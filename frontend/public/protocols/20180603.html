@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Состязание свор &quot;Тройка, птица весенняя - 2018&quot;, 03.06.2018 (Московская область, д. Михайловское)</title>
+  <style>
+    @page {
+      size: A4 landscape;
+      margin: 3mm 4mm 3mm 4mm;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+      font-size: 9pt;
+      line-height: 1.2;
+      color: #000000;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    table.protocol-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 1.5px;
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+    th, td {
+      border-top: 1px solid #4c4c4c;
+      border-left: 1px solid #4c4c4c;
+      border-right: 1px solid #b2b2b2;
+      border-bottom: 1px solid #b2b2b2;
+      background-color: #ffffff;
+      padding: 3.5px 2px;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 9pt;
+      font-weight: normal;
+    }
+    tr.top-title-row td {
+      font-size: 13pt;
+      font-weight: bold;
+      padding: 6px 4px;
+    }
+    tr.meta-row td {
+      font-size: 9.5pt;
+      font-weight: normal;
+      padding: 3px 4px;
+      text-align: center;
+    }
+    tr.col-header td {
+      font-size: 9pt;
+      font-weight: normal;
+      padding: 3px 1px;
+    }
+    td.group-header {
+      background-color: #c0c0c0 !important;
+      font-size: 10pt;
+      font-weight: bold;
+      text-align: center;
+      padding: 3.5px 3px;
+    }
+    td.status-cell {
+      text-align: center;
+      font-style: italic;
+      font-size: 9pt;
+      padding: 4px 3px;
+    }
+    tr.dns-row td {
+      background-color: #c0c0c0 !important;
+    }
+    tr.participant-row {
+      page-break-inside: avoid;
+    }
+    td.team-roster-cell {
+      text-align: left;
+      padding: 2.5px 5px;
+      line-height: 1.2;
+    }
+    .team-dog-entry {
+      font-size: 8.5pt;
+      margin: 1px 0;
+    }
+    .team-dog-entry.is-reserve {
+      color: #777;
+      font-style: italic;
+    }
+    .team-dog-entry .dog-idx {
+      font-weight: bold;
+      color: #444;
+      margin-right: 3px;
+    }
+    .team-dog-entry .dog-title {
+      font-weight: 600;
+    }
+    .team-dog-entry .dog-specs {
+      color: #444;
+      font-size: 8pt;
+      margin-left: 2px;
+    }
+
+    @media print {
+      @page {
+        size: A4 landscape;
+        margin: 1.5mm 3mm 1.5mm 3mm;
+      }
+      html, body {
+        font-size: 7.5pt;
+        line-height: 1.1;
+      }
+      table.protocol-table {
+        border-spacing: 0.8px;
+      }
+      th, td {
+        font-size: 7.5pt;
+        padding: 1px 1px;
+      }
+      tr.top-title-row td {
+        font-size: 10pt;
+        padding: 2px;
+      }
+      tr.meta-row td {
+        font-size: 7.5pt;
+        padding: 1.5px 2px;
+      }
+      tr.col-header td {
+        font-size: 7.5pt;
+        padding: 1.5px 1px;
+      }
+      td.group-header {
+        font-size: 8pt;
+        padding: 1.5px 2px;
+      }
+      td.team-roster-cell {
+        padding: 1px 4px;
+        line-height: 1.15;
+      }
+      .team-dog-entry {
+        font-size: 7.2pt;
+        margin: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .team-dog-entry .dog-specs {
+        font-size: 6.8pt;
+      }
+    }
+  
+    /* Toolbar & Old Money screen preview styles */
+    .cs-toolbar {
+      position: sticky;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #faf8f5;
+      border-bottom: 1px solid #e2d9cd;
+      padding: 10px 18px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      z-index: 9999;
+      box-shadow: 0 1px 4px rgba(40, 30, 20, 0.05);
+    }
+    .cs-toolbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+    .cs-toolbar-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+    .cs-toolbar-divider {
+      width: 1px;
+      height: 18px;
+      background: #d4c5b3;
+    }
+    .cs-toolbar-brand {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #8b5e34;
+    }
+    .cs-toolbar-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: #2b2621;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .cs-toolbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+    .cs-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid #d4c5b3;
+      background: #ffffff;
+      color: #4a3e33;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .cs-btn:hover {
+      background: #f4eee5;
+      border-color: #ba9d7e;
+      color: #2b2621;
+    }
+    .cs-btn-back {
+      background: #ffffff;
+      color: #8b5e34;
+      border-color: #d4c5b3;
+    }
+    .cs-btn-back:hover {
+      background: #f4eee5;
+      border-color: #8b5e34;
+    }
+    .cs-btn-primary {
+      background: #8b5e34;
+      border-color: #724c28;
+      color: #ffffff;
+    }
+    .cs-btn-primary:hover {
+      background: #724c28;
+      border-color: #5b3c1e;
+      color: #ffffff;
+    }
+    @media print {
+      .cs-toolbar {
+        display: none !important;
+      }
+      body {
+        background: #ffffff !important;
+        padding: 0 !important;
+      }
+      .protocol-container {
+        padding: 0 !important;
+        display: block !important;
+      }
+      table.protocol-table {
+        margin: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
+      }
+    }
+    @media screen {
+      body {
+        background: #f4f1ea;
+        min-height: 100vh;
+      }
+      .protocol-container {
+        padding: 20px 16px 40px;
+        display: flex;
+        justify-content: center;
+      }
+      table.protocol-table {
+        margin: 0 auto;
+        background: #ffffff;
+        box-shadow: 0 4px 16px rgba(43, 38, 33, 0.08);
+        border: 1px solid #dcd4c8;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+<header class="cs-toolbar">
+  <div class="cs-toolbar-inner">
+    <div class="cs-toolbar-left">
+      <a href="/event/20180603" class="cs-btn cs-btn-back" title="Вернуться к результатам на сайте">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        <span>К состязанию</span>
+      </a>
+      <span class="cs-toolbar-divider"></span>
+      <span class="cs-toolbar-brand">CoursingStats</span>
+      <span class="cs-toolbar-title">Состязание свор &quot;Тройка, птица весенняя - 2018&quot;</span>
+    </div>
+    <div class="cs-toolbar-actions">
+      
+      <a href="https://drive.google.com/file/d/1AOEFzMudCVAtPbiK0cLKd3h392vb5cZ2/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="cs-btn" title="Официальный PDF на Google Диске">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+        <span>Скачать PDF</span>
+      </a>
+      
+      
+      <button onclick="window.print()" class="cs-btn cs-btn-primary" title="Печать или сохранение в PDF (Ctrl+P)">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></svg>
+        <span>Печать</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="protocol-container">
+  <table class="protocol-table">
+    <colgroup>
+      <col style="width: 3.5%;">
+      <col style="width: 3.0%;">
+      <col style="width: 27.5%;">
+      <!-- Heat 1 -->
+      <col style="width: 2.8%;">
+      <col style="width: 2.7%;">
+      <col style="width: 2.7%;">
+      <col style="width: 2.7%;">
+      <col style="width: 2.7%;">
+      <col style="width: 2.7%;">
+      <col style="width: 2.7%;">
+      <col style="width: 2.7%;">
+      <col style="width: 3.8%;">
+      <col style="width: 4.2%;">
+      <!-- Heat 2 -->
+      <col style="width: 2.8%;">
+      <col style="width: 2.7%;">
+      <col style="width: 2.7%;">
+      <col style="width: 2.7%;">
+      <col style="width: 2.7%;">
+      <col style="width: 2.7%;">
+      <col style="width: 2.7%;">
+      <col style="width: 2.7%;">
+      <col style="width: 3.8%;">
+      <col style="width: 4.2%;">
+      <!-- Grand Total -->
+      <col style="width: 5.0%;">
+    </colgroup>
+    <tbody>
+      
+    <tr class="top-title-row">
+      <td colspan="24">Состязание свор &quot;Тройка, птица весенняя - 2018&quot;, 03.06.2018 (Московская область, д. Михайловское)</td>
+    </tr>
+    <tr class="meta-row">
+      <td colspan="24"><b>Документы:</b> <a href="https://drive.google.com/file/d/1AOEFzMudCVAtPbiK0cLKd3h392vb5cZ2/view?usp=sharing" target="_blank" rel="noopener">Официальный PDF</a></td>
+    </tr>
+    <tr class="col-header">
+      <td rowspan="2" style="width: 3.5%;">Место</td>
+      <td rowspan="2" style="width: 3.0%;">№</td>
+      <td rowspan="2" style="width: 27.5%;">Название команды</td>
+      <td colspan="10" style="width: 30.5%;">1-й заезд</td>
+      <td colspan="10" style="width: 30.5%;">2-й заезд</td>
+      <td rowspan="2" style="width: 5.0%;">Общая<br>сумма</td>
+    </tr>
+    <tr class="col-header sub-header">
+      <td>Забег</td>
+      <td>Скор.</td>
+      <td>Энт.</td>
+      <td>Ловк.</td>
+      <td>Поим.</td>
+      <td>Взаим.</td>
+      <td>НаПов.</td>
+      <td>БезПов.</td>
+      <td>Судья</td>
+      <td>Сумма 1</td>
+      <td>Забег</td>
+      <td>Скор.</td>
+      <td>Энт.</td>
+      <td>Ловк.</td>
+      <td>Поим.</td>
+      <td>Взаим.</td>
+      <td>НаПов.</td>
+      <td>БезПов.</td>
+      <td>Судья</td>
+      <td>Сумма 2</td>
+    </tr>
+  
+        <tr class="group-row">
+          <td colspan="24" class="group-header">Команда № 6</td>
+        </tr>
+      
+      <tr class="participant-row">
+        <td rowspan="2" style="font-weight: bold; font-size: 11pt;">1</td>
+        <td rowspan="2" style="font-weight: bold;">6</td>
+        <td rowspan="2" class="team-roster-cell">
+      <div class="team-dog-entry ">
+        <span class="dog-idx">1.</span>
+        <span class="dog-title">TAMIR ANI POZEMKA</span>
+        <span class="dog-specs">(Русская псовая борзая, сука)</span>
+      </div>
+    
+      <div class="team-dog-entry ">
+        <span class="dog-idx">2.</span>
+        <span class="dog-title">Тамир Ани Лезгинка</span>
+        <span class="dog-specs">(Русская псовая борзая, сука)</span>
+      </div>
+    
+      <div class="team-dog-entry ">
+        <span class="dog-idx">3.</span>
+        <span class="dog-title">Тамир Ани Первоцвет</span>
+        <span class="dog-specs">(Русская псовая борзая, кобель)</span>
+      </div>
+    
+      <div class="team-dog-entry ">
+        <span class="dog-idx">4.</span>
+        <span class="dog-title">ТАМИР АНИ ПУСТЕЛЬГА</span>
+        <span class="dog-specs">(Русская псовая борзая, сука)</span>
+      </div>
+    </td>
+        <td rowspan="2">8</td>
+        
+        <td>19</td>
+        <td>10</td>
+        <td>9</td>
+        <td>18</td>
+        <td>27</td>
+        <td>5</td>
+        <td>5</td>
+        <td style="font-weight: 500;">93</td>
+      
+        <td rowspan="2" style="font-weight: bold;">184</td>
+        <td rowspan="2">19</td>
+        
+        <td>18</td>
+        <td>9</td>
+        <td>8</td>
+        <td>17</td>
+        <td>28</td>
+        <td>5</td>
+        <td>5</td>
+        <td style="font-weight: 500;">90</td>
+      
+        <td rowspan="2" style="font-weight: bold;">180</td>
+        <td rowspan="2" style="font-weight: bold; font-size: 11pt;">364</td>
+      </tr>
+      <tr class="participant-row">
+        
+        <td>18</td>
+        <td>9</td>
+        <td>8</td>
+        <td>18</td>
+        <td>28</td>
+        <td>5</td>
+        <td>5</td>
+        <td style="font-weight: 500;">91</td>
+      
+        
+        <td>18</td>
+        <td>9</td>
+        <td>9</td>
+        <td>18</td>
+        <td>27</td>
+        <td>5</td>
+        <td>4</td>
+        <td style="font-weight: 500;">90</td>
+      
+      </tr>
+    
+        <tr class="group-row">
+          <td colspan="24" class="group-header">Команда № 5</td>
+        </tr>
+      
+      <tr class="participant-row">
+        <td rowspan="2" style="font-weight: bold; font-size: 11pt;">2</td>
+        <td rowspan="2" style="font-weight: bold;">5</td>
+        <td rowspan="2" class="team-roster-cell">
+      <div class="team-dog-entry ">
+        <span class="dog-idx">1.</span>
+        <span class="dog-title">ДЕЙОНГА ГАЙА МОНИФА /<br>DEYONGA GAYA MONIFA</span>
+        <span class="dog-specs">(Родезийский риджбек, сука)</span>
+      </div>
+    
+      <div class="team-dog-entry ">
+        <span class="dog-idx">2.</span>
+        <span class="dog-title">РИДЖЕС СТАР ОРСИ БЮТИФУЛ ГЕЛ</span>
+        <span class="dog-specs">(Родезийский риджбек, сука)</span>
+      </div>
+    
+      <div class="team-dog-entry ">
+        <span class="dog-idx">3.</span>
+        <span class="dog-title">Трой</span>
+        <span class="dog-specs">(Дружественные - Макси, кобель)</span>
+      </div>
+    </td>
+        <td rowspan="2">9</td>
+        
+        <td>17</td>
+        <td>7</td>
+        <td>8</td>
+        <td>18</td>
+        <td>27</td>
+        <td>5</td>
+        <td>4</td>
+        <td style="font-weight: 500;">86</td>
+      
+        <td rowspan="2" style="font-weight: bold;">172</td>
+        <td rowspan="2">20</td>
+        
+        <td>18</td>
+        <td>9</td>
+        <td>8</td>
+        <td>18</td>
+        <td>27</td>
+        <td>3</td>
+        <td>5</td>
+        <td style="font-weight: 500;">88</td>
+      
+        <td rowspan="2" style="font-weight: bold;">175</td>
+        <td rowspan="2" style="font-weight: bold; font-size: 11pt;">347</td>
+      </tr>
+      <tr class="participant-row">
+        
+        <td>17</td>
+        <td>7</td>
+        <td>8</td>
+        <td>19</td>
+        <td>27</td>
+        <td>5</td>
+        <td>3</td>
+        <td style="font-weight: 500;">86</td>
+      
+        
+        <td>18</td>
+        <td>8</td>
+        <td>8</td>
+        <td>18</td>
+        <td>27</td>
+        <td>3</td>
+        <td>5</td>
+        <td style="font-weight: 500;">87</td>
+      
+      </tr>
+    
+        <tr class="group-row">
+          <td colspan="24" class="group-header">Команда № 11</td>
+        </tr>
+      
+      <tr class="participant-row">
+        <td rowspan="2" style="font-weight: bold; font-size: 11pt;">3</td>
+        <td rowspan="2" style="font-weight: bold;">11</td>
+        <td rowspan="2" class="team-roster-cell">
+      <div class="team-dog-entry ">
+        <span class="dog-idx">1.</span>
+        <span class="dog-title">AMAGAMMA NAMIB MALAVI</span>
+        <span class="dog-specs">(Басенджи, сука)</span>
+      </div>
+    
+      <div class="team-dog-entry ">
+        <span class="dog-idx">2.</span>
+        <span class="dog-title">КАВКАЗОН ПИРАТ /<br>KAVKAZON PIRAT</span>
+        <span class="dog-specs">(Басенджи, сука)</span>
+      </div>
+    
+      <div class="team-dog-entry ">
+        <span class="dog-idx">3.</span>
+        <span class="dog-title">ITURY PUZZLE ITUURY IZEGBE</span>
+        <span class="dog-specs">(Басенджи, сука)</span>
+      </div>
+    </td>
+        <td rowspan="2">7</td>
+        
+        <td>17</td>
+        <td>10</td>
+        <td>8</td>
+        <td>18</td>
+        <td>25</td>
+        <td>4</td>
+        <td>4</td>
+        <td style="font-weight: 500;">86</td>
+      
+        <td rowspan="2" style="font-weight: bold;">170</td>
+        <td rowspan="2">13</td>
+        
+        <td>17</td>
+        <td>9</td>
+        <td>9</td>
+        <td>16</td>
+        <td>28</td>
+        <td>3</td>
+        <td>4</td>
+        <td style="font-weight: 500;">86</td>
+      
+        <td rowspan="2" style="font-weight: bold;">171</td>
+        <td rowspan="2" style="font-weight: bold; font-size: 11pt;">341</td>
+      </tr>
+      <tr class="participant-row">
+        
+        <td>17</td>
+        <td>9</td>
+        <td>8</td>
+        <td>19</td>
+        <td>24</td>
+        <td>3</td>
+        <td>4</td>
+        <td style="font-weight: 500;">84</td>
+      
+        
+        <td>18</td>
+        <td>9</td>
+        <td>8</td>
+        <td>17</td>
+        <td>27</td>
+        <td>3</td>
+        <td>3</td>
+        <td style="font-weight: 500;">85</td>
+      
+      </tr>
+    
+        <tr class="group-row">
+          <td colspan="24" class="group-header">Команда № 3</td>
+        </tr>
+      
+      <tr class="participant-row">
+        <td rowspan="2" style="font-weight: bold; font-size: 11pt;">4</td>
+        <td rowspan="2" style="font-weight: bold;">3</td>
+        <td rowspan="2" class="team-roster-cell">
+      <div class="team-dog-entry ">
+        <span class="dog-idx">1.</span>
+        <span class="dog-title">ARIES KHAN MARLON BRANDO</span>
+        <span class="dog-specs">(Родезийский риджбек, кобель)</span>
+      </div>
+    
+      <div class="team-dog-entry ">
+        <span class="dog-idx">2.</span>
+        <span class="dog-title">Лакки</span>
+        <span class="dog-specs">(Родезийский риджбек, сука)</span>
+      </div>
+    
+      <div class="team-dog-entry ">
+        <span class="dog-idx">3.</span>
+        <span class="dog-title">Лира</span>
+        <span class="dog-specs">(Родезийский риджбек, сука)</span>
+      </div>
+    </td>
+        <td rowspan="2">6</td>
+        
+        <td>17</td>
+        <td>7</td>
+        <td>7</td>
+        <td>15</td>
+        <td>20</td>
+        <td>4</td>
+        <td>3</td>
+        <td style="font-weight: 500;">73</td>
+      
+        <td rowspan="2" style="font-weight: bold;">143</td>
+        <td rowspan="2">17</td>
+        
+        <td>18</td>
+        <td>8</td>
+        <td>8</td>
+        <td>17</td>
+        <td>27</td>
+        <td>5</td>
+        <td>3</td>
+        <td style="font-weight: 500;">86</td>
+      
+        <td rowspan="2" style="font-weight: bold;">170</td>
+        <td rowspan="2" style="font-weight: bold; font-size: 11pt;">313</td>
+      </tr>
+      <tr class="participant-row">
+        
+        <td>17</td>
+        <td>6</td>
+        <td>6</td>
+        <td>14</td>
+        <td>19</td>
+        <td>4</td>
+        <td>4</td>
+        <td style="font-weight: 500;">70</td>
+      
+        
+        <td>18</td>
+        <td>8</td>
+        <td>8</td>
+        <td>17</td>
+        <td>26</td>
+        <td>4</td>
+        <td>3</td>
+        <td style="font-weight: 500;">84</td>
+      
+      </tr>
+    
+        <tr class="group-row">
+          <td colspan="24" class="group-header">Команда № 7</td>
+        </tr>
+      
+      <tr class="participant-row">
+        <td rowspan="2" style="font-weight: bold; font-size: 11pt;">5</td>
+        <td rowspan="2" style="font-weight: bold;">7</td>
+        <td rowspan="2" class="team-roster-cell">
+      <div class="team-dog-entry ">
+        <span class="dog-idx">1.</span>
+        <span class="dog-title">AYKO PICH</span>
+        <span class="dog-specs">(Басенджи, кобель)</span>
+      </div>
+    
+      <div class="team-dog-entry ">
+        <span class="dog-idx">2.</span>
+        <span class="dog-title">DIAMANT TOY ER UMKA LUCHIK SCHASTIA</span>
+        <span class="dog-specs">(Уиппет, сука)</span>
+      </div>
+    
+      <div class="team-dog-entry ">
+        <span class="dog-idx">3.</span>
+        <span class="dog-title">НАБАМБА ШАНИТА /<br>NABAMBA SHANITA</span>
+        <span class="dog-specs">(Басенджи, сука)</span>
+      </div>
+    </td>
+        <td rowspan="2">3</td>
+        
+        <td>18</td>
+        <td>9</td>
+        <td>7</td>
+        <td>16</td>
+        <td>20</td>
+        <td>3</td>
+        <td>4</td>
+        <td style="font-weight: 500;">77</td>
+      
+        <td rowspan="2" style="font-weight: bold;">151</td>
+        <td rowspan="2">14</td>
+        
+        <td>17</td>
+        <td>8</td>
+        <td>8</td>
+        <td>17</td>
+        <td>25</td>
+        <td>4</td>
+        <td>3</td>
+        <td style="font-weight: 500;">82</td>
+      
+        <td rowspan="2" style="font-weight: bold;">160</td>
+        <td rowspan="2" style="font-weight: bold; font-size: 11pt;">311</td>
+      </tr>
+      <tr class="participant-row">
+        
+        <td>17</td>
+        <td>8</td>
+        <td>7</td>
+        <td>14</td>
+        <td>22</td>
+        <td>3</td>
+        <td>3</td>
+        <td style="font-weight: 500;">74</td>
+      
+        
+        <td>17</td>
+        <td>7</td>
+        <td>7</td>
+        <td>17</td>
+        <td>23</td>
+        <td>4</td>
+        <td>3</td>
+        <td style="font-weight: 500;">78</td>
+      
+      </tr>
+    
+        <tr class="group-row">
+          <td colspan="24" class="group-header">Команда № 4</td>
+        </tr>
+      
+      <tr class="participant-row">
+        <td rowspan="2" style="font-weight: bold; font-size: 11pt;">6</td>
+        <td rowspan="2" style="font-weight: bold;">4</td>
+        <td rowspan="2" class="team-roster-cell">
+      <div class="team-dog-entry ">
+        <span class="dog-idx">1.</span>
+        <span class="dog-title">BBVADDIN BONGANI BAHA</span>
+        <span class="dog-specs">(Басенджи, кобель)</span>
+      </div>
+    
+      <div class="team-dog-entry ">
+        <span class="dog-idx">2.</span>
+        <span class="dog-title">ITURY PUZZLE ABIMBOLA ALIET ANULICA</span>
+        <span class="dog-specs">(Басенджи, сука)</span>
+      </div>
+    
+      <div class="team-dog-entry ">
+        <span class="dog-idx">3.</span>
+        <span class="dog-title">SALONGA VASCO DA GAMA</span>
+        <span class="dog-specs">(Басенджи, кобель)</span>
+      </div>
+    </td>
+        <td rowspan="2">4</td>
+        
+        <td>17</td>
+        <td>7</td>
+        <td>7</td>
+        <td>16</td>
+        <td>20</td>
+        <td>4</td>
+        <td>5</td>
+        <td style="font-weight: 500;">76</td>
+      
+        <td rowspan="2" style="font-weight: bold;">153</td>
+        <td rowspan="2">15</td>
+        
+        <td>15</td>
+        <td>9</td>
+        <td>6</td>
+        <td>16</td>
+        <td>24</td>
+        <td>4</td>
+        <td>3</td>
+        <td style="font-weight: 500;">77</td>
+      
+        <td rowspan="2" style="font-weight: bold;">153</td>
+        <td rowspan="2" style="font-weight: bold; font-size: 11pt;">306</td>
+      </tr>
+      <tr class="participant-row">
+        
+        <td>17</td>
+        <td>7</td>
+        <td>7</td>
+        <td>16</td>
+        <td>21</td>
+        <td>4</td>
+        <td>5</td>
+        <td style="font-weight: 500;">77</td>
+      
+        
+        <td>17</td>
+        <td>8</td>
+        <td>6</td>
+        <td>15</td>
+        <td>21</td>
+        <td>5</td>
+        <td>4</td>
+        <td style="font-weight: 500;">76</td>
+      
+      </tr>
+    
+        <tr class="group-row">
+          <td colspan="24" class="group-header">Команда № 10</td>
+        </tr>
+      
+      <tr class="participant-row">
+        <td rowspan="2" style="font-weight: bold; font-size: 11pt;">7</td>
+        <td rowspan="2" style="font-weight: bold;">10</td>
+        <td rowspan="2" class="team-roster-cell">
+      <div class="team-dog-entry ">
+        <span class="dog-idx">1.</span>
+        <span class="dog-title">NHANHLA AZERI ZEMA</span>
+        <span class="dog-specs">(Родезийский риджбек, сука)</span>
+      </div>
+    
+      <div class="team-dog-entry ">
+        <span class="dog-idx">2.</span>
+        <span class="dog-title">NHANHLA VIRGY VYSHENKA</span>
+        <span class="dog-specs">(Родезийский риджбек, сука)</span>
+      </div>
+    
+      <div class="team-dog-entry ">
+        <span class="dog-idx">3.</span>
+        <span class="dog-title">PODAROK IZ AFRIKI YAS MOGOBI</span>
+        <span class="dog-specs">(Родезийский риджбек, кобель)</span>
+      </div>
+    
+      <div class="team-dog-entry ">
+        <span class="dog-idx">4.</span>
+        <span class="dog-title">TINA TRADING MONREAL</span>
+        <span class="dog-specs">(Родезийский риджбек, кобель)</span>
+      </div>
+    </td>
+        <td rowspan="2">10</td>
+        
+        <td>14</td>
+        <td>5</td>
+        <td>5</td>
+        <td>12</td>
+        <td>14</td>
+        <td>5</td>
+        <td>5</td>
+        <td style="font-weight: 500;">60</td>
+      
+        <td rowspan="2" style="font-weight: bold;">117</td>
+        <td rowspan="2">21</td>
+        
+        <td>17</td>
+        <td>9</td>
+        <td>8</td>
+        <td>18</td>
+        <td>29</td>
+        <td>3</td>
+        <td>5</td>
+        <td style="font-weight: 500;">89</td>
+      
+        <td rowspan="2" style="font-weight: bold;">177</td>
+        <td rowspan="2" style="font-weight: bold; font-size: 11pt;">294</td>
+      </tr>
+      <tr class="participant-row">
+        
+        <td>12</td>
+        <td>5</td>
+        <td>5</td>
+        <td>11</td>
+        <td>15</td>
+        <td>4</td>
+        <td>5</td>
+        <td style="font-weight: 500;">57</td>
+      
+        
+        <td>17</td>
+        <td>8</td>
+        <td>9</td>
+        <td>18</td>
+        <td>28</td>
+        <td>4</td>
+        <td>4</td>
+        <td style="font-weight: 500;">88</td>
+      
+      </tr>
+    
+        <tr class="group-row">
+          <td colspan="24" class="group-header">Команда № 8</td>
+        </tr>
+      
+      <tr class="participant-row">
+        <td rowspan="2" style="font-weight: bold; font-size: 11pt;">8</td>
+        <td rowspan="2" style="font-weight: bold;">8</td>
+        <td rowspan="2" class="team-roster-cell">
+      <div class="team-dog-entry ">
+        <span class="dog-idx">1.</span>
+        <span class="dog-title">VASURU TAFFI’S FIRST EVER FOREVER</span>
+        <span class="dog-specs">(Уиппет, кобель)</span>
+      </div>
+    
+      <div class="team-dog-entry ">
+        <span class="dog-idx">2.</span>
+        <span class="dog-title">ВИКОНТЕССА НТАНДА УОРНЕШ /<br>VIKONTESSA NTANDA UORNESH</span>
+        <span class="dog-specs">(Басенджи, сука)</span>
+      </div>
+    
+      <div class="team-dog-entry ">
+        <span class="dog-idx">3.</span>
+        <span class="dog-title">ЛАКШЕРИ ВИПП ЛЕДИ ДЕЙ</span>
+        <span class="dog-specs">(Уиппет, кобель)</span>
+      </div>
+    </td>
+        <td rowspan="2">5</td>
+        
+        <td>18</td>
+        <td>9</td>
+        <td>8</td>
+        <td>17</td>
+        <td>20</td>
+        <td>3</td>
+        <td>5</td>
+        <td style="font-weight: 500;">80</td>
+      
+        <td rowspan="2" style="font-weight: bold;">156</td>
+        <td rowspan="2">16</td>
+        
+        <td>17</td>
+        <td>7</td>
+        <td>6</td>
+        <td>15</td>
+        <td>22</td>
+        <td>3</td>
+        <td>1</td>
+        <td style="font-weight: 500;">71</td>
+      
+        <td rowspan="2" style="font-weight: bold;">138</td>
+        <td rowspan="2" style="font-weight: bold; font-size: 11pt;">294</td>
+      </tr>
+      <tr class="participant-row">
+        
+        <td>17</td>
+        <td>8</td>
+        <td>7</td>
+        <td>17</td>
+        <td>20</td>
+        <td>3</td>
+        <td>4</td>
+        <td style="font-weight: 500;">76</td>
+      
+        
+        <td>17</td>
+        <td>6</td>
+        <td>6</td>
+        <td>14</td>
+        <td>20</td>
+        <td>3</td>
+        <td>1</td>
+        <td style="font-weight: 500;">67</td>
+      
+      </tr>
+    
+        <tr class="group-row">
+          <td colspan="24" class="group-header">Команда № 1</td>
+        </tr>
+      
+      <tr class="participant-row">
+        <td rowspan="2" style="font-weight: bold; font-size: 11pt;">9</td>
+        <td rowspan="2" style="font-weight: bold;">1</td>
+        <td rowspan="2" class="team-roster-cell">
+      <div class="team-dog-entry ">
+        <span class="dog-idx">1.</span>
+        <span class="dog-title">DAEN’S THAI THEP PRATHAN NELLIREL</span>
+        <span class="dog-specs">(Тайский риджбек, сука)</span>
+      </div>
+    
+      <div class="team-dog-entry ">
+        <span class="dog-idx">2.</span>
+        <span class="dog-title">NELLIREL JEANNE LITTLE QUEEN</span>
+        <span class="dog-specs">(Тайский риджбек, сука)</span>
+      </div>
+    
+      <div class="team-dog-entry ">
+        <span class="dog-idx">3.</span>
+        <span class="dog-title">NELLIREL VINCENT HEART</span>
+        <span class="dog-specs">(Тайский риджбек, кобель)</span>
+      </div>
+    </td>
+        <td rowspan="2">1</td>
+        
+        <td>18</td>
+        <td>10</td>
+        <td>7</td>
+        <td>19</td>
+        <td>27</td>
+        <td>5</td>
+        <td>5</td>
+        <td style="font-weight: 500;">91</td>
+      
+        <td rowspan="2" style="font-weight: bold;">178</td>
+        <td rowspan="2">12</td>
+        
+        <td>14</td>
+        <td>6</td>
+        <td>5</td>
+        <td>11</td>
+        <td>12</td>
+        <td>5</td>
+        <td>3</td>
+        <td style="font-weight: 500;">56</td>
+      
+        <td rowspan="2" style="font-weight: bold;">114</td>
+        <td rowspan="2" style="font-weight: bold; font-size: 11pt;">292</td>
+      </tr>
+      <tr class="participant-row">
+        
+        <td>18</td>
+        <td>8</td>
+        <td>7</td>
+        <td>18</td>
+        <td>26</td>
+        <td>5</td>
+        <td>5</td>
+        <td style="font-weight: 500;">87</td>
+      
+        
+        <td>14</td>
+        <td>5</td>
+        <td>5</td>
+        <td>12</td>
+        <td>12</td>
+        <td>5</td>
+        <td>5</td>
+        <td style="font-weight: 500;">58</td>
+      
+      </tr>
+    
+        <tr class="group-row">
+          <td colspan="24" class="group-header">Команда № 9</td>
+        </tr>
+      
+      <tr class="participant-row">
+        <td rowspan="2" style="font-weight: bold; font-size: 11pt;">10</td>
+        <td rowspan="2" style="font-weight: bold;">9</td>
+        <td rowspan="2" class="team-roster-cell">
+      <div class="team-dog-entry ">
+        <span class="dog-idx">1.</span>
+        <span class="dog-title">COLISTO’S BEATO</span>
+        <span class="dog-specs">(Чирнеко дель Этна, кобель)</span>
+      </div>
+    
+      <div class="team-dog-entry ">
+        <span class="dog-idx">2.</span>
+        <span class="dog-title">COLISTO’S GVENDA</span>
+        <span class="dog-specs">(Чирнеко дель Этна, сука)</span>
+      </div>
+    
+      <div class="team-dog-entry ">
+        <span class="dog-idx">3.</span>
+        <span class="dog-title">SOLLUCERO</span>
+        <span class="dog-specs">(Чирнеко дель Этна, кобель)</span>
+      </div>
+    </td>
+        <td rowspan="2">11</td>
+        
+        <td>10</td>
+        <td>5</td>
+        <td>3</td>
+        <td>2</td>
+        <td>7</td>
+        <td>5</td>
+        <td>1</td>
+        <td style="font-weight: 500;">33</td>
+      
+        <td rowspan="2" style="font-weight: bold;">64</td>
+        <td rowspan="2">22</td>
+        
+        <td>17</td>
+        <td>9</td>
+        <td>9</td>
+        <td>18</td>
+        <td>28</td>
+        <td>3</td>
+        <td>5</td>
+        <td style="font-weight: 500;">89</td>
+      
+        <td rowspan="2" style="font-weight: bold;">172</td>
+        <td rowspan="2" style="font-weight: bold; font-size: 11pt;">236</td>
+      </tr>
+      <tr class="participant-row">
+        
+        <td>10</td>
+        <td>7</td>
+        <td>3</td>
+        <td>2</td>
+        <td>4</td>
+        <td>5</td>
+        <td>0</td>
+        <td style="font-weight: 500;">31</td>
+      
+        
+        <td>17</td>
+        <td>8</td>
+        <td>7</td>
+        <td>17</td>
+        <td>27</td>
+        <td>4</td>
+        <td>3</td>
+        <td style="font-weight: 500;">83</td>
+      
+      </tr>
+    
+        <tr class="group-row">
+          <td colspan="24" class="group-header">Команда № 2</td>
+        </tr>
+      
+      <tr class="participant-row">
+        <td rowspan="2" style="font-weight: bold; font-size: 11pt;">11</td>
+        <td rowspan="2" style="font-weight: bold;">2</td>
+        <td rowspan="2" class="team-roster-cell">
+      <div class="team-dog-entry ">
+        <span class="dog-idx">1.</span>
+        <span class="dog-title">ITURI PAZZL ITUURI IZEGBE</span>
+        <span class="dog-specs">(Басенджи, сука)</span>
+      </div>
+    
+      <div class="team-dog-entry ">
+        <span class="dog-idx">2.</span>
+        <span class="dog-title">БОННИ</span>
+        <span class="dog-specs">(Басенджи, сука)</span>
+      </div>
+    
+      <div class="team-dog-entry ">
+        <span class="dog-idx">3.</span>
+        <span class="dog-title">ИТУРИ ПАЗЗЛ МАУНТАИН ДЕУ</span>
+        <span class="dog-specs">(Басенджи, кобель)</span>
+      </div>
+    
+      <div class="team-dog-entry ">
+        <span class="dog-idx">4.</span>
+        <span class="dog-title">Итури Паззл Юлиана Розалини</span>
+        <span class="dog-specs">(Басенджи, сука)</span>
+      </div>
+    </td>
+        <td rowspan="2">2</td>
+        
+        <td>15</td>
+        <td>4</td>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+        <td>4</td>
+        <td>2</td>
+        <td style="font-weight: 500;">49</td>
+      
+        <td rowspan="2" style="font-weight: bold;">93</td>
+        <td rowspan="2">18</td>
+        
+        <td>9</td>
+        <td>5</td>
+        <td>4</td>
+        <td>0</td>
+        <td>2</td>
+        <td>4</td>
+        <td>1</td>
+        <td style="font-weight: 500;">25</td>
+      
+        <td rowspan="2" style="font-weight: bold;">54</td>
+        <td rowspan="2" style="font-weight: bold; font-size: 11pt;">147</td>
+      </tr>
+      <tr class="participant-row">
+        
+        <td>14</td>
+        <td>3</td>
+        <td>4</td>
+        <td>7</td>
+        <td>10</td>
+        <td>4</td>
+        <td>2</td>
+        <td style="font-weight: 500;">44</td>
+      
+        
+        <td>10</td>
+        <td>5</td>
+        <td>5</td>
+        <td>2</td>
+        <td>4</td>
+        <td>3</td>
+        <td>0</td>
+        <td style="font-weight: 500;">29</td>
+      
+      </tr>
+    
+    </tbody>
+  </table>
+  
+</div>
+</body>
+</html>

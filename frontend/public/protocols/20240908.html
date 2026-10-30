@@ -1,0 +1,1936 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Чемпионат России по бегам борзых, 08.09.2024 (Московская обл., д. Михайловское)</title>
+  <style>
+    @page {
+      size: A4 landscape;
+      margin: 1.5mm 1.5mm 1.5mm 1.5mm;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      background: #ffffff;
+      color: #000000;
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+      font-size: 11pt;
+      line-height: 1.25;
+    }
+    table.protocol-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 1.5px;
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+    th, td {
+      border-top: 1px solid #4c4c4c;
+      border-left: 1px solid #4c4c4c;
+      border-right: 1px solid #b2b2b2;
+      border-bottom: 1px solid #b2b2b2;
+      background-color: #ffffff;
+      padding: 4px 3px;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 10.5pt;
+      font-weight: normal;
+    }
+    tr.top-title-row td {
+      font-size: 14pt;
+      font-weight: bold;
+      padding: 7px 4px;
+    }
+    tr.meta-row td {
+      font-size: 10.5pt;
+      font-weight: normal;
+      padding: 3.5px 4px;
+      text-align: center;
+    }
+    tr.col-header td {
+      font-size: 10pt;
+      font-weight: normal;
+      padding: 4px 1px;
+    }
+    tr.group-row {
+      page-break-inside: avoid;
+      page-break-after: avoid;
+    }
+    td.group-header {
+      background-color: #c0c0c0 !important;
+      font-size: 11.5pt;
+      font-weight: normal;
+      text-align: center;
+      padding: 4.5px 3px;
+    }
+    td.dog-name-cell {
+      text-align: center;
+      font-size: 10.5pt;
+      line-height: 1.25;
+      padding: 4px 4px;
+    }
+    td.time-speed-cell {
+      font-size: 9.5pt;
+      line-height: 1.15;
+      padding: 3px 2px;
+    }
+    td.status-cell {
+      text-align: center;
+      font-style: italic;
+      font-size: 10pt;
+      padding: 4px 3px;
+    }
+    tr.dns-row td {
+      background-color: #c0c0c0 !important;
+    }
+    tr.participant-row {
+      page-break-inside: avoid;
+    }
+
+    @media print {
+      @page {
+        size: A4 landscape;
+        margin: 1.5mm 1.5mm 1.5mm 1.5mm;
+      }
+      html, body {
+        font-size: 8.5pt;
+        line-height: 1.15;
+      }
+      th, td {
+        font-size: 8.5pt;
+        padding: 2.5px 1.5px;
+      }
+      tr.top-title-row td {
+        font-size: 11pt;
+        padding: 3px;
+      }
+      tr.meta-row td {
+        font-size: 8.5pt;
+        padding: 2px 2px;
+      }
+      tr.col-header td {
+        font-size: 8.5pt;
+        padding: 2px 1px;
+      }
+      td.group-header {
+        font-size: 9.5pt;
+        padding: 2.5px 2px;
+      }
+      td.dog-name-cell {
+        font-size: 8.5pt;
+        padding: 2px 3px;
+      }
+      td.time-speed-cell {
+        font-size: 7.5pt;
+        line-height: 1.1;
+        padding: 1.5px 1px;
+      }
+      td.status-cell {
+        font-size: 8.5pt;
+      }
+    }
+  
+    /* Toolbar & Old Money screen preview styles */
+    .cs-toolbar {
+      position: sticky;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #faf8f5;
+      border-bottom: 1px solid #e2d9cd;
+      padding: 10px 18px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      z-index: 9999;
+      box-shadow: 0 1px 4px rgba(40, 30, 20, 0.05);
+    }
+    .cs-toolbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+    .cs-toolbar-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+    .cs-toolbar-divider {
+      width: 1px;
+      height: 18px;
+      background: #d4c5b3;
+    }
+    .cs-toolbar-brand {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #8b5e34;
+    }
+    .cs-toolbar-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: #2b2621;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .cs-toolbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+    .cs-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid #d4c5b3;
+      background: #ffffff;
+      color: #4a3e33;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .cs-btn:hover {
+      background: #f4eee5;
+      border-color: #ba9d7e;
+      color: #2b2621;
+    }
+    .cs-btn-back {
+      background: #ffffff;
+      color: #8b5e34;
+      border-color: #d4c5b3;
+    }
+    .cs-btn-back:hover {
+      background: #f4eee5;
+      border-color: #8b5e34;
+    }
+    .cs-btn-primary {
+      background: #8b5e34;
+      border-color: #724c28;
+      color: #ffffff;
+    }
+    .cs-btn-primary:hover {
+      background: #724c28;
+      border-color: #5b3c1e;
+      color: #ffffff;
+    }
+    @media print {
+      .cs-toolbar {
+        display: none !important;
+      }
+      body {
+        background: #ffffff !important;
+        padding: 0 !important;
+      }
+      .protocol-container {
+        padding: 0 !important;
+        display: block !important;
+      }
+      table.protocol-table {
+        margin: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
+      }
+    }
+    @media screen {
+      body {
+        background: #f4f1ea;
+        min-height: 100vh;
+      }
+      .protocol-container {
+        padding: 20px 16px 40px;
+        display: flex;
+        justify-content: center;
+      }
+      table.protocol-table {
+        margin: 0 auto;
+        background: #ffffff;
+        box-shadow: 0 4px 16px rgba(43, 38, 33, 0.08);
+        border: 1px solid #dcd4c8;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+<header class="cs-toolbar">
+  <div class="cs-toolbar-inner">
+    <div class="cs-toolbar-left">
+      <a href="/event/20240908" class="cs-btn cs-btn-back" title="Вернуться к результатам на сайте">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        <span>К состязанию</span>
+      </a>
+      <span class="cs-toolbar-divider"></span>
+      <span class="cs-toolbar-brand">CoursingStats</span>
+      <span class="cs-toolbar-title">ЧР - CACL по рейсингу</span>
+    </div>
+    <div class="cs-toolbar-actions">
+      
+      <a href="https://drive.google.com/file/d/1dRrbbrAKdtOEgH7_9jzkEmuybf1_0upK/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="cs-btn" title="Официальный PDF на Google Диске">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+        <span>Скачать PDF</span>
+      </a>
+      
+      <a href="http://procoursing.ru/Catalog_2024-09-08.pdf" target="_blank" rel="noopener noreferrer" class="cs-btn" title="Каталог участников">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+        <span>Каталог</span>
+      </a>
+      
+      <button onclick="window.print()" class="cs-btn cs-btn-primary" title="Печать или сохранение в PDF (Ctrl+P)">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></svg>
+        <span>Печать</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="protocol-container">
+  <table class="protocol-table">
+    
+    <colgroup>
+      <col style="width: 3.5%;">
+      <col style="width: 3.0%;">
+      <col style="width: 12.0%;">
+      <col style="width: 10.0%;">
+      <col style="width: 4.5%;">
+      <col style="width: 35.0%;">
+      <col style="width: 5.5%;">
+      <col style="width: 4.5%;">
+      <col style="width: 4.0%;">
+      <col style="width: 10.0%;">
+      <col style="width: 3.0%;">
+      <col style="width: 5.0%;">
+    </colgroup>
+    <tbody>
+      
+    <tr class="top-title-row">
+      <td colspan="12">Чемпионат России по бегам борзых, 08.09.2024 (Московская обл., д. Михайловское)</td>
+    </tr>
+    <tr class="meta-row">
+      <td colspan="12"><b>Судьи:</b> Иванова Г.С., Гольдинова Л.М., Орлова М.О.</td>
+    </tr>
+    <tr class="meta-row">
+      <td colspan="12"><b>Документы:</b> <a href="http://procoursing.ru/Catalog_2024-09-08.pdf" target="_blank" rel="noopener">Каталог участников</a> &bull; <a href="https://drive.google.com/file/d/1dRrbbrAKdtOEgH7_9jzkEmuybf1_0upK/view?usp=sharing" target="_blank" rel="noopener">Официальный PDF</a></td>
+    </tr>
+    
+    <tr class="col-header">
+      <td>Место</td>
+      <td>№</td>
+      <td>Порода</td>
+      <td>Класс</td>
+      <td>Пол</td>
+      <td>Кличка</td>
+      <td>Дистанция<br>(м)</td>
+      <td>Забег</td>
+      <td>Попона</td>
+      <td>Время<br>Скорость</td>
+      <td>СС</td>
+      <td>Титул</td>
+    </tr>
+  
+      <tr class="group-row">
+        <td colspan="12" class="group-header">Афганская борзая — Стандартный — Микс</td>
+      </tr>
+    
+        <tr class="participant-row">
+          <td>1</td>
+          <td>2</td>
+          <td>Афганская борзая</td>
+          <td>Стандартный</td>
+          <td></td>
+          <td class="dog-name-cell">ДРИМ НЕЙШН АРИСТОКРАТИЯ /<br>DRIM NEISHN ARISTOKRATIYA</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td>CACL Br</td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>2</td>
+          <td>1</td>
+          <td>Афганская борзая</td>
+          <td>Стандартный</td>
+          <td></td>
+          <td class="dog-name-cell">ШОУ ГЕРАТ РОНАЛДО /<br>SHOU GERAT RONALDO</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td>CC</td>
+        </tr>
+      
+      <tr class="group-row">
+        <td colspan="12" class="group-header">Басенджи — Стандартный — Микс</td>
+      </tr>
+    
+        <tr class="participant-row">
+          <td>1</td>
+          <td>3</td>
+          <td>Басенджи</td>
+          <td>Стандартный</td>
+          <td></td>
+          <td class="dog-name-cell">ДЖАНА ДЖАН ГЕНРИ МОРГАН /<br>DZHANA DZHAN GENRI MORGAN</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td>Чемпион России, CACL Br</td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>2</td>
+          <td>10</td>
+          <td>Басенджи</td>
+          <td>Стандартный</td>
+          <td></td>
+          <td class="dog-name-cell">РУБИ /<br>RUBI</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td>CACL</td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>3</td>
+          <td>9</td>
+          <td>Басенджи</td>
+          <td>Стандартный</td>
+          <td></td>
+          <td class="dog-name-cell">НИКОЛЬ САН С КНЯЖЕСКОГО ДВОРА /<br>NICOL SAN S KNJAZHESKOGO DVORA</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td></td>
+          <td>6</td>
+          <td>Басенджи</td>
+          <td>Стандартный</td>
+          <td></td>
+          <td class="dog-name-cell">АНГАВУ МАИША ФРИЯ /<br>ANGAVU MAISHA FRIA</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td></td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td></td>
+          <td>7</td>
+          <td>Басенджи</td>
+          <td>Стандартный</td>
+          <td></td>
+          <td class="dog-name-cell">ЭВОНТИ КВАЙТ Э БЬЮТИ /<br>EVONTY QUITE A BEAUTY</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td></td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td></td>
+          <td>8</td>
+          <td>Басенджи</td>
+          <td>Стандартный</td>
+          <td></td>
+          <td class="dog-name-cell">ИТУРИ ПАЗЗЛ ВИЛМА /<br>ITURY PUZZLE VILMA</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td></td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td></td>
+          <td>11</td>
+          <td>Басенджи</td>
+          <td>Стандартный</td>
+          <td></td>
+          <td class="dog-name-cell">САНРАЙЗ ЛЕЮР ЖОВЕЛЛАНА /<br>SUNRISE LEUR JOVELLANA</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td></td>
+        </tr>
+      
+      <tr class="group-row">
+        <td colspan="12" class="group-header">Басенджи — Ветераны — Кобели</td>
+      </tr>
+    
+        <tr class="participant-row">
+          <td>1</td>
+          <td>12</td>
+          <td>Басенджи</td>
+          <td>Ветераны</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">ИТУРИ ПАЗЗЛ ЕКСТРАОРДИНАРИ СМАРТ</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td></td>
+        </tr>
+      
+      <tr class="group-row">
+        <td colspan="12" class="group-header">Грейхаунд — Стандартный — Кобели</td>
+      </tr>
+    
+        <tr class="participant-row">
+          <td>1</td>
+          <td>13</td>
+          <td>Грейхаунд</td>
+          <td>Стандартный</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">Ж КАПИТАН НЕЛЬСОН /<br>J KAPITAN NELSON</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td>CACL Br</td>
+          <td>CC</td>
+        </tr>
+      
+      <tr class="group-row">
+        <td colspan="12" class="group-header">Испанская борзая (Гальго) — Стандартный — Суки</td>
+      </tr>
+    
+        <tr class="participant-row">
+          <td>1</td>
+          <td>15</td>
+          <td>Испанская борзая (Гальго)</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">АРИЯ АМИГА /<br>ARIA AMIGA</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td>Чемпион России, CACL Br</td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>2</td>
+          <td>14</td>
+          <td>Испанская борзая (Гальго)</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">АГУЕРРИДА /<br>AGUERRIDA</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td>CACL</td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>3</td>
+          <td>16</td>
+          <td>Испанская борзая (Гальго)</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">TAIRA BUENA CASADORA</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td>CC</td>
+        </tr>
+      
+      <tr class="group-row">
+        <td colspan="12" class="group-header">Малая итальянская борзая (Левретка) — Стандартный — Микс</td>
+      </tr>
+    
+        <tr class="participant-row">
+          <td></td>
+          <td>17</td>
+          <td>Малая итальянская борзая (Левретка)</td>
+          <td>Стандартный</td>
+          <td></td>
+          <td class="dog-name-cell">АЙЛЕНСТИЛЬ ЕВРИСФЕЙ ФОТИС</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td></td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td></td>
+          <td>18</td>
+          <td>Малая итальянская борзая (Левретка)</td>
+          <td>Стандартный</td>
+          <td></td>
+          <td class="dog-name-cell">АПРИОРИ СТАР СИРИУС СУННИ БОЙ /<br>APRIORI STAR SIRIUS SUNNI BOY</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td></td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td></td>
+          <td>19</td>
+          <td>Малая итальянская борзая (Левретка)</td>
+          <td>Стандартный</td>
+          <td></td>
+          <td class="dog-name-cell">GRACE HAUND ELIZABETH HER EXCELLENCE</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td></td>
+        </tr>
+      
+      <tr class="group-row">
+        <td colspan="12" class="group-header">Малая итальянская борзая (Левретка) — Стандартный-спринтеры — Кобели</td>
+      </tr>
+    
+        <tr class="participant-row">
+          <td>1</td>
+          <td>20</td>
+          <td>Малая итальянская борзая (Левретка)</td>
+          <td>Стандартный-<br>спринтеры</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">АГОТИ АДАМАНТЕ ДЕЛ ЕСПАЦИО /<br>AGOTI ADAMANTE DEL ESPACIO</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td>Чемпион России, CACL Br</td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td></td>
+          <td>21</td>
+          <td>Малая итальянская борзая (Левретка)</td>
+          <td>Стандартный-<br>спринтеры</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">АНЖЕЛО ЧЕЛЕСТЕ АНТОНИО ВЕРДИ</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td></td>
+        </tr>
+      
+      <tr class="group-row">
+        <td colspan="12" class="group-header">Поденко Ибиценко г-ш — Стандартный — Микс</td>
+      </tr>
+    
+        <tr class="participant-row">
+          <td>1</td>
+          <td>23</td>
+          <td>Поденко Ибиценко г-ш</td>
+          <td>Стандартный</td>
+          <td></td>
+          <td class="dog-name-cell">АЛЬРИША ЗВЕЗДА САПФИРА /<br>ALRISHA ZVEZDA SAPFIRA</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td>Чемпион России, CACL Br</td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>2</td>
+          <td>25</td>
+          <td>Поденко Ибиценко г-ш</td>
+          <td>Стандартный</td>
+          <td></td>
+          <td class="dog-name-cell">JAZZ MY FUNNY VALENTINE BALTAS VEJAS</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td>CACL</td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>3</td>
+          <td>24</td>
+          <td>Поденко Ибиценко г-ш</td>
+          <td>Стандартный</td>
+          <td></td>
+          <td class="dog-name-cell">DODONA BALTAS VEJAS</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>4</td>
+          <td>22</td>
+          <td>Поденко Ибиценко г-ш</td>
+          <td>Стандартный</td>
+          <td></td>
+          <td class="dog-name-cell">БАЗИЛИО СОЛЕ ДОРО /<br>BASILIO SOLE DORO</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td>CC</td>
+        </tr>
+      
+      <tr class="group-row">
+        <td colspan="12" class="group-header">Родезийский риджбек — Стандартный — Микс</td>
+      </tr>
+    
+        <tr class="participant-row">
+          <td>1</td>
+          <td>27</td>
+          <td>Родезийский риджбек</td>
+          <td>Стандартный</td>
+          <td></td>
+          <td class="dog-name-cell">АРИЕС ХАН РИВЬЕРА АЛЬ РИША САНГРИЭЛЬ /<br>ARIES KHAN RIVIERA AL RISHA SANGREAL</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td>Чемпион России, CACL Br</td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>2</td>
+          <td>26</td>
+          <td>Родезийский риджбек</td>
+          <td>Стандартный</td>
+          <td></td>
+          <td class="dog-name-cell">КЭЙОД /<br>KEYOD</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td>CACL</td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td></td>
+          <td>28</td>
+          <td>Родезийский риджбек</td>
+          <td>Стандартный</td>
+          <td></td>
+          <td class="dog-name-cell">СОЛАР СПИРИТ БАГИРА /<br>SOLAR SPIRIT BAGHEERA</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td></td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td></td>
+          <td>29</td>
+          <td>Родезийский риджбек</td>
+          <td>Стандартный</td>
+          <td></td>
+          <td class="dog-name-cell">ТИНА ТРЕЙДИНГ НИККИ ФРАНЦИСКА /<br>TINA TRADING NIKKI FRANCISKA</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td></td>
+        </tr>
+      
+      <tr class="group-row">
+        <td colspan="12" class="group-header">Русская псовая борзая — Стандартный — Микс</td>
+      </tr>
+    
+        <tr class="participant-row">
+          <td>1</td>
+          <td>30</td>
+          <td>Русская псовая борзая</td>
+          <td>Стандартный</td>
+          <td></td>
+          <td class="dog-name-cell">БОРЗЫЕ СЕНАВИАН ЕГОР /<br>BORZIE SENAVIAN EGOR</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td>Чемпион России, CACL Br</td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td></td>
+          <td>31</td>
+          <td>Русская псовая борзая</td>
+          <td>Стандартный</td>
+          <td></td>
+          <td class="dog-name-cell">БОРЗЫЕ СЕНАВИАН ДОРА /<br>BORZIE SENAVIAN DORA</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td></td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td></td>
+          <td>32</td>
+          <td>Русская псовая борзая</td>
+          <td>Стандартный</td>
+          <td></td>
+          <td class="dog-name-cell">ЛУННАЯ РАДУГА ЦАРСКАЯ ВОДКА /<br>LUNNAJA RADUGA CZARSKAYA VODKA</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td></td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td></td>
+          <td>34</td>
+          <td>Русская псовая борзая</td>
+          <td>Стандартный</td>
+          <td></td>
+          <td class="dog-name-cell">СИМПЛЕ ОБСЕССИОН ЧАПТЕР ОФ МАЙ ЛАЙФ /<br>SIMPLE OBSESSION CHAPTER OF MY LIFE</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td></td>
+        </tr>
+      
+      <tr class="group-row">
+        <td colspan="12" class="group-header">Салюки — Стандартный — Микс</td>
+      </tr>
+    
+        <tr class="participant-row">
+          <td>1</td>
+          <td>35</td>
+          <td>Салюки</td>
+          <td>Стандартный</td>
+          <td></td>
+          <td class="dog-name-cell">SALGREYS UNIVERSE</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td>Чемпион России, CACL Br</td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>2</td>
+          <td>36</td>
+          <td>Салюки</td>
+          <td>Стандартный</td>
+          <td></td>
+          <td class="dog-name-cell">САЛЮКОВ СИНБАД СТОРИ ОФ СЕВЕН СИАС /<br>SALUKOV SINDBAD STORY OF SEVEN SEAS</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td>CACL</td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>3</td>
+          <td>37</td>
+          <td>Салюки</td>
+          <td>Стандартный</td>
+          <td></td>
+          <td class="dog-name-cell">АЛЬ НАФИСЭХ ХАНИЯ /<br>AL NAFISEH HANIYA</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td>CC</td>
+        </tr>
+      
+      <tr class="group-row">
+        <td colspan="12" class="group-header">Слюги — Стандартный — Микс</td>
+      </tr>
+    
+        <tr class="participant-row">
+          <td></td>
+          <td>38</td>
+          <td>Слюги</td>
+          <td>Стандартный</td>
+          <td></td>
+          <td class="dog-name-cell">АЛЛАДИН ВАЛИ ДЛЯ БОРЗОМИР /<br>ALLADIN VALI DLYA BORZOMIR</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td></td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td></td>
+          <td>39</td>
+          <td>Слюги</td>
+          <td>Стандартный</td>
+          <td></td>
+          <td class="dog-name-cell">BORZOMIR BARFAR AMAN</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td></td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td></td>
+          <td>40</td>
+          <td>Слюги</td>
+          <td>Стандартный</td>
+          <td></td>
+          <td class="dog-name-cell">БОРЗОМИР ГАЛИЯ БАСМА /<br>BORZOMIR GALIJA BASMA</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td></td>
+        </tr>
+      
+      <tr class="group-row">
+        <td colspan="12" class="group-header">Тазы — Юниоры — Микс</td>
+      </tr>
+    
+        <tr class="participant-row">
+          <td>1</td>
+          <td>43</td>
+          <td>Тазы</td>
+          <td>Юниоры</td>
+          <td></td>
+          <td class="dog-name-cell">СЭХРА ЭЛЬ МЕН ЛЕЛАП /<br>SEHRA EL MEN LELAP</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td></td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>2</td>
+          <td>41</td>
+          <td>Тазы</td>
+          <td>Юниоры</td>
+          <td></td>
+          <td class="dog-name-cell">СЭХРА ЭЛЬ МЕРГЕН БАСИР /<br>SEHRA EL MERGEN BASIR</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td></td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>3</td>
+          <td>42</td>
+          <td>Тазы</td>
+          <td>Юниоры</td>
+          <td></td>
+          <td class="dog-name-cell">СЭХРА ЭЛЬ МИРАСДАР /<br>SEHRA EL MIRASDAR</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td></td>
+        </tr>
+      
+      <tr class="group-row">
+        <td colspan="12" class="group-header">Тазы — Стандартный — Микс</td>
+      </tr>
+    
+        <tr class="participant-row">
+          <td>1</td>
+          <td>47</td>
+          <td>Тазы</td>
+          <td>Стандартный</td>
+          <td></td>
+          <td class="dog-name-cell">СЭХРА ЭЛЬ АЛИЯ /<br>SEHRA EL ALIYA</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td>Чемпион России, CACL Br</td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>2</td>
+          <td>44</td>
+          <td>Тазы</td>
+          <td>Стандартный</td>
+          <td></td>
+          <td class="dog-name-cell">СЭХРА ЭЛЬ АМИР /<br>SEHRA EL AMIR</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td>CACL</td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td></td>
+          <td>45</td>
+          <td>Тазы</td>
+          <td>Стандартный</td>
+          <td></td>
+          <td class="dog-name-cell">СЭХРА ЭЛЬ АРМАН МИРАС /<br>SEHRA EL ARMAN MIRAS</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td></td>
+        </tr>
+      
+      <tr class="group-row">
+        <td colspan="12" class="group-header">Уиппет — Юниоры — Кобели</td>
+      </tr>
+    
+        <tr class="participant-row">
+          <td>1</td>
+          <td>48</td>
+          <td>Уиппет</td>
+          <td>Юниоры</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">URAL SPIRIT SALAMANDER</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td></td>
+        </tr>
+      
+      <tr class="group-row">
+        <td colspan="12" class="group-header">Уиппет — Стандартный — Кобели</td>
+      </tr>
+    
+        <tr class="participant-row">
+          <td>1</td>
+          <td>51</td>
+          <td>Уиппет</td>
+          <td>Стандартный</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">GHAN BURI GHANS WARLOCK</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td>Чемпион России, CACL Br</td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>2</td>
+          <td>49</td>
+          <td>Уиппет</td>
+          <td>Стандартный</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">АРГО АСТРУМ /<br>ARGO ASTRUM</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td>CACL</td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>3</td>
+          <td>56</td>
+          <td>Уиппет</td>
+          <td>Стандартный</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">СТАНГЕРС ЛАНД ЗАМИР /<br>STANGERS LAND ZAMIR</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>4</td>
+          <td>50</td>
+          <td>Уиппет</td>
+          <td>Стандартный</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">АТОМИК ШТАРКЕ ВИНД /<br>ATOMIC STARKE WIND</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>5</td>
+          <td>54</td>
+          <td>Уиппет</td>
+          <td>Стандартный</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">СТАНГЕРС ЛАНД ДАКАР РАЛЛИ /<br>STANGERS LAND DAKAR RALLY</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>6</td>
+          <td>55</td>
+          <td>Уиппет</td>
+          <td>Стандартный</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">СТАНГЕРС ЛАНД ВЕРСАЛЬ ШАРМАН /<br>STANGERS LAND VERSAILLES CHARMAN</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>7</td>
+          <td>53</td>
+          <td>Уиппет</td>
+          <td>Стандартный</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">КУЛИКОВО ПОЛЕ ДАНТЕ /<br>KULIKOVO POLE DANTE</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>8</td>
+          <td>52</td>
+          <td>Уиппет</td>
+          <td>Стандартный</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">GUY</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td></td>
+          <td>57</td>
+          <td>Уиппет</td>
+          <td>Стандартный</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">YUNION SVETLYJ</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td></td>
+        </tr>
+      
+      <tr class="group-row">
+        <td colspan="12" class="group-header">Уиппет — Стандартный — Суки</td>
+      </tr>
+    
+        <tr class="participant-row">
+          <td>1</td>
+          <td>68</td>
+          <td>Уиппет</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">СТАНГЕРС ЛАНД ВАЛЬДИВИЯ /<br>STANGERS LAND VALDIVIA</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td>Чемпион России</td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>2</td>
+          <td>70</td>
+          <td>Уиппет</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">WITCH OF SHERWOOD</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td>CACL</td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>3</td>
+          <td>69</td>
+          <td>Уиппет</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">УХОУЛ УОРЛД ИН ХЕ АЙЗ /<br>WHOLE WORLD IN HER EYES</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>4</td>
+          <td>65</td>
+          <td>Уиппет</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">DIADEMI READY GO</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>5</td>
+          <td>60</td>
+          <td>Уиппет</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">АМАЗОНКА ДОЧЬ ЧАРОДЕЯ /<br>AMAZONKA DOCH CHARODEYA</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>6</td>
+          <td>67</td>
+          <td>Уиппет</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">СТАНГЕРС ЛАНД ГОЛДИ ТРИШ /<br>STANGERS LAND GOLDIE TRISH</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>7</td>
+          <td>64</td>
+          <td>Уиппет</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">ДЕНВЕР КЭННЭЛС ПЭТТИ /<br>DENWER KENNELS PATTI</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>8</td>
+          <td>61</td>
+          <td>Уиппет</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">ДЕЙТОНА МИСТИК ДРАЙВ /<br>DAYTONA MYSTIC DRIVE</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>9</td>
+          <td>62</td>
+          <td>Уиппет</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">ДЕНСИ МИДНАЙТ САН /<br>DENSI MIDNIGHT SUN</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>10</td>
+          <td>63</td>
+          <td>Уиппет</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">ДЕНВЕР КЭННЭЛС БОББИ БРАУН /<br>DENWER KENNELS BOBBIE BROWN</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>11</td>
+          <td>58</td>
+          <td>Уиппет</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">АФИНА ФИЕСТА СВИТ ТАНГО /<br>AFINA FIESTA SWEET TANGO</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td></td>
+          <td>59</td>
+          <td>Уиппет</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">АЙВИ ЛУННЫЙ СВЕТ /<br>AJVI LUNNYJ SVET</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td></td>
+        </tr>
+      
+      <tr class="group-row">
+        <td colspan="12" class="group-header">Уиппет — Стандартный-спринтеры — Суки</td>
+      </tr>
+    
+        <tr class="participant-row">
+          <td>1</td>
+          <td>66</td>
+          <td>Уиппет</td>
+          <td>Стандартный-<br>спринтеры</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">MY WILD ON THE GO</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td>Чемпион России</td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>2</td>
+          <td>82</td>
+          <td>Уиппет</td>
+          <td>Стандартный-<br>спринтеры</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">СТАНГЕРС ЛАНД ЕЖЕВИКА /<br>STANGERS LAND EZHEVIKA</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td>CACL</td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>3</td>
+          <td>79</td>
+          <td>Уиппет</td>
+          <td>Стандартный-<br>спринтеры</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">ЛАКШЕРИ ВИПП НЬЮ БЕЛЛЕ /<br>LUXURY WHIPP NEW BELLE</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>5</td>
+          <td>83</td>
+          <td>Уиппет</td>
+          <td>Стандартный-<br>спринтеры</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">СТАНГЕРС ЛАНД ЗЛАТОСЛАВА /<br>STANGERS LAND ZLATOSLAVA</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>6</td>
+          <td>81</td>
+          <td>Уиппет</td>
+          <td>Стандартный-<br>спринтеры</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">ЛАКШЕРИ ВИПП ОКСИ /<br>LUXURY WHIPP OXXY</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>7</td>
+          <td>80</td>
+          <td>Уиппет</td>
+          <td>Стандартный-<br>спринтеры</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">ЛАКШЕРИ ВИПП ОМЕГА /<br>LUXURY WHIPP OMEGA</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td></td>
+          <td>78</td>
+          <td>Уиппет</td>
+          <td>Стандартный-<br>спринтеры</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">CHIA ESSI TUATARA STRAYKER</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td></td>
+        </tr>
+      
+      <tr class="group-row">
+        <td colspan="12" class="group-header">Уиппет — Стандартный-спринтеры — Кобели</td>
+      </tr>
+    
+        <tr class="participant-row">
+          <td>1</td>
+          <td>71</td>
+          <td>Уиппет</td>
+          <td>Стандартный-<br>спринтеры</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">ALPHAS LEGACY ALTAIR</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td>Чемпион России, CACL Br</td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>2</td>
+          <td>73</td>
+          <td>Уиппет</td>
+          <td>Стандартный-<br>спринтеры</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">СТАНГЕРС ЛАНД ЗАДОР /<br>STANGERS LAND ZADOR</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td>CACL</td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>3</td>
+          <td>74</td>
+          <td>Уиппет</td>
+          <td>Стандартный-<br>спринтеры</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">СТАНГЕРС ЛАНД ЗОДИАК /<br>STANGERS LAND ZODIAK</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>4</td>
+          <td>76</td>
+          <td>Уиппет</td>
+          <td>Стандартный-<br>спринтеры</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">VARLOK YARKAYA MOLNIYA</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>5</td>
+          <td>75</td>
+          <td>Уиппет</td>
+          <td>Стандартный-<br>спринтеры</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">СТОРМ РАЙС /<br>STORM RISE</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>6</td>
+          <td>72</td>
+          <td>Уиппет</td>
+          <td>Стандартный-<br>спринтеры</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">ЛАКШЕРИ ВИПП ОРИОН /<br>LUXURY WHIPP ORION</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>7</td>
+          <td>77</td>
+          <td>Уиппет</td>
+          <td>Стандартный-<br>спринтеры</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">ВАРВАР КОНАН БЕССТРАШНЫЙ /<br>VARVAR KONAN BESSTRASHNYI</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td>CC</td>
+        </tr>
+      
+      <tr class="group-row">
+        <td colspan="12" class="group-header">Фараонова собака — Стандартный — Микс</td>
+      </tr>
+    
+        <tr class="participant-row">
+          <td>1</td>
+          <td>86</td>
+          <td>Фараонова собака</td>
+          <td>Стандартный</td>
+          <td></td>
+          <td class="dog-name-cell">РОКСИ ИФЕ ШАНИ ИЗ ШНЕЙДЕР РИЧ /<br>ROKSI IFE SHANI IZ SCHNEIDER RICH</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td>Чемпион России, CACL Br</td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>2</td>
+          <td>85</td>
+          <td>Фараонова собака</td>
+          <td>Стандартный</td>
+          <td></td>
+          <td class="dog-name-cell">АМЕНЕМХЕТ АНДОРА ТА МАЛЬТА /<br>AMENEMHET ANDORA TA MALTA</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td>CACL</td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>3</td>
+          <td>84</td>
+          <td>Фараонова собака</td>
+          <td>Стандартный</td>
+          <td></td>
+          <td class="dog-name-cell">GALMAD STAR VEDAGOR</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td>CC</td>
+        </tr>
+      
+      <tr class="group-row">
+        <td colspan="12" class="group-header">Чирнеко дель Этна — Стандартный — Кобели</td>
+      </tr>
+    
+        <tr class="participant-row">
+          <td>1</td>
+          <td>88</td>
+          <td>Чирнеко дель Этна</td>
+          <td>Стандартный</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">ИРКИСС СИД /<br>IRKISS SID</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td>Чемпион России, CACL Br</td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>2</td>
+          <td>87</td>
+          <td>Чирнеко дель Этна</td>
+          <td>Стандартный</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">CARUSO COCCIO DEI VIGNAZZI</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td>CACL</td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>3</td>
+          <td>89</td>
+          <td>Чирнеко дель Этна</td>
+          <td>Стандартный</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">ВЕНТУРА /<br>VENTURA</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td>CC</td>
+        </tr>
+      
+      <tr class="group-row">
+        <td colspan="12" class="group-header">Чирнеко дель Этна — Стандартный — Суки</td>
+      </tr>
+    
+        <tr class="participant-row">
+          <td>1</td>
+          <td>91</td>
+          <td>Чирнеко дель Этна</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">ИРКИСС СОФИЯ /<br>IRKISS SOPHIA</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td>Чемпион России</td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>2</td>
+          <td>92</td>
+          <td>Чирнеко дель Этна</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">РОССО БОРЕАЛЕ ИРКИСС /<br>ROSSO BOREALE IRKISS</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td>CACL</td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td></td>
+          <td>90</td>
+          <td>Чирнеко дель Этна</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">ИРКИСС СЛАВА /<br>IRKISS SLAVA</td>
+          <td>350</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td></td>
+        </tr>
+      
+    </tbody>
+  </table>
+</div>
+</body>
+</html>

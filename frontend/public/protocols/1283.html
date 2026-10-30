@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>ВГОО - Клуб собаководства &quot;Сириус&quot; — ПЧРКФ (Бега борзых), 30.08.2025 (Вологодская область, Вологда)</title>
+  <style>
+    @page {
+      size: A4 landscape;
+      margin: 1.5mm 1.5mm 1.5mm 1.5mm;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      background: #ffffff;
+      color: #000000;
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+      font-size: 11pt;
+      line-height: 1.25;
+    }
+    table.protocol-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 1.5px;
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+    th, td {
+      border-top: 1px solid #4c4c4c;
+      border-left: 1px solid #4c4c4c;
+      border-right: 1px solid #b2b2b2;
+      border-bottom: 1px solid #b2b2b2;
+      background-color: #ffffff;
+      padding: 4px 3px;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 10.5pt;
+      font-weight: normal;
+    }
+    tr.top-title-row td {
+      font-size: 14pt;
+      font-weight: bold;
+      padding: 7px 4px;
+    }
+    tr.meta-row td {
+      font-size: 10.5pt;
+      font-weight: normal;
+      padding: 3.5px 4px;
+      text-align: center;
+    }
+    tr.col-header td {
+      font-size: 10pt;
+      font-weight: normal;
+      padding: 4px 1px;
+    }
+    tr.group-row {
+      page-break-inside: avoid;
+      page-break-after: avoid;
+    }
+    td.group-header {
+      background-color: #c0c0c0 !important;
+      font-size: 11.5pt;
+      font-weight: normal;
+      text-align: center;
+      padding: 4.5px 3px;
+    }
+    td.dog-name-cell {
+      text-align: center;
+      font-size: 10.5pt;
+      line-height: 1.25;
+      padding: 4px 4px;
+    }
+    td.time-speed-cell {
+      font-size: 9.5pt;
+      line-height: 1.15;
+      padding: 3px 2px;
+    }
+    td.status-cell {
+      text-align: center;
+      font-style: italic;
+      font-size: 10pt;
+      padding: 4px 3px;
+    }
+    tr.dns-row td {
+      background-color: #c0c0c0 !important;
+    }
+    tr.participant-row {
+      page-break-inside: avoid;
+    }
+
+    @media print {
+      @page {
+        size: A4 landscape;
+        margin: 1.5mm 1.5mm 1.5mm 1.5mm;
+      }
+      html, body {
+        font-size: 8.5pt;
+        line-height: 1.15;
+      }
+      th, td {
+        font-size: 8.5pt;
+        padding: 2.5px 1.5px;
+      }
+      tr.top-title-row td {
+        font-size: 11pt;
+        padding: 3px;
+      }
+      tr.meta-row td {
+        font-size: 8.5pt;
+        padding: 2px 2px;
+      }
+      tr.col-header td {
+        font-size: 8.5pt;
+        padding: 2px 1px;
+      }
+      td.group-header {
+        font-size: 9.5pt;
+        padding: 2.5px 2px;
+      }
+      td.dog-name-cell {
+        font-size: 8.5pt;
+        padding: 2px 3px;
+      }
+      td.time-speed-cell {
+        font-size: 7.5pt;
+        line-height: 1.1;
+        padding: 1.5px 1px;
+      }
+      td.status-cell {
+        font-size: 8.5pt;
+      }
+    }
+  
+    /* Toolbar & Old Money screen preview styles */
+    .cs-toolbar {
+      position: sticky;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #faf8f5;
+      border-bottom: 1px solid #e2d9cd;
+      padding: 10px 18px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      z-index: 9999;
+      box-shadow: 0 1px 4px rgba(40, 30, 20, 0.05);
+    }
+    .cs-toolbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+    .cs-toolbar-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+    .cs-toolbar-divider {
+      width: 1px;
+      height: 18px;
+      background: #d4c5b3;
+    }
+    .cs-toolbar-brand {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #8b5e34;
+    }
+    .cs-toolbar-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: #2b2621;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .cs-toolbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+    .cs-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid #d4c5b3;
+      background: #ffffff;
+      color: #4a3e33;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .cs-btn:hover {
+      background: #f4eee5;
+      border-color: #ba9d7e;
+      color: #2b2621;
+    }
+    .cs-btn-back {
+      background: #ffffff;
+      color: #8b5e34;
+      border-color: #d4c5b3;
+    }
+    .cs-btn-back:hover {
+      background: #f4eee5;
+      border-color: #8b5e34;
+    }
+    .cs-btn-primary {
+      background: #8b5e34;
+      border-color: #724c28;
+      color: #ffffff;
+    }
+    .cs-btn-primary:hover {
+      background: #724c28;
+      border-color: #5b3c1e;
+      color: #ffffff;
+    }
+    @media print {
+      .cs-toolbar {
+        display: none !important;
+      }
+      body {
+        background: #ffffff !important;
+        padding: 0 !important;
+      }
+      .protocol-container {
+        padding: 0 !important;
+        display: block !important;
+      }
+      table.protocol-table {
+        margin: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
+      }
+    }
+    @media screen {
+      body {
+        background: #f4f1ea;
+        min-height: 100vh;
+      }
+      .protocol-container {
+        padding: 20px 16px 40px;
+        display: flex;
+        justify-content: center;
+      }
+      table.protocol-table {
+        margin: 0 auto;
+        background: #ffffff;
+        box-shadow: 0 4px 16px rgba(43, 38, 33, 0.08);
+        border: 1px solid #dcd4c8;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+<header class="cs-toolbar">
+  <div class="cs-toolbar-inner">
+    <div class="cs-toolbar-left">
+      <a href="/event/1283" class="cs-btn cs-btn-back" title="Вернуться к результатам на сайте">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        <span>К состязанию</span>
+      </a>
+      <span class="cs-toolbar-divider"></span>
+      <span class="cs-toolbar-brand">CoursingStats</span>
+      <span class="cs-toolbar-title">ВГОО - Клуб собаководства &quot;Сириус&quot; — ПЧРКФ (Бега борзых)</span>
+    </div>
+    <div class="cs-toolbar-actions">
+      
+      <a href="https://drive.google.com/file/d/1HIQBq2xDLWDz1I8XlctmpCevHMG7VCXZ/view" target="_blank" rel="noopener noreferrer" class="cs-btn" title="Официальный PDF на Google Диске">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+        <span>Скачать PDF</span>
+      </a>
+      
+      <a href="https://drive.google.com/file/d/1h7pLG6cmXKpXb6K5XqiMF16cox7oYtvy/view" target="_blank" rel="noopener noreferrer" class="cs-btn" title="Каталог участников">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+        <span>Каталог</span>
+      </a>
+      
+      <button onclick="window.print()" class="cs-btn cs-btn-primary" title="Печать или сохранение в PDF (Ctrl+P)">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></svg>
+        <span>Печать</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="protocol-container">
+  <table class="protocol-table">
+    
+    <colgroup>
+      <col style="width: 3.0%;">
+      <col style="width: 2.5%;">
+      <col style="width: 9.5%;">
+      <col style="width: 7.5%;">
+      <col style="width: 3.8%;">
+      <col style="width: 21.7%;">
+      <col style="width: 4.0%;">
+      <col style="width: 3.5%;">
+      <col style="width: 3.0%;">
+      <col style="width: 7.0%;">
+      <col style="width: 3.5%;">
+      <col style="width: 3.0%;">
+      <col style="width: 7.0%;">
+      <col style="width: 3.5%;">
+      <col style="width: 3.0%;">
+      <col style="width: 7.0%;">
+      <col style="width: 2.3%;">
+      <col style="width: 5.2%;">
+    </colgroup>
+    <tbody>
+      
+    <tr class="top-title-row">
+      <td colspan="18">ВГОО - Клуб собаководства &quot;Сириус&quot; — ПЧРКФ (Бега борзых), 30.08.2025 (Вологодская область, Вологда)</td>
+    </tr>
+    <tr class="meta-row">
+      <td colspan="18"><b>Организатор:</b> ВГОО - Клуб собаководства &quot;Сириус&quot;</td>
+    </tr>
+    <tr class="meta-row">
+      <td colspan="18"><b>Судьи:</b> Козлова И.В.</td>
+    </tr>
+    <tr class="meta-row">
+      <td colspan="18"><b>Документы:</b> <a href="https://drive.google.com/file/d/1h7pLG6cmXKpXb6K5XqiMF16cox7oYtvy/view" target="_blank" rel="noopener">Каталог участников</a> &bull; <a href="https://drive.google.com/file/d/1HIQBq2xDLWDz1I8XlctmpCevHMG7VCXZ/view" target="_blank" rel="noopener">Официальный PDF</a></td>
+    </tr>
+    
+    <tr class="col-header">
+      <td>Место</td>
+      <td>№</td>
+      <td>Порода</td>
+      <td>Класс</td>
+      <td>Пол</td>
+      <td>Кличка</td>
+      <td>Дистанция<br>(м)</td>
+      <td>Забег<br>1</td>
+      <td>Попона</td>
+      <td>Время 1<br>Скорость</td>
+      <td>Забег<br>2</td>
+      <td>Попона</td>
+      <td>Время 2<br>Скорость</td>
+      <td>Забег<br>3</td>
+      <td>Попона</td>
+      <td>Время 3<br>Скорость</td>
+      <td>СС</td>
+      <td>Титул</td>
+    </tr>
+  
+      <tr class="group-row">
+        <td colspan="18" class="group-header">Родезийский риджбек — Стандартный — Кобели</td>
+      </tr>
+    
+        <tr class="participant-row">
+          <td>1</td>
+          <td>5</td>
+          <td>Родезийский риджбек</td>
+          <td>Стандартный</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">WHEATEN ROAD VERDIS NOBILIS</td>
+          <td>344</td>
+          
+          <td>1</td>
+          <td style="background-color: #ffffff !important; color: #000000; font-weight: bold; border: 1px solid #4c4c4c;">3</td>
+          <td class="time-speed-cell">29.33 с<br>11.73 м/с<br>42.223 км/ч</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>15</td>
+          <td style="background-color: #ff0000 !important; color: #ffffff; font-weight: bold; ">1</td>
+          <td class="time-speed-cell">29.20 с<br>11.78 м/с<br>42.411 км/ч</td>
+          
+          <td>ПЧРКФ РК</td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>2</td>
+          <td>3</td>
+          <td>Родезийский риджбек</td>
+          <td>Стандартный</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">ЭЛЬ ТОРИ САПФИР /<br>EL TORI SAPPHIRE</td>
+          <td>344</td>
+          
+          <td>1</td>
+          <td style="background-color: #00a2e8 !important; color: #000000; font-weight: bold; ">2</td>
+          <td class="time-speed-cell">30.44 с<br>11.30 м/с<br>40.683 км/ч</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>15</td>
+          <td style="background-color: #00a2e8 !important; color: #000000; font-weight: bold; ">2</td>
+          <td class="time-speed-cell">29.98 с<br>11.47 м/с<br>41.308 км/ч</td>
+          
+          <td></td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>3</td>
+          <td>4</td>
+          <td>Родезийский риджбек</td>
+          <td>Стандартный</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">ГАКЕРУ АБУБАКАР /<br>GAKERU ABUBAKAR</td>
+          <td>344</td>
+          
+          <td>1</td>
+          <td style="background-color: #000000 !important; color: #ffffff; font-weight: bold; ">4</td>
+          <td class="time-speed-cell">34.52 с<br>9.97 м/с<br>35.875 км/ч</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>15</td>
+          <td style="background-color: #ffffff !important; color: #000000; font-weight: bold; border: 1px solid #4c4c4c;">3</td>
+          <td class="time-speed-cell">34.85 с<br>9.87 м/с<br>35.535 км/ч</td>
+          
+          <td></td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td></td>
+          <td>1</td>
+          <td>Родезийский риджбек</td>
+          <td>Стандартный</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">ARIES KHAN SAMUEL FORSAGE JACKSON</td>
+          <td>344</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="time-speed-cell status-cell">Сошёл</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td></td>
+        </tr>
+      
+      <tr class="group-row">
+        <td colspan="18" class="group-header">Русская псовая борзая — Стандартный — Суки</td>
+      </tr>
+    
+        <tr class="participant-row">
+          <td>1</td>
+          <td>2</td>
+          <td>Русская псовая борзая</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">SOKOL &amp; K EFROSINIYA</td>
+          <td>344</td>
+          
+          <td>12</td>
+          <td style="background-color: #ffffff !important; color: #000000; font-weight: bold; border: 1px solid #4c4c4c;">3</td>
+          <td class="time-speed-cell">28.52 с<br>12.06 м/с<br>43.422 км/ч</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>21</td>
+          <td style="background-color: #00a2e8 !important; color: #000000; font-weight: bold; ">2</td>
+          <td class="time-speed-cell">27.02 с<br>12.73 м/с<br>45.833 км/ч</td>
+          
+          <td>ПЧРКФ РК</td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>2</td>
+          <td>3</td>
+          <td>Русская псовая борзая</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">З ДАРА /<br>Z DARA</td>
+          <td>344</td>
+          
+          <td>12</td>
+          <td style="background-color: #ff0000 !important; color: #ffffff; font-weight: bold; ">1</td>
+          <td class="time-speed-cell">27.78 с<br>12.38 м/с<br>44.579 км/ч</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>21</td>
+          <td style="background-color: #ff0000 !important; color: #ffffff; font-weight: bold; ">1</td>
+          <td class="time-speed-cell">27.26 с<br>12.62 м/с<br>45.429 км/ч</td>
+          
+          <td></td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td></td>
+          <td>1</td>
+          <td>Русская псовая борзая</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">БЕАРС ВИКТОРИ КРЫЛАТАЯ ЛЕГЕНДА /<br>BEARS VICTORY KRYLATAYA LEGENDA</td>
+          <td>344</td>
+          
+          <td>12</td>
+          <td style="background-color: #00a2e8 !important; color: #000000; font-weight: bold; ">2</td>
+          <td class="time-speed-cell">29.21 с<br>11.78 м/с<br>42.396 км/ч</td>
+          <td></td>
+          <td></td>
+          <td class="time-speed-cell status-cell">Сошла</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td></td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td></td>
+          <td>4</td>
+          <td>Русская псовая борзая</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">ГУЛЯ /<br>GULYA</td>
+          <td>344</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="time-speed-cell status-cell">Сошла</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td></td>
+        </tr>
+      
+      <tr class="group-row">
+        <td colspan="18" class="group-header">Уиппет — Юниоры — Суки</td>
+      </tr>
+    
+        <tr class="participant-row">
+          <td>1</td>
+          <td>1</td>
+          <td>Уиппет</td>
+          <td>Юниоры</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">АНТИК ГОДДЕС /<br>ANTIQUE GODDESS</td>
+          <td>344</td>
+          
+          <td>3</td>
+          <td style="background-color: #ff0000 !important; color: #ffffff; font-weight: bold; ">1</td>
+          <td class="time-speed-cell">29.01 с<br>11.86 м/с<br>42.689 км/ч</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>17</td>
+          <td style="background-color: #ff0000 !important; color: #ffffff; font-weight: bold; ">1</td>
+          <td class="time-speed-cell">26.72 с<br>12.87 м/с<br>46.347 км/ч</td>
+          
+          <td></td>
+          <td></td>
+        </tr>
+      
+      <tr class="group-row">
+        <td colspan="18" class="group-header">Уиппет — Стандартный — Кобели</td>
+      </tr>
+    
+        <tr class="participant-row">
+          <td>1</td>
+          <td>5</td>
+          <td>Уиппет</td>
+          <td>Стандартный</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">YUNION SVETLYJ</td>
+          <td>344</td>
+          
+          <td>5</td>
+          <td style="background-color: #00a2e8 !important; color: #000000; font-weight: bold; ">2</td>
+          <td class="time-speed-cell">25.55 с<br>13.46 м/с<br>48.470 км/ч</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>19</td>
+          <td style="background-color: #ff0000 !important; color: #ffffff; font-weight: bold; ">1</td>
+          <td class="time-speed-cell">25.66 с<br>13.41 м/с<br>48.262 км/ч</td>
+          
+          <td>ПЧРКФ РК</td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>2</td>
+          <td>4</td>
+          <td>Уиппет</td>
+          <td>Стандартный</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">GUY</td>
+          <td>344</td>
+          
+          <td>4</td>
+          <td style="background-color: #ff0000 !important; color: #ffffff; font-weight: bold; ">1</td>
+          <td class="time-speed-cell">27.35 с<br>12.58 м/с<br>45.280 км/ч</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>19</td>
+          <td style="background-color: #00a2e8 !important; color: #000000; font-weight: bold; ">2</td>
+          <td class="time-speed-cell">25.88 с<br>13.29 м/с<br>47.852 км/ч</td>
+          
+          <td>CACLBr</td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>3</td>
+          <td>6</td>
+          <td>Уиппет</td>
+          <td>Стандартный</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">YUVENTUS SKORYJ</td>
+          <td>344</td>
+          
+          <td>4</td>
+          <td style="background-color: #ffffff !important; color: #000000; font-weight: bold; border: 1px solid #4c4c4c;">3</td>
+          <td class="time-speed-cell">27.54 с<br>12.49 м/с<br>44.967 км/ч</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>19</td>
+          <td style="background-color: #ffffff !important; color: #000000; font-weight: bold; border: 1px solid #4c4c4c;">3</td>
+          <td class="time-speed-cell">26.20 с<br>13.13 м/с<br>47.267 км/ч</td>
+          
+          <td></td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>4</td>
+          <td>2</td>
+          <td>Уиппет</td>
+          <td>Стандартный</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">ДОГОНИ ВЕТЕР НЕБЕСНЫЙ ЭТЮД /<br>DOGONI VETER NEBESNYI ETUDE</td>
+          <td>344</td>
+          
+          <td>5</td>
+          <td style="background-color: #ff0000 !important; color: #ffffff; font-weight: bold; ">1</td>
+          <td class="time-speed-cell">27.89 с<br>12.33 м/с<br>44.403 км/ч</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>19</td>
+          <td style="background-color: #000000 !important; color: #ffffff; font-weight: bold; ">4</td>
+          <td class="time-speed-cell">27.89 с<br>12.33 м/с<br>44.403 км/ч</td>
+          
+          <td></td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td></td>
+          <td>3</td>
+          <td>Уиппет</td>
+          <td>Стандартный</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">ДОГОНИ ВЕТЕР НЕЗЕМНОЙ СОУЛ /<br>DOGONI VETER NEZEMNOY SOUL</td>
+          <td>344</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="time-speed-cell status-cell">Сошёл</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td></td>
+        </tr>
+      
+      <tr class="group-row">
+        <td colspan="18" class="group-header">Родезийский риджбек — Стандартный — Суки</td>
+      </tr>
+    
+        <tr class="participant-row">
+          <td>1</td>
+          <td>7</td>
+          <td>Родезийский риджбек</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">АРИЕС ХАН РИВЬЕРА АЛЬ РИША САНГРИЭЛЬ /<br>ARIES KHAN RIVIERA AL RISHA SANGREAL</td>
+          <td>344</td>
+          
+          <td>2</td>
+          <td style="background-color: #00a2e8 !important; color: #000000; font-weight: bold; ">2</td>
+          <td class="time-speed-cell">28.37 с<br>12.13 м/с<br>43.652 км/ч</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>16</td>
+          <td style="background-color: #ff0000 !important; color: #ffffff; font-weight: bold; ">1</td>
+          <td class="time-speed-cell">28.29 с<br>12.16 м/с<br>43.775 км/ч</td>
+          
+          <td>ПЧРКФ РК</td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>2</td>
+          <td>8</td>
+          <td>Родезийский риджбек</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">АРИЕС ХАН СКАДИ САРАМА ФАСТ &amp; ФЬЮРИОС /<br>ARIES KHAN SKADI SARAMA FAST &amp; FURIOUS</td>
+          <td>344</td>
+          
+          <td>2</td>
+          <td style="background-color: #ffffff !important; color: #000000; font-weight: bold; border: 1px solid #4c4c4c;">3</td>
+          <td class="time-speed-cell">29.17 с<br>11.79 м/с<br>42.455 км/ч</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>16</td>
+          <td style="background-color: #00a2e8 !important; color: #000000; font-weight: bold; ">2</td>
+          <td class="time-speed-cell">28.52 с<br>12.06 м/с<br>43.422 км/ч</td>
+          
+          <td></td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>3</td>
+          <td>6</td>
+          <td>Родезийский риджбек</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">ARIES KHAN PHREIA PASIPHAE</td>
+          <td>344</td>
+          
+          <td>2</td>
+          <td style="background-color: #000000 !important; color: #ffffff; font-weight: bold; ">4</td>
+          <td class="time-speed-cell">30.21 с<br>11.39 м/с<br>40.993 км/ч</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>16</td>
+          <td style="background-color: #000000 !important; color: #ffffff; font-weight: bold; ">4</td>
+          <td class="time-speed-cell">29.34 с<br>11.72 м/с<br>42.209 км/ч</td>
+          
+          <td></td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td></td>
+          <td>9</td>
+          <td>Родезийский риджбек</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">ТИНА ТРЕЙДИНГ НИККИ ФРАНЦИСКА /<br>TINA TRADING NIKKI FRANCISKA</td>
+          <td>344</td>
+          
+          <td>2</td>
+          <td style="background-color: #ff0000 !important; color: #ffffff; font-weight: bold; ">1</td>
+          <td class="time-speed-cell">29.72 с<br>11.57 м/с<br>41.669 км/ч</td>
+          <td></td>
+          <td></td>
+          <td class="time-speed-cell status-cell">Сошла</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td></td>
+        </tr>
+      
+      <tr class="group-row">
+        <td colspan="18" class="group-header">Уиппет — Стандартный — Суки</td>
+      </tr>
+    
+        <tr class="participant-row">
+          <td>1</td>
+          <td>9</td>
+          <td>Уиппет</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">ФЕЕЛ МАЙ ХЕАРТ ДРИМФАЕР УНА /<br>FEEL MY HEART DREMFYRE UNA</td>
+          <td>344</td>
+          
+          <td>6</td>
+          <td style="background-color: #ffffff !important; color: #000000; font-weight: bold; border: 1px solid #4c4c4c;">3</td>
+          <td class="time-speed-cell">25.92 с<br>13.27 м/с<br>47.778 км/ч</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>18</td>
+          <td style="background-color: #ff0000 !important; color: #ffffff; font-weight: bold; ">1</td>
+          <td class="time-speed-cell">24.25 с<br>14.19 м/с<br>51.068 км/ч</td>
+          
+          <td>ПЧРКФ РК</td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>2</td>
+          <td>8</td>
+          <td>Уиппет</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">ФЕЕЛ МАЙ ХЕАРТ ДЕЙНЕРИС ШТОРМБОРН /<br>FEEL MY HEART DAENERYS STORMBORN</td>
+          <td>344</td>
+          
+          <td>6</td>
+          <td style="background-color: #ff0000 !important; color: #ffffff; font-weight: bold; ">1</td>
+          <td class="time-speed-cell">26.88 с<br>12.80 м/с<br>46.071 км/ч</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>18</td>
+          <td style="background-color: #000000 !important; color: #ffffff; font-weight: bold; ">4</td>
+          <td class="time-speed-cell">24.71 с<br>13.92 м/с<br>50.117 км/ч</td>
+          
+          <td>CACLBr</td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>3</td>
+          <td>11</td>
+          <td>Уиппет</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">ZOELLA VLAPAN</td>
+          <td>344</td>
+          
+          <td>7</td>
+          <td style="background-color: #ff0000 !important; color: #ffffff; font-weight: bold; ">1</td>
+          <td class="time-speed-cell">26.21 с<br>13.12 м/с<br>47.249 км/ч</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>18</td>
+          <td style="background-color: #00a2e8 !important; color: #000000; font-weight: bold; ">2</td>
+          <td class="time-speed-cell">25.51 с<br>13.48 м/с<br>48.546 км/ч</td>
+          
+          <td></td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>4</td>
+          <td>10</td>
+          <td>Уиппет</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">СТАНГЕРС ЛАНД ДАРИНГ ГРЕЙТЛИ /<br>STANGERS LAND DARING GREATLY</td>
+          <td>344</td>
+          
+          <td>6</td>
+          <td style="background-color: #00a2e8 !important; color: #000000; font-weight: bold; ">2</td>
+          <td class="time-speed-cell">26.49 с<br>12.99 м/с<br>46.750 км/ч</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>18</td>
+          <td style="background-color: #ffffff !important; color: #000000; font-weight: bold; border: 1px solid #4c4c4c;">3</td>
+          <td class="time-speed-cell">26.03 с<br>13.22 м/с<br>47.576 км/ч</td>
+          
+          <td></td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td></td>
+          <td>7</td>
+          <td>Уиппет</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">DIADEMI READY GO</td>
+          <td>344</td>
+          
+          <td>7</td>
+          <td style="background-color: #00a2e8 !important; color: #000000; font-weight: bold; ">2</td>
+          <td class="time-speed-cell">25.30 с<br>13.60 м/с<br>48.949 км/ч</td>
+          <td></td>
+          <td></td>
+          <td class="time-speed-cell status-cell">Снята владельцем</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td></td>
+        </tr>
+      
+      <tr class="group-row">
+        <td colspan="18" class="group-header">Уиппет — Стандартный-спринтеры — Кобели</td>
+      </tr>
+    
+        <tr class="participant-row">
+          <td>1</td>
+          <td>14</td>
+          <td>Уиппет</td>
+          <td>Стандартный-<br>спринтеры</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">СТАНГЕРС ЛАНД ЗАДОР /<br>STANGERS LAND ZADOR</td>
+          <td>344</td>
+          
+          <td>9</td>
+          <td style="background-color: #00a2e8 !important; color: #000000; font-weight: bold; ">2</td>
+          <td class="time-speed-cell">26.02 с<br>13.22 м/с<br>47.594 км/ч</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>20</td>
+          <td style="background-color: #00a2e8 !important; color: #000000; font-weight: bold; ">2</td>
+          <td class="time-speed-cell">25.05 с<br>13.73 м/с<br>49.437 км/ч</td>
+          
+          <td>ПЧРКФ РК</td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>2</td>
+          <td>15</td>
+          <td>Уиппет</td>
+          <td>Стандартный-<br>спринтеры</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">VARLOK YARKAYA MOLNIYA</td>
+          <td>344</td>
+          
+          <td>9</td>
+          <td style="background-color: #ff0000 !important; color: #ffffff; font-weight: bold; ">1</td>
+          <td class="time-speed-cell">25.88 с<br>13.29 м/с<br>47.852 км/ч</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>20</td>
+          <td style="background-color: #ff0000 !important; color: #ffffff; font-weight: bold; ">1</td>
+          <td class="time-speed-cell">25.73 с<br>13.37 м/с<br>48.131 км/ч</td>
+          
+          <td>CACLBr</td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>3</td>
+          <td>16</td>
+          <td>Уиппет</td>
+          <td>Стандартный-<br>спринтеры</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">ВАРВАР КОНАН БЕССТРАШНЫЙ /<br>VARVAR KONAN BESSTRASHNYI</td>
+          <td>344</td>
+          
+          <td>8</td>
+          <td style="background-color: #ffffff !important; color: #000000; font-weight: bold; border: 1px solid #4c4c4c;">3</td>
+          <td class="time-speed-cell">27.48 с<br>12.52 м/с<br>45.066 км/ч</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>20</td>
+          <td style="background-color: #ffffff !important; color: #000000; font-weight: bold; border: 1px solid #4c4c4c;">3</td>
+          <td class="time-speed-cell">27.18 с<br>12.66 м/с<br>45.563 км/ч</td>
+          
+          <td></td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td></td>
+          <td>12</td>
+          <td>Уиппет</td>
+          <td>Стандартный-<br>спринтеры</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">ГОЛДИ КРАУНД ИОНСИ БИРГИНСОН /<br>GOLDI KRAUND IONSI BIRGINSON</td>
+          <td>344</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="time-speed-cell status-cell">Мешал сопернику</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td></td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td></td>
+          <td>13</td>
+          <td>Уиппет</td>
+          <td>Стандартный-<br>спринтеры</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">ЛАКШЕРИ ВИПП ОРИОН /<br>LUXURY WHIPP ORION</td>
+          <td>344</td>
+          
+          <td>8</td>
+          <td style="background-color: #00a2e8 !important; color: #000000; font-weight: bold; ">2</td>
+          <td class="time-speed-cell">28.31 с<br>12.15 м/с<br>43.744 км/ч</td>
+          <td></td>
+          <td></td>
+          <td class="time-speed-cell status-cell">Снят<br>владельцем</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td></td>
+        </tr>
+      
+      <tr class="group-row">
+        <td colspan="18" class="group-header">Уиппет — Стандартный-спринтеры — Суки</td>
+      </tr>
+    
+        <tr class="participant-row">
+          <td>1</td>
+          <td>21</td>
+          <td>Уиппет</td>
+          <td>Стандартный-<br>спринтеры</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">СТАНГЕРС ЛАНД ИНТЕРНАЛ ЭНЕРДЖИ /<br>STANGERS LAND INTERNAL ENERGY</td>
+          <td>344</td>
+          
+          <td>10</td>
+          <td style="background-color: #00a2e8 !important; color: #000000; font-weight: bold; ">2</td>
+          <td class="time-speed-cell">26.42 с<br>13.02 м/с<br>46.874 км/ч</td>
+          <td>13</td>
+          <td style="background-color: #ff0000 !important; color: #ffffff; font-weight: bold; ">1</td>
+          <td class="time-speed-cell">25.66 с<br>13.41 м/с<br>48.262 км/ч</td>
+          <td>22</td>
+          <td style="background-color: #ff0000 !important; color: #ffffff; font-weight: bold; ">1</td>
+          <td class="time-speed-cell">25.37 с<br>13.56 м/с<br>48.814 км/ч</td>
+          
+          <td>ПЧРКФ РК</td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>2</td>
+          <td>18</td>
+          <td>Уиппет</td>
+          <td>Стандартный-<br>спринтеры</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">ДЖИПСИ ЛИЛИТ БОГИНЯ НОЧИ /<br>DZHIPSI LILIT BOGINYA NOCHI</td>
+          <td>344</td>
+          
+          <td>10</td>
+          <td style="background-color: #ffffff !important; color: #000000; font-weight: bold; border: 1px solid #4c4c4c;">3</td>
+          <td class="time-speed-cell">27.14 с<br>12.68 м/с<br>45.630 км/ч</td>
+          <td>13</td>
+          <td style="background-color: #ffffff !important; color: #000000; font-weight: bold; border: 1px solid #4c4c4c;">3</td>
+          <td class="time-speed-cell">25.67 с<br>13.40 м/с<br>48.243 км/ч</td>
+          <td>22</td>
+          <td style="background-color: #00a2e8 !important; color: #000000; font-weight: bold; ">2</td>
+          <td class="time-speed-cell">25.61 с<br>13.43 м/с<br>48.356 км/ч</td>
+          
+          <td>CACLBr</td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>3</td>
+          <td>17</td>
+          <td>Уиппет</td>
+          <td>Стандартный-<br>спринтеры</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">БАРСЕЛОНА ЭНКАНТАДОРА /<br>BARCELONA ENCANTADORA</td>
+          <td>344</td>
+          
+          <td>11</td>
+          <td style="background-color: #ff0000 !important; color: #ffffff; font-weight: bold; ">1</td>
+          <td class="time-speed-cell">26.90 с<br>12.79 м/с<br>46.037 км/ч</td>
+          <td>13</td>
+          <td style="background-color: #00a2e8 !important; color: #000000; font-weight: bold; ">2</td>
+          <td class="time-speed-cell">25.91 с<br>13.28 м/с<br>47.796 км/ч</td>
+          <td>22</td>
+          <td style="background-color: #ffffff !important; color: #000000; font-weight: bold; border: 1px solid #4c4c4c;">3</td>
+          <td class="time-speed-cell">26.12 с<br>13.17 м/с<br>47.412 км/ч</td>
+          
+          <td></td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>5</td>
+          <td>20</td>
+          <td>Уиппет</td>
+          <td>Стандартный-<br>спринтеры</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">ЛАКШЕРИ ВИПП ОРХИДЕЯ /<br>LUXURY WHIPP ORKHIDEYA</td>
+          <td>344</td>
+          
+          <td>11</td>
+          <td style="background-color: #00a2e8 !important; color: #000000; font-weight: bold; ">2</td>
+          <td class="time-speed-cell">27.10 с<br>12.69 м/с<br>45.697 км/ч</td>
+          <td>14</td>
+          <td style="background-color: #00a2e8 !important; color: #000000; font-weight: bold; ">2</td>
+          <td class="time-speed-cell">26.88 с<br>12.80 м/с<br>46.071 км/ч</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td>CC</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td></td>
+          <td>19</td>
+          <td>Уиппет</td>
+          <td>Стандартный-<br>спринтеры</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">ЛАКОСТА РАНДЕВУ /<br>LAKOSTE RANDEWO</td>
+          <td>344</td>
+          
+          <td>10</td>
+          <td style="background-color: #ff0000 !important; color: #ffffff; font-weight: bold; ">1</td>
+          <td class="time-speed-cell">26.65 с<br>12.91 м/с<br>46.469 км/ч</td>
+          <td>14</td>
+          <td style="background-color: #ff0000 !important; color: #ffffff; font-weight: bold; ">1</td>
+          <td class="time-speed-cell">26.53 с<br>12.97 м/с<br>46.679 км/ч</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td></td>
+        </tr>
+      
+      <tr class="group-row">
+        <td colspan="18" class="group-header">Неявившиеся участники</td>
+      </tr>
+    
+        <tr class="dns-row">
+          <td></td>
+          <td>2</td>
+          <td>Родезийский риджбек</td>
+          <td>Стандартный</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">АРИЕС ХАН СКИФ СИМУРАН /<br>ARIES KHAN SCYTHIAN SIMURAN</td>
+          <td colspan="12" class="status-cell">Неявка</td>
+        </tr>
+      
+    </tbody>
+  </table>
+</div>
+</body>
+</html>

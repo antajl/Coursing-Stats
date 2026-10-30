@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Уральский беговой клуб — ЧРКФ (Бега борзых), 16.05.2026 (Свердловская область, д. Большое Седельниково)</title>
+  <style>
+    @page {
+      size: A4 landscape;
+      margin: 1.5mm 1.5mm 1.5mm 1.5mm;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      background: #ffffff;
+      color: #000000;
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+      font-size: 11pt;
+      line-height: 1.25;
+    }
+    table.protocol-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 1.5px;
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+    th, td {
+      border-top: 1px solid #4c4c4c;
+      border-left: 1px solid #4c4c4c;
+      border-right: 1px solid #b2b2b2;
+      border-bottom: 1px solid #b2b2b2;
+      background-color: #ffffff;
+      padding: 4px 3px;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 10.5pt;
+      font-weight: normal;
+    }
+    tr.top-title-row td {
+      font-size: 14pt;
+      font-weight: bold;
+      padding: 7px 4px;
+    }
+    tr.meta-row td {
+      font-size: 10.5pt;
+      font-weight: normal;
+      padding: 3.5px 4px;
+      text-align: center;
+    }
+    tr.col-header td {
+      font-size: 10pt;
+      font-weight: normal;
+      padding: 4px 1px;
+    }
+    tr.group-row {
+      page-break-inside: avoid;
+      page-break-after: avoid;
+    }
+    td.group-header {
+      background-color: #c0c0c0 !important;
+      font-size: 11.5pt;
+      font-weight: normal;
+      text-align: center;
+      padding: 4.5px 3px;
+    }
+    td.dog-name-cell {
+      text-align: center;
+      font-size: 10.5pt;
+      line-height: 1.25;
+      padding: 4px 4px;
+    }
+    td.time-speed-cell {
+      font-size: 9.5pt;
+      line-height: 1.15;
+      padding: 3px 2px;
+    }
+    td.status-cell {
+      text-align: center;
+      font-style: italic;
+      font-size: 10pt;
+      padding: 4px 3px;
+    }
+    tr.dns-row td {
+      background-color: #c0c0c0 !important;
+    }
+    tr.participant-row {
+      page-break-inside: avoid;
+    }
+
+    @media print {
+      @page {
+        size: A4 landscape;
+        margin: 1.5mm 1.5mm 1.5mm 1.5mm;
+      }
+      html, body {
+        font-size: 8.5pt;
+        line-height: 1.15;
+      }
+      th, td {
+        font-size: 8.5pt;
+        padding: 2.5px 1.5px;
+      }
+      tr.top-title-row td {
+        font-size: 11pt;
+        padding: 3px;
+      }
+      tr.meta-row td {
+        font-size: 8.5pt;
+        padding: 2px 2px;
+      }
+      tr.col-header td {
+        font-size: 8.5pt;
+        padding: 2px 1px;
+      }
+      td.group-header {
+        font-size: 9.5pt;
+        padding: 2.5px 2px;
+      }
+      td.dog-name-cell {
+        font-size: 8.5pt;
+        padding: 2px 3px;
+      }
+      td.time-speed-cell {
+        font-size: 7.5pt;
+        line-height: 1.1;
+        padding: 1.5px 1px;
+      }
+      td.status-cell {
+        font-size: 8.5pt;
+      }
+    }
+  
+    /* Toolbar & Old Money screen preview styles */
+    .cs-toolbar {
+      position: sticky;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #faf8f5;
+      border-bottom: 1px solid #e2d9cd;
+      padding: 10px 18px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      z-index: 9999;
+      box-shadow: 0 1px 4px rgba(40, 30, 20, 0.05);
+    }
+    .cs-toolbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+    .cs-toolbar-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+    .cs-toolbar-divider {
+      width: 1px;
+      height: 18px;
+      background: #d4c5b3;
+    }
+    .cs-toolbar-brand {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #8b5e34;
+    }
+    .cs-toolbar-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: #2b2621;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .cs-toolbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+    .cs-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid #d4c5b3;
+      background: #ffffff;
+      color: #4a3e33;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .cs-btn:hover {
+      background: #f4eee5;
+      border-color: #ba9d7e;
+      color: #2b2621;
+    }
+    .cs-btn-back {
+      background: #ffffff;
+      color: #8b5e34;
+      border-color: #d4c5b3;
+    }
+    .cs-btn-back:hover {
+      background: #f4eee5;
+      border-color: #8b5e34;
+    }
+    .cs-btn-primary {
+      background: #8b5e34;
+      border-color: #724c28;
+      color: #ffffff;
+    }
+    .cs-btn-primary:hover {
+      background: #724c28;
+      border-color: #5b3c1e;
+      color: #ffffff;
+    }
+    @media print {
+      .cs-toolbar {
+        display: none !important;
+      }
+      body {
+        background: #ffffff !important;
+        padding: 0 !important;
+      }
+      .protocol-container {
+        padding: 0 !important;
+        display: block !important;
+      }
+      table.protocol-table {
+        margin: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
+      }
+    }
+    @media screen {
+      body {
+        background: #f4f1ea;
+        min-height: 100vh;
+      }
+      .protocol-container {
+        padding: 20px 16px 40px;
+        display: flex;
+        justify-content: center;
+      }
+      table.protocol-table {
+        margin: 0 auto;
+        background: #ffffff;
+        box-shadow: 0 4px 16px rgba(43, 38, 33, 0.08);
+        border: 1px solid #dcd4c8;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+<header class="cs-toolbar">
+  <div class="cs-toolbar-inner">
+    <div class="cs-toolbar-left">
+      <a href="/event/1316" class="cs-btn cs-btn-back" title="Вернуться к результатам на сайте">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        <span>К состязанию</span>
+      </a>
+      <span class="cs-toolbar-divider"></span>
+      <span class="cs-toolbar-brand">CoursingStats</span>
+      <span class="cs-toolbar-title">Уральский беговой клуб — ЧРКФ (Бега борзых)</span>
+    </div>
+    <div class="cs-toolbar-actions">
+      
+      <a href="https://drive.google.com/file/d/1fvY_1X6ak_Hxc6KZr9LnYIIhoLwlMqpB/view" target="_blank" rel="noopener noreferrer" class="cs-btn" title="Официальный PDF на Google Диске">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+        <span>Скачать PDF</span>
+      </a>
+      
+      
+      <button onclick="window.print()" class="cs-btn cs-btn-primary" title="Печать или сохранение в PDF (Ctrl+P)">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></svg>
+        <span>Печать</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="protocol-container">
+  <table class="protocol-table">
+    
+    <colgroup>
+      <col style="width: 3.0%;">
+      <col style="width: 2.5%;">
+      <col style="width: 9.5%;">
+      <col style="width: 7.5%;">
+      <col style="width: 3.8%;">
+      <col style="width: 21.7%;">
+      <col style="width: 4.0%;">
+      <col style="width: 3.5%;">
+      <col style="width: 3.0%;">
+      <col style="width: 7.0%;">
+      <col style="width: 3.5%;">
+      <col style="width: 3.0%;">
+      <col style="width: 7.0%;">
+      <col style="width: 3.5%;">
+      <col style="width: 3.0%;">
+      <col style="width: 7.0%;">
+      <col style="width: 2.3%;">
+      <col style="width: 5.2%;">
+    </colgroup>
+    <tbody>
+      
+    <tr class="top-title-row">
+      <td colspan="18">Уральский беговой клуб — ЧРКФ (Бега борзых), 16.05.2026 (Свердловская область, д. Большое Седельниково)</td>
+    </tr>
+    <tr class="meta-row">
+      <td colspan="18"><b>Организатор:</b> РОО &quot;Союз охотников и рыболовов Свердловской области&quot;</td>
+    </tr>
+    <tr class="meta-row">
+      <td colspan="18"><b>Судьи:</b> Минина С.В., Табуева Т.А.</td>
+    </tr>
+    <tr class="meta-row">
+      <td colspan="18"><b>Документы:</b> <a href="https://drive.google.com/file/d/1fvY_1X6ak_Hxc6KZr9LnYIIhoLwlMqpB/view" target="_blank" rel="noopener">Официальный PDF</a></td>
+    </tr>
+    
+    <tr class="col-header">
+      <td>Место</td>
+      <td>№</td>
+      <td>Порода</td>
+      <td>Класс</td>
+      <td>Пол</td>
+      <td>Кличка</td>
+      <td>Дистанция<br>(м)</td>
+      <td>Забег<br>1</td>
+      <td>Попона</td>
+      <td>Время 1<br>Скорость</td>
+      <td>Забег<br>2</td>
+      <td>Попона</td>
+      <td>Время 2<br>Скорость</td>
+      <td>Забег<br>3</td>
+      <td>Попона</td>
+      <td>Время 3<br>Скорость</td>
+      <td>СС</td>
+      <td>Титул</td>
+    </tr>
+  
+      <tr class="group-row">
+        <td colspan="18" class="group-header">Басенджи — Стандартный — Кобели</td>
+      </tr>
+    
+        <tr class="participant-row">
+          <td>1</td>
+          <td>null</td>
+          <td>Басенджи</td>
+          <td>Стандартный</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">АНГАВУ МАИША ЧИМЕКА</td>
+          <td>360</td>
+          
+          <td>1</td>
+          <td></td>
+          <td class="time-speed-cell">32.13 с<br>11.20 м/с<br>40.336 км/ч</td>
+          <td>2</td>
+          <td></td>
+          <td class="time-speed-cell">32.72 с<br>11.00 м/с<br>39.609 км/ч</td>
+          <td>3</td>
+          <td></td>
+          <td class="time-speed-cell">32.60 с<br>11.04 м/с<br>39.755 км/ч</td>
+          
+          <td>Чемпион РКФ по рабочим качествам собак,RegCACL</td>
+          <td>+</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>2</td>
+          <td>null</td>
+          <td>Басенджи</td>
+          <td>Стандартный</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">НАСЛЕДИЕ ЕТЕРА УИНСТОН ДЖЕЙМС СЕТЛЕР /<br>NASLEDIYE ETERA UINSTON DZHEJMS SETLER</td>
+          <td>360</td>
+          
+          <td>1</td>
+          <td></td>
+          <td class="time-speed-cell">32.38 с<br>11.12 м/с<br>40.025 км/ч</td>
+          <td>2</td>
+          <td></td>
+          <td class="time-speed-cell">33.18 с<br>10.85 м/с<br>39.060 км/ч</td>
+          <td>3</td>
+          <td></td>
+          <td class="time-speed-cell">32.71 с<br>11.01 м/с<br>39.621 км/ч</td>
+          
+          <td>CACL,RegCACL</td>
+          <td>+</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>3</td>
+          <td>null</td>
+          <td>Басенджи</td>
+          <td>Стандартный</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">ГОЛДИ ГОЛДЕН ДАЛЕН</td>
+          <td>360</td>
+          
+          <td>1</td>
+          <td></td>
+          <td class="time-speed-cell">37.00 с<br>9.73 м/с<br>35.027 км/ч</td>
+          <td>2</td>
+          <td></td>
+          <td class="time-speed-cell">36.11 с<br>9.97 м/с<br>35.890 км/ч</td>
+          <td>3</td>
+          <td></td>
+          <td class="time-speed-cell">36.96 с<br>9.74 м/с<br>35.065 км/ч</td>
+          
+          <td>RegCACL</td>
+          <td>+</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td></td>
+          <td>null</td>
+          <td>Басенджи</td>
+          <td>Стандартный</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">ФРАНЦУЗСКИЙ ТАЛИСМАН ВАРГ МЭН ИН БЛЭК</td>
+          <td>360</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="time-speed-cell status-cell">30
+Басенджи
+Стандартный
+Кобель
+ФРАНЦУЗСКИЙ ТАЛИСМАН ВАРГ МЭН ИН БЛЭК
+360
+-
+-
+Отстранение</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td></td>
+        </tr>
+      
+      <tr class="group-row">
+        <td colspan="18" class="group-header">Басенджи — Стандартный — Суки</td>
+      </tr>
+    
+        <tr class="participant-row">
+          <td>1</td>
+          <td>null</td>
+          <td>Басенджи</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">АНГАВУ МАИША ФРИЯ /<br>ANGAVU MAISHA FRIA</td>
+          <td>360</td>
+          
+          <td>1</td>
+          <td></td>
+          <td class="time-speed-cell">33.49 с<br>10.75 м/с<br>38.698 км/ч</td>
+          <td>2</td>
+          <td></td>
+          <td class="time-speed-cell">33.49 с<br>10.75 м/с<br>38.698 км/ч</td>
+          <td>3</td>
+          <td></td>
+          <td class="time-speed-cell">32.60 с<br>11.04 м/с<br>39.755 км/ч</td>
+          
+          <td>Чемпион РКФ по рабочим качествам собак,RegCACL</td>
+          <td>+</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>2</td>
+          <td>null</td>
+          <td>Басенджи</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">ВИННЕР ТАЙМ РУТТА /<br>WINNER TIME RUTTA</td>
+          <td>360</td>
+          
+          <td>1</td>
+          <td></td>
+          <td class="time-speed-cell">35.02 с<br>10.28 м/с<br>37.007 км/ч</td>
+          <td>2</td>
+          <td></td>
+          <td class="time-speed-cell">34.61 с<br>10.40 м/с<br>37.446 км/ч</td>
+          <td>3</td>
+          <td></td>
+          <td class="time-speed-cell">34.93 с<br>10.31 м/с<br>37.103 км/ч</td>
+          
+          <td>CACL,RegCACL</td>
+          <td>+</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>3</td>
+          <td>null</td>
+          <td>Басенджи</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">SUNNY PUPS ULLY</td>
+          <td>360</td>
+          
+          <td>1</td>
+          <td></td>
+          <td class="time-speed-cell">36.37 с<br>9.90 м/с<br>35.634 км/ч</td>
+          <td>2</td>
+          <td></td>
+          <td class="time-speed-cell">35.58 с<br>10.12 м/с<br>36.425 км/ч</td>
+          <td>3</td>
+          <td></td>
+          <td class="time-speed-cell">35.52 с<br>10.14 м/с<br>36.486 км/ч</td>
+          
+          <td>RegCACL</td>
+          <td>+</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>4</td>
+          <td>null</td>
+          <td>Басенджи</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">ВИННЕР ТАЙМ ГЕРМИОНА /<br>WINNER TIME GERMIONA</td>
+          <td>360</td>
+          
+          <td>1</td>
+          <td></td>
+          <td class="time-speed-cell">35.40 с<br>10.17 м/с<br>36.610 км/ч</td>
+          <td>2</td>
+          <td></td>
+          <td class="time-speed-cell">35.37 с<br>10.18 м/с<br>36.641 км/ч</td>
+          <td>3</td>
+          <td></td>
+          <td class="time-speed-cell">35.66 с<br>10.10 м/с<br>36.343 км/ч</td>
+          
+          <td></td>
+          <td>+</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>5</td>
+          <td>null</td>
+          <td>Басенджи</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">БОНТАНА ГВЕН СТЕФАНИ</td>
+          <td>360</td>
+          
+          <td>1</td>
+          <td></td>
+          <td class="time-speed-cell">40.59 с<br>8.87 м/с<br>31.929 км/ч</td>
+          <td>2</td>
+          <td></td>
+          <td class="time-speed-cell">39.24 с<br>9.17 м/с<br>33.028 км/ч</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td>+</td>
+        </tr>
+      
+      <tr class="group-row">
+        <td colspan="18" class="group-header">Грейхаунд — Стандартный — Суки</td>
+      </tr>
+    
+        <tr class="participant-row">
+          <td>1</td>
+          <td>null</td>
+          <td>Грейхаунд</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">ДЕРЖАВА</td>
+          <td>360</td>
+          
+          <td>1</td>
+          <td></td>
+          <td class="time-speed-cell">21.88 с<br>16.45 м/с<br>59.232 км/ч</td>
+          <td>2</td>
+          <td></td>
+          <td class="time-speed-cell">21.83 с<br>16.49 м/с<br>59.368 км/ч</td>
+          <td>3</td>
+          <td></td>
+          <td class="time-speed-cell">22.45 с<br>16.04 м/с<br>57.728 км/ч</td>
+          
+          <td></td>
+          <td>+</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>1</td>
+          <td>null</td>
+          <td>Грейхаунд</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">ДРАГУН</td>
+          <td>360</td>
+          
+          <td>1</td>
+          <td></td>
+          <td class="time-speed-cell">26.75 с<br>13.46 м/с<br>48.449 км/ч</td>
+          <td>2</td>
+          <td></td>
+          <td class="time-speed-cell">26.73 с<br>13.47 м/с<br>48.485 км/ч</td>
+          <td>3</td>
+          <td></td>
+          <td class="time-speed-cell">26.41 с<br>13.63 м/с<br>49.072 км/ч</td>
+          
+          <td>Чемпион РКФ по рабочим качествам собак,RegCACL</td>
+          <td>+</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>1</td>
+          <td>null</td>
+          <td>Грейхаунд</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">АЛЕАЗИС САДИК</td>
+          <td>360</td>
+          
+          <td>1</td>
+          <td></td>
+          <td class="time-speed-cell">27.45 с<br>13.11 м/с<br>47.213 км/ч</td>
+          <td>2</td>
+          <td></td>
+          <td class="time-speed-cell">27.80 с<br>12.95 м/с<br>46.619 км/ч</td>
+          <td>3</td>
+          <td></td>
+          <td class="time-speed-cell">28.43 с<br>12.66 м/с<br>45.586 км/ч</td>
+          
+          <td>Чемпион РКФ по рабочим качествам собак,RegCACL</td>
+          <td>+</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>1</td>
+          <td>null</td>
+          <td>Грейхаунд</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">УРАЛ СПИРИТ СТОРМ /<br>URAL SPIRIT STORM</td>
+          <td>360</td>
+          
+          <td>1</td>
+          <td></td>
+          <td class="time-speed-cell">23.68 с<br>15.20 м/с<br>54.730 км/ч</td>
+          <td>2</td>
+          <td></td>
+          <td class="time-speed-cell">23.88 с<br>15.08 м/с<br>54.271 км/ч</td>
+          <td>3</td>
+          <td></td>
+          <td class="time-speed-cell">23.81 с<br>15.12 м/с<br>54.431 км/ч</td>
+          
+          <td>Чемпион РКФ по рабочим качествам собак,RegCACL</td>
+          <td>+</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>2</td>
+          <td>null</td>
+          <td>Грейхаунд</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">ДИВНАЯ</td>
+          <td>360</td>
+          
+          <td>1</td>
+          <td></td>
+          <td class="time-speed-cell">28.46 с<br>12.65 м/с<br>45.538 км/ч</td>
+          <td>2</td>
+          <td></td>
+          <td class="time-speed-cell">27.07 с<br>13.30 м/с<br>47.876 км/ч</td>
+          <td>3</td>
+          <td></td>
+          <td class="time-speed-cell">26.60 с<br>13.53 м/с<br>48.722 км/ч</td>
+          
+          <td>CACL,RegCACL</td>
+          <td>+</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>2</td>
+          <td>null</td>
+          <td>Грейхаунд</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">УРАЛ СПИРИТ СЕВЕН /<br>URAL SPIRIT SEVEN</td>
+          <td>360</td>
+          
+          <td>1</td>
+          <td></td>
+          <td class="time-speed-cell">25.19 с<br>14.29 м/с<br>51.449 км/ч</td>
+          <td>2</td>
+          <td></td>
+          <td class="time-speed-cell">24.97 с<br>14.42 м/с<br>51.902 км/ч</td>
+          <td>3</td>
+          <td></td>
+          <td class="time-speed-cell">25.20 с<br>14.29 м/с<br>51.429 км/ч</td>
+          
+          <td>CACL,RegCACL</td>
+          <td>+</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>3</td>
+          <td>null</td>
+          <td>Грейхаунд</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">ДУША ДЕВИЦА</td>
+          <td>360</td>
+          
+          <td>1</td>
+          <td></td>
+          <td class="time-speed-cell">28.17 с<br>12.78 м/с<br>46.006 км/ч</td>
+          <td>2</td>
+          <td></td>
+          <td class="time-speed-cell">26.58 с<br>13.54 м/с<br>48.758 км/ч</td>
+          <td>3</td>
+          <td></td>
+          <td class="time-speed-cell">27.62 с<br>13.03 м/с<br>46.923 км/ч</td>
+          
+          <td>RegCACL</td>
+          <td>+</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>3</td>
+          <td>null</td>
+          <td>Грейхаунд</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">ЖИЗНЕННЫЙ ПУТЬ ИЗ ПОЛЕТА МЕЧТЫ</td>
+          <td>360</td>
+          
+          <td>1</td>
+          <td></td>
+          <td class="time-speed-cell">28.23 с<br>12.75 м/с<br>45.909 км/ч</td>
+          <td>2</td>
+          <td></td>
+          <td class="time-speed-cell">26.26 с<br>13.71 м/с<br>49.353 км/ч</td>
+          <td>3</td>
+          <td></td>
+          <td class="time-speed-cell">25.95 с<br>13.87 м/с<br>49.942 км/ч</td>
+          
+          <td>RegCACL</td>
+          <td>+</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>4</td>
+          <td>null</td>
+          <td>Грейхаунд</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">РУССКИ ПАРК ТУМАН НАД ВОДОЙ</td>
+          <td>360</td>
+          
+          <td>1</td>
+          <td></td>
+          <td class="time-speed-cell">27.75 с<br>12.97 м/с<br>46.703 км/ч</td>
+          <td>2</td>
+          <td></td>
+          <td class="time-speed-cell">27.17 с<br>13.25 м/с<br>47.700 км/ч</td>
+          <td>3</td>
+          <td></td>
+          <td class="time-speed-cell">27.39 с<br>13.14 м/с<br>47.317 км/ч</td>
+          
+          <td></td>
+          <td>+</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td></td>
+          <td>null</td>
+          <td>Грейхаунд</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">АРЬЯ /<br>ARYA</td>
+          <td>360</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="time-speed-cell status-cell">9
+Салюки
+Стандартный
+Сука
+АРЬЯ /ARYA
+360
+-
+-
+Отстранение</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td></td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td></td>
+          <td>null</td>
+          <td>Грейхаунд</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">ЯЛИККЕ СО ШКОДНОГО ДВОРА</td>
+          <td>360</td>
+          
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="time-speed-cell status-cell">10
+Салюки
+Стандартный
+Сука
+ЯЛИККЕ СО ШКОДНОГО ДВОРА
+360
+-
+-
+Отстранение</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          
+          <td></td>
+          <td></td>
+        </tr>
+      
+      <tr class="group-row">
+        <td colspan="18" class="group-header">Уиппет — Стандартный — Кобели</td>
+      </tr>
+    
+        <tr class="participant-row">
+          <td>1</td>
+          <td>null</td>
+          <td>Уиппет</td>
+          <td>Стандартный</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">АРГО АСТРУМ /<br>ARGO ASTRUM</td>
+          <td>360</td>
+          
+          <td>1</td>
+          <td></td>
+          <td class="time-speed-cell">24.53 с<br>14.68 м/с<br>52.833 км/ч</td>
+          <td>2</td>
+          <td></td>
+          <td class="time-speed-cell">24.37 с<br>14.77 м/с<br>53.180 км/ч</td>
+          <td>3</td>
+          <td></td>
+          <td class="time-speed-cell">24.42 с<br>14.74 м/с<br>53.071 км/ч</td>
+          
+          <td>Чемпион РКФ по рабочим качествам собак,RegCACL</td>
+          <td>+</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>2</td>
+          <td>null</td>
+          <td>Уиппет</td>
+          <td>Стандартный</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">АТОМИК ШТАРКЕ ВИНД /<br>ATOMIC STARKE WIND</td>
+          <td>360</td>
+          
+          <td>1</td>
+          <td></td>
+          <td class="time-speed-cell">24.51 с<br>14.69 м/с<br>52.876 км/ч</td>
+          <td>2</td>
+          <td></td>
+          <td class="time-speed-cell">24.39 с<br>14.76 м/с<br>53.137 км/ч</td>
+          <td>3</td>
+          <td></td>
+          <td class="time-speed-cell">24.94 с<br>14.43 м/с<br>51.965 км/ч</td>
+          
+          <td>CACL,RegCACL</td>
+          <td>+</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>3</td>
+          <td>null</td>
+          <td>Уиппет</td>
+          <td>Стандартный</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">ВАЛТТЕРИ СИЛЬВЕР ВИНГС /<br>VALTTERY SILVER WINGS</td>
+          <td>360</td>
+          
+          <td>1</td>
+          <td></td>
+          <td class="time-speed-cell">25.93 с<br>13.88 м/с<br>49.981 км/ч</td>
+          <td>2</td>
+          <td></td>
+          <td class="time-speed-cell">25.38 с<br>14.18 м/с<br>51.064 км/ч</td>
+          <td>3</td>
+          <td></td>
+          <td class="time-speed-cell">25.68 с<br>14.02 м/с<br>50.467 км/ч</td>
+          
+          <td>RegCACL</td>
+          <td>+</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>4</td>
+          <td>null</td>
+          <td>Уиппет</td>
+          <td>Стандартный</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">ВОЯДЖЕР ДЖОЛЛИ РОДЖЕР</td>
+          <td>360</td>
+          
+          <td>1</td>
+          <td></td>
+          <td class="time-speed-cell">26.67 с<br>13.50 м/с<br>48.594 км/ч</td>
+          <td>2</td>
+          <td></td>
+          <td class="time-speed-cell">26.27 с<br>13.70 м/с<br>49.334 км/ч</td>
+          <td>3</td>
+          <td></td>
+          <td class="time-speed-cell">30.26 с<br>11.90 м/с<br>42.829 км/ч</td>
+          
+          <td></td>
+          <td>+</td>
+        </tr>
+      
+      <tr class="group-row">
+        <td colspan="18" class="group-header">Уиппет — Стандартный — Суки</td>
+      </tr>
+    
+        <tr class="participant-row">
+          <td>1</td>
+          <td>null</td>
+          <td>Уиппет</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">АЙВИ ЛУННЫЙ СВЕТ /<br>AJVI LUNNYJ SVET</td>
+          <td>360</td>
+          
+          <td>1</td>
+          <td></td>
+          <td class="time-speed-cell">24.87 с<br>14.48 м/с<br>52.111 км/ч</td>
+          <td>2</td>
+          <td></td>
+          <td class="time-speed-cell">25.86 с<br>13.92 м/с<br>50.116 км/ч</td>
+          <td>3</td>
+          <td></td>
+          <td class="time-speed-cell">25.46 с<br>14.14 м/с<br>50.903 км/ч</td>
+          
+          <td>Чемпион РКФ по рабочим качествам собак,RegCACL</td>
+          <td>+</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>2</td>
+          <td>null</td>
+          <td>Уиппет</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">АСОКА ТАНО /<br>ASHOKA TANO</td>
+          <td>360</td>
+          
+          <td>1</td>
+          <td></td>
+          <td class="time-speed-cell">27.08 с<br>13.29 м/с<br>47.858 км/ч</td>
+          <td>2</td>
+          <td></td>
+          <td class="time-speed-cell">27.61 с<br>13.04 м/с<br>46.940 км/ч</td>
+          <td>3</td>
+          <td></td>
+          <td class="time-speed-cell">27.14 с<br>13.26 м/с<br>47.752 км/ч</td>
+          
+          <td>CACL,RegCACL</td>
+          <td>+</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>3</td>
+          <td>null</td>
+          <td>Уиппет</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">А ПАНДА ЭРРОУ /<br>A PANDA ARROW</td>
+          <td>360</td>
+          
+          <td>1</td>
+          <td></td>
+          <td class="time-speed-cell">26.56 с<br>13.55 м/с<br>48.795 км/ч</td>
+          <td>2</td>
+          <td></td>
+          <td class="time-speed-cell">26.80 с<br>13.43 м/с<br>48.358 км/ч</td>
+          <td>3</td>
+          <td></td>
+          <td class="time-speed-cell">27.18 с<br>13.25 м/с<br>47.682 км/ч</td>
+          
+          <td>RegCACL</td>
+          <td>+</td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>4</td>
+          <td>null</td>
+          <td>Уиппет</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">АРВЕН УНДОМИЭЛЬ /<br>ARWEN UNDOMIEL</td>
+          <td>360</td>
+          
+          <td>1</td>
+          <td></td>
+          <td class="time-speed-cell">28.30 с<br>12.72 м/с<br>45.795 км/ч</td>
+          <td>2</td>
+          <td></td>
+          <td class="time-speed-cell">28.40 с<br>12.68 м/с<br>45.634 км/ч</td>
+          <td>3</td>
+          <td></td>
+          <td class="time-speed-cell">28.53 с<br>12.62 м/с<br>45.426 км/ч</td>
+          
+          <td></td>
+          <td>+</td>
+        </tr>
+      
+      <tr class="group-row">
+        <td colspan="18" class="group-header">Уиппет — Юниоры — Кобели</td>
+      </tr>
+    
+        <tr class="participant-row">
+          <td>1</td>
+          <td>null</td>
+          <td>Уиппет</td>
+          <td>Юниоры</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">ATILLA NOTUS</td>
+          <td>360</td>
+          
+          <td>1</td>
+          <td></td>
+          <td class="time-speed-cell">27.13 с<br>13.27 м/с<br>47.770 км/ч</td>
+          <td>2</td>
+          <td></td>
+          <td class="time-speed-cell">26.89 с<br>13.39 м/с<br>48.196 км/ч</td>
+          <td>3</td>
+          <td></td>
+          <td class="time-speed-cell">26.91 с<br>13.38 м/с<br>48.161 км/ч</td>
+          
+          <td></td>
+          <td></td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>2</td>
+          <td>null</td>
+          <td>Уиппет</td>
+          <td>Юниоры</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">ТАТЬЯНИН ДЕНЬ КОСМОС</td>
+          <td>360</td>
+          
+          <td>1</td>
+          <td></td>
+          <td class="time-speed-cell">27.64 с<br>13.02 м/с<br>46.889 км/ч</td>
+          <td>2</td>
+          <td></td>
+          <td class="time-speed-cell">27.26 с<br>13.21 м/с<br>47.542 км/ч</td>
+          <td>3</td>
+          <td></td>
+          <td class="time-speed-cell">27.59 с<br>13.05 м/с<br>46.974 км/ч</td>
+          
+          <td></td>
+          <td></td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>3</td>
+          <td>null</td>
+          <td>Уиппет</td>
+          <td>Юниоры</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">ТАТЬЯНИН ДЕНЬ КАРЛ</td>
+          <td>360</td>
+          
+          <td>1</td>
+          <td></td>
+          <td class="time-speed-cell">27.63 с<br>13.03 м/с<br>46.906 км/ч</td>
+          <td>2</td>
+          <td></td>
+          <td class="time-speed-cell">28.72 с<br>12.53 м/с<br>45.125 км/ч</td>
+          <td>3</td>
+          <td></td>
+          <td class="time-speed-cell">27.81 с<br>12.94 м/с<br>46.602 км/ч</td>
+          
+          <td></td>
+          <td></td>
+        </tr>
+      
+        <tr class="participant-row">
+          <td>4</td>
+          <td>null</td>
+          <td>Уиппет</td>
+          <td>Юниоры</td>
+          <td>Кобель</td>
+          <td class="dog-name-cell">ЕНИСЕЙ</td>
+          <td>360</td>
+          
+          <td>1</td>
+          <td></td>
+          <td class="time-speed-cell">27.83 с<br>12.94 м/с<br>46.568 км/ч</td>
+          <td>2</td>
+          <td></td>
+          <td class="time-speed-cell">27.80 с<br>12.95 м/с<br>46.619 км/ч</td>
+          <td>3</td>
+          <td></td>
+          <td class="time-speed-cell">28.59 с<br>12.59 м/с<br>45.331 км/ч</td>
+          
+          <td></td>
+          <td></td>
+        </tr>
+      
+      <tr class="group-row">
+        <td colspan="18" class="group-header">Неявившиеся участники</td>
+      </tr>
+    
+        <tr class="dns-row">
+          <td></td>
+          <td>null</td>
+          <td>Басенджи</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">ОСМАН</td>
+          <td colspan="12" class="status-cell">Неявка</td>
+        </tr>
+      
+        <tr class="dns-row">
+          <td></td>
+          <td>null</td>
+          <td>Басенджи</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">ЧАУС</td>
+          <td colspan="12" class="status-cell">Неявка</td>
+        </tr>
+      
+        <tr class="dns-row">
+          <td></td>
+          <td>null</td>
+          <td>Басенджи</td>
+          <td>Стандартный</td>
+          <td>Сука</td>
+          <td class="dog-name-cell">СИРЕНЬ ДУШИСТАЯ</td>
+          <td colspan="12" class="status-cell">Неявка</td>
+        </tr>
+      
+    </tbody>
+  </table>
+</div>
+</body>
+</html>

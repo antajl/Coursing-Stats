@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
-import { Calendar, Users, MapPin, Building2, User, PawPrint, Download, FileText, BookOpen } from 'lucide-react'
+import { Calendar, Users, MapPin, Building2, User, PawPrint, Download, FileText, BookOpen, FileSpreadsheet } from 'lucide-react'
 import BreedGroupDivider from './components/BreedGroupDivider'
 import HoverTooltip from '../../../components/ui/HoverTooltip'
 import { formatDate } from './utils'
@@ -70,8 +70,9 @@ export default function EventHeader({ event, results }: EventHeaderProps) {
 
   const rulesUrl = event.rules_url?.trim()
   const catalogUrl = event.catalog_url?.trim()
-  const resultsPdfUrl = event.results_pdf_url?.trim()
-  const hasLinks = Boolean(rulesUrl || catalogUrl || resultsPdfUrl)
+  const eventId = event.id ? String(event.id) : null
+  const protocolUrl = eventId ? `/protocols/${eventId}.html` : null
+  const hasLinks = Boolean(rulesUrl || catalogUrl || protocolUrl)
 
   return (
     <div className="relative mb-4">
@@ -148,17 +149,17 @@ export default function EventHeader({ event, results }: EventHeaderProps) {
                   <span className="hidden sm:inline">Каталог</span>
                 </a>
               )}
-              {resultsPdfUrl && (
+              {protocolUrl && (
                 <a
-                  href={resultsPdfUrl}
+                  href={protocolUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex min-h-[44px] sm:min-h-0 flex-shrink-0 items-center gap-1.5 rounded-full border border-camel-200 bg-camel-50 px-2.5 py-1.5 text-xs font-medium text-camel-700 shadow-sm transition-colors hover:border-camel-400 hover:bg-camel-100"
-                  aria-label="Протокол PDF"
-                  title="Официальный протокол (PDF)"
+                  aria-label="Официальный протокол"
+                  title="Официальный печатный протокол (HTML / Печать)"
                 >
-                  <Download className="h-4 w-4" aria-hidden />
-                  <span className="hidden sm:inline">Протокол PDF</span>
+                  <FileSpreadsheet className="h-4 w-4" aria-hidden />
+                  <span className="hidden sm:inline">Протокол</span>
                 </a>
               )}
             </div>

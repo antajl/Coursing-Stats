@@ -1,4 +1,5 @@
 export interface Event {
+  id?: number | string
   results_url?: string | null
   catalog_url?: string | null
   results_pdf_url?: string | null

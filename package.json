@@ -97,7 +97,8 @@
     "data:quick": "echo \"Quick data check...\" && echo \"Data directories check - see data/v1/ for details\"",
     "perf:measure": "npx tsx backend/scripts/measure-performance.ts",
     "perf:compare": "npx tsx backend/scripts/compare-performance.ts",
-    "quality:report": "npx tsx backend/scripts/generate-quality-report.ts"
+    "quality:report": "npx tsx backend/scripts/generate-quality-report.ts",
+    "export-all-protocols": "npx tsx backend/scripts/export/export-all-html-protocols.ts"
   },
   "dependencies": {
     "@gutenye/ocr-node": "^1.4.9",

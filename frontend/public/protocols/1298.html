@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>ОО Региональное кинологическое общество Ставропольского края &quot;Альянс&quot; — Чемпионат России (БЗМП), 25-26.10.2025 (Ставропольский край, Ставрополь)</title>
+  <style>
+    @page {
+      size: A4 landscape;
+      margin: 1.5mm 1.5mm 1.5mm 1.5mm;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      background: #ffffff;
+      color: #000000;
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+      font-size: 11pt;
+      line-height: 1.25;
+    }
+    table.protocol-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 1.5px;
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+    th, td {
+      border-top: 1px solid #4c4c4c;
+      border-left: 1px solid #4c4c4c;
+      border-right: 1px solid #b2b2b2;
+      border-bottom: 1px solid #b2b2b2;
+      background-color: #ffffff;
+      padding: 4px 3px;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 10.5pt;
+      font-weight: normal;
+    }
+    tr.top-title-row td {
+      font-size: 14pt;
+      font-weight: bold;
+      padding: 7px 4px;
+    }
+    tr.meta-row td {
+      font-size: 10.5pt;
+      font-weight: normal;
+      padding: 3.5px 4px;
+      text-align: center;
+    }
+    tr.col-header td {
+      font-size: 10pt;
+      font-weight: normal;
+      padding: 4px 1px;
+      white-space: nowrap;
+    }
+    tr.sub-col-header td {
+      font-size: 9pt;
+      font-weight: normal;
+      padding: 3px 0px;
+      white-space: nowrap;
+    }
+    tr.group-row {
+      page-break-inside: avoid;
+      page-break-after: avoid;
+    }
+    td.group-header {
+      background-color: #c0c0c0 !important;
+      font-size: 11.5pt;
+      font-weight: normal;
+      text-align: center;
+      padding: 4.5px 3px;
+    }
+    td.dog-name-cell {
+      text-align: center;
+      font-size: 10.5pt;
+      line-height: 1.25;
+      padding: 4px 4px;
+    }
+    td.status-cell {
+      text-align: center;
+      font-style: italic;
+      font-size: 10pt;
+      padding: 4px 3px;
+    }
+    tr.dns-row td {
+      background-color: #c0c0c0 !important;
+    }
+    tr.participant-row {
+      page-break-inside: avoid;
+    }
+
+    @media print {
+      @page {
+        size: A4 landscape;
+        margin: 1.5mm 1.5mm 1.5mm 1.5mm;
+      }
+      html, body {
+        font-size: 8.5pt;
+        line-height: 1.15;
+      }
+      th, td {
+        font-size: 8.5pt;
+        padding: 2.2px 1.5px;
+      }
+      tr.top-title-row td {
+        font-size: 11pt;
+        padding: 3px;
+      }
+      tr.meta-row td {
+        font-size: 8.5pt;
+        padding: 2px 2px;
+      }
+      tr.col-header td {
+        font-size: 8.5pt;
+        padding: 2px 1px;
+      }
+      tr.sub-col-header td {
+        font-size: 7.5pt;
+        padding: 1.5px 0px;
+      }
+      td.group-header {
+        font-size: 9.5pt;
+        padding: 2.5px 2px;
+      }
+      td.dog-name-cell {
+        font-size: 8.5pt;
+        padding: 2px 3px;
+      }
+      td.status-cell {
+        font-size: 8.5pt;
+      }
+    }
+  
+    /* Toolbar & Old Money screen preview styles */
+    .cs-toolbar {
+      position: sticky;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #faf8f5;
+      border-bottom: 1px solid #e2d9cd;
+      padding: 10px 18px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      z-index: 9999;
+      box-shadow: 0 1px 4px rgba(40, 30, 20, 0.05);
+    }
+    .cs-toolbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+    .cs-toolbar-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+    .cs-toolbar-divider {
+      width: 1px;
+      height: 18px;
+      background: #d4c5b3;
+    }
+    .cs-toolbar-brand {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #8b5e34;
+    }
+    .cs-toolbar-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: #2b2621;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .cs-toolbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+    .cs-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid #d4c5b3;
+      background: #ffffff;
+      color: #4a3e33;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .cs-btn:hover {
+      background: #f4eee5;
+      border-color: #ba9d7e;
+      color: #2b2621;
+    }
+    .cs-btn-back {
+      background: #ffffff;
+      color: #8b5e34;
+      border-color: #d4c5b3;
+    }
+    .cs-btn-back:hover {
+      background: #f4eee5;
+      border-color: #8b5e34;
+    }
+    .cs-btn-primary {
+      background: #8b5e34;
+      border-color: #724c28;
+      color: #ffffff;
+    }
+    .cs-btn-primary:hover {
+      background: #724c28;
+      border-color: #5b3c1e;
+      color: #ffffff;
+    }
+    @media print {
+      .cs-toolbar {
+        display: none !important;
+      }
+      body {
+        background: #ffffff !important;
+        padding: 0 !important;
+      }
+      .protocol-container {
+        padding: 0 !important;
+        display: block !important;
+      }
+      table.protocol-table {
+        margin: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
+      }
+    }
+    @media screen {
+      body {
+        background: #f4f1ea;
+        min-height: 100vh;
+      }
+      .protocol-container {
+        padding: 20px 16px 40px;
+        display: flex;
+        justify-content: center;
+      }
+      table.protocol-table {
+        margin: 0 auto;
+        background: #ffffff;
+        box-shadow: 0 4px 16px rgba(43, 38, 33, 0.08);
+        border: 1px solid #dcd4c8;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+<header class="cs-toolbar">
+  <div class="cs-toolbar-inner">
+    <div class="cs-toolbar-left">
+      <a href="/event/1298" class="cs-btn cs-btn-back" title="Вернуться к результатам на сайте">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        <span>К состязанию</span>
+      </a>
+      <span class="cs-toolbar-divider"></span>
+      <span class="cs-toolbar-brand">CoursingStats</span>
+      <span class="cs-toolbar-title">ОО Региональное кинологическое общество Ставропольского края &quot;Альянс&quot; — Чемпионат России (БЗМП)</span>
+    </div>
+    <div class="cs-toolbar-actions">
+      
+      <a href="https://drive.google.com/file/d/local-6095/view" target="_blank" rel="noopener noreferrer" class="cs-btn" title="Официальный PDF на Google Диске">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+        <span>Скачать PDF</span>
+      </a>
+      
+      
+      <button onclick="window.print()" class="cs-btn cs-btn-primary" title="Печать или сохранение в PDF (Ctrl+P)">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></svg>
+        <span>Печать</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="protocol-container">
+  <table class="protocol-table">
+    
+    <colgroup>
+      <col style="width: 3.0%;">
+      <col style="width: 2.5%;">
+      <col style="width: 10.0%;">
+      <col style="width: 8.0%;">
+      <col style="width: 4.0%;">
+      <col style="width: 40.0%;">
+      <col style="width: 3.5%;">
+      <col style="width: 3.0%;">
+      <col style="width: 3.0%;">
+      <col style="width: 3.0%;">
+      <col style="width: 3.0%;">
+      <col style="width: 3.0%;">
+      <col style="width: 4.0%;">
+      <col style="width: 4.5%;">
+      <col style="width: 3.0%;">
+      <col style="width: 5.5%;">
+    </colgroup>
+    <tbody>
+      
+    <tr class="top-title-row">
+      <td colspan="16">ОО Региональное кинологическое общество Ставропольского края &quot;Альянс&quot; — Чемпионат России (БЗМП), 25-26.10.2025 (Ставропольский край, Ставрополь)</td>
+    </tr>
+    <tr class="meta-row">
+      <td colspan="16"><b>Организатор:</b> ОО Региональное кинологическое общество Ставропольского края &quot;Альянс&quot;</td>
+    </tr>
+    <tr class="meta-row">
+      <td colspan="16"><b>Судьи:</b> Карелина Н.В., Лукина Д.М.</td>
+    </tr>
+    <tr class="meta-row">
+      <td colspan="16"><b>Документы:</b> <a href="https://drive.google.com/file/d/local-6095/view" target="_blank" rel="noopener">Официальный PDF</a></td>
+    </tr>
+    
+    <tr class="col-header">
+      <td rowspan="2">Место</td>
+      <td rowspan="2">№</td>
+      <td rowspan="2">Порода</td>
+      <td rowspan="2">Класс</td>
+      <td rowspan="2">Пол</td>
+      <td rowspan="2">Кличка</td>
+      <td rowspan="2">Забег</td>
+      <td colspan="6">Карелина Н.В., Лукина Д.М.</td>
+      <td rowspan="2">Итого<br>баллов</td>
+      <td rowspan="2">СС</td>
+      <td rowspan="2">Титул</td>
+    </tr>
+    <tr class="col-header sub-header">
+      <td>Ман.</td>
+      <td>Резв.</td>
+      <td>Вын.</td>
+      <td>Прес.</td>
+      <td>Энт.</td>
+      <td>Сум.</td>
+    </tr>
+  
+      <tr class="group-row">
+        <td colspan="16" class="group-header">Австралийская овчарка — Стандартный — Микс</td>
+      </tr>
+    
+            <tr class="participant-row">
+              <td rowspan="2">1</td>
+              <td rowspan="2">1</td>
+              <td rowspan="2">Австралийская овчарка</td>
+              <td rowspan="2">Стандартный</td>
+              <td rowspan="2"></td>
+              <td rowspan="2" class="dog-name-cell">ЯКЛИРИОН ТАНГЕ ИЗ ДОМА КОРОЛЕВОЙ</td>
+              <td rowspan="2" style="background-color: #ffffff !important; color: #000000; font-style: italic;">10</td>
+              <td>15</td><td>18</td><td>18</td><td>16</td><td>18</td><td>85</td>
+              <td rowspan="2">169</td>
+              <td rowspan="2">CACMBBr</td>
+              <td rowspan="2">CC</td>
+            </tr>
+            
+            <tr class="participant-row">
+              <td>16</td><td>17</td><td>17</td><td>17</td><td>17</td><td>84</td>
+            </tr>
+            
+          
+      <tr class="group-row">
+        <td colspan="16" class="group-header">Белая швейцарская овчарка — Стандартный — Микс</td>
+      </tr>
+    
+            <tr class="participant-row">
+              <td rowspan="2">1</td>
+              <td rowspan="2">2</td>
+              <td rowspan="2">Белая швейцарская овчарка</td>
+              <td rowspan="2">Стандартный</td>
+              <td rowspan="2"></td>
+              <td rowspan="2" class="dog-name-cell">ZHE TEM KASPER</td>
+              <td rowspan="2" style="background-color: #ffffff !important; color: #000000; font-style: italic;">11</td>
+              <td>15</td><td>16</td><td>16</td><td>15</td><td>15</td><td>77</td>
+              <td rowspan="2">159</td>
+              <td rowspan="2">CACMBBr</td>
+              <td rowspan="2">CC</td>
+            </tr>
+            
+            <tr class="participant-row">
+              <td>15</td><td>17</td><td>16</td><td>17</td><td>17</td><td>82</td>
+            </tr>
+            
+          
+      <tr class="group-row">
+        <td colspan="16" class="group-header">Бельгийская овчарка малинуа — Стандартный — Микс</td>
+      </tr>
+    
+            <tr class="participant-row">
+              <td rowspan="2">1</td>
+              <td rowspan="2">3</td>
+              <td rowspan="2">Бельгийская овчарка малинуа</td>
+              <td rowspan="2">Стандартный</td>
+              <td rowspan="2"></td>
+              <td rowspan="2" class="dog-name-cell">DZHANIKO EXTRA</td>
+              <td rowspan="2" style="background-color: #ffffff !important; color: #000000; font-style: italic;">10</td>
+              <td>17</td><td>17</td><td>17</td><td>16</td><td>18</td><td>85</td>
+              <td rowspan="2">169</td>
+              <td rowspan="2">CACMBBr</td>
+              <td rowspan="2">CC</td>
+            </tr>
+            
+            <tr class="participant-row">
+              <td>16</td><td>17</td><td>17</td><td>17</td><td>17</td><td>84</td>
+            </tr>
+            
+          
+      <tr class="group-row">
+        <td colspan="16" class="group-header">Немецкая овчарка стандартная — Стандартный — Суки</td>
+      </tr>
+    
+            <tr class="participant-row">
+              <td rowspan="2">1</td>
+              <td rowspan="2">5</td>
+              <td rowspan="2">Немецкая овчарка стандартная</td>
+              <td rowspan="2">Стандартный</td>
+              <td rowspan="2">Сука</td>
+              <td rowspan="2" class="dog-name-cell">VARDIS OLLARD VIKTORIA</td>
+              <td rowspan="2" style="background-color: #ffffff !important; color: #000000; font-style: italic;">18</td>
+              <td>17</td><td>17</td><td>16</td><td>17</td><td>17</td><td>84</td>
+              <td rowspan="2">169</td>
+              <td rowspan="2">Чемпион России, CACMBBr</td>
+              <td rowspan="2">CC</td>
+            </tr>
+            
+            <tr class="participant-row">
+              <td>17</td><td>17</td><td>17</td><td>17</td><td>17</td><td>85</td>
+            </tr>
+            
+          
+            <tr class="participant-row">
+              <td rowspan="2">2</td>
+              <td rowspan="2">8</td>
+              <td rowspan="2">Немецкая овчарка стандартная</td>
+              <td rowspan="2">Стандартный</td>
+              <td rowspan="2">Сука</td>
+              <td rowspan="2" class="dog-name-cell">PARMA VON AVERSWALD</td>
+              <td rowspan="2" style="background-color: #ffffff !important; color: #000000; font-style: italic;">17</td>
+              <td>16</td><td>16</td><td>16</td><td>17</td><td>16</td><td>81</td>
+              <td rowspan="2">163</td>
+              <td rowspan="2">CACMB</td>
+              <td rowspan="2">CC</td>
+            </tr>
+            
+            <tr class="participant-row">
+              <td>16</td><td>17</td><td>16</td><td>16</td><td>17</td><td>82</td>
+            </tr>
+            
+          
+            <tr class="participant-row">
+              <td rowspan="2">3</td>
+              <td rowspan="2">7</td>
+              <td rowspan="2">Немецкая овчарка стандартная</td>
+              <td rowspan="2">Стандартный</td>
+              <td rowspan="2">Сука</td>
+              <td rowspan="2" class="dog-name-cell">АРЕТА ВАРРДИ ДЕОЛАР /<br>ARETHA VARRDI DEOLAR</td>
+              <td rowspan="2" style="background-color: #ffffff !important; color: #000000; font-style: italic;">17</td>
+              <td>15</td><td>15</td><td>15</td><td>16</td><td>16</td><td>77</td>
+              <td rowspan="2">156</td>
+              <td rowspan="2"></td>
+              <td rowspan="2">CC</td>
+            </tr>
+            
+            <tr class="participant-row">
+              <td>15</td><td>16</td><td>16</td><td>15</td><td>17</td><td>79</td>
+            </tr>
+            
+          
+      <tr class="group-row">
+        <td colspan="16" class="group-header">Немецкая овчарка стандартная — Юниоры — Микс</td>
+      </tr>
+    
+            <tr class="participant-row">
+              <td rowspan="2">1</td>
+              <td rowspan="2">6</td>
+              <td rowspan="2">Немецкая овчарка стандартная</td>
+              <td rowspan="2">Юниоры</td>
+              <td rowspan="2"></td>
+              <td rowspan="2" class="dog-name-cell">ДЖЕРДИ АЛАРДИ С ЕРМОЛОВА</td>
+              <td rowspan="2" style="background-color: #ffffff !important; color: #000000; font-style: italic;">9</td>
+              <td>17</td><td>16</td><td>16</td><td>16</td><td>17</td><td>82</td>
+              <td rowspan="2">166</td>
+              <td rowspan="2"></td>
+              <td rowspan="2"></td>
+            </tr>
+            
+            <tr class="participant-row">
+              <td>17</td><td>17</td><td>17</td><td>16</td><td>17</td><td>84</td>
+            </tr>
+            
+          
+      <tr class="group-row">
+        <td colspan="16" class="group-header">Доберман — Стандартный — Микс</td>
+      </tr>
+    
+            <tr class="participant-row">
+              <td rowspan="2">1</td>
+              <td rowspan="2">9</td>
+              <td rowspan="2">Доберман</td>
+              <td rowspan="2">Стандартный</td>
+              <td rowspan="2"></td>
+              <td rowspan="2" class="dog-name-cell">GUARDIAN SUNRISE CHINGISKHAN</td>
+              <td rowspan="2" style="background-color: #ffffff !important; color: #000000; font-style: italic;">16</td>
+              <td>16</td><td>15</td><td>16</td><td>17</td><td>17</td><td>81</td>
+              <td rowspan="2">161</td>
+              <td rowspan="2">Чемпион России, CACMBBr</td>
+              <td rowspan="2">CC</td>
+            </tr>
+            
+            <tr class="participant-row">
+              <td>16</td><td>16</td><td>15</td><td>16</td><td>17</td><td>80</td>
+            </tr>
+            
+          
+            <tr class="participant-row">
+              <td></td>
+              <td>10</td>
+              <td>Доберман</td>
+              <td>Стандартный</td>
+              <td></td>
+              <td class="dog-name-cell">KILLER</td>
+              <td style="background-color: #ffffff !important; color: #000000; font-style: italic;">15</td>
+              <td colspan="9" class="status-cell">Снятие (Сход с трассы)</td>
+            </tr>
+          
+      <tr class="group-row">
+        <td colspan="16" class="group-header">Ротвейлер — Юниоры — Микс</td>
+      </tr>
+    
+            <tr class="participant-row">
+              <td rowspan="2">1</td>
+              <td rowspan="2">12</td>
+              <td rowspan="2">Ротвейлер</td>
+              <td rowspan="2">Юниоры</td>
+              <td rowspan="2"></td>
+              <td rowspan="2" class="dog-name-cell">МАФИЯ</td>
+              <td rowspan="2" style="background-color: #ffffff !important; color: #000000; font-style: italic;">9</td>
+              <td>17</td><td>17</td><td>17</td><td>16</td><td>17</td><td>84</td>
+              <td rowspan="2">169</td>
+              <td rowspan="2"></td>
+              <td rowspan="2"></td>
+            </tr>
+            
+            <tr class="participant-row">
+              <td>17</td><td>17</td><td>17</td><td>17</td><td>17</td><td>85</td>
+            </tr>
+            
+          
+      <tr class="group-row">
+        <td colspan="16" class="group-header">Шнауцер — Стандартный — Микс</td>
+      </tr>
+    
+            <tr class="participant-row">
+              <td rowspan="2">1</td>
+              <td rowspan="2">13</td>
+              <td rowspan="2">Шнауцер</td>
+              <td rowspan="2">Стандартный</td>
+              <td rowspan="2"></td>
+              <td rowspan="2" class="dog-name-cell">ЭКСЕЛЛЕНТ СТАЙЛ МАРКУС /<br>EXCELLENT STYLE MARKUS</td>
+              <td rowspan="2" style="background-color: #ffffff !important; color: #000000; font-style: italic;">14</td>
+              <td>16</td><td>18</td><td>17</td><td>16</td><td>18</td><td>85</td>
+              <td rowspan="2">170</td>
+              <td rowspan="2">CACMBBr</td>
+              <td rowspan="2">CC</td>
+            </tr>
+            
+            <tr class="participant-row">
+              <td>17</td><td>17</td><td>17</td><td>17</td><td>17</td><td>85</td>
+            </tr>
+            
+          
+      <tr class="group-row">
+        <td colspan="16" class="group-header">Американский стаффордширский терьер — Стандартный — Микс</td>
+      </tr>
+    
+            <tr class="participant-row">
+              <td rowspan="2">1</td>
+              <td rowspan="2">17</td>
+              <td rowspan="2">Американский стаффордширский терьер</td>
+              <td rowspan="2">Стандартный</td>
+              <td rowspan="2"></td>
+              <td rowspan="2" class="dog-name-cell">ДЕНВЕРС ЭЛИТ АМАЙЗИНГ /<br>DENVERS ELITE AMAZING</td>
+              <td rowspan="2" style="background-color: #ffffff !important; color: #000000; font-style: italic;">7</td>
+              <td>17</td><td>17</td><td>16</td><td>17</td><td>18</td><td>85</td>
+              <td rowspan="2">173</td>
+              <td rowspan="2">Чемпион России, CACMBBr</td>
+              <td rowspan="2">CC</td>
+            </tr>
+            
+            <tr class="participant-row">
+              <td>18</td><td>18</td><td>17</td><td>17</td><td>18</td><td>88</td>
+            </tr>
+            
+          
+            <tr class="participant-row">
+              <td rowspan="2">2</td>
+              <td rowspan="2">15</td>
+              <td rowspan="2">Американский стаффордширский терьер</td>
+              <td rowspan="2">Стандартный</td>
+              <td rowspan="2"></td>
+              <td rowspan="2" class="dog-name-cell">САНСАРА ШЕРВУД ШОТЕР ГРАН ПРИ /<br>SANSARA SHERVUD SHOTER GRAN PRI</td>
+              <td rowspan="2" style="background-color: #ffffff !important; color: #000000; font-style: italic;">4</td>
+              <td>17</td><td>17</td><td>16</td><td>17</td><td>17</td><td>84</td>
+              <td rowspan="2">171</td>
+              <td rowspan="2">CACMB</td>
+              <td rowspan="2">CC</td>
+            </tr>
+            
+            <tr class="participant-row">
+              <td>17</td><td>18</td><td>17</td><td>17</td><td>18</td><td>87</td>
+            </tr>
+            
+          
+            <tr class="participant-row">
+              <td rowspan="2">3</td>
+              <td rowspan="2">16</td>
+              <td rowspan="2">Американский стаффордширский терьер</td>
+              <td rowspan="2">Стандартный</td>
+              <td rowspan="2"></td>
+              <td rowspan="2" class="dog-name-cell">БОНАВЕНТУРА ГОЛД ЛУНА РОССА /<br>BONAVENTURA GOLD LUNA ROSSA</td>
+              <td rowspan="2" style="background-color: #ffffff !important; color: #000000; font-style: italic;">5</td>
+              <td>16</td><td>16</td><td>15</td><td>16</td><td>18</td><td>81</td>
+              <td rowspan="2">167</td>
+              <td rowspan="2"></td>
+              <td rowspan="2">CC</td>
+            </tr>
+            
+            <tr class="participant-row">
+              <td>17</td><td>18</td><td>17</td><td>16</td><td>18</td><td>86</td>
+            </tr>
+            
+          
+            <tr class="participant-row">
+              <td rowspan="2">4</td>
+              <td rowspan="2">18</td>
+              <td rowspan="2">Американский стаффордширский терьер</td>
+              <td rowspan="2">Стандартный</td>
+              <td rowspan="2"></td>
+              <td rowspan="2" class="dog-name-cell">ГЛЕД ТУ БИ ГРЕЙТ ИЗ СОЗВЕЗДИЯ СТАФФ /<br>GLAD TO BE GREAT IZ SOZVEZDIYA STAFF</td>
+              <td rowspan="2" style="background-color: #ffffff !important; color: #000000; font-style: italic;">6</td>
+              <td>16</td><td>16</td><td>15</td><td>12</td><td>16</td><td>75</td>
+              <td rowspan="2">158</td>
+              <td rowspan="2"></td>
+              <td rowspan="2">CC</td>
+            </tr>
+            
+            <tr class="participant-row">
+              <td>17</td><td>18</td><td>17</td><td>15</td><td>16</td><td>83</td>
+            </tr>
+            
+          
+            <tr class="participant-row">
+              <td rowspan="2">5</td>
+              <td rowspan="2">19</td>
+              <td rowspan="2">Американский стаффордширский терьер</td>
+              <td rowspan="2">Стандартный</td>
+              <td rowspan="2"></td>
+              <td rowspan="2" class="dog-name-cell">ЖАСМИН ИЗ СОЗВЕЗДИЯ СТАФФ /<br>JASMIN IZ SOZVEZDIYA STAFF</td>
+              <td rowspan="2" style="background-color: #ffffff !important; color: #000000; font-style: italic;">5</td>
+              <td>10</td><td>12</td><td>12</td><td>10</td><td>10</td><td>54</td>
+              <td rowspan="2">112</td>
+              <td rowspan="2"></td>
+              <td rowspan="2"></td>
+            </tr>
+            
+            <tr class="participant-row">
+              <td>12</td><td>16</td><td>12</td><td>8</td><td>10</td><td>58</td>
+            </tr>
+            
+          
+            <tr class="participant-row">
+              <td></td>
+              <td>14</td>
+              <td>Американский стаффордширский терьер</td>
+              <td>Стандартный</td>
+              <td></td>
+              <td class="dog-name-cell">RASMUS KUPA HOUSE</td>
+              <td style="background-color: #ffffff !important; color: #000000; font-style: italic;">4</td>
+              <td colspan="9" class="status-cell">Снятие (Сход с трассы)</td>
+            </tr>
+          
+      <tr class="group-row">
+        <td colspan="16" class="group-header">Американский стаффордширский терьер — Ветераны — Микс</td>
+      </tr>
+    
+            <tr class="participant-row">
+              <td rowspan="2">1</td>
+              <td rowspan="2">21</td>
+              <td rowspan="2">Американский стаффордширский терьер</td>
+              <td rowspan="2">Ветераны</td>
+              <td rowspan="2"></td>
+              <td rowspan="2" class="dog-name-cell">EUPHORIA OF WINNER SOZVEZDIE STAFF</td>
+              <td rowspan="2" style="background-color: #ffffff !important; color: #000000; font-style: italic;">8</td>
+              <td>17</td><td>15</td><td>14</td><td>17</td><td>16</td><td>79</td>
+              <td rowspan="2">159</td>
+              <td rowspan="2"></td>
+              <td rowspan="2"></td>
+            </tr>
+            
+            <tr class="participant-row">
+              <td>16</td><td>16</td><td>15</td><td>16</td><td>17</td><td>80</td>
+            </tr>
+            
+          
+      <tr class="group-row">
+        <td colspan="16" class="group-header">Ирландский терьер — Стандартный — Микс</td>
+      </tr>
+    
+            <tr class="participant-row">
+              <td rowspan="2">1</td>
+              <td rowspan="2">22</td>
+              <td rowspan="2">Ирландский терьер</td>
+              <td rowspan="2">Стандартный</td>
+              <td rowspan="2"></td>
+              <td rowspan="2" class="dog-name-cell">РИЧЛИ РЭД ЮНИТИ /<br>RICHLI RED YUNITI</td>
+              <td rowspan="2" style="background-color: #ffffff !important; color: #000000; font-style: italic;">14</td>
+              <td>17</td><td>18</td><td>18</td><td>17</td><td>18</td><td>88</td>
+              <td rowspan="2">173</td>
+              <td rowspan="2">CACMBBr</td>
+              <td rowspan="2">CC</td>
+            </tr>
+            
+            <tr class="participant-row">
+              <td>17</td><td>17</td><td>17</td><td>17</td><td>17</td><td>85</td>
+            </tr>
+            
+          
+      <tr class="group-row">
+        <td colspan="16" class="group-header">Сибирский хаски — Стандартный — Микс</td>
+      </tr>
+    
+            <tr class="participant-row">
+              <td rowspan="2">1</td>
+              <td rowspan="2">23</td>
+              <td rowspan="2">Сибирский хаски</td>
+              <td rowspan="2">Стандартный</td>
+              <td rowspan="2"></td>
+              <td rowspan="2" class="dog-name-cell">HARLI IZ KRISTALNOY ROSY</td>
+              <td rowspan="2" style="background-color: #ffffff !important; color: #000000; font-style: italic;">11</td>
+              <td>17</td><td>16</td><td>14</td><td>16</td><td>16</td><td>79</td>
+              <td rowspan="2">161</td>
+              <td rowspan="2">CACMBBr</td>
+              <td rowspan="2">CC</td>
+            </tr>
+            
+            <tr class="participant-row">
+              <td>17</td><td>17</td><td>16</td><td>15</td><td>17</td><td>82</td>
+            </tr>
+            
+          
+      <tr class="group-row">
+        <td colspan="16" class="group-header">Бигль — Стандартный — Кобели</td>
+      </tr>
+    
+            <tr class="participant-row">
+              <td rowspan="2">1</td>
+              <td rowspan="2">25</td>
+              <td rowspan="2">Бигль</td>
+              <td rowspan="2">Стандартный</td>
+              <td rowspan="2">Кобель</td>
+              <td rowspan="2" class="dog-name-cell">ONIKS PERSEY</td>
+              <td rowspan="2" style="background-color: #ffffff !important; color: #000000; font-style: italic;">12</td>
+              <td>17</td><td>17</td><td>15</td><td>17</td><td>17</td><td>83</td>
+              <td rowspan="2">168</td>
+              <td rowspan="2">CACMBBr</td>
+              <td rowspan="2">CC</td>
+            </tr>
+            
+            <tr class="participant-row">
+              <td>17</td><td>17</td><td>17</td><td>17</td><td>17</td><td>85</td>
+            </tr>
+            
+          
+            <tr class="participant-row">
+              <td rowspan="2">1</td>
+              <td rowspan="2">26</td>
+              <td rowspan="2">Бигль</td>
+              <td rowspan="2">Стандартный</td>
+              <td rowspan="2">Кобель</td>
+              <td rowspan="2" class="dog-name-cell">ЗОВ ПОЛЕЙ ТЕРРАКОТ /<br>ZOV POLEY TERRAKOT</td>
+              <td rowspan="2" style="background-color: #ffffff !important; color: #000000; font-style: italic;">13</td>
+              <td>15</td><td>17</td><td>17</td><td>17</td><td>17</td><td>83</td>
+              <td rowspan="2">166</td>
+              <td rowspan="2">CACMBBr</td>
+              <td rowspan="2">CC</td>
+            </tr>
+            
+            <tr class="participant-row">
+              <td>16</td><td>17</td><td>17</td><td>16</td><td>17</td><td>83</td>
+            </tr>
+            
+          
+            <tr class="participant-row">
+              <td rowspan="2">2</td>
+              <td rowspan="2">27</td>
+              <td rowspan="2">Бигль</td>
+              <td rowspan="2">Стандартный</td>
+              <td rowspan="2">Кобель</td>
+              <td rowspan="2" class="dog-name-cell">GOLDEN APPLE</td>
+              <td rowspan="2" style="background-color: #ffffff !important; color: #000000; font-style: italic;">13</td>
+              <td>16</td><td>16</td><td>15</td><td>17</td><td>15</td><td>79</td>
+              <td rowspan="2">163</td>
+              <td rowspan="2"></td>
+              <td rowspan="2">CC</td>
+            </tr>
+            
+            <tr class="participant-row">
+              <td>17</td><td>17</td><td>17</td><td>16</td><td>17</td><td>84</td>
+            </tr>
+            
+          
+            <tr class="participant-row">
+              <td></td>
+              <td>24</td>
+              <td>Бигль</td>
+              <td>Стандартный</td>
+              <td>Кобель</td>
+              <td class="dog-name-cell">LUCHSHIY MAGNUS</td>
+              <td style="background-color: #ffffff !important; color: #000000; font-style: italic;">12</td>
+              <td colspan="9" class="status-cell">Снятие (Сход с трассы)</td>
+            </tr>
+          
+      <tr class="group-row">
+        <td colspan="16" class="group-header">Американский голый терьер — Стандартный — Микс</td>
+      </tr>
+    
+            <tr class="participant-row">
+              <td rowspan="2">1</td>
+              <td rowspan="2">31</td>
+              <td rowspan="2">Американский голый терьер</td>
+              <td rowspan="2">Стандартный</td>
+              <td rowspan="2"></td>
+              <td rowspan="2" class="dog-name-cell">ФАБИАН ДОМИНЕРИНГ</td>
+              <td rowspan="2" style="background-color: #ffffff !important; color: #000000; font-style: italic;">2</td>
+              <td>15</td><td>17</td><td>17</td><td>17</td><td>18</td><td>84</td>
+              <td rowspan="2">171</td>
+              <td rowspan="2">Чемпион России, CACMBBr</td>
+              <td rowspan="2">CC</td>
+            </tr>
+            
+            <tr class="participant-row">
+              <td>18</td><td>18</td><td>17</td><td>17</td><td>17</td><td>87</td>
+            </tr>
+            
+          
+            <tr class="participant-row">
+              <td rowspan="2">2</td>
+              <td rowspan="2">29</td>
+              <td rowspan="2">Американский голый терьер</td>
+              <td rowspan="2">Стандартный</td>
+              <td rowspan="2"></td>
+              <td rowspan="2" class="dog-name-cell">ПАЙКИ /<br>PAYKI</td>
+              <td rowspan="2" style="background-color: #ffffff !important; color: #000000; font-style: italic;">1</td>
+              <td>14</td><td>17</td><td>17</td><td>17</td><td>18</td><td>83</td>
+              <td rowspan="2">166</td>
+              <td rowspan="2">CACMB</td>
+              <td rowspan="2">CC</td>
+            </tr>
+            
+            <tr class="participant-row">
+              <td>17</td><td>17</td><td>16</td><td>16</td><td>17</td><td>83</td>
+            </tr>
+            
+          
+            <tr class="participant-row">
+              <td rowspan="2">3</td>
+              <td rowspan="2">32</td>
+              <td rowspan="2">Американский голый терьер</td>
+              <td rowspan="2">Стандартный</td>
+              <td rowspan="2"></td>
+              <td rowspan="2" class="dog-name-cell">DAKOTA SOUL QUEEN</td>
+              <td rowspan="2" style="background-color: #ffffff !important; color: #000000; font-style: italic;">1</td>
+              <td>14</td><td>17</td><td>16</td><td>17</td><td>18</td><td>82</td>
+              <td rowspan="2">166</td>
+              <td rowspan="2"></td>
+              <td rowspan="2">CC</td>
+            </tr>
+            
+            <tr class="participant-row">
+              <td>16</td><td>17</td><td>17</td><td>17</td><td>17</td><td>84</td>
+            </tr>
+            
+          
+            <tr class="participant-row">
+              <td rowspan="2">4</td>
+              <td rowspan="2">28</td>
+              <td rowspan="2">Американский голый терьер</td>
+              <td rowspan="2">Стандартный</td>
+              <td rowspan="2"></td>
+              <td rowspan="2" class="dog-name-cell">FIDEL DEFT</td>
+              <td rowspan="2" style="background-color: #ffffff !important; color: #000000; font-style: italic;">2</td>
+              <td>14</td><td>16</td><td>17</td><td>17</td><td>18</td><td>82</td>
+              <td rowspan="2">164</td>
+              <td rowspan="2"></td>
+              <td rowspan="2">CC</td>
+            </tr>
+            
+            <tr class="participant-row">
+              <td>16</td><td>17</td><td>16</td><td>16</td><td>17</td><td>82</td>
+            </tr>
+            
+          
+            <tr class="participant-row">
+              <td rowspan="2">5</td>
+              <td rowspan="2">33</td>
+              <td rowspan="2">Американский голый терьер</td>
+              <td rowspan="2">Стандартный</td>
+              <td rowspan="2"></td>
+              <td rowspan="2" class="dog-name-cell">KAYLA</td>
+              <td rowspan="2" style="background-color: #ffffff !important; color: #000000; font-style: italic;">3</td>
+              <td>14</td><td>16</td><td>16</td><td>18</td><td>18</td><td>82</td>
+              <td rowspan="2">163</td>
+              <td rowspan="2"></td>
+              <td rowspan="2">CC</td>
+            </tr>
+            
+            <tr class="participant-row">
+              <td>16</td><td>17</td><td>15</td><td>16</td><td>17</td><td>81</td>
+            </tr>
+            
+          
+            <tr class="participant-row">
+              <td rowspan="2">6</td>
+              <td rowspan="2">30</td>
+              <td rowspan="2">Американский голый терьер</td>
+              <td rowspan="2">Стандартный</td>
+              <td rowspan="2"></td>
+              <td rowspan="2" class="dog-name-cell">ДОДЖ ВОРТИ КОНТЕНДЕР</td>
+              <td rowspan="2" style="background-color: #ffffff !important; color: #000000; font-style: italic;">3</td>
+              <td>13</td><td>17</td><td>14</td><td>12</td><td>16</td><td>72</td>
+              <td rowspan="2">154</td>
+              <td rowspan="2"></td>
+              <td rowspan="2">CC</td>
+            </tr>
+            
+            <tr class="participant-row">
+              <td>16</td><td>17</td><td>17</td><td>15</td><td>17</td><td>82</td>
+            </tr>
+            
+          
+      <tr class="group-row">
+        <td colspan="16" class="group-header">Без породы — Стандартный — Кобели</td>
+      </tr>
+    
+            <tr class="participant-row">
+              <td rowspan="2">1</td>
+              <td rowspan="2">36</td>
+              <td rowspan="2">Без породы</td>
+              <td rowspan="2">Стандартный</td>
+              <td rowspan="2">Кобель</td>
+              <td rowspan="2" class="dog-name-cell">КАПУЧИНО</td>
+              <td rowspan="2" style="background-color: #ffffff !important; color: #000000; font-style: italic;">19</td>
+              <td>18</td><td>18</td><td>18</td><td>18</td><td>18</td><td>90</td>
+              <td rowspan="2">180</td>
+              <td rowspan="2">Чемпион России</td>
+              <td rowspan="2">CC</td>
+            </tr>
+            
+            <tr class="participant-row">
+              <td>18</td><td>18</td><td>18</td><td>18</td><td>18</td><td>90</td>
+            </tr>
+            
+          
+            <tr class="participant-row">
+              <td rowspan="2">2</td>
+              <td rowspan="2">37</td>
+              <td rowspan="2">Без породы</td>
+              <td rowspan="2">Стандартный</td>
+              <td rowspan="2">Кобель</td>
+              <td rowspan="2" class="dog-name-cell">МИХА</td>
+              <td rowspan="2" style="background-color: #ffffff !important; color: #000000; font-style: italic;">20</td>
+              <td>16</td><td>17</td><td>17</td><td>18</td><td>18</td><td>86</td>
+              <td rowspan="2">176</td>
+              <td rowspan="2"></td>
+              <td rowspan="2">CC</td>
+            </tr>
+            
+            <tr class="participant-row">
+              <td>18</td><td>18</td><td>18</td><td>18</td><td>18</td><td>90</td>
+            </tr>
+            
+          
+            <tr class="participant-row">
+              <td rowspan="2">3</td>
+              <td rowspan="2">35</td>
+              <td rowspan="2">Без породы</td>
+              <td rowspan="2">Стандартный</td>
+              <td rowspan="2">Кобель</td>
+              <td rowspan="2" class="dog-name-cell">MARS</td>
+              <td rowspan="2" style="background-color: #ffffff !important; color: #000000; font-style: italic;">20</td>
+              <td>16</td><td>17</td><td>16</td><td>18</td><td>16</td><td>83</td>
+              <td rowspan="2">167</td>
+              <td rowspan="2"></td>
+              <td rowspan="2">CC</td>
+            </tr>
+            
+            <tr class="participant-row">
+              <td>17</td><td>18</td><td>16</td><td>17</td><td>16</td><td>84</td>
+            </tr>
+            
+          
+      <tr class="group-row">
+        <td colspan="16" class="group-header">Неприбывшие участники</td>
+      </tr>
+    
+        <tr class="dns-row">
+          <td></td>
+          <td>4</td>
+          <td>НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ</td>
+          <td>Стандартный</td>
+          <td></td>
+          <td class="dog-name-cell">АЛАНИАН ШЕПХЕРД ИРБИС</td>
+          <td colspan="10" class="status-cell">Неявка</td>
+        </tr>
+      
+        <tr class="dns-row">
+          <td></td>
+          <td>34</td>
+          <td>АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР</td>
+          <td>Стандартный</td>
+          <td></td>
+          <td class="dog-name-cell">ФИСТАШКА СПАЙСИ</td>
+          <td colspan="10" class="status-cell">Неявка</td>
+        </tr>
+      
+        <tr class="dns-row">
+          <td></td>
+          <td>38</td>
+          <td>БЕЗ ПОРОДЫ</td>
+          <td>Стандартный</td>
+          <td></td>
+          <td class="dog-name-cell">ФОРТ</td>
+          <td colspan="10" class="status-cell">Неявка</td>
+        </tr>
+      
+        <tr class="dns-row">
+          <td></td>
+          <td>39</td>
+          <td>БЕЗ ПОРОДЫ</td>
+          <td>Стандартный</td>
+          <td></td>
+          <td class="dog-name-cell">МЭЙЗИКИН</td>
+          <td colspan="10" class="status-cell">Неявка</td>
+        </tr>
+      
+    </tbody>
+  </table>
+</div>
+</body>
+</html>

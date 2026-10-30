@@ -41,6 +41,9 @@ jobs:
         working-directory: ./frontend
         run: yarn install
       
+      - name: Export HTML protocols
+        run: yarn run export-all-protocols
+      
       - name: Build frontend
         working-directory: ./frontend
         run: yarn build

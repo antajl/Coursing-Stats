@@ -211,6 +211,9 @@ export function buildMetaRowsHtml(comp: CompetitionData, colspan: number): strin
   if (comp.event.rules_url) {
     links.push(`<a href="${escapeHtml(comp.event.rules_url)}" target="_blank" rel="noopener">Регламент состязания</a>`);
   }
+  if (comp.event.results_pdf_url) {
+    links.push(`<a href="${escapeHtml(comp.event.results_pdf_url)}" target="_blank" rel="noopener">Официальный PDF</a>`);
+  }
   if (links.length > 0) {
     html += `\r\n    <tr class="meta-row">\r\n      <td colspan="${colspan}"><b>Документы:</b> ${links.join(' &bull; ')}</td>\r\n    </tr>`;
   }
@@ -1774,33 +1777,235 @@ ${cBody}
 </html>`;
 }
 
+
+const TOOLBAR_CSS = `
+    /* Toolbar & Old Money screen preview styles */
+    .cs-toolbar {
+      position: sticky;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #faf8f5;
+      border-bottom: 1px solid #e2d9cd;
+      padding: 10px 18px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      z-index: 9999;
+      box-shadow: 0 1px 4px rgba(40, 30, 20, 0.05);
+    }
+    .cs-toolbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+    .cs-toolbar-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+    .cs-toolbar-divider {
+      width: 1px;
+      height: 18px;
+      background: #d4c5b3;
+    }
+    .cs-toolbar-brand {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #8b5e34;
+    }
+    .cs-toolbar-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: #2b2621;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .cs-toolbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+    .cs-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid #d4c5b3;
+      background: #ffffff;
+      color: #4a3e33;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .cs-btn:hover {
+      background: #f4eee5;
+      border-color: #ba9d7e;
+      color: #2b2621;
+    }
+    .cs-btn-back {
+      background: #ffffff;
+      color: #8b5e34;
+      border-color: #d4c5b3;
+    }
+    .cs-btn-back:hover {
+      background: #f4eee5;
+      border-color: #8b5e34;
+    }
+    .cs-btn-primary {
+      background: #8b5e34;
+      border-color: #724c28;
+      color: #ffffff;
+    }
+    .cs-btn-primary:hover {
+      background: #724c28;
+      border-color: #5b3c1e;
+      color: #ffffff;
+    }
+    @media print {
+      .cs-toolbar {
+        display: none !important;
+      }
+      body {
+        background: #ffffff !important;
+        padding: 0 !important;
+      }
+      .protocol-container {
+        padding: 0 !important;
+        display: block !important;
+      }
+      table.protocol-table {
+        margin: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
+      }
+    }
+    @media screen {
+      body {
+        background: #f4f1ea;
+        min-height: 100vh;
+      }
+      .protocol-container {
+        padding: 20px 16px 40px;
+        display: flex;
+        justify-content: center;
+      }
+      table.protocol-table {
+        margin: 0 auto;
+        background: #ffffff;
+        box-shadow: 0 4px 16px rgba(43, 38, 33, 0.08);
+        border: 1px solid #dcd4c8;
+      }
+    }
+`;
+
+export function buildToolbarHtml(comp: CompetitionData): string {
+  const eventId = comp.event_id || comp.event.id;
+  const title = comp.event.title || buildEventTitle(comp);
+  const pdfUrl = comp.event.results_pdf_url?.trim() || null;
+  const catalogUrl = comp.event.catalog_url?.trim() || null;
+  const rulesUrl = comp.event.rules_url?.trim() || null;
+
+  return `
+<header class="cs-toolbar">
+  <div class="cs-toolbar-inner">
+    <div class="cs-toolbar-left">
+      <a href="/event/${eventId}" class="cs-btn cs-btn-back" title="Вернуться к результатам на сайте">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        <span>К состязанию</span>
+      </a>
+      <span class="cs-toolbar-divider"></span>
+      <span class="cs-toolbar-brand">CoursingStats</span>
+      <span class="cs-toolbar-title">${escapeHtml(title)}</span>
+    </div>
+    <div class="cs-toolbar-actions">
+      ${pdfUrl ? `
+      <a href="${escapeHtml(pdfUrl)}" target="_blank" rel="noopener noreferrer" class="cs-btn" title="Официальный PDF на Google Диске">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+        <span>Скачать PDF</span>
+      </a>` : ''}
+      ${catalogUrl ? `
+      <a href="${escapeHtml(catalogUrl)}" target="_blank" rel="noopener noreferrer" class="cs-btn" title="Каталог участников">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+        <span>Каталог</span>
+      </a>` : ''}
+      ${rulesUrl ? `
+      <a href="${escapeHtml(rulesUrl)}" target="_blank" rel="noopener noreferrer" class="cs-btn" title="Регламент состязания">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        <span>Регламент</span>
+      </a>` : ''}
+      <button onclick="window.print()" class="cs-btn cs-btn-primary" title="Печать или сохранение в PDF (Ctrl+P)">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></svg>
+        <span>Печать</span>
+      </button>
+    </div>
+  </div>
+</header>
+`;
+}
+
+export function injectToolbar(html: string, comp: CompetitionData): string {
+  if (html.includes('class="cs-toolbar"')) return html;
+
+  let res = html;
+  const styleIdx = res.lastIndexOf('</style>');
+  if (styleIdx !== -1) {
+    res = res.slice(0, styleIdx) + TOOLBAR_CSS + '\r\n  ' + res.slice(styleIdx);
+  }
+
+  const toolbarHtml = buildToolbarHtml(comp);
+  const bodyIdx = res.indexOf('<body>');
+  if (bodyIdx !== -1) {
+    const afterBody = bodyIdx + '<body>'.length;
+    res = res.slice(0, afterBody) + '\r\n' + toolbarHtml + '\r\n<div class="protocol-container">' + res.slice(afterBody);
+    const closeBodyIdx = res.lastIndexOf('</body>');
+    if (closeBodyIdx !== -1) {
+      res = res.slice(0, closeBodyIdx) + '</div>\r\n' + res.slice(closeBodyIdx);
+    }
+  }
+
+  return res;
+}
+
 export function buildProtocolHtml(comp: CompetitionData): string {
+  let rawHtml: string;
   const isTeamCoursing = comp.results.some(r => r.raw_scores_json?.format === 'team_coursing') ||
     (comp.event.competition_type && comp.event.competition_type.includes('Тройка'));
 
   if (isTeamCoursing) {
-    return buildTeamCoursingProtocolHtml(comp);
+    rawHtml = buildTeamCoursingProtocolHtml(comp);
+  } else {
+    const hasRacing = comp.results.some(r => r.raw_scores_json && (r.raw_scores_json.round_time !== undefined || r.raw_scores_json.format === 'racing' || (r.raw_scores_json.heats?.[0] && r.raw_scores_json.heats[0].time !== undefined)));
+    const hasCoursing = comp.results.some(r => r.raw_scores_json && !r.raw_scores_json.round_time && r.raw_scores_json.format !== 'racing' && r.raw_scores_json.heats?.[0]?.judges !== undefined);
+
+    if (hasRacing && hasCoursing) {
+      rawHtml = buildCombinedMarathonProtocolHtml(comp);
+    } else if (hasCoursing) {
+      rawHtml = buildCoursingProtocolHtml(comp);
+    } else {
+      const isRacing = comp.event.event_type === 'racing' || 
+        hasRacing ||
+        (comp.event.competition_type && (comp.event.competition_type.toLowerCase().includes('рейсинг') || comp.event.competition_type.toLowerCase().includes('круг')));
+
+      if (isRacing) {
+        rawHtml = buildRacingProtocolHtml(comp);
+      } else {
+        rawHtml = buildCoursingProtocolHtml(comp);
+      }
+    }
   }
 
-  const hasRacing = comp.results.some(r => r.raw_scores_json && (r.raw_scores_json.round_time !== undefined || r.raw_scores_json.format === 'racing' || (r.raw_scores_json.heats?.[0] && r.raw_scores_json.heats[0].time !== undefined)));
-  const hasCoursing = comp.results.some(r => r.raw_scores_json && !r.raw_scores_json.round_time && r.raw_scores_json.format !== 'racing' && r.raw_scores_json.heats?.[0]?.judges !== undefined);
-
-  if (hasRacing && hasCoursing) {
-    return buildCombinedMarathonProtocolHtml(comp);
-  }
-
-  if (hasCoursing) {
-    return buildCoursingProtocolHtml(comp);
-  }
-
-  const isRacing = comp.event.event_type === 'racing' || 
-    hasRacing ||
-    (comp.event.competition_type && (comp.event.competition_type.toLowerCase().includes('рейсинг') || comp.event.competition_type.toLowerCase().includes('круг')));
-
-  if (isRacing) {
-    return buildRacingProtocolHtml(comp);
-  }
-  return buildCoursingProtocolHtml(comp);
+  return injectToolbar(rawHtml, comp);
 }
 
 export function compilePdfWithEdge(htmlPath: string, pdfPath: string): boolean {
