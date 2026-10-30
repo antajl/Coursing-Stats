@@ -8,6 +8,7 @@ interface RacingDetailProps {
 
 export default function RacingDetail({ rawScores, bestTimesByRace }: RacingDetailProps) {
   const heats = rawScores.heats || []
+  const hasBibData = heats.some((h) => Boolean(h.bib_color || h.bib_number != null))
 
   return (
     <>
