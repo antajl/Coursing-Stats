@@ -38,7 +38,7 @@ export default function ToolbarSearch({
       type="button"
       className={`inline-flex h-8 shrink-0 items-center justify-center rounded-full border transition-all cursor-pointer shadow-2xs ${
         hasValue
-          ? 'border-camel-500 bg-camel-500 text-charcoal-900 px-3 gap-1.5 font-semibold'
+          ? 'border-camel-400 bg-camel-100 text-camel-950 px-3 gap-1.5 font-semibold'
           : isOpen
             ? 'border-camel-500 bg-cream-100 text-charcoal-900 w-8'
             : 'border-old-money-200 bg-cream-50 text-charcoal-700 hover:border-camel-500 hover:bg-old-money-50 w-8'

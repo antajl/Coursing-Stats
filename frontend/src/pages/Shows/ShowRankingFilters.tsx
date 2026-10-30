@@ -96,7 +96,7 @@ export default function ShowRankingFilters({
       type="button"
       className={`inline-flex h-8 items-center rounded-full border px-3.5 text-xs font-semibold whitespace-nowrap transition-colors gap-1.5 cursor-pointer ${
         yearIsNonDefault
-          ? 'border-camel-500 bg-camel-500 text-charcoal-900 shadow-2xs'
+          ? 'border-camel-400 bg-camel-100 text-camel-950 shadow-2xs'
           : 'border-old-money-200 bg-cream-50 text-charcoal-700 hover:bg-old-money-50'
       }`}
     >
@@ -154,7 +154,7 @@ export default function ShowRankingFilters({
                           }}
                           className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors cursor-pointer ${
                             !filterYear
-                              ? 'bg-camel-500 text-charcoal-900 font-medium'
+                              ? 'bg-camel-100 text-camel-950 font-semibold font-medium'
                               : 'text-charcoal-700 hover:bg-camel-100'
                           }`}
                         >
@@ -171,7 +171,7 @@ export default function ShowRankingFilters({
                             }}
                             className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors cursor-pointer ${
                               filterYear === year
-                                ? 'bg-camel-500 text-charcoal-900 font-medium'
+                                ? 'bg-camel-100 text-camel-950 font-semibold font-medium'
                                 : 'text-charcoal-700 hover:bg-camel-100'
                             }`}
                           >
@@ -311,7 +311,7 @@ export default function ShowRankingFilters({
                         }}
                         className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors cursor-pointer ${
                           !filterYear
-                            ? 'bg-camel-500 text-charcoal-900 font-medium'
+                            ? 'bg-camel-100 text-camel-950 font-semibold font-medium'
                             : 'text-charcoal-700 hover:bg-camel-100'
                         }`}
                       >
@@ -328,7 +328,7 @@ export default function ShowRankingFilters({
                           }}
                           className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors cursor-pointer ${
                             filterYear === year
-                              ? 'bg-camel-500 text-charcoal-900 font-medium'
+                              ? 'bg-camel-100 text-camel-950 font-semibold font-medium'
                               : 'text-charcoal-700 hover:bg-camel-100'
                           }`}
                         >

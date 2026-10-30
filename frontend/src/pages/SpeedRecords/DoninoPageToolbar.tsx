@@ -189,7 +189,7 @@ export default function DoninoPageToolbar({
                       }}
                       className={`w-full rounded-md px-3 py-2 text-left text-sm transition-colors ${
                         filterYears.length === 0
-                          ? 'bg-camel-500 text-charcoal-900'
+                          ? 'bg-camel-100 text-camel-950 font-semibold'
                           : 'text-charcoal-700 hover:bg-camel-100'
                       }`}
                     >
@@ -213,7 +213,7 @@ export default function DoninoPageToolbar({
                           }}
                           className={`w-full rounded-md px-3 py-2 text-left text-sm transition-colors ${
                             active
-                              ? 'bg-camel-500 text-charcoal-900'
+                              ? 'bg-camel-100 text-camel-950 font-semibold'
                               : 'text-charcoal-700 hover:bg-camel-100'
                           }`}
                         >
@@ -248,7 +248,7 @@ export default function DoninoPageToolbar({
                       }}
                       className={`w-full rounded-md px-3 py-2 text-left text-sm transition-colors ${
                         filterSexes.length === 0
-                          ? 'bg-camel-500 text-charcoal-900'
+                          ? 'bg-camel-100 text-camel-950 font-semibold'
                           : 'text-charcoal-700 hover:bg-camel-100'
                       }`}
                     >
@@ -264,7 +264,7 @@ export default function DoninoPageToolbar({
                           onClick={() => onToggleFilter('sex', sex)}
                           className={`flex w-full items-center gap-2 rounded-md px-3 py-2 text-left text-sm transition-colors ${
                             active
-                              ? 'bg-camel-500 text-charcoal-900'
+                              ? 'bg-camel-100 text-camel-950 font-semibold'
                               : 'text-charcoal-700 hover:bg-camel-100'
                           }`}
                         >
@@ -355,7 +355,7 @@ export default function DoninoPageToolbar({
                     }}
                     className={`w-full rounded-md px-3 py-2 text-left text-sm transition-colors ${
                       filterYears.length === 0
-                        ? 'bg-camel-500 text-charcoal-900'
+                        ? 'bg-camel-100 text-camel-950 font-semibold'
                         : 'text-charcoal-700 hover:bg-camel-100'
                     }`}
                   >
@@ -379,7 +379,7 @@ export default function DoninoPageToolbar({
                         }}
                         className={`w-full rounded-md px-3 py-2 text-left text-sm transition-colors ${
                           active
-                            ? 'bg-camel-500 text-charcoal-900'
+                            ? 'bg-camel-100 text-camel-950 font-semibold'
                             : 'text-charcoal-700 hover:bg-camel-100'
                         }`}
                       >
@@ -416,7 +416,7 @@ export default function DoninoPageToolbar({
                     }}
                     className={`w-full rounded-md px-3 py-2 text-left text-sm transition-colors ${
                       filterSexes.length === 0
-                        ? 'bg-camel-500 text-charcoal-900'
+                        ? 'bg-camel-100 text-camel-950 font-semibold'
                         : 'text-charcoal-700 hover:bg-camel-100'
                     }`}
                   >
@@ -432,7 +432,7 @@ export default function DoninoPageToolbar({
                         onClick={() => onToggleFilter('sex', sex)}
                         className={`flex w-full items-center gap-2 rounded-md px-3 py-2 text-left text-sm transition-colors ${
                           active
-                            ? 'bg-camel-500 text-charcoal-900'
+                            ? 'bg-camel-100 text-camel-950 font-semibold'
                             : 'text-charcoal-700 hover:bg-camel-100'
                         }`}
                       >

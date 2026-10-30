@@ -78,7 +78,7 @@ export default function ToolbarSelectDropdown({
                     onClick={() => handleSelect(option)}
                     className={`w-full rounded-lg px-3 py-2 text-left text-xs font-medium transition-colors ${
                       value === option
-                        ? 'bg-camel-500 text-charcoal-900'
+                        ? 'bg-camel-100 text-camel-950 font-semibold'
                         : 'text-charcoal-700 hover:bg-old-money-100'
                     }`}
                   >

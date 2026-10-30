@@ -155,7 +155,7 @@ export default function BreedSearchDropdown({
                   onClick={() => handleSelect(breed)}
                   className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors flex items-center justify-between gap-2 ${
                     isSelected
-                      ? 'bg-camel-500 text-charcoal-900 font-semibold'
+                      ? 'bg-camel-100 text-camel-950 font-semibold'
                       : 'text-charcoal-700 hover:bg-camel-100'
                   }`}
                 >

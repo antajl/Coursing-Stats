@@ -159,7 +159,7 @@ export default function MonthYearDropdown({
             onClick={() => setViewMode('years')}
             className={`py-1 rounded-md text-xs font-semibold transition-all text-center cursor-pointer ${
               viewMode === 'years'
-                ? 'bg-camel-500 text-charcoal-900 shadow-2xs'
+                ? 'bg-camel-100 text-camel-950 font-semibold shadow-2xs'
                 : 'text-charcoal-600 hover:text-charcoal-900 hover:bg-cream-200/60'
             }`}
           >
@@ -172,7 +172,7 @@ export default function MonthYearDropdown({
             onClick={() => setViewMode('months')}
             className={`py-1 rounded-md text-xs font-semibold transition-all text-center cursor-pointer ${
               viewMode === 'months'
-                ? 'bg-camel-500 text-charcoal-900 shadow-2xs'
+                ? 'bg-camel-100 text-camel-950 font-semibold shadow-2xs'
                 : 'text-charcoal-600 hover:text-charcoal-900 hover:bg-cream-200/60'
             }`}
           >
@@ -193,7 +193,7 @@ export default function MonthYearDropdown({
               }}
               className={`w-full py-1.5 px-3 rounded-lg text-xs transition-colors border text-center cursor-pointer ${
                 !selectedYear && !selectedMonth
-                  ? 'bg-camel-500 text-charcoal-900 font-semibold border-camel-600 shadow-xs'
+                  ? 'bg-camel-100 text-camel-950 font-semibold border-camel-600 shadow-xs'
                   : 'bg-cream-100/70 hover:bg-camel-100 text-charcoal-700 border-old-money-200/60 font-medium'
               }`}
               title="Показать события за все доступные сезоны архива"
@@ -224,7 +224,7 @@ export default function MonthYearDropdown({
                       }}
                       className={`h-8 rounded-lg text-xs transition-colors tabular-nums font-medium cursor-pointer ${
                         isSelected
-                          ? 'bg-camel-500 text-charcoal-900 font-semibold shadow-xs'
+                          ? 'bg-camel-100 text-camel-950 font-semibold shadow-xs'
                           : 'bg-cream-100/70 text-charcoal-700 hover:bg-camel-100 hover:text-charcoal-900 border border-old-money-200/60'
                       }`}
                       title={`Сезон ${year}`}
@@ -256,7 +256,7 @@ export default function MonthYearDropdown({
                 isYearDisabled
                   ? 'text-charcoal-400/40 bg-cream-50/20 cursor-not-allowed select-none opacity-30 border-transparent'
                   : !selectedMonth
-                    ? 'bg-camel-500 text-charcoal-900 font-semibold border-camel-600 shadow-xs cursor-pointer'
+                    ? 'bg-camel-100 text-camel-950 font-semibold border-camel-600 shadow-xs cursor-pointer'
                     : 'bg-cream-100/70 hover:bg-camel-100 text-charcoal-700 border-old-money-200/60 font-medium cursor-pointer'
               }`}
               title={
@@ -295,7 +295,7 @@ export default function MonthYearDropdown({
                       }}
                       className={`h-8 rounded-lg text-xs transition-all flex items-center justify-center font-medium ${
                         isSelected
-                          ? 'bg-camel-500 text-charcoal-900 font-semibold shadow-xs cursor-pointer'
+                          ? 'bg-camel-100 text-camel-950 font-semibold shadow-xs cursor-pointer'
                           : !isAvailable
                             ? 'text-charcoal-400/40 bg-cream-50/20 cursor-not-allowed select-none opacity-30 border border-transparent'
                             : 'text-charcoal-700 hover:bg-camel-100 hover:text-charcoal-900 border border-transparent hover:border-old-money-200/60 cursor-pointer'

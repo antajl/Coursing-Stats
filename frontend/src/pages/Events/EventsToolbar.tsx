@@ -179,7 +179,7 @@ export default function EventsToolbar({
                 }}
                 className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
                   !filterDiscipline
-                    ? 'bg-camel-500 text-charcoal-900 font-semibold'
+                    ? 'bg-camel-100 text-camel-950 font-semibold'
                     : 'text-charcoal-700 hover:bg-camel-100'
                 }`}
               >
@@ -196,7 +196,7 @@ export default function EventsToolbar({
                   }}
                   className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
                     filterDiscipline === d.value
-                      ? 'bg-camel-500 text-charcoal-900 font-semibold'
+                      ? 'bg-camel-100 text-camel-950 font-semibold'
                       : 'text-charcoal-700 hover:bg-camel-100'
                   }`}
                 >
@@ -252,7 +252,7 @@ export default function EventsToolbar({
                   onClick={() => handleDisciplineToggle(d.value)}
                   className={`px-2.5 py-1 rounded-full text-xs font-semibold transition-all cursor-pointer ${
                     active
-                      ? 'bg-camel-500 text-charcoal-900 shadow-2xs'
+                      ? 'bg-camel-100 text-camel-950 font-semibold shadow-2xs'
                       : 'text-charcoal-700 hover:text-charcoal-900 hover:bg-cream-100'
                   }`}
                 >

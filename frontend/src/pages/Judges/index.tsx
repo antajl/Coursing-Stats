@@ -199,7 +199,7 @@ export default function Judges() {
                         }}
                         className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
                           !filterYear
-                            ? 'bg-camel-500 text-charcoal-900 font-semibold'
+                            ? 'bg-camel-100 text-camel-950 font-semibold'
                             : 'text-charcoal-700 hover:bg-camel-100'
                         }`}
                       >
@@ -216,7 +216,7 @@ export default function Judges() {
                           }}
                           className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
                             filterYear === year
-                              ? 'bg-camel-500 text-charcoal-900 font-semibold'
+                              ? 'bg-camel-100 text-camel-950 font-semibold'
                               : 'text-charcoal-700 hover:bg-camel-100'
                           }`}
                         >
@@ -274,7 +274,7 @@ export default function Judges() {
                         }}
                         className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
                           !filterDiscipline
-                            ? 'bg-camel-500 text-charcoal-900 font-semibold'
+                            ? 'bg-camel-100 text-camel-950 font-semibold'
                             : 'text-charcoal-700 hover:bg-camel-100'
                         }`}
                       >
@@ -291,7 +291,7 @@ export default function Judges() {
                           }}
                           className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
                             filterDiscipline === d.value
-                              ? 'bg-camel-500 text-charcoal-900 font-semibold'
+                              ? 'bg-camel-100 text-camel-950 font-semibold'
                               : 'text-charcoal-700 hover:bg-camel-100'
                           }`}
                         >
@@ -349,7 +349,7 @@ export default function Judges() {
                       }}
                       className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
                         !filterYear
-                          ? 'bg-camel-500 text-charcoal-900 font-semibold'
+                          ? 'bg-camel-100 text-camel-950 font-semibold'
                           : 'text-charcoal-700 hover:bg-camel-100'
                       }`}
                     >
@@ -366,7 +366,7 @@ export default function Judges() {
                         }}
                         className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
                           filterYear === year
-                            ? 'bg-camel-500 text-charcoal-900 font-semibold'
+                            ? 'bg-camel-100 text-camel-950 font-semibold'
                             : 'text-charcoal-700 hover:bg-camel-100'
                         }`}
                       >
@@ -424,7 +424,7 @@ export default function Judges() {
                       }}
                       className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
                         !filterDiscipline
-                          ? 'bg-camel-500 text-charcoal-900 font-semibold'
+                          ? 'bg-camel-100 text-camel-950 font-semibold'
                           : 'text-charcoal-700 hover:bg-camel-100'
                       }`}
                     >
@@ -441,7 +441,7 @@ export default function Judges() {
                         }}
                         className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
                           filterDiscipline === d.value
-                            ? 'bg-camel-500 text-charcoal-900 font-semibold'
+                            ? 'bg-camel-100 text-camel-950 font-semibold'
                             : 'text-charcoal-700 hover:bg-camel-100'
                         }`}
                       >

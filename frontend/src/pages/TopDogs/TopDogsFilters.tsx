@@ -108,7 +108,7 @@ export default function TopDogsFilters({
         }}
         className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
           !filterSex
-            ? 'bg-camel-500 text-charcoal-900 font-semibold'
+            ? 'bg-camel-100 text-camel-950 font-semibold'
             : 'text-charcoal-700 hover:bg-camel-100'
         }`}
       >
@@ -123,7 +123,7 @@ export default function TopDogsFilters({
         }}
         className={`flex w-full items-center gap-2 rounded-md px-3 py-2 text-left text-sm transition-colors ${
           filterSex === 'm'
-            ? 'bg-camel-500 text-charcoal-900 font-semibold'
+            ? 'bg-camel-100 text-camel-950 font-semibold'
             : 'text-charcoal-700 hover:bg-camel-100'
         }`}
       >
@@ -139,7 +139,7 @@ export default function TopDogsFilters({
         }}
         className={`flex w-full items-center gap-2 rounded-md px-3 py-2 text-left text-sm transition-colors ${
           filterSex === 'f'
-            ? 'bg-camel-500 text-charcoal-900 font-semibold'
+            ? 'bg-camel-100 text-camel-950 font-semibold'
             : 'text-charcoal-700 hover:bg-camel-100'
         }`}
       >
@@ -180,7 +180,7 @@ export default function TopDogsFilters({
                   }}
                   className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
                     !filterYear
-                      ? 'bg-camel-500 text-charcoal-900'
+                      ? 'bg-camel-100 text-camel-950 font-semibold'
                       : 'text-charcoal-700 hover:bg-camel-100'
                   }`}
                 >
@@ -196,7 +196,7 @@ export default function TopDogsFilters({
                     }}
                     className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
                       filterYear === year
-                        ? 'bg-camel-500 text-charcoal-900'
+                        ? 'bg-camel-100 text-camel-950 font-semibold'
                         : 'text-charcoal-700 hover:bg-camel-100'
                     }`}
                   >
@@ -307,7 +307,7 @@ export default function TopDogsFilters({
                         }}
                         className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
                           !filterYear
-                            ? 'bg-camel-500 text-charcoal-900'
+                            ? 'bg-camel-100 text-camel-950 font-semibold'
                             : 'text-charcoal-700 hover:bg-camel-100'
                         }`}
                       >
@@ -323,7 +323,7 @@ export default function TopDogsFilters({
                           }}
                           className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
                             filterYear === year
-                              ? 'bg-camel-500 text-charcoal-900'
+                              ? 'bg-camel-100 text-camel-950 font-semibold'
                               : 'text-charcoal-700 hover:bg-camel-100'
                           }`}
                         >

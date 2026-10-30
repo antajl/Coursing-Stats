@@ -5,7 +5,7 @@ export const TOOLBAR_CHIP_IDLE =
   'border-old-money-200 bg-cream-50 text-charcoal-700 hover:bg-old-money-50'
 
 export const TOOLBAR_CHIP_ACTIVE =
-  'border-camel-500 bg-camel-500 text-charcoal-900 shadow-2xs'
+  'border-camel-400 bg-camel-100 text-camel-950 shadow-2xs'
 
 /** Pill filter trigger with chevron (ModernDropdown). */
 export function toolbarPillTriggerClass(active: boolean, extra = '') {
@@ -25,7 +25,7 @@ export const TOOLBAR_SEGMENT_IDLE =
   'text-charcoal-600 hover:text-charcoal-800'
 
 export const TOOLBAR_SEGMENT_ACTIVE =
-  'bg-camel-500 text-charcoal-900 shadow-sm'
+  'border border-camel-400/80 bg-camel-100 text-camel-950 shadow-2xs'
 
 export const TOOLBAR_SORT_CHIP =
   'inline-flex h-8 items-center gap-1 rounded-full border px-3 text-xs font-medium whitespace-nowrap transition-colors'
