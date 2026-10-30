@@ -50,42 +50,12 @@ export default function EventHeader({ event, results }: EventHeaderProps) {
   return (
     <div className="relative mb-3">
       <div className="min-w-0 rounded-xl border border-old-money-200 bg-gradient-to-br from-cream-50 to-white px-3.5 py-3 md:px-4.5 md:py-3.5">
-        {/* Заголовок турнира, серия этапов и быстрые действия */}
+        {/* Заголовок турнира и быстрые действия */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2.5">
-          <div className="flex flex-wrap items-center gap-2.5 min-w-0 flex-1">
+          <div className="min-w-0 flex-1">
             <h1 className="min-w-0 font-serif text-base sm:text-lg font-bold leading-snug tracking-tight text-charcoal-900">
               {title}
             </h1>
-            {isDoninoSeries && (
-              <div className="inline-flex items-center gap-1.5 text-xs shrink-0 flex-wrap">
-                <span className="font-semibold text-old-money-500">Серия:</span>
-                <div className="inline-flex items-center gap-1">
-                  {[
-                    { id: '2026004', label: 'I этап (9 авг)' },
-                    { id: '2022001', label: 'II этап (20 сен)' },
-                    { id: '2026005', label: 'III этап (31 окт)' },
-                  ].map((stage) => {
-                    const isCurrent = String(event.id) === stage.id
-                    return isCurrent ? (
-                      <span
-                        key={stage.id}
-                        className="inline-flex items-center rounded-md bg-amber-800 px-2 py-0.5 text-xs font-semibold text-white shadow-2xs"
-                      >
-                        {stage.label}
-                      </span>
-                    ) : (
-                      <Link
-                        key={stage.id}
-                        to={'/event/' + stage.id + '/'}
-                        className="inline-flex items-center rounded-md border border-amber-300 bg-cream-50 px-2 py-0.5 text-xs font-medium text-amber-900 transition-colors hover:bg-amber-100 hover:border-amber-400"
-                      >
-                        {stage.label}
-                      </Link>
-                    )
-                  })}
-                </div>
-              </div>
-            )}
           </div>
           {hasLinks && (
             <div className="flex flex-wrap items-center gap-1.5 shrink-0">
@@ -238,6 +208,38 @@ export default function EventHeader({ event, results }: EventHeaderProps) {
           </div>
         </div>
       </div>
+
+      {/* Переключатель этапов серии (отдельный аккуратный блок под шапкой) */}
+      {isDoninoSeries && (
+        <div className="mt-2 flex flex-wrap items-center gap-2 rounded-lg border border-amber-200/80 bg-gradient-to-r from-amber-50/80 via-cream-50/80 to-white px-3.5 py-1.5 text-xs text-charcoal-800">
+          <span className="font-semibold text-charcoal-700">Серия:</span>
+          <div className="flex items-center gap-1.5 flex-wrap">
+            {[
+              { id: '2026004', label: 'I этап (9 авг)' },
+              { id: '2022001', label: 'II этап (20 сен)' },
+              { id: '2026005', label: 'III этап (31 окт)' },
+            ].map((stage) => {
+              const isCurrent = String(event.id) === stage.id
+              return isCurrent ? (
+                <span
+                  key={stage.id}
+                  className="inline-flex items-center rounded-md bg-amber-800 px-2.5 py-0.5 text-xs font-semibold text-white shadow-2xs"
+                >
+                  {stage.label}
+                </span>
+              ) : (
+                <Link
+                  key={stage.id}
+                  to={'/event/' + stage.id + '/'}
+                  className="inline-flex items-center rounded-md border border-amber-300 bg-cream-50 px-2.5 py-0.5 text-xs font-medium text-amber-900 transition-colors hover:bg-amber-100 hover:border-amber-400"
+                >
+                  {stage.label}
+                </Link>
+              )
+            })}
+          </div>
+        </div>
+      )}
     </div>
   )
 }
