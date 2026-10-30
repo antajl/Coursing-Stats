@@ -209,35 +209,33 @@ export default function EventHeader({ event, results }: EventHeaderProps) {
         </div>
       </div>
 
-      {/* Переключатель этапов серии (отдельный аккуратный блок под шапкой) */}
+      {/* Переключатель этапов серии */}
       {isDoninoSeries && (
-        <div className="mt-2 flex flex-wrap items-center gap-2 rounded-lg border border-amber-200/80 bg-gradient-to-r from-amber-50/80 via-cream-50/80 to-white px-3.5 py-1.5 text-xs text-charcoal-800">
-          <span className="font-semibold text-charcoal-700">Серия:</span>
-          <div className="flex items-center gap-1.5 flex-wrap">
-            {[
-              { id: '2026004', label: 'I этап (9 авг)' },
-              { id: '2022001', label: 'II этап (20 сен)' },
-              { id: '2026005', label: 'III этап (31 окт)' },
-            ].map((stage) => {
-              const isCurrent = String(event.id) === stage.id
-              return isCurrent ? (
-                <span
-                  key={stage.id}
-                  className="inline-flex items-center rounded-md bg-amber-800 px-2.5 py-0.5 text-xs font-semibold text-white shadow-2xs"
-                >
-                  {stage.label}
-                </span>
-              ) : (
-                <Link
-                  key={stage.id}
-                  to={'/event/' + stage.id + '/'}
-                  className="inline-flex items-center rounded-md border border-amber-300 bg-cream-50 px-2.5 py-0.5 text-xs font-medium text-amber-900 transition-colors hover:bg-amber-100 hover:border-amber-400"
-                >
-                  {stage.label}
-                </Link>
-              )
-            })}
-          </div>
+        <div className="mt-2.5 flex flex-wrap items-center gap-1.5 text-xs">
+          <span className="text-xs font-medium text-charcoal-500 mr-1">Серия:</span>
+          {[
+            { id: '2026004', label: 'I этап (9 авг)' },
+            { id: '2022001', label: 'II этап (20 сен)' },
+            { id: '2026005', label: 'III этап (31 окт)' },
+          ].map((stage) => {
+            const isCurrent = String(event.id) === stage.id
+            return isCurrent ? (
+              <span
+                key={stage.id}
+                className="inline-flex h-8 shrink-0 items-center rounded-full bg-camel-500 text-charcoal-900 border border-camel-600 px-3 text-xs font-semibold shadow-xs whitespace-nowrap"
+              >
+                {stage.label}
+              </span>
+            ) : (
+              <Link
+                key={stage.id}
+                to={'/event/' + stage.id + '/'}
+                className="inline-flex h-8 shrink-0 items-center rounded-full border border-old-money-200/80 bg-cream-50 px-3 text-xs font-semibold text-charcoal-700 hover:bg-old-money-50 hover:text-charcoal-900 transition-all whitespace-nowrap"
+              >
+                {stage.label}
+              </Link>
+            )
+          })}
         </div>
       )}
     </div>
