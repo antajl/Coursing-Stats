@@ -206,14 +206,7 @@ export function buildMetaRowsHtml(comp: CompetitionData, colspan: number): strin
   if (comp.event.host_club) {
     html += `\r\n    <tr class="meta-row">\r\n      <td colspan="${colspan}"><b>Организатор:</b> ${escapeHtml(comp.event.host_club)}</td>\r\n    </tr>`;
   }
-  const isDoninoSeries =
-    comp.event.competition_kind === 'Клубный чемпионат' ||
-    Boolean(comp.event.title?.includes('Клубный чемпионат')) ||
-    [2026004, 2022001, 2026005].includes(Number(comp.event.id));
-
-  if (isDoninoSeries) {
-    html += `\r\n    <tr class="meta-row">\r\n      <td colspan="${colspan}"><b>Руководитель серии:</b> Манухин М.А.</td>\r\n    </tr>`;
-  } else if (comp.event.judges && !isGenericJudgePlaceholder(comp.event.judges)) {
+  if (comp.event.judges && !isGenericJudgePlaceholder(comp.event.judges)) {
     html += `\r\n    <tr class="meta-row">\r\n      <td colspan="${colspan}"><b>Судьи:</b> ${escapeHtml(getJudgeString(comp.event.judges))}</td>\r\n    </tr>`;
   }
   return html;
@@ -2008,10 +2001,6 @@ export function buildToolbarHtml(comp: CompetitionData): string {
       <a href="/donino/championship" class="cs-btn cs-btn-donino" title="Клубный чемпионат Донино: общий зачет и этапы">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.45 1-1 1H7.5c-.28 0-.5.22-.5.5v1c0 .28.22.5.5.5h9c.28 0 .5-.22.5-.5v-1c0-.28-.22-.5-.5-.5H15c-.55 0-1-.45-1-1v-2.34c3.2-1.07 5-3.5 5-6.66V3H5v5c0 3.16 1.8 5.59 5 6.66z"/></svg>
         <span>Чемпионат</span>
-      </a>
-      <a href="/speed-records" class="cs-btn cs-btn-donino" title="База рекордов и замеров скорости в Донино">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-        <span>Рекорды Донино</span>
       </a>` : ''}
       ${pdfUrl ? `
       <a href="${escapeHtml(pdfUrl)}" target="_blank" rel="noopener noreferrer" class="cs-btn" title="PDF-файл протокола">

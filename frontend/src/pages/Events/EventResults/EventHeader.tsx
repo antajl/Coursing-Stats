@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
-import { Calendar, Users, MapPin, Building2, User, PawPrint, Download, FileText, BookOpen, FileSpreadsheet, Trophy } from 'lucide-react'
+import { Calendar, Users, MapPin, Building2, User, PawPrint, Download, FileText, BookOpen, FileSpreadsheet } from 'lucide-react'
 import BreedGroupDivider from './components/BreedGroupDivider'
 import HoverTooltip from '../../../components/ui/HoverTooltip'
 import { formatDate } from './utils'
@@ -173,78 +173,7 @@ export default function EventHeader({ event, results }: EventHeaderProps) {
           )}
         </div>
 
-        {isDoninoSeries && (
-          <div className="mt-4 rounded-lg border border-amber-300/80 bg-amber-50/70 p-3 sm:p-3.5">
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2.5">
-              <div className="flex items-center gap-2">
-                <span className="inline-flex items-center justify-center rounded bg-amber-200/90 px-2 py-0.5 text-xs font-bold text-amber-900 uppercase tracking-wide">
-                  Серия 2026
-                </span>
-                <span className="text-sm font-semibold text-charcoal-900">
-                  Клубные чемпионаты Донино по бегам борзых
-                </span>
-              </div>
-              <div className="flex items-center gap-1.5 flex-wrap">
-                {[
-                  { id: '2026004', label: 'I этап', date: '09.08' },
-                  { id: '2022001', label: 'II этап', date: '20.09' },
-                  { id: '2026005', label: 'III этап', date: '31.10' },
-                ].map((stage) => {
-                  const isCurrent = String(event.id) === stage.id
-                  return isCurrent ? (
-                    <span
-                      key={stage.id}
-                      className="inline-flex items-center gap-1 rounded-md bg-amber-800 px-2.5 py-1 text-xs font-semibold text-white shadow-2xs"
-                    >
-                      <span>{stage.label}</span>
-                      <span className="opacity-80">({stage.date})</span>
-                    </span>
-                  ) : (
-                    <Link
-                      key={stage.id}
-                      to={`/event/${stage.id}/`}
-                      className="inline-flex items-center gap-1 rounded-md border border-amber-300 bg-white/90 px-2.5 py-1 text-xs font-medium text-amber-900 transition-colors hover:bg-amber-100 hover:border-amber-400"
-                    >
-                      <span>{stage.label}</span>
-                      <span className="text-charcoal-500">({stage.date})</span>
-                    </Link>
-                  )
-                })}
-              </div>
-            </div>
-            <div className="mt-2 text-[11px] leading-relaxed text-charcoal-600 border-t border-amber-200/60 pt-2 flex flex-wrap items-center justify-between gap-2">
-              <span>Регламент клубных лиг: <b>Лига «Прогресс»</b> → <b>Лига «Чемпионы»</b> → <b>Лига «Абсолют»</b></span>
-              <div className="flex items-center gap-3 flex-wrap">
-                <Link
-                  to="/donino/championship"
-                  className="font-semibold text-amber-900 underline hover:text-amber-950 inline-flex items-center gap-1"
-                >
-                  <Trophy className="h-3 w-3" />
-                  <span>Лиги и рейтинг серии →</span>
-                </Link>
-                {rulesUrl && (
-                  <a
-                    href={rulesUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-medium text-amber-900 underline hover:text-amber-950 inline-flex items-center gap-1"
-                  >
-                    <BookOpen className="h-3 w-3" />
-                    <span>Регламент</span>
-                  </a>
-                )}
-                <Link
-                  to="/speed-records/"
-                  className="font-medium text-amber-800 hover:text-amber-950 underline inline-flex items-center gap-1"
-                >
-                  <span>Рекорды Донино →</span>
-                </Link>
-              </div>
-            </div>
-          </div>
-        )}
-
-        {(event.host_club || event.judges || isDoninoSeries || trackSchemes.length > 0) && (
+        {(event.host_club || event.judges || trackSchemes.length > 0) && (
           <div className="mt-4 pt-4 border-t border-old-money-200/60">
             <div className="flex flex-wrap gap-4 sm:gap-6">
               {event.host_club && (
@@ -253,14 +182,8 @@ export default function EventHeader({ event, results }: EventHeaderProps) {
                   <span className="text-old-money-700">{event.host_club}</span>
                 </div>
               )}
-              {isDoninoSeries ? (
-                <div className="flex items-center gap-2 text-sm">
-                  <User className="h-4 w-4 text-old-money-500 shrink-0" />
-                  <span className="text-old-money-700">
-                    <span className="text-old-money-500 font-medium">Руководитель серии:</span> Манухин М.А.
-                  </span>
-                </div>
-              ) : event.judges ? (
+              {event.judges && (
+
                 <div className="flex items-center gap-2 text-sm">
                   <User className="h-4 w-4 text-old-money-500 shrink-0" />
                   <div className="flex flex-wrap items-center gap-x-1.5 text-old-money-700">
@@ -282,7 +205,7 @@ export default function EventHeader({ event, results }: EventHeaderProps) {
                     )}
                   </div>
                 </div>
-              ) : null}
+              )}
               {trackSchemes.length > 0 && (
                 <div className="flex items-center gap-2 text-sm">
                   <div className="flex flex-wrap gap-1.5">
@@ -319,6 +242,39 @@ export default function EventHeader({ event, results }: EventHeaderProps) {
                   </div>
                 </div>
               )}
+            </div>
+          </div>
+        )}
+
+        {isDoninoSeries && (
+          <div className="mt-3 pt-3 border-t border-old-money-200/60 flex items-center gap-2 flex-wrap">
+            <span className="text-xs font-semibold text-charcoal-700">
+              Серия:
+            </span>
+            <div className="flex items-center gap-1.5 flex-wrap">
+              {[
+                { id: '2026004', label: 'I этап (9 авг)' },
+                { id: '2022001', label: 'II этап (20 сен)' },
+                { id: '2026005', label: 'III этап (31 окт)' },
+              ].map((stage) => {
+                const isCurrent = String(event.id) === stage.id
+                return isCurrent ? (
+                  <span
+                    key={stage.id}
+                    className="inline-flex items-center rounded-md bg-amber-800 px-2.5 py-1 text-xs font-semibold text-white shadow-2xs"
+                  >
+                    {stage.label}
+                  </span>
+                ) : (
+                  <Link
+                    key={stage.id}
+                    to={'/event/' + stage.id + '/'}
+                    className="inline-flex items-center rounded-md border border-amber-300 bg-cream-50 px-2.5 py-1 text-xs font-medium text-amber-900 transition-colors hover:bg-amber-100 hover:border-amber-400"
+                  >
+                    {stage.label}
+                  </Link>
+                )
+              })}
             </div>
           </div>
         )}

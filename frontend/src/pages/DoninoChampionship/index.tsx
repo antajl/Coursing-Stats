@@ -217,6 +217,7 @@ export default function DoninoChampionship() {
               <ChampionshipStandingsTab
                 standings={data.standings}
                 promotions={data.promotions}
+                onSelectRulesTab={() => handleTabChange("rules")}
               />
             )}
 
