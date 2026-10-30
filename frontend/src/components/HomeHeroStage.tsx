@@ -147,11 +147,16 @@ export default function HomeHeroStage({
       <div ref={mediaRef} className="home-v2-stage-media block" aria-hidden>
         <picture>
           <source
-            media="(max-width: 768px)"
-            srcSet="/assets/hero/background-mobile-480.webp 480w, /assets/hero/background-mobile.webp 820w"
-            sizes="(max-width: 480px) 480px, 768px"
+            media="(max-width: 480px)"
+            srcSet="/assets/hero/background-mobile-480.webp"
             width={480}
             height={252}
+          />
+          <source
+            media="(max-width: 768px)"
+            srcSet="/assets/hero/background-mobile.webp"
+            width={820}
+            height={430}
           />
           <img
             src="/assets/hero/background.webp"

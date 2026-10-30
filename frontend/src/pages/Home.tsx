@@ -151,19 +151,27 @@ export default function Home() {
         >
           <picture>
             <source
-              media="(max-width: 768px)"
-              srcSet="/assets/hero/background-mobile-480.webp 480w, /assets/hero/background-mobile.webp 820w"
-              sizes="(max-width: 480px) 480px, 768px"
+              media="(max-width: 480px)"
+              srcSet="/assets/hero/background-mobile-480.webp"
               width={480}
-              height={252}
+              height={160}
+            />
+            <source
+              media="(max-width: 768px)"
+              srcSet="/assets/hero/background-mobile.webp"
+              width={820}
+              height={278}
             />
             <img
-              src="/assets/hero/background.webp"
+              src="/assets/hero/background-mobile-480.webp"
+              width={480}
+              height={160}
               alt=""
               role="presentation"
               className="w-full h-full object-cover object-[center_68%]"
               loading="eager"
               fetchPriority="high"
+              decoding="async"
             />
           </picture>
           {/* Bottom soft gradient overlay into om-50 */}

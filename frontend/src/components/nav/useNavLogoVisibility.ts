@@ -30,9 +30,12 @@ export function useNavLogoVisibility(
     observer.observe(logoEl)
     observer.observe(navEl)
     window.addEventListener('resize', checkOverlap)
-    checkOverlap()
+
+    // Defer initial geometry read to next animation frame to prevent forced layout / reflow during hydration
+    const rafId = window.requestAnimationFrame(checkOverlap)
 
     return () => {
+      window.cancelAnimationFrame(rafId)
       observer.disconnect()
       window.removeEventListener('resize', checkOverlap)
     }

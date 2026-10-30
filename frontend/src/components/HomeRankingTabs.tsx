@@ -27,11 +27,12 @@ export default function HomeRankingTabs({ value, onChange }: HomeRankingTabsProp
       setLine({ left: btn.offsetLeft, width: btn.offsetWidth, ready: true })
     }
 
-    update()
+    const rafId = window.requestAnimationFrame(update)
     const ro = typeof ResizeObserver !== 'undefined' ? new ResizeObserver(update) : null
     ro?.observe(group)
     window.addEventListener('resize', update)
     return () => {
+      window.cancelAnimationFrame(rafId)
       ro?.disconnect()
       window.removeEventListener('resize', update)
     }

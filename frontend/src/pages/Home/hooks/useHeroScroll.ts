@@ -56,9 +56,11 @@ export function useHeroScroll() {
 
     window.addEventListener('scroll', handleScroll, { passive: true })
     window.addEventListener('resize', checkOverlap)
-    checkOverlap()
+    // Defer initial geometry read to next animation frame to prevent forced layout / reflow during hydration
+    const rafId = window.requestAnimationFrame(checkOverlap)
 
     return () => {
+      window.cancelAnimationFrame(rafId)
       observer.disconnect()
       window.removeEventListener('scroll', handleScroll)
       window.removeEventListener('resize', checkOverlap)
