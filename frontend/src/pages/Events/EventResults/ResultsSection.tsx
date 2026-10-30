@@ -1,9 +1,9 @@
 import { useState, useMemo } from 'react'
-import { X, Table, List, LayoutGrid, Layers } from 'lucide-react'
+import { X, Table, List, LayoutList, Layers } from 'lucide-react'
 import ResultCard from './ResultCard'
 import TableProtocolView from './views/TableProtocolView'
 import AccordionProtocolView from './views/AccordionProtocolView'
-import GridProtocolView from './views/GridProtocolView'
+import ScorecardProtocolView from './views/ScorecardProtocolView'
 import { groupResultsByBreedClass, groupRacingResults, isRacingFormat, parseRawScores, getBestTimesByRace } from './utils'
 import ToolbarSearch from '../../../components/toolbar/ToolbarSearch'
 import QuickBreedBar from '../../TopDogs/QuickBreedBar'
@@ -24,7 +24,7 @@ function breedCountLabel(count: number): string {
 export default function ResultsSection({ results }: ResultsSectionProps) {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedBreed, setSelectedBreed] = useState('')
-  const [viewMode, setViewMode] = useState<'table' | 'accordion' | 'grid' | 'current'>('table')
+  const [viewMode, setViewMode] = useState<'table' | 'accordion' | 'scorecard' | 'current'>('table')
 
   if (results.length === 0) {
     return (
@@ -121,10 +121,10 @@ export default function ResultsSection({ results }: ResultsSectionProps) {
           <span className="font-semibold text-charcoal-700 mr-1">Вид протокола:</span>
           <div className="inline-flex rounded-full border border-old-money-200 bg-cream-50 p-0.5 text-xs">
             {[
-              { id: 'table', label: '1. Таблица (Swiss Timing)', icon: Table },
-              { id: 'accordion', label: '2. Лидерборд-строки', icon: List },
-              { id: 'grid', label: '3. Двухколоночная сетка', icon: LayoutGrid },
-              { id: 'current', label: '4. Подробные карточки (текущий)', icon: Layers },
+              { id: 'table', label: '1. Спорт-таблица (Swiss Timing)', icon: Table },
+              { id: 'accordion', label: '2. Лидерборд-стрипы (Telemetry)', icon: List },
+              { id: 'scorecard', label: '3. Модульные бланки (Scorecard)', icon: LayoutList },
+              { id: 'current', label: '4. Подробные карточки (исходный)', icon: Layers },
             ].map((tab) => {
               const active = viewMode === tab.id
               const Icon = tab.icon
@@ -212,8 +212,8 @@ export default function ResultsSection({ results }: ResultsSectionProps) {
               />
             )}
 
-            {viewMode === 'grid' && (
-              <GridProtocolView
+            {viewMode === 'scorecard' && (
+              <ScorecardProtocolView
                 results={groupResults}
                 bestTimesByRace={bestTimesByRace}
                 isRacing={isRacing}

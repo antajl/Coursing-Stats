@@ -112,52 +112,33 @@ export default function EventHeader({
           )}
         </div>
 
-        {/* Единая компактная строка метрик и деталей турнира */}
-        <div className="mt-2.5 pt-2 border-t border-old-money-200/60 flex flex-wrap items-center justify-between gap-x-4 gap-y-2 text-xs">
-          {/* Числовые метрики */}
-          <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 shrink-0">
-            <div className="inline-flex items-center gap-1.5 rounded-lg border border-old-money-200/80 bg-cream-100/70 px-2.5 py-1 text-charcoal-800">
-              <Calendar className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
-              <span className="font-semibold text-charcoal-900">{dateText}</span>
-            </div>
-
-            <div className="inline-flex items-center gap-1.5 rounded-lg border border-old-money-200/80 bg-cream-100/70 px-2.5 py-1 text-charcoal-800">
-              <Dog className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
-              <span className="font-semibold text-charcoal-900">{participantsCount} участников</span>
-            </div>
-
-            <div className="inline-flex items-center gap-1.5 rounded-lg border border-old-money-200/80 bg-cream-100/70 px-2.5 py-1 text-charcoal-800">
-              <PawPrint className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
-              <span className="font-semibold text-charcoal-900">{breedsCount} пород</span>
-            </div>
-          </div>
-
-          {/* Организатор, Место проведения, Судейство и Трасса */}
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-xs text-charcoal-700 min-w-0 justify-start sm:justify-end">
-            {event.host_club && (
-              <div className="flex items-center gap-1.5 min-w-0">
-                <Building2 className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
-                <span className="text-old-money-500 font-medium">Организатор:</span>
-                <span className="font-semibold text-charcoal-900 truncate max-w-[200px] sm:max-w-xs" title={event.host_club}>
-                  {event.host_club}
-                </span>
+        {/* Метрики и детали турнира */}
+        <div className="mt-2.5 pt-2 border-t border-old-money-200/60 flex flex-col gap-y-2 text-xs">
+          {/* Ряд 1: Числовые метрики и Судейство */}
+          <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1.5 min-w-0">
+            {/* Числовые метрики */}
+            <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 shrink-0">
+              <div className="inline-flex items-center gap-1.5 rounded-lg border border-old-money-200/80 bg-cream-100/70 px-2.5 py-1 text-charcoal-800">
+                <Calendar className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
+                <span className="font-semibold text-charcoal-900">{dateText}</span>
               </div>
-            )}
 
-            {locationText && locationText !== '—' && (
-              <div className="flex items-center gap-1.5 min-w-0">
-                <MapPin className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
-                <span className="text-old-money-500 font-medium">Место:</span>
-                <span className="font-semibold text-charcoal-900 truncate max-w-[240px] sm:max-w-sm" title={locationText}>
-                  {locationText}
-                </span>
+              <div className="inline-flex items-center gap-1.5 rounded-lg border border-old-money-200/80 bg-cream-100/70 px-2.5 py-1 text-charcoal-800">
+                <Dog className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
+                <span className="font-semibold text-charcoal-900">{participantsCount} участников</span>
               </div>
-            )}
 
+              <div className="inline-flex items-center gap-1.5 rounded-lg border border-old-money-200/80 bg-cream-100/70 px-2.5 py-1 text-charcoal-800">
+                <PawPrint className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
+                <span className="font-semibold text-charcoal-900">{breedsCount} пород</span>
+              </div>
+            </div>
+
+            {/* Судейство */}
             {event.judges && (
-              <div className="flex items-center gap-1.5 shrink-0">
+              <div className="flex items-center gap-1.5 min-w-0">
                 <User className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
-                <span className="text-old-money-500 font-medium">Судьи:</span>
+                <span className="text-old-money-500 font-medium shrink-0">Судьи:</span>
                 <div className="flex flex-wrap items-center gap-x-1 font-semibold text-charcoal-900">
                   {parseJudgeNames(event.judges).length > 0 ? (
                     parseJudgeNames(event.judges).map((judgeName, idx, arr) => (
@@ -177,42 +158,67 @@ export default function EventHeader({
                 </div>
               </div>
             )}
-
-            {trackSchemes.length > 0 && (
-              <div className="flex items-center gap-1.5 shrink-0">
-                {trackSchemes.map((scheme, index) => {
-                  const schemeName =
-                    !scheme.url && scheme.name === 'Схема трассы' ? 'Длина трассы' : scheme.name
-                  return (
-                    <span key={index} className="group relative inline-block">
-                      <span
-                        className={`inline-flex items-center gap-1 rounded-md border border-camel-200 bg-camel-50 px-2 py-0.5 text-xs font-medium text-camel-800 ${
-                          scheme.url
-                            ? 'cursor-pointer transition-colors hover:border-camel-400 hover:bg-camel-100'
-                            : ''
-                        }`}
-                      >
-                        <span>{schemeName}</span>
-                        {scheme.length && <span className="text-old-money-500">({scheme.length})</span>}
-                      </span>
-                      {scheme.url && (
-                        <div className="absolute right-0 sm:left-0 top-full z-50 mt-2 hidden w-max max-w-[90vw] rounded-lg border border-old-money-200 bg-white p-2 shadow-xl group-hover:block md:max-w-md">
-                          <img
-                            src={scheme.url}
-                            alt={scheme.name}
-                            className="max-h-96 max-w-[90vw] object-contain md:max-w-md"
-                            onError={(e) => {
-                              ;(e.target as HTMLImageElement).style.display = 'none'
-                            }}
-                          />
-                        </div>
-                      )}
-                    </span>
-                  )
-                })}
-              </div>
-            )}
           </div>
+
+          {/* Ряд 2: Организатор, Место проведения и Трасса */}
+          {(event.host_club || (locationText && locationText !== '—') || trackSchemes.length > 0) && (
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-charcoal-700 min-w-0 justify-start">
+              {event.host_club && (
+                <div className="flex items-center gap-1.5 min-w-0">
+                  <Building2 className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
+                  <span className="text-old-money-500 font-medium shrink-0">Организатор:</span>
+                  <span className="font-semibold text-charcoal-900 truncate max-w-[280px] sm:max-w-md" title={event.host_club}>
+                    {event.host_club}
+                  </span>
+                </div>
+              )}
+
+              {locationText && locationText !== '—' && (
+                <div className="flex items-center gap-1.5 min-w-0">
+                  <MapPin className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
+                  <span className="text-old-money-500 font-medium shrink-0">Место:</span>
+                  <span className="font-semibold text-charcoal-900 truncate max-w-[320px] sm:max-w-lg" title={locationText}>
+                    {locationText}
+                  </span>
+                </div>
+              )}
+
+              {trackSchemes.length > 0 && (
+                <div className="flex items-center gap-1.5 shrink-0">
+                  {trackSchemes.map((scheme, index) => {
+                    const schemeName =
+                      !scheme.url && scheme.name === 'Схема трассы' ? 'Длина трассы' : scheme.name
+                    return (
+                      <span key={index} className="group relative inline-block">
+                        <span
+                          className={`inline-flex items-center gap-1 rounded-md border border-camel-200 bg-camel-50 px-2 py-0.5 text-xs font-medium text-camel-800 ${
+                            scheme.url
+                              ? 'cursor-pointer transition-colors hover:border-camel-400 hover:bg-camel-100'
+                              : ''
+                          }`}
+                        >
+                          <span>{schemeName}</span>
+                          {scheme.length && <span className="text-old-money-500">({scheme.length})</span>}
+                        </span>
+                        {scheme.url && (
+                          <div className="absolute right-0 sm:left-0 top-full z-50 mt-2 hidden w-max max-w-[90vw] rounded-lg border border-old-money-200 bg-white p-2 shadow-xl group-hover:block md:max-w-md">
+                            <img
+                              src={scheme.url}
+                              alt={scheme.name}
+                              className="max-h-96 max-w-[90vw] object-contain md:max-w-md"
+                              onError={(e) => {
+                                ;(e.target as HTMLImageElement).style.display = 'none'
+                              }}
+                            />
+                          </div>
+                        )}
+                      </span>
+                    )
+                  })}
+                </div>
+              )}
+            </div>
+          )}
         </div>
       </div>
 
