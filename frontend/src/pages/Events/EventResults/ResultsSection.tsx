@@ -1,12 +1,9 @@
 import { useState, useMemo } from 'react'
-import { ChevronDown, X } from 'lucide-react'
+import { X } from 'lucide-react'
 import ResultCard from './ResultCard'
 import { groupResultsByBreedClass, groupRacingResults, isRacingFormat, parseRawScores, getBestTimesByRace } from './utils'
 import ToolbarSearch from '../../../components/toolbar/ToolbarSearch'
-import BreedSearchDropdown from '../../../components/ui/BreedSearchDropdown'
 import QuickBreedBar from '../../TopDogs/QuickBreedBar'
-import { formatBreedName } from '../../../lib/breedMapping'
-import { toolbarPillTriggerClass } from '../../../lib/toolbar'
 import type { Result } from './types'
 
 interface ResultsSectionProps {
@@ -114,60 +111,38 @@ export default function ResultsSection({ results }: ResultsSectionProps) {
         </div>
       )}
 
-      {/* Панель поиска и фильтрации пород в едином стиле рейтинга соревнований */}
-      <div className="rounded-xl border border-old-money-200 bg-cream-50/70 p-2 sm:p-2.5">
-        <div className="flex flex-wrap items-center gap-2">
-          <ToolbarSearch
-            value={searchQuery}
-            onChange={setSearchQuery}
-            placeholder="Кличка собаки…"
-          />
+      {/* Панель поиска и фильтрации пород в стиле рейтинга (чистый ряд без внешней рамки) */}
+      <div className="flex items-center gap-2 w-full min-w-0">
+        <ToolbarSearch
+          value={searchQuery}
+          onChange={setSearchQuery}
+          placeholder="Кличка собаки…"
+        />
 
-          <div className="shrink-0">
-            <BreedSearchDropdown
-              breeds={breeds}
+        {breeds.length > 1 && (
+          <div className="flex-1 min-w-0">
+            <QuickBreedBar
               selectedBreed={selectedBreed}
-              onSelect={(b) => setSelectedBreed(b)}
-              trigger={
-                <button
-                  type="button"
-                  className={toolbarPillTriggerClass(Boolean(selectedBreed))}
-                >
-                  <span>{selectedBreed ? formatBreedName(selectedBreed) : 'Все породы'}</span>
-                  <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
-                </button>
-              }
+              onSelectBreed={(b) => setSelectedBreed(b)}
+              breedValues={breeds}
             />
           </div>
+        )}
 
-          {breeds.length > 1 && (
-            <>
-              <div className="hidden sm:block h-5 w-px bg-old-money-300 shrink-0 mx-0.5" aria-hidden="true" />
-              <div className="hidden sm:block flex-1 min-w-0">
-                <QuickBreedBar
-                  selectedBreed={selectedBreed}
-                  onSelectBreed={(b) => setSelectedBreed(selectedBreed === b ? '' : b)}
-                  breedValues={breeds}
-                />
-              </div>
-            </>
-          )}
-
-          {isFiltered && (
-            <button
-              type="button"
-              onClick={() => {
-                setSelectedBreed('')
-                setSearchQuery('')
-              }}
-              className="relative shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full border border-old-money-200 bg-cream-50 text-charcoal-500 hover:text-charcoal-800 transition-colors before:absolute before:-inset-1.5 before:content-['']"
-              title="Сбросить фильтры"
-              aria-label="Сбросить фильтры"
-            >
-              <X className="h-4 w-4" />
-            </button>
-          )}
-        </div>
+        {isFiltered && (
+          <button
+            type="button"
+            onClick={() => {
+              setSelectedBreed('')
+              setSearchQuery('')
+            }}
+            className="relative shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full border border-old-money-200 bg-cream-50 text-charcoal-500 hover:text-charcoal-800 transition-colors before:absolute before:-inset-1.5 before:content-['']"
+            title="Сбросить фильтры"
+            aria-label="Сбросить фильтры"
+          >
+            <X className="h-4 w-4" />
+          </button>
+        )}
       </div>
 
       {filteredSortedGroups.map(groupKey => {
