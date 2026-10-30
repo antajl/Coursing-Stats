@@ -57,7 +57,7 @@ export function ConceptSymmetricFinal({ stats, showStats }: HomeConceptsProps) {
         <div className="p-2 2xl:p-2.5 flex flex-col gap-1.5 2xl:gap-2 my-auto">
           {/* Сектор 1: Спорт и бега борзых */}
           <Link
-            to="/competitions"
+            to="/competitions/"
             className="group block bg-white/95 hover:bg-cream-50/80 rounded-xl p-2 2xl:p-2.5 border border-camel-200/80 hover:border-camel-300 shadow-2xs transition-all text-inherit no-underline"
             aria-label="Перейти в раздел Спорт: состязания, курсинг и бега"
           >
@@ -95,7 +95,7 @@ export function ConceptSymmetricFinal({ stats, showStats }: HomeConceptsProps) {
 
           {/* Сектор 2: Выставки */}
           <Link
-            to="/shows"
+            to="/shows/"
             className="group block bg-white/95 hover:bg-cream-50/80 rounded-xl p-2 2xl:p-2.5 border border-old-money-200/80 hover:border-old-money-300 shadow-2xs transition-all text-inherit no-underline"
             aria-label="Перейти в раздел Выставки: каталоги, ринги, собаки"
           >
@@ -140,14 +140,14 @@ export function ConceptSymmetricFinal({ stats, showStats }: HomeConceptsProps) {
           </span>
           <div className="flex items-center gap-1.5 shrink-0">
             <Link
-              to="/competitions"
+              to="/competitions/"
               className="px-2.5 py-1 rounded-lg bg-camel-100 hover:bg-camel-200 border border-camel-300 text-[10.5px] font-semibold text-camel-900 transition-colors flex items-center gap-1"
             >
               <span>Спорт</span>
               <ArrowRight className="w-2.5 h-2.5 text-camel-700" aria-hidden />
             </Link>
             <Link
-              to="/shows"
+              to="/shows/"
               className="px-2.5 py-1 rounded-lg bg-old-money-100 hover:bg-old-money-200 border border-old-money-300 text-[10.5px] font-semibold text-charcoal-800 transition-colors flex items-center gap-1"
             >
               <span>Выставки</span>

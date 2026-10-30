@@ -140,7 +140,7 @@ export default function DogAggressionBadge({ count = 0, incidents = [] }: DogAgg
                       </span>
                       {inc.event_id ? (
                         <Link
-                          to={`/event/${inc.event_id}`}
+                          to={`/event/${inc.event_id}/`}
                           onClick={() => setOpen(false)}
                           className="font-medium text-camel-700 hover:text-camel-800 underline truncate max-w-[11rem]"
                           title="Открыть состязание"

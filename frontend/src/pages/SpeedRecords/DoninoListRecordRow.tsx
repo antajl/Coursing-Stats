@@ -138,7 +138,7 @@ export default function DoninoListRecordRow({
 
   const profileLink = (
     <Link
-      to={`/donino-dog/${encodeURIComponent(name)}/${encodeURIComponent(breed)}`}
+      to={`/donino-dog/${encodeURIComponent(name)}/${encodeURIComponent(breed)}/`}
       state={{ from: mode === 'speed' ? 'speed-records' : 'coursing-records' }}
       className="donino-list-row-link group min-w-0 flex-1 border-b border-old-money-200 bg-white py-2 px-4 transition-colors duration-200 hover:bg-camel-100/60"
     >

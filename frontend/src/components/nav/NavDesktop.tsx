@@ -108,7 +108,7 @@ export function NavDesktop({
         <NavMenuDropdown
           open={openMenu === 'competitions'}
           onOpenChange={setMenuOpen('competitions')}
-          defaultTo="/competitions?tab=ranking"
+          defaultTo="/competitions/?tab=ranking"
           title="Рейтинг собак и судьи: курсинг, БЗМП, бега борзых"
           isSectionActive={isCompetitionsActive}
           chevronLabel="Меню раздела Соревнования"
@@ -124,7 +124,7 @@ export function NavDesktop({
         <NavMenuDropdown
           open={openMenu === 'shows'}
           onOpenChange={setMenuOpen('shows')}
-          defaultTo="/shows?tab=ranking"
+          defaultTo="/shows/?tab=ranking"
           title="Рейтинг собак и судьи на выставках"
           isSectionActive={isShowsActive}
           chevronLabel="Меню раздела Выставки"
@@ -138,7 +138,7 @@ export function NavDesktop({
         <NavMenuDropdown
           open={openMenu === 'donino'}
           onOpenChange={setMenuOpen('donino')}
-          defaultTo="/speed-records?tab=records"
+          defaultTo="/speed-records/?tab=records"
           title="Рекорды полигона Курсинг Донино"
           isSectionActive={isSpeedRecordsActive}
           chevronLabel="Меню раздела Курсинг Донино"
@@ -154,7 +154,7 @@ export function NavDesktop({
         <NavMenuDropdown
           open={openMenu === 'guide'}
           onOpenChange={setMenuOpen('guide')}
-          defaultTo="/guide?tab=titles"
+          defaultTo="/guide/?tab=titles"
           title="Правила, титулы, протоколы и рейтинг"
           isSectionActive={isGuideActive}
           chevronLabel="Меню раздела Справка"
@@ -163,7 +163,7 @@ export function NavDesktop({
           items={GUIDE_MENU_ITEMS}
         />
         <Link
-          to="/about"
+          to="/about/"
           className={`group relative flex shrink-0 items-center whitespace-nowrap py-2 px-2.5 text-xs font-semibold transition-colors duration-300 lg:px-3.5 lg:text-sm 2xl:px-5 ${
             isAboutActive ? 'text-camel-700' : 'text-charcoal-700 hover:text-charcoal-900'
           }`}

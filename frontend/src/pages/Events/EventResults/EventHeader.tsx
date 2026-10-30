@@ -184,7 +184,7 @@ export default function EventHeader({ event, results }: EventHeaderProps) {
                       parseJudgeNames(event.judges).map((judgeName, idx, arr) => (
                         <span key={judgeName} className="inline-flex items-center">
                           <Link
-                            to={`/judges/${encodeURIComponent(judgeName)}`}
+                            to={`/judges/${encodeURIComponent(judgeName)}/`}
                             className="text-camel-800 hover:text-camel-900 hover:underline font-medium transition-colors"
                           >
                             {judgeName}

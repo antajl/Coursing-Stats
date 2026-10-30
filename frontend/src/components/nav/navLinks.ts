@@ -45,7 +45,7 @@ export function guideTabActive(tab: string) {
 }
 
 const COMPETITIONS_ARCHIVE_ITEM: NavMenuItem = {
-  to: '/competitions?tab=archive',
+  to: '/competitions/?tab=archive',
   label: 'Архив',
   icon: Icons.calendar,
   isActive: (pathname: string, search: string) => {
@@ -58,14 +58,14 @@ const COMPETITIONS_ARCHIVE_ITEM: NavMenuItem = {
 export function competitionsMenuItems(calendarVisible: boolean): NavMenuItem[] {
   return [
     {
-      to: '/competitions?tab=ranking',
+      to: '/competitions/?tab=ranking',
       label: 'Рейтинг',
       icon: Icons.medal,
       isActive: competitionTabActive('ranking'),
     },
     ...(calendarVisible ? [COMPETITIONS_ARCHIVE_ITEM] : []),
     {
-      to: '/competitions?tab=judges',
+      to: '/competitions/?tab=judges',
       label: 'Судьи',
       icon: Icons.club,
       isActive: competitionTabActive('judges'),
@@ -80,7 +80,7 @@ export function competitionsMenuItems(calendarVisible: boolean): NavMenuItem[] {
 }
 
 const SHOWS_ARCHIVE_ITEM: NavMenuItem = {
-  to: '/shows?tab=archive',
+  to: '/shows/?tab=archive',
   label: 'Архив',
   icon: Icons.calendar,
   isActive: (pathname: string, search: string) => {
@@ -93,14 +93,14 @@ const SHOWS_ARCHIVE_ITEM: NavMenuItem = {
 export function showsMenuItems(calendarVisible: boolean): NavMenuItem[] {
   return [
     {
-      to: '/shows?tab=ranking',
+      to: '/shows/?tab=ranking',
       label: 'Рейтинг',
       icon: Icons.medal,
       isActive: showTabActive('ranking'),
     },
     ...(calendarVisible ? [SHOWS_ARCHIVE_ITEM] : []),
     {
-      to: '/shows?tab=judges',
+      to: '/shows/?tab=judges',
       label: 'Судьи',
       icon: Icons.club,
       isActive: showTabActive('judges'),
@@ -110,13 +110,13 @@ export function showsMenuItems(calendarVisible: boolean): NavMenuItem[] {
 
 export const DONINO_MENU_ITEMS: NavMenuItem[] = [
   {
-    to: '/speed-records?tab=records',
+    to: '/speed-records/?tab=records',
     label: 'Записи',
     icon: Icons.speed,
     isActive: doninoTabActive('records'),
   },
   {
-    to: '/speed-records?tab=stats',
+    to: '/speed-records/?tab=stats',
     label: 'Статистика',
     icon: Icons.trend,
     isActive: doninoTabActive('stats'),
@@ -125,37 +125,37 @@ export const DONINO_MENU_ITEMS: NavMenuItem[] = [
 
 export const GUIDE_MENU_ITEMS: NavMenuItem[] = [
   {
-    to: '/guide?tab=titles',
+    to: '/guide/?tab=titles',
     label: 'Соревнования',
     icon: Icons.medal,
     isActive: guideTabActive('titles'),
   },
   {
-    to: '/guide?tab=shows',
+    to: '/guide/?tab=shows',
     label: 'Выставки',
     icon: Icons.award,
     isActive: guideTabActive('shows'),
   },
   {
-    to: '/guide?tab=donino',
+    to: '/guide/?tab=donino',
     label: 'Донино',
     icon: Icons.speed,
     isActive: guideTabActive('donino'),
   },
   {
-    to: '/guide?tab=protocol',
+    to: '/guide/?tab=protocol',
     label: 'Протоколы',
     icon: Icons.flag,
     isActive: guideTabActive('protocol'),
   },
   {
-    to: '/guide?tab=rating',
+    to: '/guide/?tab=rating',
     label: 'Рейтинг',
     icon: Icons.trend,
     isActive: guideTabActive('rating'),
   },
   {
-    to: '/guide?tab=speeds',
+    to: '/guide/?tab=speeds',
     label: 'Скорость пород',
     icon: Icons.speedFlash,
     isActive: guideTabActive('speeds'),

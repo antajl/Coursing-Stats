@@ -26,7 +26,7 @@ export default function DogSearchCard({
           {name} <span className="text-charcoal-500 font-normal">({breed})</span>
         </h2>
         <Link
-          to={`/donino-dog/${encodeURIComponent(name)}/${encodeURIComponent(breed)}`}
+          to={`/donino-dog/${encodeURIComponent(name)}/${encodeURIComponent(breed)}/`}
           className="text-sm font-semibold text-camel-700 hover:underline"
         >
           Профиль Донино →

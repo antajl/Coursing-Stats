@@ -28,7 +28,7 @@ export default function HomeEventRow({ event, variant = 'default' }: HomeEventRo
 
   return (
     <Link
-      to={`/event/${event.id}`}
+      to={`/event/${event.id}/`}
       className={className}
       title={getEventHeadline(event)}
     >

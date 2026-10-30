@@ -429,7 +429,7 @@ export default function DoninoDogProfile() {
                 {/* Ссылка на официальный профиль в спорте при наличии dog_id */}
                 {data?.dog_id && (
                   <Link
-                    to={`/dog/${data.dog_id}`}
+                    to={`/dog/${data.dog_id}/`}
                     className="inline-flex items-center gap-1.5 rounded-full border border-forest-200 bg-forest-50 px-3.5 py-1.5 text-xs font-semibold text-forest-800 transition-colors hover:border-forest-300 hover:bg-forest-100"
                     title="Перейти в официальный спортивный профиль собаки (соревнования РКФ)"
                     data-export-ignore

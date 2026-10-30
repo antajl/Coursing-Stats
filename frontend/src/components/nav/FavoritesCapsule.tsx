@@ -106,7 +106,7 @@ export default function FavoritesCapsule() {
     <div className="relative shrink-0 animate-fade-in-scale" key={activeId}>
       <div className={shellClass}>
         <Link
-          to={`/dog/${activeId}`}
+          to={`/dog/${activeId}/`}
           className={linkHover}
           title={fullTitle}
           aria-label={`Избранная собака: ${fullTitle}`}

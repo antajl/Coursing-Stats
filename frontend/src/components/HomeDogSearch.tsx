@@ -184,7 +184,7 @@ export default function HomeDogSearch({ className = '' }: HomeDogSearchProps) {
       if (!ok) return
       setOpen(false)
       setQuery('')
-      navigate(`/dog/${id}`)
+      navigate(`/dog/${id}/`)
     },
     [navigate],
   )

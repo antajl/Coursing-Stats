@@ -69,7 +69,7 @@ export default function DogStatsTable({ data, type = 'placement', filterYear }) 
 
   const handleClick = (e, dogId) => {
     e.preventDefault()
-    navigate(`/dog/${dogId}`)
+    navigate(`/dog/${dogId}/`)
   }
 
   const closeTooltip = () => {

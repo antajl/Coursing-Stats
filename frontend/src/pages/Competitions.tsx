@@ -21,7 +21,7 @@ function Competitions() {
   }
 
   if (tab === 'builder' || tab === 'protocol-builder') {
-    return <Navigate to="/protocol-builder" replace />
+    return <Navigate to="/protocol-builder/" replace />
   }
 
   if (!calendarVisible && tab === 'archive') {
@@ -35,7 +35,7 @@ function Competitions() {
 
   const handleTabChange = (newTab: string) => {
     if (newTab === 'builder') {
-      navigate('/protocol-builder')
+      navigate('/protocol-builder/')
       return
     }
     const next = new URLSearchParams(searchParams)

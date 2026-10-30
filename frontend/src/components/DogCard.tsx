@@ -440,7 +440,7 @@ const DogCardInner = function DogCard({ dog, type, filterYear, rank, variant = '
 
   return (
     <DogCardContext.Provider value={contextValue}>
-      <Link to={`/dog/${dog.dog_id}`} className={shellClass}>
+      <Link to={`/dog/${dog.dog_id}/`} className={shellClass}>
         {isTop3 && rank != null ? <Top3AccentBar rank={rank} /> : null}
         {type === 'combined' ? (
           <div className="flex flex-row items-stretch w-full min-w-0">

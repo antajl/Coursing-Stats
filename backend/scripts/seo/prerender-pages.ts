@@ -49,14 +49,23 @@ function ensureDir(dir: string): void {
   fs.mkdirSync(dir, { recursive: true })
 }
 
-/** Path segment safe on Windows + Linux; matches stricter percent-encoding than encodeURIComponent. */
+/** Path segment safe on Windows + Linux; S3 web server decodes percent-encoding, so keys must be decoded UTF-8. */
 export function staticSeoPathSegment(value: string): string {
-  return encodeURIComponent(value).replace(/[!'()*]/g, (c) => {
-    return `%${c.charCodeAt(0).toString(16).toUpperCase().padStart(2, '0')}`
-  })
+  return value
+}
+
+function isSafePathForPlatform(filePath: string): boolean {
+  if (process.platform !== 'win32') return true
+  const pathWithoutDrive = filePath.replace(/^[a-zA-Z]:[/\\]/, '')
+  return !/[<>:"|?*]/.test(pathWithoutDrive)
 }
 
 function writeHtml(filePath: string, html: string): void {
+  if (!isSafePathForPlatform(filePath)) {
+    // Skip writing files with characters forbidden on Windows NTFS (e.g. '|', '*').
+    // These are fully prerendered in Linux CI during deployment to S3.
+    return
+  }
   ensureDir(path.dirname(filePath))
   fs.writeFileSync(filePath, html, 'utf8')
 }

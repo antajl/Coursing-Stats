@@ -106,7 +106,7 @@ function DoninoRecordsSectionInner({
       ) : (
         <p className="home-v2-empty" aria-live="polite">
           Пока нет данных.{' '}
-          <Link to="/speed-records">Открыть рекорды</Link>
+          <Link to="/speed-records/">Открыть рекорды</Link>
         </p>
       )}
     </section>

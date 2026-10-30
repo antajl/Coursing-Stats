@@ -45,7 +45,7 @@ export default function ResultCard({ result, index, bestTimesByRace }: ResultCar
   if (result.dog_id) {
     return (
       <Link
-        to={`/dog/${result.dog_id}`}
+        to={`/dog/${result.dog_id}/`}
         className="block no-underline cursor-pointer"
         aria-label={`Открыть профиль собаки ${result.name_ru || result.name_lat}`}
       >

@@ -73,7 +73,10 @@ export default function EventsToolbar({
   onFilterMonthChange,
   filterDiscipline,
   onFilterDisciplineChange,
+  filterWithProtocol,
+  onFilterWithProtocolChange: _onFilterWithProtocolChange,
   sortedYears,
+  onResetFilters,
   availableMonthsByYear,
   stats,
 }: EventsToolbarProps) {
@@ -82,7 +85,9 @@ export default function EventsToolbar({
     DISCIPLINE_OPTIONS.find((d) => d.value === filterDiscipline)?.label || 'Дисциплина'
 
   const isYearNonDefault = filterYear !== '' && filterYear !== CURRENT_SEASON
-  const hasActiveFilters = Boolean(isYearNonDefault || filterMonth || filterDiscipline || searchQuery)
+  const hasActiveFilters = Boolean(
+    isYearNonDefault || filterMonth || filterDiscipline || searchQuery || filterWithProtocol,
+  )
 
   const handleDisciplineToggle = (d: string) => {
     onFilterDisciplineChange(filterDiscipline === d ? '' : d)
@@ -255,6 +260,18 @@ export default function EventsToolbar({
               )
             })}
           </div>
+
+          {hasActiveFilters && (
+            <button
+              type="button"
+              onClick={onResetFilters}
+              className="relative shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full border border-old-money-200 bg-cream-50 text-charcoal-500 hover:text-charcoal-800 transition-colors cursor-pointer before:absolute before:-inset-1.5 before:content-['']"
+              title="Сбросить фильтры"
+              aria-label="Сбросить фильтры"
+            >
+              <X className="h-4 w-4" />
+            </button>
+          )}
         </div>
       </div>
     </div>

@@ -23,7 +23,7 @@ const NotFound = lazy(() => import('./pages/NotFound'));
 
 function LegacyProcoursingRedirect() {
   const location = useLocation();
-  return <Navigate to={`/competitions${location.search}`} replace />;
+  return <Navigate to={`/competitions/${location.search}`} replace />;
 }
 
 function LegacyTopRedirect() {
@@ -31,27 +31,27 @@ function LegacyTopRedirect() {
   const params = new URLSearchParams(location.search);
   params.set('tab', 'ranking');
   const qs = params.toString();
-  return <Navigate to={qs ? `/competitions?${qs}` : '/competitions?tab=ranking'} replace />;
+  return <Navigate to={qs ? `/competitions/?${qs}` : '/competitions/?tab=ranking'} replace />;
 }
 
 function LegacyJudgesListRedirect() {
   const location = useLocation();
   const params = new URLSearchParams(location.search);
   params.set('tab', 'judges');
-  return <Navigate to={`/competitions?${params.toString()}`} replace />;
+  return <Navigate to={`/competitions/?${params.toString()}`} replace />;
 }
 
 
 
 function LegacyCompetitionRedirect() {
   const { id } = useParams<{ id: string }>();
-  return <Navigate to={`/event/${id}`} replace />;
+  return <Navigate to={`/event/${id}/`} replace />;
 }
 
 function LegacyExhibitionRedirect() {
   const { id } = useParams<{ id: string }>();
-  if (!isLocalDev) return <Navigate to="/shows" replace />;
-  return <Navigate to={`/shows/exhibition/${id}`} replace />;
+  if (!isLocalDev) return <Navigate to="/shows/" replace />;
+  return <Navigate to={`/shows/exhibition/${id}/`} replace />;
 }
 
 function ShowDogIdRedirect() {
@@ -83,7 +83,7 @@ function ShowDogIdRedirect() {
   }, [id]);
   
   if (redirectId) {
-    return <Navigate to={`/dog/${redirectId}`} replace />;
+    return <Navigate to={`/dog/${redirectId}/`} replace />;
   }
   
   // No redirect needed, show the normal profile

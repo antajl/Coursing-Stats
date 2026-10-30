@@ -595,7 +595,7 @@ export default function DogProfile() {
       Number.isFinite(Number(showDog.competition_dog_id)) &&
       String(showDog.competition_dog_id) !== String(competitionId)
     ) {
-      return <Navigate to={`/dog/${showDog.competition_dog_id}`} replace />
+      return <Navigate to={`/dog/${showDog.competition_dog_id}/`} replace />
     }
     if (
       !dog &&
@@ -603,7 +603,7 @@ export default function DogProfile() {
       showDog.id &&
       String(showDog.id) !== String(competitionId)
     ) {
-      return <Navigate to={`/dog/${showDog.id}`} replace />
+      return <Navigate to={`/dog/${showDog.id}/`} replace />
     }
   }
 

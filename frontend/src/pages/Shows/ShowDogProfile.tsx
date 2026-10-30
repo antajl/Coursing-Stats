@@ -79,7 +79,7 @@ export default function ShowDogProfile() {
 
   // If this show dog has a competition link, redirect to competition profile
   if (dog.competition_dog_id && Number.isFinite(Number(dog.competition_dog_id))) {
-    return <Navigate to={`/dog/${dog.competition_dog_id}`} replace />
+    return <Navigate to={`/dog/${dog.competition_dog_id}/`} replace />
   }
 
   const title = `${dog.name_lat || dog.name_ru || ''} - ${dog.breed || ''}`
@@ -115,7 +115,7 @@ export default function ShowDogProfile() {
             <p className="text-sm text-blue-800">
               Эта собака также участвует в соревнованиях.{' '}
               <Link 
-                to={`/dog/${dog.competition_dog_id}`}
+                to={`/dog/${dog.competition_dog_id}/`}
                 className="font-semibold underline hover:text-blue-600"
               >
                 Посмотреть спортивный профиль

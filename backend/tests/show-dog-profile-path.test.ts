@@ -14,7 +14,7 @@ describe('showDogProfilePath', () => {
       competition_dog_id: null,
     })
     expect(href.startsWith('/dog/')).toBe(true)
-    const id = Number(href.slice('/dog/'.length))
+    const id = Number(href.slice('/dog/'.length).replace(/\/$/, ''))
     expect(id).toBeGreaterThanOrEqual(SHOW_PROFILE_ID_BASE)
     expect(id).not.toBe(14)
   })
@@ -27,7 +27,7 @@ describe('showDogProfilePath', () => {
         breed: 'Y',
         competition_dog_id: 5711,
       }),
-    ).toBe('/dog/5711')
+    ).toBe('/dog/5711/')
   })
 
   it('resolves stable id back to the same dog', () => {
@@ -42,7 +42,7 @@ describe('showDogProfilePath', () => {
       competition_dog_id: null,
     }
     const href = showDogProfilePath(dog)
-    const profileId = href.slice('/dog/'.length)
+    const profileId = href.slice('/dog/'.length).replace(/\/$/, '')
     const found = findShowDogByProfileId(profileId, [dog])
     expect(found?.name_lat).toBe('SANDAURI YURAI HEEPP')
   })

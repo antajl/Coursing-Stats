@@ -298,7 +298,7 @@ export function DogJudgesSection({ judgeStats }: DogJudgesSectionProps) {
             {judge.events.map((ev, eIdx) => (
               <Link
                 key={eIdx}
-                to={`/competitions/${ev.event_id}`}
+                to={`/event/${ev.event_id}/`}
                 className="group flex items-center justify-between gap-3 p-2 rounded-lg bg-white/80 hover:bg-white border border-old-money-200/60 hover:border-old-money-300 transition-colors shadow-2xs"
                 title="Открыть официальный протокол состязания"
               >

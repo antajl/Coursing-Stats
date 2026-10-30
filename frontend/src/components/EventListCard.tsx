@@ -31,7 +31,7 @@ export default function EventListCard({
             events.slice(0, 3).map((event) => (
               <Link
                 key={event.id}
-                to={`/event/${event.id}`}
+                to={`/event/${event.id}/`}
                 className="flex min-h-[44px] items-center gap-2 text-xs hover:text-camel-700 transition-colors hover:bg-camel-50/60 px-2 py-2 rounded-lg group focus:outline-none focus:ring-1 focus:ring-camel-500"
               >
                 <span className="text-charcoal-500 text-xs tabular-nums whitespace-nowrap shrink-0 group-hover:text-camel-700 font-medium">
@@ -63,7 +63,7 @@ export default function EventListCard({
             shows.slice(0, 3).map((show) => (
               <Link
                 key={show.id}
-                to={`/shows/exhibition/${show.id}`}
+                to={`/shows/exhibition/${show.id}/`}
                 className="flex min-h-[44px] items-center gap-2 text-xs hover:text-camel-700 transition-colors hover:bg-camel-50/60 px-2 py-2 rounded-lg group focus:outline-none focus:ring-1 focus:ring-camel-500"
               >
                 <span className="text-charcoal-500 text-xs tabular-nums whitespace-nowrap shrink-0 group-hover:text-camel-700 font-medium">

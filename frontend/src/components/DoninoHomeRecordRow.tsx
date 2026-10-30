@@ -133,7 +133,7 @@ export default function DoninoHomeRecordRow({
 
   return (
     <Link
-      to={`/donino-dog/${encodeURIComponent(name)}/${encodeURIComponent(breed)}`}
+      to={`/donino-dog/${encodeURIComponent(name)}/${encodeURIComponent(breed)}/`}
       state={{ from: mode === 'speed' ? 'speed-records' : 'coursing-records' }}
       className="donino-home-row group items-center hover:bg-camel-100/60 transition-colors duration-150"
       {...(rise ? { 'data-rise': true } : {})}

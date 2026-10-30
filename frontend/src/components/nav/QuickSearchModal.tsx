@@ -598,9 +598,9 @@ export default function QuickSearchModal({ isOpen, onClose }: QuickSearchModalPr
     } else if (item.type === 'breed') {
       navigate(item.item.to)
     } else if (item.type === 'dog') {
-      navigate(`/dog/${item.dog.id}`)
+      navigate(`/dog/${item.dog.id}/`)
     } else {
-      navigate(`/event/${item.event.id}`)
+      navigate(`/event/${item.event.id}/`)
     }
   }
 

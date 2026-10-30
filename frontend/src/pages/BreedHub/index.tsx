@@ -58,7 +58,7 @@ export default function BreedHub() {
           {CORE_BREED_HUBS.map((b) => (
             <Link
               key={b.slug}
-              to={`/breeds/${b.slug}`}
+              to={`/breeds/${b.slug}/`}
               className="px-3 py-2 text-sm rounded bg-camel-50 text-camel-800 border border-camel-200 hover:bg-camel-100 min-h-[44px] flex items-center"
             >
               {b.nameRu}
@@ -84,7 +84,7 @@ export default function BreedHub() {
       <nav aria-label="Хлебные крошки" className="text-xs text-old-money-600 flex items-center gap-1.5 pt-1">
         <Link to="/" className="hover:text-camel-800">Главная</Link>
         <span>→</span>
-        <Link to="/competitions" className="hover:text-camel-800">Соревнования</Link>
+        <Link to="/competitions/" className="hover:text-camel-800">Соревнования</Link>
         <span>→</span>
         <span className="text-camel-900 font-medium">{breedInfo.nameRu}</span>
       </nav>
@@ -107,7 +107,7 @@ export default function BreedHub() {
           </div>
 
           <Link
-            to={`/competitions?tab=ranking&breed=${encodeURIComponent(breedInfo.canonicalKey)}`}
+            to={`/competitions/?tab=ranking&breed=${encodeURIComponent(breedInfo.canonicalKey)}`}
             className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg bg-camel-800 text-white font-medium text-sm hover:bg-camel-900 shadow-sm transition-colors min-h-[44px]"
           >
             <span>Полный рейтинг породы</span>
@@ -133,7 +133,7 @@ export default function BreedHub() {
               <span>Лидеры сезона 2026</span>
             </h2>
             <Link
-              to={`/competitions?tab=ranking&breed=${encodeURIComponent(breedInfo.canonicalKey)}`}
+              to={`/competitions/?tab=ranking&breed=${encodeURIComponent(breedInfo.canonicalKey)}`}
               className="text-xs font-medium text-camel-800 hover:underline flex items-center gap-1"
             >
               <span>Все</span>
@@ -154,7 +154,7 @@ export default function BreedHub() {
                         {idx + 1}
                       </span>
                       <Link
-                        to={`/dog/${dog.dog_id}`}
+                        to={`/dog/${dog.dog_id}/`}
                         className="font-medium text-camel-950 hover:text-camel-800 hover:underline truncate"
                       >
                         {name}
@@ -184,7 +184,7 @@ export default function BreedHub() {
               <span>Рекорды скорости (Донино)</span>
             </h2>
             <Link
-              to="/speed-records"
+              to="/speed-records/"
               className="text-xs font-medium text-camel-800 hover:underline flex items-center gap-1"
             >
               <span>Таблица</span>
@@ -202,7 +202,7 @@ export default function BreedHub() {
                     <Award className="w-4 h-4 text-camel-600 shrink-0" />
                     {r.name && r.breed ? (
                       <Link
-                        to={`/donino-dog/${encodeURIComponent(r.name)}/${encodeURIComponent(r.breed)}`}
+                        to={`/donino-dog/${encodeURIComponent(r.name)}/${encodeURIComponent(r.breed)}/`}
                         className="font-medium text-camel-950 hover:text-camel-800 hover:underline truncate"
                       >
                         {r.name}
@@ -258,7 +258,7 @@ export default function BreedHub() {
           {CORE_BREED_HUBS.filter((b) => b.slug !== breedInfo.slug).map((b) => (
             <Link
               key={b.slug}
-              to={`/breeds/${b.slug}`}
+              to={`/breeds/${b.slug}/`}
               className="px-3 py-2 text-xs font-medium rounded-lg bg-white/80 border border-cream-200 text-old-money-800 hover:border-camel-400 hover:text-camel-900 transition-colors min-h-[44px] flex items-center"
             >
               {b.nameRu}

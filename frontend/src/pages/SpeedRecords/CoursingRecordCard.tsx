@@ -82,7 +82,7 @@ export default function CoursingRecordCard({ record }: CoursingRecordCardProps) 
   return (
     <div className="group flex overflow-hidden rounded-xl border border-old-money-200 bg-white transition-colors duration-200 hover:border-camel-300 hover:bg-cream-50">
       <Link
-        to={`/donino-dog/${encodeURIComponent(record.name)}/${encodeURIComponent(record.breed)}`}
+        to={`/donino-dog/${encodeURIComponent(record.name)}/${encodeURIComponent(record.breed)}/`}
         state={{ from: 'coursing-records' }}
         className="flex min-w-0 flex-1 flex-col gap-3 p-4 transition-colors group-hover:bg-cream-50 sm:grid sm:grid-cols-[minmax(0,1fr)_auto_auto] sm:items-center sm:gap-4"
       >

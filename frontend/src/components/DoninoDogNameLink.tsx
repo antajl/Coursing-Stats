@@ -16,7 +16,7 @@ const baseClassName =
 export default function DoninoDogNameLink({ name, breed, from, className = '', onClick }: DoninoDogNameLinkProps) {
   return (
     <Link
-      to={`/donino-dog/${encodeURIComponent(name)}/${encodeURIComponent(breed)}`}
+      to={`/donino-dog/${encodeURIComponent(name)}/${encodeURIComponent(breed)}/`}
       state={from ? { from } : undefined}
       className={`${baseClassName} ${className}`.trim()}
       onClick={onClick}

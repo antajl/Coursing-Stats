@@ -184,7 +184,7 @@ export function NavMobile({
                   </Link>
 
                   <Link
-                    to="/competitions"
+                    to="/competitions/"
                     onClick={onCloseMobileMenu}
                     className={`min-h-[44px] px-3.5 py-2.5 rounded-xl flex items-center gap-3 text-sm font-semibold transition-all ${
                       isCompetitionsActive
@@ -197,7 +197,7 @@ export function NavMobile({
                   </Link>
 
                   <Link
-                    to="/shows"
+                    to="/shows/"
                     onClick={() => {
                       void import('../../lib/prefetchShows').then((m) => m.prefetchShowsHeavyTabs())
                       onCloseMobileMenu()
@@ -213,7 +213,7 @@ export function NavMobile({
                   </Link>
 
                   <Link
-                    to="/speed-records"
+                    to="/speed-records/"
                     onClick={onCloseMobileMenu}
                     className={`min-h-[44px] px-3.5 py-2.5 rounded-xl flex items-center gap-3 text-sm font-semibold transition-all ${
                       isSpeedRecordsActive
@@ -226,7 +226,7 @@ export function NavMobile({
                   </Link>
 
                   <Link
-                    to="/guide"
+                    to="/guide/"
                     onClick={onCloseMobileMenu}
                     className={`min-h-[44px] px-3.5 py-2.5 rounded-xl flex items-center gap-3 text-sm font-semibold transition-all ${
                       isGuideActive
@@ -239,7 +239,7 @@ export function NavMobile({
                   </Link>
 
                   <Link
-                    to="/about"
+                    to="/about/"
                     onClick={onCloseMobileMenu}
                     className={`min-h-[44px] px-3.5 py-2.5 rounded-xl flex items-center gap-3 text-sm font-semibold transition-all ${
                       isAboutActive
