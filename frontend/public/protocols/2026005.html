@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>II Клубный чемпионат Донино по бегам борзых, 20.09.2026 (Московская обл., г. Раменское, д. Донино)</title>
+  <style>
+    @page {
+      size: A4 landscape;
+      margin: 1.5mm 1.5mm 1.5mm 1.5mm;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      background: #ffffff;
+      color: #000000;
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+      font-size: 11pt;
+      line-height: 1.25;
+    }
+    table.protocol-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 1.5px;
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+    th, td {
+      border-top: 1px solid #4c4c4c;
+      border-left: 1px solid #4c4c4c;
+      border-right: 1px solid #b2b2b2;
+      border-bottom: 1px solid #b2b2b2;
+      background-color: #ffffff;
+      padding: 4px 3px;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 10.5pt;
+      font-weight: normal;
+    }
+    tr.top-title-row td {
+      font-size: 14pt;
+      font-weight: bold;
+      padding: 7px 4px;
+    }
+    tr.meta-row td {
+      font-size: 10.5pt;
+      font-weight: normal;
+      padding: 3.5px 4px;
+      text-align: center;
+    }
+    tr.col-header td {
+      font-size: 10pt;
+      font-weight: normal;
+      padding: 4px 1px;
+    }
+    tr.group-row {
+      page-break-inside: avoid;
+      page-break-after: avoid;
+    }
+    td.group-header {
+      background-color: #c0c0c0 !important;
+      font-size: 11.5pt;
+      font-weight: normal;
+      text-align: center;
+      padding: 4.5px 3px;
+    }
+    td.dog-name-cell {
+      text-align: center;
+      font-size: 10.5pt;
+      line-height: 1.25;
+      padding: 4px 4px;
+    }
+    td.time-speed-cell {
+      font-size: 9.5pt;
+      line-height: 1.15;
+      padding: 3px 2px;
+    }
+    td.status-cell {
+      text-align: center;
+      font-style: italic;
+      font-size: 10pt;
+      padding: 4px 3px;
+    }
+    tr.dns-row td {
+      background-color: #c0c0c0 !important;
+    }
+    tr.participant-row {
+      page-break-inside: avoid;
+    }
+
+    @media print {
+      @page {
+        size: A4 landscape;
+        margin: 1.5mm 1.5mm 1.5mm 1.5mm;
+      }
+      html, body {
+        font-size: 8.5pt;
+        line-height: 1.15;
+      }
+      th, td {
+        font-size: 8.5pt;
+        padding: 2.5px 1.5px;
+      }
+      tr.top-title-row td {
+        font-size: 11pt;
+        padding: 3px;
+      }
+      tr.meta-row td {
+        font-size: 8.5pt;
+        padding: 2px 2px;
+      }
+      tr.col-header td {
+        font-size: 8.5pt;
+        padding: 2px 1px;
+      }
+      td.group-header {
+        font-size: 9.5pt;
+        padding: 2.5px 2px;
+      }
+      td.dog-name-cell {
+        font-size: 8.5pt;
+        padding: 2px 3px;
+      }
+      td.time-speed-cell {
+        font-size: 7.5pt;
+        line-height: 1.1;
+        padding: 1.5px 1px;
+      }
+      td.status-cell {
+        font-size: 8.5pt;
+      }
+    }
+  
+    /* Monochrome document toolbar */
+    .cs-toolbar {
+      width: 100%;
+      box-sizing: border-box;
+      background: #ffffff;
+      color: #000000;
+      border-bottom: 2px solid #000000;
+      padding: 6px 10px;
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+      margin: 0 0 4px 0;
+    }
+    .cs-toolbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .cs-toolbar-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+    .cs-toolbar-divider {
+      width: 1px;
+      height: 16px;
+      background: #b2b2b2;
+    }
+    .cs-toolbar-brand {
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #000000;
+    }
+    .cs-toolbar-title {
+      font-size: 12px;
+      font-weight: normal;
+      color: #222222;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .cs-toolbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+    .cs-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 3px;
+      font-size: 11.5px;
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+      font-weight: normal;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid #4c4c4c;
+      background: #ffffff;
+      color: #000000;
+      transition: background-color 0.1s ease, border-color 0.1s ease;
+      white-space: nowrap;
+    }
+    .cs-btn:hover {
+      background: #f0f0f0;
+      border-color: #000000;
+    }
+    .cs-btn-back {
+      font-weight: bold;
+    }
+    .cs-btn-back:hover {
+      background: #000000;
+      color: #ffffff;
+    }
+    .cs-btn-primary {
+      background: #000000;
+      border-color: #000000;
+      color: #ffffff;
+      font-weight: bold;
+    }
+    .cs-btn-primary:hover {
+      background: #333333;
+      border-color: #333333;
+    }
+    .cs-toolbar-series {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      margin-left: 6px;
+      padding-left: 8px;
+      border-left: 1px solid #b2b2b2;
+    }
+    .cs-series-label {
+      font-size: 11px;
+      color: #8c6d37;
+      font-weight: bold;
+      margin-right: 2px;
+      white-space: nowrap;
+    }
+    .cs-btn-stage {
+      padding: 2px 8px;
+      font-size: 11px;
+      border-radius: 12px;
+      border-color: #d8c29d;
+      background: #faf6ee;
+      color: #634d26;
+      font-weight: 500;
+    }
+    .cs-btn-stage:hover {
+      background: #ebdcc3;
+      border-color: #8c6d37;
+      color: #3b280c;
+    }
+    .cs-stage-active {
+      background: #8c6d37 !important;
+      border-color: #8c6d37 !important;
+      color: #ffffff !important;
+      font-weight: bold !important;
+    }
+    .cs-btn-donino {
+      background: #faf6ee;
+      border-color: #d8c29d;
+      color: #634d26;
+      font-weight: 600;
+    }
+    .cs-btn-donino:hover {
+      background: #ebdcc3;
+      border-color: #8c6d37;
+      color: #3b280c;
+    }
+    @media print {
+      .cs-toolbar {
+        display: none !important;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+<header class="cs-toolbar">
+  <div class="cs-toolbar-inner">
+    <div class="cs-toolbar-left">
+      <a href="/event/2026005" class="cs-btn cs-btn-back" title="Вернуться к состязанию на сайте">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        <span>К состязанию</span>
+      </a>
+      <span class="cs-toolbar-divider"></span>
+      <span class="cs-toolbar-brand">CoursingStats</span>
+      <span class="cs-toolbar-divider"></span>
+      <span class="cs-toolbar-title">III Клубный чемпионат Донино по бегам борзых (Финал сезона)</span>
+      
+      <div class="cs-toolbar-series">
+        <span class="cs-series-label">Серия Донино 2026:</span>
+        <a href="/protocols/2026004.html" class="cs-btn cs-btn-stage" title="I этап (9 авг)">I этап (9 авг)</a>
+        <a href="/protocols/2022001.html" class="cs-btn cs-btn-stage" title="II этап (20 сен)">II этап (20 сен)</a>
+        <span class="cs-btn cs-btn-stage cs-stage-active" title="III этап (31 окт)">III этап (31 окт)</span>
+      </div>
+    </div>
+    <div class="cs-toolbar-actions">
+      <a href="/donino/championship" class="cs-btn cs-btn-donino" title="Клубный чемпионат Донино: общий зачет и этапы">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.45 1-1 1H7.5c-.28 0-.5.22-.5.5v1c0 .28.22.5.5.5h9c.28 0 .5-.22.5-.5v-1c0-.28-.22-.5-.5-.5H15c-.55 0-1-.45-1-1v-2.34c3.2-1.07 5-3.5 5-6.66V3H5v5c0 3.16 1.8 5.59 5 6.66z"/></svg>
+        <span>Чемпионат</span>
+      </a>
+      <a href="https://drive.google.com/file/d/1bv51StWxPp8vz-N3dEBYn8aaURhkCX2T/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="cs-btn" title="Регламент состязания">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        <span>Регламент</span>
+      </a>
+    </div>
+  </div>
+</header>
+  <table class="protocol-table">
+    <tbody>
+      <tr class="top-title-row">
+        <td colspan="18">III Клубный чемпионат Донино по бегам борзых, 31.10–01.11.2026 (Московская обл., г. Раменское, д. Донино)</td>
+      </tr>
+      <tr class="meta-row">
+        <td colspan="18"><b>Организатор:</b> Курсинг в Донино</td>
+      </tr>
+      <tr class="meta-row">
+        <td colspan="18"><b>Серия турниров:</b> Клубные чемпионаты Донино 2026 (<a href="/protocols/2026004.html" style="color: #8b5a2b; text-decoration: underline;">I этап (09.08.2026)</a> · <a href="/protocols/2022001.html" style="color: #8b5a2b; text-decoration: underline;">II этап (20.09.2026)</a> · <b>III этап (31.10.2026)</b>)</td>
+      </tr>
+      <tr class="meta-row">
+        <td colspan="18"><b>Документы состязания:</b> <a href="https://drive.google.com/file/d/1bv51StWxPp8vz-N3dEBYn8aaURhkCX2T/view?usp=sharing" target="_blank" rel="noopener noreferrer" style="color: #8b5a2b; text-decoration: underline; font-weight: 500;">Регламент</a></td>
+      </tr>
+      <tr>
+        <td colspan="18" style="padding: 36px 20px; font-size: 11pt; line-height: 1.6; color: #3b280c; background-color: #faf6ee;">
+          <div style="font-weight: bold; font-size: 13.5pt; margin-bottom: 8px; color: #634d26;">Финал сезона 2026 года</div>
+          <div style="font-size: 11pt;">Заезды запланированы на 31 октября – 1 ноября 2026 года на песчаной трассе в д. Донино.</div>
+          <div style="font-size: 9.5pt; color: #70552b; margin-top: 10px;">Итоговый протокол и обновленная ротация лиг («Прогресс», «Чемпионы», «Абсолют») будут опубликованы сразу после завершения заездов.</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

@@ -468,9 +468,9 @@ export function buildRacingProtocolHtml(comp: CompetitionData): string {
         const qualRaw = (res.qualification || '').trim();
         if (qualRaw) {
           if (/чемпион/i.test(qualRaw)) {
-            targetLeagueCell = /прогресс/i.test(leagueCell) ? '<b>→ Чемпионы</b>' : 'Чемпионы';
+            targetLeagueCell = 'Чемпионов';
           } else if (/абсолют/i.test(qualRaw)) {
-            targetLeagueCell = /чемпион/i.test(leagueCell) ? '<b>→ Абсолют</b>' : 'Абсолют';
+            targetLeagueCell = 'Абсолют';
           } else if (/прогресс/i.test(qualRaw)) {
             targetLeagueCell = 'Прогресс';
           } else {
@@ -1970,7 +1970,7 @@ export function buildToolbarHtml(comp: CompetitionData): string {
   const doninoSeries = [
     { id: '2026004', label: 'I этап (9 авг)', url: '/protocols/2026004.html' },
     { id: '2022001', label: 'II этап (20 сен)', url: '/protocols/2022001.html' },
-    { id: '2026005', label: 'III этап (31 окт)', url: '/donino/championship?tab=stage-3' },
+    { id: '2026005', label: 'III этап (31 окт)', url: '/protocols/2026005.html' },
   ];
   const isDoninoSeries =
     doninoSeries.some(s => s.id === String(eventId)) ||
