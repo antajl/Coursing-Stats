@@ -73,6 +73,10 @@ export default function EventHeader({ event, results }: EventHeaderProps) {
   const eventId = event.id ? String(event.id) : null
   const protocolUrl = eventId ? `/protocols/${eventId}.html` : null
   const hasLinks = Boolean(rulesUrl || catalogUrl || protocolUrl)
+  const isDoninoSeries =
+    event.competition_kind === 'Клубный чемпионат' ||
+    Boolean(event.title?.includes('Клубный чемпионат')) ||
+    ['2026004', '2022001', '2026005'].includes(String(event.id))
 
   return (
     <div className="relative mb-4">
@@ -168,6 +172,62 @@ export default function EventHeader({ event, results }: EventHeaderProps) {
             </div>
           )}
         </div>
+
+        {isDoninoSeries && (
+          <div className="mt-4 rounded-lg border border-amber-300/80 bg-amber-50/70 p-3 sm:p-3.5">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2.5">
+              <div className="flex items-center gap-2">
+                <span className="inline-flex items-center justify-center rounded bg-amber-200/90 px-2 py-0.5 text-xs font-bold text-amber-900 uppercase tracking-wide">
+                  Серия 2026
+                </span>
+                <span className="text-sm font-semibold text-charcoal-900">
+                  Клубные чемпионаты Донино по бегам борзых
+                </span>
+              </div>
+              <div className="flex items-center gap-1.5 flex-wrap">
+                {[
+                  { id: '2026004', label: 'I этап', date: '09.08' },
+                  { id: '2022001', label: 'II этап', date: '20.09' },
+                  { id: '2026005', label: 'III этап', date: '31.10' },
+                ].map((stage) => {
+                  const isCurrent = String(event.id) === stage.id
+                  return isCurrent ? (
+                    <span
+                      key={stage.id}
+                      className="inline-flex items-center gap-1 rounded-md bg-amber-800 px-2.5 py-1 text-xs font-semibold text-white shadow-2xs"
+                    >
+                      <span>{stage.label}</span>
+                      <span className="opacity-80">({stage.date})</span>
+                    </span>
+                  ) : (
+                    <Link
+                      key={stage.id}
+                      to={`/event/${stage.id}/`}
+                      className="inline-flex items-center gap-1 rounded-md border border-amber-300 bg-white/90 px-2.5 py-1 text-xs font-medium text-amber-900 transition-colors hover:bg-amber-100 hover:border-amber-400"
+                    >
+                      <span>{stage.label}</span>
+                      <span className="text-charcoal-500">({stage.date})</span>
+                    </Link>
+                  )
+                })}
+              </div>
+            </div>
+            <div className="mt-2 text-[11px] leading-relaxed text-charcoal-600 border-t border-amber-200/60 pt-2 flex flex-wrap items-center justify-between gap-2">
+              <span>Регламент клубных лиг: <b>Лига «Прогресс»</b> → <b>Лига «Чемпионы»</b> → <b>Лига «Абсолют»</b></span>
+              {rulesUrl && (
+                <a
+                  href={rulesUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-amber-900 underline hover:text-amber-950 inline-flex items-center gap-1"
+                >
+                  <BookOpen className="h-3 w-3" />
+                  <span>Читать регламент</span>
+                </a>
+              )}
+            </div>
+          </div>
+        )}
 
         {(event.host_club || event.judges || trackSchemes.length > 0) && (
           <div className="mt-4 pt-4 border-t border-old-money-200/60">

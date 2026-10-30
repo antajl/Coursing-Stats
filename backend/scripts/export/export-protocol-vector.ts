@@ -209,6 +209,44 @@ export function buildMetaRowsHtml(comp: CompetitionData, colspan: number): strin
   if (comp.event.judges && !isGenericJudgePlaceholder(comp.event.judges)) {
     html += `\r\n    <tr class="meta-row">\r\n      <td colspan="${colspan}"><b>Судьи:</b> ${escapeHtml(getJudgeString(comp.event.judges))}</td>\r\n    </tr>`;
   }
+
+  const isDoninoSeries =
+    comp.event.competition_kind === 'Клубный чемпионат' ||
+    Boolean(comp.event.title?.includes('Клубный чемпионат')) ||
+    [2026004, 2022001, 2026005].includes(Number(comp.event.id));
+
+  if (isDoninoSeries) {
+    const curId = Number(comp.event.id);
+    const stages = [
+      { id: 2026004, label: 'I этап (09.08.2026)' },
+      { id: 2022001, label: 'II этап (20.09.2026)' },
+      { id: 2026005, label: 'III этап (31.10.2026)' },
+    ];
+    const seriesLinks = stages.map(s => {
+      if (s.id === curId) {
+        return `<b>${s.label}</b>`;
+      }
+      return `<a href="${s.id}.html" style="color: #8b5a2b; text-decoration: underline;">${s.label}</a>`;
+    }).join(' · ');
+
+    html += `\r\n    <tr class="meta-row">\r\n      <td colspan="${colspan}"><b>Серия турниров:</b> Клубные чемпионаты Донино 2026 (${seriesLinks})</td>\r\n    </tr>`;
+  }
+
+  const docLinks: string[] = [];
+  if (comp.event.rules_url) {
+    docLinks.push(`<a href="${escapeHtml(comp.event.rules_url)}" target="_blank" rel="noopener noreferrer" style="color: #8b5a2b; text-decoration: underline; font-weight: 500;">Регламент</a>`);
+  }
+  if (comp.event.catalog_url) {
+    docLinks.push(`<a href="${escapeHtml(comp.event.catalog_url)}" target="_blank" rel="noopener noreferrer" style="color: #8b5a2b; text-decoration: underline; font-weight: 500;">Каталог</a>`);
+  }
+  if (comp.event.results_pdf_url) {
+    docLinks.push(`<a href="${escapeHtml(comp.event.results_pdf_url)}" target="_blank" rel="noopener noreferrer" style="color: #8b5a2b; text-decoration: underline; font-weight: 500;">Оригинал протокола</a>`);
+  }
+
+  if (docLinks.length > 0) {
+    html += `\r\n    <tr class="meta-row">\r\n      <td colspan="${colspan}"><b>Документы состязания:</b> ${docLinks.join(' · ')}</td>\r\n    </tr>`;
+  }
+
   return html;
 }
 
@@ -332,7 +370,8 @@ export function buildRacingProtocolHtml(comp: CompetitionData): string {
 
   const isLeagueComp =
     comp.event.competition_kind === 'Клубный чемпионат' ||
-    comp.event.title?.includes('Клубный чемпионат') ||
+    Boolean(comp.event.title?.includes('Клубный чемпионат')) ||
+    [2026004, 2022001, 2026005].includes(Number(comp.event.id)) ||
     comp.results.some(r =>
       (r.qualification && ['Прогресс', 'Чемпионы', 'Чемпионов', 'Абсолют', 'Юниор'].includes(r.qualification.trim())) ||
       (r.breed_class && /(?:Прогресс|Чемпион|Абсолют)/i.test(r.breed_class))

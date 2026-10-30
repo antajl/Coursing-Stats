@@ -29,6 +29,7 @@ const STATIC_PAGES: SitemapUrl[] = [
   { loc: '/competitions/', priority: '0.9', changefreq: 'daily' },
   { loc: '/shows/', priority: '0.9', changefreq: 'daily' },
   { loc: '/speed-records/', priority: '0.8', changefreq: 'daily' },
+  { loc: '/donino/championship/', priority: '0.8', changefreq: 'weekly' },
   { loc: '/guide/', priority: '0.6', changefreq: 'monthly' },
   { loc: '/about/', priority: '0.5', changefreq: 'monthly' },
 ]
