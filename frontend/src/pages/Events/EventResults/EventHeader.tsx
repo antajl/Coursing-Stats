@@ -20,12 +20,14 @@ interface EventHeaderProps {
   event: Event
   results: Result[]
   showSeriesNav?: boolean
+  className?: string
 }
 
 export default function EventHeader({
   event,
   results,
   showSeriesNav = true,
+  className = 'mb-3',
 }: EventHeaderProps) {
   const trackSchemes: TrackScheme[] = event.track_schemes ? JSON.parse(event.track_schemes) : []
   const title = getEventHeadline({
@@ -53,7 +55,7 @@ export default function EventHeader({
     ['2026004', '2022001', '2026005'].includes(String(event.id))
 
   return (
-    <div className="relative mb-3">
+    <div className={`relative ${className}`.trim()}>
       <div className="min-w-0 rounded-xl border border-old-money-200 bg-gradient-to-br from-cream-50 to-white px-3.5 py-3 md:px-4.5 md:py-3.5">
         {/* Заголовок турнира и быстрые действия */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2.5">
