@@ -206,47 +206,16 @@ export function buildMetaRowsHtml(comp: CompetitionData, colspan: number): strin
   if (comp.event.host_club) {
     html += `\r\n    <tr class="meta-row">\r\n      <td colspan="${colspan}"><b>Организатор:</b> ${escapeHtml(comp.event.host_club)}</td>\r\n    </tr>`;
   }
-  if (comp.event.judges && !isGenericJudgePlaceholder(comp.event.judges)) {
-    html += `\r\n    <tr class="meta-row">\r\n      <td colspan="${colspan}"><b>Судьи:</b> ${escapeHtml(getJudgeString(comp.event.judges))}</td>\r\n    </tr>`;
-  }
-
   const isDoninoSeries =
     comp.event.competition_kind === 'Клубный чемпионат' ||
     Boolean(comp.event.title?.includes('Клубный чемпионат')) ||
     [2026004, 2022001, 2026005].includes(Number(comp.event.id));
 
   if (isDoninoSeries) {
-    const curId = Number(comp.event.id);
-    const stages = [
-      { id: 2026004, label: 'I этап (09.08.2026)' },
-      { id: 2022001, label: 'II этап (20.09.2026)' },
-      { id: 2026005, label: 'III этап (31.10.2026)' },
-    ];
-    const seriesLinks = stages.map(s => {
-      if (s.id === curId) {
-        return `<b>${s.label}</b>`;
-      }
-      return `<a href="${s.id}.html" style="color: #8b5a2b; text-decoration: underline;">${s.label}</a>`;
-    }).join(' · ');
-
-    html += `\r\n    <tr class="meta-row">\r\n      <td colspan="${colspan}"><b>Серия турниров:</b> Клубные чемпионаты Донино 2026 (${seriesLinks})</td>\r\n    </tr>`;
+    html += `\r\n    <tr class="meta-row">\r\n      <td colspan="${colspan}"><b>Руководитель серии:</b> Манухин М.А.</td>\r\n    </tr>`;
+  } else if (comp.event.judges && !isGenericJudgePlaceholder(comp.event.judges)) {
+    html += `\r\n    <tr class="meta-row">\r\n      <td colspan="${colspan}"><b>Судьи:</b> ${escapeHtml(getJudgeString(comp.event.judges))}</td>\r\n    </tr>`;
   }
-
-  const docLinks: string[] = [];
-  if (comp.event.rules_url) {
-    docLinks.push(`<a href="${escapeHtml(comp.event.rules_url)}" target="_blank" rel="noopener noreferrer" style="color: #8b5a2b; text-decoration: underline; font-weight: 500;">Регламент</a>`);
-  }
-  if (comp.event.catalog_url) {
-    docLinks.push(`<a href="${escapeHtml(comp.event.catalog_url)}" target="_blank" rel="noopener noreferrer" style="color: #8b5a2b; text-decoration: underline; font-weight: 500;">Каталог</a>`);
-  }
-  if (comp.event.results_pdf_url) {
-    docLinks.push(`<a href="${escapeHtml(comp.event.results_pdf_url)}" target="_blank" rel="noopener noreferrer" style="color: #8b5a2b; text-decoration: underline; font-weight: 500;">Оригинал протокола</a>`);
-  }
-
-  if (docLinks.length > 0) {
-    html += `\r\n    <tr class="meta-row">\r\n      <td colspan="${colspan}"><b>Документы состязания:</b> ${docLinks.join(' · ')}</td>\r\n    </tr>`;
-  }
-
   return html;
 }
 
@@ -2008,7 +1977,7 @@ export function buildToolbarHtml(comp: CompetitionData): string {
   const doninoSeries = [
     { id: '2026004', label: 'I этап (9 авг)', url: '/protocols/2026004.html' },
     { id: '2022001', label: 'II этап (20 сен)', url: '/protocols/2022001.html' },
-    { id: '2026005', label: 'III этап (31 окт)', url: '/event/2026005' },
+    { id: '2026005', label: 'III этап (31 окт)', url: '/donino/championship?tab=stage-3' },
   ];
   const isDoninoSeries =
     doninoSeries.some(s => s.id === String(eventId)) ||
@@ -2024,6 +1993,7 @@ export function buildToolbarHtml(comp: CompetitionData): string {
       </a>
       <span class="cs-toolbar-divider"></span>
       <span class="cs-toolbar-brand">CoursingStats</span>
+      <span class="cs-toolbar-divider"></span>
       <span class="cs-toolbar-title">${escapeHtml(title)}</span>
       ${isDoninoSeries ? `
       <div class="cs-toolbar-series">
@@ -2035,6 +2005,10 @@ export function buildToolbarHtml(comp: CompetitionData): string {
     </div>
     <div class="cs-toolbar-actions">
       ${isDoninoSeries ? `
+      <a href="/donino/championship" class="cs-btn cs-btn-donino" title="Клубный чемпионат Донино: общий зачет и этапы">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.45 1-1 1H7.5c-.28 0-.5.22-.5.5v1c0 .28.22.5.5.5h9c.28 0 .5-.22.5-.5v-1c0-.28-.22-.5-.5-.5H15c-.55 0-1-.45-1-1v-2.34c3.2-1.07 5-3.5 5-6.66V3H5v5c0 3.16 1.8 5.59 5 6.66z"/></svg>
+        <span>Чемпионат</span>
+      </a>
       <a href="/speed-records" class="cs-btn cs-btn-donino" title="База рекордов и замеров скорости в Донино">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
         <span>Рекорды Донино</span>
