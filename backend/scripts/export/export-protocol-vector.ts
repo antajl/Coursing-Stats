@@ -206,13 +206,13 @@ export function buildMetaRowsHtml(comp: CompetitionData, colspan: number): strin
   }
   const links: string[] = [];
   if (comp.event.catalog_url) {
-    links.push(`<a href="${escapeHtml(comp.event.catalog_url)}" target="_blank" rel="noopener">Каталог участников</a>`);
+    links.push(`<a href="${escapeHtml(comp.event.catalog_url)}" target="_blank" rel="noopener">Каталог</a>`);
   }
   if (comp.event.rules_url) {
-    links.push(`<a href="${escapeHtml(comp.event.rules_url)}" target="_blank" rel="noopener">Регламент состязания</a>`);
+    links.push(`<a href="${escapeHtml(comp.event.rules_url)}" target="_blank" rel="noopener">Регламент</a>`);
   }
   if (comp.event.results_pdf_url) {
-    links.push(`<a href="${escapeHtml(comp.event.results_pdf_url)}" target="_blank" rel="noopener">Официальный PDF</a>`);
+    links.push(`<a href="${escapeHtml(comp.event.results_pdf_url)}" target="_blank" rel="noopener">PDF-файл</a>`);
   }
   if (links.length > 0) {
     html += `\r\n    <tr class="meta-row">\r\n      <td colspan="${colspan}"><b>Документы:</b> ${links.join(' &bull; ')}</td>\r\n    </tr>`;
@@ -1779,49 +1779,52 @@ ${cBody}
 
 
 const TOOLBAR_CSS = `
-    /* Toolbar & Old Money screen preview styles */
+    /* Monochrome document toolbar matching protocol A4 aesthetic */
     .cs-toolbar {
       position: sticky;
       top: 0;
       left: 0;
-      right: 0;
-      background: #faf8f5;
-      border-bottom: 1px solid #e2d9cd;
-      padding: 10px 18px;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      width: 100%;
+      box-sizing: border-box;
+      background: #ffffff;
+      color: #000000;
+      border: 1px solid #4c4c4c;
+      border-bottom: 2px solid #000000;
+      margin: 0 0 10px 0;
+      padding: 6px 12px;
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
       z-index: 9999;
-      box-shadow: 0 1px 4px rgba(40, 30, 20, 0.05);
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
     }
     .cs-toolbar-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 16px;
-      max-width: 1600px;
-      margin: 0 auto;
+      width: 100%;
     }
     .cs-toolbar-left {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       min-width: 0;
     }
     .cs-toolbar-divider {
       width: 1px;
-      height: 18px;
-      background: #d4c5b3;
+      height: 16px;
+      background: #b2b2b2;
     }
     .cs-toolbar-brand {
       font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.05em;
+      font-weight: bold;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: #8b5e34;
+      color: #000000;
     }
     .cs-toolbar-title {
-      font-size: 13px;
-      font-weight: 600;
-      color: #2b2621;
+      font-size: 12px;
+      font-weight: normal;
+      color: #222222;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -1836,41 +1839,39 @@ const TOOLBAR_CSS = `
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 6px 14px;
-      border-radius: 9999px;
+      padding: 5px 12px;
+      border-radius: 3px;
       font-size: 12px;
-      font-weight: 600;
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+      font-weight: normal;
       text-decoration: none;
       cursor: pointer;
-      border: 1px solid #d4c5b3;
+      border: 1px solid #4c4c4c;
       background: #ffffff;
-      color: #4a3e33;
-      transition: all 0.15s ease;
+      color: #000000;
+      transition: background-color 0.1s ease, border-color 0.1s ease;
       white-space: nowrap;
     }
     .cs-btn:hover {
-      background: #f4eee5;
-      border-color: #ba9d7e;
-      color: #2b2621;
+      background: #f0f0f0;
+      border-color: #000000;
     }
     .cs-btn-back {
-      background: #ffffff;
-      color: #8b5e34;
-      border-color: #d4c5b3;
+      font-weight: bold;
     }
     .cs-btn-back:hover {
-      background: #f4eee5;
-      border-color: #8b5e34;
+      background: #000000;
+      color: #ffffff;
     }
     .cs-btn-primary {
-      background: #8b5e34;
-      border-color: #724c28;
+      background: #000000;
+      border-color: #000000;
       color: #ffffff;
+      font-weight: bold;
     }
     .cs-btn-primary:hover {
-      background: #724c28;
-      border-color: #5b3c1e;
-      color: #ffffff;
+      background: #333333;
+      border-color: #333333;
     }
     @media print {
       .cs-toolbar {
@@ -1880,31 +1881,39 @@ const TOOLBAR_CSS = `
         background: #ffffff !important;
         padding: 0 !important;
       }
-      .protocol-container {
+      .protocol-page-wrapper {
         padding: 0 !important;
         display: block !important;
+        width: 100% !important;
       }
       table.protocol-table {
         margin: 0 !important;
         box-shadow: none !important;
         border: none !important;
+        width: 100% !important;
       }
     }
     @media screen {
-      body {
-        background: #f4f1ea;
+      html, body {
+        background: #ececec;
+        margin: 0;
+        padding: 0;
         min-height: 100vh;
       }
-      .protocol-container {
-        padding: 20px 16px 40px;
-        display: flex;
-        justify-content: center;
+      .protocol-page-wrapper {
+        display: inline-block;
+        min-width: 100%;
+        width: max-content;
+        box-sizing: border-box;
+        padding: 12px 14px 40px 14px;
+        vertical-align: top;
       }
       table.protocol-table {
-        margin: 0 auto;
+        min-width: 1260px;
+        width: 100%;
+        margin: 0;
         background: #ffffff;
-        box-shadow: 0 4px 16px rgba(43, 38, 33, 0.08);
-        border: 1px solid #dcd4c8;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
       }
     }
 `;
@@ -1920,8 +1929,8 @@ export function buildToolbarHtml(comp: CompetitionData): string {
 <header class="cs-toolbar">
   <div class="cs-toolbar-inner">
     <div class="cs-toolbar-left">
-      <a href="/event/${eventId}" class="cs-btn cs-btn-back" title="Вернуться к результатам на сайте">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+      <a href="/event/${eventId}" class="cs-btn cs-btn-back" title="Вернуться к состязанию на сайте">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
         <span>К состязанию</span>
       </a>
       <span class="cs-toolbar-divider"></span>
@@ -1930,22 +1939,22 @@ export function buildToolbarHtml(comp: CompetitionData): string {
     </div>
     <div class="cs-toolbar-actions">
       ${pdfUrl ? `
-      <a href="${escapeHtml(pdfUrl)}" target="_blank" rel="noopener noreferrer" class="cs-btn" title="Официальный PDF на Google Диске">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
-        <span>Скачать PDF</span>
+      <a href="${escapeHtml(pdfUrl)}" target="_blank" rel="noopener noreferrer" class="cs-btn" title="PDF-файл протокола">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+        <span>PDF-файл</span>
       </a>` : ''}
       ${catalogUrl ? `
       <a href="${escapeHtml(catalogUrl)}" target="_blank" rel="noopener noreferrer" class="cs-btn" title="Каталог участников">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
         <span>Каталог</span>
       </a>` : ''}
       ${rulesUrl ? `
       <a href="${escapeHtml(rulesUrl)}" target="_blank" rel="noopener noreferrer" class="cs-btn" title="Регламент состязания">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
         <span>Регламент</span>
       </a>` : ''}
       <button onclick="window.print()" class="cs-btn cs-btn-primary" title="Печать или сохранение в PDF (Ctrl+P)">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></svg>
         <span>Печать</span>
       </button>
     </div>
@@ -1960,17 +1969,17 @@ export function injectToolbar(html: string, comp: CompetitionData): string {
   let res = html;
   const styleIdx = res.lastIndexOf('</style>');
   if (styleIdx !== -1) {
-    res = res.slice(0, styleIdx) + TOOLBAR_CSS + '\r\n  ' + res.slice(styleIdx);
+    res = res.slice(0, styleIdx) + TOOLBAR_CSS + '\n  ' + res.slice(styleIdx);
   }
 
   const toolbarHtml = buildToolbarHtml(comp);
   const bodyIdx = res.indexOf('<body>');
   if (bodyIdx !== -1) {
     const afterBody = bodyIdx + '<body>'.length;
-    res = res.slice(0, afterBody) + '\r\n' + toolbarHtml + '\r\n<div class="protocol-container">' + res.slice(afterBody);
+    res = res.slice(0, afterBody) + '\n<div class="protocol-page-wrapper">\n' + toolbarHtml + '\n' + res.slice(afterBody);
     const closeBodyIdx = res.lastIndexOf('</body>');
     if (closeBodyIdx !== -1) {
-      res = res.slice(0, closeBodyIdx) + '</div>\r\n' + res.slice(closeBodyIdx);
+      res = res.slice(0, closeBodyIdx) + '\n</div>\n' + res.slice(closeBodyIdx);
     }
   }
 
