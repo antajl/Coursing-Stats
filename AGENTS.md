@@ -1,0 +1,236 @@
+# AGENTS.md — AI Agent Entry Point
+
+> Read this first, then **[docs/MAP.md](docs/MAP.md)** for task → cheatsheet routing.  
+> Code is source of truth for implementation details.
+
+---
+
+## Quick Start (30 seconds)
+
+1. **[docs/ROADMAP.md](docs/ROADMAP.md)** — План развития и 4 ветки рефакторинга (читать обязательно)
+2. **[docs/QUICK-REFERENCE.md](docs/QUICK-REFERENCE.md)** — 5-minute overview, critical commands
+3. **[docs/MAP.md](docs/MAP.md)** — куда смотреть (detailed router)
+4. **[docs/INDEX.md](docs/INDEX.md)** — quick links by category
+5. **[docs/GLOSSARY.md](docs/GLOSSARY.md)** — глоссарий, термины и инварианты
+6. **[docs/sheets/](docs/sheets/)** — шпаргалки 00–16
+7. **[docs/decisions/](docs/decisions/)** — почему (ADRs)
+8. Skills: `.agents/skills/*/SKILL.md` — 13 domain-specific skills for CoursingStats (включая `competition-ingest`, `old-money-design`)
+9. MCP: GitHub + Cloudflare + Sequential Thinking + SQLite servers configured in `.mcp.json`
+
+## Automatic Skill Usage
+
+The following global skills are automatically activated during development:
+
+- **ponytail** — Forces laziest working solution (YAGNI, stdlib first, minimal code)
+- **verification-before-completion** — Requires verification evidence before claiming completion
+- **incremental-implementation** — Builds in thin vertical slices with testing between each
+- **old-money-design** — Enforces Old Money UI aesthetic (no emojis, camel palette, Lucide icons, 2K/FHD responsive rules, touch targets ≥ 44px)
+
+These skills trigger automatically based on context:
+- **ponytail**: Any coding task, refactoring, or when user mentions "lazy", "simplest", "minimal"
+- **verification-before-completion**: Before claiming completion, done, fixed, or tests pass
+- **incremental-implementation**: When implementing features touching multiple files or large changes
+- **old-money-design**: Any UI/layout/styling task, component creation, or visual design work
+
+---
+
+## Project Overview
+
+CoursingStats — статистика соревнований (procoursing), выставок РКФ, замеров Донино + Telegram bot.
+
+**Прод:** https://coursing-stats.ru · **CDN:** `/data/v1/` · **GitHub:** antajl/Coursing-Stats
+
+**Стратегия и дорожная карта:** см. [`docs/ROADMAP.md`](docs/ROADMAP.md) (4 ветки разработки).
+
+---
+
+## Critical Architecture Facts
+
+| Факт | |
+|------|--|
+| Public site | JSON from CDN only — **no** Worker/D1 runtime |
+| Hosting | **Yandex Object Storage** (`deploy.yml` CI sync) |
+| S3 Cache policy | `/assets/*` 1y immutable, HTML no-cache, `/data/v1/` 1h ([sheet 09](docs/sheets/09-ops-deploy.md)) |
+| Truth | `data/v1/` in git |
+| CDN packs | `dog-profiles/pack-*`, show `judge-details/pack-*` ([ADR-014](docs/decisions/014-cdn-packs-vs-turso.md)) |
+| Pages slim | exclude `dogs/by-id` + bulk exhibitions (`publish-exclude.js`) |
+| Calendars | ON in `data/v1/ui-flags.json` (competitions + shows) |
+| Turso | Полностью удалён из проекта. Все 51 429 протоколов выставок (2019–2026) отдаются статически из Яндекс S3 CDN (`/data/v1/shows/protocols/{id}.json`) в сжатом виде gzip |
+| S3 Asset Compression | Хэшированные JS и CSS в `/assets/*` обязаны предварительно сжиматься gzip level 9 (`yarn compress-assets`) и синхронизироваться в S3 с `--content-encoding gzip` и точным `--content-type` |
+| CI S3 sync | В `deploy.yml` команды `aws s3 sync` обязаны использовать флаг `--size-only` для предотвращения повторной заливки неизменных HTML и CDN файлов и утечек биллинга |
+| Package manager | **yarn@1.22.22** |
+| Local secrets | `.env.ai` (gitignored) |
+| Two sport ratings | medals ≠ CS points — never merge |
+| Bot | Workers + Grammy + KV; aggregates only |
+| External documents | **Google Диск** (`C:\Users\Antal\Documents\Google.Disk\Competitions`) — каталоги, регламенты, протоколы (не Яндекс Диск) |
+| Competition integrity | 100% файлов в `data/v1/competitions/` обязаны быть привязаны к `calendar/{year}.json`. Ноль дубликатов (контролируется `competition-integrity.test.ts`). Устаревшие 4-значные ID маппятся через `LEGACY_EVENT_ALIASES` в `rebuild-calendar-index.ts` |
+| Dog bilingual identity | Профили собак едины и двуязычны: чисто латинское написание хранится в `name_lat`, чисто кириллическое — в `name_ru`. При объединении карточек или дедупликации ни одно написание не должно затираться другим. Альтернативные варианты фиксируются в `merged_aliases` |
+| Show translit dedupe | В выставках карточки одной собаки на кириллице и латинице объединяются через `collapseShowDogsByTranslit` строго внутри одной породы (`breedsEquivalent`). Карточки с разными `competition_dog_id` объединять запрещено |
+| Competition folders | При создании состязания **всегда** создаётся папка на Google Диске; файлы перемещаются туда. Исходные протоколы (фото, сканы, каталоги, регламенты) оцифровываются и сохраняются на Google Диске. Ссылки из Google Диска обязательно вставляются в поля турнира `catalog_url`, `rules_url` и `results_pdf_url`, а в эталонном векторном протоколе `protocol_cs.html` / `.pdf` выводятся активные ссылки на каталог и регламент в шапке документа ([sheet 16](docs/sheets/16-protocol-template.md)); JSON состязания в базе сверяется и валидируется по этому эталону (при наличии готового выверенного JSON можно использовать `yarn export-protocol <id>`) |
+| Dog integrity | All `dog_id` in `competitions` **must** have `data/v1/dogs/by-id/{id}.json` (no orphans, no duplicate profiles) |
+| Cross-domain dogs | Никогда не связывать собак спорта и выставок по кличке при разных породах (`breedsEquivalent` обязательно; дата рождения не может быть позже даты выставок) |
+| Terminology | Участия собаки в курсинге/бегах называть **забеги** (сокращение на мобильных карточках: `заб.`), ни в коем случае **не** «старты» |
+| Combined season ranking | Олимпийский спортивный каскад: 1) Золотые медали desc -> 2) standingScore desc -> 3) CS v2 (rating_score) desc тай-брейк -> 4) число забегов desc. Чистая сортировка по CS без учёта побед запрещена |
+| Elo removed | Рейтинг Elo полностью удалён из UI и пайплайна сайта. Не восстанавливать |
+| Show judge strictness | Доля «отлично» (`excellent_rate`) судей выставок считается строго по взрослым/юниорским классам (`adult_graded = excellent + very_good + good + satisfactory + dq`), исключая классы бэби и щенков (`very_promising`, `promising`). Пороги РКФ: `<88%` строгий, `88–95%` умеренный, `≥95%` лояльный |
+| Sport judge dog verdict | Вердикт отношения судьи к собаке (`DogJudgeVerdict`: `'strict'` / `'favors'`) требует минимум 2 совместных пуска или 2 состязания (`hasEnoughRuns`), исключая вердикты по единственному забегу. Места из бегов борзых (рейсинг) запрещено использовать для расчёта судейской строгости |
+| Series Director vs Judges | В бегах борзых (рейсинг) и клубных чемпионатах фиксация результатов ведётся фотофинишем и хронометражем. Организаторы и руководители серии (например, «Манухин М.А.») не являются судьями; поле `event.judges` в таких турнирах обязано быть `null`, чтобы исключить загрязнение судейских индексов и статистики собак |
+| Club League Columns | В клубных чемпионатах с системой лиг («Прогресс», «Чемпионы», «Абсолют») в протоколах и таблицах результатов столбцы именуются «Лига» и «Переход в лигу» (вместо нерелевантных «СС» и «Титул»). В колонке «Переход в лигу» запрещено вставлять декоративные стрелки `→` (переносятся на новую строку); выводится чистый текст лиг («Чемпионов», «Прогресс», «Абсолют») строго по первоисточнику |
+| Competition UI sort order | Порядок и группировка результатов состязаний на сайте (`frontend/src/pages/Events/EventResults/`) обязаны строго соответствовать официальному протоколу (`export-protocol-vector.ts`): 1) группы упорядочиваются по минимальному номеру собаки по каталогу (`min(catalog_no)`), а не по алфавиту пород; 2) смешанные забеги кобелей и сук («Микс») не разрываются на разные плашки по полу; 3) собаки внутри группы упорядочиваются по занятому месту `placement`, затем по `catalog_no`; 4) неявки (`dns` / `absent`) выводятся отдельным блоком в конце списка |
+| Protocol toolbar & documents | Ссылки на этапы многоэтапной серии турниров («Серия: I этап · II этап...») и внешние документы турнира («PDF-файл», «Каталог», «Регламент», «Оригинал протокола») размещаются **строго в верхней панели навигации** (`.cs-toolbar`). Запрещено дублировать их строками метаданных внутри печатного тела таблицы протокола или в HTML-заглушках этапов ([sheet 16](docs/sheets/16-protocol-template.md)). Внутри `.cs-toolbar` автономного просмотрщика (`/protocols/{id}.html`) переключатели этапов обязаны вести строго на автономные HTML-протоколы других этапов (`/protocols/{siblingId}.html`), сохраняя пользователя в едином режиме бланков |
+| Electronic timing official roles | В соревнованиях с электронным хронометражем и фотофинишем (рейсинг, клубные чемпионаты Донино) руководитель серии («Руководитель серии: Манухин М.А.») не является судьей субъективной оценки: поле `judges` состязания устанавливается в `null`, исключая загрязнение судейской статистики и рейтингов строгости |
+| Soft Camel active buttons | Для всех активных и выбранных кнопок, табов, плашек пород (`QuickBreedBar`) и фильтров тулбаров (`toolbar.ts`) используется строго стиль **«Мягкий Camel»**: `border border-camel-400 bg-camel-100 text-camel-950 font-semibold shadow-2xs`. Глухая горчично-коричневая заливка `bg-camel-500 text-charcoal-900` запрещена на всём сайте |
+| Compact Event Header & Series | Шапка турнира на сайте (`EventHeader.tsx`) компонуется строго в 2 ряда: 1) Название турнира слева, кнопка «Протокол и документы» справа; 2) 3 числовых бейджа слева, организационные детали справа. Переключатель этапов серии турниров выносится отдельным рядом плашек в стиле «Мягкий Camel» строго под шапкой, без громоздких рамок и без загрязнения заголовка |
+
+Three domains: **Competitions** / **Shows** / **Donino** — see [docs/sheets/01-three-domains.md](docs/sheets/01-three-domains.md).
+
+---
+
+## Critical Commands
+
+```bash
+yarn run dev                  # Vite :5173
+yarn run ingest-competition <draft.json> # Safe competition import (matches dogs, prevents orphan dogs)
+yarn export-protocol <eventId> [outDir]   # Export vector HTML/PDF protocol (sheet 16)
+yarn run build-all-data       # Rebuild indexes + publish-gates
+yarn run test-parser-fixtures
+yarn test
+# Archive Full_Results → competitions → calendar link:
+# npx tsx backend/scripts/import/import-full-results-archive.ts
+# npx tsx backend/scripts/import/sync-archive-comps-to-calendar.ts
+cd bot; yarn run build
+cd bot; yarn test
+cd bot; yarn run deploy
+```
+PowerShell: use `;` not `&&`.
+
+---
+
+## Forbidden (without explicit request)
+
+- Manually create competition or dog JSON files bypassing `yarn ingest-competition` (leads to orphan dogs and test failures)
+- Включать оценки классов бэби и щенков («очень перспективный», «перспективный») в знаменатель процента «отлично» судей выставок (искусственно занижает судейскую строгость на 10–15 п.п., так как щенки по правилам РКФ не могут получать «отлично»)
+- Присваивать статус судейской строгости к собаке (`favors` / `strict`) на основе всего одного забега/соревнования, либо использовать результаты электронного хронометража рейсинга для определения субъективной судейской предвзятости
+- Связывать или объединять собак разных пород между спортом и выставками по совпадению клички (`linkShowDogsByUniqueName`, `collapseShowDogsByExactName` без валидации породы)
+- All breeds + 2015–2026 archive in UI  
+- Merge medals/points; change CS without `cs-v2` + guide  
+- Parse Breed Archive PDF (URL only)  
+- Rebrand procoursing.ru  
+- Deploy Worker in site CI  
+- Commit/push without user request  
+- Runtime D1 in production  
+- Full dog history in bot  
+- Emojis anywhere in UI, site, documentation, README, or commits (Old Money aesthetic: strictly zero emojis; use Lucide SVG icons in UI, clean markdown text in docs)
+- Co-Authored-By trailers, bot author credits, or committing as bot accounts (maintain clean single-contributor profile 'antajl <antajl@yandex.ru>')
+- Writing complex multiline node -e with backticks in PowerShell (use temporary .cjs scripts to avoid shell escaping issues)  
+- Interactive touch targets < 44px without touch padding on mobile (violates WCAG / PageSpeed)  
+- Реализовывать мобильные карусели и слайдеры через подмену одного элемента с `opacity: 0` или цепочками `requestAnimationFrame` (приводит к миганию и риску залипания на пустом экране). Использовать непрерывный 3-слотовый трек `[prev, current, next]` со сдвигом `translateX(calc(-100% + ${dragOffset}px))` и прямым тактильным 1:1 откликом на жест свайпа  
+- Images without explicit width/height or with distorted aspect ratio (breaks CLS / image-aspect-ratio)  
+- Delete competition results or dogs from sports protocols on request of owners (breaks archive integrity; see docs/COMMUNITY_CHRONICLE_2026.md)  
+- Links to Yandex Disk (`disk.yandex.ru`) for catalogs/regulations/protocols (use Google Drive links instead)  
+- Использовать термин «старты» вместо «забеги» в интерфейсе и описаниях соревнований  
+- Сортировать группы результатов соревнований на сайте в алфавитном порядке пород или разрывать смешанные зачеты («Микс») на отдельные блоки по полу в отрыве от официального протокола турнира (`export-protocol-vector.ts`)  
+- Возвращать рейтинг Elo в UI публичного сайта (удалён по ненадобности)  
+- All-caps judge names in titles, descriptions, or UI (use `toDogTitleCase` Proper Case: «Орлова Марина Олеговна», not «ОРЛОВА МАРИНА ОЛЕГОВНА»)  
+- Sports event.judges with noise prefixes, administrative roles, or heat numbers (use clean Proper Case with initials: «Крылова Е.В., Рубина А.В.», never «Главный судья: Крылова Е.В. (руководитель серии)»)  
+- Passing Node V8 memory flags to npx CLI (e.g. `npx --max-old-space-size=...` is ignored by npx and causes 4GB heap OOM; use `node --max-old-space-size=12288 ./node_modules/tsx/dist/cli.mjs <script>` or `NODE_OPTIONS`)  
+- Leaving raw downloaded PDF reports in data/local/rkf-reports/ after parsing into SQLite (raw PDFs are ephemeral and must be deleted after compression to avoid disk bloat)  
+- Exporting or syncing show protocols to S3 CDN with ALL-CAPS judge names in SQLite (all judge entries in `ex.judges`, `results[].judge`, and `main_ring[].judge` must be normalized to Proper Case via `normalize-judges-sqlite.ts`)  
+- Leaving soft hyphens inside single words in judge names, breeds, or dog names (e.g. `«валенти-новна»`, `«мордвино-ва»`), or trailing hyphen-spaces in compound terms (e.g. `«черно- подпалый»`), when exporting or normalizing show protocols  
+- Storing inverted patronymics as judge surnames (e.g. `«Рашидовна Чайковская Флера»` instead of `«Чайковская Флера Рашидовна»`), which fragments judge profiles into fake identities  
+- Leaving table line-wrap breed fragments (`«СОБАКА»`, `«ПОДШЕРСТКОМ»`, `«ОСТЕВАЯ ШЕРСТЬ С»`) unrecovered in exhibition protocol results  
+- Discarding or skipping Main Ring tables when embedded inside single certificate PDFs (the parser must support detecting «ВЕДОМОСТЬ ГЛАВНОГО РИНГА» and extracting placements alongside catalog results)  
+- Syncing exhibition protocols to S3 CDN or deploying to production without prior local parsing, local index rebuild, and user verification (Local-First pipeline)  
+- Attempting headless browser automation against Google Search directly (triggers Google reCAPTCHA / 429 bot block; search verification must rely on real user browser screenshots and Google Search Console exports)  
+- Утверждать протокол или заявлять о «100% достоверности» без фактического открытия и построчной проверки сгенерированных HTML/PDF (сверить математику сумм/скоростей, попоны, дистанцию, номера забегов, времена/баллы, клички, номера по каталогу, титулы, сертификаты, судей, организатора и заголовки)  
+- Маппить или интерпретировать чисто числовой шум парсинга (каталожные номера, возраст, e.g. `'18'`) как `'БЕЗ ПОРОДЫ'`. Числовые токены в поле породы обязаны отсекаться как артефакты; значение `'БЕЗ ПОРОДЫ'` допустимо исключительно для собак, у которых в оригинальном источнике явно указано «БЕЗ ПОРОДЫ» или «МЕТИС»  
+- Сортировать списки пород в фильтрах выставок в произвольном порядке: породы обязаны выводиться по убыванию количества собак (от самых массовых к редким) с аккуратным алфавитным вторичным ключом  
+- Оставлять или импортировать соревнования с неверным `event_type` (`unknown`, либо `coursing` для рейсинга/бегов борзых), либо оставлять файлы в `competitions/` без привязки к календарю (ломает подсчет агрессий, распределение по колонкам и вызывает 404 по ссылкам)  
+- Помечать или оставлять клубные чемпионаты и дружественные забеги («Клубный чемпионат», «Дружественные забеги», «Кубок котейки Глюка» и т.п.) как обычный `racing` или `coursing` вместо дисциплины `other` с янтарно-жёлтым акцентом `border-l-amber-300` и категорией «Другие» в календаре и фильтрах соревнований  
+- Отрисовывать попоны в курсинге только в двух цветах (красный/белый) без поддержки синих (`#00a2e8`) и белых (`#f7f6f0` off-white) попон в забегах тройками, либо использовать неоновый жёлтый цвет в курсинге  
+- Генерировать или утверждать протокол состязания с пустым значением судей (`event.judges: null`), если судейская коллегия указана на исходных фото, сканах или в каталоге состязания  
+- Дублировать ссылки на этапы серии соревнований или внешние документы состязания (каталог, регламент, оригинал) внутри строк метаданных печатной таблицы протокола или в HTML-заглушках этапов (они обязаны размещаться исключительно в верхней панели `.cs-toolbar` автономного просмотрщика)  
+- Перенаправлять пользователя из панели переключения этапов автономного HTML-протокола (`/protocols/{id}.html`) на SPA-страницу сайта вместо соответствующего автономного HTML-протокола другого этапа серии  
+- Вставлять декоративные стрелки `→` в ячейки колонки «Переход в лигу» протокола соревнований (вызывать некрасивые переносы строк на узких колонках)  
+- Записывать хронометристов, секретарей или руководителей серии в поле `event.judges` состязаний по электронному хронометражу (рейсинг/Донино), где нет субъективных судейских оценок по критериям (поле `judges` обязано быть `null`, чтобы не искажать судейскую строгость и агрегаты)  
+- Использовать формулировку «архивов ProCoursing.ru» в дисклеймерах и описаниях источников соревнований (использовать утверждённую формулировку: «на основе официальных протоколов организаторов, полевых секретариатов и материалов ProCoursing.ru» либо «материалов ProCoursing.ru»)  
+- Оставлять пустые колонки для 2-го и 3-го забегов в векторных HTML/PDF протоколах, если эти забеги фактически не проводились ни одной собакой (сетка обязана динамически адаптироваться под maxHeats: 12/15/18 колонок для рейсинга, 16/25 колонок для курсинга)  
+- Создавать отдельные разрозненные записи в календаре для многоэтапных/многораундовых соревнований одного дня (марафоны, двоеборья) — состязание оформляется единой записью с переключателями раундов на сайте и единым сводным PDF в Google Диске  
+- Выводить плейсхолдер «Главный судья/Судья» в шапке метаданных или заголовках колонок таблиц, если имена судей неизвестны (строку судей опускать, колонку подписывать «Оценки по критериям»)  
+- Генерировать протоколы состязания без даты проведения и локации в титульной строке документа  
+- Настраивать S3 --error-document на статический 404.html без JS или вырезать скрипты клиентского бандла <script type="module"> из 404.html / spa-shell (ломает роутинг SPA и вызывает ошибку 404 при прямых переходах из поисковиков на непререндеренные профили собак)  
+- Сохранять объединённую сумму двух судей в `judges[0].sum`, оставляя `judges[1].sum: null` при парсинге или импорте состязаний курсинга (ломает колонку `Σ` в UI: у каждого судьи обязана быть его личная сумма `judge.sum = sum(scores)`, а сумма забега фиксируется в `heat.total`)  
+- Отбрасывать 2-й забег или выставлять статус `finished`, если собака сошла с трассы или была снята во 2-м круге (второй забег обязан фиксироваться с `disqualified: true` и причиной схода/снятия)  
+- Рендерить или генерировать несколько тегов `<title>` в `<head>` документа или внутри `<svg>` (React 19 выполняет native metadata hoisting: заголовок в SPA обязан управляться через `document.title` в `useEffect`, а тултипы в `<svg>` — через атрибут `title="..."`, исключая появление дубликатов для поисковых краулеров и SEO-аудиторов)  
+- Использовать границу слова `\b` в регулярных выражениях для кириллицы в Node.js / JavaScript (`\b` в ASCII не распознает кириллицу как буквы слова `\w`; для кириллицы обязаны использоваться `(?:\s|$|,)` либо Unicode-экранирование `(?!\p{L})` с флагом `u`)  
+- Ошибочно квалифицировать многословные породы с начальными прилагательными окраса/размера (например, `«ЗОЛОТИСТЫЙ РЕТРИВЕР»`, `«БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА»`, `«РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР»`) как строки продолжения или сиротские фрагменты пород (`isBreedContinuationLine` / `isBreedFragment`)  
+- Использовать регистрозависимое прямое сравнение (`r.name === name`, `r.breed === breed`) при поиске или выборке собак и пород в статических API/хелперах без предварительной нормализации (`.trim().toLowerCase()`) (приводит к ложным ошибкам «Собака не найдена» при переходе по URL с другим регистром)  
+- Добавлять или использовать хуки React (`useMemo`, `useCallback`, `useEffect` и др.) в компонентах UI без их явного импорта из `'react'` (вызывает runtime-ошибку `ReferenceError` в продакшене и падение экрана в ErrorBoundary)  
+- Использовать бледные оттенки `text-charcoal-400` или `text-char-300` для подписей ключевых метрик (индекс CS, скорость, плашки пород, число забегов) на светлых фонах карточек — вторичные метрики обязаны быть читаемыми (не ниже `text-charcoal-600 font-medium`)  
+- Использовать тавтологичные заголовки состязаний (например, «Соревнования» рядом с «Рейсинг»): спортивные дисциплины обязаны именоваться «Курсинг» и «Рейсинг»  
+- Отображать тренировочные рекорды Донино в основном блоке профиля собаки при наличии официальных соревнований по курсингу или рейсингу (раздел Донино выводится только для собак без спортивного опыта)  
+- Оставлять паразитный браузерный контур `:focus-visible` вокруг полей ввода в поисковых модалках и диалогах при программном фокусе с клавиатуры (`Ctrl+K`)  
+- Использовать percent-encoding (encodeURIComponent) для генерации путей и папок в статический пререндер (prerender-pages.ts): веб-сервер S3/Nginx декодирует URI перед поиском файла, поэтому имена папок на S3 обязаны храниться в чистом UTF-8 (e.g. «Богаченко В.В.», «Monica Bellucci/АСТ»); экранирование создает литеральные «%D0...» ключи и приводит к системным 404 для поисковых роботов
+- Формировать внутренние ссылки (<Link to="...">, navigate(...), canonical) без завершающего слэша «/» для статических маршрутов: в S3 static hosting запрос пути без слэша вызывает 302 Found редирект, потерю query-параметров и генерацию тысяч неканонических дубликатов в поисковых системах. Все внутренние маршруты обязаны строго оканчиваться на «/»
+- Блокировать путь «/data/» в robots.txt: поисковые краулеры (Google WRS) используют клиентский JavaScript для рендеринга страниц и должны иметь полный доступ к fetch-запросам JSON данных, иначе страницы индексируются пустыми или получают статус Soft 404
+- Использовать растровые картинки или неадаптированные иллюстрации в шапке навигации (использовать только чистый векторный SVG `/assets/brand/logo.svg` с утверждённым гербовым значком-фавиконом и академической типографикой «Курсинг Статс»)  
+- Разделять загрузку данных главной страницы на каскадные асинхронные фазы, приводящие к поочередному морганию блоков (все данные экрана запрашиваются параллельно через единый `Promise.all` с синхронным обновлением состояния)  
+- Запрашивать неиспользуемые на странице наборы данных (календари турниров, списки выставок) в хуках первого экрана (`useHomeData`)  
+- Оставлять полноразмерный горизонтальный логотип с длинной надписью в десктопной шапке на экранах от `768px` до `1279px` (`md`–`xl`), где он физически наезжает на центрированные пункты навигации (на экранах `< 1280px` логотип обязан переключаться на компактный векторный бренд-медальон `/assets/brand/logo-badge.svg` 46×46px)  
+- Создавать внешнюю оболочку-«матрёшку» вокруг карточек подиумов первого экрана при независимо парящих блоках статистики (колонки подиумов и верхний таб-переключатель обязаны парить независимо с идентичной матовой фактурой и тенью)  
+- Использовать разную высоту, вертикальные отступы (`py-1` vs `py-2`) или несовпадающие брейкпоинты типографики (`2xl:text-sm` vs `lg:text-sm`) между простыми ссылками и выпадающими списками в десктопной навигационной шапке (приводит к вертикальному смещению подчеркиваний активных/наведенных вкладок)  
+- Заливать несжатые JS/CSS ассеты в S3 или отдавать их без заголовка Content-Encoding: gzip (раздувает размер critical chain до 141 КБ CSS / 470 КБ JS и обрушивает мобильный FCP в PageSpeed до 4+ секунд)  
+- Использовать непрозрачные белые или разнородные плашки-«пилюли» с рамками для мобильных переключателей подразделов (дисциплины в каруселях и рейтинге оформляются в стиле Pure Ghost: чистая типографика font-serif text-[12px] font-bold text-charcoal-900 с золотистой стрелкой ⇄ ArrowLeftRight text-camel-700 без фоновых рамок и разнородных иконок)  
+- Rebuilding or changing show breed normalization / yearly rankings without running `backend/scripts/shows/enrich-show-dog-details.ts` to sync alias pointers in `dog-details/` (causes 404 errors when opening dog profiles from exhibition protocols)  
+- Removing `?name=...&breed=...` query parameters from `exhibitionDogProfilePath` (breaks fallback resolution for unranked show dogs and breed variants in `/dog/:id`)  
+- При парсинге или импорте состязаний БЗМП записывать в `heat.total` сумму только первого судьи `j1.sum` вместо суммы обоих судей `j1.sum + j2.sum` (приводит к занижению суммы круга вдвое относительно `grand_total`)  
+- Склеивать сноски штрафных вычетов (`<sup>1</sup>`, `<sup>2</sup>`) со значением баллов забега при парсинге HTML-таблиц (порождает числовые аномалии вида `1561` вместо `156`)  
+- Создавать фиктивные записи второго судьи (`judge_number: 2` с пустыми баллами) в состязаниях курсинга с одним судьёй (приводит к созданию фантомных судей «Судья 2» в индексах и падению тестов целостности судей)  
+- Оставлять недействительные ссылки на внешние каталоги или регламенты (например, битые `http://procoursing.ru/...`, отдающие HTTP 404): при наличии файлов на Google Диске они обязаны привязываться к Google Диску, в противном случае поле устанавливается в `null`  
+- Оставлять неразрешённые алиас-ID в файлах рейтингов выставок (`dog-ranking-*.json`): все файлы рейтингов обязаны содержать исключительно 100% канонические ID собак; ссылки-алиасы допустимы только в `dog-details/`  
+- Отрисовывать панель или контролы сортировки на вкладке «Судьи» соревнований (`Judges/index.tsx`): список судей упорядочен по умолчанию по числу проведённых забегов (`total_evaluations_count` desc, затем имя ru), тулбар содержит только верхнюю компактную строку фильтров (поиск по фамилии, год, порода, дисциплина, сброс) без второй строки сортировки  
+- Закрывать выпадающие меню (`ModernDropdown` / popover) по событию `resize` или включать `closeOnScroll` для окон, содержащих поля ввода `<input>`: на мобильных устройствах (iOS/Android) появление экранной клавиатуры физически уменьшает высоту вьюпорта (`visualViewport`), что генерирует события `window.resize` и микропрокрутку `window.scroll` для центрирования инпута; при включённом `closeOnScroll` или закрытии по `resize` выпадающее окно захлопывается ровно в момент появления клавиатуры. Всплывающие окна с инпутами обязаны удерживать позицию через `window.visualViewport` без закрытия  
+- Пропускать названия пород, разновидностей или выставочные титулы в поля судей (например, «Миниатюрная Гладкошерстная», «Бишон Фризе», «ЛПП», «JCAC» в `judges.json`, `judges-page0.json`, `ex.judges` или `results[].judge`): пайплайн парсинга и нормализации обязан валидировать имена судей через `normalizeShowJudgeDisplayName` / `isPlausibleJudgeName`, вычищать прилипшие породные префиксы, отсекать строки без персоналий и проверять чистоту через гейт `show_judges_cleanliness`  
+- Опускать объявленные пропсы в деструктуризации параметров компонентов/тулбаров React (`EventsToolbarProps`), что вызывает runtime-ошибку `ReferenceError` при активации условных элементов интерфейса (например, кнопки `onResetFilters` при выборе не-дефолтного года или фильтра)  
+- Использовать бежевую палитру Old Money для шапки встроенного просмотрщика векторных HTML-протоколов (`.cs-toolbar`): шапка протокола обязана быть строго монохромной/черно-белой в едином стиле бланка с системным Arial/Helvetica и тонкими рамками `#4c4c4c`/`#000000`  
+- Заворачивать таблицу HTML-протокола в обёртки с `width: max-content`, `display: flex; justify-content: center` или искусственным `min-width` (таблица `table.protocol-table` и шапка `.cs-toolbar` располагаются прямо в `<body>` с естественной `width: 100%`, благодаря чему браузер адаптирует процентные колонки под ширину окна без появления многоэкранного горизонтального скролла)  
+- Использовать формулировку «Официальный PDF» в протоколах и на сайте (использовать нейтральное «PDF-файл» или «PDF»; рядом с ним в метаданных и тулбаре всегда выводить «Каталог» и «Регламент» при их наличии)  
+- Использовать иконки локации/пинов перед строкой адреса, если они сдвигают её относительно названия организации (адрес и клуб в карточках соревнований и выставок обязаны начинаться строго по единой вертикальной оси с нулевым сдвигом)  
+- Ставить бейджи дисциплин или категорий справа от названий турниров разной длины (вызывает хаотичный скачок бейджей по горизонтали; бейджи обязаны стоять слева от названия состязания с компактной фиксированной шириной, подогнанной под самое длинное слово — 67px под «Курсинг»/«Рейсинг»)  
+- Использовать font-serif (Georgia) для дат в компактных календарных блоках (цифры 3, 4, 5, 7, 9 в Georgia провисают ниже строки как строчные буквы с descender'ами, создавая провал даты ко дну и пустоту сверху; для цифр в календарных блоках обязан применяться font-sans с маюскульными полноростовыми цифрами и симметричным py-2)  
+- Искусственно сужать контентную область отдельной вкладки (max-w-5xl), если соседние вкладки раздела («Рейтинг», «Судьи») полноразмерные (создаёт скачок ширины страницы при переключении табов; для заполнения пустоты на широких мониторах обязана использоваться 4-колоночная строка с вынесением локации/региона в центр)  
+- Использовать надпись «Протокол» вместо утверждённого целевого действия «Результаты →» в архиве состязаний (а для спортивных дисциплин использовать лаконичные термины: «Курсинг», «Рейсинг», «БЗМП»)  
+- Объяснять технические концепции, изменения и архитектурные решения простым человеческим языком («на пальцах»), без избыточного инженерного жаргона и аббревиатур, если пользователь явно не запросил глубокий технический разбор  
+- Оставлять или создавать монолитные страницы интерфейса свыше 500 строк: оптимальный размер файлов для ИИ-агентов составляет 100–300 строк (максимум до 400). Крупные экраны обязаны декомпозироваться на изолированные модули: верхнеуровневый координатор `index.tsx` (100–250 LOC), кастомный хук состояния/данных `use*Data.ts`, субкомпоненты табов и адаптивные контейнеры (`*DesktopView.tsx` / `*MobileView.tsx`)  
+- Хранить одноразовые исторические скрипты импорта или генераторы черновиков прошлых лет в корне `backend/scripts/import/` (все исторические одноразовые скрипты 2021–2022 годов обязаны изолироваться в `backend/scripts/import/archive/`, сохраняя активную кодовую базу чистой)  
+- Для визуальной проверки протоколов (sheet 16) и адаптивности мобильного UI (375px / FHD / 2K, тач-таргеты >= 44px) использовать установленный инструмент Chrome DevTools (снятие скриншотов страниц и инспекция консоли браузера) перед утверждением изменений  
+- Заносить организаторов, хронометристов или руководителей серии (например, «Манухин М.А.», «Руководитель серии») в поле `event.judges`, либо называть их судьями в интерфейсе или протоколах соревнований по рейсингу/бегам борзых (в рейсинге фиксация ведётся фотофинишем; административные роли не являются судейскими и загрязняют судейские индексы и профили собак; в `event.judges` обязано быть `null`, а в протоколе и интерфейсе выводится «Руководитель серии: И.О.» или «Организатор»)  
+- Выводить в векторных протоколах или таблицах результатов соревнований с системой лиг пустые столбцы «СС» и «Титул» (в турнирах с системой лиг столбцы обязаны именоваться «Лига» и «Переход в лигу» с отображением текущей лиги собаки и статуса ротации `→ Чемпионы`, `→ Абсолют` по регламенту серии)  
+- Дублировать навигационные плашки серии соревнований на странице турнира (навигация по этапам серии и ссылка на хаб чемпионата оформляются строго единым блоком в верхней карточке турнира над метаданными, без повторения снизу)  
+- Оборачивать поисковые и фильтровые тулбары во внешние прямоугольные контейнеры с рамкой (`border`, `bg-cream-50/80`, `shadow-2xs`), создавая эффект «коробка в коробке» (элементы тулбара размещаются свободно напрямую на фоне страницы)  
+- Создавать массивные Hero-баннеры высотой 200–300px с отдельными квадратными карточками метрик в шапках турниров вместо компактных однострочных бесшовных заголовков (~40–50px)  
+- Зашивать статические массивы пород в тулбарах соревнований с нарушением порядка частотности (породы в `QuickBreedBar` обязаны упорядочиваться строго по убыванию числа зарегистрированных участников `count desc`)  
+- Дублировать метрики и виджеты (состав лиг, рекорды, лучшее время) одновременно в шапке турнира и в боковых колонках  
+- Внедрять переключатели на искусственные «краткие сводки» или подиумы на вкладках этапов соревнований при наличии официального протокола забегов (выводится исключительно официальный протокол `EventHeader` + `ResultsSection`)  
+- Использовать неверный домен `runningdogs.ru` (официальный домен бегового клуба в Донино строго в единственном числе: `https://runningdog.ru`)  
+- Использовать тёмную горчично-коричневую заливку `bg-camel-500 text-charcoal-900` для активных кнопок, фильтров, плашек пород или табов (создаёт визуально тяжёлое грязное пятно на кремовом фоне; активные элементы оформляются строго в стиле «Мягкий Camel»: `border border-camel-400 bg-camel-100 text-camel-950 shadow-2xs`)  
+- Растягивать шапку соревнований (`EventHeader.tsx`) на 3–4 отдельных вертикальных ряда с пустыми зонами более 60%, либо заворачивать навигатор этапов серии в полноширинные прямоугольные контейнеры с жёлтой рамкой (переключатель этапов оформляется плавающими плашками в стиле QuickBreedBar под шапкой)  
+
+
+
+
+
+---
+
+## Done when
+
+| Area | |
+|------|--|
+| Site/data | `build-all-data` + `yarn test` |
+| Bot | `cd bot; yarn run build` + `yarn test` |
+| Parsers | `test-parser-fixtures` |
+| Competitions | `backend/tests/competition-integrity.test.ts` (0 duplicate groups, 100% calendar-linked, valid results_file) |
+| Protocols | Построчная ручная сверка сгенерированного HTML/PDF с первоисточником (кличка, каталожный номер, попона, забеги, баллы/время/скорость, место, титулы, сертификаты, судьи, организатор) |
+| Docs | MAP resolves task to one sheet |
+
+Full checklists: [docs/sheets/11-testing.md](docs/sheets/11-testing.md).
