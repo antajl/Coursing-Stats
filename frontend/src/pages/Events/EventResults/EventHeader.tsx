@@ -77,7 +77,7 @@ export default function EventHeader({ event, results }: EventHeaderProps) {
   return (
     <div className="relative mb-4">
       <div className="min-w-0 rounded-xl border border-old-money-200 bg-gradient-to-br from-cream-50 to-white px-4 py-4 md:px-5 md:py-4.5">
-        <div className="flex items-start justify-between gap-3">
+        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
           <div className="min-w-0 flex-1">
             <h1 className="min-w-0 font-serif text-lg font-bold leading-tight tracking-tight text-charcoal-900 md:text-xl">
               {title}
@@ -122,45 +122,48 @@ export default function EventHeader({ event, results }: EventHeaderProps) {
             </div>
           </div>
           {hasLinks && (
-            <div className="mt-2 flex flex-wrap gap-2">
-              {rulesUrl && (
-                <a
-                  href={rulesUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex min-h-[44px] sm:min-h-0 flex-shrink-0 items-center gap-1.5 rounded-full border border-camel-200 bg-camel-50 px-2.5 py-1.5 text-xs font-medium text-camel-700 shadow-sm transition-colors hover:border-camel-400 hover:bg-camel-100"
-                  aria-label="Регламент"
-                  title="Регламент"
-                >
-                  <BookOpen className="h-4 w-4" aria-hidden />
-                  <span className="hidden sm:inline">Регламент</span>
-                </a>
-              )}
-              {catalogUrl && (
-                <a
-                  href={catalogUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex min-h-[44px] sm:min-h-0 flex-shrink-0 items-center gap-1.5 rounded-full border border-camel-200 bg-camel-50 px-2.5 py-1.5 text-xs font-medium text-camel-700 shadow-sm transition-colors hover:border-camel-400 hover:bg-camel-100"
-                  aria-label="Каталог"
-                  title="Каталог"
-                >
-                  <FileText className="h-4 w-4" aria-hidden />
-                  <span className="hidden sm:inline">Каталог</span>
-                </a>
-              )}
-              {protocolUrl && (
+            <div className="mt-1 flex flex-wrap gap-2 shrink-0">
+              {protocolUrl ? (
                 <a
                   href={protocolUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex min-h-[44px] sm:min-h-0 flex-shrink-0 items-center gap-1.5 rounded-full border border-camel-200 bg-camel-50 px-2.5 py-1.5 text-xs font-medium text-camel-700 shadow-sm transition-colors hover:border-camel-400 hover:bg-camel-100"
-                  aria-label="Официальный протокол"
-                  title="Официальный печатный протокол (HTML / Печать)"
+                  className="inline-flex min-h-[44px] sm:min-h-0 flex-shrink-0 items-center gap-1.5 rounded-full border border-camel-200 bg-camel-50 px-3 py-1.5 text-xs font-medium text-camel-800 shadow-xs transition-colors hover:border-camel-400 hover:bg-camel-100"
+                  aria-label="Протокол и документы"
+                  title="Официальный протокол состязания и прикреплённые документы"
                 >
-                  <FileSpreadsheet className="h-4 w-4" aria-hidden />
-                  <span className="hidden sm:inline">Протокол</span>
+                  <FileSpreadsheet className="h-4 w-4 text-camel-700" aria-hidden />
+                  <span>Протокол и документы</span>
                 </a>
+              ) : (
+                <>
+                  {rulesUrl && (
+                    <a
+                      href={rulesUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex min-h-[44px] sm:min-h-0 flex-shrink-0 items-center gap-1.5 rounded-full border border-camel-200 bg-camel-50 px-2.5 py-1.5 text-xs font-medium text-camel-700 shadow-xs transition-colors hover:border-camel-400 hover:bg-camel-100"
+                      aria-label="Регламент"
+                      title="Регламент"
+                    >
+                      <BookOpen className="h-4 w-4" aria-hidden />
+                      <span className="hidden sm:inline">Регламент</span>
+                    </a>
+                  )}
+                  {catalogUrl && (
+                    <a
+                      href={catalogUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex min-h-[44px] sm:min-h-0 flex-shrink-0 items-center gap-1.5 rounded-full border border-camel-200 bg-camel-50 px-2.5 py-1.5 text-xs font-medium text-camel-700 shadow-xs transition-colors hover:border-camel-400 hover:bg-camel-100"
+                      aria-label="Каталог"
+                      title="Каталог"
+                    >
+                      <FileText className="h-4 w-4" aria-hidden />
+                      <span className="hidden sm:inline">Каталог</span>
+                    </a>
+                  )}
+                </>
               )}
             </div>
           )}
