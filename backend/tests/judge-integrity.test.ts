@@ -76,7 +76,7 @@ describe('Judge Data Integrity (List vs Profile consistency)', () => {
         for (const b of detail.breed_stats) {
           for (const d of b.dogs || []) {
             for (const ev of d.events || []) {
-              distinctEvents.add(`${ev.date || ''}|${ev.title || ''}`)
+              distinctEvents.add(ev.event_id != null ? String(ev.event_id) : `${ev.date || ''}|${ev.title || ''}`)
             }
           }
         }

@@ -17,6 +17,9 @@ export interface CalendarEvent {
   participants_count?: number
   result_count?: number
   results_file?: string | null
+  results_pdf_url?: string | null
+  catalog_url?: string | null
+  region?: string | null
 }
 
 export function getEventDiscipline(event: { event_type?: string | null; competition_kind?: string | null }): string {
@@ -182,7 +185,7 @@ export function parseRankLabelStructure(rankLabel: string): {
   const label = normalizeRankLabel(rankLabel)
   if (!label) return { kind: '', disciplines: [] }
 
-  const lines = label
+  let lines = label
     .split('\n')
     .map((line) => line.replace(/\[отмен[её]н\]/gi, '').trim())
     .filter(Boolean)
@@ -204,12 +207,15 @@ export function parseRankLabelStructure(rankLabel: string): {
 
   // Rejoin lines that end with dangling conjunctions like '&' or '+'
   for (let i = 0; i < lines.length - 1; i++) {
-    if (/[&+]s*$/.test(lines[i])) {
+    if (/[&+]\s*$/.test(lines[i])) {
       lines[i] = `${lines[i]} ${lines[i + 1]}`.trim();
       lines.splice(i + 1, 1);
       i--;
     }
   }
+
+  // Clean any remaining trailing conjunction if single line remained
+  lines = lines.map((l) => l.replace(/\s*[&+]\s*$/, '').trim()).filter(Boolean);
 
   const lastLine = lines[lines.length - 1];
   const trailingDisciplineMatch = lastLine ? lastLine.match(/^(.*?)\s*\(([^)]+)\)$/) : null;
