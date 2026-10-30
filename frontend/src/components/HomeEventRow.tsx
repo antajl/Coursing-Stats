@@ -3,6 +3,7 @@ import { Icons } from '../lib/icons'
 import {
   type CalendarEvent,
   DISCIPLINE_BORDER,
+  getEventDiscipline,
   formatRowDateParts,
   getEventHeadline,
   isImportantCompetition,
@@ -16,7 +17,7 @@ interface HomeEventRowProps {
 }
 
 export default function HomeEventRow({ event, variant = 'default' }: HomeEventRowProps) {
-  const eventType = event.event_type || 'other'
+  const eventType = getEventDiscipline(event)
   const borderClass = DISCIPLINE_BORDER[eventType] || DISCIPLINE_BORDER.default
   const dateParts = formatRowDateParts(event.date_start, event.date_end)
   const important = isImportantCompetition(event.competition_kind)

@@ -9,7 +9,7 @@
     "date_start": "2023-09-24",
     "date_end": null,
     "rank_label": "Открытый чемпионат НКП \"Русская псовая борзая\" \"Осенний Марафон - 2023\"",
-    "event_type": "unknown",
+    "event_type": "racing",
     "competition_kind": "",
     "competition_type": "",
     "title": "Открытый чемпионат НКП \"Русская псовая борзая\" \"Осенний Марафон - 2023\"",
@@ -46,10 +46,30 @@
       "vc": "1",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 3,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Нет времени"
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Фальстарт"
+          }
+        ],
+        "best_time": null,
+        "grand_total": null
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">АПРИОРИ ЛЮКСУРИ ХМЕЛЬ /<br>APRIORI LUXURY HMEL</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Нет времени</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Фальстарт</font></td> ",
       "judges": "",
@@ -78,10 +98,30 @@
       "vc": "1",
       "status": "disqualified",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 38,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Не прошёл фотофиниш"
+          },
+          {
+            "heat_number": 26,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Сошёл"
+          }
+        ],
+        "best_time": null,
+        "grand_total": null
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">6</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БОРЗЫЕ-СЕНАВИАН АЛТАЙ</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">38</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Не прошёл фотофиниш</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">26</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сошёл</font></td> ",
       "judges": "",
@@ -110,10 +150,21 @@
       "vc": "",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 19,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Не прошёл фотофиниш"
+          }
+        ],
+        "best_time": null,
+        "grand_total": null
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">10</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БОРЗОЙ ЦАРСКИЙ ПАЛАШ</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">19</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Не прошёл фотофиниш</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
       "judges": "",
@@ -142,10 +193,21 @@
       "vc": "",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 19,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Не прошёл фотофиниш"
+          }
+        ],
+        "best_time": null,
+        "grand_total": null
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">11</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БОРЗОЙ ЦАРСКИЙ ВИХРЬ</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">19</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Не прошёл фотофиниш</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
       "judges": "",
@@ -174,10 +236,21 @@
       "vc": "",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 11,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Не прошёл фотофиниш"
+          }
+        ],
+        "best_time": null,
+        "grand_total": null
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">СОЛОВЬЕВ ШЕЛКОВЫЙ АНГЕЛ /<br>SOLOVYEV SHELKOVYI ANGEL</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">11</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Не прошёл фотофиниш</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
       "judges": "",
@@ -206,10 +279,30 @@
       "vc": "2",
       "status": "disqualified",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 41,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 31,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Сошла"
+          }
+        ],
+        "best_time": null,
+        "grand_total": null
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">52</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ПЕРМЬ ВЕЛИКАЯ САФЬЯНА</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">41</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Не прошла фотофиниш</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">31</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сошла</font></td> ",
       "judges": "",
@@ -238,10 +331,21 @@
       "vc": "",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 19,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": null,
+        "grand_total": null
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">32</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БОРЗОЙ ЦАРСКИЙ ВАЧА</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">19</font></td> <td bgcolor=\"#ffffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Не прошла фотофиниш</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
       "judges": "",
@@ -270,10 +374,21 @@
       "vc": "",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 24,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": null,
+        "grand_total": null
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">62</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ВАСИЛИСА ИЗ РАЗДОЛЬЯ</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">24</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Не прошла фотофиниш</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
       "judges": "",
@@ -302,10 +417,30 @@
       "vc": "2",
       "status": "disqualified",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 21,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 1,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Сошла"
+          }
+        ],
+        "best_time": null,
+        "grand_total": null
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">73</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Юниоры</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">МЕТЕЛЬ АВГУСТА НИКЕ</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">21</font></td> <td bgcolor=\"#ffffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Не прошла фотофиниш</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сошла</font></td> ",
       "judges": "",
@@ -328,16 +463,27 @@
       "breed_class": "Русская псовая борзая - Стандартный - Кобели",
       "catalog_no": 17,
       "placement": 1,
-      "total_score": null,
+      "total_score": 12,
       "judge_count": 0,
       "qualification": "",
       "vc": "",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 14,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 12,
+            "speed_kmh": 52.5,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 12,
+        "grand_total": 12
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ТАМИР АНИ АНЧАР</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.00 с<br>14.58 м/с<br>52.500 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.00 с<br>14.58 м/с<br>52.500 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
       "judges": "",
@@ -360,16 +506,36 @@
       "breed_class": "Русская псовая борзая - Стандартный - Суки",
       "catalog_no": 48,
       "placement": 1,
-      "total_score": null,
+      "total_score": 11.53,
       "judge_count": 0,
       "qualification": "14.40 с12.15 м/с43.750 км/ч",
       "vc": "1",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 6,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 11.53,
+            "speed_kmh": 54.64,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 7,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 14.4,
+            "speed_kmh": 43.75,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 11.53,
+        "grand_total": 11.53
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">48</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">НАГАЙКА /<br>NAGAIKA</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">11.53 с<br>15.18 м/с<br>54.640 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">6</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">11.53 с<br>15.18 м/с<br>54.640 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">7</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14.40 с<br>12.15 м/с<br>43.750 км/ч</font></td> ",
       "judges": "",
@@ -392,16 +558,36 @@
       "breed_class": "Русская псовая борзая - Юниоры - Кобели",
       "catalog_no": 67,
       "placement": 1,
-      "total_score": null,
+      "total_score": 11.73,
       "judge_count": 0,
       "qualification": "13.14 с13.32 м/с47.945 км/ч",
       "vc": "1",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 43,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 11.73,
+            "speed_kmh": 53.708,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 32,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 13.14,
+            "speed_kmh": 47.945,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 11.73,
+        "grand_total": 11.73
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">67</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Юниоры</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БОРЗЫЕ-СЕНАВИАН ЕГОР</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">11.73 с<br>14.92 м/с<br>53.708 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">43</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">11.73 с<br>14.92 м/с<br>53.708 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">32</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.14 с<br>13.32 м/с<br>47.945 км/ч</font></td> ",
       "judges": "",
@@ -424,16 +610,36 @@
       "breed_class": "Русская псовая борзая - Юниоры - Суки",
       "catalog_no": 70,
       "placement": 1,
-      "total_score": null,
+      "total_score": 12.28,
       "judge_count": 0,
       "qualification": "12.86 с13.61 м/с48.989 км/ч",
       "vc": "1",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 37,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 12.28,
+            "speed_kmh": 51.303,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 24,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 12.86,
+            "speed_kmh": 48.989,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 12.28,
+        "grand_total": 12.28
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">70</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Юниоры</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БОРЗЫЕ-СЕНАВИАН ДОРА</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.28 с<br>14.25 м/с<br>51.303 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">37</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.28 с<br>14.25 м/с<br>51.303 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">24</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.86 с<br>13.61 м/с<br>48.989 км/ч</font></td> ",
       "judges": "",
@@ -456,16 +662,36 @@
       "breed_class": "Русская псовая борзая - Стандартный - Кобели",
       "catalog_no": 8,
       "placement": 2,
-      "total_score": null,
+      "total_score": 12.4,
       "judge_count": 0,
       "qualification": "12.43 с14.08 м/с50.684 км/ч",
       "vc": "1",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 39,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 12.4,
+            "speed_kmh": 50.806,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 29,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 12.43,
+            "speed_kmh": 50.684,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 12.4,
+        "grand_total": 12.4
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">8</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БОРЗЫЕ-СЕНАВИАН ГРАНАТ</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.40 с<br>14.11 м/с<br>50.806 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">39</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.40 с<br>14.11 м/с<br>50.806 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">29</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.43 с<br>14.08 м/с<br>50.684 км/ч</font></td> ",
       "judges": "",
@@ -488,16 +714,36 @@
       "breed_class": "Русская псовая борзая - Стандартный - Суки",
       "catalog_no": 44,
       "placement": 2,
-      "total_score": null,
+      "total_score": 11.9,
       "judge_count": 0,
       "qualification": "12.64 с13.84 м/с49.842 км/ч",
       "vc": "1",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 16,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 11.9,
+            "speed_kmh": 52.941,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 12,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 12.64,
+            "speed_kmh": 49.842,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 11.9,
+        "grand_total": 11.9
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">44</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ЛУННАЯ РАДУГА РЕВОЛЮЦИЯ /<br>LUNNAJA RADUGA REVOLUTION</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">11.90 с<br>14.71 м/с<br>52.941 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">11.90 с<br>14.71 м/с<br>52.941 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.64 с<br>13.84 м/с<br>49.842 км/ч</font></td> ",
       "judges": "",
@@ -520,16 +766,36 @@
       "breed_class": "Русская псовая борзая - Юниоры - Кобели",
       "catalog_no": 69,
       "placement": 2,
-      "total_score": null,
+      "total_score": 12.12,
       "judge_count": 0,
       "qualification": "Сошёл",
       "vc": "2",
       "status": "disqualified",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 31,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 12.12,
+            "speed_kmh": 51.98,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 27,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Сошёл"
+          }
+        ],
+        "best_time": 12.12,
+        "grand_total": 12.12
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">69</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Юниоры</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ЗАТЕВАЙ</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.12 с<br>14.44 м/с<br>51.980 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">31</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.12 с<br>14.44 м/с<br>51.980 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">27</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сошёл</font></td> ",
       "judges": "",
@@ -552,16 +818,27 @@
       "breed_class": "Русская псовая борзая - Юниоры - Суки",
       "catalog_no": 71,
       "placement": 2,
-      "total_score": null,
+      "total_score": 13.35,
       "judge_count": 0,
       "qualification": "",
       "vc": "",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 13,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 13.35,
+            "speed_kmh": 47.191,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 13.35,
+        "grand_total": 13.35
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">71</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Юниоры</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ФОНЭЗЕЛ ХРАБРАЯ ЛЕДИ ЭТ ОБЕРЕГ РУСИ</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.35 с<br>13.11 м/с<br>47.191 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.35 с<br>13.11 м/с<br>47.191 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
       "judges": "",
@@ -584,16 +861,36 @@
       "breed_class": "Русская псовая борзая - Стандартный - Кобели",
       "catalog_no": 18,
       "placement": 3,
-      "total_score": null,
+      "total_score": 12.61,
       "judge_count": 0,
       "qualification": "12.61 с13.88 м/с49.960 км/ч",
       "vc": "1",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 27,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 12.71,
+            "speed_kmh": 49.567,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 15,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 12.61,
+            "speed_kmh": 49.96,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 12.61,
+        "grand_total": 12.61
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ТРУБЕЦКОВЪ ЗАВЕТ</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.61 с<br>13.88 м/с<br>49.960 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">27</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.71 с<br>13.77 м/с<br>49.567 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.61 с<br>13.88 м/с<br>49.960 км/ч</font></td> ",
       "judges": "",
@@ -616,16 +913,36 @@
       "breed_class": "Русская псовая борзая - Стандартный - Суки",
       "catalog_no": 42,
       "placement": 3,
-      "total_score": null,
+      "total_score": 12.3,
       "judge_count": 0,
       "qualification": "12.81 с13.66 м/с49.180 км/ч",
       "vc": "1",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 10,
+            "bib_number": 4,
+            "bib_color": "black",
+            "time": 12.3,
+            "speed_kmh": 51.22,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 9,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 12.81,
+            "speed_kmh": 49.18,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 12.3,
+        "grand_total": 12.3
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">42</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">КУПАВА ЯСНАЯ</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.30 с<br>14.23 м/с<br>51.220 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">10</font></td> <td bgcolor=\"#000000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">4</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.30 с<br>14.23 м/с<br>51.220 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">9</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.81 с<br>13.66 м/с<br>49.180 км/ч</font></td> ",
       "judges": "",
@@ -648,16 +965,36 @@
       "breed_class": "Русская псовая борзая - Юниоры - Кобели",
       "catalog_no": 66,
       "placement": 3,
-      "total_score": null,
+      "total_score": 12.92,
       "judge_count": 0,
       "qualification": "Сошёл",
       "vc": "2",
       "status": "disqualified",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 42,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 12.92,
+            "speed_kmh": 48.762,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 32,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Сошёл"
+          }
+        ],
+        "best_time": 12.92,
+        "grand_total": 12.92
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">66</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Юниоры</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БОРЗЫЕ-СЕНАВИАН ДАВИЛО II</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.92 с<br>13.54 м/с<br>48.762 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">42</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.92 с<br>13.54 м/с<br>48.762 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">32</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сошёл</font></td> ",
       "judges": "",
@@ -680,16 +1017,36 @@
       "breed_class": "Русская псовая борзая - Юниоры - Суки",
       "catalog_no": 72,
       "placement": 3,
-      "total_score": null,
+      "total_score": 14.11,
       "judge_count": 0,
       "qualification": "15.60 с11.22 м/с40.385 км/ч",
       "vc": "1",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 33,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 14.11,
+            "speed_kmh": 44.649,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 20,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 15.6,
+            "speed_kmh": 40.385,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 14.11,
+        "grand_total": 14.11
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">72</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Юниоры</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ФУРИЯ ИЗ КРЫЛАТОЙ ЛЕГЕНДЫ</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14.11 с<br>12.40 м/с<br>44.649 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">33</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14.11 с<br>12.40 м/с<br>44.649 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">20</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15.60 с<br>11.22 м/с<br>40.385 км/ч</font></td> ",
       "judges": "",
@@ -712,16 +1069,36 @@
       "breed_class": "Русская псовая борзая - Стандартный - Кобели",
       "catalog_no": 5,
       "placement": 4,
-      "total_score": null,
+      "total_score": 12.62,
       "judge_count": 0,
       "qualification": "12.62 с13.87 м/с49.921 км/ч",
       "vc": "1",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 17,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 12.62,
+            "speed_kmh": 49.921,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 23,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 12.62,
+            "speed_kmh": 49.921,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 12.62,
+        "grand_total": 12.62
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">4</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">5</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БОРЕЙ /<br>BOREY</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.62 с<br>13.87 м/с<br>49.921 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td bgcolor=\"#ffffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.62 с<br>13.87 м/с<br>49.921 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">23</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.62 с<br>13.87 м/с<br>49.921 км/ч</font></td> ",
       "judges": "",
@@ -744,16 +1121,36 @@
       "breed_class": "Русская псовая борзая - Стандартный - Суки",
       "catalog_no": 25,
       "placement": 4,
-      "total_score": null,
+      "total_score": 12.36,
       "judge_count": 0,
       "qualification": "13.11 с13.35 м/с48.055 км/ч",
       "vc": "2",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 2,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 12.36,
+            "speed_kmh": 50.971,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 13.11,
+            "speed_kmh": 48.055,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 12.36,
+        "grand_total": 12.36
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">4</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">25</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">АЗАРТНАЯ ОХОТА ДИАНА</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.36 с<br>14.16 м/с<br>50.971 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.36 с<br>14.16 м/с<br>50.971 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.11 с<br>13.35 м/с<br>48.055 км/ч</font></td> ",
       "judges": "",
@@ -776,16 +1173,36 @@
       "breed_class": "Русская псовая борзая - Юниоры - Кобели",
       "catalog_no": 68,
       "placement": 4,
-      "total_score": null,
+      "total_score": 13.93,
       "judge_count": 0,
       "qualification": "Сошёл",
       "vc": "2",
       "status": "disqualified",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 37,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 13.93,
+            "speed_kmh": 45.226,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 24,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Сошёл"
+          }
+        ],
+        "best_time": 13.93,
+        "grand_total": 13.93
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">4</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">68</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Юниоры</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БОРЗЫЕ-СЕНАВИАН ДЖАББАР</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.93 с<br>12.56 м/с<br>45.226 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">37</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.93 с<br>12.56 м/с<br>45.226 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">24</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сошёл</font></td> ",
       "judges": "",
@@ -808,16 +1225,36 @@
       "breed_class": "Русская псовая борзая - Стандартный - Кобели",
       "catalog_no": 4,
       "placement": 5,
-      "total_score": null,
+      "total_score": 12.67,
       "judge_count": 0,
       "qualification": "12.67 с13.81 м/с49.724 км/ч",
       "vc": "1",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 5,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 12.76,
+            "speed_kmh": 49.373,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 5,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 12.67,
+            "speed_kmh": 49.724,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 12.67,
+        "grand_total": 12.67
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">5</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">4</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">АЗАРТНАЯ ОХОТА ГРИДЕНЬ</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.67 с<br>13.81 м/с<br>49.724 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">5</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.76 с<br>13.71 м/с<br>49.373 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">5</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.67 с<br>13.81 м/с<br>49.724 км/ч</font></td> ",
       "judges": "",
@@ -840,16 +1277,36 @@
       "breed_class": "Русская псовая борзая - Стандартный - Суки",
       "catalog_no": 53,
       "placement": 5,
-      "total_score": null,
+      "total_score": 12.42,
       "judge_count": 0,
       "qualification": "13.13 с13.33 м/с47.982 км/ч",
       "vc": "1",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 8,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 12.42,
+            "speed_kmh": 50.725,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 4,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 13.13,
+            "speed_kmh": 47.982,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 12.42,
+        "grand_total": 12.42
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">5</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">53</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">СИМПЛЕ ОБСЕССИОН ЧАПТЕР ОФ МАЙ ЛАЙФ /<br>SIMPLE OBSESSION CHAPTER OF MY LIFE</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.42 с<br>14.09 м/с<br>50.725 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">8</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.42 с<br>14.09 м/с<br>50.725 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">4</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.13 с<br>13.33 м/с<br>47.982 км/ч</font></td> ",
       "judges": "",
@@ -872,16 +1329,36 @@
       "breed_class": "Русская псовая борзая - Стандартный - Кобели",
       "catalog_no": 13,
       "placement": 6,
-      "total_score": null,
+      "total_score": 12.99,
       "judge_count": 0,
       "qualification": "15.47 с11.31 м/с40.724 км/ч",
       "vc": "1",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 16,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 12.99,
+            "speed_kmh": 48.499,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 10,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 15.47,
+            "speed_kmh": 40.724,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 12.99,
+        "grand_total": 12.99
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">6</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ЛУННАЯ РАДУГА ЦАРСКИЙ ЧЕРВОНЕЦ</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.99 с<br>13.47 м/с<br>48.499 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.99 с<br>13.47 м/с<br>48.499 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">10</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15.47 с<br>11.31 м/с<br>40.724 км/ч</font></td> ",
       "judges": "",
@@ -904,16 +1381,27 @@
       "breed_class": "Русская псовая борзая - Стандартный - Суки",
       "catalog_no": 61,
       "placement": 6,
-      "total_score": null,
+      "total_score": 12.42,
       "judge_count": 0,
       "qualification": "",
       "vc": "",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 35,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 12.42,
+            "speed_kmh": 50.725,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 12.42,
+        "grand_total": 12.42
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">6</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">61</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ВАСАРТ БЛЕСТКА</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.42 с<br>14.09 м/с<br>50.725 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">35</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.42 с<br>14.09 м/с<br>50.725 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
       "judges": "",
@@ -936,16 +1424,36 @@
       "breed_class": "Русская псовая борзая - Стандартный - Кобели",
       "catalog_no": 7,
       "placement": 7,
-      "total_score": null,
+      "total_score": 13.2,
       "judge_count": 0,
       "qualification": "13.20 с13.26 м/с47.727 км/ч",
       "vc": "2",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 40,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 13.46,
+            "speed_kmh": 46.805,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 30,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 13.2,
+            "speed_kmh": 47.727,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 13.2,
+        "grand_total": 13.2
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">7</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">7</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БОРЗЫЕ-СЕНАВИАН ГОРНОСТАЙ</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.20 с<br>13.26 м/с<br>47.727 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">40</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.46 с<br>13.00 м/с<br>46.805 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">30</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.20 с<br>13.26 м/с<br>47.727 км/ч</font></td> ",
       "judges": "",
@@ -968,16 +1476,36 @@
       "breed_class": "Русская псовая борзая - Стандартный - Суки",
       "catalog_no": 45,
       "placement": 7,
-      "total_score": null,
+      "total_score": 12.65,
       "judge_count": 0,
       "qualification": "Сошла",
       "vc": "1",
       "status": "disqualified",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 9,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 12.65,
+            "speed_kmh": 49.802,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 1,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Сошла"
+          }
+        ],
+        "best_time": 12.65,
+        "grand_total": 12.65
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">7</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">45</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ЛУННАЯ РАДУГА РОССИЯ /<br>LUNNAJA RADUGA ROSSIYA</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.65 с<br>13.83 м/с<br>49.802 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">9</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.65 с<br>13.83 м/с<br>49.802 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сошла</font></td> ",
       "judges": "",
@@ -1000,16 +1528,36 @@
       "breed_class": "Русская псовая борзая - Стандартный - Кобели",
       "catalog_no": 19,
       "placement": 8,
-      "total_score": null,
+      "total_score": 13.29,
       "judge_count": 0,
       "qualification": "13.69 с12.78 м/с46.019 км/ч",
       "vc": "1",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 30,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 13.29,
+            "speed_kmh": 47.404,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 19,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 13.69,
+            "speed_kmh": 46.019,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 13.29,
+        "grand_total": 13.29
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">8</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">19</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ТРУБЕЦКОВЪ ЗЛАТ ФЕНИКС</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.29 с<br>13.17 м/с<br>47.404 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">30</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.29 с<br>13.17 м/с<br>47.404 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">19</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.69 с<br>12.78 м/с<br>46.019 км/ч</font></td> ",
       "judges": "",
@@ -1032,16 +1580,36 @@
       "breed_class": "Русская псовая борзая - Стандартный - Суки",
       "catalog_no": 60,
       "placement": 8,
-      "total_score": null,
+      "total_score": 12.79,
       "judge_count": 0,
       "qualification": "12.79 с13.68 м/с49.257 км/ч",
       "vc": "2",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 27,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 13.19,
+            "speed_kmh": 47.763,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 15,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 12.79,
+            "speed_kmh": 49.257,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 12.79,
+        "grand_total": 12.79
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">8</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">60</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ТРУБЕЦКОВЪ ЗАРНИЦА</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.79 с<br>13.68 м/с<br>49.257 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">27</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.19 с<br>13.27 м/с<br>47.763 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.79 с<br>13.68 м/с<br>49.257 км/ч</font></td> ",
       "judges": "",
@@ -1064,16 +1632,36 @@
       "breed_class": "Русская псовая борзая - Стандартный - Кобели",
       "catalog_no": 20,
       "placement": 9,
-      "total_score": null,
+      "total_score": 13.44,
       "judge_count": 0,
       "qualification": "13.44 с13.02 м/с46.875 км/ч",
       "vc": "1",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 34,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 13.71,
+            "speed_kmh": 45.952,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 22,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 13.44,
+            "speed_kmh": 46.875,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 13.44,
+        "grand_total": 13.44
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">9</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">20</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ВАСАРТ ГУМИЛЕВ /<br>VASART GUMILEV</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.44 с<br>13.02 м/с<br>46.875 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">34</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.71 с<br>12.76 м/с<br>45.952 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">22</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.44 с<br>13.02 м/с<br>46.875 км/ч</font></td> ",
       "judges": "",
@@ -1096,16 +1684,36 @@
       "breed_class": "Русская псовая борзая - Стандартный - Суки",
       "catalog_no": 30,
       "placement": 9,
-      "total_score": null,
+      "total_score": 12.82,
       "judge_count": 0,
       "qualification": "Сошла",
       "vc": "2",
       "status": "disqualified",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 39,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 12.82,
+            "speed_kmh": 49.142,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 29,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Сошла"
+          }
+        ],
+        "best_time": 12.82,
+        "grand_total": 12.82
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">9</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">30</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БОРЗЫЕ-СЕНАВИАН БАРРАКУДА /<br>BORZIE-SENAVIAN BARRAKUDA</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.82 с<br>13.65 м/с<br>49.142 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">39</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.82 с<br>13.65 м/с<br>49.142 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">29</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сошла</font></td> ",
       "judges": "",
@@ -1128,16 +1736,27 @@
       "breed_class": "Русская псовая борзая - Стандартный - Кобели",
       "catalog_no": 12,
       "placement": 10,
-      "total_score": null,
+      "total_score": 13.47,
       "judge_count": 0,
       "qualification": "",
       "vc": "",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 23,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 13.47,
+            "speed_kmh": 46.771,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 13.47,
+        "grand_total": 13.47
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">10</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">KONZA LYTHE DOT COM</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.47 с<br>12.99 м/с<br>46.771 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">23</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.47 с<br>12.99 м/с<br>46.771 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
       "judges": "",
@@ -1160,16 +1779,36 @@
       "breed_class": "Русская псовая борзая - Стандартный - Суки",
       "catalog_no": 36,
       "placement": 10,
-      "total_score": null,
+      "total_score": 12.9,
       "judge_count": 0,
       "qualification": "Сошла",
       "vc": "2",
       "status": "disqualified",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 28,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 12.9,
+            "speed_kmh": 48.837,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 16,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Сошла"
+          }
+        ],
+        "best_time": 12.9,
+        "grand_total": 12.9
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">10</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">36</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ДЕРЗА-2</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.90 с<br>13.57 м/с<br>48.837 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">28</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.90 с<br>13.57 м/с<br>48.837 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сошла</font></td> ",
       "judges": "",
@@ -1192,16 +1831,36 @@
       "breed_class": "Русская псовая борзая - Стандартный - Кобели",
       "catalog_no": 9,
       "placement": 11,
-      "total_score": null,
+      "total_score": 13.85,
       "judge_count": 0,
       "qualification": "13.93 с12.56 м/с45.226 км/ч",
       "vc": "1",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 40,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 13.85,
+            "speed_kmh": 45.487,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 30,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 13.93,
+            "speed_kmh": 45.226,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 13.85,
+        "grand_total": 13.85
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">11</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">9</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БОРЗЫЕ-СЕНАВИАН ЦАГРИ</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.85 с<br>12.64 м/с<br>45.487 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">40</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.85 с<br>12.64 м/с<br>45.487 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">30</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.93 с<br>12.56 м/с<br>45.226 км/ч</font></td> ",
       "judges": "",
@@ -1224,16 +1883,36 @@
       "breed_class": "Русская псовая борзая - Стандартный - Суки",
       "catalog_no": 24,
       "placement": 11,
-      "total_score": null,
+      "total_score": 12.96,
       "judge_count": 0,
       "qualification": "12.96 с13.50 м/с48.611 км/ч",
       "vc": "1",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 2,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 12.97,
+            "speed_kmh": 48.574,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 3,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 12.96,
+            "speed_kmh": 48.611,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 12.96,
+        "grand_total": 12.96
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">11</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">24</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">АЗАРТНАЯ ОХОТА ДЕРЖАВА</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.96 с<br>13.50 м/с<br>48.611 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.97 с<br>13.49 м/с<br>48.574 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.96 с<br>13.50 м/с<br>48.611 км/ч</font></td> ",
       "judges": "",
@@ -1256,16 +1935,27 @@
       "breed_class": "Русская псовая борзая - Стандартный - Кобели",
       "catalog_no": 15,
       "placement": 12,
-      "total_score": null,
+      "total_score": 14.4,
       "judge_count": 0,
       "qualification": "",
       "vc": "",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 35,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 14.4,
+            "speed_kmh": 43.75,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 14.4,
+        "grand_total": 14.4
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">СОКОЛ&amp;K ФАНДОРИН</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14.40 с<br>12.15 м/с<br>43.750 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">35</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14.40 с<br>12.15 м/с<br>43.750 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
       "judges": "",
@@ -1288,16 +1978,36 @@
       "breed_class": "Русская псовая борзая - Стандартный - Суки",
       "catalog_no": 21,
       "placement": 12,
-      "total_score": null,
+      "total_score": 12.96,
       "judge_count": 0,
       "qualification": "13.01 с13.45 м/с48.424 км/ч",
       "vc": "2",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 12.96,
+            "speed_kmh": 48.611,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 8,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 13.01,
+            "speed_kmh": 48.424,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 12.96,
+        "grand_total": 12.96
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">21</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">АПРИОРИ ЛУКСУРИ ФОКСХАНТЕР /<br>APRIORI LUXURY FOKSKHANTER</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.96 с<br>13.50 м/с<br>48.611 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12.96 с<br>13.50 м/с<br>48.611 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">8</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.01 с<br>13.45 м/с<br>48.424 км/ч</font></td> ",
       "judges": "",
@@ -1320,16 +2030,36 @@
       "breed_class": "Русская псовая борзая - Стандартный - Кобели",
       "catalog_no": 2,
       "placement": 13,
-      "total_score": null,
+      "total_score": 14.54,
       "judge_count": 0,
       "qualification": "14.54 с12.04 м/с43.329 км/ч",
       "vc": "1",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 3,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Нет времени"
+          },
+          {
+            "heat_number": 8,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 14.54,
+            "speed_kmh": 43.329,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 14.54,
+        "grand_total": 14.54
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">АПРИОРИ ЛУКСУРИ МАСТЕР /<br>APRIORI LUXURY MASTER</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14.54 с<br>12.04 м/с<br>43.329 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Нет времени</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">8</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14.54 с<br>12.04 м/с<br>43.329 км/ч</font></td> ",
       "judges": "",
@@ -1352,16 +2082,36 @@
       "breed_class": "Русская псовая борзая - Стандартный - Суки",
       "catalog_no": 34,
       "placement": 13,
-      "total_score": null,
+      "total_score": 13.04,
       "judge_count": 0,
       "qualification": "Сошла",
       "vc": "1",
       "status": "disqualified",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 28,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 13.04,
+            "speed_kmh": 48.313,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 16,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Сошла"
+          }
+        ],
+        "best_time": 13.04,
+        "grand_total": 13.04
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">34</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БЫСТРА</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.04 с<br>13.42 м/с<br>48.313 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">28</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.04 с<br>13.42 м/с<br>48.313 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сошла</font></td> ",
       "judges": "",
@@ -1384,16 +2134,27 @@
       "breed_class": "Русская псовая борзая - Стандартный - Кобели",
       "catalog_no": 3,
       "placement": 14,
-      "total_score": null,
+      "total_score": 18.63,
       "judge_count": 0,
       "qualification": "",
       "vc": "",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 7,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 18.63,
+            "speed_kmh": 33.816,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 18.63,
+        "grand_total": 18.63
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">АЗАРТНАЯ ОХОТА БАРГУЗИН /<br>AZARTNAYA OKHOTA BARGUZIN</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18.63 с<br>9.39 м/с<br>33.816 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">7</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18.63 с<br>9.39 м/с<br>33.816 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
       "judges": "",
@@ -1416,16 +2177,36 @@
       "breed_class": "Русская псовая борзая - Стандартный - Суки",
       "catalog_no": 33,
       "placement": 14,
-      "total_score": null,
+      "total_score": 13.05,
       "judge_count": 0,
       "qualification": "13.05 с13.41 м/с48.276 км/ч",
       "vc": "1",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 26,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 13.97,
+            "speed_kmh": 45.097,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 14,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 13.05,
+            "speed_kmh": 48.276,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 13.05,
+        "grand_total": 13.05
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">33</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БУЗИНА</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.05 с<br>13.41 м/с<br>48.276 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">26</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.97 с<br>12.53 м/с<br>45.097 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.05 с<br>13.41 м/с<br>48.276 км/ч</font></td> ",
       "judges": "",
@@ -1448,16 +2229,36 @@
       "breed_class": "Русская псовая борзая - Стандартный - Кобели",
       "catalog_no": 14,
       "placement": 15,
-      "total_score": null,
+      "total_score": 23.52,
       "judge_count": 0,
       "qualification": "23.52 с7.44 м/с26.786 км/ч",
       "vc": "1",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 21,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Не прошёл фотофиниш"
+          },
+          {
+            "heat_number": 13,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 23.52,
+            "speed_kmh": 26.786,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 23.52,
+        "grand_total": 23.52
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">САФИАН МЕТЕЛЬ АВГУСТА ИЗ ЛЕТНИХ ГРЕЗ</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">23.52 с<br>7.44 м/с<br>26.786 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">21</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Не прошёл фотофиниш</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">23.52 с<br>7.44 м/с<br>26.786 км/ч</font></td> ",
       "judges": "",
@@ -1480,16 +2281,36 @@
       "breed_class": "Русская псовая борзая - Стандартный - Суки",
       "catalog_no": 35,
       "placement": 15,
-      "total_score": null,
+      "total_score": 13.07,
       "judge_count": 0,
       "qualification": "Сошла",
       "vc": "2",
       "status": "disqualified",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 17,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 13.07,
+            "speed_kmh": 48.202,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 23,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Сошла"
+          }
+        ],
+        "best_time": 13.07,
+        "grand_total": 13.07
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">35</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БЫСТРИНА /<br>BYSTRINA</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.07 с<br>13.39 м/с<br>48.202 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.07 с<br>13.39 м/с<br>48.202 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">23</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сошла</font></td> ",
       "judges": "",
@@ -1512,16 +2333,27 @@
       "breed_class": "Русская псовая борзая - Стандартный - Суки",
       "catalog_no": 39,
       "placement": 16,
-      "total_score": null,
+      "total_score": 13.11,
       "judge_count": 0,
       "qualification": "",
       "vc": "",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 11,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 13.11,
+            "speed_kmh": 48.055,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 13.11,
+        "grand_total": 13.11
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">39</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ЕЕ ВЕЛИЧЕСТВО УДАЧА</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.11 с<br>13.35 м/с<br>48.055 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">11</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.11 с<br>13.35 м/с<br>48.055 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
       "judges": "",
@@ -1544,16 +2376,36 @@
       "breed_class": "Русская псовая борзая - Стандартный - Суки",
       "catalog_no": 29,
       "placement": 17,
-      "total_score": null,
+      "total_score": 13.16,
       "judge_count": 0,
       "qualification": "13.16 с13.30 м/с47.872 км/ч",
       "vc": "1",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 38,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 13.4,
+            "speed_kmh": 47.015,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 28,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 13.16,
+            "speed_kmh": 47.872,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 13.16,
+        "grand_total": 13.16
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">29</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БОРЗЫЕ-СЕНАВИАН АНАКОНДА</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.16 с<br>13.30 м/с<br>47.872 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">38</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.40 с<br>13.06 м/с<br>47.015 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">28</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.16 с<br>13.30 м/с<br>47.872 км/ч</font></td> ",
       "judges": "",
@@ -1576,16 +2428,36 @@
       "breed_class": "Русская псовая борзая - Стандартный - Суки",
       "catalog_no": 40,
       "placement": 18,
-      "total_score": null,
+      "total_score": 13.25,
       "judge_count": 0,
       "qualification": "13.34 с13.12 м/с47.226 км/ч",
       "vc": "1",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 15,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 13.25,
+            "speed_kmh": 47.547,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 18,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 13.34,
+            "speed_kmh": 47.226,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 13.25,
+        "grand_total": 13.25
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">40</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ФАЙЗА /<br>FAJZA</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.25 с<br>13.21 м/с<br>47.547 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.25 с<br>13.21 м/с<br>47.547 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.34 с<br>13.12 м/с<br>47.226 км/ч</font></td> ",
       "judges": "",
@@ -1608,16 +2480,36 @@
       "breed_class": "Русская псовая борзая - Стандартный - Суки",
       "catalog_no": 47,
       "placement": 19,
-      "total_score": null,
+      "total_score": 13.41,
       "judge_count": 0,
       "qualification": "13.41 с13.05 м/с46.980 км/ч",
       "vc": "2",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 18,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 15.88,
+            "speed_kmh": 39.673,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 12,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 13.41,
+            "speed_kmh": 46.98,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 13.41,
+        "grand_total": 13.41
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">19</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">47</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ЛУННАЯ РАДУГА ЦАРСКАЯ ВОДКА</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.41 с<br>13.05 м/с<br>46.980 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15.88 с<br>11.02 м/с<br>39.673 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.41 с<br>13.05 м/с<br>46.980 км/ч</font></td> ",
       "judges": "",
@@ -1640,16 +2532,36 @@
       "breed_class": "Русская псовая борзая - Стандартный - Суки",
       "catalog_no": 31,
       "placement": 20,
-      "total_score": null,
+      "total_score": 13.5,
       "judge_count": 0,
       "qualification": "13.66 с12.81 м/с46.120 км/ч",
       "vc": "1",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 41,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 13.5,
+            "speed_kmh": 46.667,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 31,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 13.66,
+            "speed_kmh": 46.12,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 13.5,
+        "grand_total": 13.5
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">20</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">31</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БОРЗЫЕ-СЕНАВИАН ЦАРИНА /<br>BORZIE-SENAVIAN CARINA</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.50 с<br>12.96 м/с<br>46.667 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">41</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.50 с<br>12.96 м/с<br>46.667 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">31</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.66 с<br>12.81 м/с<br>46.120 км/ч</font></td> ",
       "judges": "",
@@ -1672,16 +2584,27 @@
       "breed_class": "Русская псовая борзая - Стандартный - Суки",
       "catalog_no": 22,
       "placement": 21,
-      "total_score": null,
+      "total_score": 13.52,
       "judge_count": 0,
       "qualification": "",
       "vc": "",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 13.52,
+            "speed_kmh": 46.598,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 13.52,
+        "grand_total": 13.52
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">21</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">22</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">АПРИОРИ ЛУКСУРИ СОЛОВУШКА</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.52 с<br>12.94 м/с<br>46.598 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.52 с<br>12.94 м/с<br>46.598 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
       "judges": "",
@@ -1704,16 +2627,27 @@
       "breed_class": "Русская псовая борзая - Стандартный - Суки",
       "catalog_no": 28,
       "placement": 22,
-      "total_score": null,
+      "total_score": 13.54,
       "judge_count": 0,
       "qualification": "",
       "vc": "",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 17,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 13.54,
+            "speed_kmh": 46.529,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 13.54,
+        "grand_total": 13.54
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">22</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">28</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БЕРЕГИНЯ /<br>BEREGINYA</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.54 с<br>12.92 м/с<br>46.529 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.54 с<br>12.92 м/с<br>46.529 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
       "judges": "",
@@ -1736,16 +2670,27 @@
       "breed_class": "Русская псовая борзая - Стандартный - Суки",
       "catalog_no": 49,
       "placement": 23,
-      "total_score": null,
+      "total_score": 13.56,
       "judge_count": 0,
       "qualification": "",
       "vc": "",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 12,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 13.56,
+            "speed_kmh": 46.46,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 13.56,
+        "grand_total": 13.56
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">23</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">49</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ОБЕРЕГ РУСИ БЕГУЩАЯ ПО ВОЛНАМ /<br>OBEREG RUSI BEGUSCHAYA PO VOLNAM</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.56 с<br>12.91 м/с<br>46.460 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12</font></td> <td bgcolor=\"#ffffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.56 с<br>12.91 м/с<br>46.460 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
       "judges": "",
@@ -1768,16 +2713,36 @@
       "breed_class": "Русская псовая борзая - Стандартный - Суки",
       "catalog_no": 23,
       "placement": 24,
-      "total_score": null,
+      "total_score": 13.76,
       "judge_count": 0,
       "qualification": "13.76 с12.72 м/с45.785 км/ч",
       "vc": "1",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 36,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 14.03,
+            "speed_kmh": 44.904,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 11,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 13.76,
+            "speed_kmh": 45.785,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 13.76,
+        "grand_total": 13.76
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">24</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">23</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">АВАНТЮРА ИЗ ДИНАСТИИ ЗОЛОТЬКО</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.76 с<br>12.72 м/с<br>45.785 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">36</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14.03 с<br>12.47 м/с<br>44.904 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">11</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.76 с<br>12.72 м/с<br>45.785 км/ч</font></td> ",
       "judges": "",
@@ -1800,16 +2765,36 @@
       "breed_class": "Русская псовая борзая - Стандартный - Суки",
       "catalog_no": 27,
       "placement": 25,
-      "total_score": null,
+      "total_score": 13.82,
       "judge_count": 0,
       "qualification": "Фальстарт",
       "vc": "2",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 26,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 13.82,
+            "speed_kmh": 45.586,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 14,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Фальстарт"
+          }
+        ],
+        "best_time": 13.82,
+        "grand_total": 13.82
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">25</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">27</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БЕЛАЯ СТЕПЬ</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.82 с<br>12.66 м/с<br>45.586 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">26</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.82 с<br>12.66 м/с<br>45.586 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Фальстарт</font></td> ",
       "judges": "",
@@ -1832,16 +2817,36 @@
       "breed_class": "Русская псовая борзая - Стандартный - Суки",
       "catalog_no": 38,
       "placement": 26,
-      "total_score": null,
+      "total_score": 13.85,
       "judge_count": 0,
       "qualification": "15.60 с11.22 м/с40.385 км/ч",
       "vc": "3",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 26,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 13.85,
+            "speed_kmh": 45.487,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 14,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 15.6,
+            "speed_kmh": 40.385,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 13.85,
+        "grand_total": 13.85
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">26</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">38</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ДЖИВА</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.85 с<br>12.64 м/с<br>45.487 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">26</font></td> <td bgcolor=\"#ffffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.85 с<br>12.64 м/с<br>45.487 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td> <td bgcolor=\"#ffffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15.60 с<br>11.22 м/с<br>40.385 км/ч</font></td> ",
       "judges": "",
@@ -1864,16 +2869,27 @@
       "breed_class": "Русская псовая борзая - Стандартный - Суки",
       "catalog_no": 41,
       "placement": 27,
-      "total_score": null,
+      "total_score": 13.85,
       "judge_count": 0,
       "qualification": "",
       "vc": "",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 23,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 13.85,
+            "speed_kmh": 45.487,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 13.85,
+        "grand_total": 13.85
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">27</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">41</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">KONZA LYTHE DECLASSIFIED</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.85 с<br>12.64 м/с<br>45.487 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">23</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.85 с<br>12.64 м/с<br>45.487 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
       "judges": "",
@@ -1896,16 +2912,36 @@
       "breed_class": "Русская псовая борзая - Стандартный - Суки",
       "catalog_no": 57,
       "placement": 28,
-      "total_score": null,
+      "total_score": 13.98,
       "judge_count": 0,
       "qualification": "15.23 с11.49 м/с41.366 км/ч",
       "vc": "1",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 29,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 13.98,
+            "speed_kmh": 45.064,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 17,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 15.23,
+            "speed_kmh": 41.366,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 13.98,
+        "grand_total": 13.98
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">28</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">57</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ТРУБЕЦКОВЪ ЛИРА</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.98 с<br>12.52 м/с<br>45.064 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">29</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13.98 с<br>12.52 м/с<br>45.064 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15.23 с<br>11.49 м/с<br>41.366 км/ч</font></td> ",
       "judges": "",
@@ -1928,16 +2964,27 @@
       "breed_class": "Русская псовая борзая - Стандартный - Суки",
       "catalog_no": 56,
       "placement": 29,
-      "total_score": null,
+      "total_score": 14,
       "judge_count": 0,
       "qualification": "",
       "vc": "",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 14,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 14,
+            "speed_kmh": 45,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 14,
+        "grand_total": 14
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">29</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">56</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ТАМИР АНИ ПУСТЕЛЬГА</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14.00 с<br>12.50 м/с<br>45.000 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14.00 с<br>12.50 м/с<br>45.000 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
       "judges": "",
@@ -1960,16 +3007,27 @@
       "breed_class": "Русская псовая борзая - Стандартный - Суки",
       "catalog_no": 51,
       "placement": 30,
-      "total_score": null,
+      "total_score": 14.11,
       "judge_count": 0,
       "qualification": "",
       "vc": "",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 12,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 14.11,
+            "speed_kmh": 44.649,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 14.11,
+        "grand_total": 14.11
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">30</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">51</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ОБЕРЕГ РУСИ ВЕРНАЯ СЕРДЦЕМ /<br>OBEREG RUSI VERNAYA SERDCZEM</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14.11 с<br>12.40 м/с<br>44.649 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14.11 с<br>12.40 м/с<br>44.649 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
       "judges": "",
@@ -1992,16 +3050,36 @@
       "breed_class": "Русская псовая борзая - Стандартный - Суки",
       "catalog_no": 50,
       "placement": 31,
-      "total_score": null,
+      "total_score": 14.3,
       "judge_count": 0,
       "qualification": "14.30 с12.24 м/с44.056 км/ч",
       "vc": "1",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 13,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 25,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 14.3,
+            "speed_kmh": 44.056,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 14.3,
+        "grand_total": 14.3
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">31</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">50</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ОБЕРЕГ РУСИ ВЕДУНЬЯ /<br>OBEREG RUSI VEDUN'YA</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14.30 с<br>12.24 м/с<br>44.056 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Не прошла фотофиниш</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">25</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14.30 с<br>12.24 м/с<br>44.056 км/ч</font></td> ",
       "judges": "",
@@ -2024,16 +3102,36 @@
       "breed_class": "Русская псовая борзая - Стандартный - Суки",
       "catalog_no": 54,
       "placement": 32,
-      "total_score": null,
+      "total_score": 14.4,
       "judge_count": 0,
       "qualification": "Фальстарт",
       "vc": "1",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 4,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 14.4,
+            "speed_kmh": 43.75,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 27,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Фальстарт"
+          }
+        ],
+        "best_time": 14.4,
+        "grand_total": 14.4
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">32</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">54</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">СОКОЛКА</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14.40 с<br>12.15 м/с<br>43.750 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">4</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14.40 с<br>12.15 м/с<br>43.750 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">27</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Фальстарт</font></td> ",
       "judges": "",
@@ -2056,16 +3154,36 @@
       "breed_class": "Русская псовая борзая - Стандартный - Суки",
       "catalog_no": 58,
       "placement": 33,
-      "total_score": null,
+      "total_score": 14.48,
       "judge_count": 0,
       "qualification": "15.23 с11.49 м/с41.366 км/ч",
       "vc": "1",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 32,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 14.48,
+            "speed_kmh": 43.508,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 21,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 15.23,
+            "speed_kmh": 41.366,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 14.48,
+        "grand_total": 14.48
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">33</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">58</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ТРУБЕЦКОВЪ ЯНВАРСКАЯ ВЬЮГА</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14.48 с<br>12.09 м/с<br>43.508 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">32</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14.48 с<br>12.09 м/с<br>43.508 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">21</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15.23 с<br>11.49 м/с<br>41.366 км/ч</font></td> ",
       "judges": "",
@@ -2088,16 +3206,36 @@
       "breed_class": "Русская псовая борзая - Стандартный - Суки",
       "catalog_no": 63,
       "placement": 34,
-      "total_score": null,
+      "total_score": 14.55,
       "judge_count": 0,
       "qualification": "15.52 с11.28 м/с40.593 км/ч",
       "vc": "2",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 29,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 14.55,
+            "speed_kmh": 43.299,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 17,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 15.52,
+            "speed_kmh": 40.593,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 14.55,
+        "grand_total": 14.55
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">34</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">63</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ВЕСНА СЛАВНАЯ ДЛЯ ТРУБЕЦКОВЪ</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14.55 с<br>12.03 м/с<br>43.299 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">29</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14.55 с<br>12.03 м/с<br>43.299 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15.52 с<br>11.28 м/с<br>40.593 км/ч</font></td> ",
       "judges": "",
@@ -2120,16 +3258,36 @@
       "breed_class": "Русская псовая борзая - Стандартный - Суки",
       "catalog_no": 26,
       "placement": 35,
-      "total_score": null,
+      "total_score": 14.6,
       "judge_count": 0,
       "qualification": "14.60 с11.99 м/с43.151 км/ч",
       "vc": "2",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 20,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 14.68,
+            "speed_kmh": 42.916,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 20,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 14.6,
+            "speed_kmh": 43.151,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 14.6,
+        "grand_total": 14.6
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">35</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">26</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">АЗАРТНАЯ ОХОТА ГРЕЗА</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14.60 с<br>11.99 м/с<br>43.151 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">20</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14.68 с<br>11.92 м/с<br>42.916 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">20</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14.60 с<br>11.99 м/с<br>43.151 км/ч</font></td> ",
       "judges": "",
@@ -2152,16 +3310,36 @@
       "breed_class": "Русская псовая борзая - Стандартный - Суки",
       "catalog_no": 64,
       "placement": 36,
-      "total_score": null,
+      "total_score": 14.7,
       "judge_count": 0,
       "qualification": "15.28 с11.45 м/с41.230 км/ч",
       "vc": "1",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 22,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 14.7,
+            "speed_kmh": 42.857,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 6,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 15.28,
+            "speed_kmh": 41.23,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 14.7,
+        "grand_total": 14.7
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">36</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">64</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ВОРОЖЕЯ ИЗ РАЗДОЛЬЯ</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14.70 с<br>11.90 м/с<br>42.857 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">22</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14.70 с<br>11.90 м/с<br>42.857 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">6</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15.28 с<br>11.45 м/с<br>41.230 км/ч</font></td> ",
       "judges": "",
@@ -2184,16 +3362,36 @@
       "breed_class": "Русская псовая борзая - Стандартный - Суки",
       "catalog_no": 46,
       "placement": 37,
-      "total_score": null,
+      "total_score": 14.76,
       "judge_count": 0,
       "qualification": "15.43 с11.34 м/с40.830 км/ч",
       "vc": "2",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 20,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 14.76,
+            "speed_kmh": 42.683,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 10,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 15.43,
+            "speed_kmh": 40.83,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 14.76,
+        "grand_total": 14.76
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">37</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">46</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ЛУННАЯ РАДУГА ТАНГО В НОЧИ</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14.76 с<br>11.86 м/с<br>42.683 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">20</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14.76 с<br>11.86 м/с<br>42.683 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">10</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15.43 с<br>11.34 м/с<br>40.830 км/ч</font></td> ",
       "judges": "",
@@ -2216,16 +3414,36 @@
       "breed_class": "Русская псовая борзая - Стандартный - Суки",
       "catalog_no": 65,
       "placement": 38,
-      "total_score": null,
+      "total_score": 14.83,
       "judge_count": 0,
       "qualification": "Сошла",
       "vc": "2",
       "status": "disqualified",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 36,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 14.83,
+            "speed_kmh": 42.481,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 11,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Сошла"
+          }
+        ],
+        "best_time": 14.83,
+        "grand_total": 14.83
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">38</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">65</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ВОЗЛЮБА ИЗ РАЗДОЛЬЯ</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14.83 с<br>11.80 м/с<br>42.481 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">36</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14.83 с<br>11.80 м/с<br>42.481 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">11</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сошла</font></td> ",
       "judges": "",
@@ -2248,16 +3466,27 @@
       "breed_class": "Русская псовая борзая - Стандартный - Суки",
       "catalog_no": 55,
       "placement": 39,
-      "total_score": null,
+      "total_score": 15.05,
       "judge_count": 0,
       "qualification": "",
       "vc": "",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 25,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 15.05,
+            "speed_kmh": 41.86,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 15.05,
+        "grand_total": 15.05
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">39</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">55</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">СОЛОВЬЕВ ЛИНИЯ СУДЬБЫ /<br>SOLOVYEV LINIA SUDBY</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15.05 с<br>11.63 м/с<br>41.860 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">25</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15.05 с<br>11.63 м/с<br>41.860 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
       "judges": "",
@@ -2280,16 +3509,36 @@
       "breed_class": "Русская псовая борзая - Стандартный - Суки",
       "catalog_no": 59,
       "placement": 40,
-      "total_score": null,
+      "total_score": 15.42,
       "judge_count": 0,
       "qualification": "15.42 с11.35 м/с40.856 км/ч",
       "vc": "2",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 32,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 21,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 15.42,
+            "speed_kmh": 40.856,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 15.42,
+        "grand_total": 15.42
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">40</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">59</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ТРУБЕЦКОВЪ ЯРКАЯ РЯБИНКА</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15.42 с<br>11.35 м/с<br>40.856 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">32</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Не прошла фотофиниш</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">21</font></td> <td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15.42 с<br>11.35 м/с<br>40.856 км/ч</font></td> ",
       "judges": "",
@@ -2312,16 +3561,27 @@
       "breed_class": "Русская псовая борзая - Стандартный - Суки",
       "catalog_no": 37,
       "placement": 41,
-      "total_score": null,
+      "total_score": 16.4,
       "judge_count": 0,
       "qualification": "",
       "vc": "",
       "status": "unknown_status_check_raw_text",
       "raw_scores_json": {
-        "heats": [],
-        "grand_total": null,
-        "normalized_score": null,
-        "format": "racing"
+        "format": "racing",
+        "distance": 175,
+        "heats": [
+          {
+            "heat_number": 25,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 16.4,
+            "speed_kmh": 38.415,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 16.4,
+        "grand_total": 16.4
       },
       "raw_text": " <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">41</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">37</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">DONSKOI CARABOSSE</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">175</font></td> <td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16.40 с<br>10.67 м/с<br>38.415 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">25</font></td> <td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16.40 с<br>10.67 м/с<br>38.415 км/ч</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
       "judges": "",

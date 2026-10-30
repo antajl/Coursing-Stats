@@ -15,6 +15,7 @@ export const DISCIPLINE_OPTIONS = [
   { value: 'coursing', label: 'Курсинг' },
   { value: 'bzmp', label: 'БЗМП' },
   { value: 'racing', label: 'Бега' },
+  { value: 'other', label: 'Другие' },
 ] as const
 
 const LEGEND = [

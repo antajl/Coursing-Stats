@@ -19,6 +19,15 @@ export interface CalendarEvent {
   results_file?: string | null
 }
 
+export function getEventDiscipline(event: { event_type?: string | null; competition_kind?: string | null }): string {
+  if (event.event_type === 'other') return 'other';
+  const kind = (event.competition_kind || '').trim().toLowerCase();
+  if (kind === 'клубный чемпионат' || kind === 'дружественные забеги') {
+    return 'other';
+  }
+  return event.event_type || 'other';
+}
+
 export const DISCIPLINE_BORDER: Record<string, string> = {
   coursing: 'border-l-forest-300',
   bzmp: 'border-l-blue-500',

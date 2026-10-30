@@ -3,6 +3,7 @@ import {
   formatRowDateParts,
   getEventHeadline,
   getEventSubtitle,
+  getEventDiscipline,
   normalizeDisciplineLabel,
   parseRankLabelStructure,
   parseJudgeNames,
@@ -66,6 +67,14 @@ describe('calendar display utils', () => {
   it('handles judges as array without throwing', () => {
     expect(parseJudgeNames(['Орлова М.О.', 'Крылова Е.В.'])).toEqual(['Орлова М.О.', 'Крылова Е.В.'])
     expect(formatCompetitionJudgesWithRoles(['Орлова М.О.', 'Крылова Е.В.'])).toBe('Главный судья: Орлова М.О., судья: Крылова Е.В.')
+  })
+
+  it('maps club championships and friendly runs to other discipline', () => {
+    expect(getEventDiscipline({ event_type: 'coursing' })).toBe('coursing')
+    expect(getEventDiscipline({ event_type: 'racing' })).toBe('racing')
+    expect(getEventDiscipline({ event_type: 'other' })).toBe('other')
+    expect(getEventDiscipline({ event_type: 'racing', competition_kind: 'Клубный чемпионат' })).toBe('other')
+    expect(getEventDiscipline({ event_type: 'racing', competition_kind: 'Дружественные забеги' })).toBe('other')
   })
 
   it('handles null and undefined judges gracefully', () => {

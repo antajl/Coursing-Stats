@@ -4,6 +4,7 @@ import { normalizeProcoursingUrl } from '../../lib/procoursingLinks'
 import {
   type CalendarEvent,
   DISCIPLINE_BORDER,
+  getEventDiscipline,
   formatRowDateParts,
   getEventHeadline,
   isEventCancelled,
@@ -18,7 +19,7 @@ interface EventListRowProps {
 
 export default function EventListRow({ event }: EventListRowProps) {
   const important = isImportantCompetition(event.competition_kind)
-  const eventType = event.event_type || 'other'
+  const eventType = getEventDiscipline(event)
   const borderClass = DISCIPLINE_BORDER[eventType] || DISCIPLINE_BORDER.default
   const dateParts = formatRowDateParts(event.date_start, event.date_end)
   // Как на ShowCalendar: «4 апр.» / «26–27 апр.» (короткий месяц с точкой)

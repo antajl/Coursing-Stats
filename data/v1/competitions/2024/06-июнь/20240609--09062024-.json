@@ -43,13 +43,38 @@
       "name": "УРАЛ СПИРИТ САЛАМАНДР",
       "name_ru": "УРАЛ СПИРИТ САЛАМАНДР",
       "name_lat": "",
-      "total_score": null,
+      "total_score": 25.95,
       "judge_count": 1,
       "qualification": "",
       "vc": "",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[1,1,null,null,null],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":1,\"bib_color\":\"red\",\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "format": "racing",
+        "distance": 360,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 25.95,
+            "speed_kmh": 49.942,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 22,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 26.36,
+            "speed_kmh": 49.165,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 25.95,
+        "grand_total": 25.95
+      },
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">27</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Юниоры</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">УРАЛ СПИРИТ САЛАМАНДР</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td>\n<td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">25.95 с<br>13.87 м/с<br>49.942 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">22</font></td>\n<td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">26.36 с<br>13.66 м/с<br>49.165 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n",
       "judges": "Крылова Е.В.",
       "dog_id": 5656,
@@ -72,13 +97,47 @@
       "name": "ALPHAS LEGACY ALTAIR",
       "name_ru": "",
       "name_lat": "ALPHAS LEGACY ALTAIR",
-      "total_score": null,
+      "total_score": 23.77,
       "judge_count": 1,
-      "qualification": "ПЧРКФ РК",
-      "vc": "CC",
+      "qualification": "CC",
+      "vc": "ПЧРКФ РК",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[3,1,null,14,1],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":1,\"bib_color\":\"red\",\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "format": "racing",
+        "distance": 360,
+        "heats": [
+          {
+            "heat_number": 3,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 25.49,
+            "speed_kmh": 50.843,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 14,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 23.77,
+            "speed_kmh": 54.523,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 27,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 24.99,
+            "speed_kmh": 51.861,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 23.77,
+        "grand_total": 23.77
+      },
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный-спринтеры</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ALPHAS LEGACY ALTAIR</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></td>\n<td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">25.49 с<br>14.12 м/с<br>50.843 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td>\n<td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">23.77 с<br>15.15 м/с<br>54.523 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">27</font></td>\n<td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">24.99 с<br>14.41 м/с<br>51.861 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ПЧРКФ РК</font></td>\n",
       "judges": "Крылова Е.В.",
       "dog_id": 462,
@@ -99,13 +158,47 @@
       "name": "АСТИ ХОНЕЙ ДЖОЙ",
       "name_ru": "АСТИ ХОНЕЙ ДЖОЙ",
       "name_lat": "ASTI HONEY JOY",
-      "total_score": null,
+      "total_score": 25.55,
       "judge_count": 1,
-      "qualification": "",
+      "qualification": "CC",
       "vc": "CC",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[2,4,null,14,2],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":2,\"bib_color\":\"blue\",\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "format": "racing",
+        "distance": 360,
+        "heats": [
+          {
+            "heat_number": 2,
+            "bib_number": 4,
+            "bib_color": "black",
+            "time": 27.09,
+            "speed_kmh": 47.841,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 14,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 25.55,
+            "speed_kmh": 50.724,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 27,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 26.92,
+            "speed_kmh": 48.143,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 25.55,
+        "grand_total": 25.55
+      },
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный-спринтеры</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">АСТИ ХОНЕЙ ДЖОЙ /<br>ASTI HONEY JOY</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td>\n<td bgcolor=\"#000000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">4</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">27.09 с<br>13.29 м/с<br>47.841 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td>\n<td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">25.55 с<br>14.09 м/с<br>50.724 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">27</font></td>\n<td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">26.92 с<br>13.37 м/с<br>48.143 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n",
       "judges": "Крылова Е.В.",
       "dog_id": 9458,
@@ -128,13 +221,47 @@
       "name": "VARLOK YARKAYA MOLNIYA",
       "name_ru": "",
       "name_lat": "VARLOK YARKAYA MOLNIYA",
-      "total_score": null,
+      "total_score": 26.72,
       "judge_count": 1,
-      "qualification": "",
+      "qualification": "CC",
       "vc": "CC",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[2,3,null,15,2],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":4,\"bib_color\":\"black\",\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "format": "racing",
+        "distance": 360,
+        "heats": [
+          {
+            "heat_number": 2,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 26.99,
+            "speed_kmh": 48.018,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 15,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 26.72,
+            "speed_kmh": 48.503,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 27,
+            "bib_number": 4,
+            "bib_color": "black",
+            "time": 27.39,
+            "speed_kmh": 47.317,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 26.72,
+        "grand_total": 26.72
+      },
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">7</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный-спринтеры</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">VARLOK YARKAYA MOLNIYA</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td>\n<td bgcolor=\"#ffffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">26.99 с<br>13.34 м/с<br>48.018 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td>\n<td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">26.72 с<br>13.47 м/с<br>48.503 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">27</font></td>\n<td bgcolor=\"#000000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">4</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">27.39 с<br>13.14 м/с<br>47.317 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n",
       "judges": "Крылова Е.В.",
       "dog_id": 488,
@@ -155,13 +282,47 @@
       "name": "ЛАКШЕРИ ВИПП ОНИКС",
       "name_ru": "ЛАКШЕРИ ВИПП ОНИКС",
       "name_lat": "LUXURY WHIPP ONIKS",
-      "total_score": null,
+      "total_score": 25.98,
       "judge_count": 1,
-      "qualification": "",
+      "qualification": "CC",
       "vc": "CC",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[2,2,null,14,3],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":3,\"bib_color\":\"white\",\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "format": "racing",
+        "distance": 360,
+        "heats": [
+          {
+            "heat_number": 2,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 27.42,
+            "speed_kmh": 47.265,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 14,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 25.98,
+            "speed_kmh": 49.885,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 27,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 27.85,
+            "speed_kmh": 46.535,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 25.98,
+        "grand_total": 25.98
+      },
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">4</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">4</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный-спринтеры</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ЛАКШЕРИ ВИПП ОНИКС /<br>LUXURY WHIPP ONIKS</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td>\n<td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">27.42 с<br>13.13 м/с<br>47.265 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td>\n<td bgcolor=\"#ffffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">25.98 с<br>13.86 м/с<br>49.885 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">27</font></td>\n<td bgcolor=\"#ffffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">27.85 с<br>12.93 м/с<br>46.535 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n",
       "judges": "Крылова Е.В.",
       "dog_id": 463,
@@ -182,13 +343,38 @@
       "name": "ВАРВАР КОНАН БЕССТРАШНЫЙ",
       "name_ru": "ВАРВАР КОНАН БЕССТРАШНЫЙ",
       "name_lat": "VARVAR KONAN BESSTRASHNYI",
-      "total_score": null,
+      "total_score": 26.86,
       "judge_count": 1,
-      "qualification": "",
+      "qualification": "CC",
       "vc": "CC",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[3,2,null,15,1],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "format": "racing",
+        "distance": 360,
+        "heats": [
+          {
+            "heat_number": 3,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 26.86,
+            "speed_kmh": 48.25,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 15,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 27.23,
+            "speed_kmh": 47.595,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 26.86,
+        "grand_total": 26.86
+      },
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">5</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">8</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный-спринтеры</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ВАРВАР КОНАН БЕССТРАШНЫЙ /<br>VARVAR KONAN BESSTRASHNYI</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></td>\n<td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">26.86 с<br>13.40 м/с<br>48.250 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td>\n<td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">27.23 с<br>13.22 м/с<br>47.595 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n",
       "judges": "Крылова Е.В.",
       "dog_id": 5658,
@@ -209,13 +395,38 @@
       "name": "НАЙТ АНГЕЛ II",
       "name_ru": "НАЙТ АНГЕЛ II",
       "name_lat": "NIGHT ANGEL II",
-      "total_score": null,
+      "total_score": 28.7,
       "judge_count": 1,
-      "qualification": "",
+      "qualification": "CC",
       "vc": "CC",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[3,3,null,15,3],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "format": "racing",
+        "distance": 360,
+        "heats": [
+          {
+            "heat_number": 3,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 28.7,
+            "speed_kmh": 45.157,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 15,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 28.7,
+            "speed_kmh": 45.157,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 28.7,
+        "grand_total": 28.7
+      },
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">6</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">6</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный-спринтеры</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">НАЙТ АНГЕЛ II /<br>NIGHT ANGEL II</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></td>\n<td bgcolor=\"#ffffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">28.70 с<br>12.54 м/с<br>45.157 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td>\n<td bgcolor=\"#ffffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">28.70 с<br>12.54 м/с<br>45.157 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n",
       "judges": "Крылова Е.В.",
       "dog_id": 9608,
@@ -242,7 +453,23 @@
       "vc": "",
       "status": "disqualified",
       "status_reason": "вход в круг",
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[2,1,null,null,null],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "format": "racing",
+        "distance": 360,
+        "heats": [
+          {
+            "heat_number": 2,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Снят (вход в круг)"
+          }
+        ],
+        "best_time": null,
+        "grand_total": null
+      },
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">5</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный-спринтеры</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ЛАКШЕРИ ВИПП ОРИОН /<br>LUXURY WHIPP ORION</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td>\n<td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Снят (вход в круг)</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n",
       "judges": "Крылова Е.В.",
       "dog_id": 556,
@@ -263,13 +490,38 @@
       "name": "ЛАКШЕРИ ВИПП НЬЮ БЕЛЛЕ",
       "name_ru": "ЛАКШЕРИ ВИПП НЬЮ БЕЛЛЕ",
       "name_lat": "LUXURY WHIPP NEW BELLE",
-      "total_score": null,
+      "total_score": 27.12,
       "judge_count": 1,
-      "qualification": "ПЧРКФ РК",
-      "vc": "CC",
+      "qualification": "CC",
+      "vc": "ПЧРКФ РК",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[4,1,null,null,null],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":1,\"bib_color\":\"red\",\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "format": "racing",
+        "distance": 360,
+        "heats": [
+          {
+            "heat_number": 4,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 27.88,
+            "speed_kmh": 46.485,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 23,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 27.12,
+            "speed_kmh": 47.788,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 27.12,
+        "grand_total": 27.12
+      },
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">10</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный-спринтеры</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ЛАКШЕРИ ВИПП НЬЮ БЕЛЛЕ /<br>LUXURY WHIPP NEW BELLE</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">4</font></td>\n<td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">27.88 с<br>12.91 м/с<br>46.485 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">23</font></td>\n<td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">27.12 с<br>13.27 м/с<br>47.788 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ПЧРКФ РК</font></td>\n",
       "judges": "Крылова Е.В.",
       "dog_id": 249,
@@ -290,13 +542,38 @@
       "name": "ЛАКШЕРИ ВИПП ОМЕГА",
       "name_ru": "ЛАКШЕРИ ВИПП ОМЕГА",
       "name_lat": "LUXURY WHIPP OMEGA",
-      "total_score": null,
+      "total_score": 28.72,
       "judge_count": 1,
-      "qualification": "",
+      "qualification": "CC",
       "vc": "CC",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[4,3,null,null,null],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":2,\"bib_color\":\"blue\",\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "format": "racing",
+        "distance": 360,
+        "heats": [
+          {
+            "heat_number": 4,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 28.82,
+            "speed_kmh": 44.969,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 23,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 28.72,
+            "speed_kmh": 45.125,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 28.72,
+        "grand_total": 28.72
+      },
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">11</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный-спринтеры</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ЛАКШЕРИ ВИПП ОМЕГА /<br>LUXURY WHIPP OMEGA</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">4</font></td>\n<td bgcolor=\"#ffffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">28.82 с<br>12.49 м/с<br>44.969 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">23</font></td>\n<td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">28.72 с<br>12.53 м/с<br>45.125 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n",
       "judges": "Крылова Е.В.",
       "dog_id": 248,
@@ -317,13 +594,38 @@
       "name": "КУЛИКОВО ПОЛЕ ГОРДЕЯ",
       "name_ru": "КУЛИКОВО ПОЛЕ ГОРДЕЯ",
       "name_lat": "KULIKOVO POLE GORDEYA",
-      "total_score": null,
+      "total_score": 29.28,
       "judge_count": 1,
-      "qualification": "",
+      "qualification": "CC",
       "vc": "CC",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[4,2,null,null,null],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":3,\"bib_color\":\"white\",\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "format": "racing",
+        "distance": 360,
+        "heats": [
+          {
+            "heat_number": 4,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 29.37,
+            "speed_kmh": 44.127,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 23,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 29.28,
+            "speed_kmh": 44.262,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 29.28,
+        "grand_total": 29.28
+      },
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">9</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный-спринтеры</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">КУЛИКОВО ПОЛЕ ГОРДЕЯ /<br>KULIKOVO POLE GORDEYA</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">4</font></td>\n<td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">29.37 с<br>12.26 м/с<br>44.127 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">23</font></td>\n<td bgcolor=\"#ffffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">29.28 с<br>12.30 м/с<br>44.262 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n",
       "judges": "Крылова Е.В.",
       "dog_id": 9586,
@@ -344,13 +646,47 @@
       "name": "ЕАГЛЕ БЛАЦК",
       "name_ru": "ЕАГЛЕ БЛАЦК",
       "name_lat": "EAGLE BLACK",
-      "total_score": null,
+      "total_score": 25.21,
       "judge_count": 1,
-      "qualification": "ПЧРКФ РК",
-      "vc": "CC",
+      "qualification": "CC",
+      "vc": "ПЧРКФ РК",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[5,2,null,16,1],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":1,\"bib_color\":\"red\",\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "format": "racing",
+        "distance": 360,
+        "heats": [
+          {
+            "heat_number": 5,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 25.43,
+            "speed_kmh": 50.963,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 16,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 25.21,
+            "speed_kmh": 51.408,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 28,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 25.54,
+            "speed_kmh": 50.744,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 25.21,
+        "grand_total": 25.21
+      },
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ЕАГЛЕ БЛАЦК /<br>EAGLE BLACK</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">5</font></td>\n<td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">25.43 с<br>14.16 м/с<br>50.963 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">25.21 с<br>14.28 м/с<br>51.408 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">28</font></td>\n<td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">25.54 с<br>14.10 м/с<br>50.744 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ПЧРКФ РК</font></td>\n",
       "judges": "Крылова Е.В.",
       "dog_id": 255,
@@ -371,13 +707,47 @@
       "name": "СТАНГЕРС ЛАНД ЗАМИР",
       "name_ru": "СТАНГЕРС ЛАНД ЗАМИР",
       "name_lat": "STANGERS LAND ZAMIR",
-      "total_score": null,
+      "total_score": 25.65,
       "judge_count": 1,
-      "qualification": "",
+      "qualification": "CC",
       "vc": "CC",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[6,1,null,17,1],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":2,\"bib_color\":\"blue\",\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "format": "racing",
+        "distance": 360,
+        "heats": [
+          {
+            "heat_number": 6,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 26.19,
+            "speed_kmh": 49.485,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 17,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 25.65,
+            "speed_kmh": 50.526,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 28,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 26.12,
+            "speed_kmh": 49.617,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 25.65,
+        "grand_total": 25.65
+      },
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">СТАНГЕРС ЛАНД ЗАМИР /<br>STANGERS LAND ZAMIR</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">6</font></td>\n<td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">26.19 с<br>13.75 м/с<br>49.485 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">25.65 с<br>14.04 м/с<br>50.526 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">28</font></td>\n<td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">26.12 с<br>13.78 м/с<br>49.617 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n",
       "judges": "Крылова Е.В.",
       "dog_id": 5631,
@@ -398,13 +768,47 @@
       "name": "СТАНГЕРС ЛАНД ЗЛАТАН",
       "name_ru": "СТАНГЕРС ЛАНД ЗЛАТАН",
       "name_lat": "",
-      "total_score": null,
+      "total_score": 26.39,
       "judge_count": 1,
-      "qualification": "",
+      "qualification": "CC",
       "vc": "CC",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[5,3,null,16,2],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":3,\"bib_color\":\"white\",\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "format": "racing",
+        "distance": 360,
+        "heats": [
+          {
+            "heat_number": 5,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 26.82,
+            "speed_kmh": 48.322,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 16,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 26.54,
+            "speed_kmh": 48.832,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 28,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 26.39,
+            "speed_kmh": 49.11,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 26.39,
+        "grand_total": 26.39
+      },
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">СТАНГЕРС ЛАНД ЗЛАТАН</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">5</font></td>\n<td bgcolor=\"#ffffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">26.82 с<br>13.42 м/с<br>48.322 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">26.54 с<br>13.56 м/с<br>48.832 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">28</font></td>\n<td bgcolor=\"#ffffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">26.39 с<br>13.64 м/с<br>49.110 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n",
       "judges": "Крылова Е.В.",
       "dog_id": 6220,
@@ -427,13 +831,47 @@
       "name": "СТАНГЕРС ЛАНД ЗОРРО",
       "name_ru": "СТАНГЕРС ЛАНД ЗОРРО",
       "name_lat": "STANGERS LAND ZORRO",
-      "total_score": null,
+      "total_score": 26.73,
       "judge_count": 1,
-      "qualification": "",
+      "qualification": "CC",
       "vc": "CC",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[5,4,null,17,2],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":4,\"bib_color\":\"black\",\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "format": "racing",
+        "distance": 360,
+        "heats": [
+          {
+            "heat_number": 5,
+            "bib_number": 4,
+            "bib_color": "black",
+            "time": 26.73,
+            "speed_kmh": 48.485,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 17,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 26.78,
+            "speed_kmh": 48.394,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 28,
+            "bib_number": 4,
+            "bib_color": "black",
+            "time": 27.08,
+            "speed_kmh": 47.858,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 26.73,
+        "grand_total": 26.73
+      },
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">4</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">СТАНГЕРС ЛАНД ЗОРРО /<br>STANGERS LAND ZORRO</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">5</font></td>\n<td bgcolor=\"#000000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">4</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">26.73 с<br>13.47 м/с<br>48.485 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">26.78 с<br>13.44 м/с<br>48.394 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">28</font></td>\n<td bgcolor=\"#000000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">4</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">27.08 с<br>13.29 м/с<br>47.858 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n",
       "judges": "Крылова Е.В.",
       "dog_id": 9462,
@@ -454,13 +892,38 @@
       "name": "ЮВЕНТУС СКОРЫЙ",
       "name_ru": "ЮВЕНТУС СКОРЫЙ",
       "name_lat": "YUVENTUS SKORYJ",
-      "total_score": null,
+      "total_score": 27.37,
       "judge_count": 1,
-      "qualification": "",
+      "qualification": "CC",
       "vc": "CC",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[5,1,null,16,3],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "format": "racing",
+        "distance": 360,
+        "heats": [
+          {
+            "heat_number": 5,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 27.37,
+            "speed_kmh": 47.351,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 16,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 27.72,
+            "speed_kmh": 46.753,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 27.37,
+        "grand_total": 27.37
+      },
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">5</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ЮВЕНТУС СКОРЫЙ /<br>YUVENTUS SKORYJ</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">5</font></td>\n<td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">27.37 с<br>13.15 м/с<br>47.351 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td bgcolor=\"#ffffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">27.72 с<br>12.99 м/с<br>46.753 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n",
       "judges": "Крылова Е.В.",
       "dog_id": 5633,
@@ -481,13 +944,38 @@
       "name": "ЧАК ЧАК ИЗ ДОМА ПРОНИНЫХ",
       "name_ru": "ЧАК ЧАК ИЗ ДОМА ПРОНИНЫХ",
       "name_lat": "CHAK CHAK IZ DOMA PRONINYKH",
-      "total_score": null,
+      "total_score": 27.65,
       "judge_count": 1,
-      "qualification": "",
+      "qualification": "CC",
       "vc": "CC",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[6,3,null,17,3],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "format": "racing",
+        "distance": 360,
+        "heats": [
+          {
+            "heat_number": 6,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 27.97,
+            "speed_kmh": 46.335,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 17,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 27.65,
+            "speed_kmh": 46.872,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 27.65,
+        "grand_total": 27.65
+      },
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">6</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ЧАК ЧАК ИЗ ДОМА ПРОНИНЫХ /<br>CHAK CHAK IZ DOMA PRONINYKH</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">6</font></td>\n<td bgcolor=\"#ffffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">27.97 с<br>12.87 м/с<br>46.335 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td bgcolor=\"#ffffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">27.65 с<br>13.02 м/с<br>46.872 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n",
       "judges": "Крылова Е.В.",
       "dog_id": 9587,
@@ -514,7 +1002,23 @@
       "vc": "",
       "status": "disqualified",
       "status_reason": "вход в круг",
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[6,2,null,null,null],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "format": "racing",
+        "distance": 360,
+        "heats": [
+          {
+            "heat_number": 6,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Снят (вход в круг)"
+          }
+        ],
+        "best_time": null,
+        "grand_total": null
+      },
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ЮНИОН СВЕТЛЫЙ /<br>YUNION SVETLYJ</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">6</font></td>\n<td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Снят (вход в круг)</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n",
       "judges": "Крылова Е.В.",
       "dog_id": 5635,
@@ -535,13 +1039,47 @@
       "name": "MY WILD ON THE GO",
       "name_ru": "",
       "name_lat": "MY WILD ON THE GO",
-      "total_score": null,
+      "total_score": 25.55,
       "judge_count": 1,
-      "qualification": "ПЧРКФ РК",
-      "vc": "CC",
+      "qualification": "CC",
+      "vc": "ПЧРКФ РК",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[7,3,null,19,1],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":1,\"bib_color\":\"red\",\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "format": "racing",
+        "distance": 360,
+        "heats": [
+          {
+            "heat_number": 7,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 27.31,
+            "speed_kmh": 47.455,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 19,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 25.55,
+            "speed_kmh": 50.724,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 29,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 25.91,
+            "speed_kmh": 50.019,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 25.55,
+        "grand_total": 25.55
+      },
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">24</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">MY WILD ON THE GO</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">7</font></td>\n<td bgcolor=\"#ffffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">27.31 с<br>13.18 м/с<br>47.455 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">19</font></td>\n<td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">25.55 с<br>14.09 м/с<br>50.724 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">29</font></td>\n<td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">25.91 с<br>13.89 м/с<br>50.019 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ПЧРКФ РК</font></td>\n",
       "judges": "Крылова Е.В.",
       "dog_id": 245,
@@ -562,13 +1100,47 @@
       "name": "ЛАКШЕРИ ВИПП ПРИНЦЕССА ОФ ЗЕ ИВИНИНГ СТАР",
       "name_ru": "ЛАКШЕРИ ВИПП ПРИНЦЕССА ОФ ЗЕ ИВИНИНГ СТАР",
       "name_lat": "LUXURY WHIPP PRINCESS OF THE EVENING STARS",
-      "total_score": null,
+      "total_score": 27.33,
       "judge_count": 1,
-      "qualification": "",
+      "qualification": "CC",
       "vc": "CC",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[8,4,null,19,4],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":3,\"bib_color\":\"white\",\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "format": "racing",
+        "distance": 360,
+        "heats": [
+          {
+            "heat_number": 8,
+            "bib_number": 4,
+            "bib_color": "black",
+            "time": 28.59,
+            "speed_kmh": 45.331,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 19,
+            "bib_number": 4,
+            "bib_color": "black",
+            "time": 27.33,
+            "speed_kmh": 47.42,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 29,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 27.61,
+            "speed_kmh": 46.94,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 27.33,
+        "grand_total": 27.33
+      },
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">22</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ЛАКШЕРИ ВИПП ПРИНЦЕССА ОФ ЗЕ ИВИНИНГ СТАР /<br>LUXURY WHIPP PRINCESS OF THE EVENING STARS</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">8</font></td>\n<td bgcolor=\"#000000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">4</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">28.59 с<br>12.59 м/с<br>45.331 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">19</font></td>\n<td bgcolor=\"#000000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">4</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">27.33 с<br>13.17 м/с<br>47.420 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">29</font></td>\n<td bgcolor=\"#ffffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">27.61 с<br>13.04 м/с<br>46.940 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n",
       "judges": "Крылова Е.В.",
       "dog_id": 9348,
@@ -589,13 +1161,47 @@
       "name": "ДЕЙТОНА МИСТИК ДРАЙВ",
       "name_ru": "ДЕЙТОНА МИСТИК ДРАЙВ",
       "name_lat": "DAYTONA MYSTIC DRIVE",
-      "total_score": null,
+      "total_score": 27.44,
       "judge_count": 1,
-      "qualification": "",
+      "qualification": "CC",
       "vc": "CC",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[7,4,null,19,3],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":4,\"bib_color\":\"black\",\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "format": "racing",
+        "distance": 360,
+        "heats": [
+          {
+            "heat_number": 7,
+            "bib_number": 4,
+            "bib_color": "black",
+            "time": 28.36,
+            "speed_kmh": 45.698,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 19,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 27.44,
+            "speed_kmh": 47.23,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 29,
+            "bib_number": 4,
+            "bib_color": "black",
+            "time": 27.64,
+            "speed_kmh": 46.889,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 27.44,
+        "grand_total": 27.44
+      },
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">19</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ДЕЙТОНА МИСТИК ДРАЙВ /<br>DAYTONA MYSTIC DRIVE</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">7</font></td>\n<td bgcolor=\"#000000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">4</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">28.36 с<br>12.69 м/с<br>45.698 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">19</font></td>\n<td bgcolor=\"#ffffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">27.44 с<br>13.12 м/с<br>47.230 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">29</font></td>\n<td bgcolor=\"#000000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">4</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">27.64 с<br>13.02 м/с<br>46.889 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n",
       "judges": "Крылова Е.В.",
       "dog_id": 9338,
@@ -616,13 +1222,47 @@
       "name": "МИСТРЕСС ОФ КОППЕР ХИЛЛ",
       "name_ru": "МИСТРЕСС ОФ КОППЕР ХИЛЛ",
       "name_lat": "MISTRESS OF COPPER HILL",
-      "total_score": null,
+      "total_score": 26.65,
       "judge_count": 1,
       "qualification": "",
       "vc": "",
       "status": "disqualified",
       "status_reason": "вход в круг",
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[8,3,null,18,1],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":2,\"bib_color\":\"blue\",\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "format": "racing",
+        "distance": 360,
+        "heats": [
+          {
+            "heat_number": 8,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 26.97,
+            "speed_kmh": 48.053,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 18,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 26.65,
+            "speed_kmh": 48.63,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 29,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Снят (вход в круг)"
+          }
+        ],
+        "best_time": 26.65,
+        "grand_total": 26.65
+      },
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">23</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">МИСТРЕСС ОФ КОППЕР ХИЛЛ /<br>MISTRESS OF COPPER HILL</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">8</font></td>\n<td bgcolor=\"#ffffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">26.97 с<br>13.35 м/с<br>48.053 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">26.65 с<br>13.51 м/с<br>48.630 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">29</font></td>\n<td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Снят (вход в круг)</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n",
       "judges": "Крылова Е.В.",
       "dog_id": 447,
@@ -643,13 +1283,38 @@
       "name": "ДЕНВЕР КЭННЭЛС БОББИ БРАУН",
       "name_ru": "ДЕНВЕР КЭННЭЛС БОББИ БРАУН",
       "name_lat": "DENWER KENNELS BOBBIE BROWN",
-      "total_score": null,
+      "total_score": 27.45,
       "judge_count": 1,
-      "qualification": "",
+      "qualification": "CC",
       "vc": "CC",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[7,1,null,18,3],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "format": "racing",
+        "distance": 360,
+        "heats": [
+          {
+            "heat_number": 7,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 28.33,
+            "speed_kmh": 45.747,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 18,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 27.45,
+            "speed_kmh": 47.213,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 27.45,
+        "grand_total": 27.45
+      },
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">5</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">20</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ДЕНВЕР КЭННЭЛС БОББИ БРАУН /<br>DENWER KENNELS BOBBIE BROWN</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">7</font></td>\n<td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">28.33 с<br>12.71 м/с<br>45.747 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td bgcolor=\"#ffffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">27.45 с<br>13.11 м/с<br>47.213 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n",
       "judges": "Крылова Е.В.",
       "dog_id": 9588,
@@ -670,13 +1335,38 @@
       "name": "STANGERS LAND BRATISLAVA",
       "name_ru": "",
       "name_lat": "STANGERS LAND BRATISLAVA",
-      "total_score": null,
+      "total_score": 27.89,
       "judge_count": 1,
-      "qualification": "",
+      "qualification": "CC",
       "vc": "CC",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[7,2,null,19,2],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "format": "racing",
+        "distance": 360,
+        "heats": [
+          {
+            "heat_number": 7,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 27.89,
+            "speed_kmh": 46.468,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 19,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 28.29,
+            "speed_kmh": 45.811,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 27.89,
+        "grand_total": 27.89
+      },
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">6</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">25</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">STANGERS LAND BRATISLAVA</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">7</font></td>\n<td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">27.89 с<br>12.91 м/с<br>46.468 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">19</font></td>\n<td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">28.29 с<br>12.73 м/с<br>45.811 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n",
       "judges": "Крылова Е.В.",
       "dog_id": 85,
@@ -697,13 +1387,38 @@
       "name": "СТАНГЕРС ЛАНД ГОЛДИ ТРИШ",
       "name_ru": "СТАНГЕРС ЛАНД ГОЛДИ ТРИШ",
       "name_lat": "STANGERS LAND GOLDIE TRISH",
-      "total_score": null,
+      "total_score": 27.96,
       "judge_count": 1,
-      "qualification": "",
+      "qualification": "CC",
       "vc": "CC",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[8,1,null,18,2],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "format": "racing",
+        "distance": 360,
+        "heats": [
+          {
+            "heat_number": 8,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 28.31,
+            "speed_kmh": 45.779,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 18,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 27.96,
+            "speed_kmh": 46.352,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 27.96,
+        "grand_total": 27.96
+      },
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">7</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">26</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">СТАНГЕРС ЛАНД ГОЛДИ-ТРИШ /<br>STANGERS LAND GOLDIE-TRISH</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">8</font></td>\n<td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">28.31 с<br>12.72 м/с<br>45.779 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">27.96 с<br>12.88 м/с<br>46.352 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n",
       "judges": "Крылова Е.В.",
       "dog_id": 617,
@@ -724,13 +1439,38 @@
       "name": "ДЕНВЕР КЭННЭЛС ПЭТТИ",
       "name_ru": "ДЕНВЕР КЭННЭЛС ПЭТТИ",
       "name_lat": "DENWER KENNELS PATTI",
-      "total_score": null,
+      "total_score": 28.35,
       "judge_count": 1,
-      "qualification": "",
+      "qualification": "CC",
       "vc": "CC",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[8,2,null,18,4],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "format": "racing",
+        "distance": 360,
+        "heats": [
+          {
+            "heat_number": 8,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 28.8,
+            "speed_kmh": 45,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 18,
+            "bib_number": 4,
+            "bib_color": "black",
+            "time": 28.35,
+            "speed_kmh": 45.714,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 28.35,
+        "grand_total": 28.35
+      },
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">8</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">21</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ДЕНВЕР КЭННЭЛС ПЭТТИ /<br>DENWER KENNELS PATTI</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">8</font></td>\n<td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">28.80 с<br>12.50 м/с<br>45.000 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td bgcolor=\"#000000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">4</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">28.35 с<br>12.70 м/с<br>45.714 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n",
       "judges": "Крылова Е.В.",
       "dog_id": 9589,
@@ -774,13 +1514,47 @@
       "name": "АРИЕС ХАН РИВЬЕРА АЛЬ РИША САНГРИЭЛЬ",
       "name_ru": "АРИЕС ХАН РИВЬЕРА АЛЬ РИША САНГРИЭЛЬ",
       "name_lat": "ARIES KHAN RIVIERA AL RISHA SANGREAL",
-      "total_score": null,
+      "total_score": 30.68,
       "judge_count": 1,
-      "qualification": "ПЧРКФ РК",
-      "vc": "CC",
+      "qualification": "CC",
+      "vc": "ПЧРКФ РК",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[9,1,null,20,2],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":4,\"bib_color\":\"black\",\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "format": "racing",
+        "distance": 360,
+        "heats": [
+          {
+            "heat_number": 9,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 31.77,
+            "speed_kmh": 40.793,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 20,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 31.08,
+            "speed_kmh": 41.699,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 30,
+            "bib_number": 4,
+            "bib_color": "black",
+            "time": 30.68,
+            "speed_kmh": 42.243,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 30.68,
+        "grand_total": 30.68
+      },
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Родезийский риджбек</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">АРИЕС ХАН РИВЬЕРА АЛЬ РИША САНГРИЭЛЬ /<br>ARIES KHAN RIVIERA AL RISHA SANGREAL</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">9</font></td>\n<td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">31.77 с<br>11.33 м/с<br>40.793 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">20</font></td>\n<td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">31.08 с<br>11.58 м/с<br>41.699 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">30</font></td>\n<td bgcolor=\"#000000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">4</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">30.68 с<br>11.73 м/с<br>42.243 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ПЧРКФ РК</font></td>\n",
       "judges": "Крылова Е.В.",
       "dog_id": 5962,
@@ -801,13 +1575,47 @@
       "name": "ARIES KHAN PHREIA PASIPHAE",
       "name_ru": "",
       "name_lat": "ARIES KHAN PHREIA PASIPHAE",
-      "total_score": null,
+      "total_score": 30.64,
       "judge_count": 1,
-      "qualification": "",
+      "qualification": "CC",
       "vc": "CC",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[10,1,null,20,1],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":2,\"bib_color\":\"blue\",\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "format": "racing",
+        "distance": 360,
+        "heats": [
+          {
+            "heat_number": 10,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 30.64,
+            "speed_kmh": 42.298,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 20,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 30.96,
+            "speed_kmh": 41.86,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 30,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 31.43,
+            "speed_kmh": 41.234,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 30.64,
+        "grand_total": 30.64
+      },
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Родезийский риджбек</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ARIES KHAN PHREIA PASIPHAE</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">10</font></td>\n<td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">30.64 с<br>11.75 м/с<br>42.298 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">20</font></td>\n<td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">30.96 с<br>11.63 м/с<br>41.860 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">30</font></td>\n<td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">31.43 с<br>11.45 м/с<br>41.234 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n",
       "judges": "Крылова Е.В.",
       "dog_id": 182,
@@ -828,13 +1636,47 @@
       "name": "СОЛАР СПИРИТ БАГИРА",
       "name_ru": "СОЛАР СПИРИТ БАГИРА",
       "name_lat": "SOLAR SPIRIT BAGHEERA",
-      "total_score": null,
+      "total_score": 30.97,
       "judge_count": 1,
-      "qualification": "",
+      "qualification": "CC",
       "vc": "CC",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[9,2,null,null,1],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":3,\"bib_color\":\"white\",\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "format": "racing",
+        "distance": 360,
+        "heats": [
+          {
+            "heat_number": 9,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 30.97,
+            "speed_kmh": 41.847,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 21,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 30,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 32.34,
+            "speed_kmh": 40.074,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 30.97,
+        "grand_total": 30.97
+      },
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">4</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Родезийский риджбек</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">СОЛАР СПИРИТ БАГИРА /<br>SOLAR SPIRIT BAGHEERA</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">9</font></td>\n<td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">30.97 с<br>11.62 м/с<br>41.847 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">21</font></td>\n<td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Без времени<br><br>1 место на финише</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">30</font></td>\n<td bgcolor=\"#ffffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">32.34 с<br>11.13 м/с<br>40.074 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n",
       "judges": "Крылова Е.В.",
       "dog_id": 9590,
@@ -855,13 +1697,47 @@
       "name": "ТИНА ТРЕЙДИНГ НИККИ ФРАНЦИСКА",
       "name_ru": "ТИНА ТРЕЙДИНГ НИККИ ФРАНЦИСКА",
       "name_lat": "TINA TRADING NIKKI FRANCISKA",
-      "total_score": null,
+      "total_score": 30.47,
       "judge_count": 1,
-      "qualification": "",
+      "qualification": "CC",
       "vc": "CC",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[10,2,null,20,3],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":1,\"bib_color\":\"red\",\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "format": "racing",
+        "distance": 360,
+        "heats": [
+          {
+            "heat_number": 10,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 31.77,
+            "speed_kmh": 40.793,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 20,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 30.47,
+            "speed_kmh": 42.534,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 30,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 35.09,
+            "speed_kmh": 36.934,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 30.47,
+        "grand_total": 30.47
+      },
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">4</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">5</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Родезийский риджбек</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ТИНА ТРЕЙДИНГ НИККИ ФРАНЦИСКА /<br>TINA TRADING NIKKI FRANCISKA</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">10</font></td>\n<td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">31.77 с<br>11.33 м/с<br>40.793 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">20</font></td>\n<td bgcolor=\"#ffffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">30.47 с<br>11.81 м/с<br>42.534 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">30</font></td>\n<td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">35.09 с<br>10.26 м/с<br>36.934 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n",
       "judges": "Крылова Е.В.",
       "dog_id": 5839,
@@ -882,13 +1758,38 @@
       "name": "ГРАНД КОРТЕЖ НЕМБУС ЗЕ БРАЙТЕСТ",
       "name_ru": "ГРАНД КОРТЕЖ НЕМБУС ЗЕ БРАЙТЕСТ",
       "name_lat": "",
-      "total_score": null,
+      "total_score": 31.59,
       "judge_count": 1,
       "qualification": "",
       "vc": "",
       "status": "disqualified",
       "status_reason": "вход в круг",
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[9,3,null,null,2],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "format": "racing",
+        "distance": 360,
+        "heats": [
+          {
+            "heat_number": 9,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 31.59,
+            "speed_kmh": 41.026,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 21,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Снят (вход в круг)"
+          }
+        ],
+        "best_time": 31.59,
+        "grand_total": 31.59
+      },
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Родезийский риджбек</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ГРАНД КОРТЕЖ НЕМБУС ЗЕ БРАЙТЕСТ</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">9</font></td>\n<td bgcolor=\"#ffffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">31.59 с<br>11.40 м/с<br>41.026 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">21</font></td>\n<td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Снят (вход в круг)</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n",
       "judges": "Крылова Е.В.",
       "dog_id": 180,
@@ -911,13 +1812,38 @@
       "name": "ИТУРИ ПАЗЗЛ ЕКСТРАОРДИНАРИ СМАРТ",
       "name_ru": "ИТУРИ ПАЗЗЛ ЕКСТРАОРДИНАРИ СМАРТ",
       "name_lat": "",
-      "total_score": null,
+      "total_score": 37.18,
       "judge_count": 1,
       "qualification": "",
       "vc": "",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[11,1,null,null,null],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":1,\"bib_color\":\"red\",\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "format": "racing",
+        "distance": 360,
+        "heats": [
+          {
+            "heat_number": 11,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 38.22,
+            "speed_kmh": 33.909,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 24,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 37.18,
+            "speed_kmh": 34.857,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 37.18,
+        "grand_total": 37.18
+      },
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Басенджи</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Ветераны</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ИТУРИ ПАЗЗЛ ЕКСТРАОРДИНАРИ СМАРТ</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">11</font></td>\n<td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">38.22 с<br>9.42 м/с<br>33.909 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">24</font></td>\n<td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">37.18 с<br>9.68 м/с<br>34.857 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n",
       "judges": "Крылова Е.В.",
       "dog_id": 50,
@@ -940,13 +1866,38 @@
       "name": "ДЖАНА ДЖАН ГЕНРИ МОРГАН",
       "name_ru": "ДЖАНА ДЖАН ГЕНРИ МОРГАН",
       "name_lat": "DZHANA DZHAN GENRI MORGAN",
-      "total_score": null,
+      "total_score": 33.18,
       "judge_count": 1,
-      "qualification": "ПЧРКФ РК",
-      "vc": "CC",
+      "qualification": "CC",
+      "vc": "ПЧРКФ РК",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[12,2,null,null,null],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":1,\"bib_color\":\"red\",\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "format": "racing",
+        "distance": 360,
+        "heats": [
+          {
+            "heat_number": 12,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 33.94,
+            "speed_kmh": 38.185,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 25,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 33.18,
+            "speed_kmh": 39.06,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 33.18,
+        "grand_total": 33.18
+      },
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Басенджи</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ДЖАНА-ДЖАН ГЕНРИ МОРГАН /<br>DZHANA-DZHAN GENRI MORGAN</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12</font></td>\n<td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">33.94 с<br>10.61 м/с<br>38.185 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">25</font></td>\n<td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">33.18 с<br>10.85 м/с<br>39.060 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ПЧРКФ РК</font></td>\n",
       "judges": "Крылова Е.В.",
       "dog_id": 5735,
@@ -967,13 +1918,38 @@
       "name": "SUNRISE LEUR ADAM",
       "name_ru": "",
       "name_lat": "SUNRISE LEUR ADAM",
-      "total_score": null,
+      "total_score": 36.59,
       "judge_count": 1,
-      "qualification": "",
+      "qualification": "CC",
       "vc": "CC",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[12,1,null,null,null],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":3,\"bib_color\":\"white\",\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "format": "racing",
+        "distance": 360,
+        "heats": [
+          {
+            "heat_number": 12,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 36.69,
+            "speed_kmh": 35.323,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 25,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 36.59,
+            "speed_kmh": 35.42,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 36.59,
+        "grand_total": 36.59
+      },
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">4</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Басенджи</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">SUNRISE LEUR ADAM</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12</font></td>\n<td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">36.69 с<br>9.81 м/с<br>35.323 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">25</font></td>\n<td bgcolor=\"#ffffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">36.59 с<br>9.84 м/с<br>35.420 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n",
       "judges": "Крылова Е.В.",
       "dog_id": 43,
@@ -994,13 +1970,38 @@
       "name": "ХАУС ЗЭ РЭЙНБОУ УЗОЧИ ЗИКИМО",
       "name_ru": "ХАУС ЗЭ РЭЙНБОУ УЗОЧИ ЗИКИМО",
       "name_lat": "HOUSE THE RAINBOW UZOCHI ZIKIMO",
-      "total_score": null,
+      "total_score": 34.88,
       "judge_count": 1,
       "qualification": "",
       "vc": "",
       "status": "disqualified",
       "status_reason": "Агрессия",
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[12,3,null,null,null],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":2,\"bib_color\":\"blue\",\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "format": "racing",
+        "distance": 360,
+        "heats": [
+          {
+            "heat_number": 12,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": 34.88,
+            "speed_kmh": 37.156,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 25,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Дисквалификация (Агрессия)"
+          }
+        ],
+        "best_time": 34.88,
+        "grand_total": 34.88
+      },
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Басенджи</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ХАУС ЗЭ РЭЙНБОУ УЗОЧИ ЗИКИМО /<br>HOUSE THE RAINBOW UZOCHI ZIKIMO</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12</font></td>\n<td bgcolor=\"#ffffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">34.88 с<br>10.32 м/с<br>37.156 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">25</font></td>\n<td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Дисквалификация (Агрессия)</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n",
       "judges": "Крылова Е.В.",
       "dog_id": 5683,
@@ -1023,13 +2024,38 @@
       "name": "SUNRISE LEUR ARISHA",
       "name_ru": "",
       "name_lat": "SUNRISE LEUR ARISHA",
-      "total_score": null,
+      "total_score": 35.02,
       "judge_count": 1,
-      "qualification": "ПЧРКФ РК",
-      "vc": "CC",
+      "qualification": "CC",
+      "vc": "ПЧРКФ РК",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[13,1,1,null,null],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":1,\"bib_color\":\"red\",\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "format": "racing",
+        "distance": 360,
+        "heats": [
+          {
+            "heat_number": 13,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 26,
+            "bib_number": 1,
+            "bib_color": "red",
+            "time": 35.02,
+            "speed_kmh": 37.007,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 35.02,
+        "grand_total": 35.02
+      },
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">6</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Басенджи</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">SUNRISE LEUR ARISHA</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13</font></td>\n<td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Без времени<br><br>1 место на финише</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">26</font></td>\n<td bgcolor=\"#ff0000\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">1</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">35.02 с<br>10.28 м/с<br>37.007 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ПЧРКФ РК</font></td>\n",
       "judges": "Крылова Е.В.",
       "dog_id": 564,
@@ -1050,13 +2076,38 @@
       "name": "НИКОЛЬ САН С КНЯЖЕСКОГО ДВОРА",
       "name_ru": "НИКОЛЬ САН С КНЯЖЕСКОГО ДВОРА",
       "name_lat": "NICOL SAN S KNJAZHESKOGO DVORA",
-      "total_score": null,
+      "total_score": 35.69,
       "judge_count": 1,
-      "qualification": "",
+      "qualification": "CC",
       "vc": "CC",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[13,3,2,null,null],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":2,\"bib_color\":\"blue\",\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "format": "racing",
+        "distance": 360,
+        "heats": [
+          {
+            "heat_number": 13,
+            "bib_number": 3,
+            "bib_color": "white",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 26,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": 35.69,
+            "speed_kmh": 36.313,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ],
+        "best_time": 35.69,
+        "grand_total": 35.69
+      },
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">5</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Басенджи</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">НИКОЛЬ САН С КНЯЖЕСКОГО ДВОРА /<br>NICOL SAN S KNJAZHESKOGO DVORA</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13</font></td>\n<td bgcolor=\"#ffffff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Без времени<br><br>2 место на финише</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">26</font></td>\n<td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">35.69 с<br>10.09 м/с<br>36.313 км/ч</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">CC</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n",
       "judges": "Крылова Е.В.",
       "dog_id": 387,
@@ -1083,7 +2134,23 @@
       "vc": "",
       "status": "disqualified",
       "status_reason": "Агрессия",
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":360,\"bib_color\":null,\"judges\":[{\"judge_number\":1,\"scores\":[13,2,null,null,null],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "format": "racing",
+        "distance": 360,
+        "heats": [
+          {
+            "heat_number": 13,
+            "bib_number": 2,
+            "bib_color": "blue",
+            "time": null,
+            "speed_kmh": null,
+            "disqualified": true,
+            "disqualification_reason": "Дисквалификация (Агрессия)"
+          }
+        ],
+        "best_time": null,
+        "grand_total": null
+      },
       "raw_text": "\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">7</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Басенджи</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ЗЕНДЕЯ ЛЕЯ ФОН ГРИЗЗЛИ СТАЙЛ /<br>ZENDEYA LEYA VON GRIZZLY STYLE</font></td>\n<td align=\"center\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">360</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13</font></td>\n<td bgcolor=\"#00ccff\"><b><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\">2</font></b></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Дисквалификация (Агрессия)</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">&nbsp;</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td>\n",
       "judges": "Крылова Е.В.",
       "dog_id": 47,

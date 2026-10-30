@@ -149,7 +149,7 @@ export default function Events() {
           const hasProtocol = Boolean(event.has_results) || Boolean(event.results_url?.trim())
           if (!hasProtocol) return false
         }
-        if (filterDiscipline && event.event_type !== filterDiscipline) return false
+        if (filterDiscipline && getEventDiscipline(event) !== filterDiscipline) return false
 
         if (searchQuery) {
           const query = searchQuery.toLowerCase()

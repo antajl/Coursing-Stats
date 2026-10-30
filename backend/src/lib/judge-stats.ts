@@ -80,16 +80,18 @@ export function aggregateJudgeStats(results: any[]): Map<string, JudgeStats> {
             const stats = judgeStats.get(judgeName)!;
             if (judge.scores && Array.isArray(judge.scores)) {
               const validScores = judge.scores.filter((s: any) => s !== null && !isNaN(s));
-              stats.total_evaluations += validScores.length;
-              stats.scores.push(...validScores);
-              if (row.breed) stats.breeds.add(canonicalBreed(row.breed));
-              stats.disciplines.add(row.event_type);
-              stats.events.add(row.event_id);
-              const dogKey =
-                row.dog_id != null
-                  ? row.dog_id
-                  : `${row.name_lat || ''}|${row.name_ru || ''}|${row.breed || ''}`;
-              if (dogKey !== '||') stats.dogs.add(dogKey);
+              if (validScores.length > 0) {
+                stats.total_evaluations += validScores.length;
+                stats.scores.push(...validScores);
+                if (row.breed) stats.breeds.add(canonicalBreed(row.breed));
+                stats.disciplines.add(row.event_type);
+                stats.events.add(row.event_id);
+                const dogKey =
+                  row.dog_id != null
+                    ? row.dog_id
+                    : `${row.name_lat || ''}|${row.name_ru || ''}|${row.breed || ''}`;
+                if (dogKey !== '||') stats.dogs.add(dogKey);
+              }
             }
           }
         }
