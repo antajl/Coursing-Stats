@@ -20,7 +20,7 @@ interface PoponaCellProps {
 /** Ячейка попоны как в протоколе: цветной фон + цифра */
 export default function PoponaCell({ number, color, compact = false, isWinner = false }: PoponaCellProps) {
   if (number == null && !color) {
-    return <span className="text-old-money-400">—</span>
+    return null
   }
 
   const normalized = normalizeBibColorName(color ?? undefined)

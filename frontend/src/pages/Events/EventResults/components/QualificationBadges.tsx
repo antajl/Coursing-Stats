@@ -22,6 +22,13 @@ export default function QualificationBadges({ qualification }: QualificationBadg
 
   // Check if this is a league transition (Абсолют, Чемпионов, Прогресс, Юниор)
   const leagueTransitions = ['Абсолют', 'Чемпионов', 'Чемпионы', 'Прогресс', 'Юниор']
+  const leagueDisplayNames: Record<string, string> = {
+    'Чемпионов': 'Чемпионы',
+    'Чемпионы': 'Чемпионы',
+    'Абсолют': 'Абсолют',
+    'Прогресс': 'Прогресс',
+    'Юниор': 'Юниор',
+  }
   const leagueLabels: Record<string, string> = {
     'Абсолют': 'Переход в Лигу «Абсолют» — высшая лига клубного чемпионата по рейсингу в Донино (runningdog.ru)',
     'Чемпионов': 'Переход в Лигу «Чемпионы» — лига титулованных бегунов клубного чемпионата по рейсингу в Донино (runningdog.ru)',
@@ -36,17 +43,18 @@ export default function QualificationBadges({ qualification }: QualificationBadg
       <div className="flex flex-wrap items-center gap-1">
         {parts.map((raw, i) => {
           if (leagueTransitions.includes(raw)) {
+            const leagueName = leagueDisplayNames[raw] || raw
             return (
               <HoverTooltip
                 key={`league-${i}`}
-                label={leagueLabels[raw] || `Переход в лигу «${raw}» (Донино)`}
+                label={leagueLabels[raw] || `Переход в лигу «${leagueName}» (Донино)`}
                 placement="top"
                 variant="site"
                 delayMs={0}
                 portal
               >
                 <span className="inline-flex items-center gap-0.5 text-xs font-semibold text-camel-700 bg-camel-100 rounded-md px-1.5 py-0.5 whitespace-nowrap cursor-help">
-                  → {raw}
+                  → {leagueName}
                 </span>
               </HoverTooltip>
             )

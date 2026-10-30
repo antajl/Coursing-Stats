@@ -1,6 +1,12 @@
 import { useState, useMemo } from 'react'
+import { ChevronDown, X } from 'lucide-react'
 import ResultCard from './ResultCard'
 import { groupResultsByBreedClass, groupRacingResults, isRacingFormat, parseRawScores, getBestTimesByRace } from './utils'
+import ToolbarSearch from '../../../components/toolbar/ToolbarSearch'
+import BreedSearchDropdown from '../../../components/ui/BreedSearchDropdown'
+import QuickBreedBar from '../../TopDogs/QuickBreedBar'
+import { formatBreedName } from '../../../lib/breedMapping'
+import { toolbarPillTriggerClass } from '../../../lib/toolbar'
 import type { Result } from './types'
 
 interface ResultsSectionProps {
@@ -51,10 +57,6 @@ export default function ResultsSection({ results }: ResultsSectionProps) {
     return isRacing ? getBestTimesByRace(activeResults) : {}
   }, [isRacing, activeResults])
 
-  const { grouped, sortedGroups } = isRacing 
-    ? groupRacingResults(activeResults)
-    : groupResultsByBreedClass(activeResults)
-
   const breeds = Array.from(new Set(activeResults.map(r => r.dog.breed))).sort()
 
   const filteredResults = activeResults.filter(result => {
@@ -65,14 +67,14 @@ export default function ResultsSection({ results }: ResultsSectionProps) {
     return matchesSearch && matchesBreed
   })
 
-  const allBreedsCount = breeds.length
-
   const { grouped: filteredGrouped, sortedGroups: filteredSortedGroups } = isRacing
     ? groupRacingResults(filteredResults)
     : groupResultsByBreedClass(filteredResults)
 
+  const isFiltered = Boolean(selectedBreed || searchQuery.trim())
+
   return (
-    <div className="space-y-4">
+    <div className="space-y-3">
       {isMultiDiscipline && (
         <div className="flex border-b border-old-money-200 gap-2 overflow-x-auto pb-px">
           <button
@@ -111,33 +113,60 @@ export default function ResultsSection({ results }: ResultsSectionProps) {
           </button>
         </div>
       )}
-      <div className="flex flex-col sm:flex-row gap-3">
-        <div className="relative flex-1">
-          <input
-            type="text"
-            placeholder="Поиск по имени..."
+
+      {/* Панель поиска и фильтрации пород в едином стиле рейтинга соревнований */}
+      <div className="rounded-xl border border-old-money-200 bg-cream-50/70 p-2 sm:p-2.5">
+        <div className="flex flex-wrap items-center gap-2">
+          <ToolbarSearch
             value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full rounded-lg border border-camel-200 bg-white px-4 py-2.5 pl-10 text-sm transition-colors focus:border-camel-400 focus:ring-2 focus:ring-camel-100"
+            onChange={setSearchQuery}
+            placeholder="Кличка собаки…"
           />
-          <svg className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-old-money-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-          </svg>
-        </div>
-        <div className="relative">
-          <select
-            value={selectedBreed}
-            onChange={(e) => setSelectedBreed(e.target.value)}
-            className="appearance-none rounded-lg border border-camel-200 bg-white px-4 py-2.5 pr-10 text-sm transition-colors focus:border-camel-400 focus:ring-2 focus:ring-camel-100 cursor-pointer"
-          >
-            <option value="">Все породы</option>
-            {breeds.map(breed => (
-              <option key={breed} value={breed}>{breed}</option>
-            ))}
-          </select>
-          <svg className="absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 text-old-money-400 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-          </svg>
+
+          <div className="shrink-0">
+            <BreedSearchDropdown
+              breeds={breeds}
+              selectedBreed={selectedBreed}
+              onSelect={(b) => setSelectedBreed(b)}
+              trigger={
+                <button
+                  type="button"
+                  className={toolbarPillTriggerClass(Boolean(selectedBreed))}
+                >
+                  <span>{selectedBreed ? formatBreedName(selectedBreed) : 'Все породы'}</span>
+                  <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
+                </button>
+              }
+            />
+          </div>
+
+          {breeds.length > 1 && (
+            <>
+              <div className="hidden sm:block h-5 w-px bg-old-money-300 shrink-0 mx-0.5" aria-hidden="true" />
+              <div className="hidden sm:block flex-1 min-w-0">
+                <QuickBreedBar
+                  selectedBreed={selectedBreed}
+                  onSelectBreed={(b) => setSelectedBreed(selectedBreed === b ? '' : b)}
+                  breedValues={breeds}
+                />
+              </div>
+            </>
+          )}
+
+          {isFiltered && (
+            <button
+              type="button"
+              onClick={() => {
+                setSelectedBreed('')
+                setSearchQuery('')
+              }}
+              className="relative shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full border border-old-money-200 bg-cream-50 text-charcoal-500 hover:text-charcoal-800 transition-colors before:absolute before:-inset-1.5 before:content-['']"
+              title="Сбросить фильтры"
+              aria-label="Сбросить фильтры"
+            >
+              <X className="h-4 w-4" />
+            </button>
+          )}
         </div>
       </div>
 
@@ -145,16 +174,16 @@ export default function ResultsSection({ results }: ResultsSectionProps) {
         const groupResults = filteredGrouped[groupKey]
 
         return (
-          <section key={groupKey} className="space-y-4">
-            <div className="flex items-center justify-between gap-3 bg-camel-100 py-2 px-3 rounded-lg border border-camel-200">
-              <h3 className="min-w-0 flex-1 text-lg font-bold tracking-tight text-camel-800">
+          <section key={groupKey} className="space-y-1.5 pt-1">
+            <div className="flex items-center justify-between gap-3 bg-camel-100/70 py-1.5 px-3 rounded-lg border border-camel-200/80">
+              <h3 className="min-w-0 flex-1 text-sm sm:text-base font-semibold tracking-tight text-camel-950">
                 {groupKey}
               </h3>
-              <span className="flex-shrink-0 text-xs font-medium text-camel-600">
+              <span className="flex-shrink-0 text-xs font-medium text-camel-700">
                 {breedCountLabel(groupResults.length)}
               </span>
             </div>
-            <div className="space-y-2">
+            <div className="space-y-1.5">
               {groupResults.map((result, idx) => (
                 <ResultCard
                   key={`${result.dog_id}-${idx}`}

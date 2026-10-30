@@ -40,9 +40,11 @@ export default function RacingDetail({ rawScores, bestTimesByRace }: RacingDetai
                   </div>
                 </div>
                 <div className="space-y-1 text-center">
-                  <div className="pt-1 flex items-center justify-center">
-                    <PoponaCell number={heat.bib_number} color={heat.bib_color} isWinner={isFastestInRace} />
-                  </div>
+                  {hasBibData && (
+                    <div className="pt-1 flex items-center justify-center">
+                      <PoponaCell number={heat.bib_number} color={heat.bib_color} isWinner={isFastestInRace} />
+                    </div>
+                  )}
                   <div className={`font-bold ${isFastestInRace ? 'text-camel-800' : 'text-charcoal-900'}`}>
                     {heat.time ? `${heat.time} с` : '—'}
                   </div>
@@ -93,7 +95,7 @@ export default function RacingDetail({ rawScores, bestTimesByRace }: RacingDetai
         <table className="w-full text-xs min-w-[520px]">
           <colgroup>
             <col className="w-16" />
-            <col className="w-14" />
+            {hasBibData && <col className="w-14" />}
             <col className="w-16" />
             <col className="w-20" />
             <col className="w-20" />
@@ -124,9 +126,11 @@ export default function RacingDetail({ rawScores, bestTimesByRace }: RacingDetai
                     <span className="text-old-money-400 mr-0.5">№</span>
                     {heat.heat_number || '—'}
                   </td>
-                  <td className="py-2 pr-2 text-center align-middle">
-                    <PoponaCell number={heat.bib_number} color={heat.bib_color} isWinner={isFastestInRace} />
-                  </td>
+                  {hasBibData && (
+                    <td className="py-2 pr-2 text-center align-middle">
+                      <PoponaCell number={heat.bib_number} color={heat.bib_color} isWinner={isFastestInRace} />
+                    </td>
+                  )}
                   <td className="py-2 pr-2 text-center align-middle text-old-money-500 text-xs">
                     {heatDist ? `${heatDist} м` : '—'}
                   </td>
