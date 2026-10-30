@@ -105,7 +105,7 @@ export default function EventHeader({ event, results }: EventHeaderProps) {
           )}
         </div>
 
-        {/* Основные метрики турнира (аккуратные бейджи без белых заплаток) */}
+        {/* Основные числовые метрики турнира (аккуратные бейджи) */}
         <div className="mt-2.5 flex flex-wrap items-center gap-1.5 sm:gap-2 text-xs">
           <div className="inline-flex items-center gap-1.5 rounded-lg border border-old-money-200/80 bg-cream-100/70 px-2.5 py-1 text-charcoal-800 shrink-0">
             <Calendar className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
@@ -121,19 +121,10 @@ export default function EventHeader({ event, results }: EventHeaderProps) {
             <PawPrint className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
             <span className="font-semibold text-charcoal-900">{breedsCount} пород</span>
           </div>
-
-          {locationText && locationText !== '—' && (
-            <div className="inline-flex items-center gap-1.5 rounded-lg border border-old-money-200/80 bg-cream-100/70 px-2.5 py-1 text-charcoal-800 min-w-0 max-w-full sm:max-w-md">
-              <MapPin className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
-              <span className="font-semibold text-charcoal-900 truncate" title={locationText}>
-                {locationText}
-              </span>
-            </div>
-          )}
         </div>
 
-        {/* Организатор, Судейство и Трасса (отдельная структурированная строка с разделителем) */}
-        {(event.host_club || event.judges || trackSchemes.length > 0) && (
+        {/* Организатор, Место проведения, Судейство и Трасса (структурированная строка деталей турнира) */}
+        {(event.host_club || (locationText && locationText !== '—') || event.judges || trackSchemes.length > 0) && (
           <div className="mt-2.5 pt-2 border-t border-old-money-200/60 flex flex-wrap items-center justify-between gap-x-4 gap-y-1.5 text-xs text-charcoal-700">
             <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 min-w-0 flex-1">
               {event.host_club && (
@@ -142,6 +133,16 @@ export default function EventHeader({ event, results }: EventHeaderProps) {
                   <span className="text-old-money-500 font-medium">Организатор:</span>
                   <span className="font-semibold text-charcoal-900 truncate" title={event.host_club}>
                     {event.host_club}
+                  </span>
+                </div>
+              )}
+
+              {locationText && locationText !== '—' && (
+                <div className="flex items-center gap-1.5 min-w-0 max-w-full sm:max-w-md">
+                  <MapPin className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
+                  <span className="text-old-money-500 font-medium">Место:</span>
+                  <span className="font-semibold text-charcoal-900 truncate" title={locationText}>
+                    {locationText}
                   </span>
                 </div>
               )}

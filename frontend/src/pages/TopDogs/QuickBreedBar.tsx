@@ -59,7 +59,7 @@ interface QuickBreedBarProps {
 }
 
 const GAP = 6 // gap-1.5 = 6px
-const BUFFER = 6 // Запас против субпиксельного округления в flex
+const BUFFER = 16 // Запас против субпиксельного округления в flex
 
 export default function QuickBreedBar({
   selectedBreed,
@@ -69,7 +69,14 @@ export default function QuickBreedBar({
   candidateBreeds,
   className = '',
 }: QuickBreedBarProps) {
-  const candidates = candidateBreeds ?? CANDIDATE_BREEDS
+  const candidates = useMemo(() => {
+    const base = candidateBreeds ?? CANDIDATE_BREEDS
+    if (!breedValues || breedValues.length === 0) return base
+    const active = base.filter((b) =>
+      breedValues.some((bv) => matchesBreedFilter(canonicalBreed(bv), b.key))
+    )
+    return active.length > 0 ? active : base
+  }, [candidateBreeds, breedValues])
   const containerRef = useRef<HTMLDivElement>(null)
   const allBtnRef = useRef<HTMLButtonElement>(null)
   const moreBtnRef = useRef<HTMLButtonElement>(null)
@@ -260,7 +267,7 @@ export default function QuickBreedBar({
       {/* Основной адаптивный контейнер */}
       <div
         ref={containerRef}
-        className={`flex items-center gap-1.5 flex-nowrap min-w-0 w-full overflow-visible py-1 ${className}`.trim()}
+        className={`flex items-center gap-1.5 flex-nowrap min-w-0 w-full overflow-hidden py-1 ${className}`.trim()}
         role="toolbar"
         aria-label="Быстрый выбор породы"
       >

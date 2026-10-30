@@ -112,7 +112,7 @@ export default function ResultsSection({ results }: ResultsSectionProps) {
       )}
 
       {/* Панель поиска и фильтрации пород в стиле рейтинга (чистый ряд без внешней рамки) */}
-      <div className="flex items-center gap-2 w-full min-w-0">
+      <div className="flex items-center gap-2 w-full max-w-full min-w-0 overflow-hidden">
         <ToolbarSearch
           value={searchQuery}
           onChange={setSearchQuery}
@@ -120,7 +120,7 @@ export default function ResultsSection({ results }: ResultsSectionProps) {
         />
 
         {breeds.length > 1 && (
-          <div className="flex-1 min-w-0">
+          <div className="flex-1 min-w-0 max-w-full overflow-hidden">
             <QuickBreedBar
               selectedBreed={selectedBreed}
               onSelectBreed={(b) => setSelectedBreed(b)}
