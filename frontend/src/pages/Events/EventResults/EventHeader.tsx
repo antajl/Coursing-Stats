@@ -50,12 +50,42 @@ export default function EventHeader({ event, results }: EventHeaderProps) {
   return (
     <div className="relative mb-3">
       <div className="min-w-0 rounded-xl border border-old-money-200 bg-gradient-to-br from-cream-50 to-white px-3.5 py-3 md:px-4.5 md:py-3.5">
-        {/* Заголовок турнира и быстрые действия */}
+        {/* Заголовок турнира, серия этапов и быстрые действия */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2.5">
-          <div className="min-w-0 flex-1">
+          <div className="flex flex-wrap items-center gap-2.5 min-w-0 flex-1">
             <h1 className="min-w-0 font-serif text-base sm:text-lg font-bold leading-snug tracking-tight text-charcoal-900">
               {title}
             </h1>
+            {isDoninoSeries && (
+              <div className="inline-flex items-center gap-1.5 text-xs shrink-0 flex-wrap">
+                <span className="font-semibold text-old-money-500">Серия:</span>
+                <div className="inline-flex items-center gap-1">
+                  {[
+                    { id: '2026004', label: 'I этап (9 авг)' },
+                    { id: '2022001', label: 'II этап (20 сен)' },
+                    { id: '2026005', label: 'III этап (31 окт)' },
+                  ].map((stage) => {
+                    const isCurrent = String(event.id) === stage.id
+                    return isCurrent ? (
+                      <span
+                        key={stage.id}
+                        className="inline-flex items-center rounded-md bg-amber-800 px-2 py-0.5 text-xs font-semibold text-white shadow-2xs"
+                      >
+                        {stage.label}
+                      </span>
+                    ) : (
+                      <Link
+                        key={stage.id}
+                        to={'/event/' + stage.id + '/'}
+                        className="inline-flex items-center rounded-md border border-amber-300 bg-cream-50 px-2 py-0.5 text-xs font-medium text-amber-900 transition-colors hover:bg-amber-100 hover:border-amber-400"
+                      >
+                        {stage.label}
+                      </Link>
+                    )
+                  })}
+                </div>
+              </div>
+            )}
           </div>
           {hasLinks && (
             <div className="flex flex-wrap items-center gap-1.5 shrink-0">
@@ -64,7 +94,7 @@ export default function EventHeader({ event, results }: EventHeaderProps) {
                   href={protocolUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex min-h-[38px] sm:min-h-0 flex-shrink-0 items-center gap-1.5 rounded-full border border-camel-200 bg-camel-50 px-3 py-1 text-xs font-medium text-camel-800 shadow-2xs transition-colors hover:border-camel-400 hover:bg-camel-100"
+                  className="inline-flex min-h-[36px] sm:min-h-0 flex-shrink-0 items-center gap-1.5 rounded-full border border-camel-200 bg-camel-50 px-3 py-1 text-xs font-medium text-camel-800 shadow-2xs transition-colors hover:border-camel-400 hover:bg-camel-100"
                   aria-label="Протокол и документы"
                   title="Официальный протокол состязания и прикреплённые документы"
                 >
@@ -78,7 +108,7 @@ export default function EventHeader({ event, results }: EventHeaderProps) {
                       href={rulesUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex min-h-[38px] sm:min-h-0 flex-shrink-0 items-center gap-1.5 rounded-full border border-camel-200 bg-camel-50 px-2.5 py-1 text-xs font-medium text-camel-700 shadow-2xs transition-colors hover:border-camel-400 hover:bg-camel-100"
+                      className="inline-flex min-h-[36px] sm:min-h-0 flex-shrink-0 items-center gap-1.5 rounded-full border border-camel-200 bg-camel-50 px-2.5 py-1 text-xs font-medium text-camel-700 shadow-2xs transition-colors hover:border-camel-400 hover:bg-camel-100"
                       aria-label="Регламент"
                       title="Регламент"
                     >
@@ -91,7 +121,7 @@ export default function EventHeader({ event, results }: EventHeaderProps) {
                       href={catalogUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex min-h-[38px] sm:min-h-0 flex-shrink-0 items-center gap-1.5 rounded-full border border-camel-200 bg-camel-50 px-2.5 py-1 text-xs font-medium text-camel-700 shadow-2xs transition-colors hover:border-camel-400 hover:bg-camel-100"
+                      className="inline-flex min-h-[36px] sm:min-h-0 flex-shrink-0 items-center gap-1.5 rounded-full border border-camel-200 bg-camel-50 px-2.5 py-1 text-xs font-medium text-camel-700 shadow-2xs transition-colors hover:border-camel-400 hover:bg-camel-100"
                       aria-label="Каталог"
                       title="Каталог"
                     >
@@ -105,72 +135,71 @@ export default function EventHeader({ event, results }: EventHeaderProps) {
           )}
         </div>
 
-        {/* Основные числовые метрики турнира (аккуратные бейджи) */}
-        <div className="mt-2.5 flex flex-wrap items-center gap-1.5 sm:gap-2 text-xs">
-          <div className="inline-flex items-center gap-1.5 rounded-lg border border-old-money-200/80 bg-cream-100/70 px-2.5 py-1 text-charcoal-800 shrink-0">
-            <Calendar className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
-            <span className="font-semibold text-charcoal-900">{dateText}</span>
-          </div>
-
-          <div className="inline-flex items-center gap-1.5 rounded-lg border border-old-money-200/80 bg-cream-100/70 px-2.5 py-1 text-charcoal-800 shrink-0">
-            <Dog className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
-            <span className="font-semibold text-charcoal-900">{participantsCount} участников</span>
-          </div>
-
-          <div className="inline-flex items-center gap-1.5 rounded-lg border border-old-money-200/80 bg-cream-100/70 px-2.5 py-1 text-charcoal-800 shrink-0">
-            <PawPrint className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
-            <span className="font-semibold text-charcoal-900">{breedsCount} пород</span>
-          </div>
-        </div>
-
-        {/* Организатор, Место проведения, Судейство и Трасса (структурированная строка деталей турнира) */}
-        {(event.host_club || (locationText && locationText !== '—') || event.judges || trackSchemes.length > 0) && (
-          <div className="mt-2.5 pt-2 border-t border-old-money-200/60 flex flex-wrap items-center justify-between gap-x-4 gap-y-1.5 text-xs text-charcoal-700">
-            <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 min-w-0 flex-1">
-              {event.host_club && (
-                <div className="flex items-center gap-1.5 min-w-0">
-                  <Building2 className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
-                  <span className="text-old-money-500 font-medium">Организатор:</span>
-                  <span className="font-semibold text-charcoal-900 truncate" title={event.host_club}>
-                    {event.host_club}
-                  </span>
-                </div>
-              )}
-
-              {locationText && locationText !== '—' && (
-                <div className="flex items-center gap-1.5 min-w-0 max-w-full sm:max-w-md">
-                  <MapPin className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
-                  <span className="text-old-money-500 font-medium">Место:</span>
-                  <span className="font-semibold text-charcoal-900 truncate" title={locationText}>
-                    {locationText}
-                  </span>
-                </div>
-              )}
-
-              {event.judges && (
-                <div className="flex items-center gap-1.5 shrink-0">
-                  <User className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
-                  <span className="text-old-money-500 font-medium">Судьи:</span>
-                  <div className="flex flex-wrap items-center gap-x-1 font-semibold text-charcoal-900">
-                    {parseJudgeNames(event.judges).length > 0 ? (
-                      parseJudgeNames(event.judges).map((judgeName, idx, arr) => (
-                        <span key={judgeName} className="inline-flex items-center">
-                          <Link
-                            to={`/judges/${encodeURIComponent(judgeName)}/`}
-                            className="text-camel-800 hover:text-camel-900 hover:underline transition-colors"
-                          >
-                            {judgeName}
-                          </Link>
-                          {idx < arr.length - 1 && <span className="text-old-money-400 mr-1">,</span>}
-                        </span>
-                      ))
-                    ) : (
-                      <span>{formatCompetitionJudgesWithRoles(event.judges)}</span>
-                    )}
-                  </div>
-                </div>
-              )}
+        {/* Единая компактная строка метрик и деталей турнира */}
+        <div className="mt-2.5 pt-2 border-t border-old-money-200/60 flex flex-wrap items-center justify-between gap-x-4 gap-y-2 text-xs">
+          {/* Числовые метрики */}
+          <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 shrink-0">
+            <div className="inline-flex items-center gap-1.5 rounded-lg border border-old-money-200/80 bg-cream-100/70 px-2.5 py-1 text-charcoal-800">
+              <Calendar className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
+              <span className="font-semibold text-charcoal-900">{dateText}</span>
             </div>
+
+            <div className="inline-flex items-center gap-1.5 rounded-lg border border-old-money-200/80 bg-cream-100/70 px-2.5 py-1 text-charcoal-800">
+              <Dog className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
+              <span className="font-semibold text-charcoal-900">{participantsCount} участников</span>
+            </div>
+
+            <div className="inline-flex items-center gap-1.5 rounded-lg border border-old-money-200/80 bg-cream-100/70 px-2.5 py-1 text-charcoal-800">
+              <PawPrint className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
+              <span className="font-semibold text-charcoal-900">{breedsCount} пород</span>
+            </div>
+          </div>
+
+          {/* Организатор, Место проведения, Судейство и Трасса */}
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-xs text-charcoal-700 min-w-0 justify-start sm:justify-end">
+            {event.host_club && (
+              <div className="flex items-center gap-1.5 min-w-0">
+                <Building2 className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
+                <span className="text-old-money-500 font-medium">Организатор:</span>
+                <span className="font-semibold text-charcoal-900 truncate max-w-[200px] sm:max-w-xs" title={event.host_club}>
+                  {event.host_club}
+                </span>
+              </div>
+            )}
+
+            {locationText && locationText !== '—' && (
+              <div className="flex items-center gap-1.5 min-w-0">
+                <MapPin className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
+                <span className="text-old-money-500 font-medium">Место:</span>
+                <span className="font-semibold text-charcoal-900 truncate max-w-[240px] sm:max-w-sm" title={locationText}>
+                  {locationText}
+                </span>
+              </div>
+            )}
+
+            {event.judges && (
+              <div className="flex items-center gap-1.5 shrink-0">
+                <User className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
+                <span className="text-old-money-500 font-medium">Судьи:</span>
+                <div className="flex flex-wrap items-center gap-x-1 font-semibold text-charcoal-900">
+                  {parseJudgeNames(event.judges).length > 0 ? (
+                    parseJudgeNames(event.judges).map((judgeName, idx, arr) => (
+                      <span key={judgeName} className="inline-flex items-center">
+                        <Link
+                          to={`/judges/${encodeURIComponent(judgeName)}/`}
+                          className="text-camel-800 hover:text-camel-900 hover:underline transition-colors"
+                        >
+                          {judgeName}
+                        </Link>
+                        {idx < arr.length - 1 && <span className="text-old-money-400 mr-1">,</span>}
+                      </span>
+                    ))
+                  ) : (
+                    <span>{formatCompetitionJudgesWithRoles(event.judges)}</span>
+                  )}
+                </div>
+              </div>
+            )}
 
             {trackSchemes.length > 0 && (
               <div className="flex items-center gap-1.5 shrink-0">
@@ -207,39 +236,7 @@ export default function EventHeader({ event, results }: EventHeaderProps) {
               </div>
             )}
           </div>
-        )}
-
-        {/* Переключатель этапов серии */}
-        {isDoninoSeries && (
-          <div className="mt-2.5 pt-2 border-t border-old-money-200/60 flex items-center gap-2 flex-wrap text-xs">
-            <span className="font-semibold text-charcoal-700">Серия:</span>
-            <div className="flex items-center gap-1.5 flex-wrap">
-              {[
-                { id: '2026004', label: 'I этап (9 авг)' },
-                { id: '2022001', label: 'II этап (20 сен)' },
-                { id: '2026005', label: 'III этап (31 окт)' },
-              ].map((stage) => {
-                const isCurrent = String(event.id) === stage.id
-                return isCurrent ? (
-                  <span
-                    key={stage.id}
-                    className="inline-flex items-center rounded-md bg-amber-800 px-2.5 py-0.5 text-xs font-semibold text-white shadow-2xs"
-                  >
-                    {stage.label}
-                  </span>
-                ) : (
-                  <Link
-                    key={stage.id}
-                    to={'/event/' + stage.id + '/'}
-                    className="inline-flex items-center rounded-md border border-amber-300 bg-cream-50 px-2.5 py-0.5 text-xs font-medium text-amber-900 transition-colors hover:bg-amber-100 hover:border-amber-400"
-                  >
-                    {stage.label}
-                  </Link>
-                )
-              })}
-            </div>
-          </div>
-        )}
+        </div>
       </div>
     </div>
   )
