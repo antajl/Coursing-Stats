@@ -196,3 +196,34 @@ export function formatCategoryTitle(cat: CategoryGroup): string {
   const sexLabel = cat.sex === 'male' ? 'Кобели' : (cat.sex === 'female' ? 'Суки' : 'Микс')
   return `${cat.breed} — ${cat.className} — ${sexLabel}`
 }
+
+export interface ActiveRunMenuState {
+  catId: string
+  dogId: string
+  rIdx: number
+  rect: { top: number; bottom: number; left: number; right: number }
+}
+
+export interface ActiveSearchDogState {
+  catId: string
+  dogId: string
+  rect: { top: number; bottom: number; left: number; width: number }
+}
+
+export interface ActiveAwardsMenuState {
+  catId: string
+  dogId: string
+  rect: { top: number; bottom: number; left: number; right: number; width: number }
+}
+
+export interface ActiveCategoryMenuState {
+  catId: string
+  rect: { top: number; bottom: number; left: number; right: number; width: number }
+}
+
+export interface ActiveDogSexMenuState {
+  catId: string
+  dogId: string
+  rect: { top: number; bottom: number; left: number; right: number; width: number }
+}
+
