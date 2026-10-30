@@ -138,29 +138,24 @@
       }
     }
   
-    /* Monochrome document toolbar matching protocol A4 aesthetic */
+    /* Monochrome document toolbar */
     .cs-toolbar {
-      position: sticky;
-      top: 0;
-      left: 0;
       width: 100%;
       box-sizing: border-box;
       background: #ffffff;
       color: #000000;
-      border: 1px solid #4c4c4c;
       border-bottom: 2px solid #000000;
-      margin: 0 0 10px 0;
-      padding: 6px 12px;
+      padding: 6px 10px;
       font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-      z-index: 9999;
-      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+      margin: 0 0 4px 0;
     }
     .cs-toolbar-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
+      gap: 12px;
       width: 100%;
+      box-sizing: border-box;
     }
     .cs-toolbar-left {
       display: flex;
@@ -198,9 +193,9 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 5px 12px;
+      padding: 4px 10px;
       border-radius: 3px;
-      font-size: 12px;
+      font-size: 11.5px;
       font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
       font-weight: normal;
       text-decoration: none;
@@ -236,50 +231,11 @@
       .cs-toolbar {
         display: none !important;
       }
-      body {
-        background: #ffffff !important;
-        padding: 0 !important;
-      }
-      .protocol-page-wrapper {
-        padding: 0 !important;
-        display: block !important;
-        width: 100% !important;
-      }
-      table.protocol-table {
-        margin: 0 !important;
-        box-shadow: none !important;
-        border: none !important;
-        width: 100% !important;
-      }
-    }
-    @media screen {
-      html, body {
-        background: #ececec;
-        margin: 0;
-        padding: 0;
-        min-height: 100vh;
-      }
-      .protocol-page-wrapper {
-        display: inline-block;
-        min-width: 100%;
-        width: max-content;
-        box-sizing: border-box;
-        padding: 12px 14px 40px 14px;
-        vertical-align: top;
-      }
-      table.protocol-table {
-        min-width: 1260px;
-        width: 100%;
-        margin: 0;
-        background: #ffffff;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
-      }
     }
 
   </style>
 </head>
 <body>
-<div class="protocol-page-wrapper">
 
 <header class="cs-toolbar">
   <div class="cs-toolbar-inner">
@@ -391,7 +347,7 @@
     
         <tr class="participant-row">
           <td rowspan="1">1</td>
-          <td rowspan="1">null</td>
+          <td rowspan="1"></td>
           <td rowspan="1">Американский голый терьер</td>
           <td rowspan="1">Стандартный</td>
           <td rowspan="1">Кобель</td>
@@ -414,7 +370,7 @@
       
         <tr class="participant-row">
           <td rowspan="1">2</td>
-          <td rowspan="1">null</td>
+          <td rowspan="1"></td>
           <td rowspan="1">Американский голый терьер</td>
           <td rowspan="1">Стандартный</td>
           <td rowspan="1">Кобель</td>
@@ -437,7 +393,7 @@
       
         <tr class="participant-row">
           <td rowspan="1">3</td>
-          <td rowspan="1">null</td>
+          <td rowspan="1"></td>
           <td rowspan="1">Американский голый терьер</td>
           <td rowspan="1">Стандартный</td>
           <td rowspan="1">Кобель</td>
@@ -464,7 +420,7 @@
     
         <tr class="participant-row">
           <td rowspan="1">1</td>
-          <td rowspan="1">null</td>
+          <td rowspan="1"></td>
           <td rowspan="1">Американский голый терьер</td>
           <td rowspan="1">Стандартный</td>
           <td rowspan="1">Сука</td>
@@ -487,7 +443,7 @@
       
         <tr class="participant-row">
           <td rowspan="1">2</td>
-          <td rowspan="1">null</td>
+          <td rowspan="1"></td>
           <td rowspan="1">Американский голый терьер</td>
           <td rowspan="1">Стандартный</td>
           <td rowspan="1">Сука</td>
@@ -510,7 +466,7 @@
       
         <tr class="participant-row">
           <td rowspan="1">3</td>
-          <td rowspan="1">null</td>
+          <td rowspan="1"></td>
           <td rowspan="1">Американский голый терьер</td>
           <td rowspan="1">Стандартный</td>
           <td rowspan="1">Сука</td>
@@ -537,7 +493,7 @@
     
         <tr class="participant-row">
           <td rowspan="1">1</td>
-          <td rowspan="1">null</td>
+          <td rowspan="1"></td>
           <td rowspan="1">Американский голый терьер</td>
           <td rowspan="1">Юниоры</td>
           <td rowspan="1">Кобель</td>
@@ -564,7 +520,7 @@
     
         <tr class="participant-row">
           <td rowspan="1">1</td>
-          <td rowspan="1">null</td>
+          <td rowspan="1"></td>
           <td rowspan="1">Белая швейцарская овчарка</td>
           <td rowspan="1">Стандартный</td>
           <td rowspan="1">Кобель</td>
@@ -591,7 +547,7 @@
     
         <tr class="participant-row">
           <td rowspan="1">1</td>
-          <td rowspan="1">null</td>
+          <td rowspan="1"></td>
           <td rowspan="1">Бигль</td>
           <td rowspan="1">Стандартный</td>
           <td rowspan="1">Кобель</td>
@@ -618,7 +574,7 @@
     
         <tr class="participant-row">
           <td rowspan="1">1</td>
-          <td rowspan="1">null</td>
+          <td rowspan="1"></td>
           <td rowspan="1">Венгерская короткошёрстная легавая (Выжла)</td>
           <td rowspan="1">Стандартный</td>
           <td rowspan="1">Сука</td>
@@ -645,7 +601,7 @@
     
         <tr class="participant-row">
           <td rowspan="1">1</td>
-          <td rowspan="1">null</td>
+          <td rowspan="1"></td>
           <td rowspan="1">Немецкая овчарка стандартная</td>
           <td rowspan="1">Стандартный</td>
           <td rowspan="1">Сука</td>
@@ -672,7 +628,7 @@
     
         <tr class="dns-row">
           <td></td>
-          <td>null</td>
+          <td></td>
           <td>Американский голый терьер</td>
           <td>Стандартный</td>
           <td>Сука</td>
@@ -682,7 +638,7 @@
       
         <tr class="dns-row">
           <td></td>
-          <td>null</td>
+          <td></td>
           <td>Американский голый терьер</td>
           <td>Стандартный</td>
           <td>Сука</td>
@@ -692,7 +648,7 @@
       
         <tr class="dns-row">
           <td></td>
-          <td>null</td>
+          <td></td>
           <td>Американский голый терьер</td>
           <td>Стандартный</td>
           <td>Сука</td>
@@ -702,7 +658,5 @@
       
     </tbody>
   </table>
-
-</div>
 </body>
 </html>

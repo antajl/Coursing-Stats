@@ -38,7 +38,7 @@ verified: 2026-10-01
 | Legacy `/top` | → competitions ranking |
 
 - `frontend/src/pages/` (Competitions, TopDogs, Judges, Event…)
-- `frontend/src/lib/eloRank.ts` — `medalStrength` / `standingScore`
+- `frontend/src/lib/medalCascade.ts` — `medalStrength` / `standingScore`
 - `frontend/src/pages/TopDogs/mergeCombinedRanking.ts` — merge + sort
 - `frontend/src/pages/TopDogs/CoursingRatingHint.tsx` — ⓘ текст
 - `frontend/src/pages/Guide/components/RatingTab.tsx` — Справочник

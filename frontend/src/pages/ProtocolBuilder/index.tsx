@@ -38,164 +38,26 @@ import {
 } from './types'
 import { exportToCSV, exportToJSON } from './exportHelpers'
 import DogSexIcon from '../../components/DogSexIcon'
+import {
+  STORAGE_KEY,
+  BREED_GROUPS,
+  ALL_KNOWN_BREEDS,
+  CLASSES,
+  TITLES_LIST,
+  DEFAULT_HEADER,
+  createDefaultCategories,
+  type ExistingDog,
+  type BreedGroupItem
+} from './constants'
 
-const STORAGE_KEY = 'cs_protocol_builder_draft_v3'
-
-export interface BreedGroupItem {
-  groupName: string
-  breeds: string[]
+export {
+  STORAGE_KEY,
+  BREED_GROUPS,
+  ALL_KNOWN_BREEDS,
+  CLASSES,
+  TITLES_LIST,
+  type BreedGroupItem
 }
-
-export const BREED_GROUPS: BreedGroupItem[] = [
-  {
-    groupName: 'Борзые (FCI 10 и национальные)',
-    breeds: [
-      'Уиппет',
-      'Русская псовая борзая',
-      'Салюки',
-      'Малая итальянская борзая (Левретка)',
-      'Грейхаунд',
-      'Афганская борзая',
-      'Ирландский волкодав',
-      'Дирхаунд',
-      'Тазы',
-      'Хортая борзая',
-      'Испанский гальго',
-      'Слюги',
-      'Азавак',
-      'Афганская аборигенная борзая'
-    ]
-  },
-  {
-    groupName: 'Примитивные породы и риджбеки (FCI 5 / 6)',
-    breeds: [
-      'Басенджи',
-      'Родезийский риджбек',
-      'Чирнеко дель Этна',
-      'Фараонова собака',
-      'Поденко Ибиценко',
-      'Поденко Канарио',
-      'Тайский риджбек',
-      'Ксолоитцкуинтли',
-      'Сибирский хаски',
-      'Самоед',
-      'Якутская лайка',
-      'Акита'
-    ]
-  },
-  {
-    groupName: 'Терьеры и спортивные породы',
-    breeds: [
-      'Американский стаффордширский терьер',
-      'Американский голый терьер',
-      'Ирландский терьер',
-      'Джек Рассел Терьер',
-      'Бультерьер миниатюрный',
-      'Питбультерьер',
-      'Вельштерьер',
-      'Эрдельтерьер',
-      'Бедлингтон терьер'
-    ]
-  },
-  {
-    groupName: 'Служебные, подружейные и овчарки',
-    breeds: [
-      'Бельгийская овчарка (Малинуа)',
-      'Бордер Колли',
-      'Доберман',
-      'Немецкая овчарка',
-      'Белая швейцарская овчарка',
-      'Голландская овчарка',
-      'Австралийская овчарка',
-      'Австралийский хилер',
-      'Вельш корги пемброк',
-      'Венгерская выжла',
-      'Лабрадор ретривер',
-      'Веймаранер',
-      'Немецкая короткошёрстная легавая (курцхаар)',
-      'Бигль',
-      'Цвергпинчер',
-      'Немецкий пинчер',
-      'Шнауцер',
-      'Миттельшнауцер',
-      'Немецкий дог',
-      'Ротвейлер',
-      'Далматин',
-      'Аргентинский дог',
-      'Итальянская короткошерстная гончая',
-      'Ганноверская гончая'
-    ]
-  },
-  {
-    groupName: 'Компаньоны, таксы и метисы',
-    breeds: [
-      'Континентальный той спаниель (Папийон)',
-      'Русская цветная болонка',
-      'Такса миниатюрная',
-      'Метис',
-      'Без породы'
-    ]
-  }
-]
-
-export const ALL_KNOWN_BREEDS = BREED_GROUPS.flatMap(g => g.breeds)
-
-export const CLASSES = [
-  'Стандартный',
-  'Спринтер',
-  'Стандартный-спринтеры',
-  'Юниоры',
-  'Ветераны',
-  'Ветераны-спринтеры',
-  'Супер-Ветераны',
-  'Выше стандарта',
-  'Открытый',
-  'Рабочий',
-  'Чемпионы',
-  'Прогресс',
-  'Щенки',
-  'Бэби'
-]
-
-export const TITLES_LIST = [
-  'CACL',
-  'ЧРКФ',
-  'CACIT',
-  'CACMB',
-  'Ю.CACL',
-  'Вет.CACL',
-  'R.CACL',
-  'R.CACMB',
-  'Best in Field',
-  'Res.CACL',
-  'Чемпион России',
-  'ПЧРКФ РК',
-  'Победитель Кубка России',
-  'Лучший юниор',
-  'Лучший ветеран',
-  'CC'
-]
-
-interface ExistingDog {
-  name: string
-  name_ru?: string
-  name_lat?: string
-  breed: string
-  sex?: 'male' | 'female' | null
-}
-
-const DEFAULT_HEADER: CompetitionHeader = {
-  title: 'Соревнования по курсингу',
-  rank: 'Сертификатные',
-  date: new Date().toISOString().substring(0, 10),
-  location: 'Город, место проведения',
-  club: 'Кинологический клуб',
-  judges: ''
-}
-
-const createDefaultCategories = (): CategoryGroup[] => [
-  createNewCategory('Басенджи', 'Стандартный', 'male', 2, 1, 2)
-]
 
 interface ActiveRunMenuState {
   catId: string

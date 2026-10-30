@@ -121,6 +121,11 @@ export function escapeHtml(str: unknown): string {
     .replace(/'/g, '&#39;');
 }
 
+export function formatCatalogNo(num: any): string {
+  if (num == null || num === 'null' || num === '' || Number.isNaN(num)) return '';
+  return String(num);
+}
+
 export function formatDogName(dog?: DogInfo): string {
   if (!dog) return '';
   const ru = (dog.name_ru || '').trim();
@@ -484,7 +489,7 @@ export function buildRacingProtocolHtml(comp: CompetitionData): string {
       tableRowsHtml += `
         <tr class="participant-row">
           <td>${place}</td>
-          <td>${res.catalog_no}</td>
+          <td>${formatCatalogNo(res.catalog_no)}</td>
           <td>${breed}</td>
           <td>${className}</td>
           <td>${sex}</td>
@@ -538,7 +543,7 @@ export function buildRacingProtocolHtml(comp: CompetitionData): string {
       tableRowsHtml += `
         <tr class="dns-row">
           <td></td>
-          <td>${res.catalog_no}</td>
+          <td>${formatCatalogNo(res.catalog_no)}</td>
           <td>${breed}</td>
           <td>${className}</td>
           <td>${sex}</td>
@@ -962,7 +967,7 @@ export function buildCoursingProtocolHtml(comp: CompetitionData): string {
           tableRowsHtml += `
             <tr class="participant-row">
               <td>${place}</td>
-              <td>${res.catalog_no}</td>
+              <td>${formatCatalogNo(res.catalog_no)}</td>
               <td>${breed}</td>
               <td>${className}</td>
               <td>${sex}</td>
@@ -975,7 +980,7 @@ export function buildCoursingProtocolHtml(comp: CompetitionData): string {
           tableRowsHtml += `
             <tr class="participant-row">
               <td rowspan="${maxJudges}">${place}</td>
-              <td rowspan="${maxJudges}">${res.catalog_no}</td>
+              <td rowspan="${maxJudges}">${formatCatalogNo(res.catalog_no)}</td>
               <td rowspan="${maxJudges}">${breed}</td>
               <td rowspan="${maxJudges}">${className}</td>
               <td rowspan="${maxJudges}">${sex}</td>
@@ -1006,7 +1011,7 @@ export function buildCoursingProtocolHtml(comp: CompetitionData): string {
         tableRowsHtml += `
           <tr class="participant-row">
             <td>${place}</td>
-            <td>${res.catalog_no}</td>
+            <td>${formatCatalogNo(res.catalog_no)}</td>
             <td>${breed}</td>
             <td>${className}</td>
             <td>${sex}</td>
@@ -1025,7 +1030,7 @@ export function buildCoursingProtocolHtml(comp: CompetitionData): string {
         tableRowsHtml += `
           <tr class="participant-row">
             <td rowspan="${maxJudges}">${place}</td>
-            <td rowspan="${maxJudges}">${res.catalog_no}</td>
+            <td rowspan="${maxJudges}">${formatCatalogNo(res.catalog_no)}</td>
             <td rowspan="${maxJudges}">${breed}</td>
             <td rowspan="${maxJudges}">${className}</td>
             <td rowspan="${maxJudges}">${sex}</td>
@@ -1054,7 +1059,7 @@ export function buildCoursingProtocolHtml(comp: CompetitionData): string {
       tableRowsHtml += `
         <tr class="participant-row">
           <td rowspan="${maxJudges}">${place}</td>
-          <td rowspan="${maxJudges}">${res.catalog_no}</td>
+          <td rowspan="${maxJudges}">${formatCatalogNo(res.catalog_no)}</td>
           <td rowspan="${maxJudges}">${breed}</td>
           <td rowspan="${maxJudges}">${className}</td>
           <td rowspan="${maxJudges}">${sex}</td>
@@ -1101,7 +1106,7 @@ export function buildCoursingProtocolHtml(comp: CompetitionData): string {
       tableRowsHtml += `
         <tr class="dns-row">
           <td></td>
-          <td>${res.catalog_no}</td>
+          <td>${formatCatalogNo(res.catalog_no)}</td>
           <td>${breed}</td>
           <td>${className}</td>
           <td>${sex}</td>
@@ -1779,29 +1784,24 @@ ${cBody}
 
 
 const TOOLBAR_CSS = `
-    /* Monochrome document toolbar matching protocol A4 aesthetic */
+    /* Monochrome document toolbar */
     .cs-toolbar {
-      position: sticky;
-      top: 0;
-      left: 0;
       width: 100%;
       box-sizing: border-box;
       background: #ffffff;
       color: #000000;
-      border: 1px solid #4c4c4c;
       border-bottom: 2px solid #000000;
-      margin: 0 0 10px 0;
-      padding: 6px 12px;
+      padding: 6px 10px;
       font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-      z-index: 9999;
-      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+      margin: 0 0 4px 0;
     }
     .cs-toolbar-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
+      gap: 12px;
       width: 100%;
+      box-sizing: border-box;
     }
     .cs-toolbar-left {
       display: flex;
@@ -1839,9 +1839,9 @@ const TOOLBAR_CSS = `
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 5px 12px;
+      padding: 4px 10px;
       border-radius: 3px;
-      font-size: 12px;
+      font-size: 11.5px;
       font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
       font-weight: normal;
       text-decoration: none;
@@ -1876,44 +1876,6 @@ const TOOLBAR_CSS = `
     @media print {
       .cs-toolbar {
         display: none !important;
-      }
-      body {
-        background: #ffffff !important;
-        padding: 0 !important;
-      }
-      .protocol-page-wrapper {
-        padding: 0 !important;
-        display: block !important;
-        width: 100% !important;
-      }
-      table.protocol-table {
-        margin: 0 !important;
-        box-shadow: none !important;
-        border: none !important;
-        width: 100% !important;
-      }
-    }
-    @media screen {
-      html, body {
-        background: #ececec;
-        margin: 0;
-        padding: 0;
-        min-height: 100vh;
-      }
-      .protocol-page-wrapper {
-        display: inline-block;
-        min-width: 100%;
-        width: max-content;
-        box-sizing: border-box;
-        padding: 12px 14px 40px 14px;
-        vertical-align: top;
-      }
-      table.protocol-table {
-        min-width: 1260px;
-        width: 100%;
-        margin: 0;
-        background: #ffffff;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
       }
     }
 `;
@@ -1976,11 +1938,7 @@ export function injectToolbar(html: string, comp: CompetitionData): string {
   const bodyIdx = res.indexOf('<body>');
   if (bodyIdx !== -1) {
     const afterBody = bodyIdx + '<body>'.length;
-    res = res.slice(0, afterBody) + '\n<div class="protocol-page-wrapper">\n' + toolbarHtml + '\n' + res.slice(afterBody);
-    const closeBodyIdx = res.lastIndexOf('</body>');
-    if (closeBodyIdx !== -1) {
-      res = res.slice(0, closeBodyIdx) + '\n</div>\n' + res.slice(closeBodyIdx);
-    }
+    res = res.slice(0, afterBody) + '\n' + toolbarHtml + '\n' + res.slice(afterBody);
   }
 
   return res;

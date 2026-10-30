@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { medalStrength, standingScore } from '../../lib/eloRank'
+import { medalStrength, standingScore } from '../../lib/medalCascade'
 import { buildCombinedRanking } from './mergeCombinedRanking'
 
 describe('medalStrength / standingScore', () => {

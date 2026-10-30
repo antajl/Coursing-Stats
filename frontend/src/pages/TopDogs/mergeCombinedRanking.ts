@@ -4,7 +4,7 @@ import {
   STANDING_MIN_GAP,
   medalStrength,
   standingScore,
-} from '../../lib/eloRank'
+} from '../../lib/medalCascade'
 
 export { CS_TIE_GAP, STANDING_MIN_GAP, medalStrength, standingScore }
 
