@@ -18,7 +18,7 @@ interface ChampionshipRulesTabProps {
 
 export default function ChampionshipRulesTab({ reglamentUrl }: ChampionshipRulesTabProps) {
   return (
-    <div className="space-y-6 max-w-4xl">
+    <div className="space-y-6 w-full">
       {/* Intro Header */}
       <div className="rounded-2xl border border-old-money-200 bg-cream-50 p-5 sm:p-6 shadow-xs space-y-3">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
@@ -150,7 +150,7 @@ export default function ChampionshipRulesTab({ reglamentUrl }: ChampionshipRules
           </li>
           <li className="flex items-start gap-2">
             <CheckCircle2 className="w-4 h-4 text-camel-700 shrink-0 mt-0.5" />
-            <span><strong>Организатор и судейство</strong>: беговой клуб «Курсинг в Донино», руководитель серии — Михаил Андреевич Манухин.</span>
+            <span><strong>Организатор</strong>: беговой клуб «Курсинг в Донино», руководитель серии — Михаил Андреевич Манухин (фиксация результатов: система фотофиниша и электронного хронометража).</span>
           </li>
         </ul>
       </div>

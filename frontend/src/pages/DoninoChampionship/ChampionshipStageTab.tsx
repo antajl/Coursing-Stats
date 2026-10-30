@@ -82,7 +82,7 @@ export default function ChampionshipStageTab({ stage }: ChampionshipStageTabProp
           </div>
           <div className="flex items-center gap-2 p-2.5 rounded-xl bg-cream-100 border border-old-money-200">
             <User className="w-4 h-4 text-camel-700 shrink-0" />
-            <span>Судья: {stage.judge}</span>
+            <span>Руководитель серии: Манухин М.А.</span>
           </div>
         </div>
 
@@ -119,7 +119,7 @@ export default function ChampionshipStageTab({ stage }: ChampionshipStageTabProp
               </span>
               <span className="inline-flex items-center gap-1.5">
                 <User className="w-3.5 h-3.5 text-camel-700" />
-                Главный судья: {stage.judge}
+                Руководитель серии: Манухин М.А.
               </span>
               <span>
                 Участников: <strong>{stage.participants_count}</strong>
@@ -132,23 +132,11 @@ export default function ChampionshipStageTab({ stage }: ChampionshipStageTabProp
             {stage.protocol_url && (
               <Link
                 to={stage.protocol_url}
-                className="inline-flex min-h-[44px] items-center gap-2 px-3.5 py-2 text-xs font-semibold rounded-xl border border-old-money-300 bg-cream-100 hover:bg-cream-200 text-charcoal-900 transition-colors"
+                className="inline-flex min-h-[44px] items-center gap-2 px-3.5 py-2 text-xs font-semibold rounded-xl border border-camel-400/80 bg-cream-100 hover:bg-cream-200 text-charcoal-900 transition-colors font-medium shadow-xs"
               >
                 <FileText className="w-4 h-4 text-camel-700" />
-                <span>Интерактивный протокол</span>
+                <span>Протокол состязания</span>
               </Link>
-            )}
-
-            {stage.results_pdf_url && (
-              <a
-                href={stage.results_pdf_url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex min-h-[44px] items-center gap-2 px-3.5 py-2 text-xs font-semibold rounded-xl border border-old-money-300 bg-cream-100 hover:bg-cream-200 text-charcoal-900 transition-colors"
-              >
-                <ExternalLink className="w-4 h-4 text-camel-700" />
-                <span>PDF протокола</span>
-              </a>
             )}
 
             {stage.catalog_url && (

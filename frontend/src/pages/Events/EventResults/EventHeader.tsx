@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
-import { Calendar, Users, MapPin, Building2, User, PawPrint, Download, FileText, BookOpen, FileSpreadsheet } from 'lucide-react'
+import { Calendar, Users, MapPin, Building2, User, PawPrint, Download, FileText, BookOpen, FileSpreadsheet, Trophy } from 'lucide-react'
 import BreedGroupDivider from './components/BreedGroupDivider'
 import HoverTooltip from '../../../components/ui/HoverTooltip'
 import { formatDate } from './utils'
@@ -214,22 +214,37 @@ export default function EventHeader({ event, results }: EventHeaderProps) {
             </div>
             <div className="mt-2 text-[11px] leading-relaxed text-charcoal-600 border-t border-amber-200/60 pt-2 flex flex-wrap items-center justify-between gap-2">
               <span>Регламент клубных лиг: <b>Лига «Прогресс»</b> → <b>Лига «Чемпионы»</b> → <b>Лига «Абсолют»</b></span>
-              {rulesUrl && (
-                <a
-                  href={rulesUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-medium text-amber-900 underline hover:text-amber-950 inline-flex items-center gap-1"
+              <div className="flex items-center gap-3 flex-wrap">
+                <Link
+                  to="/donino/championship"
+                  className="font-semibold text-amber-900 underline hover:text-amber-950 inline-flex items-center gap-1"
                 >
-                  <BookOpen className="h-3 w-3" />
-                  <span>Читать регламент</span>
-                </a>
-              )}
+                  <Trophy className="h-3 w-3" />
+                  <span>Лиги и рейтинг серии →</span>
+                </Link>
+                {rulesUrl && (
+                  <a
+                    href={rulesUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-medium text-amber-900 underline hover:text-amber-950 inline-flex items-center gap-1"
+                  >
+                    <BookOpen className="h-3 w-3" />
+                    <span>Регламент</span>
+                  </a>
+                )}
+                <Link
+                  to="/speed-records/"
+                  className="font-medium text-amber-800 hover:text-amber-950 underline inline-flex items-center gap-1"
+                >
+                  <span>Рекорды Донино →</span>
+                </Link>
+              </div>
             </div>
           </div>
         )}
 
-        {(event.host_club || event.judges || trackSchemes.length > 0) && (
+        {(event.host_club || event.judges || isDoninoSeries || trackSchemes.length > 0) && (
           <div className="mt-4 pt-4 border-t border-old-money-200/60">
             <div className="flex flex-wrap gap-4 sm:gap-6">
               {event.host_club && (
@@ -238,7 +253,14 @@ export default function EventHeader({ event, results }: EventHeaderProps) {
                   <span className="text-old-money-700">{event.host_club}</span>
                 </div>
               )}
-              {event.judges && (
+              {isDoninoSeries ? (
+                <div className="flex items-center gap-2 text-sm">
+                  <User className="h-4 w-4 text-old-money-500 shrink-0" />
+                  <span className="text-old-money-700">
+                    <span className="text-old-money-500 font-medium">Руководитель серии:</span> Манухин М.А.
+                  </span>
+                </div>
+              ) : event.judges ? (
                 <div className="flex items-center gap-2 text-sm">
                   <User className="h-4 w-4 text-old-money-500 shrink-0" />
                   <div className="flex flex-wrap items-center gap-x-1.5 text-old-money-700">
@@ -260,7 +282,7 @@ export default function EventHeader({ event, results }: EventHeaderProps) {
                     )}
                   </div>
                 </div>
-              )}
+              ) : null}
               {trackSchemes.length > 0 && (
                 <div className="flex items-center gap-2 text-sm">
                   <div className="flex flex-wrap gap-1.5">
@@ -300,51 +322,6 @@ export default function EventHeader({ event, results }: EventHeaderProps) {
             </div>
           </div>
         )}
-
-        {(() => {
-          const DONINO_SERIES_STAGES = [
-            { id: '2026004', label: 'I этап (9 авг)' },
-            { id: '2022001', label: 'II этап (20 сен)' },
-            { id: '2026005', label: 'III этап (31 окт)' },
-          ]
-          const isDoninoSeries = DONINO_SERIES_STAGES.some((s) => s.id === String(event.id))
-          if (!isDoninoSeries) return null
-
-          return (
-            <div className="mt-3.5 pt-3 border-t border-amber-200/70 flex flex-wrap items-center justify-between gap-2.5">
-              <div className="flex flex-wrap items-center gap-2">
-                <span className="text-xs font-semibold text-amber-900">
-                  Серия Донино 2026:
-                </span>
-                <div className="flex flex-wrap items-center gap-1.5">
-                  {DONINO_SERIES_STAGES.map((stage) => {
-                    const isCurrent = String(event.id) === stage.id
-                    return (
-                      <Link
-                        key={stage.id}
-                        to={`/event/${stage.id}/`}
-                        className={`inline-flex items-center rounded-full px-2.5 py-1 text-xs font-medium transition-colors ${
-                          isCurrent
-                            ? 'bg-amber-600 text-white shadow-2xs font-semibold'
-                            : 'border border-amber-300/80 bg-amber-50/80 text-amber-900 hover:bg-amber-100 hover:border-amber-400'
-                        }`}
-                      >
-                        {stage.label}
-                      </Link>
-                    )
-                  })}
-                </div>
-              </div>
-              <Link
-                to="/speed-records/"
-                className="inline-flex items-center gap-1 text-xs font-medium text-amber-800 hover:text-amber-900 hover:underline"
-              >
-                <span>Рекорды Донино</span>
-                <span aria-hidden>→</span>
-              </Link>
-            </div>
-          )
-        })()}
       </div>
     </div>
   )

@@ -14,7 +14,8 @@ export interface StageInfo {
   title: string;
   discipline: string;
   location: string;
-  judge: string;
+  judge?: string | null;
+  series_director?: string;
   participants_count: number;
   has_results: boolean;
   status: 'completed' | 'upcoming';
@@ -182,7 +183,8 @@ export function buildDoninoChampionshipData() {
     title: 'I Клубный чемпионат Донино',
     discipline: 'Бега борзых (рейсинг 350 м)',
     location: 'Московская область, Раменский р-н, д. Донино',
-    judge: 'Манухин М.А.',
+    judge: null,
+    series_director: 'Манухин Михаил Андреевич',
     participants_count: stage1Results.length,
     has_results: true,
     status: 'completed',
@@ -210,7 +212,8 @@ export function buildDoninoChampionshipData() {
     title: 'II Клубный чемпионат Донино',
     discipline: 'Бега борзых (рейсинг 350 м)',
     location: 'Московская область, Раменский р-н, д. Донино',
-    judge: 'Манухин М.А.',
+    judge: null,
+    series_director: 'Манухин Михаил Андреевич',
     participants_count: stage2Results.length,
     has_results: true,
     status: 'completed',
@@ -240,7 +243,8 @@ export function buildDoninoChampionshipData() {
     title: 'III Клубный чемпионат Донино (Финал сезона)',
     discipline: 'Бега борзых (рейсинг 350 м)',
     location: 'Московская область, Раменский р-н, д. Донино',
-    judge: 'Манухин М.А.',
+    judge: null,
+    series_director: 'Манухин Михаил Андреевич',
     participants_count: 0,
     has_results: false,
     status: 'upcoming',
