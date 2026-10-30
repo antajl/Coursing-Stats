@@ -18,29 +18,32 @@ interface EventListRowModernProps {
   event: CalendarEvent
 }
 
-const MODERN_DISCIPLINE_BADGE: Record<string, { bg: string; text: string; border: string; label: string }> = {
+const MODERN_DISCIPLINE_BADGE: Record<
+  string,
+  { bg: string; text: string; border: string; label: string }
+> = {
   coursing: {
-    bg: 'bg-forest-50',
-    text: 'text-forest-700',
-    border: 'border-forest-200/80',
+    bg: 'bg-forest-50/90',
+    text: 'text-forest-800',
+    border: 'border-forest-200/90',
     label: 'Курсинг',
   },
   bzmp: {
-    bg: 'bg-blue-50',
-    text: 'text-blue-700',
-    border: 'border-blue-200/80',
+    bg: 'bg-blue-50/90',
+    text: 'text-blue-800',
+    border: 'border-blue-200/90',
     label: 'БЗМП',
   },
   racing: {
-    bg: 'bg-rose-50',
-    text: 'text-rose-700',
-    border: 'border-rose-200/80',
+    bg: 'bg-rose-50/90',
+    text: 'text-rose-800',
+    border: 'border-rose-200/90',
     label: 'Бега',
   },
   other: {
-    bg: 'bg-amber-50',
+    bg: 'bg-amber-50/90',
     text: 'text-amber-800',
-    border: 'border-amber-200/80',
+    border: 'border-amber-200/90',
     label: 'Другие',
   },
 }
@@ -54,9 +57,9 @@ export default function EventListRowModern({ event }: EventListRowModernProps) {
   const dateParts = formatRowDateParts(event.date_start, event.date_end)
   const judgeNames = parseJudgeNames(event.judges)
   const participants =
-    (typeof event.participants_count === 'number' && event.participants_count > 0)
+    typeof event.participants_count === 'number' && event.participants_count > 0
       ? event.participants_count
-      : (typeof event.result_count === 'number' && event.result_count > 0)
+      : typeof event.result_count === 'number' && event.result_count > 0
         ? event.result_count
         : 0
   const visibleJudges = judgeNames.slice(0, 3)
@@ -67,10 +70,11 @@ export default function EventListRowModern({ event }: EventListRowModernProps) {
   const procoursingUrl = normalizeProcoursingUrl(event.results_url)
 
   const rawHeadline = getEventHeadline(event)
-  // Разделяем заголовок на титул и дисциплину, если они объединены через " · "
+  // Разделяем заголовок на титул и дисциплину (например, "ЧРКФ" и "Курсинг борзых")
   const headlineParts = rawHeadline.split(' · ')
   const titleText = headlineParts[0] || rawHeadline
-  const specificDiscipline = headlineParts.length > 1 ? headlineParts.slice(1).join(' · ') : badgeConfig.label
+  const specificDiscipline =
+    headlineParts.length > 1 ? headlineParts.slice(1).join(' · ') : badgeConfig.label
 
   const rowClassName = `group block rounded-xl border border-old-money-200/90 border-l-4 ${borderClass} bg-cream-50 p-2.5 sm:px-4 sm:py-3 mb-2.5 transition-all duration-200 hover:border-camel-400 hover:shadow-xs hover:bg-cream-100/50 ${
     cancelled ? 'opacity-70' : ''
@@ -87,7 +91,7 @@ export default function EventListRowModern({ event }: EventListRowModernProps) {
       className={rowClassName}
     >
       <div className="grid grid-cols-[auto_minmax(0,1fr)] sm:grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-3 sm:gap-4.5">
-        {/* Колонка 1: Календарный блок даты без дублирования месяца */}
+        {/* Колонка 1: Календарный блок даты */}
         <div className="flex flex-col items-center justify-center rounded-lg bg-white/90 border border-old-money-200/80 py-1.5 px-2 w-[4.1rem] sm:w-[4.6rem] shrink-0 text-center shadow-2xs">
           <span className="font-serif text-sm sm:text-base font-bold text-charcoal-900 tabular-nums leading-none">
             {dateParts ? dateParts.dayLine : '—'}
@@ -97,29 +101,45 @@ export default function EventListRowModern({ event }: EventListRowModernProps) {
           </span>
         </div>
 
-        {/* Колонка 2: Название, бейдж дисциплины, локация и организация (строго по одной левой линии!) */}
+        {/* Колонка 2: Бейдж дисциплины (перед названием) + Название + Локация + Организация */}
         <div className="min-w-0">
-          <div className="flex flex-wrap items-center gap-1.5 leading-tight">
+          {/* Мобильная плашка дисциплины */}
+          <div className="sm:hidden mb-1 flex items-center gap-1.5">
+            <span
+              className={`inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold border ${badgeConfig.bg} ${badgeConfig.text} ${badgeConfig.border}`}
+            >
+              {specificDiscipline}
+            </span>
+            {cancelled && (
+              <span className="shrink-0 rounded-full bg-charcoal-200 px-1.5 py-0.2 text-[9.5px] font-bold uppercase tracking-wider text-charcoal-700">
+                Отменён
+              </span>
+            )}
+          </div>
+
+          {/* Строка заголовка: бейдж дисциплины фиксированной ширины СЛЕВА от названия */}
+          <div className="flex items-center gap-2.5 leading-tight">
+            {/* Бейдж фиксированной ширины (108px) — все названия начинаются на одной вертикали! */}
+            <span
+              className={`hidden sm:inline-flex items-center justify-center shrink-0 w-[6.8rem] py-0.5 rounded text-[10.5px] font-semibold text-center border shadow-2xs ${badgeConfig.bg} ${badgeConfig.text} ${badgeConfig.border}`}
+            >
+              {specificDiscipline}
+            </span>
+
             {important && (
               <TrophyIcon className="h-3.5 w-3.5 shrink-0 text-camel-600" strokeWidth={2} />
             )}
+
             <span
-              className={`text-[13.5px] sm:text-sm font-semibold ${
+              className={`text-[13.5px] sm:text-sm font-semibold truncate ${
                 important ? 'font-serif text-camel-800' : 'text-charcoal-900'
               }`}
             >
               {titleText}
             </span>
 
-            {/* Компактный бейдж дисциплины */}
-            <span
-              className={`inline-flex items-center px-1.5 py-0.5 rounded text-[10.5px] font-semibold border ${badgeConfig.bg} ${badgeConfig.text} ${badgeConfig.border}`}
-            >
-              {specificDiscipline}
-            </span>
-
             {cancelled && (
-              <span className="shrink-0 rounded-full bg-charcoal-200 px-1.5 py-0.5 text-[9.5px] font-bold uppercase tracking-wider text-charcoal-700">
+              <span className="hidden sm:inline-flex shrink-0 rounded-full bg-charcoal-200 px-1.5 py-0.5 text-[9.5px] font-bold uppercase tracking-wider text-charcoal-700">
                 Отменён
               </span>
             )}
@@ -142,7 +162,7 @@ export default function EventListRowModern({ event }: EventListRowModernProps) {
           )}
         </div>
 
-        {/* Колонка 3 (Десктоп): Судьи + Количество участников + Протокол */}
+        {/* Колонка 3 (Десктоп): Судьи + Количество участников + Кнопка "Результаты" */}
         <div className="hidden sm:flex items-center gap-4 shrink-0 pl-3.5 border-l border-old-money-200/80">
           {/* Судейский блок */}
           <div
@@ -176,8 +196,8 @@ export default function EventListRowModern({ event }: EventListRowModernProps) {
             )}
           </div>
 
-          {/* Участники + Действие перехода */}
-          <div className="flex flex-col items-end justify-center gap-1.5 w-[5.5rem] shrink-0">
+          {/* Участники + Действие перехода (Результаты) */}
+          <div className="flex flex-col items-end justify-center gap-1.5 w-[5.8rem] shrink-0">
             {participants > 0 ? (
               <span
                 className="inline-flex h-5.5 items-center justify-center gap-1 rounded-full border border-old-money-200/90 bg-white px-2 font-mono text-[11px] font-semibold tabular-nums text-charcoal-700 shadow-2xs"
@@ -191,7 +211,7 @@ export default function EventListRowModern({ event }: EventListRowModernProps) {
             )}
 
             <span className="inline-flex items-center gap-0.5 text-xs font-semibold text-camel-700 group-hover:text-camel-800 transition-colors">
-              <span>Протокол</span>
+              <span>Результаты</span>
               <ChevronRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
             </span>
           </div>
@@ -220,7 +240,7 @@ export default function EventListRowModern({ event }: EventListRowModernProps) {
         </div>
 
         <span className="inline-flex items-center gap-0.5 text-xs font-semibold text-camel-700 shrink-0 ml-auto">
-          <span>Протокол</span>
+          <span>Результаты</span>
           <ChevronRight className="h-3 w-3" />
         </span>
       </div>

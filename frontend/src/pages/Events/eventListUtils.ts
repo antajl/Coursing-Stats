@@ -202,6 +202,27 @@ export function parseRankLabelStructure(rankLabel: string): {
     }
   }
 
+  // Rejoin lines that end with dangling conjunctions like '&' or '+'
+  for (let i = 0; i < lines.length - 1; i++) {
+    if (/[&+]s*$/.test(lines[i])) {
+      lines[i] = `${lines[i]} ${lines[i + 1]}`.trim();
+      lines.splice(i + 1, 1);
+      i--;
+    }
+  }
+
+  const lastLine = lines[lines.length - 1];
+  const trailingDisciplineMatch = lastLine ? lastLine.match(/^(.*?)\s*\(([^)]+)\)$/) : null;
+  if (trailingDisciplineMatch && multilineDisciplines.length === 0) {
+    const base = trailingDisciplineMatch[1].trim();
+    const disc = trailingDisciplineMatch[2].trim();
+    const allKindLines = [...lines.slice(0, -1), base].filter(Boolean).join(' ');
+    return {
+      kind: allKindLines,
+      disciplines: [disc],
+    };
+  }
+
   const first = lines[0] || label
   const collapsed = first.match(/^([^(]+)\(([^)]+)\)/)
   if (collapsed) {

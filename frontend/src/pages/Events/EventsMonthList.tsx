@@ -49,7 +49,7 @@ export default function EventsMonthList({ monthGroups, reveal }: EventsMonthList
           </span>
           <span className="hidden md:inline text-[11px] text-charcoal-500">
             {viewMode === 'modern'
-              ? 'ровный левый край без смещающей иконки, календарная дата, связанный блок судей и участников'
+              ? 'без смещающей иконки, идеальное выравнивание адреса и организации, кнопка «Результаты»'
               : 'исходное отображение с иконкой локации и отдельной правой колонкой'}
           </span>
         </div>
