@@ -9,6 +9,7 @@ import {
   groupEventsByMonth,
   getEventYear,
   parseDate,
+  getEventDiscipline,
 } from './eventListUtils'
 import EventsToolbar, { CURRENT_SEASON } from './EventsToolbar'
 import EventsMonthList from './EventsMonthList'
