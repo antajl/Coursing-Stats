@@ -109,12 +109,11 @@ export default function TableProtocolView({
           {results.map((result, idx) => {
             const rawScores = parseRawScores(result.raw_scores_json)
             const heats = rawScores?.heats || []
-            const rawDogName = result.name_ru || result.name_lat || 'Без клички'
+            let rawDogName = result.name_ru || result.name_lat || 'Без клички'
+            if (rawDogName.includes('/')) {
+              rawDogName = rawDogName.split('/')[0].trim()
+            }
             const formattedDogName = toDogTitleCase(rawDogName)
-            const secondaryName =
-              result.name_ru && result.name_lat && result.name_ru !== result.name_lat
-                ? toDogTitleCase(result.name_lat)
-                : null
 
             const genderSymbol =
               result.dog?.gender === 'M' ? '♂' : result.dog?.gender === 'F' ? '♀' : ''
@@ -177,11 +176,6 @@ export default function TableProtocolView({
                         </span>
                       )}
                     </div>
-                    {secondaryName && (
-                      <span className="text-[10px] text-charcoal-500 font-sans leading-tight">
-                        {secondaryName}
-                      </span>
-                    )}
 
                     {isDq && statusReason && (
                       <div className="flex items-center gap-1 text-[11px] font-semibold text-rose-700 pt-0.5">
