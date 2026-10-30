@@ -1,6 +1,9 @@
 import { useState, useMemo } from 'react'
-import { X } from 'lucide-react'
+import { X, Table, List, LayoutGrid, Layers } from 'lucide-react'
 import ResultCard from './ResultCard'
+import TableProtocolView from './views/TableProtocolView'
+import AccordionProtocolView from './views/AccordionProtocolView'
+import GridProtocolView from './views/GridProtocolView'
 import { groupResultsByBreedClass, groupRacingResults, isRacingFormat, parseRawScores, getBestTimesByRace } from './utils'
 import ToolbarSearch from '../../../components/toolbar/ToolbarSearch'
 import QuickBreedBar from '../../TopDogs/QuickBreedBar'
@@ -21,6 +24,7 @@ function breedCountLabel(count: number): string {
 export default function ResultsSection({ results }: ResultsSectionProps) {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedBreed, setSelectedBreed] = useState('')
+  const [viewMode, setViewMode] = useState<'table' | 'accordion' | 'grid' | 'current'>('table')
 
   if (results.length === 0) {
     return (
@@ -111,6 +115,39 @@ export default function ResultsSection({ results }: ResultsSectionProps) {
         </div>
       )}
 
+      {/* Панель переключения вида отображения протокола */}
+      <div className="flex flex-wrap items-center justify-between gap-2 border-b border-old-money-200/80 pb-2">
+        <div className="flex items-center gap-1.5 flex-wrap text-xs">
+          <span className="font-semibold text-charcoal-700 mr-1">Вид протокола:</span>
+          <div className="inline-flex rounded-full border border-old-money-200 bg-cream-50 p-0.5 text-xs">
+            {[
+              { id: 'table', label: '1. Таблица (Swiss Timing)', icon: Table },
+              { id: 'accordion', label: '2. Лидерборд-строки', icon: List },
+              { id: 'grid', label: '3. Двухколоночная сетка', icon: LayoutGrid },
+              { id: 'current', label: '4. Подробные карточки (текущий)', icon: Layers },
+            ].map((tab) => {
+              const active = viewMode === tab.id
+              const Icon = tab.icon
+              return (
+                <button
+                  key={tab.id}
+                  type="button"
+                  onClick={() => setViewMode(tab.id as any)}
+                  className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 font-semibold transition-all cursor-pointer ${
+                    active
+                      ? 'border border-camel-400 bg-camel-100 text-camel-950 shadow-2xs'
+                      : 'text-charcoal-600 hover:text-charcoal-900 hover:bg-cream-100/60'
+                  }`}
+                >
+                  <Icon className="h-3.5 w-3.5" />
+                  <span>{tab.label}</span>
+                </button>
+              )
+            })}
+          </div>
+        </div>
+      </div>
+
       {/* Панель поиска и фильтрации пород в стиле рейтинга (чистый ряд без внешней рамки) */}
       <div className="flex items-center gap-2 w-full max-w-full min-w-0 overflow-hidden">
         <ToolbarSearch
@@ -158,16 +195,43 @@ export default function ResultsSection({ results }: ResultsSectionProps) {
                 {breedCountLabel(groupResults.length)}
               </span>
             </div>
-            <div className="space-y-1.5">
-              {groupResults.map((result, idx) => (
-                <ResultCard
-                  key={`${result.dog_id}-${idx}`}
-                  result={result}
-                  index={idx}
-                  bestTimesByRace={bestTimesByRace}
-                />
-              ))}
-            </div>
+
+            {viewMode === 'table' && (
+              <TableProtocolView
+                results={groupResults}
+                bestTimesByRace={bestTimesByRace}
+                isRacing={isRacing}
+              />
+            )}
+
+            {viewMode === 'accordion' && (
+              <AccordionProtocolView
+                results={groupResults}
+                bestTimesByRace={bestTimesByRace}
+                isRacing={isRacing}
+              />
+            )}
+
+            {viewMode === 'grid' && (
+              <GridProtocolView
+                results={groupResults}
+                bestTimesByRace={bestTimesByRace}
+                isRacing={isRacing}
+              />
+            )}
+
+            {viewMode === 'current' && (
+              <div className="space-y-1.5">
+                {groupResults.map((result, idx) => (
+                  <ResultCard
+                    key={`${result.dog_id}-${idx}`}
+                    result={result}
+                    index={idx}
+                    bestTimesByRace={bestTimesByRace}
+                  />
+                ))}
+              </div>
+            )}
           </section>
         )
       })}
