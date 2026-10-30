@@ -1,9 +1,6 @@
 import { useState, useMemo } from 'react'
-import { X, Table, List, LayoutList, Layers } from 'lucide-react'
-import ResultCard from './ResultCard'
+import { X } from 'lucide-react'
 import TableProtocolView from './views/TableProtocolView'
-import AccordionProtocolView from './views/AccordionProtocolView'
-import ScorecardProtocolView from './views/ScorecardProtocolView'
 import { groupResultsByBreedClass, groupRacingResults, isRacingFormat, parseRawScores, getBestTimesByRace } from './utils'
 import ToolbarSearch from '../../../components/toolbar/ToolbarSearch'
 import QuickBreedBar from '../../TopDogs/QuickBreedBar'
@@ -24,7 +21,6 @@ function breedCountLabel(count: number): string {
 export default function ResultsSection({ results }: ResultsSectionProps) {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedBreed, setSelectedBreed] = useState('')
-  const [viewMode, setViewMode] = useState<'table' | 'accordion' | 'scorecard' | 'current'>('table')
 
   if (results.length === 0) {
     return (
@@ -115,39 +111,6 @@ export default function ResultsSection({ results }: ResultsSectionProps) {
         </div>
       )}
 
-      {/* Панель переключения вида отображения протокола */}
-      <div className="flex flex-wrap items-center justify-between gap-2 border-b border-old-money-200/80 pb-2">
-        <div className="flex items-center gap-1.5 flex-wrap text-xs">
-          <span className="font-semibold text-charcoal-700 mr-1">Вид протокола:</span>
-          <div className="inline-flex rounded-full border border-old-money-200 bg-cream-50 p-0.5 text-xs">
-            {[
-              { id: 'table', label: '1. Спорт-таблица (Swiss Timing)', icon: Table },
-              { id: 'accordion', label: '2. Лидерборд-стрипы (Telemetry)', icon: List },
-              { id: 'scorecard', label: '3. Модульные бланки (Scorecard)', icon: LayoutList },
-              { id: 'current', label: '4. Подробные карточки (исходный)', icon: Layers },
-            ].map((tab) => {
-              const active = viewMode === tab.id
-              const Icon = tab.icon
-              return (
-                <button
-                  key={tab.id}
-                  type="button"
-                  onClick={() => setViewMode(tab.id as any)}
-                  className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 font-semibold transition-all cursor-pointer ${
-                    active
-                      ? 'border border-camel-400 bg-camel-100 text-camel-950 shadow-2xs'
-                      : 'text-charcoal-600 hover:text-charcoal-900 hover:bg-cream-100/60'
-                  }`}
-                >
-                  <Icon className="h-3.5 w-3.5" />
-                  <span>{tab.label}</span>
-                </button>
-              )
-            })}
-          </div>
-        </div>
-      </div>
-
       {/* Панель поиска и фильтрации пород в стиле рейтинга (чистый ряд без внешней рамки) */}
       <div className="flex items-center gap-2 w-full max-w-full min-w-0 overflow-hidden">
         <ToolbarSearch
@@ -196,42 +159,11 @@ export default function ResultsSection({ results }: ResultsSectionProps) {
               </span>
             </div>
 
-            {viewMode === 'table' && (
-              <TableProtocolView
-                results={groupResults}
-                bestTimesByRace={bestTimesByRace}
-                isRacing={isRacing}
-              />
-            )}
-
-            {viewMode === 'accordion' && (
-              <AccordionProtocolView
-                results={groupResults}
-                bestTimesByRace={bestTimesByRace}
-                isRacing={isRacing}
-              />
-            )}
-
-            {viewMode === 'scorecard' && (
-              <ScorecardProtocolView
-                results={groupResults}
-                bestTimesByRace={bestTimesByRace}
-                isRacing={isRacing}
-              />
-            )}
-
-            {viewMode === 'current' && (
-              <div className="space-y-1.5">
-                {groupResults.map((result, idx) => (
-                  <ResultCard
-                    key={`${result.dog_id}-${idx}`}
-                    result={result}
-                    index={idx}
-                    bestTimesByRace={bestTimesByRace}
-                  />
-                ))}
-              </div>
-            )}
+            <TableProtocolView
+              results={groupResults}
+              bestTimesByRace={bestTimesByRace}
+              isRacing={isRacing}
+            />
           </section>
         )
       })}
