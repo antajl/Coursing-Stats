@@ -1,5 +1,6 @@
 import { useMemo, useState, type ReactNode } from 'react'
 import { ChevronDown, X, ArrowLeftRight } from 'lucide-react'
+import DogSexIcon from '../../components/DogSexIcon'
 import PageToolbar from '../../components/toolbar/PageToolbar'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
 import ModernDropdown from '../../components/ui/ModernDropdown'
@@ -18,6 +19,8 @@ interface TopDogsFiltersProps {
   filterBreed: string
   onBreedChange: (value: string) => void
   breedValues: string[]
+  filterSex: string
+  onSexChange: (value: string) => void
   dogIndex?: import('../../lib/competingBreeds').DogsIndexEntry[]
   filterMinStarts?: string
   onMinStartsChange?: (value: string) => void
@@ -45,6 +48,8 @@ export default function TopDogsFilters({
   filterBreed,
   onBreedChange,
   breedValues,
+  filterSex,
+  onSexChange,
   dogIndex,
   onResetFilters,
   dropdownRef,
@@ -56,6 +61,8 @@ export default function TopDogsFilters({
 }: TopDogsFiltersProps) {
   const [mobileYearOpen, setMobileYearOpen] = useState(false)
   const [desktopYearOpen, setDesktopYearOpen] = useState(false)
+  const [mobileSexOpen, setMobileSexOpen] = useState(false)
+  const [desktopSexOpen, setDesktopSexOpen] = useState(false)
 
   const sortedYears = useMemo(
     () => [...yearValues].map(String).sort((a, b) => Number(b) - Number(a)),
@@ -63,21 +70,83 @@ export default function TopDogsFilters({
   )
 
   const isYearNonDefault = filterYear !== '' && filterYear !== currentSeason
+  const isSexActive = Boolean(filterSex)
+  const hasActiveFilters = isYearNonDefault || Boolean(filterBreed) || Boolean(filterSex) || Boolean(searchQuery.trim())
 
   const yearTrigger = (
     <button
       type="button"
-      className={`inline-flex h-8 items-center rounded-full border px-3.5 text-xs font-semibold whitespace-nowrap transition-colors gap-1.5 ${
-        isYearNonDefault
-          ? 'border-camel-500 bg-camel-500 text-charcoal-900'
-          : 'border-old-money-200 bg-cream-50 text-charcoal-700 hover:bg-old-money-50'
-      }`}
+      className={toolbarPillTriggerClass(isYearNonDefault)}
     >
       {filterYear || 'Все года'}
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevron-down h-3.5 w-3.5 transition-transform" aria-hidden>
-        <path d="m6 9 6 6 6-6"></path>
-      </svg>
+      <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
     </button>
+  )
+
+  const sexTriggerLabel = filterSex === 'm' ? 'Кобели' : filterSex === 'f' ? 'Суки' : 'Пол'
+
+  const sexTrigger = (
+    <button
+      type="button"
+      className={`shrink-0 ${toolbarPillTriggerClass(isSexActive)}`}
+    >
+      {filterSex === 'm' && <DogSexIcon sex="m" size={12} variant="neutral" className="shrink-0 text-current" />}
+      {filterSex === 'f' && <DogSexIcon sex="f" size={12} variant="neutral" className="shrink-0 text-current" />}
+      <span>{sexTriggerLabel}</span>
+      <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
+    </button>
+  )
+
+  const renderSexMenu = (setOpen: (v: boolean) => void) => (
+    <div className="p-1 min-w-[125px]" role="menu">
+      <button
+        type="button"
+        role="menuitem"
+        onClick={() => {
+          onSexChange('')
+          setOpen(false)
+        }}
+        className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
+          !filterSex
+            ? 'bg-camel-500 text-charcoal-900 font-semibold'
+            : 'text-charcoal-700 hover:bg-camel-100'
+        }`}
+      >
+        Все
+      </button>
+      <button
+        type="button"
+        role="menuitem"
+        onClick={() => {
+          onSexChange('m')
+          setOpen(false)
+        }}
+        className={`flex w-full items-center gap-2 rounded-md px-3 py-2 text-left text-sm transition-colors ${
+          filterSex === 'm'
+            ? 'bg-camel-500 text-charcoal-900 font-semibold'
+            : 'text-charcoal-700 hover:bg-camel-100'
+        }`}
+      >
+        <DogSexIcon sex="m" size={14} className={filterSex === 'm' ? 'text-charcoal-900' : 'text-slate-500'} />
+        <span>Кобели</span>
+      </button>
+      <button
+        type="button"
+        role="menuitem"
+        onClick={() => {
+          onSexChange('f')
+          setOpen(false)
+        }}
+        className={`flex w-full items-center gap-2 rounded-md px-3 py-2 text-left text-sm transition-colors ${
+          filterSex === 'f'
+            ? 'bg-camel-500 text-charcoal-900 font-semibold'
+            : 'text-charcoal-700 hover:bg-camel-100'
+        }`}
+      >
+        <DogSexIcon sex="f" size={14} className={filterSex === 'f' ? 'text-charcoal-900' : 'text-rose-500'} />
+        <span>Суки</span>
+      </button>
+    </div>
   )
 
   const isCoursing = activeMobileColumn === 'coursing'
@@ -160,10 +229,22 @@ export default function TopDogsFilters({
           />
         </div>
 
+        {/* Выбор пола */}
+        <div className="shrink-0">
+          <ModernDropdown
+            trigger={sexTrigger}
+            isOpen={mobileSexOpen}
+            onOpenChange={setMobileSexOpen}
+            width="130px"
+          >
+            {renderSexMenu(setMobileSexOpen)}
+          </ModernDropdown>
+        </div>
+
         {/* Правая часть: Сброс + Кнопка дисциплины + Инфо */}
         <div className="ml-auto shrink-0 flex items-center gap-1.5">
           {/* Сброс фильтров (если активны) */}
-          {(isYearNonDefault || filterBreed) && (
+          {hasActiveFilters && (
             <button
               type="button"
               onClick={onResetFilters}
@@ -254,6 +335,18 @@ export default function TopDogsFilters({
                 </ModernDropdown>
               </div>
 
+              {/* Выбор пола */}
+              <div className="shrink-0">
+                <ModernDropdown
+                  trigger={sexTrigger}
+                  isOpen={desktopSexOpen}
+                  onOpenChange={setDesktopSexOpen}
+                  width="130px"
+                >
+                  {renderSexMenu(setDesktopSexOpen)}
+                </ModernDropdown>
+              </div>
+
               <div className="h-5 w-px bg-old-money-300 shrink-0 mx-0.5" aria-hidden="true" />
 
               <div className="flex-1 min-w-0">
@@ -264,6 +357,19 @@ export default function TopDogsFilters({
                   dogIndex={dogIndex}
                 />
               </div>
+
+              {/* Сброс фильтров (если активны) */}
+              {hasActiveFilters && (
+                <button
+                  type="button"
+                  onClick={onResetFilters}
+                  className="relative shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full border border-old-money-200 bg-cream-50 text-charcoal-500 hover:text-charcoal-800 transition-colors before:absolute before:-inset-1.5 before:content-['']"
+                  title="Сбросить фильтры"
+                  aria-label="Сбросить фильтры"
+                >
+                  <X className="h-4 w-4" />
+                </button>
+              )}
             </div>
           }
           trailing={trailing}

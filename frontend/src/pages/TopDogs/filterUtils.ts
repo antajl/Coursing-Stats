@@ -9,6 +9,20 @@ export interface TopDogsFilterParams {
   filterScoreFrom: string
   filterSpeedFrom: string
   filterBreed: string
+  filterSex?: string
+}
+
+export function normalizeSex(sex?: string | null): 'm' | 'f' | null {
+  if (!sex) return null
+  const s = sex.trim().toLowerCase()
+  if (s === 'f' || s === 'female' || s === 'сука' || s === 'с') return 'f'
+  if (s === 'm' || s === 'male' || s === 'кобель' || s === 'к') return 'm'
+  return null
+}
+
+export function matchesSexFilter(sex?: string | null, filterSex?: string): boolean {
+  if (!filterSex) return true
+  return normalizeSex(sex) === filterSex
 }
 
 /** @deprecated kept for imports; Elo list no longer excludes short careers */
@@ -139,6 +153,7 @@ export function filterCombinedRanking(
     if (!matchesSearch(dog, params.searchQuery)) return false
     if (!matchesMinStartsFilter(dog, params.filterMinStarts)) return false
     if (!matchesBreedFilter(dog.breed, params.filterBreed)) return false
+    if (!matchesSexFilter(dog.sex, params.filterSex)) return false
 
     if (params.filterScoreFrom) {
       const threshold = parseFloat(params.filterScoreFrom)
@@ -171,6 +186,7 @@ export function filterSpeed<
     name_lat?: string
     name_ru?: string
     breed?: string
+    sex?: string | null
     total_starts?: number
     best_speed?: number
     avg_speed?: number
@@ -186,6 +202,7 @@ export function filterSpeed<
     if (!matchesSearch(dog, params.searchQuery)) return false
     if (!matchesMinStartsFilter(dog, params.filterMinStarts)) return false
     if (!matchesBreedFilter(dog.breed, params.filterBreed)) return false
+    if (!matchesSexFilter(dog.sex, params.filterSex)) return false
 
     if (params.filterSpeedFrom) {
       const speedValue = dog.best_speed
@@ -218,6 +235,7 @@ export function filterPlacement<
     if (!matchesSearch(dog, params.searchQuery)) return false
     if (!matchesMinStartsFilter(dog, params.filterMinStarts)) return false
     if (!matchesBreedFilter(dog.breed, params.filterBreed)) return false
+    if (!matchesSexFilter(dog.sex, params.filterSex)) return false
     return true
   })
 }
@@ -228,6 +246,7 @@ export function filterScore<
     name_lat?: string
     name_ru?: string
     breed?: string
+    sex?: string | null
     total_starts?: number
     best_score?: number
     best_judge_score?: number
@@ -238,6 +257,7 @@ export function filterScore<
     if (!matchesSearch(dog, params.searchQuery)) return false
     if (!matchesMinStartsFilter(dog, params.filterMinStarts)) return false
     if (!matchesBreedFilter(dog.breed, params.filterBreed)) return false
+    if (!matchesSexFilter(dog.sex, params.filterSex)) return false
     if (params.filterScoreFrom) {
       const threshold = parseFloat(params.filterScoreFrom)
       const scoreValue = ratingScoreFromRow(dog as Record<string, unknown>)

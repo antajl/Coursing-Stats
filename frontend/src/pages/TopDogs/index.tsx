@@ -31,6 +31,7 @@ export default function TopDogs() {
 
   const [filterYear, setFilterYear] = useState(() => initialSeasonYearFilter(searchParams, DEFAULT_ACTIVE_SEASON))
   const [filterBreed, setFilterBreed] = useState(() => searchParams.get('breed') || '')
+  const [filterSex, setFilterSex] = useState(() => searchParams.get('sex') || '')
   const [searchQuery, setSearchQuery] = useState(() => searchParams.get('search') || '')
   const [isInitialLoad, setIsInitialLoad] = useState(true)
 
@@ -39,10 +40,10 @@ export default function TopDogs() {
   const [filterSpeedFrom, setFilterSpeedFrom] = useState(() => searchParams.get('speedFrom') || '')
 
   useEffect(() => {
-    if (filterYear || filterBreed || searchQuery || filterMinStarts || filterScoreFrom || filterSpeedFrom) {
+    if (filterYear || filterBreed || filterSex || searchQuery || filterMinStarts || filterScoreFrom || filterSpeedFrom) {
       reachGoal('filter_used')
     }
-  }, [filterYear, filterBreed, searchQuery, filterMinStarts, filterScoreFrom, filterSpeedFrom, reachGoal])
+  }, [filterYear, filterBreed, filterSex, searchQuery, filterMinStarts, filterScoreFrom, filterSpeedFrom, reachGoal])
 
   useEffect(() => {
     if (searchQuery) {
@@ -103,6 +104,14 @@ export default function TopDogs() {
           changed = true
         }
 
+        // Sex
+        const currentSex = next.get('sex') || ''
+        if (filterSex !== currentSex) {
+          if (filterSex) next.set('sex', filterSex)
+          else next.delete('sex')
+          changed = true
+        }
+
         // Year
         const currentYear = next.get('year')
         const targetYearParam =
@@ -151,6 +160,7 @@ export default function TopDogs() {
     )
   }, [
     filterBreed,
+    filterSex,
     filterYear,
     searchQuery,
     filterMinStarts,
@@ -165,6 +175,11 @@ export default function TopDogs() {
     const breedFromUrl = searchParams.get('breed') || ''
     if (breedFromUrl !== filterBreed) {
       setFilterBreed(breedFromUrl)
+    }
+
+    const sexFromUrl = searchParams.get('sex') || ''
+    if (sexFromUrl !== filterSex) {
+      setFilterSex(sexFromUrl)
     }
 
     const yearFromUrl = searchParams.get('year')
@@ -189,6 +204,7 @@ export default function TopDogs() {
     filterScoreFrom,
     filterSpeedFrom,
     filterBreed,
+    filterSex,
   }
 
   const combinedRanking = useMemo(
@@ -217,6 +233,7 @@ export default function TopDogs() {
   const handleResetFilters = useCallback(() => {
     setFilterYear(activeSeason)
     setFilterBreed('')
+    setFilterSex('')
     setSearchQuery('')
     setFilterMinStarts('')
     setFilterScoreFrom('')
@@ -226,6 +243,7 @@ export default function TopDogs() {
   const handleResetPanelFilters = useCallback(() => {
     setFilterYear(activeSeason)
     setFilterBreed('')
+    setFilterSex('')
     setFilterMinStarts('')
     setFilterScoreFrom('')
     setFilterSpeedFrom('')
@@ -257,6 +275,8 @@ export default function TopDogs() {
         filterBreed={filterBreed}
         onBreedChange={setFilterBreed}
         breedValues={breedValues}
+        filterSex={filterSex}
+        onSexChange={setFilterSex}
         dogIndex={dogIndex}
         filterMinStarts={filterMinStarts}
         onMinStartsChange={setFilterMinStarts}
