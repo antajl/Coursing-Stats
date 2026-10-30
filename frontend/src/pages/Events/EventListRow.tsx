@@ -48,20 +48,23 @@ const DISCIPLINE_BADGE_STYLE: Record<
   },
 }
 
-function resolveDisciplineLabel(eventType: string, rawText?: string, isClubComp?: boolean): string {
-  if (isClubComp) return 'Клубный'
-  const text = (rawText || '').trim().toLowerCase()
+function resolveDisciplineLabel(event: CalendarEvent, eventType: string, rawText?: string): string {
+  const text = [
+    rawText || '',
+    event.competition_type || '',
+    event.rank_label || '',
+    event.title || '',
+  ]
+    .join(' ')
+    .trim()
+    .toLowerCase()
   if (text.includes('бзмп') || eventType === 'bzmp') return 'БЗМП'
-  if (text.includes('рейсинг') || text.includes('бега') || eventType === 'racing') return 'Рейсинг'
+  if (text.includes('рейсинг') || text.includes('бега') || text.includes('бегам') || eventType === 'racing') return 'Рейсинг'
   if (text.includes('курсинг') || eventType === 'coursing') return 'Курсинг'
   return DISCIPLINE_BADGE_STYLE[eventType]?.label || 'Другие'
 }
 
 export default function EventListRow({ event }: EventListRowProps) {
-  const isClubComp =
-    event.competition_kind === 'Клубный чемпионат' ||
-    Boolean(event.title?.includes('Клубный чемпионат')) ||
-    [2026004, 2022001, 2026005].includes(Number(event.id))
   const important = isImportantCompetition(event.competition_kind)
   const eventType = getEventDiscipline(event)
   const borderClass = DISCIPLINE_BORDER[eventType] || DISCIPLINE_BORDER.default
@@ -86,9 +89,9 @@ export default function EventListRow({ event }: EventListRowProps) {
   const headlineParts = rawHeadline.split(' · ')
   const titleText = headlineParts[0] || rawHeadline
   const specificDiscipline = resolveDisciplineLabel(
+    event,
     eventType,
     headlineParts.length > 1 ? headlineParts.slice(1).join(' · ') : undefined,
-    isClubComp,
   )
 
   const rowClassName = `group block rounded-xl border border-old-money-200/90 border-l-4 ${borderClass} bg-cream-50 p-2.5 sm:px-4 sm:py-3 mb-2.5 transition-all duration-200 hover:border-camel-400 hover:shadow-xs hover:bg-cream-100/50 ${
@@ -161,11 +164,6 @@ export default function EventListRow({ event }: EventListRowProps) {
 
           {/* На мобильных локация и клуб выводятся здесь под названием */}
           <div className="sm:hidden mt-1 flex flex-col gap-0.5 text-left">
-            {isClubComp && (
-              <div className="text-[11px] font-semibold text-amber-800 leading-tight">
-                Клубный чемпионат Донино
-              </div>
-            )}
             {event.location && (
               <div className="text-xs font-semibold text-charcoal-800 leading-tight">
                 {event.location}
@@ -179,16 +177,9 @@ export default function EventListRow({ event }: EventListRowProps) {
           </div>
 
           {/* На десктопе под названием выводится клуб-организатор */}
-          {(event.host_club || isClubComp) && (
+          {event.host_club && (
             <div className="hidden sm:block mt-1 text-[11px] text-charcoal-500 leading-tight truncate">
-              {isClubComp ? (
-                <>
-                  <span className="font-semibold text-amber-800 mr-1.5">Клубный чемпионат Донино</span>
-                  {event.host_club && <span>· {event.host_club}</span>}
-                </>
-              ) : (
-                event.host_club
-              )}
+              {event.host_club}
             </div>
           )}
         </div>
