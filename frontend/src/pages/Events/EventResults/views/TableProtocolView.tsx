@@ -105,30 +105,6 @@ export default function TableProtocolView({
   return (
     <div className="overflow-x-auto rounded-xl border border-old-money-200/90 bg-white shadow-2xs">
       <table className="w-full text-left text-xs border-collapse">
-        {/* Строго одна компактная строка заголовка таблицы */}
-        <thead className="bg-cream-100/90 border-b border-old-money-200 text-charcoal-700 font-semibold select-none">
-          <tr>
-            <th className="w-12 py-2 px-2 text-center">Место</th>
-            <th className="w-12 py-2 px-1 text-center text-charcoal-400">№ кат.</th>
-            <th className="py-2 px-3 min-w-[210px]">Кличка собаки</th>
-            <th className="w-28 py-2 px-2 hidden sm:table-cell">Класс / Лига</th>
-            {Array.from({ length: maxHeats }).map((_, i) => (
-              <th
-                key={i}
-                className="py-2 px-3 text-left whitespace-nowrap min-w-[190px]"
-              >
-                {i + 1} круг
-              </th>
-            ))}
-            <th className="w-24 py-2 px-3 text-right">
-              {isRacing ? 'Лучшее' : 'Итог'}
-            </th>
-            <th className="w-36 py-2 px-3 hidden md:table-cell">
-              Квалификация / Переход
-            </th>
-          </tr>
-        </thead>
-
         <tbody className="divide-y divide-old-money-100/70">
           {results.map((result, idx) => {
             const rawScores = parseRawScores(result.raw_scores_json)
