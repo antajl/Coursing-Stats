@@ -5,16 +5,19 @@ import {
   Award,
   ArrowUpRight,
   ArrowDownRight,
-  Search,
-  Filter,
-  Clock,
   ChevronDown,
   ChevronUp,
   ShieldCheck,
-  Zap,
+  Clock,
+  X,
 } from 'lucide-react'
 import DogSexIcon from '../../components/DogSexIcon'
 import OwnerCrownName from '../../components/OwnerCrownName'
+import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
+import ModernDropdown from '../../components/ui/ModernDropdown'
+import BreedSearchDropdown from '../../components/ui/BreedSearchDropdown'
+import { toolbarPillTriggerClass } from '../../lib/toolbar'
+import { formatBreedName } from '../../lib/breedMapping'
 import { toDogTitleCase } from '../../lib/dogName'
 import type { ChampionshipStanding, ChampionshipPromotion } from '../../lib/staticData/donino'
 
@@ -34,7 +37,8 @@ export default function ChampionshipStandingsTab({
 }: ChampionshipStandingsTabProps) {
   const [selectedLeague, setSelectedLeague] = useState<LeagueFilter>('all')
   const [searchQuery, setSearchQuery] = useState('')
-  const [selectedBreed, setSelectedBreed] = useState('all')
+  const [selectedBreed, setSelectedBreed] = useState('')
+  const [leagueDropdownOpen, setLeagueDropdownOpen] = useState(false)
   const [expandedDogKey, setExpandedDogKey] = useState<string | null>(null)
   const [showPromotions, setShowPromotions] = useState(false)
 
@@ -47,6 +51,17 @@ export default function ChampionshipStandingsTab({
     return Array.from(set).sort((a, b) => a.localeCompare(b, 'ru'))
   }, [standings])
 
+  // Counts by league
+  const leagueCounts = useMemo(() => {
+    return {
+      all: standings.length,
+      Абсолют: standings.filter((d) => d.current_league === 'Абсолют').length,
+      Чемпионов: standings.filter((d) => d.current_league === 'Чемпионов').length,
+      Прогресс: standings.filter((d) => d.current_league === 'Прогресс').length,
+      Юниоры: standings.filter((d) => d.current_league === 'Юниоры').length,
+    }
+  }, [standings])
+
   // Filtered standings
   const filtered = useMemo(() => {
     const q = searchQuery.trim().toLowerCase()
@@ -54,7 +69,7 @@ export default function ChampionshipStandingsTab({
       if (selectedLeague !== 'all' && d.current_league !== selectedLeague) {
         return false
       }
-      if (selectedBreed !== 'all' && d.breed !== selectedBreed) {
+      if (selectedBreed && d.breed !== selectedBreed) {
         return false
       }
       if (q) {
@@ -69,55 +84,149 @@ export default function ChampionshipStandingsTab({
     })
   }, [standings, selectedLeague, selectedBreed, searchQuery])
 
-  // Counts by league
-  const leagueCounts = useMemo(() => {
-    return {
-      all: standings.length,
-      Абсолют: standings.filter((d) => d.current_league === 'Абсолют').length,
-      Чемпионов: standings.filter((d) => d.current_league === 'Чемпионов').length,
-      Прогресс: standings.filter((d) => d.current_league === 'Прогресс').length,
-      Юниоры: standings.filter((d) => d.current_league === 'Юниоры').length,
-    }
-  }, [standings])
+  const hasActiveFilters = Boolean(
+    selectedLeague !== 'all' || selectedBreed || searchQuery.trim()
+  )
+
+  const handleResetFilters = () => {
+    setSelectedLeague('all')
+    setSelectedBreed('')
+    setSearchQuery('')
+  }
 
   const toggleExpand = (dogKey: string) => {
     setExpandedDogKey((prev) => (prev === dogKey ? null : dogKey))
   }
 
+  const totalPromotions =
+    promotions.after_stage_1.length + promotions.after_stage_2.length
+
   return (
-    <div className="space-y-6">
-      {/* Banner / Promotions Toggle */}
-      <div className="rounded-2xl border border-old-money-200 bg-cream-50/80 p-4 sm:p-5 shadow-xs">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-camel-500/15 border border-camel-400/40 flex items-center justify-center text-camel-700 shrink-0">
-              <Trophy className="w-5 h-5" />
-            </div>
-            <div>
-              <h2 className="text-base font-serif font-bold text-charcoal-900">
-                Турнирная таблица и статус участников
-              </h2>
-              <p className="text-xs text-charcoal-600">
-                Лиги обновляются по итогам каждого этапа согласно правилам переходов (1 победа — вверх, 3 поражения — вниз)
-              </p>
-            </div>
+    <div className="space-y-4">
+      {/* 1. Toolbar: Search, League Dropdown, Breed Dropdown, Reset, Promotions Button */}
+      <div className="rounded-2xl border border-old-money-200 bg-cream-50/80 p-2 sm:p-2.5 shadow-2xs">
+        <div className="flex flex-wrap items-center gap-2">
+          {/* Search (same as in ranking) */}
+          <div className="shrink-0">
+            <ToolbarSearch
+              value={searchQuery}
+              onChange={setSearchQuery}
+              placeholder="Кличка или порода…"
+            />
           </div>
-          <button
-            type="button"
-            onClick={() => setShowPromotions(!showPromotions)}
-            className="inline-flex min-h-[44px] items-center justify-center gap-2 px-4 py-2 text-xs font-semibold rounded-xl border border-camel-400/60 bg-cream-100 hover:bg-cream-200 text-charcoal-900 transition-colors cursor-pointer self-start sm:self-auto"
-          >
-            <ShieldCheck className="w-4 h-4 text-camel-700" />
-            <span>Хроника переходов ({promotions.after_stage_1.length + promotions.after_stage_2.length})</span>
-            {showPromotions ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-          </button>
+
+          {/* League Dropdown */}
+          <div className="shrink-0">
+            <ModernDropdown
+              trigger={
+                <button
+                  type="button"
+                  className={`shrink-0 ${toolbarPillTriggerClass(selectedLeague !== 'all')}`}
+                >
+                  <span className="truncate max-w-[125px]">
+                    {selectedLeague === 'all'
+                      ? 'Все лиги'
+                      : `Лига «${selectedLeague}»`}
+                  </span>
+                  <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
+                </button>
+              }
+              isOpen={leagueDropdownOpen}
+              onOpenChange={setLeagueDropdownOpen}
+              width="190px"
+            >
+              <div className="p-1 space-y-0.5">
+                {(['all', 'Абсолют', 'Чемпионов', 'Прогресс', 'Юниоры'] as const).map(
+                  (l) => {
+                    const isSel = selectedLeague === l
+                    const label = l === 'all' ? 'Все лиги' : `Лига «${l}»`
+                    return (
+                      <button
+                        key={l}
+                        type="button"
+                        onClick={() => {
+                          setSelectedLeague(l)
+                          setLeagueDropdownOpen(false)
+                        }}
+                        className={`w-full text-left px-3 py-2 rounded-lg text-xs font-semibold flex items-center justify-between cursor-pointer transition-colors ${
+                          isSel
+                            ? 'bg-camel-500/20 text-charcoal-900 font-bold'
+                            : 'text-charcoal-700 hover:bg-cream-100'
+                        }`}
+                      >
+                        <span>{label}</span>
+                        <span className="text-[10px] text-charcoal-500 font-normal">
+                          ({leagueCounts[l]})
+                        </span>
+                      </button>
+                    )
+                  }
+                )}
+              </div>
+            </ModernDropdown>
+          </div>
+
+          {/* Breed Dropdown (same as in ranking) */}
+          <div className="shrink-0">
+            <BreedSearchDropdown
+              breeds={breeds}
+              selectedBreed={selectedBreed}
+              onSelect={(b) => setSelectedBreed(b || '')}
+              trigger={
+                <button
+                  type="button"
+                  className={`shrink-0 ${toolbarPillTriggerClass(Boolean(selectedBreed))}`}
+                >
+                  <span className="truncate max-w-[120px]">
+                    {selectedBreed ? formatBreedName(selectedBreed) : 'Порода'}
+                  </span>
+                  <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
+                </button>
+              }
+            />
+          </div>
+
+          {/* Reset Filters */}
+          {hasActiveFilters && (
+            <button
+              type="button"
+              onClick={handleResetFilters}
+              className="relative shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full border border-old-money-200 bg-cream-50 text-charcoal-500 hover:text-charcoal-800 hover:bg-cream-100 transition-colors cursor-pointer"
+              title="Сбросить фильтры"
+              aria-label="Сбросить фильтры"
+            >
+              <X className="h-4 w-4" />
+            </button>
+          )}
+
+          {/* Right: Promotions Chronicle Button */}
+          <div className="ml-auto shrink-0">
+            <button
+              type="button"
+              onClick={() => setShowPromotions(!showPromotions)}
+              className={`inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full border px-3 text-xs font-semibold transition-all cursor-pointer shadow-2xs ${
+                showPromotions
+                  ? 'border-camel-500 bg-camel-500/20 text-charcoal-900 font-bold'
+                  : 'border-old-money-200 bg-cream-50 text-charcoal-700 hover:border-camel-400 hover:bg-cream-100'
+              }`}
+              title="Хроника переходов между лигами"
+            >
+              <ShieldCheck className="w-3.5 h-3.5 text-camel-700" />
+              <span>Переходы ({totalPromotions})</span>
+              {showPromotions ? (
+                <ChevronUp className="w-3.5 h-3.5 text-charcoal-600" />
+              ) : (
+                <ChevronDown className="w-3.5 h-3.5 text-charcoal-400" />
+              )}
+            </button>
+          </div>
         </div>
 
-        {/* Promotions collapsible section */}
+        {/* Collapsible Promotions Box */}
         {showPromotions && (
-          <div className="mt-4 pt-4 border-t border-old-money-200 grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="mt-3 pt-3 border-t border-old-money-200 grid grid-cols-1 md:grid-cols-2 gap-3">
             {/* After Stage 2 */}
-            <div className="bg-cream-100/60 rounded-xl p-3.5 border border-old-money-200">
+            <div className="bg-cream-100/70 rounded-xl p-3 border border-old-money-200">
               <div className="flex items-center justify-between mb-2">
                 <span className="text-xs font-bold font-serif text-charcoal-900">
                   Переходы после II этапа (к III этапу)
@@ -148,7 +257,7 @@ export default function ChampionshipStandingsTab({
             </div>
 
             {/* After Stage 1 */}
-            <div className="bg-cream-100/60 rounded-xl p-3.5 border border-old-money-200">
+            <div className="bg-cream-100/70 rounded-xl p-3 border border-old-money-200">
               <div className="flex items-center justify-between mb-2">
                 <span className="text-xs font-bold font-serif text-charcoal-900">
                   Переходы после I этапа (ко II этапу)
@@ -181,74 +290,8 @@ export default function ChampionshipStandingsTab({
         )}
       </div>
 
-      {/* Filter and Search Bar */}
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-center justify-between">
-        {/* League Selector Pills */}
-        <div className="flex flex-wrap gap-1.5" role="tablist" aria-label="Фильтр по лигам">
-          {(['all', 'Абсолют', 'Чемпионов', 'Прогресс', 'Юниоры'] as const).map((l) => {
-            const isActive = selectedLeague === l
-            const label = l === 'all' ? 'Все лиги' : `Лига «${l}»`
-            const count = leagueCounts[l]
-            return (
-              <button
-                key={l}
-                type="button"
-                onClick={() => setSelectedLeague(l)}
-                className={`min-h-[44px] px-3.5 py-2 rounded-xl text-xs font-semibold transition-all cursor-pointer flex items-center gap-1.5 border ${
-                  isActive
-                    ? 'bg-charcoal-900 text-cream-50 border-charcoal-900 shadow-xs'
-                    : 'bg-cream-50 text-charcoal-700 border-old-money-300 hover:bg-cream-100 hover:text-charcoal-900'
-                }`}
-              >
-                <span>{label}</span>
-                <span
-                  className={`text-[10px] px-1.5 py-0.5 rounded-full ${
-                    isActive ? 'bg-charcoal-800 text-cream-100' : 'bg-old-money-200/70 text-charcoal-600'
-                  }`}
-                >
-                  {count}
-                </span>
-              </button>
-            )
-          })}
-        </div>
-
-        {/* Search & Breed Filter Controls */}
-        <div className="flex flex-wrap items-center gap-2">
-          {/* Search Input */}
-          <div className="relative min-w-[200px] flex-1 sm:flex-initial">
-            <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-charcoal-400 pointer-events-none" />
-            <input
-              type="text"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Поиск собаки или породы..."
-              className="w-full min-h-[44px] pl-9 pr-3 py-2 text-xs rounded-xl border border-old-money-300 bg-cream-50 text-charcoal-900 placeholder:text-charcoal-400 focus:outline-hidden focus:ring-1 focus:ring-camel-600 focus:border-camel-600"
-            />
-          </div>
-
-          {/* Breed Dropdown */}
-          <div className="relative">
-            <select
-              value={selectedBreed}
-              onChange={(e) => setSelectedBreed(e.target.value)}
-              className="min-h-[44px] pl-3 pr-8 py-2 text-xs rounded-xl border border-old-money-300 bg-cream-50 text-charcoal-900 focus:outline-hidden focus:ring-1 focus:ring-camel-600 focus:border-camel-600 cursor-pointer appearance-none"
-              aria-label="Фильтр по породе"
-            >
-              <option value="all">Все породы ({breeds.length})</option>
-              {breeds.map((b) => (
-                <option key={b} value={b}>
-                  {b}
-                </option>
-              ))}
-            </select>
-            <ChevronDown className="w-3.5 h-3.5 absolute right-2.5 top-1/2 -translate-y-1/2 text-charcoal-400 pointer-events-none" />
-          </div>
-        </div>
-      </div>
-
-      {/* Standings Cards List */}
-      <div className="space-y-2.5">
+      {/* 2. Standings Cards List */}
+      <div className="space-y-2">
         <div className="text-xs text-charcoal-600 px-1 flex items-center justify-between">
           <span>
             Показано: <strong className="text-charcoal-900">{filtered.length}</strong> из{' '}
@@ -280,15 +323,33 @@ export default function ChampionshipStandingsTab({
               leagueBadgeClass = 'bg-emerald-100 text-emerald-900 border-emerald-300'
             }
 
+            // Natural Russian promotion label (instead of "лифт вверх")
+            let promotionLabelText = ''
+            if (dog.status_badge === 'promoted_up') {
+              if (dog.current_league === 'Абсолют') {
+                promotionLabelText = 'В Абсолют'
+              } else if (dog.current_league === 'Чемпионов') {
+                promotionLabelText = 'В Чемпионы'
+              } else {
+                promotionLabelText = 'Повышение'
+              }
+            } else if (dog.status_badge === 'relegated_down') {
+              if (dog.current_league === 'Прогресс') {
+                promotionLabelText = 'В Прогресс'
+              } else {
+                promotionLabelText = 'Понижение'
+              }
+            }
+
             return (
               <div
                 key={dog.dog_key}
-                className="rounded-2xl border border-old-money-200 bg-cream-50 hover:bg-cream-100/70 transition-all overflow-hidden"
+                className="rounded-xl border border-old-money-200 bg-cream-50 hover:bg-cream-100/70 transition-all overflow-hidden shadow-2xs"
               >
                 {/* Main Row */}
                 <div
                   onClick={() => toggleExpand(dog.dog_key)}
-                  className="p-3.5 sm:p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 cursor-pointer select-none"
+                  className="p-3 sm:px-4 sm:py-3 flex flex-col sm:flex-row sm:items-center justify-between gap-3 cursor-pointer select-none"
                 >
                   {/* Left: Dog info */}
                   <div className="flex items-start gap-3 min-w-0">
@@ -311,7 +372,7 @@ export default function ChampionshipStandingsTab({
                       <div className="flex flex-wrap items-center gap-2 text-xs text-charcoal-600 mt-0.5">
                         <span className="font-medium">{dog.breed}</span>
                         <span className="text-old-money-300">·</span>
-                        <span>Этапов: {dog.stages_count}</span>
+                        <span>{dog.stages_count} заб.</span>
                         {dog.wins_count > 0 && (
                           <>
                             <span className="text-old-money-300">·</span>
@@ -325,49 +386,73 @@ export default function ChampionshipStandingsTab({
                     </div>
                   </div>
 
-                  {/* Right: Badges & Best Time */}
+                  {/* Right: Badges & Best Time (formatted as Racing in rating) */}
                   <div className="flex items-center justify-between sm:justify-end gap-3 shrink-0 pt-2 sm:pt-0 border-t sm:border-t-0 border-old-money-200/50">
                     {/* Status & League Badge */}
                     <div className="flex items-center gap-1.5 flex-wrap">
                       <span
-                        className={`inline-flex items-center px-2.5 py-1 rounded-lg text-xs border ${leagueBadgeClass}`}
+                        className={`inline-flex items-center px-2 py-0.5 rounded-lg text-xs border ${leagueBadgeClass}`}
                       >
-                        {dog.current_league === 'Абсолют' && <Award className="w-3.5 h-3.5 mr-1 text-amber-700" />}
+                        {dog.current_league === 'Абсолют' && (
+                          <Award className="w-3.5 h-3.5 mr-1 text-amber-700" />
+                        )}
                         Лига {dog.current_league}
                       </span>
 
                       {dog.status_badge === 'promoted_up' && (
-                        <span className="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-md text-[11px] font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200">
+                        <span
+                          title={dog.promotion_label || 'Переход в следующую лигу'}
+                          className="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-md text-[11px] font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200"
+                        >
                           <ArrowUpRight className="w-3 h-3 text-emerald-600" />
-                          <span>Лифт вверх</span>
+                          <span>{promotionLabelText}</span>
                         </span>
                       )}
 
                       {dog.status_badge === 'relegated_down' && (
-                        <span className="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-md text-[11px] font-semibold bg-rose-50 text-rose-800 border border-rose-200">
+                        <span
+                          title={dog.promotion_label || 'Переход в предыдущую лигу'}
+                          className="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-md text-[11px] font-semibold bg-rose-50 text-rose-800 border border-rose-200"
+                        >
                           <ArrowDownRight className="w-3 h-3 text-rose-600" />
-                          <span>Лифт вниз</span>
+                          <span>{promotionLabelText}</span>
                         </span>
                       )}
                     </div>
 
-                    {/* Best Time */}
-                    <div className="text-right pl-2">
-                      <div className="text-xs text-charcoal-500">Лучшее время</div>
-                      <div className="font-mono text-sm sm:text-base font-bold text-charcoal-900">
-                        {dog.best_time ? `${dog.best_time.toFixed(2)} с` : '—'}
+                    {/* Best Time — Racing Style from Ranking */}
+                    <div className="flex items-center gap-2 sm:gap-3 pl-2 shrink-0">
+                      <div className="text-right">
+                        <div className="flex items-center justify-end gap-1 sm:gap-1.5 leading-none whitespace-nowrap">
+                          <span className="text-base sm:text-lg font-bold tabular-nums text-camel-700 leading-none">
+                            {dog.best_time ? dog.best_time.toFixed(2) : '—'}
+                          </span>
+                          {dog.best_time && (
+                            <span className="flex flex-col text-[7.5px] sm:text-[8px] font-semibold uppercase tracking-wide text-charcoal-500 leading-[1.1]">
+                              <span>лучш.</span>
+                              <span>сек</span>
+                            </span>
+                          )}
+                        </div>
+                        <div className="text-[10px] text-charcoal-500 mt-0.5">
+                          {dog.stages_count} заб.
+                        </div>
                       </div>
-                    </div>
 
-                    <div className="text-charcoal-400 pl-1">
-                      {isExpanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+                      <div className="text-charcoal-400 pl-0.5">
+                        {isExpanded ? (
+                          <ChevronUp className="w-4 h-4" />
+                        ) : (
+                          <ChevronDown className="w-4 h-4" />
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>
 
                 {/* Expanded Stage History */}
                 {isExpanded && (
-                  <div className="p-3.5 sm:p-4 bg-cream-100/80 border-t border-old-money-200 space-y-2">
+                  <div className="p-3 sm:p-4 bg-cream-100/80 border-t border-old-money-200 space-y-2">
                     <div className="text-xs font-semibold text-charcoal-700 flex items-center gap-1.5">
                       <Clock className="w-3.5 h-3.5 text-camel-700" />
                       <span>История выступлений на этапах:</span>
@@ -381,7 +466,12 @@ export default function ChampionshipStandingsTab({
                         >
                           <div>
                             <div className="font-bold text-charcoal-900">
-                              {h.stage_num === 1 ? 'I этап' : h.stage_num === 2 ? 'II этап' : 'III этап'} ({h.date})
+                              {h.stage_num === 1
+                                ? 'I этап'
+                                : h.stage_num === 2
+                                ? 'II этап'
+                                : 'III этап'}{' '}
+                              ({h.date})
                             </div>
                             <div className="text-[11px] text-charcoal-600">{h.breed_class}</div>
                           </div>
