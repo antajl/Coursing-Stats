@@ -76,14 +76,14 @@ function CoursingHeatBadge({
           ? 'bg-white text-charcoal-900 border-old-money-300'
           : 'bg-old-money-100 text-charcoal-800 border-old-money-300'
 
-  const label = heatNumber != null ? `№${heatNumber}` : '—'
+  const label = heatNumber != null ? String(heatNumber) : '—'
   const colorName = normalized ? (BIB_COLOR_LABELS[normalized] || normalized) : 'Попона'
-  const tooltipText = `${colorName} · Забег ${label}${distance ? ` (${distance}м)` : ''}`
+  const tooltipText = `${colorName} · Забег №${label}${distance ? ` (${distance}м)` : ''}`
 
   return (
     <HoverTooltip label={tooltipText} placement="top" portal delayMs={0}>
       <span
-        className={`inline-flex items-center justify-center rounded px-1.5 py-0.5 text-xs font-mono font-bold border shadow-2xs cursor-help select-none shrink-0 ${colorClass}`}
+        className={`inline-flex items-center justify-center min-w-[1.5rem] h-5.5 rounded px-1.5 py-0.5 text-xs font-mono font-bold border shadow-2xs cursor-help select-none shrink-0 ${colorClass}`}
       >
         <span>{label}</span>
       </span>
