@@ -18,6 +18,7 @@ import SkeletonLoader from '../../components/SkeletonLoader'
 import {
   getDoninoChampionship,
   type ChampionshipData,
+  type ChampionshipStage,
 } from '../../lib/staticData/donino'
 import ChampionshipStandingsTab from './ChampionshipStandingsTab'
 import ChampionshipStageTab from './ChampionshipStageTab'
@@ -25,6 +26,15 @@ import ChampionshipRulesTab from './ChampionshipRulesTab'
 import ChampionshipStatsTab from './ChampionshipStatsTab'
 
 type MainTab = 'standings' | 'analytics' | 'stage1' | 'stage2' | 'stage3' | 'rules'
+
+function formatDogsCount(count: number): string {
+  const mod10 = count % 10
+  const mod100 = count % 100
+  if (mod100 >= 11 && mod100 <= 19) return `${count} собак`
+  if (mod10 === 1) return `${count} собака`
+  if (mod10 >= 2 && mod10 <= 4) return `${count} собаки`
+  return `${count} собак`
+}
 
 export default function DoninoChampionship() {
   const [searchParams, setSearchParams] = useSearchParams()
@@ -101,6 +111,68 @@ export default function DoninoChampionship() {
   const stage2 = data?.stages.find((s) => s.stage_num === 2)
   const stage3 = data?.stages.find((s) => s.stage_num === 3)
 
+  // Dynamic header stats based on active tab
+  const activeStats = useMemo(() => {
+    if (!data) return null
+
+    let stage: ChampionshipStage | undefined
+    let stageTitle = ''
+    if (activeTab === 'stage1') {
+      stage = stage1
+      stageTitle = 'I этап'
+    } else if (activeTab === 'stage2') {
+      stage = stage2
+      stageTitle = 'II этап'
+    } else if (activeTab === 'stage3') {
+      stage = stage3
+      stageTitle = 'III этап'
+    }
+
+    if (stage) {
+      if (stage.results && stage.results.length > 0) {
+        let absolut = 0
+        let champions = 0
+        let progress = 0
+        let juniors = 0
+
+        for (const r of stage.results) {
+          if (r.league === 'Абсолют') absolut++
+          else if (r.league === 'Чемпионов') champions++
+          else if (r.league === 'Прогресс') progress++
+          else if (r.league === 'Юниоры') juniors++
+        }
+
+        return {
+          title: `${stageTitle} (${formatDogsCount(stage.results.length)}):`,
+          absolut,
+          champions,
+          progress,
+          juniors,
+          isUpcoming: false,
+        }
+      }
+
+      return {
+        title: `${stageTitle}: 31 октября 2026 (ожидаются результаты)`,
+        absolut: 0,
+        champions: 0,
+        progress: 0,
+        juniors: 0,
+        isUpcoming: true,
+      }
+    }
+
+    // Default for 'standings', 'analytics', 'rules' -> Full season stats
+    return {
+      title: `Всего: ${formatDogsCount(data.stats.total_dogs_participated)}:`,
+      absolut: data.stats.dogs_in_absolut,
+      champions: data.stats.dogs_in_champions,
+      progress: data.stats.dogs_in_progress,
+      juniors: data.stats.dogs_in_juniors,
+      isUpcoming: false,
+    }
+  }, [data, activeTab, stage1, stage2, stage3])
+
   return (
     <>
       <h1 className="sr-only">
@@ -134,23 +206,33 @@ export default function DoninoChampionship() {
               </span>
             </div>
 
-            {/* Compact inline statistics */}
-            {data && (
+            {/* Dynamic inline statistics depending on tab */}
+            {activeStats && (
               <div className="flex items-center gap-1.5 text-xs text-charcoal-600 flex-wrap">
-                <span className="font-semibold text-charcoal-800">{data.stats.total_dogs_participated} собак:</span>
-                <span className="px-2 py-0.5 rounded bg-amber-50 text-amber-950 font-medium border border-amber-200 text-[11px]">
-                  Абсолют <b>{data.stats.dogs_in_absolut}</b>
-                </span>
-                <span className="px-2 py-0.5 rounded bg-cream-100 text-charcoal-800 font-medium border border-old-money-200 text-[11px]">
-                  Чемпионов <b>{data.stats.dogs_in_champions}</b>
-                </span>
-                <span className="px-2 py-0.5 rounded bg-cream-100 text-charcoal-800 font-medium border border-old-money-200 text-[11px]">
-                  Прогресс <b>{data.stats.dogs_in_progress}</b>
-                </span>
-                {data.stats.dogs_in_juniors > 0 && (
-                  <span className="px-2 py-0.5 rounded bg-sky-50 text-sky-900 font-medium border border-sky-200 text-[11px]">
-                    Юниоры <b>{data.stats.dogs_in_juniors}</b>
-                  </span>
+                <span className="font-semibold text-charcoal-800">{activeStats.title}</span>
+                {!activeStats.isUpcoming && (
+                  <>
+                    {activeStats.absolut > 0 && (
+                      <span className="px-2 py-0.5 rounded bg-amber-50 text-amber-950 font-medium border border-amber-200 text-[11px]">
+                        Абсолют <b>{activeStats.absolut}</b>
+                      </span>
+                    )}
+                    {activeStats.champions > 0 && (
+                      <span className="px-2 py-0.5 rounded bg-cream-100 text-charcoal-800 font-medium border border-old-money-200 text-[11px]">
+                        Чемпионов <b>{activeStats.champions}</b>
+                      </span>
+                    )}
+                    {activeStats.progress > 0 && (
+                      <span className="px-2 py-0.5 rounded bg-cream-100 text-charcoal-800 font-medium border border-old-money-200 text-[11px]">
+                        Прогресс <b>{activeStats.progress}</b>
+                      </span>
+                    )}
+                    {activeStats.juniors > 0 && (
+                      <span className="px-2 py-0.5 rounded bg-sky-50 text-sky-900 font-medium border border-sky-200 text-[11px]">
+                        Юниоры <b>{activeStats.juniors}</b>
+                      </span>
+                    )}
+                  </>
                 )}
               </div>
             )}
@@ -183,10 +265,10 @@ export default function DoninoChampionship() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-old-money-200 bg-cream-50 hover:bg-cream-100 text-xs font-semibold text-charcoal-700 transition-colors shadow-2xs shrink-0"
-              title="Официальная таблица результатов заездов с временами и переходами в лиги"
+              title="Официальная таблица результатов забегов с временами и переходами в лиги"
             >
               <FileSpreadsheet className="w-3.5 h-3.5 text-emerald-700" />
-              <span>Результаты заездов</span>
+              <span>Результаты забегов</span>
               <ExternalLink className="w-3.5 h-3.5 text-charcoal-400" />
             </a>
 

@@ -56,7 +56,7 @@ export default function ChampionshipStandingsTab({
   const [leagueDropdownOpen, setLeagueDropdownOpen] = useState(false)
   const [expandedDogKey, setExpandedDogKey] = useState<string | null>(null)
   const [promotionsExpanded, setPromotionsExpanded] = useState(false)
-  const [sortMode, setSortMode] = useState<'points' | 'time'>('points')
+  const [sortMode, setSortMode] = useState<'points' | 'time'>('time')
 
   // Candidate breeds sorted strictly by participant count descending, then alphabetically
   const candidateBreeds = useMemo(() => {
@@ -295,18 +295,6 @@ export default function ChampionshipStandingsTab({
             <div className="inline-flex items-center p-0.5 rounded-lg bg-cream-100 border border-old-money-200 shadow-2xs self-start sm:self-auto">
               <button
                 type="button"
-                onClick={() => setSortMode('points')}
-                className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs transition-all cursor-pointer ${
-                  sortMode === 'points'
-                    ? 'border border-camel-400 bg-camel-100 text-camel-950 font-bold shadow-2xs'
-                    : 'text-charcoal-600 hover:text-charcoal-900 font-medium'
-                }`}
-              >
-                <Trophy className="w-3.5 h-3.5 text-amber-600 shrink-0" />
-                <span>По очкам</span>
-              </button>
-              <button
-                type="button"
                 onClick={() => setSortMode('time')}
                 className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs transition-all cursor-pointer ${
                   sortMode === 'time'
@@ -316,6 +304,18 @@ export default function ChampionshipStandingsTab({
               >
                 <Timer className="w-3.5 h-3.5 text-camel-700 shrink-0" />
                 <span>По скорости</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => setSortMode('points')}
+                className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs transition-all cursor-pointer ${
+                  sortMode === 'points'
+                    ? 'border border-camel-400 bg-camel-100 text-camel-950 font-bold shadow-2xs'
+                    : 'text-charcoal-600 hover:text-charcoal-900 font-medium'
+                }`}
+              >
+                <Trophy className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+                <span>По очкам</span>
               </button>
             </div>
           </div>
