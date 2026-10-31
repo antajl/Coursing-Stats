@@ -3,13 +3,10 @@ import { Link } from 'react-router-dom'
 import {
   ChevronDown,
   ChevronUp,
-  ShieldCheck,
   Clock,
   X,
-  FileText,
   ExternalLink,
-  Trophy,
-  Timer,
+  FileSpreadsheet,
 } from 'lucide-react'
 import DogSexIcon from '../../components/DogSexIcon'
 import OwnerCrownName from '../../components/OwnerCrownName'
@@ -28,7 +25,8 @@ interface ChampionshipStandingsTabProps {
     after_stage_1: ChampionshipPromotion[]
     after_stage_2: ChampionshipPromotion[]
   }
-  onSelectRulesTab?: () => void
+  resultsSpreadsheetUrl?: string | null
+  pointsSpreadsheetUrl?: string | null
 }
 
 type LeagueFilter = 'all' | 'Абсолют' | 'Чемпионов' | 'Прогресс' | 'Юниоры'
@@ -48,14 +46,14 @@ function formatChampionshipStatus(status: string | null | undefined): string {
 export default function ChampionshipStandingsTab({
   standings,
   promotions,
-  onSelectRulesTab,
+  resultsSpreadsheetUrl,
+  pointsSpreadsheetUrl,
 }: ChampionshipStandingsTabProps) {
   const [selectedLeague, setSelectedLeague] = useState<LeagueFilter>('all')
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedBreed, setSelectedBreed] = useState('')
   const [leagueDropdownOpen, setLeagueDropdownOpen] = useState(false)
   const [expandedDogKey, setExpandedDogKey] = useState<string | null>(null)
-  const [promotionsExpanded, setPromotionsExpanded] = useState(false)
   const [sortMode, setSortMode] = useState<'points' | 'time'>('time')
 
   // Candidate breeds sorted strictly by participant count descending, then alphabetically
@@ -91,16 +89,37 @@ export default function ChampionshipStandingsTab({
     return candidateBreeds.map((b) => b.key)
   }, [candidateBreeds])
 
-  // Counts by league
-  const leagueCounts = useMemo(() => {
+  // Filtered by breed and search query (for dynamic league counts reflecting the breed/query)
+  const breedAndSearchFiltered = useMemo(() => {
+    const q = searchQuery.trim().toLowerCase()
+    return standings.filter((d) => {
+      if (selectedBreed && !matchesBreedFilter(d.breed, selectedBreed)) {
+        return false
+      }
+      if (q) {
+        const { primary } = parseDogName(d.name_lat || d.name, d.name_ru)
+        const nameMatches =
+          primary.toLowerCase().includes(q) ||
+          d.name.toLowerCase().includes(q) ||
+          d.name_ru.toLowerCase().includes(q) ||
+          d.name_lat.toLowerCase().includes(q)
+        const breedMatches = d.breed.toLowerCase().includes(q)
+        if (!nameMatches && !breedMatches) return false
+      }
+      return true
+    })
+  }, [standings, selectedBreed, searchQuery])
+
+  // Counts by league reflecting currently selected breed and search
+  const dynamicLeagueCounts = useMemo(() => {
     return {
-      all: standings.length,
-      Абсолют: standings.filter((d) => d.current_league === 'Абсолют').length,
-      Чемпионов: standings.filter((d) => d.current_league === 'Чемпионов').length,
-      Прогресс: standings.filter((d) => d.current_league === 'Прогресс').length,
-      Юниоры: standings.filter((d) => d.current_league === 'Юниоры').length,
+      all: breedAndSearchFiltered.length,
+      Абсолют: breedAndSearchFiltered.filter((d) => d.current_league === 'Абсолют').length,
+      Чемпионов: breedAndSearchFiltered.filter((d) => d.current_league === 'Чемпионов').length,
+      Прогресс: breedAndSearchFiltered.filter((d) => d.current_league === 'Прогресс').length,
+      Юниоры: breedAndSearchFiltered.filter((d) => d.current_league === 'Юниоры').length,
     }
-  }, [standings])
+  }, [breedAndSearchFiltered])
 
   // Map of dog promotions (only meaningful transitions between leagues)
   const dogPromotionsMap = useMemo(() => {
@@ -169,6 +188,46 @@ export default function ChampionshipStandingsTab({
     return sorted
   }, [standings, selectedLeague, selectedBreed, searchQuery, sortMode])
 
+  // Top 5 dogs for Anatomy of Points from the currently filtered list (reflects breed, league, search)
+  const top5AnatomyDogs = useMemo(() => {
+    return [...filtered]
+      .filter((d) => (d.total_points || 0) > 0)
+      .sort((a, b) => (b.total_points || 0) - (a.total_points || 0) || (a.best_time ?? 999) - (b.best_time ?? 999))
+      .slice(0, 5)
+      .map((dog) => {
+        let placePts = 0
+        let bonusPts = 0
+
+        for (const h of dog.history) {
+          if (h.points_breakdown) {
+            placePts += h.points_breakdown.place_points || 0
+            bonusPts +=
+              (h.points_breakdown.best_final_points || 0) +
+              (h.points_breakdown.best_class_points || 0) +
+              (h.points_breakdown.best_breed_points || 0) +
+              (h.points_breakdown.track_record_points || 0)
+          }
+        }
+
+        const total = dog.total_points || (placePts + bonusPts)
+        const placePct = total > 0 ? Math.round((placePts / total) * 100) : 0
+        const bonusPct = total > 0 ? 100 - placePct : 0
+
+        return {
+          dog,
+          placePts,
+          bonusPts,
+          total,
+          placePct,
+          bonusPct,
+        }
+      })
+  }, [filtered])
+
+  const maxAnatomyPts = useMemo(() => {
+    return top5AnatomyDogs.length > 0 ? top5AnatomyDogs[0].total : 1
+  }, [top5AnatomyDogs])
+
   const hasActiveFilters = Boolean(
     selectedLeague !== 'all' || selectedBreed || searchQuery.trim()
   )
@@ -183,8 +242,6 @@ export default function ChampionshipStandingsTab({
     setExpandedDogKey((prev) => (prev === dogKey ? null : dogKey))
   }
 
-  const totalPromotions =
-    promotions.after_stage_1.length + promotions.after_stage_2.length
 
   return (
     <div className="space-y-4">
@@ -240,7 +297,7 @@ export default function ChampionshipStandingsTab({
                     >
                       <span>{label}</span>
                       <span className="text-[10px] text-charcoal-500 font-normal">
-                        ({leagueCounts[l]})
+                        ({dynamicLeagueCounts[l]})
                       </span>
                     </button>
                   )
@@ -302,7 +359,6 @@ export default function ChampionshipStandingsTab({
                     : 'text-charcoal-600 hover:text-charcoal-900 font-medium'
                 }`}
               >
-                <Timer className="w-3.5 h-3.5 text-camel-700 shrink-0" />
                 <span>По скорости</span>
               </button>
               <button
@@ -314,8 +370,7 @@ export default function ChampionshipStandingsTab({
                     : 'text-charcoal-600 hover:text-charcoal-900 font-medium'
                 }`}
               >
-                <Trophy className="w-3.5 h-3.5 text-amber-600 shrink-0" />
-                <span>По очкам</span>
+                <span>По баллам</span>
               </button>
             </div>
           </div>
@@ -571,149 +626,263 @@ export default function ChampionshipStandingsTab({
 
         {/* Right Column: Statistics Widgets */}
         <div className="lg:col-span-5 xl:col-span-4 space-y-4">
-          {/* Widget 1: Переходы между лигами */}
-          <div className="rounded-2xl border border-old-money-200 bg-cream-50/90 p-4 shadow-2xs space-y-3">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-camel-700" />
-                <h3 className="text-xs font-bold font-serif uppercase tracking-wider text-charcoal-900">
-                  Переходы между лигами
-                </h3>
-              </div>
-              <button
-                type="button"
-                onClick={() => setPromotionsExpanded(!promotionsExpanded)}
-                className="text-xs font-semibold text-camel-800 hover:text-camel-900 cursor-pointer flex items-center gap-0.5"
-              >
-                <span>{totalPromotions} переходов</span>
-                {promotionsExpanded ? (
-                  <ChevronUp className="w-3.5 h-3.5" />
-                ) : (
-                  <ChevronDown className="w-3.5 h-3.5" />
-                )}
-              </button>
+          {/* Card 1: Сезон 2026, Участники по лигам & Документы */}
+          <div className="rounded-2xl border border-old-money-200 bg-cream-50/90 p-4 shadow-2xs space-y-3 text-xs text-charcoal-700">
+            <div className="flex items-center justify-between gap-2">
+              <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-900 border border-amber-300">
+                Сезон 2026
+              </span>
+              <span className="text-xs font-semibold text-charcoal-800">
+                {selectedLeague !== 'all'
+                  ? `Лига «${selectedLeague}»: ${filtered.length} из ${dynamicLeagueCounts.total} собак`
+                  : `Всего: ${dynamicLeagueCounts.total} собак`}
+              </span>
             </div>
 
-            <div className="text-xs text-charcoal-600 space-y-1.5">
-              <div className="p-2.5 rounded-xl bg-cream-100/70 border border-old-money-200/80 flex items-center justify-between">
-                <span>К III этапу (после II этапа):</span>
-                <span className="font-bold text-emerald-800">
-                  +{promotions.after_stage_2.length} собаки
-                </span>
-              </div>
-              <div className="p-2.5 rounded-xl bg-cream-100/70 border border-old-money-200/80 flex items-center justify-between">
-                <span>Ко II этапу (после I этапа):</span>
-                <span className="font-bold text-emerald-800">
-                  +{promotions.after_stage_1.length} собаки
-                </span>
-              </div>
+            {/* League distribution badges (dynamic, reflecting current breed/search) */}
+            <div className="flex flex-wrap items-center gap-1.5 pt-0.5">
+              {(['Абсолют', 'Чемпионов', 'Прогресс', 'Юниоры'] as const).map((league) => {
+                const count = dynamicLeagueCounts[league]
+                const isSelected = selectedLeague === league
+
+                const badgeBase =
+                  league === 'Абсолют'
+                    ? 'bg-amber-50 text-amber-950 border-amber-200'
+                    : league === 'Чемпионов'
+                    ? 'bg-camel-100 text-charcoal-800 border-old-money-200'
+                    : league === 'Прогресс'
+                    ? 'bg-cream-100 text-charcoal-800 border-old-money-200'
+                    : 'bg-sky-50 text-sky-900 border-sky-200'
+
+                const activeStyle = isSelected
+                  ? 'ring-2 ring-camel-600 font-bold shadow-xs'
+                  : 'hover:opacity-100'
+
+                return (
+                  <button
+                    key={league}
+                    type="button"
+                    onClick={() => setSelectedLeague((prev) => (prev === league ? 'all' : league))}
+                    className={`px-2 py-0.5 rounded border text-[11px] font-medium transition-all cursor-pointer ${badgeBase} ${activeStyle} ${
+                      count === 0 ? 'opacity-40' : ''
+                    }`}
+                    title={
+                      isSelected
+                        ? `Сбросить фильтр лиги «${league}»`
+                        : `Фильтровать по лиге «${league}» (${count})`
+                    }
+                  >
+                    {league} <b>{count}</b>
+                  </button>
+                )
+              })}
             </div>
 
-            {/* Collapsible List of Promotions */}
-            {promotionsExpanded && (
-              <div className="pt-2 border-t border-old-money-200 space-y-2 max-h-60 overflow-y-auto pr-1 text-xs">
-                <div className="font-bold text-[11px] text-charcoal-800">
-                  После II этапа:
-                </div>
-                {promotions.after_stage_2.map((p, pIdx) => {
-                  const { primary: pName } = parseDogName(p.dog_name, p.dog_name)
-                  return (
-                    <div
-                      key={pIdx}
-                      className="p-1.5 rounded-lg bg-cream-100 border border-old-money-200/70 flex items-center justify-between gap-2"
-                    >
-                      <div className="min-w-0">
-                        <div className="font-semibold text-charcoal-900 truncate">
-                          {pName}
-                        </div>
-                        <div className="text-[10px] text-charcoal-500">
-                          {formatBreedName(p.breed)}
-                        </div>
-                      </div>
-                      <span className="text-[10px] font-semibold text-emerald-800 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200 shrink-0">
-                        {p.to_league}
-                      </span>
-                    </div>
-                  )
-                })}
-
-                <div className="font-bold text-[11px] text-charcoal-800 pt-1">
-                  После I этапа:
-                </div>
-                {promotions.after_stage_1.map((p, pIdx) => {
-                  const { primary: pName } = parseDogName(p.dog_name, p.dog_name)
-                  return (
-                    <div
-                      key={pIdx}
-                      className="p-1.5 rounded-lg bg-cream-100 border border-old-money-200/70 flex items-center justify-between gap-2"
-                    >
-                      <div className="min-w-0">
-                        <div className="font-semibold text-charcoal-900 truncate">
-                          {pName}
-                        </div>
-                        <div className="text-[10px] text-charcoal-500">
-                          {formatBreedName(p.breed)}
-                        </div>
-                      </div>
-                      <span className="text-[10px] font-semibold text-emerald-800 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200 shrink-0">
-                        {p.to_league}
-                      </span>
-                    </div>
-                  )
-                })}
-              </div>
-            )}
-          </div>
-
-          {/* Widget 2: О формате турнира */}
-          <div className="rounded-2xl border border-old-money-200 bg-cream-50/90 p-4 shadow-2xs space-y-2.5 text-xs text-charcoal-700">
-            <h3 className="text-xs font-bold font-serif uppercase tracking-wider text-charcoal-900">
-              Формат и правила лиг
-            </h3>
-            <ul className="space-y-1.5 text-[11px] text-charcoal-600">
-              <li className="flex items-start gap-1.5">
-                <span className="text-camel-700 font-bold">•</span>
-                <span><b>Дистанция 350 м</b>: песчаный трек, закрытые стартовые боксы, фотофиниш.</span>
-              </li>
-              <li className="flex items-start gap-1.5">
-                <span className="text-emerald-700 font-bold">•</span>
-                <span><b>Подъём вверх</b>: 1 победа в финале класса — обязательный перевод в высшую лигу.</span>
-              </li>
-              <li className="flex items-start gap-1.5">
-                <span className="text-rose-700 font-bold">•</span>
-                <span><b>Понижение вниз</b>: 3 поражения подряд в лиге — перевод в предыдущую лигу.</span>
-              </li>
-            </ul>
-          </div>
-
-          {/* Widget 3: Регламент и ссылка на все рекорды Донино */}
-          <div className="rounded-2xl border border-old-money-200 bg-cream-50/90 p-4 shadow-2xs space-y-3">
-            {onSelectRulesTab && (
-              <button
-                type="button"
-                onClick={onSelectRulesTab}
-                className="w-full inline-flex items-center justify-between py-2 px-3 rounded-xl border border-camel-400 bg-cream-50 text-xs font-semibold text-camel-900 hover:bg-cream-100 transition-colors cursor-pointer"
+            {/* External Links */}
+            <div className="space-y-1.5 pt-2 border-t border-old-money-200">
+              <a
+                href={resultsSpreadsheetUrl || 'https://docs.google.com/spreadsheets/d/1OKA9-I7oiY3xOisuxiDUOpn6C6bGxSQMkZDcuwtXiJg/edit?gid=22361699#gid=22361699'}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-between px-3 py-2 rounded-xl border border-old-money-200 bg-cream-100/70 hover:bg-cream-100 text-xs font-semibold text-charcoal-800 transition-colors shadow-2xs"
+                title="Официальная таблица результатов забегов с временами и переходами в лиги"
               >
                 <div className="flex items-center gap-2">
-                  <FileText className="w-3.5 h-3.5 text-camel-700" />
-                  <span>Правила и регламент лиг</span>
+                  <FileSpreadsheet className="w-3.5 h-3.5 text-emerald-700 shrink-0" />
+                  <span>Результаты забегов (Google)</span>
                 </div>
-                <ChevronDown className="w-3.5 h-3.5 -rotate-90 text-charcoal-500" />
-              </button>
-            )}
+                <ExternalLink className="w-3.5 h-3.5 text-charcoal-400" />
+              </a>
 
-            <Link
-              to="/speed-records/"
-              className="w-full inline-flex items-center justify-between py-2 px-3 rounded-xl border border-old-money-200 bg-cream-100/60 text-xs font-medium text-charcoal-700 hover:bg-cream-100 transition-colors"
-            >
-              <div className="flex items-center gap-2">
-                <ExternalLink className="w-3.5 h-3.5 text-charcoal-500" />
-                <span>Все рекорды скорости Донино</span>
-              </div>
-              <span className="text-[10px] text-charcoal-400">раздел →</span>
-            </Link>
+              <a
+                href={pointsSpreadsheetUrl || 'https://docs.google.com/spreadsheets/d/1PGrVO98HfxwzoOxHmd8eRaygvl3iJryIXYfPd7vmyNQ/edit?gid=0#gid=0'}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-between px-3 py-2 rounded-xl border border-old-money-200 bg-cream-100/70 hover:bg-cream-100 text-xs font-semibold text-charcoal-800 transition-colors shadow-2xs"
+                title="Официальная таблица начисления очков, бонусов за лучшее время и рекорды трека"
+              >
+                <div className="flex items-center gap-2">
+                  <FileSpreadsheet className="w-3.5 h-3.5 text-amber-700 shrink-0" />
+                  <span>Разбалловка и бонусы (Google)</span>
+                </div>
+                <ExternalLink className="w-3.5 h-3.5 text-charcoal-400" />
+              </a>
+
+              <a
+                href="https://runningdog.ru"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-between px-3 py-2 rounded-xl border border-old-money-200 bg-cream-100/70 hover:bg-cream-100 text-xs font-semibold text-charcoal-800 transition-colors shadow-2xs"
+                title="Официальный сайт бегового клуба «Курсинг в Донино»"
+              >
+                <div className="flex items-center gap-2">
+                  <span className="p-0.5 rounded border border-old-money-200/90 bg-white shadow-2xs flex items-center justify-center shrink-0">
+                    <img
+                      src="/assets/icons/runningdog.png"
+                      alt=""
+                      width={20}
+                      height={12}
+                      className="w-[20px] h-[12px] object-contain shrink-0"
+                    />
+                  </span>
+                  <span>Курсинг в Донино</span>
+                </div>
+                <ExternalLink className="w-3.5 h-3.5 text-charcoal-400" />
+              </a>
+            </div>
           </div>
-        </div>
+
+          {/* Card 2: Анатомия баллов (Топ-5 текущей выборки) */}
+          <div className="rounded-2xl border border-old-money-200 bg-cream-50/90 p-4 shadow-2xs space-y-3 text-xs text-charcoal-700">
+            <div className="flex items-center justify-between gap-2">
+              <h3 className="text-xs font-bold font-serif uppercase tracking-wider text-charcoal-900">
+                Анатомия баллов: Топ-5
+              </h3>
+              <div className="flex items-center gap-2 text-[10px] shrink-0 font-medium">
+                <span className="flex items-center gap-1 text-charcoal-700">
+                  <span className="w-2 h-2 rounded-full bg-camel-700 inline-block shrink-0" />
+                  <span>Места</span>
+                </span>
+                <span className="flex items-center gap-1 text-camel-900">
+                  <span className="w-2 h-2 rounded-full bg-camel-400 inline-block shrink-0" />
+                  <span>Бонусы</span>
+                </span>
+              </div>
+            </div>
+
+            <p className="text-[11px] text-charcoal-500 leading-tight">
+              Базовые очки за места в заездах vs скоростные бонусы (+1 б.) в текущей выборке
+            </p>
+
+            {top5AnatomyDogs.length === 0 ? (
+              <div className="text-center py-3 text-charcoal-500 text-[11px] italic">
+                Нет собак с начисленными баллами
+              </div>
+            ) : (
+              <div className="space-y-2 pt-0.5">
+                {top5AnatomyDogs.map((item, idx) => {
+                  const { primary, secondary } = parseDogName(item.dog.name_lat || item.dog.name, item.dog.name_ru)
+                  const barWidthPct = Math.max(12, Math.min(100, Math.round((item.total / maxAnatomyPts) * 100)))
+
+                  return (
+                    <div key={item.dog.dog_key} className="space-y-1">
+                      <div className="flex items-center justify-between text-xs">
+                        <div className="flex items-center gap-1.5 min-w-0 pr-2">
+                          <span className="w-4 text-center font-bold text-charcoal-400 text-[10px] shrink-0">
+                            #{idx + 1}
+                          </span>
+                          {item.dog.dog_id ? (
+                            <Link
+                              to={`/dog/${item.dog.dog_id}`}
+                              title={secondary || undefined}
+                              className="font-serif font-bold text-charcoal-900 hover:text-camel-800 truncate"
+                            >
+                              {primary}
+                            </Link>
+                          ) : (
+                            <span title={secondary || undefined} className="font-serif font-bold text-charcoal-900 truncate">
+                              {primary}
+                            </span>
+                          )}
+                          {!selectedBreed && (
+                            <span className="text-[10px] text-charcoal-400 truncate hidden sm:inline">
+                              · {formatBreedName(item.dog.breed)}
+                            </span>
+                          )}
+                        </div>
+
+                        <div className="shrink-0 flex items-center gap-1.5 text-right font-mono">
+                          <span className="text-[10px] text-charcoal-500">
+                            {item.placePts}&nbsp;б. + {item.bonusPts}&nbsp;б.
+                          </span>
+                          <span className="font-bold text-xs text-charcoal-900 min-w-[28px]">
+                            {item.total}&nbsp;б.
+                          </span>
+                        </div>
+                      </div>
+
+                      {/* Stacked bar with noble tone-on-tone Old Money palette */}
+                      <div className="h-2 w-full bg-cream-200/90 rounded-full overflow-hidden flex">
+                        <div
+                          style={{ width: `${barWidthPct}%` }}
+                          className="h-full flex overflow-hidden rounded-full shadow-2xs"
+                        >
+                          <div
+                            style={{ width: `${item.placePct}%` }}
+                            className="h-full bg-camel-700 transition-all duration-300"
+                            title={`Баллы за место: ${item.placePts}`}
+                          />
+                          <div
+                            style={{ width: `${item.bonusPct}%` }}
+                            className="h-full bg-camel-400 transition-all duration-300"
+                            title={`Бонусы за скорость: ${item.bonusPts}`}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  )
+                })}
+              </div>
+            )}
+          </div>
+
+          {/* Widget: Начисление баллов и бонусы */}
+          <div className="rounded-2xl border border-old-money-200 bg-cream-50/90 p-4 shadow-2xs space-y-3 text-xs text-charcoal-700">
+            <h3 className="text-xs font-bold font-serif uppercase tracking-wider text-charcoal-900">
+              Начисление баллов и бонусы
+            </h3>
+
+            {/* Base Points for Places */}
+            <div className="space-y-1.5">
+              <div className="text-[11px] font-bold text-charcoal-800 uppercase tracking-wide">
+                Баллы за занятое место:
+              </div>
+              <div className="grid grid-cols-4 gap-1 text-center font-mono text-[11px]">
+                <div className="p-1 rounded bg-cream-100 border border-old-money-200">
+                  <span className="text-charcoal-500 text-[10px] block">1 место</span>
+                  <span className="font-bold text-amber-950">10 б.</span>
+                </div>
+                <div className="p-1 rounded bg-cream-100 border border-old-money-200">
+                  <span className="text-charcoal-500 text-[10px] block">2 место</span>
+                  <span className="font-bold text-amber-950">9 б.</span>
+                </div>
+                <div className="p-1 rounded bg-cream-100 border border-old-money-200">
+                  <span className="text-charcoal-500 text-[10px] block">3 место</span>
+                  <span className="font-bold text-amber-950">8 б.</span>
+                </div>
+                <div className="p-1 rounded bg-cream-100 border border-old-money-200">
+                  <span className="text-charcoal-500 text-[10px] block">4+ место</span>
+                  <span className="font-bold text-amber-950">7..1 б.</span>
+                </div>
+              </div>
+            </div>
+
+            {/* 4 Speed Bonuses */}
+            <div className="space-y-1.5 pt-1 border-t border-old-money-200">
+              <div className="text-[11px] font-bold text-charcoal-800 uppercase tracking-wide">
+                4 бонуса за скорость (по +1 б.):
+              </div>
+              <ul className="space-y-1 text-[11px] text-charcoal-600">
+                <li className="flex items-start gap-1.5">
+                  <span className="text-amber-600 font-bold shrink-0">+1</span>
+                  <span>Лучшее время финала в классе</span>
+                </li>
+                <li className="flex items-start gap-1.5">
+                  <span className="text-camel-700 font-bold shrink-0">+1</span>
+                  <span>Лучшее время во всём классе</span>
+                </li>
+                <li className="flex items-start gap-1.5">
+                  <span className="text-forest-700 font-bold shrink-0">+1</span>
+                  <span>Лучшее время в породе</span>
+                </li>
+                <li className="flex items-start gap-1.5">
+                  <span className="text-rose-700 font-bold shrink-0">+1</span>
+                  <span>Абсолютный рекорд трека Донино</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          </div>
       </div>
     </div>
   )

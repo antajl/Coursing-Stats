@@ -298,7 +298,7 @@ export default function ChampionshipRulesTab({ reglamentUrl, spreadsheetUrl }: C
                       className="w-[22px] h-[14px] object-contain shrink-0"
                     />
                   </span>
-                  <span className="font-semibold">runningdog.ru</span>
+                  <span className="font-semibold">Курсинг в Донино</span>
                 </div>
                 <ExternalLink className="w-3.5 h-3.5 text-charcoal-400" />
               </a>
@@ -333,7 +333,7 @@ export default function ChampionshipRulesTab({ reglamentUrl, spreadsheetUrl }: C
               >
                 <div className="flex items-center gap-2">
                   <Trophy className="w-3.5 h-3.5 text-camel-700" />
-                  <span>Сводный зачёт и Лиги</span>
+                  <span>Рейтинг</span>
                 </div>
                 <span className="text-[10px] text-charcoal-400">таблица →</span>
               </Link>
