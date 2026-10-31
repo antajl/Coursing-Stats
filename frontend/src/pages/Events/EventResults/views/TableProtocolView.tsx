@@ -60,29 +60,17 @@ function getHeatDistance(heat: Heat, rawScores: RawScores | null): number | null
   return (heat as any).distance || (rawScores as any)?.distance || null
 }
 
-function isFastestHeat(heat: Heat, bestTimesByRace?: Record<string, number>): boolean {
-  if (heat.disqualified || !bestTimesByRace) return false
-  const t = typeof heat.time === 'number' ? heat.time : parseFloat(String(heat.time || ''))
-  if (isNaN(t) || t <= 0) return false
-  const keyByHeat = heat.heat_number != null ? String(heat.heat_number) : null
-  const keyByBib = heat.bib_number != null ? String(heat.bib_number) : null
-  const best = (keyByHeat ? bestTimesByRace[keyByHeat] : undefined) ?? (keyByBib ? bestTimesByRace[keyByBib] : undefined)
-  return best != null && Math.abs(t - best) < 0.001
-}
-
 /** Компактная плашка забега/заезда (цвет попоны с нанесенным номером забега/заезда) */
 function ProtocolHeatBadge({
   heatNumber,
   bibColor,
   bibNumber,
   distance,
-  isWinner = false,
 }: {
   heatNumber?: number | string | null
   bibColor?: string | null
   bibNumber?: number | string | null
   distance?: number | null
-  isWinner?: boolean
 }) {
   const normalized = normalizeBibColorName(bibColor ?? undefined)
   const isRed = normalized === 'red'
@@ -110,16 +98,13 @@ function ProtocolHeatBadge({
   const colorName = normalized ? (BIB_COLOR_LABELS[normalized] || normalized) : 'Попона'
   const bibInfo =
     bibNumber != null && String(bibNumber) !== String(heatNumber) ? ` (попона №${bibNumber})` : ''
-  const winnerInfo = isWinner ? ' · 1-е место в заезде' : ''
-  const tooltipText = `${colorName}${bibInfo} · Заезд №${label}${distance ? ` (${distance}м)` : ''}${winnerInfo}`
+  const tooltipText = `${colorName}${bibInfo} · Заезд №${label}${distance ? ` (${distance}м)` : ''}`
 
   return (
     <HoverTooltip label={tooltipText} placement="top" portal delayMs={0}>
       <span className="relative inline-flex items-center justify-center shrink-0">
         <span
-          className={`inline-flex items-center justify-center min-w-[1.5rem] h-5.5 rounded px-1.5 py-0.5 text-xs font-mono font-bold cursor-help select-none shrink-0 shadow-2xs transition-all ${colorClass} ${
-            isWinner ? 'ring-2 ring-camel-500 ring-offset-1' : ''
-          }`}
+          className={`inline-flex items-center justify-center min-w-[1.5rem] h-5.5 rounded px-1.5 py-0.5 text-xs font-mono font-bold cursor-help select-none shrink-0 border shadow-2xs transition-all ${colorClass}`}
           style={!colorClass.includes('bg-') && normalized ? bibColorStyle(normalized) : undefined}
         >
           <span>{label}</span>
@@ -247,7 +232,6 @@ export default function TableProtocolView({
           const dist = getHeatDistance(heat, rawScores)
 
           if (isRacing) {
-            const isWinner = isFastestHeat(heat, bestTimesByRace)
             const speedKmh = heat.speed_kmh ? heat.speed_kmh.toFixed(1) : null
             const isHeatDq = heat.disqualified || (!heat.time && !heat.speed_kmh)
             const heatNum = heat.heat_number ?? heat.bib_number ?? heatIdx + 1
@@ -276,14 +260,9 @@ export default function TableProtocolView({
                       bibColor={heat.bib_color}
                       bibNumber={heat.bib_number}
                       distance={dist}
-                      isWinner={isWinner}
                     />
                     <div className="flex flex-col min-w-0">
-                      <span
-                        className={`font-mono text-xs sm:text-sm font-bold whitespace-nowrap leading-tight ${
-                          isWinner ? 'text-camel-800' : 'text-charcoal-900'
-                        }`}
-                      >
+                      <span className="font-mono text-xs sm:text-sm font-bold text-charcoal-900 whitespace-nowrap leading-tight">
                         {heat.time ? `${heat.time} сек` : '—'}
                       </span>
                       {(speedKmh || dist) && (
