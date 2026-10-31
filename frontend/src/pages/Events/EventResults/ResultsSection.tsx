@@ -65,14 +65,83 @@ export default function ResultsSection({ results }: ResultsSectionProps) {
       result.name_ru?.toLowerCase().includes(searchQuery.toLowerCase()) ||
       result.name_lat?.toLowerCase().includes(searchQuery.toLowerCase())
     const matchesBreed = selectedBreed === '' || result.dog.breed === selectedBreed
-    return matchesSearch && matchesBreed
+    const dogSex = extractDogSex(result)
+    const matchesSex = selectedSex === '' || dogSex === selectedSex
+    return matchesSearch && matchesBreed && matchesSex
   })
 
   const { grouped: filteredGrouped, sortedGroups: filteredSortedGroups } = isRacing
     ? groupRacingResults(filteredResults)
     : groupResultsByBreedClass(filteredResults)
 
-  const isFiltered = Boolean(selectedBreed || searchQuery.trim())
+  const isSexActive = Boolean(selectedSex)
+  const sexTriggerLabel = selectedSex === 'm' ? 'Кобели' : selectedSex === 'f' ? 'Суки' : 'Пол'
+
+  const sexTrigger = (
+    <button
+      type="button"
+      className={`shrink-0 ${toolbarPillTriggerClass(isSexActive)}`}
+    >
+      {selectedSex === 'm' && <DogSexIcon sex="m" size={12} variant="neutral" className="shrink-0 text-current" />}
+      {selectedSex === 'f' && <DogSexIcon sex="f" size={12} variant="neutral" className="shrink-0 text-current" />}
+      <span>{sexTriggerLabel}</span>
+      <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
+    </button>
+  )
+
+  const renderSexMenu = (setOpen: (v: boolean) => void) => (
+    <div className="p-1 min-w-[125px]" role="menu">
+      <button
+        type="button"
+        role="menuitem"
+        onClick={() => {
+          setSelectedSex('')
+          setOpen(false)
+        }}
+        className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
+          !selectedSex
+            ? 'bg-camel-100 text-camel-950 font-semibold'
+            : 'text-charcoal-700 hover:bg-camel-100'
+        }`}
+      >
+        Все
+      </button>
+      <button
+        type="button"
+        role="menuitem"
+        onClick={() => {
+          setSelectedSex('m')
+          setOpen(false)
+        }}
+        className={`flex w-full items-center gap-2 rounded-md px-3 py-2 text-left text-sm transition-colors ${
+          selectedSex === 'm'
+            ? 'bg-camel-100 text-camel-950 font-semibold'
+            : 'text-charcoal-700 hover:bg-camel-100'
+        }`}
+      >
+        <DogSexIcon sex="m" size={14} className={selectedSex === 'm' ? 'text-charcoal-900' : 'text-slate-500'} />
+        <span>Кобели</span>
+      </button>
+      <button
+        type="button"
+        role="menuitem"
+        onClick={() => {
+          setSelectedSex('f')
+          setOpen(false)
+        }}
+        className={`flex w-full items-center gap-2 rounded-md px-3 py-2 text-left text-sm transition-colors ${
+          selectedSex === 'f'
+            ? 'bg-camel-100 text-camel-950 font-semibold'
+            : 'text-charcoal-700 hover:bg-camel-100'
+        }`}
+      >
+        <DogSexIcon sex="f" size={14} className={selectedSex === 'f' ? 'text-charcoal-900' : 'text-rose-500'} />
+        <span>Суки</span>
+      </button>
+    </div>
+  )
+
+  const isFiltered = Boolean(selectedBreed || selectedSex || searchQuery.trim())
 
   return (
     <div className="space-y-3">
@@ -115,7 +184,7 @@ export default function ResultsSection({ results }: ResultsSectionProps) {
         </div>
       )}
 
-      {/* Панель поиска и фильтрации пород в стиле рейтинга (чистый ряд без внешней рамки) */}
+      {/* Панель поиска и фильтрации в стиле рейтинга (чистый ряд без внешней рамки) */}
       <div className="flex items-center gap-2 w-full max-w-full min-w-0 overflow-hidden">
         <ToolbarSearch
           value={searchQuery}
@@ -123,14 +192,29 @@ export default function ResultsSection({ results }: ResultsSectionProps) {
           placeholder="Кличка собаки…"
         />
 
+        {/* Выбор пола */}
+        <div className="shrink-0">
+          <ModernDropdown
+            trigger={sexTrigger}
+            isOpen={sexDropdownOpen}
+            onOpenChange={setSexDropdownOpen}
+            width="130px"
+          >
+            {renderSexMenu(setSexDropdownOpen)}
+          </ModernDropdown>
+        </div>
+
         {breeds.length > 1 && (
-          <div className="flex-1 min-w-0 max-w-full overflow-hidden">
-            <QuickBreedBar
-              selectedBreed={selectedBreed}
-              onSelectBreed={(b) => setSelectedBreed(b)}
-              breedValues={breeds}
-            />
-          </div>
+          <>
+            <div className="h-5 w-px bg-old-money-300 shrink-0 mx-0.5 hidden sm:block" aria-hidden="true" />
+            <div className="flex-1 min-w-0 max-w-full overflow-hidden">
+              <QuickBreedBar
+                selectedBreed={selectedBreed}
+                onSelectBreed={(b) => setSelectedBreed(b)}
+                breedValues={breeds}
+              />
+            </div>
+          </>
         )}
 
         {isFiltered && (
@@ -138,6 +222,7 @@ export default function ResultsSection({ results }: ResultsSectionProps) {
             type="button"
             onClick={() => {
               setSelectedBreed('')
+              setSelectedSex('')
               setSearchQuery('')
             }}
             className="relative shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full border border-old-money-200 bg-cream-50 text-charcoal-500 hover:text-charcoal-800 transition-colors before:absolute before:-inset-1.5 before:content-['']"
