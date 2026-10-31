@@ -131,15 +131,26 @@ export function formatDogName(dog?: DogInfo): string {
   const ru = (dog.name_ru || '').trim();
   const en = (dog.name_lat || '').trim();
 
-  if (ru.includes('/')) {
-    const parts = ru.split('/').map(p => p.trim());
-    return `${escapeHtml(parts[0])} /<br>${escapeHtml(parts.slice(1).join('/'))}`;
+  // Если в кличке есть слеш — разделяем, русская кличка ВСЕГДА сверху
+  for (const str of [ru, en]) {
+    if (str && str.includes('/')) {
+      const parts = str.split('/').map(p => p.trim()).filter(Boolean);
+      const ruPart = parts.find(p => /[а-яё]/i.test(p));
+      const latPart = parts.find(p => /[a-z]/i.test(p));
+      if (ruPart && latPart) {
+        return `${escapeHtml(ruPart)} /<br>${escapeHtml(latPart)}`;
+      }
+      return `${escapeHtml(parts[0])} /<br>${escapeHtml(parts.slice(1).join('/'))}`;
+    }
   }
-  if (en.includes('/')) {
-    const parts = en.split('/').map(p => p.trim());
-    return `${escapeHtml(parts[0])} /<br>${escapeHtml(parts.slice(1).join('/'))}`;
-  }
+
+  // Приоритет русской клички: русский вариант сверху
   if (ru && en && ru.toUpperCase() !== en.toUpperCase()) {
+    const ruHasCyr = /[а-яё]/i.test(ru);
+    const enHasCyr = /[а-яё]/i.test(en);
+    if (!ruHasCyr && enHasCyr) {
+      return `${escapeHtml(en)} /<br>${escapeHtml(ru)}`;
+    }
     return `${escapeHtml(ru)} /<br>${escapeHtml(en)}`;
   }
   return escapeHtml(ru || en);

@@ -6,16 +6,38 @@ import path from 'node:path'
 describe('Show dog profile and alias resolution', () => {
   const detailsDir = path.resolve(__dirname, '../../data/v1/shows/indexes/dog-details')
 
+  // Shared lazy cache for 256 shards across tests in this suite
+  const shardCache = new Map<string, Record<string, any>>()
+  function getShard(shard: string): Record<string, any> {
+    let pack = shardCache.get(shard)
+    if (!pack) {
+      const file = path.join(detailsDir, `${shard}.json`)
+      pack = fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, 'utf8')) : {}
+      shardCache.set(shard, pack)
+    }
+    return pack
+  }
+
+  function loadAllShards(): Map<string, Record<string, any>> {
+    if (shardCache.size < 256) {
+      for (let i = 0; i < 256; i++) {
+        const shard = String(i).padStart(3, '0')
+        getShard(shard)
+      }
+    }
+    return shardCache
+  }
+
   it('resolves EMEREI HUGO BOSS (116566246) via alias to canonical profile', () => {
     const shard = cdnPackShardKey('116566246')
-    const pack = JSON.parse(fs.readFileSync(path.join(detailsDir, `${shard}.json`), 'utf8'))
+    const pack = getShard(shard)
     const entry = pack['116566246']
     expect(entry).toBeDefined()
     expect(entry.alias_to).toBe('721631058')
 
     // Canonical profile exists and has history
     const targetShard = cdnPackShardKey(entry.alias_to)
-    const targetPack = JSON.parse(fs.readFileSync(path.join(detailsDir, `${targetShard}.json`), 'utf8'))
+    const targetPack = getShard(targetShard)
     const targetDog = targetPack[entry.alias_to]
     expect(targetDog).toBeDefined()
     expect(targetDog.name_lat).toBe('EMEREI HUGO BOSS')
@@ -24,13 +46,13 @@ describe('Show dog profile and alias resolution', () => {
 
   it('resolves PIRS BROSNAN IZ BELYKH GYAUROV (137099100) via alias to canonical profile', () => {
     const shard = cdnPackShardKey('137099100')
-    const pack = JSON.parse(fs.readFileSync(path.join(detailsDir, `${shard}.json`), 'utf8'))
+    const pack = getShard(shard)
     const entry = pack['137099100']
     expect(entry).toBeDefined()
     expect(entry.alias_to).toBe('1394343317')
 
     const targetShard = cdnPackShardKey(entry.alias_to)
-    const targetPack = JSON.parse(fs.readFileSync(path.join(detailsDir, `${targetShard}.json`), 'utf8'))
+    const targetPack = getShard(targetShard)
     const targetDog = targetPack[entry.alias_to]
     expect(targetDog).toBeDefined()
     expect(targetDog.name_lat).toBe('PIRS BROSNAN IZ BELYKH GYAUROV')
@@ -39,13 +61,13 @@ describe('Show dog profile and alias resolution', () => {
 
   it('resolves PUELLO ORIS OM TANTRA (941371398) via alias to canonical profile', () => {
     const shard = cdnPackShardKey('941371398')
-    const pack = JSON.parse(fs.readFileSync(path.join(detailsDir, `${shard}.json`), 'utf8'))
+    const pack = getShard(shard)
     const entry = pack['941371398']
     expect(entry).toBeDefined()
     expect(entry.alias_to).toBeDefined()
 
     const targetShard = cdnPackShardKey(entry.alias_to)
-    const targetPack = JSON.parse(fs.readFileSync(path.join(detailsDir, `${targetShard}.json`), 'utf8'))
+    const targetPack = getShard(targetShard)
     const targetDog = targetPack[entry.alias_to]
     expect(targetDog).toBeDefined()
     expect(targetDog.name_lat || targetDog.name_ru).toMatch(/Пуэлло Орис|PUELLO ORIS/i)
@@ -54,13 +76,10 @@ describe('Show dog profile and alias resolution', () => {
   it('guarantees zero aliases in any ranking files across all years', () => {
     const showIdxDir = path.resolve(__dirname, '../../data/v1/shows/indexes')
     
-    // 1. Build alias lookup
+    // 1. Build alias lookup from cached shards
+    const allShards = loadAllShards()
     const aliasSet = new Set<string>()
-    for (let i = 0; i < 256; i++) {
-      const shard = String(i).padStart(3, '0')
-      const file = path.join(detailsDir, `${shard}.json`)
-      if (!fs.existsSync(file)) continue
-      const pack = JSON.parse(fs.readFileSync(file, 'utf8'))
+    for (const pack of allShards.values()) {
       for (const [id, val] of Object.entries(pack)) {
         if ((val as any).alias_to) {
           aliasSet.add(id)
@@ -101,30 +120,35 @@ describe('Show dog profile and alias resolution', () => {
   })
 
   it('guarantees all alias targets in dog-details exist and are not aliases themselves (depth <= 1)', () => {
-    const shardCache = new Map<string, Record<string, any>>()
-    for (let i = 0; i < 256; i++) {
-      const shard = String(i).padStart(3, '0')
-      const file = path.join(detailsDir, `${shard}.json`)
-      if (fs.existsSync(file)) {
-        shardCache.set(shard, JSON.parse(fs.readFileSync(file, 'utf8')))
-      }
-    }
+    const allShards = loadAllShards()
+    const violations: Array<{ id: string; targetId: string; reason: string }> = []
 
-    for (const pack of shardCache.values()) {
+    for (const pack of allShards.values()) {
       for (const [id, val] of Object.entries(pack)) {
         if (val.alias_to) {
           const targetId = String(val.alias_to)
-          expect(targetId).not.toBe(id)
+          if (targetId === id) {
+            violations.push({ id, targetId, reason: 'self-referencing alias' })
+            continue
+          }
 
           const targetShard = cdnPackShardKey(targetId)
-          const targetPack = shardCache.get(targetShard)
-          expect(targetPack).toBeDefined()
+          const targetPack = allShards.get(targetShard)
+          if (!targetPack) {
+            violations.push({ id, targetId, reason: `target shard ${targetShard} missing` })
+            continue
+          }
 
-          const targetEntry = targetPack![targetId]
-          expect(targetEntry).toBeDefined()
-          expect(targetEntry.alias_to).toBeUndefined() // target must be canonical
+          const targetEntry = targetPack[targetId]
+          if (!targetEntry) {
+            violations.push({ id, targetId, reason: 'target entry missing' })
+          } else if (targetEntry.alias_to) {
+            violations.push({ id, targetId, reason: 'target is itself an alias (depth > 1)' })
+          }
         }
       }
     }
+
+    expect(violations).toEqual([])
   }, 30000)
 })

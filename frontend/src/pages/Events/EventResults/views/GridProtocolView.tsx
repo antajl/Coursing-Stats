@@ -57,7 +57,10 @@ export default function GridProtocolView({
         const isExpanded = expandedIds.has(rowKey)
         const rawScores = parseRawScores(result.raw_scores_json)
         const heats = rawScores?.heats || []
-        const dogName = result.name_ru || result.name_lat || 'Без клички'
+        const { primary: dogName, secondary: secondaryDogName } = parseDogName(
+          result.name_lat || (result.dog as any)?.name_lat,
+          result.name_ru || (result.dog as any)?.name_ru
+        )
         const genderSymbol =
           result.dog?.gender === 'M' ? '♂' : result.dog?.gender === 'F' ? '♀' : ''
         const genderColor =
@@ -114,12 +117,13 @@ export default function GridProtocolView({
                         <Link
                           to={`/dog/${result.dog_id}/`}
                           onClick={e => e.stopPropagation()}
-                          className="font-serif font-bold text-sm text-charcoal-900 hover:text-camel-800 hover:underline truncate"
+                          title={secondaryDogName || undefined}
+                        className="font-serif font-bold text-sm text-charcoal-900 hover:text-camel-800 hover:underline truncate"
                         >
                           {dogName}
                         </Link>
                       ) : (
-                        <span className="font-serif font-bold text-sm text-charcoal-900 truncate">
+                        <span title={secondaryDogName || undefined} className="font-serif font-bold text-sm text-charcoal-900 truncate">
                           {dogName}
                         </span>
                       )}
@@ -148,7 +152,7 @@ export default function GridProtocolView({
                   <div className="text-right">
                     {isDns ? (
                       <span className="text-xs text-charcoal-400">Неявка</span>
-                    ) : isDq && !result.total_score ? (
+                    ) : isDq ? (
                       <span className="text-xs font-semibold text-rose-600">
                         {statusReason || 'Дисквал.'}
                       </span>

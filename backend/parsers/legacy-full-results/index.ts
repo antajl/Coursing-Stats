@@ -465,7 +465,7 @@ export function parseLegacyFullResultsHTML(html: string): LegacyFullResultsParse
           bibNumber: bib1,
           bibColor: bib1Color,
           judges: judgesHeat1,
-          total: heat1Total,
+          total: (h1j1.disqualified && judgesHeat1.length === 0) ? null : heat1Total,
           disqualified: h1j1.disqualified,
           disqualificationReason: h1j1.reason,
         }),
@@ -486,14 +486,14 @@ export function parseLegacyFullResultsHTML(html: string): LegacyFullResultsParse
           bibNumber: bib2,
           bibColor: bib2Color,
           judges: judgesHeat2,
-          total: heat2Total,
+          total: (h2j1.disqualified && judgesHeat2.length === 0) ? null : heat2Total,
           disqualified: h2j1.disqualified,
           disqualificationReason: h2j1.reason,
         }),
       )
     }
 
-    const raw_scores_json = buildCoursingRawScores(heats, grandTotal)
+    let raw_scores_json = buildCoursingRawScores(heats, grandTotal)
 
     const breed_class = [breed, klass, sex].filter(Boolean).join(' - ')
 
@@ -533,6 +533,16 @@ export function parseLegacyFullResultsHTML(html: string): LegacyFullResultsParse
       }
     }
 
+    let finalTotalScore = grandTotal
+    if (status === 'disqualified' || status === 'dns' || status === 'dnf') {
+      if (hasDq1 || status === 'dns' || judgesHeat1.length === 0) {
+        finalTotalScore = null
+        if (raw_scores_json) {
+          delete raw_scores_json.grand_total
+        }
+      }
+    }
+
     // Keep original breed/class for mix math; DNS → bottom section after mix.
     results.push({
       catalog_no,
@@ -542,7 +552,7 @@ export function parseLegacyFullResultsHTML(html: string): LegacyFullResultsParse
       name_lat: name,
       name_ru: name,
       placement: status === 'finished' ? rawPlacement : null,
-      total_score: grandTotal,
+      total_score: finalTotalScore,
       judge_count,
       qualification,
       vc,

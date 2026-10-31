@@ -7,7 +7,10 @@ interface DogNameLinkProps {
 }
 
 export default function DogNameLink({ result }: DogNameLinkProps) {
-  const { primary, secondary } = parseDogName(result.name_lat, result.name_ru)
+  const { primary, secondary } = parseDogName(
+    result.name_lat || (result.dog as any)?.name_lat,
+    result.name_ru || (result.dog as any)?.name_ru
+  )
   
   // Generate sex icon from sex field if not already present
   const sex = result.dog?.sex || ''

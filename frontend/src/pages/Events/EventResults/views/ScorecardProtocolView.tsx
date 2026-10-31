@@ -6,7 +6,7 @@ import QualificationBadges from '../components/QualificationBadges'
 import { parseRawScores, normalizeBibColorName } from '../utils'
 import { displayStatusReason } from '../../../../lib/statusReason'
 import { normalizeQualificationAndVc } from '../ResultSummary'
-import { toDogTitleCase } from '../../../../lib/dogName'
+import { parseDogName, toDogTitleCase } from '../../../../lib/dogName'
 import HoverTooltip from '../../../../components/ui/HoverTooltip'
 import type { Result, Heat, RawScores } from '../types'
 
@@ -124,12 +124,10 @@ export default function ScorecardProtocolView({
       {results.map((result, idx) => {
         const rawScores = parseRawScores(result.raw_scores_json)
         const heats = rawScores?.heats || []
-        const rawDogName = result.name_ru || result.name_lat || 'Без клички'
-        const formattedDogName = toDogTitleCase(rawDogName)
-        const secondaryName =
-          result.name_ru && result.name_lat && result.name_ru !== result.name_lat
-            ? toDogTitleCase(result.name_lat)
-            : null
+        const { primary: formattedDogName, secondary: secondaryName } = parseDogName(
+          result.name_lat || (result.dog as any)?.name_lat,
+          result.name_ru || (result.dog as any)?.name_ru
+        )
 
         const genderSymbol =
           result.dog?.gender === 'M' ? '♂' : result.dog?.gender === 'F' ? '♀' : ''
@@ -357,7 +355,7 @@ export default function ScorecardProtocolView({
                 <div className="text-right">
                   {isDns ? (
                     <span className="text-xs text-charcoal-400">Неявка</span>
-                  ) : isDq && !result.total_score ? (
+                  ) : isDq ? (
                     <span className="text-xs font-semibold text-rose-600">
                       {statusReason || 'Дисквал.'}
                     </span>
