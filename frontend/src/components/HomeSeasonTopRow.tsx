@@ -65,7 +65,7 @@ export default function HomeSeasonTopRow({
   const breedDisplay = breed ? displayBreed(breed) : null
 
   const renderRank = (rankVal: number) => (
-    <div className="flex min-h-0 min-w-[2.25rem] sm:min-w-[2.5rem] shrink-0 flex-col items-center justify-start pt-1 pr-1.5 sm:pr-2 mr-1.5 sm:mr-2 border-r border-old-money-200/70 self-stretch">
+    <div className="flex min-h-0 min-w-[2.25rem] sm:min-w-[2.5rem] shrink-0 flex-col items-center justify-center pr-1.5 sm:pr-2 mr-1.5 sm:mr-2 border-r border-old-money-200/70 self-stretch">
       <RankBadge rank={rankVal} />
     </div>
   )
@@ -146,9 +146,9 @@ export default function HomeSeasonTopRow({
   return (
     <Link
       to={to}
-      className={`group relative flex min-h-[5rem] sm:${DOG_CARD_HEIGHT_CLASS} flex-row items-stretch gap-0 ${
+      className={`group relative flex min-h-[4.25rem] sm:${DOG_CARD_HEIGHT_CLASS} flex-row items-stretch gap-0 ${
         isTop3 ? 'overflow-visible' : 'overflow-hidden'
-      } border-0 bg-transparent px-3 sm:px-4 py-1.5 shadow-none transition-colors duration-150 hover:bg-camel-100/60 ${top3Wash}`.trim()}
+      } border-0 bg-transparent px-3 sm:px-4 py-1 shadow-none transition-colors duration-150 hover:bg-camel-100/60 ${top3Wash}`.trim()}
     >
       {isTop3 && rank != null ? <Top3AccentBar rank={rank} /> : null}
 

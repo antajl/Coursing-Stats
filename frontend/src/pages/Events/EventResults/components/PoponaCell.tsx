@@ -6,6 +6,8 @@ const BIB_LABELS: Record<string, string> = {
   white: 'Белая попона',
   blue: 'Голубая попона',
   black: 'Чёрная попона',
+  yellow: 'Жёлтая попона',
+  green: 'Зелёная попона',
 }
 
 interface PoponaCellProps {
@@ -15,15 +17,16 @@ interface PoponaCellProps {
   compact?: boolean
   /** Победитель очного заезда (лучшее время среди участников заезда) */
   isWinner?: boolean
+  isRacing?: boolean
 }
 
 /** Ячейка попоны как в протоколе: цветной фон + цифра */
-export default function PoponaCell({ number, color, compact = false, isWinner = false }: PoponaCellProps) {
+export default function PoponaCell({ number, color, compact = false, isWinner = false, isRacing = false }: PoponaCellProps) {
   if (number == null && !color) {
     return null
   }
 
-  const normalized = normalizeBibColorName(color ?? undefined)
+  const normalized = normalizeBibColorName(color ?? undefined, isRacing)
   const colorTitle = normalized ? (BIB_LABELS[normalized] || normalized) : undefined
   const winnerTitle = isWinner ? ' · 1-е место в заезде' : ''
   const title =
@@ -40,8 +43,8 @@ export default function PoponaCell({ number, color, compact = false, isWinner = 
     <HoverTooltip label={title} placement="top" variant="site" delayMs={0} portal>
       <span className="relative inline-flex items-center justify-center">
         <span
-          className={`inline-flex items-center justify-center rounded font-bold cursor-help transition-all ${sizeClass} ${normalized ? bibTextClass(normalized) : 'text-charcoal-900 border border-old-money-300'} ${isWinner ? 'ring-2 ring-camel-500 ring-offset-1 shadow-sm' : 'shadow-xs'}`}
-          style={normalized ? bibColorStyle(normalized) : undefined}
+          className={`inline-flex items-center justify-center rounded font-bold cursor-help transition-all ${sizeClass} ${normalized ? bibTextClass(normalized, isRacing) : 'text-charcoal-900 border border-old-money-300'} ${isWinner ? 'ring-2 ring-camel-500 ring-offset-1 shadow-sm' : 'shadow-xs'}`}
+          style={normalized ? bibColorStyle(normalized, isRacing) : undefined}
         >
           {number ?? '—'}
         </span>

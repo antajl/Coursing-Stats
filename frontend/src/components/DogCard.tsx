@@ -32,7 +32,7 @@ function useDogCardContext() {
 }
 
 /** Единая высота карточки в двухколоночном рейтинге (строки выравниваются попарно). */
-export const DOG_CARD_HEIGHT_CLASS = 'h-[5.25rem]'
+export const DOG_CARD_HEIGHT_CLASS = 'h-[4.25rem]'
 
 export type DogCardVariant = 'card' | 'embedded'
 
@@ -213,10 +213,10 @@ function MedalStatBox({ variant, value }: { variant: MedalVariant; value?: numbe
 }
 
 const CARD_SHELL =
-  `group relative grid min-h-[5rem] sm:h-[5.25rem] grid-rows-[auto_auto] gap-0 overflow-hidden rounded-xl border border-old-money-200 bg-white p-2 transition-colors duration-200 hover:border-camel-300 hover:bg-cream-50`
+  `group relative grid min-h-[4.25rem] sm:h-[4.25rem] grid-rows-[auto_auto] gap-0 overflow-hidden rounded-xl border border-old-money-200 bg-white p-2 transition-colors duration-200 hover:border-camel-300 hover:bg-cream-50`
 
 const EMBEDDED_SHELL =
-  `group relative grid min-h-[5rem] sm:h-[5.25rem] grid-rows-[auto_auto] gap-0 overflow-hidden border-0 bg-transparent px-3 sm:px-4 py-1.5 shadow-none transition-colors duration-150 hover:bg-camel-100/60`
+  `group relative grid min-h-[4.25rem] sm:h-[4.25rem] grid-rows-[auto_auto] gap-0 overflow-hidden border-0 bg-transparent px-3 sm:px-4 py-1 shadow-none transition-colors duration-150 hover:bg-camel-100/60`
 
 /** Soft wash inside the row for ranks 1–3 (bar sits outside — see Top3AccentBar). */
 const TOP3_WASH: Record<1 | 2 | 3, string> = {
@@ -403,7 +403,7 @@ const DogCardRank: FC<{ className?: string }> = function DogCardRank({ className
         isEmbedded
           ? 'min-w-[2.25rem] sm:min-w-[2.5rem] pr-1.5 sm:pr-2 mr-1.5 sm:mr-2'
           : 'min-w-[2.75rem] sm:min-w-[3rem] pr-2 sm:pr-2.5 mr-2 sm:mr-2.5'
-      } shrink-0 flex-col items-center justify-start pt-0.5 sm:pt-1 border-r border-old-money-200/40 self-stretch ${className}`}
+      } shrink-0 flex-col items-center justify-center border-r border-old-money-200/40 self-stretch ${className}`}
     >
       <RankBadge rank={rank} delta={delta} />
     </div>
@@ -420,8 +420,8 @@ const DogCardInner = function DogCard({ dog, type, filterYear, rank, variant = '
   const useFlexShell = type === 'combined' || type === 'speed'
   const cardShell = useFlexShell
     ? shellBase.replace(
-        `grid min-h-[5rem] sm:h-[5.25rem] grid-rows-[auto_auto]`,
-        `flex min-h-[5rem] sm:h-[5.25rem] flex-row items-stretch`
+        `grid min-h-[4.25rem] sm:h-[4.25rem] grid-rows-[auto_auto]`,
+        `flex min-h-[4.25rem] sm:h-[4.25rem] flex-row items-stretch`
       )
     : shellBase
   // Overflow visible so the outside accent bar is not clipped by the shell.
@@ -456,7 +456,7 @@ const DogCardInner = function DogCard({ dog, type, filterYear, rank, variant = '
             </div>
 
             <div className={statsColClass}>
-              <div className="flex flex-col items-start gap-1 sm:gap-1.5">
+              <div className="flex flex-col items-start gap-0.5 sm:gap-1">
                 <StartsLabel starts={dog.total_starts || 0} size="md" />
                 <DogCardMedals />
               </div>
@@ -478,7 +478,7 @@ const DogCardInner = function DogCard({ dog, type, filterYear, rank, variant = '
             </div>
 
             <div className={statsColClass}>
-              <div className="flex flex-col items-start gap-1 sm:gap-1.5">
+              <div className="flex flex-col items-start gap-0.5 sm:gap-1">
                 <StartsLabel starts={dog.total_starts || 0} size="md" />
                 <div className="flex items-center gap-1 sm:gap-1.5 leading-none whitespace-nowrap">
                   <span className="text-base sm:text-lg font-bold tabular-nums text-camel-700 leading-none">

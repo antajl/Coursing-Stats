@@ -7,13 +7,22 @@ const fixture = (name: string) =>
   readFileSync(resolve(__dirname, 'fixtures/racing', name), 'utf-8');
 
 describe('racing heat bib numbers', () => {
-  it('2025 CC: парсит номер забега и цвет попоны (не 1,2,3 подряд)', async () => {
-    const html = await fetch('http://procoursing.ru/2025/Complete_Results_2025-06-08.html')
-      .then((r) => r.arrayBuffer())
-      .then((buf) => new TextDecoder('windows-1251').decode(buf))
-      .catch(() => null);
+  async function fetchLiveRacingHtml(url: string): Promise<string | null> {
+    try {
+      const res = await fetch(url, { signal: AbortSignal.timeout(2000) });
+      if (!res.ok) return null;
+      const buf = await res.arrayBuffer();
+      const html = new TextDecoder('windows-1251').decode(buf);
+      return html.includes('<table') ? html : null;
+    } catch {
+      return null;
+    }
+  }
 
-    if (!html || html.includes('Ошибка 404') || !html.includes('<table')) {
+  it('2025 CC: парсит номер забега и цвет попоны (не 1,2,3 подряд)', async () => {
+    const html = await fetchLiveRacingHtml('http://procoursing.ru/2025/Complete_Results_2025-06-08.html');
+
+    if (!html) {
       // offline или 404 — пропускаем live fetch
       return;
     }
@@ -30,7 +39,7 @@ describe('racing heat bib numbers', () => {
     const ingridHeats = JSON.parse(ingrid!.raw_scores_json).heats;
     expect(ingridHeats.map((h: { bib_number: number }) => h.bib_number)).toEqual([2, 1, 4]);
     expect(ingridHeats.map((h: { bib_color: string }) => h.bib_color)).toEqual(['blue', 'red', 'black']);
-  });
+  }, 10000);
 
   it('fixture sample: два забега с номерами из колонки «Попона»', async () => {
     const { results } = await parseRacingHTML(fixture('Complete_Results_2025-cc-sample.html'));
@@ -47,17 +56,14 @@ describe('racing heat bib numbers', () => {
   });
 
   it('2025 CC: парсит группы «Микс» без bgcolor на заголовке', async () => {
-    const html = await fetch('http://procoursing.ru/2025/Complete_Results_2025-06-08.html')
-      .then((r) => r.arrayBuffer())
-      .then((buf) => new TextDecoder('windows-1251').decode(buf))
-      .catch(() => null);
+    const html = await fetchLiveRacingHtml('http://procoursing.ru/2025/Complete_Results_2025-06-08.html');
 
-    if (!html || html.includes('Ошибка 404') || !html.includes('<table')) return;
+    if (!html) return;
 
     const { results } = await parseRacingHTML(html);
     const classes = [...new Set(results.map((r) => r.breed_class))];
     expect(classes).toContain('Басенджи - Стандартный - Микс');
     expect(classes).toContain('Малая итальянская борзая - Юниоры - Микс');
     expect(classes).toContain('Фараонова собака - Стандартный - Микс');
-  });
+  }, 10000);
 });

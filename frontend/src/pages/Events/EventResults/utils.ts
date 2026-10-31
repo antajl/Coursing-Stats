@@ -172,20 +172,35 @@ export function isRacingFormat(rawScores: RawScores | null): boolean {
   )
 }
 
-export function normalizeBibColorName(bibColor: string | undefined): string | null {
+export function normalizeBibColorName(bibColor: string | undefined, isRacing: boolean = false): string | null {
   const c = bibColor?.toLowerCase() ?? ''
   if (c === 'red' || c === '#ff0000') return 'red'
-  if (c === 'white' || c === '#ffffff') return 'white'
-  if (c === 'blue' || c === '#0000ff' || c === '#00ccff' || c === '#00ffff') return 'blue'
+  if (c === 'blue' || c === '#0000ff' || c === '#00a2e8' || c === '#00ccff' || c === '#00ffff') return 'blue'
   if (c === 'black' || c === '#000000' || c === '#000') return 'black'
   if (c === 'green' || c === '#00ff00' || c === '#008000') return 'green'
-  if (c === 'yellow' || c === '#ffff00' || c === '#efe4b0' || c === '#fff8dc') return 'yellow'
+  // In racing (6 boxes), box 5 is yellow
+  if (isRacing && (c === 'yellow' || c === '#ffff00')) return 'yellow'
+  // In coursing/bzmp there are no yellow bibs: pairs run strictly in red and white (3rd dog in blue).
+  // #efe4b0 / #fff8dc / #f7f6f0 / #f0ffff are off-white backgrounds used by procoursing to make white cells visible.
+  if (
+    c === 'white' ||
+    c === '#ffffff' ||
+    c === 'yellow' ||
+    c === '#ffff00' ||
+    c === '#efe4b0' ||
+    c === '#fff8dc' ||
+    c === '#f7f6f0' ||
+    c === '#f0ffff' ||
+    c === '#fffafa' ||
+    c === '#f2f2f2' ||
+    c === '#eaeaea'
+  ) return 'white'
   if (!c) return null
   return bibColor!
 }
 
-export function bibColorStyle(bibColor: string | undefined): CSSProperties {
-  const normalized = normalizeBibColorName(bibColor)
+export function bibColorStyle(bibColor: string | undefined, isRacing: boolean = false): CSSProperties {
+  const normalized = normalizeBibColorName(bibColor, isRacing)
   const backgroundColor =
     normalized === 'red' ? '#ef4444' :
     normalized === 'white' ? '#ffffff' :
@@ -201,8 +216,8 @@ export function bibColorStyle(bibColor: string | undefined): CSSProperties {
   }
 }
 
-export function bibTextClass(bibColor: string | undefined): string {
-  const normalized = normalizeBibColorName(bibColor)
+export function bibTextClass(bibColor: string | undefined, isRacing: boolean = false): string {
+  const normalized = normalizeBibColorName(bibColor, isRacing)
   if (normalized === 'white' || normalized === 'yellow') return 'text-charcoal-900'
   if (normalized === 'red' || normalized === 'blue' || normalized === 'black' || normalized === 'green') return 'text-white'
   return 'text-charcoal-900'

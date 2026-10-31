@@ -129,7 +129,8 @@ export function extractBibColor($cell) {
     if (lower === '#0000ff' || lower === 'blue' || lower === '#00ccff' || lower === '#00ffff') return 'blue';
     if (lower === '#000000' || lower === 'black' || lower === '#000') return 'black';
     if (lower === '#00ff00' || lower === 'green' || lower === '#008000') return 'green';
-    if (lower === '#efe4b0' || lower === '#fff8dc') return 'yellow';
+    if (lower === '#efe4b0' || lower === '#fff8dc' || lower === '#f7f6f0' || lower === '#f0ffff' || lower === '#fffafa' || lower === '#f2f2f2') return 'white';
+    if (lower === '#ffff00' || lower === 'yellow') return 'yellow';
     return bgColor;
   }
 
@@ -142,6 +143,7 @@ export function extractBibColor($cell) {
       if (color === '#0000ff' || color === 'blue' || color === '#00ccff' || color === '#00ffff') return 'blue';
       if (color === '#000000' || color === 'black' || color === '#000') return 'black';
       if (color === '#00ff00' || color === 'green' || color === '#008000') return 'green';
+      if (color === '#efe4b0' || color === '#fff8dc' || color === '#f7f6f0' || color === '#f0ffff' || color === '#fffafa' || color === '#f2f2f2') return 'white';
       if (color === '#ffff00' || color === 'yellow') return 'yellow';
       return colorMatch[1].trim();
     }

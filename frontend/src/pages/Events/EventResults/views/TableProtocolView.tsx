@@ -66,13 +66,15 @@ function ProtocolHeatBadge({
   bibColor,
   bibNumber,
   distance,
+  isRacing = false,
 }: {
   heatNumber?: number | string | null
   bibColor?: string | null
   bibNumber?: number | string | null
   distance?: number | null
+  isRacing?: boolean
 }) {
-  const normalized = normalizeBibColorName(bibColor ?? undefined)
+  const normalized = normalizeBibColorName(bibColor ?? undefined, isRacing)
   const isRed = normalized === 'red'
   const isBlue = normalized === 'blue'
   const isBlack = normalized === 'black'
@@ -98,7 +100,7 @@ function ProtocolHeatBadge({
   const colorName = normalized ? (BIB_COLOR_LABELS[normalized] || normalized) : 'Попона'
   const bibInfo =
     bibNumber != null && String(bibNumber) !== String(heatNumber) ? ` (попона №${bibNumber})` : ''
-  const tooltipText = `${colorName}${bibInfo} · Заезд №${label}${distance ? ` (${distance}м)` : ''}`
+  const tooltipText = `${colorName}${bibInfo} · ${isRacing ? 'Заезд' : 'Забег'} №${label}${distance ? ` (${distance}м)` : ''}`
 
   return (
     <HoverTooltip label={tooltipText} placement="top" portal delayMs={0}>
@@ -248,6 +250,7 @@ export default function TableProtocolView({
                       bibColor={heat.bib_color}
                       bibNumber={heat.bib_number}
                       distance={dist}
+                      isRacing={true}
                     />
                     <span className="text-[11px] font-semibold text-rose-600 italic leading-snug">
                       {heat.disqualification_reason || statusReason || 'Сход'}
@@ -260,6 +263,7 @@ export default function TableProtocolView({
                       bibColor={heat.bib_color}
                       bibNumber={heat.bib_number}
                       distance={dist}
+                      isRacing={true}
                     />
                     <div className="flex flex-col min-w-0">
                       <span className="font-mono text-xs sm:text-sm font-bold text-charcoal-900 whitespace-nowrap leading-tight">

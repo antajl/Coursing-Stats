@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-31T00:36:43.095Z",
+  "generated_at": "2026-10-31T00:45:32.964Z",
   "series_title": "Серия клубных чемпионатов Донино по рейсингу (бегам борзых)",
   "season": 2026,
   "organizer": "Курсинг в Донино",
@@ -1816,14 +1816,6 @@
           "time": 24.39
         },
         {
-          "dog_name": "BIRNENHOF ASTRID LAGUZ",
-          "breed": "УИППЕТ",
-          "breed_class": "Уиппет - юниор - сука",
-          "league": "Юниоры",
-          "placement": 1,
-          "time": 25.29
-        },
-        {
           "dog_name": "HEIDI SOTIS EREN YEAGER",
           "breed": "ФАРАОНОВА СОБАКА",
           "breed_class": "Фараонова собака - юниор - кобель",
@@ -3258,7 +3250,7 @@
           "sex": "Сука",
           "breed_class": "Уиппет - юниор - сука",
           "league": "Юниоры",
-          "placement": 1,
+          "placement": 0,
           "total_score": 25.29,
           "status": "withdrawn",
           "status_reason": "Снят владельцем",
@@ -5570,17 +5562,17 @@
       "breed": "УИППЕТ",
       "sex": "Сука",
       "current_league": "Юниоры",
-      "wins_count": 1,
-      "consecutive_losses": 0,
+      "wins_count": 0,
+      "consecutive_losses": 1,
       "best_time": 25.29,
       "stages_count": 1,
       "status_badge": "stable",
-      "promotion_label": "Победитель Лиги Юниоров II этапа",
+      "promotion_label": null,
       "history": [
         {
           "stage_num": 2,
           "date": "2026-09-20",
-          "placement": 1,
+          "placement": 0,
           "total_score": 25.29,
           "league": "Юниоры",
           "breed_class": "Уиппет - юниор - сука",

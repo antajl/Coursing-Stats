@@ -62,7 +62,7 @@ function CoursingHeatBadge({
   bibColor?: string | null
   distance?: number | null
 }) {
-  const normalized = normalizeBibColorName(bibColor ?? undefined)
+  const normalized = normalizeBibColorName(bibColor ?? undefined, false)
   const isRed = normalized === 'red'
   const isBlue = normalized === 'blue'
   const isBlack = normalized === 'black'

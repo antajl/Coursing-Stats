@@ -25,7 +25,7 @@ import { useFavorites } from '../../hooks/useFavorites'
 export default function TopDogs() {
   const location = useLocation()
   const [searchParams, setSearchParams] = useSearchParams()
-  const isEmbedded = location.pathname === '/competitions'
+  const isEmbedded = location.pathname.startsWith('/competitions')
   const { reachGoal } = useYandexGoal()
   const { favorites, toggleFavorite } = useFavorites()
 
@@ -256,7 +256,7 @@ export default function TopDogs() {
   const showListSkeleton = isInitialLoad && loading
 
   return (
-    <div className={isEmbedded ? 'max-w-full mx-auto pb-2 sm:pb-4' : 'px-4 pb-4'}>
+    <div className="max-w-full mx-auto pb-2 sm:pb-4">
       {!isEmbedded && (
         <SEO
           title="Рейтинг собак: курсинг и бега борзых 2026"

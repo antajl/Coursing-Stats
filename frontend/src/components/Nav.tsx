@@ -16,6 +16,7 @@ export default function Nav() {
   const isActive = (path: string) => location.pathname === path || (path === '/' && location.pathname === '/');
   const isCompetitionsActive =
     location.pathname === '/competitions' ||
+    location.pathname.startsWith('/competitions/') ||
     location.pathname === '/procoursing' ||
     location.pathname === '/protocol-builder' ||
     (isLocalDev && location.pathname.startsWith('/event/'))

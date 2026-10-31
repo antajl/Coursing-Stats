@@ -25,7 +25,7 @@ const DISCIPLINE_OPTIONS = [
 export default function Judges() {
   const location = useLocation()
   const [searchParams] = useSearchParams()
-  const isEmbedded = location.pathname === '/competitions'
+  const isEmbedded = location.pathname.startsWith('/competitions')
   const { reachGoal } = useYandexGoal()
   const { data: breedsData } = useCompetingBreeds()
   const { data: yearsData } = useYears()
@@ -153,7 +153,7 @@ export default function Judges() {
   }
 
   return (
-    <div className={isEmbedded ? '' : 'px-4 pb-4'}>
+    <div className="max-w-full mx-auto pb-2 sm:pb-4">
       {!isEmbedded && (
         <SEO
           title="Судьи"
