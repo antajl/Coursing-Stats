@@ -99,29 +99,56 @@ export function parseLeague(breedClass?: string | null): 'Абсолют' | 'Ч�
   return 'Прогресс';
 }
 
-export function cleanDogNameFields(rawRu?: string | null, rawLat?: string | null): { name: string; name_ru: string; name_lat: string } {
+export function cleanDogNameFields(
+  rawRu?: string | null,
+  rawLat?: string | null,
+  dogId?: number | null
+): { name: string; name_ru: string; name_lat: string } {
   let ru = (rawRu || '').trim();
   let lat = (rawLat || '').trim();
 
-  if (ru.includes('/')) {
-    const parts = ru.split('/').map((s) => s.trim());
-    const ruPart = parts.find((p) => /[а-яё]/i.test(p));
-    const latPart = parts.find((p) => /[a-z]/i.test(p));
-    if (ruPart) {
-      ru = ruPart;
-      if (!lat && latPart) lat = latPart;
+  // Проверяем официальный профиль собаки по dog_id
+  if (dogId) {
+    const profilePath = path.join(ROOT, 'data/v1/dogs/by-id', `${dogId}.json`);
+    if (fs.existsSync(profilePath)) {
+      try {
+        const profile = JSON.parse(fs.readFileSync(profilePath, 'utf8'));
+        if (profile.name_ru && /[а-яё]/i.test(profile.name_ru)) {
+          let pRu = profile.name_ru.trim();
+          if (pRu.includes('/')) {
+            const parts = pRu.split('/').map((s: string) => s.trim());
+            pRu = parts.find((p: string) => /[а-яё]/i.test(p)) || pRu;
+          }
+          ru = pRu;
+        }
+        if (profile.name_lat && /[a-z]/i.test(profile.name_lat)) {
+          let pLat = profile.name_lat.trim();
+          if (pLat.includes('/')) {
+            const parts = pLat.split('/').map((s: string) => s.trim());
+            pLat = parts.find((p: string) => /[a-z]/i.test(p)) || pLat;
+          }
+          lat = pLat;
+        }
+      } catch {
+        // ignore
+      }
     }
   }
 
-  if (lat.includes('/')) {
-    const parts = lat.split('/').map((s) => s.trim());
-    const ruPart = parts.find((p) => /[а-яё]/i.test(p));
-    const latPart = parts.find((p) => /[a-z]/i.test(p));
-    if (ruPart && !ru) ru = ruPart;
-    if (latPart) lat = latPart;
+  // Обрабатываем слеши в строках
+  for (const candidate of [ru, lat]) {
+    if (candidate && candidate.includes('/')) {
+      const parts = candidate.split('/').map((s) => s.trim()).filter(Boolean);
+      const ruPart = parts.find((p) => /[а-яё]/i.test(p));
+      const latPart = parts.find((p) => /[a-z]/i.test(p));
+      if (ruPart) ru = ruPart;
+      if (latPart) lat = latPart;
+    }
   }
 
-  const name = ru || lat || 'Неизвестная собака';
+  // Приоритет русской клички: если есть кириллическая кличка, она всегда name и name_ru!
+  const hasCyr = /[а-яё]/i.test(ru);
+  const name = hasCyr ? ru : (ru || lat || 'Неизвестная собака');
   return {
     name,
     name_ru: ru || name,
@@ -148,7 +175,7 @@ export function buildDoninoChampionshipData() {
         }))
       : [];
 
-    const names = cleanDogNameFields(r.dog?.name_ru || r.name_ru, r.dog?.name_lat || r.name_lat);
+    const names = cleanDogNameFields(r.dog?.name_ru || r.name_ru, r.dog?.name_lat || r.name_lat, r.dog_id || r.dog?.id);
     const league = parseLeague(r.breed_class);
 
     return {
@@ -182,7 +209,7 @@ export function buildDoninoChampionshipData() {
         }))
       : [];
 
-    const names = cleanDogNameFields(r.dog?.name_ru || r.name_ru, r.dog?.name_lat || r.name_lat);
+    const names = cleanDogNameFields(r.dog?.name_ru || r.name_ru, r.dog?.name_lat || r.name_lat, r.dog_id || r.dog?.id);
     const league = parseLeague(r.breed_class);
 
     return {

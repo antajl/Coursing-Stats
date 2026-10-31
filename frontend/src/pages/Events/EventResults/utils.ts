@@ -210,3 +210,17 @@ export function hasDisplayableRawScores(rawScores: RawScores | null): boolean {
 export function hasDisqualifiedHeat(rawScores: RawScores | null): boolean {
   return Boolean(rawScores?.heats?.some(h => h.disqualified))
 }
+
+export function extractDogSex(result: Result): 'm' | 'f' | '' {
+  const s = result.dog?.sex || (result.dog as any)?.gender || ''
+  if (s) {
+    const u = s.trim().toLowerCase()
+    if (u === 'кобель' || u === 'к' || u === 'male' || u === 'm') return 'm'
+    if (u === 'сука' || u === 'с' || u === 'female' || u === 'f') return 'f'
+  }
+  const bc = (result.breed_class || (result as any).class_label || '').toLowerCase()
+  if (bc.includes('кобел')) return 'm'
+  if (bc.includes('сук')) return 'f'
+  return ''
+}
+

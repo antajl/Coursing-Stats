@@ -293,8 +293,11 @@ export default function ChampionshipStandingsTab({
                     ? 'bg-cream-200 text-charcoal-700 border border-old-money-300'
                     : 'bg-sky-50 text-sky-800 border border-sky-200'
 
-                const dogPromotions = dogPromotionsMap.get(dog.name.trim().toLowerCase())
-                const { primary } = parseDogName(dog.name_lat || dog.name, dog.name_ru)
+                const dogPromotions =
+                  dogPromotionsMap.get(dog.name.trim().toLowerCase()) ||
+                  (dog.name_ru ? dogPromotionsMap.get(dog.name_ru.trim().toLowerCase()) : undefined) ||
+                  (dog.name_lat ? dogPromotionsMap.get(dog.name_lat.trim().toLowerCase()) : undefined)
+                const { primary, secondary } = parseDogName(dog.name_lat || dog.name, dog.name_ru || dog.name)
 
                 return (
                   <div
@@ -319,12 +322,16 @@ export default function ChampionshipStandingsTab({
                               <Link
                                 to={`/dog/${dog.dog_id}`}
                                 onClick={(e) => e.stopPropagation()}
+                                title={secondary || undefined}
                                 className="font-bold font-serif text-charcoal-900 hover:text-camel-800 transition-colors text-xs sm:text-sm truncate"
                               >
                                 {primary}
                               </Link>
                             ) : (
-                              <span className="font-bold font-serif text-charcoal-900 text-xs sm:text-sm truncate">
+                              <span
+                                title={secondary || undefined}
+                                className="font-bold font-serif text-charcoal-900 text-xs sm:text-sm truncate"
+                              >
                                 {primary}
                               </span>
                             )}

@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom'
 import PlacementBadge from '../components/PlacementBadge'
 import PoponaCell from '../components/PoponaCell'
 import QualificationBadges from '../components/QualificationBadges'
-import { parseRawScores, normalizeBibColorName } from '../utils'
+import DogSexIcon from '../../../../components/DogSexIcon'
+import { parseRawScores, normalizeBibColorName, extractDogSex } from '../utils'
 import { displayStatusReason } from '../../../../lib/statusReason'
 import { normalizeQualificationAndVc } from '../ResultSummary'
 import { toDogTitleCase } from '../../../../lib/dogName'
@@ -130,15 +131,7 @@ export default function TableProtocolView({
       rawDogName = rawDogName.split('/')[0].trim()
     }
     const formattedDogName = toDogTitleCase(rawDogName)
-
-    const genderSymbol =
-      result.dog?.gender === 'M' ? '♂' : result.dog?.gender === 'F' ? '♀' : ''
-    const genderColor =
-      result.dog?.gender === 'M'
-        ? 'text-sky-700'
-        : result.dog?.gender === 'F'
-          ? 'text-rose-700'
-          : 'text-charcoal-400'
+    const dogSex = extractDogSex(result)
 
     const isDns = result.status === 'dns' || result.status === 'absent'
     const isDq =
@@ -195,10 +188,8 @@ export default function TableProtocolView({
                 {formattedDogName}
               </span>
             )}
-            {genderSymbol && (
-              <span className={`text-xs font-bold shrink-0 ${genderColor}`} title={result.dog?.gender === 'M' ? 'Кобель' : 'Сука'}>
-                {genderSymbol}
-              </span>
+            {dogSex && (
+              <DogSexIcon sex={dogSex} size={14} className="shrink-0" />
             )}
           </div>
         </td>

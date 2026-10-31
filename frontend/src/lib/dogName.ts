@@ -195,20 +195,44 @@ export function parseDogName(
   let primary = ''
   let secondary: string | null = null
 
-  // Если есть слеш в name_lat - разделяем (русская часть основная, английская secondary)
-  if (nameLat && nameLat.includes('/')) {
-    const slashParts = nameLat.split('/')
-    primary = slashParts[0].trim()
-    secondary = slashParts.slice(1).join('/').trim() || null
-  } else if (nameRu && !nameLat) {
-    primary = nameRu
-  } else if (nameLat && !nameRu) {
-    primary = nameLat
-  } else if (nameLat && nameRu && nameLat !== nameRu) {
-    primary = nameRu
-    secondary = nameLat
-  } else {
-    primary = nameLat || nameRu || ''
+  let ruCandidate = nameRu?.trim() || null
+  let latCandidate = nameLat?.trim() || null
+
+  // Проверяем наличие слеша в обеих строках
+  for (const candidate of [nameLat, nameRu]) {
+    if (candidate && candidate.includes('/')) {
+      const parts = candidate.split('/').map((s) => s.trim()).filter(Boolean)
+      const ruPart = parts.find((p) => /[а-яё]/i.test(p))
+      const latPart = parts.find((p) => /[a-z]/i.test(p))
+      if (ruPart) ruCandidate = ruPart
+      if (latPart) latCandidate = latPart
+      if (!ruPart && !latPart && parts.length >= 2) {
+        if (!ruCandidate) ruCandidate = parts[0]
+        if (!latCandidate) latCandidate = parts.slice(1).join('/')
+      }
+    }
+  }
+
+  // Приоритет русской клички на отображение (русская всегда primary):
+  if (ruCandidate && latCandidate && ruCandidate !== latCandidate) {
+    const ruHasCyr = /[а-яё]/i.test(ruCandidate)
+    const latHasCyr = /[а-яё]/i.test(latCandidate)
+    if (ruHasCyr && !latHasCyr) {
+      primary = ruCandidate
+      secondary = latCandidate
+    } else if (!ruHasCyr && latHasCyr) {
+      primary = latCandidate
+      secondary = ruCandidate
+    } else {
+      primary = ruCandidate
+      secondary = latCandidate
+    }
+  } else if (ruCandidate) {
+    primary = ruCandidate
+    secondary = latCandidate && latCandidate !== ruCandidate ? latCandidate : null
+  } else if (latCandidate) {
+    primary = latCandidate
+    secondary = null
   }
 
   return {
