@@ -2,26 +2,30 @@ import { useState, useEffect, useRef, useCallback } from 'react'
 
 const ITEMS_PER_PAGE = 30
 
-export function useInfiniteScroll(itemCount: number, resetDeps: unknown[] = []) {
-  const [visibleCount, setVisibleCount] = useState(ITEMS_PER_PAGE)
+export function useInfiniteScroll(
+  itemCount: number,
+  resetDeps: unknown[] = [],
+  pageSize: number = ITEMS_PER_PAGE
+) {
+  const [visibleCount, setVisibleCount] = useState(pageSize)
   const loadMoreRef = useRef<HTMLDivElement>(null)
   const observerRef = useRef<IntersectionObserver | null>(null)
 
   useEffect(() => {
-    setVisibleCount(ITEMS_PER_PAGE)
+    setVisibleCount(pageSize)
     // eslint-disable-next-line react-hooks/exhaustive-deps -- reset when filters or list length change
-  }, [itemCount, ...resetDeps])
+  }, [itemCount, pageSize, ...resetDeps])
 
   const loadMore = useCallback(() => {
-    setVisibleCount((prev) => Math.min(prev + ITEMS_PER_PAGE, itemCount))
-  }, [itemCount])
+    setVisibleCount((prev) => Math.min(prev + pageSize, itemCount))
+  }, [itemCount, pageSize])
 
   useEffect(() => {
     observerRef.current = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) loadMore()
       },
-      { threshold: 0.1 }
+      { threshold: 0.1, rootMargin: '300px' }
     )
 
     const el = loadMoreRef.current

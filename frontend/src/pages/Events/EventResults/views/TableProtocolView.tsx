@@ -14,6 +14,7 @@ import { displayStatusReason } from '../../../../lib/statusReason'
 import { normalizeQualificationAndVc } from '../ResultSummary'
 import { parseDogName, toDogTitleCase } from '../../../../lib/dogName'
 import HoverTooltip from '../../../../components/ui/HoverTooltip'
+import { useInfiniteScroll } from '../../../../hooks/useInfiniteScroll'
 import type { Result, Heat, RawScores } from '../types'
 
 interface TableProtocolViewProps {
@@ -136,6 +137,38 @@ export default function TableProtocolView({
     ...allResults.map(r => parseRawScores(r.raw_scores_json)?.heats?.length || 0),
     1
   )
+
+  // Пошаговая (lazy) подгрузка участников при прокрутке страницы
+  const { visibleCount, loadMoreRef } = useInfiniteScroll(
+    allResults.length,
+    [sortedGroupKeys, results],
+    30
+  )
+
+  // Выбираем целые группы, суммарное число собак в которых укладывается в visibleCount
+  const visibleGroupKeys = useMemo(() => {
+    if (!sortedGroupKeys || !groupedResults) return []
+    let accumulated = 0
+    const keys: string[] = []
+    for (const key of sortedGroupKeys) {
+      const groupDogs = groupedResults[key] || []
+      keys.push(key)
+      accumulated += groupDogs.length
+      if (accumulated >= visibleCount) {
+        break
+      }
+    }
+    return keys
+  }, [sortedGroupKeys, groupedResults, visibleCount])
+
+  const visibleResults = useMemo(() => {
+    if (!results) return []
+    return results.slice(0, visibleCount)
+  }, [results, visibleCount])
+
+  const effectiveHasMore = sortedGroupKeys
+    ? visibleGroupKeys.length < sortedGroupKeys.length
+    : Boolean(results && visibleCount < results.length)
 
   const renderRow = (result: Result, idx: number) => {
     const rawScores = parseRawScores(result.raw_scores_json)
@@ -410,7 +443,8 @@ export default function TableProtocolView({
   }
 
   return (
-    <div className="overflow-x-auto rounded-xl border border-old-money-200/90 bg-white shadow-2xs">
+    <div className="space-y-2">
+      <div className="overflow-x-auto rounded-xl border border-old-money-200/90 bg-white shadow-2xs">
       <table className="w-full text-left text-xs border-collapse">
         <colgroup>
           <col className="w-12" />
@@ -428,7 +462,7 @@ export default function TableProtocolView({
         </colgroup>
         <tbody className="divide-y divide-old-money-100/70">
           {sortedGroupKeys && groupedResults ? (
-            sortedGroupKeys.map(groupKey => {
+            visibleGroupKeys.map(groupKey => {
               const groupResults = groupedResults[groupKey] || []
               if (groupResults.length === 0) return null
 
@@ -452,10 +486,20 @@ export default function TableProtocolView({
               )
             })
           ) : (
-            results?.map((result, idx) => renderRow(result, idx))
+            visibleResults.map((result, idx) => renderRow(result, idx))
           )}
         </tbody>
       </table>
     </div>
+
+    {effectiveHasMore && (
+      <div
+        ref={loadMoreRef}
+        className="py-3 text-center text-xs text-charcoal-500 font-medium select-none"
+      >
+        Загрузка следующих участников…
+      </div>
+    )}
+  </div>
   )
 }
