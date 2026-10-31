@@ -1,9 +1,19 @@
 import { useState, useMemo } from 'react'
-import { X } from 'lucide-react'
+import { X, ChevronDown } from 'lucide-react'
 import TableProtocolView from './views/TableProtocolView'
-import { groupResultsByBreedClass, groupRacingResults, isRacingFormat, parseRawScores, getBestTimesByRace } from './utils'
+import {
+  groupResultsByBreedClass,
+  groupRacingResults,
+  isRacingFormat,
+  parseRawScores,
+  getBestTimesByRace,
+  extractDogSex,
+} from './utils'
 import ToolbarSearch from '../../../components/toolbar/ToolbarSearch'
 import QuickBreedBar from '../../TopDogs/QuickBreedBar'
+import DogSexIcon from '../../../components/DogSexIcon'
+import ModernDropdown from '../../../components/ui/ModernDropdown'
+import { toolbarPillTriggerClass } from '../../../lib/toolbar'
 import type { Result } from './types'
 
 interface ResultsSectionProps {
@@ -13,6 +23,8 @@ interface ResultsSectionProps {
 export default function ResultsSection({ results }: ResultsSectionProps) {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedBreed, setSelectedBreed] = useState('')
+  const [selectedSex, setSelectedSex] = useState<string>('')
+  const [sexDropdownOpen, setSexDropdownOpen] = useState(false)
 
   if (results.length === 0) {
     return (
