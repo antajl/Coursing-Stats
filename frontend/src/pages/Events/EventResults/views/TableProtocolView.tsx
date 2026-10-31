@@ -210,54 +210,56 @@ export default function TableProtocolView({
     return (
       <tr key={`${result.dog_id || 'unk'}-${result.id || idx}`} className={`hover:bg-cream-100/60 transition-colors ${rowBg}`}>
         {/* 1. Место */}
-        <td className="w-12 py-1.5 sm:py-2 px-2 text-center align-middle">
+        <td className="w-9 sm:w-10 py-1.5 sm:py-2 px-1 text-center align-middle">
           <PlacementBadge result={result} />
         </td>
 
         {/* 2. Номер по каталогу */}
-        <td className="w-12 py-1.5 sm:py-2 px-1 text-center text-charcoal-500 font-mono text-xs align-middle">
+        <td className="w-9 sm:w-10 py-1.5 sm:py-2 px-1 text-center text-charcoal-500 font-mono text-[11px] align-middle">
           {result.catalog_no ? `№${result.catalog_no}` : '—'}
         </td>
 
-        {/* 3. Кличка собаки (НЕ капс, без сокращений, полная; причину дисквала выводим только справа) */}
-        <td className="py-1.5 sm:py-2 px-3 align-middle min-w-[220px]">
-          <div className="flex items-center gap-1.5 flex-nowrap">
+        {/* 3. Кличка собаки (НЕ капс, без сокращений, полная; значок пола строго инлайн в потоке текста) */}
+        <td className="py-1.5 sm:py-2 px-2 sm:px-3 align-middle min-w-[140px] sm:min-w-[170px]">
+          <div className="leading-snug break-words">
             {result.dog_id ? (
               <Link
                 to={`/dog/${result.dog_id}/`}
                 title={secondaryDogName || undefined}
-                className="font-serif font-bold text-xs sm:text-sm text-charcoal-900 hover:text-camel-800 hover:underline leading-snug whitespace-nowrap"
+                className="font-serif font-bold text-xs sm:text-sm text-charcoal-900 hover:text-camel-800 hover:underline"
               >
                 {formattedDogName}
               </Link>
             ) : (
               <span
                 title={secondaryDogName || undefined}
-                className="font-serif font-bold text-xs sm:text-sm text-charcoal-900 leading-snug whitespace-nowrap"
+                className="font-serif font-bold text-xs sm:text-sm text-charcoal-900"
               >
                 {formattedDogName}
               </span>
             )}
             {dogSex && (
-              <DogSexIcon sex={dogSex} size={14} className="shrink-0" />
+              <span className="inline-flex items-center align-middle ml-1 select-none -translate-y-px">
+                <DogSexIcon sex={dogSex} size={13} />
+              </span>
             )}
           </div>
         </td>
 
         {/* 4. Класс / Лига */}
-        <td className="w-28 sm:w-32 py-1.5 sm:py-2 px-2 text-charcoal-600 text-xs hidden sm:table-cell align-middle">
+        <td className="w-20 sm:w-24 py-1.5 sm:py-2 px-1.5 text-charcoal-600 text-xs hidden sm:table-cell align-middle truncate">
           {classLabel}
         </td>
 
         {/* 5. Заезды / Круги (строго выровнены по ширине и горизонтали) */}
         {Array.from({ length: maxHeats }).map((_, heatIdx) => {
-          const heatColClass = isRacing ? 'w-[140px] min-w-[130px]' : 'w-[205px] min-w-[205px]'
+          const heatColClass = isRacing ? 'w-[115px] sm:w-[125px]' : 'w-[165px] sm:w-[172px]'
           const heat = heats[heatIdx]
           if (!heat) {
             return (
               <td
                 key={heatIdx}
-                className={`${heatColClass} py-1.5 sm:py-2 px-2.5 text-charcoal-300 font-mono text-xs align-middle`}
+                className={`${heatColClass} py-1.5 sm:py-2 px-1.5 text-charcoal-300 font-mono text-xs align-middle`}
               >
                 —
               </td>
@@ -274,29 +276,27 @@ export default function TableProtocolView({
             return (
               <td
                 key={heatIdx}
-                className={`${heatColClass} py-1.5 sm:py-2 px-2 sm:px-2.5 align-middle`}
+                className={`${heatColClass} py-1.5 sm:py-2 px-1.5 sm:px-2 align-middle`}
               >
                 {isHeatDq ? (
-                  <div className="flex items-center gap-1.5">
+                  <div className="flex items-center gap-1">
                     <ProtocolHeatBadge
                       heatNumber={heatNum}
                       bibColor={heat.bib_color}
                       bibNumber={heat.bib_number}
                       distance={dist}
-                      isRacing={true}
                     />
                     <span className="text-[11px] font-semibold text-rose-600 italic leading-snug">
                       {heat.disqualification_reason || statusReason || 'Сход'}
                     </span>
                   </div>
                 ) : (
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-1.5 sm:gap-2">
                     <ProtocolHeatBadge
                       heatNumber={heatNum}
                       bibColor={heat.bib_color}
                       bibNumber={heat.bib_number}
                       distance={dist}
-                      isRacing={true}
                     />
                     <div className="flex flex-col min-w-0">
                       <span className="font-mono text-xs sm:text-sm font-bold text-charcoal-900 whitespace-nowrap leading-tight">
@@ -330,10 +330,10 @@ export default function TableProtocolView({
           return (
             <td
               key={heatIdx}
-              className={`${heatColClass} py-1.5 sm:py-2 px-2.5 align-middle`}
+              className={`${heatColClass} py-1.5 sm:py-2 px-1.5 sm:px-2 align-middle`}
             >
               {isHeatDq ? (
-                <div className="flex items-center gap-1.5">
+                <div className="flex items-center gap-1">
                   <ProtocolHeatBadge
                     heatNumber={heat.bib_number ?? heat.heat_number ?? heatIdx + 1}
                     bibColor={heat.bib_color}
@@ -344,7 +344,7 @@ export default function TableProtocolView({
                   </span>
                 </div>
               ) : (
-                <div className="flex items-center gap-1.5">
+                <div className="flex items-center gap-1 sm:gap-1.5">
                   {/* Номер попоны прямо впритык слева от оценок */}
                   <ProtocolHeatBadge
                     heatNumber={heat.bib_number ?? heat.heat_number ?? heatIdx + 1}
@@ -355,17 +355,17 @@ export default function TableProtocolView({
                   {/* Оценки по 5 категориям (М Р В П Э + цифры) */}
                   <div className="flex flex-col shrink-0">
                     {/* Буквы критериев */}
-                    <div className="flex items-center gap-1.5 text-[9px] font-semibold text-charcoal-400 leading-none">
+                    <div className="flex items-center gap-1 text-[9px] font-semibold text-charcoal-400 leading-none">
                       {CRITERIA_5_LABELS.map(c => (
-                        <span key={c} className="w-3.5 text-center" title={CRITERIA_TITLES[c]}>
+                        <span key={c} className="w-3 text-center" title={CRITERIA_TITLES[c]}>
                           {c}
                         </span>
                       ))}
                     </div>
                     {/* Цифры оценок */}
-                    <div className="flex items-center gap-1.5 font-mono text-xs font-bold text-charcoal-800 tabular-nums leading-tight pt-0.5">
+                    <div className="flex items-center gap-1 font-mono text-[10px] font-semibold text-charcoal-700 tabular-nums leading-tight pt-0.5">
                       {primaryScores.slice(0, 5).map((score, sIdx) => (
-                        <span key={sIdx} className="w-3.5 text-center">
+                        <span key={sIdx} className="w-3 text-center">
                           {score ?? '—'}
                         </span>
                       ))}
@@ -373,16 +373,16 @@ export default function TableProtocolView({
                   </div>
 
                   {/* Общий балл за один забег (154 б.) прямо над суммой (76+78), СТРОГО без переноса */}
-                  <div className="flex flex-col items-end pl-1.5 shrink-0 whitespace-nowrap">
+                  <div className="flex flex-col items-end pl-1 shrink-0 whitespace-nowrap">
                     <span className="font-serif font-bold text-xs sm:text-sm text-charcoal-900 tabular-nums leading-none whitespace-nowrap">
                       {heatTotal}&nbsp;б.
                     </span>
                     {judgeSums.length > 1 ? (
-                      <span className="text-[10px] text-charcoal-400 font-mono tracking-tight leading-tight pt-0.5 whitespace-nowrap">
+                      <span className="text-[9px] sm:text-[10px] text-charcoal-400 font-mono tracking-tight leading-tight pt-0.5 whitespace-nowrap">
                         ({judgeSums.join('+')})
                       </span>
                     ) : (
-                      <span className="text-[10px] text-transparent leading-tight pt-0.5 select-none">
+                      <span className="text-[9px] text-transparent leading-tight pt-0.5 select-none">
                         &nbsp;
                       </span>
                     )}
@@ -394,7 +394,7 @@ export default function TableProtocolView({
         })}
 
         {/* 6. Итоговый балл / лучшее время + ненавязчивый СС в одной строке слева от балла */}
-        <td className="w-28 py-1.5 sm:py-2 px-3 text-right align-middle">
+        <td className="w-20 sm:w-24 py-1.5 sm:py-2 px-1.5 sm:px-2 text-right align-middle">
           {isDns ? (
             <span className="text-xs text-charcoal-400">Неявка</span>
           ) : isDq ? (
@@ -402,7 +402,7 @@ export default function TableProtocolView({
               {statusReason || 'Дисквал.'}
             </span>
           ) : (
-            <div className="flex items-center justify-end gap-1.5 whitespace-nowrap leading-none">
+            <div className="flex items-center justify-end gap-1 sm:gap-1.5 whitespace-nowrap leading-none">
               {showVc && (
                 <HoverTooltip
                   label="СС — сертификат соответствия высшей квалификации (≥75% баллов во всех забегах)"
@@ -431,7 +431,7 @@ export default function TableProtocolView({
         </td>
 
         {/* 7. Квалификация / титулы / переход в лигу (только титулы, без раздувания строки по высоте) */}
-        <td className="w-44 min-w-[150px] py-1.5 sm:py-2 px-3 hidden md:table-cell align-middle">
+        <td className="w-28 sm:w-36 py-1.5 sm:py-2 px-1.5 sm:px-2 hidden md:table-cell align-middle">
           {cleanQualification ? (
             <QualificationBadges qualification={cleanQualification} />
           ) : (
@@ -447,18 +447,18 @@ export default function TableProtocolView({
       <div className="overflow-x-auto rounded-xl border border-old-money-200/90 bg-white shadow-2xs">
       <table className="w-full text-left text-xs border-collapse">
         <colgroup>
-          <col className="w-12" />
-          <col className="w-12" />
-          <col className="min-w-[220px]" />
-          <col className="w-28 sm:w-32 hidden sm:table-column" />
+          <col className="w-9 sm:w-10" />
+          <col className="w-9 sm:w-10" />
+          <col className="min-w-[140px] sm:min-w-[170px]" />
+          <col className="w-20 sm:w-24 hidden sm:table-column" />
           {Array.from({ length: maxHeats }).map((_, i) => (
             <col
               key={i}
-              className={isRacing ? 'w-[140px] min-w-[130px]' : 'w-[205px] min-w-[205px]'}
+              className={isRacing ? 'w-[115px] sm:w-[125px]' : 'w-[165px] sm:w-[172px]'}
             />
           ))}
-          <col className="w-28" />
-          <col className="w-44 hidden md:table-column" />
+          <col className="w-20 sm:w-24" />
+          <col className="w-28 sm:w-36 hidden md:table-column" />
         </colgroup>
         <tbody className="divide-y divide-old-money-100/70">
           {sortedGroupKeys && groupedResults ? (

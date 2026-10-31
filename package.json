@@ -81,9 +81,8 @@
     "test-parser": "npx tsx backend/scripts/test/test-parser.ts",
     "test-parser-fixtures": "npx tsx backend/scripts/test/test-parsers-fixtures.ts",
     "download-fixtures": "npx tsx backend/scripts/test/download-fixtures.ts",
-    "smoke-api": "npx tsx backend/scripts/test/smoke-api.ts",
     "prerender-seo": "npx tsx backend/scripts/seo/prerender-pages.ts",
-    "test": "vitest run backend/tests/",
+    "test": "vitest run",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
     "docs:check-links": "npx markdown-link-check docs/**/*.md --config .markdown-link-check.json",
@@ -98,7 +97,9 @@
     "perf:measure": "npx tsx backend/scripts/measure-performance.ts",
     "perf:compare": "npx tsx backend/scripts/compare-performance.ts",
     "quality:report": "npx tsx backend/scripts/generate-quality-report.ts",
-    "export-all-protocols": "npx tsx backend/scripts/export/export-all-html-protocols.ts"
+    "sync-donino-championship": "npx tsx backend/scripts/donino/fetch-donino-championship-sheet.ts && npx tsx backend/scripts/donino/build-donino-championship.ts",
+    "export-all-protocols": "npx tsx backend/scripts/export/export-all-html-protocols.ts",
+    "test:fast": "vitest run --exclude=\"**/*integrity*\" --exclude=\"**/*publish-gates*\" --exclude=\"**/*alias-resolution*\" --exclude=\"**/*local-data*\""
   },
   "dependencies": {
     "@gutenye/ocr-node": "^1.4.9",

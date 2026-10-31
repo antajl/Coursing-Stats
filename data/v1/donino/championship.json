@@ -1,13 +1,15 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-31T00:45:32.964Z",
+  "generated_at": "2026-10-31T01:15:45.323Z",
   "series_title": "Серия клубных чемпионатов Донино по рейсингу (бегам борзых)",
   "season": 2026,
   "organizer": "Курсинг в Донино",
   "series_director": "Манухин Михаил Андреевич",
   "track_length_meters": 350,
   "reglament_pdf_url": "https://drive.google.com/file/d/1bv51StWxPp8vz-N3dEBYn8aaURhkCX2T/view?usp=sharing",
-  "spreadsheet_url": "https://docs.google.com/spreadsheets/d/1PGrVO98HfxwzoOxHmd8eRaygvl3iJryIXYfPd7vmyNQ/edit?gid=0#gid=0",
+  "spreadsheet_url": "https://docs.google.com/spreadsheets/d/1OKA9-I7oiY3xOisuxiDUOpn6C6bGxSQMkZDcuwtXiJg/edit?gid=22361699#gid=22361699",
+  "results_spreadsheet_url": "https://docs.google.com/spreadsheets/d/1OKA9-I7oiY3xOisuxiDUOpn6C6bGxSQMkZDcuwtXiJg/edit?gid=22361699#gid=22361699",
+  "points_spreadsheet_url": "https://docs.google.com/spreadsheets/d/1PGrVO98HfxwzoOxHmd8eRaygvl3iJryIXYfPd7vmyNQ/edit?gid=0#gid=0",
   "stages": [
     {
       "id": 2026004,
@@ -3388,6 +3390,10 @@
       "consecutive_losses": 0,
       "best_time": 23.06,
       "stages_count": 1,
+      "total_points": 11,
+      "stage_points": {
+        "1": 11
+      },
       "status_badge": "promoted_up",
       "promotion_label": "Выход в Абсолют (победа I этапа)",
       "history": [
@@ -3398,7 +3404,15 @@
           "total_score": 23.06,
           "league": "Чемпионов",
           "breed_class": "Уиппет - спринтер (Чемпионы) - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 11,
+          "points_breakdown": {
+            "place_points": 7,
+            "best_final_points": 1,
+            "best_class_points": 1,
+            "best_breed_points": 1,
+            "track_record_points": 1
+          }
         }
       ]
     },
@@ -3415,6 +3429,10 @@
       "consecutive_losses": 0,
       "best_time": 23.34,
       "stages_count": 1,
+      "total_points": 13,
+      "stage_points": {
+        "2": 13
+      },
       "status_badge": "promoted_up",
       "promotion_label": "Выход в Абсолют (победа II этапа)",
       "history": [
@@ -3425,7 +3443,15 @@
           "total_score": 23.34,
           "league": "Чемпионов",
           "breed_class": "Уиппет - стандарт (Чемпионы) - сука",
-          "status": "finished"
+          "status": "finished",
+          "points": 13,
+          "points_breakdown": {
+            "place_points": 9,
+            "best_final_points": 1,
+            "best_class_points": 1,
+            "best_breed_points": 1,
+            "track_record_points": 1
+          }
         }
       ]
     },
@@ -3442,6 +3468,10 @@
       "consecutive_losses": 0,
       "best_time": 23.4,
       "stages_count": 1,
+      "total_points": 7,
+      "stage_points": {
+        "2": 7
+      },
       "status_badge": "promoted_up",
       "promotion_label": "Выход в Абсолют (победа II этапа)",
       "history": [
@@ -3452,7 +3482,15 @@
           "total_score": 23.4,
           "league": "Чемпионов",
           "breed_class": "Уиппет - спринтер (Чемпионы) - сука",
-          "status": "finished"
+          "status": "finished",
+          "points": 7,
+          "points_breakdown": {
+            "place_points": 4,
+            "best_final_points": 1,
+            "best_class_points": 1,
+            "best_breed_points": 1,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -3469,6 +3507,10 @@
       "consecutive_losses": 0,
       "best_time": 23.83,
       "stages_count": 1,
+      "total_points": 6,
+      "stage_points": {
+        "2": 6
+      },
       "status_badge": "promoted_up",
       "promotion_label": "Выход в Абсолют (победа II этапа)",
       "history": [
@@ -3479,7 +3521,15 @@
           "total_score": 23.83,
           "league": "Чемпионов",
           "breed_class": "Уиппет - спринтер (Чемпионы) - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 6,
+          "points_breakdown": {
+            "place_points": 5,
+            "best_final_points": 1,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -3496,6 +3546,11 @@
       "consecutive_losses": 0,
       "best_time": 23.87,
       "stages_count": 2,
+      "total_points": 19,
+      "stage_points": {
+        "1": 9,
+        "2": 10
+      },
       "status_badge": "stable",
       "promotion_label": "Победитель Лиги Абсолют II этапа",
       "history": [
@@ -3506,7 +3561,15 @@
           "total_score": 23.87,
           "league": "Чемпионов",
           "breed_class": "Уиппет - стандарт (Чемпионы) - сука",
-          "status": "finished"
+          "status": "finished",
+          "points": 9,
+          "points_breakdown": {
+            "place_points": 5,
+            "best_final_points": 1,
+            "best_class_points": 1,
+            "best_breed_points": 1,
+            "track_record_points": 1
+          }
         },
         {
           "stage_num": 2,
@@ -3515,7 +3578,15 @@
           "total_score": 24.02,
           "league": "Абсолют",
           "breed_class": "Уиппет - стандарт (Абсолют) - сука",
-          "status": "finished"
+          "status": "finished",
+          "points": 10,
+          "points_breakdown": {
+            "place_points": 10,
+            "best_final_points": 0,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -3532,6 +3603,10 @@
       "consecutive_losses": 0,
       "best_time": 25.96,
       "stages_count": 1,
+      "total_points": 5,
+      "stage_points": {
+        "2": 5
+      },
       "status_badge": "promoted_up",
       "promotion_label": "Выход в Абсолют (победа II этапа)",
       "history": [
@@ -3542,7 +3617,15 @@
           "total_score": 25.96,
           "league": "Чемпионов",
           "breed_class": "Салюки - стандарт (Чемпионы) - сука",
-          "status": "finished"
+          "status": "finished",
+          "points": 5,
+          "points_breakdown": {
+            "place_points": 2,
+            "best_final_points": 1,
+            "best_class_points": 1,
+            "best_breed_points": 1,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -3559,6 +3642,10 @@
       "consecutive_losses": 0,
       "best_time": 27.77,
       "stages_count": 2,
+      "total_points": 6,
+      "stage_points": {
+        "2": 6
+      },
       "status_badge": "promoted_up",
       "promotion_label": "Выход в Абсолют на III этап",
       "history": [
@@ -3569,7 +3656,8 @@
           "total_score": 27.8,
           "league": "Чемпионов",
           "breed_class": "Родезийский риджбек - стандарт (Чемпионы) - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 0
         },
         {
           "stage_num": 2,
@@ -3578,7 +3666,15 @@
           "total_score": 27.77,
           "league": "Чемпионов",
           "breed_class": "Родезийский риджбек - стандарт (Чемпионы) - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 6,
+          "points_breakdown": {
+            "place_points": 2,
+            "best_final_points": 1,
+            "best_class_points": 1,
+            "best_breed_points": 1,
+            "track_record_points": 1
+          }
         }
       ]
     },
@@ -3595,6 +3691,11 @@
       "consecutive_losses": 0,
       "best_time": 28.19,
       "stages_count": 2,
+      "total_points": 11,
+      "stage_points": {
+        "1": 7,
+        "2": 4
+      },
       "status_badge": "stable",
       "promotion_label": "Победитель Лиги Абсолют II этапа",
       "history": [
@@ -3605,7 +3706,15 @@
           "total_score": 29.12,
           "league": "Чемпионов",
           "breed_class": "Родезийский риджбек - стандарт (Чемпионы) - сука",
-          "status": "finished"
+          "status": "finished",
+          "points": 7,
+          "points_breakdown": {
+            "place_points": 3,
+            "best_final_points": 1,
+            "best_class_points": 1,
+            "best_breed_points": 1,
+            "track_record_points": 1
+          }
         },
         {
           "stage_num": 2,
@@ -3614,7 +3723,15 @@
           "total_score": 28.19,
           "league": "Абсолют",
           "breed_class": "Родезийский риджбек - стандарт (Абсолют) - сука",
-          "status": "finished"
+          "status": "finished",
+          "points": 4,
+          "points_breakdown": {
+            "place_points": 4,
+            "best_final_points": 0,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -3631,6 +3748,11 @@
       "consecutive_losses": 0,
       "best_time": 28.43,
       "stages_count": 2,
+      "total_points": 8,
+      "stage_points": {
+        "1": 3,
+        "2": 5
+      },
       "status_badge": "promoted_up",
       "promotion_label": "Выход в Абсолют на III этап",
       "history": [
@@ -3641,7 +3763,15 @@
           "total_score": 28.92,
           "league": "Прогресс",
           "breed_class": "Фараонова собака - стандарт (Прогресс) - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 3,
+          "points_breakdown": {
+            "place_points": 2,
+            "best_final_points": 1,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         },
         {
           "stage_num": 2,
@@ -3650,7 +3780,15 @@
           "total_score": 28.43,
           "league": "Чемпионов",
           "breed_class": "Фараонова собака - стандарт (Чемпионы) - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 5,
+          "points_breakdown": {
+            "place_points": 2,
+            "best_final_points": 1,
+            "best_class_points": 1,
+            "best_breed_points": 1,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -3667,6 +3805,11 @@
       "consecutive_losses": 0,
       "best_time": 28.48,
       "stages_count": 2,
+      "total_points": 10,
+      "stage_points": {
+        "1": 7,
+        "2": 3
+      },
       "status_badge": "stable",
       "promotion_label": "Победитель Лиги Абсолют II этапа",
       "history": [
@@ -3677,7 +3820,15 @@
           "total_score": 29.08,
           "league": "Чемпионов",
           "breed_class": "Фараонова собака - стандарт (Чемпионы) - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 7,
+          "points_breakdown": {
+            "place_points": 4,
+            "best_final_points": 0,
+            "best_class_points": 1,
+            "best_breed_points": 1,
+            "track_record_points": 1
+          }
         },
         {
           "stage_num": 2,
@@ -3686,7 +3837,15 @@
           "total_score": 28.48,
           "league": "Абсолют",
           "breed_class": "Фараонова собака - стандарт (Абсолют) - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 3,
+          "points_breakdown": {
+            "place_points": 3,
+            "best_final_points": 0,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -3703,6 +3862,11 @@
       "consecutive_losses": 0,
       "best_time": 28.57,
       "stages_count": 2,
+      "total_points": 5,
+      "stage_points": {
+        "1": 2,
+        "2": 3
+      },
       "status_badge": "promoted_up",
       "promotion_label": "Выход в Абсолют на III этап",
       "history": [
@@ -3713,7 +3877,15 @@
           "total_score": 29.57,
           "league": "Чемпионов",
           "breed_class": "Родезийский риджбек - стандарт (Чемпионы) - сука",
-          "status": "finished"
+          "status": "finished",
+          "points": 2,
+          "points_breakdown": {
+            "place_points": 2,
+            "best_final_points": 0,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         },
         {
           "stage_num": 2,
@@ -3722,7 +3894,15 @@
           "total_score": 28.57,
           "league": "Чемпионов",
           "breed_class": "Родезийский риджбек - стандарт (Чемпионы) - сука",
-          "status": "finished"
+          "status": "finished",
+          "points": 3,
+          "points_breakdown": {
+            "place_points": 3,
+            "best_final_points": 0,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -3739,6 +3919,10 @@
       "consecutive_losses": 0,
       "best_time": 28.84,
       "stages_count": 1,
+      "total_points": 5,
+      "stage_points": {
+        "1": 5
+      },
       "status_badge": "promoted_up",
       "promotion_label": "Выход в Абсолют (победа I этапа)",
       "history": [
@@ -3749,7 +3933,15 @@
           "total_score": 28.84,
           "league": "Чемпионов",
           "breed_class": "Фараонова собака - стандарт (Чемпионы) - сука",
-          "status": "finished"
+          "status": "finished",
+          "points": 5,
+          "points_breakdown": {
+            "place_points": 2,
+            "best_final_points": 1,
+            "best_class_points": 1,
+            "best_breed_points": 0,
+            "track_record_points": 1
+          }
         }
       ]
     },
@@ -3766,6 +3958,11 @@
       "consecutive_losses": 0,
       "best_time": 28.95,
       "stages_count": 2,
+      "total_points": 5,
+      "stage_points": {
+        "1": 1,
+        "2": 4
+      },
       "status_badge": "promoted_up",
       "promotion_label": "Выход в Абсолют на III этап",
       "history": [
@@ -3776,7 +3973,15 @@
           "total_score": 29.02,
           "league": "Прогресс",
           "breed_class": "Фараонова собака - стандарт (Прогресс) - сука",
-          "status": "finished"
+          "status": "finished",
+          "points": 1,
+          "points_breakdown": {
+            "place_points": 1,
+            "best_final_points": 0,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         },
         {
           "stage_num": 2,
@@ -3785,7 +3990,15 @@
           "total_score": 28.95,
           "league": "Чемпионов",
           "breed_class": "Фараонова собака - стандарт (Чемпионы) - сука",
-          "status": "finished"
+          "status": "finished",
+          "points": 4,
+          "points_breakdown": {
+            "place_points": 2,
+            "best_final_points": 1,
+            "best_class_points": 1,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -3802,6 +4015,11 @@
       "consecutive_losses": 0,
       "best_time": 30.39,
       "stages_count": 2,
+      "total_points": 8,
+      "stage_points": {
+        "1": 5,
+        "2": 3
+      },
       "status_badge": "promoted_up",
       "promotion_label": "Выход в Абсолют на III этап",
       "history": [
@@ -3812,7 +4030,15 @@
           "total_score": 30.39,
           "league": "Прогресс",
           "breed_class": "Чирнеко дель Этна - стандарт (Прогресс) - сука",
-          "status": "finished"
+          "status": "finished",
+          "points": 5,
+          "points_breakdown": {
+            "place_points": 1,
+            "best_final_points": 1,
+            "best_class_points": 1,
+            "best_breed_points": 1,
+            "track_record_points": 1
+          }
         },
         {
           "stage_num": 2,
@@ -3821,7 +4047,15 @@
           "total_score": 30.4,
           "league": "Чемпионов",
           "breed_class": "Чирнеко дель'Этна - стандарт (Чемпионы) - сука",
-          "status": "finished"
+          "status": "finished",
+          "points": 3,
+          "points_breakdown": {
+            "place_points": 1,
+            "best_final_points": 1,
+            "best_class_points": 1,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -3838,6 +4072,10 @@
       "consecutive_losses": 0,
       "best_time": 30.51,
       "stages_count": 1,
+      "total_points": 5,
+      "stage_points": {
+        "2": 5
+      },
       "status_badge": "promoted_up",
       "promotion_label": "Выход в Абсолют (победа II этапа)",
       "history": [
@@ -3848,7 +4086,15 @@
           "total_score": 30.51,
           "league": "Чемпионов",
           "breed_class": "Басенджи - стандарт (Чемпионы) - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 5,
+          "points_breakdown": {
+            "place_points": 1,
+            "best_final_points": 1,
+            "best_class_points": 1,
+            "best_breed_points": 1,
+            "track_record_points": 1
+          }
         }
       ]
     },
@@ -3865,6 +4111,10 @@
       "consecutive_losses": 0,
       "best_time": 30.75,
       "stages_count": 1,
+      "total_points": 4,
+      "stage_points": {
+        "1": 4
+      },
       "status_badge": "promoted_up",
       "promotion_label": "Выход в Абсолют (победа I этапа)",
       "history": [
@@ -3875,7 +4125,15 @@
           "total_score": 30.75,
           "league": "Чемпионов",
           "breed_class": "Родезийский риджбек - стандарт (Чемпионы) - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 4,
+          "points_breakdown": {
+            "place_points": 3,
+            "best_final_points": 0,
+            "best_class_points": 1,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -3892,6 +4150,11 @@
       "consecutive_losses": 0,
       "best_time": 33.28,
       "stages_count": 2,
+      "total_points": 9,
+      "stage_points": {
+        "1": 5,
+        "2": 4
+      },
       "status_badge": "promoted_up",
       "promotion_label": "Выход в Абсолют на III этап",
       "history": [
@@ -3902,7 +4165,15 @@
           "total_score": 33.28,
           "league": "Прогресс",
           "breed_class": "АПБТ - стандарт (Прогресс) - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 5,
+          "points_breakdown": {
+            "place_points": 1,
+            "best_final_points": 1,
+            "best_class_points": 1,
+            "best_breed_points": 1,
+            "track_record_points": 1
+          }
         },
         {
           "stage_num": 2,
@@ -3911,7 +4182,15 @@
           "total_score": 33.31,
           "league": "Чемпионов",
           "breed_class": "АПБТ - стандарт (Чемпионы) - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 4,
+          "points_breakdown": {
+            "place_points": 1,
+            "best_final_points": 1,
+            "best_class_points": 1,
+            "best_breed_points": 1,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -3928,6 +4207,10 @@
       "consecutive_losses": 1,
       "best_time": 23.43,
       "stages_count": 1,
+      "total_points": 5,
+      "stage_points": {
+        "2": 5
+      },
       "status_badge": "stable",
       "promotion_label": null,
       "history": [
@@ -3938,7 +4221,15 @@
           "total_score": 23.43,
           "league": "Чемпионов",
           "breed_class": "Уиппет - спринтер (Чемпионы) - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 5,
+          "points_breakdown": {
+            "place_points": 4,
+            "best_final_points": 0,
+            "best_class_points": 1,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -3955,6 +4246,10 @@
       "consecutive_losses": 1,
       "best_time": 24.07,
       "stages_count": 1,
+      "total_points": 8,
+      "stage_points": {
+        "2": 8
+      },
       "status_badge": "stable",
       "promotion_label": null,
       "history": [
@@ -3965,7 +4260,15 @@
           "total_score": 24.07,
           "league": "Чемпионов",
           "breed_class": "Уиппет - стандарт (Чемпионы) - сука",
-          "status": "finished"
+          "status": "finished",
+          "points": 8,
+          "points_breakdown": {
+            "place_points": 8,
+            "best_final_points": 0,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -3982,6 +4285,10 @@
       "consecutive_losses": 0,
       "best_time": 24.59,
       "stages_count": 1,
+      "total_points": 4,
+      "stage_points": {
+        "1": 4
+      },
       "status_badge": "promoted_up",
       "promotion_label": "Выход в Чемпионы (победа I этапа)",
       "history": [
@@ -3992,7 +4299,15 @@
           "total_score": 24.59,
           "league": "Прогресс",
           "breed_class": "Уиппет - спринтер (Прогресс) - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 4,
+          "points_breakdown": {
+            "place_points": 4,
+            "best_final_points": 0,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -4009,6 +4324,11 @@
       "consecutive_losses": 2,
       "best_time": 24.64,
       "stages_count": 2,
+      "total_points": 9,
+      "stage_points": {
+        "1": 6,
+        "2": 3
+      },
       "status_badge": "stable",
       "promotion_label": null,
       "history": [
@@ -4019,7 +4339,15 @@
           "total_score": 24.79,
           "league": "Чемпионов",
           "breed_class": "Уиппет - спринтер (Чемпионы) - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 6,
+          "points_breakdown": {
+            "place_points": 6,
+            "best_final_points": 0,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         },
         {
           "stage_num": 2,
@@ -4028,7 +4356,15 @@
           "total_score": 24.64,
           "league": "Чемпионов",
           "breed_class": "Уиппет - спринтер (Чемпионы) - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 3,
+          "points_breakdown": {
+            "place_points": 3,
+            "best_final_points": 0,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -4045,6 +4381,11 @@
       "consecutive_losses": 0,
       "best_time": 24.78,
       "stages_count": 2,
+      "total_points": 5,
+      "stage_points": {
+        "1": 3,
+        "2": 2
+      },
       "status_badge": "promoted_up",
       "promotion_label": "Выход в Чемпионы на III этап",
       "history": [
@@ -4055,7 +4396,15 @@
           "total_score": 25.74,
           "league": "Прогресс",
           "breed_class": "Уиппет - спринтер (Прогресс) - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 3,
+          "points_breakdown": {
+            "place_points": 3,
+            "best_final_points": 0,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         },
         {
           "stage_num": 2,
@@ -4064,7 +4413,15 @@
           "total_score": 24.78,
           "league": "Прогресс",
           "breed_class": "Уиппет - спринтер (Прогресс) - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 2,
+          "points_breakdown": {
+            "place_points": 2,
+            "best_final_points": 0,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -4081,6 +4438,11 @@
       "consecutive_losses": 1,
       "best_time": 24.86,
       "stages_count": 2,
+      "total_points": 7,
+      "stage_points": {
+        "1": 5,
+        "2": 2
+      },
       "status_badge": "stable",
       "promotion_label": null,
       "history": [
@@ -4091,7 +4453,15 @@
           "total_score": 24.86,
           "league": "Прогресс",
           "breed_class": "Уиппет - спринтер (Прогресс) - сука",
-          "status": "finished"
+          "status": "finished",
+          "points": 5,
+          "points_breakdown": {
+            "place_points": 2,
+            "best_final_points": 1,
+            "best_class_points": 1,
+            "best_breed_points": 0,
+            "track_record_points": 1
+          }
         },
         {
           "stage_num": 2,
@@ -4100,7 +4470,15 @@
           "total_score": 25.72,
           "league": "Чемпионов",
           "breed_class": "Уиппет - спринтер (Чемпионы) - сука",
-          "status": "finished"
+          "status": "finished",
+          "points": 2,
+          "points_breakdown": {
+            "place_points": 2,
+            "best_final_points": 0,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -4117,6 +4495,11 @@
       "consecutive_losses": 0,
       "best_time": 25.21,
       "stages_count": 2,
+      "total_points": 2,
+      "stage_points": {
+        "1": 1,
+        "2": 1
+      },
       "status_badge": "promoted_up",
       "promotion_label": "Выход в Чемпионы на III этап",
       "history": [
@@ -4127,7 +4510,15 @@
           "total_score": 25.7,
           "league": "Прогресс",
           "breed_class": "Уиппет - спринтер (Прогресс) - сука",
-          "status": "finished"
+          "status": "finished",
+          "points": 1,
+          "points_breakdown": {
+            "place_points": 1,
+            "best_final_points": 0,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         },
         {
           "stage_num": 2,
@@ -4136,7 +4527,15 @@
           "total_score": 25.21,
           "league": "Прогресс",
           "breed_class": "Уиппет - спринтер (Прогресс) - сука",
-          "status": "finished"
+          "status": "finished",
+          "points": 1,
+          "points_breakdown": {
+            "place_points": 1,
+            "best_final_points": 0,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -4153,6 +4552,10 @@
       "consecutive_losses": 0,
       "best_time": 25.32,
       "stages_count": 1,
+      "total_points": 7,
+      "stage_points": {
+        "1": 7
+      },
       "status_badge": "promoted_up",
       "promotion_label": "Выход в Чемпионы (победа I этапа)",
       "history": [
@@ -4163,7 +4566,15 @@
           "total_score": 25.32,
           "league": "Прогресс",
           "breed_class": "Уиппет - стандарт (Прогресс) - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 7,
+          "points_breakdown": {
+            "place_points": 7,
+            "best_final_points": 0,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -4180,6 +4591,11 @@
       "consecutive_losses": 0,
       "best_time": 25.43,
       "stages_count": 2,
+      "total_points": 9,
+      "stage_points": {
+        "1": 5,
+        "2": 4
+      },
       "status_badge": "promoted_up",
       "promotion_label": "Выход в Чемпионы на III этап",
       "history": [
@@ -4190,7 +4606,15 @@
           "total_score": 25.91,
           "league": "Прогресс",
           "breed_class": "Уиппет - стандарт (Прогресс) - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 5,
+          "points_breakdown": {
+            "place_points": 5,
+            "best_final_points": 0,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         },
         {
           "stage_num": 2,
@@ -4199,7 +4623,15 @@
           "total_score": 25.43,
           "league": "Прогресс",
           "breed_class": "Уиппет - стандарт (Прогресс) - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 4,
+          "points_breakdown": {
+            "place_points": 2,
+            "best_final_points": 1,
+            "best_class_points": 1,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -4216,6 +4648,10 @@
       "consecutive_losses": 1,
       "best_time": 25.48,
       "stages_count": 1,
+      "total_points": 3,
+      "stage_points": {
+        "2": 3
+      },
       "status_badge": "stable",
       "promotion_label": null,
       "history": [
@@ -4226,7 +4662,15 @@
           "total_score": 25.48,
           "league": "Чемпионов",
           "breed_class": "Уиппет - спринтер (Чемпионы) - сука",
-          "status": "finished"
+          "status": "finished",
+          "points": 3,
+          "points_breakdown": {
+            "place_points": 3,
+            "best_final_points": 0,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -4243,6 +4687,11 @@
       "consecutive_losses": 1,
       "best_time": 25.55,
       "stages_count": 2,
+      "total_points": 11,
+      "stage_points": {
+        "1": 4,
+        "2": 7
+      },
       "status_badge": "stable",
       "promotion_label": null,
       "history": [
@@ -4253,7 +4702,15 @@
           "total_score": 25.55,
           "league": "Прогресс",
           "breed_class": "Уиппет - стандарт (Прогресс) - сука",
-          "status": "finished"
+          "status": "finished",
+          "points": 4,
+          "points_breakdown": {
+            "place_points": 4,
+            "best_final_points": 0,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         },
         {
           "stage_num": 2,
@@ -4262,7 +4719,15 @@
           "total_score": 25.65,
           "league": "Чемпионов",
           "breed_class": "Уиппет - стандарт (Чемпионы) - сука",
-          "status": "finished"
+          "status": "finished",
+          "points": 7,
+          "points_breakdown": {
+            "place_points": 7,
+            "best_final_points": 0,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -4279,6 +4744,10 @@
       "consecutive_losses": 0,
       "best_time": 25.58,
       "stages_count": 1,
+      "total_points": 6,
+      "stage_points": {
+        "2": 6
+      },
       "status_badge": "promoted_up",
       "promotion_label": "Выход в Чемпионы (победа II этапа)",
       "history": [
@@ -4289,7 +4758,15 @@
           "total_score": 25.58,
           "league": "Прогресс",
           "breed_class": "Уиппет - стандарт (Прогресс) - сука",
-          "status": "finished"
+          "status": "finished",
+          "points": 6,
+          "points_breakdown": {
+            "place_points": 6,
+            "best_final_points": 0,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -4306,6 +4783,10 @@
       "consecutive_losses": 1,
       "best_time": 25.79,
       "stages_count": 1,
+      "total_points": 5,
+      "stage_points": {
+        "1": 5
+      },
       "status_badge": "stable",
       "promotion_label": null,
       "history": [
@@ -4316,7 +4797,15 @@
           "total_score": 25.79,
           "league": "Чемпионов",
           "breed_class": "Уиппет - спринтер (Чемпионы) - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 5,
+          "points_breakdown": {
+            "place_points": 5,
+            "best_final_points": 0,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -4333,6 +4822,10 @@
       "consecutive_losses": 0,
       "best_time": 25.97,
       "stages_count": 1,
+      "total_points": 5,
+      "stage_points": {
+        "2": 5
+      },
       "status_badge": "promoted_up",
       "promotion_label": "Выход в Чемпионы (победа II этапа)",
       "history": [
@@ -4343,7 +4836,15 @@
           "total_score": 25.97,
           "league": "Прогресс",
           "breed_class": "Русская псовая борзая - стандарт (Прогресс) - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 5,
+          "points_breakdown": {
+            "place_points": 2,
+            "best_final_points": 1,
+            "best_class_points": 1,
+            "best_breed_points": 1,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -4360,6 +4861,10 @@
       "consecutive_losses": 0,
       "best_time": 26.83,
       "stages_count": 1,
+      "total_points": 1,
+      "stage_points": {
+        "2": 1
+      },
       "status_badge": "promoted_up",
       "promotion_label": "Выход в Чемпионы (победа II этапа)",
       "history": [
@@ -4370,7 +4875,15 @@
           "total_score": 26.83,
           "league": "Прогресс",
           "breed_class": "Салюки - стандарт (Прогресс) - сука",
-          "status": "finished"
+          "status": "finished",
+          "points": 1,
+          "points_breakdown": {
+            "place_points": 1,
+            "best_final_points": 0,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -4387,6 +4900,10 @@
       "consecutive_losses": 0,
       "best_time": 27.58,
       "stages_count": 1,
+      "total_points": 3,
+      "stage_points": {
+        "2": 3
+      },
       "status_badge": "promoted_up",
       "promotion_label": "Выход в Чемпионы (победа II этапа)",
       "history": [
@@ -4397,7 +4914,15 @@
           "total_score": 27.58,
           "league": "Прогресс",
           "breed_class": "Русская псовая борзая - стандарт (Прогресс) - сука",
-          "status": "finished"
+          "status": "finished",
+          "points": 3,
+          "points_breakdown": {
+            "place_points": 1,
+            "best_final_points": 1,
+            "best_class_points": 1,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -4414,6 +4939,10 @@
       "consecutive_losses": 0,
       "best_time": 27.66,
       "stages_count": 1,
+      "total_points": 5,
+      "stage_points": {
+        "1": 5
+      },
       "status_badge": "promoted_up",
       "promotion_label": "Выход в Чемпионы (победа I этапа)",
       "history": [
@@ -4424,7 +4953,15 @@
           "total_score": 27.66,
           "league": "Прогресс",
           "breed_class": "Малинуа - стандарт (Прогресс) - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 5,
+          "points_breakdown": {
+            "place_points": 1,
+            "best_final_points": 1,
+            "best_class_points": 1,
+            "best_breed_points": 1,
+            "track_record_points": 1
+          }
         }
       ]
     },
@@ -4441,6 +4978,10 @@
       "consecutive_losses": 0,
       "best_time": 27.89,
       "stages_count": 1,
+      "total_points": 4,
+      "stage_points": {
+        "2": 4
+      },
       "status_badge": "promoted_up",
       "promotion_label": "Выход в Чемпионы (победа II этапа)",
       "history": [
@@ -4451,7 +4992,15 @@
           "total_score": 27.89,
           "league": "Прогресс",
           "breed_class": "Родезийский риджбек - стандарт (Прогресс) - сука",
-          "status": "finished"
+          "status": "finished",
+          "points": 4,
+          "points_breakdown": {
+            "place_points": 2,
+            "best_final_points": 1,
+            "best_class_points": 1,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -4468,6 +5017,10 @@
       "consecutive_losses": 0,
       "best_time": 28.53,
       "stages_count": 1,
+      "total_points": 4,
+      "stage_points": {
+        "2": 4
+      },
       "status_badge": "promoted_up",
       "promotion_label": "Выход в Чемпионы (победа II этапа)",
       "history": [
@@ -4478,7 +5031,15 @@
           "total_score": 28.53,
           "league": "Прогресс",
           "breed_class": "Чирнеко дель'Этна - стандарт (Прогресс) - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 4,
+          "points_breakdown": {
+            "place_points": 1,
+            "best_final_points": 1,
+            "best_class_points": 1,
+            "best_breed_points": 1,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -4495,6 +5056,10 @@
       "consecutive_losses": 1,
       "best_time": 29.92,
       "stages_count": 1,
+      "total_points": 1,
+      "stage_points": {
+        "2": 1
+      },
       "status_badge": "stable",
       "promotion_label": null,
       "history": [
@@ -4505,7 +5070,15 @@
           "total_score": 29.92,
           "league": "Чемпионов",
           "breed_class": "Фараонова собака - стандарт (Чемпионы) - сука",
-          "status": "finished"
+          "status": "finished",
+          "points": 1,
+          "points_breakdown": {
+            "place_points": 1,
+            "best_final_points": 0,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -4522,6 +5095,10 @@
       "consecutive_losses": 1,
       "best_time": 30.03,
       "stages_count": 1,
+      "total_points": 3,
+      "stage_points": {
+        "1": 3
+      },
       "status_badge": "stable",
       "promotion_label": null,
       "history": [
@@ -4532,7 +5109,15 @@
           "total_score": 30.03,
           "league": "Чемпионов",
           "breed_class": "Фараонова собака - стандарт (Чемпионы) - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 3,
+          "points_breakdown": {
+            "place_points": 3,
+            "best_final_points": 0,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -4549,6 +5134,8 @@
       "consecutive_losses": 1,
       "best_time": 30.73,
       "stages_count": 2,
+      "total_points": 0,
+      "stage_points": {},
       "status_badge": "stable",
       "promotion_label": null,
       "history": [
@@ -4559,7 +5146,8 @@
           "total_score": 30.73,
           "league": "Прогресс",
           "breed_class": "Родезийский риджбек - стандарт (Прогресс) - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 0
         },
         {
           "stage_num": 2,
@@ -4568,7 +5156,8 @@
           "total_score": null,
           "league": "Чемпионов",
           "breed_class": "Родезийский риджбек - стандарт (Чемпионы) - кобель",
-          "status": "withdrawn"
+          "status": "withdrawn",
+          "points": 0
         }
       ]
     },
@@ -4585,6 +5174,10 @@
       "consecutive_losses": 0,
       "best_time": 31.5,
       "stages_count": 1,
+      "total_points": 5,
+      "stage_points": {
+        "2": 5
+      },
       "status_badge": "promoted_up",
       "promotion_label": "Выход в Чемпионы (победа II этапа)",
       "history": [
@@ -4595,7 +5188,15 @@
           "total_score": 31.5,
           "league": "Прогресс",
           "breed_class": "Ирландский терьер - стандарт (Прогресс) - сука",
-          "status": "finished"
+          "status": "finished",
+          "points": 5,
+          "points_breakdown": {
+            "place_points": 1,
+            "best_final_points": 1,
+            "best_class_points": 1,
+            "best_breed_points": 1,
+            "track_record_points": 1
+          }
         }
       ]
     },
@@ -4612,6 +5213,10 @@
       "consecutive_losses": 0,
       "best_time": 32.16,
       "stages_count": 1,
+      "total_points": 5,
+      "stage_points": {
+        "1": 5
+      },
       "status_badge": "promoted_up",
       "promotion_label": "Выход в Чемпионы (победа I этапа)",
       "history": [
@@ -4622,7 +5227,15 @@
           "total_score": 32.16,
           "league": "Прогресс",
           "breed_class": "Ирландский терьер - стандарт (Прогресс) - сука",
-          "status": "finished"
+          "status": "finished",
+          "points": 5,
+          "points_breakdown": {
+            "place_points": 1,
+            "best_final_points": 1,
+            "best_class_points": 1,
+            "best_breed_points": 1,
+            "track_record_points": 1
+          }
         }
       ]
     },
@@ -4639,6 +5252,10 @@
       "consecutive_losses": 0,
       "best_time": 32.73,
       "stages_count": 1,
+      "total_points": 5,
+      "stage_points": {
+        "2": 5
+      },
       "status_badge": "promoted_up",
       "promotion_label": "Выход в Чемпионы (победа II этапа)",
       "history": [
@@ -4649,7 +5266,15 @@
           "total_score": 32.73,
           "league": "Прогресс",
           "breed_class": "Левретка - стандарт (Прогресс) - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 5,
+          "points_breakdown": {
+            "place_points": 2,
+            "best_final_points": 1,
+            "best_class_points": 1,
+            "best_breed_points": 1,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -4666,6 +5291,10 @@
       "consecutive_losses": 0,
       "best_time": 33.17,
       "stages_count": 1,
+      "total_points": 4,
+      "stage_points": {
+        "1": 4
+      },
       "status_badge": "promoted_up",
       "promotion_label": "Выход в Чемпионы (победа I этапа)",
       "history": [
@@ -4676,7 +5305,15 @@
           "total_score": 33.17,
           "league": "Прогресс",
           "breed_class": "Родезийский риджбек - ветеран (Прогресс) - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 4,
+          "points_breakdown": {
+            "place_points": 1,
+            "best_final_points": 1,
+            "best_class_points": 1,
+            "best_breed_points": 0,
+            "track_record_points": 1
+          }
         }
       ]
     },
@@ -4693,6 +5330,11 @@
       "consecutive_losses": 0,
       "best_time": 33.47,
       "stages_count": 2,
+      "total_points": 2,
+      "stage_points": {
+        "1": 1,
+        "2": 1
+      },
       "status_badge": "promoted_up",
       "promotion_label": "Выход в Чемпионы на III этап",
       "history": [
@@ -4703,7 +5345,15 @@
           "total_score": 33.61,
           "league": "Прогресс",
           "breed_class": "Фараонова собака - стандарт (Прогресс) - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 1,
+          "points_breakdown": {
+            "place_points": 1,
+            "best_final_points": 0,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         },
         {
           "stage_num": 2,
@@ -4712,7 +5362,15 @@
           "total_score": 33.47,
           "league": "Прогресс",
           "breed_class": "Фараонова собака - стандарт (Прогресс) - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 1,
+          "points_breakdown": {
+            "place_points": 1,
+            "best_final_points": 0,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -4729,6 +5387,10 @@
       "consecutive_losses": 0,
       "best_time": 34.29,
       "stages_count": 1,
+      "total_points": 5,
+      "stage_points": {
+        "1": 5
+      },
       "status_badge": "promoted_up",
       "promotion_label": "Выход в Чемпионы (победа I этапа)",
       "history": [
@@ -4739,7 +5401,15 @@
           "total_score": 34.29,
           "league": "Прогресс",
           "breed_class": "Кане корсо - стандарт (Прогресс) - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 5,
+          "points_breakdown": {
+            "place_points": 1,
+            "best_final_points": 1,
+            "best_class_points": 1,
+            "best_breed_points": 1,
+            "track_record_points": 1
+          }
         }
       ]
     },
@@ -4756,6 +5426,10 @@
       "consecutive_losses": 0,
       "best_time": 35.44,
       "stages_count": 1,
+      "total_points": 5,
+      "stage_points": {
+        "1": 5
+      },
       "status_badge": "promoted_up",
       "promotion_label": "Выход в Чемпионы (победа I этапа)",
       "history": [
@@ -4766,7 +5440,15 @@
           "total_score": 35.44,
           "league": "Прогресс",
           "breed_class": "Американский стаффордширский терьер - стандарт (Прогресс) - сука",
-          "status": "finished"
+          "status": "finished",
+          "points": 5,
+          "points_breakdown": {
+            "place_points": 1,
+            "best_final_points": 1,
+            "best_class_points": 1,
+            "best_breed_points": 1,
+            "track_record_points": 1
+          }
         }
       ]
     },
@@ -4783,6 +5465,10 @@
       "consecutive_losses": 0,
       "best_time": 35.66,
       "stages_count": 1,
+      "total_points": 6,
+      "stage_points": {
+        "1": 6
+      },
       "status_badge": "promoted_up",
       "promotion_label": "Выход в Чемпионы (победа I этапа)",
       "history": [
@@ -4793,7 +5479,15 @@
           "total_score": 35.66,
           "league": "Прогресс",
           "breed_class": "Немецкая овчарка - стандарт (Прогресс) - сука",
-          "status": "finished"
+          "status": "finished",
+          "points": 6,
+          "points_breakdown": {
+            "place_points": 2,
+            "best_final_points": 1,
+            "best_class_points": 1,
+            "best_breed_points": 1,
+            "track_record_points": 1
+          }
         }
       ]
     },
@@ -4810,6 +5504,10 @@
       "consecutive_losses": 0,
       "best_time": 36.88,
       "stages_count": 1,
+      "total_points": 5,
+      "stage_points": {
+        "1": 5
+      },
       "status_badge": "promoted_up",
       "promotion_label": "Выход в Чемпионы (победа I этапа)",
       "history": [
@@ -4820,7 +5518,15 @@
           "total_score": 36.88,
           "league": "Прогресс",
           "breed_class": "Кане корсо - стандарт (Прогресс) - сука",
-          "status": "finished"
+          "status": "finished",
+          "points": 5,
+          "points_breakdown": {
+            "place_points": 1,
+            "best_final_points": 1,
+            "best_class_points": 1,
+            "best_breed_points": 1,
+            "track_record_points": 1
+          }
         }
       ]
     },
@@ -4837,6 +5543,8 @@
       "consecutive_losses": 1,
       "best_time": null,
       "stages_count": 1,
+      "total_points": 0,
+      "stage_points": {},
       "status_badge": "stable",
       "promotion_label": null,
       "history": [
@@ -4847,7 +5555,8 @@
           "total_score": null,
           "league": "Чемпионов",
           "breed_class": "Малая итальянская борзая - стандарт (Чемпионы) - кобель",
-          "status": "dns"
+          "status": "dns",
+          "points": 0
         }
       ]
     },
@@ -4864,6 +5573,8 @@
       "consecutive_losses": 1,
       "best_time": null,
       "stages_count": 1,
+      "total_points": 0,
+      "stage_points": {},
       "status_badge": "stable",
       "promotion_label": null,
       "history": [
@@ -4874,7 +5585,8 @@
           "total_score": null,
           "league": "Чемпионов",
           "breed_class": "Родезийский риджбек - ветеран (Чемпионы) - кобель",
-          "status": "withdrawn"
+          "status": "withdrawn",
+          "points": 0
         }
       ]
     },
@@ -4891,6 +5603,10 @@
       "consecutive_losses": 1,
       "best_time": 24.9,
       "stages_count": 1,
+      "total_points": 1,
+      "stage_points": {
+        "2": 1
+      },
       "status_badge": "stable",
       "promotion_label": null,
       "history": [
@@ -4901,7 +5617,15 @@
           "total_score": 24.9,
           "league": "Прогресс",
           "breed_class": "Уиппет - спринтер (Прогресс) - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 1,
+          "points_breakdown": {
+            "place_points": 1,
+            "best_final_points": 0,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -4918,6 +5642,11 @@
       "consecutive_losses": 2,
       "best_time": 25.48,
       "stages_count": 2,
+      "total_points": 3,
+      "stage_points": {
+        "1": 2,
+        "2": 1
+      },
       "status_badge": "stable",
       "promotion_label": null,
       "history": [
@@ -4928,7 +5657,15 @@
           "total_score": 25.93,
           "league": "Прогресс",
           "breed_class": "Уиппет - стандарт (Прогресс) - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 2,
+          "points_breakdown": {
+            "place_points": 2,
+            "best_final_points": 0,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         },
         {
           "stage_num": 2,
@@ -4937,7 +5674,15 @@
           "total_score": 25.48,
           "league": "Прогресс",
           "breed_class": "Уиппет - стандарт (Прогресс) - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 1,
+          "points_breakdown": {
+            "place_points": 1,
+            "best_final_points": 0,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -4954,6 +5699,10 @@
       "consecutive_losses": 1,
       "best_time": 25.61,
       "stages_count": 1,
+      "total_points": 8,
+      "stage_points": {
+        "1": 8
+      },
       "status_badge": "stable",
       "promotion_label": null,
       "history": [
@@ -4964,7 +5713,15 @@
           "total_score": 25.61,
           "league": "Прогресс",
           "breed_class": "Уиппет - стандарт (Прогресс) - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 8,
+          "points_breakdown": {
+            "place_points": 6,
+            "best_final_points": 0,
+            "best_class_points": 1,
+            "best_breed_points": 0,
+            "track_record_points": 1
+          }
         }
       ]
     },
@@ -4981,6 +5738,10 @@
       "consecutive_losses": 1,
       "best_time": 25.63,
       "stages_count": 1,
+      "total_points": 3,
+      "stage_points": {
+        "1": 3
+      },
       "status_badge": "stable",
       "promotion_label": null,
       "history": [
@@ -4991,7 +5752,15 @@
           "total_score": 25.63,
           "league": "Прогресс",
           "breed_class": "Уиппет - стандарт (Прогресс) - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 3,
+          "points_breakdown": {
+            "place_points": 3,
+            "best_final_points": 0,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -5008,6 +5777,10 @@
       "consecutive_losses": 1,
       "best_time": 25.74,
       "stages_count": 1,
+      "total_points": 3,
+      "stage_points": {
+        "1": 3
+      },
       "status_badge": "stable",
       "promotion_label": null,
       "history": [
@@ -5018,7 +5791,15 @@
           "total_score": 25.74,
           "league": "Прогресс",
           "breed_class": "Уиппет - стандарт (Прогресс) - сука",
-          "status": "finished"
+          "status": "finished",
+          "points": 3,
+          "points_breakdown": {
+            "place_points": 3,
+            "best_final_points": 0,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -5035,6 +5816,10 @@
       "consecutive_losses": 1,
       "best_time": 25.76,
       "stages_count": 1,
+      "total_points": 5,
+      "stage_points": {
+        "2": 5
+      },
       "status_badge": "stable",
       "promotion_label": null,
       "history": [
@@ -5045,7 +5830,15 @@
           "total_score": 25.76,
           "league": "Прогресс",
           "breed_class": "Уиппет - стандарт (Прогресс) - сука",
-          "status": "finished"
+          "status": "finished",
+          "points": 5,
+          "points_breakdown": {
+            "place_points": 5,
+            "best_final_points": 0,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -5062,6 +5855,11 @@
       "consecutive_losses": 2,
       "best_time": 26.11,
       "stages_count": 2,
+      "total_points": 6,
+      "stage_points": {
+        "1": 2,
+        "2": 4
+      },
       "status_badge": "stable",
       "promotion_label": null,
       "history": [
@@ -5072,7 +5870,15 @@
           "total_score": 26.16,
           "league": "Прогресс",
           "breed_class": "Уиппет - стандарт (Прогресс) - сука",
-          "status": "finished"
+          "status": "finished",
+          "points": 2,
+          "points_breakdown": {
+            "place_points": 2,
+            "best_final_points": 0,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         },
         {
           "stage_num": 2,
@@ -5081,7 +5887,15 @@
           "total_score": 26.11,
           "league": "Прогресс",
           "breed_class": "Уиппет - стандарт (Прогресс) - сука",
-          "status": "finished"
+          "status": "finished",
+          "points": 4,
+          "points_breakdown": {
+            "place_points": 4,
+            "best_final_points": 0,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -5098,6 +5912,10 @@
       "consecutive_losses": 1,
       "best_time": 26.12,
       "stages_count": 1,
+      "total_points": 4,
+      "stage_points": {
+        "1": 4
+      },
       "status_badge": "stable",
       "promotion_label": null,
       "history": [
@@ -5108,7 +5926,15 @@
           "total_score": 26.12,
           "league": "Прогресс",
           "breed_class": "Уиппет - стандарт (Прогресс) - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 4,
+          "points_breakdown": {
+            "place_points": 4,
+            "best_final_points": 0,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -5125,6 +5951,10 @@
       "consecutive_losses": 1,
       "best_time": 26.16,
       "stages_count": 1,
+      "total_points": 2,
+      "stage_points": {
+        "1": 2
+      },
       "status_badge": "stable",
       "promotion_label": null,
       "history": [
@@ -5135,7 +5965,15 @@
           "total_score": 26.16,
           "league": "Прогресс",
           "breed_class": "Уиппет - спринтер (Прогресс) - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 2,
+          "points_breakdown": {
+            "place_points": 2,
+            "best_final_points": 0,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -5152,6 +5990,10 @@
       "consecutive_losses": 1,
       "best_time": 26.37,
       "stages_count": 1,
+      "total_points": 2,
+      "stage_points": {
+        "1": 2
+      },
       "status_badge": "stable",
       "promotion_label": null,
       "history": [
@@ -5162,7 +6004,15 @@
           "total_score": 26.37,
           "league": "Прогресс",
           "breed_class": "Уиппет - стандарт (Прогресс) - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 2,
+          "points_breakdown": {
+            "place_points": 1,
+            "best_final_points": 1,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -5179,6 +6029,10 @@
       "consecutive_losses": 1,
       "best_time": 26.57,
       "stages_count": 1,
+      "total_points": 3,
+      "stage_points": {
+        "2": 3
+      },
       "status_badge": "stable",
       "promotion_label": null,
       "history": [
@@ -5189,7 +6043,15 @@
           "total_score": 26.57,
           "league": "Прогресс",
           "breed_class": "Уиппет - стандарт (Прогресс) - сука",
-          "status": "finished"
+          "status": "finished",
+          "points": 3,
+          "points_breakdown": {
+            "place_points": 3,
+            "best_final_points": 0,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -5206,6 +6068,10 @@
       "consecutive_losses": 1,
       "best_time": 26.63,
       "stages_count": 1,
+      "total_points": 2,
+      "stage_points": {
+        "2": 2
+      },
       "status_badge": "stable",
       "promotion_label": null,
       "history": [
@@ -5216,7 +6082,15 @@
           "total_score": 26.63,
           "league": "Прогресс",
           "breed_class": "Уиппет - стандарт (Прогресс) - сука",
-          "status": "finished"
+          "status": "finished",
+          "points": 2,
+          "points_breakdown": {
+            "place_points": 2,
+            "best_final_points": 0,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -5233,6 +6107,10 @@
       "consecutive_losses": 1,
       "best_time": 26.97,
       "stages_count": 1,
+      "total_points": 1,
+      "stage_points": {
+        "2": 1
+      },
       "status_badge": "stable",
       "promotion_label": null,
       "history": [
@@ -5243,7 +6121,15 @@
           "total_score": 26.97,
           "league": "Прогресс",
           "breed_class": "Уиппет - стандарт (Прогресс) - сука",
-          "status": "finished"
+          "status": "finished",
+          "points": 1,
+          "points_breakdown": {
+            "place_points": 1,
+            "best_final_points": 0,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -5260,6 +6146,10 @@
       "consecutive_losses": 1,
       "best_time": 27.36,
       "stages_count": 1,
+      "total_points": 1,
+      "stage_points": {
+        "2": 1
+      },
       "status_badge": "stable",
       "promotion_label": null,
       "history": [
@@ -5270,7 +6160,15 @@
           "total_score": 27.36,
           "league": "Прогресс",
           "breed_class": "Русская псовая борзая - стандарт (Прогресс) - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 1,
+          "points_breakdown": {
+            "place_points": 1,
+            "best_final_points": 0,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -5287,6 +6185,10 @@
       "consecutive_losses": 1,
       "best_time": 27.51,
       "stages_count": 1,
+      "total_points": 1,
+      "stage_points": {
+        "1": 1
+      },
       "status_badge": "stable",
       "promotion_label": null,
       "history": [
@@ -5297,7 +6199,15 @@
           "total_score": 27.51,
           "league": "Прогресс",
           "breed_class": "Уиппет - стандарт (Прогресс) - сука",
-          "status": "finished"
+          "status": "finished",
+          "points": 1,
+          "points_breakdown": {
+            "place_points": 1,
+            "best_final_points": 0,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -5314,6 +6224,10 @@
       "consecutive_losses": 1,
       "best_time": 27.51,
       "stages_count": 1,
+      "total_points": 1,
+      "stage_points": {
+        "1": 1
+      },
       "status_badge": "stable",
       "promotion_label": null,
       "history": [
@@ -5324,7 +6238,15 @@
           "total_score": 27.51,
           "league": "Прогресс",
           "breed_class": "Уиппет - спринтер (Прогресс) - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 1,
+          "points_breakdown": {
+            "place_points": 1,
+            "best_final_points": 0,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -5341,6 +6263,10 @@
       "consecutive_losses": 2,
       "best_time": 29.48,
       "stages_count": 2,
+      "total_points": 1,
+      "stage_points": {
+        "2": 1
+      },
       "status_badge": "stable",
       "promotion_label": null,
       "history": [
@@ -5351,7 +6277,8 @@
           "total_score": 29.99,
           "league": "Прогресс",
           "breed_class": "Родезийский риджбек - стандарт (Прогресс) - сука",
-          "status": "finished"
+          "status": "finished",
+          "points": 0
         },
         {
           "stage_num": 2,
@@ -5360,7 +6287,15 @@
           "total_score": 29.48,
           "league": "Прогресс",
           "breed_class": "Родезийский риджбек - стандарт (Прогресс) - сука",
-          "status": "finished"
+          "status": "finished",
+          "points": 1,
+          "points_breakdown": {
+            "place_points": 1,
+            "best_final_points": 0,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -5377,6 +6312,8 @@
       "consecutive_losses": 1,
       "best_time": 32.59,
       "stages_count": 1,
+      "total_points": 0,
+      "stage_points": {},
       "status_badge": "stable",
       "promotion_label": null,
       "history": [
@@ -5387,7 +6324,8 @@
           "total_score": 32.59,
           "league": "Прогресс",
           "breed_class": "Салюки - стандарт (Прогресс) - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 0
         }
       ]
     },
@@ -5404,6 +6342,8 @@
       "consecutive_losses": 1,
       "best_time": 37.07,
       "stages_count": 1,
+      "total_points": 0,
+      "stage_points": {},
       "status_badge": "stable",
       "promotion_label": null,
       "history": [
@@ -5414,7 +6354,8 @@
           "total_score": 37.07,
           "league": "Прогресс",
           "breed_class": "Русская псовая борзая - ветеран (Прогресс) - сука",
-          "status": "withdrawn"
+          "status": "withdrawn",
+          "points": 0
         }
       ]
     },
@@ -5431,6 +6372,10 @@
       "consecutive_losses": 1,
       "best_time": 44.95,
       "stages_count": 1,
+      "total_points": 1,
+      "stage_points": {
+        "1": 1
+      },
       "status_badge": "stable",
       "promotion_label": null,
       "history": [
@@ -5441,7 +6386,15 @@
           "total_score": 44.95,
           "league": "Прогресс",
           "breed_class": "Немецкая овчарка - стандарт (Прогресс) - сука",
-          "status": "finished"
+          "status": "finished",
+          "points": 1,
+          "points_breakdown": {
+            "place_points": 1,
+            "best_final_points": 0,
+            "best_class_points": 0,
+            "best_breed_points": 0,
+            "track_record_points": 0
+          }
         }
       ]
     },
@@ -5458,6 +6411,8 @@
       "consecutive_losses": 1,
       "best_time": null,
       "stages_count": 1,
+      "total_points": 0,
+      "stage_points": {},
       "status_badge": "stable",
       "promotion_label": null,
       "history": [
@@ -5468,7 +6423,8 @@
           "total_score": null,
           "league": "Прогресс",
           "breed_class": "Уиппет - стандарт (Прогресс) - сука",
-          "status": "dns"
+          "status": "dns",
+          "points": 0
         }
       ]
     },
@@ -5485,6 +6441,8 @@
       "consecutive_losses": 1,
       "best_time": null,
       "stages_count": 1,
+      "total_points": 0,
+      "stage_points": {},
       "status_badge": "stable",
       "promotion_label": null,
       "history": [
@@ -5495,7 +6453,8 @@
           "total_score": null,
           "league": "Прогресс",
           "breed_class": "Фараонова собака - стандарт (Прогресс) - кобель",
-          "status": "dns"
+          "status": "dns",
+          "points": 0
         }
       ]
     },
@@ -5512,6 +6471,8 @@
       "consecutive_losses": 0,
       "best_time": 24.39,
       "stages_count": 1,
+      "total_points": 0,
+      "stage_points": {},
       "status_badge": "stable",
       "promotion_label": "Победитель Лиги Юниоров II этапа",
       "history": [
@@ -5522,7 +6483,8 @@
           "total_score": 24.39,
           "league": "Юниоры",
           "breed_class": "Уиппет - юниор - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 0
         }
       ]
     },
@@ -5539,6 +6501,8 @@
       "consecutive_losses": 0,
       "best_time": 24.51,
       "stages_count": 1,
+      "total_points": 0,
+      "stage_points": {},
       "status_badge": "stable",
       "promotion_label": "Победитель Лиги Юниоров II этапа",
       "history": [
@@ -5549,7 +6513,8 @@
           "total_score": 24.51,
           "league": "Юниоры",
           "breed_class": "Испанская борзая (гальго) - юниор - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 0
         }
       ]
     },
@@ -5566,6 +6531,8 @@
       "consecutive_losses": 1,
       "best_time": 25.29,
       "stages_count": 1,
+      "total_points": 0,
+      "stage_points": {},
       "status_badge": "stable",
       "promotion_label": null,
       "history": [
@@ -5576,7 +6543,8 @@
           "total_score": 25.29,
           "league": "Юниоры",
           "breed_class": "Уиппет - юниор - сука",
-          "status": "withdrawn"
+          "status": "withdrawn",
+          "points": 0
         }
       ]
     },
@@ -5593,6 +6561,8 @@
       "consecutive_losses": 1,
       "best_time": 26.57,
       "stages_count": 1,
+      "total_points": 0,
+      "stage_points": {},
       "status_badge": "stable",
       "promotion_label": null,
       "history": [
@@ -5603,7 +6573,8 @@
           "total_score": 26.57,
           "league": "Юниоры",
           "breed_class": "Уиппет - юниор - сука",
-          "status": "finished"
+          "status": "finished",
+          "points": 0
         }
       ]
     },
@@ -5620,6 +6591,8 @@
       "consecutive_losses": 0,
       "best_time": 29.82,
       "stages_count": 1,
+      "total_points": 0,
+      "stage_points": {},
       "status_badge": "stable",
       "promotion_label": "Победитель Лиги Юниоров II этапа",
       "history": [
@@ -5630,7 +6603,8 @@
           "total_score": 29.82,
           "league": "Юниоры",
           "breed_class": "Фараонова собака - юниор - кобель",
-          "status": "finished"
+          "status": "finished",
+          "points": 0
         }
       ]
     }

@@ -96,4 +96,38 @@ describe('Donino Data Files Integrity', () => {
     expect(gracie).toBeDefined();
     expect(gracie.sex).toBe('С');
   });
+
+  it('championship.json has valid points, standings, and stage history breakdowns', () => {
+    const champPath = path.resolve(process.cwd(), 'data/v1/donino/championship.json');
+    expect(existsSync(champPath)).toBe(true);
+    const champ = JSON.parse(readFileSync(champPath, 'utf-8'));
+    expect(champ.standings.length).toBe(77);
+
+    // Verify Zoella Vlapan is leader by points
+    const zoella = champ.standings.find((s: { name_ru: string; name_lat: string }) => 
+      s.name_lat.includes('ZOELLA') || s.name_ru.includes('ZOELLA')
+    );
+    expect(zoella).toBeDefined();
+    expect(zoella.total_points).toBe(19);
+    expect(zoella.stage_points['1']).toBe(9);
+    expect(zoella.stage_points['2']).toBe(10);
+
+    // Verify Feel My Heart Dremfyre Una has 13 points and bonus breakdown
+    const una = champ.standings.find((s: { name_ru: string; name_lat: string }) => 
+      s.name_lat.includes('UNA') || s.name_ru.includes('УНА')
+    );
+    expect(una).toBeDefined();
+    expect(una.total_points).toBe(13);
+    expect(una.history[0].points_breakdown).toEqual({
+      place_points: 9,
+      best_final_points: 1,
+      best_class_points: 1,
+      best_breed_points: 1,
+      track_record_points: 1,
+    });
+
+    // Verify juniors quorum
+    const juniors = champ.standings.filter((s: { current_league: string }) => s.current_league === 'Юниоры');
+    expect(juniors.length).toBe(5);
+  });
 });

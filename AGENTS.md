@@ -96,7 +96,8 @@ yarn run ingest-competition <draft.json> # Safe competition import (matches dogs
 yarn export-protocol <eventId> [outDir]   # Export vector HTML/PDF protocol (sheet 16)
 yarn run build-all-data       # Rebuild indexes + publish-gates
 yarn run test-parser-fixtures
-yarn test
+yarn test                     # Vitest: full unified suite (backend + frontend, ~13s)
+yarn test:fast                # Vitest: instant developer loop (3s, excludes heavy disk I/O)
 # Archive Full_Results → competitions → calendar link:
 # npx tsx backend/scripts/import/import-full-results-archive.ts
 # npx tsx backend/scripts/import/sync-archive-comps-to-calendar.ts
@@ -110,6 +111,8 @@ PowerShell: use `;` not `&&`.
 
 ## Forbidden (without explicit request)
 
+- Неизолированные живые сетевые HTTP-запросы в юнит-тестах без оффлайн-фикстуры, мока или AbortSignal.timeout (приводит к зависаниям и падениям тестов при недоступности внешних серверов)
+- Повторное синхронное чтение всего набора 256 CDN-шардов внутри отдельных тестов и циклов (шарды обязаны кэшироваться в Map на уровне файла, а проверки собираться в массив нарушений violations[])
 - Manually create competition or dog JSON files bypassing `yarn ingest-competition` (leads to orphan dogs and test failures)
 - Включать оценки классов бэби и щенков («очень перспективный», «перспективный») в знаменатель процента «отлично» судей выставок (искусственно занижает судейскую строгость на 10–15 п.п., так как щенки по правилам РКФ не могут получать «отлично»)
 - Присваивать статус судейской строгости к собаке (`favors` / `strict`) на основе всего одного забега/соревнования, либо использовать результаты электронного хронометража рейсинга для определения субъективной судейской предвзятости

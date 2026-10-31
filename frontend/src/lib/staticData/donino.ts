@@ -321,6 +321,14 @@ export interface ChampionshipStage {
   results?: ChampionshipResult[]
 }
 
+export interface ChampionshipPointBreakdown {
+  place_points: number
+  best_final_points: number
+  best_class_points: number
+  best_breed_points: number
+  track_record_points: number
+}
+
 export interface ChampionshipStandingHistory {
   stage_num: number
   date: string
@@ -329,6 +337,8 @@ export interface ChampionshipStandingHistory {
   league: string
   breed_class: string
   status: string
+  points?: number | null
+  points_breakdown?: ChampionshipPointBreakdown
 }
 
 export interface ChampionshipStanding {
@@ -344,6 +354,8 @@ export interface ChampionshipStanding {
   consecutive_losses: number
   best_time: number | null
   stages_count: number
+  total_points?: number
+  stage_points?: Record<number, number>
   status_badge: string
   promotion_label?: string | null
   history: ChampionshipStandingHistory[]
@@ -369,6 +381,8 @@ export interface ChampionshipData {
   track_length_meters: number
   reglament_pdf_url: string | null
   spreadsheet_url?: string | null
+  results_spreadsheet_url?: string | null
+  points_spreadsheet_url?: string | null
   stages: ChampionshipStage[]
   standings: ChampionshipStanding[]
   promotions: {

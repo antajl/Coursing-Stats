@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react'
 import { useSearchParams, useNavigate } from 'react-router-dom'
 import {
+  BarChart3,
   Trophy,
   Award,
   Calendar,
@@ -21,8 +22,9 @@ import {
 import ChampionshipStandingsTab from './ChampionshipStandingsTab'
 import ChampionshipStageTab from './ChampionshipStageTab'
 import ChampionshipRulesTab from './ChampionshipRulesTab'
+import ChampionshipStatsTab from './ChampionshipStatsTab'
 
-type MainTab = 'standings' | 'stage1' | 'stage2' | 'stage3' | 'rules'
+type MainTab = 'standings' | 'analytics' | 'stage1' | 'stage2' | 'stage3' | 'rules'
 
 export default function DoninoChampionship() {
   const [searchParams, setSearchParams] = useSearchParams()
@@ -88,6 +90,7 @@ export default function DoninoChampionship() {
 
   const mainTabs = [
     { id: 'standings', label: 'Сводный зачёт и Лиги', icon: Trophy },
+    { id: 'analytics', label: 'Разбалловка и бонусы', icon: BarChart3 },
     { id: 'stage1', label: 'I этап (9 авг)', icon: Calendar },
     { id: 'stage2', label: 'II этап (20 сен)', icon: Calendar },
     { id: 'stage3', label: 'III этап (31 окт)', icon: Calendar },
@@ -176,14 +179,26 @@ export default function DoninoChampionship() {
             </a>
 
             <a
-              href={data?.spreadsheet_url || 'https://docs.google.com/spreadsheets/d/1PGrVO98HfxwzoOxHmd8eRaygvl3iJryIXYfPd7vmyNQ/edit?gid=0#gid=0'}
+              href={data?.results_spreadsheet_url || 'https://docs.google.com/spreadsheets/d/1OKA9-I7oiY3xOisuxiDUOpn6C6bGxSQMkZDcuwtXiJg/edit?gid=22361699#gid=22361699'}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-old-money-200 bg-cream-50 hover:bg-cream-100 text-xs font-semibold text-charcoal-700 transition-colors shadow-2xs shrink-0"
-              title="Официальная сводная таблица чемпионата в Google Таблицах"
+              title="Официальная таблица результатов заездов с временами и переходами в лиги"
             >
               <FileSpreadsheet className="w-3.5 h-3.5 text-emerald-700" />
-              <span>Таблица турнира</span>
+              <span>Результаты заездов</span>
+              <ExternalLink className="w-3.5 h-3.5 text-charcoal-400" />
+            </a>
+
+            <a
+              href={data?.points_spreadsheet_url || 'https://docs.google.com/spreadsheets/d/1PGrVO98HfxwzoOxHmd8eRaygvl3iJryIXYfPd7vmyNQ/edit?gid=0#gid=0'}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-old-money-200 bg-cream-50 hover:bg-cream-100 text-xs font-semibold text-charcoal-700 transition-colors shadow-2xs shrink-0"
+              title="Официальная таблица начисления очков, бонусов за лучшее время и рекорды трека"
+            >
+              <FileSpreadsheet className="w-3.5 h-3.5 text-amber-700" />
+              <span>Разбалловка и бонусы</span>
               <ExternalLink className="w-3.5 h-3.5 text-charcoal-400" />
             </a>
           </div>
@@ -238,6 +253,10 @@ export default function DoninoChampionship() {
                 promotions={data.promotions}
                 onSelectRulesTab={() => handleTabChange("rules")}
               />
+            )}
+
+            {activeTab === 'analytics' && (
+              <ChampionshipStatsTab standings={data.standings} />
             )}
 
             {activeTab === 'stage1' && stage1 && (
