@@ -1,12 +1,13 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-30T19:40:47.404Z",
+  "generated_at": "2026-10-31T00:13:30.313Z",
   "series_title": "Серия клубных чемпионатов Донино по рейсингу (бегам борзых)",
   "season": 2026,
   "organizer": "Курсинг в Донино",
   "series_director": "Манухин Михаил Андреевич",
   "track_length_meters": 350,
   "reglament_pdf_url": "https://drive.google.com/file/d/1bv51StWxPp8vz-N3dEBYn8aaURhkCX2T/view?usp=sharing",
+  "spreadsheet_url": "https://docs.google.com/spreadsheets/d/1PGrVO98HfxwzoOxHmd8eRaygvl3iJryIXYfPd7vmyNQ/edit?gid=0#gid=0",
   "stages": [
     {
       "id": 2026004,
@@ -243,9 +244,9 @@
           "id": 2,
           "catalog_no": 2,
           "dog_id": 5640,
-          "dog_name": "БРАЙТ САН БАУНТИ /BRIGHT SUN BOUNTY",
-          "name_ru": "БРАЙТ САН БАУНТИ /BRIGHT SUN BOUNTY",
-          "name_lat": "БРАЙТ САН БАУНТИ /BRIGHT SUN BOUNTY",
+          "dog_name": "БРАЙТ САН БАУНТИ",
+          "name_ru": "БРАЙТ САН БАУНТИ",
+          "name_lat": "BRIGHT SUN BOUNTY",
           "breed": "УИППЕТ",
           "sex": "Кобель",
           "breed_class": "Уиппет - стандарт (Прогресс) - кобель",
@@ -837,9 +838,9 @@
           "id": 21,
           "catalog_no": 21,
           "dog_id": 7256,
-          "dog_name": "ИМРАН ДЖАЗЗИ /IMRAN JAZZEE",
-          "name_ru": "ИМРАН ДЖАЗЗИ /IMRAN JAZZEE",
-          "name_lat": "ИМРАН ДЖАЗЗИ /IMRAN JAZZEE",
+          "dog_name": "ИМРАН ДЖАЗЗИ",
+          "name_ru": "ИМРАН ДЖАЗЗИ",
+          "name_lat": "IMRAN JAZZEE",
           "breed": "САЛЮКИ",
           "sex": "Кобель",
           "breed_class": "Салюки - стандарт (Прогресс) - кобель",
@@ -957,9 +958,9 @@
           "id": 25,
           "catalog_no": 25,
           "dog_id": 5760,
-          "dog_name": "АСАДИ ФУАДИ ВИСКИ АРУНА /ASADI FUADI VISKI ARUNA",
-          "name_ru": "АСАДИ ФУАДИ ВИСКИ АРУНА /ASADI FUADI VISKI ARUNA",
-          "name_lat": "АСАДИ ФУАДИ ВИСКИ АРУНА /ASADI FUADI VISKI ARUNA",
+          "dog_name": "АСАДИ ФУАДИ ВИСКИ АРУНА",
+          "name_ru": "АСАДИ ФУАДИ ВИСКИ АРУНА",
+          "name_lat": "ASADI FUADI VISKI ARUNA",
           "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
           "sex": "Сука",
           "breed_class": "Родезийский риджбек - стандарт (Прогресс) - сука",
@@ -2178,7 +2179,7 @@
         {
           "id": 12,
           "catalog_no": 12,
-          "dog_id": 321,
+          "dog_id": 10776,
           "dog_name": "ИНТРИГА'С МАГНОЛИЯ",
           "name_ru": "ИНТРИГА'С МАГНОЛИЯ",
           "name_lat": "ИНТРИГА'С МАГНОЛИЯ",
@@ -2441,7 +2442,7 @@
         {
           "id": 21,
           "catalog_no": 21,
-          "dog_id": 10766,
+          "dog_id": 10773,
           "dog_name": "ФЛОЛЕСС",
           "name_ru": "ФЛОЛЕСС",
           "name_lat": "FLAWLESS",
@@ -2585,7 +2586,7 @@
         {
           "id": 26,
           "catalog_no": 26,
-          "dog_id": 10767,
+          "dog_id": 10788,
           "dog_name": "АНДЖЕЛИК ВИНГС",
           "name_ru": "АНДЖЕЛИК ВИНГС",
           "name_lat": "ANGELIC WINGS",
@@ -3383,7 +3384,115 @@
   ],
   "standings": [
     {
-      "dog_key": "уиппет::zoella vlapan",
+      "dog_key": "dog::462",
+      "dog_id": 462,
+      "name": "ALPHAS LEGACY ALTAIR",
+      "name_ru": "ALPHAS LEGACY ALTAIR",
+      "name_lat": "ALPHAS LEGACY ALTAIR",
+      "breed": "УИППЕТ",
+      "sex": "Кобель",
+      "current_league": "Абсолют",
+      "wins_count": 1,
+      "consecutive_losses": 0,
+      "best_time": 23.06,
+      "stages_count": 1,
+      "status_badge": "promoted_up",
+      "promotion_label": "Выход в Абсолют (победа I этапа)",
+      "history": [
+        {
+          "stage_num": 1,
+          "date": "2026-08-09",
+          "placement": 1,
+          "total_score": 23.06,
+          "league": "Чемпионов",
+          "breed_class": "Уиппет - спринтер (Чемпионы) - кобель",
+          "status": "finished"
+        }
+      ]
+    },
+    {
+      "dog_key": "dog::554",
+      "dog_id": 554,
+      "name": "FEEL MY HEART DREMFYRE UNA",
+      "name_ru": "FEEL MY HEART DREMFYRE UNA",
+      "name_lat": "FEEL MY HEART DREMFYRE UNA",
+      "breed": "УИППЕТ",
+      "sex": "Сука",
+      "current_league": "Абсолют",
+      "wins_count": 1,
+      "consecutive_losses": 0,
+      "best_time": 23.34,
+      "stages_count": 1,
+      "status_badge": "promoted_up",
+      "promotion_label": "Выход в Абсолют (победа II этапа)",
+      "history": [
+        {
+          "stage_num": 2,
+          "date": "2026-09-20",
+          "placement": 1,
+          "total_score": 23.34,
+          "league": "Чемпионов",
+          "breed_class": "Уиппет - стандарт (Чемпионы) - сука",
+          "status": "finished"
+        }
+      ]
+    },
+    {
+      "dog_key": "dog::464",
+      "dog_id": 464,
+      "name": "FEEL MY HEART DRAMIEL COSMIC",
+      "name_ru": "FEEL MY HEART DRAMIEL COSMIC",
+      "name_lat": "FEEL MY HEART DRAMIEL COSMIC",
+      "breed": "УИППЕТ",
+      "sex": "Сука",
+      "current_league": "Абсолют",
+      "wins_count": 1,
+      "consecutive_losses": 0,
+      "best_time": 23.4,
+      "stages_count": 1,
+      "status_badge": "promoted_up",
+      "promotion_label": "Выход в Абсолют (победа II этапа)",
+      "history": [
+        {
+          "stage_num": 2,
+          "date": "2026-09-20",
+          "placement": 1,
+          "total_score": 23.4,
+          "league": "Чемпионов",
+          "breed_class": "Уиппет - спринтер (Чемпионы) - сука",
+          "status": "finished"
+        }
+      ]
+    },
+    {
+      "dog_key": "dog::10748",
+      "dog_id": 10748,
+      "name": "ФЕЕЛ МАЙ ХЕАРТ ДУНКАН МАКЛАУД",
+      "name_ru": "ФЕЕЛ МАЙ ХЕАРТ ДУНКАН МАКЛАУД",
+      "name_lat": "ФЕЕЛ МАЙ ХЕАРТ ДУНКАН МАКЛАУД",
+      "breed": "УИППЕТ",
+      "sex": "Кобель",
+      "current_league": "Абсолют",
+      "wins_count": 1,
+      "consecutive_losses": 0,
+      "best_time": 23.83,
+      "stages_count": 1,
+      "status_badge": "promoted_up",
+      "promotion_label": "Выход в Абсолют (победа II этапа)",
+      "history": [
+        {
+          "stage_num": 2,
+          "date": "2026-09-20",
+          "placement": 1,
+          "total_score": 23.83,
+          "league": "Чемпионов",
+          "breed_class": "Уиппет - спринтер (Чемпионы) - кобель",
+          "status": "finished"
+        }
+      ]
+    },
+    {
+      "dog_key": "dog::267",
       "dog_id": 267,
       "name": "ZOELLA VLAPAN",
       "name_ru": "ZOELLA VLAPAN",
@@ -3419,232 +3528,7 @@
       ]
     },
     {
-      "dog_key": "фараонова собака::шнейдер рич рэм",
-      "dog_id": 10750,
-      "name": "ШНЕЙДЕР РИЧ РЭМ",
-      "name_ru": "ШНЕЙДЕР РИЧ РЭМ",
-      "name_lat": "SHNEYDER RICH REM",
-      "breed": "ФАРАОНОВА СОБАКА",
-      "sex": "male",
-      "current_league": "Абсолют",
-      "wins_count": 2,
-      "consecutive_losses": 0,
-      "best_time": 28.43,
-      "stages_count": 2,
-      "status_badge": "promoted_up",
-      "promotion_label": "Выход в Абсолют на III этап",
-      "history": [
-        {
-          "stage_num": 1,
-          "date": "2026-08-09",
-          "placement": 1,
-          "total_score": 28.92,
-          "league": "Прогресс",
-          "breed_class": "Фараонова собака - стандарт (Прогресс) - кобель",
-          "status": "finished"
-        },
-        {
-          "stage_num": 2,
-          "date": "2026-09-20",
-          "placement": 1,
-          "total_score": 28.43,
-          "league": "Чемпионов",
-          "breed_class": "Фараонова собака - стандарт (Чемпионы) - кобель",
-          "status": "finished"
-        }
-      ]
-    },
-    {
-      "dog_key": "уиппет::alphas legacy altair",
-      "dog_id": 462,
-      "name": "ALPHAS LEGACY ALTAIR",
-      "name_ru": "ALPHAS LEGACY ALTAIR",
-      "name_lat": "ALPHAS LEGACY ALTAIR",
-      "breed": "УИППЕТ",
-      "sex": "Кобель",
-      "current_league": "Абсолют",
-      "wins_count": 1,
-      "consecutive_losses": 0,
-      "best_time": 23.06,
-      "stages_count": 1,
-      "status_badge": "promoted_up",
-      "promotion_label": "Выход в Абсолют (победа I этапа)",
-      "history": [
-        {
-          "stage_num": 1,
-          "date": "2026-08-09",
-          "placement": 1,
-          "total_score": 23.06,
-          "league": "Чемпионов",
-          "breed_class": "Уиппет - спринтер (Чемпионы) - кобель",
-          "status": "finished"
-        }
-      ]
-    },
-    {
-      "dog_key": "уиппет::feel my heart dremfyre una",
-      "dog_id": 554,
-      "name": "FEEL MY HEART DREMFYRE UNA",
-      "name_ru": "FEEL MY HEART DREMFYRE UNA",
-      "name_lat": "FEEL MY HEART DREMFYRE UNA",
-      "breed": "УИППЕТ",
-      "sex": "Сука",
-      "current_league": "Абсолют",
-      "wins_count": 1,
-      "consecutive_losses": 0,
-      "best_time": 23.34,
-      "stages_count": 1,
-      "status_badge": "promoted_up",
-      "promotion_label": "Выход в Абсолют (победа II этапа)",
-      "history": [
-        {
-          "stage_num": 2,
-          "date": "2026-09-20",
-          "placement": 1,
-          "total_score": 23.34,
-          "league": "Чемпионов",
-          "breed_class": "Уиппет - стандарт (Чемпионы) - сука",
-          "status": "finished"
-        }
-      ]
-    },
-    {
-      "dog_key": "уиппет::feel my heart dramiel cosmic",
-      "dog_id": 464,
-      "name": "FEEL MY HEART DRAMIEL COSMIC",
-      "name_ru": "FEEL MY HEART DRAMIEL COSMIC",
-      "name_lat": "FEEL MY HEART DRAMIEL COSMIC",
-      "breed": "УИППЕТ",
-      "sex": "Сука",
-      "current_league": "Абсолют",
-      "wins_count": 1,
-      "consecutive_losses": 0,
-      "best_time": 23.4,
-      "stages_count": 1,
-      "status_badge": "promoted_up",
-      "promotion_label": "Выход в Абсолют (победа II этапа)",
-      "history": [
-        {
-          "stage_num": 2,
-          "date": "2026-09-20",
-          "placement": 1,
-          "total_score": 23.4,
-          "league": "Чемпионов",
-          "breed_class": "Уиппет - спринтер (Чемпионы) - сука",
-          "status": "finished"
-        }
-      ]
-    },
-    {
-      "dog_key": "уиппет::феел май хеарт дункан маклауд",
-      "dog_id": 10748,
-      "name": "ФЕЕЛ МАЙ ХЕАРТ ДУНКАН МАКЛАУД",
-      "name_ru": "ФЕЕЛ МАЙ ХЕАРТ ДУНКАН МАКЛАУД",
-      "name_lat": "ФЕЕЛ МАЙ ХЕАРТ ДУНКАН МАКЛАУД",
-      "breed": "УИППЕТ",
-      "sex": "Кобель",
-      "current_league": "Абсолют",
-      "wins_count": 1,
-      "consecutive_losses": 0,
-      "best_time": 23.83,
-      "stages_count": 1,
-      "status_badge": "promoted_up",
-      "promotion_label": "Выход в Абсолют (победа II этапа)",
-      "history": [
-        {
-          "stage_num": 2,
-          "date": "2026-09-20",
-          "placement": 1,
-          "total_score": 23.83,
-          "league": "Чемпионов",
-          "breed_class": "Уиппет - спринтер (Чемпионы) - кобель",
-          "status": "finished"
-        }
-      ]
-    },
-    {
-      "dog_key": "уиппет::ural spirit thunder",
-      "dog_id": 10762,
-      "name": "URAL SPIRIT THUNDER",
-      "name_ru": "URAL SPIRIT THUNDER",
-      "name_lat": "URAL SPIRIT THUNDER",
-      "breed": "УИППЕТ",
-      "sex": "Кобель",
-      "current_league": "Абсолют",
-      "wins_count": 1,
-      "consecutive_losses": 0,
-      "best_time": 24.39,
-      "stages_count": 1,
-      "status_badge": "promoted_up",
-      "promotion_label": "Победа в Лиге Абсолют",
-      "history": [
-        {
-          "stage_num": 2,
-          "date": "2026-09-20",
-          "placement": 1,
-          "total_score": 24.39,
-          "league": "Юниоры",
-          "breed_class": "Уиппет - юниор - кобель",
-          "status": "finished"
-        }
-      ]
-    },
-    {
-      "dog_key": "испанский гальго::шерегеш",
-      "dog_id": 9123,
-      "name": "ШЕРЕГЕШ",
-      "name_ru": "ШЕРЕГЕШ",
-      "name_lat": "ШЕРЕГЕШ",
-      "breed": "ИСПАНСКИЙ ГАЛЬГО",
-      "sex": "Кобель",
-      "current_league": "Абсолют",
-      "wins_count": 1,
-      "consecutive_losses": 0,
-      "best_time": 24.51,
-      "stages_count": 1,
-      "status_badge": "promoted_up",
-      "promotion_label": "Победа в Лиге Абсолют",
-      "history": [
-        {
-          "stage_num": 2,
-          "date": "2026-09-20",
-          "placement": 1,
-          "total_score": 24.51,
-          "league": "Юниоры",
-          "breed_class": "Испанская борзая (гальго) - юниор - кобель",
-          "status": "finished"
-        }
-      ]
-    },
-    {
-      "dog_key": "уиппет::birnenhof astrid laguz",
-      "dog_id": 10763,
-      "name": "BIRNENHOF ASTRID LAGUZ",
-      "name_ru": "BIRNENHOF ASTRID LAGUZ",
-      "name_lat": "BIRNENHOF ASTRID LAGUZ",
-      "breed": "УИППЕТ",
-      "sex": "Сука",
-      "current_league": "Абсолют",
-      "wins_count": 1,
-      "consecutive_losses": 0,
-      "best_time": 25.29,
-      "stages_count": 1,
-      "status_badge": "promoted_up",
-      "promotion_label": "Победа в Лиге Абсолют",
-      "history": [
-        {
-          "stage_num": 2,
-          "date": "2026-09-20",
-          "placement": 1,
-          "total_score": 25.29,
-          "league": "Юниоры",
-          "breed_class": "Уиппет - юниор - сука",
-          "status": "withdrawn"
-        }
-      ]
-    },
-    {
-      "dog_key": "салюки::эмуль дэ гепард гелила аль равда",
+      "dog_key": "dog::5782",
       "dog_id": 5782,
       "name": "ЭМУЛЬ ДЭ ГЕПАРД ГЕЛИЛА АЛЬ РАВДА",
       "name_ru": "ЭМУЛЬ ДЭ ГЕПАРД ГЕЛИЛА АЛЬ РАВДА",
@@ -3671,7 +3555,7 @@
       ]
     },
     {
-      "dog_key": "родезийский риджбек::кэйод",
+      "dog_key": "dog::5757",
       "dog_id": 5757,
       "name": "КЭЙОД",
       "name_ru": "КЭЙОД",
@@ -3707,21 +3591,30 @@
       ]
     },
     {
-      "dog_key": "родезийский риджбек::aries khan skadi sarama fast & furious",
+      "dog_key": "dog::5964",
       "dog_id": 5964,
-      "name": "ARIES KHAN SKADI SARAMA FAST & FURIOUS",
-      "name_ru": "ARIES KHAN SKADI SARAMA FAST & FURIOUS",
+      "name": "АРИЕС ХАН СКАДИ САРАМА ФАСТ & ФЬЮРИОС",
+      "name_ru": "АРИЕС ХАН СКАДИ САРАМА ФАСТ & ФЬЮРИОС",
       "name_lat": "ARIES KHAN SKADI SARAMA FAST & FURIOUS",
       "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
       "sex": "Сука",
       "current_league": "Абсолют",
-      "wins_count": 1,
+      "wins_count": 2,
       "consecutive_losses": 0,
       "best_time": 28.19,
-      "stages_count": 1,
-      "status_badge": "promoted_up",
-      "promotion_label": "Победа в Лиге Абсолют",
+      "stages_count": 2,
+      "status_badge": "stable",
+      "promotion_label": "Победитель Лиги Абсолют II этапа",
       "history": [
+        {
+          "stage_num": 1,
+          "date": "2026-08-09",
+          "placement": 1,
+          "total_score": 29.12,
+          "league": "Чемпионов",
+          "breed_class": "Родезийский риджбек - стандарт (Чемпионы) - сука",
+          "status": "finished"
+        },
         {
           "stage_num": 2,
           "date": "2026-09-20",
@@ -3734,21 +3627,66 @@
       ]
     },
     {
-      "dog_key": "фараонова собака::heidi sotis djed atum",
+      "dog_key": "dog::10750",
+      "dog_id": 10750,
+      "name": "ШНЕЙДЕР РИЧ РЭМ",
+      "name_ru": "ШНЕЙДЕР РИЧ РЭМ",
+      "name_lat": "SHNEYDER RICH REM",
+      "breed": "ФАРАОНОВА СОБАКА",
+      "sex": "male",
+      "current_league": "Абсолют",
+      "wins_count": 2,
+      "consecutive_losses": 0,
+      "best_time": 28.43,
+      "stages_count": 2,
+      "status_badge": "promoted_up",
+      "promotion_label": "Выход в Абсолют на III этап",
+      "history": [
+        {
+          "stage_num": 1,
+          "date": "2026-08-09",
+          "placement": 1,
+          "total_score": 28.92,
+          "league": "Прогресс",
+          "breed_class": "Фараонова собака - стандарт (Прогресс) - кобель",
+          "status": "finished"
+        },
+        {
+          "stage_num": 2,
+          "date": "2026-09-20",
+          "placement": 1,
+          "total_score": 28.43,
+          "league": "Чемпионов",
+          "breed_class": "Фараонова собака - стандарт (Чемпионы) - кобель",
+          "status": "finished"
+        }
+      ]
+    },
+    {
+      "dog_key": "dog::5903",
       "dog_id": 5903,
-      "name": "HEIDI SOTIS DJED ATUM",
-      "name_ru": "HEIDI SOTIS DJED ATUM",
+      "name": "ХЕЙДИ СОТИС ДЖЕД АТУМ",
+      "name_ru": "ХЕЙДИ СОТИС ДЖЕД АТУМ",
       "name_lat": "HEIDI SOTIS DJED ATUM",
       "breed": "ФАРАОНОВА СОБАКА",
       "sex": "Кобель",
       "current_league": "Абсолют",
-      "wins_count": 1,
+      "wins_count": 2,
       "consecutive_losses": 0,
       "best_time": 28.48,
-      "stages_count": 1,
-      "status_badge": "promoted_up",
-      "promotion_label": "Победа в Лиге Абсолют",
+      "stages_count": 2,
+      "status_badge": "stable",
+      "promotion_label": "Победитель Лиги Абсолют II этапа",
       "history": [
+        {
+          "stage_num": 1,
+          "date": "2026-08-09",
+          "placement": 1,
+          "total_score": 29.08,
+          "league": "Чемпионов",
+          "breed_class": "Фараонова собака - стандарт (Чемпионы) - кобель",
+          "status": "finished"
+        },
         {
           "stage_num": 2,
           "date": "2026-09-20",
@@ -3761,10 +3699,10 @@
       ]
     },
     {
-      "dog_key": "родезийский риджбек::aries khan riviera al risha sangreal",
+      "dog_key": "dog::5962",
       "dog_id": 5962,
-      "name": "ARIES KHAN RIVIERA AL RISHA SANGREAL",
-      "name_ru": "ARIES KHAN RIVIERA AL RISHA SANGREAL",
+      "name": "АРИЕС ХАН РИВЬЕРА АЛЬ РИША САНГРИЭЛЬ",
+      "name_ru": "АРИЕС ХАН РИВЬЕРА АЛЬ РИША САНГРИЭЛЬ",
       "name_lat": "ARIES KHAN RIVIERA AL RISHA SANGREAL",
       "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
       "sex": "Сука",
@@ -3772,10 +3710,19 @@
       "wins_count": 1,
       "consecutive_losses": 0,
       "best_time": 28.57,
-      "stages_count": 1,
+      "stages_count": 2,
       "status_badge": "promoted_up",
-      "promotion_label": "Выход в Абсолют (победа II этапа)",
+      "promotion_label": "Выход в Абсолют на III этап",
       "history": [
+        {
+          "stage_num": 1,
+          "date": "2026-08-09",
+          "placement": 2,
+          "total_score": 29.57,
+          "league": "Чемпионов",
+          "breed_class": "Родезийский риджбек - стандарт (Чемпионы) - сука",
+          "status": "finished"
+        },
         {
           "stage_num": 2,
           "date": "2026-09-20",
@@ -3788,7 +3735,7 @@
       ]
     },
     {
-      "dog_key": "фараонова собака::хейди сотис делимара минтака",
+      "dog_key": "dog::5906",
       "dog_id": 5906,
       "name": "ХЕЙДИ СОТИС ДЕЛИМАРА МИНТАКА",
       "name_ru": "ХЕЙДИ СОТИС ДЕЛИМАРА МИНТАКА",
@@ -3815,21 +3762,30 @@
       ]
     },
     {
-      "dog_key": "фараонова собака::heidi sotis djgantiya mut",
+      "dog_key": "dog::5908",
       "dog_id": 5908,
-      "name": "HEIDI SOTIS DJGANTIYA MUT",
-      "name_ru": "HEIDI SOTIS DJGANTIYA MUT",
+      "name": "ХЕЙДИ СОТИС ДЖГАНТИЯ МУТ",
+      "name_ru": "ХЕЙДИ СОТИС ДЖГАНТИЯ МУТ",
       "name_lat": "HEIDI SOTIS DJGANTIYA MUT",
       "breed": "ФАРАОНОВА СОБАКА",
       "sex": "Сука",
       "current_league": "Абсолют",
-      "wins_count": 1,
+      "wins_count": 2,
       "consecutive_losses": 0,
       "best_time": 28.95,
-      "stages_count": 1,
+      "stages_count": 2,
       "status_badge": "promoted_up",
-      "promotion_label": "Выход в Абсолют (победа II этапа)",
+      "promotion_label": "Выход в Абсолют на III этап",
       "history": [
+        {
+          "stage_num": 1,
+          "date": "2026-08-09",
+          "placement": 1,
+          "total_score": 29.02,
+          "league": "Прогресс",
+          "breed_class": "Фараонова собака - стандарт (Прогресс) - сука",
+          "status": "finished"
+        },
         {
           "stage_num": 2,
           "date": "2026-09-20",
@@ -3842,102 +3798,30 @@
       ]
     },
     {
-      "dog_key": "фараонова собака::хейди сотис джед атум",
-      "dog_id": 5903,
-      "name": "ХЕЙДИ СОТИС ДЖЕД АТУМ",
-      "name_ru": "ХЕЙДИ СОТИС ДЖЕД АТУМ",
-      "name_lat": "HEIDI SOTIS DJED ATUM",
-      "breed": "ФАРАОНОВА СОБАКА",
-      "sex": "Кобель",
-      "current_league": "Абсолют",
-      "wins_count": 1,
-      "consecutive_losses": 0,
-      "best_time": 29.08,
-      "stages_count": 1,
-      "status_badge": "promoted_up",
-      "promotion_label": "Выход в Абсолют (победа I этапа)",
-      "history": [
-        {
-          "stage_num": 1,
-          "date": "2026-08-09",
-          "placement": 1,
-          "total_score": 29.08,
-          "league": "Чемпионов",
-          "breed_class": "Фараонова собака - стандарт (Чемпионы) - кобель",
-          "status": "finished"
-        }
-      ]
-    },
-    {
-      "dog_key": "родезийский риджбек::ариес хан скади сарама фаст & фьюриос",
-      "dog_id": 5964,
-      "name": "АРИЕС ХАН СКАДИ САРАМА ФАСТ & ФЬЮРИОС",
-      "name_ru": "АРИЕС ХАН СКАДИ САРАМА ФАСТ & ФЬЮРИОС",
-      "name_lat": "ARIES KHAN SKADI SARAMA FAST & FURIOUS",
-      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
-      "sex": "Сука",
-      "current_league": "Абсолют",
-      "wins_count": 1,
-      "consecutive_losses": 0,
-      "best_time": 29.12,
-      "stages_count": 1,
-      "status_badge": "promoted_up",
-      "promotion_label": "Выход в Абсолют (победа I этапа)",
-      "history": [
-        {
-          "stage_num": 1,
-          "date": "2026-08-09",
-          "placement": 1,
-          "total_score": 29.12,
-          "league": "Чемпионов",
-          "breed_class": "Родезийский риджбек - стандарт (Чемпионы) - сука",
-          "status": "finished"
-        }
-      ]
-    },
-    {
-      "dog_key": "фараонова собака::heidi sotis eren yeager",
-      "dog_id": 10765,
-      "name": "HEIDI SOTIS EREN YEAGER",
-      "name_ru": "HEIDI SOTIS EREN YEAGER",
-      "name_lat": "HEIDI SOTIS EREN YEAGER",
-      "breed": "ФАРАОНОВА СОБАКА",
-      "sex": "Кобель",
-      "current_league": "Абсолют",
-      "wins_count": 1,
-      "consecutive_losses": 0,
-      "best_time": 29.82,
-      "stages_count": 1,
-      "status_badge": "promoted_up",
-      "promotion_label": "Победа в Лиге Абсолют",
-      "history": [
-        {
-          "stage_num": 2,
-          "date": "2026-09-20",
-          "placement": 1,
-          "total_score": 29.82,
-          "league": "Юниоры",
-          "breed_class": "Фараонова собака - юниор - кобель",
-          "status": "finished"
-        }
-      ]
-    },
-    {
-      "dog_key": "чирнеко дель этна::erin",
+      "dog_key": "dog::10754",
       "dog_id": 10754,
-      "name": "ERIN",
-      "name_ru": "ERIN",
+      "name": "ЭРИН",
+      "name_ru": "ЭРИН",
       "name_lat": "ERIN",
       "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
       "sex": "Сука",
       "current_league": "Абсолют",
-      "wins_count": 1,
+      "wins_count": 2,
       "consecutive_losses": 0,
-      "best_time": 30.4,
-      "stages_count": 1,
+      "best_time": 30.39,
+      "stages_count": 2,
       "status_badge": "promoted_up",
-      "promotion_label": "Выход в Абсолют (победа II этапа)",
+      "promotion_label": "Выход в Абсолют на III этап",
       "history": [
+        {
+          "stage_num": 1,
+          "date": "2026-08-09",
+          "placement": 1,
+          "total_score": 30.39,
+          "league": "Прогресс",
+          "breed_class": "Чирнеко дель Этна - стандарт (Прогресс) - сука",
+          "status": "finished"
+        },
         {
           "stage_num": 2,
           "date": "2026-09-20",
@@ -3950,7 +3834,7 @@
       ]
     },
     {
-      "dog_key": "басенджи::элен владхинс финвест дик дэль торро",
+      "dog_key": "dog::5828",
       "dog_id": 5828,
       "name": "ЭЛЕН ВЛАДХИНС ФИНВЕСТ ДИК ДЭЛЬ ТОРРО",
       "name_ru": "ЭЛЕН ВЛАДХИНС ФИНВЕСТ ДИК ДЭЛЬ ТОРРО",
@@ -3977,7 +3861,7 @@
       ]
     },
     {
-      "dog_key": "родезийский риджбек::ариес хан скиф симуран",
+      "dog_key": "dog::6152",
       "dog_id": 6152,
       "name": "АРИЕС ХАН СКИФ СИМУРАН",
       "name_ru": "АРИЕС ХАН СКИФ СИМУРАН",
@@ -4004,21 +3888,30 @@
       ]
     },
     {
-      "dog_key": "апбт::yug pit knl's elbrus",
+      "dog_key": "dog::766",
       "dog_id": 766,
       "name": "YUG PIT KNL'S ELBRUS",
-      "name_ru": "YUG PIT KNL'S ELBRUS",
-      "name_lat": "YUG PIT KNL'S ELBRUS",
-      "breed": "АПБТ",
+      "name_ru": "YUG PIT KNLS ELBRUS",
+      "name_lat": "YUG PIT KNLS ELBRUS",
+      "breed": "БЕЗ ПОРОДЫ",
       "sex": "Кобель",
       "current_league": "Абсолют",
-      "wins_count": 1,
+      "wins_count": 2,
       "consecutive_losses": 0,
-      "best_time": 33.31,
-      "stages_count": 1,
+      "best_time": 33.28,
+      "stages_count": 2,
       "status_badge": "promoted_up",
-      "promotion_label": "Выход в Абсолют (победа II этапа)",
+      "promotion_label": "Выход в Абсолют на III этап",
       "history": [
+        {
+          "stage_num": 1,
+          "date": "2026-08-09",
+          "placement": 1,
+          "total_score": 33.28,
+          "league": "Прогресс",
+          "breed_class": "АПБТ - стандарт (Прогресс) - кобель",
+          "status": "finished"
+        },
         {
           "stage_num": 2,
           "date": "2026-09-20",
@@ -4031,862 +3924,7 @@
       ]
     },
     {
-      "dog_key": "уиппет::брейв харт симба",
-      "dog_id": 5650,
-      "name": "БРЕЙВ ХАРТ СИМБА",
-      "name_ru": "БРЕЙВ ХАРТ СИМБА",
-      "name_lat": "BRAVE HEART SIMBA",
-      "breed": "УИППЕТ",
-      "sex": "Кобель",
-      "current_league": "Чемпионов",
-      "wins_count": 1,
-      "consecutive_losses": 0,
-      "best_time": 24.59,
-      "stages_count": 1,
-      "status_badge": "promoted_up",
-      "promotion_label": "Выход в Чемпионы (победа I этапа)",
-      "history": [
-        {
-          "stage_num": 1,
-          "date": "2026-08-09",
-          "placement": 1,
-          "total_score": 24.59,
-          "league": "Прогресс",
-          "breed_class": "Уиппет - спринтер (Прогресс) - кобель",
-          "status": "finished"
-        }
-      ]
-    },
-    {
-      "dog_key": "уиппет::уипполли эликсир",
-      "dog_id": 7288,
-      "name": "УИППОЛЛИ ЭЛИКСИР",
-      "name_ru": "УИППОЛЛИ ЭЛИКСИР",
-      "name_lat": "WHIPPOLLY ELIXIR",
-      "breed": "УИППЕТ",
-      "sex": "Кобель",
-      "current_league": "Чемпионов",
-      "wins_count": 1,
-      "consecutive_losses": 0,
-      "best_time": 24.78,
-      "stages_count": 2,
-      "status_badge": "promoted_up",
-      "promotion_label": "Выход в Чемпионы на III этап",
-      "history": [
-        {
-          "stage_num": 1,
-          "date": "2026-08-09",
-          "placement": 2,
-          "total_score": 25.74,
-          "league": "Прогресс",
-          "breed_class": "Уиппет - спринтер (Прогресс) - кобель",
-          "status": "finished"
-        },
-        {
-          "stage_num": 2,
-          "date": "2026-09-20",
-          "placement": 1,
-          "total_score": 24.78,
-          "league": "Прогресс",
-          "breed_class": "Уиппет - спринтер (Прогресс) - кобель",
-          "status": "finished"
-        }
-      ]
-    },
-    {
-      "dog_key": "уиппет::стангерс ланд златослава",
-      "dog_id": 5663,
-      "name": "СТАНГЕРС ЛАНД ЗЛАТОСЛАВА",
-      "name_ru": "СТАНГЕРС ЛАНД ЗЛАТОСЛАВА",
-      "name_lat": "STANGERS LAND ZLATOSLAVA",
-      "breed": "УИППЕТ",
-      "sex": "Сука",
-      "current_league": "Чемпионов",
-      "wins_count": 1,
-      "consecutive_losses": 1,
-      "best_time": 24.86,
-      "stages_count": 2,
-      "status_badge": "stable",
-      "promotion_label": null,
-      "history": [
-        {
-          "stage_num": 1,
-          "date": "2026-08-09",
-          "placement": 1,
-          "total_score": 24.86,
-          "league": "Прогресс",
-          "breed_class": "Уиппет - спринтер (Прогресс) - сука",
-          "status": "finished"
-        },
-        {
-          "stage_num": 2,
-          "date": "2026-09-20",
-          "placement": 3,
-          "total_score": 25.72,
-          "league": "Чемпионов",
-          "breed_class": "Уиппет - спринтер (Чемпионы) - сука",
-          "status": "finished"
-        }
-      ]
-    },
-    {
-      "dog_key": "уиппет::барселона энкантадора",
-      "dog_id": 5896,
-      "name": "БАРСЕЛОНА ЭНКАНТАДОРА",
-      "name_ru": "БАРСЕЛОНА ЭНКАНТАДОРА",
-      "name_lat": "BARCELONA ENCANTADORA",
-      "breed": "УИППЕТ",
-      "sex": "Сука",
-      "current_league": "Чемпионов",
-      "wins_count": 1,
-      "consecutive_losses": 0,
-      "best_time": 25.21,
-      "stages_count": 2,
-      "status_badge": "promoted_up",
-      "promotion_label": "Выход в Чемпионы на III этап",
-      "history": [
-        {
-          "stage_num": 1,
-          "date": "2026-08-09",
-          "placement": 2,
-          "total_score": 25.7,
-          "league": "Прогресс",
-          "breed_class": "Уиппет - спринтер (Прогресс) - сука",
-          "status": "finished"
-        },
-        {
-          "stage_num": 2,
-          "date": "2026-09-20",
-          "placement": 1,
-          "total_score": 25.21,
-          "league": "Прогресс",
-          "breed_class": "Уиппет - спринтер (Прогресс) - сука",
-          "status": "finished"
-        }
-      ]
-    },
-    {
-      "dog_key": "уиппет::ярый ветер из полета мечты",
-      "dog_id": 5803,
-      "name": "ЯРЫЙ ВЕТЕР ИЗ ПОЛЕТА МЕЧТЫ",
-      "name_ru": "ЯРЫЙ ВЕТЕР ИЗ ПОЛЕТА МЕЧТЫ",
-      "name_lat": "YARYJ VETER IZ POLETA MECHTI",
-      "breed": "УИППЕТ",
-      "sex": "Кобель",
-      "current_league": "Чемпионов",
-      "wins_count": 1,
-      "consecutive_losses": 0,
-      "best_time": 25.32,
-      "stages_count": 1,
-      "status_badge": "promoted_up",
-      "promotion_label": "Выход в Чемпионы (победа I этапа)",
-      "history": [
-        {
-          "stage_num": 1,
-          "date": "2026-08-09",
-          "placement": 1,
-          "total_score": 25.32,
-          "league": "Прогресс",
-          "breed_class": "Уиппет - стандарт (Прогресс) - кобель",
-          "status": "finished"
-        }
-      ]
-    },
-    {
-      "dog_key": "уиппет::статный барон",
-      "dog_id": 460,
-      "name": "СТАТНЫЙ БАРОН",
-      "name_ru": "СТАТНЫЙ БАРОН",
-      "name_lat": "STATNIY BARON",
-      "breed": "УИППЕТ",
-      "sex": "Кобель",
-      "current_league": "Чемпионов",
-      "wins_count": 1,
-      "consecutive_losses": 0,
-      "best_time": 25.43,
-      "stages_count": 2,
-      "status_badge": "promoted_up",
-      "promotion_label": "Выход в Чемпионы на III этап",
-      "history": [
-        {
-          "stage_num": 1,
-          "date": "2026-08-09",
-          "placement": 3,
-          "total_score": 25.91,
-          "league": "Прогресс",
-          "breed_class": "Уиппет - стандарт (Прогресс) - кобель",
-          "status": "finished"
-        },
-        {
-          "stage_num": 2,
-          "date": "2026-09-20",
-          "placement": 1,
-          "total_score": 25.43,
-          "league": "Прогресс",
-          "breed_class": "Уиппет - стандарт (Прогресс) - кобель",
-          "status": "finished"
-        }
-      ]
-    },
-    {
-      "dog_key": "уиппет::ангелик вингс",
-      "dog_id": 10788,
-      "name": "АНГЕЛИК ВИНГС",
-      "name_ru": "АНГЕЛИК ВИНГС",
-      "name_lat": "ANGELIC WINGS",
-      "breed": "УИППЕТ",
-      "sex": "Сука",
-      "current_league": "Чемпионов",
-      "wins_count": 1,
-      "consecutive_losses": 0,
-      "best_time": 25.55,
-      "stages_count": 1,
-      "status_badge": "promoted_up",
-      "promotion_label": "Выход в Чемпионы (победа I этапа)",
-      "history": [
-        {
-          "stage_num": 1,
-          "date": "2026-08-09",
-          "placement": 1,
-          "total_score": 25.55,
-          "league": "Прогресс",
-          "breed_class": "Уиппет - стандарт (Прогресс) - сука",
-          "status": "finished"
-        }
-      ]
-    },
-    {
-      "dog_key": "уиппет::стангерс ланд корица",
-      "dog_id": 5644,
-      "name": "СТАНГЕРС ЛАНД КОРИЦА",
-      "name_ru": "СТАНГЕРС ЛАНД КОРИЦА",
-      "name_lat": "СТАНГЕРС ЛАНД КОРИЦА",
-      "breed": "УИППЕТ",
-      "sex": "Сука",
-      "current_league": "Чемпионов",
-      "wins_count": 1,
-      "consecutive_losses": 0,
-      "best_time": 25.58,
-      "stages_count": 1,
-      "status_badge": "promoted_up",
-      "promotion_label": "Выход в Чемпионы (победа II этапа)",
-      "history": [
-        {
-          "stage_num": 2,
-          "date": "2026-09-20",
-          "placement": 1,
-          "total_score": 25.58,
-          "league": "Прогресс",
-          "breed_class": "Уиппет - стандарт (Прогресс) - сука",
-          "status": "finished"
-        }
-      ]
-    },
-    {
-      "dog_key": "русская псовая борзая::flesh-royal",
-      "dog_id": 10741,
-      "name": "FLESH-ROYAL",
-      "name_ru": "FLESH-ROYAL",
-      "name_lat": "FLESH-ROYAL",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "sex": "Кобель",
-      "current_league": "Чемпионов",
-      "wins_count": 1,
-      "consecutive_losses": 0,
-      "best_time": 25.97,
-      "stages_count": 1,
-      "status_badge": "promoted_up",
-      "promotion_label": "Выход в Чемпионы (победа II этапа)",
-      "history": [
-        {
-          "stage_num": 2,
-          "date": "2026-09-20",
-          "placement": 1,
-          "total_score": 25.97,
-          "league": "Прогресс",
-          "breed_class": "Русская псовая борзая - стандарт (Прогресс) - кобель",
-          "status": "finished"
-        }
-      ]
-    },
-    {
-      "dog_key": "салюки::бель этуаль каяла",
-      "dog_id": 10742,
-      "name": "БЕЛЬ ЭТУАЛЬ КАЯЛА",
-      "name_ru": "БЕЛЬ ЭТУАЛЬ КАЯЛА",
-      "name_lat": "БЕЛЬ ЭТУАЛЬ КАЯЛА",
-      "breed": "САЛЮКИ",
-      "sex": "Сука",
-      "current_league": "Чемпионов",
-      "wins_count": 1,
-      "consecutive_losses": 0,
-      "best_time": 26.83,
-      "stages_count": 1,
-      "status_badge": "promoted_up",
-      "promotion_label": "Выход в Чемпионы (победа II этапа)",
-      "history": [
-        {
-          "stage_num": 2,
-          "date": "2026-09-20",
-          "placement": 1,
-          "total_score": 26.83,
-          "league": "Прогресс",
-          "breed_class": "Салюки - стандарт (Прогресс) - сука",
-          "status": "finished"
-        }
-      ]
-    },
-    {
-      "dog_key": "русская псовая борзая::flyona",
-      "dog_id": 10740,
-      "name": "FLYONA",
-      "name_ru": "FLYONA",
-      "name_lat": "FLYONA",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "sex": "Сука",
-      "current_league": "Чемпионов",
-      "wins_count": 1,
-      "consecutive_losses": 0,
-      "best_time": 27.58,
-      "stages_count": 1,
-      "status_badge": "promoted_up",
-      "promotion_label": "Выход в Чемпионы (победа II этапа)",
-      "history": [
-        {
-          "stage_num": 2,
-          "date": "2026-09-20",
-          "placement": 1,
-          "total_score": 27.58,
-          "league": "Прогресс",
-          "breed_class": "Русская псовая борзая - стандарт (Прогресс) - сука",
-          "status": "finished"
-        }
-      ]
-    },
-    {
-      "dog_key": "бельгийская овчарка малинуа::джанико лазер (м)",
-      "dog_id": 771,
-      "name": "ДЖАНИКО ЛАЗЕР (М)",
-      "name_ru": "ДЖАНИКО ЛАЗЕР (М)",
-      "name_lat": "DZHANIKO LASER (M)",
-      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
-      "sex": "Кобель",
-      "current_league": "Чемпионов",
-      "wins_count": 1,
-      "consecutive_losses": 0,
-      "best_time": 27.66,
-      "stages_count": 1,
-      "status_badge": "promoted_up",
-      "promotion_label": "Выход в Чемпионы (победа I этапа)",
-      "history": [
-        {
-          "stage_num": 1,
-          "date": "2026-08-09",
-          "placement": 1,
-          "total_score": 27.66,
-          "league": "Прогресс",
-          "breed_class": "Малинуа - стандарт (Прогресс) - кобель",
-          "status": "finished"
-        }
-      ]
-    },
-    {
-      "dog_key": "родезийский риджбек::айна тандайв грейт стар",
-      "dog_id": 6066,
-      "name": "АЙНА ТАНДАЙВ ГРЕЙТ СТАР",
-      "name_ru": "АЙНА ТАНДАЙВ ГРЕЙТ СТАР",
-      "name_lat": "АЙНА ТАНДАЙВ ГРЕЙТ СТАР",
-      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
-      "sex": "Сука",
-      "current_league": "Чемпионов",
-      "wins_count": 1,
-      "consecutive_losses": 0,
-      "best_time": 27.89,
-      "stages_count": 1,
-      "status_badge": "promoted_up",
-      "promotion_label": "Выход в Чемпионы (победа II этапа)",
-      "history": [
-        {
-          "stage_num": 2,
-          "date": "2026-09-20",
-          "placement": 1,
-          "total_score": 27.89,
-          "league": "Прогресс",
-          "breed_class": "Родезийский риджбек - стандарт (Прогресс) - сука",
-          "status": "finished"
-        }
-      ]
-    },
-    {
-      "dog_key": "чирнеко дель этна::цвет солнца жизненный принцип любить",
-      "dog_id": 5909,
-      "name": "ЦВЕТ СОЛНЦА ЖИЗНЕННЫЙ ПРИНЦИП ЛЮБИТЬ",
-      "name_ru": "ЦВЕТ СОЛНЦА ЖИЗНЕННЫЙ ПРИНЦИП ЛЮБИТЬ",
-      "name_lat": "ЦВЕТ СОЛНЦА ЖИЗНЕННЫЙ ПРИНЦИП ЛЮБИТЬ",
-      "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
-      "sex": "Кобель",
-      "current_league": "Чемпионов",
-      "wins_count": 1,
-      "consecutive_losses": 0,
-      "best_time": 28.53,
-      "stages_count": 1,
-      "status_badge": "promoted_up",
-      "promotion_label": "Выход в Чемпионы (победа II этапа)",
-      "history": [
-        {
-          "stage_num": 2,
-          "date": "2026-09-20",
-          "placement": 1,
-          "total_score": 28.53,
-          "league": "Прогресс",
-          "breed_class": "Чирнеко дель'Этна - стандарт (Прогресс) - кобель",
-          "status": "finished"
-        }
-      ]
-    },
-    {
-      "dog_key": "фараонова собака::хейди сотис джгантия мут",
-      "dog_id": 5908,
-      "name": "ХЕЙДИ СОТИС ДЖГАНТИЯ МУТ",
-      "name_ru": "ХЕЙДИ СОТИС ДЖГАНТИЯ МУТ",
-      "name_lat": "HEIDI SOTIS DJGANTIYA MUT",
-      "breed": "ФАРАОНОВА СОБАКА",
-      "sex": "Сука",
-      "current_league": "Чемпионов",
-      "wins_count": 1,
-      "consecutive_losses": 0,
-      "best_time": 29.02,
-      "stages_count": 1,
-      "status_badge": "promoted_up",
-      "promotion_label": "Выход в Чемпионы (победа I этапа)",
-      "history": [
-        {
-          "stage_num": 1,
-          "date": "2026-08-09",
-          "placement": 1,
-          "total_score": 29.02,
-          "league": "Прогресс",
-          "breed_class": "Фараонова собака - стандарт (Прогресс) - сука",
-          "status": "finished"
-        }
-      ]
-    },
-    {
-      "dog_key": "чирнеко дель этна::эрин",
-      "dog_id": 10754,
-      "name": "ЭРИН",
-      "name_ru": "ЭРИН",
-      "name_lat": "ERIN",
-      "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
-      "sex": "Сука",
-      "current_league": "Чемпионов",
-      "wins_count": 1,
-      "consecutive_losses": 0,
-      "best_time": 30.39,
-      "stages_count": 1,
-      "status_badge": "promoted_up",
-      "promotion_label": "Выход в Чемпионы (победа I этапа)",
-      "history": [
-        {
-          "stage_num": 1,
-          "date": "2026-08-09",
-          "placement": 1,
-          "total_score": 30.39,
-          "league": "Прогресс",
-          "breed_class": "Чирнеко дель Этна - стандарт (Прогресс) - сука",
-          "status": "finished"
-        }
-      ]
-    },
-    {
-      "dog_key": "родезийский риджбек::aries khan samuel forsage jackson",
-      "dog_id": 5755,
-      "name": "ARIES KHAN SAMUEL FORSAGE JACKSON",
-      "name_ru": "ARIES KHAN SAMUEL FORSAGE JACKSON",
-      "name_lat": "ARIES KHAN SAMUEL FORSAGE JACKSON",
-      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
-      "sex": "Кобель",
-      "current_league": "Чемпионов",
-      "wins_count": 1,
-      "consecutive_losses": 0,
-      "best_time": 30.73,
-      "stages_count": 1,
-      "status_badge": "promoted_up",
-      "promotion_label": "Выход в Чемпионы (победа I этапа)",
-      "history": [
-        {
-          "stage_num": 1,
-          "date": "2026-08-09",
-          "placement": 1,
-          "total_score": 30.73,
-          "league": "Прогресс",
-          "breed_class": "Родезийский риджбек - стандарт (Прогресс) - кобель",
-          "status": "finished"
-        }
-      ]
-    },
-    {
-      "dog_key": "ирландский терьер::душечка-краса из дома алантес",
-      "dog_id": 776,
-      "name": "ДУШЕЧКА-КРАСА ИЗ ДОМА АЛАНТЕС",
-      "name_ru": "ДУШЕЧКА-КРАСА ИЗ ДОМА АЛАНТЕС",
-      "name_lat": "ДУШЕЧКА-КРАСА ИЗ ДОМА АЛАНТЕС",
-      "breed": "ИРЛАНДСКИЙ ТЕРЬЕР",
-      "sex": "Сука",
-      "current_league": "Чемпионов",
-      "wins_count": 1,
-      "consecutive_losses": 0,
-      "best_time": 31.5,
-      "stages_count": 1,
-      "status_badge": "promoted_up",
-      "promotion_label": "Выход в Чемпионы (победа II этапа)",
-      "history": [
-        {
-          "stage_num": 2,
-          "date": "2026-09-20",
-          "placement": 1,
-          "total_score": 31.5,
-          "league": "Прогресс",
-          "breed_class": "Ирландский терьер - стандарт (Прогресс) - сука",
-          "status": "finished"
-        }
-      ]
-    },
-    {
-      "dog_key": "ирландский терьер::нежное пламя эдана",
-      "dog_id": 777,
-      "name": "НЕЖНОЕ ПЛАМЯ ЭДАНА",
-      "name_ru": "НЕЖНОЕ ПЛАМЯ ЭДАНА",
-      "name_lat": "NEZHNOYE PLAMYA EDANA",
-      "breed": "ИРЛАНДСКИЙ ТЕРЬЕР",
-      "sex": "Сука",
-      "current_league": "Чемпионов",
-      "wins_count": 1,
-      "consecutive_losses": 0,
-      "best_time": 32.16,
-      "stages_count": 1,
-      "status_badge": "promoted_up",
-      "promotion_label": "Выход в Чемпионы (победа I этапа)",
-      "history": [
-        {
-          "stage_num": 1,
-          "date": "2026-08-09",
-          "placement": 1,
-          "total_score": 32.16,
-          "league": "Прогресс",
-          "breed_class": "Ирландский терьер - стандарт (Прогресс) - сука",
-          "status": "finished"
-        }
-      ]
-    },
-    {
-      "dog_key": "малая итальянская борзая::monanna republic hidan",
-      "dog_id": 748,
-      "name": "MONANNA REPUBLIC HIDAN",
-      "name_ru": "MONANNA REPUBLIC HIDAN",
-      "name_lat": "MONANNA REPUBLIC HIDAN",
-      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
-      "sex": "Кобель",
-      "current_league": "Чемпионов",
-      "wins_count": 1,
-      "consecutive_losses": 0,
-      "best_time": 32.73,
-      "stages_count": 1,
-      "status_badge": "promoted_up",
-      "promotion_label": "Выход в Чемпионы (победа II этапа)",
-      "history": [
-        {
-          "stage_num": 2,
-          "date": "2026-09-20",
-          "placement": 1,
-          "total_score": 32.73,
-          "league": "Прогресс",
-          "breed_class": "Левретка - стандарт (Прогресс) - кобель",
-          "status": "finished"
-        }
-      ]
-    },
-    {
-      "dog_key": "родезийский риджбек::jelany red troy",
-      "dog_id": 178,
-      "name": "JELANY RED TROY",
-      "name_ru": "JELANY RED TROY",
-      "name_lat": "JELANY RED TROY",
-      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
-      "sex": "Кобель",
-      "current_league": "Чемпионов",
-      "wins_count": 1,
-      "consecutive_losses": 0,
-      "best_time": 33.17,
-      "stages_count": 1,
-      "status_badge": "promoted_up",
-      "promotion_label": "Выход в Чемпионы (победа I этапа)",
-      "history": [
-        {
-          "stage_num": 1,
-          "date": "2026-08-09",
-          "placement": 1,
-          "total_score": 33.17,
-          "league": "Прогресс",
-          "breed_class": "Родезийский риджбек - ветеран (Прогресс) - кобель",
-          "status": "finished"
-        }
-      ]
-    },
-    {
-      "dog_key": "без породы::yug pit knls elbrus",
-      "dog_id": 766,
-      "name": "YUG PIT KNLS ELBRUS",
-      "name_ru": "YUG PIT KNLS ELBRUS",
-      "name_lat": "YUG PIT KNLS ELBRUS",
-      "breed": "БЕЗ ПОРОДЫ",
-      "sex": "Кобель",
-      "current_league": "Чемпионов",
-      "wins_count": 1,
-      "consecutive_losses": 0,
-      "best_time": 33.28,
-      "stages_count": 1,
-      "status_badge": "promoted_up",
-      "promotion_label": "Выход в Чемпионы (победа I этапа)",
-      "history": [
-        {
-          "stage_num": 1,
-          "date": "2026-08-09",
-          "placement": 1,
-          "total_score": 33.28,
-          "league": "Прогресс",
-          "breed_class": "АПБТ - стандарт (Прогресс) - кобель",
-          "status": "finished"
-        }
-      ]
-    },
-    {
-      "dog_key": "фараонова собака::galmad star vedagor",
-      "dog_id": 369,
-      "name": "GALMAD STAR VEDAGOR",
-      "name_ru": "GALMAD STAR VEDAGOR",
-      "name_lat": "GALMAD STAR VEDAGOR",
-      "breed": "ФАРАОНОВА СОБАКА",
-      "sex": "Кобель",
-      "current_league": "Чемпионов",
-      "wins_count": 1,
-      "consecutive_losses": 0,
-      "best_time": 33.47,
-      "stages_count": 2,
-      "status_badge": "promoted_up",
-      "promotion_label": "Выход в Чемпионы на III этап",
-      "history": [
-        {
-          "stage_num": 1,
-          "date": "2026-08-09",
-          "placement": 2,
-          "total_score": 33.61,
-          "league": "Прогресс",
-          "breed_class": "Фараонова собака - стандарт (Прогресс) - кобель",
-          "status": "finished"
-        },
-        {
-          "stage_num": 2,
-          "date": "2026-09-20",
-          "placement": 1,
-          "total_score": 33.47,
-          "league": "Прогресс",
-          "breed_class": "Фараонова собака - стандарт (Прогресс) - кобель",
-          "status": "finished"
-        }
-      ]
-    },
-    {
-      "dog_key": "кане корсо::акамару аккиро",
-      "dog_id": 11134,
-      "name": "АКАМАРУ АККИРО",
-      "name_ru": "АКАМАРУ АККИРО",
-      "name_lat": "АКАМАРУ АККИРО",
-      "breed": "КАНЕ КОРСО",
-      "sex": "Кобель",
-      "current_league": "Чемпионов",
-      "wins_count": 1,
-      "consecutive_losses": 0,
-      "best_time": 34.29,
-      "stages_count": 1,
-      "status_badge": "promoted_up",
-      "promotion_label": "Выход в Чемпионы (победа I этапа)",
-      "history": [
-        {
-          "stage_num": 1,
-          "date": "2026-08-09",
-          "placement": 1,
-          "total_score": 34.29,
-          "league": "Прогресс",
-          "breed_class": "Кане корсо - стандарт (Прогресс) - кобель",
-          "status": "finished"
-        }
-      ]
-    },
-    {
-      "dog_key": "американский стаффордширский терьер::денверс элит шейп май импреза соул",
-      "dog_id": 513,
-      "name": "ДЕНВЕРС ЭЛИТ ШЕЙП МАЙ ИМПРЕЗА СОУЛ",
-      "name_ru": "ДЕНВЕРС ЭЛИТ ШЕЙП МАЙ ИМПРЕЗА СОУЛ",
-      "name_lat": "DENVERS ELITE SHAPE MY IMPREZA SOUL",
-      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "sex": "Сука",
-      "current_league": "Чемпионов",
-      "wins_count": 1,
-      "consecutive_losses": 0,
-      "best_time": 35.44,
-      "stages_count": 1,
-      "status_badge": "promoted_up",
-      "promotion_label": "Выход в Чемпионы (победа I этапа)",
-      "history": [
-        {
-          "stage_num": 1,
-          "date": "2026-08-09",
-          "placement": 1,
-          "total_score": 35.44,
-          "league": "Прогресс",
-          "breed_class": "Американский стаффордширский терьер - стандарт (Прогресс) - сука",
-          "status": "finished"
-        }
-      ]
-    },
-    {
-      "dog_key": "немецкая овчарка::virna",
-      "dog_id": 11136,
-      "name": "VIRNA",
-      "name_ru": "VIRNA",
-      "name_lat": "VIRNA",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
-      "sex": "Сука",
-      "current_league": "Чемпионов",
-      "wins_count": 1,
-      "consecutive_losses": 0,
-      "best_time": 35.66,
-      "stages_count": 1,
-      "status_badge": "promoted_up",
-      "promotion_label": "Выход в Чемпионы (победа I этапа)",
-      "history": [
-        {
-          "stage_num": 1,
-          "date": "2026-08-09",
-          "placement": 1,
-          "total_score": 35.66,
-          "league": "Прогресс",
-          "breed_class": "Немецкая овчарка - стандарт (Прогресс) - сука",
-          "status": "finished"
-        }
-      ]
-    },
-    {
-      "dog_key": "кане корсо::жанара мартэлла дея гран при",
-      "dog_id": 11135,
-      "name": "ЖАНАРА МАРТЭЛЛА ДЕЯ ГРАН ПРИ",
-      "name_ru": "ЖАНАРА МАРТЭЛЛА ДЕЯ ГРАН ПРИ",
-      "name_lat": "ЖАНАРА МАРТЭЛЛА ДЕЯ ГРАН ПРИ",
-      "breed": "КАНЕ КОРСО",
-      "sex": "Сука",
-      "current_league": "Чемпионов",
-      "wins_count": 1,
-      "consecutive_losses": 0,
-      "best_time": 36.88,
-      "stages_count": 1,
-      "status_badge": "promoted_up",
-      "promotion_label": "Выход в Чемпионы (победа I этапа)",
-      "history": [
-        {
-          "stage_num": 1,
-          "date": "2026-08-09",
-          "placement": 1,
-          "total_score": 36.88,
-          "league": "Прогресс",
-          "breed_class": "Кане корсо - стандарт (Прогресс) - сука",
-          "status": "finished"
-        }
-      ]
-    },
-    {
-      "dog_key": "малая итальянская борзая::априори стар юкос",
-      "dog_id": 5834,
-      "name": "АПРИОРИ СТАР ЮКОС",
-      "name_ru": "АПРИОРИ СТАР ЮКОС",
-      "name_lat": "APRIORI STAR YUKOS",
-      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
-      "sex": "кобель",
-      "current_league": "Чемпионов",
-      "wins_count": 0,
-      "consecutive_losses": 1,
-      "best_time": null,
-      "stages_count": 1,
-      "status_badge": "stable",
-      "promotion_label": null,
-      "history": [
-        {
-          "stage_num": 2,
-          "date": "2026-09-20",
-          "placement": 0,
-          "total_score": null,
-          "league": "Чемпионов",
-          "breed_class": "Малая итальянская борзая - стандарт (Чемпионы) - кобель",
-          "status": "dns"
-        }
-      ]
-    },
-    {
-      "dog_key": "родезийский риджбек::ариес хан сэмюэль форсаж джексон",
-      "dog_id": 5755,
-      "name": "АРИЕС ХАН СЭМЮЭЛЬ ФОРСАЖ ДЖЕКСОН",
-      "name_ru": "АРИЕС ХАН СЭМЮЭЛЬ ФОРСАЖ ДЖЕКСОН",
-      "name_lat": "АРИЕС ХАН СЭМЮЭЛЬ ФОРСАЖ ДЖЕКСОН",
-      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
-      "sex": "Кобель",
-      "current_league": "Чемпионов",
-      "wins_count": 0,
-      "consecutive_losses": 1,
-      "best_time": null,
-      "stages_count": 1,
-      "status_badge": "stable",
-      "promotion_label": null,
-      "history": [
-        {
-          "stage_num": 2,
-          "date": "2026-09-20",
-          "placement": 0,
-          "total_score": null,
-          "league": "Чемпионов",
-          "breed_class": "Родезийский риджбек - стандарт (Чемпионы) - кобель",
-          "status": "withdrawn"
-        }
-      ]
-    },
-    {
-      "dog_key": "родезийский риджбек::гранд кортеж нембус зе брайтест",
-      "dog_id": 180,
-      "name": "ГРАНД КОРТЕЖ НЕМБУС ЗЕ БРАЙТЕСТ",
-      "name_ru": "ГРАНД КОРТЕЖ НЕМБУС ЗЕ БРАЙТЕСТ",
-      "name_lat": "ГРАНД КОРТЕЖ НЕМБУС ЗЕ БРАЙТЕСТ",
-      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
-      "sex": "Кобель",
-      "current_league": "Чемпионов",
-      "wins_count": 0,
-      "consecutive_losses": 1,
-      "best_time": null,
-      "stages_count": 1,
-      "status_badge": "stable",
-      "promotion_label": null,
-      "history": [
-        {
-          "stage_num": 1,
-          "date": "2026-08-09",
-          "placement": 0,
-          "total_score": null,
-          "league": "Чемпионов",
-          "breed_class": "Родезийский риджбек - ветеран (Чемпионы) - кобель",
-          "status": "withdrawn"
-        }
-      ]
-    },
-    {
-      "dog_key": "уиппет::ural spirit salamander",
+      "dog_key": "dog::5656",
       "dog_id": 5656,
       "name": "URAL SPIRIT SALAMANDER",
       "name_ru": "URAL SPIRIT SALAMANDER",
@@ -4913,7 +3951,7 @@
       ]
     },
     {
-      "dog_key": "уиппет::бонни флаинг флэш",
+      "dog_key": "dog::5815",
       "dog_id": 5815,
       "name": "БОННИ ФЛАИНГ ФЛЭШ",
       "name_ru": "БОННИ ФЛАИНГ ФЛЭШ",
@@ -4940,7 +3978,34 @@
       ]
     },
     {
-      "dog_key": "уиппет::купидон",
+      "dog_key": "dog::5650",
+      "dog_id": 5650,
+      "name": "БРЕЙВ ХАРТ СИМБА",
+      "name_ru": "БРЕЙВ ХАРТ СИМБА",
+      "name_lat": "BRAVE HEART SIMBA",
+      "breed": "УИППЕТ",
+      "sex": "Кобель",
+      "current_league": "Чемпионов",
+      "wins_count": 1,
+      "consecutive_losses": 0,
+      "best_time": 24.59,
+      "stages_count": 1,
+      "status_badge": "promoted_up",
+      "promotion_label": "Выход в Чемпионы (победа I этапа)",
+      "history": [
+        {
+          "stage_num": 1,
+          "date": "2026-08-09",
+          "placement": 1,
+          "total_score": 24.59,
+          "league": "Прогресс",
+          "breed_class": "Уиппет - спринтер (Прогресс) - кобель",
+          "status": "finished"
+        }
+      ]
+    },
+    {
+      "dog_key": "dog::5649",
       "dog_id": 5649,
       "name": "КУПИДОН",
       "name_ru": "КУПИДОН",
@@ -4976,7 +4041,178 @@
       ]
     },
     {
-      "dog_key": "уиппет::стангерс ланд интернал энерджи",
+      "dog_key": "dog::7288",
+      "dog_id": 7288,
+      "name": "УИППОЛЛИ ЭЛИКСИР",
+      "name_ru": "УИППОЛЛИ ЭЛИКСИР",
+      "name_lat": "WHIPPOLLY ELIXIR",
+      "breed": "УИППЕТ",
+      "sex": "Кобель",
+      "current_league": "Чемпионов",
+      "wins_count": 1,
+      "consecutive_losses": 0,
+      "best_time": 24.78,
+      "stages_count": 2,
+      "status_badge": "promoted_up",
+      "promotion_label": "Выход в Чемпионы на III этап",
+      "history": [
+        {
+          "stage_num": 1,
+          "date": "2026-08-09",
+          "placement": 2,
+          "total_score": 25.74,
+          "league": "Прогресс",
+          "breed_class": "Уиппет - спринтер (Прогресс) - кобель",
+          "status": "finished"
+        },
+        {
+          "stage_num": 2,
+          "date": "2026-09-20",
+          "placement": 1,
+          "total_score": 24.78,
+          "league": "Прогресс",
+          "breed_class": "Уиппет - спринтер (Прогресс) - кобель",
+          "status": "finished"
+        }
+      ]
+    },
+    {
+      "dog_key": "dog::5663",
+      "dog_id": 5663,
+      "name": "СТАНГЕРС ЛАНД ЗЛАТОСЛАВА",
+      "name_ru": "СТАНГЕРС ЛАНД ЗЛАТОСЛАВА",
+      "name_lat": "STANGERS LAND ZLATOSLAVA",
+      "breed": "УИППЕТ",
+      "sex": "Сука",
+      "current_league": "Чемпионов",
+      "wins_count": 1,
+      "consecutive_losses": 1,
+      "best_time": 24.86,
+      "stages_count": 2,
+      "status_badge": "stable",
+      "promotion_label": null,
+      "history": [
+        {
+          "stage_num": 1,
+          "date": "2026-08-09",
+          "placement": 1,
+          "total_score": 24.86,
+          "league": "Прогресс",
+          "breed_class": "Уиппет - спринтер (Прогресс) - сука",
+          "status": "finished"
+        },
+        {
+          "stage_num": 2,
+          "date": "2026-09-20",
+          "placement": 3,
+          "total_score": 25.72,
+          "league": "Чемпионов",
+          "breed_class": "Уиппет - спринтер (Чемпионы) - сука",
+          "status": "finished"
+        }
+      ]
+    },
+    {
+      "dog_key": "dog::5896",
+      "dog_id": 5896,
+      "name": "БАРСЕЛОНА ЭНКАНТАДОРА",
+      "name_ru": "БАРСЕЛОНА ЭНКАНТАДОРА",
+      "name_lat": "BARCELONA ENCANTADORA",
+      "breed": "УИППЕТ",
+      "sex": "Сука",
+      "current_league": "Чемпионов",
+      "wins_count": 1,
+      "consecutive_losses": 0,
+      "best_time": 25.21,
+      "stages_count": 2,
+      "status_badge": "promoted_up",
+      "promotion_label": "Выход в Чемпионы на III этап",
+      "history": [
+        {
+          "stage_num": 1,
+          "date": "2026-08-09",
+          "placement": 2,
+          "total_score": 25.7,
+          "league": "Прогресс",
+          "breed_class": "Уиппет - спринтер (Прогресс) - сука",
+          "status": "finished"
+        },
+        {
+          "stage_num": 2,
+          "date": "2026-09-20",
+          "placement": 1,
+          "total_score": 25.21,
+          "league": "Прогресс",
+          "breed_class": "Уиппет - спринтер (Прогресс) - сука",
+          "status": "finished"
+        }
+      ]
+    },
+    {
+      "dog_key": "dog::5803",
+      "dog_id": 5803,
+      "name": "ЯРЫЙ ВЕТЕР ИЗ ПОЛЕТА МЕЧТЫ",
+      "name_ru": "ЯРЫЙ ВЕТЕР ИЗ ПОЛЕТА МЕЧТЫ",
+      "name_lat": "YARYJ VETER IZ POLETA MECHTI",
+      "breed": "УИППЕТ",
+      "sex": "Кобель",
+      "current_league": "Чемпионов",
+      "wins_count": 1,
+      "consecutive_losses": 0,
+      "best_time": 25.32,
+      "stages_count": 1,
+      "status_badge": "promoted_up",
+      "promotion_label": "Выход в Чемпионы (победа I этапа)",
+      "history": [
+        {
+          "stage_num": 1,
+          "date": "2026-08-09",
+          "placement": 1,
+          "total_score": 25.32,
+          "league": "Прогресс",
+          "breed_class": "Уиппет - стандарт (Прогресс) - кобель",
+          "status": "finished"
+        }
+      ]
+    },
+    {
+      "dog_key": "dog::460",
+      "dog_id": 460,
+      "name": "СТАТНЫЙ БАРОН",
+      "name_ru": "СТАТНЫЙ БАРОН",
+      "name_lat": "STATNIY BARON",
+      "breed": "УИППЕТ",
+      "sex": "Кобель",
+      "current_league": "Чемпионов",
+      "wins_count": 1,
+      "consecutive_losses": 0,
+      "best_time": 25.43,
+      "stages_count": 2,
+      "status_badge": "promoted_up",
+      "promotion_label": "Выход в Чемпионы на III этап",
+      "history": [
+        {
+          "stage_num": 1,
+          "date": "2026-08-09",
+          "placement": 3,
+          "total_score": 25.91,
+          "league": "Прогресс",
+          "breed_class": "Уиппет - стандарт (Прогресс) - кобель",
+          "status": "finished"
+        },
+        {
+          "stage_num": 2,
+          "date": "2026-09-20",
+          "placement": 1,
+          "total_score": 25.43,
+          "league": "Прогресс",
+          "breed_class": "Уиппет - стандарт (Прогресс) - кобель",
+          "status": "finished"
+        }
+      ]
+    },
+    {
+      "dog_key": "dog::5661",
       "dog_id": 5661,
       "name": "СТАНГЕРС ЛАНД ИНТЕРНАЛ ЭНЕРДЖИ",
       "name_ru": "СТАНГЕРС ЛАНД ИНТЕРНАЛ ЭНЕРДЖИ",
@@ -5003,21 +4239,30 @@
       ]
     },
     {
-      "dog_key": "уиппет::анджелик вингс",
-      "dog_id": 10767,
-      "name": "АНДЖЕЛИК ВИНГС",
-      "name_ru": "АНДЖЕЛИК ВИНГС",
+      "dog_key": "dog::10788",
+      "dog_id": 10788,
+      "name": "АНГЕЛИК ВИНГС",
+      "name_ru": "АНГЕЛИК ВИНГС",
       "name_lat": "ANGELIC WINGS",
       "breed": "УИППЕТ",
       "sex": "Сука",
       "current_league": "Чемпионов",
-      "wins_count": 0,
+      "wins_count": 1,
       "consecutive_losses": 1,
-      "best_time": 25.65,
-      "stages_count": 1,
+      "best_time": 25.55,
+      "stages_count": 2,
       "status_badge": "stable",
       "promotion_label": null,
       "history": [
+        {
+          "stage_num": 1,
+          "date": "2026-08-09",
+          "placement": 1,
+          "total_score": 25.55,
+          "league": "Прогресс",
+          "breed_class": "Уиппет - стандарт (Прогресс) - сука",
+          "status": "finished"
+        },
         {
           "stage_num": 2,
           "date": "2026-09-20",
@@ -5030,7 +4275,34 @@
       ]
     },
     {
-      "dog_key": "уиппет::varlok yarkaya molniya",
+      "dog_key": "dog::5644",
+      "dog_id": 5644,
+      "name": "СТАНГЕРС ЛАНД КОРИЦА",
+      "name_ru": "СТАНГЕРС ЛАНД КОРИЦА",
+      "name_lat": "СТАНГЕРС ЛАНД КОРИЦА",
+      "breed": "УИППЕТ",
+      "sex": "Сука",
+      "current_league": "Чемпионов",
+      "wins_count": 1,
+      "consecutive_losses": 0,
+      "best_time": 25.58,
+      "stages_count": 1,
+      "status_badge": "promoted_up",
+      "promotion_label": "Выход в Чемпионы (победа II этапа)",
+      "history": [
+        {
+          "stage_num": 2,
+          "date": "2026-09-20",
+          "placement": 1,
+          "total_score": 25.58,
+          "league": "Прогресс",
+          "breed_class": "Уиппет - стандарт (Прогресс) - сука",
+          "status": "finished"
+        }
+      ]
+    },
+    {
+      "dog_key": "dog::488",
       "dog_id": 488,
       "name": "VARLOK YARKAYA MOLNIYA",
       "name_ru": "VARLOK YARKAYA MOLNIYA",
@@ -5057,34 +4329,169 @@
       ]
     },
     {
-      "dog_key": "родезийский риджбек::ариес хан ривьера аль риша сангриэль",
-      "dog_id": 5962,
-      "name": "АРИЕС ХАН РИВЬЕРА АЛЬ РИША САНГРИЭЛЬ",
-      "name_ru": "АРИЕС ХАН РИВЬЕРА АЛЬ РИША САНГРИЭЛЬ",
-      "name_lat": "ARIES KHAN RIVIERA AL RISHA SANGREAL",
-      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
-      "sex": "Сука",
+      "dog_key": "dog::10741",
+      "dog_id": 10741,
+      "name": "FLESH-ROYAL",
+      "name_ru": "FLESH-ROYAL",
+      "name_lat": "FLESH-ROYAL",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "sex": "Кобель",
       "current_league": "Чемпионов",
-      "wins_count": 0,
-      "consecutive_losses": 1,
-      "best_time": 29.57,
+      "wins_count": 1,
+      "consecutive_losses": 0,
+      "best_time": 25.97,
       "stages_count": 1,
-      "status_badge": "stable",
-      "promotion_label": null,
+      "status_badge": "promoted_up",
+      "promotion_label": "Выход в Чемпионы (победа II этапа)",
       "history": [
         {
-          "stage_num": 1,
-          "date": "2026-08-09",
-          "placement": 2,
-          "total_score": 29.57,
-          "league": "Чемпионов",
-          "breed_class": "Родезийский риджбек - стандарт (Чемпионы) - сука",
+          "stage_num": 2,
+          "date": "2026-09-20",
+          "placement": 1,
+          "total_score": 25.97,
+          "league": "Прогресс",
+          "breed_class": "Русская псовая борзая - стандарт (Прогресс) - кобель",
           "status": "finished"
         }
       ]
     },
     {
-      "dog_key": "фараонова собака::amenemhet andora ta malta",
+      "dog_key": "dog::10742",
+      "dog_id": 10742,
+      "name": "БЕЛЬ ЭТУАЛЬ КАЯЛА",
+      "name_ru": "БЕЛЬ ЭТУАЛЬ КАЯЛА",
+      "name_lat": "БЕЛЬ ЭТУАЛЬ КАЯЛА",
+      "breed": "САЛЮКИ",
+      "sex": "Сука",
+      "current_league": "Чемпионов",
+      "wins_count": 1,
+      "consecutive_losses": 0,
+      "best_time": 26.83,
+      "stages_count": 1,
+      "status_badge": "promoted_up",
+      "promotion_label": "Выход в Чемпионы (победа II этапа)",
+      "history": [
+        {
+          "stage_num": 2,
+          "date": "2026-09-20",
+          "placement": 1,
+          "total_score": 26.83,
+          "league": "Прогресс",
+          "breed_class": "Салюки - стандарт (Прогресс) - сука",
+          "status": "finished"
+        }
+      ]
+    },
+    {
+      "dog_key": "dog::10740",
+      "dog_id": 10740,
+      "name": "FLYONA",
+      "name_ru": "FLYONA",
+      "name_lat": "FLYONA",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "sex": "Сука",
+      "current_league": "Чемпионов",
+      "wins_count": 1,
+      "consecutive_losses": 0,
+      "best_time": 27.58,
+      "stages_count": 1,
+      "status_badge": "promoted_up",
+      "promotion_label": "Выход в Чемпионы (победа II этапа)",
+      "history": [
+        {
+          "stage_num": 2,
+          "date": "2026-09-20",
+          "placement": 1,
+          "total_score": 27.58,
+          "league": "Прогресс",
+          "breed_class": "Русская псовая борзая - стандарт (Прогресс) - сука",
+          "status": "finished"
+        }
+      ]
+    },
+    {
+      "dog_key": "dog::771",
+      "dog_id": 771,
+      "name": "ДЖАНИКО ЛАЗЕР (М)",
+      "name_ru": "ДЖАНИКО ЛАЗЕР (М)",
+      "name_lat": "DZHANIKO LASER (M)",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
+      "sex": "Кобель",
+      "current_league": "Чемпионов",
+      "wins_count": 1,
+      "consecutive_losses": 0,
+      "best_time": 27.66,
+      "stages_count": 1,
+      "status_badge": "promoted_up",
+      "promotion_label": "Выход в Чемпионы (победа I этапа)",
+      "history": [
+        {
+          "stage_num": 1,
+          "date": "2026-08-09",
+          "placement": 1,
+          "total_score": 27.66,
+          "league": "Прогресс",
+          "breed_class": "Малинуа - стандарт (Прогресс) - кобель",
+          "status": "finished"
+        }
+      ]
+    },
+    {
+      "dog_key": "dog::6066",
+      "dog_id": 6066,
+      "name": "АЙНА ТАНДАЙВ ГРЕЙТ СТАР",
+      "name_ru": "АЙНА ТАНДАЙВ ГРЕЙТ СТАР",
+      "name_lat": "АЙНА ТАНДАЙВ ГРЕЙТ СТАР",
+      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+      "sex": "Сука",
+      "current_league": "Чемпионов",
+      "wins_count": 1,
+      "consecutive_losses": 0,
+      "best_time": 27.89,
+      "stages_count": 1,
+      "status_badge": "promoted_up",
+      "promotion_label": "Выход в Чемпионы (победа II этапа)",
+      "history": [
+        {
+          "stage_num": 2,
+          "date": "2026-09-20",
+          "placement": 1,
+          "total_score": 27.89,
+          "league": "Прогресс",
+          "breed_class": "Родезийский риджбек - стандарт (Прогресс) - сука",
+          "status": "finished"
+        }
+      ]
+    },
+    {
+      "dog_key": "dog::5909",
+      "dog_id": 5909,
+      "name": "ЦВЕТ СОЛНЦА ЖИЗНЕННЫЙ ПРИНЦИП ЛЮБИТЬ",
+      "name_ru": "ЦВЕТ СОЛНЦА ЖИЗНЕННЫЙ ПРИНЦИП ЛЮБИТЬ",
+      "name_lat": "ЦВЕТ СОЛНЦА ЖИЗНЕННЫЙ ПРИНЦИП ЛЮБИТЬ",
+      "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+      "sex": "Кобель",
+      "current_league": "Чемпионов",
+      "wins_count": 1,
+      "consecutive_losses": 0,
+      "best_time": 28.53,
+      "stages_count": 1,
+      "status_badge": "promoted_up",
+      "promotion_label": "Выход в Чемпионы (победа II этапа)",
+      "history": [
+        {
+          "stage_num": 2,
+          "date": "2026-09-20",
+          "placement": 1,
+          "total_score": 28.53,
+          "league": "Прогресс",
+          "breed_class": "Чирнеко дель'Этна - стандарт (Прогресс) - кобель",
+          "status": "finished"
+        }
+      ]
+    },
+    {
+      "dog_key": "dog::5907",
       "dog_id": 5907,
       "name": "AMENEMHET ANDORA TA MALTA",
       "name_ru": "AMENEMHET ANDORA TA MALTA",
@@ -5111,7 +4518,7 @@
       ]
     },
     {
-      "dog_key": "фараонова собака::бакстер берн",
+      "dog_key": "dog::5901",
       "dog_id": 5901,
       "name": "БАКСТЕР БЕРН",
       "name_ru": "БАКСТЕР БЕРН",
@@ -5138,7 +4545,349 @@
       ]
     },
     {
-      "dog_key": "уиппет::sagita volat gero post te",
+      "dog_key": "dog::5755",
+      "dog_id": 5755,
+      "name": "АРИЕС ХАН СЭМЮЭЛЬ ФОРСАЖ ДЖЕКСОН",
+      "name_ru": "ARIES KHAN SAMUEL FORSAGE JACKSON",
+      "name_lat": "ARIES KHAN SAMUEL FORSAGE JACKSON",
+      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+      "sex": "Кобель",
+      "current_league": "Чемпионов",
+      "wins_count": 1,
+      "consecutive_losses": 1,
+      "best_time": 30.73,
+      "stages_count": 2,
+      "status_badge": "stable",
+      "promotion_label": null,
+      "history": [
+        {
+          "stage_num": 1,
+          "date": "2026-08-09",
+          "placement": 1,
+          "total_score": 30.73,
+          "league": "Прогресс",
+          "breed_class": "Родезийский риджбек - стандарт (Прогресс) - кобель",
+          "status": "finished"
+        },
+        {
+          "stage_num": 2,
+          "date": "2026-09-20",
+          "placement": 0,
+          "total_score": null,
+          "league": "Чемпионов",
+          "breed_class": "Родезийский риджбек - стандарт (Чемпионы) - кобель",
+          "status": "withdrawn"
+        }
+      ]
+    },
+    {
+      "dog_key": "dog::776",
+      "dog_id": 776,
+      "name": "ДУШЕЧКА-КРАСА ИЗ ДОМА АЛАНТЕС",
+      "name_ru": "ДУШЕЧКА-КРАСА ИЗ ДОМА АЛАНТЕС",
+      "name_lat": "ДУШЕЧКА-КРАСА ИЗ ДОМА АЛАНТЕС",
+      "breed": "ИРЛАНДСКИЙ ТЕРЬЕР",
+      "sex": "Сука",
+      "current_league": "Чемпионов",
+      "wins_count": 1,
+      "consecutive_losses": 0,
+      "best_time": 31.5,
+      "stages_count": 1,
+      "status_badge": "promoted_up",
+      "promotion_label": "Выход в Чемпионы (победа II этапа)",
+      "history": [
+        {
+          "stage_num": 2,
+          "date": "2026-09-20",
+          "placement": 1,
+          "total_score": 31.5,
+          "league": "Прогресс",
+          "breed_class": "Ирландский терьер - стандарт (Прогресс) - сука",
+          "status": "finished"
+        }
+      ]
+    },
+    {
+      "dog_key": "dog::777",
+      "dog_id": 777,
+      "name": "НЕЖНОЕ ПЛАМЯ ЭДАНА",
+      "name_ru": "НЕЖНОЕ ПЛАМЯ ЭДАНА",
+      "name_lat": "NEZHNOYE PLAMYA EDANA",
+      "breed": "ИРЛАНДСКИЙ ТЕРЬЕР",
+      "sex": "Сука",
+      "current_league": "Чемпионов",
+      "wins_count": 1,
+      "consecutive_losses": 0,
+      "best_time": 32.16,
+      "stages_count": 1,
+      "status_badge": "promoted_up",
+      "promotion_label": "Выход в Чемпионы (победа I этапа)",
+      "history": [
+        {
+          "stage_num": 1,
+          "date": "2026-08-09",
+          "placement": 1,
+          "total_score": 32.16,
+          "league": "Прогресс",
+          "breed_class": "Ирландский терьер - стандарт (Прогресс) - сука",
+          "status": "finished"
+        }
+      ]
+    },
+    {
+      "dog_key": "dog::748",
+      "dog_id": 748,
+      "name": "MONANNA REPUBLIC HIDAN",
+      "name_ru": "MONANNA REPUBLIC HIDAN",
+      "name_lat": "MONANNA REPUBLIC HIDAN",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
+      "sex": "Кобель",
+      "current_league": "Чемпионов",
+      "wins_count": 1,
+      "consecutive_losses": 0,
+      "best_time": 32.73,
+      "stages_count": 1,
+      "status_badge": "promoted_up",
+      "promotion_label": "Выход в Чемпионы (победа II этапа)",
+      "history": [
+        {
+          "stage_num": 2,
+          "date": "2026-09-20",
+          "placement": 1,
+          "total_score": 32.73,
+          "league": "Прогресс",
+          "breed_class": "Левретка - стандарт (Прогресс) - кобель",
+          "status": "finished"
+        }
+      ]
+    },
+    {
+      "dog_key": "dog::178",
+      "dog_id": 178,
+      "name": "JELANY RED TROY",
+      "name_ru": "JELANY RED TROY",
+      "name_lat": "JELANY RED TROY",
+      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+      "sex": "Кобель",
+      "current_league": "Чемпионов",
+      "wins_count": 1,
+      "consecutive_losses": 0,
+      "best_time": 33.17,
+      "stages_count": 1,
+      "status_badge": "promoted_up",
+      "promotion_label": "Выход в Чемпионы (победа I этапа)",
+      "history": [
+        {
+          "stage_num": 1,
+          "date": "2026-08-09",
+          "placement": 1,
+          "total_score": 33.17,
+          "league": "Прогресс",
+          "breed_class": "Родезийский риджбек - ветеран (Прогресс) - кобель",
+          "status": "finished"
+        }
+      ]
+    },
+    {
+      "dog_key": "dog::369",
+      "dog_id": 369,
+      "name": "GALMAD STAR VEDAGOR",
+      "name_ru": "GALMAD STAR VEDAGOR",
+      "name_lat": "GALMAD STAR VEDAGOR",
+      "breed": "ФАРАОНОВА СОБАКА",
+      "sex": "Кобель",
+      "current_league": "Чемпионов",
+      "wins_count": 1,
+      "consecutive_losses": 0,
+      "best_time": 33.47,
+      "stages_count": 2,
+      "status_badge": "promoted_up",
+      "promotion_label": "Выход в Чемпионы на III этап",
+      "history": [
+        {
+          "stage_num": 1,
+          "date": "2026-08-09",
+          "placement": 2,
+          "total_score": 33.61,
+          "league": "Прогресс",
+          "breed_class": "Фараонова собака - стандарт (Прогресс) - кобель",
+          "status": "finished"
+        },
+        {
+          "stage_num": 2,
+          "date": "2026-09-20",
+          "placement": 1,
+          "total_score": 33.47,
+          "league": "Прогресс",
+          "breed_class": "Фараонова собака - стандарт (Прогресс) - кобель",
+          "status": "finished"
+        }
+      ]
+    },
+    {
+      "dog_key": "dog::11134",
+      "dog_id": 11134,
+      "name": "АКАМАРУ АККИРО",
+      "name_ru": "АКАМАРУ АККИРО",
+      "name_lat": "АКАМАРУ АККИРО",
+      "breed": "КАНЕ КОРСО",
+      "sex": "Кобель",
+      "current_league": "Чемпионов",
+      "wins_count": 1,
+      "consecutive_losses": 0,
+      "best_time": 34.29,
+      "stages_count": 1,
+      "status_badge": "promoted_up",
+      "promotion_label": "Выход в Чемпионы (победа I этапа)",
+      "history": [
+        {
+          "stage_num": 1,
+          "date": "2026-08-09",
+          "placement": 1,
+          "total_score": 34.29,
+          "league": "Прогресс",
+          "breed_class": "Кане корсо - стандарт (Прогресс) - кобель",
+          "status": "finished"
+        }
+      ]
+    },
+    {
+      "dog_key": "dog::513",
+      "dog_id": 513,
+      "name": "ДЕНВЕРС ЭЛИТ ШЕЙП МАЙ ИМПРЕЗА СОУЛ",
+      "name_ru": "ДЕНВЕРС ЭЛИТ ШЕЙП МАЙ ИМПРЕЗА СОУЛ",
+      "name_lat": "DENVERS ELITE SHAPE MY IMPREZA SOUL",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "sex": "Сука",
+      "current_league": "Чемпионов",
+      "wins_count": 1,
+      "consecutive_losses": 0,
+      "best_time": 35.44,
+      "stages_count": 1,
+      "status_badge": "promoted_up",
+      "promotion_label": "Выход в Чемпионы (победа I этапа)",
+      "history": [
+        {
+          "stage_num": 1,
+          "date": "2026-08-09",
+          "placement": 1,
+          "total_score": 35.44,
+          "league": "Прогресс",
+          "breed_class": "Американский стаффордширский терьер - стандарт (Прогресс) - сука",
+          "status": "finished"
+        }
+      ]
+    },
+    {
+      "dog_key": "dog::11136",
+      "dog_id": 11136,
+      "name": "VIRNA",
+      "name_ru": "VIRNA",
+      "name_lat": "VIRNA",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "sex": "Сука",
+      "current_league": "Чемпионов",
+      "wins_count": 1,
+      "consecutive_losses": 0,
+      "best_time": 35.66,
+      "stages_count": 1,
+      "status_badge": "promoted_up",
+      "promotion_label": "Выход в Чемпионы (победа I этапа)",
+      "history": [
+        {
+          "stage_num": 1,
+          "date": "2026-08-09",
+          "placement": 1,
+          "total_score": 35.66,
+          "league": "Прогресс",
+          "breed_class": "Немецкая овчарка - стандарт (Прогресс) - сука",
+          "status": "finished"
+        }
+      ]
+    },
+    {
+      "dog_key": "dog::11135",
+      "dog_id": 11135,
+      "name": "ЖАНАРА МАРТЭЛЛА ДЕЯ ГРАН ПРИ",
+      "name_ru": "ЖАНАРА МАРТЭЛЛА ДЕЯ ГРАН ПРИ",
+      "name_lat": "ЖАНАРА МАРТЭЛЛА ДЕЯ ГРАН ПРИ",
+      "breed": "КАНЕ КОРСО",
+      "sex": "Сука",
+      "current_league": "Чемпионов",
+      "wins_count": 1,
+      "consecutive_losses": 0,
+      "best_time": 36.88,
+      "stages_count": 1,
+      "status_badge": "promoted_up",
+      "promotion_label": "Выход в Чемпионы (победа I этапа)",
+      "history": [
+        {
+          "stage_num": 1,
+          "date": "2026-08-09",
+          "placement": 1,
+          "total_score": 36.88,
+          "league": "Прогресс",
+          "breed_class": "Кане корсо - стандарт (Прогресс) - сука",
+          "status": "finished"
+        }
+      ]
+    },
+    {
+      "dog_key": "dog::5834",
+      "dog_id": 5834,
+      "name": "АПРИОРИ СТАР ЮКОС",
+      "name_ru": "АПРИОРИ СТАР ЮКОС",
+      "name_lat": "APRIORI STAR YUKOS",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
+      "sex": "кобель",
+      "current_league": "Чемпионов",
+      "wins_count": 0,
+      "consecutive_losses": 1,
+      "best_time": null,
+      "stages_count": 1,
+      "status_badge": "stable",
+      "promotion_label": null,
+      "history": [
+        {
+          "stage_num": 2,
+          "date": "2026-09-20",
+          "placement": 0,
+          "total_score": null,
+          "league": "Чемпионов",
+          "breed_class": "Малая итальянская борзая - стандарт (Чемпионы) - кобель",
+          "status": "dns"
+        }
+      ]
+    },
+    {
+      "dog_key": "dog::180",
+      "dog_id": 180,
+      "name": "ГРАНД КОРТЕЖ НЕМБУС ЗЕ БРАЙТЕСТ",
+      "name_ru": "ГРАНД КОРТЕЖ НЕМБУС ЗЕ БРАЙТЕСТ",
+      "name_lat": "ГРАНД КОРТЕЖ НЕМБУС ЗЕ БРАЙТЕСТ",
+      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+      "sex": "Кобель",
+      "current_league": "Чемпионов",
+      "wins_count": 0,
+      "consecutive_losses": 1,
+      "best_time": null,
+      "stages_count": 1,
+      "status_badge": "stable",
+      "promotion_label": null,
+      "history": [
+        {
+          "stage_num": 1,
+          "date": "2026-08-09",
+          "placement": 0,
+          "total_score": null,
+          "league": "Чемпионов",
+          "breed_class": "Родезийский риджбек - ветеран (Чемпионы) - кобель",
+          "status": "withdrawn"
+        }
+      ]
+    },
+    {
+      "dog_key": "dog::5653",
       "dog_id": 5653,
       "name": "SAGITA VOLAT GERO POST TE",
       "name_ru": "SAGITA VOLAT GERO POST TE",
@@ -5165,21 +4914,30 @@
       ]
     },
     {
-      "dog_key": "уиппет::брайт сан баунти",
+      "dog_key": "dog::5640",
       "dog_id": 5640,
       "name": "БРАЙТ САН БАУНТИ",
       "name_ru": "БРАЙТ САН БАУНТИ",
-      "name_lat": "БРАЙТ САН БАУНТИ",
+      "name_lat": "BRIGHT SUN BOUNTY",
       "breed": "УИППЕТ",
       "sex": "Кобель",
       "current_league": "Прогресс",
       "wins_count": 0,
-      "consecutive_losses": 1,
+      "consecutive_losses": 2,
       "best_time": 25.48,
-      "stages_count": 1,
+      "stages_count": 2,
       "status_badge": "stable",
       "promotion_label": null,
       "history": [
+        {
+          "stage_num": 1,
+          "date": "2026-08-09",
+          "placement": 6,
+          "total_score": 25.93,
+          "league": "Прогресс",
+          "breed_class": "Уиппет - стандарт (Прогресс) - кобель",
+          "status": "finished"
+        },
         {
           "stage_num": 2,
           "date": "2026-09-20",
@@ -5192,7 +4950,7 @@
       ]
     },
     {
-      "dog_key": "уиппет::маленький принц из полета мечты",
+      "dog_key": "dog::5807",
       "dog_id": 5807,
       "name": "МАЛЕНЬКИЙ ПРИНЦ ИЗ ПОЛЕТА МЕЧТЫ",
       "name_ru": "МАЛЕНЬКИЙ ПРИНЦ ИЗ ПОЛЕТА МЕЧТЫ",
@@ -5219,7 +4977,7 @@
       ]
     },
     {
-      "dog_key": "уиппет::стангерс ланд зенит",
+      "dog_key": "dog::5634",
       "dog_id": 5634,
       "name": "СТАНГЕРС ЛАНД ЗЕНИТ",
       "name_ru": "СТАНГЕРС ЛАНД ЗЕНИТ",
@@ -5246,7 +5004,7 @@
       ]
     },
     {
-      "dog_key": "уиппет::диамант топ кристал",
+      "dog_key": "dog::5876",
       "dog_id": 5876,
       "name": "ДИАМАНТ ТОП КРИСТАЛ",
       "name_ru": "ДИАМАНТ ТОП КРИСТАЛ",
@@ -5273,8 +5031,8 @@
       ]
     },
     {
-      "dog_key": "уиппет::интрига'с магнолия",
-      "dog_id": 321,
+      "dog_key": "dog::10776",
+      "dog_id": 10776,
       "name": "ИНТРИГА'С МАГНОЛИЯ",
       "name_ru": "ИНТРИГА'С МАГНОЛИЯ",
       "name_lat": "ИНТРИГА'С МАГНОЛИЯ",
@@ -5300,48 +5058,30 @@
       ]
     },
     {
-      "dog_key": "уиппет::брайт сан баунти /bright sun bounty",
-      "dog_id": 5640,
-      "name": "БРАЙТ САН БАУНТИ /BRIGHT SUN BOUNTY",
-      "name_ru": "БРАЙТ САН БАУНТИ /BRIGHT SUN BOUNTY",
-      "name_lat": "БРАЙТ САН БАУНТИ /BRIGHT SUN BOUNTY",
+      "dog_key": "dog::269",
+      "dog_id": 269,
+      "name": "СТАНГЕРС ЛАНД ДАРИНГ ГРЕЙТЛИ",
+      "name_ru": "СТАНГЕРС ЛАНД ДАРИНГ ГРЕЙТЛИ",
+      "name_lat": "STANGERS LAND DARING GREATLY",
       "breed": "УИППЕТ",
-      "sex": "Кобель",
+      "sex": "Сука",
       "current_league": "Прогресс",
       "wins_count": 0,
-      "consecutive_losses": 1,
-      "best_time": 25.93,
-      "stages_count": 1,
+      "consecutive_losses": 2,
+      "best_time": 26.11,
+      "stages_count": 2,
       "status_badge": "stable",
       "promotion_label": null,
       "history": [
         {
           "stage_num": 1,
           "date": "2026-08-09",
-          "placement": 6,
-          "total_score": 25.93,
+          "placement": 3,
+          "total_score": 26.16,
           "league": "Прогресс",
-          "breed_class": "Уиппет - стандарт (Прогресс) - кобель",
+          "breed_class": "Уиппет - стандарт (Прогресс) - сука",
           "status": "finished"
-        }
-      ]
-    },
-    {
-      "dog_key": "уиппет::stangers land daring greatly",
-      "dog_id": 269,
-      "name": "STANGERS LAND DARING GREATLY",
-      "name_ru": "STANGERS LAND DARING GREATLY",
-      "name_lat": "STANGERS LAND DARING GREATLY",
-      "breed": "УИППЕТ",
-      "sex": "Сука",
-      "current_league": "Прогресс",
-      "wins_count": 0,
-      "consecutive_losses": 1,
-      "best_time": 26.11,
-      "stages_count": 1,
-      "status_badge": "stable",
-      "promotion_label": null,
-      "history": [
+        },
         {
           "stage_num": 2,
           "date": "2026-09-20",
@@ -5354,7 +5094,7 @@
       ]
     },
     {
-      "dog_key": "уиппет::стангерс ланд ермак",
+      "dog_key": "dog::5632",
       "dog_id": 5632,
       "name": "СТАНГЕРС ЛАНД ЕРМАК",
       "name_ru": "СТАНГЕРС ЛАНД ЕРМАК",
@@ -5381,34 +5121,7 @@
       ]
     },
     {
-      "dog_key": "уиппет::стангерс ланд даринг грейтли",
-      "dog_id": 269,
-      "name": "СТАНГЕРС ЛАНД ДАРИНГ ГРЕЙТЛИ",
-      "name_ru": "СТАНГЕРС ЛАНД ДАРИНГ ГРЕЙТЛИ",
-      "name_lat": "STANGERS LAND DARING GREATLY",
-      "breed": "УИППЕТ",
-      "sex": "Сука",
-      "current_league": "Прогресс",
-      "wins_count": 0,
-      "consecutive_losses": 1,
-      "best_time": 26.16,
-      "stages_count": 1,
-      "status_badge": "stable",
-      "promotion_label": null,
-      "history": [
-        {
-          "stage_num": 1,
-          "date": "2026-08-09",
-          "placement": 3,
-          "total_score": 26.16,
-          "league": "Прогресс",
-          "breed_class": "Уиппет - стандарт (Прогресс) - сука",
-          "status": "finished"
-        }
-      ]
-    },
-    {
-      "dog_key": "уиппет::beyond blue doughnut",
+      "dog_key": "dog::760",
       "dog_id": 760,
       "name": "BEYOND BLUE DOUGHNUT",
       "name_ru": "BEYOND BLUE DOUGHNUT",
@@ -5435,7 +5148,7 @@
       ]
     },
     {
-      "dog_key": "уиппет::блэйз оф глори",
+      "dog_key": "dog::5641",
       "dog_id": 5641,
       "name": "БЛЭЙЗ ОФ ГЛОРИ",
       "name_ru": "БЛЭЙЗ ОФ ГЛОРИ",
@@ -5462,7 +5175,7 @@
       ]
     },
     {
-      "dog_key": "уиппет::чудесная целительница из полета мечты",
+      "dog_key": "dog::5810",
       "dog_id": 5810,
       "name": "ЧУДЕСНАЯ ЦЕЛИТЕЛЬНИЦА ИЗ ПОЛЕТА МЕЧТЫ",
       "name_ru": "ЧУДЕСНАЯ ЦЕЛИТЕЛЬНИЦА ИЗ ПОЛЕТА МЕЧТЫ",
@@ -5489,7 +5202,7 @@
       ]
     },
     {
-      "dog_key": "уиппет::антик годдес",
+      "dog_key": "dog::6240",
       "dog_id": 6240,
       "name": "АНТИК ГОДДЕС",
       "name_ru": "АНТИК ГОДДЕС",
@@ -5516,250 +5229,7 @@
       ]
     },
     {
-      "dog_key": "русская псовая борзая::флолесс",
-      "dog_id": 10766,
-      "name": "ФЛОЛЕСС",
-      "name_ru": "ФЛОЛЕСС",
-      "name_lat": "FLAWLESS",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "sex": "Кобель",
-      "current_league": "Прогресс",
-      "wins_count": 0,
-      "consecutive_losses": 1,
-      "best_time": 27.36,
-      "stages_count": 1,
-      "status_badge": "stable",
-      "promotion_label": null,
-      "history": [
-        {
-          "stage_num": 2,
-          "date": "2026-09-20",
-          "placement": 2,
-          "total_score": 27.36,
-          "league": "Прогресс",
-          "breed_class": "Русская псовая борзая - стандарт (Прогресс) - кобель",
-          "status": "finished"
-        }
-      ]
-    },
-    {
-      "dog_key": "уиппет::гельвеция энигма квин",
-      "dog_id": 7347,
-      "name": "ГЕЛЬВЕЦИЯ ЭНИГМА КВИН",
-      "name_ru": "ГЕЛЬВЕЦИЯ ЭНИГМА КВИН",
-      "name_lat": "GELVETSIYA ENIGMA QUEEN",
-      "breed": "УИППЕТ",
-      "sex": "Сука",
-      "current_league": "Прогресс",
-      "wins_count": 0,
-      "consecutive_losses": 1,
-      "best_time": 27.51,
-      "stages_count": 1,
-      "status_badge": "stable",
-      "promotion_label": null,
-      "history": [
-        {
-          "stage_num": 1,
-          "date": "2026-08-09",
-          "placement": 4,
-          "total_score": 27.51,
-          "league": "Прогресс",
-          "breed_class": "Уиппет - стандарт (Прогресс) - сука",
-          "status": "finished"
-        }
-      ]
-    },
-    {
-      "dog_key": "уиппет::варвар конан бесстрашный",
-      "dog_id": 5658,
-      "name": "ВАРВАР КОНАН БЕССТРАШНЫЙ",
-      "name_ru": "ВАРВАР КОНАН БЕССТРАШНЫЙ",
-      "name_lat": "VARVAR KONAN BESSTRASHNYI",
-      "breed": "УИППЕТ",
-      "sex": "Кобель",
-      "current_league": "Прогресс",
-      "wins_count": 0,
-      "consecutive_losses": 1,
-      "best_time": 27.51,
-      "stages_count": 1,
-      "status_badge": "stable",
-      "promotion_label": null,
-      "history": [
-        {
-          "stage_num": 1,
-          "date": "2026-08-09",
-          "placement": 4,
-          "total_score": 27.51,
-          "league": "Прогресс",
-          "breed_class": "Уиппет - спринтер (Прогресс) - кобель",
-          "status": "finished"
-        }
-      ]
-    },
-    {
-      "dog_key": "родезийский риджбек::асади фуади виски-аруна",
-      "dog_id": 5760,
-      "name": "АСАДИ ФУАДИ ВИСКИ-АРУНА",
-      "name_ru": "АСАДИ ФУАДИ ВИСКИ-АРУНА",
-      "name_lat": "АСАДИ ФУАДИ ВИСКИ-АРУНА",
-      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
-      "sex": "Сука",
-      "current_league": "Прогресс",
-      "wins_count": 0,
-      "consecutive_losses": 1,
-      "best_time": 29.48,
-      "stages_count": 1,
-      "status_badge": "stable",
-      "promotion_label": null,
-      "history": [
-        {
-          "stage_num": 2,
-          "date": "2026-09-20",
-          "placement": 2,
-          "total_score": 29.48,
-          "league": "Прогресс",
-          "breed_class": "Родезийский риджбек - стандарт (Прогресс) - сука",
-          "status": "finished"
-        }
-      ]
-    },
-    {
-      "dog_key": "родезийский риджбек::асади фуади виски аруна /asadi fuadi viski aruna",
-      "dog_id": 5760,
-      "name": "АСАДИ ФУАДИ ВИСКИ АРУНА /ASADI FUADI VISKI ARUNA",
-      "name_ru": "АСАДИ ФУАДИ ВИСКИ АРУНА /ASADI FUADI VISKI ARUNA",
-      "name_lat": "АСАДИ ФУАДИ ВИСКИ АРУНА /ASADI FUADI VISKI ARUNA",
-      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
-      "sex": "Сука",
-      "current_league": "Прогресс",
-      "wins_count": 0,
-      "consecutive_losses": 1,
-      "best_time": 29.99,
-      "stages_count": 1,
-      "status_badge": "stable",
-      "promotion_label": null,
-      "history": [
-        {
-          "stage_num": 1,
-          "date": "2026-08-09",
-          "placement": 0,
-          "total_score": 29.99,
-          "league": "Прогресс",
-          "breed_class": "Родезийский риджбек - стандарт (Прогресс) - сука",
-          "status": "finished"
-        }
-      ]
-    },
-    {
-      "dog_key": "салюки::имран джаззи /imran jazzee",
-      "dog_id": 7256,
-      "name": "ИМРАН ДЖАЗЗИ /IMRAN JAZZEE",
-      "name_ru": "ИМРАН ДЖАЗЗИ /IMRAN JAZZEE",
-      "name_lat": "ИМРАН ДЖАЗЗИ /IMRAN JAZZEE",
-      "breed": "САЛЮКИ",
-      "sex": "Кобель",
-      "current_league": "Прогресс",
-      "wins_count": 0,
-      "consecutive_losses": 1,
-      "best_time": 32.59,
-      "stages_count": 1,
-      "status_badge": "stable",
-      "promotion_label": null,
-      "history": [
-        {
-          "stage_num": 1,
-          "date": "2026-08-09",
-          "placement": 0,
-          "total_score": 32.59,
-          "league": "Прогресс",
-          "breed_class": "Салюки - стандарт (Прогресс) - кобель",
-          "status": "finished"
-        }
-      ]
-    },
-    {
-      "dog_key": "русская псовая борзая::друг серебряный варница",
-      "dog_id": 10404,
-      "name": "ДРУГ СЕРЕБРЯНЫЙ ВАРНИЦА",
-      "name_ru": "ДРУГ СЕРЕБРЯНЫЙ ВАРНИЦА",
-      "name_lat": "ДРУГ СЕРЕБРЯНЫЙ ВАРНИЦА",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "sex": "Сука",
-      "current_league": "Прогресс",
-      "wins_count": 0,
-      "consecutive_losses": 1,
-      "best_time": 37.07,
-      "stages_count": 1,
-      "status_badge": "stable",
-      "promotion_label": null,
-      "history": [
-        {
-          "stage_num": 2,
-          "date": "2026-09-20",
-          "placement": 0,
-          "total_score": 37.07,
-          "league": "Прогресс",
-          "breed_class": "Русская псовая борзая - ветеран (Прогресс) - сука",
-          "status": "withdrawn"
-        }
-      ]
-    },
-    {
-      "dog_key": "уиппет::стангерс ланд комета",
-      "dog_id": 5798,
-      "name": "СТАНГЕРС ЛАНД КОМЕТА",
-      "name_ru": "СТАНГЕРС ЛАНД КОМЕТА",
-      "name_lat": "STANGERS LAND KOMETA",
-      "breed": "УИППЕТ",
-      "sex": "сука",
-      "current_league": "Прогресс",
-      "wins_count": 0,
-      "consecutive_losses": 1,
-      "best_time": null,
-      "stages_count": 1,
-      "status_badge": "stable",
-      "promotion_label": null,
-      "history": [
-        {
-          "stage_num": 2,
-          "date": "2026-09-20",
-          "placement": 0,
-          "total_score": null,
-          "league": "Прогресс",
-          "breed_class": "Уиппет - стандарт (Прогресс) - сука",
-          "status": "dns"
-        }
-      ]
-    },
-    {
-      "dog_key": "фараонова собака::хейди сотис дишрет геб",
-      "dog_id": 5902,
-      "name": "ХЕЙДИ СОТИС ДИШРЕТ ГЕБ",
-      "name_ru": "ХЕЙДИ СОТИС ДИШРЕТ ГЕБ",
-      "name_lat": "HEIDI SOTIS DESHRET GEB",
-      "breed": "ФАРАОНОВА СОБАКА",
-      "sex": "кобель",
-      "current_league": "Прогресс",
-      "wins_count": 0,
-      "consecutive_losses": 1,
-      "best_time": null,
-      "stages_count": 1,
-      "status_badge": "stable",
-      "promotion_label": null,
-      "history": [
-        {
-          "stage_num": 2,
-          "date": "2026-09-20",
-          "placement": 0,
-          "total_score": null,
-          "league": "Прогресс",
-          "breed_class": "Фараонова собака - стандарт (Прогресс) - кобель",
-          "status": "dns"
-        }
-      ]
-    },
-    {
-      "dog_key": "уиппет::african passion",
+      "dog_key": "dog::5881",
       "dog_id": 5881,
       "name": "AFRICAN PASSION",
       "name_ru": "AFRICAN PASSION",
@@ -5786,7 +5256,178 @@
       ]
     },
     {
-      "dog_key": "немецкая овчарка::яра",
+      "dog_key": "dog::10773",
+      "dog_id": 10773,
+      "name": "ФЛОЛЕСС",
+      "name_ru": "ФЛОЛЕСС",
+      "name_lat": "FLAWLESS",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "sex": "Кобель",
+      "current_league": "Прогресс",
+      "wins_count": 0,
+      "consecutive_losses": 1,
+      "best_time": 27.36,
+      "stages_count": 1,
+      "status_badge": "stable",
+      "promotion_label": null,
+      "history": [
+        {
+          "stage_num": 2,
+          "date": "2026-09-20",
+          "placement": 2,
+          "total_score": 27.36,
+          "league": "Прогресс",
+          "breed_class": "Русская псовая борзая - стандарт (Прогресс) - кобель",
+          "status": "finished"
+        }
+      ]
+    },
+    {
+      "dog_key": "dog::7347",
+      "dog_id": 7347,
+      "name": "ГЕЛЬВЕЦИЯ ЭНИГМА КВИН",
+      "name_ru": "ГЕЛЬВЕЦИЯ ЭНИГМА КВИН",
+      "name_lat": "GELVETSIYA ENIGMA QUEEN",
+      "breed": "УИППЕТ",
+      "sex": "Сука",
+      "current_league": "Прогресс",
+      "wins_count": 0,
+      "consecutive_losses": 1,
+      "best_time": 27.51,
+      "stages_count": 1,
+      "status_badge": "stable",
+      "promotion_label": null,
+      "history": [
+        {
+          "stage_num": 1,
+          "date": "2026-08-09",
+          "placement": 4,
+          "total_score": 27.51,
+          "league": "Прогресс",
+          "breed_class": "Уиппет - стандарт (Прогресс) - сука",
+          "status": "finished"
+        }
+      ]
+    },
+    {
+      "dog_key": "dog::5658",
+      "dog_id": 5658,
+      "name": "ВАРВАР КОНАН БЕССТРАШНЫЙ",
+      "name_ru": "ВАРВАР КОНАН БЕССТРАШНЫЙ",
+      "name_lat": "VARVAR KONAN BESSTRASHNYI",
+      "breed": "УИППЕТ",
+      "sex": "Кобель",
+      "current_league": "Прогресс",
+      "wins_count": 0,
+      "consecutive_losses": 1,
+      "best_time": 27.51,
+      "stages_count": 1,
+      "status_badge": "stable",
+      "promotion_label": null,
+      "history": [
+        {
+          "stage_num": 1,
+          "date": "2026-08-09",
+          "placement": 4,
+          "total_score": 27.51,
+          "league": "Прогресс",
+          "breed_class": "Уиппет - спринтер (Прогресс) - кобель",
+          "status": "finished"
+        }
+      ]
+    },
+    {
+      "dog_key": "dog::5760",
+      "dog_id": 5760,
+      "name": "АСАДИ ФУАДИ ВИСКИ АРУНА",
+      "name_ru": "АСАДИ ФУАДИ ВИСКИ АРУНА",
+      "name_lat": "ASADI FUADI VISKI ARUNA",
+      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+      "sex": "Сука",
+      "current_league": "Прогресс",
+      "wins_count": 0,
+      "consecutive_losses": 2,
+      "best_time": 29.48,
+      "stages_count": 2,
+      "status_badge": "stable",
+      "promotion_label": null,
+      "history": [
+        {
+          "stage_num": 1,
+          "date": "2026-08-09",
+          "placement": 0,
+          "total_score": 29.99,
+          "league": "Прогресс",
+          "breed_class": "Родезийский риджбек - стандарт (Прогресс) - сука",
+          "status": "finished"
+        },
+        {
+          "stage_num": 2,
+          "date": "2026-09-20",
+          "placement": 2,
+          "total_score": 29.48,
+          "league": "Прогресс",
+          "breed_class": "Родезийский риджбек - стандарт (Прогресс) - сука",
+          "status": "finished"
+        }
+      ]
+    },
+    {
+      "dog_key": "dog::7256",
+      "dog_id": 7256,
+      "name": "ИМРАН ДЖАЗЗИ",
+      "name_ru": "ИМРАН ДЖАЗЗИ",
+      "name_lat": "IMRAN JAZZEE",
+      "breed": "САЛЮКИ",
+      "sex": "Кобель",
+      "current_league": "Прогресс",
+      "wins_count": 0,
+      "consecutive_losses": 1,
+      "best_time": 32.59,
+      "stages_count": 1,
+      "status_badge": "stable",
+      "promotion_label": null,
+      "history": [
+        {
+          "stage_num": 1,
+          "date": "2026-08-09",
+          "placement": 0,
+          "total_score": 32.59,
+          "league": "Прогресс",
+          "breed_class": "Салюки - стандарт (Прогресс) - кобель",
+          "status": "finished"
+        }
+      ]
+    },
+    {
+      "dog_key": "dog::10404",
+      "dog_id": 10404,
+      "name": "ДРУГ СЕРЕБРЯНЫЙ ВАРНИЦА",
+      "name_ru": "ДРУГ СЕРЕБРЯНЫЙ ВАРНИЦА",
+      "name_lat": "ДРУГ СЕРЕБРЯНЫЙ ВАРНИЦА",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "sex": "Сука",
+      "current_league": "Прогресс",
+      "wins_count": 0,
+      "consecutive_losses": 1,
+      "best_time": 37.07,
+      "stages_count": 1,
+      "status_badge": "stable",
+      "promotion_label": null,
+      "history": [
+        {
+          "stage_num": 2,
+          "date": "2026-09-20",
+          "placement": 0,
+          "total_score": 37.07,
+          "league": "Прогресс",
+          "breed_class": "Русская псовая борзая - ветеран (Прогресс) - сука",
+          "status": "withdrawn"
+        }
+      ]
+    },
+    {
+      "dog_key": "dog::10816",
       "dog_id": 10816,
       "name": "ЯРА",
       "name_ru": "ЯРА",
@@ -5813,7 +5454,142 @@
       ]
     },
     {
-      "dog_key": "уиппет::birnenhof adelrun raidho",
+      "dog_key": "dog::5798",
+      "dog_id": 5798,
+      "name": "СТАНГЕРС ЛАНД КОМЕТА",
+      "name_ru": "СТАНГЕРС ЛАНД КОМЕТА",
+      "name_lat": "STANGERS LAND KOMETA",
+      "breed": "УИППЕТ",
+      "sex": "сука",
+      "current_league": "Прогресс",
+      "wins_count": 0,
+      "consecutive_losses": 1,
+      "best_time": null,
+      "stages_count": 1,
+      "status_badge": "stable",
+      "promotion_label": null,
+      "history": [
+        {
+          "stage_num": 2,
+          "date": "2026-09-20",
+          "placement": 0,
+          "total_score": null,
+          "league": "Прогресс",
+          "breed_class": "Уиппет - стандарт (Прогресс) - сука",
+          "status": "dns"
+        }
+      ]
+    },
+    {
+      "dog_key": "dog::5902",
+      "dog_id": 5902,
+      "name": "ХЕЙДИ СОТИС ДИШРЕТ ГЕБ",
+      "name_ru": "ХЕЙДИ СОТИС ДИШРЕТ ГЕБ",
+      "name_lat": "HEIDI SOTIS DESHRET GEB",
+      "breed": "ФАРАОНОВА СОБАКА",
+      "sex": "кобель",
+      "current_league": "Прогресс",
+      "wins_count": 0,
+      "consecutive_losses": 1,
+      "best_time": null,
+      "stages_count": 1,
+      "status_badge": "stable",
+      "promotion_label": null,
+      "history": [
+        {
+          "stage_num": 2,
+          "date": "2026-09-20",
+          "placement": 0,
+          "total_score": null,
+          "league": "Прогресс",
+          "breed_class": "Фараонова собака - стандарт (Прогресс) - кобель",
+          "status": "dns"
+        }
+      ]
+    },
+    {
+      "dog_key": "dog::10762",
+      "dog_id": 10762,
+      "name": "URAL SPIRIT THUNDER",
+      "name_ru": "URAL SPIRIT THUNDER",
+      "name_lat": "URAL SPIRIT THUNDER",
+      "breed": "УИППЕТ",
+      "sex": "Кобель",
+      "current_league": "Юниоры",
+      "wins_count": 1,
+      "consecutive_losses": 0,
+      "best_time": 24.39,
+      "stages_count": 1,
+      "status_badge": "stable",
+      "promotion_label": "Победитель Лиги Юниоров II этапа",
+      "history": [
+        {
+          "stage_num": 2,
+          "date": "2026-09-20",
+          "placement": 1,
+          "total_score": 24.39,
+          "league": "Юниоры",
+          "breed_class": "Уиппет - юниор - кобель",
+          "status": "finished"
+        }
+      ]
+    },
+    {
+      "dog_key": "dog::9123",
+      "dog_id": 9123,
+      "name": "ШЕРЕГЕШ",
+      "name_ru": "ШЕРЕГЕШ",
+      "name_lat": "ШЕРЕГЕШ",
+      "breed": "ИСПАНСКИЙ ГАЛЬГО",
+      "sex": "Кобель",
+      "current_league": "Юниоры",
+      "wins_count": 1,
+      "consecutive_losses": 0,
+      "best_time": 24.51,
+      "stages_count": 1,
+      "status_badge": "stable",
+      "promotion_label": "Победитель Лиги Юниоров II этапа",
+      "history": [
+        {
+          "stage_num": 2,
+          "date": "2026-09-20",
+          "placement": 1,
+          "total_score": 24.51,
+          "league": "Юниоры",
+          "breed_class": "Испанская борзая (гальго) - юниор - кобель",
+          "status": "finished"
+        }
+      ]
+    },
+    {
+      "dog_key": "dog::10763",
+      "dog_id": 10763,
+      "name": "BIRNENHOF ASTRID LAGUZ",
+      "name_ru": "BIRNENHOF ASTRID LAGUZ",
+      "name_lat": "BIRNENHOF ASTRID LAGUZ",
+      "breed": "УИППЕТ",
+      "sex": "Сука",
+      "current_league": "Юниоры",
+      "wins_count": 1,
+      "consecutive_losses": 0,
+      "best_time": 25.29,
+      "stages_count": 1,
+      "status_badge": "stable",
+      "promotion_label": "Победитель Лиги Юниоров II этапа",
+      "history": [
+        {
+          "stage_num": 2,
+          "date": "2026-09-20",
+          "placement": 1,
+          "total_score": 25.29,
+          "league": "Юниоры",
+          "breed_class": "Уиппет - юниор - сука",
+          "status": "withdrawn"
+        }
+      ]
+    },
+    {
+      "dog_key": "dog::10764",
       "dog_id": 10764,
       "name": "BIRNENHOF ADELRUN RAIDHO",
       "name_ru": "BIRNENHOF ADELRUN RAIDHO",
@@ -5835,6 +5611,33 @@
           "total_score": 26.57,
           "league": "Юниоры",
           "breed_class": "Уиппет - юниор - сука",
+          "status": "finished"
+        }
+      ]
+    },
+    {
+      "dog_key": "dog::10765",
+      "dog_id": 10765,
+      "name": "HEIDI SOTIS EREN YEAGER",
+      "name_ru": "HEIDI SOTIS EREN YEAGER",
+      "name_lat": "HEIDI SOTIS EREN YEAGER",
+      "breed": "ФАРАОНОВА СОБАКА",
+      "sex": "Кобель",
+      "current_league": "Юниоры",
+      "wins_count": 1,
+      "consecutive_losses": 0,
+      "best_time": 29.82,
+      "stages_count": 1,
+      "status_badge": "stable",
+      "promotion_label": "Победитель Лиги Юниоров II этапа",
+      "history": [
+        {
+          "stage_num": 2,
+          "date": "2026-09-20",
+          "placement": 1,
+          "total_score": 29.82,
+          "league": "Юниоры",
+          "breed_class": "Фараонова собака - юниор - кобель",
           "status": "finished"
         }
       ]
@@ -6252,11 +6055,11 @@
     ]
   },
   "stats": {
-    "total_dogs_participated": 88,
-    "dogs_in_absolut": 23,
-    "dogs_in_champions": 39,
-    "dogs_in_progress": 25,
-    "dogs_in_juniors": 1,
+    "total_dogs_participated": 77,
+    "dogs_in_absolut": 17,
+    "dogs_in_champions": 33,
+    "dogs_in_progress": 22,
+    "dogs_in_juniors": 5,
     "promotions_count": 45
   }
 }

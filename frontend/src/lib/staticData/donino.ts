@@ -368,6 +368,7 @@ export interface ChampionshipData {
   series_director: string
   track_length_meters: number
   reglament_pdf_url: string | null
+  spreadsheet_url?: string | null
   stages: ChampionshipStage[]
   standings: ChampionshipStanding[]
   promotions: {

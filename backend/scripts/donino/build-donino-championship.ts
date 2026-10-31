@@ -99,6 +99,36 @@ export function parseLeague(breedClass?: string | null): 'Абсолют' | 'Ч�
   return 'Прогресс';
 }
 
+export function cleanDogNameFields(rawRu?: string | null, rawLat?: string | null): { name: string; name_ru: string; name_lat: string } {
+  let ru = (rawRu || '').trim();
+  let lat = (rawLat || '').trim();
+
+  if (ru.includes('/')) {
+    const parts = ru.split('/').map((s) => s.trim());
+    const ruPart = parts.find((p) => /[а-яё]/i.test(p));
+    const latPart = parts.find((p) => /[a-z]/i.test(p));
+    if (ruPart) {
+      ru = ruPart;
+      if (!lat && latPart) lat = latPart;
+    }
+  }
+
+  if (lat.includes('/')) {
+    const parts = lat.split('/').map((s) => s.trim());
+    const ruPart = parts.find((p) => /[а-яё]/i.test(p));
+    const latPart = parts.find((p) => /[a-z]/i.test(p));
+    if (ruPart && !ru) ru = ruPart;
+    if (latPart) lat = latPart;
+  }
+
+  const name = ru || lat || 'Неизвестная собака';
+  return {
+    name,
+    name_ru: ru || name,
+    name_lat: lat || name,
+  };
+}
+
 export function buildDoninoChampionshipData() {
   const stage1Path = path.join(ROOT, 'data/v1/competitions/2026/08-август/2026004-i-клубныи-чемпионат-по-бегам-борзых.json');
   const stage2Path = path.join(ROOT, 'data/v1/competitions/2026/09-сентябрь/2022001-клубный-чемпионат-по-рейсингу.json');
@@ -118,16 +148,16 @@ export function buildDoninoChampionshipData() {
         }))
       : [];
 
-    const dogName = r.dog?.name_ru || r.dog?.name_lat || r.name_ru || r.name_lat || 'Неизвестная собака';
+    const names = cleanDogNameFields(r.dog?.name_ru || r.name_ru, r.dog?.name_lat || r.name_lat);
     const league = parseLeague(r.breed_class);
 
     return {
       id: r.id,
       catalog_no: r.catalog_no,
       dog_id: r.dog_id || r.dog?.id || null,
-      dog_name: dogName,
-      name_ru: r.dog?.name_ru || r.name_ru || dogName,
-      name_lat: r.dog?.name_lat || r.name_lat || dogName,
+      dog_name: names.name,
+      name_ru: names.name_ru,
+      name_lat: names.name_lat,
       breed: (r.dog?.breed || r.breed || '').trim().toUpperCase(),
       sex: r.dog?.sex || r.sex || '',
       breed_class: r.breed_class || '',
@@ -152,16 +182,16 @@ export function buildDoninoChampionshipData() {
         }))
       : [];
 
-    const dogName = r.dog?.name_ru || r.dog?.name_lat || r.name_ru || r.name_lat || 'Неизвестная собака';
+    const names = cleanDogNameFields(r.dog?.name_ru || r.name_ru, r.dog?.name_lat || r.name_lat);
     const league = parseLeague(r.breed_class);
 
     return {
       id: r.id,
       catalog_no: r.catalog_no,
       dog_id: r.dog_id || r.dog?.id || null,
-      dog_name: dogName,
-      name_ru: r.dog?.name_ru || r.name_ru || dogName,
-      name_lat: r.dog?.name_lat || r.name_lat || dogName,
+      dog_name: names.name,
+      name_ru: names.name_ru,
+      name_lat: names.name_lat,
       breed: (r.dog?.breed || r.breed || '').trim().toUpperCase(),
       sex: r.dog?.sex || r.sex || '',
       breed_class: r.breed_class || '',
@@ -257,14 +287,21 @@ export function buildDoninoChampionshipData() {
   // Tracking dog standings and promotions
   const dogsMap = new Map<string, DogStanding>();
 
-  function getDogKey(name: string, breed: string): string {
+  function getDogKey(dog_id: number | null | undefined, name: string, breed: string): string {
+    if (dog_id) return `dog::${dog_id}`;
     return `${breed.trim().toLowerCase()}::${name.trim().toLowerCase()}`;
   }
 
   // Process Stage 1
   for (const r of stage1Results) {
-    const key = getDogKey(r.dog_name, r.breed);
+    const key = getDogKey(r.dog_id, r.dog_name, r.breed);
     const isWin = r.placement === 1;
+    let current_league = r.league;
+    if (isWin) {
+      if (r.league === 'Чемпионов') current_league = 'Абсолют';
+      else if (r.league === 'Прогресс') current_league = 'Чемпионов';
+    }
+
     dogsMap.set(key, {
       dog_key: key,
       dog_id: r.dog_id,
@@ -273,7 +310,7 @@ export function buildDoninoChampionshipData() {
       name_lat: r.name_lat,
       breed: r.breed,
       sex: r.sex,
-      current_league: isWin ? (r.league === 'Чемпионов' ? 'Абсолют' : 'Чемпионов') : r.league,
+      current_league,
       wins_count: isWin ? 1 : 0,
       consecutive_losses: isWin ? 0 : 1,
       best_time: r.total_score,
@@ -328,15 +365,19 @@ export function buildDoninoChampionshipData() {
   }
 
   for (const r of stage2Results) {
-    const key = getDogKey(r.dog_name, r.breed);
+    const key = getDogKey(r.dog_id, r.dog_name, r.breed);
     const isWin = r.placement === 1;
     let standing = dogsMap.get(key);
 
     if (!standing) {
       // New dog joining at Stage 2
-      const targetLeague = isWin
-        ? (r.league === 'Чемпионов' ? 'Абсолют' : r.league === 'Прогресс' ? 'Чемпионов' : 'Абсолют')
-        : r.league;
+      let targetLeague = r.league;
+      if (isWin) {
+        if (r.league === 'Чемпионов') targetLeague = 'Абсолют';
+        else if (r.league === 'Прогресс') targetLeague = 'Чемпионов';
+        else if (r.league === 'Юниоры') targetLeague = 'Юниоры';
+        else if (r.league === 'Абсолют') targetLeague = 'Абсолют';
+      }
 
       standing = {
         dog_key: key,
@@ -351,9 +392,15 @@ export function buildDoninoChampionshipData() {
         consecutive_losses: isWin ? 0 : 1,
         best_time: r.total_score,
         stages_count: 1,
-        status_badge: isWin ? 'promoted_up' : 'stable',
+        status_badge: isWin ? (r.league === 'Юниоры' ? 'stable' : 'promoted_up') : 'stable',
         promotion_label: isWin
-          ? (r.league === 'Чемпионов' ? 'Выход в Абсолют (победа II этапа)' : r.league === 'Прогресс' ? 'Выход в Чемпионы (победа II этапа)' : 'Победа в Лиге Абсолют')
+          ? (r.league === 'Чемпионов'
+              ? 'Выход в Абсолют (победа II этапа)'
+              : r.league === 'Прогресс'
+              ? 'Выход в Чемпионы (победа II этапа)'
+              : r.league === 'Юниоры'
+              ? 'Победитель Лиги Юниоров II этапа'
+              : 'Победа в Лиге Абсолют')
           : null,
         history: [
           {
@@ -371,6 +418,11 @@ export function buildDoninoChampionshipData() {
     } else {
       // Existing dog
       standing.stages_count += 1;
+      if (!standing.name_ru && r.name_ru) standing.name_ru = r.name_ru;
+      if (!standing.name_lat && r.name_lat) standing.name_lat = r.name_lat;
+      if (r.name_ru && (!standing.name || /[a-z]/i.test(standing.name))) {
+        standing.name = r.name_ru;
+      }
       if (typeof r.total_score === 'number') {
         if (standing.best_time === null || r.total_score < standing.best_time) {
           standing.best_time = r.total_score;
@@ -388,6 +440,10 @@ export function buildDoninoChampionshipData() {
           standing.current_league = 'Чемпионов';
           standing.status_badge = 'promoted_up';
           standing.promotion_label = 'Выход в Чемпионы на III этап';
+        } else if (r.league === 'Юниоры') {
+          standing.current_league = 'Юниоры';
+          standing.status_badge = 'stable';
+          standing.promotion_label = 'Победитель Лиги Юниоров';
         } else if (r.league === 'Абсолют') {
           standing.current_league = 'Абсолют';
           standing.status_badge = 'stable';
@@ -461,8 +517,9 @@ export function buildDoninoChampionshipData() {
     const lA = leagueOrder[a.current_league] || 99;
     const lB = leagueOrder[b.current_league] || 99;
     if (lA !== lB) return lA - lB;
-    if (b.wins_count !== a.wins_count) return b.wins_count - a.wins_count;
     if (a.best_time && b.best_time) return a.best_time - b.best_time;
+    if (a.best_time && !b.best_time) return -1;
+    if (!a.best_time && b.best_time) return 1;
     return a.name.localeCompare(b.name, 'ru');
   });
 
@@ -475,6 +532,7 @@ export function buildDoninoChampionshipData() {
     series_director: 'Манухин Михаил Андреевич',
     track_length_meters: 350,
     reglament_pdf_url: s2Data.event?.rules_url || null,
+    spreadsheet_url: 'https://docs.google.com/spreadsheets/d/1PGrVO98HfxwzoOxHmd8eRaygvl3iJryIXYfPd7vmyNQ/edit?gid=0#gid=0',
     stages: [stage1, stage2, stage3],
     standings: standingsList,
     promotions: {

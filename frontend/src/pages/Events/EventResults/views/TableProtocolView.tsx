@@ -1,5 +1,5 @@
+import { Fragment, useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import { AlertCircle, Ban } from 'lucide-react'
 import PlacementBadge from '../components/PlacementBadge'
 import PoponaCell from '../components/PoponaCell'
 import QualificationBadges from '../components/QualificationBadges'
@@ -11,7 +11,9 @@ import HoverTooltip from '../../../../components/ui/HoverTooltip'
 import type { Result, Heat, RawScores } from '../types'
 
 interface TableProtocolViewProps {
-  results: Result[]
+  groupedResults?: Record<string, Result[]>
+  sortedGroupKeys?: string[]
+  results?: Result[]
   bestTimesByRace?: Record<string, number>
   isRacing?: boolean
 }
@@ -30,6 +32,14 @@ const BIB_COLOR_LABELS: Record<string, string> = {
   white: 'Белая попона',
   blue: 'Синяя попона',
   black: 'Чёрная попона',
+}
+
+function breedCountLabel(count: number): string {
+  const mod10 = count % 10
+  const mod100 = count % 100
+  if (mod10 === 1 && mod100 !== 11) return `${count} собака`
+  if (mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14)) return `${count} собаки`
+  return `${count} собак`
 }
 
 function getHeatDistance(heat: Heat, rawScores: RawScores | null): number | null {
@@ -92,270 +102,332 @@ function CoursingHeatBadge({
 }
 
 export default function TableProtocolView({
+  groupedResults,
+  sortedGroupKeys,
   results,
   bestTimesByRace,
   isRacing = false,
 }: TableProtocolViewProps) {
-  // Determine maximum heats across the group
+  // Собираем все результаты для точного вычисления максимального числа заездов
+  const allResults = useMemo(() => {
+    if (results && results.length > 0) return results
+    if (groupedResults && sortedGroupKeys) {
+      return sortedGroupKeys.flatMap(k => groupedResults[k] || [])
+    }
+    return []
+  }, [results, groupedResults, sortedGroupKeys])
+
   const maxHeats = Math.max(
-    ...results.map(r => parseRawScores(r.raw_scores_json)?.heats?.length || 0),
+    ...allResults.map(r => parseRawScores(r.raw_scores_json)?.heats?.length || 0),
     1
   )
+
+  const renderRow = (result: Result, idx: number) => {
+    const rawScores = parseRawScores(result.raw_scores_json)
+    const heats = rawScores?.heats || []
+    let rawDogName = result.name_ru || result.name_lat || 'Без клички'
+    if (rawDogName.includes('/')) {
+      rawDogName = rawDogName.split('/')[0].trim()
+    }
+    const formattedDogName = toDogTitleCase(rawDogName)
+
+    const genderSymbol =
+      result.dog?.gender === 'M' ? '♂' : result.dog?.gender === 'F' ? '♀' : ''
+    const genderColor =
+      result.dog?.gender === 'M'
+        ? 'text-sky-700'
+        : result.dog?.gender === 'F'
+          ? 'text-rose-700'
+          : 'text-charcoal-400'
+
+    const isDns = result.status === 'dns' || result.status === 'absent'
+    const isDq =
+      result.status === 'disqualified' ||
+      result.status === 'dismissed' ||
+      result.status === 'eliminated' ||
+      result.status === 'dnf'
+    const statusReason = displayStatusReason(result.status_reason)
+
+    // Нормализация наград: основные титулы идут в награды, а СС (vc) размещается у итогового балла
+    const { qualification, vc } = normalizeQualificationAndVc(result)
+    const qualTokens = (qualification || '')
+      .split(',')
+      .map(s => s.trim())
+      .filter(Boolean)
+    const hasVcToken = qualTokens.some(p => /^(cc|сс)$/i.test(p))
+    const cleanQualification = qualTokens.filter(p => !/^(cc|сс)$/i.test(p)).join(', ')
+    const showVc = Boolean(vc || hasVcToken)
+
+    const classLabel = result.class_label || (result as any).breed_class?.split(' - ')[1] || '—'
+
+    const rowBg = isDns
+      ? 'bg-old-money-50/60 opacity-60'
+      : isDq
+        ? 'bg-rose-50/30'
+        : idx % 2 === 1
+          ? 'bg-cream-50/40'
+          : 'bg-white'
+
+    return (
+      <tr key={`${result.dog_id || 'unk'}-${result.id || idx}`} className={`hover:bg-cream-100/60 transition-colors ${rowBg}`}>
+        {/* 1. Место */}
+        <td className="w-12 py-1.5 sm:py-2 px-2 text-center align-middle">
+          <PlacementBadge result={result} />
+        </td>
+
+        {/* 2. Номер по каталогу */}
+        <td className="w-12 py-1.5 sm:py-2 px-1 text-center text-charcoal-500 font-mono text-xs align-middle">
+          {result.catalog_no ? `№${result.catalog_no}` : '—'}
+        </td>
+
+        {/* 3. Кличка собаки (НЕ капс, без сокращений, полная; причину дисквала выводим только справа) */}
+        <td className="py-1.5 sm:py-2 px-3 align-middle min-w-[200px]">
+          <div className="flex items-center gap-1.5 flex-wrap">
+            {result.dog_id ? (
+              <Link
+                to={`/dog/${result.dog_id}/`}
+                className="font-serif font-bold text-xs sm:text-sm text-charcoal-900 hover:text-camel-800 hover:underline leading-snug"
+              >
+                {formattedDogName}
+              </Link>
+            ) : (
+              <span className="font-serif font-bold text-xs sm:text-sm text-charcoal-900 leading-snug">
+                {formattedDogName}
+              </span>
+            )}
+            {genderSymbol && (
+              <span className={`text-xs font-bold shrink-0 ${genderColor}`} title={result.dog?.gender === 'M' ? 'Кобель' : 'Сука'}>
+                {genderSymbol}
+              </span>
+            )}
+          </div>
+        </td>
+
+        {/* 4. Класс / Лига */}
+        <td className="w-28 sm:w-32 py-1.5 sm:py-2 px-2 text-charcoal-600 text-xs hidden sm:table-cell align-middle">
+          {classLabel}
+        </td>
+
+        {/* 5. Заезды / Круги (строго выровнены по ширине и горизонтали; w-[205px] исключает переносы баллов) */}
+        {Array.from({ length: maxHeats }).map((_, heatIdx) => {
+          const heat = heats[heatIdx]
+          if (!heat) {
+            return (
+              <td key={heatIdx} className="w-[205px] min-w-[205px] py-1.5 sm:py-2 px-2.5 text-charcoal-300 font-mono text-xs align-middle">
+                —
+              </td>
+            )
+          }
+
+          const dist = getHeatDistance(heat, rawScores)
+
+          if (isRacing) {
+            const isWinner = isFastestHeat(heat, bestTimesByRace)
+            const speedMs = heat.speed_kmh ? (heat.speed_kmh / 3.6).toFixed(1) : null
+            const speedKmh = heat.speed_kmh ? heat.speed_kmh.toFixed(1) : null
+            const isHeatDq = heat.disqualified || (!heat.time && !heat.speed_kmh)
+
+            return (
+              <td key={heatIdx} className="w-[205px] min-w-[205px] py-1.5 sm:py-2 px-2.5 align-middle">
+                <div className="flex flex-col gap-0.5">
+                  {/* Верхний ряд: Попона + Время */}
+                  <div className="flex items-center gap-2">
+                    <PoponaCell
+                      number={heat.bib_number}
+                      color={heat.bib_color}
+                      compact
+                      isWinner={isWinner}
+                    />
+                    {isHeatDq ? (
+                      <span className="text-[11px] font-semibold text-rose-600 italic">
+                        {heat.disqualification_reason || statusReason || 'Сход'}
+                      </span>
+                    ) : (
+                      <span className={`font-mono text-sm font-bold whitespace-nowrap ${isWinner ? 'text-camel-800' : 'text-charcoal-900'}`}>
+                        {heat.time ? `${heat.time} сек` : '—'}
+                      </span>
+                    )}
+                  </div>
+
+                  {/* Нижний ряд: Заезд, Дистанция и Скорости */}
+                  {!isHeatDq && (
+                    <div className="text-[10px] text-charcoal-500 font-mono leading-tight whitespace-nowrap">
+                      <span>Заезд {heat.heat_number ?? heatIdx + 1}</span>
+                      {dist && <span> · {dist}м</span>}
+                      {speedKmh && <span> · {speedKmh} км/ч</span>}
+                      {speedMs && <span className="opacity-80"> ({speedMs} м/с)</span>}
+                    </div>
+                  )}
+                </div>
+              </td>
+            )
+          }
+
+          // Coursing rendering: попона впритык слева от оценок, балл забега строго без переноса над суммой судей
+          const judges = heat.judges || []
+          const primaryScores = judges[0]?.scores || []
+          const heatTotal = heat.total != null ? heat.total : '—'
+          const isHeatDq = heat.disqualified
+
+          // Суммы судей для скобок: (82+84)
+          const judgeSums = judges
+            .map(j => j.sum)
+            .filter((sum): sum is number | string => sum != null)
+
+          return (
+            <td key={heatIdx} className="w-[205px] min-w-[205px] py-1.5 sm:py-2 px-2.5 align-middle">
+              {isHeatDq ? (
+                <div className="flex items-center gap-1.5">
+                  <CoursingHeatBadge
+                    heatNumber={heat.bib_number ?? heat.heat_number ?? heatIdx + 1}
+                    bibColor={heat.bib_color}
+                    distance={dist}
+                  />
+                  <span className="text-[11px] font-semibold text-rose-600 italic leading-snug">
+                    {heat.disqualification_reason || statusReason || 'Сход'}
+                  </span>
+                </div>
+              ) : (
+                <div className="flex items-center gap-1.5">
+                  {/* Номер попоны прямо впритык слева от оценок */}
+                  <CoursingHeatBadge
+                    heatNumber={heat.bib_number ?? heat.heat_number ?? heatIdx + 1}
+                    bibColor={heat.bib_color}
+                    distance={dist}
+                  />
+
+                  {/* Оценки по 5 категориям (М Р В П Э + цифры) */}
+                  <div className="flex flex-col shrink-0">
+                    {/* Буквы критериев */}
+                    <div className="flex items-center gap-1.5 text-[9px] font-semibold text-charcoal-400 leading-none">
+                      {CRITERIA_5_LABELS.map(c => (
+                        <span key={c} className="w-3.5 text-center" title={CRITERIA_TITLES[c]}>
+                          {c}
+                        </span>
+                      ))}
+                    </div>
+                    {/* Цифры оценок */}
+                    <div className="flex items-center gap-1.5 font-mono text-xs font-bold text-charcoal-800 tabular-nums leading-tight pt-0.5">
+                      {primaryScores.slice(0, 5).map((score, sIdx) => (
+                        <span key={sIdx} className="w-3.5 text-center">
+                          {score ?? '—'}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Общий балл за один забег (154 б.) прямо над суммой (76+78), СТРОГО без переноса */}
+                  <div className="flex flex-col items-end pl-1.5 shrink-0 whitespace-nowrap">
+                    <span className="font-serif font-bold text-xs sm:text-sm text-charcoal-900 tabular-nums leading-none whitespace-nowrap">
+                      {heatTotal}&nbsp;б.
+                    </span>
+                    {judgeSums.length > 1 ? (
+                      <span className="text-[10px] text-charcoal-400 font-mono tracking-tight leading-tight pt-0.5 whitespace-nowrap">
+                        ({judgeSums.join('+')})
+                      </span>
+                    ) : (
+                      <span className="text-[10px] text-transparent leading-tight pt-0.5 select-none">
+                        &nbsp;
+                      </span>
+                    )}
+                  </div>
+                </div>
+              )}
+            </td>
+          )
+        })}
+
+        {/* 6. Итоговый балл / лучшее время + ненавязчивый СС в одной строке слева от балла */}
+        <td className="w-28 py-1.5 sm:py-2 px-3 text-right align-middle">
+          {isDns ? (
+            <span className="text-xs text-charcoal-400">Неявка</span>
+          ) : isDq && !result.total_score ? (
+            <span className="text-xs font-semibold text-rose-600">
+              {statusReason || 'Дисквал.'}
+            </span>
+          ) : (
+            <div className="flex items-center justify-end gap-1.5 whitespace-nowrap leading-none">
+              {showVc && (
+                <HoverTooltip
+                  label="СС — сертификат соответствия высшей квалификации (≥75% баллов во всех забегах)"
+                  placement="top"
+                  portal
+                  delayMs={0}
+                >
+                  <span className="inline-flex items-center px-1 py-0.5 text-[9px] font-mono font-medium text-charcoal-400 bg-old-money-100/60 border border-old-money-200/70 rounded cursor-help select-none leading-none tracking-tight">
+                    СС
+                  </span>
+                </HoverTooltip>
+              )}
+              <div className="whitespace-nowrap leading-none">
+                <span className="font-serif font-bold text-base sm:text-lg text-camel-800 tabular-nums">
+                  {result.total_score != null ? result.total_score : '—'}
+                </span>
+                {isRacing && result.total_score && (
+                  <span className="text-xs text-old-money-500 font-sans ml-0.5">с</span>
+                )}
+                {!isRacing && result.total_score && (
+                  <span className="text-xs text-old-money-500 font-sans ml-0.5">б</span>
+                )}
+              </div>
+            </div>
+          )}
+        </td>
+
+        {/* 7. Квалификация / титулы / переход в лигу (только титулы, без раздувания строки по высоте) */}
+        <td className="w-44 min-w-[150px] py-1.5 sm:py-2 px-3 hidden md:table-cell align-middle">
+          {cleanQualification ? (
+            <QualificationBadges qualification={cleanQualification} />
+          ) : (
+            <span className="text-old-money-300 text-xs">—</span>
+          )}
+        </td>
+      </tr>
+    )
+  }
 
   return (
     <div className="overflow-x-auto rounded-xl border border-old-money-200/90 bg-white shadow-2xs">
       <table className="w-full text-left text-xs border-collapse">
+        <colgroup>
+          <col className="w-12" />
+          <col className="w-12" />
+          <col className="min-w-[200px]" />
+          <col className="w-28 sm:w-32 hidden sm:table-column" />
+          {Array.from({ length: maxHeats }).map((_, i) => (
+            <col key={i} className="w-[205px] min-w-[205px]" />
+          ))}
+          <col className="w-28" />
+          <col className="w-44 hidden md:table-column" />
+        </colgroup>
         <tbody className="divide-y divide-old-money-100/70">
-          {results.map((result, idx) => {
-            const rawScores = parseRawScores(result.raw_scores_json)
-            const heats = rawScores?.heats || []
-            let rawDogName = result.name_ru || result.name_lat || 'Без клички'
-            if (rawDogName.includes('/')) {
-              rawDogName = rawDogName.split('/')[0].trim()
-            }
-            const formattedDogName = toDogTitleCase(rawDogName)
+          {sortedGroupKeys && groupedResults ? (
+            sortedGroupKeys.map(groupKey => {
+              const groupResults = groupedResults[groupKey] || []
+              if (groupResults.length === 0) return null
 
-            const genderSymbol =
-              result.dog?.gender === 'M' ? '♂' : result.dog?.gender === 'F' ? '♀' : ''
-            const genderColor =
-              result.dog?.gender === 'M'
-                ? 'text-sky-700'
-                : result.dog?.gender === 'F'
-                  ? 'text-rose-700'
-                  : 'text-charcoal-400'
-
-            const isDns = result.status === 'dns' || result.status === 'absent'
-            const isDq =
-              result.status === 'disqualified' ||
-              result.status === 'dismissed' ||
-              result.status === 'eliminated' ||
-              result.status === 'dnf'
-            const statusReason = displayStatusReason(result.status_reason)
-            const { qualification, vc } = normalizeQualificationAndVc(result)
-            const classLabel = result.class_label || (result as any).breed_class?.split(' - ')[1] || '—'
-
-            const rowBg = isDns
-              ? 'bg-old-money-50/60 opacity-60'
-              : isDq
-                ? 'bg-rose-50/30'
-                : idx % 2 === 1
-                  ? 'bg-cream-50/40'
-                  : 'bg-white'
-
-            return (
-              <tr key={`${result.dog_id || 'unk'}-${idx}`} className={`hover:bg-cream-100/60 transition-colors ${rowBg}`}>
-                {/* 1. Место */}
-                <td className="w-12 py-2.5 px-2 text-center align-middle">
-                  <PlacementBadge result={result} />
-                </td>
-
-                {/* 2. Номер по каталогу */}
-                <td className="w-12 py-2.5 px-1 text-center text-charcoal-500 font-mono text-xs align-middle">
-                  {result.catalog_no ? `№${result.catalog_no}` : '—'}
-                </td>
-
-                {/* 3. Кличка собаки (НЕ капс, без сокращений, полная в 1-2 строки) */}
-                <td className="py-2.5 px-3 align-middle min-w-[210px]">
-                  <div className="flex flex-col">
-                    <div className="flex items-center gap-1.5 flex-wrap">
-                      {result.dog_id ? (
-                        <Link
-                          to={`/dog/${result.dog_id}/`}
-                          className="font-serif font-bold text-xs sm:text-sm text-charcoal-900 hover:text-camel-800 hover:underline leading-snug"
-                        >
-                          {formattedDogName}
-                        </Link>
-                      ) : (
-                        <span className="font-serif font-bold text-xs sm:text-sm text-charcoal-900 leading-snug">
-                          {formattedDogName}
+              return (
+                <Fragment key={groupKey}>
+                  {/* Нативный компактный разделитель группы прямо в таблице на ВСЮ ширину таблицы */}
+                  <tr className="bg-camel-100/75 border-y border-camel-200/90 first:border-t-0 select-none">
+                    <td colSpan={100} className="py-1 px-3">
+                      <div className="flex items-center justify-between">
+                        <span className="font-semibold text-xs text-camel-950">
+                          {groupKey}
                         </span>
-                      )}
-                      {genderSymbol && (
-                        <span className={`text-xs font-bold shrink-0 ${genderColor}`} title={result.dog?.gender === 'M' ? 'Кобель' : 'Сука'}>
-                          {genderSymbol}
+                        <span className="text-[11px] font-medium text-camel-700">
+                          {breedCountLabel(groupResults.length)}
                         </span>
-                      )}
-                    </div>
-
-                    {isDq && statusReason && (
-                      <div className="flex items-center gap-1 text-[11px] font-semibold text-rose-700 pt-0.5">
-                        <AlertCircle className="h-3 w-3 shrink-0" />
-                        <span>{statusReason}</span>
-                      </div>
-                    )}
-                    {isDns && (
-                      <div className="flex items-center gap-1 text-[11px] text-charcoal-500 pt-0.5">
-                        <Ban className="h-3 w-3 shrink-0" />
-                        <span>Неявка</span>
-                      </div>
-                    )}
-                  </div>
-                </td>
-
-                {/* 4. Класс / Лига */}
-                <td className="w-28 py-2.5 px-2 text-charcoal-600 text-xs hidden sm:table-cell align-middle">
-                  {classLabel}
-                </td>
-
-                {/* 5. Заезды / Круги */}
-                {Array.from({ length: maxHeats }).map((_, heatIdx) => {
-                  const heat = heats[heatIdx]
-                  if (!heat) {
-                    return (
-                      <td key={heatIdx} className="py-2.5 px-3 text-charcoal-300 font-mono text-xs align-middle">
-                        —
-                      </td>
-                    )
-                  }
-
-                  const dist = getHeatDistance(heat, rawScores)
-
-                  if (isRacing) {
-                    const isWinner = isFastestHeat(heat, bestTimesByRace)
-                    const speedMs = heat.speed_kmh ? (heat.speed_kmh / 3.6).toFixed(1) : null
-                    const speedKmh = heat.speed_kmh ? heat.speed_kmh.toFixed(1) : null
-                    const isHeatDq = heat.disqualified || (!heat.time && !heat.speed_kmh)
-
-                    return (
-                      <td key={heatIdx} className="py-2.5 px-3 align-middle min-w-[190px]">
-                        <div className="flex flex-col gap-0.5">
-                          {/* Верхний ряд: Попона + Время */}
-                          <div className="flex items-center gap-2">
-                            <PoponaCell
-                              number={heat.bib_number}
-                              color={heat.bib_color}
-                              compact
-                              isWinner={isWinner}
-                            />
-                            {isHeatDq ? (
-                              <span className="text-[11px] font-semibold text-rose-600 italic">
-                                {heat.disqualification_reason || 'Сход'}
-                              </span>
-                            ) : (
-                              <span className={`font-mono text-sm font-bold ${isWinner ? 'text-camel-800' : 'text-charcoal-900'}`}>
-                                {heat.time ? `${heat.time} сек` : '—'}
-                              </span>
-                            )}
-                          </div>
-
-                          {/* Нижний ряд: Заезд, Дистанция и Скорости */}
-                          {!isHeatDq && (
-                            <div className="text-[10px] text-charcoal-500 font-mono leading-tight">
-                              <span>Заезд {heat.heat_number ?? heatIdx + 1}</span>
-                              {dist && <span> · {dist}м</span>}
-                              {speedKmh && <span> · {speedKmh} км/ч</span>}
-                              {speedMs && <span className="opacity-80"> ({speedMs} м/с)</span>}
-                            </div>
-                          )}
-                        </div>
-                      </td>
-                    )
-                  }
-
-                  // Coursing rendering: точный дизайн как на скриншоте пользователя
-                  const judges = heat.judges || []
-                  const primaryScores = judges[0]?.scores || []
-                  const heatTotal = heat.total != null ? heat.total : '—'
-                  const isHeatDq = heat.disqualified
-
-                  // Суммы судей для скобок: (82+84)
-                  const judgeSums = judges
-                    .map(j => j.sum)
-                    .filter((sum): sum is number | string => sum != null)
-
-                  return (
-                    <td key={heatIdx} className="py-2.5 px-3 align-middle min-w-[190px]">
-                      <div className="flex flex-col gap-0.5">
-                        {/* Верхний ряд: [🔴 №6]  166 б. */}
-                        <div className="flex items-center gap-2">
-                          <CoursingHeatBadge
-                            heatNumber={heat.bib_number ?? heat.heat_number ?? heatIdx + 1}
-                            bibColor={heat.bib_color}
-                            distance={dist}
-                          />
-                          {isHeatDq ? (
-                            <span className="text-[11px] font-semibold text-rose-600 italic">
-                              {heat.disqualification_reason || 'Сход'}
-                            </span>
-                          ) : (
-                            <span className="font-serif font-bold text-sm text-charcoal-900 tabular-nums">
-                              {heatTotal} б.
-                            </span>
-                          )}
-                        </div>
-
-                        {/* Нижний ряд:
-                            М  Р  В  П  Э   (82+84)
-                            16 17 16 16 17
-                        */}
-                        {!isHeatDq && (
-                          <div className="flex items-baseline gap-2 pt-0.5">
-                            <div className="flex flex-col">
-                              {/* Буквы критериев */}
-                              <div className="flex items-center gap-2 text-[9px] font-semibold text-charcoal-400">
-                                {CRITERIA_5_LABELS.map(c => (
-                                  <span key={c} className="w-3.5 text-center" title={CRITERIA_TITLES[c]}>
-                                    {c}
-                                  </span>
-                                ))}
-                              </div>
-                              {/* Цифры оценок */}
-                              <div className="flex items-center gap-2 font-mono text-xs font-bold text-charcoal-800 tabular-nums">
-                                {primaryScores.slice(0, 5).map((score, sIdx) => (
-                                  <span key={sIdx} className="w-3.5 text-center">
-                                    {score ?? '—'}
-                                  </span>
-                                ))}
-                              </div>
-                            </div>
-
-                            {/* Разбивка по судьям: (82+84) */}
-                            {judgeSums.length > 1 && (
-                              <span className="text-[10px] text-charcoal-400 font-mono tracking-tight self-end pb-0.5">
-                                ({judgeSums.join('+')})
-                              </span>
-                            )}
-                          </div>
-                        )}
                       </div>
                     </td>
-                  )
-                })}
-
-                {/* 6. Итоговый балл / лучшее время */}
-                <td className="w-24 py-2.5 px-3 text-right align-middle">
-                  {isDns ? (
-                    <span className="text-xs text-charcoal-400">Неявка</span>
-                  ) : isDq && !result.total_score ? (
-                    <span className="text-xs font-semibold text-rose-600">
-                      {statusReason || 'Дисквал.'}
-                    </span>
-                  ) : (
-                    <div>
-                      <span className="font-serif font-bold text-base sm:text-lg text-camel-800 tabular-nums">
-                        {result.total_score != null ? result.total_score : '—'}
-                      </span>
-                      {isRacing && result.total_score && (
-                        <span className="text-xs text-old-money-500 font-sans ml-0.5">с</span>
-                      )}
-                      {!isRacing && result.total_score && (
-                        <span className="text-xs text-old-money-500 font-sans ml-0.5">б</span>
-                      )}
-                    </div>
-                  )}
-                </td>
-
-                {/* 7. Квалификация / титулы / переход в лигу */}
-                <td className="w-36 py-2.5 px-3 hidden md:table-cell align-middle">
-                  {qualification || vc ? (
-                    <QualificationBadges qualification={qualification || vc} />
-                  ) : (
-                    <span className="text-old-money-300 text-xs">—</span>
-                  )}
-                </td>
-              </tr>
-            )
-          })}
+                  </tr>
+                  {groupResults.map((result, idx) => renderRow(result, idx))}
+                </Fragment>
+              )
+            })
+          ) : (
+            results?.map((result, idx) => renderRow(result, idx))
+          )}
         </tbody>
       </table>
     </div>

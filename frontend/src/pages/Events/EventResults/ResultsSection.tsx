@@ -10,14 +10,6 @@ interface ResultsSectionProps {
   results: Result[]
 }
 
-function breedCountLabel(count: number): string {
-  const mod10 = count % 10
-  const mod100 = count % 100
-  if (mod10 === 1 && mod100 !== 11) return `${count} собака`
-  if (mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14)) return `${count} собаки`
-  return `${count} собак`
-}
-
 export default function ResultsSection({ results }: ResultsSectionProps) {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedBreed, setSelectedBreed] = useState('')
@@ -145,28 +137,18 @@ export default function ResultsSection({ results }: ResultsSectionProps) {
         )}
       </div>
 
-      {filteredSortedGroups.map(groupKey => {
-        const groupResults = filteredGrouped[groupKey]
-
-        return (
-          <section key={groupKey} className="space-y-1.5 pt-1">
-            <div className="flex items-center justify-between gap-3 bg-camel-100/70 py-1.5 px-3 rounded-lg border border-camel-200/80">
-              <h3 className="min-w-0 flex-1 text-sm sm:text-base font-semibold tracking-tight text-camel-950">
-                {groupKey}
-              </h3>
-              <span className="flex-shrink-0 text-xs font-medium text-camel-700">
-                {breedCountLabel(groupResults.length)}
-              </span>
-            </div>
-
-            <TableProtocolView
-              results={groupResults}
-              bestTimesByRace={bestTimesByRace}
-              isRacing={isRacing}
-            />
-          </section>
-        )
-      })}
+      {filteredSortedGroups.length === 0 ? (
+        <div className="rounded-xl border border-old-money-200 bg-cream-50 p-6 text-center text-sm text-old-money-500">
+          Собаки по заданным фильтрам не найдены
+        </div>
+      ) : (
+        <TableProtocolView
+          groupedResults={filteredGrouped}
+          sortedGroupKeys={filteredSortedGroups}
+          bestTimesByRace={bestTimesByRace}
+          isRacing={isRacing}
+        />
+      )}
     </div>
   )
 }

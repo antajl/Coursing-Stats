@@ -6,8 +6,10 @@ import {
   Calendar,
   ShieldCheck,
   FileText,
+  FileSpreadsheet,
   Clock,
   ArrowRight,
+  ExternalLink,
 } from 'lucide-react'
 import { SEO } from '../../components/SEO'
 import { MobileSubNavTabs } from '../../components/ui/MobileSubNavTabs'
@@ -116,57 +118,74 @@ export default function DoninoChampionship() {
         ariaLabel="Разделы Донино"
       />
 
-      <div className="space-y-6">
-        {/* Hero Banner */}
-        <div className="rounded-3xl border border-old-money-200 bg-cream-50/90 p-5 sm:p-7 shadow-xs space-y-4">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-            <div className="space-y-1.5">
-              <div className="flex items-center gap-2">
-                <span className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-100 text-amber-900 border border-amber-300">
-                  Сезон 2026
-                </span>
-                <span className="text-xs text-charcoal-600">Курсинг в Донино</span>
-              </div>
-              <h2 className="text-xl sm:text-3xl font-serif font-bold text-charcoal-900">
+      <div className="space-y-4">
+        {/* Sleek Unboxed Tournament Header */}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-1">
+          <div className="space-y-1.5">
+            <div className="flex items-center gap-2.5 flex-wrap">
+              <h2 className="text-xl sm:text-2xl font-serif font-bold text-charcoal-900 tracking-tight">
                 Клубный чемпионат Донино
               </h2>
-              <p className="text-xs sm:text-sm text-charcoal-600 max-w-2xl leading-relaxed">
-                Клубные чемпионаты бегового клуба «Курсинг в Донино». Сезон 2026.
-              </p>
+              <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-900 border border-amber-300">
+                Сезон 2026
+              </span>
             </div>
 
-            {/* Quick Stats Badges */}
+            {/* Compact inline statistics */}
             {data && (
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 shrink-0">
-                <div className="p-2.5 rounded-xl bg-cream-100 border border-old-money-200 text-center">
-                  <div className="text-[10px] text-charcoal-500 font-medium">Участников</div>
-                  <div className="text-base sm:text-lg font-bold font-serif text-charcoal-900">
-                    {data.stats.total_dogs_participated}
-                  </div>
-                </div>
-
-                <div className="p-2.5 rounded-xl bg-amber-50 border border-amber-200 text-center">
-                  <div className="text-[10px] text-amber-800 font-medium">Лига Абсолют</div>
-                  <div className="text-base sm:text-lg font-bold font-serif text-amber-950">
-                    {data.stats.dogs_in_absolut}
-                  </div>
-                </div>
-
-                <div className="p-2.5 rounded-xl bg-camel-50 border border-camel-200 text-center">
-                  <div className="text-[10px] text-camel-800 font-medium">Лига Чемпионов</div>
-                  <div className="text-base sm:text-lg font-bold font-serif text-charcoal-900">
-                    {data.stats.dogs_in_champions}
-                  </div>
-                </div>
-
-                <div className="p-2.5 rounded-xl bg-stone-100 border border-stone-200 text-center">
-                  <div className="text-[10px] text-stone-600 font-medium">Ротаций лиг</div>
-                  <div className="text-base sm:text-lg font-bold font-serif text-charcoal-900">
-                    {data.stats.promotions_count}
-                  </div>
-                </div>
+              <div className="flex items-center gap-1.5 text-xs text-charcoal-600 flex-wrap">
+                <span className="font-semibold text-charcoal-800">{data.stats.total_dogs_participated} собак:</span>
+                <span className="px-2 py-0.5 rounded bg-amber-50 text-amber-950 font-medium border border-amber-200 text-[11px]">
+                  Абсолют <b>{data.stats.dogs_in_absolut}</b>
+                </span>
+                <span className="px-2 py-0.5 rounded bg-cream-100 text-charcoal-800 font-medium border border-old-money-200 text-[11px]">
+                  Чемпионов <b>{data.stats.dogs_in_champions}</b>
+                </span>
+                <span className="px-2 py-0.5 rounded bg-cream-100 text-charcoal-800 font-medium border border-old-money-200 text-[11px]">
+                  Прогресс <b>{data.stats.dogs_in_progress}</b>
+                </span>
+                {data.stats.dogs_in_juniors > 0 && (
+                  <span className="px-2 py-0.5 rounded bg-sky-50 text-sky-900 font-medium border border-sky-200 text-[11px]">
+                    Юниоры <b>{data.stats.dogs_in_juniors}</b>
+                  </span>
+                )}
               </div>
             )}
+          </div>
+
+          {/* Top-Right: External links */}
+          <div className="flex items-center gap-2 self-start sm:self-center shrink-0 flex-wrap">
+            <a
+              href="https://runningdog.ru"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-old-money-200 bg-cream-50 hover:bg-cream-100 text-xs font-semibold text-charcoal-700 transition-colors shadow-2xs shrink-0"
+              title="Официальный сайт бегового клуба «Курсинг в Донино»"
+            >
+              <span className="p-0.5 rounded border border-old-money-200/90 bg-white shadow-2xs flex items-center justify-center shrink-0">
+                <img
+                  src="/assets/icons/runningdog.png"
+                  alt=""
+                  width={22}
+                  height={14}
+                  className="w-[22px] h-[14px] object-contain shrink-0"
+                />
+              </span>
+              <span>runningdog.ru</span>
+              <ExternalLink className="w-3.5 h-3.5 text-charcoal-400" />
+            </a>
+
+            <a
+              href={data?.spreadsheet_url || 'https://docs.google.com/spreadsheets/d/1PGrVO98HfxwzoOxHmd8eRaygvl3iJryIXYfPd7vmyNQ/edit?gid=0#gid=0'}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-old-money-200 bg-cream-50 hover:bg-cream-100 text-xs font-semibold text-charcoal-700 transition-colors shadow-2xs shrink-0"
+              title="Официальная сводная таблица чемпионата в Google Таблицах"
+            >
+              <FileSpreadsheet className="w-3.5 h-3.5 text-emerald-700" />
+              <span>Таблица турнира</span>
+              <ExternalLink className="w-3.5 h-3.5 text-charcoal-400" />
+            </a>
           </div>
         </div>
 
@@ -234,7 +253,10 @@ export default function DoninoChampionship() {
             )}
 
             {activeTab === 'rules' && (
-              <ChampionshipRulesTab reglamentUrl={data.reglament_pdf_url} />
+              <ChampionshipRulesTab
+                reglamentUrl={data.reglament_pdf_url}
+                spreadsheetUrl={data.spreadsheet_url}
+              />
             )}
           </>
         )}

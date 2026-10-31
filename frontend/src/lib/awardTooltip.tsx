@@ -58,7 +58,7 @@ export function awardTooltipForCompetitionTitle(raw: string, count?: number): Re
   return (
     <AwardTooltipRow
       badge={badge}
-      label={competitionTitleLabel(raw, key)}
+      label={(raw.trim().toUpperCase() === 'CC' || raw.trim().toUpperCase() === 'СС') ? 'СС — сертификат соответствия высшей квалификации (≥75% баллов во всех забегах)' : competitionTitleLabel(raw, key)}
       badgeClass={titleBadgeClass(badgeBase)}
     />
   )
