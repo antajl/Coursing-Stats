@@ -122,7 +122,21 @@ export function parseRawScores(rawScoresJson: string | RawScores | null | undefi
 }
 
 export function getBestTimesByRace(results: Result[]): Record<string, number> {
-  const heatsByBib: Record<string, { times: number[]; totalParticipants: number }> = {}
+  const heatsByKey: Record<string, { times: number[]; totalParticipants: number }> = {}
+
+  const addTime = (key: string, time: number | string | null | undefined, disqualified?: boolean) => {
+    if (!heatsByKey[key]) {
+      heatsByKey[key] = { times: [], totalParticipants: 0 }
+    }
+    heatsByKey[key].totalParticipants += 1
+
+    if (!disqualified && time != null) {
+      const t = typeof time === 'number' ? time : parseFloat(String(time))
+      if (!isNaN(t) && t > 0) {
+        heatsByKey[key].times.push(t)
+      }
+    }
+  }
 
   for (const r of results) {
     if (r.status === 'dns' || r.status === 'absent') continue
@@ -131,26 +145,19 @@ export function getBestTimesByRace(results: Result[]): Record<string, number> {
     if (!rawScores?.heats) continue
 
     for (const heat of rawScores.heats) {
-      if (heat.bib_number == null) continue
-      const key = String(heat.bib_number)
-      if (!heatsByBib[key]) {
-        heatsByBib[key] = { times: [], totalParticipants: 0 }
+      if (heat.bib_number != null) {
+        addTime(String(heat.bib_number), heat.time, heat.disqualified)
       }
-      heatsByBib[key].totalParticipants += 1
-
-      if (!heat.disqualified && heat.time != null) {
-        const t = typeof heat.time === 'number' ? heat.time : parseFloat(String(heat.time))
-        if (!isNaN(t) && t > 0) {
-          heatsByBib[key].times.push(t)
-        }
+      if (heat.heat_number != null && String(heat.heat_number) !== String(heat.bib_number)) {
+        addTime(String(heat.heat_number), heat.time, heat.disqualified)
       }
     }
   }
 
   const bestTimes: Record<string, number> = {}
-  for (const [bib, data] of Object.entries(heatsByBib)) {
+  for (const [key, data] of Object.entries(heatsByKey)) {
     if (data.totalParticipants >= 2 && data.times.length > 0) {
-      bestTimes[bib] = Math.min(...data.times)
+      bestTimes[key] = Math.min(...data.times)
     }
   }
 

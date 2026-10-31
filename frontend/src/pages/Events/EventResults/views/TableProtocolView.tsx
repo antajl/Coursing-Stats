@@ -1,13 +1,18 @@
 import { Fragment, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import PlacementBadge from '../components/PlacementBadge'
-import PoponaCell from '../components/PoponaCell'
 import QualificationBadges from '../components/QualificationBadges'
 import DogSexIcon from '../../../../components/DogSexIcon'
-import { parseRawScores, normalizeBibColorName, extractDogSex } from '../utils'
+import {
+  parseRawScores,
+  normalizeBibColorName,
+  extractDogSex,
+  bibColorStyle,
+  bibTextClass,
+} from '../utils'
 import { displayStatusReason } from '../../../../lib/statusReason'
 import { normalizeQualificationAndVc } from '../ResultSummary'
-import { toDogTitleCase } from '../../../../lib/dogName'
+import { parseDogName, toDogTitleCase } from '../../../../lib/dogName'
 import HoverTooltip from '../../../../components/ui/HoverTooltip'
 import type { Result, Heat, RawScores } from '../types'
 
@@ -33,6 +38,8 @@ const BIB_COLOR_LABELS: Record<string, string> = {
   white: 'Белая попона',
   blue: 'Синяя попона',
   black: 'Чёрная попона',
+  yellow: 'Жёлтая попона',
+  green: 'Зелёная попона',
 }
 
 function breedCountLabel(count: number): string {
@@ -54,28 +61,36 @@ function getHeatDistance(heat: Heat, rawScores: RawScores | null): number | null
 }
 
 function isFastestHeat(heat: Heat, bestTimesByRace?: Record<string, number>): boolean {
-  if (heat.bib_number == null || heat.disqualified || !bestTimesByRace) return false
+  if (heat.disqualified || !bestTimesByRace) return false
   const t = typeof heat.time === 'number' ? heat.time : parseFloat(String(heat.time || ''))
   if (isNaN(t) || t <= 0) return false
-  const best = bestTimesByRace[String(heat.bib_number)]
+  const keyByHeat = heat.heat_number != null ? String(heat.heat_number) : null
+  const keyByBib = heat.bib_number != null ? String(heat.bib_number) : null
+  const best = (keyByHeat ? bestTimesByRace[keyByHeat] : undefined) ?? (keyByBib ? bestTimesByRace[keyByBib] : undefined)
   return best != null && Math.abs(t - best) < 0.001
 }
 
-/** Компактная плашка забега в курсинге (цвет попоны объединен с номером забега) */
-function CoursingHeatBadge({
+/** Компактная плашка забега/заезда (цвет попоны с нанесенным номером забега/заезда) */
+function ProtocolHeatBadge({
   heatNumber,
   bibColor,
+  bibNumber,
   distance,
+  isWinner = false,
 }: {
   heatNumber?: number | string | null
   bibColor?: string | null
+  bibNumber?: number | string | null
   distance?: number | null
+  isWinner?: boolean
 }) {
   const normalized = normalizeBibColorName(bibColor ?? undefined)
   const isRed = normalized === 'red'
   const isBlue = normalized === 'blue'
   const isBlack = normalized === 'black'
   const isWhite = normalized === 'white'
+  const isYellow = normalized === 'yellow'
+  const isGreen = normalized === 'green'
 
   const colorClass = isRed
     ? 'bg-rose-600 text-white border-rose-700'
@@ -85,18 +100,30 @@ function CoursingHeatBadge({
         ? 'bg-charcoal-900 text-white border-charcoal-950'
         : isWhite
           ? 'bg-white text-charcoal-900 border-old-money-300'
-          : 'bg-old-money-100 text-charcoal-800 border-old-money-300'
+          : isYellow
+            ? 'bg-amber-300 text-charcoal-900 border-amber-400'
+            : isGreen
+              ? 'bg-emerald-600 text-white border-emerald-700'
+              : 'bg-old-money-100 text-charcoal-800 border-old-money-300'
 
   const label = heatNumber != null ? String(heatNumber) : '—'
   const colorName = normalized ? (BIB_COLOR_LABELS[normalized] || normalized) : 'Попона'
-  const tooltipText = `${colorName} · Забег №${label}${distance ? ` (${distance}м)` : ''}`
+  const bibInfo =
+    bibNumber != null && String(bibNumber) !== String(heatNumber) ? ` (попона №${bibNumber})` : ''
+  const winnerInfo = isWinner ? ' · 1-е место в заезде' : ''
+  const tooltipText = `${colorName}${bibInfo} · Заезд №${label}${distance ? ` (${distance}м)` : ''}${winnerInfo}`
 
   return (
     <HoverTooltip label={tooltipText} placement="top" portal delayMs={0}>
-      <span
-        className={`inline-flex items-center justify-center min-w-[1.5rem] h-5.5 rounded px-1.5 py-0.5 text-xs font-mono font-bold border shadow-2xs cursor-help select-none shrink-0 ${colorClass}`}
-      >
-        <span>{label}</span>
+      <span className="relative inline-flex items-center justify-center shrink-0">
+        <span
+          className={`inline-flex items-center justify-center min-w-[1.5rem] h-5.5 rounded px-1.5 py-0.5 text-xs font-mono font-bold cursor-help select-none shrink-0 shadow-2xs transition-all ${colorClass} ${
+            isWinner ? 'ring-2 ring-camel-500 ring-offset-1' : ''
+          }`}
+          style={!colorClass.includes('bg-') && normalized ? bibColorStyle(normalized) : undefined}
+        >
+          <span>{label}</span>
+        </span>
       </span>
     </HoverTooltip>
   )
@@ -126,11 +153,10 @@ export default function TableProtocolView({
   const renderRow = (result: Result, idx: number) => {
     const rawScores = parseRawScores(result.raw_scores_json)
     const heats = rawScores?.heats || []
-    let rawDogName = result.name_ru || result.name_lat || 'Без клички'
-    if (rawDogName.includes('/')) {
-      rawDogName = rawDogName.split('/')[0].trim()
-    }
-    const formattedDogName = toDogTitleCase(rawDogName)
+    const { primary: formattedDogName, secondary: secondaryDogName } = parseDogName(
+      result.name_lat || (result.dog as any)?.name_lat,
+      result.name_ru || (result.dog as any)?.name_ru
+    )
     const dogSex = extractDogSex(result)
 
     const isDns = result.status === 'dns' || result.status === 'absent'
@@ -174,17 +200,21 @@ export default function TableProtocolView({
         </td>
 
         {/* 3. Кличка собаки (НЕ капс, без сокращений, полная; причину дисквала выводим только справа) */}
-        <td className="py-1.5 sm:py-2 px-3 align-middle min-w-[200px]">
-          <div className="flex items-center gap-1.5 flex-wrap">
+        <td className="py-1.5 sm:py-2 px-3 align-middle min-w-[220px]">
+          <div className="flex items-center gap-1.5 flex-nowrap">
             {result.dog_id ? (
               <Link
                 to={`/dog/${result.dog_id}/`}
-                className="font-serif font-bold text-xs sm:text-sm text-charcoal-900 hover:text-camel-800 hover:underline leading-snug"
+                title={secondaryDogName || undefined}
+                className="font-serif font-bold text-xs sm:text-sm text-charcoal-900 hover:text-camel-800 hover:underline leading-snug whitespace-nowrap"
               >
                 {formattedDogName}
               </Link>
             ) : (
-              <span className="font-serif font-bold text-xs sm:text-sm text-charcoal-900 leading-snug">
+              <span
+                title={secondaryDogName || undefined}
+                className="font-serif font-bold text-xs sm:text-sm text-charcoal-900 leading-snug whitespace-nowrap"
+              >
                 {formattedDogName}
               </span>
             )}
@@ -199,12 +229,16 @@ export default function TableProtocolView({
           {classLabel}
         </td>
 
-        {/* 5. Заезды / Круги (строго выровнены по ширине и горизонтали; w-[205px] исключает переносы баллов) */}
+        {/* 5. Заезды / Круги (строго выровнены по ширине и горизонтали) */}
         {Array.from({ length: maxHeats }).map((_, heatIdx) => {
+          const heatColClass = isRacing ? 'w-[140px] min-w-[130px]' : 'w-[205px] min-w-[205px]'
           const heat = heats[heatIdx]
           if (!heat) {
             return (
-              <td key={heatIdx} className="w-[205px] min-w-[205px] py-1.5 sm:py-2 px-2.5 text-charcoal-300 font-mono text-xs align-middle">
+              <td
+                key={heatIdx}
+                className={`${heatColClass} py-1.5 sm:py-2 px-2.5 text-charcoal-300 font-mono text-xs align-middle`}
+              >
                 —
               </td>
             )
@@ -214,42 +248,54 @@ export default function TableProtocolView({
 
           if (isRacing) {
             const isWinner = isFastestHeat(heat, bestTimesByRace)
-            const speedMs = heat.speed_kmh ? (heat.speed_kmh / 3.6).toFixed(1) : null
             const speedKmh = heat.speed_kmh ? heat.speed_kmh.toFixed(1) : null
             const isHeatDq = heat.disqualified || (!heat.time && !heat.speed_kmh)
+            const heatNum = heat.heat_number ?? heat.bib_number ?? heatIdx + 1
 
             return (
-              <td key={heatIdx} className="w-[205px] min-w-[205px] py-1.5 sm:py-2 px-2.5 align-middle">
-                <div className="flex flex-col gap-0.5">
-                  {/* Верхний ряд: Попона + Время */}
+              <td
+                key={heatIdx}
+                className={`${heatColClass} py-1.5 sm:py-2 px-2 sm:px-2.5 align-middle`}
+              >
+                {isHeatDq ? (
+                  <div className="flex items-center gap-1.5">
+                    <ProtocolHeatBadge
+                      heatNumber={heatNum}
+                      bibColor={heat.bib_color}
+                      bibNumber={heat.bib_number}
+                      distance={dist}
+                    />
+                    <span className="text-[11px] font-semibold text-rose-600 italic leading-snug">
+                      {heat.disqualification_reason || statusReason || 'Сход'}
+                    </span>
+                  </div>
+                ) : (
                   <div className="flex items-center gap-2">
-                    <PoponaCell
-                      number={heat.bib_number}
-                      color={heat.bib_color}
-                      compact
+                    <ProtocolHeatBadge
+                      heatNumber={heatNum}
+                      bibColor={heat.bib_color}
+                      bibNumber={heat.bib_number}
+                      distance={dist}
                       isWinner={isWinner}
                     />
-                    {isHeatDq ? (
-                      <span className="text-[11px] font-semibold text-rose-600 italic">
-                        {heat.disqualification_reason || statusReason || 'Сход'}
-                      </span>
-                    ) : (
-                      <span className={`font-mono text-sm font-bold whitespace-nowrap ${isWinner ? 'text-camel-800' : 'text-charcoal-900'}`}>
+                    <div className="flex flex-col min-w-0">
+                      <span
+                        className={`font-mono text-xs sm:text-sm font-bold whitespace-nowrap leading-tight ${
+                          isWinner ? 'text-camel-800' : 'text-charcoal-900'
+                        }`}
+                      >
                         {heat.time ? `${heat.time} сек` : '—'}
                       </span>
-                    )}
-                  </div>
-
-                  {/* Нижний ряд: Заезд, Дистанция и Скорости */}
-                  {!isHeatDq && (
-                    <div className="text-[10px] text-charcoal-500 font-mono leading-tight whitespace-nowrap">
-                      <span>Заезд {heat.heat_number ?? heatIdx + 1}</span>
-                      {dist && <span> · {dist}м</span>}
-                      {speedKmh && <span> · {speedKmh} км/ч</span>}
-                      {speedMs && <span className="opacity-80"> ({speedMs} м/с)</span>}
+                      {(speedKmh || dist) && (
+                        <span className="text-[10px] text-charcoal-500 font-mono leading-tight whitespace-nowrap pt-0.5">
+                          {speedKmh && <span>{speedKmh} км/ч</span>}
+                          {speedKmh && dist && <span> · </span>}
+                          {dist && <span>{dist}м</span>}
+                        </span>
+                      )}
                     </div>
-                  )}
-                </div>
+                  </div>
+                )}
               </td>
             )
           }
@@ -266,10 +312,13 @@ export default function TableProtocolView({
             .filter((sum): sum is number | string => sum != null)
 
           return (
-            <td key={heatIdx} className="w-[205px] min-w-[205px] py-1.5 sm:py-2 px-2.5 align-middle">
+            <td
+              key={heatIdx}
+              className={`${heatColClass} py-1.5 sm:py-2 px-2.5 align-middle`}
+            >
               {isHeatDq ? (
                 <div className="flex items-center gap-1.5">
-                  <CoursingHeatBadge
+                  <ProtocolHeatBadge
                     heatNumber={heat.bib_number ?? heat.heat_number ?? heatIdx + 1}
                     bibColor={heat.bib_color}
                     distance={dist}
@@ -281,7 +330,7 @@ export default function TableProtocolView({
               ) : (
                 <div className="flex items-center gap-1.5">
                   {/* Номер попоны прямо впритык слева от оценок */}
-                  <CoursingHeatBadge
+                  <ProtocolHeatBadge
                     heatNumber={heat.bib_number ?? heat.heat_number ?? heatIdx + 1}
                     bibColor={heat.bib_color}
                     distance={dist}
@@ -332,7 +381,7 @@ export default function TableProtocolView({
         <td className="w-28 py-1.5 sm:py-2 px-3 text-right align-middle">
           {isDns ? (
             <span className="text-xs text-charcoal-400">Неявка</span>
-          ) : isDq && !result.total_score ? (
+          ) : isDq ? (
             <span className="text-xs font-semibold text-rose-600">
               {statusReason || 'Дисквал.'}
             </span>
@@ -383,10 +432,13 @@ export default function TableProtocolView({
         <colgroup>
           <col className="w-12" />
           <col className="w-12" />
-          <col className="min-w-[200px]" />
+          <col className="min-w-[220px]" />
           <col className="w-28 sm:w-32 hidden sm:table-column" />
           {Array.from({ length: maxHeats }).map((_, i) => (
-            <col key={i} className="w-[205px] min-w-[205px]" />
+            <col
+              key={i}
+              className={isRacing ? 'w-[140px] min-w-[130px]' : 'w-[205px] min-w-[205px]'}
+            />
           ))}
           <col className="w-28" />
           <col className="w-44 hidden md:table-column" />
