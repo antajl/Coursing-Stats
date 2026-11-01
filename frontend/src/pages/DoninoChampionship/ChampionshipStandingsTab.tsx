@@ -734,24 +734,31 @@ export default function ChampionshipStandingsTab({
 
           {/* Card 2: Анатомия баллов (Топ-5 текущей выборки) */}
           <div className="rounded-2xl border border-old-money-200 bg-cream-50/90 p-4 shadow-2xs space-y-3 text-xs text-charcoal-700">
-            <div className="flex items-center justify-between gap-2">
-              <h3 className="text-xs font-bold font-serif uppercase tracking-wider text-charcoal-900">
-                Анатомия баллов: Топ-5
-              </h3>
-              <div className="flex items-center gap-2 text-[10px] shrink-0 font-medium">
-                <span className="flex items-center gap-1 text-charcoal-700">
-                  <span className="w-2 h-2 rounded-full bg-camel-700 inline-block shrink-0" />
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+              <div className="flex items-center gap-2">
+                <h3 className="text-xs font-bold font-serif uppercase tracking-wider text-charcoal-900">
+                  Анатомия баллов: Топ-5
+                </h3>
+                {selectedBreed && (
+                  <span className="text-[10px] text-charcoal-500 font-medium">
+                    · {formatBreedName(selectedBreed)}
+                  </span>
+                )}
+              </div>
+              <div className="flex items-center gap-3 text-[10px] shrink-0 font-medium">
+                <span className="flex items-center gap-1.5 text-charcoal-700">
+                  <span className="w-2 h-2 rounded-full bg-om-700 inline-block shrink-0" />
                   <span>Места</span>
                 </span>
-                <span className="flex items-center gap-1 text-camel-900">
-                  <span className="w-2 h-2 rounded-full bg-camel-400 inline-block shrink-0" />
+                <span className="flex items-center gap-1.5 text-charcoal-800 font-semibold">
+                  <span className="w-2 h-2 rounded-full bg-om-300 border border-om-400/60 inline-block shrink-0" />
                   <span>Бонусы</span>
                 </span>
               </div>
             </div>
 
             <p className="text-[11px] text-charcoal-500 leading-tight">
-              Базовые очки за места в заездах vs скоростные бонусы (+1 б.) в текущей выборке
+              Базовые баллы за места в забегах vs скоростные бонусы (+1 б.) в текущей выборке
             </p>
 
             {top5AnatomyDogs.length === 0 ? (
@@ -759,14 +766,14 @@ export default function ChampionshipStandingsTab({
                 Нет собак с начисленными баллами
               </div>
             ) : (
-              <div className="space-y-2 pt-0.5">
+              <div className="space-y-2.5 pt-0.5">
                 {top5AnatomyDogs.map((item, idx) => {
                   const { primary, secondary } = parseDogName(item.dog.name_lat || item.dog.name, item.dog.name_ru)
                   const barWidthPct = Math.max(12, Math.min(100, Math.round((item.total / maxAnatomyPts) * 100)))
 
                   return (
                     <div key={item.dog.dog_key} className="space-y-1">
-                      <div className="flex items-center justify-between text-xs">
+                      <div className="flex items-baseline justify-between text-xs">
                         <div className="flex items-center gap-1.5 min-w-0 pr-2">
                           <span className="w-4 text-center font-bold text-charcoal-400 text-[10px] shrink-0">
                             #{idx + 1}
@@ -791,6 +798,7 @@ export default function ChampionshipStandingsTab({
                           )}
                         </div>
 
+                        {/* Points breakdown */}
                         <div className="shrink-0 flex items-center gap-1.5 text-right font-mono">
                           <span className="text-[10px] text-charcoal-500">
                             {item.placePts}&nbsp;б. + {item.bonusPts}&nbsp;б.
@@ -801,22 +809,26 @@ export default function ChampionshipStandingsTab({
                         </div>
                       </div>
 
-                      {/* Stacked bar with noble tone-on-tone Old Money palette */}
-                      <div className="h-2 w-full bg-cream-200/90 rounded-full overflow-hidden flex">
+                      {/* Sleek stacked progress bar: Walnut & Cream */}
+                      <div className="h-1.5 w-full bg-om-100 rounded-full overflow-hidden flex">
                         <div
                           style={{ width: `${barWidthPct}%` }}
-                          className="h-full flex overflow-hidden rounded-full shadow-2xs"
+                          className="h-full flex items-center gap-0.5"
                         >
                           <div
                             style={{ width: `${item.placePct}%` }}
-                            className="h-full bg-camel-700 transition-all duration-300"
-                            title={`Баллы за место: ${item.placePts}`}
+                            className={`h-full bg-om-700 transition-all duration-300 ${
+                              item.bonusPts > 0 ? 'rounded-l-full' : 'rounded-full'
+                            }`}
+                            title={`Баллы за места: ${item.placePts} б.`}
                           />
-                          <div
-                            style={{ width: `${item.bonusPct}%` }}
-                            className="h-full bg-camel-400 transition-all duration-300"
-                            title={`Бонусы за скорость: ${item.bonusPts}`}
-                          />
+                          {item.bonusPts > 0 && (
+                            <div
+                              style={{ width: `${item.bonusPct}%` }}
+                              className="h-full bg-om-300 rounded-r-full transition-all duration-300"
+                              title={`Скоростные бонусы: +${item.bonusPts} б.`}
+                            />
+                          )}
                         </div>
                       </div>
                     </div>
