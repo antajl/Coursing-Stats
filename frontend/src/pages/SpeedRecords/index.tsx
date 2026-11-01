@@ -1,5 +1,6 @@
 import { useMemo, useEffect } from 'react'
 import { useSearchParams, useNavigate } from 'react-router-dom'
+import { Table, BarChart2 } from 'lucide-react'
 import { SEO } from '../../components/SEO'
 import DoninoAttribution from '../../components/DoninoAttribution'
 import { useYandexGoal } from '../../components/YandexMetrica'
@@ -19,13 +20,15 @@ function SpeedRecords() {
   const page = useSpeedRecordsPage()
   const { reachGoal } = useYandexGoal()
 
-  const handleTabChange = (newTab: 'records' | 'stats' | 'championship') => {
-    if (newTab === 'championship') {
+  const handleSubNavChange = (id: string) => {
+    if (id === 'championship') {
       navigate('/donino/championship')
-      return
     }
+  }
+
+  const handleViewChange = (newView: 'table' | 'stats') => {
     const next = new URLSearchParams(searchParams)
-    if (newTab === 'stats') {
+    if (newView === 'stats') {
       next.set('tab', 'stats')
       next.delete('view')
     } else {
@@ -35,10 +38,9 @@ function SpeedRecords() {
     setSearchParams(next)
   }
 
-  const tabs = [
-    { id: 'records', label: 'Записи' },
-    { id: 'stats', label: 'Статистика' },
-    { id: 'championship', label: 'Чемпионат' },
+  const subNavTabs = [
+    { id: 'records', label: 'Рекорды Донино' },
+    { id: 'championship', label: 'Клубный чемпионат' },
   ]
 
   // Отслеживание просмотра рекордов скорости
@@ -76,13 +78,42 @@ function SpeedRecords() {
         keywords="курсинг донино, курсинг в донино, замеры скорости собак, рекорды скорости донино, бега 350 м, беговой клуб донино, скорость борзых"
       />
       <MobileSubNavTabs
-        tabs={tabs}
-        activeTab={view === 'stats' ? 'stats' : 'records'}
-        onChange={(id) => handleTabChange(id as 'records' | 'stats' | 'championship')}
+        tabs={subNavTabs}
+        activeTab="records"
+        onChange={handleSubNavChange}
         ariaLabel="Разделы Донино"
       />
 
       <div className="space-y-4">
+        {/* Внутренний переключатель видов: Таблица замеров / Статистика и аналитика */}
+        <div className="flex items-center justify-between gap-3 pt-0.5">
+          <div className="inline-flex items-center p-0.5 rounded-lg bg-cream-100 border border-old-money-200 shadow-2xs">
+            <button
+              type="button"
+              onClick={() => handleViewChange('table')}
+              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs transition-all cursor-pointer ${
+                view === 'table'
+                  ? 'border border-camel-400 bg-camel-100 text-camel-950 font-bold shadow-2xs'
+                  : 'text-charcoal-600 hover:text-charcoal-900 font-medium'
+              }`}
+            >
+              <Table className="h-3.5 w-3.5" />
+              <span>Таблица замеров</span>
+            </button>
+            <button
+              type="button"
+              onClick={() => handleViewChange('stats')}
+              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs transition-all cursor-pointer ${
+                view === 'stats'
+                  ? 'border border-camel-400 bg-camel-100 text-camel-950 font-bold shadow-2xs'
+                  : 'text-charcoal-600 hover:text-charcoal-900 font-medium'
+              }`}
+            >
+              <BarChart2 className="h-3.5 w-3.5" />
+              <span>Статистика и аналитика</span>
+            </button>
+          </div>
+        </div>
         <DoninoPageToolbar
           view={view}
           searchQuery={page.searchQuery}

@@ -10,7 +10,9 @@ import {
   extractDogSex,
 } from './utils'
 import ToolbarSearch from '../../../components/toolbar/ToolbarSearch'
-import QuickBreedBar from '../../TopDogs/QuickBreedBar'
+import QuickBreedBar, { type QuickBreedItem } from '../../TopDogs/QuickBreedBar'
+import { canonicalBreed, formatBreedName, matchesBreedFilter } from '../../../lib/breedMapping'
+import type { DogsIndexEntry } from '../../../lib/competingBreeds'
 import DogSexIcon from '../../../components/DogSexIcon'
 import ModernDropdown from '../../../components/ui/ModernDropdown'
 import { toolbarPillTriggerClass } from '../../../lib/toolbar'
@@ -58,13 +60,51 @@ export default function ResultsSection({ results }: ResultsSectionProps) {
     return isRacing ? getBestTimesByRace(activeResults) : {}
   }, [isRacing, activeResults])
 
-  const breeds = Array.from(new Set(activeResults.map(r => r.dog.breed))).sort()
+  // Candidate breeds sorted strictly by participant count descending, then alphabetically
+  const { breeds, candidateBreeds, dogIndex } = useMemo(() => {
+    const counts = new Map<string, number>()
+    for (const r of activeResults) {
+      const b = r.dog.breed
+      if (b) counts.set(b, (counts.get(b) || 0) + 1)
+    }
+    const sortedEntries = Array.from(counts.entries())
+      .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'ru'))
+
+    const sortedBreedKeys = sortedEntries.map(([breedKey]) => breedKey)
+
+    const candidates: QuickBreedItem[] = sortedEntries.map(([breedKey]) => {
+      const fullName = formatBreedName(breedKey)
+      let label = fullName
+      if (breedKey === 'РОДЕЗИЙСКИЙ РИДЖБЕК') label = 'Риджбек'
+      else if (breedKey === 'РУССКАЯ ПСОВАЯ БОРЗАЯ') label = 'РПБ'
+      else if (breedKey === 'ФАРАОНОВА СОБАКА') label = 'Фараон'
+      else if (breedKey === 'МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ' || breedKey === 'ЛЕВРЕТКА') label = 'Левретка'
+      else if (breedKey === 'ЧИРНЕКО ДЕЛЬ ЭТНА') label = 'Чирнеко'
+      else if (breedKey === 'ИРЛАНДСКИЙ ВОЛКОДАВ') label = 'Ирл. волкодав'
+      else if (breedKey === 'АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР') label = 'АСТ'
+      else if (breedKey === 'БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА') label = 'Малинуа'
+      else if (breedKey === 'ИСПАНСКИЙ ГАЛЬГО') label = 'Гальго'
+      return {
+        key: breedKey,
+        label,
+        fullName,
+        estWidth: label.length * 9 + 32,
+      }
+    })
+
+    const index: DogsIndexEntry[] = activeResults.map(r => ({
+      breed: canonicalBreed(r.dog.breed),
+      competition_count: 1,
+    }))
+
+    return { breeds: sortedBreedKeys, candidateBreeds: candidates, dogIndex: index }
+  }, [activeResults])
 
   const filteredResults = activeResults.filter(result => {
     const matchesSearch = searchQuery === '' ||
       result.name_ru?.toLowerCase().includes(searchQuery.toLowerCase()) ||
       result.name_lat?.toLowerCase().includes(searchQuery.toLowerCase())
-    const matchesBreed = selectedBreed === '' || result.dog.breed === selectedBreed
+    const matchesBreed = selectedBreed === '' || matchesBreedFilter(canonicalBreed(result.dog.breed), selectedBreed)
     const dogSex = extractDogSex(result)
     const matchesSex = selectedSex === '' || dogSex === selectedSex
     return matchesSearch && matchesBreed && matchesSex

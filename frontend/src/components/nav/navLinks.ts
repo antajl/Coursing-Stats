@@ -110,16 +110,10 @@ export function showsMenuItems(calendarVisible: boolean): NavMenuItem[] {
 
 export const DONINO_MENU_ITEMS: NavMenuItem[] = [
   {
-    to: '/speed-records/?tab=records',
-    label: 'Записи',
+    to: '/speed-records',
+    label: 'Рекорды Донино',
     icon: Icons.speed,
-    isActive: doninoTabActive('records'),
-  },
-  {
-    to: '/speed-records/?tab=stats',
-    label: 'Статистика',
-    icon: Icons.trend,
-    isActive: doninoTabActive('stats'),
+    isActive: (pathname: string) => pathname === '/speed-records' || pathname === '/speed-records/',
   },
   {
     to: '/donino/championship',

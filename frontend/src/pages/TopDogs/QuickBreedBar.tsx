@@ -77,6 +77,11 @@ export default function QuickBreedBar({
     )
     return active.length > 0 ? active : base
   }, [candidateBreeds, breedValues])
+
+  const candidateKeys = useMemo(
+    () => candidates.map((c) => c.key).join(','),
+    [candidates]
+  )
   const containerRef = useRef<HTMLDivElement>(null)
   const allBtnRef = useRef<HTMLButtonElement>(null)
   const moreBtnRef = useRef<HTMLButtonElement>(null)
@@ -105,7 +110,8 @@ export default function QuickBreedBar({
 
     const updateContainer = () => {
       if (el) {
-        setContainerWidth(el.clientWidth)
+        const nextW = el.clientWidth
+        setContainerWidth((prev) => (prev !== nextW ? nextW : prev))
       }
     }
     updateContainer()
@@ -118,14 +124,26 @@ export default function QuickBreedBar({
     candidates.forEach((b, i) => {
       widths[b.key] = itemRefs.current[i]?.offsetWidth || b.estWidth
     })
-    setMeasured({ allW, moreW, minW, widths })
+    setMeasured((prev) => {
+      if (
+        prev &&
+        prev.allW === allW &&
+        prev.moreW === moreW &&
+        prev.minW === minW &&
+        Object.keys(prev.widths).length === Object.keys(widths).length &&
+        Object.entries(widths).every(([k, v]) => prev.widths[k] === v)
+      ) {
+        return prev
+      }
+      return { allW, moreW, minW, widths }
+    })
 
     if (typeof ResizeObserver !== 'undefined') {
       const ro = new ResizeObserver((entries) => {
         for (const entry of entries) {
           const w = entry.contentRect.width
           if (w > 0) {
-            setContainerWidth(w)
+            setContainerWidth((prev) => (prev !== w ? w : prev))
           }
         }
       })
@@ -135,7 +153,7 @@ export default function QuickBreedBar({
       window.addEventListener('resize', updateContainer)
       return () => window.removeEventListener('resize', updateContainer)
     }
-  }, [candidates])
+  }, [candidateKeys])
 
   const normalizedSelected = useMemo(
     () => (selectedBreed ? canonicalBreed(selectedBreed) : ''),

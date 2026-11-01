@@ -8,13 +8,15 @@ import type { GroupBy } from './stats/constants'
 import type { DogsIndexEntry } from '../../lib/competingBreeds'
 import { matchesBreedFilter, canonicalBreed } from '../../lib/breedMapping'
 
+const EMPTY_RECORDS: Record<string, unknown>[] = []
+
 function doninoRecordsFromQuery(
   result: { success: boolean; data?: unknown } | undefined,
 ): Record<string, unknown>[] {
-  if (!result?.success || result.data == null) return []
+  if (!result?.success || result.data == null) return EMPTY_RECORDS
   if (Array.isArray(result.data)) return result.data
   const wrapped = result.data as { records?: unknown }
-  return Array.isArray(wrapped.records) ? wrapped.records : []
+  return Array.isArray(wrapped.records) ? wrapped.records : EMPTY_RECORDS
 }
 
 export function useSpeedRecordsPage() {
@@ -112,8 +114,14 @@ export function useSpeedRecordsPage() {
     [setSearchParams]
   )
 
-  const speedRecordsData = doninoRecordsFromQuery(speedRecordsQuery.data)
-  const coursingRecordsData = doninoRecordsFromQuery(coursingRecordsQuery.data)
+  const speedRecordsData = useMemo(
+    () => doninoRecordsFromQuery(speedRecordsQuery.data),
+    [speedRecordsQuery.data]
+  )
+  const coursingRecordsData = useMemo(
+    () => doninoRecordsFromQuery(coursingRecordsQuery.data),
+    [coursingRecordsQuery.data]
+  )
 
   const sexByDog = useMemo(
     () => buildSexByDogMap(speedRecordsData as { name: string; breed: string; sex: string }[]),
@@ -643,13 +651,18 @@ export function useSpeedRecordsPage() {
   )
 
   const breeds = useMemo(() => {
-    const set = new Set<string>()
-    for (const r of bestSpeedRecords) set.add(r.breed)
-    for (const r of bestCoursingRecords) set.add(r.breed)
-    return [...set].sort()
+    const counts = new Map<string, number>()
+    for (const r of bestSpeedRecords) if (r.breed) counts.set(r.breed, (counts.get(r.breed) || 0) + 1)
+    for (const r of bestCoursingRecords) if (r.breed) counts.set(r.breed, (counts.get(r.breed) || 0) + 1)
+    return Array.from(counts.entries())
+      .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'ru'))
+      .map(([b]) => b)
   }, [bestSpeedRecords, bestCoursingRecords])
 
-  const sexes = [...new Set(bestSpeedRecords.map((r) => r.sex) as string[])].sort()
+  const sexes = useMemo(
+    () => [...new Set(bestSpeedRecords.map((r) => r.sex) as string[])].sort(),
+    [bestSpeedRecords]
+  )
 
   const dogIndex = useMemo<DogsIndexEntry[]>(() => {
     const dogMap = new Map<string, string>()

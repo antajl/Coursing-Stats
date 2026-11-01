@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useMemo, type KeyboardEvent } from 'react'
 import ModernDropdown from './ModernDropdown'
-import { uniqueCanonicalBreeds, displayBreed, matchesBreedFilter } from '../../lib/breedMapping'
+import { canonicalBreed, uniqueCanonicalBreeds, displayBreed, matchesBreedFilter } from '../../lib/breedMapping'
 import { deriveCompetingBreeds, countCompetingBreeds, type DogsIndexEntry } from '../../lib/competingBreeds'
 
 interface BreedSearchDropdownProps {
@@ -25,19 +25,51 @@ export default function BreedSearchDropdown({
   const inputRef = useRef<HTMLInputElement>(null)
   const listRef = useRef<HTMLDivElement>(null)
 
-  // Get unique canonical breeds sorted by popularity if dogIndex is provided
+  // Get unique canonical breeds sorted by popularity if dogIndex or breeds is provided
   const uniqueBreeds = useMemo(() => {
     if (dogIndex && dogIndex.length > 0) {
       return deriveCompetingBreeds(dogIndex)
     }
-    return uniqueCanonicalBreeds(breeds)
+    // Sort breeds by frequency/popularity descending, then alphabetically
+    const counts = new Map<string, number>()
+    for (const b of breeds) {
+      const canon = canonicalBreed(b || '')
+      if (canon) counts.set(canon, (counts.get(canon) || 0) + 1)
+    }
+    const hasCounts = Array.from(counts.values()).some((c) => c > 1)
+    if (hasCounts) {
+      return Array.from(counts.keys()).sort((a, b) => {
+        const byCount = (counts.get(b) || 0) - (counts.get(a) || 0)
+        if (byCount !== 0) return byCount
+        return a.localeCompare(b, 'ru')
+      })
+    }
+    // If incoming breeds were already deduplicated/pre-ordered, preserve that order
+    const seen = new Set<string>()
+    const ordered: string[] = []
+    for (const b of breeds) {
+      const canon = canonicalBreed(b || '')
+      if (canon && !seen.has(canon)) {
+        seen.add(canon)
+        ordered.push(canon)
+      }
+    }
+    return ordered.length > 0 ? ordered : uniqueCanonicalBreeds(breeds)
   }, [breeds, dogIndex])
 
-  // Count dogs per breed if dogIndex is provided
+  // Count dogs per breed if dogIndex or breeds with multiplicity is provided
   const breedCounts = useMemo(() => {
-    if (!dogIndex || dogIndex.length === 0) return new Map<string, number>()
-    return countCompetingBreeds(dogIndex)
-  }, [dogIndex])
+    if (dogIndex && dogIndex.length > 0) {
+      return countCompetingBreeds(dogIndex)
+    }
+    const counts = new Map<string, number>()
+    for (const b of breeds) {
+      const canon = canonicalBreed(b || '')
+      if (canon) counts.set(canon, (counts.get(canon) || 0) + 1)
+    }
+    const hasMultiplicity = Array.from(counts.values()).some((c) => c > 1)
+    return hasMultiplicity ? counts : new Map<string, number>()
+  }, [dogIndex, breeds])
   
   // Filter breeds based on search query
   const filteredBreeds = uniqueBreeds.filter((breed) => {

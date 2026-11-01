@@ -58,9 +58,7 @@ export default function DoninoChampionship() {
 
   const handleSubNavChange = (id: string) => {
     if (id === 'records') {
-      navigate('/speed-records/?tab=records')
-    } else if (id === 'stats') {
-      navigate('/speed-records/?tab=stats')
+      navigate('/speed-records')
     }
   }
 
@@ -75,13 +73,12 @@ export default function DoninoChampionship() {
   }
 
   const subNavTabs = [
-    { id: 'records', label: 'Записи' },
-    { id: 'stats', label: 'Статистика' },
-    { id: 'championship', label: 'Чемпионат' },
+    { id: 'records', label: 'Рекорды Донино' },
+    { id: 'championship', label: 'Клубный чемпионат' },
   ]
 
   const mainTabs = [
-    { id: 'standings', label: 'Рейтинг', icon: Trophy },
+    { id: 'standings', label: 'Рейтинг чемпионата', icon: Trophy },
     { id: 'stage1', label: 'I этап (9 авг)', icon: Calendar },
     { id: 'stage2', label: 'II этап (20 сен)', icon: Calendar },
     { id: 'stage3', label: 'III этап (31 окт)', icon: Calendar },
