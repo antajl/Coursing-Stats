@@ -435,7 +435,7 @@ const DogCardInner = function DogCard({ dog, type, filterYear, rank, variant = '
   )
 
   const statsColClass = isEmbedded
-    ? 'mr-0 flex min-h-0 w-auto shrink-0 min-w-[4.5rem] sm:min-w-[5rem] flex-col justify-center items-start border-l border-old-money-200/35 pl-2 sm:pl-2.5 pr-0.5'
+    ? 'mr-0 flex min-h-0 w-[7.75rem] shrink-0 flex-col justify-center items-start border-l border-old-money-200/35 pl-2 sm:pl-2.5 pr-0.5'
     : 'mr-6 sm:mr-7 flex min-h-0 w-[6.5rem] sm:w-[8.5rem] shrink-0 flex-col justify-center items-start border-l border-old-money-200/35 pl-2 sm:pl-2.5'
 
   return (

@@ -1,17 +1,15 @@
 import { useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import { Image, Circle, Minus } from 'lucide-react'
+import { Camera, Circle, Minus } from 'lucide-react'
 import CoursingHistorySparkline from '../../components/CoursingHistorySparkline'
 import DogSexIcon from '../../components/DogSexIcon'
 import OwnerCrownName from '../../components/OwnerCrownName'
 import SpeedHistorySparkline from '../../components/SpeedHistorySparkline'
-import SpeedStatusBadge from '../../components/SpeedStatusBadge'
 import RankBadge from '../../components/RankBadge'
 import {
   formatRecordDate,
   formatDoninoSpeedKmh,
   parseRecordHistory,
-  isRecentDoninoDate,
   time350ToSpeedKmh,
 } from '../../lib/recordDates'
 import { toDogTitleCase } from '../../lib/dogName'
@@ -33,6 +31,7 @@ interface DoninoListRecordRowProps {
   /** Flat row inside DoninoColumnShell (default true — only used there). */
   embedded?: boolean
   rank?: number
+  delta?: number | 'NEW' | null
   latestDateInDataset?: string | null
 }
 
@@ -44,23 +43,12 @@ function getTrackTypeIcon(trackType: string | null | undefined) {
   if (!trackType) return null
   const lower = trackType.toLowerCase()
   if (lower.includes('круг') || lower.includes('circle')) {
-    return <Circle size={12} className="text-camel-600" />
+    return <Circle size={10} className="text-camel-600 inline shrink-0" />
   }
   if (lower.includes('прямая') || lower.includes('straight') || lower.includes('line')) {
-    return <Minus size={12} className="text-camel-600" />
+    return <Minus size={10} className="text-camel-600 inline shrink-0" />
   }
   return null
-}
-
-function TrackTypeBadge({ trackType }: { trackType: string | null | undefined }) {
-  if (!trackType) return null
-  const icon = getTrackTypeIcon(trackType)
-  return (
-    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-camel-100 text-camel-700 text-xs font-medium">
-      {icon}
-      {trackType}
-    </span>
-  )
 }
 
 export default function DoninoListRecordRow({
@@ -77,37 +65,10 @@ export default function DoninoListRecordRow({
   trackType,
   embedded = true,
   rank,
+  delta,
   latestDateInDataset,
 }: DoninoListRecordRowProps) {
   const historyItems = useMemo(() => parseRecordHistory(history), [history])
-  const isRecent = useMemo(
-    () => isRecentDoninoDate(date, latestDateInDataset),
-    [date, latestDateInDataset]
-  )
-
-  const hasHistory = historyItems.length > 0
-  const isNewDog = status === 'new' || (!hasHistory && status !== 'improved')
-  const isImprovedDog = status === 'improved' || (hasHistory && !isNewDog)
-
-  const showNew = isRecent && isNewDog
-  const showUpd = isRecent && !showNew && isImprovedDog
-
-  const prevValue = useMemo(() => {
-    if (!hasHistory) return null
-    if (mode === 'speed') {
-      const speeds = historyItems
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        .map((h: any) => Number(h.speed_km_h ?? h.speed ?? 0))
-        .filter((s) => s > 0)
-      return speeds.length > 0 ? Math.max(...speeds).toFixed(1) : null
-    } else {
-      const times = historyItems
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        .map((h: any) => Number(h.time_seconds ?? h.time ?? 0))
-        .filter((t) => t > 0)
-      return times.length > 0 ? Math.min(...times).toFixed(2) : null
-    }
-  }, [hasHistory, historyItems, mode])
 
   const coursingSpeedKmh = useMemo(() => {
     if (mode !== 'coursing' || timeSeconds == null || timeSeconds <= 0) return null
@@ -126,13 +87,13 @@ export default function DoninoListRecordRow({
       <SpeedHistorySparkline
         current={{ speed_km_h: speedKmh ?? 0, date: date ?? '' }}
         history={history}
-        className="h-12 w-full max-w-[180px]"
+        className="h-10 w-full max-w-[170px]"
       />
     ) : (
       <CoursingHistorySparkline
         current={{ time_seconds: timeSeconds ?? 0, date: date ?? '' }}
         history={history}
-        className="h-12 w-full max-w-[180px]"
+        className="h-10 w-full max-w-[170px]"
       />
     )
 
@@ -140,68 +101,82 @@ export default function DoninoListRecordRow({
     <Link
       to={`/donino-dog/${encodeURIComponent(name)}/${encodeURIComponent(breed)}/`}
       state={{ from: mode === 'speed' ? 'speed-records' : 'coursing-records' }}
-      className="donino-list-row-link group min-w-0 flex-1 border-b border-old-money-200 bg-white py-2 px-4 transition-colors duration-200 hover:bg-camel-100/60"
+      className="donino-list-row-link group min-w-0 flex-1 border-b border-old-money-200 bg-white py-1.5 sm:py-2 px-3 sm:px-4 transition-colors duration-150 hover:bg-camel-100/60"
     >
-      <div className="flex items-center gap-2.5 min-w-0 flex-1">
+      <div className="flex items-center gap-2 min-w-0 flex-1">
         {rank != null && (
-          <div className="shrink-0 flex items-center justify-center w-6 sm:w-7">
-            <RankBadge rank={rank} />
+          <div className="shrink-0 flex items-center justify-center w-7 sm:w-8 mr-1">
+            <RankBadge rank={rank} delta={delta} />
           </div>
         )}
         <div className="donino-home-row-main min-w-0 flex-1">
-          <div className="flex min-w-0 items-center gap-2">
+          <div className="flex min-w-0 items-center gap-1.5">
             <OwnerCrownName name={name} breed={breed} kind="donino">
-              <span className="break-words font-serif text-base font-bold leading-snug text-charcoal-900 line-clamp-2">
+              <span className="break-words font-serif text-sm sm:text-base font-bold leading-snug text-charcoal-900 line-clamp-1">
                 {toDogTitleCase(name)}
               </span>
             </OwnerCrownName>
             {sex && <DogSexIcon sex={sex} />}
           </div>
           {(date || breed) && (
-            <div className="mt-0.5 flex min-w-0 items-center gap-1.5 text-xs text-old-money-500">
-              {date && <span>{formatRecordDate(date)}</span>}
+            <div className="mt-0.5 flex min-w-0 items-center gap-1.5 text-xs text-old-money-500 whitespace-nowrap">
+              {date && <span className="shrink-0">{formatRecordDate(date)}</span>}
               {date && breed && <span className="text-old-money-300">·</span>}
-              {breed && <span className="donino-home-row-breed">{breed}</span>}
+              {breed && <span className="truncate donino-home-row-breed">{breed}</span>}
+            </div>
+          )}
+          {trackType && (
+            <div className="mt-0.5 flex min-w-0 items-center text-[11px] text-old-money-500">
+              <span className="inline-flex items-center gap-0.5 font-medium text-old-money-600">
+                {getTrackTypeIcon(trackType)}
+                <span>{trackType}</span>
+              </span>
             </div>
           )}
         </div>
       </div>
 
       <div
-        className={`donino-list-row-chart mt-2 flex min-h-0 items-center justify-center sm:mt-0 sm:min-h-[48px] sm:flex-1 sm:px-2 ${
+        className={`donino-list-row-chart flex min-h-0 items-center justify-center sm:flex-1 sm:px-2 ${
           hasSparkline ? '' : 'hidden sm:flex'
         }`}
       >
         {hasSparkline ? sparkline : null}
       </div>
 
-      <div className="relative mt-2 ml-auto shrink-0 sm:mt-0 flex flex-col items-end gap-0.5 text-right">
-        <div className="flex items-center justify-end gap-1.5">
-          {showNew && (
-            <SpeedStatusBadge
-              variant="new"
-              date={date}
-            />
-          )}
-          {showUpd && !showNew && (
-            <SpeedStatusBadge
-              variant="upd"
-              date={date}
-              currentValue={mode === 'speed' ? formatDoninoSpeedKmh(speedKmh) : formatTime(timeSeconds ?? 0)}
-              prevValue={prevValue}
-              unit={mode === 'speed' ? 'км/ч' : 'сек'}
-            />
-          )}
-          <span className="donino-home-metric">
-            {mode === 'speed' ? `${formatDoninoSpeedKmh(speedKmh)} км/ч` : `${formatTime(timeSeconds ?? 0)} сек`}
-          </span>
-        </div>
-        {coursingSpeedKmh && (
-          <span className="text-[11px] font-medium tracking-tight text-old-money-500 tabular-nums">
-            {coursingSpeedKmh} км/ч
-          </span>
+      <div className="relative shrink-0 flex flex-col items-end justify-center text-right min-w-[70px] sm:min-w-[85px]">
+        {mode === 'speed' ? (
+          <>
+            <div className="flex items-center gap-1 leading-none whitespace-nowrap">
+              <span className="text-base sm:text-lg font-bold tabular-nums text-camel-700 leading-none">
+                {formatDoninoSpeedKmh(speedKmh)}
+              </span>
+              <span className="flex flex-col text-[7.5px] sm:text-[8px] font-semibold uppercase tracking-wide text-charcoal-500 leading-[1.1] text-left">
+                <span>макс.</span>
+                <span>км/ч</span>
+              </span>
+            </div>
+            <span className="text-[10px] sm:text-[10.5px] font-medium text-old-money-500 tabular-nums mt-0.5">
+              {historyItems.length > 0 ? `${historyItems.length + 1} зам.` : '1 зам.'}
+            </span>
+          </>
+        ) : (
+          <>
+            <div className="flex items-center gap-1 leading-none whitespace-nowrap">
+              <span className="text-base sm:text-lg font-bold tabular-nums text-camel-700 leading-none">
+                {formatTime(timeSeconds ?? 0)}
+              </span>
+              <span className="text-[8px] sm:text-[8.5px] font-semibold uppercase tracking-wide text-charcoal-500 leading-none">
+                сек
+              </span>
+            </div>
+            {coursingSpeedKmh && (
+              <span className="text-[10px] sm:text-[10.5px] font-medium text-old-money-500 tabular-nums mt-0.5">
+                {coursingSpeedKmh} км/ч
+              </span>
+            )}
+          </>
         )}
-        {trackType && <TrackTypeBadge trackType={trackType} />}
       </div>
     </Link>
   )
@@ -217,13 +192,12 @@ export default function DoninoListRecordRow({
         href={screenshotUrl}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Открыть скриншот"
-        title="Скриншот"
+        aria-label="Смотреть подтверждение (скриншот/протокол)"
+        title="Смотреть подтверждение (скриншот/протокол)"
         className="donino-list-row-screen"
         onClick={(e) => e.stopPropagation()}
       >
-        <Image size={14} strokeWidth={2} aria-hidden />
-        <span>Скрин</span>
+        <Camera size={15} strokeWidth={2} aria-hidden />
       </a>
     </div>
   )

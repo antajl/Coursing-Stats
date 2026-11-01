@@ -138,5 +138,26 @@ export function findStagePointEntry(
     );
   }
 
+  if (n.includes('БАЗИЛИО') || (nLat && nLat.includes('BASILIO'))) {
+    return stageList.find((item: any) =>
+      normalizeNameForMatch(item.dog_name).includes('БАЗИЛИО') ||
+      normalizeNameForMatch(item.dog_name).includes('BASILIO')
+    );
+  }
+
+  if (n.includes('КУПИДОН') || (nLat && nLat.includes('KUPIDON'))) {
+    return stageList.find((item: any) =>
+      normalizeNameForMatch(item.dog_name).includes('КУПИДОН') ||
+      normalizeNameForMatch(item.dog_name).includes('KUPIDON')
+    );
+  }
+
+  if (n.includes('СЭМЮЭЛЬ') || (nLat && nLat.includes('SAMUEL'))) {
+    return stageList.find((item: any) =>
+      normalizeNameForMatch(item.dog_name).includes('СЭМЮЭЛЬ') ||
+      normalizeNameForMatch(item.dog_name).includes('SAMUEL')
+    );
+  }
+
   return null;
 }

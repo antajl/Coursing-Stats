@@ -246,3 +246,12 @@ export function extractDogSex(result: Result): 'm' | 'f' | '' {
   return ''
 }
 
+export function extractDoninoLeague(breedClass?: string | null): string | null {
+  if (!breedClass) return null
+  if (/юниор/i.test(breedClass)) return 'Юниоры'
+  if (/абсолют/i.test(breedClass)) return 'Абсолют'
+  if (/чемпион/i.test(breedClass)) return 'Чемпионов'
+  if (/прогресс/i.test(breedClass)) return 'Прогресс'
+  return null
+}
+

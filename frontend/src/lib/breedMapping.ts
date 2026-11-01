@@ -127,6 +127,7 @@ export function sanitizeBreedName(raw: string): string {
   )
 
   // 17. Убираем служебные пометки каталогов в скобках
+  str = str.replace(/\s*\(\s*тип\s+не\s+указан\s*\)/gi, '')
   str = str.replace(/\s*\((?:ОШИБКА|ИЗМЕНЕНО|ВЫСТАВЛЯЕТСЯ|ВНЕ РИНГА|РЕШЕНИЕ)[^)]*\)/gi, '')
 
   // 18. Окрасы и разновидности в рамках одной породы
@@ -167,6 +168,7 @@ export function breedNormalizeKey(breed: string): string {
     .replace(/Ё/g, 'Е')
     .replace(/[\u00a0]/g, ' ')
     .replace(/\s+/g, ' ')
+    .replace(/\s*\(\s*ТИП\s+НЕ\s+УКАЗАН\s*\)/gi, '')
     // JS \b is ASCII-only — use explicit separators for К Ш → К-Ш
     .replace(/(^|[\s(,])([КГДЖ])[\s/]+Ш(?=$|[\s),])/g, '$1$2-Ш')
     .replace(/\(([КГДЖ]-Ш)\)/g, '$1')
@@ -354,15 +356,17 @@ export const BREED_ALIAS_BY_KEY: Record<string, string> = {
   'ВЕНГЕРСКАЯ ВЫЖЛА КОРОТКОШЕРСТНАЯ': 'ВЕНГЕРСКАЯ ВЫЖЛА К-Ш',
   'ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ ЛЕГАВАЯ': 'ВЕНГЕРСКАЯ ВЫЖЛА К-Ш',
   'ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ ЛЕГАВАЯ (ВЫЖЛА)': 'ВЕНГЕРСКАЯ ВЫЖЛА К-Ш',
-  ВЫЖЛА: 'ВЕНГЕРСКАЯ ВЫЖЛА (ТИП НЕ УКАЗАН)',
-  'ВЕНГЕРСКАЯ ВЫЖЛА': 'ВЕНГЕРСКАЯ ВЫЖЛА (ТИП НЕ УКАЗАН)',
+  ВЫЖЛА: 'ВЕНГЕРСКАЯ ВЫЖЛА',
+  'ВЕНГЕРСКАЯ ВЫЖЛА': 'ВЕНГЕРСКАЯ ВЫЖЛА',
+  'ВЕНГЕРСКАЯ ВЫЖЛА (ТИП НЕ УКАЗАН)': 'ВЕНГЕРСКАЯ ВЫЖЛА',
 
   // --- немецкая овчарка: без типа ≠ К-Ш / Д-Ш; комбинированный ринговый тип отдельно ---
   'НЕМЕЦКАЯ ОВЧАРКА К-Ш': 'НЕМЕЦКАЯ ОВЧАРКА К-Ш',
   'НЕМЕЦКАЯ ОВЧАРКА Д-Ш': 'НЕМЕЦКАЯ ОВЧАРКА Д-Ш',
   'НЕМЕЦКАЯ ОВЧАРКА (Д-Ш, К-Ш)': 'НЕМЕЦКАЯ ОВЧАРКА (Д-Ш, К-Ш)',
   'НЕМЕЦКАЯ ОВЧАРКА (Д Ш, К Ш)': 'НЕМЕЦКАЯ ОВЧАРКА (Д-Ш, К-Ш)',
-  'НЕМЕЦКАЯ ОВЧАРКА': 'НЕМЕЦКАЯ ОВЧАРКА (ТИП НЕ УКАЗАН)',
+  'НЕМЕЦКАЯ ОВЧАРКА': 'НЕМЕЦКАЯ ОВЧАРКА',
+  'НЕМЕЦКАЯ ОВЧАРКА (ТИП НЕ УКАЗАН)': 'НЕМЕЦКАЯ ОВЧАРКА',
   'НЕМЕЦКАЯ ОВЧАРКА (СТАНДАРТНАЯ)': 'НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ',
 
   // --- курцхаар (одна порода, разное написание) ---
@@ -537,7 +541,9 @@ const COAT_MARKER_RE = /(^|[\s(,])([КГДЖ])-Ш(?=$|[\s),])/g
 
 /** Sentence case для RU/EN пород; маркеры К-Ш/Д-Ш/Ж-Ш/Г-Ш сохраняются. */
 export function toSentenceCaseRu(text: string): string {
-  const raw = (text || '').trim()
+  const raw = String(text ?? '')
+    .replace(/\s*\(\s*тип\s+не\s+указан\s*\)/gi, '')
+    .trim()
   if (!raw) return raw
 
   const markers: string[] = []
@@ -598,10 +604,18 @@ const BREED_DISPLAY_OVERRIDES: Record<string, BreedDisplay> = {
     primary: 'Гальго',
     secondary: 'Испанская борзая',
   },
+  'РУССКАЯ ПСОВАЯ БОРЗАЯ': {
+    primary: 'РПБ',
+    secondary: 'Русская псовая борзая',
+  },
+  'ФАРАОНОВА СОБАКА': {
+    primary: 'Фараонова',
+    secondary: 'Фараонова собака',
+  },
 }
 
 /** Отображение породы: sentence case + опциональная официальная подпись. */
-export function displayBreed(breed: string): BreedDisplay {
+export function displayBreed(breed: unknown): BreedDisplay {
   const canon = canonicalBreed(breed)
   if (!canon) return { primary: '' }
   const override = BREED_DISPLAY_OVERRIDES[canon]
@@ -610,8 +624,8 @@ export function displayBreed(breed: string): BreedDisplay {
 }
 
 /** Каноническое UPPERCASE-имя для фильтров / индексов. */
-export function canonicalBreed(breed: string): string {
-  const raw = (breed || '').trim()
+export function canonicalBreed(breed: unknown): string {
+  const raw = String(breed ?? '').trim()
   if (!raw) return raw
   if (/^\d+$/.test(raw)) return ''
   // Сначала полный ключ (до снятия / EN) — иначе «АКИТА / AMERICAN» схлопнется в японскую акиту
@@ -635,7 +649,7 @@ export function breedDbVariants(filterBreed: string): string[] {
   return [...variants]
 }
 
-export function matchesBreedFilter(rowBreed: string | null | undefined, filterBreed: string): boolean {
+export function matchesBreedFilter(rowBreed: string | null | undefined, filterBreed: unknown): boolean {
   if (!filterBreed) return true
   if (!rowBreed) return false
   return breedAliasKey(canonicalBreed(rowBreed)) === breedAliasKey(canonicalBreed(filterBreed))
@@ -652,7 +666,8 @@ export function uniqueCanonicalBreeds(breeds: Iterable<string | null | undefined
 }
 
 /** Человекочитаемое название породы (sentence case). */
-export function formatBreedName(breed: string): string {
+export function formatBreedName(breed: unknown): string {
   if (!breed) return ''
-  return displayBreed(breed).primary || breed
+  const str = String(breed)
+  return displayBreed(str).primary || str
 }

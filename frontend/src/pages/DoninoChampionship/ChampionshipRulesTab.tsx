@@ -284,7 +284,7 @@ export default function ChampionshipRulesTab({ reglamentUrl, spreadsheetUrl }: C
           <div className="rounded-2xl border border-old-money-200 bg-cream-50 p-5 shadow-2xs space-y-3.5">
             <div className="flex items-center gap-2">
               <FileText className="w-4 h-4 text-camel-700" />
-              <h3 className="text-xs font-bold font-serif uppercase tracking-wider text-charcoal-900">
+              <h3 className="text-xs font-bold font-serif  text-charcoal-900">
                 Официальный регламент
               </h3>
             </div>
@@ -316,7 +316,7 @@ export default function ChampionshipRulesTab({ reglamentUrl, spreadsheetUrl }: C
           <div className="rounded-2xl border border-old-money-200 bg-cream-50 p-5 shadow-2xs space-y-3">
             <div className="flex items-center gap-2">
               <Sparkles className="w-4 h-4 text-camel-700" />
-              <h3 className="text-xs font-bold font-serif uppercase tracking-wider text-charcoal-900">
+              <h3 className="text-xs font-bold font-serif  text-charcoal-900">
                 Сводные параметры серии
               </h3>
             </div>
@@ -365,7 +365,7 @@ export default function ChampionshipRulesTab({ reglamentUrl, spreadsheetUrl }: C
           <div className="rounded-2xl border border-old-money-200 bg-cream-50 p-5 shadow-2xs space-y-2.5">
             <div className="flex items-center gap-2">
               <ShieldCheck className="w-4 h-4 text-camel-700" />
-              <h3 className="text-xs font-bold font-serif uppercase tracking-wider text-charcoal-900">
+              <h3 className="text-xs font-bold font-serif  text-charcoal-900">
                 Допуск к участию
               </h3>
             </div>
@@ -378,7 +378,7 @@ export default function ChampionshipRulesTab({ reglamentUrl, spreadsheetUrl }: C
           <div className="rounded-2xl border border-old-money-200 bg-cream-50 p-5 shadow-2xs space-y-3">
             <div className="flex items-center gap-2">
               <Info className="w-4 h-4 text-camel-700" />
-              <h3 className="text-xs font-bold font-serif uppercase tracking-wider text-charcoal-900">
+              <h3 className="text-xs font-bold font-serif  text-charcoal-900">
                 Организатор турнира
               </h3>
             </div>
@@ -429,7 +429,7 @@ export default function ChampionshipRulesTab({ reglamentUrl, spreadsheetUrl }: C
 
           {/* Quick Navigation Links */}
           <div className="rounded-2xl border border-old-money-200 bg-cream-50 p-5 shadow-2xs space-y-2.5">
-            <div className="text-[11px] font-bold font-serif uppercase tracking-wider text-charcoal-500">
+            <div className="text-[11px] font-bold font-serif  text-charcoal-500">
               Быстрый переход
             </div>
             <div className="space-y-1.5">

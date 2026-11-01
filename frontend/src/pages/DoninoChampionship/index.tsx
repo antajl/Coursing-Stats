@@ -13,7 +13,7 @@ import {
   type ChampionshipData,
 } from '../../lib/staticData/donino'
 import ChampionshipStandingsTab from './ChampionshipStandingsTab'
-import ChampionshipStageTab from './ChampionshipStageTab'
+import ChampionshipStageTab, { prefetchStageData } from './ChampionshipStageTab'
 import ChampionshipRulesTab from './ChampionshipRulesTab'
 
 type MainTab = 'standings' | 'stage1' | 'stage2' | 'stage3' | 'rules'
@@ -26,6 +26,16 @@ export default function DoninoChampionship() {
   const [error, setError] = useState<string | null>(null)
 
   const activeTab = (searchParams.get('tab') as MainTab) || 'standings'
+  const [visitedTabs, setVisitedTabs] = useState<Set<MainTab>>(() => new Set([activeTab]))
+
+  useEffect(() => {
+    setVisitedTabs((prev) => {
+      if (prev.has(activeTab)) return prev
+      const next = new Set(prev)
+      next.add(activeTab)
+      return next
+    })
+  }, [activeTab])
 
   useEffect(() => {
     let cancelled = false
@@ -35,6 +45,10 @@ export default function DoninoChampionship() {
         if (cancelled) return
         if (res.success && res.data) {
           setData(res.data)
+          // Prefetch stages with results so tab switches are instantaneous and never jerk
+          res.data.stages.forEach((s) => {
+            if (s.has_results) prefetchStageData(s.id)
+          })
         } else {
           setError(res.error || 'Не удалось загрузить данные чемпионата')
         }
@@ -59,6 +73,8 @@ export default function DoninoChampionship() {
   const handleSubNavChange = (id: string) => {
     if (id === 'records') {
       navigate('/speed-records')
+    } else if (id === 'analytics') {
+      navigate('/donino/analytics')
     }
   }
 
@@ -75,6 +91,7 @@ export default function DoninoChampionship() {
   const subNavTabs = [
     { id: 'records', label: 'Рекорды Донино' },
     { id: 'championship', label: 'Клубный чемпионат' },
+    { id: 'analytics', label: 'Аналитика полигона' },
   ]
 
   const mainTabs = [
@@ -153,33 +170,58 @@ export default function DoninoChampionship() {
           </div>
         ) : (
           <>
-            {activeTab === 'standings' && (
-              <ChampionshipStandingsTab
-                standings={data.standings}
-                promotions={data.promotions}
-                resultsSpreadsheetUrl={data.results_spreadsheet_url}
-                pointsSpreadsheetUrl={data.points_spreadsheet_url}
-              />
-            )}
+            <div
+              role="tabpanel"
+              className={activeTab === 'standings' ? 'animate-fade-in' : 'hidden'}
+            >
+              {visitedTabs.has('standings') && (
+                <ChampionshipStandingsTab
+                  standings={data.standings}
+                  promotions={data.promotions}
+                  resultsSpreadsheetUrl={data.results_spreadsheet_url}
+                  pointsSpreadsheetUrl={data.points_spreadsheet_url}
+                />
+              )}
+            </div>
 
-            {activeTab === 'stage1' && stage1 && (
-              <ChampionshipStageTab stage={stage1} />
-            )}
+            <div
+              role="tabpanel"
+              className={activeTab === 'stage1' ? 'animate-fade-in' : 'hidden'}
+            >
+              {visitedTabs.has('stage1') && stage1 && (
+                <ChampionshipStageTab stage={stage1} />
+              )}
+            </div>
 
-            {activeTab === 'stage2' && stage2 && (
-              <ChampionshipStageTab stage={stage2} />
-            )}
+            <div
+              role="tabpanel"
+              className={activeTab === 'stage2' ? 'animate-fade-in' : 'hidden'}
+            >
+              {visitedTabs.has('stage2') && stage2 && (
+                <ChampionshipStageTab stage={stage2} />
+              )}
+            </div>
 
-            {activeTab === 'stage3' && stage3 && (
-              <ChampionshipStageTab stage={stage3} />
-            )}
+            <div
+              role="tabpanel"
+              className={activeTab === 'stage3' ? 'animate-fade-in' : 'hidden'}
+            >
+              {visitedTabs.has('stage3') && stage3 && (
+                <ChampionshipStageTab stage={stage3} />
+              )}
+            </div>
 
-            {activeTab === 'rules' && (
-              <ChampionshipRulesTab
-                reglamentUrl={data.reglament_pdf_url}
-                spreadsheetUrl={data.spreadsheet_url}
-              />
-            )}
+            <div
+              role="tabpanel"
+              className={activeTab === 'rules' ? 'animate-fade-in' : 'hidden'}
+            >
+              {visitedTabs.has('rules') && (
+                <ChampionshipRulesTab
+                  reglamentUrl={data.reglament_pdf_url}
+                  spreadsheetUrl={data.spreadsheet_url}
+                />
+              )}
+            </div>
           </>
         )}
       </div>

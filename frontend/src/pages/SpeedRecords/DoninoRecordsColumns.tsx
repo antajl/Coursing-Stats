@@ -2,14 +2,7 @@ import { useState, useMemo } from 'react'
 import DoninoListRecordRow from './DoninoListRecordRow'
 import DoninoColumnPlaque, { DoninoColumnShell } from './DoninoColumnPlaque'
 import { useInfiniteScroll } from '../../hooks/useInfiniteScroll'
-import RecordSortBar from './RecordSortBar'
 import { SegmentedTabs } from '../../components/ui/SegmentedTabs'
-
-const UNIFIED_SORT_OPTIONS = [
-  { field: 'result', label: 'Результат' },
-  { field: 'date', label: 'Дата' },
-  { field: 'name', label: 'Кличка' },
-]
 
 interface SpeedRecord {
   id: string | number
@@ -23,6 +16,7 @@ interface SpeedRecord {
   history?: unknown[]
   track_type?: string | null
   rank?: number
+  delta?: number | 'NEW' | null
 }
 
 interface CoursingRecord {
@@ -35,6 +29,7 @@ interface CoursingRecord {
   status?: string
   history?: unknown[]
   rank?: number
+  delta?: number | 'NEW' | null
 }
 
 interface DoninoRecordsColumnsProps {
@@ -109,16 +104,6 @@ export default function DoninoRecordsColumns({
         ariaLabel="Дисциплины полигона Донино"
       />
 
-      {/* Единая сортировка для обеих колонок */}
-      <div className="flex items-center justify-between">
-        <RecordSortBar
-          options={UNIFIED_SORT_OPTIONS}
-          sortField={sortField}
-          sortDirection={sortDirection}
-          onSort={onSort}
-        />
-      </div>
-
       <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-2 lg:gap-8">
         <div className={`min-w-0 space-y-3 ${mobileTab === 'speed' ? 'block' : 'hidden lg:block'}`}>
           <DoninoColumnShell plaque={speedPlaque}>
@@ -137,6 +122,7 @@ export default function DoninoRecordsColumns({
                   screenshotUrl={record.screenshot_url}
                   trackType={record.track_type}
                   rank={record.rank}
+                  delta={record.delta}
                   latestDateInDataset={latestSpeedDate}
                 />
               ))
@@ -161,6 +147,7 @@ export default function DoninoRecordsColumns({
                   history={record.history}
                   timeSeconds={record.time_seconds}
                   rank={record.rank}
+                  delta={record.delta}
                   latestDateInDataset={latestCoursingDate}
                 />
               ))

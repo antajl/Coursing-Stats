@@ -3,13 +3,13 @@ import React from 'react'
 export default function ChampionshipPointsRulesWidget() {
   return (
     <div className="rounded-2xl border border-old-money-200 bg-cream-50/90 p-4 shadow-2xs space-y-3 text-xs text-charcoal-700">
-      <h3 className="text-xs font-bold font-serif uppercase tracking-wider text-charcoal-900">
+      <h3 className="text-xs font-bold font-serif text-charcoal-900">
         Начисление баллов и бонусы
       </h3>
 
       {/* Base Points for Places */}
       <div className="space-y-1.5">
-        <div className="text-[11px] font-bold text-charcoal-800 uppercase tracking-wide">
+        <div className="text-[11px] font-bold text-charcoal-800 ">
           Баллы за занятое место:
         </div>
         <div className="grid grid-cols-4 gap-1 text-center font-mono text-[11px]">
@@ -34,7 +34,7 @@ export default function ChampionshipPointsRulesWidget() {
 
       {/* 4 Speed Bonuses */}
       <div className="space-y-1.5 pt-1 border-t border-old-money-200">
-        <div className="text-[11px] font-bold text-charcoal-800 uppercase tracking-wide">
+        <div className="text-[11px] font-bold text-charcoal-800 ">
           4 бонуса за скорость (по +1 б.):
         </div>
         <ul className="space-y-1 text-[11px] text-charcoal-600">

@@ -18,14 +18,27 @@ interface ChampionshipDogCardProps {
 }
 
 /** Человекопонятные русские статусы для нефинишировавших участников */
-export function formatChampionshipStatus(status: string | null | undefined): string {
+export function formatChampionshipStatus(
+  status: string | null | undefined,
+  statusReason?: string | null | undefined
+): string {
+  if (statusReason) {
+    const sr = statusReason.trim()
+    if (sr.toLowerCase().includes('снят')) return 'Снят'
+    if (sr.toLowerCase().includes('неявк')) return 'Неявка'
+    if (sr.toLowerCase().includes('сош')) return 'Сошёл'
+    if (sr.toLowerCase().includes('отстран')) return 'Отстранён'
+    if (sr.toLowerCase().includes('дискв')) return 'Дискв.'
+    return sr
+  }
   if (!status) return '—'
   const s = status.toLowerCase().trim()
   if (s === 'dns' || s === 'absent') return 'Неявка'
   if (s === 'withdrawn') return 'Снят'
   if (s === 'dnf') return 'Сошёл'
   if (s === 'dismissed') return 'Отстранён'
-  if (s === 'disqualified' || s === 'dq') return 'Дисквалификация'
+  if (s === 'disqualified' || s === 'dq') return 'Дискв.'
+  if (s === 'finished') return '—'
   return status
 }
 
@@ -180,7 +193,7 @@ export default function ChampionshipDogCard({
           {/* Stages Table / Monolith in 6 Columns */}
           <div className="overflow-hidden rounded-xl border border-old-money-200/90 bg-white/95 shadow-2xs divide-y-2 divide-old-money-200/90">
             {/* Desktop Table Header: 3 columns left (Этап, Класс, Лига), 3 columns right (Место, Баллы, Секунды) */}
-            <div className="hidden sm:grid grid-cols-12 gap-2 px-3.5 py-1.5 bg-cream-100/70 text-[10px] font-bold text-charcoal-500 uppercase tracking-wider border-b border-old-money-100">
+            <div className="hidden sm:grid grid-cols-12 gap-2 px-3.5 py-1.5 bg-cream-100/70 text-[11px] font-semibold text-charcoal-600 border-b border-old-money-100">
               <div className="col-span-2">Этап</div>
               <div className="col-span-3">Класс</div>
               <div className="col-span-2">Лига</div>

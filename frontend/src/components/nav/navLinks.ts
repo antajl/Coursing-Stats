@@ -121,6 +121,12 @@ export const DONINO_MENU_ITEMS: NavMenuItem[] = [
     icon: Icons.championship,
     isActive: (pathname: string) => pathname === '/donino/championship' || pathname === '/donino-championship',
   },
+  {
+    to: '/donino/analytics',
+    label: 'Аналитика полигона',
+    icon: Icons.analytics,
+    isActive: (pathname: string) => pathname === '/donino/analytics' || pathname.startsWith('/donino/analytics'),
+  },
 ]
 
 export const GUIDE_MENU_ITEMS: NavMenuItem[] = [

@@ -337,6 +337,7 @@ export interface ChampionshipStandingHistory {
   league: string
   breed_class: string
   status: string
+  status_reason?: string | null
   points?: number | null
   points_breakdown?: ChampionshipPointBreakdown
 }

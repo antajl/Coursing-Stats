@@ -110,9 +110,10 @@ describe('Donino Data Files Integrity', () => {
       s.name_lat.includes('ZOELLA') || s.name_ru.includes('ZOELLA')
     );
     expect(zoella).toBeDefined();
-    expect(zoella.total_points).toBe(19);
+    expect(zoella.total_points).toBe(28);
     expect(zoella.stage_points['1']).toBe(9);
     expect(zoella.stage_points['2']).toBe(10);
+    expect(zoella.stage_points['3']).toBe(9);
 
     // Verify Feel My Heart Dremfyre Una has 13 points and bonus breakdown
     const una = champ.standings.find((s: { name_ru: string; name_lat: string }) => 

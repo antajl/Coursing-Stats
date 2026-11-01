@@ -1,46 +1,40 @@
 import { useMemo, useEffect } from 'react'
 import { useSearchParams, useNavigate } from 'react-router-dom'
-import { Table, BarChart2 } from 'lucide-react'
 import { SEO } from '../../components/SEO'
 import DoninoAttribution from '../../components/DoninoAttribution'
 import { useYandexGoal } from '../../components/YandexMetrica'
 import { useSpeedRecordsPage } from './useSpeedRecordsPage'
 import DoninoPageToolbar from './DoninoPageToolbar'
 import DoninoRecordsColumns from './DoninoRecordsColumns'
-import DoninoStatsColumns from './DoninoStatsColumns'
 import SkeletonLoader from '../../components/SkeletonLoader'
 import { MobileSubNavTabs } from '../../components/ui/MobileSubNavTabs'
 
 function SpeedRecords() {
-  const [searchParams, setSearchParams] = useSearchParams()
+  const [searchParams] = useSearchParams()
   const navigate = useNavigate()
   const rawTab = searchParams.get('tab')
   const rawView = searchParams.get('view')
-  const view = rawTab === 'stats' || rawView === 'stats' ? 'stats' : 'table'
   const page = useSpeedRecordsPage()
   const { reachGoal } = useYandexGoal()
+
+  useEffect(() => {
+    if (rawTab === 'stats' || rawView === 'stats') {
+      navigate('/donino/analytics', { replace: true })
+    }
+  }, [rawTab, rawView, navigate])
 
   const handleSubNavChange = (id: string) => {
     if (id === 'championship') {
       navigate('/donino/championship')
+    } else if (id === 'analytics') {
+      navigate('/donino/analytics')
     }
-  }
-
-  const handleViewChange = (newView: 'table' | 'stats') => {
-    const next = new URLSearchParams(searchParams)
-    if (newView === 'stats') {
-      next.set('tab', 'stats')
-      next.delete('view')
-    } else {
-      next.delete('tab')
-      next.delete('view')
-    }
-    setSearchParams(next)
   }
 
   const subNavTabs = [
     { id: 'records', label: 'Рекорды Донино' },
     { id: 'championship', label: 'Клубный чемпионат' },
+    { id: 'analytics', label: 'Аналитика полигона' },
   ]
 
   // Отслеживание просмотра рекордов скорости
@@ -85,49 +79,8 @@ function SpeedRecords() {
       />
 
       <div className="space-y-4">
-        {/* Navigation Tabs (такие же как в Клубном чемпионате) */}
-        <div className="border-b border-old-money-200">
-          <nav
-            className="flex space-x-1 sm:space-x-2 overflow-x-auto pb-px scrollbar-none"
-            aria-label="Вкладки замеров Донино"
-          >
-            <button
-              type="button"
-              onClick={() => handleViewChange('table')}
-              className={`min-h-[44px] px-3.5 py-2.5 rounded-t-xl text-xs sm:text-sm font-semibold transition-all flex items-center gap-2 border-b-2 cursor-pointer whitespace-nowrap ${
-                view === 'table'
-                  ? 'border-camel-700 text-charcoal-900 bg-cream-100/70 font-bold'
-                  : 'border-transparent text-charcoal-600 hover:text-charcoal-900 hover:bg-cream-50'
-              }`}
-            >
-              <Table
-                className={`w-4 h-4 shrink-0 ${
-                  view === 'table' ? 'text-camel-700' : 'text-charcoal-400'
-                }`}
-              />
-              <span>Таблица замеров</span>
-            </button>
-
-            <button
-              type="button"
-              onClick={() => handleViewChange('stats')}
-              className={`min-h-[44px] px-3.5 py-2.5 rounded-t-xl text-xs sm:text-sm font-semibold transition-all flex items-center gap-2 border-b-2 cursor-pointer whitespace-nowrap ${
-                view === 'stats'
-                  ? 'border-camel-700 text-charcoal-900 bg-cream-100/70 font-bold'
-                  : 'border-transparent text-charcoal-600 hover:text-charcoal-900 hover:bg-cream-50'
-              }`}
-            >
-              <BarChart2
-                className={`w-4 h-4 shrink-0 ${
-                  view === 'stats' ? 'text-camel-700' : 'text-charcoal-400'
-                }`}
-              />
-              <span>Статистика и аналитика</span>
-            </button>
-          </nav>
-        </div>
         <DoninoPageToolbar
-          view={view}
+          view="table"
           searchQuery={page.searchQuery}
           onSearchChange={page.setSearchQuery}
           filterYears={page.filterYears}
@@ -168,7 +121,7 @@ function SpeedRecords() {
             </div>
           )}
 
-          {!page.loading && !page.error && view === 'table' && (
+          {!page.loading && !page.error && (
             <DoninoRecordsColumns
               speedRecords={page.filteredRecords}
               coursingRecords={page.filteredCoursingRecords}
@@ -176,22 +129,6 @@ function SpeedRecords() {
               sortDirection={page.sortDirection}
               onSort={page.handleSort}
               resetScrollKey={scrollResetKey}
-            />
-          )}
-
-          {!page.loading && !page.error && view === 'stats' && (
-            <DoninoStatsColumns
-              speedRecords={page.speedRecordsWithHistory}
-              coursingRecords={page.coursingRecords}
-              searchQuery={page.searchQuery}
-              filterYears={page.filterYears}
-              filterBreeds={page.filterBreeds}
-              filterSexes={page.filterSexes}
-              filterMinSpeed={page.filterMinSpeed}
-              filterMaxSpeed={page.filterMaxSpeed}
-              filterMinTime={page.filterMinTime}
-              filterMaxTime={page.filterMaxTime}
-              statsGroupBy={page.statsGroupBy}
             />
           )}
         </div>

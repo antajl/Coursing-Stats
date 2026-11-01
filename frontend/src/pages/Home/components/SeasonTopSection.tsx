@@ -147,7 +147,7 @@ function SeasonTopSectionInner({
     [],
   )
 
-  if (loading) return <SeasonTopSectionSkeleton />
+  if (loading) return <SeasonTopSectionSkeleton compact={compact} />
 
   return (
     <section

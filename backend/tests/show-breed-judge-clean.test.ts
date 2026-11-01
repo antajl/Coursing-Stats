@@ -60,14 +60,14 @@ describe('show-breed-judge-clean', () => {
 })
 
 describe('breed-mapping unspecified coats', () => {
-  it('maps bare vizsla to unspecified, not К-Ш', () => {
-    expect(canonicalBreed('Выжла')).toBe('ВЕНГЕРСКАЯ ВЫЖЛА (ТИП НЕ УКАЗАН)')
-    expect(canonicalBreed('ВЕНГЕРСКАЯ ВЫЖЛА')).toBe('ВЕНГЕРСКАЯ ВЫЖЛА (ТИП НЕ УКАЗАН)')
+  it('maps bare vizsla to canonical, not К-Ш', () => {
+    expect(canonicalBreed('Выжла')).toBe('ВЕНГЕРСКАЯ ВЫЖЛА')
+    expect(canonicalBreed('ВЕНГЕРСКАЯ ВЫЖЛА')).toBe('ВЕНГЕРСКАЯ ВЫЖЛА')
     expect(canonicalBreed('венгерская выжла к-ш')).toBe('ВЕНГЕРСКАЯ ВЫЖЛА К-Ш')
   })
 
-  it('maps bare GSD to unspecified; keeps combined (Д-Ш, К-Ш)', () => {
-    expect(canonicalBreed('Немецкая овчарка')).toBe('НЕМЕЦКАЯ ОВЧАРКА (ТИП НЕ УКАЗАН)')
+  it('maps bare GSD to canonical; keeps combined (Д-Ш, К-Ш)', () => {
+    expect(canonicalBreed('Немецкая овчарка')).toBe('НЕМЕЦКАЯ ОВЧАРКА')
     expect(canonicalBreed('НЕМЕЦКАЯ ОВЧАРКА (Д Ш, К Ш)')).toBe('НЕМЕЦКАЯ ОВЧАРКА (Д-Ш, К-Ш)')
     expect(canonicalBreed('НЕМЕЦКАЯ ОВЧАРКА К-Ш')).toBe('НЕМЕЦКАЯ ОВЧАРКА К-Ш')
   })

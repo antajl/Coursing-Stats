@@ -1,8 +1,9 @@
 import React, { useState, useMemo } from 'react'
-import { X, ChevronDown } from 'lucide-react'
+import { X, ChevronDown, Trophy } from 'lucide-react'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
 import ModernDropdown from '../../components/ui/ModernDropdown'
 import QuickBreedBar, { type QuickBreedItem } from '../TopDogs/QuickBreedBar'
+import DogSexIcon from '../../components/DogSexIcon'
 import { toolbarPillTriggerClass } from '../../lib/toolbar'
 import { formatBreedName, matchesBreedFilter } from '../../lib/breedMapping'
 import type { ChampionshipStanding, ChampionshipPromotion } from '../../lib/staticData/donino'
@@ -32,13 +33,15 @@ export default function ChampionshipStandingsTab({
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedBreed, setSelectedBreed] = useState('')
   const [leagueDropdownOpen, setLeagueDropdownOpen] = useState(false)
+  const [selectedSex, setSelectedSex] = useState<string>('')
+  const [sexDropdownOpen, setSexDropdownOpen] = useState(false)
   const [expandedDogKey, setExpandedDogKey] = useState<string | null>(null)
   const [sortMode, setSortMode] = useState<'points' | 'time'>('time')
 
   // Candidate breeds sorted strictly by participant count descending, then alphabetically
   const candidateBreeds = useMemo(() => {
     const counts = new Map<string, number>()
-    for (const d of standings) {
+    for (const d of standings || []) {
       if (d.breed) counts.set(d.breed, (counts.get(d.breed) || 0) + 1)
     }
     return Array.from(counts.entries())
@@ -96,15 +99,20 @@ export default function ChampionshipStandingsTab({
 
   // Dynamic league counts reflecting current breed and search query
   const dynamicLeagueCounts = useMemo(() => {
-    const breedAndSearchFiltered = standings.filter((d) => {
+    const searchLower = searchQuery.toLowerCase()
+    const breedAndSearchFiltered = (standings || []).filter((d) => {
       const matchesSearch =
         searchQuery === '' ||
-        d.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        (d.name_ru && d.name_ru.toLowerCase().includes(searchQuery.toLowerCase())) ||
-        (d.name_lat && d.name_lat.toLowerCase().includes(searchQuery.toLowerCase()))
+        String(d.name || '').toLowerCase().includes(searchLower) ||
+        Boolean(d.name_ru && d.name_ru.toLowerCase().includes(searchLower)) ||
+        Boolean(d.name_lat && d.name_lat.toLowerCase().includes(searchLower))
       const matchesBreed =
         selectedBreed === '' || matchesBreedFilter(d.breed, selectedBreed)
-      return matchesSearch && matchesBreed
+      const matchesSex =
+        !selectedSex ||
+        (selectedSex === 'm' && ((d.sex || '').toLowerCase().startsWith('к') || d.sex === 'm')) ||
+        (selectedSex === 'f' && ((d.sex || '').toLowerCase().startsWith('с') || d.sex === 'f'))
+      return matchesSearch && matchesBreed && matchesSex
     })
 
     const counts: Record<string, number> = {
@@ -121,21 +129,26 @@ export default function ChampionshipStandingsTab({
       }
     }
     return counts
-  }, [standings, searchQuery, selectedBreed])
+  }, [standings, searchQuery, selectedBreed, selectedSex])
 
   // Filtered and sorted standings
   const filtered = useMemo(() => {
-    const res = standings.filter((d) => {
+    const searchLower = searchQuery.toLowerCase()
+    const res = (standings || []).filter((d) => {
       const matchesLeague =
         selectedLeague === 'all' || d.current_league === selectedLeague
       const matchesSearch =
         searchQuery === '' ||
-        d.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        (d.name_ru && d.name_ru.toLowerCase().includes(searchQuery.toLowerCase())) ||
-        (d.name_lat && d.name_lat.toLowerCase().includes(searchQuery.toLowerCase()))
+        String(d.name || '').toLowerCase().includes(searchLower) ||
+        Boolean(d.name_ru && d.name_ru.toLowerCase().includes(searchLower)) ||
+        Boolean(d.name_lat && d.name_lat.toLowerCase().includes(searchLower))
       const matchesBreed =
         selectedBreed === '' || matchesBreedFilter(d.breed, selectedBreed)
-      return matchesLeague && matchesSearch && matchesBreed
+      const matchesSex =
+        !selectedSex ||
+        (selectedSex === 'm' && ((d.sex || '').toLowerCase().startsWith('к') || d.sex === 'm')) ||
+        (selectedSex === 'f' && ((d.sex || '').toLowerCase().startsWith('с') || d.sex === 'f'))
+      return matchesLeague && matchesSearch && matchesBreed && matchesSex
     })
 
     if (sortMode === 'points') {
@@ -153,7 +166,7 @@ export default function ChampionshipStandingsTab({
       if (timeA !== timeB) return timeA - timeB
       return (b.total_points || 0) - (a.total_points || 0)
     })
-  }, [standings, selectedLeague, searchQuery, selectedBreed, sortMode])
+  }, [standings, selectedLeague, searchQuery, selectedBreed, selectedSex, sortMode])
 
   const toggleExpand = (dogKey: string) => {
     setExpandedDogKey((prev) => (prev === dogKey ? null : dogKey))
@@ -163,10 +176,11 @@ export default function ChampionshipStandingsTab({
     setSelectedLeague('all')
     setSearchQuery('')
     setSelectedBreed('')
+    setSelectedSex('')
   }
 
   const hasActiveFilters =
-    selectedLeague !== 'all' || searchQuery !== '' || selectedBreed !== ''
+    selectedLeague !== 'all' || searchQuery !== '' || selectedBreed !== '' || selectedSex !== ''
 
   const leagueOrder: LeagueFilter[] = ['Чемпионов', 'Абсолют', 'Прогресс', 'Юниоры']
   const sortedLeagues = [...leagueOrder].sort(
@@ -245,6 +259,77 @@ export default function ChampionshipStandingsTab({
           </div>
         </ModernDropdown>
 
+        {/* Sex Dropdown */}
+        <div className="shrink-0">
+          <ModernDropdown
+            trigger={
+              <button
+                type="button"
+                className={`shrink-0 ${toolbarPillTriggerClass(Boolean(selectedSex))}`}
+                title="Фильтр по полу"
+              >
+                {selectedSex === 'm' && <DogSexIcon sex="m" size={12} variant="neutral" className="shrink-0 text-current" />}
+                {selectedSex === 'f' && <DogSexIcon sex="f" size={12} variant="neutral" className="shrink-0 text-current" />}
+                <span>{!selectedSex ? 'Пол' : selectedSex === 'm' ? 'Кобели' : 'Суки'}</span>
+                <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
+              </button>
+            }
+            isOpen={sexDropdownOpen}
+            onOpenChange={setSexDropdownOpen}
+            width="130px"
+          >
+            <div className="p-1 min-w-[125px]" role="menu">
+              <button
+                type="button"
+                role="menuitem"
+                onClick={() => {
+                  setSelectedSex('')
+                  setSexDropdownOpen(false)
+                }}
+                className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors cursor-pointer ${
+                  !selectedSex
+                    ? 'bg-camel-100 text-camel-950 font-semibold'
+                    : 'text-charcoal-700 hover:bg-camel-100'
+                }`}
+              >
+                Все
+              </button>
+              <button
+                type="button"
+                role="menuitem"
+                onClick={() => {
+                  setSelectedSex('m')
+                  setSexDropdownOpen(false)
+                }}
+                className={`flex w-full items-center gap-2 rounded-md px-3 py-2 text-left text-sm transition-colors cursor-pointer ${
+                  selectedSex === 'm'
+                    ? 'bg-camel-100 text-camel-950 font-semibold'
+                    : 'text-charcoal-700 hover:bg-camel-100'
+                }`}
+              >
+                <DogSexIcon sex="m" size={14} className={selectedSex === 'm' ? 'text-charcoal-900' : 'text-slate-500'} />
+                <span>Кобели</span>
+              </button>
+              <button
+                type="button"
+                role="menuitem"
+                onClick={() => {
+                  setSelectedSex('f')
+                  setSexDropdownOpen(false)
+                }}
+                className={`flex w-full items-center gap-2 rounded-md px-3 py-2 text-left text-sm transition-colors cursor-pointer ${
+                  selectedSex === 'f'
+                    ? 'bg-camel-100 text-camel-950 font-semibold'
+                    : 'text-charcoal-700 hover:bg-camel-100'
+                }`}
+              >
+                <DogSexIcon sex="f" size={14} className={selectedSex === 'f' ? 'text-charcoal-900' : 'text-slate-500'} />
+                <span>Суки</span>
+              </button>
+            </div>
+          </ModernDropdown>
+        </div>
+
         <div className="h-5 w-px bg-old-money-300 shrink-0 mx-0.5 hidden sm:block" aria-hidden="true" />
 
         {/* QuickBreedBar with breed pills and overflow dropdown */}
@@ -274,65 +359,69 @@ export default function ChampionshipStandingsTab({
       {/* 2. Main 2-Column Grid Layout (Ranking on Left, Statistics Widgets on Right) */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
         {/* Left Column: Dog Ranking Cards */}
-        <div className="lg:col-span-7 xl:col-span-8 space-y-3">
-          {/* Section Header */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 px-1">
-            <div className="flex items-center gap-2">
-              <h2 className="text-sm font-bold font-serif uppercase tracking-wider text-charcoal-800">
-                Сводный рейтинг чемпионата Донино
-              </h2>
-              <span className="text-xs text-charcoal-500 font-medium">
-                ({filtered.length} из {standings.length})
-              </span>
-            </div>
-
-            {/* Toggle Sort: Points vs Time */}
-            <div className="inline-flex items-center p-0.5 rounded-lg bg-cream-100 border border-old-money-200 shadow-2xs self-start sm:self-auto">
-              <button
-                type="button"
-                onClick={() => setSortMode('time')}
-                className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs transition-all cursor-pointer ${
-                  sortMode === 'time'
-                    ? 'border border-camel-400 bg-camel-100 text-camel-950 font-bold shadow-2xs'
-                    : 'text-charcoal-600 hover:text-charcoal-900 font-medium'
-                }`}
-              >
-                <span>По скорости</span>
-              </button>
-              <button
-                type="button"
-                onClick={() => setSortMode('points')}
-                className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs transition-all cursor-pointer ${
-                  sortMode === 'points'
-                    ? 'border border-camel-400 bg-camel-100 text-camel-950 font-bold shadow-2xs'
-                    : 'text-charcoal-600 hover:text-charcoal-900 font-medium'
-                }`}
-              >
-                <span>По баллам</span>
-              </button>
-            </div>
-          </div>
-
-          {/* Dog List */}
-          {filtered.length === 0 ? (
-            <div className="rounded-2xl border border-old-money-200 bg-cream-50 p-8 text-center text-charcoal-600 space-y-2">
-              <div className="text-sm font-semibold">Ничего не найдено</div>
-              <div className="text-xs text-charcoal-500">
-                Попробуйте изменить поисковый запрос или сбросить фильтры
+        <div className="lg:col-span-7 xl:col-span-8">
+          {/* Main Dog Ranking Card */}
+          <div className="overflow-hidden rounded-2xl border border-old-money-200 bg-white shadow-2xs">
+            {/* Card Header inside */}
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 px-3.5 sm:px-4 pt-3 sm:pt-3.5 pb-2.5 border-b border-old-money-100 bg-cream-50/40">
+              <div className="flex items-center gap-2">
+                <Trophy className="w-4 h-4 text-camel-700" />
+                <h2 className="text-sm sm:text-base font-bold font-serif text-charcoal-900 tracking-tight">
+                  Сводный рейтинг чемпионата Донино
+                </h2>
+                <span className="text-[11px] font-semibold text-charcoal-600 bg-cream-100 px-2 py-0.5 rounded-full border border-cream-200 tabular-nums">
+                  {filtered.length} из {standings.length}
+                </span>
               </div>
-              <button
-                type="button"
-                onClick={handleResetFilters}
-                className="mt-2 inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-camel-600 text-white hover:bg-camel-700 cursor-pointer"
-              >
-                Сбросить фильтры
-              </button>
+
+              {/* Toggle Sort: Points vs Time */}
+              <div className="inline-flex items-center p-0.5 rounded-lg bg-cream-100 border border-old-money-200 shadow-2xs self-start sm:self-auto">
+                <button
+                  type="button"
+                  onClick={() => setSortMode('time')}
+                  className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs transition-all cursor-pointer ${
+                    sortMode === 'time'
+                      ? 'border border-camel-400 bg-camel-100 text-camel-950 font-bold shadow-2xs'
+                      : 'text-charcoal-600 hover:text-charcoal-900 font-medium'
+                  }`}
+                >
+                  <span>По скорости</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setSortMode('points')}
+                  className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs transition-all cursor-pointer ${
+                    sortMode === 'points'
+                      ? 'border border-camel-400 bg-camel-100 text-camel-950 font-bold shadow-2xs'
+                      : 'text-charcoal-600 hover:text-charcoal-900 font-medium'
+                  }`}
+                >
+                  <span>По баллам</span>
+                </button>
+              </div>
             </div>
-          ) : (
-            <div className="overflow-hidden rounded-2xl border border-old-money-200 bg-white shadow-2xs divide-y divide-old-money-100">
+
+            {/* Dog List or Empty State */}
+            {filtered.length === 0 ? (
+              <div className="bg-cream-50/50 p-8 text-center text-charcoal-600 space-y-2">
+                <div className="text-sm font-semibold">Ничего не найдено</div>
+                <div className="text-xs text-charcoal-500">
+                  Попробуйте изменить поисковый запрос или сбросить фильтры
+                </div>
+                <button
+                  type="button"
+                  onClick={handleResetFilters}
+                  className="mt-2 inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-camel-600 text-white hover:bg-camel-700 cursor-pointer"
+                >
+                  Сбросить фильтры
+                </button>
+              </div>
+            ) : (
+              <div className="divide-y divide-old-money-100">
               {filtered.map((dog, idx) => {
+                const dogNameLower = String(dog.name || '').trim().toLowerCase()
                 const dogPromotions =
-                  dogPromotionsMap.get(dog.name.trim().toLowerCase()) ||
+                  (dogNameLower ? dogPromotionsMap.get(dogNameLower) : undefined) ||
                   (dog.name_ru ? dogPromotionsMap.get(dog.name_ru.trim().toLowerCase()) : undefined) ||
                   (dog.name_lat ? dogPromotionsMap.get(dog.name_lat.trim().toLowerCase()) : undefined)
 
@@ -350,6 +439,7 @@ export default function ChampionshipStandingsTab({
               })}
             </div>
           )}
+          </div>
         </div>
 
         {/* Right Column: Statistics Widgets */}

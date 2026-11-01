@@ -47,8 +47,8 @@ describe('deriveCompetingBreeds', () => {
     expect(kshVizslas).toHaveLength(1)
 
     // Hungarian Vizsla unspecified should appear only ONCE (2 dogs, rank 3)
-    expect(result[2]).toBe('ВЕНГЕРСКАЯ ВЫЖЛА (ТИП НЕ УКАЗАН)')
-    const unspecifiedVizslas = result.filter((b) => b === 'ВЕНГЕРСКАЯ ВЫЖЛА (ТИП НЕ УКАЗАН)')
+    expect(result[2]).toBe('ВЕНГЕРСКАЯ ВЫЖЛА')
+    const unspecifiedVizslas = result.filter((b) => b === 'ВЕНГЕРСКАЯ ВЫЖЛА')
     expect(unspecifiedVizslas).toHaveLength(1)
 
     // Pure number '18' and 'БЕЗ ПОРОДЫ' should not be present

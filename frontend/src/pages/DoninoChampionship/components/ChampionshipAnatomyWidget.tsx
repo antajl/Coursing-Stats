@@ -49,35 +49,45 @@ export default function ChampionshipAnatomyWidget({
     return { top5AnatomyDogs: list, maxAnatomyPts: maxPts }
   }, [standings])
 
+  const hasSpecificBreed = Boolean(selectedBreed && selectedBreed !== 'all')
+
   return (
-    <div className="rounded-2xl border border-old-money-200 bg-cream-50/90 p-4 shadow-2xs space-y-3 text-xs text-charcoal-700">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-        <div className="flex items-center gap-2">
-          <h3 className="text-xs font-bold font-serif uppercase tracking-wider text-charcoal-900">
-            Анатомия баллов: Топ-5
+    <div className="rounded-2xl border border-old-money-200 bg-cream-50/90 p-3.5 sm:p-4 shadow-2xs space-y-2.5 text-xs text-charcoal-700">
+      {/* 1. Header: Clean 1-line Title and Legend (never wraps awkwardly) */}
+      <div className="flex items-center justify-between gap-2 border-b border-old-money-200/60 pb-2">
+        <div className="flex items-center gap-1.5 min-w-0">
+          <h3 className="text-xs font-bold font-serif text-charcoal-900 whitespace-nowrap">
+            Анатомия баллов
           </h3>
-          {selectedBreed && (
-            <span className="text-[10px] text-charcoal-500 font-medium">
-              · {formatBreedName(selectedBreed)}
-            </span>
-          )}
+          <span className="text-[10px] font-semibold text-charcoal-400">
+            · Топ-5
+          </span>
         </div>
-        <div className="flex items-center gap-3 text-[10px] shrink-0 font-medium">
-          <span className="flex items-center gap-1.5 text-charcoal-700">
+
+        {/* Legend */}
+        <div className="flex items-center gap-2.5 text-[10px] shrink-0 font-medium">
+          <span className="flex items-center gap-1 text-charcoal-700">
             <span className="w-2 h-2 rounded-full bg-om-700 inline-block shrink-0" />
             <span>Места</span>
           </span>
-          <span className="flex items-center gap-1.5 text-charcoal-800 font-semibold">
+          <span className="flex items-center gap-1 text-charcoal-800 font-semibold">
             <span className="w-2 h-2 rounded-full bg-om-300 border border-om-400/60 inline-block shrink-0" />
             <span>Бонусы</span>
           </span>
         </div>
       </div>
 
-      <p className="text-[11px] text-charcoal-500 leading-tight">
-        Базовые баллы за места в забегах vs скоростные бонусы (+1 б.) в текущей выборке
-      </p>
+      {/* 2. Subtitle with Context and Optional Selected Breed Badge */}
+      <div className="flex items-center justify-between gap-2 text-[11px] text-charcoal-500 leading-tight">
+        <span>Базовые места vs бонусы (+1 б.)</span>
+        {hasSpecificBreed && (
+          <span className="inline-flex items-center px-1.5 py-0.5 rounded bg-camel-100/90 text-camel-950 text-[10px] font-semibold border border-camel-300 shrink-0">
+            {formatBreedName(selectedBreed)}
+          </span>
+        )}
+      </div>
 
+      {/* 3. Top-5 Dogs List */}
       {top5AnatomyDogs.length === 0 ? (
         <div className="text-center py-3 text-charcoal-500 text-[11px] italic">
           Нет собак с начисленными баллами
@@ -93,43 +103,54 @@ export default function ChampionshipAnatomyWidget({
               12,
               Math.min(100, Math.round((item.total / maxAnatomyPts) * 100))
             )
+            const breedTitle = formatBreedName(item.dog.breed)
+            const fullTitle = `${secondary ? `${primary} / ${secondary}` : primary} (${breedTitle})`
 
             return (
               <div key={item.dog.dog_key} className="space-y-1">
-                <div className="flex items-baseline justify-between text-xs">
-                  <div className="flex items-center gap-1.5 min-w-0 pr-2">
-                    <span className="w-4 text-center font-bold text-charcoal-400 text-[10px] shrink-0">
+                <div className="flex items-baseline justify-between gap-2 text-xs">
+                  {/* Left: Rank, Dog Name (max room!), and subtle breed note if 'Все породы' */}
+                  <div className="flex items-baseline gap-1.5 min-w-0 flex-1">
+                    <span className="w-3.5 text-center font-bold text-charcoal-400 text-[10px] shrink-0">
                       #{idx + 1}
                     </span>
                     {item.dog.dog_id ? (
                       <Link
                         to={`/dog/${item.dog.dog_id}`}
-                        title={secondary || undefined}
+                        title={fullTitle}
                         className="font-serif font-bold text-charcoal-900 hover:text-camel-800 truncate"
                       >
                         {primary}
                       </Link>
                     ) : (
                       <span
-                        title={secondary || undefined}
+                        title={fullTitle}
                         className="font-serif font-bold text-charcoal-900 truncate"
                       >
                         {primary}
                       </span>
                     )}
-                    {!selectedBreed && (
-                      <span className="text-[10px] text-charcoal-400 shrink-0 hidden sm:inline">
-                        · {formatBreedName(item.dog.breed)}
+                    {!hasSpecificBreed && (
+                      <span
+                        className="text-[10px] text-charcoal-400 shrink-0 truncate max-w-[85px]"
+                        title={breedTitle}
+                      >
+                        · {breedTitle}
                       </span>
                     )}
                   </div>
 
-                  {/* Points breakdown */}
-                  <div className="shrink-0 flex items-center gap-1.5 text-right font-mono">
-                    <span className="text-[10px] text-charcoal-500">
-                      {item.placePts}&nbsp;б. + {item.bonusPts}&nbsp;б.
+                  {/* Right: Clean, compact points breakdown (no redundant 'б.' repetition) */}
+                  <div className="shrink-0 flex items-baseline gap-1.5 text-right">
+                    <span
+                      className="text-[10px] text-charcoal-500 tabular-nums"
+                      title={`Занятые места: ${item.placePts} б. · Скоростные бонусы: +${item.bonusPts} б.`}
+                    >
+                      <span className="text-charcoal-700 font-medium">{item.placePts}</span>
+                      <span className="text-charcoal-400 mx-0.5">+</span>
+                      <span className="text-amber-900 font-medium">{item.bonusPts}</span>
                     </span>
-                    <span className="font-bold text-xs text-charcoal-900 min-w-[28px]">
+                    <span className="font-serif font-bold text-xs text-charcoal-900 tabular-nums min-w-[28px]">
                       {item.total}&nbsp;б.
                     </span>
                   </div>

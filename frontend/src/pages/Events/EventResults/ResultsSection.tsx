@@ -8,6 +8,7 @@ import {
   parseRawScores,
   getBestTimesByRace,
   extractDogSex,
+  extractDoninoLeague,
 } from './utils'
 import ToolbarSearch from '../../../components/toolbar/ToolbarSearch'
 import QuickBreedBar, { type QuickBreedItem } from '../../TopDogs/QuickBreedBar'
@@ -20,13 +21,16 @@ import type { Result } from './types'
 
 interface ResultsSectionProps {
   results: Result[]
+  trailing?: React.ReactNode
 }
 
-export default function ResultsSection({ results }: ResultsSectionProps) {
+export default function ResultsSection({ results, trailing }: ResultsSectionProps) {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedBreed, setSelectedBreed] = useState('')
   const [selectedSex, setSelectedSex] = useState<string>('')
   const [sexDropdownOpen, setSexDropdownOpen] = useState(false)
+  const [selectedLeague, setSelectedLeague] = useState<string>('all')
+  const [leagueDropdownOpen, setLeagueDropdownOpen] = useState(false)
 
   if (results.length === 0) {
     return (
@@ -100,6 +104,42 @@ export default function ResultsSection({ results }: ResultsSectionProps) {
     return { breeds: sortedBreedKeys, candidateBreeds: candidates, dogIndex: index }
   }, [activeResults])
 
+    const availableLeagues = useMemo(() => {
+    const set = new Set<string>()
+    for (const r of activeResults) {
+      const l = extractDoninoLeague(r.breed_class)
+      if (l) set.add(l)
+    }
+    const ORDER = ['Чемпионов', 'Абсолют', 'Прогресс', 'Юниоры']
+    return ORDER.filter((l) => set.has(l))
+  }, [activeResults])
+
+  const leagueCounts = useMemo(() => {
+    if (availableLeagues.length === 0) return {}
+    const counts: Record<string, number> = { all: 0 }
+    for (const l of availableLeagues) counts[l] = 0
+
+    for (const r of activeResults) {
+      const matchesSearch =
+        searchQuery === '' ||
+        r.name_ru?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        r.name_lat?.toLowerCase().includes(searchQuery.toLowerCase())
+      const matchesBreed =
+        selectedBreed === '' || matchesBreedFilter(canonicalBreed(r.dog.breed), selectedBreed)
+      const dogSex = extractDogSex(r)
+      const matchesSex = selectedSex === '' || dogSex === selectedSex
+
+      if (matchesSearch && matchesBreed && matchesSex) {
+        counts.all++
+        const l = extractDoninoLeague(r.breed_class)
+        if (l && counts[l] !== undefined) {
+          counts[l]++
+        }
+      }
+    }
+    return counts
+  }, [activeResults, availableLeagues, searchQuery, selectedBreed, selectedSex])
+
   const filteredResults = activeResults.filter(result => {
     const matchesSearch = searchQuery === '' ||
       result.name_ru?.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -107,7 +147,9 @@ export default function ResultsSection({ results }: ResultsSectionProps) {
     const matchesBreed = selectedBreed === '' || matchesBreedFilter(canonicalBreed(result.dog.breed), selectedBreed)
     const dogSex = extractDogSex(result)
     const matchesSex = selectedSex === '' || dogSex === selectedSex
-    return matchesSearch && matchesBreed && matchesSex
+    const dogLeague = extractDoninoLeague(result.breed_class)
+    const matchesLeague = selectedLeague === 'all' || dogLeague === selectedLeague
+    return matchesSearch && matchesBreed && matchesSex && matchesLeague
   })
 
   const { grouped: filteredGrouped, sortedGroups: filteredSortedGroups } = isRacing
@@ -181,7 +223,7 @@ export default function ResultsSection({ results }: ResultsSectionProps) {
     </div>
   )
 
-  const isFiltered = Boolean(selectedBreed || selectedSex || searchQuery.trim())
+  const isFiltered = Boolean(selectedBreed || selectedSex || (selectedLeague !== 'all') || searchQuery.trim())
 
   return (
     <div className="space-y-3">
@@ -225,12 +267,79 @@ export default function ResultsSection({ results }: ResultsSectionProps) {
       )}
 
       {/* Панель поиска и фильтрации в стиле рейтинга (чистый ряд без внешней рамки) */}
-      <div className="flex items-center gap-2 w-full max-w-full min-w-0 overflow-hidden">
+      <div className="flex flex-wrap md:flex-nowrap items-center gap-2 w-full max-w-full min-w-0">
         <ToolbarSearch
           value={searchQuery}
           onChange={setSearchQuery}
           placeholder="Кличка собаки…"
         />
+
+        {/* Выбор лиги (если турнир с лигами, например клубный чемпионат Донино) */}
+        {availableLeagues.length > 0 && (
+          <ModernDropdown
+            isOpen={leagueDropdownOpen}
+            onOpenChange={setLeagueDropdownOpen}
+            width="180px"
+            trigger={
+              <button
+                type="button"
+                className={`shrink-0 ${toolbarPillTriggerClass(selectedLeague !== 'all')}`}
+                title="Фильтр по лигам"
+              >
+                <span>{selectedLeague === 'all' ? 'Все лиги' : `Лига «${selectedLeague}»`}</span>
+                <ChevronDown className="h-3.5 w-3.5 opacity-70" />
+              </button>
+            }
+          >
+            <div className="p-1 space-y-0.5 min-w-[170px]" role="menu">
+              <button
+                type="button"
+                onClick={() => {
+                  setSelectedLeague('all')
+                  setLeagueDropdownOpen(false)
+                }}
+                className={`w-full text-left px-2.5 py-1.5 rounded-md text-xs transition-colors cursor-pointer flex items-center justify-between ${
+                  selectedLeague === 'all'
+                    ? 'bg-camel-100 text-camel-950 font-semibold'
+                    : 'text-charcoal-700 hover:bg-cream-100'
+                }`}
+              >
+                <span>Все лиги ({leagueCounts.all ?? activeResults.length})</span>
+                {selectedLeague === 'all' && (
+                  <span className="w-1.5 h-1.5 rounded-full bg-camel-600" />
+                )}
+              </button>
+              {availableLeagues.map((league) => {
+                const count = leagueCounts[league] ?? 0
+                const isSelected = selectedLeague === league
+                const isEmpty = count === 0
+                return (
+                  <button
+                    key={league}
+                    type="button"
+                    disabled={isEmpty}
+                    onClick={() => {
+                      setSelectedLeague(league)
+                      setLeagueDropdownOpen(false)
+                    }}
+                    className={`w-full text-left px-2.5 py-1.5 rounded-md text-xs transition-colors cursor-pointer flex items-center justify-between ${
+                      isSelected
+                        ? 'border border-camel-400 bg-camel-100 text-camel-950 font-semibold shadow-2xs'
+                        : isEmpty
+                        ? 'opacity-40 cursor-not-allowed text-charcoal-400'
+                        : 'text-charcoal-700 hover:bg-cream-100'
+                    }`}
+                  >
+                    <span>{league} ({count})</span>
+                    {isSelected && (
+                      <span className="w-1.5 h-1.5 rounded-full bg-camel-600" />
+                    )}
+                  </button>
+                )
+              })}
+            </div>
+          </ModernDropdown>
+        )}
 
         {/* Выбор пола */}
         <div className="shrink-0">
@@ -263,14 +372,24 @@ export default function ResultsSection({ results }: ResultsSectionProps) {
             onClick={() => {
               setSelectedBreed('')
               setSelectedSex('')
+              setSelectedLeague('all')
               setSearchQuery('')
             }}
-            className="relative shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full border border-old-money-200 bg-cream-50 text-charcoal-500 hover:text-charcoal-800 transition-colors before:absolute before:-inset-1.5 before:content-['']"
+            className="relative shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full border border-old-money-200 bg-cream-50 text-charcoal-500 hover:text-charcoal-800 transition-colors before:absolute before:-inset-1.5 before:content-[''] cursor-pointer"
             title="Сбросить фильтры"
             aria-label="Сбросить фильтры"
           >
             <X className="h-4 w-4" />
           </button>
+        )}
+
+        {trailing && (
+          <>
+            <div className="h-5 w-px bg-old-money-300 shrink-0 mx-0.5 hidden md:block" aria-hidden="true" />
+            <div className="flex items-center gap-2 shrink-0 md:ml-auto w-full md:w-auto justify-between md:justify-end">
+              {trailing}
+            </div>
+          </>
         )}
       </div>
 

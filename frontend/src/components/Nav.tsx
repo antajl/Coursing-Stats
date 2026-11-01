@@ -31,15 +31,19 @@ export default function Nav() {
   const isGuideActive = location.pathname === '/guide';
   const isAboutActive = location.pathname === '/about';
 
+  const menuCallbacks = useRef<Record<string, (open: boolean) => void>>({});
   const setMenuOpen = useCallback((id: Exclude<OpenMenuId, null>) => {
-    return (open: boolean) => {
-      setOpenMenu((current) => {
-        if (open) return id
-        if (current === id) return null
-        return current
-      })
+    if (!menuCallbacks.current[id]) {
+      menuCallbacks.current[id] = (open: boolean) => {
+        setOpenMenu((current) => {
+          if (open) return id;
+          if (current === id) return null;
+          return current;
+        });
+      };
     }
-  }, [])
+    return menuCallbacks.current[id];
+  }, []);
 
   const handleMouseEnter = () => {
     if (timeoutRef.current) {
@@ -63,8 +67,8 @@ export default function Nav() {
   };
 
   useEffect(() => {
-    setOpenMenu(null);
-    setMobileMenuOpen(false);
+    setOpenMenu((prev) => (prev !== null ? null : prev));
+    setMobileMenuOpen((prev) => (prev ? false : prev));
   }, [location.pathname, location.search]);
 
   // Lock background scroll when mobile drawer is open

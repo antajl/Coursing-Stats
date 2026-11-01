@@ -59,6 +59,11 @@ export function processStageResults(
         }
       : undefined;
 
+    const rowStatus =
+      r.status === 'finished' && (!r.placement || r.placement <= 0) && r.status_reason
+        ? 'withdrawn'
+        : r.status;
+
     if (!standing) {
       // New dog joining at this stage
       let targetLeague = r.league;
@@ -107,7 +112,8 @@ export function processStageResults(
             total_score: r.total_score,
             league: r.league,
             breed_class: r.breed_class,
-            status: r.status,
+            status: rowStatus,
+            status_reason: r.status_reason || null,
             points: sPoints,
             points_breakdown: sBreakdown,
           },
@@ -178,7 +184,8 @@ export function processStageResults(
         total_score: r.total_score,
         league: r.league,
         breed_class: r.breed_class,
-        status: r.status,
+        status: rowStatus,
+        status_reason: r.status_reason || null,
         points: sPoints,
         points_breakdown: sBreakdown,
       });

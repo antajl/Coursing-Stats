@@ -60,7 +60,8 @@ function parseRatingSheet(rows: any[][]) {
       breed_class: String(r[3] || '').trim(),
       stage_1_points: r[4] != null ? Number(r[4]) : 0,
       stage_2_points: r[5] != null ? Number(r[5]) : 0,
-      total_points: r[6] != null ? Number(r[6]) : 0,
+      stage_3_points: r[6] != null ? Number(r[6]) : 0,
+      total_points: r[7] != null ? Number(r[7]) : (r[6] != null ? Number(r[6]) : 0),
     });
   });
   return result;
@@ -73,6 +74,9 @@ export async function fetchDoninoChampionshipPoints() {
 
   const stage1Rows = xlsx.utils.sheet_to_json(wb.Sheets['09.08.2026'], { header: 1 }) as any[][];
   const stage2Rows = xlsx.utils.sheet_to_json(wb.Sheets['20.09.2026'], { header: 1 }) as any[][];
+  const stage3Rows = wb.Sheets['31.10.2026']
+    ? (xlsx.utils.sheet_to_json(wb.Sheets['31.10.2026'], { header: 1 }) as any[][])
+    : [];
   const ratingRows = xlsx.utils.sheet_to_json(wb.Sheets['Рейтинг'], { header: 1 }) as any[][];
 
   const payload = {
@@ -80,6 +84,7 @@ export async function fetchDoninoChampionshipPoints() {
     synced_at: new Date().toISOString(),
     stage_1: parseStageSheet(stage1Rows),
     stage_2: parseStageSheet(stage2Rows),
+    stage_3: parseStageSheet(stage3Rows),
     overall: parseRatingSheet(ratingRows),
   };
 

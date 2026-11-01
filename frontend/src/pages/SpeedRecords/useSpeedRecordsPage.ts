@@ -7,6 +7,7 @@ import { buildSexByDogMap } from './stats/doninoStatsUtils'
 import type { GroupBy } from './stats/constants'
 import type { DogsIndexEntry } from '../../lib/competingBreeds'
 import { matchesBreedFilter, canonicalBreed } from '../../lib/breedMapping'
+import { computeDoninoDeltas } from './doninoRankDelta'
 
 const EMPTY_RECORDS: Record<string, unknown>[] = []
 
@@ -28,10 +29,10 @@ export function useSpeedRecordsPage() {
     return rawView === 'stats' ? 'stats' : 'table'
   })
 
-  useEffect(() => {
-    const rawView = searchParams.get('view')
-    const rawTab = searchParams.get('tab')
+  const rawView = searchParams.get('view')
+  const rawTab = searchParams.get('tab')
 
+  useEffect(() => {
     // Normalize legacy ?view= to ?tab=
     if (rawView) {
       const params = new URLSearchParams(searchParams)
@@ -52,7 +53,7 @@ export function useSpeedRecordsPage() {
     }
 
     setView(rawTab === 'stats' ? 'stats' : 'table')
-  }, [searchParams, setSearchParams])
+  }, [rawView, rawTab, searchParams, setSearchParams])
 
   const speedRecordsQuery = useSpeedRecords('', '', 10000, '', '')
   const coursingRecordsQuery = useCoursingRecords('', 10000, '', '')
@@ -64,12 +65,12 @@ export function useSpeedRecordsPage() {
     return raw.split(',').filter(Boolean)
   })
   const [filterBreeds, setFilterBreeds] = useState(() => {
-    const breeds = searchParams.get('breeds')
-    return breeds ? breeds.split(',') : []
+    const raw = searchParams.get('breed') || searchParams.get('breeds')
+    return raw ? raw.split(',') : []
   })
   const [filterSexes, setFilterSexes] = useState(() => {
-    const sexes = searchParams.get('sexes')
-    return sexes ? sexes.split(',') : []
+    const raw = searchParams.get('sex') || searchParams.get('sexes')
+    return raw ? raw.split(',') : []
   })
   const [searchQuery, setSearchQuery] = useState(() => searchParams.get('search') || '')
   const [sortField, setSortField] = useState<string>(() => {
@@ -315,10 +316,15 @@ export function useSpeedRecordsPage() {
       })
 
       const isResultLeaderboard = sortField === 'result' && sortDirection === 'desc'
-      return sorted.map((record, index) => ({
-        ...record,
-        rank: isResultLeaderboard ? index + 1 : undefined,
-      }))
+      const deltas = isResultLeaderboard ? computeDoninoDeltas(sorted, 'speed') : null
+      return sorted.map((record, index) => {
+        const key = `${record.name}::${record.breed}`
+        return {
+          ...record,
+          rank: isResultLeaderboard ? index + 1 : undefined,
+          delta: deltas ? deltas.get(key) : undefined,
+        }
+      })
     },
     [
       filterYears,
@@ -415,10 +421,15 @@ export function useSpeedRecordsPage() {
       })
 
       const isResultLeaderboard = sortField === 'result' && sortDirection === 'desc'
-      return sorted.map((record, index) => ({
-        ...record,
-        rank: isResultLeaderboard ? index + 1 : undefined,
-      }))
+      const deltas = isResultLeaderboard ? computeDoninoDeltas(sorted, 'coursing') : null
+      return sorted.map((record, index) => {
+        const key = `${record.name}::${record.breed}`
+        return {
+          ...record,
+          rank: isResultLeaderboard ? index + 1 : undefined,
+          delta: deltas ? deltas.get(key) : undefined,
+        }
+      })
     },
     [
       searchQuery,
@@ -633,6 +644,12 @@ export function useSpeedRecordsPage() {
       if (yearArr.join(',') !== filterYears.join(',')) {
         setFilterYears(yearArr)
       }
+    }
+
+    const sexFromUrl = searchParams.get('sex') || searchParams.get('sexes') || ''
+    const sexArr = sexFromUrl ? sexFromUrl.split(',') : []
+    if (sexArr.join(',') !== filterSexes.join(',')) {
+      setFilterSexes(sexArr)
     }
   }, [searchParams])
 

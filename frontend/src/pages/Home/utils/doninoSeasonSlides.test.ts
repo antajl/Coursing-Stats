@@ -34,7 +34,7 @@ describe('doninoSeasonSlides', () => {
 
     // РПБ
     const rpbSlide = slides[1]
-    expect(rpbSlide.breedLabel).toBe('Русская псовая борзая')
+    expect(rpbSlide.breedLabel).toBe('РПБ')
     expect(rpbSlide.dogCount).toBe(1)
     expect(rpbSlide.dogs[0].name).toBe('Флёна')
     expect(rpbSlide.dogs[0].rank).toBe(1)

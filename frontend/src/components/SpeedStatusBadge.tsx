@@ -11,7 +11,7 @@ export interface SpeedStatusBadgeProps {
 }
 
 const badgeBase =
-  'inline-flex items-center justify-center rounded px-1.5 py-0.5 text-[8.5px] font-bold uppercase tracking-wider shadow-2xs border leading-none select-none shrink-0 transition-transform group-hover:scale-105'
+  'inline-flex items-center justify-center rounded px-1.5 py-0.5 text-[8.5px] font-bold uppercase tracking-wider border leading-none select-none shrink-0 shadow-2xs'
 
 export default function SpeedStatusBadge({
   variant,
@@ -35,7 +35,7 @@ export default function SpeedStatusBadge({
       <span
         title={title}
         aria-label={title}
-        className={`${badgeBase} border-forest-700 bg-forest-600 text-white ${className}`.trim()}
+        className={`${badgeBase} border-amber-300/80 bg-amber-100 text-amber-900 ${className}`.trim()}
       >
         new
       </span>
@@ -57,7 +57,7 @@ export default function SpeedStatusBadge({
     <span
       title={title}
       aria-label={title}
-      className={`${badgeBase} border-warm-blue-700 bg-warm-blue-600 text-white ${className}`.trim()}
+      className={`${badgeBase} border-emerald-300/80 bg-emerald-100 text-emerald-800 ${className}`.trim()}
     >
       upd ↑
     </span>

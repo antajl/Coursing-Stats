@@ -11,6 +11,7 @@ const ShowDogProfile = lazy(() => import('./pages/Shows/ShowDogProfile'));
 const UnifiedDogProfile = lazy(() => import('./pages/UnifiedDogProfile'));
 const SpeedRecords = lazy(() => import('./pages/SpeedRecords/index'));
 const DoninoChampionship = lazy(() => import('./pages/DoninoChampionship/index'));
+const DoninoAnalytics = lazy(() => import('./pages/DoninoAnalytics/index'));
 const DoninoDogProfile = lazy(() => import('./pages/DoninoDogProfile'));
 const Guide = lazy(() => import('./pages/Guide'));
 const About = lazy(() => import('./pages/About'));
@@ -117,6 +118,7 @@ export default function AppRoutes() {
         <Route path="/speed-records" element={<SpeedRecords />} />
         <Route path="/donino/championship" element={<DoninoChampionship />} />
         <Route path="/donino-championship" element={<Navigate to="/donino/championship" replace />} />
+        <Route path="/donino/analytics" element={<DoninoAnalytics />} />
         <Route path="/breeds/:slug" element={<BreedHub />} />
         <Route path="/breed/:slug" element={<BreedHub />} />
         <Route path="/rating/:slug" element={<BreedHub />} />

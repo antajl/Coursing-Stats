@@ -19,7 +19,6 @@
     overflow: hidden !important;
     overscroll-behavior: none;
     height: 100% !important;
-    scrollbar-gutter: auto;
   }
 
   .cs-page-shell:has(.home-v2-static) {

@@ -61,7 +61,7 @@ export function MobileSubNavTabs<T extends string = string>({
               role="tab"
               aria-selected={isActive}
               onClick={() => onChange(tab.id)}
-              className={`pt-2 pb-2.5 text-xs whitespace-nowrap transition-all border-b-2 -mb-[1px] ${
+              className={`pt-2 pb-2.5 px-2.5 text-xs whitespace-nowrap transition-all border-b-2 -mb-[1px] ${
                 isFill ? 'flex-1 text-center justify-center' : 'shrink-0'
               } ${
                 isActive

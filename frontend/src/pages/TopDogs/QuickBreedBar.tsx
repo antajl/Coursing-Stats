@@ -59,7 +59,7 @@ interface QuickBreedBarProps {
 }
 
 const GAP = 6 // gap-1.5 = 6px
-const BUFFER = 16 // Запас против субпиксельного округления в flex
+const BUFFER = 24 // Запас против субпиксельного округления в flex и переполнения края контейнера
 
 export default function QuickBreedBar({
   selectedBreed,
@@ -108,6 +108,8 @@ export default function QuickBreedBar({
     const el = containerRef.current
     if (!el) return
 
+    let isCancelled = false
+
     const updateContainer = () => {
       if (el) {
         const nextW = el.clientWidth
@@ -117,26 +119,40 @@ export default function QuickBreedBar({
     updateContainer()
 
     // Точное снятие размеров кнопок в браузере с учетом шрифтов и кернинга
-    const allW = allBtnRef.current?.offsetWidth || 96
-    const moreW = moreBtnRef.current?.offsetWidth || 114
-    const minW = minBtnRef.current?.offsetWidth || 86
-    const widths: Record<string, number> = {}
-    candidates.forEach((b, i) => {
-      widths[b.key] = itemRefs.current[i]?.offsetWidth || b.estWidth
-    })
-    setMeasured((prev) => {
-      if (
-        prev &&
-        prev.allW === allW &&
-        prev.moreW === moreW &&
-        prev.minW === minW &&
-        Object.keys(prev.widths).length === Object.keys(widths).length &&
-        Object.entries(widths).every(([k, v]) => prev.widths[k] === v)
-      ) {
-        return prev
-      }
-      return { allW, moreW, minW, widths }
-    })
+    const remeasure = () => {
+      const allW = allBtnRef.current?.offsetWidth || 96
+      const moreW = moreBtnRef.current?.offsetWidth || 114
+      const minW = minBtnRef.current?.offsetWidth || 86
+      const widths: Record<string, number> = {}
+      candidates.forEach((b, i) => {
+        widths[b.key] = itemRefs.current[i]?.offsetWidth || b.estWidth
+      })
+      setMeasured((prev) => {
+        if (
+          prev &&
+          prev.allW === allW &&
+          prev.moreW === moreW &&
+          prev.minW === minW &&
+          Object.keys(prev.widths).length === Object.keys(widths).length &&
+          Object.entries(widths).every(([k, v]) => prev.widths[k] === v)
+        ) {
+          return prev
+        }
+        return { allW, moreW, minW, widths }
+      })
+    }
+
+    remeasure()
+
+    // Повторное измерение после загрузки веб-шрифтов (например, Montserrat)
+    if (typeof document !== 'undefined' && 'fonts' in document) {
+      document.fonts.ready.then(() => {
+        if (!isCancelled) {
+          remeasure()
+          updateContainer()
+        }
+      })
+    }
 
     if (typeof ResizeObserver !== 'undefined') {
       const ro = new ResizeObserver((entries) => {
@@ -148,10 +164,16 @@ export default function QuickBreedBar({
         }
       })
       ro.observe(el)
-      return () => ro.disconnect()
+      return () => {
+        isCancelled = true
+        ro.disconnect()
+      }
     } else {
       window.addEventListener('resize', updateContainer)
-      return () => window.removeEventListener('resize', updateContainer)
+      return () => {
+        isCancelled = true
+        window.removeEventListener('resize', updateContainer)
+      }
     }
   }, [candidateKeys])
 
@@ -248,14 +270,14 @@ export default function QuickBreedBar({
         <button
           ref={allBtnRef}
           type="button"
-          className="inline-flex h-8 shrink-0 items-center rounded-full px-3 text-xs font-semibold"
+          className="inline-flex h-8 shrink-0 items-center rounded-full border border-transparent px-3 text-xs font-semibold"
         >
           Все породы
         </button>
         <button
           ref={moreBtnRef}
           type="button"
-          className="inline-flex h-8 shrink-0 items-center gap-1 rounded-full px-3 text-xs font-semibold"
+          className="inline-flex h-8 shrink-0 items-center gap-1 rounded-full border border-transparent px-3 text-xs font-semibold"
         >
           <span>Ещё породы</span>
           <ChevronDown className="h-3.5 w-3.5" />
@@ -263,7 +285,7 @@ export default function QuickBreedBar({
         <button
           ref={minBtnRef}
           type="button"
-          className="inline-flex h-8 shrink-0 items-center gap-1 rounded-full px-3 text-xs font-semibold"
+          className="inline-flex h-8 shrink-0 items-center gap-1 rounded-full border border-transparent px-3 text-xs font-semibold"
         >
           <span>Породы</span>
           <ChevronDown className="h-3.5 w-3.5" />
@@ -275,7 +297,7 @@ export default function QuickBreedBar({
               itemRefs.current[i] = el
             }}
             type="button"
-            className="inline-flex h-8 shrink-0 items-center rounded-full px-3 text-xs font-semibold"
+            className="inline-flex h-8 shrink-0 items-center rounded-full border border-transparent px-3 text-xs font-semibold"
           >
             {breed.label}
           </button>
@@ -285,7 +307,7 @@ export default function QuickBreedBar({
       {/* Основной адаптивный контейнер */}
       <div
         ref={containerRef}
-        className={`flex items-center gap-1.5 flex-nowrap min-w-0 w-full overflow-hidden py-1 ${className}`.trim()}
+        className={`flex items-center gap-1.5 flex-nowrap min-w-0 w-full overflow-hidden py-1 pr-1.5 ${className}`.trim()}
         role="toolbar"
         aria-label="Быстрый выбор породы"
       >

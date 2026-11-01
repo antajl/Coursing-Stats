@@ -67,13 +67,12 @@ export default function CoursingHistorySparkline({
 
   if (points.length < 2) return null
 
-  const width = 240
-  const height = 64
-  const padding = { top: 16, right: 14, bottom: 10, left: 14 }
+  const width = 200
+  const height = 40
+  const padding = { top: 12, right: 16, bottom: 4, left: 14 }
   const times = points.map((point) => point.time_seconds)
   const minTime = Math.min(...times)
   const maxTime = Math.max(...times)
-  const delta = times[times.length - 1] - times[0]
   const range = Math.max(maxTime - minTime, 0.5)
   const minY = minTime - range * 0.2
   const maxY = maxTime + range * 0.2
@@ -92,8 +91,6 @@ export default function CoursingHistorySparkline({
 
   const linePath = coords.map((point, index) => `${index === 0 ? 'M' : 'L'} ${point.x} ${point.y}`).join(' ')
   const areaPath = `${linePath} L ${coords[coords.length - 1].x} ${floorY} L ${coords[0].x} ${floorY} Z`
-  const midX = (coords[0].x + coords[coords.length - 1].x) / 2
-  const midY = (coords[0].y + coords[coords.length - 1].y) / 2
 
   const formatTime = (value: number) => value.toFixed(2).replace('.', ',')
   const pointTooltip = (p: CoursingTimelinePoint) =>
@@ -102,7 +99,7 @@ export default function CoursingHistorySparkline({
   return (
     <svg
       viewBox={`0 0 ${width} ${height}`}
-      className={`h-16 w-full max-w-[260px] ${className}`}
+      className={`h-10 w-full max-w-[200px] ${className}`}
       role="img"
       aria-label={`История времени 350 м: от ${formatTime(minTime)} с (${time350ToSpeedKmh(minTime).toFixed(1)} км/ч) до ${formatTime(maxTime)} с (${time350ToSpeedKmh(maxTime).toFixed(1)} км/ч)`}
       title={points.map(pointTooltip).join(' → ')}
@@ -129,63 +126,45 @@ export default function CoursingHistorySparkline({
         d={linePath}
         fill="none"
         className="stroke-camel-600"
-        strokeWidth="2.5"
+        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
 
-      {points.length === 2 && delta !== 0 && (
-        <g>
-          <rect
-            x={midX - 18}
-            y={midY - 18}
-            width={36}
-            height={16}
-            rx={8}
-            className={
-              delta < 0
-                ? 'fill-green-600'
-                : 'fill-old-money-400'
-            }
-          />
-          <text
-            x={midX}
-            y={midY - 7}
-            textAnchor="middle"
-            className="fill-white text-[9px] font-bold"
-          >
-            {delta < 0 ? delta.toFixed(2).replace('.', ',') : `+${delta.toFixed(2).replace('.', ',')}`}
-          </text>
-        </g>
-      )}
+      {coords.map((point, index) => {
+        const isFirst = index === 0
+        const isLast = index === coords.length - 1
+        const anchor = isLast ? 'end' : isFirst ? 'start' : 'middle'
+        const textX = isLast ? point.x + 2 : isFirst ? point.x - 2 : point.x
 
-      {coords.map((point, index) => (
-        <g key={`${point.date}-${point.time_seconds}-${index}`}>
-          <text
-            x={point.x}
-            y={point.y - 8}
-            textAnchor="middle"
-            className={
-              point.isCurrent
-                ? 'fill-camel-700 text-[10px] font-bold'
-                : 'fill-old-money-500 text-[9px] font-semibold'
-            }
-          >
-            {formatTime(point.time_seconds)}
-          </text>
-          <circle
-            cx={point.x}
-            cy={point.y}
-            r={point.isCurrent ? 4.5 : 3.5}
-            className={
-              point.isCurrent
-                ? 'fill-camel-600 stroke-white'
-                : 'fill-old-money-300 stroke-white'
-            }
-            strokeWidth="2"
-          />
-        </g>
-      ))}
+        return (
+          <g key={`${point.date}-${point.time_seconds}-${index}`}>
+            <text
+              x={textX}
+              y={Math.max(point.y - 6, 9)}
+              textAnchor={anchor}
+              className={
+                point.isCurrent
+                  ? 'fill-camel-800 text-[9.5px] font-bold'
+                  : 'fill-old-money-600 text-[8.5px] font-semibold'
+              }
+            >
+              {formatTime(point.time_seconds)}
+            </text>
+            <circle
+              cx={point.x}
+              cy={point.y}
+              r={point.isCurrent ? 3.5 : 2.5}
+              className={
+                point.isCurrent
+                  ? 'fill-camel-600 stroke-white'
+                  : 'fill-old-money-400 stroke-white'
+              }
+              strokeWidth="1.5"
+            />
+          </g>
+        )
+      })}
     </svg>
   )
 }

@@ -161,11 +161,17 @@ export async function getDogSpeedRank(
 /** 1-based место в рейтинге по породе по местам (курсинг/БЗМП) за год. */
 export async function getDogBreedPlacementRank(
   dogId: string | number | null | undefined,
-  breed: string,
+  breed: string | number | null | undefined,
   year = '',
 ): Promise<number | null> {
+  // Gracefully handle swapped arguments if caller passed (breed, dogId)
+  if (typeof dogId === 'string' && (typeof breed === 'number' || /^\d+$/.test(String(breed)))) {
+    const tmp = dogId
+    dogId = breed
+    breed = tmp
+  }
   if (dogId == null || dogId === '' || !breed) return null
-  const items = applyCommonFilters(await loadTopIndex('top-placement', year), breed, 0)
+  const items = applyCommonFilters(await loadTopIndex('top-placement', year), String(breed), 0)
   const sorted = sortPlacementItems(items, 'gold')
   const index = sorted.findIndex((it) => String(it.dog_id) === String(dogId))
   return index >= 0 ? index + 1 : null
@@ -174,11 +180,17 @@ export async function getDogBreedPlacementRank(
 /** 1-based место в рейтинге по породе по скорости (беги) за год. */
 export async function getDogBreedSpeedRank(
   dogId: string | number | null | undefined,
-  breed: string,
+  breed: string | number | null | undefined,
   year = '',
 ): Promise<number | null> {
+  // Gracefully handle swapped arguments if caller passed (breed, dogId)
+  if (typeof dogId === 'string' && (typeof breed === 'number' || /^\d+$/.test(String(breed)))) {
+    const tmp = dogId
+    dogId = breed
+    breed = tmp
+  }
   if (dogId == null || dogId === '' || !breed) return null
-  const items = applyCommonFilters(await loadTopIndex('top-speed', year), breed, 0)
+  const items = applyCommonFilters(await loadTopIndex('top-speed', year), String(breed), 0)
   const sorted = sortSpeedItems(items, 'best_speed')
   const index = sorted.findIndex((it) => String(it.dog_id) === String(dogId))
   return index >= 0 ? index + 1 : null

@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import { Calendar, Building2 } from 'lucide-react'
+import { Calendar, Building2, Dog, PawPrint, FileSpreadsheet } from 'lucide-react'
 import SkeletonLoader from '../../components/SkeletonLoader'
 import { getEvent, getEventResults } from '../../lib/staticData'
-import EventHeader from '../Events/EventResults/EventHeader'
 import ResultsSection from '../Events/EventResults/ResultsSection'
 import type { Event, Result } from '../Events/EventResults/types'
 import type { ChampionshipStage } from '../../lib/staticData/donino'
@@ -11,15 +10,48 @@ interface ChampionshipStageTabProps {
   stage: ChampionshipStage
 }
 
+interface StageCacheEntry {
+  event: Event
+  results: Result[]
+}
+
+const stageDataCache = new Map<number, StageCacheEntry>()
+
+export function prefetchStageData(stageId: number): Promise<void> {
+  if (stageDataCache.has(stageId)) return Promise.resolve()
+  return Promise.all([
+    getEvent(String(stageId)),
+    getEventResults(String(stageId)),
+  ])
+    .then(([evRes, resRes]) => {
+      if (evRes.success && evRes.data && resRes.success && resRes.data) {
+        stageDataCache.set(stageId, {
+          event: evRes.data as Event,
+          results: Array.isArray(resRes.data) ? (resRes.data as unknown as Result[]) : [],
+        })
+      }
+    })
+    .catch(() => {})
+}
+
 export default function ChampionshipStageTab({ stage }: ChampionshipStageTabProps) {
-  const [eventData, setEventData] = useState<Event | null>(null)
-  const [eventResults, setEventResults] = useState<Result[]>([])
-  const [loadingProtocol, setLoadingProtocol] = useState(false)
+  const cached = stageDataCache.get(stage.id)
+  const [eventData, setEventData] = useState<Event | null>(cached?.event ?? null)
+  const [eventResults, setEventResults] = useState<Result[]>(cached?.results ?? [])
+  const [loadingProtocol, setLoadingProtocol] = useState(!cached && stage.has_results)
   const [protocolError, setProtocolError] = useState<string | null>(null)
 
-  // Load native official event results
+  // Load native official event results if not already cached
   useEffect(() => {
     if (!stage.has_results) return
+    if (stageDataCache.has(stage.id)) {
+      const c = stageDataCache.get(stage.id)!
+      setEventData(c.event)
+      setEventResults(c.results)
+      setLoadingProtocol(false)
+      return
+    }
+
     let cancelled = false
     setLoadingProtocol(true)
     setProtocolError(null)
@@ -30,14 +62,16 @@ export default function ChampionshipStageTab({ stage }: ChampionshipStageTabProp
     ])
       .then(([evRes, resRes]) => {
         if (cancelled) return
-        if (evRes.success && evRes.data) {
-          setEventData(evRes.data as Event)
+        if (evRes.success && evRes.data && resRes.success && resRes.data) {
+          const entry: StageCacheEntry = {
+            event: evRes.data as Event,
+            results: Array.isArray(resRes.data) ? (resRes.data as unknown as Result[]) : [],
+          }
+          stageDataCache.set(stage.id, entry)
+          setEventData(entry.event)
+          setEventResults(entry.results)
         } else {
           setProtocolError('Не удалось загрузить данные протокола')
-        }
-
-        if (resRes.success && resRes.data) {
-          setEventResults(Array.isArray(resRes.data) ? (resRes.data as unknown as Result[]) : [])
         }
       })
       .catch((err) => {
@@ -107,16 +141,47 @@ export default function ChampionshipStageTab({ stage }: ChampionshipStageTabProp
     )
   }
 
-  // Official Protocol View (EventHeader + ResultsSection)
+  const participantsCount = new Set(eventResults.map((r) => r.dog_id)).size
+  const breedsCount = new Set(
+    eventResults.map((r) => r.dog?.breed || r.breed).filter(Boolean),
+  ).size
+  const eventId = eventData?.id ? String(eventData.id) : null
+  const protocolUrl = eventId ? `/protocols/${eventId}.html` : null
+
+  // Official Protocol View (Unified Toolbar + ResultsSection)
   return (
     <div className="space-y-3.5">
-      <EventHeader
-        event={eventData}
+      <ResultsSection
         results={eventResults}
-        showSeriesNav={false}
-        className="mb-0"
+        trailing={
+          <>
+            <div className="flex items-center gap-1.5 shrink-0">
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-old-money-200/80 bg-cream-50 px-2.5 py-1 text-xs font-semibold text-charcoal-700 shadow-2xs whitespace-nowrap">
+                <Dog className="h-3.5 w-3.5 text-camel-700" aria-hidden />
+                <span>{participantsCount} участников</span>
+              </span>
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-old-money-200/80 bg-cream-50 px-2.5 py-1 text-xs font-semibold text-charcoal-700 shadow-2xs whitespace-nowrap">
+                <PawPrint className="h-3.5 w-3.5 text-camel-700" aria-hidden />
+                <span>{breedsCount} пород</span>
+              </span>
+            </div>
+
+            {protocolUrl && (
+              <a
+                href={protocolUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-camel-300 bg-camel-50 px-3 py-1 text-xs font-semibold text-camel-900 shadow-2xs transition-all hover:border-camel-400 hover:bg-camel-100 cursor-pointer whitespace-nowrap"
+                title="Официальный протокол состязания и прикреплённые документы"
+              >
+                <FileSpreadsheet className="h-3.5 w-3.5 text-camel-700" aria-hidden />
+                <span className="hidden sm:inline">Протокол и документы</span>
+                <span className="sm:hidden">Протокол</span>
+              </a>
+            )}
+          </>
+        }
       />
-      <ResultsSection results={eventResults} />
     </div>
   )
 }
