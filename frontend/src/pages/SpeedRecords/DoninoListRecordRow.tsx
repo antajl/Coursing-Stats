@@ -97,6 +97,21 @@ export default function DoninoListRecordRow({
       />
     )
 
+  const sparklineMini =
+    mode === 'speed' ? (
+      <SpeedHistorySparkline
+        current={{ speed_km_h: speedKmh ?? 0, date: date ?? '' }}
+        history={history}
+        className="h-7 w-full max-w-[210px]"
+      />
+    ) : (
+      <CoursingHistorySparkline
+        current={{ time_seconds: timeSeconds ?? 0, date: date ?? '' }}
+        history={history}
+        className="h-7 w-full max-w-[210px]"
+      />
+    )
+
   const profileLink = (
     <Link
       to={`/donino-dog/${encodeURIComponent(name)}/${encodeURIComponent(breed)}/`}
@@ -118,6 +133,14 @@ export default function DoninoListRecordRow({
             </OwnerCrownName>
             {sex && <DogSexIcon sex={sex} />}
           </div>
+
+          {/* Компактный мини-график истории замеров на мобильных устройствах */}
+          {hasSparkline && (
+            <div className="sm:hidden my-1 w-full max-w-[210px]">
+              {sparklineMini}
+            </div>
+          )}
+
           {(date || breed) && (
             <div className="mt-0.5 flex min-w-0 items-center gap-1.5 text-xs text-old-money-500 whitespace-nowrap">
               {date && <span className="shrink-0">{formatRecordDate(date)}</span>}
@@ -136,12 +159,14 @@ export default function DoninoListRecordRow({
         </div>
       </div>
 
+      {/* Полноразмерный спарклайн по центру на экранах от sm (планшеты и десктоп) */}
       {hasSparkline && (
         <div className="donino-list-row-chart hidden sm:flex sm:flex-1 sm:min-h-0 sm:items-center sm:justify-center sm:px-2">
           {sparkline}
         </div>
       )}
 
+      {/* Блок результата справа */}
       <div className="relative shrink-0 flex flex-col items-end justify-center text-right min-w-[70px] sm:min-w-[85px]">
         {mode === 'speed' ? (
           <>
@@ -178,6 +203,28 @@ export default function DoninoListRecordRow({
       </div>
     </Link>
   )
+
+  if (!screenshotUrl) {
+    return <div className={rowClass}>{profileLink}</div>
+  }
+
+  return (
+    <div className={`${rowClass} donino-list-row--with-screen`}>
+      {profileLink}
+      <a
+        href={screenshotUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Смотреть подтверждение (скриншот/протокол)"
+        title="Смотреть подтверждение (скриншот/протокол)"
+        className="donino-list-row-screen"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <Camera size={15} strokeWidth={2} aria-hidden />
+      </a>
+    </div>
+  )
+}
 
   if (!screenshotUrl) {
     return <div className={rowClass}>{profileLink}</div>

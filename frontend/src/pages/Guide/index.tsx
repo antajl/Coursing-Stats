@@ -45,8 +45,8 @@ const GUIDE_SECTIONS = [
     id: 'rating',
     label: 'Рейтинг',
     description:
-      'Как устроен зачёт сезона Coursing Stats: медали и эффективность, индекс CS, Elo как справка.',
-    keywords: 'рейтинг курсинг, зачёт сезона, индекс CS, Elo, медали курсинг',
+      'Как устроен зачёт сезона Coursing Stats: олимпийский медальный каскад, показатель эффективности standingScore и индекс CS v2.',
+    keywords: 'рейтинг курсинг, зачёт сезона, индекс CS, standingScore, медали курсинг, бега борзых',
   },
   {
     id: 'speeds',

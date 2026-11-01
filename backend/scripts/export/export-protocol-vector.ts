@@ -2066,15 +2066,66 @@ export function buildToolbarHtml(comp: CompetitionData): string {
 `;
 }
 
+export function buildProtocolSeoHead(comp: CompetitionData): string {
+  const eventId = comp.event_id || comp.event?.id || '';
+  const eventTitle = comp.event?.full_title || comp.event?.title || comp.event?.name || 'Протокол состязания';
+  const eventDate = comp.event?.date || comp.event?.date_start || '';
+  const location = (comp.event?.location || '').trim();
+  const hostClub = (comp.event?.host_club || '').trim();
+  const count = comp.results ? comp.results.length : 0;
+  const canonicalUrl = `https://coursing-stats.ru/protocols/${eventId}.html`;
+
+  const descParts = [
+    `Официальный протокол состязания: ${eventTitle}${eventDate ? ` (${eventDate})` : ''}`,
+    location ? location : null,
+    hostClub ? `Организатор: ${hostClub}` : null,
+    count > 0 ? `${count} участников` : null,
+    'Результаты забегов, баллы судей и сертификаты РКФ на портале Coursing Stats.'
+  ].filter(Boolean);
+  const description = descParts.join('. ');
+
+  const sportsEventSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'SportsEvent',
+    name: eventTitle,
+    ...(eventDate ? { startDate: eventDate } : {}),
+    ...(location ? { location: { '@type': 'Place', name: location } } : {}),
+    ...(hostClub ? { organizer: { '@type': 'Organization', name: hostClub } } : {}),
+    url: canonicalUrl
+  };
+
+  return `  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="${escapeHtml(description)}">
+  <link rel="canonical" href="${canonicalUrl}">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="${escapeHtml(eventTitle)}">
+  <meta property="og:description" content="${escapeHtml(description)}">
+  <meta property="og:url" content="${canonicalUrl}">
+  <meta property="og:site_name" content="Coursing Stats">
+  <script type="application/ld+json">
+${JSON.stringify(sportsEventSchema, null, 2)}
+  </script>`;
+}
+
 export function injectToolbar(html: string, comp: CompetitionData): string {
   if (html.includes('class="cs-toolbar"')) return html;
 
   let res = html;
+
+  // 1. Inject SEO metadata, Canonical and SportsEvent Schema into <head>
+  const headEndIdx = res.indexOf('</head>');
+  if (headEndIdx !== -1 && !res.includes('rel="canonical"')) {
+    const seoHead = buildProtocolSeoHead(comp);
+    res = res.slice(0, headEndIdx) + seoHead + '\n' + res.slice(headEndIdx);
+  }
+
+  // 2. Inject toolbar CSS
   const styleIdx = res.lastIndexOf('</style>');
   if (styleIdx !== -1) {
     res = res.slice(0, styleIdx) + TOOLBAR_CSS + '\n  ' + res.slice(styleIdx);
   }
 
+  // 3. Inject toolbar HTML
   const toolbarHtml = buildToolbarHtml(comp);
   const bodyIdx = res.indexOf('<body>');
   if (bodyIdx !== -1) {

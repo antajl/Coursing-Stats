@@ -1,37 +1,28 @@
-# Coursing Stats
+# Coursing Stats (Курсинг Статс)
 
-> Dog competition statistics aggregator (coursing, BZMP, racing) + RKF shows + Donino speed records + Telegram bot. CDN-only public site hosted on Yandex Object Storage.
+> Единая всероссийская база спортивной и выставочной кинологической статистики с 2015 года: курсинг и бега борзых (рейсинг), радарные замеры скорости полигона Донино, выставки Российской кинологической федерации (РКФ).
 
-## Core Navigation (start here)
+Сайт проекта: https://coursing-stats.ru
+Полный справочный файл для LLM: https://coursing-stats.ru/llms-full.txt
 
-- [Agent Router (MAP)](MAP.md) — task → one cheatsheet
-- [Strategic Roadmap](ROADMAP.md) — active refactoring branches
-- [Quick Reference](QUICK-REFERENCE.md) — commands & gotchas
-- [Glossary & Invariants](GLOSSARY.md) — terms, concepts, invariants
-- [Community Chronicle](COMMUNITY_CHRONICLE_2026.md) — community history, ProCoursing, legal & archive status
-- [Full Index](INDEX.md) — complete file registry
-- [Root Rules](../AGENTS.md) — primary system rules and invariants
+## Основные разделы
 
-## Domain Sheets (docs/sheets/)
+- [Календарь и архив соревнований](https://coursing-stats.ru/competitions/?tab=archive): Расписание и архив турниров по курсингу и бегам борзых с 2015 года по настоящее время. Официальные протоколы, распределение по забегам, попоны, оценки по 5 критериям, баллы судей и занятые места.
+- [Рейтинг собак в спорте](https://coursing-stats.ru/competitions/?tab=ranking): Единый спортивный рейтинг по олимпийскому каскаду (золотые медали, очки стабильности CS, число забегов) с фильтрацией по породам, полу и годам.
+- [Рекорды скорости полигона Донино](https://coursing-stats.ru/speed-records/): Официальная база замеров скорости спринтерского полигона в Донино (Раменский район) — пиковая скорость по радару (км/ч) и спринтерская дистанция 350 м (секунды).
+- [Клубный чемпионат Донино](https://coursing-stats.ru/donino/championship/): Серия турниров по бегам борзых на 350 м с электронным хронометражем и фотофинишем. Турнирная таблица лиг («Абсолют», «Чемпионов», «Прогресс»), начисление баллов и правила ротации.
+- [Аналитика полигона Донино](https://coursing-stats.ru/donino/analytics/): Сводная аналитика спринтерских качеств пород: скоростной спектр (км/ч), распределение участников по лигам и средние показатели.
+- [Выставки собак РКФ](https://coursing-stats.ru/shows/): Единый реестр сертификатных выставок РКФ, отчеты рингов, сертификаты и титулы (CAC, CACIB, ЧРКФ, BOB, BIG, BIS) и выставочные рейтинги.
+- [Судьи и эксперты](https://coursing-stats.ru/competitions/?tab=judges): Каталог спортивных судей и экспертов выставок РКФ, статистика судейства, судимые породы и индекс строгости.
+- [Справочник и правила](https://coursing-stats.ru/guide/): Метрология скорости пород борзых, правила оценки курсинга (5 критериев), правила бегов борзых, расшифровка титулов РКФ и регламенты.
 
-- [00 — Overview](sheets/00-overview.md)
-- [01 — Three domains](sheets/01-three-domains.md)
-- [02 — Data pipeline](sheets/02-data-pipeline.md)
-- [03 — Competitions](sheets/03-competitions.md)
-- [04 — Shows](sheets/04-shows.md)
-- [05 — Donino](sheets/05-donino.md)
-- [06 — Parsers](sheets/06-parsers.md)
-- [07 — Frontend](sheets/07-frontend.md)
-- [08 — Bot](sheets/08-bot.md)
-- [09 — Ops & deploy](sheets/09-ops-deploy.md)
-- [10 — Security](sheets/10-security.md)
-- [11 — Testing](sheets/11-testing.md)
-- [12 — Agent skills](sheets/12-agent-skills.md)
-- [13 — Racing standards](sheets/13-racing-standards.md)
-- [14 — Design system](sheets/14-design-system.md)
-- [15 — SEO & analytics](sheets/15-seo-analytics.md)
-- [16 — Protocol template](sheets/16-protocol-template.md)
+## Профили собак и идентификация
 
-## Decisions
+- Профиль спортивной/выставочной собаки: `https://coursing-stats.ru/dog/{dog_id}/` (карьера, история забегов, баллы, медали, сертификаты РКФ, судейская статистика).
+- Профиль собаки в замерах Донино: `https://coursing-stats.ru/donino-dog/{name}/{breed}/` (пиковая скорость км/ч, лучшее время 350 м, динамика формы).
+- Официальные векторные HTML-протоколы турниров: `https://coursing-stats.ru/protocols/{event_id}.html`.
 
-- [ADRs](decisions/)
+## Интеграция и полезные ссылки
+
+- [Карта сайта XML](https://coursing-stats.ru/sitemap-index.xml): Индексная XML sitemap всех индексируемых страниц, профилей собак, мероприятий, судей и протоколов.
+- [Telegram-бот](https://t.me/coursing_stats_bot): Официальный бот платформы (@coursing_stats_bot) для быстрого поиска собак, просмотра результатов соревнований и карточек участников.
