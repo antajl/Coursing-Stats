@@ -85,34 +85,46 @@ function SpeedRecords() {
       />
 
       <div className="space-y-4">
-        {/* Внутренний переключатель видов: Таблица замеров / Статистика и аналитика */}
-        <div className="flex items-center justify-between gap-3 pt-0.5">
-          <div className="inline-flex items-center p-0.5 rounded-lg bg-cream-100 border border-old-money-200 shadow-2xs">
+        {/* Navigation Tabs (такие же как в Клубном чемпионате) */}
+        <div className="border-b border-old-money-200">
+          <nav
+            className="flex space-x-1 sm:space-x-2 overflow-x-auto pb-px scrollbar-none"
+            aria-label="Вкладки замеров Донино"
+          >
             <button
               type="button"
               onClick={() => handleViewChange('table')}
-              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs transition-all cursor-pointer ${
+              className={`min-h-[44px] px-3.5 py-2.5 rounded-t-xl text-xs sm:text-sm font-semibold transition-all flex items-center gap-2 border-b-2 cursor-pointer whitespace-nowrap ${
                 view === 'table'
-                  ? 'border border-camel-400 bg-camel-100 text-camel-950 font-bold shadow-2xs'
-                  : 'text-charcoal-600 hover:text-charcoal-900 font-medium'
+                  ? 'border-camel-700 text-charcoal-900 bg-cream-100/70 font-bold'
+                  : 'border-transparent text-charcoal-600 hover:text-charcoal-900 hover:bg-cream-50'
               }`}
             >
-              <Table className="h-3.5 w-3.5" />
+              <Table
+                className={`w-4 h-4 shrink-0 ${
+                  view === 'table' ? 'text-camel-700' : 'text-charcoal-400'
+                }`}
+              />
               <span>Таблица замеров</span>
             </button>
+
             <button
               type="button"
               onClick={() => handleViewChange('stats')}
-              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs transition-all cursor-pointer ${
+              className={`min-h-[44px] px-3.5 py-2.5 rounded-t-xl text-xs sm:text-sm font-semibold transition-all flex items-center gap-2 border-b-2 cursor-pointer whitespace-nowrap ${
                 view === 'stats'
-                  ? 'border border-camel-400 bg-camel-100 text-camel-950 font-bold shadow-2xs'
-                  : 'text-charcoal-600 hover:text-charcoal-900 font-medium'
+                  ? 'border-camel-700 text-charcoal-900 bg-cream-100/70 font-bold'
+                  : 'border-transparent text-charcoal-600 hover:text-charcoal-900 hover:bg-cream-50'
               }`}
             >
-              <BarChart2 className="h-3.5 w-3.5" />
+              <BarChart2
+                className={`w-4 h-4 shrink-0 ${
+                  view === 'stats' ? 'text-camel-700' : 'text-charcoal-400'
+                }`}
+              />
               <span>Статистика и аналитика</span>
             </button>
-          </div>
+          </nav>
         </div>
         <DoninoPageToolbar
           view={view}

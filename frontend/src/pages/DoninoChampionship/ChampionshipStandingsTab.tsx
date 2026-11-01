@@ -87,7 +87,9 @@ export default function ChampionshipStandingsTab({
     for (const p of all) {
       const key = p.dog_name.trim().toLowerCase()
       if (!map.has(key)) map.set(key, [])
-      map.get(key)!.push(p.notes)
+      const stageRoman = p.stage_from === 1 ? 'I' : p.stage_from === 2 ? 'II' : 'III'
+      const text = `Переход после ${stageRoman} этапа: ${p.from_league} → ${p.to_league}${p.reason ? ` (${p.reason})` : ''}`
+      map.get(key)!.push(text)
     }
     return map
   }, [promotions])
@@ -166,12 +168,18 @@ export default function ChampionshipStandingsTab({
   const hasActiveFilters =
     selectedLeague !== 'all' || searchQuery !== '' || selectedBreed !== ''
 
-  const leagueOptions: { label: string; value: LeagueFilter }[] = [
-    { label: `Все лиги (${dynamicLeagueCounts.all})`, value: 'all' },
-    { label: `Абсолют (${dynamicLeagueCounts['Абсолют']})`, value: 'Абсолют' },
-    { label: `Чемпионов (${dynamicLeagueCounts['Чемпионов']})`, value: 'Чемпионов' },
-    { label: `Прогресс (${dynamicLeagueCounts['Прогресс']})`, value: 'Прогресс' },
-    { label: `Юниоры (${dynamicLeagueCounts['Юниоры']})`, value: 'Юниоры' },
+  const leagueOrder: LeagueFilter[] = ['Чемпионов', 'Абсолют', 'Прогресс', 'Юниоры']
+  const sortedLeagues = [...leagueOrder].sort(
+    (a, b) => (dynamicLeagueCounts[b] || 0) - (dynamicLeagueCounts[a] || 0)
+  )
+
+  const leagueOptions: { label: string; value: LeagueFilter; count: number }[] = [
+    { label: `Все лиги (${dynamicLeagueCounts.all})`, value: 'all', count: dynamicLeagueCounts.all },
+    ...sortedLeagues.map((league) => ({
+      label: `${league} (${dynamicLeagueCounts[league] || 0})`,
+      value: league,
+      count: dynamicLeagueCounts[league] || 0,
+    })),
   ]
 
   return (
@@ -189,8 +197,10 @@ export default function ChampionshipStandingsTab({
         {/* League Dropdown */}
         <ModernDropdown
           isOpen={leagueDropdownOpen}
-          onClose={() => setLeagueDropdownOpen(false)}
-          align="left"
+          onOpenChange={setLeagueDropdownOpen}
+          width="180px"
+          portal
+          closeOnScroll
           trigger={
             <button
               type="button"
@@ -204,26 +214,34 @@ export default function ChampionshipStandingsTab({
           }
         >
           <div className="p-1 space-y-0.5 min-w-[170px]">
-            {leagueOptions.map((opt) => (
-              <button
-                key={opt.value}
-                type="button"
-                onClick={() => {
-                  setSelectedLeague(opt.value)
-                  setLeagueDropdownOpen(false)
-                }}
-                className={`w-full text-left px-2.5 py-1.5 rounded-md text-xs transition-colors cursor-pointer flex items-center justify-between ${
-                  selectedLeague === opt.value
-                    ? 'border border-camel-400 bg-camel-100 text-camel-950 font-bold shadow-2xs'
-                    : 'text-charcoal-700 hover:bg-cream-100'
-                }`}
-              >
-                <span>{opt.label}</span>
-                {selectedLeague === opt.value && (
-                  <span className="w-1.5 h-1.5 rounded-full bg-camel-600" />
-                )}
-              </button>
-            ))}
+            {leagueOptions.map((opt) => {
+              const isSelected = selectedLeague === opt.value
+              const isEmpty = opt.count === 0 && opt.value !== 'all'
+
+              return (
+                <button
+                  key={opt.value}
+                  type="button"
+                  disabled={isEmpty}
+                  onClick={() => {
+                    setSelectedLeague(opt.value)
+                    setLeagueDropdownOpen(false)
+                  }}
+                  className={`w-full text-left px-2.5 py-1.5 rounded-md text-xs transition-colors cursor-pointer flex items-center justify-between ${
+                    isSelected
+                      ? 'border border-camel-400 bg-camel-100 text-camel-950 font-semibold shadow-2xs'
+                      : isEmpty
+                      ? 'opacity-40 cursor-not-allowed text-charcoal-400'
+                      : 'text-charcoal-700 hover:bg-cream-100'
+                  }`}
+                >
+                  <span>{opt.label}</span>
+                  {isSelected && (
+                    <span className="w-1.5 h-1.5 rounded-full bg-camel-600" />
+                  )}
+                </button>
+              )
+            })}
           </div>
         </ModernDropdown>
 

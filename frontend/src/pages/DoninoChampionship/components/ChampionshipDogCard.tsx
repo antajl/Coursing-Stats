@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { ChevronDown, ChevronUp, Clock } from 'lucide-react'
+import { ChevronDown, ChevronUp } from 'lucide-react'
 import DogSexIcon from '../../../components/DogSexIcon'
 import OwnerCrownName from '../../../components/OwnerCrownName'
 import RankBadge from '../../../components/RankBadge'
@@ -27,6 +27,22 @@ export function formatChampionshipStatus(status: string | null | undefined): str
   if (s === 'dismissed') return 'Отстранён'
   if (s === 'disqualified' || s === 'dq') return 'Дисквалификация'
   return status
+}
+
+function cleanClassName(breedClass: string): string {
+  if (!breedClass) return ''
+  return breedClass
+    .replace(/\s*\([^)]*\)\s*/g, ' ')
+    .replace(/\s*-\s*(кобель|сука)\s*$/i, '')
+    .trim()
+}
+
+function getStageLeagueBadgeClass(league: string): string {
+  if (!league) return 'bg-cream-100 text-charcoal-700 border-old-money-200'
+  if (league.includes('Абсолют')) return 'bg-amber-100/90 text-amber-900 border-amber-300/80'
+  if (league.includes('Чемпион')) return 'bg-camel-100 text-charcoal-900 border-camel-300'
+  if (league.includes('Прогресс')) return 'bg-cream-200 text-charcoal-700 border-old-money-300'
+  return 'bg-sky-50 text-sky-800 border-sky-200'
 }
 
 export default function ChampionshipDogCard({
@@ -102,8 +118,22 @@ export default function ChampionshipDogCard({
               )}
             </div>
 
-            <div className="text-[11px] text-charcoal-600 mt-0.5">
+            <div className="text-[11px] text-charcoal-600 mt-0.5 flex items-center gap-1.5 flex-wrap">
               <span className="font-medium">{formatBreedName(dog.breed)}</span>
+              <span className="text-charcoal-300" aria-hidden="true">·</span>
+              {sortMode === 'time' ? (
+                <span>
+                  <strong className="text-charcoal-800 font-semibold">{dog.total_points ?? 0}&nbsp;б.</strong>
+                  {dog.stages_count > 1 ? ` · ${dog.stages_count} заб.` : ''}
+                </span>
+              ) : (
+                <span>
+                  <strong className="text-charcoal-800 font-semibold">
+                    {dog.best_time ? `${dog.best_time.toFixed(2)} сек` : 'без заездов'}
+                  </strong>
+                  {dog.stages_count > 1 ? ` · ${dog.stages_count} заб.` : ''}
+                </span>
+              )}
             </div>
           </div>
         </div>
@@ -116,35 +146,24 @@ export default function ChampionshipDogCard({
             Лига «{dog.current_league}»
           </span>
 
-          {/* Best Time & Points Display depending on sortMode */}
-          <div className="text-right pl-1 sm:pl-2 shrink-0 min-w-[72px] flex flex-col justify-center py-0.5">
+          {/* Best Time OR Points Display depending on sortMode (strictly 1 line!) */}
+          <div className="text-right pl-1 sm:pl-2 shrink-0 min-w-[64px] flex items-center justify-end">
             {sortMode === 'points' ? (
-              <>
-                <div className="flex items-baseline justify-end gap-1 leading-none">
-                  <span className="font-serif text-base sm:text-lg font-bold tabular-nums text-camel-900 leading-none">
-                    {dog.total_points != null && dog.total_points > 0 ? dog.total_points : '—'}
-                  </span>
-                  {dog.total_points != null && dog.total_points > 0 && (
-                    <span className="text-xs font-semibold text-charcoal-700">б.</span>
-                  )}
-                </div>
-                <div className="text-[11px] text-charcoal-500 mt-1 leading-normal font-mono">
-                  {dog.best_time ? `${dog.best_time.toFixed(2)} сек` : 'без заездов'}
-                </div>
-              </>
+              <div className="flex items-baseline justify-end gap-1 leading-none">
+                <span className="font-serif text-base sm:text-lg font-bold tabular-nums text-camel-900 leading-none">
+                  {dog.total_points != null && dog.total_points > 0 ? dog.total_points : '—'}
+                </span>
+                {dog.total_points != null && dog.total_points > 0 && (
+                  <span className="text-xs font-semibold text-charcoal-700">б.</span>
+                )}
+              </div>
             ) : (
-              <>
-                <div className="flex items-baseline justify-end gap-1 leading-none">
-                  <span className="font-serif text-base sm:text-lg font-bold tabular-nums text-camel-800 leading-none">
-                    {dog.best_time ? dog.best_time.toFixed(2) : '—'}
-                  </span>
-                  <span className="text-xs font-semibold text-charcoal-600">сек</span>
-                </div>
-                <div className="text-[11px] text-charcoal-500 mt-1 leading-normal font-medium">
-                  {dog.total_points != null && dog.total_points > 0 ? `${dog.total_points} б.` : '0 б.'}
-                  {dog.stages_count > 1 ? ` · ${dog.stages_count} заб.` : ''}
-                </div>
-              </>
+              <div className="flex items-baseline justify-end gap-1 leading-none">
+                <span className="font-serif text-base sm:text-lg font-bold tabular-nums text-camel-800 leading-none">
+                  {dog.best_time ? dog.best_time.toFixed(2) : '—'}
+                </span>
+                <span className="text-xs font-semibold text-charcoal-600">сек</span>
+              </div>
             )}
           </div>
 
@@ -157,110 +176,105 @@ export default function ChampionshipDogCard({
 
       {/* Expanded Drawer: Stage History */}
       {isExpanded && (
-        <div className="px-3 sm:px-4 py-3 bg-cream-100/80 border-t border-old-money-200/80 space-y-2.5 animate-fadeIn">
-          <div className="text-xs font-semibold text-charcoal-700 flex items-center justify-between">
-            <div className="flex items-center gap-1.5">
-              <Clock className="w-3.5 h-3.5 text-camel-700" />
-              <span>История выступлений на этапах:</span>
+        <div className="px-3 sm:px-4 py-2.5 bg-cream-100/80 border-t border-old-money-200/80 space-y-2 animate-fadeIn">
+          {/* Stages Table / Monolith in 6 Columns */}
+          <div className="overflow-hidden rounded-xl border border-old-money-200/90 bg-white/95 shadow-2xs divide-y-2 divide-old-money-200/90">
+            {/* Desktop Table Header: 3 columns left (Этап, Класс, Лига), 3 columns right (Место, Баллы, Секунды) */}
+            <div className="hidden sm:grid grid-cols-12 gap-2 px-3.5 py-1.5 bg-cream-100/70 text-[10px] font-bold text-charcoal-500 uppercase tracking-wider border-b border-old-money-100">
+              <div className="col-span-2">Этап</div>
+              <div className="col-span-3">Класс</div>
+              <div className="col-span-2">Лига</div>
+              <div className="col-span-2 text-center">Место</div>
+              <div className="col-span-1 text-center">Баллы</div>
+              <div className="col-span-2 text-right">Секунды</div>
             </div>
-            <span className="sm:hidden text-[10px] px-2 py-0.5 rounded bg-cream-200 text-charcoal-700 font-semibold">
-              Лига «{dog.current_league}»
-            </span>
-          </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
             {dog.history.map((h, hIdx) => {
               const b = h.points_breakdown
+              const stageRoman = h.stage_num === 1 ? 'I этап' : h.stage_num === 2 ? 'II этап' : 'III этап'
+              const dateFormatted = h.date ? h.date.slice(5) : ''
+              const cleanClass = cleanClassName(h.breed_class)
+              const stageLeague = h.league || (h.breed_class.match(/\(([^)]+)\)/)?.[1] ?? dog.current_league)
+              const leagueBadge = getStageLeagueBadgeClass(stageLeague)
+
               return (
-                <div
-                  key={hIdx}
-                  className="p-2.5 rounded-xl bg-cream-50 border border-old-money-200 flex flex-col justify-between gap-1.5"
-                >
-                  <div className="flex items-start justify-between gap-2">
-                    <div>
-                      <div className="font-bold text-charcoal-900">
-                        {h.stage_num === 1
-                          ? 'I этап'
-                          : h.stage_num === 2
-                          ? 'II этап'
-                          : 'III этап'}{' '}
-                        ({h.date})
-                      </div>
-                      <div className="text-[11px] text-charcoal-600">{h.breed_class}</div>
-                    </div>
-                    <div className="text-right shrink-0">
-                      <div
-                        className={`font-bold ${
-                          h.placement > 0 ? 'text-charcoal-900' : 'text-stone-500 font-medium'
-                        }`}
-                      >
-                        {h.placement > 0 ? `${h.placement} место` : formatChampionshipStatus(h.status)}
-                        {h.points != null && h.points > 0 ? (
-                          <span className="ml-1 text-camel-900 font-bold">· {h.points} б.</span>
-                        ) : null}
-                      </div>
-                      <div className="font-mono text-camel-800 text-[11px]">
-                        {h.total_score ? `${h.total_score.toFixed(2)} сек` : ''}
-                      </div>
-                    </div>
+                <div key={hIdx} className="px-3.5 py-2.5 flex flex-col gap-1 sm:grid sm:grid-cols-12 sm:items-center sm:gap-2 text-xs hover:bg-cream-50/60 transition-colors">
+                  {/* Left 3 columns: Этап, Класс, Лига */}
+                  <div className="sm:col-span-2 font-bold text-charcoal-900 flex items-center gap-1.5">
+                    <span>{stageRoman}</span>
+                    {dateFormatted && (
+                      <span className="text-[10px] text-charcoal-400 font-normal">({dateFormatted})</span>
+                    )}
                   </div>
 
-                  {/* Bonus breakdown badges */}
-                  {b &&
-                    (b.place_points > 0 ||
-                      b.best_final_points > 0 ||
-                      b.best_class_points > 0 ||
-                      b.best_breed_points > 0 ||
-                      b.track_record_points > 0) && (
-                      <div className="flex flex-wrap items-center gap-1 pt-1 border-t border-old-money-100 text-[10px]">
-                        {b.place_points > 0 && (
-                          <span className="px-1.5 py-0.5 rounded bg-cream-100 text-charcoal-700 font-medium border border-old-money-200/60">
-                            место: +{b.place_points}
-                          </span>
-                        )}
-                        {b.best_final_points > 0 && (
-                          <span className="px-1.5 py-0.5 rounded bg-amber-50 text-amber-900 font-medium border border-amber-200">
-                            финал: +1
-                          </span>
-                        )}
-                        {b.best_class_points > 0 && (
-                          <span className="px-1.5 py-0.5 rounded bg-camel-50 text-camel-900 font-medium border border-camel-200">
-                            класс: +1
-                          </span>
-                        )}
-                        {b.best_breed_points > 0 && (
-                          <span className="px-1.5 py-0.5 rounded bg-forest-50 text-forest-900 font-medium border border-forest-200">
-                            порода: +1
-                          </span>
-                        )}
-                        {b.track_record_points > 0 && (
-                          <span
-                            className="px-1.5 py-0.5 rounded bg-rose-50 text-rose-900 font-medium border border-rose-200"
-                            title="Рекорд клубного чемпионата (+1 б.)"
-                          >
-                            рекорд: +1
-                          </span>
-                        )}
-                      </div>
+                  <div className="sm:col-span-3 text-[11px] text-charcoal-700 truncate" title={h.breed_class}>
+                    {cleanClass}
+                  </div>
+
+                  <div className="sm:col-span-2">
+                    <span className={`inline-flex px-2 py-0.5 rounded text-[10px] font-semibold border ${leagueBadge}`}>
+                      Лига «{stageLeague}»
+                    </span>
+                  </div>
+
+                  {/* Right 3 columns: Место, Баллы, Секунды */}
+                  <div className="sm:col-span-2 sm:text-center font-bold text-charcoal-900 flex items-center justify-between sm:justify-center">
+                    <span className="sm:hidden text-charcoal-500 font-normal">Место:</span>
+                    <span>{h.placement > 0 ? `${h.placement} место` : formatChampionshipStatus(h.status)}</span>
+                  </div>
+
+                  <div className="sm:col-span-1 sm:text-center flex items-center justify-between sm:justify-center">
+                    <span className="sm:hidden text-charcoal-500 font-normal">Баллы:</span>
+                    {h.points != null && h.points > 0 ? (
+                      <span className="font-bold text-camel-900">{h.points} б.</span>
+                    ) : (
+                      <span className="text-charcoal-400">—</span>
                     )}
+                  </div>
+
+                  <div className="sm:col-span-2 sm:text-right font-mono font-bold text-camel-800 flex items-center justify-between sm:justify-end">
+                    <span className="sm:hidden text-charcoal-500 font-normal font-sans">Время:</span>
+                    <span>{h.total_score ? `${h.total_score.toFixed(2)} сек` : '—'}</span>
+                  </div>
+
+                  {/* Bonus breakdown row if bonuses exist */}
+                  {b && (b.place_points > 0 || b.best_final_points > 0 || b.best_class_points > 0 || b.best_breed_points > 0 || b.track_record_points > 0) && (
+                    <div className="sm:col-span-12 flex flex-wrap items-center gap-1 pt-1.5 sm:mt-0.5 border-t border-old-money-100/60 text-[10px]">
+                      <span className="text-charcoal-400 font-medium">Бонусы:</span>
+                      {b.place_points > 0 && (
+                        <span className="px-1.5 py-0.5 rounded bg-cream-100 text-charcoal-700 font-medium border border-old-money-200/60">
+                          место: +{b.place_points}
+                        </span>
+                      )}
+                      {b.best_final_points > 0 && (
+                        <span className="px-1.5 py-0.5 rounded bg-amber-50 text-amber-900 font-medium border border-amber-200">
+                          финал: +1
+                        </span>
+                      )}
+                      {b.best_class_points > 0 && (
+                        <span className="px-1.5 py-0.5 rounded bg-camel-50 text-camel-900 font-medium border border-camel-200">
+                          класс: +1
+                        </span>
+                      )}
+                      {b.best_breed_points > 0 && (
+                        <span className="px-1.5 py-0.5 rounded bg-forest-50 text-forest-900 font-medium border border-forest-200">
+                          порода: +1
+                        </span>
+                      )}
+                      {b.track_record_points > 0 && (
+                        <span
+                          className="px-1.5 py-0.5 rounded bg-rose-50 text-rose-900 font-medium border border-rose-200"
+                          title="Рекорд клубного чемпионата (+1 б.)"
+                        >
+                          рекорд: +1
+                        </span>
+                      )}
+                    </div>
+                  )}
                 </div>
               )
             })}
           </div>
-
-          {/* Transitions between leagues */}
-          {dogPromotions && dogPromotions.length > 0 && (
-            <div className="space-y-1 pt-1">
-              {dogPromotions.map((note, nIdx) => (
-                <div
-                  key={nIdx}
-                  className="text-[11px] text-emerald-900 bg-emerald-50/80 border border-emerald-200/80 rounded-lg px-2.5 py-1.5 font-medium"
-                >
-                  {note}
-                </div>
-              ))}
-            </div>
-          )}
         </div>
       )}
     </div>
