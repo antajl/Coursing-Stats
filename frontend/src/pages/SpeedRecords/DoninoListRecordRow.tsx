@@ -225,25 +225,3 @@ export default function DoninoListRecordRow({
     </div>
   )
 }
-
-  if (!screenshotUrl) {
-    return <div className={rowClass}>{profileLink}</div>
-  }
-
-  return (
-    <div className={`${rowClass} donino-list-row--with-screen`}>
-      {profileLink}
-      <a
-        href={screenshotUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Смотреть подтверждение (скриншот/протокол)"
-        title="Смотреть подтверждение (скриншот/протокол)"
-        className="donino-list-row-screen"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <Camera size={15} strokeWidth={2} aria-hidden />
-      </a>
-    </div>
-  )
-}

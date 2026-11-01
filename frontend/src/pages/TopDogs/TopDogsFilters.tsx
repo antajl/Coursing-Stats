@@ -208,6 +208,18 @@ export default function TopDogsFilters({
           </ModernDropdown>
         </div>
 
+        {/* Выбор пола */}
+        <div className="shrink-0">
+          <ModernDropdown
+            trigger={sexTrigger}
+            isOpen={mobileSexOpen}
+            onOpenChange={setMobileSexOpen}
+            width="130px"
+          >
+            {renderSexMenu(setMobileSexOpen)}
+          </ModernDropdown>
+        </div>
+
         {/* Выбор породы */}
         <div className="shrink-0">
           <BreedSearchDropdown
@@ -227,18 +239,6 @@ export default function TopDogsFilters({
             }
             dogIndex={dogIndex}
           />
-        </div>
-
-        {/* Выбор пола */}
-        <div className="shrink-0">
-          <ModernDropdown
-            trigger={sexTrigger}
-            isOpen={mobileSexOpen}
-            onOpenChange={setMobileSexOpen}
-            width="130px"
-          >
-            {renderSexMenu(setMobileSexOpen)}
-          </ModernDropdown>
         </div>
 
         {/* Правая часть: Сброс + Кнопка дисциплины + Инфо */}

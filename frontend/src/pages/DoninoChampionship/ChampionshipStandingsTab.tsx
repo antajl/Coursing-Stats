@@ -1,6 +1,5 @@
 import React, { useState, useMemo } from 'react'
 import { X, ChevronDown, Trophy, Timer, Award } from 'lucide-react'
-import SlidingSegmentControl from '../../components/toolbar/SlidingSegmentControl'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
 import ModernDropdown from '../../components/ui/ModernDropdown'
 import QuickBreedBar, { type QuickBreedItem } from '../TopDogs/QuickBreedBar'
@@ -379,34 +378,35 @@ export default function ChampionshipStandingsTab({
                 </span>
               </div>
 
-              {/* Toggle Sort: Points vs Time (Canonical Old Money Sliding Segment) */}
-              <SlidingSegmentControl
-                ariaLabel="Сортировка рейтинга чемпионата"
-                value={sortMode}
-                onChange={(id) => setSortMode(id as 'time' | 'points')}
-                className="self-start sm:self-auto shadow-2xs"
-                buttonClassName="py-1 px-2.5 sm:px-3 text-xs"
-                segments={[
-                  {
-                    id: 'time',
-                    label: (
-                      <span className="inline-flex items-center gap-1.5">
-                        <Timer className="w-3.5 h-3.5 text-camel-700 shrink-0" aria-hidden />
-                        <span>По скорости</span>
-                      </span>
-                    ),
-                  },
-                  {
-                    id: 'points',
-                    label: (
-                      <span className="inline-flex items-center gap-1.5">
-                        <Award className="w-3.5 h-3.5 text-camel-700 shrink-0" aria-hidden />
-                        <span>По баллам</span>
-                      </span>
-                    ),
-                  },
-                ]}
-              />
+              {/* Toggle Sort: Points vs Time (Canonical Old Money Pill Chips - rounded-full) */}
+              <div className="inline-flex items-center gap-1.5 self-start sm:self-auto shrink-0" role="group" aria-label="Сортировка рейтинга">
+                <button
+                  type="button"
+                  onClick={() => setSortMode('time')}
+                  aria-pressed={sortMode === 'time'}
+                  className={`inline-flex h-7.5 sm:h-8 shrink-0 items-center gap-1.5 rounded-full px-3 text-xs font-semibold transition-all cursor-pointer whitespace-nowrap ${
+                    sortMode === 'time'
+                      ? 'border border-camel-400 bg-camel-100 text-camel-950 shadow-2xs'
+                      : 'border border-old-money-200/80 bg-cream-50 text-charcoal-700 hover:bg-old-money-50 hover:text-charcoal-900'
+                  }`}
+                >
+                  <Timer className={`w-3.5 h-3.5 shrink-0 ${sortMode === 'time' ? 'text-camel-800' : 'text-charcoal-500'}`} aria-hidden />
+                  <span>По скорости</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setSortMode('points')}
+                  aria-pressed={sortMode === 'points'}
+                  className={`inline-flex h-7.5 sm:h-8 shrink-0 items-center gap-1.5 rounded-full px-3 text-xs font-semibold transition-all cursor-pointer whitespace-nowrap ${
+                    sortMode === 'points'
+                      ? 'border border-camel-400 bg-camel-100 text-camel-950 shadow-2xs'
+                      : 'border border-old-money-200/80 bg-cream-50 text-charcoal-700 hover:bg-old-money-50 hover:text-charcoal-900'
+                  }`}
+                >
+                  <Award className={`w-3.5 h-3.5 shrink-0 ${sortMode === 'points' ? 'text-camel-800' : 'text-charcoal-500'}`} aria-hidden />
+                  <span>По баллам</span>
+                </button>
+              </div>
             </div>
 
             {/* Dog List or Empty State */}

@@ -5,10 +5,12 @@ import {
   Code2,
   Copy,
   ExternalLink,
+  FileText,
   Mail,
   MapPin,
   MessageCircle,
   Send,
+  Zap,
 } from 'lucide-react'
 import { ExternalHref } from './Guide/components/GuideUi'
 import { SEO } from '../components/SEO'
@@ -113,6 +115,11 @@ const DATA_SOURCES = [
     role: 'Официальные чемпионаты РКФ по курсингу и БЗМП, беговые тренировки, электронные замеры пиковой скорости (км/ч) и спринты на дистанции 350 метров.',
     url: 'https://runningdog.ru/',
   },
+  {
+    name: 'Электронный архив документов (Google Диск)',
+    role: 'Оцифрованные каталоги состязаний, регламенты серий, фотокопии оригинальных протоколов и дипломов для сверки спортивных результатов.',
+    url: 'https://coursing-stats.ru/about',
+  },
 ] as const
 
 export default function AboutPage() {
@@ -180,6 +187,30 @@ export default function AboutPage() {
         </p>
       </section>
 
+      {/* Scope & Numbers */}
+      <section className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+        <div className="rounded-xl border border-old-money-200/90 bg-white/90 p-3.5 shadow-2xs">
+          <div className="text-[10px] font-bold uppercase tracking-wider text-charcoal-500">Спорт и забеги</div>
+          <div className="mt-1 font-serif text-xl sm:text-2xl font-bold text-charcoal-900">10+ лет</div>
+          <div className="mt-0.5 text-[11px] text-charcoal-600">С 2015 года: курсинг, БЗМП, бега и 100% связка с календарём</div>
+        </div>
+        <div className="rounded-xl border border-old-money-200/90 bg-white/90 p-3.5 shadow-2xs">
+          <div className="text-[10px] font-bold uppercase tracking-wider text-charcoal-500">Выставки РКФ</div>
+          <div className="mt-1 font-serif text-xl sm:text-2xl font-bold text-charcoal-900">51 400+</div>
+          <div className="mt-0.5 text-[11px] text-charcoal-600">Официальных протоколов 2019–2026 гг. и судьи</div>
+        </div>
+        <div className="rounded-xl border border-old-money-200/90 bg-white/90 p-3.5 shadow-2xs">
+          <div className="text-[10px] font-bold uppercase tracking-wider text-charcoal-500">Полигон Донино</div>
+          <div className="mt-1 font-serif text-xl sm:text-2xl font-bold text-charcoal-900">100%</div>
+          <div className="mt-0.5 text-[11px] text-charcoal-600">Замеры км/ч, спринты 350 м и Чемпионат 2026</div>
+        </div>
+        <div className="rounded-xl border border-old-money-200/90 bg-white/90 p-3.5 shadow-2xs">
+          <div className="text-[10px] font-bold uppercase tracking-wider text-charcoal-500">Архитектура</div>
+          <div className="mt-1 font-serif text-xl sm:text-2xl font-bold text-camel-800">CDN Edge</div>
+          <div className="mt-0.5 text-[11px] text-charcoal-600">Мгновенный отклик даже при слабом интернете в полях</div>
+        </div>
+      </section>
+
       {/* Two columns: Sources and Tools */}
       <div className="grid gap-4 md:grid-cols-2">
         {/* Sources */}
@@ -241,6 +272,24 @@ export default function AboutPage() {
                   </a>
                 </div>
               </div>
+            </div>
+
+            <div>
+              <h3 className="font-serif text-sm font-bold text-charcoal-900">
+                Векторные протоколы и документы
+              </h3>
+              <p className="mt-1 text-xs leading-relaxed text-charcoal-600">
+                Для каждого турнира формируется автономный векторный HTML/PDF-протокол эталонной вёрстки со связью этапов серии и прямыми ссылками на каталоги, регламенты и сканы оригиналов на Google Диске.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-serif text-sm font-bold text-charcoal-900">
+                Двуязычная картотека собак
+              </h3>
+              <p className="mt-1 text-xs leading-relaxed text-charcoal-600">
+                Кириллическое имя имеет безусловный приоритет отображения в интерфейсе и таблицах, а международная латиница сохраняется для сквозного поиска и трансграничной родословной.
+              </p>
             </div>
 
             <div>

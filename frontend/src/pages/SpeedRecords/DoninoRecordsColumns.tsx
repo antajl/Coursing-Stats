@@ -157,12 +157,6 @@ export default function DoninoRecordsColumns({
           </DoninoColumnShell>
         </div>
       </div>
-            ) : (
-              <p className="donino-home-empty">Нет данных</p>
-            )}
-          </DoninoColumnShell>
-        </div>
-      </div>
 
       {hasMore && (
         <div
