@@ -115,6 +115,7 @@ export default function ChampionshipStandingsTab({
   const dynamicLeagueCounts = useMemo(() => {
     return {
       all: breedAndSearchFiltered.length,
+      total: breedAndSearchFiltered.length,
       Абсолют: breedAndSearchFiltered.filter((d) => d.current_league === 'Абсолют').length,
       Чемпионов: breedAndSearchFiltered.filter((d) => d.current_league === 'Чемпионов').length,
       Прогресс: breedAndSearchFiltered.filter((d) => d.current_league === 'Прогресс').length,

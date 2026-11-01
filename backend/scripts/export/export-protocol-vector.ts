@@ -338,7 +338,11 @@ export function buildRacingProtocolHtml(comp: CompetitionData): string {
     1,
     ...comp.results.map(r => r.raw_scores_json?.heats?.length || 0)
   ));
-  const totalCols = overallMaxHeats === 1 ? 12 : (overallMaxHeats === 2 ? 15 : 18);
+  const hasAnyBibs = comp.results.some(r =>
+    r.raw_scores_json?.heats?.some(h => Boolean(h.bib_color) || h.bib_number != null)
+  );
+  const colsPerHeat = hasAnyBibs ? 3 : 2;
+  const totalCols = 7 + overallMaxHeats * colsPerHeat + 2;
   const metaRowsHtml = buildMetaRowsHtml(comp, totalCols);
 
   const isLeagueComp =
@@ -353,65 +357,34 @@ export function buildRacingProtocolHtml(comp: CompetitionData): string {
   const qualColTitle = isLeagueComp ? 'Лига' : 'СС';
   const titleColTitle = isLeagueComp ? 'Переход<br>в лигу' : 'Титул';
 
-  let colHeaderHtml = '';
-  if (overallMaxHeats === 1) {
-    colHeaderHtml = `
-    <tr class="col-header">
-      <td>Место</td>
-      <td>№</td>
-      <td>Порода</td>
-      <td>Класс</td>
-      <td>Пол</td>
-      <td>Кличка</td>
-      <td>Дистанция<br>(м)</td>
-      <td>Забег</td>
+  let heatsHeaderCells = '';
+  for (let i = 1; i <= overallMaxHeats; i++) {
+    const heatLabel = overallMaxHeats === 1 ? 'Забег' : `Забег<br>${i}`;
+    const timeLabel = overallMaxHeats === 1 ? 'Время<br>Скорость' : `Время ${i}<br>Скорость`;
+    if (hasAnyBibs) {
+      heatsHeaderCells += `
+      <td>${heatLabel}</td>
       <td>Попона</td>
-      <td>Время<br>Скорость</td>
-      <td>${qualColTitle}</td>
-      <td>${titleColTitle}</td>
-    </tr>`;
-  } else if (overallMaxHeats === 2) {
-    colHeaderHtml = `
-    <tr class="col-header">
-      <td>Место</td>
-      <td>№</td>
-      <td>Порода</td>
-      <td>Класс</td>
-      <td>Пол</td>
-      <td>Кличка</td>
-      <td>Дистанция<br>(м)</td>
-      <td>Забег<br>1</td>
-      <td>Попона</td>
-      <td>Время 1<br>Скорость</td>
-      <td>Забег<br>2</td>
-      <td>Попона</td>
-      <td>Время 2<br>Скорость</td>
-      <td>${qualColTitle}</td>
-      <td>${titleColTitle}</td>
-    </tr>`;
-  } else {
-    colHeaderHtml = `
-    <tr class="col-header">
-      <td>Место</td>
-      <td>№</td>
-      <td>Порода</td>
-      <td>Класс</td>
-      <td>Пол</td>
-      <td>Кличка</td>
-      <td>Дистанция<br>(м)</td>
-      <td>Забег<br>1</td>
-      <td>Попона</td>
-      <td>Время 1<br>Скорость</td>
-      <td>Забег<br>2</td>
-      <td>Попона</td>
-      <td>Время 2<br>Скорость</td>
-      <td>Забег<br>3</td>
-      <td>Попона</td>
-      <td>Время 3<br>Скорость</td>
-      <td>${qualColTitle}</td>
-      <td>${titleColTitle}</td>
-    </tr>`;
+      <td>${timeLabel}</td>`;
+    } else {
+      heatsHeaderCells += `
+      <td>${heatLabel}</td>
+      <td>${timeLabel}</td>`;
+    }
   }
+
+  const colHeaderHtml = `
+    <tr class="col-header">
+      <td>Место</td>
+      <td>№</td>
+      <td>Порода</td>
+      <td>Класс</td>
+      <td>Пол</td>
+      <td>Кличка</td>
+      <td>Дистанция<br>(м)</td>${heatsHeaderCells}
+      <td>${qualColTitle}</td>
+      <td>${titleColTitle}</td>
+    </tr>`;
 
   let tableRowsHtml = `
     <tr class="top-title-row">
@@ -544,28 +517,16 @@ export function buildRacingProtocolHtml(comp: CompetitionData): string {
           <td>${sex}</td>
           <td class="dog-name-cell">${dogName}</td>
           <td>${dogDistance}</td>
-          ${overallMaxHeats === 1 ? `
-          <td>${getRacingRaceNumber(heat1)}</td>
-          ${renderRacingBibCell(heat1)}
-          ${renderRacingTimeSpeed(heat1, h1Reason, dogDistance)}
-          ` : overallMaxHeats === 2 ? `
-          <td>${getRacingRaceNumber(heat1)}</td>
-          ${renderRacingBibCell(heat1)}
-          ${renderRacingTimeSpeed(heat1, h1Reason, dogDistance)}
-          <td>${getRacingRaceNumber(heat2)}</td>
-          ${renderRacingBibCell(heat2)}
-          ${renderRacingTimeSpeed(heat2, h2Reason, dogDistance)}
-          ` : `
-          <td>${getRacingRaceNumber(heat1)}</td>
-          ${renderRacingBibCell(heat1)}
-          ${renderRacingTimeSpeed(heat1, h1Reason, dogDistance)}
-          <td>${getRacingRaceNumber(heat2)}</td>
-          ${renderRacingBibCell(heat2)}
-          ${renderRacingTimeSpeed(heat2, h2Reason, dogDistance)}
-          <td>${getRacingRaceNumber(heat3)}</td>
-          ${renderRacingBibCell(heat3)}
-          ${renderRacingTimeSpeed(heat3, h3Reason, dogDistance)}
-          `}
+          ${(() => {
+            const heatList = overallMaxHeats <= 2
+              ? [{ h: heat1, r: h1Reason }, { h: heat2, r: h2Reason }].slice(0, overallMaxHeats)
+              : [{ h: heat1, r: h1Reason }, { h: heat2, r: h2Reason }, { h: heat3, r: h3Reason }];
+
+            return heatList.map(item => `
+          <td>${getRacingRaceNumber(item.h)}</td>
+          ${hasAnyBibs ? renderRacingBibCell(item.h) : ''}
+          ${renderRacingTimeSpeed(item.h, item.r, dogDistance)}`).join('');
+          })()}
           <td>${leagueCell}</td>
           <td>${targetLeagueCell}</td>
         </tr>
@@ -745,38 +706,100 @@ export function buildRacingProtocolHtml(comp: CompetitionData): string {
 </head>
 <body>
   <table class="protocol-table">
-    ${overallMaxHeats === 1 ? `
+    ${(() => {
+      if (!hasAnyBibs) {
+        if (overallMaxHeats === 1) {
+          return `
+    <colgroup>
+      <col style="width: 3.5%;">
+      <col style="width: 3.0%;">
+      <col style="width: 13.0%;">
+      <col style="width: 10.0%;">
+      <col style="width: 4.5%;">
+      <col style="width: 33.0%;">
+      <col style="width: 5.0%;">
+      <col style="width: 5.0%;">
+      <col style="width: 14.0%;">
+      <col style="width: ${isLeagueComp ? '4.0%' : '3.5%'};">
+      <col style="width: ${isLeagueComp ? '5.0%' : '5.5%'};">
+    </colgroup>`;
+        }
+        if (overallMaxHeats === 2) {
+          return `
+    <colgroup>
+      <col style="width: 3.0%;">
+      <col style="width: 2.5%;">
+      <col style="width: 11.5%;">
+      <col style="width: 8.5%;">
+      <col style="width: 4.0%;">
+      <col style="width: 27.5%;">
+      <col style="width: 4.5%;">
+      <col style="width: 4.0%;">
+      <col style="width: 11.0%;">
+      <col style="width: 4.0%;">
+      <col style="width: 11.0%;">
+      <col style="width: ${isLeagueComp ? '4.0%' : '3.5%'};">
+      <col style="width: ${isLeagueComp ? '4.5%' : '5.0%'};">
+    </colgroup>`;
+        }
+        return `
+    <colgroup>
+      <col style="width: 3.0%;">
+      <col style="width: 2.5%;">
+      <col style="width: 10.5%;">
+      <col style="width: 8.0%;">
+      <col style="width: 4.0%;">
+      <col style="width: 25.0%;">
+      <col style="width: 4.0%;">
+      <col style="width: 3.5%;">
+      <col style="width: 8.0%;">
+      <col style="width: 3.5%;">
+      <col style="width: 8.0%;">
+      <col style="width: 3.5%;">
+      <col style="width: 8.0%;">
+      <col style="width: ${isLeagueComp ? '4.0%' : '3.5%'};">
+      <col style="width: ${isLeagueComp ? '4.5%' : '5.0%'};">
+    </colgroup>`;
+      }
+
+      if (overallMaxHeats === 1) {
+        return `
     <colgroup>
       <col style="width: 3.5%;">
       <col style="width: 3.0%;">
       <col style="width: 12.0%;">
       <col style="width: 10.0%;">
       <col style="width: 4.5%;">
-      <col style="width: 35.0%;">
-      <col style="width: 5.5%;">
+      <col style="width: 34.0%;">
+      <col style="width: 5.0%;">
       <col style="width: 4.5%;">
       <col style="width: 4.0%;">
-      <col style="width: 10.0%;">
-      <col style="width: ${isLeagueComp ? '3.8%' : '3.0%'};">
-      <col style="width: ${isLeagueComp ? '4.2%' : '5.0%'};">
-    </colgroup>` : overallMaxHeats === 2 ? `
+      <col style="width: 10.5%;">
+      <col style="width: ${isLeagueComp ? '4.0%' : '3.5%'};">
+      <col style="width: ${isLeagueComp ? '5.0%' : '5.5%'};">
+    </colgroup>`;
+      }
+      if (overallMaxHeats === 2) {
+        return `
     <colgroup>
       <col style="width: 3.0%;">
       <col style="width: 2.5%;">
       <col style="width: 10.5%;">
       <col style="width: 8.5%;">
       <col style="width: 4.0%;">
-      <col style="width: 27.5%;">
+      <col style="width: 26.0%;">
       <col style="width: 4.5%;">
       <col style="width: 3.8%;">
       <col style="width: 3.2%;">
-      <col style="width: 8.0%;">
+      <col style="width: 8.5%;">
       <col style="width: 3.8%;">
       <col style="width: 3.2%;">
-      <col style="width: 8.0%;">
-      <col style="width: ${isLeagueComp ? '3.8%' : '2.5%'};">
-      <col style="width: ${isLeagueComp ? '5.7%' : '7.0%'};">
-    </colgroup>` : `
+      <col style="width: 8.5%;">
+      <col style="width: ${isLeagueComp ? '4.0%' : '3.5%'};">
+      <col style="width: ${isLeagueComp ? '4.5%' : '5.0%'};">
+    </colgroup>`;
+      }
+      return `
     <colgroup>
       <col style="width: 3.0%;">
       <col style="width: 2.5%;">
@@ -796,7 +819,8 @@ export function buildRacingProtocolHtml(comp: CompetitionData): string {
       <col style="width: 7.0%;">
       <col style="width: ${isLeagueComp ? '3.5%' : '2.3%'};">
       <col style="width: ${isLeagueComp ? '4.0%' : '5.2%'};">
-    </colgroup>`}
+    </colgroup>`;
+    })()}
     <tbody>
       ${tableRowsHtml}
     </tbody>

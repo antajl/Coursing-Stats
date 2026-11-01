@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/index-top-speed-v1",
   "year": 2026,
-  "count": 167,
+  "count": 166,
   "items": [
     {
       "dog_id": 842,
@@ -2214,16 +2214,16 @@
     },
     {
       "dog_id": 9207,
-      "name_lat": "Вирна",
+      "name_lat": "VIRNA",
       "name_ru": "ВИРНА",
       "breed": "Немецкая овчарка",
       "year_from": 2026,
       "year_to": 2026,
       "best_speed": 36.44,
-      "avg_speed": 33.41,
-      "total_starts": 1,
-      "rank_delta": "NEW",
-      "rank_delta_breed": "NEW",
+      "avg_speed": 34.55,
+      "total_starts": 2,
+      "rank_delta": -6,
+      "rank_delta_breed": 0,
       "sex": "F"
     },
     {
@@ -2241,20 +2241,6 @@
       "sex": "M"
     },
     {
-      "dog_id": 11136,
-      "name_lat": "VIRNA",
-      "name_ru": null,
-      "breed": "Немецкая овчарка",
-      "year_from": 2026,
-      "year_to": 2026,
-      "best_speed": 36.030883614526736,
-      "avg_speed": 35.68,
-      "total_starts": 1,
-      "rank_delta": -8,
-      "rank_delta_breed": -1,
-      "sex": "F"
-    },
-    {
       "dog_id": 680,
       "name_lat": "ГОЛДИ ГОЛДЕН ДАЛЕН",
       "name_ru": "ГОЛДИ ГОЛДЕН ДАЛЕН",
@@ -2264,7 +2250,7 @@
       "best_speed": 35.89,
       "avg_speed": 35.33,
       "total_starts": 1,
-      "rank_delta": -8,
+      "rank_delta": -7,
       "rank_delta_breed": 0,
       "sex": "M"
     },
@@ -2278,7 +2264,7 @@
       "best_speed": 35.613340870548335,
       "avg_speed": 35.58,
       "total_starts": 1,
-      "rank_delta": -8,
+      "rank_delta": -7,
       "rank_delta_breed": 0,
       "sex": "F"
     },
@@ -2292,7 +2278,7 @@
       "best_speed": 34.1648590021692,
       "avg_speed": 34.09,
       "total_starts": 1,
-      "rank_delta": -8,
+      "rank_delta": -7,
       "rank_delta_breed": 0,
       "sex": "F"
     },
@@ -2306,7 +2292,7 @@
       "best_speed": 33.98974912328028,
       "avg_speed": 33.99,
       "total_starts": 1,
-      "rank_delta": -8,
+      "rank_delta": -7,
       "rank_delta_breed": 0,
       "sex": "F"
     },
@@ -2320,7 +2306,7 @@
       "best_speed": 33.898,
       "avg_speed": 33.74,
       "total_starts": 1,
-      "rank_delta": -8,
+      "rank_delta": -7,
       "rank_delta_breed": 0,
       "sex": "F"
     },
@@ -2334,7 +2320,7 @@
       "best_speed": 33.028,
       "avg_speed": 32.48,
       "total_starts": 1,
-      "rank_delta": -8,
+      "rank_delta": -7,
       "rank_delta_breed": 0,
       "sex": "F"
     },

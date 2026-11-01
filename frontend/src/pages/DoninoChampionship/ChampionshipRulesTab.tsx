@@ -14,6 +14,8 @@ import {
   Sparkles,
   Info,
   Trophy,
+  Ruler,
+  CalendarCheck2,
 } from 'lucide-react'
 
 interface ChampionshipRulesTabProps {
@@ -26,7 +28,7 @@ export default function ChampionshipRulesTab({ reglamentUrl, spreadsheetUrl }: C
     <div className="space-y-6 w-full">
       {/* 2-Column Responsive Grid Layout (matches Standings tab) */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-        {/* Left Column: Rules, Leagues Pyramid, Rotation Rules */}
+        {/* Left Column: Rules, Leagues Pyramid, Rotation Rules, Specs */}
         <div className="lg:col-span-8 space-y-4">
           {/* Section 1: Pyramid of Leagues */}
           <div className="rounded-2xl border border-old-money-200 bg-cream-50 p-5 sm:p-6 shadow-2xs space-y-4">
@@ -37,33 +39,20 @@ export default function ChampionshipRulesTab({ reglamentUrl, spreadsheetUrl }: C
               </h2>
             </div>
             <p className="text-xs text-charcoal-600 leading-relaxed">
-              В серии клубных чемпионатов Донино действует многоуровневая система лиг. Собаки распределяются по уровню подготовки и спортивному опыту, обеспечивая равную и честную конкуренцию в каждом классе.
+              Согласно разделу 3 официального регламента, в чемпионате действуют <b>три соревновательные лиги</b> с бессрочной системой долгосрочной спортивной прогрессии. Молодые собаки бегут в обособленном подготовительном классе.
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-1">
-              {/* Juniors */}
-              <div className="p-4 rounded-xl border border-sky-200 bg-sky-50/50 space-y-2">
-                <div className="flex items-center justify-between">
-                  <span className="px-2.5 py-0.5 rounded-md text-[11px] font-bold bg-sky-100 text-sky-900 border border-sky-300">
-                    Лига «Юниоры»
-                  </span>
-                  <span className="text-[10px] text-sky-800 font-medium">До 18 месяцев</span>
-                </div>
-                <p className="text-xs text-charcoal-700 leading-relaxed">
-                  Специальная категория для молодых собак в возрасте от 9 до 18 месяцев. Позволяет юниорам набраться бегового опыта на закрытой трассе перед переходом во взрослую систему состязаний.
-                </p>
-              </div>
-
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 pt-1">
               {/* Progress */}
               <div className="p-4 rounded-xl border border-stone-300 bg-stone-50/70 space-y-2">
                 <div className="flex items-center justify-between">
                   <span className="px-2.5 py-0.5 rounded-md text-[11px] font-bold bg-stone-200 text-stone-800 border border-stone-300">
                     Лига «Прогресс»
                   </span>
-                  <span className="text-[10px] text-stone-600 font-medium">Стартовая лига</span>
+                  <span className="text-[10px] text-stone-600 font-medium">Стартовая</span>
                 </div>
                 <p className="text-xs text-charcoal-700 leading-relaxed">
-                  Базовая лига для взрослых собак без официальных беговых титулов. Все новые взрослые участники без квалификационных титулов начинают турнирный путь с этой ступени.
+                  Базовая лига для взрослых собак без титулов в бегах борзых. Все новые участники без подтверждённых титулов начинают участие строго с этой ступени (п. 3.2).
                 </p>
               </div>
 
@@ -76,7 +65,7 @@ export default function ChampionshipRulesTab({ reglamentUrl, spreadsheetUrl }: C
                   <span className="text-[10px] text-camel-800 font-medium">Титулованные</span>
                 </div>
                 <p className="text-xs text-charcoal-700 leading-relaxed">
-                  Лига для собак с подтверждёнными беговыми титулами (ЧРКФ, Чемпион России, Победитель Кубка России по курсингу/рейсингу), а также для <b>победителей финалов Лиги «Прогресс»</b>.
+                  Для собак с подтверждёнными беговыми титулами (ЧРКФ, ПЧРКФ, «Чемпион России», «Победитель Кубка России»), а также для <b>победителей финалов Лиги «Прогресс»</b> (п. 3.1).
                 </p>
               </div>
 
@@ -89,9 +78,22 @@ export default function ChampionshipRulesTab({ reglamentUrl, spreadsheetUrl }: C
                   <span className="text-[10px] text-amber-800 font-medium">Высшая элита</span>
                 </div>
                 <p className="text-xs text-charcoal-700 leading-relaxed">
-                  Высшая лига турнира. Допускаются <b>исключительно победители финалов в Лиге «Чемпионов»</b>. Сильнейший дивизион беговой серии с максимальной спортивной плотностью.
+                  Высшая ступень турнира. Допускаются <b>исключительно победители чемпионатов в Лиге Чемпионов</b>. Сильнейший дивизион с максимальной спортивной конкуренцией (п. 3.1).
                 </p>
               </div>
+            </div>
+
+            {/* Juniors Distinct Note */}
+            <div className="p-3.5 rounded-xl border border-sky-200 bg-sky-50/60 space-y-1.5 text-xs text-charcoal-700">
+              <div className="flex items-center justify-between">
+                <span className="px-2.5 py-0.5 rounded-md text-[11px] font-bold bg-sky-100 text-sky-900 border border-sky-300">
+                  Класс «Юниоры» (вне взрослой системы лиг)
+                </span>
+                <span className="text-[10px] text-sky-800 font-medium">Подготовительный зачёт</span>
+              </div>
+              <p className="text-[11px] text-charcoal-600 leading-relaxed">
+                Специальный возрастной класс для молодых собак с 9 месяцев до наступления взрослого класса (15 месяцев для пород группы А, 18 месяцев для остальных). Юниоры бегут обособленным зачётом без межлиговой ротации, набираясь опыта на овальном треке перед переходом во взрослые лиги.
+              </p>
             </div>
           </div>
 
@@ -104,7 +106,7 @@ export default function ChampionshipRulesTab({ reglamentUrl, spreadsheetUrl }: C
               </h2>
             </div>
             <p className="text-xs text-charcoal-600 leading-relaxed">
-              Составы лиг динамически обновляются по итогам каждого этапа. Переводы между ступенями пирамиды осуществляются строго по спортивным критериям побед и поражений.
+              Согласно разделу 4 регламента, составы лиг обновляются по итогам каждого этапа. Переводы осуществляются строго по спортивным критериям побед и поражений.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
@@ -115,10 +117,10 @@ export default function ChampionshipRulesTab({ reglamentUrl, spreadsheetUrl }: C
                   <span>Повышение в лиге (перевод вверх)</span>
                 </div>
                 <p className="text-charcoal-700 leading-relaxed">
-                  Основанием для обязательного перевода собаки в высшую лигу является <b>одна победа в финальном забеге</b> своего класса (порода / пол / возрастная или ростовая категория).
+                  Основанием для обязательного перевода собаки в следующую лигу является <b>одна победа в финальном забеге</b> своего класса (п. 4.1).
                 </p>
                 <div className="text-[11px] text-emerald-900/80 bg-emerald-50/80 p-2 rounded-lg border border-emerald-200/60">
-                  Перевод вступает в силу с момента начала следующего этапа чемпионата.
+                  Перевод вступает в силу с момента начала следующего соревновательного этапа.
                 </div>
               </div>
 
@@ -129,32 +131,105 @@ export default function ChampionshipRulesTab({ reglamentUrl, spreadsheetUrl }: C
                   <span>Понижение в лиге (перевод вниз)</span>
                 </div>
                 <p className="text-charcoal-700 leading-relaxed">
-                  <b>Три поражения подряд</b> в классе влекут за собой обязательный перевод собаки в предыдущую лигу.
+                  <b>Три поражения подряд</b> в классе влекут за собой обязательный перевод собаки в предыдущую лигу (п. 4.2).
                 </p>
                 <div className="text-[11px] text-rose-900/80 bg-rose-50/80 p-2 rounded-lg border border-rose-200/60">
-                  Поражением считается любое место ниже первого в финале, сход с трассы, неявка или дисквалификация. Серия поражений сохраняется между этапами сезона.
+                  Поражением считается любое место ниже первого в финале, сход с трассы, неявка или дисквалификация. Серия не обнуляется при перерывах между этапами (п. 9.5).
                 </div>
               </div>
             </div>
 
-            {/* Classes Structure Note */}
+            {/* Invariant Note on Series & Classes */}
             <div className="p-3.5 rounded-xl bg-cream-100/50 border border-old-money-200/80 text-xs text-charcoal-700 space-y-1">
               <div className="font-semibold text-charcoal-900 flex items-center gap-1.5">
                 <Layers className="w-3.5 h-3.5 text-camel-700" />
-                <span>Формирование соревновательных классов</span>
+                <span>Учёт серий и отсутствие требований к кворуму</span>
               </div>
               <p className="text-[11px] text-charcoal-600 leading-relaxed">
-                Классы забегов формируются внутри каждой лиги с учётом породы, пола (при кворуме от 3 собак) и ростовой категории («стандарт» и «спринтер» для уиппетов). При малом числе участников однополые классы объединяются в смешанный («Микс»).
+                Серии побед и поражений ведутся последовательно в рамках одной лиги и одного класса (п. 4.3). Согласно п. 7.6 регламента, <b>кворумы не требуются</b>: минимальное количество участников для старта забега — одна собака. Одиночный пуск фиксируется в протоколе и идёт в официальный зачёт.
               </p>
             </div>
           </div>
 
-          {/* Section 3: Technical Specs & Timing */}
+          {/* Section 3: Height and Age Classes */}
+          <div className="rounded-2xl border border-old-money-200 bg-cream-50 p-5 sm:p-6 shadow-2xs space-y-4">
+            <div className="flex items-center gap-2">
+              <Ruler className="w-5 h-5 text-camel-700" />
+              <h2 className="text-base sm:text-lg font-serif font-bold text-charcoal-900">
+                Ростовые и возрастные стандарты классов
+              </h2>
+            </div>
+            <p className="text-xs text-charcoal-600 leading-relaxed">
+              Деление на классы регламентировано разделами 5–8 официального регламента на основе промеров в холке и подтверждённого возраста.
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs">
+              {/* Whippets */}
+              <div className="p-4 rounded-xl border border-old-money-200 bg-cream-100/50 space-y-2">
+                <div className="font-semibold font-serif text-charcoal-900 border-b border-old-money-200/70 pb-1">
+                  Уиппеты (деление по росту)
+                </div>
+                <ul className="space-y-1.5 text-[11px] text-charcoal-700 leading-relaxed">
+                  <li>
+                    <strong className="text-charcoal-900">Стандартный класс</strong>: кобели — до 51,0 см; суки — до 48,0 см включительно.
+                  </li>
+                  <li>
+                    <strong className="text-charcoal-900">Спринтеры</strong>: кобели — от 51,1 до 56,0 см; суки — от 48,1 до 53,0 см включительно.
+                  </li>
+                  <li>
+                    <strong className="text-charcoal-900">Оверсайз</strong>: кобели выше 56,0 см; суки выше 53,0 см.
+                  </li>
+                </ul>
+              </div>
+
+              {/* Italian Greyhounds */}
+              <div className="p-4 rounded-xl border border-old-money-200 bg-cream-100/50 space-y-2">
+                <div className="font-semibold font-serif text-charcoal-900 border-b border-old-money-200/70 pb-1">
+                  Левретки (деление по росту)
+                </div>
+                <ul className="space-y-1.5 text-[11px] text-charcoal-700 leading-relaxed">
+                  <li>
+                    <strong className="text-charcoal-900">Стандартный класс</strong>: до 38,0 см включительно (кобели и суки).
+                  </li>
+                  <li>
+                    <strong className="text-charcoal-900">Спринтеры</strong>: от 38,1 до 41,0 см включительно (кобели и суки).
+                  </li>
+                  <li>
+                    <strong className="text-charcoal-900">Оверсайз</strong>: выше 41,0 см в холке.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Age Limits */}
+            <div className="p-3.5 rounded-xl border border-old-money-200/80 bg-cream-100/30 text-xs text-charcoal-700 space-y-1.5">
+              <div className="font-semibold text-charcoal-900 flex items-center gap-1.5">
+                <CalendarCheck2 className="w-3.5 h-3.5 text-camel-700" />
+                <span>Возрастные границы участников (раздел 8)</span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-[11px] pt-1">
+                <div className="p-2 rounded-lg bg-cream-50 border border-old-money-200/60">
+                  <div className="font-semibold text-charcoal-900">Группа А (взрослые)</div>
+                  <div className="text-charcoal-600 mt-0.5">С 15 месяцев до 8 лет (уиппет, левретка, басенджи, чирнеко дель Этна).</div>
+                </div>
+                <div className="p-2 rounded-lg bg-cream-50 border border-old-money-200/60">
+                  <div className="font-semibold text-charcoal-900">Остальные породы</div>
+                  <div className="text-charcoal-600 mt-0.5">С 18 месяцев до 8 лет (грейхаунд, салюки, РПБ, фараонова собака и др.).</div>
+                </div>
+                <div className="p-2 rounded-lg bg-cream-50 border border-old-money-200/60">
+                  <div className="font-semibold text-charcoal-900">Ветераны</div>
+                  <div className="text-charcoal-600 mt-0.5">С 8 до 10 лет включительно для всех зарегистрированных пород.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Section 4: Race Format, Zig-Zag & Final Heats */}
           <div className="rounded-2xl border border-old-money-200 bg-cream-50 p-5 sm:p-6 shadow-2xs space-y-3">
             <div className="flex items-center gap-2">
               <Clock className="w-5 h-5 text-camel-700" />
               <h2 className="text-base sm:text-lg font-serif font-bold text-charcoal-900">
-                Технические условия, трасса и хронометраж
+                Формат заездов, система «зиг-заг» и финалы
               </h2>
             </div>
 
@@ -162,31 +237,41 @@ export default function ChampionshipRulesTab({ reglamentUrl, spreadsheetUrl }: C
               <li className="flex items-start gap-2.5">
                 <CheckCircle2 className="w-4 h-4 text-camel-700 shrink-0 mt-0.5" />
                 <div>
-                  <strong className="text-charcoal-900">Дистанция 350 метров</strong>: специально оборудованный овальный трек для бегов борзых с песчаным покрытием на полигоне в д. Донино (Раменский район Московской области).
+                  <strong className="text-charcoal-900">Дистанция 350 метров</strong>: специально оборудованный овальный трек для бегов борзых в д. Донино (Раменский район МО) (п. 1.4, 7.5).
                 </div>
               </li>
               <li className="flex items-start gap-2.5">
                 <CheckCircle2 className="w-4 h-4 text-camel-700 shrink-0 mt-0.5" />
                 <div>
-                  <strong className="text-charcoal-900">Старт из боксов</strong>: одновременный старт участников из 4-местных закрытых автоматических стартовых боксов, исключающий фальстарты.
+                  <strong className="text-charcoal-900">Старт из закрытых боксов</strong>: одновременный старт участников из 4-местных боксов за механическим зайцем, исключающий фальстарты (п. 7.3). В одном забеге стартует не более 4 собак.
                 </div>
               </li>
               <li className="flex items-start gap-2.5">
                 <CheckCircle2 className="w-4 h-4 text-camel-700 shrink-0 mt-0.5" />
                 <div>
-                  <strong className="text-charcoal-900">Система «зиг-заг» (2 круга забегов)</strong>: турнир проводится в два круга — квалификационный и финальный. Во втором круге участники распределяются по забегам по результатам первого круга так, чтобы лидеры не встречались в одном забеге до решающего финала.
+                  <strong className="text-charcoal-900">Формула соревновательных кругов (п. 8.1–8.2)</strong>:
+                  <div className="text-[11px] text-charcoal-600 mt-0.5">
+                    • <i>Более 4 собак в классе</i>: проводятся <b>два отборочных забега + финал</b> (всего до 3 забегов). В финал выходят до 4 лучших собак по времени любого из отборов.<br />
+                    • <i>4 собаки и менее</i>: проводятся <b>один отборочный забег + финал</b> (всего 2 забега).
+                  </div>
                 </div>
               </li>
               <li className="flex items-start gap-2.5">
                 <CheckCircle2 className="w-4 h-4 text-camel-700 shrink-0 mt-0.5" />
                 <div>
-                  <strong className="text-charcoal-900">Электронный фотофиниш</strong>: фиксация времени забега аппаратно до 0.01 секунды с помощью фотофиниша на финишном створе. Субъективная судейская коллегия отсутствует — результаты определяются объективным таймингом.
+                  <strong className="text-charcoal-900">Система «зиг-заг» и распределение попон</strong>: в 1-м круге забеги формируются жеребьёвкой; во 2-м отборе действует система «зиг-заг» (сильнейшие лидеры 1-го круга разводятся по разным забегам). В финале попоны выдаются строго по лучшему времени отбора (1-й номер — быстрейшей собаке, п. 8.5).
                 </div>
               </li>
               <li className="flex items-start gap-2.5">
                 <CheckCircle2 className="w-4 h-4 text-camel-700 shrink-0 mt-0.5" />
                 <div>
-                  <strong className="text-charcoal-900">Организатор серии</strong>: беговой клуб «Курсинг в Донино». Руководитель серии состязаний — Михаил Андреевич Манухин.
+                  <strong className="text-charcoal-900">Определение мест при сходе в финале (п. 9.4)</strong>: места финалистов фиксируются по фактическому порядку пересечения створа финиша. Места не вышедших в финал — по их лучшему времени в отборе. Если финалист сошёл, места собак вне финала не сдвигаются (5-е место остаётся 5-м).
+                </div>
+              </li>
+              <li className="flex items-start gap-2.5">
+                <CheckCircle2 className="w-4 h-4 text-camel-700 shrink-0 mt-0.5" />
+                <div>
+                  <strong className="text-charcoal-900">Система фотофиниша</strong>: аппаратная фиксация времени забега до 0.01 с. Субъективная судейская коллегия отсутствует — результат определяется объективным хронометражем (п. 9.1).
                 </div>
               </li>
             </ul>
@@ -204,7 +289,7 @@ export default function ChampionshipRulesTab({ reglamentUrl, spreadsheetUrl }: C
               </h3>
             </div>
             <p className="text-xs text-charcoal-600 leading-relaxed">
-              Полный текст официального регламента серии клубных чемпионатов Донино по рейсингу с подробными схемами забегов и правилами безопасности.
+              Полный текст утверждённого регламента серии клубных чемпионатов Донино по рейсингу со всеми приложениями и правилами безопасности.
             </p>
 
             {reglamentUrl ? (
@@ -242,16 +327,24 @@ export default function ChampionshipRulesTab({ reglamentUrl, spreadsheetUrl }: C
                 <span className="font-semibold text-charcoal-900">350 метров</span>
               </div>
               <div className="flex items-center justify-between py-1 border-b border-old-money-200/60">
-                <span className="text-charcoal-500">Покрытие трека</span>
-                <span className="font-semibold text-charcoal-900">Песчаный грунт</span>
+                <span className="text-charcoal-500">Конфигурация</span>
+                <span className="font-semibold text-charcoal-900">Овальный трек</span>
               </div>
               <div className="flex items-center justify-between py-1 border-b border-old-money-200/60">
                 <span className="text-charcoal-500">Тип старта</span>
                 <span className="font-semibold text-charcoal-900">Закрытые боксы (4)</span>
               </div>
               <div className="flex items-center justify-between py-1 border-b border-old-money-200/60">
+                <span className="text-charcoal-500">Кворум</span>
+                <span className="font-semibold text-emerald-800">Не требуется (от 1 собаки)</span>
+              </div>
+              <div className="flex items-center justify-between py-1 border-b border-old-money-200/60">
                 <span className="text-charcoal-500">Кругов на этапе</span>
-                <span className="font-semibold text-charcoal-900">2 (квалификация + финал)</span>
+                <span className="font-semibold text-charcoal-900">2–3 (отборы + финал)</span>
+              </div>
+              <div className="flex items-center justify-between py-1 border-b border-old-money-200/60">
+                <span className="text-charcoal-500">Финалистов</span>
+                <span className="font-semibold text-charcoal-900">До 4 собак в классе</span>
               </div>
               <div className="flex items-center justify-between py-1 border-b border-old-money-200/60">
                 <span className="text-charcoal-500">Фиксация</span>
@@ -266,6 +359,19 @@ export default function ChampionshipRulesTab({ reglamentUrl, spreadsheetUrl }: C
                 <span className="font-semibold text-rose-800">3 поражения подряд</span>
               </div>
             </div>
+          </div>
+
+          {/* Qualification Requirement Card */}
+          <div className="rounded-2xl border border-old-money-200 bg-cream-50 p-5 shadow-2xs space-y-2.5">
+            <div className="flex items-center gap-2">
+              <ShieldCheck className="w-4 h-4 text-camel-700" />
+              <h3 className="text-xs font-bold font-serif uppercase tracking-wider text-charcoal-900">
+                Допуск к участию
+              </h3>
+            </div>
+            <p className="text-xs text-charcoal-600 leading-relaxed">
+              Обязательным условием участия является наличие бегового допуска / квалификации по одной из дисциплин: курсинг, БЗМП или бега борзых, с подтверждением в квалификационной книжке (п. 6.1–6.3).
+            </p>
           </div>
 
           {/* Organizer & Official Website */}
@@ -329,7 +435,7 @@ export default function ChampionshipRulesTab({ reglamentUrl, spreadsheetUrl }: C
             <div className="space-y-1.5">
               <Link
                 to="/donino/championship?tab=standings"
-                className="w-full inline-flex items-center justify-between py-2 px-3 rounded-xl border border-old-money-200 bg-cream-100/60 text-xs font-medium text-charcoal-700 hover:bg-cream-100 transition-colors"
+                className="w-full min-h-[44px] inline-flex items-center justify-between py-2 px-3 rounded-xl border border-old-money-200 bg-cream-100/60 text-xs font-medium text-charcoal-700 hover:bg-cream-100 transition-colors"
               >
                 <div className="flex items-center gap-2">
                   <Trophy className="w-3.5 h-3.5 text-camel-700" />
@@ -339,7 +445,7 @@ export default function ChampionshipRulesTab({ reglamentUrl, spreadsheetUrl }: C
               </Link>
               <Link
                 to="/speed-records/"
-                className="w-full inline-flex items-center justify-between py-2 px-3 rounded-xl border border-old-money-200 bg-cream-100/60 text-xs font-medium text-charcoal-700 hover:bg-cream-100 transition-colors"
+                className="w-full min-h-[44px] inline-flex items-center justify-between py-2 px-3 rounded-xl border border-old-money-200 bg-cream-100/60 text-xs font-medium text-charcoal-700 hover:bg-cream-100 transition-colors"
               >
                 <div className="flex items-center gap-2">
                   <Clock className="w-3.5 h-3.5 text-camel-700" />

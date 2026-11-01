@@ -101,7 +101,7 @@ describe('Donino Data Files Integrity', () => {
     const champPath = path.resolve(process.cwd(), 'data/v1/donino/championship.json');
     expect(existsSync(champPath)).toBe(true);
     const champ = JSON.parse(readFileSync(champPath, 'utf-8'));
-    expect(champ.standings.length).toBe(92);
+    expect(champ.standings.length).toBe(91);
     expect(champ.stages[2].has_results).toBe(true);
     expect(champ.stages[2].participants_count).toBe(43);
 

@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-11-01T09:46:54.248Z",
+  "generated_at": "2026-11-01T09:59:32.593Z",
   "series_title": "Серия клубных чемпионатов Донино по рейсингу (бегам борзых)",
   "season": 2026,
   "organizer": "Курсинг в Донино",
@@ -149,7 +149,7 @@
           "time": 32.16
         },
         {
-          "dog_name": "VIRNA",
+          "dog_name": "ВИРНА",
           "breed": "НЕМЕЦКАЯ ОВЧАРКА",
           "breed_class": "Немецкая овчарка - стандарт (Прогресс) - сука",
           "league": "Прогресс",
@@ -1169,9 +1169,9 @@
         {
           "id": 32,
           "catalog_no": 32,
-          "dog_id": 11136,
-          "dog_name": "VIRNA",
-          "name_ru": "VIRNA",
+          "dog_id": 9207,
+          "dog_name": "ВИРНА",
+          "name_ru": "ВИРНА",
           "name_lat": "VIRNA",
           "breed": "НЕМЕЦКАЯ ОВЧАРКА",
           "sex": "Сука",
@@ -3714,7 +3714,7 @@
           "dog_id": 9207,
           "dog_name": "ВИРНА",
           "name_ru": "ВИРНА",
-          "name_lat": "Вирна",
+          "name_lat": "VIRNA",
           "breed": "НЕМЕЦКАЯ ОВЧАРКА",
           "sex": "F",
           "breed_class": "Немецкая овчарка - стандарт (Чемпионы) - сука",
@@ -6128,19 +6128,38 @@
       "dog_id": 9207,
       "name": "ВИРНА",
       "name_ru": "ВИРНА",
-      "name_lat": "Вирна",
+      "name_lat": "VIRNA",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА",
-      "sex": "F",
+      "sex": "Сука",
       "current_league": "Абсолют",
-      "wins_count": 1,
+      "wins_count": 2,
       "consecutive_losses": 0,
       "best_time": 34.58,
-      "stages_count": 1,
-      "total_points": 0,
-      "stage_points": {},
+      "stages_count": 2,
+      "total_points": 6,
+      "stage_points": {
+        "1": 6
+      },
       "status_badge": "promoted_up",
       "promotion_label": "Выход в Абсолют (победа в финале)",
       "history": [
+        {
+          "stage_num": 1,
+          "date": "2026-08-09",
+          "placement": 1,
+          "total_score": 35.66,
+          "league": "Прогресс",
+          "breed_class": "Немецкая овчарка - стандарт (Прогресс) - сука",
+          "status": "finished",
+          "points": 6,
+          "points_breakdown": {
+            "place_points": 2,
+            "best_final_points": 1,
+            "best_class_points": 1,
+            "best_breed_points": 1,
+            "track_record_points": 1
+          }
+        },
         {
           "stage_num": 3,
           "date": "2026-10-31",
@@ -7613,45 +7632,6 @@
       ]
     },
     {
-      "dog_key": "dog::11136",
-      "dog_id": 11136,
-      "name": "VIRNA",
-      "name_ru": "VIRNA",
-      "name_lat": "VIRNA",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
-      "sex": "Сука",
-      "current_league": "Чемпионов",
-      "wins_count": 1,
-      "consecutive_losses": 0,
-      "best_time": 35.66,
-      "stages_count": 1,
-      "total_points": 6,
-      "stage_points": {
-        "1": 6
-      },
-      "status_badge": "promoted_up",
-      "promotion_label": "Выход в Чемпионы (победа I этапа)",
-      "history": [
-        {
-          "stage_num": 1,
-          "date": "2026-08-09",
-          "placement": 1,
-          "total_score": 35.66,
-          "league": "Прогресс",
-          "breed_class": "Немецкая овчарка - стандарт (Прогресс) - сука",
-          "status": "finished",
-          "points": 6,
-          "points_breakdown": {
-            "place_points": 2,
-            "best_final_points": 1,
-            "best_class_points": 1,
-            "best_breed_points": 1,
-            "track_record_points": 1
-          }
-        }
-      ]
-    },
-    {
       "dog_key": "dog::11135",
       "dog_id": 11135,
       "name": "ЖАНАРА МАРТЭЛЛА ДЕЯ ГРАН ПРИ",
@@ -9014,7 +8994,7 @@
       {
         "stage_from": 1,
         "stage_to": 2,
-        "dog_name": "VIRNA",
+        "dog_name": "ВИРНА",
         "breed": "НЕМЕЦКАЯ ОВЧАРКА",
         "from_league": "Лига Прогресс",
         "to_league": "Лига Чемпионов",
@@ -9450,9 +9430,9 @@
     ]
   },
   "stats": {
-    "total_dogs_participated": 92,
+    "total_dogs_participated": 91,
     "dogs_in_absolut": 25,
-    "dogs_in_champions": 38,
+    "dogs_in_champions": 37,
     "dogs_in_progress": 19,
     "dogs_in_juniors": 10,
     "promotions_count": 63
