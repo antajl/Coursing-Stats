@@ -3,6 +3,7 @@ import { Navigate, useSearchParams, useNavigate } from 'react-router-dom'
 import { SEO } from '../components/SEO'
 import { JsonLd, breadcrumbListSchema, faqPageSchema } from '../components/JsonLd'
 import { usePublicCalendarVisible } from '../hooks/useStaticData'
+import { isLocalDev } from '../lib/env'
 import LoadingCard from '../components/LoadingCard'
 import { MobileSubNavTabs } from '../components/ui/MobileSubNavTabs'
 
@@ -21,6 +22,9 @@ function Competitions() {
   }
 
   if (tab === 'builder' || tab === 'protocol-builder') {
+    if (!isLocalDev) {
+      return <Navigate to="/competitions?tab=ranking" replace />
+    }
     return <Navigate to="/protocol-builder/" replace />
   }
 
@@ -35,7 +39,9 @@ function Competitions() {
 
   const handleTabChange = (newTab: string) => {
     if (newTab === 'builder') {
-      navigate('/protocol-builder/')
+      if (isLocalDev) {
+        navigate('/protocol-builder/')
+      }
       return
     }
     const next = new URLSearchParams(searchParams)
@@ -47,7 +53,7 @@ function Competitions() {
     { id: 'ranking', label: 'Рейтинг' },
     ...(calendarVisible ? [{ id: 'archive', label: 'Архив' }] : []),
     { id: 'judges', label: 'Судьи' },
-    { id: 'builder', label: 'Конструктор' },
+    ...(isLocalDev ? [{ id: 'builder', label: 'Конструктор' }] : []),
   ]
 
   const competitionFaqs = [

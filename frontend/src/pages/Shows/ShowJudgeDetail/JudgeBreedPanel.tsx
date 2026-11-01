@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
-import { Search, ArrowUpDown } from 'lucide-react'
+import { ArrowUpDown } from 'lucide-react'
+import ToolbarSearch from '../../../components/toolbar/ToolbarSearch'
 import { formatBreedSentenceCase } from '../../../lib/breedMapping'
 
 type BreedRow = { breed: string; count: number }
@@ -53,32 +54,18 @@ export function JudgeBreedPanel({
 
   return (
     <div className="space-y-4">
-      {/* Controls: search and sort */}
-      <div className="flex flex-col sm:flex-row gap-2.5 items-stretch sm:items-center justify-between">
-        <div className="relative flex-1 max-w-sm">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-charcoal-400" />
-          <input
-            type="text"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Найти породу..."
-            className="w-full h-9 pl-9 pr-3 rounded-lg border border-old-money-200/90 bg-cream-50/60 text-sm text-charcoal-800 placeholder-charcoal-400 hover:border-camel-300 focus:border-camel-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-camel-100 transition-colors"
-          />
-          {searchQuery && (
-            <button
-              type="button"
-              onClick={() => setSearchQuery('')}
-              className="absolute right-2.5 top-1/2 -translate-y-1/2 text-xs text-charcoal-400 hover:text-charcoal-700"
-            >
-              ✕
-            </button>
-          )}
-        </div>
+      {/* Controls: search and sort — строго 1 строка */}
+      <div className="flex items-center gap-2 overflow-x-auto no-scrollbar py-0.5 justify-between w-full min-w-0">
+        <ToolbarSearch
+          value={searchQuery}
+          onChange={setSearchQuery}
+          placeholder="Найти породу..."
+        />
 
         <button
           type="button"
           onClick={() => setSortMode((prev) => (prev === 'count' ? 'alpha' : 'count'))}
-          className="inline-flex items-center gap-1.5 self-start sm:self-auto px-3 py-1.5 rounded-lg border border-old-money-200 bg-white text-xs font-semibold text-charcoal-700 hover:bg-cream-50 hover:border-camel-300 transition-colors"
+          className="shrink-0 inline-flex items-center gap-1.5 h-8 sm:h-9 px-3 rounded-lg border border-old-money-200 bg-white text-xs font-semibold text-charcoal-700 hover:bg-cream-50 hover:border-camel-300 transition-colors cursor-pointer"
         >
           <ArrowUpDown className="h-3.5 w-3.5 text-camel-600" />
           <span>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Search, X } from 'lucide-react'
+import ToolbarSearch from '../../../components/toolbar/ToolbarSearch'
 import type { JudgeEvent } from './types'
 import { formatBreedName, formatDate } from './utils'
 
@@ -24,28 +24,13 @@ export const JudgeEventsTab: React.FC<JudgeEventsTabProps> = ({
 }) => {
   return (
     <>
-      {/* Search Toolbar */}
-      <div className="mb-4">
-        <div className="relative max-w-sm">
-          <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-charcoal-400" />
-          <input
-            type="search"
-            value={eventSearchQuery}
-            onChange={(e) => setEventSearchQuery(e.target.value)}
-            placeholder="Поиск по названию соревнований, породе или дате..."
-            className="h-9 w-full rounded-lg border border-old-money-200/90 bg-cream-50/60 pl-9 pr-8 text-xs sm:text-sm text-charcoal-900 placeholder:text-charcoal-400 hover:border-camel-300 focus:border-camel-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-camel-100 transition-colors"
-          />
-          {eventSearchQuery && (
-            <button
-              type="button"
-              onClick={() => setEventSearchQuery('')}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-charcoal-400 hover:text-charcoal-700"
-              aria-label="Очистить"
-            >
-              <X className="h-4 w-4" />
-            </button>
-          )}
-        </div>
+      {/* Search Toolbar — строго 1 строка */}
+      <div className="mb-4 flex items-center gap-2 w-full max-w-sm">
+        <ToolbarSearch
+          value={eventSearchQuery}
+          onChange={setEventSearchQuery}
+          placeholder="Поиск по турниру, породе или дате..."
+        />
       </div>
 
       {filteredEvents.length === 0 ? (

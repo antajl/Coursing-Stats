@@ -1,4 +1,5 @@
 import type { NavigationRouteItem, BreedHubSearchItem } from './quickSearchTypes'
+import { isLocalDev } from '../../lib/env'
 
 /** Реестр всех разделов сайта с синонимами, сокращениями и ключевыми словами */
 export const SITE_NAVIGATION_ROUTES: NavigationRouteItem[] = [
@@ -37,18 +38,22 @@ export const SITE_NAVIGATION_ROUTES: NavigationRouteItem[] = [
       'спорт', 'судьи соревнований', 'judges', 'суд',
     ],
   },
-  {
-    id: 'protocol-builder',
-    title: 'Конструктор протокола',
-    subtitle: 'Векторный экспорт официальных протоколов соревнований в HTML и PDF',
-    to: '/protocol-builder',
-    icon: 'fileText',
-    keywords: [
-      'конструктор', 'протокол', 'протоколы', 'билдер', 'создать протокол', 'бланк',
-      'экспорт', 'печать', 'печать протокола', 'pdf', 'пдф', 'генератор', 'builder',
-      'protocol', 'п', 'прот',
-    ],
-  },
+  ...(isLocalDev
+    ? [
+        {
+          id: 'protocol-builder',
+          title: 'Конструктор протокола',
+          subtitle: 'Векторный экспорт официальных протоколов соревнований в HTML и PDF',
+          to: '/protocol-builder',
+          icon: 'fileText' as const,
+          keywords: [
+            'конструктор', 'протокол', 'протоколы', 'билдер', 'создать протокол', 'бланк',
+            'экспорт', 'печать', 'печать протокола', 'pdf', 'пдф', 'генератор', 'builder',
+            'protocol', 'п', 'прот',
+          ],
+        },
+      ]
+    : []),
   {
     id: 'shows-ranking',
     title: 'Рейтинг выставок РКФ',
@@ -258,5 +263,5 @@ export const QUICK_NAV_SHORTCUTS = [
   { label: 'Рекорды Донино', to: '/speed-records?tab=records', icon: 'speed' as const },
   { label: 'Календарь', to: '/competitions?tab=archive', icon: 'calendar' as const },
   { label: 'Судьи', to: '/competitions?tab=judges', icon: 'club' as const },
-  { label: 'Конструктор', to: '/protocol-builder', icon: 'fileText' as const },
+  ...(isLocalDev ? [{ label: 'Конструктор', to: '/protocol-builder', icon: 'fileText' as const }] : []),
 ]

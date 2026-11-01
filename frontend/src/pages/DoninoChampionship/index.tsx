@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { useSearchParams, useNavigate } from 'react-router-dom'
 import {
   Trophy,
@@ -78,6 +78,102 @@ export default function DoninoChampionship() {
     }
   }
 
+  const navRef = useRef<HTMLElement>(null)
+
+  // Auto-scroll active tab into center view on mobile tab switch
+  useEffect(() => {
+    const nav = navRef.current
+    if (!nav) return
+    const activeBtn = nav.querySelector<HTMLElement>('[data-active="true"]')
+    if (activeBtn) {
+      activeBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })
+    }
+  }, [activeTab])
+
+  // Mobile horizontal swipe between tournament tabs: standings ↔ stage1 ↔ stage2 ↔ stage3 ↔ rules
+  const touchStartRef = useRef<{ x: number; y: number; time: number; target: EventTarget | null } | null>(null)
+  const gestureLockRef = useRef<'horizontal' | 'vertical' | null>(null)
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    if (typeof window !== 'undefined' && window.innerWidth >= 1024) return
+    const touch = e.touches[0]
+    touchStartRef.current = {
+      x: touch.clientX,
+      y: touch.clientY,
+      time: Date.now(),
+      target: touch.target,
+    }
+    gestureLockRef.current = null
+  }
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (!touchStartRef.current || (typeof window !== 'undefined' && window.innerWidth >= 1024)) return
+    const touch = e.touches[0]
+    const dx = touch.clientX - touchStartRef.current.x
+    const dy = touch.clientY - touchStartRef.current.y
+
+    if (!gestureLockRef.current) {
+      const absDx = Math.abs(dx)
+      const absDy = Math.abs(dy)
+      if (absDx < 10 && absDy < 10) return
+      if (absDy >= absDx) {
+        gestureLockRef.current = 'vertical'
+        return
+      }
+      gestureLockRef.current = 'horizontal'
+    }
+  }
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (!touchStartRef.current || (typeof window !== 'undefined' && window.innerWidth >= 1024)) return
+    const isHorizontal = gestureLockRef.current === 'horizontal'
+    const target = touchStartRef.current.target
+    const touch = e.changedTouches[0]
+    const dx = touch.clientX - touchStartRef.current.x
+    const dt = Date.now() - touchStartRef.current.time
+    const velocity = Math.abs(dx) / (dt || 1)
+
+    touchStartRef.current = null
+    gestureLockRef.current = null
+
+    if (!isHorizontal) return
+
+    // Do not switch tabs if inner ranking swipe already handled this gesture (e.g. time ↔ points)
+    if ((e.nativeEvent as any)._doninoSwipeConsumed) {
+      return
+    }
+
+    // Do not intercept if touch was inside an horizontally scrollable element (e.g. results table)
+    let el = target as HTMLElement | null
+    while (el && el !== e.currentTarget) {
+      if (el.scrollWidth > el.clientWidth) {
+        const style = window.getComputedStyle(el)
+        if (style.overflowX === 'auto' || style.overflowX === 'scroll') {
+          return
+        }
+      }
+      el = el.parentElement
+    }
+
+    const isSwipeLeft = dx < -45 || (dx < -25 && velocity > 0.25)
+    const isSwipeRight = dx > 45 || (dx > 25 && velocity > 0.25)
+
+    const mainTabsList: MainTab[] = ['standings', 'stage1', 'stage2', 'stage3', 'rules']
+    const currentIndex = mainTabsList.indexOf(activeTab)
+    if (currentIndex === -1) return
+
+    if (isSwipeLeft && currentIndex < mainTabsList.length - 1) {
+      handleTabChange(mainTabsList[currentIndex + 1])
+    } else if (isSwipeRight && currentIndex > 0) {
+      handleTabChange(mainTabsList[currentIndex - 1])
+    }
+  }
+
+  const handleTouchCancel = () => {
+    touchStartRef.current = null
+    gestureLockRef.current = null
+  }
+
   const handleTabChange = (tab: MainTab) => {
     const next = new URLSearchParams(searchParams)
     if (tab === 'standings') {
@@ -130,6 +226,7 @@ export default function DoninoChampionship() {
         {/* Tournament Navigation Tabs */}
         <div className="border-b border-old-money-200">
           <nav
+            ref={navRef}
             className="flex space-x-1 sm:space-x-2 overflow-x-auto pb-px scrollbar-none"
             aria-label="Вкладки турнира"
           >
@@ -140,6 +237,7 @@ export default function DoninoChampionship() {
                 <button
                   key={t.id}
                   type="button"
+                  data-active={isActive ? 'true' : undefined}
                   onClick={() => handleTabChange(t.id as MainTab)}
                   className={`min-h-[44px] px-3.5 py-2.5 rounded-t-xl text-xs sm:text-sm font-semibold transition-all flex items-center gap-2 border-b-2 cursor-pointer whitespace-nowrap ${
                     isActive
@@ -169,7 +267,13 @@ export default function DoninoChampionship() {
             {error || 'Данные временно недоступны'}
           </div>
         ) : (
-          <>
+          <div
+            className="touch-pan-y"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+            onTouchCancel={handleTouchCancel}
+          >
             <div
               role="tabpanel"
               className={activeTab === 'standings' ? 'animate-fade-in' : 'hidden'}
@@ -222,7 +326,7 @@ export default function DoninoChampionship() {
                 />
               )}
             </div>
-          </>
+          </div>
         )}
       </div>
     </>

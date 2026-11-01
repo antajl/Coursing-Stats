@@ -87,40 +87,62 @@ export default function DoninoListRecordRow({
       <SpeedHistorySparkline
         current={{ speed_km_h: speedKmh ?? 0, date: date ?? '' }}
         history={history}
-        className="h-10 w-full max-w-[170px]"
+        className="h-7 w-[85px] min-[380px]:w-[105px] sm:h-10 sm:w-full sm:max-w-[170px]"
       />
     ) : (
       <CoursingHistorySparkline
         current={{ time_seconds: timeSeconds ?? 0, date: date ?? '' }}
         history={history}
-        className="h-10 w-full max-w-[170px]"
+        className="h-7 w-[85px] min-[380px]:w-[105px] sm:h-10 sm:w-full sm:max-w-[170px]"
       />
     )
 
-  const sparklineMini =
-    mode === 'speed' ? (
-      <SpeedHistorySparkline
-        current={{ speed_km_h: speedKmh ?? 0, date: date ?? '' }}
-        history={history}
-        className="h-7 w-full max-w-[210px]"
-      />
-    ) : (
-      <CoursingHistorySparkline
-        current={{ time_seconds: timeSeconds ?? 0, date: date ?? '' }}
-        history={history}
-        className="h-7 w-full max-w-[210px]"
-      />
-    )
+  const resultMetric = (
+    <>
+      {mode === 'speed' ? (
+        <>
+          <div className="flex items-center gap-1 leading-none whitespace-nowrap">
+            <span className="text-base sm:text-lg font-bold tabular-nums text-camel-700 leading-none">
+              {formatDoninoSpeedKmh(speedKmh)}
+            </span>
+            <span className="flex flex-col text-[7.5px] sm:text-[8px] font-semibold uppercase tracking-wide text-charcoal-500 leading-[1.1] text-left">
+              <span>макс.</span>
+              <span>км/ч</span>
+            </span>
+          </div>
+          <span className="text-[10px] sm:text-[10.5px] font-medium text-old-money-500 tabular-nums mt-0.5">
+            {historyItems.length > 0 ? `${historyItems.length + 1} зам.` : '1 зам.'}
+          </span>
+        </>
+      ) : (
+        <>
+          <div className="flex items-center gap-1 leading-none whitespace-nowrap">
+            <span className="text-base sm:text-lg font-bold tabular-nums text-camel-700 leading-none">
+              {formatTime(timeSeconds ?? 0)}
+            </span>
+            <span className="text-[8px] sm:text-[8.5px] font-semibold uppercase tracking-wide text-charcoal-500 leading-none">
+              сек
+            </span>
+          </div>
+          {coursingSpeedKmh && (
+            <span className="text-[10px] sm:text-[10.5px] font-medium text-old-money-500 tabular-nums mt-0.5">
+              {coursingSpeedKmh} км/ч
+            </span>
+          )}
+        </>
+      )}
+    </>
+  )
 
   const profileLink = (
     <Link
       to={`/donino-dog/${encodeURIComponent(name)}/${encodeURIComponent(breed)}/`}
       state={{ from: mode === 'speed' ? 'speed-records' : 'coursing-records' }}
-      className="donino-list-row-link group min-w-0 flex-1 border-b border-old-money-200 bg-white py-1.5 sm:py-2 px-3 sm:px-4 transition-colors duration-150 hover:bg-camel-100/60"
+      className="donino-list-row-link group min-w-0 flex-1 border-b border-old-money-200 bg-white py-1.5 sm:py-2 px-2.5 sm:px-4 transition-colors duration-150 hover:bg-camel-100/60"
     >
       <div className="flex items-center gap-2 min-w-0 flex-1">
         {rank != null && (
-          <div className="shrink-0 flex items-center justify-center w-7 sm:w-8 mr-1">
+          <div className="shrink-0 flex items-center justify-center w-7 sm:w-8 mr-0.5 sm:mr-1">
             <RankBadge rank={rank} delta={delta} />
           </div>
         )}
@@ -134,15 +156,8 @@ export default function DoninoListRecordRow({
             {sex && <DogSexIcon sex={sex} />}
           </div>
 
-          {/* Компактный мини-график истории замеров на мобильных устройствах */}
-          {hasSparkline && (
-            <div className="sm:hidden my-1 w-full max-w-[210px]">
-              {sparklineMini}
-            </div>
-          )}
-
           {(date || breed) && (
-            <div className="mt-0.5 flex min-w-0 items-center gap-1.5 text-xs text-old-money-500 whitespace-nowrap">
+            <div className="mt-0.5 flex min-w-0 items-center gap-1 text-xs text-old-money-500 whitespace-nowrap">
               {date && <span className="shrink-0">{formatRecordDate(date)}</span>}
               {date && breed && <span className="text-old-money-300">·</span>}
               {breed && <span className="truncate donino-home-row-breed">{breed}</span>}
@@ -159,47 +174,16 @@ export default function DoninoListRecordRow({
         </div>
       </div>
 
-      {/* Полноразмерный спарклайн по центру на экранах от sm (планшеты и десктоп) */}
+      {/* Компактный график по центру в одну строку */}
       {hasSparkline && (
-        <div className="donino-list-row-chart hidden sm:flex sm:flex-1 sm:min-h-0 sm:items-center sm:justify-center sm:px-2">
+        <div className="donino-list-row-chart shrink-0 flex items-center justify-center sm:flex-1 sm:px-2">
           {sparkline}
         </div>
       )}
 
-      {/* Блок результата справа */}
-      <div className="relative shrink-0 flex flex-col items-end justify-center text-right min-w-[70px] sm:min-w-[85px]">
-        {mode === 'speed' ? (
-          <>
-            <div className="flex items-center gap-1 leading-none whitespace-nowrap">
-              <span className="text-base sm:text-lg font-bold tabular-nums text-camel-700 leading-none">
-                {formatDoninoSpeedKmh(speedKmh)}
-              </span>
-              <span className="flex flex-col text-[7.5px] sm:text-[8px] font-semibold uppercase tracking-wide text-charcoal-500 leading-[1.1] text-left">
-                <span>макс.</span>
-                <span>км/ч</span>
-              </span>
-            </div>
-            <span className="text-[10px] sm:text-[10.5px] font-medium text-old-money-500 tabular-nums mt-0.5">
-              {historyItems.length > 0 ? `${historyItems.length + 1} зам.` : '1 зам.'}
-            </span>
-          </>
-        ) : (
-          <>
-            <div className="flex items-center gap-1 leading-none whitespace-nowrap">
-              <span className="text-base sm:text-lg font-bold tabular-nums text-camel-700 leading-none">
-                {formatTime(timeSeconds ?? 0)}
-              </span>
-              <span className="text-[8px] sm:text-[8.5px] font-semibold uppercase tracking-wide text-charcoal-500 leading-none">
-                сек
-              </span>
-            </div>
-            {coursingSpeedKmh && (
-              <span className="text-[10px] sm:text-[10.5px] font-medium text-old-money-500 tabular-nums mt-0.5">
-                {coursingSpeedKmh} км/ч
-              </span>
-            )}
-          </>
-        )}
+      {/* Результат справа */}
+      <div className="relative shrink-0 flex flex-col items-end justify-center text-right min-w-[62px] sm:min-w-[85px]">
+        {resultMetric}
       </div>
     </Link>
   )

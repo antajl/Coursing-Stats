@@ -231,7 +231,7 @@ export default function EventsToolbar({
           placeholder="Название, клуб, регион…"
         />
 
-        <div className="flex max-w-full flex-wrap items-center gap-1.5 sm:gap-2">
+        <div className="flex max-w-full items-center gap-1.5 sm:gap-2 shrink-0">
           <MonthYearDropdown
             selectedYear={filterYear}
             onSelectYear={onFilterYearChange}

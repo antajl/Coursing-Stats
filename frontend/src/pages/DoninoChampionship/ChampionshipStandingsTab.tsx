@@ -1,7 +1,8 @@
-import React, { useState, useMemo } from 'react'
+import React, { useState, useMemo, useRef } from 'react'
 import { X, ChevronDown, Trophy, Timer, Award } from 'lucide-react'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
 import ModernDropdown from '../../components/ui/ModernDropdown'
+import BreedSearchDropdown from '../../components/ui/BreedSearchDropdown'
 import QuickBreedBar, { type QuickBreedItem } from '../TopDogs/QuickBreedBar'
 import DogSexIcon from '../../components/DogSexIcon'
 import { toolbarPillTriggerClass } from '../../lib/toolbar'
@@ -37,6 +38,65 @@ export default function ChampionshipStandingsTab({
   const [sexDropdownOpen, setSexDropdownOpen] = useState(false)
   const [expandedDogKey, setExpandedDogKey] = useState<string | null>(null)
   const [sortMode, setSortMode] = useState<'points' | 'time'>('time')
+
+  // Mobile swipe gesture to toggle between "По скорости" and "По баллам"
+  const touchStartRef = useRef<{ x: number; y: number; time: number } | null>(null)
+  const gestureLockRef = useRef<'horizontal' | 'vertical' | null>(null)
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    if (typeof window !== 'undefined' && window.innerWidth >= 1024) return
+    const touch = e.touches[0]
+    touchStartRef.current = { x: touch.clientX, y: touch.clientY, time: Date.now() }
+    gestureLockRef.current = null
+  }
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (!touchStartRef.current || (typeof window !== 'undefined' && window.innerWidth >= 1024)) return
+    const touch = e.touches[0]
+    const dx = touch.clientX - touchStartRef.current.x
+    const dy = touch.clientY - touchStartRef.current.y
+
+    if (!gestureLockRef.current) {
+      const absDx = Math.abs(dx)
+      const absDy = Math.abs(dy)
+      if (absDx < 10 && absDy < 10) return
+      if (absDy >= absDx) {
+        gestureLockRef.current = 'vertical'
+        return
+      }
+      gestureLockRef.current = 'horizontal'
+    }
+  }
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (!touchStartRef.current || (typeof window !== 'undefined' && window.innerWidth >= 1024)) return
+    const isHorizontal = gestureLockRef.current === 'horizontal'
+    const touch = e.changedTouches[0]
+    const dx = touch.clientX - touchStartRef.current.x
+    const dt = Date.now() - touchStartRef.current.time
+    const velocity = Math.abs(dx) / (dt || 1)
+
+    touchStartRef.current = null
+    gestureLockRef.current = null
+
+    if (isHorizontal) {
+      const isSwipeLeft = dx < -45 || (dx < -25 && velocity > 0.25)
+      const isSwipeRight = dx > 45 || (dx > 25 && velocity > 0.25)
+
+      if (isSwipeLeft && sortMode === 'time') {
+        setSortMode('points')
+        ;(e.nativeEvent as any)._doninoSwipeConsumed = true
+      } else if (isSwipeRight && sortMode === 'points') {
+        setSortMode('time')
+        ;(e.nativeEvent as any)._doninoSwipeConsumed = true
+      }
+    }
+  }
+
+  const handleTouchCancel = () => {
+    touchStartRef.current = null
+    gestureLockRef.current = null
+  }
 
   // Candidate breeds sorted strictly by participant count descending, then alphabetically
   const candidateBreeds = useMemo(() => {
@@ -198,68 +258,15 @@ export default function ChampionshipStandingsTab({
 
   return (
     <div className="space-y-4">
-      {/* 1. Page Toolbar: Search, League Dropdown, QuickBreedBar, Reset */}
-      <div className="flex flex-wrap items-center gap-2">
-        <div className="shrink-0">
-          <ToolbarSearch
-            value={searchQuery}
-            onChange={setSearchQuery}
-            placeholder="Поиск по кличке..."
-          />
-        </div>
+      {/* 1. Мобильная консоль: Поиск + Пол + Порода + Лига + Сброс (строго 1 компактный ряд) */}
+      <div className="flex sm:hidden items-center gap-1.5 w-full min-w-0 overflow-x-auto no-scrollbar py-0.5">
+        <ToolbarSearch
+          value={searchQuery}
+          onChange={setSearchQuery}
+          placeholder="Поиск по кличке..."
+        />
 
-        {/* League Dropdown */}
-        <ModernDropdown
-          isOpen={leagueDropdownOpen}
-          onOpenChange={setLeagueDropdownOpen}
-          width="180px"
-          portal
-          closeOnScroll
-          trigger={
-            <button
-              type="button"
-              onClick={() => setLeagueDropdownOpen(!leagueDropdownOpen)}
-              className={toolbarPillTriggerClass(selectedLeague !== 'all')}
-              title="Фильтр по лигам"
-            >
-              <span>{selectedLeague === 'all' ? 'Все лиги' : `Лига «${selectedLeague}»`}</span>
-              <ChevronDown className="h-3.5 w-3.5 opacity-70" />
-            </button>
-          }
-        >
-          <div className="p-1 space-y-0.5 min-w-[170px]">
-            {leagueOptions.map((opt) => {
-              const isSelected = selectedLeague === opt.value
-              const isEmpty = opt.count === 0 && opt.value !== 'all'
-
-              return (
-                <button
-                  key={opt.value}
-                  type="button"
-                  disabled={isEmpty}
-                  onClick={() => {
-                    setSelectedLeague(opt.value)
-                    setLeagueDropdownOpen(false)
-                  }}
-                  className={`w-full text-left px-2.5 py-1.5 rounded-md text-xs transition-colors cursor-pointer flex items-center justify-between ${
-                    isSelected
-                      ? 'border border-camel-400 bg-camel-100 text-camel-950 font-semibold shadow-2xs'
-                      : isEmpty
-                      ? 'opacity-40 cursor-not-allowed text-charcoal-400'
-                      : 'text-charcoal-700 hover:bg-cream-100'
-                  }`}
-                >
-                  <span>{opt.label}</span>
-                  {isSelected && (
-                    <span className="w-1.5 h-1.5 rounded-full bg-camel-600" />
-                  )}
-                </button>
-              )
-            })}
-          </div>
-        </ModernDropdown>
-
-        {/* Sex Dropdown */}
+        {/* Выбор пола */}
         <div className="shrink-0">
           <ModernDropdown
             trigger={
@@ -330,7 +337,175 @@ export default function ChampionshipStandingsTab({
           </ModernDropdown>
         </div>
 
-        <div className="h-5 w-px bg-old-money-300 shrink-0 mx-0.5 hidden sm:block" aria-hidden="true" />
+        {/* Выбор породы */}
+        <div className="shrink-0">
+          <BreedSearchDropdown
+            breeds={breedValues}
+            selectedBreed={selectedBreed}
+            onSelect={setSelectedBreed}
+            trigger={
+              <button
+                type="button"
+                className={`shrink-0 ${toolbarPillTriggerClass(Boolean(selectedBreed))}`}
+              >
+                <span className="truncate max-w-[85px]">
+                  {selectedBreed ? formatBreedName(selectedBreed) : 'Порода'}
+                </span>
+                <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
+              </button>
+            }
+            dogIndex={dogIndex}
+          />
+        </div>
+
+        {/* Выбор лиги (уникальный фильтр) */}
+        <div className="shrink-0">
+          <ModernDropdown
+            isOpen={leagueDropdownOpen}
+            onOpenChange={setLeagueDropdownOpen}
+            width="180px"
+            portal
+            closeOnScroll
+            trigger={
+              <button
+                type="button"
+                onClick={() => setLeagueDropdownOpen(!leagueDropdownOpen)}
+                className={`shrink-0 ${toolbarPillTriggerClass(selectedLeague !== 'all')}`}
+                title="Фильтр по лигам"
+              >
+                <span>{selectedLeague === 'all' ? 'Все лиги' : `Лига «${selectedLeague}»`}</span>
+                <ChevronDown className="h-3.5 w-3.5 opacity-70" />
+              </button>
+            }
+          >
+            <div className="p-1 space-y-0.5 min-w-[170px]">
+              {leagueOptions.map((opt) => {
+                const isSelected = selectedLeague === opt.value
+                const isEmpty = opt.count === 0 && opt.value !== 'all'
+
+                return (
+                  <button
+                    key={opt.value}
+                    type="button"
+                    disabled={isEmpty}
+                    onClick={() => {
+                      setSelectedLeague(opt.value)
+                      setLeagueDropdownOpen(false)
+                    }}
+                    className={`w-full text-left px-2.5 py-1.5 rounded-md text-xs transition-colors cursor-pointer flex items-center justify-between ${
+                      isSelected
+                        ? 'border border-camel-400 bg-camel-100 text-camel-950 font-semibold shadow-2xs'
+                        : isEmpty
+                        ? 'opacity-40 cursor-not-allowed text-charcoal-400'
+                        : 'text-charcoal-700 hover:bg-cream-100'
+                    }`}
+                  >
+                    <span>{opt.label}</span>
+                    {isSelected && (
+                      <span className="w-1.5 h-1.5 rounded-full bg-camel-600" />
+                    )}
+                  </button>
+                )
+              })}
+            </div>
+          </ModernDropdown>
+        </div>
+
+        {/* Сброс */}
+        {hasActiveFilters && (
+          <div className="ml-auto shrink-0">
+            <button
+              type="button"
+              onClick={handleResetFilters}
+              className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-old-money-200 bg-cream-50 text-charcoal-500 hover:bg-cream-100 hover:text-charcoal-800 transition-colors shrink-0 cursor-pointer"
+              title="Сбросить все фильтры"
+            >
+              <X className="h-4 w-4" />
+            </button>
+          </div>
+        )}
+      </div>
+
+      {/* 2. Десктопная консоль: Поиск + Пол + Разделитель + QuickBreedBar + Лига + Сброс */}
+      <div className="hidden sm:flex sm:items-center gap-2 w-full min-w-0">
+        <ToolbarSearch
+          value={searchQuery}
+          onChange={setSearchQuery}
+          placeholder="Поиск по кличке..."
+        />
+
+        {/* Выбор пола */}
+        <div className="shrink-0">
+          <ModernDropdown
+            trigger={
+              <button
+                type="button"
+                className={`shrink-0 ${toolbarPillTriggerClass(Boolean(selectedSex))}`}
+                title="Фильтр по полу"
+              >
+                {selectedSex === 'm' && <DogSexIcon sex="m" size={12} variant="neutral" className="shrink-0 text-current" />}
+                {selectedSex === 'f' && <DogSexIcon sex="f" size={12} variant="neutral" className="shrink-0 text-current" />}
+                <span>{!selectedSex ? 'Пол' : selectedSex === 'm' ? 'Кобели' : 'Суки'}</span>
+                <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
+              </button>
+            }
+            isOpen={sexDropdownOpen}
+            onOpenChange={setSexDropdownOpen}
+            width="130px"
+          >
+            <div className="p-1 min-w-[125px]" role="menu">
+              <button
+                type="button"
+                role="menuitem"
+                onClick={() => {
+                  setSelectedSex('')
+                  setSexDropdownOpen(false)
+                }}
+                className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors cursor-pointer ${
+                  !selectedSex
+                    ? 'bg-camel-100 text-camel-950 font-semibold'
+                    : 'text-charcoal-700 hover:bg-camel-100'
+                }`}
+              >
+                Все
+              </button>
+              <button
+                type="button"
+                role="menuitem"
+                onClick={() => {
+                  setSelectedSex('m')
+                  setSexDropdownOpen(false)
+                }}
+                className={`flex w-full items-center gap-2 rounded-md px-3 py-2 text-left text-sm transition-colors cursor-pointer ${
+                  selectedSex === 'm'
+                    ? 'bg-camel-100 text-camel-950 font-semibold'
+                    : 'text-charcoal-700 hover:bg-camel-100'
+                }`}
+              >
+                <DogSexIcon sex="m" size={14} className={selectedSex === 'm' ? 'text-charcoal-900' : 'text-slate-500'} />
+                <span>Кобели</span>
+              </button>
+              <button
+                type="button"
+                role="menuitem"
+                onClick={() => {
+                  setSelectedSex('f')
+                  setSexDropdownOpen(false)
+                }}
+                className={`flex w-full items-center gap-2 rounded-md px-3 py-2 text-left text-sm transition-colors cursor-pointer ${
+                  selectedSex === 'f'
+                    ? 'bg-camel-100 text-camel-950 font-semibold'
+                    : 'text-charcoal-700 hover:bg-camel-100'
+                }`}
+              >
+                <DogSexIcon sex="f" size={14} className={selectedSex === 'f' ? 'text-charcoal-900' : 'text-slate-500'} />
+                <span>Суки</span>
+              </button>
+            </div>
+          </ModernDropdown>
+        </div>
+
+        <div className="h-5 w-px bg-old-money-300 shrink-0 mx-0.5" aria-hidden="true" />
 
         {/* QuickBreedBar with breed pills and overflow dropdown */}
         <div className="flex-1 min-w-[200px]">
@@ -341,6 +516,59 @@ export default function ChampionshipStandingsTab({
             candidateBreeds={candidateBreeds}
             dogIndex={dogIndex}
           />
+        </div>
+
+        {/* League Dropdown */}
+        <div className="shrink-0">
+          <ModernDropdown
+            isOpen={leagueDropdownOpen}
+            onOpenChange={setLeagueDropdownOpen}
+            width="180px"
+            portal
+            closeOnScroll
+            trigger={
+              <button
+                type="button"
+                onClick={() => setLeagueDropdownOpen(!leagueDropdownOpen)}
+                className={`shrink-0 ${toolbarPillTriggerClass(selectedLeague !== 'all')}`}
+                title="Фильтр по лигам"
+              >
+                <span>{selectedLeague === 'all' ? 'Все лиги' : `Лига «${selectedLeague}»`}</span>
+                <ChevronDown className="h-3.5 w-3.5 opacity-70" />
+              </button>
+            }
+          >
+            <div className="p-1 space-y-0.5 min-w-[170px]">
+              {leagueOptions.map((opt) => {
+                const isSelected = selectedLeague === opt.value
+                const isEmpty = opt.count === 0 && opt.value !== 'all'
+
+                return (
+                  <button
+                    key={opt.value}
+                    type="button"
+                    disabled={isEmpty}
+                    onClick={() => {
+                      setSelectedLeague(opt.value)
+                      setLeagueDropdownOpen(false)
+                    }}
+                    className={`w-full text-left px-2.5 py-1.5 rounded-md text-xs transition-colors cursor-pointer flex items-center justify-between ${
+                      isSelected
+                        ? 'border border-camel-400 bg-camel-100 text-camel-950 font-semibold shadow-2xs'
+                        : isEmpty
+                        ? 'opacity-40 cursor-not-allowed text-charcoal-400'
+                        : 'text-charcoal-700 hover:bg-cream-100'
+                    }`}
+                  >
+                    <span>{opt.label}</span>
+                    {isSelected && (
+                      <span className="w-1.5 h-1.5 rounded-full bg-camel-600" />
+                    )}
+                  </button>
+                )
+              })}
+            </div>
+          </ModernDropdown>
         </div>
 
         {/* Reset button */}
@@ -361,7 +589,13 @@ export default function ChampionshipStandingsTab({
         {/* Left Column: Dog Ranking Cards */}
         <div className="lg:col-span-7 xl:col-span-8">
           {/* Main Dog Ranking Card */}
-          <div className="overflow-hidden rounded-2xl border border-old-money-200 bg-white shadow-2xs">
+          <div
+            className="overflow-hidden rounded-2xl border border-old-money-200 bg-white shadow-2xs touch-pan-y select-none sm:select-auto"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+            onTouchCancel={handleTouchCancel}
+          >
             {/* Card Header inside */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 px-3.5 sm:px-4 py-3 border-b border-old-money-100 bg-cream-50/40">
               <div className="flex items-center justify-between sm:justify-start gap-2 min-w-0">
@@ -378,32 +612,34 @@ export default function ChampionshipStandingsTab({
                 </span>
               </div>
 
-              {/* Toggle Sort: Points vs Time (Canonical Old Money Pill Chips - rounded-full) */}
-              <div className="inline-flex items-center gap-1.5 self-start sm:self-auto shrink-0" role="group" aria-label="Сортировка рейтинга">
+              {/* Toggle Sort: Points vs Time (Clean Borderless Underline Tabs) */}
+              <div className="flex items-center gap-3.5 self-start sm:self-auto shrink-0 pt-0.5 sm:pt-0" role="tablist" aria-label="Сортировка рейтинга">
                 <button
                   type="button"
+                  role="tab"
+                  aria-selected={sortMode === 'time'}
                   onClick={() => setSortMode('time')}
-                  aria-pressed={sortMode === 'time'}
-                  className={`inline-flex h-7.5 sm:h-8 shrink-0 items-center gap-1.5 rounded-full px-3 text-xs font-semibold transition-all cursor-pointer whitespace-nowrap ${
+                  className={`inline-flex items-center gap-1.5 pb-1 text-xs transition-all cursor-pointer border-b-2 ${
                     sortMode === 'time'
-                      ? 'border border-camel-400 bg-camel-100 text-camel-950 shadow-2xs'
-                      : 'border border-old-money-200/80 bg-cream-50 text-charcoal-700 hover:bg-old-money-50 hover:text-charcoal-900'
+                      ? 'border-camel-600 text-charcoal-900 font-bold'
+                      : 'border-transparent text-charcoal-400 hover:text-charcoal-700 font-medium'
                   }`}
                 >
-                  <Timer className={`w-3.5 h-3.5 shrink-0 ${sortMode === 'time' ? 'text-camel-800' : 'text-charcoal-500'}`} aria-hidden />
+                  <Timer className={`w-3.5 h-3.5 ${sortMode === 'time' ? 'text-camel-700' : 'text-charcoal-400'}`} aria-hidden />
                   <span>По скорости</span>
                 </button>
                 <button
                   type="button"
+                  role="tab"
+                  aria-selected={sortMode === 'points'}
                   onClick={() => setSortMode('points')}
-                  aria-pressed={sortMode === 'points'}
-                  className={`inline-flex h-7.5 sm:h-8 shrink-0 items-center gap-1.5 rounded-full px-3 text-xs font-semibold transition-all cursor-pointer whitespace-nowrap ${
+                  className={`inline-flex items-center gap-1.5 pb-1 text-xs transition-all cursor-pointer border-b-2 ${
                     sortMode === 'points'
-                      ? 'border border-camel-400 bg-camel-100 text-camel-950 shadow-2xs'
-                      : 'border border-old-money-200/80 bg-cream-50 text-charcoal-700 hover:bg-old-money-50 hover:text-charcoal-900'
+                      ? 'border-camel-600 text-charcoal-900 font-bold'
+                      : 'border-transparent text-charcoal-400 hover:text-charcoal-700 font-medium'
                   }`}
                 >
-                  <Award className={`w-3.5 h-3.5 shrink-0 ${sortMode === 'points' ? 'text-camel-800' : 'text-charcoal-500'}`} aria-hidden />
+                  <Award className={`w-3.5 h-3.5 ${sortMode === 'points' ? 'text-camel-700' : 'text-charcoal-400'}`} aria-hidden />
                   <span>По баллам</span>
                 </button>
               </div>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { Search, X, ChevronDown } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
+import ToolbarSearch from '../../../components/toolbar/ToolbarSearch'
 import type { BreedStat } from './types'
 import { CRITERIA_META } from './constants'
 import { formatBreedName, formatDate, getScoreTone } from './utils'
@@ -42,28 +43,13 @@ export const JudgeBreedsTab: React.FC<JudgeBreedsTabProps> = ({
 
   return (
     <>
-      {/* Search & Sort Toolbar */}
-      <div className="mb-5 flex flex-col sm:flex-row gap-3 sm:items-center justify-between">
-        <div className="relative flex-1 max-w-sm">
-          <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-charcoal-400" />
-          <input
-            type="search"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Поиск по породе или кличке собаки..."
-            className="h-9 w-full rounded-lg border border-old-money-200/90 bg-cream-50/60 pl-9 pr-8 text-xs sm:text-sm text-charcoal-900 placeholder:text-charcoal-400 hover:border-camel-300 focus:border-camel-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-camel-100 transition-colors"
-          />
-          {searchQuery && (
-            <button
-              type="button"
-              onClick={() => setSearchQuery('')}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-charcoal-400 hover:text-charcoal-700"
-              aria-label="Очистить поиск"
-            >
-              <X className="h-4 w-4" />
-            </button>
-          )}
-        </div>
+      {/* Search & Sort Toolbar — строго 1 строка со скроллом */}
+      <div className="mb-4 flex items-center gap-2 overflow-x-auto no-scrollbar py-0.5 justify-between w-full min-w-0">
+        <ToolbarSearch
+          value={searchQuery}
+          onChange={setSearchQuery}
+          placeholder="Поиск по породе или кличке..."
+        />
 
         {/* Sort Buttons */}
         <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5 text-xs w-full sm:w-auto">

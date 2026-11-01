@@ -2,6 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { FolderPlus } from 'lucide-react'
 import { usePublicCalendarVisible } from '../../hooks/useStaticData'
+import { isLocalDev } from '../../lib/env'
 import { MobileSubNavTabs } from '../../components/ui/MobileSubNavTabs'
 import { useProtocolBuilderState } from './useProtocolBuilderState'
 import { ProtocolHeaderPanel } from './ProtocolHeaderPanel'
@@ -31,7 +32,7 @@ export default function ProtocolBuilder() {
           { id: 'ranking', label: 'Рейтинг' },
           ...(calendarVisible ? [{ id: 'archive', label: 'Архив' }] : []),
           { id: 'judges', label: 'Судьи' },
-          { id: 'builder', label: 'Конструктор' },
+          ...(isLocalDev ? [{ id: 'builder', label: 'Конструктор' }] : []),
         ]}
         activeTab="builder"
         onChange={(tabId) => {

@@ -210,10 +210,11 @@ export default function ShowJudges() {
     <div className="mx-auto max-w-full space-y-4 pb-2 sm:pb-4">
       <PageToolbar
         bare
+        topRowClassName="flex-nowrap"
         filters={
           <div className="w-full min-w-0">
             {/* Мобильная компактная строка (32px): Поиск + Год + Порода + Сброс */}
-            <div className="flex sm:hidden items-center gap-1.5 w-full min-w-0">
+            <div className="flex sm:hidden items-center gap-1.5 w-full min-w-0 overflow-x-auto no-scrollbar py-0.5">
               {/* Inline Search */}
               <ToolbarSearch
                 value={searchQuery}
@@ -320,7 +321,7 @@ export default function ShowJudges() {
                 onChange={setSearchQuery}
                 placeholder="Фамилия судьи…"
               />
-              <div className="flex max-w-full items-center gap-1.5 flex-wrap">
+              <div className="flex max-w-full items-center gap-1.5 shrink-0">
                 {/* Year Dropdown */}
                 <ModernDropdown
                   trigger={
