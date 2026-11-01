@@ -2,8 +2,8 @@
   "schema": "coursing-stats/calendar-v1",
   "year": 2026,
   "exported_at": "2026-09-28T13:14:08.803Z",
-  "event_count": 27,
-  "with_results": 27,
+  "event_count": 28,
+  "with_results": 28,
   "events": [
     {
       "id": 1300,
@@ -677,7 +677,7 @@
       "title": "III Клубный чемпионат Донино по бегам борзых",
       "full_title": "III Клубный чемпионат Донино по бегам борзых, 31.10–01.11.2026 (Московская обл., г. Раменское, д. Донино)",
       "rank_label": "III Клубный чемпионат Донино\n(Бега борзых)",
-      "event_type": "other",
+      "event_type": "racing",
       "competition_kind": "Клубный чемпионат",
       "competition_type": "Бега борзых",
       "host_club": "Курсинг в Донино",
@@ -689,10 +689,10 @@
       "results_pdf_url": null,
       "confirmed": 1,
       "judges": null,
-      "has_results": false,
-      "results_file": null,
-      "result_count": 0,
-      "participants_count": 0
+      "has_results": true,
+      "results_file": "competitions/2026/10-октябрь/2026005-iii-клубныи-чемпионат-донино-по-бегам-борзых.json",
+      "result_count": 43,
+      "participants_count": 43
     }
   ]
 }

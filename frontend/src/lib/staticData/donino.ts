@@ -388,6 +388,7 @@ export interface ChampionshipData {
   promotions: {
     after_stage_1: ChampionshipPromotion[]
     after_stage_2: ChampionshipPromotion[]
+    after_stage_3?: ChampionshipPromotion[]
   }
   stats: {
     total_dogs_participated: number

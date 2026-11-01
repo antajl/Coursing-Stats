@@ -448,7 +448,11 @@ export function buildRacingProtocolHtml(comp: CompetitionData): string {
       let heat2: Heat | null = null;
       let heat3: Heat | null = null;
 
-      if (groupMaxHeats >= 3) {
+      if (overallMaxHeats <= 2) {
+        heat1 = heats[0] || null;
+        heat2 = heats[1] || null;
+        heat3 = null;
+      } else if (groupMaxHeats >= 3) {
         heat1 = heats[0] || null;
         heat2 = heats[1] || null;
         heat3 = heats[2] || null;

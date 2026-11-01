@@ -24,6 +24,7 @@ interface ChampionshipStandingsTabProps {
   promotions: {
     after_stage_1: ChampionshipPromotion[]
     after_stage_2: ChampionshipPromotion[]
+    after_stage_3?: ChampionshipPromotion[]
   }
   resultsSpreadsheetUrl?: string | null
   pointsSpreadsheetUrl?: string | null
@@ -135,6 +136,14 @@ export default function ChampionshipStandingsTab({
       const arr = map.get(k) || []
       arr.push(`После II этапа: переведена в ${p.to_league} (${p.reason})`)
       map.set(k, arr)
+    }
+    if (promotions.after_stage_3) {
+      for (const p of promotions.after_stage_3) {
+        const k = p.dog_name.trim().toLowerCase()
+        const arr = map.get(k) || []
+        arr.push(`По итогам III этапа: переведена в ${p.to_league} (${p.reason})`)
+        map.set(k, arr)
+      }
     }
     return map
   }, [promotions])

@@ -246,9 +246,11 @@ export function buildDoninoChampionshipData() {
 
   const stage1Path = path.join(ROOT, 'data/v1/competitions/2026/08-август/2026004-i-клубныи-чемпионат-по-бегам-борзых.json');
   const stage2Path = path.join(ROOT, 'data/v1/competitions/2026/09-сентябрь/2022001-клубный-чемпионат-по-рейсингу.json');
+  const stage3Path = path.join(ROOT, 'data/v1/competitions/2026/10-октябрь/2026005-iii-клубныи-чемпионат-донино-по-бегам-борзых.json');
 
   const s1Data = JSON.parse(fs.readFileSync(stage1Path, 'utf8'));
   const s2Data = JSON.parse(fs.readFileSync(stage2Path, 'utf8'));
+  const s3Data = fs.existsSync(stage3Path) ? JSON.parse(fs.readFileSync(stage3Path, 'utf8')) : null;
 
   // Stage 1 parse
   const stage1Results = (s1Data.results || []).map((r: any) => {
@@ -379,6 +381,40 @@ export function buildDoninoChampionshipData() {
     results: stage2Results,
   };
 
+  // Stage 3 parse
+  const stage3Results = (s3Data?.results || []).map((r: any) => {
+    const rawScores = r.raw_scores_json || {};
+    const heats = Array.isArray(rawScores.heats)
+      ? rawScores.heats.map((h: any, idx: number) => ({
+          heat_no: idx + 1,
+          time: typeof h.time === 'number' ? h.time : null,
+          rank: typeof h.rank === 'number' ? h.rank : null,
+          disqualified: Boolean(h.disqualified),
+        }))
+      : [];
+
+    const names = cleanDogNameFields(r.dog?.name_ru || r.name_ru, r.dog?.name_lat || r.name_lat, r.dog_id || r.dog?.id);
+    const league = parseLeague(r.breed_class);
+
+    return {
+      id: r.id,
+      catalog_no: r.catalog_no,
+      dog_id: r.dog_id || r.dog?.id || null,
+      dog_name: names.name,
+      name_ru: names.name_ru,
+      name_lat: names.name_lat,
+      breed: (r.dog?.breed || r.breed || '').trim().toUpperCase(),
+      sex: r.dog?.sex || r.sex || '',
+      breed_class: r.breed_class || '',
+      league,
+      placement: r.placement || 0,
+      total_score: typeof r.total_score === 'number' ? r.total_score : null,
+      status: r.status || 'finished',
+      status_reason: r.status_reason || null,
+      heats,
+    };
+  });
+
   const stage3: StageInfo = {
     id: 2026005,
     stage_num: 3,
@@ -389,13 +425,25 @@ export function buildDoninoChampionshipData() {
     location: 'Московская область, Раменский р-н, д. Донино',
     judge: null,
     series_director: 'Манухин Михаил Андреевич',
-    participants_count: 0,
-    has_results: false,
-    status: 'upcoming',
+    participants_count: stage3Results.length,
+    has_results: stage3Results.length > 0,
+    status: stage3Results.length > 0 ? 'completed' : 'upcoming',
+    catalog_url: s3Data?.event?.catalog_url || null,
+    rules_url: s3Data?.event?.rules_url || null,
+    results_pdf_url: s3Data?.event?.results_pdf_url || '/protocols/2026005.pdf',
     protocol_url: '/event/2026005',
-    classes_count: 0,
-    winners: [],
-    results: [],
+    classes_count: new Set(stage3Results.map((r: any) => r.breed_class)).size,
+    winners: stage3Results
+      .filter((r: any) => r.placement === 1)
+      .map((r: any) => ({
+        dog_name: r.dog_name,
+        breed: r.breed,
+        breed_class: r.breed_class,
+        league: r.league,
+        placement: 1,
+        time: r.total_score,
+      })),
+    results: stage3Results,
   };
 
   // Tracking dog standings and promotions
@@ -664,6 +712,183 @@ export function buildDoninoChampionshipData() {
     }
   }
 
+  // Process Stage 3 (Finals)
+  const promotionsAfterStage3: PromotionRecord[] = [];
+
+  for (const r of stage3Results) {
+    const key = getDogKey(r.dog_id, r.dog_name, r.breed);
+    const isWin = r.placement === 1;
+    let standing = dogsMap.get(key);
+
+    if (!standing) {
+      // New dog joining at Stage 3
+      let targetLeague = r.league;
+      if (isWin) {
+        if (r.league === 'Чемпионов') targetLeague = 'Абсолют';
+        else if (r.league === 'Прогресс') targetLeague = 'Чемпионов';
+        else if (r.league === 'Юниоры') targetLeague = 'Юниоры';
+        else if (r.league === 'Абсолют') targetLeague = 'Абсолют';
+      }
+
+      const pts3 = findStagePointEntry(r.dog_name, r.breed, r.name_ru, r.name_lat, (pointsData as any).stage_3);
+      const s3Points = pts3 ? pts3.total_points : 0;
+      const s3Breakdown = pts3 ? {
+        place_points: pts3.place_points || 0,
+        best_final_points: pts3.best_final_points || 0,
+        best_class_points: pts3.best_class_points || 0,
+        best_breed_points: pts3.best_breed_points || 0,
+        track_record_points: pts3.track_record_points || 0,
+      } : undefined;
+
+      standing = {
+        dog_key: key,
+        dog_id: r.dog_id,
+        name: r.dog_name,
+        name_ru: r.name_ru,
+        name_lat: r.name_lat,
+        breed: r.breed,
+        sex: r.sex,
+        current_league: targetLeague,
+        wins_count: isWin ? 1 : 0,
+        consecutive_losses: isWin ? 0 : 1,
+        best_time: r.total_score,
+        stages_count: 1,
+        total_points: s3Points,
+        stage_points: s3Points ? { 3: s3Points } : {},
+        status_badge: isWin ? (r.league === 'Юниоры' ? 'stable' : 'promoted_up') : 'stable',
+        promotion_label: isWin
+          ? (r.league === 'Чемпионов'
+              ? 'Выход в Абсолют (победа в финале)'
+              : r.league === 'Прогресс'
+              ? 'Выход в Чемпионы (победа в финале)'
+              : r.league === 'Юниоры'
+              ? 'Победитель Лиги Юниоров (финал)'
+              : 'Победитель Лиги Абсолют (финал)')
+          : null,
+        history: [
+          {
+            stage_num: 3,
+            date: stage3.date_start,
+            placement: r.placement,
+            total_score: r.total_score,
+            league: r.league,
+            breed_class: r.breed_class,
+            status: r.status,
+            points: s3Points,
+            points_breakdown: s3Breakdown,
+          },
+        ],
+      };
+      dogsMap.set(key, standing);
+    } else {
+      // Existing dog participating in Stage 3
+      standing.stages_count += 1;
+      if (!standing.name_ru && r.name_ru) standing.name_ru = r.name_ru;
+      if (!standing.name_lat && r.name_lat) standing.name_lat = r.name_lat;
+      if (r.name_ru && (!standing.name || /[a-z]/i.test(standing.name))) {
+        standing.name = r.name_ru;
+      }
+      if (typeof r.total_score === 'number') {
+        if (standing.best_time === null || r.total_score < standing.best_time) {
+          standing.best_time = r.total_score;
+        }
+      }
+
+      if (isWin) {
+        standing.wins_count += 1;
+        standing.consecutive_losses = 0;
+        if (r.league === 'Чемпионов') {
+          standing.current_league = 'Абсолют';
+          standing.status_badge = 'promoted_up';
+          standing.promotion_label = 'Выход в Абсолют (победа в финале)';
+        } else if (r.league === 'Прогресс') {
+          standing.current_league = 'Чемпионов';
+          standing.status_badge = 'promoted_up';
+          standing.promotion_label = 'Выход в Чемпионы (победа в финале)';
+        } else if (r.league === 'Юниоры') {
+          standing.current_league = 'Юниоры';
+          standing.status_badge = 'stable';
+          standing.promotion_label = 'Победитель Лиги Юниоров (финал)';
+        } else if (r.league === 'Абсолют') {
+          standing.current_league = 'Абсолют';
+          standing.status_badge = 'stable';
+          standing.promotion_label = 'Победитель Лиги Абсолют (финал)';
+        }
+      } else {
+        standing.consecutive_losses += 1;
+        if (standing.consecutive_losses >= 3) {
+          if (standing.current_league === 'Абсолют') {
+            standing.current_league = 'Чемпионов';
+            standing.status_badge = 'relegated_down';
+            standing.promotion_label = 'Переход в Чемпионы (3 поражения подряд)';
+          } else if (standing.current_league === 'Чемпионов') {
+            standing.current_league = 'Прогресс';
+            standing.status_badge = 'relegated_down';
+            standing.promotion_label = 'Переход в Прогресс (3 поражения подряд)';
+          }
+        } else {
+          standing.status_badge = 'stable';
+          standing.promotion_label = null;
+        }
+      }
+
+      const pts3Existing = findStagePointEntry(r.dog_name, r.breed, r.name_ru, r.name_lat, (pointsData as any).stage_3);
+      const s3PointsEx = pts3Existing ? pts3Existing.total_points : 0;
+      const s3BreakdownEx = pts3Existing ? {
+        place_points: pts3Existing.place_points || 0,
+        best_final_points: pts3Existing.best_final_points || 0,
+        best_class_points: pts3Existing.best_class_points || 0,
+        best_breed_points: pts3Existing.best_breed_points || 0,
+        track_record_points: pts3Existing.track_record_points || 0,
+      } : undefined;
+
+      if (s3PointsEx) {
+        standing.stage_points[3] = s3PointsEx;
+      }
+      standing.total_points =
+        (standing.stage_points[1] || 0) +
+        (standing.stage_points[2] || 0) +
+        (standing.stage_points[3] || 0);
+
+      standing.history.push({
+        stage_num: 3,
+        date: stage3.date_start,
+        placement: r.placement,
+        total_score: r.total_score,
+        league: r.league,
+        breed_class: r.breed_class,
+        status: r.status,
+        points: s3PointsEx,
+        points_breakdown: s3BreakdownEx,
+      });
+    }
+
+    // Record promotions after Stage 3
+    if (isWin) {
+      if (r.league === 'Чемпионов') {
+        promotionsAfterStage3.push({
+          stage_from: 3,
+          stage_to: 4,
+          dog_name: r.dog_name,
+          breed: r.breed,
+          from_league: 'Лига Чемпионов',
+          to_league: 'Лига Абсолют',
+          reason: `1 место в классе ${r.breed_class}`,
+        });
+      } else if (r.league === 'Прогресс') {
+        promotionsAfterStage3.push({
+          stage_from: 3,
+          stage_to: 4,
+          dog_name: r.dog_name,
+          breed: r.breed,
+          from_league: 'Лига Прогресс',
+          to_league: 'Лига Чемпионов',
+          reason: `1 место в классе ${r.breed_class}`,
+        });
+      }
+    }
+  }
+
   // Sort standings: League priority (Абсолют > Чемпионов > Прогресс > Юниоры), then wins_count desc, then best_time asc
   const leagueOrder: Record<string, number> = {
     'Абсолют': 1,
@@ -699,6 +924,7 @@ export function buildDoninoChampionshipData() {
     promotions: {
       after_stage_1: promotionsAfterStage1,
       after_stage_2: promotionsAfterStage2,
+      after_stage_3: promotionsAfterStage3,
     },
     stats: {
       total_dogs_participated: standingsList.length,
@@ -706,7 +932,7 @@ export function buildDoninoChampionshipData() {
       dogs_in_champions: standingsList.filter(d => d.current_league === 'Чемпионов').length,
       dogs_in_progress: standingsList.filter(d => d.current_league === 'Прогресс').length,
       dogs_in_juniors: standingsList.filter(d => d.current_league === 'Юниоры').length,
-      promotions_count: promotionsAfterStage1.length + promotionsAfterStage2.length,
+      promotions_count: promotionsAfterStage1.length + promotionsAfterStage2.length + promotionsAfterStage3.length,
     },
   };
 
