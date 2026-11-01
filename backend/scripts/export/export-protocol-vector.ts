@@ -1864,28 +1864,40 @@ const TOOLBAR_CSS = `
       background: #ffffff;
       color: #000000;
       border-bottom: 2px solid #000000;
-      padding: 6px 10px;
+      padding: 5px 8px;
       font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
       margin: 0 0 4px 0;
+      position: sticky;
+      left: 0;
+      max-width: 100vw;
+      z-index: 100;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .cs-toolbar::-webkit-scrollbar {
+      display: none;
     }
     .cs-toolbar-inner {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      width: 100%;
+      gap: 8px;
+      width: max-content;
+      min-width: 100%;
       box-sizing: border-box;
+      flex-wrap: nowrap;
     }
     .cs-toolbar-left {
       display: flex;
       align-items: center;
-      gap: 10px;
-      min-width: 0;
+      gap: 8px;
+      flex-shrink: 0;
     }
     .cs-toolbar-divider {
       width: 1px;
       height: 16px;
       background: #b2b2b2;
+      flex-shrink: 0;
     }
     .cs-toolbar-brand {
       font-size: 11px;
@@ -1893,6 +1905,8 @@ const TOOLBAR_CSS = `
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: #000000;
+      white-space: nowrap;
+      flex-shrink: 0;
     }
     .cs-toolbar-title {
       font-size: 12px;
@@ -1901,18 +1915,46 @@ const TOOLBAR_CSS = `
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      max-width: 340px;
+      flex-shrink: 1;
+    }
+    .cs-toolbar-series {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+      border-left: 1px solid #b2b2b2;
+      padding-left: 8px;
+      margin-left: 2px;
+    }
+    .cs-series-stages {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      flex-shrink: 0;
+    }
+    .cs-series-label {
+      font-size: 11px;
+      color: #8c6d37;
+      font-weight: bold;
+      margin-right: 2px;
+      white-space: nowrap;
+      flex-shrink: 0;
     }
     .cs-toolbar-actions {
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
       flex-shrink: 0;
+      margin-left: auto;
+      border-left: 1px solid #b2b2b2;
+      padding-left: 8px;
     }
     .cs-btn {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      padding: 4px 10px;
+      gap: 5px;
+      padding: 4px 9px;
       border-radius: 3px;
       font-size: 11.5px;
       font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -1924,6 +1966,13 @@ const TOOLBAR_CSS = `
       color: #000000;
       transition: background-color 0.1s ease, border-color 0.1s ease;
       white-space: nowrap;
+      box-sizing: border-box;
+      line-height: 1.2;
+      flex-shrink: 0;
+    }
+    .cs-btn svg {
+      flex-shrink: 0;
+      display: block;
     }
     .cs-btn:hover {
       background: #f0f0f0;
@@ -1946,29 +1995,17 @@ const TOOLBAR_CSS = `
       background: #333333;
       border-color: #333333;
     }
-    .cs-toolbar-series {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      margin-left: 6px;
-      padding-left: 8px;
-      border-left: 1px solid #b2b2b2;
-    }
-    .cs-series-label {
-      font-size: 11px;
-      color: #8c6d37;
-      font-weight: bold;
-      margin-right: 2px;
-      white-space: nowrap;
-    }
     .cs-btn-stage {
-      padding: 2px 8px;
+      padding: 3px 8px;
       font-size: 11px;
       border-radius: 12px;
       border-color: #d8c29d;
       background: #faf6ee;
       color: #634d26;
       font-weight: 500;
+      flex-shrink: 0;
+      text-decoration: none;
+      white-space: nowrap;
     }
     .cs-btn-stage:hover {
       background: #ebdcc3;
@@ -1992,6 +2029,34 @@ const TOOLBAR_CSS = `
       border-color: #8c6d37;
       color: #3b280c;
     }
+
+    @media (max-width: 960px) {
+      .cs-toolbar {
+        padding: 4px 8px;
+      }
+      .cs-toolbar-inner {
+        gap: 6px;
+        padding-right: 10px;
+      }
+      .cs-toolbar-title,
+      .cs-title-divider {
+        display: none !important;
+      }
+      .cs-toolbar-actions {
+        margin-left: 0;
+      }
+      .cs-btn {
+        padding: 4px 8px;
+        font-size: 11px;
+        min-height: 28px;
+      }
+      .cs-btn-stage {
+        padding: 3px 8px;
+        font-size: 11px;
+        min-height: 24px;
+      }
+    }
+
     @media print {
       .cs-toolbar {
         display: none !important;
@@ -2025,16 +2090,18 @@ export function buildToolbarHtml(comp: CompetitionData): string {
       </a>
       <span class="cs-toolbar-divider"></span>
       <span class="cs-toolbar-brand">CoursingStats</span>
-      <span class="cs-toolbar-divider"></span>
+      <span class="cs-toolbar-divider cs-title-divider"></span>
       <span class="cs-toolbar-title">${escapeHtml(title)}</span>
-      ${isDoninoSeries ? `
-      <div class="cs-toolbar-series">
-        <span class="cs-series-label">Серия Донино 2026:</span>
+    </div>
+    ${isDoninoSeries ? `
+    <div class="cs-toolbar-series">
+      <span class="cs-series-label">Серия Донино 2026:</span>
+      <div class="cs-series-stages">
         ${doninoSeries.map(s => `
         <a href="${s.url}" class="cs-btn cs-btn-stage ${s.id === String(eventId) ? 'cs-stage-active' : ''}" title="${escapeHtml(s.label)}">${escapeHtml(s.label)}</a>
         `).join('')}
-      </div>` : ''}
-    </div>
+      </div>
+    </div>` : ''}
     <div class="cs-toolbar-actions">
       ${isDoninoSeries ? `
       <a href="/donino/championship" class="cs-btn cs-btn-donino" title="Клубный чемпионат Донино: общий зачет и этапы">

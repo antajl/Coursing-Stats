@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Calendar, Building2, Dog, PawPrint, FileSpreadsheet } from 'lucide-react'
+import { Calendar, Building2, FileSpreadsheet } from 'lucide-react'
 import SkeletonLoader from '../../components/SkeletonLoader'
 import { getEvent, getEventResults } from '../../lib/staticData'
 import ResultsSection from '../Events/EventResults/ResultsSection'
@@ -141,10 +141,6 @@ export default function ChampionshipStageTab({ stage }: ChampionshipStageTabProp
     )
   }
 
-  const participantsCount = new Set(eventResults.map((r) => r.dog_id)).size
-  const breedsCount = new Set(
-    eventResults.map((r) => r.dog?.breed || r.breed).filter(Boolean),
-  ).size
   const eventId = eventData?.id ? String(eventData.id) : null
   const protocolUrl = eventId ? `/protocols/${eventId}.html` : null
 
@@ -154,29 +150,19 @@ export default function ChampionshipStageTab({ stage }: ChampionshipStageTabProp
       <ResultsSection
         results={eventResults}
         trailing={
-          <div className="flex items-center gap-1.5 shrink-0">
-            <span className="inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full border border-old-money-200/80 bg-cream-50 px-3 text-xs font-semibold text-charcoal-700 shadow-2xs whitespace-nowrap">
-              <Dog className="h-3.5 w-3.5 text-camel-700" aria-hidden />
-              <span>{participantsCount} участников</span>
-            </span>
-            <span className="inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full border border-old-money-200/80 bg-cream-50 px-3 text-xs font-semibold text-charcoal-700 shadow-2xs whitespace-nowrap">
-              <PawPrint className="h-3.5 w-3.5 text-camel-700" aria-hidden />
-              <span>{breedsCount} пород</span>
-            </span>
-            {protocolUrl && (
-              <a
-                href={protocolUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full border border-camel-300 bg-camel-50 px-3.5 text-xs font-semibold text-camel-900 shadow-2xs transition-colors hover:border-camel-400 hover:bg-camel-100 cursor-pointer whitespace-nowrap"
-                title="Официальный протокол состязания и прикреплённые документы"
-              >
-                <FileSpreadsheet className="h-3.5 w-3.5 text-camel-700" aria-hidden />
-                <span className="hidden sm:inline">Протокол и документы</span>
-                <span className="sm:hidden">Протокол</span>
-              </a>
-            )}
-          </div>
+          protocolUrl ? (
+            <a
+              href={protocolUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full border border-camel-300 bg-camel-50 px-3.5 text-xs font-semibold text-camel-900 shadow-2xs transition-colors hover:border-camel-400 hover:bg-camel-100 cursor-pointer whitespace-nowrap"
+              title="Официальный протокол состязания и прикреплённые документы"
+            >
+              <FileSpreadsheet className="h-3.5 w-3.5 text-camel-700" aria-hidden />
+              <span className="hidden sm:inline">Протокол и документы</span>
+              <span className="sm:hidden">Протокол</span>
+            </a>
+          ) : undefined
         }
       />
     </div>
