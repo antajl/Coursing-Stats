@@ -154,24 +154,21 @@ export default function ChampionshipStageTab({ stage }: ChampionshipStageTabProp
       <ResultsSection
         results={eventResults}
         trailing={
-          <>
-            <div className="flex items-center gap-1.5 shrink-0">
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-old-money-200/80 bg-cream-50 px-2.5 py-1 text-xs font-semibold text-charcoal-700 shadow-2xs whitespace-nowrap">
-                <Dog className="h-3.5 w-3.5 text-camel-700" aria-hidden />
-                <span>{participantsCount} участников</span>
-              </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-old-money-200/80 bg-cream-50 px-2.5 py-1 text-xs font-semibold text-charcoal-700 shadow-2xs whitespace-nowrap">
-                <PawPrint className="h-3.5 w-3.5 text-camel-700" aria-hidden />
-                <span>{breedsCount} пород</span>
-              </span>
-            </div>
-
+          <div className="flex items-center gap-1.5 shrink-0">
+            <span className="inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full border border-old-money-200/80 bg-cream-50 px-3 text-xs font-semibold text-charcoal-700 shadow-2xs whitespace-nowrap">
+              <Dog className="h-3.5 w-3.5 text-camel-700" aria-hidden />
+              <span>{participantsCount} участников</span>
+            </span>
+            <span className="inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full border border-old-money-200/80 bg-cream-50 px-3 text-xs font-semibold text-charcoal-700 shadow-2xs whitespace-nowrap">
+              <PawPrint className="h-3.5 w-3.5 text-camel-700" aria-hidden />
+              <span>{breedsCount} пород</span>
+            </span>
             {protocolUrl && (
               <a
                 href={protocolUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-camel-300 bg-camel-50 px-3 py-1 text-xs font-semibold text-camel-900 shadow-2xs transition-all hover:border-camel-400 hover:bg-camel-100 cursor-pointer whitespace-nowrap"
+                className="inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full border border-camel-300 bg-camel-50 px-3.5 text-xs font-semibold text-camel-900 shadow-2xs transition-colors hover:border-camel-400 hover:bg-camel-100 cursor-pointer whitespace-nowrap"
                 title="Официальный протокол состязания и прикреплённые документы"
               >
                 <FileSpreadsheet className="h-3.5 w-3.5 text-camel-700" aria-hidden />
@@ -179,7 +176,7 @@ export default function ChampionshipStageTab({ stage }: ChampionshipStageTabProp
                 <span className="sm:hidden">Протокол</span>
               </a>
             )}
-          </>
+          </div>
         }
       />
     </div>

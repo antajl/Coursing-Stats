@@ -403,7 +403,7 @@ export default function ResultsSection({ results, trailing }: ResultsSectionProp
             </button>
           )}
 
-          {trailing && <div className="shrink-0">{trailing}</div>}
+          {trailing && <div className="shrink-0 flex items-center gap-1.5">{trailing}</div>}
         </div>
       </div>
 
