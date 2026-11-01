@@ -2,7 +2,6 @@ import { Link, useLocation } from 'react-router-dom'
 import { useEffect, useRef, type MouseEvent, type ReactNode } from 'react'
 import type { LucideIcon } from 'lucide-react'
 import { Icons } from '../lib/icons'
-import { useFocusTrap } from '../hooks/useFocusManagement'
 
 const OPEN_DELAY_MS = 70
 const CLOSE_DELAY_MS = 120
@@ -48,7 +47,6 @@ export function NavMenuDropdown({
   const pinnedRef = useRef(false)
   const intentFiredRef = useRef(false)
 
-  useFocusTrap(open, menuPanelRef)
 
   const clearTimers = () => {
     if (openTimerRef.current) {
@@ -97,6 +95,18 @@ export function NavMenuDropdown({
   useEffect(() => {
     if (!open) pinnedRef.current = false
   }, [open])
+
+  useEffect(() => {
+    if (!open) return
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        pinnedRef.current = false
+        onOpenChange(false)
+      }
+    }
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [open, onOpenChange])
 
   useEffect(() => {
     if (!open) return
@@ -167,7 +177,7 @@ export function NavMenuDropdown({
                         pinnedRef.current = false
                         onOpenChange(false)
                       }}
-                      className={`flex items-center gap-2.5 whitespace-nowrap px-4 py-2.5 text-sm transition-colors ${
+                      className={`flex items-center gap-2.5 whitespace-nowrap px-4 py-2.5 text-sm transition-colors focus-visible:outline-none focus-visible:bg-camel-100/70 focus-visible:text-camel-950 ${
                         active
                           ? 'bg-camel-50 font-semibold text-camel-800'
                           : 'text-charcoal-700 hover:bg-old-money-50'

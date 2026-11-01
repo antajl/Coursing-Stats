@@ -49,12 +49,21 @@ export default function ChampionshipDogCard({
 
   const { primary, secondary } = parseDogName(dog.name_lat || dog.name, dog.name_ru || dog.name)
 
+  const rowWashClass =
+    rank === 1
+      ? 'bg-amber-50/35 hover:bg-amber-100/40'
+      : rank === 2
+      ? 'bg-slate-50/50 hover:bg-slate-100/50'
+      : rank === 3
+      ? 'bg-orange-50/35 hover:bg-orange-100/40'
+      : 'hover:bg-cream-100/60'
+
   return (
-    <div className="rounded-xl border border-old-money-200 bg-cream-50/90 shadow-2xs overflow-hidden transition-all hover:border-camel-400 hover:shadow-xs">
+    <div className={`transition-colors duration-150 ${rowWashClass}`}>
       {/* Header Row */}
       <div
         onClick={onToggle}
-        className="p-2.5 sm:p-3 flex items-center justify-between gap-2.5 cursor-pointer select-none"
+        className="px-3 sm:px-4 py-2 sm:py-2.5 flex items-center justify-between gap-2 sm:gap-2.5 cursor-pointer select-none"
       >
         <div className="flex items-center gap-2.5 min-w-0">
           {/* Rank Badge with Official Medals for 1, 2, 3 */}
@@ -102,13 +111,13 @@ export default function ChampionshipDogCard({
         {/* Right side: Fixed League Badge, Racing Time, Chevron */}
         <div className="flex items-center gap-2 sm:gap-3 shrink-0">
           <span
-            className={`hidden sm:inline-flex px-2.5 py-0.5 rounded-md text-[11px] font-semibold ${leagueBadgeClass}`}
+            className={`hidden sm:inline-flex px-2 py-0.5 rounded-md text-[11px] font-semibold ${leagueBadgeClass}`}
           >
             Лига «{dog.current_league}»
           </span>
 
           {/* Best Time & Points Display depending on sortMode */}
-          <div className="text-right pl-1 sm:pl-2 shrink-0 min-w-[72px]">
+          <div className="text-right pl-1 sm:pl-2 shrink-0 min-w-[72px] flex flex-col justify-center py-0.5">
             {sortMode === 'points' ? (
               <>
                 <div className="flex items-baseline justify-end gap-1 leading-none">
@@ -119,7 +128,7 @@ export default function ChampionshipDogCard({
                     <span className="text-xs font-semibold text-charcoal-700">б.</span>
                   )}
                 </div>
-                <div className="text-[10px] text-charcoal-500 mt-1 leading-tight font-mono">
+                <div className="text-[11px] text-charcoal-500 mt-1 leading-normal font-mono">
                   {dog.best_time ? `${dog.best_time.toFixed(2)} сек` : 'без заездов'}
                 </div>
               </>
@@ -131,7 +140,7 @@ export default function ChampionshipDogCard({
                   </span>
                   <span className="text-xs font-semibold text-charcoal-600">сек</span>
                 </div>
-                <div className="text-[10px] text-charcoal-500 mt-1 leading-tight font-medium">
+                <div className="text-[11px] text-charcoal-500 mt-1 leading-normal font-medium">
                   {dog.total_points != null && dog.total_points > 0 ? `${dog.total_points} б.` : '0 б.'}
                   {dog.stages_count > 1 ? ` · ${dog.stages_count} заб.` : ''}
                 </div>
@@ -148,7 +157,7 @@ export default function ChampionshipDogCard({
 
       {/* Expanded Drawer: Stage History */}
       {isExpanded && (
-        <div className="p-3 sm:p-4 bg-cream-100/80 border-t border-old-money-200 space-y-2.5 animate-fadeIn">
+        <div className="px-3 sm:px-4 py-3 bg-cream-100/80 border-t border-old-money-200/80 space-y-2.5 animate-fadeIn">
           <div className="text-xs font-semibold text-charcoal-700 flex items-center justify-between">
             <div className="flex items-center gap-1.5">
               <Clock className="w-3.5 h-3.5 text-camel-700" />

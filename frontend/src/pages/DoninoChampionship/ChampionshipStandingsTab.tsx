@@ -311,7 +311,7 @@ export default function ChampionshipStandingsTab({
               </button>
             </div>
           ) : (
-            <div className="space-y-2">
+            <div className="overflow-hidden rounded-2xl border border-old-money-200 bg-white shadow-2xs divide-y divide-old-money-100">
               {filtered.map((dog, idx) => {
                 const dogPromotions =
                   dogPromotionsMap.get(dog.name.trim().toLowerCase()) ||

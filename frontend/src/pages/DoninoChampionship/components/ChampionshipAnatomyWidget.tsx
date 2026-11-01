@@ -118,7 +118,7 @@ export default function ChampionshipAnatomyWidget({
                       </span>
                     )}
                     {!selectedBreed && (
-                      <span className="text-[10px] text-charcoal-400 truncate hidden sm:inline">
+                      <span className="text-[10px] text-charcoal-400 shrink-0 hidden sm:inline">
                         · {formatBreedName(item.dog.breed)}
                       </span>
                     )}

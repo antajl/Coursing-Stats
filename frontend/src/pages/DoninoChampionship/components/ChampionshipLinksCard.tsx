@@ -3,6 +3,20 @@ import { FileSpreadsheet, ExternalLink } from 'lucide-react'
 
 export type LeagueFilter = 'all' | 'Абсолют' | 'Чемпионов' | 'Прогресс' | 'Юниоры'
 
+function pluralizeDogs(count: number, genitive = false): string {
+  const mod10 = count % 10
+  const mod100 = count % 100
+  if (genitive) {
+    if (mod100 >= 11 && mod100 <= 19) return `${count} собак`
+    if (mod10 === 1) return `${count} собаки`
+    return `${count} собак`
+  }
+  if (mod100 >= 11 && mod100 <= 19) return `${count} собак`
+  if (mod10 === 1) return `${count} собака`
+  if (mod10 >= 2 && mod10 <= 4) return `${count} собаки`
+  return `${count} собак`
+}
+
 interface ChampionshipLinksCardProps {
   selectedLeague: LeagueFilter
   onSelectLeague: (league: LeagueFilter) => void
@@ -20,6 +34,7 @@ export default function ChampionshipLinksCard({
   resultsSpreadsheetUrl,
   pointsSpreadsheetUrl,
 }: ChampionshipLinksCardProps) {
+  const total = dynamicLeagueCounts.total || 0
   return (
     <div className="rounded-2xl border border-old-money-200 bg-cream-50/90 p-4 shadow-2xs space-y-3 text-xs text-charcoal-700">
       <div className="flex items-center justify-between gap-2">
@@ -28,8 +43,8 @@ export default function ChampionshipLinksCard({
         </span>
         <span className="text-xs font-semibold text-charcoal-800">
           {selectedLeague !== 'all'
-            ? `Лига «${selectedLeague}»: ${filteredCount} из ${dynamicLeagueCounts.total} собак`
-            : `Всего: ${dynamicLeagueCounts.total} собак`}
+            ? `Лига «${selectedLeague}»: ${filteredCount} из ${pluralizeDogs(total, true)}`
+            : `Всего: ${pluralizeDogs(total)}`}
         </span>
       </div>
 

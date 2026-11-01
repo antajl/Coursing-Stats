@@ -16,10 +16,10 @@
 @import './styles/home-v2-scale.css';
 @import './styles/home-v2-panels.css';
 
-/* Focus indicators */
+/* Focus indicators — subtle & elegant Old Money keyboard indicator */
 *:focus-visible {
-  outline: 2px solid var(--camel-600);
-  outline-offset: 2px;
+  outline: 1.5px solid rgba(199, 156, 86, 0.45);
+  outline-offset: 1px;
 }
 
 input:focus-visible,
