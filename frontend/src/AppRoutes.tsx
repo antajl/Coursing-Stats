@@ -102,7 +102,14 @@ export default function AppRoutes() {
         <Route path="/spa-shell/*" element={<Navigate to="/" replace />} />
         <Route path="/competitions" element={<Competitions />} />
         <Route path="/competitions/:id" element={<LegacyCompetitionRedirect />} />
-        <Route path="/protocol-builder" element={<ProtocolBuilder />} />
+        <Route
+          path="/protocol-builder"
+          element={isLocalDev ? <ProtocolBuilder /> : <Navigate to="/competitions?tab=ranking" replace />}
+        />
+        <Route
+          path="/protocol-builder/*"
+          element={isLocalDev ? <ProtocolBuilder /> : <Navigate to="/competitions?tab=ranking" replace />}
+        />
         <Route path="/procoursing" element={<LegacyProcoursingRedirect />} />
         <Route path="/shows" element={<Shows />} />
         <Route path="/shows/judges/:judgeId" element={<ShowJudgeDetail />} />
