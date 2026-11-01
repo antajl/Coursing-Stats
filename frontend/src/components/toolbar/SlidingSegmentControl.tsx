@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef, useState } from 'react'
+import { useLayoutEffect, useRef, useState, type ReactNode } from 'react'
 import {
   TOOLBAR_SEGMENT,
   TOOLBAR_SEGMENT_GROUP,
@@ -7,7 +7,7 @@ import {
 
 export interface SlidingSegment {
   id: string
-  label: string
+  label: ReactNode
 }
 
 interface SlidingSegmentControlProps {

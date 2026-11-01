@@ -3,7 +3,7 @@ import { FileSpreadsheet, ExternalLink } from 'lucide-react'
 
 export type LeagueFilter = 'all' | 'Абсолют' | 'Чемпионов' | 'Прогресс' | 'Юниоры'
 
-function pluralizeDogs(count: number, genitive = false): string {
+export function pluralizeDogs(count: number, genitive = false): string {
   const mod10 = count % 10
   const mod100 = count % 100
   if (genitive) {

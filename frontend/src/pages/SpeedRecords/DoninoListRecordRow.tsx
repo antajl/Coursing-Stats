@@ -112,7 +112,7 @@ export default function DoninoListRecordRow({
         <div className="donino-home-row-main min-w-0 flex-1">
           <div className="flex min-w-0 items-center gap-1.5">
             <OwnerCrownName name={name} breed={breed} kind="donino">
-              <span className="break-words font-serif text-sm sm:text-base font-bold leading-snug text-charcoal-900 line-clamp-1">
+              <span className="truncate font-serif text-sm sm:text-base font-bold leading-snug text-charcoal-900">
                 {toDogTitleCase(name)}
               </span>
             </OwnerCrownName>
@@ -136,13 +136,11 @@ export default function DoninoListRecordRow({
         </div>
       </div>
 
-      <div
-        className={`donino-list-row-chart flex min-h-0 items-center justify-center sm:flex-1 sm:px-2 ${
-          hasSparkline ? '' : 'hidden sm:flex'
-        }`}
-      >
-        {hasSparkline ? sparkline : null}
-      </div>
+      {hasSparkline && (
+        <div className="donino-list-row-chart hidden sm:flex sm:flex-1 sm:min-h-0 sm:items-center sm:justify-center sm:px-2">
+          {sparkline}
+        </div>
+      )}
 
       <div className="relative shrink-0 flex flex-col items-end justify-center text-right min-w-[70px] sm:min-w-[85px]">
         {mode === 'speed' ? (

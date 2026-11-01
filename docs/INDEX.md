@@ -54,6 +54,7 @@ All sheets verified 2026-10-01.
 | [012](decisions/012-typescript-strict-and-structured-logging.md) | TypeScript Strict and Structured Logging | Accepted | 2026-08-05 |
 | [013](decisions/013-ai-readable-documentation-architecture.md) | AI-Readable Documentation Architecture | Accepted | 2026-08-05 |
 | [014](decisions/014-cdn-packs-vs-turso.md) | CDN Packs vs Turso | Accepted | 2026-08-06 |
+| [015](decisions/015-legacy-code-cleanup.md) | Удаление устаревшего кода (Archive, Turso, Elo) | Accepted | 2026-11-01 |
 
 **Note:** ADR-011 (Unified SQLite Architecture with Admin System) was deleted (Rejected, contained 580 lines of unimplemented SQL schema).
 

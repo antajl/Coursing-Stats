@@ -20,6 +20,7 @@ export type SitemapUrlSources = {
   sportJudgeNames: string[]
   doninoDogs: { name: string; breed: string }[]
   eventIds: string[]
+  protocolIds?: string[]
   exhibitionIds: string[]
   showJudgeIds: string[]
 }
@@ -30,6 +31,7 @@ const STATIC_PAGES: SitemapUrl[] = [
   { loc: '/shows/', priority: '0.9', changefreq: 'daily' },
   { loc: '/speed-records/', priority: '0.8', changefreq: 'daily' },
   { loc: '/donino/championship/', priority: '0.8', changefreq: 'weekly' },
+  { loc: '/donino/analytics/', priority: '0.7', changefreq: 'weekly' },
   { loc: '/guide/', priority: '0.6', changefreq: 'monthly' },
   { loc: '/about/', priority: '0.5', changefreq: 'monthly' },
 ]
@@ -45,6 +47,9 @@ export function collectSitemapUrls(sources: SitemapUrlSources): SitemapUrl[] {
 
   for (const id of sources.eventIds) {
     out.push({ loc: `/event/${id}/`, changefreq: 'monthly', priority: '0.7' })
+  }
+  for (const id of sources.protocolIds || []) {
+    out.push({ loc: `/protocols/${id}.html`, changefreq: 'monthly', priority: '0.7' })
   }
   for (const id of sources.dogIds) {
     out.push({ loc: `/dog/${id}/`, changefreq: 'monthly', priority: '0.6' })
@@ -127,6 +132,21 @@ function loadEventIdsWithResults(): string[] {
   }
 }
 
+/** Vector HTML protocol files in frontend/public/protocols/*.html */
+export function loadProtocolIds(): string[] {
+  const protocolsDir = path.join(PUBLIC_DIR, 'protocols')
+  if (!fs.existsSync(protocolsDir)) return []
+  try {
+    return fs
+      .readdirSync(protocolsDir)
+      .filter((f) => f.endsWith('.html'))
+      .map((f) => f.replace(/\.html$/, ''))
+      .sort((a, b) => Number(a) - Number(b) || a.localeCompare(b))
+  } catch {
+    return []
+  }
+}
+
 /** CDN-indexable exhibitions: shows/index.json + numeric type1 protocol files. */
 export function loadExhibitionIdsForSitemap(): string[] {
   const ids = new Set<string>()
@@ -203,6 +223,7 @@ export function buildSitemap(db: Database.Database) {
   }
 
   const eventIds = loadEventIdsWithResults()
+  const protocolIds = loadProtocolIds()
   const exhibitionIds = loadExhibitionIdsForSitemap()
   const showJudgeIds = loadShowJudgeIds()
   const sportJudgeNames = [...judgeNames].sort((a, b) => a.localeCompare(b, 'ru'))
@@ -211,6 +232,7 @@ export function buildSitemap(db: Database.Database) {
     schema: 'coursing-stats/index-sitemap-v1',
     dogs: dogs.map((d) => `/dog/${d.id}`),
     events: eventIds.map((id) => `/event/${id}`),
+    protocols: protocolIds.map((id) => `/protocols/${id}.html`),
     exhibitions: exhibitionIds.map((id) => `/shows/exhibition/${encodeURIComponent(id)}`),
     judges: sportJudgeNames.map((name) => `/judges/${encodeURIComponent(name)}`),
     show_judges: showJudgeIds.map((id) => `/shows/judges/${encodeURIComponent(id)}`),
@@ -224,6 +246,7 @@ export function buildSitemap(db: Database.Database) {
     sportJudgeNames,
     doninoDogs,
     eventIds,
+    protocolIds,
     exhibitionIds,
     showJudgeIds,
   })
@@ -253,6 +276,11 @@ export function buildSitemap(db: Database.Database) {
     changefreq: 'monthly',
     priority: '0.7',
   }))
+  const protocolUrls: SitemapUrl[] = protocolIds.map((id) => ({
+    loc: `/protocols/${id}.html`,
+    changefreq: 'monthly',
+    priority: '0.7',
+  }))
   const dogUrls: SitemapUrl[] = dogs.map((d) => ({
     loc: `/dog/${d.id}/`,
     changefreq: 'monthly',
@@ -279,6 +307,7 @@ export function buildSitemap(db: Database.Database) {
   fs.mkdirSync(PUBLIC_DIR, { recursive: true })
   fs.writeFileSync(path.join(PUBLIC_DIR, 'sitemap-main.xml'), renderSitemapXml(mainUrls), 'utf-8')
   fs.writeFileSync(path.join(PUBLIC_DIR, 'sitemap-events.xml'), renderSitemapXml(eventUrls), 'utf-8')
+  fs.writeFileSync(path.join(PUBLIC_DIR, 'sitemap-protocols.xml'), renderSitemapXml(protocolUrls), 'utf-8')
   fs.writeFileSync(path.join(PUBLIC_DIR, 'sitemap-dogs.xml'), renderSitemapXml(dogUrls), 'utf-8')
   fs.writeFileSync(path.join(PUBLIC_DIR, 'sitemap-judges.xml'), renderSitemapXml(judgeUrls), 'utf-8')
   fs.writeFileSync(path.join(PUBLIC_DIR, 'sitemap-shows.xml'), renderSitemapXml(showUrls), 'utf-8')
@@ -286,6 +315,7 @@ export function buildSitemap(db: Database.Database) {
   const indexXml = renderSitemapIndexXml([
     { loc: '/sitemap-main.xml', lastmod: now },
     { loc: '/sitemap-events.xml', lastmod: now },
+    { loc: '/sitemap-protocols.xml', lastmod: now },
     { loc: '/sitemap-dogs.xml', lastmod: now },
     { loc: '/sitemap-judges.xml', lastmod: now },
     { loc: '/sitemap-shows.xml', lastmod: now },
@@ -295,7 +325,7 @@ export function buildSitemap(db: Database.Database) {
   const xml = renderSitemapXml(urls)
   fs.writeFileSync(path.join(PUBLIC_DIR, 'sitemap.xml'), xml, 'utf-8')
   console.log(
-    `  → frontend/public/sitemap.xml (${urls.length} urls; events=${eventIds.length}, exhibitions=${exhibitionIds.length}, showJudges=${showJudgeIds.length})`,
+    `  → frontend/public/sitemap.xml (${urls.length} urls; events=${eventIds.length}, protocols=${protocolIds.length}, exhibitions=${exhibitionIds.length}, showJudges=${showJudgeIds.length})`,
   )
   console.log(`  → generated modular sitemaps + sitemap-index.xml`)
 }

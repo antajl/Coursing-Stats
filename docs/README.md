@@ -58,3 +58,4 @@
 - **[ADR-012](decisions/012-typescript-strict-and-structured-logging.md)** — Строгий TypeScript и структурированное логирование
 - **[ADR-013](decisions/013-ai-readable-documentation-architecture.md)** — Архитектура документации (MAP + sheets)
 - **[ADR-014](decisions/014-cdn-packs-vs-turso.md)** — Шардированные CDN packs против базы данных для публичной статики
+- **[ADR-015](decisions/015-legacy-code-cleanup.md)** — Удаление устаревшего кода и исторических артефактов (Archive, Turso, Elo)

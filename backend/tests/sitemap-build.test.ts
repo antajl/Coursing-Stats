@@ -2,28 +2,40 @@ import { describe, expect, it } from 'vitest'
 import {
   collectSitemapUrls,
   loadExhibitionIdsForSitemap,
+  loadProtocolIds,
   renderSitemapIndexXml,
   renderSitemapXml,
 } from '../scripts/build-derived/sitemap'
 
 describe('sitemap collectors', () => {
-  it('includes event, exhibition, breed hubs and show-judge locs from fixtures', () => {
+  it('includes event, protocol, exhibition, breed hubs and show-judge locs from fixtures', () => {
     const urls = collectSitemapUrls({
       dogIds: [1],
       sportJudgeNames: ['Иванов'],
       doninoDogs: [{ name: 'REX', breed: 'WHIPPET' }],
       eventIds: ['1250'],
+      protocolIds: ['1250', '2026001'],
       exhibitionIds: ['10000'],
       showJudgeIds: ['иванов|и|и'],
     })
     const locs = urls.map((u) => u.loc)
     expect(locs).toContain('/event/1250/')
+    expect(locs).toContain('/protocols/1250.html')
+    expect(locs).toContain('/protocols/2026001.html')
+    expect(locs).toContain('/donino/championship/')
+    expect(locs).toContain('/donino/analytics/')
     expect(locs).toContain('/shows/exhibition/10000/')
     expect(locs).toContain('/breeds/whippet/')
     expect(locs).toContain('/breeds/saluki/')
     expect(locs.some((u) => u.startsWith('/shows/judges/'))).toBe(true)
     expect(locs).toContain('/dog/1/')
     expect(locs.every((u) => !u.startsWith('/admin'))).toBe(true)
+  })
+
+  it('loadProtocolIds loads existing public protocols', () => {
+    const ids = loadProtocolIds()
+    expect(ids.length).toBeGreaterThan(100)
+    expect(ids).toContain('2026001')
   })
 
   it('renderSitemapXml escapes and prefixes site origin', () => {

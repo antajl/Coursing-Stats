@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react'
-import { X, ChevronDown, Trophy } from 'lucide-react'
+import { X, ChevronDown, Trophy, Timer, Award } from 'lucide-react'
+import SlidingSegmentControl from '../../components/toolbar/SlidingSegmentControl'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
 import ModernDropdown from '../../components/ui/ModernDropdown'
 import QuickBreedBar, { type QuickBreedItem } from '../TopDogs/QuickBreedBar'
@@ -10,7 +11,7 @@ import type { ChampionshipStanding, ChampionshipPromotion } from '../../lib/stat
 import ChampionshipDogCard from './components/ChampionshipDogCard'
 import ChampionshipAnatomyWidget from './components/ChampionshipAnatomyWidget'
 import ChampionshipPointsRulesWidget from './components/ChampionshipPointsRulesWidget'
-import ChampionshipLinksCard, { type LeagueFilter } from './components/ChampionshipLinksCard'
+import ChampionshipLinksCard, { type LeagueFilter, pluralizeDogs } from './components/ChampionshipLinksCard'
 
 interface ChampionshipStandingsTabProps {
   standings: ChampionshipStanding[]
@@ -363,42 +364,49 @@ export default function ChampionshipStandingsTab({
           {/* Main Dog Ranking Card */}
           <div className="overflow-hidden rounded-2xl border border-old-money-200 bg-white shadow-2xs">
             {/* Card Header inside */}
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 px-3.5 sm:px-4 pt-3 sm:pt-3.5 pb-2.5 border-b border-old-money-100 bg-cream-50/40">
-              <div className="flex items-center gap-2">
-                <Trophy className="w-4 h-4 text-camel-700" />
-                <h2 className="text-sm sm:text-base font-bold font-serif text-charcoal-900 tracking-tight">
-                  Сводный рейтинг чемпионата Донино
-                </h2>
-                <span className="text-[11px] font-semibold text-charcoal-600 bg-cream-100 px-2 py-0.5 rounded-full border border-cream-200 tabular-nums">
-                  {filtered.length} из {standings.length}
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 px-3.5 sm:px-4 py-3 border-b border-old-money-100 bg-cream-50/40">
+              <div className="flex items-center justify-between sm:justify-start gap-2 min-w-0">
+                <div className="flex items-center gap-2 min-w-0">
+                  <Trophy className="w-4 h-4 text-camel-700 shrink-0" />
+                  <h2 className="text-sm sm:text-base font-bold font-serif text-charcoal-900 tracking-tight truncate">
+                    Сводный рейтинг чемпионата<span className="hidden sm:inline"> Донино</span>
+                  </h2>
+                </div>
+                <span className="text-[11px] font-semibold text-charcoal-600 bg-cream-100 px-2 py-0.5 rounded-full border border-cream-200 tabular-nums whitespace-nowrap shrink-0">
+                  {filtered.length < standings.length
+                    ? `${filtered.length} из ${standings.length}`
+                    : pluralizeDogs(standings.length)}
                 </span>
               </div>
 
-              {/* Toggle Sort: Points vs Time */}
-              <div className="inline-flex items-center p-0.5 rounded-lg bg-cream-100 border border-old-money-200 shadow-2xs self-start sm:self-auto">
-                <button
-                  type="button"
-                  onClick={() => setSortMode('time')}
-                  className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs transition-all cursor-pointer ${
-                    sortMode === 'time'
-                      ? 'border border-camel-400 bg-camel-100 text-camel-950 font-bold shadow-2xs'
-                      : 'text-charcoal-600 hover:text-charcoal-900 font-medium'
-                  }`}
-                >
-                  <span>По скорости</span>
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setSortMode('points')}
-                  className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs transition-all cursor-pointer ${
-                    sortMode === 'points'
-                      ? 'border border-camel-400 bg-camel-100 text-camel-950 font-bold shadow-2xs'
-                      : 'text-charcoal-600 hover:text-charcoal-900 font-medium'
-                  }`}
-                >
-                  <span>По баллам</span>
-                </button>
-              </div>
+              {/* Toggle Sort: Points vs Time (Canonical Old Money Sliding Segment) */}
+              <SlidingSegmentControl
+                ariaLabel="Сортировка рейтинга чемпионата"
+                value={sortMode}
+                onChange={(id) => setSortMode(id as 'time' | 'points')}
+                className="self-start sm:self-auto shadow-2xs"
+                buttonClassName="py-1 px-2.5 sm:px-3 text-xs"
+                segments={[
+                  {
+                    id: 'time',
+                    label: (
+                      <span className="inline-flex items-center gap-1.5">
+                        <Timer className="w-3.5 h-3.5 text-camel-700 shrink-0" aria-hidden />
+                        <span>По скорости</span>
+                      </span>
+                    ),
+                  },
+                  {
+                    id: 'points',
+                    label: (
+                      <span className="inline-flex items-center gap-1.5">
+                        <Award className="w-3.5 h-3.5 text-camel-700 shrink-0" aria-hidden />
+                        <span>По баллам</span>
+                      </span>
+                    ),
+                  },
+                ]}
+              />
             </div>
 
             {/* Dog List or Empty State */}
