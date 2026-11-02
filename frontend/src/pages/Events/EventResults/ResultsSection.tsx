@@ -1,5 +1,4 @@
 import { useState, useMemo } from 'react'
-import { X, ChevronDown } from 'lucide-react'
 import TableProtocolView from './views/TableProtocolView'
 import MobileCardsProtocolView from './views/MobileCardsProtocolView'
 import {
@@ -12,15 +11,11 @@ import {
   extractDogSex,
   extractDoninoLeague,
 } from './utils'
-import ToolbarSearch from '../../../components/toolbar/ToolbarSearch'
-import QuickBreedBar, { type QuickBreedItem } from '../../TopDogs/QuickBreedBar'
-import BreedSearchDropdown from '../../../components/ui/BreedSearchDropdown'
+import type { QuickBreedItem } from '../../TopDogs/QuickBreedBar'
 import { canonicalBreed, formatBreedName, matchesBreedFilter } from '../../../lib/breedMapping'
 import type { DogsIndexEntry } from '../../../lib/competingBreeds'
-import DogSexIcon from '../../../components/DogSexIcon'
-import ModernDropdown from '../../../components/ui/ModernDropdown'
-import { toolbarPillTriggerClass } from '../../../lib/toolbar'
 import type { Result } from './types'
+import { ResultsToolbar } from './ResultsToolbar'
 
 interface ResultsSectionProps {
   results: Result[]
@@ -31,9 +26,7 @@ export default function ResultsSection({ results, trailing }: ResultsSectionProp
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedBreed, setSelectedBreed] = useState('')
   const [selectedSex, setSelectedSex] = useState<string>('')
-  const [sexDropdownOpen, setSexDropdownOpen] = useState(false)
   const [selectedLeague, setSelectedLeague] = useState<string>('all')
-  const [leagueDropdownOpen, setLeagueDropdownOpen] = useState(false)
 
   if (results.length === 0) {
     return (
@@ -45,14 +38,14 @@ export default function ResultsSection({ results, trailing }: ResultsSectionProp
 
   // Multi-discipline detection (e.g. Marathon with genuine Racing and Coursing rounds)
   const isMultiDiscipline = useMemo(() => {
-    const hasRacing = results.some(r => isRacingFormat(parseRawScores(r.raw_scores_json)))
-    const hasCoursing = results.some(r => isCoursingFormat(parseRawScores(r.raw_scores_json)))
+    const hasRacing = results.some((r) => isRacingFormat(parseRawScores(r.raw_scores_json)))
+    const hasCoursing = results.some((r) => isCoursingFormat(parseRawScores(r.raw_scores_json)))
     return hasRacing && hasCoursing
   }, [results])
 
   const racingResults = useMemo(() => {
     if (!isMultiDiscipline) return results
-    return results.filter(r => {
+    return results.filter((r) => {
       if (r.breed_class?.includes('Курсинг') && !r.breed_class?.includes('Рейсинг')) return false
       if (isCoursingFormat(parseRawScores(r.raw_scores_json))) return false
       return true
@@ -61,7 +54,7 @@ export default function ResultsSection({ results, trailing }: ResultsSectionProp
 
   const coursingResults = useMemo(() => {
     if (!isMultiDiscipline) return results
-    return results.filter(r => {
+    return results.filter((r) => {
       if (r.breed_class?.includes('Рейсинг') && !r.breed_class?.includes('Курсинг')) return false
       if (isRacingFormat(parseRawScores(r.raw_scores_json))) return false
       return true
@@ -71,12 +64,14 @@ export default function ResultsSection({ results, trailing }: ResultsSectionProp
   const [activeTab, setActiveTab] = useState<'racing' | 'coursing'>('racing')
 
   const activeResults = isMultiDiscipline
-    ? (activeTab === 'racing' ? racingResults : coursingResults)
+    ? activeTab === 'racing'
+      ? racingResults
+      : coursingResults
     : results
 
   const isRacing = isMultiDiscipline
     ? activeTab === 'racing'
-    : results.some(r => isRacingFormat(parseRawScores(r.raw_scores_json)))
+    : results.some((r) => isRacingFormat(parseRawScores(r.raw_scores_json)))
 
   const bestTimesByRace = useMemo(() => {
     return isRacing ? getBestTimesByRace(activeResults) : {}
@@ -89,8 +84,9 @@ export default function ResultsSection({ results, trailing }: ResultsSectionProp
       const b = r.dog.breed
       if (b) counts.set(b, (counts.get(b) || 0) + 1)
     }
-    const sortedEntries = Array.from(counts.entries())
-      .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'ru'))
+    const sortedEntries = Array.from(counts.entries()).sort(
+      (a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'ru'),
+    )
 
     const sortedBreedKeys = sortedEntries.map(([breedKey]) => breedKey)
 
@@ -114,7 +110,7 @@ export default function ResultsSection({ results, trailing }: ResultsSectionProp
       }
     })
 
-    const index: DogsIndexEntry[] = activeResults.map(r => ({
+    const index: DogsIndexEntry[] = activeResults.map((r) => ({
       breed: canonicalBreed(r.dog.breed),
       competition_count: 1,
     }))
@@ -122,7 +118,7 @@ export default function ResultsSection({ results, trailing }: ResultsSectionProp
     return { breeds: sortedBreedKeys, candidateBreeds: candidates, dogIndex: index }
   }, [activeResults])
 
-    const availableLeagues = useMemo(() => {
+  const availableLeagues = useMemo(() => {
     const set = new Set<string>()
     for (const r of activeResults) {
       const l = extractDoninoLeague(r.breed_class)
@@ -158,11 +154,13 @@ export default function ResultsSection({ results, trailing }: ResultsSectionProp
     return counts
   }, [activeResults, availableLeagues, searchQuery, selectedBreed, selectedSex])
 
-  const filteredResults = activeResults.filter(result => {
-    const matchesSearch = searchQuery === '' ||
+  const filteredResults = activeResults.filter((result) => {
+    const matchesSearch =
+      searchQuery === '' ||
       result.name_ru?.toLowerCase().includes(searchQuery.toLowerCase()) ||
       result.name_lat?.toLowerCase().includes(searchQuery.toLowerCase())
-    const matchesBreed = selectedBreed === '' || matchesBreedFilter(canonicalBreed(result.dog.breed), selectedBreed)
+    const matchesBreed =
+      selectedBreed === '' || matchesBreedFilter(canonicalBreed(result.dog.breed), selectedBreed)
     const dogSex = extractDogSex(result)
     const matchesSex = selectedSex === '' || dogSex === selectedSex
     const dogLeague = extractDoninoLeague(result.breed_class)
@@ -174,74 +172,9 @@ export default function ResultsSection({ results, trailing }: ResultsSectionProp
     ? groupRacingResults(filteredResults)
     : groupResultsByBreedClass(filteredResults)
 
-  const isSexActive = Boolean(selectedSex)
-  const sexTriggerLabel = selectedSex === 'm' ? 'Кобели' : selectedSex === 'f' ? 'Суки' : 'Пол'
-
-  const sexTrigger = (
-    <button
-      type="button"
-      className={`shrink-0 ${toolbarPillTriggerClass(isSexActive)}`}
-    >
-      {selectedSex === 'm' && <DogSexIcon sex="m" size={12} variant="neutral" className="shrink-0 text-current" />}
-      {selectedSex === 'f' && <DogSexIcon sex="f" size={12} variant="neutral" className="shrink-0 text-current" />}
-      <span>{sexTriggerLabel}</span>
-      <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
-    </button>
+  const isFiltered = Boolean(
+    selectedBreed || selectedSex || selectedLeague !== 'all' || searchQuery.trim(),
   )
-
-  const renderSexMenu = (setOpen: (v: boolean) => void) => (
-    <div className="p-1 min-w-[125px]" role="menu">
-      <button
-        type="button"
-        role="menuitem"
-        onClick={() => {
-          setSelectedSex('')
-          setOpen(false)
-        }}
-        className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
-          !selectedSex
-            ? 'bg-camel-100 text-camel-950 font-semibold'
-            : 'text-charcoal-700 hover:bg-camel-100'
-        }`}
-      >
-        Все
-      </button>
-      <button
-        type="button"
-        role="menuitem"
-        onClick={() => {
-          setSelectedSex('m')
-          setOpen(false)
-        }}
-        className={`flex w-full items-center gap-2 rounded-md px-3 py-2 text-left text-sm transition-colors ${
-          selectedSex === 'm'
-            ? 'bg-camel-100 text-camel-950 font-semibold'
-            : 'text-charcoal-700 hover:bg-camel-100'
-        }`}
-      >
-        <DogSexIcon sex="m" size={14} className={selectedSex === 'm' ? 'text-charcoal-900' : 'text-slate-500'} />
-        <span>Кобели</span>
-      </button>
-      <button
-        type="button"
-        role="menuitem"
-        onClick={() => {
-          setSelectedSex('f')
-          setOpen(false)
-        }}
-        className={`flex w-full items-center gap-2 rounded-md px-3 py-2 text-left text-sm transition-colors ${
-          selectedSex === 'f'
-            ? 'bg-camel-100 text-camel-950 font-semibold'
-            : 'text-charcoal-700 hover:bg-camel-100'
-        }`}
-      >
-        <DogSexIcon sex="f" size={14} className={selectedSex === 'f' ? 'text-charcoal-900' : 'text-rose-500'} />
-        <span>Суки</span>
-      </button>
-    </div>
-  )
-
-  const isFiltered = Boolean(selectedBreed || selectedSex || (selectedLeague !== 'all') || searchQuery.trim())
 
   const handleResetFilters = () => {
     setSelectedBreed('')
@@ -249,72 +182,6 @@ export default function ResultsSection({ results, trailing }: ResultsSectionProp
     setSelectedLeague('all')
     setSearchQuery('')
   }
-
-  const renderLeagueDropdown = () => (
-    <ModernDropdown
-      isOpen={leagueDropdownOpen}
-      onOpenChange={setLeagueDropdownOpen}
-      width="180px"
-      trigger={
-        <button
-          type="button"
-          className={`shrink-0 ${toolbarPillTriggerClass(selectedLeague !== 'all')}`}
-          title="Фильтр по лигам"
-        >
-          <span>{selectedLeague === 'all' ? 'Все лиги' : `Лига «${selectedLeague}»`}</span>
-          <ChevronDown className="h-3.5 w-3.5 opacity-70" />
-        </button>
-      }
-    >
-      <div className="p-1 space-y-0.5 min-w-[170px]" role="menu">
-        <button
-          type="button"
-          onClick={() => {
-            setSelectedLeague('all')
-            setLeagueDropdownOpen(false)
-          }}
-          className={`w-full text-left px-2.5 py-1.5 rounded-md text-xs transition-colors cursor-pointer flex items-center justify-between ${
-            selectedLeague === 'all'
-              ? 'bg-camel-100 text-camel-950 font-semibold'
-              : 'text-charcoal-700 hover:bg-cream-100'
-          }`}
-        >
-          <span>Все лиги ({leagueCounts.all ?? activeResults.length})</span>
-          {selectedLeague === 'all' && (
-            <span className="w-1.5 h-1.5 rounded-full bg-camel-600" />
-          )}
-        </button>
-        {availableLeagues.map((league) => {
-          const count = leagueCounts[league] ?? 0
-          const isSelected = selectedLeague === league
-          const isEmpty = count === 0
-          return (
-            <button
-              key={league}
-              type="button"
-              disabled={isEmpty}
-              onClick={() => {
-                setSelectedLeague(league)
-                setLeagueDropdownOpen(false)
-              }}
-              className={`w-full text-left px-2.5 py-1.5 rounded-md text-xs transition-colors cursor-pointer flex items-center justify-between ${
-                isSelected
-                  ? 'border border-camel-400 bg-camel-100 text-camel-950 font-semibold shadow-2xs'
-                  : isEmpty
-                  ? 'opacity-40 cursor-not-allowed text-charcoal-400'
-                  : 'text-charcoal-700 hover:bg-cream-100'
-              }`}
-            >
-              <span>{league} ({count})</span>
-              {isSelected && (
-                <span className="w-1.5 h-1.5 rounded-full bg-camel-600" />
-              )}
-            </button>
-          )
-        })}
-      </div>
-    </ModernDropdown>
-  )
 
   return (
     <div className="space-y-3">
@@ -357,136 +224,25 @@ export default function ResultsSection({ results, trailing }: ResultsSectionProp
         </div>
       )}
 
-      {/* 1. Мобильная консоль: Поиск + Пол + Порода + Лига + Сброс + Trailing (строго 1 ряд со скроллом) */}
-      <div className="flex sm:hidden items-center gap-1.5 w-full min-w-0 overflow-x-auto no-scrollbar py-0.5">
-        <ToolbarSearch
-          value={searchQuery}
-          onChange={setSearchQuery}
-          placeholder="Кличка собаки…"
-        />
-
-        {/* Выбор пола */}
-        <div className="shrink-0">
-          <ModernDropdown
-            trigger={sexTrigger}
-            isOpen={sexDropdownOpen}
-            onOpenChange={setSexDropdownOpen}
-            width="130px"
-          >
-            {renderSexMenu(setSexDropdownOpen)}
-          </ModernDropdown>
-        </div>
-
-        {/* Выбор породы */}
-        {breeds.length > 1 && (
-          <div className="shrink-0">
-            <BreedSearchDropdown
-              breeds={breeds}
-              selectedBreed={selectedBreed}
-              onSelect={setSelectedBreed}
-              trigger={
-                <button
-                  type="button"
-                  className={`shrink-0 ${toolbarPillTriggerClass(Boolean(selectedBreed))}`}
-                >
-                  <span className="truncate max-w-[85px]">
-                    {selectedBreed ? formatBreedName(selectedBreed) : 'Порода'}
-                  </span>
-                  <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
-                </button>
-              }
-              dogIndex={dogIndex}
-            />
-          </div>
-        )}
-
-        {/* Выбор лиги (уникальный фильтр турнира) */}
-        {availableLeagues.length > 0 && (
-          <div className="shrink-0">
-            {renderLeagueDropdown()}
-          </div>
-        )}
-
-        <div className="ml-auto shrink-0 flex items-center gap-1.5">
-          {isFiltered && (
-            <button
-              type="button"
-              onClick={handleResetFilters}
-              className="relative shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full border border-old-money-200 bg-cream-50 text-charcoal-500 hover:text-charcoal-800 transition-colors before:absolute before:-inset-1.5 before:content-[''] cursor-pointer"
-              title="Сбросить фильтры"
-              aria-label="Сбросить фильтры"
-            >
-              <X className="h-4 w-4" />
-            </button>
-          )}
-
-          {trailing && <div className="shrink-0 flex items-center gap-1.5">{trailing}</div>}
-        </div>
-      </div>
-
-      {/* 2. Десктопная консоль: Поиск + Пол + Разделитель + QuickBreedBar + Лига + Сброс + Trailing */}
-      <div className="hidden sm:flex sm:items-center gap-2 w-full min-w-0">
-        <ToolbarSearch
-          value={searchQuery}
-          onChange={setSearchQuery}
-          placeholder="Кличка собаки…"
-        />
-
-        {/* Выбор пола */}
-        <div className="shrink-0">
-          <ModernDropdown
-            trigger={sexTrigger}
-            isOpen={sexDropdownOpen}
-            onOpenChange={setSexDropdownOpen}
-            width="130px"
-          >
-            {renderSexMenu(setSexDropdownOpen)}
-          </ModernDropdown>
-        </div>
-
-        {breeds.length > 1 && (
-          <>
-            <div className="h-5 w-px bg-old-money-300 shrink-0 mx-0.5" aria-hidden="true" />
-            <div className="flex-1 min-w-0 max-w-full overflow-hidden">
-              <QuickBreedBar
-                selectedBreed={selectedBreed}
-                onSelectBreed={(b) => setSelectedBreed(b)}
-                breedValues={breeds}
-                candidateBreeds={candidateBreeds}
-                dogIndex={dogIndex}
-              />
-            </div>
-          </>
-        )}
-
-        {/* Выбор лиги (уникальный фильтр турнира) */}
-        {availableLeagues.length > 0 && (
-          <div className="shrink-0">
-            {renderLeagueDropdown()}
-          </div>
-        )}
-
-        {isFiltered && (
-          <button
-            type="button"
-            onClick={handleResetFilters}
-            className="relative shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full border border-old-money-200 bg-cream-50 text-charcoal-500 hover:text-charcoal-800 transition-colors before:absolute before:-inset-1.5 before:content-[''] cursor-pointer"
-            title="Сбросить фильтры"
-            aria-label="Сбросить фильтры"
-          >
-            <X className="h-4 w-4" />
-          </button>
-        )}
-
-        {trailing && (
-          <>
-            <div className="h-5 w-px bg-old-money-300 shrink-0 mx-0.5 hidden md:block" aria-hidden="true" />
-            <div className="flex items-center gap-2 shrink-0 md:ml-auto justify-end">
-              {trailing}
-            </div>
-          </>
-        )}
-      </div>
+      <ResultsToolbar
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
+        selectedSex={selectedSex}
+        setSelectedSex={setSelectedSex}
+        breeds={breeds}
+        candidateBreeds={candidateBreeds}
+        dogIndex={dogIndex}
+        selectedBreed={selectedBreed}
+        setSelectedBreed={setSelectedBreed}
+        availableLeagues={availableLeagues}
+        selectedLeague={selectedLeague}
+        setSelectedLeague={setSelectedLeague}
+        leagueCounts={leagueCounts}
+        activeResultsCount={activeResults.length}
+        isFiltered={isFiltered}
+        handleResetFilters={handleResetFilters}
+        trailing={trailing}
+      />
 
       {filteredSortedGroups.length === 0 ? (
         <div className="rounded-xl border border-old-money-200 bg-cream-50 p-6 text-center text-sm text-old-money-500">
