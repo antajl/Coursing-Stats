@@ -14,6 +14,7 @@ interface SeasonCompetitionsCarouselProps {
   carousel: HomeBreedCarouselApi
   syncDots: { key: string; label: string }[]
   driveAutoplay?: boolean
+  isNudging?: boolean
   onToggleDiscipline?: () => void
 }
 
@@ -22,6 +23,7 @@ export default function SeasonCompetitionsCarousel({
   carousel,
   syncDots,
   driveAutoplay = false,
+  isNudging = false,
   onToggleDiscipline,
 }: SeasonCompetitionsCarouselProps) {
   const { index, trackStyle, getAdjacent, touchHandlers } = carousel
@@ -94,6 +96,7 @@ export default function SeasonCompetitionsCarousel({
           <HomeSubSectionTab
             targetLabel="Рейсинг"
             direction="right"
+            isNudging={isNudging}
             onToggle={onToggleDiscipline}
           />
         )}

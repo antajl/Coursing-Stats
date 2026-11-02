@@ -40,16 +40,15 @@ export default function ChampionshipStandingsTab({
   const [expandedDogKey, setExpandedDogKey] = useState<string | null>(null)
   const [sortMode, setSortMode] = useState<'points' | 'time'>('time')
 
-  const [dragOffset, setDragOffset] = useState<number | null>(null)
   const [isTransitioning, setIsTransitioning] = useState(false)
   const [isNudging, setIsNudging] = useState(false)
   const hadMovedRef = useRef(false)
   const transitionTimeoutRef = useRef<number | null>(null)
+  const trackRef = useRef<HTMLDivElement>(null)
 
   const activeSlide = sortMode === 'time' ? 0 : 1
 
   const triggerNudge = () => {
-    if (dragOffset !== null && dragOffset !== 0) return
     setIsNudging(true)
     setTimeout(() => {
       setIsNudging(false)
@@ -64,7 +63,7 @@ export default function ChampionshipStandingsTab({
     return () => clearTimeout(timer)
   }, [])
 
-  // Mobile swipe gesture with real-time drag following finger
+  // Mobile swipe gesture with real-time direct GPU drag (0 React re-renders during swipe!)
   const touchStartRef = useRef<{ x: number; y: number; time: number } | null>(null)
   const gestureLockRef = useRef<'horizontal' | 'vertical' | null>(null)
 
@@ -80,7 +79,9 @@ export default function ChampionshipStandingsTab({
       transitionTimeoutRef.current = null
     }
     setIsTransitioning(false)
-    setDragOffset(0)
+    if (trackRef.current) {
+      trackRef.current.style.transition = 'none'
+    }
   }
 
   const handleTouchMove = (e: React.TouchEvent) => {
@@ -104,11 +105,11 @@ export default function ChampionshipStandingsTab({
       gestureLockRef.current = 'horizontal'
     }
 
-    if (gestureLockRef.current === 'horizontal') {
+    if (gestureLockRef.current === 'horizontal' && trackRef.current) {
       const isAtLeftEdge = activeSlide === 0 && dx > 0
       const isAtRightEdge = activeSlide === 1 && dx < 0
       const appliedDx = isAtLeftEdge || isAtRightEdge ? dx * 0.22 : dx
-      setDragOffset(appliedDx)
+      trackRef.current.style.transform = `translate3d(calc(${-activeSlide * 100}% + ${appliedDx}px), 0, 0)`
     }
   }
 
@@ -127,23 +128,39 @@ export default function ChampionshipStandingsTab({
       const isSwipeLeft = dx < -35 || (dx < -15 && velocity > 0.2)
       const isSwipeRight = dx > 35 || (dx > 15 && velocity > 0.2)
 
-      setIsTransitioning(true)
-      setDragOffset(null)
-
+      let targetSlide = activeSlide
       if (isSwipeLeft && activeSlide === 0) {
-        setSortMode('points')
+        targetSlide = 1
         ;(e.nativeEvent as any)._doninoSwipeConsumed = true
       } else if (isSwipeRight && activeSlide === 1) {
-        setSortMode('time')
+        targetSlide = 0
         ;(e.nativeEvent as any)._doninoSwipeConsumed = true
+      }
+
+      if (trackRef.current) {
+        trackRef.current.style.transition = 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)'
+        trackRef.current.style.transform = `translate3d(${-targetSlide * 100}%, 0, 0)`
+      }
+
+      setIsTransitioning(true)
+      if (targetSlide !== activeSlide) {
+        setSortMode(targetSlide === 0 ? 'time' : 'points')
+        triggerNudge()
       }
 
       transitionTimeoutRef.current = window.setTimeout(() => {
         setIsTransitioning(false)
         hadMovedRef.current = false
+        if (trackRef.current) {
+          trackRef.current.style.transition = ''
+          trackRef.current.style.transform = `translate3d(${-targetSlide * 100}%, 0, 0)`
+        }
       }, 400)
     } else {
-      setDragOffset(null)
+      if (trackRef.current) {
+        trackRef.current.style.transition = 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)'
+        trackRef.current.style.transform = `translate3d(${-activeSlide * 100}%, 0, 0)`
+      }
       hadMovedRef.current = false
     }
   }
@@ -151,12 +168,14 @@ export default function ChampionshipStandingsTab({
   const handleTouchCancel = () => {
     touchStartRef.current = null
     gestureLockRef.current = null
-    setDragOffset(null)
+    if (trackRef.current) {
+      trackRef.current.style.transition = 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)'
+      trackRef.current.style.transform = `translate3d(${-activeSlide * 100}%, 0, 0)`
+    }
     hadMovedRef.current = false
   }
 
-  const isDragging = dragOffset !== null && dragOffset !== 0
-  const isAnimating = isTransitioning || isDragging || isNudging
+  const isAnimating = isTransitioning || isNudging
 
   const handleSortModeChange = (mode: 'points' | 'time') => {
     if (mode === sortMode) return
@@ -782,7 +801,7 @@ export default function ChampionshipStandingsTab({
           >
             {/* Card Header inside */}
             <div className="relative flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 px-3.5 sm:px-4 py-3 border-b border-old-money-100 bg-cream-50/40">
-              <div className="flex items-center justify-between sm:justify-start gap-2 min-w-0 pr-20 sm:pr-0">
+              <div className={`flex items-center justify-between sm:justify-start gap-2 min-w-0 ${activeSlide === 0 ? 'pr-20 sm:pr-0' : 'pl-20 sm:pr-0'}`}>
                 <div className="flex items-center gap-1.5 sm:gap-2 min-w-0">
                   {activeSlide === 0 ? (
                     <Trophy className="w-4 h-4 text-camel-700 shrink-0" />
@@ -804,7 +823,7 @@ export default function ChampionshipStandingsTab({
                 </div>
               </div>
 
-              {/* Физический прозрачный язычок с правого края шапки (Mobile) — 0% наложения на цифры собак! */}
+              {/* Физический прозрачный язычок с края шапки (Mobile) — 0% наложения на цифры собак! */}
               <div className="sm:hidden">
                 {activeSlide === 0 ? (
                   <button
@@ -813,7 +832,9 @@ export default function ChampionshipStandingsTab({
                       handleSortModeChange('points')
                       triggerNudge()
                     }}
-                    className="absolute top-1/2 -translate-y-1/2 right-0 z-20 inline-flex items-center gap-1 rounded-l-full border-y border-l border-camel-400/90 bg-camel-100/80 pl-3 pr-2 py-1.5 text-[11px] font-bold text-camel-950 shadow-md backdrop-blur-md transition-all hover:bg-camel-200 active:scale-95 cursor-pointer touch-manipulation"
+                    className={`absolute top-1/2 -translate-y-1/2 right-0 z-20 inline-flex items-center gap-1 rounded-l-full border-y border-l border-camel-400/90 bg-camel-100/80 pl-3 pr-2 py-1.5 text-[11px] font-bold text-camel-950 shadow-md backdrop-blur-md transition-all hover:bg-camel-200 active:scale-95 cursor-pointer touch-manipulation ${
+                      isNudging ? 'animate-tab-nudge-left' : ''
+                    }`}
                     title="Смахните экран или нажмите для перехода к баллам"
                     aria-label="Перейти к баллам"
                   >
@@ -827,7 +848,9 @@ export default function ChampionshipStandingsTab({
                       handleSortModeChange('time')
                       triggerNudge()
                     }}
-                    className="absolute top-1/2 -translate-y-1/2 right-0 z-20 inline-flex items-center gap-1 rounded-l-full border-y border-l border-camel-400/90 bg-camel-100/80 pl-3 pr-2 py-1.5 text-[11px] font-bold text-camel-950 shadow-md backdrop-blur-md transition-all hover:bg-camel-200 active:scale-95 cursor-pointer touch-manipulation"
+                    className={`absolute top-1/2 -translate-y-1/2 left-0 z-20 inline-flex items-center gap-1 rounded-r-full border-y border-r border-camel-400/90 bg-camel-100/80 pr-3 pl-2 py-1.5 text-[11px] font-bold text-camel-950 shadow-md backdrop-blur-md transition-all hover:bg-camel-200 active:scale-95 cursor-pointer touch-manipulation ${
+                      isNudging ? 'animate-tab-nudge-right' : ''
+                    }`}
                     title="Смахните экран или нажмите для перехода к скорости"
                     aria-label="Перейти к скорости"
                   >
@@ -873,6 +896,7 @@ export default function ChampionshipStandingsTab({
             {/* Real Physical Two-Column Slider */}
             <div className="relative overflow-hidden w-full">
               <div
+                ref={trackRef}
                 className={`flex w-full items-start ${
                   isNudging
                     ? activeSlide === 0
@@ -881,12 +905,8 @@ export default function ChampionshipStandingsTab({
                     : ''
                 }`}
                 style={{
-                  transform: transformStr,
-                  transition: isDragging
-                    ? 'none'
-                    : isNudging
-                    ? 'none'
-                    : 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)',
+                  transform: `translate3d(${-activeSlide * 100}%, 0, 0)`,
+                  transition: isNudging ? 'none' : 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)',
                   willChange: 'transform',
                 }}
               >

@@ -11,6 +11,7 @@ interface SeasonDoninoSpeedCarouselProps {
   carousel: HomeBreedCarouselApi
   syncDots: { key: string; label: string }[]
   driveAutoplay?: boolean
+  isNudging?: boolean
   onToggleSubTab?: () => void
 }
 
@@ -19,6 +20,7 @@ export default function SeasonDoninoSpeedCarousel({
   carousel,
   syncDots,
   driveAutoplay = false,
+  isNudging = false,
   onToggleSubTab,
 }: SeasonDoninoSpeedCarouselProps) {
   const { index, trackStyle, getAdjacent, touchHandlers } = carousel
@@ -103,6 +105,7 @@ export default function SeasonDoninoSpeedCarousel({
           <HomeSubSectionTab
             targetLabel="Бега 350 м"
             direction="right"
+            isNudging={isNudging}
             onToggle={onToggleSubTab}
           />
         )}

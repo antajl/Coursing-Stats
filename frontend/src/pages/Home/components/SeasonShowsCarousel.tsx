@@ -16,6 +16,7 @@ interface SeasonShowsCarouselProps {
   carousel: HomeBreedCarouselApi
   syncDots: { key: string; label: string }[]
   driveAutoplay?: boolean
+  isNudging?: boolean
   onToggleSubTab?: () => void
 }
 
@@ -24,6 +25,7 @@ export default function SeasonShowsCarousel({
   carousel,
   syncDots,
   driveAutoplay = false,
+  isNudging = false,
   onToggleSubTab,
 }: SeasonShowsCarouselProps) {
   const { index, trackStyle, getAdjacent, touchHandlers } = carousel
@@ -110,6 +112,7 @@ export default function SeasonShowsCarousel({
           <HomeSubSectionTab
             targetLabel="Все породы"
             direction="right"
+            isNudging={isNudging}
             onToggle={onToggleSubTab}
           />
         )}

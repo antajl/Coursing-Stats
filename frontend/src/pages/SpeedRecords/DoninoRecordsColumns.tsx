@@ -207,7 +207,9 @@ export default function DoninoRecordsColumns({
           setMobileTab('coursing')
           triggerNudge()
         }}
-        className="lg:hidden absolute top-1/2 -translate-y-1/2 right-0 z-20 inline-flex items-center gap-1 rounded-l-full border-y border-l border-camel-400/90 bg-camel-100/80 pl-3 pr-2 py-1 text-[11px] font-bold text-camel-950 shadow-md backdrop-blur-md transition-all hover:bg-camel-200 active:scale-95 cursor-pointer touch-manipulation"
+        className={`lg:hidden absolute top-1/2 -translate-y-1/2 right-0 z-20 inline-flex items-center gap-1 rounded-l-full border-y border-l border-camel-400/90 bg-camel-100/80 pl-3 pr-2 py-1 text-[11px] font-bold text-camel-950 shadow-md backdrop-blur-md transition-all hover:bg-camel-200 active:scale-95 cursor-pointer touch-manipulation ${
+          isNudging ? 'animate-tab-nudge-left' : ''
+        }`}
         title="Смахните экран или нажмите для перехода к бегам 350 м"
         aria-label="Перейти к бегам 350 м"
       >
@@ -223,7 +225,7 @@ export default function DoninoRecordsColumns({
         asHeader
         title="Бега 350 м"
         count={coursingRecords.length}
-        countClassName="pr-20 lg:pr-0"
+        titleClassName="pl-20 lg:pl-0"
       />
       <button
         type="button"
@@ -231,7 +233,9 @@ export default function DoninoRecordsColumns({
           setMobileTab('speed')
           triggerNudge()
         }}
-        className="lg:hidden absolute top-1/2 -translate-y-1/2 right-0 z-20 inline-flex items-center gap-1 rounded-l-full border-y border-l border-camel-400/90 bg-camel-100/80 pl-3 pr-2 py-1 text-[11px] font-bold text-camel-950 shadow-md backdrop-blur-md transition-all hover:bg-camel-200 active:scale-95 cursor-pointer touch-manipulation"
+        className={`lg:hidden absolute top-1/2 -translate-y-1/2 left-0 z-20 inline-flex items-center gap-1 rounded-r-full border-y border-r border-camel-400/90 bg-camel-100/80 pr-3 pl-2 py-1 text-[11px] font-bold text-camel-950 shadow-md backdrop-blur-md transition-all hover:bg-camel-200 active:scale-95 cursor-pointer touch-manipulation ${
+          isNudging ? 'animate-tab-nudge-right' : ''
+        }`}
         title="Смахните экран или нажмите для перехода к замерам"
         aria-label="Перейти к замерам"
       >

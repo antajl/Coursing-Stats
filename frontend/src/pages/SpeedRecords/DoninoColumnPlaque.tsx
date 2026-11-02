@@ -14,6 +14,7 @@ interface DoninoColumnPlaqueProps {
   count: number
   action?: ReactNode
   countClassName?: string
+  titleClassName?: string
   /** Header bar inside DoninoColumnShell (no outer margin/border). */
   asHeader?: boolean
 }
@@ -23,6 +24,7 @@ export default function DoninoColumnPlaque({
   count,
   action,
   countClassName,
+  titleClassName,
   asHeader = false,
 }: DoninoColumnPlaqueProps) {
   const shellClass = asHeader
@@ -32,7 +34,7 @@ export default function DoninoColumnPlaque({
   return (
     <div className={shellClass}>
       <div className="relative z-[1] flex items-center gap-1.5 shrink-0 min-w-0">
-        <h2 className="text-xs font-bold uppercase tracking-wider text-camel-800 truncate">
+        <h2 className={`text-xs font-bold uppercase tracking-wider text-camel-800 truncate ${titleClassName || ''}`}>
           {title}
         </h2>
         {action && (

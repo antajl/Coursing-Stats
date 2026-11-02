@@ -12,6 +12,7 @@ interface SeasonRacingCarouselProps {
   carousel: HomeBreedCarouselApi
   syncDots: { key: string; label: string }[]
   driveAutoplay?: boolean
+  isNudging?: boolean
   onToggleDiscipline?: () => void
 }
 
@@ -20,6 +21,7 @@ export default function SeasonRacingCarousel({
   carousel,
   syncDots,
   driveAutoplay = false,
+  isNudging = false,
   onToggleDiscipline,
 }: SeasonRacingCarouselProps) {
   const { index, trackStyle, getAdjacent, touchHandlers } = carousel
@@ -98,6 +100,7 @@ export default function SeasonRacingCarousel({
           <HomeSubSectionTab
             targetLabel="Курсинг"
             direction="left"
+            isNudging={isNudging}
             onToggle={onToggleDiscipline}
           />
         )}

@@ -11,6 +11,7 @@ interface SeasonDoninoCoursingCarouselProps {
   carousel: HomeBreedCarouselApi
   syncDots: { key: string; label: string }[]
   driveAutoplay?: boolean
+  isNudging?: boolean
   onToggleSubTab?: () => void
 }
 
@@ -19,6 +20,7 @@ export default function SeasonDoninoCoursingCarousel({
   carousel,
   syncDots,
   driveAutoplay = false,
+  isNudging = false,
   onToggleSubTab,
 }: SeasonDoninoCoursingCarouselProps) {
   const { index, trackStyle, getAdjacent, touchHandlers } = carousel
@@ -103,6 +105,7 @@ export default function SeasonDoninoCoursingCarousel({
           <HomeSubSectionTab
             targetLabel="Замер"
             direction="left"
+            isNudging={isNudging}
             onToggle={onToggleSubTab}
           />
         )}

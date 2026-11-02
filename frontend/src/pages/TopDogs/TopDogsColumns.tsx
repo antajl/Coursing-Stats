@@ -240,7 +240,9 @@ export default function TopDogsColumns({
           handleMobileColumnChange('racing')
           triggerNudge()
         }}
-        className="lg:hidden absolute top-1/2 -translate-y-1/2 right-0 z-20 inline-flex items-center gap-1 rounded-l-full border-y border-l border-camel-400/90 bg-camel-100/80 pl-3 pr-2 py-1 text-[11px] font-bold text-camel-950 shadow-md backdrop-blur-md transition-all hover:bg-camel-200 active:scale-95 cursor-pointer touch-manipulation"
+        className={`lg:hidden absolute top-1/2 -translate-y-1/2 right-0 z-20 inline-flex items-center gap-1 rounded-l-full border-y border-l border-camel-400/90 bg-camel-100/80 pl-3 pr-2 py-1 text-[11px] font-bold text-camel-950 shadow-md backdrop-blur-md transition-all hover:bg-camel-200 active:scale-95 cursor-pointer touch-manipulation ${
+          isNudging ? 'animate-tab-nudge-left' : ''
+        }`}
         title="Смахните экран или нажмите для перехода к рейсингу"
         aria-label="Перейти к рейсингу"
       >
@@ -256,7 +258,7 @@ export default function TopDogsColumns({
         asHeader
         title="Рейсинг"
         count={filteredSpeed.length}
-        countClassName="pr-20 lg:pr-0"
+        titleClassName="pl-20 lg:pl-0"
       />
       <button
         type="button"
@@ -264,7 +266,9 @@ export default function TopDogsColumns({
           handleMobileColumnChange('coursing')
           triggerNudge()
         }}
-        className="lg:hidden absolute top-1/2 -translate-y-1/2 right-0 z-20 inline-flex items-center gap-1 rounded-l-full border-y border-l border-camel-400/90 bg-camel-100/80 pl-3 pr-2 py-1 text-[11px] font-bold text-camel-950 shadow-md backdrop-blur-md transition-all hover:bg-camel-200 active:scale-95 cursor-pointer touch-manipulation"
+        className={`lg:hidden absolute top-1/2 -translate-y-1/2 left-0 z-20 inline-flex items-center gap-1 rounded-r-full border-y border-r border-camel-400/90 bg-camel-100/80 pr-3 pl-2 py-1 text-[11px] font-bold text-camel-950 shadow-md backdrop-blur-md transition-all hover:bg-camel-200 active:scale-95 cursor-pointer touch-manipulation ${
+          isNudging ? 'animate-tab-nudge-right' : ''
+        }`}
         title="Смахните экран или нажмите для перехода к курсингу"
         aria-label="Перейти к курсингу"
       >
