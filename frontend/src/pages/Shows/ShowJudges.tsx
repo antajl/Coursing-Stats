@@ -1,12 +1,6 @@
 import { useState, useEffect, useMemo, useRef } from 'react'
 import { useSearchParams } from 'react-router-dom'
-import { ChevronDown, X } from 'lucide-react'
 import ShowJudgeCard from '../../components/ShowJudgeCard'
-import PageToolbar from '../../components/toolbar/PageToolbar'
-import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
-import ModernDropdown from '../../components/ui/ModernDropdown'
-import BreedSearchDropdown from '../../components/ui/BreedSearchDropdown'
-import { toolbarPillTriggerClass } from '../../lib/toolbar'
 import { initialSeasonYearFilter, resolveActiveSeason } from '../../lib/season'
 import { useShowJudges, useShowJudgesPage0 } from '../../hooks/useStaticData'
 import EmptyState from '../../components/EmptyState'
@@ -14,17 +8,16 @@ import SkeletonLoader from '../../components/SkeletonLoader'
 import type { ShowJudge } from '../../lib/staticData'
 import {
   matchesBreedFilter,
-  uniqueCanonicalBreeds,
   formatBreedName,
   canonicalBreed,
 } from '../../lib/breedMapping'
+import { ShowJudgesToolbar } from './ShowJudgesToolbar'
 
 const SHOW_YEARS = ['2026', '2025', '2024'] as const
 const SHOW_JUDGES_ACTIVE_SEASON = resolveActiveSeason(SHOW_YEARS)
 
 /** Full judges.json (~12 MB) must not race page0 — wait after first paint. */
 const FULL_JUDGES_DELAY_MS = 2500
-
 
 const MIN_GRADED_FOR_RATE = 30
 
@@ -53,8 +46,6 @@ export default function ShowJudges() {
     initialSeasonYearFilter(searchParams, SHOW_JUDGES_ACTIVE_SEASON),
   )
   const [filterBreed, setFilterBreed] = useState('')
-  const [mobileYearOpen, setMobileYearOpen] = useState(false)
-  const [desktopYearOpen, setDesktopYearOpen] = useState(false)
   const [visibleCount, setVisibleCount] = useState(20)
   const [allowFullLoad, setAllowFullLoad] = useState(false)
   const [userWantsFull, setUserWantsFull] = useState(false)
@@ -163,39 +154,34 @@ export default function ShowJudges() {
     }
 
     return () => {
-      observerRef.current?.disconnect()
+      if (observerRef.current) {
+        observerRef.current.disconnect()
+      }
     }
   }, [visibleCount, sortedJudges.length, judgesPartial, page0Judges.length])
 
-
   const isYearNonDefault = filterYear !== '' && filterYear !== SHOW_JUDGES_ACTIVE_SEASON
-  const hasActiveFilters = Boolean(isYearNonDefault || filterBreed || searchQuery)
 
-  const clearFilters = () => {
-    setSearchQuery('')
+  const handleResetFilters = () => {
     setFilterYear(SHOW_JUDGES_ACTIVE_SEASON)
     setFilterBreed('')
+    setSearchQuery('')
   }
 
-  const showSkeleton = judges.length === 0 && (page0Loading || !page0Fetched)
-  const loadFailed =
-    judges.length === 0 &&
-    page0Fetched &&
-    page0Failed &&
-    allowFullLoad &&
-    judgesFetched &&
-    !(judgesResult?.success && judgesResult.data)
+  const handleSelectBreed = (breed: string) => {
+    setFilterBreed(breed)
+    if (breed) setUserWantsFull(true)
+  }
 
-  if (showSkeleton) {
+  if (page0Loading && !hasPage0) {
     return (
-      <div className="mx-auto max-w-full space-y-4 pb-2 sm:pb-4" aria-busy="true" aria-live="polite">
-        <p className="text-xs text-charcoal-500">Загрузка судей…</p>
-        <SkeletonLoader variant="card" count={8} />
+      <div className="space-y-4">
+        <SkeletonLoader variant="table" count={5} />
       </div>
     )
   }
 
-  if (loadFailed) {
+  if (judgesFetched && judges.length === 0) {
     return (
       <div className="overflow-hidden rounded-xl border border-old-money-200 bg-white">
         <EmptyState
@@ -208,213 +194,17 @@ export default function ShowJudges() {
 
   return (
     <div className="mx-auto max-w-full space-y-4 pb-2 sm:pb-4">
-      <PageToolbar
-        bare
-        topRowClassName="flex-nowrap"
-        filters={
-          <div className="w-full min-w-0">
-            {/* Мобильная компактная строка (32px): Поиск + Год + Порода + Сброс */}
-            <div className="flex sm:hidden items-center gap-1.5 w-full min-w-0 overflow-x-auto no-scrollbar py-0.5">
-              {/* Inline Search */}
-              <ToolbarSearch
-                value={searchQuery}
-                onChange={setSearchQuery}
-                placeholder="Фамилия…"
-              />
-
-              {/* Year Dropdown */}
-              <ModernDropdown
-                trigger={
-                  <button
-                    type="button"
-                    className={`shrink-0 ${toolbarPillTriggerClass(isYearNonDefault)}`}
-                  >
-                    <span>{!filterYear ? 'Все года' : filterYear}</span>
-                    <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
-                  </button>
-                }
-                isOpen={mobileYearOpen}
-                onOpenChange={setMobileYearOpen}
-                width="130px"
-              >
-                <div className="p-1 max-h-60 overflow-y-auto" role="menu">
-                  <button
-                    type="button"
-                    role="menuitem"
-                    onClick={() => {
-                      setFilterYear('')
-                      setMobileYearOpen(false)
-                    }}
-                    className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
-                      !filterYear
-                        ? 'bg-camel-100 text-camel-950 font-semibold'
-                        : 'text-charcoal-700 hover:bg-camel-100'
-                    }`}
-                  >
-                    Все года
-                  </button>
-                  {SHOW_YEARS.map((year) => (
-                    <button
-                      key={year}
-                      type="button"
-                      role="menuitem"
-                      onClick={() => {
-                        setFilterYear(year)
-                        setMobileYearOpen(false)
-                      }}
-                      className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
-                        filterYear === year
-                          ? 'bg-camel-100 text-camel-950 font-semibold'
-                          : 'text-charcoal-700 hover:bg-camel-100'
-                      }`}
-                    >
-                      {year}
-                    </button>
-                  ))}
-                </div>
-              </ModernDropdown>
-
-              {/* Breed Dropdown */}
-              <BreedSearchDropdown
-                breeds={availableBreeds}
-                selectedBreed={filterBreed}
-                onSelect={(breed) => {
-                  setFilterBreed(breed)
-                  if (breed) setUserWantsFull(true)
-                }}
-                trigger={
-                  <button
-                    type="button"
-                    className={`shrink-0 ${toolbarPillTriggerClass(Boolean(filterBreed))}`}
-                  >
-                    <span className="truncate max-w-[120px]">
-                      {filterBreed ? formatBreedName(filterBreed) : 'Порода'}
-                    </span>
-                    <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
-                  </button>
-                }
-              />
-
-              {/* Reset Filters button on mobile */}
-              {(isYearNonDefault || filterBreed) && (
-                <div className="ml-auto shrink-0">
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setFilterYear(SHOW_JUDGES_ACTIVE_SEASON)
-                      setFilterBreed('')
-                    }}
-                    className="shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full border border-old-money-200 bg-cream-50 text-charcoal-500 hover:text-charcoal-800 transition-colors cursor-pointer"
-                    title="Сбросить фильтры"
-                    aria-label="Сбросить фильтры"
-                  >
-                    <X className="h-4 w-4" />
-                  </button>
-                </div>
-              )}
-            </div>
-
-            {/* Десктопная строка */}
-            <div className="hidden sm:flex sm:items-center gap-2 w-full">
-              <ToolbarSearch
-                value={searchQuery}
-                onChange={setSearchQuery}
-                placeholder="Фамилия судьи…"
-              />
-              <div className="flex max-w-full items-center gap-1.5 shrink-0">
-                {/* Year Dropdown */}
-                <ModernDropdown
-                  trigger={
-                    <button
-                      type="button"
-                      className={`shrink-0 ${toolbarPillTriggerClass(isYearNonDefault)}`}
-                    >
-                      <span>{!filterYear ? 'Все года' : filterYear}</span>
-                      <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
-                    </button>
-                  }
-                  isOpen={desktopYearOpen}
-                  onOpenChange={setDesktopYearOpen}
-                  width="130px"
-                >
-                  <div className="p-1 max-h-60 overflow-y-auto" role="menu">
-                    <button
-                      type="button"
-                      role="menuitem"
-                      onClick={() => {
-                        setFilterYear('')
-                        setDesktopYearOpen(false)
-                      }}
-                      className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
-                        !filterYear
-                          ? 'bg-camel-100 text-camel-950 font-semibold'
-                          : 'text-charcoal-700 hover:bg-camel-100'
-                      }`}
-                    >
-                      Все года
-                    </button>
-                    {SHOW_YEARS.map((year) => (
-                      <button
-                        key={year}
-                        type="button"
-                        role="menuitem"
-                        onClick={() => {
-                          setFilterYear(year)
-                          setDesktopYearOpen(false)
-                        }}
-                        className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
-                          filterYear === year
-                            ? 'bg-camel-100 text-camel-950 font-semibold'
-                            : 'text-charcoal-700 hover:bg-camel-100'
-                        }`}
-                      >
-                        {year}
-                      </button>
-                    ))}
-                  </div>
-                </ModernDropdown>
-
-                {/* Breed Dropdown */}
-                <BreedSearchDropdown
-                  breeds={availableBreeds}
-                  selectedBreed={filterBreed}
-                  onSelect={(breed) => {
-                    setFilterBreed(breed)
-                    if (breed) setUserWantsFull(true)
-                  }}
-                  trigger={
-                    <button
-                      type="button"
-                      className={`shrink-0 ${toolbarPillTriggerClass(Boolean(filterBreed))}`}
-                    >
-                      <span className="truncate max-w-[140px]">
-                        {filterBreed ? formatBreedName(filterBreed) : 'Порода'}
-                      </span>
-                      <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
-                    </button>
-                  }
-                />
-
-                {/* Reset Filters button */}
-                {(isYearNonDefault || filterBreed) && (
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setFilterYear(SHOW_JUDGES_ACTIVE_SEASON)
-                      setFilterBreed('')
-                    }}
-                    className="shrink-0 inline-flex items-center gap-1 rounded-lg px-2.5 py-1.5 text-xs font-medium text-old-money-600 hover:text-charcoal-900 hover:bg-cream-100 transition-colors"
-                    title="Сбросить все фильтры"
-                  >
-                    <X className="h-3.5 w-3.5" />
-                    <span>Сбросить</span>
-                  </button>
-                )}
-
-            </div>
-          </div>
-        </div>
-      }
+      <ShowJudgesToolbar
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
+        filterYear={filterYear}
+        setFilterYear={setFilterYear}
+        showYears={SHOW_YEARS}
+        isYearNonDefault={isYearNonDefault}
+        availableBreeds={availableBreeds}
+        filterBreed={filterBreed}
+        onSelectBreed={handleSelectBreed}
+        onResetFilters={handleResetFilters}
       />
 
       {sortedJudges.length === 0 ? (
