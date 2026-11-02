@@ -366,7 +366,7 @@ function SeasonTopSectionInner({
         >
           <div
             ref={sportTrackRef}
-            className={`flex w-full min-w-0 items-start gap-0 md:grid md:grid-cols-2 md:gap-6 home-v2-columns md:!transform-none ${
+            className={`flex flex-nowrap w-full min-w-0 items-start gap-0 md:grid md:grid-cols-2 md:gap-6 md:!transform-none ${
               isNudging
                 ? activeSportSubTab === 'coursing'
                   ? 'animate-silk-nudge-left'
@@ -428,7 +428,7 @@ function SeasonTopSectionInner({
         >
           <div
             ref={showsTrackRef}
-            className={`flex w-full min-w-0 items-start gap-0 md:grid md:grid-cols-2 md:gap-6 home-v2-columns md:!transform-none ${
+            className={`flex flex-nowrap w-full min-w-0 items-start gap-0 md:grid md:grid-cols-2 md:gap-6 md:!transform-none ${
               isNudging
                 ? activeShowsSubTab === 'by-breed'
                   ? 'animate-silk-nudge-left'
@@ -520,7 +520,7 @@ function SeasonTopSectionInner({
         >
           <div
             ref={doninoTrackRef}
-            className={`flex w-full min-w-0 items-start gap-0 md:grid md:grid-cols-2 md:gap-6 home-v2-columns md:!transform-none ${
+            className={`flex flex-nowrap w-full min-w-0 items-start gap-0 md:grid md:grid-cols-2 md:gap-6 md:!transform-none ${
               isNudging
                 ? activeDoninoSubTab === 'speed'
                   ? 'animate-silk-nudge-left'

@@ -93,12 +93,8 @@ export default function SeasonShowsCarousel({
     <div className="flex min-h-0 min-w-0 flex-1 flex-col">
       <div className="home-v2-col-head home-v2-col-head--tabs !flex-nowrap gap-1.5 sm:gap-2 relative">
         <span className="hidden md:inline shrink-0">Выставки</span>
-        <div className="overflow-hidden flex min-w-0 flex-1 px-20 md:px-0">
-          <div className="flex w-full will-change-transform" style={trackStyle}>
-            {renderHeaderItem(prevSlide)}
-            {renderHeaderItem(slide)}
-            {renderHeaderItem(nextSlide)}
-          </div>
+        <div className="flex min-w-0 flex-1 items-center justify-center px-20 md:px-0">
+          {renderHeaderItem(slide)}
         </div>
         <div className="shrink-0 flex items-center gap-1.5 ml-auto hidden md:flex">
           <span className="shrink-0 text-[11px] font-normal text-old-money-600">
