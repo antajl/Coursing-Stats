@@ -161,14 +161,6 @@ export function useHomeBreedCarousel(slideCount: number): HomeBreedCarouselApi {
       return { transform: 'translateX(-100%)' }
     }
 
-    if (isNudging) {
-      return {
-        transform: 'translateX(-100%)',
-        animation: 'silkNudgeHome 750ms cubic-bezier(0.25, 1, 0.5, 1) forwards',
-        willChange: 'transform',
-      }
-    }
-
     if (animState === 'dragging') {
       return {
         transform: `translateX(calc(-100% + ${dragOffset}px))`,

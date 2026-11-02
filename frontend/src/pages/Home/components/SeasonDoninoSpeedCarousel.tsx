@@ -83,10 +83,7 @@ export default function SeasonDoninoSpeedCarousel({
   )
 
   return (
-    <div
-      className="flex min-h-0 min-w-0 flex-1 flex-col home-breed-carousel-swipeable"
-      {...touchHandlers}
-    >
+    <div className="flex min-h-0 min-w-0 flex-1 flex-col">
       <div className="home-v2-col-head home-v2-col-head--tabs !flex-nowrap gap-1.5 sm:gap-2">
         <span className="hidden md:inline shrink-0">Замер скорости</span>
         <div className="overflow-hidden flex min-w-0 flex-1 pr-28 md:pr-0">

@@ -379,18 +379,10 @@ export default function TopDogsColumns({
         `}</style>
 
         <div
-          className={`flex w-full items-start lg:grid lg:grid-cols-2 lg:gap-8 lg:!transform-none ${
-            isNudging
-              ? activeMobileColumn === 'coursing'
-                ? 'animate-silk-nudge-left'
-                : 'animate-silk-nudge-right'
-              : ''
-          }`}
+          className="flex w-full items-start lg:grid lg:grid-cols-2 lg:gap-8 lg:!transform-none"
           style={{
             transform: typeof window !== 'undefined' && window.innerWidth >= 1024 ? 'none' : mobileTransform,
             transition: isDragging
-              ? 'none'
-              : isNudging
               ? 'none'
               : 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)',
             willChange: 'transform',

@@ -103,19 +103,14 @@ function SeasonTopSectionInner({
   const [activeShowsSubTab, setActiveShowsSubTab] = useState<ShowsSubTab>('by-breed')
   const [activeDoninoSubTab, setActiveDoninoSubTab] = useState<DoninoSubTab>('speed')
 
-  const [dragOffset, setDragOffset] = useState<number | null>(null)
-  const [isTransitioning, setIsTransitioning] = useState(false)
   const [isNudging, setIsNudging] = useState(false)
-  const hadMovedRef = useRef(false)
-  const transitionTimeoutRef = useRef<number | null>(null)
 
   const triggerNudge = useCallback(() => {
-    if (dragOffset !== null && dragOffset !== 0) return
     setIsNudging(true)
     setTimeout(() => {
       setIsNudging(false)
     }, 750)
-  }, [dragOffset])
+  }, [])
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -124,41 +119,14 @@ function SeasonTopSectionInner({
     return () => clearTimeout(timer)
   }, [activeTab, triggerNudge])
 
-  const getCurrentSlide = useCallback(() => {
-    if (activeTab === 'sport') return activeSportSubTab === 'coursing' ? 0 : 1
-    if (activeTab === 'shows') return activeShowsSubTab === 'by-breed' ? 0 : 1
-    return activeDoninoSubTab === 'speed' ? 0 : 1
-  }, [activeTab, activeSportSubTab, activeShowsSubTab, activeDoninoSubTab])
-
-  const setNextSlide = useCallback(
-    (nextIdx: 0 | 1) => {
-      if (activeTab === 'sport') {
-        setActiveSportSubTab(nextIdx === 0 ? 'coursing' : 'racing')
-      } else if (activeTab === 'shows') {
-        setActiveShowsSubTab(nextIdx === 0 ? 'by-breed' : 'all-breeds')
-      } else {
-        setActiveDoninoSubTab(nextIdx === 0 ? 'speed' : 'coursing')
-      }
-    },
-    [activeTab],
-  )
-
   const touchStartRef = useRef<{ x: number; y: number; time: number } | null>(null)
   const gestureLockRef = useRef<'horizontal' | 'vertical' | null>(null)
 
   const handleTouchStart = (e: React.TouchEvent) => {
     if (typeof window !== 'undefined' && window.innerWidth >= 768) return
-    setIsNudging(false)
     const touch = e.touches[0]
     touchStartRef.current = { x: touch.clientX, y: touch.clientY, time: Date.now() }
     gestureLockRef.current = null
-    hadMovedRef.current = false
-    if (transitionTimeoutRef.current) {
-      clearTimeout(transitionTimeoutRef.current)
-      transitionTimeoutRef.current = null
-    }
-    setIsTransitioning(false)
-    setDragOffset(0)
   }
 
   const handleTouchMove = (e: React.TouchEvent) => {
@@ -166,10 +134,6 @@ function SeasonTopSectionInner({
     const touch = e.touches[0]
     const dx = touch.clientX - touchStartRef.current.x
     const dy = touch.clientY - touchStartRef.current.y
-
-    if (Math.abs(dx) > 8 || Math.abs(dy) > 8) {
-      hadMovedRef.current = true
-    }
 
     if (!gestureLockRef.current) {
       const absDx = Math.abs(dx)
@@ -181,62 +145,52 @@ function SeasonTopSectionInner({
       }
       gestureLockRef.current = 'horizontal'
     }
-
-    if (gestureLockRef.current === 'horizontal') {
-      const currentSlide = getCurrentSlide()
-      const isAtLeftEdge = currentSlide === 0 && dx > 0
-      const isAtRightEdge = currentSlide === 1 && dx < 0
-      const appliedDx = isAtLeftEdge || isAtRightEdge ? dx * 0.22 : dx
-      setDragOffset(appliedDx)
-    }
   }
 
   const handleTouchEnd = (e: React.TouchEvent) => {
     if (!touchStartRef.current) return
+    const isHorizontal = gestureLockRef.current === 'horizontal'
     const touch = e.changedTouches[0]
     const dx = touch.clientX - touchStartRef.current.x
     const dt = Date.now() - touchStartRef.current.time
     const velocity = Math.abs(dx) / (dt || 1)
-    const isHorizontal = gestureLockRef.current === 'horizontal'
     touchStartRef.current = null
     gestureLockRef.current = null
 
     if (isHorizontal) {
       const isSwipeLeft = dx < -35 || (dx < -15 && velocity > 0.2)
       const isSwipeRight = dx > 35 || (dx > 15 && velocity > 0.2)
-      const currentSlide = getCurrentSlide()
 
-      setIsTransitioning(true)
-      setDragOffset(null)
-
-      if (isSwipeLeft && currentSlide === 0) {
-        setNextSlide(1)
-        triggerNudge()
-      } else if (isSwipeRight && currentSlide === 1) {
-        setNextSlide(0)
-        triggerNudge()
+      if (isSwipeLeft) {
+        if (activeTab === 'sport' && activeSportSubTab === 'coursing') {
+          setActiveSportSubTab('racing')
+          triggerNudge()
+        } else if (activeTab === 'shows' && activeShowsSubTab === 'by-breed') {
+          setActiveShowsSubTab('all-breeds')
+          triggerNudge()
+        } else if (activeTab === 'donino' && activeDoninoSubTab === 'speed') {
+          setActiveDoninoSubTab('coursing')
+          triggerNudge()
+        }
+      } else if (isSwipeRight) {
+        if (activeTab === 'sport' && activeSportSubTab === 'racing') {
+          setActiveSportSubTab('coursing')
+          triggerNudge()
+        } else if (activeTab === 'shows' && activeShowsSubTab === 'all-breeds') {
+          setActiveShowsSubTab('by-breed')
+          triggerNudge()
+        } else if (activeTab === 'donino' && activeDoninoSubTab === 'coursing') {
+          setActiveDoninoSubTab('speed')
+          triggerNudge()
+        }
       }
-
-      transitionTimeoutRef.current = window.setTimeout(() => {
-        setIsTransitioning(false)
-        transitionTimeoutRef.current = null
-      }, 380)
-    } else {
-      setDragOffset(null)
     }
   }
 
   const handleTouchCancel = () => {
     touchStartRef.current = null
     gestureLockRef.current = null
-    setDragOffset(null)
-    setIsTransitioning(false)
   }
-
-  const currentSlide = getCurrentSlide()
-  const isDragging = dragOffset !== null && dragOffset !== 0
-  const isAnimating = isDragging || isTransitioning
-  const mobileTransform = `translateX(calc(${currentSlide === 0 ? '0%' : '-100%'} + ${dragOffset ?? 0}px))`
 
   const speedSlideCount = doninoSpeedSlides?.length || 0
   const coursingSlideCount = doninoCoursingSlides?.length || 0
@@ -327,81 +281,50 @@ function SeasonTopSectionInner({
       ────────────────────────────────────────────────────────────── */}
       {activeTab === 'sport' && (
         <div
-          className="w-full min-w-0 max-w-full relative overflow-hidden touch-pan-y"
+          className="w-full min-w-0 max-w-full touch-pan-y"
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
           onTouchCancel={handleTouchCancel}
-          onClickCapture={(e) => {
-            if (hadMovedRef.current) {
-              e.preventDefault()
-              e.stopPropagation()
-            }
-          }}
           {...carousel.pauseHandlers}
         >
-          <div
-            className={`flex w-full min-w-0 max-w-full items-start md:grid md:grid-cols-2 md:gap-6 home-v2-columns md:!transform-none ${
-              isNudging
-                ? currentSlide === 0
-                  ? 'animate-silk-nudge-left'
-                  : 'animate-silk-nudge-right'
-                : ''
-            }`}
-            style={{
-              transform: typeof window !== 'undefined' && window.innerWidth >= 768 ? 'none' : mobileTransform,
-              transition: isDragging
-                ? 'none'
-                : isNudging
-                ? 'none'
-                : 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)',
-              willChange: 'transform',
-            }}
-          >
+          <div className="home-v2-columns">
             {/* Column 1: Coursing */}
             <div
-              className={`w-full min-w-0 max-w-full shrink-0 md:w-auto md:shrink transition-opacity duration-200 ${
-                !isAnimating && currentSlide === 1
-                  ? 'h-0 overflow-hidden opacity-0 md:h-auto md:overflow-visible md:opacity-100'
-                  : 'h-auto opacity-100'
+              className={`home-v2-col w-full min-w-0 max-w-full ${
+                activeSportSubTab === 'racing' ? '!hidden md:!flex' : ''
               }`}
             >
-              <div className="home-v2-col w-full min-w-0 max-w-full">
-                <SeasonCompetitionsCarousel
-                  slides={competitionSlides}
-                  carousel={carousel}
-                  syncDots={syncDots}
-                  driveAutoplay
-                  isNudging={isNudging && currentSlide === 0}
-                  onToggleDiscipline={() => {
-                    setActiveSportSubTab('racing')
-                    triggerNudge()
-                  }}
-                />
-              </div>
+              <SeasonCompetitionsCarousel
+                slides={competitionSlides}
+                carousel={carousel}
+                syncDots={syncDots}
+                driveAutoplay
+                isNudging={isNudging && activeSportSubTab === 'coursing'}
+                onToggleDiscipline={() => {
+                  setActiveSportSubTab('racing')
+                  triggerNudge()
+                }}
+              />
             </div>
 
             {/* Column 2: Racing */}
             <div
-              className={`w-full min-w-0 max-w-full shrink-0 md:w-auto md:shrink transition-opacity duration-200 ${
-                !isAnimating && currentSlide === 0
-                  ? 'h-0 overflow-hidden opacity-0 md:h-auto md:overflow-visible md:opacity-100'
-                  : 'h-auto opacity-100'
+              className={`home-v2-col w-full min-w-0 max-w-full ${
+                activeSportSubTab === 'coursing' ? '!hidden md:!flex' : ''
               }`}
             >
-              <div className="home-v2-col w-full min-w-0 max-w-full">
-                <SeasonRacingCarousel
-                  slides={racingSlides}
-                  carousel={carousel}
-                  syncDots={syncDots}
-                  driveAutoplay={false}
-                  isNudging={isNudging && currentSlide === 1}
-                  onToggleDiscipline={() => {
-                    setActiveSportSubTab('coursing')
-                    triggerNudge()
-                  }}
-                />
-              </div>
+              <SeasonRacingCarousel
+                slides={racingSlides}
+                carousel={carousel}
+                syncDots={syncDots}
+                driveAutoplay={false}
+                isNudging={isNudging && activeSportSubTab === 'racing'}
+                onToggleDiscipline={() => {
+                  setActiveSportSubTab('coursing')
+                  triggerNudge()
+                }}
+              />
             </div>
           </div>
         </div>
@@ -412,110 +335,79 @@ function SeasonTopSectionInner({
       ────────────────────────────────────────────────────────────── */}
       {activeTab === 'shows' && (
         <div
-          className="w-full min-w-0 max-w-full relative overflow-hidden touch-pan-y"
+          className="w-full min-w-0 max-w-full touch-pan-y"
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
           onTouchCancel={handleTouchCancel}
-          onClickCapture={(e) => {
-            if (hadMovedRef.current) {
-              e.preventDefault()
-              e.stopPropagation()
-            }
-          }}
           {...carousel.pauseHandlers}
         >
-          <div
-            className={`flex w-full min-w-0 max-w-full items-start md:grid md:grid-cols-2 md:gap-6 home-v2-columns md:!transform-none ${
-              isNudging
-                ? currentSlide === 0
-                  ? 'animate-silk-nudge-left'
-                  : 'animate-silk-nudge-right'
-                : ''
-            }`}
-            style={{
-              transform: typeof window !== 'undefined' && window.innerWidth >= 768 ? 'none' : mobileTransform,
-              transition: isDragging
-                ? 'none'
-                : isNudging
-                ? 'none'
-                : 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)',
-              willChange: 'transform',
-            }}
-          >
+          <div className="home-v2-columns">
             {/* Left Column: Breed Carousel */}
             <div
-              className={`w-full min-w-0 max-w-full shrink-0 md:w-auto md:shrink transition-opacity duration-200 ${
-                !isAnimating && currentSlide === 1
-                  ? 'h-0 overflow-hidden opacity-0 md:h-auto md:overflow-visible md:opacity-100'
-                  : 'h-auto opacity-100'
+              className={`home-v2-col w-full min-w-0 max-w-full ${
+                activeShowsSubTab === 'all-breeds' ? '!hidden md:!flex' : ''
               }`}
             >
-              <div className="home-v2-col w-full min-w-0 max-w-full">
-                <SeasonShowsCarousel
-                  slides={showSlides}
-                  carousel={carousel}
-                  syncDots={syncDots}
-                  driveAutoplay
-                  isNudging={isNudging && currentSlide === 0}
-                  onToggleSubTab={() => {
-                    setActiveShowsSubTab('all-breeds')
-                    triggerNudge()
-                  }}
-                />
-              </div>
+              <SeasonShowsCarousel
+                slides={showSlides}
+                carousel={carousel}
+                syncDots={syncDots}
+                driveAutoplay
+                isNudging={isNudging && activeShowsSubTab === 'by-breed'}
+                onToggleSubTab={() => {
+                  setActiveShowsSubTab('all-breeds')
+                  triggerNudge()
+                }}
+              />
             </div>
 
             {/* Right Column: Absolute Top Season Dogs across all breeds */}
             <div
-              className={`w-full min-w-0 max-w-full shrink-0 md:w-auto md:shrink transition-opacity duration-200 ${
-                !isAnimating && currentSlide === 0
-                  ? 'h-0 overflow-hidden opacity-0 md:h-auto md:overflow-visible md:opacity-100'
-                  : 'h-auto opacity-100'
+              className={`home-v2-col w-full min-w-0 max-w-full ${
+                activeShowsSubTab === 'by-breed' ? '!hidden md:!flex' : ''
               }`}
             >
-              <div className="home-v2-col w-full min-w-0 max-w-full">
-                <div className="home-v2-col-head home-v2-col-head--tabs !flex-nowrap gap-1.5 sm:gap-2">
-                  <span className="hidden md:inline shrink-0">Абсолютные лидеры сезона</span>
-                  <span className="md:hidden truncate text-[12px] font-bold text-camel-800 pl-24 md:pl-0">
-                    Абсолютный топ
+              <div className="home-v2-col-head home-v2-col-head--tabs !flex-nowrap gap-1.5 sm:gap-2">
+                <span className="hidden md:inline shrink-0">Абсолютные лидеры сезона</span>
+                <span className="md:hidden truncate text-[12px] font-bold text-camel-800 pl-24 md:pl-0">
+                  Абсолютный топ
+                </span>
+                <div className="shrink-0 flex items-center gap-1.5 ml-auto">
+                  <span className="hidden md:inline shrink-0 text-[11px] font-normal text-old-money-600">
+                    Все породы · {CURRENT_SEASON}
                   </span>
-                  <div className="shrink-0 flex items-center gap-1.5 ml-auto">
-                    <span className="hidden md:inline shrink-0 text-[11px] font-normal text-old-money-600">
-                      Все породы · {CURRENT_SEASON}
-                    </span>
-                    <HomeSubSectionTab
-                      targetLabel="По породам"
-                      direction="left"
-                      isNudging={isNudging && currentSlide === 1}
-                      onToggle={() => {
-                        setActiveShowsSubTab('by-breed')
-                        triggerNudge()
-                      }}
-                    />
-                  </div>
+                  <HomeSubSectionTab
+                    targetLabel="По породам"
+                    direction="left"
+                    isNudging={isNudging && activeShowsSubTab === 'all-breeds'}
+                    onToggle={() => {
+                      setActiveShowsSubTab('by-breed')
+                      triggerNudge()
+                    }}
+                  />
                 </div>
-                <div className="donino-home-list" role="list">
-                  {topShowDogs.slice(0, 3).map((dog, i) => {
-                    const { primary } = parseDogName(dog.name_lat, dog.name_ru)
-                    return (
-                      <div key={`shows-abs-${dog.id}`} className="relative group" role="listitem">
-                        <HomeSeasonTopRow
-                          to={showDogProfilePath(dog)}
-                          name={primary}
-                          breed={dog.breed}
-                          sex={dog.sex}
-                          dogId={dog.competition_dog_id}
-                          metric={showHomeMetric(dog)}
-                          showTitles={showHomeMetric(dog)}
-                          rank={dog.rank ?? i + 1}
-                          totalStarts={dog.total_shows}
-                          bestAward={dog.best_award}
-                        />
-                      </div>
-                    )
-                  })}
-                </div>
+              </div>
+              <div className="donino-home-list" role="list">
+                {topShowDogs.slice(0, 3).map((dog, i) => {
+                  const { primary } = parseDogName(dog.name_lat, dog.name_ru)
+                  return (
+                    <div key={`shows-abs-${dog.id}`} className="relative group" role="listitem">
+                      <HomeSeasonTopRow
+                        to={showDogProfilePath(dog)}
+                        name={primary}
+                        breed={dog.breed}
+                        sex={dog.sex}
+                        dogId={dog.competition_dog_id}
+                        metric={showHomeMetric(dog)}
+                        showTitles={showHomeMetric(dog)}
+                        rank={dog.rank ?? i + 1}
+                        totalStarts={dog.total_shows}
+                        bestAward={dog.best_award}
+                      />
+                    </div>
+                  )
+                })}
               </div>
             </div>
           </div>
@@ -527,153 +419,122 @@ function SeasonTopSectionInner({
       ────────────────────────────────────────────────────────────── */}
       {activeTab === 'donino' && (
         <div
-          className="w-full min-w-0 max-w-full relative overflow-hidden touch-pan-y"
+          className="w-full min-w-0 max-w-full touch-pan-y"
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
           onTouchCancel={handleTouchCancel}
-          onClickCapture={(e) => {
-            if (hadMovedRef.current) {
-              e.preventDefault()
-              e.stopPropagation()
-            }
-          }}
           {...carousel.pauseHandlers}
         >
-          <div
-            className={`flex w-full min-w-0 max-w-full items-start md:grid md:grid-cols-2 md:gap-6 home-v2-columns md:!transform-none ${
-              isNudging
-                ? currentSlide === 0
-                  ? 'animate-silk-nudge-left'
-                  : 'animate-silk-nudge-right'
-                : ''
-            }`}
-            style={{
-              transform: typeof window !== 'undefined' && window.innerWidth >= 768 ? 'none' : mobileTransform,
-              transition: isDragging
-                ? 'none'
-                : isNudging
-                ? 'none'
-                : 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)',
-              willChange: 'transform',
-            }}
-          >
+          <div className="home-v2-columns">
             {/* Column 1: Speed Radar Carousel */}
             <div
-              className={`w-full min-w-0 max-w-full shrink-0 md:w-auto md:shrink transition-opacity duration-200 ${
-                !isAnimating && currentSlide === 1
-                  ? 'h-0 overflow-hidden opacity-0 md:h-auto md:overflow-visible md:opacity-100'
-                  : 'h-auto opacity-100'
+              className={`home-v2-col w-full min-w-0 max-w-full ${
+                activeDoninoSubTab === 'coursing' ? '!hidden md:!flex' : ''
               }`}
             >
-              <div className="home-v2-col w-full min-w-0 max-w-full">
-                {doninoSpeedSlides && doninoSpeedSlides.length > 0 ? (
-                  <SeasonDoninoSpeedCarousel
-                    slides={doninoSpeedSlides}
-                    carousel={carousel}
-                    syncDots={syncDots}
-                    driveAutoplay
-                    isNudging={isNudging && currentSlide === 0}
-                    onToggleSubTab={() => {
-                      setActiveDoninoSubTab('coursing')
-                      triggerNudge()
-                    }}
-                  />
-                ) : (
-                  <>
-                    <div className="home-v2-col-head home-v2-col-head--tabs !flex-nowrap gap-1.5 sm:gap-2">
-                      <span className="pr-28 md:pr-0 truncate">Замер скорости (радар)</span>
-                      <HomeSubSectionTab
-                        targetLabel="Бега 350 м"
-                        direction="right"
-                        isNudging={isNudging && currentSlide === 0}
-                        onToggle={() => {
-                          setActiveDoninoSubTab('coursing')
-                          triggerNudge()
-                        }}
-                      />
-                    </div>
-                    <div className="donino-home-list" role="list">
-                      {doninoSpeedRecords.slice(0, 5).map((record) => (
-                        <div key={`donino-speed-${record.breed}-${record.name}`} role="listitem">
-                          <DoninoHomeRecordRow
-                            mode="speed"
-                            name={record.name}
-                            breed={record.breed}
-                            sex={record.sex}
-                            date={record.date}
-                            status={record.status}
-                            history={record.history}
-                            speedKmh={record.speed_km_h}
-                            trackType={record.track_type}
-                            latestDateInDataset={null}
-                            rank={record.rank}
-                          />
-                        </div>
-                      ))}
-                    </div>
-                  </>
-                )}
-              </div>
+              {doninoSpeedSlides && doninoSpeedSlides.length > 0 ? (
+                <SeasonDoninoSpeedCarousel
+                  slides={doninoSpeedSlides}
+                  carousel={carousel}
+                  syncDots={syncDots}
+                  driveAutoplay
+                  isNudging={isNudging && activeDoninoSubTab === 'speed'}
+                  onToggleSubTab={() => {
+                    setActiveDoninoSubTab('coursing')
+                    triggerNudge()
+                  }}
+                />
+              ) : (
+                <>
+                  <div className="home-v2-col-head home-v2-col-head--tabs !flex-nowrap gap-1.5 sm:gap-2">
+                    <span className="pr-28 md:pr-0 truncate">Замер скорости (радар)</span>
+                    <HomeSubSectionTab
+                      targetLabel="Бега 350 м"
+                      direction="right"
+                      isNudging={isNudging && activeDoninoSubTab === 'speed'}
+                      onToggle={() => {
+                        setActiveDoninoSubTab('coursing')
+                        triggerNudge()
+                      }}
+                    />
+                  </div>
+                  <div className="donino-home-list" role="list">
+                    {doninoSpeedRecords.slice(0, 5).map((record) => (
+                      <div key={`donino-speed-${record.breed}-${record.name}`} role="listitem">
+                        <DoninoHomeRecordRow
+                          mode="speed"
+                          name={record.name}
+                          breed={record.breed}
+                          sex={record.sex}
+                          date={record.date}
+                          status={record.status}
+                          history={record.history}
+                          speedKmh={record.speed_km_h}
+                          trackType={record.track_type}
+                          latestDateInDataset={null}
+                          rank={record.rank}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </>
+              )}
             </div>
 
             {/* Column 2: 350m Track Carousel */}
             <div
-              className={`w-full min-w-0 max-w-full shrink-0 md:w-auto md:shrink transition-opacity duration-200 ${
-                !isAnimating && currentSlide === 0
-                  ? 'h-0 overflow-hidden opacity-0 md:h-auto md:overflow-visible md:opacity-100'
-                  : 'h-auto opacity-100'
+              className={`home-v2-col w-full min-w-0 max-w-full ${
+                activeDoninoSubTab === 'speed' ? '!hidden md:!flex' : ''
               }`}
             >
-              <div className="home-v2-col w-full min-w-0 max-w-full">
-                {doninoCoursingSlides && doninoCoursingSlides.length > 0 ? (
-                  <SeasonDoninoCoursingCarousel
-                    slides={doninoCoursingSlides}
-                    carousel={carousel}
-                    syncDots={syncDots}
-                    driveAutoplay={false}
-                    isNudging={isNudging && currentSlide === 1}
-                    onToggleSubTab={() => {
-                      setActiveDoninoSubTab('speed')
-                      triggerNudge()
-                    }}
-                  />
-                ) : (
-                  <>
-                    <div className="home-v2-col-head home-v2-col-head--tabs !flex-nowrap gap-1.5 sm:gap-2">
-                      <span className="pl-20 md:pr-0 truncate">Бега 350 м (спринт)</span>
-                      <HomeSubSectionTab
-                        targetLabel="Замер"
-                        direction="left"
-                        isNudging={isNudging && currentSlide === 1}
-                        onToggle={() => {
-                          setActiveDoninoSubTab('speed')
-                          triggerNudge()
-                        }}
-                      />
-                    </div>
-                    <div className="donino-home-list" role="list">
-                      {doninoCoursingRecords.slice(0, 5).map((record) => (
-                        <div key={`donino-run-${record.breed}-${record.name}`} role="listitem">
-                          <DoninoHomeRecordRow
-                            mode="coursing"
-                            name={record.name}
-                            breed={record.breed}
-                            sex={record.sex}
-                            date={record.date}
-                            status={record.status}
-                            history={record.history}
-                            timeSeconds={record.time_seconds}
-                            trackLength={record.track_length}
-                            latestDateInDataset={null}
-                            rank={record.rank}
-                          />
-                        </div>
-                      ))}
-                    </div>
-                  </>
-                )}
-              </div>
+              {doninoCoursingSlides && doninoCoursingSlides.length > 0 ? (
+                <SeasonDoninoCoursingCarousel
+                  slides={doninoCoursingSlides}
+                  carousel={carousel}
+                  syncDots={syncDots}
+                  driveAutoplay={false}
+                  isNudging={isNudging && activeDoninoSubTab === 'coursing'}
+                  onToggleSubTab={() => {
+                    setActiveDoninoSubTab('speed')
+                    triggerNudge()
+                  }}
+                />
+              ) : (
+                <>
+                  <div className="home-v2-col-head home-v2-col-head--tabs !flex-nowrap gap-1.5 sm:gap-2">
+                    <span className="pl-20 md:pr-0 truncate">Бега 350 м (спринт)</span>
+                    <HomeSubSectionTab
+                      targetLabel="Замер"
+                      direction="left"
+                      isNudging={isNudging && activeDoninoSubTab === 'coursing'}
+                      onToggle={() => {
+                        setActiveDoninoSubTab('speed')
+                        triggerNudge()
+                      }}
+                    />
+                  </div>
+                  <div className="donino-home-list" role="list">
+                    {doninoCoursingRecords.slice(0, 5).map((record) => (
+                      <div key={`donino-run-${record.breed}-${record.name}`} role="listitem">
+                        <DoninoHomeRecordRow
+                          mode="coursing"
+                          name={record.name}
+                          breed={record.breed}
+                          sex={record.sex}
+                          date={record.date}
+                          status={record.status}
+                          history={record.history}
+                          timeSeconds={record.time_seconds}
+                          trackLength={record.track_length}
+                          latestDateInDataset={null}
+                          rank={record.rank}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </>
+              )}
             </div>
           </div>
         </div>

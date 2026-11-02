@@ -897,13 +897,7 @@ export default function ChampionshipStandingsTab({
             <div className="relative overflow-hidden w-full">
               <div
                 ref={trackRef}
-                className={`flex w-full items-start ${
-                  isNudging
-                    ? activeSlide === 0
-                      ? 'animate-silk-nudge-left'
-                      : 'animate-silk-nudge-right'
-                    : ''
-                }`}
+                className="flex w-full items-start"
                 style={{
                   transform: `translate3d(${-activeSlide * 100}%, 0, 0)`,
                   transition: isNudging ? 'none' : 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)',
