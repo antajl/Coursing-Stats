@@ -9,33 +9,15 @@ import {
   useDogCoursingRecords,
   useCoursingRecordsByBreed,
 } from '../../hooks/useStaticData'
-import {
-  resolveShowDogDetail,
-  getDogAllTimePlacementRank,
-  getDogAllTimeSpeedRank,
-  getDogPlacementRank,
-  getDogSpeedRank,
-  getDogBreedPlacementRank,
-  getDogBreedSpeedRank,
-  getShowDogAllTimeRank,
-  getShowDogBreedRank,
-  getShowDogYearRank,
-} from '../../lib/staticData'
-import {
-  isShowOnlyProfileId,
-  showDogProfilePath,
-} from '../../lib/showDogProfilePath'
+import { resolveShowDogDetail } from '../../lib/staticData'
 import {
   buildDogProfileTitleGroups,
   maxMergeDogTitles,
 } from '../../lib/qualificationTitles'
-import { parseDogName, toDogTitleCase } from '../../lib/dogName'
-import { displayBreed } from '../../lib/breedMapping'
 import { toPng } from 'html-to-image'
 import { useYandexGoal } from '../../components/YandexMetrica'
 import { buildEventResultsUrlMap } from '../../lib/procoursingLinks'
 import type { ShowDogCardData } from '../Shows/ShowDogCard'
-import type { ProfileHeaderRank } from './DogProfileHeader'
 import type { DogJudgesStats } from './DogJudgesSection'
 import type { DisciplineTabId, DisciplineTabItem } from './types'
 import {
@@ -43,6 +25,8 @@ import {
   computeSpeedStats,
   computeCoursingDoninoStats,
 } from './dogProfileStats'
+import { useDogProfileRanks } from './useDogProfileRanks'
+import { useDogProfileSeo } from './useDogProfileSeo'
 
 export function useDogProfileData() {
   const params = useParams<{ id?: string; dogId?: string; breed?: string }>()
@@ -59,7 +43,6 @@ export function useDogProfileData() {
   const [showAllRacingEvents, setShowAllRacingEvents] = useState(false)
   const [showDog, setShowDog] = useState<ShowDogCardData | null>(null)
   const [showsLoading, setShowsLoading] = useState(true)
-  const [asyncRanks, setAsyncRanks] = useState<ProfileHeaderRank[]>([])
 
   const exportRef = useRef<HTMLDivElement>(null)
   const { reachGoal } = useYandexGoal()
@@ -139,154 +122,15 @@ export function useDogProfileData() {
     }
   }, [competitionId, dog, loading, showRouteDogId, showRouteBreed, isLegacyShowRoute, profileId, queryName, queryBreed])
 
-  // Синхронные ранги курсинга и бегов из кэша пака
-  const precomputedSportRanks = useMemo<ProfileHeaderRank[]>(() => {
-    if (!dog) return []
-    const precomputed = (dog as any)?.ranks || (dog as any)?.dog?.ranks
-    if (!precomputed) return []
-
-    const initial: ProfileHeaderRank[] = []
-    if (precomputed.coursing && (precomputed.coursing.rank != null || precomputed.coursing.yearRank != null)) {
-      initial.push({
-        key: 'coursing',
-        label: 'Курсинг',
-        rank: precomputed.coursing.rank ?? null,
-        yearRank: precomputed.coursing.yearRank ?? undefined,
-        breedRank: precomputed.coursing.breedRank ?? undefined,
-        yearBreedRank: precomputed.coursing.yearBreedRank ?? undefined,
-        href: `/competitions?tab=ranking&year=${precomputed.coursing.year || '2026'}`,
-      })
-    }
-    if (precomputed.racing && (precomputed.racing.rank != null || precomputed.racing.yearRank != null)) {
-      initial.push({
-        key: 'racing',
-        label: 'Бега',
-        rank: precomputed.racing.rank ?? null,
-        yearRank: precomputed.racing.yearRank ?? undefined,
-        breedRank: precomputed.racing.breedRank ?? undefined,
-        yearBreedRank: precomputed.racing.yearBreedRank ?? undefined,
-        href: `/competitions?tab=ranking&year=${precomputed.racing.year || '2026'}`,
-      })
-    }
-    return initial
-  }, [dog])
-
-  // Итоговые headerRanks: предрасчитанный спорт + выставочные ранги
-  const headerRanks = useMemo<ProfileHeaderRank[]>(() => {
-    const map = new Map<string, ProfileHeaderRank>()
-    for (const r of precomputedSportRanks) {
-      map.set(r.key, r)
-    }
-    if (showDog) {
-      const showAllTimeBreedRank =
-        (showDog as any)?.breed_rank ?? (showDog as any)?.breedRank ?? undefined
-      const has2026Show = Boolean(
-        showDog.history && showDog.history.some((h) => h.date && h.date.includes('2026')),
-      )
-      map.set('shows', {
-        key: 'shows',
-        label: 'Выставки',
-        rank: showDog.rank ?? null,
-        breedRank: showAllTimeBreedRank,
-        yearBreedRank: undefined,
-        href: `/shows?tab=ranking&year=${has2026Show ? '2026' : ''}`,
-      })
-    }
-    for (const r of asyncRanks) {
-      map.set(r.key, r)
-    }
-    return Array.from(map.values())
-  }, [precomputedSportRanks, showDog, asyncRanks])
-
-  // Дозагрузка асинхронных рангов (выставки или фоллбэк спорта)
-  useEffect(() => {
-    let cancelled = false
-    const loadRanks = async () => {
-      const competitionDogId = dog?.id ?? (profileId && !isShowOnlyProfileId(profileId) ? profileId : null)
-      const breed = dog?.breed || showDog?.breed || ''
-      const currentYear = new Date().getFullYear().toString()
-      const competitionYear = events.length > 0 && events[events.length - 1].date
-        ? events[events.length - 1].date.substring(0, 4)
-        : currentYear
-      const has2026Show = Boolean(
-        showDog?.history &&
-          showDog.history.some((h) => h.date && h.date.includes('2026')),
-      )
-      const showYear = has2026Show
-        ? '2026'
-        : showDog?.history && showDog.history[0]?.date
-          ? showDog.history[0].date.substring(6, 10)
-          : '2026'
-
-      const precomputed = (dog as any)?.ranks || (dog as any)?.dog?.ranks
-      const hasPrecomputedSport = Boolean(precomputed?.coursing || precomputed?.racing)
-
-      const [
-        allTimePlacementRank,
-        allTimeSpeedRank,
-        yearPlacementRank,
-        yearSpeedRank,
-        breedPlacementRank,
-        breedSpeedRank,
-        showAllTimeRank,
-        showAllTimeBreedRank,
-        showYearRank,
-      ] = await Promise.all([
-        !hasPrecomputedSport && competitionDogId ? getDogAllTimePlacementRank(competitionDogId) : Promise.resolve(null),
-        !hasPrecomputedSport && competitionDogId ? getDogAllTimeSpeedRank(competitionDogId) : Promise.resolve(null),
-        !hasPrecomputedSport && competitionDogId ? getDogPlacementRank(competitionDogId, competitionYear) : Promise.resolve(null),
-        !hasPrecomputedSport && competitionDogId ? getDogSpeedRank(competitionDogId, competitionYear) : Promise.resolve(null),
-        !hasPrecomputedSport && competitionDogId && breed ? getDogBreedPlacementRank(competitionDogId, breed, competitionYear) : Promise.resolve(null),
-        !hasPrecomputedSport && competitionDogId && breed ? getDogBreedSpeedRank(competitionDogId, breed, competitionYear) : Promise.resolve(null),
-        showDog ? getShowDogAllTimeRank(showDog) : Promise.resolve(null),
-        showDog ? getShowDogBreedRank(showDog) : Promise.resolve(null),
-        showDog ? getShowDogYearRank(showDog, showYear) : Promise.resolve(null),
-      ])
-
-      if (cancelled) return
-
-      const newRanks: ProfileHeaderRank[] = []
-      if (!hasPrecomputedSport && (allTimePlacementRank || yearPlacementRank)) {
-        newRanks.push({
-          key: 'coursing',
-          label: 'Курсинг',
-          rank: allTimePlacementRank,
-          yearRank: yearPlacementRank || undefined,
-          breedRank: breedPlacementRank || undefined,
-          href: `/competitions?tab=ranking&year=${competitionYear}`,
-        })
-      }
-      if (!hasPrecomputedSport && (allTimeSpeedRank || yearSpeedRank)) {
-        newRanks.push({
-          key: 'racing',
-          label: 'Бега',
-          rank: allTimeSpeedRank,
-          yearRank: yearSpeedRank || undefined,
-          breedRank: breedSpeedRank || undefined,
-          href: `/competitions?tab=ranking&year=${competitionYear}`,
-        })
-      }
-      if (showDog) {
-        newRanks.push({
-          key: 'shows',
-          label: 'Выставки',
-          rank: showDog.rank ?? showAllTimeRank,
-          breedRank: showAllTimeBreedRank || undefined,
-          yearBreedRank: showYearRank || undefined,
-          href: `/shows?tab=ranking&year=${has2026Show ? '2026' : ''}`,
-        })
-      }
-      setAsyncRanks(newRanks)
-    }
-
-    if (!loading && !showsLoading) {
-      loadRanks()
-    }
-
-    return () => {
-      cancelled = true
-    }
-  }, [dog, showDog, events, loading, showsLoading, profileId])
+  // Расчёт и асинхронная дозагрузка рангов
+  const headerRanks = useDogProfileRanks({
+    dog,
+    showDog,
+    events,
+    loading,
+    showsLoading,
+    profileId,
+  })
 
   // Объединение выставочных и спортивных титулов
   const titleGroups = useMemo(() => {
@@ -452,70 +296,32 @@ export function useDogProfileData() {
   const bestSpeedEventId = racing.best_speed_event_id || null
   const avgSpeedEventId = racing.avg_speed_event_id || null
 
-  const { primary: primaryDogName, secondary: secondaryDogName } = parseDogName(
-    headerDog?.name_lat,
-    headerDog?.name_ru,
-  )
-  const dogName = primaryDogName || toDogTitleCase(headerDog?.name_lat || headerDog?.name_ru || 'Собака')
-  const displayName =
-    secondaryDogName && secondaryDogName !== dogName
-      ? `${dogName} (${secondaryDogName})`
-      : dogName
-  const dogBreed = displayBreed(headerDog?.breed || headerBreed || '').primary || headerDog?.breed || headerBreed || ''
-  const dogTitles = titles.map((t) => t.title).join(', ')
-
-  const rawPath = dog
-    ? `/dog/${dog.id}`
-    : showDog
-      ? showDogProfilePath(showDog)
-      : competitionId
-        ? `/dog/${competitionId}`
-        : '/'
-  const profilePath = rawPath.endsWith('/') ? rawPath : `${rawPath}/`
-  const canonicalUrl = `https://coursing-stats.ru${profilePath}`
-
-  const seoFacts: string[] = []
-  if (hasCoursingData) {
-    seoFacts.push(`курсинг ${coursing.total_starts || 0} участий`)
-  }
-  if (hasRacingData) {
-    seoFacts.push(`беги ${racing.total_starts || 0} участий`)
-  }
-  if (showDog && (showDog.total_shows || 0) > 0) {
-    seoFacts.push(`выставки: ${showDog.total_shows}`)
-  }
-  if (hasSpeedRecords && speedStats?.bestSpeed != null) {
-    seoFacts.push(`Донино ${speedStats.bestSpeed.toFixed(1)} км/ч`)
-  }
-  if (hasCoursingRecords && coursingStats?.bestTime != null) {
-    seoFacts.push(`350 м ${coursingStats.bestTime.toFixed(2)} с`)
-  }
-  const totalGold = (coursing?.gold || 0) + (racing?.gold || 0)
-  const medalText = totalGold > 0 ? `${totalGold} побед (золото)` : ''
-  const description =
-    seoFacts.length > 0
-      ? `${displayName} (${dogBreed}): ${medalText ? `${medalText}, ` : ''}${seoFacts.join('; ')}. Профиль собаки, спортивная карьера, медали и результаты забегов на Coursing Stats.`
-      : `Профиль собаки ${displayName} (${dogBreed}): курсинг, бега борзых, медали и рекорды на Coursing Stats.`
-  const keywords = [
+  const {
     dogName,
-    secondaryDogName,
-    headerDog?.name_ru,
-    headerDog?.name_lat,
+    displayName,
     dogBreed,
-    'курсинг',
-    'бега борзых',
-    'рейтинг борзых 2026',
-    'выставки',
-    'Донино',
-    'статистика',
-    dogTitles,
-    'РКФ',
-  ]
-    .filter(Boolean)
-    .join(', ')
-  const seoTitle = dogBreed
-    ? `${displayName} (${dogBreed}) — профиль собаки, результаты забегов и медали`
-    : `${displayName} — профиль собаки, результаты забегов и медали`
+    profilePath,
+    canonicalUrl,
+    seoTitle,
+    description,
+    keywords,
+    alternateNames,
+  } = useDogProfileSeo({
+    headerDog,
+    headerBreed,
+    dog,
+    showDog,
+    competitionId,
+    titles,
+    hasCoursingData,
+    hasRacingData,
+    coursing,
+    racing,
+    hasSpeedRecords,
+    hasCoursingRecords,
+    speedStats,
+    coursingStats,
+  })
 
   const visibleSpeedHistory = showAllSpeedHistory
     ? (speedStats?.history ?? [])
@@ -529,14 +335,6 @@ export function useDogProfileData() {
   const visibleRacingEvents = showAllRacingEvents
     ? racingEvents
     : racingEvents.slice(0, HISTORY_DEFAULT)
-
-  const alternateNames = Array.from(
-    new Set(
-      [secondaryDogName, headerDog?.name_ru, headerDog?.name_lat].filter(
-        (n): n is string => Boolean(n && n !== dogName),
-      ),
-    ),
-  )
 
   return {
     competitionId,
