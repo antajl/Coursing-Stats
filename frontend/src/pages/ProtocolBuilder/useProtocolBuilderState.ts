@@ -1,6 +1,4 @@
 import { useState, useEffect, useRef } from 'react'
-import { toPng } from 'html-to-image'
-import { jsPDF } from 'jspdf'
 import type {
   CompetitionHeader,
   CategoryGroup,
@@ -17,14 +15,18 @@ import {
   createNewCategory,
   createNewParticipant,
   createRunData,
-  createEmptyScores
 } from './types'
 import {
-  STORAGE_KEY,
   DEFAULT_HEADER,
   createDefaultCategories,
   type ExistingDog
 } from './constants'
+import { exportToPDF, printProtocol } from './protocolPdfExport'
+import {
+  loadProtocolDraft,
+  saveProtocolDraft,
+  clearProtocolDraft
+} from './protocolDraftStorage'
 
 export function useProtocolBuilderState() {
   const [kind, setKind] = useState<CompetitionKind>('coursing')
@@ -66,7 +68,7 @@ export function useProtocolBuilderState() {
   useEffect(() => {
     const handleScroll = (e: Event) => {
       const target = e.target as HTMLElement | null
-      // Не закрывать меню, если пользователь прокручивает сам выпадающий список (титулы, порода, автокомплит)
+      // Не закрывать меню, если пользователь прокручивает сам выпадающий список
       if (target && target.closest && target.closest('[data-portal-menu]')) {
         return
       }
@@ -136,110 +138,18 @@ export function useProtocolBuilderState() {
       .catch(() => {})
   }, [])
 
-  // Загрузка черновика из localStorage
+  // Загрузка черновика из localStorage при монтировании
   useEffect(() => {
-    try {
-      const saved = localStorage.getItem(STORAGE_KEY)
-      if (saved) {
-        const parsed = JSON.parse(saved)
-        if (parsed.header) {
-          const raw = parsed.header
-          setHeader({
-            ...DEFAULT_HEADER,
-            ...raw,
-            title:
-              raw.title === 'Чемпионат РКФ по курсингу'
-                ? DEFAULT_HEADER.title
-                : raw.title || DEFAULT_HEADER.title,
-            rank: raw.rank === 'ЧРКФ' ? DEFAULT_HEADER.rank : raw.rank || DEFAULT_HEADER.rank,
-            location:
-              raw.location === 'Московская обл., Донино'
-                ? DEFAULT_HEADER.location
-                : raw.location || DEFAULT_HEADER.location,
-            club:
-              raw.club === 'МКОО Клуб Спортивного Собаководства'
-                ? DEFAULT_HEADER.club
-                : raw.club || DEFAULT_HEADER.club
-          })
-        }
-        if (parsed.kind) setKind(parsed.kind)
-        if (Array.isArray(parsed.categories) && parsed.categories.length > 0) {
-          // Нормализация runs и awards с защитой от повреждённых/устаревших черновиков
-          const normCats = parsed.categories.map((c: any) => ({
-            ...c,
-            id: c.id || 'cat_' + Math.random().toString(36).substring(2, 9),
-            breed: c.breed || 'Басенджи',
-            className: c.className || 'Стандартный',
-            sex: c.sex || 'male',
-            runsCount: c.runsCount === 1 || c.runsCount === 2 || c.runsCount === 3 ? c.runsCount : 2,
-            dogs: (c.dogs || []).map((d: any, dIdx: number) => {
-              const rawRuns =
-                Array.isArray(d.runs) && d.runs.length > 0
-                  ? d.runs
-                  : [
-                      d.run1_scores
-                        ? {
-                            heat: d.run1_heat || '1',
-                            blanket: d.run1_blanket || 'red',
-                            scores: d.run1_scores
-                          }
-                        : createRunData('1', 'red'),
-                      d.run2_scores
-                        ? {
-                            heat: d.run2_heat || '1',
-                            blanket: d.run2_blanket || 'white',
-                            scores: d.run2_scores
-                          }
-                        : createRunData('1', 'white')
-                    ]
-
-              const runs = rawRuns.map((r: any, rIdx: number) => ({
-                heat:
-                  String(r?.heat || String(rIdx + 1))
-                    .replace(/\D/g, '')
-                    .slice(0, 3) || String(rIdx + 1),
-                blanket: r?.blanket || (rIdx === 0 ? 'red' : rIdx === 1 ? 'white' : 'blue'),
-                scores: r?.scores
-                  ? {
-                      speed: typeof r.scores.speed === 'number' ? r.scores.speed : '',
-                      enthusiasm: typeof r.scores.enthusiasm === 'number' ? r.scores.enthusiasm : '',
-                      intelligence:
-                        typeof r.scores.intelligence === 'number' ? r.scores.intelligence : '',
-                      agility: typeof r.scores.agility === 'number' ? r.scores.agility : '',
-                      endurance: typeof r.scores.endurance === 'number' ? r.scores.endurance : ''
-                    }
-                  : createEmptyScores(),
-                status: r?.status || 'normal',
-                reason: r?.reason || ''
-              }))
-
-              return {
-                id: d.id || 'dog_' + Math.random().toString(36).substring(2, 9),
-                catalogNumber: d.catalogNumber ?? String(dIdx + 1),
-                dogName: d.dogName || '',
-                sex: d.sex || 'male',
-                runs,
-                racing_box: d.racing_box || '1',
-                racing_time1: d.racing_time1 || '',
-                racing_time2: d.racing_time2 || '',
-                racing_final_time: d.racing_final_time || '',
-                disqualified: Boolean(d.disqualified),
-                comment: d.comment || '',
-                awards: Array.isArray(d.awards) ? d.awards : []
-              }
-            })
-          }))
-          setCategories(normCats)
-        }
-      }
-    } catch {}
+    const draft = loadProtocolDraft()
+    if (!draft) return
+    if (draft.header) setHeader(draft.header)
+    if (draft.kind) setKind(draft.kind)
+    if (draft.categories) setCategories(draft.categories)
   }, [])
 
   // Автосохранение черновика
   useEffect(() => {
-    try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify({ header, kind, categories }))
-    } catch {}
+    saveProtocolDraft({ header, kind, categories })
   }, [header, kind, categories])
 
   // Добавление новой категории
@@ -536,12 +446,7 @@ export function useProtocolBuilderState() {
   }
 
   const handlePrint = () => {
-    const originalTitle = document.title
-    document.title = header.title ? `${header.title} — Результаты` : 'Протокол соревнований'
-    window.print()
-    setTimeout(() => {
-      document.title = originalTitle
-    }, 1000)
+    printProtocol(header.title)
   }
 
   const handleDownloadPDF = async () => {
@@ -549,57 +454,7 @@ export function useProtocolBuilderState() {
     setIsDownloadOpen(false)
     setIsExportingPDF(true)
     try {
-      const element = printableRef.current
-      const canvas = await toPng(element, {
-        quality: 1,
-        pixelRatio: 2,
-        backgroundColor: '#ffffff'
-      })
-
-      const img = new Image()
-      img.src = canvas
-      await new Promise((resolve, reject) => {
-        img.onload = () => resolve(true)
-        img.onerror = reject
-      })
-
-      // Альбомная ориентация для широких таблиц результатов
-      const isLandscape = img.width > img.height * 1.15
-      const orientation = isLandscape ? 'landscape' : 'portrait'
-      const pdf = new jsPDF(orientation, 'mm', 'a4')
-
-      const pageWidth = pdf.internal.pageSize.getWidth()
-      const pageHeight = pdf.internal.pageSize.getHeight()
-      const margin = 8
-      const contentWidth = pageWidth - margin * 2
-      const contentHeight = (img.height * contentWidth) / img.width
-      const usableHeight = pageHeight - margin * 2
-
-      if (contentHeight <= usableHeight) {
-        pdf.addImage(canvas, 'PNG', margin, margin, contentWidth, contentHeight)
-      } else {
-        let heightLeft = contentHeight
-        let position = margin
-
-        pdf.addImage(canvas, 'PNG', margin, position, contentWidth, contentHeight)
-        heightLeft -= usableHeight
-
-        while (heightLeft > 0) {
-          position -= usableHeight
-          pdf.addPage()
-          pdf.addImage(canvas, 'PNG', margin, position, contentWidth, contentHeight)
-          heightLeft -= usableHeight
-        }
-      }
-
-      const safeName = (header.title || 'protocol')
-        .toLowerCase()
-        .replace(/[^a-zа-яё0-9]+/gi, '_')
-        .replace(/^_+|_+$/g, '')
-      pdf.save(`${safeName || 'protocol'}_${header.date || 'results'}.pdf`)
-    } catch (err) {
-      console.error('PDF export failed:', err)
-      handlePrint()
+      await exportToPDF(printableRef.current, header, handlePrint)
     } finally {
       setIsExportingPDF(false)
     }
@@ -607,7 +462,7 @@ export function useProtocolBuilderState() {
 
   const handleResetToDefault = () => {
     if (window.confirm('Стереть все внесённые данные и сбросить протокол до начального состояния?')) {
-      localStorage.removeItem(STORAGE_KEY)
+      clearProtocolDraft()
       setHeader({
         ...DEFAULT_HEADER,
         date: new Date().toISOString().substring(0, 10)
