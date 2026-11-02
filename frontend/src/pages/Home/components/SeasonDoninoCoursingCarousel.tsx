@@ -40,7 +40,7 @@ export default function SeasonDoninoCoursingCarousel({
   const renderHeaderItem = (s: BreedSlide<CoursingRecord>) => {
     const rankingHref = `/coursing-records?breed=${encodeURIComponent(s.breedKey)}`
     return (
-      <div className="w-full shrink-0 flex items-center justify-start md:justify-center gap-1.5 pr-2 md:px-2">
+      <div className="w-full shrink-0 flex items-center justify-center gap-1.5 px-2">
         <Link
           to={rankingHref}
           className="truncate text-[12px] font-semibold text-camel-800 hover:underline"
@@ -84,9 +84,9 @@ export default function SeasonDoninoCoursingCarousel({
 
   return (
     <div className="flex min-h-0 min-w-0 flex-1 flex-col">
-      <div className="home-v2-col-head home-v2-col-head--tabs !flex-nowrap gap-1.5 sm:gap-2">
+      <div className="home-v2-col-head home-v2-col-head--tabs !flex-nowrap gap-1.5 sm:gap-2 relative">
         <span className="hidden md:inline shrink-0">Бега 350 м</span>
-        <div className="overflow-hidden flex min-w-0 flex-1 pl-20 md:pr-0">
+        <div className="overflow-hidden flex min-w-0 flex-1 px-20 md:px-0">
           <div className="flex w-full will-change-transform" style={trackStyle}>
             {renderHeaderItem(prevSlide)}
             {renderHeaderItem(slide)}
