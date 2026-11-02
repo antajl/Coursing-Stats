@@ -373,10 +373,10 @@ export function useHomeBreedCarousel(slideCount: number): HomeBreedCarouselApi {
   }
 
   const touchHandlers = {
-    onTouchStart,
-    onTouchMove,
-    onTouchEnd,
-    onTouchCancel,
+    onTouchStart: undefined,
+    onTouchMove: undefined,
+    onTouchEnd: undefined,
+    onTouchCancel: undefined,
     onClickCapture,
   }
 

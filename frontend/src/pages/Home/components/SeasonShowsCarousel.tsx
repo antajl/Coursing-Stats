@@ -5,7 +5,7 @@ import HomeSeasonTopRow from '../../../components/HomeSeasonTopRow'
 import { showHomeMetric } from '../utils/formatters'
 import type { HomeBreedCarouselApi } from '../hooks/useHomeBreedCarousel'
 import { HomeBreedCarouselPager } from './HomeBreedCarouselPager'
-import { HomeSubSectionCapsule } from './SeasonTopSection'
+import { HomeSubSectionTab } from './SeasonTopSection'
 import type { BreedSlide } from '../utils/breedSeasonSlides'
 import type { ShowHomeTopDog } from '../../../lib/staticData'
 
@@ -94,25 +94,25 @@ export default function SeasonShowsCarousel({
     >
       <div className="home-v2-col-head home-v2-col-head--tabs !flex-nowrap gap-1.5 sm:gap-2">
         <span className="hidden md:inline shrink-0">Выставки</span>
-        <div className="overflow-hidden flex min-w-0 flex-1">
+        <div className="overflow-hidden flex min-w-0 flex-1 pr-24 md:pr-0">
           <div className="flex w-full will-change-transform" style={trackStyle}>
             {renderHeaderItem(prevSlide)}
             {renderHeaderItem(slide)}
             {renderHeaderItem(nextSlide)}
           </div>
         </div>
-        <div className="shrink-0 flex items-center gap-1.5 ml-auto">
-          <span className="hidden md:inline shrink-0 text-[11px] font-normal text-old-money-600">
+        <div className="shrink-0 flex items-center gap-1.5 ml-auto hidden md:flex">
+          <span className="shrink-0 text-[11px] font-normal text-old-money-600">
             по титулам
           </span>
-          {onToggleSubTab && (
-            <HomeSubSectionCapsule
-              currentLabel="По породам"
-              isFirst={true}
-              onToggle={onToggleSubTab}
-            />
-          )}
         </div>
+        {onToggleSubTab && (
+          <HomeSubSectionTab
+            targetLabel="Все породы"
+            direction="right"
+            onToggle={onToggleSubTab}
+          />
+        )}
       </div>
 
       <div className="overflow-hidden flex-1 flex flex-col">
