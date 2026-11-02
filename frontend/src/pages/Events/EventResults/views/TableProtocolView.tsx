@@ -15,6 +15,7 @@ import { normalizeQualificationAndVc } from '../ResultSummary'
 import { parseDogName, toDogTitleCase } from '../../../../lib/dogName'
 import HoverTooltip from '../../../../components/ui/HoverTooltip'
 import { useInfiniteScroll } from '../../../../hooks/useInfiniteScroll'
+import ProtocolHeatBadge, { getHeatDistance } from '../components/ProtocolHeatBadge'
 import type { Result, Heat, RawScores } from '../types'
 
 interface TableProtocolViewProps {
@@ -49,72 +50,6 @@ function breedCountLabel(count: number): string {
   if (mod10 === 1 && mod100 !== 11) return `${count} собака`
   if (mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14)) return `${count} собаки`
   return `${count} собак`
-}
-
-function getHeatDistance(heat: Heat, rawScores: RawScores | null): number | null {
-  if (heat.time && heat.speed_kmh) {
-    const t = typeof heat.time === 'number' ? heat.time : parseFloat(String(heat.time))
-    if (!isNaN(t) && t > 0) {
-      return Math.round((heat.speed_kmh / 3.6) * t)
-    }
-  }
-  return (heat as any).distance || (rawScores as any)?.distance || null
-}
-
-/** Компактная плашка забега/заезда (цвет попоны с нанесенным номером забега/заезда) */
-function ProtocolHeatBadge({
-  heatNumber,
-  bibColor,
-  bibNumber,
-  distance,
-  isRacing = false,
-}: {
-  heatNumber?: number | string | null
-  bibColor?: string | null
-  bibNumber?: number | string | null
-  distance?: number | null
-  isRacing?: boolean
-}) {
-  const normalized = normalizeBibColorName(bibColor ?? undefined, isRacing)
-  const isRed = normalized === 'red'
-  const isBlue = normalized === 'blue'
-  const isBlack = normalized === 'black'
-  const isWhite = normalized === 'white'
-  const isYellow = normalized === 'yellow'
-  const isGreen = normalized === 'green'
-
-  const colorClass = isRed
-    ? 'bg-rose-600 text-white border-rose-700'
-    : isBlue
-      ? 'bg-sky-600 text-white border-sky-700'
-      : isBlack
-        ? 'bg-charcoal-900 text-white border-charcoal-950'
-        : isWhite
-          ? 'bg-white text-charcoal-900 border-old-money-300'
-          : isYellow
-            ? 'bg-amber-300 text-charcoal-900 border-amber-400'
-            : isGreen
-              ? 'bg-emerald-600 text-white border-emerald-700'
-              : 'bg-old-money-100 text-charcoal-800 border-old-money-300'
-
-  const label = heatNumber != null ? String(heatNumber) : '—'
-  const colorName = normalized ? (BIB_COLOR_LABELS[normalized] || normalized) : 'Попона'
-  const bibInfo =
-    bibNumber != null && String(bibNumber) !== String(heatNumber) ? ` (попона №${bibNumber})` : ''
-  const tooltipText = `${colorName}${bibInfo} · ${isRacing ? 'Заезд' : 'Забег'} №${label}${distance ? ` (${distance}м)` : ''}`
-
-  return (
-    <HoverTooltip label={tooltipText} placement="top" portal delayMs={0}>
-      <span className="relative inline-flex items-center justify-center shrink-0">
-        <span
-          className={`inline-flex items-center justify-center min-w-[1.5rem] h-5.5 rounded px-1.5 py-0.5 text-xs font-mono font-bold cursor-help select-none shrink-0 border shadow-2xs transition-all ${colorClass}`}
-          style={!colorClass.includes('bg-') && normalized ? bibColorStyle(normalized) : undefined}
-        >
-          <span>{label}</span>
-        </span>
-      </span>
-    </HoverTooltip>
-  )
 }
 
 export default function TableProtocolView({

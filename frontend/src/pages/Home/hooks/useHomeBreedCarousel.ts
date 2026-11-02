@@ -32,6 +32,8 @@ export type HomeBreedCarouselApi = {
   next: () => void
   slideDirection: 1 | -1
   animState: AnimState
+  isNudging: boolean
+  triggerNudge: () => void
   trackStyle: CSSProperties
   fadeStyle: CSSProperties | undefined
   slideStyle: CSSProperties | undefined
@@ -80,6 +82,23 @@ export function useHomeBreedCarousel(slideCount: number): HomeBreedCarouselApi {
 
   const animTimerRef = useRef<number | null>(null)
   const clickBlockTimerRef = useRef<number | null>(null)
+  const [isNudging, setIsNudging] = useState(false)
+
+  const triggerNudge = useCallback(() => {
+    if (animState !== 'idle' || dragOffset !== 0) return
+    setIsNudging(true)
+    setTimeout(() => {
+      setIsNudging(false)
+    }, 750)
+  }, [animState, dragOffset])
+
+  useEffect(() => {
+    if (slideCount <= 1) return
+    const timer = setTimeout(() => {
+      triggerNudge()
+    }, 700)
+    return () => clearTimeout(timer)
+  }, [slideCount, triggerNudge])
 
   const reduceMotion = prefersReducedMotion()
   const autoplay = slideCount > 1 && !reduceMotion
@@ -142,6 +161,14 @@ export function useHomeBreedCarousel(slideCount: number): HomeBreedCarouselApi {
       return { transform: 'translateX(-100%)' }
     }
 
+    if (isNudging) {
+      return {
+        transform: 'translateX(-100%)',
+        animation: 'silkNudgeHome 750ms cubic-bezier(0.25, 1, 0.5, 1) forwards',
+        willChange: 'transform',
+      }
+    }
+
     if (animState === 'dragging') {
       return {
         transform: `translateX(calc(-100% + ${dragOffset}px))`,
@@ -178,11 +205,12 @@ export function useHomeBreedCarousel(slideCount: number): HomeBreedCarouselApi {
       transform: 'translateX(-100%)',
       transition: 'none',
     }
-  }, [animState, dragOffset, reduceMotion])
+  }, [animState, dragOffset, isNudging, reduceMotion])
 
   const onTouchStart = useCallback(
     (e: TouchEvent<HTMLDivElement>) => {
       if (slideCount <= 1 || e.touches.length !== 1 || animState !== 'idle') return
+      setIsNudging(false)
       const touch = e.touches[0]
       touchStartX.current = touch.clientX
       touchStartY.current = touch.clientY
@@ -364,6 +392,8 @@ export function useHomeBreedCarousel(slideCount: number): HomeBreedCarouselApi {
     next,
     slideDirection,
     animState,
+    isNudging,
+    triggerNudge,
     trackStyle,
     fadeStyle: undefined,
     slideStyle: undefined,

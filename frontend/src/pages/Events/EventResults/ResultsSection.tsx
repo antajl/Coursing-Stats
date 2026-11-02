@@ -1,10 +1,12 @@
 import { useState, useMemo } from 'react'
 import { X, ChevronDown } from 'lucide-react'
 import TableProtocolView from './views/TableProtocolView'
+import MobileCardsProtocolView from './views/MobileCardsProtocolView'
 import {
   groupResultsByBreedClass,
   groupRacingResults,
   isRacingFormat,
+  isCoursingFormat,
   parseRawScores,
   getBestTimesByRace,
   extractDogSex,
@@ -41,16 +43,31 @@ export default function ResultsSection({ results, trailing }: ResultsSectionProp
     )
   }
 
-  // Split results if multi-discipline event (e.g. Marathon with Racing and Coursing)
-  const racingResults = useMemo(() => {
-    return results.filter(r => isRacingFormat(parseRawScores(r.raw_scores_json)))
+  // Multi-discipline detection (e.g. Marathon with genuine Racing and Coursing rounds)
+  const isMultiDiscipline = useMemo(() => {
+    const hasRacing = results.some(r => isRacingFormat(parseRawScores(r.raw_scores_json)))
+    const hasCoursing = results.some(r => isCoursingFormat(parseRawScores(r.raw_scores_json)))
+    return hasRacing && hasCoursing
   }, [results])
+
+  const racingResults = useMemo(() => {
+    if (!isMultiDiscipline) return results
+    return results.filter(r => {
+      if (r.breed_class?.includes('Курсинг') && !r.breed_class?.includes('Рейсинг')) return false
+      if (isCoursingFormat(parseRawScores(r.raw_scores_json))) return false
+      return true
+    })
+  }, [results, isMultiDiscipline])
 
   const coursingResults = useMemo(() => {
-    return results.filter(r => !isRacingFormat(parseRawScores(r.raw_scores_json)))
-  }, [results])
+    if (!isMultiDiscipline) return results
+    return results.filter(r => {
+      if (r.breed_class?.includes('Рейсинг') && !r.breed_class?.includes('Курсинг')) return false
+      if (isRacingFormat(parseRawScores(r.raw_scores_json))) return false
+      return true
+    })
+  }, [results, isMultiDiscipline])
 
-  const isMultiDiscipline = racingResults.length > 0 && coursingResults.length > 0
   const [activeTab, setActiveTab] = useState<'racing' | 'coursing'>('racing')
 
   const activeResults = isMultiDiscipline
@@ -476,12 +493,27 @@ export default function ResultsSection({ results, trailing }: ResultsSectionProp
           Собаки по заданным фильтрам не найдены
         </div>
       ) : (
-        <TableProtocolView
-          groupedResults={filteredGrouped}
-          sortedGroupKeys={filteredSortedGroups}
-          bestTimesByRace={bestTimesByRace}
-          isRacing={isRacing}
-        />
+        <>
+          {/* Мобильная версия (< 640px): бесшовные монолитные карточки без отступов между собаками и заголовками */}
+          <div className="block sm:hidden">
+            <MobileCardsProtocolView
+              groupedResults={filteredGrouped}
+              sortedGroupKeys={filteredSortedGroups}
+              bestTimesByRace={bestTimesByRace}
+              isRacing={isRacing}
+            />
+          </div>
+
+          {/* Десктопная версия (≥ 640px): монолитная таблица с фиксированной сеткой колонок */}
+          <div className="hidden sm:block">
+            <TableProtocolView
+              groupedResults={filteredGrouped}
+              sortedGroupKeys={filteredSortedGroups}
+              bestTimesByRace={bestTimesByRace}
+              isRacing={isRacing}
+            />
+          </div>
+        </>
       )}
     </div>
   )

@@ -13,6 +13,7 @@ interface DoninoColumnPlaqueProps {
   title: string
   count: number
   action?: ReactNode
+  countClassName?: string
   /** Header bar inside DoninoColumnShell (no outer margin/border). */
   asHeader?: boolean
 }
@@ -21,6 +22,7 @@ export default function DoninoColumnPlaque({
   title,
   count,
   action,
+  countClassName,
   asHeader = false,
 }: DoninoColumnPlaqueProps) {
   const shellClass = asHeader
@@ -44,7 +46,7 @@ export default function DoninoColumnPlaque({
           <div className="pointer-events-auto">{action}</div>
         </div>
       )}
-      <span className="relative z-[1] ml-auto shrink-0 pl-2 text-xs font-semibold text-old-money-600">
+      <span className={`relative z-[1] ml-auto shrink-0 pl-2 text-xs font-semibold text-old-money-600 ${countClassName || ''}`}>
         {formatDogCount(count)}
       </span>
     </div>

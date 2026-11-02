@@ -1,5 +1,5 @@
 import { useMemo, useState, type ReactNode } from 'react'
-import { ChevronDown, X, ArrowLeftRight } from 'lucide-react'
+import { ChevronDown, X } from 'lucide-react'
 import DogSexIcon from '../../components/DogSexIcon'
 import PageToolbar from '../../components/toolbar/PageToolbar'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
@@ -253,22 +253,6 @@ export default function TopDogsFilters({
               aria-label="Сбросить фильтры"
             >
               <X className="h-4 w-4" />
-            </button>
-          )}
-
-          {/* Кнопка дисциплины (Чистый призрак со стрелочкой) */}
-          {activeMobileColumn && onMobileColumnChange && (
-            <button
-              type="button"
-              onClick={() => onMobileColumnChange(isCoursing ? 'racing' : 'coursing')}
-              className="relative shrink-0 inline-flex h-8 items-center gap-1.5 rounded-md px-2 text-charcoal-900 hover:bg-cream-200/60 active:bg-cream-200/90 active:scale-95 transition-all touch-manipulation cursor-pointer before:absolute before:-inset-1.5 before:content-['']"
-              title={`Переключить на ${isCoursing ? 'рейсинг' : 'курсинг'} (или смахните экран)`}
-              aria-label={`Переключить на ${isCoursing ? 'рейсинг' : 'курсинг'}`}
-            >
-              <span className="font-serif text-xs font-bold text-charcoal-900 tracking-tight whitespace-nowrap">
-                {isCoursing ? 'Курсинг' : 'Рейсинг'}
-              </span>
-              <ArrowLeftRight className="h-3 w-3 text-camel-700 shrink-0" aria-hidden />
             </button>
           )}
 

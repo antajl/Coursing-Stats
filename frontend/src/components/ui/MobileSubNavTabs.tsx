@@ -25,15 +25,21 @@ export function MobileSubNavTabs<T extends string = string>({
   breakpoint = 'md',
 }: MobileSubNavTabsProps<T>) {
   const activeTabRef = useRef<HTMLButtonElement | null>(null)
+  const scrollContainerRef = useRef<HTMLDivElement | null>(null)
   const isFill = layout === 'fill' || (layout === 'auto' && tabs.length <= 4)
   const hideClass = breakpoint === 'lg' ? 'lg:hidden' : 'md:hidden'
 
   useEffect(() => {
-    if (!isFill) {
-      activeTabRef.current?.scrollIntoView({
+    if (!isFill && scrollContainerRef.current && activeTabRef.current) {
+      const container = scrollContainerRef.current
+      const el = activeTabRef.current
+      const cRect = container.getBoundingClientRect()
+      const elRect = el.getBoundingClientRect()
+      const relLeft = elRect.left - cRect.left + container.scrollLeft
+      const target = relLeft - (container.clientWidth - elRect.width) / 2
+      container.scrollTo({
+        left: Math.max(0, target),
         behavior: 'smooth',
-        inline: 'center',
-        block: 'nearest',
       })
     }
   }, [activeTab, isFill])
@@ -45,6 +51,7 @@ export function MobileSubNavTabs<T extends string = string>({
       className={`relative mb-3 sm:mb-4 ${hideClass} border-b border-old-money-200/90 ${className}`.trim()}
     >
       <div
+        ref={scrollContainerRef}
         className={
           isFill
             ? 'flex w-full items-center'

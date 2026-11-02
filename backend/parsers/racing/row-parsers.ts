@@ -35,7 +35,7 @@ export function parseNonArrivedRow($, $row, breedClass) {
     qualification: null,
     vc: null,
     status: statusText === "Неявка" ? "dns" : "unknown_status",
-    raw_scores_json: JSON.stringify({ heats: [], grand_total: null, normalized_score: null }),
+    raw_scores_json: JSON.stringify({ heats: [], grand_total: null, normalized_score: null, format: "racing" }),
     raw_text: $row.html() || "",
   };
 }

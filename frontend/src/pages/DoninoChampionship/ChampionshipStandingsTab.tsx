@@ -1,5 +1,5 @@
-import React, { useState, useMemo, useRef } from 'react'
-import { X, ChevronDown, Trophy, Timer, Award } from 'lucide-react'
+import React, { useState, useMemo, useRef, useEffect } from 'react'
+import { X, ChevronDown, Trophy, Timer, Award, ChevronLeft, ChevronRight, Sparkles } from 'lucide-react'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
 import ModernDropdown from '../../components/ui/ModernDropdown'
 import BreedSearchDropdown from '../../components/ui/BreedSearchDropdown'
@@ -8,6 +8,7 @@ import DogSexIcon from '../../components/DogSexIcon'
 import { toolbarPillTriggerClass } from '../../lib/toolbar'
 import { formatBreedName, matchesBreedFilter } from '../../lib/breedMapping'
 import type { ChampionshipStanding, ChampionshipPromotion } from '../../lib/staticData/donino'
+import { useInfiniteScroll } from '../../hooks/useInfiniteScroll'
 import ChampionshipDogCard from './components/ChampionshipDogCard'
 import ChampionshipAnatomyWidget from './components/ChampionshipAnatomyWidget'
 import ChampionshipPointsRulesWidget from './components/ChampionshipPointsRulesWidget'
@@ -39,15 +40,47 @@ export default function ChampionshipStandingsTab({
   const [expandedDogKey, setExpandedDogKey] = useState<string | null>(null)
   const [sortMode, setSortMode] = useState<'points' | 'time'>('time')
 
-  // Mobile swipe gesture to toggle between "По скорости" and "По баллам"
+  const [dragOffset, setDragOffset] = useState<number | null>(null)
+  const [isTransitioning, setIsTransitioning] = useState(false)
+  const [isNudging, setIsNudging] = useState(false)
+  const hadMovedRef = useRef(false)
+  const transitionTimeoutRef = useRef<number | null>(null)
+
+  const activeSlide = sortMode === 'time' ? 0 : 1
+
+  const triggerNudge = () => {
+    if (dragOffset !== null && dragOffset !== 0) return
+    setIsNudging(true)
+    setTimeout(() => {
+      setIsNudging(false)
+    }, 750)
+  }
+
+  // Auto-play gentle invitation nudge on page load (after 600ms)
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      triggerNudge()
+    }, 600)
+    return () => clearTimeout(timer)
+  }, [])
+
+  // Mobile swipe gesture with real-time drag following finger
   const touchStartRef = useRef<{ x: number; y: number; time: number } | null>(null)
   const gestureLockRef = useRef<'horizontal' | 'vertical' | null>(null)
 
   const handleTouchStart = (e: React.TouchEvent) => {
     if (typeof window !== 'undefined' && window.innerWidth >= 1024) return
+    setIsNudging(false)
     const touch = e.touches[0]
     touchStartRef.current = { x: touch.clientX, y: touch.clientY, time: Date.now() }
     gestureLockRef.current = null
+    hadMovedRef.current = false
+    if (transitionTimeoutRef.current) {
+      clearTimeout(transitionTimeoutRef.current)
+      transitionTimeoutRef.current = null
+    }
+    setIsTransitioning(false)
+    setDragOffset(0)
   }
 
   const handleTouchMove = (e: React.TouchEvent) => {
@@ -56,15 +89,26 @@ export default function ChampionshipStandingsTab({
     const dx = touch.clientX - touchStartRef.current.x
     const dy = touch.clientY - touchStartRef.current.y
 
+    if (Math.abs(dx) > 8 || Math.abs(dy) > 8) {
+      hadMovedRef.current = true
+    }
+
     if (!gestureLockRef.current) {
       const absDx = Math.abs(dx)
       const absDy = Math.abs(dy)
-      if (absDx < 10 && absDy < 10) return
+      if (absDx < 8 && absDy < 8) return
       if (absDy >= absDx) {
         gestureLockRef.current = 'vertical'
         return
       }
       gestureLockRef.current = 'horizontal'
+    }
+
+    if (gestureLockRef.current === 'horizontal') {
+      const isAtLeftEdge = activeSlide === 0 && dx > 0
+      const isAtRightEdge = activeSlide === 1 && dx < 0
+      const appliedDx = isAtLeftEdge || isAtRightEdge ? dx * 0.22 : dx
+      setDragOffset(appliedDx)
     }
   }
 
@@ -80,23 +124,63 @@ export default function ChampionshipStandingsTab({
     gestureLockRef.current = null
 
     if (isHorizontal) {
-      const isSwipeLeft = dx < -45 || (dx < -25 && velocity > 0.25)
-      const isSwipeRight = dx > 45 || (dx > 25 && velocity > 0.25)
+      const isSwipeLeft = dx < -35 || (dx < -15 && velocity > 0.2)
+      const isSwipeRight = dx > 35 || (dx > 15 && velocity > 0.2)
 
-      if (isSwipeLeft && sortMode === 'time') {
+      setIsTransitioning(true)
+      setDragOffset(null)
+
+      if (isSwipeLeft && activeSlide === 0) {
         setSortMode('points')
         ;(e.nativeEvent as any)._doninoSwipeConsumed = true
-      } else if (isSwipeRight && sortMode === 'points') {
+      } else if (isSwipeRight && activeSlide === 1) {
         setSortMode('time')
         ;(e.nativeEvent as any)._doninoSwipeConsumed = true
       }
+
+      transitionTimeoutRef.current = window.setTimeout(() => {
+        setIsTransitioning(false)
+        hadMovedRef.current = false
+      }, 400)
+    } else {
+      setDragOffset(null)
+      hadMovedRef.current = false
     }
   }
 
   const handleTouchCancel = () => {
     touchStartRef.current = null
     gestureLockRef.current = null
+    setDragOffset(null)
+    hadMovedRef.current = false
   }
+
+  const isDragging = dragOffset !== null && dragOffset !== 0
+  const isAnimating = isTransitioning || isDragging || isNudging
+
+  const handleSortModeChange = (mode: 'points' | 'time') => {
+    if (mode === sortMode) return
+    setIsTransitioning(true)
+    setSortMode(mode)
+    if (transitionTimeoutRef.current) {
+      clearTimeout(transitionTimeoutRef.current)
+    }
+    transitionTimeoutRef.current = window.setTimeout(() => {
+      setIsTransitioning(false)
+    }, 400)
+  }
+
+  const transformStr = useMemo(() => {
+    if (typeof window !== 'undefined' && window.innerWidth >= 1024) {
+      return activeSlide === 0 ? 'translateX(0%)' : 'translateX(-100%)'
+    }
+
+    const dragPx = dragOffset ?? 0
+    if (activeSlide === 0) {
+      return `translateX(${dragPx}px)`
+    }
+    return `translateX(calc(-100% + ${dragPx}px))`
+  }, [activeSlide, dragOffset])
 
   // Candidate breeds sorted strictly by participant count descending, then alphabetically
   const candidateBreeds = useMemo(() => {
@@ -191,10 +275,10 @@ export default function ChampionshipStandingsTab({
     return counts
   }, [standings, searchQuery, selectedBreed, selectedSex])
 
-  // Filtered and sorted standings
-  const filtered = useMemo(() => {
+  // Base filtered list before sorting
+  const baseFiltered = useMemo(() => {
     const searchLower = searchQuery.toLowerCase()
-    const res = (standings || []).filter((d) => {
+    return (standings || []).filter((d) => {
       const matchesLeague =
         selectedLeague === 'all' || d.current_league === selectedLeague
       const matchesSearch =
@@ -210,23 +294,35 @@ export default function ChampionshipStandingsTab({
         (selectedSex === 'f' && ((d.sex || '').toLowerCase().startsWith('с') || d.sex === 'f'))
       return matchesLeague && matchesSearch && matchesBreed && matchesSex
     })
+  }, [standings, selectedLeague, searchQuery, selectedBreed, selectedSex])
 
-    if (sortMode === 'points') {
-      return res.sort((a, b) => {
-        const diff = (b.total_points || 0) - (a.total_points || 0)
-        if (diff !== 0) return diff
-        const timeA = a.best_time ?? 999
-        const timeB = b.best_time ?? 999
-        return timeA - timeB
-      })
-    }
-    return res.sort((a, b) => {
+  const filteredByTime = useMemo(() => {
+    return [...baseFiltered].sort((a, b) => {
       const timeA = a.best_time ?? 999
       const timeB = b.best_time ?? 999
       if (timeA !== timeB) return timeA - timeB
       return (b.total_points || 0) - (a.total_points || 0)
     })
-  }, [standings, selectedLeague, searchQuery, selectedBreed, selectedSex, sortMode])
+  }, [baseFiltered])
+
+  const filteredByPoints = useMemo(() => {
+    return [...baseFiltered].sort((a, b) => {
+      const diff = (b.total_points || 0) - (a.total_points || 0)
+      if (diff !== 0) return diff
+      const timeA = a.best_time ?? 999
+      const timeB = b.best_time ?? 999
+      return timeA - timeB
+    })
+  }, [baseFiltered])
+
+  const filtered = sortMode === 'time' ? filteredByTime : filteredByPoints
+
+  const listLength = Math.max(filteredByTime.length, filteredByPoints.length)
+  const { visibleCount, loadMoreRef, hasMore } = useInfiniteScroll(
+    listLength,
+    [selectedLeague, searchQuery, selectedBreed, selectedSex, sortMode],
+    30
+  )
 
   const toggleExpand = (dogKey: string) => {
     setExpandedDogKey((prev) => (prev === dogKey ? null : dogKey))
@@ -237,6 +333,52 @@ export default function ChampionshipStandingsTab({
     setSearchQuery('')
     setSelectedBreed('')
     setSelectedSex('')
+  }
+
+  const renderDogList = (list: typeof filteredByTime, mode: 'time' | 'points') => {
+    if (list.length === 0) {
+      return (
+        <div className="bg-cream-50/50 p-8 text-center text-charcoal-600 space-y-2">
+          <div className="text-sm font-semibold">Ничего не найдено</div>
+          <div className="text-xs text-charcoal-500">
+            Попробуйте изменить поисковый запрос или сбросить фильтры
+          </div>
+          <button
+            type="button"
+            onClick={handleResetFilters}
+            className="mt-2 inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-camel-600 text-white hover:bg-camel-700 cursor-pointer"
+          >
+            Сбросить фильтры
+          </button>
+        </div>
+      )
+    }
+
+    const visibleList = list.slice(0, visibleCount)
+
+    return (
+      <div className="divide-y divide-old-money-100">
+        {visibleList.map((dog, idx) => {
+          const dogNameLower = String(dog.name || '').trim().toLowerCase()
+          const dogPromotions =
+            (dogNameLower ? dogPromotionsMap.get(dogNameLower) : undefined) ||
+            (dog.name_ru ? dogPromotionsMap.get(dog.name_ru.trim().toLowerCase()) : undefined) ||
+            (dog.name_lat ? dogPromotionsMap.get(dog.name_lat.trim().toLowerCase()) : undefined)
+
+          return (
+            <ChampionshipDogCard
+              key={`${mode}-${dog.dog_key}`}
+              dog={dog}
+              rank={idx + 1}
+              isExpanded={expandedDogKey === dog.dog_key}
+              sortMode={mode}
+              dogPromotions={dogPromotions}
+              onToggle={() => toggleExpand(dog.dog_key)}
+            />
+          )
+        })}
+      </div>
+    )
   }
 
   const hasActiveFilters =
@@ -587,38 +729,121 @@ export default function ChampionshipStandingsTab({
       {/* 2. Main 2-Column Grid Layout (Ranking on Left, Statistics Widgets on Right) */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
         {/* Left Column: Dog Ranking Cards */}
-        <div className="lg:col-span-7 xl:col-span-8">
-          {/* Main Dog Ranking Card */}
+        <div className="lg:col-span-7 xl:col-span-8 space-y-3">
+          {/* GPU Keyframes for ultra-smooth spring nudge and synchronized arrow bounce */}
+          <style>{`
+            @keyframes silkNudgeLeft {
+              0% { transform: translate3d(0, 0, 0); }
+              22% { transform: translate3d(-34px, 0, 0); }
+              38% { transform: translate3d(-34px, 0, 0); }
+              66% { transform: translate3d(4px, 0, 0); }
+              82% { transform: translate3d(-1px, 0, 0); }
+              100% { transform: translate3d(0, 0, 0); }
+            }
+            @keyframes silkNudgeRight {
+              0% { transform: translate3d(-100%, 0, 0); }
+              22% { transform: translate3d(calc(-100% + 34px), 0, 0); }
+              38% { transform: translate3d(calc(-100% + 34px), 0, 0); }
+              66% { transform: translate3d(calc(-100% - 4px), 0, 0); }
+              82% { transform: translate3d(calc(-100% + 1px), 0, 0); }
+              100% { transform: translate3d(-100%, 0, 0); }
+            }
+            @keyframes arrowNudge {
+              0%, 100% { transform: translate3d(0, 0, 0); }
+              22%, 38% { transform: translate3d(3px, 0, 0); }
+              66% { transform: translate3d(-1px, 0, 0); }
+            }
+            .animate-silk-nudge-left {
+              animation: silkNudgeLeft 750ms cubic-bezier(0.25, 1, 0.5, 1) forwards;
+            }
+            .animate-silk-nudge-right {
+              animation: silkNudgeRight 750ms cubic-bezier(0.25, 1, 0.5, 1) forwards;
+            }
+            .animate-arrow-nudge {
+              animation: arrowNudge 750ms cubic-bezier(0.25, 1, 0.5, 1) forwards;
+            }
+          `}</style>
+
+
+
+          {/* Main Dog Ranking Card with Physical Swipe Carousel */}
           <div
-            className="overflow-hidden rounded-2xl border border-old-money-200 bg-white shadow-2xs touch-pan-y select-none sm:select-auto"
+            className="relative overflow-hidden rounded-2xl border border-old-money-200 bg-white shadow-2xs touch-pan-y select-none sm:select-auto"
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
             onTouchCancel={handleTouchCancel}
+            onClickCapture={(e) => {
+              if (hadMovedRef.current) {
+                e.preventDefault()
+                e.stopPropagation()
+              }
+            }}
           >
             {/* Card Header inside */}
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 px-3.5 sm:px-4 py-3 border-b border-old-money-100 bg-cream-50/40">
-              <div className="flex items-center justify-between sm:justify-start gap-2 min-w-0">
-                <div className="flex items-center gap-2 min-w-0">
-                  <Trophy className="w-4 h-4 text-camel-700 shrink-0" />
+            <div className="relative flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 px-3.5 sm:px-4 py-3 border-b border-old-money-100 bg-cream-50/40">
+              <div className="flex items-center justify-between sm:justify-start gap-2 min-w-0 pr-20 sm:pr-0">
+                <div className="flex items-center gap-1.5 sm:gap-2 min-w-0">
+                  {activeSlide === 0 ? (
+                    <Trophy className="w-4 h-4 text-camel-700 shrink-0" />
+                  ) : (
+                    <Award className="w-4 h-4 text-camel-700 shrink-0" />
+                  )}
                   <h2 className="text-sm sm:text-base font-bold font-serif text-charcoal-900 tracking-tight truncate">
-                    Сводный рейтинг чемпионата<span className="hidden sm:inline"> Донино</span>
+                    <span className="sm:hidden">Рейтинг: {activeSlide === 0 ? 'скорость' : 'баллы'}</span>
+                    <span className="hidden sm:inline">Сводный рейтинг: {activeSlide === 0 ? 'по скорости' : 'по баллам'}</span>
                   </h2>
                 </div>
-                <span className="text-[11px] font-semibold text-charcoal-600 bg-cream-100 px-2 py-0.5 rounded-full border border-cream-200 tabular-nums whitespace-nowrap shrink-0">
-                  {filtered.length < standings.length
-                    ? `${filtered.length} из ${standings.length}`
-                    : pluralizeDogs(standings.length)}
-                </span>
+
+                <div className="flex items-center gap-2 shrink-0">
+                  <span className="text-[11px] font-semibold text-charcoal-600 bg-cream-100 px-2 py-0.5 rounded-full border border-cream-200 tabular-nums whitespace-nowrap">
+                    {filtered.length < standings.length
+                      ? `${filtered.length} из ${standings.length}`
+                      : pluralizeDogs(standings.length)}
+                  </span>
+                </div>
               </div>
 
-              {/* Toggle Sort: Points vs Time (Clean Borderless Underline Tabs) */}
-              <div className="flex items-center gap-3.5 self-start sm:self-auto shrink-0 pt-0.5 sm:pt-0" role="tablist" aria-label="Сортировка рейтинга">
+              {/* Физический прозрачный язычок с правого края шапки (Mobile) — 0% наложения на цифры собак! */}
+              <div className="sm:hidden">
+                {activeSlide === 0 ? (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      handleSortModeChange('points')
+                      triggerNudge()
+                    }}
+                    className="absolute top-1/2 -translate-y-1/2 right-0 z-20 inline-flex items-center gap-1 rounded-l-full border-y border-l border-camel-400/90 bg-camel-100/80 pl-3 pr-2 py-1.5 text-[11px] font-bold text-camel-950 shadow-md backdrop-blur-md transition-all hover:bg-camel-200 active:scale-95 cursor-pointer touch-manipulation"
+                    title="Смахните экран или нажмите для перехода к баллам"
+                    aria-label="Перейти к баллам"
+                  >
+                    <span>Баллы</span>
+                    <ChevronRight className="w-3.5 h-3.5 text-camel-800 shrink-0" />
+                  </button>
+                ) : (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      handleSortModeChange('time')
+                      triggerNudge()
+                    }}
+                    className="absolute top-1/2 -translate-y-1/2 right-0 z-20 inline-flex items-center gap-1 rounded-l-full border-y border-l border-camel-400/90 bg-camel-100/80 pl-3 pr-2 py-1.5 text-[11px] font-bold text-camel-950 shadow-md backdrop-blur-md transition-all hover:bg-camel-200 active:scale-95 cursor-pointer touch-manipulation"
+                    title="Смахните экран или нажмите для перехода к скорости"
+                    aria-label="Перейти к скорости"
+                  >
+                    <ChevronLeft className="w-3.5 h-3.5 text-camel-800 shrink-0" />
+                    <span>Скорость</span>
+                  </button>
+                )}
+              </div>
+
+              {/* Desktop-only Underline Tabs */}
+              <div className="hidden sm:flex items-center gap-3.5 self-start sm:self-auto shrink-0 pt-0.5 sm:pt-0" role="tablist" aria-label="Сортировка рейтинга">
                 <button
                   type="button"
                   role="tab"
                   aria-selected={sortMode === 'time'}
-                  onClick={() => setSortMode('time')}
+                  onClick={() => handleSortModeChange('time')}
                   className={`inline-flex items-center gap-1.5 pb-1 text-xs transition-all cursor-pointer border-b-2 ${
                     sortMode === 'time'
                       ? 'border-camel-600 text-charcoal-900 font-bold'
@@ -632,7 +857,7 @@ export default function ChampionshipStandingsTab({
                   type="button"
                   role="tab"
                   aria-selected={sortMode === 'points'}
-                  onClick={() => setSortMode('points')}
+                  onClick={() => handleSortModeChange('points')}
                   className={`inline-flex items-center gap-1.5 pb-1 text-xs transition-all cursor-pointer border-b-2 ${
                     sortMode === 'points'
                       ? 'border-camel-600 text-charcoal-900 font-bold'
@@ -645,44 +870,58 @@ export default function ChampionshipStandingsTab({
               </div>
             </div>
 
-            {/* Dog List or Empty State */}
-            {filtered.length === 0 ? (
-              <div className="bg-cream-50/50 p-8 text-center text-charcoal-600 space-y-2">
-                <div className="text-sm font-semibold">Ничего не найдено</div>
-                <div className="text-xs text-charcoal-500">
-                  Попробуйте изменить поисковый запрос или сбросить фильтры
-                </div>
-                <button
-                  type="button"
-                  onClick={handleResetFilters}
-                  className="mt-2 inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-camel-600 text-white hover:bg-camel-700 cursor-pointer"
+            {/* Real Physical Two-Column Slider */}
+            <div className="relative overflow-hidden w-full">
+              <div
+                className={`flex w-full items-start ${
+                  isNudging
+                    ? activeSlide === 0
+                      ? 'animate-silk-nudge-left'
+                      : 'animate-silk-nudge-right'
+                    : ''
+                }`}
+                style={{
+                  transform: transformStr,
+                  transition: isDragging
+                    ? 'none'
+                    : isNudging
+                    ? 'none'
+                    : 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)',
+                  willChange: 'transform',
+                }}
+              >
+                {/* Slide 1: By Speed */}
+                <div
+                  className={`w-full shrink-0 min-w-0 transition-opacity duration-200 ${
+                    !isAnimating && activeSlide === 1
+                      ? 'h-0 overflow-hidden opacity-0'
+                      : 'h-auto opacity-100'
+                  }`}
                 >
-                  Сбросить фильтры
-                </button>
-              </div>
-            ) : (
-              <div className="divide-y divide-old-money-100">
-              {filtered.map((dog, idx) => {
-                const dogNameLower = String(dog.name || '').trim().toLowerCase()
-                const dogPromotions =
-                  (dogNameLower ? dogPromotionsMap.get(dogNameLower) : undefined) ||
-                  (dog.name_ru ? dogPromotionsMap.get(dog.name_ru.trim().toLowerCase()) : undefined) ||
-                  (dog.name_lat ? dogPromotionsMap.get(dog.name_lat.trim().toLowerCase()) : undefined)
+                  {renderDogList(filteredByTime, 'time')}
+                </div>
 
-                return (
-                  <ChampionshipDogCard
-                    key={dog.dog_key}
-                    dog={dog}
-                    rank={idx + 1}
-                    isExpanded={expandedDogKey === dog.dog_key}
-                    sortMode={sortMode}
-                    dogPromotions={dogPromotions}
-                    onToggle={() => toggleExpand(dog.dog_key)}
-                  />
-                )
-              })}
+                {/* Slide 2: By Points */}
+                <div
+                  className={`w-full shrink-0 min-w-0 transition-opacity duration-200 ${
+                    !isAnimating && activeSlide === 0
+                      ? 'h-0 overflow-hidden opacity-0'
+                      : 'h-auto opacity-100'
+                  }`}
+                >
+                  {renderDogList(filteredByPoints, 'points')}
+                </div>
+              </div>
             </div>
-          )}
+
+            {hasMore && (
+              <div
+                ref={loadMoreRef}
+                className="py-4 text-center text-xs font-semibold text-charcoal-400"
+              >
+                Загрузка участников…
+              </div>
+            )}
           </div>
         </div>
 

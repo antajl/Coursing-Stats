@@ -80,13 +80,24 @@ export default function DoninoChampionship() {
 
   const navRef = useRef<HTMLElement>(null)
 
-  // Auto-scroll active tab into center view on mobile tab switch
+  // Auto-scroll active tab into center view on mobile tab switch inside nav container ONLY (never window scroll)
   useEffect(() => {
     const nav = navRef.current
     if (!nav) return
     const activeBtn = nav.querySelector<HTMLElement>('[data-active="true"]')
     if (activeBtn) {
-      activeBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })
+      const navRect = nav.getBoundingClientRect()
+      const btnRect = activeBtn.getBoundingClientRect()
+      const relLeft = btnRect.left - navRect.left + nav.scrollLeft
+      const targetScroll = relLeft - (nav.clientWidth - btnRect.width) / 2
+      nav.scrollTo({
+        left: Math.max(0, targetScroll),
+        behavior: 'smooth',
+      })
+    }
+    // Prevent and fix any accidental window horizontal scroll
+    if (typeof window !== 'undefined' && window.scrollX > 0) {
+      window.scrollTo({ left: 0 })
     }
   }, [activeTab])
 
@@ -222,12 +233,12 @@ export default function DoninoChampionship() {
         ariaLabel="Разделы Донино"
       />
 
-      <div className="space-y-4">
+      <div className="space-y-4 w-full max-w-full min-w-0">
         {/* Tournament Navigation Tabs */}
-        <div className="border-b border-old-money-200">
+        <div className="border-b border-old-money-200 w-full max-w-full overflow-hidden">
           <nav
             ref={navRef}
-            className="flex space-x-1 sm:space-x-2 overflow-x-auto pb-px scrollbar-none"
+            className="flex gap-1 sm:gap-2 overflow-x-auto pb-px scrollbar-none w-full max-w-full"
             aria-label="Вкладки турнира"
           >
             {mainTabs.map((t) => {
@@ -268,7 +279,7 @@ export default function DoninoChampionship() {
           </div>
         ) : (
           <div
-            className="touch-pan-y"
+            className="w-full max-w-full min-w-0 touch-pan-y"
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}

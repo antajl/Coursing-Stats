@@ -25,15 +25,15 @@ interface ChampionshipRulesTabProps {
 
 export default function ChampionshipRulesTab({ reglamentUrl, spreadsheetUrl }: ChampionshipRulesTabProps) {
   return (
-    <div className="space-y-6 w-full">
+    <div className="space-y-6 w-full min-w-0 max-w-full overflow-hidden">
       {/* 2-Column Responsive Grid Layout (matches Standings tab) */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start min-w-0">
         {/* Left Column: Rules, Leagues Pyramid, Rotation Rules, Specs */}
-        <div className="lg:col-span-8 space-y-4">
+        <div className="lg:col-span-8 space-y-4 min-w-0">
           {/* Section 1: Pyramid of Leagues */}
-          <div className="rounded-2xl border border-old-money-200 bg-cream-50 p-5 sm:p-6 shadow-2xs space-y-4">
+          <div className="rounded-2xl border border-old-money-200 bg-cream-50 p-4 sm:p-6 shadow-2xs space-y-4">
             <div className="flex items-center gap-2">
-              <Award className="w-5 h-5 text-camel-700" />
+              <Award className="w-5 h-5 text-camel-700 shrink-0" />
               <h2 className="text-base sm:text-lg font-serif font-bold text-charcoal-900">
                 Пирамида лиг чемпионата
               </h2>
@@ -44,8 +44,8 @@ export default function ChampionshipRulesTab({ reglamentUrl, spreadsheetUrl }: C
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 pt-1">
               {/* Progress */}
-              <div className="p-4 rounded-xl border border-stone-300 bg-stone-50/70 space-y-2">
-                <div className="flex items-center justify-between">
+              <div className="p-3.5 sm:p-4 rounded-xl border border-stone-300 bg-stone-50/70 space-y-2">
+                <div className="flex flex-wrap items-center justify-between gap-1.5">
                   <span className="px-2.5 py-0.5 rounded-md text-[11px] font-bold bg-stone-200 text-stone-800 border border-stone-300">
                     Лига «Прогресс»
                   </span>
@@ -57,8 +57,8 @@ export default function ChampionshipRulesTab({ reglamentUrl, spreadsheetUrl }: C
               </div>
 
               {/* Champions */}
-              <div className="p-4 rounded-xl border border-camel-300 bg-camel-50/70 space-y-2">
-                <div className="flex items-center justify-between">
+              <div className="p-3.5 sm:p-4 rounded-xl border border-camel-300 bg-camel-50/70 space-y-2">
+                <div className="flex flex-wrap items-center justify-between gap-1.5">
                   <span className="px-2.5 py-0.5 rounded-md text-[11px] font-bold bg-camel-200 text-charcoal-900 border border-camel-300">
                     Лига «Чемпионов»
                   </span>
@@ -70,8 +70,8 @@ export default function ChampionshipRulesTab({ reglamentUrl, spreadsheetUrl }: C
               </div>
 
               {/* Absolute */}
-              <div className="p-4 rounded-xl border border-amber-300 bg-amber-50/80 space-y-2">
-                <div className="flex items-center justify-between">
+              <div className="p-3.5 sm:p-4 rounded-xl border border-amber-300 bg-amber-50/80 space-y-2">
+                <div className="flex flex-wrap items-center justify-between gap-1.5">
                   <span className="px-2.5 py-0.5 rounded-md text-[11px] font-bold bg-amber-200 text-amber-950 border border-amber-300">
                     Лига «Абсолют»
                   </span>
@@ -85,11 +85,11 @@ export default function ChampionshipRulesTab({ reglamentUrl, spreadsheetUrl }: C
 
             {/* Juniors Distinct Note */}
             <div className="p-3.5 rounded-xl border border-sky-200 bg-sky-50/60 space-y-1.5 text-xs text-charcoal-700">
-              <div className="flex items-center justify-between">
-                <span className="px-2.5 py-0.5 rounded-md text-[11px] font-bold bg-sky-100 text-sky-900 border border-sky-300">
+              <div className="flex flex-wrap items-center justify-between gap-1.5">
+                <span className="px-2.5 py-0.5 rounded-md text-[11px] font-bold bg-sky-100 text-sky-900 border border-sky-300 max-w-full">
                   Класс «Юниоры» (вне взрослой системы лиг)
                 </span>
-                <span className="text-[10px] text-sky-800 font-medium">Подготовительный зачёт</span>
+                <span className="text-[10px] text-sky-800 font-medium shrink-0">Подготовительный зачёт</span>
               </div>
               <p className="text-[11px] text-charcoal-600 leading-relaxed">
                 Специальный возрастной класс для молодых собак с 9 месяцев до наступления взрослого класса (15 месяцев для пород группы А, 18 месяцев для остальных). Юниоры бегут обособленным зачётом без межлиговой ротации, набираясь опыта на овальном треке перед переходом во взрослые лиги.
@@ -98,9 +98,9 @@ export default function ChampionshipRulesTab({ reglamentUrl, spreadsheetUrl }: C
           </div>
 
           {/* Section 2: Rotation Rules (Promotions and Relegations) */}
-          <div className="rounded-2xl border border-old-money-200 bg-cream-50 p-5 sm:p-6 shadow-2xs space-y-4">
+          <div className="rounded-2xl border border-old-money-200 bg-cream-50 p-4 sm:p-6 shadow-2xs space-y-4">
             <div className="flex items-center gap-2">
-              <ShieldCheck className="w-5 h-5 text-camel-700" />
+              <ShieldCheck className="w-5 h-5 text-camel-700 shrink-0" />
               <h2 className="text-base sm:text-lg font-serif font-bold text-charcoal-900">
                 Правила ротации и переходов между лигами
               </h2>
@@ -111,9 +111,9 @@ export default function ChampionshipRulesTab({ reglamentUrl, spreadsheetUrl }: C
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
               {/* Promotion Up */}
-              <div className="p-4 rounded-xl bg-cream-100/70 border border-emerald-200 space-y-2.5">
+              <div className="p-3.5 sm:p-4 rounded-xl bg-cream-100/70 border border-emerald-200 space-y-2.5">
                 <div className="flex items-center gap-2 text-emerald-900 font-bold font-serif text-sm">
-                  <ArrowUpRight className="w-4 h-4 text-emerald-600" />
+                  <ArrowUpRight className="w-4 h-4 text-emerald-600 shrink-0" />
                   <span>Повышение в лиге (перевод вверх)</span>
                 </div>
                 <p className="text-charcoal-700 leading-relaxed">
@@ -125,9 +125,9 @@ export default function ChampionshipRulesTab({ reglamentUrl, spreadsheetUrl }: C
               </div>
 
               {/* Relegation Down */}
-              <div className="p-4 rounded-xl bg-cream-100/70 border border-rose-200 space-y-2.5">
+              <div className="p-3.5 sm:p-4 rounded-xl bg-cream-100/70 border border-rose-200 space-y-2.5">
                 <div className="flex items-center gap-2 text-rose-900 font-bold font-serif text-sm">
-                  <ArrowDownRight className="w-4 h-4 text-rose-600" />
+                  <ArrowDownRight className="w-4 h-4 text-rose-600 shrink-0" />
                   <span>Понижение в лиге (перевод вниз)</span>
                 </div>
                 <p className="text-charcoal-700 leading-relaxed">
@@ -142,7 +142,7 @@ export default function ChampionshipRulesTab({ reglamentUrl, spreadsheetUrl }: C
             {/* Invariant Note on Series & Classes */}
             <div className="p-3.5 rounded-xl bg-cream-100/50 border border-old-money-200/80 text-xs text-charcoal-700 space-y-1">
               <div className="font-semibold text-charcoal-900 flex items-center gap-1.5">
-                <Layers className="w-3.5 h-3.5 text-camel-700" />
+                <Layers className="w-3.5 h-3.5 text-camel-700 shrink-0" />
                 <span>Учёт серий и отсутствие требований к кворуму</span>
               </div>
               <p className="text-[11px] text-charcoal-600 leading-relaxed">
@@ -152,9 +152,9 @@ export default function ChampionshipRulesTab({ reglamentUrl, spreadsheetUrl }: C
           </div>
 
           {/* Section 3: Height and Age Classes */}
-          <div className="rounded-2xl border border-old-money-200 bg-cream-50 p-5 sm:p-6 shadow-2xs space-y-4">
+          <div className="rounded-2xl border border-old-money-200 bg-cream-50 p-4 sm:p-6 shadow-2xs space-y-4">
             <div className="flex items-center gap-2">
-              <Ruler className="w-5 h-5 text-camel-700" />
+              <Ruler className="w-5 h-5 text-camel-700 shrink-0" />
               <h2 className="text-base sm:text-lg font-serif font-bold text-charcoal-900">
                 Ростовые и возрастные стандарты классов
               </h2>
@@ -165,7 +165,7 @@ export default function ChampionshipRulesTab({ reglamentUrl, spreadsheetUrl }: C
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs">
               {/* Whippets */}
-              <div className="p-4 rounded-xl border border-old-money-200 bg-cream-100/50 space-y-2">
+              <div className="p-3.5 sm:p-4 rounded-xl border border-old-money-200 bg-cream-100/50 space-y-2">
                 <div className="font-semibold font-serif text-charcoal-900 border-b border-old-money-200/70 pb-1">
                   Уиппеты (деление по росту)
                 </div>
@@ -183,7 +183,7 @@ export default function ChampionshipRulesTab({ reglamentUrl, spreadsheetUrl }: C
               </div>
 
               {/* Italian Greyhounds */}
-              <div className="p-4 rounded-xl border border-old-money-200 bg-cream-100/50 space-y-2">
+              <div className="p-3.5 sm:p-4 rounded-xl border border-old-money-200 bg-cream-100/50 space-y-2">
                 <div className="font-semibold font-serif text-charcoal-900 border-b border-old-money-200/70 pb-1">
                   Левретки (деление по росту)
                 </div>
@@ -204,7 +204,7 @@ export default function ChampionshipRulesTab({ reglamentUrl, spreadsheetUrl }: C
             {/* Age Limits */}
             <div className="p-3.5 rounded-xl border border-old-money-200/80 bg-cream-100/30 text-xs text-charcoal-700 space-y-1.5">
               <div className="font-semibold text-charcoal-900 flex items-center gap-1.5">
-                <CalendarCheck2 className="w-3.5 h-3.5 text-camel-700" />
+                <CalendarCheck2 className="w-3.5 h-3.5 text-camel-700 shrink-0" />
                 <span>Возрастные границы участников (раздел 8)</span>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-[11px] pt-1">
@@ -225,7 +225,7 @@ export default function ChampionshipRulesTab({ reglamentUrl, spreadsheetUrl }: C
           </div>
 
           {/* Section 4: Race Format, Zig-Zag & Final Heats */}
-          <div className="rounded-2xl border border-old-money-200 bg-cream-50 p-5 sm:p-6 shadow-2xs space-y-3">
+          <div className="rounded-2xl border border-old-money-200 bg-cream-50 p-4 sm:p-6 shadow-2xs space-y-3">
             <div className="flex items-center gap-2">
               <Clock className="w-5 h-5 text-camel-700" />
               <h2 className="text-base sm:text-lg font-serif font-bold text-charcoal-900">
@@ -279,12 +279,12 @@ export default function ChampionshipRulesTab({ reglamentUrl, spreadsheetUrl }: C
         </div>
 
         {/* Right Column: Official Documents & Quick Facts Sidebar */}
-        <div className="lg:col-span-4 space-y-5">
+        <div className="lg:col-span-4 space-y-5 min-w-0">
           {/* Document Card */}
-          <div className="rounded-2xl border border-old-money-200 bg-cream-50 p-5 shadow-2xs space-y-3.5">
+          <div className="rounded-2xl border border-old-money-200 bg-cream-50 p-4 sm:p-5 shadow-2xs space-y-3.5">
             <div className="flex items-center gap-2">
-              <FileText className="w-4 h-4 text-camel-700" />
-              <h3 className="text-xs font-bold font-serif  text-charcoal-900">
+              <FileText className="w-4 h-4 text-camel-700 shrink-0" />
+              <h3 className="text-xs font-bold font-serif text-charcoal-900">
                 Официальный регламент
               </h3>
             </div>
@@ -297,13 +297,13 @@ export default function ChampionshipRulesTab({ reglamentUrl, spreadsheetUrl }: C
                 href={reglamentUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full min-h-[44px] inline-flex items-center justify-between px-3.5 py-2.5 text-xs font-semibold rounded-xl border border-camel-400 bg-cream-100/90 hover:bg-cream-100 text-charcoal-900 transition-colors shadow-2xs"
+                className="w-full min-h-[44px] inline-flex items-center justify-between px-3.5 py-2.5 text-xs font-semibold rounded-xl border border-camel-400 bg-cream-100/90 hover:bg-cream-100 text-charcoal-900 transition-colors shadow-2xs min-w-0"
               >
-                <div className="flex items-center gap-2">
-                  <FileText className="w-4 h-4 text-camel-700" />
-                  <span>Открыть регламент (PDF)</span>
+                <div className="flex items-center gap-2 min-w-0">
+                  <FileText className="w-4 h-4 text-camel-700 shrink-0" />
+                  <span className="truncate">Открыть регламент (PDF)</span>
                 </div>
-                <ExternalLink className="w-3.5 h-3.5 text-charcoal-500" />
+                <ExternalLink className="w-3.5 h-3.5 text-charcoal-500 shrink-0 ml-2" />
               </a>
             ) : (
               <div className="text-xs text-charcoal-500 italic">
@@ -313,59 +313,59 @@ export default function ChampionshipRulesTab({ reglamentUrl, spreadsheetUrl }: C
           </div>
 
           {/* Quick Specifications Card */}
-          <div className="rounded-2xl border border-old-money-200 bg-cream-50 p-5 shadow-2xs space-y-3">
+          <div className="rounded-2xl border border-old-money-200 bg-cream-50 p-4 sm:p-5 shadow-2xs space-y-3">
             <div className="flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-camel-700" />
-              <h3 className="text-xs font-bold font-serif  text-charcoal-900">
+              <Sparkles className="w-4 h-4 text-camel-700 shrink-0" />
+              <h3 className="text-xs font-bold font-serif text-charcoal-900">
                 Сводные параметры серии
               </h3>
             </div>
 
             <div className="space-y-2 text-xs">
-              <div className="flex items-center justify-between py-1 border-b border-old-money-200/60">
-                <span className="text-charcoal-500">Дистанция</span>
-                <span className="font-semibold text-charcoal-900">350 метров</span>
+              <div className="flex items-center justify-between gap-2 py-1 border-b border-old-money-200/60">
+                <span className="text-charcoal-500 shrink-0">Дистанция</span>
+                <span className="font-semibold text-charcoal-900 text-right">350 метров</span>
               </div>
-              <div className="flex items-center justify-between py-1 border-b border-old-money-200/60">
-                <span className="text-charcoal-500">Конфигурация</span>
-                <span className="font-semibold text-charcoal-900">Овальный трек</span>
+              <div className="flex items-center justify-between gap-2 py-1 border-b border-old-money-200/60">
+                <span className="text-charcoal-500 shrink-0">Конфигурация</span>
+                <span className="font-semibold text-charcoal-900 text-right">Овальный трек</span>
               </div>
-              <div className="flex items-center justify-between py-1 border-b border-old-money-200/60">
-                <span className="text-charcoal-500">Тип старта</span>
-                <span className="font-semibold text-charcoal-900">Закрытые боксы (4)</span>
+              <div className="flex items-center justify-between gap-2 py-1 border-b border-old-money-200/60">
+                <span className="text-charcoal-500 shrink-0">Тип старта</span>
+                <span className="font-semibold text-charcoal-900 text-right">Закрытые боксы (4)</span>
               </div>
-              <div className="flex items-center justify-between py-1 border-b border-old-money-200/60">
-                <span className="text-charcoal-500">Кворум</span>
-                <span className="font-semibold text-emerald-800">Не требуется (от 1 собаки)</span>
+              <div className="flex items-center justify-between gap-2 py-1 border-b border-old-money-200/60">
+                <span className="text-charcoal-500 shrink-0">Кворум</span>
+                <span className="font-semibold text-emerald-800 text-right">Не требуется (от 1 собаки)</span>
               </div>
-              <div className="flex items-center justify-between py-1 border-b border-old-money-200/60">
-                <span className="text-charcoal-500">Кругов на этапе</span>
-                <span className="font-semibold text-charcoal-900">2–3 (отборы + финал)</span>
+              <div className="flex items-center justify-between gap-2 py-1 border-b border-old-money-200/60">
+                <span className="text-charcoal-500 shrink-0">Кругов на этапе</span>
+                <span className="font-semibold text-charcoal-900 text-right">2–3 (отборы + финал)</span>
               </div>
-              <div className="flex items-center justify-between py-1 border-b border-old-money-200/60">
-                <span className="text-charcoal-500">Финалистов</span>
-                <span className="font-semibold text-charcoal-900">До 4 собак в классе</span>
+              <div className="flex items-center justify-between gap-2 py-1 border-b border-old-money-200/60">
+                <span className="text-charcoal-500 shrink-0">Финалистов</span>
+                <span className="font-semibold text-charcoal-900 text-right">До 4 собак в классе</span>
               </div>
-              <div className="flex items-center justify-between py-1 border-b border-old-money-200/60">
-                <span className="text-charcoal-500">Фиксация</span>
-                <span className="font-semibold text-charcoal-900">Фотофиниш (0.01 с)</span>
+              <div className="flex items-center justify-between gap-2 py-1 border-b border-old-money-200/60">
+                <span className="text-charcoal-500 shrink-0">Фиксация</span>
+                <span className="font-semibold text-charcoal-900 text-right">Фотофиниш (0.01 с)</span>
               </div>
-              <div className="flex items-center justify-between py-1 border-b border-old-money-200/60">
-                <span className="text-charcoal-500">Переход вверх</span>
-                <span className="font-semibold text-emerald-800">1 победа в финале</span>
+              <div className="flex items-center justify-between gap-2 py-1 border-b border-old-money-200/60">
+                <span className="text-charcoal-500 shrink-0">Переход вверх</span>
+                <span className="font-semibold text-emerald-800 text-right">1 победа в финале</span>
               </div>
-              <div className="flex items-center justify-between py-1">
-                <span className="text-charcoal-500">Переход вниз</span>
-                <span className="font-semibold text-rose-800">3 поражения подряд</span>
+              <div className="flex items-center justify-between gap-2 py-1">
+                <span className="text-charcoal-500 shrink-0">Переход вниз</span>
+                <span className="font-semibold text-rose-800 text-right">3 поражения подряд</span>
               </div>
             </div>
           </div>
 
           {/* Qualification Requirement Card */}
-          <div className="rounded-2xl border border-old-money-200 bg-cream-50 p-5 shadow-2xs space-y-2.5">
+          <div className="rounded-2xl border border-old-money-200 bg-cream-50 p-4 sm:p-5 shadow-2xs space-y-2.5">
             <div className="flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4 text-camel-700" />
-              <h3 className="text-xs font-bold font-serif  text-charcoal-900">
+              <ShieldCheck className="w-4 h-4 text-camel-700 shrink-0" />
+              <h3 className="text-xs font-bold font-serif text-charcoal-900">
                 Допуск к участию
               </h3>
             </div>
@@ -375,10 +375,10 @@ export default function ChampionshipRulesTab({ reglamentUrl, spreadsheetUrl }: C
           </div>
 
           {/* Organizer & Official Website */}
-          <div className="rounded-2xl border border-old-money-200 bg-cream-50 p-5 shadow-2xs space-y-3">
+          <div className="rounded-2xl border border-old-money-200 bg-cream-50 p-4 sm:p-5 shadow-2xs space-y-3">
             <div className="flex items-center gap-2">
-              <Info className="w-4 h-4 text-camel-700" />
-              <h3 className="text-xs font-bold font-serif  text-charcoal-900">
+              <Info className="w-4 h-4 text-camel-700 shrink-0" />
+              <h3 className="text-xs font-bold font-serif text-charcoal-900">
                 Организатор турнира
               </h3>
             </div>
@@ -391,10 +391,10 @@ export default function ChampionshipRulesTab({ reglamentUrl, spreadsheetUrl }: C
                 href="https://runningdog.ru"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full min-h-[44px] inline-flex items-center justify-between px-3.5 py-2.5 text-xs font-medium rounded-xl border border-old-money-200 bg-cream-100/70 hover:bg-cream-100 text-charcoal-800 transition-colors shadow-2xs"
+                className="w-full min-h-[44px] inline-flex items-center justify-between px-3.5 py-2.5 text-xs font-medium rounded-xl border border-old-money-200 bg-cream-100/70 hover:bg-cream-100 text-charcoal-800 transition-colors shadow-2xs min-w-0"
                 title="Официальный сайт бегового клуба «Курсинг в Донино»"
               >
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 min-w-0">
                   <span className="p-0.5 rounded border border-old-money-200/90 bg-white shadow-2xs flex items-center justify-center shrink-0">
                     <img
                       src="/assets/icons/runningdog.png"
@@ -404,54 +404,54 @@ export default function ChampionshipRulesTab({ reglamentUrl, spreadsheetUrl }: C
                       className="w-[22px] h-[14px] object-contain shrink-0"
                     />
                   </span>
-                  <span className="font-semibold">Курсинг в Донино</span>
+                  <span className="font-semibold truncate">Курсинг в Донино</span>
                 </div>
-                <ExternalLink className="w-3.5 h-3.5 text-charcoal-400" />
+                <ExternalLink className="w-3.5 h-3.5 text-charcoal-400 shrink-0 ml-2" />
               </a>
 
               <a
                 href={spreadsheetUrl || 'https://docs.google.com/spreadsheets/d/1PGrVO98HfxwzoOxHmd8eRaygvl3iJryIXYfPd7vmyNQ/edit?gid=0#gid=0'}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full min-h-[44px] inline-flex items-center justify-between px-3.5 py-2.5 text-xs font-medium rounded-xl border border-old-money-200 bg-cream-100/70 hover:bg-cream-100 text-charcoal-800 transition-colors shadow-2xs"
+                className="w-full min-h-[44px] inline-flex items-center justify-between px-3.5 py-2.5 text-xs font-medium rounded-xl border border-old-money-200 bg-cream-100/70 hover:bg-cream-100 text-charcoal-800 transition-colors shadow-2xs min-w-0"
                 title="Официальная сводная таблица чемпионата в Google Таблицах"
               >
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 min-w-0">
                   <span className="p-1 rounded border border-emerald-300/80 bg-emerald-50 text-emerald-800 shadow-2xs flex items-center justify-center shrink-0">
                     <FileSpreadsheet className="w-3.5 h-3.5 text-emerald-700" />
                   </span>
-                  <span className="font-semibold">Таблица чемпионата (Google)</span>
+                  <span className="font-semibold truncate">Таблица чемпионата (Google)</span>
                 </div>
-                <ExternalLink className="w-3.5 h-3.5 text-charcoal-400" />
+                <ExternalLink className="w-3.5 h-3.5 text-charcoal-400 shrink-0 ml-2" />
               </a>
             </div>
           </div>
 
           {/* Quick Navigation Links */}
-          <div className="rounded-2xl border border-old-money-200 bg-cream-50 p-5 shadow-2xs space-y-2.5">
-            <div className="text-[11px] font-bold font-serif  text-charcoal-500">
+          <div className="rounded-2xl border border-old-money-200 bg-cream-50 p-4 sm:p-5 shadow-2xs space-y-2.5">
+            <div className="text-[11px] font-bold font-serif text-charcoal-500">
               Быстрый переход
             </div>
             <div className="space-y-1.5">
               <Link
                 to="/donino/championship?tab=standings"
-                className="w-full min-h-[44px] inline-flex items-center justify-between py-2 px-3 rounded-xl border border-old-money-200 bg-cream-100/60 text-xs font-medium text-charcoal-700 hover:bg-cream-100 transition-colors"
+                className="w-full min-h-[44px] inline-flex items-center justify-between py-2 px-3 rounded-xl border border-old-money-200 bg-cream-100/60 text-xs font-medium text-charcoal-700 hover:bg-cream-100 transition-colors min-w-0"
               >
-                <div className="flex items-center gap-2">
-                  <Trophy className="w-3.5 h-3.5 text-camel-700" />
-                  <span>Рейтинг</span>
+                <div className="flex items-center gap-2 min-w-0">
+                  <Trophy className="w-3.5 h-3.5 text-camel-700 shrink-0" />
+                  <span className="truncate">Рейтинг</span>
                 </div>
-                <span className="text-[10px] text-charcoal-400">таблица →</span>
+                <span className="text-[10px] text-charcoal-400 shrink-0 ml-2">таблица →</span>
               </Link>
               <Link
                 to="/speed-records/"
-                className="w-full min-h-[44px] inline-flex items-center justify-between py-2 px-3 rounded-xl border border-old-money-200 bg-cream-100/60 text-xs font-medium text-charcoal-700 hover:bg-cream-100 transition-colors"
+                className="w-full min-h-[44px] inline-flex items-center justify-between py-2 px-3 rounded-xl border border-old-money-200 bg-cream-100/60 text-xs font-medium text-charcoal-700 hover:bg-cream-100 transition-colors min-w-0"
               >
-                <div className="flex items-center gap-2">
-                  <Clock className="w-3.5 h-3.5 text-camel-700" />
-                  <span>Все рекорды скорости Донино</span>
+                <div className="flex items-center gap-2 min-w-0">
+                  <Clock className="w-3.5 h-3.5 text-camel-700 shrink-0" />
+                  <span className="truncate">Все рекорды скорости Донино</span>
                 </div>
-                <span className="text-[10px] text-charcoal-400">раздел →</span>
+                <span className="text-[10px] text-charcoal-400 shrink-0 ml-2">раздел →</span>
               </Link>
             </div>
           </div>

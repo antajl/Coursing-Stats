@@ -172,6 +172,16 @@ export function isRacingFormat(rawScores: RawScores | null): boolean {
   )
 }
 
+export function isCoursingFormat(rawScores: RawScores | null): boolean {
+  if (!rawScores) return false
+  if (rawScores.format === 'coursing') return true
+  if (Array.isArray(rawScores.runs) && rawScores.runs.length > 0) return true
+  return !!(
+    rawScores.heats?.[0] &&
+    (Array.isArray(rawScores.heats[0].judges) && rawScores.heats[0].judges.length > 0)
+  )
+}
+
 export function normalizeBibColorName(bibColor: string | undefined, isRacing: boolean = false): string | null {
   const c = bibColor?.toLowerCase() ?? ''
   if (c === 'red' || c === '#ff0000') return 'red'

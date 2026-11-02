@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
-import { Star } from 'lucide-react'
+import { Star, ChevronLeft, ChevronRight } from 'lucide-react'
 import DogCard, { DOG_CARD_HEIGHT_CLASS } from '../../components/DogCard'
 import EmptyState from '../../components/EmptyState'
 import DoninoColumnPlaque, { DoninoColumnShell } from '../SpeedRecords/DoninoColumnPlaque'
@@ -84,22 +84,40 @@ export default function TopDogsColumns({
   // Жест свайпа влево/вправо на мобильных экранах
   const [dragOffset, setDragOffset] = useState<number | null>(null)
   const [isTransitioning, setIsTransitioning] = useState(false)
+  const [isNudging, setIsNudging] = useState(false)
   const touchStartRef = useRef<{ x: number; y: number; time: number } | null>(null)
   const gestureLockRef = useRef<'horizontal' | 'vertical' | null>(null)
   const transitionTimeoutRef = useRef<number | null>(null)
   const hadMovedRef = useRef(false)
+
+  const triggerNudge = () => {
+    if (dragOffset !== null && dragOffset !== 0) return
+    setIsNudging(true)
+    setTimeout(() => {
+      setIsNudging(false)
+    }, 750)
+  }
+
+  // Auto-play invitation nudge on page load (after 600ms)
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      triggerNudge()
+    }, 600)
+    return () => clearTimeout(timer)
+  }, [])
 
   // Плавная анимация скольжения колонок при изменении активной дисциплины
   useEffect(() => {
     setIsTransitioning(true)
     const timer = setTimeout(() => {
       setIsTransitioning(false)
-    }, 320)
+    }, 400)
     return () => clearTimeout(timer)
   }, [activeMobileColumn])
 
   const handleTouchStart = (e: React.TouchEvent) => {
     if (typeof window !== 'undefined' && window.innerWidth >= 1024) return
+    setIsNudging(false)
     const touch = e.touches[0]
     touchStartRef.current = { x: touch.clientX, y: touch.clientY, time: Date.now() }
     gestureLockRef.current = null
@@ -157,8 +175,8 @@ export default function TopDogsColumns({
     gestureLockRef.current = null
 
     if (isHorizontal) {
-      const isSwipeLeft = dx < -45 || (dx < -20 && velocity > 0.25)
-      const isSwipeRight = dx > 45 || (dx > 20 && velocity > 0.25)
+      const isSwipeLeft = dx < -35 || (dx < -15 && velocity > 0.2)
+      const isSwipeRight = dx > 35 || (dx > 15 && velocity > 0.2)
 
       setIsTransitioning(true)
       setDragOffset(null)
@@ -172,7 +190,7 @@ export default function TopDogsColumns({
       transitionTimeoutRef.current = window.setTimeout(() => {
         setIsTransitioning(false)
         hadMovedRef.current = false
-      }, 320)
+      }, 400)
     } else {
       setDragOffset(null)
       hadMovedRef.current = false
@@ -209,19 +227,51 @@ export default function TopDogsColumns({
   }
 
   const coursingPlaque = (
-    <DoninoColumnPlaque
-      asHeader
-      title="Курсинг / БЗМП"
-      count={filteredCombined.length}
-    />
+    <div className="relative">
+      <DoninoColumnPlaque
+        asHeader
+        title="Курсинг / БЗМП"
+        count={filteredCombined.length}
+        countClassName="pr-20 lg:pr-0"
+      />
+      <button
+        type="button"
+        onClick={() => {
+          handleMobileColumnChange('racing')
+          triggerNudge()
+        }}
+        className="lg:hidden absolute top-1/2 -translate-y-1/2 right-0 z-20 inline-flex items-center gap-1 rounded-l-full border-y border-l border-camel-400/90 bg-camel-100/80 pl-3 pr-2 py-1 text-[11px] font-bold text-camel-950 shadow-md backdrop-blur-md transition-all hover:bg-camel-200 active:scale-95 cursor-pointer touch-manipulation"
+        title="Смахните экран или нажмите для перехода к рейсингу"
+        aria-label="Перейти к рейсингу"
+      >
+        <span>Рейсинг</span>
+        <ChevronRight className="w-3.5 h-3.5 text-camel-800 shrink-0" />
+      </button>
+    </div>
   )
 
   const racingPlaque = (
-    <DoninoColumnPlaque
-      asHeader
-      title="Рейсинг"
-      count={filteredSpeed.length}
-    />
+    <div className="relative">
+      <DoninoColumnPlaque
+        asHeader
+        title="Рейсинг"
+        count={filteredSpeed.length}
+        countClassName="pr-20 lg:pr-0"
+      />
+      <button
+        type="button"
+        onClick={() => {
+          handleMobileColumnChange('coursing')
+          triggerNudge()
+        }}
+        className="lg:hidden absolute top-1/2 -translate-y-1/2 right-0 z-20 inline-flex items-center gap-1 rounded-l-full border-y border-l border-camel-400/90 bg-camel-100/80 pl-3 pr-2 py-1 text-[11px] font-bold text-camel-950 shadow-md backdrop-blur-md transition-all hover:bg-camel-200 active:scale-95 cursor-pointer touch-manipulation"
+        title="Смахните экран или нажмите для перехода к курсингу"
+        aria-label="Перейти к курсингу"
+      >
+        <ChevronLeft className="w-3.5 h-3.5 text-camel-800 shrink-0" />
+        <span>Курсинг</span>
+      </button>
+    </div>
   )
 
   const renderCoursingCard = (dog: CombinedRankingDog, slotKey: string) =>
@@ -298,12 +348,48 @@ export default function TopDogsColumns({
           }
         }}
       >
+        {/* GPU Keyframes for ultra-smooth spring nudge */}
+        <style>{`
+          @keyframes silkNudgeLeft {
+            0% { transform: translate3d(0, 0, 0); }
+            22% { transform: translate3d(-34px, 0, 0); }
+            38% { transform: translate3d(-34px, 0, 0); }
+            66% { transform: translate3d(4px, 0, 0); }
+            82% { transform: translate3d(-1px, 0, 0); }
+            100% { transform: translate3d(0, 0, 0); }
+          }
+          @keyframes silkNudgeRight {
+            0% { transform: translate3d(-100%, 0, 0); }
+            22% { transform: translate3d(calc(-100% + 34px), 0, 0); }
+            38% { transform: translate3d(calc(-100% + 34px), 0, 0); }
+            66% { transform: translate3d(calc(-100% - 4px), 0, 0); }
+            82% { transform: translate3d(calc(-100% + 1px), 0, 0); }
+            100% { transform: translate3d(-100%, 0, 0); }
+          }
+          .animate-silk-nudge-left {
+            animation: silkNudgeLeft 750ms cubic-bezier(0.25, 1, 0.5, 1) forwards;
+          }
+          .animate-silk-nudge-right {
+            animation: silkNudgeRight 750ms cubic-bezier(0.25, 1, 0.5, 1) forwards;
+          }
+        `}</style>
+
         <div
           className={`flex w-full items-start lg:grid lg:grid-cols-2 lg:gap-8 lg:!transform-none ${
-            isDragging ? '' : 'transition-transform duration-300 ease-out'
+            isNudging
+              ? activeMobileColumn === 'coursing'
+                ? 'animate-silk-nudge-left'
+                : 'animate-silk-nudge-right'
+              : ''
           }`}
           style={{
             transform: typeof window !== 'undefined' && window.innerWidth >= 1024 ? 'none' : mobileTransform,
+            transition: isDragging
+              ? 'none'
+              : isNudging
+              ? 'none'
+              : 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)',
+            willChange: 'transform',
           }}
         >
           {/* Слайд 1: Курсинг */}
@@ -315,7 +401,7 @@ export default function TopDogsColumns({
             }`}
           >
             <DoninoColumnShell
-              plaque={<div className="hidden lg:block">{coursingPlaque}</div>}
+              plaque={coursingPlaque}
               listRef={coursingRevealRef}
             >
               {coursingList}
@@ -331,7 +417,7 @@ export default function TopDogsColumns({
             }`}
           >
             <DoninoColumnShell
-              plaque={<div className="hidden lg:block">{racingPlaque}</div>}
+              plaque={racingPlaque}
               listRef={speedRevealRef}
             >
               {speedList}
