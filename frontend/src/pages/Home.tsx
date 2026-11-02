@@ -179,7 +179,7 @@ export default function Home() {
         </div>
 
         {/* Content Container */}
-        <div className="wrap !pb-2 px-3 sm:px-4 relative z-10 flex flex-col gap-2.5">
+        <div className="wrap !pb-2 px-3 sm:px-4 relative z-10 flex flex-col gap-2.5 min-w-0 max-w-full overflow-x-clip">
           {/* Database Statistics */}
           <HomeStatsPills stats={stats} showStats={showStats} loading={seasonLoading} />
 

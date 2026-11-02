@@ -306,7 +306,7 @@ function SeasonTopSectionInner({
   return (
     <section
       id="season-top"
-      className={`home-v2-block scroll-mt-20 ${
+      className={`home-v2-block scroll-mt-20 w-full min-w-0 max-w-full overflow-hidden ${
         compact ? 'home-v2-season-top--compact' : ''
       }`}
       {...(!compact ? { 'data-home-reveal': true } : {})}
@@ -327,7 +327,7 @@ function SeasonTopSectionInner({
       ────────────────────────────────────────────────────────────── */}
       {activeTab === 'sport' && (
         <div
-          className="w-full relative overflow-hidden touch-pan-y"
+          className="w-full min-w-0 max-w-full relative overflow-hidden touch-pan-y"
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
@@ -341,7 +341,7 @@ function SeasonTopSectionInner({
           {...carousel.pauseHandlers}
         >
           <div
-            className={`flex w-full items-start md:grid md:grid-cols-2 md:gap-6 md:!transform-none ${
+            className={`flex w-full min-w-0 max-w-full items-start md:grid md:grid-cols-2 md:gap-6 home-v2-columns md:!transform-none ${
               isNudging
                 ? currentSlide === 0
                   ? 'animate-silk-nudge-left'
@@ -360,13 +360,13 @@ function SeasonTopSectionInner({
           >
             {/* Column 1: Coursing */}
             <div
-              className={`w-full shrink-0 md:w-auto md:shrink transition-opacity duration-200 ${
+              className={`w-full min-w-0 max-w-full shrink-0 md:w-auto md:shrink transition-opacity duration-200 ${
                 !isAnimating && currentSlide === 1
                   ? 'h-0 overflow-hidden opacity-0 md:h-auto md:overflow-visible md:opacity-100'
                   : 'h-auto opacity-100'
               }`}
             >
-              <div className="home-v2-col">
+              <div className="home-v2-col w-full min-w-0 max-w-full">
                 <SeasonCompetitionsCarousel
                   slides={competitionSlides}
                   carousel={carousel}
@@ -383,13 +383,13 @@ function SeasonTopSectionInner({
 
             {/* Column 2: Racing */}
             <div
-              className={`w-full shrink-0 md:w-auto md:shrink transition-opacity duration-200 ${
+              className={`w-full min-w-0 max-w-full shrink-0 md:w-auto md:shrink transition-opacity duration-200 ${
                 !isAnimating && currentSlide === 0
                   ? 'h-0 overflow-hidden opacity-0 md:h-auto md:overflow-visible md:opacity-100'
                   : 'h-auto opacity-100'
               }`}
             >
-              <div className="home-v2-col">
+              <div className="home-v2-col w-full min-w-0 max-w-full">
                 <SeasonRacingCarousel
                   slides={racingSlides}
                   carousel={carousel}
@@ -412,7 +412,7 @@ function SeasonTopSectionInner({
       ────────────────────────────────────────────────────────────── */}
       {activeTab === 'shows' && (
         <div
-          className="w-full relative overflow-hidden touch-pan-y"
+          className="w-full min-w-0 max-w-full relative overflow-hidden touch-pan-y"
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
@@ -426,7 +426,7 @@ function SeasonTopSectionInner({
           {...carousel.pauseHandlers}
         >
           <div
-            className={`flex w-full items-start md:grid md:grid-cols-2 md:gap-6 md:!transform-none ${
+            className={`flex w-full min-w-0 max-w-full items-start md:grid md:grid-cols-2 md:gap-6 home-v2-columns md:!transform-none ${
               isNudging
                 ? currentSlide === 0
                   ? 'animate-silk-nudge-left'
@@ -445,13 +445,13 @@ function SeasonTopSectionInner({
           >
             {/* Left Column: Breed Carousel */}
             <div
-              className={`w-full shrink-0 md:w-auto md:shrink transition-opacity duration-200 ${
+              className={`w-full min-w-0 max-w-full shrink-0 md:w-auto md:shrink transition-opacity duration-200 ${
                 !isAnimating && currentSlide === 1
                   ? 'h-0 overflow-hidden opacity-0 md:h-auto md:overflow-visible md:opacity-100'
                   : 'h-auto opacity-100'
               }`}
             >
-              <div className="home-v2-col">
+              <div className="home-v2-col w-full min-w-0 max-w-full">
                 <SeasonShowsCarousel
                   slides={showSlides}
                   carousel={carousel}
@@ -468,13 +468,13 @@ function SeasonTopSectionInner({
 
             {/* Right Column: Absolute Top Season Dogs across all breeds */}
             <div
-              className={`w-full shrink-0 md:w-auto md:shrink transition-opacity duration-200 ${
+              className={`w-full min-w-0 max-w-full shrink-0 md:w-auto md:shrink transition-opacity duration-200 ${
                 !isAnimating && currentSlide === 0
                   ? 'h-0 overflow-hidden opacity-0 md:h-auto md:overflow-visible md:opacity-100'
                   : 'h-auto opacity-100'
               }`}
             >
-              <div className="home-v2-col">
+              <div className="home-v2-col w-full min-w-0 max-w-full">
                 <div className="home-v2-col-head home-v2-col-head--tabs !flex-nowrap gap-1.5 sm:gap-2">
                   <span className="hidden md:inline shrink-0">Абсолютные лидеры сезона</span>
                   <span className="md:hidden truncate text-[12px] font-bold text-camel-800 pl-24 md:pl-0">
@@ -527,7 +527,7 @@ function SeasonTopSectionInner({
       ────────────────────────────────────────────────────────────── */}
       {activeTab === 'donino' && (
         <div
-          className="w-full relative overflow-hidden touch-pan-y"
+          className="w-full min-w-0 max-w-full relative overflow-hidden touch-pan-y"
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
@@ -541,7 +541,7 @@ function SeasonTopSectionInner({
           {...carousel.pauseHandlers}
         >
           <div
-            className={`flex w-full items-start md:grid md:grid-cols-2 md:gap-6 md:!transform-none ${
+            className={`flex w-full min-w-0 max-w-full items-start md:grid md:grid-cols-2 md:gap-6 home-v2-columns md:!transform-none ${
               isNudging
                 ? currentSlide === 0
                   ? 'animate-silk-nudge-left'
@@ -560,13 +560,13 @@ function SeasonTopSectionInner({
           >
             {/* Column 1: Speed Radar Carousel */}
             <div
-              className={`w-full shrink-0 md:w-auto md:shrink transition-opacity duration-200 ${
+              className={`w-full min-w-0 max-w-full shrink-0 md:w-auto md:shrink transition-opacity duration-200 ${
                 !isAnimating && currentSlide === 1
                   ? 'h-0 overflow-hidden opacity-0 md:h-auto md:overflow-visible md:opacity-100'
                   : 'h-auto opacity-100'
               }`}
             >
-              <div className="home-v2-col">
+              <div className="home-v2-col w-full min-w-0 max-w-full">
                 {doninoSpeedSlides && doninoSpeedSlides.length > 0 ? (
                   <SeasonDoninoSpeedCarousel
                     slides={doninoSpeedSlides}
@@ -619,13 +619,13 @@ function SeasonTopSectionInner({
 
             {/* Column 2: 350m Track Carousel */}
             <div
-              className={`w-full shrink-0 md:w-auto md:shrink transition-opacity duration-200 ${
+              className={`w-full min-w-0 max-w-full shrink-0 md:w-auto md:shrink transition-opacity duration-200 ${
                 !isAnimating && currentSlide === 0
                   ? 'h-0 overflow-hidden opacity-0 md:h-auto md:overflow-visible md:opacity-100'
                   : 'h-auto opacity-100'
               }`}
             >
-              <div className="home-v2-col">
+              <div className="home-v2-col w-full min-w-0 max-w-full">
                 {doninoCoursingSlides && doninoCoursingSlides.length > 0 ? (
                   <SeasonDoninoCoursingCarousel
                     slides={doninoCoursingSlides}

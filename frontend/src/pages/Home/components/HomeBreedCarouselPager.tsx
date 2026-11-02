@@ -29,9 +29,9 @@ export function HomeBreedCarouselPager({
   if (dots.length <= 1) return null
 
   return (
-    <div className="mt-auto border-t border-old-money-100 home-breed-pager-wrapper">
+    <div className="mt-auto border-t border-old-money-100 home-breed-pager-wrapper w-full max-w-full overflow-hidden">
       <nav
-        className="flex items-center justify-center gap-0.5 px-3 py-0.5 home-breed-pager-nav"
+        className="flex items-center justify-center gap-0.5 px-2 py-0.5 w-full max-w-full overflow-hidden home-breed-pager-nav"
         aria-label={ariaLabel}
       >
         {dots.map((dot, i) => {
@@ -42,13 +42,13 @@ export function HomeBreedCarouselPager({
               type="button"
               aria-label={dot.label}
               title={dot.label}
-              className="inline-flex min-h-[44px] min-w-[36px] items-center justify-center px-1 py-1 focus:outline-none home-breed-pager-dot-btn"
+              className="inline-flex min-h-[32px] sm:min-h-[36px] min-w-0 flex-1 max-w-[28px] items-center justify-center px-0.5 py-1 focus:outline-none home-breed-pager-dot-btn cursor-pointer"
               onClick={() => go(i)}
             >
               <span
                 className={`h-1.5 rounded-full transition-all duration-300 ${
                   active
-                    ? 'w-4 bg-camel-500'
+                    ? 'w-3.5 sm:w-4 bg-camel-500'
                     : 'w-1.5 bg-old-money-300 hover:bg-old-money-400'
                 }`}
                 aria-hidden="true"
