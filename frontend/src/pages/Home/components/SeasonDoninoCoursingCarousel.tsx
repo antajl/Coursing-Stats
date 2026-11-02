@@ -23,8 +23,8 @@ export default function SeasonDoninoCoursingCarousel({
   isNudging = false,
   onToggleSubTab,
 }: SeasonDoninoCoursingCarouselProps) {
-  const { index, trackStyle, getAdjacent, touchHandlers } = carousel
-  const { prev: prevSlide, current: slide, next: nextSlide } = getAdjacent(slides)
+  const { index, getAdjacent } = carousel
+  const { current: slide } = getAdjacent(slides)
 
   if (!slide) {
     return (
@@ -40,10 +40,10 @@ export default function SeasonDoninoCoursingCarousel({
   const renderHeaderItem = (s: BreedSlide<CoursingRecord>) => {
     const rankingHref = `/coursing-records?breed=${encodeURIComponent(s.breedKey)}`
     return (
-      <div className="w-full shrink-0 flex items-center justify-center gap-1.5 px-2">
+      <div className="min-w-0 max-w-full flex items-center justify-center gap-1.5 px-1">
         <Link
           to={rankingHref}
-          className="truncate text-[12px] font-semibold text-camel-800 hover:underline"
+          className="truncate min-w-0 text-[12px] font-semibold text-camel-800 hover:underline"
           title={`Рекорды спринта: ${s.breedLabel}`}
         >
           {s.breedLabel}
@@ -57,7 +57,7 @@ export default function SeasonDoninoCoursingCarousel({
 
   const renderSlideDogs = (s: BreedSlide<CoursingRecord>) => (
     <div
-      className="w-full shrink-0 donino-home-list"
+      className="w-full min-w-0 donino-home-list"
       role="list"
       aria-label={`Рекорды спринта 350 м Донино: ${s.breedLabel}`}
       aria-live="polite"
@@ -86,7 +86,7 @@ export default function SeasonDoninoCoursingCarousel({
     <div className="flex min-h-0 min-w-0 flex-1 flex-col">
       <div className="home-v2-col-head home-v2-col-head--tabs !flex-nowrap gap-1.5 sm:gap-2 relative">
         <span className="hidden md:inline shrink-0">Бега 350 м</span>
-        <div className="flex min-w-0 flex-1 items-center justify-center px-20 md:px-0">
+        <div className="flex min-w-0 flex-1 items-center justify-center px-14 sm:px-16 md:px-0">
           {renderHeaderItem(slide)}
         </div>
         <div className="shrink-0 flex items-center gap-1.5 ml-auto hidden md:flex">
@@ -104,11 +104,9 @@ export default function SeasonDoninoCoursingCarousel({
         )}
       </div>
 
-      <div className="overflow-hidden flex-1 flex flex-col">
-        <div className="flex w-full will-change-transform" style={trackStyle}>
-          {renderSlideDogs(prevSlide)}
+      <div className="overflow-hidden flex-1 flex flex-col min-w-0 w-full">
+        <div key={slide.breedKey} className="w-full flex-1">
           {renderSlideDogs(slide)}
-          {renderSlideDogs(nextSlide)}
         </div>
       </div>
 

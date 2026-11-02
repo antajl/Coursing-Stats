@@ -358,6 +358,7 @@ function SeasonTopSectionInner({
       {activeTab === 'sport' && (
         <div
           className="w-full min-w-0 max-w-full overflow-hidden touch-pan-y"
+          style={{ width: '100%', maxWidth: '100%', contain: 'layout paint' }}
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
@@ -384,7 +385,7 @@ function SeasonTopSectionInner({
             }}
           >
             {/* Column 1: Coursing */}
-            <div className="w-full min-w-full max-w-full shrink-0 md:w-auto md:min-w-0 md:shrink">
+            <div className="w-full max-w-full min-w-0 shrink-0 basis-full md:w-auto md:min-w-0 md:shrink md:basis-auto">
               <div className="home-v2-col w-full min-w-0 max-w-full">
                 <SeasonCompetitionsCarousel
                   slides={competitionSlides}
@@ -398,7 +399,7 @@ function SeasonTopSectionInner({
             </div>
 
             {/* Column 2: Racing */}
-            <div className="w-full min-w-full max-w-full shrink-0 md:w-auto md:min-w-0 md:shrink">
+            <div className="w-full max-w-full min-w-0 shrink-0 basis-full md:w-auto md:min-w-0 md:shrink md:basis-auto">
               <div className="home-v2-col w-full min-w-0 max-w-full">
                 <SeasonRacingCarousel
                   slides={racingSlides}
@@ -420,6 +421,7 @@ function SeasonTopSectionInner({
       {activeTab === 'shows' && (
         <div
           className="w-full min-w-0 max-w-full overflow-hidden touch-pan-y"
+          style={{ width: '100%', maxWidth: '100%', contain: 'layout paint' }}
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
@@ -446,7 +448,7 @@ function SeasonTopSectionInner({
             }}
           >
             {/* Left Column: Breed Carousel */}
-            <div className="w-full min-w-full max-w-full shrink-0 md:w-auto md:min-w-0 md:shrink">
+            <div className="w-full max-w-full min-w-0 shrink-0 basis-full md:w-auto md:min-w-0 md:shrink md:basis-auto">
               <div className="home-v2-col w-full min-w-0 max-w-full">
                 <SeasonShowsCarousel
                   slides={showSlides}
@@ -460,11 +462,11 @@ function SeasonTopSectionInner({
             </div>
 
             {/* Right Column: Absolute Top Season Dogs across all breeds */}
-            <div className="w-full min-w-full max-w-full shrink-0 md:w-auto md:min-w-0 md:shrink">
+            <div className="w-full max-w-full min-w-0 shrink-0 basis-full md:w-auto md:min-w-0 md:shrink md:basis-auto">
               <div className="home-v2-col w-full min-w-0 max-w-full">
                 <div className="home-v2-col-head home-v2-col-head--tabs !flex-nowrap gap-1.5 sm:gap-2 relative">
                   <span className="hidden md:inline shrink-0">Абсолютные лидеры сезона</span>
-                  <span className="md:hidden truncate text-[12.5px] font-bold text-camel-800 text-center w-full px-20 md:px-0">
+                  <span className="md:hidden truncate text-[12.5px] font-bold text-camel-800 text-center w-full px-14 sm:px-16 md:px-0">
                     Абсолютный топ · все породы
                   </span>
                   <div className="shrink-0 flex items-center gap-1.5 ml-auto hidden md:flex">
@@ -512,6 +514,7 @@ function SeasonTopSectionInner({
       {activeTab === 'donino' && (
         <div
           className="w-full min-w-0 max-w-full overflow-hidden touch-pan-y"
+          style={{ width: '100%', maxWidth: '100%', contain: 'layout paint' }}
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
@@ -538,7 +541,7 @@ function SeasonTopSectionInner({
             }}
           >
             {/* Column 1: Speed Radar Carousel */}
-            <div className="w-full min-w-full max-w-full shrink-0 md:w-auto md:min-w-0 md:shrink">
+            <div className="w-full max-w-full min-w-0 shrink-0 basis-full md:w-auto md:min-w-0 md:shrink md:basis-auto">
               <div className="home-v2-col w-full min-w-0 max-w-full">
                 {doninoSpeedSlides && doninoSpeedSlides.length > 0 ? (
                   <SeasonDoninoSpeedCarousel
@@ -552,7 +555,7 @@ function SeasonTopSectionInner({
                 ) : (
                   <>
                     <div className="home-v2-col-head home-v2-col-head--tabs !flex-nowrap gap-1.5 sm:gap-2 relative">
-                      <span className="truncate text-center w-full px-20 md:px-0">Замер скорости (радар)</span>
+                      <span className="truncate text-center w-full px-14 sm:px-16 md:px-0">Замер скорости (радар)</span>
                       <HomeSubSectionTab
                         targetLabel="Бега 350 м"
                         direction="right"
@@ -585,7 +588,7 @@ function SeasonTopSectionInner({
             </div>
 
             {/* Column 2: 350m Track Carousel */}
-            <div className="w-full min-w-full max-w-full shrink-0 md:w-auto md:min-w-0 md:shrink">
+            <div className="w-full max-w-full min-w-0 shrink-0 basis-full md:w-auto md:min-w-0 md:shrink md:basis-auto">
               <div className="home-v2-col w-full min-w-0 max-w-full">
                 {doninoCoursingSlides && doninoCoursingSlides.length > 0 ? (
                   <SeasonDoninoCoursingCarousel
@@ -599,7 +602,7 @@ function SeasonTopSectionInner({
                 ) : (
                   <>
                     <div className="home-v2-col-head home-v2-col-head--tabs !flex-nowrap gap-1.5 sm:gap-2 relative">
-                      <span className="truncate text-center w-full px-20 md:px-0">Бега 350 м (спринт)</span>
+                      <span className="truncate text-center w-full px-14 sm:px-16 md:px-0">Бега 350 м (спринт)</span>
                       <HomeSubSectionTab
                         targetLabel="Замер"
                         direction="left"
