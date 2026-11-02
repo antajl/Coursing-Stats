@@ -25,12 +25,14 @@ The following global skills are automatically activated during development:
 - **verification-before-completion** — Requires verification evidence before claiming completion
 - **incremental-implementation** — Builds in thin vertical slices with testing between each
 - **old-money-design** — Enforces Old Money UI aesthetic (no emojis, camel palette, Lucide icons, 2K/FHD responsive rules, touch targets ≥ 44px)
+- **smart-commit-and-learn** — Autonomous invariant learning (zero-prompt `/learn`) and intelligent atomic English Conventional Commits on demand
 
 These skills trigger automatically based on context:
 - **ponytail**: Any coding task, refactoring, or when user mentions "lazy", "simplest", "minimal"
 - **verification-before-completion**: Before claiming completion, done, fixed, or tests pass
 - **incremental-implementation**: When implementing features touching multiple files or large changes
 - **old-money-design**: Any UI/layout/styling task, component creation, or visual design work
+- **smart-commit-and-learn**: Any architectural decision, domain rule change, UI pattern agreement, or when user requests commit/push
 
 ---
 
@@ -107,6 +109,29 @@ Three domains: **Competitions** / **Shows** / **Donino** — see [docs/sheets/01
 
 ---
 
+## Git Commit & Autonomous Learn Protocol
+
+### 1. Autonomous Invariant Learning (Zero-Friction /learn)
+- **Automatic detection:** Whenever an architectural decision, UI/UX layout pattern, data invariant, domain cynological rule, or user correction/preference is established during a session, the AI agent **automatically captures it**. No need for the user to manually type `/learn` or approve dialogs.
+- **Immediate recording:** The agent writes the new invariant directly into `AGENTS.md` (under `Critical Architecture Facts` or `Forbidden`) and/or the relevant domain cheatsheet (`docs/sheets/`).
+- **Commit attribution:** The rule is either committed as an atomic commit `docs(learn): <imperative description>` or bundled into the session's clean commit plan.
+
+### 2. Smart Atomic Commits on Demand
+- **Commit triggers:** Execute commits only when the user requests it ("commit", "push", "закоммить", "запушь", "сохрани", "залей") or gives explicit instruction.
+- **Never spam micro-commits:** During active iterative work (styling, adjusting margins, trying variants), the agent **does not spam micro-commits**. When a task is complete and verified, note `✓ Ready for commit`.
+- **Pre-commit quality pipeline:**
+  1. `git status` / `git diff`: check all modified files, verify no stray `console.log`, temporary files, or debug scrap.
+  2. Verification: run fast tests (`yarn test:fast`) to ensure every commit is green and bisectable.
+  3. **Atomic splitting:** if changes touch distinct domains (e.g. `frontend/` UI + `backend/` scripts + `AGENTS.md` docs), stage them into **separate atomic commits** via `git add <files>`. Never dump unrelated changes into a single grab-bag commit.
+  4. **Strict Conventional Commits (English, No Emojis):**
+     - Format: `<type>(<scope>): <action in present imperative>` (lowercase, no trailing period, strictly zero emojis).
+     - Types: `feat`, `fix`, `docs`, `data`, `refactor`, `perf`, `test`, `chore`.
+     - Scopes: `events`, `competitions`, `donino`, `shows`, `dogs`, `judges`, `ui`, `rules`, `learn`, `seo`, `deploy`.
+     - Single action: forbidden to use compound "and" (`feat: add X and fix Y` is split into two commits).
+  5. Push to `origin/main` (when push requested) and output a concise summary of created commits and newly learned project invariants.
+
+---
+
 ## Critical Commands
 
 ```bash
@@ -141,7 +166,7 @@ PowerShell: use `;` not `&&`.
 - Parse Breed Archive PDF (URL only)  
 - Rebrand procoursing.ru  
 - Deploy Worker in site CI  
-- Commit/push without user request  
+- Commit/push without user request (execute smart commits only when user requests: "commit", "push", "закоммить", "сохрани", "запушь")  
 - Runtime D1 in production  
 - Full dog history in bot  
 - Emojis anywhere in UI, site, documentation, README, or commits (Old Money aesthetic: strictly zero emojis; use Lucide SVG icons in UI, clean markdown text in docs)
