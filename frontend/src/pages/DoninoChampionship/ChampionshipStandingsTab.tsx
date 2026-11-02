@@ -1,11 +1,5 @@
-import React, { useState, useMemo, useRef, useEffect } from 'react'
-import { X, ChevronDown, Trophy, Timer, Award, ChevronLeft, ChevronRight, Sparkles } from 'lucide-react'
-import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
-import ModernDropdown from '../../components/ui/ModernDropdown'
-import BreedSearchDropdown from '../../components/ui/BreedSearchDropdown'
-import QuickBreedBar, { type QuickBreedItem } from '../TopDogs/QuickBreedBar'
-import DogSexIcon from '../../components/DogSexIcon'
-import { toolbarPillTriggerClass } from '../../lib/toolbar'
+import React, { useState, useMemo } from 'react'
+import { Trophy, Timer, Award, ChevronLeft, ChevronRight } from 'lucide-react'
 import { formatBreedName, matchesBreedFilter } from '../../lib/breedMapping'
 import type { ChampionshipStanding, ChampionshipPromotion } from '../../lib/staticData/donino'
 import { useInfiniteScroll } from '../../hooks/useInfiniteScroll'
@@ -13,6 +7,8 @@ import ChampionshipDogCard from './components/ChampionshipDogCard'
 import ChampionshipAnatomyWidget from './components/ChampionshipAnatomyWidget'
 import ChampionshipPointsRulesWidget from './components/ChampionshipPointsRulesWidget'
 import ChampionshipLinksCard, { type LeagueFilter, pluralizeDogs } from './components/ChampionshipLinksCard'
+import ChampionshipToolbar from './components/ChampionshipToolbar'
+import { useChampionshipCarousel } from './hooks/useChampionshipCarousel'
 
 interface ChampionshipStandingsTabProps {
   standings: ChampionshipStanding[]
@@ -34,172 +30,23 @@ export default function ChampionshipStandingsTab({
   const [selectedLeague, setSelectedLeague] = useState<LeagueFilter>('all')
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedBreed, setSelectedBreed] = useState('')
-  const [leagueDropdownOpen, setLeagueDropdownOpen] = useState(false)
   const [selectedSex, setSelectedSex] = useState<string>('')
-  const [sexDropdownOpen, setSexDropdownOpen] = useState(false)
   const [expandedDogKey, setExpandedDogKey] = useState<string | null>(null)
-  const [sortMode, setSortMode] = useState<'points' | 'time'>('time')
 
-  const [isTransitioning, setIsTransitioning] = useState(false)
-  const [isNudging, setIsNudging] = useState(false)
-  const hadMovedRef = useRef(false)
-  const transitionTimeoutRef = useRef<number | null>(null)
-  const trackRef = useRef<HTMLDivElement>(null)
-
-  const activeSlide = sortMode === 'time' ? 0 : 1
-
-  const triggerNudge = () => {
-    setIsNudging(true)
-    setTimeout(() => {
-      setIsNudging(false)
-    }, 750)
-  }
-
-  // Auto-play gentle invitation nudge on page load (after 600ms)
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      triggerNudge()
-    }, 600)
-    return () => clearTimeout(timer)
-  }, [])
-
-  // Mobile swipe gesture with real-time direct GPU drag (0 React re-renders during swipe!)
-  const touchStartRef = useRef<{ x: number; y: number; time: number } | null>(null)
-  const gestureLockRef = useRef<'horizontal' | 'vertical' | null>(null)
-
-  const handleTouchStart = (e: React.TouchEvent) => {
-    if (typeof window !== 'undefined' && window.innerWidth >= 1024) return
-    setIsNudging(false)
-    const touch = e.touches[0]
-    touchStartRef.current = { x: touch.clientX, y: touch.clientY, time: Date.now() }
-    gestureLockRef.current = null
-    hadMovedRef.current = false
-    if (transitionTimeoutRef.current) {
-      clearTimeout(transitionTimeoutRef.current)
-      transitionTimeoutRef.current = null
-    }
-    setIsTransitioning(false)
-    if (trackRef.current) {
-      trackRef.current.style.transition = 'none'
-    }
-  }
-
-  const handleTouchMove = (e: React.TouchEvent) => {
-    if (!touchStartRef.current || (typeof window !== 'undefined' && window.innerWidth >= 1024)) return
-    const touch = e.touches[0]
-    const dx = touch.clientX - touchStartRef.current.x
-    const dy = touch.clientY - touchStartRef.current.y
-
-    if (Math.abs(dx) > 8 || Math.abs(dy) > 8) {
-      hadMovedRef.current = true
-    }
-
-    if (!gestureLockRef.current) {
-      const absDx = Math.abs(dx)
-      const absDy = Math.abs(dy)
-      if (absDx < 8 && absDy < 8) return
-      if (absDy >= absDx) {
-        gestureLockRef.current = 'vertical'
-        return
-      }
-      gestureLockRef.current = 'horizontal'
-    }
-
-    if (gestureLockRef.current === 'horizontal' && trackRef.current) {
-      const isAtLeftEdge = activeSlide === 0 && dx > 0
-      const isAtRightEdge = activeSlide === 1 && dx < 0
-      const appliedDx = isAtLeftEdge || isAtRightEdge ? dx * 0.22 : dx
-      trackRef.current.style.transform = `translate3d(calc(${-activeSlide * 100}% + ${appliedDx}px), 0, 0)`
-    }
-  }
-
-  const handleTouchEnd = (e: React.TouchEvent) => {
-    if (!touchStartRef.current || (typeof window !== 'undefined' && window.innerWidth >= 1024)) return
-    const isHorizontal = gestureLockRef.current === 'horizontal'
-    const touch = e.changedTouches[0]
-    const dx = touch.clientX - touchStartRef.current.x
-    const dt = Date.now() - touchStartRef.current.time
-    const velocity = Math.abs(dx) / (dt || 1)
-
-    touchStartRef.current = null
-    gestureLockRef.current = null
-
-    if (isHorizontal) {
-      const isSwipeLeft = dx < -35 || (dx < -15 && velocity > 0.2)
-      const isSwipeRight = dx > 35 || (dx > 15 && velocity > 0.2)
-
-      let targetSlide = activeSlide
-      if (isSwipeLeft && activeSlide === 0) {
-        targetSlide = 1
-        ;(e.nativeEvent as any)._doninoSwipeConsumed = true
-      } else if (isSwipeRight && activeSlide === 1) {
-        targetSlide = 0
-        ;(e.nativeEvent as any)._doninoSwipeConsumed = true
-      }
-
-      if (trackRef.current) {
-        trackRef.current.style.transition = 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)'
-        trackRef.current.style.transform = `translate3d(${-targetSlide * 100}%, 0, 0)`
-      }
-
-      setIsTransitioning(true)
-      if (targetSlide !== activeSlide) {
-        setSortMode(targetSlide === 0 ? 'time' : 'points')
-        triggerNudge()
-      }
-
-      transitionTimeoutRef.current = window.setTimeout(() => {
-        setIsTransitioning(false)
-        hadMovedRef.current = false
-        if (trackRef.current) {
-          trackRef.current.style.transition = ''
-          trackRef.current.style.transform = `translate3d(${-targetSlide * 100}%, 0, 0)`
-        }
-      }, 400)
-    } else {
-      if (trackRef.current) {
-        trackRef.current.style.transition = 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)'
-        trackRef.current.style.transform = `translate3d(${-activeSlide * 100}%, 0, 0)`
-      }
-      hadMovedRef.current = false
-    }
-  }
-
-  const handleTouchCancel = () => {
-    touchStartRef.current = null
-    gestureLockRef.current = null
-    if (trackRef.current) {
-      trackRef.current.style.transition = 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)'
-      trackRef.current.style.transform = `translate3d(${-activeSlide * 100}%, 0, 0)`
-    }
-    hadMovedRef.current = false
-  }
-
-  const isAnimating = isTransitioning || isNudging
-
-  const handleSortModeChange = (mode: 'points' | 'time') => {
-    if (mode === sortMode) return
-    setIsTransitioning(true)
-    setSortMode(mode)
-    if (transitionTimeoutRef.current) {
-      clearTimeout(transitionTimeoutRef.current)
-    }
-    transitionTimeoutRef.current = window.setTimeout(() => {
-      setIsTransitioning(false)
-    }, 400)
-  }
-
-  const transformStr = useMemo(() => {
-    if (typeof window !== 'undefined' && window.innerWidth >= 1024) {
-      return activeSlide === 0 ? 'translateX(0%)' : 'translateX(-100%)'
-    }
-
-    const dragPx = dragOffset ?? 0
-    if (activeSlide === 0) {
-      return `translateX(${dragPx}px)`
-    }
-    return `translateX(calc(-100% + ${dragPx}px))`
-  }, [activeSlide, dragOffset])
+  const {
+    sortMode,
+    activeSlide,
+    isNudging,
+    isAnimating,
+    trackRef,
+    hadMovedRef,
+    triggerNudge,
+    handleSortModeChange,
+    handleTouchStart,
+    handleTouchMove,
+    handleTouchEnd,
+    handleTouchCancel,
+  } = useChampionshipCarousel()
 
   // Candidate breeds sorted strictly by participant count descending, then alphabetically
   const candidateBreeds = useMemo(() => {
@@ -403,388 +250,30 @@ export default function ChampionshipStandingsTab({
   const hasActiveFilters =
     selectedLeague !== 'all' || searchQuery !== '' || selectedBreed !== '' || selectedSex !== ''
 
-  const leagueOrder: LeagueFilter[] = ['Чемпионов', 'Абсолют', 'Прогресс', 'Юниоры']
-  const sortedLeagues = [...leagueOrder].sort(
-    (a, b) => (dynamicLeagueCounts[b] || 0) - (dynamicLeagueCounts[a] || 0)
-  )
-
-  const leagueOptions: { label: string; value: LeagueFilter; count: number }[] = [
-    { label: `Все лиги (${dynamicLeagueCounts.all})`, value: 'all', count: dynamicLeagueCounts.all },
-    ...sortedLeagues.map((league) => ({
-      label: `${league} (${dynamicLeagueCounts[league] || 0})`,
-      value: league,
-      count: dynamicLeagueCounts[league] || 0,
-    })),
-  ]
-
   return (
     <div className="space-y-4">
-      {/* 1. Мобильная консоль: Поиск + Пол + Порода + Лига + Сброс (строго 1 компактный ряд) */}
-      <div className="flex sm:hidden items-center gap-1.5 w-full min-w-0 overflow-x-auto no-scrollbar py-0.5">
-        <ToolbarSearch
-          value={searchQuery}
-          onChange={setSearchQuery}
-          placeholder="Поиск по кличке..."
-        />
+      {/* Search & Filter Toolbar */}
+      <ChampionshipToolbar
+        searchQuery={searchQuery}
+        onSearchChange={setSearchQuery}
+        selectedSex={selectedSex}
+        onSexChange={setSelectedSex}
+        selectedBreed={selectedBreed}
+        onBreedChange={setSelectedBreed}
+        selectedLeague={selectedLeague}
+        onLeagueChange={setSelectedLeague}
+        dynamicLeagueCounts={dynamicLeagueCounts}
+        candidateBreeds={candidateBreeds}
+        breedValues={breedValues}
+        dogIndex={dogIndex}
+        hasActiveFilters={hasActiveFilters}
+        onResetFilters={handleResetFilters}
+      />
 
-        {/* Выбор пола */}
-        <div className="shrink-0">
-          <ModernDropdown
-            trigger={
-              <button
-                type="button"
-                className={`shrink-0 ${toolbarPillTriggerClass(Boolean(selectedSex))}`}
-                title="Фильтр по полу"
-              >
-                {selectedSex === 'm' && <DogSexIcon sex="m" size={12} variant="neutral" className="shrink-0 text-current" />}
-                {selectedSex === 'f' && <DogSexIcon sex="f" size={12} variant="neutral" className="shrink-0 text-current" />}
-                <span>{!selectedSex ? 'Пол' : selectedSex === 'm' ? 'Кобели' : 'Суки'}</span>
-                <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
-              </button>
-            }
-            isOpen={sexDropdownOpen}
-            onOpenChange={setSexDropdownOpen}
-            width="130px"
-          >
-            <div className="p-1 min-w-[125px]" role="menu">
-              <button
-                type="button"
-                role="menuitem"
-                onClick={() => {
-                  setSelectedSex('')
-                  setSexDropdownOpen(false)
-                }}
-                className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors cursor-pointer ${
-                  !selectedSex
-                    ? 'bg-camel-100 text-camel-950 font-semibold'
-                    : 'text-charcoal-700 hover:bg-camel-100'
-                }`}
-              >
-                Все
-              </button>
-              <button
-                type="button"
-                role="menuitem"
-                onClick={() => {
-                  setSelectedSex('m')
-                  setSexDropdownOpen(false)
-                }}
-                className={`flex w-full items-center gap-2 rounded-md px-3 py-2 text-left text-sm transition-colors cursor-pointer ${
-                  selectedSex === 'm'
-                    ? 'bg-camel-100 text-camel-950 font-semibold'
-                    : 'text-charcoal-700 hover:bg-camel-100'
-                }`}
-              >
-                <DogSexIcon sex="m" size={14} className={selectedSex === 'm' ? 'text-charcoal-900' : 'text-slate-500'} />
-                <span>Кобели</span>
-              </button>
-              <button
-                type="button"
-                role="menuitem"
-                onClick={() => {
-                  setSelectedSex('f')
-                  setSexDropdownOpen(false)
-                }}
-                className={`flex w-full items-center gap-2 rounded-md px-3 py-2 text-left text-sm transition-colors cursor-pointer ${
-                  selectedSex === 'f'
-                    ? 'bg-camel-100 text-camel-950 font-semibold'
-                    : 'text-charcoal-700 hover:bg-camel-100'
-                }`}
-              >
-                <DogSexIcon sex="f" size={14} className={selectedSex === 'f' ? 'text-charcoal-900' : 'text-slate-500'} />
-                <span>Суки</span>
-              </button>
-            </div>
-          </ModernDropdown>
-        </div>
-
-        {/* Выбор породы */}
-        <div className="shrink-0">
-          <BreedSearchDropdown
-            breeds={breedValues}
-            selectedBreed={selectedBreed}
-            onSelect={setSelectedBreed}
-            trigger={
-              <button
-                type="button"
-                className={`shrink-0 ${toolbarPillTriggerClass(Boolean(selectedBreed))}`}
-              >
-                <span className="truncate max-w-[85px]">
-                  {selectedBreed ? formatBreedName(selectedBreed) : 'Порода'}
-                </span>
-                <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
-              </button>
-            }
-            dogIndex={dogIndex}
-          />
-        </div>
-
-        {/* Выбор лиги (уникальный фильтр) */}
-        <div className="shrink-0">
-          <ModernDropdown
-            isOpen={leagueDropdownOpen}
-            onOpenChange={setLeagueDropdownOpen}
-            width="180px"
-            portal
-            closeOnScroll
-            trigger={
-              <button
-                type="button"
-                onClick={() => setLeagueDropdownOpen(!leagueDropdownOpen)}
-                className={`shrink-0 ${toolbarPillTriggerClass(selectedLeague !== 'all')}`}
-                title="Фильтр по лигам"
-              >
-                <span>{selectedLeague === 'all' ? 'Все лиги' : `Лига «${selectedLeague}»`}</span>
-                <ChevronDown className="h-3.5 w-3.5 opacity-70" />
-              </button>
-            }
-          >
-            <div className="p-1 space-y-0.5 min-w-[170px]">
-              {leagueOptions.map((opt) => {
-                const isSelected = selectedLeague === opt.value
-                const isEmpty = opt.count === 0 && opt.value !== 'all'
-
-                return (
-                  <button
-                    key={opt.value}
-                    type="button"
-                    disabled={isEmpty}
-                    onClick={() => {
-                      setSelectedLeague(opt.value)
-                      setLeagueDropdownOpen(false)
-                    }}
-                    className={`w-full text-left px-2.5 py-1.5 rounded-md text-xs transition-colors cursor-pointer flex items-center justify-between ${
-                      isSelected
-                        ? 'border border-camel-400 bg-camel-100 text-camel-950 font-semibold shadow-2xs'
-                        : isEmpty
-                        ? 'opacity-40 cursor-not-allowed text-charcoal-400'
-                        : 'text-charcoal-700 hover:bg-cream-100'
-                    }`}
-                  >
-                    <span>{opt.label}</span>
-                    {isSelected && (
-                      <span className="w-1.5 h-1.5 rounded-full bg-camel-600" />
-                    )}
-                  </button>
-                )
-              })}
-            </div>
-          </ModernDropdown>
-        </div>
-
-        {/* Сброс */}
-        {hasActiveFilters && (
-          <div className="ml-auto shrink-0">
-            <button
-              type="button"
-              onClick={handleResetFilters}
-              className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-old-money-200 bg-cream-50 text-charcoal-500 hover:bg-cream-100 hover:text-charcoal-800 transition-colors shrink-0 cursor-pointer"
-              title="Сбросить все фильтры"
-            >
-              <X className="h-4 w-4" />
-            </button>
-          </div>
-        )}
-      </div>
-
-      {/* 2. Десктопная консоль: Поиск + Пол + Разделитель + QuickBreedBar + Лига + Сброс */}
-      <div className="hidden sm:flex sm:items-center gap-2 w-full min-w-0">
-        <ToolbarSearch
-          value={searchQuery}
-          onChange={setSearchQuery}
-          placeholder="Поиск по кличке..."
-        />
-
-        {/* Выбор пола */}
-        <div className="shrink-0">
-          <ModernDropdown
-            trigger={
-              <button
-                type="button"
-                className={`shrink-0 ${toolbarPillTriggerClass(Boolean(selectedSex))}`}
-                title="Фильтр по полу"
-              >
-                {selectedSex === 'm' && <DogSexIcon sex="m" size={12} variant="neutral" className="shrink-0 text-current" />}
-                {selectedSex === 'f' && <DogSexIcon sex="f" size={12} variant="neutral" className="shrink-0 text-current" />}
-                <span>{!selectedSex ? 'Пол' : selectedSex === 'm' ? 'Кобели' : 'Суки'}</span>
-                <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
-              </button>
-            }
-            isOpen={sexDropdownOpen}
-            onOpenChange={setSexDropdownOpen}
-            width="130px"
-          >
-            <div className="p-1 min-w-[125px]" role="menu">
-              <button
-                type="button"
-                role="menuitem"
-                onClick={() => {
-                  setSelectedSex('')
-                  setSexDropdownOpen(false)
-                }}
-                className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors cursor-pointer ${
-                  !selectedSex
-                    ? 'bg-camel-100 text-camel-950 font-semibold'
-                    : 'text-charcoal-700 hover:bg-camel-100'
-                }`}
-              >
-                Все
-              </button>
-              <button
-                type="button"
-                role="menuitem"
-                onClick={() => {
-                  setSelectedSex('m')
-                  setSexDropdownOpen(false)
-                }}
-                className={`flex w-full items-center gap-2 rounded-md px-3 py-2 text-left text-sm transition-colors cursor-pointer ${
-                  selectedSex === 'm'
-                    ? 'bg-camel-100 text-camel-950 font-semibold'
-                    : 'text-charcoal-700 hover:bg-camel-100'
-                }`}
-              >
-                <DogSexIcon sex="m" size={14} className={selectedSex === 'm' ? 'text-charcoal-900' : 'text-slate-500'} />
-                <span>Кобели</span>
-              </button>
-              <button
-                type="button"
-                role="menuitem"
-                onClick={() => {
-                  setSelectedSex('f')
-                  setSexDropdownOpen(false)
-                }}
-                className={`flex w-full items-center gap-2 rounded-md px-3 py-2 text-left text-sm transition-colors cursor-pointer ${
-                  selectedSex === 'f'
-                    ? 'bg-camel-100 text-camel-950 font-semibold'
-                    : 'text-charcoal-700 hover:bg-camel-100'
-                }`}
-              >
-                <DogSexIcon sex="f" size={14} className={selectedSex === 'f' ? 'text-charcoal-900' : 'text-slate-500'} />
-                <span>Суки</span>
-              </button>
-            </div>
-          </ModernDropdown>
-        </div>
-
-        <div className="h-5 w-px bg-old-money-300 shrink-0 mx-0.5" aria-hidden="true" />
-
-        {/* QuickBreedBar with breed pills and overflow dropdown */}
-        <div className="flex-1 min-w-[200px]">
-          <QuickBreedBar
-            selectedBreed={selectedBreed}
-            onSelectBreed={setSelectedBreed}
-            breedValues={breedValues}
-            candidateBreeds={candidateBreeds}
-            dogIndex={dogIndex}
-          />
-        </div>
-
-        {/* League Dropdown */}
-        <div className="shrink-0">
-          <ModernDropdown
-            isOpen={leagueDropdownOpen}
-            onOpenChange={setLeagueDropdownOpen}
-            width="180px"
-            portal
-            closeOnScroll
-            trigger={
-              <button
-                type="button"
-                onClick={() => setLeagueDropdownOpen(!leagueDropdownOpen)}
-                className={`shrink-0 ${toolbarPillTriggerClass(selectedLeague !== 'all')}`}
-                title="Фильтр по лигам"
-              >
-                <span>{selectedLeague === 'all' ? 'Все лиги' : `Лига «${selectedLeague}»`}</span>
-                <ChevronDown className="h-3.5 w-3.5 opacity-70" />
-              </button>
-            }
-          >
-            <div className="p-1 space-y-0.5 min-w-[170px]">
-              {leagueOptions.map((opt) => {
-                const isSelected = selectedLeague === opt.value
-                const isEmpty = opt.count === 0 && opt.value !== 'all'
-
-                return (
-                  <button
-                    key={opt.value}
-                    type="button"
-                    disabled={isEmpty}
-                    onClick={() => {
-                      setSelectedLeague(opt.value)
-                      setLeagueDropdownOpen(false)
-                    }}
-                    className={`w-full text-left px-2.5 py-1.5 rounded-md text-xs transition-colors cursor-pointer flex items-center justify-between ${
-                      isSelected
-                        ? 'border border-camel-400 bg-camel-100 text-camel-950 font-semibold shadow-2xs'
-                        : isEmpty
-                        ? 'opacity-40 cursor-not-allowed text-charcoal-400'
-                        : 'text-charcoal-700 hover:bg-cream-100'
-                    }`}
-                  >
-                    <span>{opt.label}</span>
-                    {isSelected && (
-                      <span className="w-1.5 h-1.5 rounded-full bg-camel-600" />
-                    )}
-                  </button>
-                )
-              })}
-            </div>
-          </ModernDropdown>
-        </div>
-
-        {/* Reset button */}
-        {hasActiveFilters && (
-          <button
-            type="button"
-            onClick={handleResetFilters}
-            className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-old-money-200 bg-cream-50 text-charcoal-500 hover:bg-cream-100 hover:text-charcoal-800 transition-colors shrink-0 cursor-pointer"
-            title="Сбросить все фильтры"
-          >
-            <X className="h-4 w-4" />
-          </button>
-        )}
-      </div>
-
-      {/* 2. Main 2-Column Grid Layout (Ranking on Left, Statistics Widgets on Right) */}
+      {/* Main 2-Column Grid Layout (Ranking on Left, Statistics Widgets on Right) */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
         {/* Left Column: Dog Ranking Cards */}
         <div className="lg:col-span-7 xl:col-span-8 space-y-3">
-          {/* GPU Keyframes for ultra-smooth spring nudge and synchronized arrow bounce */}
-          <style>{`
-            @keyframes silkNudgeLeft {
-              0% { transform: translate3d(0, 0, 0); }
-              22% { transform: translate3d(-34px, 0, 0); }
-              38% { transform: translate3d(-34px, 0, 0); }
-              66% { transform: translate3d(4px, 0, 0); }
-              82% { transform: translate3d(-1px, 0, 0); }
-              100% { transform: translate3d(0, 0, 0); }
-            }
-            @keyframes silkNudgeRight {
-              0% { transform: translate3d(-100%, 0, 0); }
-              22% { transform: translate3d(calc(-100% + 34px), 0, 0); }
-              38% { transform: translate3d(calc(-100% + 34px), 0, 0); }
-              66% { transform: translate3d(calc(-100% - 4px), 0, 0); }
-              82% { transform: translate3d(calc(-100% + 1px), 0, 0); }
-              100% { transform: translate3d(-100%, 0, 0); }
-            }
-            @keyframes arrowNudge {
-              0%, 100% { transform: translate3d(0, 0, 0); }
-              22%, 38% { transform: translate3d(3px, 0, 0); }
-              66% { transform: translate3d(-1px, 0, 0); }
-            }
-            .animate-silk-nudge-left {
-              animation: silkNudgeLeft 750ms cubic-bezier(0.25, 1, 0.5, 1) forwards;
-            }
-            .animate-silk-nudge-right {
-              animation: silkNudgeRight 750ms cubic-bezier(0.25, 1, 0.5, 1) forwards;
-            }
-            .animate-arrow-nudge {
-              animation: arrowNudge 750ms cubic-bezier(0.25, 1, 0.5, 1) forwards;
-            }
-          `}</style>
-
-
-
           {/* Main Dog Ranking Card with Physical Swipe Carousel */}
           <div
             className="relative overflow-hidden rounded-2xl border border-old-money-200 bg-white shadow-2xs touch-pan-y select-none sm:select-auto"
@@ -823,7 +312,7 @@ export default function ChampionshipStandingsTab({
                 </div>
               </div>
 
-              {/* Физический прозрачный язычок с края шапки (Mobile) — 0% наложения на цифры собак! */}
+              {/* Физический прозрачный язычок с края шапки (Mobile) */}
               <div className="sm:hidden">
                 {activeSlide === 0 ? (
                   <button

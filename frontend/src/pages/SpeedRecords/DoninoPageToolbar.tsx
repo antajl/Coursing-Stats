@@ -1,18 +1,15 @@
 import { useMemo, useState } from 'react'
-import { ChevronDown, X } from 'lucide-react'
-import DogSexIcon from '../../components/DogSexIcon'
-import FilterSelect from '../../components/FilterSelect'
+import { X } from 'lucide-react'
 import PageToolbar from '../../components/toolbar/PageToolbar'
-import ToolbarFiltersDropdown from '../../components/toolbar/ToolbarFiltersDropdown'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
 import QuickBreedBar from '../TopDogs/QuickBreedBar'
-import ModernDropdown from '../../components/ui/ModernDropdown'
 import BreedSearchDropdown from '../../components/ui/BreedSearchDropdown'
-import { formatBreedName } from '../../lib/breedMapping'
-import { TOOLBAR_NUMBER_INPUT, toolbarPillTriggerClass } from '../../lib/toolbar'
+import { formatBreedName, displayBreed } from '../../lib/breedMapping'
 import type { DogsIndexEntry } from '../../lib/competingBreeds'
-import { displayBreed } from '../../lib/breedMapping'
-import { GROUP_BY_OPTIONS, type GroupBy } from './stats/constants'
+import type { GroupBy } from './stats/constants'
+import { DoninoYearDropdown } from './components/DoninoYearDropdown'
+import { DoninoSexDropdown, sexLabel } from './components/DoninoSexDropdown'
+import { DoninoThresholdDropdown } from './components/DoninoThresholdDropdown'
 
 interface DoninoPageToolbarProps {
   view: 'table' | 'stats'
@@ -47,16 +44,6 @@ interface DoninoPageToolbarProps {
   coursingRecords?: { name: string; breed: string; time_seconds: number; date: string }[]
   speedStats?: { breed: string; count: number; bestSpeed: number; avgSpeed: number }[]
   coursingStats?: { breed: string; count: number; bestTime: number; avgTime: number }[]
-}
-
-function PillChevron() {
-  return <ChevronDown className="h-3.5 w-3.5 shrink-0" aria-hidden />
-}
-
-function sexLabel(sex: string): string {
-  if (sex === 'С') return 'Сука'
-  if (sex === 'К') return 'Кобель'
-  return sex
 }
 
 export default function DoninoPageToolbar({
@@ -97,8 +84,7 @@ export default function DoninoPageToolbar({
   const hasThresholdFilters = Boolean(
     filterMinSpeed || filterMaxSpeed || filterMinTime || filterMaxTime,
   )
-  const thresholdCount = [filterMinSpeed, filterMaxSpeed, filterMinTime, filterMaxTime].filter(Boolean)
-    .length
+  const thresholdCount = [filterMinSpeed, filterMaxSpeed, filterMinTime, filterMaxTime].filter(Boolean).length
 
   const sortedYears = useMemo(
     () => [...years].map(String).sort((a, b) => Number(b) - Number(a)),
@@ -115,6 +101,20 @@ export default function DoninoPageToolbar({
 
   const clearAllYears = () => {
     for (const y of [...filterYears]) onToggleFilter('year', y)
+  }
+
+  const handleSelectYear = (year: string) => {
+    if (onYearChange) {
+      onYearChange(year)
+    } else {
+      clearAllYears()
+      if (year) onToggleFilter('year', year)
+    }
+  }
+
+  const handleSelectSex = (sex: string) => {
+    for (const s of [...filterSexes]) onToggleFilter('sex', s)
+    if (sex) onToggleFilter('sex', sex)
   }
 
   const yearTriggerLabel =
@@ -138,8 +138,6 @@ export default function DoninoPageToolbar({
         ? sexLabel(filterSexes[0]!)
         : `Пол · ${filterSexes.length}`
 
-
-
   const isYearActive =
     filterYears.length > 0 &&
     !(filterYears.length === 1 && filterYears[0] === currentSeason)
@@ -159,126 +157,21 @@ export default function DoninoPageToolbar({
                 placeholder="Кличка собаки…"
               />
 
-              <ModernDropdown
-                trigger={
-                  <button
-                    type="button"
-                    className={toolbarPillTriggerClass(isYearActive)}
-                  >
-                    {yearTriggerLabel}
-                    <PillChevron />
-                  </button>
-                }
+              <DoninoYearDropdown
                 isOpen={mobileYearDropdownOpen}
                 onOpenChange={setMobileYearDropdownOpen}
-                width="120px"
-              >
-                <div className="max-h-60 overflow-y-auto p-1" role="menu">
-                  <button
-                    type="button"
-                    role="menuitem"
-                    onClick={() => {
-                      if (onYearChange) {
-                        onYearChange('')
-                      } else {
-                        clearAllYears()
-                      }
-                      setMobileYearDropdownOpen(false)
-                    }}
-                    className={`w-full rounded-md px-3 py-2 text-left text-sm transition-colors ${
-                      filterYears.length === 0
-                        ? 'bg-camel-100 text-camel-950 font-semibold'
-                        : 'text-charcoal-700 hover:bg-camel-100'
-                    }`}
-                  >
-                    Все года
-                  </button>
-                  {sortedYears.map((year) => {
-                    const active = filterYears.length === 1 && filterYears[0] === year
-                    return (
-                      <button
-                        key={year}
-                        type="button"
-                        role="menuitem"
-                        onClick={() => {
-                          if (onYearChange) {
-                            onYearChange(year)
-                          } else {
-                            clearAllYears()
-                            onToggleFilter('year', year)
-                          }
-                          setMobileYearDropdownOpen(false)
-                        }}
-                        className={`w-full rounded-md px-3 py-2 text-left text-sm transition-colors ${
-                          active
-                            ? 'bg-camel-100 text-camel-950 font-semibold'
-                            : 'text-charcoal-700 hover:bg-camel-100'
-                        }`}
-                      >
-                        {year}
-                      </button>
-                    )
-                  })}
-                </div>
-              </ModernDropdown>
-
-              <ModernDropdown
-                trigger={
-                  <button
-                    type="button"
-                    className={toolbarPillTriggerClass(filterSexes.length > 0)}
-                  >
-                    {sexTriggerLabel}
-                    <PillChevron />
-                  </button>
-                }
-                isOpen={mobileSexDropdownOpen}
-                onOpenChange={setMobileSexDropdownOpen}
-                width="140px"
-              >
-                <div className="p-1" role="menu">
-                  <button
-                    type="button"
-                    role="menuitem"
-                    onClick={() => {
-                      for (const s of [...filterSexes]) onToggleFilter('sex', s)
-                      setMobileSexDropdownOpen(false)
-                    }}
-                    className={`w-full rounded-md px-3 py-2 text-left text-sm transition-colors ${
-                      filterSexes.length === 0
-                        ? 'bg-camel-100 text-camel-950 font-semibold'
-                        : 'text-charcoal-700 hover:bg-camel-100'
-                    }`}
-                  >
-                    Все
-                  </button>
-                  {sexes.map((sex) => {
-                    const active = filterSexes.includes(sex)
-                    return (
-                      <button
-                        key={sex}
-                        type="button"
-                        role="menuitem"
-                        onClick={() => onToggleFilter('sex', sex)}
-                        className={`flex w-full items-center gap-2 rounded-md px-3 py-2 text-left text-sm transition-colors ${
-                          active
-                            ? 'bg-camel-100 text-camel-950 font-semibold'
-                            : 'text-charcoal-700 hover:bg-camel-100'
-                        }`}
-                      >
-                        <DogSexIcon sex={sex} />
-                        {sexLabel(sex)}
-                      </button>
-                    )
-                  })}
-                </div>
-              </ModernDropdown>
+                sortedYears={sortedYears}
+                filterYears={filterYears}
+                yearTriggerLabel={yearTriggerLabel}
+                isYearActive={isYearActive}
+                onSelectYear={handleSelectYear}
+              />
 
               <div className="shrink-0">
                 <BreedSearchDropdown
-                  breeds={breeds}
-                  selectedBreed={filterBreeds[0] || ''}
-                  onSelect={(breed) => {
+                  buttonLabel={breedTriggerLabel}
+                  selectedBreed={filterBreeds.length === 1 ? filterBreeds[0] : ''}
+                  onSelectBreed={(breed) => {
                     if (onBreedChange) {
                       onBreedChange(breed)
                     } else {
@@ -286,167 +179,101 @@ export default function DoninoPageToolbar({
                       if (breed) onToggleFilter('breed', breed)
                     }
                   }}
-                  trigger={
-                    <button
-                      type="button"
-                      className={`shrink-0 ${toolbarPillTriggerClass(filterBreeds.length > 0)}`}
-                    >
-                      <span className="truncate max-w-[100px]">
-                        {filterBreeds.length > 0 ? formatBreedName(filterBreeds[0]) : 'Порода'}
-                      </span>
-                      <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
-                    </button>
-                  }
+                  breedValues={breeds}
                   dogIndex={dogIndex}
                 />
               </div>
 
+              <DoninoSexDropdown
+                isOpen={mobileSexDropdownOpen}
+                onOpenChange={setMobileSexDropdownOpen}
+                sexes={sexes}
+                filterSexes={filterSexes}
+                sexTriggerLabel={sexTriggerLabel}
+                onSelectSex={handleSelectSex}
+              />
+
+              {view === 'stats' ? (
+                <DoninoThresholdDropdown
+                  hasThresholdFilters={hasThresholdFilters}
+                  thresholdCount={thresholdCount}
+                  onClearPanelFilters={onClearPanelFilters}
+                  statsGroupBy={statsGroupBy}
+                  onStatsGroupByChange={onStatsGroupByChange}
+                  filterMinSpeed={filterMinSpeed}
+                  filterMaxSpeed={filterMaxSpeed}
+                  filterMinTime={filterMinTime}
+                  filterMaxTime={filterMaxTime}
+                  onFilterMinSpeedChange={onFilterMinSpeedChange}
+                  onFilterMaxSpeedChange={onFilterMaxSpeedChange}
+                  onFilterMinTimeChange={onFilterMinTimeChange}
+                  onFilterMaxTimeChange={onFilterMaxTimeChange}
+                />
+              ) : null}
+
               {hasActiveFilters && (
-                <div className="ml-auto shrink-0">
-                  <button
-                    type="button"
-                    onClick={onClearFilters}
-                    className="shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full border border-old-money-200 bg-cream-50 text-charcoal-500 hover:text-charcoal-800 transition-colors cursor-pointer"
-                    title="Сбросить фильтры"
-                    aria-label="Сбросить фильтры"
-                  >
-                    <X className="h-4 w-4" />
-                  </button>
-                </div>
+                <button
+                  type="button"
+                  onClick={onClearFilters}
+                  className="shrink-0 inline-flex h-8 items-center gap-1.5 rounded-full border border-old-money-200 bg-cream-50 px-2.5 text-xs font-semibold text-charcoal-600 hover:border-camel-500 hover:text-charcoal-900 hover:bg-cream-100 transition-colors cursor-pointer"
+                  title="Сбросить все фильтры"
+                >
+                  <X className="h-3.5 w-3.5" />
+                  <span>Сбросить</span>
+                </button>
               )}
             </div>
 
-            {/* Десктопная группа: Поиск + Год + Пол + Разделитель + Порода + Пороги + Сброс */}
-            <div className="hidden md:flex md:items-center gap-2 w-full min-w-0">
-              <div className="flex items-center gap-1.5 shrink-0">
-                <ToolbarSearch
-                  value={searchQuery}
-                  onChange={onSearchChange}
-                  placeholder="Кличка, порода…"
-                />
-              <ModernDropdown
-                trigger={
-                  <button
-                    type="button"
-                    className={toolbarPillTriggerClass(isYearActive)}
-                  >
-                    {yearTriggerLabel}
-                    <PillChevron />
-                  </button>
-                }
+            {/* QuickBreedBar для десктопа */}
+            <div className="hidden md:block">
+              <QuickBreedBar
+                breeds={breeds}
+                selectedBreed={filterBreeds.length === 1 ? filterBreeds[0] : ''}
+                onSelectBreed={(breed) => {
+                  if (onBreedChange) {
+                    onBreedChange(breed)
+                  } else {
+                    for (const b of [...filterBreeds]) onToggleFilter('breed', b)
+                    if (breed) onToggleFilter('breed', breed)
+                  }
+                }}
+                allLabel="Все породы"
+                className="mb-2"
+                dogIndex={dogIndex}
+              />
+            </div>
+
+            {/* Десктопная панель фильтров: второй ряд */}
+            <div className="hidden md:flex items-center gap-2 overflow-x-auto no-scrollbar py-0.5">
+              <ToolbarSearch
+                value={searchQuery}
+                onChange={onSearchChange}
+                placeholder="Поиск по кличке собаки…"
+              />
+
+              <DoninoYearDropdown
                 isOpen={desktopYearDropdownOpen}
                 onOpenChange={setDesktopYearDropdownOpen}
-                width="120px"
-              >
-                <div className="max-h-60 overflow-y-auto p-1" role="menu">
-                  <button
-                    type="button"
-                    role="menuitem"
-                    onClick={() => {
-                      if (onYearChange) {
-                        onYearChange('')
-                      } else {
-                        clearAllYears()
-                      }
-                      setDesktopYearDropdownOpen(false)
-                    }}
-                    className={`w-full rounded-md px-3 py-2 text-left text-sm transition-colors ${
-                      filterYears.length === 0
-                        ? 'bg-camel-100 text-camel-950 font-semibold'
-                        : 'text-charcoal-700 hover:bg-camel-100'
-                    }`}
-                  >
-                    Все года
-                  </button>
-                  {sortedYears.map((year) => {
-                    const active = filterYears.length === 1 && filterYears[0] === year
-                    return (
-                      <button
-                        key={year}
-                        type="button"
-                        role="menuitem"
-                        onClick={() => {
-                          if (onYearChange) {
-                            onYearChange(year)
-                          } else {
-                            clearAllYears()
-                            onToggleFilter('year', year)
-                          }
-                          setDesktopYearDropdownOpen(false)
-                        }}
-                        className={`w-full rounded-md px-3 py-2 text-left text-sm transition-colors ${
-                          active
-                            ? 'bg-camel-100 text-camel-950 font-semibold'
-                            : 'text-charcoal-700 hover:bg-camel-100'
-                        }`}
-                      >
-                        {year}
-                      </button>
-                    )
-                  })}
-                </div>
-              </ModernDropdown>
+                sortedYears={sortedYears}
+                filterYears={filterYears}
+                yearTriggerLabel={yearTriggerLabel}
+                isYearActive={isYearActive}
+                onSelectYear={handleSelectYear}
+              />
 
-              <ModernDropdown
-                trigger={
-                  <button
-                    type="button"
-                    className={toolbarPillTriggerClass(filterSexes.length > 0)}
-                  >
-                    {sexTriggerLabel}
-                    <PillChevron />
-                  </button>
-                }
+              <DoninoSexDropdown
                 isOpen={desktopSexDropdownOpen}
                 onOpenChange={setDesktopSexDropdownOpen}
-                width="140px"
-              >
-                <div className="p-1" role="menu">
-                  <button
-                    type="button"
-                    role="menuitem"
-                    onClick={() => {
-                      for (const s of [...filterSexes]) onToggleFilter('sex', s)
-                      setDesktopSexDropdownOpen(false)
-                    }}
-                    className={`w-full rounded-md px-3 py-2 text-left text-sm transition-colors ${
-                      filterSexes.length === 0
-                        ? 'bg-camel-100 text-camel-950 font-semibold'
-                        : 'text-charcoal-700 hover:bg-camel-100'
-                    }`}
-                  >
-                    Все
-                  </button>
-                  {sexes.map((sex) => {
-                    const active = filterSexes.includes(sex)
-                    return (
-                      <button
-                        key={sex}
-                        type="button"
-                        role="menuitem"
-                        onClick={() => onToggleFilter('sex', sex)}
-                        className={`flex w-full items-center gap-2 rounded-md px-3 py-2 text-left text-sm transition-colors ${
-                          active
-                            ? 'bg-camel-100 text-camel-950 font-semibold'
-                            : 'text-charcoal-700 hover:bg-camel-100'
-                        }`}
-                      >
-                        <DogSexIcon sex={sex} />
-                        {sexLabel(sex)}
-                      </button>
-                    )
-                  })}
-                </div>
-              </ModernDropdown>
-              </div>
+                sexes={sexes}
+                filterSexes={filterSexes}
+                sexTriggerLabel={sexTriggerLabel}
+                onSelectSex={handleSelectSex}
+              />
 
-              {/* Разделитель между фильтрами и породами на десктопе */}
-              <div className="hidden md:block h-5 w-px bg-old-money-300 shrink-0 mx-0.5" aria-hidden="true" />
-
-              {/* Быстрый выбор пород QuickBreedBar — строго перед уникальными фильтрами */}
-              <div className="hidden md:block flex-1 min-w-0 w-full md:w-auto">
-                <QuickBreedBar
-                  selectedBreed={filterBreeds[0] || ''}
+              <div className="shrink-0">
+                <BreedSearchDropdown
+                  buttonLabel={breedTriggerLabel}
+                  selectedBreed={filterBreeds.length === 1 ? filterBreeds[0] : ''}
                   onSelectBreed={(breed) => {
                     if (onBreedChange) {
                       onBreedChange(breed)
@@ -461,82 +288,23 @@ export default function DoninoPageToolbar({
               </div>
 
               {view === 'stats' ? (
-                <div className="shrink-0">
-                <ToolbarFiltersDropdown
-                  active={hasThresholdFilters}
-                  activeCount={thresholdCount}
-                  fillContent
-                  panelClassName="md:w-[min(300px,calc(100vw-2rem))]"
-                  onReset={onClearPanelFilters}
-                  label="Пороги"
-                >
-                  <div className="space-y-3 p-3">
-                    <FilterSelect
-                      label="Группировка"
-                      ariaLabel="Группировка"
-                      value={statsGroupBy}
-                      onChange={(value) => onStatsGroupByChange(value as GroupBy)}
-                      options={GROUP_BY_OPTIONS.map((o) => ({ value: o.value, label: o.label }))}
-                      className="w-full"
-                    />
-                    <div className="grid grid-cols-2 gap-2">
-                      <label className="block space-y-0.5">
-                        <span className="text-[11px] font-medium text-charcoal-600">
-                          Мин. км/ч
-                        </span>
-                        <input
-                          type="number"
-                          value={filterMinSpeed}
-                          onChange={(e) => onFilterMinSpeedChange(e.target.value)}
-                          placeholder="мин."
-                          className={`${TOOLBAR_NUMBER_INPUT} !h-8`}
-                        />
-                      </label>
-                      <label className="block space-y-0.5">
-                        <span className="text-[11px] font-medium text-charcoal-600">
-                          Макс. км/ч
-                        </span>
-                        <input
-                          type="number"
-                          value={filterMaxSpeed}
-                          onChange={(e) => onFilterMaxSpeedChange(e.target.value)}
-                          placeholder="макс."
-                          className={`${TOOLBAR_NUMBER_INPUT} !h-8`}
-                        />
-                      </label>
-                      <label className="block space-y-0.5">
-                        <span className="text-[11px] font-medium text-charcoal-600">
-                          Мин. сек
-                        </span>
-                        <input
-                          type="number"
-                          step="0.01"
-                          value={filterMinTime}
-                          onChange={(e) => onFilterMinTimeChange(e.target.value)}
-                          placeholder="мин."
-                          className={`${TOOLBAR_NUMBER_INPUT} !h-8`}
-                        />
-                      </label>
-                      <label className="block space-y-0.5">
-                        <span className="text-[11px] font-medium text-charcoal-600">
-                          Макс. сек
-                        </span>
-                        <input
-                          type="number"
-                          step="0.01"
-                          value={filterMaxTime}
-                          onChange={(e) => onFilterMaxTimeChange(e.target.value)}
-                          placeholder="макс."
-                          className={`${TOOLBAR_NUMBER_INPUT} !h-8`}
-                        />
-                      </label>
-                    </div>
-                  </div>
-                </ToolbarFiltersDropdown>
-                </div>
+                <DoninoThresholdDropdown
+                  hasThresholdFilters={hasThresholdFilters}
+                  thresholdCount={thresholdCount}
+                  onClearPanelFilters={onClearPanelFilters}
+                  statsGroupBy={statsGroupBy}
+                  onStatsGroupByChange={onStatsGroupByChange}
+                  filterMinSpeed={filterMinSpeed}
+                  filterMaxSpeed={filterMaxSpeed}
+                  filterMinTime={filterMinTime}
+                  filterMaxTime={filterMaxTime}
+                  onFilterMinSpeedChange={onFilterMinSpeedChange}
+                  onFilterMaxSpeedChange={onFilterMaxSpeedChange}
+                  onFilterMinTimeChange={onFilterMinTimeChange}
+                  onFilterMaxTimeChange={onFilterMaxTimeChange}
+                />
               ) : null}
 
-              {/* Сброс фильтров на десктопе */}
               {hasActiveFilters && (
                 <button
                   type="button"
