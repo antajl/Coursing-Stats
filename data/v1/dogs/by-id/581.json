@@ -6,12 +6,14 @@
   "name_lat": "INFINITI LOVE",
   "name_ru": "ИНФИНИТИ ЛАВ",
   "breed": "УИППЕТ",
-  "sex": null,
+  "sex": "female",
   "owner": null,
   "competition_ids": [
-    1285
+    1285,
+    20250706
   ],
   "competition_files": [
-    "competitions/2025/09-сентябрь/1285-чемпионат-россии-бега-борзых.json"
+    "competitions/2025/09-сентябрь/1285-чемпионат-россии-бега-борзых.json",
+    "competitions/2025/07-июль/20250706-кубок-котеики-глюка-дружественные-забеги.json"
   ]
 }

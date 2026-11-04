@@ -2,8 +2,8 @@
   "schema": "coursing-stats/calendar-v1",
   "year": 2025,
   "exported_at": "2026-09-28T13:21:42.919Z",
-  "event_count": 39,
-  "with_results": 39,
+  "event_count": 40,
+  "with_results": 40,
   "events": [
     {
       "id": 1250,
@@ -529,6 +529,25 @@
       "result_count": 97,
       "participants_count": 97,
       "results_pdf_url": "https://drive.google.com/file/d/1tXZA9USWBb5rsji-t8WqIgTaOqTI6lEd/view"
+    },
+    {
+      "id": 20250706,
+      "year": 2025,
+      "date_start": "2025-07-06",
+      "date_end": "2025-07-06",
+      "rank_label": "Кубок котейки Глюка · Дружественные забеги\n(Курсинг борзых)",
+      "event_type": "racing",
+      "competition_kind": "Дружественные забеги",
+      "competition_type": "Спринт (бега борзых)",
+      "title": "Кубок котейки Глюка — Дружественные забеги",
+      "host_club": "Курсинг в Михайловском",
+      "region": "Московская область",
+      "location": "Московская область, Пушкинский р-н, д. Михайловское",
+      "has_results": true,
+      "results_file": "competitions/2025/07-июль/20250706-кубок-котеики-глюка-дружественные-забеги.json",
+      "result_count": 50,
+      "participants_count": 50,
+      "results_pdf_url": "https://drive.google.com/file/d/1nwC0FCAOeBTCb7PIarAscNyOqdgx_mnw/view?usp=sharing"
     },
     {
       "id": 1278,
