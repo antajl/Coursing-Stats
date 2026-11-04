@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/index-top-placement-v1",
   "year": 2024,
-  "count": 422,
+  "count": 425,
   "items": [
     {
       "dog_id": 50,
@@ -129,7 +129,7 @@
       "total_starts": 4,
       "year_from": 2024,
       "year_to": 2024,
-      "rank_delta": 10,
+      "rank_delta": 12,
       "rank_delta_breed": 1,
       "sex": "F"
     },
@@ -263,6 +263,38 @@
       "sex": "F"
     },
     {
+      "dog_id": 508,
+      "name_lat": "ДЕНВЕРС ЭЛИТ ОФЕЛИЯ /DENVERS ELITE OPHELIA",
+      "name_ru": "ДЕНВЕРС ЭЛИТ ОФЕЛИЯ /DENVERS ELITE OPHELIA",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "year": 2024,
+      "gold": 3,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 4,
+      "year_from": 2024,
+      "year_to": 2024,
+      "rank_delta": -1,
+      "rank_delta_breed": 0,
+      "sex": "F"
+    },
+    {
+      "dog_id": 9220,
+      "name_lat": "АРЕС",
+      "name_ru": "АРЕС",
+      "breed": "БИГЛЬ",
+      "year": 2024,
+      "gold": 3,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 4,
+      "year_from": 2024,
+      "year_to": 2024,
+      "rank_delta": -1,
+      "rank_delta_breed": 0,
+      "sex": "M"
+    },
+    {
       "dog_id": 503,
       "name_lat": "САНСАРА ШЕРВУД ШОТЕР ГРАН ПРИ /SANSARA SHERVUD SHOTER GRAN PRI",
       "name_ru": "САНСАРА ШЕРВУД ШОТЕР ГРАН ПРИ /SANSARA SHERVUD SHOTER GRAN PRI",
@@ -274,8 +306,8 @@
       "total_starts": 3,
       "year_from": 2024,
       "year_to": 2024,
-      "rank_delta": 28,
-      "rank_delta_breed": 3,
+      "rank_delta": 26,
+      "rank_delta_breed": 2,
       "sex": "M"
     },
     {
@@ -326,22 +358,6 @@
       "rank_delta": -1,
       "rank_delta_breed": 0,
       "sex": "F"
-    },
-    {
-      "dog_id": 9220,
-      "name_lat": "АРЕС",
-      "name_ru": "АРЕС",
-      "breed": "БИГЛЬ",
-      "year": 2024,
-      "gold": 3,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 3,
-      "year_from": 2024,
-      "year_to": 2024,
-      "rank_delta": -1,
-      "rank_delta_breed": 0,
-      "sex": "M"
     },
     {
       "dog_id": 7226,
@@ -464,11 +480,12 @@
       "gold": 2,
       "silver": 1,
       "bronze": 1,
-      "total_starts": 4,
+      "total_starts": 5,
       "year_from": 2024,
       "year_to": 2024,
       "rank_delta": -3,
-      "rank_delta_breed": -1
+      "rank_delta_breed": -1,
+      "sex": "F"
     },
     {
       "dog_id": 7214,
@@ -515,7 +532,7 @@
       "total_starts": 3,
       "year_from": 2024,
       "year_to": 2024,
-      "rank_delta": 20,
+      "rank_delta": 19,
       "rank_delta_breed": 0,
       "sex": "M"
     },
@@ -565,7 +582,8 @@
       "year_to": 2024,
       "rank_delta": -4,
       "rank_delta_breed": -1,
-      "aggression_count": 1
+      "aggression_count": 1,
+      "sex": "M"
     },
     {
       "dog_id": 7088,
@@ -647,22 +665,6 @@
       "rank_delta_breed": -1,
       "aggression_count": 2,
       "sex": "M"
-    },
-    {
-      "dog_id": 508,
-      "name_lat": "ДЕНВЕРС ЭЛИТ ОФЕЛИЯ /DENVERS ELITE OPHELIA",
-      "name_ru": "ДЕНВЕРС ЭЛИТ ОФЕЛИЯ /DENVERS ELITE OPHELIA",
-      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "year": 2024,
-      "gold": 2,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 3,
-      "year_from": 2024,
-      "year_to": 2024,
-      "rank_delta": -4,
-      "rank_delta_breed": -1,
-      "sex": "F"
     },
     {
       "dog_id": 654,
@@ -819,7 +821,7 @@
       "total_starts": 2,
       "year_from": 2024,
       "year_to": 2024,
-      "rank_delta": 56,
+      "rank_delta": 59,
       "rank_delta_breed": 0,
       "sex": "M"
     },
@@ -900,7 +902,7 @@
       "total_starts": 2,
       "year_from": 2024,
       "year_to": 2024,
-      "rank_delta": 61,
+      "rank_delta": 63,
       "rank_delta_breed": 0,
       "sex": "F"
     },
@@ -935,6 +937,22 @@
       "rank_delta": -4,
       "rank_delta_breed": 0,
       "sex": "F"
+    },
+    {
+      "dog_id": 9612,
+      "name_lat": "САНСАРА ШЕРВУД ШОТЕР ГРАН ПРИ",
+      "name_ru": "САНСАРА ШЕРВУД ШОТЕР ГРАН ПРИ",
+      "breed": "МЕТИС",
+      "year": 2024,
+      "gold": 2,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 2,
+      "year_from": 2024,
+      "year_to": 2024,
+      "rank_delta": -4,
+      "rank_delta_breed": 0,
+      "sex": "M"
     },
     {
       "dog_id": 9658,
@@ -980,9 +998,25 @@
       "total_starts": 9,
       "year_from": 2024,
       "year_to": 2024,
-      "rank_delta": -3,
+      "rank_delta": -2,
       "rank_delta_breed": -1,
       "sex": "M"
+    },
+    {
+      "dog_id": 9555,
+      "name_lat": "ДЕНВЕРС ЭЛИТ РЕДМУН /DENVERS ELITE REDMOON",
+      "name_ru": "ДЕНВЕРС ЭЛИТ РЕДМУН /DENVERS ELITE REDMOON",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "year": 2024,
+      "gold": 1,
+      "silver": 4,
+      "bronze": 0,
+      "total_starts": 5,
+      "year_from": 2024,
+      "year_to": 2024,
+      "rank_delta": -5,
+      "rank_delta_breed": 0,
+      "sex": "F"
     },
     {
       "dog_id": 5662,
@@ -1015,22 +1049,6 @@
       "rank_delta": -4,
       "rank_delta_breed": 0,
       "sex": "M"
-    },
-    {
-      "dog_id": 9555,
-      "name_lat": "ДЕНВЕРС ЭЛИТ РЕДМУН /DENVERS ELITE REDMOON",
-      "name_ru": "ДЕНВЕРС ЭЛИТ РЕДМУН /DENVERS ELITE REDMOON",
-      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "year": 2024,
-      "gold": 1,
-      "silver": 3,
-      "bronze": 0,
-      "total_starts": 4,
-      "year_from": 2024,
-      "year_to": 2024,
-      "rank_delta": -4,
-      "rank_delta_breed": 0,
-      "sex": "F"
     },
     {
       "dog_id": 481,
@@ -1192,7 +1210,8 @@
       "year_from": 2024,
       "year_to": 2024,
       "rank_delta": -3,
-      "rank_delta_breed": -1
+      "rank_delta_breed": -1,
+      "sex": "F"
     },
     {
       "dog_id": 5638,
@@ -1302,7 +1321,7 @@
       "total_starts": 2,
       "year_from": 2024,
       "year_to": 2024,
-      "rank_delta": 117,
+      "rank_delta": 119,
       "rank_delta_breed": 4
     },
     {
@@ -1337,6 +1356,22 @@
       "rank_delta": -4,
       "rank_delta_breed": 0,
       "sex": "M"
+    },
+    {
+      "dog_id": 7753,
+      "name_lat": "АФИНА",
+      "name_ru": "АФИНА",
+      "breed": "МЕТИС",
+      "year": 2024,
+      "gold": 1,
+      "silver": 1,
+      "bronze": 0,
+      "total_starts": 2,
+      "year_from": 2024,
+      "year_to": 2024,
+      "rank_delta": -4,
+      "rank_delta_breed": 0,
+      "sex": "F"
     },
     {
       "dog_id": 8950,
@@ -1624,6 +1659,22 @@
       "year_to": 2024,
       "rank_delta": -5,
       "rank_delta_breed": -1,
+      "sex": "F"
+    },
+    {
+      "dog_id": 7154,
+      "name_lat": "EUPHORIA OF WINNER SOZVEZDIE STAFF",
+      "name_ru": "EUPHORIA OF WINNER SOZVEZDIE STAFF",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "year": 2024,
+      "gold": 1,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 2,
+      "year_from": 2024,
+      "year_to": 2024,
+      "rank_delta": -5,
+      "rank_delta_breed": 0,
       "sex": "F"
     },
     {
@@ -1946,22 +1997,6 @@
       "sex": "M"
     },
     {
-      "dog_id": 7154,
-      "name_lat": "EUPHORIA OF WINNER SOZVEZDIE STAFF",
-      "name_ru": "EUPHORIA OF WINNER SOZVEZDIE STAFF",
-      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "year": 2024,
-      "gold": 1,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 1,
-      "year_from": 2024,
-      "year_to": 2024,
-      "rank_delta": -9,
-      "rank_delta_breed": 0,
-      "sex": "F"
-    },
-    {
       "dog_id": 7155,
       "name_lat": "HARLI IZ KRISTALNOY ROSY",
       "name_ru": "HARLI IZ KRISTALNOY ROSY",
@@ -2041,22 +2076,6 @@
       "sex": "F"
     },
     {
-      "dog_id": 7753,
-      "name_lat": "АФИНА",
-      "name_ru": "АФИНА",
-      "breed": "МЕТИС",
-      "year": 2024,
-      "gold": 1,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 1,
-      "year_from": 2024,
-      "year_to": 2024,
-      "rank_delta": -9,
-      "rank_delta_breed": 0,
-      "sex": "F"
-    },
-    {
       "dog_id": 8127,
       "name_lat": "ПОЮЩИЙ ВЕТЕР ПРЕСТИЖ БЭСТ /POYUSCIY VETER PRESTIGE BEST",
       "name_ru": "ПОЮЩИЙ ВЕТЕР ПРЕСТИЖ БЭСТ /POYUSCIY VETER PRESTIGE BEST",
@@ -2071,6 +2090,22 @@
       "rank_delta": -9,
       "rank_delta_breed": 0,
       "sex": "M"
+    },
+    {
+      "dog_id": 8374,
+      "name_lat": "FARLEIN",
+      "name_ru": "ФАРЛЕЙН",
+      "breed": "МЕТИС",
+      "year": 2024,
+      "gold": 1,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 1,
+      "year_from": 2024,
+      "year_to": 2024,
+      "rank_delta": -9,
+      "rank_delta_breed": 0,
+      "sex": "F"
     },
     {
       "dog_id": 9062,
@@ -2244,21 +2279,6 @@
       "rank_delta_breed": 0
     },
     {
-      "dog_id": 9612,
-      "name_lat": "САНСАРА ШЕРВУД ШОТЕР ГРАН ПРИ",
-      "name_ru": "САНСАРА ШЕРВУД ШОТЕР ГРАН ПРИ",
-      "breed": "МЕТИС",
-      "year": 2024,
-      "gold": 1,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 1,
-      "year_from": 2024,
-      "year_to": 2024,
-      "rank_delta": -8,
-      "rank_delta_breed": 0
-    },
-    {
       "dog_id": 9618,
       "name_lat": "VILANTA DIAMOND ANNABELLA DE LA MONTANERA",
       "name_ru": "VILANTA DIAMOND ANNABELLA DE LA MONTANERA",
@@ -2380,6 +2400,22 @@
       "year_to": 2024,
       "rank_delta": -7,
       "rank_delta_breed": 0
+    },
+    {
+      "dog_id": 11188,
+      "name_lat": "ANDROMEDA IZ DOMA MANSUROVYKH",
+      "name_ru": "ANDROMEDA IZ DOMA MANSUROVYKH",
+      "breed": "БИГЛЬ",
+      "year": 2024,
+      "gold": 1,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 1,
+      "year_from": 2024,
+      "year_to": 2024,
+      "rank_delta": -7,
+      "rank_delta_breed": 0,
+      "sex": "F"
     },
     {
       "dog_id": 507,
@@ -2570,7 +2606,7 @@
       "total_starts": 3,
       "year_from": 2024,
       "year_to": 2024,
-      "rank_delta": 20,
+      "rank_delta": 21,
       "rank_delta_breed": 0
     },
     {
@@ -2909,6 +2945,22 @@
       "year_to": 2024,
       "rank_delta": -8,
       "rank_delta_breed": -1,
+      "sex": "F"
+    },
+    {
+      "dog_id": 9611,
+      "name_lat": "ТИССА ЛУНА ГОЛУБОЙ РОДНИК КРЕДО",
+      "name_ru": "ТИССА ЛУНА ГОЛУБОЙ РОДНИК КРЕДО",
+      "breed": "МЕТИС",
+      "year": 2024,
+      "gold": 0,
+      "silver": 1,
+      "bronze": 1,
+      "total_starts": 2,
+      "year_from": 2024,
+      "year_to": 2024,
+      "rank_delta": -8,
+      "rank_delta_breed": 0,
       "sex": "F"
     },
     {
@@ -3548,21 +3600,6 @@
       "rank_delta_breed": 0
     },
     {
-      "dog_id": 9611,
-      "name_lat": "ТИССА ЛУНА ГОЛУБОЙ РОДНИК КРЕДО",
-      "name_ru": "ТИССА ЛУНА ГОЛУБОЙ РОДНИК КРЕДО",
-      "breed": "МЕТИС",
-      "year": 2024,
-      "gold": 0,
-      "silver": 1,
-      "bronze": 0,
-      "total_starts": 1,
-      "year_from": 2024,
-      "year_to": 2024,
-      "rank_delta": -8,
-      "rank_delta_breed": 0
-    },
-    {
       "dog_id": 9623,
       "name_lat": "RED STRIPE CEO OF A WABBIT",
       "name_ru": "RED STRIPE CEO OF A WABBIT",
@@ -3672,6 +3709,22 @@
       "sex": "F"
     },
     {
+      "dog_id": 11189,
+      "name_lat": "BARBARA IZ DOMA MANSUROVYKH",
+      "name_ru": "BARBARA IZ DOMA MANSUROVYKH",
+      "breed": "БИГЛЬ",
+      "year": 2024,
+      "gold": 0,
+      "silver": 1,
+      "bronze": 0,
+      "total_starts": 1,
+      "year_from": 2024,
+      "year_to": 2024,
+      "rank_delta": -8,
+      "rank_delta_breed": 0,
+      "sex": "F"
+    },
+    {
       "dog_id": 7385,
       "name_lat": "ДЕНВЕРС ЭЛИТ НАЙЛИНГ /DENVERS ELITE NAILING",
       "name_ru": "ДЕНВЕРС ЭЛИТ НАЙЛИНГ /DENVERS ELITE NAILING",
@@ -3679,8 +3732,8 @@
       "year": 2024,
       "gold": 0,
       "silver": 0,
-      "bronze": 3,
-      "total_starts": 5,
+      "bronze": 4,
+      "total_starts": 6,
       "year_from": 2024,
       "year_to": 2024,
       "rank_delta": -8,
@@ -4215,8 +4268,7 @@
       "year_from": 2024,
       "year_to": 2024,
       "rank_delta": -9,
-      "rank_delta_breed": 0,
-      "sex": "F"
+      "rank_delta_breed": 0
     },
     {
       "dog_id": 9318,
@@ -5213,7 +5265,8 @@
       "year_from": 2024,
       "year_to": 2024,
       "rank_delta": -9,
-      "rank_delta_breed": 0
+      "rank_delta_breed": 0,
+      "sex": "M"
     },
     {
       "dog_id": 262,
@@ -5374,7 +5427,8 @@
       "year_from": 2024,
       "year_to": 2024,
       "rank_delta": -9,
-      "rank_delta_breed": 0
+      "rank_delta_breed": 0,
+      "sex": "M"
     },
     {
       "dog_id": 5649,

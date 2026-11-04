@@ -207,7 +207,8 @@
       "year_to": 2023,
       "judge_eval_count": 10,
       "score_std_dev": 1.73,
-      "rating_score": 88.71
+      "rating_score": 88.71,
+      "sex": "M"
     },
     {
       "dog_id": 5746,
@@ -652,7 +653,8 @@
       "judge_eval_count": 6,
       "score_std_dev": 1.03,
       "rating_score": 87.95,
-      "aggression_count": 1
+      "aggression_count": 1,
+      "sex": "M"
     },
     {
       "dog_id": 255,
@@ -1095,8 +1097,7 @@
       "year_to": 2023,
       "judge_eval_count": 6,
       "score_std_dev": 2.1,
-      "rating_score": 87.43,
-      "sex": "F"
+      "rating_score": 87.43
     },
     {
       "dog_id": 9637,
@@ -1320,6 +1321,23 @@
       "rating_score": 87.29,
       "aggression_count": 1,
       "sex": "F"
+    },
+    {
+      "dog_id": 9595,
+      "name_lat": "J KAPITAN NELSON",
+      "name_ru": "Ж КАПИТАН НЕЛЬСОН",
+      "breed": "ГРЕЙХАУНД",
+      "year": 2023,
+      "best_score": 540,
+      "total_starts": 1,
+      "best_judge_score": 92,
+      "avg_judge_score": 90,
+      "year_from": 2023,
+      "year_to": 2023,
+      "judge_eval_count": 6,
+      "score_std_dev": 1.1,
+      "rating_score": 87.27,
+      "sex": "M"
     },
     {
       "dog_id": 314,
@@ -1731,23 +1749,6 @@
       "sex": "F"
     },
     {
-      "dog_id": 9595,
-      "name_lat": "J KAPITAN NELSON",
-      "name_ru": "Ж КАПИТАН НЕЛЬСОН",
-      "breed": "ГРЕЙХАУНД",
-      "year": 2023,
-      "best_score": 540,
-      "total_starts": 1,
-      "best_judge_score": 90,
-      "avg_judge_score": 90,
-      "year_from": 2023,
-      "year_to": 2023,
-      "judge_eval_count": 6,
-      "score_std_dev": 0,
-      "rating_score": 87.02,
-      "sex": "M"
-    },
-    {
       "dog_id": 9359,
       "name_lat": "HOUSE THE RAINBOW YUNONA",
       "name_ru": "HOUSE THE RAINBOW YUNONA",
@@ -1823,12 +1824,12 @@
       "year": 2023,
       "best_score": 532,
       "total_starts": 3,
-      "best_judge_score": 91,
+      "best_judge_score": 92,
       "avg_judge_score": 87.21,
       "year_from": 2023,
       "year_to": 2023,
       "judge_eval_count": 14,
-      "score_std_dev": 2.42,
+      "score_std_dev": 2.61,
       "rating_score": 86.98,
       "sex": "F"
     },
@@ -6611,9 +6612,9 @@
       "name_ru": "KNIAZHIE ZOLOTO BAYARD",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "year": 2023,
-      "best_score": 245,
+      "best_score": 170,
       "total_starts": 3,
-      "best_judge_score": 85,
+      "best_judge_score": 245,
       "avg_judge_score": null,
       "year_from": 2023,
       "year_to": 2023,
@@ -6676,6 +6677,41 @@
       "sex": "M"
     },
     {
+      "dog_id": 9312,
+      "name_lat": "ТАТАНКА ВИТКА ДЖОК ДЖАЗ",
+      "name_ru": "ТАТАНКА ВИТКА ДЖОК ДЖАЗ",
+      "breed": "ГРЕЙХАУНД",
+      "year": 2023,
+      "best_score": null,
+      "total_starts": 1,
+      "best_judge_score": 256,
+      "avg_judge_score": null,
+      "year_from": 2023,
+      "year_to": 2023,
+      "judge_eval_count": 0,
+      "score_std_dev": null,
+      "rating_score": null,
+      "aggression_count": 1,
+      "sex": "M"
+    },
+    {
+      "dog_id": 9304,
+      "name_lat": "ЗВЕЗДНАЯ РАДУГА САМОЦВЕТ ОЗОРНОЙ",
+      "name_ru": "ЗВЕЗДНАЯ РАДУГА САМОЦВЕТ ОЗОРНОЙ",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year": 2023,
+      "best_score": null,
+      "total_starts": 1,
+      "best_judge_score": 235,
+      "avg_judge_score": null,
+      "year_from": 2023,
+      "year_to": 2023,
+      "judge_eval_count": 0,
+      "score_std_dev": null,
+      "rating_score": null,
+      "sex": "M"
+    },
+    {
       "dog_id": 18,
       "name_lat": "АРЬЯ",
       "name_ru": "АРЬЯ",
@@ -6708,24 +6744,6 @@
       "judge_eval_count": 0,
       "score_std_dev": null,
       "rating_score": null,
-      "sex": "M"
-    },
-    {
-      "dog_id": 9312,
-      "name_lat": "ТАТАНКА ВИТКА ДЖОК ДЖАЗ",
-      "name_ru": "ТАТАНКА ВИТКА ДЖОК ДЖАЗ",
-      "breed": "ГРЕЙХАУНД",
-      "year": 2023,
-      "best_score": 256,
-      "total_starts": 1,
-      "best_judge_score": 89,
-      "avg_judge_score": null,
-      "year_from": 2023,
-      "year_to": 2023,
-      "judge_eval_count": 0,
-      "score_std_dev": null,
-      "rating_score": null,
-      "aggression_count": 1,
       "sex": "M"
     },
     {
@@ -6771,23 +6789,6 @@
       "best_score": 167,
       "total_starts": 1,
       "best_judge_score": 84,
-      "avg_judge_score": null,
-      "year_from": 2023,
-      "year_to": 2023,
-      "judge_eval_count": 0,
-      "score_std_dev": null,
-      "rating_score": null,
-      "sex": "M"
-    },
-    {
-      "dog_id": 9304,
-      "name_lat": "ЗВЕЗДНАЯ РАДУГА САМОЦВЕТ ОЗОРНОЙ",
-      "name_ru": "ЗВЕЗДНАЯ РАДУГА САМОЦВЕТ ОЗОРНОЙ",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "year": 2023,
-      "best_score": 235,
-      "total_starts": 1,
-      "best_judge_score": 82,
       "avg_judge_score": null,
       "year_from": 2023,
       "year_to": 2023,

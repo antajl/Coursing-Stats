@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Национальные монопородные состязания - ПЧРКФ, 22.04.2023 (Московская область, г. Балашиха)</title>
   <style>
+
     @page {
       size: A4 landscape;
       margin: 1.5mm 1.5mm 1.5mm 1.5mm;
@@ -60,6 +61,7 @@
       padding: 4px 1px;
       white-space: nowrap;
     }
+    
     tr.sub-col-header td {
       font-size: 9pt;
       font-weight: normal;
@@ -83,6 +85,7 @@
       line-height: 1.25;
       padding: 4px 4px;
     }
+    
     td.status-cell {
       text-align: center;
       font-style: italic;
@@ -121,6 +124,7 @@
         font-size: 8.5pt;
         padding: 2px 1px;
       }
+      
       tr.sub-col-header td {
         font-size: 7.5pt;
         padding: 1.5px 0px;
@@ -133,10 +137,12 @@
         font-size: 8.5pt;
         padding: 2px 3px;
       }
+      
       td.status-cell {
         font-size: 8.5pt;
       }
     }
+
   
     /* Monochrome document toolbar */
     .cs-toolbar {
@@ -277,9 +283,9 @@
       border-color: #333333;
     }
     .cs-btn-stage {
-      padding: 3px 8px;
+      padding: 3px 10px;
       font-size: 11px;
-      border-radius: 12px;
+      border-radius: 9999px;
       border-color: #d8c29d;
       background: #faf6ee;
       color: #634d26;
@@ -309,6 +315,20 @@
       background: #ebdcc3;
       border-color: #8c6d37;
       color: #3b280c;
+    }
+    .cs-btn-doc {
+      background: #faf6ee;
+      border-color: #c9ab7b;
+      color: #2a1c0a;
+      font-weight: 600;
+    }
+    .cs-btn-doc svg {
+      color: #7b511c;
+    }
+    .cs-btn-doc:hover {
+      background: #ebdcc3;
+      border-color: #8c6d37;
+      color: #2a1c0a;
     }
 
     @media (max-width: 960px) {
@@ -389,16 +409,20 @@
     <div class="cs-toolbar-actions">
       
       
-      <a href="https://drive.google.com/file/d/15Qj3vFrqWbXWuFLYXVdu68WX_R2ID-9r/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="cs-btn" title="PDF-файл протокола">
+      <a href="https://drive.google.com/file/d/15Qj3vFrqWbXWuFLYXVdu68WX_R2ID-9r/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="cs-btn cs-btn-doc" title="PDF-файл протокола">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
         <span>PDF-файл</span>
       </a>
       
-      <a href="http://procoursing.ru/Catalog_2023-04-22.pdf" target="_blank" rel="noopener noreferrer" class="cs-btn" title="Каталог участников">
+      <a href="https://drive.google.com/file/d/1v_NzYGCXPs75rAhhKeLXjybwlc53Bg12/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="cs-btn cs-btn-doc" title="Каталог участников">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
         <span>Каталог</span>
       </a>
       
+      <a href="https://drive.google.com/file/d/1kgEE-2SjlNv0rogzgok4Pdwpw60ICgXL/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="cs-btn cs-btn-doc" title="Регламент состязания">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        <span>Регламент</span>
+      </a>
       <button onclick="window.print()" class="cs-btn cs-btn-primary" title="Печать или сохранение в PDF (Ctrl+P)">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></svg>
         <span>Печать</span>
@@ -411,42 +435,33 @@
   <table class="protocol-table">
     
     <colgroup>
-      <col style="width: 2.4%;">
-      <col style="width: 2.0%;">
-      <col style="width: 7.0%;">
-      <col style="width: 6.0%;">
-      <col style="width: 3.2%;">
-      <col style="width: 33.0%;">
-      <col style="width: 2.4%;">
-      <col style="width: 1.6%;">
-      <col style="width: 1.6%;">
-      <col style="width: 1.6%;">
-      <col style="width: 1.6%;">
-      <col style="width: 1.6%;">
-      <col style="width: 1.6%;">
-      <col style="width: 2.6%;">
-      <col style="width: 2.4%;">
-      <col style="width: 1.6%;">
-      <col style="width: 1.6%;">
-      <col style="width: 1.6%;">
-      <col style="width: 1.6%;">
-      <col style="width: 1.6%;">
-      <col style="width: 1.6%;">
-      <col style="width: 2.6%;">
       <col style="width: 3.0%;">
-      <col style="width: 2.2%;">
+      <col style="width: 2.5%;">
       <col style="width: 10.0%;">
+      <col style="width: 8.0%;">
+      <col style="width: 4.0%;">
+      <col style="width: 40.0%;">
+      <col style="width: 3.5%;">
+      <col style="width: 3.0%;">
+      <col style="width: 3.0%;">
+      <col style="width: 3.0%;">
+      <col style="width: 3.0%;">
+      <col style="width: 3.0%;">
+      <col style="width: 4.0%;">
+      <col style="width: 4.5%;">
+      <col style="width: 3.0%;">
+      <col style="width: 5.5%;">
     </colgroup>
     <tbody>
       
     <tr class="top-title-row">
-      <td colspan="25">Национальные монопородные состязания - ПЧРКФ, 22.04.2023 (Московская область, г. Балашиха)</td>
+      <td colspan="16">Национальные монопородные состязания - ПЧРКФ, 22.04.2023 (Московская область, г. Балашиха)</td>
     </tr>
     <tr class="meta-row">
-      <td colspan="25"><b>Организатор:</b> ОООК КЦ «Элита» (РАЛББ)</td>
+      <td colspan="16"><b>Организатор:</b> ОООК КЦ «Элита» (РАЛББ)</td>
     </tr>
     <tr class="meta-row">
-      <td colspan="25"><b>Судьи:</b> Гольдинова Л.М., Полякова Г.Б., Гуриненко А.В.</td>
+      <td colspan="16"><b>Судьи:</b> Гольдинова Л.М., Полякова Г.Б., Гуриненко А.В.</td>
     </tr>
     
     <tr class="col-header">
@@ -456,13 +471,9 @@
       <td rowspan="2">Класс</td>
       <td rowspan="2">Пол</td>
       <td rowspan="2">Кличка</td>
-      <td rowspan="2">Забег<br>1</td>
+      <td rowspan="2">Забег</td>
       <td colspan="6">Гольдинова Л.М., Полякова Г.Б., Гуриненко А.В.</td>
-      <td rowspan="2">Сумма<br>1</td>
-      <td rowspan="2">Забег<br>2</td>
-      <td colspan="6">Гольдинова Л.М., Полякова Г.Б., Гуриненко А.В.</td>
-      <td rowspan="2">Сумма<br>2</td>
-      <td rowspan="2">Общая<br>сумма</td>
+      <td rowspan="2">Итого<br>баллов</td>
       <td rowspan="2">СС</td>
       <td rowspan="2">Титул</td>
     </tr>
@@ -473,966 +484,569 @@
       <td>Прес.</td>
       <td>Энт.</td>
       <td>Сум.</td>
-      <td>Ман.</td>
-      <td>Резв.</td>
-      <td>Вын.</td>
-      <td>Прес.</td>
-      <td>Энт.</td>
-      <td>Сум.</td>
     </tr>
   
       <tr class="group-row">
-        <td colspan="25" class="group-header">Грейхаунд — Стандартный — Микс</td>
+        <td colspan="16" class="group-header">Грейхаунд — Стандартный — Микс</td>
       </tr>
     
-        <tr class="participant-row">
-          <td rowspan="3">1</td>
-          <td rowspan="3">1</td>
-          <td rowspan="3">Грейхаунд</td>
-          <td rowspan="3">Стандартный</td>
-          <td rowspan="3"></td>
-          <td rowspan="3" class="dog-name-cell">Ж КАПИТАН НЕЛЬСОН /<br>J KAPITAN NELSON</td>
-          <td rowspan="3" style="background-color: #ff0000 !important; color: #ffffff; font-style: italic;">12</td>
-          <td>18</td><td>18</td><td>18</td><td>18</td><td>18</td><td>90</td>
-          <td rowspan="3">270</td>
-          <td rowspan="3" style="background-color: #ff0000 !important; color: #ffffff; font-style: italic;">31</td>
-          <td>18</td><td>18</td><td>17</td><td>18</td><td>19</td><td>90</td>
-          <td rowspan="3">270</td>
-          <td rowspan="3">540</td>
-          <td rowspan="3">ПЧРКФ РК</td>
-          <td rowspan="3">СС</td>
-        </tr>
-        <tr class="participant-row">
-          <td>18</td><td>19</td><td>18</td><td>17</td><td>18</td><td>90</td>
-          <td>18</td><td>19</td><td>18</td><td>17</td><td>18</td><td>90</td>
-        </tr>
-        
-        <tr class="participant-row">
-          <td>18</td><td>19</td><td>18</td><td>17</td><td>18</td><td>90</td>
-          <td>19</td><td>18</td><td>17</td><td>18</td><td>18</td><td>90</td>
-        </tr>
-      
-        <tr class="participant-row">
-          <td rowspan="3">2</td>
-          <td rowspan="3">2</td>
-          <td rowspan="3">Грейхаунд</td>
-          <td rowspan="3">Стандартный</td>
-          <td rowspan="3"></td>
-          <td rowspan="3" class="dog-name-cell">АРТЕФАКТ РУТА</td>
-          <td rowspan="3" style="background-color: #ff0000 !important; color: #ffffff; font-style: italic;">12</td>
-          <td>17</td><td>18</td><td>18</td><td>17</td><td>18</td><td>88</td>
-          <td rowspan="3">265</td>
-          <td rowspan="3" style="background-color: #ff0000 !important; color: #ffffff; font-style: italic;">30</td>
-          <td>18</td><td>18</td><td>18</td><td>18</td><td>20</td><td>92</td>
-          <td rowspan="3">271</td>
-          <td rowspan="3">536</td>
-          <td rowspan="3"></td>
-          <td rowspan="3">СС</td>
-        </tr>
-        <tr class="participant-row">
-          <td>18</td><td>18</td><td>17</td><td>18</td><td>18</td><td>89</td>
-          <td>18</td><td>18</td><td>18</td><td>18</td><td>19</td><td>91</td>
-        </tr>
-        
-        <tr class="participant-row">
-          <td>17</td><td>17</td><td>18</td><td>18</td><td>18</td><td>88</td>
-          <td>17</td><td>17</td><td>18</td><td>18</td><td>18</td><td>88</td>
-        </tr>
-      
-        <tr class="participant-row">
-          <td rowspan="3">3</td>
-          <td rowspan="3">4</td>
-          <td rowspan="3">Грейхаунд</td>
-          <td rowspan="3">Стандартный</td>
-          <td rowspan="3"></td>
-          <td rowspan="3" class="dog-name-cell">ФЕЕРИЯ ПАФФ</td>
-          <td rowspan="3" style="background-color: #ff0000 !important; color: #ffffff; font-style: italic;">13</td>
-          <td>18</td><td>18</td><td>18</td><td>18</td><td>18</td><td>90</td>
-          <td rowspan="3">263</td>
-          <td rowspan="3" style="background-color: #ff0000 !important; color: #ffffff; font-style: italic;">31</td>
-          <td>18</td><td>17</td><td>18</td><td>18</td><td>19</td><td>90</td>
-          <td rowspan="3">269</td>
-          <td rowspan="3">532</td>
-          <td rowspan="3"></td>
-          <td rowspan="3">СС</td>
-        </tr>
-        <tr class="participant-row">
-          <td>17</td><td>18</td><td>18</td><td>17</td><td>18</td><td>88</td>
-          <td>18</td><td>17</td><td>18</td><td>18</td><td>19</td><td>90</td>
-        </tr>
-        
-        <tr class="participant-row">
-          <td>17</td><td>17</td><td>17</td><td>17</td><td>17</td><td>85</td>
-          <td>18</td><td>18</td><td>18</td><td>17</td><td>18</td><td>89</td>
-        </tr>
-      
-          <tr class="participant-row">
-            <td rowspan="3"></td>
-            <td rowspan="3">3</td>
-            <td rowspan="3">Грейхаунд</td>
-            <td rowspan="3">Стандартный</td>
-            <td rowspan="3"></td>
-            <td rowspan="3" class="dog-name-cell">ТАТАНКА ВИТКА ДЖОК ДЖАЗ</td>
-            <td rowspan="3" style="background-color: #ff0000 !important; color: #ffffff; font-style: italic;">13</td>
-            <td>17</td><td>18</td><td>17</td><td>17</td><td>18</td><td>87</td>
-            <td rowspan="3">256</td>
-            <td rowspan="3" style="background-color: #ff0000 !important; color: #ffffff; font-style: italic;">30</td>
-            <td colspan="7" rowspan="3" class="status-cell">Агрессия</td>
-            <td rowspan="3">256</td>
-            <td rowspan="3"></td>
-            <td rowspan="3"></td>
-          </tr>
-          <tr class="participant-row">
-            <td>18</td><td>18</td><td>17</td><td>18</td><td>18</td><td>89</td>
-          </tr>
+            <tr class="participant-row">
+              <td rowspan="1">1</td>
+              <td rowspan="1">1</td>
+              <td rowspan="1">Грейхаунд</td>
+              <td rowspan="1">Стандартный</td>
+              <td rowspan="1"></td>
+              <td rowspan="1" class="dog-name-cell">Ж КАПИТАН НЕЛЬСОН /<br>J KAPITAN NELSON</td>
+              <td rowspan="1"></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+              <td rowspan="1">540</td>
+              <td rowspan="1">ПЧРКФ РК</td>
+              <td rowspan="1">CC</td>
+            </tr>
+            
+            
           
-          <tr class="participant-row">
-            <td>17</td><td>18</td><td>17</td><td>18</td><td>18</td><td>88</td>
-          </tr>
-        
+            <tr class="participant-row">
+              <td rowspan="1">2</td>
+              <td rowspan="1">2</td>
+              <td rowspan="1">Грейхаунд</td>
+              <td rowspan="1">Стандартный</td>
+              <td rowspan="1"></td>
+              <td rowspan="1" class="dog-name-cell">АРТЕФАКТ РУТА</td>
+              <td rowspan="1"></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+              <td rowspan="1">536</td>
+              <td rowspan="1"></td>
+              <td rowspan="1">CC</td>
+            </tr>
+            
+            
+          
+            <tr class="participant-row">
+              <td rowspan="1">3</td>
+              <td rowspan="1">4</td>
+              <td rowspan="1">Грейхаунд</td>
+              <td rowspan="1">Стандартный</td>
+              <td rowspan="1"></td>
+              <td rowspan="1" class="dog-name-cell">ФЕЕРИЯ ПАФФ</td>
+              <td rowspan="1"></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+              <td rowspan="1">532</td>
+              <td rowspan="1"></td>
+              <td rowspan="1">CC</td>
+            </tr>
+            
+            
+          
+            <tr class="participant-row">
+              <td></td>
+              <td>3</td>
+              <td>Грейхаунд</td>
+              <td>Стандартный</td>
+              <td></td>
+              <td class="dog-name-cell">ТАТАНКА ВИТКА ДЖОК ДЖАЗ</td>
+              <td></td>
+              <td colspan="9" class="status-cell">Снятие (Агрессия)</td>
+            </tr>
+          
       <tr class="group-row">
-        <td colspan="25" class="group-header">Испанский гальго — Стандартный — Суки</td>
+        <td colspan="16" class="group-header">Испанский гальго — Стандартный — Суки</td>
       </tr>
     
-        <tr class="participant-row">
-          <td rowspan="3">1</td>
-          <td rowspan="3">1</td>
-          <td rowspan="3">Испанский гальго</td>
-          <td rowspan="3">Стандартный</td>
-          <td rowspan="3">Сука</td>
-          <td rowspan="3" class="dog-name-cell">АГУЕРРИДА /<br>AGUERRIDA</td>
-          <td rowspan="3" style="background-color: #ff0000 !important; color: #ffffff; font-style: italic;">14</td>
-          <td>18</td><td>18</td><td>17</td><td>18</td><td>18</td><td>89</td>
-          <td rowspan="3">268</td>
-          <td rowspan="3" style="background-color: #ff0000 !important; color: #ffffff; font-style: italic;">33</td>
-          <td>19</td><td>18</td><td>18</td><td>18</td><td>18</td><td>91</td>
-          <td rowspan="3">268</td>
-          <td rowspan="3">536</td>
-          <td rowspan="3">ПЧРКФ РК</td>
-          <td rowspan="3">СС</td>
-        </tr>
-        <tr class="participant-row">
-          <td>17</td><td>18</td><td>17</td><td>17</td><td>16</td><td>85</td>
-          <td>18</td><td>18</td><td>18</td><td>18</td><td>18</td><td>90</td>
-        </tr>
-        
-        <tr class="participant-row">
-          <td>19</td><td>19</td><td>18</td><td>19</td><td>19</td><td>94</td>
-          <td>17</td><td>18</td><td>17</td><td>17</td><td>18</td><td>87</td>
-        </tr>
-      
-        <tr class="participant-row">
-          <td rowspan="3">1</td>
-          <td rowspan="3">2</td>
-          <td rowspan="3">Испанский гальго</td>
-          <td rowspan="3">Стандартный</td>
-          <td rowspan="3">Сука</td>
-          <td rowspan="3" class="dog-name-cell">ШАВАТИ КАЙЛАН</td>
-          <td rowspan="3" style="background-color: #ff0000 !important; color: #ffffff; font-style: italic;">18</td>
-          <td>18</td><td>18</td><td>18</td><td>18</td><td>18</td><td>90</td>
-          <td rowspan="3">270</td>
-          <td rowspan="3" style="background-color: #ff0000 !important; color: #ffffff; font-style: italic;">35</td>
-          <td>19</td><td>19</td><td>18</td><td>18</td><td>18</td><td>92</td>
-          <td rowspan="3">272</td>
-          <td rowspan="3">542</td>
-          <td rowspan="3">ПЧРКФ РК</td>
-          <td rowspan="3">СС</td>
-        </tr>
-        <tr class="participant-row">
-          <td>19</td><td>18</td><td>18</td><td>18</td><td>19</td><td>92</td>
-          <td>18</td><td>18</td><td>17</td><td>18</td><td>17</td><td>88</td>
-        </tr>
-        
-        <tr class="participant-row">
-          <td>18</td><td>19</td><td>17</td><td>17</td><td>17</td><td>88</td>
-          <td>19</td><td>19</td><td>18</td><td>18</td><td>18</td><td>92</td>
-        </tr>
-      
-        <tr class="participant-row">
-          <td rowspan="3">2</td>
-          <td rowspan="3">2</td>
-          <td rowspan="3">Испанский гальго</td>
-          <td rowspan="3">Стандартный</td>
-          <td rowspan="3">Сука</td>
-          <td rowspan="3" class="dog-name-cell">TAIRA BUENA CASADORA</td>
-          <td rowspan="3" style="background-color: #fffafa !important; color: #000000; font-style: italic;">15</td>
-          <td>18</td><td>18</td><td>18</td><td>18</td><td>18</td><td>90</td>
-          <td rowspan="3">268</td>
-          <td rowspan="3" style="background-color: #fffafa !important; color: #000000; font-style: italic;">33</td>
-          <td>19</td><td>18</td><td>18</td><td>18</td><td>18</td><td>91</td>
-          <td rowspan="3">268</td>
-          <td rowspan="3">536</td>
-          <td rowspan="3"></td>
-          <td rowspan="3">СС</td>
-        </tr>
-        <tr class="participant-row">
-          <td>18</td><td>17</td><td>17</td><td>18</td><td>18</td><td>88</td>
-          <td>18</td><td>18</td><td>18</td><td>18</td><td>18</td><td>90</td>
-        </tr>
-        
-        <tr class="participant-row">
-          <td>18</td><td>18</td><td>18</td><td>18</td><td>18</td><td>90</td>
-          <td>17</td><td>18</td><td>17</td><td>17</td><td>18</td><td>87</td>
-        </tr>
-      
-        <tr class="participant-row">
-          <td rowspan="3">2</td>
-          <td rowspan="3">4</td>
-          <td rowspan="3">Испанский гальго</td>
-          <td rowspan="3">Стандартный</td>
-          <td rowspan="3">Сука</td>
-          <td rowspan="3" class="dog-name-cell">SULAHAT KARA</td>
-          <td rowspan="3" style="background-color: #ff0000 !important; color: #ffffff; font-style: italic;">19</td>
-          <td>18</td><td>18</td><td>17</td><td>18</td><td>18</td><td>89</td>
-          <td rowspan="3">262</td>
-          <td rowspan="3" style="background-color: #ff0000 !important; color: #ffffff; font-style: italic;">36</td>
-          <td>18</td><td>19</td><td>18</td><td>18</td><td>18</td><td>91</td>
-          <td rowspan="3">272</td>
-          <td rowspan="3">534</td>
-          <td rowspan="3"></td>
-          <td rowspan="3">СС</td>
-        </tr>
-        <tr class="participant-row">
-          <td>17</td><td>18</td><td>17</td><td>17</td><td>17</td><td>86</td>
-          <td>18</td><td>18</td><td>18</td><td>18</td><td>19</td><td>91</td>
-        </tr>
-        
-        <tr class="participant-row">
-          <td>18</td><td>18</td><td>17</td><td>17</td><td>17</td><td>87</td>
-          <td>18</td><td>19</td><td>18</td><td>17</td><td>18</td><td>90</td>
-        </tr>
-      
-        <tr class="participant-row">
-          <td rowspan="3">3</td>
-          <td rowspan="3">4</td>
-          <td rowspan="3">Испанский гальго</td>
-          <td rowspan="3">Стандартный</td>
-          <td rowspan="3">Сука</td>
-          <td rowspan="3" class="dog-name-cell">АРИЯ АМИГА /<br>ARIA AMIGA</td>
-          <td rowspan="3" style="background-color: #fffafa !important; color: #000000; font-style: italic;">14</td>
-          <td>17</td><td>18</td><td>18</td><td>18</td><td>18</td><td>89</td>
-          <td rowspan="3">265</td>
-          <td rowspan="3" style="background-color: #ff0000 !important; color: #ffffff; font-style: italic;">32</td>
-          <td>18</td><td>18</td><td>18</td><td>18</td><td>18</td><td>90</td>
-          <td rowspan="3">269</td>
-          <td rowspan="3">534</td>
-          <td rowspan="3"></td>
-          <td rowspan="3">СС</td>
-        </tr>
-        <tr class="participant-row">
-          <td>17</td><td>18</td><td>18</td><td>17</td><td>17</td><td>87</td>
-          <td>18</td><td>18</td><td>18</td><td>18</td><td>19</td><td>91</td>
-        </tr>
-        
-        <tr class="participant-row">
-          <td>18</td><td>17</td><td>18</td><td>18</td><td>18</td><td>89</td>
-          <td>17</td><td>18</td><td>18</td><td>17</td><td>18</td><td>88</td>
-        </tr>
-      
-        <tr class="participant-row">
-          <td rowspan="3">3</td>
-          <td rowspan="3">6</td>
-          <td rowspan="3">Испанский гальго</td>
-          <td rowspan="3">Стандартный</td>
-          <td rowspan="3">Сука</td>
-          <td rowspan="3" class="dog-name-cell">АЛЬ НАФИСЭХ ХАЙФА /<br>AL NAFISEH HAIFA</td>
-          <td rowspan="3" style="background-color: #fffafa !important; color: #000000; font-style: italic;">19</td>
-          <td>18</td><td>17</td><td>18</td><td>18</td><td>18</td><td>89</td>
-          <td rowspan="3">268</td>
-          <td rowspan="3" style="background-color: #fffafa !important; color: #000000; font-style: italic;">35</td>
-          <td>18</td><td>18</td><td>18</td><td>17</td><td>18</td><td>89</td>
-          <td rowspan="3">262</td>
-          <td rowspan="3">530</td>
-          <td rowspan="3"></td>
-          <td rowspan="3">СС</td>
-        </tr>
-        <tr class="participant-row">
-          <td>18</td><td>19</td><td>18</td><td>18</td><td>18</td><td>91</td>
-          <td>17</td><td>18</td><td>17</td><td>18</td><td>18</td><td>88</td>
-        </tr>
-        
-        <tr class="participant-row">
-          <td>18</td><td>17</td><td>17</td><td>18</td><td>18</td><td>88</td>
-          <td>17</td><td>17</td><td>17</td><td>17</td><td>17</td><td>85</td>
-        </tr>
-      
-        <tr class="participant-row">
-          <td rowspan="3">4</td>
-          <td rowspan="3">3</td>
-          <td rowspan="3">Испанский гальго</td>
-          <td rowspan="3">Стандартный</td>
-          <td rowspan="3">Сука</td>
-          <td rowspan="3" class="dog-name-cell">ТЕРНУРА АЦУАРЕЛА /<br>TERNURA ACUARELA</td>
-          <td rowspan="3" style="background-color: #ff0000 !important; color: #ffffff; font-style: italic;">15</td>
-          <td>18</td><td>18</td><td>18</td><td>18</td><td>18</td><td>90</td>
-          <td rowspan="3">263</td>
-          <td rowspan="3" style="background-color: #fffafa !important; color: #000000; font-style: italic;">32</td>
-          <td>18</td><td>18</td><td>17</td><td>18</td><td>18</td><td>89</td>
-          <td rowspan="3">263</td>
-          <td rowspan="3">526</td>
-          <td rowspan="3"></td>
-          <td rowspan="3">СС</td>
-        </tr>
-        <tr class="participant-row">
-          <td>18</td><td>18</td><td>18</td><td>18</td><td>18</td><td>90</td>
-          <td>18</td><td>17</td><td>17</td><td>17</td><td>18</td><td>87</td>
-        </tr>
-        
-        <tr class="participant-row">
-          <td>16</td><td>16</td><td>17</td><td>17</td><td>17</td><td>83</td>
-          <td>18</td><td>18</td><td>16</td><td>17</td><td>18</td><td>87</td>
-        </tr>
-      
-        <tr class="participant-row">
-          <td rowspan="3">4</td>
-          <td rowspan="3">5</td>
-          <td rowspan="3">Испанский гальго</td>
-          <td rowspan="3">Стандартный</td>
-          <td rowspan="3">Сука</td>
-          <td rowspan="3" class="dog-name-cell">АЙСАРА /<br>AYSARA</td>
-          <td rowspan="3" style="background-color: #ff0000 !important; color: #ffffff; font-style: italic;">16</td>
-          <td>16</td><td>18</td><td>18</td><td>17</td><td>18</td><td>87</td>
-          <td rowspan="3">262</td>
-          <td rowspan="3" style="background-color: #ff0000 !important; color: #ffffff; font-style: italic;">37</td>
-          <td>18</td><td>18</td><td>18</td><td>18</td><td>18</td><td>90</td>
-          <td rowspan="3">263</td>
-          <td rowspan="3">525</td>
-          <td rowspan="3"></td>
-          <td rowspan="3">СС</td>
-        </tr>
-        <tr class="participant-row">
-          <td>17</td><td>18</td><td>18</td><td>17</td><td>18</td><td>88</td>
-          <td>18</td><td>18</td><td>18</td><td>18</td><td>18</td><td>90</td>
-        </tr>
-        
-        <tr class="participant-row">
-          <td>17</td><td>18</td><td>17</td><td>18</td><td>17</td><td>87</td>
-          <td>17</td><td>17</td><td>17</td><td>16</td><td>16</td><td>83</td>
-        </tr>
-      
-        <tr class="participant-row">
-          <td rowspan="3">5</td>
-          <td rowspan="3">8</td>
-          <td rowspan="3">Испанский гальго</td>
-          <td rowspan="3">Стандартный</td>
-          <td rowspan="3">Сука</td>
-          <td rowspan="3" class="dog-name-cell">САЛГРЕЙС ТЭ ПАУЭР ОФ ЛАВ /<br>SALGREYS THE POWER OF LOVE</td>
-          <td rowspan="3" style="background-color: #fffafa !important; color: #000000; font-style: italic;">16</td>
-          <td>18</td><td>17</td><td>17</td><td>17</td><td>18</td><td>87</td>
-          <td rowspan="3">258</td>
-          <td rowspan="3" style="background-color: #fffafa !important; color: #000000; font-style: italic;">36</td>
-          <td>17</td><td>18</td><td>17</td><td>18</td><td>18</td><td>88</td>
-          <td rowspan="3">265</td>
-          <td rowspan="3">523</td>
-          <td rowspan="3"></td>
-          <td rowspan="3">СС</td>
-        </tr>
-        <tr class="participant-row">
-          <td>18</td><td>17</td><td>18</td><td>18</td><td>17</td><td>88</td>
-          <td>18</td><td>17</td><td>18</td><td>18</td><td>18</td><td>89</td>
-        </tr>
-        
-        <tr class="participant-row">
-          <td>17</td><td>16</td><td>17</td><td>16</td><td>17</td><td>83</td>
-          <td>18</td><td>18</td><td>18</td><td>17</td><td>17</td><td>88</td>
-        </tr>
-      
-        <tr class="participant-row">
-          <td rowspan="3">6</td>
-          <td rowspan="3">1</td>
-          <td rowspan="3">Испанский гальго</td>
-          <td rowspan="3">Стандартный</td>
-          <td rowspan="3">Сука</td>
-          <td rowspan="3" class="dog-name-cell">АЛЬ НАФИСЭХ ХОМЭЙЮН /<br>AL NAFISEH HOMAYOON</td>
-          <td rowspan="3" style="background-color: #fffafa !important; color: #000000; font-style: italic;">18</td>
-          <td>18</td><td>18</td><td>18</td><td>17</td><td>20</td><td>91</td>
-          <td rowspan="3">258</td>
-          <td rowspan="3" style="background-color: #ff0000 !important; color: #ffffff; font-style: italic;">34</td>
-          <td>17</td><td>17</td><td>18</td><td>18</td><td>18</td><td>88</td>
-          <td rowspan="3">263</td>
-          <td rowspan="3">521</td>
-          <td rowspan="3"></td>
-          <td rowspan="3">СС</td>
-        </tr>
-        <tr class="participant-row">
-          <td>17</td><td>17</td><td>17</td><td>17</td><td>17</td><td>85</td>
-          <td>18</td><td>18</td><td>17</td><td>17</td><td>17</td><td>87</td>
-        </tr>
-        
-        <tr class="participant-row">
-          <td>16</td><td>16</td><td>16</td><td>17</td><td>17</td><td>82</td>
-          <td>17</td><td>18</td><td>17</td><td>18</td><td>18</td><td>88</td>
-        </tr>
-      
-        <tr class="participant-row">
-          <td rowspan="3">7</td>
-          <td rowspan="3">3</td>
-          <td rowspan="3">Испанский гальго</td>
-          <td rowspan="3">Стандартный</td>
-          <td rowspan="3">Сука</td>
-          <td rowspan="3" class="dog-name-cell">AL NAFISEH GUL PARI</td>
-          <td rowspan="3" style="background-color: #ff0000 !important; color: #ffffff; font-style: italic;">17</td>
-          <td>17</td><td>18</td><td>18</td><td>16</td><td>18</td><td>87</td>
-          <td rowspan="3">262</td>
-          <td rowspan="3" style="background-color: #fffafa !important; color: #000000; font-style: italic;">37</td>
-          <td>18</td><td>18</td><td>18</td><td>17</td><td>18</td><td>89</td>
-          <td rowspan="3">258</td>
-          <td rowspan="3">520</td>
-          <td rowspan="3"></td>
-          <td rowspan="3">СС</td>
-        </tr>
-        <tr class="participant-row">
-          <td>17</td><td>18</td><td>17</td><td>18</td><td>18</td><td>88</td>
-          <td>18</td><td>17</td><td>18</td><td>17</td><td>17</td><td>87</td>
-        </tr>
-        
-        <tr class="participant-row">
-          <td>17</td><td>18</td><td>18</td><td>17</td><td>17</td><td>87</td>
-          <td>17</td><td>17</td><td>16</td><td>16</td><td>16</td><td>82</td>
-        </tr>
-      
-        <tr class="participant-row">
-          <td rowspan="3">8</td>
-          <td rowspan="3">7</td>
-          <td rowspan="3">Испанский гальго</td>
-          <td rowspan="3">Стандартный</td>
-          <td rowspan="3">Сука</td>
-          <td rowspan="3" class="dog-name-cell">БЕЛЬ ЭТУАЛЬ ДЭЙЛИ СМАЙЛ</td>
-          <td rowspan="3" style="background-color: #fffafa !important; color: #000000; font-style: italic;">17</td>
-          <td>17</td><td>17</td><td>17</td><td>17</td><td>18</td><td>86</td>
-          <td rowspan="3">255</td>
-          <td rowspan="3" style="background-color: #fffafa !important; color: #000000; font-style: italic;">34</td>
-          <td>17</td><td>17</td><td>18</td><td>16</td><td>17</td><td>85</td>
-          <td rowspan="3">253</td>
-          <td rowspan="3">508</td>
-          <td rowspan="3"></td>
-          <td rowspan="3">СС</td>
-        </tr>
-        <tr class="participant-row">
-          <td>17</td><td>18</td><td>17</td><td>17</td><td>17</td><td>86</td>
-          <td>17</td><td>18</td><td>18</td><td>17</td><td>18</td><td>88</td>
-        </tr>
-        
-        <tr class="participant-row">
-          <td>17</td><td>16</td><td>17</td><td>17</td><td>16</td><td>83</td>
-          <td>15</td><td>16</td><td>17</td><td>16</td><td>16</td><td>80</td>
-        </tr>
-      
+            <tr class="participant-row">
+              <td rowspan="1">1</td>
+              <td rowspan="1">1</td>
+              <td rowspan="1">Испанский гальго</td>
+              <td rowspan="1">Стандартный</td>
+              <td rowspan="1">Сука</td>
+              <td rowspan="1" class="dog-name-cell">АГУЕРРИДА /<br>AGUERRIDA</td>
+              <td rowspan="1"></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+              <td rowspan="1">536</td>
+              <td rowspan="1">ПЧРКФ РК</td>
+              <td rowspan="1">CC</td>
+            </tr>
+            
+            
+          
+            <tr class="participant-row">
+              <td rowspan="1">2</td>
+              <td rowspan="1">2</td>
+              <td rowspan="1">Испанский гальго</td>
+              <td rowspan="1">Стандартный</td>
+              <td rowspan="1">Сука</td>
+              <td rowspan="1" class="dog-name-cell">TAIRA BUENA CASADORA</td>
+              <td rowspan="1"></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+              <td rowspan="1">536</td>
+              <td rowspan="1"></td>
+              <td rowspan="1">CC</td>
+            </tr>
+            
+            
+          
+            <tr class="participant-row">
+              <td rowspan="1">3</td>
+              <td rowspan="1">4</td>
+              <td rowspan="1">Испанский гальго</td>
+              <td rowspan="1">Стандартный</td>
+              <td rowspan="1">Сука</td>
+              <td rowspan="1" class="dog-name-cell">АРИЯ АМИГА /<br>ARIA AMIGA</td>
+              <td rowspan="1"></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+              <td rowspan="1">534</td>
+              <td rowspan="1"></td>
+              <td rowspan="1">CC</td>
+            </tr>
+            
+            
+          
+            <tr class="participant-row">
+              <td rowspan="1">4</td>
+              <td rowspan="1">3</td>
+              <td rowspan="1">Испанский гальго</td>
+              <td rowspan="1">Стандартный</td>
+              <td rowspan="1">Сука</td>
+              <td rowspan="1" class="dog-name-cell">ТЕРНУРА АЦУАРЕЛА /<br>TERNURA ACUARELA</td>
+              <td rowspan="1"></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+              <td rowspan="1">526</td>
+              <td rowspan="1"></td>
+              <td rowspan="1">CC</td>
+            </tr>
+            
+            
+          
       <tr class="group-row">
-        <td colspan="25" class="group-header">Русская псовая борзая — Стандартный — Кобели</td>
+        <td colspan="16" class="group-header">Русская псовая борзая — Стандартный — Кобели</td>
       </tr>
     
-        <tr class="participant-row">
-          <td rowspan="3">1</td>
-          <td rowspan="3">10</td>
-          <td rowspan="3">Русская псовая борзая</td>
-          <td rowspan="3">Стандартный</td>
-          <td rowspan="3">Кобель</td>
-          <td rowspan="3" class="dog-name-cell">ОБЕРЕГ РУСИ АГАТ /<br>OBEREG RUSI AGAT</td>
-          <td rowspan="3" style="background-color: #ff0000 !important; color: #ffffff; font-style: italic;">5</td>
-          <td>18</td><td>18</td><td>18</td><td>18</td><td>18</td><td>90</td>
-          <td rowspan="3">268</td>
-          <td rowspan="3" style="background-color: #ff0000 !important; color: #ffffff; font-style: italic;">24</td>
-          <td>18</td><td>19</td><td>18</td><td>18</td><td>18</td><td>91</td>
-          <td rowspan="3">271</td>
-          <td rowspan="3">539</td>
-          <td rowspan="3">ПЧРКФ РК</td>
-          <td rowspan="3">СС</td>
-        </tr>
-        <tr class="participant-row">
-          <td>18</td><td>18</td><td>17</td><td>18</td><td>19</td><td>90</td>
-          <td>19</td><td>19</td><td>18</td><td>18</td><td>19</td><td>93</td>
-        </tr>
-        
-        <tr class="participant-row">
-          <td>18</td><td>17</td><td>18</td><td>17</td><td>18</td><td>88</td>
-          <td>18</td><td>18</td><td>17</td><td>17</td><td>17</td><td>87</td>
-        </tr>
-      
-        <tr class="participant-row">
-          <td rowspan="3">2</td>
-          <td rowspan="3">5</td>
-          <td rowspan="3">Русская псовая борзая</td>
-          <td rowspan="3">Стандартный</td>
-          <td rowspan="3">Кобель</td>
-          <td rowspan="3" class="dog-name-cell">АПРИОРИ ЛЮКСУРИ ХОРОШИЙ</td>
-          <td rowspan="3" style="background-color: #ff0000 !important; color: #ffffff; font-style: italic;">2</td>
-          <td>18</td><td>18</td><td>18</td><td>19</td><td>18</td><td>91</td>
-          <td rowspan="3">266</td>
-          <td rowspan="3" style="background-color: #ff0000 !important; color: #ffffff; font-style: italic;">20</td>
-          <td>18</td><td>18</td><td>18</td><td>18</td><td>18</td><td>90</td>
-          <td rowspan="3">267</td>
-          <td rowspan="3">533</td>
-          <td rowspan="3"></td>
-          <td rowspan="3">СС</td>
-        </tr>
-        <tr class="participant-row">
-          <td>18</td><td>18</td><td>18</td><td>18</td><td>17</td><td>89</td>
-          <td>19</td><td>18</td><td>17</td><td>18</td><td>18</td><td>90</td>
-        </tr>
-        
-        <tr class="participant-row">
-          <td>17</td><td>17</td><td>16</td><td>18</td><td>18</td><td>86</td>
-          <td>18</td><td>18</td><td>17</td><td>17</td><td>17</td><td>87</td>
-        </tr>
-      
-        <tr class="participant-row">
-          <td rowspan="3">3</td>
-          <td rowspan="3">4</td>
-          <td rowspan="3">Русская псовая борзая</td>
-          <td rowspan="3">Стандартный</td>
-          <td rowspan="3">Кобель</td>
-          <td rowspan="3" class="dog-name-cell">АПРИОРИ ЛЮКСУРИ ХМЕЛЬ /<br>APRIORI LUXURY HMEL</td>
-          <td rowspan="3" style="background-color: #ff0000 !important; color: #ffffff; font-style: italic;">4</td>
-          <td>17</td><td>19</td><td>18</td><td>18</td><td>19</td><td>91</td>
-          <td rowspan="3">264</td>
-          <td rowspan="3" style="background-color: #ff0000 !important; color: #ffffff; font-style: italic;">23</td>
-          <td>18</td><td>19</td><td>18</td><td>18</td><td>20</td><td>93</td>
-          <td rowspan="3">267</td>
-          <td rowspan="3">531</td>
-          <td rowspan="3"></td>
-          <td rowspan="3">СС</td>
-        </tr>
-        <tr class="participant-row">
-          <td>17</td><td>17</td><td>16</td><td>17</td><td>18</td><td>85</td>
-          <td>18</td><td>18</td><td>17</td><td>18</td><td>18</td><td>89</td>
-        </tr>
-        
-        <tr class="participant-row">
-          <td>17</td><td>18</td><td>18</td><td>17</td><td>18</td><td>88</td>
-          <td>16</td><td>17</td><td>18</td><td>17</td><td>17</td><td>85</td>
-        </tr>
-      
-        <tr class="participant-row">
-          <td rowspan="3">4</td>
-          <td rowspan="3">7</td>
-          <td rowspan="3">Русская псовая борзая</td>
-          <td rowspan="3">Стандартный</td>
-          <td rowspan="3">Кобель</td>
-          <td rowspan="3" class="dog-name-cell">ДОРОГОЙ ДРУГ ФАРТОВЫЙ /<br>DOROGOY DRUG FARTOVYJ</td>
-          <td rowspan="3" style="background-color: #fffafa !important; color: #000000; font-style: italic;">1</td>
-          <td>18</td><td>18</td><td>18</td><td>18</td><td>19</td><td>91</td>
-          <td rowspan="3">267</td>
-          <td rowspan="3" style="background-color: #fffafa !important; color: #000000; font-style: italic;">24</td>
-          <td>18</td><td>18</td><td>19</td><td>18</td><td>18</td><td>91</td>
-          <td rowspan="3">262</td>
-          <td rowspan="3">529</td>
-          <td rowspan="3"></td>
-          <td rowspan="3">СС</td>
-        </tr>
-        <tr class="participant-row">
-          <td>19</td><td>19</td><td>18</td><td>18</td><td>19</td><td>93</td>
-          <td>18</td><td>18</td><td>17</td><td>18</td><td>18</td><td>89</td>
-        </tr>
-        
-        <tr class="participant-row">
-          <td>17</td><td>16</td><td>17</td><td>17</td><td>16</td><td>83</td>
-          <td>16</td><td>17</td><td>17</td><td>16</td><td>16</td><td>82</td>
-        </tr>
-      
-        <tr class="participant-row">
-          <td rowspan="3">5</td>
-          <td rowspan="3">6</td>
-          <td rowspan="3">Русская псовая борзая</td>
-          <td rowspan="3">Стандартный</td>
-          <td rowspan="3">Кобель</td>
-          <td rowspan="3" class="dog-name-cell">БОРЗЫЕ СЕНАВИАН ЦАГРИ</td>
-          <td rowspan="3" style="background-color: #ff0000 !important; color: #ffffff; font-style: italic;">6</td>
-          <td>18</td><td>18</td><td>17</td><td>18</td><td>18</td><td>89</td>
-          <td rowspan="3">260</td>
-          <td rowspan="3" style="background-color: #ff0000 !important; color: #ffffff; font-style: italic;">22</td>
-          <td>18</td><td>18</td><td>19</td><td>18</td><td>18</td><td>91</td>
-          <td rowspan="3">265</td>
-          <td rowspan="3">525</td>
-          <td rowspan="3"></td>
-          <td rowspan="3">СС</td>
-        </tr>
-        <tr class="participant-row">
-          <td>18</td><td>19</td><td>17</td><td>17</td><td>18</td><td>89</td>
-          <td>18</td><td>18</td><td>18</td><td>17</td><td>18</td><td>89</td>
-        </tr>
-        
-        <tr class="participant-row">
-          <td>16</td><td>17</td><td>16</td><td>17</td><td>16</td><td>82</td>
-          <td>17</td><td>17</td><td>18</td><td>16</td><td>17</td><td>85</td>
-        </tr>
-      
-        <tr class="participant-row">
-          <td rowspan="3">6</td>
-          <td rowspan="3">9</td>
-          <td rowspan="3">Русская псовая борзая</td>
-          <td rowspan="3">Стандартный</td>
-          <td rowspan="3">Кобель</td>
-          <td rowspan="3" class="dog-name-cell">ЛУННАЯ РАДУГА ФАРТОВЫЙ</td>
-          <td rowspan="3" style="background-color: #fffafa !important; color: #000000; font-style: italic;">4</td>
-          <td>17</td><td>16</td><td>16</td><td>17</td><td>17</td><td>83</td>
-          <td rowspan="3">256</td>
-          <td rowspan="3" style="background-color: #fffafa !important; color: #000000; font-style: italic;">22</td>
-          <td>18</td><td>17</td><td>18</td><td>18</td><td>18</td><td>89</td>
-          <td rowspan="3">263</td>
-          <td rowspan="3">519</td>
-          <td rowspan="3"></td>
-          <td rowspan="3">СС</td>
-        </tr>
-        <tr class="participant-row">
-          <td>16</td><td>17</td><td>17</td><td>17</td><td>18</td><td>85</td>
-          <td>17</td><td>18</td><td>17</td><td>17</td><td>18</td><td>87</td>
-        </tr>
-        
-        <tr class="participant-row">
-          <td>18</td><td>17</td><td>18</td><td>17</td><td>18</td><td>88</td>
-          <td>18</td><td>16</td><td>18</td><td>17</td><td>18</td><td>87</td>
-        </tr>
-      
-        <tr class="participant-row">
-          <td rowspan="3">7</td>
-          <td rowspan="3">1</td>
-          <td rowspan="3">Русская псовая борзая</td>
-          <td rowspan="3">Стандартный</td>
-          <td rowspan="3">Кобель</td>
-          <td rowspan="3" class="dog-name-cell">APRIORI LUXURY MASTER</td>
-          <td rowspan="3" style="background-color: #ff0000 !important; color: #ffffff; font-style: italic;">3</td>
-          <td>17</td><td>18</td><td>18</td><td>18</td><td>18</td><td>89</td>
-          <td rowspan="3">264</td>
-          <td rowspan="3" style="background-color: #fffafa !important; color: #000000; font-style: italic;">20</td>
-          <td>17</td><td>18</td><td>18</td><td>17</td><td>18</td><td>88</td>
-          <td rowspan="3">255</td>
-          <td rowspan="3">519</td>
-          <td rowspan="3"></td>
-          <td rowspan="3">СС</td>
-        </tr>
-        <tr class="participant-row">
-          <td>18</td><td>18</td><td>17</td><td>18</td><td>18</td><td>89</td>
-          <td>17</td><td>17</td><td>16</td><td>17</td><td>18</td><td>85</td>
-        </tr>
-        
-        <tr class="participant-row">
-          <td>16</td><td>18</td><td>17</td><td>17</td><td>18</td><td>86</td>
-          <td>16</td><td>17</td><td>16</td><td>16</td><td>17</td><td>82</td>
-        </tr>
-      
-        <tr class="participant-row">
-          <td rowspan="3">8</td>
-          <td rowspan="3">3</td>
-          <td rowspan="3">Русская псовая борзая</td>
-          <td rowspan="3">Стандартный</td>
-          <td rowspan="3">Кобель</td>
-          <td rowspan="3" class="dog-name-cell">КНЯЖЬЕ ЗОЛОТО ПЛЕЙБОЙ /<br>KNIAZHIE ZOLOTO PLAYBOY</td>
-          <td rowspan="3" style="background-color: #fffafa !important; color: #000000; font-style: italic;">5</td>
-          <td>18</td><td>17</td><td>16</td><td>18</td><td>18</td><td>87</td>
-          <td rowspan="3">263</td>
-          <td rowspan="3" style="background-color: #fffafa !important; color: #000000; font-style: italic;">23</td>
-          <td>18</td><td>17</td><td>16</td><td>18</td><td>20</td><td>89</td>
-          <td rowspan="3">253</td>
-          <td rowspan="3">516</td>
-          <td rowspan="3"></td>
-          <td rowspan="3">СС</td>
-        </tr>
-        <tr class="participant-row">
-          <td>18</td><td>16</td><td>17</td><td>17</td><td>18</td><td>86</td>
-          <td>17</td><td>18</td><td>17</td><td>17</td><td>17</td><td>86</td>
-        </tr>
-        
-        <tr class="participant-row">
-          <td>18</td><td>18</td><td>18</td><td>18</td><td>18</td><td>90</td>
-          <td>15</td><td>16</td><td>16</td><td>16</td><td>15</td><td>78</td>
-        </tr>
-      
-        <tr class="participant-row">
-          <td rowspan="3">9</td>
-          <td rowspan="3">11</td>
-          <td rowspan="3">Русская псовая борзая</td>
-          <td rowspan="3">Стандартный</td>
-          <td rowspan="3">Кобель</td>
-          <td rowspan="3" class="dog-name-cell">СТЕПЬ КУБАНСКАЯ КАПРИЗ</td>
-          <td rowspan="3" style="background-color: #fffafa !important; color: #000000; font-style: italic;">3</td>
-          <td>17</td><td>17</td><td>16</td><td>17</td><td>17</td><td>84</td>
-          <td rowspan="3">245</td>
-          <td rowspan="3" style="background-color: #fffafa !important; color: #000000; font-style: italic;">21</td>
-          <td>17</td><td>17</td><td>18</td><td>18</td><td>20</td><td>90</td>
-          <td rowspan="3">256</td>
-          <td rowspan="3">501</td>
-          <td rowspan="3"></td>
-          <td rowspan="3">СС</td>
-        </tr>
-        <tr class="participant-row">
-          <td>16</td><td>16</td><td>17</td><td>16</td><td>17</td><td>82</td>
-          <td>18</td><td>18</td><td>17</td><td>17</td><td>18</td><td>88</td>
-        </tr>
-        
-        <tr class="participant-row">
-          <td>15</td><td>16</td><td>15</td><td>16</td><td>17</td><td>79</td>
-          <td>16</td><td>16</td><td>15</td><td>15</td><td>16</td><td>78</td>
-        </tr>
-      
-          <tr class="participant-row">
-            <td rowspan="3"></td>
-            <td rowspan="3">2</td>
-            <td rowspan="3">Русская псовая борзая</td>
-            <td rowspan="3">Стандартный</td>
-            <td rowspan="3">Кобель</td>
-            <td rowspan="3" class="dog-name-cell">KNIAZHIE ZOLOTO BAYARD</td>
-            <td rowspan="3" style="background-color: #fffafa !important; color: #000000; font-style: italic;">2</td>
-            <td>17</td><td>16</td><td>16</td><td>16</td><td>16</td><td>81</td>
-            <td rowspan="3">245</td>
-            <td rowspan="3" style="background-color: #ffffff !important; color: #000000; font-style: italic;">2</td>
-            <td colspan="7" rowspan="3" class="status-cell">Сошёл</td>
-            <td rowspan="3"></td>
-            <td rowspan="3"></td>
-            <td rowspan="3"></td>
-          </tr>
-          <tr class="participant-row">
-            <td>17</td><td>17</td><td>16</td><td>16</td><td>16</td><td>82</td>
-          </tr>
+            <tr class="participant-row">
+              <td rowspan="1">1</td>
+              <td rowspan="1">10</td>
+              <td rowspan="1">Русская псовая борзая</td>
+              <td rowspan="1">Стандартный</td>
+              <td rowspan="1">Кобель</td>
+              <td rowspan="1" class="dog-name-cell">ОБЕРЕГ РУСИ АГАТ /<br>OBEREG RUSI AGAT</td>
+              <td rowspan="1"></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+              <td rowspan="1">539</td>
+              <td rowspan="1">ПЧРКФ РК</td>
+              <td rowspan="1">CC</td>
+            </tr>
+            
+            
           
-          <tr class="participant-row">
-            <td></td><td></td><td></td><td></td><td></td><td></td>
-          </tr>
-        
-          <tr class="participant-row">
-            <td rowspan="3"></td>
-            <td rowspan="3">8</td>
-            <td rowspan="3">Русская псовая борзая</td>
-            <td rowspan="3">Стандартный</td>
-            <td rowspan="3">Кобель</td>
-            <td rowspan="3" class="dog-name-cell">ЗВЕЗДНАЯ РАДУГА САМОЦВЕТ ОЗОРНОЙ</td>
-            <td rowspan="3" style="background-color: #ff0000 !important; color: #ffffff; font-style: italic;">1</td>
-            <td>16</td><td>16</td><td>16</td><td>16</td><td>17</td><td>81</td>
-            <td rowspan="3">235</td>
-            <td rowspan="3" style="background-color: #ffffff !important; color: #000000; font-style: italic;">2</td>
-            <td colspan="7" rowspan="3" class="status-cell">Снят ветеринаром</td>
-            <td rowspan="3"></td>
-            <td rowspan="3"></td>
-            <td rowspan="3"></td>
-          </tr>
-          <tr class="participant-row">
-            <td>16</td><td>16</td><td>17</td><td>16</td><td>17</td><td>82</td>
-          </tr>
+            <tr class="participant-row">
+              <td rowspan="1">2</td>
+              <td rowspan="1">5</td>
+              <td rowspan="1">Русская псовая борзая</td>
+              <td rowspan="1">Стандартный</td>
+              <td rowspan="1">Кобель</td>
+              <td rowspan="1" class="dog-name-cell">АПРИОРИ ЛЮКСУРИ ХОРОШИЙ</td>
+              <td rowspan="1"></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+              <td rowspan="1">533</td>
+              <td rowspan="1"></td>
+              <td rowspan="1">CC</td>
+            </tr>
+            
+            
           
-          <tr class="participant-row">
-            <td></td><td></td><td></td><td></td><td></td><td></td>
-          </tr>
-        
+            <tr class="participant-row">
+              <td rowspan="1">3</td>
+              <td rowspan="1">4</td>
+              <td rowspan="1">Русская псовая борзая</td>
+              <td rowspan="1">Стандартный</td>
+              <td rowspan="1">Кобель</td>
+              <td rowspan="1" class="dog-name-cell">АПРИОРИ ЛЮКСУРИ ХМЕЛЬ /<br>APRIORI LUXURY HMEL</td>
+              <td rowspan="1"></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+              <td rowspan="1">531</td>
+              <td rowspan="1"></td>
+              <td rowspan="1">CC</td>
+            </tr>
+            
+            
+          
+            <tr class="participant-row">
+              <td rowspan="1">4</td>
+              <td rowspan="1">7</td>
+              <td rowspan="1">Русская псовая борзая</td>
+              <td rowspan="1">Стандартный</td>
+              <td rowspan="1">Кобель</td>
+              <td rowspan="1" class="dog-name-cell">ДОРОГОЙ ДРУГ ФАРТОВЫЙ /<br>DOROGOY DRUG FARTOVYJ</td>
+              <td rowspan="1"></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+              <td rowspan="1">529</td>
+              <td rowspan="1"></td>
+              <td rowspan="1">CC</td>
+            </tr>
+            
+            
+          
+            <tr class="participant-row">
+              <td rowspan="1">5</td>
+              <td rowspan="1">6</td>
+              <td rowspan="1">Русская псовая борзая</td>
+              <td rowspan="1">Стандартный</td>
+              <td rowspan="1">Кобель</td>
+              <td rowspan="1" class="dog-name-cell">БОРЗЫЕ СЕНАВИАН ЦАГРИ</td>
+              <td rowspan="1"></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+              <td rowspan="1">525</td>
+              <td rowspan="1"></td>
+              <td rowspan="1">CC</td>
+            </tr>
+            
+            
+          
+            <tr class="participant-row">
+              <td rowspan="1">6</td>
+              <td rowspan="1">9</td>
+              <td rowspan="1">Русская псовая борзая</td>
+              <td rowspan="1">Стандартный</td>
+              <td rowspan="1">Кобель</td>
+              <td rowspan="1" class="dog-name-cell">ЛУННАЯ РАДУГА ФАРТОВЫЙ</td>
+              <td rowspan="1"></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+              <td rowspan="1">519</td>
+              <td rowspan="1"></td>
+              <td rowspan="1">CC</td>
+            </tr>
+            
+            
+          
+            <tr class="participant-row">
+              <td rowspan="1">7</td>
+              <td rowspan="1">1</td>
+              <td rowspan="1">Русская псовая борзая</td>
+              <td rowspan="1">Стандартный</td>
+              <td rowspan="1">Кобель</td>
+              <td rowspan="1" class="dog-name-cell">APRIORI LUXURY MASTER</td>
+              <td rowspan="1"></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+              <td rowspan="1">519</td>
+              <td rowspan="1"></td>
+              <td rowspan="1">CC</td>
+            </tr>
+            
+            
+          
+            <tr class="participant-row">
+              <td rowspan="1">8</td>
+              <td rowspan="1">3</td>
+              <td rowspan="1">Русская псовая борзая</td>
+              <td rowspan="1">Стандартный</td>
+              <td rowspan="1">Кобель</td>
+              <td rowspan="1" class="dog-name-cell">КНЯЖЬЕ ЗОЛОТО ПЛЕЙБОЙ /<br>KNIAZHIE ZOLOTO PLAYBOY</td>
+              <td rowspan="1"></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+              <td rowspan="1">516</td>
+              <td rowspan="1"></td>
+              <td rowspan="1">CC</td>
+            </tr>
+            
+            
+          
+            <tr class="participant-row">
+              <td rowspan="1">9</td>
+              <td rowspan="1">11</td>
+              <td rowspan="1">Русская псовая борзая</td>
+              <td rowspan="1">Стандартный</td>
+              <td rowspan="1">Кобель</td>
+              <td rowspan="1" class="dog-name-cell">СТЕПЬ КУБАНСКАЯ КАПРИЗ</td>
+              <td rowspan="1"></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+              <td rowspan="1">501</td>
+              <td rowspan="1"></td>
+              <td rowspan="1">CC</td>
+            </tr>
+            
+            
+          
+            <tr class="participant-row">
+              <td></td>
+              <td>2</td>
+              <td>Русская псовая борзая</td>
+              <td>Стандартный</td>
+              <td>Кобель</td>
+              <td class="dog-name-cell">KNIAZHIE ZOLOTO BAYARD</td>
+              <td></td>
+              <td colspan="9" class="status-cell">Снятие (Сошёл)</td>
+            </tr>
+          
+            <tr class="participant-row">
+              <td></td>
+              <td>8</td>
+              <td>Русская псовая борзая</td>
+              <td>Стандартный</td>
+              <td>Кобель</td>
+              <td class="dog-name-cell">ЗВЕЗДНАЯ РАДУГА САМОЦВЕТ ОЗОРНОЙ</td>
+              <td></td>
+              <td colspan="9" class="status-cell">Снятие (Снят ветеринаром)</td>
+            </tr>
+          
       <tr class="group-row">
-        <td colspan="25" class="group-header">Русская псовая борзая — Стандартный — Суки</td>
+        <td colspan="16" class="group-header">Салюки — Стандартный — Микс</td>
       </tr>
     
-        <tr class="participant-row">
-          <td rowspan="3">1</td>
-          <td rowspan="3">12</td>
-          <td rowspan="3">Русская псовая борзая</td>
-          <td rowspan="3">Стандартный</td>
-          <td rowspan="3">Сука</td>
-          <td rowspan="3" class="dog-name-cell">АПРИОРИ ЛУКСУРИ ФОКСХАНТЕР /<br>APRIORI LUXURY FOKSKHANTER</td>
-          <td rowspan="3" style="background-color: #ff0000 !important; color: #ffffff; font-style: italic;">9</td>
-          <td>18</td><td>19</td><td>18</td><td>18</td><td>18</td><td>91</td>
-          <td rowspan="3">266</td>
-          <td rowspan="3" style="background-color: #ff0000 !important; color: #ffffff; font-style: italic;">28</td>
-          <td>18</td><td>19</td><td>19</td><td>18</td><td>19</td><td>93</td>
-          <td rowspan="3">277</td>
-          <td rowspan="3">543</td>
-          <td rowspan="3">ПЧРКФ РК</td>
-          <td rowspan="3">СС</td>
-        </tr>
-        <tr class="participant-row">
-          <td>18</td><td>19</td><td>18</td><td>18</td><td>18</td><td>91</td>
-          <td>19</td><td>19</td><td>18</td><td>18</td><td>18</td><td>92</td>
-        </tr>
-        
-        <tr class="participant-row">
-          <td>17</td><td>17</td><td>17</td><td>16</td><td>17</td><td>84</td>
-          <td>19</td><td>19</td><td>18</td><td>18</td><td>18</td><td>92</td>
-        </tr>
-      
-        <tr class="participant-row">
-          <td rowspan="3">2</td>
-          <td rowspan="3">15</td>
-          <td rowspan="3">Русская псовая борзая</td>
-          <td rowspan="3">Стандартный</td>
-          <td rowspan="3">Сука</td>
-          <td rowspan="3" class="dog-name-cell">ДОРОГОЙ ДРУГ ФИФА /<br>DOROGOY DRUG FIFA</td>
-          <td rowspan="3" style="background-color: #fffafa !important; color: #000000; font-style: italic;">9</td>
-          <td>18</td><td>18</td><td>18</td><td>18</td><td>18</td><td>90</td>
-          <td rowspan="3">267</td>
-          <td rowspan="3" style="background-color: #fffafa !important; color: #000000; font-style: italic;">26</td>
-          <td>18</td><td>18</td><td>18</td><td>18</td><td>18</td><td>90</td>
-          <td rowspan="3">273</td>
-          <td rowspan="3">540</td>
-          <td rowspan="3"></td>
-          <td rowspan="3">СС</td>
-        </tr>
-        <tr class="participant-row">
-          <td>18</td><td>18</td><td>18</td><td>17</td><td>18</td><td>89</td>
-          <td>18</td><td>18</td><td>18</td><td>18</td><td>19</td><td>91</td>
-        </tr>
-        
-        <tr class="participant-row">
-          <td>18</td><td>18</td><td>17</td><td>18</td><td>17</td><td>88</td>
-          <td>17</td><td>19</td><td>18</td><td>19</td><td>19</td><td>92</td>
-        </tr>
-      
-        <tr class="participant-row">
-          <td rowspan="3">3</td>
-          <td rowspan="3">18</td>
-          <td rowspan="3">Русская псовая борзая</td>
-          <td rowspan="3">Стандартный</td>
-          <td rowspan="3">Сука</td>
-          <td rowspan="3" class="dog-name-cell">ОБЕРЕГ РУСИ ВЕРНАЯ СЕРДЦЕМ /<br>OBEREG RUSI VERNAYA SERDCZEM</td>
-          <td rowspan="3" style="background-color: #ff0000 !important; color: #ffffff; font-style: italic;">8</td>
-          <td>18</td><td>18</td><td>17</td><td>18</td><td>18</td><td>89</td>
-          <td rowspan="3">269</td>
-          <td rowspan="3" style="background-color: #ff0000 !important; color: #ffffff; font-style: italic;">26</td>
-          <td>18</td><td>17</td><td>17</td><td>18</td><td>18</td><td>88</td>
-          <td rowspan="3">271</td>
-          <td rowspan="3">540</td>
-          <td rowspan="3"></td>
-          <td rowspan="3">СС</td>
-        </tr>
-        <tr class="participant-row">
-          <td>18</td><td>18</td><td>17</td><td>17</td><td>18</td><td>88</td>
-          <td>19</td><td>18</td><td>18</td><td>18</td><td>18</td><td>91</td>
-        </tr>
-        
-        <tr class="participant-row">
-          <td>18</td><td>19</td><td>18</td><td>18</td><td>19</td><td>92</td>
-          <td>18</td><td>18</td><td>18</td><td>19</td><td>19</td><td>92</td>
-        </tr>
-      
-        <tr class="participant-row">
-          <td rowspan="3">4</td>
-          <td rowspan="3">13</td>
-          <td rowspan="3">Русская псовая борзая</td>
-          <td rowspan="3">Стандартный</td>
-          <td rowspan="3">Сука</td>
-          <td rowspan="3" class="dog-name-cell">СИМПЛЕ ОБСЕССИОН ЧАПТЕР ОФ МАЙ ЛАЙФ /<br>SIMPLE OBSESSION CHAPTER OF MY LIFE</td>
-          <td rowspan="3" style="background-color: #ff0000 !important; color: #ffffff; font-style: italic;">10</td>
-          <td>17</td><td>18</td><td>18</td><td>17</td><td>18</td><td>88</td>
-          <td rowspan="3">261</td>
-          <td rowspan="3" style="background-color: #fffafa !important; color: #000000; font-style: italic;">28</td>
-          <td>18</td><td>18</td><td>18</td><td>17</td><td>18</td><td>89</td>
-          <td rowspan="3">264</td>
-          <td rowspan="3">525</td>
-          <td rowspan="3"></td>
-          <td rowspan="3">СС</td>
-        </tr>
-        <tr class="participant-row">
-          <td>18</td><td>18</td><td>18</td><td>18</td><td>18</td><td>90</td>
-          <td>18</td><td>18</td><td>17</td><td>17</td><td>18</td><td>88</td>
-        </tr>
-        
-        <tr class="participant-row">
-          <td>16</td><td>17</td><td>17</td><td>16</td><td>17</td><td>83</td>
-          <td>18</td><td>18</td><td>18</td><td>17</td><td>16</td><td>87</td>
-        </tr>
-      
-        <tr class="participant-row">
-          <td rowspan="3">5</td>
-          <td rowspan="3">17</td>
-          <td rowspan="3">Русская псовая борзая</td>
-          <td rowspan="3">Стандартный</td>
-          <td rowspan="3">Сука</td>
-          <td rowspan="3" class="dog-name-cell">ОБЕРЕГ РУСИ ВЕДУНЬЯ</td>
-          <td rowspan="3" style="background-color: #ff0000 !important; color: #ffffff; font-style: italic;">7</td>
-          <td>18</td><td>16</td><td>16</td><td>18</td><td>18</td><td>86</td>
-          <td rowspan="3">256</td>
-          <td rowspan="3" style="background-color: #ff0000 !important; color: #ffffff; font-style: italic;">27</td>
-          <td>18</td><td>18</td><td>17</td><td>19</td><td>18</td><td>90</td>
-          <td rowspan="3">263</td>
-          <td rowspan="3">519</td>
-          <td rowspan="3"></td>
-          <td rowspan="3">СС</td>
-        </tr>
-        <tr class="participant-row">
-          <td>18</td><td>17</td><td>17</td><td>18</td><td>18</td><td>88</td>
-          <td>18</td><td>18</td><td>18</td><td>18</td><td>18</td><td>90</td>
-        </tr>
-        
-        <tr class="participant-row">
-          <td>16</td><td>17</td><td>16</td><td>16</td><td>17</td><td>82</td>
-          <td>17</td><td>17</td><td>16</td><td>16</td><td>17</td><td>83</td>
-        </tr>
-      
-          <tr class="participant-row">
-            <td rowspan="3"></td>
-            <td rowspan="3">16</td>
-            <td rowspan="3">Русская псовая борзая</td>
-            <td rowspan="3">Стандартный</td>
-            <td rowspan="3">Сука</td>
-            <td rowspan="3" class="dog-name-cell">ОБЕРЕГ РУСИ АФРОДИТА /<br>OBEREG RUSI AFRODITA</td>
-            <td rowspan="3" style="background-color: #fffafa !important; color: #000000; font-style: italic;">10</td>
-            <td></td><td></td><td></td><td></td><td></td><td></td>
-            <td rowspan="3"></td>
-            <td rowspan="3" style="background-color: #ffffff !important; color: #000000; font-style: italic;">2</td>
-            <td colspan="7" rowspan="3" class="status-cell">Агрессия</td>
-            <td rowspan="3"></td>
-            <td rowspan="3"></td>
-            <td rowspan="3"></td>
-          </tr>
-          <tr class="participant-row">
-            <td></td><td></td><td></td><td></td><td></td><td></td>
-          </tr>
+            <tr class="participant-row">
+              <td rowspan="1">1</td>
+              <td rowspan="1">2</td>
+              <td rowspan="1">Салюки</td>
+              <td rowspan="1">Стандартный</td>
+              <td rowspan="1"></td>
+              <td rowspan="1" class="dog-name-cell">ШАВАТИ КАЙЛАН</td>
+              <td rowspan="1"></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+              <td rowspan="1">542</td>
+              <td rowspan="1">ПЧРКФ РК</td>
+              <td rowspan="1">CC</td>
+            </tr>
+            
+            
           
-          <tr class="participant-row">
-            <td></td><td></td><td></td><td></td><td></td><td></td>
-          </tr>
-        
-          <tr class="participant-row">
-            <td rowspan="3"></td>
-            <td rowspan="3">19</td>
-            <td rowspan="3">Русская псовая борзая</td>
-            <td rowspan="3">Стандартный</td>
-            <td rowspan="3">Сука</td>
-            <td rowspan="3" class="dog-name-cell">ФАЙЗА /<br>FAJZA</td>
-            <td rowspan="3" style="background-color: #fffafa !important; color: #000000; font-style: italic;">7</td>
-            <td></td><td></td><td></td><td></td><td></td><td></td>
-            <td rowspan="3"></td>
-            <td rowspan="3" style="background-color: #ffffff !important; color: #000000; font-style: italic;">2</td>
-            <td colspan="7" rowspan="3" class="status-cell">Снят</td>
-            <td rowspan="3"></td>
-            <td rowspan="3"></td>
-            <td rowspan="3"></td>
-          </tr>
-          <tr class="participant-row">
-            <td></td><td></td><td></td><td></td><td></td><td></td>
-          </tr>
+            <tr class="participant-row">
+              <td rowspan="1">2</td>
+              <td rowspan="1">4</td>
+              <td rowspan="1">Салюки</td>
+              <td rowspan="1">Стандартный</td>
+              <td rowspan="1"></td>
+              <td rowspan="1" class="dog-name-cell">SULAHAT KARA</td>
+              <td rowspan="1"></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+              <td rowspan="1">534</td>
+              <td rowspan="1"></td>
+              <td rowspan="1">CC</td>
+            </tr>
+            
+            
           
-          <tr class="participant-row">
-            <td></td><td></td><td></td><td></td><td></td><td></td>
-          </tr>
-        
+            <tr class="participant-row">
+              <td rowspan="1">3</td>
+              <td rowspan="1">6</td>
+              <td rowspan="1">Салюки</td>
+              <td rowspan="1">Стандартный</td>
+              <td rowspan="1"></td>
+              <td rowspan="1" class="dog-name-cell">АЛЬ НАФИСЭХ ХАЙФА /<br>AL NAFISEH HAIFA</td>
+              <td rowspan="1"></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+              <td rowspan="1">530</td>
+              <td rowspan="1"></td>
+              <td rowspan="1">CC</td>
+            </tr>
+            
+            
+          
+            <tr class="participant-row">
+              <td rowspan="1">4</td>
+              <td rowspan="1">5</td>
+              <td rowspan="1">Салюки</td>
+              <td rowspan="1">Стандартный</td>
+              <td rowspan="1"></td>
+              <td rowspan="1" class="dog-name-cell">АЙСАРА /<br>AYSARA</td>
+              <td rowspan="1"></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+              <td rowspan="1">525</td>
+              <td rowspan="1"></td>
+              <td rowspan="1">CC</td>
+            </tr>
+            
+            
+          
+            <tr class="participant-row">
+              <td rowspan="1">5</td>
+              <td rowspan="1">8</td>
+              <td rowspan="1">Салюки</td>
+              <td rowspan="1">Стандартный</td>
+              <td rowspan="1"></td>
+              <td rowspan="1" class="dog-name-cell">САЛГРЕЙС ТЭ ПАУЭР ОФ ЛАВ /<br>SALGREYS THE POWER OF LOVE</td>
+              <td rowspan="1"></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+              <td rowspan="1">523</td>
+              <td rowspan="1"></td>
+              <td rowspan="1">CC</td>
+            </tr>
+            
+            
+          
+            <tr class="participant-row">
+              <td rowspan="1">6</td>
+              <td rowspan="1">1</td>
+              <td rowspan="1">Салюки</td>
+              <td rowspan="1">Стандартный</td>
+              <td rowspan="1"></td>
+              <td rowspan="1" class="dog-name-cell">АЛЬ НАФИСЭХ ХОМЭЙЮН /<br>AL NAFISEH HOMAYOON</td>
+              <td rowspan="1"></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+              <td rowspan="1">521</td>
+              <td rowspan="1"></td>
+              <td rowspan="1">CC</td>
+            </tr>
+            
+            
+          
+            <tr class="participant-row">
+              <td rowspan="1">7</td>
+              <td rowspan="1">3</td>
+              <td rowspan="1">Салюки</td>
+              <td rowspan="1">Стандартный</td>
+              <td rowspan="1"></td>
+              <td rowspan="1" class="dog-name-cell">AL NAFISEH GUL PARI</td>
+              <td rowspan="1"></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+              <td rowspan="1">520</td>
+              <td rowspan="1"></td>
+              <td rowspan="1">CC</td>
+            </tr>
+            
+            
+          
+            <tr class="participant-row">
+              <td rowspan="1">8</td>
+              <td rowspan="1">7</td>
+              <td rowspan="1">Салюки</td>
+              <td rowspan="1">Стандартный</td>
+              <td rowspan="1"></td>
+              <td rowspan="1" class="dog-name-cell">БЕЛЬ ЭТУАЛЬ ДЭЙЛИ СМАЙЛ</td>
+              <td rowspan="1"></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+              <td rowspan="1">508</td>
+              <td rowspan="1"></td>
+              <td rowspan="1">CC</td>
+            </tr>
+            
+            
+          
       <tr class="group-row">
-        <td colspan="25" class="group-header">Русская псовая борзая — Юниоры — Кобели</td>
+        <td colspan="16" class="group-header">Русская псовая борзая — Стандартный — Суки</td>
       </tr>
     
-        <tr class="participant-row">
-          <td rowspan="3">1</td>
-          <td rowspan="3">20</td>
-          <td rowspan="3">Русская псовая борзая</td>
-          <td rowspan="3">Юниоры</td>
-          <td rowspan="3">Кобель</td>
-          <td rowspan="3" class="dog-name-cell">БОРЗЫЕ СЕНАВИАН ГОРНОСТАЙ</td>
-          <td rowspan="3" style="background-color: #ff0000 !important; color: #ffffff; font-style: italic;">11</td>
-          <td>18</td><td>18</td><td>17</td><td>18</td><td>18</td><td>89</td>
-          <td rowspan="3">260</td>
-          <td rowspan="3" style="background-color: #ff0000 !important; color: #ffffff; font-style: italic;">29</td>
-          <td>18</td><td>18</td><td>18</td><td>18</td><td>20</td><td>92</td>
-          <td rowspan="3">264</td>
-          <td rowspan="3">524</td>
-          <td rowspan="3"></td>
-          <td rowspan="3"></td>
-        </tr>
-        <tr class="participant-row">
-          <td>17</td><td>18</td><td>18</td><td>17</td><td>18</td><td>88</td>
-          <td>18</td><td>18</td><td>18</td><td>17</td><td>18</td><td>89</td>
-        </tr>
-        
-        <tr class="participant-row">
-          <td>16</td><td>17</td><td>16</td><td>17</td><td>17</td><td>83</td>
-          <td>17</td><td>17</td><td>16</td><td>17</td><td>16</td><td>83</td>
-        </tr>
-      
+            <tr class="participant-row">
+              <td rowspan="1">1</td>
+              <td rowspan="1">12</td>
+              <td rowspan="1">Русская псовая борзая</td>
+              <td rowspan="1">Стандартный</td>
+              <td rowspan="1">Сука</td>
+              <td rowspan="1" class="dog-name-cell">АПРИОРИ ЛУКСУРИ ФОКСХАНТЕР /<br>APRIORI LUXURY FOKSKHANTER</td>
+              <td rowspan="1"></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+              <td rowspan="1">543</td>
+              <td rowspan="1">ПЧРКФ РК</td>
+              <td rowspan="1">CC</td>
+            </tr>
+            
+            
+          
+            <tr class="participant-row">
+              <td rowspan="1">2</td>
+              <td rowspan="1">15</td>
+              <td rowspan="1">Русская псовая борзая</td>
+              <td rowspan="1">Стандартный</td>
+              <td rowspan="1">Сука</td>
+              <td rowspan="1" class="dog-name-cell">ДОРОГОЙ ДРУГ ФИФА /<br>DOROGOY DRUG FIFA</td>
+              <td rowspan="1"></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+              <td rowspan="1">540</td>
+              <td rowspan="1"></td>
+              <td rowspan="1">CC</td>
+            </tr>
+            
+            
+          
+            <tr class="participant-row">
+              <td rowspan="1">3</td>
+              <td rowspan="1">18</td>
+              <td rowspan="1">Русская псовая борзая</td>
+              <td rowspan="1">Стандартный</td>
+              <td rowspan="1">Сука</td>
+              <td rowspan="1" class="dog-name-cell">ОБЕРЕГ РУСИ ВЕРНАЯ СЕРДЦЕМ /<br>OBEREG RUSI VERNAYA SERDCZEM</td>
+              <td rowspan="1"></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+              <td rowspan="1">540</td>
+              <td rowspan="1"></td>
+              <td rowspan="1">CC</td>
+            </tr>
+            
+            
+          
+            <tr class="participant-row">
+              <td rowspan="1">4</td>
+              <td rowspan="1">13</td>
+              <td rowspan="1">Русская псовая борзая</td>
+              <td rowspan="1">Стандартный</td>
+              <td rowspan="1">Сука</td>
+              <td rowspan="1" class="dog-name-cell">СИМПЛЕ ОБСЕССИОН ЧАПТЕР ОФ МАЙ ЛАЙФ /<br>SIMPLE OBSESSION CHAPTER OF MY LIFE</td>
+              <td rowspan="1"></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+              <td rowspan="1">525</td>
+              <td rowspan="1"></td>
+              <td rowspan="1">CC</td>
+            </tr>
+            
+            
+          
+            <tr class="participant-row">
+              <td rowspan="1">5</td>
+              <td rowspan="1">17</td>
+              <td rowspan="1">Русская псовая борзая</td>
+              <td rowspan="1">Стандартный</td>
+              <td rowspan="1">Сука</td>
+              <td rowspan="1" class="dog-name-cell">ОБЕРЕГ РУСИ ВЕДУНЬЯ</td>
+              <td rowspan="1"></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+              <td rowspan="1">519</td>
+              <td rowspan="1"></td>
+              <td rowspan="1">CC</td>
+            </tr>
+            
+            
+          
+            <tr class="participant-row">
+              <td></td>
+              <td>16</td>
+              <td>Русская псовая борзая</td>
+              <td>Стандартный</td>
+              <td>Сука</td>
+              <td class="dog-name-cell">ОБЕРЕГ РУСИ АФРОДИТА /<br>OBEREG RUSI AFRODITA</td>
+              <td></td>
+              <td colspan="9" class="status-cell">Снятие (Агрессия)</td>
+            </tr>
+          
+            <tr class="participant-row">
+              <td></td>
+              <td>19</td>
+              <td>Русская псовая борзая</td>
+              <td>Стандартный</td>
+              <td>Сука</td>
+              <td class="dog-name-cell">ФАЙЗА /<br>FAJZA</td>
+              <td></td>
+              <td colspan="9" class="status-cell">Снятие (Снят)</td>
+            </tr>
+          
       <tr class="group-row">
-        <td colspan="25" class="group-header">Неприбывшие участники</td>
+        <td colspan="16" class="group-header">Русская псовая борзая — Юниоры — Микс</td>
+      </tr>
+    
+            <tr class="participant-row">
+              <td rowspan="1">1</td>
+              <td rowspan="1">20</td>
+              <td rowspan="1">Русская псовая борзая</td>
+              <td rowspan="1">Юниоры</td>
+              <td rowspan="1"></td>
+              <td rowspan="1" class="dog-name-cell">БОРЗЫЕ СЕНАВИАН ГОРНОСТАЙ</td>
+              <td rowspan="1"></td>
+              <td></td><td></td><td></td><td></td><td></td><td></td>
+              <td rowspan="1">524</td>
+              <td rowspan="1"></td>
+              <td rowspan="1"></td>
+            </tr>
+            
+            
+          
+      <tr class="group-row">
+        <td colspan="16" class="group-header">Неприбывшие участники</td>
       </tr>
     
         <tr class="dns-row">
@@ -1442,7 +1056,7 @@
           <td>Стандартный</td>
           <td></td>
           <td class="dog-name-cell">БОРЗОЙ ЦАРСКИЙ ВАЧА</td>
-          <td colspan="19" class="status-cell">Неявка</td>
+          <td colspan="10" class="status-cell">Неявка</td>
         </tr>
       
     </tbody>

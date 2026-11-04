@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Чемпионат РКФ (Ярославль) по курсингу борзых, 04.04.2026 (Ярославская область, г. Ярославль)</title>
   <style>
+
     @page {
       size: A4 landscape;
       margin: 1.5mm 1.5mm 1.5mm 1.5mm;
@@ -60,6 +61,7 @@
       padding: 4px 1px;
       white-space: nowrap;
     }
+    
     tr.sub-col-header td {
       font-size: 9pt;
       font-weight: normal;
@@ -83,6 +85,7 @@
       line-height: 1.25;
       padding: 4px 4px;
     }
+    
     td.status-cell {
       text-align: center;
       font-style: italic;
@@ -121,6 +124,7 @@
         font-size: 8.5pt;
         padding: 2px 1px;
       }
+      
       tr.sub-col-header td {
         font-size: 7.5pt;
         padding: 1.5px 0px;
@@ -133,10 +137,12 @@
         font-size: 8.5pt;
         padding: 2px 3px;
       }
+      
       td.status-cell {
         font-size: 8.5pt;
       }
     }
+
   
     /* Monochrome document toolbar */
     .cs-toolbar {
@@ -277,9 +283,9 @@
       border-color: #333333;
     }
     .cs-btn-stage {
-      padding: 3px 8px;
+      padding: 3px 10px;
       font-size: 11px;
-      border-radius: 12px;
+      border-radius: 9999px;
       border-color: #d8c29d;
       background: #faf6ee;
       color: #634d26;
@@ -309,6 +315,20 @@
       background: #ebdcc3;
       border-color: #8c6d37;
       color: #3b280c;
+    }
+    .cs-btn-doc {
+      background: #faf6ee;
+      border-color: #c9ab7b;
+      color: #2a1c0a;
+      font-weight: 600;
+    }
+    .cs-btn-doc svg {
+      color: #7b511c;
+    }
+    .cs-btn-doc:hover {
+      background: #ebdcc3;
+      border-color: #8c6d37;
+      color: #2a1c0a;
     }
 
     @media (max-width: 960px) {
@@ -389,7 +409,7 @@
     <div class="cs-toolbar-actions">
       
       
-      <a href="https://drive.google.com/file/d/1gEFmQZPOgZRFKc4BjxnHgMTnb3-DI59g/view" target="_blank" rel="noopener noreferrer" class="cs-btn" title="PDF-файл протокола">
+      <a href="https://drive.google.com/file/d/1gEFmQZPOgZRFKc4BjxnHgMTnb3-DI59g/view" target="_blank" rel="noopener noreferrer" class="cs-btn cs-btn-doc" title="PDF-файл протокола">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
         <span>PDF-файл</span>
       </a>

@@ -2,7 +2,7 @@
   "schema": "coursing-stats/index-top-score-v1",
   "year": null,
   "rating_score_version": "cs-v2",
-  "count": 2062,
+  "count": 2064,
   "items": [
     {
       "dog_id": 10115,
@@ -1271,7 +1271,24 @@
       "judge_eval_count": 50,
       "score_std_dev": 4.48,
       "rating_score": 88.98,
-      "aggression_count": 1
+      "aggression_count": 1,
+      "sex": "M"
+    },
+    {
+      "dog_id": 9220,
+      "name_lat": "АРЕС",
+      "name_ru": "АРЕС",
+      "breed": "БИГЛЬ",
+      "year_from": 2020,
+      "year_to": 2024,
+      "best_score": 362,
+      "total_starts": 9,
+      "best_judge_score": 95,
+      "avg_judge_score": 84.07,
+      "judge_eval_count": 30,
+      "score_std_dev": 5.46,
+      "rating_score": 88.98,
+      "sex": "M"
     },
     {
       "dog_id": 10301,
@@ -1398,22 +1415,6 @@
       "avg_judge_score": 87.79,
       "judge_eval_count": 52,
       "score_std_dev": 3.04,
-      "rating_score": 88.9,
-      "sex": "M"
-    },
-    {
-      "dog_id": 9220,
-      "name_lat": "АРЕС",
-      "name_ru": "АРЕС",
-      "breed": "БИГЛЬ",
-      "year_from": 2020,
-      "year_to": 2024,
-      "best_score": 362,
-      "total_starts": 8,
-      "best_judge_score": 95,
-      "avg_judge_score": 84.07,
-      "judge_eval_count": 30,
-      "score_std_dev": 5.46,
       "rating_score": 88.9,
       "sex": "M"
     },
@@ -3287,6 +3288,22 @@
       "sex": "M"
     },
     {
+      "dog_id": 11188,
+      "name_lat": "ANDROMEDA IZ DOMA MANSUROVYKH",
+      "name_ru": "ANDROMEDA IZ DOMA MANSUROVYKH",
+      "breed": "БИГЛЬ",
+      "year_from": 2024,
+      "year_to": 2024,
+      "best_score": 360,
+      "total_starts": 1,
+      "best_judge_score": 92,
+      "avg_judge_score": 90,
+      "judge_eval_count": 4,
+      "score_std_dev": 1.83,
+      "rating_score": 88.23,
+      "sex": "F"
+    },
+    {
       "dog_id": 9527,
       "name_lat": "DODONA BALTAS VEJAS",
       "name_ru": "DODONA BALTAS VEJAS",
@@ -3331,8 +3348,7 @@
       "avg_judge_score": 88,
       "judge_eval_count": 14,
       "score_std_dev": 2.08,
-      "rating_score": 88.22,
-      "sex": "F"
+      "rating_score": 88.22
     },
     {
       "dog_id": 10900,
@@ -3618,7 +3634,8 @@
       "avg_judge_score": 87.17,
       "judge_eval_count": 18,
       "score_std_dev": 4.49,
-      "rating_score": 88.16
+      "rating_score": 88.16,
+      "sex": "M"
     },
     {
       "dog_id": 7354,
@@ -5234,6 +5251,22 @@
       "sex": "M"
     },
     {
+      "dog_id": 9555,
+      "name_lat": "ДЕНВЕРС ЭЛИТ РЕДМУН /DENVERS ELITE REDMOON",
+      "name_ru": "ДЕНВЕРС ЭЛИТ РЕДМУН /DENVERS ELITE REDMOON",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "year_from": 2024,
+      "year_to": 2024,
+      "best_score": 354,
+      "total_starts": 5,
+      "best_judge_score": 92,
+      "avg_judge_score": 86.4,
+      "judge_eval_count": 20,
+      "score_std_dev": 3.1,
+      "rating_score": 87.77,
+      "sex": "F"
+    },
+    {
       "dog_id": 10084,
       "name_lat": "LAST UNICORN",
       "name_ru": "LAST UNICORN",
@@ -5262,7 +5295,8 @@
       "avg_judge_score": 86.71,
       "judge_eval_count": 31,
       "score_std_dev": 4.13,
-      "rating_score": 87.76
+      "rating_score": 87.76,
+      "sex": "F"
     },
     {
       "dog_id": 152,
@@ -5422,6 +5456,22 @@
       "score_std_dev": 3.81,
       "rating_score": 87.73,
       "sex": "M"
+    },
+    {
+      "dog_id": 508,
+      "name_lat": "ДЕНВЕРС ЭЛИТ ОФЕЛИЯ /DENVERS ELITE OPHELIA",
+      "name_ru": "ДЕНВЕРС ЭЛИТ ОФЕЛИЯ /DENVERS ELITE OPHELIA",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "year_from": 2024,
+      "year_to": 2025,
+      "best_score": 356,
+      "total_starts": 5,
+      "best_judge_score": 91,
+      "avg_judge_score": 86.35,
+      "judge_eval_count": 20,
+      "score_std_dev": 4.12,
+      "rating_score": 87.73,
+      "sex": "F"
     },
     {
       "dog_id": 10338,
@@ -6338,22 +6388,6 @@
       "sex": "F"
     },
     {
-      "dog_id": 9555,
-      "name_lat": "ДЕНВЕРС ЭЛИТ РЕДМУН /DENVERS ELITE REDMOON",
-      "name_ru": "ДЕНВЕРС ЭЛИТ РЕДМУН /DENVERS ELITE REDMOON",
-      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "year_from": 2024,
-      "year_to": 2024,
-      "best_score": 354,
-      "total_starts": 4,
-      "best_judge_score": 92,
-      "avg_judge_score": 86.38,
-      "judge_eval_count": 16,
-      "score_std_dev": 3.36,
-      "rating_score": 87.55,
-      "sex": "F"
-    },
-    {
       "dog_id": 10510,
       "name_lat": "TIM SPIRIT KAJLAS",
       "name_ru": "TIM SPIRIT KAJLAS",
@@ -7230,22 +7264,6 @@
       "sex": "M"
     },
     {
-      "dog_id": 508,
-      "name_lat": "ДЕНВЕРС ЭЛИТ ОФЕЛИЯ /DENVERS ELITE OPHELIA",
-      "name_ru": "ДЕНВЕРС ЭЛИТ ОФЕЛИЯ /DENVERS ELITE OPHELIA",
-      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "year_from": 2024,
-      "year_to": 2025,
-      "best_score": 356,
-      "total_starts": 4,
-      "best_judge_score": 91,
-      "avg_judge_score": 86.25,
-      "judge_eval_count": 16,
-      "score_std_dev": 4.57,
-      "rating_score": 87.43,
-      "sex": "F"
-    },
-    {
       "dog_id": 10281,
       "name_lat": "ИСТОРИЯ ЛЮБВИ ПЕТЕРБУРГ БЬЮТИФУЛ",
       "name_ru": "ИСТОРИЯ ЛЮБВИ ПЕТЕРБУРГ БЬЮТИФУЛ",
@@ -7307,6 +7325,22 @@
       "judge_eval_count": 8,
       "score_std_dev": 5.51,
       "rating_score": 87.42
+    },
+    {
+      "dog_id": 510,
+      "name_lat": "ГЛЕД ТУ БИ ГРЕЙТ ИЗ СОЗВЕЗДИЯ СТАФФ /GLAD TO BE GREAT IZ SOZVEZDIYA STAFF",
+      "name_ru": "ГЛЕД ТУ БИ ГРЕЙТ ИЗ СОЗВЕЗДИЯ СТАФФ /GLAD TO BE GREAT IZ SOZVEZDIYA STAFF",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "year_from": 2024,
+      "year_to": 2026,
+      "best_score": 363,
+      "total_starts": 13,
+      "best_judge_score": 94,
+      "avg_judge_score": 84.96,
+      "judge_eval_count": 48,
+      "score_std_dev": 4.65,
+      "rating_score": 87.42,
+      "sex": "F"
     },
     {
       "dog_id": 10344,
@@ -7478,6 +7512,22 @@
       "avg_judge_score": 87.5,
       "judge_eval_count": 8,
       "score_std_dev": 2.73,
+      "rating_score": 87.39,
+      "sex": "F"
+    },
+    {
+      "dog_id": 8374,
+      "name_lat": "FARLEIN",
+      "name_ru": "ФАРЛЕЙН",
+      "breed": "МЕТИС",
+      "year_from": 2024,
+      "year_to": 2025,
+      "best_score": 361,
+      "total_starts": 3,
+      "best_judge_score": 93,
+      "avg_judge_score": 86.58,
+      "judge_eval_count": 12,
+      "score_std_dev": 3.48,
       "rating_score": 87.39,
       "sex": "F"
     },
@@ -7815,21 +7865,6 @@
       "score_std_dev": 2.79,
       "rating_score": 87.35,
       "sex": "F"
-    },
-    {
-      "dog_id": 510,
-      "name_lat": "ГЛЕД ТУ БИ ГРЕЙТ ИЗ СОЗВЕЗДИЯ СТАФФ /GLAD TO BE GREAT IZ SOZVEZDIYA STAFF",
-      "name_ru": "ГЛЕД ТУ БИ ГРЕЙТ ИЗ СОЗВЕЗДИЯ СТАФФ /GLAD TO BE GREAT IZ SOZVEZDIYA STAFF",
-      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "year_from": 2024,
-      "year_to": 2026,
-      "best_score": 363,
-      "total_starts": 12,
-      "best_judge_score": 94,
-      "avg_judge_score": 84.91,
-      "judge_eval_count": 44,
-      "score_std_dev": 4.59,
-      "rating_score": 87.33
     },
     {
       "dog_id": 9452,
@@ -8181,7 +8216,7 @@
       "judge_eval_count": 4,
       "score_std_dev": 2.75,
       "rating_score": 87.29,
-      "sex": "F"
+      "sex": "M"
     },
     {
       "dog_id": 706,
@@ -8489,6 +8524,22 @@
       "sex": "F"
     },
     {
+      "dog_id": 9595,
+      "name_lat": "J KAPITAN NELSON",
+      "name_ru": "Ж КАПИТАН НЕЛЬСОН",
+      "breed": "ГРЕЙХАУНД",
+      "year_from": 2023,
+      "year_to": 2023,
+      "best_score": 540,
+      "total_starts": 1,
+      "best_judge_score": 92,
+      "avg_judge_score": 90,
+      "judge_eval_count": 6,
+      "score_std_dev": 1.1,
+      "rating_score": 87.27,
+      "sex": "M"
+    },
+    {
       "dog_id": 10767,
       "name_lat": "BORZOMIR BARIJAT AMIRA",
       "name_ru": "BORZOMIR BARIJAT AMIRA",
@@ -8710,6 +8761,22 @@
       "score_std_dev": 2.8,
       "rating_score": 87.24,
       "sex": "F"
+    },
+    {
+      "dog_id": 9612,
+      "name_lat": "САНСАРА ШЕРВУД ШОТЕР ГРАН ПРИ",
+      "name_ru": "САНСАРА ШЕРВУД ШОТЕР ГРАН ПРИ",
+      "breed": "МЕТИС",
+      "year_from": 2024,
+      "year_to": 2024,
+      "best_score": 350,
+      "total_starts": 2,
+      "best_judge_score": 89,
+      "avg_judge_score": 87.5,
+      "judge_eval_count": 8,
+      "score_std_dev": 1.41,
+      "rating_score": 87.24,
+      "sex": "M"
     },
     {
       "dog_id": 10446,
@@ -9594,10 +9661,10 @@
       "year_to": 2023,
       "best_score": 532,
       "total_starts": 5,
-      "best_judge_score": 91,
+      "best_judge_score": 92,
       "avg_judge_score": 86.86,
       "judge_eval_count": 22,
-      "score_std_dev": 2.64,
+      "score_std_dev": 2.75,
       "rating_score": 87.13,
       "sex": "F"
     },
@@ -9679,6 +9746,22 @@
       "judge_eval_count": 6,
       "score_std_dev": 4.58,
       "rating_score": 87.11
+    },
+    {
+      "dog_id": 7753,
+      "name_lat": "АФИНА",
+      "name_ru": "АФИНА",
+      "breed": "МЕТИС",
+      "year_from": 2024,
+      "year_to": 2025,
+      "best_score": 354,
+      "total_starts": 4,
+      "best_judge_score": 92,
+      "avg_judge_score": 85.63,
+      "judge_eval_count": 16,
+      "score_std_dev": 4.16,
+      "rating_score": 87.11,
+      "sex": "F"
     },
     {
       "dog_id": 5652,
@@ -9967,6 +10050,22 @@
       "avg_judge_score": 87.75,
       "judge_eval_count": 8,
       "score_std_dev": 2.19,
+      "rating_score": 87.09,
+      "sex": "F"
+    },
+    {
+      "dog_id": 9611,
+      "name_lat": "ТИССА ЛУНА ГОЛУБОЙ РОДНИК КРЕДО",
+      "name_ru": "ТИССА ЛУНА ГОЛУБОЙ РОДНИК КРЕДО",
+      "breed": "МЕТИС",
+      "year_from": 2024,
+      "year_to": 2024,
+      "best_score": 349,
+      "total_starts": 2,
+      "best_judge_score": 91,
+      "avg_judge_score": 86.75,
+      "judge_eval_count": 8,
+      "score_std_dev": 3.62,
       "rating_score": 87.09,
       "sex": "F"
     },
@@ -10462,22 +10561,6 @@
       "judge_eval_count": 72,
       "score_std_dev": 4.17,
       "rating_score": 87.03,
-      "sex": "M"
-    },
-    {
-      "dog_id": 9595,
-      "name_lat": "J KAPITAN NELSON",
-      "name_ru": "Ж КАПИТАН НЕЛЬСОН",
-      "breed": "ГРЕЙХАУНД",
-      "year_from": 2023,
-      "year_to": 2023,
-      "best_score": 540,
-      "total_starts": 1,
-      "best_judge_score": 90,
-      "avg_judge_score": 90,
-      "judge_eval_count": 6,
-      "score_std_dev": 0,
-      "rating_score": 87.02,
       "sex": "M"
     },
     {
@@ -13655,21 +13738,6 @@
       "rating_score": 86.63
     },
     {
-      "dog_id": 9612,
-      "name_lat": "САНСАРА ШЕРВУД ШОТЕР ГРАН ПРИ",
-      "name_ru": "САНСАРА ШЕРВУД ШОТЕР ГРАН ПРИ",
-      "breed": "МЕТИС",
-      "year_from": 2024,
-      "year_to": 2024,
-      "best_score": 350,
-      "total_starts": 1,
-      "best_judge_score": 89,
-      "avg_judge_score": 87.5,
-      "judge_eval_count": 4,
-      "score_std_dev": 1.29,
-      "rating_score": 86.63
-    },
-    {
       "dog_id": 10103,
       "name_lat": "ТИНА ТРЕЙДИНГ ЯРОСЛАВА II",
       "name_ru": "ТИНА ТРЕЙДИНГ ЯРОСЛАВА II",
@@ -13811,22 +13879,6 @@
       "score_std_dev": 4.23,
       "rating_score": 86.62,
       "aggression_count": 1,
-      "sex": "F"
-    },
-    {
-      "dog_id": 7753,
-      "name_lat": "АФИНА",
-      "name_ru": "АФИНА",
-      "breed": "МЕТИС",
-      "year_from": 2024,
-      "year_to": 2025,
-      "best_score": 354,
-      "total_starts": 3,
-      "best_judge_score": 92,
-      "avg_judge_score": 85.08,
-      "judge_eval_count": 12,
-      "score_std_dev": 4.34,
-      "rating_score": 86.61,
       "sex": "F"
     },
     {
@@ -14065,6 +14117,23 @@
       "judge_eval_count": 26,
       "score_std_dev": 6.47,
       "rating_score": 86.59
+    },
+    {
+      "dog_id": 9312,
+      "name_lat": "ТАТАНКА ВИТКА ДЖОК ДЖАЗ",
+      "name_ru": "ТАТАНКА ВИТКА ДЖОК ДЖАЗ",
+      "breed": "ГРЕЙХАУНД",
+      "year_from": 2021,
+      "year_to": 2023,
+      "best_score": 349,
+      "total_starts": 2,
+      "best_judge_score": 256,
+      "avg_judge_score": 87.25,
+      "judge_eval_count": 4,
+      "score_std_dev": 1.5,
+      "rating_score": 86.58,
+      "aggression_count": 1,
+      "sex": "M"
     },
     {
       "dog_id": 10167,
@@ -14651,6 +14720,22 @@
       "sex": "M"
     },
     {
+      "dog_id": 11189,
+      "name_lat": "BARBARA IZ DOMA MANSUROVYKH",
+      "name_ru": "BARBARA IZ DOMA MANSUROVYKH",
+      "breed": "БИГЛЬ",
+      "year_from": 2024,
+      "year_to": 2024,
+      "best_score": 333,
+      "total_starts": 1,
+      "best_judge_score": 86,
+      "avg_judge_score": 83.25,
+      "judge_eval_count": 4,
+      "score_std_dev": 2.06,
+      "rating_score": 86.54,
+      "sex": "F"
+    },
+    {
       "dog_id": 9101,
       "name_lat": "ИЛУНА ИЗ САГИ О ГАРДАРИКЕ",
       "name_ru": "ИЛУНА ИЗ САГИ О ГАРДАРИКЕ",
@@ -14741,7 +14826,8 @@
       "avg_judge_score": 86,
       "judge_eval_count": 4,
       "score_std_dev": 5.35,
-      "rating_score": 86.53
+      "rating_score": 86.53,
+      "sex": "F"
     },
     {
       "dog_id": 11098,
@@ -16177,21 +16263,6 @@
       "sex": "F"
     },
     {
-      "dog_id": 9611,
-      "name_lat": "ТИССА ЛУНА ГОЛУБОЙ РОДНИК КРЕДО",
-      "name_ru": "ТИССА ЛУНА ГОЛУБОЙ РОДНИК КРЕДО",
-      "breed": "МЕТИС",
-      "year_from": 2024,
-      "year_to": 2024,
-      "best_score": 345,
-      "total_starts": 1,
-      "best_judge_score": 91,
-      "avg_judge_score": 86.25,
-      "judge_eval_count": 4,
-      "score_std_dev": 4.65,
-      "rating_score": 86.36
-    },
-    {
       "dog_id": 9435,
       "name_lat": "ГРИНЧ НОЧНОЙ ПОЛЕТ",
       "name_ru": "ГРИНЧ НОЧНОЙ ПОЛЕТ",
@@ -16429,23 +16500,6 @@
       "score_std_dev": 4.24,
       "rating_score": 86.34,
       "sex": "F"
-    },
-    {
-      "dog_id": 9312,
-      "name_lat": "ТАТАНКА ВИТКА ДЖОК ДЖАЗ",
-      "name_ru": "ТАТАНКА ВИТКА ДЖОК ДЖАЗ",
-      "breed": "ГРЕЙХАУНД",
-      "year_from": 2021,
-      "year_to": 2023,
-      "best_score": 349,
-      "total_starts": 2,
-      "best_judge_score": 89,
-      "avg_judge_score": 87.25,
-      "judge_eval_count": 4,
-      "score_std_dev": 1.5,
-      "rating_score": 86.33,
-      "aggression_count": 1,
-      "sex": "M"
     },
     {
       "dog_id": 9284,
@@ -17658,22 +17712,6 @@
       "sex": "F"
     },
     {
-      "dog_id": 8374,
-      "name_lat": "FARLEIN",
-      "name_ru": "ФАРЛЕЙН",
-      "breed": "МЕТИС",
-      "year_from": 2025,
-      "year_to": 2025,
-      "best_score": 340,
-      "total_starts": 2,
-      "best_judge_score": 88,
-      "avg_judge_score": 84.75,
-      "judge_eval_count": 8,
-      "score_std_dev": 2.31,
-      "rating_score": 86.16,
-      "sex": "F"
-    },
-    {
       "dog_id": 9986,
       "name_lat": "ЗАВЕТНАЯ МЕЧТА",
       "name_ru": "ЗАВЕТНАЯ МЕЧТА",
@@ -18808,22 +18846,6 @@
       "score_std_dev": 5.2,
       "rating_score": 86,
       "sex": "M"
-    },
-    {
-      "dog_id": 7154,
-      "name_lat": "EUPHORIA OF WINNER SOZVEZDIE STAFF",
-      "name_ru": "EUPHORIA OF WINNER SOZVEZDIE STAFF",
-      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "year_from": 2024,
-      "year_to": 2025,
-      "best_score": 327,
-      "total_starts": 3,
-      "best_judge_score": 90,
-      "avg_judge_score": 83.5,
-      "judge_eval_count": 8,
-      "score_std_dev": 3.46,
-      "rating_score": 86,
-      "sex": "F"
     },
     {
       "dog_id": 10994,
@@ -22140,7 +22162,7 @@
       "judge_eval_count": 4,
       "score_std_dev": 2.52,
       "rating_score": 85.48,
-      "sex": "F"
+      "sex": "M"
     },
     {
       "dog_id": 9502,
@@ -23413,6 +23435,22 @@
       "score_std_dev": 2.14,
       "rating_score": 85.26,
       "sex": "M"
+    },
+    {
+      "dog_id": 7154,
+      "name_lat": "EUPHORIA OF WINNER SOZVEZDIE STAFF",
+      "name_ru": "EUPHORIA OF WINNER SOZVEZDIE STAFF",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "year_from": 2024,
+      "year_to": 2025,
+      "best_score": 327,
+      "total_starts": 4,
+      "best_judge_score": 90,
+      "avg_judge_score": 82,
+      "judge_eval_count": 12,
+      "score_std_dev": 3.62,
+      "rating_score": 85.26,
+      "sex": "F"
     },
     {
       "dog_id": 306,
@@ -28274,6 +28312,22 @@
       "sex": "F"
     },
     {
+      "dog_id": 7385,
+      "name_lat": "ДЕНВЕРС ЭЛИТ НАЙЛИНГ /DENVERS ELITE NAILING",
+      "name_ru": "ДЕНВЕРС ЭЛИТ НАЙЛИНГ /DENVERS ELITE NAILING",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "year_from": 2024,
+      "year_to": 2025,
+      "best_score": 340,
+      "total_starts": 7,
+      "best_judge_score": 88,
+      "avg_judge_score": 80.11,
+      "judge_eval_count": 28,
+      "score_std_dev": 6.06,
+      "rating_score": 83.51,
+      "sex": "M"
+    },
+    {
       "dog_id": 9594,
       "name_lat": "ALL SQUARE TURANDOT THE LADY OF INTRIGUE",
       "name_ru": "ОЛЛ СКУАРЕ ТУРАНДОТ ЗЕ ЛЭДИ ОФ ИНТРИГ",
@@ -28752,22 +28806,6 @@
       "sex": "M"
     },
     {
-      "dog_id": 7385,
-      "name_lat": "ДЕНВЕРС ЭЛИТ НАЙЛИНГ /DENVERS ELITE NAILING",
-      "name_ru": "ДЕНВЕРС ЭЛИТ НАЙЛИНГ /DENVERS ELITE NAILING",
-      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "year_from": 2024,
-      "year_to": 2025,
-      "best_score": 335,
-      "total_starts": 6,
-      "best_judge_score": 88,
-      "avg_judge_score": 79.29,
-      "judge_eval_count": 24,
-      "score_std_dev": 6.15,
-      "rating_score": 83.03,
-      "sex": "M"
-    },
-    {
       "dog_id": 9795,
       "name_lat": "ISTORIYA LUBVI LUXURY DOVE",
       "name_ru": "ISTORIYA LUBVI LUXURY DOVE",
@@ -29080,7 +29118,8 @@
       "avg_judge_score": 74.5,
       "judge_eval_count": 4,
       "score_std_dev": 6.03,
-      "rating_score": 82.71
+      "rating_score": 82.71,
+      "sex": "M"
     },
     {
       "dog_id": 7195,
@@ -30630,9 +30669,9 @@
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "year_from": 2023,
       "year_to": 2023,
-      "best_score": 245,
+      "best_score": 170,
       "total_starts": 3,
-      "best_judge_score": 85,
+      "best_judge_score": 245,
       "avg_judge_score": null,
       "judge_eval_count": 0,
       "score_std_dev": null,
@@ -30851,6 +30890,22 @@
       "score_std_dev": null,
       "rating_score": null,
       "sex": "F"
+    },
+    {
+      "dog_id": 9304,
+      "name_lat": "ЗВЕЗДНАЯ РАДУГА САМОЦВЕТ ОЗОРНОЙ",
+      "name_ru": "ЗВЕЗДНАЯ РАДУГА САМОЦВЕТ ОЗОРНОЙ",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2023,
+      "year_to": 2023,
+      "best_score": null,
+      "total_starts": 1,
+      "best_judge_score": 235,
+      "avg_judge_score": null,
+      "judge_eval_count": 0,
+      "score_std_dev": null,
+      "rating_score": null,
+      "sex": "M"
     },
     {
       "dog_id": 9083,
@@ -31091,22 +31146,6 @@
       "score_std_dev": null,
       "rating_score": null,
       "sex": "F"
-    },
-    {
-      "dog_id": 9304,
-      "name_lat": "ЗВЕЗДНАЯ РАДУГА САМОЦВЕТ ОЗОРНОЙ",
-      "name_ru": "ЗВЕЗДНАЯ РАДУГА САМОЦВЕТ ОЗОРНОЙ",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "year_from": 2023,
-      "year_to": 2023,
-      "best_score": 235,
-      "total_starts": 1,
-      "best_judge_score": 82,
-      "avg_judge_score": null,
-      "judge_eval_count": 0,
-      "score_std_dev": null,
-      "rating_score": null,
-      "sex": "M"
     },
     {
       "dog_id": 10638,

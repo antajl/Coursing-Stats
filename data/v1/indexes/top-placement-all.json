@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/index-top-placement-v1",
   "year": null,
-  "count": 2062,
+  "count": 2064,
   "items": [
     {
       "dog_id": 182,
@@ -253,7 +253,8 @@
       "silver": 0,
       "bronze": 4,
       "total_starts": 13,
-      "aggression_count": 1
+      "aggression_count": 1,
+      "sex": "M"
     },
     {
       "dog_id": 5889,
@@ -580,7 +581,7 @@
       "gold": 6,
       "silver": 2,
       "bronze": 0,
-      "total_starts": 8,
+      "total_starts": 9,
       "sex": "M"
     },
     {
@@ -840,7 +841,8 @@
       "gold": 5,
       "silver": 1,
       "bronze": 4,
-      "total_starts": 12
+      "total_starts": 13,
+      "sex": "F"
     },
     {
       "dog_id": 383,
@@ -1481,6 +1483,19 @@
       "silver": 0,
       "bronze": 0,
       "total_starts": 4,
+      "sex": "F"
+    },
+    {
+      "dog_id": 508,
+      "name_lat": "ДЕНВЕРС ЭЛИТ ОФЕЛИЯ /DENVERS ELITE OPHELIA",
+      "name_ru": "ДЕНВЕРС ЭЛИТ ОФЕЛИЯ /DENVERS ELITE OPHELIA",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "year_from": 2024,
+      "year_to": 2025,
+      "gold": 4,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 5,
       "sex": "F"
     },
     {
@@ -2409,19 +2424,6 @@
       "sex": "F"
     },
     {
-      "dog_id": 508,
-      "name_lat": "ДЕНВЕРС ЭЛИТ ОФЕЛИЯ /DENVERS ELITE OPHELIA",
-      "name_ru": "ДЕНВЕРС ЭЛИТ ОФЕЛИЯ /DENVERS ELITE OPHELIA",
-      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "year_from": 2024,
-      "year_to": 2025,
-      "gold": 3,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 4,
-      "sex": "F"
-    },
-    {
       "dog_id": 643,
       "name_lat": "URAL ULKEN SATTILIK NORTH FAMILY",
       "name_ru": "URAL ULKEN SATTILIK NORTH FAMILY",
@@ -2495,7 +2497,7 @@
       "gold": 3,
       "silver": 0,
       "bronze": 0,
-      "total_starts": 3,
+      "total_starts": 4,
       "sex": "F"
     },
     {
@@ -2503,6 +2505,19 @@
       "name_lat": "АМБАСЭДЭР КИ ТУ САКСЭС /AMBASSADOR KEY TO SUCCESS",
       "name_ru": "АМБАСЭДЭР КИ ТУ САКСЭС /AMBASSADOR KEY TO SUCCESS",
       "breed": "БОРДЕР КОЛЛИ",
+      "year_from": 2024,
+      "year_to": 2025,
+      "gold": 3,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 3,
+      "sex": "F"
+    },
+    {
+      "dog_id": 8374,
+      "name_lat": "FARLEIN",
+      "name_ru": "ФАРЛЕЙН",
+      "breed": "МЕТИС",
       "year_from": 2024,
       "year_to": 2025,
       "gold": 3,
@@ -2804,7 +2819,8 @@
       "gold": 2,
       "silver": 3,
       "bronze": 0,
-      "total_starts": 9
+      "total_starts": 9,
+      "sex": "F"
     },
     {
       "dog_id": 9934,
@@ -3829,7 +3845,8 @@
       "gold": 2,
       "silver": 0,
       "bronze": 1,
-      "total_starts": 5
+      "total_starts": 5,
+      "sex": "M"
     },
     {
       "dog_id": 836,
@@ -4323,19 +4340,6 @@
       "sex": "M"
     },
     {
-      "dog_id": 8374,
-      "name_lat": "FARLEIN",
-      "name_ru": "ФАРЛЕЙН",
-      "breed": "МЕТИС",
-      "year_from": 2025,
-      "year_to": 2025,
-      "gold": 2,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 2,
-      "sex": "F"
-    },
-    {
       "dog_id": 9246,
       "name_lat": "МАГНИФИКО НЕРО",
       "name_ru": "МАГНИФИКО НЕРО",
@@ -4400,6 +4404,19 @@
       "total_starts": 4,
       "aggression_count": 1,
       "sex": "F"
+    },
+    {
+      "dog_id": 9612,
+      "name_lat": "САНСАРА ШЕРВУД ШОТЕР ГРАН ПРИ",
+      "name_ru": "САНСАРА ШЕРВУД ШОТЕР ГРАН ПРИ",
+      "breed": "МЕТИС",
+      "year_from": 2024,
+      "year_to": 2024,
+      "gold": 2,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 2,
+      "sex": "M"
     },
     {
       "dog_id": 9658,
@@ -4844,6 +4861,19 @@
       "sex": "F"
     },
     {
+      "dog_id": 9555,
+      "name_lat": "ДЕНВЕРС ЭЛИТ РЕДМУН /DENVERS ELITE REDMOON",
+      "name_ru": "ДЕНВЕРС ЭЛИТ РЕДМУН /DENVERS ELITE REDMOON",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "year_from": 2024,
+      "year_to": 2024,
+      "gold": 1,
+      "silver": 4,
+      "bronze": 0,
+      "total_starts": 5,
+      "sex": "F"
+    },
+    {
       "dog_id": 7167,
       "name_lat": "ITURY PUZZLE IZYUM V CHOCOLADE",
       "name_ru": "ИТУРИ ПАЗЗЛ ИЗЮМ В ШОКОЛАДЕ",
@@ -4920,19 +4950,6 @@
       "bronze": 1,
       "total_starts": 5,
       "sex": "M"
-    },
-    {
-      "dog_id": 9555,
-      "name_lat": "ДЕНВЕРС ЭЛИТ РЕДМУН /DENVERS ELITE REDMOON",
-      "name_ru": "ДЕНВЕРС ЭЛИТ РЕДМУН /DENVERS ELITE REDMOON",
-      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "year_from": 2024,
-      "year_to": 2024,
-      "gold": 1,
-      "silver": 3,
-      "bronze": 0,
-      "total_starts": 4,
-      "sex": "F"
     },
     {
       "dog_id": 9568,
@@ -5861,6 +5878,19 @@
       "bronze": 1,
       "total_starts": 4,
       "sex": "M"
+    },
+    {
+      "dog_id": 7753,
+      "name_lat": "АФИНА",
+      "name_ru": "АФИНА",
+      "breed": "МЕТИС",
+      "year_from": 2024,
+      "year_to": 2025,
+      "gold": 1,
+      "silver": 1,
+      "bronze": 1,
+      "total_starts": 4,
+      "sex": "F"
     },
     {
       "dog_id": 9297,
@@ -7548,19 +7578,6 @@
       "total_starts": 2
     },
     {
-      "dog_id": 7753,
-      "name_lat": "АФИНА",
-      "name_ru": "АФИНА",
-      "breed": "МЕТИС",
-      "year_from": 2024,
-      "year_to": 2025,
-      "gold": 1,
-      "silver": 0,
-      "bronze": 1,
-      "total_starts": 3,
-      "sex": "F"
-    },
-    {
       "dog_id": 7902,
       "name_lat": "ТЕКИЛА ДЖАЗ С КНЯЖЕСКОГО ДВОРА /TEQUILA JAZZ S KNJAZHESKOGO DVORA",
       "name_ru": "ТЕКИЛА ДЖАЗ С КНЯЖЕСКОГО ДВОРА /TEQUILA JAZZ S KNJAZHESKOGO DVORA",
@@ -8918,7 +8935,8 @@
       "gold": 1,
       "silver": 0,
       "bronze": 0,
-      "total_starts": 2
+      "total_starts": 2,
+      "sex": "F"
     },
     {
       "dog_id": 7200,
@@ -8981,7 +8999,7 @@
       "silver": 0,
       "bronze": 0,
       "total_starts": 1,
-      "sex": "F"
+      "sex": "M"
     },
     {
       "dog_id": 7596,
@@ -9764,18 +9782,6 @@
       "bronze": 0,
       "total_starts": 1,
       "sex": "M"
-    },
-    {
-      "dog_id": 9612,
-      "name_lat": "САНСАРА ШЕРВУД ШОТЕР ГРАН ПРИ",
-      "name_ru": "САНСАРА ШЕРВУД ШОТЕР ГРАН ПРИ",
-      "breed": "МЕТИС",
-      "year_from": 2024,
-      "year_to": 2024,
-      "gold": 1,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 1
     },
     {
       "dog_id": 9618,
@@ -10863,7 +10869,7 @@
       "silver": 0,
       "bronze": 0,
       "total_starts": 1,
-      "sex": "F"
+      "sex": "M"
     },
     {
       "dog_id": 10587,
@@ -11662,6 +11668,19 @@
       "sex": "F"
     },
     {
+      "dog_id": 11188,
+      "name_lat": "ANDROMEDA IZ DOMA MANSUROVYKH",
+      "name_ru": "ANDROMEDA IZ DOMA MANSUROVYKH",
+      "breed": "БИГЛЬ",
+      "year_from": 2024,
+      "year_to": 2024,
+      "gold": 1,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 1,
+      "sex": "F"
+    },
+    {
       "dog_id": 371,
       "name_lat": "ROSSO BOREALE AURORA",
       "name_ru": "ROSSO BOREALE AURORA",
@@ -12320,8 +12339,7 @@
       "gold": 0,
       "silver": 2,
       "bronze": 1,
-      "total_starts": 3,
-      "sex": "F"
+      "total_starts": 3
     },
     {
       "dog_id": 9997,
@@ -13348,6 +13366,19 @@
       "silver": 1,
       "bronze": 1,
       "total_starts": 5,
+      "sex": "F"
+    },
+    {
+      "dog_id": 9611,
+      "name_lat": "ТИССА ЛУНА ГОЛУБОЙ РОДНИК КРЕДО",
+      "name_ru": "ТИССА ЛУНА ГОЛУБОЙ РОДНИК КРЕДО",
+      "breed": "МЕТИС",
+      "year_from": 2024,
+      "year_to": 2024,
+      "gold": 0,
+      "silver": 1,
+      "bronze": 1,
+      "total_starts": 2,
       "sex": "F"
     },
     {
@@ -15022,18 +15053,6 @@
       "total_starts": 1
     },
     {
-      "dog_id": 9611,
-      "name_lat": "ТИССА ЛУНА ГОЛУБОЙ РОДНИК КРЕДО",
-      "name_ru": "ТИССА ЛУНА ГОЛУБОЙ РОДНИК КРЕДО",
-      "breed": "МЕТИС",
-      "year_from": 2024,
-      "year_to": 2024,
-      "gold": 0,
-      "silver": 1,
-      "bronze": 0,
-      "total_starts": 1
-    },
-    {
       "dog_id": 9623,
       "name_lat": "RED STRIPE CEO OF A WABBIT",
       "name_ru": "RED STRIPE CEO OF A WABBIT",
@@ -16549,6 +16568,32 @@
       "sex": "F"
     },
     {
+      "dog_id": 11189,
+      "name_lat": "BARBARA IZ DOMA MANSUROVYKH",
+      "name_ru": "BARBARA IZ DOMA MANSUROVYKH",
+      "breed": "БИГЛЬ",
+      "year_from": 2024,
+      "year_to": 2024,
+      "gold": 0,
+      "silver": 1,
+      "bronze": 0,
+      "total_starts": 1,
+      "sex": "F"
+    },
+    {
+      "dog_id": 7385,
+      "name_lat": "ДЕНВЕРС ЭЛИТ НАЙЛИНГ /DENVERS ELITE NAILING",
+      "name_ru": "ДЕНВЕРС ЭЛИТ НАЙЛИНГ /DENVERS ELITE NAILING",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "year_from": 2024,
+      "year_to": 2025,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 4,
+      "total_starts": 7,
+      "sex": "M"
+    },
+    {
       "dog_id": 112,
       "name_lat": "LUXURY WHIPP OXXY",
       "name_ru": "ЛАКШЕРИ ВИПП ОКСИ",
@@ -16611,19 +16656,6 @@
       "silver": 0,
       "bronze": 3,
       "total_starts": 4,
-      "sex": "M"
-    },
-    {
-      "dog_id": 7385,
-      "name_lat": "ДЕНВЕРС ЭЛИТ НАЙЛИНГ /DENVERS ELITE NAILING",
-      "name_ru": "ДЕНВЕРС ЭЛИТ НАЙЛИНГ /DENVERS ELITE NAILING",
-      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "year_from": 2024,
-      "year_to": 2025,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 3,
-      "total_starts": 6,
       "sex": "M"
     },
     {
@@ -20074,7 +20106,8 @@
       "gold": 0,
       "silver": 0,
       "bronze": 0,
-      "total_starts": 1
+      "total_starts": 1,
+      "sex": "M"
     },
     {
       "dog_id": 570,

@@ -1,0 +1,1131 @@
+{
+  "schema": "coursing-stats/competition-v1",
+  "exported_at": "2026-11-04T21:39:12.149Z",
+  "source": "manual-entry",
+  "event_id": 20240526,
+  "event": {
+    "id": 20240526,
+    "year": 2024,
+    "date_start": "2024-05-26",
+    "date_end": null,
+    "rank_label": "Чемпионат РКФ (Иволга)\n(БЗМП)",
+    "event_type": "bzmp",
+    "competition_kind": "ЧРКФ",
+    "competition_type": "Бега за механической приманкой",
+    "title": "Чемпионат РКФ (Иволга) по бегам за механической приманкой",
+    "host_club": "РКОО «Калужский областной клуб собаководства»",
+    "region": "Калужская область",
+    "location": "Калужская область, Жуковский р-н, с. Спас-Прогнанье, база отдыха Иволга",
+    "catalog_url": null,
+    "results_url": null,
+    "rules_url": null,
+    "results_pdf_url": "https://drive.google.com/file/d/1YVPNz6SW3GEy5OYYgVGjTNQBaMvobXkB/view?usp=sharing",
+    "confirmed": 1,
+    "last_modified": "2026-11-04T21:39:12.149Z",
+    "scraped_at": null,
+    "telegram_url": null,
+    "full_title": null,
+    "event_date": null,
+    "protocol_location": null,
+    "judges": "Гольдинова Л.М., Петровас Н.Е.",
+    "track_schemes": []
+  },
+  "result_count": 12,
+  "results": [
+    {
+      "id": 1,
+      "event_id": 20240526,
+      "dog_id": 508,
+      "breed_class": "Американский стаффордширский терьер - Стандартный - Микс",
+      "catalog_no": 2,
+      "placement": 1,
+      "total_score": 347,
+      "judge_count": 2,
+      "qualification": "Чемпион РКФ",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 1,
+            "bib_color": "white",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 87
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 173,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 10,
+            "bib_color": "white",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 174,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 508,
+        "dog_key": "денверс-элит-офелия-denvers-elite-opheli--американскии-стаффордшир",
+        "name_lat": "ДЕНВЕРС ЭЛИТ ОФЕЛИЯ /DENVERS ELITE OPHELIA",
+        "name_ru": "ДЕНВЕРС ЭЛИТ ОФЕЛИЯ /DENVERS ELITE OPHELIA",
+        "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 2,
+      "event_id": 20240526,
+      "dog_id": 9555,
+      "breed_class": "Американский стаффордширский терьер - Стандартный - Микс",
+      "catalog_no": 3,
+      "placement": 2,
+      "total_score": 346,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 3,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 175,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 10,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  17,
+                  16,
+                  18,
+                  18
+                ],
+                "sum": 87
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  16,
+                  16,
+                  17,
+                  18
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 171,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9555,
+        "dog_key": "денверс-элит-редмун-denvers-elite-redmoo--американскии-стаффордшир",
+        "name_lat": "ДЕНВЕРС ЭЛИТ РЕДМУН /DENVERS ELITE REDMOON",
+        "name_ru": "ДЕНВЕРС ЭЛИТ РЕДМУН /DENVERS ELITE REDMOON",
+        "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 3,
+      "event_id": 20240526,
+      "dog_id": 7385,
+      "breed_class": "Американский стаффордширский терьер - Стандартный - Микс",
+      "catalog_no": 1,
+      "placement": 3,
+      "total_score": 340,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 2,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 87
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  16,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 170,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 11,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 86
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 170,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 7385,
+        "dog_key": "денверс-элит-наилинг-denvers-elite-naili--американскии-стаффордшир",
+        "name_lat": "ДЕНВЕРС ЭЛИТ НАЙЛИНГ /DENVERS ELITE NAILING",
+        "name_ru": "ДЕНВЕРС ЭЛИТ НАЙЛИНГ /DENVERS ELITE NAILING",
+        "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 4,
+      "event_id": 20240526,
+      "dog_id": 510,
+      "breed_class": "Американский стаффордширский терьер - Стандартный - Микс",
+      "catalog_no": 5,
+      "placement": 4,
+      "total_score": 326,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 1,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  16,
+                  15,
+                  16,
+                  18
+                ],
+                "sum": 82
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  16,
+                  15,
+                  16,
+                  16
+                ],
+                "sum": 79
+              }
+            ],
+            "total": 1451,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 12,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  18,
+                  19
+                ],
+                "sum": 89
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  19,
+                  20
+                ],
+                "sum": 92
+              }
+            ],
+            "total": 181,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 510,
+        "dog_key": "глед-ту-би-греит-из-созвездия-стафф-glad--американскии-стаффордшир",
+        "name_lat": "ГЛЕД ТУ БИ ГРЕЙТ ИЗ СОЗВЕЗДИЯ СТАФФ /GLAD TO BE GREAT IZ SOZVEZDIYA STAFF",
+        "name_ru": "ГЛЕД ТУ БИ ГРЕЙТ ИЗ СОЗВЕЗДИЯ СТАФФ /GLAD TO BE GREAT IZ SOZVEZDIYA STAFF",
+        "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 5,
+      "event_id": 20240526,
+      "dog_id": 7154,
+      "breed_class": "Американский стаффордширский терьер - Стандартный - Микс",
+      "catalog_no": 4,
+      "placement": 5,
+      "total_score": 316,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 2,
+            "bib_color": "white",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  15,
+                  15,
+                  16,
+                  18
+                ],
+                "sum": 80
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  14,
+                  14,
+                  16,
+                  17
+                ],
+                "sum": 77
+              }
+            ],
+            "total": 157,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 11,
+            "bib_color": "white",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  14,
+                  14,
+                  17,
+                  18
+                ],
+                "sum": 80
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  15,
+                  15,
+                  17,
+                  16
+                ],
+                "sum": 79
+              }
+            ],
+            "total": 159,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 7154,
+        "dog_key": "euphoria-of-winner-sozvezdie-staff--американскии-стаффордшир",
+        "name_lat": "EUPHORIA OF WINNER SOZVEZDIE STAFF",
+        "name_ru": "EUPHORIA OF WINNER SOZVEZDIE STAFF",
+        "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 6,
+      "event_id": 20240526,
+      "dog_id": 11188,
+      "breed_class": "Бигль - Стандартный - Микс",
+      "catalog_no": 7,
+      "placement": 1,
+      "total_score": 360,
+      "judge_count": 2,
+      "qualification": "Чемпион РКФ",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 5,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 91
+              }
+            ],
+            "total": 180,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 13,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  20
+                ],
+                "sum": 92
+              }
+            ],
+            "total": 180,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11188,
+        "dog_key": "andromeda-iz-doma-mansurovykh--бигль",
+        "name_lat": "ANDROMEDA IZ DOMA MANSUROVYKH",
+        "name_ru": "ANDROMEDA IZ DOMA MANSUROVYKH",
+        "breed": "БИГЛЬ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 7,
+      "event_id": 20240526,
+      "dog_id": 11189,
+      "breed_class": "Бигль - Стандартный - Микс",
+      "catalog_no": 8,
+      "placement": 2,
+      "total_score": 333,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 4,
+            "bib_color": "white",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  16,
+                  15,
+                  17,
+                  18
+                ],
+                "sum": 83
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  16,
+                  16,
+                  17,
+                  20
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 169,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 13,
+            "bib_color": "white",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  15,
+                  15,
+                  15,
+                  18
+                ],
+                "sum": 81
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  16,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 164,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11189,
+        "dog_key": "barbara-iz-doma-mansurovykh--бигль",
+        "name_lat": "BARBARA IZ DOMA MANSUROVYKH",
+        "name_ru": "BARBARA IZ DOMA MANSUROVYKH",
+        "breed": "БИГЛЬ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 8,
+      "event_id": 20240526,
+      "dog_id": 9220,
+      "breed_class": "Бигль - Стандартный - Микс",
+      "catalog_no": 6,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 4,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  17,
+                  15,
+                  10,
+                  12
+                ],
+                "sum": 71
+              }
+            ],
+            "total": 71,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 143,
+            "bib_color": null,
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  14,
+                  null,
+                  null,
+                  null,
+                  null
+                ],
+                "sum": 14
+              }
+            ],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": "Снят",
+      "dog": {
+        "id": 9220,
+        "dog_key": "арес--бигль",
+        "name_lat": "АРЕС",
+        "name_ru": "АРЕС",
+        "breed": "БИГЛЬ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 9,
+      "event_id": 20240526,
+      "dog_id": 8374,
+      "breed_class": "Метис - Стандартный - Суки",
+      "catalog_no": 10,
+      "placement": 1,
+      "total_score": 361,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 7,
+            "bib_color": "white",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  19,
+                  19
+                ],
+                "sum": 91
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  18,
+                  19,
+                  18,
+                  20
+                ],
+                "sum": 93
+              }
+            ],
+            "total": 184,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 16,
+            "bib_color": "white",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  18,
+                  19
+                ],
+                "sum": 89
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 177,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 8374,
+        "dog_key": "farlein--метис",
+        "name_lat": "FARLEIN",
+        "name_ru": "ФАРЛЕЙН",
+        "breed": "МЕТИС",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 10,
+      "event_id": 20240526,
+      "dog_id": 7753,
+      "breed_class": "Метис - Стандартный - Суки",
+      "catalog_no": 9,
+      "placement": 2,
+      "total_score": 349,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 6,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  15,
+                  17
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 170,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 15,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  18,
+                  20
+                ],
+                "sum": 90
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  19
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 179,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 7753,
+        "dog_key": "афина--метис",
+        "name_lat": "АФИНА",
+        "name_ru": "АФИНА",
+        "breed": "МЕТИС",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 11,
+      "event_id": 20240526,
+      "dog_id": 9611,
+      "breed_class": "Метис - Стандартный - Суки",
+      "catalog_no": 11,
+      "placement": 3,
+      "total_score": 349,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CC",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 8,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  19,
+                  18,
+                  16,
+                  19,
+                  19
+                ],
+                "sum": 91
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  17,
+                  18
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 176,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 17,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  18,
+                  16,
+                  18,
+                  19
+                ],
+                "sum": 88
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  17,
+                  18
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 173,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9611,
+        "dog_key": "тисса-луна-голубои-родник-кредо--метис",
+        "name_lat": "ТИССА ЛУНА ГОЛУБОЙ РОДНИК КРЕДО",
+        "name_ru": "ТИССА ЛУНА ГОЛУБОЙ РОДНИК КРЕДО",
+        "breed": "МЕТИС",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 12,
+      "event_id": 20240526,
+      "dog_id": 9612,
+      "breed_class": "Метис - Юниоры - Микс",
+      "catalog_no": 12,
+      "placement": 1,
+      "total_score": 350,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 9,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  17,
+                  15,
+                  19,
+                  20
+                ],
+                "sum": 89
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  17,
+                  19
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 175,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 18,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  18,
+                  16,
+                  18,
+                  19
+                ],
+                "sum": 89
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 175,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9612,
+        "dog_key": "сансара-шервуд-шотер-гран-при--метис",
+        "name_lat": "САНСАРА ШЕРВУД ШОТЕР ГРАН ПРИ",
+        "name_ru": "САНСАРА ШЕРВУД ШОТЕР ГРАН ПРИ",
+        "breed": "МЕТИС",
+        "sex": "Кобель",
+        "owner": null
+      }
+    }
+  ],
+  "results_pdf_url": "https://drive.google.com/file/d/1YVPNz6SW3GEy5OYYgVGjTNQBaMvobXkB/view?usp=sharing"
+}

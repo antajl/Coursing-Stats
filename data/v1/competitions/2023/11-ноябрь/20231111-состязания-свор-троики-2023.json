@@ -1,0 +1,6889 @@
+{
+  "schema": "coursing-stats/competition-v1",
+  "exported_at": "2026-11-04T16:17:46.314Z",
+  "source": "procoursing",
+  "event_id": 20231111,
+  "event": {
+    "id": 20231111,
+    "year": 2023,
+    "date_start": "2023-11-11",
+    "date_end": "2023-11-11",
+    "rank_label": "Состязание свор «Тройка»\n(Курсинг борзых)",
+    "event_type": "other",
+    "competition_kind": "Состязания свор",
+    "competition_type": "Состязание свор (командный курсинг)",
+    "title": "Тройка — Состязание свор",
+    "host_club": "Курсинг в Михайловском",
+    "region": "Московская область",
+    "location": "Московская область, Пушкинский р-н, д. Михайловское",
+    "catalog_url": "https://drive.google.com/file/d/1ODCYNQXrAwzVySBKYNDOYYzNCCdtNFmC/view?usp=sharing",
+    "results_url": null,
+    "rules_url": "https://drive.google.com/file/d/1VGJqJoXj2QKFk3a3kTV8ytBNB8ZkK73P/view?usp=sharing",
+    "results_pdf_url": "https://drive.google.com/file/d/1aa1i7cQgTA4MFZQeGvVELMrBu3aiw5jh/view?usp=sharing",
+    "confirmed": 1,
+    "last_modified": "2026-11-04T16:17:46.314Z",
+    "scraped_at": null,
+    "telegram_url": null,
+    "full_title": "Состязания свор \"Тройки - 2023\", 11.11.2023 (Московская область, д. Михайловское): Полные результаты состязания",
+    "event_date": "2023-11-11",
+    "protocol_location": "д. Михайловское",
+    "judges": "Главный судья - Иванова Г.С., судья - Кузнецова Н.Н.",
+    "track_schemes": []
+  },
+  "result_count": 67,
+  "results": [
+    {
+      "id": 1,
+      "event_id": 20231111,
+      "dog_id": 9589,
+      "breed_class": "Борзые",
+      "catalog_no": 11,
+      "placement": 1,
+      "total_score": 369,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Большой куст",
+        "team_placement": 1,
+        "team_members": [
+          "ДЕНВЕР КЭННЭЛС ПЭТТИ",
+          "КУЛИКОВО ПОЛЕ ГОРДЕЯ",
+          "ЛАКШЕРИ ВИПП ОРИОН"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 6,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  8,
+                  9,
+                  20,
+                  27,
+                  3,
+                  5
+                ],
+                "sum": 91
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  18,
+                  26,
+                  4,
+                  5
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 180
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 14,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  9,
+                  10,
+                  20,
+                  28,
+                  5,
+                  5
+                ],
+                "sum": 96
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  10,
+                  18,
+                  28,
+                  5,
+                  4
+                ],
+                "sum": 93
+              }
+            ],
+            "total": 189
+          }
+        ],
+        "grand_total": 369
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 9589,
+        "dog_key": "denwer-kennels-patti--уиппет",
+        "name_lat": "DENWER KENNELS PATTI",
+        "name_ru": "ДЕНВЕР КЭННЭЛС ПЭТТИ",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 2,
+      "event_id": 20231111,
+      "dog_id": 9586,
+      "breed_class": "Борзые",
+      "catalog_no": 11,
+      "placement": 1,
+      "total_score": 369,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Большой куст",
+        "team_placement": 1,
+        "team_members": [
+          "ДЕНВЕР КЭННЭЛС ПЭТТИ",
+          "КУЛИКОВО ПОЛЕ ГОРДЕЯ",
+          "ЛАКШЕРИ ВИПП ОРИОН"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 6,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  8,
+                  9,
+                  20,
+                  27,
+                  3,
+                  5
+                ],
+                "sum": 91
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  18,
+                  26,
+                  4,
+                  5
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 180
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 14,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  9,
+                  10,
+                  20,
+                  28,
+                  5,
+                  5
+                ],
+                "sum": 96
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  10,
+                  18,
+                  28,
+                  5,
+                  4
+                ],
+                "sum": 93
+              }
+            ],
+            "total": 189
+          }
+        ],
+        "grand_total": 369
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 9586,
+        "dog_key": "kulikovo-pole-gordeya--уиппет",
+        "name_lat": "KULIKOVO POLE GORDEYA",
+        "name_ru": "КУЛИКОВО ПОЛЕ ГОРДЕЯ",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 3,
+      "event_id": 20231111,
+      "dog_id": 11175,
+      "breed_class": "Борзые",
+      "catalog_no": 11,
+      "placement": 1,
+      "total_score": 369,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Большой куст",
+        "team_placement": 1,
+        "team_members": [
+          "ДЕНВЕР КЭННЭЛС ПЭТТИ",
+          "КУЛИКОВО ПОЛЕ ГОРДЕЯ",
+          "ЛАКШЕРИ ВИПП ОРИОН"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 6,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  8,
+                  9,
+                  20,
+                  27,
+                  3,
+                  5
+                ],
+                "sum": 91
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  18,
+                  26,
+                  4,
+                  5
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 180
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 14,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  9,
+                  10,
+                  20,
+                  28,
+                  5,
+                  5
+                ],
+                "sum": 96
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  10,
+                  18,
+                  28,
+                  5,
+                  4
+                ],
+                "sum": 93
+              }
+            ],
+            "total": 189
+          }
+        ],
+        "grand_total": 369
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 11175,
+        "dog_key": "laksheri-vipp-orion--уиппет",
+        "name_lat": "LAKSHERI VIPP ORION",
+        "name_ru": "ЛАКШЕРИ ВИПП ОРИОН",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 4,
+      "event_id": 20231111,
+      "dog_id": 9344,
+      "breed_class": "Борзые",
+      "catalog_no": 1,
+      "placement": 2,
+      "total_score": 349,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Десперадос",
+        "team_placement": 2,
+        "team_members": [
+          "АЙС КЕССИДИ ПЛАТИНУМ МАКИНТОШ",
+          "АФИНА ФИЕСТА СВИТ ТАНГО",
+          "ГИНУРА ЮТТА КУЛУМА"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 5,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  8,
+                  8,
+                  19,
+                  26,
+                  3,
+                  4
+                ],
+                "sum": 87
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  7,
+                  17,
+                  26,
+                  3,
+                  3
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 169
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 13,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  19,
+                  28,
+                  4,
+                  5
+                ],
+                "sum": 93
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  16,
+                  28,
+                  3,
+                  5
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 180
+          }
+        ],
+        "grand_total": 349
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 9344,
+        "dog_key": "ays-kessidi-platinum-makhintosh--уиппет",
+        "name_lat": "AYS KESSIDI PLATINUM MAKHINTOSH",
+        "name_ru": "АЙС КЕССИДИ ПЛАТИНУМ МАКИНТОШ",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 5,
+      "event_id": 20231111,
+      "dog_id": 9644,
+      "breed_class": "Борзые",
+      "catalog_no": 1,
+      "placement": 2,
+      "total_score": 349,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Десперадос",
+        "team_placement": 2,
+        "team_members": [
+          "АЙС КЕССИДИ ПЛАТИНУМ МАКИНТОШ",
+          "АФИНА ФИЕСТА СВИТ ТАНГО",
+          "ГИНУРА ЮТТА КУЛУМА"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 5,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  8,
+                  8,
+                  19,
+                  26,
+                  3,
+                  4
+                ],
+                "sum": 87
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  7,
+                  17,
+                  26,
+                  3,
+                  3
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 169
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 13,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  19,
+                  28,
+                  4,
+                  5
+                ],
+                "sum": 93
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  16,
+                  28,
+                  3,
+                  5
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 180
+          }
+        ],
+        "grand_total": 349
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 9644,
+        "dog_key": "afina-fiesta-sweet-tango--уиппет",
+        "name_lat": "AFINA FIESTA SWEET TANGO",
+        "name_ru": "АФИНА ФИЕСТА СВИТ ТАНГО",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 6,
+      "event_id": 20231111,
+      "dog_id": 9436,
+      "breed_class": "Борзые",
+      "catalog_no": 1,
+      "placement": 2,
+      "total_score": 349,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Десперадос",
+        "team_placement": 2,
+        "team_members": [
+          "АЙС КЕССИДИ ПЛАТИНУМ МАКИНТОШ",
+          "АФИНА ФИЕСТА СВИТ ТАНГО",
+          "ГИНУРА ЮТТА КУЛУМА"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 5,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  8,
+                  8,
+                  19,
+                  26,
+                  3,
+                  4
+                ],
+                "sum": 87
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  7,
+                  17,
+                  26,
+                  3,
+                  3
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 169
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 13,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  19,
+                  28,
+                  4,
+                  5
+                ],
+                "sum": 93
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  16,
+                  28,
+                  3,
+                  5
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 180
+          }
+        ],
+        "grand_total": 349
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 9436,
+        "dog_key": "гинура-ютта-кулума--уиппет",
+        "name_lat": "ГИНУРА ЮТТА КУЛУМА",
+        "name_ru": "ГИНУРА ЮТТА КУЛУМА",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 7,
+      "event_id": 20231111,
+      "dog_id": 7261,
+      "breed_class": "Борзые",
+      "catalog_no": 9,
+      "placement": 3,
+      "total_score": 344,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Рахат Лукум",
+        "team_placement": 3,
+        "team_members": [
+          "АЛЬ НАФИСЭХ ХАЙФА",
+          "САЛЮКОВ СИНБАД СТОРИ ОФ СЕВЕН СИАС",
+          "ШАВАТИ КАЙЛАН"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 7,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  8,
+                  8,
+                  18,
+                  26,
+                  4,
+                  3
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  17,
+                  8,
+                  8,
+                  17,
+                  25,
+                  4,
+                  4
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 169
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 15,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  9,
+                  8,
+                  18,
+                  25,
+                  4,
+                  4
+                ],
+                "sum": 87
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  17,
+                  27,
+                  5,
+                  4
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 175
+          }
+        ],
+        "grand_total": 344
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 7261,
+        "dog_key": "al-nafiseh-haifa--салюки",
+        "name_lat": "AL NAFISEH HAIFA",
+        "name_ru": "АЛЬ НАФИСЭХ ХАЙФА",
+        "breed": "САЛЮКИ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 8,
+      "event_id": 20231111,
+      "dog_id": 5781,
+      "breed_class": "Борзые",
+      "catalog_no": 9,
+      "placement": 3,
+      "total_score": 344,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Рахат Лукум",
+        "team_placement": 3,
+        "team_members": [
+          "АЛЬ НАФИСЭХ ХАЙФА",
+          "САЛЮКОВ СИНБАД СТОРИ ОФ СЕВЕН СИАС",
+          "ШАВАТИ КАЙЛАН"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 7,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  8,
+                  8,
+                  18,
+                  26,
+                  4,
+                  3
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  17,
+                  8,
+                  8,
+                  17,
+                  25,
+                  4,
+                  4
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 169
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 15,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  9,
+                  8,
+                  18,
+                  25,
+                  4,
+                  4
+                ],
+                "sum": 87
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  17,
+                  27,
+                  5,
+                  4
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 175
+          }
+        ],
+        "grand_total": 344
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 5781,
+        "dog_key": "salukov-sindbad-story-of-seven-seas--салюки",
+        "name_lat": "SALUKOV SINDBAD STORY OF SEVEN SEAS",
+        "name_ru": "САЛЮКОВ СИНБАД СТОРИ ОФ СЕВЕН СИАС",
+        "breed": "САЛЮКИ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 9,
+      "event_id": 20231111,
+      "dog_id": 217,
+      "breed_class": "Борзые",
+      "catalog_no": 9,
+      "placement": 3,
+      "total_score": 344,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Рахат Лукум",
+        "team_placement": 3,
+        "team_members": [
+          "АЛЬ НАФИСЭХ ХАЙФА",
+          "САЛЮКОВ СИНБАД СТОРИ ОФ СЕВЕН СИАС",
+          "ШАВАТИ КАЙЛАН"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 7,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  8,
+                  8,
+                  18,
+                  26,
+                  4,
+                  3
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  17,
+                  8,
+                  8,
+                  17,
+                  25,
+                  4,
+                  4
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 169
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 15,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  9,
+                  8,
+                  18,
+                  25,
+                  4,
+                  4
+                ],
+                "sum": 87
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  17,
+                  27,
+                  5,
+                  4
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 175
+          }
+        ],
+        "grand_total": 344
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 217,
+        "dog_key": "шавати-каилан--салюки",
+        "name_lat": "ШАВАТИ КАЙЛАН",
+        "name_ru": "ШАВАТИ КАЙЛАН",
+        "breed": "САЛЮКИ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 10,
+      "event_id": 20231111,
+      "dog_id": 5647,
+      "breed_class": "Борзые",
+      "catalog_no": 8,
+      "placement": 4,
+      "total_score": 338,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Ешки крошки",
+        "team_placement": 4,
+        "team_members": [
+          "СТАНГЕРС ЛАНД ЕГОЗА",
+          "СТАНГЕРС ЛАНД Е-ЛАНЬ",
+          "СТАНГЕРС ЛАНД ЕРМАК"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 2,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  18,
+                  26,
+                  5,
+                  3
+                ],
+                "sum": 88
+              },
+              {
+                "scores": [
+                  17,
+                  8,
+                  7,
+                  17,
+                  25,
+                  4,
+                  3
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 169
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 10,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  9,
+                  8,
+                  19,
+                  26,
+                  3,
+                  4
+                ],
+                "sum": 88
+              },
+              {
+                "scores": [
+                  17,
+                  9,
+                  9,
+                  12,
+                  26,
+                  5,
+                  3
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 169
+          }
+        ],
+        "grand_total": 338
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 5647,
+        "dog_key": "stangers-land-egoza--уиппет",
+        "name_lat": "STANGERS LAND EGOZA",
+        "name_ru": "СТАНГЕРС ЛАНД ЕГОЗА",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 11,
+      "event_id": 20231111,
+      "dog_id": 5643,
+      "breed_class": "Борзые",
+      "catalog_no": 8,
+      "placement": 4,
+      "total_score": 338,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Ешки крошки",
+        "team_placement": 4,
+        "team_members": [
+          "СТАНГЕРС ЛАНД ЕГОЗА",
+          "СТАНГЕРС ЛАНД Е-ЛАНЬ",
+          "СТАНГЕРС ЛАНД ЕРМАК"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 2,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  18,
+                  26,
+                  5,
+                  3
+                ],
+                "sum": 88
+              },
+              {
+                "scores": [
+                  17,
+                  8,
+                  7,
+                  17,
+                  25,
+                  4,
+                  3
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 169
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 10,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  9,
+                  8,
+                  19,
+                  26,
+                  3,
+                  4
+                ],
+                "sum": 88
+              },
+              {
+                "scores": [
+                  17,
+                  9,
+                  9,
+                  12,
+                  26,
+                  5,
+                  3
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 169
+          }
+        ],
+        "grand_total": 338
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 5643,
+        "dog_key": "stangers-land-e-lan--уиппет",
+        "name_lat": "STANGERS LAND E LAN",
+        "name_ru": "СТАНГЕРС ЛАНД Е ЛАНЬ",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 12,
+      "event_id": 20231111,
+      "dog_id": 5632,
+      "breed_class": "Борзые",
+      "catalog_no": 8,
+      "placement": 4,
+      "total_score": 338,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Ешки крошки",
+        "team_placement": 4,
+        "team_members": [
+          "СТАНГЕРС ЛАНД ЕГОЗА",
+          "СТАНГЕРС ЛАНД Е-ЛАНЬ",
+          "СТАНГЕРС ЛАНД ЕРМАК"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 2,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  18,
+                  26,
+                  5,
+                  3
+                ],
+                "sum": 88
+              },
+              {
+                "scores": [
+                  17,
+                  8,
+                  7,
+                  17,
+                  25,
+                  4,
+                  3
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 169
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 10,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  9,
+                  8,
+                  19,
+                  26,
+                  3,
+                  4
+                ],
+                "sum": 88
+              },
+              {
+                "scores": [
+                  17,
+                  9,
+                  9,
+                  12,
+                  26,
+                  5,
+                  3
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 169
+          }
+        ],
+        "grand_total": 338
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 5632,
+        "dog_key": "stangers-land-ermak--уиппет",
+        "name_lat": "STANGERS LAND ERMAK",
+        "name_ru": "СТАНГЕРС ЛАНД ЕРМАК",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 13,
+      "event_id": 20231111,
+      "dog_id": 9411,
+      "breed_class": "Борзые",
+      "catalog_no": 15,
+      "placement": 5,
+      "total_score": 334,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Чемпионы на всю голову",
+        "team_placement": 5,
+        "team_members": [
+          "ANTHRAX GO-BYE",
+          "STRONG STOAT",
+          "VARLOK YARKAYA MOLNIYA"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 8,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  9,
+                  7,
+                  19,
+                  25,
+                  4,
+                  5
+                ],
+                "sum": 88
+              },
+              {
+                "scores": [
+                  17,
+                  7,
+                  7,
+                  16,
+                  22,
+                  4,
+                  3
+                ],
+                "sum": 76
+              }
+            ],
+            "total": 164
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 16,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  8,
+                  8,
+                  18,
+                  26,
+                  5,
+                  5
+                ],
+                "sum": 89
+              },
+              {
+                "scores": [
+                  17,
+                  8,
+                  7,
+                  15,
+                  25,
+                  5,
+                  4
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 170
+          }
+        ],
+        "grand_total": 334
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 9411,
+        "dog_key": "anthrax-go-bye--уиппет",
+        "name_lat": "ANTHRAX GO BYE",
+        "name_ru": "ANTHRAX GO BYE",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 14,
+      "event_id": 20231111,
+      "dog_id": 10319,
+      "breed_class": "Борзые",
+      "catalog_no": 15,
+      "placement": 5,
+      "total_score": 334,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Чемпионы на всю голову",
+        "team_placement": 5,
+        "team_members": [
+          "ANTHRAX GO-BYE",
+          "STRONG STOAT",
+          "VARLOK YARKAYA MOLNIYA"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 8,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  9,
+                  7,
+                  19,
+                  25,
+                  4,
+                  5
+                ],
+                "sum": 88
+              },
+              {
+                "scores": [
+                  17,
+                  7,
+                  7,
+                  16,
+                  22,
+                  4,
+                  3
+                ],
+                "sum": 76
+              }
+            ],
+            "total": 164
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 16,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  8,
+                  8,
+                  18,
+                  26,
+                  5,
+                  5
+                ],
+                "sum": 89
+              },
+              {
+                "scores": [
+                  17,
+                  8,
+                  7,
+                  15,
+                  25,
+                  5,
+                  4
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 170
+          }
+        ],
+        "grand_total": 334
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 10319,
+        "dog_key": "strong-stoat--уиппет",
+        "name_lat": "STRONG STOAT",
+        "name_ru": "STRONG STOAT",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 15,
+      "event_id": 20231111,
+      "dog_id": 488,
+      "breed_class": "Борзые",
+      "catalog_no": 15,
+      "placement": 5,
+      "total_score": 334,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Чемпионы на всю голову",
+        "team_placement": 5,
+        "team_members": [
+          "ANTHRAX GO-BYE",
+          "STRONG STOAT",
+          "VARLOK YARKAYA MOLNIYA"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 8,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  9,
+                  7,
+                  19,
+                  25,
+                  4,
+                  5
+                ],
+                "sum": 88
+              },
+              {
+                "scores": [
+                  17,
+                  7,
+                  7,
+                  16,
+                  22,
+                  4,
+                  3
+                ],
+                "sum": 76
+              }
+            ],
+            "total": 164
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 16,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  8,
+                  8,
+                  18,
+                  26,
+                  5,
+                  5
+                ],
+                "sum": 89
+              },
+              {
+                "scores": [
+                  17,
+                  8,
+                  7,
+                  15,
+                  25,
+                  5,
+                  4
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 170
+          }
+        ],
+        "grand_total": 334
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 488,
+        "dog_key": "varlok-yarkaya-molniya--уиппет",
+        "name_lat": "VARLOK YARKAYA MOLNIYA",
+        "name_ru": "VARLOK YARKAYA MOLNIYA",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 16,
+      "event_id": 20231111,
+      "dog_id": 9364,
+      "breed_class": "Борзые",
+      "catalog_no": 13,
+      "placement": 6,
+      "total_score": 326,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Три богатыря",
+        "team_placement": 6,
+        "team_members": [
+          "АНЖЕЛО ЧЕЛЕСТЕ АНТОНИО ВЕРДИ",
+          "АПРИОРИ СТАР СИРИУС СУННИ БОЙ",
+          "ВЕНТО СТЕЛЛАРЕ АРЧИБАЛЬД"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 3,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  7,
+                  18,
+                  24,
+                  5,
+                  3
+                ],
+                "sum": 84
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  5,
+                  17,
+                  20,
+                  3,
+                  3
+                ],
+                "sum": 71
+              }
+            ],
+            "total": 155
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 11,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  9,
+                  18,
+                  26,
+                  5,
+                  4
+                ],
+                "sum": 88
+              },
+              {
+                "scores": [
+                  17,
+                  10,
+                  9,
+                  12,
+                  27,
+                  5,
+                  3
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 171
+          }
+        ],
+        "grand_total": 326
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 9364,
+        "dog_key": "анжело-челесте-антонио-верди--малая-итальянская-борзая",
+        "name_lat": "АНЖЕЛО ЧЕЛЕСТЕ АНТОНИО ВЕРДИ",
+        "name_ru": "АНЖЕЛО ЧЕЛЕСТЕ АНТОНИО ВЕРДИ",
+        "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 17,
+      "event_id": 20231111,
+      "dog_id": 541,
+      "breed_class": "Борзые",
+      "catalog_no": 13,
+      "placement": 6,
+      "total_score": 326,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Три богатыря",
+        "team_placement": 6,
+        "team_members": [
+          "АНЖЕЛО ЧЕЛЕСТЕ АНТОНИО ВЕРДИ",
+          "АПРИОРИ СТАР СИРИУС СУННИ БОЙ",
+          "ВЕНТО СТЕЛЛАРЕ АРЧИБАЛЬД"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 3,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  7,
+                  18,
+                  24,
+                  5,
+                  3
+                ],
+                "sum": 84
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  5,
+                  17,
+                  20,
+                  3,
+                  3
+                ],
+                "sum": 71
+              }
+            ],
+            "total": 155
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 11,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  9,
+                  18,
+                  26,
+                  5,
+                  4
+                ],
+                "sum": 88
+              },
+              {
+                "scores": [
+                  17,
+                  10,
+                  9,
+                  12,
+                  27,
+                  5,
+                  3
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 171
+          }
+        ],
+        "grand_total": 326
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 541,
+        "dog_key": "apriori-star-sirius-sunni-boy--малая-итальянская-борзая",
+        "name_lat": "APRIORI STAR SIRIUS SUNNI BOY",
+        "name_ru": "АПРИОРИ СТАР СИРИУС СУННИ БОЙ",
+        "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 18,
+      "event_id": 20231111,
+      "dog_id": 5748,
+      "breed_class": "Борзые",
+      "catalog_no": 13,
+      "placement": 6,
+      "total_score": 326,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Три богатыря",
+        "team_placement": 6,
+        "team_members": [
+          "АНЖЕЛО ЧЕЛЕСТЕ АНТОНИО ВЕРДИ",
+          "АПРИОРИ СТАР СИРИУС СУННИ БОЙ",
+          "ВЕНТО СТЕЛЛАРЕ АРЧИБАЛЬД"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 3,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  7,
+                  18,
+                  24,
+                  5,
+                  3
+                ],
+                "sum": 84
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  5,
+                  17,
+                  20,
+                  3,
+                  3
+                ],
+                "sum": 71
+              }
+            ],
+            "total": 155
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 11,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  9,
+                  18,
+                  26,
+                  5,
+                  4
+                ],
+                "sum": 88
+              },
+              {
+                "scores": [
+                  17,
+                  10,
+                  9,
+                  12,
+                  27,
+                  5,
+                  3
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 171
+          }
+        ],
+        "grand_total": 326
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 5748,
+        "dog_key": "vento-stellare-archibald--малая-итальянская-борзая",
+        "name_lat": "VENTO STELLARE ARCHIBALD",
+        "name_ru": "ВЕНТО СТЕЛЛАРЕ АРЧИБАЛЬД",
+        "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 19,
+      "event_id": 20231111,
+      "dog_id": 9545,
+      "breed_class": "Борзые",
+      "catalog_no": 3,
+      "placement": 7,
+      "total_score": 325,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Серые волки",
+        "team_placement": 7,
+        "team_members": [
+          "AISKNEKHT TEQUILA",
+          "BORS MES AMIS DE MAFINNS",
+          "VERNAYA KELTAM IZ VOLSHEBNOGO LESA",
+          "ЕЛАНЬ ЛАНЬ БЫСТРАЯ",
+          "МЛЕЧНЫЙ ПУТЬ ИЗ ВОЛШЕБНОГО ЛЕСА"
+        ],
+        "ran": false,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 1,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  8,
+                  16,
+                  25,
+                  4,
+                  3
+                ],
+                "sum": 81
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  7,
+                  10,
+                  25,
+                  4,
+                  3
+                ],
+                "sum": 72
+              }
+            ],
+            "total": 153
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 9,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  10,
+                  8,
+                  18,
+                  28,
+                  5,
+                  3
+                ],
+                "sum": 90
+              },
+              {
+                "scores": [
+                  17,
+                  9,
+                  9,
+                  12,
+                  27,
+                  5,
+                  3
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 172
+          }
+        ],
+        "grand_total": 325
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 9545,
+        "dog_key": "aisknekht-tequila--бордер-колли",
+        "name_lat": "AISKNEKHT TEQUILA",
+        "name_ru": "AISKNEKHT TEQUILA",
+        "breed": "БОРДЕР КОЛЛИ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 20,
+      "event_id": 20231111,
+      "dog_id": 10585,
+      "breed_class": "Борзые",
+      "catalog_no": 3,
+      "placement": 7,
+      "total_score": 325,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Серые волки",
+        "team_placement": 7,
+        "team_members": [
+          "AISKNEKHT TEQUILA",
+          "BORS MES AMIS DE MAFINNS",
+          "VERNAYA KELTAM IZ VOLSHEBNOGO LESA",
+          "ЕЛАНЬ ЛАНЬ БЫСТРАЯ",
+          "МЛЕЧНЫЙ ПУТЬ ИЗ ВОЛШЕБНОГО ЛЕСА"
+        ],
+        "ran": false,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 1,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  8,
+                  16,
+                  25,
+                  4,
+                  3
+                ],
+                "sum": 81
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  7,
+                  10,
+                  25,
+                  4,
+                  3
+                ],
+                "sum": 72
+              }
+            ],
+            "total": 153
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 9,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  10,
+                  8,
+                  18,
+                  28,
+                  5,
+                  3
+                ],
+                "sum": 90
+              },
+              {
+                "scores": [
+                  17,
+                  9,
+                  9,
+                  12,
+                  27,
+                  5,
+                  3
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 172
+          }
+        ],
+        "grand_total": 325
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 10585,
+        "dog_key": "bors-mes-amis-de-mafinns--ирландскии-вольфхаунд",
+        "name_lat": "BORS MES AMIS DE MAFINNS",
+        "name_ru": null,
+        "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 21,
+      "event_id": 20231111,
+      "dog_id": 10586,
+      "breed_class": "Борзые",
+      "catalog_no": 3,
+      "placement": 7,
+      "total_score": 325,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Серые волки",
+        "team_placement": 7,
+        "team_members": [
+          "AISKNEKHT TEQUILA",
+          "BORS MES AMIS DE MAFINNS",
+          "VERNAYA KELTAM IZ VOLSHEBNOGO LESA",
+          "ЕЛАНЬ ЛАНЬ БЫСТРАЯ",
+          "МЛЕЧНЫЙ ПУТЬ ИЗ ВОЛШЕБНОГО ЛЕСА"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 1,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  8,
+                  16,
+                  25,
+                  4,
+                  3
+                ],
+                "sum": 81
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  7,
+                  10,
+                  25,
+                  4,
+                  3
+                ],
+                "sum": 72
+              }
+            ],
+            "total": 153
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 9,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  10,
+                  8,
+                  18,
+                  28,
+                  5,
+                  3
+                ],
+                "sum": 90
+              },
+              {
+                "scores": [
+                  17,
+                  9,
+                  9,
+                  12,
+                  27,
+                  5,
+                  3
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 172
+          }
+        ],
+        "grand_total": 325
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 10586,
+        "dog_key": "vernaya-keltam-iz-volshebnogo-lesa--ирландскии-вольфхаунд",
+        "name_lat": "VERNAYA KELTAM IZ VOLSHEBNOGO LESA",
+        "name_ru": null,
+        "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 22,
+      "event_id": 20231111,
+      "dog_id": 5746,
+      "breed_class": "Борзые",
+      "catalog_no": 3,
+      "placement": 7,
+      "total_score": 325,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Серые волки",
+        "team_placement": 7,
+        "team_members": [
+          "AISKNEKHT TEQUILA",
+          "BORS MES AMIS DE MAFINNS",
+          "VERNAYA KELTAM IZ VOLSHEBNOGO LESA",
+          "ЕЛАНЬ ЛАНЬ БЫСТРАЯ",
+          "МЛЕЧНЫЙ ПУТЬ ИЗ ВОЛШЕБНОГО ЛЕСА"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 1,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  8,
+                  16,
+                  25,
+                  4,
+                  3
+                ],
+                "sum": 81
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  7,
+                  10,
+                  25,
+                  4,
+                  3
+                ],
+                "sum": 72
+              }
+            ],
+            "total": 153
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 9,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  10,
+                  8,
+                  18,
+                  28,
+                  5,
+                  3
+                ],
+                "sum": 90
+              },
+              {
+                "scores": [
+                  17,
+                  9,
+                  9,
+                  12,
+                  27,
+                  5,
+                  3
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 172
+          }
+        ],
+        "grand_total": 325
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 5746,
+        "dog_key": "elan-lan-bystraya--ирландскии-вольфхаунд",
+        "name_lat": "ELAN LAN BYSTRAYA",
+        "name_ru": "ЕЛАНЬ ЛАНЬ БЫСТРАЯ",
+        "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 23,
+      "event_id": 20231111,
+      "dog_id": 569,
+      "breed_class": "Борзые",
+      "catalog_no": 3,
+      "placement": 7,
+      "total_score": 325,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Серые волки",
+        "team_placement": 7,
+        "team_members": [
+          "AISKNEKHT TEQUILA",
+          "BORS MES AMIS DE MAFINNS",
+          "VERNAYA KELTAM IZ VOLSHEBNOGO LESA",
+          "ЕЛАНЬ ЛАНЬ БЫСТРАЯ",
+          "МЛЕЧНЫЙ ПУТЬ ИЗ ВОЛШЕБНОГО ЛЕСА"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 1,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  8,
+                  16,
+                  25,
+                  4,
+                  3
+                ],
+                "sum": 81
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  7,
+                  10,
+                  25,
+                  4,
+                  3
+                ],
+                "sum": 72
+              }
+            ],
+            "total": 153
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 9,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  10,
+                  8,
+                  18,
+                  28,
+                  5,
+                  3
+                ],
+                "sum": 90
+              },
+              {
+                "scores": [
+                  17,
+                  9,
+                  9,
+                  12,
+                  27,
+                  5,
+                  3
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 172
+          }
+        ],
+        "grand_total": 325
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 569,
+        "dog_key": "mlechniy-put-iz-volshebnogo-lesa--ирландскии-вольфхаунд",
+        "name_lat": "MLECHNIY PUT IZ VOLSHEBNOGO LESA",
+        "name_ru": "МЛЕЧНЫЙ ПУТЬ ИЗ ВОЛШЕБНОГО ЛЕСА",
+        "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 24,
+      "event_id": 20231111,
+      "dog_id": 10533,
+      "breed_class": "Борзые",
+      "catalog_no": 21,
+      "placement": 8,
+      "total_score": 312,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Восставшие с дивана",
+        "team_placement": 8,
+        "team_members": [
+          "LAVING BRIZ OLIVER",
+          "VREMYA NE ZHDYOT ERAGON",
+          "КЕТЛИН ФАУСТ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 4,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  7,
+                  19,
+                  22,
+                  2,
+                  5
+                ],
+                "sum": 80
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  5,
+                  16,
+                  20,
+                  1,
+                  2
+                ],
+                "sum": 67
+              }
+            ],
+            "total": 147
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 12,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  7,
+                  7,
+                  18,
+                  25,
+                  3,
+                  5
+                ],
+                "sum": 82
+              },
+              {
+                "scores": [
+                  17,
+                  8,
+                  8,
+                  17,
+                  25,
+                  3,
+                  5
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 165
+          }
+        ],
+        "grand_total": 312
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 10533,
+        "dog_key": "laving-briz-oliver--уиппет",
+        "name_lat": "LAVING BRIZ OLIVER",
+        "name_ru": "LAVING BRIZ OLIVER",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 25,
+      "event_id": 20231111,
+      "dog_id": 10428,
+      "breed_class": "Борзые",
+      "catalog_no": 21,
+      "placement": 8,
+      "total_score": 312,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Восставшие с дивана",
+        "team_placement": 8,
+        "team_members": [
+          "LAVING BRIZ OLIVER",
+          "VREMYA NE ZHDYOT ERAGON",
+          "КЕТЛИН ФАУСТ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 4,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  7,
+                  19,
+                  22,
+                  2,
+                  5
+                ],
+                "sum": 80
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  5,
+                  16,
+                  20,
+                  1,
+                  2
+                ],
+                "sum": 67
+              }
+            ],
+            "total": 147
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 12,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  7,
+                  7,
+                  18,
+                  25,
+                  3,
+                  5
+                ],
+                "sum": 82
+              },
+              {
+                "scores": [
+                  17,
+                  8,
+                  8,
+                  17,
+                  25,
+                  3,
+                  5
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 165
+          }
+        ],
+        "grand_total": 312
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 10428,
+        "dog_key": "vremya-ne-zhdyot-eragon--уиппет",
+        "name_lat": "VREMYA NE ZHDYOT ERAGON",
+        "name_ru": "VREMYA NE ZHDYOT ERAGON",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 26,
+      "event_id": 20231111,
+      "dog_id": 10973,
+      "breed_class": "Борзые",
+      "catalog_no": 21,
+      "placement": 8,
+      "total_score": 312,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Восставшие с дивана",
+        "team_placement": 8,
+        "team_members": [
+          "LAVING BRIZ OLIVER",
+          "VREMYA NE ZHDYOT ERAGON",
+          "КЕТЛИН ФАУСТ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 4,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  7,
+                  19,
+                  22,
+                  2,
+                  5
+                ],
+                "sum": 80
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  5,
+                  16,
+                  20,
+                  1,
+                  2
+                ],
+                "sum": 67
+              }
+            ],
+            "total": 147
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 12,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  7,
+                  7,
+                  18,
+                  25,
+                  3,
+                  5
+                ],
+                "sum": 82
+              },
+              {
+                "scores": [
+                  17,
+                  8,
+                  8,
+                  17,
+                  25,
+                  3,
+                  5
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 165
+          }
+        ],
+        "grand_total": 312
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 10973,
+        "dog_key": "ketlin-faust--уиппет",
+        "name_lat": "KETLIN FAUST",
+        "name_ru": "КЕТЛИН ФАУСТ",
+        "breed": "Уиппет",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 27,
+      "event_id": 20231111,
+      "dog_id": 178,
+      "breed_class": "5-6 группы",
+      "catalog_no": 4,
+      "placement": 1,
+      "total_score": 338,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "5-6 группы",
+        "team_name": "БОрзые пятачки",
+        "team_placement": 1,
+        "team_members": [
+          "JELANY RED TROY",
+          "ИЛИФИЯ ИЗ ШНЕЙДЕР РИЧ",
+          "РОКСИ ИФЕ ШАНИ ИЗ ШНЕЙДЕР РИЧ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 20,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  18,
+                  28,
+                  5,
+                  5
+                ],
+                "sum": 92
+              },
+              {
+                "scores": [
+                  17,
+                  10,
+                  9,
+                  18,
+                  25,
+                  5,
+                  4
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 180
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 27,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  8,
+                  8,
+                  18,
+                  24,
+                  3,
+                  2
+                ],
+                "sum": 82
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  7,
+                  12,
+                  22,
+                  3,
+                  5
+                ],
+                "sum": 76
+              }
+            ],
+            "total": 158
+          }
+        ],
+        "grand_total": 338
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 178,
+        "dog_key": "jelany-red-troy--родезиискии-риджбек",
+        "name_lat": "JELANY RED TROY",
+        "name_ru": "JELANY RED TROY",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 28,
+      "event_id": 20231111,
+      "dog_id": 11150,
+      "breed_class": "5-6 группы",
+      "catalog_no": 4,
+      "placement": 1,
+      "total_score": 338,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "5-6 группы",
+        "team_name": "БОрзые пятачки",
+        "team_placement": 1,
+        "team_members": [
+          "JELANY RED TROY",
+          "ИЛИФИЯ ИЗ ШНЕЙДЕР РИЧ",
+          "РОКСИ ИФЕ ШАНИ ИЗ ШНЕЙДЕР РИЧ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 20,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  18,
+                  28,
+                  5,
+                  5
+                ],
+                "sum": 92
+              },
+              {
+                "scores": [
+                  17,
+                  10,
+                  9,
+                  18,
+                  25,
+                  5,
+                  4
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 180
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 27,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  8,
+                  8,
+                  18,
+                  24,
+                  3,
+                  2
+                ],
+                "sum": 82
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  7,
+                  12,
+                  22,
+                  3,
+                  5
+                ],
+                "sum": 76
+              }
+            ],
+            "total": 158
+          }
+        ],
+        "grand_total": 338
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 11150,
+        "dog_key": "ilifiya-iz-shneyder-rich--фараонова-собака",
+        "name_lat": "ILIFIYA IZ SHNEYDER RICH",
+        "name_ru": "Илифия из Шнейдер Рич",
+        "breed": "ФАРАОНОВА СОБАКА",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 29,
+      "event_id": 20231111,
+      "dog_id": 5664,
+      "breed_class": "5-6 группы",
+      "catalog_no": 4,
+      "placement": 1,
+      "total_score": 338,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "5-6 группы",
+        "team_name": "БОрзые пятачки",
+        "team_placement": 1,
+        "team_members": [
+          "JELANY RED TROY",
+          "ИЛИФИЯ ИЗ ШНЕЙДЕР РИЧ",
+          "РОКСИ ИФЕ ШАНИ ИЗ ШНЕЙДЕР РИЧ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 20,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  18,
+                  28,
+                  5,
+                  5
+                ],
+                "sum": 92
+              },
+              {
+                "scores": [
+                  17,
+                  10,
+                  9,
+                  18,
+                  25,
+                  5,
+                  4
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 180
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 27,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  8,
+                  8,
+                  18,
+                  24,
+                  3,
+                  2
+                ],
+                "sum": 82
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  7,
+                  12,
+                  22,
+                  3,
+                  5
+                ],
+                "sum": 76
+              }
+            ],
+            "total": 158
+          }
+        ],
+        "grand_total": 338
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 5664,
+        "dog_key": "roksi-ife-shani-iz-schneider-rich--фараонова-собака",
+        "name_lat": "ROKSI IFE SHANI IZ SCHNEIDER RICH",
+        "name_ru": "РОКСИ ИФЕ ШАНИ ИЗ ШНЕЙДЕР РИЧ",
+        "breed": "ФАРАОНОВА СОБАКА",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 30,
+      "event_id": 20231111,
+      "dog_id": 371,
+      "breed_class": "5-6 группы",
+      "catalog_no": 18,
+      "placement": 2,
+      "total_score": 334,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "5-6 группы",
+        "team_name": "Тагильские бОрзые",
+        "team_placement": 2,
+        "team_members": [
+          "ROSSO BOREALE AURORA",
+          "TESORO SOLARE DOMENICO",
+          "РОССО БОРЕАЛЕ ВИТТОРИЯ СИДА",
+          "РОССО БОРЕАЛЕ ИРКИСС"
+        ],
+        "ran": false,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 22,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  19,
+                  27,
+                  5,
+                  5
+                ],
+                "sum": 92
+              },
+              {
+                "scores": [
+                  17,
+                  9,
+                  9,
+                  20,
+                  26,
+                  5,
+                  5
+                ],
+                "sum": 91
+              }
+            ],
+            "total": 183
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 29,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  7,
+                  7,
+                  17,
+                  23,
+                  5,
+                  3
+                ],
+                "sum": 79
+              },
+              {
+                "scores": [
+                  18,
+                  7,
+                  7,
+                  11,
+                  21,
+                  4,
+                  4
+                ],
+                "sum": 72
+              }
+            ],
+            "total": 151
+          }
+        ],
+        "grand_total": 334
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 371,
+        "dog_key": "rosso-boreale-aurora--чирнеко-дель-этна",
+        "name_lat": "ROSSO BOREALE AURORA",
+        "name_ru": "ROSSO BOREALE AURORA",
+        "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 31,
+      "event_id": 20231111,
+      "dog_id": 282,
+      "breed_class": "5-6 группы",
+      "catalog_no": 18,
+      "placement": 2,
+      "total_score": 334,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "5-6 группы",
+        "team_name": "Тагильские бОрзые",
+        "team_placement": 2,
+        "team_members": [
+          "ROSSO BOREALE AURORA",
+          "TESORO SOLARE DOMENICO",
+          "РОССО БОРЕАЛЕ ВИТТОРИЯ СИДА",
+          "РОССО БОРЕАЛЕ ИРКИСС"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 22,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  19,
+                  27,
+                  5,
+                  5
+                ],
+                "sum": 92
+              },
+              {
+                "scores": [
+                  17,
+                  9,
+                  9,
+                  20,
+                  26,
+                  5,
+                  5
+                ],
+                "sum": 91
+              }
+            ],
+            "total": 183
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 29,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  7,
+                  7,
+                  17,
+                  23,
+                  5,
+                  3
+                ],
+                "sum": 79
+              },
+              {
+                "scores": [
+                  18,
+                  7,
+                  7,
+                  11,
+                  21,
+                  4,
+                  4
+                ],
+                "sum": 72
+              }
+            ],
+            "total": 151
+          }
+        ],
+        "grand_total": 334
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 282,
+        "dog_key": "tesoro-solare-domenico--чирнеко-дель-этна",
+        "name_lat": "TESORO SOLARE DOMENICO",
+        "name_ru": "TESORO SOLARE DOMENICO",
+        "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 32,
+      "event_id": 20231111,
+      "dog_id": 7120,
+      "breed_class": "5-6 группы",
+      "catalog_no": 18,
+      "placement": 2,
+      "total_score": 334,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "5-6 группы",
+        "team_name": "Тагильские бОрзые",
+        "team_placement": 2,
+        "team_members": [
+          "ROSSO BOREALE AURORA",
+          "TESORO SOLARE DOMENICO",
+          "РОССО БОРЕАЛЕ ВИТТОРИЯ СИДА",
+          "РОССО БОРЕАЛЕ ИРКИСС"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 22,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  19,
+                  27,
+                  5,
+                  5
+                ],
+                "sum": 92
+              },
+              {
+                "scores": [
+                  17,
+                  9,
+                  9,
+                  20,
+                  26,
+                  5,
+                  5
+                ],
+                "sum": 91
+              }
+            ],
+            "total": 183
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 29,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  7,
+                  7,
+                  17,
+                  23,
+                  5,
+                  3
+                ],
+                "sum": 79
+              },
+              {
+                "scores": [
+                  18,
+                  7,
+                  7,
+                  11,
+                  21,
+                  4,
+                  4
+                ],
+                "sum": 72
+              }
+            ],
+            "total": 151
+          }
+        ],
+        "grand_total": 334
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 7120,
+        "dog_key": "rosso-boreale-vittoriya-sida--чирнеко-дель-этна",
+        "name_lat": "ROSSO BOREALE VITTORIYA SIDA",
+        "name_ru": "РОССО БОРЕАЛЕ ВИТТОРИЯ СИДА",
+        "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 33,
+      "event_id": 20231111,
+      "dog_id": 5824,
+      "breed_class": "5-6 группы",
+      "catalog_no": 18,
+      "placement": 2,
+      "total_score": 334,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "5-6 группы",
+        "team_name": "Тагильские бОрзые",
+        "team_placement": 2,
+        "team_members": [
+          "ROSSO BOREALE AURORA",
+          "TESORO SOLARE DOMENICO",
+          "РОССО БОРЕАЛЕ ВИТТОРИЯ СИДА",
+          "РОССО БОРЕАЛЕ ИРКИСС"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 22,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  19,
+                  27,
+                  5,
+                  5
+                ],
+                "sum": 92
+              },
+              {
+                "scores": [
+                  17,
+                  9,
+                  9,
+                  20,
+                  26,
+                  5,
+                  5
+                ],
+                "sum": 91
+              }
+            ],
+            "total": 183
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 29,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  7,
+                  7,
+                  17,
+                  23,
+                  5,
+                  3
+                ],
+                "sum": 79
+              },
+              {
+                "scores": [
+                  18,
+                  7,
+                  7,
+                  11,
+                  21,
+                  4,
+                  4
+                ],
+                "sum": 72
+              }
+            ],
+            "total": 151
+          }
+        ],
+        "grand_total": 334
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 5824,
+        "dog_key": "rosso-boreale-irkiss--чирнеко-дель-этна",
+        "name_lat": "ROSSO BOREALE IRKISS",
+        "name_ru": "РОССО БОРЕАЛЕ ИРКИСС",
+        "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 34,
+      "event_id": 20231111,
+      "dog_id": 383,
+      "breed_class": "5-6 группы",
+      "catalog_no": 2,
+      "placement": 3,
+      "total_score": 319,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "5-6 группы",
+        "team_name": "Рожденные вулканом",
+        "team_placement": 3,
+        "team_members": [
+          "MIA SANTO’S ILVA-NEVA",
+          "ЖОРЖ",
+          "МИА САНТО'С МАРКО КВИНТО"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 23,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  18,
+                  26,
+                  3,
+                  4
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  16,
+                  9,
+                  7,
+                  17,
+                  24,
+                  3,
+                  2
+                ],
+                "sum": 78
+              }
+            ],
+            "total": 164
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 30,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  7,
+                  18,
+                  25,
+                  4,
+                  3
+                ],
+                "sum": 83
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  7,
+                  11,
+                  20,
+                  4,
+                  4
+                ],
+                "sum": 72
+              }
+            ],
+            "total": 155
+          }
+        ],
+        "grand_total": 319
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 383,
+        "dog_key": "mia-santo-s-ilva-neva--чирнеко-дель-этна",
+        "name_lat": "MIA SANTO’S ILVA NEVA",
+        "name_ru": "MIA SANTO’S ILVA NEVA",
+        "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 35,
+      "event_id": 20231111,
+      "dog_id": 11176,
+      "breed_class": "5-6 группы",
+      "catalog_no": 2,
+      "placement": 3,
+      "total_score": 319,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "5-6 группы",
+        "team_name": "Рожденные вулканом",
+        "team_placement": 3,
+        "team_members": [
+          "MIA SANTO’S ILVA-NEVA",
+          "ЖОРЖ",
+          "МИА САНТО'С МАРКО КВИНТО"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 23,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  18,
+                  26,
+                  3,
+                  4
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  16,
+                  9,
+                  7,
+                  17,
+                  24,
+                  3,
+                  2
+                ],
+                "sum": 78
+              }
+            ],
+            "total": 164
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 30,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  7,
+                  18,
+                  25,
+                  4,
+                  3
+                ],
+                "sum": 83
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  7,
+                  11,
+                  20,
+                  4,
+                  4
+                ],
+                "sum": 72
+              }
+            ],
+            "total": 155
+          }
+        ],
+        "grand_total": 319
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 11176,
+        "dog_key": "zhorzh--чирнеко-дель-этна",
+        "name_lat": "ZHORZH",
+        "name_ru": "ЖОРЖ",
+        "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 36,
+      "event_id": 20231111,
+      "dog_id": 7820,
+      "breed_class": "5-6 группы",
+      "catalog_no": 2,
+      "placement": 3,
+      "total_score": 319,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "5-6 группы",
+        "team_name": "Рожденные вулканом",
+        "team_placement": 3,
+        "team_members": [
+          "MIA SANTO’S ILVA-NEVA",
+          "ЖОРЖ",
+          "МИА САНТО'С МАРКО КВИНТО"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 23,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  18,
+                  26,
+                  3,
+                  4
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  16,
+                  9,
+                  7,
+                  17,
+                  24,
+                  3,
+                  2
+                ],
+                "sum": 78
+              }
+            ],
+            "total": 164
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 30,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  7,
+                  18,
+                  25,
+                  4,
+                  3
+                ],
+                "sum": 83
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  7,
+                  11,
+                  20,
+                  4,
+                  4
+                ],
+                "sum": 72
+              }
+            ],
+            "total": 155
+          }
+        ],
+        "grand_total": 319
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 7820,
+        "dog_key": "mia-santos-marco-qwinto--чирнеко-дель-этна",
+        "name_lat": "MIA SANTOS MARCO QWINTO",
+        "name_ru": "МИА САНТОС МАРКО КВИНТО",
+        "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 37,
+      "event_id": 20231111,
+      "dog_id": 9425,
+      "breed_class": "5-6 группы",
+      "catalog_no": 19,
+      "placement": 4,
+      "total_score": 317,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "5-6 группы",
+        "team_name": "Команда голых мексиканок",
+        "team_placement": 4,
+        "team_members": [
+          "W'UNO ZAFIRA BLANCO IZ KANEKSO (STAND)",
+          "ЕАГЛЕ БЛАЦК",
+          "ОРАБЕЛЛА ЛОРЕН"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 17,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  18,
+                  22,
+                  3,
+                  3
+                ],
+                "sum": 81
+              },
+              {
+                "scores": [
+                  16,
+                  8,
+                  7,
+                  17,
+                  20,
+                  4,
+                  3
+                ],
+                "sum": 75
+              }
+            ],
+            "total": 156
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 24,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  18,
+                  27,
+                  4,
+                  5
+                ],
+                "sum": 91
+              },
+              {
+                "scores": [
+                  17,
+                  8,
+                  7,
+                  12,
+                  20,
+                  3,
+                  3
+                ],
+                "sum": 70
+              }
+            ],
+            "total": 161
+          }
+        ],
+        "grand_total": 317
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 9425,
+        "dog_key": "wuno-zafira-blanco-iz-kanekso-stand--ксолоитцкуинтли-стандарт",
+        "name_lat": "WUNO ZAFIRA BLANCO IZ KANEKSO (STAND)",
+        "name_ru": "WUNO ZAFIRA BLANCO IZ KANEKSO (STAND)",
+        "breed": "КСОЛОИТЦКУИНТЛИ СТАНДАРТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 38,
+      "event_id": 20231111,
+      "dog_id": 255,
+      "breed_class": "5-6 группы",
+      "catalog_no": 19,
+      "placement": 4,
+      "total_score": 317,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "5-6 группы",
+        "team_name": "Команда голых мексиканок",
+        "team_placement": 4,
+        "team_members": [
+          "W'UNO ZAFIRA BLANCO IZ KANEKSO (STAND)",
+          "ЕАГЛЕ БЛАЦК",
+          "ОРАБЕЛЛА ЛОРЕН"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 17,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  18,
+                  22,
+                  3,
+                  3
+                ],
+                "sum": 81
+              },
+              {
+                "scores": [
+                  16,
+                  8,
+                  7,
+                  17,
+                  20,
+                  4,
+                  3
+                ],
+                "sum": 75
+              }
+            ],
+            "total": 156
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 24,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  18,
+                  27,
+                  4,
+                  5
+                ],
+                "sum": 91
+              },
+              {
+                "scores": [
+                  17,
+                  8,
+                  7,
+                  12,
+                  20,
+                  3,
+                  3
+                ],
+                "sum": 70
+              }
+            ],
+            "total": 161
+          }
+        ],
+        "grand_total": 317
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 255,
+        "dog_key": "eagle-black--уиппет",
+        "name_lat": "EAGLE BLACK",
+        "name_ru": "ЕАГЛЕ БЛАЦК",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 39,
+      "event_id": 20231111,
+      "dog_id": 11177,
+      "breed_class": "5-6 группы",
+      "catalog_no": 19,
+      "placement": 4,
+      "total_score": 317,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "5-6 группы",
+        "team_name": "Команда голых мексиканок",
+        "team_placement": 4,
+        "team_members": [
+          "W'UNO ZAFIRA BLANCO IZ KANEKSO (STAND)",
+          "ЕАГЛЕ БЛАЦК",
+          "ОРАБЕЛЛА ЛОРЕН"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 17,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  18,
+                  22,
+                  3,
+                  3
+                ],
+                "sum": 81
+              },
+              {
+                "scores": [
+                  16,
+                  8,
+                  7,
+                  17,
+                  20,
+                  4,
+                  3
+                ],
+                "sum": 75
+              }
+            ],
+            "total": 156
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 24,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  18,
+                  27,
+                  4,
+                  5
+                ],
+                "sum": 91
+              },
+              {
+                "scores": [
+                  17,
+                  8,
+                  7,
+                  12,
+                  20,
+                  3,
+                  3
+                ],
+                "sum": 70
+              }
+            ],
+            "total": 161
+          }
+        ],
+        "grand_total": 317
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 11177,
+        "dog_key": "orabella-loren--ксолоитцкуинтли-медио",
+        "name_lat": "ORABELLA LOREN",
+        "name_ru": "ОРАБЕЛЛА ЛОРЕН",
+        "breed": "КСОЛОИТЦКУИНТЛИ МЕДИО",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 40,
+      "event_id": 20231111,
+      "dog_id": 43,
+      "breed_class": "5-6 группы",
+      "catalog_no": 17,
+      "placement": 5,
+      "total_score": 302,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "5-6 группы",
+        "team_name": "Семейный подряд",
+        "team_placement": 5,
+        "team_members": [
+          "SUNRISE LEUR ADAM",
+          "SUNRISE LEUR ARISHA",
+          "ХАУС ЗЭ РЭЙНБОУ УЗОЧИ ЗИКИМО"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 19,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  8,
+                  18,
+                  22,
+                  5,
+                  4
+                ],
+                "sum": 82
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  7,
+                  15,
+                  21,
+                  3,
+                  5
+                ],
+                "sum": 74
+              }
+            ],
+            "total": 156
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 26,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  7,
+                  7,
+                  17,
+                  22,
+                  4,
+                  5
+                ],
+                "sum": 79
+              },
+              {
+                "scores": [
+                  16,
+                  6,
+                  5,
+                  11,
+                  20,
+                  4,
+                  5
+                ],
+                "sum": 67
+              }
+            ],
+            "total": 146
+          }
+        ],
+        "grand_total": 302
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 43,
+        "dog_key": "sunrise-leur-adam--басенджи",
+        "name_lat": "SUNRISE LEUR ADAM",
+        "name_ru": "SUNRISE LEUR ADAM",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 41,
+      "event_id": 20231111,
+      "dog_id": 564,
+      "breed_class": "5-6 группы",
+      "catalog_no": 17,
+      "placement": 5,
+      "total_score": 302,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "5-6 группы",
+        "team_name": "Семейный подряд",
+        "team_placement": 5,
+        "team_members": [
+          "SUNRISE LEUR ADAM",
+          "SUNRISE LEUR ARISHA",
+          "ХАУС ЗЭ РЭЙНБОУ УЗОЧИ ЗИКИМО"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 19,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  8,
+                  18,
+                  22,
+                  5,
+                  4
+                ],
+                "sum": 82
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  7,
+                  15,
+                  21,
+                  3,
+                  5
+                ],
+                "sum": 74
+              }
+            ],
+            "total": 156
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 26,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  7,
+                  7,
+                  17,
+                  22,
+                  4,
+                  5
+                ],
+                "sum": 79
+              },
+              {
+                "scores": [
+                  16,
+                  6,
+                  5,
+                  11,
+                  20,
+                  4,
+                  5
+                ],
+                "sum": 67
+              }
+            ],
+            "total": 146
+          }
+        ],
+        "grand_total": 302
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 564,
+        "dog_key": "sunrise-leur-arisha--басенджи",
+        "name_lat": "SUNRISE LEUR ARISHA",
+        "name_ru": "SUNRISE LEUR ARISHA",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 42,
+      "event_id": 20231111,
+      "dog_id": 5683,
+      "breed_class": "5-6 группы",
+      "catalog_no": 17,
+      "placement": 5,
+      "total_score": 302,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "5-6 группы",
+        "team_name": "Семейный подряд",
+        "team_placement": 5,
+        "team_members": [
+          "SUNRISE LEUR ADAM",
+          "SUNRISE LEUR ARISHA",
+          "ХАУС ЗЭ РЭЙНБОУ УЗОЧИ ЗИКИМО"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 19,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  8,
+                  18,
+                  22,
+                  5,
+                  4
+                ],
+                "sum": 82
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  7,
+                  15,
+                  21,
+                  3,
+                  5
+                ],
+                "sum": 74
+              }
+            ],
+            "total": 156
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 26,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  7,
+                  7,
+                  17,
+                  22,
+                  4,
+                  5
+                ],
+                "sum": 79
+              },
+              {
+                "scores": [
+                  16,
+                  6,
+                  5,
+                  11,
+                  20,
+                  4,
+                  5
+                ],
+                "sum": 67
+              }
+            ],
+            "total": 146
+          }
+        ],
+        "grand_total": 302
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 5683,
+        "dog_key": "хаус-зэ-рэинбоу-узочи-зикимо--басенджи",
+        "name_lat": "ХАУС ЗЭ РЭЙНБОУ УЗОЧИ ЗИКИМО",
+        "name_ru": "ХАУС ЗЭ РЭЙНБОУ УЗОЧИ ЗИКИМО",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 43,
+      "event_id": 20231111,
+      "dog_id": 5939,
+      "breed_class": "5-6 группы",
+      "catalog_no": 7,
+      "placement": 6,
+      "total_score": 293,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "5-6 группы",
+        "team_name": "Афробублики",
+        "team_placement": 6,
+        "team_members": [
+          "ДАММАР ГРАНД АСТЕРИОН",
+          "ИТУРИ ПАЗЗЛ ЕКСТРАОРДИНАРИ СМАРТ",
+          "ЭРНА"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 18,
+            "judges": [
+              {
+                "scores": [
+                  16,
+                  7,
+                  7,
+                  17,
+                  21,
+                  4,
+                  3
+                ],
+                "sum": 75
+              },
+              {
+                "scores": [
+                  15,
+                  6,
+                  7,
+                  12,
+                  20,
+                  3,
+                  3
+                ],
+                "sum": 66
+              }
+            ],
+            "total": 141
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 25,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  18,
+                  23,
+                  5,
+                  4
+                ],
+                "sum": 84
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  5,
+                  12,
+                  20,
+                  4,
+                  4
+                ],
+                "sum": 68
+              }
+            ],
+            "total": 152
+          }
+        ],
+        "grand_total": 293
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 5939,
+        "dog_key": "dammar-grand-asterion--басенджи",
+        "name_lat": "DAMMAR GRAND ASTERION",
+        "name_ru": "ДАММАР ГРАНД АСТЕРИОН",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 44,
+      "event_id": 20231111,
+      "dog_id": 50,
+      "breed_class": "5-6 группы",
+      "catalog_no": 7,
+      "placement": 6,
+      "total_score": 293,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "5-6 группы",
+        "team_name": "Афробублики",
+        "team_placement": 6,
+        "team_members": [
+          "ДАММАР ГРАНД АСТЕРИОН",
+          "ИТУРИ ПАЗЗЛ ЕКСТРАОРДИНАРИ СМАРТ",
+          "ЭРНА"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 18,
+            "judges": [
+              {
+                "scores": [
+                  16,
+                  7,
+                  7,
+                  17,
+                  21,
+                  4,
+                  3
+                ],
+                "sum": 75
+              },
+              {
+                "scores": [
+                  15,
+                  6,
+                  7,
+                  12,
+                  20,
+                  3,
+                  3
+                ],
+                "sum": 66
+              }
+            ],
+            "total": 141
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 25,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  18,
+                  23,
+                  5,
+                  4
+                ],
+                "sum": 84
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  5,
+                  12,
+                  20,
+                  4,
+                  4
+                ],
+                "sum": 68
+              }
+            ],
+            "total": 152
+          }
+        ],
+        "grand_total": 293
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 50,
+        "dog_key": "итури-паззл-екстраординари-смарт--басенджи",
+        "name_lat": "ИТУРИ ПАЗЗЛ ЕКСТРАОРДИНАРИ СМАРТ",
+        "name_ru": "ИТУРИ ПАЗЗЛ ЕКСТРАОРДИНАРИ СМАРТ",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 45,
+      "event_id": 20231111,
+      "dog_id": 5739,
+      "breed_class": "5-6 группы",
+      "catalog_no": 7,
+      "placement": 6,
+      "total_score": 293,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "5-6 группы",
+        "team_name": "Афробублики",
+        "team_placement": 6,
+        "team_members": [
+          "ДАММАР ГРАНД АСТЕРИОН",
+          "ИТУРИ ПАЗЗЛ ЕКСТРАОРДИНАРИ СМАРТ",
+          "ЭРНА"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 18,
+            "judges": [
+              {
+                "scores": [
+                  16,
+                  7,
+                  7,
+                  17,
+                  21,
+                  4,
+                  3
+                ],
+                "sum": 75
+              },
+              {
+                "scores": [
+                  15,
+                  6,
+                  7,
+                  12,
+                  20,
+                  3,
+                  3
+                ],
+                "sum": 66
+              }
+            ],
+            "total": 141
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 25,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  18,
+                  23,
+                  5,
+                  4
+                ],
+                "sum": 84
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  5,
+                  12,
+                  20,
+                  4,
+                  4
+                ],
+                "sum": 68
+              }
+            ],
+            "total": 152
+          }
+        ],
+        "grand_total": 293
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 5739,
+        "dog_key": "erna--басенджи",
+        "name_lat": "ERNA",
+        "name_ru": "ЭРНА",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 46,
+      "event_id": 20231111,
+      "dog_id": 9675,
+      "breed_class": "5-6 группы",
+      "catalog_no": 5,
+      "placement": 7,
+      "total_score": 291,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "5-6 группы",
+        "team_name": "Серпуховские колбасенджи",
+        "team_placement": 7,
+        "team_members": [
+          "ИТУРИ ПАЗЗЛ ВИЛМА",
+          "ОДИССЕЙ",
+          "САНРАЙЗ ЛЕЮР ЖОВЕЛЛАНА"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 21,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  7,
+                  17,
+                  21,
+                  3,
+                  4
+                ],
+                "sum": 77
+              },
+              {
+                "scores": [
+                  15,
+                  6,
+                  7,
+                  12,
+                  20,
+                  4,
+                  4
+                ],
+                "sum": 68
+              }
+            ],
+            "total": 145
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 28,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  7,
+                  7,
+                  17,
+                  23,
+                  2,
+                  3
+                ],
+                "sum": 76
+              },
+              {
+                "scores": [
+                  17,
+                  7,
+                  7,
+                  11,
+                  20,
+                  3,
+                  5
+                ],
+                "sum": 70
+              }
+            ],
+            "total": 146
+          }
+        ],
+        "grand_total": 291
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 9675,
+        "dog_key": "itury-puzzle-vilma--басенджи",
+        "name_lat": "ITURY PUZZLE VILMA",
+        "name_ru": "ИТУРИ ПАЗЗЛ ВИЛМА",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 47,
+      "event_id": 20231111,
+      "dog_id": 7469,
+      "breed_class": "5-6 группы",
+      "catalog_no": 5,
+      "placement": 7,
+      "total_score": 291,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "5-6 группы",
+        "team_name": "Серпуховские колбасенджи",
+        "team_placement": 7,
+        "team_members": [
+          "ИТУРИ ПАЗЗЛ ВИЛМА",
+          "ОДИССЕЙ",
+          "САНРАЙЗ ЛЕЮР ЖОВЕЛЛАНА"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 21,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  7,
+                  17,
+                  21,
+                  3,
+                  4
+                ],
+                "sum": 77
+              },
+              {
+                "scores": [
+                  15,
+                  6,
+                  7,
+                  12,
+                  20,
+                  4,
+                  4
+                ],
+                "sum": 68
+              }
+            ],
+            "total": 145
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 28,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  7,
+                  7,
+                  17,
+                  23,
+                  2,
+                  3
+                ],
+                "sum": 76
+              },
+              {
+                "scores": [
+                  17,
+                  7,
+                  7,
+                  11,
+                  20,
+                  3,
+                  5
+                ],
+                "sum": 70
+              }
+            ],
+            "total": 146
+          }
+        ],
+        "grand_total": 291
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 7469,
+        "dog_key": "odissey--басенджи",
+        "name_lat": "ODISSEY",
+        "name_ru": "ОДИССЕЙ",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 48,
+      "event_id": 20231111,
+      "dog_id": 9676,
+      "breed_class": "5-6 группы",
+      "catalog_no": 5,
+      "placement": 7,
+      "total_score": 291,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "5-6 группы",
+        "team_name": "Серпуховские колбасенджи",
+        "team_placement": 7,
+        "team_members": [
+          "ИТУРИ ПАЗЗЛ ВИЛМА",
+          "ОДИССЕЙ",
+          "САНРАЙЗ ЛЕЮР ЖОВЕЛЛАНА"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 21,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  7,
+                  17,
+                  21,
+                  3,
+                  4
+                ],
+                "sum": 77
+              },
+              {
+                "scores": [
+                  15,
+                  6,
+                  7,
+                  12,
+                  20,
+                  4,
+                  4
+                ],
+                "sum": 68
+              }
+            ],
+            "total": 145
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 28,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  7,
+                  7,
+                  17,
+                  23,
+                  2,
+                  3
+                ],
+                "sum": 76
+              },
+              {
+                "scores": [
+                  17,
+                  7,
+                  7,
+                  11,
+                  20,
+                  3,
+                  5
+                ],
+                "sum": 70
+              }
+            ],
+            "total": 146
+          }
+        ],
+        "grand_total": 291
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 9676,
+        "dog_key": "sunrise-leur-jovellana--басенджи",
+        "name_lat": "SUNRISE LEUR JOVELLANA",
+        "name_ru": "САНРАЙЗ ЛЕЮР ЖОВЕЛЛАНА",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 49,
+      "event_id": 20231111,
+      "dog_id": 11160,
+      "breed_class": "НеБорзые",
+      "catalog_no": 14,
+      "placement": 1,
+      "total_score": 333,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "НеБорзые",
+        "team_name": "АфроАмериканцы",
+        "team_placement": 1,
+        "team_members": [
+          "БЕСТ",
+          "ДЖОЙ",
+          "МАЧО",
+          "ЭРА"
+        ],
+        "ran": false,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 32,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  9,
+                  19,
+                  26,
+                  4,
+                  5
+                ],
+                "sum": 88
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  9,
+                  18,
+                  20,
+                  5,
+                  5
+                ],
+                "sum": 80
+              }
+            ],
+            "total": 168
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 38,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  18,
+                  24,
+                  5,
+                  4
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  17,
+                  7,
+                  8,
+                  15,
+                  22,
+                  5,
+                  5
+                ],
+                "sum": 79
+              }
+            ],
+            "total": 165
+          }
+        ],
+        "grand_total": 333
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 11160,
+        "dog_key": "best--американскии-стаффордшир",
+        "name_lat": "BEST",
+        "name_ru": "Бест",
+        "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 50,
+      "event_id": 20231111,
+      "dog_id": 11178,
+      "breed_class": "НеБорзые",
+      "catalog_no": 14,
+      "placement": 1,
+      "total_score": 333,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "НеБорзые",
+        "team_name": "АфроАмериканцы",
+        "team_placement": 1,
+        "team_members": [
+          "БЕСТ",
+          "ДЖОЙ",
+          "МАЧО",
+          "ЭРА"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 32,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  9,
+                  19,
+                  26,
+                  4,
+                  5
+                ],
+                "sum": 88
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  9,
+                  18,
+                  20,
+                  5,
+                  5
+                ],
+                "sum": 80
+              }
+            ],
+            "total": 168
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 38,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  18,
+                  24,
+                  5,
+                  4
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  17,
+                  7,
+                  8,
+                  15,
+                  22,
+                  5,
+                  5
+                ],
+                "sum": 79
+              }
+            ],
+            "total": 165
+          }
+        ],
+        "grand_total": 333
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 11178,
+        "dog_key": "dzhoy--родезиискии-риджбек",
+        "name_lat": "DZHOY",
+        "name_ru": "ДЖОЙ",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 51,
+      "event_id": 20231111,
+      "dog_id": 11161,
+      "breed_class": "НеБорзые",
+      "catalog_no": 14,
+      "placement": 1,
+      "total_score": 333,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "НеБорзые",
+        "team_name": "АфроАмериканцы",
+        "team_placement": 1,
+        "team_members": [
+          "БЕСТ",
+          "ДЖОЙ",
+          "МАЧО",
+          "ЭРА"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 32,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  9,
+                  19,
+                  26,
+                  4,
+                  5
+                ],
+                "sum": 88
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  9,
+                  18,
+                  20,
+                  5,
+                  5
+                ],
+                "sum": 80
+              }
+            ],
+            "total": 168
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 38,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  18,
+                  24,
+                  5,
+                  4
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  17,
+                  7,
+                  8,
+                  15,
+                  22,
+                  5,
+                  5
+                ],
+                "sum": 79
+              }
+            ],
+            "total": 165
+          }
+        ],
+        "grand_total": 333
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 11161,
+        "dog_key": "macho--американскии-стаффордшир",
+        "name_lat": "MACHO",
+        "name_ru": "Мачо",
+        "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 52,
+      "event_id": 20231111,
+      "dog_id": 11179,
+      "breed_class": "НеБорзые",
+      "catalog_no": 14,
+      "placement": 1,
+      "total_score": 333,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "НеБорзые",
+        "team_name": "АфроАмериканцы",
+        "team_placement": 1,
+        "team_members": [
+          "БЕСТ",
+          "ДЖОЙ",
+          "МАЧО",
+          "ЭРА"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 32,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  9,
+                  19,
+                  26,
+                  4,
+                  5
+                ],
+                "sum": 88
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  9,
+                  18,
+                  20,
+                  5,
+                  5
+                ],
+                "sum": 80
+              }
+            ],
+            "total": 168
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 38,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  18,
+                  24,
+                  5,
+                  4
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  17,
+                  7,
+                  8,
+                  15,
+                  22,
+                  5,
+                  5
+                ],
+                "sum": 79
+              }
+            ],
+            "total": 165
+          }
+        ],
+        "grand_total": 333
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 11179,
+        "dog_key": "era--американскии-стаффордшир",
+        "name_lat": "ERA",
+        "name_ru": "ЭРА",
+        "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 53,
+      "event_id": 20231111,
+      "dog_id": 11180,
+      "breed_class": "НеБорзые",
+      "catalog_no": 16,
+      "placement": 2,
+      "total_score": 317,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "НеБорзые",
+        "team_name": "Dogwille Team",
+        "team_placement": 2,
+        "team_members": [
+          "АСТИ",
+          "КАЛИ ПИТ ЛЕГИОН",
+          "МУНЯ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 34,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  7,
+                  8,
+                  17,
+                  23,
+                  5,
+                  4
+                ],
+                "sum": 82
+              },
+              {
+                "scores": [
+                  15,
+                  6,
+                  6,
+                  11,
+                  19,
+                  5,
+                  5
+                ],
+                "sum": 67
+              }
+            ],
+            "total": 149
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 40,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  8,
+                  8,
+                  18,
+                  24,
+                  5,
+                  4
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  16,
+                  22,
+                  5,
+                  5
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 168
+          }
+        ],
+        "grand_total": 317
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 11180,
+        "dog_key": "asti--американскии-стаффордшир",
+        "name_lat": "ASTI",
+        "name_ru": "АСТИ",
+        "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 54,
+      "event_id": 20231111,
+      "dog_id": 9444,
+      "breed_class": "НеБорзые",
+      "catalog_no": 16,
+      "placement": 2,
+      "total_score": 317,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "НеБорзые",
+        "team_name": "Dogwille Team",
+        "team_placement": 2,
+        "team_members": [
+          "АСТИ",
+          "КАЛИ ПИТ ЛЕГИОН",
+          "МУНЯ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 34,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  7,
+                  8,
+                  17,
+                  23,
+                  5,
+                  4
+                ],
+                "sum": 82
+              },
+              {
+                "scores": [
+                  15,
+                  6,
+                  6,
+                  11,
+                  19,
+                  5,
+                  5
+                ],
+                "sum": 67
+              }
+            ],
+            "total": 149
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 40,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  8,
+                  8,
+                  18,
+                  24,
+                  5,
+                  4
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  16,
+                  22,
+                  5,
+                  5
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 168
+          }
+        ],
+        "grand_total": 317
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 9444,
+        "dog_key": "кали-пит-легион--без-породы",
+        "name_lat": "КАЛИ ПИТ ЛЕГИОН",
+        "name_ru": "КАЛИ ПИТ ЛЕГИОН",
+        "breed": "БЕЗ ПОРОДЫ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 55,
+      "event_id": 20231111,
+      "dog_id": 11181,
+      "breed_class": "НеБорзые",
+      "catalog_no": 16,
+      "placement": 2,
+      "total_score": 317,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "НеБорзые",
+        "team_name": "Dogwille Team",
+        "team_placement": 2,
+        "team_members": [
+          "АСТИ",
+          "КАЛИ ПИТ ЛЕГИОН",
+          "МУНЯ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 34,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  7,
+                  8,
+                  17,
+                  23,
+                  5,
+                  4
+                ],
+                "sum": 82
+              },
+              {
+                "scores": [
+                  15,
+                  6,
+                  6,
+                  11,
+                  19,
+                  5,
+                  5
+                ],
+                "sum": 67
+              }
+            ],
+            "total": 149
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 40,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  8,
+                  8,
+                  18,
+                  24,
+                  5,
+                  4
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  16,
+                  22,
+                  5,
+                  5
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 168
+          }
+        ],
+        "grand_total": 317
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 11181,
+        "dog_key": "munya--американскии-стаффордшир",
+        "name_lat": "MUNYA",
+        "name_ru": "МУНЯ",
+        "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 56,
+      "event_id": 20231111,
+      "dog_id": 11182,
+      "breed_class": "НеБорзые",
+      "catalog_no": 10,
+      "placement": 3,
+      "total_score": 317,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "НеБорзые",
+        "team_name": "Адские гончие",
+        "team_placement": 3,
+        "team_members": [
+          "МАНИФИК МЕТ ОСКАР",
+          "МЭГГИ",
+          "РИЧЧИ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 31,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  7,
+                  17,
+                  25,
+                  5,
+                  5
+                ],
+                "sum": 85
+              },
+              {
+                "scores": [
+                  15,
+                  6,
+                  6,
+                  11,
+                  20,
+                  4,
+                  4
+                ],
+                "sum": 66
+              }
+            ],
+            "total": 151
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 37,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  9,
+                  19,
+                  23,
+                  5,
+                  4
+                ],
+                "sum": 85
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  7,
+                  17,
+                  24,
+                  5,
+                  5
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 166
+          }
+        ],
+        "grand_total": 317
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 11182,
+        "dog_key": "manifik-met-oskar--бигль",
+        "name_lat": "MANIFIK MET OSKAR",
+        "name_ru": "МАНИФИК МЕТ ОСКАР",
+        "breed": "БИГЛЬ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 57,
+      "event_id": 20231111,
+      "dog_id": 11183,
+      "breed_class": "НеБорзые",
+      "catalog_no": 10,
+      "placement": 3,
+      "total_score": 317,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "НеБорзые",
+        "team_name": "Адские гончие",
+        "team_placement": 3,
+        "team_members": [
+          "МАНИФИК МЕТ ОСКАР",
+          "МЭГГИ",
+          "РИЧЧИ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 31,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  7,
+                  17,
+                  25,
+                  5,
+                  5
+                ],
+                "sum": 85
+              },
+              {
+                "scores": [
+                  15,
+                  6,
+                  6,
+                  11,
+                  20,
+                  4,
+                  4
+                ],
+                "sum": 66
+              }
+            ],
+            "total": 151
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 37,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  9,
+                  19,
+                  23,
+                  5,
+                  4
+                ],
+                "sum": 85
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  7,
+                  17,
+                  24,
+                  5,
+                  5
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 166
+          }
+        ],
+        "grand_total": 317
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 11183,
+        "dog_key": "meggi--бигль",
+        "name_lat": "MEGGI",
+        "name_ru": "МЭГГИ",
+        "breed": "БИГЛЬ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 58,
+      "event_id": 20231111,
+      "dog_id": 11163,
+      "breed_class": "НеБорзые",
+      "catalog_no": 10,
+      "placement": 3,
+      "total_score": 317,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "НеБорзые",
+        "team_name": "Адские гончие",
+        "team_placement": 3,
+        "team_members": [
+          "МАНИФИК МЕТ ОСКАР",
+          "МЭГГИ",
+          "РИЧЧИ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 31,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  7,
+                  17,
+                  25,
+                  5,
+                  5
+                ],
+                "sum": 85
+              },
+              {
+                "scores": [
+                  15,
+                  6,
+                  6,
+                  11,
+                  20,
+                  4,
+                  4
+                ],
+                "sum": 66
+              }
+            ],
+            "total": 151
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 37,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  9,
+                  19,
+                  23,
+                  5,
+                  4
+                ],
+                "sum": 85
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  7,
+                  17,
+                  24,
+                  5,
+                  5
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 166
+          }
+        ],
+        "grand_total": 317
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 11163,
+        "dog_key": "richchi--бигль",
+        "name_lat": "RICHCHI",
+        "name_ru": "Риччи",
+        "breed": "БИГЛЬ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 59,
+      "event_id": 20231111,
+      "dog_id": 9220,
+      "breed_class": "НеБорзые",
+      "catalog_no": 12,
+      "placement": 4,
+      "total_score": 313,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "НеБорзые",
+        "team_name": "Жгучие перцы",
+        "team_placement": 4,
+        "team_members": [
+          "АРЕС",
+          "ВЕРСАЧЕ БРАЙТ КРИСТАЛ",
+          "ЦЕСВИЛЬ ГАРДЕН ИРИНУС ГОЛД БРЕЙН"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 35,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  17,
+                  25,
+                  5,
+                  5
+                ],
+                "sum": 87
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  6,
+                  11,
+                  18,
+                  5,
+                  4
+                ],
+                "sum": 67
+              }
+            ],
+            "total": 154
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 41,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  9,
+                  18,
+                  25,
+                  5,
+                  3
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  16,
+                  8,
+                  6,
+                  13,
+                  22,
+                  4,
+                  4
+                ],
+                "sum": 73
+              }
+            ],
+            "total": 159
+          }
+        ],
+        "grand_total": 313
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 9220,
+        "dog_key": "арес--бигль",
+        "name_lat": "АРЕС",
+        "name_ru": "АРЕС",
+        "breed": "БИГЛЬ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 60,
+      "event_id": 20231111,
+      "dog_id": 11184,
+      "breed_class": "НеБорзые",
+      "catalog_no": 12,
+      "placement": 4,
+      "total_score": 313,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "НеБорзые",
+        "team_name": "Жгучие перцы",
+        "team_placement": 4,
+        "team_members": [
+          "АРЕС",
+          "ВЕРСАЧЕ БРАЙТ КРИСТАЛ",
+          "ЦЕСВИЛЬ ГАРДЕН ИРИНУС ГОЛД БРЕЙН"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 35,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  17,
+                  25,
+                  5,
+                  5
+                ],
+                "sum": 87
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  6,
+                  11,
+                  18,
+                  5,
+                  4
+                ],
+                "sum": 67
+              }
+            ],
+            "total": 154
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 41,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  9,
+                  18,
+                  25,
+                  5,
+                  3
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  16,
+                  8,
+                  6,
+                  13,
+                  22,
+                  4,
+                  4
+                ],
+                "sum": 73
+              }
+            ],
+            "total": 159
+          }
+        ],
+        "grand_total": 313
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 11184,
+        "dog_key": "versache-brayt-kristal--бигль",
+        "name_lat": "VERSACHE BRAYT KRISTAL",
+        "name_ru": "ВЕРСАЧЕ БРАЙТ КРИСТАЛ",
+        "breed": "БИГЛЬ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 61,
+      "event_id": 20231111,
+      "dog_id": 11172,
+      "breed_class": "НеБорзые",
+      "catalog_no": 12,
+      "placement": 4,
+      "total_score": 313,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "НеБорзые",
+        "team_name": "Жгучие перцы",
+        "team_placement": 4,
+        "team_members": [
+          "АРЕС",
+          "ВЕРСАЧЕ БРАЙТ КРИСТАЛ",
+          "ЦЕСВИЛЬ ГАРДЕН ИРИНУС ГОЛД БРЕЙН"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 35,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  17,
+                  25,
+                  5,
+                  5
+                ],
+                "sum": 87
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  6,
+                  11,
+                  18,
+                  5,
+                  4
+                ],
+                "sum": 67
+              }
+            ],
+            "total": 154
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 41,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  9,
+                  18,
+                  25,
+                  5,
+                  3
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  16,
+                  8,
+                  6,
+                  13,
+                  22,
+                  4,
+                  4
+                ],
+                "sum": 73
+              }
+            ],
+            "total": 159
+          }
+        ],
+        "grand_total": 313
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 11172,
+        "dog_key": "tsesvil-garden-irinus-gold-breyn--цвергпинчер",
+        "name_lat": "TSESVIL GARDEN IRINUS GOLD BREYN",
+        "name_ru": "Цесвиль Гарден Иринус Голд Брейн",
+        "breed": "ЦВЕРГПИНЧЕР",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 62,
+      "event_id": 20231111,
+      "dog_id": 9224,
+      "breed_class": "НеБорзые",
+      "catalog_no": 6,
+      "placement": 5,
+      "total_score": 291,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "НеБорзые",
+        "team_name": "Рус Денди Лоточки",
+        "team_placement": 5,
+        "team_members": [
+          "МАГИЯ УРАЛА ЯДВИГА ДЛЯ РУС ДЕНДИ ЛОТ",
+          "РУС ДЕНДИ ЛОТ ВЕРОНИКА ВИНТЕР",
+          "РУС ДЕНДИ ЛОТ Ж'АДОР КИРА"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 36,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  7,
+                  7,
+                  16,
+                  24,
+                  2,
+                  3
+                ],
+                "sum": 76
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  5,
+                  10,
+                  18,
+                  4,
+                  3
+                ],
+                "sum": 63
+              }
+            ],
+            "total": 139
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 42,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  7,
+                  17,
+                  23,
+                  5,
+                  4
+                ],
+                "sum": 81
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  7,
+                  12,
+                  22,
+                  3,
+                  4
+                ],
+                "sum": 71
+              }
+            ],
+            "total": 152
+          }
+        ],
+        "grand_total": 291
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 9224,
+        "dog_key": "магия-урала-ядвига-для-рус-денди-лот--ирландскии-терьер",
+        "name_lat": "МАГИЯ УРАЛА ЯДВИГА ДЛЯ РУС ДЕНДИ ЛОТ",
+        "name_ru": "МАГИЯ УРАЛА ЯДВИГА ДЛЯ РУС ДЕНДИ ЛОТ",
+        "breed": "ИРЛАНДСКИЙ ТЕРЬЕР",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 63,
+      "event_id": 20231111,
+      "dog_id": 11185,
+      "breed_class": "НеБорзые",
+      "catalog_no": 6,
+      "placement": 5,
+      "total_score": 291,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "НеБорзые",
+        "team_name": "Рус Денди Лоточки",
+        "team_placement": 5,
+        "team_members": [
+          "МАГИЯ УРАЛА ЯДВИГА ДЛЯ РУС ДЕНДИ ЛОТ",
+          "РУС ДЕНДИ ЛОТ ВЕРОНИКА ВИНТЕР",
+          "РУС ДЕНДИ ЛОТ Ж'АДОР КИРА"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 36,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  7,
+                  7,
+                  16,
+                  24,
+                  2,
+                  3
+                ],
+                "sum": 76
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  5,
+                  10,
+                  18,
+                  4,
+                  3
+                ],
+                "sum": 63
+              }
+            ],
+            "total": 139
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 42,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  7,
+                  17,
+                  23,
+                  5,
+                  4
+                ],
+                "sum": 81
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  7,
+                  12,
+                  22,
+                  3,
+                  4
+                ],
+                "sum": 71
+              }
+            ],
+            "total": 152
+          }
+        ],
+        "grand_total": 291
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 11185,
+        "dog_key": "rus-dendi-lot-veronika-vinter--ирландскии-терьер",
+        "name_lat": "RUS DENDI LOT VERONIKA VINTER",
+        "name_ru": "РУС ДЕНДИ ЛОТ ВЕРОНИКА ВИНТЕР",
+        "breed": "ИРЛАНДСКИЙ ТЕРЬЕР",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 64,
+      "event_id": 20231111,
+      "dog_id": 11186,
+      "breed_class": "НеБорзые",
+      "catalog_no": 6,
+      "placement": 5,
+      "total_score": 291,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "НеБорзые",
+        "team_name": "Рус Денди Лоточки",
+        "team_placement": 5,
+        "team_members": [
+          "МАГИЯ УРАЛА ЯДВИГА ДЛЯ РУС ДЕНДИ ЛОТ",
+          "РУС ДЕНДИ ЛОТ ВЕРОНИКА ВИНТЕР",
+          "РУС ДЕНДИ ЛОТ Ж'АДОР КИРА"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 36,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  7,
+                  7,
+                  16,
+                  24,
+                  2,
+                  3
+                ],
+                "sum": 76
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  5,
+                  10,
+                  18,
+                  4,
+                  3
+                ],
+                "sum": 63
+              }
+            ],
+            "total": 139
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 42,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  7,
+                  17,
+                  23,
+                  5,
+                  4
+                ],
+                "sum": 81
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  7,
+                  12,
+                  22,
+                  3,
+                  4
+                ],
+                "sum": 71
+              }
+            ],
+            "total": 152
+          }
+        ],
+        "grand_total": 291
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 11186,
+        "dog_key": "rus-dendi-lot-zh-ador-kira--ирландскии-терьер",
+        "name_lat": "RUS DENDI LOT ZH'ADOR KIRA",
+        "name_ru": "РУС ДЕНДИ ЛОТ Ж'АДОР КИРА",
+        "breed": "ИРЛАНДСКИЙ ТЕРЬЕР",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 65,
+      "event_id": 20231111,
+      "dog_id": 9238,
+      "breed_class": "НеБорзые",
+      "catalog_no": 20,
+      "placement": 6,
+      "total_score": 268,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "НеБорзые",
+        "team_name": "Неудержимые",
+        "team_placement": 6,
+        "team_members": [
+          "ГЕРДА",
+          "ГОРД",
+          "ШАНТИ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 33,
+            "judges": [
+              {
+                "scores": [
+                  14,
+                  6,
+                  6,
+                  14,
+                  12,
+                  4,
+                  3
+                ],
+                "sum": 59
+              },
+              {
+                "scores": [
+                  16,
+                  6,
+                  6,
+                  10,
+                  15,
+                  4,
+                  3
+                ],
+                "sum": 60
+              }
+            ],
+            "total": 119
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 39,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  6,
+                  7,
+                  17,
+                  20,
+                  4,
+                  3
+                ],
+                "sum": 75
+              },
+              {
+                "scores": [
+                  18,
+                  6,
+                  7,
+                  14,
+                  21,
+                  4,
+                  4
+                ],
+                "sum": 74
+              }
+            ],
+            "total": 149
+          }
+        ],
+        "grand_total": 268
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 9238,
+        "dog_key": "герда--метис",
+        "name_lat": "ГЕРДА",
+        "name_ru": "ГЕРДА",
+        "breed": "МЕТИС",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 66,
+      "event_id": 20231111,
+      "dog_id": 9234,
+      "breed_class": "НеБорзые",
+      "catalog_no": 20,
+      "placement": 6,
+      "total_score": 268,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "НеБорзые",
+        "team_name": "Неудержимые",
+        "team_placement": 6,
+        "team_members": [
+          "ГЕРДА",
+          "ГОРД",
+          "ШАНТИ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 33,
+            "judges": [
+              {
+                "scores": [
+                  14,
+                  6,
+                  6,
+                  14,
+                  12,
+                  4,
+                  3
+                ],
+                "sum": 59
+              },
+              {
+                "scores": [
+                  16,
+                  6,
+                  6,
+                  10,
+                  15,
+                  4,
+                  3
+                ],
+                "sum": 60
+              }
+            ],
+            "total": 119
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 39,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  6,
+                  7,
+                  17,
+                  20,
+                  4,
+                  3
+                ],
+                "sum": 75
+              },
+              {
+                "scores": [
+                  18,
+                  6,
+                  7,
+                  14,
+                  21,
+                  4,
+                  4
+                ],
+                "sum": 74
+              }
+            ],
+            "total": 149
+          }
+        ],
+        "grand_total": 268
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 9234,
+        "dog_key": "горд--метис",
+        "name_lat": "ГОРД",
+        "name_ru": "ГОРД",
+        "breed": "МЕТИС",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 67,
+      "event_id": 20231111,
+      "dog_id": 11187,
+      "breed_class": "НеБорзые",
+      "catalog_no": 20,
+      "placement": 6,
+      "total_score": 268,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "НеБорзые",
+        "team_name": "Неудержимые",
+        "team_placement": 6,
+        "team_members": [
+          "ГЕРДА",
+          "ГОРД",
+          "ШАНТИ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 33,
+            "judges": [
+              {
+                "scores": [
+                  14,
+                  6,
+                  6,
+                  14,
+                  12,
+                  4,
+                  3
+                ],
+                "sum": 59
+              },
+              {
+                "scores": [
+                  16,
+                  6,
+                  6,
+                  10,
+                  15,
+                  4,
+                  3
+                ],
+                "sum": 60
+              }
+            ],
+            "total": 119
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 39,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  6,
+                  7,
+                  17,
+                  20,
+                  4,
+                  3
+                ],
+                "sum": 75
+              },
+              {
+                "scores": [
+                  18,
+                  6,
+                  7,
+                  14,
+                  21,
+                  4,
+                  4
+                ],
+                "sum": 74
+              }
+            ],
+            "total": 149
+          }
+        ],
+        "grand_total": 268
+      },
+      "raw_text": "",
+      "judges": "Иванова Г.С., Кузнецова Н.Н.",
+      "status_reason": null,
+      "dog": {
+        "id": 11187,
+        "dog_key": "shanti--метис",
+        "name_lat": "SHANTI",
+        "name_ru": "ШАНТИ",
+        "breed": "МЕТИС",
+        "sex": "Сука",
+        "owner": null
+      }
+    }
+  ],
+  "results_pdf_url": "https://drive.google.com/file/d/1aa1i7cQgTA4MFZQeGvVELMrBu3aiw5jh/view?usp=sharing"
+}
