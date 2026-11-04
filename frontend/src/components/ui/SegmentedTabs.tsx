@@ -52,8 +52,8 @@ export function SegmentedTabs<T extends string = string>({
               isSm ? 'py-1 px-1.5 sm:px-2.5 rounded-md text-[11px]' : 'py-2 px-1.5 sm:px-3 rounded-lg text-[11.5px] sm:text-xs'
             } transition-all ${
               isActive
-                ? `bg-white text-charcoal-900 shadow-2xs border border-old-money-200/80 font-semibold`
-                : `text-charcoal-600 hover:text-charcoal-900 font-medium border border-transparent`
+                ? `bg-white text-charcoal-900 shadow-2xs font-semibold`
+                : `text-charcoal-600 hover:text-charcoal-900 font-medium`
             }`}
           >
             <span>{tab.label}</span>

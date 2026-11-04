@@ -315,7 +315,7 @@ export default function QuickBreedBar({
           /* МАКСИМАЛЬНО СУЖЕННЫЙ РЕЖИМ: просто кнопка «Породы» */
           normalizedSelected ? (
             <span
-              className="inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full border border-camel-400 bg-camel-100 px-3 text-xs font-semibold text-camel-950 shadow-2xs whitespace-nowrap"
+              className="cs-glass-pill-active inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full px-3 text-xs font-semibold whitespace-nowrap"
               title={`Выбрана порода: ${selectedDisplay}`}
             >
               <BreedSearchDropdown
@@ -357,7 +357,7 @@ export default function QuickBreedBar({
               trigger={
                 <button
                   type="button"
-                  className="inline-flex h-8 shrink-0 items-center gap-1 rounded-full border border-old-money-200/80 bg-cream-50 px-3 text-xs font-semibold text-charcoal-700 hover:bg-old-money-50 hover:text-charcoal-900 transition-colors whitespace-nowrap cursor-pointer"
+                  className="cs-glass-pill inline-flex h-8 shrink-0 items-center gap-1 rounded-full px-3 text-xs font-semibold whitespace-nowrap cursor-pointer"
                   title="Выбрать породу из полного списка"
                   aria-label="Открыть список пород"
                 >
@@ -376,8 +376,8 @@ export default function QuickBreedBar({
               onClick={() => onSelectBreed('')}
               className={`inline-flex h-8 shrink-0 items-center rounded-full px-3 text-xs font-semibold transition-all cursor-pointer whitespace-nowrap ${
                 !normalizedSelected
-                  ? 'border border-camel-400 bg-camel-100 text-camel-950 shadow-2xs'
-                  : 'border border-old-money-200/80 bg-cream-50 text-charcoal-700 hover:bg-old-money-50 hover:text-charcoal-900'
+                  ? "cs-glass-pill-active"
+                  : "cs-glass-pill"
               }`}
               aria-pressed={!normalizedSelected}
             >
@@ -395,8 +395,8 @@ export default function QuickBreedBar({
                   title={breed.fullName}
                   className={`inline-flex h-8 shrink-0 items-center rounded-full px-3 text-xs font-semibold transition-all cursor-pointer whitespace-nowrap ${
                     isActive
-                      ? 'border border-camel-400 bg-camel-100 text-camel-950 shadow-2xs'
-                      : 'border border-old-money-200/80 bg-cream-50 text-charcoal-700 hover:bg-old-money-50 hover:text-charcoal-900'
+                      ? "cs-glass-pill-active"
+                      : "cs-glass-pill"
                   }`}
                   aria-pressed={isActive}
                   aria-label={`Фильтр по породе ${breed.fullName}`}
@@ -409,7 +409,7 @@ export default function QuickBreedBar({
             {/* Чип для выбранной редкой породы или породы, не вошедшей в visible */}
             {rareBreedChip && (
               <span
-                className="inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full border border-camel-400 bg-camel-100 px-3 text-xs font-semibold text-camel-950 shadow-2xs whitespace-nowrap"
+                className="cs-glass-pill-active inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full px-3 text-xs font-semibold whitespace-nowrap"
                 title={`Выбрана порода: ${rareBreedChip}`}
               >
                 <span>{rareBreedChip}</span>
@@ -437,7 +437,7 @@ export default function QuickBreedBar({
               trigger={
                 <button
                   type="button"
-                  className="inline-flex h-8 shrink-0 items-center gap-1 rounded-full border border-old-money-200/80 bg-cream-50 px-3 text-xs font-semibold text-charcoal-700 hover:bg-old-money-50 hover:text-charcoal-900 transition-colors whitespace-nowrap cursor-pointer"
+                  className="cs-glass-pill inline-flex h-8 shrink-0 items-center gap-1 rounded-full px-3 text-xs font-semibold whitespace-nowrap cursor-pointer"
                   title="Выбрать другую породу из полного списка"
                   aria-label="Открыть полный список пород"
                 >

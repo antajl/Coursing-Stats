@@ -61,7 +61,7 @@ export const QuickSearchEmptyState: React.FC<QuickSearchEmptyStateProps> = ({
             key={breed}
             type="button"
             onClick={() => onSelectBreed(breed)}
-            className="px-2.5 py-1 text-xs rounded-lg border border-old-money-200 bg-white hover:bg-old-money-50 hover:border-camel-300 text-charcoal-700 transition-colors cursor-pointer"
+            className="px-2.5 py-1 text-xs rounded-full border border-old-money-200 bg-white hover:bg-old-money-50 hover:border-camel-300 text-charcoal-700 transition-colors cursor-pointer"
           >
             {breed}
           </button>

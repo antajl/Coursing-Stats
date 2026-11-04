@@ -190,7 +190,7 @@ export default function EventListRow({ event }: EventListRowProps) {
             Локация
           </span>
           <span className="text-xs font-semibold text-charcoal-800 leading-tight">
-            {event.location || 'Место не указано'}
+            {event.location || 'Локация не указана'}
           </span>
           {event.region && event.region !== event.location && (
             <span className="text-[11px] text-charcoal-500 mt-0.5 truncate">

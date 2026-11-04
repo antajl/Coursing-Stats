@@ -6,7 +6,7 @@ import type { DogCardProps } from './DogCardContext'
 export const DOG_CARD_HEIGHT_CLASS = 'h-[4.25rem]'
 
 export const CARD_SHELL =
-  `group relative grid min-h-[4.25rem] sm:h-[4.25rem] grid-rows-[auto_auto] gap-0 overflow-hidden rounded-xl border border-old-money-200 bg-white p-2 transition-colors duration-200 hover:border-camel-300 hover:bg-cream-50`
+  `group relative grid min-h-[4.25rem] sm:h-[4.25rem] grid-rows-[auto_auto] gap-0 overflow-hidden rounded-2xl border border-old-money-200 bg-white p-2 transition-colors duration-200 hover:border-camel-300 hover:bg-cream-50`
 
 export const EMBEDDED_SHELL =
   `group relative grid min-h-[4.25rem] sm:h-[4.25rem] grid-rows-[auto_auto] gap-0 overflow-hidden border-0 bg-transparent px-3 sm:px-4 py-1 shadow-none transition-colors duration-150 hover:bg-camel-100/60`
@@ -31,7 +31,7 @@ export function Top3AccentBar({ rank }: { rank: number }) {
 
 export function StatBox({ label, value }: { label: string; value: string | number }) {
   return (
-    <div className="flex min-w-0 flex-col justify-center rounded-lg bg-cream-100 px-2 py-1.5 text-center">
+    <div className="flex min-w-0 flex-col justify-center rounded-xl bg-cream-100 px-2 py-1.5 text-center">
       <p className="mb-0.5 truncate text-[9px] uppercase tracking-wide text-charcoal-500">
         {label}
       </p>

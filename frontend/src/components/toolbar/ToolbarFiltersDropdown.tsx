@@ -149,14 +149,14 @@ function ToolbarFiltersDropdownInner({
                     onReset()
                     setOpenState(false)
                   }}
-                  className="flex-1 rounded-lg border border-old-money-200 bg-white px-3 py-2.5 text-xs font-medium text-charcoal-700 transition-colors hover:bg-old-money-100"
+                  className="flex-1 rounded-full border border-old-money-200 bg-white px-3 py-2.5 text-xs font-medium text-charcoal-700 transition-colors hover:bg-old-money-100 cursor-pointer"
                 >
                   Сбросить
                 </button>
                 <button
                   type="button"
                   onClick={() => setOpenState(false)}
-                  className="flex-1 rounded-lg bg-camel-600 px-3 py-2.5 text-xs font-semibold text-charcoal-900 transition-colors hover:bg-camel-500"
+                  className="flex-1 rounded-full cs-glass-pill-active px-3 py-2.5 text-xs font-semibold text-charcoal-900 transition-colors cursor-pointer"
                 >
                   Готово
                 </button>

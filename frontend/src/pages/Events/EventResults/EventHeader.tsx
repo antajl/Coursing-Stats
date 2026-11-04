@@ -56,7 +56,7 @@ export default function EventHeader({
 
   return (
     <div className={`relative ${className}`.trim()}>
-      <div className="min-w-0 rounded-xl border border-old-money-200 bg-gradient-to-br from-cream-50 to-white px-3.5 py-3 md:px-4.5 md:py-3.5">
+      <div className="min-w-0 rounded-2xl border border-old-money-200 bg-gradient-to-br from-cream-50 to-white px-3.5 py-3 md:px-4.5 md:py-3.5">
         {/* Заголовок турнира и быстрые действия */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2.5">
           <div className="min-w-0 flex-1">
@@ -71,12 +71,13 @@ export default function EventHeader({
                   href={protocolUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex min-h-[36px] sm:min-h-0 flex-shrink-0 items-center gap-1.5 rounded-full border border-camel-200 bg-camel-50 px-3 py-1 text-xs font-medium text-camel-800 shadow-2xs transition-colors hover:border-camel-400 hover:bg-camel-100"
+                  className="doc-physical-btn group inline-flex min-h-[36px] sm:min-h-0 flex-shrink-0 items-center gap-1.5 rounded-full px-3.5 py-1.5 sm:px-4 text-xs sm:text-[13px] font-semibold text-charcoal-900 cursor-pointer"
                   aria-label="Протокол и документы"
-                  title="Официальный протокол состязания и прикреплённые документы"
+                  title="Протокол состязания и прикреплённые документы"
                 >
-                  <FileSpreadsheet className="h-3.5 w-3.5 text-camel-700" aria-hidden />
-                  <span>Протокол и документы</span>
+                  <FileSpreadsheet className="h-3.5 w-3.5 text-camel-700 shrink-0 transition-colors group-hover:text-camel-900" aria-hidden />
+                  <span className="hidden sm:inline">Протокол и документы</span>
+                  <span className="sm:hidden">Протокол</span>
                 </a>
               ) : (
                 <>
@@ -85,11 +86,11 @@ export default function EventHeader({
                       href={rulesUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex min-h-[36px] sm:min-h-0 flex-shrink-0 items-center gap-1.5 rounded-full border border-camel-200 bg-camel-50 px-2.5 py-1 text-xs font-medium text-camel-700 shadow-2xs transition-colors hover:border-camel-400 hover:bg-camel-100"
+                      className="doc-physical-btn inline-flex min-h-[36px] sm:min-h-0 flex-shrink-0 items-center gap-1.5 rounded-full px-3.5 py-1.5 text-xs sm:text-[13px] font-semibold text-charcoal-900 cursor-pointer"
                       aria-label="Регламент"
                       title="Регламент"
                     >
-                      <BookOpen className="h-3.5 w-3.5" aria-hidden />
+                      <BookOpen className="h-3.5 w-3.5 text-camel-700" aria-hidden />
                       <span className="hidden sm:inline">Регламент</span>
                     </a>
                   )}
@@ -98,11 +99,11 @@ export default function EventHeader({
                       href={catalogUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex min-h-[36px] sm:min-h-0 flex-shrink-0 items-center gap-1.5 rounded-full border border-camel-200 bg-camel-50 px-2.5 py-1 text-xs font-medium text-camel-700 shadow-2xs transition-colors hover:border-camel-400 hover:bg-camel-100"
+                      className="doc-physical-btn inline-flex min-h-[36px] sm:min-h-0 flex-shrink-0 items-center gap-1.5 rounded-full px-3.5 py-1.5 text-xs sm:text-[13px] font-semibold text-charcoal-900 cursor-pointer"
                       aria-label="Каталог"
                       title="Каталог"
                     >
-                      <FileText className="h-3.5 w-3.5" aria-hidden />
+                      <FileText className="h-3.5 w-3.5 text-camel-700" aria-hidden />
                       <span className="hidden sm:inline">Каталог</span>
                     </a>
                   )}
@@ -176,7 +177,7 @@ export default function EventHeader({
               {locationText && locationText !== '—' && (
                 <div className="flex items-center gap-1.5 min-w-0">
                   <MapPin className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
-                  <span className="text-old-money-500 font-medium shrink-0">Место:</span>
+                  <span className="text-old-money-500 font-medium shrink-0">Локация:</span>
                   <span className="font-semibold text-charcoal-900 truncate max-w-[320px] sm:max-w-lg" title={locationText}>
                     {locationText}
                   </span>

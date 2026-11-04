@@ -115,7 +115,7 @@ export default function CoursingRatingHint({
         trigger={
           <button
             type="button"
-            className="relative inline-flex h-8 w-8 sm:w-auto shrink-0 items-center justify-center gap-1.5 rounded-full border border-old-money-300/80 bg-cream-50 sm:px-2.5 text-xs font-semibold text-charcoal-800 hover:border-camel-500 hover:bg-cream-100 hover:text-charcoal-900 transition-all cursor-pointer shadow-2xs before:absolute before:-inset-1.5 before:content-[''] sm:before:hidden"
+            className="cs-glass-pill relative inline-flex h-8 w-8 sm:w-auto shrink-0 items-center justify-center gap-1.5 rounded-full sm:px-2.5 text-xs font-semibold cursor-pointer before:absolute before:-inset-1.5 before:content-[''] sm:before:hidden"
             aria-label="О рейтинге и источниках данных"
             title="О рейтинге и источниках данных"
           >

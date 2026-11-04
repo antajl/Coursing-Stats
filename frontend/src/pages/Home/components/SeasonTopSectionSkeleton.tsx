@@ -10,9 +10,11 @@ export function SeasonTopSectionSkeleton({ compact = false }: SeasonTopSectionSk
         className="home-v2-block home-v2-season-top--compact"
         aria-label="Загрузка рейтингов сезона"
       >
-        {/* Top tab mimic */}
-        <div className="home-v2-stats-cockpit-tab mb-2.5 flex items-center justify-between animate-pulse">
-          <div className="h-4 bg-old-money-200/50 rounded w-48" />
+        {/* Top tab mimic: 3 floating pills */}
+        <div className="mb-2.5 flex items-center gap-2 h-[34px]">
+          <div className="h-[34px] flex-1 rounded-full bg-white/70 border border-white/80 animate-pulse" />
+          <div className="h-[34px] flex-1 rounded-full bg-white/50 border border-white/60 animate-pulse" />
+          <div className="h-[34px] flex-1 rounded-full bg-white/50 border border-white/60 animate-pulse" />
         </div>
 
         {/* 2-column podium mimic */}

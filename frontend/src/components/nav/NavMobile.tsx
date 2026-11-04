@@ -83,7 +83,7 @@ export function NavMobile({
           <button
             type="button"
             onClick={onOpenSearch}
-            className="w-11 h-11 border-2 border-old-money-300 rounded-lg bg-old-money-50 hover:bg-old-money-100 transition-colors flex items-center justify-center shrink-0 text-old-money-700 cursor-pointer"
+            className="cs-glass-pill w-11 h-11 rounded-full flex items-center justify-center shrink-0 cursor-pointer"
             aria-label="Быстрый поиск"
             title="Быстрый поиск"
           >
@@ -96,7 +96,7 @@ export function NavMobile({
             aria-expanded={mobileMenuOpen}
             aria-controls="mobile-drawer"
             aria-label="Навигационное меню"
-            className="w-11 h-11 border-2 border-old-money-300 rounded-lg bg-old-money-50 hover:bg-old-money-100 transition-colors flex items-center justify-center cursor-pointer"
+            className="cs-glass-pill w-11 h-11 rounded-full flex items-center justify-center cursor-pointer"
           >
             <svg className="w-5 h-5 text-old-money-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {mobileMenuOpen ? (
@@ -161,7 +161,7 @@ export function NavMobile({
                   <button
                     type="button"
                     onClick={onCloseMobileMenu}
-                    className="w-9 h-9 rounded-lg border border-old-money-300 bg-cream-50 hover:bg-cream-200 transition-colors flex items-center justify-center text-charcoal-700 cursor-pointer"
+                    className="w-9 h-9 rounded-full border border-old-money-300 bg-cream-50 hover:bg-cream-200 transition-colors flex items-center justify-center text-charcoal-700 cursor-pointer"
                     aria-label="Закрыть меню"
                   >
                     <X className="w-4 h-4 text-charcoal-800" aria-hidden="true" />

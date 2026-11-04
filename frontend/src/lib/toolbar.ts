@@ -1,11 +1,11 @@
 export const TOOLBAR_CHIP =
-  'inline-flex h-8 items-center rounded-full border px-3.5 text-xs font-semibold whitespace-nowrap transition-colors'
+  'inline-flex h-8 items-center rounded-full px-3.5 text-xs font-semibold whitespace-nowrap'
 
 export const TOOLBAR_CHIP_IDLE =
-  'border-old-money-200 bg-cream-50 text-charcoal-700 hover:bg-old-money-50'
+  'cs-glass-pill cursor-pointer'
 
 export const TOOLBAR_CHIP_ACTIVE =
-  'border-camel-400 bg-camel-100 text-camel-950 shadow-2xs'
+  'cs-glass-pill-active cursor-pointer'
 
 /** Pill filter trigger with chevron (ModernDropdown). */
 export function toolbarPillTriggerClass(active: boolean, extra = '') {

@@ -241,7 +241,7 @@ export function ResultsToolbar({
             <button
               type="button"
               onClick={handleResetFilters}
-              className="relative shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full border border-old-money-200 bg-cream-50 text-charcoal-500 hover:text-charcoal-800 transition-colors before:absolute before:-inset-1.5 before:content-[''] cursor-pointer"
+              className="cs-glass-pill relative shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full text-charcoal-600 hover:text-charcoal-900 before:absolute before:-inset-1.5 before:content-[''] cursor-pointer"
               title="Сбросить фильтры"
               aria-label="Сбросить фильтры"
             >

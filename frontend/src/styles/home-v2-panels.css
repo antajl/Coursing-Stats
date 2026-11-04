@@ -9,9 +9,18 @@
 .home-v2-events-col {
   position: relative;
   min-width: 0;
-  border: 1.5px solid var(--om-200);
+  border: 1px solid rgba(255, 255, 255, 0.92);
   border-radius: 16px;
-  background: var(--cream-50);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.75) 100%);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  box-shadow:
+    inset 0 1.5px 1px 0 rgba(255, 255, 255, 1),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.65),
+    inset 0 -1px 1px 0 rgba(255, 255, 255, 0.40),
+    0 1px 2px 0 rgba(45, 30, 15, 0.08),
+    0 4px 10px -2px rgba(45, 30, 15, 0.16),
+    0 2px 4px -1px rgba(45, 30, 15, 0.10);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -340,46 +349,101 @@
   width: 100% !important;
   box-sizing: border-box !important;
 }
-.home-v2-season-top--compact [role="tablist"] {
-  background: rgba(255, 255, 255, 0.9) !important;
-  backdrop-filter: blur(12px) !important;
-  -webkit-backdrop-filter: blur(12px) !important;
-  border: 1px solid rgba(216, 181, 122, 0.7) !important;
+.home-v2-season-top--compact [role="tablist"].tab-track-default {
+  height: 34px !important;
+  box-sizing: border-box !important;
+  padding: 3px !important;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.90) 0%, rgba(255, 255, 255, 0.65) 100%) !important;
+  backdrop-filter: blur(14px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(160%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.92) !important;
   border-radius: 12px !important;
-  box-shadow: 0 4px 12px rgba(44, 39, 32, 0.06) !important;
+  box-shadow:
+    inset 0 1.5px 1px 0 rgba(255, 255, 255, 1),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.65),
+    inset 0 -1px 1px 0 rgba(255, 255, 255, 0.40),
+    0 1px 2px 0 rgba(45, 30, 15, 0.08),
+    0 3px 6px -1px rgba(45, 30, 15, 0.14) !important;
 }
+
+.home-v2-season-top--compact [role="tablist"].tab-track-default button {
+  height: 100% !important;
+  border: none !important;
+  outline: none !important;
+  box-sizing: border-box !important;
+}
+
+.home-v2-season-top--compact [role="tablist"].tab-track-default button[aria-selected="true"] {
+  background: #ffffff !important;
+  border: none !important;
+  border-radius: 9px !important;
+  color: #17120a !important;
+  font-weight: 600 !important;
+  box-shadow:
+    0 1px 2px 0 rgba(45, 30, 15, 0.08),
+    0 1px 1px 0 rgba(45, 30, 15, 0.04) !important;
+}
+
+.home-v2-season-top--compact [role="tablist"].tab-track-default button[aria-selected="false"] {
+  color: #5a4f40 !important;
+  border: none !important;
+  border-radius: 9px !important;
+  background: transparent !important;
+}
+.home-v2-season-top--compact [role="tablist"].tab-track-default button[aria-selected="false"]:hover {
+  color: #17120a !important;
+  background: rgba(255, 255, 255, 0.45) !important;
+}
+
 .home-v2-season-top--compact .home-v2-col {
   min-width: 0 !important;
   overflow: hidden !important;
-  border-radius: 14px !important;
-  border: 1px solid rgba(216, 181, 122, 0.7) !important;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(252, 250, 247, 0.95)) !important;
-  backdrop-filter: blur(12px) !important;
-  -webkit-backdrop-filter: blur(12px) !important;
-  box-shadow: 0 4px 16px rgba(44, 39, 32, 0.08) !important;
+  border-radius: 16px !important;
+  border: 1px solid rgba(255, 255, 255, 0.92) !important;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.75) 100%) !important;
+  backdrop-filter: blur(14px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(160%) !important;
+  box-shadow:
+    inset 0 1.5px 1px 0 rgba(255, 255, 255, 1),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.65),
+    inset 0 -1px 1px 0 rgba(255, 255, 255, 0.40),
+    0 1px 2px 0 rgba(45, 30, 15, 0.08),
+    0 4px 10px -2px rgba(45, 30, 15, 0.16),
+    0 2px 4px -1px rgba(45, 30, 15, 0.10) !important;
 }
 
 /* Right statistics cockpit — pixel-perfect mirror of compact columns */
 .home-v2-stats-cockpit-tab {
   height: 34px !important;
-  border-radius: 12px !important;
-  border: 1px solid rgba(216, 181, 122, 0.7) !important;
-  background: rgba(255, 255, 255, 0.9) !important;
-  backdrop-filter: blur(12px) !important;
-  -webkit-backdrop-filter: blur(12px) !important;
-  box-shadow: 0 4px 12px rgba(44, 39, 32, 0.06) !important;
+  border-radius: 9999px !important;
+  border: 1px solid rgba(255, 255, 255, 0.92) !important;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.90) 0%, rgba(255, 255, 255, 0.65) 100%) !important;
+  backdrop-filter: blur(14px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(160%) !important;
+  box-shadow:
+    inset 0 1.5px 1px 0 rgba(255, 255, 255, 1),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.65),
+    inset 0 -1px 1px 0 rgba(255, 255, 255, 0.40),
+    0 1px 2px 0 rgba(45, 30, 15, 0.08),
+    0 3px 6px -1px rgba(45, 30, 15, 0.14) !important;
   padding: 0 12px !important;
   box-sizing: border-box !important;
 }
 
 .home-v2-stats-cockpit {
   height: 276.3px !important;
-  border-radius: 14px !important;
-  border: 1px solid rgba(216, 181, 122, 0.7) !important;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(252, 250, 247, 0.95)) !important;
-  backdrop-filter: blur(12px) !important;
-  -webkit-backdrop-filter: blur(12px) !important;
-  box-shadow: 0 4px 16px rgba(44, 39, 32, 0.08) !important;
+  border-radius: 16px !important;
+  border: 1px solid rgba(255, 255, 255, 0.92) !important;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.75) 100%) !important;
+  backdrop-filter: blur(14px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(160%) !important;
+  box-shadow:
+    inset 0 1.5px 1px 0 rgba(255, 255, 255, 1),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.65),
+    inset 0 -1px 1px 0 rgba(255, 255, 255, 0.40),
+    0 1px 2px 0 rgba(45, 30, 15, 0.08),
+    0 4px 10px -2px rgba(45, 30, 15, 0.16),
+    0 2px 4px -1px rgba(45, 30, 15, 0.10) !important;
   box-sizing: border-box !important;
 }
 
@@ -390,11 +454,14 @@
 }
 .home-v2-season-top--compact .home-breed-progress-track,
 .home-v2-season-top--compact .home-breed-progress-fill__bar {
-  border-radius: calc(14px - 1.5px) !important;
+  border-radius: calc(16px - 1.5px) !important;
 }
 .home-v2-season-top--compact .home-v2-col-head {
   padding: 5px 12px;
   font-size: 13px;
+  background: linear-gradient(180deg, rgba(247, 238, 222, 0.70) 0%, rgba(240, 226, 202, 0.45) 100%) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8) !important;
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.9) !important;
 }
 @media (min-width: 1920px) {
   .home-v2-season-top--compact .home-v2-col-head {

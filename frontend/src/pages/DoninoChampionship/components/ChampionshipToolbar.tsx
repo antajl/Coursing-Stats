@@ -228,7 +228,7 @@ export default function ChampionshipToolbar({
             <button
               type="button"
               onClick={onResetFilters}
-              className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-old-money-200 bg-cream-50 text-charcoal-500 hover:bg-cream-100 hover:text-charcoal-800 transition-colors shrink-0 cursor-pointer"
+              className="cs-glass-pill inline-flex h-8 w-8 items-center justify-center rounded-full text-charcoal-600 hover:text-charcoal-900 shrink-0 cursor-pointer"
               title="Сбросить все фильтры"
             >
               <X className="h-4 w-4" />

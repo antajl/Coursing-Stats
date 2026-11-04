@@ -36,12 +36,12 @@ export default function ToolbarSearch({
   const trigger = (
     <button
       type="button"
-      className={`inline-flex h-8 shrink-0 items-center justify-center rounded-full border transition-all cursor-pointer shadow-2xs ${
+      className={`inline-flex h-8 shrink-0 items-center justify-center rounded-full cursor-pointer ${
         hasValue
-          ? 'border-camel-400 bg-camel-100 text-camel-950 px-3 gap-1.5 font-semibold'
+          ? 'cs-glass-pill-active px-3 gap-1.5 font-semibold'
           : isOpen
-            ? 'border-camel-500 bg-cream-100 text-charcoal-900 w-8'
-            : 'border-old-money-200 bg-cream-50 text-charcoal-700 hover:border-camel-500 hover:bg-old-money-50 w-8'
+            ? 'cs-glass-pill-active w-8'
+            : 'cs-glass-pill w-8'
       } ${className}`}
       title={hasValue ? `Поиск: ${value}` : 'Поиск'}
       aria-label={hasValue ? `Поиск: ${value}` : 'Поиск'}
@@ -84,7 +84,7 @@ export default function ToolbarSearch({
         portal
       >
         <div className="p-2 min-w-[240px]">
-          <div className="flex h-9 items-center gap-2 rounded-lg border border-old-money-300 bg-white px-2.5 focus-within:border-camel-500 focus-within:ring-1 focus-within:ring-camel-500/30 transition-all">
+          <div className="flex h-9 items-center gap-2 rounded-full border border-old-money-300 bg-white px-3 focus-within:border-camel-500 focus-within:ring-1 focus-within:ring-camel-500/30 transition-all">
             <Search className="h-4 w-4 shrink-0 text-charcoal-400" strokeWidth={2} />
             <input
               ref={inputRef}

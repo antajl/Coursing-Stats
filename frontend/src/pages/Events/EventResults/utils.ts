@@ -66,8 +66,10 @@ export function groupResultsByBreedClass(results: Result[]): {
       acc['Неприбывшие участники'].push(result)
       return acc
     }
-    const info = parseBreedClass(result.breed_class, result.dog?.breed, result.dog?.sex)
-    const groupKey = info.groupHeader || result.breed_class || 'Другие'
+    const isTeam = (result.raw_scores_json as any)?.format === 'team_coursing'
+    const groupKey = isTeam
+      ? ((result.raw_scores_json as any)?.category || result.breed_class || 'Борзые')
+      : (parseBreedClass(result.breed_class, result.dog?.breed, result.dog?.sex).groupHeader || result.breed_class || 'Другие')
     if (!acc[groupKey]) acc[groupKey] = []
     acc[groupKey].push(result)
     return acc

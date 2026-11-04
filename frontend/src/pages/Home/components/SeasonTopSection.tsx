@@ -109,15 +109,34 @@ function SeasonTopSectionInner({
       }`}
       {...(!compact ? { 'data-home-reveal': true } : {})}
     >
-      <SegmentedTabs
-        tabs={mainTabs}
-        activeTab={activeTab}
-        onChange={(tab) => setActiveTab(tab as HubCategoryTab)}
-        breakpoint="all"
-        size={compact ? 'sm' : 'md'}
-        className={compact ? 'mb-2.5' : 'mb-4'}
-        ariaLabel="Разделы рейтингов и достижений"
-      />
+      {/* Парящие плашки Physical Glass — строго по высоте h-[34px] с симметричным кокпитом */}
+      <div
+        role="tablist"
+        aria-label="Разделы рейтингов и достижений"
+        className="mb-2.5 flex items-center gap-2 h-[34px] !bg-transparent !border-0 !shadow-none !p-0 select-none"
+        style={{ height: '34px', boxSizing: 'border-box' }}
+      >
+        {mainTabs.map((tab) => {
+          const isActive = activeTab === tab.id
+          return (
+            <button
+              key={tab.id}
+              type="button"
+              role="tab"
+              aria-selected={isActive}
+              onClick={() => setActiveTab(tab.id)}
+              className={`h-[34px] flex-1 px-3.5 rounded-full text-xs transition-all flex items-center justify-center cursor-pointer whitespace-nowrap ${
+                isActive
+                  ? 'cs-glass-pill-active !font-bold !text-camel-950'
+                  : 'cs-glass-pill !font-medium !text-charcoal-700'
+              }`}
+              style={{ height: '34px', boxSizing: 'border-box' }}
+            >
+              <span>{tab.label}</span>
+            </button>
+          )
+        })}
+      </div>
 
       {activeTab === 'sport' && (
         <SportTopTab

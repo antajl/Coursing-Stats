@@ -67,7 +67,7 @@ export function DoninoColumnShell({
   listRef?: Ref<HTMLDivElement>
 }) {
   return (
-    <section className="min-w-0 overflow-hidden rounded-xl border border-old-money-200 bg-white">
+    <section className="min-w-0 overflow-hidden rounded-2xl border border-old-money-200 bg-white shadow-2xs">
       {plaque}
       <div
         ref={listRef}

@@ -181,7 +181,7 @@ export function NavDesktop({
         <button
           type="button"
           onClick={onOpenSearch}
-          className="flex items-center justify-center gap-1.5 h-9 w-9 2xl:w-auto 2xl:px-3 rounded-lg border border-old-money-300 bg-white/90 hover:bg-old-money-50 hover:border-camel-400 text-charcoal-700 transition-all text-xs font-semibold shadow-2xs group cursor-pointer shrink-0"
+          className="cs-glass-pill flex items-center justify-center gap-1.5 h-9 w-9 2xl:w-auto 2xl:px-3 rounded-full text-charcoal-700 text-xs font-semibold group cursor-pointer shrink-0"
           title="Быстрый поиск"
           aria-label="Быстрый поиск по базе"
         >
@@ -197,7 +197,7 @@ export function NavDesktop({
           <button
             aria-expanded={sourcesOpen}
             aria-label="Источники данных"
-            className="flex items-center justify-center h-9 w-9 rounded-lg border border-old-money-300 bg-white/90 hover:bg-old-money-50 hover:border-camel-400 text-charcoal-700 transition-all shadow-2xs group cursor-pointer shrink-0"
+            className="cs-glass-pill flex items-center justify-center h-9 w-9 rounded-full text-charcoal-700 group cursor-pointer shrink-0"
             title="Источники данных"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-camel-700 transition-transform group-hover:scale-110" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -58,7 +58,7 @@ export function ConceptSymmetricFinal({ stats, showStats }: HomeConceptsProps) {
           {/* Сектор 1: Спорт и бега борзых */}
           <Link
             to="/competitions/"
-            className="group block bg-white/95 hover:bg-cream-50/80 rounded-xl p-2 2xl:p-2.5 border border-camel-200/80 hover:border-camel-300 shadow-2xs transition-all text-inherit no-underline"
+            className="group block bg-white/90 hover:bg-white rounded-xl p-2 2xl:p-2.5 border border-white/90 hover:border-white shadow-2xs transition-all text-inherit no-underline"
             aria-label="Перейти в раздел Спорт: состязания, курсинг и бега"
           >
             <div className="flex items-center justify-between pb-1 mb-1 border-b border-camel-200/40">
@@ -141,14 +141,14 @@ export function ConceptSymmetricFinal({ stats, showStats }: HomeConceptsProps) {
           <div className="flex items-center gap-1.5 shrink-0">
             <Link
               to="/competitions/"
-              className="px-2.5 py-1 rounded-lg bg-camel-100 hover:bg-camel-200 border border-camel-300 text-[10.5px] font-semibold text-camel-900 transition-colors flex items-center gap-1"
+              className="cs-glass-pill-active px-3 py-1 rounded-full text-[10.5px] font-semibold flex items-center gap-1"
             >
               <span>Спорт</span>
               <ArrowRight className="w-2.5 h-2.5 text-camel-700" aria-hidden />
             </Link>
             <Link
               to="/shows/"
-              className="px-2.5 py-1 rounded-lg bg-old-money-100 hover:bg-old-money-200 border border-old-money-300 text-[10.5px] font-semibold text-charcoal-800 transition-colors flex items-center gap-1"
+              className="cs-glass-pill px-3 py-1 rounded-full text-[10.5px] font-semibold flex items-center gap-1"
             >
               <span>Выставки</span>
               <ArrowRight className="w-2.5 h-2.5 text-old-money-600" aria-hidden />
