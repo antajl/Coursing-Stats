@@ -5,12 +5,22 @@ import {
   buildEventTitle,
 } from './protocol-shared.js';
 
+function sanitizeDocUrl(url: string | null | undefined): string | null {
+  if (!url) return null;
+  const trimmed = url.trim();
+  const lower = trimmed.toLowerCase();
+  if (lower.includes('web.archive.org') || lower.includes('procoursing.ru')) {
+    return null;
+  }
+  return trimmed;
+}
+
 export function buildToolbarHtml(comp: CompetitionData): string {
   const eventId = comp.event_id || comp.event.id;
   const title = comp.event.title || buildEventTitle(comp);
-  const pdfUrl = comp.event.results_pdf_url?.trim() || null;
-  const catalogUrl = comp.event.catalog_url?.trim() || null;
-  const rulesUrl = comp.event.rules_url?.trim() || null;
+  const pdfUrl = sanitizeDocUrl(comp.event.results_pdf_url);
+  const catalogUrl = sanitizeDocUrl(comp.event.catalog_url);
+  const rulesUrl = sanitizeDocUrl(comp.event.rules_url);
 
   const doninoSeries = [
     { id: '2026004', label: 'I этап (9 авг)', url: '/protocols/2026004.html' },
@@ -50,17 +60,17 @@ export function buildToolbarHtml(comp: CompetitionData): string {
         <span>Чемпионат</span>
       </a>` : ''}
       ${pdfUrl ? `
-      <a href="${escapeHtml(pdfUrl)}" target="_blank" rel="noopener noreferrer" class="cs-btn" title="PDF-файл протокола">
+      <a href="${escapeHtml(pdfUrl)}" target="_blank" rel="noopener noreferrer" class="cs-btn cs-btn-doc" title="PDF-файл протокола">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
         <span>PDF-файл</span>
       </a>` : ''}
       ${catalogUrl ? `
-      <a href="${escapeHtml(catalogUrl)}" target="_blank" rel="noopener noreferrer" class="cs-btn" title="Каталог участников">
+      <a href="${escapeHtml(catalogUrl)}" target="_blank" rel="noopener noreferrer" class="cs-btn cs-btn-doc" title="Каталог участников">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
         <span>Каталог</span>
       </a>` : ''}
       ${rulesUrl ? `
-      <a href="${escapeHtml(rulesUrl)}" target="_blank" rel="noopener noreferrer" class="cs-btn" title="Регламент состязания">
+      <a href="${escapeHtml(rulesUrl)}" target="_blank" rel="noopener noreferrer" class="cs-btn cs-btn-doc" title="Регламент состязания">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
         <span>Регламент</span>
       </a>` : ''}

@@ -40,6 +40,28 @@ export function exportAllHtmlProtocols(outDir = OUT_DIR): { total: number; durat
   const compFiles = findJsonFiles(COMPS_DIR);
   let count = 0;
 
+  // Build index of calendar event IDs pointing to results files
+  const calDir = path.join(ROOT, 'data/v1/calendar');
+  const fileToCalEventIds = new Map<string, number[]>();
+  if (fs.existsSync(calDir)) {
+    for (const calFile of fs.readdirSync(calDir)) {
+      if (!calFile.endsWith('.json')) continue;
+      try {
+        const calData = JSON.parse(fs.readFileSync(path.join(calDir, calFile), 'utf8'));
+        if (Array.isArray(calData?.events)) {
+          for (const ev of calData.events) {
+            if (ev.results_file && ev.id) {
+              const baseName = path.basename(ev.results_file);
+              const list = fileToCalEventIds.get(baseName) || [];
+              list.push(ev.id);
+              fileToCalEventIds.set(baseName, list);
+            }
+          }
+        }
+      } catch {}
+    }
+  }
+
   for (const filePath of compFiles) {
     try {
       const comp = JSON.parse(fs.readFileSync(filePath, 'utf8')) as CompetitionData;
@@ -47,9 +69,18 @@ export function exportAllHtmlProtocols(outDir = OUT_DIR): { total: number; durat
       if (!eventId) continue;
 
       const html = buildProtocolHtml(comp);
-      const outPath = path.join(outDir, `${eventId}.html`);
-      fs.writeFileSync(outPath, html, 'utf8');
-      count++;
+      const targetIds = new Set<number>([Number(eventId)]);
+
+      const calIds = fileToCalEventIds.get(path.basename(filePath));
+      if (calIds) {
+        for (const cid of calIds) targetIds.add(cid);
+      }
+
+      for (const tid of targetIds) {
+        const outPath = path.join(outDir, `${tid}.html`);
+        fs.writeFileSync(outPath, html, 'utf8');
+        count++;
+      }
     } catch (err) {
       console.error(`Error exporting protocol for ${filePath}:`, err instanceof Error ? err.message : String(err));
     }

@@ -12,7 +12,7 @@
 
 const MALE = /^(кобели|кобель|male|males)$/i
 const FEMALE = /^(суки|сука|female|females)$/i
-const MIX = /^(микс|mix|mixed)$/i
+const MIX = /^(микс|mix|mixed|общая|общий|общ)$/i
 
 export const MIN_DOGS_FOR_SEPARATE_SEX = 3
 

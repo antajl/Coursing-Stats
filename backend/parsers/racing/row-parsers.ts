@@ -7,21 +7,34 @@ import { parseRacingHeatsFromRow, racingHeatsToRawScores } from './parse-heats';
 
 export function parseNonArrivedRow($, $row, breedClass) {
   const $cells = $row.find("td");
-  
-  // Каталожный номер
-  const catalogNo = extractItalicNumber($cells.eq(1));
+  if ($cells.length < 5) return null;
+
+  let catalogNo: number | null = null;
+  let breed: string | null = null;
+  let class_: string | null = null;
+  let sex: string | null = null;
+  let nameText = '';
+  let statusText = '';
+
+  const c0Num = extractNumber($cells.eq(0).text());
+  if (c0Num !== null && $cells.length === 6) {
+    catalogNo = c0Num;
+    breed = normalizeBreed($cells.eq(1).text());
+    class_ = cleanText($cells.eq(2).text());
+    sex = cleanText($cells.eq(3).text());
+    nameText = $cells.eq(4).text();
+    statusText = cleanText($cells.eq(5).text());
+  } else {
+    catalogNo = extractItalicNumber($cells.eq(1)) ?? extractNumber($cells.eq(1).text());
+    breed = normalizeBreed($cells.eq(2).text());
+    class_ = cleanText($cells.eq(3).text());
+    sex = cleanText($cells.eq(4).text());
+    nameText = $cells.eq(5).text();
+    statusText = cleanText($cells.eq(6).text());
+  }
+
   if (!catalogNo) return null;
-
-  // Порода, класс, пол
-  const breed = normalizeBreed($cells.eq(2).text());
-  const class_ = cleanText($cells.eq(3).text());
-  const sex = cleanText($cells.eq(4).text());
-
-  // Кличка
-  const name = normalizeDogName($cells.eq(5).text());
-
-  // Статус (колонка 6 с colspan=12 для racing)
-  const statusText = cleanText($cells.eq(6).text());
+  const name = normalizeDogName(nameText);
 
   return {
     breed_class: breedClass || "Неприбывшие участники",
@@ -31,10 +44,11 @@ export function parseNonArrivedRow($, $row, breedClass) {
     class: class_,
     sex,
     name,
+    name_lat: name,
     total_score: null,
     qualification: null,
     vc: null,
-    status: statusText === "Неявка" ? "dns" : "unknown_status",
+    status: /неявка/i.test(statusText) ? "dns" : "unknown_status",
     raw_scores_json: JSON.stringify({ heats: [], grand_total: null, normalized_score: null, format: "racing" }),
     raw_text: $row.html() || "",
   };
@@ -47,9 +61,9 @@ export function parseDogRow($, $row, breedClass, allRows, rowIndex) {
   const cellCount = $cells.length;
   if (cellCount < 10) return null;
   
-  // Проверяем, что это строка с собакой (должна быть каталожный номер в <i>)
+  // Проверяем, что это строка с собакой (должна быть каталожный номер в <i> или просто число)
   const catalogNoCell = $cells.eq(1);
-  const catalogNo = extractItalicNumber(catalogNoCell);
+  const catalogNo = extractItalicNumber(catalogNoCell) ?? extractNumber(catalogNoCell.text());
   if (!catalogNo) return null;
 
   // Место (первая ячейка)

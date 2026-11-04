@@ -62,8 +62,8 @@ export async function parseCoursingHTML(html) {
   
   allRows.forEach(($row, rowIndex) => {
     const $rowEl = $($row);
-    const bgColor = $rowEl.attr('bgcolor');
     const $cells = $rowEl.find("td");
+    const bgColor = $rowEl.attr('bgcolor') || $cells.eq(0).attr('bgcolor');
     const firstCellText = $cells.eq(0).text().trim();
     
     // Пропускаем уже обработанные строки (например, строки с оценками судьи 2)

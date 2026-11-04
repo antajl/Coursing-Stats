@@ -459,9 +459,9 @@ export const TOOLBAR_CSS = `
       border-color: #333333;
     }
     .cs-btn-stage {
-      padding: 3px 8px;
+      padding: 3px 10px;
       font-size: 11px;
-      border-radius: 12px;
+      border-radius: 9999px;
       border-color: #d8c29d;
       background: #faf6ee;
       color: #634d26;
@@ -491,6 +491,20 @@ export const TOOLBAR_CSS = `
       background: #ebdcc3;
       border-color: #8c6d37;
       color: #3b280c;
+    }
+    .cs-btn-doc {
+      background: #faf6ee;
+      border-color: #c9ab7b;
+      color: #2a1c0a;
+      font-weight: 600;
+    }
+    .cs-btn-doc svg {
+      color: #7b511c;
+    }
+    .cs-btn-doc:hover {
+      background: #ebdcc3;
+      border-color: #8c6d37;
+      color: #2a1c0a;
     }
 
     @media (max-width: 960px) {

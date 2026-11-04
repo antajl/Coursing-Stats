@@ -19,7 +19,7 @@ export function parseDogRow($, $row, breedClass, allRows, rowIndex, judges, extr
   
   // Проверяем, что это строка с собакой (должна быть каталожный номер в <i> или просто число)
   const catalogNoCell = $cells.eq(1);
-  const catalogNo = extractItalicNumber(catalogNoCell);
+  const catalogNo = extractItalicNumber(catalogNoCell) || extractNumber(catalogNoCell.text());
   
   if (!catalogNo) return null; // Не строка собаки
 

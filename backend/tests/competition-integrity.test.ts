@@ -31,7 +31,7 @@ describe('competition integrity', () => {
 
   it('ensures every competition JSON on disk is referenced by calendar', () => {
     const allCompFiles = walkJsonFiles(COMPS_DIR).map((p) =>
-      p.slice(p.indexOf('competitions/')),
+      p.slice(p.indexOf('competitions/')).normalize('NFC'),
     )
 
     const calFiles = fs.readdirSync(CALENDAR_DIR).filter((f) => f.endsWith('.json'))
@@ -41,7 +41,7 @@ describe('competition integrity', () => {
       const cal = JSON.parse(fs.readFileSync(path.join(CALENDAR_DIR, cf), 'utf-8'))
       for (const e of cal.events || []) {
         if (!e.results_file) continue
-        const rf = String(e.results_file)
+        const rf = String(e.results_file).normalize('NFC')
         if (rf.startsWith('competitions/')) {
           calendarReferenced.add(rf)
         } else {
