@@ -28,19 +28,6 @@
 .home-v2-col.hidden {
   display: none !important;
 }
-/* Bottom timer: inset shadow follows border-radius (plain h-bar leaves corner gaps). */
-.home-breed-progress-track,
-.home-breed-progress-fill__bar {
-  pointer-events: none;
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  border-radius: calc(16px - 1.5px);
-  box-shadow: inset 0 -2px 0 0 var(--om-100);
-}
-.home-breed-progress-fill__bar {
-  box-shadow: inset 0 -2px 0 0 var(--camel-500);
-}
 .home-v2-col-head {
   position: relative;
   font-family: var(--font-serif);
@@ -135,10 +122,10 @@
 
 @keyframes home-breed-progress {
   from {
-    clip-path: inset(0 100% 0 0);
+    transform: scaleX(0);
   }
   to {
-    clip-path: inset(0 0 0 0);
+    transform: scaleX(1);
   }
 }
 .home-v2-col-head--tabs .home-ranking-tabs {
@@ -451,10 +438,6 @@
   .home-v2-stats-cockpit {
     height: 292.5px !important;
   }
-}
-.home-v2-season-top--compact .home-breed-progress-track,
-.home-v2-season-top--compact .home-breed-progress-fill__bar {
-  border-radius: calc(16px - 1.5px) !important;
 }
 .home-v2-season-top--compact .home-v2-col-head {
   padding: 5px 12px;

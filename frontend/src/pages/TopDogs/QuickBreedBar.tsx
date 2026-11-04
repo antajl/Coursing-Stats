@@ -52,7 +52,7 @@ export const TOP_QUICK_BREEDS = CANDIDATE_BREEDS
 interface QuickBreedBarProps {
   selectedBreed: string
   onSelectBreed: (breed: string) => void
-  breedValues: string[]
+  breedValues?: string[]
   dogIndex?: DogsIndexEntry[]
   candidateBreeds?: QuickBreedItem[]
   className?: string
@@ -64,7 +64,7 @@ const BUFFER = 24 // Запас против субпиксельного окр
 export default function QuickBreedBar({
   selectedBreed,
   onSelectBreed,
-  breedValues,
+  breedValues = [],
   dogIndex,
   candidateBreeds,
   className = '',

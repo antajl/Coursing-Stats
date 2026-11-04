@@ -28,8 +28,8 @@ export const SportTopTab = memo(function SportTopTab({
 
   return (
     <div
-      className="w-full min-w-0 max-w-full overflow-hidden touch-pan-y"
-      style={{ width: '100%', maxWidth: '100%', contain: 'layout paint' }}
+      className="w-full min-w-0 max-w-full overflow-x-hidden md:overflow-visible touch-pan-y pb-2 -mb-2"
+      style={{ width: '100%', maxWidth: '100%' }}
       {...touchHandlers}
       {...carousel.pauseHandlers}
     >

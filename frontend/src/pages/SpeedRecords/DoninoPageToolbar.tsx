@@ -1,10 +1,11 @@
 import { useMemo, useState } from 'react'
-import { X } from 'lucide-react'
+import { ChevronDown, X } from 'lucide-react'
 import PageToolbar from '../../components/toolbar/PageToolbar'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
 import QuickBreedBar from '../TopDogs/QuickBreedBar'
 import BreedSearchDropdown from '../../components/ui/BreedSearchDropdown'
-import { formatBreedName, displayBreed } from '../../lib/breedMapping'
+import { displayBreed } from '../../lib/breedMapping'
+import { toolbarPillTriggerClass } from '../../lib/toolbar'
 import type { DogsIndexEntry } from '../../lib/competingBreeds'
 import type { GroupBy } from './stats/constants'
 import { DoninoYearDropdown } from './components/DoninoYearDropdown'
@@ -169,9 +170,9 @@ export default function DoninoPageToolbar({
 
               <div className="shrink-0">
                 <BreedSearchDropdown
-                  buttonLabel={breedTriggerLabel}
+                  breeds={breeds}
                   selectedBreed={filterBreeds.length === 1 ? filterBreeds[0] : ''}
-                  onSelectBreed={(breed) => {
+                  onSelect={(breed) => {
                     if (onBreedChange) {
                       onBreedChange(breed)
                     } else {
@@ -179,7 +180,17 @@ export default function DoninoPageToolbar({
                       if (breed) onToggleFilter('breed', breed)
                     }
                   }}
-                  breedValues={breeds}
+                  trigger={
+                    <button
+                      type="button"
+                      className={`shrink-0 ${toolbarPillTriggerClass(filterBreeds.length > 0)}`}
+                    >
+                      <span className="truncate max-w-[100px]">
+                        {breedTriggerLabel}
+                      </span>
+                      <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
+                    </button>
+                  }
                   dogIndex={dogIndex}
                 />
               </div>
@@ -224,25 +235,6 @@ export default function DoninoPageToolbar({
               )}
             </div>
 
-            {/* QuickBreedBar для десктопа */}
-            <div className="hidden md:block">
-              <QuickBreedBar
-                breeds={breeds}
-                selectedBreed={filterBreeds.length === 1 ? filterBreeds[0] : ''}
-                onSelectBreed={(breed) => {
-                  if (onBreedChange) {
-                    onBreedChange(breed)
-                  } else {
-                    for (const b of [...filterBreeds]) onToggleFilter('breed', b)
-                    if (breed) onToggleFilter('breed', breed)
-                  }
-                }}
-                allLabel="Все породы"
-                className="mb-2"
-                dogIndex={dogIndex}
-              />
-            </div>
-
             {/* Десктопная панель фильтров: второй ряд */}
             <div className="hidden md:flex items-center gap-2 overflow-x-auto no-scrollbar py-0.5">
               <ToolbarSearch
@@ -270,9 +262,12 @@ export default function DoninoPageToolbar({
                 onSelectSex={handleSelectSex}
               />
 
-              <div className="shrink-0">
-                <BreedSearchDropdown
-                  buttonLabel={breedTriggerLabel}
+              {/* Разделитель между фильтрами и породами на десктопе */}
+              <div className="h-5 w-px bg-old-money-300 shrink-0 mx-0.5" aria-hidden="true" />
+
+              {/* Быстрый выбор пород QuickBreedBar — строго перед уникальными фильтрами */}
+              <div className="flex-1 min-w-0">
+                <QuickBreedBar
                   selectedBreed={filterBreeds.length === 1 ? filterBreeds[0] : ''}
                   onSelectBreed={(breed) => {
                     if (onBreedChange) {

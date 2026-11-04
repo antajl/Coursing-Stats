@@ -29,7 +29,26 @@ export function HomeBreedCarouselPager({
   if (dots.length <= 1) return null
 
   return (
-    <div className="mt-auto border-t border-old-money-100 home-breed-pager-wrapper w-full max-w-full overflow-hidden">
+    <div className="relative mt-auto border-t border-old-money-200/70 home-breed-pager-wrapper w-full max-w-full overflow-hidden">
+      {/* Autoplay progress bar: sleek 2px hairline along the straight top divider */}
+      {autoplay && (
+        <div className="absolute top-0 inset-x-0 h-[2px] bg-old-money-200/40 overflow-hidden pointer-events-none z-10" aria-hidden>
+          {progressReady ? (
+            <div
+              key={index}
+              className="h-full bg-camel-600 origin-left"
+              style={{
+                animation: `home-breed-progress ${HOME_BREED_SLIDE_MS}ms linear forwards`,
+                animationPlayState: paused ? 'paused' : 'running',
+              }}
+              onAnimationEnd={() => {
+                if (driveAutoplay && !paused) go(index + 1, 1)
+              }}
+            />
+          ) : null}
+        </div>
+      )}
+
       <nav
         className="flex items-center justify-center gap-0.5 px-2 py-0.5 w-full max-w-full overflow-hidden home-breed-pager-nav"
         aria-label={ariaLabel}
@@ -57,26 +76,6 @@ export function HomeBreedCarouselPager({
           )
         })}
       </nav>
-
-      {autoplay && (
-        <>
-          <div className="home-breed-progress-track" aria-hidden />
-          {progressReady ? (
-            <div
-              key={index}
-              className="home-breed-progress-fill__bar"
-              aria-hidden
-              style={{
-                animation: `home-breed-progress ${HOME_BREED_SLIDE_MS}ms linear forwards`,
-                animationPlayState: paused ? 'paused' : 'running',
-              }}
-              onAnimationEnd={() => {
-                if (driveAutoplay && !paused) go(index + 1, 1)
-              }}
-            />
-          ) : null}
-        </>
-      )}
     </div>
   )
 }

@@ -4,7 +4,7 @@ import { canonicalBreed, uniqueCanonicalBreeds, displayBreed, matchesBreedFilter
 import { deriveCompetingBreeds, countCompetingBreeds, type DogsIndexEntry } from '../../lib/competingBreeds'
 
 interface BreedSearchDropdownProps {
-  breeds: string[]
+  breeds?: string[]
   selectedBreed?: string
   onSelect: (breed: string) => void
   trigger: React.ReactNode
@@ -13,7 +13,7 @@ interface BreedSearchDropdownProps {
 }
 
 export default function BreedSearchDropdown({
-  breeds,
+  breeds = [],
   selectedBreed,
   onSelect,
   trigger,
@@ -30,9 +30,10 @@ export default function BreedSearchDropdown({
     if (dogIndex && dogIndex.length > 0) {
       return deriveCompetingBreeds(dogIndex)
     }
+    const safeBreeds = Array.isArray(breeds) ? breeds : []
     // Sort breeds by frequency/popularity descending, then alphabetically
     const counts = new Map<string, number>()
-    for (const b of breeds) {
+    for (const b of safeBreeds) {
       const canon = canonicalBreed(b || '')
       if (canon) counts.set(canon, (counts.get(canon) || 0) + 1)
     }
@@ -47,14 +48,14 @@ export default function BreedSearchDropdown({
     // If incoming breeds were already deduplicated/pre-ordered, preserve that order
     const seen = new Set<string>()
     const ordered: string[] = []
-    for (const b of breeds) {
+    for (const b of safeBreeds) {
       const canon = canonicalBreed(b || '')
       if (canon && !seen.has(canon)) {
         seen.add(canon)
         ordered.push(canon)
       }
     }
-    return ordered.length > 0 ? ordered : uniqueCanonicalBreeds(breeds)
+    return ordered.length > 0 ? ordered : uniqueCanonicalBreeds(safeBreeds)
   }, [breeds, dogIndex])
 
   // Count dogs per breed if dogIndex or breeds with multiplicity is provided
@@ -62,8 +63,9 @@ export default function BreedSearchDropdown({
     if (dogIndex && dogIndex.length > 0) {
       return countCompetingBreeds(dogIndex)
     }
+    const safeBreeds = Array.isArray(breeds) ? breeds : []
     const counts = new Map<string, number>()
-    for (const b of breeds) {
+    for (const b of safeBreeds) {
       const canon = canonicalBreed(b || '')
       if (canon) counts.set(canon, (counts.get(canon) || 0) + 1)
     }
