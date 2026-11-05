@@ -1,6 +1,7 @@
 import { memo, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { Star } from 'lucide-react'
+import DogSexIcon from '../../components/DogSexIcon'
 import OwnerCrownName from '../../components/OwnerCrownName'
 import { Top3AccentBar } from '../../components/DogCard'
 import RankBadge, { DeltaBadge } from '../../components/RankBadge'
@@ -204,6 +205,14 @@ function ShowDogCardInner({
                 <span className="text-charcoal-600 font-medium truncate">
                   {breedDisplay.primary}
                 </span>
+                {dog.sex && (
+                  <>
+                    <span className="text-charcoal-300 shrink-0" aria-hidden>
+                      ·
+                    </span>
+                    <DogSexIcon sex={dog.sex} size={11} variant="neutral" strokeWidth={2.25} />
+                  </>
+                )}
                 {yearBadge && (
                   <>
                     <span className="text-charcoal-300 shrink-0" aria-hidden>
@@ -255,6 +264,14 @@ function ShowDogCardInner({
               <span className="text-[10px] text-charcoal-600 font-medium truncate">
                 {breedDisplay.primary}
               </span>
+              {dog.sex && (
+                <>
+                  <span className="text-charcoal-300 shrink-0" aria-hidden>
+                    ·
+                  </span>
+                  <DogSexIcon sex={dog.sex} size={11} variant="neutral" strokeWidth={2.25} />
+                </>
+              )}
               {yearBadge && (
                 <>
                   <span className="text-charcoal-300 shrink-0" aria-hidden>

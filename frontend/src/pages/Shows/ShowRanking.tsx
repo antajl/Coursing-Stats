@@ -12,6 +12,7 @@ import { dogNameSearchText, dogQuerySearchTokens } from '../../lib/dogName'
 import { canonicalBreed, breedAliasKey } from '../../lib/breedMapping'
 import { initialSeasonYearFilter, resolveActiveSeason } from '../../lib/season'
 import { useFavorites } from '../../hooks/useFavorites'
+import { matchesSexFilter } from '../TopDogs/filterUtils'
 
 const SHOW_RANKING_YEARS = [
   '2026',
@@ -38,6 +39,7 @@ export default function ShowRanking() {
     initialSeasonYearFilter(searchParams, SHOW_ACTIVE_SEASON),
   )
   const [filterBreed, setFilterBreed] = useState(() => searchParams.get('breed') || '')
+  const [filterSex, setFilterSex] = useState(() => searchParams.get('sex') || '')
   const [allowFullLoad, setAllowFullLoad] = useState(false)
   const dropdownRef = useRef<HTMLDivElement>(null)
 
@@ -73,7 +75,8 @@ export default function ShowRanking() {
 
     const hasActiveFilters =
       Boolean(searchQuery.trim()) ||
-      Boolean(filterBreed)
+      Boolean(filterBreed) ||
+      Boolean(filterSex)
 
     if (hasActiveFilters || page0Failed) {
       setAllowFullLoad(true)
@@ -84,7 +87,7 @@ export default function ShowRanking() {
 
     const t = window.setTimeout(() => setAllowFullLoad(true), FULL_RANKING_DELAY_MS)
     return () => window.clearTimeout(t)
-  }, [rankingYear, isPage0Fetched, isPage0Error, page0Failed, searchQuery, filterBreed])
+  }, [rankingYear, isPage0Fetched, isPage0Error, page0Failed, searchQuery, filterBreed, filterSex])
 
   const {
     data: rankingData,
@@ -129,6 +132,14 @@ export default function ShowRanking() {
           changed = true
         }
 
+        // Sex
+        const currentSex = next.get('sex') || ''
+        if (filterSex !== currentSex) {
+          if (filterSex) next.set('sex', filterSex)
+          else next.delete('sex')
+          changed = true
+        }
+
         // Year
         const currentYear = next.get('year')
         const targetYearParam =
@@ -158,13 +169,18 @@ export default function ShowRanking() {
       },
       { replace: true },
     )
-  }, [filterBreed, filterYear, searchQuery, setSearchParams])
+  }, [filterBreed, filterSex, filterYear, searchQuery, setSearchParams])
 
   // Respond to browser back/forward navigation
   useEffect(() => {
     const breedFromUrl = searchParams.get('breed') || ''
     if (breedFromUrl !== filterBreed) {
       setFilterBreed(breedFromUrl)
+    }
+
+    const sexFromUrl = searchParams.get('sex') || ''
+    if (sexFromUrl !== filterSex) {
+      setFilterSex(sexFromUrl)
     }
 
     const yearFromUrl = searchParams.get('year')
@@ -223,8 +239,9 @@ export default function ShowRanking() {
 
     const hasBreed = Boolean(targetBreedKey)
     const hasSearch = searchTokens.length > 0
+    const hasSex = Boolean(filterSex)
 
-    if (!hasBreed && !hasSearch) {
+    if (!hasBreed && !hasSearch && !hasSex) {
       return rankedDogs
     }
 
@@ -232,6 +249,9 @@ export default function ShowRanking() {
       if (hasBreed) {
         if (!dog.breed) return false
         if (breedAliasKey(canonicalBreed(dog.breed)) !== targetBreedKey) return false
+      }
+      if (hasSex) {
+        if (!matchesSexFilter(dog.sex, filterSex)) return false
       }
       if (hasSearch) {
         const haystack = dogNameSearchText(dog.name_lat, dog.name_ru)
@@ -247,11 +267,12 @@ export default function ShowRanking() {
       overall_rank: dog.overall_rank ?? dog.rank,
       rank: i + 1,
     }))
-  }, [rankedDogs, filterBreed, debouncedSearchQuery])
+  }, [rankedDogs, filterBreed, filterSex, debouncedSearchQuery])
 
   const handleResetFilters = useCallback(() => {
     setFilterYear(SHOW_ACTIVE_SEASON)
     setFilterBreed('')
+    setFilterSex('')
     setSearchQuery('')
   }, [])
 
@@ -276,6 +297,8 @@ export default function ShowRanking() {
         filterBreed={filterBreed}
         onBreedChange={setFilterBreed}
         breedValues={breeds}
+        filterSex={filterSex}
+        onSexChange={setFilterSex}
         dogIndex={dogIndex}
         onResetFilters={handleResetFilters}
         dropdownRef={dropdownRef}
