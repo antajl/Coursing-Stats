@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Info, FileText, ChevronDown, X } from 'lucide-react'
-import { toolbarPillTriggerClass } from '../../lib/toolbar'
+import { toolbarPillTriggerClass, formatToolbarEventsStats, formatToolbarEventsStatsMobile } from '../../lib/toolbar'
 import PageToolbar from '../../components/toolbar/PageToolbar'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
 import ToolbarTip from '../../components/toolbar/ToolbarTip'
@@ -301,13 +301,11 @@ export default function EventsToolbar({
         stats ? (
           <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
             <p className="hidden sm:inline text-xs text-charcoal-500">
-              {`Всего событий: ${stats.total} · отфильтровано: ${stats.filtered} · с результатом: ${stats.withResult}`}
+              {formatToolbarEventsStats(stats)}
               {filterDiscipline && <span> · {disciplineLabel}</span>}
             </p>
             <p className="sm:hidden text-[11px] text-charcoal-500 whitespace-nowrap">
-              {stats.filtered === stats.total
-                ? `${stats.total} соб. · рез: ${stats.withResult}`
-                : `${stats.filtered}/${stats.total} · рез: ${stats.withResult}`}
+              {formatToolbarEventsStatsMobile(stats)}
             </p>
           </div>
         ) : undefined

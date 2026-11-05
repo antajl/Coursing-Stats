@@ -70,3 +70,42 @@ export const TOOLBAR_FILTER_OPTION_ROW_ACTIVE =
 
 export const TOOLBAR_FILTER_SEARCH =
   'h-8 w-full rounded-lg border border-old-money-300 bg-white px-3 text-xs font-medium text-charcoal-800 outline-none placeholder:text-charcoal-400 focus:border-camel-400 focus:ring-1 focus:ring-camel-400/40'
+
+export interface ToolbarEventsStats {
+  total: number
+  filtered: number
+  withResult: number
+}
+
+/**
+ * Формирует строку статистики событий для десктопа:
+ * - Если фильтры не применены и все с результатом: «Всего событий: 28»
+ * - Если отфильтровано: «Всего событий: 28 · отфильтровано: 10»
+ * - Если не у всех есть результат: «... · с результатом: 8»
+ * Исключает тавтологию «28 · отфильтровано: 28 · с результатом: 28».
+ */
+export function formatToolbarEventsStats(stats: ToolbarEventsStats): string {
+  const parts: string[] = [`Всего событий: ${stats.total}`]
+  if (stats.filtered !== stats.total) {
+    parts.push(`отфильтровано: ${stats.filtered}`)
+  }
+  if (stats.withResult !== stats.filtered) {
+    parts.push(`с результатом: ${stats.withResult}`)
+  }
+  return parts.join(' · ')
+}
+
+/**
+ * Компактный мобильный вариант строки статистики:
+ * - Без фильтра: «28 соб.» (или «28 соб. · рез: 20»)
+ * - С фильтром: «10/28 соб.» (или «10/28 · рез: 8»)
+ */
+export function formatToolbarEventsStatsMobile(stats: ToolbarEventsStats): string {
+  const isFiltered = stats.filtered !== stats.total
+  const hasIncomplete = stats.withResult !== stats.filtered
+
+  if (!isFiltered) {
+    return hasIncomplete ? `${stats.total} соб. · рез: ${stats.withResult}` : `${stats.total} соб.`
+  }
+  return hasIncomplete ? `${stats.filtered}/${stats.total} · рез: ${stats.withResult}` : `${stats.filtered}/${stats.total} соб.`
+}

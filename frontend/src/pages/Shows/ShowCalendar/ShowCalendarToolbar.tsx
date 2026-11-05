@@ -31,7 +31,6 @@ export interface ShowCalendarToolbarProps {
   candidateBreeds?: QuickBreedItem[]
   onClearQuickPreset: () => void
   availableMonths?: Set<string>
-  totalCount?: number
 }
 
 export function ShowCalendarToolbar({
@@ -49,7 +48,6 @@ export function ShowCalendarToolbar({
   candidateBreeds = SHOW_CANDIDATE_BREEDS,
   onClearQuickPreset,
   availableMonths,
-  totalCount,
 }: ShowCalendarToolbarProps) {
   const isYearNonDefault = Boolean(filterYear) && filterYear !== currentSeason
   const hasActiveFilters = Boolean(isYearNonDefault || filterMonth || searchQuery || filterBreed)
@@ -115,12 +113,6 @@ export function ShowCalendarToolbar({
             </button>
           )}
 
-          {typeof totalCount === 'number' && (
-            <span className="hidden sm:inline text-xs text-charcoal-500 tabular-nums whitespace-nowrap">
-              {totalCount} с протоколом
-            </span>
-          )}
-
           <div className="shrink-0">
             <ShowCalendarHint compact />
           </div>
@@ -150,12 +142,6 @@ export function ShowCalendarToolbar({
           <div className="shrink-0">
             <ShowCalendarHint />
           </div>
-
-          {typeof totalCount === 'number' && (
-            <span className="text-xs text-charcoal-500 tabular-nums whitespace-nowrap px-1">
-              {totalCount} с протоколом
-            </span>
-          )}
 
           {hasActiveFilters && (
             <button

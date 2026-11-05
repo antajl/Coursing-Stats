@@ -11,9 +11,9 @@ import {
   type ShowRkfCalendarEntry,
 } from '../../lib/staticData'
 import { canonicalBreed, formatBreedName, matchesBreedFilter } from '../../lib/breedMapping'
+import { formatToolbarEventsStats, formatToolbarEventsStatsMobile } from '../../lib/toolbar'
 import { SHOW_CANDIDATE_BREEDS } from '../TopDogs/QuickBreedBar'
 import { useInfiniteScroll } from '../../hooks/useInfiniteScroll'
-import { MONTH_FILTER_OPTIONS } from '../Events/eventListUtils'
 import {
   filterShowCalendarGroups,
   groupExhibitionsByMonth,
@@ -202,12 +202,30 @@ export default function ShowCalendar() {
     return set
   }, [exhibitions])
 
-  const countSummary = useMemo(() => {
-    if (filterBreed) {
-      return `Выставок с породой «${formatBreedName(filterBreed)}»: ${filteredGroups.length} за ${filterYear || CURRENT_SEASON} год`
+  const totalYearEvents = useMemo(() => {
+    if (!exhibitions || exhibitions.length === 0) return 0
+    return filterShowCalendarGroups(exhibitions, {
+      filterMonth: '',
+      filterBreed: '',
+      filterLcOnly: true,
+      searchQuery: '',
+      quickPreset: null,
+    }).length
+  }, [exhibitions])
+
+  const withResultCount = useMemo(
+    () => filteredGroups.filter((g) => g.hasProtocol).length,
+    [filteredGroups],
+  )
+
+  const stats = useMemo(() => {
+    if (isCalendarLoading || exhibitions.length === 0) return undefined
+    return {
+      total: totalYearEvents,
+      filtered: filteredGroups.length,
+      withResult: withResultCount,
     }
-    return `Выставок с протоколом: ${filteredGroups.length} за ${filterYear || CURRENT_SEASON} год`
-  }, [filterBreed, filteredGroups.length, filterYear])
+  }, [isCalendarLoading, exhibitions.length, totalYearEvents, filteredGroups.length, withResultCount])
 
   const pageToolbar = (
     <PageToolbar
@@ -228,15 +246,22 @@ export default function ShowCalendar() {
           breedValues={breedValues}
           onClearQuickPreset={() => setQuickPreset(null)}
           availableMonths={availableMonths}
-          totalCount={filteredGroups.length}
         />
       }
       bottomLeft={
-        <div className="hidden sm:flex items-center gap-2 text-xs text-charcoal-500">
-          <p>{countSummary}</p>
-        </div>
+        stats ? (
+          <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+            <p className="hidden sm:inline text-xs text-charcoal-500">
+              {formatToolbarEventsStats(stats)}
+              {filterBreed && <span> · {formatBreedName(filterBreed)}</span>}
+            </p>
+            <p className="sm:hidden text-[11px] text-charcoal-500 whitespace-nowrap">
+              {formatToolbarEventsStatsMobile(stats)}
+              {filterBreed && <span> · {formatBreedName(filterBreed)}</span>}
+            </p>
+          </div>
+        ) : undefined
       }
-      bottomRowClassName="hidden sm:flex"
     />
   )
 
