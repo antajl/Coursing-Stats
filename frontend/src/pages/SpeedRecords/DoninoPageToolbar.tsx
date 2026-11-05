@@ -226,7 +226,7 @@ export default function DoninoPageToolbar({
                 <button
                   type="button"
                   onClick={onClearFilters}
-                  className="shrink-0 inline-flex h-8 items-center gap-1.5 rounded-full border border-old-money-200 bg-cream-50 px-2.5 text-xs font-semibold text-charcoal-600 hover:border-camel-500 hover:text-charcoal-900 hover:bg-cream-100 transition-colors cursor-pointer"
+                  className="cs-glass-pill shrink-0 inline-flex h-8 items-center gap-1.5 rounded-full px-2.5 text-xs font-semibold !text-charcoal-600 hover:!text-charcoal-900 transition-colors cursor-pointer select-none"
                   title="Сбросить все фильтры"
                 >
                   <X className="h-3.5 w-3.5" />
@@ -236,7 +236,7 @@ export default function DoninoPageToolbar({
             </div>
 
             {/* Десктопная панель фильтров: второй ряд */}
-            <div className="hidden md:flex items-center gap-2 overflow-x-auto no-scrollbar py-0.5">
+            <div className="hidden md:flex items-center gap-2 w-full min-w-0 overflow-x-auto no-scrollbar py-0.5">
               <ToolbarSearch
                 value={searchQuery}
                 onChange={onSearchChange}
@@ -262,26 +262,6 @@ export default function DoninoPageToolbar({
                 onSelectSex={handleSelectSex}
               />
 
-              {/* Разделитель между фильтрами и породами на десктопе */}
-              <div className="h-5 w-px bg-old-money-300 shrink-0 mx-0.5" aria-hidden="true" />
-
-              {/* Быстрый выбор пород QuickBreedBar — строго перед уникальными фильтрами */}
-              <div className="flex-1 min-w-0">
-                <QuickBreedBar
-                  selectedBreed={filterBreeds.length === 1 ? filterBreeds[0] : ''}
-                  onSelectBreed={(breed) => {
-                    if (onBreedChange) {
-                      onBreedChange(breed)
-                    } else {
-                      for (const b of [...filterBreeds]) onToggleFilter('breed', b)
-                      if (breed) onToggleFilter('breed', breed)
-                    }
-                  }}
-                  breedValues={breeds}
-                  dogIndex={dogIndex}
-                />
-              </div>
-
               {view === 'stats' ? (
                 <DoninoThresholdDropdown
                   hasThresholdFilters={hasThresholdFilters}
@@ -304,13 +284,33 @@ export default function DoninoPageToolbar({
                 <button
                   type="button"
                   onClick={onClearFilters}
-                  className="shrink-0 inline-flex h-8 items-center gap-1.5 rounded-full border border-old-money-200 bg-cream-50 px-3 text-xs font-semibold text-charcoal-600 hover:border-camel-500 hover:text-charcoal-900 hover:bg-cream-100 transition-colors cursor-pointer"
+                  className="cs-glass-pill shrink-0 inline-flex h-8 items-center gap-1.5 rounded-full px-3 text-xs font-semibold !text-charcoal-600 hover:!text-charcoal-900 transition-colors cursor-pointer select-none"
                   title="Сбросить все фильтры"
                 >
                   <X className="h-3.5 w-3.5" />
                   <span>Сбросить</span>
                 </button>
               )}
+
+              {/* Разделитель между фильтрами и породами на десктопе */}
+              <div className="h-5 w-px bg-old-money-300 shrink-0 mx-0.5" aria-hidden="true" />
+
+              {/* Быстрый выбор пород QuickBreedBar — всегда самая правая часть панели фильтров */}
+              <div className="flex-1 min-w-0">
+                <QuickBreedBar
+                  selectedBreed={filterBreeds.length === 1 ? filterBreeds[0] : ''}
+                  onSelectBreed={(breed) => {
+                    if (onBreedChange) {
+                      onBreedChange(breed)
+                    } else {
+                      for (const b of [...filterBreeds]) onToggleFilter('breed', b)
+                      if (breed) onToggleFilter('breed', breed)
+                    }
+                  }}
+                  breedValues={breeds}
+                  dogIndex={dogIndex}
+                />
+              </div>
             </div>
           </div>
         }

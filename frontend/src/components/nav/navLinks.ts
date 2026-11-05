@@ -172,16 +172,3 @@ export const GUIDE_MENU_ITEMS: NavMenuItem[] = [
     isActive: guideTabActive('speeds'),
   },
 ]
-
-export const DATA_SOURCE_LINKS = [
-  { href: 'http://procoursing.ru', label: 'Procoursing.ru' },
-  { href: 'https://runningdog.ru/', label: 'Курсинг Донино' },
-  {
-    href: 'https://docs.google.com/spreadsheets/d/1NTiY3HXZIkXE8xTeXZESgMKaZsEXunmcWhTfhhkoKyE/edit?gid=1787526009#gid=1787526009',
-    label: 'Рекорды Донино (курсинг)',
-  },
-  {
-    href: 'https://docs.google.com/spreadsheets/d/1kpRjPy4OKZmqyM_J12a-MJqEUQD6Isglt-KRtSqLSAY/edit?gid=0#gid=0',
-    label: 'Рекорды Донино (бега борзых)',
-  },
-] as const

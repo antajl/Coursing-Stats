@@ -252,7 +252,7 @@ export default function DoninoChampionship() {
                   onClick={() => handleTabChange(t.id as MainTab)}
                   className={`min-h-[44px] px-3.5 py-2.5 rounded-t-xl text-xs sm:text-sm font-semibold transition-all flex items-center gap-2 border-b-2 cursor-pointer whitespace-nowrap ${
                     isActive
-                      ? 'border-camel-700 text-charcoal-900 bg-cream-100/70 font-bold'
+                      ? 'border-camel-700 text-charcoal-900 bg-cream-100/70'
                       : 'border-transparent text-charcoal-600 hover:text-charcoal-900 hover:bg-cream-50'
                   }`}
                 >

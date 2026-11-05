@@ -3,12 +3,8 @@ import { useSearchParams } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
 import SkeletonLoader from '../../components/SkeletonLoader'
 import { getShowDogRanking, getShowDogRankingPage0 } from '../../lib/staticData'
-import {
-  compareShowDogs,
-  SHOW_FILTER_AWARD_KEYS,
-  type ShowAwardKey,
-} from '../../../../backend/lib/show-award-ranking'
-import ShowRankingFilters, { type ShowAwardMinFilters } from './ShowRankingFilters'
+import { compareShowDogs } from '../../../../backend/lib/show-award-ranking'
+import ShowRankingFilters from './ShowRankingFilters'
 import ShowRankingColumns, { type RankedShowDog } from './ShowRankingColumns'
 import type { ShowDogCardData } from './ShowDogCard'
 import { useDebounce } from '../../hooks/useDebounce'
@@ -34,10 +30,6 @@ const SHOW_ACTIVE_SEASON = resolveActiveSeason(SHOW_RANKING_YEARS)
 /** Brief grace period for page0 to paint before requesting the full season file. */
 const FULL_RANKING_DELAY_MS = 250
 
-const EMPTY_AWARD_MINS: ShowAwardMinFilters = Object.fromEntries(
-  SHOW_FILTER_AWARD_KEYS.map((k) => [k, '']),
-) as ShowAwardMinFilters
-
 export default function ShowRanking() {
   const [searchParams, setSearchParams] = useSearchParams()
   const { favorites, toggleFavorite } = useFavorites()
@@ -46,18 +38,6 @@ export default function ShowRanking() {
     initialSeasonYearFilter(searchParams, SHOW_ACTIVE_SEASON),
   )
   const [filterBreed, setFilterBreed] = useState(() => searchParams.get('breed') || '')
-  const [filterGroup, setFilterGroup] = useState(() => searchParams.get('group') || '')
-  const [awardMins, setAwardMins] = useState<ShowAwardMinFilters>(() => ({
-    ...EMPTY_AWARD_MINS,
-    BIS: searchParams.get('minBis') || '',
-    BOB: searchParams.get('minBob') || '',
-    BOS: searchParams.get('minBos') || '',
-    CACIB: searchParams.get('minCacib') || '',
-    CAC: searchParams.get('minCac') || '',
-    JCAC: searchParams.get('minJcac') || '',
-    CW: searchParams.get('minCw') || '',
-    CHRKF: searchParams.get('minChrkf') || '',
-  }))
   const [allowFullLoad, setAllowFullLoad] = useState(false)
   const dropdownRef = useRef<HTMLDivElement>(null)
 
@@ -93,9 +73,7 @@ export default function ShowRanking() {
 
     const hasActiveFilters =
       Boolean(searchQuery.trim()) ||
-      Boolean(filterBreed) ||
-      Boolean(filterGroup) ||
-      Object.values(awardMins).some((v) => Boolean(v))
+      Boolean(filterBreed)
 
     if (hasActiveFilters || page0Failed) {
       setAllowFullLoad(true)
@@ -106,7 +84,7 @@ export default function ShowRanking() {
 
     const t = window.setTimeout(() => setAllowFullLoad(true), FULL_RANKING_DELAY_MS)
     return () => window.clearTimeout(t)
-  }, [rankingYear, isPage0Fetched, isPage0Error, page0Failed, searchQuery, filterBreed, filterGroup, awardMins])
+  }, [rankingYear, isPage0Fetched, isPage0Error, page0Failed, searchQuery, filterBreed])
 
   const {
     data: rankingData,
@@ -176,31 +154,11 @@ export default function ShowRanking() {
           changed = true
         }
 
-        // Group
-        const currentGroup = next.get('group') || ''
-        if (filterGroup !== currentGroup) {
-          if (filterGroup) next.set('group', filterGroup)
-          else next.delete('group')
-          changed = true
-        }
-
-        // Award minimums
-        for (const key of SHOW_FILTER_AWARD_KEYS) {
-          const paramKey = `min${key.charAt(0).toUpperCase()}${key.slice(1).toLowerCase()}`
-          const currentVal = next.get(paramKey) || ''
-          const targetVal = awardMins[key] || ''
-          if (currentVal !== targetVal) {
-            if (targetVal) next.set(paramKey, targetVal)
-            else next.delete(paramKey)
-            changed = true
-          }
-        }
-
         return changed ? next : prev
       },
       { replace: true },
     )
-  }, [filterBreed, filterYear, searchQuery, filterGroup, awardMins, setSearchParams])
+  }, [filterBreed, filterYear, searchQuery, setSearchParams])
 
   // Respond to browser back/forward navigation
   useEffect(() => {
@@ -215,11 +173,6 @@ export default function ShowRanking() {
       if (targetYear !== filterYear) {
         setFilterYear(targetYear)
       }
-    }
-
-    const groupFromUrl = searchParams.get('group') || ''
-    if (groupFromUrl !== filterGroup) {
-      setFilterGroup(groupFromUrl)
     }
   }, [searchParams])
 
@@ -268,21 +221,10 @@ export default function ShowRanking() {
     const searchTokens = debouncedSearchQuery ? dogQuerySearchTokens(debouncedSearchQuery) : []
     const searchLower = debouncedSearchQuery ? debouncedSearchQuery.toLowerCase() : ''
 
-    const activeAwardFilters: Array<[ShowAwardKey, number]> = []
-    for (let i = 0; i < SHOW_FILTER_AWARD_KEYS.length; i++) {
-      const key = SHOW_FILTER_AWARD_KEYS[i]
-      const min = Number(awardMins[key])
-      if (Number.isFinite(min) && min > 0) {
-        activeAwardFilters.push([key, min])
-      }
-    }
-
     const hasBreed = Boolean(targetBreedKey)
-    const hasGroup = Boolean(filterGroup)
-    const hasAwards = activeAwardFilters.length > 0
     const hasSearch = searchTokens.length > 0
 
-    if (!hasBreed && !hasGroup && !hasAwards && !hasSearch) {
+    if (!hasBreed && !hasSearch) {
       return rankedDogs
     }
 
@@ -290,15 +232,6 @@ export default function ShowRanking() {
       if (hasBreed) {
         if (!dog.breed) return false
         if (breedAliasKey(canonicalBreed(dog.breed)) !== targetBreedKey) return false
-      }
-      if (hasGroup && dog.breed_group !== filterGroup) {
-        return false
-      }
-      if (hasAwards) {
-        for (let i = 0; i < activeAwardFilters.length; i++) {
-          const [key, min] = activeAwardFilters[i]
-          if ((dog.titles?.[key] || 0) < min) return false
-        }
       }
       if (hasSearch) {
         const haystack = dogNameSearchText(dog.name_lat, dog.name_ru)
@@ -314,23 +247,12 @@ export default function ShowRanking() {
       overall_rank: dog.overall_rank ?? dog.rank,
       rank: i + 1,
     }))
-  }, [rankedDogs, filterBreed, filterGroup, awardMins, debouncedSearchQuery])
-
-  const handleAwardMinChange = useCallback((key: ShowAwardKey, value: string) => {
-    setAwardMins((prev) => ({ ...prev, [key]: value }))
-  }, [])
+  }, [rankedDogs, filterBreed, debouncedSearchQuery])
 
   const handleResetFilters = useCallback(() => {
     setFilterYear(SHOW_ACTIVE_SEASON)
     setFilterBreed('')
-    setFilterGroup('')
-    setAwardMins({ ...EMPTY_AWARD_MINS })
     setSearchQuery('')
-  }, [])
-
-  const handleResetPanelFilters = useCallback(() => {
-    setFilterGroup('')
-    setAwardMins({ ...EMPTY_AWARD_MINS })
   }, [])
 
   const showListSkeleton = allDogs.length === 0 && (isPage0Loading || !isPage0Fetched)
@@ -355,12 +277,7 @@ export default function ShowRanking() {
         onBreedChange={setFilterBreed}
         breedValues={breeds}
         dogIndex={dogIndex}
-        filterGroup={filterGroup}
-        onGroupChange={setFilterGroup}
-        awardMins={awardMins}
-        onAwardMinChange={handleAwardMinChange}
         onResetFilters={handleResetFilters}
-        onResetPanelFilters={handleResetPanelFilters}
         dropdownRef={dropdownRef}
       />
 

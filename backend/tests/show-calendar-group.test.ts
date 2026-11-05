@@ -1,9 +1,11 @@
 import { describe, expect, it } from 'vitest'
 import {
+  exhibitionMatchesBreed,
   groupRkfMonoVariants,
   normalizeMergeText,
   rkfMonoMergeKey,
 } from '../../frontend/src/pages/Shows/showCalendarGroup'
+import { filterShowCalendarGroups } from '../../frontend/src/pages/Shows/showCalendarDate'
 import type { ShowRkfCalendarEntry } from '../../frontend/src/lib/staticData'
 
 function entry(partial: Partial<ShowRkfCalendarEntry> & Pick<ShowRkfCalendarEntry, 'id' | 'title'>): ShowRkfCalendarEntry {
@@ -60,5 +62,55 @@ describe('showCalendarGroup merge', () => {
     expect(rkfMonoMergeKey(club1)).not.toBe(rkfMonoMergeKey(club2))
     const groups = groupRkfMonoVariants([club1, club2])
     expect(groups).toHaveLength(2)
+  })
+
+  it('filters exhibitions by breed accurately', () => {
+    const monoRpb = entry({
+      id: 10,
+      title: 'Монопородная выставка РПБ',
+      breeds: 'Русская псовая борзая',
+      has_lc_protocol: true,
+    })
+    const monoToy = entry({
+      id: 20,
+      title: 'Монопородная выставка Русский Той',
+      breeds: 'Русский той',
+      has_lc_protocol: true,
+    })
+    const cacWithWhippet = entry({
+      id: 30,
+      title: 'Всепородная выставка САС',
+      has_lc_protocol: true,
+    })
+
+    // 1. exhibitionMatchesBreed tests
+    expect(exhibitionMatchesBreed(monoRpb, 'РУССКАЯ ПСОВАЯ БОРЗАЯ')).toBe(true)
+    expect(exhibitionMatchesBreed(monoToy, 'РУССКАЯ ПСОВАЯ БОРЗАЯ')).toBe(false)
+    expect(exhibitionMatchesBreed(cacWithWhippet, 'УИППЕТ', new Set([30]))).toBe(true)
+    expect(exhibitionMatchesBreed(cacWithWhippet, 'УИППЕТ', new Set([99]))).toBe(false)
+
+    // 2. filterShowCalendarGroups test with breed filter
+    const all = [monoRpb, monoToy, cacWithWhippet]
+    const filteredRpb = filterShowCalendarGroups(all, {
+      filterMonth: '',
+      filterBreed: 'РУССКАЯ ПСОВАЯ БОРЗАЯ',
+      allowedExhibitionIds: new Set([10]),
+      filterLcOnly: true,
+      searchQuery: '',
+      quickPreset: null,
+    })
+    expect(filteredRpb).toHaveLength(1)
+    expect(filteredRpb[0]!.representative.id).toBe(10)
+
+    const filteredWhippet = filterShowCalendarGroups(all, {
+      filterMonth: '',
+      filterBreed: 'УИППЕТ',
+      allowedExhibitionIds: new Set([30]),
+      filterLcOnly: true,
+      searchQuery: '',
+      quickPreset: null,
+    })
+    expect(filteredWhippet).toHaveLength(1)
+    expect(filteredWhippet[0]!.representative.id).toBe(30)
   })
 })

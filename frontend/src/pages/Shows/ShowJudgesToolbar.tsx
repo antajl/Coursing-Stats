@@ -131,7 +131,7 @@ export function ShowJudgesToolbar({
                 <button
                   type="button"
                   onClick={onResetFilters}
-                  className="shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full border border-old-money-200 bg-cream-50 text-charcoal-500 hover:text-charcoal-800 transition-colors cursor-pointer"
+                  className="cs-glass-pill shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full !text-charcoal-500 hover:!text-charcoal-800 transition-colors cursor-pointer select-none"
                   title="Сбросить фильтры"
                   aria-label="Сбросить фильтры"
                 >
@@ -190,7 +190,7 @@ export function ShowJudgesToolbar({
                 <button
                   type="button"
                   onClick={onResetFilters}
-                  className="shrink-0 inline-flex h-8 items-center gap-1.5 rounded-full border border-old-money-200 bg-cream-50 px-3 text-xs font-semibold text-charcoal-600 hover:border-camel-500 hover:text-charcoal-900 hover:bg-cream-100 transition-colors cursor-pointer"
+                  className="cs-glass-pill shrink-0 inline-flex h-8 items-center gap-1.5 rounded-full px-3 text-xs font-semibold !text-charcoal-600 hover:!text-charcoal-900 transition-colors cursor-pointer select-none"
                   title="Сбросить все фильтры"
                 >
                   <X className="h-3.5 w-3.5" />

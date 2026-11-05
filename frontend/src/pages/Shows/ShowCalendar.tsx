@@ -6,9 +6,12 @@ import EmptyState from '../../components/EmptyState'
 import SkeletonLoader from '../../components/SkeletonLoader'
 import {
   getShowCalendar,
+  getShowBreedCalendar,
   getShowRkfCalendarYears,
   type ShowRkfCalendarEntry,
 } from '../../lib/staticData'
+import { canonicalBreed, formatBreedName, matchesBreedFilter } from '../../lib/breedMapping'
+import { SHOW_CANDIDATE_BREEDS } from '../TopDogs/QuickBreedBar'
 import { useInfiniteScroll } from '../../hooks/useInfiniteScroll'
 import { MONTH_FILTER_OPTIONS } from '../Events/eventListUtils'
 import {
@@ -19,7 +22,6 @@ import {
   ShowCalendarToolbar,
   type QuickPreset,
 } from './ShowCalendar/ShowCalendarToolbar'
-import ShowCalendarHint from './ShowCalendar/ShowCalendarHint'
 import {
   ShowCalendarMonthList,
   type ShowCalendarFlatRow,
@@ -38,7 +40,8 @@ export default function ShowCalendar() {
     if (!monthParam || monthParam === 'from_previous') return ''
     return monthParam
   })
-  
+  const [filterBreed, setFilterBreed] = useState(() => searchParams.get('breed') || '')
+
   const [searchQuery, setSearchQuery] = useState(() => searchParams.get('search') || '')
   const [quickPreset, setQuickPreset] = useState<QuickPreset>(null)
   const [expandedKeys, setExpandedKeys] = useState<Set<string>>(() => new Set())
@@ -55,11 +58,19 @@ export default function ShowCalendar() {
     staleTime: 5 * 60 * 1000,
   })
 
+  // Load breed index for the year (lazy, cached)
+  const { data: breedCalendarData } = useQuery({
+    queryKey: ['showBreedCalendar', filterYear],
+    queryFn: () => getShowBreedCalendar(filterYear || CURRENT_YEAR),
+    staleTime: 10 * 60 * 1000,
+  })
+
   useEffect(() => {
     if (calendarData?.success && calendarData.data) setExhibitions(calendarData.data)
     else if (calendarData?.success) setExhibitions([])
   }, [calendarData])
 
+  // Sync state to URL search params
   useEffect(() => {
     setSearchParams(
       (prev) => {
@@ -68,28 +79,66 @@ export default function ShowCalendar() {
         else params.delete('year')
         if (filterMonth) params.set('month', filterMonth)
         else params.delete('month')
+        if (filterBreed) params.set('breed', filterBreed)
+        else params.delete('breed')
         if (searchQuery) params.set('search', searchQuery)
         else params.delete('search')
-        
+
         return params
       },
       { replace: true },
     )
-  }, [filterYear, filterMonth, searchQuery, setSearchParams])
+  }, [filterYear, filterMonth, filterBreed, searchQuery, setSearchParams])
+
+  // Sync URL changes back to state (e.g. browser back/forward or tab switch)
+  useEffect(() => {
+    const breedFromUrl = searchParams.get('breed') || ''
+    if (breedFromUrl !== filterBreed) {
+      setFilterBreed(breedFromUrl)
+    }
+  }, [searchParams])
 
   useEffect(() => {
     setExpandedKeys(new Set())
-  }, [filterYear, filterMonth, searchQuery, quickPreset])
+  }, [filterYear, filterMonth, filterBreed, searchQuery, quickPreset])
+
+  // Build matching exhibition IDs for the selected breed
+  const allowedExhibitionIds = useMemo(() => {
+    if (!filterBreed || !breedCalendarData?.data) return null
+    const canon = canonicalBreed(filterBreed).toUpperCase().trim()
+    const data = breedCalendarData.data
+    const ids = new Set<number>()
+
+    if (data[canon]) {
+      for (const id of data[canon]) ids.add(id)
+    }
+    for (const [key, list] of Object.entries(data)) {
+      if (key !== canon && matchesBreedFilter(key, filterBreed)) {
+        for (const id of list) ids.add(id)
+      }
+    }
+    return ids
+  }, [filterBreed, breedCalendarData])
+
+  // Available breed options for dropdown
+  const breedValues = useMemo(() => {
+    if (breedCalendarData?.data) {
+      return Object.keys(breedCalendarData.data).sort((a, b) => a.localeCompare(b, 'ru'))
+    }
+    return SHOW_CANDIDATE_BREEDS.map((b) => b.key)
+  }, [breedCalendarData])
 
   const filteredGroups = useMemo(
     () =>
       filterShowCalendarGroups(exhibitions, {
         filterMonth,
+        filterBreed,
+        allowedExhibitionIds,
         filterLcOnly: true,
         searchQuery,
         quickPreset,
       }),
-    [exhibitions, searchQuery, quickPreset, filterMonth],
+    [exhibitions, searchQuery, quickPreset, filterMonth, filterBreed, allowedExhibitionIds],
   )
 
   const monthGroups = useMemo(
@@ -116,52 +165,13 @@ export default function ShowCalendar() {
   const { visibleCount, loadMoreRef, hasMore } = useInfiniteScroll(flatVisible.length, [
     filterYear,
     filterMonth,
+    filterBreed,
     searchQuery,
     quickPreset,
     flatVisible.length,
   ])
 
   const visibleRows = flatVisible.slice(0, visibleCount)
-  const withResultCount = useMemo(
-    () => filteredGroups.filter((g) => g.hasProtocol).length,
-    [filteredGroups],
-  )
-  const hasActiveFilters = Boolean(
-    filterYear !== CURRENT_SEASON || filterMonth || searchQuery || quickPreset,
-  )
-
-  const activeFilterChips = useMemo(() => {
-    const chips: Array<{ key: string; label: string; onRemove: () => void }> = []
-    if (filterYear !== CURRENT_SEASON) {
-      chips.push({
-        key: 'year',
-        label: filterYear || 'Все года',
-        onRemove: () => setFilterYear(CURRENT_SEASON),
-      })
-    }
-    if (filterMonth) {
-      chips.push({
-        key: 'month',
-        label: MONTH_FILTER_OPTIONS.find((m) => m.value === filterMonth)?.label || filterMonth,
-        onRemove: () => setFilterMonth(''),
-      })
-    }
-    if (quickPreset === 'upcoming30') {
-      chips.push({
-        key: 'preset-30',
-        label: 'Ближайшие 30 дней',
-        onRemove: () => setQuickPreset(null),
-      })
-    }
-    return chips
-  }, [filterYear, filterMonth, quickPreset])
-
-  const handleResetFilters = () => {
-    setFilterYear(CURRENT_SEASON)
-    setFilterMonth('')
-    setSearchQuery('')
-    setQuickPreset(null)
-  }
 
   const toggleExpanded = (key: string) => {
     setExpandedKeys((prev) => {
@@ -192,6 +202,13 @@ export default function ShowCalendar() {
     return set
   }, [exhibitions])
 
+  const countSummary = useMemo(() => {
+    if (filterBreed) {
+      return `Выставок с породой «${formatBreedName(filterBreed)}»: ${filteredGroups.length} за ${filterYear || CURRENT_SEASON} год`
+    }
+    return `Выставок с протоколом: ${filteredGroups.length} за ${filterYear || CURRENT_SEASON} год`
+  }, [filterBreed, filteredGroups.length, filterYear])
+
   const pageToolbar = (
     <PageToolbar
       bare
@@ -206,6 +223,9 @@ export default function ShowCalendar() {
           onYearChange={setFilterYear}
           filterMonth={filterMonth}
           onMonthChange={setFilterMonth}
+          filterBreed={filterBreed}
+          onBreedChange={setFilterBreed}
+          breedValues={breedValues}
           onClearQuickPreset={() => setQuickPreset(null)}
           availableMonths={availableMonths}
           totalCount={filteredGroups.length}
@@ -213,9 +233,7 @@ export default function ShowCalendar() {
       }
       bottomLeft={
         <div className="hidden sm:flex items-center gap-2 text-xs text-charcoal-500">
-          <p>
-            {`Выставок с протоколом: ${filteredGroups.length} из ${withResultCount} за ${filterYear || CURRENT_SEASON} год`}
-          </p>
+          <p>{countSummary}</p>
         </div>
       }
       bottomRowClassName="hidden sm:flex"
@@ -250,7 +268,11 @@ export default function ShowCalendar() {
       {filteredGroups.length === 0 ? (
         <EmptyState
           title="Выставки не найдены"
-          description="Попробуйте изменить фильтры или поисковый запрос"
+          description={
+            filterBreed
+              ? `Для породы «${formatBreedName(filterBreed)}» не найдено выставок с выбранными фильтрами`
+              : 'Попробуйте изменить фильтры или поисковый запрос'
+          }
         />
       ) : (
         <ShowCalendarMonthList

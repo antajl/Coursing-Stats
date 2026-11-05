@@ -2,6 +2,7 @@ import type { ShowRkfCalendarEntry } from '../../lib/staticData'
 import { formatMonthShortRu } from '../Events/eventListUtils'
 import {
   exhibitionHasProtocol,
+  exhibitionMatchesBreed,
   groupMatchesSearch,
   groupRkfMonoVariants,
   type RkfCalendarGroup,
@@ -44,6 +45,8 @@ export function filterShowCalendarGroups(
   exhibitions: ShowRkfCalendarEntry[],
   opts: {
     filterMonth: string
+    filterBreed?: string
+    allowedExhibitionIds?: Set<number> | null
     filterLcOnly: boolean
     searchQuery: string
     quickPreset: 'upcoming30' | null
@@ -79,7 +82,14 @@ export function filterShowCalendarGroups(
     })
   }
 
-  const baseFiltered = opts.filterLcOnly ? monthFiltered.filter(exhibitionHasProtocol) : monthFiltered
+  let breedFiltered = monthFiltered
+  if (opts.filterBreed) {
+    breedFiltered = monthFiltered.filter((ex) =>
+      exhibitionMatchesBreed(ex, opts.filterBreed!, opts.allowedExhibitionIds),
+    )
+  }
+
+  const baseFiltered = opts.filterLcOnly ? breedFiltered.filter(exhibitionHasProtocol) : breedFiltered
   const groups = groupRkfMonoVariants(baseFiltered)
   return groups.filter((group) => {
     if (opts.filterLcOnly && !group.hasProtocol) return false

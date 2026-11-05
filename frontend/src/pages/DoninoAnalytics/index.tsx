@@ -135,7 +135,6 @@ export default function DoninoAnalytics() {
         activeTab="analytics"
         onChange={handleSubNavChange}
         ariaLabel="Разделы Донино"
-        layout="scroll"
       />
 
       <div className="space-y-4 sm:space-y-5">

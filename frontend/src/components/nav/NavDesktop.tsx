@@ -1,18 +1,9 @@
 import { Link } from 'react-router-dom'
 import { useRef } from 'react'
 import { Icons } from '../../lib/icons'
-import { NavMenuDropdown } from '../NavMenuDropdown'
-import { usePublicCalendarVisible } from '../../hooks/useStaticData'
 import { useNavLogoVisibility } from './useNavLogoVisibility'
 import FavoritesCapsule from './FavoritesCapsule'
-import {
-  competitionsMenuItems,
-  DONINO_MENU_ITEMS,
-  DATA_SOURCE_LINKS,
-  GUIDE_MENU_ITEMS,
-  showsMenuItems,
-  type OpenMenuId,
-} from './navLinks'
+import type { OpenMenuId } from './navLinks'
 
 type NavDesktopProps = {
   isActive: (path: string) => boolean
@@ -21,11 +12,8 @@ type NavDesktopProps = {
   isSpeedRecordsActive: boolean
   isGuideActive: boolean
   isAboutActive: boolean
-  openMenu: OpenMenuId
-  setMenuOpen: (id: Exclude<OpenMenuId, null>) => (open: boolean) => void
-  sourcesOpen: boolean
-  onSourcesMouseEnter: () => void
-  onSourcesMouseLeave: () => void
+  openMenu?: OpenMenuId
+  setMenuOpen?: (id: Exclude<OpenMenuId, null>) => (open: boolean) => void
   onOpenSearch: () => void
 }
 
@@ -36,17 +24,10 @@ export function NavDesktop({
   isSpeedRecordsActive,
   isGuideActive,
   isAboutActive,
-  openMenu,
-  setMenuOpen,
-  sourcesOpen,
-  onSourcesMouseEnter,
-  onSourcesMouseLeave,
+  openMenu: _openMenu,
+  setMenuOpen: _setMenuOpen,
   onOpenSearch,
 }: NavDesktopProps) {
-  const competitionsCalendar = usePublicCalendarVisible('competitions')
-  const showsCalendar = usePublicCalendarVisible('shows')
-  const competitionsItems = competitionsMenuItems(competitionsCalendar)
-  const showsItems = showsMenuItems(showsCalendar)
   const logoRef = useRef<HTMLAnchorElement>(null)
   const navCenterRef = useRef<HTMLDivElement>(null)
   const { logoVisible, logoOpacity } = useNavLogoVisibility(logoRef, navCenterRef)
@@ -105,63 +86,81 @@ export function NavDesktop({
             }`}
           />
         </Link>
-        <NavMenuDropdown
-          open={openMenu === 'competitions'}
-          onOpenChange={setMenuOpen('competitions')}
-          defaultTo="/competitions/?tab=ranking"
+
+        {/* Соревнования */}
+        <Link
+          to="/competitions/?tab=ranking"
+          className={`group relative flex shrink-0 items-center whitespace-nowrap py-2 px-2.5 text-xs font-semibold transition-colors duration-300 lg:px-3.5 lg:text-sm 2xl:px-5 ${
+            isCompetitionsActive ? 'text-camel-700' : 'text-charcoal-700 hover:text-charcoal-900'
+          }`}
           title="Рейтинг собак и судьи: курсинг, БЗМП, бега борзых"
-          isSectionActive={isCompetitionsActive}
-          chevronLabel="Меню раздела Соревнования"
-          ariaLabel="Соревнования - рейтинг, архив, судьи"
-          label={
-            <>
-              <span className="xl:hidden">Соревн.</span>
-              <span className="hidden xl:inline">Соревнования</span>
-            </>
-          }
-          items={competitionsItems}
-        />
-        <NavMenuDropdown
-          open={openMenu === 'shows'}
-          onOpenChange={setMenuOpen('shows')}
-          defaultTo="/shows/?tab=ranking"
-          title="Рейтинг собак и судьи на выставках"
-          isSectionActive={isShowsActive}
-          chevronLabel="Меню раздела Выставки"
-          ariaLabel="Выставки - рейтинг, календарь, судьи"
-          label="Выставки"
-          items={showsItems}
-          onIntent={() => {
+        >
+          <span className="relative z-10">
+            <span className="xl:hidden">Соревн.</span>
+            <span className="hidden xl:inline">Соревнования</span>
+          </span>
+          <span
+            className={`pointer-events-none absolute bottom-0 left-0 h-0.5 w-full origin-left bg-camel-600 transition-transform duration-300 ${
+              isCompetitionsActive ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+            }`}
+          />
+        </Link>
+
+        {/* Выставки */}
+        <Link
+          to="/shows/?tab=ranking"
+          onMouseEnter={() => {
             void import('../../lib/prefetchShows').then((m) => m.prefetchShowsHeavyTabs())
           }}
-        />
-        <NavMenuDropdown
-          open={openMenu === 'donino'}
-          onOpenChange={setMenuOpen('donino')}
-          defaultTo="/speed-records/?tab=records"
+          className={`group relative flex shrink-0 items-center whitespace-nowrap py-2 px-2.5 text-xs font-semibold transition-colors duration-300 lg:px-3.5 lg:text-sm 2xl:px-5 ${
+            isShowsActive ? 'text-camel-700' : 'text-charcoal-700 hover:text-charcoal-900'
+          }`}
+          title="Рейтинг собак и судьи на выставках"
+        >
+          <span className="relative z-10">Выставки</span>
+          <span
+            className={`pointer-events-none absolute bottom-0 left-0 h-0.5 w-full origin-left bg-camel-600 transition-transform duration-300 ${
+              isShowsActive ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+            }`}
+          />
+        </Link>
+
+        {/* Курсинг Донино */}
+        <Link
+          to="/speed-records/?tab=records"
+          className={`group relative flex shrink-0 items-center whitespace-nowrap py-2 px-2.5 text-xs font-semibold transition-colors duration-300 lg:px-3.5 lg:text-sm 2xl:px-5 ${
+            isSpeedRecordsActive ? 'text-camel-700' : 'text-charcoal-700 hover:text-charcoal-900'
+          }`}
           title="Рекорды полигона Курсинг Донино"
-          isSectionActive={isSpeedRecordsActive}
-          chevronLabel="Меню раздела Курсинг Донино"
-          ariaLabel="Курсинг Донино - записи и статистика"
-          label={
-            <>
-              <span className="xl:hidden">Донино</span>
-              <span className="hidden xl:inline">Курсинг Донино</span>
-            </>
-          }
-          items={DONINO_MENU_ITEMS}
-        />
-        <NavMenuDropdown
-          open={openMenu === 'guide'}
-          onOpenChange={setMenuOpen('guide')}
-          defaultTo="/guide/?tab=titles"
+        >
+          <span className="relative z-10">
+            <span className="xl:hidden">Донино</span>
+            <span className="hidden xl:inline">Курсинг Донино</span>
+          </span>
+          <span
+            className={`pointer-events-none absolute bottom-0 left-0 h-0.5 w-full origin-left bg-camel-600 transition-transform duration-300 ${
+              isSpeedRecordsActive ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+            }`}
+          />
+        </Link>
+
+        {/* Справка */}
+        <Link
+          to="/guide/?tab=titles"
+          className={`group relative flex shrink-0 items-center whitespace-nowrap py-2 px-2.5 text-xs font-semibold transition-colors duration-300 lg:px-3.5 lg:text-sm 2xl:px-5 ${
+            isGuideActive ? 'text-camel-700' : 'text-charcoal-700 hover:text-charcoal-900'
+          }`}
           title="Правила, титулы, протоколы и рейтинг"
-          isSectionActive={isGuideActive}
-          chevronLabel="Меню раздела Справка"
-          ariaLabel="Справка - правила, титулы, протоколы"
-          label="Справка"
-          items={GUIDE_MENU_ITEMS}
-        />
+        >
+          <span className="relative z-10">Справка</span>
+          <span
+            className={`pointer-events-none absolute bottom-0 left-0 h-0.5 w-full origin-left bg-camel-600 transition-transform duration-300 ${
+              isGuideActive ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+            }`}
+          />
+        </Link>
+
+        {/* О проекте */}
         <Link
           to="/about/"
           className={`group relative flex shrink-0 items-center whitespace-nowrap py-2 px-2.5 text-xs font-semibold transition-colors duration-300 lg:px-3.5 lg:text-sm 2xl:px-5 ${
@@ -189,39 +188,6 @@ export function NavDesktop({
           <span className="hidden 2xl:inline">Поиск</span>
         </button>
         <FavoritesCapsule />
-        <div
-          className="relative shrink-0"
-          onMouseEnter={onSourcesMouseEnter}
-          onMouseLeave={onSourcesMouseLeave}
-        >
-          <button
-            aria-expanded={sourcesOpen}
-            aria-label="Источники данных"
-            className="cs-glass-pill flex items-center justify-center h-9 w-9 rounded-full text-charcoal-700 group cursor-pointer shrink-0"
-            title="Источники данных"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-camel-700 transition-transform group-hover:scale-110" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
-            </svg>
-          </button>
-          {sourcesOpen && (
-            <div className="absolute right-0 mt-1 w-64 bg-white rounded-xl shadow-xl border-2 border-old-money-200 overflow-hidden z-[100]">
-              {DATA_SOURCE_LINKS.map((link, index) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`block px-4 py-3 text-sm text-charcoal-700 hover:bg-old-money-50 transition-colors${
-                    index < DATA_SOURCE_LINKS.length - 1 ? ' border-b border-old-money-100' : ''
-                  }`}
-                >
-                  {link.label}
-                </a>
-              ))}
-            </div>
-          )}
-        </div>
       </div>
     </div>
   )

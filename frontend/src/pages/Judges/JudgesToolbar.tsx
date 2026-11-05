@@ -4,6 +4,7 @@ import PageToolbar from '../../components/toolbar/PageToolbar'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
 import ModernDropdown from '../../components/ui/ModernDropdown'
 import BreedSearchDropdown from '../../components/ui/BreedSearchDropdown'
+import QuickBreedBar from '../TopDogs/QuickBreedBar'
 import { toolbarPillTriggerClass } from '../../lib/toolbar'
 import { formatBreedName } from '../../lib/breedMapping'
 import type { DogsIndexEntry } from '../../lib/competingBreeds'
@@ -136,7 +137,7 @@ export function JudgesToolbar({
       topRowClassName="flex-nowrap"
       filters={
         <div className="w-full min-w-0">
-          {/* Мобильная строка (32px): Поиск + Год + Порода + Дисциплина + Сброс */}
+          {/* Мобильная строка (32px): Поиск + Год + Дисциплина + Порода + Сброс */}
           <div className="flex sm:hidden items-center gap-1.5 w-full min-w-0 overflow-x-auto no-scrollbar py-0.5">
             <ToolbarSearch
               value={searchQuery}
@@ -162,25 +163,6 @@ export function JudgesToolbar({
               {renderYearMenuItems(() => setMobileYearOpen(false))}
             </ModernDropdown>
 
-            {/* Breed Dropdown */}
-            <BreedSearchDropdown
-              breeds={availableBreeds}
-              selectedBreed={filterBreed}
-              onSelect={setFilterBreed}
-              trigger={
-                <button
-                  type="button"
-                  className={`shrink-0 ${toolbarPillTriggerClass(Boolean(filterBreed))}`}
-                >
-                  <span className="truncate max-w-[100px]">
-                    {filterBreed ? formatBreedName(filterBreed) : 'Порода'}
-                  </span>
-                  <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
-                </button>
-              }
-              dogIndex={dogIndex}
-            />
-
             {/* Discipline Dropdown */}
             <ModernDropdown
               trigger={
@@ -201,12 +183,31 @@ export function JudgesToolbar({
               {renderDisciplineMenuItems(() => setMobileDisciplineOpen(false))}
             </ModernDropdown>
 
+            {/* Breed Dropdown */}
+            <BreedSearchDropdown
+              breeds={availableBreeds}
+              selectedBreed={filterBreed}
+              onSelect={setFilterBreed}
+              trigger={
+                <button
+                  type="button"
+                  className={`shrink-0 ${toolbarPillTriggerClass(Boolean(filterBreed))}`}
+                >
+                  <span className="truncate max-w-[100px]">
+                    {filterBreed ? formatBreedName(filterBreed) : 'Порода'}
+                  </span>
+                  <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
+                </button>
+              }
+              dogIndex={dogIndex}
+            />
+
             {hasActiveFilters && (
               <div className="ml-auto shrink-0">
                 <button
                   type="button"
                   onClick={clearFilters}
-                  className="shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full border border-old-money-200 bg-cream-50 text-charcoal-500 hover:text-charcoal-800 transition-colors cursor-pointer"
+                  className="cs-glass-pill shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full !text-charcoal-500 hover:!text-charcoal-800 transition-colors cursor-pointer select-none"
                   title="Сбросить фильтры"
                   aria-label="Сбросить фильтры"
                 >
@@ -216,15 +217,16 @@ export function JudgesToolbar({
             )}
           </div>
 
-          {/* Десктопная строка */}
-          <div className="hidden sm:flex sm:items-center gap-2 w-full">
+          {/* Десктопная строка: Поиск + Год + Дисциплина + Разделитель + Порода (QuickBreedBar) + Сброс */}
+          <div className="hidden sm:flex sm:items-center gap-2 w-full min-w-0">
             <ToolbarSearch
               value={searchQuery}
               onChange={setSearchQuery}
               placeholder="Фамилия судьи…"
             />
-            <div className="flex max-w-full items-center gap-1.5 shrink-0">
-              {/* Year Dropdown */}
+
+            {/* Year Dropdown */}
+            <div className="shrink-0">
               <ModernDropdown
                 trigger={
                   <button
@@ -241,27 +243,10 @@ export function JudgesToolbar({
               >
                 {renderYearMenuItems(() => setDesktopYearOpen(false))}
               </ModernDropdown>
+            </div>
 
-              {/* Breed Dropdown */}
-              <BreedSearchDropdown
-                breeds={availableBreeds}
-                selectedBreed={filterBreed}
-                onSelect={setFilterBreed}
-                trigger={
-                  <button
-                    type="button"
-                    className={`shrink-0 ${toolbarPillTriggerClass(Boolean(filterBreed))}`}
-                  >
-                    <span className="truncate max-w-[140px]">
-                      {filterBreed ? formatBreedName(filterBreed) : 'Порода'}
-                    </span>
-                    <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
-                  </button>
-                }
-                dogIndex={dogIndex}
-              />
-
-              {/* Discipline Dropdown */}
+            {/* Discipline Dropdown */}
+            <div className="shrink-0">
               <ModernDropdown
                 trigger={
                   <button
@@ -278,19 +263,31 @@ export function JudgesToolbar({
               >
                 {renderDisciplineMenuItems(() => setDesktopDisciplineOpen(false))}
               </ModernDropdown>
+            </div>
 
-              {/* Reset Filters button */}
-              {hasActiveFilters && (
-                <button
-                  type="button"
-                  onClick={clearFilters}
-                  className="shrink-0 inline-flex h-8 items-center gap-1.5 rounded-full border border-old-money-200 bg-cream-50 px-3 text-xs font-semibold text-charcoal-600 hover:border-camel-500 hover:text-charcoal-900 hover:bg-cream-100 transition-colors cursor-pointer"
-                  title="Сбросить все фильтры"
-                >
-                  <X className="h-3.5 w-3.5" />
-                  <span>Сбросить</span>
-                </button>
-              )}
+            {/* Reset Filters button — слева перед разделителем */}
+            {hasActiveFilters && (
+              <button
+                type="button"
+                onClick={clearFilters}
+                className="cs-glass-pill shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full !text-charcoal-500 hover:!text-charcoal-800 transition-colors cursor-pointer select-none"
+                title="Сбросить все фильтры"
+                aria-label="Сбросить все фильтры"
+              >
+                <X className="h-4 w-4" />
+              </button>
+            )}
+
+            <div className="h-5 w-px bg-old-money-300 shrink-0 mx-0.5" aria-hidden="true" />
+
+            {/* Breed QuickBreedBar — всегда самая правая часть панели фильтра */}
+            <div className="flex-1 min-w-0">
+              <QuickBreedBar
+                selectedBreed={filterBreed}
+                onSelectBreed={setFilterBreed}
+                breedValues={availableBreeds}
+                dogIndex={dogIndex}
+              />
             </div>
           </div>
         </div>

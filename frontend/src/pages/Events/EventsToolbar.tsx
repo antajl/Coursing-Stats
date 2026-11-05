@@ -100,7 +100,7 @@ export default function EventsToolbar({
       trigger={
         <button
           type="button"
-          className="inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full border border-old-money-300/80 bg-cream-50 px-3 text-xs font-semibold text-charcoal-800 hover:border-camel-500 hover:bg-cream-100 hover:text-charcoal-900 transition-all cursor-pointer shadow-2xs"
+          className="cs-glass-pill inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full px-3 text-xs font-semibold !text-charcoal-700 transition-all cursor-pointer select-none"
           aria-label="Об открытом архиве и источниках"
         >
           <Info className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
@@ -120,7 +120,7 @@ export default function EventsToolbar({
       trigger={
         <button
           type="button"
-          className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-old-money-300/80 bg-cream-50 text-xs font-semibold text-charcoal-800 hover:border-camel-500 hover:bg-cream-100 transition-all cursor-pointer shadow-2xs"
+          className="cs-glass-pill inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-xs font-semibold !text-charcoal-700 transition-all cursor-pointer select-none"
           aria-label="Об архиве и источниках"
           title="Об архиве"
         >
@@ -212,7 +212,7 @@ export default function EventsToolbar({
             <button
               type="button"
               onClick={onResetFilters}
-              className="shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full border border-old-money-200 bg-cream-50 text-charcoal-500 hover:text-charcoal-800 transition-colors cursor-pointer"
+              className="cs-glass-pill shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full !text-charcoal-500 hover:!text-charcoal-800 transition-colors cursor-pointer select-none"
               title="Сбросить фильтры"
               aria-label="Сбросить фильтры"
             >
@@ -242,7 +242,7 @@ export default function EventsToolbar({
             availableMonthsByYear={availableMonthsByYear}
           />
 
-          <div className="flex items-center gap-1 bg-cream-50 p-0.5 rounded-full border border-old-money-200 h-8">
+          <div className="flex items-center gap-1.5 overflow-visible py-1 -my-1">
             {DISCIPLINE_OPTIONS.map((d) => {
               const active = filterDiscipline === d.value
               return (
@@ -250,10 +250,10 @@ export default function EventsToolbar({
                   key={d.value}
                   type="button"
                   onClick={() => handleDisciplineToggle(d.value)}
-                  className={`px-2.5 py-1 rounded-full text-xs font-semibold transition-all cursor-pointer ${
+                  className={`h-8 px-3 rounded-full text-xs font-semibold transition-all cursor-pointer whitespace-nowrap select-none ${
                     active
-                      ? 'bg-camel-100 text-camel-950 font-semibold shadow-2xs'
-                      : 'text-charcoal-700 hover:text-charcoal-900 hover:bg-cream-100'
+                      ? 'cs-glass-pill-active !font-semibold !text-camel-950'
+                      : 'cs-glass-pill !font-semibold !text-charcoal-700'
                   }`}
                 >
                   {d.label}
@@ -266,7 +266,7 @@ export default function EventsToolbar({
             <button
               type="button"
               onClick={onResetFilters}
-              className="relative shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full border border-old-money-200 bg-cream-50 text-charcoal-500 hover:text-charcoal-800 transition-colors cursor-pointer before:absolute before:-inset-1.5 before:content-['']"
+              className="cs-glass-pill shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full !text-charcoal-500 hover:!text-charcoal-800 transition-colors cursor-pointer select-none"
               title="Сбросить фильтры"
               aria-label="Сбросить фильтры"
             >

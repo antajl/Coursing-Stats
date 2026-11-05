@@ -55,6 +55,7 @@ export { getDogProfile, getDogEvents, getDogProfileFile } from './dogs'
 
 export {
   getShowCalendar,
+  getShowBreedCalendar,
   getShowFeatured,
   getShowRkfCalendar,
   getShowRkfCalendarYears,

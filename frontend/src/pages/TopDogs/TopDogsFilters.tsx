@@ -1,9 +1,10 @@
-import { useMemo, useState, type ReactNode } from 'react'
+import { useState, type ReactNode } from 'react'
 import { ChevronDown, X } from 'lucide-react'
 import DogSexIcon from '../../components/DogSexIcon'
 import PageToolbar from '../../components/toolbar/PageToolbar'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
 import ModernDropdown from '../../components/ui/ModernDropdown'
+import YearDropdown from '../../components/ui/YearDropdown'
 import BreedSearchDropdown from '../../components/ui/BreedSearchDropdown'
 import QuickBreedBar from './QuickBreedBar'
 import { formatBreedName } from '../../lib/breedMapping'
@@ -59,29 +60,12 @@ export default function TopDogsFilters({
   coursingCount,
   racingCount,
 }: TopDogsFiltersProps) {
-  const [mobileYearOpen, setMobileYearOpen] = useState(false)
-  const [desktopYearOpen, setDesktopYearOpen] = useState(false)
   const [mobileSexOpen, setMobileSexOpen] = useState(false)
   const [desktopSexOpen, setDesktopSexOpen] = useState(false)
-
-  const sortedYears = useMemo(
-    () => [...yearValues].map(String).sort((a, b) => Number(b) - Number(a)),
-    [yearValues]
-  )
 
   const isYearNonDefault = filterYear !== '' && filterYear !== currentSeason
   const isSexActive = Boolean(filterSex)
   const hasActiveFilters = isYearNonDefault || Boolean(filterBreed) || Boolean(filterSex) || Boolean(searchQuery.trim())
-
-  const yearTrigger = (
-    <button
-      type="button"
-      className={toolbarPillTriggerClass(isYearNonDefault)}
-    >
-      {filterYear || 'Все года'}
-      <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
-    </button>
-  )
 
   const sexTriggerLabel = filterSex === 'm' ? 'Кобели' : filterSex === 'f' ? 'Суки' : 'Пол'
 
@@ -164,48 +148,12 @@ export default function TopDogsFilters({
 
         {/* Выбор года */}
         <div className="shrink-0">
-          <ModernDropdown
-            trigger={yearTrigger}
-            isOpen={mobileYearOpen}
-            onOpenChange={setMobileYearOpen}
-            width="120px"
-          >
-            <div className="p-1 min-w-[100px]">
-              <div className="max-h-60 overflow-y-auto" role="menu">
-                <button
-                  role="menuitem"
-                  onClick={() => {
-                    onYearChange('')
-                    setMobileYearOpen(false)
-                  }}
-                  className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
-                    !filterYear
-                      ? 'bg-camel-100 text-camel-950 font-semibold'
-                      : 'text-charcoal-700 hover:bg-camel-100'
-                  }`}
-                >
-                  Все года
-                </button>
-                {sortedYears.map((year) => (
-                  <button
-                    key={year}
-                    role="menuitem"
-                    onClick={() => {
-                      onYearChange(year)
-                      setMobileYearOpen(false)
-                    }}
-                    className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
-                      filterYear === year
-                        ? 'bg-camel-100 text-camel-950 font-semibold'
-                        : 'text-charcoal-700 hover:bg-camel-100'
-                    }`}
-                  >
-                    {year}
-                  </button>
-                ))}
-              </div>
-            </div>
-          </ModernDropdown>
+          <YearDropdown
+            years={yearValues}
+            selectedYear={filterYear}
+            currentSeason={currentSeason}
+            onSelectYear={onYearChange}
+          />
         </div>
 
         {/* Выбор пола */}
@@ -248,7 +196,7 @@ export default function TopDogsFilters({
             <button
               type="button"
               onClick={onResetFilters}
-              className="relative shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full border border-old-money-200 bg-cream-50 text-charcoal-500 hover:text-charcoal-800 transition-colors before:absolute before:-inset-1.5 before:content-['']"
+              className="cs-glass-pill shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full !text-charcoal-500 hover:!text-charcoal-800 transition-colors cursor-pointer select-none"
               title="Сбросить фильтры"
               aria-label="Сбросить фильтры"
             >
@@ -275,48 +223,12 @@ export default function TopDogsFilters({
               />
 
               <div className="shrink-0">
-                <ModernDropdown
-                  trigger={yearTrigger}
-                  isOpen={desktopYearOpen}
-                  onOpenChange={setDesktopYearOpen}
-                  width="120px"
-                >
-                  <div className="p-1 min-w-[100px]">
-                    <div className="max-h-60 overflow-y-auto" role="menu">
-                      <button
-                        role="menuitem"
-                        onClick={() => {
-                          onYearChange('')
-                          setDesktopYearOpen(false)
-                        }}
-                        className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
-                          !filterYear
-                            ? 'bg-camel-100 text-camel-950 font-semibold'
-                            : 'text-charcoal-700 hover:bg-camel-100'
-                        }`}
-                      >
-                        Все года
-                      </button>
-                      {sortedYears.map((year) => (
-                        <button
-                          key={year}
-                          role="menuitem"
-                          onClick={() => {
-                            onYearChange(year)
-                            setDesktopYearOpen(false)
-                          }}
-                          className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
-                            filterYear === year
-                              ? 'bg-camel-100 text-camel-950 font-semibold'
-                              : 'text-charcoal-700 hover:bg-camel-100'
-                          }`}
-                        >
-                          {year}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                </ModernDropdown>
+                <YearDropdown
+                  years={yearValues}
+                  selectedYear={filterYear}
+                  currentSeason={currentSeason}
+                  onSelectYear={onYearChange}
+                />
               </div>
 
               {/* Выбор пола */}
@@ -331,8 +243,25 @@ export default function TopDogsFilters({
                 </ModernDropdown>
               </div>
 
+              {/* Кнопка Инфо о рейтинге (i) — слева */}
+              {trailing && <div className="shrink-0">{trailing}</div>}
+
+              {/* Сброс фильтров (если активны) — слева перед разделителем */}
+              {hasActiveFilters && (
+                <button
+                  type="button"
+                  onClick={onResetFilters}
+                  className="cs-glass-pill shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full !text-charcoal-500 hover:!text-charcoal-800 transition-colors cursor-pointer select-none"
+                  title="Сбросить фильтры"
+                  aria-label="Сбросить фильтры"
+                >
+                  <X className="h-4 w-4" />
+                </button>
+              )}
+
               <div className="h-5 w-px bg-old-money-300 shrink-0 mx-0.5" aria-hidden="true" />
 
+              {/* Породы — всегда самая правая часть панели фильтров */}
               <div className="flex-1 min-w-0">
                 <QuickBreedBar
                   selectedBreed={filterBreed}
@@ -341,22 +270,8 @@ export default function TopDogsFilters({
                   dogIndex={dogIndex}
                 />
               </div>
-
-              {/* Сброс фильтров (если активны) */}
-              {hasActiveFilters && (
-                <button
-                  type="button"
-                  onClick={onResetFilters}
-                  className="relative shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full border border-old-money-200 bg-cream-50 text-charcoal-500 hover:text-charcoal-800 transition-colors before:absolute before:-inset-1.5 before:content-['']"
-                  title="Сбросить фильтры"
-                  aria-label="Сбросить фильтры"
-                >
-                  <X className="h-4 w-4" />
-                </button>
-              )}
             </div>
           }
-          trailing={trailing}
         />
       </div>
     </div>

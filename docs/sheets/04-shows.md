@@ -52,6 +52,7 @@ yarn run ingest-rkf-calendar
 yarn run download-rkf-reports
 yarn run parse-rkf-reports
 yarn run rebuild-show-year
+yarn run build-show-breed-calendar
 # Выгрузка протоколов на Яндекс S3 (gzip):
 npx tsx backend/scripts/shows/export-protocols-to-s3.ts --all
 # Ремонт данных 2026:

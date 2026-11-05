@@ -9,13 +9,9 @@ import {
   BookOpen,
   Info,
   X,
-  ChevronDown,
-  Database,
-  ExternalLink,
 } from 'lucide-react'
 import { Icons } from '../../lib/icons'
 import FavoritesCapsule from './FavoritesCapsule'
-import { DATA_SOURCE_LINKS } from './navLinks'
 import { useInteractiveDrawer } from '../../hooks/useInteractiveDrawer'
 
 type NavMobileProps = {
@@ -26,10 +22,8 @@ type NavMobileProps = {
   isGuideActive: boolean
   isAboutActive: boolean
   mobileMenuOpen: boolean
-  sourcesOpen: boolean
   onToggleMobileMenu: () => void
   onCloseMobileMenu: () => void
-  onToggleSources: () => void
   onOpenSearch: () => void
 }
 
@@ -41,10 +35,8 @@ export function NavMobile({
   isGuideActive,
   isAboutActive,
   mobileMenuOpen,
-  sourcesOpen,
   onToggleMobileMenu,
   onCloseMobileMenu,
-  onToggleSources,
   onOpenSearch,
 }: NavMobileProps) {
   const [mounted, setMounted] = useState(false)
@@ -250,37 +242,6 @@ export function NavMobile({
                     <Info className={`w-4 h-4 shrink-0 ${isAboutActive ? 'text-camel-700' : 'text-charcoal-500'}`} aria-hidden="true" />
                     <span>О проекте</span>
                   </Link>
-
-                  {/* Источники данных */}
-                  <div className="pt-2 mt-2 border-t border-old-money-200/80">
-                    <button
-                      type="button"
-                      onClick={onToggleSources}
-                      className="w-full min-h-[44px] flex items-center justify-between px-3.5 py-2 rounded-xl text-sm font-semibold text-charcoal-700 hover:bg-cream-100 transition-colors cursor-pointer"
-                    >
-                      <div className="flex items-center gap-3">
-                        <Database className="w-4 h-4 text-charcoal-500 shrink-0" aria-hidden="true" />
-                        <span>Источники данных</span>
-                      </div>
-                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${sourcesOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
-                    </button>
-                    {sourcesOpen && (
-                      <div className="mt-1 space-y-0.5 pl-9 pr-2">
-                        {DATA_SOURCE_LINKS.map((link) => (
-                          <a
-                            key={link.href}
-                            href={link.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center justify-between min-h-[38px] px-3 py-1.5 text-xs text-charcoal-700 hover:bg-cream-200/60 rounded-lg transition-colors"
-                          >
-                            <span>{link.label}</span>
-                            <ExternalLink className="w-3 h-3 text-charcoal-400" aria-hidden="true" />
-                          </a>
-                        ))}
-                      </div>
-                    )}
-                  </div>
                 </nav>
               </div>
 

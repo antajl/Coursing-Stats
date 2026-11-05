@@ -5,12 +5,12 @@ import {
   Code2,
   Copy,
   ExternalLink,
-  FileText,
   Mail,
-  MapPin,
   MessageCircle,
+  Search,
   Send,
-  Zap,
+  Trophy,
+  UserCheck,
 } from 'lucide-react'
 import { ExternalHref } from './Guide/components/GuideUi'
 import { SEO } from '../components/SEO'
@@ -34,7 +34,7 @@ function ContactCard({
     <a
       href={href}
       {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-      className="group flex items-center gap-3 rounded-xl border border-old-money-200/90 bg-cream-50/50 p-3.5 transition-all hover:border-camel-300 hover:bg-cream-100/60"
+      className="group flex items-center gap-3 rounded-xl border border-old-money-200/90 bg-white/90 p-3.5 shadow-2xs transition-all hover:border-camel-300 hover:bg-white"
     >
       <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border shadow-sm transition-transform group-hover:scale-105 ${iconBgClass}`}>
         <Icon className="h-5 w-5" aria-hidden />
@@ -68,7 +68,7 @@ function DiscordContact() {
     <button
       type="button"
       onClick={copy}
-      className="group flex w-full items-center gap-3 rounded-xl border border-old-money-200/90 bg-cream-50/50 p-3.5 text-left transition-all hover:border-camel-300 hover:bg-cream-100/60 cursor-pointer"
+      className="group flex w-full items-center gap-3 rounded-xl border border-old-money-200/90 bg-white/90 p-3.5 shadow-2xs text-left transition-all hover:border-camel-300 hover:bg-white cursor-pointer"
       title="Скопировать ник Discord"
     >
       <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-indigo-200/80 bg-indigo-50/70 text-indigo-700 shadow-sm transition-transform group-hover:scale-105">
@@ -146,17 +146,22 @@ export default function AboutPage() {
 
         <div className="mt-3 space-y-2.5 text-sm leading-relaxed text-charcoal-700">
           <p>
-            Проект задумывался из простого и практичного интереса: собрать объективную статистику работы
-            судей, объединить разрозненные результаты состязаний прошлых лет и сделать удобные интерактивные
-            профили собак, где наглядно видны все их забеги, оценки, медали, скоростные замеры и движение в
-            рейтингах.
+            Проект задумывался из простого и практичного интереса: объединить разрозненные результаты состязаний прошлых лет,
+            собрать статистику работы судей и сделать удобную картотеку собак, где в одном профиле видны все забеги,
+            оценки, титулы и скоростные показатели.
+          </p>
+
+          <p>
+            В едином архиве систематизированы протоколы по курсингу, бегам борзых и БЗМП, результаты выставок РКФ,
+            а также замеры пиковой скорости и спринты бегового клуба в Донино. Сервис устроен как легковесный
+            статический справочник, поэтому страницы и профили быстро открываются со смартфона даже при слабом
+            мобильном интернете на полях или у ринга.
           </p>
 
           <p>
             Огромный и тяжелый труд по организации состязаний, судейству, составлению регламентов и подсчету
-            результатов на полях ведут кинологические клубы, секретариат и судьи на местах. Coursing Stats
-            ничего не регламентирует самостоятельно — сервис лишь бережно систематизирует уже опубликованные
-            официальные протоколы в единый структурированный архив.
+            результатов ведут кинологические клубы, секретариат и судьи на местах. Coursing Stats ничего не регламентирует
+            самостоятельно — сервис лишь систематизирует уже опубликованные официальные протоколы в единую базу.
           </p>
 
           <p>
@@ -166,28 +171,26 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Scope & Numbers */}
-      <section className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-        <div className="rounded-xl border border-old-money-200/90 bg-white/90 p-3.5 shadow-2xs">
-          <div className="text-[11px] font-bold uppercase tracking-wider text-charcoal-500">Спорт и забеги</div>
-          <div className="mt-1 font-serif text-xl sm:text-2xl font-bold text-charcoal-900">10+ лет</div>
-          <div className="mt-1 text-xs leading-relaxed text-charcoal-600">С 2015 года: курсинг, БЗМП, бега и связка с календарём</div>
-        </div>
-        <div className="rounded-xl border border-old-money-200/90 bg-white/90 p-3.5 shadow-2xs">
-          <div className="text-[11px] font-bold uppercase tracking-wider text-charcoal-500">Выставки РКФ</div>
-          <div className="mt-1 font-serif text-xl sm:text-2xl font-bold text-charcoal-900">51 400+</div>
-          <div className="mt-1 text-xs leading-relaxed text-charcoal-600">Официальных протоколов 2019–2026 гг. и судьи</div>
-        </div>
-        <div className="rounded-xl border border-old-money-200/90 bg-white/90 p-3.5 shadow-2xs">
-          <div className="text-[11px] font-bold uppercase tracking-wider text-charcoal-500">Полигон Донино</div>
-          <div className="mt-1 font-serif text-xl sm:text-2xl font-bold text-charcoal-900">100%</div>
-          <div className="mt-1 text-xs leading-relaxed text-charcoal-600">Замеры км/ч, спринты 350 м и Чемпионат 2026</div>
-        </div>
-        <div className="rounded-xl border border-old-money-200/90 bg-white/90 p-3.5 shadow-2xs">
-          <div className="text-[11px] font-bold uppercase tracking-wider text-charcoal-500">Архитектура</div>
-          <div className="mt-1 font-serif text-xl sm:text-2xl font-bold text-camel-800">CDN Edge</div>
-          <div className="mt-1 text-xs leading-relaxed text-charcoal-600">Мгновенный отклик даже при слабом интернете в полях</div>
-        </div>
+      {/* Direct contacts */}
+      <section className="grid grid-cols-1 gap-3 sm:grid-cols-3">
+        <ContactCard
+          label="Telegram автора"
+          value="@antajl"
+          href="https://t.me/antajl"
+          icon={Send}
+          iconBgClass="border-sky-200/80 bg-sky-50/80 text-sky-600"
+          external
+        />
+
+        <ContactCard
+          label="Электронная почта"
+          value="antajl@yandex.ru"
+          href="mailto:antajl@yandex.ru"
+          icon={Mail}
+          iconBgClass="border-amber-200/80 bg-amber-50/80 text-amber-700"
+        />
+
+        <DiscordContact />
       </section>
 
       {/* Two columns: Sources and Tools */}
@@ -216,69 +219,72 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Telegram bot & Open source */}
+        {/* Telegram bot dedicated section */}
         <section className="flex flex-col justify-between rounded-xl border border-old-money-200/90 bg-white/80 p-4 sm:p-5">
-          <div className="space-y-4">
+          <div className="space-y-3.5">
             <div>
-              <h2 className="font-serif text-sm sm:text-base font-bold text-charcoal-900">
-                Telegram-бот и инструменты
-              </h2>
-              <div className="mt-3 rounded-xl border border-sky-200/80 bg-sky-50/40 p-3.5">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <span className="flex h-6 w-6 items-center justify-center rounded-md bg-sky-100 text-sky-700">
-                      <Bot className="h-3.5 w-3.5" aria-hidden />
-                    </span>
-                    <span className="text-xs font-semibold text-charcoal-900">@coursing_stats_bot</span>
+              <div className="flex items-center justify-between">
+                <h2 className="font-serif text-base sm:text-lg font-bold text-charcoal-900">
+                  Telegram-бот
+                </h2>
+                <span className="rounded-full border border-sky-200/80 bg-sky-50 px-2 py-0.5 text-[10px] font-semibold text-sky-800">
+                  @coursing_stats_bot
+                </span>
+              </div>
+              <p className="mt-1 text-xs text-charcoal-500">
+                Карманный помощник для быстрого поиска со смартфона прямо в полях или у ринга:
+              </p>
+            </div>
+
+            <div className="space-y-2">
+              <div className="flex items-start gap-2.5 rounded-lg border border-old-money-100 bg-cream-50/50 p-2.5">
+                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md border border-sky-200/80 bg-sky-50 text-sky-700">
+                  <Search className="h-3.5 w-3.5" aria-hidden />
+                </span>
+                <div className="min-w-0 text-xs">
+                  <div className="font-semibold text-charcoal-900">Карточка собаки в любой переписке</div>
+                  <div className="mt-0.5 leading-relaxed text-charcoal-600">
+                    Наберите <code className="rounded bg-cream-200/70 px-1 py-0.2 text-[11px] font-mono text-charcoal-900">@coursing_stats_bot кличка</code>, чтобы поделиться карточкой собаки.
                   </div>
-                  <span className="rounded-full border border-sky-200/80 bg-sky-100/60 px-2 py-0.5 text-[10px] font-semibold text-sky-800">
-                    Telegram
-                  </span>
                 </div>
-                <p className="mt-2 text-xs leading-relaxed text-charcoal-600">
-                  Карманный помощник для смартфонов: быстрый поиск карточки любой собаки по кличке,
-                  просмотр судей и свежих результатов состязаний прямо на поле или у ринга.
-                </p>
-                <div className="mt-2.5">
-                  <a
-                    href="https://t.me/coursing_stats_bot"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 rounded-lg border border-sky-300/80 bg-sky-100/80 px-2.5 py-1 text-xs font-semibold text-sky-900 hover:bg-sky-200/80 transition-colors"
-                  >
-                    <span>Открыть бота в Telegram</span>
-                    <ExternalLink className="h-3 w-3" aria-hidden />
-                  </a>
+              </div>
+
+              <div className="flex items-start gap-2.5 rounded-lg border border-old-money-100 bg-cream-50/50 p-2.5">
+                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md border border-amber-200/80 bg-amber-50 text-amber-700">
+                  <Trophy className="h-3.5 w-3.5" aria-hidden />
+                </span>
+                <div className="min-w-0 text-xs">
+                  <div className="font-semibold text-charcoal-900">Забеги, оценки и титулы</div>
+                  <div className="mt-0.5 leading-relaxed text-charcoal-600">
+                    Мгновенный просмотр баллов курсинга, скоростей, выставочных оценок и наград.
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-2.5 rounded-lg border border-old-money-100 bg-cream-50/50 p-2.5">
+                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md border border-emerald-200/80 bg-emerald-50 text-emerald-700">
+                  <UserCheck className="h-3.5 w-3.5" aria-hidden />
+                </span>
+                <div className="min-w-0 text-xs">
+                  <div className="font-semibold text-charcoal-900">Судьи состязаний и рингов</div>
+                  <div className="mt-0.5 leading-relaxed text-charcoal-600">
+                    Статистика работы судейской бригады и строгость судейства по породам.
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div>
-              <h3 className="font-serif text-sm font-bold text-charcoal-900">
-                Векторные протоколы и документы
-              </h3>
-              <p className="mt-1 text-xs leading-relaxed text-charcoal-600">
-                Для каждого турнира формируется автономный векторный HTML/PDF-протокол эталонной вёрстки с переключением этапов серии и прямыми ссылками на каталоги, регламенты и документы состязаний.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-serif text-sm font-bold text-charcoal-900">
-                Двуязычная картотека собак
-              </h3>
-              <p className="mt-1 text-xs leading-relaxed text-charcoal-600">
-                Кириллическое имя имеет безусловный приоритет отображения в интерфейсе и таблицах, а международная латиница сохраняется для сквозного поиска и трансграничной родословной.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-serif text-sm font-bold text-charcoal-900">
-                Открытость и исходный код
-              </h3>
-              <p className="mt-1 text-xs leading-relaxed text-charcoal-600">
-                Проект с открытым исходным кодом под лицензией MIT. Легковесная архитектура без серверных баз данных
-                обеспечивает быструю работу даже при слабом мобильном интернете.
-              </p>
+            <div className="pt-0.5">
+              <a
+                href="https://t.me/coursing_stats_bot"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-sky-300/90 bg-sky-100/90 py-2.5 text-xs font-semibold text-sky-950 shadow-2xs transition-colors hover:bg-sky-200"
+              >
+                <Bot className="h-4 w-4 text-sky-700" aria-hidden />
+                <span>Открыть @coursing_stats_bot в Telegram</span>
+                <ExternalLink className="h-3.5 w-3.5 text-sky-600" aria-hidden />
+              </a>
             </div>
           </div>
 
@@ -302,53 +308,6 @@ export default function AboutPage() {
           </div>
         </section>
       </div>
-
-      {/* Contacts & Regionality */}
-      <section className="rounded-2xl border border-old-money-200/90 bg-white/90 p-4 sm:p-6 shadow-sm">
-        <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
-          <h2 className="font-serif text-base sm:text-lg font-bold text-charcoal-900">
-            Контакты и география проекта
-          </h2>
-          <span className="text-xs text-charcoal-500">
-            Для сообщений об ошибках в кличках или отправки протоколов
-          </span>
-        </div>
-
-        <div className="mt-3.5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          <div className="flex items-center gap-3 rounded-xl border border-old-money-200/90 bg-cream-50/50 p-3.5">
-            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-sky-200/80 bg-sky-50/80 text-sky-700 shadow-sm">
-              <MapPin className="h-5 w-5" aria-hidden />
-            </span>
-            <span className="min-w-0">
-              <span className="block text-[10px] font-semibold uppercase tracking-wider text-charcoal-500">
-                Регион
-              </span>
-              <span className="block truncate text-sm font-semibold text-charcoal-900">
-                Россия
-              </span>
-            </span>
-          </div>
-
-          <ContactCard
-            label="Telegram автора"
-            value="@antajl"
-            href="https://t.me/antajl"
-            icon={Send}
-            iconBgClass="border-sky-200/80 bg-sky-50/80 text-sky-600"
-            external
-          />
-
-          <ContactCard
-            label="Электронная почта"
-            value="antajl@yandex.ru"
-            href="mailto:antajl@yandex.ru"
-            icon={Mail}
-            iconBgClass="border-amber-200/80 bg-amber-50/80 text-amber-700"
-          />
-
-          <DiscordContact />
-        </div>
-      </section>
 
       {/* Legal disclaimer */}
       <footer className="rounded-xl border border-old-money-100 bg-cream-50/30 p-3 text-center sm:text-left">

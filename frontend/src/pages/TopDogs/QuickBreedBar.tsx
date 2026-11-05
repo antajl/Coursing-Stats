@@ -59,7 +59,7 @@ interface QuickBreedBarProps {
 }
 
 const GAP = 6 // gap-1.5 = 6px
-const BUFFER = 24 // Запас против субпиксельного округления в flex и переполнения края контейнера
+const BUFFER = 8 // Запас против субпиксельного округления в flex и переполнения края контейнера
 
 export default function QuickBreedBar({
   selectedBreed,
@@ -75,8 +75,33 @@ export default function QuickBreedBar({
     const active = base.filter((b) =>
       breedValues.some((bv) => matchesBreedFilter(canonicalBreed(bv), b.key))
     )
-    return active.length > 0 ? active : base
-  }, [candidateBreeds, breedValues])
+    const seen = new Set(active.map((b) => b.key))
+    const remainingBreeds = [...breedValues]
+      .map((bv) => canonicalBreed(bv))
+      .filter((cb) => {
+        if (!cb || seen.has(cb)) return false
+        seen.add(cb)
+        return true
+      })
+    if (dogIndex && dogIndex.length > 0) {
+      const counts = new Map<string, number>()
+      dogIndex.forEach((d) => counts.set(d.breed, (counts.get(d.breed) || 0) + (d.competition_count || 1)))
+      remainingBreeds.sort((a, b) => (counts.get(b) || 0) - (counts.get(a) || 0))
+    }
+    const extraCandidates: QuickBreedItem[] = remainingBreeds.map((cb) => {
+      const disp = displayBreed(cb)
+      const label = disp.short || disp.primary || cb
+      const fullName = disp.primary || cb
+      return {
+        key: cb,
+        label,
+        fullName,
+        estWidth: Math.max(60, Math.min(130, label.length * 8 + 32)),
+      }
+    })
+    const combined = [...active, ...extraCandidates]
+    return combined.length > 0 ? combined : base
+  }, [candidateBreeds, breedValues, dogIndex])
 
   const candidateKeys = useMemo(
     () => candidates.map((c) => c.key).join(','),
@@ -307,7 +332,7 @@ export default function QuickBreedBar({
       {/* Основной адаптивный контейнер */}
       <div
         ref={containerRef}
-        className={`flex items-center gap-1.5 flex-nowrap min-w-0 w-full overflow-hidden py-1 px-1.5 -mx-1.5 ${className}`.trim()}
+        className={`flex items-center gap-1.5 flex-nowrap min-w-0 w-full py-2 -my-2 px-2 -mx-2 overflow-visible ${className}`.trim()}
         role="toolbar"
         aria-label="Быстрый выбор породы"
       >
@@ -429,23 +454,25 @@ export default function QuickBreedBar({
             )}
 
             {/* Выпадающий поиск по всем породам */}
-            <BreedSearchDropdown
-              breeds={breedValues}
-              selectedBreed={selectedBreed}
-              onSelect={onSelectBreed}
-              dogIndex={dogIndex}
-              trigger={
-                <button
-                  type="button"
-                  className="cs-glass-pill inline-flex h-8 shrink-0 items-center gap-1 rounded-full px-3 text-xs font-semibold whitespace-nowrap cursor-pointer"
-                  title="Выбрать другую породу из полного списка"
-                  aria-label="Открыть полный список пород"
-                >
-                  <span>Ещё породы</span>
-                  <ChevronDown className="h-3.5 w-3.5 opacity-70" aria-hidden />
-                </button>
-              }
-            />
+            <div className="ml-auto shrink-0 flex items-center">
+              <BreedSearchDropdown
+                breeds={breedValues}
+                selectedBreed={selectedBreed}
+                onSelect={onSelectBreed}
+                dogIndex={dogIndex}
+                trigger={
+                  <button
+                    type="button"
+                    className="cs-glass-pill inline-flex h-8 shrink-0 items-center gap-1 rounded-full px-3 text-xs font-semibold whitespace-nowrap cursor-pointer"
+                    title="Выбрать другую породу из полного списка"
+                    aria-label="Открыть полный список пород"
+                  >
+                    <span>Ещё породы</span>
+                    <ChevronDown className="h-3.5 w-3.5 opacity-70" aria-hidden />
+                  </button>
+                }
+              />
+            </div>
           </>
         )}
       </div>

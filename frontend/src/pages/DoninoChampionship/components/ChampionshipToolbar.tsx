@@ -177,27 +177,6 @@ export default function ChampionshipToolbar({
           </ModernDropdown>
         </div>
 
-        {/* Выбор породы */}
-        <div className="shrink-0">
-          <BreedSearchDropdown
-            breeds={breedValues}
-            selectedBreed={selectedBreed}
-            onSelect={onBreedChange}
-            trigger={
-              <button
-                type="button"
-                className={`shrink-0 ${toolbarPillTriggerClass(Boolean(selectedBreed))}`}
-              >
-                <span className="truncate max-w-[85px]">
-                  {selectedBreed ? formatBreedName(selectedBreed) : 'Порода'}
-                </span>
-                <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
-              </button>
-            }
-            dogIndex={dogIndex}
-          />
-        </div>
-
         {/* Выбор лиги */}
         <div className="shrink-0">
           <ModernDropdown
@@ -220,6 +199,27 @@ export default function ChampionshipToolbar({
           >
             {leagueDropdownContent}
           </ModernDropdown>
+        </div>
+
+        {/* Выбор породы */}
+        <div className="shrink-0">
+          <BreedSearchDropdown
+            breeds={breedValues}
+            selectedBreed={selectedBreed}
+            onSelect={onBreedChange}
+            trigger={
+              <button
+                type="button"
+                className={`shrink-0 ${toolbarPillTriggerClass(Boolean(selectedBreed))}`}
+              >
+                <span className="truncate max-w-[85px]">
+                  {selectedBreed ? formatBreedName(selectedBreed) : 'Порода'}
+                </span>
+                <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
+              </button>
+            }
+            dogIndex={dogIndex}
+          />
         </div>
 
         {/* Сброс */}
@@ -268,19 +268,6 @@ export default function ChampionshipToolbar({
           </ModernDropdown>
         </div>
 
-        <div className="h-5 w-px bg-old-money-300 shrink-0 mx-0.5" aria-hidden="true" />
-
-        {/* QuickBreedBar with breed pills and overflow dropdown */}
-        <div className="flex-1 min-w-[200px]">
-          <QuickBreedBar
-            selectedBreed={selectedBreed}
-            onSelectBreed={onBreedChange}
-            breedValues={breedValues}
-            candidateBreeds={candidateBreeds}
-            dogIndex={dogIndex}
-          />
-        </div>
-
         {/* League Dropdown */}
         <div className="shrink-0">
           <ModernDropdown
@@ -305,17 +292,30 @@ export default function ChampionshipToolbar({
           </ModernDropdown>
         </div>
 
-        {/* Reset button */}
+        {/* Reset button — слева перед разделителем */}
         {hasActiveFilters && (
           <button
             type="button"
             onClick={onResetFilters}
-            className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-old-money-200 bg-cream-50 text-charcoal-500 hover:bg-cream-100 hover:text-charcoal-800 transition-colors shrink-0 cursor-pointer"
+            className="cs-glass-pill inline-flex h-8 w-8 items-center justify-center rounded-full !text-charcoal-500 hover:!text-charcoal-800 transition-colors shrink-0 cursor-pointer select-none"
             title="Сбросить все фильтры"
           >
             <X className="h-4 w-4" />
           </button>
         )}
+
+        <div className="h-5 w-px bg-old-money-300 shrink-0 mx-0.5" aria-hidden="true" />
+
+        {/* QuickBreedBar with breed pills and overflow dropdown — всегда самая правая часть панели */}
+        <div className="flex-1 min-w-0">
+          <QuickBreedBar
+            selectedBreed={selectedBreed}
+            onSelectBreed={onBreedChange}
+            breedValues={breedValues}
+            candidateBreeds={candidateBreeds}
+            dogIndex={dogIndex}
+          />
+        </div>
       </div>
     </>
   )

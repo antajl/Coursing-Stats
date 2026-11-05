@@ -269,6 +269,19 @@ export async function getShowCalendar(
   return { success: true, data }
 }
 
+/** Индекс выставок по породам для архива (shows/indexes/breed-calendar/{year}.json). */
+export async function getShowBreedCalendar(
+  year: string,
+): Promise<ApiResult<Record<string, number[]>>> {
+  try {
+    const data = await fetchJson<Record<string, number[]>>(`shows/indexes/breed-calendar/${year}.json`)
+    if (data && typeof data === 'object') {
+      return { success: true, data }
+    }
+  } catch {}
+  return { success: false, error: 'Breed calendar index unavailable' }
+}
+
 
 /**
  * Легковесный список избранных/недавних выставок для главной страницы

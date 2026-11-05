@@ -1,12 +1,14 @@
-import { X } from 'lucide-react'
+import { ChevronDown, X } from 'lucide-react'
 import MonthYearDropdown from '../../../components/toolbar/MonthYearDropdown'
 import ToolbarSearch from '../../../components/toolbar/ToolbarSearch'
+import BreedSearchDropdown from '../../../components/ui/BreedSearchDropdown'
+import QuickBreedBar, {
+  SHOW_CANDIDATE_BREEDS,
+  type QuickBreedItem,
+} from '../../TopDogs/QuickBreedBar'
 import ShowCalendarHint from './ShowCalendarHint'
-import {
-  TOOLBAR_CHIP,
-  TOOLBAR_CHIP_ACTIVE,
-  TOOLBAR_CHIP_IDLE,
-} from '../../../lib/toolbar'
+import { formatBreedName } from '../../../lib/breedMapping'
+import { toolbarPillTriggerClass } from '../../../lib/toolbar'
 
 export type QuickPreset = 'upcoming30' | null
 
@@ -23,7 +25,11 @@ export interface ShowCalendarToolbarProps {
   onMonthChange: (month: string) => void
   monthDropdownOpen?: boolean
   onMonthDropdownOpenChange?: (open: boolean) => void
-onClearQuickPreset: () => void
+  filterBreed: string
+  onBreedChange: (breed: string) => void
+  breedValues: string[]
+  candidateBreeds?: QuickBreedItem[]
+  onClearQuickPreset: () => void
   availableMonths?: Set<string>
   totalCount?: number
 }
@@ -37,22 +43,29 @@ export function ShowCalendarToolbar({
   onYearChange,
   filterMonth,
   onMonthChange,
+  filterBreed,
+  onBreedChange,
+  breedValues,
+  candidateBreeds = SHOW_CANDIDATE_BREEDS,
   onClearQuickPreset,
   availableMonths,
+  totalCount,
 }: ShowCalendarToolbarProps) {
   const isYearNonDefault = Boolean(filterYear) && filterYear !== currentSeason
-  const hasActiveFilters = Boolean(isYearNonDefault || filterMonth || searchQuery)
+  const hasActiveFilters = Boolean(isYearNonDefault || filterMonth || searchQuery || filterBreed)
 
   const handleReset = () => {
     onSearchChange('')
     onYearChange(currentSeason)
     onMonthChange('')
+    onBreedChange('')
     onClearQuickPreset()
   }
+
   return (
-    <div className="w-full min-w-0">
-      {/* Мобильная строка (32px): Поиск + Год/Месяц + (i) + [Количество справа] */}
-      <div className="flex sm:hidden items-center gap-1.5 w-full min-w-0">
+    <div className="w-full min-w-0 space-y-2">
+      {/* Мобильная строка (32px): Поиск + Год/Месяц + Порода + (X) + [Количество] + (i) */}
+      <div className="flex md:hidden items-center gap-1.5 w-full min-w-0">
         <ToolbarSearch
           value={searchQuery}
           onChange={onSearchChange}
@@ -70,12 +83,31 @@ export function ShowCalendarToolbar({
           availableMonthsByYear={availableMonths ? { [filterYear]: availableMonths } : undefined}
         />
 
+        <div className="shrink-0">
+          <BreedSearchDropdown
+            breeds={breedValues}
+            selectedBreed={filterBreed}
+            onSelect={onBreedChange}
+            trigger={
+              <button
+                type="button"
+                className={`shrink-0 ${toolbarPillTriggerClass(Boolean(filterBreed))}`}
+              >
+                <span className="truncate max-w-[85px]">
+                  {filterBreed ? formatBreedName(filterBreed) : 'Порода'}
+                </span>
+                <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
+              </button>
+            }
+          />
+        </div>
+
         <div className="ml-auto shrink-0 flex items-center gap-1.5">
           {hasActiveFilters && (
             <button
               type="button"
               onClick={handleReset}
-              className="shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full border border-old-money-200 bg-cream-50 text-charcoal-500 hover:text-charcoal-800 transition-colors cursor-pointer"
+              className="cs-glass-pill shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full !text-charcoal-500 hover:!text-charcoal-800 transition-colors cursor-pointer select-none"
               title="Сбросить фильтры"
               aria-label="Сбросить фильтры"
             >
@@ -84,7 +116,7 @@ export function ShowCalendarToolbar({
           )}
 
           {typeof totalCount === 'number' && (
-            <span className="text-xs text-charcoal-500 tabular-nums whitespace-nowrap">
+            <span className="hidden sm:inline text-xs text-charcoal-500 tabular-nums whitespace-nowrap">
               {totalCount} с протоколом
             </span>
           )}
@@ -95,9 +127,9 @@ export function ShowCalendarToolbar({
         </div>
       </div>
 
-      {/* Десктопная строка: Поиск + Год/Месяц + Сброс + [О календаре справа] */}
-      <div className="hidden sm:flex sm:items-center justify-between gap-2 w-full min-w-0">
-        <div className="flex items-center gap-2 min-w-0">
+      {/* Десктопная строка: Поиск + Год/Месяц + (i) + [Количество] + Сброс + Разделитель + QuickBreedBar edge-to-edge */}
+      <div className="hidden md:flex md:items-center gap-2 w-full min-w-0">
+        <div className="flex items-center gap-1.5 shrink-0">
           <ToolbarSearch
             value={searchQuery}
             onChange={onSearchChange}
@@ -115,11 +147,21 @@ export function ShowCalendarToolbar({
             availableMonthsByYear={availableMonths ? { [filterYear]: availableMonths } : undefined}
           />
 
+          <div className="shrink-0">
+            <ShowCalendarHint />
+          </div>
+
+          {typeof totalCount === 'number' && (
+            <span className="text-xs text-charcoal-500 tabular-nums whitespace-nowrap px-1">
+              {totalCount} с протоколом
+            </span>
+          )}
+
           {hasActiveFilters && (
             <button
               type="button"
               onClick={handleReset}
-              className="shrink-0 inline-flex h-8 items-center gap-1.5 rounded-full border border-old-money-200 bg-cream-50 px-3 text-xs font-semibold text-charcoal-600 hover:border-camel-500 hover:text-charcoal-900 hover:bg-cream-100 transition-colors cursor-pointer"
+              className="cs-glass-pill shrink-0 inline-flex h-8 items-center gap-1.5 rounded-full px-3 text-xs font-semibold !text-charcoal-600 hover:!text-charcoal-900 transition-colors cursor-pointer select-none"
               title="Сбросить все фильтры"
             >
               <X className="h-3.5 w-3.5" />
@@ -128,8 +170,20 @@ export function ShowCalendarToolbar({
           )}
         </div>
 
-        <div className="shrink-0 ml-auto">
-          <ShowCalendarHint />
+        {/* Разделитель между левыми контролами и породами */}
+        <div
+          className="h-5 w-px bg-old-money-300 shrink-0 mx-0.5"
+          aria-hidden="true"
+        />
+
+        {/* Выбор породы QuickBreedBar — всегда самая правая часть фильтра до края страницы */}
+        <div className="flex-1 min-w-0">
+          <QuickBreedBar
+            selectedBreed={filterBreed}
+            onSelectBreed={onBreedChange}
+            breedValues={breedValues}
+            candidateBreeds={candidateBreeds}
+          />
         </div>
       </div>
     </div>

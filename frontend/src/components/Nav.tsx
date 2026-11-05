@@ -8,11 +8,9 @@ import type { OpenMenuId } from './nav/navLinks'
 
 export default function Nav() {
   const location = useLocation();
-  const [sourcesOpen, setSourcesOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState<OpenMenuId>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const isActive = (path: string) => location.pathname === path || (path === '/' && location.pathname === '/');
   const isCompetitionsActive =
     location.pathname === '/competitions' ||
@@ -44,23 +42,6 @@ export default function Nav() {
     }
     return menuCallbacks.current[id];
   }, []);
-
-  const handleMouseEnter = () => {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-    }
-    setSourcesOpen(true);
-  };
-
-  const handleMouseLeave = () => {
-    timeoutRef.current = setTimeout(() => {
-      setSourcesOpen(false);
-    }, 200);
-  };
-
-  const toggleSources = () => {
-    setSourcesOpen(!sourcesOpen);
-  };
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -109,9 +90,6 @@ export default function Nav() {
         isAboutActive={isAboutActive}
         openMenu={openMenu}
         setMenuOpen={setMenuOpen}
-        sourcesOpen={sourcesOpen}
-        onSourcesMouseEnter={handleMouseEnter}
-        onSourcesMouseLeave={handleMouseLeave}
         onOpenSearch={() => setSearchOpen(true)}
       />
       <NavMobile
@@ -122,10 +100,8 @@ export default function Nav() {
         isGuideActive={isGuideActive}
         isAboutActive={isAboutActive}
         mobileMenuOpen={mobileMenuOpen}
-        sourcesOpen={sourcesOpen}
         onToggleMobileMenu={toggleMobileMenu}
         onCloseMobileMenu={() => setMobileMenuOpen(false)}
-        onToggleSources={toggleSources}
         onOpenSearch={() => setSearchOpen(true)}
       />
       <QuickSearchModal isOpen={searchOpen} onClose={() => setSearchOpen(false)} />

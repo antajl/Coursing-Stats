@@ -1,4 +1,5 @@
 import type { ShowRkfCalendarEntry } from '../../lib/staticData'
+import { matchesBreedFilter } from '../../lib/breedMapping'
 
 /** Collapse whitespace so merge keys stay stable across catalog quirks. */
 export function normalizeWs(value: string | null | undefined): string {
@@ -129,6 +130,19 @@ export interface RkfCalendarGroup {
   hasLc: boolean
   /** Any viewable protocol: LC, RKF report PDF, or BIS report. */
   hasProtocol: boolean
+}
+
+/** Check if exhibition matches selected breed (via allowedIds index or mono metadata). */
+export function exhibitionMatchesBreed(
+  entry: ShowRkfCalendarEntry,
+  filterBreed: string,
+  allowedIds?: Set<number> | null,
+): boolean {
+  if (!filterBreed) return true
+  if (allowedIds && entry.id && allowedIds.has(entry.id)) return true
+  if (entry.breeds && matchesBreedFilter(entry.breeds, filterBreed)) return true
+  if (entry.national_breed_club_name && matchesBreedFilter(entry.national_breed_club_name, filterBreed)) return true
+  return false
 }
 
 /** Exhibition has a protocol / report the UI can open. */

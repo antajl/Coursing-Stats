@@ -206,6 +206,13 @@ export function ResultsToolbar({
           </ModernDropdown>
         </div>
 
+        {/* Выбор лиги (уникальный фильтр турнира) */}
+        {availableLeagues.length > 0 && (
+          <div className="shrink-0">
+            {renderLeagueDropdown()}
+          </div>
+        )}
+
         {/* Выбор породы */}
         {breeds.length > 1 && (
           <div className="shrink-0">
@@ -229,19 +236,12 @@ export function ResultsToolbar({
           </div>
         )}
 
-        {/* Выбор лиги (уникальный фильтр турнира) */}
-        {availableLeagues.length > 0 && (
-          <div className="shrink-0">
-            {renderLeagueDropdown()}
-          </div>
-        )}
-
         <div className="ml-auto shrink-0 flex items-center gap-1.5">
           {isFiltered && (
             <button
               type="button"
               onClick={handleResetFilters}
-              className="cs-glass-pill relative shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full text-charcoal-600 hover:text-charcoal-900 before:absolute before:-inset-1.5 before:content-[''] cursor-pointer"
+              className="cs-glass-pill relative shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full !text-charcoal-500 hover:!text-charcoal-800 before:absolute before:-inset-1.5 before:content-[''] cursor-pointer select-none"
               title="Сбросить фильтры"
               aria-label="Сбросить фильтры"
             >
@@ -253,7 +253,7 @@ export function ResultsToolbar({
         </div>
       </div>
 
-      {/* 2. Десктопная консоль: Поиск + Пол + Разделитель + QuickBreedBar + Лига + Сброс + Trailing */}
+      {/* 2. Десктопная консоль: Поиск + Пол + Лиги + Разделитель + QuickBreedBar + Сброс + Trailing */}
       <div className="hidden sm:flex sm:items-center gap-2 w-full min-w-0">
         <ToolbarSearch
           value={searchQuery}
@@ -273,21 +273,6 @@ export function ResultsToolbar({
           </ModernDropdown>
         </div>
 
-        {breeds.length > 1 && (
-          <>
-            <div className="h-5 w-px bg-old-money-300 shrink-0 mx-0.5" aria-hidden="true" />
-            <div className="flex-1 min-w-0 max-w-full overflow-hidden">
-              <QuickBreedBar
-                selectedBreed={selectedBreed}
-                onSelectBreed={(b) => setSelectedBreed(b)}
-                breedValues={breeds}
-                candidateBreeds={candidateBreeds}
-                dogIndex={dogIndex}
-              />
-            </div>
-          </>
-        )}
-
         {/* Выбор лиги (уникальный фильтр турнира) */}
         {availableLeagues.length > 0 && (
           <div className="shrink-0">
@@ -295,11 +280,19 @@ export function ResultsToolbar({
           </div>
         )}
 
+        {/* Trailing action (например, переключатель вида) — слева перед разделителем */}
+        {trailing && (
+          <div className="flex items-center gap-2 shrink-0">
+            {trailing}
+          </div>
+        )}
+
+        {/* Сброс фильтров — слева перед разделителем */}
         {isFiltered && (
           <button
             type="button"
             onClick={handleResetFilters}
-            className="relative shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full border border-old-money-200 bg-cream-50 text-charcoal-500 hover:text-charcoal-800 transition-colors before:absolute before:-inset-1.5 before:content-[''] cursor-pointer"
+            className="cs-glass-pill shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full !text-charcoal-500 hover:!text-charcoal-800 transition-colors cursor-pointer select-none"
             title="Сбросить фильтры"
             aria-label="Сбросить фильтры"
           >
@@ -307,11 +300,18 @@ export function ResultsToolbar({
           </button>
         )}
 
-        {trailing && (
+        {breeds.length > 1 && (
           <>
-            <div className="h-5 w-px bg-old-money-300 shrink-0 mx-0.5 hidden md:block" aria-hidden="true" />
-            <div className="flex items-center gap-2 shrink-0 md:ml-auto justify-end">
-              {trailing}
+            <div className="h-5 w-px bg-old-money-300 shrink-0 mx-0.5" aria-hidden="true" />
+            {/* Породы — всегда самая правая часть панели */}
+            <div className="flex-1 min-w-0">
+              <QuickBreedBar
+                selectedBreed={selectedBreed}
+                onSelectBreed={(b) => setSelectedBreed(b)}
+                breedValues={breeds}
+                candidateBreeds={candidateBreeds}
+                dogIndex={dogIndex}
+              />
             </div>
           </>
         )}
