@@ -81,7 +81,7 @@ export default function ResultsSection({ results, trailing }: ResultsSectionProp
   const { breeds, candidateBreeds, dogIndex } = useMemo(() => {
     const counts = new Map<string, number>()
     for (const r of activeResults) {
-      const b = r.dog.breed
+      const b = canonicalBreed(r.dog.breed)
       if (b) counts.set(b, (counts.get(b) || 0) + 1)
     }
     const sortedEntries = Array.from(counts.entries()).sort(

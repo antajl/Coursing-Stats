@@ -12,6 +12,7 @@ import {
   FileText,
 } from 'lucide-react'
 import HoverTooltip from '../../../components/ui/HoverTooltip'
+import { canonicalBreed } from '../../../lib/breedMapping'
 import { formatDate } from './utils'
 import { getEventHeadline, formatCompetitionJudgesWithRoles, parseJudgeNames } from '../eventListUtils'
 import type { Event, Result, TrackScheme } from './types'
@@ -42,7 +43,9 @@ export default function EventHeader({
   const dateText = formatDate(event.date_start) || event.event_date || '—'
   const locationText = event.protocol_location || event.location || '—'
   const participantsCount = new Set(results.map((r) => r.dog_id)).size
-  const breedsCount = new Set(results.map((r) => r.breed)).size
+  const breedsCount = new Set(
+    results.map((r) => canonicalBreed(r.breed || r.dog?.breed || '')).filter(Boolean),
+  ).size
 
   const rulesUrl = event.rules_url?.trim()
   const catalogUrl = event.catalog_url?.trim()

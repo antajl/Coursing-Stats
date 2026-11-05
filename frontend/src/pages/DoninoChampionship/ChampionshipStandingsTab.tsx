@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react'
 import { Trophy, Timer, Award, ChevronLeft, ChevronRight } from 'lucide-react'
-import { formatBreedName, matchesBreedFilter } from '../../lib/breedMapping'
+import { canonicalBreed, formatBreedName, matchesBreedFilter } from '../../lib/breedMapping'
 import type { ChampionshipStanding, ChampionshipPromotion } from '../../lib/staticData/donino'
 import { useInfiniteScroll } from '../../hooks/useInfiniteScroll'
 import ChampionshipDogCard from './components/ChampionshipDogCard'
@@ -52,7 +52,8 @@ export default function ChampionshipStandingsTab({
   const candidateBreeds = useMemo(() => {
     const counts = new Map<string, number>()
     for (const d of standings || []) {
-      if (d.breed) counts.set(d.breed, (counts.get(d.breed) || 0) + 1)
+      const b = canonicalBreed(d.breed)
+      if (b) counts.set(b, (counts.get(b) || 0) + 1)
     }
     return Array.from(counts.entries())
       .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'ru'))

@@ -22,6 +22,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execSync } from 'node:child_process';
 import { slugify, dogKey, monthFolder } from '../export/d1-export-utils.js';
+import { canonicalBreed } from '../../src/lib/breed-mapping.js';
 import {
   type DraftDog,
   type DraftResult,
@@ -106,7 +107,9 @@ export async function ingestCompetition(
 
     const nameLat = (draftDog.name_lat || draftDog.name || '').trim();
     const nameRu = (draftDog.name_ru || '').trim();
-    const breed = (draftDog.breed || '').trim();
+    const rawBreed = (draftDog.breed || '').trim();
+    const breed = rawBreed ? (canonicalBreed(rawBreed) || rawBreed) : '';
+    draftDog.breed = breed;
 
     const match = findMatchingDog(draftDog, allDogs);
 
@@ -153,6 +156,10 @@ export async function ingestCompetition(
       }
       if (!targetDog.name_lat && nameLat) {
         targetDog.name_lat = nameLat;
+        changed = true;
+      }
+      if (targetDog.breed && canonicalBreed(targetDog.breed) && canonicalBreed(targetDog.breed) !== targetDog.breed) {
+        targetDog.breed = canonicalBreed(targetDog.breed);
         changed = true;
       }
 

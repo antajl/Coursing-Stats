@@ -114,13 +114,18 @@ async function loadCompetition(
     track_schemes: restringify(comp.event.track_schemes),
   }
 
-  const results = (comp.results ?? []).map((r) => ({
-    ...r,
-    name_lat: r.dog?.name_lat ?? r.name_lat,
-    name_ru: r.dog?.name_ru ?? r.name_ru,
-    breed: r.dog?.breed ?? r.breed,
-    raw_scores_json: restringify(r.raw_scores_json),
-  }))
+  const results = (comp.results ?? []).map((r) => {
+    const rawBreed = (r.dog?.breed ?? r.breed ?? '').trim()
+    const canonBreed = rawBreed ? (canonicalBreed(rawBreed) || rawBreed) : ''
+    return {
+      ...r,
+      name_lat: r.dog?.name_lat ?? r.name_lat,
+      name_ru: r.dog?.name_ru ?? r.name_ru,
+      breed: canonBreed,
+      dog: r.dog ? { ...r.dog, breed: canonBreed } : undefined,
+      raw_scores_json: restringify(r.raw_scores_json),
+    }
+  })
 
   return { event, results }
 }
