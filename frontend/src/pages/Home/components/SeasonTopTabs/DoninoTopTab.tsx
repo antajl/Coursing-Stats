@@ -41,7 +41,7 @@ export const DoninoTopTab = memo(function DoninoTopTab({
     >
       <div
         ref={trackRef}
-        className={`flex flex-nowrap w-full min-w-0 items-start gap-0 md:grid md:grid-cols-2 md:gap-6 md:!transform-none ${
+        className={`flex flex-nowrap w-full min-w-0 items-start gap-4 md:grid md:grid-cols-2 md:gap-6 md:!transform-none ${
           isNudging
             ? activeSubTab === 'speed'
               ? 'animate-silk-nudge-left'

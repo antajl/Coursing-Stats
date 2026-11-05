@@ -3,17 +3,26 @@ import { useState, useRef, useEffect, useCallback } from 'react'
 interface UseSubTabSwipeOptions<T extends string> {
   subTabs: [T, T]
   initialSubTab?: T
+  gapPx?: number
 }
 
 export function useSubTabSwipe<T extends string>({
   subTabs,
   initialSubTab = subTabs[0],
+  gapPx = 16,
 }: UseSubTabSwipeOptions<T>) {
   const [activeSubTab, setActiveSubTab] = useState<T>(initialSubTab)
   const [isNudging, setIsNudging] = useState(false)
   const trackRef = useRef<HTMLDivElement>(null)
 
   const currentSlide = activeSubTab === subTabs[0] ? 0 : 1
+
+  const getSlideOffset = useCallback(
+    (slideIndex: number) => {
+      return slideIndex === 0 ? '0%' : `calc(-100% - ${gapPx}px)`
+    },
+    [gapPx],
+  )
 
   const triggerNudge = useCallback(() => {
     setIsNudging(true)
@@ -34,14 +43,14 @@ export function useSubTabSwipe<T extends string>({
     (target: T) => {
       if (trackRef.current) {
         trackRef.current.style.transition = 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)'
-        trackRef.current.style.transform = `translate3d(${target === subTabs[0] ? '0%' : '-100%'}, 0, 0)`
+        trackRef.current.style.transform = `translate3d(${target === subTabs[0] ? '0%' : `calc(-100% - ${gapPx}px)`}, 0, 0)`
       }
       setActiveSubTab(target)
       window.setTimeout(() => {
         triggerNudge()
       }, 400)
     },
-    [subTabs, triggerNudge],
+    [subTabs, gapPx, triggerNudge],
   )
 
   const touchStartRef = useRef<{ x: number; y: number; time: number } | null>(null)
@@ -79,7 +88,8 @@ export function useSubTabSwipe<T extends string>({
       const isAtLeftEdge = currentSlide === 0 && dx > 0
       const isAtRightEdge = currentSlide === 1 && dx < 0
       const appliedDx = isAtLeftEdge || isAtRightEdge ? dx * 0.22 : dx
-      trackRef.current.style.transform = `translate3d(calc(${-currentSlide * 100}% + ${appliedDx}px), 0, 0)`
+      const base = currentSlide === 0 ? '0%' : `calc(-100% - ${gapPx}px)`
+      trackRef.current.style.transform = `translate3d(calc(${base} + ${appliedDx}px), 0, 0)`
     }
   }
 
@@ -106,7 +116,7 @@ export function useSubTabSwipe<T extends string>({
       }
 
       track.style.transition = 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)'
-      track.style.transform = `translate3d(${-targetSlide * 100}%, 0, 0)`
+      track.style.transform = `translate3d(${getSlideOffset(targetSlide)}, 0, 0)`
 
       if (targetSlide !== currentSlide) {
         setActiveSubTab(subTabs[targetSlide])
@@ -116,7 +126,7 @@ export function useSubTabSwipe<T extends string>({
       }
     } else if (track) {
       track.style.transition = 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)'
-      track.style.transform = `translate3d(${-currentSlide * 100}%, 0, 0)`
+      track.style.transform = `translate3d(${getSlideOffset(currentSlide)}, 0, 0)`
     }
   }
 
@@ -125,7 +135,7 @@ export function useSubTabSwipe<T extends string>({
     gestureLockRef.current = null
     if (trackRef.current) {
       trackRef.current.style.transition = 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)'
-      trackRef.current.style.transform = `translate3d(${-currentSlide * 100}%, 0, 0)`
+      trackRef.current.style.transform = `translate3d(${getSlideOffset(currentSlide)}, 0, 0)`
     }
   }
 
@@ -146,7 +156,7 @@ export function useSubTabSwipe<T extends string>({
           ? 'none'
           : isNudging
           ? undefined
-          : `translate3d(${activeSubTab === subTabs[0] ? '0%' : '-100%'}, 0, 0)`,
+          : `translate3d(${activeSubTab === subTabs[0] ? '0%' : `calc(-100% - ${gapPx}px)`}, 0, 0)`,
       willChange: 'transform' as const,
     },
   }

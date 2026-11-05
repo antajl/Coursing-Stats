@@ -307,7 +307,7 @@ export default function QuickBreedBar({
       {/* Основной адаптивный контейнер */}
       <div
         ref={containerRef}
-        className={`flex items-center gap-1.5 flex-nowrap min-w-0 w-full overflow-hidden py-1 pr-1.5 ${className}`.trim()}
+        className={`flex items-center gap-1.5 flex-nowrap min-w-0 w-full overflow-hidden py-1 px-1.5 -mx-1.5 ${className}`.trim()}
         role="toolbar"
         aria-label="Быстрый выбор породы"
       >
