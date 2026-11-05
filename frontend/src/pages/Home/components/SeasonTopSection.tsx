@@ -127,8 +127,8 @@ function SeasonTopSectionInner({
               onClick={() => setActiveTab(tab.id)}
               className={`h-[34px] flex-1 px-3.5 rounded-full text-xs transition-all flex items-center justify-center cursor-pointer whitespace-nowrap ${
                 isActive
-                  ? 'cs-glass-pill-active !font-bold !text-camel-950'
-                  : 'cs-glass-pill !font-medium !text-charcoal-700'
+                  ? 'cs-glass-pill-active !font-semibold !text-camel-950'
+                  : 'cs-glass-pill !font-semibold !text-charcoal-700'
               }`}
               style={{ height: '34px', boxSizing: 'border-box' }}
             >

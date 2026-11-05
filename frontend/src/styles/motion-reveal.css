@@ -229,21 +229,20 @@
   }
 }
 
-/* Физические стеклянные плашки тулбара, пород и фильтров */
+/* Физические стеклянные плашки тулбара, пород и фильтров — Вариант B «Кристальный янтарь» */
 .cs-glass-pill {
-  background: linear-gradient(135deg, rgba(248, 244, 236, 0.88) 0%, rgba(240, 233, 220, 0.72) 100%);
+  background: linear-gradient(135deg, rgba(250, 245, 235, 0.95) 0%, rgba(240, 230, 212, 0.88) 100%);
   backdrop-filter: blur(12px) saturate(160%);
   -webkit-backdrop-filter: blur(12px) saturate(160%);
-  border: 1px solid rgba(255, 255, 255, 0.95);
-  border-bottom-color: rgba(215, 205, 190, 0.65);
-  color: #382e22;
+  border: 1px solid rgba(195, 168, 128, 0.75);
+  color: #3d2c16;
   box-shadow:
     inset 0 1.5px 1px 0 #ffffff,
-    inset 0 0 0 1px rgba(255, 255, 255, 0.60),
-    inset 0 -1px 1px 0 rgba(210, 195, 175, 0.45),
-    0 1px 2px 0 rgba(45, 30, 15, 0.06),
-    0 3px 6px -1px rgba(45, 30, 15, 0.12),
-    0 2px 4px -1px rgba(45, 30, 15, 0.06);
+    inset 0 0 0 1px rgba(255, 250, 235, 0.90),
+    inset 0 -1px 1px 0 rgba(190, 160, 120, 0.40),
+    0 1px 2px 0 rgba(50, 35, 15, 0.06),
+    0 3px 6px -1px rgba(50, 35, 15, 0.12),
+    0 2px 4px -1px rgba(50, 35, 15, 0.06);
   transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1),
               box-shadow 0.2s cubic-bezier(0.22, 1, 0.36, 1),
               background 0.2s ease,
@@ -252,45 +251,44 @@
 }
 
 .cs-glass-pill:hover {
-  background: linear-gradient(135deg, rgba(255, 250, 242, 0.96) 0%, rgba(246, 240, 228, 0.85) 100%);
-  border-color: #ffffff;
-  border-bottom-color: rgba(200, 185, 165, 0.75);
-  color: #17120a;
+  background: linear-gradient(135deg, rgba(254, 250, 242, 0.98) 0%, rgba(246, 238, 222, 0.92) 100%);
+  border-color: rgba(180, 150, 108, 0.85);
+  color: #261a0b;
   box-shadow:
     inset 0 1.5px 1px 0 #ffffff,
-    inset 0 0 0 1px rgba(255, 255, 255, 0.85),
-    inset 0 -1px 1px 0 rgba(200, 185, 165, 0.50),
-    0 2px 3px 0 rgba(45, 30, 15, 0.08),
-    0 5px 10px -2px rgba(45, 30, 15, 0.16),
-    0 3px 5px -1px rgba(45, 30, 15, 0.08);
+    inset 0 0 0 1px rgba(255, 252, 242, 0.95),
+    inset 0 -1px 1px 0 rgba(180, 150, 108, 0.45),
+    0 2px 3px 0 rgba(50, 35, 15, 0.08),
+    0 5px 10px -2px rgba(50, 35, 15, 0.16),
+    0 3px 5px -1px rgba(50, 35, 15, 0.08);
   transform: translateY(-1px);
 }
 
 .cs-glass-pill:active {
-  background: rgba(242, 235, 222, 0.90);
-  border-color: rgba(215, 205, 190, 0.8);
+  background: rgba(238, 228, 210, 0.92);
+  border-color: rgba(180, 150, 108, 0.80);
   box-shadow:
-    inset 0 1px 1px 0 rgba(255, 255, 255, 0.75),
-    inset 0 0 0 1px rgba(215, 205, 190, 0.45),
-    0 1px 2px 0 rgba(45, 30, 15, 0.10);
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.8),
+    inset 0 0 0 1px rgba(210, 185, 145, 0.45),
+    0 1px 2px 0 rgba(50, 35, 15, 0.10);
   transform: translateY(0.5px);
 }
 
-/* Активная стеклянная плашка — Вариант 3 «Медовое стекло» с солнечным золотистым сиянием */
+/* Активная стеклянная плашка — Вариант B «Солнечный Янтарь» (насыщенный и контрастный) */
 .cs-glass-pill-active {
-  background: linear-gradient(135deg, rgba(244, 218, 172, 0.95) 0%, rgba(228, 192, 134, 0.88) 100%);
+  background: linear-gradient(135deg, rgba(235, 202, 148, 0.98) 0%, rgba(214, 172, 110, 0.92) 100%);
   backdrop-filter: blur(12px) saturate(160%);
   -webkit-backdrop-filter: blur(12px) saturate(160%);
-  border: 1px solid rgba(198, 152, 85, 0.95);
-  color: #2e1c06;
-  font-weight: 700;
+  border: 1px solid rgba(175, 128, 60, 0.98);
+  color: #201202;
+  font-weight: 600;
   box-shadow:
     inset 0 1.5px 1px 0 #ffffff,
-    inset 0 0 0 1px rgba(255, 245, 215, 0.75),
-    inset 0 -1px 1.5px 0 rgba(175, 125, 55, 0.40),
-    0 1px 2px 0 rgba(50, 30, 10, 0.08),
-    0 3px 6px -1px rgba(50, 30, 10, 0.18),
-    0 2px 4px -1px rgba(50, 30, 10, 0.08);
+    inset 0 0 0 1px rgba(255, 240, 200, 0.85),
+    inset 0 -1px 1.5px 0 rgba(150, 105, 45, 0.50),
+    0 1px 2px 0 rgba(50, 30, 10, 0.10),
+    0 4px 8px -1px rgba(50, 30, 10, 0.22),
+    0 2px 4px -1px rgba(50, 30, 10, 0.10);
   transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1),
               box-shadow 0.2s cubic-bezier(0.22, 1, 0.36, 1),
               background 0.2s ease,
@@ -299,25 +297,25 @@
 }
 
 .cs-glass-pill-active:hover {
-  background: linear-gradient(135deg, rgba(248, 226, 184, 0.98) 0%, rgba(234, 200, 144, 0.92) 100%);
-  border-color: rgba(185, 140, 75, 0.98);
-  color: #221404;
+  background: linear-gradient(135deg, rgba(242, 212, 160, 0.98) 0%, rgba(222, 182, 122, 0.95) 100%);
+  border-color: rgba(160, 115, 50, 0.98);
+  color: #170c01;
   box-shadow:
     inset 0 1.5px 1px 0 #ffffff,
-    inset 0 0 0 1px rgba(255, 248, 225, 0.85),
-    inset 0 -1px 1.5px 0 rgba(175, 125, 55, 0.50),
-    0 2px 3px 0 rgba(50, 30, 10, 0.10),
-    0 5px 10px -2px rgba(50, 30, 10, 0.22),
-    0 3px 5px -1px rgba(50, 30, 10, 0.10);
+    inset 0 0 0 1px rgba(255, 245, 210, 0.90),
+    inset 0 -1px 1.5px 0 rgba(150, 105, 45, 0.60),
+    0 2px 3px 0 rgba(50, 30, 10, 0.12),
+    0 6px 12px -2px rgba(50, 30, 10, 0.26),
+    0 3px 6px -1px rgba(50, 30, 10, 0.12);
   transform: translateY(-1px);
 }
 
 .cs-glass-pill-active:active {
-  background: rgba(232, 198, 142, 0.94);
-  border-color: rgba(185, 140, 75, 0.90);
+  background: rgba(216, 175, 114, 0.95);
+  border-color: rgba(160, 115, 50, 0.95);
   box-shadow:
     inset 0 1px 1px 0 rgba(255, 255, 255, 0.8),
-    inset 0 0 0 1px rgba(210, 160, 90, 0.5),
-    0 1px 2px 0 rgba(50, 30, 10, 0.12);
+    inset 0 0 0 1px rgba(180, 130, 60, 0.5),
+    0 1px 2px 0 rgba(50, 30, 10, 0.14);
   transform: translateY(0.5px);
 }
