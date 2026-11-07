@@ -623,6 +623,18 @@ function prerenderExhibitions(spaHtml: string): number {
       }
     }
 
+    if (!date && title) {
+      const match = title.match(/(?:^|[^\d])(\d{2}\.\d{2}\.(?:\d{4}|\d{2}))(?:[^\d]|$)/)
+      if (match) date = match[1]
+    }
+    if (!date && index[id]) {
+      const matchFile = index[id].match(/(?:^|[^\d])(\d{2})(\d{2})(\d{2})(?:[^\d]|$)/)
+      if (matchFile) {
+        const [, d, m, y] = matchFile
+        date = `${d}.${m}.20${y}`
+      }
+    }
+
     const meta = exhibitionMeta({ id, title, date, city, dogCount, club })
     const html = applyMetaToSpaShell(spaHtml, {
       title: meta.title,

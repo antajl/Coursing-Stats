@@ -450,9 +450,29 @@ describe('prerender-seo helpers', () => {
     expect(event.location.address.addressLocality).toBe('Горно-Алтайск')
   })
 
-  it('toIsoDate handles DD.MM.YYYY, ISO dates and empty values correctly', () => {
+  it('exhibitionMeta with missing date falls back to ItemPage without invalid Event node', () => {
+    const meta = exhibitionMeta({
+      id: '12',
+      title: 'Выставка Всемирной федерации клубов бульдогов',
+      date: '',
+      city: 'Москва',
+      club: 'РКФ',
+    })
+
+    const graph = (meta.jsonLd as any)['@graph'] as any[]
+    const event = graph.find((i: any) => i['@type'] === 'Event')
+    expect(event).toBeUndefined()
+
+    const itemPage = graph.find((i: any) => i['@type'] === 'ItemPage')
+    expect(itemPage).toBeDefined()
+    expect(itemPage.name).toBe('Выставка Всемирной федерации клубов бульдогов')
+  })
+
+  it('toIsoDate handles DD.MM.YYYY, DD.MM.YY, embedded dates, ISO dates and empty values correctly', () => {
     expect(toIsoDate('31.08.2024')).toBe('2024-08-31')
     expect(toIsoDate('2026-06-15')).toBe('2026-06-15')
+    expect(toIsoDate('02.11.19')).toBe('2019-11-02')
+    expect(toIsoDate('20.10.19 СЕЗОН В НИЖНЕМ')).toBe('2019-10-20')
     expect(toIsoDate('')).toBeUndefined()
     expect(toIsoDate(null)).toBeUndefined()
   })
