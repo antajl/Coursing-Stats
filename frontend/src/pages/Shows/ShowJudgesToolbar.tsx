@@ -4,6 +4,7 @@ import PageToolbar from '../../components/toolbar/PageToolbar'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
 import YearDropdown from '../../components/ui/YearDropdown'
 import BreedSearchDropdown from '../../components/ui/BreedSearchDropdown'
+import type { DogsIndexEntry } from '../../lib/competingBreeds'
 import QuickBreedBar, { SHOW_CANDIDATE_BREEDS } from '../TopDogs/QuickBreedBar'
 import { toolbarPillTriggerClass } from '../../lib/toolbar'
 import { formatBreedName } from '../../lib/breedMapping'
@@ -18,6 +19,7 @@ export interface ShowJudgesToolbarProps {
   availableBreeds: string[]
   filterBreed: string
   onSelectBreed: (breed: string) => void
+  dogIndex?: DogsIndexEntry[]
   onResetFilters: () => void
 }
 
@@ -31,6 +33,7 @@ export function ShowJudgesToolbar({
   availableBreeds,
   filterBreed,
   onSelectBreed,
+  dogIndex,
   onResetFilters,
 }: ShowJudgesToolbarProps) {
   const [mobileYearOpen, setMobileYearOpen] = useState(false)
@@ -63,6 +66,7 @@ export function ShowJudgesToolbar({
             {/* Breed Dropdown */}
             <BreedSearchDropdown
               breeds={availableBreeds}
+              dogIndex={dogIndex}
               selectedBreed={filterBreed}
               onSelect={onSelectBreed}
               trigger={
@@ -135,6 +139,7 @@ export function ShowJudgesToolbar({
                 selectedBreed={filterBreed}
                 onSelectBreed={onSelectBreed}
                 breedValues={availableBreeds}
+                dogIndex={dogIndex}
                 candidateBreeds={SHOW_CANDIDATE_BREEDS}
               />
             </div>

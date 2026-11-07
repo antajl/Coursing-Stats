@@ -2,10 +2,11 @@ import { useState, useEffect, useMemo, useRef } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import ShowJudgeCard from '../../components/ShowJudgeCard'
 import { initialSeasonYearFilter, resolveActiveSeason } from '../../lib/season'
-import { useShowJudges, useShowJudgesPage0 } from '../../hooks/useStaticData'
+import { useShowJudges, useShowJudgesPage0, useShowBreedAliases } from '../../hooks/useStaticData'
 import EmptyState from '../../components/EmptyState'
 import SkeletonLoader from '../../components/SkeletonLoader'
 import type { ShowJudge } from '../../lib/staticData'
+import type { DogsIndexEntry } from '../../lib/competingBreeds'
 import {
   matchesBreedFilter,
   formatBreedName,
@@ -91,24 +92,38 @@ export default function ShowJudges() {
   const judges: ShowJudge[] = fullJudges.length > 0 ? fullJudges : page0Judges
   const judgesPartial = fullJudges.length === 0 && hasPage0
 
-  const availableBreeds = useMemo(() => {
-    // Scan breeds from top judges (covers all active breeds without scanning 268k items on tab switch)
-    const source = judges.length > 250 ? judges.slice(0, 250) : judges
+  const { data: breedAliases = [] } = useShowBreedAliases()
+  const officialBreedsSet = useMemo(() => new Set(breedAliases.map((b) => canonicalBreed(b))), [breedAliases])
+
+  const { availableBreeds, dogIndex } = useMemo(() => {
     const counts = new Map<string, number>()
-    for (let i = 0; i < source.length; i++) {
-      const jb = source[i].breeds
+    for (let i = 0; i < judges.length; i++) {
+      const jb = judges[i].breeds
       if (!jb) continue
+      const seenJudgeBreeds = new Set<string>()
       for (let k = 0; k < jb.length; k++) {
         const canon = canonicalBreed(jb[k])
-        if (canon) counts.set(canon, (counts.get(canon) || 0) + 1)
+        if (!canon || canon.startsWith('*') || canon === 'БЕЗ ПОРОДЫ') continue
+        if (officialBreedsSet.size > 0 && !officialBreedsSet.has(canon)) continue
+        if (!seenJudgeBreeds.has(canon)) {
+          seenJudgeBreeds.add(canon)
+          counts.set(canon, (counts.get(canon) || 0) + 1)
+        }
       }
     }
-    return Array.from(counts.keys()).sort((a, b) => {
+    const idx: DogsIndexEntry[] = []
+    const breedList: string[] = []
+    for (const [breed, count] of counts.entries()) {
+      idx.push({ breed, dog_count: count, competition_count: count })
+      breedList.push(breed)
+    }
+    breedList.sort((a, b) => {
       const diff = (counts.get(b) || 0) - (counts.get(a) || 0)
       if (diff !== 0) return diff
       return a.localeCompare(b, 'ru')
     })
-  }, [judges === fullJudges ? 'full' : judges.length])
+    return { availableBreeds: breedList, dogIndex: idx }
+  }, [judges === fullJudges ? 'full' : judges.length, officialBreedsSet])
 
   const filteredJudges = useMemo(() => {
     const q = searchQuery.trim().toLowerCase()
@@ -204,6 +219,7 @@ export default function ShowJudges() {
         showYears={SHOW_YEARS}
         isYearNonDefault={isYearNonDefault}
         availableBreeds={availableBreeds}
+        dogIndex={dogIndex}
         filterBreed={filterBreed}
         onSelectBreed={handleSelectBreed}
         onResetFilters={handleResetFilters}

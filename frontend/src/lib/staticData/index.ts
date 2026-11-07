@@ -69,6 +69,7 @@ export {
   getShowJudgesPage0,
   getShowJudgeDetails,
   getShowJudgesStrictnessBaseline,
+  getShowBreedAliases,
   getShowHeroStats,
   getShowHomeTop,
   getShowDogAllTimeRank,

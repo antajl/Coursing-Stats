@@ -13,7 +13,7 @@ export function sanitizeBreedName(raw: string): string {
   let str = raw.normalize('NFKC').trim()
 
   // 1. Убираем сноски, звездочки и буллеты (*Порода -> Порода)
-  str = str.replace(/[*•]/g, '').trim()
+  str = str.replace(/^[*•\s]+/, '').replace(/[*•]/g, '').trim()
 
   if (/^\d+$/.test(str)) return ''
   if (!str || /^(?:SIGHTHOUND)?БЕЗ\s+ПОРОДЫ$/i.test(str)) {
@@ -26,6 +26,9 @@ export function sanitizeBreedName(raw: string): string {
   }
 
   // 3. Случайно приклеенная предыдущая порода в шапке (mergeBreedCarry)
+  if (/^КОКЕР\s+(?:БАВАРСКАЯ|СИБИРСКИЙ|ЗОЛОТИСТЫЙ|ВЕНГЕРСКАЯ|ИСПАНСКАЯ|НЕМЕЦКАЯ|НОРВЕЖСКИЙ|ПЕРУАНСКАЯ|ФИНСКАЯ|АМЕРИКАНСКАЯ|ГОНЧАЯ|МАЛАЯ|МАЛЫЙ|ВОДЯНАЯ|ГАСКОНСКИЙ|БРЕТОНСКИЙ)/i.test(str)) {
+    str = str.replace(/^КОКЕР\s+/i, '')
+  }
   if (/^БАСЕНДЖИ\s+(?:КСОЛОИТЦКУИНТЛИ|НЕМЕЦКИЙ|ВОЛЬФШПИЦ|ЗАПАДНОСИБИРСКАЯ|КАРЕЛЬСКАЯ|ГОЛАЯ|ИНТЛИ|СОБАКА)/i.test(str)) {
     str = str.replace(/^БАСЕНДЖИ\s+/i, '')
   }
@@ -83,8 +86,9 @@ export function sanitizeBreedName(raw: string): string {
 
   // 9. Австралийская пастушья собака
   if (/АВСТРАЛИЙСКАЯ\s+(?:ПАСТУШЬЯ\s+)?СОБАКА\s*\(\s*АВСТРАЛИЙСКИЙ/i.test(str) ||
-      /^ПАСТУШЬЯ\s+СОБАКА\s*\(\s*АВСТРАЛИЙСКИЙ/i.test(str)) {
-    return 'АВСТРАЛИЙСКАЯ ПАСТУШЬЯ СОБАКА (ХИЛЕР)'
+      /^ПАСТУШЬЯ\s+СОБАКА\s*\(\s*АВСТРАЛИЙСКИЙ/i.test(str) ||
+      /^АВСТРАЛИЙСКАЯ\s+ПАСТУШЬЯ\s+СОБАКА\s*\(\s*ХИЛЕР\s*\)/i.test(str)) {
+    return 'АВСТРАЛИЙСКАЯ ПАСТУШЬЯ СОБАКА'
   }
 
   // 10. Папийон / Фален
@@ -92,8 +96,11 @@ export function sanitizeBreedName(raw: string): string {
     return 'КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН'
   }
 
-  // 11. Английский кокер спаниель
-  if (/^АНГЛИЙСКИЙ\s+КОКЕР\s+СПАНИЕЛЬ/i.test(str)) {
+  // 11. Американский и английский кокер спаниели (схлопывание разновидностей и опечаток)
+  if (/^АМЕРИКАНСКИЙ\s+КОК[К]?ЕР[- ]*СПАНИЕЛЬ/i.test(str) || /^КОКЕР\s+АМЕРИКАНСКИЙ/i.test(str) || /^АМЕРИКАНСКИЙ\s+КОКЕР(?:\s|$)/i.test(str)) {
+    return 'АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ'
+  }
+  if (/^АНГЛИЙСКИЙ\s+КОК[К]?ЕР[- ]*СПАНИЕЛЬ/i.test(str) || /^КОКЕР\s+АНГЛИЙСКИЙ/i.test(str) || /^АНГЛИЙСКИЙ\s+КОКЕР(?:\s|$)/i.test(str) || /^КОКЕР[- ]*СПАНИЕЛЬ(?:\s|$)/i.test(str) || /СПАНИЕЛЬ\s+АНГЛИЙСКИЙ\s+КОКЕР/i.test(str)) {
     return 'АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ'
   }
 
@@ -101,7 +108,7 @@ export function sanitizeBreedName(raw: string): string {
   if (/^POODLE\s+TOY/i.test(str)) return 'ПУДЕЛЬ ТОЙ'
   if (/^POODLE\s+MINIATURE/i.test(str)) return 'ПУДЕЛЬ МИНИАТЮРНЫЙ'
   if (/^POODLE\s+STANDARD/i.test(str) || /^STANDARD\s+BLACK/i.test(str)) return 'ПУДЕЛЬ СТАНДАРТНЫЙ'
-  if (/^(?:GERMAN\s+)?SPITZ\s+TOY/i.test(str)) return 'НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)'
+  if (/^(?:GERMAN\s+)?SPITZ\s+TOY/i.test(str) || /^\(?ПОМЕРАНСКИЙ\)?/i.test(str)) return 'НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)'
   if (/^FRENCH\s+BULLDOG/i.test(str)) return 'ФРАНЦУЗСКИЙ БУЛЬДОГ'
 
   // 13. Пудели с длинными перечислениями окрасов
@@ -156,6 +163,17 @@ export function sanitizeBreedName(raw: string): string {
   if (/СПРИНГЕР\s+СПАНИЕЛЬ.*ЗОЛОТИСТЫЙ\s+РЕТРИВЕР/i.test(str)) {
     return 'АНГЛИЙСКИЙ СПРИНГЕР СПАНИЕЛЬ'
   }
+
+  // 19. Отсечение склеенных многострочных пород из битых таблиц PDF
+  const multiBreedMarkers = (str.match(/(?:РЕТРИВЕР|СПАНИЕЛЬ|ОВЧАРКА|ТЕРЬЕР|ГОНЧАЯ|ЛАЙКА|БОРЗАЯ|ДОГ|БУЛЬДОГ|ШПИЦ|ТАКСА|ПУДЕЛЬ|ХАСКИ|БАСЕНДЖИ|СЕТТЕР)/gi) || []).length
+  if (multiBreedMarkers >= 2 && str.length > 40) {
+    const firstMatch = str.match(/^(?:АМЕРИКАНСКИЙ\s+КОК[К]?ЕР[- ]*СПАНИЕЛЬ|АНГЛИЙСКИЙ\s+КОК[К]?ЕР[- ]*СПАНИЕЛЬ|ЗОЛОТИСТЫЙ\s+РЕТРИВЕР|ЛАБРАДОР\s+РЕТРИВЕР|ПРЯМОШЕРСТНЫЙ\s+РЕТРИВЕР|СИБИРСКИЙ\s+ХАСКИ|ФРАНЦУЗСКИЙ\s+БУЛЬДОГ|НЕМЕЦКИЙ\s+БОКСЕР|НЕМЕЦКАЯ\s+ОВЧАРКА|ВЕЛЬШ\s+КОРГИ\s+ПЕМБРОК|ВЕЛЬШ\s+КОРГИ\s+КАРДИГАН|ДОБЕРМАН|РОТВЕЙЛЕР|ШИ-ТЦУ|МОПС)/i)
+    if (firstMatch) return firstMatch[0].toUpperCase().trim()
+    return ''
+  }
+
+  // Обрывки без имени породы, начинающиеся со скобки
+  if (str.startsWith('(') && !str.includes(')')) return ''
 
   return str.replace(/\s+/g, ' ').trim()
 }
@@ -217,7 +235,8 @@ export const BREED_ALIAS_BY_KEY: Record<string, string> = {
   'ПТИ (МАЛЫЙ) БРАБАНСОН': 'ПТИ БРАБАНСОН',
   'ПТИ(МАЛЫЙ) БРАБАНСОН': 'ПТИ БРАБАНСОН',
   'МАЛЫЙ БРАБАНСОН': 'ПТИ БРАБАНСОН',
-  'АВСТРАЛИЙСКАЯ ПАСТУШЬЯ СОБАКА': 'АВСТРАЛИЙСКАЯ ПАСТУШЬЯ СОБАКА (ХИЛЕР)',
+  'АВСТРАЛИЙСКАЯ ПАСТУШЬЯ СОБАКА': 'АВСТРАЛИЙСКАЯ ПАСТУШЬЯ СОБАКА',
+  'АВСТРАЛИЙСКАЯ ПАСТУШЬЯ СОБАКА (ХИЛЕР)': 'АВСТРАЛИЙСКАЯ ПАСТУШЬЯ СОБАКА',
   'НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ': 'НЕМЕЦКАЯ ОВЧАРКА К-Ш',
   'НЕМЕЦКАЯ ОВЧАРКА КОРОТКОШЕРСТНАЯ': 'НЕМЕЦКАЯ ОВЧАРКА К-Ш',
   'НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТ НАЯ': 'НЕМЕЦКАЯ ОВЧАРКА К-Ш',
@@ -644,14 +663,23 @@ export function canonicalBreed(breed: unknown): string {
     CANONICAL_BREED_CACHE.set(raw, '')
     return ''
   }
+
+  // 1. Очистка артефактов PDF, сносок со звёздочками и склеек
+  const clean = sanitizeBreedName(raw)
+  if (!clean || clean === 'БЕЗ ПОРОДЫ') {
+    const res = clean || ''
+    CANONICAL_BREED_CACHE.set(raw, res)
+    return res
+  }
+
   // Сначала полный ключ (до снятия / EN) — иначе «АКИТА / AMERICAN» схлопнется в японскую акиту
-  const full = breedNormalizeKey(raw).replace(/\s*\/+\s*$/, '').trim()
+  const full = breedNormalizeKey(clean).replace(/\s*\/+\s*$/, '').trim()
   if (BREED_ALIAS_BY_KEY[full]) {
     const res = BREED_ALIAS_BY_KEY[full]
     CANONICAL_BREED_CACHE.set(raw, res)
     return res
   }
-  const key = breedAliasKey(raw).replace(/\s*\/+\s*$/, '').trim()
+  const key = breedAliasKey(clean).replace(/\s*\/+\s*$/, '').trim()
   const res = BREED_ALIAS_BY_KEY[key] || key
   CANONICAL_BREED_CACHE.set(raw, res)
   return res

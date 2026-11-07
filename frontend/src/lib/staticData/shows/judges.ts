@@ -175,3 +175,15 @@ export async function getShowJudgesStrictnessBaseline(): Promise<ApiResult<ShowJ
   if (!file) return { success: false, error: 'Show judges strictness baseline unavailable' }
   return { success: true, data: file }
 }
+
+let cachedBreedAliases: string[] | null = null
+
+export async function getShowBreedAliases(): Promise<string[]> {
+  if (cachedBreedAliases) return cachedBreedAliases
+  const data = await fetchJson<{ pairs?: [string, string][] }>('shows/indexes/breed-aliases.json')
+  if (data?.pairs && Array.isArray(data.pairs)) {
+    cachedBreedAliases = data.pairs.map((p) => p[0])
+    return cachedBreedAliases
+  }
+  return []
+}

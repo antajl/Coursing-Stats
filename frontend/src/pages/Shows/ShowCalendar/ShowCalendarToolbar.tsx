@@ -2,6 +2,7 @@ import { ChevronDown } from 'lucide-react'
 import MonthYearDropdown from '../../../components/toolbar/MonthYearDropdown'
 import ToolbarSearch from '../../../components/toolbar/ToolbarSearch'
 import BreedSearchDropdown from '../../../components/ui/BreedSearchDropdown'
+import type { DogsIndexEntry } from '../../../lib/competingBreeds'
 import CitySearchDropdown, { type CityOption } from './CitySearchDropdown'
 import QuickBreedBar, {
   SHOW_CANDIDATE_BREEDS,
@@ -33,6 +34,7 @@ export interface ShowCalendarToolbarProps {
   cities?: CityOption[]
   breedValues: string[]
   candidateBreeds?: QuickBreedItem[]
+  dogIndex?: DogsIndexEntry[]
   onClearQuickPreset: () => void
   availableMonths?: Set<string>
 }
@@ -53,6 +55,7 @@ export function ShowCalendarToolbar({
   cities = [],
   breedValues,
   candidateBreeds = SHOW_CANDIDATE_BREEDS,
+  dogIndex,
   onClearQuickPreset,
   availableMonths,
 }: ShowCalendarToolbarProps) {
@@ -89,6 +92,7 @@ export function ShowCalendarToolbar({
         <div className="shrink-0">
           <BreedSearchDropdown
             breeds={breedValues}
+            dogIndex={dogIndex}
             selectedBreed={filterBreed}
             onSelect={onBreedChange}
             trigger={
@@ -155,6 +159,7 @@ export function ShowCalendarToolbar({
             selectedBreed={filterBreed}
             onSelectBreed={onBreedChange}
             breedValues={breedValues}
+            dogIndex={dogIndex}
             candidateBreeds={candidateBreeds}
           />
         </div>

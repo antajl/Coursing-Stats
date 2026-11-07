@@ -11,6 +11,7 @@ import {
   getShowJudgesPage0,
   getShowJudgeDetails,
   getShowJudgesStrictnessBaseline,
+  getShowBreedAliases,
 } from '../lib/staticData';
 import {
   calendarVisibleFromFlags,
@@ -240,5 +241,13 @@ export function useShowJudgesStrictnessBaseline() {
     queryKey: ['showJudgesStrictnessBaseline'],
     queryFn: getShowJudgesStrictnessBaseline,
     staleTime: STALE_LONG_MS,
+  })
+}
+
+export function useShowBreedAliases() {
+  return useQuery({
+    queryKey: ['showBreedAliases'],
+    queryFn: getShowBreedAliases,
+    staleTime: 60 * 60 * 1000,
   })
 }
