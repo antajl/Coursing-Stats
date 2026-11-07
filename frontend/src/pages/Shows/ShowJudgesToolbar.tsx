@@ -4,6 +4,7 @@ import PageToolbar from '../../components/toolbar/PageToolbar'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
 import YearDropdown from '../../components/ui/YearDropdown'
 import BreedSearchDropdown from '../../components/ui/BreedSearchDropdown'
+import QuickBreedBar, { SHOW_CANDIDATE_BREEDS } from '../TopDogs/QuickBreedBar'
 import { toolbarPillTriggerClass } from '../../lib/toolbar'
 import { formatBreedName } from '../../lib/breedMapping'
 
@@ -93,9 +94,9 @@ export function ShowJudgesToolbar({
             )}
           </div>
 
-          {/* Десктопная строка */}
-          <div className="hidden sm:flex sm:items-center gap-2 w-full">
-            <div className="flex max-w-full items-center gap-1.5 shrink-0">
+          {/* Десктопная строка: Поиск + Год + Сброс + Разделитель | + QuickBreedBar edge-to-edge */}
+          <div className="hidden sm:flex sm:items-center gap-2 w-full min-w-0">
+            <div className="flex items-center gap-1.5 shrink-0">
               <ToolbarSearch
                 value={searchQuery}
                 onChange={setSearchQuery}
@@ -108,25 +109,7 @@ export function ShowJudgesToolbar({
                 onSelectYear={setFilterYear}
               />
 
-              {/* Breed Dropdown */}
-              <BreedSearchDropdown
-                breeds={availableBreeds}
-                selectedBreed={filterBreed}
-                onSelect={onSelectBreed}
-                trigger={
-                  <button
-                    type="button"
-                    className={`shrink-0 ${toolbarPillTriggerClass(Boolean(filterBreed))}`}
-                  >
-                    <span className="truncate max-w-[140px]">
-                      {filterBreed ? formatBreedName(filterBreed) : 'Порода'}
-                    </span>
-                    <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70 transition-transform" aria-hidden />
-                  </button>
-                }
-              />
-
-              {/* Reset Filters button */}
+              {/* Reset Filters button — слева перед разделителем */}
               {hasActiveFilters && (
                 <button
                   type="button"
@@ -138,6 +121,22 @@ export function ShowJudgesToolbar({
                   <span>Сбросить</span>
                 </button>
               )}
+            </div>
+
+            {/* Разделитель между левыми контролами и породами */}
+            <div
+              className="h-5 w-px bg-old-money-300 shrink-0 mx-0.5"
+              aria-hidden="true"
+            />
+
+            {/* Выбор породы QuickBreedBar — всегда самая правая часть фильтра до края страницы */}
+            <div className="flex-1 min-w-0">
+              <QuickBreedBar
+                selectedBreed={filterBreed}
+                onSelectBreed={onSelectBreed}
+                breedValues={availableBreeds}
+                candidateBreeds={SHOW_CANDIDATE_BREEDS}
+              />
             </div>
           </div>
         </div>

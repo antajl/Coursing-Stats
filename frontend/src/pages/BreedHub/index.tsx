@@ -2,6 +2,7 @@ import { useMemo } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { Trophy, Gauge, Award, ArrowUpRight, HelpCircle } from 'lucide-react'
 import { SEO } from '../../components/SEO'
+import { JsonLd, breadcrumbListSchema, itemPageSchema } from '../../components/JsonLd'
 import { CORE_BREED_HUBS, getBreedHubBySlug } from '../../lib/breed-hubs-data'
 import { useTopPlacement, useSpeedRecordsByBreed } from '../../hooks/useStaticData'
 
@@ -78,6 +79,25 @@ export default function BreedHub() {
         title={seoTitle}
         description={seoDesc}
         canonicalUrl={`https://coursing-stats.ru/breeds/${breedInfo.slug}/`}
+      />
+      <JsonLd
+        data={{
+          '@context': 'https://schema.org',
+          '@graph': [
+            breadcrumbListSchema([
+              { name: 'Главная', url: '/' },
+              { name: 'Соревнования', url: '/competitions/' },
+              { name: breedInfo.nameRu, url: `/breeds/${breedInfo.slug}/` },
+            ]),
+            itemPageSchema({
+              url: `https://coursing-stats.ru/breeds/${breedInfo.slug}/`,
+              name: `${breedInfo.nameRu} (${breedInfo.nameLat})`,
+              alternateName: [breedInfo.nameLat, breedInfo.nameRu],
+              breed: breedInfo.nameRu,
+              description: seoDesc,
+            }),
+          ],
+        }}
       />
 
       {/* Breadcrumbs */}

@@ -1,5 +1,6 @@
 import fs from 'node:fs'
 import path from 'node:path'
+import zlib from 'node:zlib'
 import { fileURLToPath } from 'node:url'
 import { createRequire } from 'node:module'
 import { defineConfig, type Plugin } from 'vite'
@@ -98,7 +99,13 @@ function serveDataV1(): Plugin {
 
     const ext = path.extname(filePath)
     res.setHeader('Content-Type', CONTENT_TYPES[ext] ?? 'application/octet-stream')
-    fs.createReadStream(filePath).pipe(res)
+    const acceptEncoding = req.headers['accept-encoding'] || ''
+    if (ext === '.json' && typeof acceptEncoding === 'string' && acceptEncoding.includes('gzip')) {
+      res.setHeader('Content-Encoding', 'gzip')
+      fs.createReadStream(filePath).pipe(zlib.createGzip({ level: 6 })).pipe(res)
+    } else {
+      fs.createReadStream(filePath).pipe(res)
+    }
   }
 
   return {

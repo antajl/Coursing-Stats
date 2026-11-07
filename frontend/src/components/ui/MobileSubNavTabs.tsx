@@ -9,6 +9,7 @@ interface MobileSubNavTabsProps<T extends string = string> {
   tabs: readonly SubNavTabItem<T>[]
   activeTab: T
   onChange: (tabId: T) => void
+  onHoverTab?: (tabId: T) => void
   className?: string
   ariaLabel?: string
   layout?: 'auto' | 'fill' | 'scroll'
@@ -19,6 +20,7 @@ export function MobileSubNavTabs<T extends string = string>({
   tabs,
   activeTab,
   onChange,
+  onHoverTab,
   className = '',
   ariaLabel = 'Вкладки раздела',
   layout = 'auto',
@@ -71,6 +73,8 @@ export function MobileSubNavTabs<T extends string = string>({
               role="tab"
               aria-selected={isActive}
               onClick={() => onChange(tab.id)}
+              onMouseEnter={() => onHoverTab?.(tab.id)}
+              onTouchStart={() => onHoverTab?.(tab.id)}
               className={`h-9 px-3.5 sm:px-4 rounded-full text-xs sm:text-sm font-semibold transition-all flex items-center justify-center cursor-pointer whitespace-nowrap select-none ${
                 isFill ? 'flex-1' : 'shrink-0 sm:flex-1'
               } ${

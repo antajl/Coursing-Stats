@@ -61,6 +61,29 @@ interface QuickBreedBarProps {
 const GAP = 6 // gap-1.5 = 6px
 const BUFFER = 8 // Запас против субпиксельного округления в flex и переполнения края контейнера
 
+// Модульный кэш измерений для мгновенного и стабильного рендеринга без фликов при переключении вкладок
+let cachedContainerWidth: number | null = null
+let cachedMeasured: {
+  allW: number
+  moreW: number
+  minW: number
+  widths: Record<string, number>
+} | null = null
+
+function getInitialContainerWidth(): number {
+  if (cachedContainerWidth !== null && cachedContainerWidth > 0) {
+    return cachedContainerWidth
+  }
+  if (typeof window !== 'undefined') {
+    // Учитываем каркас сайта App.tsx (md:max-w-7xl = 1280px) и боковые отступы (32-64px)
+    const effectiveLayoutWidth = Math.min(window.innerWidth - 32, 1280 - 64)
+    // Левые управляющие элементы тулбаров (поиск, год, пол, подсказка, разделитель) занимают ~500-520px
+    const estimatedLeftControls = 520
+    return Math.max(260, effectiveLayoutWidth - estimatedLeftControls)
+  }
+  return 600
+}
+
 export default function QuickBreedBar({
   selectedBreed,
   onSelectBreed,
@@ -113,21 +136,16 @@ export default function QuickBreedBar({
   const minBtnRef = useRef<HTMLButtonElement>(null)
   const itemRefs = useRef<(HTMLButtonElement | null)[]>([])
 
-  // Начальная ширина до первого измерения через ResizeObserver
-  const [containerWidth, setContainerWidth] = useState<number>(() => {
-    if (typeof window !== 'undefined') {
-      return Math.max(260, window.innerWidth - 560)
-    }
-    return 600
-  })
+  // Начальная ширина: берем из кэша либо вычисляем реалистичную оценку под макет 1280px
+  const [containerWidth, setContainerWidth] = useState<number>(getInitialContainerWidth)
 
-  // Точные измеренные ширины элементов из невидимого контейнера
+  // Точные измеренные ширины элементов из невидимого контейнера (из кэша либо null)
   const [measured, setMeasured] = useState<{
     allW: number
     moreW: number
     minW: number
     widths: Record<string, number>
-  } | null>(null)
+  } | null>(() => cachedMeasured)
 
   useLayoutEffect(() => {
     const el = containerRef.current
@@ -138,19 +156,23 @@ export default function QuickBreedBar({
     const updateContainer = () => {
       if (el) {
         const nextW = el.clientWidth
-        setContainerWidth((prev) => (prev !== nextW ? nextW : prev))
+        if (nextW > 0) {
+          cachedContainerWidth = nextW
+          setContainerWidth((prev) => (prev !== nextW ? nextW : prev))
+        }
       }
     }
     updateContainer()
 
     // Точное снятие размеров кнопок в браузере с учетом шрифтов и кернинга
     const remeasure = () => {
-      const allW = allBtnRef.current?.offsetWidth || 96
-      const moreW = moreBtnRef.current?.offsetWidth || 114
-      const minW = minBtnRef.current?.offsetWidth || 86
-      const widths: Record<string, number> = {}
+      const allW = allBtnRef.current?.offsetWidth || cachedMeasured?.allW || 96
+      const moreW = moreBtnRef.current?.offsetWidth || cachedMeasured?.moreW || 114
+      const minW = minBtnRef.current?.offsetWidth || cachedMeasured?.minW || 86
+      const widths: Record<string, number> = { ...(cachedMeasured?.widths || {}) }
       candidates.forEach((b, i) => {
-        widths[b.key] = itemRefs.current[i]?.offsetWidth || b.estWidth
+        widths[b.key] =
+          itemRefs.current[i]?.offsetWidth || cachedMeasured?.widths[b.key] || b.estWidth
       })
       setMeasured((prev) => {
         if (
@@ -163,7 +185,9 @@ export default function QuickBreedBar({
         ) {
           return prev
         }
-        return { allW, moreW, minW, widths }
+        const next = { allW, moreW, minW, widths }
+        cachedMeasured = next
+        return next
       })
     }
 
@@ -184,6 +208,7 @@ export default function QuickBreedBar({
         for (const entry of entries) {
           const w = entry.contentRect.width
           if (w > 0) {
+            cachedContainerWidth = w
             setContainerWidth((prev) => (prev !== w ? w : prev))
           }
         }

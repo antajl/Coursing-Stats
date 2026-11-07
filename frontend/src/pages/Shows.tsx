@@ -17,21 +17,18 @@ function Shows() {
   const rawTab = searchParams.get('tab') || 'ranking'
   const calendarVisible = usePublicCalendarVisible('shows')
 
-  // Warm the other heavy tab while the user is already on /shows.
   // IMPORTANT: Keep this hook before any early returns to respect Rules of Hooks!
+  // Warm the other heavy tab only after the active tab has finished its initial load
+  // (2.5s deferred idle timer so background work never competes with the first paint).
   useEffect(() => {
-    const idle =
-      typeof window !== 'undefined' && 'requestIdleCallback' in window
-        ? window.requestIdleCallback.bind(window)
-        : (cb: () => void) => window.setTimeout(cb, 400)
-    const id = idle(() => prefetchShowsHeavyTabs())
-    return () => {
-      if (typeof window !== 'undefined' && 'cancelIdleCallback' in window && typeof id === 'number') {
-        window.cancelIdleCallback(id)
-      } else {
-        window.clearTimeout(id as number)
-      }
-    }
+    const timer = window.setTimeout(() => {
+      const idle =
+        typeof window !== 'undefined' && 'requestIdleCallback' in window
+          ? window.requestIdleCallback.bind(window)
+          : (cb: () => void) => window.setTimeout(cb, 200)
+      idle(() => prefetchShowsHeavyTabs())
+    }, 2500)
+    return () => window.clearTimeout(timer)
   }, [])
 
   const rawTabParam = searchParams.get('tab')
@@ -93,6 +90,7 @@ function Shows() {
         tabs={tabs}
         activeTab={activeTab}
         onChange={handleTabChange}
+        onHoverTab={() => prefetchShowsHeavyTabs()}
         ariaLabel="Разделы выставок"
       />
 
