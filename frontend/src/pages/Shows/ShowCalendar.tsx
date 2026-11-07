@@ -16,6 +16,7 @@ import { SHOW_CANDIDATE_BREEDS } from '../TopDogs/QuickBreedBar'
 import { useInfiniteScroll } from '../../hooks/useInfiniteScroll'
 import {
   filterShowCalendarGroups,
+  findLatestMonthWithProtocols,
   groupExhibitionsByMonth,
 } from './showCalendarDate'
 import { exhibitionHasProtocol } from './showCalendarGroup'
@@ -100,10 +101,11 @@ export default function ShowCalendar() {
       }
     } else if (filterMonth === 'all') {
       setExpandedMonths(new Set(Array.from({ length: 12 }, (_, i) => i + 1)))
-    } else if (filterYear === CURRENT_SEASON) {
-      setExpandedMonths(new Set([CURRENT_MONTH]))
+    } else if (exhibitions.length > 0) {
+      const latest = findLatestMonthWithProtocols(exhibitions)
+      setExpandedMonths(new Set([latest]))
     }
-  }, [filterMonth, filterYear])
+  }, [filterMonth, filterYear, exhibitions])
 
   useEffect(() => {
     if (calendarData?.success && calendarData.data) setExhibitions(calendarData.data)

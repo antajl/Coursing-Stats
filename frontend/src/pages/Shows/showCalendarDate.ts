@@ -16,6 +16,34 @@ export function parseShowDate(dateStr: string): Date | null {
   return new Date(year, month - 1, day)
 }
 
+/**
+ * Находит последний месяц с существующими протоколами в переданном наборе выставок.
+ * Если протоколов нет вовсе, возвращает последний месяц с выставками (или текущий месяц).
+ */
+export function findLatestMonthWithProtocols(exhibitions: ShowRkfCalendarEntry[]): number {
+  let latestWithProtocol = 0
+  let latestWithAny = 0
+
+  for (const ex of exhibitions) {
+    if (!ex.date) continue
+    const parts = ex.date.split('.')
+    if (parts.length < 2) continue
+    const m = parseInt(parts[1], 10)
+    if (isNaN(m) || m < 1 || m > 12) continue
+
+    if (m > latestWithAny) {
+      latestWithAny = m
+    }
+    if (exhibitionHasProtocol(ex)) {
+      if (m > latestWithProtocol) {
+        latestWithProtocol = m
+      }
+    }
+  }
+
+  return latestWithProtocol || latestWithAny || (new Date().getMonth() + 1)
+}
+
 /** Calendar-day compare in local time (same as parseShowDate). */
 export function isShowNotStartedYet(dateStr: string): boolean {
   const start = parseShowDate(dateStr)
