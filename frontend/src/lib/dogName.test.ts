@@ -62,4 +62,18 @@ describe('parseDogName', () => {
     expect(res.primary).toBe('Стангерс Ланд Зодиак')
     expect(res.secondary).toBe('Stangers Land Zodiak')
   })
+
+  it('deduplicates identical names across slash (e.g. Pandora von Haus Boccia)', () => {
+    const res1 = parseDogName('PANDORA VON HAUS BOCCIA', 'PANDORA VON HAUS BOCCIA /PANDORA VON HAUS BOCCIA')
+    expect(res1.primary).toBe('Pandora von Haus Boccia')
+    expect(res1.secondary).toBeNull()
+
+    const res2 = parseDogName('YARMAK /YARMAK', 'YARMAK /YARMAK')
+    expect(res2.primary).toBe('Yarmak')
+    expect(res2.secondary).toBeNull()
+
+    const res3 = parseDogName('HARLEY /HARLEY')
+    expect(res3.primary).toBe('Harley')
+    expect(res3.secondary).toBeNull()
+  })
 })

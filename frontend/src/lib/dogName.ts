@@ -202,6 +202,23 @@ export function parseDogName(
   for (const candidate of [nameLat, nameRu]) {
     if (candidate && candidate.includes('/')) {
       const parts = candidate.split('/').map((s) => s.trim()).filter(Boolean)
+      if (parts.length === 0) continue
+
+      // Если части через слеш дублируют друг друга (напр. "NAME / NAME"):
+      const isAllIdentical = parts.every((p) => p.toUpperCase() === parts[0].toUpperCase())
+      if (isAllIdentical) {
+        const single = parts[0]
+        if (/[а-яё]/i.test(single)) {
+          ruCandidate = single
+        } else {
+          latCandidate = single
+          if (candidate === nameRu || (ruCandidate && ruCandidate.toUpperCase() === single.toUpperCase())) {
+            ruCandidate = single
+          }
+        }
+        continue
+      }
+
       const ruPart = parts.find((p) => /[а-яё]/i.test(p))
       const latPart = parts.find((p) => /[a-z]/i.test(p))
       if (ruPart) ruCandidate = ruPart
@@ -209,6 +226,10 @@ export function parseDogName(
       if (!ruPart && !latPart && parts.length >= 2) {
         if (!ruCandidate) ruCandidate = parts[0]
         if (!latCandidate) latCandidate = parts.slice(1).join('/')
+      } else if (!ruPart && parts.length >= 2 && candidate === nameRu) {
+        // Если в nameRu был слеш, но ни одна часть не содержит кириллицы,
+        // не оставляем в ruCandidate грязную строку со слешем:
+        ruCandidate = latPart || parts[0]
       }
     }
   }
