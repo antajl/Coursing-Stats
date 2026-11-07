@@ -39,7 +39,7 @@ describe('dog-name-parts', () => {
   });
 
   it('extractDogNames deduplicates identical names across slash', () => {
-    const $ = cheerio.load('<td>PANDORA VON HAUS BOCCIA /<br>PANDORA VON HAUS BOCCIA</td>');
+    const $ = cheerio.load('<table><tr><td>PANDORA VON HAUS BOCCIA /<br>PANDORA VON HAUS BOCCIA</td></tr></table>');
     const res = extractDogNames($('td'));
     expect(res.name_lat).toBe('PANDORA VON HAUS BOCCIA');
     expect(res.name_ru).toBe('');
