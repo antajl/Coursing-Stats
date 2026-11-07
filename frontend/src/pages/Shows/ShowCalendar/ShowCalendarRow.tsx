@@ -1,4 +1,4 @@
-import { ArrowRight, ChevronDown, ChevronUp } from 'lucide-react'
+import { ChevronDown, ChevronRight, ChevronUp } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import type { ShowRkfCalendarEntry } from '../../../lib/staticData'
 import {
@@ -8,8 +8,7 @@ import {
   formatNkpDisplay,
   type RkfCalendarGroup,
 } from '../showCalendarGroup'
-import { formatShowDate, isShowNotStartedYet } from '../showCalendarDate'
-import { exhibitionRkfUrl, OutboundLinks } from './OutboundLinks'
+import { formatShowDateParts } from '../showCalendarDate'
 
 const RANK_CHIP =
   'inline-flex h-5 shrink-0 items-center justify-center rounded-md bg-old-money-100/90 px-1.5 font-mono text-xs font-semibold text-charcoal-600'
@@ -39,17 +38,6 @@ function rankTokens(exhibition: ShowRkfCalendarEntry): string[] {
     .filter(Boolean)
 }
 
-function rowSurfaceClass(isMulti: boolean, hasProtocol: boolean): string {
-  if (isMulti) {
-    return hasProtocol
-      ? 'border border-warm-blue-200/90 border-l-4 border-l-warm-blue-500 bg-[#FDFBF7] hover:bg-warm-blue-50/50 shadow-[0_1px_2px_rgba(0,0,0,0.02)]'
-      : 'border border-camel-200/90 border-l-4 border-l-camel-600 bg-[#FDFBF7] hover:bg-camel-50/80 shadow-[0_1px_2px_rgba(0,0,0,0.02)]'
-  }
-  return hasProtocol
-    ? 'border border-warm-blue-200/90 border-l-4 border-l-warm-blue-500 bg-warm-blue-50/50 hover:bg-warm-blue-100/70 shadow-[0_1px_2px_rgba(0,0,0,0.02)]'
-    : 'border border-old-money-200 border-l-4 border-l-camel-300 bg-cream-50 hover:bg-camel-100/70 shadow-[0_1px_2px_rgba(0,0,0,0.02)]'
-}
-
 export interface ShowCalendarRowProps {
   group: RkfCalendarGroup
   expanded: boolean
@@ -64,7 +52,7 @@ export function ShowCalendarRow({
   const navigate = useNavigate()
   const exhibition = group.representative
   const isMulti = group.children.length > 1
-  const dateParts = formatShowDate(exhibition.date)
+  const dateParts = formatShowDateParts(exhibition.date, exhibition.date_end)
   const isLc = group.hasLc
   const hasProtocol = group.hasProtocol
 
@@ -79,10 +67,7 @@ export function ShowCalendarRow({
     return null
   })()
 
-  const rkfUrl = exhibitionRkfUrl(exhibition)
   const reportUrl = exhibition.reports_link?.trim() || null
-  const bisReportUrl = exhibition.bis_reports_link?.trim() || null
-  const notStartedYet = isShowNotStartedYet(exhibition.date)
   const place = exhibition.city || exhibition.location || ''
   const subtitle = isMulti ? null : monoSubtitle(exhibition)
   const ranks = isMulti ? collectGroupRanks(group.children) : rankTokens(exhibition)
@@ -117,7 +102,7 @@ export function ShowCalendarRow({
   const interactive = isMulti || Boolean(singleLocalPath) || Boolean(reportUrl)
 
   return (
-    <div className="mb-2">
+    <div data-list-item className="relative">
       <div
         role={interactive ? (isMulti ? 'button' : 'link') : undefined}
         tabIndex={interactive ? 0 : undefined}
@@ -140,54 +125,41 @@ export function ShowCalendarRow({
               }
             : undefined
         }
-        className={`group flex flex-col sm:grid sm:grid-cols-[5rem_minmax(0,1fr)_auto] items-start sm:items-center gap-2 sm:gap-4 rounded-lg p-3 sm:py-2.5 transition-all ${
+        className={`group block bg-transparent px-3 py-2.5 sm:px-4 sm:py-2.5 transition-colors duration-150 hover:bg-camel-100/60 ${
           interactive ? 'cursor-pointer' : 'cursor-default'
-        } ${rowSurfaceClass(isMulti, hasProtocol)}`}
+        }`}
       >
-        {/* Date + Title / Details container */}
-        <div className="flex items-start sm:contents w-full gap-3">
-          {/* Date Column */}
-          <div className="w-[4.5rem] sm:w-[5rem] shrink-0 pt-0.5 sm:pt-0 text-sm leading-tight text-charcoal-800">
-            {dateParts ? (
-              <span className="block whitespace-nowrap font-semibold tabular-nums">
-                {dateParts}
-              </span>
-            ) : (
-              '—'
-            )}
+        <div className="grid grid-cols-[auto_minmax(0,1fr)] sm:grid-cols-[4.1rem_minmax(0,1fr)_11.5rem_8rem] md:grid-cols-[4.1rem_minmax(0,1fr)_13.5rem_8.5rem] items-center gap-3 sm:gap-4">
+          {/* Колонка 1: Календарный блок даты */}
+          <div className="flex flex-col items-center justify-center rounded-lg bg-cream-50/90 border border-old-money-200/80 px-1.5 w-[3.7rem] sm:w-full py-1.5 shrink-0 text-center shadow-2xs gap-0.5">
+            <span className="text-sm sm:text-[15px] font-bold text-charcoal-900 tabular-nums leading-none tracking-tight">
+              {dateParts ? dateParts.dayLine : '—'}
+            </span>
+            <span className="text-[10px] font-semibold text-charcoal-500 uppercase tracking-wider leading-none">
+              {dateParts?.metaLine || ''}
+            </span>
           </div>
 
-          {/* Main Info Column */}
-          <div className="min-w-0 flex-1">
+          {/* Колонка 2: Название выставки + ранги + подзаголовок */}
+          <div className="min-w-0">
             <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
-              {/* Multi-indicator pill on left of title */}
+              {/* Плашка мульти-выставки */}
               {isMulti && (
-                <span className={`inline-flex items-center gap-1 rounded px-2 py-0.5 text-[11px] font-semibold border ${
-                  protocolsCount > 0
-                    ? 'bg-warm-blue-100 text-warm-blue-900 border-warm-blue-300'
-                    : 'bg-camel-200/80 text-camel-900 border-camel-300'
-                }`}>
+                <span
+                  className={`inline-flex items-center gap-1 rounded px-2 py-0.5 text-[11px] font-semibold border shrink-0 ${
+                    protocolsCount > 0
+                      ? 'bg-warm-blue-100 text-warm-blue-900 border-warm-blue-300'
+                      : 'bg-camel-200/80 text-camel-900 border-camel-300'
+                  }`}
+                >
                   {expanded ? <ChevronUp className="h-3 w-3" /> : <ChevronDown className="h-3 w-3" />}
                   <span className="sm:hidden">{formatShowCount(group.children.length)}</span>
                   <span className="hidden sm:inline">{multiLabel}</span>
                 </span>
               )}
 
-              {/* Single Protocol Badge for desktop */}
-              {!isMulti && singleLocalPath && (
-                <span className="hidden sm:inline-flex items-center gap-1 rounded bg-warm-blue-100 px-1.5 py-0.5 text-[11px] font-semibold text-warm-blue-800 border border-warm-blue-200">
-                  Протокол
-                </span>
-              )}
-
               <span
-                className={`min-w-0 leading-[1.3em] text-[13.5px] font-semibold ${
-                  singleLocalPath
-                    ? 'text-charcoal-900 group-hover:text-warm-blue-700 transition-colors'
-                    : isMulti
-                      ? 'text-charcoal-900 group-hover:text-camel-800 transition-colors'
-                      : 'text-charcoal-900'
-                }`}
+                className={`min-w-0 leading-[1.3em] text-[13.5px] sm:text-sm font-semibold truncate text-charcoal-900 group-hover:text-camel-800 transition-colors`}
               >
                 {exhibition.title}
               </span>
@@ -213,17 +185,68 @@ export function ShowCalendarRow({
                 {subtitle}
               </div>
             )}
-            {(place || exhibition.club) && (
-              <div className="mt-0.5 truncate text-xs text-charcoal-500">
-                {[place, exhibition.club].filter(Boolean).join(' · ')}
-              </div>
+
+            {/* На мобильных (< sm) локация и клуб выводятся под названием */}
+            <div className="sm:hidden mt-1 flex flex-col gap-0.5 text-left">
+              {place && (
+                <div className="text-xs font-semibold text-charcoal-800 leading-tight">
+                  {place}
+                </div>
+              )}
+              {exhibition.club && exhibition.club !== place && (
+                <div className="text-[11px] text-charcoal-500 leading-tight">
+                  {exhibition.club}
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* Колонка 3 (Десктоп): Локация и Клуб с идеальным вертикальным выравниванием */}
+          <div className="hidden sm:flex flex-col justify-center min-w-0 pl-3.5 border-l border-old-money-200/70 text-left self-stretch">
+            <span className="text-[9.5px] uppercase font-bold tracking-wider text-charcoal-400 mb-0.5">
+              Локация
+            </span>
+            <span className="text-xs font-semibold text-charcoal-800 leading-tight truncate">
+              {place || 'Локация не указана'}
+            </span>
+            {exhibition.club && exhibition.club !== place && (
+              <span className="text-[11px] text-charcoal-500 mt-0.5 truncate" title={exhibition.club}>
+                {exhibition.club}
+              </span>
             )}
+          </div>
+
+          {/* Колонка 4 (Десктоп): Действие (Развернуть/Свернуть для групп, Результаты > для одиночных) */}
+          <div className="hidden sm:flex items-center justify-end shrink-0 pl-3.5 border-l border-old-money-200/80 self-stretch">
+            {isMulti ? (
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation()
+                  onToggleExpanded(group.key)
+                }}
+                className="inline-flex items-center gap-1.5 rounded-lg border border-camel-300 bg-camel-100/80 px-3 py-1.5 text-xs font-semibold text-camel-900 shadow-2xs hover:bg-camel-200/90 active:bg-camel-300 transition-colors"
+              >
+                <span>{expanded ? 'Свернуть' : 'Развернуть'}</span>
+                {expanded ? <ChevronUp className="h-3.5 w-3.5" /> : <ChevronDown className="h-3.5 w-3.5" />}
+              </button>
+            ) : singleLocalPath ? (
+              <span className="inline-flex items-center gap-0.5 text-xs font-semibold text-camel-700 group-hover:text-camel-800 transition-colors">
+                <span>Результаты</span>
+                <ChevronRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+              </span>
+            ) : reportUrl ? (
+              <span className="inline-flex items-center gap-0.5 text-xs font-semibold text-charcoal-600 group-hover:text-charcoal-800 transition-colors">
+                <span>Отчёт РКФ</span>
+                <ChevronRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+              </span>
+            ) : null}
           </div>
         </div>
 
-        {/* Mobile Action Rows */}
-        {isMulti && (
-          <div className="w-full sm:hidden mt-1 pt-1.5 border-t border-camel-200/60">
+        {/* Мобильный подвал карточки (< sm) */}
+        {isMulti ? (
+          <div className="w-full sm:hidden mt-2 pt-1.5 border-t border-camel-200/60">
             <button
               type="button"
               onClick={(e) => {
@@ -236,93 +259,31 @@ export function ShowCalendarRow({
               <span>{expanded ? 'Свернуть список' : `Показать ${multiLabel}`}</span>
             </button>
           </div>
-        )}
-
-        {!isMulti && (
-          <div className="w-full sm:hidden mt-1 pt-1.5 border-t border-old-money-200/60 flex flex-wrap items-center justify-between gap-1.5">
+        ) : (
+          <div className="sm:hidden mt-2 pt-1.5 border-t border-old-money-200/60 flex items-center justify-between text-xs">
+            <span className="text-[11px] text-charcoal-500 truncate">
+              {place || exhibition.club || ''}
+            </span>
             {singleLocalPath ? (
-              <button
-                type="button"
-                onClick={(e) => {
-                  e.stopPropagation()
-                  navigate(singleLocalPath)
-                }}
-                className="inline-flex items-center gap-1 rounded-md bg-warm-blue-600 px-3 py-1 text-xs font-semibold text-white shadow-sm active:bg-warm-blue-700 transition-colors"
-              >
-                <span>Протокол</span>
-                <ArrowRight className="h-3 w-3" />
-              </button>
-            ) : (
-              <span />
-            )}
-            <div className="flex flex-wrap items-center gap-1.5">
-              <OutboundLinks
-                rkfUrl={rkfUrl}
-                reportUrl={reportUrl}
-                bisReportUrl={bisReportUrl}
-                notStartedYet={notStartedYet}
-              />
-            </div>
+              <span className="inline-flex items-center gap-0.5 text-xs font-semibold text-camel-700 shrink-0 ml-auto">
+                <span>Результаты</span>
+                <ChevronRight className="h-3 w-3" />
+              </span>
+            ) : reportUrl ? (
+              <span className="inline-flex items-center gap-0.5 text-xs font-semibold text-charcoal-600 shrink-0 ml-auto">
+                <span>Отчёт РКФ</span>
+                <ChevronRight className="h-3 w-3" />
+              </span>
+            ) : null}
           </div>
         )}
-
-        {/* Desktop Action Column (Right) */}
-        <div className="hidden sm:flex shrink-0 flex-col items-end justify-center gap-1.5 self-stretch pl-4 border-l border-old-money-200/80 min-w-[9.5rem]">
-          {isMulti ? (
-            <button
-              type="button"
-              onClick={(e) => {
-                e.stopPropagation()
-                onToggleExpanded(group.key)
-              }}
-              className="inline-flex items-center gap-1.5 rounded-lg border border-camel-300 bg-camel-100/80 px-3 py-1 text-xs font-semibold text-camel-900 shadow-sm hover:bg-camel-200/90 active:bg-camel-300 transition-colors"
-            >
-              <span>{expanded ? 'Свернуть' : 'Развернуть'}</span>
-              {expanded ? <ChevronUp className="h-3.5 w-3.5" /> : <ChevronDown className="h-3.5 w-3.5" />}
-            </button>
-          ) : singleLocalPath ? (
-            <>
-              <button
-                type="button"
-                onClick={(e) => {
-                  e.stopPropagation()
-                  navigate(singleLocalPath)
-                }}
-                className="inline-flex items-center gap-1.5 rounded-lg bg-warm-blue-600 px-3 py-1 text-xs font-semibold text-white shadow-sm hover:bg-warm-blue-700 active:bg-warm-blue-800 transition-colors"
-              >
-                <span>Протокол</span>
-                <ArrowRight className="h-3.5 w-3.5" />
-              </button>
-              <div className="flex items-center gap-1">
-                <OutboundLinks
-                  rkfUrl={rkfUrl}
-                  reportUrl={reportUrl}
-                  bisReportUrl={bisReportUrl}
-                  notStartedYet={notStartedYet}
-                />
-              </div>
-            </>
-          ) : (
-            <div className="flex flex-col items-end gap-1">
-              <OutboundLinks
-                rkfUrl={rkfUrl}
-                reportUrl={reportUrl}
-                bisReportUrl={bisReportUrl}
-                notStartedYet={notStartedYet}
-              />
-            </div>
-          )}
-        </div>
       </div>
 
-      {/* Expanded Multi-exhibitions List */}
+      {/* Развёрнутый список мульти-выставки (спокойный, без тяжелых рамок и избыточных кнопок) */}
       {expanded ? (
-        <ul className="mt-1 mb-2 ml-2 sm:ml-[5.5rem] space-y-1.5 border-l-2 border-camel-300 pl-2 sm:pl-3">
+        <ul className="my-1.5 sm:my-2 ml-4 sm:ml-[4.8rem] mr-2 sm:mr-4 border-l-2 border-camel-300/80 pl-3 sm:pl-4 py-1 space-y-1">
           {group.children.map((child) => {
-            const childRkf = exhibitionRkfUrl(child)
             const childReport = child.reports_link?.trim() || null
-            const childBisReport = child.bis_reports_link?.trim() || null
-            const childNotStarted = isShowNotStartedYet(child.date)
             const childHasProtocol = exhibitionHasProtocol(child)
             const childLcPath =
               child.has_lc_protocol && child.lc_exhibition_id
@@ -359,13 +320,13 @@ export function ShowCalendarRow({
                       }
                     : undefined
                 }
-                className={`flex flex-col sm:flex-row sm:items-center justify-between gap-2 rounded-lg border border-old-money-200/80 bg-white/90 p-2.5 text-xs transition-all shadow-[0_1px_2px_rgba(0,0,0,0.02)] ${
-                  childInteractive ? 'cursor-pointer hover:border-camel-300 hover:bg-camel-50/50' : ''
+                className={`group/child flex items-center justify-between gap-3 px-2.5 py-1.5 rounded-md transition-colors ${
+                  childInteractive ? 'cursor-pointer hover:bg-camel-100/70' : ''
                 }`}
               >
                 <div className="min-w-0 flex-1">
                   <div className="flex flex-wrap items-center gap-1.5">
-                    <span className="font-semibold text-charcoal-900">
+                    <span className="text-[13px] font-semibold text-charcoal-900 group-hover/child:text-camel-800 transition-colors">
                       {childHeading}
                     </span>
                     {childRanks.length > 0 && (
@@ -375,32 +336,24 @@ export function ShowCalendarRow({
                     )}
                   </div>
                   {child.club && (
-                    <div className="text-[11px] text-charcoal-500 mt-0.5 truncate">
+                    <div className="text-[11px] text-charcoal-500 truncate">
                       {child.club}
                     </div>
                   )}
                 </div>
 
-                <div className="flex shrink-0 flex-wrap items-center gap-1.5 self-start sm:self-auto">
-                  {childLcPath && (
-                    <button
-                      type="button"
-                      onClick={(e) => {
-                        e.stopPropagation()
-                        navigate(childLcPath)
-                      }}
-                      className="inline-flex items-center gap-1 rounded-md bg-warm-blue-600 px-2 py-0.5 text-[11px] font-semibold text-white shadow-sm hover:bg-warm-blue-700 active:bg-warm-blue-800 transition-colors"
-                    >
-                      <span>Протокол</span>
-                      <ArrowRight className="h-3 w-3" />
-                    </button>
-                  )}
-                  <OutboundLinks
-                    rkfUrl={childRkf}
-                    reportUrl={childReport}
-                    bisReportUrl={childBisReport}
-                    notStartedYet={childNotStarted}
-                  />
+                <div className="shrink-0 flex items-center">
+                  {childLcPath ? (
+                    <span className="inline-flex items-center gap-0.5 text-xs font-semibold text-camel-700 group-hover/child:text-camel-800 transition-colors">
+                      <span>Результаты</span>
+                      <ChevronRight className="h-3.5 w-3.5 transition-transform group-hover/child:translate-x-0.5" />
+                    </span>
+                  ) : childReport ? (
+                    <span className="inline-flex items-center gap-0.5 text-xs font-semibold text-charcoal-500">
+                      <span>Отчёт</span>
+                      <ChevronRight className="h-3 w-3" />
+                    </span>
+                  ) : null}
                 </div>
               </li>
             )

@@ -216,23 +216,21 @@ export default function TopDogsFilters({
           topRowClassName="flex-nowrap"
           filters={
             <div className="flex items-center gap-2 w-full min-w-0">
-              <ToolbarSearch
-                value={searchQuery}
-                onChange={onSearchChange}
-                placeholder="Кличка, порода…"
-              />
+              <div className="flex items-center gap-1.5 shrink-0">
+                <ToolbarSearch
+                  value={searchQuery}
+                  onChange={onSearchChange}
+                  placeholder="Кличка, порода…"
+                />
 
-              <div className="shrink-0">
                 <YearDropdown
                   years={yearValues}
                   selectedYear={filterYear}
                   currentSeason={currentSeason}
                   onSelectYear={onYearChange}
                 />
-              </div>
 
-              {/* Выбор пола */}
-              <div className="shrink-0">
+                {/* Выбор пола */}
                 <ModernDropdown
                   trigger={sexTrigger}
                   isOpen={desktopSexOpen}
@@ -241,23 +239,23 @@ export default function TopDogsFilters({
                 >
                   {renderSexMenu(setDesktopSexOpen)}
                 </ModernDropdown>
+
+                {/* Кнопка Инфо о рейтинге (i) — слева */}
+                {trailing && <div className="shrink-0">{trailing}</div>}
+
+                {/* Сброс фильтров (если активны) — слева перед разделителем */}
+                {hasActiveFilters && (
+                  <button
+                    type="button"
+                    onClick={onResetFilters}
+                    className="cs-glass-pill shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full !text-charcoal-500 hover:!text-charcoal-800 transition-colors cursor-pointer select-none"
+                    title="Сбросить фильтры"
+                    aria-label="Сбросить фильтры"
+                  >
+                    <X className="h-4 w-4" />
+                  </button>
+                )}
               </div>
-
-              {/* Кнопка Инфо о рейтинге (i) — слева */}
-              {trailing && <div className="shrink-0">{trailing}</div>}
-
-              {/* Сброс фильтров (если активны) — слева перед разделителем */}
-              {hasActiveFilters && (
-                <button
-                  type="button"
-                  onClick={onResetFilters}
-                  className="cs-glass-pill shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full !text-charcoal-500 hover:!text-charcoal-800 transition-colors cursor-pointer select-none"
-                  title="Сбросить фильтры"
-                  aria-label="Сбросить фильтры"
-                >
-                  <X className="h-4 w-4" />
-                </button>
-              )}
 
               <div className="h-5 w-px bg-old-money-300 shrink-0 mx-0.5" aria-hidden="true" />
 

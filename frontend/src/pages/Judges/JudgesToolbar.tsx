@@ -219,14 +219,14 @@ export function JudgesToolbar({
 
           {/* Десктопная строка: Поиск + Год + Дисциплина + Разделитель + Порода (QuickBreedBar) + Сброс */}
           <div className="hidden sm:flex sm:items-center gap-2 w-full min-w-0">
-            <ToolbarSearch
-              value={searchQuery}
-              onChange={setSearchQuery}
-              placeholder="Фамилия судьи…"
-            />
+            <div className="flex items-center gap-1.5 shrink-0">
+              <ToolbarSearch
+                value={searchQuery}
+                onChange={setSearchQuery}
+                placeholder="Фамилия судьи…"
+              />
 
-            {/* Year Dropdown */}
-            <div className="shrink-0">
+              {/* Year Dropdown */}
               <ModernDropdown
                 trigger={
                   <button
@@ -243,10 +243,8 @@ export function JudgesToolbar({
               >
                 {renderYearMenuItems(() => setDesktopYearOpen(false))}
               </ModernDropdown>
-            </div>
 
-            {/* Discipline Dropdown */}
-            <div className="shrink-0">
+              {/* Discipline Dropdown */}
               <ModernDropdown
                 trigger={
                   <button
@@ -263,20 +261,20 @@ export function JudgesToolbar({
               >
                 {renderDisciplineMenuItems(() => setDesktopDisciplineOpen(false))}
               </ModernDropdown>
-            </div>
 
-            {/* Reset Filters button — слева перед разделителем */}
-            {hasActiveFilters && (
-              <button
-                type="button"
-                onClick={clearFilters}
-                className="cs-glass-pill shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full !text-charcoal-500 hover:!text-charcoal-800 transition-colors cursor-pointer select-none"
-                title="Сбросить все фильтры"
-                aria-label="Сбросить все фильтры"
-              >
-                <X className="h-4 w-4" />
-              </button>
-            )}
+              {/* Reset Filters button — слева перед разделителем */}
+              {hasActiveFilters && (
+                <button
+                  type="button"
+                  onClick={clearFilters}
+                  className="cs-glass-pill shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full !text-charcoal-500 hover:!text-charcoal-800 transition-colors cursor-pointer select-none"
+                  title="Сбросить все фильтры"
+                  aria-label="Сбросить все фильтры"
+                >
+                  <X className="h-4 w-4" />
+                </button>
+              )}
+            </div>
 
             <div className="h-5 w-px bg-old-money-300 shrink-0 mx-0.5" aria-hidden="true" />
 

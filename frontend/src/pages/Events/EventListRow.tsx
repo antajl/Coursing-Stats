@@ -94,11 +94,11 @@ export default function EventListRow({ event }: EventListRowProps) {
     headlineParts.length > 1 ? headlineParts.slice(1).join(' · ') : undefined,
   )
 
-  const rowClassName = `group block rounded-xl border border-old-money-200/90 border-l-4 ${borderClass} bg-cream-50 p-2.5 sm:px-4 sm:py-3 mb-2.5 transition-all duration-200 hover:border-camel-400 hover:shadow-xs hover:bg-cream-100/50 ${
-    cancelled ? 'opacity-70' : ''
+  const rowClassName = `group block border-l-4 ${borderClass} bg-transparent px-3 py-2.5 sm:px-4 sm:py-2.5 transition-colors duration-150 hover:bg-camel-100/60 ${
+    cancelled ? 'opacity-70 bg-charcoal-50/40' : ''
   } ${
     important
-      ? 'bg-gradient-to-r from-camel-100/70 via-cream-50 to-cream-50 border-camel-300/90'
+      ? 'border-l-amber-500 bg-gradient-to-r from-camel-100/40 via-cream-50/20 to-transparent'
       : ''
   }`
 
@@ -110,7 +110,7 @@ export default function EventListRow({ event }: EventListRowProps) {
     >
       <div className="grid grid-cols-[auto_minmax(0,1fr)] sm:grid-cols-[auto_minmax(0,1.2fr)_minmax(0,1fr)_auto] items-center gap-3 sm:gap-4">
         {/* Колонка 1: Календарный блок даты с идеальным оптическим центрированием */}
-        <div className="flex flex-col items-center justify-center rounded-lg bg-white/95 border border-old-money-200/80 px-1.5 w-[3.7rem] sm:w-[4.1rem] py-2 shrink-0 text-center shadow-2xs gap-1">
+        <div className="flex flex-col items-center justify-center rounded-lg bg-cream-50/90 border border-old-money-200/80 px-1.5 w-[3.7rem] sm:w-[4.1rem] py-1.5 shrink-0 text-center shadow-2xs gap-0.5">
           <span className="text-sm sm:text-[15px] font-bold text-charcoal-900 tabular-nums leading-none tracking-tight">
             {dateParts ? dateParts.dayLine : '—'}
           </span>

@@ -33,6 +33,31 @@ export function formatShowDate(dateStr: string): string | null {
   return `${day} ${month}`
 }
 
+export function formatShowDateParts(
+  dateStr: string,
+  dateEndStr?: string | null,
+): { dayLine: string; metaLine: string } | null {
+  const d = parseShowDate(dateStr)
+  if (!d) return null
+
+  const weekday = d.toLocaleDateString('ru-RU', { weekday: 'short' })
+  const end = dateEndStr ? parseShowDate(dateEndStr) : null
+  const dayEnd =
+    end && end.getTime() !== d.getTime() && end.getMonth() === d.getMonth()
+      ? end.getDate()
+      : undefined
+  const weekdayEnd =
+    dayEnd && end
+      ? end.toLocaleDateString('ru-RU', { weekday: 'short' })
+      : undefined
+
+  const dayLine = dayEnd ? `${d.getDate()}–${dayEnd}` : String(d.getDate())
+  const metaLine =
+    weekdayEnd && weekday !== weekdayEnd ? `${weekday}–${weekdayEnd}` : weekday
+
+  return { dayLine, metaLine }
+}
+
 export function monthLabel(year: number, monthIndex: number): string {
   const label = new Date(year, monthIndex, 1).toLocaleDateString('ru-RU', {
     month: 'long',

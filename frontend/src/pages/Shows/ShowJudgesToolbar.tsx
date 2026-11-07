@@ -143,12 +143,12 @@ export function ShowJudgesToolbar({
 
           {/* Десктопная строка */}
           <div className="hidden sm:flex sm:items-center gap-2 w-full">
-            <ToolbarSearch
-              value={searchQuery}
-              onChange={setSearchQuery}
-              placeholder="Фамилия судьи…"
-            />
             <div className="flex max-w-full items-center gap-1.5 shrink-0">
+              <ToolbarSearch
+                value={searchQuery}
+                onChange={setSearchQuery}
+                placeholder="Фамилия судьи…"
+              />
               {/* Year Dropdown */}
               <ModernDropdown
                 trigger={

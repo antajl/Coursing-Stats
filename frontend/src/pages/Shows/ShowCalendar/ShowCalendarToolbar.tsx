@@ -61,7 +61,7 @@ export function ShowCalendarToolbar({
   }
 
   return (
-    <div className="w-full min-w-0 space-y-2">
+    <div className="w-full min-w-0">
       {/* Мобильная строка (32px): Поиск + Год/Месяц + Порода + (X) + [Количество] + (i) */}
       <div className="flex md:hidden items-center gap-1.5 w-full min-w-0">
         <ToolbarSearch
