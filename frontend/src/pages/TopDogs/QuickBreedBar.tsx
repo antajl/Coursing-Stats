@@ -16,35 +16,35 @@ export interface QuickBreedItem {
  * Заполняют доступное пространство между фильтрами года и кнопкой «О рейтинге».
  */
 export const CANDIDATE_BREEDS: QuickBreedItem[] = [
-  { key: 'УИППЕТ', label: 'Уиппет', fullName: 'Уиппет', estWidth: 76 },
-  { key: 'РУССКАЯ ПСОВАЯ БОРЗАЯ', label: 'РПБ', fullName: 'Русская псовая борзая', estWidth: 58 },
-  { key: 'БАСЕНДЖИ', label: 'Басенджи', fullName: 'Басенджи', estWidth: 86 },
-  { key: 'РОДЕЗИЙСКИЙ РИДЖБЕК', label: 'Риджбек', fullName: 'Родезийский риджбек', estWidth: 86 },
-  { key: 'САЛЮКИ', label: 'Салюки', fullName: 'Салюки', estWidth: 76 },
-  { key: 'ГРЕЙХАУНД', label: 'Грейхаунд', fullName: 'Грейхаунд', estWidth: 96 },
-  { key: 'ИРЛАНДСКИЙ ВОЛКОДАВ', label: 'Ирл. волкодав', fullName: 'Ирландский волкодав', estWidth: 116 },
-  { key: 'ЧИРНЕКО ДЕЛЬ ЭТНА', label: 'Чирнеко', fullName: 'Чирнеко дель Этна', estWidth: 86 },
-  { key: 'ФАРАОНОВА СОБАКА', label: 'Фараон', fullName: 'Фараонова собака', estWidth: 80 },
-  { key: 'ЛЕВРЕТКА', label: 'Левретка', fullName: 'Левретка', estWidth: 86 },
-  { key: 'АФГАНСКАЯ БОРЗАЯ', label: 'Афган', fullName: 'Афганская борзая', estWidth: 76 },
-  { key: 'МАДЬЯР АГАР', label: 'Мадьяр', fullName: 'Мадьяр агар', estWidth: 80 },
-  { key: 'АЗАВАК', label: 'Азавак', fullName: 'Азавак', estWidth: 80 },
+  { key: 'УИППЕТ', label: 'Уиппет', fullName: 'Уиппет', estWidth: 68 },
+  { key: 'РУССКАЯ ПСОВАЯ БОРЗАЯ', label: 'РПБ', fullName: 'Русская псовая борзая', estWidth: 50 },
+  { key: 'БАСЕНДЖИ', label: 'Басенджи', fullName: 'Басенджи', estWidth: 78 },
+  { key: 'РОДЕЗИЙСКИЙ РИДЖБЕК', label: 'Риджбек', fullName: 'Родезийский риджбек', estWidth: 78 },
+  { key: 'САЛЮКИ', label: 'Салюки', fullName: 'Салюки', estWidth: 68 },
+  { key: 'ГРЕЙХАУНД', label: 'Грейхаунд', fullName: 'Грейхаунд', estWidth: 88 },
+  { key: 'ИРЛАНДСКИЙ ВОЛКОДАВ', label: 'Ирл. волкодав', fullName: 'Ирландский волкодав', estWidth: 108 },
+  { key: 'ЧИРНЕКО ДЕЛЬ ЭТНА', label: 'Чирнеко', fullName: 'Чирнеко дель Этна', estWidth: 78 },
+  { key: 'ФАРАОНОВА СОБАКА', label: 'Фараон', fullName: 'Фараонова собака', estWidth: 72 },
+  { key: 'ЛЕВРЕТКА', label: 'Левретка', fullName: 'Левретка', estWidth: 78 },
+  { key: 'АФГАНСКАЯ БОРЗАЯ', label: 'Афган', fullName: 'Афганская борзая', estWidth: 68 },
+  { key: 'МАДЬЯР АГАР', label: 'Мадьяр', fullName: 'Мадьяр агар', estWidth: 72 },
+  { key: 'АЗАВАК', label: 'Азавак', fullName: 'Азавак', estWidth: 72 },
 ]
 
 export const SHOW_CANDIDATE_BREEDS: QuickBreedItem[] = [
-  { key: 'УИППЕТ', label: 'Уиппет', fullName: 'Уиппет', estWidth: 76 },
-  { key: 'РУССКАЯ ПСОВАЯ БОРЗАЯ', label: 'РПБ', fullName: 'Русская псовая борзая', estWidth: 58 },
-  { key: 'БАСЕНДЖИ', label: 'Басенджи', fullName: 'Басенджи', estWidth: 86 },
-  { key: 'САЛЮКИ', label: 'Салюки', fullName: 'Салюки', estWidth: 76 },
-  { key: 'ЛЕВРЕТКА', label: 'Левретка', fullName: 'Левретка', estWidth: 86 },
-  { key: 'ИРЛАНДСКИЙ ВОЛКОДАВ', label: 'Ирл. волкодав', fullName: 'Ирландский волкодав', estWidth: 116 },
-  { key: 'ГРЕЙХАУНД', label: 'Грейхаунд', fullName: 'Грейхаунд', estWidth: 96 },
-  { key: 'АФГАНСКАЯ БОРЗАЯ', label: 'Афган', fullName: 'Афганская борзая', estWidth: 76 },
-  { key: 'РОДЕЗИЙСКИЙ РИДЖБЕК', label: 'Риджбек', fullName: 'Родезийский риджбек', estWidth: 86 },
-  { key: 'ЧИРНЕКО ДЕЛЬ ЭТНА', label: 'Чирнеко', fullName: 'Чирнеко дель Этна', estWidth: 86 },
-  { key: 'ФАРАОНОВА СОБАКА', label: 'Фараон', fullName: 'Фараонова собака', estWidth: 80 },
-  { key: 'ТАКСА', label: 'Такса', fullName: 'Такса', estWidth: 70 },
-  { key: 'ПУДЕЛЬ', label: 'Пудель', fullName: 'Пудель', estWidth: 76 },
+  { key: 'УИППЕТ', label: 'Уиппет', fullName: 'Уиппет', estWidth: 68 },
+  { key: 'РУССКАЯ ПСОВАЯ БОРЗАЯ', label: 'РПБ', fullName: 'Русская псовая борзая', estWidth: 50 },
+  { key: 'БАСЕНДЖИ', label: 'Басенджи', fullName: 'Басенджи', estWidth: 78 },
+  { key: 'САЛЮКИ', label: 'Салюки', fullName: 'Салюки', estWidth: 68 },
+  { key: 'ЛЕВРЕТКА', label: 'Левретка', fullName: 'Левретка', estWidth: 78 },
+  { key: 'ИРЛАНДСКИЙ ВОЛКОДАВ', label: 'Ирл. волкодав', fullName: 'Ирландский волкодав', estWidth: 108 },
+  { key: 'ГРЕЙХАУНД', label: 'Грейхаунд', fullName: 'Грейхаунд', estWidth: 88 },
+  { key: 'АФГАНСКАЯ БОРЗАЯ', label: 'Афган', fullName: 'Афганская борзая', estWidth: 68 },
+  { key: 'РОДЕЗИЙСКИЙ РИДЖБЕК', label: 'Риджбек', fullName: 'Родезийский риджбек', estWidth: 78 },
+  { key: 'ЧИРНЕКО ДЕЛЬ ЭТНА', label: 'Чирнеко', fullName: 'Чирнеко дель Этна', estWidth: 78 },
+  { key: 'ФАРАОНОВА СОБАКА', label: 'Фараон', fullName: 'Фараонова собака', estWidth: 72 },
+  { key: 'ТАКСА', label: 'Такса', fullName: 'Такса', estWidth: 62 },
+  { key: 'ПУДЕЛЬ', label: 'Пудель', fullName: 'Пудель', estWidth: 68 },
 ]
 
 export const TOP_QUICK_BREEDS = CANDIDATE_BREEDS
@@ -59,11 +59,11 @@ interface QuickBreedBarProps {
   strictFilterByBreedValues?: boolean
 }
 
-const GAP = 6 // gap-1.5 = 6px
-const BUFFER = 8 // Запас против субпиксельного округления в flex и переполнения края контейнера
+const GAP = 5 // gap-[5px] = 5px
+const BUFFER = 4 // Запас против субпиксельного округления в flex и переполнения края контейнера
 
-// Модульный кэш измерений для мгновенного и стабильного рендеринга без фликов при переключении вкладок
-let cachedContainerWidth: number | null = null
+// Контекстный кэш измерений (по URL/вкладке), исключающий перенос более широких замеров с других вкладок
+const cachedWidthByContext = new Map<string, number>()
 let cachedMeasured: {
   allW: number
   moreW: number
@@ -71,15 +71,26 @@ let cachedMeasured: {
   widths: Record<string, number>
 } | null = null
 
+function getContextKey(): string {
+  if (typeof window !== 'undefined') {
+    const tab = new URLSearchParams(window.location.search).get('tab') || ''
+    return `${window.location.pathname}:${tab}`
+  }
+  return 'default'
+}
+
 function getInitialContainerWidth(): number {
-  if (cachedContainerWidth !== null && cachedContainerWidth > 0) {
-    return cachedContainerWidth
+  const key = getContextKey()
+  const cached = cachedWidthByContext.get(key)
+  if (cached && cached > 0) {
+    return cached
   }
   if (typeof window !== 'undefined') {
     // Учитываем каркас сайта App.tsx (md:max-w-7xl = 1280px) и боковые отступы (32-64px)
     const effectiveLayoutWidth = Math.min(window.innerWidth - 32, 1280 - 64)
-    // Левые управляющие элементы тулбаров (поиск, год, пол, подсказка, разделитель) занимают ~500-520px
-    const estimatedLeftControls = 520
+    // Левые управляющие элементы тулбара на рейтинге занимают ~420px, на архиве ~340px
+    const isRanking = window.location.search.includes('tab=ranking')
+    const estimatedLeftControls = isRanking ? 420 : 340
     return Math.max(260, effectiveLayoutWidth - estimatedLeftControls)
   }
   return 600
