@@ -4,6 +4,7 @@ import { Icons } from '../../lib/icons'
 import { useNavLogoVisibility } from './useNavLogoVisibility'
 import FavoritesCapsule from './FavoritesCapsule'
 import type { OpenMenuId } from './navLinks'
+import { getSectionLink, getLastDoninoPath } from '../../lib/navState'
 
 type NavDesktopProps = {
   isActive: (path: string) => boolean
@@ -81,8 +82,8 @@ export function NavDesktop({
         >
           <span className="relative z-10">Главная</span>
           <span
-            className={`pointer-events-none absolute bottom-0 left-0 h-0.5 w-full origin-left bg-camel-600 transition-transform duration-300 ${
-              isActive('/') ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+            className={`pointer-events-none absolute bottom-0 left-0 h-0.5 bg-camel-600 transition-[width] duration-300 ease-out ${
+              isActive('/') ? 'w-full' : 'w-0 group-hover:w-full'
             }`}
           />
         </Link>
@@ -100,8 +101,8 @@ export function NavDesktop({
             <span className="hidden xl:inline">Соревнования</span>
           </span>
           <span
-            className={`pointer-events-none absolute bottom-0 left-0 h-0.5 w-full origin-left bg-camel-600 transition-transform duration-300 ${
-              isCompetitionsActive ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+            className={`pointer-events-none absolute bottom-0 left-0 h-0.5 bg-camel-600 transition-[width] duration-300 ease-out ${
+              isCompetitionsActive ? 'w-full' : 'w-0 group-hover:w-full'
             }`}
           />
         </Link>
@@ -119,8 +120,8 @@ export function NavDesktop({
         >
           <span className="relative z-10">Выставки</span>
           <span
-            className={`pointer-events-none absolute bottom-0 left-0 h-0.5 w-full origin-left bg-camel-600 transition-transform duration-300 ${
-              isShowsActive ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+            className={`pointer-events-none absolute bottom-0 left-0 h-0.5 bg-camel-600 transition-[width] duration-300 ease-out ${
+              isShowsActive ? 'w-full' : 'w-0 group-hover:w-full'
             }`}
           />
         </Link>
@@ -138,8 +139,8 @@ export function NavDesktop({
             <span className="hidden xl:inline">Курсинг Донино</span>
           </span>
           <span
-            className={`pointer-events-none absolute bottom-0 left-0 h-0.5 w-full origin-left bg-camel-600 transition-transform duration-300 ${
-              isSpeedRecordsActive ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+            className={`pointer-events-none absolute bottom-0 left-0 h-0.5 bg-camel-600 transition-[width] duration-300 ease-out ${
+              isSpeedRecordsActive ? 'w-full' : 'w-0 group-hover:w-full'
             }`}
           />
         </Link>
@@ -154,8 +155,8 @@ export function NavDesktop({
         >
           <span className="relative z-10">Справка</span>
           <span
-            className={`pointer-events-none absolute bottom-0 left-0 h-0.5 w-full origin-left bg-camel-600 transition-transform duration-300 ${
-              isGuideActive ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+            className={`pointer-events-none absolute bottom-0 left-0 h-0.5 bg-camel-600 transition-[width] duration-300 ease-out ${
+              isGuideActive ? 'w-full' : 'w-0 group-hover:w-full'
             }`}
           />
         </Link>
@@ -169,8 +170,8 @@ export function NavDesktop({
         >
           <span className="relative z-10">О проекте</span>
           <span
-            className={`pointer-events-none absolute bottom-0 left-0 h-0.5 w-full origin-left bg-camel-600 transition-transform duration-300 ${
-              isAboutActive ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+            className={`pointer-events-none absolute bottom-0 left-0 h-0.5 bg-camel-600 transition-[width] duration-300 ease-out ${
+              isAboutActive ? 'w-full' : 'w-0 group-hover:w-full'
             }`}
           />
         </Link>
