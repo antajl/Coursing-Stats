@@ -56,11 +56,14 @@ interface ShowDog {
 }
 
 function hydrateShowDog(raw: ShowDog & { titles?: Partial<ShowTitleCounts> }): ShowDog {
+  if (raw.titles && raw.history && raw.name_ru != null && raw.sex != null) {
+    return raw as ShowDog
+  }
   return {
     ...raw,
     name_ru: raw.name_ru || '',
     sex: raw.sex || '',
-    titles: expandShowTitles(raw.titles),
+    titles: (raw.titles as ShowTitleCounts) || ({} as ShowTitleCounts),
     history: Array.isArray(raw.history) ? raw.history : [],
   }
 }

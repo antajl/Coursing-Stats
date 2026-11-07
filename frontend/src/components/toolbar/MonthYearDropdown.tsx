@@ -145,7 +145,8 @@ export default function MonthYearDropdown({
       onOpenChange={handleOpenChange}
       width="280px"
     >
-      <div className="p-3 text-xs text-charcoal-800 space-y-2.5">
+      {isOpen ? (
+        <div className="p-3 text-xs text-charcoal-800 space-y-2.5">
         {/* Segmented Mode Switcher: Год / Месяц */}
         <div
           className="grid grid-cols-2 p-0.5 rounded-lg bg-cream-100/90 border border-old-money-200/80 gap-0.5"
@@ -329,6 +330,7 @@ export default function MonthYearDropdown({
           </div>
         )}
       </div>
+      ) : null}
     </ModernDropdown>
   )
 }

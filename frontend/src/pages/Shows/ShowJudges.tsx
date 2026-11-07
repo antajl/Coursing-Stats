@@ -92,13 +92,15 @@ export default function ShowJudges() {
   const judgesPartial = fullJudges.length === 0 && hasPage0
 
   const availableBreeds = useMemo(() => {
+    // Scan breeds from top judges (covers all active breeds without scanning 268k items on tab switch)
+    const source = judges.length > 250 ? judges.slice(0, 250) : judges
     const counts = new Map<string, number>()
-    for (const judge of judges) {
-      for (const breed of judge.breeds || []) {
-        if (breed) {
-          const canon = canonicalBreed(breed)
-          if (canon) counts.set(canon, (counts.get(canon) || 0) + 1)
-        }
+    for (let i = 0; i < source.length; i++) {
+      const jb = source[i].breeds
+      if (!jb) continue
+      for (let k = 0; k < jb.length; k++) {
+        const canon = canonicalBreed(jb[k])
+        if (canon) counts.set(canon, (counts.get(canon) || 0) + 1)
       }
     }
     return Array.from(counts.keys()).sort((a, b) => {
@@ -106,7 +108,7 @@ export default function ShowJudges() {
       if (diff !== 0) return diff
       return a.localeCompare(b, 'ru')
     })
-  }, [judges])
+  }, [judges === fullJudges ? 'full' : judges.length])
 
   const filteredJudges = useMemo(() => {
     const q = searchQuery.trim().toLowerCase()

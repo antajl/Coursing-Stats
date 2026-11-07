@@ -616,26 +616,45 @@ const BREED_DISPLAY_OVERRIDES: Record<string, BreedDisplay> = {
   },
 }
 
+const DISPLAY_BREED_CACHE = new Map<string, BreedDisplay>()
+
 /** Отображение породы: sentence case + опциональная официальная подпись. */
 export function displayBreed(breed: unknown): BreedDisplay {
-  const canon = canonicalBreed(breed)
+  const raw = String(breed ?? '').trim()
+  if (!raw) return { primary: '' }
+  const cached = DISPLAY_BREED_CACHE.get(raw)
+  if (cached) return cached
+  const canon = canonicalBreed(raw)
   if (!canon) return { primary: '' }
   const override = BREED_DISPLAY_OVERRIDES[canon]
-  if (override) return { ...override }
-  return { primary: toSentenceCaseRu(canon) }
+  const res = override ? { ...override } : { primary: toSentenceCaseRu(canon) }
+  DISPLAY_BREED_CACHE.set(raw, res)
+  return res
 }
+
+const CANONICAL_BREED_CACHE = new Map<string, string>()
 
 /** Каноническое UPPERCASE-имя для фильтров / индексов. */
 export function canonicalBreed(breed: unknown): string {
   const raw = String(breed ?? '').trim()
   if (!raw) return raw
-  if (/^\d+$/.test(raw)) return ''
+  const cached = CANONICAL_BREED_CACHE.get(raw)
+  if (cached !== undefined) return cached
+  if (/^\d+$/.test(raw)) {
+    CANONICAL_BREED_CACHE.set(raw, '')
+    return ''
+  }
   // Сначала полный ключ (до снятия / EN) — иначе «АКИТА / AMERICAN» схлопнется в японскую акиту
   const full = breedNormalizeKey(raw).replace(/\s*\/+\s*$/, '').trim()
-  if (BREED_ALIAS_BY_KEY[full]) return BREED_ALIAS_BY_KEY[full]
+  if (BREED_ALIAS_BY_KEY[full]) {
+    const res = BREED_ALIAS_BY_KEY[full]
+    CANONICAL_BREED_CACHE.set(raw, res)
+    return res
+  }
   const key = breedAliasKey(raw).replace(/\s*\/+\s*$/, '').trim()
-  if (BREED_ALIAS_BY_KEY[key]) return BREED_ALIAS_BY_KEY[key]
-  return key
+  const res = BREED_ALIAS_BY_KEY[key] || key
+  CANONICAL_BREED_CACHE.set(raw, res)
+  return res
 }
 
 /** Все сырые варианты, которые мапятся в канон (для SQL IN / фильтров). */

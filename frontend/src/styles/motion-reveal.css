@@ -319,3 +319,39 @@
     0 1px 3px 0 rgba(70, 45, 15, 0.08);
   transform: translateY(0.5px);
 }
+
+
+/* Индикатор фоновой загрузки табов (Top loader bar в стиле Old Money) */
+@keyframes cs-tab-progress {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(40%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+.cs-tab-loading-bar {
+  position: absolute;
+  bottom: -4px;
+  left: 12px;
+  right: 12px;
+  height: 2px;
+  border-radius: 9999px;
+  overflow: hidden;
+  background: rgba(214, 172, 110, 0.18);
+  pointer-events: none;
+  z-index: 20;
+}
+
+.cs-tab-loading-bar-inner {
+  width: 40%;
+  height: 100%;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, rgba(214, 172, 110, 0.2) 0%, rgba(175, 128, 60, 0.95) 50%, rgba(235, 202, 148, 1) 100%);
+  animation: cs-tab-progress 1.1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  box-shadow: 0 0 8px rgba(175, 128, 60, 0.5);
+}

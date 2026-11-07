@@ -1,31 +1,55 @@
 import { queryClient } from './query-client'
-import { getShowDogRankingPage0, getShowJudgesPage0 } from './staticData'
+import { getShowDogRankingPage0, getShowJudgesPage0, getShowCalendar } from './staticData'
 
 const CURRENT_SEASON = String(new Date().getFullYear())
-const STALE_MS = 5 * 60 * 1000
+const STALE_MS = 10 * 60 * 1000
 
-let intentScheduled = false
+const prefetchedTabs = new Set<string>()
 
 /**
- * Prefetch only first-paint page0 indexes (+ route chunks).
- * Do NOT prefetch full ranking/judges here — they steal bandwidth and
- * JSON.parse of 12–25 MB freezes the tab right when the user opens Shows.
+ * Targeted predictive prefetch for a specific tab.
+ * Preloads both the JS component chunk and the initial page0/calendar JSON
+ * on hover / touchstart before the user clicks.
+ */
+export function prefetchShowsTab(tab: string): void {
+  if (prefetchedTabs.has(tab)) return
+  prefetchedTabs.add(tab)
+
+  if (tab === 'ranking') {
+    void import('../pages/Shows/ShowRanking')
+    void queryClient.prefetchQuery({
+      queryKey: ['showDogRankingPage0', CURRENT_SEASON],
+      queryFn: () => getShowDogRankingPage0(CURRENT_SEASON),
+      staleTime: STALE_MS,
+    })
+  } else if (tab === 'archive') {
+    void import('../pages/Shows/ShowCalendar')
+    void queryClient.prefetchQuery({
+      queryKey: ['showCalendar', CURRENT_SEASON],
+      queryFn: () => getShowCalendar(CURRENT_SEASON),
+      staleTime: STALE_MS,
+    })
+  } else if (tab === 'judges') {
+    void import('../pages/Shows/ShowJudges')
+    void queryClient.prefetchQuery({
+      queryKey: ['showJudgesPage0'],
+      queryFn: getShowJudgesPage0,
+      staleTime: STALE_MS,
+    })
+  }
+}
+
+let allHeavyScheduled = false
+
+/**
+ * Idle warmup: prefetch initial chunks and page0 datasets
+ * after first paint when browser is idle.
  */
 export function prefetchShowsHeavyTabs(): void {
-  if (intentScheduled) return
-  intentScheduled = true
+  if (allHeavyScheduled) return
+  allHeavyScheduled = true
 
-  void import('../pages/Shows/ShowRanking')
-  void import('../pages/Shows/ShowJudges')
-
-  void queryClient.prefetchQuery({
-    queryKey: ['showDogRankingPage0', CURRENT_SEASON],
-    queryFn: () => getShowDogRankingPage0(CURRENT_SEASON),
-    staleTime: STALE_MS,
-  })
-  void queryClient.prefetchQuery({
-    queryKey: ['showJudgesPage0'],
-    queryFn: getShowJudgesPage0,
-    staleTime: STALE_MS,
-  })
+  prefetchShowsTab('ranking')
+  prefetchShowsTab('archive')
+  prefetchShowsTab('judges')
 }

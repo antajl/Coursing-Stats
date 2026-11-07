@@ -29,7 +29,7 @@ const SHOW_RANKING_YEARS = [
 const SHOW_ACTIVE_SEASON = resolveActiveSeason(SHOW_RANKING_YEARS)
 
 /** Brief grace period for page0 to paint before requesting the full season file. */
-const FULL_RANKING_DELAY_MS = 250
+const FULL_RANKING_DELAY_MS = 3000
 
 export default function ShowRanking() {
   const [searchParams, setSearchParams] = useSearchParams()
@@ -85,8 +85,22 @@ export default function ShowRanking() {
 
     if (!isPage0Fetched && !isPage0Error) return
 
-    const t = window.setTimeout(() => setAllowFullLoad(true), FULL_RANKING_DELAY_MS)
-    return () => window.clearTimeout(t)
+    const idle =
+      typeof window !== 'undefined' && 'requestIdleCallback' in window
+        ? window.requestIdleCallback.bind(window)
+        : (cb: () => void) => window.setTimeout(cb, 500)
+
+    let idleId: number | null = null
+    const timer = window.setTimeout(() => {
+      idleId = idle(() => setAllowFullLoad(true)) as unknown as number
+    }, FULL_RANKING_DELAY_MS)
+
+    return () => {
+      window.clearTimeout(timer)
+      if (idleId && typeof window !== 'undefined' && 'cancelIdleCallback' in window) {
+        window.cancelIdleCallback(idleId)
+      }
+    }
   }, [rankingYear, isPage0Fetched, isPage0Error, page0Failed, searchQuery, filterBreed, filterSex])
 
   const {

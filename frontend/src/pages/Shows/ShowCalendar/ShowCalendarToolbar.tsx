@@ -1,4 +1,4 @@
-import { ChevronDown, X } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 import MonthYearDropdown from '../../../components/toolbar/MonthYearDropdown'
 import ToolbarSearch from '../../../components/toolbar/ToolbarSearch'
 import BreedSearchDropdown from '../../../components/ui/BreedSearchDropdown'
@@ -56,23 +56,9 @@ export function ShowCalendarToolbar({
   onClearQuickPreset,
   availableMonths,
 }: ShowCalendarToolbarProps) {
-  const isYearNonDefault = Boolean(filterYear) && filterYear !== currentSeason
-  const hasActiveFilters = Boolean(
-    isYearNonDefault || filterMonth || searchQuery || filterBreed || filterCity,
-  )
-
-  const handleReset = () => {
-    onSearchChange('')
-    onYearChange(currentSeason)
-    onMonthChange('')
-    onBreedChange('')
-    onCityChange?.('')
-    onClearQuickPreset()
-  }
-
   return (
     <div className="w-full min-w-0">
-      {/* Мобильная строка (32px): Поиск + Год/Месяц + Локация + Порода + (X) + (i) */}
+      {/* Мобильная строка (32px): Поиск + Год/Месяц + Локация + Порода + (i) */}
       <div className="flex md:hidden items-center gap-1.5 w-full min-w-0">
         <ToolbarSearch
           value={searchQuery}
@@ -119,26 +105,12 @@ export function ShowCalendarToolbar({
           />
         </div>
 
-        <div className="ml-auto shrink-0 flex items-center gap-1.5">
-          {hasActiveFilters && (
-            <button
-              type="button"
-              onClick={handleReset}
-              className="cs-glass-pill shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full !text-charcoal-500 hover:!text-charcoal-800 transition-colors cursor-pointer select-none"
-              title="Сбросить фильтры"
-              aria-label="Сбросить фильтры"
-            >
-              <X className="h-4 w-4" />
-            </button>
-          )}
-
-          <div className="shrink-0">
-            <ShowCalendarHint compact />
-          </div>
+        <div className="ml-auto shrink-0 flex items-center">
+          <ShowCalendarHint compact />
         </div>
       </div>
 
-      {/* Десктопная строка: Поиск + Год/Месяц + Локация + (i) + Сброс + Разделитель + QuickBreedBar edge-to-edge */}
+      {/* Десктопная строка: Поиск + Год/Месяц + Локация + (i) + Разделитель + QuickBreedBar edge-to-edge */}
       <div className="hidden md:flex md:items-center gap-2 w-full min-w-0">
         <div className="flex items-center gap-1.5 shrink-0">
           <ToolbarSearch
@@ -169,18 +141,6 @@ export function ShowCalendarToolbar({
           <div className="shrink-0">
             <ShowCalendarHint />
           </div>
-
-          {hasActiveFilters && (
-            <button
-              type="button"
-              onClick={handleReset}
-              className="cs-glass-pill shrink-0 inline-flex h-8 items-center gap-1.5 rounded-full px-3 text-xs font-semibold !text-charcoal-600 hover:!text-charcoal-900 transition-colors cursor-pointer select-none"
-              title="Сбросить все фильтры"
-            >
-              <X className="h-3.5 w-3.5" />
-              <span>Сбросить</span>
-            </button>
-          )}
         </div>
 
         {/* Разделитель между левыми контролами и породами */}

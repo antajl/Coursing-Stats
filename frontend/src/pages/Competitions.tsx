@@ -1,4 +1,4 @@
-import { lazy, Suspense, useState, useEffect } from 'react'
+import { lazy, Suspense, useState, useEffect, useCallback } from 'react'
 import { Navigate, useSearchParams, useNavigate } from 'react-router-dom'
 import { SEO } from '../components/SEO'
 import { JsonLd, breadcrumbListSchema, faqPageSchema } from '../components/JsonLd'
@@ -18,48 +18,84 @@ function Competitions() {
   const rawTabParam = searchParams.get('tab')
   const calendarVisible = usePublicCalendarVisible('competitions')
 
+  let redirectPath: string | null = null
   if (!rawTabParam) {
     const savedTab = getLastSectionTab('competitions')
     const next = new URLSearchParams(searchParams)
     next.set('tab', savedTab)
-    return <Navigate to={`/competitions/?${next.toString()}`} replace />
+    redirectPath = `/competitions/?${next.toString()}`
+  } else if (rawTabParam === 'calendar') {
+    redirectPath = '/competitions?tab=archive'
+  } else if (rawTabParam === 'builder' || rawTabParam === 'protocol-builder') {
+    redirectPath = isLocalDev ? '/protocol-builder/' : '/competitions?tab=ranking'
+  } else if (!calendarVisible && rawTabParam === 'archive') {
+    redirectPath = '/competitions?tab=ranking'
   }
 
-  const tab = rawTabParam
-
-  if (tab === 'calendar') {
-    return <Navigate to="/competitions?tab=archive" replace />
-  }
-
-  if (tab === 'builder' || tab === 'protocol-builder') {
-    if (!isLocalDev) {
-      return <Navigate to="/competitions?tab=ranking" replace />
-    }
-    return <Navigate to="/protocol-builder/" replace />
-  }
-
-  if (!calendarVisible && tab === 'archive') {
-    return <Navigate to="/competitions?tab=ranking" replace />
-  }
-
-  const activeTab =
-    tab === 'judges' || tab === 'ranking' || (calendarVisible && tab === 'archive')
-      ? tab
+  const resolvedTab =
+    rawTabParam === 'judges' || rawTabParam === 'ranking' || (calendarVisible && rawTabParam === 'archive')
+      ? rawTabParam
       : 'ranking'
 
-  useEffect(() => {
-    setLastSectionTab('competitions', activeTab)
-  }, [activeTab])
+  const [activeTab, setActiveTab] = useState<string>(resolvedTab)
+  const [visitedTabs, setVisitedTabs] = useState<Set<string>>(() => new Set([resolvedTab]))
+  const [isTabLoading, setIsTabLoading] = useState<boolean>(false)
 
-  const handleTabChange = (newTab: string) => {
+  useEffect(() => {
+    setActiveTab(resolvedTab)
+    setVisitedTabs((prev) => (prev.has(resolvedTab) ? prev : new Set(prev).add(resolvedTab)))
+  }, [resolvedTab])
+
+  useEffect(() => {
+    if (!redirectPath) {
+      setLastSectionTab('competitions', activeTab)
+    }
+  }, [activeTab, redirectPath])
+
+  useEffect(() => {
+    if (isTabLoading) {
+      const t = window.setTimeout(() => setIsTabLoading(false), 350)
+      return () => window.clearTimeout(t)
+    }
+  }, [isTabLoading, activeTab])
+
+  const prefetchCompTab = (tabId: string) => {
+    if (tabId === 'ranking') void import('./TopDogs')
+    else if (tabId === 'archive') void import('./Events')
+    else if (tabId === 'judges') void import('./Judges')
+  }
+
+  const handleTabChange = useCallback((newTab: string) => {
     if (newTab === 'builder') {
       if (isLocalDev) {
         navigate('/protocol-builder/')
       }
       return
     }
-    setSearchParams({ tab: newTab })
+    if (newTab === activeTab) return
+
+    setActiveTab(newTab)
+    const isFirstVisit = !visitedTabs.has(newTab)
+    if (isFirstVisit) {
+      setVisitedTabs((prev) => new Set(prev).add(newTab))
+      setIsTabLoading(true)
+    }
+
+    setSearchParams(
+      (prev) => {
+        const next = new URLSearchParams(prev)
+        next.set('tab', newTab)
+        return next
+      },
+      { replace: false }
+    )
+  }, [activeTab, visitedTabs, navigate, setSearchParams])
+
+  if (redirectPath) {
+    return <Navigate to={redirectPath} replace />
   }
+
+  const isVisited = (tabId: string) => visitedTabs.has(tabId) || activeTab === tabId
 
   const tabs = [
     { id: 'ranking', label: 'Рейтинг' },
@@ -116,46 +152,48 @@ function Competitions() {
         tabs={tabs}
         activeTab={activeTab}
         onChange={handleTabChange}
+        onHoverTab={prefetchCompTab}
+        isLoading={isTabLoading}
         ariaLabel="Разделы соревнований"
       />
 
       <div className="min-h-[400px]">
-        {activeTab === 'ranking' && (
+        {isVisited('ranking') && (
           <div
-            key="ranking"
             id="tab-panel-ranking"
             role="tabpanel"
             aria-labelledby="tab-ranking"
-            className="cs-tab-panel-enter"
+            className={activeTab === 'ranking' ? 'block cs-tab-panel-enter' : 'hidden'}
+            aria-hidden={activeTab !== 'ranking'}
           >
             <Suspense fallback={<LoadingCard count={3} variant="list" />}>
               <TopDogs />
             </Suspense>
           </div>
         )}
-        {activeTab === 'judges' && (
+        {calendarVisible && isVisited('archive') && (
           <div
-            key="judges"
-            id="tab-panel-judges"
-            role="tabpanel"
-            aria-labelledby="tab-judges"
-            className="cs-tab-panel-enter"
-          >
-            <Suspense fallback={<LoadingCard count={3} variant="list" />}>
-              <Judges />
-            </Suspense>
-          </div>
-        )}
-        {calendarVisible && activeTab === 'archive' && (
-          <div
-            key="archive"
             id="tab-panel-archive"
             role="tabpanel"
             aria-labelledby="tab-archive"
-            className="cs-tab-panel-enter"
+            className={activeTab === 'archive' ? 'block cs-tab-panel-enter' : 'hidden'}
+            aria-hidden={activeTab !== 'archive'}
           >
             <Suspense fallback={<LoadingCard count={3} variant="list" />}>
               <Events />
+            </Suspense>
+          </div>
+        )}
+        {isVisited('judges') && (
+          <div
+            id="tab-panel-judges"
+            role="tabpanel"
+            aria-labelledby="tab-judges"
+            className={activeTab === 'judges' ? 'block cs-tab-panel-enter' : 'hidden'}
+            aria-hidden={activeTab !== 'judges'}
+          >
+            <Suspense fallback={<LoadingCard count={3} variant="list" />}>
+              <Judges />
             </Suspense>
           </div>
         )}

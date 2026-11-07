@@ -1,10 +1,11 @@
-import { lazy, Suspense, useEffect } from 'react'
+import { lazy, Suspense, useState, useEffect, useCallback } from 'react'
 import { Navigate, useSearchParams } from 'react-router-dom'
 import RKFAttribution from '../components/RKFAttribution'
 import { SEO } from '../components/SEO'
 import { usePublicCalendarVisible } from '../hooks/useStaticData'
 import LoadingCard from '../components/LoadingCard'
-import { prefetchShowsHeavyTabs } from '../lib/prefetchShows'
+import SkeletonLoader from '../components/SkeletonLoader'
+import { prefetchShowsHeavyTabs, prefetchShowsTab } from '../lib/prefetchShows'
 import { MobileSubNavTabs } from '../components/ui/MobileSubNavTabs'
 import { getLastSectionTab, setLastSectionTab } from '../lib/navState'
 
@@ -14,12 +15,38 @@ const ShowCalendar = lazy(() => import('./Shows/ShowCalendar'))
 
 function Shows() {
   const [searchParams, setSearchParams] = useSearchParams()
-  const rawTab = searchParams.get('tab') || 'ranking'
+  const rawTabParam = searchParams.get('tab')
+  const rawTab = rawTabParam || 'ranking'
   const calendarVisible = usePublicCalendarVisible('shows')
 
-  // IMPORTANT: Keep this hook before any early returns to respect Rules of Hooks!
-  // Warm the other heavy tab only after the active tab has finished its initial load
-  // (2.5s deferred idle timer so background work never competes with the first paint).
+  let redirectTab: string | null = null
+  if (!rawTabParam) {
+    redirectTab = getLastSectionTab('shows')
+  } else if (rawTab === 'champions') {
+    redirectTab = 'ranking'
+  } else if (rawTab === 'calendar') {
+    redirectTab = 'archive'
+  } else if (!calendarVisible && rawTab === 'archive') {
+    redirectTab = 'ranking'
+  }
+
+  const resolvedTab =
+    rawTab === 'judges' || rawTab === 'ranking' || (calendarVisible && rawTab === 'archive')
+      ? rawTab
+      : 'ranking'
+
+  // Local activeTab state guarantees 0ms synchronized rendering between the tab pill and panels
+  const [activeTab, setActiveTab] = useState<string>(resolvedTab)
+  const [visitedTabs, setVisitedTabs] = useState<Set<string>>(() => new Set([resolvedTab]))
+  const [isTabLoading, setIsTabLoading] = useState<boolean>(false)
+
+  // Sync with URL when external navigation (browser Back / Forward) happens
+  useEffect(() => {
+    setActiveTab(resolvedTab)
+    setVisitedTabs((prev) => (prev.has(resolvedTab) ? prev : new Set(prev).add(resolvedTab)))
+  }, [resolvedTab])
+
+  // Warm other tabs in background after initial paint
   useEffect(() => {
     const timer = window.setTimeout(() => {
       const idle =
@@ -27,49 +54,56 @@ function Shows() {
           ? window.requestIdleCallback.bind(window)
           : (cb: () => void) => window.setTimeout(cb, 200)
       idle(() => prefetchShowsHeavyTabs())
-    }, 2500)
+    }, 2000)
     return () => window.clearTimeout(timer)
   }, [])
 
-  const rawTabParam = searchParams.get('tab')
-  if (!rawTabParam) {
-    const savedTab = getLastSectionTab('shows')
-    return <Navigate to={`/shows?tab=${savedTab}`} replace />
-  }
-
-  if (rawTab === 'champions') {
-    return <Navigate to="/shows?tab=ranking" replace />
-  }
-
-  // Redirect legacy ?tab=calendar to ?tab=archive
-  if (rawTab === 'calendar') {
-    return <Navigate to="/shows?tab=archive" replace />
-  }
-
-  if (!calendarVisible && rawTab === 'archive') {
-    return <Navigate to="/shows?tab=ranking" replace />
-  }
-
-  const activeTab =
-    rawTab === 'judges' || rawTab === 'ranking' || (calendarVisible && rawTab === 'archive')
-      ? rawTab
-      : 'ranking'
-
   useEffect(() => {
-    setLastSectionTab('shows', activeTab)
-  }, [activeTab])
+    if (!redirectTab) {
+      setLastSectionTab('shows', activeTab)
+    }
+  }, [activeTab, redirectTab])
 
-  const handleTabChange = (newTab: string) => {
-    setSearchParams({ tab: newTab })
+  // Clear loading bar shortly after new tab mounts
+  useEffect(() => {
+    if (isTabLoading) {
+      const t = window.setTimeout(() => setIsTabLoading(false), 350)
+      return () => window.clearTimeout(t)
+    }
+  }, [isTabLoading, activeTab])
+
+  const handleTabChange = useCallback((newTab: string) => {
+    if (newTab === activeTab) return
+
+    // Immediately update both the tab button and the content panel in one render frame
+    setActiveTab(newTab)
+    const isFirstVisit = !visitedTabs.has(newTab)
+    if (isFirstVisit) {
+      setVisitedTabs((prev) => new Set(prev).add(newTab))
+      setIsTabLoading(true)
+    }
+
+    setSearchParams(
+      (prev) => {
+        const next = new URLSearchParams(prev)
+        next.set('tab', newTab)
+        return next
+      },
+      { replace: false }
+    )
+  }, [activeTab, visitedTabs, setSearchParams])
+
+  if (redirectTab) {
+    return <Navigate to={`/shows?tab=${redirectTab}`} replace />
   }
+
+  const isVisited = (tabId: string) => visitedTabs.has(tabId) || activeTab === tabId
 
   const tabs = [
     { id: 'ranking', label: 'Рейтинг' },
     ...(calendarVisible ? [{ id: 'archive', label: 'Архив' }] : []),
     { id: 'judges', label: 'Судьи' },
   ]
-
-  const fallback = <LoadingCard count={6} variant="shows" />
 
   return (
     <>
@@ -84,46 +118,47 @@ function Shows() {
         tabs={tabs}
         activeTab={activeTab}
         onChange={handleTabChange}
-        onHoverTab={() => prefetchShowsHeavyTabs()}
+        onHoverTab={(tabId) => prefetchShowsTab(tabId)}
+        isLoading={isTabLoading}
         ariaLabel="Разделы выставок"
       />
 
       <div className="min-h-[480px]">
-        {activeTab === 'ranking' && (
+        {isVisited('ranking') && (
           <div
-            key="ranking"
             id="tab-panel-ranking"
             role="tabpanel"
             aria-labelledby="tab-ranking"
-            className="cs-tab-panel-enter"
+            className={activeTab === 'ranking' ? 'block cs-tab-panel-enter' : 'hidden'}
+            aria-hidden={activeTab !== 'ranking'}
           >
-            <Suspense fallback={fallback}>
+            <Suspense fallback={<LoadingCard count={6} variant="shows" />}>
               <ShowRanking />
             </Suspense>
           </div>
         )}
-        {calendarVisible && activeTab === 'archive' && (
+        {calendarVisible && isVisited('archive') && (
           <div
-            key="archive"
             id="tab-panel-archive"
             role="tabpanel"
             aria-labelledby="tab-archive"
-            className="cs-tab-panel-enter"
+            className={activeTab === 'archive' ? 'block cs-tab-panel-enter' : 'hidden'}
+            aria-hidden={activeTab !== 'archive'}
           >
-            <Suspense fallback={fallback}>
+            <Suspense fallback={<SkeletonLoader count={6} variant="cards" />}>
               <ShowCalendar />
             </Suspense>
           </div>
         )}
-        {activeTab === 'judges' && (
+        {isVisited('judges') && (
           <div
-            key="judges"
             id="tab-panel-judges"
             role="tabpanel"
             aria-labelledby="tab-judges"
-            className="cs-tab-panel-enter"
+            className={activeTab === 'judges' ? 'block cs-tab-panel-enter' : 'hidden'}
+            aria-hidden={activeTab !== 'judges'}
           >
-            <Suspense fallback={fallback}>
+            <Suspense fallback={<SkeletonLoader count={6} variant="cards" />}>
               <ShowJudges />
             </Suspense>
           </div>

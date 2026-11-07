@@ -101,7 +101,8 @@ export default function YearDropdown({
       width={width}
       className={className}
     >
-      <div className="p-3 text-xs text-charcoal-800 space-y-2.5">
+      {isOpen ? (
+        <div className="p-3 text-xs text-charcoal-800 space-y-2.5">
         {/* Full width button: Все года */}
         <button
           type="button"
@@ -160,6 +161,7 @@ export default function YearDropdown({
           </div>
         )}
       </div>
+      ) : null}
     </ModernDropdown>
   )
 }
