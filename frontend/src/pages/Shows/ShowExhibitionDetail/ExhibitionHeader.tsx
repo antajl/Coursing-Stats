@@ -1,11 +1,14 @@
-import { Calendar, Users, PawPrint, MapPin } from 'lucide-react'
+import { Fragment } from 'react'
+import { Calendar, Dog, PawPrint, MapPin } from 'lucide-react'
 import LazyImage from '../../../components/LazyImage'
 import HoverTooltip from '../../../components/ui/HoverTooltip'
 import { resolveRkfOnlineExhibitionUrl, rkfExhibitionResultsUrl } from '../../../lib/rkfLinks'
+import { getClubTooltip, getFederationTooltip, getRankTooltip } from '../showMetaTooltips'
 import type { ShowExhibition } from './types'
 
 export function ExhibitionHeader({ exhibition }: { exhibition: ShowExhibition }) {
-  const resultsCount = exhibition.results.length
+  const uniqueDogsCount = new Set(exhibition.results.map((r) => (r.dog_name || '').trim().toLowerCase()).filter(Boolean)).size
+  const dogsCount = uniqueDogsCount || exhibition.results.length
   const breedsCount =
     exhibition.breed_catalog?.length ?? new Set(exhibition.results.map((r) => r.breed)).size
   const rkfUrl =
@@ -17,10 +20,11 @@ export function ExhibitionHeader({ exhibition }: { exhibition: ShowExhibition })
     exhibition.source === 'rkf-pdf' || exhibition.id >= 10_000
       ? 'Открыть на rkf.online'
       : 'Открыть на lc.rkfshow.ru'
-  const metaLine = [exhibition.club, exhibition.rank, exhibition.type]
-    .map((v) => (typeof v === 'string' ? v.trim() : ''))
-    .filter(Boolean)
-    .join(' · ')
+  const metaItems = [
+    exhibition.club ? { text: exhibition.club.trim(), tooltip: getClubTooltip(exhibition.club) } : null,
+    exhibition.rank ? { text: exhibition.rank.trim(), tooltip: getRankTooltip(exhibition.rank) } : null,
+    exhibition.type ? { text: exhibition.type.trim(), tooltip: getFederationTooltip(exhibition.type) } : null,
+  ].filter((item): item is { text: string; tooltip: ReturnType<typeof getClubTooltip> } => Boolean(item && item.text))
   const locationText = exhibition.location || '—'
 
   return (
@@ -52,10 +56,10 @@ export function ExhibitionHeader({ exhibition }: { exhibition: ShowExhibition })
                 </div>
               </div>
               <div className="flex items-center gap-2 rounded-lg bg-white/60 px-3 py-2 shrink-0">
-                <Users className="h-4 w-4 text-camel-600" />
+                <Dog className="h-4 w-4 text-camel-600" />
                 <div>
-                  <div className="text-[10px] uppercase tracking-wide text-old-money-500">Результатов</div>
-                  <div className="text-sm font-semibold text-charcoal-900">{resultsCount}</div>
+                  <div className="text-[10px] uppercase tracking-wide text-old-money-500">Собак</div>
+                  <div className="text-sm font-semibold text-charcoal-900">{dogsCount}</div>
                 </div>
               </div>
               <div className="flex items-center gap-2 rounded-lg bg-white/60 px-3 py-2 shrink-0">
@@ -104,9 +108,33 @@ export function ExhibitionHeader({ exhibition }: { exhibition: ShowExhibition })
           ) : null}
         </div>
 
-        {metaLine ? (
-          <div className="mt-3 pt-3 border-t border-old-money-200/60">
-            <p className="text-sm leading-snug text-charcoal-600">{metaLine}</p>
+        {metaItems.length > 0 ? (
+          <div className="mt-3 pt-3 border-t border-old-money-200/60 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm leading-snug text-charcoal-600">
+            {metaItems.map((item, index) => (
+              <Fragment key={index}>
+                {index > 0 && <span className="text-old-money-400 select-none">·</span>}
+                {item.tooltip ? (
+                  <HoverTooltip
+                    placement="bottom"
+                    variant="site"
+                    delayMs={0}
+                    portal
+                    label={
+                      <div className="max-w-xs sm:max-w-sm text-left py-0.5">
+                        <div className="font-semibold text-charcoal-900 text-xs">{item.tooltip.title}</div>
+                        <div className="mt-1 text-[11.5px] leading-relaxed text-charcoal-600">{item.tooltip.description}</div>
+                      </div>
+                    }
+                  >
+                    <span className="cursor-help decoration-dotted underline decoration-old-money-400/80 underline-offset-4 transition-colors hover:text-charcoal-900 hover:decoration-camel-600">
+                      {item.text}
+                    </span>
+                  </HoverTooltip>
+                ) : (
+                  <span>{item.text}</span>
+                )}
+              </Fragment>
+            ))}
           </div>
         ) : null}
       </div>

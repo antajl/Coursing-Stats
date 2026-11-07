@@ -6,6 +6,7 @@ import ErrorState from '../../components/ErrorState'
 import RKFAttribution from '../../components/RKFAttribution'
 import PageToolbar from '../../components/toolbar/PageToolbar'
 import { SEO } from '../../components/SEO'
+import { JsonLd, breadcrumbListSchema, sportsEventSchema } from '../../components/JsonLd'
 import { CACHE } from '../../lib/constants'
 import ToolbarFiltersDropdown from '../../components/toolbar/ToolbarFiltersDropdown'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
@@ -114,7 +115,7 @@ export default function ShowExhibitionDetail() {
     `Выставка РКФ: ${exhibition.title}`,
     exhibition.date || null,
     exhibition.location || null,
-    exhibition.results?.length ? `${exhibition.results.length} результатов` : null,
+    exhibition.results?.length ? `${exhibition.results.length} собак` : null,
     'Протокол и статистика на Coursing Stats.',
   ]
     .filter(Boolean)
@@ -127,6 +128,26 @@ export default function ShowExhibitionDetail() {
         description={seoDescription}
         keywords={`${exhibition.title}, выставка РКФ, результаты, ${exhibition.location || ''}`}
         canonicalUrl={`https://coursing-stats.ru/shows/exhibition/${id}/`}
+      />
+      <JsonLd
+        data={{
+          '@context': 'https://schema.org',
+          '@graph': [
+            breadcrumbListSchema([
+              { name: 'Главная', url: '/' },
+              { name: 'Выставки', url: '/shows?tab=archive' },
+              { name: exhibition.title || 'Выставка', url: `/shows/exhibition/${id}/` },
+            ]),
+            sportsEventSchema({
+              url: `https://coursing-stats.ru/shows/exhibition/${id}/`,
+              name: exhibition.title,
+              startDate: exhibition.date,
+              location: exhibition.location,
+              organizer: exhibition.club || 'Российская кинологическая федерация (РКФ)',
+              description: seoDescription,
+            }),
+          ],
+        }}
       />
       <ExhibitionHeader exhibition={exhibition} />
 
