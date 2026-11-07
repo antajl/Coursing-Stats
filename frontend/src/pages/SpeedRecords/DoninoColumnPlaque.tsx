@@ -28,8 +28,8 @@ export default function DoninoColumnPlaque({
   asHeader = false,
 }: DoninoColumnPlaqueProps) {
   const shellClass = asHeader
-    ? 'donino-column-plaque relative flex h-10 min-h-10 items-center justify-between border-b border-old-money-200 bg-cream-100/90 px-3.5'
-    : 'donino-column-plaque relative mb-3 flex h-10 min-h-10 items-center justify-between rounded-xl border border-old-money-200 bg-cream-100/90 px-3.5'
+    ? 'donino-column-plaque relative flex h-10 min-h-10 items-center justify-between border-b border-[rgba(195,168,128,0.55)] bg-cream-100/90 px-3.5'
+    : 'donino-column-plaque relative mb-3 flex h-10 min-h-10 items-center justify-between rounded-xl border border-[rgba(195,168,128,0.75)] bg-cream-100/90 px-3.5 shadow-sm'
 
   return (
     <div className={shellClass}>
@@ -60,14 +60,16 @@ export function DoninoColumnShell({
   plaque,
   children,
   listRef,
+  className = '',
 }: {
   plaque: ReactNode
   children: ReactNode
   /** Ref for list-reveal root (stagger only within this column). */
   listRef?: Ref<HTMLDivElement>
+  className?: string
 }) {
   return (
-    <section className="min-w-0 overflow-hidden rounded-2xl border border-old-money-200 bg-white shadow-2xs">
+    <section className={`cs-glass-card min-w-0 overflow-hidden rounded-2xl bg-white ${className}`}>
       {plaque}
       <div
         ref={listRef}
