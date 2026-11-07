@@ -2,7 +2,7 @@
   "schema": "coursing-stats/index-top-score-v1",
   "year": null,
   "rating_score_version": "cs-v2",
-  "count": 2064,
+  "count": 2062,
   "items": [
     {
       "dog_id": 10115,
@@ -13099,21 +13099,6 @@
       "sex": "F"
     },
     {
-      "dog_id": 10218,
-      "name_lat": "MERSEDES DARDALIE",
-      "name_ru": "MERSEDES DARDALIE",
-      "breed": "ДИРХАУНД",
-      "year_from": 2018,
-      "year_to": 2018,
-      "best_score": 521,
-      "total_starts": 1,
-      "best_judge_score": 90,
-      "avg_judge_score": 86.83,
-      "judge_eval_count": 6,
-      "score_std_dev": 2.79,
-      "rating_score": 86.71
-    },
-    {
       "dog_id": 10987,
       "name_lat": "BOOGIE WOOGIE WOO KILLKAPI",
       "name_ru": "БУГИ-ВУГИ ВУ КИЛЛКАПИ",
@@ -13207,6 +13192,22 @@
       "avg_judge_score": 85,
       "judge_eval_count": 63,
       "score_std_dev": 4.8,
+      "rating_score": 86.7,
+      "sex": "F"
+    },
+    {
+      "dog_id": 10292,
+      "name_lat": "MAGIC KALLIOPA",
+      "name_ru": "MAGIC KALLIOPA",
+      "breed": "БАСЕНДЖИ",
+      "year_from": 2018,
+      "year_to": 2019,
+      "best_score": 514,
+      "total_starts": 2,
+      "best_judge_score": 90,
+      "avg_judge_score": 84.83,
+      "judge_eval_count": 12,
+      "score_std_dev": 5.29,
       "rating_score": 86.7,
       "sex": "F"
     },
@@ -13370,6 +13371,22 @@
       "score_std_dev": 0.96,
       "rating_score": 86.68,
       "aggression_count": 1,
+      "sex": "F"
+    },
+    {
+      "dog_id": 9568,
+      "name_lat": "MERCEDES DARDALIE",
+      "name_ru": "MERCEDES DARDALIE",
+      "breed": "ДИРХАУНД",
+      "year_from": 2018,
+      "year_to": 2024,
+      "best_score": 522,
+      "total_starts": 7,
+      "best_judge_score": 90,
+      "avg_judge_score": 84.46,
+      "judge_eval_count": 24,
+      "score_std_dev": 4.7,
+      "rating_score": 86.68,
       "sex": "F"
     },
     {
@@ -14229,22 +14246,6 @@
       "score_std_dev": 1.71,
       "rating_score": 86.58,
       "sex": "M"
-    },
-    {
-      "dog_id": 10214,
-      "name_lat": "MAGIK KALLIOPA",
-      "name_ru": "MAGIK KALLIOPA",
-      "breed": "БАСЕНДЖИ",
-      "year_from": 2018,
-      "year_to": 2018,
-      "best_score": 514,
-      "total_starts": 1,
-      "best_judge_score": 88,
-      "avg_judge_score": 85.67,
-      "judge_eval_count": 6,
-      "score_std_dev": 2.25,
-      "rating_score": 86.57,
-      "sex": "F"
     },
     {
       "dog_id": 9447,
@@ -18081,22 +18082,6 @@
       "sex": "F"
     },
     {
-      "dog_id": 9568,
-      "name_lat": "MERCEDES DARDALIE",
-      "name_ru": "MERCEDES DARDALIE",
-      "breed": "ДИРХАУНД",
-      "year_from": 2019,
-      "year_to": 2024,
-      "best_score": 522,
-      "total_starts": 6,
-      "best_judge_score": 90,
-      "avg_judge_score": 83.67,
-      "judge_eval_count": 18,
-      "score_std_dev": 4.99,
-      "rating_score": 86.13,
-      "sex": "F"
-    },
-    {
       "dog_id": 311,
       "name_lat": "САНДЖАР САБИКА ДАЗЗЛИНГ /SANJAR SABIKA DAZZLING",
       "name_ru": "САНДЖАР САБИКА ДАЗЗЛИНГ /SANJAR SABIKA DAZZLING",
@@ -20102,22 +20087,6 @@
       "sex": "M"
     },
     {
-      "dog_id": 10292,
-      "name_lat": "MAGIC KALLIOPA",
-      "name_ru": "MAGIC KALLIOPA",
-      "breed": "БАСЕНДЖИ",
-      "year_from": 2019,
-      "year_to": 2019,
-      "best_score": 504,
-      "total_starts": 1,
-      "best_judge_score": 90,
-      "avg_judge_score": 84,
-      "judge_eval_count": 6,
-      "score_std_dev": 7.4,
-      "rating_score": 85.83,
-      "sex": "F"
-    },
-    {
       "dog_id": 10353,
       "name_lat": "BELKA BICHI SENIYA",
       "name_ru": "BELKA BICHI SENIYA",
@@ -20212,9 +20181,9 @@
       "sex": "M"
     },
     {
-      "dog_id": 10231,
-      "name_lat": "LUNNAJA RADUGA BELAYA NOCH",
-      "name_ru": "LUNNAJA RADUGA BELAYA NOCH",
+      "dog_id": 10021,
+      "name_lat": "LUNNAYA RADUGA BELAYA NOCH",
+      "name_ru": "LUNNAYA RADUGA BELAYA NOCH",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "year_from": 2018,
       "year_to": 2018,
@@ -20224,7 +20193,8 @@
       "avg_judge_score": 82.5,
       "judge_eval_count": 6,
       "score_std_dev": 2.07,
-      "rating_score": 85.81
+      "rating_score": 85.81,
+      "sex": "F"
     },
     {
       "dog_id": 5757,
