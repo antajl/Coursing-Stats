@@ -54,6 +54,17 @@ export function extractDogNames($cell) {
     const parts = text.split(/\/|<br>/i).map(p => p.trim()).filter(p => p);
     
     if (parts.length >= 2) {
+      // Если все части через слеш идентичны (напр. "NAME / NAME"):
+      const isAllIdentical = parts.every((p) => p.toUpperCase() === parts[0].toUpperCase());
+      if (isAllIdentical) {
+        const single = normalizeDogName(parts[0]);
+        const hasCyr = /[а-яё]/i.test(single);
+        return {
+          name_ru: hasCyr ? single : "",
+          name_lat: !hasCyr ? single : "",
+        };
+      }
+
       // Определяем, какая часть русская, какая латинская
       const cyrillicPattern = /[а-яё]/i;
       const latinPattern = /[a-z]/i;
