@@ -58,14 +58,6 @@ export default function ShowCalendar() {
     if (!monthParam || monthParam === 'from_previous') return ''
     return monthParam
   })
-  const [expandedMonths, setExpandedMonths] = useState<Set<number>>(() => {
-    const monthParam = searchParams.get('month')
-    if (monthParam && monthParam !== 'all' && monthParam !== 'from_previous') {
-      const num = Number(monthParam)
-      if (num >= 1 && num <= 12) return new Set([num])
-    }
-    return new Set([CURRENT_MONTH])
-  })
   const [filterBreed, setFilterBreed] = useState(() => searchParams.get('breed') || '')
   const [filterCity, setFilterCity] = useState(() => searchParams.get('city') || '')
 
@@ -94,23 +86,25 @@ export default function ShowCalendar() {
   })
 
   useEffect(() => {
-    if (filterMonth && filterMonth !== 'all') {
-      const num = Number(filterMonth)
-      if (num >= 1 && num <= 12) {
-        setExpandedMonths(new Set([num]))
-      }
-    } else if (filterMonth === 'all') {
-      setExpandedMonths(new Set(Array.from({ length: 12 }, (_, i) => i + 1)))
-    } else if (exhibitions.length > 0) {
-      const latest = findLatestMonthWithProtocols(exhibitions)
-      setExpandedMonths(new Set([latest]))
-    }
-  }, [filterMonth, filterYear, exhibitions])
-
-  useEffect(() => {
     if (calendarData?.success && calendarData.data) setExhibitions(calendarData.data)
     else if (calendarData?.success) setExhibitions([])
   }, [calendarData])
+
+  const defaultMonth = useMemo(() => {
+    if (exhibitions.length > 0) {
+      return findLatestMonthWithProtocols(exhibitions)
+    }
+    return CURRENT_MONTH
+  }, [exhibitions])
+
+  const activeMonth = useMemo(() => {
+    if (filterMonth === 'all') return null
+    if (filterMonth) {
+      const num = Number(filterMonth)
+      if (num >= 1 && num <= 12) return num
+    }
+    return defaultMonth
+  }, [filterMonth, defaultMonth])
 
   // Sync state to URL search params (keep clean URL for current season, avoid URL jumping)
   useEffect(() => {
@@ -123,7 +117,12 @@ export default function ShowCalendar() {
         const currentSearch = prev.get('search') || ''
 
         const targetYear = filterYear && filterYear !== CURRENT_SEASON ? filterYear : null
-        const targetMonth = filterMonth || null
+        const targetMonth =
+          filterMonth === 'all'
+            ? 'all'
+            : filterMonth && Number(filterMonth) !== defaultMonth
+              ? filterMonth
+              : null
         const targetBreed = filterBreed || null
         const targetCity = filterCity.trim() || null
         const targetSearch = searchQuery.trim() || null
@@ -264,39 +263,25 @@ export default function ShowCalendar() {
 
   const isGlobalSearch = Boolean(searchQuery.trim() || filterBreed || filterCity || quickPreset)
   const isAllMonthsSelected = filterMonth === 'all'
-  const isSpecificMonthSelected = Boolean(filterMonth && filterMonth !== 'all')
 
   const effectiveMonths = useMemo(() => {
-    if (isGlobalSearch || isAllMonthsSelected) return null
-    if (isSpecificMonthSelected) {
-      const num = Number(filterMonth)
-      return num >= 1 && num <= 12 ? new Set([num]) : null
-    }
-    if (filterYear !== CURRENT_SEASON) return null
-    return expandedMonths
-  }, [isGlobalSearch, isAllMonthsSelected, isSpecificMonthSelected, filterMonth, filterYear, expandedMonths])
+    if (isGlobalSearch || isAllMonthsSelected || activeMonth === null) return null
+    return new Set([activeMonth])
+  }, [isGlobalSearch, isAllMonthsSelected, activeMonth])
 
-  const minExpanded = useMemo(() => {
-    if (!effectiveMonths || effectiveMonths.size === 0) return null
-    return Math.min(...effectiveMonths)
-  }, [effectiveMonths])
+  const canGoPrev = Boolean(activeMonth && activeMonth > 1 && !isGlobalSearch && !isAllMonthsSelected)
+  const canGoNext = Boolean(activeMonth && activeMonth < 12 && !isGlobalSearch && !isAllMonthsSelected)
 
-  const maxExpanded = useMemo(() => {
-    if (!effectiveMonths || effectiveMonths.size === 0) return null
-    return Math.max(...effectiveMonths)
-  }, [effectiveMonths])
-
-  const canExpandPrev = Boolean(minExpanded && minExpanded > 1 && !isGlobalSearch && !isSpecificMonthSelected)
-  const canExpandNext = Boolean(maxExpanded && maxExpanded < 12 && !isGlobalSearch && !isSpecificMonthSelected)
-
-  const handleExpandPrevMonth = () => {
-    if (!minExpanded || minExpanded <= 1) return
-    setExpandedMonths((prev) => new Set([...prev, minExpanded - 1]))
+  const handleGoPrev = () => {
+    if (!activeMonth || activeMonth <= 1) return
+    setFilterMonth(String(activeMonth - 1))
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
-  const handleExpandNextMonth = () => {
-    if (!maxExpanded || maxExpanded >= 12) return
-    setExpandedMonths((prev) => new Set([...prev, maxExpanded + 1]))
+  const handleGoNext = () => {
+    if (!activeMonth || activeMonth >= 12) return
+    setFilterMonth(String(activeMonth + 1))
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   const filteredGroups = useMemo(
@@ -389,7 +374,7 @@ export default function ShowCalendar() {
           currentSeason={CURRENT_SEASON}
           sortedYears={sortedYears}
           onYearChange={setFilterYear}
-          filterMonth={filterMonth}
+          filterMonth={filterMonth || (activeMonth ? String(activeMonth) : '')}
           onMonthChange={setFilterMonth}
           filterBreed={filterBreed}
           onBreedChange={setFilterBreed}
@@ -444,15 +429,15 @@ export default function ShowCalendar() {
         />
       ) : (
         <>
-          {canExpandPrev && minExpanded && (
-            <div className="flex justify-center mb-3">
+          {canGoPrev && activeMonth && (
+            <div className="flex justify-center mb-3.5 sm:mb-5">
               <button
                 type="button"
-                onClick={handleExpandPrevMonth}
-                className="cs-glass-pill px-4 py-1.5 text-xs font-semibold text-charcoal-700 hover:text-charcoal-950 flex items-center gap-1.5 transition-all shadow-xs cursor-pointer select-none"
+                onClick={handleGoPrev}
+                className="cs-glass-pill inline-flex h-9 items-center gap-2 rounded-full px-5 text-xs sm:text-sm font-semibold !text-charcoal-700 hover:!text-charcoal-950 transition-all cursor-pointer select-none shadow-xs active:scale-95"
               >
-                <ChevronUp className="w-3.5 h-3.5 text-camel-600" />
-                <span>Показать {MONTH_NAMES_RU[minExpanded - 2]}</span>
+                <ChevronUp className="w-4 h-4 text-camel-600" />
+                <span>Показать {MONTH_NAMES_RU[activeMonth - 2]}</span>
               </button>
             </div>
           )}
@@ -463,15 +448,15 @@ export default function ShowCalendar() {
             hasMore={hasMore}
             loadMoreRef={loadMoreRef}
           />
-          {canExpandNext && maxExpanded && (
-            <div className="flex justify-center mt-3">
+          {canGoNext && activeMonth && (
+            <div className="flex justify-center mt-3.5 sm:mt-5 mb-2">
               <button
                 type="button"
-                onClick={handleExpandNextMonth}
-                className="cs-glass-pill px-4 py-1.5 text-xs font-semibold text-charcoal-700 hover:text-charcoal-950 flex items-center gap-1.5 transition-all shadow-xs cursor-pointer select-none"
+                onClick={handleGoNext}
+                className="cs-glass-pill inline-flex h-9 items-center gap-2 rounded-full px-5 text-xs sm:text-sm font-semibold !text-charcoal-700 hover:!text-charcoal-950 transition-all cursor-pointer select-none shadow-xs active:scale-95"
               >
-                <span>Показать {MONTH_NAMES_RU[maxExpanded]}</span>
-                <ChevronDown className="w-3.5 h-3.5 text-camel-600" />
+                <span>Показать {MONTH_NAMES_RU[activeMonth]}</span>
+                <ChevronDown className="w-4 h-4 text-camel-600" />
               </button>
             </div>
           )}

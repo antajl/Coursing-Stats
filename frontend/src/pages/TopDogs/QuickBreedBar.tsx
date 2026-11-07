@@ -334,19 +334,19 @@ export default function QuickBreedBar({
       {/* Скрытый измеритель размеров кнопок (вне потока) */}
       <div
         aria-hidden="true"
-        className="pointer-events-none invisible fixed -left-[9999px] -top-[9999px] -z-50 flex items-center gap-1.5 whitespace-nowrap"
+        className="pointer-events-none invisible fixed -left-[9999px] -top-[9999px] -z-50 flex items-center gap-[5px] whitespace-nowrap"
       >
         <button
           ref={allBtnRef}
           type="button"
-          className="inline-flex h-8 shrink-0 items-center rounded-full border border-transparent px-3 text-xs font-semibold"
+          className="inline-flex h-8 shrink-0 items-center rounded-full border border-transparent px-2.5 text-xs font-semibold"
         >
           Все породы
         </button>
         <button
           ref={moreBtnRef}
           type="button"
-          className="inline-flex h-8 shrink-0 items-center gap-1 rounded-full border border-transparent px-3 text-xs font-semibold"
+          className="inline-flex h-8 shrink-0 items-center gap-1 rounded-full border border-transparent px-2.5 text-xs font-semibold"
         >
           <span>Ещё породы</span>
           <ChevronDown className="h-3.5 w-3.5" />
@@ -354,7 +354,7 @@ export default function QuickBreedBar({
         <button
           ref={minBtnRef}
           type="button"
-          className="inline-flex h-8 shrink-0 items-center gap-1 rounded-full border border-transparent px-3 text-xs font-semibold"
+          className="inline-flex h-8 shrink-0 items-center gap-1 rounded-full border border-transparent px-2.5 text-xs font-semibold"
         >
           <span>Породы</span>
           <ChevronDown className="h-3.5 w-3.5" />
@@ -366,7 +366,7 @@ export default function QuickBreedBar({
               itemRefs.current[i] = el
             }}
             type="button"
-            className="inline-flex h-8 shrink-0 items-center rounded-full border border-transparent px-3 text-xs font-semibold"
+            className="inline-flex h-8 shrink-0 items-center rounded-full border border-transparent px-2.5 text-xs font-semibold"
           >
             {breed.label}
           </button>
@@ -376,7 +376,7 @@ export default function QuickBreedBar({
       {/* Основной адаптивный контейнер */}
       <div
         ref={containerRef}
-        className={`flex items-center gap-1.5 flex-nowrap min-w-0 w-full py-2 -my-2 px-2 -mx-2 overflow-visible ${className}`.trim()}
+        className={`flex items-center gap-[5px] flex-nowrap min-w-0 w-full py-2 -my-2 px-2 -mx-2 overflow-visible ${className}`.trim()}
         role="toolbar"
         aria-label="Быстрый выбор породы"
       >
@@ -384,7 +384,7 @@ export default function QuickBreedBar({
           /* МАКСИМАЛЬНО СУЖЕННЫЙ РЕЖИМ: просто кнопка «Породы» */
           normalizedSelected ? (
             <span
-              className="cs-glass-pill-active inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full px-3 text-xs font-semibold whitespace-nowrap"
+              className="cs-glass-pill-active inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full px-2.5 text-xs font-semibold whitespace-nowrap"
               title={`Выбрана порода: ${selectedDisplay}`}
             >
               <BreedSearchDropdown
@@ -426,7 +426,7 @@ export default function QuickBreedBar({
               trigger={
                 <button
                   type="button"
-                  className="cs-glass-pill inline-flex h-8 shrink-0 items-center gap-1 rounded-full px-3 text-xs font-semibold whitespace-nowrap cursor-pointer"
+                  className="cs-glass-pill inline-flex h-8 shrink-0 items-center gap-1 rounded-full px-2.5 text-xs font-semibold whitespace-nowrap cursor-pointer"
                   title="Выбрать породу из полного списка"
                   aria-label="Открыть список пород"
                 >
@@ -443,7 +443,7 @@ export default function QuickBreedBar({
             <button
               type="button"
               onClick={() => onSelectBreed('')}
-              className={`inline-flex h-8 shrink-0 items-center rounded-full px-3 text-xs font-semibold transition-all cursor-pointer whitespace-nowrap ${
+              className={`inline-flex h-8 shrink-0 items-center rounded-full px-2.5 text-xs font-semibold transition-all cursor-pointer whitespace-nowrap ${
                 !normalizedSelected
                   ? "cs-glass-pill-active"
                   : "cs-glass-pill"
@@ -462,7 +462,7 @@ export default function QuickBreedBar({
                   type="button"
                   onClick={() => handlePillClick(breed.key)}
                   title={breed.fullName}
-                  className={`inline-flex h-8 shrink-0 items-center rounded-full px-3 text-xs font-semibold transition-all cursor-pointer whitespace-nowrap ${
+                  className={`inline-flex h-8 shrink-0 items-center rounded-full px-2.5 text-xs font-semibold transition-all cursor-pointer whitespace-nowrap ${
                     isActive
                       ? "cs-glass-pill-active"
                       : "cs-glass-pill"
@@ -478,7 +478,7 @@ export default function QuickBreedBar({
             {/* Чип для выбранной редкой породы или породы, не вошедшей в visible */}
             {rareBreedChip && (
               <span
-                className="cs-glass-pill-active inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full px-3 text-xs font-semibold whitespace-nowrap"
+                className="cs-glass-pill-active inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full px-2.5 text-xs font-semibold whitespace-nowrap"
                 title={`Выбрана порода: ${rareBreedChip}`}
               >
                 <span>{rareBreedChip}</span>
@@ -507,7 +507,7 @@ export default function QuickBreedBar({
                 trigger={
                   <button
                     type="button"
-                    className="cs-glass-pill inline-flex h-8 shrink-0 items-center gap-1 rounded-full px-3 text-xs font-semibold whitespace-nowrap cursor-pointer"
+                    className="cs-glass-pill inline-flex h-8 shrink-0 items-center gap-1 rounded-full px-2.5 text-xs font-semibold whitespace-nowrap cursor-pointer"
                     title="Выбрать другую породу из полного списка"
                     aria-label="Открыть полный список пород"
                   >

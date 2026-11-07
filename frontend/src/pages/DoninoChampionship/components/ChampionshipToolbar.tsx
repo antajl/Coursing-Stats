@@ -314,6 +314,7 @@ export default function ChampionshipToolbar({
             breedValues={breedValues}
             candidateBreeds={candidateBreeds}
             dogIndex={dogIndex}
+            strictFilterByBreedValues={true}
           />
         </div>
       </div>
