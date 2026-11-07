@@ -44,6 +44,28 @@ export function findLatestMonthWithProtocols(exhibitions: ShowRkfCalendarEntry[]
   return latestWithProtocol || latestWithAny || (new Date().getMonth() + 1)
 }
 
+/**
+ * Возвращает отсортированный массив номеров месяцев (1..12), в которых есть протоколы.
+ * Если протоколов нет вовсе, возвращает месяцы с любыми выставками.
+ */
+export function getMonthsWithProtocols(exhibitions: ShowRkfCalendarEntry[]): number[] {
+  const monthsWithProto = new Set<number>()
+  const monthsWithAny = new Set<number>()
+  for (const ex of exhibitions) {
+    if (!ex.date) continue
+    const parts = ex.date.split('.')
+    if (parts.length < 2) continue
+    const m = parseInt(parts[1], 10)
+    if (isNaN(m) || m < 1 || m > 12) continue
+    monthsWithAny.add(m)
+    if (exhibitionHasProtocol(ex)) {
+      monthsWithProto.add(m)
+    }
+  }
+  const result = monthsWithProto.size > 0 ? monthsWithProto : monthsWithAny
+  return Array.from(result).sort((a, b) => a - b)
+}
+
 /** Calendar-day compare in local time (same as parseShowDate). */
 export function isShowNotStartedYet(dateStr: string): boolean {
   const start = parseShowDate(dateStr)

@@ -1,7 +1,7 @@
 import { useState, useEffect, useMemo } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
-import { ChevronDown, ChevronUp } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 import PageToolbar from '../../components/toolbar/PageToolbar'
 import EmptyState from '../../components/EmptyState'
 import SkeletonLoader from '../../components/SkeletonLoader'
@@ -17,7 +17,9 @@ import { useInfiniteScroll } from '../../hooks/useInfiniteScroll'
 import {
   filterShowCalendarGroups,
   findLatestMonthWithProtocols,
+  getMonthsWithProtocols,
   groupExhibitionsByMonth,
+  monthLabel,
 } from './showCalendarDate'
 import { exhibitionHasProtocol } from './showCalendarGroup'
 import {
@@ -34,18 +36,18 @@ const CURRENT_SEASON = CURRENT_YEAR
 const CURRENT_MONTH = new Date().getMonth() + 1
 
 const MONTH_NAMES_RU = [
-  'январь',
-  'февраль',
-  'март',
-  'апрель',
-  'май',
-  'июнь',
-  'июль',
-  'август',
-  'сентябрь',
-  'октябрь',
-  'ноябрь',
-  'декабрь',
+  'Январь',
+  'Февраль',
+  'Март',
+  'Апрель',
+  'Май',
+  'Июнь',
+  'Июль',
+  'Август',
+  'Сентябрь',
+  'Октябрь',
+  'Ноябрь',
+  'Декабрь',
 ]
 
 export default function ShowCalendar() {
@@ -269,20 +271,43 @@ export default function ShowCalendar() {
     return new Set([activeMonth])
   }, [isGlobalSearch, isAllMonthsSelected, activeMonth])
 
-  const canGoPrev = Boolean(activeMonth && activeMonth > 1 && !isGlobalSearch && !isAllMonthsSelected)
-  const canGoNext = Boolean(activeMonth && activeMonth < 12 && !isGlobalSearch && !isAllMonthsSelected)
+  const monthsWithData = useMemo(
+    () => getMonthsWithProtocols(exhibitions),
+    [exhibitions],
+  )
+
+  const prevMonthNumber = useMemo(() => {
+    if (!activeMonth || monthsWithData.length === 0) return null
+    const smaller = monthsWithData.filter((m) => m < activeMonth)
+    if (smaller.length > 0) return smaller[smaller.length - 1]
+    if (activeMonth > 1) return activeMonth - 1
+    return null
+  }, [activeMonth, monthsWithData])
+
+  const nextMonthNumber = useMemo(() => {
+    if (!activeMonth || monthsWithData.length === 0) return null
+    const larger = monthsWithData.filter((m) => m > activeMonth)
+    if (larger.length > 0) return larger[0]
+    return null
+  }, [activeMonth, monthsWithData])
+
+  const canGoPrev = Boolean(prevMonthNumber && !isGlobalSearch && !isAllMonthsSelected)
+  const canGoNext = Boolean(nextMonthNumber && !isGlobalSearch && !isAllMonthsSelected)
 
   const handleGoPrev = () => {
-    if (!activeMonth || activeMonth <= 1) return
-    setFilterMonth(String(activeMonth - 1))
+    if (!prevMonthNumber) return
+    setFilterMonth(String(prevMonthNumber))
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   const handleGoNext = () => {
-    if (!activeMonth || activeMonth >= 12) return
-    setFilterMonth(String(activeMonth + 1))
+    if (!nextMonthNumber) return
+    setFilterMonth(String(nextMonthNumber))
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
+
+  const prevMonthLabel = prevMonthNumber ? MONTH_NAMES_RU[prevMonthNumber - 1] : null
+  const nextMonthLabel = nextMonthNumber ? MONTH_NAMES_RU[nextMonthNumber - 1] : null
 
   const filteredGroups = useMemo(
     () =>
@@ -306,6 +331,16 @@ export default function ShowCalendar() {
 
   const flatVisible = useMemo(() => {
     const rows: ShowCalendarFlatRow[] = []
+    if (filteredGroups.length === 0 && activeMonth && !isGlobalSearch) {
+      const year = Number(filterYear) || Number(CURRENT_SEASON)
+      rows.push({
+        kind: 'month',
+        key: `m-${year}-${String(activeMonth).padStart(2, '0')}`,
+        label: monthLabel(year, activeMonth - 1),
+        count: 0,
+      })
+      return rows
+    }
     for (const month of monthGroups) {
       rows.push({
         kind: 'month',
@@ -318,7 +353,7 @@ export default function ShowCalendar() {
       }
     }
     return rows
-  }, [monthGroups])
+  }, [monthGroups, filteredGroups.length, activeMonth, isGlobalSearch, filterYear])
 
   const { visibleCount, loadMoreRef, hasMore } = useInfiniteScroll(flatVisible.length, [
     filterYear,
@@ -348,19 +383,9 @@ export default function ShowCalendar() {
   )
 
   const availableMonths = useMemo(() => {
-    if (!exhibitions || exhibitions.length === 0) return undefined
-    const set = new Set<string>()
-    for (const ex of exhibitions) {
-      if (ex.date) {
-        const parts = ex.date.split('.')
-        if (parts.length === 3) {
-          const m = String(parseInt(parts[1], 10))
-          if (m && !isNaN(Number(m))) set.add(m)
-        }
-      }
-    }
-    return set
-  }, [exhibitions])
+    if (monthsWithData.length === 0) return undefined
+    return new Set(monthsWithData.map(String))
+  }, [monthsWithData])
 
   const pageToolbar = (
     <PageToolbar
@@ -414,7 +439,7 @@ export default function ShowCalendar() {
   return (
     <div className="max-w-full mx-auto pb-2 sm:pb-4">
       <div className="mb-2.5 sm:mb-4">{pageToolbar}</div>
-      {filteredGroups.length === 0 ? (
+      {filteredGroups.length === 0 && isGlobalSearch ? (
         <EmptyState
           title="Выставки не найдены"
           description={
@@ -429,33 +454,25 @@ export default function ShowCalendar() {
         />
       ) : (
         <>
-          {canGoPrev && activeMonth && (
-            <div className="flex justify-center mb-3.5 sm:mb-5">
-              <button
-                type="button"
-                onClick={handleGoPrev}
-                className="cs-glass-pill inline-flex h-9 items-center gap-2 rounded-full px-5 text-xs sm:text-sm font-semibold !text-charcoal-700 hover:!text-charcoal-950 transition-all cursor-pointer select-none shadow-xs active:scale-95"
-              >
-                <ChevronUp className="w-4 h-4 text-camel-600" />
-                <span>Показать {MONTH_NAMES_RU[activeMonth - 2]}</span>
-              </button>
-            </div>
-          )}
           <ShowCalendarMonthList
             visibleRows={visibleRows}
             expandedKeys={expandedKeys}
             onToggleExpanded={toggleExpanded}
             hasMore={hasMore}
             loadMoreRef={loadMoreRef}
+            prevMonthLabel={prevMonthLabel}
+            nextMonthLabel={nextMonthLabel}
+            onGoPrev={canGoPrev ? handleGoPrev : undefined}
+            onGoNext={canGoNext ? handleGoNext : undefined}
           />
-          {canGoNext && activeMonth && (
+          {canGoNext && nextMonthLabel && (
             <div className="flex justify-center mt-3.5 sm:mt-5 mb-2">
               <button
                 type="button"
                 onClick={handleGoNext}
                 className="cs-glass-pill inline-flex h-9 items-center gap-2 rounded-full px-5 text-xs sm:text-sm font-semibold !text-charcoal-700 hover:!text-charcoal-950 transition-all cursor-pointer select-none shadow-xs active:scale-95"
               >
-                <span>Показать {MONTH_NAMES_RU[activeMonth]}</span>
+                <span>Показать {nextMonthLabel}</span>
                 <ChevronDown className="w-4 h-4 text-camel-600" />
               </button>
             </div>
