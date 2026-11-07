@@ -1,4 +1,5 @@
 import { cdnPackShardKey, dogProfilePackPath, type DogProfilePackFile } from '../../../../backend/lib/cdn-packs'
+import { isShowOnlyProfileId } from '../../../../backend/lib/show-dog-profile-id'
 import { type ApiResult, fetchJson } from './core'
 
 interface DogProfileFile {
@@ -23,14 +24,14 @@ async function loadDogProfilePack(shard: string): Promise<DogProfilePackFile | n
 }
 
 async function loadDogProfileFile(dogId: string): Promise<DogProfileFile | null> {
+  if (!dogId || isShowOnlyProfileId(dogId)) return null
+
   const shard = cdnPackShardKey(dogId)
   const pack = await loadDogProfilePack(shard)
   const fromPack = pack?.byId?.[String(dogId)] as DogProfileFile | undefined
   if (fromPack?.dog) return fromPack
 
-  // Legacy fallback during rollout / local partial trees
-  const legacy = await fetchJson<DogProfileFile>(`indexes/dog-profiles/${dogId}.json`)
-  return legacy?.dog ? legacy : null
+  return null
 }
 
 export async function getDogProfile(dogId: string): Promise<ApiResult<Record<string, unknown>>> {

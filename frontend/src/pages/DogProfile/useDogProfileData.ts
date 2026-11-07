@@ -27,6 +27,7 @@ import {
 } from './dogProfileStats'
 import { useDogProfileRanks } from './useDogProfileRanks'
 import { useDogProfileSeo } from './useDogProfileSeo'
+import { isShowOnlyProfileId } from '../../lib/showDogProfilePath'
 
 export function useDogProfileData() {
   const params = useParams<{ id?: string; dogId?: string; breed?: string }>()
@@ -55,10 +56,12 @@ export function useDogProfileData() {
   const queryBreed = searchParams.get('breed')
 
   const profileId = competitionId || ''
-  const { data: dogDataResult, isLoading: loading } = useDogProfile(profileId)
-  const { data: eventsData } = useDogEvents(profileId)
-  const { data: speedRecordsData } = useDogSpeedRecords(profileId)
-  const { data: coursingRecordsData } = useDogCoursingRecords(profileId)
+  const isShowOnly = isShowOnlyProfileId(profileId)
+  const sportDogId = isShowOnly ? '' : profileId
+  const { data: dogDataResult, isLoading: loading } = useDogProfile(sportDogId)
+  const { data: eventsData } = useDogEvents(sportDogId)
+  const { data: speedRecordsData } = useDogSpeedRecords(sportDogId)
+  const { data: coursingRecordsData } = useDogCoursingRecords(sportDogId)
 
   const dog = dogDataResult?.success ? dogDataResult.data : null
   const events = eventsData?.success ? (Array.isArray(eventsData.data) ? eventsData.data : []) : []
