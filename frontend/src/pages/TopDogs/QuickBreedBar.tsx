@@ -176,7 +176,7 @@ export default function QuickBreedBar({
       if (el) {
         const nextW = el.clientWidth
         if (nextW > 0) {
-          cachedContainerWidth = nextW
+          cachedWidthByContext.set(getContextKey(), nextW)
           setContainerWidth((prev) => (prev !== nextW ? nextW : prev))
         }
       }
@@ -185,9 +185,9 @@ export default function QuickBreedBar({
 
     // Точное снятие размеров кнопок в браузере с учетом шрифтов и кернинга
     const remeasure = () => {
-      const allW = allBtnRef.current?.offsetWidth || cachedMeasured?.allW || 96
-      const moreW = moreBtnRef.current?.offsetWidth || cachedMeasured?.moreW || 114
-      const minW = minBtnRef.current?.offsetWidth || cachedMeasured?.minW || 86
+      const allW = allBtnRef.current?.offsetWidth || cachedMeasured?.allW || 88
+      const moreW = moreBtnRef.current?.offsetWidth || cachedMeasured?.moreW || 105
+      const minW = minBtnRef.current?.offsetWidth || cachedMeasured?.minW || 82
       const widths: Record<string, number> = { ...(cachedMeasured?.widths || {}) }
       candidates.forEach((b, i) => {
         widths[b.key] =
@@ -227,7 +227,7 @@ export default function QuickBreedBar({
         for (const entry of entries) {
           const w = entry.contentRect.width
           if (w > 0) {
-            cachedContainerWidth = w
+            cachedWidthByContext.set(getContextKey(), w)
             setContainerWidth((prev) => (prev !== w ? w : prev))
           }
         }
@@ -259,8 +259,8 @@ export default function QuickBreedBar({
   // Расчет: минимальный режим vs обычный + сколько плашек точно помещается
   const { isMinimal, visibleBreeds, rareBreedChip } = useMemo(() => {
     const avail = Math.max(0, containerWidth - BUFFER)
-    const allW = measured?.allW ?? 96
-    const moreW = measured?.moreW ?? 114
+    const allW = measured?.allW ?? 88
+    const moreW = measured?.moreW ?? 105
 
     // Минимальная ширина для обычной строки: [Все породы] + gap + [Ещё породы]
     const normalMinNeeded = allW + GAP + moreW
