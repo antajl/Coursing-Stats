@@ -17,6 +17,7 @@ import {
   filterShowCalendarGroups,
   groupExhibitionsByMonth,
 } from './showCalendarDate'
+import { exhibitionHasProtocol } from './showCalendarGroup'
 import {
   ShowCalendarToolbar,
   type QuickPreset,
@@ -40,6 +41,7 @@ export default function ShowCalendar() {
     return monthParam
   })
   const [filterBreed, setFilterBreed] = useState(() => searchParams.get('breed') || '')
+  const [filterCity, setFilterCity] = useState(() => searchParams.get('city') || '')
 
   const [searchQuery, setSearchQuery] = useState(() => searchParams.get('search') || '')
   const [quickPreset, setQuickPreset] = useState<QuickPreset>(null)
@@ -69,31 +71,91 @@ export default function ShowCalendar() {
     else if (calendarData?.success) setExhibitions([])
   }, [calendarData])
 
-  // Sync state to URL search params
+  // Sync state to URL search params (keep clean URL for current season, avoid URL jumping)
   useEffect(() => {
     setSearchParams(
       (prev) => {
-        const params = new URLSearchParams(prev)
-        if (filterYear) params.set('year', filterYear)
-        else params.delete('year')
-        if (filterMonth) params.set('month', filterMonth)
-        else params.delete('month')
-        if (filterBreed) params.set('breed', filterBreed)
-        else params.delete('breed')
-        if (searchQuery) params.set('search', searchQuery)
-        else params.delete('search')
+        const currentYear = prev.get('year')
+        const currentMonth = prev.get('month') || ''
+        const currentBreed = prev.get('breed') || ''
+        const currentCity = prev.get('city') || ''
+        const currentSearch = prev.get('search') || ''
 
-        return params
+        const targetYear = filterYear && filterYear !== CURRENT_SEASON ? filterYear : null
+        const targetMonth = filterMonth || null
+        const targetBreed = filterBreed || null
+        const targetCity = filterCity.trim() || null
+        const targetSearch = searchQuery.trim() || null
+
+        let changed = false
+        const params = new URLSearchParams(prev)
+
+        if (targetYear !== null) {
+          if (currentYear !== targetYear) {
+            params.set('year', targetYear)
+            changed = true
+          }
+        } else if (currentYear) {
+          params.delete('year')
+          changed = true
+        }
+
+        if (targetMonth !== null) {
+          if (currentMonth !== targetMonth) {
+            params.set('month', targetMonth)
+            changed = true
+          }
+        } else if (currentMonth) {
+          params.delete('month')
+          changed = true
+        }
+
+        if (targetBreed !== null) {
+          if (currentBreed !== targetBreed) {
+            params.set('breed', targetBreed)
+            changed = true
+          }
+        } else if (currentBreed) {
+          params.delete('breed')
+          changed = true
+        }
+
+        if (targetCity !== null) {
+          if (currentCity !== targetCity) {
+            params.set('city', targetCity)
+            changed = true
+          }
+        } else if (currentCity) {
+          params.delete('city')
+          changed = true
+        }
+
+        if (targetSearch !== null) {
+          if (currentSearch !== targetSearch) {
+            params.set('search', targetSearch)
+            changed = true
+          }
+        } else if (currentSearch) {
+          params.delete('search')
+          changed = true
+        }
+
+        return changed ? params : prev
       },
       { replace: true },
     )
-  }, [filterYear, filterMonth, filterBreed, searchQuery, setSearchParams])
+  }, [filterYear, filterMonth, filterBreed, filterCity, searchQuery, setSearchParams])
 
   // Sync URL changes back to state (e.g. browser back/forward or tab switch)
   useEffect(() => {
     const breedFromUrl = searchParams.get('breed') || ''
     if (breedFromUrl !== filterBreed) {
       setFilterBreed(breedFromUrl)
+    }
+
+    const cityFromUrl = searchParams.get('city') || ''
+    if (cityFromUrl !== filterCity) {
+      setFilterCity(cityFromUrl)
     }
 
     const yearFromUrl = searchParams.get('year') || CURRENT_YEAR
@@ -114,7 +176,7 @@ export default function ShowCalendar() {
 
   useEffect(() => {
     setExpandedKeys(new Set())
-  }, [filterYear, filterMonth, filterBreed, searchQuery, quickPreset])
+  }, [filterYear, filterMonth, filterBreed, filterCity, searchQuery, quickPreset])
 
   // Build matching exhibition IDs for the selected breed
   const allowedExhibitionIds = useMemo(() => {
@@ -142,17 +204,35 @@ export default function ShowCalendar() {
     return SHOW_CANDIDATE_BREEDS.map((b) => b.key)
   }, [breedCalendarData])
 
+  // Available cities/locations with count of exhibitions having protocols
+  const availableCities = useMemo(() => {
+    if (!exhibitions || exhibitions.length === 0) return []
+    const counts = new Map<string, number>()
+    const hasProtocols = exhibitions.some(exhibitionHasProtocol)
+    for (const ex of exhibitions) {
+      if (hasProtocols && !exhibitionHasProtocol(ex)) continue
+      const city = (ex.city || ex.location || '').trim()
+      if (city) {
+        counts.set(city, (counts.get(city) || 0) + 1)
+      }
+    }
+    return Array.from(counts.entries())
+      .map(([city, count]) => ({ city, count }))
+      .sort((a, b) => b.count - a.count || a.city.localeCompare(b.city, 'ru'))
+  }, [exhibitions])
+
   const filteredGroups = useMemo(
     () =>
       filterShowCalendarGroups(exhibitions, {
         filterMonth,
         filterBreed,
         allowedExhibitionIds,
+        filterCity,
         filterLcOnly: true,
         searchQuery,
         quickPreset,
       }),
-    [exhibitions, searchQuery, quickPreset, filterMonth, filterBreed, allowedExhibitionIds],
+    [exhibitions, searchQuery, quickPreset, filterMonth, filterBreed, filterCity, allowedExhibitionIds],
   )
 
   const monthGroups = useMemo(
@@ -232,6 +312,9 @@ export default function ShowCalendar() {
           onMonthChange={setFilterMonth}
           filterBreed={filterBreed}
           onBreedChange={setFilterBreed}
+          filterCity={filterCity}
+          onCityChange={setFilterCity}
+          cities={availableCities}
           breedValues={breedValues}
           onClearQuickPreset={() => setQuickPreset(null)}
           availableMonths={availableMonths}
@@ -269,9 +352,13 @@ export default function ShowCalendar() {
         <EmptyState
           title="Выставки не найдены"
           description={
-            filterBreed
-              ? `Для породы «${formatBreedName(filterBreed)}» не найдено выставок с выбранными фильтрами`
-              : 'Попробуйте изменить фильтры или поисковый запрос'
+            filterBreed && filterCity
+              ? `Для породы «${formatBreedName(filterBreed)}» в локации «${filterCity}» не найдено выставок`
+              : filterCity
+                ? `В локации «${filterCity}» не найдено выставок с выбранными фильтрами`
+                : filterBreed
+                  ? `Для породы «${formatBreedName(filterBreed)}» не найдено выставок с выбранными фильтрами`
+                  : 'Попробуйте изменить фильтры или поисковый запрос'
           }
         />
       ) : (

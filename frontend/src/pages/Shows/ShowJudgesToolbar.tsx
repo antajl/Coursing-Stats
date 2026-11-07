@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { ChevronDown, X } from 'lucide-react'
 import PageToolbar from '../../components/toolbar/PageToolbar'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
-import ModernDropdown from '../../components/ui/ModernDropdown'
+import YearDropdown from '../../components/ui/YearDropdown'
 import BreedSearchDropdown from '../../components/ui/BreedSearchDropdown'
 import { toolbarPillTriggerClass } from '../../lib/toolbar'
 import { formatBreedName } from '../../lib/breedMapping'
@@ -33,45 +33,6 @@ export function ShowJudgesToolbar({
   onResetFilters,
 }: ShowJudgesToolbarProps) {
   const [mobileYearOpen, setMobileYearOpen] = useState(false)
-  const [desktopYearOpen, setDesktopYearOpen] = useState(false)
-
-  const renderYearMenuItems = (closeDropdown: () => void) => (
-    <div className="p-1 max-h-60 overflow-y-auto" role="menu">
-      <button
-        type="button"
-        role="menuitem"
-        onClick={() => {
-          setFilterYear('')
-          closeDropdown()
-        }}
-        className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
-          !filterYear
-            ? 'bg-camel-100 text-camel-950 font-semibold'
-            : 'text-charcoal-700 hover:bg-camel-100'
-        }`}
-      >
-        Все года
-      </button>
-      {showYears.map((year) => (
-        <button
-          key={year}
-          type="button"
-          role="menuitem"
-          onClick={() => {
-            setFilterYear(year)
-            closeDropdown()
-          }}
-          className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
-            filterYear === year
-              ? 'bg-camel-100 text-camel-950 font-semibold'
-              : 'text-charcoal-700 hover:bg-camel-100'
-          }`}
-        >
-          {year}
-        </button>
-      ))}
-    </div>
-  )
 
   const hasActiveFilters = Boolean(isYearNonDefault || filterBreed || searchQuery.trim())
 
@@ -90,22 +51,13 @@ export function ShowJudgesToolbar({
             />
 
             {/* Year Dropdown */}
-            <ModernDropdown
-              trigger={
-                <button
-                  type="button"
-                  className={`shrink-0 ${toolbarPillTriggerClass(isYearNonDefault)}`}
-                >
-                  <span>{!filterYear ? 'Все года' : filterYear}</span>
-                  <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
-                </button>
-              }
+            <YearDropdown
+              years={showYears as string[]}
+              selectedYear={filterYear}
+              onSelectYear={setFilterYear}
               isOpen={mobileYearOpen}
               onOpenChange={setMobileYearOpen}
-              width="130px"
-            >
-              {renderYearMenuItems(() => setMobileYearOpen(false))}
-            </ModernDropdown>
+            />
 
             {/* Breed Dropdown */}
             <BreedSearchDropdown
@@ -120,7 +72,7 @@ export function ShowJudgesToolbar({
                   <span className="truncate max-w-[120px]">
                     {filterBreed ? formatBreedName(filterBreed) : 'Порода'}
                   </span>
-                  <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
+                  <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70 transition-transform" aria-hidden />
                 </button>
               }
             />
@@ -150,22 +102,11 @@ export function ShowJudgesToolbar({
                 placeholder="Фамилия судьи…"
               />
               {/* Year Dropdown */}
-              <ModernDropdown
-                trigger={
-                  <button
-                    type="button"
-                    className={`shrink-0 ${toolbarPillTriggerClass(isYearNonDefault)}`}
-                  >
-                    <span>{!filterYear ? 'Все года' : filterYear}</span>
-                    <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
-                  </button>
-                }
-                isOpen={desktopYearOpen}
-                onOpenChange={setDesktopYearOpen}
-                width="130px"
-              >
-                {renderYearMenuItems(() => setDesktopYearOpen(false))}
-              </ModernDropdown>
+              <YearDropdown
+                years={showYears as string[]}
+                selectedYear={filterYear}
+                onSelectYear={setFilterYear}
+              />
 
               {/* Breed Dropdown */}
               <BreedSearchDropdown
@@ -180,7 +121,7 @@ export function ShowJudgesToolbar({
                     <span className="truncate max-w-[140px]">
                       {filterBreed ? formatBreedName(filterBreed) : 'Порода'}
                     </span>
-                    <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
+                    <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70 transition-transform" aria-hidden />
                   </button>
                 }
               />

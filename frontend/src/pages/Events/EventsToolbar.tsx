@@ -115,7 +115,7 @@ export default function EventsToolbar({
       trigger={
         <button
           type="button"
-          className="cs-glass-pill inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full px-3 text-xs font-semibold !text-charcoal-700 transition-all cursor-pointer whitespace-nowrap select-none"
+          className="cs-glass-pill inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full px-3.5 text-xs font-semibold transition-all cursor-pointer whitespace-nowrap select-none"
           aria-label="Об открытом архиве и источниках"
         >
           <Info className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
@@ -135,7 +135,7 @@ export default function EventsToolbar({
       trigger={
         <button
           type="button"
-          className="cs-glass-pill inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-xs font-semibold !text-charcoal-700 transition-all cursor-pointer select-none"
+          className="cs-glass-pill inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-xs font-semibold transition-all cursor-pointer select-none"
           aria-label="Об архиве и источниках"
           title="Об архиве"
         >
@@ -290,10 +290,10 @@ export default function EventsToolbar({
                 <button
                   type="button"
                   onClick={() => handleDisciplineToggle(d.value)}
-                  className={`inline-flex items-center gap-1.5 h-8 px-3 rounded-full text-xs font-semibold transition-all cursor-pointer whitespace-nowrap select-none ${
+                  className={`inline-flex items-center gap-1.5 h-8 px-3.5 rounded-full text-xs font-semibold transition-all cursor-pointer whitespace-nowrap select-none ${
                     active
-                      ? 'cs-glass-pill-active !font-semibold !text-camel-950'
-                      : 'cs-glass-pill !font-semibold !text-charcoal-700'
+                      ? 'cs-glass-pill-active !text-camel-950'
+                      : 'cs-glass-pill'
                   }`}
                 >
                   <span className={`h-2 w-2 rounded-full shrink-0 ${DISCIPLINE_DOT[d.value]}`} />

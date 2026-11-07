@@ -4,6 +4,7 @@ import {
   escapeHtml,
   buildEventTitle,
 } from './protocol-shared.js';
+import { toIsoDate } from '../seo/entities/event-seo.js';
 
 function sanitizeDocUrl(url: string | null | undefined): string | null {
   if (!url) return null;
@@ -102,15 +103,24 @@ export function buildProtocolSeoHead(comp: CompetitionData): string {
   ].filter(Boolean);
   const description = descParts.join('. ');
 
-  const sportsEventSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'SportsEvent',
-    name: eventTitle,
-    ...(eventDate ? { startDate: eventDate } : {}),
-    ...(location ? { location: { '@type': 'Place', name: location } } : {}),
-    ...(hostClub ? { organizer: { '@type': 'Organization', name: hostClub } } : {}),
-    url: canonicalUrl
-  };
+  const startIso = toIsoDate(eventDate);
+  const sportsEventSchema = startIso
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'SportsEvent',
+        name: eventTitle,
+        startDate: startIso,
+        ...(location ? { location: { '@type': 'Place', name: location } } : {}),
+        ...(hostClub ? { organizer: { '@type': 'Organization', name: hostClub } } : {}),
+        url: canonicalUrl
+      }
+    : {
+        '@context': 'https://schema.org',
+        '@type': 'ItemPage',
+        name: eventTitle,
+        description,
+        url: canonicalUrl
+      };
 
   return `  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="${escapeHtml(description)}">

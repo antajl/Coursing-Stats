@@ -101,15 +101,31 @@ export const itemPageSchema = profilePageSchema
 function toIsoDate(dateStr?: string | null): string | null {
   if (!dateStr) return null
   const s = String(dateStr).trim()
-  const dmy = s.match(/^(\d{2})\.(\d{2})\.(\d{4})$/)
-  if (dmy) {
-    return `${dmy[3]}-${dmy[2]}-${dmy[1]}`
+  const dmy4 = s.match(/^(\d{2})[./](\d{2})[./](\d{4})$/)
+  if (dmy4) {
+    return `${dmy4[3]}-${dmy4[2]}-${dmy4[1]}`
+  }
+  const dmy2 = s.match(/^(\d{2})[./](\d{2})[./](\d{2})$/)
+  if (dmy2) {
+    const yr = parseInt(dmy2[3], 10)
+    const fullYr = yr < 50 ? 2000 + yr : 1900 + yr
+    return `${fullYr}-${dmy2[2]}-${dmy2[1]}`
   }
   const iso = s.match(/^(\d{4}-\d{2}-\d{2})/)
   if (iso) {
     return iso[1]
   }
-  return s
+  const embedded4 = s.match(/(?:^|[^\d])(\d{2})\.(\d{2})\.(\d{4})(?:[^\d]|$)/)
+  if (embedded4) {
+    return `${embedded4[3]}-${embedded4[2]}-${embedded4[1]}`
+  }
+  const embedded2 = s.match(/(?:^|[^\d])(\d{2})\.(\d{2})\.(\d{2})(?:[^\d]|$)/)
+  if (embedded2) {
+    const yr = parseInt(embedded2[3], 10)
+    const fullYr = yr < 50 ? 2000 + yr : 1900 + yr
+    return `${fullYr}-${embedded2[2]}-${embedded2[1]}`
+  }
+  return null
 }
 
 export function sportsEventSchema(options: {
@@ -123,6 +139,13 @@ export function sportsEventSchema(options: {
   description?: string
 }): Record<string, unknown> {
   const startIso = toIsoDate(options.startDate)
+  if (!startIso) {
+    return itemPageSchema({
+      url: options.url,
+      name: options.name,
+      description: options.description,
+    })
+  }
   const endIso = toIsoDate(options.endDate) || startIso
 
   return {
@@ -131,7 +154,7 @@ export function sportsEventSchema(options: {
     '@id': options.url,
     url: options.url,
     name: options.name,
-    ...(startIso ? { startDate: startIso } : {}),
+    startDate: startIso,
     ...(endIso ? { endDate: endIso } : {}),
     eventStatus: 'https://schema.org/EventScheduled',
     eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',

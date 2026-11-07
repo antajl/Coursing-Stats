@@ -113,4 +113,39 @@ describe('showCalendarGroup merge', () => {
     expect(filteredWhippet).toHaveLength(1)
     expect(filteredWhippet[0]!.representative.id).toBe(30)
   })
+
+  it('filters exhibitions by city/location accurately', () => {
+    const showMsk = entry({
+      id: 101,
+      title: 'Выставка Москва',
+      city: 'Москва',
+      has_lc_protocol: true,
+    })
+    const showSpb = entry({
+      id: 102,
+      title: 'Выставка СПб',
+      city: 'Санкт-Петербург',
+      has_lc_protocol: true,
+    })
+
+    const filteredMsk = filterShowCalendarGroups([showMsk, showSpb], {
+      filterMonth: '',
+      filterCity: 'Москва',
+      filterLcOnly: true,
+      searchQuery: '',
+      quickPreset: null,
+    })
+    expect(filteredMsk).toHaveLength(1)
+    expect(filteredMsk[0]!.representative.id).toBe(101)
+
+    const filteredSpb = filterShowCalendarGroups([showMsk, showSpb], {
+      filterMonth: '',
+      filterCity: 'Санкт-Петербург',
+      filterLcOnly: true,
+      searchQuery: '',
+      quickPreset: null,
+    })
+    expect(filteredSpb).toHaveLength(1)
+    expect(filteredSpb[0]!.representative.id).toBe(102)
+  })
 })

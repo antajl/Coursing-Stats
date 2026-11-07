@@ -25,17 +25,35 @@ export function formatEventDateRu(dateStr?: string | null): string {
   return `${parseInt(d, 10)} ${monthName} ${y} г.`
 }
 
-/** Преобразует дату (DD.MM.YYYY или ISO) в канонический формат ISO 8601 YYYY-MM-DD для Schema.org */
+/** Преобразует дату (DD.MM.YYYY, DD.MM.YY, DD/MM/YYYY, ISO или встроенную дату) в канонический формат ISO 8601 YYYY-MM-DD для Schema.org */
 export function toIsoDate(dateStr?: string | null): string | undefined {
   if (!dateStr) return undefined
   const s = String(dateStr).trim()
-  const dmy = s.match(/^(\d{2})\.(\d{2})\.(\d{4})$/)
-  if (dmy) {
-    return `${dmy[3]}-${dmy[2]}-${dmy[1]}`
+  const dmy4 = s.match(/^(\d{2})[./](\d{2})[./](\d{4})$/)
+  if (dmy4) {
+    return `${dmy4[3]}-${dmy4[2]}-${dmy4[1]}`
+  }
+  const dmy2 = s.match(/^(\d{2})[./](\d{2})[./](\d{2})$/)
+  if (dmy2) {
+    const yr = parseInt(dmy2[3], 10)
+    const fullYr = yr < 50 ? 2000 + yr : 1900 + yr
+    return `${fullYr}-${dmy2[2]}-${dmy2[1]}`
   }
   const iso = s.match(/^(\d{4}-\d{2}-\d{2})/)
   if (iso) {
     return iso[1]
+  }
+  // Try extracting DD.MM.YYYY inside string (e.g. "02.11.2019 ...")
+  const embedded4 = s.match(/(?:^|[^\d])(\d{2})\.(\d{2})\.(\d{4})(?:[^\d]|$)/)
+  if (embedded4) {
+    return `${embedded4[3]}-${embedded4[2]}-${embedded4[1]}`
+  }
+  // Try extracting DD.MM.YY inside string (e.g. "02.11.19 ...")
+  const embedded2 = s.match(/(?:^|[^\d])(\d{2})\.(\d{2})\.(\d{2})(?:[^\d]|$)/)
+  if (embedded2) {
+    const yr = parseInt(embedded2[3], 10)
+    const fullYr = yr < 50 ? 2000 + yr : 1900 + yr
+    return `${fullYr}-${embedded2[2]}-${embedded2[1]}`
   }
   return undefined
 }
@@ -129,16 +147,13 @@ export function eventMetaFromEntry(entry: {
   const endIso = toIsoDate(entry.date_end) || startIso
   const organizerName = entry.organizer?.trim() || 'Российская кинологическая федерация (РКФ)'
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@graph': [
-      breadcrumbJsonLd(breadcrumbs),
-      {
+  const eventNode = startIso
+    ? {
         '@type': 'SportsEvent',
         '@id': `${SITE_ORIGIN}/event/${entry.id}/`,
         url: `${SITE_ORIGIN}/event/${entry.id}/`,
         name: headline,
-        ...(startIso ? { startDate: startIso } : {}),
+        startDate: startIso,
         ...(endIso ? { endDate: endIso } : {}),
         eventStatus: 'https://schema.org/EventScheduled',
         eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
@@ -173,7 +188,26 @@ export function eventMetaFromEntry(entry: {
               })),
             }
           : {}),
-      },
+      }
+    : {
+        '@type': 'ItemPage',
+        '@id': `${SITE_ORIGIN}/event/${entry.id}/`,
+        url: `${SITE_ORIGIN}/event/${entry.id}/`,
+        name: headline,
+        description,
+        mainEntity: {
+          '@type': 'Thing',
+          name: headline,
+          description,
+          url: `${SITE_ORIGIN}/event/${entry.id}/`,
+        },
+      }
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      breadcrumbJsonLd(breadcrumbs),
+      eventNode,
     ],
   }
 
@@ -274,21 +308,14 @@ export function exhibitionMeta(entry: {
   const startDateIso = toIsoDate(date)
   const organizerName = entry.club?.trim() || 'Российская кинологическая федерация (РКФ)'
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@graph': [
-      breadcrumbJsonLd(breadcrumbs),
-      {
+  const exhibitionNode = startDateIso
+    ? {
         '@type': 'Event',
         '@id': `${SITE_ORIGIN}/shows/exhibition/${entry.id}/`,
         url: `${SITE_ORIGIN}/shows/exhibition/${entry.id}/`,
         name: headline,
-        ...(startDateIso
-          ? {
-              startDate: startDateIso,
-              endDate: startDateIso,
-            }
-          : {}),
+        startDate: startDateIso,
+        endDate: startDateIso,
         eventStatus: 'https://schema.org/EventScheduled',
         eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
         organizer: {
@@ -306,7 +333,26 @@ export function exhibitionMeta(entry: {
           },
         },
         description,
-      },
+      }
+    : {
+        '@type': 'ItemPage',
+        '@id': `${SITE_ORIGIN}/shows/exhibition/${entry.id}/`,
+        url: `${SITE_ORIGIN}/shows/exhibition/${entry.id}/`,
+        name: headline,
+        description,
+        mainEntity: {
+          '@type': 'Thing',
+          name: headline,
+          description,
+          url: `${SITE_ORIGIN}/shows/exhibition/${entry.id}/`,
+        },
+      }
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      breadcrumbJsonLd(breadcrumbs),
+      exhibitionNode,
     ],
   }
 

@@ -66,12 +66,20 @@ export function monthLabel(year: number, monthIndex: number): string {
   return label.charAt(0).toUpperCase() + label.slice(1)
 }
 
+export function exhibitionMatchesCity(ex: ShowRkfCalendarEntry, filterCity: string): boolean {
+  if (!filterCity) return true
+  const target = filterCity.trim().toLowerCase()
+  const city = (ex.city || ex.location || '').trim().toLowerCase()
+  return city === target || city.includes(target) || target.includes(city)
+}
+
 export function filterShowCalendarGroups(
   exhibitions: ShowRkfCalendarEntry[],
   opts: {
     filterMonth: string
     filterBreed?: string
     allowedExhibitionIds?: Set<number> | null
+    filterCity?: string
     filterLcOnly: boolean
     searchQuery: string
     quickPreset: 'upcoming30' | null
@@ -114,7 +122,12 @@ export function filterShowCalendarGroups(
     )
   }
 
-  const baseFiltered = opts.filterLcOnly ? breedFiltered.filter(exhibitionHasProtocol) : breedFiltered
+  let cityFiltered = breedFiltered
+  if (opts.filterCity) {
+    cityFiltered = breedFiltered.filter((ex) => exhibitionMatchesCity(ex, opts.filterCity!))
+  }
+
+  const baseFiltered = opts.filterLcOnly ? cityFiltered.filter(exhibitionHasProtocol) : cityFiltered
   const groups = groupRkfMonoVariants(baseFiltered)
   return groups.filter((group) => {
     if (opts.filterLcOnly && !group.hasProtocol) return false

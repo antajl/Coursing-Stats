@@ -2,6 +2,7 @@ import { ChevronDown, X } from 'lucide-react'
 import MonthYearDropdown from '../../../components/toolbar/MonthYearDropdown'
 import ToolbarSearch from '../../../components/toolbar/ToolbarSearch'
 import BreedSearchDropdown from '../../../components/ui/BreedSearchDropdown'
+import CitySearchDropdown, { type CityOption } from './CitySearchDropdown'
 import QuickBreedBar, {
   SHOW_CANDIDATE_BREEDS,
   type QuickBreedItem,
@@ -27,6 +28,9 @@ export interface ShowCalendarToolbarProps {
   onMonthDropdownOpenChange?: (open: boolean) => void
   filterBreed: string
   onBreedChange: (breed: string) => void
+  filterCity?: string
+  onCityChange?: (city: string) => void
+  cities?: CityOption[]
   breedValues: string[]
   candidateBreeds?: QuickBreedItem[]
   onClearQuickPreset: () => void
@@ -44,25 +48,31 @@ export function ShowCalendarToolbar({
   onMonthChange,
   filterBreed,
   onBreedChange,
+  filterCity = '',
+  onCityChange,
+  cities = [],
   breedValues,
   candidateBreeds = SHOW_CANDIDATE_BREEDS,
   onClearQuickPreset,
   availableMonths,
 }: ShowCalendarToolbarProps) {
   const isYearNonDefault = Boolean(filterYear) && filterYear !== currentSeason
-  const hasActiveFilters = Boolean(isYearNonDefault || filterMonth || searchQuery || filterBreed)
+  const hasActiveFilters = Boolean(
+    isYearNonDefault || filterMonth || searchQuery || filterBreed || filterCity,
+  )
 
   const handleReset = () => {
     onSearchChange('')
     onYearChange(currentSeason)
     onMonthChange('')
     onBreedChange('')
+    onCityChange?.('')
     onClearQuickPreset()
   }
 
   return (
     <div className="w-full min-w-0">
-      {/* Мобильная строка (32px): Поиск + Год/Месяц + Порода + (X) + [Количество] + (i) */}
+      {/* Мобильная строка (32px): Поиск + Год/Месяц + Локация + Порода + (X) + (i) */}
       <div className="flex md:hidden items-center gap-1.5 w-full min-w-0">
         <ToolbarSearch
           value={searchQuery}
@@ -80,6 +90,15 @@ export function ShowCalendarToolbar({
           onClearPreset={onClearQuickPreset}
           availableMonthsByYear={availableMonths ? { [filterYear]: availableMonths } : undefined}
         />
+
+        {cities.length > 0 && onCityChange && (
+          <CitySearchDropdown
+            cities={cities}
+            selectedCity={filterCity}
+            onSelect={onCityChange}
+            compact
+          />
+        )}
 
         <div className="shrink-0">
           <BreedSearchDropdown
@@ -119,7 +138,7 @@ export function ShowCalendarToolbar({
         </div>
       </div>
 
-      {/* Десктопная строка: Поиск + Год/Месяц + (i) + [Количество] + Сброс + Разделитель + QuickBreedBar edge-to-edge */}
+      {/* Десктопная строка: Поиск + Год/Месяц + Локация + (i) + Сброс + Разделитель + QuickBreedBar edge-to-edge */}
       <div className="hidden md:flex md:items-center gap-2 w-full min-w-0">
         <div className="flex items-center gap-1.5 shrink-0">
           <ToolbarSearch
@@ -138,6 +157,14 @@ export function ShowCalendarToolbar({
             onClearPreset={onClearQuickPreset}
             availableMonthsByYear={availableMonths ? { [filterYear]: availableMonths } : undefined}
           />
+
+          {cities.length > 0 && onCityChange && (
+            <CitySearchDropdown
+              cities={cities}
+              selectedCity={filterCity}
+              onSelect={onCityChange}
+            />
+          )}
 
           <div className="shrink-0">
             <ShowCalendarHint />
