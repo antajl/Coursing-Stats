@@ -291,7 +291,7 @@ export default function ChampionshipStandingsTab({
           >
             {/* Card Header inside */}
             <div className="relative flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 px-3.5 sm:px-4 py-3 border-b border-old-money-100 bg-cream-50/40">
-              <div className={`flex items-center justify-between sm:justify-start gap-2 min-w-0 ${activeSlide === 0 ? 'pr-20 sm:pr-0' : 'pl-20 sm:pr-0'}`}>
+              <div className={`flex items-center justify-between sm:justify-start gap-2 min-w-0 sm:px-0 ${activeSlide === 0 ? 'pr-20 sm:pr-0' : 'pl-20 sm:pl-0'}`}>
                 <div className="flex items-center gap-1.5 sm:gap-2 min-w-0">
                   {activeSlide === 0 ? (
                     <Trophy className="w-4 h-4 text-camel-700 shrink-0" />
