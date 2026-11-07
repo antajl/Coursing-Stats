@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom'
 
 interface ModernDropdownProps {
   trigger: ReactNode
-  children: ReactNode
+  children: ReactNode | (() => ReactNode)
   className?: string
   isOpen?: boolean
   onOpenChange?: (open: boolean) => void
@@ -235,7 +235,7 @@ export default function ModernDropdown({
     }
   }, [isOpen, width, closeOnScroll])
 
-  const dropdownContent = (
+  const dropdownContent = isOpen ? (
     <div
       ref={dropdownRef}
       onMouseEnter={handleMouseEnter}
@@ -252,9 +252,9 @@ export default function ModernDropdown({
       role="menu"
       aria-hidden={!isOpen}
     >
-      {children}
+      {typeof children === 'function' ? (children as () => ReactNode)() : children}
     </div>
-  )
+  ) : null
 
   return (
     <div

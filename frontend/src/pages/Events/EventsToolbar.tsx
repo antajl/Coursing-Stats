@@ -125,7 +125,7 @@ export default function EventsToolbar({
       width="340px"
       portal
     >
-      {ARCHIVE_MODAL_CONTENT}
+      {() => ARCHIVE_MODAL_CONTENT}
     </ModernDropdown>
   )
 
@@ -145,7 +145,7 @@ export default function EventsToolbar({
       width="320px"
       portal
     >
-      {ARCHIVE_MODAL_CONTENT}
+      {() => ARCHIVE_MODAL_CONTENT}
     </ModernDropdown>
   )
 
@@ -187,6 +187,7 @@ export default function EventsToolbar({
             onOpenChange={setDisciplineDropdownOpen}
             width="160px"
           >
+            {disciplineDropdownOpen ? (
             <div className="p-1 max-h-60 overflow-y-auto" role="menu">
               <button
                 type="button"
@@ -223,6 +224,7 @@ export default function EventsToolbar({
                 </button>
               ))}
             </div>
+            ) : null}
           </ModernDropdown>
         </div>
 

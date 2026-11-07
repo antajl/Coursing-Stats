@@ -83,6 +83,26 @@ export default function DoninoChampionship() {
     }
   }
 
+  const prefetchDoninoTab = (id: string) => {
+    if (id === 'records') void import('../SpeedRecords')
+    else if (id === 'analytics') void import('../DoninoAnalytics')
+  }
+
+  // Warm other Donino tabs in background after initial paint
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      const idle =
+        typeof window !== 'undefined' && 'requestIdleCallback' in window
+          ? window.requestIdleCallback.bind(window)
+          : (cb: () => void) => window.setTimeout(cb, 200)
+      idle(() => {
+        void import('../SpeedRecords')
+        void import('../DoninoAnalytics')
+      })
+    }, 2000)
+    return () => window.clearTimeout(timer)
+  }, [])
+
   const navRef = useRef<HTMLElement>(null)
 
   // Auto-scroll active tab into center view on mobile tab switch inside nav container ONLY (never window scroll)
@@ -235,6 +255,7 @@ export default function DoninoChampionship() {
         tabs={subNavTabs}
         activeTab="championship"
         onChange={handleSubNavChange}
+        onHoverTab={prefetchDoninoTab}
         ariaLabel="Разделы Донино"
       />
 

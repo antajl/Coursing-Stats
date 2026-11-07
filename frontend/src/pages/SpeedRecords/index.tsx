@@ -32,6 +32,26 @@ function SpeedRecords() {
     }
   }
 
+  const prefetchDoninoTab = (id: string) => {
+    if (id === 'championship') void import('../DoninoChampionship')
+    else if (id === 'analytics') void import('../DoninoAnalytics')
+  }
+
+  // Warm other Donino tabs in background after initial paint
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      const idle =
+        typeof window !== 'undefined' && 'requestIdleCallback' in window
+          ? window.requestIdleCallback.bind(window)
+          : (cb: () => void) => window.setTimeout(cb, 200)
+      idle(() => {
+        void import('../DoninoChampionship')
+        void import('../DoninoAnalytics')
+      })
+    }, 2000)
+    return () => window.clearTimeout(timer)
+  }, [])
+
   const subNavTabs = [
     { id: 'records', label: 'Рекорды Донино' },
     { id: 'championship', label: 'Клубный чемпионат' },
@@ -77,6 +97,7 @@ function SpeedRecords() {
         tabs={subNavTabs}
         activeTab="records"
         onChange={handleSubNavChange}
+        onHoverTab={prefetchDoninoTab}
         ariaLabel="Разделы Донино"
       />
 

@@ -164,7 +164,7 @@ export default function TopDogsFilters({
             onOpenChange={setMobileSexOpen}
             width="130px"
           >
-            {renderSexMenu(setMobileSexOpen)}
+            {mobileSexOpen ? renderSexMenu(setMobileSexOpen) : null}
           </ModernDropdown>
         </div>
 
@@ -237,7 +237,7 @@ export default function TopDogsFilters({
                   onOpenChange={setDesktopSexOpen}
                   width="130px"
                 >
-                  {renderSexMenu(setDesktopSexOpen)}
+                  {desktopSexOpen ? renderSexMenu(setDesktopSexOpen) : null}
                 </ModernDropdown>
 
                 {/* Кнопка Инфо о рейтинге (i) — слева */}

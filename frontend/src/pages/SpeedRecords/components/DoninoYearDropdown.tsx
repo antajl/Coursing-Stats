@@ -42,6 +42,7 @@ export function DoninoYearDropdown({
       onOpenChange={onOpenChange}
       width="270px"
     >
+      {isOpen ? (
       <div className="p-3 text-xs text-charcoal-800 space-y-2.5">
         <button
           type="button"
@@ -92,6 +93,7 @@ export function DoninoYearDropdown({
           </div>
         </div>
       </div>
+      ) : null}
     </ModernDropdown>
   )
 }

@@ -126,7 +126,7 @@ export default function CoursingRatingHint({
         width="340px"
         portal
       >
-        {RATING_MODAL_CONTENT}
+        {() => RATING_MODAL_CONTENT}
       </ModernDropdown>
     )
   }

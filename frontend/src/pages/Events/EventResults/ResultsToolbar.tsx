@@ -134,6 +134,7 @@ export function ResultsToolbar({
         </button>
       }
     >
+      {leagueDropdownOpen ? (
       <div className="p-1 space-y-0.5 min-w-[170px]" role="menu">
         <button
           type="button"
@@ -181,6 +182,7 @@ export function ResultsToolbar({
           )
         })}
       </div>
+      ) : null}
     </ModernDropdown>
   )
 
@@ -202,7 +204,7 @@ export function ResultsToolbar({
             onOpenChange={setSexDropdownOpen}
             width="130px"
           >
-            {renderSexMenu(setSexDropdownOpen)}
+            {sexDropdownOpen ? renderSexMenu(setSexDropdownOpen) : null}
           </ModernDropdown>
         </div>
 
@@ -269,7 +271,7 @@ export function ResultsToolbar({
             onOpenChange={setSexDropdownOpen}
             width="130px"
           >
-            {renderSexMenu(setSexDropdownOpen)}
+            {sexDropdownOpen ? renderSexMenu(setSexDropdownOpen) : null}
           </ModernDropdown>
         </div>
 

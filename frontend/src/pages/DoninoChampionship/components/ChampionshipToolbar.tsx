@@ -173,7 +173,7 @@ export default function ChampionshipToolbar({
             onOpenChange={setSexDropdownOpen}
             width="130px"
           >
-            {sexDropdownContent}
+            {sexDropdownOpen ? sexDropdownContent : null}
           </ModernDropdown>
         </div>
 
@@ -197,7 +197,7 @@ export default function ChampionshipToolbar({
               </button>
             }
           >
-            {leagueDropdownContent}
+            {leagueDropdownOpen ? leagueDropdownContent : null}
           </ModernDropdown>
         </div>
 
@@ -264,7 +264,7 @@ export default function ChampionshipToolbar({
             onOpenChange={setSexDropdownOpen}
             width="130px"
           >
-            {sexDropdownContent}
+            {sexDropdownOpen ? sexDropdownContent : null}
           </ModernDropdown>
         </div>
 
@@ -288,7 +288,7 @@ export default function ChampionshipToolbar({
               </button>
             }
           >
-            {leagueDropdownContent}
+            {leagueDropdownOpen ? leagueDropdownContent : null}
           </ModernDropdown>
         </div>
 

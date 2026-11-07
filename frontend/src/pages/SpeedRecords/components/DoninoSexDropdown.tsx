@@ -41,6 +41,7 @@ export function DoninoSexDropdown({
       onOpenChange={onOpenChange}
       width="130px"
     >
+      {isOpen ? (
       <div className="p-1" role="menu">
         <button
           type="button"
@@ -80,6 +81,7 @@ export function DoninoSexDropdown({
           )
         })}
       </div>
+      ) : null}
     </ModernDropdown>
   )
 }

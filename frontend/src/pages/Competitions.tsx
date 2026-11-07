@@ -52,6 +52,22 @@ function Competitions() {
     }
   }, [activeTab, redirectPath])
 
+  // Warm other tabs in background after initial paint
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      const idle =
+        typeof window !== 'undefined' && 'requestIdleCallback' in window
+          ? window.requestIdleCallback.bind(window)
+          : (cb: () => void) => window.setTimeout(cb, 200)
+      idle(() => {
+        void import('./TopDogs')
+        void import('./Events')
+        void import('./Judges')
+      })
+    }, 2000)
+    return () => window.clearTimeout(timer)
+  }, [])
+
   useEffect(() => {
     if (isTabLoading) {
       const t = window.setTimeout(() => setIsTabLoading(false), 350)

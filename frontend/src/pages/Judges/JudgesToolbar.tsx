@@ -133,7 +133,7 @@ export function JudgesToolbar({
               onOpenChange={setMobileDisciplineOpen}
               width="160px"
             >
-              {renderDisciplineMenuItems(() => setMobileDisciplineOpen(false))}
+              {mobileDisciplineOpen ? renderDisciplineMenuItems(() => setMobileDisciplineOpen(false)) : null}
             </ModernDropdown>
 
             {/* Breed Dropdown */}
@@ -201,7 +201,7 @@ export function JudgesToolbar({
                 onOpenChange={setDesktopDisciplineOpen}
                 width="150px"
               >
-                {renderDisciplineMenuItems(() => setDesktopDisciplineOpen(false))}
+                {desktopDisciplineOpen ? renderDisciplineMenuItems(() => setDesktopDisciplineOpen(false)) : null}
               </ModernDropdown>
 
               {/* Reset Filters button — слева перед разделителем */}
