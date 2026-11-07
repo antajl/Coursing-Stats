@@ -17,7 +17,7 @@ verified: 2026-10-01
 | Протокол `/shows/exhibition/:id` | Прямой fetch с S3 CDN `shows/protocols/${id}.json` (gzip); fallback: `shows/index.json` (LC allowlist) |
 | Bulk протоколы выставок | Все 51 429 протоколов (2019–2026) на S3 CDN (`shows/protocols/*.json`) в gzip |
 | ShowRanking / ShowCalendar | React Query → **CDN**, не Turso |
-| ShowCalendar URL & Prefetch | Дефолтный год не пишется в URL (?tab=archive без &year=2026); префетч табов отложен на 2.5с / по наведению onHoverTab |
+| ShowCalendar URL & Prefetch | Дефолтный год не пишется в URL (?tab=archive); активный месяц по умолчанию — последний с протоколами (findLatestMonthWithProtocols); префетч отложен на 2.5с / по наведению onHoverTab |
 | All-time `dog-ranking.json` | &gt;25 MB — **не** в CDN deploy |
 | Lookup | `show-dog-lookup/{0-f}.json` шарды (~обход 25 MB) |
 | Show dog card | `shows/indexes/dog-details/{000-255}.json` (уже паки) |
