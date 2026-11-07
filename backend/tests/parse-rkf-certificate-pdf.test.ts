@@ -251,6 +251,25 @@ describe('parseMainRingPdf — type3 BIS', () => {
       expect(bis.every((r) => !/СХИППЕРКЕ.*МУДИ|МУДИ.*СХИППЕРКЕ/.test(r.breed))).toBe(true)
     },
   )
+
+  it.skipIf(!fs.existsSync(bisPdf(92447)))(
+    '92447: Saratov SOKK — clean labels without leading/trailing slashes and correct puppy/junior/baby separation',
+    async () => {
+      const rows = await parseMainRingPdf(bisPdf(92447))
+      expect(rows.length).toBe(33)
+      const baby = rows.filter((r) => r.competition_key === 'BIS_BABY')
+      expect(baby).toHaveLength(3)
+      expect(baby[0].dog_name).toMatch(/СЬЕРРА ЛЕОНЕ/)
+      expect(baby.every((r) => !r.competition_label.startsWith('/') && !r.competition_label.endsWith('/'))).toBe(true)
+      const puppy = rows.filter((r) => r.competition_key === 'BIS_PUPPY')
+      expect(puppy).toHaveLength(3)
+      expect(puppy[0].dog_name).toMatch(/PUELLO ORIS OM TANTRA/)
+      const big1 = rows.filter((r) => r.competition_key === 'BIG' && r.group === 1)
+      expect(big1).toHaveLength(3)
+      expect(big1[0].dog_name).toMatch(/ГЕРМАНИЯ/)
+      expect(big1.every((r) => !r.competition_label.endsWith('/'))).toBe(true)
+    },
+  )
 })
 
 describe('normalizeCertLookalikes', () => {

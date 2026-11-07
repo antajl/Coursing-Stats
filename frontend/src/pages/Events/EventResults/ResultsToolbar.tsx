@@ -311,6 +311,7 @@ export function ResultsToolbar({
                 breedValues={breeds}
                 candidateBreeds={candidateBreeds}
                 dogIndex={dogIndex}
+                strictFilterByBreedValues={true}
               />
             </div>
           </>

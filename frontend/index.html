@@ -5,6 +5,7 @@
     <link rel="icon" href="/favicons/favicon.ico" sizes="48x48" />
     <link rel="icon" type="image/svg+xml" href="/favicons/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preload" as="image" href="/assets/hero/background-mobile-480.webp" type="image/webp" media="(max-width: 768px)" fetchpriority="high" />
     <meta name="theme-color" content="#F5F1E8" />
     <title data-rh="true">Курсинг Статс (Coursing Stats) — статистика курсинга, бегов и выставок собак</title>
     <meta name="description" content="Курсинг Статс (Coursing Stats) — рейтинги и статистика собак в России: курсинг и бега борзых, рекорды Донино, выставки РКФ, профили и судьи. Архив с 2015 года." data-rh="true" />
@@ -35,9 +36,9 @@
         }
         events.forEach(function(e) { window.addEventListener(e, onInteract, { passive: true, once: true }); });
         if ('requestIdleCallback' in window) {
-          window.requestIdleCallback(function() { setTimeout(loadGTM, 2500); });
+          window.requestIdleCallback(function() { setTimeout(loadGTM, 5000); });
         } else {
-          setTimeout(loadGTM, 3500);
+          setTimeout(loadGTM, 6000);
         }
       })();
     </script>

@@ -56,6 +56,7 @@ interface QuickBreedBarProps {
   dogIndex?: DogsIndexEntry[]
   candidateBreeds?: QuickBreedItem[]
   className?: string
+  strictFilterByBreedValues?: boolean
 }
 
 const GAP = 6 // gap-1.5 = 6px
@@ -91,13 +92,20 @@ export default function QuickBreedBar({
   dogIndex,
   candidateBreeds,
   className = '',
+  strictFilterByBreedValues = false,
 }: QuickBreedBarProps) {
   const candidates = useMemo(() => {
     const base = candidateBreeds ?? CANDIDATE_BREEDS
     if (!breedValues || breedValues.length === 0) return base
-    const active = base.filter((b) =>
-      breedValues.some((bv) => matchesBreedFilter(canonicalBreed(bv), b.key))
-    )
+    // Базовые породы-кандидаты являются приоритетными и не должны исчезать/мелькать
+    // при частичной асинхронной загрузке данных (например, первой порции page0 в рейтинге).
+    // Только если передан строгий фильтр (например, на странице конкретного состязания),
+    // мы ограничиваем кандидатов исключительно заявленными породами.
+    const active = strictFilterByBreedValues
+      ? base.filter((b) =>
+          breedValues.some((bv) => matchesBreedFilter(canonicalBreed(bv), b.key))
+        )
+      : base
     const seen = new Set(active.map((b) => b.key))
     const remainingBreeds = [...breedValues]
       .map((bv) => canonicalBreed(bv))
@@ -124,7 +132,7 @@ export default function QuickBreedBar({
     })
     const combined = [...active, ...extraCandidates]
     return combined.length > 0 ? combined : base
-  }, [candidateBreeds, breedValues, dogIndex])
+  }, [candidateBreeds, breedValues, dogIndex, strictFilterByBreedValues])
 
   const candidateKeys = useMemo(
     () => candidates.map((c) => c.key).join(','),

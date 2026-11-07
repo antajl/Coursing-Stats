@@ -77,6 +77,7 @@ export function filterShowCalendarGroups(
   exhibitions: ShowRkfCalendarEntry[],
   opts: {
     filterMonth: string
+    filterMonths?: Set<number> | null
     filterBreed?: string
     allowedExhibitionIds?: Set<number> | null
     filterCity?: string
@@ -107,7 +108,13 @@ export function filterShowCalendarGroups(
   })
 
   let monthFiltered = sorted
-  if (opts.filterMonth) {
+  if (opts.filterMonths && opts.filterMonths.size > 0) {
+    monthFiltered = sorted.filter((ex) => {
+      const date = parseShowDate(ex.date)
+      if (!date) return false
+      return opts.filterMonths!.has(date.getMonth() + 1)
+    })
+  } else if (opts.filterMonth && opts.filterMonth !== 'all') {
     monthFiltered = sorted.filter((ex) => {
       const date = parseShowDate(ex.date)
       if (!date) return false

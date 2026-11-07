@@ -143,6 +143,29 @@ function compareRuDatesDesc(a: string, b: string): number {
 export async function getShowRkfCalendar(
   year?: string,
 ): Promise<ApiResult<ShowRkfCalendarEntry[]>> {
+  if (year) {
+    const part = await fetchJson<ShowRkfCalendarFile>(`shows/calendar-rkf/${year}.json`)
+    const exhibitions: ShowRkfCalendarEntry[] = []
+    for (const entry of part?.exhibitions ?? []) {
+      exhibitions.push({
+        ...entry,
+        location: entry.city ?? entry.location ?? '',
+        rank: entry.ranks ?? entry.rank ?? '',
+        club: entry.club ?? '',
+        type: entry.type ?? '',
+        judges: entry.judges ?? [],
+        results: [],
+        source: 'rkf',
+      })
+    }
+    if (exhibitions.length === 0) {
+      return { success: false, error: 'RKF shows calendar unavailable' }
+    }
+    exhibitions.sort(
+      (a, b) => compareRuDatesDesc(a.date, b.date) || (b.id ?? 0) - (a.id ?? 0),
+    )
+    return { success: true, data: exhibitions }
+  }
   const manifest = await fetchJson<ShowRkfCalendarManifest>('shows/calendar-rkf/manifest.json')
   const years =
     year

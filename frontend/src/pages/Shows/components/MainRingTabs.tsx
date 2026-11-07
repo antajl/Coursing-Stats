@@ -2,92 +2,14 @@ import { useState } from 'react'
 import {
   displayShowAwardToken,
   matchShowAwardToken,
-  SHOW_AWARD_BADGE,
   SHOW_AWARD_WEIGHTS,
 } from '../../../../../backend/lib/show-award-ranking'
 import { ShowGradeChip, SHOW_AWARD_CHIP_CLASS } from '../../../lib/ShowGradeChip'
 import { HoverTooltip } from '../../../components/ui/HoverTooltip'
 import { awardTooltipForToken, awardTooltipList } from '../../../lib/awardTooltip'
 import { splitShowTitleTokens } from '../showExhibitionUtils'
-
-interface MainRingRow {
-  competition_key: string
-  competition_label: string
-  group: number | null
-  place: number
-  breed: string
-  catalog_number: number
-  dog_name: string
-  pedigree?: string
-  award_badge?: string
-}
-
-type MainRingTab = {
-  id: string
-  label: string
-  shortLabel: string
-  rows: MainRingRow[]
-}
-
-const MAIN_RING_KEY_ORDER: Record<string, number> = {
-  BIS: 0,
-  BIS_BABY: 1,
-  BIS_PUPPY: 2,
-  BIS_JUNIOR: 3,
-  BIS_VETERAN: 4,
-  BIG: 5,
-  OTHER: 6,
-}
-
-function mainRingTabShortLabel(rows: MainRingRow[]): string {
-  const sample = rows[0]
-  if (!sample) return '—'
-  const key = sample.competition_key
-  if (key === 'BIG') {
-    return sample.group != null ? `BIG ${sample.group}` : 'BIG'
-  }
-  const fromPlace1 = rows.find((r) => r.place === 1 && r.award_badge)?.award_badge
-  if (fromPlace1) return fromPlace1
-  if (key === 'BIS') return SHOW_AWARD_BADGE.BIS
-  if (key === 'BIS_BABY') return SHOW_AWARD_BADGE.BIS_BABY
-  if (key === 'BIS_PUPPY') return SHOW_AWARD_BADGE.BIS_PUPPY
-  if (key === 'BIS_JUNIOR') return SHOW_AWARD_BADGE.BIS_JUNIOR
-  if (key === 'BIS_VETERAN') return SHOW_AWARD_BADGE.BIS_VETERAN
-  return sample.competition_label.slice(0, 24) || key
-}
-
-function groupMainRing(rows: MainRingRow[]): MainRingTab[] {
-  const byId = new Map<string, MainRingRow[]>()
-  for (const row of rows) {
-    const id = `${row.competition_key}:${row.group ?? ''}:${row.competition_label || row.competition_key}`
-    if (!byId.has(id)) byId.set(id, [])
-    byId.get(id)!.push(row)
-  }
-
-  const tabs: MainRingTab[] = [...byId.entries()].map(([id, list]) => {
-    const sorted = list.slice().sort((a, b) => a.place - b.place)
-    return {
-      id,
-      label: sorted[0]?.competition_label || sorted[0]?.competition_key || id,
-      shortLabel: mainRingTabShortLabel(sorted),
-      rows: sorted,
-    }
-  })
-
-  tabs.sort((a, b) => {
-    const ka = a.rows[0]?.competition_key || 'OTHER'
-    const kb = b.rows[0]?.competition_key || 'OTHER'
-    const oa = MAIN_RING_KEY_ORDER[ka] ?? 9
-    const ob = MAIN_RING_KEY_ORDER[kb] ?? 9
-    if (oa !== ob) return oa - ob
-    const ga = a.rows[0]?.group
-    const gb = b.rows[0]?.group
-    if (ga != null && gb != null && ga !== gb) return ga - gb
-    return a.label.localeCompare(b.label, 'ru')
-  })
-
-  return tabs
-}
+import { groupMainRing } from '../ShowExhibitionDetail/exhibitionDetailUtils'
+import type { MainRingRow } from '../ShowExhibitionDetail/types'
 
 function TitleChips({ title }: { title: string }) {
   const [offset, setOffset] = useState(0)
@@ -180,56 +102,86 @@ export function MainRingTabs({ rows }: MainRingTabsProps) {
 
   if (tabs.length === 0) return null
 
-  const activeTabData = tabs.find((t) => t.id === activeTab) || tabs[0]
+  const currentTab = tabs.find((t) => t.id === activeTab) || tabs[0]
+  if (!currentTab) return null
 
   return (
-    <div className="main-ring-tabs">
-      <div className="flex gap-2 border-b border-charcoal-200 mb-4 overflow-x-auto">
-        {tabs.map((tab) => (
-          <button
-            key={tab.id}
-            onClick={() => setActiveTab(tab.id)}
-            className={`px-3 py-2 text-sm font-medium whitespace-nowrap transition-colors ${
-              activeTab === tab.id
-                ? 'text-camel-700 border-b-2 border-camel-700'
-                : 'text-charcoal-500 hover:text-charcoal-700'
-            }`}
-          >
-            {tab.shortLabel}
-          </button>
-        ))}
+    <div className="space-y-4">
+      {/* Tab Selector */}
+      <div className="flex gap-2 border-b border-old-money-200 overflow-x-auto pb-2 scrollbar-thin">
+        {tabs.map((tab) => {
+          const isActive = tab.id === currentTab.id
+          return (
+            <button
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id)}
+              className={`px-3 py-1.5 text-xs font-semibold rounded-lg transition-colors whitespace-nowrap ${
+                isActive
+                  ? 'bg-camel-500 text-charcoal-900 shadow-sm'
+                  : 'bg-old-money-100 text-charcoal-600 hover:bg-old-money-200/80 hover:text-charcoal-800'
+              }`}
+            >
+              {tab.shortLabel}
+            </button>
+          )
+        })}
       </div>
 
-      <div className="main-ring-content">
-        <h3 className="font-serif text-lg mb-3 text-charcoal-900">
-          {activeTabData?.label}
-        </h3>
-        <table className="w-full text-sm">
-          <thead>
-            <tr className="border-b border-charcoal-200">
-              <th className="text-left py-2 px-3 text-charcoal-500">Место</th>
-              <th className="text-left py-2 px-3 text-charcoal-500">Порода</th>
-              <th className="text-left py-2 px-3 text-charcoal-500">Собака</th>
-              <th className="text-left py-2 px-3 text-charcoal-500">Награда</th>
-            </tr>
-          </thead>
-          <tbody>
-            {activeTabData?.rows.map((row, idx) => (
-              <tr key={idx} className="border-b border-charcoal-100">
-                <td className="py-2 px-3 font-mono">{row.place}</td>
-                <td className="py-2 px-3">{row.breed}</td>
-                <td className="py-2 px-3">{row.dog_name}</td>
-                <td className="py-2 px-3">
-                  {row.award_badge ? (
-                    <ShowGradeChip token={row.award_badge} />
-                  ) : (
-                    <TitleChips title={row.competition_label} />
-                  )}
-                </td>
+      {/* Tab Content: Title and Table */}
+      <div className="space-y-2">
+        <h4 className="text-sm font-semibold text-charcoal-800">
+          {currentTab.label}
+        </h4>
+
+        <div className="overflow-x-auto rounded-lg border border-old-money-200">
+          <table className="w-full text-left text-xs text-charcoal-700">
+            <thead className="bg-old-money-100 text-charcoal-900 border-b border-old-money-200">
+              <tr>
+                <th className="py-2 px-3 font-semibold text-center w-12">Место</th>
+                <th className="py-2 px-3 font-semibold w-16">Каталог</th>
+                <th className="py-2 px-3 font-semibold">Кличка собаки</th>
+                <th className="py-2 px-3 font-semibold">Порода</th>
+                <th className="py-2 px-3 font-semibold">Награды</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody className="divide-y divide-old-money-100 bg-white">
+              {currentTab.rows.map((row) => (
+                <tr
+                  key={`${row.catalog_number}-${row.place}-${row.dog_name}`}
+                  className="hover:bg-old-money-50/50 transition-colors"
+                >
+                  <td className="py-2 px-3 text-center">
+                    <span
+                      className={`inline-flex items-center justify-center w-5 h-5 rounded-full text-xs font-bold ${
+                        row.place === 1
+                          ? 'bg-amber-100 text-amber-800 border border-amber-300'
+                          : row.place === 2
+                            ? 'bg-slate-100 text-slate-700 border border-slate-300'
+                            : row.place === 3
+                              ? 'bg-orange-100 text-orange-800 border border-orange-300'
+                              : 'text-charcoal-600'
+                      }`}
+                    >
+                      {row.place}
+                    </span>
+                  </td>
+                  <td className="py-2 px-3 font-mono text-charcoal-500">
+                    №{row.catalog_number}
+                  </td>
+                  <td className="py-2 px-3 font-medium text-charcoal-900">
+                    {row.dog_name}
+                  </td>
+                  <td className="py-2 px-3 text-charcoal-600">
+                    {row.breed}
+                  </td>
+                  <td className="py-2 px-3">
+                    <TitleChips title={row.competition_label} />
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   )

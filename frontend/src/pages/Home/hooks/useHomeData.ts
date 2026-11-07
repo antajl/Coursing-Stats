@@ -66,24 +66,19 @@ export function useHomeData() {
 
     async function loadAllHomeData() {
       try {
+        // Phase 1 (Critical): Hero stats and Sport Season Top (immediate LCP render)
         const [
           statsData,
           showStatsData,
           placementData,
           scoreData,
           speedData,
-          showHomeTopData,
-          doninoSpeedData,
-          doninoCoursingData,
         ] = await Promise.all([
           api.getStats(),
           api.getShowHeroStats(),
           api.getTopPlacement(String(CURRENT_SEASON), '', 0, 'gold', null, 0),
           api.getTopScore(String(CURRENT_SEASON), '', 0, 'rating_score', null, 0),
           api.getTopSpeed(String(CURRENT_SEASON), '', 0, 'best_speed', null, 0),
-          getShowHomeTop(String(CURRENT_SEASON)),
-          api.getSpeedRecords('', '', 1000),
-          api.getCoursingRecords('', 1000),
         ])
 
         if (!isMounted) return
@@ -114,6 +109,19 @@ export function useHomeData() {
         if (speedDogs.length > 0) {
           setRacingSlides(buildTopBreedSlides(speedDogs as Record<string, unknown>[], 5, 3))
         }
+
+        // Unblock critical view immediately for minimal LCP
+        setHeroLoading(false)
+        setSeasonLoading(false)
+
+        // Phase 2 (Background): Secondary tabs (Shows & Donino)
+        const [showHomeTopData, doninoSpeedData, doninoCoursingData] = await Promise.all([
+          getShowHomeTop(String(CURRENT_SEASON)),
+          api.getSpeedRecords('', '', 1000),
+          api.getCoursingRecords('', 1000),
+        ])
+
+        if (!isMounted) return
 
         if (showHomeTopData.success && showHomeTopData.data) {
           const payload = showHomeTopData.data

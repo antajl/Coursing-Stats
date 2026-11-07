@@ -46,12 +46,16 @@ async function extractAllItems(pdfPath: string): Promise<{ items: PdfItem[]; pag
   return { items, pageCount: doc.numPages }
 }
 
-function classifyMainRingCompetition(label: string): {
+export function classifyMainRingCompetition(label: string): {
   key: MainRingCompetitionKey
   group: number | null
 } {
   const u = label.toUpperCase().replace(/\s+/g, ' ').trim()
-  const groupM = u.match(/(\d{1,2})\s*ГРУППА\s*FCI/) || u.match(/BEST\s+IN\s+GROUP\s+(\d{1,2})/)
+  const groupM =
+    u.match(/(\d{1,2})\s*ГРУППА\s*FCI/) ||
+    u.match(/BEST\s+IN\s+GROUP\s+(\d{1,2})/) ||
+    u.match(/GROUP\s+(\d{1,2})\s*FCI/) ||
+    u.match(/^(\d{1,2})\s*FCI/)
   if (groupM || /BEST\s+IN\s+GROUP/.test(u) || /ГРУППА\s+FCI/.test(u)) {
     return { key: 'BIG', group: groupM ? Number(groupM[1]) : null }
   }
@@ -75,6 +79,25 @@ function classifyMainRingCompetition(label: string): {
     return { key: 'BIS', group: null }
   }
   return { key: 'OTHER', group: null }
+}
+
+export function cleanCompetitionLabel(
+  raw: string,
+  key?: MainRingCompetitionKey,
+  group?: number | null,
+): string {
+  let s = (raw || '').replace(/\s+/g, ' ').trim()
+  s = s.replace(/^[\s/\\|–—-]+/, '').replace(/[\s/\\|–—-]+$/, '').trim()
+  s = s.replace(/\s*\/\s*/g, ' / ')
+
+  if (key === 'BIS_BABY') return 'ЛУЧШИЙ БЕБИ / BEST IN SHOW BABY'
+  if (key === 'BIS_PUPPY') return 'ЛУЧШИЙ ЩЕНОК / BEST IN SHOW PUPPY'
+  if (key === 'BIS_JUNIOR') return 'ЛУЧШИЙ ЮНИОР / BEST IN SHOW JUNIOR'
+  if (key === 'BIS_VETERAN') return 'ЛУЧШИЙ ВЕТЕРАН / BEST IN SHOW VETERAN'
+  if (key === 'BIS') return 'ЛУЧШАЯ СОБАКА ВЫСТАВКИ / BEST IN SHOW'
+  if (key === 'BIG' && group != null) return `${group} ГРУППА FCI / BEST IN GROUP ${group}`
+
+  return s || key || ''
 }
 
 function mainRingAwardBadge(key: MainRingCompetitionKey, place: number): string {
@@ -103,6 +126,7 @@ const COMP_HEADER_RE =
 /** Column anchors from the type3 header row (layouts drift: place@252 vs @272 vs @297). */
 type MainRingCols = {
   placeX: number
+  judgeX: number
   breedMinX: number
   catalogMinX: number
   nameMinX: number
@@ -117,6 +141,7 @@ function detectMainRingCols(items: PdfItem[]): MainRingCols {
     byY.get(y)!.push(it)
   }
   let placeX = 254
+  let judgeX = 100
   let breedX = 300
   let catalogX = 450
   let nameX = 560
@@ -125,9 +150,11 @@ function detectMainRingCols(items: PdfItem[]): MainRingCols {
     const rowSorted = row.slice().sort((a, b) => a.x - b.x)
     const mesto = rowSorted.find((t) => /^МЕСТО$/i.test(t.str))
     const poroda = rowSorted.find((t) => /^ПОРОДА$/i.test(t.str))
+    const judge = rowSorted.find((t) => /СУДЬЯ|JUDGE/i.test(t.str))
     if (!mesto || !poroda) continue
     placeX = mesto.x
     breedX = poroda.x
+    if (judge) judgeX = judge.x
     const cat =
       rowSorted.find((t) => /КАТАЛОГ/i.test(t.str)) ||
       rowSorted.find((t) => /^ПО$/i.test(t.str) && t.x > poroda.x)
@@ -141,6 +168,7 @@ function detectMainRingCols(items: PdfItem[]): MainRingCols {
   // Breed text often starts left of the «ПОРОДА» header glyph (header is centered).
   return {
     placeX,
+    judgeX,
     breedMinX: placeX + 12,
     catalogMinX: (breedX + catalogX) / 2,
     nameMinX: (catalogX + nameX) / 2,
@@ -163,47 +191,138 @@ export function parseMainRingItems(items: PdfItem[]): MainRingRow[] {
   const sorted = items.slice().sort((a, b) => a.page - b.page || b.y - a.y || a.x - b.x)
   const cols = detectMainRingCols(sorted)
 
-  type CompMark = { y: number; page: number; label: string; key: MainRingCompetitionKey; group: number | null }
+  type CompMark = {
+    y: number
+    page: number
+    label: string
+    key: MainRingCompetitionKey
+    group: number | null
+    judge: string
+    topY?: number
+    bottomY?: number
+  }
   const comps: CompMark[] = []
-  let pendingLabel = ''
-  let pendingY = 0
-  let pendingPage = 0
 
-  const flushPending = () => {
-    if (!pendingLabel) return
-    const { key, group } = classifyMainRingCompetition(pendingLabel)
-    if (key !== 'OTHER' || COMP_HEADER_RE.test(pendingLabel)) {
+  const placeAnchors = sorted.filter(
+    (it) =>
+      /^[1-3]$/.test(it.str) &&
+      Math.abs(it.x - cols.placeX) <= 40 &&
+      Number(it.str) >= 1 &&
+      Number(it.str) <= 3,
+  )
+
+  // Try block-based recognition from place groups
+  const blocks: PdfItem[][] = []
+  let currentBlock: PdfItem[] = []
+  for (const pa of placeAnchors) {
+    const pl = Number(pa.str)
+    if (pl === 1 && currentBlock.length > 0) {
+      blocks.push(currentBlock)
+      currentBlock = []
+    }
+    currentBlock.push(pa)
+  }
+  if (currentBlock.length > 0) blocks.push(currentBlock)
+
+  if (blocks.length > 0) {
+    for (let bIdx = 0; bIdx < blocks.length; bIdx++) {
+      const block = blocks[bIdx]
+      const page = block[0].page
+      const prevBlock = bIdx > 0 && blocks[bIdx - 1][0].page === page ? blocks[bIdx - 1] : null
+      const topY = prevBlock
+        ? (prevBlock[prevBlock.length - 1].y + block[0].y) / 2
+        : block[0].y + 20
+      const nextBlock =
+        bIdx < blocks.length - 1 && blocks[bIdx + 1][0].page === page ? blocks[bIdx + 1] : null
+      const bottomY = nextBlock
+        ? (block[block.length - 1].y + nextBlock[0].y) / 2
+        : block[block.length - 1].y - 20
+
+      const compMaxX = Math.min(cols.placeX - 50, cols.judgeX ? cols.judgeX - 10 : 85)
+      const headerToks = sorted
+        .filter(
+          (it) =>
+            it.page === page &&
+            it.x < compMaxX &&
+            it.y >= bottomY &&
+            it.y <= topY &&
+            !/^(М\.П\.|КОНКУРС|COMPETITION)$/i.test(it.str),
+        )
+        .sort((a, b) => b.y - a.y || a.x - b.x)
+
+      const judgeToks = sorted
+        .filter(
+          (it) =>
+            it.page === page &&
+            it.x >= compMaxX &&
+            it.x < cols.placeX - 25 &&
+            it.y >= bottomY &&
+            it.y <= topY &&
+            !/^(СУДЬЯ|JUDGE)$/i.test(it.str),
+        )
+        .sort((a, b) => b.y - a.y)
+
+      const rawLabel = headerToks.map((t) => t.str).join(' ')
+      const judge = judgeToks.map((t) => t.str).join(' ').trim()
+      const { key, group } = classifyMainRingCompetition(rawLabel)
+      const label = cleanCompetitionLabel(rawLabel, key, group)
+
       comps.push({
-        y: pendingY,
-        page: pendingPage,
-        label: pendingLabel.replace(/\s+/g, ' ').trim(),
-        key: key === 'OTHER' ? 'BIS' : key,
+        y: block[0].y,
+        page,
+        label,
+        key: key === 'OTHER' && !rawLabel ? 'BIS' : key,
         group,
+        judge,
+        topY,
+        bottomY,
       })
     }
-    pendingLabel = ''
   }
 
-  for (const it of sorted) {
-    if (it.x < cols.placeX - 20 && COMP_HEADER_RE.test(it.str)) {
-      flushPending()
-      pendingLabel = it.str
-      pendingY = it.y
-      pendingPage = it.page
-      continue
+  // Fallback if no blocks were recognized
+  if (comps.length === 0) {
+    let pendingLabel = ''
+    let pendingY = 0
+    let pendingPage = 0
+
+    const flushPending = () => {
+      if (!pendingLabel) return
+      const { key, group } = classifyMainRingCompetition(pendingLabel)
+      if (key !== 'OTHER' || COMP_HEADER_RE.test(pendingLabel)) {
+        comps.push({
+          y: pendingY,
+          page: pendingPage,
+          label: cleanCompetitionLabel(pendingLabel, key, group),
+          key: key === 'OTHER' ? 'BIS' : key,
+          group,
+          judge: '',
+        })
+      }
+      pendingLabel = ''
     }
-    if (
-      pendingLabel &&
-      it.x < cols.placeX - 20 &&
-      it.page === pendingPage &&
-      pendingY - it.y < 45 &&
-      /^(PUPPY|JUNIOR|BABY|VETERAN|SHOW|IN\s+GROUP\s+\d{1,2}\s*FCI)$/i.test(it.str)
-    ) {
-      pendingLabel = `${pendingLabel} ${it.str}`
-      continue
+
+    for (const it of sorted) {
+      if (it.x < cols.placeX - 20 && COMP_HEADER_RE.test(it.str)) {
+        flushPending()
+        pendingLabel = it.str
+        pendingY = it.y
+        pendingPage = it.page
+        continue
+      }
+      if (
+        pendingLabel &&
+        it.x < cols.placeX - 20 &&
+        it.page === pendingPage &&
+        pendingY - it.y < 45 &&
+        /^(PUPPY|JUNIOR|BABY|VETERAN|SHOW|IN\s+GROUP\s+\d{1,2}\s*FCI)$/i.test(it.str)
+      ) {
+        pendingLabel = `${pendingLabel} ${it.str}`
+        continue
+      }
     }
+    flushPending()
   }
-  flushPending()
 
   /** Headers often sit on row 1 or 2 of a block (not above all places). Voronoi midpoints. */
   function competitionForRow(page: number, y: number): CompMark | null {
@@ -212,6 +331,13 @@ export function parseMainRingItems(items: PdfItem[]): MainRingRow[] {
       .slice()
       .sort((a, b) => b.y - a.y)
     if (pageComps.length === 0) return null
+
+    // Exact block bounding check if available
+    const blockMatch = pageComps.find(
+      (c) => c.topY != null && c.bottomY != null && y <= c.topY && y >= c.bottomY,
+    )
+    if (blockMatch) return blockMatch
+
     if (pageComps.length === 1) {
       return Math.abs(pageComps[0].y - y) <= 120 ? pageComps[0] : null
     }
@@ -223,14 +349,6 @@ export function parseMainRingItems(items: PdfItem[]): MainRingRow[] {
     }
     return pageComps[pageComps.length - 1]
   }
-
-  const placeAnchors = sorted.filter(
-    (it) =>
-      /^[1-3]$/.test(it.str) &&
-      Math.abs(it.x - cols.placeX) <= 40 &&
-      Number(it.str) >= 1 &&
-      Number(it.str) <= 3,
-  )
 
   const placeYsByPage = new Map<number, number[]>()
   for (const p of placeAnchors) {
@@ -354,7 +472,7 @@ export function parseMainRingItems(items: PdfItem[]): MainRingRow[] {
       catalog_number,
       dog_name,
       pedigree,
-      judge: '',
+      judge: comp.judge || '',
       award_badge: mainRingAwardBadge(comp.key, place),
     })
   }

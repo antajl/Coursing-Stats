@@ -109,6 +109,7 @@ function SeasonTopSectionInner({
       }`}
       {...(!compact ? { 'data-home-reveal': true } : {})}
     >
+      <h2 className="sr-only">Лидеры сезона и рейтинги</h2>
       {/* Парящие плашки Physical Glass — строго по высоте h-[34px] с симметричным кокпитом */}
       <div
         role="tablist"
