@@ -83,9 +83,7 @@ export default function Guide() {
   const { reachGoal } = useYandexGoal()
 
   const handleTabChange = (newTab: TabId) => {
-    const next = new URLSearchParams(searchParams)
-    next.set('tab', newTab)
-    setSearchParams(next)
+    setSearchParams({ tab: newTab })
   }
 
   useEffect(() => {

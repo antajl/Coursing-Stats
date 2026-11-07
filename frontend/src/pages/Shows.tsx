@@ -34,9 +34,7 @@ function Shows() {
   const rawTabParam = searchParams.get('tab')
   if (!rawTabParam) {
     const savedTab = getLastSectionTab('shows')
-    const next = new URLSearchParams(searchParams)
-    next.set('tab', savedTab)
-    return <Navigate to={`/shows?${next.toString()}`} replace />
+    return <Navigate to={`/shows?tab=${savedTab}`} replace />
   }
 
   if (rawTab === 'champions') {
@@ -45,9 +43,7 @@ function Shows() {
 
   // Redirect legacy ?tab=calendar to ?tab=archive
   if (rawTab === 'calendar') {
-    const next = new URLSearchParams(searchParams)
-    next.set('tab', 'archive')
-    return <Navigate to={`/shows?${next.toString()}`} replace />
+    return <Navigate to="/shows?tab=archive" replace />
   }
 
   if (!calendarVisible && rawTab === 'archive') {
@@ -64,9 +60,7 @@ function Shows() {
   }, [activeTab])
 
   const handleTabChange = (newTab: string) => {
-    const next = new URLSearchParams(searchParams)
-    next.set('tab', newTab)
-    setSearchParams(next)
+    setSearchParams({ tab: newTab })
   }
 
   const tabs = [

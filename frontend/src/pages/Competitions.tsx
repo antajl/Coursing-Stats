@@ -58,9 +58,7 @@ function Competitions() {
       }
       return
     }
-    const next = new URLSearchParams(searchParams)
-    next.set('tab', newTab)
-    setSearchParams(next)
+    setSearchParams({ tab: newTab })
   }
 
   const tabs = [
