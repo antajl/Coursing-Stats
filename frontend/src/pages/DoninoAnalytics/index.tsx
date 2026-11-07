@@ -18,6 +18,7 @@ import {
   uniqueSpeedDogCount,
   uniqueCoursingDogCount,
 } from '../SpeedRecords/stats/doninoStatsUtils'
+import { setLastDoninoPath } from '../../lib/navState'
 
 export default function DoninoAnalytics() {
   const navigate = useNavigate()
@@ -39,6 +40,10 @@ export default function DoninoAnalytics() {
     return () => {
       cancelled = true
     }
+  }, [])
+
+  useEffect(() => {
+    setLastDoninoPath('/donino/analytics')
   }, [])
 
   const handleSubNavChange = (id: string) => {

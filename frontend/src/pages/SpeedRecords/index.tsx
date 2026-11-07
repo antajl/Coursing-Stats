@@ -8,6 +8,7 @@ import DoninoPageToolbar from './DoninoPageToolbar'
 import DoninoRecordsColumns from './DoninoRecordsColumns'
 import SkeletonLoader from '../../components/SkeletonLoader'
 import { MobileSubNavTabs } from '../../components/ui/MobileSubNavTabs'
+import { setLastDoninoPath } from '../../lib/navState'
 
 function SpeedRecords() {
   const [searchParams] = useSearchParams()
@@ -40,6 +41,7 @@ function SpeedRecords() {
   // Отслеживание просмотра рекордов скорости
   useEffect(() => {
     reachGoal('speed_records_view')
+    setLastDoninoPath('/speed-records/?tab=records')
   }, [reachGoal])
 
   const scrollResetKey = useMemo(

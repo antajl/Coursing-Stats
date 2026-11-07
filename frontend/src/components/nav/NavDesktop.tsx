@@ -90,7 +90,12 @@ export function NavDesktop({
 
         {/* Соревнования */}
         <Link
-          to="/competitions/?tab=ranking"
+          to={getSectionLink('competitions')}
+          onClick={() => {
+            if (isCompetitionsActive && typeof window !== 'undefined') {
+              window.scrollTo({ top: 0, behavior: 'smooth' })
+            }
+          }}
           className={`group relative flex shrink-0 items-center whitespace-nowrap py-2 px-2.5 text-xs font-semibold transition-colors duration-300 lg:px-3.5 lg:text-sm 2xl:px-5 ${
             isCompetitionsActive ? 'text-camel-700' : 'text-charcoal-700 hover:text-charcoal-900'
           }`}
@@ -109,9 +114,14 @@ export function NavDesktop({
 
         {/* Выставки */}
         <Link
-          to="/shows/?tab=ranking"
+          to={getSectionLink('shows')}
           onMouseEnter={() => {
             void import('../../lib/prefetchShows').then((m) => m.prefetchShowsHeavyTabs())
+          }}
+          onClick={() => {
+            if (isShowsActive && typeof window !== 'undefined') {
+              window.scrollTo({ top: 0, behavior: 'smooth' })
+            }
           }}
           className={`group relative flex shrink-0 items-center whitespace-nowrap py-2 px-2.5 text-xs font-semibold transition-colors duration-300 lg:px-3.5 lg:text-sm 2xl:px-5 ${
             isShowsActive ? 'text-camel-700' : 'text-charcoal-700 hover:text-charcoal-900'
@@ -128,7 +138,12 @@ export function NavDesktop({
 
         {/* Курсинг Донино */}
         <Link
-          to="/speed-records/?tab=records"
+          to={getLastDoninoPath()}
+          onClick={() => {
+            if (isSpeedRecordsActive && typeof window !== 'undefined') {
+              window.scrollTo({ top: 0, behavior: 'smooth' })
+            }
+          }}
           className={`group relative flex shrink-0 items-center whitespace-nowrap py-2 px-2.5 text-xs font-semibold transition-colors duration-300 lg:px-3.5 lg:text-sm 2xl:px-5 ${
             isSpeedRecordsActive ? 'text-camel-700' : 'text-charcoal-700 hover:text-charcoal-900'
           }`}
@@ -147,7 +162,12 @@ export function NavDesktop({
 
         {/* Справка */}
         <Link
-          to="/guide/?tab=titles"
+          to={getSectionLink('guide')}
+          onClick={() => {
+            if (isGuideActive && typeof window !== 'undefined') {
+              window.scrollTo({ top: 0, behavior: 'smooth' })
+            }
+          }}
           className={`group relative flex shrink-0 items-center whitespace-nowrap py-2 px-2.5 text-xs font-semibold transition-colors duration-300 lg:px-3.5 lg:text-sm 2xl:px-5 ${
             isGuideActive ? 'text-camel-700' : 'text-charcoal-700 hover:text-charcoal-900'
           }`}

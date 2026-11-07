@@ -136,6 +136,34 @@ export default function Events() {
     setSearchParams,
   ])
 
+  // Respond to URL changes (e.g. navigation clicks resetting search params)
+  useEffect(() => {
+    const yearFromUrl = initialSeasonYearFilter(searchParams, CURRENT_SEASON)
+    if (yearFromUrl !== filterYear) {
+      setFilterYear(yearFromUrl)
+    }
+
+    const monthFromUrl = searchParams.get('month') || ''
+    if (monthFromUrl !== filterMonth) {
+      setFilterMonth(monthFromUrl)
+    }
+
+    const discFromUrl = searchParams.get('discipline') || ''
+    if (discFromUrl !== filterDiscipline) {
+      setFilterDiscipline(discFromUrl)
+    }
+
+    const protoFromUrl = searchParams.get('protocol') === '1' || searchParams.get('results') === '1'
+    if (protoFromUrl !== filterWithProtocol) {
+      setFilterWithProtocol(protoFromUrl)
+    }
+
+    const searchFromUrl = searchParams.get('search') || ''
+    if (searchFromUrl !== searchQuery) {
+      setSearchQuery(searchFromUrl)
+    }
+  }, [searchParams])
+
   const filteredEvents = useMemo(() => {
     return events
       .filter((event) => {

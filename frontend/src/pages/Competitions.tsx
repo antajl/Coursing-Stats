@@ -6,6 +6,7 @@ import { usePublicCalendarVisible } from '../hooks/useStaticData'
 import { isLocalDev } from '../lib/env'
 import LoadingCard from '../components/LoadingCard'
 import { MobileSubNavTabs } from '../components/ui/MobileSubNavTabs'
+import { getLastSectionTab, setLastSectionTab } from '../lib/navState'
 
 const TopDogs = lazy(() => import('./TopDogs'))
 const Judges = lazy(() => import('./Judges'))
@@ -14,8 +15,17 @@ const Events = lazy(() => import('./Events'))
 function Competitions() {
   const [searchParams, setSearchParams] = useSearchParams()
   const navigate = useNavigate()
-  const tab = searchParams.get('tab') || 'ranking'
+  const rawTabParam = searchParams.get('tab')
   const calendarVisible = usePublicCalendarVisible('competitions')
+
+  if (!rawTabParam) {
+    const savedTab = getLastSectionTab('competitions')
+    const next = new URLSearchParams(searchParams)
+    next.set('tab', savedTab)
+    return <Navigate to={`/competitions/?${next.toString()}`} replace />
+  }
+
+  const tab = rawTabParam
 
   if (tab === 'calendar') {
     return <Navigate to="/competitions?tab=archive" replace />
@@ -36,6 +46,10 @@ function Competitions() {
     tab === 'judges' || tab === 'ranking' || (calendarVisible && tab === 'archive')
       ? tab
       : 'ranking'
+
+  useEffect(() => {
+    setLastSectionTab('competitions', activeTab)
+  }, [activeTab])
 
   const handleTabChange = (newTab: string) => {
     if (newTab === 'builder') {

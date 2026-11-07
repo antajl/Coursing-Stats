@@ -189,6 +189,13 @@ export default function ShowRanking() {
       if (targetYear !== filterYear) {
         setFilterYear(targetYear)
       }
+    } else if (filterYear !== SHOW_ACTIVE_SEASON) {
+      setFilterYear(SHOW_ACTIVE_SEASON)
+    }
+
+    const searchFromUrl = searchParams.get('search') || ''
+    if (searchFromUrl !== searchQuery) {
+      setSearchQuery(searchFromUrl)
     }
   }, [searchParams])
 

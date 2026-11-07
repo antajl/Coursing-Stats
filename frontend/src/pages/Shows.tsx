@@ -6,6 +6,7 @@ import { usePublicCalendarVisible } from '../hooks/useStaticData'
 import LoadingCard from '../components/LoadingCard'
 import { prefetchShowsHeavyTabs } from '../lib/prefetchShows'
 import { MobileSubNavTabs } from '../components/ui/MobileSubNavTabs'
+import { getLastSectionTab, setLastSectionTab } from '../lib/navState'
 
 const ShowRanking = lazy(() => import('./Shows/ShowRanking'))
 const ShowJudges = lazy(() => import('./Shows/ShowJudges'))
@@ -33,6 +34,14 @@ function Shows() {
     }
   }, [])
 
+  const rawTabParam = searchParams.get('tab')
+  if (!rawTabParam) {
+    const savedTab = getLastSectionTab('shows')
+    const next = new URLSearchParams(searchParams)
+    next.set('tab', savedTab)
+    return <Navigate to={`/shows?${next.toString()}`} replace />
+  }
+
   if (rawTab === 'champions') {
     return <Navigate to="/shows?tab=ranking" replace />
   }
@@ -52,6 +61,10 @@ function Shows() {
     rawTab === 'judges' || rawTab === 'ranking' || (calendarVisible && rawTab === 'archive')
       ? rawTab
       : 'ranking'
+
+  useEffect(() => {
+    setLastSectionTab('shows', activeTab)
+  }, [activeTab])
 
   const handleTabChange = (newTab: string) => {
     const next = new URLSearchParams(searchParams)

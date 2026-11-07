@@ -11,7 +11,6 @@ import {
   type ShowRkfCalendarEntry,
 } from '../../lib/staticData'
 import { canonicalBreed, formatBreedName, matchesBreedFilter } from '../../lib/breedMapping'
-import { formatToolbarEventsStats, formatToolbarEventsStatsMobile } from '../../lib/toolbar'
 import { SHOW_CANDIDATE_BREEDS } from '../TopDogs/QuickBreedBar'
 import { useInfiniteScroll } from '../../hooks/useInfiniteScroll'
 import {
@@ -95,6 +94,21 @@ export default function ShowCalendar() {
     const breedFromUrl = searchParams.get('breed') || ''
     if (breedFromUrl !== filterBreed) {
       setFilterBreed(breedFromUrl)
+    }
+
+    const yearFromUrl = searchParams.get('year') || CURRENT_YEAR
+    if (yearFromUrl !== filterYear) {
+      setFilterYear(yearFromUrl)
+    }
+
+    const monthFromUrl = searchParams.get('month') || ''
+    if (monthFromUrl !== filterMonth) {
+      setFilterMonth(monthFromUrl)
+    }
+
+    const searchFromUrl = searchParams.get('search') || ''
+    if (searchFromUrl !== searchQuery) {
+      setSearchQuery(searchFromUrl)
     }
   }, [searchParams])
 
@@ -202,31 +216,6 @@ export default function ShowCalendar() {
     return set
   }, [exhibitions])
 
-  const totalYearEvents = useMemo(() => {
-    if (!exhibitions || exhibitions.length === 0) return 0
-    return filterShowCalendarGroups(exhibitions, {
-      filterMonth: '',
-      filterBreed: '',
-      filterLcOnly: true,
-      searchQuery: '',
-      quickPreset: null,
-    }).length
-  }, [exhibitions])
-
-  const withResultCount = useMemo(
-    () => filteredGroups.filter((g) => g.hasProtocol).length,
-    [filteredGroups],
-  )
-
-  const stats = useMemo(() => {
-    if (isCalendarLoading || exhibitions.length === 0) return undefined
-    return {
-      total: totalYearEvents,
-      filtered: filteredGroups.length,
-      withResult: withResultCount,
-    }
-  }, [isCalendarLoading, exhibitions.length, totalYearEvents, filteredGroups.length, withResultCount])
-
   const pageToolbar = (
     <PageToolbar
       bare
@@ -248,27 +237,13 @@ export default function ShowCalendar() {
           availableMonths={availableMonths}
         />
       }
-      bottomLeft={
-        stats ? (
-          <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
-            <p className="hidden sm:inline text-xs text-charcoal-500">
-              {formatToolbarEventsStats(stats)}
-              {filterBreed && <span> · {formatBreedName(filterBreed)}</span>}
-            </p>
-            <p className="sm:hidden text-[11px] text-charcoal-500 whitespace-nowrap">
-              {formatToolbarEventsStatsMobile(stats)}
-              {filterBreed && <span> · {formatBreedName(filterBreed)}</span>}
-            </p>
-          </div>
-        ) : undefined
-      }
     />
   )
 
   if (isCalendarLoading) {
     return (
       <div className="max-w-full mx-auto pb-2 sm:pb-4">
-        <div className="mb-4">{pageToolbar}</div>
+        <div className="mb-2.5 sm:mb-4">{pageToolbar}</div>
         <SkeletonLoader variant="card" count={6} />
       </div>
     )
@@ -277,7 +252,7 @@ export default function ShowCalendar() {
   if (calendarError) {
     return (
       <div className="max-w-full mx-auto pb-2 sm:pb-4">
-        <div className="mb-4">{pageToolbar}</div>
+        <div className="mb-2.5 sm:mb-4">{pageToolbar}</div>
         <div className="min-h-[360px] flex items-center justify-center">
           <p className="text-sm text-red-600">
             Ошибка загрузки календаря. Попробуйте позже.
@@ -289,7 +264,7 @@ export default function ShowCalendar() {
 
   return (
     <div className="max-w-full mx-auto pb-2 sm:pb-4">
-      <div className="mb-4">{pageToolbar}</div>
+      <div className="mb-2.5 sm:mb-4">{pageToolbar}</div>
       {filteredGroups.length === 0 ? (
         <EmptyState
           title="Выставки не найдены"

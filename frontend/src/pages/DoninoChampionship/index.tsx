@@ -15,6 +15,7 @@ import {
 import ChampionshipStandingsTab from './ChampionshipStandingsTab'
 import ChampionshipStageTab, { prefetchStageData } from './ChampionshipStageTab'
 import ChampionshipRulesTab from './ChampionshipRulesTab'
+import { setLastDoninoPath } from '../../lib/navState'
 
 type MainTab = 'standings' | 'stage1' | 'stage2' | 'stage3' | 'rules'
 
@@ -68,6 +69,10 @@ export default function DoninoChampionship() {
   useEffect(() => {
     document.title =
       'Клубный чемпионат Донино по бегам борзых — результаты, лиги и протоколы | Курсинг Статс'
+  }, [])
+
+  useEffect(() => {
+    setLastDoninoPath('/donino/championship')
   }, [])
 
   const handleSubNavChange = (id: string) => {

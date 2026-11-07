@@ -13,6 +13,7 @@ import {
 import { Icons } from '../../lib/icons'
 import FavoritesCapsule from './FavoritesCapsule'
 import { useInteractiveDrawer } from '../../hooks/useInteractiveDrawer'
+import { getSectionLink, getLastDoninoPath } from '../../lib/navState'
 
 type NavMobileProps = {
   isActive: (path: string) => boolean
@@ -176,7 +177,7 @@ export function NavMobile({
                   </Link>
 
                   <Link
-                    to="/competitions/"
+                    to={getSectionLink('competitions')}
                     onClick={onCloseMobileMenu}
                     className={`min-h-[44px] px-3.5 py-2.5 rounded-xl flex items-center gap-3 text-sm font-semibold transition-all ${
                       isCompetitionsActive
@@ -189,7 +190,7 @@ export function NavMobile({
                   </Link>
 
                   <Link
-                    to="/shows/"
+                    to={getSectionLink('shows')}
                     onClick={() => {
                       void import('../../lib/prefetchShows').then((m) => m.prefetchShowsHeavyTabs())
                       onCloseMobileMenu()
@@ -205,7 +206,7 @@ export function NavMobile({
                   </Link>
 
                   <Link
-                    to="/speed-records/"
+                    to={getLastDoninoPath()}
                     onClick={onCloseMobileMenu}
                     className={`min-h-[44px] px-3.5 py-2.5 rounded-xl flex items-center gap-3 text-sm font-semibold transition-all ${
                       isSpeedRecordsActive
@@ -218,7 +219,7 @@ export function NavMobile({
                   </Link>
 
                   <Link
-                    to="/guide/"
+                    to={getSectionLink('guide')}
                     onClick={onCloseMobileMenu}
                     className={`min-h-[44px] px-3.5 py-2.5 rounded-xl flex items-center gap-3 text-sm font-semibold transition-all ${
                       isGuideActive

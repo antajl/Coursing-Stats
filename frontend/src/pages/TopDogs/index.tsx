@@ -188,8 +188,30 @@ export default function TopDogs() {
       if (targetYear !== filterYear) {
         setFilterYear(targetYear)
       }
+    } else if (filterYear !== activeSeason) {
+      setFilterYear(activeSeason)
     }
-  }, [searchParams])
+
+    const searchFromUrl = searchParams.get('search') || ''
+    if (searchFromUrl !== searchQuery) {
+      setSearchQuery(searchFromUrl)
+    }
+
+    const minStartsFromUrl = searchParams.get('minStarts') || ''
+    if (minStartsFromUrl !== filterMinStarts) {
+      setFilterMinStarts(minStartsFromUrl)
+    }
+
+    const scoreFromUrl = searchParams.get('scoreFrom') || ''
+    if (scoreFromUrl !== filterScoreFrom) {
+      setFilterScoreFrom(scoreFromUrl)
+    }
+
+    const speedFromUrl = searchParams.get('speedFrom') || ''
+    if (speedFromUrl !== filterSpeedFrom) {
+      setFilterSpeedFrom(speedFromUrl)
+    }
+  }, [searchParams, activeSeason])
 
   const breedValues = breeds
   const yearValues = years.map(String)

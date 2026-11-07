@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
-import { useSearchParams } from 'react-router-dom'
+import { useSearchParams, Navigate } from 'react-router-dom'
+import { getLastSectionTab, setLastSectionTab } from '../../lib/navState'
 import { SEO } from '../../components/SEO'
 import { JsonLd, faqPageSchema } from '../../components/JsonLd'
 import { useYandexGoal } from '../../components/YandexMetrica'
@@ -69,7 +70,15 @@ function parseGuideTab(value: string | null): TabId {
 
 export default function Guide() {
   const [searchParams, setSearchParams] = useSearchParams()
-  const activeTab = parseGuideTab(searchParams.get('tab'))
+  const rawTabParam = searchParams.get('tab')
+  if (!rawTabParam) {
+    const savedTab = getLastSectionTab('guide')
+    const next = new URLSearchParams(searchParams)
+    next.set('tab', savedTab)
+    return <Navigate to={`/guide/?${next.toString()}`} replace />
+  }
+
+  const activeTab = parseGuideTab(rawTabParam)
   const section = GUIDE_SECTIONS.find((s) => s.id === activeTab) ?? GUIDE_SECTIONS[0]
   const { reachGoal } = useYandexGoal()
 
@@ -82,6 +91,10 @@ export default function Guide() {
   useEffect(() => {
     reachGoal('guide_view')
   }, [reachGoal])
+
+  useEffect(() => {
+    setLastSectionTab('guide', activeTab)
+  }, [activeTab])
 
   return (
     <>
