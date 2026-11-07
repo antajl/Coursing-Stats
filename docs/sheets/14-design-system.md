@@ -1,6 +1,6 @@
 ---
 title: Design System & Desktop UI Contract
-verified: 2026-10-01
+verified: 2026-11-08
 ---
 
 # 14 — Design System & Desktop UI Contract

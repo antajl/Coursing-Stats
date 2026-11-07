@@ -2,7 +2,7 @@
 title: SEO & Search Analytics Cheatsheet
 description: Search Console, Yandex Webmaster insights, mobile user behavior, and SEO strategy for CoursingStats
 confidence: stable
-verified: 2026-10-02
+verified: 2026-11-08
 ---
 
 # 15 — SEO & Search Analytics

@@ -1,6 +1,6 @@
 ---
 title: Racing Standards (Бега борзых)
-verified: 2026-09-28
+verified: 2026-11-08
 ---
 
 # 13 — Racing Standards (Бега борзых)
@@ -73,7 +73,7 @@ verified: 2026-09-28
 - Поддерживаются форматы имён:
   - Только русский: `"ЭМУЛЬ ДЭ ГЕПАРД ГЕЛИЛА АЛЬ РАВДА"`
   - Только английский: `"EMUL DE GEPARD GELILA AL RAWDA"`
-  - Комбинированный: `"ЭМУЛЬ ДЭ ГЕПАРД ГЕЛИЛА АЛЬ РАВДА / EMUL DE GEPARD GELILA AL RAWDA"`
+  - Двуязычный профиль: `name_ru: "ЭМУЛЬ ДЭ ГЕПАРД ГЕЛИЛА АЛЬ РАВДА"`, `name_lat: "EMUL DE GEPARD GELILA AL RAWDA"` (дубликаты через слэш "X / X" строго запрещены)
 - Пол (sex) может использоваться для уточнения, но не overriding name+breed
 
 ### Creating new profiles
@@ -84,22 +84,29 @@ verified: 2026-09-28
   - `competitions[]` с event 2022000
   - `racing_stats` для финишеров (total_starts, best_speed, avg_speed)
 
-## Data source hierarchy
+## Data source hierarchy & Ingestion Pipeline
 
-1. **Authoritative source**: TSV протокол (например `protocol_full_transcription_rechecked.tsv`)
-2. **Parsers**: `backend/scripts/import/parse-protocol-tsv.ts` → `data/v1/2022000-results-temp.json`
-3. **Event file**: `data/v1/competitions/2026/09-сентябрь/2022000-чемпионат-россии-по-бегам-борзых.json`
-4. **Indexes**: `data/v1/indexes/*` (сгенерированы через `build-all-data`)
-5. **Frontend**: `frontend/public/data/v1/*` (скопировано через `copy-data`)
+1. **Authoritative source**: Первичный протокол соревнований (скан, фото, TSV, PDF регламент/каталог на Google Диске).
+2. **Canonical ingestion**: Ввод соревнований и результатов ведётся строго через конвейер `yarn ingest-competition` (навык `competition-ingest`).
+   - Автоматически сопоставляет собак (кириллица, латиница, fuzzy translit).
+   - Создаёт карточки новых собак в `dogs/by-id/` без появления сирот и фантомных дубликатов.
+   - Схлопывает дубликаты кличек вида «NAME / NAME».
+   - Валидирует кворум «Микс» и привязывает состязание к `calendar/{year}.json`.
+3. **Event file**: `data/v1/competitions/{year}/{month}/{id}-{slug}.json`.
+4. **Official Vector Protocol**: Экспорт эталонного векторного протокола `yarn export-protocol <id>` (см. [16-protocol-template](16-protocol-template.md)).
+5. **Indexes**: `data/v1/indexes/*` (собираются через `yarn build-all-data`).
 
-## Build pipeline
+## Workflows
 
 ```bash
-# После изменений протокола
-npx tsx backend/scripts/import/parse-protocol-tsv.ts
-npx tsx backend/scripts/import/match-dogs-to-protocol.ts
-npx tsx backend/scripts/import/copy-results-simple.ts
-yarn run build-all-data  # Обязательно!
+# 1. Безопасный ввод турнира
+yarn ingest-competition
+
+# 2. Экспорт эталонного протокола
+yarn export-protocol <eventId>
+
+# 3. Полная пересборка индексов и валидация гейтов
+yarn run build-all-data
 ```
 
 ## Frontend display rules
@@ -119,15 +126,8 @@ yarn run build-all-data  # Обязательно!
 
 ## Key files
 
-- `backend/scripts/import/parse-protocol-tsv.ts` — TSV парсер
-- `backend/scripts/import/match-dogs-to-protocol.ts` — сопоставление собак
-- `backend/scripts/import/create-dog-profiles-from-protocol.ts` — создание профилей
-- `backend/scripts/import/copy-results-simple.ts` — копирование результатов
-- `backend/scripts/build-all-data.ts` — пересбор индексов
-- `frontend/src/components/DogSexIcon.tsx` — иконка пола
-- `data/v1/competitions/{year}/{month}/{id}-{slug}.json` — соревнования
-- `data/v1/indexes/dog-profiles/pack-*.json` — профили собак
-
-## See also
-
-[03-competitions](03-competitions.md) · [06-parsers](06-parsers.md) · [02-data-pipeline](02-data-pipeline.md)
+- `backend/scripts/ingest/ingest-competition.ts` — канонический конвейер ввода турниров
+- `backend/scripts/export/export-protocol-vector.ts` — генератор эталонных векторных протоколов
+- `backend/parsers/racing/index.ts` — парсер бегов борзых
+- `frontend/src/pages/Events/EventResults/EventResultsTable.tsx` — отображение результатов забегов и раскладки по попонам
+- `data/v1/competitions/` — верифицированные JSON-файлы состязаний

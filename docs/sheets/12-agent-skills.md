@@ -1,6 +1,6 @@
 ---
 title: Agent Skills & Rules
-verified: 2026-10-01
+verified: 2026-11-08
 ---
 
 # 12 — Agent Skills & Rules
@@ -22,7 +22,7 @@ verified: 2026-10-01
 1. Project skills (`.agents/skills/`)
 2. Global / builtin skills (`ponytail`, `verification-before-completion`, `incremental-implementation`)
 
-### Project skills (13 доменных скиллов)
+### Project skills (доменные и инженерные навыки)
 
 | Skill | Когда |
 |-------|-------|
@@ -39,6 +39,10 @@ verified: 2026-10-01
 | `bot-deploy` | деплой Telegram-бота в Cloudflare Workers через wrangler |
 | `workers-best-practices` | правила разработки и проверки Cloudflare Workers |
 | `old-money-design` | дизайн-система Old Money, цвета, типографика, адаптивность, запрет эмодзи |
+| `smart-commit-and-learn` | автономное обучение инвариантам проекта и умные Conventional Commits (без эмодзи) |
+| `remove-turso-and-migrate-to-s3` | регламент удаления рантайм-БД и отдачи протоколов через статический S3 CDN |
+| `code-review` | параллельный аудит стандартов и спецификаций изменений |
+| `accessibility` / `fixing-accessibility` | аудит и исправление доступности по WCAG 2.2 |
 
 ### Global (активируются автоматически)
 
@@ -46,6 +50,7 @@ verified: 2026-10-01
 - `verification-before-completion` — обязательная проверка тестами перед отчетом о готовности
 - `incremental-implementation` — пошаговая разработка тонкими вертикальными слайсами
 - `old-money-design` — эстетика Old Money, отсутствие эмодзи, палитра camel/cream, touch targets >= 44px
+- `smart-commit-and-learn` — автономная фиксация проектных законов (zero-prompt) и атомарные коммиты
 
 ## Key files
 

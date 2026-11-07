@@ -1,6 +1,6 @@
 ---
 title: Data Pipeline
-verified: 2026-09-22
+verified: 2026-11-08
 ---
 
 # 02 — Data Pipeline

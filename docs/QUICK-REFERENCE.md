@@ -42,7 +42,7 @@ yarn test
 
 # Run bot tests
 cd bot
-yarn run vitest run
+yarn test
 
 # Build all data
 yarn run build-all-data
@@ -55,7 +55,7 @@ yarn run dev
 ```bash
 cd bot
 yarn run build
-yarn run test:run
+yarn test
 yarn run deploy  # Manual only
 ```
 
@@ -81,9 +81,9 @@ procoursing / Google Sheets / RKF PDF
 - **RIGHT:** 100% static JSON from S3 CDN (protocols at /data/v1/shows/protocols/{id}.json in gzip)
 - **Reason:** Production is CDN-only, no Worker/D1 runtime
 
-### 3. Merging Ratings
-- **WRONG:** Merge medals, CS points, Elo into composite (0.4*Elo + 0.3*CS + …)
-- **RIGHT:** Keep separate: top-placement-*, top-score-*, top-speed-*
+### 3. Combined Season Ranking (Olympic Cascade)
+- **WRONG:** Pure CS sorting or merging medals and points into a single weighted score
+- **RIGHT:** Olympic cascade: 1) Gold medals desc → 2) standingScore desc → 3) CS v2 (rating_score) desc tie-break → 4) run count desc (Elo strictly removed)
 
 ### 4. Show Ranking Validation
 - **Current:** Year-based files (dog-ranking-2017.json, dog-ranking-2018.json, etc.)
@@ -114,8 +114,7 @@ curl https://<worker>.workers.dev/health
 ### Data Issues
 ```bash
 # Rebuild show year
-cd backend
-npx tsx scripts/repair/rebuild-show-year.ts --year=2026
+yarn run rebuild-show-year --year=2026
 
 # Rebuild exhibition snapshot (12 GB heap wrapper)
 yarn run rebuild-show-snapshot
@@ -162,6 +161,7 @@ Project-specific skills (auto-activated by context):
 - `bot-deploy` — Telegram bot Cloudflare deployment
 - `workers-best-practices` — Workers & KV patterns
 - `old-money-design` — Saluki / Old Money UI design system
+- `smart-commit-and-learn` — Autonomous invariant learning & atomic English Conventional Commits
 
 Global skills (auto-activated):
 - `ponytail` — minimal code, YAGNI, stdlib first
@@ -171,4 +171,4 @@ Global skills (auto-activated):
 
 ## Last Verified
 
-2026-10-01 — All systems operational, documentation verified, Yandex Object Storage deployment active.
+2026-11-08 — All systems operational, documentation verified, Yandex Object Storage deployment active.

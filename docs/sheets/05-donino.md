@@ -1,6 +1,6 @@
 ---
 title: Donino
-verified: 2026-10-26
+verified: 2026-11-08
 ---
 
 # 05 — Donino

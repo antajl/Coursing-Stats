@@ -1,11 +1,11 @@
 # ADR-007: Exhibitions-RKF SQLite Migration
 
 ## Status
-Accepted
+Superseded (by [ADR-009](009-turso-migration.md), [ADR-014](014-cdn-packs-vs-turso.md), and [ADR-015](015-legacy-code-cleanup.md))
 
 ## Date
 2026-08-03
-**Updated:** 2026-08-05 (Frontend migration to Turso completed)
+**Updated:** 2026-10-25 (Superseded by static S3 CDN gzip protocols in ADR-014 / ADR-015; Turso and SQLite runtimes removed from prod)
 
 ## Context
 Exhibitions-RKF data (51,430 JSON files, 1.38 GB) occupied significant disk space and became a maintenance burden. The data was derived from RKF PDF parsing and used for show statistics generation.

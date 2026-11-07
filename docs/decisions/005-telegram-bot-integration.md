@@ -57,7 +57,7 @@ Push notifications for new results were considered but are **not implemented**.
 - Handler/keyboard callback contracts need tests
 
 ### Implementation
-- Deploy: `cd bot; yarn run build && yarn run test:run && yarn run deploy` (manual)
+- Deploy: `cd bot; yarn run build && yarn test && yarn run deploy` (manual)
 - Docs: `docs/sheets/08-bot.md`
 - Skill: `.agents/skills/bot-add-handler/SKILL.md`
 

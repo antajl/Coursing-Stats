@@ -1,6 +1,6 @@
 ---
 title: Operations & Deployment
-verified: 2026-10-01
+verified: 2026-11-08
 ---
 
 # 09 — Operations & Deployment

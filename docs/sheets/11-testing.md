@@ -1,6 +1,6 @@
 ---
 title: Testing
-verified: 2026-09-22
+verified: 2026-11-08
 ---
 
 # 11 — Testing
@@ -18,8 +18,8 @@ verified: 2026-09-22
 | Bot | `cd bot; yarn run build` + `cd bot; yarn test` |
 | Security | `yarn run security:scan` без critical |
 | Data integrity | `yarn run data:quick` |
-| Perf smoke | `yarn run perf:quick` |
-| Docs links | `yarn run docs:check-links` (после правок docs) |
+| Performance | `yarn run perf:measure` |
+| Integrity | `yarn run data:validate` (целостность данных) |
 | Publish | `yarn run publish-gates` |
 
 ## Key commands / paths
@@ -28,7 +28,6 @@ verified: 2026-09-22
 yarn test                              # vitest backend/tests/
 yarn run test-parser-fixtures
 yarn run test:e2e                      # playwright
-yarn run smoke-api
 yarn run publish-gates
 ```
 

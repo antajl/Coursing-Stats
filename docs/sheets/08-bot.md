@@ -1,6 +1,6 @@
 ---
 title: Telegram Bot
-verified: 2026-09-22
+verified: 2026-11-08
 ---
 
 # 08 — Bot
@@ -67,7 +67,7 @@ bot/wrangler.toml
 ```bash
 cd bot; yarn install
 cd bot; yarn run build    # tsc — обязательно перед deploy
-cd bot; yarn run test:run
+cd bot; yarn test
 cd bot; yarn run deploy   # manual
 ```
 

@@ -47,7 +47,7 @@ All sheets verified 2026-10-01.
 | [004](decisions/004-home-page-refactoring.md) | Home Page Refactoring | Accepted | 2026-08-01 |
 | [005](decisions/005-telegram-bot-integration.md) | Telegram Bot Integration | Accepted | 2025-04-15 |
 | [006](decisions/006-pdf-processing-optimization.md) | PDF Processing Optimization | Accepted | 2026-08-03 |
-| [007](decisions/007-exhibitions-rkf-sqlite-migration.md) | Exhibitions-RKF SQLite Migration | Accepted | 2026-08-03 |
+| [007](decisions/007-exhibitions-rkf-sqlite-migration.md) | Exhibitions-RKF SQLite Migration | Superseded | 2026-08-03 / 2026-10-25 |
 | [008](decisions/008-unified-event-structure.md) | Unified Event Structure | Deprecated | 2026-08-03 / 2026-09-28 |
 | [009](decisions/009-turso-migration.md) | Turso Migration | Superseded | 2026-08-03 / 2026-10-25 |
 | [010](decisions/010-automatic-rkf-monitoring.md) | Automatic RKF Calendar Monitoring | Deprecated | 2026-08-04 / 2026-09-28 |

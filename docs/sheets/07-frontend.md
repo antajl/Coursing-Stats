@@ -1,6 +1,6 @@
 ---
 title: Frontend
-verified: 2026-10-01
+verified: 2026-11-08
 ---
 
 # 07 — Frontend
