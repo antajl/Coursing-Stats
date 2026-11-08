@@ -7,26 +7,17 @@ import { useYandexGoal } from '../../components/YandexMetrica'
 import { MobileSubNavTabs } from '../../components/ui/MobileSubNavTabs'
 import { GUIDE_FAQS } from './guideFaqs'
 import TitlesTab from './components/TitlesTab'
-import ProtocolTab from './components/ProtocolTab'
 import ShowsTab from './components/ShowsTab'
-import SpeedsTab from './components/SpeedsTab'
-import RatingTab from './components/RatingTab'
 import DoninoTab from './components/DoninoTab'
+import RatingTab from './components/RatingTab'
 
 const GUIDE_SECTIONS = [
   {
     id: 'titles',
     label: 'Соревнования',
     description:
-      'Правила курсинга и бегов борзых РКФ/FCI: титулы, сертификаты CACIL и CACL, кворум и олимпийская лестница наград.',
-    keywords: 'титулы курсинг, CACIL, CACL, чемпион России курсинг, сертификаты бега борзых',
-  },
-  {
-    id: 'protocol',
-    label: 'Протоколы',
-    description:
-      'Как читать протоколы курсинга и бегов борзых: структура таблицы, 5 критериев судейства, норматив ВС, попоны и дисквалификации.',
-    keywords: 'протокол курсинг, как читать протокол, оценка курсинг, квалификация ВС, критерии судейства',
+      'Правила курсинга и бегов борзых РКФ/FCI: титулы, сертификаты CACIL и CACL, анатомия протокола, кворум и лестница наград.',
+    keywords: 'титулы курсинг, CACIL, CACL, чемпион России курсинг, сертификаты бега борзых, анатомия протокола, норма ВС',
   },
   {
     id: 'shows',
@@ -36,34 +27,29 @@ const GUIDE_SECTIONS = [
     keywords: 'выставки РКФ, CAC, BOB, ЧРКФ, КЧК, классы выставок, титулы выставок',
   },
   {
-    id: 'speeds',
-    label: 'Скорость пород',
+    id: 'donino',
+    label: 'Скорость и Донино',
     description:
-      'Скорость бега и рекорды пород борзых в км/ч: уиппет, салюки, русская псовая борзая, левретка, грейхаунд, афган. Сравнение спринта и дистанционной выносливости.',
-    keywords:
-      'рекорд скорости салюки, какая максимальная скорость уиппета, русская борзая скорость бега, левретка скорость бега, скорость борзых км ч',
+      'Скорость бега пород борзых в км/ч, спринт 350 м на песчаном треке Донино, система 3 соревновательных лиг и рекорды полигона.',
+    keywords: 'курсинг донино, скорость борзых км ч, замеры скорости собак, рекорды 350м, runningdog, лиги донино, уиппет скорость',
   },
   {
     id: 'rating',
-    label: 'Рейтинг',
+    label: 'Рейтинг сайта',
     description:
-      'Как устроен зачёт сезона Coursing Stats: олимпийский медальный каскад, показатель эффективности standingScore и индекс CS v2.',
+      'Как устроен зачёт сезона Coursing Stats: олимпийский медальный каскад, показатель эффективности standingScore и индекс качества CS v2.',
     keywords: 'рейтинг курсинг, зачёт сезона, индекс CS, standingScore, медали курсинг, бега борзых',
-  },
-  {
-    id: 'donino',
-    label: 'Донино',
-    description:
-      'Беговой комплекс в Донино: трек 350 м, старт из боксов, система 3 соревновательных лиг (Прогресс, Чемпионы, Абсолют) и рекорды полигона.',
-    keywords: 'курсинг донино, замеры скорости собак, рекорды 350м, runningdog, лиги донино',
   },
 ] as const
 
 type TabId = (typeof GUIDE_SECTIONS)[number]['id']
 
 function parseGuideTab(value: string | null): TabId {
-  if (value === 'site') {
+  if (value === 'site' || value === 'protocol') {
     return 'titles'
+  }
+  if (value === 'speeds') {
+    return 'donino'
   }
   return GUIDE_SECTIONS.some((t) => t.id === value) ? (value as TabId) : 'titles'
 }
@@ -76,7 +62,7 @@ export default function Guide() {
   if (!rawTabParam) {
     const savedTab = getLastSectionTab('guide')
     const next = new URLSearchParams(searchParams)
-    next.set('tab', savedTab)
+    next.set('tab', parseGuideTab(savedTab))
     redirectPath = `/guide/?${next.toString()}`
   }
 
@@ -123,11 +109,9 @@ export default function Guide() {
       {/* Main Content */}
       <div className="space-y-6">
         {activeTab === 'titles' && <TitlesTab />}
-        {activeTab === 'protocol' && <ProtocolTab />}
         {activeTab === 'shows' && <ShowsTab />}
-        {activeTab === 'speeds' && <SpeedsTab />}
-        {activeTab === 'rating' && <RatingTab />}
         {activeTab === 'donino' && <DoninoTab />}
+        {activeTab === 'rating' && <RatingTab />}
       </div>
     </>
   )

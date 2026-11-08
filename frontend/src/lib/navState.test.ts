@@ -50,9 +50,9 @@ describe('navState', () => {
     expect(getLastSectionTab('competitions')).toBe('judges')
     expect(getSectionLink('competitions')).toBe('/competitions/?tab=judges')
 
-    setLastSectionTab('guide', 'speeds')
-    expect(getLastSectionTab('guide')).toBe('speeds')
-    expect(getSectionLink('guide')).toBe('/guide/?tab=speeds')
+    setLastSectionTab('guide', 'donino')
+    expect(getLastSectionTab('guide')).toBe('donino')
+    expect(getSectionLink('guide')).toBe('/guide/?tab=donino')
   })
 
   it('ignores invalid tab values and falls back to default', () => {

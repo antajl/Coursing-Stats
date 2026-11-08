@@ -5,7 +5,7 @@ const TAB_STORAGE_PREFIX = 'cs_last_tab:'
 const VALID_TABS: Record<NavSection, readonly string[]> = {
   competitions: ['ranking', 'archive', 'judges', 'builder'],
   shows: ['ranking', 'archive', 'judges'],
-  guide: ['titles', 'shows', 'donino', 'protocol', 'rating', 'speeds'],
+  guide: ['titles', 'shows', 'donino', 'rating'],
 }
 
 const DEFAULT_TABS: Record<NavSection, string> = {

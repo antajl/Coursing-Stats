@@ -149,26 +149,14 @@ export const GUIDE_MENU_ITEMS: NavMenuItem[] = [
   },
   {
     to: '/guide/?tab=donino',
-    label: 'Донино',
+    label: 'Скорость и Донино',
     icon: Icons.speed,
     isActive: guideTabActive('donino'),
   },
   {
-    to: '/guide/?tab=protocol',
-    label: 'Протоколы',
-    icon: Icons.flag,
-    isActive: guideTabActive('protocol'),
-  },
-  {
     to: '/guide/?tab=rating',
-    label: 'Рейтинг',
+    label: 'Рейтинг сайта',
     icon: Icons.trend,
     isActive: guideTabActive('rating'),
-  },
-  {
-    to: '/guide/?tab=speeds',
-    label: 'Скорость пород',
-    icon: Icons.speedFlash,
-    isActive: guideTabActive('speeds'),
   },
 ]

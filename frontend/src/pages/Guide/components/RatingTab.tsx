@@ -1,10 +1,11 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import {
   Activity,
   ArrowDown,
   CheckCircle2,
   ChevronDown,
+  ChevronUp,
   ExternalLink,
   ShieldCheck,
   Sparkles,
@@ -123,6 +124,19 @@ function OlympicCascadeStepper() {
 }
 
 export default function RatingTab() {
+  const [showScrollTop, setShowScrollTop] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 300)
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
   const [showFormulaDetails, setShowFormulaDetails] = useState(false)
 
   return (
@@ -318,6 +332,19 @@ export default function RatingTab() {
           ))}
         </dl>
       </SectionCard>
+
+      {/* ПЛАВАЮЩАЯ ЛИПКАЯ КНОПКА «НАВЕРХ» */}
+      {showScrollTop && (
+        <button
+          type="button"
+          onClick={scrollToTop}
+          className="fixed bottom-6 right-6 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-camel-800 text-white shadow-xl border border-camel-600/50 transition-all hover:bg-camel-900 hover:scale-105 active:scale-95 cursor-pointer"
+          aria-label="Вернуться к началу страницы"
+          title="Наверх"
+        >
+          <ChevronUp className="h-6 w-6" aria-hidden />
+        </button>
+      )}
     </div>
   )
 }
