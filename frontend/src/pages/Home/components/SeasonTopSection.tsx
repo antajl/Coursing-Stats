@@ -104,7 +104,7 @@ function SeasonTopSectionInner({
   return (
     <section
       id="season-top"
-      className={`home-v2-block scroll-mt-20 w-full min-w-0 max-w-full overflow-x-hidden md:overflow-visible ${
+      className={`home-v2-block scroll-mt-20 w-full min-w-0 max-w-full overflow-x-clip md:overflow-visible ${
         compact ? 'home-v2-season-top--compact' : ''
       }`}
       {...(!compact ? { 'data-home-reveal': true } : {})}
