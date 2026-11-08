@@ -481,7 +481,7 @@
       "speed_km_h": 57,
       "date": "2026-10-24",
       "screenshot_url": "https://disk.yandex.ru/i/zTdlF9ZZRE6f7w",
-      "status": "new",
+      "status": "normal",
       "track_type": "круг",
       "history": [],
       "dog_id": 9159
@@ -729,7 +729,7 @@
       "speed_km_h": 56,
       "date": "2026-10-22",
       "screenshot_url": "https://disk.yandex.ru/i/D-nzTjbjGnl4BA",
-      "status": "new",
+      "status": "normal",
       "track_type": "прямая",
       "history": []
     },
@@ -810,7 +810,7 @@
       "speed_km_h": 55,
       "date": "2026-10-22",
       "screenshot_url": "https://disk.yandex.ru/i/582WPVH-JBU9mw",
-      "status": "new",
+      "status": "normal",
       "track_type": "прямая",
       "history": []
     },
@@ -821,7 +821,7 @@
       "speed_km_h": 55,
       "date": "2026-10-24",
       "screenshot_url": "https://disk.yandex.ru/i/Rt6hjiquMCDdEw",
-      "status": "new",
+      "status": "normal",
       "track_type": "круг",
       "history": [],
       "dog_id": 9673
@@ -1295,17 +1295,6 @@
       "dog_id": 9271
     },
     {
-      "breed": "Уиппет",
-      "sex": "С",
-      "name": "Сара",
-      "speed_km_h": 51,
-      "date": "2026-07-05",
-      "screenshot_url": "https://disk.yandex.ru/i/Wk3oscRwVV9tnA",
-      "status": "normal",
-      "track_type": "курсинг",
-      "history": []
-    },
-    {
       "breed": "Салюки",
       "sex": "С",
       "name": "Грейси",
@@ -1333,6 +1322,17 @@
       "speed_km_h": 51,
       "date": "2026-07-01",
       "screenshot_url": "https://disk.yandex.ru/i/0Qfm5-MwY1Seng",
+      "status": "normal",
+      "track_type": "курсинг",
+      "history": []
+    },
+    {
+      "breed": "Уиппет",
+      "sex": "С",
+      "name": "Сара",
+      "speed_km_h": 51,
+      "date": "2026-07-05",
+      "screenshot_url": "https://disk.yandex.ru/i/Wk3oscRwVV9tnA",
       "status": "normal",
       "track_type": "курсинг",
       "history": []
@@ -1731,7 +1731,7 @@
       "speed_km_h": 48,
       "date": "2026-10-24",
       "screenshot_url": "https://disk.yandex.ru/i/lRLVHsQreNZZvg",
-      "status": "new",
+      "status": "normal",
       "track_type": "круг",
       "history": []
     },
@@ -1974,6 +1974,24 @@
       "dog_id": 6036
     },
     {
+      "breed": "Басенджи",
+      "sex": "К",
+      "name": "Тайсон",
+      "speed_km_h": 45,
+      "date": "2026-11-07",
+      "screenshot_url": "https://disk.yandex.ru/i/8Trln9qI6ALV-Q",
+      "status": "improved",
+      "track_type": "курсинг",
+      "history": [
+        {
+          "speed_km_h": 44,
+          "date": "2026-10-04",
+          "track_type": "прямая",
+          "screenshot_url": "https://disk.yandex.ru/i/8yWJoToXNEDO_w"
+        }
+      ]
+    },
+    {
       "breed": "АСТ",
       "sex": "С",
       "name": "Бася",
@@ -2037,24 +2055,13 @@
       "history": []
     },
     {
-      "breed": "Басенджи",
-      "sex": "К",
-      "name": "Тайсон",
-      "speed_km_h": 44,
-      "date": "2026-10-04",
-      "screenshot_url": "https://disk.yandex.ru/i/8yWJoToXNEDO_w",
-      "status": "normal",
-      "track_type": "прямая",
-      "history": []
-    },
-    {
       "breed": "Алабай",
       "sex": "С",
       "name": "Гретта",
       "speed_km_h": 44,
       "date": "2026-10-22",
       "screenshot_url": "https://disk.yandex.ru/i/PBG6Hvopq5qfqw",
-      "status": "new",
+      "status": "normal",
       "track_type": "курсинг",
       "history": [],
       "dog_id": 11137
@@ -2705,12 +2712,19 @@
       "breed": "Метис",
       "sex": "К",
       "name": "Герц",
-      "speed_km_h": 33,
-      "date": "2026-10-04",
-      "screenshot_url": "https://disk.yandex.ru/i/ew4C5-HbHYwB_g",
-      "status": "normal",
+      "speed_km_h": 34,
+      "date": "2026-11-07",
+      "screenshot_url": "https://disk.yandex.ru/i/pNFQ8g5VlHGA0g",
+      "status": "improved",
       "track_type": "курсинг",
-      "history": []
+      "history": [
+        {
+          "speed_km_h": 33,
+          "date": "2026-10-04",
+          "track_type": "курсинг",
+          "screenshot_url": "https://disk.yandex.ru/i/ew4C5-HbHYwB_g"
+        }
+      ]
     },
     {
       "breed": "Джек-рассел-терьер",
