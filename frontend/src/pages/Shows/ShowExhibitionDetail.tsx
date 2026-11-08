@@ -135,7 +135,7 @@ export default function ShowExhibitionDetail() {
           '@graph': [
             breadcrumbListSchema([
               { name: 'Главная', url: '/' },
-              { name: 'Выставки', url: '/shows?tab=archive' },
+              { name: 'Выставки', url: '/shows/?tab=archive' },
               { name: exhibition.title || 'Выставка', url: `/shows/exhibition/${id}/` },
             ]),
             sportsEventSchema({

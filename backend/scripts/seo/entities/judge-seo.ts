@@ -62,7 +62,7 @@ export function sportJudgeMeta(judge: {
   const url = `${SITE_ORIGIN}/judges/${encodeURIComponent(judge.id)}/`
   const breadcrumbs = [
     { name: 'Главная', url: '/' },
-    { name: 'Судьи', url: '/competitions?tab=judges' },
+    { name: 'Судьи', url: '/competitions/?tab=judges' },
     { name: displayName, url: `/judges/${encodeURIComponent(judge.id)}/` },
   ]
   const jsonLd = {
@@ -95,9 +95,9 @@ export function sportJudgeMeta(judge: {
     breadcrumbs,
     jsonLd,
     sectionLinks: [
-      { href: '/competitions?tab=judges', label: 'Судьи' },
-      { href: '/competitions', label: 'Соревнования' },
-      { href: '/guide', label: 'Справочник' },
+      { href: '/competitions/?tab=judges', label: 'Судьи' },
+      { href: '/competitions/', label: 'Соревнования' },
+      { href: '/guide/', label: 'Справочник' },
     ],
   }
 }
@@ -159,9 +159,9 @@ export function showJudgeMeta(judge: {
     breadcrumbs,
     jsonLd,
     sectionLinks: [
-      { href: '/shows?tab=judges', label: 'Судьи выставок' },
-      { href: '/shows', label: 'Выставки' },
-      { href: '/guide', label: 'Справочник' },
+      { href: '/shows/?tab=judges', label: 'Судьи выставок' },
+      { href: '/shows/', label: 'Выставки' },
+      { href: '/guide/', label: 'Справочник' },
     ],
   }
 }

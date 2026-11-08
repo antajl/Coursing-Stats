@@ -79,8 +79,8 @@ describe('prerender-seo helpers', () => {
       paragraph: 'Краткий текст',
     })
     expect(body).toContain('<h1>Рейтинг собак</h1>')
-    expect(body).toContain('href="/shows"')
-    expect(body).toContain('href="/guide"')
+    expect(body).toContain('href="/shows/"')
+    expect(body).toContain('href="/guide/"')
     expect(body).toContain('aria-current="page"')
   })
 
@@ -95,9 +95,9 @@ describe('prerender-seo helpers', () => {
     expect(body).toContain('TEST DOG')
     expect(body).toContain('Курсинг: 3 участий')
     expect(body).toContain('ЧРКФ — тест')
-    expect(body).toContain('href="/competitions"')
-    expect(body).toContain('href="/speed-records"')
-    expect(body).toContain('href="/guide"')
+    expect(body).toContain('href="/competitions/"')
+    expect(body).toContain('href="/speed-records/"')
+    expect(body).toContain('href="/guide/"')
   })
 
   it('breadcrumbJsonLd builds BreadcrumbList', () => {
@@ -248,7 +248,7 @@ describe('prerender-seo helpers', () => {
     expect(html).toContain('Coursing Stats на основе официальных протоколов соревнований РКФ с 2015 года')
     expect(html).toContain('забегов: 9')
     expect(html).not.toContain('стартов:')
-    expect(html).toContain('<a href="/dog/5645">Стангерс Ланд Каталина</a>')
+    expect(html).toContain('<a href="/dog/5645/">Стангерс Ланд Каталина</a>')
   })
 
   it('competitionsJsonLd outputs FAQPage schema with questions and answers', () => {
@@ -346,8 +346,8 @@ describe('prerender-seo helpers', () => {
     expect(html).toContain('Какая максимальная скорость бега уиппета?')
     expect(html).toContain('Какова скорость бега русской псовой борзой (РПБ)?')
     expect(html).toContain('Какую скорость развивает левретка (малая итальянская борзая)?')
-    expect(html).toContain('<a href="/competitions">')
-    expect(html).toContain('<a href="/speed-records">')
+    expect(html).toContain('<a href="/competitions/">')
+    expect(html).toContain('<a href="/speed-records/">')
   })
 
   it('guideJsonLd outputs FAQPage schema with breed speed questions', () => {
@@ -403,7 +403,7 @@ describe('prerender-seo helpers', () => {
     expect(meta.h1).toContain('Уиппет (Whippet) в курсинге и бегах')
     expect(meta.contentHtml).toContain('<a href="/dog/5645/"><strong>Стангерс Ланд Каталина</strong></a>')
     expect(meta.contentHtml).toContain('Драм</strong>: 64 км/ч')
-    expect(meta.contentHtml).toContain('href="/competitions?tab=ranking&breed=%D0%A3%D0%98%D0%9F%D0%9F%D0%95%D0%A2"')
+    expect(meta.contentHtml).toContain('href="/competitions/?tab=ranking&breed=%D0%A3%D0%98%D0%9F%D0%9F%D0%95%D0%A2"')
 
     const graph = (meta.jsonLd as any)['@graph'] as any[]
     const faq = graph.find((i) => i['@type'] === 'FAQPage')

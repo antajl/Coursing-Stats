@@ -230,14 +230,14 @@ export function buildSitemap(db: Database.Database) {
 
   writeIndex('sitemap-urls.json', {
     schema: 'coursing-stats/index-sitemap-v1',
-    dogs: dogs.map((d) => `/dog/${d.id}`),
-    events: eventIds.map((id) => `/event/${id}`),
+    dogs: dogs.map((d) => `/dog/${d.id}/`),
+    events: eventIds.map((id) => `/event/${id}/`),
     protocols: protocolIds.map((id) => `/protocols/${id}.html`),
-    exhibitions: exhibitionIds.map((id) => `/shows/exhibition/${encodeURIComponent(id)}`),
-    judges: sportJudgeNames.map((name) => `/judges/${encodeURIComponent(name)}`),
-    show_judges: showJudgeIds.map((id) => `/shows/judges/${encodeURIComponent(id)}`),
+    exhibitions: exhibitionIds.map((id) => `/shows/exhibition/${encodeURIComponent(id)}/`),
+    judges: sportJudgeNames.map((name) => `/judges/${encodeURIComponent(name)}/`),
+    show_judges: showJudgeIds.map((id) => `/shows/judges/${encodeURIComponent(id)}/`),
     donino_dogs: doninoDogs.map(
-      (d) => `/donino-dog/${encodeURIComponent(d.name)}/${encodeURIComponent(d.breed)}`,
+      (d) => `/donino-dog/${encodeURIComponent(d.name)}/${encodeURIComponent(d.breed)}/`,
     ),
   })
 

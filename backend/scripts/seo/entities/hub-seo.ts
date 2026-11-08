@@ -95,18 +95,20 @@ export const HUB_PAGES: HubMeta[] = [
 
 export const HUB_NAV: { href: string; label: string }[] = [
   { href: '/', label: 'Главная' },
-  { href: '/competitions', label: 'Соревнования' },
-  { href: '/shows', label: 'Выставки' },
-  { href: '/speed-records', label: 'Донино' },
-  { href: '/donino/championship', label: 'Клубный чемпионат' },
-  { href: '/donino/analytics', label: 'Аналитика Донино' },
-  { href: '/guide', label: 'Справочник' },
-  { href: '/about', label: 'О проекте' },
+  { href: '/competitions/', label: 'Соревнования' },
+  { href: '/shows/', label: 'Выставки' },
+  { href: '/speed-records/', label: 'Донино' },
+  { href: '/donino/championship/', label: 'Клубный чемпионат' },
+  { href: '/donino/analytics/', label: 'Аналитика Донино' },
+  { href: '/guide/', label: 'Справочник' },
+  { href: '/about/', label: 'О проекте' },
 ]
 
 export function hubNavHtml(currentPath: string): string {
+  const normCurrent = currentPath.endsWith('/') ? currentPath : `${currentPath}/`
   const links = HUB_NAV.map(({ href, label }) => {
-    const current = href === currentPath
+    const normHref = href.endsWith('/') ? href : `${href}/`
+    const current = (normHref === '/' && normCurrent === '/') || (normHref !== '/' && normCurrent === normHref)
     const attrs = current ? ' aria-current="page"' : ''
     return `<a href="${href}"${attrs}>${escapeHtml(label)}</a>`
   }).join(' · ')
@@ -164,6 +166,14 @@ export function homepageJsonLd(): Record<string, unknown> {
         description:
           'Единая всероссийская база и статистика курсинга, бегов борзых и выставок собак РКФ с 2015 года.',
         inLanguage: 'ru-RU',
+        potentialAction: {
+          '@type': 'SearchAction',
+          target: {
+            '@type': 'EntryPoint',
+            urlTemplate: `${SITE_ORIGIN}/competitions/?tab=ranking&search={search_term_string}`,
+          },
+          'query-input': 'required name=search_term_string',
+        },
       },
       {
         '@type': 'Organization',
@@ -185,6 +195,44 @@ export function homepageJsonLd(): Record<string, unknown> {
   }
 }
 
+export function doninoDatasetJsonLd(): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      breadcrumbJsonLd([
+        { name: 'Главная', url: '/' },
+        { name: 'Донино', url: '/speed-records/' },
+      ]),
+      {
+        '@type': 'Dataset',
+        '@id': `${SITE_ORIGIN}/speed-records/#dataset`,
+        name: 'База инструментальных замеров скорости собак пород борзых (Полигон Донино)',
+        description:
+          'Официальная база радарных замеров пиковой скорости (км/ч) и времени спринта на 350 м радаром Stalker Pro II бегового клуба «Курсинг в Донино» с 2017 по 2026 год.',
+        url: `${SITE_ORIGIN}/speed-records/`,
+        keywords: [
+          'курсинг',
+          'бега борзых',
+          'скорость собак',
+          'радар Донино',
+          'салюки',
+          'уиппет',
+          'русская псовая борзая',
+          'басенджи',
+          'левретка',
+        ],
+        creator: {
+          '@type': 'Organization',
+          name: 'Беговой клуб «Курсинг в Донино»',
+          url: `${SITE_ORIGIN}/speed-records/`,
+        },
+        temporalCoverage: '2017/2026',
+        spatialCoverage: 'Донино, Раменский район, Московская область, Россия',
+      },
+    ],
+  }
+}
+
 export function competitionsJsonLd(
   faqs: Array<{ question: string; answer: string }> = DEFAULT_COMPETITION_FAQS,
 ): Record<string, unknown> {
@@ -193,7 +241,7 @@ export function competitionsJsonLd(
     '@graph': [
       breadcrumbJsonLd([
         { name: 'Главная', url: '/' },
-        { name: 'Соревнования', url: '/competitions' },
+        { name: 'Соревнования', url: '/competitions/' },
       ]),
       {
         '@type': 'FAQPage',
@@ -241,7 +289,7 @@ export function buildCompetitionsHubHtml(
         if (d.silver) medals.push(`серебро: ${d.silver}`)
         if (d.bronze) medals.push(`бронза: ${d.bronze}`)
         const medalStr = medals.length > 0 ? ` (${medals.join(', ')})` : ''
-        return `<li><a href="/dog/${d.dog_id}">${escapeHtml(name)}</a> — ${escapeHtml(breed)}${escapeHtml(medalStr)}, забегов: ${d.total_starts}</li>`
+        return `<li><a href="/dog/${d.dog_id}/">${escapeHtml(name)}</a> — ${escapeHtml(breed)}${escapeHtml(medalStr)}, забегов: ${d.total_starts}</li>`
       })
       .join('\n')
 
@@ -306,7 +354,7 @@ export function guideJsonLd(
     '@graph': [
       breadcrumbJsonLd([
         { name: 'Главная', url: '/' },
-        { name: 'Справочник', url: '/guide' },
+        { name: 'Справочник', url: '/guide/' },
       ]),
       {
         '@type': 'FAQPage',
@@ -394,7 +442,7 @@ export function buildGuideHubHtml(
     tableRows,
     `</tbody>`,
     `</table>`,
-    `<p><a href="/competitions">Перейти в турнирную таблицу забегов РКФ</a> · <a href="/speed-records">Смотреть радарные замеры Донино</a></p>`,
+    `<p><a href="/competitions/">Перейти в турнирную таблицу забегов РКФ</a> · <a href="/speed-records/">Смотреть радарные замеры Донино</a></p>`,
     `<h2>Частые вопросы о скорости и рекордах борзых (Google AI Overview)</h2>`,
     faqBlocks,
     hubNavHtml(hub.path),
@@ -429,7 +477,7 @@ export function breedHubMeta(input: BreedHubMetaInput): SimpleEntityMeta {
 
   const breadcrumbs = [
     { name: 'Главная', url: '/' },
-    { name: 'Соревнования', url: '/competitions' },
+    { name: 'Соревнования', url: '/competitions/' },
     { name: input.nameRu, url },
   ]
 
@@ -457,7 +505,7 @@ export function breedHubMeta(input: BreedHubMetaInput): SimpleEntityMeta {
     contentHtml += `</ol>`
   }
 
-  contentHtml += `<p><a href="/competitions?tab=ranking&breed=${encodeURIComponent(input.canonicalKey)}"><strong>Смотреть полную турнирную таблицу породы ${escapeHtml(input.nameRu)} →</strong></a></p>`
+  contentHtml += `<p><a href="/competitions/?tab=ranking&breed=${encodeURIComponent(input.canonicalKey)}"><strong>Смотреть полную турнирную таблицу породы ${escapeHtml(input.nameRu)} →</strong></a></p>`
 
   const faqItems = input.faqs.map((f) => ({
     '@type': 'Question',
@@ -496,10 +544,10 @@ export function breedHubMeta(input: BreedHubMetaInput): SimpleEntityMeta {
     breadcrumbs,
     jsonLd,
     sectionLinks: [
-      { href: `/competitions?tab=ranking&breed=${encodeURIComponent(input.canonicalKey)}`, label: `Рейтинг: ${input.nameRu}` },
-      { href: '/speed-records', label: 'Рекорды Донино' },
-      { href: '/competitions?tab=calendar', label: 'Календарь' },
-      { href: '/guide', label: 'Справочник' },
+      { href: `/competitions/?tab=ranking&breed=${encodeURIComponent(input.canonicalKey)}`, label: `Рейтинг: ${input.nameRu}` },
+      { href: '/speed-records/', label: 'Рекорды Донино' },
+      { href: '/competitions/?tab=calendar', label: 'Календарь' },
+      { href: '/guide/', label: 'Справочник' },
     ],
   }
 }

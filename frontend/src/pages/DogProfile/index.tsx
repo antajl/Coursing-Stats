@@ -164,7 +164,7 @@ export default function DogProfile() {
           '@graph': [
             breadcrumbListSchema([
               { name: 'Главная', url: '/' },
-              { name: 'Рейтинг', url: '/competitions?tab=ranking' },
+              { name: 'Рейтинг', url: '/competitions/?tab=ranking' },
               { name: data.dogName, url: data.profilePath },
             ]),
             profilePageSchema({

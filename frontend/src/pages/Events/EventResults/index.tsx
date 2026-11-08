@@ -125,11 +125,11 @@ export default function EventResults() {
           '@graph': [
             breadcrumbListSchema([
               { name: 'Главная', url: '/' },
-              { name: 'Соревнования', url: '/competitions' },
-              { name: eventName, url: `/event/${id}` },
+              { name: 'Соревнования', url: '/competitions/' },
+              { name: eventName, url: `/event/${id}/` },
             ]),
             sportsEventSchema({
-              url: `https://coursing-stats.ru/event/${id}`,
+              url: `https://coursing-stats.ru/event/${id}/`,
               name: eventName,
               startDate: event.date_start || event.event_date || null,
               endDate: event.date_end || event.date_start || event.event_date || null,

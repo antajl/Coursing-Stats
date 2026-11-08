@@ -139,7 +139,7 @@ export function eventMetaFromEntry(entry: {
 
   const breadcrumbs = [
     { name: 'Главная', url: '/' },
-    { name: 'Соревнования', url: '/competitions' },
+    { name: 'Соревнования', url: '/competitions/' },
     { name: headline, url: `/event/${entry.id}/` },
   ]
 
@@ -220,9 +220,9 @@ export function eventMetaFromEntry(entry: {
     breadcrumbs,
     jsonLd,
     sectionLinks: [
-      { href: '/competitions?tab=calendar', label: 'Календарь' },
-      { href: '/competitions?tab=ranking', label: 'Рейтинг' },
-      { href: '/guide', label: 'Справочник' },
+      { href: '/competitions/?tab=calendar', label: 'Календарь' },
+      { href: '/competitions/?tab=ranking', label: 'Рейтинг' },
+      { href: '/guide/', label: 'Справочник' },
     ],
   }
 }
@@ -233,7 +233,7 @@ export function doninoMeta(dog: { name: string; breed: string }): SimpleEntityMe
   const url = `${SITE_ORIGIN}/donino-dog/${encodeURIComponent(dog.name)}/${encodeURIComponent(dog.breed)}/`
   const breadcrumbs = [
     { name: 'Главная', url: '/' },
-    { name: 'Донино', url: '/speed-records' },
+    { name: 'Донино', url: '/speed-records/' },
     {
       name: dog.name,
       url: `/donino-dog/${encodeURIComponent(dog.name)}/${encodeURIComponent(dog.breed)}/`,
@@ -267,9 +267,9 @@ export function doninoMeta(dog: { name: string; breed: string }): SimpleEntityMe
     breadcrumbs,
     jsonLd,
     sectionLinks: [
-      { href: '/speed-records', label: 'Рекорды Донино' },
-      { href: '/competitions', label: 'Соревнования' },
-      { href: '/guide', label: 'Справочник' },
+      { href: '/speed-records/', label: 'Рекорды Донино' },
+      { href: '/competitions/', label: 'Соревнования' },
+      { href: '/guide/', label: 'Справочник' },
     ],
   }
 }
@@ -301,7 +301,7 @@ export function exhibitionMeta(entry: {
 
   const breadcrumbs = [
     { name: 'Главная', url: '/' },
-    { name: 'Выставки', url: '/shows' },
+    { name: 'Выставки', url: '/shows/' },
     { name: headline, url: `/shows/exhibition/${entry.id}/` },
   ]
 
@@ -364,9 +364,9 @@ export function exhibitionMeta(entry: {
     breadcrumbs,
     jsonLd,
     sectionLinks: [
-      { href: '/shows?tab=archive', label: 'Архив выставок' },
-      { href: '/shows?tab=ranking', label: 'Рейтинг' },
-      { href: '/guide', label: 'Справочник' },
+      { href: '/shows/?tab=archive', label: 'Архив выставок' },
+      { href: '/shows/?tab=ranking', label: 'Рейтинг' },
+      { href: '/guide/', label: 'Справочник' },
     ],
   }
 }

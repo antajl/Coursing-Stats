@@ -158,7 +158,7 @@ function Competitions() {
           '@graph': [
             breadcrumbListSchema([
               { name: 'Главная', url: '/' },
-              { name: 'Соревнования', url: '/competitions' },
+              { name: 'Соревнования', url: '/competitions/' },
             ]),
             faqPageSchema(competitionFaqs),
           ],

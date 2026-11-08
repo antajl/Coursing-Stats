@@ -100,7 +100,7 @@ export function buildDogBodyHtml(dog: DogProfileInput): string {
   const breed = dog.breed ? ` (${dog.breed})` : ''
   const crumbs = [
     `<a href="/">Главная</a>`,
-    `<a href="/competitions">Рейтинг</a>`,
+    `<a href="/competitions/?tab=ranking">Рейтинг</a>`,
     `<span>${escapeHtml(name)}</span>`,
   ].join(' → ')
 
@@ -145,10 +145,10 @@ export function buildDogBodyHtml(dog: DogProfileInput): string {
       : ''
 
   const links = [
-    `<a href="/competitions">Соревнования</a>`,
-    `<a href="/shows">Выставки</a>`,
-    `<a href="/speed-records">Донино</a>`,
-    `<a href="/guide">Справочник</a>`,
+    `<a href="/competitions/">Соревнования</a>`,
+    `<a href="/shows/">Выставки</a>`,
+    `<a href="/speed-records/">Донино</a>`,
+    `<a href="/guide/">Справочник</a>`,
   ].join(' · ')
 
   return [
@@ -192,10 +192,10 @@ export function dogMetaFromProfile(profile: {
   const cs = dog.coursing_stats
   const rs = dog.racing_stats
   if (cs && (cs.total_starts || 0) > 0) {
-    facts.push(`Курсинг: ${cs.total_starts} участий`)
+    facts.push(`Курсинг: ${cs.total_starts} забегов`)
   }
   if (rs && (rs.total_starts || 0) > 0) {
-    facts.push(`Бега: ${rs.total_starts} участий`)
+    facts.push(`Бега: ${rs.total_starts} забегов`)
   }
   const medals: string[] = []
   const gold = (cs?.gold || 0) + (rs?.gold || 0)
@@ -233,8 +233,8 @@ export function dogMetaFromProfile(profile: {
 
   const breadcrumbs = [
     { name: 'Главная', url: '/' },
-    { name: 'Рейтинг', url: '/competitions' },
-    { name, url: `/dog/${id}` },
+    { name: 'Рейтинг', url: '/competitions/?tab=ranking' },
+    { name, url: `/dog/${id}/` },
   ]
 
   const alternateNames = Array.from(
@@ -325,8 +325,8 @@ export function dogMetaFromShowRanking(entry: {
 
   const breadcrumbs = [
     { name: 'Главная', url: '/' },
-    { name: 'Рейтинг', url: '/competitions' },
-    { name, url: `/dog/${id}` },
+    { name: 'Рейтинг', url: '/competitions/?tab=ranking' },
+    { name, url: `/dog/${id}/` },
   ]
 
   const alternateNames = Array.from(
