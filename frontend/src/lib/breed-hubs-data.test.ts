@@ -67,6 +67,9 @@ describe('breed-hubs-data', () => {
     expect(getBreedHubBySlug('amstaff')?.nameRu).toBe('Американский стаффордширский терьер')
     expect(getBreedHubBySlug('mixed-breed')?.nameRu).toBe('Метисы (Любительский класс)')
     expect(getBreedHubBySlug('magyar-agar')?.nameRu).toBe('Венгерская борзая (Мадьяр-агар)')
+    expect(getBreedHubBySlug('dachshund')?.nameRu).toBe('Такса')
+    expect(getBreedHubBySlug('miniature-dachshund')?.nameRu).toBe('Такса')
+    expect(getBreedHubBySlug('taksa')?.nameRu).toBe('Такса')
     expect(getBreedHubBySlug('unknown-slug')).toBeUndefined()
   })
 

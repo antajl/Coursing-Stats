@@ -24,12 +24,31 @@ describe('quickSearchScoring', () => {
     expect(scoreNavigation(route, 'несуществующийраздел123')).toBe(0)
   })
 
-  it('scoreBreedHub finds breed hubs by Russian and Latin names', () => {
+  it('scoreBreedHub finds breed hubs by Russian and Latin names and handles Russian declension cases', () => {
     const whippetHub = BREED_HUBS.find((h) => h.slug === 'whippet')!
     expect(whippetHub).toBeDefined()
     expect(scoreBreedHub(whippetHub, 'уиппет')).toBeGreaterThan(90)
+    expect(scoreBreedHub(whippetHub, 'уиппета')).toBeGreaterThan(90)
     expect(scoreBreedHub(whippetHub, 'whippet')).toBeGreaterThan(90)
     expect(scoreBreedHub(whippetHub, 'афган')).toBe(0)
+
+    const dachshundHub = BREED_HUBS.find((h) => h.slug === 'dachshund')!
+    expect(dachshundHub).toBeDefined()
+    expect(scoreBreedHub(dachshundHub, 'таксу')).toBeGreaterThan(90)
+    expect(scoreBreedHub(dachshundHub, 'такса')).toBeGreaterThan(90)
+    expect(scoreBreedHub(dachshundHub, 'такс')).toBeGreaterThan(90)
+    expect(scoreBreedHub(dachshundHub, 'dachshund')).toBeGreaterThan(90)
+  })
+
+  it('computeSearchResults returns Dachshund breed hub when user types "таксу"', () => {
+    const dogs: HomeSearchDog[] = [
+      { id: 1, name_ru: 'Миднайт Бис Лагуна', name_lat: 'Midnayt Bis Laguna', breed: 'ТАКСА МИНИАТЮРНАЯ Ж-Ш', competition_count: 5 },
+    ]
+    const res = computeSearchResults('таксу', dogs, [])
+    expect(res.breedItems.length).toBeGreaterThan(0)
+    expect(res.breedItems[0].item.slug).toBe('dachshund')
+    expect(res.breedItems[0].item.to).toBe('/breeds/dachshund/')
+    expect(res.dogItems.length).toBeGreaterThan(0)
   })
 
   it('dogDedupeKey deduplicates identical dogs across Russian and Latin transcriptions', () => {
