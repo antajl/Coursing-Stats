@@ -31,6 +31,12 @@ export type CompetitionTitleKey =
   | 'rcacl'
   | 'caclbr'
   | 'regcacl'
+  | 'cacmb'
+  | 'rcacmb'
+  | 'regcacmb'
+  | 'ss'
+  | 'jss'
+  | 'vss'
   | 'international'
   | 'league_absolute'
   | 'league_champions'
@@ -55,6 +61,12 @@ export const COMPETITION_TITLE_BADGE: Record<string, string> = {
   rcacl: 'R.CACL',
   caclbr: 'CACLBr',
   regcacl: 'RegCACL',
+  cacmb: 'CACMB',
+  rcacmb: 'R.CACMB',
+  regcacmb: 'RegCACMB',
+  ss: 'СС',
+  jss: 'ЮСС',
+  vss: 'ВСС',
   league_absolute: 'Абсолют',
   league_champions: 'Чемпионы',
   league_progress: 'Прогресс',
@@ -78,6 +90,12 @@ export const COMPETITION_TITLE_LABELS: Record<string, string> = {
   rcacl: 'R.CACL — резервный национальный титульный сертификат',
   caclbr: 'CACLBr — породный титульный сертификат (Br = breed)',
   regcacl: 'RegCACL — региональный / локальный сертификат (в протоколах; не в п. 1.4 Положения РКФ)',
+  cacmb: 'CACMB — кандидат в чемпионы России по бегам за механической приманкой (БЗМП)',
+  rcacmb: 'R.CACMB — резервный кандидат в чемпионы России по бегам за механической приманкой',
+  regcacmb: 'RegCACMB — региональный / локальный сертификат по БЗМП',
+  ss: 'СС — сертификат соответствия высшей квалификации (≥75% баллов во всех забегах)',
+  jss: 'ЮСС — юниорский сертификат соответствия высшей квалификации',
+  vss: 'ВСС — ветеранский сертификат соответствия высшей квалификации',
   league_absolute: 'Лига «Абсолют» — высшая лига клубного чемпионата по рейсингу в Донино (runningdog.ru)',
   league_champions: 'Лига «Чемпионы» — лига титулованных бегунов клубного чемпионата по рейсингу в Донино (runningdog.ru)',
   league_progress: 'Лига «Прогресс» — стартовая лига клубного чемпионата по рейсингу в Донино (runningdog.ru)',
@@ -106,6 +124,12 @@ export const COMPETITION_TITLE_RANK: Record<string, number> = {
   rcacl: 55, // резерв CACL (R.CACL)
   caclbr: 50, // породный (Br = breed)
   regcacl: 40, // региональный / локальный; в протоколах есть, в п. 1.4 Положения нет
+  cacmb: 60, // национальный сертификат БЗМП
+  rcacmb: 55, // резерв CACMB
+  regcacmb: 40, // региональный сертификат БЗМП
+  ss: 25, // сертификат соответствия
+  jss: 23, // юниорский СС
+  vss: 20, // ветеранский СС
   // Клубные лиги Донино (рейсинг 350 м, runningdog.ru)
   league_absolute: 75,
   league_champions: 70,
@@ -115,7 +139,7 @@ export const COMPETITION_TITLE_RANK: Record<string, number> = {
 
 export function competitionTitleKey(raw: string): CompetitionTitleKey {
   const t = raw.trim().toLowerCase().replace(/\s+/g, ' ')
-  if (!t || /^\d+$/.test(t) || /^[vв]$/i.test(t) || /^(cc|вк|b|б)$/i.test(t)) return ''
+  if (!t || /^\d+$/.test(t) || /^[vв]$/i.test(t) || /^(вк|b|б)$/i.test(t)) return ''
 
   // Кумулятивы — раньше «чемпион россии», иначе гранд/национальный съест ЧР
   if (
@@ -189,6 +213,20 @@ export function competitionTitleKey(raw: string): CompetitionTitleKey {
   if (t.includes('caclbr') || /^cacl\s*br\b/.test(t) || t === 'cacl br') return 'caclbr'
   if (t.includes('regcacl') || (t.includes('reg') && t.includes('cacl'))) return 'regcacl'
   if (/\bcacl\b/.test(t) || t.startsWith('cacl')) return 'cacl'
+
+  if (
+    /^r\.?\s*cacmb\b/.test(t) ||
+    /^rcacmb\b/.test(t) ||
+    /\br\.?\s*cacmb\b/.test(t)
+  ) {
+    return 'rcacmb'
+  }
+  if (t.includes('regcacmb') || (t.includes('reg') && t.includes('cacmb'))) return 'regcacmb'
+  if (/\bcacmb\b/.test(t) || t.startsWith('cacmb')) return 'cacmb'
+
+  if (/^(cc|сс)$/i.test(t)) return 'ss'
+  if (/^(юсс|jcc)$/i.test(t)) return 'jss'
+  if (/^(всс|vcc)$/i.test(t)) return 'vss'
 
   // Клубные лиги Донино (рейсинг 350 м, runningdog.ru)
   if (t === 'абсолют' || t === 'лига абсолют') {

@@ -101,14 +101,20 @@ export function classifyCompetitionTitle(raw: string): AwardCategory {
     return 'prestige'
   }
 
-  // Сертификаты (в т.ч. региональный RegCACL)
+  // Сертификаты (в т.ч. региональные RegCACL / RegCACMB, CACMB, СС)
   if (
     /^CACIL/.test(compact) ||
     /^CACL/.test(compact) ||
     /^REGCACL/.test(compact) ||
+    /^CACMB/.test(compact) ||
+    /^REGCACMB/.test(compact) ||
+    /^R\.?\s*CACMB/.test(compact) ||
+    /^(Ю|В|J|V|R)?(CC|СС)$/.test(compact) ||
     compact.includes('CACIL') ||
     compact.includes('CACL') ||
-    compact.includes('REGCACL')
+    compact.includes('REGCACL') ||
+    compact.includes('CACMB') ||
+    compact.includes('REGCACMB')
   ) {
     return 'certificate'
   }
