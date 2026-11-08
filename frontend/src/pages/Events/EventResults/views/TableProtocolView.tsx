@@ -366,7 +366,7 @@ export default function TableProtocolView({
         </td>
 
         {/* 7. Квалификация / титулы / переход в лигу (только титулы, без раздувания строки по высоте) */}
-        <td className="w-28 sm:w-36 py-1.5 sm:py-2 px-1.5 sm:px-2 hidden md:table-cell align-middle">
+        <td className="w-28 sm:w-36 py-1.5 sm:py-2 px-1.5 sm:px-2 hidden sm:table-cell align-middle">
           {cleanQualification ? (
             <QualificationBadges qualification={cleanQualification} />
           ) : (
@@ -393,7 +393,7 @@ export default function TableProtocolView({
             />
           ))}
           <col className="w-20 sm:w-24" />
-          <col className="w-28 sm:w-36 hidden md:table-column" />
+          <col className="w-28 sm:w-36 hidden sm:table-column" />
         </colgroup>
         <tbody className="divide-y divide-old-money-100/70">
           {sortedGroupKeys && groupedResults ? (

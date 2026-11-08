@@ -99,8 +99,15 @@ export default function MobileCardsProtocolView({
       .map(s => s.trim())
       .filter(Boolean)
     const hasVcToken = qualTokens.some(p => /^(cc|сс)$/i.test(p))
-    const cleanQualification = qualTokens.filter(p => !/^(cc|сс)$/i.test(p)).join(', ')
+    const cleanTokens = qualTokens.filter(p => !/^(cc|сс)$/i.test(p))
     const showVc = Boolean(vc || hasVcToken)
+
+    // Собираем все награды собаки для мобильной карточки (включая СС при его наличии)
+    const cardAwardsTokens = [...cleanTokens]
+    if (showVc && !cardAwardsTokens.some(p => /^(cc|сс)$/i.test(p))) {
+      cardAwardsTokens.push('СС')
+    }
+    const cardAwards = (!isDns && !isDq) ? cardAwardsTokens.join(', ') : ''
 
     const classLabel = result.class_label || (result as any).breed_class?.split(' - ')[1] || ''
 
@@ -280,10 +287,10 @@ export default function MobileCardsProtocolView({
         )}
 
         {/* Подвал карточки: Награды и переход в лигу */}
-        {cleanQualification && (
+        {cardAwards && (
           <div className="pt-1 flex items-center justify-between text-[11px]">
             <span className="text-[10px] text-charcoal-400 font-medium">Награды:</span>
-            <QualificationBadges qualification={cleanQualification} />
+            <QualificationBadges qualification={cardAwards} />
           </div>
         )}
       </div>
