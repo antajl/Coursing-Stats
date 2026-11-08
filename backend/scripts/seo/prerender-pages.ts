@@ -27,6 +27,7 @@ import {
   DEFAULT_COMPETITION_FAQS,
   dogMetaFromProfile,
   dogMetaFromShowRanking,
+  doninoDatasetJsonLd,
   doninoMeta,
   eventMetaFromEntry,
   type EventWinnerSummary,
@@ -164,6 +165,8 @@ function prerenderHubs(spaHtml: string): number {
     } else if (hub.path === '/competitions') {
       bodyHtml = buildCompetitionsHubHtml(hub, topPlacementDogs)
       jsonLd = competitionsJsonLd(DEFAULT_COMPETITION_FAQS)
+    } else if (hub.path === '/speed-records') {
+      jsonLd = doninoDatasetJsonLd()
     } else if (hub.path === '/guide') {
       bodyHtml = buildGuideHubHtml(hub)
       jsonLd = guideJsonLd()
@@ -714,6 +717,20 @@ function prerenderShowJudges(spaHtml: string): number {
   return written
 }
 
+function matchesPrerenderDoninoBreed(recordBreed: unknown, targetBreed: string): boolean {
+  if (!recordBreed || !targetBreed) return false
+  const r = String(recordBreed).toUpperCase().replace(/['"`’\-]/g, ' ').replace(/\s+/g, ' ').trim()
+  const t = targetBreed.toUpperCase().replace(/['"`’\-]/g, ' ').replace(/\s+/g, ' ').trim()
+  if (r === t) return true
+  if ((r.includes('ИТАЛЬЯНСКАЯ') || r.includes('ЛЕВРЕТК')) && (t.includes('ИТАЛЬЯНСКАЯ') || t.includes('ЛЕВРЕТК'))) {
+    return true
+  }
+  if (r.includes('ЧИРНЕКО') && t.includes('ЧИРНЕКО')) {
+    return true
+  }
+  return r.includes(t) || t.includes(r)
+}
+
 function prerenderBreedHubs(spaHtml: string): number {
   const topPlacementPath = path.join(ROOT, 'data/v1/indexes/top-placement-2026.json')
   let topDogs: Array<{
@@ -758,11 +775,7 @@ function prerenderBreedHubs(spaHtml: string): number {
       }))
 
     const breedSpeeds = speedRows
-      .filter(
-        (r) =>
-          (r.breed || '').toUpperCase().includes(breedUpper) ||
-          breedUpper.includes((r.breed || '').toUpperCase()),
-      )
+      .filter((r) => matchesPrerenderDoninoBreed(r.breed, breedUpper))
       .slice(0, 3)
       .map((r) => ({
         name: r.name || '',

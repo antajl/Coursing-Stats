@@ -128,8 +128,13 @@ export function buildProtocolSeoHead(comp: CompetitionData): string {
   <meta property="og:type" content="article">
   <meta property="og:title" content="${escapeHtml(eventTitle)}">
   <meta property="og:description" content="${escapeHtml(description)}">
+  <meta property="og:image" content="https://coursing-stats.ru/og-image.png">
   <meta property="og:url" content="${canonicalUrl}">
   <meta property="og:site_name" content="Coursing Stats">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="${escapeHtml(eventTitle)}">
+  <meta name="twitter:description" content="${escapeHtml(description)}">
+  <meta name="twitter:image" content="https://coursing-stats.ru/og-image.png">
   <script type="application/ld+json">
 ${JSON.stringify(sportsEventSchema, null, 2)}
   </script>`;
