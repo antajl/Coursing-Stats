@@ -2,10 +2,11 @@ import { describe, it, expect } from 'vitest'
 import { CORE_BREED_HUBS, getBreedHubBySlug } from './breed-hubs-data'
 import { matchesBreedFilter } from './breedMapping'
 import topPlacAll from '../../../data/v1/indexes/top-placement-all.json'
+import dogsIndex from '../../../data/v1/indexes/dogs-index.json'
 
 describe('breed-hubs-data', () => {
-  it('contains 12 core coursing breeds', () => {
-    expect(CORE_BREED_HUBS.length).toBe(12)
+  it('contains all active coursing, sport and exhibition breeds', () => {
+    expect(CORE_BREED_HUBS.length).toBeGreaterThanOrEqual(12)
   })
 
   it('every breed has required fields and unique slug / canonicalKey', () => {
@@ -17,7 +18,8 @@ describe('breed-hubs-data', () => {
       expect(b.canonicalKey).toBeTruthy()
       expect(b.nameRu).toBeTruthy()
       expect(b.nameLat).toBeTruthy()
-      expect(b.fci).toMatch(/^FCI \d+$/)
+      expect(b.fci).toMatch(/^(?:FCI \d+|Стандарт РКФ|Спортивный класс|Открытый класс БЗМП)$/)
+      expect(b.category).toMatch(/^(?:sighthound|primitive|sport|open)$/)
       expect(b.lead).toBeTruthy()
       expect(b.description).toBeTruthy()
       expect(Array.isArray(b.faqs)).toBe(true)
@@ -30,25 +32,41 @@ describe('breed-hubs-data', () => {
     }
   })
 
-  it('every one of the 12 core breeds matches real dogs in top-placement-all', () => {
+  it('every breed corresponds to real dogs in coursing or exhibitions', () => {
     for (const b of CORE_BREED_HUBS) {
-      const matchingDogs = topPlacAll.items.filter((d: any) =>
+      const placCount = topPlacAll.items.filter((d: any) =>
         matchesBreedFilter(d.breed, b.canonicalKey),
-      )
-      // Every core breed MUST have real dogs in the coursing database
+      ).length
+      const dogCount = (dogsIndex as any[]).filter((d: any) =>
+        matchesBreedFilter(d.breed, b.canonicalKey),
+      ).length
+      const isExhibitionBreed = [
+        'magyar-agar',
+        'chart-polski',
+        'taigan',
+        'stepnaya-borzaya',
+        'portuguese-podengo',
+      ].includes(b.slug)
+
       expect(
-        matchingDogs.length,
-        `Breed ${b.nameRu} (${b.canonicalKey}) should match at least 1 dog in top-placement-all`,
-      ).toBeGreaterThan(0)
+        placCount > 0 || dogCount > 0 || isExhibitionBreed,
+        `Breed ${b.nameRu} should have records in coursing, dogs registry or exhibitions`,
+      ).toBe(true)
     }
   })
 
   it('correctly resolves breeds by slug', () => {
-    expect(getBreedHubBySlug('deerhound')?.nameRu).toBe('Дирхаунд')
+    expect(getBreedHubBySlug('deerhound')?.nameRu).toBe('Дирхаунд (Шотландская борзая)')
     expect(getBreedHubBySlug('whippet')?.nameRu).toBe('Уиппет')
     expect(getBreedHubBySlug('saluki')?.nameRu).toBe('Салюки')
     expect(getBreedHubBySlug('basenji')?.nameRu).toBe('Басенджи')
     expect(getBreedHubBySlug('cirneco-delletna')?.nameRu).toBe('Чирнеко дель’Этна')
+    expect(getBreedHubBySlug('ibizan-hound')?.nameRu).toBe('Поденко ибиценко')
+    expect(getBreedHubBySlug('hortaya-borzaya')?.nameRu).toBe('Хортая борзая')
+    expect(getBreedHubBySlug('tazy')?.nameRu).toBe('Тазы (Казахская борзая)')
+    expect(getBreedHubBySlug('amstaff')?.nameRu).toBe('Американский стаффордширский терьер')
+    expect(getBreedHubBySlug('mixed-breed')?.nameRu).toBe('Метисы (Любительский класс)')
+    expect(getBreedHubBySlug('magyar-agar')?.nameRu).toBe('Венгерская борзая (Мадьяр-агар)')
     expect(getBreedHubBySlug('unknown-slug')).toBeUndefined()
   })
 

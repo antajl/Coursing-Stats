@@ -386,6 +386,19 @@ export const BREED_ALIAS_BY_KEY: Record<string, string> = {
   'АВСТРАЛИЙСКАЯ ПАСТУШЬЯ СОБАКА (АВСТРАЛИЙСКИЙ ХИЛЕР)': 'АВСТРАЛИЙСКАЯ ПАСТУШЬЯ СОБАКА',
   'ПАСТУШЬЯ СОБАКА (АВСТРАЛИЙСКИЙ ХИЛЕР)': 'АВСТРАЛИЙСКАЯ ПАСТУШЬЯ СОБАКА',
 
+  // --- мадьяр агар = венгерская борзая (FCI 240) ---
+  'МАДЬЯР АГАР': 'ВЕНГЕРСКАЯ БОРЗАЯ',
+  'МАДЬЯР-АГАР': 'ВЕНГЕРСКАЯ БОРЗАЯ',
+  'ВЕНГЕРСКАЯ БОРЗАЯ (МАДЬЯР АГАР)': 'ВЕНГЕРСКАЯ БОРЗАЯ',
+  'ВЕНГЕРСКАЯ БОРЗАЯ (МАДЬЯР-АГАР)': 'ВЕНГЕРСКАЯ БОРЗАЯ',
+
+  // --- южнорусская степная борзая ---
+  'СТЕПНАЯ БОРЗАЯ': 'ЮЖНОРУССКАЯ СТЕПНАЯ БОРЗАЯ',
+
+  // --- баварская и ганноверская гончие ---
+  'БАВАРСКАЯ ГОРНАЯ ГОНЧАЯ': 'БАВАРСКАЯ ГОНЧАЯ',
+  'ГАННОВЕРСКАЯ СЛЕДОВАЯ ГОНЧАЯ': 'ГАННОВЕРСКАЯ ГОНЧАЯ',
+
   'АКИТА АМЕРИКАНСКАЯ': 'АМЕРИКАНСКАЯ АКИТА',
   'АКИТА АМЕРИКАНСКИЙ': 'АМЕРИКАНСКАЯ АКИТА',
   'АКИТА / AMERICAN': 'АМЕРИКАНСКАЯ АКИТА',
@@ -567,5 +580,16 @@ export function appendBreedFilter(
 export function matchesBreedFilter(rowBreed: string | null | undefined, filterBreed: string): boolean {
   if (!filterBreed) return true
   if (!rowBreed) return false
-  return breedAliasKey(canonicalBreed(rowBreed)) === breedAliasKey(canonicalBreed(filterBreed))
+  const canonRow = breedAliasKey(canonicalBreed(rowBreed))
+  const canonFilter = breedAliasKey(canonicalBreed(filterBreed))
+  if (canonRow === canonFilter) return true
+
+  // Support base-breed matching for sport varieties (e.g. Podenco Ibicenco, German Shepherd, Vizsla, Xoloitzcuintli)
+  if (canonRow.startsWith(canonFilter + ' ') || canonFilter.startsWith(canonRow + ' ')) return true
+  if (canonRow.startsWith(canonFilter + '(') || canonFilter.startsWith(canonRow + '(')) return true
+  if (canonFilter.includes('ВЫЖЛА') && canonRow.includes('ВЫЖЛА')) return true
+  if (canonFilter.includes('КСОЛОИТЦКУИНТЛИ') && canonRow.includes('КСОЛОИТЦКУИНТЛИ')) return true
+  if (canonFilter.includes('ПИТ') && canonFilter.includes('БУЛЬ') && canonRow.includes('ПИТ') && canonRow.includes('БУЛЬ')) return true
+  if (canonFilter.includes('ТАКСА') && canonRow.includes('ТАКСА')) return true
+  return false
 }

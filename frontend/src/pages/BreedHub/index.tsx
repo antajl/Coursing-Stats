@@ -2,7 +2,7 @@ import { useMemo } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { Trophy, Gauge, ArrowUpRight, HelpCircle } from 'lucide-react'
 import { SEO } from '../../components/SEO'
-import { JsonLd, itemPageSchema } from '../../components/JsonLd'
+import { JsonLd, itemPageSchema, breadcrumbListSchema, faqPageSchema } from '../../components/JsonLd'
 import { CORE_BREED_HUBS, getBreedHubBySlug } from '../../lib/breed-hubs-data'
 import { useTopPlacement, useTopSpeed, useSpeedRecordsByBreed } from '../../hooks/useStaticData'
 import { parseDogName } from '../../lib/dogName'
@@ -189,45 +189,83 @@ export default function BreedHub() {
     return (
       <div className="py-12 px-4 max-w-4xl mx-auto text-center">
         <h1 className="text-xl font-serif font-bold text-charcoal-900 mb-3">Порода не найдена</h1>
-        <p className="text-xs sm:text-sm text-charcoal-600 mb-5">
-          Пожалуйста, выберите интересующую породу из списка основных беговых пород:
+        <p className="text-xs sm:text-sm text-charcoal-600 mb-6">
+          Пожалуйста, выберите интересующую породу из официального каталога беговых пород:
         </p>
-        <div className="flex flex-wrap gap-2 justify-center">
-          {CORE_BREED_HUBS.map((b) => (
-            <Link
-              key={b.slug}
-              to={`/breeds/${b.slug}/`}
-              className="cs-glass-pill inline-flex h-8 shrink-0 items-center rounded-full px-3 text-xs font-semibold transition-all cursor-pointer whitespace-nowrap"
-            >
-              {b.nameRu}
-            </Link>
-          ))}
+        <div className="space-y-4 text-left">
+          {([
+            { id: 'sighthound', title: 'Борзые (10 группа FCI и национальные породы)' },
+            { id: 'primitive', title: 'Примитивные охотничьи породы (5 группа FCI)' },
+            { id: 'sport', title: 'Породы в бегах за механической приманкой (БЗМП)' },
+            { id: 'open', title: 'Открытый любительский класс' },
+          ] as const).map((cat) => {
+            const list = CORE_BREED_HUBS.filter((b) => b.category === cat.id)
+            if (list.length === 0) return null
+            return (
+              <div key={cat.id} className="rounded-xl border border-cream-200 bg-white/60 p-3 sm:p-4">
+                <div className="text-[11px] font-semibold text-charcoal-500 uppercase tracking-wider mb-2">
+                  {cat.title}
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {list.map((b) => (
+                    <Link
+                      key={b.slug}
+                      to={`/breeds/${b.slug}/`}
+                      className="cs-glass-pill inline-flex h-8 shrink-0 items-center rounded-full px-3 text-xs font-semibold transition-all cursor-pointer whitespace-nowrap"
+                    >
+                      {b.nameRu}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )
+          })}
         </div>
       </div>
     )
   }
 
-  const seoTitle = `${breedInfo.nameRu} (${breedInfo.nameLat}) — рейтинг в курсинге, результаты и рекорды`
-  const seoDesc = `Всероссийский рейтинг породы ${breedInfo.nameRu} (${breedInfo.nameLat}, ${breedInfo.fci}) в курсинге и бегах борзых: топ сезона по скорости, замеры в Донино (км/ч), протоколы соревнований РКФ и результаты забегов на Coursing Stats.`
+  const seoTitle = `${breedInfo.nameRu} (${breedInfo.nameLat}) — рейтинг в курсинге, результаты забегов и рекорды | Coursing Stats`
+  const seoDesc = `Всероссийский рейтинг породы ${breedInfo.nameRu} (${breedInfo.nameLat}, ${breedInfo.fci}) в курсинге, бегах борзых и БЗМП: результаты забегов, топ сезона по скорости, замеры в Донино (км/ч), протоколы соревнований РКФ и рекорды на Coursing Stats.`
+  const seoKeywords = [
+    breedInfo.nameRu.toLowerCase(),
+    breedInfo.nameLat.toLowerCase(),
+    breedInfo.canonicalKey.toLowerCase(),
+    `курсинг ${breedInfo.nameRu.toLowerCase()}`,
+    `бега ${breedInfo.nameRu.toLowerCase()}`,
+    `скорость ${breedInfo.nameRu.toLowerCase()}`,
+    `рейтинг ${breedInfo.nameRu.toLowerCase()}`,
+    'рекорды донино',
+    'бзмп',
+    'ркф',
+    'fci',
+  ].join(', ')
 
   return (
     <div className="space-y-6 pb-12">
       <SEO
         title={seoTitle}
         description={seoDesc}
+        keywords={seoKeywords}
         canonicalUrl={`https://coursing-stats.ru/breeds/${breedInfo.slug}/`}
       />
       <JsonLd
         data={{
           '@context': 'https://schema.org',
           '@graph': [
+            breadcrumbListSchema([
+              { name: 'Главная', url: '/' },
+              { name: 'Соревнования', url: '/competitions/' },
+              { name: breedInfo.nameRu, url: `/breeds/${breedInfo.slug}/` },
+            ]),
             itemPageSchema({
               url: `https://coursing-stats.ru/breeds/${breedInfo.slug}/`,
-              name: `${breedInfo.nameRu} (${breedInfo.nameLat})`,
-              alternateName: [breedInfo.nameLat, breedInfo.nameRu],
+              name: seoTitle,
+              alternateName: [breedInfo.nameLat, breedInfo.nameRu, breedInfo.canonicalKey],
               breed: breedInfo.nameRu,
               description: seoDesc,
             }),
+            faqPageSchema(breedInfo.faqs),
           ],
         }}
       />
@@ -721,20 +759,41 @@ export default function BreedHub() {
       )}
 
       {/* Other Breeds Grid */}
-      <section className="pt-2">
-        <h2 className="text-xs font-semibold uppercase tracking-wider text-charcoal-500 mb-2.5">
-          Другие породы в курсинге
+      <section className="space-y-4 pt-2">
+        <h2 className="text-xs font-semibold uppercase tracking-wider text-charcoal-500">
+          Каталог пород в курсинге и бегах
         </h2>
-        <div className="flex flex-wrap gap-2">
-          {CORE_BREED_HUBS.filter((b) => b.slug !== breedInfo.slug).map((b) => (
-            <Link
-              key={b.slug}
-              to={`/breeds/${b.slug}/`}
-              className="cs-glass-pill inline-flex h-8 shrink-0 items-center rounded-full px-3 text-xs font-semibold transition-all cursor-pointer whitespace-nowrap"
-            >
-              {b.nameRu}
-            </Link>
-          ))}
+
+        <div className="space-y-3">
+          {([
+            { id: 'sighthound', title: 'Борзые (10 группа FCI и национальные породы)' },
+            { id: 'primitive', title: 'Примитивные охотничьи породы (5 группа FCI)' },
+            { id: 'sport', title: 'Породы в бегах за механической приманкой (БЗМП)' },
+            { id: 'open', title: 'Открытый любительский класс' },
+          ] as const).map((cat) => {
+            const list = CORE_BREED_HUBS.filter(
+              (b) => b.category === cat.id && b.slug !== breedInfo.slug,
+            )
+            if (list.length === 0) return null
+            return (
+              <div key={cat.id} className="rounded-xl border border-cream-200 bg-white/60 p-3 sm:p-4">
+                <div className="text-[11px] font-semibold text-charcoal-500 uppercase tracking-wider mb-2">
+                  {cat.title}
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {list.map((b) => (
+                    <Link
+                      key={b.slug}
+                      to={`/breeds/${b.slug}/`}
+                      className="cs-glass-pill inline-flex h-8 shrink-0 items-center rounded-full px-3 text-xs font-semibold transition-all cursor-pointer whitespace-nowrap"
+                    >
+                      {b.nameRu}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )
+          })}
         </div>
       </section>
     </div>
