@@ -155,7 +155,7 @@ export default function ChampionshipStageTab({ stage }: ChampionshipStageTabProp
               href={protocolUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="doc-physical-btn group inline-flex h-8.5 shrink-0 items-center gap-1.5 rounded-full px-3.5 sm:px-4 text-xs sm:text-[13px] font-semibold text-charcoal-900 cursor-pointer whitespace-nowrap"
+              className="cs-glass-pill group inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full px-3 text-xs font-semibold !text-charcoal-700 hover:!text-charcoal-950 transition-all cursor-pointer whitespace-nowrap select-none"
               title="Протокол состязания и прикреплённые документы"
             >
               <FileSpreadsheet className="h-3.5 w-3.5 text-camel-700 shrink-0 transition-colors group-hover:text-camel-900" aria-hidden />
