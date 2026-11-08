@@ -43,6 +43,7 @@
     "monitor-rkf-shows": "npx tsx backend/scripts/shows/monitor-new-rkf-protocols.ts",
     "rebuild-show-year": "npx tsx backend/scripts/build-show-indexes-by-year.ts",
     "build-show-breed-calendar": "npx tsx backend/scripts/shows/build-breed-calendar-index.ts",
+    "build-show-all-time": "npx tsx backend/scripts/shows/build-all-time-top-ranking.ts",
     "enrich-show-dog-details": "node --max-old-space-size=12288 ./node_modules/tsx/dist/cli.mjs backend/scripts/shows/enrich-show-dog-details.ts",
     "rebuild-show-snapshot": "node backend/scripts/run-with-memory.cjs backend/scripts/build-show-indexes.ts",
     "generate-show-page0": "npx tsx backend/scripts/shows/generate-show-page0-indexes.ts",

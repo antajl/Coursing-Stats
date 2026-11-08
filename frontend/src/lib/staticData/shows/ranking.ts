@@ -147,21 +147,28 @@ async function loadShowDogRankingYear(year: string): Promise<ShowDog[] | null> {
 
 /** First-paint slice (~top 400). Falls back to null if not built yet. */
 export async function getShowDogRankingPage0(year: string): Promise<ApiResult<ShowDog[]>> {
-  if (!year) return { success: false, error: 'Year required for page0 ranking' }
+  const fileName = year ? `dog-ranking-${year}-page0.json` : 'dog-ranking-all-time-page0.json'
   const file = await fetchJson<{
     schema?: string
     dogs?: ShowDog[]
     count?: number
     total_count?: number
-  }>(`shows/indexes/dog-ranking-${year}-page0.json`)
+  }>(`shows/indexes/${fileName}`)
   if (!file || !Array.isArray(file.dogs) || file.dogs.length === 0) {
-    return { success: false, error: `Dog ranking page0 for year ${year} unavailable` }
+    return { success: false, error: `Dog ranking page0 for ${year || 'all time'} unavailable` }
   }
   return { success: true, data: file.dogs.map(hydrateShowDog) }
 }
 
 export async function getShowDogRanking(year = ''): Promise<ApiResult<ShowDog[]>> {
-  const targetYear = year || SHOW_RANKING_YEARS[SHOW_RANKING_YEARS.length - 1]
+  if (!year) {
+    const file = await fetchJson<ShowDog[]>('shows/indexes/dog-ranking-all-time.json')
+    if (!file || !Array.isArray(file)) {
+      return { success: false, error: 'Dog ranking for all time unavailable' }
+    }
+    return { success: true, data: file.map(hydrateShowDog) }
+  }
+  const targetYear = year
   console.debug('[getShowDogRanking] Requested year:', year, 'targetYear:', targetYear)
   const ranking = await loadShowDogRankingYear(targetYear)
   console.debug('[getShowDogRanking] Year ranking loaded:', ranking ? ranking.length : 'null')

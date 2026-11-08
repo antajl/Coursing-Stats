@@ -312,7 +312,7 @@ export default function ShowRanking() {
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}
         filterYear={filterYear}
-        onYearChange={(y) => setFilterYear(y || SHOW_ACTIVE_SEASON)}
+        onYearChange={setFilterYear}
         currentSeason={SHOW_ACTIVE_SEASON}
         yearValues={years}
         filterBreed={filterBreed}

@@ -1,3 +1,4 @@
+import { buildAllTimeTopRanking } from './shows/build-all-time-top-ranking'
 import * as fs from 'fs'
 import * as path from 'path'
 import { fileURLToPath } from 'url'
@@ -667,6 +668,7 @@ async function main() {
   )
   console.log(`Saved year-data/dogs-${targetYear}.json`)
 
+  try { buildAllTimeTopRanking() } catch (e) { console.warn('Failed to rebuild all-time top ranking:', e) }
   console.log(`Year ${targetYear} indexes built successfully!`)
 }
 

@@ -312,8 +312,8 @@ export default function TopDogs() {
         trailing={<CoursingRatingHint embedded variant="unified" />}
         activeMobileColumn={activeMobileColumn}
         onMobileColumnChange={setSelectedMobileColumn}
-        coursingCount={filteredCombined.length}
-        racingCount={filteredSpeed.length}
+        coursingCount={displayedCombined.length}
+        racingCount={displayedSpeed.length}
       />
 
       {showListSkeleton ? (
@@ -322,8 +322,8 @@ export default function TopDogs() {
         </div>
       ) : (
         <TopDogsColumns
-          filteredCombined={filteredCombined}
-          filteredSpeed={filteredSpeed}
+          filteredCombined={displayedCombined}
+          filteredSpeed={displayedSpeed}
           filterYear={filterYear}
           favorites={favorites}
           onToggleFavorite={(dogId, meta) => {
