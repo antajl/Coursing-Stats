@@ -43,6 +43,7 @@ interface ShowDog {
   titles: ShowTitleCounts
   competition_dog_id?: number | null
   catalog_id?: string
+  pedigree_url?: string | null
   history?: Array<{
     date: string
     exhibition_id: number

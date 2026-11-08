@@ -273,13 +273,21 @@ export function useDogProfileData() {
     }
   }
 
-  const headerDog = dog ?? (showDog ? {
-    id: showDog.competition_dog_id ?? showDog.id,
-    name_lat: showDog.name_lat,
-    name_ru: showDog.name_ru,
-    breed: showDog.breed,
-    sex: showDog.sex,
-  } : null)
+  const headerDog = dog
+    ? {
+        ...dog,
+        pedigree_url: (dog as any).pedigree_url || showDog?.pedigree_url || null,
+      }
+    : (showDog
+        ? {
+            id: showDog.competition_dog_id ?? showDog.id,
+            name_lat: showDog.name_lat,
+            name_ru: showDog.name_ru,
+            breed: showDog.breed,
+            sex: showDog.sex,
+            pedigree_url: showDog.pedigree_url || null,
+          }
+        : null)
 
   const hasCourseMedals =
     (coursing.gold || 0) > 0 || (coursing.silver || 0) > 0 || (coursing.bronze || 0) > 0
