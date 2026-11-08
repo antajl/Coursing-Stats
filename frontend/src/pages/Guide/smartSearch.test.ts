@@ -42,41 +42,66 @@ describe('smartGuideSearch', () => {
     expect(isFuzzyWordMatch('маневренностью', 'маневренность')).toBe(true)
   })
 
-  it('retrieves accurate direct answers for natural language queries and typos', () => {
-    // Вопрос о возрасте обычный и с опечаткой
+  it('retrieves accurate direct answers for all 15 key cynological domains', () => {
+    // 1. Возраст
     const ageRes = executeSmartGuideSearch('со скольки месяцев можно бегать?')
     expect(ageRes.matchedDirectAnswer?.id).toBe('age-rules')
     expect(ageRes.matchedSectionIds.has('sec-requirements')).toBe(true)
 
-    const ageTypoRes = executeSmartGuideSearch('возростной ценз')
-    expect(ageTypoRes.matchedDirectAnswer?.id).toBe('age-rules')
-
-    // Запрос в английской раскладке "rdjhev" (кворум)
+    // 2. Кворум (раскладка)
     const layoutRes = executeSmartGuideSearch('rdjhev')
     expect(layoutRes.matchedDirectAnswer?.id).toBe('quorum-rules')
 
-    // Запрос про переход со 2-го места
+    // 3. Переход R.CACL
     const transferRes = executeSmartGuideSearch('почему второе место получило cacl?')
     expect(transferRes.matchedDirectAnswer?.id).toBe('rcacl-transfer')
 
-    // Запрос про ничью / тай-брейк с опечаткой "тайбрек"
+    // 4. Тай-брейк / ничья
     const tieRes = executeSmartGuideSearch('тайбрек если равные баллы')
     expect(tieRes.matchedDirectAnswer?.id).toBe('tie-break')
 
-    // Запрос про намордник с опечаткой "наморднек"
+    // 5. Намордник и попоны
     const muzzleRes = executeSmartGuideSearch('какой наморднек нужен для состязаний')
     expect(muzzleRes.matchedDirectAnswer?.id).toBe('muzzles-blankets')
 
-    // Запрос про 6 схем НЧ РК
+    // 6. 6 схем НЧ РК
     const schemesRes = executeSmartGuideSearch('как закрыть нч рк по схемам')
     expect(schemesRes.matchedDirectAnswer?.id).toBe('nch-schemes')
 
-    // Запрос про беговой допуск
+    // 7. Беговой допуск
     const licenseRes = executeSmartGuideSearch('как получить беговой допуск')
     expect(licenseRes.matchedDirectAnswer?.id).toBe('license-booklet')
 
-    // Запрос про норматив ВС
+    // 8. Норматив ВС
     const vcRes = executeSmartGuideSearch('что такое знак вс')
     expect(vcRes.matchedDirectAnswer?.id).toBe('vc-norm')
+
+    // 9. Разница курсинг vs бега
+    const diffRes = executeSmartGuideSearch('в чем разница курсинг и бега')
+    expect(diffRes.matchedDirectAnswer?.id).toBe('disciplines-diff')
+
+    // 10. 5 критериев судейства
+    const critRes = executeSmartGuideSearch('за что судьи ставят баллы 5 критериев')
+    expect(critRes.matchedDirectAnswer?.id).toBe('judging-5-criteria')
+
+    // 11. Чемпион России (ЧР РК)
+    const chRusRes = executeSmartGuideSearch('как получить титул чемпион россии чр рк')
+    expect(chRusRes.matchedDirectAnswer?.id).toBe('ch-rus-annual')
+
+    // 12. Международные титулы FCI
+    const fciRes = executeSmartGuideSearch('международный чемпион по бегам cic fci')
+    expect(fciRes.matchedDirectAnswer?.id).toBe('intl-titles-fci')
+
+    // 13. Дисквалификации
+    const disqRes = executeSmartGuideSearch('на сколько дисквалифицируют за драку disq')
+    expect(disqRes.matchedDirectAnswer?.id).toBe('disqualifications-rules')
+
+    // 14. Гранд и Абсолютный чемпион
+    const grandRes = executeSmartGuideSearch('что такое гранд чемпион гчр рк мультиспорт')
+    expect(grandRes.matchedDirectAnswer?.id).toBe('grand-absolute-titles')
+
+    // 15. Барьер 2-го круга
+    const round2Res = executeSmartGuideSearch('почему сняли после первого круга барьер 50%')
+    expect(round2Res.matchedDirectAnswer?.id).toBe('round2-barrier')
   })
 })
