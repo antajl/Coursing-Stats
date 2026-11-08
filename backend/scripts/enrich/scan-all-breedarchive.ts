@@ -1,294 +1,319 @@
 /**
- * Полное сканирование всех собак базы на наличие профилей в Breed Archive.
+ * Полное сканирование всех собак базы (спорт + выставки) на наличие профилей в Breed Archive.
  *
  * Usage:
  *   npx tsx backend/scripts/enrich/scan-all-breedarchive.ts
- *   npx tsx backend/scripts/enrich/scan-all-breedarchive.ts --apply
+ *   npx tsx backend/scripts/enrich/scan-all-breedarchive.ts --dry-run
+ *   npx tsx backend/scripts/enrich/scan-all-breedarchive.ts --sport-only
+ *   npx tsx backend/scripts/enrich/scan-all-breedarchive.ts --show-only
+ *   npx tsx backend/scripts/enrich/scan-all-breedarchive.ts --breed saluki
+ *   npx tsx backend/scripts/enrich/scan-all-breedarchive.ts --limit 100
+ *
+ * После применения: npm run build-all-data
  */
 import fs from 'node:fs';
 import path from 'node:path';
 import { DATA_V1_ROOT } from '../../lib/local-data/paths.ts';
-import { transliterateRuToLat } from '../../lib/text-normalization.ts';
+import {
+  breedArchiveSubdomain,
+  cleanAlphanumeric,
+  normalizeBreedKey,
+  resolveBreedArchiveUrl,
+} from '../../lib/breedarchive.ts';
+import { canonicalBreed } from '../../src/lib/breed-mapping.ts';
 
-const DOGS_DIR = path.join(DATA_V1_ROOT, 'dogs/by-id');
-const DOGS_KEY_DIR = path.join(DATA_V1_ROOT, 'dogs/by-key');
+const SPORT_DOGS_DIR = path.join(DATA_V1_ROOT, 'dogs/by-id');
+const SPORT_DOGS_KEY_DIR = path.join(DATA_V1_ROOT, 'dogs/by-key');
+const SHOW_DETAILS_DIR = path.join(DATA_V1_ROOT, 'shows/indexes/dog-details');
 const REPORT_FILE = 'backend/scripts/breedarchive-scan-results.json';
 
-const DELAY_MS = 120;
+const DELAY_MS = 100;
 
 function sleep(ms: number) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-// 73 verified real Breed Archive subdomains:
-const VALID_SUBS = new Set([
-  'americanhairlessterrier', 'americanwaterspaniel', 'azawakh', 'bedlingtonterrier',
-  'belgianshepherd', 'bergerpicard', 'bordercollie', 'borzoi', 'bostonterrier',
-  'boxer', 'cardiganwelshcorgi', 'ceskyterrier', 'chartpolski', 'chihuahua',
-  'cirneco', 'collie', 'curlycoatedretriever', 'deerhound', 'finnishlapphund',
-  'frenchbulldog', 'galgoespanol', 'gbgv', 'germanshepherd',
-  'germanshorthairedpointer', 'germanwirehairedpointer', 'greyhound', 'havanese',
-  'hokkaido', 'ibizanhound', 'italiangreyhound', 'japanesechin',
-  'kingcharlesspaniel', 'kromfohrlaender', 'labradorretriever', 'lagotto',
-  'lowchen', 'magyaragar', 'maltese', 'manchesterterrier',
-  'miniatureamericanshepherd', 'miniaturepinscher', 'mudi', 'norrbottenspets',
-  'norwegianbuhund', 'nsdtr', 'papillon', 'parsonrussellterrier', 'pbgv',
-  'pekingese', 'pembrokewelshcorgi', 'peruvianhairless', 'pharaohhound',
-  'podengoportugues', 'pomeranian', 'portuguesewaterdog', 'ratterrier',
-  'rottweiler', 'russiantoy', 'saluki', 'schapendoes', 'sheltie',
-  'siberianhusky', 'silkenwindsprite', 'sloughi', 'smoothfoxterrier',
-  'sussexspaniel', 'swedishlapphund', 'tibetanmastiff', 'tibetanterrier',
-  'welshspringerspaniel', 'whippet', 'wirefoxterrier', 'xolo'
+const SIGHTHOUND_AND_COURSING_BREEDS = new Set([
+  'САЛЮКИ',
+  'УИППЕТ',
+  'РУССКАЯ ПСОВАЯ БОРЗАЯ',
+  'МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ',
+  'МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)',
+  'ЛЕВРЕТКА',
+  'ГРЕЙХАУНД',
+  'ФАРАОНОВА СОБАКА',
+  'ЧИРНЕКО ДЕЛЬ ЭТНА',
+  'ЧИРНЕКО ДЕЛЬ’ЭТНА',
+  'ЧИРНЕКО ДЕЛЬ\'ЭТНА',
+  'АЗАВАК',
+  'СЛЮГИ',
+  'ПОДЕНКО ИБИЦЕНКО',
+  'ПОДЕНКО ИБИЦЕНКО (К Ш, Г Ш)',
+  'ПОДЕНКО ИБИЦЕНКО (К-Ш, Г-Ш)',
+  'ПОДЕНКО ИБИЦЕНКО Г Ш',
+  'ПОДЕНКО ИБИЦЕНКО К/Ш',
+  'ПОДЕНГО ПОРТУГАЛЬСКИЙ',
+  'ДИРХАУНД',
+  'ДИРХАУНД (ШОТЛАНДСКАЯ БОРЗАЯ)',
+  'ИСПАНСКИЙ ГАЛЬГО',
+  'ИСПАНСКАЯ БОРЗАЯ (ГАЛЬГО)',
+  'ГАЛЬГО',
+  'ВЕНГЕРСКАЯ БОРЗАЯ',
+  'ЧАРТ',
+  'СИЛКЕН ВИНДСПРАЙТ',
 ]);
 
-const BREED_MAP: Record<string, string> = {
-  'РУССКАЯ ПСОВАЯ БОРЗАЯ': 'borzoi',
-  'УИППЕТ': 'whippet',
-  'САЛЮКИ': 'saluki',
-  'ФАРАОНОВА СОБАКА': 'pharaohhound',
-  'ЧИРНЕКО ДЕЛЬ ЭТНА': 'cirneco',
-  'ГРЕЙХАУНД': 'greyhound',
-  'ЛЕВРЕТКА': 'italiangreyhound',
-  'МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ': 'italiangreyhound',
-  'МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)': 'italiangreyhound',
-  'ПОДЕНКО ИБИЦЕНКО': 'ibizanhound',
-  'ПОДЕНКО ИБИЦЕНКО (К Ш, Г Ш)': 'ibizanhound',
-  'ПОДЕНКО ИБИЦЕНКО Г Ш': 'ibizanhound',
-  'ПОДЕНКО ИБИЦЕНКО К/Ш': 'ibizanhound',
-  'ПОДЕНКО ИБИЦЕНКО (К-Ш, Г-Ш)': 'ibizanhound',
-  'ИСПАНСКИЙ ГАЛЬГО': 'galgoespanol',
-  'ИСПАНСКАЯ БОРЗАЯ (ГАЛЬГО)': 'galgoespanol',
-  'ГАЛЬГО': 'galgoespanol',
-  'СЛЮГИ': 'sloughi',
-  'ДИРХАУНД': 'deerhound',
-  'ДИРХАУНД (ШОТЛАНДСКАЯ БОРЗАЯ)': 'deerhound',
-  'АЗАВАК': 'azawakh',
-  'КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН': 'papillon',
-  'КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ': 'papillon',
-  'ПАПИЙОН': 'papillon',
-  'НЕМЕЦКАЯ ОВЧАРКА': 'germanshepherd',
-  'НЕМЕЦКАЯ ОВЧАРКА (СТАНДАРТНАЯ)': 'germanshepherd',
-  'НЕМЕЦКАЯ ОВЧАРКА (Д Ш, К Ш)': 'germanshepherd',
-  'НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ': 'germanshepherd',
-  'НЕМЕЦКАЯ ОВЧАРКА (К/Ш)': 'germanshepherd',
-  'НЕMEЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ': 'germanshepherd',
-  'НЕМЕЦКАЯ ОВЧАРКА К Ш': 'germanshepherd',
-  'БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА': 'belgianshepherd',
-  'БЕЛЬГИЙСКАЯ ОВЧАРКА (МАЛИНУА)': 'belgianshepherd',
-  'МАЛИНУА': 'belgianshepherd',
-  'КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ СОБАКА) СТАНДАРТ': 'xolo',
-  'КСОЛОИТЦКУИНТЛИ СТАНДАРТ': 'xolo',
-  'КСОЛОИТЦКУИНТЛИ МЕДИО': 'xolo',
-  'КСОЛОИТЦКУИНТЛИ СТАНДАРТНЫЙ': 'xolo',
-  'ЦВЕРГПИНЧЕР': 'miniaturepinscher',
-  'НЕМЕЦКИЙ ПИНЧЕР': 'miniaturepinscher',
-  'СИБИРСКИЙ ХАСКИ': 'siberianhusky',
-  'БОРДЕР КОЛЛИ': 'bordercollie',
-  'АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР': 'americanhairlessterrier',
-  'БЕДЛИНГТОН ТЕРЬЕР': 'bedlingtonterrier',
-  'ЛАБРАДОР РЕТРИВЕР': 'labradorretriever',
-  'РОТВЕЙЛЕР': 'rottweiler',
-  'ВЕЛЬШ КОРГИ ПЕМБРОК': 'pembrokewelshcorgi',
-  'ВЕЛЬШ КОРГИ КАРДИГАН': 'cardiganwelshcorgi',
-  'ГЛАДКОШЕРСТНЫЙ ФОКСТЕРЬЕР': 'smoothfoxterrier',
-  'ФОКС-ТЕРЬЕР ГЛАДКОШЕРСТНЫЙ': 'smoothfoxterrier',
-  'ЖЕСТКОШЕРСТНЫЙ ФОКСТЕРЬЕР': 'wirefoxterrier',
-  'РУССКИЙ ТОЙ': 'russiantoy',
-  'НЕМЕЦКАЯ КОРОТКОШЕРСТНАЯ ЛЕГАВАЯ': 'germanshorthairedpointer',
-  'НЕМЕЦКАЯ КОРОТКОШЕРСТНАЯ ЛЕГАВАЯ (КУРЦХААР)': 'germanshorthairedpointer',
-  'НЕМЕЦКИЙ ДРАТХААР': 'germanwirehairedpointer',
-  'ВЕНГЕРСКАЯ БОРЗАЯ': 'magyaragar',
-  'СИЛКЕН ВИНДСПРАЙТ': 'silkenwindsprite',
-  'ЧАРТ': 'chartpolski',
-  'БОСТОН-ТЕРЬЕР': 'bostonterrier',
-  'БОКСЕР': 'boxer',
-  'ЧЕШСКИЙ ТЕРЬЕР': 'ceskyterrier',
-  'ЦЕСКИЙ ТЕРЬЕР': 'ceskyterrier',
-  'ЧИХУАХУА': 'chihuahua',
-  'КОЛЛИ': 'collie',
-  'ШЕЛТИ': 'sheltie',
-};
-
-function getArchiveSubdomain(breed: string | null | undefined): string | null {
-  if (!breed?.trim()) return null;
-  const k = breed.trim().replace(/\s+/g, ' ').toUpperCase();
-  const sub = BREED_MAP[k];
-  if (sub && VALID_SUBS.has(sub)) return sub;
-  return null;
+interface QueueItem {
+  domain: 'sport' | 'show';
+  id: string;
+  breed: string;
+  name_lat?: string | null;
+  name_ru?: string | null;
+  subdomain: string;
+  filePath?: string;
+  shard?: string;
+  dogKey?: string;
 }
 
-function cleanPunctuation(str: string): string {
-  return str
-    .toLowerCase()
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .replace(/['’`"„“«»]/g, '')
-    .replace(/[-–—/\\._]+/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim();
+function parseArgs(argv: string[]) {
+  const dryRun = argv.includes('--dry-run');
+  const sportOnly = argv.includes('--sport-only');
+  const showOnly = argv.includes('--show-only');
+  const breedIdx = argv.indexOf('--breed');
+  const breedFilter = breedIdx >= 0 ? argv[breedIdx + 1]?.toLowerCase() : null;
+  const limitIdx = argv.indexOf('--limit');
+  const limit = limitIdx >= 0 ? Number(argv[limitIdx + 1]) : null;
+
+  return { dryRun, sportOnly, showOnly, breedFilter, limit: Number.isFinite(limit) ? limit! : null };
 }
 
-function matchBreedArchiveHits(
-  hits: Array<{ label: string; linkName: string; uuid: string; nameLower: string }>,
-  targetName: string,
-): { hit: any; matchType: 'exact' | 'punctuation' } | null {
-  const targetClean = cleanPunctuation(targetName);
-  if (!targetClean) return null;
-
-  // 1. Strict exact match
-  const exact = hits.filter(
-    (h) =>
-      h.nameLower?.trim().toLowerCase() === targetName.trim().toLowerCase() ||
-      h.label?.trim().toLowerCase() === targetName.trim().toLowerCase(),
-  );
-  if (exact.length === 1) return { hit: exact[0], matchType: 'exact' };
-
-  // 2. Punctuation & diacritics cleaned match
-  const cleanMatches = hits.filter(
-    (h) =>
-      cleanPunctuation(h.nameLower || '') === targetClean ||
-      cleanPunctuation(h.label || '') === targetClean,
-  );
-  if (cleanMatches.length === 1) return { hit: cleanMatches[0], matchType: 'punctuation' };
-
-  return null;
-}
-
-async function searchArchive(subdomain: string, term: string): Promise<any[]> {
-  const url = `https://${subdomain}.breedarchive.com/animal/search?term=${encodeURIComponent(term)}`;
-  for (let attempt = 0; attempt < 3; attempt++) {
-    try {
-      const res = await fetch(url, {
-        redirect: 'manual',
-        headers: { Accept: 'application/json' },
-      });
-      if (res.status === 429) {
-        await sleep(2000 * (attempt + 1));
-        continue;
-      }
-      if (res.status !== 200) return [];
-      const ct = res.headers.get('content-type') || '';
-      if (!ct.includes('json')) return [];
-      const text = await res.text();
-      if (!text || text === 'search term is missing') return [];
-      const data = JSON.parse(text);
-      return Array.isArray(data) ? data : [];
-    } catch (e) {
-      if (attempt === 2) return [];
-      await sleep(1000 * (attempt + 1));
-    }
-  }
-  return [];
+function isTargetShowBreed(breed: string): boolean {
+  if (!breed) return false;
+  const k = normalizeBreedKey(breed);
+  if (SIGHTHOUND_AND_COURSING_BREEDS.has(k)) return true;
+  try {
+    const c = canonicalBreed(breed);
+    if (c && SIGHTHOUND_AND_COURSING_BREEDS.has(normalizeBreedKey(c))) return true;
+  } catch {}
+  return false;
 }
 
 async function main() {
-  const apply = process.argv.includes('--apply');
-  console.log(`Breed Archive Scanner — Mode: ${apply ? 'APPLY (writing URLs to dog profiles)' : 'DRY-RUN (audit only)'}`);
+  const { dryRun, sportOnly, showOnly, breedFilter, limit } = parseArgs(process.argv.slice(2));
 
-  const files = fs
-    .readdirSync(DOGS_DIR)
-    .filter((f) => f.endsWith('.json'))
-    .sort((a, b) => Number(a.replace('.json', '')) - Number(b.replace('.json', '')));
+  console.log('=== Breed Archive Comprehensive Scanner ===');
+  console.log(`Mode: ${dryRun ? 'DRY-RUN (read-only audit)' : 'APPLY (writing URLs to dog profiles)'}`);
+  if (sportOnly) console.log('Scope: Sport dogs only');
+  if (showOnly) console.log('Scope: Show dogs only');
+  if (breedFilter) console.log(`Breed filter: "${breedFilter}"`);
+  if (limit) console.log(`Limit: ${limit} dogs`);
+  console.log('-------------------------------------------');
 
-  const queue: Array<{ file: string; dog: any; sub: string }> = [];
-  let alreadyHasPedigree = 0;
-  let unsupportedBreed = 0;
+  const queue: QueueItem[] = [];
+  let sportAlreadyHas = 0;
+  let showAlreadyHas = 0;
 
-  for (const f of files) {
-    const d = JSON.parse(fs.readFileSync(path.join(DOGS_DIR, f), 'utf8'));
-    if (d.pedigree_url) {
-      alreadyHasPedigree++;
-      continue;
+  // 1. Collect sport dogs
+  if (!showOnly && fs.existsSync(SPORT_DOGS_DIR)) {
+    const sportFiles = fs.readdirSync(SPORT_DOGS_DIR).filter((f) => f.endsWith('.json'));
+    for (const f of sportFiles) {
+      const filePath = path.join(SPORT_DOGS_DIR, f);
+      try {
+        const d = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+        if (d.pedigree_url) {
+          sportAlreadyHas++;
+          continue;
+        }
+        const sub = breedArchiveSubdomain(d.breed);
+        if (!sub) continue;
+        if (breedFilter && !sub.includes(breedFilter) && !d.breed?.toLowerCase().includes(breedFilter)) {
+          continue;
+        }
+        if (!d.name_lat?.trim() && !d.name_ru?.trim()) continue;
+
+        queue.push({
+          domain: 'sport',
+          id: String(d.id),
+          breed: d.breed,
+          name_lat: d.name_lat,
+          name_ru: d.name_ru,
+          subdomain: sub,
+          filePath,
+          dogKey: d.dog_key,
+        });
+      } catch {}
     }
-    const sub = getArchiveSubdomain(d.breed);
-    if (!sub) {
-      unsupportedBreed++;
-      continue;
-    }
-    if (!d.name_lat?.trim() && !d.name_ru?.trim()) {
-      continue;
-    }
-    queue.push({ file: f, dog: d, sub });
   }
 
-  console.log(`Total dogs in DB: ${files.length}`);
-  console.log(`Already have verified pedigree_url: ${alreadyHasPedigree}`);
-  console.log(`Breeds not hosted on Breed Archive: ${unsupportedBreed}`);
-  console.log(`Dogs to search in Breed Archive: ${queue.length}\n`);
+  // 2. Collect show dogs
+  const shardsData = new Map<string, Record<string, any>>();
+  if (!sportOnly && fs.existsSync(SHOW_DETAILS_DIR)) {
+    for (let i = 0; i < 256; i++) {
+      const shard = String(i).padStart(3, '0');
+      const shardFile = path.join(SHOW_DETAILS_DIR, `${shard}.json`);
+      if (!fs.existsSync(shardFile)) continue;
+      try {
+        const data = JSON.parse(fs.readFileSync(shardFile, 'utf8'));
+        shardsData.set(shard, data);
+
+        for (const [id, dog] of Object.entries(data)) {
+          const d = dog as any;
+          if (d.alias_to) continue;
+          if (d.pedigree_url) {
+            showAlreadyHas++;
+            continue;
+          }
+          const sub = breedArchiveSubdomain(d.breed);
+          if (!sub) continue;
+
+          // Target: sighthounds/coursing breeds OR dogs with awards (BIS/BIG)
+          const isSighthound = isTargetShowBreed(d.breed);
+          const hasBigAward = d.best_award === 'BIS' || d.best_award === 'BIG' || (d.titles?.BIS || 0) > 0 || (d.titles?.BIG || 0) > 0;
+
+          if (!isSighthound && !hasBigAward && !breedFilter) {
+            continue;
+          }
+
+          if (breedFilter && !sub.includes(breedFilter) && !d.breed?.toLowerCase().includes(breedFilter)) {
+            continue;
+          }
+
+          if (!d.name_lat?.trim() && !d.name_ru?.trim()) continue;
+
+          queue.push({
+            domain: 'show',
+            id,
+            breed: d.breed,
+            name_lat: d.name_lat,
+            name_ru: d.name_ru,
+            subdomain: sub,
+            shard,
+          });
+        }
+      } catch {}
+    }
+  }
+
+  console.log(`Already have pedigree_url: Sport=${sportAlreadyHas}, Show=${showAlreadyHas}`);
+  console.log(`Total queue size: ${queue.length} dogs`);
+
+  const activeQueue = limit ? queue.slice(0, limit) : queue;
+  console.log(`Will process: ${activeQueue.length} dogs\n`);
 
   const results: any[] = [];
-  let matchedCount = 0;
+  let foundSport = 0;
+  let foundShow = 0;
+  const modifiedShards = new Set<string>();
 
-  for (let i = 0; i < queue.length; i++) {
-    const { file, dog, sub } = queue[i];
-    let target = dog.name_lat?.trim() || '';
-    const isCyr = (target.match(/[\u0400-\u04FF]/g) || []).length > (target.match(/[a-zA-Z]/g) || []).length;
-    if (!target || isCyr) {
-      if (dog.name_ru?.trim()) target = transliterateRuToLat(dog.name_ru.trim());
-    }
+  for (let i = 0; i < activeQueue.length; i++) {
+    const item = activeQueue[i];
+    const nameToSearch = item.name_lat || item.name_ru || '';
 
-    if (!target) continue;
+    try {
+      const url = await resolveBreedArchiveUrl(item.breed, item.name_lat, item.name_ru);
 
-    let hits = await searchArchive(sub, target);
-    let match = matchBreedArchiveHits(hits, target);
+      if (url) {
+        if (item.domain === 'sport') foundSport++;
+        else foundShow++;
 
-    if (!match && dog.name_ru?.trim()) {
-      const translit = transliterateRuToLat(dog.name_ru.trim());
-      if (cleanPunctuation(translit) !== cleanPunctuation(target)) {
-        const translitHits = await searchArchive(sub, translit);
-        match = matchBreedArchiveHits(translitHits, translit);
-      }
-    }
+        console.log(`✓ [${item.domain.toUpperCase()}] [${item.id}] ${item.breed} | ${nameToSearch}`);
+        console.log(`  -> ${url}`);
 
-    if (match) {
-      matchedCount++;
-      const url = `https://${sub}.breedarchive.com/animal/view/${match.hit.linkName}-${match.hit.uuid}`;
-      results.push({
-        dogId: dog.id,
-        dogKey: dog.dog_key,
-        breed: dog.breed,
-        name_lat: dog.name_lat,
-        name_ru: dog.name_ru,
-        matchedName: match.hit.label,
-        matchType: match.matchType,
-        url,
-      });
+        results.push({
+          domain: item.domain,
+          id: item.id,
+          breed: item.breed,
+          name_lat: item.name_lat,
+          name_ru: item.name_ru,
+          url,
+        });
 
-      console.log(`✓ [${dog.id}] ${dog.breed} | ${dog.name_lat || dog.name_ru} -> ${match.hit.label} (${match.matchType})`);
+        if (!dryRun) {
+          if (item.domain === 'sport' && item.filePath) {
+            try {
+              const dog = JSON.parse(fs.readFileSync(item.filePath, 'utf8'));
+              dog.pedigree_url = url;
+              fs.writeFileSync(item.filePath, `${JSON.stringify(dog)}\n`, 'utf8');
 
-      if (apply) {
-        dog.pedigree_url = url;
-        const filePath = path.join(DOGS_DIR, file);
-        fs.writeFileSync(filePath, `${JSON.stringify(dog)}\n`, 'utf8');
-        if (dog.dog_key) {
-          const keyPath = path.join(DOGS_KEY_DIR, `${dog.dog_key}.json`);
-          if (fs.existsSync(keyPath)) {
-            fs.writeFileSync(keyPath, `${JSON.stringify(dog)}\n`, 'utf8');
+              if (item.dogKey) {
+                const keyPath = path.join(SPORT_DOGS_KEY_DIR, `${item.dogKey}.json`);
+                if (fs.existsSync(keyPath)) {
+                  fs.writeFileSync(keyPath, `${JSON.stringify(dog)}\n`, 'utf8');
+                }
+              }
+            } catch (err) {
+              console.error(`Failed writing sport dog ${item.id}:`, err);
+            }
+          } else if (item.domain === 'show' && item.shard) {
+            const shardObj = shardsData.get(item.shard);
+            if (shardObj && shardObj[item.id]) {
+              shardObj[item.id].pedigree_url = url;
+              modifiedShards.add(item.shard);
+            }
           }
         }
       }
+    } catch (err) {
+      console.error(`✗ Error on [${item.id}] ${item.breed} ${nameToSearch}:`, err instanceof Error ? err.message : err);
     }
 
-    if ((i + 1) % 50 === 0 || i === queue.length - 1) {
-      console.log(`Progress: ${i + 1} / ${queue.length} dogs checked (${matchedCount} matches so far)`);
-      fs.writeFileSync(REPORT_FILE, JSON.stringify({
-        totalChecked: i + 1,
-        totalQueue: queue.length,
-        matchedCount,
-        results,
-      }, null, 2), 'utf8');
+    // Flush modified shards every 100 items or at the end
+    if (!dryRun && (i + 1) % 100 === 0 && modifiedShards.size > 0) {
+      for (const shard of modifiedShards) {
+        const shardFile = path.join(SHOW_DETAILS_DIR, `${shard}.json`);
+        const data = shardsData.get(shard);
+        if (data) {
+          fs.writeFileSync(shardFile, JSON.stringify(data), 'utf8');
+        }
+      }
+      modifiedShards.clear();
+    }
+
+    if ((i + 1) % 50 === 0 || i === activeQueue.length - 1) {
+      console.log(`[Progress ${i + 1}/${activeQueue.length}] Matches: Sport=${foundSport}, Show=${foundShow}`);
+      fs.writeFileSync(
+        REPORT_FILE,
+        JSON.stringify(
+          {
+            timestamp: new Date().toISOString(),
+            totalProcessed: i + 1,
+            totalQueue: activeQueue.length,
+            foundSport,
+            foundShow,
+            totalFound: foundSport + foundShow,
+            results,
+          },
+          null,
+          2,
+        ),
+        'utf8',
+      );
     }
 
     await sleep(DELAY_MS);
   }
 
-  console.log(`\n=== SCAN COMPLETED ===`);
-  console.log(`Total dogs searched: ${queue.length}`);
-  console.log(`New matches found: ${matchedCount}`);
-  if (apply) {
-    console.log(`Updated all ${matchedCount} dog files in ${DOGS_DIR} and ${DOGS_KEY_DIR}.`);
-    console.log(`Remember to run: npm run build-all-data`);
+  // Final flush for any remaining modified shards
+  if (!dryRun && modifiedShards.size > 0) {
+    console.log(`\nFlushing ${modifiedShards.size} modified show shards to disk...`);
+    for (const shard of modifiedShards) {
+      const shardFile = path.join(SHOW_DETAILS_DIR, `${shard}.json`);
+      const data = shardsData.get(shard);
+      if (data) {
+        fs.writeFileSync(shardFile, JSON.stringify(data), 'utf8');
+      }
+    }
+  }
+
+  console.log('\n=== SCAN COMPLETED ===');
+  console.log(`Total dogs scanned: ${activeQueue.length}`);
+  console.log(`New matches found: Sport=${foundSport}, Show=${foundShow}, Total=${foundSport + foundShow}`);
+  if (!dryRun && (foundSport > 0 || foundShow > 0)) {
+    console.log('\nRemember to run: npm run build-all-data');
   }
 }
 
-main().catch(console.error);
+main().catch((err) => {
+  console.error(err);
+  process.exit(1);
+});
