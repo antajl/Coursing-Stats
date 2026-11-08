@@ -8,6 +8,19 @@ import {
 } from '../lib/competition-titles'
 
 describe('competitionTitleKey', () => {
+  it('maps CACMB, RegCACMB, and СС correctly', () => {
+    expect(competitionTitleKey('CACMB')).toBe('cacmb')
+    expect(competitionTitleDisplayName('CACMB')).toBe('CACMB')
+    expect(competitionTitleKey('RegCACMB')).toBe('regcacmb')
+    expect(competitionTitleDisplayName('RegCACMB')).toBe('RegCACMB')
+    expect(competitionTitleKey('R.CACMB')).toBe('rcacmb')
+    expect(competitionTitleDisplayName('R.CACMB')).toBe('R.CACMB')
+    expect(competitionTitleKey('СС')).toBe('ss')
+    expect(competitionTitleDisplayName('СС')).toBe('СС')
+    expect(competitionTitleKey('CC')).toBe('ss')
+    expect(competitionTitleDisplayName('CC')).toBe('СС')
+  })
+
   it('keeps CACLBr separate from CACL', () => {
     expect(competitionTitleKey('CACLBr')).toBe('caclbr')
     expect(competitionTitleKey('CACL')).toBe('cacl')
@@ -152,6 +165,22 @@ describe('compareCompetitionTitles', () => {
       'CACIL',
       'CACL',
       'RegCACL',
+    ])
+  })
+
+  it('orders Чемпион РКФ > CACMB > RegCACMB > СС', () => {
+    const parts = [
+      'СС',
+      'RegCACMB',
+      'Чемпион РКФ',
+      'CACMB',
+    ].sort(compareCompetitionTitles)
+
+    expect(parts).toEqual([
+      'Чемпион РКФ',
+      'CACMB',
+      'RegCACMB',
+      'СС',
     ])
   })
 

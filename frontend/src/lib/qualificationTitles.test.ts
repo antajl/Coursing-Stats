@@ -124,6 +124,9 @@ describe('isCertificateToken', () => {
     expect(isCertificateToken('R.CACIL')).toBe(true)
     expect(isCertificateToken('RegCACL')).toBe(true)
     expect(isCertificateToken('CACLBr')).toBe(true)
+    expect(isCertificateToken('CACMB')).toBe(true)
+    expect(isCertificateToken('R.CACMB')).toBe(true)
+    expect(isCertificateToken('RegCACMB')).toBe(true)
 
     // Genuine titles must NOT be treated as certificates
     expect(isCertificateToken('BIS')).toBe(false)
