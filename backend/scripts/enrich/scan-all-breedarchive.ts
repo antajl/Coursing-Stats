@@ -33,34 +33,46 @@ function sleep(ms: number) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-const SIGHTHOUND_AND_COURSING_BREEDS = new Set([
-  'САЛЮКИ',
-  'УИППЕТ',
-  'РУССКАЯ ПСОВАЯ БОРЗАЯ',
-  'МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ',
-  'МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)',
-  'ЛЕВРЕТКА',
-  'ГРЕЙХАУНД',
-  'ФАРАОНОВА СОБАКА',
-  'ЧИРНЕКО ДЕЛЬ ЭТНА',
-  'ЧИРНЕКО ДЕЛЬ’ЭТНА',
-  'ЧИРНЕКО ДЕЛЬ\'ЭТНА',
-  'АЗАВАК',
-  'СЛЮГИ',
-  'ПОДЕНКО ИБИЦЕНКО',
-  'ПОДЕНКО ИБИЦЕНКО (К Ш, Г Ш)',
-  'ПОДЕНКО ИБИЦЕНКО (К-Ш, Г-Ш)',
-  'ПОДЕНКО ИБИЦЕНКО Г Ш',
-  'ПОДЕНКО ИБИЦЕНКО К/Ш',
-  'ПОДЕНГО ПОРТУГАЛЬСКИЙ',
-  'ДИРХАУНД',
-  'ДИРХАУНД (ШОТЛАНДСКАЯ БОРЗАЯ)',
-  'ИСПАНСКИЙ ГАЛЬГО',
-  'ИСПАНСКАЯ БОРЗАЯ (ГАЛЬГО)',
-  'ГАЛЬГО',
-  'ВЕНГЕРСКАЯ БОРЗАЯ',
-  'ЧАРТ',
-  'СИЛКЕН ВИНДСПРАЙТ',
+async function safeWriteJson(filePath: string, content: string) {
+  const tmp = `${filePath}.${process.pid}.${Date.now()}.tmp`;
+  for (let attempt = 0; attempt < 5; attempt++) {
+    try {
+      fs.writeFileSync(tmp, content, 'utf8');
+      try {
+        fs.renameSync(tmp, filePath);
+      } catch {
+        fs.copyFileSync(tmp, filePath);
+        try { fs.unlinkSync(tmp); } catch {}
+      }
+      return;
+    } catch (err) {
+      try { if (fs.existsSync(tmp)) fs.unlinkSync(tmp); } catch {}
+      if (attempt === 4) {
+        console.error(`Warning: could not write to ${filePath}:`, (err as any)?.message);
+        return;
+      }
+      await sleep(150 * (attempt + 1));
+    }
+  }
+}
+
+const SIGHTHOUND_SUBDOMAINS = new Set([
+  'saluki',
+  'whippet',
+  'borzoi',
+  'italiangreyhound',
+  'greyhound',
+  'pharaohhound',
+  'cirneco',
+  'azawakh',
+  'sloughi',
+  'ibizanhound',
+  'deerhound',
+  'galgoespanol',
+  'magyaragar',
+  'chartpolski',
+  'podengoportugues',
+  'silkenwindsprite',
 ]);
 
 interface QueueItem {
@@ -89,13 +101,8 @@ function parseArgs(argv: string[]) {
 
 function isTargetShowBreed(breed: string): boolean {
   if (!breed) return false;
-  const k = normalizeBreedKey(breed);
-  if (SIGHTHOUND_AND_COURSING_BREEDS.has(k)) return true;
-  try {
-    const c = canonicalBreed(breed);
-    if (c && SIGHTHOUND_AND_COURSING_BREEDS.has(normalizeBreedKey(c))) return true;
-  } catch {}
-  return false;
+  const sub = breedArchiveSubdomain(breed);
+  return Boolean(sub && SIGHTHOUND_SUBDOMAINS.has(sub));
 }
 
 async function main() {
@@ -233,12 +240,12 @@ async function main() {
             try {
               const dog = JSON.parse(fs.readFileSync(item.filePath, 'utf8'));
               dog.pedigree_url = url;
-              fs.writeFileSync(item.filePath, `${JSON.stringify(dog)}\n`, 'utf8');
+              await safeWriteJson(item.filePath, `${JSON.stringify(dog)}\n`);
 
               if (item.dogKey) {
                 const keyPath = path.join(SPORT_DOGS_KEY_DIR, `${item.dogKey}.json`);
                 if (fs.existsSync(keyPath)) {
-                  fs.writeFileSync(keyPath, `${JSON.stringify(dog)}\n`, 'utf8');
+                  await safeWriteJson(keyPath, `${JSON.stringify(dog)}\n`);
                 }
               }
             } catch (err) {
@@ -263,7 +270,7 @@ async function main() {
         const shardFile = path.join(SHOW_DETAILS_DIR, `${shard}.json`);
         const data = shardsData.get(shard);
         if (data) {
-          fs.writeFileSync(shardFile, JSON.stringify(data), 'utf8');
+          await safeWriteJson(shardFile, JSON.stringify(data));
         }
       }
       modifiedShards.clear();
@@ -271,7 +278,7 @@ async function main() {
 
     if ((i + 1) % 50 === 0 || i === activeQueue.length - 1) {
       console.log(`[Progress ${i + 1}/${activeQueue.length}] Matches: Sport=${foundSport}, Show=${foundShow}`);
-      fs.writeFileSync(
+      await safeWriteJson(
         REPORT_FILE,
         JSON.stringify(
           {
@@ -286,7 +293,6 @@ async function main() {
           null,
           2,
         ),
-        'utf8',
       );
     }
 
@@ -300,7 +306,7 @@ async function main() {
       const shardFile = path.join(SHOW_DETAILS_DIR, `${shard}.json`);
       const data = shardsData.get(shard);
       if (data) {
-        fs.writeFileSync(shardFile, JSON.stringify(data), 'utf8');
+        await safeWriteJson(shardFile, JSON.stringify(data));
       }
     }
   }

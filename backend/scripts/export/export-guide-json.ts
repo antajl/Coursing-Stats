@@ -4,18 +4,25 @@ import { fileURLToPath } from 'node:url';
 
 import {
   TITLE_RANK_LADDER,
-  ABSOLUTE_CAREER_TITLES,
-  EVENT_TITLES,
-  CUMULATIVE_TITLES,
+  SPORT_TIER_CERTIFICATES,
+  SPORT_TIER_ANNUAL_EVENTS,
+  SPORT_TIER_CUMULATIVE,
   NATIONAL_CHAMPION_VARIANTS,
-  STATUS_EVENT_RULES,
   COURSING_REQUIREMENTS as COURSING_REQ,
-  CRITERIA,
+  COURSING_JUDGING_CRITERIA,
+  COURSING_TIE_BREAK_STEPS,
+  SPORT_BLANKET_COLORS,
+  SPORT_CAREER_ROADMAP,
+  ABBREVIATIONS as SPORT_ABBREVIATIONS,
 } from '../../../frontend/src/pages/Guide/constants';
 import {
   SHOW_RANKS,
-  SHOW_EVENT_AWARDS_PRIORITY,
-  SHOW_CHAMPIONSHIP_TITLES,
+  SHOW_CLASSES,
+  SHOW_GRADES,
+  SHOW_RING_AWARDS,
+  SHOW_CAREER_TITLES,
+  SHOW_REQUIREMENTS,
+  SHOW_ABBREVIATIONS,
 } from '../../../frontend/src/pages/Guide/showConstants';
 import {
   DONINO_SPEED_LADDER,
@@ -28,7 +35,8 @@ import {
   PROTOCOL_ABBREVIATIONS,
 } from '../../../frontend/src/pages/Guide/protocolConstants';
 import {
-  RATING_LADDER,
+  OLYMPIC_CASCADE_STEPS,
+  CS_V2_COMPONENTS,
   RATING_REQUIREMENTS,
   RATING_ABBREVIATIONS,
 } from '../../../frontend/src/pages/Guide/ratingConstants';
@@ -48,18 +56,25 @@ const guideData = {
       howToGet: item.howToGet,
       details: item.details,
     })),
-    absolute_career: ABSOLUTE_CAREER_TITLES,
-    event_titles: EVENT_TITLES,
-    cumulative: CUMULATIVE_TITLES,
+    tier_certificates: SPORT_TIER_CERTIFICATES,
+    tier_annual_events: SPORT_TIER_ANNUAL_EVENTS,
+    tier_cumulative: SPORT_TIER_CUMULATIVE,
     national_variants: NATIONAL_CHAMPION_VARIANTS,
-    status_events: STATUS_EVENT_RULES,
     requirements: COURSING_REQ,
-    criteria: CRITERIA,
+    criteria: COURSING_JUDGING_CRITERIA,
+    tie_break_steps: COURSING_TIE_BREAK_STEPS,
+    blanket_colors: SPORT_BLANKET_COLORS,
+    career_roadmap: SPORT_CAREER_ROADMAP,
+    abbreviations: SPORT_ABBREVIATIONS,
   },
   shows: {
     ranks: SHOW_RANKS,
-    awards: SHOW_EVENT_AWARDS_PRIORITY,
-    titles: SHOW_CHAMPIONSHIP_TITLES,
+    classes: SHOW_CLASSES,
+    grades: SHOW_GRADES,
+    awards: SHOW_RING_AWARDS,
+    titles: SHOW_CAREER_TITLES,
+    requirements: SHOW_REQUIREMENTS,
+    abbreviations: SHOW_ABBREVIATIONS,
   },
   donino: {
     speed_ladder: DONINO_SPEED_LADDER.map(item => ({
@@ -86,14 +101,8 @@ const guideData = {
     abbreviations: PROTOCOL_ABBREVIATIONS,
   },
   rating: {
-    ladder: RATING_LADDER.map(item => ({
-      rank: item.rank,
-      badge: item.badge,
-      name: item.name,
-      prestigeLabel: item.prestigeLabel,
-      howToGet: item.howToGet,
-      details: item.details,
-    })),
+    olympic_cascade: OLYMPIC_CASCADE_STEPS,
+    cs_v2_components: CS_V2_COMPONENTS,
     requirements: RATING_REQUIREMENTS,
     abbreviations: RATING_ABBREVIATIONS,
   },
