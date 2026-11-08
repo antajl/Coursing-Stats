@@ -1,17 +1,19 @@
-import { useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import {
   Award,
+  BookOpen,
   CheckCircle2,
+  ChevronRight,
   ChevronUp,
   Compass,
   FileText,
   Flag,
   Gauge,
   HelpCircle,
+  Lightbulb,
   Scale,
   Search,
   ShieldCheck,
-  Sparkles,
   Trophy,
   X,
 } from 'lucide-react'
@@ -30,6 +32,7 @@ import {
   SPORT_TIER_CUMULATIVE,
 } from '../constants'
 import { GUIDE_SPORT_TITLES_FAQS } from '../guideFaqs'
+import { executeSmartGuideSearch } from '../smartSearch'
 import {
   AbbreviationsDropdown,
   OfficialSourcesList,
@@ -38,32 +41,32 @@ import {
   TitleLadderList,
 } from './GuideUi'
 
-type DemoVariant = 1 | 2 | 3 | 4
-type ScenarioMode = 'all' | 'beginner' | 'titles' | 'judging'
-
-const VARIANT_INFO: Record<DemoVariant, { title: string; desc: string }> = {
-  1: {
-    title: 'Вариант 1: Сценарный переключатель фокуса (Role-Based Lens)',
-    desc: 'Разделяет массивную страницу на 3 понятных пользовательских сценария («Новичку», «Титулы», «Судейство»). Страница становится в 3 раза короче и не перегружает деталями.',
-  },
-  2: {
-    title: 'Вариант 2: Липкая панель быстрых переходов (Sticky Jump-Bar)',
-    desc: 'Сохраняет все 9 блоков, но закрепляет вверху горизонтальную строку навигации по якорям со скролл-переходом и кнопкой возврата наверх.',
-  },
-  3: {
-    title: 'Вариант 3: Интеллектуальный Spotlight-поиск и подсказки',
-    desc: 'Вверху ставится умная поисковая строка и 4 кнопки быстрых вопросов («С какого возраста?», «Схемы НЧ», «Тай-брейк»). Мгновенно фильтрует карточки по запросу.',
-  },
-  4: {
-    title: 'Вариант 4: Архитектурное разделение (Чистый спорт и карьера, 5 блоков)',
-    desc: 'Убирает дублирование с вкладкой «Протоколы»: оставляет в состязаниях только маршрут, титулы и схемы НЧ (5 блоков). Техническое судейство живёт в «Протоколах».',
-  },
-}
+const POPULAR_QUERIES = [
+  { label: 'С какого возраста можно бегать?', query: 'со скольки месяцев возраст' },
+  { label: 'Что такое кворум и как делят по полу?', query: 'кворум минимум собак кобели и суки' },
+  { label: 'Переход сертификата CACL со 2-го места', query: 'переход r.cacl второе место' },
+  { label: 'Как закрыть титул НЧ РК (6 схем)', query: '6 схем нч рк набор сертификатов' },
+  { label: 'Как решается ничья (тай-брейк)', query: 'тай-брейк равные баллы ничья' },
+  { label: 'Беговой намордник и цвета попон', query: 'намордник попона экипировка' },
+  { label: 'Что означает отметка «ВС»?', query: 'норма вс высшая квалификация 66.7' },
+] as const
 
 export default function TitlesTab() {
-  const [demoVariant, setDemoVariant] = useState<DemoVariant>(1)
-  const [scenario, setScenario] = useState<ScenarioMode>('all')
   const [searchQuery, setSearchQuery] = useState('')
+  const [showScrollTop, setShowScrollTop] = useState(false)
+
+  // Отслеживание скролла для плавающей кнопки «Наверх»
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 300)
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
 
   const scrollToSection = (id: string) => {
     const el = document.getElementById(id)
@@ -72,15 +75,17 @@ export default function TitlesTab() {
     }
   }
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
+  // Интеллектуальный поиск с раскладками, опечатками и стеммингом
+  const searchResult = useMemo(
+    () => executeSmartGuideSearch(searchQuery),
+    [searchQuery]
+  )
 
-  // Фильтрация для Варианта 3 (Spotlight Search)
-  const q = searchQuery.trim().toLowerCase()
-  const isMatch = (text: string) => !q || text.toLowerCase().includes(q)
+  const isSearching = searchQuery.trim().length > 0
+  const isSectionVisible = (secId: string) =>
+    !isSearching || searchResult.matchedSectionIds.has(secId)
 
-  // Секция 1: Дисциплины
+  // 1. Две спортивные дисциплины
   const renderDisciplines = () => (
     <div id="sec-disciplines">
       <SectionCard title="Две спортивные дисциплины: курсинг и бега борзых">
@@ -131,7 +136,7 @@ export default function TitlesTab() {
     </div>
   )
 
-  // Секция 2: Маршрут
+  // 2. Пошаговый путь
   const renderRoadmap = () => (
     <div id="sec-roadmap">
       <SectionCard title="Пошаговый путь в спорте: от первой тренировки до Чемпиона России">
@@ -181,7 +186,7 @@ export default function TitlesTab() {
     </div>
   )
 
-  // Секция 3: Иерархия титулов
+  // 3. Иерархия наград в 3 логических блоках
   const renderHierarchy = () => (
     <div id="sec-hierarchy">
       <SectionCard title="Иерархия спортивных сертификатов и титулов РКФ">
@@ -257,7 +262,7 @@ export default function TitlesTab() {
     </div>
   )
 
-  // Секция 4: 6 схем НЧ РК
+  // 4. 6 схем оформления НЧ РК
   const renderSchemes = () => (
     <div id="sec-schemes">
       <SectionCard title="6 официальных схем оформления титула «Национальный чемпион по РК» (НЧ РК)">
@@ -290,7 +295,7 @@ export default function TitlesTab() {
     </div>
   )
 
-  // Секция 5: Судейство в курсинге
+  // 5. Судейство в курсинге
   const renderJudging = () => (
     <div id="sec-judging">
       <SectionCard title="Судейство в курсинге: 5 официальных критериев и тай-брейк">
@@ -360,7 +365,7 @@ export default function TitlesTab() {
     </div>
   )
 
-  // Секция 6: Памятка участника
+  // 6. Памятка участника
   const renderRequirements = () => (
     <div id="sec-requirements">
       <SectionCard title="Памятка участника: регламент, кворум и экипировка">
@@ -416,7 +421,7 @@ export default function TitlesTab() {
     </div>
   )
 
-  // Секция 7: Словарь
+  // 7. Словарь
   const renderAbbreviations = () => (
     <div id="sec-abbr">
       <SectionCard title="Словарь сокращений и терминов соревнований">
@@ -431,7 +436,7 @@ export default function TitlesTab() {
     </div>
   )
 
-  // Секция 8: Источники
+  // 8. Источники
   const renderSources = () => (
     <div id="sec-sources">
       <SectionCard title="Официальные первоисточники и регламенты">
@@ -443,7 +448,7 @@ export default function TitlesTab() {
     </div>
   )
 
-  // Секция 9: FAQ
+  // 9. FAQ
   const renderFaqs = () => (
     <div id="sec-faqs">
       <SectionCard title="Частые вопросы о соревнованиях">
@@ -466,372 +471,159 @@ export default function TitlesTab() {
 
   return (
     <div className="space-y-6">
-      {/* ПАНЕЛЬ ПЕРЕКЛЮЧЕНИЯ ВАРИАНТОВ ДЛЯ ТЕСТИРОВАНИЯ */}
-      <div className="sticky top-0 z-30 rounded-xl border border-camel-300 bg-amber-50/95 p-3 shadow-md backdrop-blur-md">
-        <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+      {/* ИНТЕЛЛЕКТУАЛЬНЫЙ ПОИСК В ШАПКЕ */}
+      <div className="rounded-2xl border border-camel-200 bg-linear-to-b from-white to-cream-50/70 p-4 sm:p-5 shadow-xs">
+        <div className="flex items-center justify-between gap-2 mb-2">
           <div className="flex items-center gap-2">
-            <span className="flex items-center gap-1 rounded bg-camel-200 px-2 py-0.5 text-[11px] font-bold text-camel-950 uppercase tracking-wider">
-              <Sparkles className="h-3 w-3 text-camel-800" aria-hidden />
-              Тест вариантов UX
+            <span className="flex h-6 w-6 items-center justify-center rounded-md bg-camel-100 text-camel-900">
+              <Search className="h-3.5 w-3.5" aria-hidden />
             </span>
-            <span className="text-xs text-charcoal-700 font-medium hidden sm:inline">
-              Выберите способ компоновки страницы:
+            <span className="text-xs sm:text-sm font-bold text-charcoal-900">
+              Умный поиск по правилам, регламентам и титулам
             </span>
           </div>
-
-          <div className="flex flex-wrap items-center gap-1.5">
-            <button
-              type="button"
-              onClick={() => setDemoVariant(1)}
-              className={`rounded-lg px-2.5 py-1 text-xs font-bold transition-all cursor-pointer ${
-                demoVariant === 1
-                  ? 'bg-camel-700 text-white shadow-xs'
-                  : 'bg-white text-charcoal-700 hover:bg-camel-100 border border-camel-200'
-              }`}
-            >
-              1. Сценарный фокус
-            </button>
-            <button
-              type="button"
-              onClick={() => setDemoVariant(2)}
-              className={`rounded-lg px-2.5 py-1 text-xs font-bold transition-all cursor-pointer ${
-                demoVariant === 2
-                  ? 'bg-camel-700 text-white shadow-xs'
-                  : 'bg-white text-charcoal-700 hover:bg-camel-100 border border-camel-200'
-              }`}
-            >
-              2. Липкий Jump-Bar
-            </button>
-            <button
-              type="button"
-              onClick={() => setDemoVariant(3)}
-              className={`rounded-lg px-2.5 py-1 text-xs font-bold transition-all cursor-pointer ${
-                demoVariant === 3
-                  ? 'bg-camel-700 text-white shadow-xs'
-                  : 'bg-white text-charcoal-700 hover:bg-camel-100 border border-camel-200'
-              }`}
-            >
-              3. Spotlight-поиск
-            </button>
-            <button
-              type="button"
-              onClick={() => setDemoVariant(4)}
-              className={`rounded-lg px-2.5 py-1 text-xs font-bold transition-all cursor-pointer ${
-                demoVariant === 4
-                  ? 'bg-camel-700 text-white shadow-xs'
-                  : 'bg-white text-charcoal-700 hover:bg-camel-100 border border-camel-200'
-              }`}
-            >
-              4. Чистый спорт (5 блоков)
-            </button>
-          </div>
+          <span className="text-[11px] font-medium text-charcoal-500 hidden sm:inline">
+            Устойчив к опечаткам, окончаниям и смене раскладки
+          </span>
         </div>
 
-        <p className="mt-2 text-xs text-charcoal-700 leading-snug border-t border-camel-200/80 pt-1.5">
-          <strong>{VARIANT_INFO[demoVariant].title}:</strong> {VARIANT_INFO[demoVariant].desc}
-        </p>
+        {/* Поисковое поле ввода */}
+        <div className="relative">
+          <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3.5 text-charcoal-400">
+            <Search className="h-4 w-4" aria-hidden />
+          </div>
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder="Задайте вопрос или введите слово (например: возраст, кворум, переход CACL, намордник, ничья)..."
+            className="w-full rounded-xl border border-old-money-200 bg-white py-3 pl-10 pr-10 text-xs sm:text-sm font-medium text-charcoal-800 placeholder-charcoal-400 shadow-2xs transition-all hover:border-camel-300 focus:border-camel-400 focus:outline-none focus:ring-2 focus:ring-camel-400/20"
+          />
+          {searchQuery && (
+            <button
+              type="button"
+              onClick={() => setSearchQuery('')}
+              className="absolute inset-y-0 right-0 flex items-center pr-3.5 text-charcoal-400 hover:text-charcoal-700 cursor-pointer"
+              aria-label="Очистить поиск"
+            >
+              <X className="h-4 w-4" />
+            </button>
+          )}
+        </div>
+
+        {/* Быстрые чипы частых вопросов */}
+        <div className="mt-3 flex flex-wrap items-center gap-1.5 text-xs">
+          <span className="text-[11px] text-charcoal-500 font-medium mr-0.5">Частые темы:</span>
+          {POPULAR_QUERIES.map((item) => (
+            <button
+              key={item.label}
+              type="button"
+              onClick={() => setSearchQuery(item.query)}
+              className="rounded-full border border-old-money-200 bg-white px-2.5 py-1 text-[11px] font-medium text-charcoal-700 hover:border-camel-300 hover:bg-camel-50 hover:text-camel-900 transition-all cursor-pointer shadow-2xs"
+            >
+              {item.label}
+            </button>
+          ))}
+        </div>
       </div>
 
-      {/* ============================================================== */}
-      {/* РЕНДЕР ВАРИАНТА 1: СЦЕНАРНЫЙ ПЕРЕКЛЮЧАТЕЛЬ ФОКУСА (ROLE-BASED) */}
-      {/* ============================================================== */}
-      {demoVariant === 1 && (
-        <div className="space-y-6">
-          {/* Сегментный переключатель сценария */}
-          <div className="rounded-xl border border-old-money-200 bg-white p-3 shadow-2xs">
-            <div className="text-[11px] font-bold uppercase tracking-wider text-camel-800 mb-2">
-              Выберите интересующий сценарий (страница адаптируется под вашу задачу):
+      {/* ПРЯМОЙ ОТВЕТ НА ВОПРОС (DIRECT ANSWER CARD) */}
+      {searchResult.matchedDirectAnswer && (
+        <div className="rounded-2xl border-2 border-amber-300 bg-linear-to-r from-amber-50/90 via-cream-50/80 to-amber-50/90 p-4 sm:p-5 shadow-sm">
+          <div className="flex items-center justify-between gap-2 border-b border-amber-200 pb-2.5">
+            <div className="flex items-center gap-2">
+              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-amber-200 text-amber-950 shadow-2xs">
+                <Lightbulb className="h-3.5 w-3.5" aria-hidden />
+              </span>
+              <span className="text-xs font-bold uppercase tracking-wider text-amber-950">
+                Быстрый ответ по регламенту: {searchResult.matchedDirectAnswer.title}
+              </span>
             </div>
-            <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
-              <button
-                type="button"
-                onClick={() => setScenario('all')}
-                className={`rounded-lg p-2.5 text-left text-xs transition-all cursor-pointer border ${
-                  scenario === 'all'
-                    ? 'border-camel-500 bg-camel-100/80 font-bold text-camel-950 shadow-2xs'
-                    : 'border-old-money-200 bg-white text-charcoal-700 hover:bg-cream-50'
-                }`}
-              >
-                <div className="font-bold">Все разделы</div>
-                <div className="text-[10px] text-charcoal-500 font-normal">Полный справочник (9)</div>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => setScenario('beginner')}
-                className={`rounded-lg p-2.5 text-left text-xs transition-all cursor-pointer border ${
-                  scenario === 'beginner'
-                    ? 'border-camel-500 bg-camel-100/80 font-bold text-camel-950 shadow-2xs'
-                    : 'border-old-money-200 bg-white text-charcoal-700 hover:bg-cream-50'
-                }`}
-              >
-                <div className="font-bold text-emerald-900">Новичку в спорте</div>
-                <div className="text-[10px] text-charcoal-500 font-normal">Старт, допуск, книжка</div>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => setScenario('titles')}
-                className={`rounded-lg p-2.5 text-left text-xs transition-all cursor-pointer border ${
-                  scenario === 'titles'
-                    ? 'border-camel-500 bg-camel-100/80 font-bold text-camel-950 shadow-2xs'
-                    : 'border-old-money-200 bg-white text-charcoal-700 hover:bg-cream-50'
-                }`}
-              >
-                <div className="font-bold text-amber-900">Титулы и схемы НЧ</div>
-                <div className="text-[10px] text-charcoal-500 font-normal">CACL, 6 схем НЧ, FCI</div>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => setScenario('judging')}
-                className={`rounded-lg p-2.5 text-left text-xs transition-all cursor-pointer border ${
-                  scenario === 'judging'
-                    ? 'border-camel-500 bg-camel-100/80 font-bold text-camel-950 shadow-2xs'
-                    : 'border-old-money-200 bg-white text-charcoal-700 hover:bg-cream-50'
-                }`}
-              >
-                <div className="font-bold text-blue-900">Судейство и правила</div>
-                <div className="text-[10px] text-charcoal-500 font-normal">5 критериев, тай-брейк</div>
-              </button>
-            </div>
+            <button
+              type="button"
+              onClick={() => scrollToSection(searchResult.matchedDirectAnswer!.targetSectionId)}
+              className="inline-flex items-center gap-1 text-[11px] font-semibold text-camel-800 hover:text-camel-950 underline underline-offset-2 cursor-pointer"
+            >
+              <span>К разделу</span>
+              <ChevronRight className="h-3 w-3" />
+            </button>
           </div>
 
-          {/* Отображение выбранных блоков */}
-          {(scenario === 'all' || scenario === 'beginner') && renderDisciplines()}
-          {(scenario === 'all' || scenario === 'beginner') && renderRoadmap()}
-          {(scenario === 'all' || scenario === 'titles') && renderHierarchy()}
-          {(scenario === 'all' || scenario === 'titles') && renderSchemes()}
-          {(scenario === 'all' || scenario === 'judging') && renderJudging()}
-          {(scenario === 'all' || scenario === 'beginner' || scenario === 'judging') && renderRequirements()}
-          {(scenario === 'all' || scenario === 'judging') && renderAbbreviations()}
-          {(scenario === 'all' || scenario === 'titles') && renderSources()}
-          {(scenario === 'all' || scenario === 'beginner') && renderFaqs()}
+          <p className="mt-2.5 text-xs sm:text-sm font-medium text-charcoal-800 leading-relaxed">
+            {searchResult.matchedDirectAnswer.shortAnswer}
+          </p>
+
+          <ul className="mt-2.5 space-y-1.5 pl-4 list-disc text-xs sm:text-sm text-charcoal-700 leading-relaxed">
+            {searchResult.matchedDirectAnswer.bulletPoints.map((pt) => (
+              <li key={pt}>{pt}</li>
+            ))}
+          </ul>
+
+          <div className="mt-3 pt-2 border-t border-amber-200/70 text-[11px] text-amber-900 font-medium">
+            Официальный первоисточник: {searchResult.matchedDirectAnswer.officialRef}
+          </div>
         </div>
       )}
 
-      {/* ============================================================== */}
-      {/* РЕНДЕР ВАРИАНТА 2: ЛИПКАЯ ПАНЕЛЬ БЫСТРЫХ ПЕРЕХОДОВ (JUMP-BAR) */}
-      {/* ============================================================== */}
-      {demoVariant === 2 && (
-        <div className="space-y-6">
-          {/* Липкая панель якорей */}
-          <div className="sticky top-20 z-20 -mx-1 rounded-xl border border-old-money-200 bg-white/95 p-2 shadow-sm backdrop-blur-md">
-            <div className="flex items-center gap-1.5 overflow-x-auto pb-1 text-xs">
-              <span className="shrink-0 text-[10px] font-bold uppercase tracking-wider text-charcoal-400 pl-1">
-                Перейти:
-              </span>
-              <button
-                type="button"
-                onClick={() => scrollToSection('sec-disciplines')}
-                className="shrink-0 rounded-md bg-cream-50 px-2.5 py-1 font-semibold text-charcoal-700 hover:bg-camel-100 hover:text-camel-900 border border-old-money-200 transition-colors"
-              >
-                Дисциплины
-              </button>
-              <button
-                type="button"
-                onClick={() => scrollToSection('sec-roadmap')}
-                className="shrink-0 rounded-md bg-cream-50 px-2.5 py-1 font-semibold text-charcoal-700 hover:bg-camel-100 hover:text-camel-900 border border-old-money-200 transition-colors"
-              >
-                Маршрут (4 шага)
-              </button>
-              <button
-                type="button"
-                onClick={() => scrollToSection('sec-hierarchy')}
-                className="shrink-0 rounded-md bg-cream-50 px-2.5 py-1 font-semibold text-charcoal-700 hover:bg-camel-100 hover:text-camel-900 border border-old-money-200 transition-colors"
-              >
-                Титулы РКФ
-              </button>
-              <button
-                type="button"
-                onClick={() => scrollToSection('sec-schemes')}
-                className="shrink-0 rounded-md bg-cream-50 px-2.5 py-1 font-semibold text-charcoal-700 hover:bg-camel-100 hover:text-camel-900 border border-old-money-200 transition-colors"
-              >
-                6 схем НЧ РК
-              </button>
-              <button
-                type="button"
-                onClick={() => scrollToSection('sec-judging')}
-                className="shrink-0 rounded-md bg-cream-50 px-2.5 py-1 font-semibold text-charcoal-700 hover:bg-camel-100 hover:text-camel-900 border border-old-money-200 transition-colors"
-              >
-                Судейство (5 качеств)
-              </button>
-              <button
-                type="button"
-                onClick={() => scrollToSection('sec-requirements')}
-                className="shrink-0 rounded-md bg-cream-50 px-2.5 py-1 font-semibold text-charcoal-700 hover:bg-camel-100 hover:text-camel-900 border border-old-money-200 transition-colors"
-              >
-                Памятка и попоны
-              </button>
-              <button
-                type="button"
-                onClick={() => scrollToSection('sec-abbr')}
-                className="shrink-0 rounded-md bg-cream-50 px-2.5 py-1 font-semibold text-charcoal-700 hover:bg-camel-100 hover:text-camel-900 border border-old-money-200 transition-colors"
-              >
-                Словарь
-              </button>
-              <button
-                type="button"
-                onClick={() => scrollToSection('sec-sources')}
-                className="shrink-0 rounded-md bg-cream-50 px-2.5 py-1 font-semibold text-charcoal-700 hover:bg-camel-100 hover:text-camel-900 border border-old-money-200 transition-colors"
-              >
-                Регламенты
-              </button>
-              <button
-                type="button"
-                onClick={() => scrollToSection('sec-faqs')}
-                className="shrink-0 rounded-md bg-cream-50 px-2.5 py-1 font-semibold text-charcoal-700 hover:bg-camel-100 hover:text-camel-900 border border-old-money-200 transition-colors"
-              >
-                FAQ
-              </button>
-            </div>
-          </div>
-
-          {/* Все 9 блоков подряд */}
-          {renderDisciplines()}
-          {renderRoadmap()}
-          {renderHierarchy()}
-          {renderSchemes()}
-          {renderJudging()}
-          {renderRequirements()}
-          {renderAbbreviations()}
-          {renderSources()}
-          {renderFaqs()}
-
-          {/* Плавающая кнопка Наверх */}
+      {/* СТРОКА РЕЗУЛЬТАТОВ ПОИСКА ПРИ АКТИВНОМ ЗАПРОСЕ */}
+      {isSearching && (
+        <div className="flex items-center justify-between text-xs text-charcoal-600 px-1 border-b border-old-money-100 pb-2">
+          <span>
+            Показаны релевантные разделы по запросу «<strong className="text-charcoal-900">{searchQuery}</strong>»
+            {searchResult.matchedSectionIds.size > 0 && ` (найдено разделов: ${searchResult.matchedSectionIds.size})`}:
+          </span>
           <button
             type="button"
-            onClick={scrollToTop}
-            className="fixed bottom-6 right-6 z-40 flex h-11 w-11 items-center justify-center rounded-full bg-camel-700 text-white shadow-lg transition-transform hover:scale-105 active:scale-95 cursor-pointer"
-            aria-label="Вернуться к началу страницы"
+            onClick={() => setSearchQuery('')}
+            className="font-bold text-camel-700 hover:text-camel-800 hover:underline cursor-pointer"
           >
-            <ChevronUp className="h-5 w-5" />
+            Сбросить и показать всё
           </button>
         </div>
       )}
 
-      {/* ============================================================== */}
-      {/* РЕНДЕР ВАРИАНТА 3: SPOTLIGHT-ПОИСК И БЫСТРЫЕ ВОПРОСЫ           */}
-      {/* ============================================================== */}
-      {demoVariant === 3 && (
-        <div className="space-y-6">
-          {/* Интерактивная поисковая шапка */}
-          <div className="rounded-xl border border-camel-300 bg-white p-4 shadow-sm">
-            <div className="relative">
-              <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3.5 text-charcoal-400">
-                <Search className="h-4 w-4" aria-hidden />
-              </div>
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Быстрый поиск по состязаниям (например: возраст, кворум, переход CACL, намордник, ВС)..."
-                className="w-full rounded-lg border border-old-money-200 bg-white py-2.5 pl-10 pr-9 text-xs sm:text-sm font-medium text-charcoal-800 placeholder-charcoal-400 shadow-2xs transition-colors hover:border-camel-300 focus:border-camel-400 focus:outline-none focus:ring-1 focus:ring-camel-400"
-              />
-              {searchQuery && (
-                <button
-                  type="button"
-                  onClick={() => setSearchQuery('')}
-                  className="absolute inset-y-0 right-0 flex items-center pr-3 text-charcoal-400 hover:text-charcoal-700 cursor-pointer"
-                  aria-label="Очистить поиск"
-                >
-                  <X className="h-4 w-4" />
-                </button>
-              )}
-            </div>
+      {/* ОТОБРАЖЕНИЕ РАЗДЕЛОВ (ЕСЛИ ИЩЕМ — ФИЛЬТРУЕМ, ИНАЧЕ ПОЛНЫЙ ВИД) */}
+      {isSectionVisible('sec-disciplines') && renderDisciplines()}
+      {isSectionVisible('sec-roadmap') && renderRoadmap()}
+      {isSectionVisible('sec-hierarchy') && renderHierarchy()}
+      {isSectionVisible('sec-schemes') && renderSchemes()}
+      {isSectionVisible('sec-judging') && renderJudging()}
+      {isSectionVisible('sec-requirements') && renderRequirements()}
+      {isSectionVisible('sec-abbr') && renderAbbreviations()}
+      {isSectionVisible('sec-sources') && renderSources()}
+      {isSectionVisible('sec-faqs') && renderFaqs()}
 
-            {/* Быстрые подсказки */}
-            <div className="mt-3 flex flex-wrap items-center gap-1.5 text-xs">
-              <span className="text-[11px] text-charcoal-500 font-medium mr-1">Частые вопросы:</span>
-              <button
-                type="button"
-                onClick={() => setSearchQuery('возраст')}
-                className="rounded-full border border-old-money-200 bg-cream-50 px-2.5 py-1 text-[11px] font-medium text-charcoal-700 hover:border-camel-300 hover:bg-camel-50 cursor-pointer"
-              >
-                С какого возраста можно бегать?
-              </button>
-              <button
-                type="button"
-                onClick={() => setSearchQuery('кворум')}
-                className="rounded-full border border-old-money-200 bg-cream-50 px-2.5 py-1 text-[11px] font-medium text-charcoal-700 hover:border-camel-300 hover:bg-camel-50 cursor-pointer"
-              >
-                Что такое кворум?
-              </button>
-              <button
-                type="button"
-                onClick={() => setSearchQuery('переход')}
-                className="rounded-full border border-old-money-200 bg-cream-50 px-2.5 py-1 text-[11px] font-medium text-charcoal-700 hover:border-camel-300 hover:bg-camel-50 cursor-pointer"
-              >
-                Как сертификат CACL переходит 2-му месту?
-              </button>
-              <button
-                type="button"
-                onClick={() => setSearchQuery('тай-брейк')}
-                className="rounded-full border border-old-money-200 bg-cream-50 px-2.5 py-1 text-[11px] font-medium text-charcoal-700 hover:border-camel-300 hover:bg-camel-50 cursor-pointer"
-              >
-                Как решается ничья в курсинге?
-              </button>
-            </div>
-          </div>
-
-          {/* Результаты фильтрации */}
-          {searchQuery ? (
-            <div className="space-y-4">
-              <div className="flex items-center justify-between text-xs text-charcoal-600 px-1">
-                <span>
-                  Показаны блоки, содержащие «<strong className="text-charcoal-900">{searchQuery}</strong>»:
-                </span>
-                <button
-                  type="button"
-                  onClick={() => setSearchQuery('')}
-                  className="font-bold text-camel-700 hover:underline cursor-pointer"
-                >
-                  Сбросить и показать всё
-                </button>
-              </div>
-
-              {(isMatch('курсинг') || isMatch('бега') || isMatch('дисциплин')) && renderDisciplines()}
-              {(isMatch('маршрут') || isMatch('возраст') || isMatch('допуск') || isMatch('книжк')) && renderRoadmap()}
-              {(isMatch('титул') || isMatch('cacl') || isMatch('cacil') || isMatch('иерархи')) && renderHierarchy()}
-              {(isMatch('нч рк') || isMatch('схем') || isMatch('набор')) && renderSchemes()}
-              {(isMatch('судейств') || isMatch('балл') || isMatch('маневренност') || isMatch('тай-брейк')) && renderJudging()}
-              {(isMatch('кворум') || isMatch('попон') || isMatch('намордник') || isMatch('переход') || isMatch('вс')) && renderRequirements()}
-              {isMatch('сокращен') && renderAbbreviations()}
-              {isMatch('регламент') && renderSources()}
-              {renderFaqs()}
-            </div>
-          ) : (
-            <div className="space-y-6">
-              {renderDisciplines()}
-              {renderRoadmap()}
-              {renderHierarchy()}
-              {renderSchemes()}
-              {renderJudging()}
-              {renderRequirements()}
-              {renderAbbreviations()}
-              {renderSources()}
-              {renderFaqs()}
-            </div>
-          )}
+      {/* ЕСЛИ СОВСЕМ НИЧЕГО НЕ НАЙДЕНО */}
+      {isSearching && searchResult.matchedSectionIds.size === 0 && !searchResult.matchedDirectAnswer && (
+        <div className="rounded-2xl border border-dashed border-old-money-200 bg-cream-50/50 p-8 text-center">
+          <BookOpen className="mx-auto h-8 w-8 text-charcoal-400 mb-2" aria-hidden />
+          <h3 className="text-sm font-bold text-charcoal-800">
+            Ничего не найдено по запросу «{searchQuery}»
+          </h3>
+          <p className="mt-1 text-xs text-charcoal-600 max-w-md mx-auto">
+            Попробуйте задать вопрос иначе или выберите одну из популярных тем: возраст, кворум, переход CACL, намордник, 6 схем НЧ РК.
+          </p>
+          <button
+            type="button"
+            onClick={() => setSearchQuery('')}
+            className="mt-3 inline-flex items-center rounded-lg bg-camel-700 px-3 py-1.5 text-xs font-semibold text-white hover:bg-camel-800 transition-colors cursor-pointer"
+          >
+            Показать полный справочник
+          </button>
         </div>
       )}
 
-      {/* ============================================================== */}
-      {/* РЕНДЕР ВАРИАНТА 4: ЧИСТЫЙ СПОРТ И КАРЬЕРА (5 БЛОКОВ)           */}
-      {/* ============================================================== */}
-      {demoVariant === 4 && (
-        <div className="space-y-6">
-          <div className="rounded-xl border border-camel-200 bg-camel-50/60 p-3.5 text-xs text-charcoal-700">
-            <strong>Архитектурная чистота:</strong> Вкладка «Соревнования» фокусируется исключительно на спортивной карьере, сертификатах и титулах (всего 5 блоков). Вся техническая судейская часть (5 критериев, тай-брейк, цвета попон и чеклисты протоколов) живёт в соседней вкладке <strong>«Протоколы»</strong>.
-          </div>
-
-          {renderDisciplines()}
-          {renderRoadmap()}
-          {renderHierarchy()}
-          {renderSchemes()}
-          {renderSources()}
-          {renderFaqs()}
-        </div>
+      {/* ПЛАВАЮЩАЯ ЛИПКАЯ КНОПКА «НАВЕРХ» */}
+      {showScrollTop && (
+        <button
+          type="button"
+          onClick={scrollToTop}
+          className="fixed bottom-6 right-6 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-camel-800 text-white shadow-xl border border-camel-600/50 transition-all hover:bg-camel-900 hover:scale-105 active:scale-95 cursor-pointer"
+          aria-label="Вернуться к началу страницы"
+          title="Наверх"
+        >
+          <ChevronUp className="h-6 w-6" aria-hidden />
+        </button>
       )}
     </div>
   )
