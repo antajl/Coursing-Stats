@@ -1,3 +1,4 @@
+# Standard search engines
 User-agent: *
 Allow: /
 
@@ -10,8 +11,37 @@ Disallow: /forgot-password
 Disallow: /reset-password
 Disallow: /verify-email
 
-Sitemap: https://coursing-stats.ru/sitemap.xml
+# AI Search & Retrieval (SearchGPT, ChatGPT, Perplexity, Claude, Apple, Google Gemini)
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Primary Sitemap Index (modular sitemaps: main, events, protocols, dogs, judges, shows)
 Sitemap: https://coursing-stats.ru/sitemap-index.xml
+Sitemap: https://coursing-stats.ru/sitemap.xml
 
 # LLM & AI Search Engines
 # Specification: https://llmstxt.org/

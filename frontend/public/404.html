@@ -4,12 +4,18 @@
     <meta charset="UTF-8" />
     <link rel="icon" href="/favicons/favicon.ico" sizes="48x48" />
     <link rel="icon" type="image/svg+xml" href="/favicons/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preload" as="image" href="/assets/hero/background-mobile-480.webp" type="image/webp" media="(max-width: 768px)" fetchpriority="high" />
     <meta name="theme-color" content="#F5F1E8" />
     <title data-rh="true">Страница не найдена | Coursing Stats</title>
   <meta name="description" content="Страница не найдена." data-rh="true" />
   <meta name="keywords" content="курсинг статс, coursing stats, курсинг, бега борзых, статистика курсинга, рейтинг собак, рекорды Донино, выставки, РКФ" data-rh="true" />
     <meta name="author" content="Курсинг Статс (Coursing Stats)" />
+
+    <!-- LLM & AI Agents Auto-discovery (https://llmstxt.org/) -->
+    <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLM Summary" />
+    <link rel="help" href="/llms-full.txt" title="Full LLM Knowledge Base" />
 
     <!-- Google Analytics (Delayed execution for Core Web Vitals / LCP / FCP) -->
     <script>
@@ -35,9 +41,9 @@
         }
         events.forEach(function(e) { window.addEventListener(e, onInteract, { passive: true, once: true }); });
         if ('requestIdleCallback' in window) {
-          window.requestIdleCallback(function() { setTimeout(loadGTM, 2500); });
+          window.requestIdleCallback(function() { setTimeout(loadGTM, 5000); });
         } else {
-          setTimeout(loadGTM, 3500);
+          setTimeout(loadGTM, 6000);
         }
       })();
     </script>
@@ -146,16 +152,13 @@
         }, true);
       })();
     </script>
-    <script type="module" crossorigin src="/assets/index-1793387011497-C3cj8KS8.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime-1793387011497-hePW80VL.js">
-    <link rel="modulepreload" crossorigin href="/assets/jsx-runtime-1793387011497-DTZIpLyR.js">
-    <link rel="modulepreload" crossorigin href="/assets/preload-helper-1793387011497-Czpn1I53.js">
-    <link rel="modulepreload" crossorigin href="/assets/QueryClientProvider-1793387011497-B0iUslAR.js">
-    <link rel="modulepreload" crossorigin href="/assets/createLucideIcon-1793387011497-DCQHyWOD.js">
-    <link rel="modulepreload" crossorigin href="/assets/dogName-1793387011497-DAi6iL47.js">
-    <link rel="modulepreload" crossorigin href="/assets/show-award-ranking-1793387011497-Cff9ExVw.js">
-    <link rel="modulepreload" crossorigin href="/assets/staticData-1793387011497-jkWLbv95.js">
-    <link rel="stylesheet" crossorigin href="/assets/index-D1txHuwF.css">
+    <script type="module" crossorigin src="/assets/index-1794149348137-DpQVqmBk.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime-1794149348137-hePW80VL.js">
+    <link rel="modulepreload" crossorigin href="/assets/jsx-runtime-1794149348137-ClB1r32z.js">
+    <link rel="modulepreload" crossorigin href="/assets/preload-helper-1794149348137-Czpn1I53.js">
+    <link rel="modulepreload" crossorigin href="/assets/createLucideIcon-1794149348137-BAhIHhyz.js">
+    <link rel="modulepreload" crossorigin href="/assets/show-award-ranking-1794149348137-D98zjF0G.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-CGQNclQf.css">
     <meta name="robots" content="noindex, nofollow" />
 </head>
   <body>
