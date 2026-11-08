@@ -5,8 +5,11 @@
  * 1. Автоматическая смена раскладки клавиатуры (QWERTY ↔ ЙЦУКЕН: "rdjhev" → "кворум", "сасл" → "cacl").
  * 2. Русская и английская лемматизация / стемминг (нормализация падежей, чисел и окончаний).
  * 3. Нечёткий поиск с устойчивостью к опечаткам (Damerau-Levenshtein distance ≤ 2).
- * 4. База смысловых синонимов и естественных вопросов («со скольки месяцев», «почему второе место», «ничья»).
- * 5. 15 готовых прямых ответов (Direct Answer Snippets) по всем аспектам состязаний.
+ * 4. Фильтрация кинологических стоп-слов и разговорного шума («как получить», «титул», «по», «для»).
+ * 5. Извлечение семантических N-грамм и коллокаций («гранд чемпион», «рабочим качествам», «беговой допуск»).
+ * 6. Детектор естественных интентов (Conversational Intent Matcher) для сложных многословных фраз.
+ * 7. Взвешивание специфичности терминов (Anchor Salience Boost): якори («гранд», «кворум») доминируют над общими словами.
+ * 8. 15 готовых прямых ответов (Direct Answer Snippets) по всем аспектам состязаний.
  */
 
 // 1. Таблица переключения раскладки клавиатуры QWERTY ↔ ЙЦУКЕН
@@ -96,18 +99,68 @@ export function damerauLevenshtein(a: string, b: string): number {
   return d[la][lb]
 }
 
-// 5. Проверка нечёткого совпадения слова с учётом опечаток и стемминга
+// 5. Стоп-слова и разговорные связки в русскоязычных поисковых запросах
+export const RUSSIAN_STOP_WORDS = new Set<string>([
+  // Вопросительные частицы и местоимения
+  'как', 'что', 'где', 'куда', 'откуда', 'когда', 'почему', 'зачем', 'кто', 'чем',
+  'какой', 'какая', 'какое', 'какие', 'каком', 'каких', 'какому', 'какую', 'каким',
+  'сколько', 'скольки', 'со', 'до', 'при',
+  // Предлоги и союзы
+  'в', 'во', 'на', 'с', 'из', 'для', 'от', 'к', 'ко', 'у', 'о', 'об', 'обо',
+  'по', 'без', 'через', 'над', 'под', 'за', 'и', 'а', 'но', 'или', 'да',
+  'ли', 'же', 'то', 'бы', 'вот', 'если', 'чтобы', 'только', 'хоть', 'хотя',
+  // Местоимения
+  'мне', 'нам', 'вам', 'им', 'его', 'ее', 'их', 'мой', 'твой', 'наш', 'ваш',
+  'себя', 'себе', 'собой', 'это', 'эта', 'этот', 'эти', 'этом', 'этих', 'тому',
+  // Наречия-усилители и вводные слова
+  'абсолютно', 'совсем', 'очень', 'просто', 'точно', 'действительно',
+  // Разговорные связки и общие глаголы-запросы
+  'получить', 'получать', 'получение', 'получения', 'получению', 'получив',
+  'стать', 'становится', 'делать', 'сделать', 'быть', 'является', 'являются',
+  'нужно', 'надо', 'можно', 'нельзя', 'хочу', 'хотим',
+  'подскажи', 'подскажите', 'расскажи', 'расскажите', 'скажи', 'скажите',
+  'объясни', 'объясните', 'узнать', 'пожалуйста', 'спасибо',
+  // Размытый кинологический шум (при наличии более специфичных терминов)
+  'титул', 'титула', 'титулы', 'титулу', 'титулом', 'титулах', 'титулов',
+  'собака', 'собаке', 'собаки', 'собаку', 'собакой', 'собакам', 'собаках',
+  'правило', 'правила', 'правилу', 'правилом', 'правилах', 'правилам',
+])
+
+/** Извлекает ключевые значимые токены, отсеивая стоп-слова */
+export function extractSalientTokens(text: string): {
+  allTokens: string[]
+  salientTokens: string[]
+} {
+  const allTokens = text
+    .toLowerCase()
+    .replace(/ё/g, 'е')
+    .split(/[\s,.;:!?/\\—–\-()"]+/)
+    .map((w) => w.trim())
+    .filter((w) => w.length >= 2)
+
+  const salientTokens = allTokens.filter((token) => !RUSSIAN_STOP_WORDS.has(token))
+  return {
+    allTokens,
+    salientTokens: salientTokens.length > 0 ? salientTokens : allTokens,
+  }
+}
+
+// 6. Проверка нечёткого совпадения одного слова (word-to-word)
 export function isFuzzyWordMatch(queryWord: string, targetWord: string): boolean {
-  const q = queryWord.toLowerCase().replace(/ё/g, 'е')
-  const t = targetWord.toLowerCase().replace(/ё/g, 'е')
+  const q = queryWord.toLowerCase().replace(/ё/g, 'е').trim()
+  const t = targetWord.toLowerCase().replace(/ё/g, 'е').trim()
 
   if (q === t) return true
-  if (t.includes(q) && q.length >= 3) return true
+
+  // Проверка по общему префиксу для длинных слов (от 4 символов)
+  if (q.length >= 4 && t.length >= 4 && (t.startsWith(q) || q.startsWith(t))) {
+    return true
+  }
 
   // Проверка по стеммингу
   const stemQ = stemWord(q)
   const stemT = stemWord(t)
-  if (stemQ.length >= 3 && (stemT.startsWith(stemQ) || stemQ.startsWith(stemT))) {
+  if (stemQ.length >= 3 && stemT.length >= 3 && (stemT.startsWith(stemQ) || stemQ.startsWith(stemT))) {
     return true
   }
 
@@ -122,7 +175,42 @@ export function isFuzzyWordMatch(queryWord: string, targetWord: string): boolean
   return false
 }
 
-// 6. База смысловых интентов (вопросов) и готовых прямых ответов (Direct Answer Snippets)
+/** Проверяет совпадение многословной фразы / коллокации в запросе с поддержкой свободного порядка */
+export function isPhraseMatch(query: string, phrase: string): boolean {
+  const q = query.toLowerCase().replace(/ё/g, 'е').trim()
+  const p = phrase.toLowerCase().replace(/ё/g, 'е').trim()
+
+  if (q.includes(p)) return true
+
+  const pWords = p.split(/\s+/).filter(Boolean)
+  if (pWords.length <= 1) return false
+
+  const pStems = pWords.map(stemWord)
+  const qWords = q.split(/[\s,.;:!?/\\—–\-()"]+/).filter(Boolean)
+  const qStems = qWords.map(stemWord)
+
+  // 1. Проверка прямого последовательного порядка стеммов
+  let pIdx = 0
+  for (let i = 0; i < qStems.length; i += 1) {
+    if (qStems[i] === pStems[pIdx] || isFuzzyWordMatch(qWords[i], pWords[pIdx])) {
+      pIdx += 1
+      if (pIdx === pStems.length) return true
+    }
+  }
+
+  // 2. Для двухсловных коллокаций: если оба стемма присутствуют рядом (окно <= 3 слов)
+  if (pStems.length === 2) {
+    const idx0 = qStems.findIndex((s, i) => s === pStems[0] || isFuzzyWordMatch(qWords[i], pWords[0]))
+    const idx1 = qStems.findIndex((s, i) => s === pStems[1] || isFuzzyWordMatch(qWords[i], pWords[1]))
+    if (idx0 !== -1 && idx1 !== -1 && Math.abs(idx0 - idx1) <= 3) {
+      return true
+    }
+  }
+
+  return false
+}
+
+// 7. База смысловых интентов (вопросов) и готовых прямых ответов (Direct Answer Snippets)
 export type DirectAnswer = {
   id: string
   title: string
@@ -138,11 +226,10 @@ export const DIRECT_ANSWERS: readonly DirectAnswer[] = [
     id: 'age-rules',
     title: 'Возрастные ограничения в спорте борзых (РКФ)',
     triggerKeywords: [
-      'возраст', 'возрасте', 'возрастной', 'возрастом', 'возрастов', 'со скольки', 'сколько месяцев',
-      'в каком возрасте', 'когда можно', 'щенок', 'щенка', 'щенком', 'щенки', 'молодая собака',
-      'юниор', 'ветеран', 'ветераны', 'до скольки', 'до скольки лет', 'предел', 'предельный возраст',
-      'старая собака', 'уиппет', 'левретка', 'басенджи', 'грейхаунд', 'рпб', 'салюки', 'афган',
-      'djphfcn', 'djphfcnj',
+      'возраст', 'со скольки', 'сколько месяцев', 'в каком возрасте', 'когда можно',
+      'щенок', 'щенки', 'юниор', 'ветеран', 'предельный возраст', 'со скольки месяцев',
+      'с какого возраста', 'минимальный возраст',
+      'djphfcn',
     ],
     shortAnswer:
       'Официальные правила РКФ строго регламентируют минимальный и предельный возраст допуска собаки к тренировкам и состязаниям:',
@@ -160,9 +247,9 @@ export const DIRECT_ANSWERS: readonly DirectAnswer[] = [
     id: 'quorum-rules',
     title: 'Кворум участников и разделение забегов по полу',
     triggerKeywords: [
-      'кворум', 'кворума', 'кворуме', 'кворумом', 'кворумы', 'сколько собак', 'минимум собак', 'мало участников',
-      'одна собака', 'две собаки', 'раздельно', 'по полу', 'кобели и суки', 'микс', 'смешанный', 'смешанный забег',
-      'сколько нужно собак', 'кворум породы',
+      'кворум', 'кворума', 'кворуме', 'сколько собак', 'минимум собак', 'мало участников',
+      'одна собака', 'две собаки', 'раздельно', 'по полу', 'кобели и суки', 'микс', 'смешанный',
+      'сколько нужно собак', 'кворум породы', 'сколько собак должно быть',
       'rdjhev',
     ],
     shortAnswer:
@@ -180,10 +267,10 @@ export const DIRECT_ANSWERS: readonly DirectAnswer[] = [
     id: 'rcacl-transfer',
     title: 'Правило перехода сертификата (R.CACL → CACL)',
     triggerKeywords: [
-      'переход', 'переходит', 'перейдет', 'второе место', 'второму месту', 'серебро',
-      'вторая собака', 'почему дали cacl', 'чемпион выиграл', 'r.cacl', 'р.сасл',
-      'кому достается cacl', 'переходящий сертификат', 'r-cacl', 'rcacl',
-      'ghj[jl', 'r-cacl',
+      'переход', 'второе место', 'серебро', 'вторая собака', 'почему дали cacl',
+      'чемпион выиграл', 'r.cacl', 'р.сасл', 'переход сертификата', 'r-cacl', 'rcacl',
+      'почему собаке на втором месте отдали cacl', 'кому переходит cacl',
+      'ghj[jl',
     ],
     shortAnswer:
       'Сертификат кандидата в Чемпионы России (CACL) официально переходит обладателю 2-го места:',
@@ -200,7 +287,8 @@ export const DIRECT_ANSWERS: readonly DirectAnswer[] = [
     title: 'Как разрешается ничья в курсинге (Тай-брейк)',
     triggerKeywords: [
       'тай-брейк', 'тайбрейк', 'ничья', 'одинаково', 'поровну', 'равные баллы', 'одинаковые баллы',
-      'равенство', 'кто победил', 'кто выше', 'одинаковая сумма', 'равенство сумм', 'ничейный результат',
+      'равенство', 'кто победил', 'кто выше', 'равенство сумм', 'ничейный результат',
+      'как судьи определяют победителя если баллы абсолютно одинаковые',
       'nfq-ihtqr', 'nfqihtqr',
     ],
     shortAnswer:
@@ -217,9 +305,8 @@ export const DIRECT_ANSWERS: readonly DirectAnswer[] = [
     id: 'muzzles-blankets',
     title: 'Беговые намордники и цвета попон',
     triggerKeywords: [
-      'намордник', 'намордники', 'намордника', 'наморднике', 'намордником',
-      'попона', 'попоны', 'попонах', 'жилетка', 'жилетки', 'красная', 'белая', 'синяя', 'черная', 'желтая',
-      'полосатая', 'экипировка', 'цвета', 'номер попоны', 'номера попон', 'какой намордник', 'нужен ли намордник',
+      'намордник', 'намордники', 'попона', 'попоны', 'жилетка', 'красная', 'белая', 'синяя',
+      'черная', 'желтая', 'полосатая', 'экипировка', 'номер попоны', 'какой намордник', 'нужен ли намордник',
       'yfvhlybr', 'gjgjyf',
     ],
     shortAnswer:
@@ -238,9 +325,10 @@ export const DIRECT_ANSWERS: readonly DirectAnswer[] = [
     id: 'nch-schemes',
     title: '6 официальных схем набора титула НЧ РК',
     triggerKeywords: [
-      'схема', 'схемы', 'схемам', 'схеме', 'нч рк', 'национальный чемпион', 'как закрыть нч',
-      'как стать чемпионом', 'набор сертификатов', 'сколько cacl', '5 регионов', 'субъекты рф',
+      'схема', 'схемы', 'нч рк', 'национальный чемпион', 'как закрыть нч',
+      'набор сертификатов', 'сколько cacl', '5 регионов', 'субъекты рф',
       'схема 1', 'схема 2', 'схема 3', 'схема 4', 'схема 5', 'схема 6', '4 судьи',
+      'национальный чемпион по рабочим качествам', 'титул нч рк',
       'c[tvf', 'yxt hr',
     ],
     shortAnswer:
@@ -261,8 +349,8 @@ export const DIRECT_ANSWERS: readonly DirectAnswer[] = [
     title: 'Беговой допуск и квалификационная книжка РКФ',
     triggerKeywords: [
       'допуск', 'книжка', 'квалификационная книжка', 'беговой паспорт', 'лицензия',
-      'как получить допуск', 'одиночный пуск', 'парный пуск', 'первый старт', 'входной билет',
-      'паспорт собаки', 'беговая книжка', 'сдача допуска', 'квалификация',
+      'беговой допуск', 'одиночный пуск', 'парный пуск', 'первый старт', 'сдача допуска',
+      'как получить беговой допуск', 'где сдать беговой допуск',
       'ljgenc', 'rybcrf',
     ],
     shortAnswer:
@@ -281,7 +369,7 @@ export const DIRECT_ANSWERS: readonly DirectAnswer[] = [
     title: 'Квалификационная отметка «ВС» (≥ 66,7% баллов)',
     triggerKeywords: [
       'вс', 'норма вс', 'отметка вс', 'что такое вс', '66.7', 'две трети', 'высшая квалификация',
-      'сс', 'cc', 'почему не дали cacl', 'первое место без титула', 'баллы вс', 'знак вс',
+      'баллы вс', 'знак вс', 'квалификационная норма',
       'dc', 'cc',
     ],
     shortAnswer:
@@ -298,8 +386,9 @@ export const DIRECT_ANSWERS: readonly DirectAnswer[] = [
     title: 'Разница между курсингом и бегами борзых (рейсингом)',
     triggerKeywords: [
       'курсинг и бега', 'разница', 'отличие', 'чем отличается курсинг', 'курсинг vs бега',
-      'поле или трек', 'длина трассы', 'дистанция', 'сколько метров', 'песчаный овал',
-      'стартовые боксы', 'механический заяц', 'ghfdbkf',
+      'поле или трек', 'длина трассы', 'дистанция', 'песчаный овал', 'стартовые боксы',
+      'в чем разница курсинг и бега',
+      'ghfdbkf',
     ],
     shortAnswer:
       'Две официальные дисциплины с принципиально разными правилами и судейством:',
@@ -317,7 +406,7 @@ export const DIRECT_ANSWERS: readonly DirectAnswer[] = [
     triggerKeywords: [
       '5 критериев', 'как судят', 'за что баллы', 'максимальный балл', '100 баллов', '20 баллов',
       'маневренность', 'скорость', 'резвость', 'выносливость', 'преследование', 'энтузиазм',
-      'охотничий азарт', 'критерии оценки', 'судейская коллегия',
+      'охотничий азарт', 'критерии оценки', 'пять критериев', 'за что судьи ставят баллы',
     ],
     shortAnswer:
       'В курсинге каждый судья оценивает забег по 5 нормативным критериям FCI/РКФ (до 20 баллов каждый):',
@@ -335,8 +424,10 @@ export const DIRECT_ANSWERS: readonly DirectAnswer[] = [
     id: 'ch-rus-annual',
     title: 'Титул «Чемпион России по рабочим качествам» (ЧР РК)',
     triggerKeywords: [
-      'чемпион россии', 'чр рк', 'как получить чр рк', 'чр рк кб', 'чр рк бб',
+      'чемпион россии', 'чр рк', 'чр', 'чр рк кб', 'чр рк бб',
+      'чемпион россии по рабочим качествам', 'титул чемпиона россии',
       'главный чемпионат', 'главный старт года', 'норматив 75%', '112.5 баллов', 'победа на чемпионате россии',
+      'как получить чемпиона россии',
     ],
     shortAnswer:
       'Высший ежегодный соревновательный титул страны:',
@@ -353,7 +444,7 @@ export const DIRECT_ANSWERS: readonly DirectAnswer[] = [
     title: 'Международные титулы FCI: C.I.C., C.I.B.P. и CACIL',
     triggerKeywords: [
       'cacil', 'сасил', 'cic', 'cibp', 'cib', 'интерчемпион', 'международный чемпион',
-      'за границей', 'зарубежные состязания', 'бельгия fci', 'cacib и cacil', 'интерчемпион по бегам',
+      'за границей', 'зарубежные состязания', 'бельгия fci', 'интерчемпион по бегам',
     ],
     shortAnswer:
       'Высшие международные звания Всемирной кинологической федерации (FCI):',
@@ -387,7 +478,11 @@ export const DIRECT_ANSWERS: readonly DirectAnswer[] = [
     id: 'grand-absolute-titles',
     title: 'Гранд чемпион (ГЧР РК) и Абсолютный чемпион (АЧР / АЧК)',
     triggerKeywords: [
-      'гчр рк', 'гранд чемпион', 'ачр', 'ачк', 'абсолютный чемпион', 'мультиспорт',
+      'гчр рк', 'гчр', 'гранд чемпион', 'гранд чемпион россии',
+      'гранд чемпион по рабочим качествам', 'титул гранд чемпион',
+      'как получить титул гранд чемпион по рабочим качествам',
+      'как получить гранд чемпиона', 'как стать гранд чемпионом',
+      'ачр', 'ачк', 'абсолютный чемпион', 'мультиспорт',
       'шоу плюс спорт', 'выставки и спорт', 'чемпион нкп', 'клуб породы',
     ],
     shortAnswer:
@@ -419,7 +514,110 @@ export const DIRECT_ANSWERS: readonly DirectAnswer[] = [
   },
 ] as const
 
-// 7. Проверка совпадения поискового запроса с элементом
+// 8. Детектор естественных интентов (Conversational Intent Matcher)
+export function detectConversationalIntent(query: string): string | null {
+  const q = query.toLowerCase().replace(/ё/g, 'е')
+
+  // 1. Гранд чемпион (ГЧР РК) и Абсолютный чемпион (АЧР / АЧК)
+  if (/(гранд\s*чемпион|гчр|титул.*гранд|как\s+получить\s+.*гранд|как\s+стать\s+.*гранд)/i.test(q)) {
+    return 'grand-absolute-titles'
+  }
+  if (/(абсолютн[а-яёa-z]*\s*чемпион|ачр|ачк|шоу\s*плюс\s*спорт)/i.test(q)) {
+    return 'grand-absolute-titles'
+  }
+
+  // 2. Схемы набора НЧ РК
+  if (/(национальн[а-яёa-z]*\s*чемпион|нч\s*рк|схем[а-яёa-z]*\s*(набора|закрытия|1|2|3|4|5|6)|как\s+закрыть\s+нч|5\s+регион)/i.test(q)) {
+    return 'nch-schemes'
+  }
+
+  // 3. Чемпион России (ЧР РК) — только главный турнир года
+  if (/(чемпион[а-яёa-z]*\s*росси|чр\s*рк|главн[а-яёa-z]*\s*чемпионат)/i.test(q) && !/гранд|национальн/i.test(q)) {
+    return 'ch-rus-annual'
+  }
+
+  // 4. Беговой допуск и квалификационная книжка
+  if (/(как\s+получить|где\s+сдать|как\s+сдать|что\s+нужно\s+для|сдача)\s*.*(допуск|книжк|лицензи|паспорт)/i.test(q) || /(бегов[а-яёa-z]*\s+допуск|квалификационн[а-яёa-z]*\s+книжк)/i.test(q)) {
+    return 'license-booklet'
+  }
+
+  // 5. Возрастные рамки
+  if (/(со\s+скольк|с\s+какого\s+возраст|в\s+каком\s+возраст|до\s+скольк|минимальн[а-яёa-z]*\s+возраст|когда\s+можно\s+бегать)/i.test(q)) {
+    return 'age-rules'
+  }
+
+  // 6. Переход R.CACL -> CACL
+  if (/(почему|как)\s*.*(втор[а-яёa-z]*\s+мест|серебр)\s*.*(cacl|сасл|сертификат)|переход[а-яёa-z]*\s*(cacl|сасл|сертификат)|r[\s.-]?cacl/i.test(q)) {
+    return 'rcacl-transfer'
+  }
+
+  // 7. Ничья и тай-брейк
+  if (/(равн[а-яёa-z]*|одинаков[а-яёa-z]*)\s+([а-яёa-z]+\s+)?балл|балл[а-яёa-z]*\s+([а-яёa-z]+\s+)?(равн[а-яёa-z]*|одинаков[а-яёa-z]*)|ничь[а-яёa-z]*|тай[\s-]?брейк|кто\s+победил\s+при\s+равенстве/i.test(q)) {
+    return 'tie-break'
+  }
+
+  // 8. Кворум и разделение по полу
+  if (/(скольк[а-яёa-z]*|минимум|мало)\s+собак\s*.*(для\s+cacl|кворум|на\s+старт)|кворум/i.test(q)) {
+    return 'quorum-rules'
+  }
+
+  // 9. Намордники и цвета попон
+  if (/(какой\s+намордник|нужен\s+ли\s+намордник|цвет[а-яёa-z]*\s+попон|номер[а-яёa-z]*\s+попон|экипировк)/i.test(q)) {
+    return 'muzzles-blankets'
+  }
+
+  // 10. 5 критериев судейства
+  if (/(5\s+критериев|пять\s+критериев|за\s+что\s+судьи\s+ставят\s+баллы|как\s+оценивают\s+курсинг|критери[а-яёa-z]*\s+оценк)/i.test(q)) {
+    return 'judging-5-criteria'
+  }
+
+  // 11. Разница курсинг vs бега
+  if (/(в\s+чем\s+разниц[а-яёa-z]*|чем\s+отличается)\s*.*(курсинг|бега|рейсинг)|курсинг\s*(vs|или|и)\s*бега/i.test(q)) {
+    return 'disciplines-diff'
+  }
+
+  // 12. Отметка ВС (Высшая квалификация)
+  if (/(что\s+такое|знак|отметка|норматив)\s*(вс|cc)|норма\s+вс|66\.7%/i.test(q)) {
+    return 'vc-norm'
+  }
+
+  // 13. Барьер 2-го круга (< 50% баллов)
+  if (/(барьер|порог|почему\s+сняли|почему\s+не\s+допустили)\s*.*(втор[а-яёa-z]*\s+круг|50%)/i.test(q)) {
+    return 'round2-barrier'
+  }
+
+  // 14. Международные титулы FCI
+  if (/(международн[а-яёa-z]*\s+чемпион|интерчемпион|как\s+получить\s+cacil|титул\s+cic|титул\s+cibp|cacil)/i.test(q)) {
+    return 'intl-titles-fci'
+  }
+
+  // 15. Дисквалификации
+  if (/(дисквалификац|за\s+что\s+снимают|драка|на\s+сколько\s+банят|disq)/i.test(q)) {
+    return 'disqualifications-rules'
+  }
+
+  return null
+}
+
+// 9. Специфичные семантические якоря (высокий вес IDF, отсекающий ложные совпадения)
+const ANCHOR_TERMS: Record<string, { answerId: string; sectionId: string; weight: number }> = {
+  гранд: { answerId: 'grand-absolute-titles', sectionId: 'sec-hierarchy', weight: 450 },
+  гчр: { answerId: 'grand-absolute-titles', sectionId: 'sec-hierarchy', weight: 450 },
+  ачр: { answerId: 'grand-absolute-titles', sectionId: 'sec-hierarchy', weight: 450 },
+  ачк: { answerId: 'grand-absolute-titles', sectionId: 'sec-hierarchy', weight: 450 },
+  кворум: { answerId: 'quorum-rules', sectionId: 'sec-requirements', weight: 400 },
+  намордник: { answerId: 'muzzles-blankets', sectionId: 'sec-requirements', weight: 400 },
+  попон: { answerId: 'muzzles-blankets', sectionId: 'sec-requirements', weight: 400 },
+  тайбрейк: { answerId: 'tie-break', sectionId: 'sec-judging', weight: 400 },
+  ничь: { answerId: 'tie-break', sectionId: 'sec-judging', weight: 400 },
+  допуск: { answerId: 'license-booklet', sectionId: 'sec-roadmap', weight: 400 },
+  книжк: { answerId: 'license-booklet', sectionId: 'sec-roadmap', weight: 400 },
+  дисквалифик: { answerId: 'disqualifications-rules', sectionId: 'sec-abbr', weight: 400 },
+  маневренн: { answerId: 'judging-5-criteria', sectionId: 'sec-judging', weight: 350 },
+  энтузиазм: { answerId: 'judging-5-criteria', sectionId: 'sec-judging', weight: 350 },
+}
+
+// 10. Проверка совпадения поискового запроса с элементом
 export type SearchMatchResult = {
   score: number
   matchedDirectAnswer: DirectAnswer | null
@@ -427,7 +625,7 @@ export type SearchMatchResult = {
   matchedTokens: Set<string>
 }
 
-/** Выполняет комплексный интеллектуальный поиск с обработкой раскладок, опечаток и синонимов */
+/** Выполняет комплексный интеллектуальный поиск с обработкой раскладок, опечаток, стоп-слов и интентов */
 export function executeSmartGuideSearch(rawQuery: string): SearchMatchResult {
   const qTrim = rawQuery.trim().toLowerCase().replace(/ё/g, 'е')
   if (!qTrim) {
@@ -439,48 +637,95 @@ export function executeSmartGuideSearch(rawQuery: string): SearchMatchResult {
     }
   }
 
-  // Расширяем запрос альтернативными формами:
+  // Расширяем запрос альтернативными формами (раскладка и фонетика)
   const queryVariants = new Set<string>([qTrim])
 
-  // Вариант 1: переключение раскладки клавиатуры (rdjhev → кворум)
   const convertedLayout = convertKeyboardLayout(qTrim)
   if (convertedLayout && convertedLayout !== qTrim) {
     queryVariants.add(convertedLayout)
   }
 
-  // Вариант 2: фонетические алиасы (сасл → cacl)
   if (PHONETIC_ALIASES[qTrim]) {
     queryVariants.add(PHONETIC_ALIASES[qTrim])
   }
 
-  // Извлекаем слова из всех вариантов запроса
-  const searchWords: string[] = []
+  // Извлекаем значимые токены (без шума и стоп-слов)
+  const allSearchWords: string[] = []
+  const salientSearchWords: string[] = []
+
   for (const v of queryVariants) {
-    v.split(/[\s,.;:!?/-]+/)
-      .map((w) => w.trim())
-      .filter((w) => w.length >= 2)
-      .forEach((w) => searchWords.push(w))
+    const { allTokens, salientTokens } = extractSalientTokens(v)
+    allTokens.forEach((t) => allSearchWords.push(t))
+    salientTokens.forEach((t) => salientSearchWords.push(t))
   }
+
+  const effectiveSearchWords = salientSearchWords.length > 0 ? salientSearchWords : allSearchWords
 
   const matchedSectionIds = new Set<string>()
   const matchedTokens = new Set<string>()
   let bestDirectAnswer: DirectAnswer | null = null
   let maxAnswerScore = 0
 
-  // Проверяем прямые смысловые ответы (DIRECT_ANSWERS)
+  // 1. Проверяем естественные интенты (Conversational Intent Matcher)
+  let intentTargetAnswerId: string | null = null
+  for (const qv of queryVariants) {
+    const detected = detectConversationalIntent(qv)
+    if (detected) {
+      intentTargetAnswerId = detected
+      break
+    }
+  }
+
+  // 2. Проверяем семантические якоря (Anchor Terms)
+  for (const sw of effectiveSearchWords) {
+    const stem = stemWord(sw)
+    for (const [anchor, info] of Object.entries(ANCHOR_TERMS)) {
+      if (stem.startsWith(anchor) || anchor.startsWith(stem) || isFuzzyWordMatch(sw, anchor)) {
+        matchedSectionIds.add(info.sectionId)
+        matchedTokens.add(sw)
+      }
+    }
+  }
+
+  // 3. Проверяем прямые смысловые ответы (DIRECT_ANSWERS)
   for (const answer of DIRECT_ANSWERS) {
     let answerScore = 0
-    for (const kw of answer.triggerKeywords) {
-      for (const sw of searchWords) {
-        if (isFuzzyWordMatch(sw, kw)) {
-          answerScore += kw === sw ? 100 : 70
-          matchedTokens.add(sw)
+
+    // Бонус за соответствие естественному интенту
+    if (intentTargetAnswerId === answer.id) {
+      answerScore += 450
+      matchedSectionIds.add(answer.targetSectionId)
+    }
+
+    // Бонус за семантические якоря
+    for (const sw of effectiveSearchWords) {
+      const stem = stemWord(sw)
+      for (const [anchor, info] of Object.entries(ANCHOR_TERMS)) {
+        if (info.answerId === answer.id && (stem.startsWith(anchor) || anchor.startsWith(stem) || isFuzzyWordMatch(sw, anchor))) {
+          answerScore += info.weight
         }
       }
-      // Проверка на фразу целиком
-      for (const qv of queryVariants) {
-        if (qv.includes(kw) || kw.includes(qv)) {
-          answerScore += 120
+    }
+
+    // Сопоставление с triggerKeywords
+    for (const kw of answer.triggerKeywords) {
+      const isMultiWord = kw.includes(' ')
+
+      if (isMultiWord) {
+        // Проверяем фразу целиком
+        for (const qv of queryVariants) {
+          if (isPhraseMatch(qv, kw)) {
+            answerScore += 350
+            kw.split(/\s+/).forEach((w) => matchedTokens.add(w))
+          }
+        }
+      } else {
+        // Одиночное ключевое слово
+        for (const sw of effectiveSearchWords) {
+          if (isFuzzyWordMatch(sw, kw)) {
+            answerScore += kw === sw ? 120 : 80
+            matchedTokens.add(sw)
+          }
         }
       }
     }
@@ -490,27 +735,27 @@ export function executeSmartGuideSearch(rawQuery: string): SearchMatchResult {
       bestDirectAnswer = answer
     }
 
-    if (answerScore > 50) {
+    if (answerScore >= 70) {
       matchedSectionIds.add(answer.targetSectionId)
     }
   }
 
-  // Общие правила привязки слов к секциям:
+  // 4. Общие правила привязки значимых слов к разделам справки
   const sectionKeywords: Record<string, string[]> = {
     'sec-disciplines': ['курсинг', 'бега', 'рейсинг', 'трек', 'овал', 'дисциплина', 'lure', 'track', 'песок', 'разница', 'отличие'],
     'sec-roadmap': ['маршрут', 'шаг', 'допуск', 'книжка', 'тренировка', 'старт', 'щенок', 'возраст', 'паспорт', 'лицензия'],
     'sec-hierarchy': ['титул', 'сертификат', 'cacl', 'cacil', 'r.cacl', 'r.cacil', 'чр рк', 'пкр рк', 'чркф', 'нч рк', 'cic', 'cibp', 'гранд', 'абсолютный', 'чемпион россии'],
-    'sec-schemes': ['схема', 'схемы', 'схеме', 'нч рк', 'набор', '5 регионов', 'субъекты', 'закрыть', 'комбинации'],
+    'sec-schemes': ['схема', 'схемы', 'нч рк', 'набор', '5 регионов', 'субъекты', 'закрыть', 'комбинации'],
     'sec-judging': ['судейство', 'судья', 'балл', 'маневренность', 'скорость', 'резвость', 'выносливость', 'преследование', 'энтузиазм', 'тай-брейк', 'ничья', 'критерий', '100 баллов'],
     'sec-requirements': ['кворум', 'норма', 'вс', 'попона', 'попоны', 'намордник', 'экипировка', 'переход', 'дисквалификация', 'возраст', 'барьер'],
     'sec-abbr': ['сокращение', 'аббревиатура', 'словарь', 'dns', 'dnf', 'inj', 'disq', 'гск', 'bob', 'bos'],
     'sec-sources': ['регламент', 'правила', 'положение', 'ркф', 'fci', 'документ', 'первоисточник', 'pdf'],
-    'sec-faqs': ['faq', 'вопрос', 'ответ', 'почему', 'как', 'можно ли'],
+    'sec-faqs': ['faq', 'вопрос', 'ответ', 'почему'],
   }
 
   for (const [secId, kws] of Object.entries(sectionKeywords)) {
     for (const kw of kws) {
-      for (const sw of searchWords) {
+      for (const sw of effectiveSearchWords) {
         if (isFuzzyWordMatch(sw, kw)) {
           matchedSectionIds.add(secId)
           matchedTokens.add(sw)
