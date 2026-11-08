@@ -189,8 +189,8 @@ export function buildRacingProtocolHtml(comp: CompetitionData): string {
           targetLeagueCell = leagueCell;
         }
       } else {
-        leagueCell = qual;
-        targetLeagueCell = vc;
+        leagueCell = vc;
+        targetLeagueCell = qual;
       }
 
       let h1Reason: string | null = null;
