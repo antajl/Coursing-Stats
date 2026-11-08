@@ -15,6 +15,8 @@ describe('breedarchive', () => {
     expect(breedArchiveSubdomain('БОРДЕР КОЛЛИ')).toBe('bordercollie');
     expect(breedArchiveSubdomain('ПОДЕНКО ИБИЦЕНКО К/Ш')).toBe('ibizanhound');
     expect(breedArchiveSubdomain('ДИРХАУНД (ШОТЛАНДСКАЯ БОРЗАЯ)')).toBe('deerhound');
+    expect(breedArchiveSubdomain('ЧИРНЕКО ДЕЛЬ’ЭТНА')).toBe('cirneco');
+    expect(breedArchiveSubdomain('Чирнеко дель-Этна')).toBe('cirneco');
     expect(breedArchiveSubdomain('АФГАНСКАЯ БОРЗАЯ')).toBeNull();
   });
 

@@ -1,4 +1,6 @@
 /** Breed Archive (breedarchive.com) — поиск карточек собак по registered name. */
+import { canonicalBreed } from '../src/lib/breed-mapping.ts';
+import { transliterateRuToLat } from './text-normalization.ts';
 
 export interface BreedArchiveSearchHit {
   label: string;
@@ -124,7 +126,13 @@ for (const [breed, subdomain] of Object.entries(BREED_SUBDOMAIN)) {
 }
 
 export function normalizeBreedKey(breed: string): string {
-  return breed.trim().replace(/\s+/g, ' ').toUpperCase();
+  return breed
+    .normalize('NFKC')
+    .trim()
+    .replace(/[\u2018\u2019\u201A\u201B`']/g, ' ')
+    .replace(/[-–—/\\._]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .toUpperCase();
 }
 
 export function normalizeDogName(name: string): string {
@@ -145,9 +153,21 @@ export function cleanPunctuation(str: string): string {
     .trim();
 }
 
+export function cleanAlphanumeric(str: string): string {
+  return cleanPunctuation(str).replace(/[^a-z0-9]/g, '');
+}
+
 export function breedArchiveSubdomain(breed: string | null | undefined): string | null {
   if (!breed?.trim()) return null;
-  return breedLookup.get(normalizeBreedKey(breed)) ?? null;
+  const direct = breedLookup.get(normalizeBreedKey(breed));
+  if (direct) return direct;
+  try {
+    const canon = canonicalBreed(breed);
+    if (canon && canon !== breed) {
+      return breedLookup.get(normalizeBreedKey(canon)) ?? null;
+    }
+  } catch {}
+  return null;
 }
 
 export function buildBreedArchiveProfileUrl(subdomain: string, hit: BreedArchiveSearchHit): string {
@@ -187,6 +207,17 @@ export function pickExactBreedArchiveHit(
     if (punctMatches.length === 1) return punctMatches[0]!;
   }
 
+  // 4. Compressed alphanumeric match (e.g. Alansari's vs Alansaris)
+  const targetAlpha = cleanAlphanumeric(target);
+  if (targetAlpha.length >= 4) {
+    const alphaMatches = hits.filter(
+      (hit) =>
+        cleanAlphanumeric(hit.nameLower) === targetAlpha ||
+        cleanAlphanumeric(hit.label) === targetAlpha,
+    );
+    if (alphaMatches.length === 1) return alphaMatches[0]!;
+  }
+
   return null;
 }
 
@@ -195,7 +226,11 @@ export async function searchBreedArchive(
   nameLat: string,
   fetchFn: typeof fetch = fetch,
 ): Promise<BreedArchiveSearchHit[]> {
-  const term = nameLat.trim();
+  let term = nameLat
+    .normalize('NFKC')
+    .replace(/[\u2018\u2019\u201A\u201B`]/g, "'")
+    .replace(/["“”«»]/g, '')
+    .trim();
   if (!term) return [];
 
   const url = `https://${subdomain}.breedarchive.com/animal/search?term=${encodeURIComponent(term)}`;
@@ -218,13 +253,39 @@ export async function searchBreedArchive(
 export async function resolveBreedArchiveUrl(
   breed: string | null | undefined,
   nameLat: string | null | undefined,
-  fetchFn: typeof fetch = fetch,
+  nameRuOrFetch?: string | null | typeof fetch,
+  fetchFnArg?: typeof fetch,
 ): Promise<string | null> {
-  if (!nameLat?.trim()) return null;
+  const nameRu = typeof nameRuOrFetch === 'string' ? nameRuOrFetch : null;
+  const fetchFn = typeof nameRuOrFetch === 'function' ? nameRuOrFetch : (fetchFnArg || fetch);
+
   const subdomain = breedArchiveSubdomain(breed);
   if (!subdomain) return null;
 
-  const hits = await searchBreedArchive(subdomain, nameLat, fetchFn);
-  const exact = pickExactBreedArchiveHit(hits, nameLat);
-  return exact ? buildBreedArchiveProfileUrl(subdomain, exact) : null;
+  // 1. Try search with nameLat (if available and not purely Cyrillic)
+  const candidateName = nameLat?.trim() || '';
+  const cyrCount = (candidateName.match(/[\u0400-\u04FF]/g) || []).length;
+  const latCount = (candidateName.match(/[a-zA-Z]/g) || []).length;
+  if (candidateName && latCount >= cyrCount) {
+    try {
+      const hits = await searchBreedArchive(subdomain, candidateName, fetchFn);
+      const exact = pickExactBreedArchiveHit(hits, candidateName);
+      if (exact) return buildBreedArchiveProfileUrl(subdomain, exact);
+    } catch {}
+  }
+
+  // 2. Fallback to transliterated nameRu (or transliterated nameLat if it was Cyrillic)
+  const ruSource = nameRu?.trim() || (cyrCount > latCount ? candidateName : '');
+  if (ruSource) {
+    const translit = transliterateRuToLat(ruSource);
+    if (translit && cleanAlphanumeric(translit) !== cleanAlphanumeric(candidateName)) {
+      try {
+        const hits = await searchBreedArchive(subdomain, translit, fetchFn);
+        const exact = pickExactBreedArchiveHit(hits, translit);
+        if (exact) return buildBreedArchiveProfileUrl(subdomain, exact);
+      } catch {}
+    }
+  }
+
+  return null;
 }
