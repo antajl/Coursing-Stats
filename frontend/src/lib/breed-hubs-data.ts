@@ -2,6 +2,7 @@ export type BreedCategory = 'sighthound' | 'primitive' | 'sport' | 'open'
 
 export interface BreedHubDefinition {
   slug: string
+  aliases?: string[]
   canonicalKey: string
   nameRu: string
   nameLat: string
@@ -1006,14 +1007,15 @@ export const CORE_BREED_HUBS: BreedHubDefinition[] = [
     ]
   },
   {
-    "slug": "miniature-dachshund",
-    "canonicalKey": "ТАКСА МИНИАТЮРНАЯ (Г-Ш, Д-Ш, Ж-Ш)",
-    "nameRu": "Такса миниатюрная",
-    "nameLat": "Miniature Dachshund",
+    "slug": "dachshund",
+    "aliases": ["miniature-dachshund", "taksa"],
+    "canonicalKey": "ТАКСА",
+    "nameRu": "Такса",
+    "nameLat": "Dachshund (Teckel)",
     "fci": "FCI 148",
     "category": "sport",
-    "lead": "Маленький охотник с большим сердцем — упрямый, азартный спринтер с низким центром тяжести и потрясающим упорством.",
-    "description": "Такса — исторический норный охотник, чье удлиненное гибкое тело и мощные короткие лапы созданы для целеустремленного преследования зверя. В забегах за приманкой таксы показывают фантастическую самоотдачу и удивительную для коротких лап частоту движений.",
+    "lead": "Маленький охотник с большим сердцем — азартный спринтер с низким центром тяжести и потрясающим упорством на треке.",
+    "description": "Такса — исторический норный охотник (FCI 148), чье удлиненное гибкое тело и мощные короткие лапы созданы для целеустремленного преследования зверя. В бегах за механической приманкой (БЗМП) таксы всех разновидностей (стандартные, миниатюрные, кроличьи) показывают фантастическую самоотдачу и удивительную частоту шага галопа.",
     "faqs": [
       {
         "question": "Какова дистанция и скорость таксы на спринте?",
@@ -1876,12 +1878,16 @@ export const CORE_BREED_HUBS: BreedHubDefinition[] = [
 ];
 
 export function getBreedHubBySlug(slug: string): BreedHubDefinition | undefined {
-  return CORE_BREED_HUBS.find((b) => b.slug === slug)
+  const norm = slug.toLowerCase().replace(/\/+$/, '').trim()
+  return CORE_BREED_HUBS.find((b) => b.slug === norm || b.aliases?.includes(norm))
 }
 
 export function getBreedHubByCanonicalKey(key: string): BreedHubDefinition | undefined {
-  const upper = key.toUpperCase()
+  const upper = key.toUpperCase().trim()
   return CORE_BREED_HUBS.find(
-    (b) => b.canonicalKey === upper || b.canonicalKey.toUpperCase() === upper,
+    (b) =>
+      b.canonicalKey === upper ||
+      b.canonicalKey.toUpperCase() === upper ||
+      (upper.includes('ТАКСА') && b.canonicalKey === 'ТАКСА'),
   )
 }
