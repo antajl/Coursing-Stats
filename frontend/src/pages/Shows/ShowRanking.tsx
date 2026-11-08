@@ -46,7 +46,7 @@ export default function ShowRanking() {
   // Debounce only text typing in search input (never debounce clicks on breed/group/award pills)
   const debouncedSearchQuery = useDebounce(searchQuery, 250)
 
-  const rankingYear = filterYear
+  const rankingYear = filterYear || SHOW_ACTIVE_SEASON
 
   const {
     data: page0Data,
@@ -312,7 +312,7 @@ export default function ShowRanking() {
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}
         filterYear={filterYear}
-        onYearChange={setFilterYear}
+        onYearChange={(y) => setFilterYear(y || SHOW_ACTIVE_SEASON)}
         currentSeason={SHOW_ACTIVE_SEASON}
         yearValues={years}
         filterBreed={filterBreed}

@@ -161,28 +161,12 @@ export async function getShowDogRankingPage0(year: string): Promise<ApiResult<Sh
 }
 
 export async function getShowDogRanking(year = ''): Promise<ApiResult<ShowDog[]>> {
-  console.debug('[getShowDogRanking] Requested year:', year)
-  if (year) {
-    console.debug('[getShowDogRanking] Loading year ranking for:', year)
-    const ranking = await loadShowDogRankingYear(year)
-    console.debug('[getShowDogRanking] Year ranking loaded:', ranking ? ranking.length : 'null')
-    if (!ranking) return { success: false, error: `Dog ranking for year ${year} unavailable` }
-    return { success: true, data: ranking }
-  }
-
-  const allTime = await fetchJson<ShowDog[]>('shows/indexes/dog-ranking.json')
-  console.debug('[getShowDogRanking] All-time ranking:', allTime ? allTime.length : 'null')
-  if (allTime && Array.isArray(allTime) && allTime.length > 0) {
-    return { success: true, data: allTime.map(hydrateShowDog) }
-  }
-
-  console.debug('[getShowDogRanking] Loading year rankings:', SHOW_RANKING_YEARS)
-  const parts = await Promise.all(SHOW_RANKING_YEARS.map((y) => loadShowDogRankingYear(y)))
-  console.debug('[getShowDogRanking] Year rankings loaded:', parts.map(p => p ? p.length : 'null'))
-  const lists = parts.filter((p): p is ShowDog[] => Array.isArray(p) && p.length > 0)
-  console.debug('[getShowDogRanking] Valid lists:', lists.length)
-  if (lists.length === 0) return { success: false, error: 'Dog ranking unavailable' }
-  return { success: true, data: mergeShowDogRankings(lists) }
+  const targetYear = year || SHOW_RANKING_YEARS[SHOW_RANKING_YEARS.length - 1]
+  console.debug('[getShowDogRanking] Requested year:', year, 'targetYear:', targetYear)
+  const ranking = await loadShowDogRankingYear(targetYear)
+  console.debug('[getShowDogRanking] Year ranking loaded:', ranking ? ranking.length : 'null')
+  if (!ranking) return { success: false, error: `Dog ranking for year ${targetYear} unavailable` }
+  return { success: true, data: ranking }
 }
 
 export interface ShowDogSearchEntry {

@@ -263,7 +263,7 @@ export function ShowsColumn({ dog, rank, breed }: ShowsColumnProps) {
         <DisciplineHistoryCard theme={THEME} participations={history.length}>
           <div className="flex-1">
             {visible.map((entry, idx) => {
-              const entryTitles = parseShowTitles(entry.title || '')
+              const entryTitles = presentShowAwards(parseShowTitles(entry.title || ''))
               const rowKey = `${entry.exhibition_id}-${idx}`
               const rowClass =
                 'block border-b border-camel-200/80 py-2 text-inherit no-underline transition-colors last:border-b-0 hover:bg-camel-50/60'
@@ -276,8 +276,11 @@ export function ShowsColumn({ dog, rank, breed }: ShowsColumnProps) {
                     date={
                       entry.date
                         ? (() => {
-                            const [day, month, year] = entry.date.split('.')
-                            return `${day}.${month}.${year}`
+                            if (entry.date.includes('.')) {
+                              const [day, month, year] = entry.date.split('.')
+                              if (day && month && year) return `${day}.${month}.${year}`
+                            }
+                            return entry.date
                           })()
                         : '—'
                     }
@@ -292,7 +295,7 @@ export function ShowsColumn({ dog, rank, breed }: ShowsColumnProps) {
                             key={i}
                             className="inline-block rounded-md border border-camel-200 bg-camel-50/90 px-1.5 py-0.5 text-[10px] font-semibold text-camel-800"
                           >
-                            {t}
+                            {SHOW_AWARD_BADGE[t] || t}
                           </span>
                         ))}
                       </div>

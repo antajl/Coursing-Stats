@@ -144,6 +144,7 @@ export default function ShowRankingFilters({
                   selectedYear={filterYear}
                   currentSeason={currentSeason}
                   onSelectYear={onYearChange}
+                  showAllYears={false}
                   isOpen={mobileYearDropdownOpen}
                   onOpenChange={setMobileYearDropdownOpen}
                 />
@@ -210,6 +211,7 @@ export default function ShowRankingFilters({
                   selectedYear={filterYear}
                   currentSeason={currentSeason}
                   onSelectYear={onYearChange}
+                  showAllYears={false}
                 />
 
                 <ModernDropdown

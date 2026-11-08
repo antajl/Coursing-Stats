@@ -28,6 +28,8 @@ export interface YearDropdownProps {
   allYearsTitle?: string
   /** Header label above years grid (defaults to 'Выберите сезон:') */
   subtitle?: string
+  /** Whether to show the 'Все года' button (defaults to true) */
+  showAllYears?: boolean
   /** Sort order of years in grid: 'asc' (2015->2026, default like in Archive) or 'desc' (2026->2015) */
   sortOrder?: 'asc' | 'desc'
   /** Controlled open state */
@@ -48,6 +50,7 @@ export default function YearDropdown({
   allYearsLabel = 'Все года',
   allYearsTitle = 'Показать данные за все доступные сезоны',
   subtitle = 'Выберите сезон:',
+  showAllYears = true,
   sortOrder = 'asc',
   isOpen: controlledIsOpen,
   onOpenChange: controlledOnOpenChange,
@@ -79,7 +82,7 @@ export default function YearDropdown({
   const isNonDefault =
     Boolean(selectedYear) && selectedYear !== currentSeason
 
-  const triggerLabel = selectedYear || allYearsLabel
+  const triggerLabel = selectedYear || (showAllYears ? allYearsLabel : currentSeason)
 
   const effectiveTrigger = trigger ?? (
     <button
@@ -104,18 +107,20 @@ export default function YearDropdown({
       {isOpen ? (
         <div className="p-3 text-xs text-charcoal-800 space-y-2.5">
         {/* Full width button: Все года */}
-        <button
-          type="button"
-          onClick={() => handleSelect('')}
-          className={`w-full py-1.5 px-3 rounded-lg text-xs transition-colors border text-center cursor-pointer ${
-            !selectedYear
-              ? 'bg-camel-100 text-camel-950 font-semibold border-camel-600 shadow-xs'
-              : 'bg-cream-100/70 hover:bg-camel-100 text-charcoal-700 border-old-money-200/60 font-medium'
-          }`}
-          title={allYearsTitle}
-        >
-          {allYearsLabel}
-        </button>
+        {showAllYears && (
+          <button
+            type="button"
+            onClick={() => handleSelect('')}
+            className={`w-full py-1.5 px-3 rounded-lg text-xs transition-colors border text-center cursor-pointer ${
+              !selectedYear
+                ? 'bg-camel-100 text-camel-950 font-semibold border-camel-600 shadow-xs'
+                : 'bg-cream-100/70 hover:bg-camel-100 text-charcoal-700 border-old-money-200/60 font-medium'
+            }`}
+            title={allYearsTitle}
+          >
+            {allYearsLabel}
+          </button>
+        )}
 
         {/* 3-column Year Grid */}
         <div className="space-y-1">

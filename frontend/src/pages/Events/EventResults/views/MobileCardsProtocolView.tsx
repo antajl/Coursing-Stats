@@ -1,5 +1,6 @@
 import { useMemo, Fragment } from 'react'
 import { Link } from 'react-router-dom'
+import { Award } from 'lucide-react'
 import PlacementBadge from '../components/PlacementBadge'
 import ProtocolHeatBadge, { getHeatDistance } from '../components/ProtocolHeatBadge'
 import QualificationBadges from '../components/QualificationBadges'
@@ -286,11 +287,18 @@ export default function MobileCardsProtocolView({
           </div>
         )}
 
-        {/* Подвал карточки: Награды и переход в лигу */}
+        {/* Подвал карточки: Награды и переход в лигу в обособленной плашке с рамкой */}
         {cardAwards && (
-          <div className="pt-1 flex items-center justify-between text-[11px]">
-            <span className="text-[10px] text-charcoal-400 font-medium">Награды:</span>
-            <QualificationBadges qualification={cardAwards} />
+          <div className="mt-2 flex items-center justify-between gap-2 px-2.5 py-1.5 rounded-lg bg-cream-50/80 border border-old-money-200/70 text-[11px]">
+            <div className="flex items-center gap-1.5 shrink-0 text-charcoal-600 font-medium">
+              <Award className="w-3.5 h-3.5 text-camel-700 shrink-0" aria-hidden="true" />
+              <span className="text-[10.5px] text-charcoal-700 font-semibold tracking-wide">
+                Награды:
+              </span>
+            </div>
+            <div className="flex flex-wrap items-center justify-end gap-1">
+              <QualificationBadges qualification={cardAwards} />
+            </div>
           </div>
         )}
       </div>
@@ -307,7 +315,7 @@ export default function MobileCardsProtocolView({
           return (
             <div
               key={groupKey}
-              className="overflow-hidden rounded-xl border border-old-money-200/90 bg-white shadow-2xs divide-y divide-old-money-100/70"
+              className="overflow-hidden rounded-xl border border-old-money-200/90 bg-white shadow-2xs divide-y divide-old-money-200"
             >
               {/* Фирменная плашка группы пород — бесшовно переходит в первую собаку */}
               <div className="bg-camel-100/80 border-b border-camel-200/90 py-1.5 px-3 select-none flex items-center justify-between">
@@ -318,13 +326,13 @@ export default function MobileCardsProtocolView({
                   {breedCountLabel(groupResults.length)}
                 </span>
               </div>
-              {/* Карточки собак группы — абсолютно бесшовные между собой и заголовком */}
+              {/* Карточки собак группы */}
               {groupResults.map((result, idx) => renderCard(result, idx))}
             </div>
           )
         })
       ) : (
-        <div className="overflow-hidden rounded-xl border border-old-money-200/90 bg-white shadow-2xs divide-y divide-old-money-100/70">
+        <div className="overflow-hidden rounded-xl border border-old-money-200/90 bg-white shadow-2xs divide-y divide-old-money-200">
           {visibleResults.map((result, idx) => renderCard(result, idx))}
         </div>
       )}

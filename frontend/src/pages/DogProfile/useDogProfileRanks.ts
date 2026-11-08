@@ -132,9 +132,27 @@ export function useDogProfileRanks({
         !hasPrecomputedSport && competitionDogId ? getDogSpeedRank(competitionDogId, competitionYear) : Promise.resolve(null),
         !hasPrecomputedSport && competitionDogId && breed ? getDogBreedPlacementRank(competitionDogId, breed, competitionYear) : Promise.resolve(null),
         !hasPrecomputedSport && competitionDogId && breed ? getDogBreedSpeedRank(competitionDogId, breed, competitionYear) : Promise.resolve(null),
-        showDog ? getShowDogAllTimeRank(showDog) : Promise.resolve(null),
-        showDog ? getShowDogBreedRank(showDog) : Promise.resolve(null),
-        showDog ? getShowDogYearRank(showDog, showYear) : Promise.resolve(null),
+        showDog
+          ? getShowDogAllTimeRank({
+              showId: showDog.id,
+              competitionId: showDog.competition_dog_id,
+            })
+          : Promise.resolve(null),
+        showDog && showDog.breed && !showDog.breed_rank
+          ? getShowDogBreedRank({
+              showId: showDog.id,
+              competitionId: showDog.competition_dog_id,
+              breed: showDog.breed,
+              year: showYear,
+            })
+          : Promise.resolve(showDog?.breed_rank ?? null),
+        showDog && !showDog.rank
+          ? getShowDogYearRank({
+              showId: showDog.id,
+              competitionId: showDog.competition_dog_id,
+              year: showYear,
+            })
+          : Promise.resolve(showDog?.rank ?? null),
       ])
 
       if (cancelled) return
