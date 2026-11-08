@@ -5,6 +5,8 @@ import { SEO } from '../../components/SEO'
 import { JsonLd, itemPageSchema } from '../../components/JsonLd'
 import { CORE_BREED_HUBS, getBreedHubBySlug } from '../../lib/breed-hubs-data'
 import { useTopPlacement, useTopSpeed, useSpeedRecordsByBreed } from '../../hooks/useStaticData'
+import { parseDogName } from '../../lib/dogName'
+import { matchesBreedFilter } from '../../lib/breedMapping'
 
 interface TopPlacementItem {
   dog_id: number
@@ -15,7 +17,10 @@ interface TopPlacementItem {
   silver: number
   bronze: number
   total_starts: number
-  year: number
+  year?: number
+  year_from?: number
+  year_to?: number
+  sex?: string
 }
 
 interface TopSpeedItem {
@@ -26,6 +31,9 @@ interface TopSpeedItem {
   best_speed?: number
   avg_speed?: number
   total_starts: number
+  sex?: string
+  year_from?: number
+  year_to?: number
 }
 
 interface SpeedRecordItem {
@@ -40,9 +48,11 @@ export default function BreedHub() {
   const { slug } = useParams<{ slug: string }>()
   const breedInfo = useMemo(() => (slug ? getBreedHubBySlug(slug) : undefined), [slug])
 
-  // Load top dogs for 2026: both speed and placement cascades
+  // Load top dogs: 2026 first, and fallback to all-time
   const { data: topSpeedRes, isLoading: speedRankLoading } = useTopSpeed('2026')
   const { data: topPlacementRes, isLoading: placementLoading } = useTopPlacement('2026')
+  const { data: topSpeedAllRes, isLoading: speedAllLoading } = useTopSpeed('all')
+  const { data: topPlacementAllRes, isLoading: placementAllLoading } = useTopPlacement('all')
 
   // Load Donino speed records
   const { data: doninoSpeedRes, isLoading: doninoLoading } = useSpeedRecordsByBreed(
@@ -51,41 +61,135 @@ export default function BreedHub() {
 
   const topSpeedDogs = useMemo(() => {
     if (!breedInfo || !topSpeedRes?.data?.items) return []
-    const key = breedInfo.canonicalKey.toUpperCase()
     return (topSpeedRes.data.items as TopSpeedItem[])
-      .filter(
-        (d) =>
-          (d.breed || '').toUpperCase().includes(key) ||
-          key.includes((d.breed || '').toUpperCase()),
-      )
+      .filter((d) => matchesBreedFilter(d.breed, breedInfo.canonicalKey))
       .slice(0, 10)
   }, [breedInfo, topSpeedRes])
 
   const topPlacementDogs = useMemo(() => {
     if (!breedInfo || !topPlacementRes?.data?.items) return []
-    const key = breedInfo.canonicalKey.toUpperCase()
     return (topPlacementRes.data.items as TopPlacementItem[])
-      .filter(
-        (d) =>
-          (d.breed || '').toUpperCase().includes(key) ||
-          (d.breed || '').toUpperCase() === key,
-      )
+      .filter((d) => matchesBreedFilter(d.breed, breedInfo.canonicalKey))
       .slice(0, 10)
   }, [breedInfo, topPlacementRes])
+
+  // Fallback to all-time leaders if 2026 has no data for the breed
+  const topSpeedAllDogs = useMemo(() => {
+    if (!breedInfo || !topSpeedAllRes?.data?.items) return []
+    return (topSpeedAllRes.data.items as TopSpeedItem[])
+      .filter((d) => matchesBreedFilter(d.breed, breedInfo.canonicalKey))
+      .slice(0, 10)
+  }, [breedInfo, topSpeedAllRes])
+
+  const topPlacementAllDogs = useMemo(() => {
+    if (!breedInfo || !topPlacementAllRes?.data?.items) return []
+    return (topPlacementAllRes.data.items as TopPlacementItem[])
+      .filter((d) => matchesBreedFilter(d.breed, breedInfo.canonicalKey))
+      .slice(0, 10)
+  }, [breedInfo, topPlacementAllRes])
 
   const speedRecords = useMemo(() => {
     if (!breedInfo || !doninoSpeedRes?.data) return []
     const list = Array.isArray(doninoSpeedRes.data)
       ? doninoSpeedRes.data
       : (doninoSpeedRes.data as any)?.records || []
-    return (list as SpeedRecordItem[]).slice(0, 6)
+    return (list as SpeedRecordItem[]).slice(0, 10)
   }, [breedInfo, doninoSpeedRes])
+
+  // Real live database statistics calculated across all-time records
+  const breedStats = useMemo(() => {
+    if (!breedInfo || !topPlacementAllRes?.data?.items) {
+      return { totalDogs: 0, totalStarts: 0, totalGold: 0, yearsSpan: '', maxSpeed: 0 }
+    }
+    const matchingPlacement = (topPlacementAllRes.data.items as TopPlacementItem[]).filter((d) =>
+      matchesBreedFilter(d.breed, breedInfo.canonicalKey),
+    )
+
+    let totalStarts = 0
+    let totalGold = 0
+    let minYear = 9999
+    let maxYear = 0
+
+    matchingPlacement.forEach((d) => {
+      totalStarts += d.total_starts || 0
+      totalGold += d.gold || 0
+      if (d.year_from && d.year_from < minYear) minYear = d.year_from
+      if (d.year_to && d.year_to > maxYear) maxYear = d.year_to
+    })
+
+    let maxSpeed = 0
+    if (topSpeedAllRes?.data?.items) {
+      const matchingSpeed = (topSpeedAllRes.data.items as TopSpeedItem[]).filter((d) =>
+        matchesBreedFilter(d.breed, breedInfo.canonicalKey),
+      )
+      matchingSpeed.forEach((d) => {
+        if (d.best_speed && d.best_speed > maxSpeed) {
+          maxSpeed = d.best_speed
+        }
+      })
+    }
+
+    speedRecords.forEach((r) => {
+      if (r.speed_km_h && r.speed_km_h > maxSpeed) {
+        maxSpeed = r.speed_km_h
+      }
+    })
+
+    const yearsSpan =
+      minYear !== 9999 ? (minYear === maxYear ? `${minYear}` : `${minYear}–${maxYear}`) : ''
+
+    return {
+      totalDogs: matchingPlacement.length,
+      totalStarts,
+      totalGold,
+      yearsSpan,
+      maxSpeed,
+    }
+  }, [breedInfo, topPlacementAllRes, topSpeedAllRes, speedRecords])
+
+  // Cascade hierarchy: 1) 2026 speed -> 2) 2026 placement -> 3) all-time speed -> 4) all-time placement
+  const has2026Speed = topSpeedDogs.length > 0
+  const has2026Placement = topPlacementDogs.length > 0
+  const hasAllSpeed = topSpeedAllDogs.length > 0
+  const hasAllPlacement = topPlacementAllDogs.length > 0
+
+  const is2026Active = has2026Speed || has2026Placement
+  const isAllTimeFallback = !is2026Active && (hasAllSpeed || hasAllPlacement)
+
+  const isSpeedMode = has2026Speed || (!is2026Active && hasAllSpeed)
+  const displayDogs = has2026Speed
+    ? topSpeedDogs
+    : has2026Placement
+    ? topPlacementDogs
+    : hasAllSpeed
+    ? topSpeedAllDogs
+    : topPlacementAllDogs
+
+  const leadersTitle = is2026Active
+    ? isSpeedMode
+      ? 'Лидеры сезона 2026 по скорости'
+      : 'Лидеры сезона 2026'
+    : isSpeedMode
+    ? 'Лидеры по скорости (все сезоны)'
+    : 'Лидеры состязаний (все сезоны)'
+
+  const leadersUrl = is2026Active
+    ? isSpeedMode
+      ? `/competitions/?tab=ranking&breed=${encodeURIComponent(breedInfo?.canonicalKey || '')}&sort=speed`
+      : `/competitions/?tab=ranking&breed=${encodeURIComponent(breedInfo?.canonicalKey || '')}`
+    : isSpeedMode
+    ? `/competitions/?tab=ranking&breed=${encodeURIComponent(breedInfo?.canonicalKey || '')}&year=all&sort=speed`
+    : `/competitions/?tab=ranking&breed=${encodeURIComponent(breedInfo?.canonicalKey || '')}&year=all`
+
+  const isLeadersLoading =
+    (speedRankLoading || placementLoading || speedAllLoading || placementAllLoading) &&
+    displayDogs.length === 0
 
   if (!breedInfo) {
     return (
       <div className="py-12 px-4 max-w-4xl mx-auto text-center">
-        <h1 className="text-2xl font-serif font-bold text-camel-900 mb-4">Порода не найдена</h1>
-        <p className="text-old-money-700 mb-6">
+        <h1 className="text-xl font-serif font-bold text-charcoal-900 mb-3">Порода не найдена</h1>
+        <p className="text-xs sm:text-sm text-charcoal-600 mb-5">
           Пожалуйста, выберите интересующую породу из списка основных беговых пород:
         </p>
         <div className="flex flex-wrap gap-2 justify-center">
@@ -93,7 +197,7 @@ export default function BreedHub() {
             <Link
               key={b.slug}
               to={`/breeds/${b.slug}/`}
-              className="px-3 py-2 text-sm rounded bg-camel-50 text-camel-800 border border-camel-200 hover:bg-camel-100 min-h-[44px] flex items-center"
+              className="cs-glass-pill inline-flex h-8 shrink-0 items-center rounded-full px-3 text-xs font-semibold transition-all cursor-pointer whitespace-nowrap"
             >
               {b.nameRu}
             </Link>
@@ -105,10 +209,6 @@ export default function BreedHub() {
 
   const seoTitle = `${breedInfo.nameRu} (${breedInfo.nameLat}) — рейтинг в курсинге, результаты и рекорды`
   const seoDesc = `Всероссийский рейтинг породы ${breedInfo.nameRu} (${breedInfo.nameLat}, ${breedInfo.fci}) в курсинге и бегах борзых: топ сезона по скорости, замеры в Донино (км/ч), протоколы соревнований РКФ и результаты забегов на Coursing Stats.`
-
-  // Speed-first prioritization for leaders section
-  const hasSpeedLeaders = topSpeedDogs.length > 0
-  const isLeadersLoading = hasSpeedLeaders ? false : speedRankLoading && placementLoading
 
   return (
     <div className="space-y-6 pb-12">
@@ -133,219 +233,485 @@ export default function BreedHub() {
       />
 
       {/* Hero Header */}
-      <header className="rounded-xl border border-camel-200 bg-white/70 p-5 md:p-8 shadow-sm backdrop-blur">
-        <div className="flex flex-wrap items-center justify-between gap-4 mb-3">
+      <header className="rounded-xl border border-cream-200 bg-white/80 p-4 sm:p-5 md:p-6 shadow-sm">
+        <div className="flex flex-wrap items-center justify-between gap-3 mb-2.5">
           <div>
-            <div className="flex items-center gap-2 mb-1">
-              <span className="text-xs font-semibold px-2 py-0.5 rounded bg-camel-100 text-camel-800 tracking-wide">
+            <div className="flex flex-wrap items-center gap-2 mb-1">
+              <span className="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-camel-100 text-camel-900 border border-camel-200/80 tracking-wide">
                 {breedInfo.fci}
               </span>
-              <span className="text-xs text-old-money-600 uppercase tracking-wider">
+              <span className="text-xs text-charcoal-600 uppercase tracking-wider font-medium">
                 {breedInfo.nameLat}
               </span>
+              {breedStats.yearsSpan && (
+                <span className="text-xs text-charcoal-500 font-sans tabular-nums">
+                  · Сезоны {breedStats.yearsSpan}
+                </span>
+              )}
             </div>
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-camel-950 tracking-tight">
+            <h1 className="text-xl sm:text-2xl font-serif font-bold text-charcoal-900 tracking-tight">
               {breedInfo.nameRu} в курсинге и бегах
             </h1>
           </div>
 
           <Link
             to={`/competitions/?tab=ranking&breed=${encodeURIComponent(breedInfo.canonicalKey)}`}
-            className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg bg-camel-800 text-white font-medium text-sm hover:bg-camel-900 shadow-sm transition-colors min-h-[44px]"
+            className="cs-glass-pill inline-flex h-8 items-center gap-1.5 rounded-full px-3 text-xs font-semibold shrink-0 cursor-pointer"
           >
             <span>Полный рейтинг породы</span>
-            <ArrowUpRight className="w-4 h-4" />
+            <ArrowUpRight className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
           </Link>
         </div>
 
-        <p className="text-base md:text-lg text-camel-900 font-medium mb-2 leading-relaxed">
+        <p className="text-xs sm:text-sm font-medium text-charcoal-800 mb-1 leading-relaxed">
           {breedInfo.lead}
         </p>
-        <p className="text-sm md:text-base text-old-money-700 leading-relaxed">
+        <p className="text-xs sm:text-sm text-charcoal-600 leading-relaxed">
           {breedInfo.description}
         </p>
-      </header>
 
-      {/* Fast Navigation Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* Leaders Section (Speed First) */}
-        <section className="rounded-xl border border-cream-200 bg-white/80 p-5 shadow-sm">
-          <div className="flex items-center justify-between mb-4 pb-2 border-b border-cream-200">
-            <h2 className="text-lg font-serif font-bold text-camel-900 flex items-center gap-2">
-              {hasSpeedLeaders ? (
-                <>
-                  <Gauge className="w-5 h-5 text-camel-700" />
-                  <span>Лидеры сезона 2026 по скорости</span>
-                </>
+        {/* Real Live Database Statistics Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 pt-3.5 border-t border-cream-200/80 mt-3.5">
+          <div className="rounded-lg bg-cream-50/60 border border-cream-200/80 p-2 sm:p-2.5 text-center">
+            <div className="text-[10px] font-semibold uppercase tracking-wider text-charcoal-600 mb-0.5">
+              Собак в состязаниях
+            </div>
+            <div className="text-base sm:text-lg font-bold font-sans tabular-nums text-charcoal-900">
+              {placementAllLoading ? (
+                <span className="text-charcoal-400">...</span>
               ) : (
-                <>
-                  <Trophy className="w-5 h-5 text-camel-700" />
-                  <span>Лидеры сезона 2026</span>
-                </>
+                breedStats.totalDogs.toLocaleString('ru-RU')
               )}
-            </h2>
-            <Link
-              to={
-                hasSpeedLeaders
-                  ? `/competitions/?tab=ranking&breed=${encodeURIComponent(breedInfo.canonicalKey)}&sort=speed`
-                  : `/competitions/?tab=ranking&breed=${encodeURIComponent(breedInfo.canonicalKey)}`
-              }
-              className="text-xs font-medium text-camel-800 hover:underline flex items-center gap-1"
-            >
-              <span>Все</span>
-              <ArrowUpRight className="w-3.5 h-3.5" />
-            </Link>
+            </div>
+            <div className="text-[10px] text-charcoal-500 mt-0.5 hidden sm:block">
+              в базе состязаний
+            </div>
           </div>
 
-          {isLeadersLoading ? (
-            <p className="text-xs text-old-money-600 py-4">Данные сезона загружаются...</p>
-          ) : hasSpeedLeaders ? (
-            <ol className="divide-y divide-cream-100 text-sm">
-              {topSpeedDogs.map((dog, idx) => {
-                const name = dog.name_ru || dog.name_lat || 'Собака'
-                return (
-                  <li key={dog.dog_id} className="py-2.5 flex items-center justify-between gap-3">
-                    <div className="flex items-center gap-2.5 min-w-0">
-                      <span className="w-5 text-center font-bold font-sans tabular-nums text-xs text-old-money-500 shrink-0">
-                        {idx + 1}
-                      </span>
-                      <Link
-                        to={`/dog/${dog.dog_id}/`}
-                        className="font-medium text-camel-950 hover:text-camel-800 hover:underline truncate"
-                      >
-                        {name}
-                      </Link>
-                    </div>
+          <div className="rounded-lg bg-cream-50/60 border border-cream-200/80 p-2 sm:p-2.5 text-center">
+            <div className="text-[10px] font-semibold uppercase tracking-wider text-charcoal-600 mb-0.5">
+              Всего забегов
+            </div>
+            <div className="text-base sm:text-lg font-bold font-sans tabular-nums text-charcoal-900">
+              {placementAllLoading ? (
+                <span className="text-charcoal-400">...</span>
+              ) : (
+                breedStats.totalStarts.toLocaleString('ru-RU')
+              )}
+            </div>
+            <div className="text-[10px] text-charcoal-500 mt-0.5 hidden sm:block">
+              в протоколах состязаний
+            </div>
+          </div>
 
-                    <div className="flex items-center gap-2 text-xs shrink-0 text-old-money-600">
-                      <span title="Забеги">{dog.total_starts} заб.</span>
-                      {dog.best_speed ? (
-                        <span
-                          className="inline-flex items-center px-2 py-0.5 rounded bg-camel-100 text-camel-950 font-semibold font-sans tabular-nums text-xs border border-camel-200 leading-normal"
-                          title={
-                            dog.avg_speed
-                              ? `Лучшая скорость: ${dog.best_speed.toFixed(1)} км/ч, средняя: ${dog.avg_speed.toFixed(1)} км/ч`
-                              : `Лучшая скорость: ${dog.best_speed.toFixed(1)} км/ч`
-                          }
-                        >
-                          {dog.best_speed.toFixed(1)} км/ч
+          <div className="rounded-lg bg-cream-50/60 border border-cream-200/80 p-2 sm:p-2.5 text-center">
+            <div className="text-[10px] font-semibold uppercase tracking-wider text-charcoal-600 mb-0.5">
+              Побед (золото)
+            </div>
+            <div className="text-base sm:text-lg font-bold font-sans tabular-nums text-charcoal-900">
+              {placementAllLoading ? (
+                <span className="text-charcoal-400">...</span>
+              ) : (
+                breedStats.totalGold.toLocaleString('ru-RU')
+              )}
+            </div>
+            <div className="text-[10px] text-charcoal-500 mt-0.5 hidden sm:block">
+              1-х мест на турнирах
+            </div>
+          </div>
+
+          <div className="rounded-lg bg-cream-50/60 border border-cream-200/80 p-2 sm:p-2.5 text-center">
+            <div className="text-[10px] font-semibold uppercase tracking-wider text-charcoal-600 mb-0.5">
+              {breedStats.maxSpeed > 0 ? 'Рекорд скорости' : 'Сезоны состязаний'}
+            </div>
+            <div className="text-base sm:text-lg font-bold font-sans tabular-nums text-charcoal-900">
+              {speedAllLoading || doninoLoading ? (
+                <span className="text-charcoal-400">...</span>
+              ) : breedStats.maxSpeed > 0 ? (
+                `${breedStats.maxSpeed % 1 === 0 ? breedStats.maxSpeed : breedStats.maxSpeed.toFixed(1)} км/ч`
+              ) : (
+                breedStats.yearsSpan || 'Архив'
+              )}
+            </div>
+            <div className="text-[10px] text-charcoal-500 mt-0.5 hidden sm:block">
+              {breedStats.maxSpeed > 0 ? 'полигон и состязания' : 'период активности'}
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {/* Live Champions & Speed Records Grid */}
+      {speedRecords.length > 0 ? (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Leaders Section */}
+          <section className="rounded-xl border border-cream-200 bg-white/80 p-4 sm:p-5 shadow-sm">
+            <div className="flex items-center justify-between mb-3.5 pb-2 border-b border-cream-200">
+              <h2 className="text-sm sm:text-base font-serif font-bold text-charcoal-900 flex items-center gap-2">
+                {isSpeedMode ? (
+                  <Gauge className="w-4 h-4 text-camel-700" />
+                ) : (
+                  <Trophy className="w-4 h-4 text-camel-700" />
+                )}
+                <span>{leadersTitle}</span>
+              </h2>
+              <Link
+                to={leadersUrl}
+                className="text-xs font-semibold text-charcoal-700 hover:text-camel-800 flex items-center gap-1"
+              >
+                <span>Все</span>
+                <ArrowUpRight className="w-3.5 h-3.5 text-camel-600" />
+              </Link>
+            </div>
+
+            {isAllTimeFallback && (
+              <p className="text-[11px] text-old-money-600 mb-3 bg-cream-50/80 rounded px-2.5 py-1.5 border border-cream-200/60 leading-relaxed">
+                В сезоне 2026 забегов породы пока не зафиксировано. Показан общий рейтинг за все сезоны состязаний.
+              </p>
+            )}
+
+            {isLeadersLoading ? (
+              <p className="text-xs text-old-money-600 py-4">Данные загружаются...</p>
+            ) : displayDogs.length === 0 ? (
+              <div className="py-6 text-center text-xs text-old-money-600">
+                <p>В официальных состязаниях РКФ забегов породы пока не зафиксировано.</p>
+              </div>
+            ) : (
+              <ol className="divide-y divide-cream-100 text-sm">
+                {displayDogs.map((dog, idx) => {
+                  const { primary, secondary } = parseDogName(dog.name_lat, dog.name_ru)
+                  const speedDog = dog as TopSpeedItem
+                  const placDog = dog as TopPlacementItem
+                  return (
+                    <li key={dog.dog_id} className="py-2.5 flex items-center justify-between gap-3">
+                      <div className="flex items-center gap-2.5 min-w-0">
+                        <span className="w-5 text-center font-bold font-sans tabular-nums text-xs text-old-money-500 shrink-0">
+                          {idx + 1}
                         </span>
-                      ) : null}
-                    </div>
-                  </li>
-                )
-              })}
-            </ol>
-          ) : topPlacementDogs.length === 0 ? (
-            <p className="text-xs text-old-money-600 py-4">Данные сезона обновляются...</p>
-          ) : (
-            <ol className="divide-y divide-cream-100 text-sm">
-              {topPlacementDogs.map((dog, idx) => {
-                const name = dog.name_ru || dog.name_lat || 'Собака'
-                return (
-                  <li key={dog.dog_id} className="py-2.5 flex items-center justify-between gap-3">
+                        <div className="min-w-0">
+                          <Link
+                            to={`/dog/${dog.dog_id}/`}
+                            className="font-medium text-camel-950 hover:text-camel-800 hover:underline truncate block"
+                          >
+                            {primary}
+                          </Link>
+                          {secondary && (
+                            <span className="text-[11px] text-old-money-600 truncate block">
+                              {secondary}
+                            </span>
+                          )}
+                        </div>
+                      </div>
+
+                      <div className="flex items-center gap-2 text-xs shrink-0 text-old-money-600">
+                        <span title="Забеги">{dog.total_starts} заб.</span>
+                        {isSpeedMode && speedDog.best_speed ? (
+                          <span
+                            className="inline-flex items-center px-2 py-0.5 rounded bg-camel-100 text-camel-950 font-semibold font-sans tabular-nums text-xs border border-camel-200 leading-normal"
+                            title={
+                              speedDog.avg_speed
+                                ? `Лучшая скорость: ${speedDog.best_speed.toFixed(1)} км/ч, средняя: ${speedDog.avg_speed.toFixed(1)} км/ч`
+                                : `Лучшая скорость: ${speedDog.best_speed.toFixed(1)} км/ч`
+                            }
+                          >
+                            {speedDog.best_speed.toFixed(1)} км/ч
+                          </span>
+                        ) : placDog.gold > 0 ? (
+                          <span className="inline-flex items-center px-1.5 py-0.5 rounded bg-amber-50 text-amber-800 font-semibold font-sans tabular-nums border border-amber-200/60 leading-normal">
+                            {placDog.gold} зол.
+                          </span>
+                        ) : null}
+                      </div>
+                    </li>
+                  )
+                })}
+              </ol>
+            )}
+          </section>
+
+          {/* Speed Records Section */}
+          <section className="rounded-xl border border-cream-200 bg-white/80 p-4 sm:p-5 shadow-sm">
+            <div className="flex items-center justify-between mb-3.5 pb-2 border-b border-cream-200">
+              <h2 className="text-sm sm:text-base font-serif font-bold text-charcoal-900 flex items-center gap-2">
+                <Gauge className="w-4 h-4 text-camel-700" />
+                <span>Рекорды скорости (Донино)</span>
+              </h2>
+              <Link
+                to="/speed-records/"
+                className="text-xs font-semibold text-charcoal-700 hover:text-camel-800 flex items-center gap-1"
+              >
+                <span>Таблица</span>
+                <ArrowUpRight className="w-3.5 h-3.5 text-camel-600" />
+              </Link>
+            </div>
+
+            {doninoLoading ? (
+              <p className="text-xs text-old-money-600 py-4">Загрузка замеров скорости...</p>
+            ) : (
+              <ol className="divide-y divide-cream-100 text-sm">
+                {speedRecords.map((r, i) => (
+                  <li key={`${r.name}-${i}`} className="py-2.5 flex items-center justify-between gap-3">
                     <div className="flex items-center gap-2.5 min-w-0">
                       <span className="w-5 text-center font-bold font-sans tabular-nums text-xs text-old-money-500 shrink-0">
-                        {idx + 1}
+                        {i + 1}
                       </span>
-                      <Link
-                        to={`/dog/${dog.dog_id}/`}
-                        className="font-medium text-camel-950 hover:text-camel-800 hover:underline truncate"
-                      >
-                        {name}
-                      </Link>
-                    </div>
-
-                    <div className="flex items-center gap-2 text-xs shrink-0 text-old-money-600">
-                      <span title="Забеги">{dog.total_starts} заб.</span>
-                      {dog.gold > 0 && (
-                        <span className="inline-flex items-center px-1.5 py-0.5 rounded bg-amber-50 text-amber-800 font-semibold font-sans tabular-nums border border-amber-200/60 leading-normal">
-                          {dog.gold} зол.
+                      {r.name && r.breed ? (
+                        <Link
+                          to={`/donino-dog/${encodeURIComponent(r.name)}/${encodeURIComponent(r.breed)}/`}
+                          className="font-medium text-camel-950 hover:text-camel-800 hover:underline truncate"
+                        >
+                          {r.name}
+                        </Link>
+                      ) : (
+                        <span className="font-medium text-camel-950 truncate">{r.name}</span>
+                      )}
+                      {r.track_type && (
+                        <span className="text-xs text-old-money-500 hidden sm:inline">
+                          ({r.track_type})
                         </span>
                       )}
                     </div>
-                  </li>
-                )
-              })}
-            </ol>
-          )}
-        </section>
 
-        {/* Speed Records Section */}
-        <section className="rounded-xl border border-cream-200 bg-white/80 p-5 shadow-sm">
-          <div className="flex items-center justify-between mb-4 pb-2 border-b border-cream-200">
-            <h2 className="text-lg font-serif font-bold text-camel-900 flex items-center gap-2">
-              <Gauge className="w-5 h-5 text-camel-700" />
-              <span>Рекорды скорости (Донино)</span>
+                    <div className="text-right shrink-0">
+                      <span className="text-base font-sans font-bold tabular-nums text-camel-800">
+                        {r.speed_km_h}
+                      </span>
+                      <span className="text-xs text-old-money-600 ml-1">км/ч</span>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            )}
+          </section>
+        </div>
+      ) : (
+        /* Full-Width Hall of Fame when Donino has no radar tests for this breed */
+        <section className="rounded-xl border border-cream-200 bg-white/80 p-4 sm:p-5 shadow-sm">
+          <div className="flex items-center justify-between mb-3.5 pb-2 border-b border-cream-200">
+            <h2 className="text-sm sm:text-base font-serif font-bold text-charcoal-900 flex items-center gap-2">
+              {isSpeedMode ? (
+                <Gauge className="w-4 h-4 text-camel-700" />
+              ) : (
+                <Trophy className="w-4 h-4 text-camel-700" />
+              )}
+              <span>{leadersTitle}</span>
             </h2>
             <Link
-              to="/speed-records/"
-              className="text-xs font-medium text-camel-800 hover:underline flex items-center gap-1"
+              to={leadersUrl}
+              className="text-xs font-semibold text-charcoal-700 hover:text-camel-800 flex items-center gap-1"
             >
-              <span>Таблица</span>
-              <ArrowUpRight className="w-3.5 h-3.5" />
+              <span>Полный рейтинг породы</span>
+              <ArrowUpRight className="w-3.5 h-3.5 text-camel-600" />
             </Link>
           </div>
 
-          {doninoLoading ? (
-            <p className="text-xs text-old-money-600 py-4">Загрузка замеров скорости...</p>
-          ) : speedRecords.length === 0 ? (
-            <p className="text-xs text-old-money-600 py-4">
-              Замеры полигона Донино для породы обрабатываются...
+          {isAllTimeFallback && (
+            <p className="text-[11px] text-old-money-600 mb-3 bg-cream-50/80 rounded px-2.5 py-1.5 border border-cream-200/60 leading-relaxed">
+              В сезоне 2026 забегов породы пока не зафиксировано. Показан общий рейтинг за все сезоны состязаний.
             </p>
-          ) : (
-            <ol className="divide-y divide-cream-100 text-sm">
-              {speedRecords.map((r, i) => (
-                <li key={`${r.name}-${i}`} className="py-2.5 flex items-center justify-between gap-3">
-                  <div className="flex items-center gap-2.5 min-w-0">
-                    <span className="w-5 text-center font-bold font-sans tabular-nums text-xs text-old-money-500 shrink-0">
-                      {i + 1}
-                    </span>
-                    {r.name && r.breed ? (
-                      <Link
-                        to={`/donino-dog/${encodeURIComponent(r.name)}/${encodeURIComponent(r.breed)}/`}
-                        className="font-medium text-camel-950 hover:text-camel-800 hover:underline truncate"
-                      >
-                        {r.name}
-                      </Link>
-                    ) : (
-                      <span className="font-medium text-camel-950 truncate">{r.name}</span>
-                    )}
-                    {r.track_type && (
-                      <span className="text-xs text-old-money-500 hidden sm:inline">
-                        ({r.track_type})
-                      </span>
-                    )}
-                  </div>
-
-                  <div className="text-right shrink-0">
-                    <span className="text-base font-sans font-bold tabular-nums text-camel-800">
-                      {r.speed_km_h}
-                    </span>
-                    <span className="text-xs text-old-money-600 ml-1">км/ч</span>
-                  </div>
-                </li>
-              ))}
-            </ol>
           )}
-        </section>
-      </div>
 
-      {/* FAQs Section (Compact, Clean, No Spoilers) */}
+          {isLeadersLoading ? (
+            <p className="text-xs text-old-money-600 py-4">Данные загружаются...</p>
+          ) : displayDogs.length === 0 ? (
+            <div className="py-6 text-center text-xs text-old-money-600">
+              <p>В официальных состязаниях РКФ забегов породы пока не зафиксировано.</p>
+            </div>
+          ) : (
+            <>
+              {/* Desktop Table View */}
+              <div className="hidden sm:block overflow-x-auto">
+                <table className="w-full text-left text-sm">
+                  <thead>
+                    <tr className="border-b border-cream-200 text-[11px] font-semibold uppercase tracking-wider text-old-money-600">
+                      <th className="py-2.5 px-3 w-12 text-center">№</th>
+                      <th className="py-2.5 px-3">Собака</th>
+                      <th className="py-2.5 px-3 w-28">Пол</th>
+                      <th className="py-2.5 px-3 w-32">Сезоны</th>
+                      <th className="py-2.5 px-3 w-28 text-right">Забегов</th>
+                      <th className="py-2.5 px-3 text-right">
+                        {isSpeedMode ? 'Скорость' : 'Награды'}
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-cream-100">
+                    {displayDogs.map((dog, idx) => {
+                      const { primary, secondary } = parseDogName(dog.name_lat, dog.name_ru)
+                      const speedDog = dog as TopSpeedItem
+                      const placDog = dog as TopPlacementItem
+                      const sexLabel =
+                        dog.sex === 'M' || dog.sex === 'К'
+                          ? 'Кобель'
+                          : dog.sex === 'F' || dog.sex === 'С'
+                          ? 'Сука'
+                          : '—'
+                      const seasons =
+                        dog.year_from && dog.year_to
+                          ? dog.year_from === dog.year_to
+                            ? `${dog.year_from}`
+                            : `${dog.year_from}–${dog.year_to}`
+                          : dog.year || '—'
+
+                      return (
+                        <tr key={dog.dog_id} className="hover:bg-cream-50/50 transition-colors">
+                          <td className="py-3 px-3 text-center font-bold font-sans tabular-nums text-xs text-old-money-500">
+                            {idx + 1}
+                          </td>
+                          <td className="py-3 px-3">
+                            <Link
+                              to={`/dog/${dog.dog_id}/`}
+                              className="font-medium text-camel-950 hover:text-camel-800 hover:underline block leading-snug"
+                            >
+                              {primary}
+                            </Link>
+                            {secondary && (
+                              <span className="text-[11px] text-old-money-600 block leading-tight">
+                                {secondary}
+                              </span>
+                            )}
+                          </td>
+                          <td className="py-3 px-3">
+                            <span
+                              className={`inline-block text-[11px] font-medium px-2 py-0.5 rounded border ${
+                                sexLabel === 'Кобель'
+                                  ? 'bg-sky-50 text-sky-800 border-sky-200/60'
+                                  : sexLabel === 'Сука'
+                                  ? 'bg-rose-50 text-rose-800 border-rose-200/60'
+                                  : 'bg-stone-50 text-stone-600 border-stone-200/60'
+                              }`}
+                            >
+                              {sexLabel}
+                            </span>
+                          </td>
+                          <td className="py-3 px-3 text-xs font-sans tabular-nums text-old-money-700">
+                            {seasons}
+                          </td>
+                          <td className="py-3 px-3 text-right text-xs font-sans tabular-nums text-old-money-700">
+                            {dog.total_starts} заб.
+                          </td>
+                          <td className="py-3 px-3 text-right">
+                            {isSpeedMode && speedDog.best_speed ? (
+                              <span className="inline-flex items-center px-2 py-0.5 rounded bg-camel-100 text-camel-950 font-semibold font-sans tabular-nums text-xs border border-camel-200">
+                                {speedDog.best_speed.toFixed(1)} км/ч
+                              </span>
+                            ) : (
+                              <div className="flex items-center justify-end gap-1.5 text-xs font-semibold font-sans tabular-nums">
+                                {placDog.gold > 0 && (
+                                  <span
+                                    className="px-1.5 py-0.5 rounded bg-amber-50 text-amber-800 border border-amber-200/60"
+                                    title="Золото"
+                                  >
+                                    {placDog.gold} зол.
+                                  </span>
+                                )}
+                                {placDog.silver > 0 && (
+                                  <span
+                                    className="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200"
+                                    title="Серебро"
+                                  >
+                                    {placDog.silver} сер.
+                                  </span>
+                                )}
+                                {placDog.bronze > 0 && (
+                                  <span
+                                    className="px-1.5 py-0.5 rounded bg-orange-50 text-orange-800 border border-orange-200/60"
+                                    title="Бронза"
+                                  >
+                                    {placDog.bronze} бр.
+                                  </span>
+                                )}
+                                {placDog.gold === 0 &&
+                                  placDog.silver === 0 &&
+                                  placDog.bronze === 0 && (
+                                    <span className="text-old-money-400">—</span>
+                                  )}
+                              </div>
+                            )}
+                          </td>
+                        </tr>
+                      )
+                    })}
+                  </tbody>
+                </table>
+              </div>
+
+              {/* Mobile View */}
+              <ol className="divide-y divide-cream-100 text-sm sm:hidden">
+                {displayDogs.map((dog, idx) => {
+                  const { primary, secondary } = parseDogName(dog.name_lat, dog.name_ru)
+                  const speedDog = dog as TopSpeedItem
+                  const placDog = dog as TopPlacementItem
+                  return (
+                    <li key={dog.dog_id} className="py-2.5 flex items-center justify-between gap-3">
+                      <div className="flex items-center gap-2.5 min-w-0">
+                        <span className="w-5 text-center font-bold font-sans tabular-nums text-xs text-old-money-500 shrink-0">
+                          {idx + 1}
+                        </span>
+                        <div className="min-w-0">
+                          <Link
+                            to={`/dog/${dog.dog_id}/`}
+                            className="font-medium text-camel-950 hover:text-camel-800 hover:underline truncate block"
+                          >
+                            {primary}
+                          </Link>
+                          {secondary && (
+                            <span className="text-[11px] text-old-money-600 truncate block">
+                              {secondary}
+                            </span>
+                          )}
+                        </div>
+                      </div>
+
+                      <div className="flex items-center gap-2 text-xs shrink-0 text-old-money-600">
+                        <span title="Забеги">{dog.total_starts} заб.</span>
+                        {isSpeedMode && speedDog.best_speed ? (
+                          <span className="inline-flex items-center px-2 py-0.5 rounded bg-camel-100 text-camel-950 font-semibold font-sans tabular-nums text-xs border border-camel-200">
+                            {speedDog.best_speed.toFixed(1)} км/ч
+                          </span>
+                        ) : placDog.gold > 0 ? (
+                          <span className="inline-flex items-center px-1.5 py-0.5 rounded bg-amber-50 text-amber-800 font-semibold font-sans tabular-nums border border-amber-200/60">
+                            {placDog.gold} зол.
+                          </span>
+                        ) : null}
+                      </div>
+                    </li>
+                  )
+                })}
+              </ol>
+            </>
+          )}
+
+          {/* Context footer regarding Donino */}
+          <div className="mt-4 pt-3 border-t border-cream-200/80 flex flex-wrap items-center justify-between gap-2 text-xs text-old-money-600">
+            <div className="flex items-center gap-1.5">
+              <Gauge className="w-4 h-4 text-camel-600 shrink-0" />
+              <span>Радарных замеров скорости в Донино для этой породы пока не проводилось.</span>
+            </div>
+            <Link
+              to="/speed-records/"
+              className="inline-flex items-center gap-1 font-medium text-camel-800 hover:underline"
+            >
+              <span>Таблица рекордов скорости всех пород</span>
+              <ArrowUpRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+        </section>
+      )}
+
+      {/* FAQs Section */}
       {breedInfo.faqs.length > 0 && (
         <section className="rounded-xl border border-cream-200 bg-white/80 p-4 sm:p-5 shadow-sm">
-          <h2 className="text-base sm:text-lg font-serif font-bold text-camel-900 flex items-center gap-2 mb-3 pb-2 border-b border-cream-200">
-            <HelpCircle className="w-5 h-5 text-camel-700 shrink-0" />
+          <h2 className="text-sm sm:text-base font-serif font-bold text-charcoal-900 flex items-center gap-2 mb-3 pb-2 border-b border-cream-200">
+            <HelpCircle className="w-4 h-4 text-camel-700 shrink-0" />
             <span>Частые вопросы о породе {breedInfo.nameRu}</span>
           </h2>
 
           <div className="divide-y divide-cream-100">
             {breedInfo.faqs.map((faq, i) => (
               <div key={i} className="py-2.5 sm:py-3 first:pt-0 last:pb-0">
-                <h3 className="text-xs sm:text-sm font-semibold text-camel-950 mb-1">
+                <h3 className="text-xs sm:text-sm font-semibold text-charcoal-900 mb-1">
                   {faq.question}
                 </h3>
-                <p className="text-xs sm:text-sm text-old-money-700 leading-relaxed max-w-4xl">
+                <p className="text-xs sm:text-sm text-charcoal-600 leading-relaxed max-w-4xl">
                   {faq.answer}
                 </p>
               </div>
@@ -354,9 +720,9 @@ export default function BreedHub() {
         </section>
       )}
 
-      {/* Other Breeds Carousel / Grid */}
+      {/* Other Breeds Grid */}
       <section className="pt-2">
-        <h2 className="text-sm font-semibold uppercase tracking-wider text-old-money-600 mb-3">
+        <h2 className="text-xs font-semibold uppercase tracking-wider text-charcoal-500 mb-2.5">
           Другие породы в курсинге
         </h2>
         <div className="flex flex-wrap gap-2">
@@ -364,7 +730,7 @@ export default function BreedHub() {
             <Link
               key={b.slug}
               to={`/breeds/${b.slug}/`}
-              className="px-3 py-2 text-xs font-medium rounded-lg bg-white/80 border border-cream-200 text-old-money-800 hover:border-camel-400 hover:text-camel-900 transition-colors min-h-[44px] flex items-center"
+              className="cs-glass-pill inline-flex h-8 shrink-0 items-center rounded-full px-3 text-xs font-semibold transition-all cursor-pointer whitespace-nowrap"
             >
               {b.nameRu}
             </Link>
