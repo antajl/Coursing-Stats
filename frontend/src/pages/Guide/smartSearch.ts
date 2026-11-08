@@ -57,7 +57,8 @@ const PHONETIC_ALIASES: Record<string, string> = {
 }
 
 // 3. Упрощённый русский стеммер (удаление словоизменительных окончаний)
-export { RUSSIAN_ENDINGS_REGEX, stemWord } from '../../lib/stemmer'
+import { RUSSIAN_ENDINGS_REGEX, stemWord } from '../../lib/stemmer'
+export { RUSSIAN_ENDINGS_REGEX, stemWord }
 
 // 4. Расстояние Дамерау-Левенштейна (для поиска опечаток)
 export function damerauLevenshtein(a: string, b: string): number {

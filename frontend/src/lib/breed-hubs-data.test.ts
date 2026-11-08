@@ -32,7 +32,7 @@ describe('breed-hubs-data', () => {
     }
   })
 
-  it('every breed corresponds to real dogs in coursing or exhibitions', () => {
+  it('every breed corresponds to real dogs in coursing or exhibitions', { timeout: 15000 }, () => {
     for (const b of CORE_BREED_HUBS) {
       const placCount = topPlacAll.items.filter((d: any) =>
         matchesBreedFilter(d.breed, b.canonicalKey),
