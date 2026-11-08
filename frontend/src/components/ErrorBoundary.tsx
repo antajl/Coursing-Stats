@@ -29,6 +29,29 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
       componentStack: errorInfo.componentStack,
       errorBoundary: true,
     });
+
+    // Auto-recover once on client version mismatch, stale chunk, or React lifecycle desync
+    try {
+      const msg = error?.message || '';
+      const isDesync =
+        msg.includes('Minified React error #310') ||
+        msg.includes('Minified React error #300') ||
+        msg.includes('Minified React error #185') ||
+        msg.includes('Failed to fetch dynamically imported module') ||
+        msg.includes('dynamically imported module');
+
+      if (isDesync) {
+        const KEY = 'cs:error-reload';
+        const now = Date.now();
+        const prev = Number(sessionStorage.getItem(KEY) || 0);
+        if (!prev || now - prev > 15000) {
+          sessionStorage.setItem(KEY, String(now));
+          window.location.reload();
+        }
+      }
+    } catch {
+      // Ignore storage errors in restricted contexts
+    }
   }
 
   render() {

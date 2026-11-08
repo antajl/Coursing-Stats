@@ -1,3 +1,5 @@
+import { useEffect, useRef } from 'react'
+import { useLocation } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 
 // Яндекс.Метрика код счетчика
@@ -5,7 +7,18 @@ import { Helmet } from 'react-helmet-async'
 // Настройки: Вебвизор, карта скроллинга, точные отскоки, отслеживание ссылок
 const YANDEX_METRICA_ID = 110619327
 
+declare global {
+  interface Window {
+    ym?: (...args: any[]) => void
+    gtag?: (...args: any[]) => void
+    dataLayer?: any[]
+  }
+}
+
 export function YandexMetrica() {
+  const location = useLocation()
+  const isFirstRender = useRef(true)
+
   const isLocalhost =
     typeof window !== 'undefined' &&
     (window.location.hostname === 'localhost' ||
@@ -14,6 +27,43 @@ export function YandexMetrica() {
       window.location.hostname.startsWith('10.') ||
       window.location.hostname.startsWith('172.') ||
       window.location.hostname.endsWith('.local'))
+
+  useEffect(() => {
+    if (import.meta.env.DEV || isLocalhost) return
+
+    // Первый рендер уже фиксируется init-скриптом Метрики и тегом GA4 в index.html
+    if (isFirstRender.current) {
+      isFirstRender.current = false
+      return
+    }
+
+    // При виртуальных переходах в SPA (React Router) отправляем hit в Метрику и page_view в GA4
+    const url = window.location.href
+    const path = location.pathname + location.search
+
+    // Откладываем на такт микротаски, чтобы тег <title> успел обновиться через Helmet/SEO
+    const timer = setTimeout(() => {
+      try {
+        if (typeof window.ym === 'function') {
+          window.ym(YANDEX_METRICA_ID, 'hit', url, {
+            title: document.title,
+            referer: document.referrer,
+          })
+        }
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'page_view', {
+            page_title: document.title,
+            page_location: url,
+            page_path: path,
+          })
+        }
+      } catch (err) {
+        console.warn('Analytics SPA hit error:', err)
+      }
+    }, 50)
+
+    return () => clearTimeout(timer)
+  }, [location.pathname, location.search, isLocalhost])
 
   if (import.meta.env.DEV || isLocalhost) {
     return null
