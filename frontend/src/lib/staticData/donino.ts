@@ -4,6 +4,22 @@ interface DoninoFile {
   records?: Record<string, unknown>[]
 }
 
+export function matchesDoninoBreed(recordBreed: unknown, targetBreed: string): boolean {
+  if (!recordBreed || !targetBreed) return false
+  const r = String(recordBreed).toUpperCase().replace(/['"`’\-]/g, ' ').replace(/\s+/g, ' ').trim()
+  const t = targetBreed.toUpperCase().replace(/['"`’\-]/g, ' ').replace(/\s+/g, ' ').trim()
+  if (r === t) return true
+  // Handle breed aliases: Малая итальянская борзая <-> Левретка
+  if ((r.includes('ИТАЛЬЯНСКАЯ') || r.includes('ЛЕВРЕТК')) && (t.includes('ИТАЛЬЯНСКАЯ') || t.includes('ЛЕВРЕТК'))) {
+    return true
+  }
+  // Handle Чирнеко
+  if (r.includes('ЧИРНЕКО') && t.includes('ЧИРНЕКО')) {
+    return true
+  }
+  return r.includes(t) || t.includes(r)
+}
+
 function filterDoninoRecords(
   records: Record<string, unknown>[],
   opts: {
@@ -20,7 +36,7 @@ function filterDoninoRecords(
   let rows = records
 
   if (opts.dogId) rows = rows.filter((r) => String(r.dog_id ?? '') === opts.dogId)
-  if (opts.breed) rows = rows.filter((r) => r.breed === opts.breed)
+  if (opts.breed) rows = rows.filter((r) => matchesDoninoBreed(r.breed, opts.breed!))
   if (opts.sex) rows = rows.filter((r) => r.sex === opts.sex)
   if (opts.year) rows = rows.filter((r) => String(r.date ?? '').includes(`.${opts.year}`))
   if (opts.search) {
