@@ -1,5 +1,6 @@
 import type { NavigationRouteItem, BreedHubSearchItem } from './quickSearchTypes'
 import { isLocalDev } from '../../lib/env'
+import { CORE_BREED_HUBS, type BreedHubDefinition } from '../../lib/breed-hubs-data'
 
 /** Реестр всех разделов сайта с синонимами, сокращениями и ключевыми словами */
 export const SITE_NAVIGATION_ROUTES: NavigationRouteItem[] = [
@@ -196,57 +197,156 @@ export const SITE_NAVIGATION_ROUTES: NavigationRouteItem[] = [
   },
 ]
 
-/** Породные хабы */
-export const BREED_HUBS: BreedHubSearchItem[] = [
-  {
-    slug: 'whippet',
-    nameRu: 'Уиппет',
-    nameLat: 'Whippet',
-    subtitle: 'Породный хаб: рекорды скорости (до 65 км/ч), статистика и история',
-    to: '/breed/whippet',
-    keywords: ['уиппет', 'whippet', 'малая английская борзая', 'уипет', 'уип'],
-  },
-  {
-    slug: 'saluki',
-    nameRu: 'Салюки',
-    nameLat: 'Saluki',
-    subtitle: 'Породный хаб: рекорд скорости 68.8 км/ч, статистика и история',
-    to: '/breed/saluki',
-    keywords: ['салюки', 'saluki', 'персидская борзая', 'сал'],
-  },
-  {
-    slug: 'borzoi',
-    nameRu: 'Русская псовая борзая',
-    nameLat: 'Borzoi',
-    subtitle: 'Породный хаб: национальное достояние, рекорды и статистика',
-    to: '/breed/borzoi',
-    keywords: ['русская псовая борзая', 'рпб', 'borzoi', 'псовая борзая', 'русская борзая'],
-  },
-  {
-    slug: 'basenji',
-    nameRu: 'Басенджи',
-    nameLat: 'Basenji',
-    subtitle: 'Породный хаб: азарт, преследование, рекорды скорости и статистика',
-    to: '/breed/basenji',
-    keywords: ['басенджи', 'basenji', 'нелающая собака', 'конго терьер', 'бас'],
-  },
-  {
-    slug: 'italian-greyhound',
-    nameRu: 'Левретка (Итальянский грейхаунд)',
-    nameLat: 'Italian Greyhound',
-    subtitle: 'Породный хаб: малая итальянская борзая, грация и спринт',
-    to: '/breed/italian-greyhound',
-    keywords: ['левретка', 'итальянский грейхаунд', 'italian greyhound', 'малая итальянская', 'левр'],
-  },
-  {
-    slug: 'afghan-hound',
-    nameRu: 'Афганская борзая',
-    nameLat: 'Afghan Hound',
-    subtitle: 'Породный хаб: горная маневренность, рекорды и история',
-    to: '/breed/afghan-hound',
-    keywords: ['афганская борзая', 'афган', 'afghan hound', 'афганка'],
-  },
-]
+function buildBreedKeywords(hub: BreedHubDefinition): string[] {
+  const set = new Set<string>()
+
+  const add = (text: string) => {
+    const clean = text
+      .toLowerCase()
+      .replace(/ё/g, 'е')
+      .replace(/[(),'’"/]/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim()
+    if (!clean) return
+    set.add(clean)
+    for (const word of clean.split(' ')) {
+      if (word.length >= 2) set.add(word)
+    }
+  }
+
+  add(hub.nameRu)
+  add(hub.nameLat)
+  add(hub.canonicalKey)
+  if (hub.aliases) {
+    for (const a of hub.aliases) add(a)
+  }
+
+  // Popular nicknames, aliases, and declinations
+  const key = hub.canonicalKey.toUpperCase()
+  if (key.includes('ТАКСА')) {
+    set.add('такса')
+    set.add('таксу')
+    set.add('таксы')
+    set.add('такс')
+    set.add('таксой')
+    set.add('таксе')
+    set.add('dachshund')
+    set.add('dackel')
+    set.add('текель')
+  }
+  if (key.includes('УИППЕТ')) {
+    set.add('уиппет')
+    set.add('уиппета')
+    set.add('уиппету')
+    set.add('whippet')
+    set.add('малая английская борзая')
+  }
+  if (key.includes('ПСОВАЯ')) {
+    set.add('рпб')
+    set.add('borzoi')
+    set.add('русская борзая')
+    set.add('борзая')
+    set.add('борзую')
+    set.add('борзой')
+    set.add('борзые')
+  }
+  if (key.includes('САЛЮКИ')) {
+    set.add('салюки')
+    set.add('saluki')
+    set.add('персидская борзая')
+  }
+  if (key.includes('БАСЕНДЖИ')) {
+    set.add('басенджи')
+    set.add('basenji')
+    set.add('нелающая собака')
+  }
+  if (key.includes('ЛЕВРЕТКА')) {
+    set.add('левретка')
+    set.add('левретку')
+    set.add('левретки')
+    set.add('italian greyhound')
+    set.add('итальянский грейхаунд')
+    set.add('малая итальянская')
+  }
+  if (key.includes('ГРЕЙХАУНД')) {
+    set.add('грейхаунд')
+    set.add('грейхаунда')
+    set.add('greyhound')
+  }
+  if (key.includes('ВОЛКОДАВ')) {
+    set.add('ив')
+    set.add('волкодав')
+    set.add('волкодава')
+    set.add('irish wolfhound')
+  }
+  if (key.includes('ДИРХАУНД')) {
+    set.add('дирхаунд')
+    set.add('deerhound')
+    set.add('шотландская борзая')
+  }
+  if (key.includes('АФГАН')) {
+    set.add('афган')
+    set.add('афганка')
+    set.add('afghan hound')
+  }
+  if (key.includes('РИДЖБЕК')) {
+    set.add('риджбек')
+    set.add('риджбека')
+    set.add('rhodesian ridgeback')
+  }
+  if (key.includes('КОРГИ')) {
+    set.add('корги')
+    set.add('пемброк')
+    set.add('кардиган')
+    set.add('corgi')
+  }
+  if (key.includes('АВСТРАЛИЙСКАЯ ОВЧАРКА')) {
+    set.add('аусси')
+    set.add('aussie')
+  }
+  if (key.includes('СТАФФОРДШИРСКИЙ ТЕРЬЕР')) {
+    set.add('амстафф')
+    set.add('amstaff')
+  }
+  if (key.includes('СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР')) {
+    set.add('стаффбуль')
+    set.add('staffbull')
+  }
+  if (key.includes('ДЖЕК РАССЕЛ')) {
+    set.add('дрт')
+    set.add('jrt')
+  }
+  if (key.includes('БИГЛЬ')) {
+    set.add('бигль')
+    set.add('бигля')
+    set.add('beagle')
+  }
+  if (key.includes('ДОБЕРМАН')) {
+    set.add('доберман')
+    set.add('добермана')
+    set.add('dobermann')
+  }
+  if (key.includes('НЕМЕЦКАЯ ОВЧАРКА')) {
+    set.add('но')
+    set.add('овчарка')
+  }
+  if (key.includes('МАЛИНУА')) {
+    set.add('малинуа')
+    set.add('бельгийская овчарка')
+  }
+
+  return [...set]
+}
+
+/** Породные хабы (все 82 породы из официального реестра) */
+export const BREED_HUBS: BreedHubSearchItem[] = CORE_BREED_HUBS.map((hub) => ({
+  slug: hub.slug,
+  nameRu: hub.nameRu,
+  nameLat: hub.nameLat,
+  subtitle: hub.lead.length > 80 ? `${hub.lead.slice(0, 77)}...` : hub.lead,
+  to: `/breeds/${hub.slug}/`,
+  keywords: buildBreedKeywords(hub),
+}))
 
 export const POPULAR_BREEDS = [
   'Уиппет',
@@ -254,6 +354,8 @@ export const POPULAR_BREEDS = [
   'Салюки',
   'Басенджи',
   'Левретка',
+  'Такса',
+  'Грейхаунд',
   'Афганская борзая',
 ]
 

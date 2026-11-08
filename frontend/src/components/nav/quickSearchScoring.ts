@@ -1,4 +1,5 @@
 import { canonicalBreed, displayBreed } from '../../lib/breedMapping'
+import { stemWord } from '../../lib/stemmer'
 import {
   dogNameMatchesQuery,
   dogNameSearchText,
@@ -59,17 +60,49 @@ export function scoreBreedHub(hub: BreedHubSearchItem, q: string): number {
 
   if (nameRu === qClean || nameLat === qClean) return 110
   for (const kw of hub.keywords) {
-    if (kw === qClean) return 105
+    if (normalizeText(kw) === qClean) return 105
   }
 
   if (nameRu.startsWith(qClean) || nameLat.startsWith(qClean)) return 95
   for (const kw of hub.keywords) {
-    if (kw.startsWith(qClean)) return 90
+    const kwClean = normalizeText(kw)
+    if (kwClean.startsWith(qClean)) return 90
   }
+
+  if (nameRu.includes(` ${qClean}`) || nameLat.includes(` ${qClean}`)) return 88
 
   if (nameRu.includes(qClean) || nameLat.includes(qClean)) return 80
   for (const kw of hub.keywords) {
-    if (kw.includes(qClean)) return 75
+    const kwClean = normalizeText(kw)
+    if (kwClean.includes(qClean)) return 75
+  }
+
+  // Morphology and stem matching (handles cases like "таксу" -> "такса", "уиппета" -> "уиппет", "борзую" -> "борзая")
+  const qTokens = qClean.split(' ').filter(Boolean)
+  const qStems = qTokens.map(stemWord).filter((s) => s.length >= 3)
+  if (qStems.length > 0) {
+    const targetWords = [
+      ...nameRu.split(' '),
+      ...nameLat.split(' '),
+      ...hub.keywords.flatMap((k) => normalizeText(k).split(' ')),
+    ].filter(Boolean)
+    const targetStems = targetWords.map(stemWord).filter((s) => s.length >= 3)
+
+    const allMatch = qStems.every((qs) =>
+      targetStems.some(
+        (ts) => ts === qs || (ts.length >= 4 && ts.startsWith(qs)) || (qs.length >= 4 && qs.startsWith(ts)),
+      ),
+    )
+
+    if (allMatch) {
+      const primaryStems = nameRu.split(' ').map(stemWord).filter((s) => s.length >= 3)
+      const matchesPrimary = qStems.some((qs) =>
+        primaryStems.some(
+          (ps) => ps === qs || (ps.length >= 4 && ps.startsWith(qs)) || (qs.length >= 4 && qs.startsWith(ps)),
+        ),
+      )
+      return matchesPrimary ? 95 : 85
+    }
   }
 
   return 0
@@ -93,11 +126,13 @@ export function scoreDog(dog: HomeSearchDog, q: string): number {
   const display = dog.breed ? displayBreed(dog.breed) : null
   const displayPrimary = display?.primary ? normalizeText(display.primary) : ''
   const displaySecondary = display?.secondary ? normalizeText(display.secondary) : ''
+  const qStem = stemWord(breedQ)
   const breedHit =
     breedQ.length >= 2 &&
     (breed.includes(breedQ) ||
       (displayPrimary && displayPrimary.includes(breedQ)) ||
-      (displaySecondary && displaySecondary.includes(breedQ)))
+      (displaySecondary && displaySecondary.includes(breedQ)) ||
+      (qStem.length >= 3 && (breed.includes(qStem) || displayPrimary.includes(qStem))))
 
   if (!dogNameMatchesQuery(dog.name_lat, dog.name_ru, q) && !breedHit) return 0
 
