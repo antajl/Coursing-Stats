@@ -567,6 +567,7 @@ type DogProfileMeta = {
   sex: string | null;
   owner: string | null;
   pedigree_url: string | null;
+  photo_url?: string | null;
 };
 
 /** Canonical dog fields from data/v1/dogs/by-id (survives sqlite UNIQUE(name_lat, breed) dedup). */
@@ -584,6 +585,7 @@ function loadDogMetadataFromById(): Map<number, DogProfileMeta> {
       sex: (data.sex as string | null | undefined) ?? null,
       owner: (data.owner as string | null | undefined) ?? null,
       pedigree_url: (data.pedigree_url as string | null | undefined) ?? null,
+      photo_url: (data.photo_url as string | null | undefined) ?? null,
     });
   }
   return map;
@@ -827,6 +829,7 @@ export function buildDogProfiles(db: Database.Database) {
       })(),
       owner: fromFile?.owner ?? fromDb?.owner ?? null,
       pedigree_url: fromFile && 'pedigree_url' in fromFile ? fromFile.pedigree_url : (fromDb?.pedigree_url ?? null),
+      photo_url: fromFile?.photo_url ?? null,
     };
 
     const dogCompetitions = competitionsByDog.get(dogId) ?? [];

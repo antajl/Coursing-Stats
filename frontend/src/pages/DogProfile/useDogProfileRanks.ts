@@ -183,8 +183,8 @@ export function useDogProfileRanks({
           key: 'shows',
           label: 'Выставки',
           rank: showDog.rank ?? showAllTimeRank,
+          yearRank: showYearRank || undefined,
           breedRank: showAllTimeBreedRank || undefined,
-          yearBreedRank: showYearRank || undefined,
           href: `/shows?tab=ranking&year=${has2026Show ? '2026' : ''}`,
         })
       }
