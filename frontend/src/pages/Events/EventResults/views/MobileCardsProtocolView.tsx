@@ -112,29 +112,29 @@ export default function MobileCardsProtocolView({
 
     const classLabel = result.class_label || (result as any).breed_class?.split(' - ')[1] || ''
 
-    // Подиумный акцент (элегантная левая цветная полоса, без внешних рамок и разрывов)
+    // Фоновый цвет карточек: подиумные цвета для призеров и зебра для остальных (как в десктопе)
     const isGold = result.placement === 1
     const isSilver = result.placement === 2
     const isBronze = result.placement === 3
 
-    const podiumBorder = isGold
-      ? 'border-l-[3.5px] border-l-amber-500 bg-amber-50/15'
-      : isSilver
-        ? 'border-l-[3.5px] border-l-slate-400 bg-slate-50/15'
-        : isBronze
-          ? 'border-l-[3.5px] border-l-amber-700/60 bg-amber-50/10'
-          : isDns
-            ? 'border-l-[3.5px] border-l-transparent bg-old-money-50/50 opacity-60'
-            : isDq
-              ? 'border-l-[3.5px] border-l-rose-500 bg-rose-50/20'
+    const cardBg = isDns
+      ? 'bg-old-money-50/60 opacity-60'
+      : isDq
+        ? 'bg-rose-50/30'
+        : isGold
+          ? 'bg-amber-50/90'
+          : isSilver
+            ? 'bg-slate-50'
+            : isBronze
+              ? 'bg-amber-50/60'
               : idx % 2 === 1
-                ? 'border-l-[3.5px] border-l-transparent bg-cream-50/30'
-                : 'border-l-[3.5px] border-l-transparent bg-white'
+                ? 'bg-cream-100/70'
+                : 'bg-white'
 
     return (
       <div
         key={cardKey}
-        className={`p-2.5 sm:p-3 space-y-1.5 transition-colors ${podiumBorder}`}
+        className={`p-3 sm:p-3.5 space-y-2 transition-colors ${cardBg}`}
       >
         {/* Шапка карточки: [Место] Кличка + № ··· Итог [СС] */}
         <div className="flex items-start justify-between gap-1.5">
@@ -185,11 +185,6 @@ export default function MobileCardsProtocolView({
               </span>
             ) : (
               <div className="flex items-center justify-end gap-1">
-                {showVc && (
-                  <span className="inline-flex items-center px-1 py-0.5 text-[9px] font-mono font-medium text-charcoal-600 bg-old-money-100 border border-old-money-200 rounded leading-none">
-                    СС
-                  </span>
-                )}
                 <span className="font-serif font-bold text-sm sm:text-base text-camel-800 tabular-nums">
                   {result.total_score != null ? result.total_score : '—'}
                 </span>
@@ -214,7 +209,7 @@ export default function MobileCardsProtocolView({
                 const heatLabel = isFinal ? 'Финал' : `${hIdx + 1}-й круг`
 
                 return (
-                  <div key={hIdx} className="bg-cream-50/80 border border-old-money-200/60 rounded-md p-1.5 text-xs space-y-0.5 min-w-0">
+                  <div key={hIdx} className="bg-white/85 border border-old-money-200/70 rounded-md p-1.5 text-xs space-y-0.5 min-w-0">
                     <div className="flex items-center justify-between gap-1">
                       <div className="flex items-center gap-1 font-semibold text-charcoal-800 text-[11px] min-w-0">
                         <ProtocolHeatBadge
@@ -250,7 +245,7 @@ export default function MobileCardsProtocolView({
                 .filter((sum): sum is number | string => sum != null)
 
               return (
-                <div key={hIdx} className="bg-cream-50/80 border border-old-money-200/60 rounded-md p-1.5 text-xs space-y-1">
+                <div key={hIdx} className="bg-white/85 border border-old-money-200/70 rounded-md p-1.5 text-xs space-y-1">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-1 font-semibold text-charcoal-800 text-[11px]">
                       <ProtocolHeatBadge
@@ -289,7 +284,7 @@ export default function MobileCardsProtocolView({
 
         {/* Подвал карточки: Награды и переход в лигу в обособленной плашке с рамкой */}
         {cardAwards && (
-          <div className="mt-2 flex items-center justify-between gap-2 px-2.5 py-1.5 rounded-lg bg-cream-50/80 border border-old-money-200/70 text-[11px]">
+          <div className="mt-2 flex items-center justify-between gap-2 px-2.5 py-1.5 rounded-lg bg-white/85 border border-old-money-200/70 text-[11px]">
             <div className="flex items-center gap-1.5 shrink-0 text-charcoal-600 font-medium">
               <Award className="w-3.5 h-3.5 text-camel-700 shrink-0" aria-hidden="true" />
               <span className="text-[10.5px] text-charcoal-700 font-semibold tracking-wide">
@@ -315,10 +310,10 @@ export default function MobileCardsProtocolView({
           return (
             <div
               key={groupKey}
-              className="overflow-hidden rounded-xl border border-old-money-200/90 bg-white shadow-2xs divide-y divide-old-money-200"
+              className="cs-glass-card overflow-hidden rounded-xl bg-white divide-y divide-old-money-200/80"
             >
               {/* Фирменная плашка группы пород — бесшовно переходит в первую собаку */}
-              <div className="bg-camel-100/80 border-b border-camel-200/90 py-1.5 px-3 select-none flex items-center justify-between">
+              <div className="bg-camel-100/80 border-b border-[rgba(195,168,128,0.75)] py-1.5 px-3 select-none flex items-center justify-between">
                 <span className="font-semibold text-xs text-camel-950">
                   {groupKey}
                 </span>
@@ -332,7 +327,7 @@ export default function MobileCardsProtocolView({
           )
         })
       ) : (
-        <div className="overflow-hidden rounded-xl border border-old-money-200/90 bg-white shadow-2xs divide-y divide-old-money-200">
+        <div className="cs-glass-card overflow-hidden rounded-xl bg-white divide-y divide-old-money-200/80">
           {visibleResults.map((result, idx) => renderCard(result, idx))}
         </div>
       )}

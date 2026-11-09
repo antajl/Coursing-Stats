@@ -379,7 +379,7 @@ export default function TableProtocolView({
 
   return (
     <div className="space-y-2">
-      <div className="overflow-x-auto rounded-xl border border-old-money-200/90 bg-white shadow-2xs">
+      <div className="cs-glass-card overflow-x-auto rounded-xl bg-white">
       <table className="w-full text-left text-xs border-collapse">
         <colgroup>
           <col className="w-9 sm:w-10" />
@@ -404,7 +404,7 @@ export default function TableProtocolView({
               return (
                 <Fragment key={groupKey}>
                   {/* Нативный компактный разделитель группы прямо в таблице на ВСЮ ширину таблицы */}
-                  <tr className="bg-camel-100/75 border-y border-camel-200/90 first:border-t-0 select-none">
+                  <tr className="bg-camel-100/75 border-y border-[rgba(195,168,128,0.75)] first:border-t-0 select-none">
                     <td colSpan={100} className="py-1 px-3">
                       <div className="flex items-center justify-between">
                         <span className="font-semibold text-xs text-camel-950">
