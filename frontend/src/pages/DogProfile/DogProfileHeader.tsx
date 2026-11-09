@@ -1,4 +1,5 @@
 import { useState, useMemo, useEffect } from 'react'
+import { createPortal } from 'react-dom'
 import {
   Star as StarIcon,
   Crown,
@@ -8,6 +9,8 @@ import {
   Zap,
   Sparkles,
   ExternalLink,
+  Maximize2,
+  X,
 } from 'lucide-react'
 import OwnerCrownName from '../../components/OwnerCrownName'
 import DogSexIcon from '../../components/DogSexIcon'
@@ -72,14 +75,20 @@ export function DogProfileHeader({
   const dogId = String(dog.id)
   const favorite = isFavorite(dogId)
   const [isPhotoOpen, setIsPhotoOpen] = useState(false)
+  const [photoVariant, setPhotoVariant] = useState<'passport' | 'split_right' | 'bottom_card' | 'cover_banner'>('passport')
 
   useEffect(() => {
     if (!isPhotoOpen) return
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') setIsPhotoOpen(false)
     }
+    const prevOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
     window.addEventListener('keydown', handleKeyDown)
-    return () => window.removeEventListener('keydown', handleKeyDown)
+    return () => {
+      document.body.style.overflow = prevOverflow
+      window.removeEventListener('keydown', handleKeyDown)
+    }
   }, [isPhotoOpen])
 
   const handleToggleFavorite = async () => {
@@ -189,31 +198,104 @@ export function DogProfileHeader({
 
   return (
     <div className="relative mb-6">
+      {/* Главная карточка профиля собаки (Вариант 1: Паспортный аватар слева) */}
       <div className="relative min-w-0 overflow-hidden rounded-2xl border border-old-money-200/80 bg-white p-4 sm:p-5 md:p-6 shadow-2xs">
         <div className="relative z-10">
-          {/* РЯД 1: Сетка [Кличка (minmax 1fr)] + [Действия (auto)] */}
-        <div className="grid grid-cols-1 sm:grid-cols-[minmax(0,1fr)_auto] gap-3 sm:gap-4 items-start">
-          {/* Кличка собаки: свободное пространство, никакого сжатия */}
-          <div className="min-w-0">
-            <OwnerCrownName name={formattedPrimary} dogId={dog.id} kind="competition">
-              <h1 className="break-words text-2xl sm:text-3xl font-bold tracking-tight text-charcoal-900 leading-tight">
-                {formattedPrimary}
-              </h1>
-            </OwnerCrownName>
-            {secondary ? (
-              <div className="mt-1 text-sm sm:text-base font-medium text-charcoal-400">
-                {secondary}
-              </div>
-            ) : showRuName ? (
-              <div className="mt-1 text-sm sm:text-base font-medium text-old-money-500">
-                {formatNameWithNonBreakingSpaces(toDogTitleCase(dog.name_ru))}
-              </div>
-            ) : null}
-          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-[minmax(0,1fr)_auto] gap-4 sm:gap-6 items-start">
+            {/* Слева: Крупный аватар с закруглёнными углами + имя и метаданные */}
+            <div className="flex items-start gap-4 sm:gap-5 md:gap-6 min-w-0">
+              {dog.photo_url && (
+                <button
+                  type="button"
+                  onClick={() => setIsPhotoOpen(true)}
+                  className="group relative h-24 w-24 sm:h-28 sm:w-28 md:h-32 md:w-32 shrink-0 overflow-hidden rounded-2xl border border-cream-200/90 bg-cream-50/60 shadow-xs transition-all hover:border-camel-400 hover:shadow-sm focus-visible:outline-hidden cursor-pointer"
+                  aria-label={`Увеличить фото ${primary}`}
+                  title="Нажмите, чтобы открыть фото в полном размере"
+                >
+                  <img
+                    src={dog.photo_url}
+                    alt={primary}
+                    referrerPolicy="no-referrer"
+                    className="h-full w-full object-cover object-[center_20%] transition-transform duration-300 group-hover:scale-105"
+                    loading="lazy"
+                    decoding="async"
+                    onError={(e) => {
+                      const target = e.currentTarget;
+                      if (target.parentElement) target.parentElement.style.display = 'none';
+                    }}
+                  />
+                  <span className="pointer-events-none absolute bottom-1.5 right-1.5 rounded-md bg-charcoal-900/60 p-1 text-white opacity-0 transition-opacity group-hover:opacity-100 backdrop-blur-xs">
+                    <Maximize2 className="h-3 w-3" aria-hidden />
+                  </span>
+                </button>
+              )}
 
-          {/* Действия: компактные кнопки справа вверху + миниатюра фото собаки */}
-          <div className="flex items-center gap-2.5 self-start shrink-0">
-            <div className="flex items-center gap-2">
+              <div className="min-w-0 flex-1">
+                <OwnerCrownName name={formattedPrimary} dogId={dog.id} kind="competition">
+                  <h1 className="break-words text-2xl sm:text-3xl font-bold tracking-tight text-charcoal-900 leading-tight">
+                    {formattedPrimary}
+                  </h1>
+                </OwnerCrownName>
+                {secondary ? (
+                  <div className="mt-1 text-sm sm:text-base font-medium text-charcoal-400">
+                    {secondary}
+                  </div>
+                ) : showRuName ? (
+                  <div className="mt-1 text-sm sm:text-base font-medium text-old-money-500">
+                    {formatNameWithNonBreakingSpaces(toDogTitleCase(dog.name_ru))}
+                  </div>
+                ) : null}
+
+                {/* РЯД 2: Метаданные чистым текстом через точку « · » */}
+                <div className="mt-2.5 flex flex-wrap items-center gap-x-2.5 gap-y-1 text-xs text-charcoal-600 font-medium">
+                  <span className="font-semibold text-charcoal-800">{breedDisplay.primary}</span>
+                  {dog.sex && (
+                    <>
+                      <span className="text-old-money-300 select-none">·</span>
+                      <span className="inline-flex items-center gap-1">
+                        <DogSexIcon sex={dog.sex} size={13} />
+                        <span>{isMale ? 'Кобель' : 'Сука'}</span>
+                      </span>
+                    </>
+                  )}
+                  {dog.pedigree_url && (
+                    <>
+                      <span className="text-old-money-300 select-none">·</span>
+                      <a
+                        href={dog.pedigree_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-camel-700 hover:text-camel-900 hover:underline transition-colors"
+                      >
+                        <img
+                          src={BREED_ARCHIVE_FAVICON}
+                          alt=""
+                          role="presentation"
+                          width={13}
+                          height={13}
+                          className="h-3 w-3 shrink-0 rounded-sm"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                        <span>Breed Archive</span>
+                      </a>
+                    </>
+                  )}
+                  {dog.aggression_count ? (
+                    <>
+                      <span className="text-old-money-300 select-none">·</span>
+                      <DogAggressionBadge
+                        count={dog.aggression_count}
+                        incidents={dog.aggression_incidents}
+                      />
+                    </>
+                  ) : null}
+                </div>
+              </div>
+            </div>
+
+            {/* Справа: Компактные кнопки действий */}
+            <div className="flex items-center gap-2 self-start shrink-0">
               <button
                 type="button"
                 onClick={handleToggleFavorite}
@@ -229,7 +311,6 @@ export function DogProfileHeader({
                 <StarIcon className={`h-3.5 w-3.5 shrink-0 ${favorite ? 'fill-current text-amber-500' : 'text-charcoal-400'}`} aria-hidden />
                 <span>{favorite ? 'В избранном' : 'В избранное'}</span>
               </button>
-
               <a
                 href={`https://t.me/coursing_stats_bot?start=dog_${dog.id}`}
                 target="_blank"
@@ -238,161 +319,62 @@ export function DogProfileHeader({
                 aria-label="Отслеживать собаку в Telegram"
                 title="Отслеживать собаку в Telegram: результаты и место в топе"
               >
-                <img
-                  src={TELEGRAM_FAVICON}
-                  alt=""
-                  role="presentation"
-                  aria-hidden="true"
-                  width={14}
-                  height={14}
-                  className="h-3.5 w-3.5 shrink-0 rounded-full"
-                  loading="lazy"
-                  decoding="async"
-                />
+                <img src={TELEGRAM_FAVICON} alt="" width={14} height={14} className="h-3.5 w-3.5 shrink-0 rounded-full" />
                 <span>Отслеживать</span>
               </a>
             </div>
-
-            {dog.photo_url && (
-              <button
-                type="button"
-                onClick={() => setIsPhotoOpen(true)}
-                className="group relative h-16 w-20 sm:h-20 sm:w-26 shrink-0 overflow-hidden rounded-xl border border-cream-200/90 bg-cream-50/70 p-1 shadow-2xs transition-all hover:border-camel-400 hover:shadow-xs focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-camel-400 cursor-pointer"
-                aria-label={`Увеличить фото ${primary}`}
-                title="Нажмите, чтобы открыть фото в полном размере"
-              >
-                <img
-                  src={dog.photo_url}
-                  alt={primary}
-                  referrerPolicy="no-referrer"
-                  className="h-full w-full object-contain rounded-lg transition-transform duration-200 group-hover:scale-105"
-                  loading="lazy"
-                  decoding="async"
-                  onError={(e) => {
-                    const target = e.currentTarget;
-                    if (target.parentElement) target.parentElement.style.display = 'none';
-                  }}
-                />
-                <span className="pointer-events-none absolute bottom-1 right-1 rounded-md bg-charcoal-900/60 p-0.5 text-white opacity-0 transition-opacity group-hover:opacity-100 backdrop-blur-xs">
-                  <Maximize2 className="h-2.5 w-2.5" aria-hidden />
-                </span>
-              </button>
-            )}
           </div>
-        </div>
 
-        {/* РЯД 2: Метаданные чистым текстом через точку « · » */}
-        <div className="mt-2.5 flex flex-wrap items-center gap-x-2.5 gap-y-1 text-xs text-charcoal-600 font-medium">
-          <span className="font-semibold text-charcoal-800">
-            {breedDisplay.primary}
-          </span>
-          
-          {dog.sex && (
-            <>
-              <span className="text-old-money-300 select-none">·</span>
-              <span className="inline-flex items-center gap-1">
-                <DogSexIcon sex={dog.sex} size={13} />
-                <span>{isMale ? 'Кобель' : 'Сука'}</span>
-              </span>
-            </>
-          )}
-
-          {dog.pedigree_url && (
-            <>
-              <span className="text-old-money-300 select-none">·</span>
-              <a
-                href={dog.pedigree_url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-camel-700 hover:text-camel-900 hover:underline transition-colors"
-              >
-                <img
-                  src={BREED_ARCHIVE_FAVICON}
-                  alt=""
-                  role="presentation"
-                  aria-hidden="true"
-                  width={13}
-                  height={13}
-                  className="h-3 w-3 shrink-0 rounded-sm"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <span>Breed Archive</span>
-                <ExternalLink className="w-2.5 h-2.5 text-camel-500" aria-hidden />
-              </a>
-            </>
-          )}
-
-          {dog.owner && (
-            <>
-              <span className="text-old-money-300 select-none">·</span>
-              <span>
-                <span className="text-charcoal-400">Владелец:</span> {dog.owner}
-              </span>
-            </>
-          )}
-
-          {dog.aggression_count && dog.aggression_count > 0 ? (
-            <>
-              <span className="text-old-money-300 select-none">·</span>
-              <DogAggressionBadge
-                count={dog.aggression_count}
-                incidents={dog.aggression_incidents}
+          {/* РЯД 3: Титулы слева + Ачивки рейтингов справа в одном блоке */}
+          {(hasTitles || achievements.length > 0) && (
+            <div className="mt-4 pt-3.5 border-t border-cream-200/70">
+              <DogProfileAwardsBar
+                competitionTitles={competitionTitles}
+                showTitles={showTitles}
+                achievements={achievements}
               />
-            </>
-          ) : null}
-        </div>
-
-
-
-        {/* РЯД 3: Титулы слева + Ачивки рейтингов справа в одном блоке */}
-        {(hasTitles || achievements.length > 0) && (
-          <DogProfileAwardsBar
-            competitionTitles={competitionTitles}
-            showTitles={showTitles}
-            achievements={achievements}
-          />
-        )}
+            </div>
+          )}
         </div>
       </div>
-    
-      {/* Lightbox модальное окно для полноразмерного фото */}
-      {isPhotoOpen && dog.photo_url && (
+
+      {/* Полноэкранный Lightbox для фото собаки (при клике на аватар) */}
+      {isPhotoOpen && dog.photo_url && typeof document !== 'undefined' && createPortal(
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-charcoal-900/80 p-4 backdrop-blur-sm transition-opacity"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-charcoal-950/85 p-4 backdrop-blur-md transition-opacity animate-in fade-in duration-200"
           onClick={() => setIsPhotoOpen(false)}
           role="dialog"
           aria-modal="true"
           aria-label={`Фотография ${primary}`}
         >
           <div
-            className="relative max-h-[90vh] max-w-[95vw] sm:max-w-3xl flex flex-col items-center"
+            className="relative max-h-[92vh] max-w-[95vw] sm:max-w-3xl flex flex-col items-center"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Кнопка закрытия */}
             <button
               type="button"
               onClick={() => setIsPhotoOpen(false)}
-              className="absolute -top-11 right-0 inline-flex items-center gap-1.5 rounded-full bg-white/20 px-3 py-1 text-xs font-semibold text-white hover:bg-white/30 backdrop-blur-xs transition-colors cursor-pointer"
+              className="absolute -top-12 right-0 inline-flex items-center gap-1.5 rounded-full bg-white/20 px-3.5 py-1.5 text-xs font-semibold text-white hover:bg-white/30 backdrop-blur-xs transition-colors cursor-pointer min-h-[36px]"
               aria-label="Закрыть фото"
             >
               <X className="h-4 w-4" aria-hidden />
-              <span>Закрыть</span>
+              <span>Закрыть (Esc)</span>
             </button>
 
-            {/* Картинка */}
+            {/* Полное фото собаки без обрезки */}
             <div className="overflow-hidden rounded-2xl border border-white/20 bg-charcoal-900 shadow-2xl">
               <img
                 src={dog.photo_url}
                 alt={primary}
                 referrerPolicy="no-referrer"
-                className="max-h-[75vh] w-auto max-w-full object-contain"
+                className="max-h-[78vh] w-auto max-w-full object-contain select-none"
               />
             </div>
 
             {/* Подпись под фото */}
             <div className="mt-3 flex items-center justify-between w-full text-xs text-white/80 px-1">
-              <span className="font-semibold text-white">{primary}</span>
+              <span className="font-medium text-white">{primary}</span>
               {dog.pedigree_url && (
                 <a
                   href={dog.pedigree_url}
@@ -406,8 +388,9 @@ export function DogProfileHeader({
               )}
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
-</div>
+    </div>
   )
 }

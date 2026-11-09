@@ -64,6 +64,7 @@
     "update-current-year": "npx tsx backend/scripts/update/update-current-year.ts",
     "merge-dogs": "npx tsx backend/scripts/update/merge-dogs.ts",
     "enrich-breedarchive-urls": "npx tsx backend/scripts/enrich/enrich-breedarchive-urls.ts",
+    "enrich-breedarchive-details": "npx tsx backend/scripts/enrich/enrich-dogs-from-breedarchive.ts",
     "fetch-speed-records": "npx tsx backend/scripts/speed/fetch-speed-records.ts",
     "export-donino-speed": "npx tsx backend/scripts/speed/export-speed-from-sheets.ts",
     "export-donino-coursing": "npx tsx backend/scripts/speed/export-coursing-from-sheets.ts",

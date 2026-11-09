@@ -48,7 +48,21 @@ function loadCache(): Record<string, CachedDetail> {
 }
 
 function saveCache(cache: Record<string, CachedDetail>) {
-  fs.writeFileSync(CACHE_FILE, JSON.stringify(cache, null, 2) + '\n', 'utf8')
+  for (let attempt = 0; attempt < 5; attempt++) {
+    try {
+      const tmp = `${CACHE_FILE}.tmp`
+      fs.writeFileSync(tmp, JSON.stringify(cache, null, 2) + '\n', 'utf8')
+      fs.copyFileSync(tmp, CACHE_FILE)
+      try { fs.unlinkSync(tmp) } catch {}
+      return
+    } catch (err) {
+      if (attempt === 4) {
+        console.warn('[WARN] Failed to write cache after 5 attempts:', err)
+      } else {
+        Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 150)
+      }
+    }
+  }
 }
 
 async function fetchBaDetails(url: string): Promise<{ sex: 'M' | 'F' | null; photo_url: string | null }> {
@@ -128,7 +142,7 @@ async function main() {
           fetched_at: new Date().toISOString(),
         }
         cache[url] = details
-        saveCache(cache)
+        if (processedCount % 10 === 0) saveCache(cache)
         await delay(350) // polite delay
       }
 
@@ -180,7 +194,7 @@ async function main() {
             fetched_at: new Date().toISOString(),
           }
           cache[url] = details
-          saveCache(cache)
+          if (processedCount % 10 === 0) saveCache(cache)
           await delay(350)
         }
 
