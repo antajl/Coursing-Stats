@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react'
+import React, { useMemo, memo } from 'react'
 import { Link } from 'react-router-dom'
 import { formatBreedName } from '../../../lib/breedMapping'
 import { parseDogName } from '../../../lib/dogName'
@@ -9,7 +9,7 @@ interface ChampionshipAnatomyWidgetProps {
   selectedBreed?: string
 }
 
-export default function ChampionshipAnatomyWidget({
+function ChampionshipAnatomyWidget({
   standings,
   selectedBreed,
 }: ChampionshipAnatomyWidgetProps) {
@@ -116,7 +116,7 @@ export default function ChampionshipAnatomyWidget({
                     </span>
                     {item.dog.dog_id ? (
                       <Link
-                        to={`/dog/${item.dog.dog_id}`}
+                        to={`/dog/${item.dog.dog_id}/`}
                         title={fullTitle}
                         className="font-serif font-bold text-charcoal-900 hover:text-camel-800 truncate"
                       >
@@ -183,3 +183,5 @@ export default function ChampionshipAnatomyWidget({
     </div>
   )
 }
+
+export default memo(ChampionshipAnatomyWidget)

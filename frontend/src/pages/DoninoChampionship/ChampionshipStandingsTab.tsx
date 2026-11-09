@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react'
+import React, { useState, useMemo, useCallback } from 'react'
 import { Trophy, Timer, Award, ChevronLeft, ChevronRight } from 'lucide-react'
 import { canonicalBreed, formatBreedName, matchesBreedFilter } from '../../lib/breedMapping'
 import type { ChampionshipStanding, ChampionshipPromotion } from '../../lib/staticData/donino'
@@ -190,13 +190,13 @@ export default function ChampionshipStandingsTab({
   const listLength = Math.max(filteredByTime.length, filteredByPoints.length)
   const { visibleCount, loadMoreRef, hasMore } = useInfiniteScroll(
     listLength,
-    [selectedLeague, searchQuery, selectedBreed, selectedSex, sortMode],
+    [selectedLeague, searchQuery, selectedBreed, selectedSex],
     30
   )
 
-  const toggleExpand = (dogKey: string) => {
+  const handleToggleDog = useCallback((dogKey: string) => {
     setExpandedDogKey((prev) => (prev === dogKey ? null : dogKey))
-  }
+  }, [])
 
   const handleResetFilters = () => {
     setSelectedLeague('all')
@@ -205,51 +205,57 @@ export default function ChampionshipStandingsTab({
     setSelectedSex('')
   }
 
-  const renderDogList = (list: typeof filteredByTime, mode: 'time' | 'points') => {
-    if (list.length === 0) {
-      return (
-        <div className="bg-cream-50/50 p-8 text-center text-charcoal-600 space-y-2">
-          <div className="text-sm font-semibold">Ничего не найдено</div>
-          <div className="text-xs text-charcoal-500">
-            Попробуйте изменить поисковый запрос или сбросить фильтры
+  const renderDogList = useCallback(
+    (list: typeof filteredByTime, mode: 'time' | 'points') => {
+      if (list.length === 0) {
+        return (
+          <div className="bg-cream-50/50 p-8 text-center text-charcoal-600 space-y-2">
+            <div className="text-sm font-semibold">Ничего не найдено</div>
+            <div className="text-xs text-charcoal-500">
+              Попробуйте изменить поисковый запрос или сбросить фильтры
+            </div>
+            <button
+              type="button"
+              onClick={handleResetFilters}
+              className="mt-2 inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-camel-600 text-white hover:bg-camel-700 cursor-pointer"
+            >
+              Сбросить фильтры
+            </button>
           </div>
-          <button
-            type="button"
-            onClick={handleResetFilters}
-            className="mt-2 inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-camel-600 text-white hover:bg-camel-700 cursor-pointer"
-          >
-            Сбросить фильтры
-          </button>
+        )
+      }
+
+      const visibleList = list.slice(0, visibleCount)
+
+      return (
+        <div className="divide-y divide-old-money-100">
+          {visibleList.map((dog, idx) => {
+            const dogNameLower = String(dog.name || '').trim().toLowerCase()
+            const dogPromotions =
+              (dogNameLower ? dogPromotionsMap.get(dogNameLower) : undefined) ||
+              (dog.name_ru ? dogPromotionsMap.get(dog.name_ru.trim().toLowerCase()) : undefined) ||
+              (dog.name_lat ? dogPromotionsMap.get(dog.name_lat.trim().toLowerCase()) : undefined)
+
+            return (
+              <ChampionshipDogCard
+                key={`${mode}-${dog.dog_key}`}
+                dog={dog}
+                rank={idx + 1}
+                isExpanded={expandedDogKey === dog.dog_key}
+                sortMode={mode}
+                dogPromotions={dogPromotions}
+                onToggle={() => handleToggleDog(dog.dog_key)}
+              />
+            )
+          })}
         </div>
       )
-    }
+    },
+    [visibleCount, expandedDogKey, dogPromotionsMap, handleToggleDog],
+  )
 
-    const visibleList = list.slice(0, visibleCount)
-
-    return (
-      <div className="divide-y divide-old-money-100">
-        {visibleList.map((dog, idx) => {
-          const dogNameLower = String(dog.name || '').trim().toLowerCase()
-          const dogPromotions =
-            (dogNameLower ? dogPromotionsMap.get(dogNameLower) : undefined) ||
-            (dog.name_ru ? dogPromotionsMap.get(dog.name_ru.trim().toLowerCase()) : undefined) ||
-            (dog.name_lat ? dogPromotionsMap.get(dog.name_lat.trim().toLowerCase()) : undefined)
-
-          return (
-            <ChampionshipDogCard
-              key={`${mode}-${dog.dog_key}`}
-              dog={dog}
-              rank={idx + 1}
-              isExpanded={expandedDogKey === dog.dog_key}
-              sortMode={mode}
-              dogPromotions={dogPromotions}
-              onToggle={() => toggleExpand(dog.dog_key)}
-            />
-          )
-        })}
-      </div>
-    )
-  }
+  const speedList = useMemo(() => renderDogList(filteredByTime, 'time'), [renderDogList, filteredByTime])
+  const pointsList = useMemo(() => renderDogList(filteredByPoints, 'points'), [renderDogList, filteredByPoints])
 
   const hasActiveFilters =
     selectedLeague !== 'all' || searchQuery !== '' || selectedBreed !== '' || selectedSex !== ''
@@ -280,7 +286,7 @@ export default function ChampionshipStandingsTab({
         <div className="lg:col-span-7 xl:col-span-8 space-y-3">
           {/* Main Dog Ranking Carousel Container */}
           <div
-            className="w-full relative overflow-x-clip touch-pan-y select-none sm:select-auto"
+            className="w-full relative overflow-x-clip lg:overflow-visible touch-pan-y select-none"
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
@@ -386,7 +392,7 @@ export default function ChampionshipStandingsTab({
                   </div>
 
                   {/* List for Speed */}
-                  {renderDogList(filteredByTime, 'time')}
+                  {speedList}
                 </div>
               </div>
 
@@ -463,7 +469,7 @@ export default function ChampionshipStandingsTab({
                   </div>
 
                   {/* List for Points */}
-                  {renderDogList(filteredByPoints, 'points')}
+                  {pointsList}
                 </div>
               </div>
             </div>
@@ -485,13 +491,13 @@ export default function ChampionshipStandingsTab({
             selectedLeague={selectedLeague}
             onSelectLeague={setSelectedLeague}
             dynamicLeagueCounts={dynamicLeagueCounts}
-            filteredCount={filtered.length}
+            filteredCount={baseFiltered.length}
             resultsSpreadsheetUrl={resultsSpreadsheetUrl}
             pointsSpreadsheetUrl={pointsSpreadsheetUrl}
           />
 
           <ChampionshipAnatomyWidget
-            standings={filtered}
+            standings={baseFiltered}
             selectedBreed={selectedBreed}
           />
 

@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { memo } from 'react'
 
-export default function ChampionshipPointsRulesWidget() {
+function ChampionshipPointsRulesWidget() {
   return (
     <div className="rounded-2xl border border-old-money-200 bg-cream-50/90 p-4 shadow-2xs space-y-3 text-xs text-charcoal-700">
       <h3 className="text-xs font-bold font-serif text-charcoal-900">
@@ -59,3 +59,5 @@ export default function ChampionshipPointsRulesWidget() {
     </div>
   )
 }
+
+export default memo(ChampionshipPointsRulesWidget)

@@ -60,7 +60,19 @@ export function useChampionshipCarousel() {
   const touchStartRef = useRef<{ x: number; y: number; time: number } | null>(null)
   const gestureLockRef = useRef<'horizontal' | 'vertical' | null>(null)
 
-  const startDrag = (clientX: number, clientY: number) => {
+  // Плавная анимация скольжения колонок при изменении активной сортировки
+  useEffect(() => {
+    const slideIndex = sortMode === 'time' ? 0 : 1
+    if (currentSlideRef.current !== slideIndex) {
+      currentSlideRef.current = slideIndex
+      if (trackRef.current && (typeof window === 'undefined' || window.innerWidth < 1024)) {
+        trackRef.current.style.transition = 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)'
+        trackRef.current.style.transform = `translate3d(${getSlideOffset(slideIndex)}, 0, 0)`
+      }
+    }
+  }, [sortMode, getSlideOffset])
+
+  const startDrag = useCallback((clientX: number, clientY: number) => {
     if (typeof window !== 'undefined' && window.innerWidth >= 1024) return
     hasInteractedRef.current = true
     cancelNudge()
@@ -70,9 +82,9 @@ export function useChampionshipCarousel() {
     if (trackRef.current) {
       trackRef.current.style.transition = 'none'
     }
-  }
+  }, [cancelNudge])
 
-  const moveDrag = (clientX: number, clientY: number) => {
+  const moveDrag = useCallback((clientX: number, clientY: number) => {
     if (!touchStartRef.current || (typeof window !== 'undefined' && window.innerWidth >= 1024)) return
     const dx = clientX - touchStartRef.current.x
     const dy = clientY - touchStartRef.current.y
@@ -93,15 +105,16 @@ export function useChampionshipCarousel() {
     }
 
     if (gestureLockRef.current === 'horizontal' && trackRef.current) {
-      const isAtLeftEdge = activeSlide === 0 && dx > 0
-      const isAtRightEdge = activeSlide === 1 && dx < 0
+      const currentSlide = sortMode === 'time' ? 0 : 1
+      const isAtLeftEdge = currentSlide === 0 && dx > 0
+      const isAtRightEdge = currentSlide === 1 && dx < 0
       const appliedDx = isAtLeftEdge || isAtRightEdge ? dx * 0.22 : dx
-      const base = activeSlide === 0 ? '0%' : `calc(-100% - ${gapPx}px)`
+      const base = currentSlide === 0 ? '0%' : `calc(-100% - ${gapPx}px)`
       trackRef.current.style.transform = `translate3d(calc(${base} + ${appliedDx}px), 0, 0)`
     }
-  }
+  }, [sortMode, gapPx])
 
-  const endDrag = (clientX: number, nativeEvent?: any) => {
+  const endDrag = useCallback((clientX: number, nativeEvent?: any) => {
     if (!touchStartRef.current || (typeof window !== 'undefined' && window.innerWidth >= 1024)) return
     const isHorizontal = gestureLockRef.current === 'horizontal'
     const dx = clientX - touchStartRef.current.x
@@ -111,15 +124,17 @@ export function useChampionshipCarousel() {
     touchStartRef.current = null
     gestureLockRef.current = null
 
+    const currentSlide = sortMode === 'time' ? 0 : 1
+
     if (isHorizontal) {
       const isSwipeLeft = dx < -35 || (dx < -15 && velocity > 0.2)
       const isSwipeRight = dx > 35 || (dx > 15 && velocity > 0.2)
 
-      let targetSlide = activeSlide
-      if (isSwipeLeft && activeSlide === 0) {
+      let targetSlide = currentSlide
+      if (isSwipeLeft && currentSlide === 0) {
         targetSlide = 1
         if (nativeEvent) nativeEvent._doninoSwipeConsumed = true
-      } else if (isSwipeRight && activeSlide === 1) {
+      } else if (isSwipeRight && currentSlide === 1) {
         targetSlide = 0
         if (nativeEvent) nativeEvent._doninoSwipeConsumed = true
       }
@@ -130,66 +145,67 @@ export function useChampionshipCarousel() {
         trackRef.current.style.transform = `translate3d(${getSlideOffset(targetSlide)}, 0, 0)`
       }
 
-      if (targetSlide !== activeSlide) {
+      if (targetSlide !== currentSlide) {
         setSortMode(targetSlide === 0 ? 'time' : 'points')
       }
     } else {
       if (trackRef.current) {
         trackRef.current.style.transition = 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)'
-        trackRef.current.style.transform = `translate3d(${getSlideOffset(activeSlide)}, 0, 0)`
+        trackRef.current.style.transform = `translate3d(${getSlideOffset(currentSlide)}, 0, 0)`
       }
       hadMovedRef.current = false
     }
-  }
+  }, [sortMode, getSlideOffset])
 
-  const cancelDrag = () => {
+  const cancelDrag = useCallback(() => {
     hasInteractedRef.current = true
     cancelNudge()
     touchStartRef.current = null
     gestureLockRef.current = null
+    const currentSlide = sortMode === 'time' ? 0 : 1
     if (trackRef.current) {
       trackRef.current.style.transition = 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)'
-      trackRef.current.style.transform = `translate3d(${getSlideOffset(activeSlide)}, 0, 0)`
+      trackRef.current.style.transform = `translate3d(${getSlideOffset(currentSlide)}, 0, 0)`
     }
     hadMovedRef.current = false
-  }
+  }, [sortMode, getSlideOffset, cancelNudge])
 
-  const handleTouchStart = (e: React.TouchEvent) => {
+  const handleTouchStart = useCallback((e: React.TouchEvent) => {
     startDrag(e.touches[0].clientX, e.touches[0].clientY)
-  }
+  }, [startDrag])
 
-  const handleTouchMove = (e: React.TouchEvent) => {
+  const handleTouchMove = useCallback((e: React.TouchEvent) => {
     moveDrag(e.touches[0].clientX, e.touches[0].clientY)
-  }
+  }, [moveDrag])
 
-  const handleTouchEnd = (e: React.TouchEvent) => {
+  const handleTouchEnd = useCallback((e: React.TouchEvent) => {
     endDrag(e.changedTouches[0].clientX, e.nativeEvent)
-  }
+  }, [endDrag])
 
-  const handleTouchCancel = () => {
+  const handleTouchCancel = useCallback(() => {
     cancelDrag()
-  }
+  }, [cancelDrag])
 
-  const handleMouseDown = (e: React.MouseEvent) => {
+  const handleMouseDown = useCallback((e: React.MouseEvent) => {
     if (e.button !== 0) return
     startDrag(e.clientX, e.clientY)
-  }
+  }, [startDrag])
 
-  const handleMouseMove = (e: React.MouseEvent) => {
+  const handleMouseMove = useCallback((e: React.MouseEvent) => {
     moveDrag(e.clientX, e.clientY)
-  }
+  }, [moveDrag])
 
-  const handleMouseUp = (e: React.MouseEvent) => {
+  const handleMouseUp = useCallback((e: React.MouseEvent) => {
     endDrag(e.clientX)
-  }
+  }, [endDrag])
 
-  const handleMouseLeave = () => {
+  const handleMouseLeave = useCallback(() => {
     if (touchStartRef.current) {
       cancelDrag()
     }
-  }
+  }, [cancelDrag])
 
-  const handleSortModeChange = (mode: SortMode) => {
+  const handleSortModeChange = useCallback((mode: SortMode) => {
     if (mode === sortMode) return
     hasInteractedRef.current = true
     cancelNudge()
@@ -200,7 +216,7 @@ export function useChampionshipCarousel() {
       trackRef.current.style.transform = `translate3d(${getSlideOffset(targetSlide)}, 0, 0)`
     }
     setSortMode(mode)
-  }
+  }, [sortMode, getSlideOffset, cancelNudge])
 
   const isAnimating = isNudging
 

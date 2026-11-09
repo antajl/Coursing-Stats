@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import { FileSpreadsheet, ExternalLink } from 'lucide-react'
 
 export type LeagueFilter = 'all' | 'Абсолют' | 'Чемпионов' | 'Прогресс' | 'Юниоры'
@@ -26,7 +26,7 @@ interface ChampionshipLinksCardProps {
   pointsSpreadsheetUrl?: string | null
 }
 
-export default function ChampionshipLinksCard({
+function ChampionshipLinksCard({
   selectedLeague,
   onSelectLeague,
   dynamicLeagueCounts,
@@ -148,3 +148,5 @@ export default function ChampionshipLinksCard({
     </div>
   )
 }
+
+export default memo(ChampionshipLinksCard)

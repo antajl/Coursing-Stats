@@ -105,7 +105,7 @@ function ChampionshipDogCard({
             <div className="flex items-center gap-1.5 flex-wrap">
               {dog.dog_id ? (
                 <Link
-                  to={`/dog/${dog.dog_id}`}
+                  to={`/dog/${dog.dog_id}/`}
                   onClick={(e) => e.stopPropagation()}
                   title={secondary || undefined}
                   className="font-bold font-serif text-charcoal-900 hover:text-camel-800 transition-colors text-xs sm:text-sm truncate"
@@ -294,4 +294,12 @@ function ChampionshipDogCard({
   )
 }
 
-export default memo(ChampionshipDogCard)
+export default memo(ChampionshipDogCard, (prev, next) => {
+  return (
+    prev.dog.dog_key === next.dog.dog_key &&
+    prev.rank === next.rank &&
+    prev.isExpanded === next.isExpanded &&
+    prev.sortMode === next.sortMode &&
+    prev.dog === next.dog
+  )
+})
