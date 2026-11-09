@@ -212,6 +212,7 @@ jobs:
             --endpoint-url https://storage.yandexcloud.net \
             --acl public-read \
             --size-only \
+            --exclude "shows/protocols/*" \
             --cache-control "public, max-age=3600, must-revalidate" \
             --delete
         env:

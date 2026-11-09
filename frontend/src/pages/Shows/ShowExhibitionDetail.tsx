@@ -8,6 +8,7 @@ import PageToolbar from '../../components/toolbar/PageToolbar'
 import { SEO } from '../../components/SEO'
 import { JsonLd, breadcrumbListSchema, sportsEventSchema } from '../../components/JsonLd'
 import { CACHE } from '../../lib/constants'
+import { rkfOnlineExhibitionUrl } from '../../lib/rkfLinks'
 import ToolbarFiltersDropdown from '../../components/toolbar/ToolbarFiltersDropdown'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
 import { getShowExhibition } from '../../lib/staticData'
@@ -91,6 +92,16 @@ export default function ShowExhibitionDetail() {
           message={error || `ID: ${id}`}
           action={
             <div className="flex flex-wrap items-center justify-center gap-3">
+              {id && (
+                <a
+                  href={rkfOnlineExhibitionUrl(id) ?? '#'}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-xl border border-camel-400 bg-camel-50 px-4 py-2 text-sm font-semibold text-camel-900 transition-all hover:bg-camel-100"
+                >
+                  Открыть на rkf.online ↗
+                </a>
+              )}
               <Link
                 to="/shows?tab=archive"
                 className="rounded-xl border-2 border-camel-300 bg-white px-4 py-2 text-sm font-semibold text-camel-700 transition-all hover:border-camel-400 hover:bg-camel-50"

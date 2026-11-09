@@ -42,66 +42,49 @@ function parseArgs(argv: string[]) {
   return { year, all, limit, dryRun }
 }
 
-async function main() {
-  const { year, all, limit, dryRun } = parseArgs(process.argv.slice(2))
+function syncYear(db: Database.Database, targetYear: number, limit: number, dryRun: boolean) {
+  console.log(`\n========================================`)
+  console.log(`Processing year: ${targetYear}`)
+  console.log(`========================================`)
 
-  if (!year && !all) {
-    console.log('Please specify --year=YYYY or --all (e.g. --year=2026)')
-    process.exit(1)
+  // Ensure clean temp dir
+  if (fs.existsSync(TEMP_DIR)) {
+    fs.rmSync(TEMP_DIR, { recursive: true, force: true })
   }
+  fs.mkdirSync(TEMP_DIR, { recursive: true })
 
-  if (!fs.existsSync(DB_PATH)) {
-    console.error('Database not found at', DB_PATH)
-    process.exit(1)
-  }
-
-  if (!accessKey || !secretKey) {
-    console.error('Missing YC_ACCESS_KEY_ID or YC_SECRET_ACCESS_KEY in .env.ai')
-    process.exit(1)
-  }
-
-  if (!fs.existsSync(TEMP_DIR)) {
-    fs.mkdirSync(TEMP_DIR, { recursive: true })
-  }
-
-  console.log(`Connecting to SQLite database: ${DB_PATH}`)
-  const db = new Database(DB_PATH, { readonly: true })
-
-  let query = 'SELECT id, year, data FROM exhibitions_rkf'
-  const params: any[] = []
-  if (year) {
-    query += ' WHERE year = ?'
-    params.push(year)
-  }
-  query += ' ORDER BY year, id'
+  let query = 'SELECT id, data FROM exhibitions_rkf WHERE year = ? ORDER BY id'
+  const params: any[] = [targetYear]
   if (limit) {
     query += ' LIMIT ?'
     params.push(limit)
   }
 
-  const rows = db.prepare(query).all(...params) as Array<{ id: string; year: number; data: Buffer }>
-  console.log(`Found ${rows.length} exhibitions to export`)
+  const stmt = db.prepare(query)
+  const rows = stmt.all(...params) as Array<{ id: string; data: Buffer }>
+  console.log(`Found ${rows.length} exhibitions to export for year ${targetYear}`)
 
-  console.log(`Exporting gzipped buffers to temp directory: ${TEMP_DIR}`)
+  if (rows.length === 0) return
+
   let exported = 0
   for (const row of rows) {
     const filePath = path.join(TEMP_DIR, `${row.id}.json`)
     // row.data is ALREADY gzip compressed in SQLite!
     fs.writeFileSync(filePath, row.data)
     exported++
-    if (exported % 1000 === 0) {
+    if (exported % 1000 === 0 || exported === rows.length) {
       process.stdout.write(`\rExported to disk: ${exported}/${rows.length}`)
     }
   }
   console.log(`\nFinished exporting ${exported} files to ${TEMP_DIR}`)
-  db.close()
 
   if (dryRun) {
     console.log('Dry run complete. Skipping S3 upload.')
+    fs.rmSync(TEMP_DIR, { recursive: true, force: true })
     return
   }
 
-  console.log(`\nSyncing to Yandex Object Storage: s3://${bucket}/data/v1/shows/protocols/ ...`)
+  console.log(`Syncing year ${targetYear} (${exported} files) to S3 CDN...`)
   const s3Cmd = [
     'aws s3 sync',
     `"${TEMP_DIR}"`,
@@ -120,10 +103,48 @@ async function main() {
     AWS_SECRET_ACCESS_KEY: secretKey,
   }
 
-  console.log('Running S3 sync command...')
-  execSync(s3Cmd, { stdio: 'inherit', env })
+  try {
+    execSync(s3Cmd, { stdio: 'inherit', env })
+    console.log(`Year ${targetYear} synced to S3 successfully!`)
+  } finally {
+    fs.rmSync(TEMP_DIR, { recursive: true, force: true })
+  }
+}
 
-  console.log('\nS3 sync completed successfully!')
+async function main() {
+  const { year, all, limit, dryRun } = parseArgs(process.argv.slice(2))
+
+  if (!year && !all) {
+    console.log('Please specify --year=YYYY or --all (e.g. --year=2026)')
+    process.exit(1)
+  }
+
+  if (!fs.existsSync(DB_PATH)) {
+    console.error('Database not found at', DB_PATH)
+    process.exit(1)
+  }
+
+  if (!accessKey || !secretKey) {
+    console.error('Missing YC_ACCESS_KEY_ID or YC_SECRET_ACCESS_KEY in .env.ai')
+    process.exit(1)
+  }
+
+  console.log(`Connecting to SQLite database: ${DB_PATH}`)
+  const db = new Database(DB_PATH, { readonly: true })
+
+  // Configure AWS CLI concurrency for high performance if possible
+  try {
+    execSync('aws configure set default.s3.max_concurrent_requests 50', { stdio: 'ignore' })
+  } catch {}
+
+  const years = year ? [year] : [2026, 2025, 2024, 2023, 2022, 2021, 2020, 2019]
+
+  for (const y of years) {
+    syncYear(db, y, limit, dryRun)
+  }
+
+  db.close()
+  console.log('\nAll requested years exported and synced to S3 successfully!')
 }
 
 main().catch((err) => {

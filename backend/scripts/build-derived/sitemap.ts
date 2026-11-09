@@ -1,6 +1,6 @@
 import fs from 'node:fs'
 import path from 'node:path'
-import type Database from 'better-sqlite3'
+import Database from 'better-sqlite3'
 import { parseJudgeNames } from '../../src/lib/judge-names'
 import { PUBLIC_DIR, ROOT, SITE_BASE_URL, writeIndex } from './shared'
 import { CORE_BREED_HUBS } from '../../../frontend/src/lib/breed-hubs-data'
@@ -150,6 +150,19 @@ export function loadProtocolIds(): string[] {
 /** CDN-indexable exhibitions: shows/index.json + numeric type1 protocol files. */
 export function loadExhibitionIdsForSitemap(): string[] {
   const ids = new Set<string>()
+
+  // 1. All parsed exhibitions from SQLite archive
+  const archivePath = path.join(ROOT, 'data/local/exhibitions-rkf-archive.sqlite')
+  if (fs.existsSync(archivePath)) {
+    try {
+      const db = new Database(archivePath, { readonly: true })
+      const rows = db.prepare('SELECT id FROM exhibitions_rkf').all() as { id: string }[]
+      for (const r of rows) ids.add(String(r.id))
+      db.close()
+    } catch {
+      /* ignore */
+    }
+  }
   const indexPath = path.join(ROOT, 'data/v1/shows/index.json')
   if (fs.existsSync(indexPath)) {
     try {
@@ -166,7 +179,7 @@ export function loadExhibitionIdsForSitemap(): string[] {
       if (m) ids.add(m[1])
     }
   }
-  return [...ids].sort((a, b) => Number(a) - Number(b) || a.localeCompare(b, 'ru'))
+  return [...ids].sort((a, b) => (Number(a) || 0) - (Number(b) || 0))
 }
 
 export function saveAvailableExhibitionsIndex(): string[] {
