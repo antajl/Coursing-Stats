@@ -1,5 +1,7 @@
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useQuery } from '@tanstack/react-query'
+import { getAvailableExhibitionIds } from '../../../lib/staticData'
 import { ExternalLink, Calendar } from 'lucide-react'
 import ToolbarSearch from '../../../components/toolbar/ToolbarSearch'
 import { formatDate, type GradeFilterKey } from './judgeDetailAggregates'
@@ -24,6 +26,11 @@ export function JudgeExhibitionPanel({
   onToggleShowAll: () => void
 }) {
   const [searchQuery, setSearchQuery] = useState('')
+  const { data: availableIds } = useQuery({
+    queryKey: ['available-exhibitions'],
+    queryFn: getAvailableExhibitionIds,
+    staleTime: Infinity,
+  })
 
   const filtered = useMemo(() => {
     const q = searchQuery.trim().toLowerCase()
@@ -65,7 +72,8 @@ export function JudgeExhibitionPanel({
       ) : (
         <div className="divide-y divide-old-money-100/70 rounded-xl border border-old-money-200/80 bg-white overflow-hidden shadow-2xs">
           {displayed.map((ex) => {
-            const internalHref = ex.id ? `/shows/exhibition/${ex.id}` : null
+            const hasLocalPage = Boolean(availableIds && availableIds.has(Number(ex.id)))
+            const internalHref = hasLocalPage ? `/shows/exhibition/${ex.id}/` : null
             const rkfHref = ex.rkf_url || (ex.id ? `https://rkf.online/exhibitions/${ex.id}` : null)
 
             return (

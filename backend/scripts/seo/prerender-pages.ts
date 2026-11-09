@@ -1,3 +1,20 @@
+function buildRedirectHtml(canonicalUrl: string): string {
+  return `<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="0; url=${canonicalUrl}" />
+    <link rel="canonical" href="${canonicalUrl}" />
+    <meta name="robots" content="noindex, follow" />
+    <title>Перенаправление...</title>
+    <script>window.location.replace('${canonicalUrl}');</script>
+  </head>
+  <body>
+    <p>Профиль собаки перемещён. Перенаправление на <a href="${canonicalUrl}">${canonicalUrl}</a>...</p>
+  </body>
+</html>`
+}
+
 /**
  * CLI: after `cd frontend && npm run build`, clone dist/index.html into
  * hub + dog HTML files with real meta and crawlable #root content.
@@ -36,7 +53,7 @@ import {
   sportJudgeMeta,
 } from './prerender-html.js'
 import { CORE_BREED_HUBS } from '../../../frontend/src/lib/breed-hubs-data.js'
-import { loadExhibitionIdsForSitemap } from '../build-derived/sitemap.js'
+import { loadExhibitionIdsForSitemap, saveAvailableExhibitionsIndex } from '../build-derived/sitemap.js'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT = path.resolve(__dirname, '../../..')
 const DIST = path.join(ROOT, 'frontend/dist')
@@ -276,17 +293,6 @@ function prerenderShowOnlyDogs(spaHtml: string): number {
   const dogs = collectShowOnlyDogs()
   if (dogs.size === 0) return 0
 
-  // Clean up any stale alias directories in dist so alias URLs correctly fallback to SPA shell
-  const aliasMap = loadDetailsAliasMap()
-  for (const aliasId of aliasMap.keys()) {
-    const aliasDir = path.join(DIST, 'dog', aliasId)
-    if (fs.existsSync(aliasDir)) {
-      try {
-        fs.rmSync(aliasDir, { recursive: true, force: true })
-      } catch {}
-    }
-  }
-
   const maxExtra = Math.max(0, Number(process.env.PRERENDER_SHOW_ONLY_MAX || 15000) || 15000)
   // Prefer dogs with more shows
   const ranked = [...dogs.entries()].sort(
@@ -295,11 +301,14 @@ function prerenderShowOnlyDogs(spaHtml: string): number {
 
   let written = 0
   let skippedExisting = 0
+  const writtenIds = new Set<string>()
+
   for (const [id, entry] of ranked) {
     if (written >= maxExtra) break
     const outFile = path.join(DIST, 'dog', id, 'index.html')
     if (fs.existsSync(outFile)) {
       skippedExisting++
+      writtenIds.add(id)
       continue
     }
 
@@ -313,7 +322,48 @@ function prerenderShowOnlyDogs(spaHtml: string): number {
     })
     writeHtml(outFile, html)
     written++
+    writtenIds.add(id)
   }
+
+  // Generate lightweight HTML redirects for aliases pointing to canonical dogs
+  const aliasMap = loadDetailsAliasMap()
+  const maxAliases = Math.max(0, Number(process.env.PRERENDER_ALIASES_MAX || 50000) || 50000)
+  let aliasWritten = 0
+
+  // 1. Process known ID migrations first
+  const migrationsPath = path.join(ROOT, 'data/v1/shows/id-migrations.json')
+  if (fs.existsSync(migrationsPath)) {
+    try {
+      const migrations = JSON.parse(fs.readFileSync(migrationsPath, 'utf8')) as Array<{ old_id: string; new_id: string }>
+      for (const m of migrations) {
+        if (m.old_id && m.new_id) {
+          const canonicalUrl = `${SITE_ORIGIN}/dog/${m.new_id}/`
+          writeHtml(path.join(DIST, 'dog', m.old_id, 'index.html'), buildRedirectHtml(canonicalUrl))
+          aliasWritten++
+        }
+      }
+    } catch {}
+  }
+
+  // 2. Process show-dog deduplication aliases pointing to active ranked dogs
+  for (const [aliasId, rawTarget] of aliasMap.entries()) {
+    if (aliasWritten >= maxAliases) break
+    let targetId = rawTarget
+    let depth = 0
+    while (aliasMap.has(targetId) && depth < 5) {
+      targetId = aliasMap.get(targetId)!
+      depth++
+    }
+    if (writtenIds.has(targetId) || dogs.has(targetId)) {
+      const canonicalTarget = dogs.get(targetId)?.competition_dog_id != null
+        ? String(dogs.get(targetId)!.competition_dog_id)
+        : targetId
+      const canonicalUrl = `${SITE_ORIGIN}/dog/${canonicalTarget}/`
+      writeHtml(path.join(DIST, 'dog', aliasId, 'index.html'), buildRedirectHtml(canonicalUrl))
+      aliasWritten++
+    }
+  }
+  console.log(`[prerender-seo] Generated ${aliasWritten} dog alias redirects`)
   if (dogs.size > written + skippedExisting) {
     console.warn(
       `[prerender-seo] show-only capped: candidates=${dogs.size} written=${written} already=${skippedExisting} max=${maxExtra} (set PRERENDER_SHOW_ONLY_MAX to raise)`,
@@ -845,6 +895,15 @@ function main(): void {
   const donino = prerenderDoninoDogs(shellForPages)
   const exhibitions = prerenderExhibitions(shellForPages)
   const showJudges = prerenderShowJudges(shellForPages)
+
+  // Ensure available-exhibitions.json is generated and placed into dist
+  saveAvailableExhibitionsIndex()
+  const availSrc = path.join(ROOT, 'data/v1/shows/indexes/available-exhibitions.json')
+  const availDst = path.join(DIST, 'data/v1/shows/indexes/available-exhibitions.json')
+  if (fs.existsSync(availSrc)) {
+    ensureDir(path.dirname(availDst))
+    fs.copyFileSync(availSrc, availDst)
+  }
 
   // Ensure all sitemap*.xml and robots.txt are copied to dist for deployment
   const publicDir = path.join(ROOT, 'frontend/public')

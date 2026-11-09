@@ -359,3 +359,18 @@ export async function getShowExhibition(exhibitionId: string): Promise<ApiResult
     error: 'Выставка не найдена',
   }
 }
+
+
+let availableExhibitionsCache: Set<number> | null = null
+
+export async function getAvailableExhibitionIds(): Promise<Set<number>> {
+  if (availableExhibitionsCache) return availableExhibitionsCache
+  try {
+    const list = await fetchJson<number[]>('shows/indexes/available-exhibitions.json')
+    if (Array.isArray(list)) {
+      availableExhibitionsCache = new Set(list)
+      return availableExhibitionsCache
+    }
+  } catch {}
+  return new Set()
+}

@@ -169,6 +169,15 @@ export function loadExhibitionIdsForSitemap(): string[] {
   return [...ids].sort((a, b) => Number(a) - Number(b) || a.localeCompare(b, 'ru'))
 }
 
+export function saveAvailableExhibitionsIndex(): string[] {
+  const exhibitionIds = loadExhibitionIdsForSitemap()
+  const outDir = path.join(ROOT, 'data/v1/shows/indexes')
+  fs.mkdirSync(outDir, { recursive: true })
+  const outPath = path.join(outDir, 'available-exhibitions.json')
+  fs.writeFileSync(outPath, JSON.stringify(exhibitionIds.map((id) => Number(id) || id)), 'utf-8')
+  return exhibitionIds
+}
+
 function loadShowJudgeIds(): string[] {
   const file = path.join(ROOT, 'data/v1/shows/indexes/judges.json')
   if (!fs.existsSync(file)) return []
@@ -224,7 +233,7 @@ export function buildSitemap(db: Database.Database) {
 
   const eventIds = loadEventIdsWithResults()
   const protocolIds = loadProtocolIds()
-  const exhibitionIds = loadExhibitionIdsForSitemap()
+  const exhibitionIds = saveAvailableExhibitionsIndex()
   const showJudgeIds = loadShowJudgeIds()
   const sportJudgeNames = [...judgeNames].sort((a, b) => a.localeCompare(b, 'ru'))
 

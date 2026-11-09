@@ -60,6 +60,7 @@ export {
   getShowRkfCalendar,
   getShowRkfCalendarYears,
   getShowExhibition,
+  getAvailableExhibitionIds,
   getShowDogRanking,
   getShowDogRankingPage0,
   getShowDogSearchIndex,
