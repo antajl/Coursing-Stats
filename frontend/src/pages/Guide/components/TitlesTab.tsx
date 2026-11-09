@@ -761,21 +761,7 @@ export default function TitlesTab() {
   return (
     <div className="space-y-6">
       {/* ИНТЕЛЛЕКТУАЛЬНЫЙ ПОИСК В ШАПКЕ */}
-      <div className="rounded-2xl border border-camel-200 bg-linear-to-b from-white to-cream-50/70 p-4 sm:p-5 shadow-xs">
-        <div className="flex items-center justify-between gap-2 mb-2">
-          <div className="flex items-center gap-2">
-            <span className="flex h-6 w-6 items-center justify-center rounded-md bg-camel-100 text-camel-900">
-              <Search className="h-3.5 w-3.5" aria-hidden />
-            </span>
-            <span className="text-xs sm:text-sm font-bold text-charcoal-900">
-              Умный поиск по правилам, регламентам и титулам
-            </span>
-          </div>
-          <span className="text-[11px] font-medium text-charcoal-500 hidden sm:inline">
-            Устойчив к опечаткам, окончаниям и смене раскладки
-          </span>
-        </div>
-
+      <div className="rounded-2xl border border-camel-200 bg-linear-to-b from-white to-cream-50/70 p-3.5 sm:p-4 shadow-xs">
         {/* Поисковое поле ввода */}
         <div className="relative">
           <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3.5 text-charcoal-400">
