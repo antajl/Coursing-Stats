@@ -1,7 +1,7 @@
 import { memo, useMemo, useState } from 'react'
+import { Trophy, Sparkles } from 'lucide-react'
 import { SeasonTopSectionSkeleton } from './SeasonTopSectionSkeleton'
 import { useHomeBreedCarousel } from '../hooks/useHomeBreedCarousel'
-import { SegmentedTabs } from '../../../components/ui/SegmentedTabs'
 import {
   HomeSubSectionTab,
   HomeSubSectionCapsule,
@@ -84,14 +84,22 @@ function SeasonTopSectionInner({
 
   const mainTabs = useMemo(
     () => [
-      { id: 'sport' as const, label: 'Соревнования' },
+      {
+        id: 'sport' as const,
+        label: (
+          <>
+            <span className="sm:hidden">Спорт</span>
+            <span className="hidden sm:inline">Соревнования</span>
+          </>
+        ),
+      },
       { id: 'shows' as const, label: 'Выставки' },
       {
         id: 'donino' as const,
         label: (
           <>
-            <span className="md:hidden">Донино</span>
-            <span className="hidden md:inline">Рекорды Донино</span>
+            <span className="sm:hidden">Донино</span>
+            <span className="hidden sm:inline">Рекорды Донино</span>
           </>
         ),
       },
@@ -110,33 +118,53 @@ function SeasonTopSectionInner({
       {...(!compact ? { 'data-home-reveal': true } : {})}
     >
       <h2 className="sr-only">Лидеры сезона и рейтинги</h2>
-      {/* Парящие плашки Physical Glass — строго по высоте h-[34px] с симметричным кокпитом */}
+      {/* Верхняя полоса: Единая парящая плашка Physical Glass (h=34px), зеркально отражающая правый кокпит «База данных и реестр» */}
       <div
-        role="tablist"
-        aria-label="Разделы рейтингов и достижений"
-        className="mb-2.5 flex items-center gap-2 h-[34px] !bg-transparent !border-0 !shadow-none !p-0 select-none"
+        className="home-v2-stats-cockpit-tab mb-2.5 flex items-center gap-2 sm:gap-2.5 text-xs select-none"
         style={{ height: '34px', boxSizing: 'border-box' }}
       >
-        {mainTabs.map((tab) => {
-          const isActive = activeTab === tab.id
-          return (
-            <button
-              key={tab.id}
-              type="button"
-              role="tab"
-              aria-selected={isActive}
-              onClick={() => setActiveTab(tab.id)}
-              className={`h-[34px] flex-1 px-3.5 rounded-full text-xs transition-all flex items-center justify-center cursor-pointer whitespace-nowrap ${
-                isActive
-                  ? 'cs-glass-pill-active !font-semibold !text-camel-950'
-                  : 'cs-glass-pill !font-semibold !text-charcoal-700'
-              }`}
-              style={{ height: '34px', boxSizing: 'border-box' }}
-            >
-              <span>{tab.label}</span>
-            </button>
-          )
-        })}
+        {/* Заголовок виджета (зеркально как справа «База данных и реестр») */}
+        <span className="text-[11.5px] font-bold text-camel-900 uppercase tracking-wider flex items-center gap-1.5 shrink-0 pl-0.5 sm:pl-1">
+          <Trophy className="w-3.5 h-3.5 text-camel-700" aria-hidden />
+          <span className="hidden xs:inline">Лидеры сезона</span>
+          <span className="xs:hidden">Лидеры</span>
+        </span>
+
+        {/* Тонкий вертикальный разделитель */}
+        <span className="w-px h-3.5 bg-old-money-300/70 shrink-0" aria-hidden />
+
+        {/* Переключатель вкладок — без вложенных треков-пилюль, просто аккуратные кнопки в один ряд */}
+        <div
+          role="tablist"
+          aria-label="Разделы рейтингов и достижений"
+          className="flex items-center gap-1 sm:gap-1.5 shrink-0"
+        >
+          {mainTabs.map((tab) => {
+            const isActive = activeTab === tab.id
+            return (
+              <button
+                key={tab.id}
+                type="button"
+                role="tab"
+                aria-selected={isActive}
+                onClick={() => setActiveTab(tab.id)}
+                className={`h-[25px] px-2.5 sm:px-3 rounded-full text-xs transition-all flex items-center justify-center cursor-pointer whitespace-nowrap ${
+                  isActive
+                    ? 'border border-camel-400 bg-camel-100 text-camel-950 font-semibold shadow-2xs'
+                    : 'text-charcoal-700 hover:text-charcoal-900 hover:bg-white/70 font-medium'
+                }`}
+              >
+                <span>{tab.label}</span>
+              </button>
+            )
+          })}
+        </div>
+
+        {/* Мета-информация справа (зеркально как «Россия · 240+ пород» справа) */}
+        <span className="ml-auto text-[11px] font-medium text-charcoal-600 hidden sm:flex items-center gap-1 shrink-0 pr-1">
+          <Sparkles className="w-3 h-3 text-camel-700" aria-hidden />
+          <span>2026 · Топ-3 по породам</span>
+        </span>
       </div>
 
       {activeTab === 'sport' && (
