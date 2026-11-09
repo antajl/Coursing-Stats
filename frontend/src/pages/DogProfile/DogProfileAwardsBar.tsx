@@ -73,10 +73,10 @@ export function DogProfileAwardsBar({
   }
 
   return (
-    <div className="mt-3.5 pt-3 border-t border-old-money-200/70">
-      <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_auto] gap-3 lg:gap-6 items-center">
-        {/* СЛЕВА: Титулы спорта и выставок */}
-        <div className="space-y-1.5 min-w-0">
+    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3 lg:gap-6">
+      {/* СЛЕВА: Титулы спорта и выставок */}
+      {(hasComp || hasShow) && (
+        <div className="space-y-1.5 min-w-0 flex-1">
           {hasComp && (
             <div className="grid grid-cols-[4.5rem_1fr] sm:grid-cols-[5rem_1fr] items-baseline gap-2">
               <span className="text-[10px] font-bold uppercase tracking-wider text-charcoal-400 select-none">
@@ -99,27 +99,27 @@ export function DogProfileAwardsBar({
             </div>
           )}
         </div>
+      )}
 
-        {/* СПРАВА: Ачивки и рейтинги (максимум 2 в строку / 2 колонки) */}
-        {hasAchievements && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 shrink-0 pt-1 lg:pt-0 border-t lg:border-t-0 border-old-money-100 max-w-full lg:max-w-md">
-            {achievements.map((ach) => (
-              <HoverTooltip key={ach.id} label={ach.tooltip} placement="top" portal>
-                <div
-                  className={`inline-flex items-center gap-1.5 rounded-md px-2 py-0.5 text-[11px] font-semibold tabular-nums whitespace-nowrap transition-transform hover:scale-105 justify-start ${ach.color}`}
-                  tabIndex={0}
-                >
-                  {ach.icon}
-                  <span className="truncate">{ach.label}</span>
-                  {ach.sublabel && (
-                    <span className="text-[10px] font-normal opacity-75 truncate">· {ach.sublabel}</span>
-                  )}
-                </div>
-              </HoverTooltip>
-            ))}
-          </div>
-        )}
-      </div>
+      {/* СПРАВА: Сезонные ачивки рейтинга (вертикально друг под другом, параллельно строкам титулов) */}
+      {hasAchievements && (
+        <div className="flex flex-col gap-1.5 shrink-0 items-start lg:items-end justify-center">
+          {achievements.slice(0, 3).map((ach) => (
+            <HoverTooltip key={ach.id} label={ach.tooltip} placement="top" portal>
+              <div
+                className={`cs-glass-pill inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[11px] font-semibold tabular-nums whitespace-nowrap transition-transform hover:scale-105 cursor-default ${ach.color}`}
+                tabIndex={0}
+              >
+                {ach.icon}
+                <span className="truncate">{ach.label}</span>
+                {ach.sublabel && (
+                  <span className="text-[10px] font-normal text-charcoal-500 truncate">· {ach.sublabel}</span>
+                )}
+              </div>
+            </HoverTooltip>
+          ))}
+        </div>
+      )}
     </div>
   )
 }

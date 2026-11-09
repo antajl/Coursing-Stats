@@ -124,8 +124,8 @@ export function DogProfileHeader({
         id: 'coursing-breed-1',
         label: 'Топ-1 в породе',
         sublabel: 'Курсинг 2026',
-        icon: <Crown className="h-3.5 w-3.5 text-amber-500 shrink-0" />,
-        color: 'bg-amber-50 text-amber-950 border border-amber-300 font-bold shadow-2xs',
+        icon: <Crown className="h-3.5 w-3.5 text-amber-600 shrink-0" />,
+        color: 'text-charcoal-900',
         tooltip: '№1 среди всех собак породы в сезоне по курсингу',
       })
     } else if (coursing?.yearBreedRank === 2) {
@@ -133,8 +133,8 @@ export function DogProfileHeader({
         id: 'coursing-breed-2',
         label: 'Топ-2 в породе',
         sublabel: 'Курсинг 2026',
-        icon: <Medal className="h-3.5 w-3.5 text-slate-500 shrink-0" />,
-        color: 'bg-slate-50 text-slate-900 border border-slate-300/90 shadow-2xs',
+        icon: <Medal className="h-3.5 w-3.5 text-camel-700 shrink-0" />,
+        color: 'text-charcoal-900',
         tooltip: '№2 среди всех собак породы в сезоне по курсингу',
       })
     } else if (coursing?.yearBreedRank === 3) {
@@ -143,7 +143,7 @@ export function DogProfileHeader({
         label: 'Топ-3 в породе',
         sublabel: 'Курсинг 2026',
         icon: <Medal className="h-3.5 w-3.5 text-amber-700 shrink-0" />,
-        color: 'bg-orange-50 text-amber-950 border border-amber-300/80 shadow-2xs',
+        color: 'text-charcoal-900',
         tooltip: '№3 среди всех собак породы в сезоне по курсингу',
       })
     } else if (coursing?.yearBreedRank && coursing.yearBreedRank <= 5) {
@@ -152,7 +152,7 @@ export function DogProfileHeader({
         label: `Топ-${coursing.yearBreedRank} в породе`,
         sublabel: 'Курсинг 2026',
         icon: <Award className="h-3.5 w-3.5 text-camel-700 shrink-0" />,
-        color: 'bg-cream-100 text-charcoal-800 border border-old-money-200/90',
+        color: 'text-charcoal-800',
         tooltip: `Входит в топ-${coursing.yearBreedRank} собак породы в сезоне`,
       })
     }
@@ -163,8 +163,8 @@ export function DogProfileHeader({
         id: 'racing-breed-podium',
         label: `Топ-${racing.yearBreedRank} в бегах`,
         sublabel: 'Рейсинг 2026',
-        icon: <Zap className="h-3.5 w-3.5 text-forest-600 shrink-0" />,
-        color: 'bg-forest-50 text-forest-900 border border-forest-300 shadow-2xs',
+        icon: <Zap className="h-3.5 w-3.5 text-camel-700 shrink-0" />,
+        color: 'text-charcoal-900',
         tooltip: `${racing.yearBreedRank} место в рейтинге по максимальной скорости в бегах`,
       })
     } else if (racing?.yearBreedRank && racing.yearBreedRank <= 5) {
@@ -172,21 +172,22 @@ export function DogProfileHeader({
         id: 'racing-breed-top5',
         label: `Топ-${racing.yearBreedRank} в бегах`,
         sublabel: 'Рейсинг 2026',
-        icon: <Zap className="h-3.5 w-3.5 text-forest-700 shrink-0" />,
-        color: 'bg-forest-50/70 text-forest-800 border border-forest-200',
+        icon: <Zap className="h-3.5 w-3.5 text-camel-700 shrink-0" />,
+        color: 'text-charcoal-800',
         tooltip: `Входит в топ-${racing.yearBreedRank} собак породы по скорости в бегах`,
       })
     }
 
     // 3. Выставки (если топ в породе)
-    if (shows?.yearBreedRank && shows.yearBreedRank <= 5) {
+    const showRank = shows?.yearBreedRank || shows?.breedRank
+    if (showRank && showRank <= 5) {
       items.push({
         id: 'shows-breed-podium',
-        label: `Топ-${shows.yearBreedRank} выставок`,
+        label: `Топ-${showRank} выставок`,
         sublabel: 'РКФ',
         icon: <Sparkles className="h-3.5 w-3.5 text-camel-700 shrink-0" />,
-        color: 'bg-cream-100 text-charcoal-800 border border-old-money-200',
-        tooltip: `${shows.yearBreedRank} место в рейтинге выставок РКФ в породе`,
+        color: 'text-charcoal-800',
+        tooltip: `${showRank} место в рейтинге выставок РКФ в породе`,
       })
     }
 

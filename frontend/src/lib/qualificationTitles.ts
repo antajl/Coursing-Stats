@@ -124,7 +124,17 @@ export function resolveCompetitionTitles(opts: {
   indexed?: DogTitle[] | null
   competitions?: Array<{ qualification?: string | null; status?: string | null }> | null
 }): DogTitle[] {
-  const indexed = Array.isArray(opts.indexed) ? opts.indexed : []
+  const rawIndexed = Array.isArray(opts.indexed) ? opts.indexed : []
+  const indexed: DogTitle[] = rawIndexed
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    .map((item: any) => {
+      if (typeof item === 'string') return { title: item, count: 1 }
+      if (item && typeof item === 'object' && item.title) {
+        return { title: String(item.title), count: Number(item.count) || 1 }
+      }
+      return null
+    })
+    .filter((t): t is DogTitle => Boolean(t && t.title.trim()))
   const fromHistory = aggregateQualificationTitles(
     (opts.competitions ?? [])
       .filter(

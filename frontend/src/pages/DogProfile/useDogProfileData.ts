@@ -12,7 +12,6 @@ import {
 import { resolveShowDogDetail } from '../../lib/staticData'
 import {
   buildDogProfileTitleGroups,
-  maxMergeDogTitles,
 } from '../../lib/qualificationTitles'
 import { toPng } from 'html-to-image'
 import { useYandexGoal } from '../../components/YandexMetrica'
@@ -137,16 +136,13 @@ export function useDogProfileData() {
 
   // Объединение выставочных и спортивных титулов
   const titleGroups = useMemo(() => {
-    const rawDogTitles = dog ? (dog.titles || []).map((t: any) => t.title || t) : []
-    const dogTitlesGroup = buildDogProfileTitleGroups(rawDogTitles)
-    const showTitlesGroup = showDog?.titles
-      ? buildDogProfileTitleGroups(showDog.titles)
-      : { show: [], competition: [] }
-    return {
-      show: maxMergeDogTitles(dogTitlesGroup.show, showTitlesGroup.show),
-      competition: maxMergeDogTitles(dogTitlesGroup.competition, showTitlesGroup.competition),
-    }
-  }, [dog, showDog])
+    return buildDogProfileTitleGroups({
+      competitionIndexed: dog?.titles,
+      competitions: events,
+      showTitles: showDog?.titles,
+      showHistory: showDog?.history,
+    })
+  }, [dog, showDog, events])
 
   const titles = useMemo(
     () => [...titleGroups.show, ...titleGroups.competition].map((t) => ({ title: t })),
