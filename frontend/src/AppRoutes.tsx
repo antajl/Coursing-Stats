@@ -1,4 +1,5 @@
 import { lazy, Suspense, useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { Routes, Route, Navigate, useLocation, useParams } from 'react-router-dom';
 import PageLoader from './components/PageLoader';
 import { isLocalDev } from './lib/env';
@@ -105,7 +106,7 @@ function ErrorPreviewPage() {
   const sampleError = new Error('TypeError: Failed to fetch competition protocol data (/data/v1/competitions/2026/04-05.json)');
   sampleError.stack = `TypeError: Failed to fetch competition protocol data\n    at loadCompetitionData (http://localhost:5173/src/pages/Events/EventResults/index.tsx:42:15)\n    at EventResults (http://localhost:5173/src/pages/Events/EventResults/index.tsx:78:9)\n    at renderWithHooks (http://localhost:5173/node_modules/react-dom/cjs/react-dom.development.js:15486:18)`;
 
-  return <ErrorFallback error={sampleError} />;
+  return createPortal(<ErrorFallback error={sampleError} />, document.body);
 }
 
 export default function AppRoutes() {

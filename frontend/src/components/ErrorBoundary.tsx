@@ -109,7 +109,7 @@ export function ErrorFallback({ error, onReset }: ErrorFallbackProps) {
   );
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 overflow-y-auto cs-page-shell">
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 overflow-y-auto cs-page-shell min-h-dvh">
       {/* Мягкое радиальное фоновое свечение в стиле Old Money */}
       <div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[480px] h-[480px] rounded-full pointer-events-none opacity-40 blur-3xl"
