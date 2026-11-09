@@ -24,6 +24,7 @@ verified: 2026-11-08
 | Raw all-time `dog-ranking.json` (>220 MB) | Исключён из CDN (`publish-exclude.js`) во избежание превышения лимитов |
 | Lookup | `show-dog-lookup/{0-f}.json` шарды (~обход 25 MB) |
 | Show dog card | `shows/indexes/dog-details/{000-255}.json` (уже паки) |
+| History date sort | Даты `DD.MM.YYYY` обязаны сортироваться через ISO `toShowDateIso` / `sortShowHistory` (`show-dates.ts`); прямой `localeCompare` запрещен во избежание сортировки по дню месяца |
 | Show judge detail | `shows/indexes/judge-details/pack-*.json` (`byKey`) |
 | Identity | show dog id **≠** competition `dog_id` |
 | Calendar prod | `ui-flags.publicCalendars.shows: true` |
