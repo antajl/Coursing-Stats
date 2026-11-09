@@ -164,7 +164,7 @@ export default function DogTooltip({ dogId, pointer, onClose }) {
                 </h3>
                 {dogData.sex && (
                   <span className="text-sm text-gray-400 flex-shrink-0">
-                    {dogData.sex === 'M' ? '♂' : '♀'}
+                    {dogData.sex === 'M' || dogData.sex === 'Кобель' ? '♂' : '♀'}
                   </span>
                 )}
               </div>
