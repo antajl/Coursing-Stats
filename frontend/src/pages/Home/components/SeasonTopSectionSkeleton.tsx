@@ -10,11 +10,14 @@ export function SeasonTopSectionSkeleton({ compact = false }: SeasonTopSectionSk
         className="home-v2-block home-v2-season-top--compact"
         aria-label="Загрузка рейтингов сезона"
       >
-        {/* Top tab mimic: 3 floating pills */}
-        <div className="mb-2.5 flex items-center gap-2 h-[34px]">
-          <div className="h-[34px] flex-1 rounded-full bg-white/70 border border-white/80 animate-pulse" />
-          <div className="h-[34px] flex-1 rounded-full bg-white/50 border border-white/60 animate-pulse" />
-          <div className="h-[34px] flex-1 rounded-full bg-white/50 border border-white/60 animate-pulse" />
+        {/* Top tab mimic: single cockpit tab matching ConceptSymmetricFinal */}
+        <div className="home-v2-stats-cockpit-tab mb-2.5 flex items-center gap-2.5 text-xs animate-pulse">
+          <div className="h-3.5 bg-old-money-200/50 rounded w-28 shrink-0" />
+          <div className="w-px h-3.5 bg-old-money-200/40 shrink-0" />
+          <div className="h-6 bg-old-money-200/40 rounded-full w-24 shrink-0" />
+          <div className="h-6 bg-old-money-200/20 rounded-full w-20 shrink-0" />
+          <div className="h-6 bg-old-money-200/20 rounded-full w-28 shrink-0" />
+          <div className="ml-auto h-3 bg-old-money-200/30 rounded w-32 shrink-0 hidden sm:block" />
         </div>
 
         {/* 2-column podium mimic */}
@@ -84,7 +87,11 @@ export function SeasonTopSectionSkeleton({ compact = false }: SeasonTopSectionSk
   // Non-compact (mobile) skeleton
   return (
     <section id="season-top" className="home-v2-block mb-4" aria-label="Загрузка рейтингов сезона">
-      <div className="h-9 mb-3 bg-old-money-200/40 rounded-xl animate-pulse w-full max-w-sm" />
+      <div className="home-v2-stats-cockpit-tab mb-2.5 flex items-center gap-2 text-xs animate-pulse">
+        <div className="h-3.5 bg-old-money-200/50 rounded w-20" />
+        <div className="w-px h-3.5 bg-old-money-200/40 shrink-0" />
+        <div className="h-6 bg-old-money-200/40 rounded-full w-40" />
+      </div>
       <div className="home-v2-col">
         <div className="home-v2-col-head home-v2-col-head--tabs flex items-center justify-between">
           <div className="h-3.5 bg-old-money-200/50 rounded w-20 animate-pulse" />
