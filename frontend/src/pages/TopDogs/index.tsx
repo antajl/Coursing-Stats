@@ -252,6 +252,17 @@ export default function TopDogs() {
     [rankedSpeed, filterParams]
   )
 
+  const isAllTimeWithoutSearch = filterYear === '' && !searchQuery.trim()
+
+  const displayedCombined = useMemo(
+    () => (isAllTimeWithoutSearch ? filteredCombined.slice(0, 100) : filteredCombined),
+    [isAllTimeWithoutSearch, filteredCombined]
+  )
+  const displayedSpeed = useMemo(
+    () => (isAllTimeWithoutSearch ? filteredSpeed.slice(0, 100) : filteredSpeed),
+    [isAllTimeWithoutSearch, filteredSpeed]
+  )
+
   const handleResetFilters = useCallback(() => {
     setFilterYear(activeSeason)
     setFilterBreed('')
