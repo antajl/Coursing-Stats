@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, memo } from 'react'
 import { Link } from 'react-router-dom'
 import { Crown, ArrowRight, Award } from 'lucide-react'
 import {
@@ -104,9 +104,12 @@ export function ShowsColumn({ dog, rank, breed }: ShowsColumnProps) {
     return sortShowHistory([...raw])
   }, [dog.history])
   const visible = showAll ? history : history.slice(0, HISTORY_DEFAULT)
-  const bestGrade = resolveBestGradeLabel(dog)
+  const bestGrade = useMemo(() => resolveBestGradeLabel(dog), [dog.best_grade, history])
   const totalShows = history.length
-  const bestExhibitionId = resolveBestAwardExhibitionId(history, bestKey, bestBadge)
+  const bestExhibitionId = useMemo(
+    () => resolveBestAwardExhibitionId(history, bestKey, bestBadge),
+    [history, bestKey, bestBadge],
+  )
 
   const dogBreed = breed || dog.breed || ''
   const rankingUrl = `/shows?tab=ranking${dogBreed ? `&breed=${encodeURIComponent(dogBreed)}` : ''}`

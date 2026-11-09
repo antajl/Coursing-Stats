@@ -23,6 +23,26 @@ interface UseDogProfileRanksOptions {
   profileId: string
 }
 
+function areRanksEqual(a: ProfileHeaderRank[], b: ProfileHeaderRank[]): boolean {
+  if (a.length !== b.length) return false
+  for (let i = 0; i < a.length; i++) {
+    const ra = a[i]
+    const rb = b[i]
+    if (
+      ra.key !== rb.key ||
+      ra.label !== rb.label ||
+      ra.rank !== rb.rank ||
+      ra.yearRank !== rb.yearRank ||
+      ra.breedRank !== rb.breedRank ||
+      ra.yearBreedRank !== rb.yearBreedRank ||
+      ra.href !== rb.href
+    ) {
+      return false
+    }
+  }
+  return true
+}
+
 export function useDogProfileRanks({
   dog,
   showDog,
@@ -188,7 +208,7 @@ export function useDogProfileRanks({
           href: `/shows?tab=ranking&year=${has2026Show ? '2026' : ''}`,
         })
       }
-      setAsyncRanks(newRanks)
+      setAsyncRanks((prev) => (areRanksEqual(prev, newRanks) ? prev : newRanks))
     }
 
     if (!loading && !showsLoading) {
@@ -198,7 +218,20 @@ export function useDogProfileRanks({
     return () => {
       cancelled = true
     }
-  }, [dog, showDog, events, loading, showsLoading, profileId])
+  }, [
+    dog?.id,
+    dog?.breed,
+    showDog?.id,
+    showDog?.breed,
+    showDog?.rank,
+    (showDog as any)?.breed_rank,
+    showDog?.history?.length,
+    events.length,
+    events.length > 0 ? events[events.length - 1]?.date : '',
+    loading,
+    showsLoading,
+    profileId,
+  ])
 
   return headerRanks
 }

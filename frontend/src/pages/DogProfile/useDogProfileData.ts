@@ -28,6 +28,8 @@ import { useDogProfileRanks } from './useDogProfileRanks'
 import { useDogProfileSeo } from './useDogProfileSeo'
 import { isShowOnlyProfileId } from '../../lib/showDogProfilePath'
 
+const EMPTY_ARRAY: never[] = []
+
 export function useDogProfileData() {
   const params = useParams<{ id?: string; dogId?: string; breed?: string }>()
   const competitionId = params.id
@@ -63,34 +65,36 @@ export function useDogProfileData() {
   const { data: coursingRecordsData } = useDogCoursingRecords(sportDogId)
 
   const dog = dogDataResult?.success ? dogDataResult.data : null
-  const events = eventsData?.success ? (Array.isArray(eventsData.data) ? eventsData.data : []) : []
+  const events = eventsData?.success
+    ? (Array.isArray(eventsData.data) ? eventsData.data : EMPTY_ARRAY)
+    : EMPTY_ARRAY
   const eventResultsUrls = useMemo(() => buildEventResultsUrlMap(events), [events])
 
   const speedRecords = speedRecordsData?.success
     ? Array.isArray(speedRecordsData.data)
       ? speedRecordsData.data
-      : []
-    : []
+      : EMPTY_ARRAY
+    : EMPTY_ARRAY
   const coursingRecords = coursingRecordsData?.success
     ? Array.isArray(coursingRecordsData.data)
       ? coursingRecordsData.data
-      : []
-    : []
+      : EMPTY_ARRAY
+    : EMPTY_ARRAY
 
   const headerBreed = dog?.breed || showDog?.breed || showRouteBreed || ''
   const { data: breedRecordsData } = useSpeedRecordsByBreed(dog?.breed || showDog?.breed || '')
   const breedRecords = breedRecordsData?.success
     ? Array.isArray(breedRecordsData.data)
       ? breedRecordsData.data
-      : []
-    : []
+      : EMPTY_ARRAY
+    : EMPTY_ARRAY
 
   const { data: breedCoursingRecordsData } = useCoursingRecordsByBreed(dog?.breed || showDog?.breed || '')
   const breedCoursingRecords = breedCoursingRecordsData?.success
     ? Array.isArray(breedCoursingRecordsData.data)
       ? breedCoursingRecordsData.data
-      : []
-    : []
+      : EMPTY_ARRAY
+    : EMPTY_ARRAY
 
   useEffect(() => {
     if (dog || showDog) reachGoal('dog_profile_view')
@@ -269,23 +273,27 @@ export function useDogProfileData() {
     }
   }
 
-  const headerDog = dog
-    ? {
+  const headerDog = useMemo(() => {
+    if (dog) {
+      return {
         ...dog,
         pedigree_url: (dog as any).pedigree_url || showDog?.pedigree_url || null,
         photo_url: (dog as any).photo_url || (showDog as any)?.photo_url || null,
       }
-    : (showDog
-        ? {
-            id: showDog.competition_dog_id ?? showDog.id,
-            name_lat: showDog.name_lat,
-            name_ru: showDog.name_ru,
-            breed: showDog.breed,
-            sex: showDog.sex,
-            pedigree_url: showDog.pedigree_url || null,
-            photo_url: (showDog as any)?.photo_url || null,
-          }
-        : null)
+    }
+    if (showDog) {
+      return {
+        id: showDog.competition_dog_id ?? showDog.id,
+        name_lat: showDog.name_lat,
+        name_ru: showDog.name_ru,
+        breed: showDog.breed,
+        sex: showDog.sex,
+        pedigree_url: showDog.pedigree_url || null,
+        photo_url: (showDog as any)?.photo_url || null,
+      }
+    }
+    return null
+  }, [dog, showDog])
 
   const hasCourseMedals =
     (coursing.gold || 0) > 0 || (coursing.silver || 0) > 0 || (coursing.bronze || 0) > 0
@@ -297,7 +305,10 @@ export function useDogProfileData() {
     ? computeCoursingDoninoStats(coursingRecords, breedCoursingRecords)
     : null
 
-  const showRuName = headerDog?.name_ru && headerDog.name_ru !== headerDog.name_lat
+  const showRuName = useMemo(
+    () => Boolean(headerDog?.name_ru && headerDog.name_ru !== headerDog.name_lat),
+    [headerDog],
+  )
 
   const bestScoreEventId = coursing.best_score_event_id || null
   const bestJudgeScoreEventId = coursing.best_judge_score_event_id || null
