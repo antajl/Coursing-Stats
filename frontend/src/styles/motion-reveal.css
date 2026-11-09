@@ -355,3 +355,40 @@
   animation: cs-tab-progress 1.1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
   box-shadow: 0 0 8px rgba(175, 128, 60, 0.5);
 }
+
+/* Бесконечная бегущая строка тем справочника в 1 ряд (Old Money Guide Ticker) */
+@keyframes cs-guide-ticker {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.cs-guide-ticker-container {
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent, black 16px, black calc(100% - 16px), transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 16px, black calc(100% - 16px), transparent);
+}
+
+.cs-guide-ticker-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: cs-guide-ticker 42s linear infinite;
+}
+
+.cs-guide-ticker-container:hover .cs-guide-ticker-track,
+.cs-guide-ticker-track:focus-within {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cs-guide-ticker-track {
+    animation: none;
+    width: 100%;
+    overflow-x: auto;
+  }
+}

@@ -34,9 +34,11 @@ import {
   SPORT_TIER_CUMULATIVE,
 } from '../constants'
 import { GUIDE_SPORT_TITLES_FAQS } from '../guideFaqs'
+import { DISQUALIFICATION_RULES } from '../protocolConstants'
 import { executeSmartGuideSearch } from '../smartSearch'
 import {
   AbbreviationsDropdown,
+  GuideTopicsTicker,
   OfficialSourcesList,
   RefTag,
   SectionCard,
@@ -88,6 +90,7 @@ const COL_EXPLANATIONS: Record<ProtocolColKey, { title: string; desc: string }> 
 export default function TitlesTab() {
   const [searchQuery, setSearchQuery] = useState('')
   const [showScrollTop, setShowScrollTop] = useState(false)
+  const [activeCol, setActiveCol] = useState<ProtocolColKey>('sum')
 
   // Отслеживание скролла для плавающей кнопки «Наверх»
   useEffect(() => {
@@ -797,20 +800,11 @@ export default function TitlesTab() {
           )}
         </div>
 
-        {/* Быстрые чипы частых вопросов */}
-        <div className="mt-3 flex flex-wrap items-center gap-1.5 text-xs">
-          <span className="text-[11px] text-charcoal-500 font-medium mr-0.5">Частые темы:</span>
-          {POPULAR_QUERIES.map((item) => (
-            <button
-              key={item.label}
-              type="button"
-              onClick={() => setSearchQuery(item.query)}
-              className="rounded-full border border-old-money-200 bg-white px-2.5 py-1 text-[11px] font-medium text-charcoal-700 hover:border-camel-300 hover:bg-camel-50 hover:text-camel-900 transition-all cursor-pointer shadow-2xs"
-            >
-              {item.label}
-            </button>
-          ))}
-        </div>
+        {/* Бесконечно движущаяся строка частых вопросов в 1 ряд */}
+        <GuideTopicsTicker
+          items={POPULAR_QUERIES}
+          onSelect={(query) => setSearchQuery(query)}
+        />
       </div>
 
       {/* ПРЯМОЙ ОТВЕТ НА ВОПРОС (DIRECT ANSWER CARD) */}

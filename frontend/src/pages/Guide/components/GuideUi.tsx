@@ -512,3 +512,60 @@ export function TitleLadderList({ items }: { items: readonly TitleRankItem[] }) 
   )
 }
 
+
+
+/**
+ * Бесконечно движущаяся строка частых вопросов в 1 ряд (Old Money Guide Ticker).
+ * При наведении или фокусе движение автоматически мягко останавливается.
+ */
+export function GuideTopicsTicker({
+  items,
+  onSelect,
+  label = 'Частые темы:',
+}: {
+  items: readonly { label: string; query: string }[]
+  onSelect: (query: string) => void
+  label?: string
+}) {
+  return (
+    <div className="mt-3 flex items-center gap-2 overflow-hidden text-xs">
+      {label && (
+        <span className="shrink-0 text-[11px] font-semibold text-charcoal-500 whitespace-nowrap select-none">
+          {label}
+        </span>
+      )}
+      <div className="cs-guide-ticker-container flex-1 py-0.5 min-w-0">
+        <div className="cs-guide-ticker-track flex items-center">
+          {/* Оригинальный набор кнопок */}
+          <div className="flex items-center gap-1.5 pr-1.5 shrink-0">
+            {items.map((item) => (
+              <button
+                key={item.label}
+                type="button"
+                onClick={() => onSelect(item.query)}
+                className="rounded-full border border-old-money-200 bg-white px-2.5 py-1 text-[11px] font-medium text-charcoal-700 hover:border-camel-300 hover:bg-camel-50 hover:text-camel-900 transition-colors cursor-pointer shadow-2xs whitespace-nowrap shrink-0"
+              >
+                {item.label}
+              </button>
+            ))}
+          </div>
+
+          {/* Бесшовный клон для непрерывного цикла 0% -> -50% */}
+          <div className="flex items-center gap-1.5 pr-1.5 shrink-0" aria-hidden="true">
+            {items.map((item, idx) => (
+              <button
+                key={`${item.label}-clone-${idx}`}
+                type="button"
+                tabIndex={-1}
+                onClick={() => onSelect(item.query)}
+                className="rounded-full border border-old-money-200 bg-white px-2.5 py-1 text-[11px] font-medium text-charcoal-700 hover:border-camel-300 hover:bg-camel-50 hover:text-camel-900 transition-colors cursor-pointer shadow-2xs whitespace-nowrap shrink-0"
+              >
+                {item.label}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}

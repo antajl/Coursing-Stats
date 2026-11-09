@@ -1,35 +1,41 @@
-/**
- * Компонент для отображения состояния ошибки
- * 
- * @param {string} title - Заголовок ошибки
- * @param {string} message - Сообщение об ошибке
- * @param {() => void} onRetry - Функция для повтора действия
- * @param {React.ReactNode} action - Опциональное кастомное действие
- */
-const ICONS = {
-  default: (
-    <svg viewBox="0 0 80 80" className="w-20 h-20" fill="none">
-      <circle cx="40" cy="40" r="30" className="stroke-terracotta-200" strokeWidth="2"/>
-      <path d="M40 25 L40 40 M40 50 L40 55" className="stroke-terracotta-500" strokeWidth="3" strokeLinecap="round"/>
-    </svg>
-  ),
-};
+import { ReactNode } from 'react';
+import { AlertCircle, RotateCcw } from 'lucide-react';
 
-export default function ErrorState({ title = 'Произошла ошибка', message = '', onRetry = null, action = null, icon = 'default' }) {
+interface ErrorStateProps {
+  title?: string;
+  message?: string;
+  onRetry?: (() => void) | null;
+  action?: ReactNode;
+  icon?: 'default';
+}
+
+/**
+ * Компонент для отображения состояния локальной ошибки внутри секций
+ */
+export default function ErrorState({
+  title = 'Произошла ошибка',
+  message = '',
+  onRetry = null,
+  action = null,
+}: ErrorStateProps) {
   return (
-    <div className="flex flex-col items-center justify-center py-16 px-4 text-center">
-      <div className="mb-6 opacity-70">{ICONS[icon] || ICONS.default}</div>
-      <h3 className="text-xl font-bold text-terracotta-700 mb-2">{title}</h3>
+    <div className="flex flex-col items-center justify-center py-12 px-4 text-center">
+      <div className="w-12 h-12 rounded-2xl bg-cream-100 border border-terracotta-200/80 flex items-center justify-center mb-4 shadow-xs">
+        <AlertCircle className="w-6 h-6 text-terracotta-600" />
+      </div>
+      <h3 className="font-serif text-lg font-bold text-char-900 mb-2">{title}</h3>
       {message && (
-        <p className="text-sm text-old-money-700 max-w-sm leading-relaxed mb-6">{message}</p>
+        <p className="text-sm text-char-600 max-w-sm leading-relaxed mb-5">{message}</p>
       )}
-      <div className="flex gap-3 mt-4">
+      <div className="flex items-center gap-3 mt-1 flex-wrap justify-center">
         {onRetry && (
           <button
+            type="button"
             onClick={onRetry}
-            className="rounded-xl border-2 border-camel-300 bg-white px-4 py-2 text-sm font-semibold text-camel-700 transition-all hover:bg-camel-50 hover:border-camel-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-camel-500 focus-visible:ring-offset-2"
+            className="cs-glass-pill inline-flex min-h-[44px] items-center justify-center gap-2 px-5 py-2 rounded-full text-xs font-semibold shadow-xs cursor-pointer active:scale-95 transition-all"
           >
-            Повторить
+            <RotateCcw className="w-3.5 h-3.5 text-camel-700 shrink-0" />
+            <span>Повторить</span>
           </button>
         )}
         {action}
