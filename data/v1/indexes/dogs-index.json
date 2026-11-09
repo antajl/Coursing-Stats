@@ -167,13 +167,13 @@
   {
     "id": 16,
     "dog_key": "алмас-альасвад--салюки",
-    "name_lat": "АЛМАС АЛЬАСВАД",
+    "name_lat": "ALMAS AL`ASWAD",
     "name_ru": "АЛМАС АЛЬАСВАД",
     "breed": "САЛЮКИ",
     "file_by_id": "dogs/by-id/16.json",
     "file_by_key": "dogs/by-key/алмас-альасвад--салюки.json",
     "competition_count": 1,
-    "sex": null
+    "sex": "M"
   },
   {
     "id": 17,
@@ -202,24 +202,24 @@
   {
     "id": 19,
     "dog_key": "алеазис-садик--салюки",
-    "name_lat": "АЛЕАЗИС САДИК",
+    "name_lat": "ALEAZIZ SADIQ",
     "name_ru": "АЛЕАЗИС САДИК",
     "breed": "САЛЮКИ",
     "file_by_id": "dogs/by-id/19.json",
     "file_by_key": "dogs/by-key/алеазис-садик--салюки.json",
     "competition_count": 2,
-    "sex": "F"
+    "sex": "M"
   },
   {
     "id": 20,
     "dog_key": "жизненныи-путь-из-полета-мечты--уиппет",
-    "name_lat": "ЖИЗНЕННЫЙ ПУТЬ ИЗ ПОЛЕТА МЕЧТЫ",
+    "name_lat": "ZHIZNENNIY PUT IZ POLETA MECHTI",
     "name_ru": "ЖИЗНЕННЫЙ ПУТЬ ИЗ ПОЛЕТА МЕЧТЫ",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/20.json",
     "file_by_key": "dogs/by-key/жизненныи-путь-из-полета-мечты--уиппет.json",
     "competition_count": 2,
-    "sex": "male"
+    "sex": "M"
   },
   {
     "id": 22,
@@ -235,7 +235,7 @@
   {
     "id": 23,
     "dog_key": "хепи-хепри-пегасус--уиппет",
-    "name_lat": "ХЕПИ ХЕПРИ ПЕГАСУС",
+    "name_lat": "HEPI HEPRI PEGASUS",
     "name_ru": "ХЕПИ ХЕПРИ ПЕГАСУС",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/23.json",
@@ -246,7 +246,7 @@
   {
     "id": 24,
     "dog_key": "атреио-сильвер-свифт--уиппет",
-    "name_lat": "АТРЕЙО СИЛЬВЕР СВИФТ",
+    "name_lat": "ATREYO SILVER SWIFT",
     "name_ru": "АТРЕЙО СИЛЬВЕР СВИФТ",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/24.json",
@@ -481,7 +481,7 @@
   {
     "id": 109,
     "dog_key": "лакшери-уипп-орхидея--уиппет",
-    "name_lat": "LUXURY WHIPP ORKHIDEYA",
+    "name_lat": "LUXURY WHIPP ORCHIDEYA",
     "name_ru": "ЛАКШЕРИ УИПП ОРХИДЕЯ",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/109.json",
@@ -515,7 +515,7 @@
   {
     "id": 122,
     "dog_key": "стангерс-ланд-версаль-шарман--уиппет",
-    "name_lat": "STANGERS LAND VERSAILLES CHARMAN",
+    "name_lat": "STANGERS LAND VERSAILLES CHARMANT",
     "name_ru": "СТАНГЕРС ЛАНД ВЕРСАЛЬ ШАРМАН",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/122.json",
@@ -604,7 +604,7 @@
   {
     "id": 135,
     "dog_key": "борзые-сенавиан-жак--русская-псовая-борзая",
-    "name_lat": "БОРЗЫЕ СЕНАВИАН ЖАК",
+    "name_lat": "BORZIE-SENAVIAN ZHAK",
     "name_ru": "БОРЗЫЕ СЕНАВИАН ЖАК",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/135.json",
@@ -793,7 +793,7 @@
   {
     "id": 217,
     "dog_key": "шавати-каилан--салюки",
-    "name_lat": "ШАВАТИ КАЙЛАН",
+    "name_lat": "SHAWATI KAYLAN",
     "name_ru": "ШАВАТИ КАЙЛАН",
     "breed": "САЛЮКИ",
     "file_by_id": "dogs/by-id/217.json",
@@ -1024,7 +1024,7 @@
   {
     "id": 292,
     "dog_key": "кавалльерик-уникум--русская-псовая-борзая",
-    "name_lat": "CAVALLIERIK UNIKUM",
+    "name_lat": "CAVALLIERIK UNIQUM",
     "name_ru": "КАВАЛЛЬЕРИК УНИКУМ",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/292.json",
@@ -1068,7 +1068,7 @@
   {
     "id": 298,
     "dog_key": "джини-ламбор--уиппет",
-    "name_lat": "ДЖИНИ ЛАМБОР",
+    "name_lat": "DJINI LAMBOR",
     "name_ru": "ДЖИНИ ЛАМБОР",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/298.json",
@@ -1189,7 +1189,7 @@
   {
     "id": 313,
     "dog_key": "симпле-обсессион-фостбустер--русская-псовая-борзая",
-    "name_lat": "СИМПЛЕ ОБСЕССИОН ФОСТБУСТЕР",
+    "name_lat": "SIMPLE OBSESSION GHOSTBUSTER",
     "name_ru": "СИМПЛЕ ОБСЕССИОН ФОСТБУСТЕР",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/313.json",
@@ -1200,7 +1200,7 @@
   {
     "id": 314,
     "dog_key": "лунная-радуга-фартовыи--русская-псовая-борзая",
-    "name_lat": "ЛУННАЯ РАДУГА ФАРТОВЫЙ",
+    "name_lat": "LUNNAYA RADUGA FARTOVYI",
     "name_ru": "ЛУННАЯ РАДУГА ФАРТОВЫЙ",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/314.json",
@@ -1222,7 +1222,7 @@
   {
     "id": 316,
     "dog_key": "азартная-охота-граф-тверскои--русская-псовая-борзая",
-    "name_lat": "АЗАРТНАЯ ОХОТА ГРАФ ТВЕРСКОЙ",
+    "name_lat": "AZARTNAYA OKHOTA GRAF TVERSKOJ",
     "name_ru": "АЗАРТНАЯ ОХОТА ГРАФ ТВЕРСКОЙ",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/316.json",
@@ -1233,7 +1233,7 @@
   {
     "id": 317,
     "dog_key": "магнат-из-дома-дюваль--русская-псовая-борзая",
-    "name_lat": "МАГНАТ ИЗ ДОМА ДЮВАЛЬ",
+    "name_lat": "MAGNAT IZ DOMA DUVAL",
     "name_ru": "МАГНАТ ИЗ ДОМА ДЮВАЛЬ",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/317.json",
@@ -1244,7 +1244,7 @@
   {
     "id": 319,
     "dog_key": "бьютифул-беллур--уиппет",
-    "name_lat": "БЬЮТИФУЛ БЕЛЛУР",
+    "name_lat": "BEAUTIFUL BELLUR",
     "name_ru": "БЬЮТИФУЛ БЕЛЛУР",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/319.json",
@@ -1266,7 +1266,7 @@
   {
     "id": 323,
     "dog_key": "интригас-ренесме-виннер--уиппет",
-    "name_lat": "ИНТРИГАС РЕНЕСМЕ ВИННЕР",
+    "name_lat": "INTRIGA'S RENESMEE WINNER",
     "name_ru": "ИНТРИГАС РЕНЕСМЕ ВИННЕР",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/323.json",
@@ -1277,7 +1277,7 @@
   {
     "id": 325,
     "dog_key": "интригас-валери--уиппет",
-    "name_lat": "ИНТРИГАС ВАЛЕРИ",
+    "name_lat": "INTRIGA'S VALERY",
     "name_ru": "ИНТРИГАС ВАЛЕРИ",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/325.json",
@@ -1387,13 +1387,13 @@
   {
     "id": 373,
     "dog_key": "барская-прихоть-хабиба-любимая--русская-псовая-борзая",
-    "name_lat": "БАРСКАЯ ПРИХОТЬ ХАБИБА ЛЮБИМАЯ",
+    "name_lat": "BARSKAYA PRIHOT HABIBA LYUBIMAYA",
     "name_ru": "БАРСКАЯ ПРИХОТЬ ХАБИБА ЛЮБИМАЯ",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/373.json",
     "file_by_key": "dogs/by-key/барская-прихоть-хабиба-любимая--русская-псовая-борзая.json",
     "competition_count": 2,
-    "sex": null
+    "sex": "F"
   },
   {
     "id": 374,
@@ -1631,7 +1631,7 @@
   {
     "id": 410,
     "dog_key": "borzie-senavian-ivolga--русская-псовая-борзая",
-    "name_lat": "BORZIE SENAVIAN IVOLGA",
+    "name_lat": "BORZIE-SENAVIAN TAVOLGA",
     "name_ru": "BORZIE SENAVIAN IVOLGA",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/410.json",
@@ -1753,18 +1753,18 @@
   {
     "id": 432,
     "dog_key": "lunnaja-raduga-gagarin--русская-псовая-борзая",
-    "name_lat": "LUNNAJA RADUGA GAGARIN",
+    "name_lat": "LUNNAYA RADUGA GAGARIN",
     "name_ru": "LUNNAJA RADUGA GAGARIN",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/432.json",
     "file_by_key": "dogs/by-key/lunnaja-raduga-gagarin--русская-псовая-борзая.json",
     "competition_count": 1,
-    "sex": null
+    "sex": "M"
   },
   {
     "id": 433,
     "dog_key": "zvezdnaya-raduga-charodey--русская-псовая-борзая",
-    "name_lat": "ZVEZDNAYA RADUGA CHARODEY",
+    "name_lat": "ZVEZDNAYA RADUGA CHARODEI",
     "name_ru": "ZVEZDNAYA RADUGA CHARODEY",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/433.json",
@@ -1797,7 +1797,7 @@
   {
     "id": 436,
     "dog_key": "zhelannyj-iz-severnoi-ohoty--русская-псовая-борзая",
-    "name_lat": "ZHELANNYJ IZ SEVERNOI OHOTY",
+    "name_lat": "ZHELANNIY IZ SEVERNOI OHOTY",
     "name_ru": "ZHELANNYJ IZ SEVERNOI OHOTY",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/436.json",
@@ -1819,7 +1819,7 @@
   {
     "id": 439,
     "dog_key": "noble-tradition-zarya--русская-псовая-борзая",
-    "name_lat": "NOBLE TRADITION ZARYA",
+    "name_lat": "NOBLE TRADITION YARA",
     "name_ru": "NOBLE TRADITION ZARYA",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/439.json",
@@ -1841,7 +1841,7 @@
   {
     "id": 441,
     "dog_key": "obereg-rusi-zhiznennaja-sila--русская-псовая-борзая",
-    "name_lat": "OBEREG RUSI ZHIZNENNAJA SILA",
+    "name_lat": "OBEREG RUSI ZHIZNENNAYA SILA",
     "name_ru": "OBEREG RUSI ZHIZNENNAJA SILA",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/441.json",
@@ -1918,7 +1918,7 @@
   {
     "id": 450,
     "dog_key": "борзые-сенавиан-гранат--русская-псовая-борзая",
-    "name_lat": "БОРЗЫЕ СЕНАВИАН ГРАНАТ",
+    "name_lat": "BORZIE-SENAVIAN GRANAT",
     "name_ru": "БОРЗЫЕ СЕНАВИАН ГРАНАТ",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/450.json",
@@ -2144,7 +2144,7 @@
   {
     "id": 480,
     "dog_key": "gran-vencedor-blonde--русская-псовая-борзая",
-    "name_lat": "GRAN VENCEDOR BLONDE",
+    "name_lat": "GRAN VENCEDOR BLONDI",
     "name_ru": "GRAN VENCEDOR BLONDE",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/480.json",
@@ -2166,7 +2166,7 @@
   {
     "id": 485,
     "dog_key": "сурскии-сувенир-европеец--уиппет",
-    "name_lat": "СУРСКИЙ СУВЕНИР ЕВРОПЕЕЦ",
+    "name_lat": "SURSKY SOUVENIR EVROPEETS",
     "name_ru": "СУРСКИЙ СУВЕНИР ЕВРОПЕЕЦ",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/485.json",
@@ -2507,7 +2507,7 @@
   {
     "id": 541,
     "dog_key": "априори-стар-сириус-сунни-бои--малая-итальянская-борзая",
-    "name_lat": "APRIORI STAR SIRIUS SUNNI BOY",
+    "name_lat": "APRIORI STAR SIRIUS SUNNY BOY",
     "name_ru": "АПРИОРИ СТАР СИРИУС СУННИ БОЙ",
     "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/541.json",
@@ -2563,7 +2563,7 @@
   {
     "id": 553,
     "dog_key": "догони-ветер-неземнои-соул--уиппет",
-    "name_lat": "DOGONI VETER NEZEMNOY SOUL",
+    "name_lat": "DOGONI VETER NEZEMNOJ SOUL",
     "name_ru": "ДОГОНИ ВЕТЕР НЕЗЕМНОЙ СОУЛ",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/553.json",
@@ -2574,7 +2574,7 @@
   {
     "id": 554,
     "dog_key": "феел-маи-хеарт-дримфаер-уна--уиппет",
-    "name_lat": "FEEL MY HEART DREMFYRE UNA",
+    "name_lat": "FEEL MY HEART DREAMFYRE UNA",
     "name_ru": "ФЕЕЛ МАЙ ХЕАРТ ДРИМФАЕР УНА",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/554.json",
@@ -2787,7 +2787,7 @@
   {
     "id": 581,
     "dog_key": "инфинити-лав--уиппет",
-    "name_lat": "INFINITI LOVE",
+    "name_lat": "INFINITY LOVE",
     "name_ru": "ИНФИНИТИ ЛАВ",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/581.json",
@@ -2798,7 +2798,7 @@
   {
     "id": 582,
     "dog_key": "яхара-шустрая-колибри--уиппет",
-    "name_lat": "IAKHARA SHUSTRAIA KOLIBRI",
+    "name_lat": "YAHARA SHUSTRAYA KOLIBRI",
     "name_ru": "ЯХАРА ШУСТРАЯ КОЛИБРИ",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/582.json",
@@ -2920,24 +2920,24 @@
   {
     "id": 628,
     "dog_key": "лунная-радуга-жакан-верныи--русская-псовая-борзая",
-    "name_lat": "ЛУННАЯ РАДУГА ЖАКАН ВЕРНЫЙ",
+    "name_lat": "LUNNAYA RADUGA ZHAKAN VERNIY",
     "name_ru": "ЛУННАЯ РАДУГА ЖАКАН ВЕРНЫЙ",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/628.json",
     "file_by_key": "dogs/by-key/лунная-радуга-жакан-верныи--русская-псовая-борзая.json",
     "competition_count": 1,
-    "sex": null
+    "sex": "M"
   },
   {
     "id": 629,
     "dog_key": "борзые-сенавиан-ратибор--русская-псовая-борзая",
-    "name_lat": "БОРЗЫЕ СЕНАВИАН РАТИБОР",
+    "name_lat": "BORZIE-SENAVIAN RATIBOR",
     "name_ru": "БОРЗЫЕ СЕНАВИАН РАТИБОР",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/629.json",
     "file_by_key": "dogs/by-key/борзые-сенавиан-ратибор--русская-псовая-борзая.json",
     "competition_count": 1,
-    "sex": null
+    "sex": "M"
   },
   {
     "id": 631,
@@ -2975,7 +2975,7 @@
   {
     "id": 635,
     "dog_key": "lunnaja-raduga-czarstvennaya-osoba--русская-псовая-борзая",
-    "name_lat": "LUNNAJA RADUGA CZARSTVENNAYA OSOBA",
+    "name_lat": "LUNNAYA RADUGA CZARSTVENNAYA OSOBA",
     "name_ru": "LUNNAJA RADUGA CZARSTVENNAYA OSOBA",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/635.json",
@@ -2986,24 +2986,24 @@
   {
     "id": 636,
     "dog_key": "лунная-радуга-заговоренная-на-удачу--русская-псовая-борзая",
-    "name_lat": "ЛУННАЯ РАДУГА ЗАГОВОРЕННАЯ НА УДАЧУ",
+    "name_lat": "LUNNAJA RADUGA ZAGOVORENNAYA NA UDACHU",
     "name_ru": "ЛУННАЯ РАДУГА ЗАГОВОРЕННАЯ НА УДАЧУ",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/636.json",
     "file_by_key": "dogs/by-key/лунная-радуга-заговоренная-на-удачу--русская-псовая-борзая.json",
     "competition_count": 1,
-    "sex": null
+    "sex": "F"
   },
   {
     "id": 637,
     "dog_key": "лунная-радуга-горчица--русская-псовая-борзая",
-    "name_lat": "LUNNAJA RADUGA GORCHITZA",
+    "name_lat": "LUNNAYA RADUGA GORCHITZA",
     "name_ru": "ЛУННАЯ РАДУГА ГОРЧИЦА",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/637.json",
     "file_by_key": "dogs/by-key/лунная-радуга-горчица--русская-псовая-борзая.json",
     "competition_count": 1,
-    "sex": null
+    "sex": "F"
   },
   {
     "id": 643,
@@ -3141,13 +3141,13 @@
   {
     "id": 664,
     "dog_key": "друг-серебрянныи-темная-ночь--русская-псовая-борзая",
-    "name_lat": "ДРУГ СЕРЕБРЯННЫЙ ТЕМНАЯ НОЧЬ",
+    "name_lat": "DRUG SEREBRYANYIY TEMNAYA NOCH",
     "name_ru": "ДРУГ СЕРЕБРЯННЫЙ ТЕМНАЯ НОЧЬ",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/664.json",
     "file_by_key": "dogs/by-key/друг-серебрянныи-темная-ночь--русская-псовая-борзая.json",
     "competition_count": 1,
-    "sex": null
+    "sex": "F"
   },
   {
     "id": 665,
@@ -4198,7 +4198,7 @@
   {
     "id": 793,
     "dog_key": "плувиум-мерсегера-из-дома-прониных--уиппет",
-    "name_lat": "ПЛУВИУМ МЕРСЕГЕРА ИЗ ДОМА ПРОНИНЫХ",
+    "name_lat": "PLUVIUM MERSEGUERA IZ DOMA PRONINYKH",
     "name_ru": "ПЛУВИУМ МЕРСЕГЕРА ИЗ ДОМА ПРОНИНЫХ",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/793.json",
@@ -4264,7 +4264,7 @@
   {
     "id": 799,
     "dog_key": "сервилия-фом-грюнен-штадт--бельгииская-овчарка-мали",
-    "name_lat": "СЕРВИЛИЯ ФОМ ГРЮНЕН ШТАДТ",
+    "name_lat": "SERVILIYA FOM GRUNEN STADT",
     "name_ru": "СЕРВИЛИЯ ФОМ ГРЮНЕН ШТАДТ",
     "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
     "file_by_id": "dogs/by-id/799.json",
@@ -4572,13 +4572,13 @@
   {
     "id": 845,
     "dog_key": "русски-парк-туман-над-водои--уиппет",
-    "name_lat": "РУССКИ ПАРК ТУМАН НАД ВОДОЙ",
+    "name_lat": "RUSSKI PARK TUMAN NAD VODOJ",
     "name_ru": "РУССКИ ПАРК ТУМАН НАД ВОДОЙ",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/845.json",
     "file_by_key": "dogs/by-key/русски-парк-туман-над-водои--уиппет.json",
     "competition_count": 1,
-    "sex": "F"
+    "sex": "M"
   },
   {
     "id": 846,
@@ -4925,7 +4925,7 @@
   {
     "id": 3708,
     "dog_key": "сирень-душистая--русская-псовая-борзая",
-    "name_lat": "СИРЕНЬ ДУШИСТАЯ",
+    "name_lat": "SIREN DUSHISTAY",
     "name_ru": "СИРЕНЬ ДУШИСТАЯ",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/3708.json",
@@ -5256,7 +5256,7 @@
   {
     "id": 5651,
     "dog_key": "история-любви-ландыш-серебристыи--уиппет",
-    "name_lat": "ISTORIYA LUBVI LANDYSH SEREBRISTYY",
+    "name_lat": "ISTORIYA LUBVI LANDYSH SEREBRISTIY",
     "name_ru": "ИСТОРИЯ ЛЮБВИ ЛАНДЫШ СЕРЕБРИСТЫЙ",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/5651.json",
@@ -5267,7 +5267,7 @@
   {
     "id": 5652,
     "dog_key": "история-любви-изумруд--уиппет",
-    "name_lat": "ИСТОРИЯ ЛЮБВИ ИЗУМРУД",
+    "name_lat": "ISTORIYA LUBVI IZUMRUD",
     "name_ru": "ИСТОРИЯ ЛЮБВИ ИЗУМРУД",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/5652.json",
@@ -5278,7 +5278,7 @@
   {
     "id": 5653,
     "dog_key": "саджитеи-волеит-геро-пост-те--уиппет",
-    "name_lat": "SAGITA VOLAT GERO POST TE",
+    "name_lat": "SAGITTA VOLAT GERO POST TE",
     "name_ru": "САДЖИТЕЙ ВОЛЕЙТ ГЕРО ПОСТ ТЕ",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/5653.json",
@@ -5819,7 +5819,7 @@
   {
     "id": 5770,
     "dog_key": "забава-знати--русская-псовая-борзая",
-    "name_lat": "ZABAVA ZNATI",
+    "name_lat": "ZABAVA ZNATY",
     "name_ru": "ЗАБАВА ЗНАТИ",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/5770.json",
@@ -6063,18 +6063,18 @@
   {
     "id": 5818,
     "dog_key": "гриндевальд-из-шнеидер-рич--фараонова-собака",
-    "name_lat": "GRINDEVALD IZ SCHNEIDER RICH",
+    "name_lat": "GRINDEVALD IS SCHNEIDER RICH",
     "name_ru": "ГРИНДЕВАЛЬД ИЗ ШНЕЙДЕР РИЧ",
     "breed": "ФАРАОНОВА СОБАКА",
     "file_by_id": "dogs/by-id/5818.json",
     "file_by_key": "dogs/by-key/гриндевальд-из-шнеидер-рич--фараонова-собака.json",
     "competition_count": 10,
-    "sex": "female"
+    "sex": "M"
   },
   {
     "id": 5819,
     "dog_key": "блэкси-шаин-галатея--фараонова-собака",
-    "name_lat": "BLACKSEA SHINE GALATEYA",
+    "name_lat": "BLACKSEA SHINE GALATEA",
     "name_ru": "БЛЭКСИ ШАЙН ГАЛАТЕЯ",
     "breed": "ФАРАОНОВА СОБАКА",
     "file_by_id": "dogs/by-id/5819.json",
@@ -6979,7 +6979,7 @@
   {
     "id": 6285,
     "dog_key": "жани-ша-ден-из-шнеидер-рич--фараонова-собака",
-    "name_lat": "JANI SHA DEN IZ SCHNEIDER RICH",
+    "name_lat": "JANI SHA DEN IS SCHNEIDER RICH",
     "name_ru": "ЖАНИ ША ДЕН ИЗ ШНЕЙДЕР РИЧ",
     "breed": "ФАРАОНОВА СОБАКА",
     "file_by_id": "dogs/by-id/6285.json",
@@ -7012,7 +7012,7 @@
   {
     "id": 7027,
     "dog_key": "валттери-сильвер-вингс--уиппет",
-    "name_lat": "VALTTERY SILVER WINGS",
+    "name_lat": "VALTTERI SILVER WINGS",
     "name_ru": "ВАЛТТЕРИ СИЛЬВЕР ВИНГС",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/7027.json",
@@ -7248,7 +7248,7 @@
   {
     "id": 7120,
     "dog_key": "россо-бореале-виттория-сида--чирнеко-дель-этна",
-    "name_lat": "ROSSO BOREALE VITTORIYA SIDA",
+    "name_lat": "ROSSO BOREALE VITTORIA SIDA",
     "name_ru": "РОССО БОРЕАЛЕ ВИТТОРИЯ СИДА",
     "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
     "file_by_id": "dogs/by-id/7120.json",
@@ -7648,7 +7648,7 @@
   {
     "id": 7236,
     "dog_key": "лунная-радуга-аивори--русская-псовая-борзая",
-    "name_lat": "LUNNAJA RADUGA AJVORI",
+    "name_lat": "LUNNAYA RADUGA AJVORI",
     "name_ru": "ЛУННАЯ РАДУГА АЙВОРИ",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/7236.json",
@@ -7670,7 +7670,7 @@
   {
     "id": 7239,
     "dog_key": "лунная-радуга-царская-водка--русская-псовая-борзая",
-    "name_lat": "LUNNAJA RADUGA CZARSKAYA VODKA",
+    "name_lat": "LUNNAYA RADUGA CZARSKAYA VODKA",
     "name_ru": "ЛУННАЯ РАДУГА ЦАРСКАЯ ВОДКА",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/7239.json",
@@ -7827,7 +7827,7 @@
   {
     "id": 7289,
     "dog_key": "куликово-поле-гермес--уиппет",
-    "name_lat": "KULIKOVO POLE GERMES",
+    "name_lat": "KULIKOVO POLE HERMES",
     "name_ru": "КУЛИКОВО ПОЛЕ ГЕРМЕС",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/7289.json",
@@ -8391,7 +8391,7 @@
   {
     "id": 7499,
     "dog_key": "дорогои-друг-фартовыи--русская-псовая-борзая",
-    "name_lat": "DOROGOY DRUG FARTOVYJ",
+    "name_lat": "DOROGOY DRUG FARTOVIY",
     "name_ru": "ДОРОГОЙ ДРУГ ФАРТОВЫЙ",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/7499.json",
@@ -9329,7 +9329,7 @@
   {
     "id": 8349,
     "dog_key": "ритм-сердца-из-полета-мечты--уиппет",
-    "name_lat": "RITM SERDTSA IZ POLETA MECHTI",
+    "name_lat": "RITM SERDSA IZ POLETA MECHTI",
     "name_ru": "РИТМ СЕРДЦА ИЗ ПОЛЕТА МЕЧТЫ",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/8349.json",
@@ -10024,7 +10024,7 @@
   {
     "id": 9098,
     "dog_key": "эмуль-де-гепард-бадрия--салюки",
-    "name_lat": "ЭМУЛЬ ДЕ ГЕПАРД БАДРИЯ",
+    "name_lat": "EMUL DE GEPARD BADRIA",
     "name_ru": "ЭМУЛЬ ДЕ ГЕПАРД БАДРИЯ",
     "breed": "САЛЮКИ",
     "file_by_id": "dogs/by-id/9098.json",
@@ -10046,13 +10046,13 @@
   {
     "id": 9100,
     "dog_key": "кетлин-нильф--уиппет",
-    "name_lat": "КЕТЛИН НИЛЬФ",
+    "name_lat": "KETLIN NILFE",
     "name_ru": "КЕТЛИН НИЛЬФ",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/9100.json",
     "file_by_key": "dogs/by-key/кетлин-нильф--уиппет.json",
     "competition_count": 1,
-    "sex": null
+    "sex": "M"
   },
   {
     "id": 9101,
@@ -11630,13 +11630,13 @@
   {
     "id": 9246,
     "dog_key": "магнифико-неро--малая-итальянская-борзая",
-    "name_lat": "МАГНИФИКО НЕРО",
+    "name_lat": "MAGNIFICO NERO",
     "name_ru": "МАГНИФИКО НЕРО",
     "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
     "file_by_id": "dogs/by-id/9246.json",
     "file_by_key": "dogs/by-key/магнифико-неро--малая-итальянская-борзая.json",
     "competition_count": 2,
-    "sex": "male"
+    "sex": "M"
   },
   {
     "id": 9247,
@@ -11740,7 +11740,7 @@
   {
     "id": 9264,
     "dog_key": "ах-шалунья--русская-псовая-борзая",
-    "name_lat": "AH SHALUNYA",
+    "name_lat": "AH-SHALUNJA",
     "name_ru": "АХ ШАЛУНЬЯ",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/9264.json",
@@ -11818,7 +11818,7 @@
   {
     "id": 9272,
     "dog_key": "mlechnyy-put-iz-poleta-mechti--уиппет",
-    "name_lat": "MLECHNYY PUT IZ POLETA MECHTI",
+    "name_lat": "MLECHNIY PUT' IZ POLETA MECHTI",
     "name_ru": "MLECHNYY PUT IZ POLETA MECHTI",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/9272.json",
@@ -11829,7 +11829,7 @@
   {
     "id": 9273,
     "dog_key": "татьянин-день-инки--уиппет",
-    "name_lat": "ТАТЬЯНИН ДЕНЬ ИНКИ",
+    "name_lat": "TATYANIN DEN INKY",
     "name_ru": "ТАТЬЯНИН ДЕНЬ ИНКИ",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/9273.json",
@@ -11895,7 +11895,7 @@
   {
     "id": 9282,
     "dog_key": "амбер-вэивс-нэнси--уиппет",
-    "name_lat": "АМБЕР ВЭЙВС НЭНСИ",
+    "name_lat": "AMBER VEIV'S NENSI",
     "name_ru": "АМБЕР ВЭЙВС НЭНСИ",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/9282.json",
@@ -11961,7 +11961,7 @@
   {
     "id": 9289,
     "dog_key": "история-любви-эвр-быстрыи--уиппет",
-    "name_lat": "ИСТОРИЯ ЛЮБВИ ЭВР БЫСТРЫЙ",
+    "name_lat": "ISTORIYA LUBVI EVR BY'STRY'J",
     "name_ru": "ИСТОРИЯ ЛЮБВИ ЭВР БЫСТРЫЙ",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/9289.json",
@@ -11994,7 +11994,7 @@
   {
     "id": 9293,
     "dog_key": "ацуарела-дель-рио-дарк-ангел--уиппет",
-    "name_lat": "АЦУАРЕЛА ДЕЛЬ РИО ДАРК АНГЕЛ",
+    "name_lat": "ACUARELA DEL` RIO DARK ANGEL",
     "name_ru": "АЦУАРЕЛА ДЕЛЬ РИО ДАРК АНГЕЛ",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/9293.json",
@@ -12038,7 +12038,7 @@
   {
     "id": 9301,
     "dog_key": "борзые-сенавиан-цагри--русская-псовая-борзая",
-    "name_lat": "БОРЗЫЕ СЕНАВИАН ЦАГРИ",
+    "name_lat": "BORZIE-SENAVIAN TSAGRI",
     "name_ru": "БОРЗЫЕ СЕНАВИАН ЦАГРИ",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/9301.json",
@@ -12105,7 +12105,7 @@
   {
     "id": 9308,
     "dog_key": "борзые-сенавиан-горностаи--русская-псовая-борзая",
-    "name_lat": "БОРЗЫЕ СЕНАВИАН ГОРНОСТАЙ",
+    "name_lat": "BORZOIE-SENAVIAN GORNOSTAY",
     "name_ru": "БОРЗЫЕ СЕНАВИАН ГОРНОСТАЙ",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/9308.json",
@@ -12150,7 +12150,7 @@
   {
     "id": 9314,
     "dog_key": "taira-buena-casadora--испанскии-гальго",
-    "name_lat": "TAIRA BUENA CASADORA",
+    "name_lat": "TAIRA BUENA CAZADORA",
     "name_ru": "TAIRA BUENA CASADORA",
     "breed": "ИСПАНСКИЙ ГАЛЬГО",
     "file_by_id": "dogs/by-id/9314.json",
@@ -12641,7 +12641,7 @@
   {
     "id": 9373,
     "dog_key": "derzy-veter-sensation--русская-псовая-борзая",
-    "name_lat": "DERZY VETER SENSATION",
+    "name_lat": "DERZHI VETER SENSATION",
     "name_ru": "DERZY VETER SENSATION",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/9373.json",
@@ -12665,7 +12665,7 @@
   {
     "id": 9376,
     "dog_key": "фурия-из-крылатои-легенды--русская-псовая-борзая",
-    "name_lat": "ФУРИЯ ИЗ КРЫЛАТОЙ ЛЕГЕНДЫ",
+    "name_lat": "FURIYA IZ KRYLATOI LEGENDY",
     "name_ru": "ФУРИЯ ИЗ КРЫЛАТОЙ ЛЕГЕНДЫ",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/9376.json",
@@ -12676,7 +12676,7 @@
   {
     "id": 9377,
     "dog_key": "азартная-охота-греза--русская-псовая-борзая",
-    "name_lat": "АЗАРТНАЯ ОХОТА ГРЕЗА",
+    "name_lat": "AZARTNAYA OKHOTA GERA",
     "name_ru": "АЗАРТНАЯ ОХОТА ГРЕЗА",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/9377.json",
@@ -12687,7 +12687,7 @@
   {
     "id": 9378,
     "dog_key": "борзые-сенавиан-давило-ii--русская-псовая-борзая",
-    "name_lat": "БОРЗЫЕ СЕНАВИАН ДАВИЛО II",
+    "name_lat": "BORZIE-SENAVIAN DAVILO II",
     "name_ru": "БОРЗЫЕ СЕНАВИАН ДАВИЛО II",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/9378.json",
@@ -12832,13 +12832,13 @@
   {
     "id": 9393,
     "dog_key": "apriori-star-stitch-silver-wind--малая-итальянская-борзая",
-    "name_lat": "APRIORI STAR STITCH SILVER WIND",
+    "name_lat": "APRIORI STAR STICH SILVER WIND",
     "name_ru": "APRIORI STAR STITCH SILVER WIND",
     "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
     "file_by_id": "dogs/by-id/9393.json",
     "file_by_key": "dogs/by-key/apriori-star-stitch-silver-wind--малая-итальянская-борзая.json",
     "competition_count": 1,
-    "sex": "male"
+    "sex": "M"
   },
   {
     "id": 9394,
@@ -13130,7 +13130,7 @@
   {
     "id": 9435,
     "dog_key": "гринч-ночнои-полет--уиппет",
-    "name_lat": "ГРИНЧ НОЧНОЙ ПОЛЕТ",
+    "name_lat": "GRINCH NOCHNOI POLET",
     "name_ru": "ГРИНЧ НОЧНОЙ ПОЛЕТ",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/9435.json",
@@ -13141,7 +13141,7 @@
   {
     "id": 9436,
     "dog_key": "гинура-ютта-кулума--уиппет",
-    "name_lat": "ГИНУРА ЮТТА КУЛУМА",
+    "name_lat": "GINURA JUTTA KULUMA",
     "name_ru": "ГИНУРА ЮТТА КУЛУМА",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/9436.json",
@@ -13505,7 +13505,7 @@
   {
     "id": 9476,
     "dog_key": "борзые-сенавиан-алтаи--русская-псовая-борзая",
-    "name_lat": "БОРЗЫЕ СЕНАВИАН АЛТАЙ",
+    "name_lat": "BORZIE-SENAVIAN ALTAY",
     "name_ru": "БОРЗЫЕ СЕНАВИАН АЛТАЙ",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/9476.json",
@@ -13516,7 +13516,7 @@
   {
     "id": 9477,
     "dog_key": "борзои-царскии-палаш--русская-псовая-борзая",
-    "name_lat": "БОРЗОЙ ЦАРСКИЙ ПАЛАШ",
+    "name_lat": "BORZOI TSARSKI PALASH",
     "name_ru": "БОРЗОЙ ЦАРСКИЙ ПАЛАШ",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/9477.json",
@@ -13560,7 +13560,7 @@
   {
     "id": 9481,
     "dog_key": "лунная-радуга-революция--русская-псовая-борзая",
-    "name_lat": "LUNNAJA RADUGA REVOLUTION",
+    "name_lat": "LUNNAYA RADUGA REVOLYUCIYA",
     "name_ru": "ЛУННАЯ РАДУГА РЕВОЛЮЦИЯ",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/9481.json",
@@ -13582,7 +13582,7 @@
   {
     "id": 9483,
     "dog_key": "васарт-блестка--русская-псовая-борзая",
-    "name_lat": "ВАСАРТ БЛЕСТКА",
+    "name_lat": "VASART BLYESTKA",
     "name_ru": "ВАСАРТ БЛЕСТКА",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/9483.json",
@@ -13681,7 +13681,7 @@
   {
     "id": 9492,
     "dog_key": "ее-величество-удача--русская-псовая-борзая",
-    "name_lat": "ЕЕ ВЕЛИЧЕСТВО УДАЧА",
+    "name_lat": "EYO VELICHESTVO UDACHA",
     "name_ru": "ЕЕ ВЕЛИЧЕСТВО УДАЧА",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/9492.json",
@@ -13692,7 +13692,7 @@
   {
     "id": 9493,
     "dog_key": "борзые-сенавиан-анаконда--русская-псовая-борзая",
-    "name_lat": "БОРЗЫЕ СЕНАВИАН АНАКОНДА",
+    "name_lat": "BORZIE-SENAVIAN ANACONDA",
     "name_ru": "БОРЗЫЕ СЕНАВИАН АНАКОНДА",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/9493.json",
@@ -13703,7 +13703,7 @@
   {
     "id": 9494,
     "dog_key": "борзые-сенавиан-царина--русская-псовая-борзая",
-    "name_lat": "BORZIE SENAVIAN CARINA",
+    "name_lat": "BORZIE-SENAVIAN BARIN",
     "name_ru": "БОРЗЫЕ СЕНАВИАН ЦАРИНА",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/9494.json",
@@ -13857,7 +13857,7 @@
   {
     "id": 9510,
     "dog_key": "лунная-радуга-танго-в-ночи--русская-псовая-борзая",
-    "name_lat": "ЛУННАЯ РАДУГА ТАНГО В НОЧИ",
+    "name_lat": "LUNNAJA RADUGA TANGO V NOCHI",
     "name_ru": "ЛУННАЯ РАДУГА ТАНГО В НОЧИ",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/9510.json",
@@ -13868,7 +13868,7 @@
   {
     "id": 9511,
     "dog_key": "возлюба-из-раздолья--русская-псовая-борзая",
-    "name_lat": "ВОЗЛЮБА ИЗ РАЗДОЛЬЯ",
+    "name_lat": "VOZLYUBA IZ RAZDOLIA",
     "name_ru": "ВОЗЛЮБА ИЗ РАЗДОЛЬЯ",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/9511.json",
@@ -13923,7 +13923,7 @@
   {
     "id": 9516,
     "dog_key": "борзои-царскии-вача--русская-псовая-борзая",
-    "name_lat": "БОРЗОЙ ЦАРСКИЙ ВАЧА",
+    "name_lat": "BORZOI TSARSKI VACHA",
     "name_ru": "БОРЗОЙ ЦАРСКИЙ ВАЧА",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/9516.json",
@@ -13934,7 +13934,7 @@
   {
     "id": 9517,
     "dog_key": "василиса-из-раздолья--русская-псовая-борзая",
-    "name_lat": "ВАСИЛИСА ИЗ РАЗДОЛЬЯ",
+    "name_lat": "VASILISA IZ RAZDOLIA",
     "name_ru": "ВАСИЛИСА ИЗ РАЗДОЛЬЯ",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/9517.json",
@@ -14022,7 +14022,7 @@
   {
     "id": 9526,
     "dog_key": "angelo-cheleste-faraon--малая-итальянская-борзая",
-    "name_lat": "ANGELO CHELESTE FARAON",
+    "name_lat": "ANGELO CELESTE FARAON",
     "name_ru": "ANGELO CHELESTE FARAON",
     "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
     "file_by_id": "dogs/by-id/9526.json",
@@ -14078,7 +14078,7 @@
   {
     "id": 9534,
     "dog_key": "kulikovo-pole-versk-lovets-udachi--уиппет",
-    "name_lat": "KULIKOVO POLE VERSK LOVETS UDACHI",
+    "name_lat": "KULIKOVO POLE VERESK LOVETS UDACHI",
     "name_ru": "KULIKOVO POLE VERSK LOVETS UDACHI",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/9534.json",
@@ -14122,7 +14122,7 @@
   {
     "id": 9539,
     "dog_key": "chester-stremitelny--уиппет",
-    "name_lat": "CHESTER STREMITELNY",
+    "name_lat": "CHESTER STREMITELNIY",
     "name_ru": "CHESTER STREMITELNY",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/9539.json",
@@ -14353,7 +14353,7 @@
   {
     "id": 9575,
     "dog_key": "wilkie-ze-alien--уиппет",
-    "name_lat": "WILKIE ZE ALIEN",
+    "name_lat": "WILKIE THE ALIEN",
     "name_ru": "WILKIE ZE ALIEN",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/9575.json",
@@ -14452,7 +14452,7 @@
   {
     "id": 9589,
     "dog_key": "денвер-кэннэлс-пэтти--уиппет",
-    "name_lat": "DENWER KENNELS PATTI",
+    "name_lat": "DENWER KENNELS PATTY",
     "name_ru": "ДЕНВЕР КЭННЭЛС ПЭТТИ",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/9589.json",
@@ -14510,7 +14510,7 @@
   {
     "id": 9595,
     "dog_key": "ж-капитан-нельсон--греихаунд",
-    "name_lat": "J KAPITAN NELSON",
+    "name_lat": "J-CAPITAN NELSON",
     "name_ru": "Ж КАПИТАН НЕЛЬСОН",
     "breed": "ГРЕЙХАУНД",
     "file_by_id": "dogs/by-id/9595.json",
@@ -14609,7 +14609,7 @@
   {
     "id": 9605,
     "dog_key": "sagita-volat-bis-bonitas--уиппет",
-    "name_lat": "SAGITA VOLAT BIS BONITAS",
+    "name_lat": "SAGITTA VOLAT BIS BONITAS",
     "name_ru": "SAGITA VOLAT BIS BONITAS",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/9605.json",
@@ -14819,7 +14819,7 @@
   {
     "id": 9632,
     "dog_key": "золтаис-диамонд-ирия-примавера--чирнеко-дель-этна",
-    "name_lat": "ЗОЛТАИС ДИАМОНД ИРИЯ ПРИМАВЕРА",
+    "name_lat": "ZOLTAIS DIAMOND IRIA PRIMAVERA",
     "name_ru": "ЗОЛТАИС ДИАМОНД ИРИЯ ПРИМАВЕРА",
     "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
     "file_by_id": "dogs/by-id/9632.json",
@@ -14918,7 +14918,7 @@
   {
     "id": 9646,
     "dog_key": "уэндеринг-зе-хезер--уиппет",
-    "name_lat": "WENDERING THE HEATHER",
+    "name_lat": "WANDERING THE HEATHER",
     "name_ru": "УЭНДЕРИНГ ЗЕ ХЕЗЕР",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/9646.json",
@@ -14985,7 +14985,7 @@
   {
     "id": 9654,
     "dog_key": "taira-buena-casadora--испанская-борзая-гальго",
-    "name_lat": "TAIRA BUENA CASADORA",
+    "name_lat": "TAIRA BUENA CAZADORA",
     "name_ru": "TAIRA BUENA CASADORA",
     "breed": "ИСПАНСКАЯ БОРЗАЯ (ГАЛЬГО)",
     "file_by_id": "dogs/by-id/9654.json",
@@ -15230,7 +15230,7 @@
   {
     "id": 9683,
     "dog_key": "виват-санраиз-веселая-мазурка--русская-псовая-борзая",
-    "name_lat": "ВИВАТ САНРАЙЗ ВЕСЕЛАЯ МАЗУРКА",
+    "name_lat": "VIVAT SANRAIZ VESELAYA MAZURKA",
     "name_ru": "ВИВАТ САНРАЙЗ ВЕСЕЛАЯ МАЗУРКА",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/9683.json",
@@ -15241,7 +15241,7 @@
   {
     "id": 9684,
     "dog_key": "дамачервеи-из-села-царево--русская-псовая-борзая",
-    "name_lat": "ДАМАЧЕРВЕЙ ИЗ СЕЛА ЦАРЕВО",
+    "name_lat": "DAMA CHERVEJ IZ SELA TSAREVO",
     "name_ru": "ДАМАЧЕРВЕЙ ИЗ СЕЛА ЦАРЕВО",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/9684.json",
@@ -15286,13 +15286,13 @@
   {
     "id": 9689,
     "dog_key": "уилл-креик--фараонова-собака",
-    "name_lat": "УИЛЛ КРЕЙК",
+    "name_lat": "WILL KREYK",
     "name_ru": "УИЛЛ КРЕЙК",
     "breed": "ФАРАОНОВА СОБАКА",
     "file_by_id": "dogs/by-id/9689.json",
     "file_by_key": "dogs/by-key/уилл-креик--фараонова-собака.json",
     "competition_count": 2,
-    "sex": null
+    "sex": "M"
   },
   {
     "id": 9691,
@@ -15330,7 +15330,7 @@
   {
     "id": 9701,
     "dog_key": "kingdom-fly-borra-agassi--уиппет",
-    "name_lat": "KINGDOM FLY BORRA AGASSI",
+    "name_lat": "KINGDOM FLY BORRA AGASI",
     "name_ru": "KINGDOM FLY BORRA AGASSI",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/9701.json",
@@ -15385,13 +15385,13 @@
   {
     "id": 9708,
     "dog_key": "ацуарела-дель-рио-клюква--уиппет",
-    "name_lat": "АЦУАРЕЛА ДЕЛЬ РИО КЛЮКВА",
+    "name_lat": "ACUARELA DEL` RIO KLYUKVA",
     "name_ru": "АЦУАРЕЛА ДЕЛЬ РИО КЛЮКВА",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/9708.json",
     "file_by_key": "dogs/by-key/ацуарела-дель-рио-клюква--уиппет.json",
     "competition_count": 1,
-    "sex": null
+    "sex": "F"
   },
   {
     "id": 9709,
@@ -15946,7 +15946,7 @@
   {
     "id": 9776,
     "dog_key": "борзые-сенавиан-барин--русская-псовая-борзая",
-    "name_lat": "БОРЗЫЕ СЕНАВИАН БАРИН",
+    "name_lat": "BORZIE-SENAVIAN BARIN",
     "name_ru": "БОРЗЫЕ СЕНАВИАН БАРИН",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/9776.json",
@@ -15957,7 +15957,7 @@
   {
     "id": 9777,
     "dog_key": "борзые-сенавиан-ермак--русская-псовая-борзая",
-    "name_lat": "БОРЗЫЕ СЕНАВИАН ЕРМАК",
+    "name_lat": "BORZIE-SENAVIAN ERMAK",
     "name_ru": "БОРЗЫЕ СЕНАВИАН ЕРМАК",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/9777.json",
@@ -15968,7 +15968,7 @@
   {
     "id": 9778,
     "dog_key": "княжье-золото-великан-могучии--русская-псовая-борзая",
-    "name_lat": "КНЯЖЬЕ ЗОЛОТО ВЕЛИКАН МОГУЧИЙ",
+    "name_lat": "KNIAZHIE ZOLOTO VELIKAN MOGUCHIY",
     "name_ru": "КНЯЖЬЕ ЗОЛОТО ВЕЛИКАН МОГУЧИЙ",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/9778.json",
@@ -15980,7 +15980,7 @@
   {
     "id": 9779,
     "dog_key": "княжье-золото-вираж-крутои--русская-псовая-борзая",
-    "name_lat": "КНЯЖЬЕ ЗОЛОТО ВИРАЖ КРУТОЙ",
+    "name_lat": "KNIAZHIE ZOLOTO VIRAZH KRUTOY",
     "name_ru": "КНЯЖЬЕ ЗОЛОТО ВИРАЖ КРУТОЙ",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/9779.json",
@@ -16024,7 +16024,7 @@
   {
     "id": 9783,
     "dog_key": "княжье-золото-саламандра--русская-псовая-борзая",
-    "name_lat": "КНЯЖЬЕ ЗОЛОТО САЛАМАНДРА",
+    "name_lat": "KNIAZHIE ZOLOTO SALAMANDRA",
     "name_ru": "КНЯЖЬЕ ЗОЛОТО САЛАМАНДРА",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/9783.json",
@@ -16035,7 +16035,7 @@
   {
     "id": 9784,
     "dog_key": "княжье-золото-эмир--русская-псовая-борзая",
-    "name_lat": "КНЯЖЬЕ ЗОЛОТО ЭМИР",
+    "name_lat": "KNIAZHIE ZOLOTO EMIR",
     "name_ru": "КНЯЖЬЕ ЗОЛОТО ЭМИР",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/9784.json",
@@ -16057,13 +16057,13 @@
   {
     "id": 9786,
     "dog_key": "салгреис-инширах--салюки",
-    "name_lat": "САЛГРЕЙС ИНШИРАХ",
+    "name_lat": "SALGREY'S INSHIRAH",
     "name_ru": "САЛГРЕЙС ИНШИРАХ",
     "breed": "САЛЮКИ",
     "file_by_id": "dogs/by-id/9786.json",
     "file_by_key": "dogs/by-key/салгреис-инширах--салюки.json",
     "competition_count": 0,
-    "sex": "male"
+    "sex": "M"
   },
   {
     "id": 9787,
@@ -16079,7 +16079,7 @@
   {
     "id": 9788,
     "dog_key": "диоскури-амалфея--салюки",
-    "name_lat": "ДИОСКУРИ АМАЛФЕЯ",
+    "name_lat": "DIOSKURY AMALFEJA",
     "name_ru": "ДИОСКУРИ АМАЛФЕЯ",
     "breed": "САЛЮКИ",
     "file_by_id": "dogs/by-id/9788.json",
@@ -16750,7 +16750,7 @@
   {
     "id": 9851,
     "dog_key": "княжье-золото-важная-персона--русская-псовая-борзая",
-    "name_lat": "КНЯЖЬЕ ЗОЛОТО ВАЖНАЯ ПЕРСОНА",
+    "name_lat": "KNIAZHIE ZOLOTO VAZHNAYA PERSONA",
     "name_ru": "КНЯЖЬЕ ЗОЛОТО ВАЖНАЯ ПЕРСОНА",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/9851.json",
@@ -16761,7 +16761,7 @@
   {
     "id": 9852,
     "dog_key": "княжье-золото-вечерняя-москва--русская-псовая-борзая",
-    "name_lat": "КНЯЖЬЕ ЗОЛОТО ВЕЧЕРНЯЯ МОСКВА",
+    "name_lat": "KNIAZHIE ZOLOTO VECHERNYAYA MOSKVA",
     "name_ru": "КНЯЖЬЕ ЗОЛОТО ВЕЧЕРНЯЯ МОСКВА",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/9852.json",
@@ -16838,7 +16838,7 @@
   {
     "id": 9859,
     "dog_key": "дорогои-друг-серебряныи--русская-псовая-борзая",
-    "name_lat": "ДОРОГОЙ ДРУГ СЕРЕБРЯНЫЙ",
+    "name_lat": "DOROGOY DRUG SEREBRYANIY",
     "name_ru": "ДОРОГОЙ ДРУГ СЕРЕБРЯНЫЙ",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/9859.json",
@@ -16937,7 +16937,7 @@
   {
     "id": 9870,
     "dog_key": "istoriya-lubvi-gardarika--уиппет",
-    "name_lat": "ISTORIYA LUBVI GARDARIKA",
+    "name_lat": "ISTORIYA LUBVI GARDARICA",
     "name_ru": "ISTORIYA LUBVI GARDARIKA",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/9870.json",
@@ -16959,7 +16959,7 @@
   {
     "id": 9872,
     "dog_key": "история-любви-золотая-ника--уиппет",
-    "name_lat": "ИСТОРИЯ ЛЮБВИ ЗОЛОТАЯ НИКА",
+    "name_lat": "ISTORIYA LUBVI ZOLOTAYA NIKA",
     "name_ru": "ИСТОРИЯ ЛЮБВИ ЗОЛОТАЯ НИКА",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/9872.json",
@@ -16970,7 +16970,7 @@
   {
     "id": 9873,
     "dog_key": "история-любви-истинная-леди--уиппет",
-    "name_lat": "ИСТОРИЯ ЛЮБВИ ИСТИННАЯ ЛЕДИ",
+    "name_lat": "ISTORIYA LUBVI ISTINNAYA LEDI",
     "name_ru": "ИСТОРИЯ ЛЮБВИ ИСТИННАЯ ЛЕДИ",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/9873.json",
@@ -17168,7 +17168,7 @@
   {
     "id": 9892,
     "dog_key": "livelong-hit-zhenevieva--ксолоитцкуинтли-медио",
-    "name_lat": "LIVELONG HIT ZHENEVIEVA",
+    "name_lat": "LIVELONG HIT ZHENIVIEVA",
     "name_ru": "LIVELONG HIT ZHENEVIEVA",
     "breed": "КСОЛОИТЦКУИНТЛИ МЕДИО",
     "file_by_id": "dogs/by-id/9892.json",
@@ -17256,7 +17256,7 @@
   {
     "id": 9902,
     "dog_key": "тамир-ани-любим--русская-псовая-борзая",
-    "name_lat": "ТАМИР АНИ ЛЮБИМ",
+    "name_lat": "TAMIR ANY LUBIM",
     "name_ru": "ТАМИР АНИ ЛЮБИМ",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/9902.json",
@@ -17267,7 +17267,7 @@
   {
     "id": 9903,
     "dog_key": "шелковыи-рассвет-жиган--русская-псовая-борзая",
-    "name_lat": "ШЕЛКОВЫЙ РАССВЕТ ЖИГАН",
+    "name_lat": "SHELKOVIY RASSVET ZHIGAN",
     "name_ru": "ШЕЛКОВЫЙ РАССВЕТ ЖИГАН",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/9903.json",
@@ -17355,7 +17355,7 @@
   {
     "id": 9911,
     "dog_key": "barskaya-prikhot-brava--русская-псовая-борзая",
-    "name_lat": "BARSKAYA PRIKHOT BRAVA",
+    "name_lat": "BARSKAYA PRIHOT BRAVA",
     "name_ru": "BARSKAYA PRIKHOT BRAVA",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/9911.json",
@@ -17422,7 +17422,7 @@
   {
     "id": 9918,
     "dog_key": "диоскури-рара-кьяра--салюки",
-    "name_lat": "ДИОСКУРИ РАРА КЬЯРА",
+    "name_lat": "DIOSKURY RARA KJARA",
     "name_ru": "ДИОСКУРИ РАРА КЬЯРА",
     "breed": "САЛЮКИ",
     "file_by_id": "dogs/by-id/9918.json",
@@ -17579,7 +17579,7 @@
   {
     "id": 9932,
     "dog_key": "амбер-вэивс-мариус--уиппет",
-    "name_lat": "АМБЕР ВЭЙВС МАРИУС",
+    "name_lat": "AMBER VEIV'S MARIUS",
     "name_ru": "АМБЕР ВЭЙВС МАРИУС",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/9932.json",
@@ -17876,7 +17876,7 @@
   {
     "id": 9960,
     "dog_key": "колистос-арон--чирнеко-дель-этна",
-    "name_lat": "КОЛИСТОС АРОН",
+    "name_lat": "COLISTO'S ARON",
     "name_ru": "КОЛИСТОС АРОН",
     "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
     "file_by_id": "dogs/by-id/9960.json",
@@ -18086,7 +18086,7 @@
   {
     "id": 9982,
     "dog_key": "весна-красна--русская-псовая-борзая",
-    "name_lat": "ВЕСНА КРАСНА",
+    "name_lat": "VESNA KRASNA",
     "name_ru": "ВЕСНА КРАСНА",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/9982.json",
@@ -18097,7 +18097,7 @@
   {
     "id": 9983,
     "dog_key": "волна-бегущая--русская-псовая-борзая",
-    "name_lat": "ВОЛНА БЕГУЩАЯ",
+    "name_lat": "VOLNA BEGUSHCAYA",
     "name_ru": "ВОЛНА БЕГУЩАЯ",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/9983.json",
@@ -18185,7 +18185,7 @@
   {
     "id": 9991,
     "dog_key": "цвет-калина-от-борзых-никона--русская-псовая-борзая",
-    "name_lat": "ЦВЕТ КАЛИНА ОТ БОРЗЫХ НИКОНА",
+    "name_lat": "TSVET-KALINA OT BORZIH NIKONA",
     "name_ru": "ЦВЕТ КАЛИНА ОТ БОРЗЫХ НИКОНА",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/9991.json",
@@ -18207,7 +18207,7 @@
   {
     "id": 9993,
     "dog_key": "imran-ensar-falayhan--салюки",
-    "name_lat": "IMRAN ENSAR FALAYHAN",
+    "name_lat": "IMRAN ENSAR FALAYAN",
     "name_ru": "IMRAN ENSAR FALAYHAN",
     "breed": "САЛЮКИ",
     "file_by_id": "dogs/by-id/9993.json",
@@ -18306,7 +18306,7 @@
   {
     "id": 10002,
     "dog_key": "whippolly-illiria--уиппет",
-    "name_lat": "WHIPPOLLY ILLIRIA",
+    "name_lat": "WHIPPOLLY ILIRIA",
     "name_ru": "WHIPPOLLY ILLIRIA",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/10002.json",
@@ -18328,13 +18328,13 @@
   {
     "id": 10005,
     "dog_key": "оллин-блу--уиппет",
-    "name_lat": "ОЛЛИН БЛУ",
+    "name_lat": "OLLIN BLUE",
     "name_ru": "ОЛЛИН БЛУ",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/10005.json",
     "file_by_key": "dogs/by-key/оллин-блу--уиппет.json",
     "competition_count": 1,
-    "sex": "male"
+    "sex": "M"
   },
   {
     "id": 10006,
@@ -18438,7 +18438,7 @@
   {
     "id": 10015,
     "dog_key": "house-of-hounds-genivieva--левретка",
-    "name_lat": "HOUSE OF HOUNDS GENIVIEVA",
+    "name_lat": "HOUSE OF HOUNDS GENEVIEVA",
     "name_ru": "HOUSE OF HOUNDS GENIVIEVA",
     "breed": "ЛЕВРЕТКА",
     "file_by_id": "dogs/by-id/10015.json",
@@ -18482,7 +18482,7 @@
   {
     "id": 10019,
     "dog_key": "несказанныи-свет-любыи--русская-псовая-борзая",
-    "name_lat": "НЕСКАЗАННЫЙ СВЕТ ЛЮБЫЙ",
+    "name_lat": "NESKAZANNYI SVET LYUBYI",
     "name_ru": "НЕСКАЗАННЫЙ СВЕТ ЛЮБЫЙ",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/10019.json",
@@ -18669,7 +18669,7 @@
   {
     "id": 10038,
     "dog_key": "bel-etual-gertsog-gamilton--греихаунд",
-    "name_lat": "BEL ETUAL GERTSOG GAMILTON",
+    "name_lat": "BEL ETUAL GERTZOG GAMILTON",
     "name_ru": "BEL ETUAL GERTSOG GAMILTON",
     "breed": "ГРЕЙХАУНД",
     "file_by_id": "dogs/by-id/10038.json",
@@ -18955,7 +18955,7 @@
   {
     "id": 10066,
     "dog_key": "barskaya-prikhot-jasmine--русская-псовая-борзая",
-    "name_lat": "BARSKAYA PRIKHOT JASMINE",
+    "name_lat": "BARSKAYA PRIKHOT JASMIN",
     "name_ru": "BARSKAYA PRIKHOT JASMINE",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/10066.json",
@@ -18988,7 +18988,7 @@
   {
     "id": 10069,
     "dog_key": "dioskury-araks-aiious--салюки",
-    "name_lat": "DIOSKURY ARAKS AIIOUS",
+    "name_lat": "DIOSKURY ARAKS ALLOUS",
     "name_ru": "DIOSKURY ARAKS AIIOUS",
     "breed": "САЛЮКИ",
     "file_by_id": "dogs/by-id/10069.json",
@@ -19065,7 +19065,7 @@
   {
     "id": 10076,
     "dog_key": "история-любви-тип-топ--уиппет",
-    "name_lat": "ИСТОРИЯ ЛЮБВИ ТИП ТОП",
+    "name_lat": "ISTORIYA LUBVI TIP TOP",
     "name_ru": "ИСТОРИЯ ЛЮБВИ ТИП ТОП",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/10076.json",
@@ -19164,7 +19164,7 @@
   {
     "id": 10085,
     "dog_key": "istoriya-lubvi-milada-mitsar--уиппет",
-    "name_lat": "ISTORIYA LUBVI MILADA MITSAR",
+    "name_lat": "ISTORIYA LUBVI MILADA MIZAR",
     "name_ru": "ISTORIYA LUBVI MILADA MITSAR",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/10085.json",
@@ -19494,7 +19494,7 @@
   {
     "id": 10119,
     "dog_key": "друг-серебряныи-игра-осенняя-сказка--русская-псовая-борзая",
-    "name_lat": "ДРУГ СЕРЕБРЯНЫЙ ИГРА ОСЕННЯЯ СКАЗКА",
+    "name_lat": "DRUG SEREBRYANYIY IGRA OSENNAYA SKAZKA",
     "name_ru": "ДРУГ СЕРЕБРЯНЫЙ ИГРА ОСЕННЯЯ СКАЗКА",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/10119.json",
@@ -19505,7 +19505,7 @@
   {
     "id": 10120,
     "dog_key": "drug-serebryanyiy-ivushka-feya-vetrov--русская-псовая-борзая",
-    "name_lat": "DRUG SEREBRYANYIY IVUSHKA FEYA VETROV",
+    "name_lat": "DRUG SEREBRYANYIY IVYSHKA FEYA VETROV",
     "name_ru": "DRUG SEREBRYANYIY IVUSHKA FEYA VETROV",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/10120.json",
@@ -19516,7 +19516,7 @@
   {
     "id": 10121,
     "dog_key": "tsvet-kalina-ot-borzyh-nikona--русская-псовая-борзая",
-    "name_lat": "TSVET KALINA OT BORZYH NIKONA",
+    "name_lat": "TSVET-KALINA OT BORZIH NIKONA",
     "name_ru": "TSVET KALINA OT BORZYH NIKONA",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/10121.json",
@@ -19626,7 +19626,7 @@
   {
     "id": 10132,
     "dog_key": "imran-faysal-finist--салюки",
-    "name_lat": "IMRAN FAYSAL FINIST",
+    "name_lat": "IMRAN FAISAL FINIST",
     "name_ru": "IMRAN FAYSAL FINIST",
     "breed": "САЛЮКИ",
     "file_by_id": "dogs/by-id/10132.json",
@@ -19792,7 +19792,7 @@
   {
     "id": 10147,
     "dog_key": "anutiny-glazki--уиппет",
-    "name_lat": "ANUTINY GLAZKI",
+    "name_lat": "ANYUTINY GLAZKI",
     "name_ru": "ANUTINY GLAZKI",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/10147.json",
@@ -19825,13 +19825,13 @@
   {
     "id": 10152,
     "dog_key": "вальпаин-пэк-блаватская--уиппет",
-    "name_lat": "ВАЛЬПАЙН ПЭК БЛАВАТСКАЯ",
+    "name_lat": "VALPAIN PEK BLAVATSKAYA",
     "name_ru": "ВАЛЬПАЙН ПЭК БЛАВАТСКАЯ",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/10152.json",
     "file_by_key": "dogs/by-key/вальпаин-пэк-блаватская--уиппет.json",
     "competition_count": 1,
-    "sex": "female"
+    "sex": "F"
   },
   {
     "id": 10153,
@@ -19847,7 +19847,7 @@
   {
     "id": 10154,
     "dog_key": "вальпаин-пэк-бонанза--уиппет",
-    "name_lat": "ВАЛЬПАЙН ПЭК БОНАНЗА",
+    "name_lat": "VALPAIN PEK BONANZA",
     "name_ru": "ВАЛЬПАЙН ПЭК БОНАНЗА",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/10154.json",
@@ -20057,7 +20057,7 @@
   {
     "id": 10173,
     "dog_key": "борзые-сенавиан-империя--русская-псовая-борзая",
-    "name_lat": "БОРЗЫЕ СЕНАВИАН ИМПЕРИЯ",
+    "name_lat": "BORZIE-SENAVIAN IMPERIYA",
     "name_ru": "БОРЗЫЕ СЕНАВИАН ИМПЕРИЯ",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/10173.json",
@@ -20112,24 +20112,24 @@
   {
     "id": 10179,
     "dog_key": "аль-нафисэх-энаиат--салюки",
-    "name_lat": "АЛЬ НАФИСЭХ ЭНАЙАТ",
+    "name_lat": "AL NAFISEH ENAYAT",
     "name_ru": "АЛЬ НАФИСЭХ ЭНАЙАТ",
     "breed": "САЛЮКИ",
     "file_by_id": "dogs/by-id/10179.json",
     "file_by_key": "dogs/by-key/аль-нафисэх-энаиат--салюки.json",
     "competition_count": 1,
-    "sex": "male"
+    "sex": "M"
   },
   {
     "id": 10180,
     "dog_key": "аль-нафисэх-фуад--салюки",
-    "name_lat": "АЛЬ НАФИСЭХ ФУАД",
+    "name_lat": "AL NAFISEH FUAD",
     "name_ru": "АЛЬ НАФИСЭХ ФУАД",
     "breed": "САЛЮКИ",
     "file_by_id": "dogs/by-id/10180.json",
     "file_by_key": "dogs/by-key/аль-нафисэх-фуад--салюки.json",
     "competition_count": 1,
-    "sex": "male"
+    "sex": "M"
   },
   {
     "id": 10181,
@@ -20310,7 +20310,7 @@
   {
     "id": 10200,
     "dog_key": "прима-полярис--уиппет",
-    "name_lat": "ПРИМА ПОЛЯРИС",
+    "name_lat": "PRIMA POLARIS",
     "name_ru": "ПРИМА ПОЛЯРИС",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/10200.json",
@@ -20355,7 +20355,7 @@
   {
     "id": 10205,
     "dog_key": "вальпаин-пэк-блоссом-дрэгон--уиппет",
-    "name_lat": "ВАЛЬПАЙН ПЭК БЛОССОМ ДРЭГОН",
+    "name_lat": "VALPAIN PEK BLOSSOM DRAGON",
     "name_ru": "ВАЛЬПАЙН ПЭК БЛОССОМ ДРЭГОН",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/10205.json",
@@ -20597,7 +20597,7 @@
   {
     "id": 10229,
     "dog_key": "barskaya-prikhot-aktrisa--русская-псовая-борзая",
-    "name_lat": "BARSKAYA PRIKHOT AKTRISA",
+    "name_lat": "BARSKAYA PRIHOT AKTRISA",
     "name_ru": "BARSKAYA PRIKHOT AKTRISA",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/10229.json",
@@ -20630,7 +20630,7 @@
   {
     "id": 10233,
     "dog_key": "lunnaja-raduga-tsaritsa-serdets--русская-псовая-борзая",
-    "name_lat": "LUNNAJA RADUGA TSARITSA SERDETS",
+    "name_lat": "LUNNAYA RADUGA TSARITSA SERDETS",
     "name_ru": "LUNNAJA RADUGA TSARITSA SERDETS",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/10233.json",
@@ -20663,7 +20663,7 @@
   {
     "id": 10236,
     "dog_key": "svirep-udaloy-iz-sela-tsaryovo--русская-псовая-борзая",
-    "name_lat": "SVIREP UDALOY IZ SELA TSARYOVO",
+    "name_lat": "SVIREP UDALOY IZ SELA TSAREVO",
     "name_ru": "SVIREP UDALOY IZ SELA TSARYOVO",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/10236.json",
@@ -20740,13 +20740,13 @@
   {
     "id": 10245,
     "dog_key": "admiral-ego-velichestva--уиппет",
-    "name_lat": "ADMIRAL EGO VELICHESTVA",
+    "name_lat": "ADMIRAL EJO VELICHESTVA",
     "name_ru": "ADMIRAL EGO VELICHESTVA",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/10245.json",
     "file_by_key": "dogs/by-key/admiral-ego-velichestva--уиппет.json",
     "competition_count": 1,
-    "sex": "male"
+    "sex": "M"
   },
   {
     "id": 10246,
@@ -21016,7 +21016,7 @@
   {
     "id": 10271,
     "dog_key": "vasilisk-slavnyi--русская-псовая-борзая",
-    "name_lat": "VASILISK SLAVNYI",
+    "name_lat": "VASILISK SLAVNIY",
     "name_ru": "VASILISK SLAVNYI",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/10271.json",
@@ -21082,13 +21082,13 @@
   {
     "id": 10277,
     "dog_key": "борзые-сенавиан-ядвига--русская-псовая-борзая",
-    "name_lat": "БОРЗЫЕ СЕНАВИАН ЯДВИГА",
+    "name_lat": "BORZIE-SENAVIAN YADWIGA",
     "name_ru": "БОРЗЫЕ СЕНАВИАН ЯДВИГА",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/10277.json",
     "file_by_key": "dogs/by-key/борзые-сенавиан-ядвига--русская-псовая-борзая.json",
     "competition_count": 1,
-    "sex": "female"
+    "sex": "F"
   },
   {
     "id": 10278,
@@ -21445,7 +21445,7 @@
   {
     "id": 10314,
     "dog_key": "burya-osennyaya--русская-псовая-борзая",
-    "name_lat": "BURYA OSENNYAYA",
+    "name_lat": "BURYA OSENNIAYA",
     "name_ru": "BURYA OSENNYAYA",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/10314.json",
@@ -21544,7 +21544,7 @@
   {
     "id": 10323,
     "dog_key": "лакшери-випп-леди-дэи--уиппет",
-    "name_lat": "LUXURY VIPP LADY DAY",
+    "name_lat": "LUXURY WHIPP LADY DAY",
     "name_ru": "ЛАКШЕРИ ВИПП ЛЕДИ ДЭЙ",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/10323.json",
@@ -21599,7 +21599,7 @@
   {
     "id": 10329,
     "dog_key": "istoriya-lyubvi-peterburg-beautiful--уиппет",
-    "name_lat": "ISTORIYA LYUBVI PETERBURG BEAUTIFUL",
+    "name_lat": "ISTORIYA LUBVI PETERBURG BEAUTIFUL",
     "name_ru": "ISTORIYA LYUBVI PETERBURG BEAUTIFUL",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/10329.json",
@@ -21687,13 +21687,13 @@
   {
     "id": 10337,
     "dog_key": "априори-стар-жания--левретка",
-    "name_lat": "АПРИОРИ СТАР ЖАНИЯ",
+    "name_lat": "APRIORI STAR ZHANYA",
     "name_ru": "АПРИОРИ СТАР ЖАНИЯ",
     "breed": "ЛЕВРЕТКА",
     "file_by_id": "dogs/by-id/10337.json",
     "file_by_key": "dogs/by-key/априори-стар-жания--левретка.json",
     "competition_count": 1,
-    "sex": "female"
+    "sex": "F"
   },
   {
     "id": 10338,
@@ -21731,7 +21731,7 @@
   {
     "id": 10342,
     "dog_key": "muffin-s-isuminkoy--уиппет",
-    "name_lat": "MUFFIN S ISUMINKOY",
+    "name_lat": "MUFFIN S ISUMINKOI",
     "name_ru": "MUFFIN S ISUMINKOY",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/10342.json",
@@ -21764,7 +21764,7 @@
   {
     "id": 10346,
     "dog_key": "эмералд-оф-маи-соул--уиппет",
-    "name_lat": "ЭМЕРАЛД ОФ МАЙ СОУЛ",
+    "name_lat": "EMERALD OF MY SOUL",
     "name_ru": "ЭМЕРАЛД ОФ МАЙ СОУЛ",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/10346.json",
@@ -21841,7 +21841,7 @@
   {
     "id": 10355,
     "dog_key": "аль-нафисэх-гольнар--салюки",
-    "name_lat": "АЛЬ НАФИСЭХ ГОЛЬНАР",
+    "name_lat": "AL NAFISEH GOLNAR",
     "name_ru": "АЛЬ НАФИСЭХ ГОЛЬНАР",
     "breed": "САЛЮКИ",
     "file_by_id": "dogs/by-id/10355.json",
@@ -21896,7 +21896,7 @@
   {
     "id": 10360,
     "dog_key": "vorozheya-is-sagi-o-gardarike--уиппет",
-    "name_lat": "VOROZHEYA IS SAGI O GARDARIKE",
+    "name_lat": "VOROZHEYA IZ SAGI O GARDARIKE",
     "name_ru": "VOROZHEYA IS SAGI O GARDARIKE",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/10360.json",
@@ -21907,7 +21907,7 @@
   {
     "id": 10361,
     "dog_key": "адмирал-ее-величества--уиппет",
-    "name_lat": "АДМИРАЛ ЕЕ ВЕЛИЧЕСТВА",
+    "name_lat": "ADMIRAL EJO VELICHESTVA",
     "name_ru": "АДМИРАЛ ЕЕ ВЕЛИЧЕСТВА",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/10361.json",
@@ -21918,7 +21918,7 @@
   {
     "id": 10362,
     "dog_key": "reedly-road-qui-warranto--фараонова-собака",
-    "name_lat": "REEDLY ROAD QUI WARRANTO",
+    "name_lat": "REEDLY ROAD QUO WARRANTO",
     "name_ru": "REEDLY ROAD QUI WARRANTO",
     "breed": "ФАРАОНОВА СОБАКА",
     "file_by_id": "dogs/by-id/10362.json",
@@ -22094,7 +22094,7 @@
   {
     "id": 10378,
     "dog_key": "razguljai-shalyi--русская-псовая-борзая",
-    "name_lat": "RAZGULJAI SHALYI",
+    "name_lat": "RAZGULJAI SHALY",
     "name_ru": "RAZGULJAI SHALYI",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/10378.json",
@@ -22382,7 +22382,7 @@
   {
     "id": 10404,
     "dog_key": "друг-серебряныи-варница--русская-псовая-борзая",
-    "name_lat": "ДРУГ СЕРЕБРЯНЫЙ ВАРНИЦА",
+    "name_lat": "DRUG SEREBRYANYIY VARNITSA",
     "name_ru": "ДРУГ СЕРЕБРЯНЫЙ ВАРНИЦА",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/10404.json",
@@ -22569,7 +22569,7 @@
   {
     "id": 10421,
     "dog_key": "derzhi-veter-anarhiya--русская-псовая-борзая",
-    "name_lat": "DERZHI VETER ANARHIYA",
+    "name_lat": "DERZHI VETER ANARKHIA",
     "name_ru": "DERZHI VETER ANARHIYA",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/10421.json",
@@ -22679,24 +22679,24 @@
   {
     "id": 10431,
     "dog_key": "санжар-камаль--салюки",
-    "name_lat": "САНЖАР КАМАЛЬ",
+    "name_lat": "SANJAR KAMAL",
     "name_ru": "САНЖАР КАМАЛЬ",
     "breed": "САЛЮКИ",
     "file_by_id": "dogs/by-id/10431.json",
     "file_by_key": "dogs/by-key/санжар-камаль--салюки.json",
     "competition_count": 1,
-    "sex": "male"
+    "sex": "M"
   },
   {
     "id": 10432,
     "dog_key": "саиман-идрис--салюки",
-    "name_lat": "САЙМАН ИДРИС",
+    "name_lat": "SAYMAN IDREES",
     "name_ru": "САЙМАН ИДРИС",
     "breed": "САЛЮКИ",
     "file_by_id": "dogs/by-id/10432.json",
     "file_by_key": "dogs/by-key/саиман-идрис--салюки.json",
     "competition_count": 1,
-    "sex": "male"
+    "sex": "M"
   },
   {
     "id": 10433,
@@ -22833,7 +22833,7 @@
   {
     "id": 10446,
     "dog_key": "artefakt-juliette-adam--греихаунд",
-    "name_lat": "ARTEFAKT JULIETTE ADAM",
+    "name_lat": "ARTEFAKT JULLIETTE ADAM",
     "name_ru": "ARTEFAKT JULIETTE ADAM",
     "breed": "ГРЕЙХАУНД",
     "file_by_id": "dogs/by-id/10446.json",
@@ -22877,13 +22877,13 @@
   {
     "id": 10450,
     "dog_key": "симпле-обсессион-му-мистресс--русская-псовая-борзая",
-    "name_lat": "СИМПЛЕ ОБСЕССИОН МУ МИСТРЕСС",
+    "name_lat": "SIMPLE OBSESSION MY MISTRESS",
     "name_ru": "СИМПЛЕ ОБСЕССИОН МУ МИСТРЕСС",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/10450.json",
     "file_by_key": "dogs/by-key/симпле-обсессион-му-мистресс--русская-псовая-борзая.json",
     "competition_count": 2,
-    "sex": "female"
+    "sex": "F"
   },
   {
     "id": 10451,
@@ -23218,7 +23218,7 @@
   {
     "id": 10488,
     "dog_key": "куликово-поле-гелиос--уиппет",
-    "name_lat": "KULIKOVO POLE GELIOS",
+    "name_lat": "KULIKOVO POLE HELIOS",
     "name_ru": "КУЛИКОВО ПОЛЕ ГЕЛИОС",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/10488.json",
@@ -23251,7 +23251,7 @@
   {
     "id": 10492,
     "dog_key": "apriori-star-stitch-silver-wind--левретка",
-    "name_lat": "APRIORI STAR STITCH SILVER WIND",
+    "name_lat": "APRIORI STAR STICH SILVER WIND",
     "name_ru": "APRIORI STAR STITCH SILVER WIND",
     "breed": "ЛЕВРЕТКА",
     "file_by_id": "dogs/by-id/10492.json",
@@ -23273,7 +23273,7 @@
   {
     "id": 10494,
     "dog_key": "аиленстиль-еврисфеи-фотис--левретка",
-    "name_lat": "АЙЛЕНСТИЛЬ ЕВРИСФЕЙ ФОТИС",
+    "name_lat": "AILENSTIL EVRISFEJ FOTIS",
     "name_ru": "АЙЛЕНСТИЛЬ ЕВРИСФЕЙ ФОТИС",
     "breed": "ЛЕВРЕТКА",
     "file_by_id": "dogs/by-id/10494.json",
@@ -23372,7 +23372,7 @@
   {
     "id": 10506,
     "dog_key": "соловьев-луч-света--русская-псовая-борзая",
-    "name_lat": "СОЛОВЬЕВ ЛУЧ СВЕТА",
+    "name_lat": "SOLOVYEV LUCH SVETA",
     "name_ru": "СОЛОВЬЕВ ЛУЧ СВЕТА",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/10506.json",
@@ -23504,7 +23504,7 @@
   {
     "id": 10520,
     "dog_key": "stylar-harlay-quinn--уиппет",
-    "name_lat": "STYLAR HARLAY QUINN",
+    "name_lat": "STILAR HARLEY QUINN",
     "name_ru": "STYLAR HARLAY QUINN",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/10520.json",
@@ -23559,7 +23559,7 @@
   {
     "id": 10528,
     "dog_key": "магнифико-неро--левретка",
-    "name_lat": "МАГНИФИКО НЕРО",
+    "name_lat": "MAGNIFICO NERO",
     "name_ru": "МАГНИФИКО НЕРО",
     "breed": "ЛЕВРЕТКА",
     "file_by_id": "dogs/by-id/10528.json",
@@ -23581,13 +23581,13 @@
   {
     "id": 10531,
     "dog_key": "lunnaja-raduga-veni-vedi-vici--русская-псовая-борзая",
-    "name_lat": "LUNNAJA RADUGA VENI VEDI VICI",
+    "name_lat": "LUNNAJA RADUGA VENI VIDI VICI",
     "name_ru": "LUNNAJA RADUGA VENI VEDI VICI",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/10531.json",
     "file_by_key": "dogs/by-key/lunnaja-raduga-veni-vedi-vici--русская-псовая-борзая.json",
     "competition_count": 1,
-    "sex": "male"
+    "sex": "M"
   },
   {
     "id": 10533,
@@ -23790,7 +23790,7 @@
   {
     "id": 10554,
     "dog_key": "korvet-zvezdnyy-iz-poleta-mechti--уиппет",
-    "name_lat": "KORVET ZVEZDNYY IZ POLETA MECHTI",
+    "name_lat": "KORVET ZVEZDNIY IZ POLETA MECHTI",
     "name_ru": "KORVET ZVEZDNYY IZ POLETA MECHTI",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/10554.json",
@@ -24219,7 +24219,7 @@
   {
     "id": 10610,
     "dog_key": "симург-из-летних-грез--русская-псовая-борзая",
-    "name_lat": "SIMURG IZ LETNIKH GREZ",
+    "name_lat": "SIMURGH IZ LETNIKH GREZ",
     "name_ru": "СИМУРГ ИЗ ЛЕТНИХ ГРЕЗ",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/10610.json",
@@ -24274,7 +24274,7 @@
   {
     "id": 10618,
     "dog_key": "жорж-из-саги-о-гардарике--уиппет",
-    "name_lat": "ZHORZH IZ SAGI O GARDARIKE",
+    "name_lat": "ZHORGE IZ SAGI O GARDARIKE",
     "name_ru": "ЖОРЖ ИЗ САГИ О ГАРДАРИКЕ",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/10618.json",
@@ -24329,7 +24329,7 @@
   {
     "id": 10623,
     "dog_key": "колистос-туллио--чирнеко-дель-этна",
-    "name_lat": "КОЛИСТОС ТУЛЛИО",
+    "name_lat": "COLISTO'S TULLIA",
     "name_ru": "КОЛИСТОС ТУЛЛИО",
     "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
     "file_by_id": "dogs/by-id/10623.json",
@@ -24839,14 +24839,14 @@
   },
   {
     "id": 10699,
-    "dog_key": "eoganachta-arabella--дирхаунд-шотландская-бор",
-    "name_lat": "EOGANACHTA ARABELLA",
+    "dog_key": "eoganahta-arabella--дирхаунд-шотландская-бор",
+    "name_lat": "EOGANAHTA ARABELLA",
     "name_ru": "",
     "breed": "ДИРХАУНД (ШОТЛАНДСКАЯ БОРЗАЯ)",
     "file_by_id": "dogs/by-id/10699.json",
-    "file_by_key": "dogs/by-key/eoganachta-arabella--дирхаунд-шотландская-бор.json",
+    "file_by_key": "dogs/by-key/eoganahta-arabella--дирхаунд-шотландская-бор.json",
     "competition_count": 0,
-    "sex": null
+    "sex": "F"
   },
   {
     "id": 10701,
@@ -25018,7 +25018,7 @@
   {
     "id": 10750,
     "dog_key": "шнеидер-рич-рэм--фараонова-собака",
-    "name_lat": "SHNEYDER RICH REM",
+    "name_lat": "SCHNEIDER RICH REM",
     "name_ru": "ШНЕЙДЕР РИЧ РЭМ",
     "breed": "ФАРАОНОВА СОБАКА",
     "file_by_id": "dogs/by-id/10750.json",
@@ -25106,7 +25106,7 @@
   {
     "id": 10767,
     "dog_key": "borzomir-barijat-amira--слюги",
-    "name_lat": "BORZOMIR BARIJAT AMIRA",
+    "name_lat": "BORZOMIR BARIYAT AMIRA",
     "name_ru": "BORZOMIR BARIJAT AMIRA",
     "breed": "СЛЮГИ",
     "file_by_id": "dogs/by-id/10767.json",
@@ -25635,7 +25635,7 @@
   {
     "id": 10820,
     "dog_key": "невская-легенда-милыи--русская-псовая-борзая",
-    "name_lat": "NEVSKAYA LEGENDA MILYI",
+    "name_lat": "NEVSKAYA LEGENDA MYLIY",
     "name_ru": "НЕВСКАЯ ЛЕГЕНДА МИЛЫЙ",
     "breed": "Русская псовая борзая",
     "file_by_id": "dogs/by-id/10820.json",
@@ -25657,7 +25657,7 @@
   {
     "id": 10822,
     "dog_key": "чародеика-моеи-души-из-раздолья--русская-псовая-борзая",
-    "name_lat": "CHARODEYKA MOEY DUSHI IZ RAZDOLIA",
+    "name_lat": "CHARODEJKA MOEJ DUSHI IZ RAZDOLIA",
     "name_ru": "ЧАРОДЕЙКА МОЕЙ ДУШИ ИЗ РАЗДОЛЬЯ",
     "breed": "Русская псовая борзая",
     "file_by_id": "dogs/by-id/10822.json",
@@ -25734,7 +25734,7 @@
   {
     "id": 10829,
     "dog_key": "ясныи-сокол-из-раздолья--русская-псовая-борзая",
-    "name_lat": "YASNYJ SOKOL IZ RAZDOLIA",
+    "name_lat": "YASNYI SOKOL IZ RAZDOLIA",
     "name_ru": "ЯСНЫЙ СОКОЛ ИЗ РАЗДОЛЬЯ",
     "breed": "Русская псовая борзая",
     "file_by_id": "dogs/by-id/10829.json",
@@ -25976,7 +25976,7 @@
   {
     "id": 10856,
     "dog_key": "тамир-ани-лезгинка--русская-псовая-борзая",
-    "name_lat": "Тамир Ани Лезгинка",
+    "name_lat": "TAMIR ANY LEZGINKA",
     "name_ru": "Тамир Ани Лезгинка",
     "breed": "Русская псовая борзая",
     "file_by_id": "dogs/by-id/10856.json",
@@ -26251,7 +26251,7 @@
   {
     "id": 10885,
     "dog_key": "гермес-из-севернои-охоты--русская-псовая-борзая",
-    "name_lat": "",
+    "name_lat": "GERMES IZ SEVERNOI OHOTY",
     "name_ru": "ГЕРМЕС ИЗ СЕВЕРНОЙ ОХОТЫ",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/10885.json",
@@ -26284,7 +26284,7 @@
   {
     "id": 10888,
     "dog_key": "голос-ветра-из-раздолья--русская-псовая-борзая",
-    "name_lat": "GOLOS IZ RAZDOLIA",
+    "name_lat": "GOLOS VETRA IZ RAZDOLIA",
     "name_ru": "ГОЛОС ВЕТРА ИЗ РАЗДОЛЬЯ",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/10888.json",
@@ -26449,7 +26449,7 @@
   {
     "id": 10904,
     "dog_key": "вондерленд-итар-рио-санта-рита--ксолоитцкуинтли-медио",
-    "name_lat": "ВОНДЕРЛЕНД ИТАР РИО САНТА РИТА",
+    "name_lat": "WONDERLAND ITAR RIO-SANTA RITA",
     "name_ru": "Вондерленд Итар Рио Санта Рита",
     "breed": "КСОЛОИТЦКУИНТЛИ МЕДИО",
     "file_by_id": "dogs/by-id/10904.json",
@@ -26789,12 +26789,12 @@
   },
   {
     "id": 10937,
-    "dog_key": "kulikovo-pole-oriks-bystry--уиппет",
-    "name_lat": "KULIKOVO POLE ORIKS BYSTRY",
+    "dog_key": "kulikovo-pole-oriks-bystryi--уиппет",
+    "name_lat": "KULIKOVO POLE ORIKS BYSTRYI",
     "name_ru": "",
     "breed": "Уиппет",
     "file_by_id": "dogs/by-id/10937.json",
-    "file_by_key": "dogs/by-key/kulikovo-pole-oriks-bystry--уиппет.json",
+    "file_by_key": "dogs/by-key/kulikovo-pole-oriks-bystryi--уиппет.json",
     "competition_count": 1,
     "sex": "M"
   },
@@ -26834,7 +26834,7 @@
   {
     "id": 10941,
     "dog_key": "ксения-гранд-дачесс--уиппет",
-    "name_lat": "КСЕНИЯ ГРАНД ДАЧЕСС",
+    "name_lat": "KSENIA GRAND DUCHESS",
     "name_ru": "КСЕНИЯ ГРАНД ДАЧЕСС",
     "breed": "Уиппет",
     "file_by_id": "dogs/by-id/10941.json",
@@ -26888,12 +26888,12 @@
   },
   {
     "id": 10946,
-    "dog_key": "borzie-senavian-tsagry--русская-псовая-борзая",
-    "name_lat": "BORZIE-SENAVIAN TSAGRY",
+    "dog_key": "borzie-senavian-tsagri--русская-псовая-борзая",
+    "name_lat": "BORZIE-SENAVIAN TSAGRI",
     "name_ru": "",
     "breed": "Русская псовая борзая",
     "file_by_id": "dogs/by-id/10946.json",
-    "file_by_key": "dogs/by-key/borzie-senavian-tsagry--русская-псовая-борзая.json",
+    "file_by_key": "dogs/by-key/borzie-senavian-tsagri--русская-псовая-борзая.json",
     "competition_count": 1,
     "sex": "M"
   },
@@ -26954,12 +26954,12 @@
   },
   {
     "id": 10952,
-    "dog_key": "step-kubanskaya-j-nord-vest--русская-псовая-борзая",
-    "name_lat": "STEP KUBANSKAYA J-NORD-VEST",
+    "dog_key": "step-kubanskaya-zh-nord-vest--русская-псовая-борзая",
+    "name_lat": "STEP' KUBANSKAYA ZH-NORD-VEST",
     "name_ru": "",
     "breed": "Русская псовая борзая",
     "file_by_id": "dogs/by-id/10952.json",
-    "file_by_key": "dogs/by-key/step-kubanskaya-j-nord-vest--русская-псовая-борзая.json",
+    "file_by_key": "dogs/by-key/step-kubanskaya-zh-nord-vest--русская-псовая-борзая.json",
     "competition_count": 0,
     "sex": "M"
   },
@@ -26999,7 +26999,7 @@
   {
     "id": 10956,
     "dog_key": "улаан-баатыр-с-енисеиских-полеи--русская-псовая-борзая",
-    "name_lat": "ULAAN BAATYR S ENISEISKIH POLEI",
+    "name_lat": "ULAAN BAATYR S ENISEJSKIKH POLEY",
     "name_ru": "УЛААН БААТЫР С ЕНИСЕЙСКИХ ПОЛЕЙ",
     "breed": "Русская псовая борзая",
     "file_by_id": "dogs/by-id/10956.json",
@@ -27010,7 +27010,7 @@
   {
     "id": 10957,
     "dog_key": "фумма-спирит--уиппет",
-    "name_lat": "FUMMA SPIRIT",
+    "name_lat": "PUMMA SPIRIT",
     "name_ru": "ФУММА СПИРИТ",
     "breed": "Уиппет",
     "file_by_id": "dogs/by-id/10957.json",
@@ -27054,7 +27054,7 @@
   {
     "id": 10961,
     "dog_key": "борзои-царскии-восторг--русская-псовая-борзая",
-    "name_lat": "BORZOY TSARSKIY VOSTORG",
+    "name_lat": "BORZOI TSARSKI VOSTORG",
     "name_ru": "БОРЗОЙ ЦАРСКИЙ ВОСТОРГ",
     "breed": "Русская псовая борзая",
     "file_by_id": "dogs/by-id/10961.json",
@@ -27098,7 +27098,7 @@
   {
     "id": 10965,
     "dog_key": "звездная-радуга-лорелея--русская-псовая-борзая",
-    "name_lat": "ZVEZDNAYA RADUGA LORELEYA",
+    "name_lat": "ZVEZDNAYA RADUGA LORELEI",
     "name_ru": "ЗВЁЗДНАЯ РАДУГА ЛОРЕЛЕЯ",
     "breed": "Русская псовая борзая",
     "file_by_id": "dogs/by-id/10965.json",
@@ -27198,7 +27198,7 @@
   {
     "id": 10974,
     "dog_key": "таина-мироздания-из-полета-мечты--уиппет",
-    "name_lat": "TAJNA MIROZDANIYA IZ POLETA MECHTI",
+    "name_lat": "TAYNA MIROZDANIYA IZ POLETA MECHTI",
     "name_ru": "ТАЙНА МИРОЗДАНИЯ ИЗ ПОЛЕТА МЕЧТЫ",
     "breed": "Уиппет",
     "file_by_id": "dogs/by-id/10974.json",
@@ -27263,12 +27263,12 @@
   },
   {
     "id": 10980,
-    "dog_key": "bonitas-spirit-outstanding-talisman--левретка",
-    "name_lat": "BONITAS SPIRIT OUTSTANDING TALISMAN",
+    "dog_key": "bonitas-spirit-outstaiding-taliman--левретка",
+    "name_lat": "BONITAS SPIRIT OUTSTAIDING TALIMAN",
     "name_ru": "",
     "breed": "Левретка",
     "file_by_id": "dogs/by-id/10980.json",
-    "file_by_key": "dogs/by-key/bonitas-spirit-outstanding-talisman--левретка.json",
+    "file_by_key": "dogs/by-key/bonitas-spirit-outstaiding-taliman--левретка.json",
     "competition_count": 1,
     "sex": "F"
   },
@@ -27440,7 +27440,7 @@
   {
     "id": 10996,
     "dog_key": "хорлендс-интернал-энерджи--уиппет",
-    "name_lat": "HORLEND'S INTERNAL ENERGY",
+    "name_lat": "HORLEND'S INTERMAL ENERGY",
     "name_ru": "ХОРЛЕНДС ИНТЕРНАЛ ЭНЕРДЖИ",
     "breed": "Уиппет",
     "file_by_id": "dogs/by-id/10996.json",
@@ -27451,7 +27451,7 @@
   {
     "id": 10997,
     "dog_key": "коломбина-из-королевства-анны--уиппет",
-    "name_lat": "KOLOMBINA IZ KOROLEVSTVA ANNY",
+    "name_lat": "COLUMBINA IZ KOROLEVSTVA ANNY",
     "name_ru": "КОЛОМБИНА ИЗ КОРОЛЕВСТВА АННЫ",
     "breed": "Уиппет",
     "file_by_id": "dogs/by-id/10997.json",
@@ -27473,7 +27473,7 @@
   {
     "id": 10999,
     "dog_key": "лакшери-випп-тазер--уиппет",
-    "name_lat": "LUXURY WHIPP TAZER",
+    "name_lat": "LUXURY WHIPP LAZER",
     "name_ru": "ЛАКШЕРИ ВИПП ТАЗЕР",
     "breed": "Уиппет",
     "file_by_id": "dogs/by-id/10999.json",
@@ -27517,7 +27517,7 @@
   {
     "id": 11003,
     "dog_key": "стангерс-лэнд-голди-триш--уиппет",
-    "name_lat": "STANGERS LAND GOLDI-TRISH",
+    "name_lat": "STANGERS LAND GOLDIE-TRISH",
     "name_ru": "СТАНГЕРС ЛЭНД ГОЛДИ-ТРИШ",
     "breed": "Уиппет",
     "file_by_id": "dogs/by-id/11003.json",
@@ -27891,7 +27891,7 @@
   {
     "id": 11037,
     "dog_key": "stanger-land-blackthorne-winter--уиппет",
-    "name_lat": "STANGER LAND BLACKTHORNE WINTER",
+    "name_lat": "STANGERS LAND BLACKTHORNE WINTER",
     "name_ru": "STANGER LAND BLACKTHORNE WINTER",
     "breed": "Уиппет",
     "file_by_id": "dogs/by-id/11037.json",
@@ -27957,7 +27957,7 @@
   {
     "id": 11043,
     "dog_key": "lunnaja-raduga-vlast--русская-псовая-борзая",
-    "name_lat": "LUNNAJA RADUGA VLAST'",
+    "name_lat": "LUNNAYA RADUGA VLAST",
     "name_ru": "LUNNAJA RADUGA VLAST'",
     "breed": "Русская псовая борзая",
     "file_by_id": "dogs/by-id/11043.json",
@@ -28100,7 +28100,7 @@
   {
     "id": 11056,
     "dog_key": "литлар-с-нью-песня-ветра--фараонова-собака",
-    "name_lat": "LITLAR'S N'YU PESNYA VETRA",
+    "name_lat": "LITLAR'S NIJU PESNYA VETRA",
     "name_ru": "ЛИТЛАР'С НЬЮ ПЕСНЯ ВЕТРА",
     "breed": "ФАРАОНОВА СОБАКА",
     "file_by_id": "dogs/by-id/11056.json",
@@ -28331,7 +28331,7 @@
   {
     "id": 11077,
     "dog_key": "априори-люксюри-резвыи-ярослав--русская-псовая-борзая",
-    "name_lat": "APRIORI LUXURY REZVY YAROSLAV",
+    "name_lat": "APRIORI LUXURY REZVYI YAROSLAV",
     "name_ru": "АПРИОРИ ЛЮКСЮРИ РЕЗВЫЙ ЯРОСЛАВ",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/11077.json",
@@ -28342,7 +28342,7 @@
   {
     "id": 11078,
     "dog_key": "разгуляи-чудесица--русская-псовая-борзая",
-    "name_lat": "RAZGULJAI CHUDESITSA",
+    "name_lat": "RAZGULJAI CHUDESNITSA",
     "name_ru": "РАЗГУЛЯЙ ЧУДЕСИЦА",
     "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
     "file_by_id": "dogs/by-id/11078.json",
@@ -28375,7 +28375,7 @@
   {
     "id": 11081,
     "dog_key": "скаи-из-камелота--уиппет",
-    "name_lat": "SKAY IZ KAMELOTA",
+    "name_lat": "SKAI IZ KAMELOTA",
     "name_ru": "СКАЙ ИЗ КАМЕЛОТА",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/11081.json",
@@ -28386,7 +28386,7 @@
   {
     "id": 11082,
     "dog_key": "татьянин-день-душистыи-мед--уиппет",
-    "name_lat": "TATYANIN DEN DUSHISTY MED",
+    "name_lat": "TATYANIN DEN DUSHISTIY MED",
     "name_ru": "ТАТЬЯНИН ДЕНЬ ДУШИСТЫЙ МЕД",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/11082.json",
@@ -28430,7 +28430,7 @@
   {
     "id": 11086,
     "dog_key": "ясныи-сокол--уиппет",
-    "name_lat": "YASNY SOKOL",
+    "name_lat": "YASNIY SOKOL",
     "name_ru": "ЯСНЫЙ СОКОЛ",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/11086.json",
@@ -28540,7 +28540,7 @@
   {
     "id": 11096,
     "dog_key": "зак-честер-золтан-из-ожерелья--левретка",
-    "name_lat": "ZAK CHESTER ZOLTAN IZ OZHERELYA",
+    "name_lat": "ZACK CHESTER ZOLTAN IZ OZHERELIA",
     "name_ru": "ЗАК ЧЕСТЕР ЗОЛТАН ИЗ ОЖЕРЕЛЬЯ",
     "breed": "Левретка",
     "file_by_id": "dogs/by-id/11096.json",
@@ -28562,7 +28562,7 @@
   {
     "id": 11098,
     "dog_key": "литлар-с-нидзю-миссия-выполнима--фараонова-собака",
-    "name_lat": "LITLAR'S NIJU MISSIYA VYPOLNIMA",
+    "name_lat": "LITLAR'S NIJU MISSIYA VIPOLNIMA",
     "name_ru": "ЛИТЛАР'С НИДЗЮ МИССИЯ ВЫПОЛНИМА",
     "breed": "Фараонова собака",
     "file_by_id": "dogs/by-id/11098.json",
@@ -28782,7 +28782,7 @@
   {
     "id": 11118,
     "dog_key": "volar-blek-shark-uma--уиппет",
-    "name_lat": "Volar Blek Shark Uma",
+    "name_lat": "VOLAR BLEK SHARC UMA",
     "name_ru": "Volar Blek Shark Uma",
     "breed": "Уиппет",
     "file_by_id": "dogs/by-id/11118.json",
@@ -28793,7 +28793,7 @@
   {
     "id": 11119,
     "dog_key": "volar-blek-shark-ultra--уиппет",
-    "name_lat": "Volar Blek Shark Ultra",
+    "name_lat": "VOLAR BLEK SHARC ULTRA",
     "name_ru": "Volar Blek Shark Ultra",
     "breed": "Уиппет",
     "file_by_id": "dogs/by-id/11119.json",
@@ -29079,7 +29079,7 @@
   {
     "id": 11145,
     "dog_key": "enchantress-earts--уиппет",
-    "name_lat": "ENCHANTRESS  EARTS",
+    "name_lat": "ENCHANTRESS EARTH",
     "name_ru": "ENCHANTRESS  EARTS",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/11145.json",
@@ -29112,7 +29112,7 @@
   {
     "id": 11148,
     "dog_key": "стангерс-лэнд-ермак--уиппет",
-    "name_lat": "STANGERS LEND ERMAK",
+    "name_lat": "STANGERS LAND ERMAK",
     "name_ru": "СТАНГЕРС ЛЭНД ЕРМАК",
     "breed": "УИППЕТ",
     "file_by_id": "dogs/by-id/11148.json",
