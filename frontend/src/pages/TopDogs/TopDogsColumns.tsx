@@ -81,17 +81,23 @@ export default function TopDogsColumns({
     (filteredCombined.length === 0 && filteredSpeed.length > 0 ? 'racing' : 'coursing')
   const handleMobileColumnChange = onMobileColumnChangeProp ?? setSelectedMobileColumn
 
-  // Жест свайпа влево/вправо на мобильных экранах
-  const [dragOffset, setDragOffset] = useState<number | null>(null)
-  const [isTransitioning, setIsTransitioning] = useState(false)
+  // Жест свайпа влево/вправо на мобильных экранах (Direct GPU, 0 React re-renders)
+  const trackRef = useRef<HTMLDivElement>(null)
   const [isNudging, setIsNudging] = useState(false)
   const hasInteractedRef = useRef(false)
   const nudgeTimerRef = useRef<number | null>(null)
   const nudgeEndTimerRef = useRef<number | null>(null)
   const touchStartRef = useRef<{ x: number; y: number; time: number } | null>(null)
   const gestureLockRef = useRef<'horizontal' | 'vertical' | null>(null)
-  const transitionTimeoutRef = useRef<number | null>(null)
   const hadMovedRef = useRef(false)
+  const gapPx = 16
+
+  const getSlideOffset = useCallback(
+    (slideIndex: number) => {
+      return slideIndex === 0 ? '0%' : `calc(-100% - ${gapPx}px)`
+    },
+    [gapPx],
+  )
 
   const cancelNudge = useCallback(() => {
     if (nudgeTimerRef.current !== null) {
@@ -106,14 +112,14 @@ export default function TopDogsColumns({
   }, [])
 
   const triggerNudge = useCallback(() => {
-    if (hasInteractedRef.current || (dragOffset !== null && dragOffset !== 0)) return
+    if (hasInteractedRef.current) return
     cancelNudge()
     setIsNudging(true)
     nudgeEndTimerRef.current = window.setTimeout(() => {
       setIsNudging(false)
       nudgeEndTimerRef.current = null
     }, 750)
-  }, [cancelNudge, dragOffset])
+  }, [cancelNudge])
 
   // Auto-play invitation nudge on page load (after 600ms) only if not interacted
   useEffect(() => {
@@ -128,36 +134,32 @@ export default function TopDogsColumns({
 
   // Плавная анимация скольжения колонок при изменении активной дисциплины
   useEffect(() => {
-    setIsTransitioning(true)
-    const timer = setTimeout(() => {
-      setIsTransitioning(false)
-    }, 400)
-    return () => clearTimeout(timer)
-  }, [activeMobileColumn])
+    if (trackRef.current && (typeof window === 'undefined' || window.innerWidth < 1024)) {
+      const slideIndex = activeMobileColumn === 'coursing' ? 0 : 1
+      trackRef.current.style.transition = 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)'
+      trackRef.current.style.transform = `translate3d(${getSlideOffset(slideIndex)}, 0, 0)`
+    }
+  }, [activeMobileColumn, getSlideOffset])
 
-  const handleTouchStart = (e: React.TouchEvent) => {
+  const startDrag = (clientX: number, clientY: number) => {
     if (typeof window !== 'undefined' && window.innerWidth >= 1024) return
     hasInteractedRef.current = true
     cancelNudge()
-    const touch = e.touches[0]
-    touchStartRef.current = { x: touch.clientX, y: touch.clientY, time: Date.now() }
+    touchStartRef.current = { x: clientX, y: clientY, time: Date.now() }
     gestureLockRef.current = null
     hadMovedRef.current = false
-    if (transitionTimeoutRef.current) {
-      clearTimeout(transitionTimeoutRef.current)
-      transitionTimeoutRef.current = null
+    if (trackRef.current) {
+      trackRef.current.style.transition = 'none'
     }
-    setIsTransitioning(false)
-    setDragOffset(0)
   }
 
-  const handleTouchMove = (e: React.TouchEvent) => {
+  const moveDrag = (clientX: number, clientY: number) => {
     if (!touchStartRef.current || (typeof window !== 'undefined' && window.innerWidth >= 1024)) return
-    const touch = e.touches[0]
-    const dx = touch.clientX - touchStartRef.current.x
-    const dy = touch.clientY - touchStartRef.current.y
+    const touch = touchStartRef.current
+    const dx = clientX - touch.x
+    const dy = clientY - touch.y
 
-    if (Math.abs(dx) > 10 || Math.abs(dy) > 10) {
+    if (Math.abs(dx) > 7 || Math.abs(dy) > 7) {
       hadMovedRef.current = true
     }
 
@@ -165,64 +167,106 @@ export default function TopDogsColumns({
     if (!gestureLockRef.current) {
       const absDx = Math.abs(dx)
       const absDy = Math.abs(dy)
-      if (absDx < 8 && absDy < 8) return
+      if (absDx < 7 && absDy < 7) return
       if (absDy >= absDx) {
-        // Вертикальный скролл страницы: не перехватываем жест
         gestureLockRef.current = 'vertical'
         return
       }
       gestureLockRef.current = 'horizontal'
     }
 
-    if (gestureLockRef.current === 'horizontal') {
-      // Упругое сопротивление (rubber-band) при попытке свайпа за край
-      const isAtLeftEdge = activeMobileColumn === 'coursing' && dx > 0
-      const isAtRightEdge = activeMobileColumn === 'racing' && dx < 0
+    if (gestureLockRef.current === 'horizontal' && trackRef.current) {
+      const currentSlide = activeMobileColumn === 'coursing' ? 0 : 1
+      const isAtLeftEdge = currentSlide === 0 && dx > 0
+      const isAtRightEdge = currentSlide === 1 && dx < 0
       const appliedDx = isAtLeftEdge || isAtRightEdge ? dx * 0.22 : dx
-      setDragOffset(appliedDx)
+      const base = currentSlide === 0 ? '0%' : `calc(-100% - ${gapPx}px)`
+      trackRef.current.style.transform = `translate3d(calc(${base} + ${appliedDx}px), 0, 0)`
     }
   }
 
-  const handleTouchEnd = (e: React.TouchEvent) => {
+  const endDrag = (clientX: number) => {
     if (!touchStartRef.current || (typeof window !== 'undefined' && window.innerWidth >= 1024)) return
 
     const isHorizontal = gestureLockRef.current === 'horizontal'
-    const touch = e.changedTouches[0]
-    const dx = touch.clientX - touchStartRef.current.x
+    const dx = clientX - touchStartRef.current.x
     const dt = Date.now() - touchStartRef.current.time
     const velocity = Math.abs(dx) / (dt || 1)
 
     touchStartRef.current = null
     gestureLockRef.current = null
 
-    if (isHorizontal) {
+    const track = trackRef.current
+    const currentSlide = activeMobileColumn === 'coursing' ? 0 : 1
+
+    if (isHorizontal && track) {
       const isSwipeLeft = dx < -35 || (dx < -15 && velocity > 0.2)
       const isSwipeRight = dx > 35 || (dx > 15 && velocity > 0.2)
+      let targetSlide: 0 | 1 = currentSlide
 
-      setIsTransitioning(true)
-      setDragOffset(null)
-
-      if (activeMobileColumn === 'coursing' && isSwipeLeft) {
-        handleMobileColumnChange('racing')
-      } else if (activeMobileColumn === 'racing' && isSwipeRight) {
-        handleMobileColumnChange('coursing')
+      if (isSwipeLeft && currentSlide === 0) {
+        targetSlide = 1
+      } else if (isSwipeRight && currentSlide === 1) {
+        targetSlide = 0
       }
 
-      transitionTimeoutRef.current = window.setTimeout(() => {
-        setIsTransitioning(false)
-        hadMovedRef.current = false
-      }, 400)
-    } else {
-      setDragOffset(null)
-      hadMovedRef.current = false
+      track.style.transition = 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)'
+      track.style.transform = `translate3d(${getSlideOffset(targetSlide)}, 0, 0)`
+
+      if (targetSlide !== currentSlide) {
+        handleMobileColumnChange(targetSlide === 0 ? 'coursing' : 'racing')
+      }
+    } else if (track) {
+      track.style.transition = 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)'
+      track.style.transform = `translate3d(${getSlideOffset(currentSlide)}, 0, 0)`
     }
   }
 
-  const handleTouchCancel = () => {
+  const cancelDrag = () => {
+    hasInteractedRef.current = true
+    cancelNudge()
     touchStartRef.current = null
     gestureLockRef.current = null
-    setDragOffset(null)
-    hadMovedRef.current = false
+    if (trackRef.current) {
+      const currentSlide = activeMobileColumn === 'coursing' ? 0 : 1
+      trackRef.current.style.transition = 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)'
+      trackRef.current.style.transform = `translate3d(${getSlideOffset(currentSlide)}, 0, 0)`
+    }
+  }
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    startDrag(e.touches[0].clientX, e.touches[0].clientY)
+  }
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    moveDrag(e.touches[0].clientX, e.touches[0].clientY)
+  }
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    endDrag(e.changedTouches[0].clientX)
+  }
+
+  const handleTouchCancel = () => {
+    cancelDrag()
+  }
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    if (e.button !== 0) return
+    startDrag(e.clientX, e.clientY)
+  }
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    moveDrag(e.clientX, e.clientY)
+  }
+
+  const handleMouseUp = (e: React.MouseEvent) => {
+    endDrag(e.clientX)
+  }
+
+  const handleMouseLeave = () => {
+    if (touchStartRef.current) {
+      cancelDrag()
+    }
   }
 
   const listLength = Math.max(filteredCombined.length, filteredSpeed.length)
@@ -355,19 +399,19 @@ export default function TopDogsColumns({
       <p className="py-6 text-center text-sm text-charcoal-500">Нет данных</p>
     )
 
-  const isDragging = dragOffset !== null && dragOffset !== 0
-  const isAnimating = isDragging || isTransitioning
-  const mobileTransform = `translateX(calc(${activeMobileColumn === 'coursing' ? '0%' : '-100%'} + ${dragOffset ?? 0}px))`
-
   return (
     <div className="space-y-4">
       {/* Мобильный свайп-контейнер и десктопная двухколоночная сетка */}
       <div
-        className="w-full relative overflow-hidden touch-pan-y"
+        className="w-full relative overflow-x-clip lg:overflow-visible touch-pan-y select-none"
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
         onTouchCancel={handleTouchCancel}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseLeave}
         onClickCapture={(e) => {
           if (hadMovedRef.current) {
             e.preventDefault()
@@ -375,50 +419,27 @@ export default function TopDogsColumns({
           }
         }}
       >
-        {/* GPU Keyframes for ultra-smooth spring nudge */}
-        <style>{`
-          @keyframes silkNudgeLeft {
-            0% { transform: translate3d(0, 0, 0); }
-            22% { transform: translate3d(-34px, 0, 0); }
-            38% { transform: translate3d(-34px, 0, 0); }
-            66% { transform: translate3d(4px, 0, 0); }
-            82% { transform: translate3d(-1px, 0, 0); }
-            100% { transform: translate3d(0, 0, 0); }
-          }
-          @keyframes silkNudgeRight {
-            0% { transform: translate3d(-100%, 0, 0); }
-            22% { transform: translate3d(calc(-100% + 34px), 0, 0); }
-            38% { transform: translate3d(calc(-100% + 34px), 0, 0); }
-            66% { transform: translate3d(calc(-100% - 4px), 0, 0); }
-            82% { transform: translate3d(calc(-100% + 1px), 0, 0); }
-            100% { transform: translate3d(-100%, 0, 0); }
-          }
-          .animate-silk-nudge-left {
-            animation: silkNudgeLeft 750ms cubic-bezier(0.25, 1, 0.5, 1) forwards;
-          }
-          .animate-silk-nudge-right {
-            animation: silkNudgeRight 750ms cubic-bezier(0.25, 1, 0.5, 1) forwards;
-          }
-        `}</style>
-
         <div
-          className="flex w-full items-start lg:grid lg:grid-cols-2 lg:gap-8 lg:!transform-none"
+          ref={trackRef}
+          className={`flex flex-nowrap w-full min-w-0 items-start gap-4 lg:grid lg:grid-cols-2 lg:gap-8 lg:!transform-none ${
+            isNudging
+              ? activeMobileColumn === 'coursing'
+                ? 'animate-silk-nudge-left'
+                : 'animate-silk-nudge-right'
+              : ''
+          }`}
           style={{
-            transform: typeof window !== 'undefined' && window.innerWidth >= 1024 ? 'none' : mobileTransform,
-            transition: isDragging
-              ? 'none'
-              : 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)',
+            transform:
+              typeof window !== 'undefined' && window.innerWidth >= 1024
+                ? 'none'
+                : isNudging
+                ? undefined
+                : `translate3d(${getSlideOffset(activeMobileColumn === 'coursing' ? 0 : 1)}, 0, 0)`,
             willChange: 'transform',
           }}
         >
           {/* Слайд 1: Курсинг */}
-          <div
-            className={`w-full shrink-0 lg:w-auto lg:shrink transition-opacity duration-200 ${
-              !isAnimating && activeMobileColumn === 'racing'
-                ? 'h-0 overflow-hidden opacity-0 lg:h-auto lg:overflow-visible lg:opacity-100'
-                : 'h-auto opacity-100'
-            }`}
-          >
+          <div className="w-full max-w-full min-w-0 shrink-0 basis-full lg:w-auto lg:min-w-0 lg:shrink lg:basis-auto">
             <DoninoColumnShell
               plaque={coursingPlaque}
               listRef={coursingRevealRef}
@@ -428,13 +449,7 @@ export default function TopDogsColumns({
           </div>
 
           {/* Слайд 2: Рейсинг */}
-          <div
-            className={`w-full shrink-0 lg:w-auto lg:shrink transition-opacity duration-200 ${
-              !isAnimating && activeMobileColumn === 'coursing'
-                ? 'h-0 overflow-hidden opacity-0 lg:h-auto lg:overflow-visible lg:opacity-100'
-                : 'h-auto opacity-100'
-            }`}
-          >
+          <div className="w-full max-w-full min-w-0 shrink-0 basis-full lg:w-auto lg:min-w-0 lg:shrink lg:basis-auto">
             <DoninoColumnShell
               plaque={racingPlaque}
               listRef={speedRevealRef}

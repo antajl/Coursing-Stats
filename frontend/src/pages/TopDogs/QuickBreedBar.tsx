@@ -426,7 +426,7 @@ export default function QuickBreedBar({
               trigger={
                 <button
                   type="button"
-                  className="cs-glass-pill inline-flex h-8 shrink-0 items-center gap-1 rounded-full px-2.5 text-xs font-semibold whitespace-nowrap cursor-pointer"
+                  className="cs-glass-pill inline-flex h-8 shrink-0 items-center gap-1 rounded-full px-2.5 text-xs font-medium whitespace-nowrap cursor-pointer"
                   title="Выбрать породу из полного списка"
                   aria-label="Открыть список пород"
                 >
@@ -443,7 +443,7 @@ export default function QuickBreedBar({
             <button
               type="button"
               onClick={() => onSelectBreed('')}
-              className={`inline-flex h-8 shrink-0 items-center rounded-full px-2.5 text-xs font-semibold transition-all cursor-pointer whitespace-nowrap ${
+              className={`inline-flex h-8 shrink-0 items-center rounded-full px-2.5 text-xs font-medium transition-all cursor-pointer whitespace-nowrap ${
                 !normalizedSelected
                   ? "cs-glass-pill-active"
                   : "cs-glass-pill"
@@ -462,7 +462,7 @@ export default function QuickBreedBar({
                   type="button"
                   onClick={() => handlePillClick(breed.key)}
                   title={breed.fullName}
-                  className={`inline-flex h-8 shrink-0 items-center rounded-full px-2.5 text-xs font-semibold transition-all cursor-pointer whitespace-nowrap ${
+                  className={`inline-flex h-8 shrink-0 items-center rounded-full px-2.5 text-xs font-medium transition-all cursor-pointer whitespace-nowrap ${
                     isActive
                       ? "cs-glass-pill-active"
                       : "cs-glass-pill"
