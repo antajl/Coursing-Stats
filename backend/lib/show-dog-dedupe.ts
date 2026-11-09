@@ -16,6 +16,7 @@ import {
   type ShowTitles,
 } from './show-award-ranking'
 import { bestShowGradeLabel } from './show-grades'
+import { sortShowHistory } from './show-dates'
 
 export type ShowDogDedupeFields = {
   id: string
@@ -153,7 +154,7 @@ function mergeDogGroup<T extends ShowDogDedupeFields>(group: T[]): T {
   if (latin) base.name_lat = latin
   if (cyrillic) base.name_ru = cyrillic
 
-  base.history.sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')))
+  sortShowHistory(base.history)
   base.rank_score = showRankScore(base.titles)
   base.best_award = bestShowAward(base.titles)
   base.best_grade = bestShowGradeLabel(base.history.map((h) => h.grade || ''))

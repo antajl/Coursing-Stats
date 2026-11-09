@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { Crown, ArrowRight, Award } from 'lucide-react'
 import {
@@ -9,6 +9,7 @@ import {
   type ShowAwardKey,
 } from '../../../../backend/lib/show-award-ranking'
 import { bestShowGradeLabel } from '../../../../backend/lib/show-grades'
+import { sortShowHistory } from '../../../../backend/lib/show-dates'
 import { ShowGradeChip } from '../../lib/ShowGradeChip'
 import type { ShowDogCardData } from '../Shows/ShowDogCard'
 import HoverTooltip from '../../components/ui/HoverTooltip'
@@ -98,7 +99,10 @@ export function ShowsColumn({ dog, rank, breed }: ShowsColumnProps) {
   const bestKey = (dog.best_award as ShowAwardKey | null) ?? null
   const bestLabel = bestKey ? SHOW_AWARD_LABELS[bestKey] : null
   const bestBadge = bestKey ? SHOW_AWARD_BADGE[bestKey] : null
-  const history = Array.isArray(dog.history) ? dog.history : []
+  const history = useMemo(() => {
+    const raw = Array.isArray(dog.history) ? dog.history : []
+    return sortShowHistory([...raw])
+  }, [dog.history])
   const visible = showAll ? history : history.slice(0, HISTORY_DEFAULT)
   const bestGrade = resolveBestGradeLabel(dog)
   const totalShows = history.length

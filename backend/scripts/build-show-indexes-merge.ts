@@ -18,6 +18,7 @@ import {
   SHOW_GRADE_ORDER,
   type ShowGradeKey,
 } from '../lib/show-grades'
+import { sortShowHistory } from '../lib/show-dates'
 import { stableShowProfileId, SHOW_PROFILE_ID_BASE } from '../lib/show-dog-profile-id'
 import { cdnPackShardKey } from '../lib/cdn-packs'
 import {
@@ -208,7 +209,7 @@ function buildDogRanking(exhibitions: ShowExhibition[]): ShowDog[] {
   }
 
   const dogs = Array.from(dogMap.values()).map((dog) => {
-    dog.history.sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')))
+    sortShowHistory(dog.history)
     return {
       ...dog,
       rank_score: showRankScore(dog.titles),

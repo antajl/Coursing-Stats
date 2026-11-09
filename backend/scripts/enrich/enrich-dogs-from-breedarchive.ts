@@ -47,22 +47,24 @@ function loadCache(): Record<string, CachedDetail> {
   return {}
 }
 
-function saveCache(cache: Record<string, CachedDetail>) {
+function safeWriteJson(filePath: string, data: any, spaces = 0) {
   for (let attempt = 0; attempt < 5; attempt++) {
     try {
-      const tmp = `${CACHE_FILE}.tmp`
-      fs.writeFileSync(tmp, JSON.stringify(cache, null, 2) + '\n', 'utf8')
-      fs.copyFileSync(tmp, CACHE_FILE)
-      try { fs.unlinkSync(tmp) } catch {}
+      const content = (spaces ? JSON.stringify(data, null, spaces) : JSON.stringify(data)) + '\n'
+      fs.writeFileSync(filePath, content, 'utf8')
       return
     } catch (err) {
       if (attempt === 4) {
-        console.warn('[WARN] Failed to write cache after 5 attempts:', err)
+        console.warn(`[WARN] Failed to write ${filePath} after 5 attempts:`, err)
       } else {
-        Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 150)
+        Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 200)
       }
     }
   }
+}
+
+function saveCache(cache: Record<string, CachedDetail>) {
+  safeWriteJson(CACHE_FILE, cache, 2)
 }
 
 async function fetchBaDetails(url: string): Promise<{ sex: 'M' | 'F' | null; photo_url: string | null }> {
@@ -213,7 +215,7 @@ async function main() {
       }
 
       if (shardModified) {
-        fs.writeFileSync(shardPath, JSON.stringify(shardMap) + '\n', 'utf8')
+        safeWriteJson(shardPath, shardMap)
       }
     }
   }
