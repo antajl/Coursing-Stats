@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import { Link } from 'react-router-dom'
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import DogSexIcon from '../../../components/DogSexIcon'
@@ -58,7 +58,7 @@ function getStageLeagueBadgeClass(league: string): string {
   return 'bg-sky-50 text-sky-800 border-sky-200'
 }
 
-export default function ChampionshipDogCard({
+function ChampionshipDogCard({
   dog,
   rank,
   isExpanded,
@@ -293,3 +293,5 @@ export default function ChampionshipDogCard({
     </div>
   )
 }
+
+export default memo(ChampionshipDogCard)

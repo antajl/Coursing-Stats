@@ -25,9 +25,9 @@ function formatNum(value: number | undefined | null): string {
 // =========================================================================
 export function ConceptSymmetricFinal({ stats, showStats }: HomeConceptsProps) {
   return (
-    <div className="w-[330px] xl:w-[360px] 2xl:w-[380px] 3xl:w-[420px] flex flex-col pointer-events-auto text-left select-none">
+    <div className="home-v2-monolith-shell w-[330px] xl:w-[360px] 2xl:w-[380px] 3xl:w-[420px] flex flex-col pointer-events-auto text-left select-none">
       {/* 1. ВЕРХНЯЯ ПОЛОСА: Чистая цельная плашка точно по высоте и форме левых табов */}
-      <div className="home-v2-stats-cockpit-tab mb-2.5 flex items-center justify-between text-xs select-none">
+      <div className="home-v2-stats-cockpit-tab flex items-center justify-between text-xs select-none shrink-0">
         <span className="text-[11.5px] font-bold text-camel-900 uppercase tracking-wider flex items-center gap-1.5">
           <Layers className="w-3.5 h-3.5 text-camel-700" aria-hidden />
           <span>База данных и реестр</span>
@@ -39,7 +39,7 @@ export function ConceptSymmetricFinal({ stats, showStats }: HomeConceptsProps) {
       </div>
 
       {/* 2. ТЕЛО КАРТОЧКИ: Точно совпадает по высоте и стилю с левыми колонками (.home-v2-col) */}
-      <div className="home-v2-stats-cockpit flex flex-col justify-between overflow-hidden relative">
+      <div className="home-v2-stats-cockpit flex flex-col justify-between overflow-hidden relative flex-1 min-h-0">
         {/* Шапка карточки — точная копия плашки над подиумами (home-v2-col-head) */}
         <div className="home-v2-col-head home-v2-col-head--tabs !flex-nowrap gap-1.5 sm:gap-2 relative shrink-0">
           <span className="shrink-0">Статистика</span>

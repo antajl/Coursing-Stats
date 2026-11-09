@@ -36,16 +36,19 @@ export default function ChampionshipStandingsTab({
   const {
     sortMode,
     activeSlide,
+    getSlideOffset,
     isNudging,
-    isAnimating,
     trackRef,
     hadMovedRef,
-    triggerNudge,
     handleSortModeChange,
     handleTouchStart,
     handleTouchMove,
     handleTouchEnd,
     handleTouchCancel,
+    handleMouseDown,
+    handleMouseMove,
+    handleMouseUp,
+    handleMouseLeave,
   } = useChampionshipCarousel()
 
   // Candidate breeds sorted strictly by participant count descending, then alphabetically
@@ -275,13 +278,17 @@ export default function ChampionshipStandingsTab({
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
         {/* Left Column: Dog Ranking Cards */}
         <div className="lg:col-span-7 xl:col-span-8 space-y-3">
-          {/* Main Dog Ranking Card with Physical Swipe Carousel */}
+          {/* Main Dog Ranking Carousel Container */}
           <div
-            className="relative overflow-hidden rounded-2xl border border-old-money-200 bg-white shadow-2xs touch-pan-y select-none sm:select-auto"
+            className="w-full relative overflow-x-clip touch-pan-y select-none sm:select-auto"
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
             onTouchCancel={handleTouchCancel}
+            onMouseDown={handleMouseDown}
+            onMouseMove={handleMouseMove}
+            onMouseUp={handleMouseUp}
+            onMouseLeave={handleMouseLeave}
             onClickCapture={(e) => {
               if (hadMovedRef.current) {
                 e.preventDefault()
@@ -289,142 +296,187 @@ export default function ChampionshipStandingsTab({
               }
             }}
           >
-            {/* Card Header inside */}
-            <div className="relative flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 px-3.5 sm:px-4 py-3 border-b border-old-money-100 bg-cream-50/40">
-              <div className={`flex items-center justify-between sm:justify-start gap-2 min-w-0 sm:px-0 ${activeSlide === 0 ? 'pr-20 sm:pr-0' : 'pl-20 sm:pl-0'}`}>
-                <div className="flex items-center gap-1.5 sm:gap-2 min-w-0">
-                  {activeSlide === 0 ? (
-                    <Trophy className="w-4 h-4 text-camel-700 shrink-0" />
-                  ) : (
-                    <Award className="w-4 h-4 text-camel-700 shrink-0" />
-                  )}
-                  <h2 className="text-sm sm:text-base font-bold font-serif text-charcoal-900 tracking-tight truncate">
-                    <span className="sm:hidden">Рейтинг: {activeSlide === 0 ? 'скорость' : 'баллы'}</span>
-                    <span className="hidden sm:inline">Сводный рейтинг: {activeSlide === 0 ? 'по скорости' : 'по баллам'}</span>
-                  </h2>
-                </div>
-
-                <div className="flex items-center gap-2 shrink-0">
-                  <span className="text-[11px] font-semibold text-charcoal-600 bg-cream-100 px-2 py-0.5 rounded-full border border-cream-200 tabular-nums whitespace-nowrap">
-                    {filtered.length < standings.length
-                      ? `${filtered.length} из ${standings.length}`
-                      : pluralizeDogs(standings.length)}
-                  </span>
-                </div>
-              </div>
-
-              {/* Физический прозрачный язычок с края шапки (Mobile) */}
-              <div className="sm:hidden">
-                {activeSlide === 0 ? (
-                  <button
-                    type="button"
-                    onClick={() => {
-                      handleSortModeChange('points')
-                    }}
-                    className={`absolute top-1/2 -translate-y-1/2 right-0 z-20 inline-flex items-center gap-1 rounded-l-full border-y border-l border-camel-400/90 bg-camel-100/80 pl-3 pr-2 py-1.5 text-[11px] font-bold text-camel-950 shadow-md backdrop-blur-md transition-all hover:bg-camel-200 active:scale-95 cursor-pointer touch-manipulation ${
-                      isNudging ? 'animate-tab-nudge-left' : ''
-                    }`}
-                    title="Смахните экран или нажмите для перехода к баллам"
-                    aria-label="Перейти к баллам"
-                  >
-                    <span>Баллы</span>
-                    <ChevronRight className="w-3.5 h-3.5 text-camel-800 shrink-0" />
-                  </button>
-                ) : (
-                  <button
-                    type="button"
-                    onClick={() => {
-                      handleSortModeChange('time')
-                    }}
-                    className={`absolute top-1/2 -translate-y-1/2 left-0 z-20 inline-flex items-center gap-1 rounded-r-full border-y border-r border-camel-400/90 bg-camel-100/80 pr-3 pl-2 py-1.5 text-[11px] font-bold text-camel-950 shadow-md backdrop-blur-md transition-all hover:bg-camel-200 active:scale-95 cursor-pointer touch-manipulation ${
-                      isNudging ? 'animate-tab-nudge-right' : ''
-                    }`}
-                    title="Смахните экран или нажмите для перехода к скорости"
-                    aria-label="Перейти к скорости"
-                  >
-                    <ChevronLeft className="w-3.5 h-3.5 text-camel-800 shrink-0" />
-                    <span>Скорость</span>
-                  </button>
-                )}
-              </div>
-
-              {/* Desktop-only Underline Tabs */}
-              <div className="hidden sm:flex items-center gap-3.5 self-start sm:self-auto shrink-0 pt-0.5 sm:pt-0" role="tablist" aria-label="Сортировка рейтинга">
-                <button
-                  type="button"
-                  role="tab"
-                  aria-selected={sortMode === 'time'}
-                  onClick={() => handleSortModeChange('time')}
-                  className={`inline-flex items-center gap-1.5 pb-1 text-xs transition-all cursor-pointer border-b-2 ${
-                    sortMode === 'time'
-                      ? 'border-camel-600 text-charcoal-900 font-bold'
-                      : 'border-transparent text-charcoal-400 hover:text-charcoal-700 font-medium'
-                  }`}
-                >
-                  <Timer className={`w-3.5 h-3.5 ${sortMode === 'time' ? 'text-camel-700' : 'text-charcoal-400'}`} aria-hidden />
-                  <span>По скорости</span>
-                </button>
-                <button
-                  type="button"
-                  role="tab"
-                  aria-selected={sortMode === 'points'}
-                  onClick={() => handleSortModeChange('points')}
-                  className={`inline-flex items-center gap-1.5 pb-1 text-xs transition-all cursor-pointer border-b-2 ${
-                    sortMode === 'points'
-                      ? 'border-camel-600 text-charcoal-900 font-bold'
-                      : 'border-transparent text-charcoal-400 hover:text-charcoal-700 font-medium'
-                  }`}
-                >
-                  <Award className={`w-3.5 h-3.5 ${sortMode === 'points' ? 'text-camel-700' : 'text-charcoal-400'}`} aria-hidden />
-                  <span>По баллам</span>
-                </button>
-              </div>
-            </div>
-
             {/* Real Physical Two-Column Slider */}
-            <div className="relative overflow-hidden w-full">
-              <div
-                ref={trackRef}
-                className="flex w-full items-start"
-                style={{
-                  transform: `translate3d(${-activeSlide * 100}%, 0, 0)`,
-                  transition: isNudging ? 'none' : 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)',
-                  willChange: 'transform',
-                }}
-              >
-                {/* Slide 1: By Speed */}
-                <div
-                  className={`w-full shrink-0 min-w-0 transition-opacity duration-200 ${
-                    !isAnimating && activeSlide === 1
-                      ? 'h-0 overflow-hidden opacity-0'
-                      : 'h-auto opacity-100'
-                  }`}
-                >
+            <div
+              ref={trackRef}
+              className={`flex flex-nowrap w-full min-w-0 items-start gap-4 ${
+                isNudging
+                  ? activeSlide === 0
+                    ? 'animate-silk-nudge-left'
+                    : 'animate-silk-nudge-right'
+                  : ''
+              }`}
+              style={{
+                transform: isNudging
+                  ? undefined
+                  : `translate3d(${getSlideOffset(activeSlide)}, 0, 0)`,
+                willChange: 'transform',
+              }}
+            >
+              {/* Slide 1: By Speed Full Card */}
+              <div className="w-full max-w-full min-w-0 shrink-0 basis-full">
+                <div className="relative overflow-hidden rounded-2xl border border-old-money-200 bg-white shadow-2xs">
+                  {/* Card Header inside */}
+                  <div className="relative flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 px-3.5 sm:px-4 py-3 border-b border-old-money-100 bg-cream-50/40">
+                    <div className="flex items-center justify-between sm:justify-start gap-2 min-w-0 pr-20 sm:pr-0">
+                      <div className="flex items-center gap-1.5 sm:gap-2 min-w-0">
+                        <Trophy className="w-4 h-4 text-camel-700 shrink-0" />
+                        <h2 className="text-sm sm:text-base font-bold font-serif text-charcoal-900 tracking-tight truncate">
+                          <span className="sm:hidden">Рейтинг: скорость</span>
+                          <span className="hidden sm:inline">Сводный рейтинг: по скорости</span>
+                        </h2>
+                      </div>
+
+                      <div className="flex items-center gap-2 shrink-0">
+                        <span className="text-[11px] font-semibold text-charcoal-600 bg-cream-100 px-2 py-0.5 rounded-full border border-cream-200 tabular-nums whitespace-nowrap">
+                          {filteredByTime.length < standings.length
+                            ? `${filteredByTime.length} из ${standings.length}`
+                            : pluralizeDogs(standings.length)}
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Физический прозрачный язычок с края шапки (Mobile) */}
+                    <div className="sm:hidden">
+                      <button
+                        type="button"
+                        onClick={() => handleSortModeChange('points')}
+                        className={`absolute top-1/2 -translate-y-1/2 right-0 z-20 inline-flex items-center gap-1 rounded-l-full border-y border-l border-camel-400/90 bg-camel-100/80 pl-3 pr-2 py-1.5 text-[11px] font-bold text-camel-950 shadow-md backdrop-blur-md transition-all hover:bg-camel-200 active:scale-95 cursor-pointer touch-manipulation ${
+                          isNudging ? 'animate-tab-nudge-left' : ''
+                        }`}
+                        title="Смахните экран или нажмите для перехода к баллам"
+                        aria-label="Перейти к баллам"
+                      >
+                        <span>Баллы</span>
+                        <ChevronRight className="w-3.5 h-3.5 text-camel-800 shrink-0" />
+                      </button>
+                    </div>
+
+                    {/* Desktop-only Underline Tabs */}
+                    <div className="hidden sm:flex items-center gap-3.5 self-start sm:self-auto shrink-0 pt-0.5 sm:pt-0" role="tablist" aria-label="Сортировка рейтинга">
+                      <button
+                        type="button"
+                        role="tab"
+                        aria-selected={sortMode === 'time'}
+                        onClick={() => handleSortModeChange('time')}
+                        className={`inline-flex items-center gap-1.5 pb-1 text-xs transition-all cursor-pointer border-b-2 ${
+                          sortMode === 'time'
+                            ? 'border-camel-600 text-charcoal-900 font-bold'
+                            : 'border-transparent text-charcoal-400 hover:text-charcoal-700 font-medium'
+                        }`}
+                      >
+                        <Timer className={`w-3.5 h-3.5 ${sortMode === 'time' ? 'text-camel-700' : 'text-charcoal-400'}`} aria-hidden />
+                        <span>По скорости</span>
+                      </button>
+                      <button
+                        type="button"
+                        role="tab"
+                        aria-selected={sortMode === 'points'}
+                        onClick={() => handleSortModeChange('points')}
+                        className={`inline-flex items-center gap-1.5 pb-1 text-xs transition-all cursor-pointer border-b-2 ${
+                          sortMode === 'points'
+                            ? 'border-camel-600 text-charcoal-900 font-bold'
+                            : 'border-transparent text-charcoal-400 hover:text-charcoal-700 font-medium'
+                        }`}
+                      >
+                        <Award className={`w-3.5 h-3.5 ${sortMode === 'points' ? 'text-camel-700' : 'text-charcoal-400'}`} aria-hidden />
+                        <span>По баллам</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* List for Speed */}
                   {renderDogList(filteredByTime, 'time')}
                 </div>
+              </div>
 
-                {/* Slide 2: By Points */}
-                <div
-                  className={`w-full shrink-0 min-w-0 transition-opacity duration-200 ${
-                    !isAnimating && activeSlide === 0
-                      ? 'h-0 overflow-hidden opacity-0'
-                      : 'h-auto opacity-100'
-                  }`}
-                >
+              {/* Slide 2: By Points Full Card */}
+              <div className="w-full max-w-full min-w-0 shrink-0 basis-full">
+                <div className="relative overflow-hidden rounded-2xl border border-old-money-200 bg-white shadow-2xs">
+                  {/* Card Header inside */}
+                  <div className="relative flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 px-3.5 sm:px-4 py-3 border-b border-old-money-100 bg-cream-50/40">
+                    <div className="flex items-center justify-between sm:justify-start gap-2 min-w-0 pl-20 sm:pl-0">
+                      <div className="flex items-center gap-1.5 sm:gap-2 min-w-0">
+                        <Award className="w-4 h-4 text-camel-700 shrink-0" />
+                        <h2 className="text-sm sm:text-base font-bold font-serif text-charcoal-900 tracking-tight truncate">
+                          <span className="sm:hidden">Рейтинг: баллы</span>
+                          <span className="hidden sm:inline">Сводный рейтинг: по баллам</span>
+                        </h2>
+                      </div>
+
+                      <div className="flex items-center gap-2 shrink-0">
+                        <span className="text-[11px] font-semibold text-charcoal-600 bg-cream-100 px-2 py-0.5 rounded-full border border-cream-200 tabular-nums whitespace-nowrap">
+                          {filteredByPoints.length < standings.length
+                            ? `${filteredByPoints.length} из ${standings.length}`
+                            : pluralizeDogs(standings.length)}
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Физический прозрачный язычок с края шапки (Mobile) */}
+                    <div className="sm:hidden">
+                      <button
+                        type="button"
+                        onClick={() => handleSortModeChange('time')}
+                        className={`absolute top-1/2 -translate-y-1/2 left-0 z-20 inline-flex items-center gap-1 rounded-r-full border-y border-r border-camel-400/90 bg-camel-100/80 pr-3 pl-2 py-1.5 text-[11px] font-bold text-camel-950 shadow-md backdrop-blur-md transition-all hover:bg-camel-200 active:scale-95 cursor-pointer touch-manipulation ${
+                          isNudging ? 'animate-tab-nudge-right' : ''
+                        }`}
+                        title="Смахните экран или нажмите для перехода к скорости"
+                        aria-label="Перейти к скорости"
+                      >
+                        <ChevronLeft className="w-3.5 h-3.5 text-camel-800 shrink-0" />
+                        <span>Скорость</span>
+                      </button>
+                    </div>
+
+                    {/* Desktop-only Underline Tabs */}
+                    <div className="hidden sm:flex items-center gap-3.5 self-start sm:self-auto shrink-0 pt-0.5 sm:pt-0" role="tablist" aria-label="Сортировка рейтинга">
+                      <button
+                        type="button"
+                        role="tab"
+                        aria-selected={sortMode === 'time'}
+                        onClick={() => handleSortModeChange('time')}
+                        className={`inline-flex items-center gap-1.5 pb-1 text-xs transition-all cursor-pointer border-b-2 ${
+                          sortMode === 'time'
+                            ? 'border-camel-600 text-charcoal-900 font-bold'
+                            : 'border-transparent text-charcoal-400 hover:text-charcoal-700 font-medium'
+                        }`}
+                      >
+                        <Timer className={`w-3.5 h-3.5 ${sortMode === 'time' ? 'text-camel-700' : 'text-charcoal-400'}`} aria-hidden />
+                        <span>По скорости</span>
+                      </button>
+                      <button
+                        type="button"
+                        role="tab"
+                        aria-selected={sortMode === 'points'}
+                        onClick={() => handleSortModeChange('points')}
+                        className={`inline-flex items-center gap-1.5 pb-1 text-xs transition-all cursor-pointer border-b-2 ${
+                          sortMode === 'points'
+                            ? 'border-camel-600 text-charcoal-900 font-bold'
+                            : 'border-transparent text-charcoal-400 hover:text-charcoal-700 font-medium'
+                        }`}
+                      >
+                        <Award className={`w-3.5 h-3.5 ${sortMode === 'points' ? 'text-camel-700' : 'text-charcoal-400'}`} aria-hidden />
+                        <span>По баллам</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* List for Points */}
                   {renderDogList(filteredByPoints, 'points')}
                 </div>
               </div>
             </div>
-
-            {hasMore && (
-              <div
-                ref={loadMoreRef}
-                className="py-4 text-center text-xs font-semibold text-charcoal-400"
-              >
-                Загрузка участников…
-              </div>
-            )}
           </div>
+
+          {hasMore && (
+            <div
+              ref={loadMoreRef}
+              className="py-4 text-center text-xs font-semibold text-charcoal-400"
+            >
+              Загрузка участников…
+            </div>
+          )}
         </div>
 
         {/* Right Column: Statistics Widgets */}

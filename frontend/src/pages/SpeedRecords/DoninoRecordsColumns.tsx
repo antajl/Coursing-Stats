@@ -100,12 +100,32 @@ export default function DoninoRecordsColumns({
     }
   }, [triggerNudge, cancelNudge])
 
+  const currentSlideRef = useRef<number>(mobileTab === 'speed' ? 0 : 1)
+
+  const handleTabChange = useCallback(
+    (targetTab: 'speed' | 'coursing') => {
+      hasInteractedRef.current = true
+      cancelNudge()
+      const targetSlide = targetTab === 'speed' ? 0 : 1
+      currentSlideRef.current = targetSlide
+      if (trackRef.current) {
+        trackRef.current.style.transition = 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)'
+        trackRef.current.style.transform = `translate3d(${getSlideOffset(targetSlide)}, 0, 0)`
+      }
+      setMobileTab(targetTab)
+    },
+    [getSlideOffset, cancelNudge],
+  )
+
   // Плавная анимация скольжения колонок при изменении активной дисциплины
   useEffect(() => {
-    if (trackRef.current && (typeof window === 'undefined' || window.innerWidth < 1024)) {
-      const slideIndex = mobileTab === 'speed' ? 0 : 1
-      trackRef.current.style.transition = 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)'
-      trackRef.current.style.transform = `translate3d(${getSlideOffset(slideIndex)}, 0, 0)`
+    const slideIndex = mobileTab === 'speed' ? 0 : 1
+    if (currentSlideRef.current !== slideIndex) {
+      currentSlideRef.current = slideIndex
+      if (trackRef.current && (typeof window === 'undefined' || window.innerWidth < 1024)) {
+        trackRef.current.style.transition = 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)'
+        trackRef.current.style.transform = `translate3d(${getSlideOffset(slideIndex)}, 0, 0)`
+      }
     }
   }, [mobileTab, getSlideOffset])
 
@@ -179,6 +199,7 @@ export default function DoninoRecordsColumns({
         if (nativeEvent) nativeEvent._doninoSwipeConsumed = true
       }
 
+      currentSlideRef.current = targetSlide
       track.style.transition = 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)'
       track.style.transform = `translate3d(${getSlideOffset(targetSlide)}, 0, 0)`
 
@@ -186,6 +207,7 @@ export default function DoninoRecordsColumns({
         setMobileTab(targetSlide === 0 ? 'speed' : 'coursing')
       }
     } else if (track) {
+      currentSlideRef.current = currentSlide
       track.style.transition = 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)'
       track.style.transform = `translate3d(${getSlideOffset(currentSlide)}, 0, 0)`
     }
@@ -266,10 +288,6 @@ export default function DoninoRecordsColumns({
     return <div className="py-12 text-center text-old-money-600">Нет данных</div>
   }
 
-  const isDragging = dragOffset !== null && dragOffset !== 0
-  const isAnimating = isDragging || isTransitioning
-  const mobileTransform = `translateX(calc(${mobileTab === 'speed' ? '0%' : '-100%'} + ${dragOffset ?? 0}px))`
-
   const speedPlaque = (
     <div className="relative">
       <DoninoColumnPlaque
@@ -280,11 +298,7 @@ export default function DoninoRecordsColumns({
       />
       <button
         type="button"
-        onClick={() => {
-          hasInteractedRef.current = true
-          cancelNudge()
-          setMobileTab('coursing')
-        }}
+        onClick={() => handleTabChange('coursing')}
         className={`lg:hidden absolute top-1/2 -translate-y-1/2 right-0 z-20 inline-flex items-center gap-1 rounded-l-full border-y border-l border-camel-400/90 bg-camel-100/80 pl-3 pr-2 py-1 text-[11px] font-bold text-camel-950 shadow-md backdrop-blur-md transition-all hover:bg-camel-200 active:scale-95 cursor-pointer touch-manipulation ${
           isNudging ? 'animate-tab-nudge-left' : ''
         }`}
@@ -307,11 +321,7 @@ export default function DoninoRecordsColumns({
       />
       <button
         type="button"
-        onClick={() => {
-          hasInteractedRef.current = true
-          cancelNudge()
-          setMobileTab('speed')
-        }}
+        onClick={() => handleTabChange('speed')}
         className={`lg:hidden absolute top-1/2 -translate-y-1/2 left-0 z-20 inline-flex items-center gap-1 rounded-r-full border-y border-r border-camel-400/90 bg-camel-100/80 pr-3 pl-2 py-1 text-[11px] font-bold text-camel-950 shadow-md backdrop-blur-md transition-all hover:bg-camel-200 active:scale-95 cursor-pointer touch-manipulation ${
           isNudging ? 'animate-tab-nudge-right' : ''
         }`}
@@ -328,11 +338,15 @@ export default function DoninoRecordsColumns({
     <div className="space-y-2.5 sm:space-y-4">
       {/* Мобильный свайп-контейнер и десктопная двухколоночная сетка */}
       <div
-        className="w-full relative overflow-hidden touch-pan-y"
+        className="w-full relative overflow-x-clip lg:overflow-visible touch-pan-y select-none"
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
         onTouchCancel={handleTouchCancel}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseLeave}
         onClickCapture={(e) => {
           if (hadMovedRef.current) {
             e.preventDefault()
@@ -340,50 +354,27 @@ export default function DoninoRecordsColumns({
           }
         }}
       >
-        {/* GPU Keyframes for ultra-smooth spring nudge */}
-        <style>{`
-          @keyframes silkNudgeLeft {
-            0% { transform: translate3d(0, 0, 0); }
-            22% { transform: translate3d(-34px, 0, 0); }
-            38% { transform: translate3d(-34px, 0, 0); }
-            66% { transform: translate3d(4px, 0, 0); }
-            82% { transform: translate3d(-1px, 0, 0); }
-            100% { transform: translate3d(0, 0, 0); }
-          }
-          @keyframes silkNudgeRight {
-            0% { transform: translate3d(-100%, 0, 0); }
-            22% { transform: translate3d(calc(-100% + 34px), 0, 0); }
-            38% { transform: translate3d(calc(-100% + 34px), 0, 0); }
-            66% { transform: translate3d(calc(-100% - 4px), 0, 0); }
-            82% { transform: translate3d(calc(-100% + 1px), 0, 0); }
-            100% { transform: translate3d(-100%, 0, 0); }
-          }
-          .animate-silk-nudge-left {
-            animation: silkNudgeLeft 750ms cubic-bezier(0.25, 1, 0.5, 1) forwards;
-          }
-          .animate-silk-nudge-right {
-            animation: silkNudgeRight 750ms cubic-bezier(0.25, 1, 0.5, 1) forwards;
-          }
-        `}</style>
-
         <div
-          className="flex w-full items-start lg:grid lg:grid-cols-2 lg:gap-8 lg:!transform-none"
+          ref={trackRef}
+          className={`flex flex-nowrap w-full min-w-0 items-start gap-4 lg:grid lg:grid-cols-2 lg:gap-8 lg:!transform-none ${
+            isNudging
+              ? mobileTab === 'speed'
+                ? 'animate-silk-nudge-left'
+                : 'animate-silk-nudge-right'
+              : ''
+          }`}
           style={{
-            transform: typeof window !== 'undefined' && window.innerWidth >= 1024 ? 'none' : mobileTransform,
-            transition: isDragging
-              ? 'none'
-              : 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)',
+            transform:
+              typeof window !== 'undefined' && window.innerWidth >= 1024
+                ? 'none'
+                : isNudging
+                ? undefined
+                : `translate3d(${getSlideOffset(mobileTab === 'speed' ? 0 : 1)}, 0, 0)`,
             willChange: 'transform',
           }}
         >
           {/* Слайд 1: Замер скорости */}
-          <div
-            className={`w-full shrink-0 lg:w-auto lg:shrink transition-opacity duration-200 ${
-              !isAnimating && mobileTab === 'coursing'
-                ? 'h-0 overflow-hidden opacity-0 lg:h-auto lg:overflow-visible lg:opacity-100'
-                : 'h-auto opacity-100'
-            }`}
-          >
+          <div className="w-full max-w-full min-w-0 shrink-0 basis-full lg:w-auto lg:min-w-0 lg:shrink lg:basis-auto">
             <DoninoColumnShell plaque={speedPlaque}>
               {visibleSpeed.length > 0 ? (
                 visibleSpeed.map((record) => (
@@ -411,13 +402,7 @@ export default function DoninoRecordsColumns({
           </div>
 
           {/* Слайд 2: Бега 350 м */}
-          <div
-            className={`w-full shrink-0 lg:w-auto lg:shrink transition-opacity duration-200 ${
-              !isAnimating && mobileTab === 'speed'
-                ? 'h-0 overflow-hidden opacity-0 lg:h-auto lg:overflow-visible lg:opacity-100'
-                : 'h-auto opacity-100'
-            }`}
-          >
+          <div className="w-full max-w-full min-w-0 shrink-0 basis-full lg:w-auto lg:min-w-0 lg:shrink lg:basis-auto">
             <DoninoColumnShell plaque={coursingPlaque}>
               {visibleCoursing.length > 0 ? (
                 visibleCoursing.map((record) => (

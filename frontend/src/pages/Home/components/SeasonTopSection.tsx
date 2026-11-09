@@ -103,10 +103,7 @@ function SeasonTopSectionInner({
     >
       <h2 className="sr-only">Лидеры сезона и рейтинги</h2>
       {/* Верхняя полоса: Единая парящая плашка Physical Glass (h=34px), зеркально отражающая правый кокпит «База данных и реестр» */}
-      <div
-        className="home-v2-stats-cockpit-tab mb-2.5 relative flex items-center justify-between text-xs select-none"
-        style={{ height: '34px', boxSizing: 'border-box' }}
-      >
+      <div className="home-v2-stats-cockpit-tab relative flex items-center justify-between text-xs select-none shrink-0">
         {/* Заголовок виджета слева (зеркально как справа «База данных и реестр») */}
         <span className="text-[11.5px] font-bold text-camel-900 uppercase tracking-wider flex items-center gap-1.5 shrink-0 pl-0.5 sm:pl-1">
           <Trophy className="w-3.5 h-3.5 text-camel-700" aria-hidden />

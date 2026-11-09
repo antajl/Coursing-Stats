@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import { useMemo, memo } from 'react'
 import { Link } from 'react-router-dom'
 import { Camera, Circle, Minus } from 'lucide-react'
 import CoursingHistorySparkline from '../../components/CoursingHistorySparkline'
@@ -51,7 +51,7 @@ function getTrackTypeIcon(trackType: string | null | undefined) {
   return null
 }
 
-export default function DoninoListRecordRow({
+function DoninoListRecordRow({
   mode,
   name,
   breed,
@@ -209,3 +209,5 @@ export default function DoninoListRecordRow({
     </div>
   )
 }
+
+export default memo(DoninoListRecordRow)
