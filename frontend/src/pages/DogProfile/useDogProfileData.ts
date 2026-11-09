@@ -277,6 +277,7 @@ export function useDogProfileData() {
     ? {
         ...dog,
         pedigree_url: (dog as any).pedigree_url || showDog?.pedigree_url || null,
+        photo_url: (dog as any).photo_url || (showDog as any)?.photo_url || null,
       }
     : (showDog
         ? {
@@ -286,6 +287,7 @@ export function useDogProfileData() {
             breed: showDog.breed,
             sex: showDog.sex,
             pedigree_url: showDog.pedigree_url || null,
+            photo_url: (showDog as any)?.photo_url || null,
           }
         : null)
 

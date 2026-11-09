@@ -929,6 +929,7 @@ export function buildDogProfiles(db: Database.Database) {
         sex: dog.sex,
         owner: dog.owner,
         pedigree_url: dog.pedigree_url,
+        photo_url: (fromFile as any)?.photo_url ?? null,
         coursing_stats,
         racing_stats,
         judge_stats,

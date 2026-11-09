@@ -97,7 +97,8 @@
     "quality:report": "npx tsx backend/scripts/generate-quality-report.ts",
     "sync-donino-championship": "npx tsx backend/scripts/donino/fetch-donino-championship-sheet.ts && npx tsx backend/scripts/donino/build-donino-championship.ts",
     "export-all-protocols": "npx tsx backend/scripts/export/export-all-html-protocols.ts",
-    "test:fast": "vitest run --exclude=\"**/*integrity*\" --exclude=\"**/*publish-gates*\" --exclude=\"**/*alias-resolution*\" --exclude=\"**/*local-data*\""
+    "test:fast": "vitest run --exclude=\"**/*integrity*\" --exclude=\"**/*publish-gates*\" --exclude=\"**/*alias-resolution*\" --exclude=\"**/*local-data*\"",
+    "enrich-breedarchive-details": "npx tsx backend/scripts/enrich/enrich-dogs-from-breedarchive.ts"
   },
   "dependencies": {
     "@gutenye/ocr-node": "^1.4.9",

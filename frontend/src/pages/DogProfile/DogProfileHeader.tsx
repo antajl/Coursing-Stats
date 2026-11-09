@@ -179,9 +179,37 @@ export function DogProfileHeader({
 
   return (
     <div className="relative mb-6">
-      <div className="relative min-w-0 rounded-2xl border border-old-money-200/80 bg-white p-4 sm:p-5 md:p-6 shadow-2xs">
-        
-        {/* РЯД 1: Сетка [Кличка (minmax 1fr)] + [Действия (auto)] */}
+      <div className="relative min-w-0 overflow-hidden rounded-2xl border border-old-money-200/80 bg-white p-4 sm:p-5 md:p-6 shadow-2xs">
+        {/* Фоновое фото собаки из Breed Archive — благородный мягкий фон в стиле Old Money */}
+        {dog.photo_url && (
+          <div
+            className="pointer-events-none absolute inset-0 overflow-hidden select-none"
+            aria-hidden="true"
+          >
+            <div className="absolute right-0 top-0 bottom-0 w-full sm:w-1/2 md:w-5/12 overflow-hidden">
+              <img
+                src={dog.photo_url}
+                alt=""
+                role="presentation"
+                referrerPolicy="no-referrer"
+                className="h-full w-full object-cover object-center sm:object-right opacity-40 sm:opacity-50 filter contrast-105"
+                loading="lazy"
+                decoding="async"
+                onError={(e) => {
+                  console.warn('[DogProfileHeader] Photo failed to load:', dog.photo_url)
+                  const target = e.currentTarget
+                  if (target.parentElement) target.parentElement.style.display = 'none'
+                }}
+              />
+              {/* Мягкий градиент слева, плавно растворяющий фото в белом фоне карточки */}
+              <div className="absolute inset-0 bg-gradient-to-r from-white via-white/40 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-white/50 via-transparent to-white/30" />
+            </div>
+          </div>
+        )}
+
+        <div className="relative z-10">
+          {/* РЯД 1: Сетка [Кличка (minmax 1fr)] + [Действия (auto)] */}
         <div className="grid grid-cols-1 sm:grid-cols-[minmax(0,1fr)_auto] gap-3 sm:gap-4 items-start">
           {/* Кличка собаки: свободное пространство, никакого сжатия */}
           <div className="min-w-0">
@@ -315,6 +343,7 @@ export function DogProfileHeader({
             achievements={achievements}
           />
         )}
+        </div>
       </div>
     </div>
   )
