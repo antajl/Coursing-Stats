@@ -45,9 +45,13 @@ export function ErrorFallback({ error, onReset }: ErrorFallbackProps) {
     window.addEventListener('online', handleOnline);
     window.addEventListener('offline', handleOffline);
 
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+
     return () => {
       window.removeEventListener('online', handleOnline);
       window.removeEventListener('offline', handleOffline);
+      document.body.style.overflow = prevOverflow;
     };
   }, []);
 
@@ -105,7 +109,7 @@ export function ErrorFallback({ error, onReset }: ErrorFallbackProps) {
   );
 
   return (
-    <div className="cs-page-shell min-h-screen flex items-center justify-center px-4 py-8 relative overflow-hidden">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 overflow-y-auto cs-page-shell">
       {/* Мягкое радиальное фоновое свечение в стиле Old Money */}
       <div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[480px] h-[480px] rounded-full pointer-events-none opacity-40 blur-3xl"
