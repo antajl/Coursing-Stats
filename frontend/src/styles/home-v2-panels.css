@@ -415,8 +415,28 @@
   }
 }
 
-/* Master Header: 36px, integrated seamlessly into the top edge of the card */
+/* Mobile Monolith Shell (< 768px) */
+.home-v2-season-top--mobile {
+  border-radius: 16px !important;
+  border: 1px solid rgba(255, 255, 255, 0.92) !important;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.78) 100%) !important;
+  backdrop-filter: blur(14px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(160%) !important;
+  box-shadow:
+    inset 0 1.5px 1px 0 rgba(255, 255, 255, 1),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.70),
+    0 4px 20px 0 rgba(60, 40, 15, 0.06),
+    0 1px 4px 0 rgba(60, 40, 15, 0.03) !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  margin-bottom: 0 !important;
+}
+
+/* Master Header (Mobile & Desktop): integrated seamlessly into the top edge of the card */
 .home-v2-season-top--compact .home-v2-stats-cockpit-tab,
+.home-v2-season-top--mobile .home-v2-stats-cockpit-tab,
 .home-v2-monolith-shell .home-v2-stats-cockpit-tab {
   height: 36px !important;
   min-height: 36px !important;
@@ -433,7 +453,8 @@
 }
 
 /* Frameless inner columns inside the master monolith on desktop */
-.home-v2-season-top--compact .home-v2-col {
+.home-v2-season-top--compact .home-v2-col,
+.home-v2-season-top--mobile .home-v2-col {
   border: none !important;
   box-shadow: none !important;
   background: transparent !important;
@@ -472,6 +493,7 @@
 
 /* Subheaders (Zone 1b): exactly 32px (34px at 1920px) on ALL columns */
 .home-v2-season-top--compact .home-v2-col-head,
+.home-v2-season-top--mobile .home-v2-col-head,
 .home-v2-monolith-shell .home-v2-col-head {
   height: 32px !important;
   min-height: 32px !important;
@@ -532,6 +554,7 @@
 
 /* Footers: exactly 36px (38px at 1920px) on ALL columns */
 .home-v2-season-top--compact .home-breed-pager-wrapper,
+.home-v2-season-top--mobile .home-breed-pager-wrapper,
 .home-v2-monolith-shell .home-v2-stats-cockpit-footer {
   height: 36px !important;
   min-height: 36px !important;

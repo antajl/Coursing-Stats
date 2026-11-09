@@ -97,7 +97,7 @@ function SeasonTopSectionInner({
     <section
       id="season-top"
       className={`home-v2-block scroll-mt-20 w-full min-w-0 max-w-full overflow-x-clip md:overflow-visible ${
-        compact ? 'home-v2-season-top--compact' : ''
+        compact ? 'home-v2-season-top--compact md:overflow-visible' : 'home-v2-season-top--mobile overflow-hidden'
       }`}
       {...(!compact ? { 'data-home-reveal': true } : {})}
     >
@@ -115,7 +115,7 @@ function SeasonTopSectionInner({
         <div
           role="tablist"
           aria-label="Разделы рейтингов и достижений"
-          className="absolute left-1/2 -translate-x-1/2 flex items-center gap-1 sm:gap-2"
+          className="flex items-center gap-1 sm:gap-2 md:absolute md:left-1/2 md:-translate-x-1/2"
         >
           {mainTabs.map((tab) => {
             const isActive = activeTab === tab.id
@@ -139,7 +139,7 @@ function SeasonTopSectionInner({
         </div>
 
         {/* Мета-информация справа (зеркально как «Россия · 240+ пород» справа) */}
-        <span className="text-[11px] font-medium text-charcoal-600 hidden sm:flex items-center gap-1 shrink-0 pr-1">
+        <span className="text-[11px] font-medium text-charcoal-600 hidden md:flex items-center gap-1 shrink-0 pr-1">
           <Sparkles className="w-3 h-3 text-camel-700" aria-hidden />
           <span>2026 · Топ-3 по породам</span>
         </span>

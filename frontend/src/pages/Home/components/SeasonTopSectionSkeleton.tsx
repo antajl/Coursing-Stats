@@ -11,7 +11,7 @@ export function SeasonTopSectionSkeleton({ compact = false }: SeasonTopSectionSk
         aria-label="Загрузка рейтингов сезона"
       >
         {/* Top tab mimic: single cockpit tab matching ConceptSymmetricFinal */}
-        <div className="home-v2-stats-cockpit-tab mb-2.5 relative flex items-center justify-between text-xs animate-pulse">
+        <div className="home-v2-stats-cockpit-tab relative flex items-center justify-between text-xs animate-pulse">
           <div className="h-3.5 bg-old-money-200/50 rounded w-28 shrink-0" />
           <div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-1.5">
             <div className="h-6 bg-old-money-200/40 rounded-full w-24" />
@@ -87,8 +87,8 @@ export function SeasonTopSectionSkeleton({ compact = false }: SeasonTopSectionSk
 
   // Non-compact (mobile) skeleton
   return (
-    <section id="season-top" className="home-v2-block mb-4" aria-label="Загрузка рейтингов сезона">
-      <div className="home-v2-stats-cockpit-tab mb-2.5 relative flex items-center justify-between text-xs animate-pulse">
+    <section id="season-top" className="home-v2-block home-v2-season-top--mobile overflow-hidden" aria-label="Загрузка рейтингов сезона">
+      <div className="home-v2-stats-cockpit-tab relative flex items-center justify-between text-xs animate-pulse">
         <div className="h-3.5 bg-old-money-200/50 rounded w-20" />
         <div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-1.5">
           <div className="h-6 bg-old-money-200/40 rounded-full w-20" />
