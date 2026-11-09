@@ -70,6 +70,7 @@ Local без `data/local/shows/exhibitions-rkf`: **не** форсить пол�
 
 ## Pitfalls
 
+- Мобильная панель фильтров ShowRanking: запрещены растягивающие обёртки вокруг кнопки поиска (ToolbarSearch) и flex-wrap; все контролы (Поиск, Год, Пол, Порода, Сброс, Hint) обязаны компоноваться строго в один ряд высотой 32px (overflow-x-auto no-scrollbar py-0.5), а ShowRatingHint на мобильных вызывается с compact (капсула 32×32px без текстового ярлыка).
 - Старые docs «ShowRanking читает Turso» — **ложно**.
 - Не мерджить show judges со sport judges.
 - Lean ranking без history; history в `dog-details/` при необходимости.
