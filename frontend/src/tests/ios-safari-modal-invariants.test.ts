@@ -76,4 +76,34 @@ describe('iOS Safari & Mobile Modal/Backdrop Invariants Audit', () => {
     expect(source).toContain("document.addEventListener('touchstart'")
     expect(source).toContain("document.removeEventListener('touchstart'")
   })
+
+  it('guarantees index.html has viewport-fit=cover, telephone format-detection disabled, and Apple web app meta tags', () => {
+    const indexPath = path.resolve(root, '../index.html')
+    const source = fs.readFileSync(indexPath, 'utf-8')
+
+    expect(source).toContain('viewport-fit=cover')
+    expect(source).toContain('format-detection')
+    expect(source).toContain('telephone=no')
+    expect(source).toContain('apple-mobile-web-app-capable')
+  })
+
+  it('guarantees global CSS prevents tap highlight flash, landscape text inflation, and mobile input auto-zoom', () => {
+    const cssPath = path.join(root, 'index.css')
+    const source = fs.readFileSync(cssPath, 'utf-8')
+
+    expect(source).toContain('-webkit-tap-highlight-color: transparent')
+    expect(source).toContain('-webkit-text-size-adjust: 100%')
+    expect(source).toContain('touch-action: manipulation')
+    expect(source).toContain('font-size: 16px !important')
+  })
+
+  it('guarantees ToolbarSelectDropdown respects safe-area-inset-bottom and App uses min-h-dvh', () => {
+    const selectPath = path.join(root, 'components/toolbar/ToolbarSelectDropdown.tsx')
+    const selectSource = fs.readFileSync(selectPath, 'utf-8')
+    expect(selectSource).toContain('env(safe-area-inset-bottom)')
+
+    const appPath = path.join(root, 'App.tsx')
+    const appSource = fs.readFileSync(appPath, 'utf-8')
+    expect(appSource).toContain('min-h-dvh')
+  })
 })

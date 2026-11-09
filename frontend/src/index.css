@@ -16,6 +16,44 @@
 @import './styles/home-v2-scale.css';
 @import './styles/home-v2-panels.css';
 
+/* Cross-device & iOS Safari normalization */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body,
+button,
+a,
+input,
+select,
+textarea {
+  touch-action: manipulation;
+}
+
+/* Prevent iOS Safari forced auto-zoom on input focus (font-size < 16px triggers irreversible zoom) */
+@media (max-width: 768px) {
+  input:not([type='checkbox']):not([type='radio']):not([type='range']),
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* Smooth inertia scrolling on iOS touch devices */
+.overflow-y-auto,
+.overflow-x-auto,
+.overflow-auto {
+  -webkit-overflow-scrolling: touch;
+}
+
 /* Focus indicators — subtle & elegant Old Money keyboard indicator */
 *:focus-visible {
   outline: 1.5px solid rgba(199, 156, 86, 0.45);

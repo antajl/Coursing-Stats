@@ -118,7 +118,7 @@ function SeasonTopSectionInner({
         <div
           role="tablist"
           aria-label="Разделы рейтингов и достижений"
-          className="absolute left-1/2 -translate-x-1/2 inline-flex items-center p-0.5 rounded-full bg-cream-200/60 border border-old-money-200/70 shadow-2xs"
+          className="absolute left-1/2 -translate-x-1/2 flex items-center gap-1 sm:gap-2"
         >
           {mainTabs.map((tab) => {
             const isActive = activeTab === tab.id
@@ -129,10 +129,10 @@ function SeasonTopSectionInner({
                 role="tab"
                 aria-selected={isActive}
                 onClick={() => setActiveTab(tab.id)}
-                className={`h-[23px] sm:h-[24px] px-2.5 sm:px-3 rounded-full text-xs transition-all flex items-center justify-center cursor-pointer whitespace-nowrap select-none ${
+                className={`h-[25px] px-3 rounded-full text-xs transition-all flex items-center justify-center cursor-pointer whitespace-nowrap select-none ${
                   isActive
-                    ? 'bg-white text-charcoal-900 font-semibold shadow-2xs border border-white/80'
-                    : 'text-charcoal-600 hover:text-charcoal-900 font-medium hover:bg-white/40'
+                    ? 'cs-glass-pill-active !text-camel-950 font-semibold shadow-2xs'
+                    : 'text-charcoal-700 hover:text-charcoal-950 hover:bg-white/60 font-medium'
                 }`}
               >
                 <span>{tab.label}</span>

@@ -56,7 +56,7 @@ export function ConceptSymmetricFinal({ stats, showStats }: HomeConceptsProps) {
         </div>
 
         {/* Внутренние белые секторы (Спорт и Выставки) */}
-        <div className="p-2 2xl:p-2.5 flex flex-col gap-1.5 2xl:gap-2 my-auto">
+        <div className="p-2 2xl:p-2.5 flex flex-col justify-between flex-1 min-h-0">
           {/* Сектор 1: Спорт и бега борзых */}
           <Link
             to="/competitions/"
@@ -135,7 +135,7 @@ export function ConceptSymmetricFinal({ stats, showStats }: HomeConceptsProps) {
         </div>
 
         {/* 3. НИЖНЯЯ СТРОКА: Статус архива и кнопки прямого перехода (нижний срез карточки) */}
-        <div className="h-[36px] 2xl:h-[38px] px-3 bg-cream-50/70 border-t border-old-money-200/70 flex items-center justify-between gap-2 shrink-0 box-border">
+        <div className="home-v2-stats-cockpit-footer h-[36px] 2xl:h-[38px] px-3 bg-cream-50/70 border-t border-old-money-200/70 flex items-center justify-between gap-2 shrink-0 box-border">
           <span className="text-[10px] 2xl:text-[10.5px] text-charcoal-600 font-medium flex items-center gap-1 shrink-0">
             <Sparkles className="w-3 h-3 text-camel-600 shrink-0" aria-hidden />
             <span>Архивы и протоколы</span>

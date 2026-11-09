@@ -379,9 +379,12 @@
   background: rgba(255, 255, 255, 0.45) !important;
 }
 
-.home-v2-season-top--compact .home-v2-col {
-  min-width: 0 !important;
-  overflow: hidden !important;
+/* Cards: pixel-perfect identical height for all 3 columns */
+.home-v2-season-top--compact .home-v2-col,
+.home-v2-stats-cockpit {
+  height: 280px !important;
+  min-height: 280px !important;
+  max-height: 280px !important;
   border-radius: 16px !important;
   border: 1px solid rgba(255, 255, 255, 0.92) !important;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.75) 100%) !important;
@@ -392,9 +395,23 @@
     inset 0 0 0 1px rgba(255, 255, 255, 0.70),
     0 4px 20px 0 rgba(60, 40, 15, 0.06),
     0 1px 4px 0 rgba(60, 40, 15, 0.03) !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  overflow: hidden !important;
 }
 
-/* Right statistics cockpit — pixel-perfect mirror of compact columns */
+@media (min-width: 1920px) {
+  .home-v2-season-top--compact .home-v2-col,
+  .home-v2-stats-cockpit {
+    height: 300px !important;
+    min-height: 300px !important;
+    max-height: 300px !important;
+  }
+}
+
+/* Right statistics cockpit tab */
 .home-v2-stats-cockpit-tab {
   height: 34px !important;
   border-radius: 9999px !important;
@@ -412,74 +429,98 @@
   box-sizing: border-box !important;
 }
 
-.home-v2-stats-cockpit {
-  height: 276.3px !important;
-  border-radius: 16px !important;
-  border: 1px solid rgba(255, 255, 255, 0.92) !important;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.75) 100%) !important;
-  backdrop-filter: blur(14px) saturate(160%) !important;
-  -webkit-backdrop-filter: blur(14px) saturate(160%) !important;
-  box-shadow:
-    inset 0 1.5px 1px 0 rgba(255, 255, 255, 1),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.70),
-    0 4px 20px 0 rgba(60, 40, 15, 0.06),
-    0 1px 4px 0 rgba(60, 40, 15, 0.03) !important;
-  box-sizing: border-box !important;
-}
-
-@media (min-width: 1920px) {
-  .home-v2-stats-cockpit {
-    height: 292.5px !important;
-  }
-}
+/* Zone 1: Headers — exactly 32px (34px at 1920px) on ALL columns */
 .home-v2-season-top--compact .home-v2-col-head,
 .home-v2-stats-cockpit .home-v2-col-head {
-  padding: 5px 12px !important;
+  height: 32px !important;
+  min-height: 32px !important;
+  max-height: 32px !important;
+  padding: 0 12px !important;
+  display: flex !important;
+  align-items: center !important;
+  box-sizing: border-box !important;
   font-size: 13px !important;
   line-height: 1.4 !important;
   background: linear-gradient(180deg, rgba(247, 238, 222, 0.70) 0%, rgba(240, 226, 202, 0.45) 100%) !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.8) !important;
   box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.9) !important;
+  flex-shrink: 0 !important;
 }
+
 @media (min-width: 1920px) {
   .home-v2-season-top--compact .home-v2-col-head,
   .home-v2-stats-cockpit .home-v2-col-head {
-    padding: 6px 14px !important;
+    height: 34px !important;
+    min-height: 34px !important;
+    max-height: 34px !important;
+    padding: 0 14px !important;
     font-size: 13.5px !important;
   }
 }
 
-/* Dog rows in compact dashboard mode */
+/* Zone 2: Middle Content — exactly 210px (226px at 1920px) divided across 3 rows = 70px per row */
 .home-v2-season-top--compact a.group {
-  min-height: 4.125rem !important;
-  height: 4.125rem !important;
-  padding-top: 3px !important;
-  padding-bottom: 3px !important;
-}
-@media (min-width: 1920px) {
-  .home-v2-season-top--compact a.group {
-    min-height: 4.375rem !important;
-    height: 4.375rem !important;
-    padding-top: 4px !important;
-    padding-bottom: 4px !important;
-  }
-}
-
-/* Compact breed pagination dots & progress bar — synchronized with right statistics cockpit (height: 36px) */
-.home-v2-season-top--compact .home-breed-pager-wrapper {
-  height: 36px !important;
+  height: 70px !important;
+  min-height: 70px !important;
+  max-height: 70px !important;
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
   box-sizing: border-box !important;
   display: flex !important;
   align-items: center !important;
-  padding: 0 !important;
 }
+
+.home-v2-season-top--compact .donino-home-row {
+  height: 70px !important;
+  min-height: 70px !important;
+  max-height: 70px !important;
+  padding: 2px 12px !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+@media (min-width: 1920px) {
+  .home-v2-season-top--compact a.group,
+  .home-v2-season-top--compact .donino-home-row {
+    height: 75.3px !important;
+    min-height: 75.3px !important;
+    max-height: 75.3px !important;
+  }
+}
+
+/* Zone 3 & 4: Divider and Footers — exactly 36px (38px at 1920px) on ALL columns */
+.home-v2-season-top--compact .home-breed-pager-wrapper,
+.home-v2-stats-cockpit .home-v2-stats-cockpit-footer {
+  height: 36px !important;
+  min-height: 36px !important;
+  max-height: 36px !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  align-items: center !important;
+  padding: 0 12px !important;
+  margin-top: auto !important;
+  border-top: 1px solid rgba(195, 168, 128, 0.40) !important;
+  background: rgba(250, 246, 238, 0.70) !important;
+  flex-shrink: 0 !important;
+}
+
+@media (min-width: 1920px) {
+  .home-v2-season-top--compact .home-breed-pager-wrapper,
+  .home-v2-stats-cockpit .home-v2-stats-cockpit-footer {
+    height: 38px !important;
+    min-height: 38px !important;
+    max-height: 38px !important;
+  }
+}
+
 .home-v2-season-top--compact .home-breed-pager-nav {
   height: 100% !important;
   display: flex !important;
   align-items: center !important;
   padding: 0 !important;
-
 }
+
 .home-v2-season-top--compact .home-breed-pager-dot-btn {
   min-height: 32px !important;
   min-width: 22px !important;

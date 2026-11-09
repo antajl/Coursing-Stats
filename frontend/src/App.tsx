@@ -41,7 +41,7 @@ function App() {
                     backgroundRepeat: 'repeat',
                   }}
                 />
-                <div className="cs-page-shell min-h-screen">
+                <div className="cs-page-shell min-h-screen min-h-dvh flex flex-col">
                   <Nav />
                   <div className="relative z-[1]">
                     <main id="main-content" className="w-full md:max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8 pt-3 pb-5 md:pt-4 flex-1 print:p-0 print:m-0 print:max-w-none">

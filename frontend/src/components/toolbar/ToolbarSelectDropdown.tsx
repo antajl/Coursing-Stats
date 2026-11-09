@@ -67,7 +67,7 @@ export default function ToolbarSelectDropdown({
             <div className="flex shrink-0 justify-center pt-2.5 md:hidden" aria-hidden>
               <span className="h-1 w-10 rounded-full bg-old-money-300" />
             </div>
-            <div className="min-h-0 flex-1 overflow-y-auto overflow-x-hidden overscroll-contain px-2 pb-2 pt-1 md:px-1 md:pb-1 md:pt-1">
+            <div className="min-h-0 flex-1 overflow-y-auto overflow-x-hidden overscroll-contain px-2 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-1 md:px-1 md:pb-1 md:pt-1">
               <div className="space-y-0.5">
                 {options.map((option) => (
                   <button
