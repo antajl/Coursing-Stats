@@ -15,6 +15,11 @@ export function useSubTabSwipe<T extends string>({
   const [isNudging, setIsNudging] = useState(false)
   const trackRef = useRef<HTMLDivElement>(null)
 
+  // One-shot hint tracking: once user touches, clicks, or swipes, hint is killed forever
+  const hasInteractedRef = useRef(false)
+  const nudgeTimerRef = useRef<number | null>(null)
+  const nudgeEndTimerRef = useRef<number | null>(null)
+
   const currentSlide = activeSubTab === subTabs[0] ? 0 : 1
 
   const getSlideOffset = useCallback(
@@ -24,33 +29,50 @@ export function useSubTabSwipe<T extends string>({
     [gapPx],
   )
 
-  const triggerNudge = useCallback(() => {
-    setIsNudging(true)
-    const timer = setTimeout(() => {
-      setIsNudging(false)
-    }, 750)
-    return () => clearTimeout(timer)
+  const cancelNudge = useCallback(() => {
+    if (nudgeTimerRef.current !== null) {
+      clearTimeout(nudgeTimerRef.current)
+      nudgeTimerRef.current = null
+    }
+    if (nudgeEndTimerRef.current !== null) {
+      clearTimeout(nudgeEndTimerRef.current)
+      nudgeEndTimerRef.current = null
+    }
+    setIsNudging(false)
   }, [])
 
+  const triggerNudge = useCallback(() => {
+    if (hasInteractedRef.current) return
+    cancelNudge()
+    setIsNudging(true)
+    nudgeEndTimerRef.current = window.setTimeout(() => {
+      setIsNudging(false)
+      nudgeEndTimerRef.current = null
+    }, 750)
+  }, [cancelNudge])
+
+  // Single-shot invitation nudge on clean initial mount only
   useEffect(() => {
-    const timer = setTimeout(() => {
+    if (hasInteractedRef.current) return
+    nudgeTimerRef.current = window.setTimeout(() => {
       triggerNudge()
     }, 600)
-    return () => clearTimeout(timer)
-  }, [triggerNudge])
+    return () => {
+      cancelNudge()
+    }
+  }, [triggerNudge, cancelNudge])
 
   const handleToggle = useCallback(
     (target: T) => {
+      hasInteractedRef.current = true
+      cancelNudge()
       if (trackRef.current) {
         trackRef.current.style.transition = 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)'
         trackRef.current.style.transform = `translate3d(${target === subTabs[0] ? '0%' : `calc(-100% - ${gapPx}px)`}, 0, 0)`
       }
       setActiveSubTab(target)
-      window.setTimeout(() => {
-        triggerNudge()
-      }, 400)
     },
-    [subTabs, gapPx, triggerNudge],
+    [subTabs, gapPx, cancelNudge],
   )
 
   const touchStartRef = useRef<{ x: number; y: number; time: number } | null>(null)
@@ -58,7 +80,8 @@ export function useSubTabSwipe<T extends string>({
 
   const handleTouchStart = (e: React.TouchEvent) => {
     if (typeof window !== 'undefined' && window.innerWidth >= 768) return
-    setIsNudging(false)
+    hasInteractedRef.current = true
+    cancelNudge()
     const touch = e.touches[0]
     touchStartRef.current = { x: touch.clientX, y: touch.clientY, time: Date.now() }
     gestureLockRef.current = null
@@ -120,9 +143,6 @@ export function useSubTabSwipe<T extends string>({
 
       if (targetSlide !== currentSlide) {
         setActiveSubTab(subTabs[targetSlide])
-        window.setTimeout(() => {
-          triggerNudge()
-        }, 400)
       }
     } else if (track) {
       track.style.transition = 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)'
@@ -131,6 +151,8 @@ export function useSubTabSwipe<T extends string>({
   }
 
   const handleTouchCancel = () => {
+    hasInteractedRef.current = true
+    cancelNudge()
     touchStartRef.current = null
     gestureLockRef.current = null
     if (trackRef.current) {

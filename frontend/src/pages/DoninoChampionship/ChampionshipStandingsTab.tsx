@@ -320,7 +320,6 @@ export default function ChampionshipStandingsTab({
                     type="button"
                     onClick={() => {
                       handleSortModeChange('points')
-                      triggerNudge()
                     }}
                     className={`absolute top-1/2 -translate-y-1/2 right-0 z-20 inline-flex items-center gap-1 rounded-l-full border-y border-l border-camel-400/90 bg-camel-100/80 pl-3 pr-2 py-1.5 text-[11px] font-bold text-camel-950 shadow-md backdrop-blur-md transition-all hover:bg-camel-200 active:scale-95 cursor-pointer touch-manipulation ${
                       isNudging ? 'animate-tab-nudge-left' : ''
@@ -336,7 +335,6 @@ export default function ChampionshipStandingsTab({
                     type="button"
                     onClick={() => {
                       handleSortModeChange('time')
-                      triggerNudge()
                     }}
                     className={`absolute top-1/2 -translate-y-1/2 left-0 z-20 inline-flex items-center gap-1 rounded-r-full border-y border-r border-camel-400/90 bg-camel-100/80 pr-3 pl-2 py-1.5 text-[11px] font-bold text-camel-950 shadow-md backdrop-blur-md transition-all hover:bg-camel-200 active:scale-95 cursor-pointer touch-manipulation ${
                       isNudging ? 'animate-tab-nudge-right' : ''

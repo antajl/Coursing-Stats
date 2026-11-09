@@ -83,22 +83,41 @@ export function useHomeBreedCarousel(slideCount: number): HomeBreedCarouselApi {
   const animTimerRef = useRef<number | null>(null)
   const clickBlockTimerRef = useRef<number | null>(null)
   const [isNudging, setIsNudging] = useState(false)
+  const hasInteractedRef = useRef(false)
+  const nudgeTimerRef = useRef<number | null>(null)
+  const nudgeEndTimerRef = useRef<number | null>(null)
+
+  const cancelNudge = useCallback(() => {
+    if (nudgeTimerRef.current !== null) {
+      clearTimeout(nudgeTimerRef.current)
+      nudgeTimerRef.current = null
+    }
+    if (nudgeEndTimerRef.current !== null) {
+      clearTimeout(nudgeEndTimerRef.current)
+      nudgeEndTimerRef.current = null
+    }
+    setIsNudging(false)
+  }, [])
 
   const triggerNudge = useCallback(() => {
-    if (animState !== 'idle' || dragOffset !== 0) return
+    if (hasInteractedRef.current || animState !== 'idle' || dragOffset !== 0) return
+    cancelNudge()
     setIsNudging(true)
-    setTimeout(() => {
+    nudgeEndTimerRef.current = window.setTimeout(() => {
       setIsNudging(false)
+      nudgeEndTimerRef.current = null
     }, 750)
-  }, [animState, dragOffset])
+  }, [animState, cancelNudge, dragOffset])
 
   useEffect(() => {
-    if (slideCount <= 1) return
-    const timer = setTimeout(() => {
+    if (slideCount <= 1 || hasInteractedRef.current) return
+    nudgeTimerRef.current = window.setTimeout(() => {
       triggerNudge()
     }, 700)
-    return () => clearTimeout(timer)
-  }, [slideCount, triggerNudge])
+    return () => {
+      cancelNudge()
+    }
+  }, [slideCount, triggerNudge, cancelNudge])
 
   const reduceMotion = prefersReducedMotion()
   const autoplay = slideCount > 1 && !reduceMotion
@@ -112,6 +131,8 @@ export function useHomeBreedCarousel(slideCount: number): HomeBreedCarouselApi {
 
   const go = useCallback(
     (nextIdx: number, explicitDir?: 1 | -1) => {
+      hasInteractedRef.current = true
+      cancelNudge()
       if (slideCount <= 1 || animState !== 'idle') return
       const normalizedTarget = ((nextIdx % slideCount) + slideCount) % slideCount
       if (normalizedTarget === index) return
@@ -201,8 +222,9 @@ export function useHomeBreedCarousel(slideCount: number): HomeBreedCarouselApi {
 
   const onTouchStart = useCallback(
     (e: TouchEvent<HTMLDivElement>) => {
+      hasInteractedRef.current = true
+      cancelNudge()
       if (slideCount <= 1 || e.touches.length !== 1 || animState !== 'idle') return
-      setIsNudging(false)
       const touch = e.touches[0]
       touchStartX.current = touch.clientX
       touchStartY.current = touch.clientY

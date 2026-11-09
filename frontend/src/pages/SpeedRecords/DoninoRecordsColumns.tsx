@@ -1,4 +1,4 @@
-import { useState, useMemo, useRef, useEffect } from 'react'
+import { useState, useMemo, useRef, useEffect, useCallback } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import DoninoListRecordRow from './DoninoListRecordRow'
 import DoninoColumnPlaque, { DoninoColumnShell } from './DoninoColumnPlaque'
@@ -53,24 +53,44 @@ export default function DoninoRecordsColumns({
   const [dragOffset, setDragOffset] = useState<number | null>(null)
   const [isTransitioning, setIsTransitioning] = useState(false)
   const [isNudging, setIsNudging] = useState(false)
+  const hasInteractedRef = useRef(false)
+  const nudgeTimerRef = useRef<number | null>(null)
+  const nudgeEndTimerRef = useRef<number | null>(null)
   const hadMovedRef = useRef(false)
   const transitionTimeoutRef = useRef<number | null>(null)
 
-  const triggerNudge = () => {
-    if (dragOffset !== null && dragOffset !== 0) return
-    setIsNudging(true)
-    setTimeout(() => {
-      setIsNudging(false)
-    }, 750)
-  }
+  const cancelNudge = useCallback(() => {
+    if (nudgeTimerRef.current !== null) {
+      clearTimeout(nudgeTimerRef.current)
+      nudgeTimerRef.current = null
+    }
+    if (nudgeEndTimerRef.current !== null) {
+      clearTimeout(nudgeEndTimerRef.current)
+      nudgeEndTimerRef.current = null
+    }
+    setIsNudging(false)
+  }, [])
 
-  // Auto-play invitation nudge on page load (after 600ms)
+  const triggerNudge = useCallback(() => {
+    if (hasInteractedRef.current || (dragOffset !== null && dragOffset !== 0)) return
+    cancelNudge()
+    setIsNudging(true)
+    nudgeEndTimerRef.current = window.setTimeout(() => {
+      setIsNudging(false)
+      nudgeEndTimerRef.current = null
+    }, 750)
+  }, [cancelNudge, dragOffset])
+
+  // Auto-play invitation nudge on page load (after 600ms) only if not interacted
   useEffect(() => {
-    const timer = setTimeout(() => {
+    if (hasInteractedRef.current) return
+    nudgeTimerRef.current = window.setTimeout(() => {
       triggerNudge()
     }, 600)
-    return () => clearTimeout(timer)
-  }, [])
+    return () => {
+      cancelNudge()
+    }
+  }, [triggerNudge, cancelNudge])
 
   // Touch handlers for mobile swipe
   const touchStartRef = useRef<{ x: number; y: number; time: number } | null>(null)
@@ -78,7 +98,8 @@ export default function DoninoRecordsColumns({
 
   const handleTouchStart = (e: React.TouchEvent) => {
     if (typeof window !== 'undefined' && window.innerWidth >= 1024) return
-    setIsNudging(false)
+    hasInteractedRef.current = true
+    cancelNudge()
     const touch = e.touches[0]
     touchStartRef.current = { x: touch.clientX, y: touch.clientY, time: Date.now() }
     gestureLockRef.current = null
@@ -204,8 +225,9 @@ export default function DoninoRecordsColumns({
       <button
         type="button"
         onClick={() => {
+          hasInteractedRef.current = true
+          cancelNudge()
           setMobileTab('coursing')
-          triggerNudge()
         }}
         className={`lg:hidden absolute top-1/2 -translate-y-1/2 right-0 z-20 inline-flex items-center gap-1 rounded-l-full border-y border-l border-camel-400/90 bg-camel-100/80 pl-3 pr-2 py-1 text-[11px] font-bold text-camel-950 shadow-md backdrop-blur-md transition-all hover:bg-camel-200 active:scale-95 cursor-pointer touch-manipulation ${
           isNudging ? 'animate-tab-nudge-left' : ''
@@ -230,8 +252,9 @@ export default function DoninoRecordsColumns({
       <button
         type="button"
         onClick={() => {
+          hasInteractedRef.current = true
+          cancelNudge()
           setMobileTab('speed')
-          triggerNudge()
         }}
         className={`lg:hidden absolute top-1/2 -translate-y-1/2 left-0 z-20 inline-flex items-center gap-1 rounded-r-full border-y border-r border-camel-400/90 bg-camel-100/80 pr-3 pl-2 py-1 text-[11px] font-bold text-camel-950 shadow-md backdrop-blur-md transition-all hover:bg-camel-200 active:scale-95 cursor-pointer touch-manipulation ${
           isNudging ? 'animate-tab-nudge-right' : ''

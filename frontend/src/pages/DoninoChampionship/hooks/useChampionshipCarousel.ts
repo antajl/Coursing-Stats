@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect, useCallback } from 'react'
 
 export type SortMode = 'time' | 'points'
 
@@ -6,6 +6,9 @@ export function useChampionshipCarousel() {
   const [sortMode, setSortMode] = useState<SortMode>('time')
   const [isTransitioning, setIsTransitioning] = useState(false)
   const [isNudging, setIsNudging] = useState(false)
+  const hasInteractedRef = useRef(false)
+  const nudgeTimerRef = useRef<number | null>(null)
+  const nudgeEndTimerRef = useRef<number | null>(null)
 
   const hadMovedRef = useRef(false)
   const transitionTimeoutRef = useRef<number | null>(null)
@@ -13,20 +16,38 @@ export function useChampionshipCarousel() {
 
   const activeSlide = sortMode === 'time' ? 0 : 1
 
-  const triggerNudge = () => {
-    setIsNudging(true)
-    setTimeout(() => {
-      setIsNudging(false)
-    }, 750)
-  }
+  const cancelNudge = useCallback(() => {
+    if (nudgeTimerRef.current !== null) {
+      clearTimeout(nudgeTimerRef.current)
+      nudgeTimerRef.current = null
+    }
+    if (nudgeEndTimerRef.current !== null) {
+      clearTimeout(nudgeEndTimerRef.current)
+      nudgeEndTimerRef.current = null
+    }
+    setIsNudging(false)
+  }, [])
 
-  // Auto-play gentle invitation nudge on page load (after 600ms)
+  const triggerNudge = useCallback(() => {
+    if (hasInteractedRef.current) return
+    cancelNudge()
+    setIsNudging(true)
+    nudgeEndTimerRef.current = window.setTimeout(() => {
+      setIsNudging(false)
+      nudgeEndTimerRef.current = null
+    }, 750)
+  }, [cancelNudge])
+
+  // Auto-play gentle invitation nudge on page load (after 600ms) only if not interacted
   useEffect(() => {
-    const timer = setTimeout(() => {
+    if (hasInteractedRef.current) return
+    nudgeTimerRef.current = window.setTimeout(() => {
       triggerNudge()
     }, 600)
-    return () => clearTimeout(timer)
-  }, [])
+    return () => {
+      cancelNudge()
+    }
+  }, [triggerNudge, cancelNudge])
 
   // Mobile swipe gesture with real-time direct GPU drag (0 React re-renders during swipe!)
   const touchStartRef = useRef<{ x: number; y: number; time: number } | null>(null)
@@ -34,7 +55,8 @@ export function useChampionshipCarousel() {
 
   const handleTouchStart = (e: React.TouchEvent) => {
     if (typeof window !== 'undefined' && window.innerWidth >= 1024) return
-    setIsNudging(false)
+    hasInteractedRef.current = true
+    cancelNudge()
     const touch = e.touches[0]
     touchStartRef.current = { x: touch.clientX, y: touch.clientY, time: Date.now() }
     gestureLockRef.current = null
@@ -110,7 +132,6 @@ export function useChampionshipCarousel() {
       setIsTransitioning(true)
       if (targetSlide !== activeSlide) {
         setSortMode(targetSlide === 0 ? 'time' : 'points')
-        triggerNudge()
       }
 
       transitionTimeoutRef.current = window.setTimeout(() => {
@@ -131,6 +152,8 @@ export function useChampionshipCarousel() {
   }
 
   const handleTouchCancel = () => {
+    hasInteractedRef.current = true
+    cancelNudge()
     touchStartRef.current = null
     gestureLockRef.current = null
     if (trackRef.current) {
@@ -142,6 +165,8 @@ export function useChampionshipCarousel() {
 
   const handleSortModeChange = (mode: SortMode) => {
     if (mode === sortMode) return
+    hasInteractedRef.current = true
+    cancelNudge()
     setIsTransitioning(true)
     setSortMode(mode)
     if (transitionTimeoutRef.current) {

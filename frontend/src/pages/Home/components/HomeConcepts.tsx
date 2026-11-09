@@ -41,16 +41,18 @@ export function ConceptSymmetricFinal({ stats, showStats }: HomeConceptsProps) {
       {/* 2. ТЕЛО КАРТОЧКИ: Точно совпадает по высоте и стилю с левыми колонками (.home-v2-col) */}
       <div className="home-v2-stats-cockpit flex flex-col justify-between overflow-hidden relative">
         {/* Шапка карточки — точная копия плашки над подиумами (home-v2-col-head) */}
-        <div className="home-v2-col-head home-v2-col-head--tabs !px-3 shrink-0">
-          <span className="font-serif font-bold text-camel-900 text-xs 2xl:text-[13px] shrink-0">
-            Статистика
-          </span>
-          <span className="text-[11px] font-bold text-camel-800 shrink-0">
-            Спорт и выставки
-          </span>
-          <span className="text-[10.5px] font-normal text-old-money-600 shrink-0">
-            с 2015 года
-          </span>
+        <div className="home-v2-col-head home-v2-col-head--tabs !flex-nowrap gap-1.5 sm:gap-2 relative shrink-0">
+          <span className="shrink-0">Статистика</span>
+          <div className="flex min-w-0 flex-1 items-center justify-center">
+            <span className="truncate min-w-0 text-[12.5px] font-bold text-camel-800">
+              Спорт и выставки
+            </span>
+          </div>
+          <div className="shrink-0 flex items-center gap-1.5 ml-auto">
+            <span className="shrink-0 text-[11px] font-normal text-old-money-600">
+              с 2015 года
+            </span>
+          </div>
         </div>
 
         {/* Внутренние белые секторы (Спорт и Выставки) */}

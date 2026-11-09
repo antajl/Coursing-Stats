@@ -120,24 +120,21 @@ function SeasonTopSectionInner({
       <h2 className="sr-only">Лидеры сезона и рейтинги</h2>
       {/* Верхняя полоса: Единая парящая плашка Physical Glass (h=34px), зеркально отражающая правый кокпит «База данных и реестр» */}
       <div
-        className="home-v2-stats-cockpit-tab mb-2.5 flex items-center gap-2 sm:gap-2.5 text-xs select-none"
+        className="home-v2-stats-cockpit-tab mb-2.5 relative flex items-center justify-between text-xs select-none"
         style={{ height: '34px', boxSizing: 'border-box' }}
       >
-        {/* Заголовок виджета (зеркально как справа «База данных и реестр») */}
+        {/* Заголовок виджета слева (зеркально как справа «База данных и реестр») */}
         <span className="text-[11.5px] font-bold text-camel-900 uppercase tracking-wider flex items-center gap-1.5 shrink-0 pl-0.5 sm:pl-1">
           <Trophy className="w-3.5 h-3.5 text-camel-700" aria-hidden />
           <span className="hidden xs:inline">Лидеры сезона</span>
           <span className="xs:hidden">Лидеры</span>
         </span>
 
-        {/* Тонкий вертикальный разделитель */}
-        <span className="w-px h-3.5 bg-old-money-300/70 shrink-0" aria-hidden />
-
-        {/* Переключатель вкладок — без вложенных треков-пилюль, просто аккуратные кнопки в один ряд */}
+        {/* Переключатель вкладок строго по центру полосы */}
         <div
           role="tablist"
           aria-label="Разделы рейтингов и достижений"
-          className="flex items-center gap-1 sm:gap-1.5 shrink-0"
+          className="absolute left-1/2 -translate-x-1/2 flex items-center gap-1 sm:gap-1.5"
         >
           {mainTabs.map((tab) => {
             const isActive = activeTab === tab.id
@@ -161,7 +158,7 @@ function SeasonTopSectionInner({
         </div>
 
         {/* Мета-информация справа (зеркально как «Россия · 240+ пород» справа) */}
-        <span className="ml-auto text-[11px] font-medium text-charcoal-600 hidden sm:flex items-center gap-1 shrink-0 pr-1">
+        <span className="text-[11px] font-medium text-charcoal-600 hidden sm:flex items-center gap-1 shrink-0 pr-1">
           <Sparkles className="w-3 h-3 text-camel-700" aria-hidden />
           <span>2026 · Топ-3 по породам</span>
         </span>
