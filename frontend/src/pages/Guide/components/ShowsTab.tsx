@@ -21,6 +21,7 @@ import { GUIDE_SHOWS_FAQS } from '../guideFaqs'
 import { executeSmartShowSearch } from '../smartShowSearch'
 import {
   AbbreviationsDropdown,
+  GuideSearchHeader,
   GuideTopicsTicker,
   OfficialSourcesList,
   RefTag,
@@ -333,35 +334,13 @@ export default function ShowsTab() {
 
   return (
     <div className="space-y-6">
-      {/* ИНТЕЛЛЕКТУАЛЬНЫЙ ПОИСК В ШАПКЕ */}
-      <div className="rounded-2xl border border-old-money-200 bg-linear-to-b from-white to-cream-50/70 p-4 sm:p-5 shadow-2xs">
-        <div className="relative">
-          <Search className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-charcoal-400" />
-          <input
-            type="text"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Задайте вопрос или введите слово (например: cacib, возраст щенка, bob, чр, ленты, bis)..."
-            className="w-full rounded-xl border border-old-money-200 bg-white py-3 pl-10 pr-10 text-xs sm:text-sm font-medium text-charcoal-800 placeholder-charcoal-400 shadow-2xs transition-all hover:border-camel-300 focus:border-camel-400 focus:outline-none focus:ring-2 focus:ring-camel-400/20"
-          />
-          {searchQuery && (
-            <button
-              type="button"
-              onClick={() => setSearchQuery('')}
-              className="absolute inset-y-0 right-0 flex items-center pr-3.5 text-charcoal-400 hover:text-charcoal-700 cursor-pointer"
-              aria-label="Очистить поиск"
-            >
-              <X className="h-4 w-4" />
-            </button>
-          )}
-        </div>
-
-        {/* Бесконечно движущаяся строка частых вопросов в 1 ряд */}
-        <GuideTopicsTicker
-          items={SHOW_POPULAR_QUERIES}
-          onSelect={(query) => setSearchQuery(query)}
-        />
-      </div>
+      {/* ЕДИНЫЙ ПОИСК И ЧАСТЫЕ ТЕМЫ */}
+      <GuideSearchHeader
+        searchQuery={searchQuery}
+        onSearchChange={setSearchQuery}
+        placeholder="Задайте вопрос или введите слово (например: cacib, возраст щенка, bob, чр, ленты, bis)..."
+        popularQueries={SHOW_POPULAR_QUERIES}
+      />
 
       {/* ПРЯМОЙ ОТВЕТ НА ВОПРОС (DIRECT ANSWER CARD) */}
       {searchResult.matchedDirectAnswer && (

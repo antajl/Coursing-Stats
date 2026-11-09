@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import {
   Star as StarIcon,
   Crown,
@@ -71,6 +71,16 @@ export function DogProfileHeader({
   const [loadingFavorite, setLoadingFavorite] = useState(false)
   const dogId = String(dog.id)
   const favorite = isFavorite(dogId)
+  const [isPhotoOpen, setIsPhotoOpen] = useState(false)
+
+  useEffect(() => {
+    if (!isPhotoOpen) return
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setIsPhotoOpen(false)
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [isPhotoOpen])
 
   const handleToggleFavorite = async () => {
     if (loadingFavorite) return
@@ -180,34 +190,6 @@ export function DogProfileHeader({
   return (
     <div className="relative mb-6">
       <div className="relative min-w-0 overflow-hidden rounded-2xl border border-old-money-200/80 bg-white p-4 sm:p-5 md:p-6 shadow-2xs">
-        {/* Фоновое фото собаки из Breed Archive — благородный мягкий фон в стиле Old Money */}
-        {dog.photo_url && (
-          <div
-            className="pointer-events-none absolute inset-0 overflow-hidden select-none"
-            aria-hidden="true"
-          >
-            <div className="absolute right-0 top-0 bottom-0 w-full sm:w-1/2 md:w-5/12 overflow-hidden">
-              <img
-                src={dog.photo_url}
-                alt=""
-                role="presentation"
-                referrerPolicy="no-referrer"
-                className="h-full w-full object-cover object-center sm:object-right opacity-40 sm:opacity-50 filter contrast-105"
-                loading="lazy"
-                decoding="async"
-                onError={(e) => {
-                  console.warn('[DogProfileHeader] Photo failed to load:', dog.photo_url)
-                  const target = e.currentTarget
-                  if (target.parentElement) target.parentElement.style.display = 'none'
-                }}
-              />
-              {/* Мягкий градиент слева, плавно растворяющий фото в белом фоне карточки */}
-              <div className="absolute inset-0 bg-gradient-to-r from-white via-white/40 to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-t from-white/50 via-transparent to-white/30" />
-            </div>
-          </div>
-        )}
-
         <div className="relative z-10">
           {/* РЯД 1: Сетка [Кличка (minmax 1fr)] + [Действия (auto)] */}
         <div className="grid grid-cols-1 sm:grid-cols-[minmax(0,1fr)_auto] gap-3 sm:gap-4 items-start">
@@ -229,45 +211,73 @@ export function DogProfileHeader({
             ) : null}
           </div>
 
-          {/* Действия: компактные кнопки справа вверху (на мобильном переносятся) */}
-          <div className="flex items-center gap-2 self-start shrink-0">
-            <button
-              type="button"
-              onClick={handleToggleFavorite}
-              disabled={loadingFavorite}
-              className={`inline-flex items-center gap-1.5 rounded-xl border px-3 py-1.5 text-xs font-semibold transition-all disabled:opacity-50 min-h-[36px] ${
-                favorite
-                  ? 'border-amber-400 bg-amber-50 text-amber-800 hover:bg-amber-100'
-                  : 'border-old-money-200/90 bg-cream-50/60 text-charcoal-700 hover:bg-cream-100 hover:text-charcoal-900'
-              }`}
-              aria-label={favorite ? 'Удалить из избранного' : 'Добавить в избранное'}
-              title={favorite ? 'Удалить из избранного' : 'Добавить в избранное'}
-            >
-              <StarIcon className={`h-3.5 w-3.5 shrink-0 ${favorite ? 'fill-current text-amber-500' : 'text-charcoal-400'}`} aria-hidden />
-              <span>{favorite ? 'В избранном' : 'В избранное'}</span>
-            </button>
+          {/* Действия: компактные кнопки справа вверху + миниатюра фото собаки */}
+          <div className="flex items-center gap-2.5 self-start shrink-0">
+            <div className="flex items-center gap-2">
+              <button
+                type="button"
+                onClick={handleToggleFavorite}
+                disabled={loadingFavorite}
+                className={`inline-flex items-center gap-1.5 rounded-xl border px-3 py-1.5 text-xs font-semibold transition-all disabled:opacity-50 min-h-[36px] ${
+                  favorite
+                    ? 'border-amber-400 bg-amber-50 text-amber-800 hover:bg-amber-100'
+                    : 'border-old-money-200/90 bg-cream-50/60 text-charcoal-700 hover:bg-cream-100 hover:text-charcoal-900'
+                }`}
+                aria-label={favorite ? 'Удалить из избранного' : 'Добавить в избранное'}
+                title={favorite ? 'Удалить из избранного' : 'Добавить в избранное'}
+              >
+                <StarIcon className={`h-3.5 w-3.5 shrink-0 ${favorite ? 'fill-current text-amber-500' : 'text-charcoal-400'}`} aria-hidden />
+                <span>{favorite ? 'В избранном' : 'В избранное'}</span>
+              </button>
 
-            <a
-              href={`https://t.me/coursing_stats_bot?start=dog_${dog.id}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 rounded-xl border border-old-money-200/90 bg-cream-50/60 px-3 py-1.5 text-xs font-semibold text-charcoal-700 hover:bg-cream-100 hover:text-charcoal-900 transition-all min-h-[36px]"
-              aria-label="Отслеживать собаку в Telegram"
-              title="Отслеживать собаку в Telegram: результаты и место в топе"
-            >
-              <img
-                src={TELEGRAM_FAVICON}
-                alt=""
-                role="presentation"
-                aria-hidden="true"
-                width={14}
-                height={14}
-                className="h-3.5 w-3.5 shrink-0 rounded-full"
-                loading="lazy"
-                decoding="async"
-              />
-              <span>Отслеживать</span>
-            </a>
+              <a
+                href={`https://t.me/coursing_stats_bot?start=dog_${dog.id}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 rounded-xl border border-old-money-200/90 bg-cream-50/60 px-3 py-1.5 text-xs font-semibold text-charcoal-700 hover:bg-cream-100 hover:text-charcoal-900 transition-all min-h-[36px]"
+                aria-label="Отслеживать собаку в Telegram"
+                title="Отслеживать собаку в Telegram: результаты и место в топе"
+              >
+                <img
+                  src={TELEGRAM_FAVICON}
+                  alt=""
+                  role="presentation"
+                  aria-hidden="true"
+                  width={14}
+                  height={14}
+                  className="h-3.5 w-3.5 shrink-0 rounded-full"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span>Отслеживать</span>
+              </a>
+            </div>
+
+            {dog.photo_url && (
+              <button
+                type="button"
+                onClick={() => setIsPhotoOpen(true)}
+                className="group relative h-16 w-20 sm:h-20 sm:w-26 shrink-0 overflow-hidden rounded-xl border border-cream-200/90 bg-cream-50/70 p-1 shadow-2xs transition-all hover:border-camel-400 hover:shadow-xs focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-camel-400 cursor-pointer"
+                aria-label={`Увеличить фото ${primary}`}
+                title="Нажмите, чтобы открыть фото в полном размере"
+              >
+                <img
+                  src={dog.photo_url}
+                  alt={primary}
+                  referrerPolicy="no-referrer"
+                  className="h-full w-full object-contain rounded-lg transition-transform duration-200 group-hover:scale-105"
+                  loading="lazy"
+                  decoding="async"
+                  onError={(e) => {
+                    const target = e.currentTarget;
+                    if (target.parentElement) target.parentElement.style.display = 'none';
+                  }}
+                />
+                <span className="pointer-events-none absolute bottom-1 right-1 rounded-md bg-charcoal-900/60 p-0.5 text-white opacity-0 transition-opacity group-hover:opacity-100 backdrop-blur-xs">
+                  <Maximize2 className="h-2.5 w-2.5" aria-hidden />
+                </span>
+              </button>
+            )}
           </div>
         </div>
 
@@ -345,6 +355,59 @@ export function DogProfileHeader({
         )}
         </div>
       </div>
-    </div>
+    
+      {/* Lightbox модальное окно для полноразмерного фото */}
+      {isPhotoOpen && dog.photo_url && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-charcoal-900/80 p-4 backdrop-blur-sm transition-opacity"
+          onClick={() => setIsPhotoOpen(false)}
+          role="dialog"
+          aria-modal="true"
+          aria-label={`Фотография ${primary}`}
+        >
+          <div
+            className="relative max-h-[90vh] max-w-[95vw] sm:max-w-3xl flex flex-col items-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Кнопка закрытия */}
+            <button
+              type="button"
+              onClick={() => setIsPhotoOpen(false)}
+              className="absolute -top-11 right-0 inline-flex items-center gap-1.5 rounded-full bg-white/20 px-3 py-1 text-xs font-semibold text-white hover:bg-white/30 backdrop-blur-xs transition-colors cursor-pointer"
+              aria-label="Закрыть фото"
+            >
+              <X className="h-4 w-4" aria-hidden />
+              <span>Закрыть</span>
+            </button>
+
+            {/* Картинка */}
+            <div className="overflow-hidden rounded-2xl border border-white/20 bg-charcoal-900 shadow-2xl">
+              <img
+                src={dog.photo_url}
+                alt={primary}
+                referrerPolicy="no-referrer"
+                className="max-h-[75vh] w-auto max-w-full object-contain"
+              />
+            </div>
+
+            {/* Подпись под фото */}
+            <div className="mt-3 flex items-center justify-between w-full text-xs text-white/80 px-1">
+              <span className="font-semibold text-white">{primary}</span>
+              {dog.pedigree_url && (
+                <a
+                  href={dog.pedigree_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-camel-300 hover:text-white transition-colors"
+                >
+                  <span>The Breed Archive</span>
+                  <ExternalLink className="h-3 w-3" aria-hidden />
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+</div>
   )
 }

@@ -569,3 +569,53 @@ export function GuideTopicsTicker({
     </div>
   )
 }
+
+/**
+ * Единый блок поиска и частых тем для разделов справочника.
+ * Строго одинаковый размер, отступы и отсутствие внешней рамки (border).
+ */
+export function GuideSearchHeader({
+  searchQuery,
+  onSearchChange,
+  placeholder,
+  popularQueries,
+}: {
+  searchQuery: string
+  onSearchChange: (query: string) => void
+  placeholder: string
+  popularQueries: readonly { label: string; query: string }[]
+}) {
+  return (
+    <div className="w-full">
+      {/* Поисковое поле ввода */}
+      <div className="relative">
+        <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3.5 text-charcoal-400">
+          <Search className="h-4 w-4" aria-hidden />
+        </div>
+        <input
+          type="text"
+          value={searchQuery}
+          onChange={(e) => onSearchChange(e.target.value)}
+          placeholder={placeholder}
+          className="w-full rounded-xl border border-old-money-200 bg-white py-3 pl-10 pr-10 text-xs sm:text-sm font-medium text-charcoal-800 placeholder-charcoal-400 shadow-2xs transition-all hover:border-camel-300 focus:border-camel-400 focus:outline-none focus:ring-2 focus:ring-camel-400/20"
+        />
+        {searchQuery && (
+          <button
+            type="button"
+            onClick={() => onSearchChange('')}
+            className="absolute inset-y-0 right-0 flex items-center pr-3.5 text-charcoal-400 hover:text-charcoal-700 cursor-pointer"
+            aria-label="Очистить поиск"
+          >
+            <X className="h-4 w-4" />
+          </button>
+        )}
+      </div>
+
+      {/* Бесконечно движущаяся строка частых вопросов в 1 ряд */}
+      <GuideTopicsTicker
+        items={popularQueries}
+        onSelect={onSearchChange}
+      />
+    </div>
+  )
+}
