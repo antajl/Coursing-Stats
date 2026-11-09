@@ -101,7 +101,7 @@ function ToolbarFiltersDropdownInner({
           <button
             type="button"
             aria-label="Закрыть фильтры"
-            className="fixed inset-0 z-40 bg-charcoal-900/40 md:hidden"
+            className="fixed inset-0 z-40 bg-charcoal-900/40 md:hidden cursor-pointer touch-manipulation"
             onClick={() => setOpenState(false)}
             onKeyDown={(e) => {
               if (e.key === 'Escape') {

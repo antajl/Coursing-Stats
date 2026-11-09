@@ -151,12 +151,24 @@ export default function QuickSearchModal({ isOpen, onClose }: QuickSearchModalPr
       role="dialog"
       aria-modal="true"
       aria-label="Быстрый поиск и навигация"
-      className="fixed inset-0 z-[100] flex items-start justify-center pt-[8vh] sm:pt-[11vh] px-3 sm:px-4 bg-charcoal-900/40 backdrop-blur-sm transition-all"
-      onClick={(e) => {
-        if (e.target === e.currentTarget) onClose()
+      className="fixed inset-0 z-[100] flex items-start justify-center pt-[max(1rem,env(safe-area-inset-top,1rem))] sm:pt-[10vh] px-3 sm:px-4 bg-charcoal-950/75 select-none transition-all"
+      onTouchMove={(e) => {
+        if (e.target === e.currentTarget) e.preventDefault()
       }}
     >
-      <div className="w-full max-w-xl bg-cream-50 rounded-2xl shadow-[0_20px_50px_-10px_rgba(43,37,32,0.35)] border border-old-money-200 overflow-hidden flex flex-col will-change-transform animate-in fade-in zoom-in-95 duration-150">
+      {/* Полноэкранный оверлей-кнопка для надежного закрытия по тапу в любом месте фона на iOS Safari */}
+      <button
+        type="button"
+        aria-label="Закрыть поиск"
+        className="absolute inset-0 h-full w-full cursor-pointer bg-transparent border-none p-0 -z-10 focus:outline-hidden"
+        onClick={onClose}
+        tabIndex={-1}
+      />
+
+      <div
+        className="w-full max-w-xl bg-cream-50 rounded-2xl shadow-[0_20px_50px_-10px_rgba(43,37,32,0.35)] border border-old-money-200 overflow-hidden flex flex-col will-change-transform animate-in fade-in zoom-in-95 duration-150"
+        onClick={(e) => e.stopPropagation()}
+      >
         {/* Search Input Bar */}
         <div className="relative flex items-center px-3.5 sm:px-4 py-3 sm:py-3.5 border-b border-old-money-200 bg-white">
           <Icons.search className="w-4 h-4 sm:w-5 sm:h-5 text-camel-700 shrink-0 mr-2.5 sm:mr-3" aria-hidden />
@@ -178,20 +190,29 @@ export default function QuickSearchModal({ isOpen, onClose }: QuickSearchModalPr
                   setQuery('')
                   inputRef.current?.focus()
                 }}
-                className="p-1 rounded text-charcoal-400 hover:text-charcoal-700 transition-colors cursor-pointer"
+                className="p-1.5 rounded-lg text-charcoal-400 hover:text-charcoal-700 hover:bg-cream-100 transition-colors cursor-pointer min-h-[36px] min-w-[36px] flex items-center justify-center"
                 aria-label="Очистить"
               >
                 <Icons.close className="w-4 h-4" />
               </button>
             )}
-            <kbd className="hidden sm:inline-flex items-center text-[10px] font-mono font-medium px-2 py-0.5 rounded-md border border-old-money-200 bg-old-money-100/70 text-charcoal-500 select-none shadow-2xs">
-              ESC
-            </kbd>
+            <button
+              type="button"
+              onClick={onClose}
+              className="px-2 sm:px-2 py-1.5 rounded-lg text-xs font-semibold text-charcoal-600 hover:text-charcoal-900 hover:bg-cream-100 border border-old-money-200/80 transition-colors cursor-pointer min-h-[36px] flex items-center gap-1 active:scale-95"
+              aria-label="Закрыть поиск"
+            >
+              <Icons.close className="w-3.5 h-3.5 sm:hidden" />
+              <span className="sm:hidden text-xs">Закрыть</span>
+              <kbd className="hidden sm:inline-flex items-center text-[10px] font-mono font-medium px-1.5 py-0.5 rounded border border-old-money-200 bg-old-money-100/70 text-charcoal-500 select-none shadow-2xs">
+                ESC
+              </kbd>
+            </button>
           </div>
         </div>
 
         {/* Results Container */}
-        <div ref={listRef} className="max-h-[58vh] overflow-y-auto overscroll-contain py-2 divide-y divide-old-money-100">
+        <div ref={listRef} className="max-h-[min(58dvh,520px)] overflow-y-auto overscroll-contain py-2 divide-y divide-old-money-100">
           {!query.trim() || allItems.length === 0 ? (
             <QuickSearchEmptyState
               query={query}

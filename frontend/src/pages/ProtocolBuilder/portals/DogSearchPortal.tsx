@@ -24,7 +24,13 @@ export const DogSearchPortal: React.FC<DogSearchPortalProps> = ({
 
   return createPortal(
     <>
-      <div className="fixed inset-0 z-50" onClick={onClose} />
+      <button
+        type="button"
+        aria-label="Закрыть"
+        className="fixed inset-0 z-50 bg-transparent border-none p-0 cursor-pointer touch-manipulation"
+        onClick={onClose}
+        tabIndex={-1}
+      />
       <div
         data-portal-menu
         className="fixed z-50 bg-cream-50 rounded-xl border border-om-300 shadow-2xl py-1 divide-y divide-om-100 max-h-56 overflow-y-auto ring-1 ring-char-900/10 text-xs animate-in fade-in zoom-in-95 duration-100"

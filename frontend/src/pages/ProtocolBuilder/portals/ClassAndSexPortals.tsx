@@ -58,7 +58,13 @@ export const ClassAndSexPortals: React.FC<ClassAndSexPortalsProps> = ({
       {activeClassMenu && targetClassCat &&
         createPortal(
           <>
-            <div className="fixed inset-0 z-50" onClick={onCloseClassMenu} />
+            <button
+              type="button"
+              aria-label="Закрыть"
+              className="fixed inset-0 z-50 bg-transparent border-none p-0 cursor-pointer touch-manipulation"
+              onClick={onCloseClassMenu}
+              tabIndex={-1}
+            />
             <div
               data-portal-menu
               className="fixed z-50 w-52 bg-cream-50 rounded-xl border border-om-300 shadow-2xl p-1 text-xs ring-1 ring-char-900/10 animate-in fade-in zoom-in-95 duration-100"
@@ -136,7 +142,13 @@ export const ClassAndSexPortals: React.FC<ClassAndSexPortalsProps> = ({
       {activeCategorySexMenu && targetCategorySexCat &&
         createPortal(
           <>
-            <div className="fixed inset-0 z-50" onClick={onCloseCategorySexMenu} />
+            <button
+              type="button"
+              aria-label="Закрыть"
+              className="fixed inset-0 z-50 bg-transparent border-none p-0 cursor-pointer touch-manipulation"
+              onClick={onCloseCategorySexMenu}
+              tabIndex={-1}
+            />
             <div
               data-portal-menu
               className="fixed z-50 w-36 bg-cream-50 rounded-xl border border-om-300 shadow-2xl p-1 text-xs ring-1 ring-char-900/10 animate-in fade-in zoom-in-95 duration-100"
@@ -181,7 +193,13 @@ export const ClassAndSexPortals: React.FC<ClassAndSexPortalsProps> = ({
       {activeDogSexMenu && targetDogSexCat && targetDog &&
         createPortal(
           <>
-            <div className="fixed inset-0 z-50" onClick={onCloseDogSexMenu} />
+            <button
+              type="button"
+              aria-label="Закрыть"
+              className="fixed inset-0 z-50 bg-transparent border-none p-0 cursor-pointer touch-manipulation"
+              onClick={onCloseDogSexMenu}
+              tabIndex={-1}
+            />
             <div
               data-portal-menu
               className="fixed z-50 w-32 bg-cream-50 rounded-xl border border-om-300 shadow-2xl p-1 text-xs ring-1 ring-char-900/10 animate-in fade-in zoom-in-95 duration-100"

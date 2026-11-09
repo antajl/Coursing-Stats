@@ -118,12 +118,14 @@ export function NavMobile({
             ref={containerRef}
             className="fixed inset-0 z-[999] md:hidden invisible pointer-events-none"
           >
-            {/* Затемняющий оверлей с мягким blur */}
+            {/* Затемняющий оверлей с поддержкой тапов на iOS Safari */}
             <div
               ref={overlayRef}
-              className="fixed inset-0 bg-charcoal-950/45 backdrop-blur-[2px] opacity-0"
+              role="button"
+              tabIndex={-1}
+              aria-label="Закрыть меню"
+              className="fixed inset-0 bg-charcoal-950/45 opacity-0 cursor-pointer touch-manipulation"
               onClick={onCloseMobileMenu}
-              aria-hidden="true"
             />
 
             {/* Выдвижная боковая шторка (Drawer) */}

@@ -1,7 +1,8 @@
 import { Link, useLocation } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Star } from 'lucide-react'
 import { useFavorites } from '../../hooks/useFavorites'
+import { useClickOutside } from '../../hooks/useClickOutside'
 import { getDogProfileFile } from '../../lib/staticData/dogs'
 import { parseDogName } from '../../lib/dogName'
 import { displayBreed } from '../../lib/breedMapping'
@@ -25,6 +26,12 @@ export default function FavoritesCapsule() {
   const { activeId, favoriteIds, ready, setActive, getMeta, setMeta } = useFavorites()
   const [open, setOpen] = useState(false)
   const [listMeta, setListMeta] = useState<Record<string, { name: string; breed: string }>>({})
+  const containerRef = useRef<HTMLDivElement>(null)
+
+  useClickOutside(containerRef, {
+    onClickOutside: () => setOpen(false),
+    enabled: open,
+  })
 
   const cachedMeta = activeId ? getMeta(activeId) : null
 
@@ -103,7 +110,7 @@ export default function FavoritesCapsule() {
     : 'h-3.5 w-3.5 shrink-0 fill-current text-amber-500 animate-favorite-star-pop'
 
   return (
-    <div className="relative shrink-0 animate-fade-in-scale" key={activeId}>
+    <div ref={containerRef} className="relative shrink-0 animate-fade-in-scale" key={activeId}>
       <div className={shellClass}>
         <Link
           to={`/dog/${activeId}/`}

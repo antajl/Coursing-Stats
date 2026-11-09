@@ -171,11 +171,15 @@ export default function HomeDogSearch({ className = '' }: HomeDogSearchProps) {
   }, [candidates])
 
   useEffect(() => {
-    function onDoc(e: MouseEvent) {
+    function onDoc(e: MouseEvent | TouchEvent) {
       if (!rootRef.current?.contains(e.target as Node)) setOpen(false)
     }
     document.addEventListener('mousedown', onDoc)
-    return () => document.removeEventListener('mousedown', onDoc)
+    document.addEventListener('touchstart', onDoc, { passive: true })
+    return () => {
+      document.removeEventListener('mousedown', onDoc)
+      document.removeEventListener('touchstart', onDoc)
+    }
   }, [])
 
   const goDog = useCallback(
