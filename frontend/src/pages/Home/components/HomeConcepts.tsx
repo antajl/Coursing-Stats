@@ -135,7 +135,7 @@ export function ConceptSymmetricFinal({ stats, showStats }: HomeConceptsProps) {
         </div>
 
         {/* 3. НИЖНЯЯ СТРОКА: Статус архива и кнопки прямого перехода (нижний срез карточки) */}
-        <div className="px-3 py-1.5 2xl:py-2 bg-cream-50/70 border-t border-camel-200/50 flex items-center justify-between gap-2 shrink-0">
+        <div className="h-[36px] 2xl:h-[38px] px-3 bg-cream-50/70 border-t border-old-money-200/70 flex items-center justify-between gap-2 shrink-0 box-border">
           <span className="text-[10px] 2xl:text-[10.5px] text-charcoal-600 font-medium flex items-center gap-1 shrink-0">
             <Sparkles className="w-3 h-3 text-camel-600 shrink-0" aria-hidden />
             <span>Архивы и протоколы</span>
@@ -143,14 +143,14 @@ export function ConceptSymmetricFinal({ stats, showStats }: HomeConceptsProps) {
           <div className="flex items-center gap-1.5 shrink-0">
             <Link
               to="/competitions/"
-              className="cs-glass-pill-active px-3 py-1 rounded-full text-[10.5px] font-semibold flex items-center gap-1"
+              className="cs-glass-pill-active px-2.5 py-0.5 rounded-full text-[10.5px] font-semibold flex items-center gap-1"
             >
               <span>Спорт</span>
               <ArrowRight className="w-2.5 h-2.5 text-camel-700" aria-hidden />
             </Link>
             <Link
               to="/shows/"
-              className="cs-glass-pill px-3 py-1 rounded-full text-[10.5px] font-semibold flex items-center gap-1"
+              className="cs-glass-pill px-2.5 py-0.5 rounded-full text-[10.5px] font-semibold flex items-center gap-1"
             >
               <span>Выставки</span>
               <ArrowRight className="w-2.5 h-2.5 text-old-money-600" aria-hidden />

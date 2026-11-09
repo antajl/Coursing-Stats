@@ -465,22 +465,35 @@
   }
 }
 
-/* Compact breed pagination dots & progress bar (saves ~30px of height) */
+/* Compact breed pagination dots & progress bar — synchronized with right statistics cockpit (height: 36px) */
 .home-v2-season-top--compact .home-breed-pager-wrapper {
+  height: 36px !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  align-items: center !important;
   padding: 0 !important;
 }
 .home-v2-season-top--compact .home-breed-pager-nav {
-  padding-top: 1px !important;
-  padding-bottom: 1px !important;
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  padding: 0 !important;
+
 }
 .home-v2-season-top--compact .home-breed-pager-dot-btn {
-  min-height: 18px !important;
-  min-width: 20px !important;
+  min-height: 32px !important;
+  min-width: 22px !important;
   padding: 2px 2px !important;
 }
 .home-v2-season-top--compact .home-breed-pager-dot-btn span {
   height: 4px !important;
 }
 .home-v2-season-top--compact .home-breed-pager-dot-btn span.w-4 {
-  width: 14px !important;
+  width: 16px !important;
+}
+
+@media (min-width: 1920px) {
+  .home-v2-season-top--compact .home-breed-pager-wrapper {
+    height: 38px !important;
+  }
 }
