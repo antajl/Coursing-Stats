@@ -128,15 +128,13 @@ export default function ShowRankingFilters({
         topRowClassName="flex-nowrap"
         filters={
           <div className="w-full">
-            {/* Мобильная панель фильтров */}
-            <div className="flex md:hidden items-center gap-1.5 w-full flex-wrap">
-              <div className="flex-1 min-w-[140px]">
-                <ToolbarSearch
-                  value={searchQuery}
-                  onChange={onSearchChange}
-                  placeholder="Кличка, порода…"
-                />
-              </div>
+            {/* Мобильная панель фильтров: компактный единый ряд 32px */}
+            <div className="flex md:hidden items-center gap-1.5 w-full min-w-0 overflow-x-auto no-scrollbar py-0.5">
+              <ToolbarSearch
+                value={searchQuery}
+                onChange={onSearchChange}
+                placeholder="Кличка, порода…"
+              />
 
               <div className="shrink-0">
                 <YearDropdown
@@ -193,7 +191,7 @@ export default function ShowRankingFilters({
                     <X className="h-4 w-4" />
                   </button>
                 )}
-                {trailing ?? <ShowRatingHint />}
+                {trailing ?? <ShowRatingHint compact />}
               </div>
             </div>
 

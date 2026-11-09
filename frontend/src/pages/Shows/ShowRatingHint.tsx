@@ -84,19 +84,28 @@ interface ShowRatingHintProps {
 }
 
 export default function ShowRatingHint({ embedded: _embedded, compact }: ShowRatingHintProps) {
+  const isCompact = compact === true
+  const isAuto = compact === undefined
+
   const trigger = (
     <button
       type="button"
       className={
-        compact
+        isCompact
           ? 'cs-glass-pill inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-xs font-semibold !text-charcoal-700 transition-all cursor-pointer select-none'
-          : 'cs-glass-pill inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full px-3 text-xs font-semibold !text-charcoal-700 transition-all cursor-pointer whitespace-nowrap select-none'
+          : isAuto
+            ? 'cs-glass-pill inline-flex h-8 w-8 sm:w-auto shrink-0 items-center justify-center gap-1.5 rounded-full sm:px-3 text-xs font-semibold !text-charcoal-700 transition-all cursor-pointer whitespace-nowrap select-none'
+            : 'cs-glass-pill inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full px-3 text-xs font-semibold !text-charcoal-700 transition-all cursor-pointer whitespace-nowrap select-none'
       }
       aria-label="О рейтинге выставок"
       title="О рейтинге выставок"
     >
       <Info className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
-      {!compact && <span>О рейтинге</span>}
+      {isAuto ? (
+        <span className="hidden sm:inline">О рейтинге</span>
+      ) : !isCompact ? (
+        <span>О рейтинге</span>
+      ) : null}
     </button>
   )
 
