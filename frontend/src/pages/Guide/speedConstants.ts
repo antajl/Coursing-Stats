@@ -38,8 +38,8 @@ export const BREED_SPEEDS_DATA: BreedSpeedItem[] = [
     specialty: 'Абсолютный мировой спринтер',
     description:
       'Абсолютный рекордсмен по скорости среди всех собак в мире на коротких дистанциях (официальный рекорд Книги Гиннесса — 67,32 км/ч, Star Title). За счёт глубокой груди, гибкого позвоночника и двойного фазного галопа развивает предельную скорость на первых 100 метрах.',
-    competitionsUrl: '/competitions?tab=ranking&breed=Грейхаунд',
-    doninoUrl: '/speed-records?breed=Грейхаунд',
+    competitionsUrl: '/competitions/?tab=ranking&breed=Грейхаунд',
+    doninoUrl: '/speed-records/?breed=Грейхаунд',
   },
   {
     breed: 'Уиппет',
@@ -51,8 +51,8 @@ export const BREED_SPEEDS_DATA: BreedSpeedItem[] = [
     specialty: 'Взрывной старт (быстрее лошади)',
     description:
       'Компактный атлет с непревзойденной динамикой разгона. На первых метрах дистанции стартовое ускорение уиппета превосходит скаковую лошадь. По данным полевых радарных замеров полигона Донино рекорд породы составляет 64 км/ч.',
-    competitionsUrl: '/competitions?tab=ranking&breed=Уиппет',
-    doninoUrl: '/speed-records?breed=Уиппет',
+    competitionsUrl: '/competitions/?tab=ranking&breed=Уиппет',
+    doninoUrl: '/speed-records/?breed=Уиппет',
   },
   {
     breed: 'Салюки (персидская борзая)',
@@ -64,8 +64,8 @@ export const BREED_SPEEDS_DATA: BreedSpeedItem[] = [
     specialty: 'Марафонец на длинные дистанции',
     description:
       'Официальный мировой рекордсмен Книги Гиннесса (1996 г.) на длинных дистанциях (свыше 800 м) со скоростью 68,8 км/ч. В отличие от спринтеров-грейхаундов, салюки выведена для пустынной охоты и способна удерживать темп выше 50 км/ч на протяжении нескольких километров.',
-    competitionsUrl: '/competitions?tab=ranking&breed=Салюки',
-    doninoUrl: '/speed-records?breed=Салюки',
+    competitionsUrl: '/competitions/?tab=ranking&breed=Салюки',
+    doninoUrl: '/speed-records/?breed=Салюки',
   },
   {
     breed: 'Русская псовая борзая (РПБ)',
@@ -77,8 +77,8 @@ export const BREED_SPEEDS_DATA: BreedSpeedItem[] = [
     specialty: 'Взрывной охотничий бросок',
     description:
       'Историческая русская охотничья порода, веками отбиравшаяся для стремительной скачки и резкого броска на зверя. На прямых дистанциях при рывке за приманкой скорость доходит до 65 км/ч, а на круговых бегах средний темп держится в районе 49–50 км/ч.',
-    competitionsUrl: '/competitions?tab=ranking&breed=Русская+псовая+борзая',
-    doninoUrl: '/speed-records?breed=Русская+псовая+борзая',
+    competitionsUrl: '/competitions/?tab=ranking&breed=Русская+псовая+борзая',
+    doninoUrl: '/speed-records/?breed=Русская+псовая+борзая',
   },
   {
     breed: 'Азавак',
@@ -90,8 +90,8 @@ export const BREED_SPEEDS_DATA: BreedSpeedItem[] = [
     specialty: 'Африканский охотник Сахеля',
     description:
       'Древняя высоконоговая борзая кочевников Сахары. Обладает исключительной теплоотдачей, сухой конституцией и мощным толчком, позволяющим стремительно ускоряться на песчаном грунте.',
-    competitionsUrl: '/competitions?tab=ranking&breed=Азавак',
-    doninoUrl: '/speed-records?breed=Азавак',
+    competitionsUrl: '/competitions/?tab=ranking&breed=Азавак',
+    doninoUrl: '/speed-records/?breed=Азавак',
   },
   {
     breed: 'Испанский гальго',
@@ -103,8 +103,8 @@ export const BREED_SPEEDS_DATA: BreedSpeedItem[] = [
     specialty: 'Полевая выносливость на пересечёнке',
     description:
       'Традиционная охотничья борзая Пиренеев. В отличие от коротких трековых спринтов, гальго славится способностью скакать по пересечённой местности на дистанциях более 1,5–2 километров без потери маневренности.',
-    competitionsUrl: '/competitions?tab=ranking&breed=Испанский+гальго',
-    doninoUrl: '/speed-records?breed=Испанский+гальго',
+    competitionsUrl: '/competitions/?tab=ranking&breed=Испанский+гальго',
+    doninoUrl: '/speed-records/?breed=Испанский+гальго',
   },
   {
     breed: 'Афганская борзая',
@@ -116,8 +116,8 @@ export const BREED_SPEEDS_DATA: BreedSpeedItem[] = [
     specialty: 'Горный скакун с мощным толчком',
     description:
       'Обладает уникальным строением тазовых костей, дающим свободу вращения в суставах для резких разворотов на крутых горных склонах. Развивает на прямых отрезках до 58 км/ч.',
-    competitionsUrl: '/competitions?tab=ranking&breed=Афганская+борзая',
-    doninoUrl: '/speed-records?breed=Афганская+борзая',
+    competitionsUrl: '/competitions/?tab=ranking&breed=Афганская+борзая',
+    doninoUrl: '/speed-records/?breed=Афганская+борзая',
   },
   {
     breed: 'Ирландский волкодав / Дирхаунд',
@@ -129,8 +129,8 @@ export const BREED_SPEEDS_DATA: BreedSpeedItem[] = [
     specialty: 'Атлетическая мощь при весе до 70 кг',
     description:
       'Гиганты собачьего мира. Несмотря на вес 50–70 кг и рост в холке до 85–90 см, развивают на прямом отрезке скорость свыше 50 км/ч за счёт огромной длины маха галопа.',
-    competitionsUrl: '/competitions?tab=ranking&breed=Ирландский+волкодав',
-    doninoUrl: '/speed-records?breed=Ирландский+волкодав',
+    competitionsUrl: '/competitions/?tab=ranking&breed=Ирландский+волкодав',
+    doninoUrl: '/speed-records/?breed=Ирландский+волкодав',
   },
   {
     breed: 'Малая итальянская борзая (левретка)',
@@ -142,8 +142,8 @@ export const BREED_SPEEDS_DATA: BreedSpeedItem[] = [
     specialty: 'Маневренность при весе до 5 кг',
     description:
       'Самая миниатюрная борзая в мире. При весе всего 3–5 кг обладает поразительной частотой махов и гибкостью, разгоняясь на коротких прямых отрезках до 49–50 км/ч.',
-    competitionsUrl: '/competitions?tab=ranking&breed=Левретка',
-    doninoUrl: '/speed-records?breed=Левретка',
+    competitionsUrl: '/competitions/?tab=ranking&breed=Левретка',
+    doninoUrl: '/speed-records/?breed=Левретка',
   },
   {
     breed: 'Басенджи',
@@ -155,7 +155,7 @@ export const BREED_SPEEDS_DATA: BreedSpeedItem[] = [
     specialty: 'Африканская охотничья собака (5 группа)',
     description:
       'Представитель 5-й группы FCI с великолепными охотничьими инстинктами. В бегах борзых и курсинге демонстрирует стабильный и ровный темп около 40 км/ч на дистанциях 350–500 м.',
-    competitionsUrl: '/competitions?tab=ranking&breed=Басенджи',
-    doninoUrl: '/speed-records?breed=Басенджи',
+    competitionsUrl: '/competitions/?tab=ranking&breed=Басенджи',
+    doninoUrl: '/speed-records/?breed=Басенджи',
   },
 ]

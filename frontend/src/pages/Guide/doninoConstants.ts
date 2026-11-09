@@ -15,17 +15,17 @@ export const DONINO_OFFICIAL_SOURCES = [
   },
   {
     label: 'Сводный рейтинг чемпионата Донино на сайте',
-    href: 'https://coursing-stats.ru/donino/championship/standings',
+    href: 'https://coursing-stats.ru/donino/championship/',
     note: 'Таблица лиг: Абсолют, Чемпионы, Прогресс, Юниоры; начисление очков, переходы между лигами и этапы',
   },
   {
     label: 'Аналитика чемпионата Донино',
-    href: 'https://coursing-stats.ru/donino/championship/analytics',
+    href: 'https://coursing-stats.ru/donino/analytics/',
     note: 'Глубокий анализ плотности результатов, прогрессии лиг, скоростных коридоров и рекордов полигона',
   },
   {
     label: 'Раздел рекордов Донино на Coursing Stats',
-    href: 'https://coursing-stats.ru/speed-records',
+    href: 'https://coursing-stats.ru/speed-records/',
     note: 'Интерактивные таблицы рекордов All-time и сезонов, фильтры по породам и профили собак',
   },
 ] as const

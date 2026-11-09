@@ -115,19 +115,19 @@ export function showsMenuItems(calendarVisible: boolean): NavMenuItem[] {
 
 export const DONINO_MENU_ITEMS: NavMenuItem[] = [
   {
-    to: '/speed-records',
+    to: '/speed-records/',
     label: 'Рекорды Донино',
     icon: Icons.speed,
     isActive: (pathname: string) => pathname === '/speed-records' || pathname === '/speed-records/',
   },
   {
-    to: '/donino/championship',
+    to: '/donino/championship/',
     label: 'Клубный чемпионат',
     icon: Icons.championship,
-    isActive: (pathname: string) => pathname === '/donino/championship' || pathname === '/donino-championship',
+    isActive: (pathname: string) => pathname === '/donino/championship' || pathname === '/donino/championship/' || pathname === '/donino-championship',
   },
   {
-    to: '/donino/analytics',
+    to: '/donino/analytics/',
     label: 'Аналитика полигона',
     icon: Icons.analytics,
     isActive: (pathname: string) => pathname === '/donino/analytics' || pathname.startsWith('/donino/analytics'),

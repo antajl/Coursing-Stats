@@ -124,7 +124,9 @@ export default function AppRoutes() {
         <Route path="/event/:id" element={<EventResults />} />
         <Route path="/speed-records" element={<SpeedRecords />} />
         <Route path="/donino/championship" element={<DoninoChampionship />} />
-        <Route path="/donino-championship" element={<Navigate to="/donino/championship" replace />} />
+        <Route path="/donino/championship/standings" element={<Navigate to="/donino/championship/" replace />} />
+        <Route path="/donino/championship/analytics" element={<Navigate to="/donino/analytics/" replace />} />
+        <Route path="/donino-championship" element={<Navigate to="/donino/championship/" replace />} />
         <Route path="/donino/analytics" element={<DoninoAnalytics />} />
         <Route path="/breeds/:slug" element={<BreedHub />} />
         <Route path="/breed/:slug" element={<BreedHub />} />

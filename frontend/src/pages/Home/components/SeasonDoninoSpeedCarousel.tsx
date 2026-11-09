@@ -38,7 +38,7 @@ export default function SeasonDoninoSpeedCarousel({
   }
 
   const renderHeaderItem = (s: BreedSlide<SpeedRecord>) => {
-    const rankingHref = `/speed-records?breed=${encodeURIComponent(s.breedKey)}`
+    const rankingHref = `/speed-records/?breed=${encodeURIComponent(s.breedKey)}`
     return (
       <div className="min-w-0 max-w-full flex items-center justify-center gap-1.5 px-1">
         <Link

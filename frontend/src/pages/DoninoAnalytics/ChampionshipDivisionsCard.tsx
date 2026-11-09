@@ -86,7 +86,7 @@ export default function ChampionshipDivisionsCard({
           </h3>
         </div>
         <Link
-          to="/donino/championship"
+          to="/donino/championship/"
           className="inline-flex items-center gap-1 text-xs font-semibold text-camel-900 hover:text-charcoal-950 bg-camel-50 hover:bg-camel-100 border border-camel-300 px-2.5 py-1 rounded-xl transition-all shadow-2xs"
         >
           <span>В чемпионат</span>

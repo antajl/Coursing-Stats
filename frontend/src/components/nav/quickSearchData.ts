@@ -8,7 +8,7 @@ export const SITE_NAVIGATION_ROUTES: NavigationRouteItem[] = [
     id: 'competitions-ranking',
     title: 'Рейтинг соревнований',
     subtitle: 'Курсинг и рейсинг: медали, CS points, баллы и подиум 2015–2026',
-    to: '/competitions?tab=ranking',
+    to: '/competitions/?tab=ranking',
     icon: 'medal',
     keywords: [
       'рейтинг', 'рейтинг собак', 'топ', 'лидеры', 'соревнования', 'курсинг', 'бега',
@@ -20,7 +20,7 @@ export const SITE_NAVIGATION_ROUTES: NavigationRouteItem[] = [
     id: 'competitions-archive',
     title: 'Календарь и архив соревнований',
     subtitle: 'Все состязания с 2015 года: даты, организаторы и полные результаты',
-    to: '/competitions?tab=archive',
+    to: '/competitions/?tab=archive',
     icon: 'calendar',
     keywords: [
       'архив', 'календарь', 'состязания', 'турниры', 'расписание', 'график', 'даты',
@@ -32,7 +32,7 @@ export const SITE_NAVIGATION_ROUTES: NavigationRouteItem[] = [
     id: 'competitions-judges',
     title: 'Судьи соревнований',
     subtitle: 'Судейская коллегия, стаж, статистика турниров и оценок',
-    to: '/competitions?tab=judges',
+    to: '/competitions/?tab=judges',
     icon: 'club',
     keywords: [
       'судьи', 'судья', 'эксперты', 'судейство', 'арбитры', 'коллегия', 'оценщики',
@@ -59,7 +59,7 @@ export const SITE_NAVIGATION_ROUTES: NavigationRouteItem[] = [
     id: 'shows-ranking',
     title: 'Рейтинг выставок РКФ',
     subtitle: 'Выставочный рейтинг по породам и абсолютные лидеры сезона',
-    to: '/shows?tab=ranking',
+    to: '/shows/?tab=ranking',
     icon: 'award',
     keywords: [
       'выставки', 'выставка', 'ркф', 'рейтинг выставок', 'шоу', 'ринги', 'титулы',
@@ -71,7 +71,7 @@ export const SITE_NAVIGATION_ROUTES: NavigationRouteItem[] = [
     id: 'shows-calendar',
     title: 'Архив выставок РКФ',
     subtitle: 'Архив протоколов и расписание выставок РКФ 2019–2026',
-    to: '/shows?tab=archive',
+    to: '/shows/?tab=archive',
     icon: 'calendar',
     keywords: [
       'архив выставок', 'календарь выставок', 'график выставок', 'расписание выставок', 'выставки 2026',
@@ -82,7 +82,7 @@ export const SITE_NAVIGATION_ROUTES: NavigationRouteItem[] = [
     id: 'shows-judges',
     title: 'Судьи выставок РКФ',
     subtitle: 'Эксперты РКФ и статистика судейства в рингах',
-    to: '/shows?tab=judges',
+    to: '/shows/?tab=judges',
     icon: 'club',
     keywords: [
       'судьи выставок', 'эксперты ркф', 'судья выставки', 'ринговые судьи',
@@ -93,7 +93,7 @@ export const SITE_NAVIGATION_ROUTES: NavigationRouteItem[] = [
     id: 'donino-records',
     title: 'Рекорды Донино',
     subtitle: 'База замеров скорости радаром (км/ч), бегов на 350 м и статистика пород',
-    to: '/speed-records',
+    to: '/speed-records/',
     icon: 'speed',
     keywords: [
       'донино', 'донин', 'рекорды', 'замер скорости', 'скорость', 'радар', 'км/ч',
@@ -105,7 +105,7 @@ export const SITE_NAVIGATION_ROUTES: NavigationRouteItem[] = [
     id: 'donino-championship',
     title: 'Клубный чемпионат Донино',
     subtitle: 'Сводный рейтинг участников, 4 лиги, этапы I–III и регламент серии',
-    to: '/donino/championship',
+    to: '/donino/championship/',
     icon: 'championship',
     keywords: [
       'клубный чемпионат', 'чемпионат донино', 'лиги', 'абсолют', 'чемпионов', 'прогресс',
@@ -116,7 +116,7 @@ export const SITE_NAVIGATION_ROUTES: NavigationRouteItem[] = [
     id: 'guide-titles',
     title: 'Справка: Правила соревнований и титулы',
     subtitle: 'Нормативы CACL, ЧРКФ, сертификаты, правила курсинга и бегов',
-    to: '/guide?tab=titles',
+    to: '/guide/?tab=titles',
     icon: 'flag',
     keywords: [
       'правила', 'титулы', 'регламент', 'положение', 'cacl', 'чркф', 'квалификация',
@@ -127,7 +127,7 @@ export const SITE_NAVIGATION_ROUTES: NavigationRouteItem[] = [
     id: 'guide-shows',
     title: 'Справка: Выставочные титулы и правила',
     subtitle: 'CAC, CACIB, ЧР, ЮЧР, классы собак, оценки и ринги',
-    to: '/guide?tab=shows',
+    to: '/guide/?tab=shows',
     icon: 'award',
     keywords: [
       'правила выставок', 'титулы выставок', 'cacib', 'cac', 'чр', 'ючр', 'кчк', 'чк',
@@ -138,7 +138,7 @@ export const SITE_NAVIGATION_ROUTES: NavigationRouteItem[] = [
     id: 'guide-rating',
     title: 'Справка: Методика расчета рейтинга',
     subtitle: 'Формула CS Points, коэффициенты сложности и правила подсчета',
-    to: '/guide?tab=rating',
+    to: '/guide/?tab=rating',
     icon: 'trend',
     keywords: [
       'методика', 'формула', 'как считается', 'расчет рейтинга', 'cs points',
@@ -149,7 +149,7 @@ export const SITE_NAVIGATION_ROUTES: NavigationRouteItem[] = [
     id: 'guide-protocol',
     title: 'Справка: Как читать протоколы',
     subtitle: 'Анатомия строки протокола, норматив ВС, барьеры и критерии судейства',
-    to: '/guide?tab=titles',
+    to: '/guide/?tab=titles',
     icon: 'fileText',
     keywords: [
       'как читать протокол', 'попоны', 'критерии', 'оценки', 'дисквалификация',
@@ -160,7 +160,7 @@ export const SITE_NAVIGATION_ROUTES: NavigationRouteItem[] = [
     id: 'guide-donino',
     title: 'Справка: Скорость пород и Донино',
     subtitle: 'Скорости пород в км/ч, спринт 350 м, трек и регламент полигона Донино',
-    to: '/guide?tab=donino',
+    to: '/guide/?tab=donino',
     icon: 'speed',
     keywords: [
       'о донино', 'правила донино', 'полигон донино', 'замер радаром', 'хронометраж',
@@ -171,7 +171,7 @@ export const SITE_NAVIGATION_ROUTES: NavigationRouteItem[] = [
     id: 'guide-speeds',
     title: 'Справка: Скорости пород',
     subtitle: 'Сравнительная шкала предельных и средних скоростей борзых',
-    to: '/guide?tab=donino',
+    to: '/guide/?tab=donino',
     icon: 'speed',
     keywords: [
       'скорость пород', 'скорости', 'быстрые породы', 'сравнение скоростей',
@@ -181,7 +181,7 @@ export const SITE_NAVIGATION_ROUTES: NavigationRouteItem[] = [
     id: 'about',
     title: 'О проекте',
     subtitle: 'История базы данных Coursing Stats, авторы и открытые источники',
-    to: '/about',
+    to: '/about/',
     icon: 'club',
     keywords: [
       'о проекте', 'о сайте', 'автор', 'контакты', 'история', 'обратная связь',
@@ -361,10 +361,10 @@ export const POPULAR_BREEDS = [
 ]
 
 export const QUICK_NAV_SHORTCUTS = [
-  { label: 'Рейтинг спорта', to: '/competitions?tab=ranking', icon: 'medal' as const },
-  { label: 'Рейтинг выставок', to: '/shows?tab=ranking', icon: 'award' as const },
-  { label: 'Рекорды Донино', to: '/speed-records?tab=records', icon: 'speed' as const },
-  { label: 'Календарь', to: '/competitions?tab=archive', icon: 'calendar' as const },
-  { label: 'Судьи', to: '/competitions?tab=judges', icon: 'club' as const },
+  { label: 'Рейтинг спорта', to: '/competitions/?tab=ranking', icon: 'medal' as const },
+  { label: 'Рейтинг выставок', to: '/shows/?tab=ranking', icon: 'award' as const },
+  { label: 'Рекорды Донино', to: '/speed-records/?tab=records', icon: 'speed' as const },
+  { label: 'Календарь', to: '/competitions/?tab=archive', icon: 'calendar' as const },
+  { label: 'Судьи', to: '/competitions/?tab=judges', icon: 'club' as const },
   ...(isLocalDev ? [{ label: 'Конструктор', to: '/protocol-builder', icon: 'fileText' as const }] : []),
 ]

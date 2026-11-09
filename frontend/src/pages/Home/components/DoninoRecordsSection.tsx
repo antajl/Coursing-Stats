@@ -45,7 +45,7 @@ function DoninoRecordsSectionInner({
       <SectionHead
         icon={Icons.speed}
         title="Рекорды Донино"
-        href="/speed-records"
+        href="/speed-records/"
         linkLabel="Все рекорды"
       />
       {doninoSpeedRecords.length > 0 || doninoCoursingRanked.length > 0 ? (

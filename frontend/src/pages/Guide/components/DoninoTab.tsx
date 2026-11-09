@@ -441,7 +441,7 @@ export default function DoninoTab() {
         {/* Интерактивные разделы Чемпионата */}
         <div className="mt-3 flex flex-wrap items-center gap-2 pt-2">
           <Link
-            to="/donino/championship/standings"
+            to="/donino/championship/"
             className="group inline-flex items-center gap-1.5 rounded-lg border border-camel-400 bg-camel-100 px-3 py-1.5 text-xs font-semibold text-camel-950 shadow-2xs transition-colors hover:bg-camel-200/80"
           >
             <Award className="h-3.5 w-3.5 text-camel-800" aria-hidden />
@@ -449,7 +449,7 @@ export default function DoninoTab() {
             <ChevronRight className="h-3.5 w-3.5 text-camel-700 transition-transform group-hover:translate-x-0.5" aria-hidden />
           </Link>
           <Link
-            to="/donino/championship/analytics"
+            to="/donino/analytics/"
             className="group inline-flex items-center gap-1.5 rounded-lg border border-old-money-200 bg-white px-3 py-1.5 text-xs font-semibold text-charcoal-800 shadow-2xs transition-colors hover:border-camel-300 hover:text-camel-800"
           >
             <BarChart3 className="h-3.5 w-3.5 text-charcoal-600" aria-hidden />
@@ -457,7 +457,7 @@ export default function DoninoTab() {
             <ChevronRight className="h-3.5 w-3.5 text-charcoal-400 transition-transform group-hover:translate-x-0.5" aria-hidden />
           </Link>
           <Link
-            to="/speed-records"
+            to="/speed-records/"
             className="group inline-flex items-center gap-1.5 rounded-lg border border-old-money-200 bg-white px-3 py-1.5 text-xs font-semibold text-charcoal-800 shadow-2xs transition-colors hover:border-camel-300 hover:text-camel-800"
           >
             <Gauge className="h-3.5 w-3.5 text-charcoal-600" aria-hidden />
