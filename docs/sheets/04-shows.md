@@ -18,7 +18,9 @@ verified: 2026-11-08
 | Bulk протоколы выставок | Все 51 429 протоколов (2019–2026) на S3 CDN (`shows/protocols/*.json`) в gzip |
 | ShowRanking / ShowCalendar | React Query → **CDN**, не Turso |
 | ShowCalendar URL & Prefetch | Дефолтный год не пишется в URL (?tab=archive); активный месяц по умолчанию — последний с протоколами (findLatestMonthWithProtocols); навигация вперед/назад и доступные месяцы в тулбаре ограничены месяцами с протоколами (getMonthsWithProtocols); при открытии пустого месяца сохраняется шапка с кнопкой возврата назад; префетч отложен на 2.5с / по наведению onHoverTab |
-| All-time `dog-ranking.json` | &gt;25 MB — **не** в CDN deploy |
+| All-time `dog-ranking-all-time.json` | ~17.6 MB (~2.2 MB gzip) — Top-100 overall + Top-100 per breed, публикуется на CDN |
+| All-time `dog-ranking-all-time-page0.json` | ~32 KB — Top-100 overall first-paint slice (<20 ms) |
+| Raw all-time `dog-ranking.json` (>220 MB) | Исключён из CDN (`publish-exclude.js`) во избежание превышения лимитов |
 | Lookup | `show-dog-lookup/{0-f}.json` шарды (~обход 25 MB) |
 | Show dog card | `shows/indexes/dog-details/{000-255}.json` (уже паки) |
 | Show judge detail | `shows/indexes/judge-details/pack-*.json` (`byKey`) |
