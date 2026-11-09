@@ -147,4 +147,24 @@ describe('smartShowSearch', () => {
     expect(abbrRes.matchedDirectAnswer?.id).toBe('show-abbreviations')
     expect(abbrRes.matchedSectionIds.has('sec-show-abbr')).toBe(true)
   })
+
+  it('matches all 9 popular queries from ShowsTab cleanly without cross-domain false positives', () => {
+    const popularShowQueries = [
+      { label: 'С какого возраста бэби и щенки?', expectedAnswerId: 'show-age-classes', expectedSectionId: 'sec-show-classes' },
+      { label: 'Разница между CAC и CACIB', expectedAnswerId: 'show-cac-vs-cacib', expectedSectionId: 'sec-show-ring-awards' },
+      { label: 'Как закрыть Чемпиона России (ЧР)?', expectedAnswerId: 'show-ch-rus', expectedSectionId: 'sec-show-career-titles' },
+      { label: 'Кто выходит в сравнение на BOB и BOS?', expectedAnswerId: 'show-bob-bos-comparison', expectedSectionId: 'sec-show-ring-awards' },
+      { label: 'Главный ринг: Best in Show (BIS)', expectedAnswerId: 'show-main-ring-bis', expectedSectionId: 'sec-show-roadmap' },
+      { label: 'Цвета наградных лент РКФ', expectedAnswerId: 'show-ribbon-colors', expectedSectionId: 'sec-show-grades' },
+      { label: 'Ранги выставок (CACIB / ЧРКФ ОС / ЧФ)', expectedAnswerId: 'show-ranks-diff', expectedSectionId: 'sec-show-ranks' },
+      { label: 'Юный чемпион России (ЮЧР)', expectedAnswerId: 'show-jch-rus', expectedSectionId: 'sec-show-career-titles' },
+      { label: 'Резервный R.CAC: когда переходит?', expectedAnswerId: 'show-rcac-transfer', expectedSectionId: 'sec-show-ring-awards' },
+    ]
+
+    for (const item of popularShowQueries) {
+      const res = executeSmartShowSearch(item.label)
+      expect(res.matchedDirectAnswer?.id).toBe(item.expectedAnswerId)
+      expect(res.matchedSectionIds.has(item.expectedSectionId)).toBe(true)
+    }
+  })
 })

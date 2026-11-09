@@ -520,13 +520,52 @@ export function TitleLadderList({ items }: { items: readonly TitleRankItem[] }) 
  */
 export function GuideTopicsTicker({
   items,
+  currentQuery = '',
   onSelect,
   label = 'Частые темы:',
 }: {
-  items: readonly { label: string; query: string }[]
+  items: readonly { label: string; query?: string }[]
+  currentQuery?: string
   onSelect: (query: string) => void
   label?: string
 }) {
+  const normCurrent = currentQuery.trim().toLowerCase()
+
+  const isItemActive = (item: { label: string; query?: string }) => {
+    if (!normCurrent) return false
+    const nq = (item.query ?? item.label).trim().toLowerCase()
+    const nl = item.label.trim().toLowerCase()
+    return normCurrent === nq || normCurrent === nl
+  }
+
+  const handleItemClick = (item: { label: string; query?: string }) => {
+    if (isItemActive(item)) {
+      onSelect('')
+    } else {
+      onSelect(item.query ?? item.label)
+    }
+  }
+
+  const renderButton = (item: { label: string; query?: string }, key: string, tabIndex?: number) => {
+    const active = isItemActive(item)
+    return (
+      <button
+        key={key}
+        type="button"
+        tabIndex={tabIndex}
+        onClick={() => handleItemClick(item)}
+        aria-pressed={active}
+        className={`rounded-full px-2.5 py-1 text-[11px] transition-all cursor-pointer shadow-2xs whitespace-nowrap shrink-0 ${
+          active
+            ? 'border border-camel-500 bg-camel-100 text-camel-950 font-semibold shadow-xs ring-1 ring-camel-400/40'
+            : 'border border-old-money-200 bg-white font-medium text-charcoal-700 hover:border-camel-300 hover:bg-camel-50 hover:text-camel-900'
+        }`}
+      >
+        {item.label}
+      </button>
+    )
+  }
+
   return (
     <div className="mt-3 flex items-center gap-2 overflow-hidden text-xs">
       {label && (
@@ -538,31 +577,12 @@ export function GuideTopicsTicker({
         <div className="cs-guide-ticker-track flex items-center">
           {/* Оригинальный набор кнопок */}
           <div className="flex items-center gap-1.5 pr-1.5 shrink-0">
-            {items.map((item) => (
-              <button
-                key={item.label}
-                type="button"
-                onClick={() => onSelect(item.query)}
-                className="rounded-full border border-old-money-200 bg-white px-2.5 py-1 text-[11px] font-medium text-charcoal-700 hover:border-camel-300 hover:bg-camel-50 hover:text-camel-900 transition-colors cursor-pointer shadow-2xs whitespace-nowrap shrink-0"
-              >
-                {item.label}
-              </button>
-            ))}
+            {items.map((item) => renderButton(item, item.label))}
           </div>
 
           {/* Бесшовный клон для непрерывного цикла 0% -> -50% */}
           <div className="flex items-center gap-1.5 pr-1.5 shrink-0" aria-hidden="true">
-            {items.map((item, idx) => (
-              <button
-                key={`${item.label}-clone-${idx}`}
-                type="button"
-                tabIndex={-1}
-                onClick={() => onSelect(item.query)}
-                className="rounded-full border border-old-money-200 bg-white px-2.5 py-1 text-[11px] font-medium text-charcoal-700 hover:border-camel-300 hover:bg-camel-50 hover:text-camel-900 transition-colors cursor-pointer shadow-2xs whitespace-nowrap shrink-0"
-              >
-                {item.label}
-              </button>
-            ))}
+            {items.map((item, idx) => renderButton(item, `${item.label}-clone-${idx}`, -1))}
           </div>
         </div>
       </div>
@@ -583,7 +603,7 @@ export function GuideSearchHeader({
   searchQuery: string
   onSearchChange: (query: string) => void
   placeholder: string
-  popularQueries: readonly { label: string; query: string }[]
+  popularQueries: readonly { label: string; query?: string }[]
 }) {
   return (
     <div className="w-full">
@@ -614,6 +634,7 @@ export function GuideSearchHeader({
       {/* Бесконечно движущаяся строка частых вопросов в 1 ряд */}
       <GuideTopicsTicker
         items={popularQueries}
+        currentQuery={searchQuery}
         onSelect={onSearchChange}
       />
     </div>

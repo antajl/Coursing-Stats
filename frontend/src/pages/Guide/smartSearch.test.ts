@@ -162,5 +162,34 @@ describe('smartGuideSearch', () => {
     // 15. Барьер 2-го круга
     const round2Res = executeSmartGuideSearch('почему сняли после первого круга барьер 50%')
     expect(round2Res.matchedDirectAnswer?.id).toBe('round2-barrier')
+
+    // 16. Анатомия строки протокола соревнований
+    const protocolRes = executeSmartGuideSearch('как читать строку протокола?')
+    expect(protocolRes.matchedDirectAnswer?.id).toBe('protocol-anatomy')
+    expect(protocolRes.matchedSectionIds.has('sec-protocol')).toBe(true)
+
+    const catalogRes = executeSmartGuideSearch('каталожный номер')
+    expect(catalogRes.matchedSectionIds.has('sec-protocol')).toBe(true)
+  })
+
+  it('matches all 10 popular queries from TitlesTab cleanly without cross-domain false positives', () => {
+    const popularSportQueries = [
+      { label: 'Как читать строку протокола?', expectedAnswerId: 'protocol-anatomy', expectedSectionId: 'sec-protocol' },
+      { label: 'С какого возраста можно бегать?', expectedAnswerId: 'age-rules', expectedSectionId: 'sec-requirements' },
+      { label: 'Что такое кворум и как делят по полу?', expectedAnswerId: 'quorum-rules', expectedSectionId: 'sec-requirements' },
+      { label: 'Переход сертификата CACL со 2-го места', expectedAnswerId: 'rcacl-transfer', expectedSectionId: 'sec-hierarchy' },
+      { label: '6 схем оформления титула НЧ РК', expectedAnswerId: 'nch-schemes', expectedSectionId: 'sec-schemes' },
+      { label: '5 критериев судейства (100 баллов)', expectedAnswerId: 'judging-5-criteria', expectedSectionId: 'sec-judging' },
+      { label: 'Как решается ничья (тай-брейк)', expectedAnswerId: 'tie-break', expectedSectionId: 'sec-judging' },
+      { label: 'Беговой намордник и цвета попон', expectedAnswerId: 'muzzles-blankets', expectedSectionId: 'sec-requirements' },
+      { label: 'Что означает отметка «ВС»?', expectedAnswerId: 'vc-norm', expectedSectionId: 'sec-requirements' },
+      { label: 'В чём разница: курсинг и бега?', expectedAnswerId: 'disciplines-diff', expectedSectionId: 'sec-disciplines' },
+    ]
+
+    for (const item of popularSportQueries) {
+      const res = executeSmartGuideSearch(item.label)
+      expect(res.matchedDirectAnswer?.id).toBe(item.expectedAnswerId)
+      expect(res.matchedSectionIds.has(item.expectedSectionId)).toBe(true)
+    }
   })
 })

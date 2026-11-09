@@ -115,14 +115,17 @@ export function damerauLevenshtein(a: string, b: string): number {
 // 5. Стоп-слова и разговорные связки в русскоязычных поисковых запросах
 export const RUSSIAN_STOP_WORDS = new Set<string>([
   'как', 'что', 'где', 'куда', 'откуда', 'когда', 'почему', 'зачем', 'кто', 'чем',
-  'какой', 'какая', 'какое', 'какие', 'каком', 'каких', 'какому', 'какую', 'каким',
-  'сколько', 'скольки', 'со', 'до', 'при',
-  'в', 'во', 'на', 'с', 'из', 'для', 'от', 'к', 'ко', 'у', 'о', 'об', 'обо',
+  'какой', 'какая', 'какое', 'какие', 'каком', 'каких', 'какому', 'какую', 'каким', 'какими', 'какого',
+  'сколько', 'скольки', 'со', 'до', 'при', 'обо', 'изо', 'ко',
+  'чей', 'чья', 'чье', 'чьи', 'чьего', 'чьей', 'чьих',
+  'в', 'во', 'на', 'с', 'из', 'для', 'от', 'к', 'у', 'о', 'об',
   'по', 'без', 'через', 'над', 'под', 'за', 'и', 'а', 'но', 'или', 'да',
   'ли', 'же', 'то', 'бы', 'вот', 'если', 'чтобы', 'только', 'хоть', 'хотя',
   'мне', 'нам', 'вам', 'им', 'его', 'ее', 'их', 'мой', 'твой', 'наш', 'ваш',
-  'себя', 'себе', 'собой', 'это', 'эта', 'этот', 'эти', 'этом', 'этих', 'тому',
-  'абсолютно', 'совсем', 'очень', 'просто', 'точно', 'действительно',
+  'себя', 'себе', 'собой', 'это', 'эта', 'этот', 'эти', 'этом', 'этих', 'этому', 'тому',
+  'такой', 'такая', 'такое', 'такие', 'такого', 'таким', 'таких',
+  'весь', 'вся', 'все', 'всего', 'всем', 'всех',
+  'абсолютно', 'совсем', 'очень', 'просто', 'точно', 'действительно', 'вообще', 'вообще-то',
   'получить', 'получать', 'получение', 'получения', 'получению', 'получив',
   'стать', 'становится', 'делать', 'сделать', 'быть', 'является', 'являются',
   'нужно', 'надо', 'можно', 'нельзя', 'хочу', 'хотим',
@@ -158,18 +161,33 @@ export function isFuzzyWordMatch(queryWord: string, targetWord: string): boolean
   const q = queryWord.toLowerCase().replace(/ё/g, 'е').trim()
   const t = targetWord.toLowerCase().replace(/ё/g, 'е').trim()
 
+  // Если один из аргументов фраза с пробелами, пословное сравнение не применяется
+  if (q.includes(' ') || t.includes(' ')) {
+    return false
+  }
+
   if (q === t) return true
 
+  // Проверка по общему префиксу для длинных слов (от 4 символов)
   if (q.length >= 4 && t.length >= 4 && (t.startsWith(q) || q.startsWith(t))) {
     return true
   }
 
+  // Проверка по стеммингу
   const stemQ = stemWord(q)
   const stemT = stemWord(t)
   if (stemQ.length >= 3 && stemT.length >= 3 && (stemT.startsWith(stemQ) || stemQ.startsWith(stemT))) {
     return true
   }
 
+  // Чередование согласных в основах (г/ж, к/ч, х/ш, д/ж)
+  if (stemQ.length >= 4 && stemT.length >= 4 && Math.abs(stemQ.length - stemT.length) <= 1) {
+    if (damerauLevenshtein(stemQ, stemT) <= 1) {
+      return true
+    }
+  }
+
+  // Проверка по опечаткам (допустима 1 опечатка при длине от 4 символов, 2 опечатки от 7)
   const maxDistance = q.length >= 7 ? 2 : q.length >= 4 ? 1 : 0
   if (maxDistance > 0 && Math.abs(q.length - t.length) <= maxDistance) {
     if (damerauLevenshtein(q, t) <= maxDistance) {
@@ -527,7 +545,7 @@ export function detectShowConversationalIntent(query: string): string | null {
   }
 
   // 3. Чемпион России по красоте (ЧР)
-  if (/(чемпион[а-яёa-z]*\s*росси|чр\b|как\s+закрыть\s+чр|схем[а-яёa-z]*\s*(чр|набора|cac))/i.test(q) && !/гранд|юны|ветеран/i.test(q)) {
+  if (/(чемпион[а-яёa-z]*\s*росси|(^|[^а-яёa-z0-9])чр($|[^а-яёa-z0-9])|как\s+закрыть\s+чр|схем[а-яёa-z]*\s*(чр|набора|cac))/i.test(q) && !/гранд|юны|ветеран/i.test(q)) {
     return 'show-ch-rus'
   }
 
@@ -763,10 +781,19 @@ export function executeSmartShowSearch(rawQuery: string): ShowSearchMatchResult 
 
   for (const [secId, kws] of Object.entries(sectionKeywords)) {
     for (const kw of kws) {
-      for (const sw of effectiveSearchWords) {
-        if (isFuzzyWordMatch(sw, kw)) {
-          matchedSectionIds.add(secId)
-          matchedTokens.add(sw)
+      if (kw.includes(' ')) {
+        for (const qv of queryVariants) {
+          if (isPhraseMatch(qv, kw)) {
+            matchedSectionIds.add(secId)
+            kw.split(/\s+/).forEach((w) => matchedTokens.add(w))
+          }
+        }
+      } else {
+        for (const sw of effectiveSearchWords) {
+          if (isFuzzyWordMatch(sw, kw)) {
+            matchedSectionIds.add(secId)
+            matchedTokens.add(sw)
+          }
         }
       }
     }

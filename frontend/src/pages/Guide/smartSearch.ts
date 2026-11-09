@@ -94,17 +94,20 @@ export function damerauLevenshtein(a: string, b: string): number {
 export const RUSSIAN_STOP_WORDS = new Set<string>([
   // Вопросительные частицы и местоимения
   'как', 'что', 'где', 'куда', 'откуда', 'когда', 'почему', 'зачем', 'кто', 'чем',
-  'какой', 'какая', 'какое', 'какие', 'каком', 'каких', 'какому', 'какую', 'каким',
-  'сколько', 'скольки', 'со', 'до', 'при',
+  'какой', 'какая', 'какое', 'какие', 'каком', 'каких', 'какому', 'какую', 'каким', 'какими', 'какого',
+  'сколько', 'скольки', 'со', 'до', 'при', 'обо', 'изо', 'ко',
+  'чей', 'чья', 'чье', 'чьи', 'чьего', 'чьей', 'чьих',
   // Предлоги и союзы
-  'в', 'во', 'на', 'с', 'из', 'для', 'от', 'к', 'ко', 'у', 'о', 'об', 'обо',
+  'в', 'во', 'на', 'с', 'из', 'для', 'от', 'к', 'у', 'о', 'об',
   'по', 'без', 'через', 'над', 'под', 'за', 'и', 'а', 'но', 'или', 'да',
   'ли', 'же', 'то', 'бы', 'вот', 'если', 'чтобы', 'только', 'хоть', 'хотя',
   // Местоимения
   'мне', 'нам', 'вам', 'им', 'его', 'ее', 'их', 'мой', 'твой', 'наш', 'ваш',
-  'себя', 'себе', 'собой', 'это', 'эта', 'этот', 'эти', 'этом', 'этих', 'тому',
+  'себя', 'себе', 'собой', 'это', 'эта', 'этот', 'эти', 'этом', 'этих', 'этому', 'тому',
+  'такой', 'такая', 'такое', 'такие', 'такого', 'таким', 'таких',
+  'весь', 'вся', 'все', 'всего', 'всем', 'всех',
   // Наречия-усилители и вводные слова
-  'абсолютно', 'совсем', 'очень', 'просто', 'точно', 'действительно',
+  'абсолютно', 'совсем', 'очень', 'просто', 'точно', 'действительно', 'вообще', 'вообще-то',
   // Разговорные связки и общие глаголы-запросы
   'получить', 'получать', 'получение', 'получения', 'получению', 'получив',
   'стать', 'становится', 'делать', 'сделать', 'быть', 'является', 'являются',
@@ -141,6 +144,11 @@ export function isFuzzyWordMatch(queryWord: string, targetWord: string): boolean
   const q = queryWord.toLowerCase().replace(/ё/g, 'е').trim()
   const t = targetWord.toLowerCase().replace(/ё/g, 'е').trim()
 
+  // Если один из аргументов фраза с пробелами, пословное сравнение не применяется
+  if (q.includes(' ') || t.includes(' ')) {
+    return false
+  }
+
   if (q === t) return true
 
   // Проверка по общему префиксу для длинных слов (от 4 символов)
@@ -153,6 +161,13 @@ export function isFuzzyWordMatch(queryWord: string, targetWord: string): boolean
   const stemT = stemWord(t)
   if (stemQ.length >= 3 && stemT.length >= 3 && (stemT.startsWith(stemQ) || stemQ.startsWith(stemT))) {
     return true
+  }
+
+  // Чередование согласных в основах (г/ж, к/ч, х/ш, д/ж: каталог -> каталожный, круг -> круговой)
+  if (stemQ.length >= 4 && stemT.length >= 4 && Math.abs(stemQ.length - stemT.length) <= 1) {
+    if (damerauLevenshtein(stemQ, stemT) <= 1) {
+      return true
+    }
   }
 
   // Проверка по опечаткам (допустима 1 опечатка при длине от 4 символов, 2 опечатки от 7)
@@ -503,6 +518,27 @@ export const DIRECT_ANSWERS: readonly DirectAnswer[] = [
     officialRef: 'Правила состязаний по курсингу борзых РКФ, п. 7.4.1.3',
     targetSectionId: 'sec-requirements',
   },
+  {
+    id: 'protocol-anatomy',
+    title: 'Анатомия строки протокола соревнований',
+    triggerKeywords: [
+      'как читать протокол', 'строка протокола', 'анатомия протокола', 'анатомия строки',
+      'как читать строку протокола', 'как читать строку', 'таблица протокола',
+      'ячейки протокола', 'колонки протокола', 'расшифровка протокола',
+      'структура протокола', 'ghjnjrjk',
+    ],
+    shortAnswer:
+      'Официальный протокол состязаний по курсингу и бегам фиксирует путь каждой собаки по ключевым этапам турнира:',
+    bulletPoints: [
+      '№ по каталогу: порядковый номер участника в каталоге состязания, определяет пары 1-го круга.',
+      '1 и 2 круг: баллы за каждый забег и цвет попоны собаки (Красная № 1 или Белая № 2). Барьер выхода во 2-й круг — не менее 50% баллов.',
+      'Итог Σ (прямая сумма): прямая сумма баллов всех судей за оба круга без деления и скрытых коэффициентов.',
+      'Отметка [ВС]: Высшая квалификация (≥ 66,7% от максимума) — обязательное условие присуждения титулов и CACL.',
+      'Место и сертификат [CACL]: сертификат кандидата в чемпионы присуждается 1-му месту только при одновременном наличии знака [ВС] и кворума от 3 собак.',
+    ],
+    officialRef: 'Правила проведения состязаний по курсингу и бегам борзых РКФ, разд. IV · Протоколы',
+    targetSectionId: 'sec-protocol',
+  },
 ] as const
 
 // 8. Детектор естественных интентов (Conversational Intent Matcher)
@@ -587,6 +623,11 @@ export function detectConversationalIntent(query: string): string | null {
     return 'disqualifications-rules'
   }
 
+  // 16. Анатомия строки протокола соревнований
+  if (/(как\s+читать\s+.*протокол|анатоми[а-яёa-z]*\s+.*строк|как\s+понять\s+протокол|строк[а-яёa-z]*\s+протокол|расшифровк[а-яёa-z]*\s+протокол|как\s+читать\s+строку)/i.test(q)) {
+    return 'protocol-anatomy'
+  }
+
   return null
 }
 
@@ -606,6 +647,8 @@ const ANCHOR_TERMS: Record<string, { answerId: string; sectionId: string; weight
   дисквалифик: { answerId: 'disqualifications-rules', sectionId: 'sec-abbr', weight: 400 },
   маневренн: { answerId: 'judging-5-criteria', sectionId: 'sec-judging', weight: 350 },
   энтузиазм: { answerId: 'judging-5-criteria', sectionId: 'sec-judging', weight: 350 },
+  анатоми: { answerId: 'protocol-anatomy', sectionId: 'sec-protocol', weight: 450 },
+  протокол: { answerId: 'protocol-anatomy', sectionId: 'sec-protocol', weight: 350 },
 }
 
 // 10. Проверка совпадения поискового запроса с элементом
@@ -747,10 +790,19 @@ export function executeSmartGuideSearch(rawQuery: string): SearchMatchResult {
 
   for (const [secId, kws] of Object.entries(sectionKeywords)) {
     for (const kw of kws) {
-      for (const sw of effectiveSearchWords) {
-        if (isFuzzyWordMatch(sw, kw)) {
-          matchedSectionIds.add(secId)
-          matchedTokens.add(sw)
+      if (kw.includes(' ')) {
+        for (const qv of queryVariants) {
+          if (isPhraseMatch(qv, kw)) {
+            matchedSectionIds.add(secId)
+            kw.split(/\s+/).forEach((w) => matchedTokens.add(w))
+          }
+        }
+      } else {
+        for (const sw of effectiveSearchWords) {
+          if (isFuzzyWordMatch(sw, kw)) {
+            matchedSectionIds.add(secId)
+            matchedTokens.add(sw)
+          }
         }
       }
     }
