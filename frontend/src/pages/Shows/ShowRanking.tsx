@@ -46,7 +46,7 @@ export default function ShowRanking() {
   // Debounce only text typing in search input (never debounce clicks on breed/group/award pills)
   const debouncedSearchQuery = useDebounce(searchQuery, 250)
 
-  const rankingYear = filterYear || SHOW_ACTIVE_SEASON
+  const rankingYear = filterYear
 
   const {
     data: page0Data,
@@ -57,7 +57,7 @@ export default function ShowRanking() {
     queryKey: ['showDogRankingPage0', rankingYear],
     queryFn: () => getShowDogRankingPage0(rankingYear),
     staleTime: 5 * 60 * 1000,
-    enabled: Boolean(rankingYear),
+    enabled: typeof rankingYear === 'string',
   })
 
   const hasPage0 = Boolean(page0Data?.success && page0Data.data)
@@ -69,10 +69,8 @@ export default function ShowRanking() {
     setAllowFullLoad(false)
   }, [rankingYear])
 
-  // Full season fetch: start immediately if filters are active or page0 failed; otherwise after a brief delay
+  // Full season/all-time fetch: start immediately if filters are active or page0 failed; otherwise after a brief delay
   useEffect(() => {
-    if (!rankingYear) return
-
     const hasActiveFilters =
       Boolean(searchQuery.trim()) ||
       Boolean(filterBreed) ||
@@ -111,7 +109,7 @@ export default function ShowRanking() {
     queryKey: ['showDogRanking', rankingYear],
     queryFn: () => getShowDogRanking(rankingYear),
     staleTime: 5 * 60 * 1000,
-    enabled: Boolean(rankingYear) && allowFullLoad,
+    enabled: allowFullLoad,
   })
 
   // Synchronous memoized allDogs: zero delay, no useState or effect lag
@@ -240,15 +238,15 @@ export default function ShowRanking() {
     new Set(['2017', '2018', '2019', '2021', '2022', '2023', '2024', '2025', '2026']),
   ).sort((a, b) => Number(b) - Number(a))
 
-  // Avoid cloning 58k objects when rank is already present
+  // Avoid cloning 80k objects when rank is already present
   const rankedDogs = useMemo<RankedShowDog[]>(() => {
-    if (filterYear && allDogs.length > 0 && typeof allDogs[0].rank === 'number') {
+    if (allDogs.length > 0 && typeof allDogs[0].rank === 'number') {
       return allDogs as RankedShowDog[]
     }
     return [...allDogs]
       .sort(compareShowDogs)
       .map((dog, i) => ({ ...dog, rank: i + 1 }))
-  }, [allDogs, filterYear])
+  }, [allDogs])
 
   // Optimized filter loop: precalculates all invariants outside the 58k loop
   const filteredDogs = useMemo(() => {
@@ -290,6 +288,13 @@ export default function ShowRanking() {
     }))
   }, [rankedDogs, filterBreed, filterSex, debouncedSearchQuery])
 
+  const isAllTimeWithoutSearch = rankingYear === '' && !debouncedSearchQuery.trim()
+
+  const displayedDogs = useMemo(
+    () => (isAllTimeWithoutSearch ? filteredDogs.slice(0, 100) : filteredDogs),
+    [isAllTimeWithoutSearch, filteredDogs],
+  )
+
   const handleResetFilters = useCallback(() => {
     setFilterYear(SHOW_ACTIVE_SEASON)
     setFilterBreed('')
@@ -328,7 +333,7 @@ export default function ShowRanking() {
       {showListSkeleton ? (
         <div className="min-h-[360px]" aria-busy="true" aria-live="polite">
           <p className="mb-3 text-xs text-charcoal-500">
-            Загрузка рейтинга сезона…
+            {rankingYear ? 'Загрузка рейтинга сезона…' : 'Загрузка рейтинга за все года…'}
           </p>
           <SkeletonLoader variant="card" count={8} />
         </div>
@@ -340,7 +345,7 @@ export default function ShowRanking() {
         </div>
       ) : (
         <ShowRankingColumns
-          dogs={filteredDogs}
+          dogs={displayedDogs}
           filterYear={rankingYear}
           filterBreed={filterBreed}
           favorites={favorites}

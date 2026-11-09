@@ -44,5 +44,19 @@ describe('All-time show ranking tests', () => {
     const salukis = dogs.filter((d: { breed: string }) => d.breed === 'САЛЮКИ')
     expect(salukis.length).toBeGreaterThan(0)
     expect(salukis.length).toBeLessThanOrEqual(100)
+
+    // Verify all-time leader vs 2026 single-season leader distinction
+    // All-time Saluki #1 is Bel Etual Arabeska with over 100 exhibitions across career
+    expect(salukis[0].name_lat).toBe('BEL ETUAL ARABESKA')
+    expect(salukis[0].total_shows).toBeGreaterThan(100)
+
+    // Verify 2026 year ranking has distinct leader and show counts
+    const y2026Path = path.join(INDEXES_DIR, 'dog-ranking-2026.json')
+    if (fs.existsSync(y2026Path)) {
+      const dogs2026 = JSON.parse(fs.readFileSync(y2026Path, 'utf8'))
+      const salukis2026 = dogs2026.filter((d: { breed: string }) => d.breed === 'САЛЮКИ')
+      expect(salukis2026[0].name_lat).toBe('BEL ETUAL LIBERA STELLA')
+      expect(salukis2026[0].total_shows).toBeLessThan(salukis[0].total_shows)
+    }
   })
 })
