@@ -9,6 +9,7 @@ import {
   extractDogSex,
   bibColorStyle,
   bibTextClass,
+  formatGroupTitle,
 } from '../utils'
 import { displayStatusReason } from '../../../../lib/statusReason'
 import { normalizeQualificationAndVc } from '../ResultSummary'
@@ -406,11 +407,11 @@ export default function TableProtocolView({
                   {/* Нативный компактный разделитель группы прямо в таблице на ВСЮ ширину таблицы */}
                   <tr className="bg-camel-100/75 border-y border-[rgba(195,168,128,0.75)] first:border-t-0 select-none">
                     <td colSpan={100} className="py-1 px-3">
-                      <div className="flex items-center justify-between">
+                      <div className="flex items-center justify-between gap-2 min-w-0">
                         <span className="font-semibold text-xs text-camel-950">
-                          {groupKey}
+                          {formatGroupTitle(groupKey)}
                         </span>
-                        <span className="text-[11px] font-medium text-camel-700">
+                        <span className="shrink-0 whitespace-nowrap text-[11px] font-medium text-camel-700">
                           {breedCountLabel(groupResults.length)}
                         </span>
                       </div>

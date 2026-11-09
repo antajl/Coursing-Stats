@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { isRacingFormat, isCoursingFormat } from './utils'
+import { isRacingFormat, isCoursingFormat, formatGroupTitle } from './utils'
 import type { RawScores } from './types'
 
 describe('EventResults format detection', () => {
@@ -49,5 +49,14 @@ describe('EventResults format detection', () => {
     }
     expect(isRacingFormat(dnsRacingScores)).toBe(true)
     expect(isCoursingFormat(dnsRacingScores)).toBe(false)
+  })
+
+  it('formats group titles with elegant interpuncts instead of ASCII dashes', () => {
+    expect(formatGroupTitle('Русская псовая борзая - Стандартный - Кобели')).toBe(
+      'Русская псовая борзая · Стандартный · Кобели'
+    )
+    expect(formatGroupTitle('Салюки - Стандартный - Кобели')).toBe('Салюки · Стандартный · Кобели')
+    expect(formatGroupTitle('Неприбывшие участники')).toBe('Неприбывшие участники')
+    expect(formatGroupTitle('')).toBe('')
   })
 })

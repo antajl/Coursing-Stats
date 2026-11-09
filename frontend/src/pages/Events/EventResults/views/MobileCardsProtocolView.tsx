@@ -8,6 +8,7 @@ import DogSexIcon from '../../../../components/DogSexIcon'
 import {
   parseRawScores,
   extractDogSex,
+  formatGroupTitle,
 } from '../utils'
 import { displayStatusReason } from '../../../../lib/statusReason'
 import { normalizeQualificationAndVc } from '../ResultSummary'
@@ -313,11 +314,11 @@ export default function MobileCardsProtocolView({
               className="cs-glass-card overflow-hidden rounded-xl bg-white divide-y divide-old-money-200/80"
             >
               {/* Фирменная плашка группы пород — бесшовно переходит в первую собаку */}
-              <div className="bg-camel-100/80 border-b border-[rgba(195,168,128,0.75)] py-1.5 px-3 select-none flex items-center justify-between">
-                <span className="font-semibold text-xs text-camel-950">
-                  {groupKey}
+              <div className="bg-camel-100/80 border-b border-[rgba(195,168,128,0.75)] py-1.5 px-2.5 sm:px-3 select-none flex items-center justify-between gap-2 min-w-0">
+                <span className="font-semibold text-[11px] sm:text-xs text-camel-950 leading-tight">
+                  {formatGroupTitle(groupKey)}
                 </span>
-                <span className="text-[11px] font-medium text-camel-700">
+                <span className="shrink-0 whitespace-nowrap text-[10.5px] sm:text-[11px] font-medium text-camel-700">
                   {breedCountLabel(groupResults.length)}
                 </span>
               </div>

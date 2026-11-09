@@ -55,6 +55,15 @@ export function parseBreedClass(breedClass?: string | null, defaultBreed: string
   return { breed, className, category, groupHeader }
 }
 
+/**
+ * Элегантное форматирование заголовка группы пород для UI:
+ * заменяет грубые дефисы " - " на благородные интерпункты " · "
+ */
+export function formatGroupTitle(title: string): string {
+  if (!title) return ''
+  return title.replace(/\s+-\s+/g, ' · ')
+}
+
 export function groupResultsByBreedClass(results: Result[]): {
   grouped: Record<string, Result[]>
   sortedGroups: string[]
