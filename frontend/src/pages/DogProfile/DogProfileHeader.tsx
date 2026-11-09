@@ -75,7 +75,6 @@ export function DogProfileHeader({
   const dogId = String(dog.id)
   const favorite = isFavorite(dogId)
   const [isPhotoOpen, setIsPhotoOpen] = useState(false)
-  const [photoVariant, setPhotoVariant] = useState<'passport' | 'split_right' | 'bottom_card' | 'cover_banner'>('passport')
 
   useEffect(() => {
     if (!isPhotoOpen) return
@@ -342,46 +341,63 @@ export function DogProfileHeader({
       {/* Полноэкранный Lightbox для фото собаки (при клике на аватар) */}
       {isPhotoOpen && dog.photo_url && typeof document !== 'undefined' && createPortal(
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-charcoal-950/85 p-4 backdrop-blur-md transition-opacity animate-in fade-in duration-200"
-          onClick={() => setIsPhotoOpen(false)}
+          className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-6 bg-charcoal-950/92 select-none animate-in fade-in duration-200"
           role="dialog"
           aria-modal="true"
           aria-label={`Фотография ${primary}`}
+          onTouchMove={(e) => {
+            if (e.target === e.currentTarget) e.preventDefault()
+          }}
         >
+          {/* Полноэкранный кликабельный оверлей для надежного закрытия по тапу в любом месте фона (включая iOS Safari) */}
+          <button
+            type="button"
+            onClick={() => setIsPhotoOpen(false)}
+            className="absolute inset-0 h-full w-full cursor-pointer bg-transparent border-none p-0 -z-10 focus:outline-hidden"
+            aria-label="Закрыть фото"
+            tabIndex={-1}
+          />
+
+          {/* Фиксированная кнопка закрытия в правом верхнем углу (с учетом Safe Area на iPhone) */}
+          <button
+            type="button"
+            onClick={() => setIsPhotoOpen(false)}
+            className="fixed z-[110] flex items-center justify-center gap-1.5 rounded-full border border-white/25 bg-charcoal-900/85 px-3 py-2 text-xs font-semibold text-white shadow-xl backdrop-blur-sm transition-transform active:scale-95 hover:bg-charcoal-800 cursor-pointer min-h-[44px] min-w-[44px]"
+            style={{
+              top: 'max(0.75rem, env(safe-area-inset-top, 0.75rem))',
+              right: 'max(0.75rem, env(safe-area-inset-right, 0.75rem))',
+            }}
+            aria-label="Закрыть фото"
+          >
+            <X className="h-5 w-5 text-white" aria-hidden />
+            <span className="hidden sm:inline">Закрыть</span>
+          </button>
+
           <div
-            className="relative max-h-[92vh] max-w-[95vw] sm:max-w-3xl flex flex-col items-center"
+            className="relative max-h-[85dvh] max-w-[95vw] sm:max-w-3xl flex flex-col items-center"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Кнопка закрытия */}
-            <button
-              type="button"
-              onClick={() => setIsPhotoOpen(false)}
-              className="absolute -top-12 right-0 inline-flex items-center gap-1.5 rounded-full bg-white/20 px-3.5 py-1.5 text-xs font-semibold text-white hover:bg-white/30 backdrop-blur-xs transition-colors cursor-pointer min-h-[36px]"
-              aria-label="Закрыть фото"
-            >
-              <X className="h-4 w-4" aria-hidden />
-              <span>Закрыть (Esc)</span>
-            </button>
-
             {/* Полное фото собаки без обрезки */}
             <div className="overflow-hidden rounded-2xl border border-white/20 bg-charcoal-900 shadow-2xl">
               <img
                 src={dog.photo_url}
                 alt={primary}
                 referrerPolicy="no-referrer"
-                className="max-h-[78vh] w-auto max-w-full object-contain select-none"
+                loading="eager"
+                decoding="async"
+                className="max-h-[72dvh] sm:max-h-[78dvh] w-auto max-w-full object-contain select-none block"
               />
             </div>
 
             {/* Подпись под фото */}
-            <div className="mt-3 flex items-center justify-between w-full text-xs text-white/80 px-1">
-              <span className="font-medium text-white">{primary}</span>
+            <div className="mt-3 flex items-center justify-between w-full text-xs text-white/80 px-1 gap-3">
+              <span className="font-medium text-white truncate">{primary}</span>
               {dog.pedigree_url && (
                 <a
                   href={dog.pedigree_url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-camel-300 hover:text-white transition-colors"
+                  className="inline-flex items-center gap-1 text-camel-300 hover:text-white transition-colors shrink-0"
                 >
                   <span>The Breed Archive</span>
                   <ExternalLink className="h-3 w-3" aria-hidden />
