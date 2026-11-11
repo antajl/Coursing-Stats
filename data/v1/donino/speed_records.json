@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/donino-speed-v1",
   "source": "google-sheets",
-  "count": 176,
+  "count": 178,
   "records": [
     {
       "breed": "Уиппет",
@@ -459,6 +459,12 @@
           "date": "2026-05-14",
           "track_type": "прямая",
           "screenshot_url": "https://disk.yandex.ru/i/Zt00i2dVgOiT2Q"
+        },
+        {
+          "speed_km_h": 57,
+          "date": "2026-11-11",
+          "track_type": "прямая",
+          "screenshot_url": "https://disk.yandex.ru/i/NsLdx9pjd0FKhQ"
         }
       ],
       "dog_id": 9130
@@ -731,6 +737,17 @@
       "screenshot_url": "https://disk.yandex.ru/i/D-nzTjbjGnl4BA",
       "status": "normal",
       "track_type": "прямая",
+      "history": []
+    },
+    {
+      "breed": "Уиппет",
+      "sex": "С",
+      "name": "Люся",
+      "speed_km_h": 56,
+      "date": "2026-11-11",
+      "screenshot_url": "https://disk.yandex.ru/i/qOpnNe24WuC2iw",
+      "status": "new",
+      "track_type": "курсинг",
       "history": []
     },
     {
@@ -1108,6 +1125,17 @@
         }
       ],
       "dog_id": 9185
+    },
+    {
+      "breed": "Малинуа",
+      "sex": "К",
+      "name": "Орландо",
+      "speed_km_h": 53,
+      "date": "2026-11-11",
+      "screenshot_url": "https://disk.yandex.ru/i/-k2THME468XfLw",
+      "status": "new",
+      "track_type": "курсинг",
+      "history": []
     },
     {
       "breed": "Поденко ибиценко",
