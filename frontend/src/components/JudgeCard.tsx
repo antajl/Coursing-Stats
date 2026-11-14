@@ -50,6 +50,23 @@ const DISCIPLINE_TAGS: Record<string, { label: string; badgeClass: string }> = {
   },
 }
 
+function formatYearsActive(years: string): string {
+  if (!years) return ''
+  if (years.includes('–') || years.includes('-') || years.includes(',')) {
+    return `${years} гг.`
+  }
+  return `${years} г.`
+}
+
+function formatRunsCount(count: number): string {
+  const mod10 = count % 10
+  const mod100 = count % 100
+  if (mod100 >= 11 && mod100 <= 14) return `${count.toLocaleString('ru-RU')} забегов`
+  if (mod10 === 1) return `${count.toLocaleString('ru-RU')} забег`
+  if (mod10 >= 2 && mod10 <= 4) return `${count.toLocaleString('ru-RU')} забега`
+  return `${count.toLocaleString('ru-RU')} забегов`
+}
+
 function formatBreedsCount(count: number): string {
   const mod10 = count % 10
   const mod100 = count % 100
@@ -89,11 +106,12 @@ export default function JudgeCard({
       : ['coursing']
 
   const totalBreeds = judge.unique_breeds || 0
+  const yearsActiveLabel = judge.years_active ? formatYearsActive(judge.years_active) : ''
 
   const isEmbedded = variant === 'embedded'
   const shellClass = isEmbedded
     ? 'group relative flex items-center w-full min-w-0 border-0 bg-transparent px-3 sm:px-4 py-2.5 sm:py-3 transition-colors duration-150 hover:bg-camel-100/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-camel-500/60 min-h-[44px]'
-    : 'group relative flex items-center w-full min-w-0 rounded-2xl border border-old-money-200/90 bg-white px-3 sm:px-4 py-2.5 sm:py-3 transition-colors duration-150 hover:border-camel-300 hover:bg-cream-50/70 hover:shadow-xs min-h-[44px]'
+    : 'group relative flex items-center w-full min-w-0 rounded-xl sm:rounded-2xl border border-old-money-200/80 bg-white px-3 sm:px-3.5 py-2.5 sm:py-3 transition-all duration-150 hover:border-camel-400 hover:bg-cream-50/70 hover:shadow-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-camel-500/60 min-h-[44px]'
 
   return (
     <Link to={linkTo} className={shellClass}>
@@ -113,16 +131,19 @@ export default function JudgeCard({
             <span>{strictness.label}</span>
           </span>
 
-          {judge.years_active && (
+          {yearsActiveLabel && (
             <span
-              className="hidden sm:inline-flex items-center rounded-md border border-old-money-200/60 bg-cream-100/70 px-1.5 py-0.5 text-[9.5px] font-medium text-charcoal-600 shrink-0"
+              className="hidden sm:inline-flex items-center gap-1 rounded-full border border-old-money-200/90 bg-cream-100/90 px-2 py-0.5 text-[10px] text-charcoal-700 shrink-0"
               title="Период судейской практики и общее количество забегов"
             >
-              <span>{judge.years_active} гг.</span>
+              <span className="font-medium text-charcoal-800">{yearsActiveLabel}</span>
               {typeof judge.total_evaluations_count === 'number' && judge.total_evaluations_count > 0 && (
-                <span className="text-charcoal-400 ml-1">
-                  · {judge.total_evaluations_count.toLocaleString('ru-RU')} забегов
-                </span>
+                <>
+                  <span className="text-old-money-400" aria-hidden="true">·</span>
+                  <span className="font-semibold text-charcoal-800">
+                    {formatRunsCount(judge.total_evaluations_count)}
+                  </span>
+                </>
               )}
             </span>
           )}
@@ -147,23 +168,22 @@ export default function JudgeCard({
           </div>
 
           {totalBreeds > 0 && (
-            <>
-              <span className="hidden sm:inline-block h-3 w-px bg-old-money-300/80 shrink-0" aria-hidden="true" />
-              <span className="text-[10px] text-charcoal-500 font-medium shrink-0">
-                {totalBreeds} {formatBreedsCount(totalBreeds)}
-              </span>
-            </>
+            <span className="inline-flex items-center gap-1 text-[10.5px] text-charcoal-600 shrink-0">
+              <span className="text-old-money-400 font-bold" aria-hidden="true">·</span>
+              <span className="font-semibold text-charcoal-800">{totalBreeds}</span>
+              <span>{formatBreedsCount(totalBreeds)}</span>
+            </span>
           )}
         </div>
       </div>
 
       {/* 3. Правый блок ключевой статистики */}
-      <div className="shrink-0 flex items-center gap-2 sm:gap-3 border-l border-old-money-200/40 pl-2.5 sm:pl-3.5 ml-2 sm:ml-3">
+      <div className="shrink-0 flex items-center gap-2 sm:gap-2.5 border-l border-old-money-200/40 pl-2.5 sm:pl-3.5 ml-2 sm:ml-3">
         {/* Десктопные плашки метрик (>= sm) */}
-        <div className="hidden sm:flex items-center gap-2">
+        <div className="hidden sm:flex items-center gap-1.5 sm:gap-2">
           {/* Турниров */}
           <div
-            className="flex flex-col items-center justify-center min-w-[4.25rem] rounded-xl bg-cream-100/90 border border-old-money-200/60 px-2.5 py-1 text-center group-hover:bg-white group-hover:border-camel-300 transition-colors"
+            className="flex flex-col items-center justify-center w-[4.5rem] shrink-0 rounded-xl bg-cream-100/90 border border-old-money-200/60 px-1 py-1 text-center group-hover:bg-white group-hover:border-camel-300 transition-colors"
             title={`${judge.unique_events || 0} турниров в официальных протоколах`}
           >
             <span className="text-[9px] uppercase tracking-wider text-charcoal-500 font-medium">Турниров</span>
@@ -174,7 +194,7 @@ export default function JudgeCard({
 
           {/* Собак */}
           <div
-            className="flex flex-col items-center justify-center min-w-[4.25rem] rounded-xl bg-cream-100/90 border border-old-money-200/60 px-2.5 py-1 text-center group-hover:bg-white group-hover:border-camel-300 transition-colors"
+            className="flex flex-col items-center justify-center w-[4.5rem] shrink-0 rounded-xl bg-cream-100/90 border border-old-money-200/60 px-1 py-1 text-center group-hover:bg-white group-hover:border-camel-300 transition-colors"
             title={`${(judge.unique_dogs || 0).toLocaleString('ru-RU')} уникальных собак`}
           >
             <span className="text-[9px] uppercase tracking-wider text-charcoal-500 font-medium">Собак</span>
@@ -185,7 +205,7 @@ export default function JudgeCard({
 
           {/* Ср. балл */}
           <div
-            className="flex flex-col items-center justify-center min-w-[4.25rem] rounded-xl bg-cream-100/90 border border-old-money-200/60 px-2.5 py-1 text-center group-hover:bg-white group-hover:border-camel-300 transition-colors"
+            className="flex flex-col items-center justify-center w-[4.5rem] shrink-0 rounded-xl bg-cream-100/90 border border-old-money-200/60 px-1 py-1 text-center group-hover:bg-white group-hover:border-camel-300 transition-colors"
             title={strictness.detail}
           >
             <span className="text-[9px] uppercase tracking-wider text-charcoal-500 font-medium">Ср. балл</span>
@@ -219,7 +239,7 @@ export default function JudgeCard({
 
         {/* Шеврон-индикатор кликабельности */}
         <ChevronRight
-          className="w-4 h-4 text-charcoal-300 group-hover:text-camel-600 group-hover:translate-x-0.5 transition-all shrink-0 ml-1"
+          className="w-4 h-4 text-charcoal-300 group-hover:text-camel-600 group-hover:translate-x-0.5 transition-all shrink-0 ml-0.5 sm:ml-1"
           aria-hidden="true"
         />
       </div>

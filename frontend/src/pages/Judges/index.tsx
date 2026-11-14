@@ -217,6 +217,7 @@ export default function Judges() {
       title={plaqueTitle}
       count={sortedJudges.length}
       countLabel={formatJudgesCount(sortedJudges.length)}
+      actionPlacement="inline"
       action={<JudgeSortDropdown value={sortKey} onChange={setSortKey} compact />}
     />
   )
@@ -259,14 +260,19 @@ export default function Judges() {
         </div>
       ) : (
         <div className="space-y-4">
-          <DoninoColumnShell plaque={plaque} listRef={listRevealRef}>
+          <DoninoColumnShell
+            plaque={plaque}
+            listRef={listRevealRef}
+            bodyClassName="grid grid-cols-1 lg:grid-cols-2 gap-2.5 p-2.5 sm:p-3 bg-cream-50/20"
+          >
             {sortedJudges.slice(0, visibleCount).map((judge) => (
-              <div key={judge.id} data-list-item>
+              <div key={judge.id} data-list-item className="min-w-0">
                 <JudgeCard
                   judge={judge}
                   filterYear={filterYear}
                   filterDiscipline={filterDiscipline}
                   filterBreed={filterBreed}
+                  variant="card"
                 />
               </div>
             ))}

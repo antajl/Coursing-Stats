@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ArrowUpDown, Check } from 'lucide-react'
+import { ArrowUpDown, Check, ChevronDown } from 'lucide-react'
 import ModernDropdown from '../../components/ui/ModernDropdown'
 
 export type JudgeSortKey =
@@ -42,16 +42,14 @@ export default function JudgeSortDropdown({
   const trigger = (
     <button
       type="button"
-      className={
-        compact
-          ? 'cs-glass-pill inline-flex h-7 px-2 items-center gap-1 rounded-full text-[11px] font-semibold text-camel-900 border border-camel-300/80 bg-white/90 shadow-2xs hover:border-camel-400 transition-colors cursor-pointer select-none'
-          : 'cs-glass-pill inline-flex h-7.5 px-2.5 items-center gap-1.5 rounded-full text-xs font-semibold text-camel-900 border border-camel-300/80 bg-white/90 shadow-2xs hover:border-camel-400 transition-colors cursor-pointer select-none'
-      }
+      className="cs-glass-pill inline-flex h-7 px-2.5 items-center gap-1 sm:gap-1.5 rounded-full text-[11px] sm:text-xs text-charcoal-800 border border-camel-300/80 bg-white/95 shadow-2xs hover:border-camel-500 hover:bg-cream-50 transition-all cursor-pointer select-none"
       aria-label="Сортировка судей"
       title={`Сортировка: ${currentOption.label}`}
     >
       <ArrowUpDown className="h-3 w-3 text-camel-700 shrink-0" aria-hidden />
-      <span>{compact ? currentOption.shortLabel : currentOption.label}</span>
+      <span className="hidden sm:inline text-charcoal-500 font-normal">Сортировка:</span>
+      <span className="font-semibold text-camel-950">{compact ? currentOption.shortLabel : currentOption.label}</span>
+      <ChevronDown className="h-2.5 w-2.5 text-camel-600/80 shrink-0" aria-hidden />
     </button>
   )
 
