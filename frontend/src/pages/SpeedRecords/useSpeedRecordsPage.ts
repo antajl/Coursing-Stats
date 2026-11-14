@@ -313,7 +313,7 @@ export function useSpeedRecordsPage() {
     setFilterMinTime('')
     setFilterMaxTime('')
     if (location.pathname.startsWith('/speed-records')) {
-      navigate('/speed-records/')
+      navigate(`/speed-records/${activeSeason}/`)
     }
   }, [activeSeason, location.pathname, navigate])
 
@@ -326,7 +326,7 @@ export function useSpeedRecordsPage() {
     setFilterMinTime('')
     setFilterMaxTime('')
     if (location.pathname.startsWith('/speed-records')) {
-      navigate('/speed-records/')
+      navigate(`/speed-records/${activeSeason}/`)
     }
   }, [activeSeason, location.pathname, navigate])
 
