@@ -16,6 +16,8 @@ import {
   getFavoritesKeyboard,
   getCompareKeyboard,
   getNavigationButtons,
+  getCalendar2027Keyboard,
+  getCalendarChangelogKeyboard,
 } from './keyboards';
 import { matchesHandlerCallback } from './constants';
 
@@ -56,6 +58,9 @@ function collectProductionKeyboardCallbacks(): { callback: string; source: strin
     { source: 'getDogCardKeyboard', keyboard: getDogCardKeyboard('42', 'favorites') },
     { source: 'getFavoritesKeyboard', keyboard: getFavoritesKeyboard([{ id: 10 }, { id: 20 }]) },
     { source: 'getNavigationButtons', keyboard: getNavigationButtons('ratings', 'main_menu') },
+    { source: 'getCalendar2027Keyboard(sub=false)', keyboard: getCalendar2027Keyboard(false, 0, 42) },
+    { source: 'getCalendar2027Keyboard(sub=true)', keyboard: getCalendar2027Keyboard(true, 10, 42) },
+    { source: 'getCalendarChangelogKeyboard', keyboard: getCalendarChangelogKeyboard() },
   ];
 
   const out: { callback: string; source: string }[] = [];

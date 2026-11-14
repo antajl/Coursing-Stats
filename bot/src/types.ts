@@ -68,6 +68,7 @@ export interface Competition {
   title?: string;
   date?: string;
   date_start?: string;
+  date_end?: string;
   location: string;
   type?: string;
   event_type?: string;
@@ -76,6 +77,29 @@ export interface Competition {
   speed_value?: number;
   placement?: number;
   total_score?: number;
+  notes?: string | null;
+  rules_url?: string | null;
+  rules_file?: string | null;
+  host_club?: string | null;
+  rank_label?: string | null;
+}
+
+export interface CalendarChangelogEntry {
+  date: string;
+  version: string;
+  title: string;
+  summary: string;
+  changes: string[];
+}
+
+export interface CalendarChangelog {
+  schema: string;
+  season: number;
+  source_url?: string;
+  attachment_url?: string;
+  last_checked_at?: string;
+  source_sha256?: string;
+  entries: CalendarChangelogEntry[];
 }
 
 export interface SpeedRecord {

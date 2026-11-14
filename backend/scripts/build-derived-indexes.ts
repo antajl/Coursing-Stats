@@ -6,6 +6,7 @@
  */
 import { openDb, ROOT } from './build-derived/shared';
 import { buildTopIndexes, buildTopSpeedIndexes, buildYearsIndex } from './build-derived/top-indexes';
+import { buildBreedAnnualLeaders } from './build-derived/breed-annual-leaders';
 import { buildJudgesSummary, buildJudgeDetails } from './build-derived/judges-indexes';
 import { buildDogProfiles } from './build-derived/dog-profiles';
 import { buildSitemap } from './build-derived/sitemap';
@@ -19,6 +20,7 @@ function main() {
   buildTopIndexes(db);
   buildTopSpeedIndexes(db);
   buildYearsIndex(db);
+  buildBreedAnnualLeaders();
   const { rows, judgesData } = buildJudgesSummary(db);
   buildJudgeDetails(rows, judgesData);
   buildDogProfiles(db);

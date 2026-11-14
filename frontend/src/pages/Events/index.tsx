@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from 'react'
-import { useSearchParams } from 'react-router-dom'
+import { useSearchParams, useNavigate, useLocation, useParams } from 'react-router-dom'
 import { useYears, useEvents } from '../../hooks/useApi'
 import { useYandexGoal } from '../../components/YandexMetrica'
 import EmptyState from '../../components/EmptyState'
@@ -16,12 +16,30 @@ import EventsToolbar, { CURRENT_SEASON } from './EventsToolbar'
 import EventsMonthList from './EventsMonthList'
 import { initialSeasonYearFilter } from '../../lib/season'
 
-export default function Events() {
+export type EventsProps = {
+  urlYear?: string
+}
+
+export default function Events({ urlYear }: EventsProps = {}) {
+  const { year: routeYearParam } = useParams<{ year?: string }>()
+  const routeYear = urlYear ?? routeYearParam
   const [searchParams, setSearchParams] = useSearchParams()
+  const navigate = useNavigate()
+  const location = useLocation()
   const { reachGoal } = useYandexGoal()
-  const [filterYear, setFilterYear] = useState(() =>
-    initialSeasonYearFilter(searchParams, CURRENT_SEASON),
-  )
+  const [filterYear, setFilterYear] = useState(() => {
+    if (routeYear !== undefined) {
+      return routeYear === 'all' ? '' : routeYear
+    }
+    return initialSeasonYearFilter(searchParams, CURRENT_SEASON)
+  })
+
+  useEffect(() => {
+    if (routeYear !== undefined) {
+      const target = routeYear === 'all' ? '' : routeYear
+      setFilterYear((prev) => (prev !== target ? target : prev))
+    }
+  }, [routeYear])
   const [filterMonth, setFilterMonth] = useState(() => {
     const monthParam = searchParams.get('month')
     if (!monthParam || monthParam === 'from_previous') return ''
@@ -97,21 +115,43 @@ export default function Events() {
     return map
   }, [allEventsData, eventsData])
 
+  const handleFilterYearChange = (newYear: string) => {
+    setFilterYear(newYear)
+    if (newYear === '2027') {
+      navigate('/competitions/archive/2027/')
+      return
+    }
+    if (location.pathname.startsWith('/competitions/archive')) {
+      const targetSlug = newYear === '' ? 'all' : newYear
+      const nextParams = new URLSearchParams(searchParams)
+      nextParams.delete('year')
+      const qs = nextParams.toString()
+      navigate(`/competitions/archive/${targetSlug}/${qs ? '?' + qs : ''}`)
+    }
+  }
+
   const handleResetFilters = () => {
     setFilterYear(CURRENT_SEASON)
     setFilterMonth('')
     setFilterDiscipline('')
     setFilterWithProtocol(false)
     setSearchQuery('')
+    if (location.pathname.startsWith('/competitions/archive')) {
+      navigate('/competitions/archive/')
+    }
   }
 
   useEffect(() => {
     setSearchParams(
       (prev) => {
         const params = new URLSearchParams(prev)
-        if (filterYear === '') params.set('year', 'all')
-        else if (filterYear !== CURRENT_SEASON) params.set('year', filterYear)
-        else params.delete('year')
+        if (!location.pathname.startsWith('/competitions/archive')) {
+          if (filterYear === '') params.set('year', 'all')
+          else if (filterYear !== CURRENT_SEASON) params.set('year', filterYear)
+          else params.delete('year')
+        } else {
+          params.delete('year')
+        }
         if (filterMonth) params.set('month', filterMonth)
         else params.delete('month')
         if (filterDiscipline) params.set('discipline', filterDiscipline)
@@ -233,7 +273,7 @@ export default function Events() {
       searchQuery={searchQuery}
       onSearchChange={setSearchQuery}
       filterYear={filterYear}
-      onFilterYearChange={setFilterYear}
+      onFilterYearChange={handleFilterYearChange}
       filterMonth={filterMonth}
       onFilterMonthChange={setFilterMonth}
       filterDiscipline={filterDiscipline}

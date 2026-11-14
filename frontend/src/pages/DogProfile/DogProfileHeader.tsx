@@ -1,5 +1,6 @@
 import { useState, useMemo, useEffect } from 'react'
 import { createPortal } from 'react-dom'
+import { Link } from 'react-router-dom'
 import {
   Star as StarIcon,
   Crown,
@@ -11,6 +12,7 @@ import {
   ExternalLink,
   Maximize2,
   X,
+  ArrowUpRight,
 } from 'lucide-react'
 import OwnerCrownName from '../../components/OwnerCrownName'
 import DogSexIcon from '../../components/DogSexIcon'
@@ -18,6 +20,7 @@ import { isCertificateToken, type DogTitle } from '../../lib/qualificationTitles
 import { DogProfileAwardsBar } from './DogProfileAwardsBar'
 import { parseDogName, toDogTitleCase, formatNameWithNonBreakingSpaces } from '../../lib/dogName'
 import { displayBreed } from '../../lib/breedMapping'
+import { getBreedHubByCanonicalKey } from '../../lib/breed-hubs-data'
 import { useFavorites } from '../../hooks/useFavorites'
 import { createLogger } from '../../lib/logging'
 import HoverTooltip from '../../components/ui/HoverTooltip'
@@ -67,6 +70,10 @@ export function DogProfileHeader({
 }: DogProfileHeaderProps) {
   const { primary, secondary } = parseDogName(dog.name_lat, dog.name_ru)
   const breedDisplay = displayBreed(dog.breed)
+  const breedHub = useMemo(
+    () => (dog.breed ? getBreedHubByCanonicalKey(dog.breed) : undefined),
+    [dog.breed]
+  )
   const hasTitles =
     showTitles.some((t) => !isCertificateToken(t.title)) ||
     competitionTitles.some((t) => !isCertificateToken(t.title))
@@ -248,7 +255,18 @@ export function DogProfileHeader({
 
                 {/* РЯД 2: Метаданные чистым текстом через точку « · » */}
                 <div className="mt-2.5 flex flex-wrap items-center gap-x-2.5 gap-y-1 text-xs text-charcoal-600 font-medium">
-                  <span className="font-semibold text-charcoal-800">{breedDisplay.primary}</span>
+                  {breedHub ? (
+                    <Link
+                      to={`/breeds/${breedHub.slug}/`}
+                      className="font-semibold text-charcoal-800 hover:text-camel-800 hover:underline inline-flex items-center gap-0.5 transition-colors group cursor-pointer"
+                      title={`Хаб породы ${breedDisplay.primary}`}
+                    >
+                      <span>{breedDisplay.primary}</span>
+                      <ArrowUpRight className="h-3 w-3 text-camel-600 opacity-60 group-hover:opacity-100 transition-opacity" aria-hidden />
+                    </Link>
+                  ) : (
+                    <span className="font-semibold text-charcoal-800">{breedDisplay.primary}</span>
+                  )}
                   {dog.sex && (
                     <>
                       <span className="text-old-money-300 select-none">·</span>

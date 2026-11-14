@@ -1,5 +1,5 @@
-import { useState, useEffect, useMemo } from 'react'
-import { useSearchParams } from 'react-router-dom'
+import { useState, useEffect, useMemo, useCallback } from 'react'
+import { useSearchParams, useLocation, useNavigate, useParams } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
 import { ChevronDown } from 'lucide-react'
 import PageToolbar from '../../components/toolbar/PageToolbar'
@@ -52,11 +52,31 @@ const MONTH_NAMES_RU = [
   'Декабрь',
 ]
 
-export default function ShowCalendar() {
+export type ShowCalendarProps = {
+  urlYear?: string
+}
+
+export default function ShowCalendar({ urlYear }: ShowCalendarProps = {}) {
+  const { year: routeYearParam } = useParams<{ year?: string }>()
+  const routeYear = urlYear ?? routeYearParam
+  const location = useLocation()
+  const navigate = useNavigate()
   const [searchParams, setSearchParams] = useSearchParams()
   const [exhibitions, setExhibitions] = useState<ShowRkfCalendarEntry[]>([])
   const [years, setYears] = useState<string[]>([CURRENT_YEAR])
-  const [filterYear, setFilterYear] = useState(() => searchParams.get('year') || CURRENT_YEAR)
+  const [filterYear, setFilterYear] = useState(() => {
+    if (routeYear !== undefined) {
+      return routeYear === 'all' ? '' : routeYear
+    }
+    return searchParams.get('year') || CURRENT_YEAR
+  })
+
+  useEffect(() => {
+    if (routeYear !== undefined) {
+      const target = routeYear === 'all' ? '' : routeYear
+      setFilterYear((prev) => (prev !== target ? target : prev))
+    }
+  }, [routeYear])
   const [filterMonth, setFilterMonth] = useState(() => {
     const monthParam = searchParams.get('month')
     if (!monthParam || monthParam === 'from_previous') return ''

@@ -11,7 +11,9 @@ import {
   getRatingKeyboard,
   getCalendarKeyboard,
   getDogCardKeyboard,
-  getFavoritesKeyboard
+  getFavoritesKeyboard,
+  getCalendar2027Keyboard,
+  getCalendarChangelogKeyboard,
 } from './keyboards';
 
 describe('Keyboards', () => {
@@ -261,6 +263,40 @@ describe('Keyboards', () => {
       if (paginationButton && 'callback_data' in paginationButton) {
         expect(paginationButton.text).toBe('Назад');
       }
+    });
+  });
+
+  describe('getCalendar2027Keyboard', () => {
+    it('shows subscribe button when not subscribed', () => {
+      const keyboard = getCalendar2027Keyboard(false, 0, 42);
+      const callbacks = keyboard.inline_keyboard.flat().map((b) => ('callback_data' in b ? b.callback_data : null));
+      const texts = keyboard.inline_keyboard.flat().map((b) => b.text);
+      expect(callbacks).toContain('cal_sub_toggle_2027');
+      expect(texts.some((t) => t.includes('Подписаться'))).toBe(true);
+      expect(callbacks).toContain('cal_changelog_2027');
+      expect(callbacks).toContain('competitions_menu');
+    });
+
+    it('shows unsubscribe button when subscribed', () => {
+      const keyboard = getCalendar2027Keyboard(true, 0, 42);
+      const texts = keyboard.inline_keyboard.flat().map((b) => b.text);
+      expect(texts.some((t) => t.includes('Отписаться'))).toBe(true);
+    });
+
+    it('includes pagination buttons when total > 10', () => {
+      const keyboard = getCalendar2027Keyboard(false, 0, 42);
+      const callbacks = keyboard.inline_keyboard.flat().map((b) => ('callback_data' in b ? b.callback_data : null));
+      expect(callbacks).toContain('calendar_2027_10');
+    });
+  });
+
+  describe('getCalendarChangelogKeyboard', () => {
+    it('provides back button to 2027 calendar and web link', () => {
+      const keyboard = getCalendarChangelogKeyboard();
+      const callbacks = keyboard.inline_keyboard.flat().map((b) => ('callback_data' in b ? b.callback_data : null));
+      const urls = keyboard.inline_keyboard.flat().map((b) => ('url' in b ? b.url : null));
+      expect(callbacks).toContain('calendar_2027');
+      expect(urls).toContain('https://coursing-stats.ru/competitions/archive/2027/');
     });
   });
 });

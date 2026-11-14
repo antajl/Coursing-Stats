@@ -104,6 +104,37 @@ export function useYears() {
   });
 }
 
+export interface AnnualDogLeader {
+  year: number;
+  dog_id: number;
+  name_lat: string;
+  name_ru?: string | null;
+  sex?: string | null;
+  gold: number;
+  silver: number;
+  bronze: number;
+  total_starts: number;
+  best_speed?: number | null;
+  rating_score?: number | null;
+}
+
+export interface BreedAnnualLeadersData {
+  schema: string;
+  generated_at: string;
+  total_breeds: number;
+  breeds_with_data: number;
+  total_entries: number;
+  leaders_by_slug: Record<string, AnnualDogLeader[]>;
+}
+
+export function useBreedAnnualLeaders() {
+  return useQuery({
+    queryKey: ['breedAnnualLeaders'],
+    queryFn: () => fetchStaticData<BreedAnnualLeadersData>('/data/v1/indexes/breed-annual-leaders.json'),
+    staleTime: STALE_LONG_MS,
+  });
+}
+
 export function useJudges(breed: string, discipline: string, year = '') {
   return useQuery({
     queryKey: ['judges', breed, discipline, year],

@@ -1,4 +1,4 @@
-import { Dog, DogData, SpeedRecord, CoursingRecord, Rating, Competition, RatingItem, SpeedRecordExtended, CompetitionData } from './types';
+import { Dog, DogData, SpeedRecord, CoursingRecord, Rating, Competition, RatingItem, SpeedRecordExtended, CompetitionData, CalendarChangelog } from './types';
 
 const DEFAULT_SITE_URL = 'https://coursing-stats.ru';
 
@@ -562,6 +562,20 @@ class CoursingStatsAPI {
       return calendarData?.events || [];
     } catch (error) {
       return [];
+    }
+  }
+
+  /**
+   * Получает историю изменений (ченджлог) календаря
+   * @param year - год (по умолчанию '2027')
+   * @returns объект ченджлога или null
+   */
+  async getCalendarChangelog(year: string = '2027'): Promise<CalendarChangelog | null> {
+    try {
+      const data = await this.fetchJSON(`${this.baseApiUrl}/calendar/${year}-changelog.json`, CACHE_TTL.CALENDAR);
+      return (data as CalendarChangelog) || null;
+    } catch (error) {
+      return null;
     }
   }
 

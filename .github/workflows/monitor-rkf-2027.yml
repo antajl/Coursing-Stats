@@ -1,0 +1,79 @@
+name: Monitor RKF 2027 Calendar Plan
+
+on:
+  schedule:
+    # Daily at 05:00 UTC (08:00 MSK) synchronized with Donino schedule
+    - cron: "0 5 * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Force check even if SHA-256 unchanged"
+        type: boolean
+        required: false
+        default: false
+      apply:
+        description: "Apply detected changes to calendar and changelog"
+        type: boolean
+        required: false
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  monitor-rkf-2027:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Check RKF 2027 Calendar Plan
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+          TELEGRAM_ADMIN_CHAT_ID: ${{ secrets.ADMIN_CHAT_ID }}
+        run: |
+          FLAGS=""
+          if [ "${{ github.event.inputs.force }}" = "true" ]; then FLAGS="$FLAGS --force"; fi
+          if [ "${{ github.event.inputs.apply }}" = "true" ]; then FLAGS="$FLAGS --apply"; fi
+          npx tsx backend/scripts/competitions/check-rkf-2027.ts $FLAGS
+
+      - name: Commit updated calendar and changelog
+        id: commit_changes
+        run: |
+          git config --local user.email "antajl@yandex.ru"
+          git config --local user.name "antajl"
+          git add data/v1/calendar/2027.json data/v1/calendar/2027-changelog.json
+          if git diff --staged --quiet; then
+            echo "No calendar changes to commit"
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            git commit -m "Update RKF 2027 calendar plan and changelog"
+            git push
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Deploy updated calendar to S3 CDN
+        if: steps.commit_changes.outputs.has_changes == 'true'
+        run: |
+          aws s3 cp data/v1/calendar/2027.json s3://${{ secrets.S3_BUCKET }}/data/v1/calendar/2027.json \
+            --endpoint-url https://storage.yandexcloud.net \
+            --acl public-read \
+            --cache-control "public, max-age=3600"
+          aws s3 cp data/v1/calendar/2027-changelog.json s3://${{ secrets.S3_BUCKET }}/data/v1/calendar/2027-changelog.json \
+            --endpoint-url https://storage.yandexcloud.net \
+            --acl public-read \
+            --cache-control "public, max-age=3600"
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

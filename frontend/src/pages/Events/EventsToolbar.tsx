@@ -231,7 +231,7 @@ export default function EventsToolbar({
 
         <div className="ml-auto shrink-0 flex items-center gap-1.5">
           <Link
-            to="/competitions/2027/"
+            to="/competitions/archive/2027/"
             className="group cs-glass-pill inline-flex h-8 shrink-0 items-center gap-1 rounded-full px-2.5 text-xs font-semibold transition-all text-camel-900 border-camel-400/50 hover:bg-camel-100"
             title="Будущие соревнования 2027 года"
           >
@@ -318,7 +318,7 @@ export default function EventsToolbar({
         {/* Кнопка «Сезон 2027», прилипшая к правому краю */}
         <div className="ml-auto shrink-0 flex items-center">
           <Link
-            to="/competitions/2027/"
+            to="/competitions/archive/2027/"
             className="group cs-glass-pill inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full px-3.5 text-xs font-semibold transition-all cursor-pointer whitespace-nowrap select-none text-camel-950 border-camel-400/60 bg-camel-50/50 hover:bg-camel-100/80 hover:border-camel-500 shadow-2xs"
             title="Будущие соревнования 2027 года (календарный план РКФ)"
           >

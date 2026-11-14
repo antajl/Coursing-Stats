@@ -1,5 +1,5 @@
 import { lazy, Suspense, useState, useEffect, useCallback } from 'react'
-import { Navigate, useSearchParams, useNavigate } from 'react-router-dom'
+import { Navigate, useSearchParams, useNavigate, useParams, useLocation } from 'react-router-dom'
 import { SEO } from '../components/SEO'
 import { JsonLd, breadcrumbListSchema, faqPageSchema } from '../components/JsonLd'
 import { usePublicCalendarVisible } from '../hooks/useStaticData'
@@ -12,11 +12,19 @@ const TopDogs = lazy(() => import('./TopDogs'))
 const Judges = lazy(() => import('./Judges'))
 const Events = lazy(() => import('./Events'))
 
-function Competitions() {
+export type CompetitionsProps = {
+  defaultTab?: string
+}
+
+function Competitions({ defaultTab }: CompetitionsProps) {
+  const { tab: routeTab, id: routeId, year: routeYear } = useParams<{ tab?: string; id?: string; year?: string }>()
+  const location = useLocation()
   const [searchParams, setSearchParams] = useSearchParams()
   const navigate = useNavigate()
-  const rawTabParam = searchParams.get('tab')
   const calendarVisible = usePublicCalendarVisible('competitions')
+
+  const pathTab = routeTab || (routeId === 'archive' || routeId === 'ranking' || routeId === 'judges' ? routeId : undefined)
+  const rawTabParam = pathTab || defaultTab || searchParams.get('tab')
 
   let redirectPath: string | null = null
   const currentHash = typeof window !== 'undefined' ? window.location.hash : ''
@@ -32,14 +40,15 @@ function Competitions() {
       targetTab = 'judges'
     }
     const next = new URLSearchParams(searchParams)
-    next.set('tab', targetTab)
-    redirectPath = `/competitions/?${next.toString()}${currentHash}`
+    next.delete('tab')
+    const qs = next.toString()
+    redirectPath = `/competitions/${targetTab}/${qs ? '?' + qs : ''}${currentHash}`
   } else if (rawTabParam === 'calendar') {
-    redirectPath = `/competitions/?tab=archive${currentHash}`
+    redirectPath = `/competitions/archive/${currentHash}`
   } else if (rawTabParam === 'builder' || rawTabParam === 'protocol-builder') {
-    redirectPath = isLocalDev ? '/protocol-builder/' : `/competitions/?tab=ranking${currentHash}`
+    redirectPath = isLocalDev ? '/protocol-builder/' : `/competitions/ranking/${currentHash}`
   } else if (!calendarVisible && rawTabParam === 'archive') {
-    redirectPath = `/competitions/?tab=ranking${currentHash}`
+    redirectPath = `/competitions/ranking/${currentHash}`
   }
 
   const resolvedTab =
@@ -107,15 +116,21 @@ function Competitions() {
       setIsTabLoading(true)
     }
 
-    setSearchParams(
-      (prev) => {
-        const next = new URLSearchParams(prev)
-        next.set('tab', newTab)
-        return next
-      },
-      { replace: false }
-    )
-  }, [activeTab, visitedTabs, navigate, setSearchParams])
+    const currentYear = routeYear || searchParams.get('year')
+    const nextParams = new URLSearchParams(searchParams)
+    nextParams.delete('tab')
+    nextParams.delete('year')
+    const qs = nextParams.toString()
+    const queryPart = qs ? `?${qs}` : ''
+
+    if (currentYear && currentYear !== 'all') {
+      navigate(`/competitions/${newTab}/${currentYear}/${queryPart}`)
+    } else if (currentYear === 'all') {
+      navigate(`/competitions/${newTab}/all/${queryPart}`)
+    } else {
+      navigate(`/competitions/${newTab}/${queryPart}`)
+    }
+  }, [activeTab, visitedTabs, navigate, searchParams, routeYear])
 
   if (redirectPath) {
     return <Navigate to={redirectPath} replace />
@@ -153,13 +168,35 @@ function Competitions() {
     },
   ]
 
+  const currentYear = routeYear || searchParams.get('year')
+  const displayYear = currentYear && currentYear !== 'all' ? currentYear : '2026'
+
+  const seoTitle =
+    activeTab === 'archive'
+      ? `Соревнования и результаты по курсингу ${displayYear} года — Календарь и протоколы РКФ`
+      : activeTab === 'judges'
+      ? 'Судьи соревнований по курсингу и бегам борзых — РКФ | Курсинг Статс'
+      : `Рейтинг собак по курсингу и бегам ${displayYear} — Календарь соревнований и результаты РКФ`
+
+  const seoDescription =
+    activeTab === 'archive'
+      ? `Все соревнования по курсингу и бегам борзых ${displayYear} года: расписание, электронные протоколы забегов, оценки по 5 критериям и судьи РКФ на платформе Coursing Stats.`
+      : activeTab === 'judges'
+      ? 'Реестр и статистика работы спортивных судей РКФ по курсингу и бегам: судейские бригады, обслуженные старты и оценки.'
+      : `Официальный рейтинг собак по курсингу и бегам борзых ${displayYear} года: результаты забегов, медальный зачёт, очки CS, календарь состязаний РКФ и рекорды пород на платформе Coursing Stats.`
+
+  const canonicalPath = routeYear
+    ? `/competitions/${activeTab}/${routeYear}/`
+    : `/competitions/${activeTab}/`
+  const canonicalUrl = `https://coursing-stats.ru${canonicalPath}`
+
   return (
     <>
       <h1 className="sr-only">Расписание соревнований, результаты и рейтинг собак в курсинге</h1>
       <SEO
-        title="Рейтинг собак по курсингу и бегам 2026 — Календарь соревнований и результаты РКФ"
-        description="Официальный рейтинг собак по курсингу и бегам борзых 2026 года: результаты забегов, медальный зачёт, очки CS, календарь состязаний РКФ и рекорды пород на платформе Coursing Stats."
-        canonicalUrl="https://coursing-stats.ru/competitions/"
+        title={seoTitle}
+        description={seoDescription}
+        canonicalUrl={canonicalUrl}
         keywords="курсинг борзых расписание 2026, соревнования по курсингу расписание, календарь курсинг 2026, чемпионат ркф по курсингу результаты, рейтинг собак в курсинге, рекорд скорости салюки, рекорды скорости борзых, рейтинг салюки, рейтинг уиппетов, рейтинг РПБ, бега борзых, рейтинг собак по курсингу, рейтинг курсинг, единый рейтинг собак, турнирная таблица курсинг, лидеры сезона, медали, архив соревнований, РКФ"
       />
       <JsonLd
@@ -169,6 +206,8 @@ function Competitions() {
             breadcrumbListSchema([
               { name: 'Главная', url: '/' },
               { name: 'Соревнования', url: '/competitions/' },
+              ...(activeTab !== 'ranking' ? [{ name: activeTab === 'archive' ? 'Архив' : 'Судьи', url: canonicalPath }] : []),
+              ...(routeYear ? [{ name: `Сезон ${routeYear}`, url: canonicalPath }] : []),
             ]),
             faqPageSchema(competitionFaqs),
           ],
@@ -194,7 +233,7 @@ function Competitions() {
           >
             <div id="ranking" className="scroll-mt-20" />
             <Suspense fallback={<LoadingCard count={3} variant="list" />}>
-              <TopDogs />
+              <TopDogs urlYear={routeYear} />
             </Suspense>
           </div>
         )}
@@ -209,7 +248,7 @@ function Competitions() {
             <div id="archive" className="scroll-mt-20" />
             <div id="calendar" className="scroll-mt-20" />
             <Suspense fallback={<LoadingCard count={3} variant="list" />}>
-              <Events />
+              <Events urlYear={routeYear} />
             </Suspense>
           </div>
         )}
@@ -240,4 +279,3 @@ function Competitions() {
   )
 }
 
-export default Competitions

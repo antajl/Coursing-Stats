@@ -26,6 +26,11 @@ export default function Nav() {
     location.pathname.startsWith('/donino-');
   const isShowsActive =
     location.pathname === '/shows' || location.pathname.startsWith('/shows/')
+  const isBreedsActive =
+    location.pathname === '/breeds' ||
+    location.pathname.startsWith('/breeds/') ||
+    location.pathname === '/breed' ||
+    location.pathname.startsWith('/breed/')
   const isGuideActive = location.pathname === '/guide';
   const isAboutActive = location.pathname === '/about';
 
@@ -85,6 +90,7 @@ export default function Nav() {
         isActive={isActive}
         isCompetitionsActive={isCompetitionsActive}
         isShowsActive={isShowsActive}
+        isBreedsActive={isBreedsActive}
         isSpeedRecordsActive={isSpeedRecordsActive}
         isGuideActive={isGuideActive}
         isAboutActive={isAboutActive}
@@ -96,6 +102,7 @@ export default function Nav() {
         isActive={isActive}
         isCompetitionsActive={isCompetitionsActive}
         isShowsActive={isShowsActive}
+        isBreedsActive={isBreedsActive}
         isSpeedRecordsActive={isSpeedRecordsActive}
         isGuideActive={isGuideActive}
         isAboutActive={isAboutActive}

@@ -19,6 +19,9 @@ export interface CalendarEvent {
   results_file?: string | null
   results_pdf_url?: string | null
   catalog_url?: string | null
+  rules_url?: string | null
+  rules_file?: string | null
+  notes?: string | null
   region?: string | null
 }
 

@@ -1,7 +1,9 @@
 import { useState, useLayoutEffect, useRef, useMemo } from 'react'
-import { ChevronDown, X } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { ChevronDown, X, ArrowUpRight } from 'lucide-react'
 import BreedSearchDropdown from '../../components/ui/BreedSearchDropdown'
 import { canonicalBreed, displayBreed, matchesBreedFilter } from '../../lib/breedMapping'
+import { getBreedHubByCanonicalKey } from '../../lib/breed-hubs-data'
 import type { DogsIndexEntry } from '../../lib/competingBreeds'
 
 export interface QuickBreedItem {
@@ -256,6 +258,11 @@ export default function QuickBreedBar({
     return displayBreed(normalizedSelected).primary || selectedBreed
   }, [normalizedSelected, selectedBreed])
 
+  const selectedHub = useMemo(
+    () => (selectedBreed ? getBreedHubByCanonicalKey(selectedBreed) : undefined),
+    [selectedBreed]
+  )
+
   // Расчет: минимальный режим vs обычный + сколько плашек точно помещается
   const { isMinimal, visibleBreeds, rareBreedChip } = useMemo(() => {
     const avail = Math.max(0, containerWidth - BUFFER)
@@ -383,40 +390,53 @@ export default function QuickBreedBar({
         {isMinimal ? (
           /* МАКСИМАЛЬНО СУЖЕННЫЙ РЕЖИМ: просто кнопка «Породы» */
           normalizedSelected ? (
-            <span
-              className="cs-glass-pill-active inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full px-2.5 text-xs font-semibold whitespace-nowrap"
-              title={`Выбрана порода: ${selectedDisplay}`}
-            >
-              <BreedSearchDropdown
-                breeds={breedValues}
-                selectedBreed={selectedBreed}
-                onSelect={onSelectBreed}
-                dogIndex={dogIndex}
-                trigger={
-                  <button
-                    type="button"
-                    className="inline-flex items-center gap-1 cursor-pointer max-w-[130px] truncate"
-                    title="Сменить породу"
-                    aria-label={`Выбрана порода: ${selectedDisplay}. Нажмите для смены.`}
-                  >
-                    <span className="truncate">{selectedDisplay}</span>
-                    <ChevronDown className="h-3.5 w-3.5 opacity-70 shrink-0" aria-hidden />
-                  </button>
-                }
-              />
-              <button
-                type="button"
-                onClick={(e) => {
-                  e.stopPropagation()
-                  onSelectBreed('')
-                }}
-                className="rounded-full p-0.5 hover:bg-camel-200/60 text-camel-950 transition-colors shrink-0 cursor-pointer"
-                title="Сбросить породу"
-                aria-label={`Сбросить фильтр породы ${selectedDisplay}`}
+            <>
+              <span
+                className="cs-glass-pill-active inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full px-2.5 text-xs font-semibold whitespace-nowrap"
+                title={`Выбрана порода: ${selectedDisplay}`}
               >
-                <X className="h-3.5 w-3.5" aria-hidden />
-              </button>
-            </span>
+                <BreedSearchDropdown
+                  breeds={breedValues}
+                  selectedBreed={selectedBreed}
+                  onSelect={onSelectBreed}
+                  dogIndex={dogIndex}
+                  trigger={
+                    <button
+                      type="button"
+                      className="inline-flex items-center gap-1 cursor-pointer max-w-[130px] truncate"
+                      title="Сменить породу"
+                      aria-label={`Выбрана порода: ${selectedDisplay}. Нажмите для смены.`}
+                    >
+                      <span className="truncate">{selectedDisplay}</span>
+                      <ChevronDown className="h-3.5 w-3.5 opacity-70 shrink-0" aria-hidden />
+                    </button>
+                  }
+                />
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation()
+                    onSelectBreed('')
+                  }}
+                  className="rounded-full p-0.5 hover:bg-camel-200/60 text-camel-950 transition-colors shrink-0 cursor-pointer"
+                  title="Сбросить породу"
+                  aria-label={`Сбросить фильтр породы ${selectedDisplay}`}
+                >
+                  <X className="h-3.5 w-3.5" aria-hidden />
+                </button>
+              </span>
+              {selectedHub && (
+                <Link
+                  to={`/breeds/${selectedHub.slug}/`}
+                  className="cs-glass-pill inline-flex h-8 shrink-0 items-center gap-1 rounded-full px-2 text-xs font-semibold text-camel-900 border border-camel-300/80 bg-camel-50 hover:bg-camel-100 transition-colors whitespace-nowrap cursor-pointer"
+                  title={`Хаб породы ${selectedHub.nameRu}`}
+                  aria-label={`Открыть хаб породы ${selectedHub.nameRu}`}
+                >
+                  <span>Хаб</span>
+                  <ArrowUpRight className="h-3.5 w-3.5 text-camel-700" aria-hidden />
+                </Link>
+              )}
+            </>
           ) : (
             <BreedSearchDropdown
               breeds={breedValues}
@@ -495,6 +515,19 @@ export default function QuickBreedBar({
                   <X className="h-3.5 w-3.5" aria-hidden />
                 </button>
               </span>
+            )}
+
+            {/* Ссылка на хаб выбранной породы */}
+            {selectedHub && (
+              <Link
+                to={`/breeds/${selectedHub.slug}/`}
+                className="cs-glass-pill inline-flex h-8 shrink-0 items-center gap-1 rounded-full px-2.5 text-xs font-semibold text-camel-900 border border-camel-300/80 bg-camel-50 hover:bg-camel-100 transition-colors whitespace-nowrap cursor-pointer"
+                title={`Хаб породы ${selectedHub.nameRu}`}
+                aria-label={`Открыть хаб породы ${selectedHub.nameRu}`}
+              >
+                <span>Хаб породы</span>
+                <ArrowUpRight className="h-3.5 w-3.5 text-camel-700" aria-hidden />
+              </Link>
             )}
 
             {/* Выпадающий поиск по всем породам */}

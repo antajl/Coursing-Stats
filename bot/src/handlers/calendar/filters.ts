@@ -133,3 +133,99 @@ export function formatCalendarText(
   
   return text;
 }
+
+function escapeHtml(str: string): string {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+/**
+ * Форматирует список состязаний утвержденного плана сезона 2027
+ */
+export function formatCalendar2027Text(
+  events: Competition[],
+  offset: number = 0,
+  isSubscribed: boolean = false
+): string {
+  const total = events.length;
+  const page = events.slice(offset, offset + 10);
+
+  let text = '<b>📅 Календарный план состязаний 2027</b>\n';
+  text += `Всего запланировано: <b>${total}</b> стартов (РКФ)\n`;
+  if (isSubscribed) {
+    text += '🔔 <i>Вы подписаны на уведомления об изменениях</i>\n\n';
+  } else {
+    text += '🔕 <i>Подписка не оформлена (нажмите кнопку ниже)</i>\n\n';
+  }
+
+  if (page.length === 0) {
+    text += 'Нет состязаний для отображения.';
+    return text;
+  }
+
+  page.forEach((event, index) => {
+    const num = offset + index + 1;
+    const title = escapeHtml(event.title || event.name || 'Состязание');
+    const startStr = formatDateRussian(event.date_start || event.date || '');
+    const endStr = event.date_end ? formatDateRussian(event.date_end) : startStr;
+    const dateDisplay = startStr === endStr ? startStr : `${startStr} — ${endStr}`;
+    const loc = escapeHtml(event.location || 'Место уточняется');
+    const isPending = event.notes && event.notes.toLowerCase().includes('согласовани');
+
+    text += `<b>${num}. ${dateDisplay}</b>\n`;
+    text += `🏆 ${title}\n`;
+    text += `📍 <i>${loc}</i>\n`;
+    if (isPending) {
+      text += `⚠️ <b>Статус:</b> на согласовании комиссии\n`;
+    }
+    text += '\n';
+  });
+
+  if (total > 10) {
+    const pageNum = Math.floor(offset / 10) + 1;
+    const totalPages = Math.ceil(total / 10);
+    text += `<i>Страница ${pageNum} из ${totalPages} (показано ${offset + 1}–${offset + page.length} из ${total})</i>`;
+  }
+
+  return text;
+}
+
+/**
+ * Форматирует историю изменений (ченджлог) сезона 2027 с <blockquote expandable>
+ */
+export function formatCalendarChangelogText(changelog: import('../../types').CalendarChangelog | null): string {
+  if (!changelog || !changelog.entries || changelog.entries.length === 0) {
+    return '<b>📋 История изменений 2027</b>\n\nИстория изменений пока пуста.';
+  }
+
+  let text = '<b>📋 История изменений плана состязаний 2027</b>\n';
+  if (changelog.last_checked_at) {
+    const checkDate = new Date(changelog.last_checked_at).toLocaleDateString('ru-RU');
+    text += `<i>Последняя синхронизация с РКФ: ${checkDate}</i>\n\n`;
+  } else {
+    text += '\n';
+  }
+
+  changelog.entries.forEach((entry) => {
+    const ver = escapeHtml(entry.version);
+    const date = escapeHtml(entry.date);
+    const title = escapeHtml(entry.title);
+    text += `📌 <b>Версия ${ver} (${date})</b> — ${title}\n`;
+    if (entry.summary) {
+      text += `<i>${escapeHtml(entry.summary)}</i>\n`;
+    }
+    if (entry.changes && entry.changes.length > 0) {
+      text += '<blockquote expandable>';
+      entry.changes.forEach((c) => {
+        text += `• ${escapeHtml(c)}\n`;
+      });
+      text += '</blockquote>';
+    }
+    text += '\n';
+  });
+
+  return text;
+}

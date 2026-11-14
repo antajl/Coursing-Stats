@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest'
-import { CORE_BREED_HUBS, getBreedHubBySlug } from './breed-hubs-data'
+import { CORE_BREED_HUBS, getBreedHubBySlug, getBreedHubByCanonicalKey } from './breed-hubs-data'
+import annualLeaders from '../../../data/v1/indexes/breed-annual-leaders.json'
 import { matchesBreedFilter } from './breedMapping'
 import topPlacAll from '../../../data/v1/indexes/top-placement-all.json'
 import dogsIndex from '../../../data/v1/indexes/dogs-index.json'
@@ -89,6 +90,32 @@ describe('breed-hubs-data', () => {
       expect(b.trackDistance).toBeUndefined()
       expect(b.admissionAge).toBeUndefined()
       expect(b.groupRu).toBeUndefined()
+    }
+  })
+
+  it('correctly resolves breeds by canonical key', () => {
+    expect(getBreedHubByCanonicalKey('УИППЕТ')?.slug).toBe('whippet')
+    expect(getBreedHubByCanonicalKey('САЛЮКИ')?.slug).toBe('saluki')
+    expect(getBreedHubByCanonicalKey('РУССКАЯ ПСОВАЯ БОРЗАЯ')?.slug).toBe('borzoi')
+    expect(getBreedHubByCanonicalKey('ТАКСА')?.slug).toBe('dachshund')
+    expect(getBreedHubByCanonicalKey('ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ')?.slug).toBe('dachshund')
+  })
+
+  it('breed annual leaders index has valid structure and historical records', () => {
+    expect(annualLeaders.schema).toBe('coursing-stats/breed-annual-leaders-v1')
+    expect(annualLeaders.breeds_with_data).toBeGreaterThanOrEqual(60)
+    expect(annualLeaders.total_entries).toBeGreaterThanOrEqual(300)
+
+    const leadersBySlug = annualLeaders.leaders_by_slug as Record<string, any[]>
+    expect(leadersBySlug.whippet.length).toBe(12)
+    expect(leadersBySlug.saluki.length).toBe(12)
+    expect(leadersBySlug.borzoi.length).toBe(12)
+
+    for (const leader of leadersBySlug.whippet) {
+      expect(leader.year).toBeGreaterThanOrEqual(2015)
+      expect(leader.dog_id).toBeGreaterThan(0)
+      expect(leader.name_lat).toBeTruthy()
+      expect(leader.total_starts).toBeGreaterThan(0)
     }
   })
 })

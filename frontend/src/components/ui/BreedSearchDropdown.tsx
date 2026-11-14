@@ -1,4 +1,6 @@
 import { useState, useEffect, useRef, useMemo, type KeyboardEvent } from 'react'
+import { Link } from 'react-router-dom'
+import { ArrowUpRight } from 'lucide-react'
 import ModernDropdown from './ModernDropdown'
 import { canonicalBreed, uniqueCanonicalBreeds, displayBreed, matchesBreedFilter } from '../../lib/breedMapping'
 import { deriveCompetingBreeds, countCompetingBreeds, type DogsIndexEntry } from '../../lib/competingBreeds'
@@ -222,17 +224,26 @@ export default function BreedSearchDropdown({
             )}
           </div>
 
-          {/* Clear selection button */}
-          {selectedBreed && (
-            <div className="mt-2 pt-2 border-t border-old-money-200">
+          {/* Bottom directory link & clear selection */}
+          <div className="mt-2 pt-2 border-t border-old-money-200 flex items-center justify-between gap-2 text-xs">
+            <Link
+              to="/breeds/"
+              onClick={() => setIsOpen(false)}
+              className="inline-flex items-center gap-1 text-camel-800 hover:text-camel-950 hover:underline font-medium px-1 py-1"
+            >
+              <span>Каталог всех пород</span>
+              <ArrowUpRight className="h-3 w-3" />
+            </Link>
+            {selectedBreed && (
               <button
+                type="button"
                 onClick={handleClear}
-                className="w-full px-3 py-1.5 text-sm text-charcoal-500 hover:text-charcoal-700 transition-colors"
+                className="text-charcoal-500 hover:text-charcoal-700 transition-colors px-2 py-1 cursor-pointer"
               >
-                Сбросить фильтр
+                Сбросить
               </button>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       ) : null}
     </ModernDropdown>

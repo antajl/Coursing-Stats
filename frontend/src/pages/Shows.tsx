@@ -1,5 +1,5 @@
 import { lazy, Suspense, useState, useEffect, useCallback } from 'react'
-import { Navigate, useSearchParams } from 'react-router-dom'
+import { Navigate, useSearchParams, useNavigate, useParams, useLocation } from 'react-router-dom'
 import RKFAttribution from '../components/RKFAttribution'
 import { SEO } from '../components/SEO'
 import { usePublicCalendarVisible } from '../hooks/useStaticData'
@@ -13,11 +13,20 @@ const ShowRanking = lazy(() => import('./Shows/ShowRanking'))
 const ShowJudges = lazy(() => import('./Shows/ShowJudges'))
 const ShowCalendar = lazy(() => import('./Shows/ShowCalendar'))
 
-function Shows() {
+export type ShowsProps = {
+  defaultTab?: string
+}
+
+function Shows({ defaultTab }: ShowsProps) {
+  const { tab: routeTab, id: routeId, year: routeYear } = useParams<{ tab?: string; id?: string; year?: string }>()
+  const location = useLocation()
+  const navigate = useNavigate()
   const [searchParams, setSearchParams] = useSearchParams()
-  const rawTabParam = searchParams.get('tab')
-  const rawTab = rawTabParam || 'ranking'
   const calendarVisible = usePublicCalendarVisible('shows')
+
+  const pathTab = routeTab || (routeId === 'archive' || routeId === 'ranking' || routeId === 'judges' ? routeId : undefined)
+  const rawTabParam = pathTab || defaultTab || searchParams.get('tab')
+  const rawTab = rawTabParam || 'ranking'
   const currentHash = typeof window !== 'undefined' ? window.location.hash : ''
   const hashKey = currentHash.replace(/^#/, '')
 
@@ -85,7 +94,6 @@ function Shows() {
   const handleTabChange = useCallback((newTab: string) => {
     if (newTab === activeTab) return
 
-    // Immediately update both the tab button and the content panel in one render frame
     setActiveTab(newTab)
     const isFirstVisit = !visitedTabs.has(newTab)
     if (isFirstVisit) {
@@ -93,18 +101,24 @@ function Shows() {
       setIsTabLoading(true)
     }
 
-    setSearchParams(
-      (prev) => {
-        const next = new URLSearchParams(prev)
-        next.set('tab', newTab)
-        return next
-      },
-      { replace: false }
-    )
-  }, [activeTab, visitedTabs, setSearchParams])
+    const currentYear = routeYear || searchParams.get('year')
+    const nextParams = new URLSearchParams(searchParams)
+    nextParams.delete('tab')
+    nextParams.delete('year')
+    const qs = nextParams.toString()
+    const queryPart = qs ? `?${qs}` : ''
+
+    if (currentYear && currentYear !== 'all') {
+      navigate(`/shows/${newTab}/${currentYear}/${queryPart}`)
+    } else if (currentYear === 'all') {
+      navigate(`/shows/${newTab}/all/${queryPart}`)
+    } else {
+      navigate(`/shows/${newTab}/${queryPart}`)
+    }
+  }, [activeTab, visitedTabs, navigate, searchParams, routeYear])
 
   if (redirectTab) {
-    return <Navigate to={`/shows/?tab=${redirectTab}${currentHash}`} replace />
+    return <Navigate to={`/shows/${redirectTab}/${currentHash}`} replace />
   }
 
   const isVisited = (tabId: string) => visitedTabs.has(tabId) || activeTab === tabId
@@ -115,13 +129,35 @@ function Shows() {
     { id: 'judges', label: 'Судьи' },
   ]
 
+  const currentYear = routeYear || searchParams.get('year')
+  const displayYear = currentYear && currentYear !== 'all' ? currentYear : '2026'
+
+  const seoTitle =
+    activeTab === 'archive'
+      ? `Календарь и выставки собак РКФ ${displayYear} года — Отчеты и результаты | Курсинг Статс`
+      : activeTab === 'judges'
+      ? 'Судьи выставок собак РКФ — Статистика экспертиз | Курсинг Статс'
+      : `Рейтинг выставочных собак РКФ ${displayYear} года — Топ чемпионов | Курсинг Статс`
+
+  const seoDescription =
+    activeTab === 'archive'
+      ? `Все выставки собак РКФ сезона ${displayYear} года: даты, города, клубы-организаторы, судьи и электронные отчеты с rkf.online.`
+      : activeTab === 'judges'
+      ? 'Статистика судей выставок РКФ: количество отсуженных выставок, строгость судейства, процент отличных оценок.'
+      : `Рейтинг собак по выставкам РКФ ${displayYear} года: награды дня (CAC, BOB, ЧРКФ и др.), профили чемпионов и статистика судей.`
+
+  const canonicalPath = routeYear
+    ? `/shows/${activeTab}/${routeYear}/`
+    : `/shows/${activeTab}/`
+  const canonicalUrl = `https://coursing-stats.ru${canonicalPath}`
+
   return (
     <>
-      <h1 className="sr-only">Рейтинг выставочных собак РКФ 2026</h1>
+      <h1 className="sr-only">Рейтинг выставочных собак РКФ {displayYear}</h1>
       <SEO
-        title="Рейтинг выставочных собак РКФ"
-        description="Рейтинг собак по выставкам РКФ: награды дня (CAC, BOB, ЧРКФ и др.), профили и статистика судей. Ссылки на оригиналы rkf.online."
-        canonicalUrl="https://coursing-stats.ru/shows/"
+        title={seoTitle}
+        description={seoDescription}
+        canonicalUrl={canonicalUrl}
         keywords="рейтинг выставок, выставки собак, РКФ, CAC, BOB, ЧРКФ, судьи выставок"
       />
       <MobileSubNavTabs
@@ -145,7 +181,7 @@ function Shows() {
             <div id="ranking" className="scroll-mt-20" />
             <div id="champions" className="scroll-mt-20" />
             <Suspense fallback={<LoadingCard count={6} variant="shows" />}>
-              <ShowRanking />
+              <ShowRanking urlYear={routeYear} />
             </Suspense>
           </div>
         )}
@@ -160,7 +196,7 @@ function Shows() {
             <div id="archive" className="scroll-mt-20" />
             <div id="calendar" className="scroll-mt-20" />
             <Suspense fallback={<SkeletonLoader count={6} variant="cards" />}>
-              <ShowCalendar />
+              <ShowCalendar urlYear={routeYear} />
             </Suspense>
           </div>
         )}

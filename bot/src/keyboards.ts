@@ -34,8 +34,9 @@ export function getBackButton(): InlineKeyboard {
 export function getCompetitionsMenu(): InlineKeyboard {
   return new InlineKeyboard()
     .text(`${unicodeIcons.calendar} Архив соревнований`, 'calendar')
-    .text(`${unicodeIcons.ratings} Рейтинги`, 'ratings')
+    .text('📅 Сезон 2027', 'calendar_2027')
     .row()
+    .text(`${unicodeIcons.ratings} Рейтинги`, 'ratings')
     .text(`${unicodeIcons.judges} Судьи`, 'judges')
     .row()
     .text(`${unicodeIcons.back} Назад`, 'main_menu');
@@ -305,6 +306,11 @@ export function getCalendarKeyboard(offset: string | number = 0, isShows: boolea
     keyboard.text('Назад', isShows ? `shows_calendar_0` : `calendar_0`);
   }
 
+  if (!isShows) {
+    keyboard.row();
+    keyboard.text('📅 Сезон 2027', 'calendar_2027');
+  }
+
   keyboard.row();
   if (isShows) {
     keyboard.url('🌐 На сайте', 'https://coursing-stats.ru/shows?tab=calendar');
@@ -316,6 +322,46 @@ export function getCalendarKeyboard(offset: string | number = 0, isShows: boolea
   keyboard.text('← Назад', isShows ? 'shows_menu' : 'competitions_menu');
 
   return keyboard;
+}
+
+/** Клавиатура для календарного плана сезона 2027 с подпиской */
+export function getCalendar2027Keyboard(isSubscribed: boolean = false, offset: number = 0, total: number = 42): InlineKeyboard {
+  const keyboard = new InlineKeyboard();
+
+  const subText = isSubscribed ? '🔕 Отписаться от обновлений' : '🔔 Подписаться на обновления';
+  keyboard.text(subText, 'cal_sub_toggle_2027');
+  keyboard.row();
+
+  const currentOffset = Number(offset) || 0;
+  if (currentOffset === 0 && total > 10) {
+    keyboard.text('Ещё 10', 'calendar_2027_10');
+    keyboard.row();
+  } else if (currentOffset > 0) {
+    const prevOffset = Math.max(0, currentOffset - 10);
+    const nextOffset = currentOffset + 10;
+    keyboard.text('← Назад', `calendar_2027_${prevOffset}`);
+    if (nextOffset < total) {
+      keyboard.text('Вперёд →', `calendar_2027_${nextOffset}`);
+    }
+    keyboard.row();
+  }
+
+  keyboard.text('📋 История изменений', 'cal_changelog_2027');
+  keyboard.row();
+
+  keyboard.url('🌐 На сайте', 'https://coursing-stats.ru/competitions/archive/2027/');
+  keyboard.row();
+
+  keyboard.text(`${unicodeIcons.back} Назад`, 'competitions_menu');
+  return keyboard;
+}
+
+/** Клавиатура для ченджлога сезона 2027 */
+export function getCalendarChangelogKeyboard(): InlineKeyboard {
+  return new InlineKeyboard()
+    .url('🌐 На сайте', 'https://coursing-stats.ru/competitions/archive/2027/')
+    .row()
+    .text(`${unicodeIcons.back} К календарю 2027`, 'calendar_2027');
 }
 
 /** Список избранного: кличка собаки → dog:{id} */

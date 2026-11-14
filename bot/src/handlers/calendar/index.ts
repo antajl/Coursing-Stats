@@ -1,8 +1,15 @@
 import { Composer } from 'grammy';
 import { CoursingStatsAPI } from '../../api';
-import { getNavigationButtons, getCalendarKeyboard } from '../../keyboards';
+import { getNavigationButtons, getCalendarKeyboard, getCalendar2027Keyboard, getCalendarChangelogKeyboard } from '../../keyboards';
 import { Competition } from '../../types';
-import { filterUpcomingEvents, filterByEventType, sortEventsByDate, formatCalendarText } from './filters';
+import {
+  filterUpcomingEvents,
+  filterByEventType,
+  sortEventsByDate,
+  formatCalendarText,
+  formatCalendar2027Text,
+  formatCalendarChangelogText,
+} from './filters';
 import { safeEditOrReply } from '../commands';
 import type { KVNamespace } from '../context';
 
@@ -324,6 +331,136 @@ export function createCalendar(api: CoursingStatsAPI, cache?: KVNamespace) {
       await safeEditOrReply(ctx,
         '❌ Ошибка при загрузке календаря.',
         { reply_markup: getNavigationButtons('competitions_menu', 'main_menu') },
+        cache
+      );
+    }
+  });
+
+  // Season 2027 calendar plan
+  calendar.callbackQuery(/^calendar_2027(?:_(\d+))?$/, async (ctx) => {
+    const offset = parseInt(ctx.match?.[1] || '0', 10);
+    const userId = ctx.from?.id;
+    let isSubscribed = false;
+    if (userId && cache) {
+      try {
+        const sub = await cache.get(`sub:cal:2027:${userId}`);
+        isSubscribed = sub === '1';
+      } catch {
+        isSubscribed = false;
+      }
+    }
+
+    await safeEditOrReply(ctx, '<b>Загрузка плана состязаний 2027...</b>', {
+      parse_mode: 'HTML',
+      reply_markup: getNavigationButtons('competitions_menu', 'main_menu'),
+    }, cache);
+
+    try {
+      const events = await api.getCalendar('2027');
+      if (events.length === 0) {
+        await safeEditOrReply(ctx,
+          'Не удалось загрузить план состязаний 2027.',
+          { reply_markup: getNavigationButtons('competitions_menu', 'competitions_menu') },
+          cache
+        );
+        return;
+      }
+
+      const text = formatCalendar2027Text(events, offset, isSubscribed);
+      await safeEditOrReply(ctx, text, {
+        parse_mode: 'HTML',
+        reply_markup: getCalendar2027Keyboard(isSubscribed, offset, events.length),
+      }, cache);
+    } catch (error) {
+      console.error('[calendar_2027] Error:', error);
+      await safeEditOrReply(ctx,
+        '❌ Ошибка при загрузке состязаний 2027.',
+        { reply_markup: getNavigationButtons('competitions_menu', 'competitions_menu') },
+        cache
+      );
+    }
+  });
+
+  // Toggle 2027 calendar subscription
+  calendar.callbackQuery('cal_sub_toggle_2027', async (ctx) => {
+    const userId = ctx.from?.id;
+    if (!userId) {
+      await ctx.answerCallbackQuery({ text: 'Ошибка авторизации' });
+      return;
+    }
+
+    if (!cache) {
+      await ctx.answerCallbackQuery({ text: 'Хранилище временно недоступно' });
+      return;
+    }
+
+    try {
+      const subKey = `sub:cal:2027:${userId}`;
+      const currentSub = await cache.get(subKey);
+      const isNowSubscribed = !currentSub || currentSub === '0';
+
+      await cache.put(subKey, isNowSubscribed ? '1' : '0');
+
+      // Update global subscribers list
+      const subscribersKey = 'subscribers:cal:2027';
+      let subscriberIds: number[] = [];
+      try {
+        const existing = await cache.get(subscribersKey);
+        if (existing) {
+          subscriberIds = JSON.parse(existing) as number[];
+        }
+      } catch {
+        subscriberIds = [];
+      }
+
+      if (isNowSubscribed) {
+        if (!subscriberIds.includes(userId)) {
+          subscriberIds.push(userId);
+        }
+      } else {
+        subscriberIds = subscriberIds.filter((id) => id !== userId);
+      }
+      await cache.put(subscribersKey, JSON.stringify(subscriberIds));
+
+      await ctx.answerCallbackQuery({
+        text: isNowSubscribed
+          ? '🔔 Вы подписались на обновления календаря 2027!'
+          : '🔕 Вы отписались от обновлений календаря 2027',
+        show_alert: false,
+      });
+
+      // Refresh view
+      const events = await api.getCalendar('2027');
+      const text = formatCalendar2027Text(events, 0, isNowSubscribed);
+      await safeEditOrReply(ctx, text, {
+        parse_mode: 'HTML',
+        reply_markup: getCalendar2027Keyboard(isNowSubscribed, 0, events.length),
+      }, cache);
+    } catch (error) {
+      console.error('[cal_sub_toggle_2027] Error:', error);
+      await ctx.answerCallbackQuery({ text: 'Произошла ошибка при обновлении подписки' });
+    }
+  });
+
+  // Season 2027 Changelog
+  calendar.callbackQuery('cal_changelog_2027', async (ctx) => {
+    await safeEditOrReply(ctx, '<b>Загрузка истории изменений...</b>', {
+      parse_mode: 'HTML',
+      reply_markup: getNavigationButtons('calendar_2027', 'competitions_menu'),
+    }, cache);
+
+    try {
+      const changelog = await api.getCalendarChangelog('2027');
+      const text = formatCalendarChangelogText(changelog);
+      await safeEditOrReply(ctx, text, {
+        parse_mode: 'HTML',
+        reply_markup: getCalendarChangelogKeyboard(),
+      }, cache);
+    } catch (error) {
+      console.error('[cal_changelog_2027] Error:', error);
+      await safeEditOrReply(ctx,
+        '❌ Ошибка при загрузке истории изменений.',
+        { reply_markup: getCalendarChangelogKeyboard() },
         cache
       );
     }

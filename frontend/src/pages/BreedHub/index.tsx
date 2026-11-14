@@ -4,7 +4,13 @@ import { Trophy, Gauge, ArrowUpRight, HelpCircle } from 'lucide-react'
 import { SEO } from '../../components/SEO'
 import { JsonLd, itemPageSchema, breadcrumbListSchema, faqPageSchema } from '../../components/JsonLd'
 import { CORE_BREED_HUBS, getBreedHubBySlug } from '../../lib/breed-hubs-data'
-import { useTopPlacement, useTopSpeed, useSpeedRecordsByBreed } from '../../hooks/useStaticData'
+import {
+  useTopPlacement,
+  useTopSpeed,
+  useSpeedRecordsByBreed,
+  useBreedAnnualLeaders,
+  type AnnualDogLeader,
+} from '../../hooks/useStaticData'
 import { parseDogName } from '../../lib/dogName'
 import { matchesBreedFilter } from '../../lib/breedMapping'
 
@@ -58,6 +64,13 @@ export default function BreedHub() {
   const { data: doninoSpeedRes, isLoading: doninoLoading } = useSpeedRecordsByBreed(
     breedInfo?.canonicalKey || '',
   )
+
+  // Load annual champions history (2015-2026)
+  const { data: annualLeadersRes, isLoading: annualLeadersLoading } = useBreedAnnualLeaders()
+  const annualLeaders = useMemo(() => {
+    if (!slug || !annualLeadersRes?.data?.leaders_by_slug) return []
+    return (annualLeadersRes.data.leaders_by_slug[slug] || []) as AnnualDogLeader[]
+  }, [slug, annualLeadersRes])
 
   const topSpeedDogs = useMemo(() => {
     if (!breedInfo || !topSpeedRes?.data?.items) return []
@@ -735,6 +748,223 @@ export default function BreedHub() {
         </section>
       )}
 
+      {/* Annual Champions / Hall of Fame for this Breed (Зал славы: лучшая собака по годам) */}
+      <section className="rounded-xl border border-cream-200 bg-white/80 p-4 sm:p-5 shadow-sm">
+        <div className="flex flex-wrap items-center justify-between gap-2 mb-3.5 pb-2 border-b border-cream-200">
+          <div>
+            <h2 className="text-sm sm:text-base font-serif font-bold text-charcoal-900 flex items-center gap-2">
+              <Trophy className="w-4 h-4 text-camel-700 shrink-0" />
+              <span>Лучшая собака породы по годам</span>
+            </h2>
+            <p className="text-[11px] sm:text-xs text-charcoal-500 mt-0.5">
+              Зал славы: победители официального сезона состязаний за каждый год по олимпийскому каскаду (золото, эффективность, старты)
+            </p>
+          </div>
+          {annualLeaders.length > 0 && (
+            <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-camel-100 text-camel-900 border border-camel-200/80 font-sans tabular-nums shrink-0">
+              {annualLeaders.length} {annualLeaders.length === 1 ? 'сезон' : annualLeaders.length < 5 ? 'сезона' : 'сезонов'}
+            </span>
+          )}
+        </div>
+
+        {annualLeadersLoading ? (
+          <p className="text-xs text-old-money-600 py-4">Загрузка архива по годам...</p>
+        ) : annualLeaders.length === 0 ? (
+          <div className="py-6 text-center text-xs text-old-money-600">
+            <p>В официальных протоколах состязаний РКФ с 2015 года забегов породы пока не зафиксировано.</p>
+          </div>
+        ) : (
+          <>
+            {/* Desktop View */}
+            <div className="hidden sm:block overflow-x-auto">
+              <table className="w-full text-left text-sm">
+                <thead>
+                  <tr className="border-b border-cream-200 text-[11px] font-semibold uppercase tracking-wider text-old-money-600">
+                    <th className="py-2.5 px-3 w-20 text-center">Сезон</th>
+                    <th className="py-2.5 px-3">Лучшая собака года</th>
+                    <th className="py-2.5 px-3 w-24">Пол</th>
+                    <th className="py-2.5 px-3 w-24 text-right">Забегов</th>
+                    <th className="py-2.5 px-3 w-36 text-right">Медали сезона</th>
+                    <th className="py-2.5 px-3 w-28 text-right">Показатель</th>
+                    <th className="py-2.5 px-3 w-24 text-right">Рейтинг</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-cream-100">
+                  {annualLeaders.map((item) => {
+                    const { primary, secondary } = parseDogName(item.name_lat, item.name_ru)
+                    const isMale = item.sex === 'M' || item.sex === 'К'
+                    const isFemale = item.sex === 'F' || item.sex === 'С'
+                    const sexLabel = isMale ? 'Кобель' : isFemale ? 'Сука' : '—'
+
+                    return (
+                      <tr key={item.year} className="hover:bg-cream-50/50 transition-colors">
+                        <td className="py-3 px-3 text-center">
+                          <span className="inline-block px-2 py-0.5 rounded-full font-bold font-sans tabular-nums text-xs bg-camel-100 text-camel-950 border border-camel-200/80">
+                            {item.year}
+                          </span>
+                        </td>
+                        <td className="py-3 px-3">
+                          <Link
+                            to={`/dog/${item.dog_id}/`}
+                            className="font-medium text-camel-950 hover:text-camel-800 hover:underline block leading-snug"
+                          >
+                            {primary}
+                          </Link>
+                          {secondary && (
+                            <span className="text-[11px] text-old-money-600 block leading-tight">
+                              {secondary}
+                            </span>
+                          )}
+                        </td>
+                        <td className="py-3 px-3">
+                          <span
+                            className={`inline-block text-[11px] font-medium px-2 py-0.5 rounded border ${
+                              sexLabel === 'Кобель'
+                                ? 'bg-sky-50 text-sky-800 border-sky-200/60'
+                                : sexLabel === 'Сука'
+                                ? 'bg-rose-50 text-rose-800 border-rose-200/60'
+                                : 'bg-stone-50 text-stone-600 border-stone-200/60'
+                            }`}
+                          >
+                            {sexLabel}
+                          </span>
+                        </td>
+                        <td className="py-3 px-3 text-right text-xs font-sans tabular-nums text-old-money-700">
+                          {item.total_starts} заб.
+                        </td>
+                        <td className="py-3 px-3 text-right">
+                          <div className="flex items-center justify-end gap-1 text-xs font-semibold font-sans tabular-nums">
+                            {item.gold > 0 && (
+                              <span
+                                className="px-1.5 py-0.5 rounded bg-amber-50 text-amber-800 border border-amber-200/60"
+                                title="Золотые медали"
+                              >
+                                {item.gold} зол.
+                              </span>
+                            )}
+                            {item.silver > 0 && (
+                              <span
+                                className="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200"
+                                title="Серебряные медали"
+                              >
+                                {item.silver} сер.
+                              </span>
+                            )}
+                            {item.bronze > 0 && (
+                              <span
+                                className="px-1.5 py-0.5 rounded bg-orange-50 text-orange-800 border border-orange-200/60"
+                                title="Бронзовые медали"
+                              >
+                                {item.bronze} бр.
+                              </span>
+                            )}
+                            {item.gold === 0 && item.silver === 0 && item.bronze === 0 && (
+                              <span className="text-old-money-400">—</span>
+                            )}
+                          </div>
+                        </td>
+                        <td className="py-3 px-3 text-right">
+                          {item.best_speed ? (
+                            <span
+                              className="inline-flex items-center px-2 py-0.5 rounded bg-camel-100 text-camel-950 font-semibold font-sans tabular-nums text-xs border border-camel-200"
+                              title="Максимальная скорость в сезоне"
+                            >
+                              {item.best_speed.toFixed(1)} км/ч
+                            </span>
+                          ) : item.rating_score ? (
+                            <span
+                              className="inline-flex items-center px-1.5 py-0.5 rounded bg-cream-100 text-charcoal-700 font-sans tabular-nums text-xs border border-cream-200"
+                              title="Рейтинг качества CS"
+                            >
+                              {item.rating_score.toFixed(1)} CS
+                            </span>
+                          ) : (
+                            <span className="text-old-money-400 text-xs">—</span>
+                          )}
+                        </td>
+                        <td className="py-3 px-3 text-right">
+                          <Link
+                            to={`/competitions/?tab=ranking&breed=${encodeURIComponent(breedInfo.canonicalKey)}&year=${item.year}`}
+                            className="inline-flex items-center gap-1 text-xs font-semibold text-camel-800 hover:text-camel-950 hover:underline"
+                            title={`Открыть полный рейтинг ${breedInfo.nameRu} за ${item.year} год`}
+                          >
+                            <span>{item.year}</span>
+                            <ArrowUpRight className="h-3 w-3" />
+                          </Link>
+                        </td>
+                      </tr>
+                    )
+                  })}
+                </tbody>
+              </table>
+            </div>
+
+            {/* Mobile View */}
+            <ol className="divide-y divide-cream-100 text-sm sm:hidden">
+              {annualLeaders.map((item) => {
+                const { primary, secondary } = parseDogName(item.name_lat, item.name_ru)
+                const isMale = item.sex === 'M' || item.sex === 'К'
+                const isFemale = item.sex === 'F' || item.sex === 'С'
+                const sexLabel = isMale ? 'Кобель' : isFemale ? 'Сука' : ''
+
+                return (
+                  <li key={item.year} className="py-3 flex flex-col gap-1.5">
+                    <div className="flex items-center justify-between gap-2">
+                      <div className="flex items-center gap-2 min-w-0">
+                        <span className="px-2 py-0.5 rounded-full font-bold font-sans tabular-nums text-xs bg-camel-100 text-camel-950 border border-camel-200/80 shrink-0">
+                          {item.year}
+                        </span>
+                        <Link
+                          to={`/dog/${item.dog_id}/`}
+                          className="font-medium text-camel-950 hover:text-camel-800 hover:underline truncate"
+                        >
+                          {primary}
+                        </Link>
+                      </div>
+                      <Link
+                        to={`/competitions/?tab=ranking&breed=${encodeURIComponent(breedInfo.canonicalKey)}&year=${item.year}`}
+                        className="text-xs font-semibold text-camel-800 hover:underline shrink-0 flex items-center gap-0.5"
+                      >
+                        <span>Рейтинг</span>
+                        <ArrowUpRight className="h-3 w-3" />
+                      </Link>
+                    </div>
+
+                    {secondary && (
+                      <div className="text-[11px] text-old-money-600 truncate pl-1">
+                        {secondary}
+                      </div>
+                    )}
+
+                    <div className="flex flex-wrap items-center gap-2 text-xs text-old-money-600 pt-0.5">
+                      {sexLabel && <span>{sexLabel}</span>}
+                      {sexLabel && <span className="text-old-money-300">·</span>}
+                      <span>{item.total_starts} заб.</span>
+                      {item.gold > 0 && (
+                        <>
+                          <span className="text-old-money-300">·</span>
+                          <span className="px-1.5 py-0.2 rounded bg-amber-50 text-amber-800 font-semibold font-sans tabular-nums border border-amber-200/60">
+                            {item.gold} зол.
+                          </span>
+                        </>
+                      )}
+                      {item.best_speed && (
+                        <>
+                          <span className="text-old-money-300">·</span>
+                          <span className="px-1.5 py-0.2 rounded bg-camel-100 text-camel-950 font-semibold font-sans tabular-nums border border-camel-200">
+                            {item.best_speed.toFixed(1)} км/ч
+                          </span>
+                        </>
+                      )}
+                    </div>
+                  </li>
+                )
+              })}
+            </ol>
+          </>
+        )}
+      </section>
+
       {/* FAQs Section */}
       {breedInfo.faqs.length > 0 && (
         <section className="rounded-xl border border-cream-200 bg-white/80 p-4 sm:p-5 shadow-sm">
@@ -760,9 +990,18 @@ export default function BreedHub() {
 
       {/* Other Breeds Grid */}
       <section className="space-y-4 pt-2">
-        <h2 className="text-xs font-semibold uppercase tracking-wider text-charcoal-500">
-          Каталог пород в курсинге и бегах
-        </h2>
+        <div className="flex items-center justify-between">
+          <h2 className="text-xs font-semibold uppercase tracking-wider text-charcoal-500">
+            Каталог пород в курсинге и бегах
+          </h2>
+          <Link
+            to="/breeds/"
+            className="text-xs font-semibold text-camel-800 hover:text-camel-950 hover:underline flex items-center gap-1"
+          >
+            <span>Все 83 породы</span>
+            <ArrowUpRight className="w-3.5 h-3.5" />
+          </Link>
+        </div>
 
         <div className="space-y-3">
           {([

@@ -256,6 +256,13 @@ export default function EventListRow({ event }: EventListRowProps) {
                 <span>Результаты</span>
                 <ChevronRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
               </span>
+            ) : event.notes ? (
+              <span
+                className="inline-flex items-center text-[10.5px] font-medium text-amber-900 bg-amber-50 border border-amber-300/80 rounded-full px-2 py-0.5 select-none text-right"
+                title={event.notes}
+              >
+                {event.notes === 'на согласовании комиссии' ? 'На согласовании' : event.notes}
+              </span>
             ) : (
               <span className="inline-flex items-center text-[11px] font-medium text-charcoal-400 select-none">
                 {cancelled ? 'Отменено' : 'В плане РКФ'}
@@ -290,6 +297,13 @@ export default function EventListRow({ event }: EventListRowProps) {
           <span className="inline-flex items-center gap-0.5 text-xs font-semibold text-camel-700 shrink-0 ml-auto">
             <span>Результаты</span>
             <ChevronRight className="h-3 w-3" />
+          </span>
+        ) : event.notes ? (
+          <span
+            className="text-[10px] font-medium text-amber-900 bg-amber-50 border border-amber-300/80 rounded-full px-1.5 py-0.2 shrink-0 ml-auto select-none"
+            title={event.notes}
+          >
+            {event.notes === 'на согласовании комиссии' ? 'На согласовании' : event.notes}
           </span>
         ) : (
           <span className="text-[10.5px] font-medium text-charcoal-400 shrink-0 ml-auto select-none">
