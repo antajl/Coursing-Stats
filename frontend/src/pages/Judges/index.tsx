@@ -209,13 +209,13 @@ export default function Judges() {
       ) : (
         <div className="space-y-4">
           <DoninoColumnShell plaque={plaque} listRef={listRevealRef}>
-            {sortedJudges.slice(0, visibleCount).map((judge, idx) => (
+            {sortedJudges.slice(0, visibleCount).map((judge) => (
               <div key={judge.id} data-list-item>
                 <JudgeCard
                   judge={judge}
-                  rank={idx + 1}
                   filterYear={filterYear}
                   filterDiscipline={filterDiscipline}
+                  filterBreed={filterBreed}
                 />
               </div>
             ))}
