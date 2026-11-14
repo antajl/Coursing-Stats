@@ -435,6 +435,17 @@ export default function ShowCalendar({ urlYear }: ShowCalendarProps = {}) {
     [years],
   )
 
+  const handleYearChange = useCallback((newYear: string) => {
+    setFilterYear(newYear)
+    if (location.pathname.startsWith('/shows/archive')) {
+      const targetSlug = newYear === '' ? 'all' : newYear
+      const nextParams = new URLSearchParams(searchParams)
+      nextParams.delete('year')
+      const qs = nextParams.toString()
+      navigate(`/shows/archive/${targetSlug}/${qs ? '?' + qs : ''}`)
+    }
+  }, [location.pathname, navigate, searchParams])
+
   const availableMonths = useMemo(() => {
     if (monthsWithData.length === 0) return undefined
     return new Set(monthsWithData.map(String))
@@ -451,7 +462,7 @@ export default function ShowCalendar({ urlYear }: ShowCalendarProps = {}) {
           filterYear={filterYear}
           currentSeason={CURRENT_SEASON}
           sortedYears={sortedYears}
-          onYearChange={setFilterYear}
+          onYearChange={handleYearChange}
           filterMonth={filterMonth || (activeMonth ? String(activeMonth) : '')}
           onMonthChange={setFilterMonth}
           filterBreed={filterBreed}

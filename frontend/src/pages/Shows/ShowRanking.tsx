@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useMemo, useCallback } from 'react'
-import { useSearchParams } from 'react-router-dom'
+import { useSearchParams, useLocation, useNavigate, useParams } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
 import SkeletonLoader from '../../components/SkeletonLoader'
 import { getShowDogRanking, getShowDogRankingPage0 } from '../../lib/staticData'
