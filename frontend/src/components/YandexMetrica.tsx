@@ -69,31 +69,8 @@ export function YandexMetrica() {
     return null
   }
 
-  return (
-    <Helmet>
-      {/* Яндекс.Метрика */}
-      <script type="text/javascript">
-        {`
-          (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-          m[i].l=1*new Date();
-          for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-          k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-          (window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=110619327', 'ym');
-
-          ym(${YANDEX_METRICA_ID}, 'init', {
-            ssr: true,
-            webvisor: false,
-            clickmap: true,
-            accurateTrackBounce: true,
-            trackLinks: true
-          });
-        `}
-      </script>
-      <noscript>
-        {`<div><img src="https://mc.yandex.ru/watch/${YANDEX_METRICA_ID}" width="1" height="1" style="position:absolute; left:-9999px;" alt="" role="presentation" aria-hidden="true" /></div>`}
-      </noscript>
-    </Helmet>
-  )
+  // Init-скрипт и noscript вынесены статически в index.html для гарантированного обнаружения ботами
+  return null
 }
 
 // Хук для отслеживания целей Яндекс.Метрики
