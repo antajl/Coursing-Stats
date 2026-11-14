@@ -55,19 +55,26 @@ function LegacyCompetitionRedirect() {
 function CompetitionsParamRoute() {
   const { id } = useParams<{ id: string }>();
   const location = useLocation();
-  if (!id) return <Navigate to={`/competitions/ranking/2026/${location.search}`} replace />;
+  const searchParams = new URLSearchParams(location.search);
+  const queryYear = searchParams.get('year');
+  searchParams.delete('year');
+  const qs = searchParams.toString();
+  const queryPart = qs ? `?${qs}` : '';
+  const resolvedYear = queryYear && queryYear !== '' ? queryYear : '2026';
+
+  if (!id) return <Navigate to={`/competitions/ranking/${resolvedYear}/${queryPart}`} replace />;
 
   if (id === 'archive' || id === 'ranking' || id === 'judges') {
-    return <Navigate to={`/competitions/${id}/2026/${location.search}`} replace />;
+    return <Navigate to={`/competitions/${id}/${resolvedYear}/${queryPart}`} replace />;
   }
   if (id === 'calendar') {
-    return <Navigate to={`/competitions/archive/2026/${location.search}`} replace />;
+    return <Navigate to={`/competitions/archive/${resolvedYear}/${queryPart}`} replace />;
   }
   if (id === '2027') {
-    return <Navigate to={`/competitions/archive/2027/${location.search}`} replace />;
+    return <Navigate to={`/competitions/archive/2027/${queryPart}`} replace />;
   }
   if (/^20\d\d$/.test(id)) {
-    return <Navigate to={`/competitions/archive/${id}/${location.search}`} replace />;
+    return <Navigate to={`/competitions/archive/${id}/${queryPart}`} replace />;
   }
   return <LegacyCompetitionRedirect />;
 }
@@ -81,6 +88,9 @@ function CompetitionsYearRoute() {
   if (tab === 'archive' && year === '2027') {
     return <Competitions2027 />;
   }
+  if (year !== 'all' && !/^20\d\d$/.test(year || '')) {
+    return <NotFound />;
+  }
   if (tab === 'archive' || tab === 'ranking' || tab === 'judges') {
     return <Competitions defaultTab={tab} />;
   }
@@ -90,16 +100,23 @@ function CompetitionsYearRoute() {
 function ShowsParamRoute() {
   const { id } = useParams<{ id: string }>();
   const location = useLocation();
-  if (!id) return <Navigate to={`/shows/ranking/2026/${location.search}`} replace />;
+  const searchParams = new URLSearchParams(location.search);
+  const queryYear = searchParams.get('year');
+  searchParams.delete('year');
+  const qs = searchParams.toString();
+  const queryPart = qs ? `?${qs}` : '';
+  const resolvedYear = queryYear && queryYear !== '' ? queryYear : '2026';
+
+  if (!id) return <Navigate to={`/shows/ranking/${resolvedYear}/${queryPart}`} replace />;
 
   if (id === 'archive' || id === 'ranking' || id === 'judges') {
-    return <Navigate to={`/shows/${id}/2026/${location.search}`} replace />;
+    return <Navigate to={`/shows/${id}/${resolvedYear}/${queryPart}`} replace />;
   }
   if (id === 'calendar') {
-    return <Navigate to={`/shows/archive/2026/${location.search}`} replace />;
+    return <Navigate to={`/shows/archive/${resolvedYear}/${queryPart}`} replace />;
   }
   if (/^20\d\d$/.test(id)) {
-    return <Navigate to={`/shows/archive/${id}/${location.search}`} replace />;
+    return <Navigate to={`/shows/archive/${id}/${queryPart}`} replace />;
   }
   return <NotFound />;
 }
@@ -109,6 +126,9 @@ function ShowsYearRoute() {
   const location = useLocation();
   if (tab === 'calendar') {
     return <Navigate to={`/shows/archive/${year || '2026'}/${location.search}`} replace />;
+  }
+  if (year !== 'all' && !/^20\d\d$/.test(year || '')) {
+    return <NotFound />;
   }
   if (tab === 'archive' || tab === 'ranking' || tab === 'judges') {
     return <Shows defaultTab={tab} />;

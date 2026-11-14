@@ -134,6 +134,10 @@ export default function ShowCalendar({ urlYear }: ShowCalendarProps = {}) {
 
   // Sync state to URL search params (keep clean URL for current season, avoid URL jumping)
   useEffect(() => {
+    if (!location.pathname.startsWith('/shows/archive')) {
+      return
+    }
+
     setSearchParams(
       (prev) => {
         const currentYear = prev.get('year')

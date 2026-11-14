@@ -149,6 +149,10 @@ export default function ShowRanking({ urlYear }: ShowRankingProps = {}) {
       return
     }
 
+    if (!location.pathname.startsWith('/shows/ranking')) {
+      return
+    }
+
     setSearchParams(
       (prev) => {
         const next = new URLSearchParams(prev)

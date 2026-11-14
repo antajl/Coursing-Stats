@@ -138,26 +138,15 @@ export default function Events({ urlYear }: EventsProps = {}) {
   }
 
   useEffect(() => {
+    if (!location.pathname.startsWith('/competitions/archive')) {
+      return
+    }
+
     setSearchParams(
       (prev) => {
         let changed = false
         const params = new URLSearchParams(prev)
-        if (!location.pathname.startsWith('/competitions/archive')) {
-          if (filterYear === '') {
-            if (params.get('year') !== 'all') {
-              params.set('year', 'all')
-              changed = true
-            }
-          } else if (filterYear !== CURRENT_SEASON) {
-            if (params.get('year') !== filterYear) {
-              params.set('year', filterYear)
-              changed = true
-            }
-          } else if (params.has('year')) {
-            params.delete('year')
-            changed = true
-          }
-        } else if (params.has('year')) {
+        if (params.has('year')) {
           params.delete('year')
           changed = true
         }

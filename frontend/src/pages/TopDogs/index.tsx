@@ -110,6 +110,10 @@ export default function TopDogs({ urlYear }: TopDogsProps = {}) {
       return
     }
 
+    if (!location.pathname.startsWith('/competitions/ranking')) {
+      return
+    }
+
     setSearchParams(
       (prev) => {
         const next = new URLSearchParams(prev)
