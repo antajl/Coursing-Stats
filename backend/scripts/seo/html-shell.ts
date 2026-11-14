@@ -266,6 +266,9 @@ export function applyMetaToSpaShell(spaHtml: string, options: ApplyMetaOptions):
   html = replaceOrInsertMetaName(html, 'twitter:title', options.title)
   html = replaceOrInsertMetaName(html, 'twitter:description', options.description)
   html = replaceOrInsertMetaName(html, 'twitter:image', ogImage)
+  if (!html.includes('rel="manifest"')) {
+    html = html.replace(/<\/head>/i, '  <link rel="manifest" href="/manifest.webmanifest" />\n</head>')
+  }
   html = injectJsonLd(html, options.jsonLd)
   html = setRootBody(html, options.bodyHtml)
   return html

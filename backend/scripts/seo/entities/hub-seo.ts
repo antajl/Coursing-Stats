@@ -93,26 +93,25 @@ export const HUB_PAGES: HubMeta[] = [
   },
 ]
 
-export const HUB_NAV: { href: string; label: string }[] = [
-  { href: '/', label: 'Главная' },
-  { href: '/competitions/', label: 'Соревнования' },
-  { href: '/shows/', label: 'Выставки' },
-  { href: '/speed-records/', label: 'Донино' },
-  { href: '/donino/championship/', label: 'Клубный чемпионат' },
-  { href: '/donino/analytics/', label: 'Аналитика Донино' },
-  { href: '/guide/', label: 'Справочник' },
-  { href: '/about/', label: 'О проекте' },
+export const HUB_NAV: { href: string; label: string; desc?: string }[] = [
+  { href: '/competitions/', label: 'Соревнования и рейтинг', desc: 'Календарь состязаний, результаты забегов и единый рейтинг собак' },
+  { href: '/shows/', label: 'Выставки РКФ', desc: 'Рейтинг выставочных собак, чемпионы и статистика судей' },
+  { href: '/speed-records/', label: 'Замеры скорости Донино', desc: 'Радарные замеры скорости (км/ч) и спринт на 350 м' },
+  { href: '/guide/', label: 'Справочник', desc: 'Скорости пород борзых, расшифровка титулов и регламенты' },
+  { href: '/donino/championship/', label: 'Клубный чемпионат', desc: 'Результаты этапов, протоколы забегов и лиги Донино' },
+  { href: '/about/', label: 'О проекте', desc: 'Электронный кинологический архив соревнований с 2015 года' },
 ]
 
 export function hubNavHtml(currentPath: string): string {
   const normCurrent = currentPath.endsWith('/') ? currentPath : `${currentPath}/`
-  const links = HUB_NAV.map(({ href, label }) => {
+  const items = HUB_NAV.map(({ href, label, desc }) => {
     const normHref = href.endsWith('/') ? href : `${href}/`
     const current = (normHref === '/' && normCurrent === '/') || (normHref !== '/' && normCurrent === normHref)
     const attrs = current ? ' aria-current="page"' : ''
-    return `<a href="${href}"${attrs}>${escapeHtml(label)}</a>`
-  }).join(' · ')
-  return `<nav aria-label="Разделы сайта">${links}</nav>`
+    const descHtml = desc ? ` — <span>${escapeHtml(desc)}</span>` : ''
+    return `<li><a href="${href}"${attrs}><strong>${escapeHtml(label)}</strong></a>${descHtml}</li>`
+  }).join('\n')
+  return `<nav aria-label="Разделы платформы" class="site-navigation">\n<ul>\n${items}\n</ul>\n</nav>`
 }
 
 export function buildHubBodyHtml(hub: Pick<HubMeta, 'path' | 'h1' | 'paragraph'>): string {
@@ -166,14 +165,32 @@ export function homepageJsonLd(): Record<string, unknown> {
         description:
           'Единая всероссийская база и статистика курсинга, бегов борзых и выставок собак РКФ с 2015 года.',
         inLanguage: 'ru-RU',
-        potentialAction: {
-          '@type': 'SearchAction',
-          target: {
-            '@type': 'EntryPoint',
-            urlTemplate: `${SITE_ORIGIN}/competitions/?tab=ranking&search={search_term_string}`,
+        hasPart: [
+          {
+            '@type': 'WebPage',
+            name: 'Соревнования и рейтинг курсинга',
+            url: `${SITE_ORIGIN}/competitions/`,
+            description: 'Календарь турниров, результаты забегов и единый рейтинг собак в России.',
           },
-          'query-input': 'required name=search_term_string',
-        },
+          {
+            '@type': 'WebPage',
+            name: 'Выставки собак РКФ',
+            url: `${SITE_ORIGIN}/shows/`,
+            description: 'Рейтинг выставочных собак, результаты рингов и статистика судей.',
+          },
+          {
+            '@type': 'WebPage',
+            name: 'Замеры скорости и рекорды Донино',
+            url: `${SITE_ORIGIN}/speed-records/`,
+            description: 'Радарные замеры пиковой скорости (км/ч) и спринт борзых на 350 м.',
+          },
+          {
+            '@type': 'WebPage',
+            name: 'Справочник курсинга и регламенты',
+            url: `${SITE_ORIGIN}/guide/`,
+            description: 'Скорости пород борзых, правила присвоения титулов РКФ и анатомия протокола.',
+          },
+        ],
       },
       {
         '@type': 'Organization',
@@ -193,6 +210,122 @@ export function homepageJsonLd(): Record<string, unknown> {
       },
     ],
   }
+}
+
+export function showsHubJsonLd(): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      breadcrumbJsonLd([
+        { name: 'Главная', url: '/' },
+        { name: 'Выставки РКФ', url: '/shows/' },
+      ]),
+      {
+        '@type': 'CollectionPage',
+        '@id': `${SITE_ORIGIN}/shows/#collection`,
+        url: `${SITE_ORIGIN}/shows/`,
+        name: 'Рейтинг выставочных собак РКФ 2026',
+        description:
+          'Рейтинг собак по выставкам РКФ: награды дня, профили чемпионов и статистика судей.',
+        inLanguage: 'ru-RU',
+        isPartOf: { '@id': `${SITE_ORIGIN}/#website` },
+      },
+    ],
+  }
+}
+
+export function doninoChampionshipJsonLd(): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      breadcrumbJsonLd([
+        { name: 'Главная', url: '/' },
+        { name: 'Полигон Донино', url: '/speed-records/' },
+        { name: 'Клубный чемпионат', url: '/donino/championship/' },
+      ]),
+      {
+        '@type': 'SportsEvent',
+        name: 'Клубный чемпионат Донино по бегам борзых',
+        description: 'Серия состязаний по рейсингу на 350 м, старт из боксов, система соревновательных лиг.',
+        url: `${SITE_ORIGIN}/donino/championship/`,
+        inLanguage: 'ru-RU',
+      },
+    ],
+  }
+}
+
+export function doninoAnalyticsJsonLd(): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      breadcrumbJsonLd([
+        { name: 'Главная', url: '/' },
+        { name: 'Полигон Донино', url: '/speed-records/' },
+        { name: 'Аналитика', url: '/donino/analytics/' },
+      ]),
+      {
+        '@type': 'ItemPage',
+        name: 'Аналитика полигона Донино',
+        description: 'Спортивная аналитика скоростного спектра пород и статистика участников.',
+        url: `${SITE_ORIGIN}/donino/analytics/`,
+        inLanguage: 'ru-RU',
+      },
+    ],
+  }
+}
+
+export function buildShowsHubHtml(hub: Pick<HubMeta, 'path' | 'h1' | 'paragraph'>): string {
+  return [
+    `<main>`,
+    `<h1>${escapeHtml(hub.h1)}</h1>`,
+    `<p>${escapeHtml(hub.paragraph)}</p>`,
+    `<nav aria-label="Разделы выставок" class="hub-toc">`,
+    `<ul>`,
+    `<li><a href="#ranking"><strong>Рейтинг чемпионов</strong> — топ выставочных собак РКФ</a></li>`,
+    `<li><a href="#calendar"><strong>Календарь выставок</strong> — расписание и отчеты РКФ</a></li>`,
+    `<li><a href="#judges"><strong>Судьи выставок</strong> — статистика оценок и строгость экспертов</a></li>`,
+    `</ul>`,
+    `</nav>`,
+    `<section id="ranking">`,
+    `<h2>Рейтинг выставочных собак РКФ</h2>`,
+    `<p>Ежегодный всероссийский рейтинг выставочных собак по результатам сертификатных выставок РКФ с 2019 года. Баллы начисляются за высшие титулы дня (BIS, BIG, BOB, BOS, CAC) и квалификационные оценки «отлично».</p>`,
+    `</section>`,
+    `<section id="calendar">`,
+    `<h2>Календарь и отчеты выставок</h2>`,
+    `<p>Архив расписания и официальных результатов выставок собак всех пород и монопородных выставок борзых рангов CACIB, CAC, ЧРКФ и КЧК.</p>`,
+    `</section>`,
+    `<section id="judges">`,
+    `<h2>Судьи и эксперты РКФ</h2>`,
+    `<p>Персональные страницы выставочных судей: процент оценок «отлично», распределение титулов, статистика судейства по группам и породам собак.</p>`,
+    `</section>`,
+    hubNavHtml(hub.path),
+    `</main>`,
+  ].join('\n')
+}
+
+export function buildSpeedRecordsHubHtml(hub: Pick<HubMeta, 'path' | 'h1' | 'paragraph'>): string {
+  return [
+    `<main>`,
+    `<h1>${escapeHtml(hub.h1)}</h1>`,
+    `<p>${escapeHtml(hub.paragraph)}</p>`,
+    `<nav aria-label="Разделы полигона Донино" class="hub-toc">`,
+    `<ul>`,
+    `<li><a href="#speeds"><strong>Замеры скорости</strong> — радарные измерения (км/ч)</a></li>`,
+    `<li><a href="#racing350"><strong>Спринт 350 м</strong> — чистое время трека (секунды)</a></li>`,
+    `<li><a href="/donino/championship/"><strong>Клубный чемпионат</strong> — турнирная таблица лиг</a></li>`,
+    `</ul>`,
+    `</nav>`,
+    `<section id="speeds">`,
+    `<h2>Радарные замеры скорости собак (км/ч)</h2>`,
+    `<p>Инструментальные замеры пиковой скорости борзых на прямом участке полигона в Донино. Абсолютные рекорды пород: уиппеты до 64 км/ч, салюки до 55 км/ч, РПБ до 56 км/ч, левретки до 49 км/ч.</p>`,
+    `</section>`,
+    `<section id="racing350">`,
+    `<h2>Классический спринт на 350 м (секунды)</h2>`,
+    `<p>Результаты забегов на круговой дистанции 350 метров со стартом из боксов и электронным фотофинишем.</p>`,
+    `</section>`,
+    hubNavHtml(hub.path),
+    `</main>`,
+  ].join('\n')
 }
 
 export function doninoDatasetJsonLd(): Record<string, unknown> {
@@ -305,7 +438,24 @@ export function buildCompetitionsHubHtml(
     `<main>`,
     `<h1>${escapeHtml(hub.h1)}</h1>`,
     `<p>${escapeHtml(hub.paragraph)}</p>`,
+    `<nav aria-label="Разделы соревнований" class="hub-toc">`,
+    `<ul>`,
+    `<li><a href="#ranking"><strong>Рейтинг собак</strong> — медальный зачёт и топ сезона</a></li>`,
+    `<li><a href="#calendar"><strong>Календарь турниров</strong> — расписание состязаний РКФ</a></li>`,
+    `<li><a href="#judges"><strong>Судьи соревнований</strong> — статистика судейства курсинга</a></li>`,
+    `</ul>`,
+    `</nav>`,
+    `<section id="ranking">`,
     topDogsSection,
+    `</section>`,
+    `<section id="calendar">`,
+    `<h2>Календарь соревнований по курсингу и бегам борзых</h2>`,
+    `<p>Официальные даты состязаний РКФ, квалификационных забегов и регламентов на текущий и прошедшие сезоны с 2015 года.</p>`,
+    `</section>`,
+    `<section id="judges">`,
+    `<h2>Судейский корпус курсинга</h2>`,
+    `<p>Список судей соревнований по рабочим качествам и спортивным дисциплинам борзых с историей судейства турниров.</p>`,
+    `</section>`,
     `<h2>Частые вопросы о рейтинге курсинга в России</h2>`,
     faqBlocks,
     hubNavHtml(hub.path),
@@ -435,6 +585,15 @@ export function buildGuideHubHtml(
     `<main>`,
     `<h1>${escapeHtml(hub.h1)}</h1>`,
     `<p>${escapeHtml(hub.paragraph)}</p>`,
+    `<nav aria-label="Содержание справочника" class="guide-toc">`,
+    `<ul>`,
+    `<li><a href="#speeds"><strong>Скорость пород</strong> — радарные замеры и эталоны трека</a></li>`,
+    `<li><a href="#titles"><strong>Титулы курсинга</strong> — 3 уровня наград и схемы НЧ РК</a></li>`,
+    `<li><a href="#rules"><strong>Правила и протоколы</strong> — 5 критериев оценки и анатомия строки</a></li>`,
+    `<li><a href="#rating"><strong>Рейтинг сайта</strong> — олимпийский каскад и индекс CS v2</a></li>`,
+    `</ul>`,
+    `</nav>`,
+    `<section id="speeds">`,
     `<h2>Скорость и рекорды пород борзых (км/ч)</h2>`,
     `<table>`,
     `<thead><tr><th>Порода</th><th>Пиковый спринт</th><th>Радар Донино</th><th>Бега РКФ (360 м)</th><th>Специфика</th></tr></thead>`,
@@ -445,6 +604,19 @@ export function buildGuideHubHtml(
     `<p><a href="/competitions/">Перейти в турнирную таблицу забегов РКФ</a> · <a href="/speed-records/">Смотреть радарные замеры Донино</a></p>`,
     `<h2>Частые вопросы о скорости и рекордах борзых (Google AI Overview)</h2>`,
     faqBlocks,
+    `</section>`,
+    `<section id="titles">`,
+    `<h2>Спортивные титулы и сертификаты курсинга РКФ</h2>`,
+    `<p>Официальные правила присвоения бегового допуска, сертификатов CACL и CACIL, титулов Чемпиона России по рабочим качествам и 6 схем оформления накопительного титула НЧ РК.</p>`,
+    `</section>`,
+    `<section id="rules">`,
+    `<h2>Правила судейства курсинга и анатомия протокола</h2>`,
+    `<p>5 нормативных критериев оценки собаки в поле: Скорость, Энтузиазм, Интеллект/Маневренность, Выносливость, Преследование (до 100 баллов за забег). Правила тай-брейка и порядок чтения строк официальных протоколов.</p>`,
+    `</section>`,
+    `<section id="rating">`,
+    `<h2>Методология рейтинга платформы и формула CS v2</h2>`,
+    `<p>Олимпийский каскад распределения мест в сезоне: Золотые медали → standingScore → индекс качества CS v2 → Число забегов.</p>`,
+    `</section>`,
     hubNavHtml(hub.path),
     `</main>`,
   ].join('\n')

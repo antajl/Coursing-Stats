@@ -1,5 +1,12 @@
 import { Link } from 'react-router-dom'
-import { formatJudgeDisplayName, getJudgeInitials, getSportJudgeStrictnessBadge } from '../lib/judgeUiUtils'
+import { ChevronRight } from 'lucide-react'
+import RankBadge from './RankBadge'
+import { TOP3_WASH } from './DogCard/DogCardHelpers'
+import {
+  formatJudgeDisplayName,
+  getJudgeInitials,
+  getSportJudgeStrictnessBadge,
+} from '../lib/judgeUiUtils'
 
 export interface JudgeCardData {
   id: string
@@ -12,34 +19,21 @@ export interface JudgeCardData {
   unique_disciplines?: number
 }
 
-interface JudgeCardProps {
+export interface JudgeCardProps {
   judge: JudgeCardData
+  rank?: number
   filterYear?: string
   filterDiscipline?: string
+  variant?: 'embedded' | 'card'
 }
 
-function StatPill({
-  label,
-  value,
-  highlightClass,
-}: {
-  label: string
-  value: string | number
-  highlightClass?: string
-}) {
-  return (
-    <div className="min-w-[4.25rem] rounded-lg bg-cream-100/80 px-2.5 py-1.5 text-center">
-      <p className="mb-0.5 text-[9px] uppercase tracking-wide text-charcoal-500">
-        {label}
-      </p>
-      <p className={`text-sm font-bold tabular-nums ${highlightClass || 'text-camel-700'}`}>
-        {value}
-      </p>
-    </div>
-  )
-}
-
-export default function JudgeCard({ judge, filterYear, filterDiscipline }: JudgeCardProps) {
+export default function JudgeCard({
+  judge,
+  rank,
+  filterYear,
+  filterDiscipline,
+  variant = 'embedded',
+}: JudgeCardProps) {
   const displayName = formatJudgeDisplayName(judge.name)
   const initials = getJudgeInitials(displayName)
   const strictness = getSportJudgeStrictnessBadge(
@@ -57,79 +51,115 @@ export default function JudgeCard({ judge, filterYear, filterDiscipline }: Judge
   const queryStr = queryParams.toString()
   const linkTo = `/judges/${encodeURIComponent(judge.id)}${queryStr ? '?' + queryStr : ''}`
 
+  const isTop3 = rank != null && rank > 0 && rank <= 3
+  const top3Wash = isTop3 ? TOP3_WASH[rank as 1 | 2 | 3] : ''
+
+  const isEmbedded = variant === 'embedded'
+  const shellClass = isEmbedded
+    ? `group relative flex items-center w-full min-w-0 border-0 bg-transparent px-3 sm:px-4 py-2.5 sm:py-3 transition-colors duration-150 hover:bg-camel-100/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-camel-500/60 min-h-[44px] ${top3Wash}`.trim()
+    : `group relative flex items-center w-full min-w-0 rounded-2xl border border-old-money-200/90 bg-white px-3 sm:px-4 py-2.5 sm:py-3 transition-colors duration-150 hover:border-camel-300 hover:bg-cream-50/70 hover:shadow-xs min-h-[44px] ${top3Wash}`.trim()
+
   return (
-    <Link
-      to={linkTo}
-      className="group flex flex-col gap-3 rounded-xl border border-old-money-200/90 bg-white p-3.5 sm:p-4 transition-all duration-200 hover:border-camel-300 hover:bg-cream-50/70 hover:shadow-xs sm:flex-row sm:items-center sm:gap-4"
-    >
-      {/* Monogram avatar (Desktop) */}
-      <div className="hidden sm:flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-old-money-200/80 bg-gradient-to-br from-cream-100 via-cream-50 to-amber-50/40 text-sm font-bold tracking-tight text-camel-800 shadow-2xs group-hover:border-camel-400 group-hover:scale-102 transition-transform">
+    <Link to={linkTo} className={shellClass}>
+      {/* 1. Позиция в рейтинге (Rank badge) */}
+      {rank != null && rank > 0 && (
+        <div className="flex min-h-0 min-w-[2.25rem] sm:min-w-[2.75rem] pr-1.5 sm:pr-2.5 mr-1.5 sm:mr-2.5 shrink-0 flex-col items-center justify-center border-r border-old-money-200/40 self-stretch">
+          <RankBadge rank={rank} />
+        </div>
+      )}
+
+      {/* 2. Монограмма-аватар */}
+      <div className="flex h-9 w-9 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-xl border border-old-money-200/80 bg-gradient-to-br from-cream-100 via-cream-50 to-amber-50/40 text-xs sm:text-sm font-bold tracking-tight text-camel-800 shadow-2xs group-hover:border-camel-400 group-hover:scale-105 transition-all mr-2.5 sm:mr-3.5">
         {initials}
       </div>
 
-      <div className="min-w-0 flex-1">
-        <div className="flex flex-wrap items-center gap-2">
-          {/* Mobile monogram inline */}
-          <span className="sm:hidden flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border border-old-money-200/80 bg-cream-100 text-xs font-bold text-camel-800">
-            {initials}
-          </span>
-          <h3 className="line-clamp-2 break-words text-base font-bold leading-snug text-charcoal-900 group-hover:text-camel-800 transition-colors sm:text-sm">
+      {/* 3. Центральный блок: ФИО, строгость и контекстная сводка */}
+      <div className="min-w-0 flex-1 flex flex-col justify-center gap-0.5 sm:gap-1">
+        <div className="flex flex-wrap items-center gap-1.5 min-w-0">
+          <h3 className="text-xs sm:text-sm 2xl:text-[15px] font-bold leading-snug text-charcoal-900 group-hover:text-camel-800 transition-colors truncate">
             {displayName}
           </h3>
           <span
-            className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[10px] font-medium tracking-tight ${strictness.badgeClass}`}
+            className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[9.5px] sm:text-[10px] font-medium tracking-tight shrink-0 ${strictness.badgeClass}`}
             title={strictness.detail}
           >
             <span className={`h-1.5 w-1.5 rounded-full ${strictness.dotClass}`} />
-            {strictness.label}
+            <span>{strictness.label}</span>
           </span>
         </div>
 
-        <div className="mt-1 flex flex-wrap items-center gap-2 text-xs text-charcoal-500">
-          <span className="hidden sm:inline">{judge.unique_events || 0} соревнований</span>
-          <span className="hidden sm:inline">·</span>
-          <span className="hidden sm:inline">{judge.unique_breeds || 0} пород</span>
-          {typeof judge.unique_dogs === 'number' && (
+        {/* Контекстные метрики: турниры, породы, собаки, дисциплины */}
+        <div className="flex items-center gap-1.5 text-[11px] sm:text-[11.5px] text-charcoal-600 font-medium truncate">
+          <span className="truncate">
+            <span className="text-charcoal-500 font-normal">Турниров: </span>
+            <strong className="font-semibold text-charcoal-900 tabular-nums">{judge.unique_events || 0}</strong>
+          </span>
+          <span className="text-charcoal-300 shrink-0" aria-hidden>·</span>
+          <span className="truncate">
+            <span className="text-charcoal-500 font-normal">Пород: </span>
+            <strong className="font-semibold text-charcoal-900 tabular-nums">{judge.unique_breeds || 0}</strong>
+          </span>
+          {typeof judge.unique_dogs === 'number' && judge.unique_dogs > 0 && (
             <>
-              <span className="hidden sm:inline">·</span>
-              <span>{judge.unique_dogs} собак</span>
+              <span className="text-charcoal-300 shrink-0 hidden sm:inline" aria-hidden>·</span>
+              <span className="truncate hidden sm:inline">
+                <span className="text-charcoal-500 font-normal">Собак: </span>
+                <strong className="font-semibold text-charcoal-900 tabular-nums">{judge.unique_dogs}</strong>
+              </span>
             </>
           )}
+          {judge.unique_disciplines && judge.unique_disciplines > 1 ? (
+            <>
+              <span className="text-charcoal-300 shrink-0 hidden md:inline" aria-hidden>·</span>
+              <span className="hidden md:inline-flex items-center px-1.5 py-0.25 rounded text-[9.5px] font-semibold bg-camel-100/80 text-camel-950 border border-camel-300/60">
+                {judge.unique_disciplines} дисц.
+              </span>
+            </>
+          ) : null}
         </div>
       </div>
 
-      {/* Mobile stats grid */}
-      <div className="grid grid-cols-4 gap-1.5 sm:hidden w-full border-t border-old-money-100 pt-2.5">
-        <div className="rounded-lg bg-cream-100/80 py-1 px-0.5 text-center">
-          <p className="text-[9px] uppercase tracking-wider text-charcoal-500 truncate">Забегов</p>
-          <p className="text-xs font-bold tabular-nums text-camel-700">{judge.total_evaluations_count || 0}</p>
-        </div>
-        <div className="rounded-lg bg-cream-100/80 py-1 px-0.5 text-center">
-          <p className="text-[9px] uppercase tracking-wider text-charcoal-500 truncate">Турниров</p>
-          <p className="text-xs font-bold tabular-nums text-camel-700">{judge.unique_events || 0}</p>
-        </div>
-        <div className="rounded-lg bg-cream-100/80 py-1 px-0.5 text-center">
-          <p className="text-[9px] uppercase tracking-wider text-charcoal-500 truncate">Пород</p>
-          <p className="text-xs font-bold tabular-nums text-camel-700">{judge.unique_breeds || 0}</p>
-        </div>
-        <div className="rounded-lg bg-cream-100/80 py-1 px-0.5 text-center">
-          <p className="text-[9px] uppercase tracking-wider text-charcoal-500 truncate">Ср. балл</p>
-          <p className={`text-xs font-bold tabular-nums ${strictness.textClass}`}>{score100}</p>
-        </div>
-      </div>
+      {/* 4. Правый блок статистики (Забегов, Ср. балл + стрелка перехода) */}
+      <div className="shrink-0 flex items-center gap-2 sm:gap-3 border-l border-old-money-200/40 pl-2.5 sm:pl-3.5 ml-2 sm:ml-3">
+        {/* Десктопные плашки метрик (>= sm) */}
+        <div className="hidden sm:flex items-center gap-2">
+          {/* Забегов */}
+          <div className="flex flex-col items-center justify-center min-w-[4.25rem] rounded-xl bg-cream-100/90 border border-old-money-200/60 px-2.5 py-1 text-center group-hover:bg-white group-hover:border-camel-300 transition-colors">
+            <span className="text-[9px] uppercase tracking-wider text-charcoal-500 font-medium">Забегов</span>
+            <span className="text-sm font-bold tabular-nums text-camel-800">
+              {(judge.total_evaluations_count || 0).toLocaleString('ru-RU')}
+            </span>
+          </div>
 
-      {/* Desktop pills (>= sm) */}
-      <div className="hidden sm:flex shrink-0 items-center gap-2 sm:gap-2.5">
-        <StatPill label="Забегов" value={judge.total_evaluations_count || 0} />
-        <StatPill label="Турниров" value={judge.unique_events || 0} />
-        <StatPill label="Пород" value={judge.unique_breeds || 0} />
-        {typeof judge.unique_dogs === 'number' && (
-          <StatPill label="Собак" value={judge.unique_dogs} />
-        )}
-        <StatPill
-          label="Ср. балл"
-          value={score100}
-          highlightClass={strictness.textClass}
+          {/* Средний балл */}
+          <div className="flex flex-col items-center justify-center min-w-[4.25rem] rounded-xl bg-cream-100/90 border border-old-money-200/60 px-2.5 py-1 text-center group-hover:bg-white group-hover:border-camel-300 transition-colors">
+            <span className="text-[9px] uppercase tracking-wider text-charcoal-500 font-medium">Ср. балл</span>
+            <span className={`text-sm font-bold tabular-nums ${strictness.textClass}`}>
+              {score100}
+            </span>
+          </div>
+        </div>
+
+        {/* Мобильный вертикальный стек (< sm) */}
+        <div className="flex sm:hidden flex-col items-end justify-center gap-0.5 min-w-[4.5rem]">
+          <div className="flex items-center gap-1 text-[11px] leading-tight">
+            <span className="text-[9.5px] text-charcoal-500 font-normal">Забегов:</span>
+            <strong className="font-bold tabular-nums text-camel-800 text-xs">
+              {(judge.total_evaluations_count || 0).toLocaleString('ru-RU')}
+            </strong>
+          </div>
+          <div className="flex items-center gap-1 text-[11px] leading-tight">
+            <span className="text-[9.5px] text-charcoal-500 font-normal">Ср. балл:</span>
+            <strong className={`font-bold tabular-nums text-xs ${strictness.textClass}`}>
+              {score100}
+            </strong>
+          </div>
+        </div>
+
+        {/* Шеврон-индикатор кликабельности */}
+        <ChevronRight
+          className="w-4 h-4 text-charcoal-300 group-hover:text-camel-600 group-hover:translate-x-0.5 transition-all shrink-0 ml-1"
+          aria-hidden="true"
         />
       </div>
     </Link>

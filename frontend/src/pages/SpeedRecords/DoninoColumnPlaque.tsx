@@ -12,6 +12,7 @@ function formatDogCount(count: number): string {
 interface DoninoColumnPlaqueProps {
   title: string
   count: number
+  countLabel?: string
   action?: ReactNode
   countClassName?: string
   titleClassName?: string
@@ -22,6 +23,7 @@ interface DoninoColumnPlaqueProps {
 export default function DoninoColumnPlaque({
   title,
   count,
+  countLabel,
   action,
   countClassName,
   titleClassName,
@@ -49,7 +51,7 @@ export default function DoninoColumnPlaque({
         </div>
       )}
       <span className={`relative z-[1] ml-auto shrink-0 pl-2 text-xs font-semibold text-old-money-600 ${countClassName || ''}`}>
-        {formatDogCount(count)}
+        {countLabel ?? formatDogCount(count)}
       </span>
     </div>
   )

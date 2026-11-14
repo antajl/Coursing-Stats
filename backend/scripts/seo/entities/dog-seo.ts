@@ -124,7 +124,7 @@ export function buildDogBodyHtml(dog: DogProfileInput): string {
   const comps = (dog.recentCompetitions || []).filter(Boolean).slice(0, 8)
   const compsBlock =
     comps.length > 0
-      ? `<h2>Недавние забеги и соревнования</h2><ul>${comps
+      ? `<section id="competitions"><h2 id="competitions-title">Недавние забеги и соревнования</h2><ul>${comps
           .map((item) => {
             if (typeof item === 'string') {
               return `<li>${escapeHtml(item)}</li>`
@@ -141,7 +141,7 @@ export function buildDogBodyHtml(dog: DogProfileInput): string {
               .join(', ')
             return `<li>${link}${extra ? ` — ${extra}` : ''}</li>`
           })
-          .join('')}</ul>`
+          .join('')}</ul></section>`
       : ''
 
   const links = [

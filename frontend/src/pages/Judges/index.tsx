@@ -8,7 +8,18 @@ import { useJudges, useCompetingBreeds, useYears } from '../../hooks/useStaticDa
 import EmptyState from '../../components/EmptyState'
 import LoadingCard from '../../components/LoadingCard'
 import { useListReveal } from '../../hooks/useListReveal'
-import { JudgesToolbar } from './JudgesToolbar'
+import { JudgesToolbar, DISCIPLINE_OPTIONS } from './JudgesToolbar'
+import DoninoColumnPlaque, { DoninoColumnShell } from '../SpeedRecords/DoninoColumnPlaque'
+import { formatBreedName } from '../../lib/breedMapping'
+
+function formatJudgesCount(count: number): string {
+  const mod10 = count % 10
+  const mod100 = count % 100
+  if (mod100 >= 11 && mod100 <= 14) return `${count} судей`
+  if (mod10 === 1) return `${count} судья`
+  if (mod10 >= 2 && mod10 <= 4) return `${count} судьи`
+  return `${count} судей`
+}
 
 export default function Judges() {
   const location = useLocation()
@@ -132,6 +143,33 @@ export default function Judges() {
     setFilterDiscipline('')
   }
 
+  const plaqueTitle = useMemo(() => {
+    const parts: string[] = ['Судьи соревнований']
+    if (filterDiscipline) {
+      const disc = DISCIPLINE_OPTIONS.find((d) => d.value === filterDiscipline)?.label
+      if (disc) parts.push(disc)
+    }
+    if (filterBreed) {
+      const breedName = formatBreedName(filterBreed)
+      if (breedName) parts.push(breedName)
+    }
+    if (searchQuery.trim()) {
+      parts.push(`«${searchQuery.trim()}»`)
+    } else if (filterYear) {
+      parts.push(filterYear === 'all' ? 'Все года' : `${filterYear} г.`)
+    }
+    return parts.join(' · ')
+  }, [filterDiscipline, filterBreed, searchQuery, filterYear])
+
+  const plaque = (
+    <DoninoColumnPlaque
+      asHeader
+      title={plaqueTitle}
+      count={sortedJudges.length}
+      countLabel={formatJudgesCount(sortedJudges.length)}
+    />
+  )
+
   if (isInitialLoad && loading) {
     return <LoadingCard count={6} variant="list" />
   }
@@ -169,14 +207,23 @@ export default function Judges() {
           <EmptyState title="Судьи не найдены" description="Попробуйте изменить фильтры" />
         </div>
       ) : (
-        <div ref={listRevealRef} className="grid grid-cols-1 gap-2">
-          {sortedJudges.slice(0, visibleCount).map((judge) => (
-            <div key={judge.id} data-list-item>
-              <JudgeCard judge={judge} filterYear={filterYear} filterDiscipline={filterDiscipline} />
-            </div>
-          ))}
+        <div className="space-y-4">
+          <DoninoColumnShell plaque={plaque} listRef={listRevealRef}>
+            {sortedJudges.slice(0, visibleCount).map((judge, idx) => (
+              <div key={judge.id} data-list-item>
+                <JudgeCard
+                  judge={judge}
+                  rank={idx + 1}
+                  filterYear={filterYear}
+                  filterDiscipline={filterDiscipline}
+                />
+              </div>
+            ))}
+          </DoninoColumnShell>
           {sortedJudges.length > visibleCount && (
-            <div ref={loadMoreRef} className="h-4" />
+            <div ref={loadMoreRef} className="py-3 text-center text-xs text-charcoal-500">
+              Загрузка…
+            </div>
           )}
         </div>
       )}

@@ -35,6 +35,11 @@ import {
   buildDogBodyHtml,
   buildGuideHubHtml,
   buildHubBodyHtml,
+  buildShowsHubHtml,
+  buildSpeedRecordsHubHtml,
+  showsHubJsonLd,
+  doninoChampionshipJsonLd,
+  doninoAnalyticsJsonLd,
   buildNeutralSpaShell,
   buildSimpleEntityBodyHtml,
   breedHubMeta,
@@ -182,8 +187,16 @@ function prerenderHubs(spaHtml: string): number {
     } else if (hub.path === '/competitions') {
       bodyHtml = buildCompetitionsHubHtml(hub, topPlacementDogs)
       jsonLd = competitionsJsonLd(DEFAULT_COMPETITION_FAQS)
+    } else if (hub.path === '/shows') {
+      bodyHtml = buildShowsHubHtml(hub)
+      jsonLd = showsHubJsonLd()
     } else if (hub.path === '/speed-records') {
+      bodyHtml = buildSpeedRecordsHubHtml(hub)
       jsonLd = doninoDatasetJsonLd()
+    } else if (hub.path === '/donino/championship') {
+      jsonLd = doninoChampionshipJsonLd()
+    } else if (hub.path === '/donino/analytics') {
+      jsonLd = doninoAnalyticsJsonLd()
     } else if (hub.path === '/guide') {
       bodyHtml = buildGuideHubHtml(hub)
       jsonLd = guideJsonLd()

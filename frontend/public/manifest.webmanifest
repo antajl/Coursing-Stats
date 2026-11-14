@@ -1,0 +1,33 @@
+{
+  "name": "Курсинг Статс — статистика и рейтинг собак",
+  "short_name": "CoursingStats",
+  "description": "Единая всероссийская база и статистика курсинга, бегов борзых, замеров Донино и выставок собак РКФ с 2015 года.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F5F1E8",
+  "theme_color": "#F5F1E8",
+  "lang": "ru",
+  "dir": "ltr",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicons/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/brand/logo-badge.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}
