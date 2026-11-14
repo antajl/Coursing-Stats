@@ -179,6 +179,9 @@ export default function ShowJudgeDetail() {
         <div className="relative">
           <JudgeDetailHeader
             judgeName={judge.display_name || judge.name}
+            city={judge.city}
+            ranks={judge.ranks}
+            certNumber={judge.cert_number}
             yearParam={yearParam}
             availableYears={availableYears}
             onYearChange={setYear}

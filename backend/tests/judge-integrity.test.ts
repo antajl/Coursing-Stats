@@ -49,6 +49,7 @@ describe('Judge Data Integrity (List vs Profile consistency)', () => {
           judge_name: string
           total_evaluations: number
           avg_score: number | null
+          rkf_id?: string
           breed_stats: Array<{ breed: string; count?: number; dogs?: Array<{ events?: Array<{ date?: string; title?: string }> }> }>
         }>(detailRel)
 
@@ -84,6 +85,14 @@ describe('Judge Data Integrity (List vs Profile consistency)', () => {
           judge.unique_events,
           `Events mismatch for "${judge.name}": summary=${judge.unique_events}, detail distinct events=${distinctEvents.size}`,
         ).toBe(distinctEvents.size)
+
+        // 6. Verified sport judges with RKF certificate numbers
+        if (judge.name === 'Карелина Н.В.') {
+          expect(detail.rkf_id).toBe('3561')
+        }
+        if (judge.name === 'Богаченко В.В.') {
+          expect(detail.rkf_id).toBe('3758')
+        }
       }
     })
   })
@@ -103,6 +112,9 @@ describe('Judge Data Integrity (List vs Profile consistency)', () => {
           by_year: Record<string, number>
           excellent_rate: number | null
           graded: number
+          city?: string
+          cert_number?: number
+          ranks?: string
         }>
       >('shows/indexes/judges.json')
 
@@ -143,6 +155,11 @@ describe('Judge Data Integrity (List vs Profile consistency)', () => {
         if (j.excellent_rate != null && detail.strictness?.excellent_rate != null) {
           expect(j.excellent_rate).toBeCloseTo(detail.strictness.excellent_rate, 4)
         }
+
+        // 5. RKF accreditation fields must match between list and pack detail
+        expect(j.city).toBe(detail.city)
+        expect(j.cert_number).toBe(detail.cert_number)
+        expect(j.ranks).toBe(detail.ranks)
       }
     })
   })

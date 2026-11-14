@@ -1,4 +1,4 @@
-import { Award, Layers, Calendar, CheckCircle2 } from 'lucide-react'
+import { Award, Layers, Calendar, CheckCircle2, MapPin } from 'lucide-react'
 import {
   GRADE_TILES,
   type GradeFilterKey,
@@ -97,11 +97,17 @@ export function JudgeDetailHeader({
   onSelectExhibitions,
   onSelectBreeds,
   onToggleGrade,
+  city,
+  ranks,
+  certNumber,
 }: {
   judgeName: string
   yearParam: string
   availableYears: string[]
   onYearChange: (year: string) => void
+  city?: string
+  ranks?: string
+  certNumber?: number
   periodExhibitionCount: number
   periodBreedCount: number
   periodGrades: Record<GradeFilterKey, number>
@@ -147,6 +153,25 @@ export function JudgeDetailHeader({
                 <Award className="h-3 w-3 text-camel-600" />
                 Судья РКФ / FCI
               </span>
+
+              {city && (
+                <span className="inline-flex items-center gap-1 rounded-md border border-old-money-200/80 bg-cream-50/80 px-2 py-0.5 text-[11px] font-medium text-charcoal-700">
+                  <MapPin className="h-3 w-3 text-camel-700" />
+                  {city}
+                </span>
+              )}
+
+              {certNumber && (
+                <span className="inline-flex items-center gap-1 rounded-md border border-camel-200/90 bg-cream-100/90 px-2 py-0.5 text-[11px] font-semibold text-camel-800">
+                  РКФ № {certNumber}
+                </span>
+              )}
+
+              {ranks && (
+                <span className="inline-flex items-center gap-1 rounded-md border border-camel-200/70 bg-cream-100/70 px-2 py-0.5 text-[11px] font-medium text-camel-900">
+                  {ranks}
+                </span>
+              )}
               <span
                 className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-0.5 text-xs font-semibold tracking-tight ${strictnessBadge.badgeClass}`}
                 title={strictnessBadge.detail}

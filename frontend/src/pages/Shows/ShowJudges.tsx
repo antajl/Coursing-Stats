@@ -255,6 +255,8 @@ export default function ShowJudges() {
                 breedChips: (judge.breeds || []).slice(0, 2),
                 excellentPct: judgeExcellentPctForCard(judge, filterYear),
                 graded: filterYear ? judge.by_year_graded?.[filterYear] : judge.graded,
+                city: judge.city,
+                ranks: judge.ranks,
               }}
             />
           ))}

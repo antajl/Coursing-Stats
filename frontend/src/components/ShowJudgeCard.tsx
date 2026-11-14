@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { MapPin } from 'lucide-react'
 import { formatBreedSentenceCase } from '../lib/breedMapping'
 import { formatJudgeDisplayName, getJudgeInitials, getStrictnessBadge } from '../lib/judgeUiUtils'
 
@@ -11,6 +12,8 @@ export interface ShowJudgeCardData {
   /** 0–100, null если мало/нет данных */
   excellentPct: number | null
   graded?: number
+  city?: string
+  ranks?: string
   /** До 2 пород для чипов; остальное — в breedsCount */
   breedChips?: string[]
 }
@@ -74,6 +77,12 @@ export default function ShowJudgeCard({ judge, filterYear }: { judge: ShowJudgeC
             <span className={`h-1.5 w-1.5 rounded-full ${strictness.dotClass}`} />
             {strictness.label}
           </span>
+          {judge.city && (
+            <span className="inline-flex items-center gap-1 rounded-full border border-old-money-200/80 bg-cream-50/80 px-2 py-0.5 text-[10px] font-medium text-charcoal-700">
+              <MapPin className="h-2.5 w-2.5 text-camel-700" />
+              {judge.city}
+            </span>
+          )}
         </div>
 
         {chips.length > 0 && (

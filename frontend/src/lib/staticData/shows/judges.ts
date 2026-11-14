@@ -28,6 +28,9 @@ export interface ShowJudge {
   by_year_excellent?: Record<string, number>
   by_year_graded?: Record<string, number>
   by_year_breeds?: Record<string, number>
+  city?: string
+  ranks?: string
+  cert_number?: number
 }
 
 export interface ShowJudgeDetail {
@@ -39,6 +42,9 @@ export interface ShowJudgeDetail {
   unique_breeds: number
   by_year: Record<string, number>
   breeds: Array<{ breed: string; count: number }>
+  city?: string
+  ranks?: string
+  cert_number?: number
   exhibitions: Array<{
     id: number
     date: string
@@ -99,6 +105,9 @@ function normalizeShowJudge(raw: ShowJudge | Record<string, unknown>): ShowJudge
       raw.by_year_graded && typeof raw.by_year_graded === 'object'
         ? (raw.by_year_graded as Record<string, number>)
         : undefined,
+    city: typeof (raw as ShowJudge).city === 'string' ? (raw as ShowJudge).city : undefined,
+    ranks: typeof (raw as ShowJudge).ranks === 'string' ? (raw as ShowJudge).ranks : undefined,
+    cert_number: typeof (raw as ShowJudge).cert_number === 'number' ? (raw as ShowJudge).cert_number : undefined,
   }
 }
 

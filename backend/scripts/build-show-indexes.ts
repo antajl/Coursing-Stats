@@ -30,6 +30,7 @@ import {
   translitLatSurname,
   GIVEN_CANON_EN_TO_RU,
 } from '../lib/show-judge-name'
+import { matchRkfExteriorJudge } from '../lib/rkf-exterior-judges.js'
 import {
   addBreedAliasPair,
   breedKeys,
@@ -1155,6 +1156,22 @@ async function main() {
 
   console.log('Building show judges index...')
   const { list: judges, details: judgeDetails, baseline } = buildJudgesIndex(exhibitions)
+  for (const j of judges) {
+    const rkf = matchRkfExteriorJudge(j.name)
+    if (rkf) {
+      ;(j as any).city = rkf.city_name
+      ;(j as any).cert_number = rkf.cert_number
+      ;(j as any).ranks = rkf.ranks
+    }
+  }
+  for (const detail of judgeDetails) {
+    const rkf = matchRkfExteriorJudge(detail.name)
+    if (rkf) {
+      ;(detail as any).city = rkf.city_name
+      ;(detail as any).cert_number = rkf.cert_number
+      ;(detail as any).ranks = rkf.ranks
+    }
+  }
   const judgesCount = judges.length
   console.log(`Built index for ${judgesCount} judges`)
   safeWriteFileSync(path.join(INDEXES_DIR, 'judges.json'), JSON.stringify(judges))
