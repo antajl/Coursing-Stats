@@ -50,22 +50,19 @@ function Shows({ defaultTab }: ShowsProps) {
     }
 
     const queryYear = searchParams.get('year')
+    const targetYear = queryYear || '2026'
     const next = new URLSearchParams(searchParams)
     next.delete('tab')
     next.delete('year')
     const qs = next.toString()
     const queryPart = qs ? `?${qs}` : ''
-    if (queryYear) {
-      redirectPath = `/shows/${targetTab}/${queryYear}/${queryPart}${currentHash}`
-    } else {
-      redirectPath = `/shows/${targetTab}/${queryPart}${currentHash}`
-    }
+    redirectPath = `/shows/${targetTab}/${targetYear}/${queryPart}${currentHash}`
   } else if (rawTab === 'champions') {
-    redirectPath = `/shows/ranking/${currentHash}`
+    redirectPath = `/shows/ranking/2026/${currentHash}`
   } else if (rawTab === 'calendar') {
-    redirectPath = `/shows/archive/${currentHash}`
+    redirectPath = `/shows/archive/2026/${currentHash}`
   } else if (!calendarVisible && rawTab === 'archive') {
-    redirectPath = `/shows/ranking/${currentHash}`
+    redirectPath = `/shows/ranking/2026/${currentHash}`
   }
 
   const resolvedTab =
@@ -120,7 +117,7 @@ function Shows({ defaultTab }: ShowsProps) {
       setIsTabLoading(true)
     }
 
-    const currentYear = routeYear || searchParams.get('year')
+    const currentYear = routeYear || searchParams.get('year') || '2026'
     const nextParams = new URLSearchParams(searchParams)
     nextParams.delete('tab')
     nextParams.delete('year')
@@ -132,7 +129,7 @@ function Shows({ defaultTab }: ShowsProps) {
     } else if (currentYear === 'all') {
       navigate(`/shows/${newTab}/all/${queryPart}`)
     } else {
-      navigate(`/shows/${newTab}/${queryPart}`)
+      navigate(`/shows/${newTab}/2026/${queryPart}`)
     }
   }, [activeTab, visitedTabs, navigate, searchParams, routeYear])
 
@@ -229,7 +226,7 @@ function Shows({ defaultTab }: ShowsProps) {
           >
             <div id="judges" className="scroll-mt-20" />
             <Suspense fallback={<SkeletonLoader count={6} variant="cards" />}>
-              <ShowJudges />
+              <ShowJudges urlYear={routeYear} />
             </Suspense>
           </div>
         )}
