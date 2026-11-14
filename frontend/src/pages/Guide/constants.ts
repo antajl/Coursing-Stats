@@ -24,6 +24,11 @@ export const OFFICIAL_SOURCES = [
     href: 'https://rkf.org.ru/dressirovka-i-sport/polozhenija/',
     note: 'Каталог официальных документов на rkf.org.ru',
   },
+  {
+    label: 'Единый календарный план состязаний РКФ (2026–2027)',
+    href: 'https://info.rkf.online/article/fb2b53ca-bdf2-5e35-bea2-2e973592e2d7',
+    note: 'Официальный график национальных и квалификационных состязаний по курсингу борзых, бегам борзых и БЗМП',
+  },
 ] as const
 
 export const SPORT_DISCIPLINES = [

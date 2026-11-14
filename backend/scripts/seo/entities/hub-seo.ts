@@ -643,8 +643,8 @@ export interface BreedHubMetaInput {
 }
 
 export function breedHubMeta(input: BreedHubMetaInput): SimpleEntityMeta {
-  const title = `${input.nameRu} (${input.nameLat}) — рейтинг в курсинге, результаты забегов и рекорды скорости | Курсинг Статс (Coursing Stats)`
-  const description = `Сводный рейтинг породы ${input.nameRu} (${input.nameLat}, ${input.fci}) в курсинге и бегах борзых: топ сезона, рекорды скорости в Донино (км/ч), протоколы соревнований РКФ и результаты забегов на Курсинг Статс (Coursing Stats).`
+  const title = `${input.nameRu} (${input.nameLat}) — рейтинг курсинга, результаты забегов и рекорды скорости 2026 | Coursing Stats`
+  const description = `Рейтинг породы ${input.nameRu} (${input.nameLat}) в курсинге и бегах борзых 2026 года: лидеры сезона, очки CS, рекорды скорости в Донино (км/ч) и протоколы соревнований на Coursing Stats.`
   const url = `${SITE_ORIGIN}/breeds/${input.slug}/`
 
   const breadcrumbs = [
