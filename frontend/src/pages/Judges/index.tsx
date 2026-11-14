@@ -1,5 +1,5 @@
-import { useState, useEffect, useMemo, useRef } from 'react'
-import { useLocation, useSearchParams } from 'react-router-dom'
+import { useState, useEffect, useMemo, useRef, useCallback } from 'react'
+import { useLocation, useSearchParams, useNavigate, useParams } from 'react-router-dom'
 import { SEO } from '../../components/SEO'
 import { useYandexGoal } from '../../components/YandexMetrica'
 import JudgeCard from '../../components/JudgeCard'
@@ -23,8 +23,15 @@ function formatJudgesCount(count: number): string {
   return `${count} судей`
 }
 
-export default function Judges() {
+interface JudgesProps {
+  urlYear?: string
+}
+
+export default function Judges({ urlYear }: JudgesProps = {}) {
+  const { year: routeYearParam } = useParams<{ year?: string }>()
+  const routeYear = urlYear ?? routeYearParam
   const location = useLocation()
+  const navigate = useNavigate()
   const [searchParams] = useSearchParams()
   const isEmbedded = location.pathname.startsWith('/competitions')
   const { reachGoal } = useYandexGoal()
@@ -43,11 +50,21 @@ export default function Judges() {
   const activeSeason = useMemo(() => resolveActiveSeason(availableYears), [availableYears])
 
   const [searchQuery, setSearchQuery] = useState('')
-  const [filterYear, setFilterYear] = useState(() =>
-    initialSeasonYearFilter(searchParams, DEFAULT_ACTIVE_SEASON),
-  )
+  const [filterYear, setFilterYear] = useState(() => {
+    if (routeYear !== undefined) {
+      return routeYear === 'all' ? '' : routeYear
+    }
+    return initialSeasonYearFilter(searchParams, DEFAULT_ACTIVE_SEASON)
+  })
 
-  const hasUrlYear = searchParams.get('year') !== null
+  useEffect(() => {
+    if (routeYear !== undefined) {
+      const target = routeYear === 'all' ? '' : routeYear
+      setFilterYear((prev) => (prev !== target ? target : prev))
+    }
+  }, [routeYear])
+
+  const hasUrlYear = (routeYear !== undefined && routeYear !== '') || searchParams.get('year') !== null
   useEffect(() => {
     if (!hasUrlYear && availableYears.length > 0) {
       const resolved = resolveActiveSeason(availableYears)
