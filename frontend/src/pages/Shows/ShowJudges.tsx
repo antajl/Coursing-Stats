@@ -5,6 +5,8 @@ import { initialSeasonYearFilter, resolveActiveSeason } from '../../lib/season'
 import { useShowJudges, useShowJudgesPage0, useShowBreedAliases } from '../../hooks/useStaticData'
 import EmptyState from '../../components/EmptyState'
 import SkeletonLoader from '../../components/SkeletonLoader'
+import DoninoColumnPlaque, { DoninoColumnShell } from '../SpeedRecords/DoninoColumnPlaque'
+import { useListReveal } from '../../hooks/useListReveal'
 import type { ShowJudge } from '../../lib/staticData'
 import type { DogsIndexEntry } from '../../lib/competingBreeds'
 import {
@@ -13,6 +15,7 @@ import {
   canonicalBreed,
 } from '../../lib/breedMapping'
 import { ShowJudgesToolbar } from './ShowJudgesToolbar'
+import ShowJudgeSortDropdown, { ShowJudgeSortKey } from './ShowJudgeSortDropdown'
 
 const SHOW_YEARS = ['2026', '2025', '2024'] as const
 const SHOW_JUDGES_ACTIVE_SEASON = resolveActiveSeason(SHOW_YEARS)
@@ -40,6 +43,15 @@ function judgeExcellentPctForCard(judge: ShowJudge, year: string): number | null
   return rate == null ? null : rate * 100
 }
 
+function formatJudgesCount(count: number): string {
+  const mod10 = count % 10
+  const mod100 = count % 100
+  if (mod100 >= 11 && mod100 <= 14) return `${count.toLocaleString('ru-RU')} судей`
+  if (mod10 === 1) return `${count.toLocaleString('ru-RU')} судья`
+  if (mod10 >= 2 && mod10 <= 4) return `${count.toLocaleString('ru-RU')} судьи`
+  return `${count.toLocaleString('ru-RU')} судей`
+}
+
 export default function ShowJudges() {
   const [searchParams] = useSearchParams()
   const [searchQuery, setSearchQuery] = useState('')
@@ -47,6 +59,7 @@ export default function ShowJudges() {
     initialSeasonYearFilter(searchParams, SHOW_JUDGES_ACTIVE_SEASON),
   )
   const [filterBreed, setFilterBreed] = useState('')
+  const [sortKey, setSortKey] = useState<ShowJudgeSortKey>('exhibitions')
   const [visibleCount, setVisibleCount] = useState(20)
   const [allowFullLoad, setAllowFullLoad] = useState(false)
   const [userWantsFull, setUserWantsFull] = useState(false)
@@ -144,13 +157,72 @@ export default function ShowJudges() {
 
   const sortedJudges = useMemo(() => {
     return [...filteredJudges].sort((a, b) => {
-      const aVal = filterYear ? (a.by_year?.[filterYear] ?? 0) : a.total_judged
-      const bVal = filterYear ? (b.by_year?.[filterYear] ?? 0) : b.total_judged
-      const cmp = bVal - aVal
-      if (cmp !== 0) return cmp
+      const aExhibitions = filterYear ? (a.by_year?.[filterYear] ?? 0) : a.total_judged
+      const bExhibitions = filterYear ? (b.by_year?.[filterYear] ?? 0) : b.total_judged
+      const aDogs = filterYear ? (a.by_year_graded?.[filterYear] ?? 0) : (a.graded ?? 0)
+      const bDogs = filterYear ? (b.by_year_graded?.[filterYear] ?? 0) : (b.graded ?? 0)
+      const aBreeds = filterYear
+        ? (a.by_year_breeds?.[filterYear] ?? (a.unique_breeds ?? a.breeds?.length ?? 0))
+        : (a.unique_breeds ?? a.breeds?.length ?? 0)
+      const bBreeds = filterYear
+        ? (b.by_year_breeds?.[filterYear] ?? (b.unique_breeds ?? b.breeds?.length ?? 0))
+        : (b.unique_breeds ?? b.breeds?.length ?? 0)
+
+      const aRate = judgeExcellentRate(a, filterYear)
+      const bRate = judgeExcellentRate(b, filterYear)
+
+      switch (sortKey) {
+        case 'dogs': {
+          const cmp = bDogs - aDogs
+          if (cmp !== 0) return cmp
+          break
+        }
+        case 'breeds': {
+          const cmp = bBreeds - aBreeds
+          if (cmp !== 0) return cmp
+          break
+        }
+        case 'strictness_strict': {
+          if (aRate != null && bRate != null) {
+            const cmp = aRate - bRate
+            if (cmp !== 0) return cmp
+          } else if (aRate != null) {
+            return -1
+          } else if (bRate != null) {
+            return 1
+          }
+          break
+        }
+        case 'strictness_soft': {
+          if (aRate != null && bRate != null) {
+            const cmp = bRate - aRate
+            if (cmp !== 0) return cmp
+          } else if (aRate != null) {
+            return -1
+          } else if (bRate != null) {
+            return 1
+          }
+          break
+        }
+        case 'name': {
+          return a.name.localeCompare(b.name, 'ru')
+        }
+        case 'exhibitions':
+        default: {
+          const cmp = bExhibitions - aExhibitions
+          if (cmp !== 0) return cmp
+          break
+        }
+      }
+
+      // Вторичная сортировка: по числу выставок, затем по имени
+      const secCmp = bExhibitions - aExhibitions
+      if (secCmp !== 0) return secCmp
       return a.name.localeCompare(b.name, 'ru')
     })
-  }, [filteredJudges, filterYear])
+  }, [filteredJudges, filterYear, sortKey])
+
+  const listRevealRef = useListReveal(!page0Loading && sortedJudges.length > 0)
 
   useEffect(() => {
     observerRef.current = new IntersectionObserver(
@@ -183,12 +255,43 @@ export default function ShowJudges() {
     setFilterYear(SHOW_JUDGES_ACTIVE_SEASON)
     setFilterBreed('')
     setSearchQuery('')
+    setSortKey('exhibitions')
   }
 
   const handleSelectBreed = (breed: string) => {
     setFilterBreed(breed)
     if (breed) setUserWantsFull(true)
   }
+
+  const plaqueTitle = useMemo(() => {
+    const parts: string[] = ['Судьи выставок РКФ']
+    if (filterBreed) {
+      const breedName = formatBreedName(filterBreed)
+      if (breedName) parts.push(breedName)
+    }
+    if (searchQuery.trim()) {
+      parts.push(`«${searchQuery.trim()}»`)
+    } else if (filterYear) {
+      parts.push(filterYear === 'all' ? 'Все года' : `${filterYear} г.`)
+    }
+    return parts.join(' · ')
+  }, [filterBreed, searchQuery, filterYear])
+
+  const plaque = (
+    <DoninoColumnPlaque
+      asHeader
+      title={
+        <span className="inline-flex items-center gap-1.5 sm:gap-2 truncate">
+          <span>{plaqueTitle}</span>
+          <span className="text-old-money-500 font-semibold text-[11px] sm:text-xs normal-case tracking-normal shrink-0">
+            · {formatJudgesCount(sortedJudges.length)}
+          </span>
+        </span>
+      }
+      actionPlacement="right"
+      action={<ShowJudgeSortDropdown value={sortKey} onChange={setSortKey} />}
+    />
+  )
 
   if (page0Loading && !hasPage0) {
     return (
@@ -237,30 +340,39 @@ export default function ShowJudges() {
           />
         </div>
       ) : (
-        <div className="grid grid-cols-1 gap-2">
-          {sortedJudges.slice(0, visibleCount).map((judge) => (
-            <ShowJudgeCard
-              key={judge.id || judge.name}
-              filterYear={filterYear}
-              judge={{
-                id: judge.id || judge.name,
-                name: judge.name,
-                display_name: judge.display_name,
-                exhibitionsCount: filterYear
-                  ? (judge.by_year?.[filterYear] ?? 0)
-                  : judge.total_judged,
-                breedsCount: filterYear
-                  ? (judge.by_year_breeds?.[filterYear] ?? (judge.unique_breeds ?? judge.breeds?.length ?? 0))
-                  : (judge.unique_breeds ?? judge.breeds?.length ?? 0),
-                breedChips: (judge.breeds || []).slice(0, 2),
-                excellentPct: judgeExcellentPctForCard(judge, filterYear),
-                graded: filterYear ? judge.by_year_graded?.[filterYear] : judge.graded,
-                city: judge.city,
-                ranks: judge.ranks,
-              }}
-            />
-          ))}
-          {sortedJudges.length > visibleCount && <div ref={loadMoreRef} className="h-4" />}
+        <div className="space-y-4">
+          <DoninoColumnShell plaque={plaque} listRef={listRevealRef}>
+            <div className="divide-y divide-old-money-100">
+              {sortedJudges.slice(0, visibleCount).map((judge) => (
+                <div key={judge.id || judge.name} data-list-item>
+                  <ShowJudgeCard
+                    filterYear={filterYear}
+                    judge={{
+                      id: judge.id || judge.name,
+                      name: judge.name,
+                      display_name: judge.display_name,
+                      exhibitionsCount: filterYear
+                        ? (judge.by_year?.[filterYear] ?? 0)
+                        : judge.total_judged,
+                      breedsCount: filterYear
+                        ? (judge.by_year_breeds?.[filterYear] ?? (judge.unique_breeds ?? judge.breeds?.length ?? 0))
+                        : (judge.unique_breeds ?? judge.breeds?.length ?? 0),
+                      excellentPct: judgeExcellentPctForCard(judge, filterYear),
+                      graded: filterYear ? judge.by_year_graded?.[filterYear] : judge.graded,
+                      city: judge.city,
+                      ranks: judge.ranks,
+                    }}
+                    variant="embedded"
+                  />
+                </div>
+              ))}
+            </div>
+          </DoninoColumnShell>
+          {sortedJudges.length > visibleCount && (
+            <div ref={loadMoreRef} className="py-3 text-center text-xs text-charcoal-500">
+              Загрузка…
+            </div>
+          )}
         </div>
       )}
     </div>

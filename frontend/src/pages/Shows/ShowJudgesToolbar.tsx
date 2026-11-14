@@ -6,6 +6,7 @@ import YearDropdown from '../../components/ui/YearDropdown'
 import BreedSearchDropdown from '../../components/ui/BreedSearchDropdown'
 import type { DogsIndexEntry } from '../../lib/competingBreeds'
 import QuickBreedBar, { SHOW_CANDIDATE_BREEDS } from '../TopDogs/QuickBreedBar'
+import ShowJudgesRatingHint from './ShowJudgesRatingHint'
 import { toolbarPillTriggerClass } from '../../lib/toolbar'
 import { formatBreedName } from '../../lib/breedMapping'
 
@@ -82,9 +83,9 @@ export function ShowJudgesToolbar({
               }
             />
 
-            {/* Reset Filters button on mobile */}
-            {hasActiveFilters && (
-              <div className="ml-auto shrink-0">
+            {/* Reset Filters and Info button on mobile */}
+            <div className="ml-auto shrink-0 flex items-center gap-1.5">
+              {hasActiveFilters && (
                 <button
                   type="button"
                   onClick={onResetFilters}
@@ -94,11 +95,12 @@ export function ShowJudgesToolbar({
                 >
                   <X className="h-4 w-4" />
                 </button>
-              </div>
-            )}
+              )}
+              <ShowJudgesRatingHint compact />
+            </div>
           </div>
 
-          {/* Десктопная строка: Поиск + Год + Сброс + Разделитель | + QuickBreedBar edge-to-edge */}
+          {/* Десктопная строка: Поиск + Год + О судействе + Сброс + Разделитель | + QuickBreedBar edge-to-edge */}
           <div className="hidden sm:flex sm:items-center gap-2 w-full min-w-0">
             <div className="flex items-center gap-1.5 shrink-0">
               <ToolbarSearch
@@ -112,6 +114,9 @@ export function ShowJudgesToolbar({
                 selectedYear={filterYear}
                 onSelectYear={setFilterYear}
               />
+
+              {/* Info button */}
+              <ShowJudgesRatingHint />
 
               {/* Reset Filters button — слева перед разделителем */}
               {hasActiveFilters && (

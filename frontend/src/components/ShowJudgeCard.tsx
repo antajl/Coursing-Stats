@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom'
-import { MapPin } from 'lucide-react'
-import { formatBreedSentenceCase } from '../lib/breedMapping'
-import { formatJudgeDisplayName, getJudgeInitials, getStrictnessBadge } from '../lib/judgeUiUtils'
+import { ChevronRight } from 'lucide-react'
+import {
+  formatJudgeDisplayName,
+  getStrictnessBadge,
+} from '../lib/judgeUiUtils'
 
 export interface ShowJudgeCardData {
   id: string
@@ -14,104 +16,191 @@ export interface ShowJudgeCardData {
   graded?: number
   city?: string
   ranks?: string
-  /** До 2 пород для чипов; остальное — в breedsCount */
   breedChips?: string[]
 }
 
-function StatPill({
-  label,
-  value,
-  highlightClass,
-}: {
-  label: string
-  value: string | number
-  highlightClass?: string
-}) {
-  return (
-    <div className="min-w-[4.25rem] rounded-lg bg-cream-100/80 px-2.5 py-1.5 text-center">
-      <p className="mb-0.5 text-[9px] uppercase tracking-wide text-charcoal-500">
-        {label}
-      </p>
-      <p className={`text-sm font-bold tabular-nums ${highlightClass || 'text-camel-700'}`}>
-        {value}
-      </p>
-    </div>
-  )
+export interface ShowJudgeCardProps {
+  judge: ShowJudgeCardData
+  filterYear?: string
+  variant?: 'embedded' | 'card'
 }
 
-export default function ShowJudgeCard({ judge, filterYear }: { judge: ShowJudgeCardData; filterYear?: string }) {
-  const chips = (judge.breedChips || []).slice(0, 2)
-  const extraBreeds = Math.max(0, judge.breedsCount - chips.length)
+function formatExhibitionsCount(count: number): string {
+  const mod10 = count % 10
+  const mod100 = count % 100
+  if (mod100 >= 11 && mod100 <= 14) return `${count.toLocaleString('ru-RU')} выставок`
+  if (mod10 === 1) return `${count.toLocaleString('ru-RU')} выставка`
+  if (mod10 >= 2 && mod10 <= 4) return `${count.toLocaleString('ru-RU')} выставки`
+  return `${count.toLocaleString('ru-RU')} выставок`
+}
+
+function formatBreedsCount(count: number): string {
+  const mod10 = count % 10
+  const mod100 = count % 100
+  if (mod100 >= 11 && mod100 <= 14) return 'пород'
+  if (mod10 === 1) return 'порода'
+  if (mod10 >= 2 && mod10 <= 4) return 'породы'
+  return 'пород'
+}
+
+function formatDogsCount(count: number): string {
+  const mod10 = count % 10
+  const mod100 = count % 100
+  if (mod100 >= 11 && mod100 <= 14) return `${count.toLocaleString('ru-RU')} собак`
+  if (mod10 === 1) return `${count.toLocaleString('ru-RU')} собака`
+  if (mod10 >= 2 && mod10 <= 4) return `${count.toLocaleString('ru-RU')} собаки`
+  return `${count.toLocaleString('ru-RU')} собак`
+}
+
+function formatEvaluationsCount(count: number): string {
+  const mod10 = count % 10
+  const mod100 = count % 100
+  if (mod100 >= 11 && mod100 <= 14) return `${count.toLocaleString('ru-RU')} оценок`
+  if (mod10 === 1) return `${count.toLocaleString('ru-RU')} оценка`
+  if (mod10 >= 2 && mod10 <= 4) return `${count.toLocaleString('ru-RU')} оценки`
+  return `${count.toLocaleString('ru-RU')} оценок`
+}
+
+export default function ShowJudgeCard({
+  judge,
+  filterYear,
+  variant = 'embedded',
+}: ShowJudgeCardProps) {
   const rawName = judge.display_name || judge.name
   const displayName = formatJudgeDisplayName(rawName)
-  const initials = getJudgeInitials(displayName)
 
   const excellentRateFraction = judge.excellentPct != null ? judge.excellentPct / 100 : null
   const strictness = getStrictnessBadge(excellentRateFraction, judge.graded)
 
   const linkTo = `/shows/judges/${encodeURIComponent(judge.id)}${filterYear ? '?year=' + filterYear : ''}`
 
-  return (
-    <Link
-      to={linkTo}
-      className="group flex flex-col gap-3 rounded-xl border border-old-money-200/90 bg-white p-3.5 sm:p-4 transition-all duration-200 hover:border-camel-300 hover:bg-cream-50/70 hover:shadow-xs sm:flex-row sm:items-center sm:gap-4"
-    >
-      {/* Monogram avatar */}
-      <div className="hidden sm:flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-old-money-200/80 bg-gradient-to-br from-cream-100 via-cream-50 to-amber-50/40 text-sm font-bold tracking-tight text-camel-800 shadow-2xs group-hover:border-camel-400 group-hover:scale-102 transition-transform">
-        {initials}
-      </div>
+  const isEmbedded = variant === 'embedded'
+  const shellClass = isEmbedded
+    ? 'group relative flex items-center w-full min-w-0 border-0 bg-transparent px-3 sm:px-4 py-2.5 sm:py-3 transition-colors duration-150 hover:bg-camel-100/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-camel-500/60 min-h-[44px]'
+    : 'group relative flex items-center w-full min-w-0 rounded-xl sm:rounded-2xl border border-old-money-200/80 bg-white px-3 sm:px-3.5 py-2.5 sm:py-3 transition-all duration-150 hover:border-camel-400 hover:bg-cream-50/70 hover:shadow-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-camel-500/60 min-h-[44px]'
 
-      <div className="min-w-0 flex-1">
-        <div className="flex flex-wrap items-center gap-2">
-          {/* Mobile monogram inline */}
-          <span className="sm:hidden flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border border-old-money-200/80 bg-cream-100 text-xs font-bold text-camel-800">
-            {initials}
-          </span>
-          <h3 className="line-clamp-2 break-words text-base font-bold leading-snug text-charcoal-900 group-hover:text-camel-800 transition-colors sm:text-sm">
-            {displayName}
-          </h3>
-          <span
-            className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[10px] font-medium tracking-tight ${strictness.badgeClass}`}
-            title={strictness.detail}
-          >
-            <span className={`h-1.5 w-1.5 rounded-full ${strictness.dotClass}`} />
-            {strictness.label}
-          </span>
-          {judge.city && (
-            <span className="inline-flex items-center gap-1 rounded-full border border-old-money-200/80 bg-cream-50/80 px-2 py-0.5 text-[10px] font-medium text-charcoal-700">
-              <MapPin className="h-2.5 w-2.5 text-camel-700" />
-              {judge.city}
+  return (
+    <Link to={linkTo} className={shellClass}>
+      <div className="grid grid-cols-[minmax(0,1fr)_auto] md:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)_auto] items-center gap-3 sm:gap-5 w-full py-0.5">
+        {/* Колонка 1: Судья (Имя + Город/Породы) */}
+        <div className="flex flex-col justify-center min-w-0">
+          <div className="flex items-center gap-2 min-w-0">
+            <h3 className="text-sm sm:text-base font-bold leading-snug text-charcoal-900 group-hover:text-camel-800 transition-colors truncate">
+              {displayName}
+            </h3>
+            {/* На мобильных бейдж строгости рядом с именем */}
+            <span
+              className={`inline-flex md:hidden items-center gap-1 rounded-full border px-2 py-0.25 text-[9.5px] font-medium tracking-tight shrink-0 ${strictness.badgeClass}`}
+            >
+              <span className={`h-1.5 w-1.5 rounded-full ${strictness.dotClass}`} />
+              <span>{strictness.label}</span>
             </span>
+          </div>
+
+          <div className="text-[11.5px] sm:text-xs text-charcoal-500 font-medium truncate mt-0.5">
+            <span>{judge.breedsCount.toLocaleString('ru-RU')} {formatBreedsCount(judge.breedsCount)}</span>
+          </div>
+
+          {/* На мобильных (< md) год и число оценок */}
+          <div className="flex md:hidden items-center gap-1.5 text-[10.5px] text-charcoal-600 font-medium mt-1">
+            <span>{filterYear && filterYear !== 'all' ? `${filterYear} г.` : 'Все года'}</span>
+            {typeof judge.graded === 'number' && judge.graded > 0 && (
+              <>
+                <span className="text-old-money-400">·</span>
+                <span>{formatEvaluationsCount(judge.graded)}</span>
+              </>
+            )}
+          </div>
+        </div>
+
+        {/* Колонка 2 (Десктоп): Стиль и опыт (Бейдж строгости + Год + Объем оценок) */}
+        <div className="hidden md:flex flex-col justify-center min-w-0 pl-4 lg:pl-5 border-l border-old-money-200/60 text-left">
+          <div className="flex items-center gap-2.5 min-w-0">
+            <span
+              className={`inline-flex items-center justify-center gap-1 rounded-full border px-2.5 py-0.5 text-[10.5px] font-medium tracking-tight shrink-0 ${strictness.badgeClass}`}
+              title={strictness.detail}
+            >
+              <span className={`h-1.5 w-1.5 rounded-full ${strictness.dotClass}`} />
+              <span>{strictness.label}</span>
+            </span>
+            <span className="text-xs font-semibold text-charcoal-800 truncate">
+              {filterYear && filterYear !== 'all' ? `${filterYear} г.` : 'Все года'}
+            </span>
+          </div>
+
+          {typeof judge.graded === 'number' && judge.graded > 0 && (
+            <div className="text-xs text-charcoal-600 font-medium mt-1 truncate">
+              {formatEvaluationsCount(judge.graded)}
+            </div>
           )}
         </div>
 
-        {chips.length > 0 && (
-          <div className="mt-1.5 flex flex-wrap items-center gap-1.5">
-            {chips.map((breed) => (
-              <span
-                key={breed}
-                className="max-w-[11rem] truncate rounded-md border border-old-money-200/70 bg-cream-50/80 px-1.5 py-0.5 text-[10px] font-medium text-charcoal-600"
-              >
-                {formatBreedSentenceCase(breed)}
+        {/* Колонка 3: Метрики (Выставок, Собак, Отлично) */}
+        <div className="shrink-0 flex items-center gap-2 sm:gap-3 pl-3 sm:pl-4 border-l border-old-money-200/60 ml-auto">
+          {/* Десктопные плашки метрик (>= sm) */}
+          <div className="hidden sm:flex items-center gap-1.5 sm:gap-2">
+            {/* Выставок */}
+            <div
+              className="flex flex-col items-center justify-center w-[4.5rem] shrink-0 rounded-lg bg-cream-100/70 border border-old-money-200/50 px-1 py-1 text-center group-hover:bg-white group-hover:border-camel-300 transition-colors"
+              title={`${judge.exhibitionsCount} выставок в официальных каталогах`}
+            >
+              <span className="text-[9px] uppercase tracking-wider text-charcoal-500 font-medium">Выставок</span>
+              <span className="text-sm font-bold tabular-nums text-charcoal-900">
+                {judge.exhibitionsCount}
               </span>
-            ))}
-            {extraBreeds > 0 && (
-              <span className="text-[10px] tabular-nums text-charcoal-400">
-                +{extraBreeds}
-              </span>
-            )}
-          </div>
-        )}
-      </div>
+            </div>
 
-      <div className="flex shrink-0 items-center gap-2 sm:gap-2.5 self-end sm:self-auto">
-        <StatPill label="Выставок" value={judge.exhibitionsCount} />
-        <StatPill label="Пород" value={judge.breedsCount} />
-        <StatPill
-          label="Отлично"
-          value={judge.excellentPct != null ? `${judge.excellentPct.toFixed(0)}%` : '—'}
-          highlightClass={strictness.textClass}
-        />
+            {/* Собак */}
+            <div
+              className="flex flex-col items-center justify-center w-[4.5rem] shrink-0 rounded-lg bg-cream-100/70 border border-old-money-200/50 px-1 py-1 text-center group-hover:bg-white group-hover:border-camel-300 transition-colors"
+              title={`${(judge.graded || 0).toLocaleString('ru-RU')} собак в каталогах`}
+            >
+              <span className="text-[9px] uppercase tracking-wider text-charcoal-500 font-medium">Собак</span>
+              <span className="text-sm font-bold tabular-nums text-camel-800">
+                {(judge.graded || 0).toLocaleString('ru-RU')}
+              </span>
+            </div>
+
+            {/* Отлично */}
+            <div
+              className="flex flex-col items-center justify-center w-[4.5rem] shrink-0 rounded-lg bg-cream-100/70 border border-old-money-200/50 px-1 py-1 text-center group-hover:bg-white group-hover:border-camel-300 transition-colors"
+              title={strictness.detail}
+            >
+              <span className="text-[9px] uppercase tracking-wider text-charcoal-500 font-medium">Отлично</span>
+              <span className={`text-sm font-bold tabular-nums ${strictness.textClass}`}>
+                {judge.excellentPct != null ? `${judge.excellentPct.toFixed(0)}%` : '—'}
+              </span>
+            </div>
+          </div>
+
+          {/* Мобильный вертикальный стек (< sm) */}
+          <div className="flex sm:hidden flex-col items-end justify-center gap-0.5 min-w-[4.5rem]">
+            <div className="flex items-center gap-1 text-[11px] leading-tight">
+              <span className="text-[9.5px] text-charcoal-500 font-normal">Выставок:</span>
+              <strong className="font-bold tabular-nums text-charcoal-900 text-xs">
+                {judge.exhibitionsCount}
+              </strong>
+            </div>
+            <div className="flex items-center gap-1 text-[11px] leading-tight">
+              <span className="text-[9.5px] text-charcoal-500 font-normal">Собак:</span>
+              <strong className="font-bold tabular-nums text-camel-800 text-xs">
+                {(judge.graded || 0).toLocaleString('ru-RU')}
+              </strong>
+            </div>
+            <div className="flex items-center gap-1 text-[11px] leading-tight">
+              <span className="text-[9.5px] text-charcoal-500 font-normal">Отлично:</span>
+              <strong className={`font-bold tabular-nums text-xs ${strictness.textClass}`}>
+                {judge.excellentPct != null ? `${judge.excellentPct.toFixed(0)}%` : '—'}
+              </strong>
+            </div>
+          </div>
+
+          {/* Шеврон-индикатор кликабельности */}
+          <ChevronRight
+            className="w-4 h-4 text-charcoal-300 group-hover:text-camel-600 group-hover:translate-x-0.5 transition-all shrink-0 ml-0.5 sm:ml-1"
+            aria-hidden="true"
+          />
+        </div>
       </div>
     </Link>
   )

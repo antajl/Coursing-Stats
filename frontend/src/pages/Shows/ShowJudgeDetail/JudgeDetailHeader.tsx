@@ -4,7 +4,7 @@ import {
   type GradeFilterKey,
   type StrictnessVerdict,
 } from './judgeDetailAggregates'
-import { formatJudgeDisplayName, getJudgeInitials, getStrictnessBadge } from '../../../lib/judgeUiUtils'
+import { formatJudgeDisplayName, getStrictnessBadge } from '../../../lib/judgeUiUtils'
 
 type PeriodStrictness = {
   graded: number
@@ -124,7 +124,6 @@ export function JudgeDetailHeader({
   onToggleGrade: (key: GradeFilterKey) => void
 }) {
   const displayName = formatJudgeDisplayName(judgeName)
-  const initials = getJudgeInitials(judgeName)
   const strictnessBadge = getStrictnessBadge(
     periodStrictness.excellent_rate,
     periodStrictness.graded,
@@ -140,19 +139,13 @@ export function JudgeDetailHeader({
   return (
     <div className="min-w-0 rounded-2xl border border-old-money-200/90 bg-white p-4 sm:p-6 md:p-8 shadow-xs">
       {/* Top Profile Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-        <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
-          {/* Monogram Badge */}
-          <div className="flex h-14 w-14 sm:h-16 sm:w-16 shrink-0 items-center justify-center rounded-2xl border border-old-money-200/80 bg-gradient-to-br from-cream-100 via-cream-50 to-amber-50/50 text-xl font-bold tracking-tight text-camel-800 shadow-xs">
-            {initials}
-          </div>
-
-          <div className="min-w-0 flex-1">
-            <div className="flex flex-wrap items-center gap-2 mb-1">
-              <span className="inline-flex items-center gap-1 rounded-md border border-camel-200/90 bg-cream-100/90 px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wider text-camel-800">
-                <Award className="h-3 w-3 text-camel-600" />
-                Судья РКФ / FCI
-              </span>
+      <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+        <div className="min-w-0 flex-1">
+          <div className="flex flex-wrap items-center gap-2 mb-1.5">
+            <span className="inline-flex items-center gap-1 rounded-md border border-camel-200/90 bg-cream-100/90 px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wider text-camel-800">
+              <Award className="h-3 w-3 text-camel-600" />
+              Судья РКФ / FCI
+            </span>
 
               {city && (
                 <span className="inline-flex items-center gap-1 rounded-md border border-old-money-200/80 bg-cream-50/80 px-2 py-0.5 text-[11px] font-medium text-charcoal-700">
@@ -184,7 +177,6 @@ export function JudgeDetailHeader({
               {displayName}
             </h1>
           </div>
-        </div>
 
         {/* Year Filter */}
         <div className="flex items-center justify-between sm:justify-end gap-2 shrink-0 w-full sm:w-auto pt-2 border-t border-old-money-100/70 sm:border-0 sm:pt-0">
@@ -348,18 +340,18 @@ export function JudgeDetailHeader({
                 <div className="relative h-2.5 overflow-hidden rounded-full bg-cream-200 border border-old-money-200/50">
                   {/* Visual zones background */}
                   <div className="absolute inset-0 flex">
-                    <div className="w-[88%] bg-rose-100/50 border-r border-rose-200/50" title="Зона высокой строгости (<88%)" />
-                    <div className="w-[7%] bg-amber-100/50 border-r border-amber-200/50" title="Умеренная зона (88-95%)" />
-                    <div className="w-[5%] bg-emerald-100/50" title="Лояльная зона (≥95%)" />
+                    <div className="w-[76%] bg-rose-100/50 border-r border-rose-200/50" title="Зона высокой строгости (<76%)" />
+                    <div className="w-[9%] bg-amber-100/50 border-r border-amber-200/50" title="Умеренная зона (76-85%)" />
+                    <div className="w-[15%] bg-emerald-100/50" title="Лояльная зона (≥85%)" />
                   </div>
 
                   {/* Judge's filled value */}
                   {judgePctNumber != null && (
                     <div
                       className={`absolute inset-y-0 left-0 rounded-full transition-all duration-500 opacity-80 ${
-                        judgePctNumber >= 95
+                        judgePctNumber >= 85
                           ? 'bg-emerald-500'
-                          : judgePctNumber >= 88
+                          : judgePctNumber >= 76
                             ? 'bg-amber-500'
                             : 'bg-rose-500'
                       }`}
@@ -378,9 +370,9 @@ export function JudgeDetailHeader({
                 </div>
 
                 <div className="mt-2 flex justify-between text-[11px] font-medium text-charcoal-500">
-                  <span className="text-rose-700">Строгий &lt;88%</span>
-                  <span className="text-amber-700">Умеренный 88–95%</span>
-                  <span className="text-emerald-700">Лояльный ≥95%</span>
+                  <span className="text-rose-700">Строгий &lt;76%</span>
+                  <span className="text-amber-700">Умеренный 76–85%</span>
+                  <span className="text-emerald-700">Лояльный ≥85%</span>
                 </div>
 
                 <p className="mt-2.5 text-center text-xs text-charcoal-500">
