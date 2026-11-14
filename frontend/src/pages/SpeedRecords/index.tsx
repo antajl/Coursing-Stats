@@ -1,5 +1,5 @@
 import { useMemo, useEffect } from 'react'
-import { useSearchParams, useNavigate } from 'react-router-dom'
+import { useSearchParams, useNavigate, useParams } from 'react-router-dom'
 import { SEO } from '../../components/SEO'
 import DoninoAttribution from '../../components/DoninoAttribution'
 import { useYandexGoal } from '../../components/YandexMetrica'
@@ -84,13 +84,22 @@ function SpeedRecords() {
     ]
   )
 
+  const { year: routeYear } = useParams<{ year?: string }>()
+  const displayYear = routeYear && routeYear !== 'all' ? routeYear : ''
+  const seoTitle = displayYear
+    ? `Замеры скорости и рекорды борзых ${displayYear} года — Курсинг в Донино`
+    : 'Курсинг Донино — результаты забегов, замеры скорости (км/ч) и рекорды борзых'
+  const canonicalUrl = routeYear
+    ? `https://coursing-stats.ru/speed-records/${routeYear}/`
+    : 'https://coursing-stats.ru/speed-records/'
+
   return (
     <>
       <h1 className="sr-only">Курсинг Донино: замеры скорости радаром и рекорды забегов на 350 м</h1>
       <SEO
-        title="Курсинг Донино — результаты забегов, замеры скорости (км/ч) и рекорды борзых"
+        title={seoTitle}
         description="База бегового клуба «Курсинг в Донино»: результаты забегов, радарные замеры скорости (км/ч) и рекорды борзых на 350 м. Салюки, уиппеты, РПБ, басенджи на полигоне в Раменском районе."
-        canonicalUrl="https://coursing-stats.ru/speed-records/"
+        canonicalUrl={canonicalUrl}
         keywords="курсинг донино, курсинг в донино, замеры скорости собак, рекорды скорости донино, бега 350 м, беговой клуб донино, скорость борзых"
       />
       <MobileSubNavTabs

@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useMemo, useCallback } from 'react'
-import { useSearchParams } from 'react-router-dom'
+import { useSearchParams, useLocation, useNavigate, useParams } from 'react-router-dom'
 import { useSpeedRecords, useCoursingRecords } from '../../hooks/useStaticData'
 import { getRecordYear, parseRecordHistory } from '../../lib/recordDates'
 import { DEFAULT_ACTIVE_SEASON, resolveActiveSeason } from '../../lib/season'
@@ -26,6 +26,9 @@ function doninoRecordsFromQuery(
 }
 
 export function useSpeedRecordsPage() {
+  const { year: routeYearParam } = useParams<{ year?: string }>()
+  const location = useLocation()
+  const navigate = useNavigate()
   const [searchParams, setSearchParams] = useSearchParams()
   const [view, setView] = useState<'table' | 'stats'>(() => {
     const rawTab = searchParams.get('tab')
@@ -64,11 +67,21 @@ export function useSpeedRecordsPage() {
   const coursingRecordsQuery = useCoursingRecords('', 10000, '', '')
 
   const [filterYears, setFilterYears] = useState<string[]>(() => {
+    if (routeYearParam !== undefined) {
+      return routeYearParam === 'all' ? [] : [routeYearParam]
+    }
     const raw = searchParams.get('years') ?? searchParams.get('year')
     if (raw === null) return [DEFAULT_ACTIVE_SEASON]
     if (raw === '' || raw === 'all') return []
     return raw.split(',').filter(Boolean)
   })
+
+  useEffect(() => {
+    if (routeYearParam !== undefined) {
+      const target = routeYearParam === 'all' ? [] : [routeYearParam]
+      setFilterYears((prev) => (prev.join(',') !== target.join(',') ? target : prev))
+    }
+  }, [routeYearParam])
   const [filterBreeds, setFilterBreeds] = useState(() => {
     const raw = searchParams.get('breed') || searchParams.get('breeds')
     return raw ? raw.split(',') : []
@@ -251,7 +264,15 @@ export function useSpeedRecordsPage() {
 
   const onYearChange = useCallback((year: string) => {
     setFilterYears(year ? [year] : [])
-  }, [])
+    if (location.pathname.startsWith('/speed-records')) {
+      const targetSlug = year === '' ? 'all' : year
+      const nextParams = new URLSearchParams(searchParams)
+      nextParams.delete('year')
+      nextParams.delete('years')
+      const qs = nextParams.toString()
+      navigate(`/speed-records/${targetSlug}/${qs ? '?' + qs : ''}`)
+    }
+  }, [location.pathname, navigate, searchParams])
 
   const onBreedChange = useCallback((breed: string) => {
     setFilterBreeds(breed ? [breed] : [])
@@ -291,7 +312,10 @@ export function useSpeedRecordsPage() {
     setFilterMaxSpeed('')
     setFilterMinTime('')
     setFilterMaxTime('')
-  }, [activeSeason])
+    if (location.pathname.startsWith('/speed-records')) {
+      navigate('/speed-records/')
+    }
+  }, [activeSeason, location.pathname, navigate])
 
   const clearPanelFilters = useCallback(() => {
     setFilterYears([activeSeason])
@@ -301,7 +325,10 @@ export function useSpeedRecordsPage() {
     setFilterMaxSpeed('')
     setFilterMinTime('')
     setFilterMaxTime('')
-  }, [activeSeason])
+    if (location.pathname.startsWith('/speed-records')) {
+      navigate('/speed-records/')
+    }
+  }, [activeSeason, location.pathname, navigate])
 
   // Synchronize state with URL search params (TopDogs / Competitions pattern)
   const isFirstRender = useRef(true)
@@ -327,21 +354,29 @@ export function useSpeedRecordsPage() {
         }
 
         // Year
-        const currentYear = next.get('year')
-        const targetYearParam =
-          filterYears.length === 0
-            ? 'all'
-            : filterYears.length === 1 && filterYears[0] === activeSeason
-              ? null
-              : filterYears.join(',')
-        if (targetYearParam !== null) {
-          if (currentYear !== targetYearParam) {
-            next.set('year', targetYearParam)
-            next.delete('years')
-            changed = true
+        if (!location.pathname.startsWith('/speed-records/')) {
+          const currentYear = next.get('year')
+          const targetYearParam =
+            filterYears.length === 0
+              ? 'all'
+              : filterYears.length === 1 && filterYears[0] === activeSeason
+                ? null
+                : filterYears.join(',')
+          if (targetYearParam !== null) {
+            if (currentYear !== targetYearParam) {
+              next.set('year', targetYearParam)
+              next.delete('years')
+              changed = true
+            }
+          } else {
+            if (currentYear === 'all' || (currentYear && currentYear !== activeSeason)) {
+              next.delete('year')
+              next.delete('years')
+              changed = true
+            }
           }
         } else {
-          if (currentYear === 'all' || (currentYear && currentYear !== activeSeason)) {
+          if (next.has('year') || next.has('years')) {
             next.delete('year')
             next.delete('years')
             changed = true
