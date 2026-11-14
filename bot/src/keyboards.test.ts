@@ -268,25 +268,35 @@ describe('Keyboards', () => {
 
   describe('getCalendar2027Keyboard', () => {
     it('shows subscribe button when not subscribed', () => {
-      const keyboard = getCalendar2027Keyboard(false, 0, 42);
+      const keyboard = getCalendar2027Keyboard(false, 0, 42, 'all');
       const callbacks = keyboard.inline_keyboard.flat().map((b) => ('callback_data' in b ? b.callback_data : null));
       const texts = keyboard.inline_keyboard.flat().map((b) => b.text);
-      expect(callbacks).toContain('cal_sub_toggle_2027');
+      expect(callbacks).toContain('filter_2027_all');
+      expect(callbacks).toContain('filter_2027_coursing');
+      expect(callbacks).toContain('filter_2027_racing');
+      expect(callbacks).toContain('cal_sub_toggle_2027_0_all');
       expect(texts.some((t) => t.includes('Подписаться'))).toBe(true);
       expect(callbacks).toContain('cal_changelog_2027');
       expect(callbacks).toContain('competitions_menu');
     });
 
     it('shows unsubscribe button when subscribed', () => {
-      const keyboard = getCalendar2027Keyboard(true, 0, 42);
+      const keyboard = getCalendar2027Keyboard(true, 0, 42, 'coursing');
       const texts = keyboard.inline_keyboard.flat().map((b) => b.text);
       expect(texts.some((t) => t.includes('Отписаться'))).toBe(true);
     });
 
     it('includes pagination buttons when total > 10', () => {
-      const keyboard = getCalendar2027Keyboard(false, 0, 42);
+      const keyboard = getCalendar2027Keyboard(false, 0, 42, 'all');
       const callbacks = keyboard.inline_keyboard.flat().map((b) => ('callback_data' in b ? b.callback_data : null));
-      expect(callbacks).toContain('calendar_2027_10');
+      expect(callbacks).toContain('cal_2027_page_10_all');
+    });
+
+    it('includes bidirectional pagination when offset > 0', () => {
+      const keyboard = getCalendar2027Keyboard(false, 10, 42, 'coursing');
+      const callbacks = keyboard.inline_keyboard.flat().map((b) => ('callback_data' in b ? b.callback_data : null));
+      expect(callbacks).toContain('cal_2027_page_0_coursing');
+      expect(callbacks).toContain('cal_2027_page_20_coursing');
     });
   });
 

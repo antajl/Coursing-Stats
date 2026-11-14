@@ -1,5 +1,6 @@
 import { Icons } from '../../lib/icons'
 import { isLocalDev } from '../../lib/env'
+import { DEFAULT_ACTIVE_SEASON } from '../../lib/season'
 import type { NavMenuItem } from '../NavMenuDropdown'
 
 export type OpenMenuId = 'competitions' | 'shows' | 'donino' | 'guide' | null
@@ -48,7 +49,7 @@ export function guideTabActive(tab: string) {
 }
 
 const COMPETITIONS_ARCHIVE_ITEM: NavMenuItem = {
-  to: '/competitions/archive/',
+  to: `/competitions/archive/${DEFAULT_ACTIVE_SEASON}/`,
   label: 'Архив',
   icon: Icons.calendar,
   isActive: (pathname: string, search: string) => {
@@ -62,14 +63,14 @@ const COMPETITIONS_ARCHIVE_ITEM: NavMenuItem = {
 export function competitionsMenuItems(calendarVisible: boolean): NavMenuItem[] {
   return [
     {
-      to: '/competitions/ranking/',
+      to: `/competitions/ranking/${DEFAULT_ACTIVE_SEASON}/`,
       label: 'Рейтинг',
       icon: Icons.medal,
       isActive: competitionTabActive('ranking'),
     },
     ...(calendarVisible ? [COMPETITIONS_ARCHIVE_ITEM] : []),
     {
-      to: '/competitions/judges/',
+      to: `/competitions/judges/${DEFAULT_ACTIVE_SEASON}/`,
       label: 'Судьи',
       icon: Icons.club,
       isActive: competitionTabActive('judges'),
@@ -88,7 +89,7 @@ export function competitionsMenuItems(calendarVisible: boolean): NavMenuItem[] {
 }
 
 const SHOWS_ARCHIVE_ITEM: NavMenuItem = {
-  to: '/shows/archive/',
+  to: `/shows/archive/${DEFAULT_ACTIVE_SEASON}/`,
   label: 'Архив',
   icon: Icons.calendar,
   isActive: (pathname: string, search: string) => {
@@ -102,14 +103,14 @@ const SHOWS_ARCHIVE_ITEM: NavMenuItem = {
 export function showsMenuItems(calendarVisible: boolean): NavMenuItem[] {
   return [
     {
-      to: '/shows/ranking/',
+      to: `/shows/ranking/${DEFAULT_ACTIVE_SEASON}/`,
       label: 'Рейтинг',
       icon: Icons.medal,
       isActive: showTabActive('ranking'),
     },
     ...(calendarVisible ? [SHOWS_ARCHIVE_ITEM] : []),
     {
-      to: '/shows/judges/',
+      to: `/shows/judges/${DEFAULT_ACTIVE_SEASON}/`,
       label: 'Судьи',
       icon: Icons.club,
       isActive: showTabActive('judges'),
@@ -119,10 +120,10 @@ export function showsMenuItems(calendarVisible: boolean): NavMenuItem[] {
 
 export const DONINO_MENU_ITEMS: NavMenuItem[] = [
   {
-    to: '/speed-records/',
+    to: `/speed-records/${DEFAULT_ACTIVE_SEASON}/`,
     label: 'Рекорды Донино',
     icon: Icons.speed,
-    isActive: (pathname: string) => pathname === '/speed-records' || pathname === '/speed-records/',
+    isActive: (pathname: string) => pathname === '/speed-records' || pathname.startsWith('/speed-records/'),
   },
   {
     to: '/donino/championship/',

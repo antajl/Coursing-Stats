@@ -336,9 +336,12 @@ export function createCalendar(api: CoursingStatsAPI, cache?: KVNamespace) {
     }
   });
 
-  // Season 2027 calendar plan
-  calendar.callbackQuery(/^calendar_2027(?:_(\d+))?$/, async (ctx) => {
-    const offset = parseInt(ctx.match?.[1] || '0', 10);
+  // Helper to render 2027 calendar view
+  async function renderCalendar2027View(
+    ctx: any,
+    filter: 'all' | 'coursing' | 'racing' = 'all',
+    offset: number = 0
+  ) {
     const userId = ctx.from?.id;
     let isSubscribed = false;
     if (userId && cache) {
@@ -350,15 +353,11 @@ export function createCalendar(api: CoursingStatsAPI, cache?: KVNamespace) {
       }
     }
 
-    await safeEditOrReply(ctx, '<b>Загрузка плана состязаний 2027...</b>', {
-      parse_mode: 'HTML',
-      reply_markup: getNavigationButtons('competitions_menu', 'main_menu'),
-    }, cache);
-
     try {
-      const events = await api.getCalendar('2027');
-      if (events.length === 0) {
-        await safeEditOrReply(ctx,
+      const allEvents = await api.getCalendar('2027');
+      if (allEvents.length === 0) {
+        await safeEditOrReply(
+          ctx,
           'Не удалось загрузить план состязаний 2027.',
           { reply_markup: getNavigationButtons('competitions_menu', 'competitions_menu') },
           cache
@@ -366,23 +365,56 @@ export function createCalendar(api: CoursingStatsAPI, cache?: KVNamespace) {
         return;
       }
 
-      const text = formatCalendar2027Text(events, offset, isSubscribed);
-      await safeEditOrReply(ctx, text, {
-        parse_mode: 'HTML',
-        reply_markup: getCalendar2027Keyboard(isSubscribed, offset, events.length),
-      }, cache);
+      let filteredEvents = allEvents;
+      if (filter === 'coursing') {
+        filteredEvents = allEvents.filter((e) => e.event_type === 'coursing' || e.title?.toLowerCase().includes('курсинг'));
+      } else if (filter === 'racing') {
+        filteredEvents = allEvents.filter((e) => e.event_type === 'racing' || e.title?.toLowerCase().includes('бега'));
+      }
+
+      const text = formatCalendar2027Text(filteredEvents, offset, isSubscribed, filter);
+      await safeEditOrReply(
+        ctx,
+        text,
+        {
+          parse_mode: 'HTML',
+          reply_markup: getCalendar2027Keyboard(isSubscribed, offset, filteredEvents.length, filter),
+        },
+        cache
+      );
     } catch (error) {
       console.error('[calendar_2027] Error:', error);
-      await safeEditOrReply(ctx,
+      await safeEditOrReply(
+        ctx,
         '❌ Ошибка при загрузке состязаний 2027.',
         { reply_markup: getNavigationButtons('competitions_menu', 'competitions_menu') },
         cache
       );
     }
+  }
+
+  // Season 2027 calendar plan entry point
+  calendar.callbackQuery('calendar_2027', async (ctx) => {
+    await renderCalendar2027View(ctx, 'all', 0);
   });
 
-  // Toggle 2027 calendar subscription
-  calendar.callbackQuery('cal_sub_toggle_2027', async (ctx) => {
+  // Filter 2027 handlers
+  calendar.callbackQuery(/^filter_2027_(all|coursing|racing)$/, async (ctx) => {
+    const filter = (ctx.match?.[1] || 'all') as 'all' | 'coursing' | 'racing';
+    await renderCalendar2027View(ctx, filter, 0);
+  });
+
+  // Pagination 2027 handlers
+  calendar.callbackQuery(/^cal_2027_page_(\d+)_(all|coursing|racing)$/, async (ctx) => {
+    const offset = parseInt(ctx.match?.[1] || '0', 10);
+    const filter = (ctx.match?.[2] || 'all') as 'all' | 'coursing' | 'racing';
+    await renderCalendar2027View(ctx, filter, offset);
+  });
+
+  // Toggle 2027 calendar subscription (preserves offset and filter)
+  calendar.callbackQuery(/^cal_sub_toggle_2027(?:_(\d+)_(all|coursing|racing))?$/, async (ctx) => {
+    const offset = parseInt(ctx.match?.[1] || '0', 10);
+    const filter = (ctx.match?.[2] || 'all') as 'all' | 'coursing' | 'racing';
     const userId = ctx.from?.id;
     if (!userId) {
       await ctx.answerCallbackQuery({ text: 'Ошибка авторизации' });
@@ -429,13 +461,8 @@ export function createCalendar(api: CoursingStatsAPI, cache?: KVNamespace) {
         show_alert: false,
       });
 
-      // Refresh view
-      const events = await api.getCalendar('2027');
-      const text = formatCalendar2027Text(events, 0, isNowSubscribed);
-      await safeEditOrReply(ctx, text, {
-        parse_mode: 'HTML',
-        reply_markup: getCalendar2027Keyboard(isNowSubscribed, 0, events.length),
-      }, cache);
+      // Refresh view preserving current offset and filter
+      await renderCalendar2027View(ctx, filter, offset);
     } catch (error) {
       console.error('[cal_sub_toggle_2027] Error:', error);
       await ctx.answerCallbackQuery({ text: 'Произошла ошибка при обновлении подписки' });
@@ -444,11 +471,6 @@ export function createCalendar(api: CoursingStatsAPI, cache?: KVNamespace) {
 
   // Season 2027 Changelog
   calendar.callbackQuery('cal_changelog_2027', async (ctx) => {
-    await safeEditOrReply(ctx, '<b>Загрузка истории изменений...</b>', {
-      parse_mode: 'HTML',
-      reply_markup: getNavigationButtons('calendar_2027', 'competitions_menu'),
-    }, cache);
-
     try {
       const changelog = await api.getCalendarChangelog('2027');
       const text = formatCalendarChangelogText(changelog);

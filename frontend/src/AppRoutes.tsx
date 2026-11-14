@@ -55,13 +55,13 @@ function LegacyCompetitionRedirect() {
 function CompetitionsParamRoute() {
   const { id } = useParams<{ id: string }>();
   const location = useLocation();
-  if (!id) return <Competitions defaultTab="ranking" />;
+  if (!id) return <Navigate to={`/competitions/ranking/2026/${location.search}`} replace />;
 
   if (id === 'archive' || id === 'ranking' || id === 'judges') {
-    return <Competitions defaultTab={id} />;
+    return <Navigate to={`/competitions/${id}/2026/${location.search}`} replace />;
   }
   if (id === 'calendar') {
-    return <Navigate to={`/competitions/archive/${location.search}`} replace />;
+    return <Navigate to={`/competitions/archive/2026/${location.search}`} replace />;
   }
   if (id === '2027') {
     return <Navigate to={`/competitions/archive/2027/${location.search}`} replace />;
@@ -76,7 +76,7 @@ function CompetitionsYearRoute() {
   const { tab, year } = useParams<{ tab: string; year: string }>();
   const location = useLocation();
   if (tab === 'calendar') {
-    return <Navigate to={`/competitions/archive/${year || ''}/${location.search}`} replace />;
+    return <Navigate to={`/competitions/archive/${year || '2026'}/${location.search}`} replace />;
   }
   if (tab === 'archive' && year === '2027') {
     return <Competitions2027 />;
@@ -90,13 +90,13 @@ function CompetitionsYearRoute() {
 function ShowsParamRoute() {
   const { id } = useParams<{ id: string }>();
   const location = useLocation();
-  if (!id) return <Shows defaultTab="ranking" />;
+  if (!id) return <Navigate to={`/shows/ranking/2026/${location.search}`} replace />;
 
   if (id === 'archive' || id === 'ranking' || id === 'judges') {
-    return <Shows defaultTab={id} />;
+    return <Navigate to={`/shows/${id}/2026/${location.search}`} replace />;
   }
   if (id === 'calendar') {
-    return <Navigate to={`/shows/archive/${location.search}`} replace />;
+    return <Navigate to={`/shows/archive/2026/${location.search}`} replace />;
   }
   if (/^20\d\d$/.test(id)) {
     return <Navigate to={`/shows/archive/${id}/${location.search}`} replace />;
@@ -108,7 +108,7 @@ function ShowsYearRoute() {
   const { tab, year } = useParams<{ tab: string; year: string }>();
   const location = useLocation();
   if (tab === 'calendar') {
-    return <Navigate to={`/shows/archive/${year || ''}/${location.search}`} replace />;
+    return <Navigate to={`/shows/archive/${year || '2026'}/${location.search}`} replace />;
   }
   if (tab === 'archive' || tab === 'ranking' || tab === 'judges') {
     return <Shows defaultTab={tab} />;
@@ -199,7 +199,7 @@ export default function AppRoutes() {
         <Route path="/event/:id" element={<EventResults />} />
         <Route path="/speed-records" element={<SpeedRecords />} />
         <Route path="/speed-records/:year" element={<SpeedRecords />} />
-        <Route path="/donino/records" element={<Navigate to="/speed-records/" replace />} />
+        <Route path="/donino/records" element={<Navigate to="/speed-records/2026/" replace />} />
         <Route path="/donino/records/:year" element={<SpeedRecords />} />
         <Route path="/donino/championship" element={<DoninoChampionship />} />
         <Route path="/donino/championship/standings" element={<Navigate to="/donino/championship/" replace />} />

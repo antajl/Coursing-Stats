@@ -9,7 +9,6 @@ import {
   BookOpen,
   Info,
   X,
-  Layers,
 } from 'lucide-react'
 import { Icons } from '../../lib/icons'
 import FavoritesCapsule from './FavoritesCapsule'
@@ -20,7 +19,6 @@ type NavMobileProps = {
   isActive: (path: string) => boolean
   isCompetitionsActive: boolean
   isShowsActive: boolean
-  isBreedsActive: boolean
   isSpeedRecordsActive: boolean
   isGuideActive: boolean
   isAboutActive: boolean
@@ -34,7 +32,6 @@ export function NavMobile({
   isActive,
   isCompetitionsActive,
   isShowsActive,
-  isBreedsActive,
   isSpeedRecordsActive,
   isGuideActive,
   isAboutActive,
@@ -208,19 +205,6 @@ export function NavMobile({
                   >
                     <Award className={`w-4 h-4 shrink-0 ${isShowsActive ? 'text-camel-700' : 'text-charcoal-500'}`} aria-hidden="true" />
                     <span>Выставки</span>
-                  </Link>
-
-                  <Link
-                    to="/breeds/"
-                    onClick={onCloseMobileMenu}
-                    className={`min-h-[44px] px-3.5 py-2.5 rounded-xl flex items-center gap-3 text-sm font-semibold transition-all ${
-                      isBreedsActive
-                        ? 'bg-camel-500/15 text-charcoal-900 border-l-2 border-camel-600 font-bold'
-                        : 'text-charcoal-700 hover:bg-cream-100 hover:text-charcoal-900'
-                    }`}
-                  >
-                    <Layers className={`w-4 h-4 shrink-0 ${isBreedsActive ? 'text-camel-700' : 'text-charcoal-500'}`} aria-hidden="true" />
-                    <span>Породы</span>
                   </Link>
 
                   <Link

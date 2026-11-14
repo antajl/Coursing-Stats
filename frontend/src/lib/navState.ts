@@ -1,3 +1,5 @@
+import { DEFAULT_ACTIVE_SEASON } from './season'
+
 export type NavSection = 'competitions' | 'shows' | 'guide'
 
 const TAB_STORAGE_PREFIX = 'cs_last_tab:'
@@ -73,6 +75,9 @@ export function getSectionLink(section: NavSection): string {
     return `/guide/?tab=${tab}`
   }
   const tab = getLastSectionTab(section)
+  if (tab === 'builder') {
+    return '/protocol-builder/'
+  }
   return `/${section}/${tab}/`
 }
 

@@ -1,4 +1,4 @@
-name: Update Speed Records
+name: Update Speed Records & 2027 Calendar
 
 on:
   schedule:
@@ -34,17 +34,21 @@ jobs:
       - name: Export coursing records from Google Sheets to JSON
         run: npx tsx backend/scripts/speed/export-coursing-from-sheets.ts
 
+      - name: Check & sync RKF 2027 calendar plan
+        continue-on-error: true
+        run: npx tsx backend/scripts/competitions/check-rkf-2027.ts --apply
+
       - name: Commit updated data files
         id: commit_data
         run: |
           git config --local user.email "antajl@yandex.ru"
           git config --local user.name "antajl"
-          git add data/v1/donino/speed_records.json data/v1/donino/coursing_records.json
+          git add data/v1/donino/speed_records.json data/v1/donino/coursing_records.json data/v1/calendar/2027.json data/v1/calendar/2027-changelog.json
           if git diff --staged --quiet; then
             echo "No data changes to commit"
             echo "has_changes=false" >> $GITHUB_OUTPUT
           else
-            git commit -m "Update speed records from Google Sheets"
+            git commit -m "Update speed records and RKF 2027 calendar plan"
             git push
             echo "has_changes=true" >> $GITHUB_OUTPUT
           fi
@@ -54,6 +58,14 @@ jobs:
         run: |
           aws s3 cp data/v1/donino/ s3://${{ secrets.S3_BUCKET }}/data/v1/donino/ \
             --recursive \
+            --endpoint-url https://storage.yandexcloud.net \
+            --acl public-read \
+            --cache-control "public, max-age=3600"
+          aws s3 cp data/v1/calendar/2027.json s3://${{ secrets.S3_BUCKET }}/data/v1/calendar/2027.json \
+            --endpoint-url https://storage.yandexcloud.net \
+            --acl public-read \
+            --cache-control "public, max-age=3600"
+          aws s3 cp data/v1/calendar/2027-changelog.json s3://${{ secrets.S3_BUCKET }}/data/v1/calendar/2027-changelog.json \
             --endpoint-url https://storage.yandexcloud.net \
             --acl public-read \
             --cache-control "public, max-age=3600"

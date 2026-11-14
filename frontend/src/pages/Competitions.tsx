@@ -45,30 +45,27 @@ function Competitions({ defaultTab }: CompetitionsProps) {
     }
 
     if (targetTab === 'builder' || targetTab === 'protocol-builder') {
-      redirectPath = isLocalDev ? '/protocol-builder/' : `/competitions/ranking/${currentHash}`
+      redirectPath = isLocalDev ? '/protocol-builder/' : `/competitions/ranking/2026/${currentHash}`
     } else if (!calendarVisible && targetTab === 'archive') {
       targetTab = 'ranking'
     }
 
     if (!redirectPath) {
       const queryYear = searchParams.get('year')
+      const targetYear = queryYear || '2026'
       const next = new URLSearchParams(searchParams)
       next.delete('tab')
       next.delete('year')
       const qs = next.toString()
       const queryPart = qs ? `?${qs}` : ''
-      if (queryYear) {
-        redirectPath = `/competitions/${targetTab}/${queryYear}/${queryPart}${currentHash}`
-      } else {
-        redirectPath = `/competitions/${targetTab}/${queryPart}${currentHash}`
-      }
+      redirectPath = `/competitions/${targetTab}/${targetYear}/${queryPart}${currentHash}`
     }
   } else if (rawTabParam === 'calendar') {
-    redirectPath = `/competitions/archive/${currentHash}`
+    redirectPath = `/competitions/archive/2026/${currentHash}`
   } else if (rawTabParam === 'builder' || rawTabParam === 'protocol-builder') {
-    redirectPath = isLocalDev ? '/protocol-builder/' : `/competitions/ranking/${currentHash}`
+    redirectPath = isLocalDev ? '/protocol-builder/' : `/competitions/ranking/2026/${currentHash}`
   } else if (!calendarVisible && rawTabParam === 'archive') {
-    redirectPath = `/competitions/ranking/${currentHash}`
+    redirectPath = `/competitions/ranking/2026/${currentHash}`
   }
 
   const resolvedTab =
@@ -136,7 +133,7 @@ function Competitions({ defaultTab }: CompetitionsProps) {
       setIsTabLoading(true)
     }
 
-    const currentYear = routeYear || searchParams.get('year')
+    const currentYear = routeYear || searchParams.get('year') || '2026'
     const nextParams = new URLSearchParams(searchParams)
     nextParams.delete('tab')
     nextParams.delete('year')
@@ -148,7 +145,7 @@ function Competitions({ defaultTab }: CompetitionsProps) {
     } else if (currentYear === 'all') {
       navigate(`/competitions/${newTab}/all/${queryPart}`)
     } else {
-      navigate(`/competitions/${newTab}/${queryPart}`)
+      navigate(`/competitions/${newTab}/2026/${queryPart}`)
     }
   }, [activeTab, visitedTabs, navigate, searchParams, routeYear])
 
@@ -282,7 +279,7 @@ function Competitions({ defaultTab }: CompetitionsProps) {
           >
             <div id="judges" className="scroll-mt-20" />
             <Suspense fallback={<LoadingCard count={3} variant="list" />}>
-              <Judges />
+              <Judges urlYear={routeYear} />
             </Suspense>
           </div>
         )}

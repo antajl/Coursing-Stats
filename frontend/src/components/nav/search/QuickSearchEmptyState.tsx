@@ -1,12 +1,12 @@
 import React from 'react'
 import { Icons } from '../../../lib/icons'
-import { POPULAR_BREEDS, QUICK_NAV_SHORTCUTS } from '../quickSearchData'
+import { POPULAR_BREEDS, QUICK_NAV_SHORTCUTS, type PopularBreedItem } from '../quickSearchData'
 
 interface QuickSearchEmptyStateProps {
   query: string
   hasNoResults: boolean
   onSelectShortcut: (to: string) => void
-  onSelectBreed: (breed: string) => void
+  onSelectBreed: (breed: PopularBreedItem) => void
 }
 
 export const QuickSearchEmptyState: React.FC<QuickSearchEmptyStateProps> = ({
@@ -52,18 +52,28 @@ export const QuickSearchEmptyState: React.FC<QuickSearchEmptyStateProps> = ({
       </div>
 
       {/* Popular Breeds */}
-      <p className="text-xs font-semibold uppercase tracking-wider text-charcoal-500 mb-2">
-        Популярные породы
-      </p>
+      <div className="flex items-center justify-between mb-2">
+        <p className="text-xs font-semibold uppercase tracking-wider text-charcoal-500">
+          Популярные породы
+        </p>
+        <button
+          type="button"
+          onClick={() => onSelectShortcut('/breeds/')}
+          className="text-xs font-semibold text-camel-700 hover:text-camel-900 transition-colors cursor-pointer flex items-center gap-0.5"
+        >
+          <span>Все 83 породы</span>
+          <Icons.chevronRight className="w-3.5 h-3.5" aria-hidden="true" />
+        </button>
+      </div>
       <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-4">
         {POPULAR_BREEDS.map((breed) => (
           <button
-            key={breed}
+            key={breed.slug}
             type="button"
             onClick={() => onSelectBreed(breed)}
             className="px-2.5 py-1 text-xs rounded-full border border-old-money-200 bg-white hover:bg-old-money-50 hover:border-camel-300 text-charcoal-700 transition-colors cursor-pointer"
           >
-            {breed}
+            {breed.name}
           </button>
         ))}
       </div>

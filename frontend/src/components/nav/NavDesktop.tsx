@@ -10,7 +10,6 @@ type NavDesktopProps = {
   isActive: (path: string) => boolean
   isCompetitionsActive: boolean
   isShowsActive: boolean
-  isBreedsActive: boolean
   isSpeedRecordsActive: boolean
   isGuideActive: boolean
   isAboutActive: boolean
@@ -23,7 +22,6 @@ export function NavDesktop({
   isActive,
   isCompetitionsActive,
   isShowsActive,
-  isBreedsActive,
   isSpeedRecordsActive,
   isGuideActive,
   isAboutActive,
@@ -134,27 +132,6 @@ export function NavDesktop({
           <span
             className={`pointer-events-none absolute bottom-0 left-0 h-0.5 bg-camel-600 transition-[width] duration-300 ease-out ${
               isShowsActive ? 'w-full' : 'w-0 group-hover:w-full'
-            }`}
-          />
-        </Link>
-
-        {/* Породы */}
-        <Link
-          to="/breeds/"
-          onClick={() => {
-            if (isBreedsActive && typeof window !== 'undefined') {
-              window.scrollTo({ top: 0, behavior: 'smooth' })
-            }
-          }}
-          className={`group relative flex shrink-0 items-center whitespace-nowrap py-2 px-2.5 text-xs font-semibold transition-colors duration-300 lg:px-3.5 lg:text-sm 2xl:px-5 ${
-            isBreedsActive ? 'text-camel-700' : 'text-charcoal-700 hover:text-charcoal-900'
-          }`}
-          title="Каталог пород и персональные хабы"
-        >
-          <span className="relative z-10">Породы</span>
-          <span
-            className={`pointer-events-none absolute bottom-0 left-0 h-0.5 bg-camel-600 transition-[width] duration-300 ease-out ${
-              isBreedsActive ? 'w-full' : 'w-0 group-hover:w-full'
             }`}
           />
         </Link>

@@ -222,8 +222,8 @@ export default function QuickSearchModal({ isOpen, onClose }: QuickSearchModalPr
                 navigate(to)
               }}
               onSelectBreed={(breed) => {
-                setQuery(breed)
-                inputRef.current?.focus()
+                onClose()
+                navigate(`/breeds/${breed.slug}/`)
               }}
             />
           ) : (

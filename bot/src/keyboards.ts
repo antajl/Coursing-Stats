@@ -324,34 +324,44 @@ export function getCalendarKeyboard(offset: string | number = 0, isShows: boolea
   return keyboard;
 }
 
-/** Клавиатура для календарного плана сезона 2027 с подпиской */
-export function getCalendar2027Keyboard(isSubscribed: boolean = false, offset: number = 0, total: number = 42): InlineKeyboard {
+/** Клавиатура для календарного плана сезона 2027 с фильтрами по дисциплинам и подпиской */
+export function getCalendar2027Keyboard(
+  isSubscribed: boolean = false,
+  offset: number = 0,
+  total: number = 42,
+  currentFilter: 'all' | 'coursing' | 'racing' = 'all'
+): InlineKeyboard {
   const keyboard = new InlineKeyboard();
 
-  const subText = isSubscribed ? '🔕 Отписаться от обновлений' : '🔔 Подписаться на обновления';
-  keyboard.text(subText, 'cal_sub_toggle_2027');
+  // 1. Фильтры по дисциплинам
+  keyboard.text(currentFilter === 'all' ? '✅ Все' : 'Все', 'filter_2027_all');
+  keyboard.text(currentFilter === 'coursing' ? '✅ Курсинг' : 'Курсинг', 'filter_2027_coursing');
+  keyboard.text(currentFilter === 'racing' ? '✅ Бега' : 'Бега', 'filter_2027_racing');
   keyboard.row();
 
+  // 2. Пагинация
   const currentOffset = Number(offset) || 0;
   if (currentOffset === 0 && total > 10) {
-    keyboard.text('Ещё 10', 'calendar_2027_10');
+    keyboard.text('Следующие 10 »', `cal_2027_page_10_${currentFilter}`);
     keyboard.row();
   } else if (currentOffset > 0) {
     const prevOffset = Math.max(0, currentOffset - 10);
     const nextOffset = currentOffset + 10;
-    keyboard.text('← Назад', `calendar_2027_${prevOffset}`);
+    keyboard.text('« Предыдущие 10', `cal_2027_page_${prevOffset}_${currentFilter}`);
     if (nextOffset < total) {
-      keyboard.text('Вперёд →', `calendar_2027_${nextOffset}`);
+      keyboard.text('Следующие 10 »', `cal_2027_page_${nextOffset}_${currentFilter}`);
     }
     keyboard.row();
   }
 
-  keyboard.text('📋 История изменений', 'cal_changelog_2027');
+  // 3. Подписка и Ченджлог
+  const subText = isSubscribed ? '🔕 Отписаться' : '🔔 Подписаться';
+  keyboard.text(subText, `cal_sub_toggle_2027_${currentOffset}_${currentFilter}`);
+  keyboard.text('📋 Изменения', 'cal_changelog_2027');
   keyboard.row();
 
+  // 4. Ссылка на сайт и Назад в меню соревнований
   keyboard.url('🌐 На сайте', 'https://coursing-stats.ru/competitions/archive/2027/');
-  keyboard.row();
-
   keyboard.text(`${unicodeIcons.back} Назад`, 'competitions_menu');
   return keyboard;
 }
@@ -361,7 +371,7 @@ export function getCalendarChangelogKeyboard(): InlineKeyboard {
   return new InlineKeyboard()
     .url('🌐 На сайте', 'https://coursing-stats.ru/competitions/archive/2027/')
     .row()
-    .text(`${unicodeIcons.back} К календарю 2027`, 'calendar_2027');
+    .text(`${unicodeIcons.back} К плану 2027`, 'calendar_2027');
 }
 
 /** Список избранного: кличка собаки → dog:{id} */
