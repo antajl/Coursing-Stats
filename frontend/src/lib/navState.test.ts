@@ -41,14 +41,14 @@ describe('navState', () => {
     expect(getLastDoninoPath()).toBe('/speed-records/2026/')
   })
 
-  it('saves and restores valid section tabs', () => {
+  it('saves and restores valid section tabs while getSectionLink always targets active season ranking', () => {
     setLastSectionTab('shows', 'archive')
     expect(getLastSectionTab('shows')).toBe('archive')
-    expect(getSectionLink('shows')).toBe('/shows/archive/2026/')
+    expect(getSectionLink('shows')).toBe('/shows/ranking/2026/')
 
     setLastSectionTab('competitions', 'judges')
     expect(getLastSectionTab('competitions')).toBe('judges')
-    expect(getSectionLink('competitions')).toBe('/competitions/judges/2026/')
+    expect(getSectionLink('competitions')).toBe('/competitions/ranking/2026/')
 
     setLastSectionTab('guide', 'donino')
     expect(getLastSectionTab('guide')).toBe('donino')
@@ -63,16 +63,16 @@ describe('navState', () => {
     expect(getLastSectionTab('competitions')).toBe('ranking')
   })
 
-  it('saves and restores Donino paths', () => {
+  it('returns default active season Donino path', () => {
     setLastDoninoPath('/donino/championship')
-    expect(getLastDoninoPath()).toBe('/donino/championship')
+    expect(getLastDoninoPath()).toBe('/speed-records/2026/')
 
     setLastDoninoPath('/donino/analytics')
-    expect(getLastDoninoPath()).toBe('/donino/analytics')
+    expect(getLastDoninoPath()).toBe('/speed-records/2026/')
 
     // Invalid path ignored
     setLastDoninoPath('/external/link')
-    expect(getLastDoninoPath()).toBe('/donino/analytics')
+    expect(getLastDoninoPath()).toBe('/speed-records/2026/')
   })
 })
 

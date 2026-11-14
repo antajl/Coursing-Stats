@@ -18,6 +18,7 @@ import {
   type CalendarEvent,
   groupEventsByMonth,
   eventMatchesDiscipline,
+  compareEventsAsc,
 } from '../Events/eventListUtils'
 import { DISCIPLINE_OPTIONS } from '../Events/EventsToolbar'
 
@@ -132,33 +133,35 @@ export default function Competitions2027() {
   const hasActiveFilters = Boolean(searchQuery || filterDiscipline)
 
   const filteredEvents = useMemo(() => {
-    return events.filter((event) => {
-      if (filterDiscipline && !eventMatchesDiscipline(event, filterDiscipline)) {
-        return false
-      }
-
-      if (searchQuery) {
-        const query = searchQuery.toLowerCase()
-        const searchableFields = [
-          event.title,
-          event.full_title,
-          event.location,
-          event.host_club,
-          event.region,
-          event.competition_kind,
-          event.competition_type,
-          event.rank_label,
-          event.date_start,
-          event.date_end,
-          event.notes,
-        ]
-        if (!searchableFields.some((f) => f && f.toString().toLowerCase().includes(query))) {
+    return events
+      .filter((event) => {
+        if (filterDiscipline && !eventMatchesDiscipline(event, filterDiscipline)) {
           return false
         }
-      }
 
-      return true
-    })
+        if (searchQuery) {
+          const query = searchQuery.toLowerCase()
+          const searchableFields = [
+            event.title,
+            event.full_title,
+            event.location,
+            event.host_club,
+            event.region,
+            event.competition_kind,
+            event.competition_type,
+            event.rank_label,
+            event.date_start,
+            event.date_end,
+            event.notes,
+          ]
+          if (!searchableFields.some((f) => f && f.toString().toLowerCase().includes(query))) {
+            return false
+          }
+        }
+
+        return true
+      })
+      .sort(compareEventsAsc)
   }, [events, filterDiscipline, searchQuery])
 
   const monthGroups = useMemo(() => groupEventsByMonth(filteredEvents), [filteredEvents])

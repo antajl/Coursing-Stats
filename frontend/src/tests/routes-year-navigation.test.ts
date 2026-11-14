@@ -32,22 +32,18 @@ describe('Year Navigation & Route Invariants', () => {
     expect(getLastDoninoPath()).toBe('/speed-records/2026/')
   })
 
-  it('navState: switching subtab preserves active 2026 season', () => {
+  it('navState: main tabs always link to the active season ranking regardless of stored tab', () => {
     setLastSectionTab('competitions', 'archive')
-    expect(getSectionLink('competitions')).toBe('/competitions/archive/2026/')
+    expect(getSectionLink('competitions')).toBe('/competitions/ranking/2026/')
 
     setLastSectionTab('competitions', 'judges')
-    expect(getSectionLink('competitions')).toBe('/competitions/judges/2026/')
+    expect(getSectionLink('competitions')).toBe('/competitions/ranking/2026/')
 
     setLastSectionTab('shows', 'archive')
-    expect(getSectionLink('shows')).toBe('/shows/archive/2026/')
+    expect(getSectionLink('shows')).toBe('/shows/ranking/2026/')
 
     setLastSectionTab('shows', 'judges')
-    expect(getSectionLink('shows')).toBe('/shows/judges/2026/')
-
-    // Reset back to default
-    setLastSectionTab('competitions', 'ranking')
-    setLastSectionTab('shows', 'ranking')
+    expect(getSectionLink('shows')).toBe('/shows/ranking/2026/')
   })
 
   it('navLinks: competitions menu items explicitly include 2026', () => {

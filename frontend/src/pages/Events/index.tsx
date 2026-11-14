@@ -11,6 +11,7 @@ import {
   parseDate,
   getEventDiscipline,
   eventMatchesDiscipline,
+  compareEventsAsc,
 } from './eventListUtils'
 import EventsToolbar, { CURRENT_SEASON } from './EventsToolbar'
 import EventsMonthList from './EventsMonthList'
@@ -286,14 +287,7 @@ export default function Events({ urlYear }: EventsProps = {}) {
 
         return true
       })
-      .sort((a, b) => {
-        const aVal = parseDate(a.date_start)
-        const bVal = parseDate(b.date_start)
-        if (aVal == null && bVal == null) return 0
-        if (aVal == null) return 1
-        if (bVal == null) return -1
-        return aVal < bVal ? -1 : aVal > bVal ? 1 : 0
-      })
+      .sort(compareEventsAsc)
   }, [
     events,
     filterYear,

@@ -9,6 +9,8 @@ import {
   parseRankLabelStructure,
   parseJudgeNames,
   formatCompetitionJudgesWithRoles,
+  compareEventsAsc,
+  groupEventsByMonth,
 } from '../../frontend/src/pages/Events/eventListUtils'
 
 describe('calendar display utils', () => {
@@ -125,5 +127,19 @@ describe('calendar display utils', () => {
     expect(parseJudgeNames(undefined)).toEqual([])
     expect(formatCompetitionJudgesWithRoles(null)).toBe('')
     expect(formatCompetitionJudgesWithRoles(undefined)).toBe('')
+  })
+
+  it('orders calendar events chronologically ascending (earlier dates first)', () => {
+    const eventLater = { id: 1405, date_start: '2027-04-17', title: 'Later event' }
+    const eventEarlier = { id: 1402, date_start: '2027-04-03', title: 'Earlier event' }
+
+    expect(compareEventsAsc(eventEarlier, eventLater)).toBeLessThan(0)
+    expect(compareEventsAsc(eventLater, eventEarlier)).toBeGreaterThan(0)
+
+    // groupEventsByMonth sorts internal month events ascending even when input is descending
+    const grouped = groupEventsByMonth([eventLater, eventEarlier])
+    expect(grouped).toHaveLength(1)
+    expect(grouped[0].events.map((e) => e.date_start)).toEqual(['2027-04-03', '2027-04-17'])
+    expect(grouped[0].events.map((e) => e.id)).toEqual([1402, 1405])
   })
 })

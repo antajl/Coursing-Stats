@@ -452,6 +452,17 @@ function monthLabel(year: number, monthIndex: number): string {
   return label.charAt(0).toUpperCase() + label.slice(1)
 }
 
+export function compareEventsAsc(a: CalendarEvent, b: CalendarEvent): number {
+  const aVal = parseDate(a.date_start)
+  const bVal = parseDate(b.date_start)
+  if (aVal == null && bVal == null) return (a.id ?? 0) - (b.id ?? 0)
+  if (aVal == null) return 1
+  if (bVal == null) return -1
+  const diff = aVal.getTime() - bVal.getTime()
+  if (diff !== 0) return diff
+  return (a.id ?? 0) - (b.id ?? 0)
+}
+
 export function groupEventsByMonth(events: CalendarEvent[]): { key: string; label: string; events: CalendarEvent[] }[] {
   const map = new Map<string, { label: string; events: CalendarEvent[] }>()
 
@@ -468,7 +479,11 @@ export function groupEventsByMonth(events: CalendarEvent[]): { key: string; labe
 
   return [...map.entries()]
     .sort(([a], [b]) => a.localeCompare(b))
-    .map(([key, value]) => ({ key, label: value.label, events: value.events }))
+    .map(([key, value]) => ({
+      key,
+      label: value.label,
+      events: [...value.events].sort(compareEventsAsc),
+    }))
 }
 
 export function toISODate(d: Date): string {

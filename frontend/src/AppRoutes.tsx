@@ -26,23 +26,66 @@ const BreedHub = lazy(() => import('./pages/BreedHub'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 function LegacyProcoursingRedirect() {
-  const location = useLocation();
-  return <Navigate to={`/competitions/${location.search}`} replace />;
+  return <Navigate to="/competitions/ranking/2026/" replace />;
 }
 
 function LegacyTopRedirect() {
   const location = useLocation();
   const params = new URLSearchParams(location.search);
-  params.set('tab', 'ranking');
+  const year = params.get('year') || '2026';
+  params.delete('year');
+  params.delete('tab');
   const qs = params.toString();
-  return <Navigate to={qs ? `/competitions/?${qs}` : '/competitions/?tab=ranking'} replace />;
+  const queryPart = qs ? `?${qs}` : '';
+  return <Navigate to={`/competitions/ranking/${year}/${queryPart}`} replace />;
 }
 
 function LegacyJudgesListRedirect() {
   const location = useLocation();
   const params = new URLSearchParams(location.search);
-  params.set('tab', 'judges');
-  return <Navigate to={`/competitions/?${params.toString()}`} replace />;
+  const year = params.get('year') || '2026';
+  params.delete('year');
+  params.delete('tab');
+  const qs = params.toString();
+  const queryPart = qs ? `?${qs}` : '';
+  return <Navigate to={`/competitions/judges/${year}/${queryPart}`} replace />;
+}
+
+function CompetitionsBaseRoute() {
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const queryYear = searchParams.get('year') || '2026';
+  const queryTab = searchParams.get('tab') || 'ranking';
+  searchParams.delete('year');
+  searchParams.delete('tab');
+  const qs = searchParams.toString();
+  const queryPart = qs ? `?${qs}` : '';
+  const resolvedTab = queryTab === 'archive' || queryTab === 'judges' ? queryTab : 'ranking';
+  return <Navigate to={`/competitions/${resolvedTab}/${queryYear}/${queryPart}${location.hash}`} replace />;
+}
+
+function ShowsBaseRoute() {
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const queryYear = searchParams.get('year') || '2026';
+  const queryTab = searchParams.get('tab') || 'ranking';
+  searchParams.delete('year');
+  searchParams.delete('tab');
+  const qs = searchParams.toString();
+  const queryPart = qs ? `?${qs}` : '';
+  const resolvedTab = queryTab === 'archive' || queryTab === 'judges' ? queryTab : 'ranking';
+  return <Navigate to={`/shows/${resolvedTab}/${queryYear}/${queryPart}${location.hash}`} replace />;
+}
+
+function SpeedRecordsBaseRoute() {
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const queryYear = searchParams.get('year') || searchParams.get('years') || '2026';
+  searchParams.delete('year');
+  searchParams.delete('years');
+  const qs = searchParams.toString();
+  const queryPart = qs ? `?${qs}` : '';
+  return <Navigate to={`/speed-records/${queryYear}/${queryPart}${location.hash}`} replace />;
 }
 
 
@@ -178,6 +221,14 @@ function ShowDogIdRedirect() {
   return <UnifiedDogProfile />;
 }
 
+function ShowJudgeRoute() {
+  const { judgeId } = useParams<{ judgeId: string }>();
+  if (judgeId === 'all' || (judgeId && /^20\d\d$/.test(judgeId))) {
+    return <Shows defaultTab="judges" />;
+  }
+  return <ShowJudgeDetail />;
+}
+
 export default function AppRoutes() {
   return (
     <Suspense fallback={<PageLoader />}>
@@ -186,7 +237,7 @@ export default function AppRoutes() {
         <Route path="/preview/home" element={<Navigate to="/" replace />} />
         <Route path="/spa-shell" element={<Navigate to="/" replace />} />
         <Route path="/spa-shell/*" element={<Navigate to="/" replace />} />
-        <Route path="/competitions" element={<Competitions />} />
+        <Route path="/competitions" element={<CompetitionsBaseRoute />} />
         <Route path="/competitions/archive/2027" element={<Competitions2027 />} />
         <Route path="/competitions/archive/2027/" element={<Competitions2027 />} />
         <Route path="/competitions/2027" element={<Navigate to="/competitions/archive/2027/" replace />} />
@@ -197,17 +248,17 @@ export default function AppRoutes() {
         <Route path="/competitions/:tab/:year" element={<CompetitionsYearRoute />} />
         <Route
           path="/protocol-builder"
-          element={isLocalDev ? <ProtocolBuilder /> : <Navigate to="/competitions/ranking/" replace />}
+          element={isLocalDev ? <ProtocolBuilder /> : <Navigate to="/competitions/ranking/2026/" replace />}
         />
         <Route
           path="/protocol-builder/*"
-          element={isLocalDev ? <ProtocolBuilder /> : <Navigate to="/competitions/ranking/" replace />}
+          element={isLocalDev ? <ProtocolBuilder /> : <Navigate to="/competitions/ranking/2026/" replace />}
         />
         <Route path="/procoursing" element={<LegacyProcoursingRedirect />} />
-        <Route path="/shows" element={<Shows />} />
-        <Route path="/shows/judges/:judgeId" element={<ShowJudgeDetail />} />
+        <Route path="/shows" element={<ShowsBaseRoute />} />
+        <Route path="/shows/judges/:judgeId" element={<ShowJudgeRoute />} />
         <Route path="/shows/exhibition/:id" element={<ShowExhibitionDetail />} />
-        <Route path="/shows/champions" element={<Navigate to="/shows/ranking/" replace />} />
+        <Route path="/shows/champions" element={<Navigate to="/shows/ranking/2026/" replace />} />
         <Route path="/shows/:id" element={<ShowsParamRoute />} />
         <Route path="/shows/:tab/:year" element={<ShowsYearRoute />} />
         <Route path="/shows/dog/:showDogId" element={<ShowDogProfile />} />
@@ -217,7 +268,7 @@ export default function AppRoutes() {
         <Route path="/top-dogs" element={<LegacyTopRedirect />} />
         <Route path="/dog/:id" element={<ShowDogIdRedirect />} />
         <Route path="/event/:id" element={<EventResults />} />
-        <Route path="/speed-records" element={<SpeedRecords />} />
+        <Route path="/speed-records" element={<SpeedRecordsBaseRoute />} />
         <Route path="/speed-records/:year" element={<SpeedRecords />} />
         <Route path="/donino/records" element={<Navigate to="/speed-records/2026/" replace />} />
         <Route path="/donino/records/:year" element={<SpeedRecords />} />

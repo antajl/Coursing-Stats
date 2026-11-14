@@ -67,28 +67,21 @@ export function setLastSectionTab(section: NavSection, tab: string): void {
 }
 
 /**
- * Generates the clean target link for a main section using its last active subtab.
+ * Generates the clean target link for a main section.
+ * Clicking a primary section tab always navigates to its primary ranking view of the active season.
  */
 export function getSectionLink(section: NavSection): string {
   if (section === 'guide') {
     const tab = getLastSectionTab('guide')
     return `/guide/?tab=${tab}`
   }
-  const tab = getLastSectionTab(section)
-  if (tab === 'builder') {
-    return '/protocol-builder/'
-  }
-  return `/${section}/${tab}/${DEFAULT_ACTIVE_SEASON}/`
+  return `/${section}/ranking/${DEFAULT_ACTIVE_SEASON}/`
 }
 
 /**
- * Returns the last visited Donino subsection URL.
+ * Returns the primary Donino subsection URL with the active season.
  */
 export function getLastDoninoPath(): string {
-  const saved = safeGetItem(TAB_STORAGE_PREFIX + 'donino')
-  if (saved && VALID_DONINO_PREFIXES.some((prefix) => saved.startsWith(prefix))) {
-    return saved
-  }
   return DEFAULT_DONINO_PATH
 }
 
