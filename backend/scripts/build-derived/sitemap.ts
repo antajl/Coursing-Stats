@@ -25,6 +25,74 @@ export type SitemapUrlSources = {
   showJudgeIds: string[]
 }
 
+const COMPETITION_SEASONS = [2027, 2026, 2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015]
+const SHOW_SEASONS = [2026, 2025, 2024, 2023, 2022, 2021, 2020, 2019]
+const SPEED_SEASONS = [2026, 2025]
+
+function buildYearStaticPages(): SitemapUrl[] {
+  const pages: SitemapUrl[] = []
+
+  // Competitions Archive & Ranking
+  pages.push({ loc: '/competitions/archive/', priority: '0.85', changefreq: 'daily' })
+  for (const year of COMPETITION_SEASONS) {
+    const isCurrent = year === 2027 || year === 2026
+    pages.push({
+      loc: `/competitions/archive/${year}/`,
+      priority: isCurrent ? '0.85' : '0.7',
+      changefreq: isCurrent ? 'weekly' : 'monthly',
+    })
+  }
+  pages.push({ loc: '/competitions/archive/all/', priority: '0.75', changefreq: 'weekly' })
+
+  pages.push({ loc: '/competitions/ranking/', priority: '0.85', changefreq: 'daily' })
+  for (const year of COMPETITION_SEASONS.filter((y) => y !== 2027)) {
+    const isCurrent = year === 2026
+    pages.push({
+      loc: `/competitions/ranking/${year}/`,
+      priority: isCurrent ? '0.85' : '0.7',
+      changefreq: isCurrent ? 'weekly' : 'monthly',
+    })
+  }
+  pages.push({ loc: '/competitions/ranking/all/', priority: '0.75', changefreq: 'weekly' })
+  pages.push({ loc: '/competitions/judges/', priority: '0.75', changefreq: 'weekly' })
+
+  // Shows Archive & Ranking
+  pages.push({ loc: '/shows/archive/', priority: '0.85', changefreq: 'daily' })
+  for (const year of SHOW_SEASONS) {
+    const isCurrent = year === 2026
+    pages.push({
+      loc: `/shows/archive/${year}/`,
+      priority: isCurrent ? '0.85' : '0.7',
+      changefreq: isCurrent ? 'weekly' : 'monthly',
+    })
+  }
+  pages.push({ loc: '/shows/archive/all/', priority: '0.75', changefreq: 'weekly' })
+
+  pages.push({ loc: '/shows/ranking/', priority: '0.85', changefreq: 'daily' })
+  for (const year of SHOW_SEASONS) {
+    const isCurrent = year === 2026
+    pages.push({
+      loc: `/shows/ranking/${year}/`,
+      priority: isCurrent ? '0.85' : '0.7',
+      changefreq: isCurrent ? 'weekly' : 'monthly',
+    })
+  }
+  pages.push({ loc: '/shows/ranking/all/', priority: '0.75', changefreq: 'weekly' })
+  pages.push({ loc: '/shows/judges/', priority: '0.75', changefreq: 'weekly' })
+
+  // Speed Records
+  for (const year of SPEED_SEASONS) {
+    pages.push({
+      loc: `/speed-records/${year}/`,
+      priority: year === 2026 ? '0.8' : '0.7',
+      changefreq: year === 2026 ? 'weekly' : 'monthly',
+    })
+  }
+  pages.push({ loc: '/speed-records/all/', priority: '0.75', changefreq: 'weekly' })
+
+  return pages
+}
+
 const STATIC_PAGES: SitemapUrl[] = [
   { loc: '/', priority: '1.0', changefreq: 'daily' },
   { loc: '/competitions/', priority: '0.9', changefreq: 'daily' },
@@ -35,6 +103,7 @@ const STATIC_PAGES: SitemapUrl[] = [
   { loc: '/donino/analytics/', priority: '0.7', changefreq: 'weekly' },
   { loc: '/guide/', priority: '0.6', changefreq: 'monthly' },
   { loc: '/about/', priority: '0.5', changefreq: 'monthly' },
+  ...buildYearStaticPages(),
 ]
 
 /** Pure collector — unit-tested without sqlite. */

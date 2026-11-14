@@ -29,6 +29,12 @@ describe('sitemap collectors', () => {
     expect(locs).toContain('/breeds/saluki/')
     expect(locs.some((u) => u.startsWith('/shows/judges/'))).toBe(true)
     expect(locs).toContain('/dog/1/')
+    expect(locs).toContain('/competitions/archive/2026/')
+    expect(locs).toContain('/competitions/archive/2027/')
+    expect(locs).toContain('/competitions/ranking/2026/')
+    expect(locs).toContain('/shows/archive/2026/')
+    expect(locs).toContain('/shows/ranking/2026/')
+    expect(locs).toContain('/speed-records/2026/')
     expect(locs.every((u) => !u.startsWith('/admin'))).toBe(true)
   })
 

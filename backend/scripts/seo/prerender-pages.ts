@@ -184,13 +184,13 @@ function prerenderHubs(spaHtml: string): number {
 
     if (hub.path === '/') {
       jsonLd = homepageJsonLd()
-    } else if (hub.path === '/competitions') {
+    } else if (hub.path === '/competitions' || hub.path.startsWith('/competitions/')) {
       bodyHtml = buildCompetitionsHubHtml(hub, topPlacementDogs)
       jsonLd = competitionsJsonLd(DEFAULT_COMPETITION_FAQS)
-    } else if (hub.path === '/shows') {
+    } else if (hub.path === '/shows' || hub.path.startsWith('/shows/')) {
       bodyHtml = buildShowsHubHtml(hub)
       jsonLd = showsHubJsonLd()
-    } else if (hub.path === '/speed-records') {
+    } else if (hub.path === '/speed-records' || hub.path.startsWith('/speed-records/')) {
       bodyHtml = buildSpeedRecordsHubHtml(hub)
       jsonLd = doninoDatasetJsonLd()
     } else if (hub.path === '/donino/championship') {
