@@ -37,6 +37,7 @@ export function useChampionshipCarousel() {
 
   const triggerNudge = useCallback(() => {
     if (hasInteractedRef.current) return
+    if (typeof window !== 'undefined' && window.innerWidth >= 1024) return
     cancelNudge()
     setIsNudging(true)
     nudgeEndTimerRef.current = window.setTimeout(() => {
@@ -48,6 +49,7 @@ export function useChampionshipCarousel() {
   // Auto-play gentle invitation nudge on page load (after 600ms) only if not interacted
   useEffect(() => {
     if (hasInteractedRef.current) return
+    if (typeof window !== 'undefined' && window.innerWidth >= 1024) return
     nudgeTimerRef.current = window.setTimeout(() => {
       triggerNudge()
     }, 600)
@@ -163,7 +165,7 @@ export function useChampionshipCarousel() {
     touchStartRef.current = null
     gestureLockRef.current = null
     const currentSlide = sortMode === 'time' ? 0 : 1
-    if (trackRef.current) {
+    if (trackRef.current && (typeof window === 'undefined' || window.innerWidth < 1024)) {
       trackRef.current.style.transition = 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)'
       trackRef.current.style.transform = `translate3d(${getSlideOffset(currentSlide)}, 0, 0)`
     }
@@ -211,7 +213,7 @@ export function useChampionshipCarousel() {
     cancelNudge()
     const targetSlide = mode === 'time' ? 0 : 1
     currentSlideRef.current = targetSlide
-    if (trackRef.current) {
+    if (trackRef.current && (typeof window === 'undefined' || window.innerWidth < 1024)) {
       trackRef.current.style.transition = 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)'
       trackRef.current.style.transform = `translate3d(${getSlideOffset(targetSlide)}, 0, 0)`
     }

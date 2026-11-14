@@ -286,7 +286,7 @@ export default function ChampionshipStandingsTab({
         <div className="lg:col-span-7 xl:col-span-8 space-y-3">
           {/* Main Dog Ranking Carousel Container */}
           <div
-            className="w-full relative overflow-x-clip lg:overflow-visible touch-pan-y select-none"
+            className="w-full relative overflow-x-clip touch-pan-y select-none lg:select-auto"
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
@@ -305,22 +305,25 @@ export default function ChampionshipStandingsTab({
             {/* Real Physical Two-Column Slider */}
             <div
               ref={trackRef}
-              className={`flex flex-nowrap w-full min-w-0 items-start gap-4 ${
+              className={`flex flex-nowrap w-full min-w-0 items-start gap-4 lg:gap-0 lg:!transform-none ${
                 isNudging
                   ? activeSlide === 0
-                    ? 'animate-silk-nudge-left'
-                    : 'animate-silk-nudge-right'
+                    ? 'animate-silk-nudge-left lg:animate-none'
+                    : 'animate-silk-nudge-right lg:animate-none'
                   : ''
               }`}
               style={{
-                transform: isNudging
-                  ? undefined
-                  : `translate3d(${getSlideOffset(activeSlide)}, 0, 0)`,
-                willChange: 'transform',
+                transform:
+                  typeof window !== 'undefined' && window.innerWidth >= 1024
+                    ? 'none'
+                    : isNudging
+                    ? undefined
+                    : `translate3d(${getSlideOffset(activeSlide)}, 0, 0)`,
+                willChange: typeof window !== 'undefined' && window.innerWidth >= 1024 ? 'auto' : 'transform',
               }}
             >
               {/* Slide 1: By Speed Full Card */}
-              <div className="w-full max-w-full min-w-0 shrink-0 basis-full">
+              <div className={`w-full max-w-full min-w-0 shrink-0 basis-full ${sortMode === 'points' ? 'lg:hidden' : ''}`}>
                 <div className="relative overflow-hidden rounded-2xl border border-old-money-200 bg-white shadow-2xs">
                   {/* Card Header inside */}
                   <div className="relative flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 px-3.5 sm:px-4 py-3 border-b border-old-money-100 bg-cream-50/40">
@@ -397,7 +400,7 @@ export default function ChampionshipStandingsTab({
               </div>
 
               {/* Slide 2: By Points Full Card */}
-              <div className="w-full max-w-full min-w-0 shrink-0 basis-full">
+              <div className={`w-full max-w-full min-w-0 shrink-0 basis-full ${sortMode === 'time' ? 'lg:hidden' : ''}`}>
                 <div className="relative overflow-hidden rounded-2xl border border-old-money-200 bg-white shadow-2xs">
                   {/* Card Header inside */}
                   <div className="relative flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 px-3.5 sm:px-4 py-3 border-b border-old-money-100 bg-cream-50/40">
