@@ -320,12 +320,26 @@ export default function ShowRanking({ urlYear }: ShowRankingProps = {}) {
     [isAllTimeWithoutSearch, filteredDogs],
   )
 
+  const handleYearChange = useCallback((newYear: string) => {
+    setFilterYear(newYear)
+    if (location.pathname.startsWith('/shows/ranking')) {
+      const targetSlug = newYear === '' ? 'all' : newYear
+      const nextParams = new URLSearchParams(searchParams)
+      nextParams.delete('year')
+      const qs = nextParams.toString()
+      navigate(`/shows/ranking/${targetSlug}/${qs ? '?' + qs : ''}`)
+    }
+  }, [location.pathname, navigate, searchParams])
+
   const handleResetFilters = useCallback(() => {
     setFilterYear(SHOW_ACTIVE_SEASON)
     setFilterBreed('')
     setFilterSex('')
     setSearchQuery('')
-  }, [])
+    if (location.pathname.startsWith('/shows/ranking')) {
+      navigate('/shows/ranking/')
+    }
+  }, [location.pathname, navigate])
 
   const showListSkeleton = allDogs.length === 0 && (isPage0Loading || !isPage0Fetched)
   const loadFailed =
@@ -342,7 +356,7 @@ export default function ShowRanking({ urlYear }: ShowRankingProps = {}) {
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}
         filterYear={filterYear}
-        onYearChange={setFilterYear}
+        onYearChange={handleYearChange}
         currentSeason={SHOW_ACTIVE_SEASON}
         yearValues={years}
         filterBreed={filterBreed}
