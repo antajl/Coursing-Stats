@@ -1,7 +1,7 @@
 <div align="center">
 
   <a href="https://coursing-stats.ru">
-    <img src="frontend/public/assets/brand/logo-badge.svg" alt="CoursingStats Logo" width="120" height="124" />
+    <img src="frontend/public/assets/brand/logo-badge.svg" alt="CoursingStats Logo" width="108" height="112" />
   </a>
 
   # CoursingStats
@@ -11,19 +11,19 @@
 
   <p align="center">
     <a href="https://coursing-stats.ru">
-      <img src="https://img.shields.io/badge/Status-Live-2e7d32?style=flat-square" alt="Status Live" />
+      <img src="https://img.shields.io/badge/Production-coursing--stats.ru-2e7d32?style=flat-square" alt="Production" />
+    </a>
+    <a href="https://github.com/antajl/Coursing-Stats/actions/workflows/deploy.yml">
+      <img src="https://img.shields.io/github/actions/workflow/status/antajl/Coursing-Stats/deploy.yml?branch=main&label=CI%2FCD&style=flat-square" alt="CI/CD Status" />
     </a>
     <a href="https://t.me/coursing_stats_bot">
       <img src="https://img.shields.io/badge/Telegram_Bot-@coursing__stats__bot-2CA5E0?style=flat-square&logo=telegram&logoColor=white" alt="Telegram Bot" />
-    </a>
-    <a href="https://github.com/antajl/Coursing-Stats/actions">
-      <img src="https://img.shields.io/badge/Tests-383_passed-3178c6?style=flat-square" alt="Tests" />
     </a>
     <a href="https://react.dev">
       <img src="https://img.shields.io/badge/React-19-087ea4?style=flat-square&logo=react&logoColor=white" alt="React 19" />
     </a>
     <a href="https://www.typescriptlang.org">
-      <img src="https://img.shields.io/badge/TypeScript-5.4-3178c6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+      <img src="https://img.shields.io/badge/TypeScript-5.4+-3178c6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
     </a>
     <a href="LICENSE">
       <img src="https://img.shields.io/badge/License-MIT-c5a880?style=flat-square" alt="MIT License" />
@@ -31,11 +31,13 @@
   </p>
 
   <p align="center">
-    <a href="https://coursing-stats.ru"><strong>coursing-stats.ru</strong></a> •
+    <a href="https://coursing-stats.ru">Веб-платформа</a> •
+    <a href="https://coursing-stats.ru/shows">Выставки РКФ</a> •
+    <a href="https://coursing-stats.ru/speed-records">Замеры Донино</a> •
     <a href="https://t.me/coursing_stats_bot">Telegram-бот</a> •
     <a href="docs/ROADMAP.md">Дорожная карта</a> •
     <a href="docs/MAP.md">Документация</a> •
-    <a href="https://coursing-stats.ru/data/v1/">Открытый CDN</a>
+    <a href="#открытые-данные-open-cdn">Открытый CDN</a>
   </p>
 
 </div>
@@ -44,16 +46,30 @@
 
 ## О проекте
 
-**CoursingStats** — открытая кинологическая аналитическая платформа и агрегатор спортивной статистики в России. Проект объединяет результаты официальных состязаний борзых (2015–2026), национальные выставки Российской кинологической федерации (РКФ) и замеры спринтерской скорости в единую систему с поиском, рейтингами и профилями собак.
+**CoursingStats** — открытая кинологическая аналитическая платформа и статистический архив. Проект объединяет результаты официальных состязаний борзых (курсинг, бега за механической приманкой, круговой трек с 2015 года), сертификатные выставки РКФ (2019–2026) и замеры спринтерской скорости в единую систему с поиском, рейтингами и профилями собак.
 
-### Ключевые возможности:
+### Архитектурные принципы
 
-- **Zero-Backend CDN (0ms Runtime):** Публичный сайт не использует базу данных во время выполнения. Клиентское приложение напрямую загружает структурированные сжатые JSON-пакеты через CDN Yandex Object Storage (`/data/v1/`).
-- **Три изолированных домена:** Независимые правила подсчета и архитектурные контуры для спорта (курсинг и бега), выставок РКФ и радарных испытаний в Донино.
-- **Две спортивные рейтинговые системы:** Медальный зачет (подиумы) и система очков стабильности CS (качество и плотность забегов) рассчитываются строго независимо.
-- **Векторные протоколы:** Автоматический экспорт и верстка эталонных официальных протоколов соревнований в векторный HTML и PDF по стандартам РКФ.
-- **Serverless Telegram-бот:** Бот на базе Cloudflare Workers и Grammy с поиском по кличкам, карточками участников и уведомлениями.
-- **Old Money Design System:** Строгий интерфейс без визуального шума в теплой бежево-песочной палитре с типографикой Montserrat и SVG-иконками Lucide.
+- **Zero-Backend CDN (0ms Runtime):** Публичный сайт не выполняет запросов к базе данных при загрузке страниц. Клиентское приложение напрямую получает предрассчитанные сжатые JSON-пакеты из CDN Yandex Object Storage (`/data/v1/`).
+- **Три изолированных домена:** Полная изоляция правил подсчета и архитектурных контуров для спорта (курсинг и бега), выставок РКФ и радарных испытаний в Донино. Смешивание метрик между доменами запрещено.
+- **Две независимые рейтинговые системы в спорте:** Медальный зачет (подиумы) и система очков стабильности CS (качество и плотность забегов) рассчитываются параллельно и не подменяют друг друга.
+- **Векторные протоколы РКФ:** Встроенный генератор эталонных печатных протоколов соревнований в векторный HTML и PDF по нормативам РКФ.
+- **Serverless Telegram-бот:** Бот на базе Cloudflare Workers и Grammy с многоуровневым KV-кэшированием и отдачей карточек собак.
+- **Old Money Design System:** Интерфейс в сдержанной песочно-бежевой палитре (Camel/Sand), типографика Montserrat, SVG-иконки Lucide и полный запрет на эмодзи в оформлении.
+- **AI-Ready репозиторий:** Кодовая база структурирована для работы автономных AI-агентов (`AGENTS.md`, 13 предметных навыков в `.agents/skills/`, 17 инженерных шпаргалок в `docs/sheets/`).
+
+---
+
+## Масштаб платформы
+
+| Направление | Объем данных | Особенности хранения и обработки |
+|:---|---:|:---|
+| Выставки РКФ | 60 000+ выставок | Архивы рингов за 2019–2026 гг. |
+| Записи в протоколах рингов | ~18 000 000 записей | 51 000+ сжатых gzip протоколов на S3 CDN |
+| Спортивные турниры (курсинг, бега, БЗМП) | 157 состязаний | Официальные турниры с 2015 года |
+| Спортивные собаки в базе | 2 341 собака | Профили, родословные, история баллов |
+| Результаты забегов | 9 082 записи | Детализация по пускам и судейским оценкам |
+| Замеры скорости Донино | 300+ результатов | Радарная скорость (км/ч) и время 350 м (сек) |
 
 ---
 
@@ -61,68 +77,63 @@
 
 ```mermaid
 flowchart LR
-    subgraph Sources[Источники]
+    subgraph Sources[1. Источники]
         P[procoursing.ru]
         R[Отчеты РКФ]
         D[Полигон Донино]
     end
 
-    subgraph Pipeline[Пайплайн данных]
+    subgraph Pipeline[2. Пайплайн]
         Ingest[yarn ingest-competition]
-        Parsers[Парсеры и валидация]
+        Parsers[Парсеры и валидация Zod]
         Build[yarn build-all-data]
     end
 
-    subgraph Storage[Хранение и CDN]
-        CDN[Static CDN /data/v1/]
-        Protocols[51k+ Gzip протоколов выставок S3]
+    subgraph Storage[3. Статический CDN]
+        CDN[CDN /data/v1/ Yandex S3]
+        Protocols[51k+ Gzip протоколов S3]
     end
 
-    subgraph Clients[Интерфейсы]
-        Web[Веб-сайт React 19]
-        Bot[Telegram-бот Workers]
+    subgraph Clients[4. Интерфейсы]
+        Web[React 19 + Vite]
+        Bot[Telegram-бот Workers + KV]
     end
 
     Sources --> Pipeline --> Storage --> Clients
 ```
 
-### Три домена данных
+### Доменная структура
 
-| Домен | Что отслеживает | Источники и алгоритмы |
+| Домен | Предметная область | Источники и алгоритмы |
 |:---|:---|:---|
 | **Соревнования (Sport)** | Курсинг, бега за механической приманкой (БЗМП), круговой трек. Профили собак, статистика судей, динамика забегов. | Данные 2015–2026 гг. Независимые зачёты: **Медали** (подиумы) и **Очки CS** (баллы за качество забегов). |
-| **Выставки РКФ (Shows)** | Национальный выставочный рейтинг, протоколы рингов, профили экспертов-судей и архивы (CAC, CACIB, моно). | Парсинг официальных PDF-отчетов РКФ. База из более чем 1.5 млн собак и расчет годовых рейтингов по породам и группам FCI. |
-| **Донино (Speed)** | Фиксация спринтерских рекордов борзых на специализированной трассе в Донино. | Радарные замеры максимальной скорости (**км/ч**) и прохождение дистанции курсинга 350 м (**секунды**). |
+| **Выставки РКФ (Shows)** | Национальный выставочный рейтинг, протоколы рингов, профили экспертов-судей и архивы (CAC, CACIB, моно). | Оцифровка официальных PDF-отчетов РКФ. База из 1.5+ млн собак, расчет годовых рейтингов по породам и группам FCI. |
+| **Донино (Speed)** | Фиксация спринтерских рекордов борзых на специализированной трассе в Донино. | Радарные замеры максимальной скорости (**км/ч**) и время дистанции 350 м (**секунды**). |
 
 ---
 
-## Масштаб платформы
+## Открытые данные (Open CDN)
 
-| Показатель | Значение |
-|:---|---:|
-| Спортивные турниры (курсинг, бега, БЗМП) | 157 состязаний (2015–2026) |
-| Спортивные собаки в базе | 2 341 собака |
-| Результаты забегов в протоколах | 9 082 записи |
-| Выставки РКФ | 60 000+ выставок |
-| Записей в протоколах рингов | ~18 000 000 записей |
-| Замеры скорости Донино | 300+ официальных результатов |
+Платформа предоставляет доступ к сформированным кинологическим индексам без API-ключей и авторизации:
 
----
+```bash
+# Топ-100 собак в общем зачёте выставок РКФ:
+curl -s https://coursing-stats.ru/data/v1/shows/indexes/dog-ranking-all-time-page0.json | jq '.[0]'
 
-## Архитектура и технические решения
+# Профиль спортивной собаки со стартами и титулами:
+curl -s https://coursing-stats.ru/data/v1/dogs/by-id/721.json
 
-- **CDN Packs Pattern (ADR-014):** Профили собак и судей упаковываются в блочные шарды (`pack-*`), что исключает генерацию сотен тысяч мелких сетевых запросов.
-- **Gzip Static Protocols:** Все 51 429 протоколов выставок (2019–2026) отдаются напрямую из Яндекс S3 CDN в сжатом виде gzip, полностью исключая задержки базы данных.
-- **Serverless Telegram Bot:** Бот развернут в Cloudflare Workers с многоуровневым KV-кэшированием и отдачей легковесных карточек.
-- **AI-First архитектура:** Кодовая база снабжена контекстными инструкциями для AI-ассистентов (`AGENTS.md`, каталог `.agents/skills/`, 17 инженерных шпаргалок в `docs/sheets/`).
+# Спринтерские рекорды пород (Донино):
+curl -s https://coursing-stats.ru/data/v1/donino/speed-records.json
+```
 
 ---
 
 ## Стек технологий
 
-- **Frontend:** React 19, TypeScript, Vite, Tailwind CSS, TanStack React Query, GSAP, Lucide Icons.
-- **Pipelines & Data:** Node.js, TSX, Vitest, Cheerio, ExcelJS, PDF parsing (pdfjs, paddle-ocr), Zod.
-- **Infrastructure:** Yandex Object Storage (Static CDN S3), Cloudflare Workers & KV, GitHub Actions CI/CD.
+- **Фронтенд:** React 19, TypeScript, Vite, Tailwind CSS, TanStack React Query, GSAP, Lucide Icons.
+- **Пайплайн данных:** Node.js, TSX, Vitest, Cheerio, ExcelJS, PDF parsing (pdfjs, paddle-ocr), Zod.
+- **Инфраструктура:** Yandex Object Storage (Static CDN S3), Cloudflare Workers & KV, GitHub Actions CI/CD.
 
 ---
 
@@ -133,7 +144,7 @@ flowchart LR
 - Node.js >= 20.x
 - Yarn 1.22.22
 
-### Установка и запуск
+### Локальная разработка
 
 ```bash
 # 1. Клонирование репозитория
@@ -143,43 +154,43 @@ cd Coursing-Stats
 # 2. Установка зависимостей
 yarn install
 
-# 3. Запуск локального сервера разработки (Vite)
+# 3. Запуск сервера разработки (Vite)
 yarn run dev
 ```
 
-Фронтенд будет доступен по адресу `http://localhost:5173`.
+Приложение доступно по адресу `http://localhost:5173`. Данные загружаются напрямую из продакшен CDN.
 
 <details>
 <summary><strong>Команды обработки данных и тестирования</strong></summary>
 
 ```bash
-# Безопасный ввод турнира с автосопоставлением собак:
+# Ввод турнира с автоматическим сопоставлением собак:
 yarn ingest-competition <path-to-draft.json>
 
-# Экспорт эталонного векторного протокола (HTML/PDF):
+# Экспорт векторного протокола РКФ (HTML/PDF):
 yarn export-protocol <eventId> [outDir]
 
-# Полная пересборка всех индексов и проверка publish-gates:
+# Полная пересборка индексов и проверка publish-gates:
 yarn run build-all-data
 
-# Запуск тестов бэкенда и алгоритмов (46 тест-сьютов):
+# Запуск тестов алгоритмов и компонентов:
 yarn test
 
-# Тестирование фикстур парсеров:
+# Проверка фикстур парсеров:
 yarn run test-parser-fixtures
 ```
 
 </details>
 
 <details>
-<summary><strong>Запуск и деплой Telegram-бота</strong></summary>
+<summary><strong>Разработка и деплой Telegram-бота</strong></summary>
 
 ```bash
 cd bot
 yarn install
 yarn test
-yarn run dev     # локальный запуск
-yarn run deploy  # Cloudflare Workers деплой
+yarn run dev     # локальный запуск через Miniflare
+yarn run deploy  # деплой в Cloudflare Workers
 ```
 
 </details>
@@ -188,10 +199,11 @@ yarn run deploy  # Cloudflare Workers деплой
 
 ## Документация
 
-- **[ROADMAP.md](docs/ROADMAP.md)** — Дорожная карта и 4 стратегические ветки развития.
-- **[MAP.md](docs/MAP.md)** — Маршрутизатор по кодовой базе и задачам.
-- **[Архитектурные решения (ADR)](docs/decisions/)** — История и контекст инженерных решений (ADR-001 — ADR-014).
-- **[Шпаргалки по разделам](docs/sheets/)** — 17 подробных технических документов (00–16).
+- **[ROADMAP.md](docs/ROADMAP.md)** — Стратегический план развития и 4 ветки рефакторинга.
+- **[MAP.md](docs/MAP.md)** — Маршрутизатор по кодовой базе («Задача → 1 файл»).
+- **[Архитектурные решения (ADR)](docs/decisions/)** — Инженерные решения и их обоснование (ADR-001 — ADR-016).
+- **[Шпаргалки по разделам](docs/sheets/)** — 17 технических руководств по компонентам системы (00–16).
+- **[AGENTS.md](AGENTS.md)** — Правила и системный контекст для работы AI-ассистентов.
 
 ---
 
