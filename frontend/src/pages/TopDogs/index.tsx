@@ -289,7 +289,7 @@ export default function TopDogs({ urlYear }: TopDogsProps = {}) {
     setFilterMinStarts('')
     setFilterScoreFrom('')
     setFilterSpeedFrom('')
-    navigate('/competitions/ranking/')
+    navigate(`/competitions/ranking/${activeSeason}/`)
   }, [activeSeason, navigate])
 
   const handleResetPanelFilters = useCallback(() => {
@@ -299,7 +299,7 @@ export default function TopDogs({ urlYear }: TopDogsProps = {}) {
     setFilterMinStarts('')
     setFilterScoreFrom('')
     setFilterSpeedFrom('')
-    navigate('/competitions/ranking/')
+    navigate(`/competitions/ranking/${activeSeason}/`)
   }, [activeSeason, navigate])
 
   const [selectedMobileColumn, setSelectedMobileColumn] = useState<'coursing' | 'racing' | null>(null)

@@ -198,11 +198,20 @@ export function NavDesktop({
       </div>
 
       <div className="flex shrink-0 items-center gap-1.5 lg:gap-2 2xl:gap-2.5">
+        <Link
+          to="/breeds/"
+          className="cs-glass-pill flex items-center justify-center gap-1.5 h-9 px-2.5 2xl:px-3 rounded-full text-charcoal-700 hover:text-charcoal-900 hover:border-camel-300 text-xs font-semibold transition-all shrink-0 no-underline active:scale-95"
+          title="Каталог пород и персональные хабы"
+          aria-label="Каталог пород"
+        >
+          <Icons.dog className="w-3.5 h-3.5 text-camel-700" aria-hidden />
+          <span>Породы</span>
+        </Link>
         <button
           type="button"
           onClick={onOpenSearch}
           className="cs-glass-pill flex items-center justify-center gap-1.5 h-9 w-9 2xl:w-auto 2xl:px-3 rounded-full text-charcoal-700 text-xs font-semibold group cursor-pointer shrink-0"
-          title="Быстрый поиск"
+          title="Быстрый поиск (Ctrl+K)"
           aria-label="Быстрый поиск по базе"
         >
           <Icons.search className="w-4 h-4 text-camel-700 transition-transform group-hover:scale-110" aria-hidden />

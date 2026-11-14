@@ -243,7 +243,7 @@ export default function HomeDogSearch({ className = '' }: HomeDogSearchProps) {
       {loadError && (
         <p className="home-v2-search-hint">
           Поиск временно недоступен.{' '}
-          <Link to="/competitions/ranking/">Открыть рейтинг</Link>
+          <Link to="/competitions/ranking/2026/">Открыть рейтинг</Link>
         </p>
       )}
       {open && query.trim().length >= 2 && results.length > 0 && (

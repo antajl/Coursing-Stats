@@ -72,7 +72,16 @@ export function NavMobile({
             style={{ objectFit: 'contain' }}
           />
         </Link>
-        <div className="flex min-w-0 flex-1 items-center justify-end gap-2">
+        <div className="flex min-w-0 flex-1 items-center justify-end gap-1.5 sm:gap-2">
+          <Link
+            to="/breeds/"
+            className="cs-glass-pill h-11 w-11 sm:w-auto sm:px-3 rounded-full flex items-center justify-center gap-1.5 shrink-0 text-xs font-semibold text-charcoal-700 active:scale-95 transition-all no-underline"
+            aria-label="Каталог пород"
+            title="Каталог пород"
+          >
+            <Icons.dog className="w-5 h-5 sm:w-4 sm:h-4 text-camel-700" aria-hidden />
+            <span className="hidden sm:inline">Породы</span>
+          </Link>
           <button
             type="button"
             onClick={onOpenSearch}
@@ -205,6 +214,15 @@ export function NavMobile({
                   >
                     <Award className={`w-4 h-4 shrink-0 ${isShowsActive ? 'text-camel-700' : 'text-charcoal-500'}`} aria-hidden="true" />
                     <span>Выставки</span>
+                  </Link>
+
+                  <Link
+                    to="/breeds/"
+                    onClick={onCloseMobileMenu}
+                    className="min-h-[44px] px-3.5 py-2.5 rounded-xl flex items-center gap-3 text-sm font-semibold transition-all text-charcoal-700 hover:bg-cream-100 hover:text-charcoal-900"
+                  >
+                    <Icons.dog className="w-4 h-4 shrink-0 text-camel-700" aria-hidden="true" />
+                    <span>Породы</span>
                   </Link>
 
                   <Link

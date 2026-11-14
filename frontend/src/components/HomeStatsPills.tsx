@@ -86,7 +86,7 @@ export default function HomeStatsPills({ stats, showStats, loading }: HomeStatsP
       {/* Спорт */}
       {stats && (
         <Link
-          to="/competitions/ranking/"
+          to="/competitions/ranking/2026/"
           className="group block bg-gradient-to-br from-white/95 to-cream-50/95 backdrop-blur-md rounded-xl border border-camel-200/70 shadow-xs hover:shadow-md active:scale-[0.99] p-2.5 3xl:p-3 transition-all text-inherit no-underline"
           aria-label="Перейти в раздел Спорт: турниры, результаты, собаки"
         >
@@ -123,7 +123,7 @@ export default function HomeStatsPills({ stats, showStats, loading }: HomeStatsP
       {/* Выставки */}
       {showStats && (
         <Link
-          to="/shows/ranking/"
+          to="/shows/ranking/2026/"
           className="group block bg-gradient-to-br from-white/95 to-cream-50/95 backdrop-blur-md rounded-xl border border-camel-200/70 shadow-xs hover:shadow-md active:scale-[0.99] p-2.5 3xl:p-3 transition-all text-inherit no-underline"
           aria-label="Перейти в раздел Выставки: каталоги, ринги, собаки"
         >

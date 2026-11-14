@@ -134,7 +134,7 @@ export default function Events({ urlYear }: EventsProps = {}) {
     setFilterDiscipline('')
     setFilterWithProtocol(false)
     setSearchQuery('')
-    navigate('/competitions/archive/')
+    navigate(`/competitions/archive/${CURRENT_SEASON}/`)
   }
 
   useEffect(() => {

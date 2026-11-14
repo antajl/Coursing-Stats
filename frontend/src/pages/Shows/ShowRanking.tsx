@@ -317,7 +317,7 @@ export default function ShowRanking({ urlYear }: ShowRankingProps = {}) {
     setFilterBreed('')
     setFilterSex('')
     setSearchQuery('')
-    navigate('/shows/ranking/')
+    navigate(`/shows/ranking/${SHOW_ACTIVE_SEASON}/`)
   }, [navigate])
 
   const showListSkeleton = allDogs.length === 0 && (isPage0Loading || !isPage0Fetched)

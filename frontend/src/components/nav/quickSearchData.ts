@@ -8,7 +8,7 @@ export const SITE_NAVIGATION_ROUTES: NavigationRouteItem[] = [
     id: 'competitions-ranking',
     title: 'Рейтинг соревнований',
     subtitle: 'Курсинг и рейсинг: медали, CS points, баллы и подиум 2015–2026',
-    to: '/competitions/ranking/',
+    to: '/competitions/ranking/2026/',
     icon: 'medal',
     keywords: [
       'рейтинг', 'рейтинг собак', 'топ', 'лидеры', 'соревнования', 'курсинг', 'бега',
@@ -20,7 +20,7 @@ export const SITE_NAVIGATION_ROUTES: NavigationRouteItem[] = [
     id: 'competitions-archive',
     title: 'Календарь и архив соревнований',
     subtitle: 'Все состязания с 2015 года: даты, организаторы и полные результаты',
-    to: '/competitions/archive/',
+    to: '/competitions/archive/2026/',
     icon: 'calendar',
     keywords: [
       'архив', 'календарь', 'состязания', 'турниры', 'расписание', 'график', 'даты',
@@ -32,7 +32,7 @@ export const SITE_NAVIGATION_ROUTES: NavigationRouteItem[] = [
     id: 'competitions-judges',
     title: 'Судьи соревнований',
     subtitle: 'Судейская коллегия, стаж, статистика турниров и оценок',
-    to: '/competitions/judges/',
+    to: '/competitions/judges/2026/',
     icon: 'club',
     keywords: [
       'судьи', 'судья', 'эксперты', 'судейство', 'арбитры', 'коллегия', 'оценщики',
@@ -59,7 +59,7 @@ export const SITE_NAVIGATION_ROUTES: NavigationRouteItem[] = [
     id: 'shows-ranking',
     title: 'Рейтинг выставок РКФ',
     subtitle: 'Выставочный рейтинг по породам и абсолютные лидеры сезона',
-    to: '/shows/ranking/',
+    to: '/shows/ranking/2026/',
     icon: 'award',
     keywords: [
       'выставки', 'выставка', 'ркф', 'рейтинг выставок', 'шоу', 'ринги', 'титулы',
@@ -71,7 +71,7 @@ export const SITE_NAVIGATION_ROUTES: NavigationRouteItem[] = [
     id: 'shows-calendar',
     title: 'Архив выставок РКФ',
     subtitle: 'Архив протоколов и расписание выставок РКФ 2019–2026',
-    to: '/shows/archive/',
+    to: '/shows/archive/2026/',
     icon: 'calendar',
     keywords: [
       'архив выставок', 'календарь выставок', 'график выставок', 'расписание выставок', 'выставки 2026',
@@ -82,7 +82,7 @@ export const SITE_NAVIGATION_ROUTES: NavigationRouteItem[] = [
     id: 'shows-judges',
     title: 'Судьи выставок РКФ',
     subtitle: 'Эксперты РКФ и статистика судейства в рингах',
-    to: '/shows/judges/',
+    to: '/shows/judges/2026/',
     icon: 'club',
     keywords: [
       'судьи выставок', 'эксперты ркф', 'судья выставки', 'ринговые судьи',
@@ -93,7 +93,7 @@ export const SITE_NAVIGATION_ROUTES: NavigationRouteItem[] = [
     id: 'donino-records',
     title: 'Рекорды Донино',
     subtitle: 'База замеров скорости радаром (км/ч), бегов на 350 м и статистика пород',
-    to: '/speed-records/',
+    to: '/speed-records/2026/',
     icon: 'speed',
     keywords: [
       'донино', 'донин', 'рекорды', 'замер скорости', 'скорость', 'радар', 'км/ч',

@@ -16,7 +16,7 @@ const DEFAULT_TABS: Record<NavSection, string> = {
   guide: 'titles',
 }
 
-const DEFAULT_DONINO_PATH = '/speed-records/?tab=records'
+const DEFAULT_DONINO_PATH = `/speed-records/${DEFAULT_ACTIVE_SEASON}/`
 
 const VALID_DONINO_PREFIXES = [
   '/speed-records',
@@ -78,7 +78,7 @@ export function getSectionLink(section: NavSection): string {
   if (tab === 'builder') {
     return '/protocol-builder/'
   }
-  return `/${section}/${tab}/`
+  return `/${section}/${tab}/${DEFAULT_ACTIVE_SEASON}/`
 }
 
 /**

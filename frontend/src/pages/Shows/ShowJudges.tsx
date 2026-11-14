@@ -1,5 +1,5 @@
-import { useState, useEffect, useMemo, useRef } from 'react'
-import { useSearchParams } from 'react-router-dom'
+import { useState, useEffect, useMemo, useRef, useCallback } from 'react'
+import { useSearchParams, useNavigate, useParams, useLocation } from 'react-router-dom'
 import ShowJudgeCard from '../../components/ShowJudgeCard'
 import { initialSeasonYearFilter, resolveActiveSeason } from '../../lib/season'
 import { useShowJudges, useShowJudgesPage0, useShowBreedAliases } from '../../hooks/useStaticData'
@@ -52,12 +52,30 @@ function formatJudgesCount(count: number): string {
   return `${count.toLocaleString('ru-RU')} судей`
 }
 
-export default function ShowJudges() {
+interface ShowJudgesProps {
+  urlYear?: string
+}
+
+export default function ShowJudges({ urlYear }: ShowJudgesProps = {}) {
+  const { year: routeYearParam } = useParams<{ year?: string }>()
+  const routeYear = urlYear ?? routeYearParam
+  const location = useLocation()
+  const navigate = useNavigate()
   const [searchParams] = useSearchParams()
   const [searchQuery, setSearchQuery] = useState('')
-  const [filterYear, setFilterYear] = useState(() =>
-    initialSeasonYearFilter(searchParams, SHOW_JUDGES_ACTIVE_SEASON),
-  )
+  const [filterYear, setFilterYear] = useState(() => {
+    if (routeYear !== undefined) {
+      return routeYear === 'all' ? '' : routeYear
+    }
+    return initialSeasonYearFilter(searchParams, SHOW_JUDGES_ACTIVE_SEASON)
+  })
+
+  useEffect(() => {
+    if (routeYear !== undefined) {
+      const target = routeYear === 'all' ? '' : routeYear
+      setFilterYear((prev) => (prev !== target ? target : prev))
+    }
+  }, [routeYear])
   const [filterBreed, setFilterBreed] = useState('')
   const [sortKey, setSortKey] = useState<ShowJudgeSortKey>('exhibitions')
   const [visibleCount, setVisibleCount] = useState(20)
@@ -251,12 +269,22 @@ export default function ShowJudges() {
 
   const isYearNonDefault = filterYear !== '' && filterYear !== SHOW_JUDGES_ACTIVE_SEASON
 
-  const handleResetFilters = () => {
+  const handleYearChange = useCallback((newYear: string) => {
+    setFilterYear(newYear)
+    const targetSlug = newYear === '' ? 'all' : newYear
+    const nextParams = new URLSearchParams(searchParams)
+    nextParams.delete('year')
+    const qs = nextParams.toString()
+    navigate(`/shows/judges/${targetSlug}/${qs ? '?' + qs : ''}`)
+  }, [navigate, searchParams])
+
+  const handleResetFilters = useCallback(() => {
     setFilterYear(SHOW_JUDGES_ACTIVE_SEASON)
     setFilterBreed('')
     setSearchQuery('')
     setSortKey('exhibitions')
-  }
+    navigate(`/shows/judges/${SHOW_JUDGES_ACTIVE_SEASON}/`)
+  }, [navigate])
 
   const handleSelectBreed = (breed: string) => {
     setFilterBreed(breed)
@@ -318,7 +346,7 @@ export default function ShowJudges() {
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
         filterYear={filterYear}
-        setFilterYear={setFilterYear}
+        setFilterYear={handleYearChange}
         showYears={SHOW_YEARS}
         isYearNonDefault={isYearNonDefault}
         availableBreeds={availableBreeds}

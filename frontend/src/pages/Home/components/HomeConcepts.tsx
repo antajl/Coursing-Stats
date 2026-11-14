@@ -32,10 +32,14 @@ export function ConceptSymmetricFinal({ stats, showStats }: HomeConceptsProps) {
           <Layers className="w-3.5 h-3.5 text-camel-700" aria-hidden />
           <span>База данных и реестр</span>
         </span>
-        <span className="text-[11px] font-medium text-charcoal-600 flex items-center gap-1">
+        <Link
+          to="/breeds/"
+          className="text-[11px] font-semibold text-camel-800 hover:text-camel-950 flex items-center gap-1 transition-colors hover:underline"
+          title="Каталог пород и персональные хабы"
+        >
           <ShieldCheck className="w-3 h-3 text-camel-700" aria-hidden />
-          <span>Россия · 240+ пород</span>
-        </span>
+          <span>83 породы & хабы →</span>
+        </Link>
       </div>
 
       {/* 2. ТЕЛО КАРТОЧКИ: Точно совпадает по высоте и стилю с левыми колонками (.home-v2-col) */}
@@ -135,25 +139,34 @@ export function ConceptSymmetricFinal({ stats, showStats }: HomeConceptsProps) {
         </div>
 
         {/* 3. НИЖНЯЯ СТРОКА: Статус архива и кнопки прямого перехода (нижний срез карточки) */}
-        <div className="home-v2-stats-cockpit-footer h-[36px] 2xl:h-[38px] px-3 bg-cream-50/70 border-t border-old-money-200/70 flex items-center justify-between gap-2 shrink-0 box-border">
-          <span className="text-[10px] 2xl:text-[10.5px] text-charcoal-600 font-medium flex items-center gap-1 shrink-0">
+        <div className="home-v2-stats-cockpit-footer h-[36px] 2xl:h-[38px] px-2.5 2xl:px-3 bg-cream-50/70 border-t border-old-money-200/70 flex items-center justify-between gap-1.5 shrink-0 box-border">
+          <span className="text-[9.5px] 2xl:text-[10.5px] text-charcoal-600 font-medium flex items-center gap-1 shrink-0 truncate">
             <Sparkles className="w-3 h-3 text-camel-600 shrink-0" aria-hidden />
-            <span>Архивы и протоколы</span>
+            <span className="hidden xl:inline">Архивы и протоколы</span>
+            <span className="xl:hidden">Архивы</span>
           </span>
-          <div className="flex items-center gap-1.5 shrink-0">
+          <div className="flex items-center gap-1 shrink-0">
             <Link
-              to="/competitions/"
-              className="cs-glass-pill-active px-2.5 py-0.5 rounded-full text-[10.5px] font-semibold flex items-center gap-1"
+              to="/competitions/ranking/2026/"
+              className="cs-glass-pill-active px-2 2xl:px-2.5 py-0.5 rounded-full text-[10px] 2xl:text-[10.5px] font-semibold flex items-center gap-0.5"
             >
               <span>Спорт</span>
               <ArrowRight className="w-2.5 h-2.5 text-camel-700" aria-hidden />
             </Link>
             <Link
-              to="/shows/"
-              className="cs-glass-pill px-2.5 py-0.5 rounded-full text-[10.5px] font-semibold flex items-center gap-1"
+              to="/shows/ranking/2026/"
+              className="cs-glass-pill px-2 2xl:px-2.5 py-0.5 rounded-full text-[10px] 2xl:text-[10.5px] font-semibold flex items-center gap-0.5"
             >
               <span>Выставки</span>
               <ArrowRight className="w-2.5 h-2.5 text-old-money-600" aria-hidden />
+            </Link>
+            <Link
+              to="/breeds/"
+              className="cs-glass-pill px-2 2xl:px-2.5 py-0.5 rounded-full text-[10px] 2xl:text-[10.5px] font-semibold flex items-center gap-0.5 hover:border-camel-400 hover:text-camel-900"
+              title="Каталог всех 83 пород и персональные хабы"
+            >
+              <span>Породы</span>
+              <ArrowRight className="w-2.5 h-2.5 text-camel-700" aria-hidden />
             </Link>
           </div>
         </div>
