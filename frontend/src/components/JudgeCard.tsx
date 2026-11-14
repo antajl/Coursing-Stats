@@ -94,7 +94,7 @@ export default function JudgeCard({
 
       {/* 2. Центральный блок: ФИО, строгость, стаж, дисциплины и топ-породы */}
       <div className="min-w-0 flex-1 flex flex-col justify-center gap-1 sm:gap-1.5 py-0.5">
-        {/* Строка 1: Имя + Строгость + Стаж */}
+        {/* Строка 1: Имя + Строгость + Стаж и забеги */}
         <div className="flex flex-wrap items-center gap-1.5 min-w-0">
           <h3 className="text-xs sm:text-sm 2xl:text-[15px] font-bold leading-snug text-charcoal-900 group-hover:text-camel-800 transition-colors truncate">
             {displayName}
@@ -111,54 +111,76 @@ export default function JudgeCard({
           {judge.years_active && (
             <span
               className="hidden sm:inline-flex items-center rounded-md border border-old-money-200/60 bg-cream-100/70 px-1.5 py-0.5 text-[9.5px] font-medium text-charcoal-600 shrink-0"
-              title="Период судейской практики в официальных протоколах"
+              title="Период судейской практики и общее количество забегов"
             >
-              {judge.years_active} гг.
+              <span>{judge.years_active} гг.</span>
+              {typeof judge.total_evaluations_count === 'number' && judge.total_evaluations_count > 0 && (
+                <span className="text-charcoal-400 ml-1">
+                  · {judge.total_evaluations_count.toLocaleString('ru-RU')} забегов
+                </span>
+              )}
             </span>
           )}
         </div>
 
-        {/* Строка 2: Дисциплины судейства + Топ пород */}
-        <div className="flex flex-wrap items-center gap-1.5 min-w-0">
-          {/* Плашки дисциплин (Курсинг, БЗМП, Рейсинг) */}
-          {judgeDisciplines.map((disc) => {
-            const tag = DISCIPLINE_TAGS[disc]
-            if (!tag) return null
-            return (
-              <span
-                key={disc}
-                className={`inline-flex items-center px-1.5 py-0.25 rounded text-[9.5px] sm:text-[10px] font-semibold border ${tag.badgeClass} shrink-0`}
-              >
-                {tag.label}
-              </span>
-            )
-          })}
-
-          {/* Топ судимых пород */}
-          {chips.length > 0 && (
-            <div className="flex items-center gap-1 min-w-0 overflow-hidden">
-              {chips.map((breed) => (
-                <span
-                  key={breed}
-                  className="max-w-[8.5rem] sm:max-w-[11rem] truncate rounded-md border border-old-money-200/70 bg-cream-50/90 px-1.5 py-0.25 text-[9.5px] sm:text-[10px] font-medium text-charcoal-700 shrink-0"
-                >
-                  {formatBreedSentenceCase(breed)}
-                </span>
-              ))}
-              {extraBreeds > 0 && (
-                <span className="text-[9.5px] sm:text-[10px] tabular-nums text-charcoal-400 shrink-0">
-                  +{extraBreeds}
-                </span>
-              )}
+        {/* Строка 2: Дисциплины судейства и Топ судимых пород с четким разграничением */}
+        <div className="flex flex-wrap items-center gap-y-1 gap-x-2 min-w-0 text-[10px]">
+          {/* Группа дисциплин */}
+          <div className="inline-flex items-center gap-1 shrink-0">
+            <span className="text-[9px] sm:text-[9.5px] uppercase font-bold tracking-wider text-charcoal-400 select-none">
+              Дисциплины:
+            </span>
+            <div className="inline-flex items-center gap-1">
+              {judgeDisciplines.map((disc) => {
+                const tag = DISCIPLINE_TAGS[disc]
+                if (!tag) return null
+                return (
+                  <span
+                    key={disc}
+                    className={`inline-flex items-center px-1.5 py-0.25 rounded text-[9.5px] sm:text-[10px] font-semibold border ${tag.badgeClass} shrink-0`}
+                  >
+                    {tag.label}
+                  </span>
+                )
+              })}
             </div>
+          </div>
+
+          {/* Вертикальный разделитель между дисциплинами и породами */}
+          {chips.length > 0 && (
+            <span
+              className="hidden sm:inline-block h-3.5 w-px bg-old-money-300/80 mx-0.5 shrink-0"
+              aria-hidden="true"
+            />
           )}
 
-          {/* Мобильная сводка турниров/собак */}
-          <div className="sm:hidden flex items-center gap-1 text-[10px] text-charcoal-500 shrink-0 ml-auto">
-            <span>{judge.unique_events || 0} сост.</span>
-            <span>·</span>
-            <span>{judge.unique_dogs || 0} соб.</span>
-          </div>
+          {/* Группа пород */}
+          {chips.length > 0 && (
+            <div className="inline-flex items-center gap-1 min-w-0">
+              <span className="text-[9px] sm:text-[9.5px] uppercase font-bold tracking-wider text-charcoal-400 select-none shrink-0">
+                Породы:
+              </span>
+              <div className="inline-flex items-center gap-1 min-w-0 overflow-hidden">
+                {chips.map((breed) => (
+                  <span
+                    key={breed}
+                    className="max-w-[7.5rem] sm:max-w-[10.5rem] truncate rounded-md border border-old-money-200/70 bg-cream-50/90 px-1.5 py-0.25 text-[9.5px] sm:text-[10px] font-medium text-charcoal-700 shrink-0"
+                    title={formatBreedSentenceCase(breed)}
+                  >
+                    {formatBreedSentenceCase(breed)}
+                  </span>
+                ))}
+                {extraBreeds > 0 && (
+                  <span
+                    className="text-[9.5px] sm:text-[10px] font-medium tabular-nums text-charcoal-400 shrink-0"
+                    title={`Еще ${extraBreeds} пород`}
+                  >
+                    +{extraBreeds}
+                  </span>
+                )}
+              </div>
+            </div>
+          )}
         </div>
       </div>
 
@@ -166,27 +188,36 @@ export default function JudgeCard({
       <div className="shrink-0 flex items-center gap-2 sm:gap-3 border-l border-old-money-200/40 pl-2.5 sm:pl-3.5 ml-2 sm:ml-3">
         {/* Десктопные плашки метрик (>= sm) */}
         <div className="hidden sm:flex items-center gap-2">
-          {/* Забегов */}
-          <div className="flex flex-col items-center justify-center min-w-[4.25rem] rounded-xl bg-cream-100/90 border border-old-money-200/60 px-2.5 py-1 text-center group-hover:bg-white group-hover:border-camel-300 transition-colors">
-            <span className="text-[9px] uppercase tracking-wider text-charcoal-500 font-medium">Забегов</span>
+          {/* Турниров */}
+          <div
+            className="flex flex-col items-center justify-center min-w-[4.25rem] rounded-xl bg-cream-100/90 border border-old-money-200/60 px-2.5 py-1 text-center group-hover:bg-white group-hover:border-camel-300 transition-colors"
+            title={`${judge.unique_events || 0} турниров в официальных протоколах`}
+          >
+            <span className="text-[9px] uppercase tracking-wider text-charcoal-500 font-medium">Турниров</span>
             <span className="text-sm font-bold tabular-nums text-charcoal-900">
-              {(judge.total_evaluations_count || 0).toLocaleString('ru-RU')}
+              {judge.unique_events || 0}
+            </span>
+          </div>
+
+          {/* Собак */}
+          <div
+            className="flex flex-col items-center justify-center min-w-[4.25rem] rounded-xl bg-cream-100/90 border border-old-money-200/60 px-2.5 py-1 text-center group-hover:bg-white group-hover:border-camel-300 transition-colors"
+            title={`${(judge.unique_dogs || 0).toLocaleString('ru-RU')} уникальных собак`}
+          >
+            <span className="text-[9px] uppercase tracking-wider text-charcoal-500 font-medium">Собак</span>
+            <span className="text-sm font-bold tabular-nums text-camel-800">
+              {(judge.unique_dogs || 0).toLocaleString('ru-RU')}
             </span>
           </div>
 
           {/* Ср. балл */}
-          <div className="flex flex-col items-center justify-center min-w-[4.25rem] rounded-xl bg-cream-100/90 border border-old-money-200/60 px-2.5 py-1 text-center group-hover:bg-white group-hover:border-camel-300 transition-colors">
+          <div
+            className="flex flex-col items-center justify-center min-w-[4.25rem] rounded-xl bg-cream-100/90 border border-old-money-200/60 px-2.5 py-1 text-center group-hover:bg-white group-hover:border-camel-300 transition-colors"
+            title={strictness.detail}
+          >
             <span className="text-[9px] uppercase tracking-wider text-charcoal-500 font-medium">Ср. балл</span>
             <span className={`text-sm font-bold tabular-nums ${strictness.textClass}`}>
               {score100}
-            </span>
-          </div>
-
-          {/* Турниров */}
-          <div className="flex flex-col items-center justify-center min-w-[4rem] rounded-xl bg-cream-100/90 border border-old-money-200/60 px-2.5 py-1 text-center group-hover:bg-white group-hover:border-camel-300 transition-colors">
-            <span className="text-[9px] uppercase tracking-wider text-charcoal-500 font-medium">Турниров</span>
-            <span className="text-sm font-bold tabular-nums text-camel-800">
-              {judge.unique_events || 0}
             </span>
           </div>
         </div>
@@ -194,9 +225,15 @@ export default function JudgeCard({
         {/* Мобильный вертикальный стек (< sm) */}
         <div className="flex sm:hidden flex-col items-end justify-center gap-0.5 min-w-[4.5rem]">
           <div className="flex items-center gap-1 text-[11px] leading-tight">
-            <span className="text-[9.5px] text-charcoal-500 font-normal">Забегов:</span>
+            <span className="text-[9.5px] text-charcoal-500 font-normal">Турниров:</span>
             <strong className="font-bold tabular-nums text-charcoal-900 text-xs">
-              {(judge.total_evaluations_count || 0).toLocaleString('ru-RU')}
+              {judge.unique_events || 0}
+            </strong>
+          </div>
+          <div className="flex items-center gap-1 text-[11px] leading-tight">
+            <span className="text-[9.5px] text-charcoal-500 font-normal">Собак:</span>
+            <strong className="font-bold tabular-nums text-camel-800 text-xs">
+              {(judge.unique_dogs || 0).toLocaleString('ru-RU')}
             </strong>
           </div>
           <div className="flex items-center gap-1 text-[11px] leading-tight">
