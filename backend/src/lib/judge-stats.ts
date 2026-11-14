@@ -6,7 +6,9 @@ export interface JudgeStats {
   total_evaluations: number;
   scores: number[];
   breeds: Set<string>;
+  breedCounts: Map<string, number>;
   disciplines: Set<string>;
+  years: Set<number>;
   events: Set<number>;
   dogs: Set<string | number>;
 }
@@ -71,7 +73,9 @@ export function aggregateJudgeStats(results: any[]): Map<string, JudgeStats> {
                 total_evaluations: 0,
                 scores: [],
                 breeds: new Set(),
+                breedCounts: new Map(),
                 disciplines: new Set(),
+                years: new Set(),
                 events: new Set(),
                 dogs: new Set(),
               });
@@ -83,8 +87,18 @@ export function aggregateJudgeStats(results: any[]): Map<string, JudgeStats> {
               if (validScores.length > 0) {
                 stats.total_evaluations += validScores.length;
                 stats.scores.push(...validScores);
-                if (row.breed) stats.breeds.add(canonicalBreed(row.breed));
-                stats.disciplines.add(row.event_type);
+                if (row.breed) {
+                  const canon = canonicalBreed(row.breed);
+                  if (canon) {
+                    stats.breeds.add(canon);
+                    stats.breedCounts.set(canon, (stats.breedCounts.get(canon) || 0) + validScores.length);
+                  }
+                }
+                if (row.event_type) stats.disciplines.add(row.event_type);
+                if (row.date_start) {
+                  const y = parseInt(row.date_start.slice(0, 4), 10);
+                  if (!isNaN(y)) stats.years.add(y);
+                }
                 stats.events.add(row.event_id);
                 const dogKey =
                   row.dog_id != null
@@ -136,6 +150,19 @@ export function formatJudgesData(judgeStats: Map<string, JudgeStats>): any[] {
       ? validScores.reduce((a: number, b: number) => a + b, 0) / validScores.length
       : null;
 
+    const sortedBreeds = Array.from(stats.breedCounts.entries())
+      .sort((a, b) => b[1] - a[1])
+      .map(([b]) => b);
+    const sortedYears = Array.from(stats.years).sort((a, b) => a - b);
+    const firstYear = sortedYears[0];
+    const lastYear = sortedYears[sortedYears.length - 1];
+    const yearsActive =
+      firstYear && lastYear
+        ? firstYear === lastYear
+          ? `${firstYear}`
+          : `${firstYear}–${lastYear}`
+        : undefined;
+
     judgesData.push({
       id: name,
       name: stats.name,
@@ -146,6 +173,11 @@ export function formatJudgesData(judgeStats: Map<string, JudgeStats>): any[] {
       unique_disciplines: stats.disciplines.size,
       unique_events: stats.events.size,
       unique_dogs: stats.dogs.size,
+      top_breeds: sortedBreeds.slice(0, 3),
+      disciplines: Array.from(stats.disciplines),
+      first_year: firstYear,
+      last_year: lastYear,
+      years_active: yearsActive,
     });
   }
 
