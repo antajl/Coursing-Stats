@@ -22,13 +22,12 @@ function SpeedRecords() {
   const isBaseRoute = location.pathname === '/speed-records' || location.pathname === '/speed-records/'
   if (isBaseRoute) {
     const rawYear = searchParams.get('year') ?? searchParams.get('years')
-    if (rawYear) {
-      const next = new URLSearchParams(searchParams)
-      next.delete('year')
-      next.delete('years')
-      const qs = next.toString()
-      return <Navigate to={`/speed-records/${rawYear}/${qs ? '?' + qs : ''}`} replace />
-    }
+    const targetYear = rawYear || '2026'
+    const next = new URLSearchParams(searchParams)
+    next.delete('year')
+    next.delete('years')
+    const qs = next.toString()
+    return <Navigate to={`/speed-records/${targetYear}/${qs ? '?' + qs : ''}`} replace />
   }
 
   useEffect(() => {
