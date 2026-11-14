@@ -202,13 +202,23 @@ export default function Judges({ urlYear }: JudgesProps = {}) {
   const isYearNonDefault = filterYear !== '' && filterYear !== activeSeason
   const hasActiveFilters = Boolean(isYearNonDefault || filterBreed || filterDiscipline || searchQuery)
 
-  const clearFilters = () => {
+  const handleYearChange = useCallback((newYear: string) => {
+    setFilterYear(newYear)
+    const targetSlug = newYear === '' ? 'all' : newYear
+    const nextParams = new URLSearchParams(searchParams)
+    nextParams.delete('year')
+    const qs = nextParams.toString()
+    navigate(`/competitions/judges/${targetSlug}/${qs ? '?' + qs : ''}`)
+  }, [navigate, searchParams])
+
+  const clearFilters = useCallback(() => {
     setSearchQuery('')
     setFilterYear(activeSeason)
     setFilterBreed('')
     setFilterDiscipline('')
     setSortKey('evaluations')
-  }
+    navigate(`/competitions/judges/${activeSeason}/`)
+  }, [activeSeason, navigate])
 
   const plaqueTitle = useMemo(() => {
     const parts: string[] = ['Судьи соревнований']
@@ -262,7 +272,7 @@ export default function Judges({ urlYear }: JudgesProps = {}) {
           searchQuery={searchQuery}
           setSearchQuery={setSearchQuery}
           filterYear={filterYear}
-          setFilterYear={setFilterYear}
+          setFilterYear={handleYearChange}
           availableYears={availableYears}
           isYearNonDefault={isYearNonDefault}
           filterBreed={filterBreed}
