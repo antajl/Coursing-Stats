@@ -156,21 +156,9 @@ export default function ShowCalendar({ urlYear }: ShowCalendarProps = {}) {
         let changed = false
         const params = new URLSearchParams(prev)
 
-        if (!location.pathname.startsWith('/shows/archive')) {
-          if (targetYear !== null) {
-            if (currentYear !== targetYear) {
-              params.set('year', targetYear)
-              changed = true
-            }
-          } else if (currentYear) {
-            params.delete('year')
-            changed = true
-          }
-        } else {
-          if (params.has('year')) {
-            params.delete('year')
-            changed = true
-          }
+        if (params.has('year')) {
+          params.delete('year')
+          changed = true
         }
 
         if (targetMonth !== null) {
@@ -231,9 +219,14 @@ export default function ShowCalendar({ urlYear }: ShowCalendarProps = {}) {
       setFilterCity(cityFromUrl)
     }
 
-    const yearFromUrl = searchParams.get('year') || CURRENT_YEAR
-    if (yearFromUrl !== filterYear) {
-      setFilterYear(yearFromUrl)
+    if (routeYear === undefined) {
+      const yearFromUrl = searchParams.get('year')
+      if (yearFromUrl !== null) {
+        const targetYear = yearFromUrl === 'all' ? '' : yearFromUrl
+        if (targetYear !== filterYear) {
+          setFilterYear(targetYear)
+        }
+      }
     }
 
     const monthFromUrl = searchParams.get('month') || ''
@@ -245,7 +238,7 @@ export default function ShowCalendar({ urlYear }: ShowCalendarProps = {}) {
     if (searchFromUrl !== searchQuery) {
       setSearchQuery(searchFromUrl)
     }
-  }, [searchParams])
+  }, [searchParams, routeYear])
 
   useEffect(() => {
     setExpandedKeys(new Set())
@@ -437,14 +430,12 @@ export default function ShowCalendar({ urlYear }: ShowCalendarProps = {}) {
 
   const handleYearChange = useCallback((newYear: string) => {
     setFilterYear(newYear)
-    if (location.pathname.startsWith('/shows/archive')) {
-      const targetSlug = newYear === '' ? 'all' : newYear
-      const nextParams = new URLSearchParams(searchParams)
-      nextParams.delete('year')
-      const qs = nextParams.toString()
-      navigate(`/shows/archive/${targetSlug}/${qs ? '?' + qs : ''}`)
-    }
-  }, [location.pathname, navigate, searchParams])
+    const targetSlug = newYear === '' ? 'all' : newYear
+    const nextParams = new URLSearchParams(searchParams)
+    nextParams.delete('year')
+    const qs = nextParams.toString()
+    navigate(`/shows/archive/${targetSlug}/${qs ? '?' + qs : ''}`)
+  }, [navigate, searchParams])
 
   const availableMonths = useMemo(() => {
     if (monthsWithData.length === 0) return undefined

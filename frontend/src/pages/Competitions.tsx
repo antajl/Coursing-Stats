@@ -30,19 +30,39 @@ function Competitions({ defaultTab }: CompetitionsProps) {
   const currentHash = typeof window !== 'undefined' ? window.location.hash : ''
   const hashKey = currentHash.replace(/^#/, '')
 
-  if (!rawTabParam) {
-    let targetTab = getLastSectionTab('competitions')
+  const isBaseRoute = location.pathname === '/competitions' || location.pathname === '/competitions/'
+
+  if (isBaseRoute) {
+    let targetTab = rawTabParam || getLastSectionTab('competitions')
     if (hashKey === 'calendar' || hashKey === 'archive') {
       targetTab = 'archive'
     } else if (hashKey === 'ranking' || hashKey === 'leaders') {
       targetTab = 'ranking'
     } else if (hashKey === 'judges') {
       targetTab = 'judges'
+    } else if (targetTab === 'calendar') {
+      targetTab = 'archive'
     }
-    const next = new URLSearchParams(searchParams)
-    next.delete('tab')
-    const qs = next.toString()
-    redirectPath = `/competitions/${targetTab}/${qs ? '?' + qs : ''}${currentHash}`
+
+    if (targetTab === 'builder' || targetTab === 'protocol-builder') {
+      redirectPath = isLocalDev ? '/protocol-builder/' : `/competitions/ranking/${currentHash}`
+    } else if (!calendarVisible && targetTab === 'archive') {
+      targetTab = 'ranking'
+    }
+
+    if (!redirectPath) {
+      const queryYear = searchParams.get('year')
+      const next = new URLSearchParams(searchParams)
+      next.delete('tab')
+      next.delete('year')
+      const qs = next.toString()
+      const queryPart = qs ? `?${qs}` : ''
+      if (queryYear) {
+        redirectPath = `/competitions/${targetTab}/${queryYear}/${queryPart}${currentHash}`
+      } else {
+        redirectPath = `/competitions/${targetTab}/${queryPart}${currentHash}`
+      }
+    }
   } else if (rawTabParam === 'calendar') {
     redirectPath = `/competitions/archive/${currentHash}`
   } else if (rawTabParam === 'builder' || rawTabParam === 'protocol-builder') {

@@ -1,5 +1,5 @@
 import { useMemo, useEffect } from 'react'
-import { useSearchParams, useNavigate, useParams } from 'react-router-dom'
+import { useSearchParams, useNavigate, useParams, useLocation, Navigate } from 'react-router-dom'
 import { SEO } from '../../components/SEO'
 import DoninoAttribution from '../../components/DoninoAttribution'
 import { useYandexGoal } from '../../components/YandexMetrica'
@@ -13,10 +13,23 @@ import { setLastDoninoPath } from '../../lib/navState'
 function SpeedRecords() {
   const [searchParams] = useSearchParams()
   const navigate = useNavigate()
+  const location = useLocation()
   const rawTab = searchParams.get('tab')
   const rawView = searchParams.get('view')
   const page = useSpeedRecordsPage()
   const { reachGoal } = useYandexGoal()
+
+  const isBaseRoute = location.pathname === '/speed-records' || location.pathname === '/speed-records/'
+  if (isBaseRoute) {
+    const rawYear = searchParams.get('year') ?? searchParams.get('years')
+    if (rawYear) {
+      const next = new URLSearchParams(searchParams)
+      next.delete('year')
+      next.delete('years')
+      const qs = next.toString()
+      return <Navigate to={`/speed-records/${rawYear}/${qs ? '?' + qs : ''}`} replace />
+    }
+  }
 
   useEffect(() => {
     if (rawTab === 'stats' || rawView === 'stats') {

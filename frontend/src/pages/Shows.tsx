@@ -30,23 +30,42 @@ function Shows({ defaultTab }: ShowsProps) {
   const currentHash = typeof window !== 'undefined' ? window.location.hash : ''
   const hashKey = currentHash.replace(/^#/, '')
 
-  let redirectTab: string | null = null
-  if (!rawTabParam) {
-    let target = getLastSectionTab('shows')
+  let redirectPath: string | null = null
+  const isBaseRoute = location.pathname === '/shows' || location.pathname === '/shows/'
+
+  if (isBaseRoute) {
+    let targetTab = rawTabParam || getLastSectionTab('shows')
     if (hashKey === 'calendar' || hashKey === 'archive') {
-      target = 'archive'
-    } else if (hashKey === 'judges') {
-      target = 'judges'
+      targetTab = 'archive'
     } else if (hashKey === 'ranking' || hashKey === 'champions') {
-      target = 'ranking'
+      targetTab = 'ranking'
+    } else if (hashKey === 'judges') {
+      targetTab = 'judges'
+    } else if (targetTab === 'calendar' || targetTab === 'champions') {
+      targetTab = targetTab === 'calendar' ? 'archive' : 'ranking'
     }
-    redirectTab = target
+
+    if (!calendarVisible && targetTab === 'archive') {
+      targetTab = 'ranking'
+    }
+
+    const queryYear = searchParams.get('year')
+    const next = new URLSearchParams(searchParams)
+    next.delete('tab')
+    next.delete('year')
+    const qs = next.toString()
+    const queryPart = qs ? `?${qs}` : ''
+    if (queryYear) {
+      redirectPath = `/shows/${targetTab}/${queryYear}/${queryPart}${currentHash}`
+    } else {
+      redirectPath = `/shows/${targetTab}/${queryPart}${currentHash}`
+    }
   } else if (rawTab === 'champions') {
-    redirectTab = 'ranking'
+    redirectPath = `/shows/ranking/${currentHash}`
   } else if (rawTab === 'calendar') {
-    redirectTab = 'archive'
+    redirectPath = `/shows/archive/${currentHash}`
   } else if (!calendarVisible && rawTab === 'archive') {
-    redirectTab = 'ranking'
+    redirectPath = `/shows/ranking/${currentHash}`
   }
 
   const resolvedTab =
@@ -78,10 +97,10 @@ function Shows({ defaultTab }: ShowsProps) {
   }, [])
 
   useEffect(() => {
-    if (!redirectTab) {
+    if (!redirectPath) {
       setLastSectionTab('shows', activeTab)
     }
-  }, [activeTab, redirectTab])
+  }, [activeTab, redirectPath])
 
   // Clear loading bar shortly after new tab mounts
   useEffect(() => {
@@ -117,8 +136,8 @@ function Shows({ defaultTab }: ShowsProps) {
     }
   }, [activeTab, visitedTabs, navigate, searchParams, routeYear])
 
-  if (redirectTab) {
-    return <Navigate to={`/shows/${redirectTab}/${currentHash}`} replace />
+  if (redirectPath) {
+    return <Navigate to={redirectPath} replace />
   }
 
   const isVisited = (tabId: string) => visitedTabs.has(tabId) || activeTab === tabId

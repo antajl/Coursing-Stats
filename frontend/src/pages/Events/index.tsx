@@ -121,13 +121,11 @@ export default function Events({ urlYear }: EventsProps = {}) {
       navigate('/competitions/archive/2027/')
       return
     }
-    if (location.pathname.startsWith('/competitions/archive')) {
-      const targetSlug = newYear === '' ? 'all' : newYear
-      const nextParams = new URLSearchParams(searchParams)
-      nextParams.delete('year')
-      const qs = nextParams.toString()
-      navigate(`/competitions/archive/${targetSlug}/${qs ? '?' + qs : ''}`)
-    }
+    const targetSlug = newYear === '' ? 'all' : newYear
+    const nextParams = new URLSearchParams(searchParams)
+    nextParams.delete('year')
+    const qs = nextParams.toString()
+    navigate(`/competitions/archive/${targetSlug}/${qs ? "?" + qs : ""}`)
   }
 
   const handleResetFilters = () => {
@@ -136,51 +134,108 @@ export default function Events({ urlYear }: EventsProps = {}) {
     setFilterDiscipline('')
     setFilterWithProtocol(false)
     setSearchQuery('')
-    if (location.pathname.startsWith('/competitions/archive')) {
-      navigate('/competitions/archive/')
-    }
+    navigate('/competitions/archive/')
   }
 
   useEffect(() => {
     setSearchParams(
       (prev) => {
+        let changed = false
         const params = new URLSearchParams(prev)
         if (!location.pathname.startsWith('/competitions/archive')) {
-          if (filterYear === '') params.set('year', 'all')
-          else if (filterYear !== CURRENT_SEASON) params.set('year', filterYear)
-          else params.delete('year')
-        } else {
+          if (filterYear === '') {
+            if (params.get('year') !== 'all') {
+              params.set('year', 'all')
+              changed = true
+            }
+          } else if (filterYear !== CURRENT_SEASON) {
+            if (params.get('year') !== filterYear) {
+              params.set('year', filterYear)
+              changed = true
+            }
+          } else if (params.has('year')) {
+            params.delete('year')
+            changed = true
+          }
+        } else if (params.has('year')) {
           params.delete('year')
+          changed = true
         }
-        if (filterMonth) params.set('month', filterMonth)
-        else params.delete('month')
-        if (filterDiscipline) params.set('discipline', filterDiscipline)
-        else params.delete('discipline')
-        if (filterWithProtocol) params.set('protocol', '1')
-        else params.delete('protocol')
-        params.delete('results')
-        params.delete('kind')
-        params.delete('championships')
-        if (searchQuery) params.set('search', searchQuery)
-        else params.delete('search')
-        return params
+
+        if (filterMonth) {
+          if (params.get('month') !== filterMonth) {
+            params.set('month', filterMonth)
+            changed = true
+          }
+        } else if (params.has('month')) {
+          params.delete('month')
+          changed = true
+        }
+
+        if (filterDiscipline) {
+          if (params.get('discipline') !== filterDiscipline) {
+            params.set('discipline', filterDiscipline)
+            changed = true
+          }
+        } else if (params.has('discipline')) {
+          params.delete('discipline')
+          changed = true
+        }
+
+        const hasProtocol = params.get('protocol') === '1'
+        if (filterWithProtocol !== hasProtocol) {
+          if (filterWithProtocol) params.set('protocol', '1')
+          else params.delete('protocol')
+          changed = true
+        }
+
+        if (params.has('results')) {
+          params.delete('results')
+          changed = true
+        }
+        if (params.has('kind')) {
+          params.delete('kind')
+          changed = true
+        }
+        if (params.has('championships')) {
+          params.delete('championships')
+          changed = true
+        }
+
+        const trimmedSearch = searchQuery.trim()
+        if (trimmedSearch) {
+          if (params.get('search') !== trimmedSearch) {
+            params.set('search', trimmedSearch)
+            changed = true
+          }
+        } else if (params.has('search')) {
+          params.delete('search')
+          changed = true
+        }
+
+        return changed ? params : prev
       },
       { replace: true },
     )
   }, [
-    filterYear,
     filterMonth,
     filterDiscipline,
     filterWithProtocol,
     searchQuery,
     setSearchParams,
+    location.pathname,
   ])
 
   // Respond to URL changes (e.g. navigation clicks resetting search params)
   useEffect(() => {
-    const yearFromUrl = initialSeasonYearFilter(searchParams, CURRENT_SEASON)
-    if (yearFromUrl !== filterYear) {
-      setFilterYear(yearFromUrl)
+    if (routeYear === undefined) {
+      const yearFromUrl = searchParams.get('year')
+      if (yearFromUrl !== null) {
+        const targetYear = yearFromUrl === 'all' ? '' : yearFromUrl
+        if (targetYear !== filterYear) {
+          setFilterYear(targetYear)
+        }
+      }
     }
 
     const monthFromUrl = searchParams.get('month') || ''
@@ -202,7 +257,7 @@ export default function Events({ urlYear }: EventsProps = {}) {
     if (searchFromUrl !== searchQuery) {
       setSearchQuery(searchFromUrl)
     }
-  }, [searchParams])
+  }, [searchParams, routeYear])
 
   const filteredEvents = useMemo(() => {
     return events

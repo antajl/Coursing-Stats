@@ -132,26 +132,9 @@ export default function TopDogs({ urlYear }: TopDogsProps = {}) {
         }
 
         // Year
-        if (!location.pathname.startsWith('/competitions/ranking')) {
-          const currentYear = next.get('year')
-          const targetYearParam =
-            filterYear === '' ? 'all' : filterYear !== activeSeason ? filterYear : null
-          if (targetYearParam !== null) {
-            if (currentYear !== targetYearParam) {
-              next.set('year', targetYearParam)
-              changed = true
-            }
-          } else {
-            if (currentYear === 'all' || (currentYear && currentYear !== activeSeason)) {
-              next.delete('year')
-              changed = true
-            }
-          }
-        } else {
-          if (next.has('year')) {
-            next.delete('year')
-            changed = true
-          }
+        if (next.has('year')) {
+          next.delete('year')
+          changed = true
         }
 
         // Search query
@@ -208,14 +191,14 @@ export default function TopDogs({ urlYear }: TopDogsProps = {}) {
       setFilterSex(sexFromUrl)
     }
 
-    const yearFromUrl = searchParams.get('year')
-    if (yearFromUrl !== null) {
-      const targetYear = yearFromUrl === 'all' ? '' : yearFromUrl
-      if (targetYear !== filterYear) {
-        setFilterYear(targetYear)
+    if (routeYear === undefined) {
+      const yearFromUrl = searchParams.get('year')
+      if (yearFromUrl !== null) {
+        const targetYear = yearFromUrl === 'all' ? '' : yearFromUrl
+        if (targetYear !== filterYear) {
+          setFilterYear(targetYear)
+        }
       }
-    } else if (filterYear !== activeSeason) {
-      setFilterYear(activeSeason)
     }
 
     const searchFromUrl = searchParams.get('search') || ''
@@ -291,14 +274,12 @@ export default function TopDogs({ urlYear }: TopDogsProps = {}) {
 
   const handleYearChange = useCallback((newYear: string) => {
     setFilterYear(newYear)
-    if (location.pathname.startsWith('/competitions/ranking')) {
-      const targetSlug = newYear === '' ? 'all' : newYear
-      const nextParams = new URLSearchParams(searchParams)
-      nextParams.delete('year')
-      const qs = nextParams.toString()
-      navigate(`/competitions/ranking/${targetSlug}/${qs ? '?' + qs : ''}`)
-    }
-  }, [location.pathname, navigate, searchParams])
+    const targetSlug = newYear === '' ? 'all' : newYear
+    const nextParams = new URLSearchParams(searchParams)
+    nextParams.delete('year')
+    const qs = nextParams.toString()
+    navigate(`/competitions/ranking/${targetSlug}/${qs ? '?' + qs : ''}`)
+  }, [navigate, searchParams])
 
   const handleResetFilters = useCallback(() => {
     setFilterYear(activeSeason)
@@ -308,10 +289,8 @@ export default function TopDogs({ urlYear }: TopDogsProps = {}) {
     setFilterMinStarts('')
     setFilterScoreFrom('')
     setFilterSpeedFrom('')
-    if (location.pathname.startsWith('/competitions/ranking')) {
-      navigate('/competitions/ranking/')
-    }
-  }, [activeSeason, location.pathname, navigate])
+    navigate('/competitions/ranking/')
+  }, [activeSeason, navigate])
 
   const handleResetPanelFilters = useCallback(() => {
     setFilterYear(activeSeason)
@@ -320,10 +299,8 @@ export default function TopDogs({ urlYear }: TopDogsProps = {}) {
     setFilterMinStarts('')
     setFilterScoreFrom('')
     setFilterSpeedFrom('')
-    if (location.pathname.startsWith('/competitions/ranking')) {
-      navigate('/competitions/ranking/')
-    }
-  }, [activeSeason, location.pathname, navigate])
+    navigate('/competitions/ranking/')
+  }, [activeSeason, navigate])
 
   const [selectedMobileColumn, setSelectedMobileColumn] = useState<'coursing' | 'racing' | null>(null)
   const activeMobileColumn =

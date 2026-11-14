@@ -171,26 +171,9 @@ export default function ShowRanking({ urlYear }: ShowRankingProps = {}) {
         }
 
         // Year
-        if (!location.pathname.startsWith('/shows/ranking')) {
-          const currentYear = next.get('year')
-          const targetYearParam =
-            filterYear === '' ? 'all' : filterYear !== SHOW_ACTIVE_SEASON ? filterYear : null
-          if (targetYearParam !== null) {
-            if (currentYear !== targetYearParam) {
-              next.set('year', targetYearParam)
-              changed = true
-            }
-          } else {
-            if (currentYear === 'all' || (currentYear && currentYear !== SHOW_ACTIVE_SEASON)) {
-              next.delete('year')
-              changed = true
-            }
-          }
-        } else {
-          if (next.has('year')) {
-            next.delete('year')
-            changed = true
-          }
+        if (next.has('year')) {
+          next.delete('year')
+          changed = true
         }
 
         // Search query
@@ -220,21 +203,21 @@ export default function ShowRanking({ urlYear }: ShowRankingProps = {}) {
       setFilterSex(sexFromUrl)
     }
 
-    const yearFromUrl = searchParams.get('year')
-    if (yearFromUrl !== null) {
-      const targetYear = yearFromUrl === 'all' ? '' : yearFromUrl
-      if (targetYear !== filterYear) {
-        setFilterYear(targetYear)
+    if (routeYear === undefined) {
+      const yearFromUrl = searchParams.get('year')
+      if (yearFromUrl !== null) {
+        const targetYear = yearFromUrl === 'all' ? '' : yearFromUrl
+        if (targetYear !== filterYear) {
+          setFilterYear(targetYear)
+        }
       }
-    } else if (filterYear !== SHOW_ACTIVE_SEASON) {
-      setFilterYear(SHOW_ACTIVE_SEASON)
     }
 
     const searchFromUrl = searchParams.get('search') || ''
     if (searchFromUrl !== searchQuery) {
       setSearchQuery(searchFromUrl)
     }
-  }, [searchParams])
+  }, [searchParams, routeYear])
 
   // Single-pass computation of unique breeds and compact dogIndex (avoids allocating 115k objects)
   const { breeds, dogIndex } = useMemo(() => {
@@ -322,24 +305,20 @@ export default function ShowRanking({ urlYear }: ShowRankingProps = {}) {
 
   const handleYearChange = useCallback((newYear: string) => {
     setFilterYear(newYear)
-    if (location.pathname.startsWith('/shows/ranking')) {
-      const targetSlug = newYear === '' ? 'all' : newYear
-      const nextParams = new URLSearchParams(searchParams)
-      nextParams.delete('year')
-      const qs = nextParams.toString()
-      navigate(`/shows/ranking/${targetSlug}/${qs ? '?' + qs : ''}`)
-    }
-  }, [location.pathname, navigate, searchParams])
+    const targetSlug = newYear === '' ? 'all' : newYear
+    const nextParams = new URLSearchParams(searchParams)
+    nextParams.delete('year')
+    const qs = nextParams.toString()
+    navigate(`/shows/ranking/${targetSlug}/${qs ? '?' + qs : ''}`)
+  }, [navigate, searchParams])
 
   const handleResetFilters = useCallback(() => {
     setFilterYear(SHOW_ACTIVE_SEASON)
     setFilterBreed('')
     setFilterSex('')
     setSearchQuery('')
-    if (location.pathname.startsWith('/shows/ranking')) {
-      navigate('/shows/ranking/')
-    }
-  }, [location.pathname, navigate])
+    navigate('/shows/ranking/')
+  }, [navigate])
 
   const showListSkeleton = allDogs.length === 0 && (isPage0Loading || !isPage0Fetched)
   const loadFailed =
