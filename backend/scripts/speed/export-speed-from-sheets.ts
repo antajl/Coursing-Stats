@@ -23,6 +23,9 @@ async function main() {
   // 1. Download from Google Sheets
   console.log('Fetching XLSX from Google Sheets...');
   const response = await fetch(GOOGLE_SHEETS_URL);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch speed sheet: ${response.status} ${response.statusText}`);
+  }
   const arrayBuffer = await response.arrayBuffer();
   const buffer = Buffer.from(arrayBuffer);
   console.log(`XLSX fetched: ${buffer.length} bytes`);
@@ -31,6 +34,13 @@ async function main() {
   const workbook = XLSX.read(buffer, { type: 'buffer', cellStyles: true });
   const parsed = parseSpeedRecordsFromWorkbook(workbook);
   const uniqueRecords = attachSpeedRecordHistory(dedupeSpeedRecords(parsed));
+
+  const MIN_SPEED_RECORDS_THRESHOLD = 150;
+  if (uniqueRecords.length < MIN_SPEED_RECORDS_THRESHOLD) {
+    throw new Error(
+      `Sanity check failed: parsed only ${uniqueRecords.length} speed records (minimum expected: ${MIN_SPEED_RECORDS_THRESHOLD}). Aborting export to protect existing data.`
+    );
+  }
 
   const statusCounts = uniqueRecords.reduce<Record<string, number>>((acc, r) => {
     acc[r.status] = (acc[r.status] || 0) + 1;

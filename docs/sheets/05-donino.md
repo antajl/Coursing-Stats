@@ -66,7 +66,8 @@ verified: 2026-11-08
 - `backend/scripts/speed/parse-speed-xlsx.ts`
 - `backend/scripts/speed/parse-coursing-xlsx.ts`
 - `backend/scripts/speed/match-donino-dog.ts`
-- `.github/workflows/update-speed-records.yml` — **2×/day** (05:00 & 17:00 UTC / 08:00 & 20:00 МСК)
+- `.github/workflows/update-speed-records.yml` — **2×/day** (05:00 & 17:00 UTC / 08:00 & 20:00 МСК) с автоматическим коммитом и прямой синхронизацией в Яндекс S3 CDN (`aws s3 cp data/v1/donino/`)
+- **Sanity checks пороги:** `export-speed-from-sheets.ts` ($\ge 150$) и `export-coursing-from-sheets.ts` ($\ge 180$) прерывают выполнение с ошибкой, предотвращая перезапись базы пустыми/повреждёнными данными при сбоях в Google Sheets.
 
 ## Workflows
 

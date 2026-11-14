@@ -35,13 +35,28 @@ jobs:
         run: npx tsx backend/scripts/speed/export-coursing-from-sheets.ts
 
       - name: Commit updated data files
+        id: commit_data
         run: |
           git config --local user.email "antajl@yandex.ru"
           git config --local user.name "antajl"
           git add data/v1/donino/speed_records.json data/v1/donino/coursing_records.json
           if git diff --staged --quiet; then
             echo "No data changes to commit"
+            echo "has_changes=false" >> $GITHUB_OUTPUT
           else
             git commit -m "Update speed records from Google Sheets"
             git push
+            echo "has_changes=true" >> $GITHUB_OUTPUT
           fi
+
+      - name: Deploy updated records to S3 CDN
+        if: steps.commit_data.outputs.has_changes == 'true'
+        run: |
+          aws s3 cp data/v1/donino/ s3://${{ secrets.S3_BUCKET }}/data/v1/donino/ \
+            --recursive \
+            --endpoint-url https://storage.yandexcloud.net \
+            --acl public-read \
+            --cache-control "public, max-age=3600"
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

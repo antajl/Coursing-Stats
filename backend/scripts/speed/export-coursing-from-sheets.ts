@@ -48,10 +48,18 @@ async function main() {
       allParsed.push(...parsed);
     } catch (err) {
       console.error(`Error processing ${label}:`, err);
+      throw new Error(`Critical error processing ${label}: ${(err as Error).message}. Aborting export to protect existing data.`);
     }
   }
 
   const uniqueRecords = dedupeCoursingRecords(allParsed);
+
+  const MIN_COURSING_RECORDS_THRESHOLD = 180;
+  if (uniqueRecords.length < MIN_COURSING_RECORDS_THRESHOLD) {
+    throw new Error(
+      `Sanity check failed: parsed only ${uniqueRecords.length} coursing records (minimum expected: ${MIN_COURSING_RECORDS_THRESHOLD}). Aborting export to protect existing data.`
+    );
+  }
 
   const statusCounts = uniqueRecords.reduce<Record<string, number>>((acc, r) => {
     acc[r.status] = (acc[r.status] || 0) + 1;
