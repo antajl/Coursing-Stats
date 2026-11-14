@@ -56,7 +56,7 @@ export function DoninoSexDropdown({
               : 'text-charcoal-700 hover:bg-camel-100'
           }`}
         >
-          Любой пол
+          Все
         </button>
         {sexes.map((sex) => {
           const active = filterSexes.includes(sex)
