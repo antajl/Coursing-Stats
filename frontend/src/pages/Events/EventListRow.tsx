@@ -94,7 +94,17 @@ export default function EventListRow({ event }: EventListRowProps) {
     headlineParts.length > 1 ? headlineParts.slice(1).join(' · ') : undefined,
   )
 
-  const rowClassName = `group block border-l-4 ${borderClass} bg-transparent px-3 py-2.5 sm:px-4 sm:py-2.5 transition-colors duration-150 hover:bg-camel-100/60 ${
+  const hasResults =
+    event.has_results !== false &&
+    Boolean(
+      event.has_results ||
+        event.results_file ||
+        (typeof event.result_count === 'number' && event.result_count > 0),
+    )
+
+  const rowClassName = `group block border-l-4 ${borderClass} bg-transparent px-3 py-2.5 sm:px-4 sm:py-2.5 transition-colors duration-150 ${
+    hasResults ? 'hover:bg-camel-100/60 cursor-pointer' : ''
+  } ${
     cancelled ? 'opacity-70 bg-charcoal-50/40' : ''
   } ${
     important
@@ -102,12 +112,8 @@ export default function EventListRow({ event }: EventListRowProps) {
       : ''
   }`
 
-  return (
-    <ProcoursingEventLink
-      eventId={event.id}
-      procoursingUrl={procoursingUrl}
-      className={rowClassName}
-    >
+  const rowContent = (
+    <>
       <div className="grid grid-cols-[auto_minmax(0,1fr)] sm:grid-cols-[auto_minmax(0,1.2fr)_minmax(0,1fr)_auto] items-center gap-3 sm:gap-4">
         {/* Колонка 1: Календарный блок даты с идеальным оптическим центрированием */}
         <div className="flex flex-col items-center justify-center rounded-lg bg-cream-50/90 border border-old-money-200/80 px-1.5 w-[3.7rem] sm:w-[4.1rem] py-1.5 shrink-0 text-center shadow-2xs gap-0.5">
@@ -245,10 +251,16 @@ export default function EventListRow({ event }: EventListRowProps) {
               <span className="h-5.5" />
             )}
 
-            <span className="inline-flex items-center gap-0.5 text-xs font-semibold text-camel-700 group-hover:text-camel-800 transition-colors">
-              <span>Результаты</span>
-              <ChevronRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
-            </span>
+            {hasResults ? (
+              <span className="inline-flex items-center gap-0.5 text-xs font-semibold text-camel-700 group-hover:text-camel-800 transition-colors">
+                <span>Результаты</span>
+                <ChevronRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+              </span>
+            ) : (
+              <span className="inline-flex items-center text-[11px] font-medium text-charcoal-400 select-none">
+                {cancelled ? 'Отменено' : 'В плане РКФ'}
+              </span>
+            )}
           </div>
         </div>
       </div>
@@ -274,11 +286,32 @@ export default function EventListRow({ event }: EventListRowProps) {
           )}
         </div>
 
-        <span className="inline-flex items-center gap-0.5 text-xs font-semibold text-camel-700 shrink-0 ml-auto">
-          <span>Результаты</span>
-          <ChevronRight className="h-3 w-3" />
-        </span>
+        {hasResults ? (
+          <span className="inline-flex items-center gap-0.5 text-xs font-semibold text-camel-700 shrink-0 ml-auto">
+            <span>Результаты</span>
+            <ChevronRight className="h-3 w-3" />
+          </span>
+        ) : (
+          <span className="text-[10.5px] font-medium text-charcoal-400 shrink-0 ml-auto select-none">
+            {cancelled ? 'Отменено' : 'В плане РКФ'}
+          </span>
+        )}
       </div>
+    </>
+  )
+
+  if (!hasResults) {
+    return <div className={rowClassName}>{rowContent}</div>
+  }
+
+  return (
+    <ProcoursingEventLink
+      eventId={event.id}
+      eventTitle={event.title}
+      procoursingUrl={procoursingUrl}
+      className={rowClassName}
+    >
+      {rowContent}
     </ProcoursingEventLink>
   )
 }

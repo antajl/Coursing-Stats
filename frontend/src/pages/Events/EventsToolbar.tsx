@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Info, FileText, ChevronDown, X, Calendar } from 'lucide-react'
+import { Info, FileText, ChevronDown, X, Calendar, ChevronRight } from 'lucide-react'
 import { toolbarPillTriggerClass } from '../../lib/toolbar'
 import PageToolbar from '../../components/toolbar/PageToolbar'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
@@ -232,11 +232,11 @@ export default function EventsToolbar({
         <div className="ml-auto shrink-0 flex items-center gap-1.5">
           <Link
             to="/competitions/2027/"
-            className="cs-glass-pill inline-flex h-8 shrink-0 items-center gap-1 rounded-full px-2.5 text-xs font-semibold transition-all text-camel-900 border-camel-400/50 hover:bg-camel-100"
+            className="group cs-glass-pill inline-flex h-8 shrink-0 items-center gap-1 rounded-full px-2.5 text-xs font-semibold transition-all text-camel-900 border-camel-400/50 hover:bg-camel-100"
             title="Будущие соревнования 2027 года"
           >
             <span>2027</span>
-            <span className="text-camel-600 font-mono text-[10px] font-bold">→</span>
+            <ChevronRight className="h-3.5 w-3.5 text-camel-700 shrink-0 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
           </Link>
           {hasActiveFilters && (
             <button
@@ -319,12 +319,12 @@ export default function EventsToolbar({
         <div className="ml-auto shrink-0 flex items-center">
           <Link
             to="/competitions/2027/"
-            className="cs-glass-pill inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full px-3.5 text-xs font-semibold transition-all cursor-pointer whitespace-nowrap select-none text-camel-950 border-camel-400/60 bg-camel-50/50 hover:bg-camel-100/80 hover:border-camel-500 shadow-2xs"
+            className="group cs-glass-pill inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full px-3.5 text-xs font-semibold transition-all cursor-pointer whitespace-nowrap select-none text-camel-950 border-camel-400/60 bg-camel-50/50 hover:bg-camel-100/80 hover:border-camel-500 shadow-2xs"
             title="Будущие соревнования 2027 года (календарный план РКФ)"
           >
-            <Calendar className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
+            <Calendar className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden="true" />
             <span>Сезон 2027</span>
-            <span className="text-camel-600 font-mono text-[11px] font-bold">→</span>
+            <ChevronRight className="h-3.5 w-3.5 text-camel-700 shrink-0 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
           </Link>
         </div>
       </div>
