@@ -6,6 +6,7 @@ import ModernDropdown from '../../components/ui/ModernDropdown'
 import YearDropdown from '../../components/ui/YearDropdown'
 import BreedSearchDropdown from '../../components/ui/BreedSearchDropdown'
 import QuickBreedBar from '../TopDogs/QuickBreedBar'
+import JudgesRatingHint from './JudgesRatingHint'
 import { toolbarPillTriggerClass } from '../../lib/toolbar'
 import { formatBreedName } from '../../lib/breedMapping'
 import type { DogsIndexEntry } from '../../lib/competingBreeds'
@@ -155,8 +156,8 @@ export function JudgesToolbar({
               dogIndex={dogIndex}
             />
 
-            {hasActiveFilters && (
-              <div className="ml-auto shrink-0">
+            <div className="ml-auto shrink-0 flex items-center gap-1.5">
+              {hasActiveFilters && (
                 <button
                   type="button"
                   onClick={clearFilters}
@@ -166,11 +167,12 @@ export function JudgesToolbar({
                 >
                   <X className="h-4 w-4" />
                 </button>
-              </div>
-            )}
+              )}
+              <JudgesRatingHint compact />
+            </div>
           </div>
 
-          {/* Десктопная строка: Поиск + Год + Дисциплина + Разделитель + Порода (QuickBreedBar) + Сброс */}
+          {/* Десктопная строка: Поиск + Год + Дисциплина + О судействе + Сброс + Разделитель + Порода (QuickBreedBar) */}
           <div className="hidden sm:flex sm:items-center gap-2 w-full min-w-0">
             <div className="flex items-center gap-1.5 shrink-0">
               <ToolbarSearch
@@ -203,6 +205,9 @@ export function JudgesToolbar({
               >
                 {desktopDisciplineOpen ? renderDisciplineMenuItems(() => setDesktopDisciplineOpen(false)) : null}
               </ModernDropdown>
+
+              {/* Кнопка «О судействе» */}
+              <JudgesRatingHint embedded />
 
               {/* Reset Filters button — слева перед разделителем */}
               {hasActiveFilters && (

@@ -1,15 +1,19 @@
 import { Link } from 'react-router-dom'
 import { ChevronRight } from 'lucide-react'
-import { formatBreedSentenceCase } from '../lib/breedMapping'
 import {
   formatJudgeDisplayName,
-  getJudgeInitials,
   getSportJudgeStrictnessBadge,
 } from '../lib/judgeUiUtils'
 
 export interface JudgeCardData {
   id: string
   name: string
+  full_name?: string
+  city?: string
+  role?: string
+  categories?: string[]
+  verified?: boolean
+  notes?: string
   total_evaluations_count?: number
   unique_events?: number
   unique_dogs?: number
@@ -46,6 +50,15 @@ const DISCIPLINE_TAGS: Record<string, { label: string; badgeClass: string }> = {
   },
 }
 
+function formatBreedsCount(count: number): string {
+  const mod10 = count % 10
+  const mod100 = count % 100
+  if (mod100 >= 11 && mod100 <= 14) return 'пород'
+  if (mod10 === 1) return 'порода'
+  if (mod10 >= 2 && mod10 <= 4) return 'породы'
+  return 'пород'
+}
+
 export default function JudgeCard({
   judge,
   filterYear,
@@ -54,7 +67,6 @@ export default function JudgeCard({
   variant = 'embedded',
 }: JudgeCardProps) {
   const displayName = formatJudgeDisplayName(judge.name)
-  const initials = getJudgeInitials(displayName)
   const strictness = getSportJudgeStrictnessBadge(
     judge.avg_score,
     judge.total_evaluations_count,
@@ -76,9 +88,7 @@ export default function JudgeCard({
       ? judge.disciplines
       : ['coursing']
 
-  const chips = (judge.top_breeds || []).slice(0, 3)
   const totalBreeds = judge.unique_breeds || 0
-  const extraBreeds = Math.max(0, totalBreeds - chips.length)
 
   const isEmbedded = variant === 'embedded'
   const shellClass = isEmbedded
@@ -87,14 +97,9 @@ export default function JudgeCard({
 
   return (
     <Link to={linkTo} className={shellClass}>
-      {/* 1. Монограмма-аватар судьи */}
-      <div className="flex h-10 w-10 sm:h-11 sm:w-11 shrink-0 items-center justify-center rounded-xl border border-old-money-200/80 bg-gradient-to-br from-cream-100 via-cream-50 to-amber-50/40 text-xs sm:text-sm font-bold tracking-tight text-camel-800 shadow-2xs group-hover:border-camel-400 group-hover:scale-105 transition-all mr-2.5 sm:mr-3.5">
-        {initials}
-      </div>
-
-      {/* 2. Центральный блок: ФИО, строгость, стаж, дисциплины и топ-породы */}
+      {/* 1. Центральный блок: Сокращенное имя, строгость, стаж, дисциплины и охват пород */}
       <div className="min-w-0 flex-1 flex flex-col justify-center gap-1 sm:gap-1.5 py-0.5">
-        {/* Строка 1: Имя + Строгость + Стаж и забеги */}
+        {/* Строка 1: Сокращенное имя + Строгость + Стаж и забеги */}
         <div className="flex flex-wrap items-center gap-1.5 min-w-0">
           <h3 className="text-xs sm:text-sm 2xl:text-[15px] font-bold leading-snug text-charcoal-900 group-hover:text-camel-800 transition-colors truncate">
             {displayName}
@@ -123,63 +128,31 @@ export default function JudgeCard({
           )}
         </div>
 
-        {/* Строка 2: Дисциплины судейства и Топ судимых пород с четким разграничением */}
-        <div className="flex flex-wrap items-center gap-y-1 gap-x-2 min-w-0 text-[10px]">
-          {/* Группа дисциплин */}
+        {/* Строка 2: Дисциплины судейства и охват пород без шума */}
+        <div className="flex flex-wrap items-center gap-2 min-w-0 text-[10px]">
+          {/* Плашки дисциплин */}
           <div className="inline-flex items-center gap-1 shrink-0">
-            <span className="text-[9px] sm:text-[9.5px] uppercase font-bold tracking-wider text-charcoal-400 select-none">
-              Дисциплины:
-            </span>
-            <div className="inline-flex items-center gap-1">
-              {judgeDisciplines.map((disc) => {
-                const tag = DISCIPLINE_TAGS[disc]
-                if (!tag) return null
-                return (
-                  <span
-                    key={disc}
-                    className={`inline-flex items-center px-1.5 py-0.25 rounded text-[9.5px] sm:text-[10px] font-semibold border ${tag.badgeClass} shrink-0`}
-                  >
-                    {tag.label}
-                  </span>
-                )
-              })}
-            </div>
+            {judgeDisciplines.map((disc) => {
+              const tag = DISCIPLINE_TAGS[disc]
+              if (!tag) return null
+              return (
+                <span
+                  key={disc}
+                  className={`inline-flex items-center px-1.5 py-0.25 rounded text-[9.5px] sm:text-[10px] font-semibold border ${tag.badgeClass} shrink-0`}
+                >
+                  {tag.label}
+                </span>
+              )
+            })}
           </div>
 
-          {/* Вертикальный разделитель между дисциплинами и породами */}
-          {chips.length > 0 && (
-            <span
-              className="hidden sm:inline-block h-3.5 w-px bg-old-money-300/80 mx-0.5 shrink-0"
-              aria-hidden="true"
-            />
-          )}
-
-          {/* Группа пород */}
-          {chips.length > 0 && (
-            <div className="inline-flex items-center gap-1 min-w-0">
-              <span className="text-[9px] sm:text-[9.5px] uppercase font-bold tracking-wider text-charcoal-400 select-none shrink-0">
-                Породы:
+          {totalBreeds > 0 && (
+            <>
+              <span className="hidden sm:inline-block h-3 w-px bg-old-money-300/80 shrink-0" aria-hidden="true" />
+              <span className="text-[10px] text-charcoal-500 font-medium shrink-0">
+                {totalBreeds} {formatBreedsCount(totalBreeds)}
               </span>
-              <div className="inline-flex items-center gap-1 min-w-0 overflow-hidden">
-                {chips.map((breed) => (
-                  <span
-                    key={breed}
-                    className="max-w-[7.5rem] sm:max-w-[10.5rem] truncate rounded-md border border-old-money-200/70 bg-cream-50/90 px-1.5 py-0.25 text-[9.5px] sm:text-[10px] font-medium text-charcoal-700 shrink-0"
-                    title={formatBreedSentenceCase(breed)}
-                  >
-                    {formatBreedSentenceCase(breed)}
-                  </span>
-                ))}
-                {extraBreeds > 0 && (
-                  <span
-                    className="text-[9.5px] sm:text-[10px] font-medium tabular-nums text-charcoal-400 shrink-0"
-                    title={`Еще ${extraBreeds} пород`}
-                  >
-                    +{extraBreeds}
-                  </span>
-                )}
-              </div>
-            </div>
+            </>
           )}
         </div>
       </div>

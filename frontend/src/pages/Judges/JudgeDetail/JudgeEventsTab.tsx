@@ -1,5 +1,7 @@
 import React from 'react'
+import { ChevronRight } from 'lucide-react'
 import ToolbarSearch from '../../../components/toolbar/ToolbarSearch'
+import ProcoursingEventLink from '../../../components/ProcoursingEventLink'
 import type { JudgeEvent } from './types'
 import { formatBreedName, formatDate } from './utils'
 
@@ -55,31 +57,51 @@ export const JudgeEventsTab: React.FC<JudgeEventsTabProps> = ({
       ) : (
         <>
           <div className="space-y-2.5">
-            {(showAllEvents || eventSearchQuery ? filteredEvents : filteredEvents.slice(0, 20)).map((ev) => (
-              <div
-                key={ev.key}
-                className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 rounded-xl border border-old-money-200/80 bg-white p-3.5 transition-colors hover:border-camel-300 shadow-2xs"
-              >
-                <div className="flex items-start sm:items-center gap-3 min-w-0">
-                  <div className="flex h-10 w-24 shrink-0 flex-col items-center justify-center rounded-lg border border-old-money-200/80 bg-cream-50/80 px-1 text-center">
-                    <span className="text-xs font-bold tabular-nums text-charcoal-800">
-                      {formatDate(ev.date)}
-                    </span>
+            {(showAllEvents || eventSearchQuery ? filteredEvents : filteredEvents.slice(0, 20)).map((ev) => {
+              const cardContent = (
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 rounded-xl border border-old-money-200/80 bg-white p-3.5 transition-all duration-150 hover:border-camel-400 hover:bg-cream-50/40 hover:shadow-2xs group">
+                  <div className="flex items-start sm:items-center gap-3 min-w-0">
+                    <div className="flex h-10 w-24 shrink-0 flex-col items-center justify-center rounded-lg border border-old-money-200/80 bg-cream-50/80 px-1 text-center shadow-2xs">
+                      <span className="text-xs font-bold tabular-nums text-charcoal-800">
+                        {formatDate(ev.date)}
+                      </span>
+                    </div>
+                    <div className="min-w-0">
+                      <p className="text-sm font-semibold text-charcoal-900 group-hover:text-camel-800 transition-colors leading-snug">
+                        {ev.title}
+                      </p>
+                    </div>
                   </div>
-                  <div className="min-w-0">
-                    <p className="text-sm font-semibold text-charcoal-900 leading-snug">
-                      {ev.title}
-                    </p>
-                  </div>
-                </div>
 
-                <div className="shrink-0 self-end sm:self-center">
-                  <span className="inline-flex items-center rounded-lg border border-camel-200/80 bg-cream-50 px-2.5 py-1 text-xs font-semibold text-camel-900">
-                    {formatBreedName(ev.breed)}
-                  </span>
+                  <div className="shrink-0 flex items-center gap-2 self-end sm:self-center">
+                    <span className="inline-flex items-center rounded-lg border border-camel-200/80 bg-cream-50 px-2.5 py-1 text-xs font-semibold text-camel-900">
+                      {formatBreedName(ev.breed)}
+                    </span>
+                    {ev.event_id && (
+                      <span className="hidden sm:inline-flex items-center gap-0.5 text-xs font-semibold text-camel-700 group-hover:text-camel-800 transition-colors">
+                        <span>Протокол</span>
+                        <ChevronRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+                      </span>
+                    )}
+                  </div>
                 </div>
-              </div>
-            ))}
+              )
+
+              if (ev.event_id) {
+                return (
+                  <ProcoursingEventLink
+                    key={ev.key}
+                    eventId={ev.event_id}
+                    className="block group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-camel-500/60 rounded-xl"
+                    title={`Открыть результаты состязания: ${ev.title}`}
+                  >
+                    {cardContent}
+                  </ProcoursingEventLink>
+                )
+              }
+
+              return <div key={ev.key}>{cardContent}</div>
+            })}
           </div>
 
           {!eventSearchQuery && filteredEvents.length > 20 && (

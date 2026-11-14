@@ -9,8 +9,10 @@ import EmptyState from '../../components/EmptyState'
 import LoadingCard from '../../components/LoadingCard'
 import { useListReveal } from '../../hooks/useListReveal'
 import { JudgesToolbar, DISCIPLINE_OPTIONS } from './JudgesToolbar'
+import JudgeSortDropdown, { type JudgeSortKey } from './JudgeSortDropdown'
 import DoninoColumnPlaque, { DoninoColumnShell } from '../SpeedRecords/DoninoColumnPlaque'
 import { formatBreedName } from '../../lib/breedMapping'
+import { getSportJudgeInfo } from '../../lib/sportJudgesRegistry'
 
 function formatJudgesCount(count: number): string {
   const mod10 = count % 10
@@ -97,17 +99,64 @@ export default function Judges() {
 
   const filteredJudges = judges.filter((judge) => {
     if (!searchQuery.trim()) return true
-    const query = searchQuery.toLowerCase()
-    return judge.name?.toLowerCase().includes(query)
+    const query = searchQuery.toLowerCase().trim()
+    const nameMatch = judge.name?.toLowerCase().includes(query)
+    const fullNameMatch = (judge.full_name as string)?.toLowerCase().includes(query)
+    const cityMatch = (judge.city as string)?.toLowerCase().includes(query)
+    const info = getSportJudgeInfo(judge.name)
+    const infoFullNameMatch = info?.fullName?.toLowerCase().includes(query)
+    const infoCityMatch = info?.city?.toLowerCase().includes(query)
+    const aliasMatch = info?.aliases?.some((a) => a.toLowerCase().includes(query))
+    return Boolean(
+      nameMatch ||
+      fullNameMatch ||
+      cityMatch ||
+      infoFullNameMatch ||
+      infoCityMatch ||
+      aliasMatch
+    )
   })
+
+  const [sortKey, setSortKey] = useState<JudgeSortKey>('evaluations')
 
   const sortedJudges = useMemo(() => {
     return [...filteredJudges].sort((a, b) => {
-      const cmp = (b.total_evaluations_count ?? 0) - (a.total_evaluations_count ?? 0)
-      if (cmp !== 0) return cmp
+      switch (sortKey) {
+        case 'events': {
+          const cmp = (b.unique_events ?? 0) - (a.unique_events ?? 0)
+          if (cmp !== 0) return cmp
+          break
+        }
+        case 'dogs': {
+          const cmp = (b.unique_dogs ?? 0) - (a.unique_dogs ?? 0)
+          if (cmp !== 0) return cmp
+          break
+        }
+        case 'score_desc': {
+          const bScore = b.avg_score ?? -1
+          const aScore = a.avg_score ?? -1
+          if (bScore !== aScore) return bScore - aScore
+          break
+        }
+        case 'score_asc': {
+          const bScore = b.avg_score ?? 999
+          const aScore = a.avg_score ?? 999
+          if (bScore !== aScore) return aScore - bScore
+          break
+        }
+        case 'name': {
+          return String(a.name || '').localeCompare(String(b.name || ''), 'ru')
+        }
+        case 'evaluations':
+        default: {
+          const cmp = (b.total_evaluations_count ?? 0) - (a.total_evaluations_count ?? 0)
+          if (cmp !== 0) return cmp
+          break
+        }
+      }
       return String(a.name || '').localeCompare(String(b.name || ''), 'ru')
     })
-  }, [filteredJudges])
+  }, [filteredJudges, sortKey])
 
   const listRevealRef = useListReveal(!loading && sortedJudges.length > 0)
 
@@ -141,6 +190,7 @@ export default function Judges() {
     setFilterYear(activeSeason)
     setFilterBreed('')
     setFilterDiscipline('')
+    setSortKey('evaluations')
   }
 
   const plaqueTitle = useMemo(() => {
@@ -167,6 +217,7 @@ export default function Judges() {
       title={plaqueTitle}
       count={sortedJudges.length}
       countLabel={formatJudgesCount(sortedJudges.length)}
+      action={<JudgeSortDropdown value={sortKey} onChange={setSortKey} compact />}
     />
   )
 

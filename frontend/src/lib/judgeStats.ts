@@ -1,4 +1,5 @@
 import { canonicalBreed, matchesBreedFilter } from './breedMapping'
+import { getSportJudgeInfo } from './sportJudgesRegistry'
 
 /**
  * Клиентский порт backend/src/lib/judge-stats.ts + judge-names.ts.
@@ -176,9 +177,16 @@ export function formatJudgesData(judgeStats: Map<string, JudgeStatsAcc>) {
           : `${firstYear}–${lastYear}`
         : undefined
 
+    const reg = getSportJudgeInfo(stats.name)
     judgesData.push({
       id: stats.name,
       name: stats.name,
+      full_name: reg?.fullName,
+      city: reg?.city,
+      role: reg?.role,
+      categories: reg?.categories,
+      verified: reg?.verified,
+      notes: reg?.notes,
       total_evaluations: stats.total_evaluations,
       total_evaluations_count: Math.round(stats.total_evaluations / 5),
       avg_score: avgScore,

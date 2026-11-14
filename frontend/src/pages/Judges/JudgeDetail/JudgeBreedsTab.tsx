@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import { ChevronDown } from 'lucide-react'
+import { ChevronDown, ExternalLink } from 'lucide-react'
 import ToolbarSearch from '../../../components/toolbar/ToolbarSearch'
+import ProcoursingEventLink from '../../../components/ProcoursingEventLink'
 import type { BreedStat } from './types'
 import { CRITERIA_META } from './constants'
 import { formatBreedName, formatDate, getScoreTone } from './utils'
@@ -296,9 +297,20 @@ export const JudgeBreedsTab: React.FC<JudgeBreedsTabProps> = ({
                                         >
                                           <div className="min-w-0 flex-1">
                                             <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5">
-                                              <span className="text-charcoal-800 font-medium">
-                                                {ev.title || 'Соревнование'}
-                                              </span>
+                                              {ev.event_id ? (
+                                                <ProcoursingEventLink
+                                                  eventId={ev.event_id}
+                                                  className="text-charcoal-900 font-semibold hover:text-camel-800 hover:underline inline-flex items-center gap-1 transition-colors"
+                                                  title={`Открыть протокол: ${ev.title}`}
+                                                >
+                                                  <span>{ev.title || 'Соревнование'}</span>
+                                                  <ExternalLink className="h-3 w-3 text-camel-600 shrink-0" aria-hidden />
+                                                </ProcoursingEventLink>
+                                              ) : (
+                                                <span className="text-charcoal-800 font-medium">
+                                                  {ev.title || 'Соревнование'}
+                                                </span>
+                                              )}
                                               {ev.date && (
                                                 <span className="text-charcoal-400 tabular-nums">
                                                   {formatDate(ev.date)}

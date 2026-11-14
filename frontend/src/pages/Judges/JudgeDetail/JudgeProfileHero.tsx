@@ -1,12 +1,17 @@
 import React from 'react'
-import { Award, Calendar, Layers, FileText } from 'lucide-react'
+import { Award, Calendar, Layers, FileText, MapPin } from 'lucide-react'
 import type { CriteriaStat } from './types'
 import { CRITERIA_META, DISCIPLINES } from './constants'
 import type { getSportJudgeStrictnessBadge } from '../../../lib/judgeUiUtils'
 
 interface JudgeProfileHeroProps {
   displayName: string
-  initials: string
+  fullName?: string | null
+  city?: string | null
+  role?: string | null
+  categories?: string[] | null
+  notes?: string | null
+  verified?: boolean | null
   strictnessBadge: ReturnType<typeof getSportJudgeStrictnessBadge>
   yearParam: string
   setYear: (year: string) => void
@@ -23,7 +28,12 @@ interface JudgeProfileHeroProps {
 
 export const JudgeProfileHero: React.FC<JudgeProfileHeroProps> = ({
   displayName,
-  initials,
+  fullName,
+  city,
+  role,
+  categories,
+  notes: _notes,
+  verified: _verified,
   strictnessBadge,
   yearParam,
   setYear,
@@ -40,19 +50,21 @@ export const JudgeProfileHero: React.FC<JudgeProfileHeroProps> = ({
   return (
     <div className="min-w-0 rounded-2xl border border-old-money-200/80 bg-white p-4 sm:p-6 md:p-8 shadow-xs">
       {/* Top Profile Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-        <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
-          {/* Monogram Badge */}
-          <div className="flex h-14 w-14 sm:h-16 sm:w-16 shrink-0 items-center justify-center rounded-2xl border border-old-money-200/80 bg-gradient-to-br from-cream-100 via-cream-50 to-amber-50/50 text-xl font-bold tracking-tight text-camel-800 shadow-xs">
-            {initials}
-          </div>
+      <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+        <div className="min-w-0 flex-1">
+          <div className="flex flex-wrap items-center gap-2 mb-1.5">
+            <span className="inline-flex items-center gap-1 rounded-md border border-camel-200/90 bg-cream-100/90 px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wider text-camel-800">
+              <Award className="h-3 w-3 text-camel-600" />
+              {role || 'Судья соревнований РКФ'}
+            </span>
 
-          <div className="min-w-0 flex-1">
-            <div className="flex flex-wrap items-center gap-2 mb-1">
-              <span className="inline-flex items-center gap-1 rounded-md border border-camel-200/90 bg-cream-100/90 px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wider text-camel-800">
-                <Award className="h-3 w-3 text-camel-600" />
-                Судья соревнований РКФ
-              </span>
+              {city && (
+                <span className="inline-flex items-center gap-1 rounded-md border border-old-money-200/80 bg-cream-50/80 px-2 py-0.5 text-[11px] font-medium text-charcoal-700">
+                  <MapPin className="h-3 w-3 text-camel-700" />
+                  {city}
+                </span>
+              )}
+
               <span
                 className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-0.5 text-xs font-semibold tracking-tight ${strictnessBadge.badgeClass}`}
                 title={strictnessBadge.detail}
@@ -61,11 +73,24 @@ export const JudgeProfileHero: React.FC<JudgeProfileHeroProps> = ({
                 {strictnessBadge.label}
               </span>
             </div>
+
             <h1 className="text-2xl font-bold tracking-tight text-charcoal-900 sm:text-3xl line-clamp-2">
-              {displayName}
+              {fullName || displayName}
             </h1>
+
+            {categories && categories.length > 0 && (
+              <div className="flex flex-wrap items-center gap-1.5 mt-2">
+                {categories.map((cat) => (
+                  <span
+                    key={cat}
+                    className="inline-flex items-center rounded-full bg-cream-100/70 border border-camel-200/70 px-2.5 py-0.5 text-[11px] font-medium text-camel-900"
+                  >
+                    {cat}
+                  </span>
+                ))}
+              </div>
+            )}
           </div>
-        </div>
 
         {/* Year Filter */}
         <div className="flex items-center justify-between sm:justify-end gap-2 shrink-0 w-full sm:w-auto pt-2 border-t border-old-money-100/70 sm:border-0 sm:pt-0">

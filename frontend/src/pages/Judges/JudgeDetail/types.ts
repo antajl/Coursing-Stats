@@ -46,4 +46,5 @@ export interface JudgeEvent {
   title: string
   date: string
   breed: string
+  event_id?: number | string
 }

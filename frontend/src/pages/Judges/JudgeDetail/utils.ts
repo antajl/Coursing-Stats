@@ -66,7 +66,7 @@ export function collectEvents(breedStats: BreedStat[] | undefined): JudgeEvent[]
         const title = ev.title || 'Мероприятие'
         const key = `${date}|${title}|${stat.breed}`
         if (!map.has(key)) {
-          map.set(key, { key, title, date, breed: stat.breed })
+          map.set(key, { key, title, date, breed: stat.breed, event_id: ev.event_id })
         }
       }
     }

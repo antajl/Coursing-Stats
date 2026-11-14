@@ -10,6 +10,7 @@ import {
   type JudgeRawRow,
 } from '../judgeStats'
 import { type ApiResult, fetchJson, judgeDetailKey } from './core'
+import { getSportJudgeInfo } from '../sportJudgesRegistry'
 
 interface JudgesSummaryFile {
   judges?: Record<string, unknown>[]
@@ -49,6 +50,12 @@ export async function getJudges(
 
 interface JudgeDetailFile {
   judge_name?: string
+  full_name?: string
+  city?: string
+  role?: string
+  categories?: string[]
+  verified?: boolean
+  notes?: string
   total_evaluations?: number
   avg_score?: number | null
   breed_stats?: unknown[]
@@ -80,11 +87,18 @@ export async function getJudgeDetails(
   const allScores = aggregateAllScores(filtered, judgeName)
   const overallAvg =
     allScores.length > 0 ? allScores.reduce((a, b) => a + b, 0) / allScores.length : null
+  const info = getSportJudgeInfo(judgeName)
 
   return {
     success: true,
     data: {
       judge_name: judgeName,
+      full_name: info?.fullName,
+      city: info?.city,
+      role: info?.role,
+      categories: info?.categories,
+      verified: info?.verified,
+      notes: info?.notes,
       total_evaluations: allScores.length,
       avg_score: overallAvg,
       breed_stats: breedData,

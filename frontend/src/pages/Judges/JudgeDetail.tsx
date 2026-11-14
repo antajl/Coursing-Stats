@@ -4,6 +4,7 @@ import { useJudgeDetails } from '../../hooks/useStaticData'
 import { SEO } from '../../components/SEO'
 import { JsonLd, personSchema } from '../../components/JsonLd'
 import { formatJudgeDisplayName, getJudgeInitials, getSportJudgeStrictnessBadge } from '../../lib/judgeUiUtils'
+import { getSportJudgeInfo } from '../../lib/sportJudgesRegistry'
 import { sortArray, type SortState } from '../../lib/judgeSortUtils'
 import type { BreedStat, CriteriaStat, ListTab } from './JudgeDetail/types'
 import { collectEvents, formatBreedName } from './JudgeDetail/utils'
@@ -180,8 +181,16 @@ export default function JudgeDetail() {
   }
 
   const judgeName = String(judgeData.judge_name || 'Судья')
+  const info = getSportJudgeInfo(judgeName)
+  const fullName = (judgeData.full_name as string) || info?.fullName || null
+  const city = (judgeData.city as string) || info?.city || null
+  const role = (judgeData.role as string) || info?.role || 'Судья соревнований РКФ'
+  const categories = (judgeData.categories as string[]) || info?.categories || null
+  const notes = (judgeData.notes as string) || info?.notes || null
+  const verified = (judgeData.verified as boolean) ?? info?.verified ?? null
+
   const displayName = formatJudgeDisplayName(judgeName)
-  const initials = getJudgeInitials(judgeName)
+  const initials = getJudgeInitials(fullName || displayName)
   const avgScore = judgeData.avg_score as number | null | undefined
   const totalEvalsRaw = Number(judgeData.total_evaluations) || 0
   /** Листы оценок (собака×проба), как в списке — не сырые критерии. */
@@ -189,28 +198,34 @@ export default function JudgeDetail() {
   const breedCount = sortedBreeds.length
   const eventCount = distinctEventCount
   const strictnessBadge = getSportJudgeStrictnessBadge(avgScore, totalEvals)
+  const seoFullName = fullName ? `${fullName} (${displayName})` : displayName
 
   return (
     <>
       <SEO
-        title={`${displayName} — судья по курсингу и бегам борзых | Coursing Stats`}
-        description={`Судья по курсингу и бегам ${displayName}: статистика забегов (${eventCount} соревнований, ${totalEvals} оценок, ${breedCount} пород), средний балл и критерии на Coursing Stats.`}
-        keywords={`${judgeName}, ${displayName}, судья, курсинг, бега борзых, статистика, РКФ, оценки, соревнования`}
+        title={`${seoFullName} — судья по курсингу и бегам борзых | Coursing Stats`}
+        description={`Судья по курсингу и бегам ${seoFullName}: статистика забегов (${eventCount} соревнований, ${totalEvals} оценок, ${breedCount} пород), средний балл и критерии на Coursing Stats.`}
+        keywords={`${judgeName}, ${fullName || ''}, ${displayName}, судья, курсинг, бега борзых, статистика, РКФ, оценки, соревнования`}
         canonicalUrl={`https://coursing-stats.ru/judges/${encodeURIComponent(judgeId || judgeName)}/`}
       />
       <JsonLd
         data={personSchema({
-          name: displayName,
-          jobTitle: 'Судья соревнований по курсингу и бегам борзых',
+          name: fullName || displayName,
+          jobTitle: role || 'Судья соревнований по курсингу и бегам борзых',
           url: `https://coursing-stats.ru/judges/${encodeURIComponent(judgeId || judgeName)}/`,
-          description: `Судья по курсингу и бегам ${displayName}: ${eventCount} соревнований, ${totalEvals} оценок, ${breedCount} пород на Coursing Stats.`,
+          description: `Судья по курсингу и бегам ${seoFullName}: ${eventCount} соревнований, ${totalEvals} оценок, ${breedCount} пород на Coursing Stats.`,
         })}
       />
 
       <div className="space-y-6 pb-6">
         <JudgeProfileHero
           displayName={displayName}
-          initials={initials}
+          fullName={fullName}
+          city={city}
+          role={role}
+          categories={categories}
+          notes={notes}
+          verified={verified}
           strictnessBadge={strictnessBadge}
           yearParam={yearParam}
           setYear={setYear}
