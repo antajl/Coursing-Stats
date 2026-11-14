@@ -68,7 +68,7 @@ export function JudgesToolbar({
             : 'text-charcoal-700 hover:bg-camel-100'
         }`}
       >
-        Все дисциплины
+        Все
       </button>
       {DISCIPLINE_OPTIONS.map((d) => (
         <button
