@@ -14,7 +14,6 @@ import type { DogsIndexEntry } from '../../lib/competingBreeds'
 export const DISCIPLINE_OPTIONS = [
   { value: 'coursing', label: 'Курсинг' },
   { value: 'bzmp', label: 'БЗМП' },
-  { value: 'racing', label: 'Рейсинг' },
 ] as const
 
 export interface JudgesToolbarProps {

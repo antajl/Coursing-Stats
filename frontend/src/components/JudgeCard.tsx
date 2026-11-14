@@ -35,21 +35,6 @@ export interface JudgeCardProps {
   variant?: 'embedded' | 'card'
 }
 
-const DISCIPLINE_TAGS: Record<string, { label: string; badgeClass: string }> = {
-  coursing: {
-    label: 'Курсинг',
-    badgeClass: 'bg-forest-50/90 text-forest-800 border-forest-200/90',
-  },
-  bzmp: {
-    label: 'БЗМП',
-    badgeClass: 'bg-blue-50/90 text-blue-800 border-blue-200/90',
-  },
-  racing: {
-    label: 'Рейсинг',
-    badgeClass: 'bg-rose-50/90 text-rose-800 border-rose-200/90',
-  },
-}
-
 function formatYearsActive(years: string): string {
   if (!years) return ''
   if (years.includes('–') || years.includes('-') || years.includes(',')) {
@@ -100,16 +85,8 @@ export default function JudgeCard({
   const queryStr = queryParams.toString()
   const linkTo = `/judges/${encodeURIComponent(judge.id)}${queryStr ? '?' + queryStr : ''}`
 
-  const judgeDisciplines =
-    Array.isArray(judge.disciplines) && judge.disciplines.length > 0
-      ? judge.disciplines
-      : ['coursing']
-
   const totalBreeds = judge.unique_breeds || 0
   const yearsActiveLabel = judge.years_active ? formatYearsActive(judge.years_active) : ''
-  const disciplinesText = judgeDisciplines
-    .map((d) => DISCIPLINE_TAGS[d]?.label || d)
-    .join(', ')
 
   const isEmbedded = variant === 'embedded'
   const shellClass = isEmbedded
@@ -119,7 +96,7 @@ export default function JudgeCard({
   return (
     <Link to={linkTo} className={shellClass}>
       <div className="grid grid-cols-[minmax(0,1fr)_auto] md:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)_auto] items-center gap-3 sm:gap-5 w-full py-0.5">
-        {/* Колонка 1: Судья (Имя + Специализация + Породы) */}
+        {/* Колонка 1: Судья (Имя + Породы) */}
         <div className="flex flex-col justify-center min-w-0">
           <div className="flex items-center gap-2 min-w-0">
             <h3 className="text-sm sm:text-base font-bold leading-snug text-charcoal-900 group-hover:text-camel-800 transition-colors truncate">
@@ -135,13 +112,7 @@ export default function JudgeCard({
           </div>
 
           <div className="text-[11.5px] sm:text-xs text-charcoal-500 font-medium truncate mt-0.5">
-            <span>{disciplinesText}</span>
-            {totalBreeds > 0 && (
-              <>
-                <span className="text-old-money-400 mx-1.5 font-bold" aria-hidden="true">·</span>
-                <span>{totalBreeds} {formatBreedsCount(totalBreeds)}</span>
-              </>
-            )}
+            <span>{totalBreeds} {formatBreedsCount(totalBreeds)}</span>
           </div>
 
           {/* На мобильных (< md) стаж и забеги */}
