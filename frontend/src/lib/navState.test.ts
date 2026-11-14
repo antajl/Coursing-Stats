@@ -35,8 +35,8 @@ describe('navState', () => {
     expect(getLastSectionTab('competitions')).toBe('ranking')
     expect(getLastSectionTab('shows')).toBe('ranking')
     expect(getLastSectionTab('guide')).toBe('titles')
-    expect(getSectionLink('competitions')).toBe('/competitions/?tab=ranking')
-    expect(getSectionLink('shows')).toBe('/shows/?tab=ranking')
+    expect(getSectionLink('competitions')).toBe('/competitions/ranking/')
+    expect(getSectionLink('shows')).toBe('/shows/ranking/')
     expect(getSectionLink('guide')).toBe('/guide/?tab=titles')
     expect(getLastDoninoPath()).toBe('/speed-records/?tab=records')
   })
@@ -44,11 +44,11 @@ describe('navState', () => {
   it('saves and restores valid section tabs', () => {
     setLastSectionTab('shows', 'archive')
     expect(getLastSectionTab('shows')).toBe('archive')
-    expect(getSectionLink('shows')).toBe('/shows/?tab=archive')
+    expect(getSectionLink('shows')).toBe('/shows/archive/')
 
     setLastSectionTab('competitions', 'judges')
     expect(getLastSectionTab('competitions')).toBe('judges')
-    expect(getSectionLink('competitions')).toBe('/competitions/?tab=judges')
+    expect(getSectionLink('competitions')).toBe('/competitions/judges/')
 
     setLastSectionTab('guide', 'donino')
     expect(getLastSectionTab('guide')).toBe('donino')

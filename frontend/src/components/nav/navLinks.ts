@@ -6,6 +6,7 @@ export type OpenMenuId = 'competitions' | 'shows' | 'donino' | 'guide' | null
 
 export function competitionTabActive(tab: string) {
   return (pathname: string, search: string) => {
+    if (pathname === `/competitions/${tab}` || pathname.startsWith(`/competitions/${tab}/`)) return true
     if (pathname !== '/competitions' && pathname !== '/procoursing') return false
     const current = new URLSearchParams(search).get('tab') || 'ranking'
     return current === tab
@@ -14,6 +15,7 @@ export function competitionTabActive(tab: string) {
 
 export function showTabActive(tab: string) {
   return (pathname: string, search: string) => {
+    if (pathname === `/shows/${tab}` || pathname.startsWith(`/shows/${tab}/`)) return true
     if (pathname !== '/shows') return false
     const current = new URLSearchParams(search).get('tab') || 'ranking'
     return current === tab
@@ -46,10 +48,11 @@ export function guideTabActive(tab: string) {
 }
 
 const COMPETITIONS_ARCHIVE_ITEM: NavMenuItem = {
-  to: '/competitions/?tab=archive',
+  to: '/competitions/archive/',
   label: 'Архив',
   icon: Icons.calendar,
   isActive: (pathname: string, search: string) => {
+    if (pathname === '/competitions/archive' || pathname.startsWith('/competitions/archive/')) return true
     if (pathname !== '/competitions' && pathname !== '/procoursing') return false
     const current = new URLSearchParams(search).get('tab')
     return current === 'archive' || current === 'calendar'
@@ -59,14 +62,14 @@ const COMPETITIONS_ARCHIVE_ITEM: NavMenuItem = {
 export function competitionsMenuItems(calendarVisible: boolean): NavMenuItem[] {
   return [
     {
-      to: '/competitions/?tab=ranking',
+      to: '/competitions/ranking/',
       label: 'Рейтинг',
       icon: Icons.medal,
       isActive: competitionTabActive('ranking'),
     },
     ...(calendarVisible ? [COMPETITIONS_ARCHIVE_ITEM] : []),
     {
-      to: '/competitions/?tab=judges',
+      to: '/competitions/judges/',
       label: 'Судьи',
       icon: Icons.club,
       isActive: competitionTabActive('judges'),
@@ -85,10 +88,11 @@ export function competitionsMenuItems(calendarVisible: boolean): NavMenuItem[] {
 }
 
 const SHOWS_ARCHIVE_ITEM: NavMenuItem = {
-  to: '/shows/?tab=archive',
+  to: '/shows/archive/',
   label: 'Архив',
   icon: Icons.calendar,
   isActive: (pathname: string, search: string) => {
+    if (pathname === '/shows/archive' || pathname.startsWith('/shows/archive/')) return true
     if (pathname !== '/shows') return false
     const current = new URLSearchParams(search).get('tab')
     return current === 'archive' || current === 'calendar'
@@ -98,14 +102,14 @@ const SHOWS_ARCHIVE_ITEM: NavMenuItem = {
 export function showsMenuItems(calendarVisible: boolean): NavMenuItem[] {
   return [
     {
-      to: '/shows/?tab=ranking',
+      to: '/shows/ranking/',
       label: 'Рейтинг',
       icon: Icons.medal,
       isActive: showTabActive('ranking'),
     },
     ...(calendarVisible ? [SHOWS_ARCHIVE_ITEM] : []),
     {
-      to: '/shows/?tab=judges',
+      to: '/shows/judges/',
       label: 'Судьи',
       icon: Icons.club,
       isActive: showTabActive('judges'),

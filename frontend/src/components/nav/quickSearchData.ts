@@ -8,7 +8,7 @@ export const SITE_NAVIGATION_ROUTES: NavigationRouteItem[] = [
     id: 'competitions-ranking',
     title: 'Рейтинг соревнований',
     subtitle: 'Курсинг и рейсинг: медали, CS points, баллы и подиум 2015–2026',
-    to: '/competitions/?tab=ranking',
+    to: '/competitions/ranking/',
     icon: 'medal',
     keywords: [
       'рейтинг', 'рейтинг собак', 'топ', 'лидеры', 'соревнования', 'курсинг', 'бега',
@@ -20,7 +20,7 @@ export const SITE_NAVIGATION_ROUTES: NavigationRouteItem[] = [
     id: 'competitions-archive',
     title: 'Календарь и архив соревнований',
     subtitle: 'Все состязания с 2015 года: даты, организаторы и полные результаты',
-    to: '/competitions/?tab=archive',
+    to: '/competitions/archive/',
     icon: 'calendar',
     keywords: [
       'архив', 'календарь', 'состязания', 'турниры', 'расписание', 'график', 'даты',
@@ -32,7 +32,7 @@ export const SITE_NAVIGATION_ROUTES: NavigationRouteItem[] = [
     id: 'competitions-judges',
     title: 'Судьи соревнований',
     subtitle: 'Судейская коллегия, стаж, статистика турниров и оценок',
-    to: '/competitions/?tab=judges',
+    to: '/competitions/judges/',
     icon: 'club',
     keywords: [
       'судьи', 'судья', 'эксперты', 'судейство', 'арбитры', 'коллегия', 'оценщики',
@@ -59,7 +59,7 @@ export const SITE_NAVIGATION_ROUTES: NavigationRouteItem[] = [
     id: 'shows-ranking',
     title: 'Рейтинг выставок РКФ',
     subtitle: 'Выставочный рейтинг по породам и абсолютные лидеры сезона',
-    to: '/shows/?tab=ranking',
+    to: '/shows/ranking/',
     icon: 'award',
     keywords: [
       'выставки', 'выставка', 'ркф', 'рейтинг выставок', 'шоу', 'ринги', 'титулы',
@@ -71,7 +71,7 @@ export const SITE_NAVIGATION_ROUTES: NavigationRouteItem[] = [
     id: 'shows-calendar',
     title: 'Архив выставок РКФ',
     subtitle: 'Архив протоколов и расписание выставок РКФ 2019–2026',
-    to: '/shows/?tab=archive',
+    to: '/shows/archive/',
     icon: 'calendar',
     keywords: [
       'архив выставок', 'календарь выставок', 'график выставок', 'расписание выставок', 'выставки 2026',
@@ -82,7 +82,7 @@ export const SITE_NAVIGATION_ROUTES: NavigationRouteItem[] = [
     id: 'shows-judges',
     title: 'Судьи выставок РКФ',
     subtitle: 'Эксперты РКФ и статистика судейства в рингах',
-    to: '/shows/?tab=judges',
+    to: '/shows/judges/',
     icon: 'club',
     keywords: [
       'судьи выставок', 'эксперты ркф', 'судья выставки', 'ринговые судьи',
@@ -175,6 +175,16 @@ export const SITE_NAVIGATION_ROUTES: NavigationRouteItem[] = [
     icon: 'speed',
     keywords: [
       'скорость пород', 'скорости', 'быстрые породы', 'сравнение скоростей',
+    ],
+  },
+  {
+    id: 'breeds-directory',
+    title: 'Каталог пород',
+    subtitle: 'Официальный справочник всех 83 беговых пород и хабы',
+    to: '/breeds/',
+    icon: 'flag',
+    keywords: [
+      'породы', 'порода', 'каталог пород', 'хабы', 'список пород', 'беговые породы', 'breeds', 'breed',
     ],
   },
   {
@@ -349,22 +359,30 @@ export const BREED_HUBS: BreedHubSearchItem[] = CORE_BREED_HUBS.map((hub) => ({
   keywords: buildBreedKeywords(hub),
 }))
 
-export const POPULAR_BREEDS = [
-  'Уиппет',
-  'Русская псовая борзая',
-  'Салюки',
-  'Басенджи',
-  'Левретка',
-  'Такса',
-  'Грейхаунд',
-  'Афганская борзая',
+export interface PopularBreedItem {
+  name: string
+  slug: string
+}
+
+export const POPULAR_BREEDS: PopularBreedItem[] = [
+  { name: 'Уиппет', slug: 'whippet' },
+  { name: 'РПБ', slug: 'borzoi' },
+  { name: 'Салюки', slug: 'saluki' },
+  { name: 'Басенджи', slug: 'basenji' },
+  { name: 'Левретка', slug: 'italian-greyhound' },
+  { name: 'Грейхаунд', slug: 'greyhound' },
+  { name: 'Афган', slug: 'afghan-hound' },
+  { name: 'Волкодав', slug: 'irish-wolfhound' },
+  { name: 'Риджбек', slug: 'rhodesian-ridgeback' },
+  { name: 'Такса', slug: 'dachshund' },
 ]
 
 export const QUICK_NAV_SHORTCUTS = [
-  { label: 'Рейтинг спорта', to: '/competitions/?tab=ranking', icon: 'medal' as const },
-  { label: 'Рейтинг выставок', to: '/shows/?tab=ranking', icon: 'award' as const },
+  { label: 'Рейтинг спорта', to: '/competitions/ranking/', icon: 'medal' as const },
+  { label: 'Рейтинг выставок', to: '/shows/ranking/', icon: 'award' as const },
+  { label: 'Каталог пород', to: '/breeds/', icon: 'flag' as const },
   { label: 'Рекорды Донино', to: '/speed-records/?tab=records', icon: 'speed' as const },
-  { label: 'Календарь', to: '/competitions/?tab=archive', icon: 'calendar' as const },
-  { label: 'Судьи', to: '/competitions/?tab=judges', icon: 'club' as const },
+  { label: 'Календарь', to: '/competitions/archive/', icon: 'calendar' as const },
+  { label: 'Судьи', to: '/competitions/judges/', icon: 'club' as const },
   ...(isLocalDev ? [{ label: 'Конструктор', to: '/protocol-builder', icon: 'fileText' as const }] : []),
 ]

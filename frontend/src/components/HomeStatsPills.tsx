@@ -68,6 +68,15 @@ export default function HomeStatsPills({ stats, showStats, loading }: HomeStatsP
             </div>
           </div>
         </div>
+
+        {/* Породы скелетон */}
+        <div className="bg-gradient-to-br from-white/95 to-cream-50/95 backdrop-blur-md rounded-xl border border-camel-200/70 shadow-md px-3 py-2 3xl:py-2.5 min-h-[44px] animate-pulse flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <div className="h-3 w-16 bg-camel-200/60 rounded" />
+            <div className="h-2.5 w-32 bg-charcoal-200/40 rounded" />
+          </div>
+          <div className="h-2.5 w-14 bg-charcoal-200/50 rounded" />
+        </div>
       </div>
     )
   }
@@ -77,7 +86,7 @@ export default function HomeStatsPills({ stats, showStats, loading }: HomeStatsP
       {/* Спорт */}
       {stats && (
         <Link
-          to="/competitions/"
+          to="/competitions/ranking/"
           className="group block bg-gradient-to-br from-white/95 to-cream-50/95 backdrop-blur-md rounded-xl border border-camel-200/70 shadow-xs hover:shadow-md active:scale-[0.99] p-2.5 3xl:p-3 transition-all text-inherit no-underline"
           aria-label="Перейти в раздел Спорт: турниры, результаты, собаки"
         >
@@ -114,7 +123,7 @@ export default function HomeStatsPills({ stats, showStats, loading }: HomeStatsP
       {/* Выставки */}
       {showStats && (
         <Link
-          to="/shows/"
+          to="/shows/ranking/"
           className="group block bg-gradient-to-br from-white/95 to-cream-50/95 backdrop-blur-md rounded-xl border border-camel-200/70 shadow-xs hover:shadow-md active:scale-[0.99] p-2.5 3xl:p-3 transition-all text-inherit no-underline"
           aria-label="Перейти в раздел Выставки: каталоги, ринги, собаки"
         >
@@ -147,6 +156,26 @@ export default function HomeStatsPills({ stats, showStats, loading }: HomeStatsP
           </div>
         </Link>
       )}
+
+      {/* Породы */}
+      <Link
+        to="/breeds/"
+        className="group flex items-center justify-between bg-gradient-to-br from-white/95 to-cream-50/95 backdrop-blur-md rounded-xl border border-camel-200/70 shadow-xs hover:shadow-md active:scale-[0.99] px-3 py-2 3xl:py-2.5 min-h-[44px] transition-all text-inherit no-underline"
+        aria-label="Каталог пород и хабы"
+      >
+        <div className="flex items-center gap-2">
+          <span className="text-xs sm:text-[12.5px] 3xl:text-[13px] font-bold uppercase tracking-wider text-camel-800">
+            Породы
+          </span>
+          <span className="text-[10px] 3xl:text-[11px] text-charcoal-600 font-medium">
+            83 породы & персональные хабы
+          </span>
+        </div>
+        <span className="text-[10px] 3xl:text-[11px] text-camel-700 font-medium flex items-center gap-0.5 group-hover:text-camel-900 transition-colors">
+          <span>каталог</span>
+          <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" aria-hidden />
+        </span>
+      </Link>
     </div>
   )
 }

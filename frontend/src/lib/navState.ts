@@ -68,8 +68,12 @@ export function setLastSectionTab(section: NavSection, tab: string): void {
  * Generates the clean target link for a main section using its last active subtab.
  */
 export function getSectionLink(section: NavSection): string {
+  if (section === 'guide') {
+    const tab = getLastSectionTab('guide')
+    return `/guide/?tab=${tab}`
+  }
   const tab = getLastSectionTab(section)
-  return `/${section}/?tab=${tab}`
+  return `/${section}/${tab}/`
 }
 
 /**
