@@ -6,6 +6,7 @@ import { usePublicCalendarVisible } from './hooks/useStaticData';
 
 import Home from './pages/Home';
 const Competitions = lazy(() => import('./pages/Competitions'));
+const Competitions2027 = lazy(() => import('./pages/Competitions/Competitions2027'));
 const Shows = lazy(() => import('./pages/Shows'));
 const ShowDogProfile = lazy(() => import('./pages/Shows/ShowDogProfile'));
 const UnifiedDogProfile = lazy(() => import('./pages/UnifiedDogProfile'));
@@ -101,6 +102,10 @@ export default function AppRoutes() {
         <Route path="/spa-shell" element={<Navigate to="/" replace />} />
         <Route path="/spa-shell/*" element={<Navigate to="/" replace />} />
         <Route path="/competitions" element={<Competitions />} />
+        <Route path="/competitions/2027" element={<Competitions2027 />} />
+        <Route path="/competitions/2027/" element={<Competitions2027 />} />
+        <Route path="/calendar/2027" element={<Navigate to="/competitions/2027/" replace />} />
+        <Route path="/calendar/2027/" element={<Navigate to="/competitions/2027/" replace />} />
         <Route path="/competitions/:id" element={<LegacyCompetitionRedirect />} />
         <Route
           path="/protocol-builder"
