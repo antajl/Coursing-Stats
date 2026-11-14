@@ -31,13 +31,31 @@ const SHOW_ACTIVE_SEASON = resolveActiveSeason(SHOW_RANKING_YEARS)
 /** Brief grace period for page0 to paint before requesting the full season file. */
 const FULL_RANKING_DELAY_MS = 3000
 
-export default function ShowRanking() {
+export type ShowRankingProps = {
+  urlYear?: string
+}
+
+export default function ShowRanking({ urlYear }: ShowRankingProps = {}) {
+  const { year: routeYearParam } = useParams<{ year?: string }>()
+  const routeYear = urlYear ?? routeYearParam
+  const location = useLocation()
+  const navigate = useNavigate()
   const [searchParams, setSearchParams] = useSearchParams()
   const { favorites, toggleFavorite } = useFavorites()
   const [searchQuery, setSearchQuery] = useState(() => searchParams.get('search') || '')
-  const [filterYear, setFilterYear] = useState(() =>
-    initialSeasonYearFilter(searchParams, SHOW_ACTIVE_SEASON),
-  )
+  const [filterYear, setFilterYear] = useState(() => {
+    if (routeYear !== undefined) {
+      return routeYear === 'all' ? '' : routeYear
+    }
+    return initialSeasonYearFilter(searchParams, SHOW_ACTIVE_SEASON)
+  })
+
+  useEffect(() => {
+    if (routeYear !== undefined) {
+      const target = routeYear === 'all' ? '' : routeYear
+      setFilterYear((prev) => (prev !== target ? target : prev))
+    }
+  }, [routeYear])
   const [filterBreed, setFilterBreed] = useState(() => searchParams.get('breed') || '')
   const [filterSex, setFilterSex] = useState(() => searchParams.get('sex') || '')
   const [allowFullLoad, setAllowFullLoad] = useState(false)
@@ -153,16 +171,23 @@ export default function ShowRanking() {
         }
 
         // Year
-        const currentYear = next.get('year')
-        const targetYearParam =
-          filterYear === '' ? 'all' : filterYear !== SHOW_ACTIVE_SEASON ? filterYear : null
-        if (targetYearParam !== null) {
-          if (currentYear !== targetYearParam) {
-            next.set('year', targetYearParam)
-            changed = true
+        if (!location.pathname.startsWith('/shows/ranking')) {
+          const currentYear = next.get('year')
+          const targetYearParam =
+            filterYear === '' ? 'all' : filterYear !== SHOW_ACTIVE_SEASON ? filterYear : null
+          if (targetYearParam !== null) {
+            if (currentYear !== targetYearParam) {
+              next.set('year', targetYearParam)
+              changed = true
+            }
+          } else {
+            if (currentYear === 'all' || (currentYear && currentYear !== SHOW_ACTIVE_SEASON)) {
+              next.delete('year')
+              changed = true
+            }
           }
         } else {
-          if (currentYear === 'all' || (currentYear && currentYear !== SHOW_ACTIVE_SEASON)) {
+          if (next.has('year')) {
             next.delete('year')
             changed = true
           }
