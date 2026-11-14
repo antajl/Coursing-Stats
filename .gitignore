@@ -191,6 +191,7 @@ backend/scripts/tmp-*.ts
 
 # Agent skills & local assistant configuration
 .agents/
+skills-lock.json
 .mcp.json
 tasks/
 .devin/
