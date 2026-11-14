@@ -13,6 +13,7 @@ import {
 import { judgeDetailKey } from '../../src/lib/static-api';
 import { INDEXES_DIR, writeIndex } from './shared';
 import { canonicalBreed } from '../../src/lib/breed-mapping';
+import { getSportJudgeInfo, getSportJudgesRegistry } from '../../lib/sport-judges-registry';
 
 const JUDGES_RAW_ROWS_SQL = `
   SELECT
@@ -57,6 +58,20 @@ export function buildJudgesSummary(db: Database.Database) {
 
   const judgeStatsMap = aggregateJudgeStats(rows);
   const judgesData = formatJudgesData(judgeStatsMap);
+  const registry = getSportJudgesRegistry();
+
+  for (const j of judgesData as Record<string, unknown>[]) {
+    const key = String(j.name ?? j.id ?? '');
+    const reg = registry[key];
+    if (reg) {
+      if (reg.fullName) j.full_name = reg.fullName;
+      if (reg.city) j.city = reg.city;
+      if (reg.role) j.role = reg.role;
+      if (reg.categories) j.categories = reg.categories;
+      if (reg.verified != null) j.verified = reg.verified;
+      if (reg.notes) j.notes = reg.notes;
+    }
+  }
 
   writeIndex('judges-summary.json', {
     schema: 'coursing-stats/index-judges-summary-v1',
@@ -87,9 +102,16 @@ export function buildJudgeDetails(rows: unknown[], judgesData: { id?: string; na
     const overallAvg =
       allScores.length > 0 ? allScores.reduce((a, b) => a + b, 0) / allScores.length : null;
 
+    const reg = getSportJudgeInfo(judgeName);
     const payload = {
       schema: 'coursing-stats/index-judge-detail-v1',
       judge_name: judgeName,
+      full_name: reg?.fullName,
+      city: reg?.city,
+      role: reg?.role,
+      categories: reg?.categories,
+      verified: reg?.verified,
+      notes: reg?.notes,
       total_evaluations: allScores.length,
       avg_score: overallAvg,
       breed_stats: breedData,
