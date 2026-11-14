@@ -168,3 +168,16 @@ verified: 2026-11-08
 4. **PWA Web Manifest (`manifest.webmanifest`):**
    - В `frontend/public/manifest.webmanifest` объявлен веб-манифест платформы с фирменной палитрой Old Money (фоновый цвет `#F5F1E8`), гербовыми иконками и режимом отображения `standalone`.
    - Манифест подключен через `<link rel="manifest" href="/manifest.webmanifest" />` в `index.html`, `404.html` и мета-оболочке пререндера `html-shell.ts`.
+
+---
+
+## 9. Канонический Open Graph (OG) и политика кэширования сниппетов
+
+1. **Единый визуальный стандарт Old Money:**
+   - Канонический файл превью: `frontend/public/og-image.png` (1200×630 px, PNG, ~1.18 МБ).
+   - Сюжет: динамичный прыжок длинношёрстной борзой (салюки / афган) на фоне залитых солнцем холмов Тосканы, кипарисов и виллы с заголовком «Курсинг Статс» и капсулой `coursing-stats.ru`.
+   - Все устаревшие тёмно-зелёные плашки (включая `og-chatgpt-master.jpg`) и временные скрипты генерации (`generate-og-image.ts`) навсегда удалены из кодовой базы.
+2. **Сброс устаревших сниппетов в Google Search:**
+   - Робот Googlebot-Image кэширует графические миниатюры на CDN `encrypted-tbn0.gstatic.com` отдельно от HTML-страниц и может сохранять старую миниатюру неделями, если URL картинки не менялся.
+   - Для гарантированного сброса используется официальный сервис [Обновление устаревшего контента в Google Поиске](https://search.google.com/search-console/remove-outdated-content) $\to$ вкладка «Изображение» $\to$ указание URL картинки (`https://coursing-stats.ru/og-image.png`) и страницы (`https://coursing-stats.ru/competitions/`).
+
