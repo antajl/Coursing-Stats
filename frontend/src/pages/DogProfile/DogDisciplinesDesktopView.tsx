@@ -94,6 +94,7 @@ export const DogDisciplinesDesktopView: React.FC<DogDisciplinesDesktopViewProps>
     <>
       {/* Десктопный вид: 3 колонки рядом */}
       <div className="mb-6 hidden items-stretch gap-4 lg:grid lg:grid-cols-3 lg:gap-5 xl:gap-6">
+        <div id="coursing" className="scroll-mt-20 flex flex-col h-full">
         {showCoursingColumn ? (
           <CoursingColumn
             hasCoursingData={hasCoursingData}
@@ -114,6 +115,8 @@ export const DogDisciplinesDesktopView: React.FC<DogDisciplinesDesktopViewProps>
           <EmptyDisciplineColumn title="Курсинг / БЗМП" theme="forest" />
         )}
 
+        </div>
+        <div id="racing" className="scroll-mt-20 flex flex-col h-full">
         {showRacingColumn ? (
           <RacingColumn
             hasRacingData={hasRacingData}
@@ -133,6 +136,8 @@ export const DogDisciplinesDesktopView: React.FC<DogDisciplinesDesktopViewProps>
           <EmptyDisciplineColumn title="Бега борзых" theme="warm-blue" />
         )}
 
+        </div>
+        <div id="shows" className="scroll-mt-20 flex flex-col h-full">
         {showDog ? (
           <ShowsColumn
             dog={showDog}
@@ -142,18 +147,19 @@ export const DogDisciplinesDesktopView: React.FC<DogDisciplinesDesktopViewProps>
         ) : (
           <EmptyDisciplineColumn title="Выставки" theme="camel" />
         )}
+        </div>
       </div>
 
       {/* Десктопная секция судей */}
       {judgeStats && (
-        <div className="hidden md:block">
+        <div id="judges" className="scroll-mt-20 hidden md:block">
           <DogJudgesSection judgeStats={judgeStats} competitions={events} />
         </div>
       )}
 
       {/* Десктопное Донино: CollapsibleSection внизу */}
       {(hasSpeedRecords || hasCoursingRecords) && !showCoursingColumn && !showRacingColumn && (
-        <div className="hidden md:block">
+        <div id="donino" className="scroll-mt-20 hidden md:block">
           <CollapsibleSection
             title="Рекорды Донино"
             defaultOpen={false}

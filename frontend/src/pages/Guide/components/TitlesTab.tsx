@@ -227,7 +227,7 @@ export default function TitlesTab() {
   // 3. Иерархия наград в 3 логических блоках
   const renderHierarchy = () => (
     <div id="sec-hierarchy">
-      <SectionCard title="Иерархия спортивных сертификатов и титулов РКФ">
+      <SectionCard id="titles" title="Иерархия спортивных сертификатов и титулов РКФ">
         <p className="text-xs text-charcoal-600 sm:text-sm">
           Все спортивные награды борзых выстроены в естественном порядке от первой квалификационной книжки до высших званий (клик по строке раскроет условия и правила):
         </p>
@@ -303,7 +303,7 @@ export default function TitlesTab() {
   // 4. 6 схем оформления НЧ РК
   const renderSchemes = () => (
     <div id="sec-schemes">
-      <SectionCard title="6 официальных схем оформления титула «Национальный чемпион по РК» (НЧ РК)">
+      <SectionCard id="schemes" title="6 официальных схем оформления титула «Национальный чемпион по РК» (НЧ РК)">
         <p className="text-xs text-charcoal-600 sm:text-sm">
           С 15.12.2022 титул Чемпиона России набором сертификатов больше не оформляется — вместо него присваивается накопительный титул <strong>НЧ РК</strong> по одной из 6 схем на выбор:
         </p>
@@ -336,7 +336,7 @@ export default function TitlesTab() {
   // 5. Судейство в курсинге
   const renderJudging = () => (
     <div id="sec-judging">
-      <SectionCard title="Судейство в курсинге: 5 официальных критериев и тай-брейк">
+      <SectionCard id="criteria" title="Судейство в курсинге: 5 официальных критериев и тай-брейк">
         <p className="text-xs text-charcoal-600 sm:text-sm">
           В курсинге каждый судья оценивает собаку в обоих кругах по 5 нормативным критериям FCI/РКФ (максимум 20 баллов по каждому критерию, до 100 баллов за забег):
         </p>
@@ -406,7 +406,7 @@ export default function TitlesTab() {
   // 6. Памятка участника
   const renderRequirements = () => (
     <div id="sec-requirements">
-      <SectionCard title="Памятка участника: регламент, кворум и экипировка">
+      <SectionCard id="regulations" title="Памятка участника: регламент, кворум и экипировка">
         <div className="grid gap-3 sm:grid-cols-2">
           {COURSING_REQUIREMENTS.map((req) => (
             <div
@@ -462,7 +462,7 @@ export default function TitlesTab() {
   // 7. Анатомия протокола и квалификационные барьеры
   const renderProtocol = () => (
     <div id="sec-protocol" className="space-y-6">
-      <SectionCard title="Анатомия строки протокола соревнований">
+      <SectionCard id="anatomy" title="Анатомия строки протокола соревнований">
         <p className="text-xs text-charcoal-600 sm:text-sm">
           Нажмите на любую ячейку образца протокола, чтобы увидеть подробное объяснение колонки:
         </p>

@@ -18,10 +18,20 @@ function Shows() {
   const rawTabParam = searchParams.get('tab')
   const rawTab = rawTabParam || 'ranking'
   const calendarVisible = usePublicCalendarVisible('shows')
+  const currentHash = typeof window !== 'undefined' ? window.location.hash : ''
+  const hashKey = currentHash.replace(/^#/, '')
 
   let redirectTab: string | null = null
   if (!rawTabParam) {
-    redirectTab = getLastSectionTab('shows')
+    let target = getLastSectionTab('shows')
+    if (hashKey === 'calendar' || hashKey === 'archive') {
+      target = 'archive'
+    } else if (hashKey === 'judges') {
+      target = 'judges'
+    } else if (hashKey === 'ranking' || hashKey === 'champions') {
+      target = 'ranking'
+    }
+    redirectTab = target
   } else if (rawTab === 'champions') {
     redirectTab = 'ranking'
   } else if (rawTab === 'calendar') {
@@ -94,7 +104,7 @@ function Shows() {
   }, [activeTab, visitedTabs, setSearchParams])
 
   if (redirectTab) {
-    return <Navigate to={`/shows?tab=${redirectTab}`} replace />
+    return <Navigate to={`/shows/?tab=${redirectTab}${currentHash}`} replace />
   }
 
   const isVisited = (tabId: string) => visitedTabs.has(tabId) || activeTab === tabId
@@ -132,6 +142,8 @@ function Shows() {
             className={activeTab === 'ranking' ? 'block cs-tab-panel-enter' : 'hidden'}
             aria-hidden={activeTab !== 'ranking'}
           >
+            <div id="ranking" className="scroll-mt-20" />
+            <div id="champions" className="scroll-mt-20" />
             <Suspense fallback={<LoadingCard count={6} variant="shows" />}>
               <ShowRanking />
             </Suspense>
@@ -145,6 +157,8 @@ function Shows() {
             className={activeTab === 'archive' ? 'block cs-tab-panel-enter' : 'hidden'}
             aria-hidden={activeTab !== 'archive'}
           >
+            <div id="archive" className="scroll-mt-20" />
+            <div id="calendar" className="scroll-mt-20" />
             <Suspense fallback={<SkeletonLoader count={6} variant="cards" />}>
               <ShowCalendar />
             </Suspense>
@@ -158,6 +172,7 @@ function Shows() {
             className={activeTab === 'judges' ? 'block cs-tab-panel-enter' : 'hidden'}
             aria-hidden={activeTab !== 'judges'}
           >
+            <div id="judges" className="scroll-mt-20" />
             <Suspense fallback={<SkeletonLoader count={6} variant="cards" />}>
               <ShowJudges />
             </Suspense>

@@ -186,7 +186,7 @@ export default function RatingTab() {
       </SectionCard>
 
       {/* 2. Олимпийский каскад главного зачёта сезона */}
-      <SectionCard title="Олимпийский медальный каскад соревнований">
+      <SectionCard id="cascade" title="Олимпийский медальный каскад соревнований">
         <p className="text-xs text-charcoal-600">
           В зачёте сезона курсинга и БЗМП места распределяются по строгой 4-ступенчатой системе приоритетов:
         </p>
@@ -195,7 +195,7 @@ export default function RatingTab() {
       </SectionCard>
 
       {/* 3. Формулы и математика: standingScore и CS v2 */}
-      <SectionCard title="Анатомия расчёта: standingScore и индекс CS v2">
+      <SectionCard id="formula" title="Анатомия расчёта: standingScore и индекс CS v2">
         <div className="space-y-4">
           {/* standingScore */}
           <div className="rounded-xl border border-camel-200 bg-camel-50/60 p-4">

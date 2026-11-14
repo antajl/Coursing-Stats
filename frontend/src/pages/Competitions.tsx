@@ -19,17 +19,27 @@ function Competitions() {
   const calendarVisible = usePublicCalendarVisible('competitions')
 
   let redirectPath: string | null = null
+  const currentHash = typeof window !== 'undefined' ? window.location.hash : ''
+  const hashKey = currentHash.replace(/^#/, '')
+
   if (!rawTabParam) {
-    const savedTab = getLastSectionTab('competitions')
+    let targetTab = getLastSectionTab('competitions')
+    if (hashKey === 'calendar' || hashKey === 'archive') {
+      targetTab = 'archive'
+    } else if (hashKey === 'ranking' || hashKey === 'leaders') {
+      targetTab = 'ranking'
+    } else if (hashKey === 'judges') {
+      targetTab = 'judges'
+    }
     const next = new URLSearchParams(searchParams)
-    next.set('tab', savedTab)
-    redirectPath = `/competitions/?${next.toString()}`
+    next.set('tab', targetTab)
+    redirectPath = `/competitions/?${next.toString()}${currentHash}`
   } else if (rawTabParam === 'calendar') {
-    redirectPath = '/competitions?tab=archive'
+    redirectPath = `/competitions/?tab=archive${currentHash}`
   } else if (rawTabParam === 'builder' || rawTabParam === 'protocol-builder') {
-    redirectPath = isLocalDev ? '/protocol-builder/' : '/competitions?tab=ranking'
+    redirectPath = isLocalDev ? '/protocol-builder/' : `/competitions/?tab=ranking${currentHash}`
   } else if (!calendarVisible && rawTabParam === 'archive') {
-    redirectPath = '/competitions?tab=ranking'
+    redirectPath = `/competitions/?tab=ranking${currentHash}`
   }
 
   const resolvedTab =
@@ -182,6 +192,7 @@ function Competitions() {
             className={activeTab === 'ranking' ? 'block cs-tab-panel-enter' : 'hidden'}
             aria-hidden={activeTab !== 'ranking'}
           >
+            <div id="ranking" className="scroll-mt-20" />
             <Suspense fallback={<LoadingCard count={3} variant="list" />}>
               <TopDogs />
             </Suspense>
@@ -195,6 +206,8 @@ function Competitions() {
             className={activeTab === 'archive' ? 'block cs-tab-panel-enter' : 'hidden'}
             aria-hidden={activeTab !== 'archive'}
           >
+            <div id="archive" className="scroll-mt-20" />
+            <div id="calendar" className="scroll-mt-20" />
             <Suspense fallback={<LoadingCard count={3} variant="list" />}>
               <Events />
             </Suspense>
@@ -208,6 +221,7 @@ function Competitions() {
             className={activeTab === 'judges' ? 'block cs-tab-panel-enter' : 'hidden'}
             aria-hidden={activeTab !== 'judges'}
           >
+            <div id="judges" className="scroll-mt-20" />
             <Suspense fallback={<LoadingCard count={3} variant="list" />}>
               <Judges />
             </Suspense>

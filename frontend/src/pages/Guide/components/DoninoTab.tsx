@@ -254,7 +254,7 @@ export default function DoninoTab() {
       </div>
 
       {/* 5. Иерархия соревновательных лиг чемпионата */}
-      <SectionCard title="Иерархия соревновательных лиг в Донино">
+      <SectionCard id="leagues" title="Иерархия соревновательных лиг в Донино">
         <p className="text-xs text-charcoal-600 sm:text-sm">
           Официальная система лиг клубного чемпионата по рейсингу в Донино (клик по строке раскроет правила допуска и переходов между лигами):
         </p>
@@ -263,7 +263,7 @@ export default function DoninoTab() {
       </SectionCard>
 
       {/* 6. Скоростные ориентиры 350 м по породам */}
-      <SectionCard title="Скоростные ориентиры и эталонные времена 350 м">
+      <SectionCard id="racing350" title="Скоростные ориентиры и эталонные времена 350 м">
         <p className="text-xs text-charcoal-600 sm:text-sm">
           Типичные показатели чистого времени и скорости на песчаном треке Донино:
         </p>

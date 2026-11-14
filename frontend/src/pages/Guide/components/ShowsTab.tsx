@@ -78,7 +78,7 @@ export default function ShowsTab() {
   // 1. Пошаговый роадмап ринга одного дня
   const renderRoadmap = () => (
     <div id="sec-show-roadmap">
-      <SectionCard title="Роадмап выставки: путь от класса до Best in Show">
+      <SectionCard id="roadmap" title="Роадмап выставки: путь от класса до Best in Show">
         <p className="text-xs text-charcoal-600 sm:text-sm">
           Как устроена официальная последовательность сравнений на выставке РКФ одного дня:
         </p>
@@ -141,7 +141,7 @@ export default function ShowsTab() {
   // 2. Награды ринга одного дня с очками сайта
   const renderRingAwards = () => (
     <div id="sec-show-ring-awards">
-      <SectionCard title="Награды ринга одного дня (ценность и очки рейтинга)">
+      <SectionCard id="awards" title="Награды ринга одного дня (ценность и очки рейтинга)">
         <p className="text-xs text-charcoal-600 sm:text-sm">
           Иерархия наград на одной выставке и точные веса очков в рейтинге сайта Coursing Stats (клик раскроет подробности):
         </p>
@@ -154,7 +154,7 @@ export default function ShowsTab() {
   // 3. Выставочные классы собак по возрасту
   const renderClasses = () => (
     <div id="sec-show-classes">
-      <SectionCard title="Выставочные классы и возрастные рамки">
+      <SectionCard id="classes" title="Выставочные классы и возрастные рамки">
         <p className="text-xs text-charcoal-600 sm:text-sm">
           Официальные половозрастные классы по Положению о сертификатных выставках РКФ:
         </p>
@@ -186,7 +186,7 @@ export default function ShowsTab() {
   // 4. Оценки и цвета наградных лент
   const renderGrades = () => (
     <div id="sec-show-grades">
-      <SectionCard title="Шкала оценок в ринге и цвета наградных лент РКФ">
+      <SectionCard id="ribbons" title="Шкала оценок в ринге и цвета наградных лент РКФ">
         <div className="grid gap-2.5 sm:grid-cols-2 pt-1">
           {SHOW_GRADES.map((g) => (
             <div
@@ -246,7 +246,7 @@ export default function ShowsTab() {
   // 6. Карьерные чемпионские титулы в родословную
   const renderCareerTitles = () => (
     <div id="sec-show-career-titles">
-      <SectionCard title="Пожизненные чемпионские титулы в родословную">
+      <SectionCard id="titles" title="Пожизненные чемпионские титулы в родословную">
         <p className="text-xs text-charcoal-600 sm:text-sm">
           Титулы, которые официально регистрируются в РКФ и вносятся в родословные потомков по набору сертификатов:
         </p>

@@ -50,6 +50,16 @@ export default function DoninoRecordsColumns({
   resetScrollKey,
 }: DoninoRecordsColumnsProps) {
   const [mobileTab, setMobileTab] = useState<'speed' | 'coursing'>('speed')
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    const hash = window.location.hash.replace(/^#/, '')
+    if (hash === 'racing' || hash === 'racing350' || hash === 'coursing') {
+      setMobileTab('coursing')
+    } else if (hash === 'speed' || hash === 'speeds') {
+      setMobileTab('speed')
+    }
+  }, [])
   const trackRef = useRef<HTMLDivElement>(null)
   const [isNudging, setIsNudging] = useState(false)
   const hasInteractedRef = useRef(false)
@@ -374,7 +384,7 @@ export default function DoninoRecordsColumns({
           }}
         >
           {/* Слайд 1: Замер скорости */}
-          <div className="w-full max-w-full min-w-0 shrink-0 basis-full lg:w-auto lg:min-w-0 lg:shrink lg:basis-auto">
+          <div id="speeds" className="scroll-mt-20 w-full max-w-full min-w-0 shrink-0 basis-full lg:w-auto lg:min-w-0 lg:shrink lg:basis-auto">
             <DoninoColumnShell plaque={speedPlaque}>
               {visibleSpeed.length > 0 ? (
                 visibleSpeed.map((record) => (
@@ -402,7 +412,7 @@ export default function DoninoRecordsColumns({
           </div>
 
           {/* Слайд 2: Бега 350 м */}
-          <div className="w-full max-w-full min-w-0 shrink-0 basis-full lg:w-auto lg:min-w-0 lg:shrink lg:basis-auto">
+          <div id="racing350" className="scroll-mt-20 w-full max-w-full min-w-0 shrink-0 basis-full lg:w-auto lg:min-w-0 lg:shrink lg:basis-auto">
             <DoninoColumnShell plaque={coursingPlaque}>
               {visibleCoursing.length > 0 ? (
                 visibleCoursing.map((record) => (

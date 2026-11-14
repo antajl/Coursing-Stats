@@ -131,6 +131,7 @@ export const DogDisciplinesMobileView: React.FC<DogDisciplinesMobileViewProps> =
                       shouldCollapse ? 'h-0 overflow-hidden opacity-0' : 'h-auto opacity-100'
                     }`}
                   >
+                    <div id={tab.id} className="scroll-mt-20" />
                     {renderTabContent(tab.id)}
                   </div>
                 )

@@ -32,9 +32,9 @@ export function AbbrTag({
   )
 }
 
-export function SectionCard({ title, children }: { title: string; children: ReactNode }) {
+export function SectionCard({ title, children, id }: { title: string; children: ReactNode; id?: string }) {
   return (
-    <section className="rounded-xl border border-old-money-200 bg-white/80 p-4 md:p-6">
+    <section id={id} className="scroll-mt-20 rounded-xl border border-old-money-200 bg-white/80 p-4 md:p-6">
       <h2 className="mb-3 font-serif text-lg font-bold text-charcoal-900 md:text-xl">{title}</h2>
       <div className="space-y-3 text-sm leading-relaxed text-charcoal-700">{children}</div>
     </section>

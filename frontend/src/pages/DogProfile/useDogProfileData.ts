@@ -234,6 +234,12 @@ export function useDogProfileData() {
   ])
 
   const [activeDiscipline, setActiveDiscipline] = useState<DisciplineTabId>(() => {
+    const hash = typeof window !== 'undefined' ? window.location.hash.replace(/^#/, '') : ''
+    if (hash === 'shows') return 'shows'
+    if (hash === 'racing') return 'racing'
+    if (hash === 'coursing' || hash === 'competitions') return 'coursing'
+    if (hash === 'donino' || hash === 'speeds') return 'donino'
+    if (hash === 'judges') return 'judges'
     if (fromSpeedRecords || fromCoursingRecords) return 'donino'
     if (showCoursingColumn) return 'coursing'
     if (showRacingColumn) return 'racing'
@@ -241,6 +247,22 @@ export function useDogProfileData() {
     if (hasSpeedRecords || hasCoursingRecords) return 'donino'
     return 'coursing'
   })
+
+  // Sync mobile discipline tab when URL hash changes
+  useEffect(() => {
+    const hash = location.hash.replace(/^#/, '')
+    if (!hash) return
+    let targetTab: DisciplineTabId | null = null
+    if (hash === 'shows') targetTab = 'shows'
+    else if (hash === 'racing') targetTab = 'racing'
+    else if (hash === 'coursing' || hash === 'competitions') targetTab = 'coursing'
+    else if (hash === 'donino' || hash === 'speeds') targetTab = 'donino'
+    else if (hash === 'judges') targetTab = 'judges'
+
+    if (targetTab && availableTabs.some((t) => t.id === targetTab)) {
+      setActiveDiscipline(targetTab)
+    }
+  }, [location.hash, availableTabs])
 
   useEffect(() => {
     if (availableTabs.length > 0 && !availableTabs.some((t) => t.id === activeDiscipline)) {

@@ -45,11 +45,14 @@ const GUIDE_SECTIONS = [
 type TabId = (typeof GUIDE_SECTIONS)[number]['id']
 
 function parseGuideTab(value: string | null): TabId {
-  if (value === 'site' || value === 'protocol') {
+  if (value === 'site' || value === 'protocol' || value === 'rules' || value === 'levels') {
     return 'titles'
   }
-  if (value === 'speeds') {
+  if (value === 'speeds' || value === 'donino-speeds') {
     return 'donino'
+  }
+  if (value === 'cascade' || value === 'formula') {
+    return 'rating'
   }
   return GUIDE_SECTIONS.some((t) => t.id === value) ? (value as TabId) : 'titles'
 }
@@ -60,10 +63,13 @@ export default function Guide() {
 
   let redirectPath: string | null = null
   if (!rawTabParam) {
-    const savedTab = getLastSectionTab('guide')
+    const hash = typeof window !== 'undefined' ? window.location.hash.replace(/^#/, '') : ''
+    const hashTab = hash ? parseGuideTab(hash) : null
+    const targetTab = hashTab || parseGuideTab(getLastSectionTab('guide'))
     const next = new URLSearchParams(searchParams)
-    next.set('tab', parseGuideTab(savedTab))
-    redirectPath = `/guide/?${next.toString()}`
+    next.set('tab', targetTab)
+    const currentHash = typeof window !== 'undefined' ? window.location.hash : ''
+    redirectPath = `/guide/?${next.toString()}${currentHash}`
   }
 
   const activeTab = parseGuideTab(rawTabParam)
