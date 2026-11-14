@@ -156,14 +156,21 @@ export default function ShowCalendar({ urlYear }: ShowCalendarProps = {}) {
         let changed = false
         const params = new URLSearchParams(prev)
 
-        if (targetYear !== null) {
-          if (currentYear !== targetYear) {
-            params.set('year', targetYear)
+        if (!location.pathname.startsWith('/shows/archive')) {
+          if (targetYear !== null) {
+            if (currentYear !== targetYear) {
+              params.set('year', targetYear)
+              changed = true
+            }
+          } else if (currentYear) {
+            params.delete('year')
             changed = true
           }
-        } else if (currentYear) {
-          params.delete('year')
-          changed = true
+        } else {
+          if (params.has('year')) {
+            params.delete('year')
+            changed = true
+          }
         }
 
         if (targetMonth !== null) {
