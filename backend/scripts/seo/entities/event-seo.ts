@@ -102,7 +102,7 @@ export function eventMetaFromEntry(entry: {
     location ? location : null,
     n != null && n > 0 ? `${n} участников` : null,
     winnersPart,
-    'Официальный протокол забегов, баллы судей и сертификаты РКФ на Coursing Stats',
+    'Электронный протокол забегов, баллы судей и сертификаты соревнований на Coursing Stats',
   ].filter((p): p is string => Boolean(p))
 
   const description = descriptionParts.map((s) => s.replace(/\.+$/, '')).join('. ') + '.'
@@ -112,7 +112,7 @@ export function eventMetaFromEntry(entry: {
     location ? `в ${location}` : null,
     n != null && n > 0 ? `(${n} участников)` : null,
     winnersPart ? `${winnersPart}.` : null,
-    'Статистика курсинга, бегов борзых и официальные протоколы на Coursing Stats.',
+    'Статистика курсинга, бегов борзых и протоколы забегов на Coursing Stats.',
   ]
     .filter(Boolean)
     .join(' ')

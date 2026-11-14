@@ -300,7 +300,7 @@ export function DogJudgesSection({ judgeStats }: DogJudgesSectionProps) {
                 key={eIdx}
                 to={`/event/${ev.event_id}/`}
                 className="group flex items-center justify-between gap-3 p-2 rounded-lg bg-white/80 hover:bg-white border border-old-money-200/60 hover:border-old-money-300 transition-colors shadow-2xs"
-                title="Открыть официальный протокол состязания"
+                title="Открыть протокол состязания"
               >
                 <div className="min-w-0 flex-1">
                   <div className="font-semibold text-charcoal-900 group-hover:text-camel-800 transition-colors truncate flex items-center gap-1.5">

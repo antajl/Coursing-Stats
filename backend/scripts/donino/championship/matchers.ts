@@ -23,7 +23,7 @@ export function cleanDogNameFields(
   let ru = (rawRu || '').trim();
   let lat = (rawLat || '').trim();
 
-  // Проверяем официальный профиль собаки по dog_id
+  // Проверяем спортивный профиль собаки по dog_id
   if (dogId) {
     const profilePath = path.join(ROOT, 'data/v1/dogs/by-id', `${dogId}.json`);
     if (fs.existsSync(profilePath)) {

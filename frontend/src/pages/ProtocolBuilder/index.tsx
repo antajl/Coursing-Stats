@@ -115,7 +115,7 @@ export default function ProtocolBuilder() {
           </div>
         </div>
 
-        {/* Официальная сводная ведомость результатов (для печати и PDF) */}
+        {/* Сводная ведомость результатов (для печати и PDF) */}
         <ProtocolPrintView
           printableRef={state.printableRef}
           header={state.header}

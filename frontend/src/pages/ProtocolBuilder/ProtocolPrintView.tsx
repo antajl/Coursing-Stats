@@ -29,16 +29,16 @@ export const ProtocolPrintView: React.FC<ProtocolPrintViewProps> = ({
           Итоговые результаты по категориям
         </h2>
         <span className="text-xs text-char-500">
-          (Отображение чистого официального протокола)
+          (Печатная форма протокола)
         </span>
       </div>
 
-      {/* Лист официального протокола (для скачивания в PDF и печати) */}
+      {/* Лист протокола (для скачивания в PDF и печати) */}
       <div
         ref={printableRef}
         className="bg-white p-4 md:p-6 rounded-xl border border-om-200 shadow-xs print:border-none print:shadow-none print:p-0 print:m-0 space-y-5"
       >
-        {/* ОФИЦИАЛЬНАЯ ШАПКА РЕЗУЛЬТАТОВ */}
+        {/* ШАПКА РЕЗУЛЬТАТОВ */}
         <div className="border-b-2 border-char-900 pb-3 mb-4 flex items-center justify-between gap-4">
           <div className="shrink-0 flex items-center">
             <img

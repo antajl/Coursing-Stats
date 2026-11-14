@@ -44,7 +44,7 @@ export const SITE_NAVIGATION_ROUTES: NavigationRouteItem[] = [
         {
           id: 'protocol-builder',
           title: 'Конструктор протокола',
-          subtitle: 'Векторный экспорт официальных протоколов соревнований в HTML и PDF',
+          subtitle: 'Векторный экспорт протоколов соревнований в HTML и PDF',
           to: '/protocol-builder',
           icon: 'fileText' as const,
           keywords: [

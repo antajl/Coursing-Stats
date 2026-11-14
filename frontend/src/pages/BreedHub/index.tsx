@@ -226,7 +226,7 @@ export default function BreedHub() {
   }
 
   const seoTitle = `${breedInfo.nameRu} (${breedInfo.nameLat}) — рейтинг в курсинге, результаты забегов и рекорды | Coursing Stats`
-  const seoDesc = `Всероссийский рейтинг породы ${breedInfo.nameRu} (${breedInfo.nameLat}, ${breedInfo.fci}) в курсинге, бегах борзых и БЗМП: результаты забегов, топ сезона по скорости, замеры в Донино (км/ч), протоколы соревнований РКФ и рекорды на Coursing Stats.`
+  const seoDesc = `Сводный рейтинг породы ${breedInfo.nameRu} (${breedInfo.nameLat}, ${breedInfo.fci}) в курсинге, бегах борзых и БЗМП: результаты забегов, топ сезона по скорости, замеры в Донино (км/ч), протоколы соревнований РКФ и рекорды на Coursing Stats.`
   const seoKeywords = [
     breedInfo.nameRu.toLowerCase(),
     breedInfo.nameLat.toLowerCase(),

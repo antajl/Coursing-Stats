@@ -95,7 +95,7 @@ export function buildProtocolSeoHead(comp: CompetitionData): string {
   const canonicalUrl = `https://coursing-stats.ru/protocols/${eventId}.html`;
 
   const descParts = [
-    `Официальный протокол состязания: ${eventTitle}${eventDate ? ` (${eventDate})` : ''}`,
+    `Протокол состязания: ${eventTitle}${eventDate ? ` (${eventDate})` : ''}`,
     location ? location : null,
     hostClub ? `Организатор: ${hostClub}` : null,
     count > 0 ? `${count} участников` : null,

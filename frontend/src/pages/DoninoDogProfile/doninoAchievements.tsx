@@ -202,7 +202,7 @@ export function computeDoninoAchievements(
       label: 'Ветеран клуба',
       sublabel: `${totalRecords} забегов`,
       color: 'bg-cream-100 text-charcoal-800 border border-old-money-200/90',
-      tooltip: `${totalRecords} официальных замеров и забегов на полигоне`,
+      tooltip: `${totalRecords} зафиксированных замеров и забегов на полигоне`,
     })
   }
 
