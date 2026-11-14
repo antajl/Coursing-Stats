@@ -279,3 +279,6 @@ function Competitions({ defaultTab }: CompetitionsProps) {
   )
 }
 
+export default Competitions
+
+
