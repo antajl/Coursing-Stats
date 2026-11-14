@@ -112,6 +112,7 @@ export function buildJudgeDetails(rows: unknown[], judgesData: { id?: string; na
       categories: reg?.categories,
       verified: reg?.verified,
       notes: reg?.notes,
+      rkf_id: reg?.rkfId,
       total_evaluations: allScores.length,
       avg_score: overallAvg,
       breed_stats: breedData,

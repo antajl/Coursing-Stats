@@ -99,6 +99,7 @@ export async function getJudgeDetails(
       categories: info?.categories,
       verified: info?.verified,
       notes: info?.notes,
+      rkf_id: info?.rkfId,
       total_evaluations: allScores.length,
       avg_score: overallAvg,
       breed_stats: breedData,

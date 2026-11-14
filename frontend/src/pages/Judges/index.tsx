@@ -214,11 +214,16 @@ export default function Judges() {
   const plaque = (
     <DoninoColumnPlaque
       asHeader
-      title={plaqueTitle}
-      count={sortedJudges.length}
-      countLabel={formatJudgesCount(sortedJudges.length)}
-      actionPlacement="inline"
-      action={<JudgeSortDropdown value={sortKey} onChange={setSortKey} compact />}
+      title={
+        <span className="inline-flex items-center gap-1.5 sm:gap-2 truncate">
+          <span>{plaqueTitle}</span>
+          <span className="text-old-money-500 font-semibold text-[11px] sm:text-xs normal-case tracking-normal shrink-0">
+            · {formatJudgesCount(sortedJudges.length)}
+          </span>
+        </span>
+      }
+      actionPlacement="right"
+      action={<JudgeSortDropdown value={sortKey} onChange={setSortKey} />}
     />
   )
 
@@ -260,19 +265,15 @@ export default function Judges() {
         </div>
       ) : (
         <div className="space-y-4">
-          <DoninoColumnShell
-            plaque={plaque}
-            listRef={listRevealRef}
-            bodyClassName="grid grid-cols-1 lg:grid-cols-2 gap-2.5 p-2.5 sm:p-3 bg-cream-50/20"
-          >
+          <DoninoColumnShell plaque={plaque} listRef={listRevealRef}>
             {sortedJudges.slice(0, visibleCount).map((judge) => (
-              <div key={judge.id} data-list-item className="min-w-0">
+              <div key={judge.id} data-list-item>
                 <JudgeCard
                   judge={judge}
                   filterYear={filterYear}
                   filterDiscipline={filterDiscipline}
                   filterBreed={filterBreed}
-                  variant="card"
+                  variant="embedded"
                 />
               </div>
             ))}

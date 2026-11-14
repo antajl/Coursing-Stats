@@ -1,6 +1,7 @@
 export interface SportJudgeInfo {
   fullName: string
   city?: string
+  rkfId?: string
   role?: string
   categories?: string[]
   aliases?: string[]
@@ -19,6 +20,7 @@ export const SPORT_JUDGES_REGISTRY: Record<string, SportJudgeInfo> = {
   'Карелина Н.В.': {
     fullName: 'Карелина Настасья Вальдемаровна',
     city: 'Москва',
+    rkfId: '3561',
     role: 'Судья соревнований РКФ',
     categories: ['RUS-C (Курсинг)', 'RUS-Q (Бега борзых)'],
     aliases: ['Карелина Анастасия Вальдемаровна', 'Карелина Настасья Вольдемаровна'],
@@ -174,6 +176,7 @@ export const SPORT_JUDGES_REGISTRY: Record<string, SportJudgeInfo> = {
   'Богаченко В.В.': {
     fullName: 'Богаченко Владимир',
     city: 'Москва',
+    rkfId: '3758',
     role: 'Судья соревнований РКФ',
     categories: ['RUS-Q (Курсинг)', 'RUS-Q (Бега борзых)'],
     verified: true,

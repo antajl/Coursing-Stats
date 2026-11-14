@@ -8,6 +8,7 @@ interface JudgeProfileHeroProps {
   displayName: string
   fullName?: string | null
   city?: string | null
+  rkfId?: string | null
   role?: string | null
   categories?: string[] | null
   notes?: string | null
@@ -30,6 +31,7 @@ export const JudgeProfileHero: React.FC<JudgeProfileHeroProps> = ({
   displayName,
   fullName,
   city,
+  rkfId,
   role,
   categories,
   notes: _notes,
@@ -62,6 +64,12 @@ export const JudgeProfileHero: React.FC<JudgeProfileHeroProps> = ({
                 <span className="inline-flex items-center gap-1 rounded-md border border-old-money-200/80 bg-cream-50/80 px-2 py-0.5 text-[11px] font-medium text-charcoal-700">
                   <MapPin className="h-3 w-3 text-camel-700" />
                   {city}
+                </span>
+              )}
+
+              {rkfId && (
+                <span className="inline-flex items-center gap-1 rounded-md border border-camel-200/90 bg-cream-100/90 px-2 py-0.5 text-[11px] font-semibold text-camel-800">
+                  РКФ № {rkfId}
                 </span>
               )}
 

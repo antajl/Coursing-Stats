@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url'
 export interface SportJudgeInfo {
   fullName: string
   city?: string
+  rkfId?: string
   role?: string
   categories?: string[]
   aliases?: string[]

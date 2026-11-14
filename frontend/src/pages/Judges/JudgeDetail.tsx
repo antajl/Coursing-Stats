@@ -184,6 +184,7 @@ export default function JudgeDetail() {
   const info = getSportJudgeInfo(judgeName)
   const fullName = (judgeData.full_name as string) || info?.fullName || null
   const city = (judgeData.city as string) || info?.city || null
+  const rkfId = (judgeData.rkf_id as string) || info?.rkfId || null
   const role = (judgeData.role as string) || info?.role || 'Судья соревнований РКФ'
   const categories = (judgeData.categories as string[]) || info?.categories || null
   const notes = (judgeData.notes as string) || info?.notes || null
@@ -222,6 +223,7 @@ export default function JudgeDetail() {
           displayName={displayName}
           fullName={fullName}
           city={city}
+          rkfId={rkfId}
           role={role}
           categories={categories}
           notes={notes}

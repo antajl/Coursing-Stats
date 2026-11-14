@@ -183,7 +183,7 @@ export default function JudgeCard({
         <div className="hidden sm:flex items-center gap-1.5 sm:gap-2">
           {/* Турниров */}
           <div
-            className="flex flex-col items-center justify-center w-[4.5rem] shrink-0 rounded-xl bg-cream-100/90 border border-old-money-200/60 px-1 py-1 text-center group-hover:bg-white group-hover:border-camel-300 transition-colors"
+            className="flex flex-col items-center justify-center w-[4.75rem] shrink-0 rounded-xl bg-cream-100/90 border border-old-money-200/60 px-1.5 py-1 text-center group-hover:bg-white group-hover:border-camel-300 transition-colors"
             title={`${judge.unique_events || 0} турниров в официальных протоколах`}
           >
             <span className="text-[9px] uppercase tracking-wider text-charcoal-500 font-medium">Турниров</span>
@@ -194,7 +194,7 @@ export default function JudgeCard({
 
           {/* Собак */}
           <div
-            className="flex flex-col items-center justify-center w-[4.5rem] shrink-0 rounded-xl bg-cream-100/90 border border-old-money-200/60 px-1 py-1 text-center group-hover:bg-white group-hover:border-camel-300 transition-colors"
+            className="flex flex-col items-center justify-center w-[4.75rem] shrink-0 rounded-xl bg-cream-100/90 border border-old-money-200/60 px-1.5 py-1 text-center group-hover:bg-white group-hover:border-camel-300 transition-colors"
             title={`${(judge.unique_dogs || 0).toLocaleString('ru-RU')} уникальных собак`}
           >
             <span className="text-[9px] uppercase tracking-wider text-charcoal-500 font-medium">Собак</span>
@@ -205,7 +205,7 @@ export default function JudgeCard({
 
           {/* Ср. балл */}
           <div
-            className="flex flex-col items-center justify-center w-[4.5rem] shrink-0 rounded-xl bg-cream-100/90 border border-old-money-200/60 px-1 py-1 text-center group-hover:bg-white group-hover:border-camel-300 transition-colors"
+            className="flex flex-col items-center justify-center w-[4.75rem] shrink-0 rounded-xl bg-cream-100/90 border border-old-money-200/60 px-1.5 py-1 text-center group-hover:bg-white group-hover:border-camel-300 transition-colors"
             title={strictness.detail}
           >
             <span className="text-[9px] uppercase tracking-wider text-charcoal-500 font-medium">Ср. балл</span>

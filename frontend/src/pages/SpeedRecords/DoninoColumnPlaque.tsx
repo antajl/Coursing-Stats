@@ -10,11 +10,11 @@ function formatDogCount(count: number): string {
 }
 
 interface DoninoColumnPlaqueProps {
-  title: string
-  count: number
+  title: ReactNode
+  count?: number
   countLabel?: string
   action?: ReactNode
-  actionPlacement?: 'inline' | 'center'
+  actionPlacement?: 'inline' | 'center' | 'right'
   countClassName?: string
   titleClassName?: string
   /** Header bar inside DoninoColumnShell (no outer margin/border). */
@@ -36,6 +36,7 @@ export default function DoninoColumnPlaque({
     : 'donino-column-plaque relative mb-3 flex h-10 min-h-10 items-center justify-between rounded-xl border border-[rgba(195,168,128,0.75)] bg-cream-100/90 px-3.5 shadow-sm'
 
   const isInlineAction = actionPlacement === 'inline'
+  const isRightAction = actionPlacement === 'right'
 
   return (
     <div className={shellClass}>
@@ -48,20 +49,28 @@ export default function DoninoColumnPlaque({
             {action}
           </div>
         )}
-        {action && !isInlineAction && (
+        {action && !isInlineAction && !isRightAction && (
           <div className="sm:hidden flex items-center shrink-0">
             {action}
           </div>
         )}
       </div>
-      {action && !isInlineAction && (
+
+      {action && !isInlineAction && !isRightAction && (
         <div className="pointer-events-none absolute inset-0 hidden sm:flex items-center justify-center px-24">
           <div className="pointer-events-auto">{action}</div>
         </div>
       )}
-      <span className={`relative z-[1] ml-auto shrink-0 pl-2 text-xs font-semibold text-old-money-600 ${countClassName || ''}`}>
-        {countLabel ?? formatDogCount(count)}
-      </span>
+
+      <div className="relative z-[1] ml-auto shrink-0 flex items-center pl-2">
+        {action && isRightAction ? (
+          action
+        ) : countLabel != null || count != null ? (
+          <span className={`text-xs font-semibold text-old-money-600 ${countClassName || ''}`}>
+            {countLabel ?? formatDogCount(count ?? 0)}
+          </span>
+        ) : null}
+      </div>
     </div>
   )
 }
