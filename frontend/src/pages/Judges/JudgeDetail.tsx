@@ -5,6 +5,7 @@ import { SEO } from '../../components/SEO'
 import { JsonLd, personSchema } from '../../components/JsonLd'
 import { formatJudgeDisplayName, getJudgeInitials, getSportJudgeStrictnessBadge } from '../../lib/judgeUiUtils'
 import { getSportJudgeInfo } from '../../lib/sportJudgesRegistry'
+import { resolveSportJudgeNumericId } from '../../lib/judgeIdMap.generated'
 import { sortArray, type SortState } from '../../lib/judgeSortUtils'
 import type { BreedStat, CriteriaStat, ListTab } from './JudgeDetail/types'
 import { collectEvents, formatBreedName } from './JudgeDetail/utils'
@@ -201,19 +202,22 @@ export default function JudgeDetail() {
   const strictnessBadge = getSportJudgeStrictnessBadge(avgScore, totalEvals)
   const seoFullName = fullName ? `${fullName} (${displayName})` : displayName
 
+  const numericId = resolveSportJudgeNumericId(judgeId || judgeName)
+  const canonicalJudgeSlug = numericId || encodeURIComponent(judgeId || judgeName)
+
   return (
     <>
       <SEO
         title={`${seoFullName} — судья по курсингу и бегам борзых | Coursing Stats`}
         description={`Судья по курсингу и бегам ${seoFullName}: статистика забегов (${eventCount} соревнований, ${totalEvals} оценок, ${breedCount} пород), средний балл и критерии на Coursing Stats.`}
         keywords={`${judgeName}, ${fullName || ''}, ${displayName}, судья, курсинг, бега борзых, статистика, РКФ, оценки, соревнования`}
-        canonicalUrl={`https://coursing-stats.ru/judges/${encodeURIComponent(judgeId || judgeName)}/`}
+        canonicalUrl={`https://coursing-stats.ru/judges/${canonicalJudgeSlug}/`}
       />
       <JsonLd
         data={personSchema({
           name: fullName || displayName,
           jobTitle: role || 'Судья соревнований по курсингу и бегам борзых',
-          url: `https://coursing-stats.ru/judges/${encodeURIComponent(judgeId || judgeName)}/`,
+          url: `https://coursing-stats.ru/judges/${canonicalJudgeSlug}/`,
           description: `Судья по курсингу и бегам ${seoFullName}: ${eventCount} соревнований, ${totalEvals} оценок, ${breedCount} пород на Coursing Stats.`,
         })}
       />
