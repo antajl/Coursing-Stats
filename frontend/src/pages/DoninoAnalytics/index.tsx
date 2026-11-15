@@ -43,14 +43,14 @@ export default function DoninoAnalytics() {
   }, [])
 
   useEffect(() => {
-    setLastDoninoPath('/donino/analytics')
+    setLastDoninoPath('/donino/analytics/')
   }, [])
 
   const handleSubNavChange = (id: string) => {
     if (id === 'records') {
-      navigate('/speed-records')
+      navigate('/speed-records/2026/')
     } else if (id === 'championship') {
-      navigate('/donino/championship')
+      navigate('/donino/championship/')
     }
   }
 

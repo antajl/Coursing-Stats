@@ -276,7 +276,7 @@ function StandingExplainerBody({
       <p className="text-[11px] leading-snug text-charcoal-600">
         Подробнее — в{' '}
         <Link
-          to={`/guide?tab=${guideTab}`}
+          to={`/guide/?tab=${guideTab}`}
           onClick={onClose}
           className="font-semibold text-camel-700 underline underline-offset-2 hover:text-camel-800"
         >

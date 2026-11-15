@@ -36,9 +36,9 @@ export default function ProtocolBuilder() {
         ]}
         activeTab="builder"
         onChange={(tabId) => {
-          if (tabId === 'ranking') navigate('/competitions?tab=ranking')
-          else if (tabId === 'archive') navigate('/competitions?tab=archive')
-          else if (tabId === 'judges') navigate('/competitions?tab=judges')
+          if (tabId === 'ranking') navigate('/competitions/ranking/2026/')
+          else if (tabId === 'archive') navigate('/competitions/archive/2026/')
+          else if (tabId === 'judges') navigate('/competitions/judges/2026/')
         }}
         ariaLabel="Разделы соревнований"
         className="print:hidden"

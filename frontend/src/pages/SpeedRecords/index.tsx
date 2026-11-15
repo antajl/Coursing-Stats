@@ -33,15 +33,15 @@ function SpeedRecords() {
 
   useEffect(() => {
     if (rawTab === 'stats' || rawView === 'stats') {
-      navigate('/donino/analytics', { replace: true })
+      navigate('/donino/analytics/', { replace: true })
     }
   }, [rawTab, rawView, navigate])
 
   const handleSubNavChange = (id: string) => {
     if (id === 'championship') {
-      navigate('/donino/championship')
+      navigate('/donino/championship/')
     } else if (id === 'analytics') {
-      navigate('/donino/analytics')
+      navigate('/donino/analytics/')
     }
   }
 

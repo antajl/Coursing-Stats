@@ -11,7 +11,7 @@ import { toDogTitleCase } from '../lib/dogName'
 import { displayBreed } from '../lib/breedMapping'
 import { useFavorites } from '../hooks/useFavorites'
 import { SEO } from '../components/SEO'
-import { JsonLd, breadcrumbListSchema, profilePageSchema } from '../components/JsonLd'
+import { JsonLd, breadcrumbListSchema, itemPageSchema } from '../components/JsonLd'
 import DoninoAttribution from '../components/DoninoAttribution'
 import { api } from '../services/api'
 import { SegmentedTabs } from '../components/ui/SegmentedTabs'
@@ -187,7 +187,7 @@ export default function DoninoDogProfile() {
                 { name: 'Рекорды Донино', url: '/speed-records/' },
                 { name: displayName, url: seoCanonical },
               ]),
-              profilePageSchema({
+              itemPageSchema({
                 url: seoCanonical,
                 name: displayName,
                 breed: breedInfo.primary,
