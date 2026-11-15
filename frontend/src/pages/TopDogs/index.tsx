@@ -94,7 +94,7 @@ export default function TopDogs({ urlYear }: TopDogsProps = {}) {
   const activeSeason = useMemo(() => resolveActiveSeason(years), [years])
 
   // Sync with resolved active season once years load if user did not provide an explicit year in URL
-  const hasUrlYear = searchParams.get('year') !== null
+  const hasUrlYear = routeYear !== undefined || searchParams.get('year') !== null
   useEffect(() => {
     if (!hasUrlYear && years.length > 0) {
       const resolved = resolveActiveSeason(years)
@@ -174,12 +174,10 @@ export default function TopDogs({ urlYear }: TopDogsProps = {}) {
   }, [
     filterBreed,
     filterSex,
-    filterYear,
     searchQuery,
     filterMinStarts,
     filterScoreFrom,
     filterSpeedFrom,
-    activeSeason,
     setSearchParams,
   ])
 
@@ -224,10 +222,10 @@ export default function TopDogs({ urlYear }: TopDogsProps = {}) {
     if (speedFromUrl !== filterSpeedFrom) {
       setFilterSpeedFrom(speedFromUrl)
     }
-  }, [searchParams, activeSeason])
+  }, [searchParams, activeSeason, routeYear])
 
   const breedValues = breeds
-  const yearValues = years.map(String)
+  const yearValues = years.filter((y) => Number(y) <= 2026).map(String)
 
   const topPlacement = topPlacementData?.success ? topPlacementData.data?.items || [] : []
   const topScore = topScoreData?.success ? topScoreData.data?.items || [] : []

@@ -64,7 +64,7 @@ export function sortYearsChronologically(years: (string | number)[]): string[] {
   const numeric = years
     .map(String)
     .map((y) => y.trim())
-    .filter((y) => y && !isNaN(Number(y)))
+    .filter((y) => y && !isNaN(Number(y)) && Number(y) <= 2026)
   const unique = Array.from(new Set(numeric))
   return unique.sort((a, b) => Number(a) - Number(b))
 }

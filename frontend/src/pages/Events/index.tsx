@@ -78,7 +78,7 @@ export default function Events({ urlYear }: EventsProps = {}) {
     const combined = [...fromYearsData, ...fromAllEvents]
     const years = [CURRENT_SEASON, ...combined]
       .map(String)
-      .filter(Boolean)
+      .filter((y) => Boolean(y) && y !== '2027' && Number(y) <= 2026)
       .sort((a, b) => Number(b) - Number(a))
       .filter((value, index, self) => self.indexOf(value) === index)
 

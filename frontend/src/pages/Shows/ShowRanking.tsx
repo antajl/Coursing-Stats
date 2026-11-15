@@ -193,7 +193,7 @@ export default function ShowRanking({ urlYear }: ShowRankingProps = {}) {
       },
       { replace: true },
     )
-  }, [filterBreed, filterSex, filterYear, searchQuery, setSearchParams])
+  }, [filterBreed, filterSex, searchQuery, setSearchParams])
 
   // Respond to browser back/forward navigation
   useEffect(() => {

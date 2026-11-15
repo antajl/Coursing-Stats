@@ -68,7 +68,6 @@ const SHOW_RKF_CALENDAR_YEARS_FALLBACK = [
   '2024',
   '2025',
   '2026',
-  '2027',
 ] as const
 
 interface ShowCalendarEntry {

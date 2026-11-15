@@ -1,10 +1,14 @@
 import { useState, useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import { Search, X, ArrowUpRight, Trophy, Layers } from 'lucide-react'
+import { Trophy, ArrowUpRight, X } from 'lucide-react'
 import { SEO } from '../../components/SEO'
 import { JsonLd, breadcrumbListSchema, itemPageSchema } from '../../components/JsonLd'
 import { CORE_BREED_HUBS, type BreedCategory } from '../../lib/breed-hubs-data'
 import { useBreedAnnualLeaders } from '../../hooks/useStaticData'
+import PageToolbar from '../../components/toolbar/PageToolbar'
+import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
+import DoninoColumnPlaque, { DoninoColumnShell } from '../SpeedRecords/DoninoColumnPlaque'
+import EmptyState from '../../components/EmptyState'
 
 const CATEGORIES: Array<{ id: 'all' | BreedCategory; label: string; count: number }> = [
   { id: 'all', label: 'Все породы', count: CORE_BREED_HUBS.length },
@@ -20,7 +24,7 @@ const CATEGORIES: Array<{ id: 'all' | BreedCategory; label: string; count: numbe
   },
   {
     id: 'sport',
-    label: 'Спортивный класс БЗМП',
+    label: 'Спорт БЗМП',
     count: CORE_BREED_HUBS.filter((b) => b.category === 'sport').length,
   },
   {
@@ -29,6 +33,24 @@ const CATEGORIES: Array<{ id: 'all' | BreedCategory; label: string; count: numbe
     count: CORE_BREED_HUBS.filter((b) => b.category === 'open').length,
   },
 ]
+
+function formatBreedsCount(count: number): string {
+  const mod10 = count % 10
+  const mod100 = count % 100
+  if (mod100 >= 11 && mod100 <= 14) return `${count} пород`
+  if (mod10 === 1) return `${count} порода`
+  if (mod10 >= 2 && mod10 <= 4) return `${count} породы`
+  return `${count} пород`
+}
+
+function formatSeasonsCount(count: number): string {
+  const mod10 = count % 10
+  const mod100 = count % 100
+  if (mod100 >= 11 && mod100 <= 14) return 'сезонов'
+  if (mod10 === 1) return 'сезон'
+  if (mod10 >= 2 && mod10 <= 4) return 'сезона'
+  return 'сезонов'
+}
 
 export default function BreedsDirectory() {
   const [selectedCategory, setSelectedCategory] = useState<'all' | BreedCategory>('all')
@@ -60,12 +82,41 @@ export default function BreedsDirectory() {
     return list
   }, [selectedCategory, searchQuery])
 
+  const hasActiveFilters = searchQuery.trim().length > 0 || selectedCategory !== 'all'
+
+  const clearFilters = () => {
+    setSearchQuery('')
+    setSelectedCategory('all')
+  }
+
+  const activeCategoryLabel = CATEGORIES.find((c) => c.id === selectedCategory)?.label || 'Все породы'
+
+  const plaque = (
+    <DoninoColumnPlaque
+      asHeader
+      title={
+        <span className="inline-flex items-center gap-1.5 sm:gap-2 truncate">
+          <span>{activeCategoryLabel}</span>
+          <span className="text-old-money-500 font-semibold text-[11px] sm:text-xs normal-case tracking-normal shrink-0">
+            · {formatBreedsCount(filteredBreeds.length)}
+          </span>
+        </span>
+      }
+      actionPlacement="right"
+      action={
+        <span className="text-[11px] text-charcoal-500 font-medium hidden sm:inline">
+          Официальный реестр беговых пород
+        </span>
+      }
+    />
+  )
+
   const seoTitle = 'Каталог пород собак: курсинг, бега борзых и БЗМП | Coursing Stats'
   const seoDesc =
     'Официальный реестр всех 83 беговых пород собак в курсинге, рейсинге и БЗМП: карточки пород, история забегов с 2015 года, рекорды скорости и залы славы чемпионов.'
 
   return (
-    <div className="space-y-6 pb-12">
+    <div className="max-w-full mx-auto pb-4 sm:pb-6 space-y-3 sm:space-y-4">
       <SEO
         title={seoTitle}
         description={seoDesc}
@@ -89,157 +140,205 @@ export default function BreedsDirectory() {
         }}
       />
 
-      {/* Hero Header */}
-      <header className="rounded-xl border border-cream-200 bg-white/80 p-4 sm:p-5 md:p-6 shadow-sm">
-        <div className="flex flex-wrap items-center gap-2 mb-2">
-          <span className="inline-flex items-center gap-1 text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-camel-100 text-camel-900 border border-camel-200/80">
-            <Layers className="h-3 w-3 text-camel-700" aria-hidden />
-            <span>Каталог пород</span>
-          </span>
-          <span className="text-xs text-charcoal-500 font-sans tabular-nums">
-            {CORE_BREED_HUBS.length} пород в базе состязаний
-          </span>
-        </div>
+      {/* Toolbar: единый стиль сайтов Old Money (как в Рейтинге, Архиве, Судьях и Донино) */}
+      <PageToolbar
+        bare
+        topRowClassName="flex-nowrap"
+        filters={
+          <div className="w-full min-w-0">
+            {/* Мобильная строка: Поиск + Категории + Сброс */}
+            <div className="flex sm:hidden items-center gap-1.5 w-full min-w-0 overflow-x-auto no-scrollbar py-0.5">
+              <ToolbarSearch
+                value={searchQuery}
+                onChange={setSearchQuery}
+                placeholder="Поиск породы…"
+              />
 
-        <h1 className="text-xl sm:text-2xl font-serif font-bold text-charcoal-900 tracking-tight mb-2">
-          Породы в курсинге, бегах борзых и БЗМП
-        </h1>
+              <div className="flex items-center gap-1 shrink-0">
+                {CATEGORIES.map((cat) => {
+                  const active = selectedCategory === cat.id
+                  return (
+                    <button
+                      key={cat.id}
+                      type="button"
+                      onClick={() => setSelectedCategory(cat.id)}
+                      className={`h-8 rounded-full px-2.5 text-xs font-semibold whitespace-nowrap cursor-pointer transition-all flex items-center gap-1 shrink-0 ${
+                        active ? 'cs-glass-pill-active' : 'cs-glass-pill'
+                      }`}
+                    >
+                      <span>{cat.label.split(' ')[0]}</span>
+                      <span className={`text-[10px] tabular-nums font-sans px-1 rounded-full ${
+                        active ? 'bg-camel-200/80 text-camel-950 font-bold' : 'bg-cream-100 text-charcoal-500'
+                      }`}>
+                        {cat.count}
+                      </span>
+                    </button>
+                  )
+                })}
+              </div>
 
-        <p className="text-xs sm:text-sm text-charcoal-600 max-w-3xl leading-relaxed">
-          Официальный справочник всех признанных и спортивных пород собак. Выберите интересующую
-          породу для перехода в персональный хаб со статистикой состязаний, рекордами скорости в
-          Донино, залом славы по годам и полным рейтингом.
-        </p>
-
-        {/* Toolbar: Search input & category pills */}
-        <div className="mt-4 pt-4 border-t border-cream-200/80 space-y-3">
-          {/* Search bar */}
-          <div className="relative max-w-md">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-charcoal-400 pointer-events-none" />
-            <input
-              type="text"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Поиск породы по названию или коду FCI..."
-              className="w-full h-9 pl-9 pr-8 text-xs sm:text-sm rounded-full border border-cream-300 bg-white/90 text-charcoal-900 placeholder:text-charcoal-400 focus:outline-none focus:ring-1 focus:ring-camel-400 focus:border-camel-400 transition-all"
-            />
-            {searchQuery && (
-              <button
-                type="button"
-                onClick={() => setSearchQuery('')}
-                className="absolute right-2.5 top-1/2 -translate-y-1/2 text-charcoal-400 hover:text-charcoal-700 cursor-pointer p-0.5"
-                aria-label="Очистить поиск"
-              >
-                <X className="h-3.5 w-3.5" />
-              </button>
-            )}
-          </div>
-
-          {/* Categories */}
-          <div className="flex flex-wrap items-center gap-1.5">
-            {CATEGORIES.map((cat) => {
-              const active = selectedCategory === cat.id
-              return (
+              {hasActiveFilters && (
                 <button
-                  key={cat.id}
                   type="button"
-                  onClick={() => setSelectedCategory(cat.id)}
-                  className={`inline-flex items-center gap-1.5 h-8 rounded-full px-3 text-xs font-semibold transition-all cursor-pointer whitespace-nowrap ${
-                    active ? 'cs-glass-pill-active' : 'cs-glass-pill'
-                  }`}
+                  onClick={clearFilters}
+                  className="cs-glass-pill shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full !text-charcoal-500 hover:!text-charcoal-800 transition-colors cursor-pointer select-none ml-auto"
+                  title="Сбросить фильтры"
+                  aria-label="Сбросить фильтры"
                 >
-                  <span>{cat.label}</span>
-                  <span
-                    className={`text-[10px] tabular-nums font-sans px-1.5 py-0.2 rounded-full ${
-                      active ? 'bg-camel-200/80 text-camel-950' : 'bg-cream-100 text-charcoal-500'
-                    }`}
-                  >
-                    {cat.count}
-                  </span>
+                  <X className="h-4 w-4" />
                 </button>
-              )
-            })}
-          </div>
-        </div>
-      </header>
+              )}
+            </div>
 
-      {/* Grid of Breed Cards */}
+            {/* Десктопная строка (>= sm): Полноразмерный поиск + чипы категорий */}
+            <div className="hidden sm:flex items-center justify-between gap-3 w-full min-w-0">
+              <div className="w-64 lg:w-72 shrink-0">
+                <ToolbarSearch
+                  value={searchQuery}
+                  onChange={setSearchQuery}
+                  placeholder="Поиск породы или код FCI…"
+                />
+              </div>
+
+              <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5">
+                {CATEGORIES.map((cat) => {
+                  const active = selectedCategory === cat.id
+                  return (
+                    <button
+                      key={cat.id}
+                      type="button"
+                      onClick={() => setSelectedCategory(cat.id)}
+                      className={`h-8 rounded-full px-3 text-xs font-semibold whitespace-nowrap cursor-pointer transition-all flex items-center gap-1.5 shrink-0 ${
+                        active ? 'cs-glass-pill-active' : 'cs-glass-pill'
+                      }`}
+                    >
+                      <span>{cat.label}</span>
+                      <span className={`text-[10.5px] tabular-nums font-sans px-1.5 py-0.2 rounded-full ${
+                        active ? 'bg-camel-200/80 text-camel-950 font-bold' : 'bg-cream-100 text-charcoal-500'
+                      }`}>
+                        {cat.count}
+                      </span>
+                    </button>
+                  )
+                })}
+              </div>
+
+              {hasActiveFilters && (
+                <button
+                  type="button"
+                  onClick={clearFilters}
+                  className="cs-glass-pill shrink-0 inline-flex h-8 px-2.5 items-center justify-center gap-1 rounded-full text-xs font-semibold !text-charcoal-600 hover:!text-charcoal-900 transition-colors cursor-pointer select-none ml-auto"
+                  title="Сбросить фильтры"
+                >
+                  <X className="h-3.5 w-3.5" />
+                  <span>Сброс</span>
+                </button>
+              )}
+            </div>
+          </div>
+        }
+      />
+
+      {/* Список пород: колоночный шелл DoninoColumnShell с единой плашкой DoninoColumnPlaque */}
       {filteredBreeds.length === 0 ? (
-        <div className="rounded-xl border border-cream-200 bg-white/80 p-8 text-center text-charcoal-600">
-          <p className="text-sm font-medium mb-2">По вашему запросу ничего не найдено</p>
-          <button
-            type="button"
-            onClick={() => {
-              setSearchQuery('')
-              setSelectedCategory('all')
-            }}
-            className="cs-glass-pill inline-flex h-8 items-center rounded-full px-3 text-xs font-semibold cursor-pointer"
-          >
-            Сбросить фильтры
-          </button>
+        <div className="overflow-hidden rounded-xl border border-old-money-200 bg-white">
+          <EmptyState
+            title="Породы не найдены"
+            description="Попробуйте изменить поисковый запрос или выбрать другую категорию"
+          />
         </div>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-4">
+        <DoninoColumnShell plaque={plaque} bodyClassName="flex flex-col divide-y divide-old-money-100">
           {filteredBreeds.map((breed) => {
             const leaders = leadersBySlug?.[breed.slug] || []
-            const activeSeasonsCount = leaders.length
+            const seasonsCount = leaders.length
+            const latestLeader = leaders[0]
 
             return (
               <div
                 key={breed.slug}
-                className="rounded-xl border border-cream-200 bg-white/85 p-4 sm:p-5 flex flex-col justify-between hover:border-camel-300 hover:shadow-xs transition-all group"
+                className="p-3 sm:p-4 hover:bg-cream-50/70 transition-colors flex flex-col md:flex-row md:items-center justify-between gap-3 group"
               >
-                <div>
-                  <div className="flex items-center justify-between gap-2 mb-2">
-                    <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-cream-100 text-charcoal-700 border border-cream-200 tracking-wide">
+                {/* Инфо о породе */}
+                <div className="min-w-0 flex-1">
+                  <div className="flex flex-wrap items-center gap-2 mb-1">
+                    <span className="inline-flex items-center rounded-md border border-camel-200/90 bg-cream-100/90 px-2 py-0.5 text-[10.5px] font-semibold uppercase tracking-wider text-camel-800 shrink-0">
                       {breed.fci}
                     </span>
-                    {activeSeasonsCount > 0 && (
-                      <span className="text-[10px] text-charcoal-500 font-sans tabular-nums">
-                        {activeSeasonsCount} {activeSeasonsCount === 1 ? 'сезон' : activeSeasonsCount < 5 ? 'сезона' : 'сезонов'}
+                    <span className="text-xs font-sans text-charcoal-500 font-medium">
+                      {breed.nameLat}
+                    </span>
+                    {seasonsCount > 0 && (
+                      <span className="text-xs text-charcoal-400 font-sans tabular-nums hidden sm:inline">
+                        · {seasonsCount} {formatSeasonsCount(seasonsCount)}
                       </span>
                     )}
                   </div>
 
                   <Link
                     to={`/breeds/${breed.slug}/`}
-                    className="block group-hover:text-camel-800 transition-colors"
+                    className="text-base sm:text-[17px] font-serif font-bold text-charcoal-900 group-hover:text-camel-800 transition-colors inline-block leading-snug"
                   >
-                    <h2 className="text-base sm:text-lg font-serif font-bold text-charcoal-900 leading-snug">
-                      {breed.nameRu}
-                    </h2>
-                    <div className="text-xs text-charcoal-500 font-sans tracking-wide mt-0.5 mb-2">
-                      {breed.nameLat}
-                    </div>
+                    {breed.nameRu}
                   </Link>
 
-                  <p className="text-xs text-charcoal-600 line-clamp-3 leading-relaxed mb-4">
+                  <p className="text-xs text-charcoal-600 line-clamp-1 sm:line-clamp-2 mt-0.5 leading-relaxed max-w-3xl">
                     {breed.lead}
                   </p>
                 </div>
 
-                <div className="pt-3 border-t border-cream-200/80 flex items-center justify-between gap-2">
-                  <Link
-                    to={`/breeds/${breed.slug}/`}
-                    className="cs-glass-pill-active inline-flex h-8 items-center gap-1 rounded-full px-3 text-xs font-semibold shrink-0 cursor-pointer"
+                {/* Блок метрик и быстрых переходов */}
+                <div className="shrink-0 flex items-center justify-between sm:justify-end gap-2 sm:gap-3 pt-2 md:pt-0 border-t md:border-t-0 border-old-money-100/80">
+                  {/* Плашка сезонов активности */}
+                  <div
+                    className="flex flex-col items-center justify-center w-[4.5rem] shrink-0 rounded-lg bg-cream-100/70 border border-old-money-200/50 px-1 py-1 text-center group-hover:bg-white group-hover:border-camel-300 transition-colors"
+                    title={`${seasonsCount} сезонов с зафиксированными официальными результатами`}
                   >
-                    <span>Хаб породы</span>
-                    <ArrowUpRight className="h-3.5 w-3.5 text-camel-800" aria-hidden />
-                  </Link>
+                    <span className="text-[9px] uppercase tracking-wider text-charcoal-500 font-medium">Сезонов</span>
+                    <span className="text-sm font-bold tabular-nums text-charcoal-900">
+                      {seasonsCount > 0 ? seasonsCount : '—'}
+                    </span>
+                  </div>
 
-                  <Link
-                    to={`/competitions/?tab=ranking&breed=${encodeURIComponent(breed.canonicalKey)}`}
-                    className="cs-glass-pill inline-flex h-8 items-center gap-1 rounded-full px-2.5 text-xs font-medium text-charcoal-700 hover:text-camel-800 cursor-pointer"
-                    title={`Открыть рейтинг породы ${breed.nameRu}`}
-                  >
-                    <Trophy className="h-3 w-3 text-camel-700" aria-hidden />
-                    <span>Рейтинг</span>
-                  </Link>
+                  {/* Действующий чемпион года */}
+                  {latestLeader ? (
+                    <div
+                      className="hidden lg:flex flex-col items-start justify-center w-[10rem] shrink-0 rounded-lg bg-cream-100/70 border border-old-money-200/50 px-2 py-1 text-left group-hover:bg-white group-hover:border-camel-300 transition-colors truncate"
+                      title={`Лидер ${latestLeader.year} года: ${latestLeader.dog_name}`}
+                    >
+                      <span className="text-[9px] uppercase tracking-wider text-charcoal-500 font-medium truncate w-full">
+                        Лидер {latestLeader.year}
+                      </span>
+                      <span className="text-xs font-bold text-camel-800 truncate w-full">
+                        {latestLeader.dog_name}
+                      </span>
+                    </div>
+                  ) : null}
+
+                  {/* Кнопки действий */}
+                  <div className="flex items-center gap-1.5 shrink-0 pl-1">
+                    <Link
+                      to={`/breeds/${breed.slug}/`}
+                      className="cs-glass-pill-active inline-flex h-8 items-center gap-1 rounded-full px-3 text-xs font-semibold shrink-0 cursor-pointer"
+                    >
+                      <span>Хаб породы</span>
+                      <ArrowUpRight className="h-3.5 w-3.5 text-camel-800" aria-hidden />
+                    </Link>
+
+                    <Link
+                      to={`/competitions/?tab=ranking&breed=${encodeURIComponent(breed.canonicalKey)}`}
+                      className="cs-glass-pill inline-flex h-8 items-center gap-1 rounded-full px-2.5 text-xs font-medium text-charcoal-700 hover:text-camel-800 cursor-pointer"
+                      title={`Рейтинг соревнований для ${breed.nameRu}`}
+                    >
+                      <Trophy className="h-3 w-3 text-camel-700" aria-hidden />
+                      <span className="hidden sm:inline">Рейтинг</span>
+                    </Link>
+                  </div>
                 </div>
               </div>
             )
           })}
-        </div>
+        </DoninoColumnShell>
       )}
     </div>
   )

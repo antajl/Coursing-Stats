@@ -209,7 +209,7 @@ export default function ShowCalendar({ urlYear }: ShowCalendarProps = {}) {
       },
       { replace: true },
     )
-  }, [filterYear, filterMonth, filterBreed, filterCity, searchQuery, setSearchParams])
+  }, [filterMonth, filterBreed, filterCity, searchQuery, setSearchParams])
 
   // Sync URL changes back to state (e.g. browser back/forward or tab switch)
   useEffect(() => {
