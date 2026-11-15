@@ -120,6 +120,7 @@ const STATIC_PAGES: SitemapUrl[] = [
   { loc: '/donino/championship/', priority: '0.8', changefreq: 'weekly' },
   { loc: '/donino/analytics/', priority: '0.7', changefreq: 'weekly' },
   { loc: '/guide/', priority: '0.6', changefreq: 'monthly' },
+  { loc: '/breeds/', priority: '0.85', changefreq: 'weekly' },
   { loc: '/about/', priority: '0.5', changefreq: 'monthly' },
   ...buildYearStaticPages(),
 ]

@@ -869,6 +869,34 @@ function prerenderBreedHubs(spaHtml: string): number {
   return written
 }
 
+function prerenderStaticRedirects(): number {
+  const redirects: Array<{ path: string; target: string }> = [
+    { path: '/procoursing', target: '/competitions/ranking/2026/' },
+    { path: '/top', target: '/competitions/ranking/2026/' },
+    { path: '/top-dogs', target: '/competitions/ranking/2026/' },
+    { path: '/judges', target: '/competitions/judges/2026/' },
+    { path: '/shows/champions', target: '/shows/ranking/2026/' },
+    { path: '/shows/calendar', target: '/shows/archive/2026/' },
+    { path: '/competitions/calendar', target: '/competitions/archive/2026/' },
+    { path: '/competitions/2027', target: '/competitions/archive/2027/' },
+    { path: '/calendar/2027', target: '/competitions/archive/2027/' },
+    { path: '/coursing-records', target: '/speed-records/2026/' },
+    { path: '/donino/records', target: '/speed-records/2026/' },
+    { path: '/donino-championship', target: '/donino/championship/' },
+    { path: '/donino/championship/standings', target: '/donino/championship/' },
+    { path: '/donino/championship/analytics', target: '/donino/analytics/' },
+    { path: '/breed', target: '/breeds/' },
+  ]
+
+  for (const r of redirects) {
+    const canonicalUrl = `${SITE_ORIGIN}${r.target}`
+    const html = buildRedirectHtml(canonicalUrl)
+    const outPath = path.join(DIST, r.path.replace(/^\//, ''), 'index.html')
+    writeHtml(outPath, html)
+  }
+  return redirects.length
+}
+
 function main(): void {
   const started = Date.now()
 
@@ -899,6 +927,7 @@ function main(): void {
 
   const hubs = prerenderHubs(shellForPages)
   const breedHubs = prerenderBreedHubs(shellForPages)
+  const redirects = prerenderStaticRedirects()
   const profilesDir = resolveProfilesDir()
   const competitionDogs = prerenderCompetitionDogs(shellForPages, profilesDir)
   const showOnlyDogs = prerenderShowOnlyDogs(shellForPages)
@@ -939,7 +968,7 @@ function main(): void {
   const elapsed = Date.now() - started
 
   console.log(
-    `[prerender-seo] hubs=${hubs} breedHubs=${breedHubs} dogs=${dogs} (competition=${competitionDogs}, show-only=${showOnlyDogs}) events=${events} judges=${judges} donino=${donino} exhibitions=${exhibitions} showJudges=${showJudges} elapsed=${elapsed}ms`,
+    `[prerender-seo] hubs=${hubs} breedHubs=${breedHubs} redirects=${redirects} dogs=${dogs} (competition=${competitionDogs}, show-only=${showOnlyDogs}) events=${events} judges=${judges} donino=${donino} exhibitions=${exhibitions} showJudges=${showJudges} elapsed=${elapsed}ms`,
   )
 }
 
