@@ -12,16 +12,16 @@ export interface QuickGroupItem {
 
 // Порядок приоритета групп для отображения в быстрых плашках
 export const CANDIDATE_GROUPS: QuickGroupItem[] = [
-  { id: '10', label: 'FCI 10: Борзые', fullName: 'FCI 10: Борзые (и нац. породы)', estWidth: 112 },
-  { id: '5', label: 'FCI 5: Шпицы', fullName: 'FCI 5: Шпицы и аборигенные породы', estWidth: 105 },
-  { id: '3', label: 'FCI 3: Терьеры', fullName: 'FCI 3: Терьеры', estWidth: 100 },
-  { id: '2', label: 'FCI 2: Пинчеры', fullName: 'FCI 2: Пинчеры, шнауцеры, молоссы', estWidth: 105 },
-  { id: '1', label: 'FCI 1: Пастушьи', fullName: 'FCI 1: Пастушьи и скотогонные', estWidth: 105 },
-  { id: '8', label: 'FCI 8: Ретриверы', fullName: 'FCI 8: Ретриверы и спаниели', estWidth: 110 },
-  { id: '6', label: 'FCI 6: Гончие', fullName: 'FCI 6: Гончие и родственные', estWidth: 95 },
-  { id: '7', label: 'FCI 7: Легавые', fullName: 'FCI 7: Легавые', estWidth: 95 },
-  { id: '4', label: 'FCI 4: Таксы', fullName: 'FCI 4: Таксы', estWidth: 85 },
-  { id: '9', label: 'FCI 9: Декоративные', fullName: 'FCI 9: Декоративные', estWidth: 120 },
+  { id: '10', label: 'FCI 10', fullName: 'FCI 10: Борзые (и нац. породы)', estWidth: 64 },
+  { id: '5', label: 'FCI 5', fullName: 'FCI 5: Шпицы и аборигенные породы', estWidth: 58 },
+  { id: '3', label: 'FCI 3', fullName: 'FCI 3: Терьеры', estWidth: 58 },
+  { id: '2', label: 'FCI 2', fullName: 'FCI 2: Пинчеры, шнауцеры, молоссы', estWidth: 58 },
+  { id: '1', label: 'FCI 1', fullName: 'FCI 1: Пастушьи и скотогонные', estWidth: 58 },
+  { id: '8', label: 'FCI 8', fullName: 'FCI 8: Ретриверы и спаниели', estWidth: 58 },
+  { id: '6', label: 'FCI 6', fullName: 'FCI 6: Гончие и родственные', estWidth: 58 },
+  { id: '7', label: 'FCI 7', fullName: 'FCI 7: Легавые', estWidth: 58 },
+  { id: '4', label: 'FCI 4', fullName: 'FCI 4: Таксы', estWidth: 58 },
+  { id: '9', label: 'FCI 9', fullName: 'FCI 9: Декоративные', estWidth: 58 },
 ]
 
 interface QuickGroupBarProps {
@@ -122,9 +122,9 @@ export default function QuickGroupBar({
       if (!isTopCandidate && activeGroup) {
         rareChip = {
           id: value,
-          label: activeGroup.shortName,
+          label: value === '0' ? 'Спорт' : `FCI ${value}`,
           fullName: activeGroup.name,
-          estWidth: Math.max(90, Math.min(150, activeGroup.shortName.length * 8 + 32)),
+          estWidth: 58,
         }
         const rareCost = GAP + rareChip.estWidth
         remaining = Math.max(0, remaining - rareCost)
@@ -152,9 +152,9 @@ export default function QuickGroupBar({
     if (!isAll && !isSelectedInVisible && !rareChip && activeGroup) {
       rareChip = {
         id: value,
-        label: activeGroup.shortName,
+        label: value === '0' ? 'Спорт' : `FCI ${value}`,
         fullName: activeGroup.name,
-        estWidth: 110,
+        estWidth: 58,
       }
     }
 
@@ -174,9 +174,11 @@ export default function QuickGroupBar({
 
   const sortedGroupKeys = useMemo(
     () =>
-      Object.keys(FCI_GROUPS).sort(
-        (a, b) => FCI_GROUPS[Number(a)].order - FCI_GROUPS[Number(b)].order,
-      ),
+      Object.keys(FCI_GROUPS).sort((a, b) => {
+        const nameA = FCI_GROUPS[Number(a)]?.name.replace(/^FCI\s*\d+:\s*/i, '').trim() || ''
+        const nameB = FCI_GROUPS[Number(b)]?.name.replace(/^FCI\s*\d+:\s*/i, '').trim() || ''
+        return nameA.localeCompare(nameB, 'ru')
+      }),
     [],
   )
 
@@ -239,15 +241,19 @@ export default function QuickGroupBar({
       {/* Основной видимый контейнер групп на всю отведенную ширину */}
       <div
         ref={containerRef}
-        className={`flex items-center gap-[5px] w-full min-w-0 overflow-hidden ${className}`}
+        className={`flex items-center gap-[5px] flex-nowrap w-full min-w-0 py-2 -my-2 overflow-visible ${className}`.trim()}
+        role="toolbar"
+        aria-label="Фильтр по группам FCI"
       >
         {/* Кнопка «Все группы» */}
         <button
+          ref={allBtnRef}
           type="button"
           onClick={() => onChange('all')}
-          className={`h-8 rounded-full px-3 text-xs font-semibold whitespace-nowrap cursor-pointer transition-all inline-flex items-center shrink-0 ${
+          className={`inline-flex h-8 shrink-0 items-center rounded-full px-2.5 text-xs font-medium transition-all cursor-pointer whitespace-nowrap ${
             isAll ? 'cs-glass-pill-active' : 'cs-glass-pill'
           }`}
+          aria-pressed={isAll}
           title="Показать все группы пород"
         >
           <span>Все группы</span>
@@ -261,9 +267,10 @@ export default function QuickGroupBar({
               key={group.id}
               type="button"
               onClick={() => onChange(active ? 'all' : group.id)}
-              className={`h-8 rounded-full px-3 text-xs font-semibold whitespace-nowrap cursor-pointer transition-all inline-flex items-center shrink-0 ${
+              className={`inline-flex h-8 shrink-0 items-center rounded-full px-2.5 text-xs font-medium transition-all cursor-pointer whitespace-nowrap ${
                 active ? 'cs-glass-pill-active' : 'cs-glass-pill'
               }`}
+              aria-pressed={active}
               title={group.fullName}
             >
               <span>{group.label}</span>

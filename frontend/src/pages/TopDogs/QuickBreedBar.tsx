@@ -59,6 +59,7 @@ interface QuickBreedBarProps {
   candidateBreeds?: QuickBreedItem[]
   className?: string
   strictFilterByBreedValues?: boolean
+  showHubLink?: boolean
 }
 
 const GAP = 5 // gap-[5px] = 5px
@@ -106,6 +107,7 @@ export default function QuickBreedBar({
   candidateBreeds,
   className = '',
   strictFilterByBreedValues = false,
+  showHubLink = true,
 }: QuickBreedBarProps) {
   const candidates = useMemo(() => {
     const base = candidateBreeds ?? CANDIDATE_BREEDS
@@ -426,7 +428,7 @@ export default function QuickBreedBar({
                   <X className="h-3.5 w-3.5" aria-hidden />
                 </button>
               </span>
-              {selectedHub && (
+              {showHubLink && selectedHub && (
                 <Link
                   to={`/breeds/${selectedHub.slug}/`}
                   className="cs-glass-pill inline-flex h-8 shrink-0 items-center gap-1 rounded-full px-2 text-xs font-semibold text-camel-900 border border-camel-300/80 bg-camel-50 hover:bg-camel-100 transition-colors whitespace-nowrap cursor-pointer"
@@ -522,7 +524,7 @@ export default function QuickBreedBar({
             )}
 
             {/* Ссылка на хаб выбранной породы */}
-            {selectedHub && (
+            {showHubLink && selectedHub && (
               <Link
                 to={`/breeds/${selectedHub.slug}/`}
                 className="cs-glass-pill inline-flex h-8 shrink-0 items-center gap-1 rounded-full px-2.5 text-xs font-semibold text-camel-900 border border-camel-300/80 bg-camel-50 hover:bg-camel-100 transition-colors whitespace-nowrap cursor-pointer"
