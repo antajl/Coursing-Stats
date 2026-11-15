@@ -13,6 +13,7 @@ import {
 } from 'lucide-react'
 import HoverTooltip from '../../../components/ui/HoverTooltip'
 import { canonicalBreed } from '../../../lib/breedMapping'
+import { resolveSportJudgeNumericId } from '../../../lib/judgeIdMap.generated'
 import { formatDate } from './utils'
 import { getEventHeadline, formatCompetitionJudgesWithRoles, parseJudgeNames } from '../eventListUtils'
 import type { Event, Result, TrackScheme } from './types'
@@ -148,7 +149,7 @@ export default function EventHeader({
                     parseJudgeNames(event.judges).map((judgeName, idx, arr) => (
                       <span key={judgeName} className="inline-flex items-center">
                         <Link
-                          to={`/judges/${encodeURIComponent(judgeName)}/`}
+                          to={`/judges/${resolveSportJudgeNumericId(judgeName) || encodeURIComponent(judgeName)}/`}
                           className="text-camel-800 hover:text-camel-900 hover:underline transition-colors"
                         >
                           {judgeName}
