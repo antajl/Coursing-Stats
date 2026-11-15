@@ -43,7 +43,7 @@ function BorzoiRacing() {
               Бега борзых (coursing) — это официальные соревнования, в которых борзые преследуют механическую приманку. Это безопасный и гуманный способ проявить естественные инстинкты собак.
             </p>
             <Link 
-              to="/competitions?tab=ranking"
+              to="/competitions/ranking/2026/"
               className="inline-block px-4 py-2 bg-camel-600 text-white rounded-lg hover:bg-camel-700 transition-colors"
             >
               Смотреть рейтинги
@@ -58,7 +58,7 @@ function BorzoiRacing() {
               Рекорды замера скорости борзых на спринтерском полигоне в Донино. Рейтинги по породам и история результатов.
             </p>
             <Link 
-              to="/speed-records/"
+              to="/speed-records/2026/"
               className="inline-block px-4 py-2 bg-camel-600 text-white rounded-lg hover:bg-camel-700 transition-colors"
             >
               Смотреть рекорды
@@ -89,7 +89,7 @@ function BorzoiRacing() {
             Основные породы в бегах борзых: грейхаунд, уиппет, салюки, тайган, русская псовая борзая, deerhound и другие борзые породы.
           </p>
           <Link 
-            to="/competitions?tab=ranking"
+            to="/competitions/ranking/2026/"
             className="inline-block px-4 py-2 bg-camel-600 text-white rounded-lg hover:bg-camel-700 transition-colors"
             >
               Все породы

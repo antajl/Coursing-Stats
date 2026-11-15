@@ -34,7 +34,7 @@ export default function SeasonCompetitionsCarousel({
   }
 
   const renderHeaderItem = (s: BreedSlide<CombinedRankingDog>) => {
-    const rankingHref = `/competitions?tab=ranking&year=${CURRENT_SEASON}&breed=${encodeURIComponent(s.breedKey)}`
+    const rankingHref = `/competitions/ranking/${CURRENT_SEASON}/?breed=${encodeURIComponent(s.breedKey)}`
     return (
       <div className="min-w-0 max-w-full flex items-center justify-center gap-1.5 px-1">
         <Link

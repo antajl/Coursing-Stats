@@ -155,7 +155,7 @@ export function getDoninoKeyboard(currentType: 'speed' | 'coursing'): InlineKeyb
     .row()
     .url('Открыть Курсинг Донино', 'https://runningdog.ru/')
     .row()
-    .url('Открыть на сайте', 'https://coursing-stats.ru/speed-records')
+    .url('Открыть на сайте', 'https://coursing-stats.ru/speed-records/2026/')
     .row()
     .text('← Назад', 'main_menu');
 
@@ -182,9 +182,9 @@ export function getJudgesKeyboard(currentType: 'competition' | 'shows'): InlineK
 
   keyboard.row();
   if (currentType === 'competition') {
-    keyboard.url('🌐 На сайте', 'https://coursing-stats.ru/competitions?tab=judges');
+    keyboard.url('🌐 На сайте', 'https://coursing-stats.ru/competitions/judges/2026/');
   } else {
-    keyboard.url('🌐 На сайте', 'https://coursing-stats.ru/shows?tab=judges');
+    keyboard.url('🌐 На сайте', 'https://coursing-stats.ru/shows/judges/2026/');
   }
 
   keyboard.row();
@@ -259,11 +259,11 @@ export function getRatingKeyboard(discipline: string, category: string, year: st
   }
 
   if (discipline === 'shows') {
-    keyboard.url('🌐 На сайте', 'https://coursing-stats.ru/shows?tab=ranking');
+    keyboard.url('🌐 На сайте', 'https://coursing-stats.ru/shows/ranking/2026/');
   } else if (discipline === 'racing') {
-    keyboard.url('🌐 На сайте', 'https://coursing-stats.ru/competitions?tab=ranking');
+    keyboard.url('🌐 На сайте', 'https://coursing-stats.ru/competitions/ranking/2026/');
   } else {
-    keyboard.url('🌐 На сайте', 'https://coursing-stats.ru/competitions?tab=ranking');
+    keyboard.url('🌐 На сайте', 'https://coursing-stats.ru/competitions/ranking/2026/');
   }
 
   keyboard.row();
@@ -313,9 +313,9 @@ export function getCalendarKeyboard(offset: string | number = 0, isShows: boolea
 
   keyboard.row();
   if (isShows) {
-    keyboard.url('🌐 На сайте', 'https://coursing-stats.ru/shows?tab=calendar');
+    keyboard.url('🌐 На сайте', 'https://coursing-stats.ru/shows/archive/2026/');
   } else {
-    keyboard.url('🌐 На сайте', 'https://coursing-stats.ru/competitions?tab=calendar');
+    keyboard.url('🌐 На сайте', 'https://coursing-stats.ru/competitions/archive/2026/');
   }
 
   keyboard.row();

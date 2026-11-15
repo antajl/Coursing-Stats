@@ -78,7 +78,7 @@ export function RacingColumn({
   if (!hasRacingData && racingEvents.length === 0) return null
 
   const dogBreed = breed || ''
-  const rankingUrl = `/competitions?tab=ranking${dogBreed ? `&breed=${encodeURIComponent(dogBreed)}` : ''}`
+  const rankingUrl = `/competitions/ranking/2026/${dogBreed ? `?breed=${encodeURIComponent(dogBreed)}` : ''}`
   const bestSpeedUrl = bestSpeedEventId
     ? procoursingUrlForEventId(eventResultsUrls, bestSpeedEventId)
     : null

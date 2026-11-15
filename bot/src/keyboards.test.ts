@@ -133,13 +133,13 @@ describe('Keyboards', () => {
     it('calendar competitions has site URL', () => {
       const keyboard = getCalendarKeyboard(0, false, 'all');
       const urls = keyboard.inline_keyboard.flat().map((b) => ('url' in b ? b.url : null));
-      expect(urls).toContain('https://coursing-stats.ru/competitions?tab=calendar');
+      expect(urls).toContain('https://coursing-stats.ru/competitions/archive/2026/');
     });
 
     it('judges shows has site URL', () => {
       const keyboard = getJudgesKeyboard('shows');
       const urls = keyboard.inline_keyboard.flat().map((b) => ('url' in b ? b.url : null));
-      expect(urls).toContain('https://coursing-stats.ru/shows?tab=judges');
+      expect(urls).toContain('https://coursing-stats.ru/shows/judges/2026/');
     });
   });
 

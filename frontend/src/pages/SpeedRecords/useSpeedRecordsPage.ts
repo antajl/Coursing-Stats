@@ -293,7 +293,9 @@ export function useSpeedRecordsPage() {
 
   const activeSeason = useMemo(() => resolveActiveSeason(years), [years])
 
-  const hasUrlYear = (searchParams.get('years') ?? searchParams.get('year')) !== null
+  const hasUrlYear =
+    routeYearParam !== undefined ||
+    (searchParams.get('years') ?? searchParams.get('year')) !== null
   useEffect(() => {
     if (!hasUrlYear && years.length > 0) {
       const resolved = resolveActiveSeason(years)
@@ -431,7 +433,6 @@ export function useSpeedRecordsPage() {
     )
   }, [
     filterBreeds,
-    filterYears,
     searchQuery,
     filterSexes,
     sortField,
@@ -461,7 +462,7 @@ export function useSpeedRecordsPage() {
     if (sexArr.join(',') !== filterSexes.join(',')) {
       setFilterSexes(sexArr)
     }
-  }, [searchParams])
+  }, [searchParams, routeYearParam])
 
   const isYearNonDefault =
     filterYears.length !== 1 || filterYears[0] !== activeSeason

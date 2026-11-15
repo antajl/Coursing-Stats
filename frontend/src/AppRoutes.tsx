@@ -270,6 +270,7 @@ export default function AppRoutes() {
         <Route path="/event/:id" element={<EventResults />} />
         <Route path="/speed-records" element={<SpeedRecordsBaseRoute />} />
         <Route path="/speed-records/:year" element={<SpeedRecords />} />
+        <Route path="/coursing-records" element={<Navigate to="/speed-records/2026/" replace />} />
         <Route path="/donino/records" element={<Navigate to="/speed-records/2026/" replace />} />
         <Route path="/donino/records/:year" element={<SpeedRecords />} />
         <Route path="/donino/championship" element={<DoninoChampionship />} />

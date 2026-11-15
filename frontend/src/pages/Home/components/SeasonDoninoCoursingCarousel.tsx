@@ -38,7 +38,7 @@ export default function SeasonDoninoCoursingCarousel({
   }
 
   const renderHeaderItem = (s: BreedSlide<CoursingRecord>) => {
-    const rankingHref = `/coursing-records?breed=${encodeURIComponent(s.breedKey)}`
+    const rankingHref = `/speed-records/2026/?breed=${encodeURIComponent(s.breedKey)}`
     return (
       <div className="min-w-0 max-w-full flex items-center justify-center gap-1.5 px-1">
         <Link

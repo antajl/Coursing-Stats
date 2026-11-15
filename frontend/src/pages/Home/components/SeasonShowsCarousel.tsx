@@ -43,7 +43,7 @@ export default function SeasonShowsCarousel({
   }
 
   const renderHeaderItem = (s: BreedSlide<ShowHomeTopDog>) => {
-    const rankingHref = `/shows?tab=ranking&year=${CURRENT_SEASON}&breed=${encodeURIComponent(s.breedKey)}`
+    const rankingHref = `/shows/ranking/${CURRENT_SEASON}/?breed=${encodeURIComponent(s.breedKey)}`
     return (
       <div className="min-w-0 max-w-full flex items-center justify-center gap-1.5 px-1">
         <Link

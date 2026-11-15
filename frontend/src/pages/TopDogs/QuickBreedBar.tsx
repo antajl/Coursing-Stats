@@ -91,7 +91,7 @@ function getInitialContainerWidth(): number {
     // Учитываем каркас сайта App.tsx (md:max-w-7xl = 1280px) и боковые отступы (32-64px)
     const effectiveLayoutWidth = Math.min(window.innerWidth - 32, 1280 - 64)
     // Левые управляющие элементы тулбара на рейтинге занимают ~420px, на архиве ~340px
-    const isRanking = window.location.search.includes('tab=ranking')
+    const isRanking = window.location.pathname.includes('/ranking') || window.location.search.includes('tab=ranking')
     const estimatedLeftControls = isRanking ? 420 : 340
     return Math.max(260, effectiveLayoutWidth - estimatedLeftControls)
   }

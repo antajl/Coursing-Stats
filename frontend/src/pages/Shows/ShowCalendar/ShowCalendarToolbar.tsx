@@ -62,7 +62,7 @@ export function ShowCalendarToolbar({
   return (
     <div className="w-full min-w-0">
       {/* Мобильная строка (32px): Поиск + Год/Месяц + Локация + Порода + (i) */}
-      <div className="flex md:hidden items-center gap-1.5 w-full min-w-0">
+      <div className="flex md:hidden items-center gap-1.5 w-full min-w-0 overflow-x-auto no-scrollbar py-0.5">
         <ToolbarSearch
           value={searchQuery}
           onChange={onSearchChange}
@@ -78,6 +78,8 @@ export function ShowCalendarToolbar({
           currentSeason={currentSeason}
           onClearPreset={onClearQuickPreset}
           availableMonthsByYear={availableMonths ? { [filterYear]: availableMonths } : undefined}
+          allMonthsValue="all"
+          className="!px-2.5 sm:!px-3.5"
         />
 
         {cities.length > 0 && onCityChange && (
@@ -86,6 +88,7 @@ export function ShowCalendarToolbar({
             selectedCity={filterCity}
             onSelect={onCityChange}
             compact
+            className="!px-2.5 sm:!px-3.5"
           />
         )}
 
@@ -98,9 +101,9 @@ export function ShowCalendarToolbar({
             trigger={
               <button
                 type="button"
-                className={`shrink-0 ${toolbarPillTriggerClass(Boolean(filterBreed))}`}
+                className={`shrink-0 ${toolbarPillTriggerClass(Boolean(filterBreed))} !px-2.5 sm:!px-3.5`}
               >
-                <span className="truncate max-w-[85px]">
+                <span className="truncate max-w-[70px] sm:max-w-[85px]">
                   {filterBreed ? formatBreedName(filterBreed) : 'Порода'}
                 </span>
                 <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
@@ -109,7 +112,7 @@ export function ShowCalendarToolbar({
           />
         </div>
 
-        <div className="ml-auto shrink-0 flex items-center">
+        <div className="ml-auto shrink-0 flex items-center pr-0.5">
           <ShowCalendarHint compact />
         </div>
       </div>
@@ -132,6 +135,7 @@ export function ShowCalendarToolbar({
             currentSeason={currentSeason}
             onClearPreset={onClearQuickPreset}
             availableMonthsByYear={availableMonths ? { [filterYear]: availableMonths } : undefined}
+            allMonthsValue="all"
           />
 
           {cities.length > 0 && onCityChange && (

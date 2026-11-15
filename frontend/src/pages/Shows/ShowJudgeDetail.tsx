@@ -136,7 +136,7 @@ export default function ShowJudgeDetail() {
           <p className="font-medium">Судья не найден</p>
         </div>
         <Link
-          to="/shows?tab=judges"
+          to="/shows/judges/2026/"
           className="text-camel-700 transition-colors hover:text-camel-800 hover:underline"
         >
           <span className="md:hidden">Назад</span>

@@ -22,12 +22,13 @@ export const MONTHS_GRID = [
 export interface MonthYearDropdownProps {
   selectedYear: string // '' for all years, '2026', '2025', etc.
   onSelectYear: (year: string) => void
-  selectedMonth: string // '' for all months, '1'..'12'
+  selectedMonth: string // '' for all months, '1'..'12', or 'all'
   onSelectMonth: (month: string) => void
   sortedYears: string[]
   currentSeason?: string
   onClearPreset?: () => void
   className?: string
+  allMonthsValue?: string
   /**
    * Optional map of year -> Set or array of available month numbers ('1'..'12').
    * If provided, months with no events will be disabled.
@@ -44,7 +45,7 @@ export function formatPeriodLabel(
   selectedMonth: string,
 ): string {
   const monthInfo = MONTHS_GRID.find((m) => m.value === selectedMonth)
-  if (selectedMonth && monthInfo) {
+  if (selectedMonth && selectedMonth !== 'all' && monthInfo) {
     if (selectedYear) {
       return `${monthInfo.full} ${selectedYear}`
     }
@@ -78,6 +79,7 @@ export default function MonthYearDropdown({
   currentSeason = resolveActiveSeason(),
   onClearPreset,
   className = '',
+  allMonthsValue = '',
   availableMonthsByYear,
   getAvailableMonths,
 }: MonthYearDropdownProps) {
@@ -97,11 +99,21 @@ export default function MonthYearDropdown({
     chronologicalYears[chronologicalYears.length - 1] ||
     '2026'
 
+  const isAllMonthsSelected =
+    !selectedMonth ||
+    selectedMonth === 'all' ||
+    (Boolean(allMonthsValue) && selectedMonth === allMonthsValue)
+
+  const hasSpecificMonth =
+    Boolean(selectedMonth) &&
+    selectedMonth !== 'all' &&
+    selectedMonth !== allMonthsValue
+
   // Whenever dropdown opens:
-  // If a month filter is active, open on 'months'; if whole year or all years, open on 'years'
+  // If a specific month filter is active, open on 'months'; if whole year or all years, open on 'years'
   const handleOpenChange = (open: boolean) => {
     if (open) {
-      setViewMode(selectedMonth ? 'months' : 'years')
+      setViewMode(hasSpecificMonth ? 'months' : 'years')
     }
     setIsOpen(open)
   }
@@ -122,7 +134,7 @@ export default function MonthYearDropdown({
     availableMonthsForActiveSeason !== null && availableMonthsForActiveSeason.size === 0
 
   const isNonDefault =
-    Boolean(selectedMonth) || (Boolean(selectedYear) && selectedYear !== currentSeason)
+    hasSpecificMonth || (Boolean(selectedYear) && selectedYear !== currentSeason)
 
   const triggerLabel = formatPeriodLabel(selectedYear, selectedMonth)
 
@@ -133,7 +145,7 @@ export default function MonthYearDropdown({
       aria-label={`Период: ${triggerLabel}`}
       title={`Период: ${triggerLabel}`}
     >
-      <span className="tabular-nums">{triggerLabel}</span>
+      <span className="tabular-nums truncate max-w-[125px] sm:max-w-none">{triggerLabel}</span>
       <ChevronDown className="h-3.5 w-3.5 shrink-0 transition-transform" aria-hidden />
     </button>
   )
@@ -212,7 +224,7 @@ export default function MonthYearDropdown({
                 aria-label="Годы"
               >
                 {chronologicalYears.map((year) => {
-                  const isSelected = selectedYear === year && !selectedMonth
+                  const isSelected = selectedYear === year && isAllMonthsSelected
                   return (
                     <button
                       key={year}
@@ -249,14 +261,14 @@ export default function MonthYearDropdown({
               onClick={() => {
                 if (isYearDisabled) return
                 onSelectYear(activeSeason)
-                onSelectMonth('')
+                onSelectMonth(allMonthsValue ?? '')
                 onClearPreset?.()
                 setIsOpen(false)
               }}
               className={`w-full py-1.5 px-3 rounded-lg text-xs transition-colors border text-center ${
                 isYearDisabled
                   ? 'text-charcoal-400/40 bg-cream-50/20 cursor-not-allowed select-none opacity-30 border-transparent'
-                  : !selectedMonth
+                  : isAllMonthsSelected
                     ? 'bg-camel-100 text-camel-950 font-semibold border-camel-600 shadow-xs cursor-pointer'
                     : 'bg-cream-100/70 hover:bg-camel-100 text-charcoal-700 border-old-money-200/60 font-medium cursor-pointer'
               }`}

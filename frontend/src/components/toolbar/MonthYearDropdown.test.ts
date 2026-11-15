@@ -23,6 +23,11 @@ describe('formatPeriodLabel', () => {
   it('formats month across all years when year is empty', () => {
     expect(formatPeriodLabel('', '5')).toBe('Май (все года)')
   })
+
+  it('formats all months for a year when month is all', () => {
+    expect(formatPeriodLabel('2026', 'all')).toBe('2026')
+    expect(formatPeriodLabel('', 'all')).toBe('Все года')
+  })
 })
 
 describe('MONTHS_GRID', () => {

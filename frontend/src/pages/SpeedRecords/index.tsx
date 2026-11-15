@@ -14,6 +14,7 @@ function SpeedRecords() {
   const [searchParams] = useSearchParams()
   const navigate = useNavigate()
   const location = useLocation()
+  const { year: routeYear } = useParams<{ year?: string }>()
   const rawTab = searchParams.get('tab')
   const rawView = searchParams.get('view')
   const page = useSpeedRecordsPage()
@@ -73,8 +74,8 @@ function SpeedRecords() {
   // Отслеживание просмотра рекордов скорости
   useEffect(() => {
     reachGoal('speed_records_view')
-    setLastDoninoPath('/speed-records/?tab=records')
-  }, [reachGoal])
+    setLastDoninoPath(`/speed-records/${routeYear || '2026'}/`)
+  }, [reachGoal, routeYear])
 
   const scrollResetKey = useMemo(
     () =>
@@ -96,7 +97,6 @@ function SpeedRecords() {
     ]
   )
 
-  const { year: routeYear } = useParams<{ year?: string }>()
   const displayYear = routeYear && routeYear !== 'all' ? routeYear : ''
   const seoTitle = displayYear
     ? `Замеры скорости и рекорды борзых ${displayYear} года — Курсинг в Донино`

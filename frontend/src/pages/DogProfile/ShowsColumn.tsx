@@ -112,7 +112,7 @@ export function ShowsColumn({ dog, rank, breed }: ShowsColumnProps) {
   )
 
   const dogBreed = breed || dog.breed || ''
-  const rankingUrl = `/shows?tab=ranking${dogBreed ? `&breed=${encodeURIComponent(dogBreed)}` : ''}`
+  const rankingUrl = `/shows/ranking/2026/${dogBreed ? `?breed=${encodeURIComponent(dogBreed)}` : ''}`
 
   const has2026 = rank?.yearBreedRank != null && rank.yearBreedRank > 0
   const allTimeRank = (rank?.breedRank != null && rank.breedRank > 0)

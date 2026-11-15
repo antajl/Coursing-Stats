@@ -378,11 +378,11 @@ export const POPULAR_BREEDS: PopularBreedItem[] = [
 ]
 
 export const QUICK_NAV_SHORTCUTS = [
-  { label: 'Рейтинг спорта', to: '/competitions/ranking/', icon: 'medal' as const },
-  { label: 'Рейтинг выставок', to: '/shows/ranking/', icon: 'award' as const },
+  { label: 'Рейтинг спорта', to: '/competitions/ranking/2026/', icon: 'medal' as const },
+  { label: 'Рейтинг выставок', to: '/shows/ranking/2026/', icon: 'award' as const },
   { label: 'Каталог пород', to: '/breeds/', icon: 'flag' as const },
-  { label: 'Рекорды Донино', to: '/speed-records/?tab=records', icon: 'speed' as const },
-  { label: 'Календарь', to: '/competitions/archive/', icon: 'calendar' as const },
-  { label: 'Судьи', to: '/competitions/judges/', icon: 'club' as const },
+  { label: 'Рекорды Донино', to: '/speed-records/2026/', icon: 'speed' as const },
+  { label: 'Календарь', to: '/competitions/archive/2026/', icon: 'calendar' as const },
+  { label: 'Судьи', to: '/competitions/judges/2026/', icon: 'club' as const },
   ...(isLocalDev ? [{ label: 'Конструктор', to: '/protocol-builder', icon: 'fileText' as const }] : []),
 ]

@@ -100,7 +100,7 @@ export function buildDogBodyHtml(dog: DogProfileInput): string {
   const breed = dog.breed ? ` (${dog.breed})` : ''
   const crumbs = [
     `<a href="/">Главная</a>`,
-    `<a href="/competitions/?tab=ranking">Рейтинг</a>`,
+    `<a href="/competitions/ranking/2026/">Рейтинг</a>`,
     `<span>${escapeHtml(name)}</span>`,
   ].join(' → ')
 
@@ -233,7 +233,7 @@ export function dogMetaFromProfile(profile: {
 
   const breadcrumbs = [
     { name: 'Главная', url: '/' },
-    { name: 'Рейтинг', url: '/competitions/?tab=ranking' },
+    { name: 'Рейтинг', url: '/competitions/ranking/2026/' },
     { name, url: `/dog/${id}/` },
   ]
 
@@ -325,7 +325,7 @@ export function dogMetaFromShowRanking(entry: {
 
   const breadcrumbs = [
     { name: 'Главная', url: '/' },
-    { name: 'Рейтинг', url: '/competitions/?tab=ranking' },
+    { name: 'Рейтинг', url: '/competitions/ranking/2026/' },
     { name, url: `/dog/${id}/` },
   ]
 

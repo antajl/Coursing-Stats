@@ -81,7 +81,7 @@ export function CoursingColumn({
   if (!hasCoursingData && coursingEvents.length === 0) return null
 
   const dogBreed = breed || ''
-  const rankingUrl = `/competitions?tab=ranking${dogBreed ? `&breed=${encodeURIComponent(dogBreed)}` : ''}`
+  const rankingUrl = `/competitions/ranking/2026/${dogBreed ? `?breed=${encodeURIComponent(dogBreed)}` : ''}`
   const bestScoreUrl = bestScoreEventId
     ? procoursingUrlForEventId(eventResultsUrls, bestScoreEventId)
     : null

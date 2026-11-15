@@ -63,7 +63,7 @@ export function ConceptSymmetricFinal({ stats, showStats }: HomeConceptsProps) {
         <div className="p-2 2xl:p-2.5 flex flex-col justify-between flex-1 min-h-0">
           {/* Сектор 1: Спорт и бега борзых */}
           <Link
-            to="/competitions/"
+            to="/competitions/ranking/2026/"
             className="group block bg-white/90 hover:bg-white rounded-xl p-2 2xl:p-2.5 border border-white/90 hover:border-white shadow-2xs transition-all text-inherit no-underline"
             aria-label="Перейти в раздел Спорт: состязания, курсинг и бега"
           >
@@ -101,7 +101,7 @@ export function ConceptSymmetricFinal({ stats, showStats }: HomeConceptsProps) {
 
           {/* Сектор 2: Выставки */}
           <Link
-            to="/shows/"
+            to="/shows/ranking/2026/"
             className="group block bg-white/95 hover:bg-cream-50/80 rounded-xl p-2 2xl:p-2.5 border border-old-money-200/80 hover:border-old-money-300 shadow-2xs transition-all text-inherit no-underline"
             aria-label="Перейти в раздел Выставки: каталоги, ринги, собаки"
           >

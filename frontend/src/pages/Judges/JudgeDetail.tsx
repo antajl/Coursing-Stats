@@ -171,7 +171,7 @@ export default function JudgeDetail() {
           <p className="font-medium">Судья не найден</p>
         </div>
         <Link
-          to="/competitions?tab=judges"
+          to="/competitions/judges/2026/"
           className="text-camel-700 transition-colors hover:text-camel-800 hover:underline"
         >
           ← Вернуться к списку судей

@@ -47,7 +47,7 @@ export default function ShowDogProfile() {
             key: 'shows',
             label: 'Рейтинг выставок',
             rank: result.data.rank,
-            href: `/shows?tab=ranking`,
+            href: `/shows/ranking/2026/`,
           })
         }
         setHeaderRanks(ranks)

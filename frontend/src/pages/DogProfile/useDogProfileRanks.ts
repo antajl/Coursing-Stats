@@ -68,7 +68,7 @@ export function useDogProfileRanks({
         yearRank: precomputed.coursing.yearRank ?? undefined,
         breedRank: precomputed.coursing.breedRank ?? undefined,
         yearBreedRank: precomputed.coursing.yearBreedRank ?? undefined,
-        href: `/competitions?tab=ranking&year=${precomputed.coursing.year || '2026'}`,
+        href: `/competitions/ranking/${precomputed.coursing.year || '2026'}/`,
       })
     }
     if (precomputed.racing && (precomputed.racing.rank != null || precomputed.racing.yearRank != null)) {
@@ -79,7 +79,7 @@ export function useDogProfileRanks({
         yearRank: precomputed.racing.yearRank ?? undefined,
         breedRank: precomputed.racing.breedRank ?? undefined,
         yearBreedRank: precomputed.racing.yearBreedRank ?? undefined,
-        href: `/competitions?tab=ranking&year=${precomputed.racing.year || '2026'}`,
+        href: `/competitions/ranking/${precomputed.racing.year || '2026'}/`,
       })
     }
     return initial
@@ -103,7 +103,7 @@ export function useDogProfileRanks({
         rank: showDog.rank ?? null,
         breedRank: showAllTimeBreedRank,
         yearBreedRank: undefined,
-        href: `/shows?tab=ranking&year=${has2026Show ? '2026' : ''}`,
+        href: `/shows/ranking/${has2026Show ? '2026' : 'all'}/`,
       })
     }
     for (const r of asyncRanks) {
@@ -185,7 +185,7 @@ export function useDogProfileRanks({
           rank: allTimePlacementRank,
           yearRank: yearPlacementRank || undefined,
           breedRank: breedPlacementRank || undefined,
-          href: `/competitions?tab=ranking&year=${competitionYear}`,
+          href: `/competitions/ranking/${competitionYear}/`,
         })
       }
       if (!hasPrecomputedSport && (allTimeSpeedRank || yearSpeedRank)) {
@@ -195,7 +195,7 @@ export function useDogProfileRanks({
           rank: allTimeSpeedRank,
           yearRank: yearSpeedRank || undefined,
           breedRank: breedSpeedRank || undefined,
-          href: `/competitions?tab=ranking&year=${competitionYear}`,
+          href: `/competitions/ranking/${competitionYear}/`,
         })
       }
       if (showDog) {
@@ -205,7 +205,7 @@ export function useDogProfileRanks({
           rank: showDog.rank ?? showAllTimeRank,
           yearRank: showYearRank || undefined,
           breedRank: showAllTimeBreedRank || undefined,
-          href: `/shows?tab=ranking&year=${has2026Show ? '2026' : ''}`,
+          href: `/shows/ranking/${has2026Show ? '2026' : 'all'}/`,
         })
       }
       setAsyncRanks((prev) => (areRanksEqual(prev, newRanks) ? prev : newRanks))

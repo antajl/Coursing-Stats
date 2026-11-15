@@ -850,7 +850,7 @@ export function breedHubMeta(input: BreedHubMetaInput): SimpleEntityMeta {
     contentHtml += `</ol>`
   }
 
-  contentHtml += `<p><a href="/competitions/?tab=ranking&breed=${encodeURIComponent(input.canonicalKey)}"><strong>Смотреть полную турнирную таблицу породы ${escapeHtml(input.nameRu)} →</strong></a></p>`
+  contentHtml += `<p><a href="/competitions/ranking/2026/?breed=${encodeURIComponent(input.canonicalKey)}"><strong>Смотреть полную турнирную таблицу породы ${escapeHtml(input.nameRu)} →</strong></a></p>`
 
   const faqItems = input.faqs.map((f) => ({
     '@type': 'Question',
@@ -889,9 +889,9 @@ export function breedHubMeta(input: BreedHubMetaInput): SimpleEntityMeta {
     breadcrumbs,
     jsonLd,
     sectionLinks: [
-      { href: `/competitions/?tab=ranking&breed=${encodeURIComponent(input.canonicalKey)}`, label: `Рейтинг: ${input.nameRu}` },
-      { href: '/speed-records/', label: 'Рекорды Донино' },
-      { href: '/competitions/?tab=calendar', label: 'Календарь' },
+      { href: `/competitions/ranking/2026/?breed=${encodeURIComponent(input.canonicalKey)}`, label: `Рейтинг: ${input.nameRu}` },
+      { href: '/speed-records/2026/', label: 'Рекорды Донино' },
+      { href: '/competitions/archive/2026/', label: 'Календарь' },
       { href: '/guide/', label: 'Справочник' },
     ],
   }

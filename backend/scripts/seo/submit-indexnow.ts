@@ -27,11 +27,13 @@ const ENDPOINTS = [
 
 const CORE_URLS = [
   `https://${HOST}/`,
-  `https://${HOST}/competitions/`,
-  `https://${HOST}/competitions/?tab=archive`,
-  `https://${HOST}/competitions/?tab=ranking`,
-  `https://${HOST}/shows/`,
-  `https://${HOST}/speed-records/`,
+  `https://${HOST}/competitions/ranking/2026/`,
+  `https://${HOST}/competitions/archive/2026/`,
+  `https://${HOST}/competitions/judges/2026/`,
+  `https://${HOST}/shows/ranking/2026/`,
+  `https://${HOST}/shows/archive/2026/`,
+  `https://${HOST}/shows/judges/2026/`,
+  `https://${HOST}/speed-records/2026/`,
   `https://${HOST}/donino/championship/`,
   `https://${HOST}/donino/analytics/`,
   `https://${HOST}/guide/`,

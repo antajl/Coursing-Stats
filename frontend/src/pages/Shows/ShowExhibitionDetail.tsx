@@ -103,13 +103,13 @@ export default function ShowExhibitionDetail() {
                 </a>
               )}
               <Link
-                to="/shows?tab=archive"
+                to="/shows/archive/2026/"
                 className="rounded-xl border-2 border-camel-300 bg-white px-4 py-2 text-sm font-semibold text-camel-700 transition-all hover:border-camel-400 hover:bg-camel-50"
               >
                 К архиву выставок
               </Link>
               <Link
-                to="/shows?tab=ranking"
+                to="/shows/ranking/2026/"
                 className="rounded-xl border-2 border-camel-300 bg-white px-4 py-2 text-sm font-semibold text-camel-700 transition-all hover:border-camel-400 hover:bg-camel-50"
               >
                 К рейтингу выставок
@@ -147,7 +147,7 @@ export default function ShowExhibitionDetail() {
           '@graph': [
             breadcrumbListSchema([
               { name: 'Главная', url: '/' },
-              { name: 'Выставки', url: '/shows/?tab=archive' },
+              { name: 'Выставки', url: '/shows/archive/2026/' },
               { name: exhibition.title || 'Выставка', url: `/shows/exhibition/${id}/` },
             ]),
             sportsEventSchema({

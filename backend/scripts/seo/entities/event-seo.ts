@@ -220,8 +220,8 @@ export function eventMetaFromEntry(entry: {
     breadcrumbs,
     jsonLd,
     sectionLinks: [
-      { href: '/competitions/?tab=calendar', label: 'Календарь' },
-      { href: '/competitions/?tab=ranking', label: 'Рейтинг' },
+      { href: '/competitions/archive/2026/', label: 'Календарь' },
+      { href: '/competitions/ranking/2026/', label: 'Рейтинг' },
       { href: '/guide/', label: 'Справочник' },
     ],
   }
@@ -364,8 +364,8 @@ export function exhibitionMeta(entry: {
     breadcrumbs,
     jsonLd,
     sectionLinks: [
-      { href: '/shows/?tab=archive', label: 'Архив выставок' },
-      { href: '/shows/?tab=ranking', label: 'Рейтинг' },
+      { href: '/shows/archive/2026/', label: 'Архив выставок' },
+      { href: '/shows/ranking/2026/', label: 'Рейтинг' },
       { href: '/guide/', label: 'Справочник' },
     ],
   }

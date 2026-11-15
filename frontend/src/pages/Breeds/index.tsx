@@ -326,7 +326,7 @@ export default function BreedsDirectory() {
                     </Link>
 
                     <Link
-                      to={`/competitions/?tab=ranking&breed=${encodeURIComponent(breed.canonicalKey)}`}
+                      to={`/competitions/ranking/2026/?breed=${encodeURIComponent(breed.canonicalKey)}`}
                       className="cs-glass-pill inline-flex h-8 items-center gap-1 rounded-full px-2.5 text-xs font-medium text-charcoal-700 hover:text-camel-800 cursor-pointer"
                       title={`Рейтинг соревнований для ${breed.nameRu}`}
                     >

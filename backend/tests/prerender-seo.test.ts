@@ -49,7 +49,7 @@ describe('prerender-seo helpers', () => {
     expect(html).toContain('404-dogs.png')
     expect(html).toContain('404-dogs-mobile.png')
     expect(html).toContain('Coursing Stats')
-    expect(html).toContain('href="/competitions"')
+    expect(html).toContain('href="/competitions/ranking/2026/"')
   })
 
   it('escapeHtml escapes markup characters', () => {
@@ -403,7 +403,7 @@ describe('prerender-seo helpers', () => {
     expect(meta.h1).toContain('Уиппет (Whippet) в курсинге и бегах')
     expect(meta.contentHtml).toContain('<a href="/dog/5645/"><strong>Стангерс Ланд Каталина</strong></a>')
     expect(meta.contentHtml).toContain('Драм</strong>: 64 км/ч')
-    expect(meta.contentHtml).toContain('href="/competitions/?tab=ranking&breed=%D0%A3%D0%98%D0%9F%D0%9F%D0%95%D0%A2"')
+    expect(meta.contentHtml).toContain('href="/competitions/ranking/2026/?breed=%D0%A3%D0%98%D0%9F%D0%9F%D0%95%D0%A2"')
 
     const graph = (meta.jsonLd as any)['@graph'] as any[]
     const faq = graph.find((i) => i['@type'] === 'FAQPage')

@@ -85,7 +85,7 @@ export default function CitySearchDropdown({
   const trigger = (
     <button
       type="button"
-      className={`shrink-0 ${toolbarPillTriggerClass(Boolean(selectedCity))}`}
+      className={`shrink-0 ${toolbarPillTriggerClass(Boolean(selectedCity))} ${className}`.trim()}
       title={selectedCity ? `Выбран город: ${selectedCity}` : 'Фильтр по городу'}
       aria-label={selectedCity ? `Выбран город: ${selectedCity}` : 'Фильтр по городу'}
     >

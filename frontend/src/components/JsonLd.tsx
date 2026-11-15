@@ -209,7 +209,7 @@ export const webSiteSchema = {
     'Рейтинги собак по курсингу и бегам борзых, рекорды Донино, выставки РКФ, профили и статистика судей.',
   potentialAction: {
     '@type': 'SearchAction',
-    target: 'https://coursing-stats.ru/competitions?tab=ranking&search={search_term_string}',
+    target: 'https://coursing-stats.ru/competitions/ranking/2026/?search={search_term_string}',
     'query-input': 'required name=search_term_string'
   }
 }

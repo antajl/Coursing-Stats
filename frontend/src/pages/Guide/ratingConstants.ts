@@ -37,7 +37,7 @@ export const RATING_DOMAINS = [
     metric: 'Золото → standingScore → CS v2 → Забеги',
     details:
       'Главный турнирный зачёт сезона. Собаки ранжируются по числу побед (золотых медалей), плотности подиумов (КПД) и качеству судейских оценок.',
-    href: '/competitions?tab=ranking',
+    href: '/competitions/ranking/2026/',
     tag: 'Главный спорт',
   },
   {
@@ -47,7 +47,7 @@ export const RATING_DOMAINS = [
     metric: 'Максимальная скорость (км/ч)',
     details:
       'Параллельный спринтерский зачёт для кругового трека. Без субъективных судейских баллов — ранжирование строится строго по секундомеру и фотофинишу.',
-    href: '/competitions?tab=ranking',
+    href: '/competitions/ranking/2026/',
     tag: 'Чистая скорость',
   },
   {
@@ -57,7 +57,7 @@ export const RATING_DOMAINS = [
     metric: 'Сумма очков наград (до 10 000 за BIS)',
     details:
       'Суммирует баллы за распознанные в отчётах РКФ победы: финал Главного ринга (BIS: 10 000, BIG: 5 000), порода (BOB: 2 000) и сертификаты классов (CAC: 100).',
-    href: '/shows?tab=ranking',
+    href: '/shows/ranking/2026/',
     tag: 'Экстерьер',
   },
   {

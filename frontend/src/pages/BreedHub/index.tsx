@@ -221,7 +221,7 @@ export default function BreedHub() {
 
           <div className="flex items-center gap-2 shrink-0">
             <Link
-              to={`/competitions/?tab=ranking&breed=${encodeURIComponent(breedInfo.canonicalKey)}`}
+              to={`/competitions/ranking/2026/?breed=${encodeURIComponent(breedInfo.canonicalKey)}`}
               className="cs-glass-pill inline-flex h-8 items-center gap-1.5 rounded-full px-3 text-xs font-semibold shrink-0 cursor-pointer text-charcoal-700 hover:text-camel-800"
               title={`Полный официальный рейтинг породы ${breedInfo.nameRu}`}
             >
@@ -328,7 +328,7 @@ export default function BreedHub() {
             actionPlacement="right"
             action={
               <Link
-                to={`/competitions/?tab=ranking&breed=${encodeURIComponent(breedInfo.canonicalKey)}`}
+                to={`/competitions/ranking/2026/?breed=${encodeURIComponent(breedInfo.canonicalKey)}`}
                 className="cs-glass-pill inline-flex h-8 items-center gap-1 rounded-full px-2.5 text-xs font-semibold text-charcoal-700 hover:text-camel-800 cursor-pointer shrink-0"
               >
                 <span>Полный рейтинг</span>
@@ -455,7 +455,7 @@ export default function BreedHub() {
                         </td>
                         <td className="py-3 px-3.5 text-right">
                           <Link
-                            to={`/competitions/?tab=ranking&breed=${encodeURIComponent(breedInfo.canonicalKey)}&year=${item.year}`}
+                            to={`/competitions/ranking/${item.year}/?breed=${encodeURIComponent(breedInfo.canonicalKey)}`}
                             className="inline-flex items-center gap-1 text-xs font-semibold text-camel-800 hover:text-camel-950 hover:underline"
                             title={`Открыть полный рейтинг ${breedInfo.nameRu} за ${item.year} год`}
                           >
@@ -493,7 +493,7 @@ export default function BreedHub() {
                         </Link>
                       </div>
                       <Link
-                        to={`/competitions/?tab=ranking&breed=${encodeURIComponent(breedInfo.canonicalKey)}&year=${item.year}`}
+                        to={`/competitions/ranking/${item.year}/?breed=${encodeURIComponent(breedInfo.canonicalKey)}`}
                         className="text-xs font-semibold text-camel-800 hover:underline shrink-0 flex items-center gap-0.5"
                       >
                         <span>Рейтинг</span>
