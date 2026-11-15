@@ -297,3 +297,20 @@ export function buildSimpleEntityBodyHtml(meta: Omit<SimpleEntityMeta, 'title' |
     .filter(Boolean)
     .join('\n')
 }
+
+export function buildRedirectHtml(canonicalUrl: string, title?: string): string {
+  return `<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="0; url=${canonicalUrl}" />
+    <link rel="canonical" href="${canonicalUrl}" />
+    <meta name="robots" content="noindex, follow" />
+    <title>Перенаправление...${title ? ` ${title}` : ''}</title>
+    <script>window.location.replace('${canonicalUrl}');</script>
+  </head>
+  <body>
+    <p>Профиль перемещён. Перенаправление на <a href="${canonicalUrl}">${canonicalUrl}</a>...</p>
+  </body>
+</html>`
+}

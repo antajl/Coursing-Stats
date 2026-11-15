@@ -5126,7 +5126,10 @@ export const SPORT_JUDGE_LEGACY_TO_NUMERIC: Record<string, number> = {
   "Гродинская Т.Л.": 29,
   "Мухотин Н.П.": 30,
   "Демидова Е.Ю.": 31,
-  "Яковлева Т.С.": 32
+  "Яковлева Т.С.": 32,
+  "Молев С.Ю.": 33,
+  "Dyka Beritt Kerstin": 34,
+  "Бычкова О.": 35
 }
 
 export const SPORT_JUDGE_NUMERIC_TO_LEGACY: Record<number, string> = {
@@ -5161,7 +5164,10 @@ export const SPORT_JUDGE_NUMERIC_TO_LEGACY: Record<number, string> = {
   "29": "Гродинская Т.Л.",
   "30": "Мухотин Н.П.",
   "31": "Демидова Е.Ю.",
-  "32": "Яковлева Т.С."
+  "32": "Яковлева Т.С.",
+  "33": "Молев С.Ю.",
+  "34": "Dyka Beritt Kerstin",
+  "35": "Бычкова О."
 }
 
 /**

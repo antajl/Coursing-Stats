@@ -131,6 +131,36 @@ export function buildJudgeIdMaps(): {
     }
   }
 
+  // Also include any extra judges parsed from calendar events
+  const calendarDir = path.join(ROOT, 'data/v1/calendar')
+  if (fs.existsSync(calendarDir)) {
+    for (const file of fs.readdirSync(calendarDir)) {
+      if (!file.endsWith('.json')) continue
+      try {
+        const data = JSON.parse(fs.readFileSync(path.join(calendarDir, file), 'utf8'))
+        const list = Array.isArray(data) ? data : data.events || []
+        for (const ev of list) {
+          if (ev && typeof ev.judges === 'string') {
+            const parts = ev.judges.split(/[;,]/)
+            for (let p of parts) {
+              p = p.replace(/\s*\([^)]*\)/g, '').trim()
+              if (p && !/^(судья|гл|секретарь)/i.test(p)) {
+                if (!sportMap[p]) {
+                  currentSportId++
+                  while (existingSportIds.has(currentSportId)) {
+                    currentSportId++
+                  }
+                  sportMap[p] = currentSportId
+                  existingSportIds.add(currentSportId)
+                }
+              }
+            }
+          }
+        }
+      } catch {}
+    }
+  }
+
   fs.writeFileSync(SPORT_JUDGE_MAP_PATH, JSON.stringify(sportMap, null, 2), 'utf8')
 
   // Enrich sport judges in judges-summary.json
@@ -299,12 +329,12 @@ export function resolveSportJudgeLegacyId(input: string | number | null | undefi
 `
 
   fs.writeFileSync(TS_OUT_PATH, tsContent, 'utf8')
-  console.log(`[build-judge-id-maps] Processed ${enrichedShowJudges.length} show judges and ${rawSportJudges.length} sport judges`)
+  console.log(`[build-judge-id-maps] Processed ${enrichedShowJudges.length} show judges and ${Object.keys(sportMap).length} sport judges`)
   console.log(`[build-judge-id-maps] Wrote ${TS_OUT_PATH}`)
 
   return {
     showJudgesCount: enrichedShowJudges.length,
-    sportJudgesCount: rawSportJudges.length,
+    sportJudgesCount: Object.keys(sportMap).length,
   }
 }
 
