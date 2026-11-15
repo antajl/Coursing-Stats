@@ -108,9 +108,11 @@ export default function BreedsDirectory() {
 
   const sortedGroupKeys = useMemo(() => {
     return Object.keys(FCI_GROUPS).sort((a, b) => {
-      const nameA = FCI_GROUPS[Number(a)]?.name.replace(/^FCI\s*\d+:\s*/i, '').trim() || ''
-      const nameB = FCI_GROUPS[Number(b)]?.name.replace(/^FCI\s*\d+:\s*/i, '').trim() || ''
-      return nameA.localeCompare(nameB, 'ru')
+      const numA = Number(a)
+      const numB = Number(b)
+      if (numA === 0 && numB !== 0) return 1
+      if (numB === 0 && numA !== 0) return -1
+      return numA - numB
     })
   }, [])
 
@@ -149,6 +151,17 @@ export default function BreedsDirectory() {
       else if (b.slug === 'afghan-hound') label = 'Афган'
       else if (b.slug === 'hortaya-borzaya') label = 'Хортая'
       else if (b.slug === 'spanish-galgo') label = 'Гальго'
+      else if (b.slug === 'amstaff') label = 'Амстафф'
+      else if (b.slug === 'staffordshire-bull-terrier') label = 'Стаффбуль'
+      else if (b.slug === 'miniature-bull-terrier') label = 'Мини-буль'
+      else if (b.slug === 'jack-russell-terrier') label = 'Джек-рассел'
+      else if (b.slug === 'irish-terrier') label = 'Ирл. терьер'
+      else if (b.slug === 'miniature-pinscher') label = 'Цвергпинчер'
+      else if (b.slug === 'dobermann') label = 'Доберман'
+      else if (b.slug === 'german-shepherd') label = 'НО'
+      else if (b.slug === 'australian-shepherd') label = 'Аусси'
+      else if (b.slug === 'border-collie') label = 'Бордер-колли'
+      else if (b.slug === 'welsh-corgi-pembroke') label = 'Корги'
 
       return {
         key: b.canonicalKey,
@@ -287,11 +300,9 @@ export default function BreedsDirectory() {
     )
     const nextVal = b ? b.slug : key
     setSelectedBreed(nextVal)
-    if (b && selectedGroup !== 'all') {
+    if (b) {
       const gNum = String(getBreedFciGroup(b.slug))
-      if (gNum !== selectedGroup) {
-        setSelectedGroup('all')
-      }
+      setSelectedGroup(gNum)
     }
   }
 
@@ -409,10 +420,6 @@ export default function BreedsDirectory() {
           >
             {(close) => (
               <div className="p-1 space-y-0.5 text-xs" role="menu">
-                <div className="px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-charcoal-400 border-b border-old-money-100">
-                  Группы пород по классификации FCI / РКФ
-                </div>
-
                 {/* Все группы */}
                 <button
                   type="button"
@@ -535,6 +542,7 @@ export default function BreedsDirectory() {
                     onSelectBreed={handleSelectBreed}
                     candidateBreeds={breedCandidates}
                     breedValues={allBreedKeys}
+                    strictFilterByBreedValues={selectedGroup !== 'all'}
                     showHubLink={false}
                   />
                 </div>

@@ -285,40 +285,49 @@ export default function QuickBreedBar({
 
     let remaining = avail - normalMinNeeded
 
-    // Если выбрана порода, которой нет в топ-кандидатах — резервируем место под её чип
+    // 1. Если выбрана порода, резервируем место под неё В ПЕРВУЮ ОЧЕРЕДЬ
     let rareChip: string | null = null
+    const targetBreed = normalizedSelected
+      ? candidates.find((b) => matchesBreedFilter(normalizedSelected, b.key)) || null
+      : null
+
     if (normalizedSelected) {
-      const isCandidate = candidates.some((b) =>
-        matchesBreedFilter(normalizedSelected, b.key),
-      )
-      if (!isCandidate) {
+      if (targetBreed) {
+        // Кандидат выбран: гарантируем ему место в строке
+        const selW = measured?.widths[targetBreed.key] ?? targetBreed.estWidth
+        remaining = Math.max(0, remaining - (GAP + selW))
+      } else {
+        // Редкая порода не из кандидатов: резервируем чип с ограничением ширины
         rareChip = selectedDisplay
-        const rareCost =
-          GAP + Math.max(75, Math.min(160, (selectedDisplay?.length || 0) * 7.5 + 44))
+        const rareCost = GAP + Math.max(60, Math.min(130, (selectedDisplay?.length || 0) * 7.5 + 36))
         remaining = Math.max(0, remaining - rareCost)
       }
     }
 
-    // Заполняем оставшееся пространство плашками в порядке популярности
+    // 2. Заполняем оставшееся пространство остальными плашками кандидатов
     const visible: QuickBreedItem[] = []
     let isSelectedInVisible = false
 
+    // Если выбранная порода — кандидат, она всегда входит в visible
+    if (targetBreed) {
+      visible.push(targetBreed)
+      isSelectedInVisible = true
+    }
+
     for (const breed of candidates) {
+      if (targetBreed && matchesBreedFilter(targetBreed.key, breed.key)) continue
       const bW = measured?.widths[breed.key] ?? breed.estWidth
       const cost = GAP + bW
       if (remaining >= cost) {
         visible.push(breed)
         remaining -= cost
-        if (matchesBreedFilter(normalizedSelected, breed.key)) {
-          isSelectedInVisible = true
-        }
       } else {
         // Больше не влезает в доступное пространство
         break
       }
     }
 
-    // Если кандидат был выбран, но из-за сужения не вошел в видимые — показываем его чипом
+    // Если кандидат не вошёл в visible, показываем его через rareChip
     if (normalizedSelected && !isSelectedInVisible && !rareChip) {
       rareChip = selectedDisplay
     }
@@ -504,17 +513,17 @@ export default function QuickBreedBar({
             {/* Чип для выбранной редкой породы или породы, не вошедшей в visible */}
             {rareBreedChip && (
               <span
-                className="cs-glass-pill-active inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full px-2.5 text-xs font-semibold whitespace-nowrap"
+                className="cs-glass-pill-active inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full px-2.5 text-xs font-semibold whitespace-nowrap max-w-[160px] sm:max-w-[200px]"
                 title={`Выбрана порода: ${rareBreedChip}`}
               >
-                <span>{rareBreedChip}</span>
+                <span className="truncate max-w-[120px] sm:max-w-[150px]">{rareBreedChip}</span>
                 <button
                   type="button"
                   onClick={(e) => {
                     e.stopPropagation()
                     onSelectBreed('')
                   }}
-                  className="rounded-full p-0.5 hover:bg-camel-200/60 text-camel-950 transition-colors cursor-pointer"
+                  className="rounded-full p-0.5 hover:bg-camel-200/60 text-camel-950 transition-colors cursor-pointer shrink-0"
                   title="Сбросить породу"
                   aria-label={`Сбросить фильтр породы ${rareBreedChip}`}
                 >

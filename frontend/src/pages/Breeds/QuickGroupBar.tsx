@@ -292,10 +292,6 @@ export default function QuickGroupBar({
           >
             {(close) => (
               <div className="p-1 space-y-0.5 text-xs" role="menu">
-                <div className="px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-charcoal-400 border-b border-old-money-100">
-                  Группы пород по классификации FCI / РКФ
-                </div>
-
                 {/* Все группы */}
                 <button
                   type="button"
