@@ -40,8 +40,8 @@ export default function DoninoColumnPlaque({
 
   return (
     <div className={shellClass}>
-      <div className="relative z-[1] flex items-center gap-2 sm:gap-2.5 shrink-0 min-w-0">
-        <h2 className={`text-xs font-bold uppercase tracking-wider text-camel-800 truncate ${titleClassName || ''}`}>
+      <div className="relative z-[1] flex items-center gap-2 sm:gap-2.5 flex-1 min-w-0 overflow-hidden mr-2">
+        <h2 className={`text-xs font-bold uppercase tracking-wider text-camel-800 truncate min-w-0 ${titleClassName || ''}`}>
           {title}
         </h2>
         {action && isInlineAction && (

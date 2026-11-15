@@ -15,10 +15,12 @@ const ShowCalendar = lazy(() => import('./Shows/ShowCalendar'))
 
 export type ShowsProps = {
   defaultTab?: string
+  urlYear?: string
 }
 
-function Shows({ defaultTab }: ShowsProps) {
-  const { tab: routeTab, id: routeId, year: routeYear } = useParams<{ tab?: string; id?: string; year?: string }>()
+function Shows({ defaultTab, urlYear }: ShowsProps) {
+  const { tab: routeTab, id: routeId, year: routeYearParam, judgeId } = useParams<{ tab?: string; id?: string; year?: string; judgeId?: string }>()
+  const routeYear = urlYear ?? routeYearParam ?? (judgeId && (judgeId === 'all' || /^20\d\d$/.test(judgeId)) ? judgeId : undefined)
   const location = useLocation()
   const navigate = useNavigate()
   const [searchParams, setSearchParams] = useSearchParams()

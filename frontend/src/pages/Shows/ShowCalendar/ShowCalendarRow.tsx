@@ -11,7 +11,7 @@ import {
 import { formatShowDateParts } from '../showCalendarDate'
 
 const RANK_CHIP =
-  'inline-flex h-5 shrink-0 items-center justify-center rounded-md bg-old-money-100/90 px-1.5 font-mono text-xs font-semibold text-charcoal-600'
+  'inline-flex h-5 max-w-full shrink-0 items-center justify-center rounded-md bg-old-money-100/90 px-1.5 font-mono text-xs font-semibold text-charcoal-600 truncate'
 
 function formatShowCount(count: number): string {
   const mod10 = count % 10
@@ -165,14 +165,14 @@ export function ShowCalendarRow({
               </span>
 
               {ranks.length > 0 && (
-                <div className="flex shrink-0 flex-wrap items-center gap-1">
+                <div className="flex w-full sm:w-auto min-w-0 max-w-full flex-wrap items-center gap-1">
                   {ranks.slice(0, 4).map((rank) => (
-                    <span key={rank} className={RANK_CHIP}>
+                    <span key={rank} className={RANK_CHIP} title={rank}>
                       {rank}
                     </span>
                   ))}
                   {ranks.length > 4 && (
-                    <span className={RANK_CHIP}>
+                    <span className={RANK_CHIP} title={`Ещё ${ranks.length - 4} рангов`}>
                       +{ranks.length - 4}
                     </span>
                   )}

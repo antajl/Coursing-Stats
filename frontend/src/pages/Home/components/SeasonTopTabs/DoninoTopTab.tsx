@@ -41,7 +41,7 @@ export const DoninoTopTab = memo(function DoninoTopTab({
     >
       <div
         ref={trackRef}
-        className={`flex flex-nowrap w-full min-w-0 items-start gap-4 md:grid md:grid-cols-2 md:gap-6 md:!transform-none ${
+        className={`flex flex-nowrap w-full min-w-0 items-start gap-0 md:grid md:grid-cols-2 md:gap-6 md:!transform-none ${
           isNudging
             ? activeSubTab === 'speed'
               ? 'animate-silk-nudge-left'
@@ -51,7 +51,7 @@ export const DoninoTopTab = memo(function DoninoTopTab({
         style={trackStyle}
       >
         {/* Column 1: Speed Radar Carousel */}
-        <div className="w-full max-w-full min-w-0 shrink-0 basis-full md:w-auto md:min-w-0 md:shrink md:basis-auto">
+        <div className="w-full max-w-full min-w-0 shrink-0 basis-full border-r border-[rgba(195,168,128,0.40)] md:w-auto md:min-w-0 md:shrink md:basis-auto">
           <div className="home-v2-col w-full min-w-0 max-w-full">
             {doninoSpeedSlides && doninoSpeedSlides.length > 0 ? (
               <SeasonDoninoSpeedCarousel

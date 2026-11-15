@@ -224,7 +224,7 @@ function ShowDogIdRedirect() {
 function ShowJudgeRoute() {
   const { judgeId } = useParams<{ judgeId: string }>();
   if (judgeId === 'all' || (judgeId && /^20\d\d$/.test(judgeId))) {
-    return <Shows defaultTab="judges" />;
+    return <Shows defaultTab="judges" urlYear={judgeId} />;
   }
   return <ShowJudgeDetail />;
 }

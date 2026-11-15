@@ -9,7 +9,7 @@ interface UseSubTabSwipeOptions<T extends string> {
 export function useSubTabSwipe<T extends string>({
   subTabs,
   initialSubTab = subTabs[0],
-  gapPx = 16,
+  gapPx = 0,
 }: UseSubTabSwipeOptions<T>) {
   const [activeSubTab, setActiveSubTab] = useState<T>(initialSubTab)
   const [isNudging, setIsNudging] = useState(false)
@@ -24,7 +24,7 @@ export function useSubTabSwipe<T extends string>({
 
   const getSlideOffset = useCallback(
     (slideIndex: number) => {
-      return slideIndex === 0 ? '0%' : `calc(-100% - ${gapPx}px)`
+      return slideIndex === 0 ? '0%' : gapPx ? `calc(-100% - ${gapPx}px)` : '-100%'
     },
     [gapPx],
   )
@@ -68,7 +68,7 @@ export function useSubTabSwipe<T extends string>({
       cancelNudge()
       if (trackRef.current) {
         trackRef.current.style.transition = 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)'
-        trackRef.current.style.transform = `translate3d(${target === subTabs[0] ? '0%' : `calc(-100% - ${gapPx}px)`}, 0, 0)`
+        trackRef.current.style.transform = `translate3d(${target === subTabs[0] ? '0%' : gapPx ? `calc(-100% - ${gapPx}px)` : '-100%'}, 0, 0)`
       }
       setActiveSubTab(target)
     },
@@ -111,7 +111,7 @@ export function useSubTabSwipe<T extends string>({
       const isAtLeftEdge = currentSlide === 0 && dx > 0
       const isAtRightEdge = currentSlide === 1 && dx < 0
       const appliedDx = isAtLeftEdge || isAtRightEdge ? dx * 0.22 : dx
-      const base = currentSlide === 0 ? '0%' : `calc(-100% - ${gapPx}px)`
+      const base = currentSlide === 0 ? '0%' : gapPx ? `calc(-100% - ${gapPx}px)` : '-100%'
       trackRef.current.style.transform = `translate3d(calc(${base} + ${appliedDx}px), 0, 0)`
     }
   }
@@ -178,7 +178,7 @@ export function useSubTabSwipe<T extends string>({
           ? 'none'
           : isNudging
           ? undefined
-          : `translate3d(${activeSubTab === subTabs[0] ? '0%' : `calc(-100% - ${gapPx}px)`}, 0, 0)`,
+          : `translate3d(${activeSubTab === subTabs[0] ? '0%' : gapPx ? `calc(-100% - ${gapPx}px)` : '-100%'}, 0, 0)`,
       willChange: 'transform' as const,
     },
   }
