@@ -31,7 +31,7 @@ def refresh_access_token():
     }).encode("utf-8")
 
     req = urllib.request.Request("https://oauth2.googleapis.com/token", data=data, method="POST")
-    with urllib.request.urlopen(req) as resp:
+    with urllib.request.urlopen(req, timeout=20) as resp:
         res = json.loads(resp.read().decode("utf-8"))
         tokens["access_token"] = res.get("access_token")
         if "refresh_token" in res:
@@ -51,7 +51,7 @@ def make_request(url, method="GET", payload=None):
             headers["Content-Type"] = "application/json"
             data = json.dumps(payload).encode("utf-8")
         req = urllib.request.Request(url, data=data, headers=headers, method=method)
-        with urllib.request.urlopen(req) as resp:
+        with urllib.request.urlopen(req, timeout=20) as resp:
             raw = resp.read().decode("utf-8")
         if not raw:
             return {}

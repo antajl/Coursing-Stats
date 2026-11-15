@@ -313,9 +313,9 @@ export const HUB_PAGES: HubMeta[] = [
 ]
 
 export const HUB_NAV: { href: string; label: string; desc?: string }[] = [
-  { href: '/competitions/', label: 'Соревнования и рейтинг', desc: 'Календарь состязаний, результаты забегов и единый рейтинг собак' },
-  { href: '/shows/', label: 'Выставки РКФ', desc: 'Рейтинг выставочных собак, чемпионы и статистика судей' },
-  { href: '/speed-records/', label: 'Замеры скорости Донино', desc: 'Радарные замеры скорости (км/ч) и спринт на 350 м' },
+  { href: '/competitions/ranking/2026/', label: 'Соревнования и рейтинг', desc: 'Календарь состязаний, результаты забегов и единый рейтинг собак' },
+  { href: '/shows/ranking/2026/', label: 'Выставки РКФ', desc: 'Рейтинг выставочных собак, чемпионы и статистика судей' },
+  { href: '/speed-records/2026/', label: 'Замеры скорости Донино', desc: 'Радарные замеры скорости (км/ч) и спринт на 350 м' },
   { href: '/guide/', label: 'Справочник', desc: 'Скорости пород борзых, расшифровка титулов и регламенты' },
   { href: '/donino/championship/', label: 'Клубный чемпионат', desc: 'Результаты этапов, протоколы забегов и лиги Донино' },
   { href: '/about/', label: 'О проекте', desc: 'Электронный кинологический архив соревнований с 2015 года' },
@@ -325,7 +325,11 @@ export function hubNavHtml(currentPath: string): string {
   const normCurrent = currentPath.endsWith('/') ? currentPath : `${currentPath}/`
   const items = HUB_NAV.map(({ href, label, desc }) => {
     const normHref = href.endsWith('/') ? href : `${href}/`
-    const current = (normHref === '/' && normCurrent === '/') || (normHref !== '/' && normCurrent === normHref)
+    const hrefBase = normHref.split('/').filter(Boolean)[0]
+    const currentBase = normCurrent.split('/').filter(Boolean)[0]
+    const current =
+      (normHref === '/' && normCurrent === '/') ||
+      (normHref !== '/' && (normCurrent === normHref || (Boolean(hrefBase) && hrefBase === currentBase)))
     const attrs = current ? ' aria-current="page"' : ''
     const descHtml = desc ? ` — <span>${escapeHtml(desc)}</span>` : ''
     return `<li><a href="${href}"${attrs}><strong>${escapeHtml(label)}</strong></a>${descHtml}</li>`

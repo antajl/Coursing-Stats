@@ -79,7 +79,7 @@ describe('prerender-seo helpers', () => {
       paragraph: 'Краткий текст',
     })
     expect(body).toContain('<h1>Рейтинг собак</h1>')
-    expect(body).toContain('href="/shows/"')
+    expect(body).toContain('href="/shows/ranking/2026/"')
     expect(body).toContain('href="/guide/"')
     expect(body).toContain('aria-current="page"')
   })

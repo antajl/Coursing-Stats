@@ -38,6 +38,12 @@ const CORE_URLS = [
   `https://${HOST}/donino/analytics/`,
   `https://${HOST}/guide/`,
   `https://${HOST}/about/`,
+  `https://${HOST}/breeds/`,
+  `https://${HOST}/breeds/whippet/`,
+  `https://${HOST}/breeds/borzoi/`,
+  `https://${HOST}/breeds/saluki/`,
+  `https://${HOST}/breeds/basenji/`,
+  `https://${HOST}/breeds/italian-greyhound/`,
   `https://${HOST}/llms.txt`,
   `https://${HOST}/llms-full.txt`,
 ];

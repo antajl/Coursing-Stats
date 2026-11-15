@@ -75,7 +75,7 @@ export function sportJudgeMeta(judge: {
     jsonLd,
     sectionLinks: [
       { href: '/competitions/judges/2026/', label: 'Судьи' },
-      { href: '/competitions/', label: 'Соревнования' },
+      { href: '/competitions/ranking/2026/', label: 'Соревнования' },
       { href: '/guide/', label: 'Справочник' },
     ],
   }
@@ -141,7 +141,7 @@ export function showJudgeMeta(judge: {
     jsonLd,
     sectionLinks: [
       { href: '/shows/judges/2026/', label: 'Судьи выставок' },
-      { href: '/shows/', label: 'Выставки' },
+      { href: '/shows/ranking/2026/', label: 'Выставки' },
       { href: '/guide/', label: 'Справочник' },
     ],
   }

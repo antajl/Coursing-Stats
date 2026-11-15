@@ -268,8 +268,8 @@ export function doninoMeta(dog: { name: string; breed: string }): SimpleEntityMe
     breadcrumbs,
     jsonLd,
     sectionLinks: [
-      { href: '/speed-records/', label: 'Рекорды Донино' },
-      { href: '/competitions/', label: 'Соревнования' },
+      { href: '/speed-records/2026/', label: 'Рекорды Донино' },
+      { href: '/competitions/ranking/2026/', label: 'Соревнования' },
       { href: '/guide/', label: 'Справочник' },
     ],
   }
