@@ -175,9 +175,11 @@ export default function QuickGroupBar({
   const sortedGroupKeys = useMemo(
     () =>
       Object.keys(FCI_GROUPS).sort((a, b) => {
-        const nameA = FCI_GROUPS[Number(a)]?.name.replace(/^FCI\s*\d+:\s*/i, '').trim() || ''
-        const nameB = FCI_GROUPS[Number(b)]?.name.replace(/^FCI\s*\d+:\s*/i, '').trim() || ''
-        return nameA.localeCompare(nameB, 'ru')
+        const numA = Number(a)
+        const numB = Number(b)
+        if (numA === 0 && numB !== 0) return 1
+        if (numB === 0 && numA !== 0) return -1
+        return numA - numB
       }),
     [],
   )
