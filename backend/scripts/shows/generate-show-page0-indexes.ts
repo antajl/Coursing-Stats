@@ -93,6 +93,7 @@ export function writeRankingPage0(year: string, dogs: RankingDog[], pageSize = S
 
 type JudgeRow = {
   id?: string
+  numeric_id?: number
   name?: string
   display_name?: string
   total_judged?: number
@@ -113,6 +114,7 @@ function leanJudgeForList(j: JudgeRow): JudgeRow {
   const breeds = Array.isArray(j.breeds) ? j.breeds.filter(Boolean) : []
   return {
     id: j.id,
+    numeric_id: j.numeric_id,
     name: j.name,
     display_name: j.display_name,
     total_judged: j.total_judged ?? 0,

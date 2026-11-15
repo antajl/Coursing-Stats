@@ -1,6 +1,7 @@
 import { cdnPackShardKey, showJudgeDetailPackPath, type ShowJudgeDetailPackFile } from '../../../../../backend/lib/cdn-packs'
 import { type ShowGradeKey } from '../../../../../backend/lib/show-grades'
 import { type ApiResult, fetchJson, judgeDetailKey } from '../core'
+import { resolveShowJudgeLegacyId, resolveShowJudgeNumericId } from '../../judgeIdMap.generated'
 
 const showJudgePackCache = new Map<string, Promise<ShowJudgeDetailPackFile | null>>()
 
@@ -15,6 +16,7 @@ async function loadShowJudgePack(shard: string): Promise<ShowJudgeDetailPackFile
 
 export interface ShowJudge {
   id: string
+  numeric_id?: number
   name: string
   /** Original name with preserved case for display */
   display_name?: string
@@ -35,6 +37,7 @@ export interface ShowJudge {
 
 export interface ShowJudgeDetail {
   id: string
+  numeric_id?: number
   name: string
   /** Original name with preserved case for display */
   display_name?: string
@@ -155,8 +158,8 @@ export async function getShowJudgeDetails(
   judgeId: string | undefined,
 ): Promise<ApiResult<ShowJudgeDetail>> {
   if (!judgeId) return { success: false, error: 'Judge id required' }
-  const id = decodeURIComponent(judgeId)
-  const fileKey = judgeDetailKey(id)
+  const legacyId = resolveShowJudgeLegacyId(judgeId) || decodeURIComponent(judgeId)
+  const fileKey = judgeDetailKey(legacyId)
   const shard = cdnPackShardKey(fileKey)
   const pack = await loadShowJudgePack(shard)
   let detail = pack?.byKey?.[fileKey] as ShowJudgeDetail | undefined
@@ -171,6 +174,9 @@ export async function getShowJudgeDetails(
   // Ensure display_name is set if not present (fallback to name)
   if (!detail.display_name) {
     detail.display_name = detail.name
+  }
+  if (!detail.numeric_id) {
+    detail.numeric_id = resolveShowJudgeNumericId(judgeId) ?? resolveShowJudgeNumericId(legacyId) ?? undefined
   }
   return { success: true, data: detail }
 }

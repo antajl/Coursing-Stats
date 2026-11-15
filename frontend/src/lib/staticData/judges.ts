@@ -11,6 +11,7 @@ import {
 } from '../judgeStats'
 import { type ApiResult, fetchJson, judgeDetailKey } from './core'
 import { getSportJudgeInfo } from '../sportJudgesRegistry'
+import { resolveSportJudgeLegacyId, resolveSportJudgeNumericId } from '../judgeIdMap.generated'
 
 interface JudgesSummaryFile {
   judges?: Record<string, unknown>[]
@@ -68,7 +69,7 @@ export async function getJudgeDetails(
   discipline = '',
   year = '',
 ): Promise<ApiResult<Record<string, unknown>>> {
-  const judgeName = decodeURIComponent(judgeId)
+  const judgeName = resolveSportJudgeLegacyId(judgeId) || decodeURIComponent(judgeId)
 
   if (!breed && !discipline && !year) {
     const detail = await fetchJson<JudgeDetailFile>(
@@ -92,6 +93,7 @@ export async function getJudgeDetails(
   return {
     success: true,
     data: {
+      numeric_id: resolveSportJudgeNumericId(judgeId) ?? resolveSportJudgeNumericId(judgeName) ?? undefined,
       judge_name: judgeName,
       full_name: info?.fullName,
       city: info?.city,

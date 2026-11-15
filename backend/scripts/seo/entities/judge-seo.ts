@@ -17,6 +17,7 @@ export const SPORT_JUDGE_FULL_NAMES: Record<string, string> = Object.fromEntries
 
 export function sportJudgeMeta(judge: {
   id: string
+  numeric_id?: number | null
   name?: string | null
   unique_events?: number | null
   unique_breeds?: number | null
@@ -35,11 +36,12 @@ export function sportJudgeMeta(judge: {
     facts.length > 0
       ? `Судья РКФ по курсингу и бегам борзых ${displayName}: статистика судейства (${facts.join(', ')}), судимые породы, оценки собак и история забегов на Coursing Stats.`
       : `Судья РКФ по курсингу и бегам борзых ${displayName}: профиль, статистика судейства, оценки собак и судимые породы на Coursing Stats.`
-  const url = `${SITE_ORIGIN}/judges/${encodeURIComponent(judge.id)}/`
+  const judgeSlug = judge.numeric_id != null ? String(judge.numeric_id) : encodeURIComponent(judge.id)
+  const url = `${SITE_ORIGIN}/judges/${judgeSlug}/`
   const breadcrumbs = [
     { name: 'Главная', url: '/' },
     { name: 'Судьи', url: '/competitions/judges/2026/' },
-    { name: displayName, url: `/judges/${encodeURIComponent(judge.id)}/` },
+    { name: displayName, url: `/judges/${judgeSlug}/` },
   ]
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -80,6 +82,7 @@ export function sportJudgeMeta(judge: {
 
 export function showJudgeMeta(judge: {
   id: string
+  numeric_id?: number | null
   name?: string | null
   display_name?: string | null
   total_judged?: number | null
@@ -98,11 +101,12 @@ export function showJudgeMeta(judge: {
     facts.length > 0
       ? `Эксперт РКФ / FCI ${name}: статистика судейства на выставках собак (${facts.join(', ')}), строгость оценок, судимые породы и отзывы на Coursing Stats.`
       : `Эксперт РКФ / FCI ${name}: статистика судейства на выставках собак, строгость оценок (% отлично), породы и история судейства на Coursing Stats.`
-  const url = `${SITE_ORIGIN}/shows/judges/${encodeURIComponent(judge.id)}/`
+  const judgeSlug = judge.numeric_id != null ? String(judge.numeric_id) : encodeURIComponent(judge.id)
+  const url = `${SITE_ORIGIN}/shows/judges/${judgeSlug}/`
   const breadcrumbs = [
     { name: 'Главная', url: '/' },
     { name: 'Судьи выставок', url: '/shows/judges/2026/' },
-    { name: name, url: `/shows/judges/${encodeURIComponent(judge.id)}/` },
+    { name: name, url: `/shows/judges/${judgeSlug}/` },
   ]
 
   const jsonLd = {

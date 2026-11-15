@@ -4,9 +4,11 @@ import {
   formatJudgeDisplayName,
   getStrictnessBadge,
 } from '../lib/judgeUiUtils'
+import { resolveShowJudgeNumericId } from '../lib/judgeIdMap.generated'
 
 export interface ShowJudgeCardData {
   id: string
+  numeric_id?: number
   name: string
   display_name?: string
   exhibitionsCount: number
@@ -72,7 +74,8 @@ export default function ShowJudgeCard({
   const excellentRateFraction = judge.excellentPct != null ? judge.excellentPct / 100 : null
   const strictness = getStrictnessBadge(excellentRateFraction, judge.graded)
 
-  const linkTo = `/shows/judges/${encodeURIComponent(judge.id)}${filterYear ? '?year=' + filterYear : ''}`
+  const targetId = judge.numeric_id ?? resolveShowJudgeNumericId(judge.id) ?? encodeURIComponent(judge.id)
+  const linkTo = `/shows/judges/${targetId}/${filterYear ? '?year=' + filterYear : ''}`
 
   const isEmbedded = variant === 'embedded'
   const shellClass = isEmbedded

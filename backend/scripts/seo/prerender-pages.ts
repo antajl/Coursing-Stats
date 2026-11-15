@@ -534,6 +534,7 @@ function prerenderSportJudges(spaHtml: string): number {
   const summary = readJsonFile<{
     judges?: Array<{
       id?: string
+      numeric_id?: number
       name?: string
       unique_events?: number
       unique_breeds?: number
@@ -545,8 +546,13 @@ function prerenderSportJudges(spaHtml: string): number {
   for (const j of judges) {
     const id = j.id || j.name
     if (!id) continue
+    const numericId = j.numeric_id
+    const judgeSlug = numericId != null ? String(numericId) : encodeURIComponent(id)
+    const canonicalUrl = `${SITE_ORIGIN}/judges/${judgeSlug}/`
+
     const meta = sportJudgeMeta({
       id,
+      numeric_id: numericId,
       name: j.name || id,
       unique_events: j.unique_events,
       unique_breeds: j.unique_breeds,
@@ -555,12 +561,20 @@ function prerenderSportJudges(spaHtml: string): number {
     const html = applyMetaToSpaShell(spaHtml, {
       title: meta.title,
       description: meta.description,
-      canonicalUrl: `${SITE_ORIGIN}/judges/${encodeURIComponent(id)}/`,
+      canonicalUrl,
       bodyHtml: buildSimpleEntityBodyHtml(meta),
       jsonLd: meta.jsonLd || breadcrumbJsonLd(meta.breadcrumbs),
     })
-    writeHtml(path.join(DIST, 'judges', staticSeoPathSegment(id), 'index.html'), html)
+
+    // Write canonical page under numeric slug if available
+    writeHtml(path.join(DIST, 'judges', judgeSlug, 'index.html'), html)
     written++
+
+    // If numeric slug is used and differs from legacy ID, write 301 static redirect at legacy path
+    if (numericId != null && String(numericId) !== id) {
+      const redirectHtml = buildRedirectHtml(canonicalUrl)
+      writeHtml(path.join(DIST, 'judges', staticSeoPathSegment(id), 'index.html'), redirectHtml)
+    }
   }
   return written
 }
@@ -727,6 +741,7 @@ function prerenderShowJudges(spaHtml: string): number {
   const raw = readJsonFile<
     | Array<{
         id?: string
+        numeric_id?: number
         name?: string
         display_name?: string
         total_judged?: number
@@ -735,6 +750,7 @@ function prerenderShowJudges(spaHtml: string): number {
     | {
         judges?: Array<{
           id?: string
+          numeric_id?: number
           name?: string
           display_name?: string
           total_judged?: number
@@ -754,8 +770,13 @@ function prerenderShowJudges(spaHtml: string): number {
     if (written >= max) break
     const id = j.id
     if (!id) continue
+    const numericId = j.numeric_id
+    const judgeSlug = numericId != null ? String(numericId) : encodeURIComponent(id)
+    const canonicalUrl = `${SITE_ORIGIN}/shows/judges/${judgeSlug}/`
+
     const meta = showJudgeMeta({
       id,
+      numeric_id: numericId,
       name: j.name,
       display_name: j.display_name,
       total_judged: j.total_judged,
@@ -765,12 +786,20 @@ function prerenderShowJudges(spaHtml: string): number {
     const html = applyMetaToSpaShell(spaHtml, {
       title: meta.title,
       description: meta.description,
-      canonicalUrl: `${SITE_ORIGIN}/shows/judges/${encodeURIComponent(id)}/`,
+      canonicalUrl,
       bodyHtml: buildSimpleEntityBodyHtml(meta),
       jsonLd: meta.jsonLd || breadcrumbJsonLd(meta.breadcrumbs),
     })
-    writeHtml(path.join(DIST, 'shows', 'judges', staticSeoPathSegment(id), 'index.html'), html)
+
+    // Write canonical page under numeric slug (e.g. /shows/judges/1001/)
+    writeHtml(path.join(DIST, 'shows', 'judges', judgeSlug, 'index.html'), html)
     written++
+
+    // If numeric slug is used, write 301 static redirect at legacy path (/shows/judges/гаврилова|я|а/)
+    if (numericId != null && String(numericId) !== id) {
+      const redirectHtml = buildRedirectHtml(canonicalUrl)
+      writeHtml(path.join(DIST, 'shows', 'judges', staticSeoPathSegment(id), 'index.html'), redirectHtml)
+    }
   }
   if (judges.length > written) {
     console.warn(

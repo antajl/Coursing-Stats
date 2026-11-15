@@ -3,6 +3,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { SEO } from '../../components/SEO'
 import { useShowJudgeDetails, useShowJudgesStrictnessBaseline } from '../../hooks/useStaticData'
 import { JsonLd, personSchema } from '../../components/JsonLd'
+import { resolveShowJudgeNumericId } from '../../lib/judgeIdMap.generated'
 import {
   GRADE_TILES,
   buildStrictness,
@@ -158,19 +159,21 @@ export default function ShowJudgeDetail() {
     baseline?.excellent_rate,
   )
 
+  const canonicalSlug = judge.numeric_id ?? resolveShowJudgeNumericId(judge.id) ?? encodeURIComponent(judge.id)
+
   return (
     <>
       <SEO
         title={`${judge.display_name || judge.name} — судья РКФ: статистика выставок, породы, строгость оценок`}
         description={`Судья РКФ / FCI ${judge.display_name || judge.name}: статистика судейства на выставках собак (${periodExhibitions.length} выставок, ${periodBreeds.length} пород), строгость оценок (% отлично) и судимые породы.`}
         keywords={`${judge.display_name || judge.name}, судья, эксперт ркф, отзывы, выставки ркф, cac, bob, строгость`}
-        canonicalUrl={`https://coursing-stats.ru/shows/judges/${encodeURIComponent(judge.id)}/`}
+        canonicalUrl={`https://coursing-stats.ru/shows/judges/${canonicalSlug}/`}
       />
       <JsonLd
         data={personSchema({
           name: judge.display_name || judge.name,
           jobTitle: 'Судья по породам собак РКФ / FCI',
-          url: `https://coursing-stats.ru/shows/judges/${encodeURIComponent(judge.id)}/`,
+          url: `https://coursing-stats.ru/shows/judges/${canonicalSlug}/`,
           description: `Эксперт РКФ / FCI ${judge.display_name || judge.name}: статистика судейства на выставках собак, судимые породы.`,
           worksFor: 'Российская Кинологическая Федерация (РКФ)',
         })}

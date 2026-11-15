@@ -4,6 +4,8 @@ import PageLoader from './components/PageLoader';
 import { isLocalDev } from './lib/env';
 import { usePublicCalendarVisible } from './hooks/useStaticData';
 
+import { resolveShowJudgeNumericId, resolveSportJudgeNumericId } from './lib/judgeIdMap.generated';
+
 import Home from './pages/Home';
 const Competitions = lazy(() => import('./pages/Competitions'));
 const Competitions2027 = lazy(() => import('./pages/Competitions/Competitions2027'));
@@ -226,7 +228,22 @@ function ShowJudgeRoute() {
   if (judgeId === 'all' || (judgeId && /^20\d\d$/.test(judgeId))) {
     return <Shows defaultTab="judges" urlYear={judgeId} />;
   }
+  const location = useLocation();
+  const numericId = resolveShowJudgeNumericId(judgeId);
+  if (numericId != null && String(numericId) !== judgeId) {
+    return <Navigate to={`/shows/judges/${numericId}/${location.search}`} replace />;
+  }
   return <ShowJudgeDetail />;
+}
+
+function SportJudgeRoute() {
+  const { judgeId } = useParams<{ judgeId: string }>();
+  const location = useLocation();
+  const numericId = resolveSportJudgeNumericId(judgeId);
+  if (numericId != null && String(numericId) !== judgeId) {
+    return <Navigate to={`/judges/${numericId}/${location.search}`} replace />;
+  }
+  return <JudgeDetail />;
 }
 
 export default function AppRoutes() {
@@ -290,7 +307,7 @@ export default function AppRoutes() {
         <Route path="/about" element={<About />} />
         <Route path="/donino-dog/:name/:breed" element={<DoninoDogProfile />} />
         <Route path="/judges" element={<LegacyJudgesListRedirect />} />
-        <Route path="/judges/:judgeId" element={<JudgeDetail />} />
+        <Route path="/judges/:judgeId" element={<SportJudgeRoute />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Suspense>

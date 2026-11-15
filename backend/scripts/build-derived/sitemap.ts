@@ -125,9 +125,31 @@ const STATIC_PAGES: SitemapUrl[] = [
   ...buildYearStaticPages(),
 ]
 
+function loadShowJudgeMap(): Record<string, number> {
+  const mapPath = path.join(ROOT, 'data/v1/shows/indexes/judge-id-map.json')
+  if (!fs.existsSync(mapPath)) return {}
+  try {
+    return JSON.parse(fs.readFileSync(mapPath, 'utf8'))
+  } catch {
+    return {}
+  }
+}
+
+function loadSportJudgeMap(): Record<string, number> {
+  const mapPath = path.join(ROOT, 'data/v1/indexes/sport-judge-id-map.json')
+  if (!fs.existsSync(mapPath)) return {}
+  try {
+    return JSON.parse(fs.readFileSync(mapPath, 'utf8'))
+  } catch {
+    return {}
+  }
+}
+
 /** Pure collector — unit-tested without sqlite. */
 export function collectSitemapUrls(sources: SitemapUrlSources): SitemapUrl[] {
   const out: SitemapUrl[] = [...STATIC_PAGES]
+  const showJudgeMap = loadShowJudgeMap()
+  const sportJudgeMap = loadSportJudgeMap()
 
   for (const b of CORE_BREED_HUBS) {
     out.push({ loc: `/breeds/${b.slug}/`, changefreq: 'weekly', priority: '0.85' })
@@ -151,15 +173,17 @@ export function collectSitemapUrls(sources: SitemapUrlSources): SitemapUrl[] {
     })
   }
   for (const name of sources.sportJudgeNames) {
+    const slug = sportJudgeMap[name] != null ? String(sportJudgeMap[name]) : encodeURIComponent(name)
     out.push({
-      loc: `/judges/${encodeURIComponent(name)}/`,
+      loc: `/judges/${slug}/`,
       changefreq: 'monthly',
       priority: '0.5',
     })
   }
   for (const id of sources.showJudgeIds) {
+    const slug = showJudgeMap[id] != null ? String(showJudgeMap[id]) : encodeURIComponent(id)
     out.push({
-      loc: `/shows/judges/${encodeURIComponent(id)}/`,
+      loc: `/shows/judges/${slug}/`,
       changefreq: 'monthly',
       priority: '0.5',
     })
@@ -339,14 +363,23 @@ export function buildSitemap(db: Database.Database) {
   const showJudgeIds = loadShowJudgeIds()
   const sportJudgeNames = [...judgeNames].sort((a, b) => a.localeCompare(b, 'ru'))
 
+  const showJudgeMap = loadShowJudgeMap()
+  const sportJudgeMap = loadSportJudgeMap()
+
   writeIndex('sitemap-urls.json', {
     schema: 'coursing-stats/index-sitemap-v1',
     dogs: dogs.map((d) => `/dog/${d.id}/`),
     events: eventIds.map((id) => `/event/${id}/`),
     protocols: protocolIds.map((id) => `/protocols/${id}.html`),
     exhibitions: exhibitionIds.map((id) => `/shows/exhibition/${encodeURIComponent(id)}/`),
-    judges: sportJudgeNames.map((name) => `/judges/${encodeURIComponent(name)}/`),
-    show_judges: showJudgeIds.map((id) => `/shows/judges/${encodeURIComponent(id)}/`),
+    judges: sportJudgeNames.map((name) => {
+      const slug = sportJudgeMap[name] != null ? String(sportJudgeMap[name]) : encodeURIComponent(name)
+      return `/judges/${slug}/`
+    }),
+    show_judges: showJudgeIds.map((id) => {
+      const slug = showJudgeMap[id] != null ? String(showJudgeMap[id]) : encodeURIComponent(id)
+      return `/shows/judges/${slug}/`
+    }),
     donino_dogs: doninoDogs.map(
       (d) => `/donino-dog/${encodeURIComponent(d.name)}/${encodeURIComponent(d.breed)}/`,
     ),
@@ -398,16 +431,22 @@ export function buildSitemap(db: Database.Database) {
     priority: '0.6',
   }))
   const judgeUrls: SitemapUrl[] = [
-    ...sportJudgeNames.map((name) => ({
-      loc: `/judges/${encodeURIComponent(name)}/`,
-      changefreq: 'monthly',
-      priority: '0.5',
-    })),
-    ...showJudgeIds.map((id) => ({
-      loc: `/shows/judges/${encodeURIComponent(id)}/`,
-      changefreq: 'monthly',
-      priority: '0.5',
-    })),
+    ...sportJudgeNames.map((name) => {
+      const slug = sportJudgeMap[name] != null ? String(sportJudgeMap[name]) : encodeURIComponent(name)
+      return {
+        loc: `/judges/${slug}/`,
+        changefreq: 'monthly' as const,
+        priority: '0.5' as const,
+      }
+    }),
+    ...showJudgeIds.map((id) => {
+      const slug = showJudgeMap[id] != null ? String(showJudgeMap[id]) : encodeURIComponent(id)
+      return {
+        loc: `/shows/judges/${slug}/`,
+        changefreq: 'monthly' as const,
+        priority: '0.5' as const,
+      }
+    }),
   ]
   const showUrls: SitemapUrl[] = exhibitionIds.map((id) => ({
     loc: `/shows/exhibition/${encodeURIComponent(id)}/`,

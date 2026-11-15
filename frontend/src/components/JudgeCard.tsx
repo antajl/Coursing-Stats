@@ -4,9 +4,11 @@ import {
   formatJudgeDisplayName,
   getSportJudgeStrictnessBadge,
 } from '../lib/judgeUiUtils'
+import { resolveSportJudgeNumericId } from '../lib/judgeIdMap.generated'
 
 export interface JudgeCardData {
   id: string
+  numeric_id?: number
   name: string
   full_name?: string
   city?: string
@@ -83,7 +85,8 @@ export default function JudgeCard({
   if (filterDiscipline) queryParams.set('discipline', filterDiscipline)
   if (filterBreed) queryParams.set('breed', filterBreed)
   const queryStr = queryParams.toString()
-  const linkTo = `/judges/${encodeURIComponent(judge.id)}${queryStr ? '?' + queryStr : ''}`
+  const targetId = judge.numeric_id ?? resolveSportJudgeNumericId(judge.id) ?? encodeURIComponent(judge.id)
+  const linkTo = `/judges/${targetId}/${queryStr ? '?' + queryStr : ''}`
 
   const totalBreeds = judge.unique_breeds || 0
   const yearsActiveLabel = judge.years_active ? formatYearsActive(judge.years_active) : ''
