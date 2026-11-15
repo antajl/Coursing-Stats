@@ -460,16 +460,31 @@ export function buildSitemap(db: Database.Database) {
   fs.writeFileSync(path.join(PUBLIC_DIR, 'sitemap-protocols.xml'), renderSitemapXml(protocolUrls), 'utf-8')
   fs.writeFileSync(path.join(PUBLIC_DIR, 'sitemap-dogs.xml'), renderSitemapXml(dogUrls), 'utf-8')
   fs.writeFileSync(path.join(PUBLIC_DIR, 'sitemap-judges.xml'), renderSitemapXml(judgeUrls), 'utf-8')
-  fs.writeFileSync(path.join(PUBLIC_DIR, 'sitemap-shows.xml'), renderSitemapXml(showUrls), 'utf-8')
 
-  const indexXml = renderSitemapIndexXml([
+  const MAX_CHUNK = 45000
+  const indexEntries = [
     { loc: '/sitemap-main.xml', lastmod: now },
     { loc: '/sitemap-events.xml', lastmod: now },
     { loc: '/sitemap-protocols.xml', lastmod: now },
     { loc: '/sitemap-dogs.xml', lastmod: now },
     { loc: '/sitemap-judges.xml', lastmod: now },
-    { loc: '/sitemap-shows.xml', lastmod: now },
-  ])
+  ]
+
+  if (showUrls.length > MAX_CHUNK) {
+    const totalChunks = Math.ceil(showUrls.length / MAX_CHUNK)
+    for (let c = 0; c < totalChunks; c++) {
+      const chunkUrls = showUrls.slice(c * MAX_CHUNK, (c + 1) * MAX_CHUNK)
+      const chunkName = `sitemap-shows-${c + 1}.xml`
+      fs.writeFileSync(path.join(PUBLIC_DIR, chunkName), renderSitemapXml(chunkUrls), 'utf-8')
+      indexEntries.push({ loc: `/${chunkName}`, lastmod: now })
+    }
+    fs.writeFileSync(path.join(PUBLIC_DIR, 'sitemap-shows.xml'), renderSitemapXml(showUrls.slice(0, MAX_CHUNK)), 'utf-8')
+  } else {
+    fs.writeFileSync(path.join(PUBLIC_DIR, 'sitemap-shows.xml'), renderSitemapXml(showUrls), 'utf-8')
+    indexEntries.push({ loc: '/sitemap-shows.xml', lastmod: now })
+  }
+
+  const indexXml = renderSitemapIndexXml(indexEntries)
   fs.writeFileSync(path.join(PUBLIC_DIR, 'sitemap-index.xml'), indexXml, 'utf-8')
 
   const xml = renderSitemapXml(urls)

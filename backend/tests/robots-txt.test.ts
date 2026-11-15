@@ -14,7 +14,7 @@ describe('robots.txt', () => {
     const text = fs.readFileSync(robotsPath, 'utf8')
     expect(text).toMatch(/User-agent:\s*\*/i)
     expect(text).toMatch(/Allow:\s*\//i)
-    expect(text).toContain('Sitemap: https://coursing-stats.ru/sitemap.xml')
+    expect(text).toContain('Sitemap: https://coursing-stats.ru/sitemap-index.xml')
     expect(text).toMatch(/Disallow:\s*\/admin/i)
     expect(text).toMatch(/Disallow:\s*\/login/i)
     expect(text).toMatch(/Disallow:\s*\/account/i)
