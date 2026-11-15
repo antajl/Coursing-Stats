@@ -40,7 +40,7 @@ interface PageToolbarProps {
 // Compound components
 function PageToolbarFilters() {
   const { filters } = usePageToolbarContext()
-  return <div className="flex min-w-0 flex-1 flex-wrap items-center gap-2">{filters}</div>
+  return <div className="flex min-w-0 flex-1 flex-wrap items-center gap-2 w-full">{filters}</div>
 }
 
 function PageToolbarActions() {
@@ -58,7 +58,7 @@ function PageToolbarActions() {
 function PageToolbarTopRow({ children }: { children?: ReactNode }) {
   const { topRowClassName = '' } = usePageToolbarContext()
   return (
-    <div className={`flex flex-wrap items-center justify-between gap-2 ${topRowClassName}`.trim()}>
+    <div className={`flex w-full flex-wrap items-center justify-between gap-2 ${topRowClassName}`.trim()}>
       {children}
     </div>
   )
@@ -112,11 +112,11 @@ export default function PageToolbar({
 
   return (
     <PageToolbarContext.Provider value={contextValue}>
-      <div className={bare ? 'space-y-2.5' : `${TOOLBAR_PANEL} space-y-2.5`}>
+      <div className={bare ? 'w-full space-y-2.5' : `${TOOLBAR_PANEL} space-y-2.5`}>
         {children || (
           <>
-            <div className={`flex flex-wrap items-center justify-between gap-2 ${topRowClassName}`.trim()}>
-              <div className="flex min-w-0 flex-1 flex-wrap items-center gap-2">{filters}</div>
+            <div className={`flex w-full flex-wrap items-center justify-between gap-2 ${topRowClassName}`.trim()}>
+              <div className="flex min-w-0 flex-1 flex-wrap items-center gap-2 w-full">{filters}</div>
               {showEnd && (
                 <div className="flex shrink-0 items-center gap-2 ml-auto">
                   {exportAction}

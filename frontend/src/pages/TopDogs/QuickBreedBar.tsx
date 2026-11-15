@@ -383,14 +383,14 @@ export default function QuickBreedBar({
       {/* Основной адаптивный контейнер */}
       <div
         ref={containerRef}
-        className={`flex items-center gap-[5px] flex-nowrap min-w-0 w-full py-2 -my-2 px-2 -mx-2 overflow-visible ${className}`.trim()}
+        className={`flex items-center gap-[5px] flex-nowrap min-w-0 w-full py-2 -my-2 overflow-visible ${className}`.trim()}
         role="toolbar"
         aria-label="Быстрый выбор породы"
       >
         {isMinimal ? (
           /* МАКСИМАЛЬНО СУЖЕННЫЙ РЕЖИМ: просто кнопка «Породы» */
           normalizedSelected ? (
-            <>
+            <div className="ml-auto shrink-0 flex items-center gap-1.5">
               <span
                 className="cs-glass-pill-active inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full px-2.5 text-xs font-semibold whitespace-nowrap"
                 title={`Выбрана порода: ${selectedDisplay}`}
@@ -400,6 +400,7 @@ export default function QuickBreedBar({
                   selectedBreed={selectedBreed}
                   onSelect={onSelectBreed}
                   dogIndex={dogIndex}
+                  align="right"
                   trigger={
                     <button
                       type="button"
@@ -436,25 +437,28 @@ export default function QuickBreedBar({
                   <ArrowUpRight className="h-3.5 w-3.5 text-camel-700" aria-hidden />
                 </Link>
               )}
-            </>
+            </div>
           ) : (
-            <BreedSearchDropdown
-              breeds={breedValues}
-              selectedBreed={selectedBreed}
-              onSelect={onSelectBreed}
-              dogIndex={dogIndex}
-              trigger={
-                <button
-                  type="button"
-                  className="cs-glass-pill inline-flex h-8 shrink-0 items-center gap-1 rounded-full px-2.5 text-xs font-medium whitespace-nowrap cursor-pointer"
-                  title="Выбрать породу из полного списка"
-                  aria-label="Открыть список пород"
-                >
-                  <span>Породы</span>
-                  <ChevronDown className="h-3.5 w-3.5 opacity-70" aria-hidden />
-                </button>
-              }
-            />
+            <div className="ml-auto shrink-0 flex items-center">
+              <BreedSearchDropdown
+                breeds={breedValues}
+                selectedBreed={selectedBreed}
+                onSelect={onSelectBreed}
+                dogIndex={dogIndex}
+                align="right"
+                trigger={
+                  <button
+                    type="button"
+                    className="cs-glass-pill inline-flex h-8 shrink-0 items-center gap-1 rounded-full px-2.5 text-xs font-medium whitespace-nowrap cursor-pointer"
+                    title="Выбрать породу из полного списка"
+                    aria-label="Открыть список пород"
+                  >
+                    <span>Породы</span>
+                    <ChevronDown className="h-3.5 w-3.5 opacity-70" aria-hidden />
+                  </button>
+                }
+              />
+            </div>
           )
         ) : (
           /* ОБЫЧНЫЙ АДАПТИВНЫЙ РЕЖИМ: плашки заполняют все свободное пространство */
@@ -537,6 +541,7 @@ export default function QuickBreedBar({
                 selectedBreed={selectedBreed}
                 onSelect={onSelectBreed}
                 dogIndex={dogIndex}
+                align="right"
                 trigger={
                   <button
                     type="button"

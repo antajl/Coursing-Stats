@@ -19,6 +19,8 @@ interface ModernDropdownProps {
   closeDelay?: number
   /** Close dropdown when window or page scrolls */
   closeOnScroll?: boolean
+  /** Horizontal alignment relative to trigger ('left' or 'right') */
+  align?: 'left' | 'right'
 }
 
 export default function ModernDropdown({
@@ -33,6 +35,7 @@ export default function ModernDropdown({
   openDelay = 60,
   closeDelay = 200,
   closeOnScroll = false,
+  align = 'left',
 }: ModernDropdownProps) {
   const [internalOpen, setInternalOpen] = useState(false)
   const [positionReady, setPositionReady] = useState(false)
@@ -183,9 +186,10 @@ export default function ModernDropdown({
       const parsedWidth = width ? parseInt(width, 10) : triggerRect.width
       const dropdownWidth = Math.min(parsedWidth, Math.max(200, window.innerWidth - 16))
       const maxLeft = Math.max(8, window.innerWidth - dropdownWidth - 8)
+      const targetLeft = align === 'right' ? triggerRect.right - dropdownWidth : triggerRect.left
       setPosition({
         top: triggerRect.bottom + 4,
-        left: Math.max(8, Math.min(triggerRect.left, maxLeft)),
+        left: Math.max(8, Math.min(targetLeft, maxLeft)),
         width: dropdownWidth,
       })
       return true
@@ -233,7 +237,7 @@ export default function ModernDropdown({
       window.visualViewport?.removeEventListener('resize', handleResize)
       window.visualViewport?.removeEventListener('scroll', handleResize)
     }
-  }, [isOpen, width, closeOnScroll])
+  }, [isOpen, width, closeOnScroll, align])
 
   const dropdownContent = isOpen ? (
     <div

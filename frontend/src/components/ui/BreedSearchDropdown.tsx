@@ -12,6 +12,7 @@ interface BreedSearchDropdownProps {
   trigger: React.ReactNode
   className?: string
   dogIndex?: DogsIndexEntry[]
+  align?: 'left' | 'right'
 }
 
 export default function BreedSearchDropdown({
@@ -21,6 +22,7 @@ export default function BreedSearchDropdown({
   trigger,
   className = '',
   dogIndex,
+  align = 'left',
 }: BreedSearchDropdownProps) {
   const [searchQuery, setSearchQuery] = useState('')
   const [isOpen, setIsOpen] = useState(false)
@@ -142,6 +144,7 @@ export default function BreedSearchDropdown({
       onOpenChange={setIsOpen}
       className={className}
       width="320px"
+      align={align}
     >
       {isOpen ? (
         <div className="p-2 min-w-[200px] max-w-xs">
