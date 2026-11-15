@@ -11,7 +11,7 @@ import {
   getShowRkfCalendarYears,
   type ShowRkfCalendarEntry,
 } from '../../lib/staticData'
-import { canonicalBreed, formatBreedName, matchesBreedFilter } from '../../lib/breedMapping'
+import { canonicalBreed, formatBreedName, matchesBreedFilter, breedToSlug, resolveBreedParam } from '../../lib/breedMapping'
 import { SHOW_CANDIDATE_BREEDS } from '../TopDogs/QuickBreedBar'
 import { useShowBreedAliases } from '../../hooks/useStaticData'
 import type { DogsIndexEntry } from '../../lib/competingBreeds'
@@ -82,7 +82,7 @@ export default function ShowCalendar({ urlYear }: ShowCalendarProps = {}) {
     if (!monthParam || monthParam === 'from_previous') return ''
     return monthParam
   })
-  const [filterBreed, setFilterBreed] = useState(() => searchParams.get('breed') || '')
+  const [filterBreed, setFilterBreed] = useState(() => resolveBreedParam(searchParams.get('breed')))
   const [filterCity, setFilterCity] = useState(() => searchParams.get('city') || '')
 
   const [searchQuery, setSearchQuery] = useState(() => searchParams.get('search') || '')
@@ -153,7 +153,7 @@ export default function ShowCalendar({ urlYear }: ShowCalendarProps = {}) {
             : filterMonth && Number(filterMonth) !== defaultMonth
               ? filterMonth
               : null
-        const targetBreed = filterBreed || null
+        const targetBreed = filterBreed ? breedToSlug(filterBreed) : null
         const targetCity = filterCity.trim() || null
         const targetSearch = searchQuery.trim() || null
 
@@ -213,7 +213,7 @@ export default function ShowCalendar({ urlYear }: ShowCalendarProps = {}) {
 
   // Sync URL changes back to state (e.g. browser back/forward or tab switch)
   useEffect(() => {
-    const breedFromUrl = searchParams.get('breed') || ''
+    const breedFromUrl = resolveBreedParam(searchParams.get('breed'))
     if (breedFromUrl !== filterBreed) {
       setFilterBreed(breedFromUrl)
     }

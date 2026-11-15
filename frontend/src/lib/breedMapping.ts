@@ -6,6 +6,8 @@
  * Держать синхронно с backend/src/lib/breed-mapping.ts
  */
 
+import { getBreedHubBySlug, getBreedHubByCanonicalKey } from './breed-hubs-data'
+
 /** Нормализация без снятия RU/EN хвоста — для алиасов вроде «АКИТА / AMERICAN». */
 /** Очистка артефактов парсинга PDF и опечаток в названиях пород */
 export function sanitizeBreedName(raw: string): string {
@@ -743,4 +745,40 @@ export function formatBreedName(breed: unknown): string {
   if (!breed) return ''
   const str = String(breed)
   return displayBreed(str).primary || str
+}
+
+/**
+ * Resolves a breed parameter from URL into internal uppercase canonical breed key.
+ * Supports:
+ * - Latin slug: "whippet" -> "УИППЕТ", "borzoi" -> "РУССКАЯ ПСОВАЯ БОРЗАЯ", "saluki" -> "САЛЮКИ"
+ * - Cyrillic canonical or synonym: "УИППЕТ" -> "УИППЕТ", "салюки" -> "САЛЮКИ"
+ */
+export function resolveBreedParam(rawParam: string | null | undefined): string {
+  if (!rawParam) return ''
+  const trimmed = rawParam.trim()
+  if (!trimmed) return ''
+
+  // 1. Try slug from breed hubs first (whippet, saluki, borzoi, etc.)
+  const bySlug = getBreedHubBySlug(trimmed)
+  if (bySlug) return bySlug.canonicalKey
+
+  // 2. Try canonicalBreed from synonyms
+  const canonical = canonicalBreed(trimmed)
+  if (canonical && canonical !== 'БЕЗ ПОРОДЫ') return canonical
+
+  // 3. Fallback
+  return trimmed.toUpperCase()
+}
+
+/**
+ * Converts an internal canonical breed key to a clean URL-friendly Latin slug.
+ * Example: "УИППЕТ" -> "whippet", "РУССКАЯ ПСОВАЯ БОРЗАЯ" -> "borzoi".
+ * If no slug exists in breed hubs, returns the original key.
+ */
+export function breedToSlug(breedKey: string | null | undefined): string {
+  if (!breedKey) return ''
+  const canonical = canonicalBreed(breedKey) || breedKey
+  const hub = getBreedHubByCanonicalKey(canonical)
+  if (hub?.slug) return hub.slug
+  return breedKey
 }

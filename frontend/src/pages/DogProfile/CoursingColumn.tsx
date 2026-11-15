@@ -13,6 +13,7 @@ import {
 } from './DisciplineColumnShell'
 import { HistoryMetaRow } from './HistoryPlacement'
 import type { ProfileHeaderRank } from './DogProfileHeader'
+import { breedToSlug } from '../../lib/breedMapping'
 
 type CoursingStats = {
   best_score?: number | string | null
@@ -81,7 +82,7 @@ export function CoursingColumn({
   if (!hasCoursingData && coursingEvents.length === 0) return null
 
   const dogBreed = breed || ''
-  const rankingUrl = `/competitions/ranking/2026/${dogBreed ? `?breed=${encodeURIComponent(dogBreed)}` : ''}`
+  const rankingUrl = `/competitions/ranking/2026/${dogBreed ? `?breed=${encodeURIComponent(breedToSlug(dogBreed))}` : ''}`
   const bestScoreUrl = bestScoreEventId
     ? procoursingUrlForEventId(eventResultsUrls, bestScoreEventId)
     : null

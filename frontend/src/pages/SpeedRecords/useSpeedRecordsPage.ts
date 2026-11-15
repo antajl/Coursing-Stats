@@ -3,6 +3,7 @@ import { useSearchParams, useLocation, useNavigate, useParams } from 'react-rout
 import { useSpeedRecords, useCoursingRecords } from '../../hooks/useStaticData'
 import { getRecordYear, parseRecordHistory } from '../../lib/recordDates'
 import { DEFAULT_ACTIVE_SEASON, resolveActiveSeason } from '../../lib/season'
+import { breedToSlug, resolveBreedParam } from '../../lib/breedMapping'
 import { buildSexByDogMap } from './stats/doninoStatsUtils'
 import type { GroupBy } from './stats/constants'
 import {
@@ -84,7 +85,11 @@ export function useSpeedRecordsPage() {
   }, [routeYearParam])
   const [filterBreeds, setFilterBreeds] = useState(() => {
     const raw = searchParams.get('breed') || searchParams.get('breeds')
-    return raw ? raw.split(',') : []
+    if (!raw) return []
+    return raw
+      .split(',')
+      .map((b) => resolveBreedParam(b))
+      .filter(Boolean)
   })
   const [filterSexes, setFilterSexes] = useState(() => {
     const raw = searchParams.get('sex') || searchParams.get('sexes')
@@ -347,7 +352,8 @@ export function useSpeedRecordsPage() {
 
         // Breed
         const currentBreed = next.get('breed') || ''
-        const targetBreed = filterBreeds.length > 0 ? filterBreeds[0] : ''
+        const rawTarget = filterBreeds.length > 0 ? filterBreeds[0] : ''
+        const targetBreed = rawTarget ? breedToSlug(rawTarget) : ''
         if (targetBreed !== currentBreed) {
           if (targetBreed) next.set('breed', targetBreed)
           else next.delete('breed')
@@ -444,7 +450,12 @@ export function useSpeedRecordsPage() {
   // Respond to browser back/forward navigation
   useEffect(() => {
     const breedFromUrl = searchParams.get('breed') || searchParams.get('breeds') || ''
-    const breedArr = breedFromUrl ? breedFromUrl.split(',') : []
+    const breedArr = breedFromUrl
+      ? breedFromUrl
+          .split(',')
+          .map((b) => resolveBreedParam(b))
+          .filter(Boolean)
+      : []
     if (breedArr.join(',') !== filterBreeds.join(',')) {
       setFilterBreeds(breedArr)
     }

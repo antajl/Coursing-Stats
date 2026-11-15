@@ -228,7 +228,7 @@ export default function BreedHub() {
 
           <div className="flex items-center gap-2 shrink-0 flex-wrap">
             <Link
-              to={`/competitions/ranking/2026/?breed=${encodeURIComponent(breedInfo.canonicalKey)}`}
+              to={`/competitions/ranking/2026/?breed=${breedInfo.slug}`}
               className="cs-glass-pill inline-flex h-8 items-center gap-1.5 rounded-full px-3 text-xs font-semibold shrink-0 cursor-pointer text-charcoal-700 hover:text-camel-800"
               title={`Полный рейтинг породы ${breedInfo.nameRu}`}
             >

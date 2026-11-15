@@ -27,6 +27,7 @@ import {
 import { useDogProfileRanks } from './useDogProfileRanks'
 import { useDogProfileSeo } from './useDogProfileSeo'
 import { isShowOnlyProfileId } from '../../lib/showDogProfilePath'
+import { resolveBreedParam } from '../../lib/breedMapping'
 
 const EMPTY_ARRAY: never[] = []
 
@@ -54,7 +55,7 @@ export function useDogProfileData() {
 
   const [searchParams] = useSearchParams()
   const queryName = searchParams.get('name')
-  const queryBreed = searchParams.get('breed')
+  const queryBreed = resolveBreedParam(searchParams.get('breed')) || searchParams.get('breed')
 
   const profileId = competitionId || ''
   const isShowOnly = isShowOnlyProfileId(profileId)

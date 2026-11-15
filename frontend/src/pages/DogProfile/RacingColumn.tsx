@@ -13,6 +13,7 @@ import {
 } from './DisciplineColumnShell'
 import { HistoryMetaRow } from './HistoryPlacement'
 import type { ProfileHeaderRank } from './DogProfileHeader'
+import { breedToSlug } from '../../lib/breedMapping'
 
 type RacingStats = {
   best_speed?: number | string | null
@@ -78,7 +79,7 @@ export function RacingColumn({
   if (!hasRacingData && racingEvents.length === 0) return null
 
   const dogBreed = breed || ''
-  const rankingUrl = `/competitions/ranking/2026/${dogBreed ? `?breed=${encodeURIComponent(dogBreed)}` : ''}`
+  const rankingUrl = `/competitions/ranking/2026/${dogBreed ? `?breed=${encodeURIComponent(breedToSlug(dogBreed))}` : ''}`
   const bestSpeedUrl = bestSpeedEventId
     ? procoursingUrlForEventId(eventResultsUrls, bestSpeedEventId)
     : null

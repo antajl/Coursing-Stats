@@ -7,6 +7,7 @@ import DogSexIcon from '../../components/DogSexIcon'
 import MedalBadge from '../../components/MedalBadge'
 import { parseDogName } from '../../lib/dogName'
 import type { AnnualDogLeader } from '../../hooks/useStaticData'
+import { breedToSlug } from '../../lib/breedMapping'
 
 export interface SpeedRecordItem {
   breed?: string
@@ -187,7 +188,7 @@ export default function BreedHubColumns({
       actionPlacement="right"
       action={
         <Link
-          to={`/competitions/ranking/2026/?breed=${encodeURIComponent(canonicalKey)}`}
+          to={`/competitions/ranking/2026/?breed=${encodeURIComponent(breedToSlug(canonicalKey))}`}
           className="inline-flex items-center gap-1 text-xs font-semibold text-camel-800 hover:text-camel-950 transition-colors cursor-pointer shrink-0"
           title={`Полный рейтинг породы ${breedNameRu}`}
         >
@@ -332,7 +333,7 @@ export default function BreedHubColumns({
                             >
                               <td className="py-2.5 px-2.5 text-center whitespace-nowrap">
                                 <Link
-                                  to={`/competitions/ranking/${item.year}/?breed=${encodeURIComponent(canonicalKey)}`}
+                                  to={`/competitions/ranking/${item.year}/?breed=${encodeURIComponent(breedToSlug(canonicalKey))}`}
                                   className="inline-block px-2.5 py-0.5 rounded-full font-bold font-sans tabular-nums text-xs bg-camel-100 hover:bg-camel-200 active:scale-95 text-camel-950 border border-camel-200/80 transition-all shadow-2xs cursor-pointer"
                                   title={`Открыть рейтинг соревнований ${item.year} года`}
                                 >
@@ -401,7 +402,7 @@ export default function BreedHubColumns({
                           {/* Верхняя строка: Кликабельный бейдж года (без стрелочки) + Имя собаки + Иконка пола */}
                           <div className="flex items-center gap-2 min-w-0">
                             <Link
-                              to={`/competitions/ranking/${item.year}/?breed=${encodeURIComponent(canonicalKey)}`}
+                              to={`/competitions/ranking/${item.year}/?breed=${encodeURIComponent(breedToSlug(canonicalKey))}`}
                               className="px-2.5 py-0.5 rounded-full font-bold font-sans tabular-nums text-xs bg-camel-100 hover:bg-camel-200 active:scale-95 text-camel-950 border border-camel-200/80 shrink-0 transition-all shadow-2xs cursor-pointer"
                               title={`Открыть рейтинг соревнований ${item.year} года`}
                             >

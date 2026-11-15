@@ -6,6 +6,7 @@ import { HomeBreedCarouselPager } from './HomeBreedCarouselPager'
 import { HomeSubSectionTab } from './SeasonTopSection'
 import type { BreedSlide } from '../utils/breedSeasonSlides'
 import type { CombinedRankingDog } from '../../TopDogs/mergeCombinedRanking'
+import { breedToSlug } from '../../../lib/breedMapping'
 
 const CURRENT_SEASON = new Date().getFullYear()
 
@@ -34,7 +35,7 @@ export default function SeasonCompetitionsCarousel({
   }
 
   const renderHeaderItem = (s: BreedSlide<CombinedRankingDog>) => {
-    const rankingHref = `/competitions/ranking/${CURRENT_SEASON}/?breed=${encodeURIComponent(s.breedKey)}`
+    const rankingHref = `/competitions/ranking/${CURRENT_SEASON}/?breed=${encodeURIComponent(breedToSlug(s.breedKey))}`
     return (
       <div className="min-w-0 max-w-full flex items-center justify-start md:justify-center gap-1.5 px-1">
         <Link

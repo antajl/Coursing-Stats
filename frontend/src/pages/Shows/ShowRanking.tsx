@@ -9,7 +9,7 @@ import ShowRankingColumns, { type RankedShowDog } from './ShowRankingColumns'
 import type { ShowDogCardData } from './ShowDogCard'
 import { useDebounce } from '../../hooks/useDebounce'
 import { dogNameSearchText, dogQuerySearchTokens } from '../../lib/dogName'
-import { canonicalBreed, breedAliasKey } from '../../lib/breedMapping'
+import { canonicalBreed, breedAliasKey, breedToSlug, resolveBreedParam } from '../../lib/breedMapping'
 import { initialSeasonYearFilter, resolveActiveSeason } from '../../lib/season'
 import { useFavorites } from '../../hooks/useFavorites'
 import { matchesSexFilter } from '../TopDogs/filterUtils'
@@ -56,7 +56,7 @@ export default function ShowRanking({ urlYear }: ShowRankingProps = {}) {
       setFilterYear((prev) => (prev !== target ? target : prev))
     }
   }, [routeYear])
-  const [filterBreed, setFilterBreed] = useState(() => searchParams.get('breed') || '')
+  const [filterBreed, setFilterBreed] = useState(() => resolveBreedParam(searchParams.get('breed')))
   const [filterSex, setFilterSex] = useState(() => searchParams.get('sex') || '')
   const [allowFullLoad, setAllowFullLoad] = useState(false)
   const dropdownRef = useRef<HTMLDivElement>(null)
@@ -159,9 +159,10 @@ export default function ShowRanking({ urlYear }: ShowRankingProps = {}) {
         let changed = false
 
         // Breed
+        const targetBreedSlug = breedToSlug(filterBreed)
         const currentBreed = next.get('breed') || ''
-        if (filterBreed !== currentBreed) {
-          if (filterBreed) next.set('breed', filterBreed)
+        if (targetBreedSlug !== currentBreed) {
+          if (targetBreedSlug) next.set('breed', targetBreedSlug)
           else next.delete('breed')
           changed = true
         }
@@ -197,7 +198,7 @@ export default function ShowRanking({ urlYear }: ShowRankingProps = {}) {
 
   // Respond to browser back/forward navigation
   useEffect(() => {
-    const breedFromUrl = searchParams.get('breed') || ''
+    const breedFromUrl = resolveBreedParam(searchParams.get('breed'))
     if (breedFromUrl !== filterBreed) {
       setFilterBreed(breedFromUrl)
     }

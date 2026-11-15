@@ -5,6 +5,7 @@ import { HomeBreedCarouselPager } from './HomeBreedCarouselPager'
 import { HomeSubSectionTab } from './SeasonTopSection'
 import type { BreedSlide } from '../utils/breedSeasonSlides'
 import type { SpeedRecord } from '../types'
+import { breedToSlug } from '../../../lib/breedMapping'
 
 interface SeasonDoninoSpeedCarouselProps {
   slides: BreedSlide<SpeedRecord>[]
@@ -38,7 +39,7 @@ export default function SeasonDoninoSpeedCarousel({
   }
 
   const renderHeaderItem = (s: BreedSlide<SpeedRecord>) => {
-    const rankingHref = `/speed-records/2026/?breed=${encodeURIComponent(s.breedKey)}`
+    const rankingHref = `/speed-records/2026/?breed=${encodeURIComponent(breedToSlug(s.breedKey))}`
     return (
       <div className="min-w-0 max-w-full flex items-center justify-start md:justify-center gap-1.5 px-1">
         <Link

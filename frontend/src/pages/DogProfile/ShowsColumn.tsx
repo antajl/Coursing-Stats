@@ -23,6 +23,7 @@ import {
   disciplineTheme,
 } from './DisciplineColumnShell'
 import { HistoryMetaRow } from './HistoryPlacement'
+import { breedToSlug } from '../../lib/breedMapping'
 import type { ProfileHeaderRank } from './DogProfileHeader'
 
 export type ShowHistoryEntry = {
@@ -112,7 +113,7 @@ export function ShowsColumn({ dog, rank, breed }: ShowsColumnProps) {
   )
 
   const dogBreed = breed || dog.breed || ''
-  const rankingUrl = `/shows/ranking/2026/${dogBreed ? `?breed=${encodeURIComponent(dogBreed)}` : ''}`
+  const rankingUrl = `/shows/ranking/2026/${dogBreed ? `?breed=${encodeURIComponent(breedToSlug(dogBreed))}` : ''}`
 
   const has2026 = rank?.yearBreedRank != null && rank.yearBreedRank > 0
   const allTimeRank = (rank?.breedRank != null && rank.breedRank > 0)

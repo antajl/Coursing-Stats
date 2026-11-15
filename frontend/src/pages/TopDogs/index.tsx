@@ -21,6 +21,7 @@ import {
 } from '../../lib/season'
 import { buildCombinedRanking } from './mergeCombinedRanking'
 import { useFavorites } from '../../hooks/useFavorites'
+import { breedToSlug, resolveBreedParam } from '../../lib/breedMapping'
 
 export type TopDogsProps = {
   urlYear?: string
@@ -49,7 +50,7 @@ export default function TopDogs({ urlYear }: TopDogsProps = {}) {
       setFilterYear((prev) => (prev !== target ? target : prev))
     }
   }, [routeYear])
-  const [filterBreed, setFilterBreed] = useState(() => searchParams.get('breed') || '')
+  const [filterBreed, setFilterBreed] = useState(() => resolveBreedParam(searchParams.get('breed')))
   const [filterSex, setFilterSex] = useState(() => searchParams.get('sex') || '')
   const [searchQuery, setSearchQuery] = useState(() => searchParams.get('search') || '')
   const [isInitialLoad, setIsInitialLoad] = useState(true)
@@ -120,9 +121,10 @@ export default function TopDogs({ urlYear }: TopDogsProps = {}) {
         let changed = false
 
         // Breed
+        const targetBreedSlug = breedToSlug(filterBreed)
         const currentBreed = next.get('breed') || ''
-        if (filterBreed !== currentBreed) {
-          if (filterBreed) next.set('breed', filterBreed)
+        if (targetBreedSlug !== currentBreed) {
+          if (targetBreedSlug) next.set('breed', targetBreedSlug)
           else next.delete('breed')
           changed = true
         }
@@ -183,7 +185,7 @@ export default function TopDogs({ urlYear }: TopDogsProps = {}) {
 
   // Respond to browser back/forward navigation
   useEffect(() => {
-    const breedFromUrl = searchParams.get('breed') || ''
+    const breedFromUrl = resolveBreedParam(searchParams.get('breed'))
     if (breedFromUrl !== filterBreed) {
       setFilterBreed(breedFromUrl)
     }
