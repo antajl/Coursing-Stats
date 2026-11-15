@@ -34,7 +34,7 @@ export const JUDGES_HINT_MODAL_CONTENT = (
             <span>Шкала строгости судей</span>
           </div>
           <p className="text-[11px] text-charcoal-600 mt-0.5 leading-snug">
-            Рассчитывается по всем официальным протоколам относительно среднего уровня в породе:
+            Рассчитывается по всем протоколам соревнований относительно среднего уровня в породе:
           </p>
           <div className="mt-1.5 grid grid-cols-3 gap-1 text-[10.5px]">
             <div className="rounded border border-rose-200/80 bg-rose-50/70 p-1 text-center">

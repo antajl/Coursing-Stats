@@ -69,7 +69,7 @@ export const ShowsTopTab = memo(function ShowsTopTab({
           <div className="home-v2-col w-full min-w-0 max-w-full">
             <div className="home-v2-col-head home-v2-col-head--tabs !flex-nowrap gap-1.5 sm:gap-2 relative">
               <span className="hidden md:inline shrink-0">Абсолютные лидеры сезона</span>
-              <span className="md:hidden truncate text-[12.5px] font-bold text-camel-800 text-center w-full px-14 sm:px-16 md:px-0">
+              <span className="md:hidden truncate text-[12.5px] font-bold text-camel-800 text-right w-full pr-2.5 sm:pr-3 pl-20 sm:pl-24 md:px-0 md:text-center">
                 Абсолютный топ · все породы
               </span>
               <div className="shrink-0 items-center gap-1.5 ml-auto hidden md:flex">

@@ -22,13 +22,7 @@ export function HomeSubSectionTab({
     <button
       type="button"
       onClick={onToggle}
-      className={`md:hidden absolute top-1/2 -translate-y-1/2 z-20 inline-flex items-center gap-1 bg-[#fbf7f0]/75 text-camel-950 font-bold text-[11px] py-1 shadow-xs backdrop-blur-md transition-all hover:bg-camel-100/90 active:scale-95 cursor-pointer touch-manipulation select-none ${alignClass} ${
-        isNudging
-          ? isLeft
-            ? 'animate-tab-nudge-right'
-            : 'animate-tab-nudge-left'
-          : ''
-      }`}
+      className={`md:hidden absolute top-1/2 -translate-y-1/2 z-20 inline-flex items-center gap-1 bg-[#fbf7f0]/75 text-camel-950 font-bold text-[11px] py-1 shadow-xs backdrop-blur-md transition-all hover:bg-camel-100/90 active:scale-95 cursor-pointer touch-manipulation select-none ${alignClass}`}
       title={`Перейти: ${targetLabel}`}
       aria-label={`Перейти: ${targetLabel}`}
     >

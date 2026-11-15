@@ -108,7 +108,7 @@ export default function DoninoTab() {
         title={`Сравнительная шкала максимальной скорости (${filteredBreeds.length} из ${BREED_SPEEDS_DATA.length} пород)`}
       >
         <p className="text-xs text-charcoal-600 sm:text-sm">
-          Пиковая скорость прямого спринта по данным официальных радарных замеров и Книги рекордов Гиннесса:
+          Пиковая скорость прямого спринта по данным радарных замеров и Книги рекордов Гиннесса:
         </p>
 
         <div className="space-y-2.5 pt-2">

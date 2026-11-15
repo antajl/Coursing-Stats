@@ -142,7 +142,7 @@ export default function ShowJudgeCard({
             {/* Выставок */}
             <div
               className="flex flex-col items-center justify-center w-[4.5rem] shrink-0 rounded-lg bg-cream-100/70 border border-old-money-200/50 px-1 py-1 text-center group-hover:bg-white group-hover:border-camel-300 transition-colors"
-              title={`${judge.exhibitionsCount} выставок в официальных каталогах`}
+              title={`${judge.exhibitionsCount} выставок в каталогах РКФ`}
             >
               <span className="text-[9px] uppercase tracking-wider text-charcoal-500 font-medium">Выставок</span>
               <span className="text-sm font-bold tabular-nums text-charcoal-900">

@@ -9,6 +9,8 @@ interface BreedGroupDropdownProps {
   counts: Record<string, number>
 }
 
+const QUICK_GROUP_IDS = ['all', '10', '5', '3']
+
 export default function BreedGroupDropdown({
   value,
   onChange,
@@ -16,20 +18,21 @@ export default function BreedGroupDropdown({
 }: BreedGroupDropdownProps) {
   const [open, setOpen] = useState(false)
 
+  // Если выбрана одна из основных быстрых плашек (Все, 10, 5, 3), кнопка называется строго "Ещё группы"
+  // и не подсвечивается как дублирующий активный элемент.
+  // Если выбрана редкая группа из списка (например, FCI 1, 2, 4 и т.д.), кнопка подсвечивается и выводит её имя.
   const isAll = value === 'all'
-  const currentGroup = !isAll ? FCI_GROUPS[Number(value)] : undefined
+  const isQuickGroup = QUICK_GROUP_IDS.includes(value)
+  const currentGroup = !isQuickGroup ? FCI_GROUPS[Number(value)] : undefined
+  const isDropdownActive = Boolean(currentGroup)
 
-  const triggerLabel = isAll
-    ? `Все группы (${counts['all'] || 82})`
-    : currentGroup
-    ? `${currentGroup.shortName} (${counts[value] || 0})`
-    : 'Группа FCI'
+  const triggerLabel = currentGroup ? currentGroup.shortName : 'Ещё группы'
 
   const trigger = (
     <button
       type="button"
       className={`h-8 rounded-full px-3 text-xs font-semibold whitespace-nowrap cursor-pointer transition-all inline-flex items-center gap-1.5 shrink-0 ${
-        !isAll ? 'cs-glass-pill-active' : 'cs-glass-pill'
+        isDropdownActive ? 'cs-glass-pill-active' : 'cs-glass-pill'
       }`}
       aria-label={`Классификация пород: ${triggerLabel}`}
       title={`Классификация пород FCI / РКФ: ${triggerLabel}`}

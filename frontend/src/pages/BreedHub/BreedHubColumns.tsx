@@ -184,7 +184,7 @@ export default function BreedHubColumns({
         <Link
           to={`/competitions/ranking/2026/?breed=${encodeURIComponent(canonicalKey)}`}
           className="cs-glass-pill inline-flex h-8 items-center gap-1 rounded-full px-2 sm:px-2.5 text-xs font-semibold text-charcoal-700 hover:text-camel-800 cursor-pointer shrink-0"
-          title={`Полный официальный рейтинг породы ${breedNameRu}`}
+          title={`Полный рейтинг породы ${breedNameRu}`}
         >
           <span className="hidden sm:inline">Рейтинг</span>
           <ArrowUpRight className="h-3.5 w-3.5 text-camel-700" aria-hidden />
@@ -296,7 +296,7 @@ export default function BreedHubColumns({
                 <p className="text-xs text-old-money-600 py-6 text-center">Загрузка архива по годам…</p>
               ) : annualLeaders.length === 0 ? (
                 <div className="py-8 text-center text-xs text-old-money-600 px-4">
-                  <p>В официальных протоколах состязаний РКФ с 2015 года забегов породы пока не зафиксировано.</p>
+                  <p>В открытых протоколах состязаний с 2015 года забегов породы пока не зафиксировано.</p>
                 </div>
               ) : (
                 <>
@@ -391,7 +391,7 @@ export default function BreedHubColumns({
                     </table>
                   </div>
 
-                  {/* Мобильный вид (Фиксированная сетка без скачков слева направо) */}
+                  {/* Мобильный вид (Фиксированная 3-колоночная сетка метрик без скачков) */}
                   <ol className="divide-y divide-old-money-100 text-sm sm:hidden">
                     {annualLeaders.map((item) => {
                       const { primary, secondary } = parseDogName(item.name_lat, item.name_ru)
@@ -401,9 +401,9 @@ export default function BreedHubColumns({
 
                       return (
                         <li key={item.year} className="p-3 flex flex-col gap-1.5 hover:bg-cream-50/60 transition-colors">
-                          {/* Верхняя строка: Год + Имя собаки + Ссылка на рейтинг */}
+                          {/* Верхняя строка: Год + Имя собаки + Иконка пола + Ссылка на рейтинг */}
                           <div className="flex items-center justify-between gap-2">
-                            <div className="flex items-center gap-2 min-w-0">
+                            <div className="flex items-center gap-1.5 min-w-0">
                               <span className="px-2 py-0.5 rounded-full font-bold font-sans tabular-nums text-xs bg-camel-100 text-camel-950 border border-camel-200/80 shrink-0">
                                 {item.year}
                               </span>
@@ -413,6 +413,11 @@ export default function BreedHubColumns({
                               >
                                 {primary}
                               </Link>
+                              {sexVal && (
+                                <span title={isMale ? 'Кобель' : 'Сука'} className="inline-flex shrink-0">
+                                  <DogSexIcon sex={sexVal} size={12} variant="colored" />
+                                </span>
+                              )}
                             </div>
                             <Link
                               to={`/competitions/ranking/${item.year}/?breed=${encodeURIComponent(canonicalKey)}`}
@@ -430,22 +435,14 @@ export default function BreedHubColumns({
                             </div>
                           )}
 
-                          {/* Нижняя строка: Фиксированная 4-колоночная сетка (строго фиксированные ячейки) */}
-                          <div className="grid grid-cols-4 items-center text-xs pt-1.5 border-t border-old-money-100/70 font-sans tabular-nums">
-                            {/* Клетка 1: Иконка и пол собаки */}
-                            <div className="flex items-center gap-1 min-w-0" title={isMale ? 'Кобель' : isFemale ? 'Сука' : 'Пол не указан'}>
-                              <DogSexIcon sex={sexVal} size={13} variant="colored" />
-                              <span className="text-[11px] text-charcoal-700 font-medium truncate">
-                                {isMale ? 'Кобель' : isFemale ? 'Сука' : '—'}
-                              </span>
-                            </div>
-
-                            {/* Клетка 2: Количество забегов */}
-                            <div className="text-center text-[11px] text-charcoal-600 font-medium">
+                          {/* Нижняя строка: Фиксированная 3-колоночная сетка (Забеги / Золото / Скорость или балл) */}
+                          <div className="grid grid-cols-3 items-center text-xs pt-1.5 border-t border-old-money-100/70 font-sans tabular-nums">
+                            {/* Клетка 1: Количество забегов */}
+                            <div className="text-left text-[11px] text-charcoal-600 font-medium">
                               <span>{item.total_starts} заб.</span>
                             </div>
 
-                            {/* Клетка 3: Медали (золото) */}
+                            {/* Клетка 2: Медали (золото) */}
                             <div className="text-center">
                               {item.gold > 0 ? (
                                 <span className="inline-block px-1.5 py-0.2 rounded bg-amber-50 text-amber-800 text-[10.5px] font-semibold border border-amber-200/60">
@@ -456,7 +453,7 @@ export default function BreedHubColumns({
                               )}
                             </div>
 
-                            {/* Клетка 4: Рекорд скорости или балл */}
+                            {/* Клетка 3: Рекорд скорости или балл */}
                             <div className="text-right">
                               {item.best_speed ? (
                                 <span className="inline-block px-1.5 py-0.2 rounded bg-camel-100 text-camel-950 text-[11px] font-semibold border border-camel-200">

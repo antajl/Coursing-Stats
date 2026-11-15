@@ -64,7 +64,7 @@ type ProtocolColKey = 'catalog' | 'dog' | 'heat1' | 'heat2' | 'sum' | 'placement
 const COL_EXPLANATIONS: Record<ProtocolColKey, { title: string; desc: string }> = {
   catalog: {
     title: '№ по каталогу состязания',
-    desc: 'Порядковый номер собаки в официальном каталоге турнира. По каталожному номеру формируется жеребьёвка забегов 1-го круга.',
+    desc: 'Порядковый номер собаки в каталоге турнира. По каталожному номеру формируется жеребьёвка забегов 1-го круга.',
   },
   dog: {
     title: 'Кличка собаки и владелец',
@@ -179,7 +179,7 @@ export default function TitlesTab() {
     <div id="sec-roadmap">
       <SectionCard title="Пошаговый путь в спорте: от первой тренировки до Чемпиона России">
         <p className="text-xs text-charcoal-600 sm:text-sm">
-          Понятный маршрут собаки в официальном спорте борзых — как подготовиться, когда сдавать беговой допуск и как расти в званиях:
+          Понятный маршрут собаки в спорте борзых — как подготовиться, когда сдавать беговой допуск и как расти в званиях:
         </p>
 
         <div className="grid gap-3 sm:grid-cols-2 pt-1">
@@ -262,7 +262,7 @@ export default function TitlesTab() {
               </span>
               <div>
                 <h3 className="text-xs sm:text-sm font-bold text-charcoal-900">
-                  2. Главные турниры года: победы в официальных финалах
+                  2. Главные турниры года: победы в финалах
                 </h3>
                 <p className="text-[11px] text-charcoal-500">
                   Разыгрываются 1 раз в год. Присуждаются исключительно за 1-е место при норме от 75% баллов
@@ -303,7 +303,7 @@ export default function TitlesTab() {
   // 4. 6 схем оформления НЧ РК
   const renderSchemes = () => (
     <div id="sec-schemes">
-      <SectionCard id="schemes" title="6 официальных схем оформления титула «Национальный чемпион по РК» (НЧ РК)">
+      <SectionCard id="schemes" title="6 схем оформления титула «Национальный чемпион по РК» (НЧ РК)">
         <p className="text-xs text-charcoal-600 sm:text-sm">
           С 15.12.2022 титул Чемпиона России набором сертификатов больше не оформляется — вместо него присваивается накопительный титул <strong>НЧ РК</strong> по одной из 6 схем на выбор:
         </p>
@@ -336,7 +336,7 @@ export default function TitlesTab() {
   // 5. Судейство в курсинге
   const renderJudging = () => (
     <div id="sec-judging">
-      <SectionCard id="criteria" title="Судейство в курсинге: 5 официальных критериев и тай-брейк">
+      <SectionCard id="criteria" title="Судейство в курсинге: 5 критериев оценки и тай-брейк">
         <p className="text-xs text-charcoal-600 sm:text-sm">
           В курсинге каждый судья оценивает собаку в обоих кругах по 5 нормативным критериям FCI/РКФ (максимум 20 баллов по каждому критерию, до 100 баллов за забег):
         </p>

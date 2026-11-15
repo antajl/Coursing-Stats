@@ -180,7 +180,7 @@ export const SITE_NAVIGATION_ROUTES: NavigationRouteItem[] = [
   {
     id: 'breeds-directory',
     title: 'Каталог пород',
-    subtitle: 'Официальный справочник всех 83 беговых пород и хабы',
+    subtitle: 'Сводный справочник 83 беговых пород и хабы',
     to: '/breeds/',
     icon: 'flag',
     keywords: [

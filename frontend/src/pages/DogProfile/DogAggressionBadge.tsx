@@ -123,7 +123,7 @@ export default function DogAggressionBadge({ count = 0, incidents = [] }: DogAgg
                 <span>{isRepeat ? 'Повторная агрессия (рецидив)' : 'Дисквалификация за агрессию'}</span>
               </div>
               <p className="mt-0.5 text-[11px] text-charcoal-500">
-                Официальные записи в судейских протоколах РКФ
+                Записи в судейских протоколах РКФ
               </p>
             </div>
 

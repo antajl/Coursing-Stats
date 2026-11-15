@@ -245,7 +245,7 @@ describe('prerender-seo helpers', () => {
     expect(html).toContain('<h1>')
     expect(html).toContain('Частые вопросы о рейтинге курсинга в России')
     expect(html).toContain('Существует ли единый всероссийский рейтинг собак по курсингу?')
-    expect(html).toContain('Coursing Stats на основе официальных протоколов соревнований РКФ с 2015 года')
+    expect(html).toContain('Coursing Stats на основе открытых протоколов соревнований и отчётов РКФ с 2015 года')
     expect(html).toContain('забегов: 9')
     expect(html).not.toContain('стартов:')
     expect(html).toContain('<a href="/dog/5645/">Стангерс Ланд Каталина</a>')

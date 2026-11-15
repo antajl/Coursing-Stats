@@ -80,7 +80,7 @@ export default function ShowsTab() {
     <div id="sec-show-roadmap">
       <SectionCard id="roadmap" title="Роадмап выставки: путь от класса до Best in Show">
         <p className="text-xs text-charcoal-600 sm:text-sm">
-          Как устроена официальная последовательность сравнений на выставке РКФ одного дня:
+          Как устроена последовательность сравнений на выставке РКФ одного дня:
         </p>
 
         <div className="grid gap-2 sm:grid-cols-5 pt-1">
@@ -248,7 +248,7 @@ export default function ShowsTab() {
     <div id="sec-show-career-titles">
       <SectionCard id="titles" title="Пожизненные чемпионские титулы в родословную">
         <p className="text-xs text-charcoal-600 sm:text-sm">
-          Титулы, которые официально регистрируются в РКФ и вносятся в родословные потомков по набору сертификатов:
+          Титулы, которые регистрируются в РКФ и вносятся в родословные потомков по набору сертификатов:
         </p>
 
         <TitleLadderList items={SHOW_CAREER_TITLES} />
@@ -285,7 +285,7 @@ export default function ShowsTab() {
     <div id="sec-show-abbr">
       <SectionCard title="Словарь сокращений выставочных протоколов">
         <p className="text-xs text-charcoal-600 sm:text-sm">
-          Выберите официальное сокращение титула или сертификата, чтобы увидеть его расшифровку:
+          Выберите принятое сокращение титула или сертификата, чтобы увидеть его расшифровку:
         </p>
         <AbbreviationsDropdown
           rows={SHOW_ABBREVIATIONS}

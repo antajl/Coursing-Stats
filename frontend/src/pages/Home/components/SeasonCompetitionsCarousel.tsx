@@ -36,7 +36,7 @@ export default function SeasonCompetitionsCarousel({
   const renderHeaderItem = (s: BreedSlide<CombinedRankingDog>) => {
     const rankingHref = `/competitions/ranking/${CURRENT_SEASON}/?breed=${encodeURIComponent(s.breedKey)}`
     return (
-      <div className="min-w-0 max-w-full flex items-center justify-center gap-1.5 px-1">
+      <div className="min-w-0 max-w-full flex items-center justify-start md:justify-center gap-1.5 px-1">
         <Link
           to={rankingHref}
           className="truncate min-w-0 text-[12.5px] font-bold text-camel-800 hover:underline"
@@ -76,7 +76,7 @@ export default function SeasonCompetitionsCarousel({
     <div className="flex min-h-0 min-w-0 flex-1 flex-col">
       <div className="home-v2-col-head home-v2-col-head--tabs !flex-nowrap gap-1.5 sm:gap-2 relative">
         <span className="hidden md:inline shrink-0">Курсинг</span>
-        <div className="flex min-w-0 flex-1 items-center justify-center px-14 sm:px-16 md:px-0">
+        <div className="flex min-w-0 flex-1 items-center justify-start pl-2.5 sm:pl-3 pr-20 sm:pr-24 md:px-0 md:justify-center">
           {renderHeaderItem(slide)}
         </div>
         <div className="shrink-0 flex items-center gap-1.5 ml-auto hidden md:flex">

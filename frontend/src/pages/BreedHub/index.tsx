@@ -120,7 +120,7 @@ export default function BreedHub() {
       <div className="py-12 px-4 max-w-4xl mx-auto text-center">
         <h1 className="text-xl font-serif font-bold text-charcoal-900 mb-3">Порода не найдена</h1>
         <p className="text-xs sm:text-sm text-charcoal-600 mb-6">
-          Пожалуйста, выберите интересующую породу из официального каталога беговых пород:
+          Пожалуйста, выберите интересующую породу из каталога беговых пород:
         </p>
         <div className="space-y-4 text-left">
           {([
@@ -231,7 +231,7 @@ export default function BreedHub() {
             <Link
               to={`/competitions/ranking/2026/?breed=${encodeURIComponent(breedInfo.canonicalKey)}`}
               className="cs-glass-pill inline-flex h-8 items-center gap-1.5 rounded-full px-3 text-xs font-semibold shrink-0 cursor-pointer text-charcoal-700 hover:text-camel-800"
-              title={`Полный официальный рейтинг породы ${breedInfo.nameRu}`}
+              title={`Полный рейтинг породы ${breedInfo.nameRu}`}
             >
               <Trophy className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
               <span>Рейтинг соревнований</span>

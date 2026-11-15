@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { ChevronRight } from 'lucide-react'
 import type { BreedHubDefinition } from '../lib/breed-hubs-data'
+import { getBreedFciGroup, getFciGroupInfo } from '../lib/fciGroups'
 
 export interface BreedStatsData {
   dogs: number
@@ -52,9 +53,9 @@ export default function BreedCard({
 
   return (
     <Link to={`/breeds/${breed.slug}/`} className={shellClass}>
-      <div className="grid grid-cols-[minmax(0,1fr)_auto] md:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)_auto] items-center gap-3 sm:gap-5 w-full py-0.5">
+      <div className="flex items-center justify-between gap-3 sm:gap-5 w-full py-0.5">
         {/* Колонка 1: Порода (FCI + Название + Латинское) */}
-        <div className="flex flex-col justify-center min-w-0">
+        <div className="flex flex-col justify-center min-w-0 flex-1">
           <div className="flex items-center gap-2 mb-0.5">
             <span className="inline-flex items-center rounded border border-camel-200/90 bg-cream-100/90 px-1.5 py-0.2 text-[10px] font-semibold uppercase tracking-wider text-camel-800 shrink-0">
               {breed.fci}
@@ -68,8 +69,8 @@ export default function BreedCard({
             {breed.nameRu}
           </h3>
 
-          {/* На мобильных (< md) компактная строка ключевых цифр */}
-          <div className="flex md:hidden items-center gap-1.5 text-[10.5px] text-charcoal-600 font-medium mt-1 truncate">
+          {/* На мобильных (< sm) компактная строка ключевых цифр */}
+          <div className="flex sm:hidden items-center gap-1.5 text-[10.5px] text-charcoal-600 font-medium mt-1 truncate">
             {hasStats ? (
               <>
                 {stats && stats.dogs > 0 && <span>{formatDogsCount(stats.dogs)}</span>}
@@ -89,43 +90,14 @@ export default function BreedCard({
                 )}
               </>
             ) : (
-              <span className="text-charcoal-500">
-                {breed.category === 'sighthound'
-                  ? 'Борзые (10 группа FCI)'
-                  : breed.category === 'primitive'
-                  ? 'Примитивные (5 группа FCI)'
-                  : breed.category === 'sport'
-                  ? 'Спорт БЗМП'
-                  : 'Любительский класс'}
+              <span className="text-charcoal-500 truncate">
+                {getFciGroupInfo(getBreedFciGroup(breed.slug))?.shortName || 'Классификация РКФ'}
               </span>
             )}
           </div>
         </div>
 
-        {/* Колонка 2 (Десктоп): Лидер сезона и краткий статус */}
-        <div className="hidden md:flex flex-col justify-center min-w-0 pl-4 lg:pl-5 border-l border-old-money-200/60 text-left">
-          {stats?.latestLeader ? (
-            <>
-              <div className="flex items-center gap-1.5 text-xs truncate">
-                <span className="text-[10px] uppercase font-bold tracking-wider text-charcoal-500 shrink-0">
-                  Лидер {stats.latestLeader.year}:
-                </span>
-                <span className="font-semibold text-camel-900 truncate">
-                  {stats.latestLeader.dog_name}
-                </span>
-              </div>
-              <div className="text-[11.5px] text-charcoal-500 truncate mt-0.5 line-clamp-1">
-                {breed.lead}
-              </div>
-            </>
-          ) : (
-            <div className="text-xs text-charcoal-600 line-clamp-2 leading-relaxed">
-              {breed.lead}
-            </div>
-          )}
-        </div>
-
-        {/* Колонка 3: Метрики (Собак, Забегов, Рекорд, Сезонов) + Стрелка перехода */}
+        {/* Колонка 2: Метрики (Собак, Забегов, Рекорд, Сезонов) + Стрелка перехода */}
         <div className="shrink-0 flex items-center gap-2 sm:gap-3 pl-3 sm:pl-4 border-l border-old-money-200/60 ml-auto">
           {/* Десктопные плашки метрик (>= sm) */}
           <div className="hidden sm:flex items-center gap-1.5 sm:gap-2">

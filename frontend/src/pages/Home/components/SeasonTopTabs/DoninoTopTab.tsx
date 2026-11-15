@@ -65,7 +65,7 @@ export const DoninoTopTab = memo(function DoninoTopTab({
             ) : (
               <>
                 <div className="home-v2-col-head home-v2-col-head--tabs !flex-nowrap gap-1.5 sm:gap-2 relative">
-                  <span className="truncate text-center w-full px-14 sm:px-16 md:px-0">
+                  <span className="truncate text-left w-full pl-2.5 sm:pl-3 pr-20 sm:pr-24 md:px-0 md:text-center">
                     Замер скорости (радар)
                   </span>
                   <HomeSubSectionTab
@@ -114,7 +114,7 @@ export const DoninoTopTab = memo(function DoninoTopTab({
             ) : (
               <>
                 <div className="home-v2-col-head home-v2-col-head--tabs !flex-nowrap gap-1.5 sm:gap-2 relative">
-                  <span className="truncate text-center w-full px-14 sm:px-16 md:px-0">
+                  <span className="truncate text-right w-full pr-2.5 sm:pr-3 pl-20 sm:pl-24 md:px-0 md:text-center">
                     Бега 350 м (спринт)
                   </span>
                   <HomeSubSectionTab

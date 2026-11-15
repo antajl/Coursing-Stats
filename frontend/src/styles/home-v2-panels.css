@@ -74,15 +74,15 @@
 
 @keyframes tabNudgeLeft {
   0%, 100% { transform: translate3d(0, -50%, 0); }
-  22%, 38% { transform: translate3d(-6px, -50%, 0); }
-  66% { transform: translate3d(-0.5px, -50%, 0); }
+  22%, 38% { transform: translate3d(0, -50%, 0); }
+  66% { transform: translate3d(0, -50%, 0); }
   82% { transform: translate3d(0, -50%, 0); }
 }
 
 @keyframes tabNudgeRight {
   0%, 100% { transform: translate3d(0, -50%, 0); }
-  22%, 38% { transform: translate3d(6px, -50%, 0); }
-  66% { transform: translate3d(0.5px, -50%, 0); }
+  22%, 38% { transform: translate3d(0, -50%, 0); }
+  66% { transform: translate3d(0, -50%, 0); }
   82% { transform: translate3d(0, -50%, 0); }
 }
 
@@ -562,7 +562,7 @@
   box-sizing: border-box !important;
   display: flex !important;
   align-items: center !important;
-  padding: 0 12px !important;
+  padding: 0 10px !important;
   margin-top: auto !important;
   border-top: 1px solid rgba(195, 168, 128, 0.40) !important;
   background: rgba(250, 246, 238, 0.70) !important;

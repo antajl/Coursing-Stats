@@ -223,7 +223,7 @@ export default function BreedsDirectory() {
 
   const seoTitle = 'Каталог пород собак: курсинг, бега борзых и БЗМП | Coursing Stats'
   const seoDesc =
-    'Официальный реестр всех 82 беговых пород собак в курсинге, рейсинге и БЗМП: карточки пород по группам FCI и РКФ, история забегов с 2015 года, рекорды скорости и залы славы чемпионов.'
+    'Сводный реестр 83 беговых пород собак в курсинге, рейсинге и БЗМП: карточки пород по группам FCI и РКФ, история забегов с 2015 года, рекорды скорости и залы славы чемпионов.'
 
   if (isInitialLoad && loading) {
     return <LoadingCard count={8} variant="list" />
@@ -254,103 +254,60 @@ export default function BreedsDirectory() {
         }}
       />
 
-      {/* Toolbar: выпадающий список классификации FCI/РКФ и поиск */}
+      {/* Toolbar: единый ряд фильтров по классификации FCI/РКФ и поиск */}
       <PageToolbar
         bare
         topRowClassName="flex-nowrap"
         filters={
-          <div className="w-full min-w-0">
-            {/* Мобильная строка (< sm): Поиск + Выпадающий список групп FCI + Сброс */}
-            <div className="flex sm:hidden items-center gap-1.5 w-full min-w-0 py-0.5">
-              <div className="flex-1 min-w-0">
-                <ToolbarSearch
-                  value={searchQuery}
-                  onChange={setSearchQuery}
-                  placeholder="Поиск породы…"
-                />
-              </div>
+          <div className="flex items-center gap-1.5 sm:gap-2 w-full min-w-0 overflow-x-auto no-scrollbar py-0.5">
+            {/* Поиск породы или кода FCI: компактная кнопка 32px без лишних обёрток */}
+            <ToolbarSearch
+              value={searchQuery}
+              onChange={setSearchQuery}
+              placeholder="Поиск породы или код FCI…"
+            />
 
-              <BreedGroupDropdown
-                value={selectedGroup}
-                onChange={setSelectedGroup}
-                counts={groupCounts}
-              />
-
-              {hasActiveFilters && (
+            {/* Быстрые фильтры основных спортивных групп с префиксом FCI (без цифр) */}
+            {[
+              { id: 'all', label: 'Все группы' },
+              { id: '10', label: 'FCI 10: Борзые' },
+              { id: '5', label: 'FCI 5: Шпицы и аборигенные' },
+              { id: '3', label: 'FCI 3: Терьеры' },
+            ].map((item) => {
+              const active = selectedGroup === item.id
+              return (
                 <button
+                  key={item.id}
                   type="button"
-                  onClick={clearFilters}
-                  className="cs-glass-pill shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full !text-charcoal-500 hover:!text-charcoal-800 transition-colors cursor-pointer select-none"
-                  title="Сбросить фильтры"
-                  aria-label="Сбросить фильтры"
+                  onClick={() => setSelectedGroup(item.id)}
+                  className={`h-8 rounded-full px-3 text-xs font-semibold whitespace-nowrap cursor-pointer transition-all inline-flex items-center shrink-0 ${
+                    active ? 'cs-glass-pill-active' : 'cs-glass-pill'
+                  }`}
                 >
-                  <X className="h-4 w-4" />
+                  <span>{item.label}</span>
                 </button>
-              )}
-            </div>
+              )
+            })}
 
-            {/* Десктопная строка (>= sm): Поиск + Быстрые чипы + Полный выпадающий список групп FCI */}
-            <div className="hidden sm:flex items-center justify-between gap-3 w-full min-w-0">
-              <div className="w-64 lg:w-72 shrink-0">
-                <ToolbarSearch
-                  value={searchQuery}
-                  onChange={setSearchQuery}
-                  placeholder="Поиск породы или код FCI…"
-                />
-              </div>
+            {/* Выпадающий список «Ещё группы» */}
+            <BreedGroupDropdown
+              value={selectedGroup}
+              onChange={setSelectedGroup}
+              counts={groupCounts}
+            />
 
-              <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5">
-                {/* Быстрые фильтры основных спортивных групп */}
-                {[
-                  { id: 'all', label: 'Все группы', count: groupCounts['all'] || 82 },
-                  { id: '10', label: '10: Борзые', count: groupCounts['10'] || 18 },
-                  { id: '5', label: '5: Шпицы и примитивные', count: groupCounts['5'] || 13 },
-                  { id: '3', label: '3: Терьеры', count: groupCounts['3'] || 11 },
-                ].map((item) => {
-                  const active = selectedGroup === item.id
-                  return (
-                    <button
-                      key={item.id}
-                      type="button"
-                      onClick={() => setSelectedGroup(item.id)}
-                      className={`h-8 rounded-full px-3 text-xs font-semibold whitespace-nowrap cursor-pointer transition-all flex items-center gap-1.5 shrink-0 ${
-                        active ? 'cs-glass-pill-active' : 'cs-glass-pill'
-                      }`}
-                    >
-                      <span>{item.label}</span>
-                      <span
-                        className={`text-[10px] tabular-nums font-sans px-1.5 py-0.2 rounded-full ${
-                          active
-                            ? 'bg-camel-200/80 text-camel-950 font-bold'
-                            : 'bg-cream-100 text-charcoal-500'
-                        }`}
-                      >
-                        {item.count}
-                      </span>
-                    </button>
-                  )
-                })}
-
-                {/* Выпадающий список всех 10 групп FCI + нац. породы */}
-                <BreedGroupDropdown
-                  value={selectedGroup}
-                  onChange={setSelectedGroup}
-                  counts={groupCounts}
-                />
-              </div>
-
-              {hasActiveFilters && (
-                <button
-                  type="button"
-                  onClick={clearFilters}
-                  className="cs-glass-pill shrink-0 inline-flex h-8 px-2.5 items-center justify-center gap-1 rounded-full text-xs font-semibold !text-charcoal-600 hover:!text-charcoal-900 transition-colors cursor-pointer select-none ml-auto"
-                  title="Сбросить фильтры"
-                >
-                  <X className="h-3.5 w-3.5" />
-                  <span>Сброс</span>
-                </button>
-              )}
-            </div>
+            {/* Кнопка сброса при наличии фильтров */}
+            {hasActiveFilters && (
+              <button
+                type="button"
+                onClick={clearFilters}
+                className="cs-glass-pill shrink-0 inline-flex h-8 px-2.5 items-center justify-center gap-1 rounded-full text-xs font-semibold !text-charcoal-600 hover:!text-charcoal-900 transition-colors cursor-pointer select-none"
+                title="Сбросить фильтры"
+              >
+                <X className="h-3.5 w-3.5" />
+                <span className="hidden sm:inline">Сброс</span>
+              </button>
+            )}
           </div>
         }
       />

@@ -59,12 +59,12 @@ export function ConceptSymmetricFinal({ stats, showStats }: HomeConceptsProps) {
           </div>
         </div>
 
-        {/* Внутренние белые секторы (Спорт и Выставки) */}
-        <div className="p-2 2xl:p-2.5 flex flex-col justify-between flex-1 min-h-0">
+        {/* Внутренние монолитные секторы (Спорт и Выставки) — без промежутков, встык, как на левом подиуме */}
+        <div className="flex flex-col flex-1 min-h-0 bg-white/95 divide-y divide-[rgba(195,168,128,0.40)]">
           {/* Сектор 1: Спорт и бега борзых */}
           <Link
             to="/competitions/ranking/2026/"
-            className="group block bg-white/90 hover:bg-white rounded-xl p-2 2xl:p-2.5 border border-white/90 hover:border-white shadow-2xs transition-all text-inherit no-underline"
+            className="group flex-1 flex flex-col justify-center px-3 2xl:px-3.5 py-2 2xl:py-2.5 transition-colors hover:bg-cream-50/70 text-inherit no-underline"
             aria-label="Перейти в раздел Спорт: состязания, курсинг и бега"
           >
             <div className="flex items-center justify-between pb-1 mb-1 border-b border-camel-200/40">
@@ -102,7 +102,7 @@ export function ConceptSymmetricFinal({ stats, showStats }: HomeConceptsProps) {
           {/* Сектор 2: Выставки */}
           <Link
             to="/shows/ranking/2026/"
-            className="group block bg-white/95 hover:bg-cream-50/80 rounded-xl p-2 2xl:p-2.5 border border-old-money-200/80 hover:border-old-money-300 shadow-2xs transition-all text-inherit no-underline"
+            className="group flex-1 flex flex-col justify-center px-3 2xl:px-3.5 py-2 2xl:py-2.5 transition-colors hover:bg-cream-50/70 text-inherit no-underline"
             aria-label="Перейти в раздел Выставки: каталоги, ринги, собаки"
           >
             <div className="flex items-center justify-between pb-1 mb-1 border-b border-old-money-200/40">
@@ -139,30 +139,30 @@ export function ConceptSymmetricFinal({ stats, showStats }: HomeConceptsProps) {
         </div>
 
         {/* 3. НИЖНЯЯ СТРОКА: Статус архива и кнопки прямого перехода (нижний срез карточки) */}
-        <div className="home-v2-stats-cockpit-footer h-[36px] 2xl:h-[38px] px-2.5 2xl:px-3 bg-cream-50/70 border-t border-old-money-200/70 flex items-center justify-between gap-1.5 shrink-0 box-border">
-          <span className="text-[9.5px] 2xl:text-[10.5px] text-charcoal-600 font-medium flex items-center gap-1 shrink-0 truncate">
+        <div className="home-v2-stats-cockpit-footer h-[36px] 2xl:h-[38px] px-2 sm:px-2.5 2xl:px-3 bg-cream-50/70 border-t border-old-money-200/70 flex items-center justify-between gap-1 shrink-0 box-border overflow-hidden">
+          <span className="text-[9.5px] 2xl:text-[10px] text-charcoal-600 font-medium flex items-center gap-1 shrink-0 truncate">
             <Sparkles className="w-3 h-3 text-camel-600 shrink-0" aria-hidden />
-            <span className="hidden xl:inline">Архивы и протоколы</span>
-            <span className="xl:hidden">Архивы</span>
+            <span className="hidden 2xl:inline">Архивы и протоколы</span>
+            <span className="2xl:hidden">Архивы</span>
           </span>
-          <div className="flex items-center gap-1 shrink-0">
+          <div className="flex items-center gap-1 shrink-0 min-w-0">
             <Link
               to="/competitions/ranking/2026/"
-              className="cs-glass-pill-active px-2 2xl:px-2.5 py-0.5 rounded-full text-[10px] 2xl:text-[10.5px] font-semibold flex items-center gap-0.5"
+              className="cs-glass-pill-active px-1.5 2xl:px-2 py-0.5 rounded-full text-[9.5px] 2xl:text-[10px] font-semibold flex items-center gap-0.5 shrink-0"
             >
               <span>Спорт</span>
               <ArrowRight className="w-2.5 h-2.5 text-camel-700" aria-hidden />
             </Link>
             <Link
               to="/shows/ranking/2026/"
-              className="cs-glass-pill px-2 2xl:px-2.5 py-0.5 rounded-full text-[10px] 2xl:text-[10.5px] font-semibold flex items-center gap-0.5"
+              className="cs-glass-pill px-1.5 2xl:px-2 py-0.5 rounded-full text-[9.5px] 2xl:text-[10px] font-semibold flex items-center gap-0.5 shrink-0"
             >
               <span>Выставки</span>
               <ArrowRight className="w-2.5 h-2.5 text-old-money-600" aria-hidden />
             </Link>
             <Link
               to="/breeds/"
-              className="cs-glass-pill px-2 2xl:px-2.5 py-0.5 rounded-full text-[10px] 2xl:text-[10.5px] font-semibold flex items-center gap-0.5 hover:border-camel-400 hover:text-camel-900"
+              className="cs-glass-pill px-1.5 2xl:px-2 py-0.5 rounded-full text-[9.5px] 2xl:text-[10px] font-semibold flex items-center gap-0.5 hover:border-camel-400 hover:text-camel-900 shrink-0"
               title="Каталог всех 83 пород и персональные хабы"
             >
               <span>Породы</span>
