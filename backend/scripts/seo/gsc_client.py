@@ -52,7 +52,10 @@ def make_request(url, method="GET", payload=None):
             data = json.dumps(payload).encode("utf-8")
         req = urllib.request.Request(url, data=data, headers=headers, method=method)
         with urllib.request.urlopen(req) as resp:
-            return json.loads(resp.read().decode("utf-8"))
+            raw = resp.read().decode("utf-8")
+        if not raw:
+            return {}
+        return json.loads(raw)
 
     try:
         return _call(access_token)
@@ -90,6 +93,18 @@ def list_sitemaps(site_url="sc-domain:coursing-stats.ru"):
     encoded_site = urllib.parse.quote(site_url, safe="")
     url = f"https://www.googleapis.com/webmasters/v3/sites/{encoded_site}/sitemaps"
     return make_request(url)
+
+def submit_sitemap(sitemap_url, site_url="sc-domain:coursing-stats.ru"):
+    encoded_site = urllib.parse.quote(site_url, safe="")
+    encoded_sitemap = urllib.parse.quote(sitemap_url, safe="")
+    url = f"https://www.googleapis.com/webmasters/v3/sites/{encoded_site}/sitemaps/{encoded_sitemap}"
+    return make_request(url, method="PUT")
+
+def delete_sitemap(sitemap_url, site_url="sc-domain:coursing-stats.ru"):
+    encoded_site = urllib.parse.quote(site_url, safe="")
+    encoded_sitemap = urllib.parse.quote(sitemap_url, safe="")
+    url = f"https://www.googleapis.com/webmasters/v3/sites/{encoded_site}/sitemaps/{encoded_sitemap}"
+    return make_request(url, method="DELETE")
 
 def inspect_url(inspection_url, site_url="sc-domain:coursing-stats.ru"):
     url = "https://searchconsole.googleapis.com/v1/urlInspection/index:inspect"

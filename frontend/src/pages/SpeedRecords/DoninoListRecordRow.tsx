@@ -33,6 +33,10 @@ interface DoninoListRecordRowProps {
   rank?: number
   delta?: number | 'NEW' | null
   latestDateInDataset?: string | null
+  /** If true, omit redundant breed name and collapse date + track into one line (e.g. in BreedHub). */
+  hideBreed?: boolean
+  /** Compact vertical padding (py-1 sm:py-1.5). */
+  compact?: boolean
 }
 
 function formatTime(value: number): string {
@@ -67,6 +71,8 @@ function DoninoListRecordRow({
   rank,
   delta,
   latestDateInDataset,
+  hideBreed = false,
+  compact = false,
 }: DoninoListRecordRowProps) {
   const historyItems = useMemo(() => parseRecordHistory(history), [history])
 
@@ -75,7 +81,9 @@ function DoninoListRecordRow({
     return time350ToSpeedKmh(timeSeconds).toFixed(1)
   }, [mode, timeSeconds])
 
-  const rowClass = embedded ? 'donino-list-row donino-list-row--embedded' : 'donino-list-row'
+  const rowClass = embedded
+    ? `donino-list-row donino-list-row--embedded${compact ? ' flex-1 min-h-0' : ''}`
+    : 'donino-list-row'
 
   const hasSparkline =
     mode === 'speed'
@@ -138,7 +146,9 @@ function DoninoListRecordRow({
     <Link
       to={`/donino-dog/${encodeURIComponent(name)}/${encodeURIComponent(breed)}/`}
       state={{ from: mode === 'speed' ? 'speed-records' : 'coursing-records' }}
-      className="donino-list-row-link group min-w-0 flex-1 border-b border-old-money-200 bg-white py-1.5 sm:py-2 px-2.5 sm:px-4 transition-colors duration-150 hover:bg-camel-100/60"
+      className={`donino-list-row-link group min-w-0 flex-1 border-b border-old-money-200 bg-white ${
+        compact ? 'py-1 sm:py-1.5 px-2.5 sm:px-3' : 'py-1.5 sm:py-2 px-2.5 sm:px-4'
+      } transition-colors duration-150 hover:bg-camel-100/60`}
     >
       <div className="flex items-center gap-2 min-w-0 flex-1">
         {rank != null && (
@@ -156,20 +166,37 @@ function DoninoListRecordRow({
             {sex && <DogSexIcon sex={sex} />}
           </div>
 
-          {(date || breed) && (
-            <div className="mt-0.5 flex min-w-0 items-center gap-1 text-xs text-old-money-500 whitespace-nowrap">
-              {date && <span className="shrink-0">{formatRecordDate(date)}</span>}
-              {date && breed && <span className="text-old-money-300">·</span>}
-              {breed && <span className="truncate donino-home-row-breed">{breed}</span>}
-            </div>
-          )}
-          {trackType && (
-            <div className="mt-0.5 flex min-w-0 items-center text-[11px] text-old-money-500">
-              <span className="inline-flex items-center gap-0.5 font-medium text-old-money-600">
-                {getTrackTypeIcon(trackType)}
-                <span>{trackType}</span>
-              </span>
-            </div>
+          {hideBreed ? (
+            (date || trackType) && (
+              <div className="mt-0.5 flex min-w-0 items-center gap-1 text-[11px] sm:text-xs text-old-money-500 whitespace-nowrap">
+                {date && <span className="shrink-0">{formatRecordDate(date)}</span>}
+                {date && trackType && <span className="text-old-money-300">·</span>}
+                {trackType && (
+                  <span className="inline-flex items-center gap-0.5 font-medium text-old-money-600 truncate">
+                    {getTrackTypeIcon(trackType)}
+                    <span>{trackType}</span>
+                  </span>
+                )}
+              </div>
+            )
+          ) : (
+            <>
+              {(date || breed) && (
+                <div className="mt-0.5 flex min-w-0 items-center gap-1 text-xs text-old-money-500 whitespace-nowrap">
+                  {date && <span className="shrink-0">{formatRecordDate(date)}</span>}
+                  {date && breed && <span className="text-old-money-300">·</span>}
+                  {breed && <span className="truncate donino-home-row-breed">{breed}</span>}
+                </div>
+              )}
+              {trackType && (
+                <div className="mt-0.5 flex min-w-0 items-center text-[11px] text-old-money-500">
+                  <span className="inline-flex items-center gap-0.5 font-medium text-old-money-600">
+                    {getTrackTypeIcon(trackType)}
+                    <span>{trackType}</span>
+                  </span>
+                </div>
+              )}
+            </>
           )}
         </div>
       </div>

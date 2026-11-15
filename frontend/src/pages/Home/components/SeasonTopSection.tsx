@@ -1,5 +1,5 @@
 import { memo, useMemo, useState } from 'react'
-import { Trophy, Sparkles } from 'lucide-react'
+import { Trophy } from 'lucide-react'
 import { SeasonTopSectionSkeleton } from './SeasonTopSectionSkeleton'
 import { useHomeBreedCarousel } from '../hooks/useHomeBreedCarousel'
 import {
@@ -138,9 +138,8 @@ function SeasonTopSectionInner({
           })}
         </div>
 
-        {/* Мета-информация справа (зеркально как «Россия · 240+ пород» справа) */}
-        <span className="text-[11px] font-medium text-charcoal-600 hidden md:flex items-center gap-1 shrink-0 pr-1">
-          <Sparkles className="w-3 h-3 text-camel-700" aria-hidden />
+        {/* Мета-информация справа */}
+        <span className="text-[11px] font-medium text-charcoal-600 hidden md:flex items-center shrink-0 pr-1">
           <span>2026 · Топ-3 по породам</span>
         </span>
       </div>
