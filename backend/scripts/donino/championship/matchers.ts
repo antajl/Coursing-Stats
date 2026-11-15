@@ -138,6 +138,44 @@ export function findStagePointEntry(
     );
   }
 
+  if (
+    n.includes('DREMFYRE') ||
+    n.includes('DREAMFYRE') ||
+    (nLat && (nLat.includes('DREMFYRE') || nLat.includes('DREAMFYRE'))) ||
+    n.includes('ДРИМФАЕР') ||
+    (nRu && nRu.includes('ДРИМФАЕР'))
+  ) {
+    const m = stageList.find((item: any) => {
+      const iname = normalizeNameForMatch(item.dog_name);
+      return iname.includes('DREMFYRE') || iname.includes('DREAMFYRE') || iname.includes('UNA');
+    });
+    if (m) return m;
+  }
+
+  if (
+    n.includes('ШНЕЙДЕР') ||
+    (nLat && (nLat.includes('SCHNEIDER') || nLat.includes('SHNEYDER'))) ||
+    (nRu && nRu.includes('ШНЕЙДЕР'))
+  ) {
+    const m = stageList.find((item: any) => {
+      const iname = normalizeNameForMatch(item.dog_name);
+      return iname.includes('ШНЕЙДЕР') || iname.includes('SCHNEIDER') || iname.includes('SHNEYDER');
+    });
+    if (m) return m;
+  }
+
+  if (
+    n.includes('САДЖИТЕЙ') ||
+    (nLat && (nLat.includes('SAGITTA') || nLat.includes('SAGITA'))) ||
+    (nRu && nRu.includes('САДЖИТЕЙ'))
+  ) {
+    const m = stageList.find((item: any) => {
+      const iname = normalizeNameForMatch(item.dog_name);
+      return iname.includes('САДЖИТЕЙ') || iname.includes('SAGITTA') || iname.includes('SAGITA');
+    });
+    if (m) return m;
+  }
+
   if (n.includes('БАЗИЛИО') || (nLat && nLat.includes('BASILIO'))) {
     return stageList.find((item: any) =>
       normalizeNameForMatch(item.dog_name).includes('БАЗИЛИО') ||
