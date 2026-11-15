@@ -6,7 +6,7 @@ import json
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(SCRIPT_DIR)
 
-from gsc_client import list_sites, get_search_analytics, list_sitemaps, make_request
+from gsc_client import list_sites, get_search_analytics, list_sitemaps, inspect_url, make_request
 
 TOOLS = [
     {
@@ -62,6 +62,25 @@ TOOLS = [
                     "default": "sc-domain:coursing-stats.ru"
                 }
             }
+        }
+    },
+    {
+        "name": "gsc_inspect_url",
+        "description": "Проверить статус индексации конкретного URL в Google Search Console (вердикт, дата последнего сканирования, канонический URL, ошибки Schema.org).",
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "url": {
+                    "type": "string",
+                    "description": "Полный URL для проверки (например 'https://coursing-stats.ru/dog/546266275')"
+                },
+                "site_url": {
+                    "type": "string",
+                    "description": "URL сайта или ресурс в GSC (по умолчанию 'sc-domain:coursing-stats.ru')",
+                    "default": "sc-domain:coursing-stats.ru"
+                }
+            },
+            "required": ["url"]
         }
     }
 ]
@@ -136,6 +155,21 @@ def handle_request(req):
 
             elif tool_name == "gsc_list_sitemaps":
                 res = list_sitemaps(args.get("site_url", "sc-domain:coursing-stats.ru"))
+                return {
+                    "jsonrpc": "2.0",
+                    "id": req_id,
+                    "result": {
+                        "content": [
+                            {"type": "text", "text": json.dumps(res, ensure_ascii=False, indent=2)}
+                        ]
+                    }
+                }
+
+            elif tool_name == "gsc_inspect_url":
+                res = inspect_url(
+                    inspection_url=args.get("url"),
+                    site_url=args.get("site_url", "sc-domain:coursing-stats.ru")
+                )
                 return {
                     "jsonrpc": "2.0",
                     "id": req_id,
