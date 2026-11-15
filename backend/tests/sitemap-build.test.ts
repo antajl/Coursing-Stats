@@ -34,6 +34,8 @@ describe('sitemap collectors', () => {
     expect(locs).toContain('/competitions/ranking/2026/')
     expect(locs).toContain('/shows/archive/2026/')
     expect(locs).toContain('/shows/ranking/2026/')
+    expect(locs).toContain('/shows/judges/2026/')
+    expect(locs).toContain('/competitions/judges/2026/')
     expect(locs).toContain('/speed-records/2026/')
     expect(locs.every((u) => !u.startsWith('/admin'))).toBe(true)
   })

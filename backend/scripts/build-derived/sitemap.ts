@@ -55,6 +55,15 @@ function buildYearStaticPages(): SitemapUrl[] {
   }
   pages.push({ loc: '/competitions/ranking/all/', priority: '0.75', changefreq: 'weekly' })
   pages.push({ loc: '/competitions/judges/', priority: '0.75', changefreq: 'weekly' })
+  for (const year of COMPETITION_SEASONS.filter((y) => y !== 2027)) {
+    const isCurrent = year === 2026
+    pages.push({
+      loc: `/competitions/judges/${year}/`,
+      priority: isCurrent ? '0.8' : '0.7',
+      changefreq: isCurrent ? 'weekly' : 'monthly',
+    })
+  }
+  pages.push({ loc: '/competitions/judges/all/', priority: '0.75', changefreq: 'weekly' })
 
   // Shows Archive & Ranking
   pages.push({ loc: '/shows/archive/', priority: '0.85', changefreq: 'daily' })
@@ -79,6 +88,15 @@ function buildYearStaticPages(): SitemapUrl[] {
   }
   pages.push({ loc: '/shows/ranking/all/', priority: '0.75', changefreq: 'weekly' })
   pages.push({ loc: '/shows/judges/', priority: '0.75', changefreq: 'weekly' })
+  for (const year of SHOW_SEASONS) {
+    const isCurrent = year === 2026
+    pages.push({
+      loc: `/shows/judges/${year}/`,
+      priority: isCurrent ? '0.8' : '0.7',
+      changefreq: isCurrent ? 'weekly' : 'monthly',
+    })
+  }
+  pages.push({ loc: '/shows/judges/all/', priority: '0.75', changefreq: 'weekly' })
 
   // Speed Records
   for (const year of SPEED_SEASONS) {

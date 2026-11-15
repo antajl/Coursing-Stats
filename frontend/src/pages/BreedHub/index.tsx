@@ -12,8 +12,9 @@ import {
   type AnnualDogLeader,
 } from '../../hooks/useStaticData'
 import { matchesBreedFilter } from '../../lib/breedMapping'
+import { getBreedArchiveUrl } from '../../lib/breedArchive'
 import DoninoColumnPlaque, { DoninoColumnShell } from '../SpeedRecords/DoninoColumnPlaque'
-import BreedHubColumns from './BreedHubColumns'
+import BreedHubColumns, { type SpeedRecordItem } from './BreedHubColumns'
 
 interface TopPlacementItem {
   dog_id: number
@@ -30,17 +31,15 @@ interface TopPlacementItem {
   sex?: string
 }
 
-interface SpeedRecordItem {
-  breed?: string
-  name?: string
-  speed_km_h?: number
-  date?: string
-  track_type?: string
-}
-
 export default function BreedHub() {
   const { slug } = useParams<{ slug: string }>()
   const breedInfo = useMemo(() => (slug ? getBreedHubBySlug(slug) : undefined), [slug])
+
+  // Ссылка на международную базу родословных The Breed Archive (если поддерживается для породы)
+  const breedArchiveUrl = useMemo(
+    () => (breedInfo ? getBreedArchiveUrl(breedInfo.slug) || getBreedArchiveUrl(breedInfo.canonicalKey) : null),
+    [breedInfo],
+  )
 
   // Load all-time aggregates for database statistics
   const { data: topPlacementAllRes, isLoading: placementAllLoading } = useTopPlacement('all')
@@ -227,7 +226,7 @@ export default function BreedHub() {
             </h1>
           </div>
 
-          <div className="flex items-center gap-2 shrink-0">
+          <div className="flex items-center gap-2 shrink-0 flex-wrap">
             <Link
               to={`/competitions/ranking/2026/?breed=${encodeURIComponent(breedInfo.canonicalKey)}`}
               className="cs-glass-pill inline-flex h-8 items-center gap-1.5 rounded-full px-3 text-xs font-semibold shrink-0 cursor-pointer text-charcoal-700 hover:text-camel-800"
@@ -237,6 +236,25 @@ export default function BreedHub() {
               <span>Рейтинг соревнований</span>
               <ArrowUpRight className="h-3.5 w-3.5 text-charcoal-400" aria-hidden />
             </Link>
+
+            {breedArchiveUrl && (
+              <a
+                href={breedArchiveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cs-glass-pill inline-flex h-8 items-center gap-1.5 rounded-full px-3 text-xs font-semibold shrink-0 cursor-pointer text-charcoal-700 hover:text-camel-800"
+                title={`Международная база родословных The Breed Archive (${breedInfo.nameLat})`}
+              >
+                <img
+                  src="/assets/icons/breedarchive.webp"
+                  alt=""
+                  className="h-3.5 w-3.5 rounded-xs shrink-0"
+                  loading="lazy"
+                />
+                <span>Breed Archive</span>
+                <ArrowUpRight className="h-3.5 w-3.5 text-charcoal-400" aria-hidden />
+              </a>
+            )}
           </div>
         </div>
 

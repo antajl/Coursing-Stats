@@ -91,6 +91,14 @@ def list_sitemaps(site_url="sc-domain:coursing-stats.ru"):
     url = f"https://www.googleapis.com/webmasters/v3/sites/{encoded_site}/sitemaps"
     return make_request(url)
 
+def inspect_url(inspection_url, site_url="sc-domain:coursing-stats.ru"):
+    url = "https://searchconsole.googleapis.com/v1/urlInspection/index:inspect"
+    payload = {
+        "inspectionUrl": inspection_url,
+        "siteUrl": site_url,
+    }
+    return make_request(url, method="POST", payload=payload)
+
 if __name__ == "__main__":
     sites = list_sites()
     print("Доступные сайты в GSC:")

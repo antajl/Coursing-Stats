@@ -225,6 +225,11 @@ describe('prerender-seo helpers', () => {
     expect(donino.title.toLowerCase()).toContain('донино')
     expect(donino.title.toLowerCase()).toMatch(/курсинг/)
     expect(donino.description.toLowerCase()).toMatch(/в донино|курсинг донино/)
+
+    expect(HUB_PAGES.some((h) => h.path === '/shows/judges/2026')).toBe(true)
+    expect(HUB_PAGES.some((h) => h.path === '/shows/judges/all')).toBe(true)
+    expect(HUB_PAGES.some((h) => h.path === '/competitions/judges/2026')).toBe(true)
+    expect(HUB_PAGES.some((h) => h.path === '/competitions/judges/all')).toBe(true)
   })
 
   it('buildCompetitionsHubHtml renders semantic H1, AI Overview FAQ, and dog leader links', () => {
