@@ -4,6 +4,7 @@ import { Trophy, Gauge, ArrowUpRight } from 'lucide-react'
 import DoninoColumnPlaque, { DoninoColumnShell } from '../SpeedRecords/DoninoColumnPlaque'
 import DoninoListRecordRow from '../SpeedRecords/DoninoListRecordRow'
 import DogSexIcon from '../../components/DogSexIcon'
+import MedalBadge from '../../components/MedalBadge'
 import { parseDogName } from '../../lib/dogName'
 import type { AnnualDogLeader } from '../../hooks/useStaticData'
 
@@ -305,15 +306,15 @@ export default function BreedHubColumns({
               ) : (
                 <>
                   {/* Десктопный вид (Таблица) */}
-                  <div className="hidden sm:block flex-1 min-w-0 overflow-x-auto">
+                  <div className="hidden sm:block flex-1 min-w-0">
                     <table className="w-full text-left text-sm table-auto h-full">
                       <thead>
                         <tr className="border-b border-old-money-200/60 bg-cream-50/50 text-[11px] font-semibold uppercase tracking-wider text-charcoal-600">
-                          <th className="py-2 px-2 w-16 text-center">Сезон</th>
-                          <th className="py-2 px-2.5">Лучшая собака года</th>
-                          <th className="py-2 px-2 w-16 text-right">Старты</th>
-                          <th className="py-2 px-2 w-20 text-center">Медали</th>
-                          <th className="py-2 px-2.5 w-20 text-right">Скорость</th>
+                          <th className="py-2.5 px-2.5 w-16 text-center">Сезон</th>
+                          <th className="py-2.5 px-3">Лучшая собака года</th>
+                          <th className="py-2.5 px-2 w-14 text-right">Забеги</th>
+                          <th className="py-2.5 px-2 w-24 text-center">Медали</th>
+                          <th className="py-2.5 px-3 w-20 text-right">Скорость</th>
                         </tr>
                       </thead>
                       <tbody className="divide-y divide-old-money-100">
@@ -322,7 +323,6 @@ export default function BreedHubColumns({
                           const isMale = item.sex === 'M' || item.sex === 'К'
                           const isFemale = item.sex === 'F' || item.sex === 'С'
                           const sexVal = isMale ? 'm' : isFemale ? 'f' : ''
-                          const isAllWins = item.gold > 0 && item.gold === item.total_starts
 
                           return (
                             <tr
@@ -330,17 +330,16 @@ export default function BreedHubColumns({
                               className="hover:bg-cream-50/60 transition-colors"
                               title={`Чемпион ${item.year} года: ${item.gold} золотых побед из ${item.total_starts} стартов${item.best_speed ? `, пиковая скорость ${item.best_speed.toFixed(1)} км/ч` : ''}`}
                             >
-                              <td className="py-2 px-2 text-center whitespace-nowrap">
+                              <td className="py-2.5 px-2.5 text-center whitespace-nowrap">
                                 <Link
                                   to={`/competitions/ranking/${item.year}/?breed=${encodeURIComponent(canonicalKey)}`}
-                                  className="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-md font-bold font-sans tabular-nums text-xs bg-camel-100 hover:bg-camel-200 text-camel-950 border border-camel-200/80 transition-colors shadow-2xs group cursor-pointer"
+                                  className="inline-block px-2.5 py-0.5 rounded-full font-bold font-sans tabular-nums text-xs bg-camel-100 hover:bg-camel-200 active:scale-95 text-camel-950 border border-camel-200/80 transition-all shadow-2xs cursor-pointer"
                                   title={`Открыть рейтинг соревнований ${item.year} года`}
                                 >
-                                  <span>{item.year}</span>
-                                  <ArrowUpRight className="h-3 w-3 text-camel-700 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                                  {item.year}
                                 </Link>
                               </td>
-                              <td className="py-2 px-2.5 min-w-0">
+                              <td className="py-2.5 px-3 min-w-0">
                                 <div className="flex items-center gap-1.5 min-w-0">
                                   <Link
                                     to={`/dog/${item.dog_id}/`}
@@ -360,54 +359,26 @@ export default function BreedHubColumns({
                                   </span>
                                 )}
                               </td>
-                              <td className="py-2 px-2 text-right text-xs font-sans tabular-nums text-charcoal-700 whitespace-nowrap">
-                                {item.total_starts} заб.
+                              <td className="py-2.5 px-2 text-right text-xs font-sans tabular-nums font-semibold text-charcoal-700 whitespace-nowrap">
+                                {item.total_starts}
                               </td>
-                              <td className="py-2 px-2 text-center whitespace-nowrap">
-                                <div className="inline-flex items-center gap-1 justify-center">
-                                  {item.gold > 0 ? (
-                                    <span
-                                      className="inline-block px-1.5 py-0.2 rounded bg-amber-50 text-amber-900 font-bold font-sans tabular-nums text-xs border border-amber-200/80"
-                                      title={`Золотые медали: ${item.gold}`}
-                                    >
-                                      {item.gold} зол.
-                                    </span>
-                                  ) : (
-                                    <span className="text-charcoal-400 text-xs">—</span>
-                                  )}
-                                  {item.silver > 0 && (
-                                    <span
-                                      className="text-[10px] font-sans tabular-nums text-charcoal-500 font-medium"
-                                      title={`Серебряные медали: ${item.silver}`}
-                                    >
-                                      +{item.silver}
-                                    </span>
-                                  )}
-                                  {isAllWins && (
-                                    <span
-                                      className="text-[9px] font-sans font-bold text-emerald-800 bg-emerald-50 border border-emerald-200/60 rounded px-1 py-0.2"
-                                      title="100% золотых побед во всех стартах сезона!"
-                                    >
-                                      100%
-                                    </span>
-                                  )}
+                              <td className="py-2.5 px-2 text-center whitespace-nowrap">
+                                <div className="flex items-center justify-center gap-1">
+                                  <MedalBadge variant="gold" count={item.gold || 0} size="sm" />
+                                  <MedalBadge variant="silver" count={item.silver || 0} size="sm" />
+                                  <MedalBadge variant="bronze" count={item.bronze || 0} size="sm" />
                                 </div>
                               </td>
-                              <td className="py-2 px-2.5 text-right whitespace-nowrap">
+                              <td className="py-2.5 px-3 text-right whitespace-nowrap">
                                 {item.best_speed ? (
-                                  <span
-                                    className="inline-block px-1.5 py-0.2 rounded bg-camel-100 text-camel-950 font-bold font-sans tabular-nums text-xs border border-camel-200"
-                                    title={`Максимальная скорость в сезоне: ${item.best_speed.toFixed(1)} км/ч`}
-                                  >
-                                    {item.best_speed.toFixed(1)} км/ч
-                                  </span>
+                                  <div className="inline-flex items-baseline gap-0.5 justify-end">
+                                    <span className="font-sans font-bold tabular-nums text-xs text-charcoal-900">
+                                      {item.best_speed.toFixed(1)}
+                                    </span>
+                                    <span className="text-[10px] text-charcoal-500 font-medium">км/ч</span>
+                                  </div>
                                 ) : (
-                                  <span
-                                    className="text-charcoal-400 text-xs"
-                                    title="В этом сезоне замеры скорости радаром не проводились"
-                                  >
-                                    —
-                                  </span>
+                                  <span className="text-charcoal-400 text-xs">—</span>
                                 )}
                               </td>
                             </tr>
@@ -424,19 +395,17 @@ export default function BreedHubColumns({
                       const isMale = item.sex === 'M' || item.sex === 'К'
                       const isFemale = item.sex === 'F' || item.sex === 'С'
                       const sexVal = isMale ? 'm' : isFemale ? 'f' : ''
-                      const isAllWins = item.gold > 0 && item.gold === item.total_starts
 
                       return (
                         <li key={item.year} className="p-3 flex flex-col gap-1.5 hover:bg-cream-50/60 transition-colors">
-                          {/* Верхняя строка: Кликабельный бейдж года + Имя собаки + Иконка пола */}
+                          {/* Верхняя строка: Кликабельный бейдж года (без стрелочки) + Имя собаки + Иконка пола */}
                           <div className="flex items-center gap-2 min-w-0">
                             <Link
                               to={`/competitions/ranking/${item.year}/?breed=${encodeURIComponent(canonicalKey)}`}
-                              className="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-md font-bold font-sans tabular-nums text-xs bg-camel-100 hover:bg-camel-200 text-camel-950 border border-camel-200/80 shrink-0 transition-colors shadow-2xs group cursor-pointer"
+                              className="px-2.5 py-0.5 rounded-full font-bold font-sans tabular-nums text-xs bg-camel-100 hover:bg-camel-200 active:scale-95 text-camel-950 border border-camel-200/80 shrink-0 transition-all shadow-2xs cursor-pointer"
                               title={`Открыть рейтинг соревнований ${item.year} года`}
                             >
-                              <span>{item.year}</span>
-                              <ArrowUpRight className="h-3 w-3 text-camel-700 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                              {item.year}
                             </Link>
 
                             <div className="flex items-center gap-1.5 min-w-0 flex-1">
@@ -460,41 +429,28 @@ export default function BreedHubColumns({
                             </div>
                           )}
 
-                          {/* Нижняя строка: Фиксированная 3-колоночная сетка (Старты / Медали / Макс. скорость) */}
+                          {/* Нижняя строка: Фиксированная 3-колоночная сетка (Забеги / Медали / Скорость) */}
                           <div className="grid grid-cols-3 items-center text-xs pt-1.5 border-t border-old-money-100/70 font-sans tabular-nums">
                             {/* Клетка 1: Количество забегов */}
                             <div className="text-left text-[11px] text-charcoal-600 font-medium">
                               <span>{item.total_starts} заб.</span>
                             </div>
 
-                            {/* Клетка 2: Медали (золото + серебро) */}
-                            <div className="text-center">
-                              {item.gold > 0 ? (
-                                <span className="inline-flex items-center gap-1">
-                                  <span className="inline-block px-1.5 py-0.2 rounded bg-amber-50 text-amber-800 text-[10.5px] font-semibold border border-amber-200/60">
-                                    {item.gold} зол.
-                                  </span>
-                                  {item.silver > 0 && (
-                                    <span className="text-[10px] text-charcoal-500 font-medium">
-                                      +{item.silver}
-                                    </span>
-                                  )}
-                                  {isAllWins && (
-                                    <span className="text-[9px] text-emerald-800 bg-emerald-50 border border-emerald-200/60 rounded px-1 py-0.2 font-semibold">
-                                      100%
-                                    </span>
-                                  )}
-                                </span>
-                              ) : (
-                                <span className="text-charcoal-400 text-xs">—</span>
-                              )}
+                            {/* Клетка 2: 3 иконки медалей (золото, серебро, бронза) */}
+                            <div className="flex items-center justify-center gap-1">
+                              <MedalBadge variant="gold" count={item.gold || 0} size="sm" />
+                              <MedalBadge variant="silver" count={item.silver || 0} size="sm" />
+                              <MedalBadge variant="bronze" count={item.bronze || 0} size="sm" />
                             </div>
 
-                            {/* Клетка 3: Макс. скорость */}
+                            {/* Клетка 3: Скорость текстом */}
                             <div className="text-right leading-tight">
                               {item.best_speed ? (
-                                <span className="inline-block px-1.5 py-0.2 rounded bg-camel-100 text-camel-950 text-[11px] font-bold border border-camel-200">
-                                  {item.best_speed.toFixed(1)} км/ч
+                                <span className="inline-flex items-baseline gap-0.5 justify-end">
+                                  <span className="font-bold text-charcoal-900 text-xs">
+                                    {item.best_speed.toFixed(1)}
+                                  </span>
+                                  <span className="text-[10px] text-charcoal-500 font-medium">км/ч</span>
                                 </span>
                               ) : (
                                 <span className="text-charcoal-400 text-xs">—</span>
