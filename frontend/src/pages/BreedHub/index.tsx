@@ -154,7 +154,7 @@ export default function BreedHub() {
     )
   }
 
-  const seoTitle = `${breedInfo.nameRu} (${breedInfo.nameLat}) — лучшие собаки по годам, результаты забегов и рекорды | Coursing Stats`
+  const seoTitle = `${breedInfo.nameRu} (${breedInfo.nameLat}) — лучшие собаки по годам, результаты забегов и рекорды | Курсинг Статс`
   const seoDesc = `Персональный хаб породы ${breedInfo.nameRu} (${breedInfo.nameLat}) в курсинге, бегах борзых и БЗМП: зал славы чемпионов по годам с 2015 года, замеры скорости в Донино (км/ч), статистика побед и регламент состязаний.`
   const seoKeywords = [
     breedInfo.nameRu.toLowerCase(),

@@ -40,7 +40,7 @@ const SPA_SHELL = `<!doctype html>
 describe('prerender-seo helpers', () => {
   it('build404Html generates standalone 404 with noindex, no canonical, and 404 artwork', () => {
     const html = build404Html(SPA_SHELL)
-    expect(html).toContain('<title data-rh="true">Страница не найдена | Coursing Stats</title>')
+    expect(html).toContain('<title data-rh="true">Страница не найдена | Курсинг Статс</title>')
     expect(html).toContain('<meta name="robots" content="noindex, nofollow" />')
     expect(html).not.toMatch(/rel=["']canonical["']/)
     // Client script must be preserved so dynamic SPA routes (show dogs, etc.) hydrate on S3 fallback
@@ -135,7 +135,7 @@ describe('prerender-seo helpers', () => {
       canonicalUrl: 'https://coursing-stats.ru/dog/1',
       bodyHtml: '<main></main>',
     })
-    expect(html).toContain('property="og:title" content="Новый title | Coursing Stats"')
+    expect(html).toContain('property="og:title" content="Новый title"')
     expect(html).toContain('property="og:description" content="Новое описание"')
     expect(html).toContain('property="og:url" content="https://coursing-stats.ru/dog/1"')
   })
@@ -189,7 +189,7 @@ describe('prerender-seo helpers', () => {
     expect(meta.title).toContain('Эмуль Дэ Гепард Гелила Аль Равда')
     expect(meta.title).toContain('Emul de Gepard Gelila Al Rawda')
     expect(meta.title).toContain('Салюки')
-    expect(meta.title).toContain('Coursing Stats')
+    expect(meta.title).toContain('Курсинг Статс')
 
     // Both RU and EN must be present in Description
     expect(meta.description).toContain('Эмуль Дэ Гепард Гелила Аль Равда')
@@ -250,7 +250,7 @@ describe('prerender-seo helpers', () => {
     expect(html).toContain('<h1>')
     expect(html).toContain('Частые вопросы о рейтинге курсинга в России')
     expect(html).toContain('Существует ли единый всероссийский рейтинг собак по курсингу?')
-    expect(html).toContain('Coursing Stats на основе открытых протоколов соревнований и отчётов РКФ с 2015 года')
+    expect(html).toContain('Курсинг Статс на основе открытых протоколов соревнований и отчётов РКФ с 2015 года')
     expect(html).toContain('забегов: 9')
     expect(html).not.toContain('стартов:')
     expect(html).toContain('<a href="/dog/5645/">Стангерс Ланд Каталина</a>')
@@ -264,7 +264,7 @@ describe('prerender-seo helpers', () => {
     expect(faqPage.mainEntity.length).toBeGreaterThanOrEqual(4)
     expect(faqPage.mainEntity[0].name).toContain('актуальное расписание и календарь соревнований по курсингу')
     expect(faqPage.mainEntity.some((q: any) => q.name.includes('Существует ли единый всероссийский рейтинг'))).toBe(true)
-    expect(faqPage.mainEntity[0].acceptedAnswer.text).toContain('Coursing Stats')
+    expect(faqPage.mainEntity[0].acceptedAnswer.text).toContain('Курсинг Статс')
   })
 
   it('eventMetaFromEntry formats top winners in description and SportsEvent award', () => {
@@ -373,10 +373,10 @@ describe('prerender-seo helpers', () => {
     expect(Array.isArray(graph)).toBe(true)
     const website = graph.find((item) => item['@type'] === 'WebSite')
     expect(website).toBeDefined()
-    expect(website.name).toContain('Coursing Stats')
-    expect(website.name).toContain('Курсинг Статс')
+    expect(website.name).toBe('Курсинг Статс')
+    expect(website.alternateName).toContain('Coursing Stats')
     expect(website.alternateName).toContain('ProCoursing')
-    expect(website.alternateName).toContain('Курсинг Статс')
+    expect(website.alternateName).toContain('КурсингСтатс')
 
     const org = graph.find((item) => item['@type'] === 'Organization')
     expect(org).toBeDefined()

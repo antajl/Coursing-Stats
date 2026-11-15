@@ -208,8 +208,8 @@ export default function JudgeDetail() {
   return (
     <>
       <SEO
-        title={`${seoFullName} — судья по курсингу и бегам борзых | Coursing Stats`}
-        description={`Судья по курсингу и бегам ${seoFullName}: статистика забегов (${eventCount} соревнований, ${totalEvals} оценок, ${breedCount} пород), средний балл и критерии на Coursing Stats.`}
+        title={`${seoFullName} — судья по курсингу и бегам борзых | Курсинг Статс`}
+        description={`Судья по курсингу и бегам ${seoFullName}: статистика забегов (${eventCount} соревнований, ${totalEvals} оценок, ${breedCount} пород), средний балл и критерии на Курсинг Статс.`}
         keywords={`${judgeName}, ${fullName || ''}, ${displayName}, судья, курсинг, бега борзых, статистика, РКФ, оценки, соревнования`}
         canonicalUrl={`https://coursing-stats.ru/judges/${canonicalJudgeSlug}/`}
       />
@@ -218,7 +218,7 @@ export default function JudgeDetail() {
           name: fullName || displayName,
           jobTitle: role || 'Судья соревнований по курсингу и бегам борзых',
           url: `https://coursing-stats.ru/judges/${canonicalJudgeSlug}/`,
-          description: `Судья по курсингу и бегам ${seoFullName}: ${eventCount} соревнований, ${totalEvals} оценок, ${breedCount} пород на Coursing Stats.`,
+          description: `Судья по курсингу и бегам ${seoFullName}: ${eventCount} соревнований, ${totalEvals} оценок, ${breedCount} пород на Курсинг Статс.`,
         })}
       />
 

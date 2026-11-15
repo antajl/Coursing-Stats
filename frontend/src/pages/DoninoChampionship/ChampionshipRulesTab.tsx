@@ -434,7 +434,7 @@ export default function ChampionshipRulesTab({ reglamentUrl, spreadsheetUrl }: C
             </div>
             <div className="space-y-1.5">
               <Link
-                to="/donino/championship?tab=standings"
+                to="/donino/championship/?tab=standings"
                 className="w-full min-h-[44px] inline-flex items-center justify-between py-2 px-3 rounded-xl border border-old-money-200 bg-cream-100/60 text-xs font-medium text-charcoal-700 hover:bg-cream-100 transition-colors min-w-0"
               >
                 <div className="flex items-center gap-2 min-w-0">

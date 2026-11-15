@@ -86,7 +86,7 @@ export default function ShowExhibitionDetail() {
   if (error || !exhibition) {
     return (
       <div className="mx-auto max-w-full pb-2 sm:pb-4">
-        <SEO title="Выставка не найдена | Coursing Stats" noIndex />
+        <SEO title="Выставка не найдена | Курсинг Статс" noIndex />
         <ErrorState
           title="Выставка не найдена"
           message={error || `ID: ${id}`}
@@ -128,7 +128,7 @@ export default function ShowExhibitionDetail() {
     exhibition.date || null,
     exhibition.location || null,
     exhibition.results?.length ? `${exhibition.results.length} собак` : null,
-    'Протокол и статистика на Coursing Stats.',
+    'Протокол и статистика на Курсинг Статс.',
   ]
     .filter(Boolean)
     .join('. ')

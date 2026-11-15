@@ -6,6 +6,7 @@ import {
   SITE_ORIGIN,
   escapeHtml,
   breadcrumbJsonLd,
+  pluralizeRu,
   type SimpleEntityMeta,
 } from '../html-shell.js'
 import { toDogTitleCase } from './dog-seo.js'
@@ -85,8 +86,8 @@ export function eventMetaFromEntry(entry: {
   const kind = entry.competition_kind || entry.event_type || 'курсинг'
   const n = entry.result_count
   const title = dateFormatted
-    ? `${headline} (${dateFormatted}) — результаты соревнований | Coursing Stats`
-    : `${headline} — результаты соревнований | Coursing Stats`
+    ? `${headline} (${dateFormatted}) — результаты соревнований | Курсинг Статс`
+    : `${headline} — результаты соревнований | Курсинг Статс`
 
   const winnerTexts = (entry.winners || []).slice(0, 3).map((w) => {
     const breed = w.breed ? toDogTitleCase(w.breed) : ''
@@ -97,12 +98,12 @@ export function eventMetaFromEntry(entry: {
   })
   const winnersPart = winnerTexts.length > 0 ? `Победители: ${winnerTexts.join('; ')}` : null
 
+  const participantsText = n != null && n > 0 ? pluralizeRu(n, 'участник', 'участника', 'участников') : null
   const descriptionParts = [
-    `Результаты состязания: ${kind}${dateFormatted ? ` от ${dateFormatted}` : ''}`,
     location ? location : null,
-    n != null && n > 0 ? `${n} участников` : null,
+    participantsText,
     winnersPart,
-    'Электронный протокол забегов, баллы судей и сертификаты соревнований на Coursing Stats',
+    'Оценки по 5 критериям, квалификация и сертификаты CACL/CACIL.',
   ].filter((p): p is string => Boolean(p))
 
   const description = descriptionParts.map((s) => s.replace(/\.+$/, '')).join('. ') + '.'
@@ -110,9 +111,9 @@ export function eventMetaFromEntry(entry: {
     `Результаты состязания по виду «${kind}»`,
     dateFormatted ? `от ${dateFormatted}` : null,
     location ? `в ${location}` : null,
-    n != null && n > 0 ? `(${n} участников)` : null,
+    participantsText ? `(${participantsText})` : null,
     winnersPart ? `${winnersPart}.` : null,
-    'Статистика курсинга, бегов борзых и протоколы забегов на Coursing Stats.',
+    'Статистика курсинга, бегов борзых и протоколы забегов на Курсинг Статс.',
   ]
     .filter(Boolean)
     .join(' ')
@@ -228,7 +229,7 @@ export function eventMetaFromEntry(entry: {
 }
 
 export function doninoMeta(dog: { name: string; breed: string }): SimpleEntityMeta {
-  const title = `${dog.name} (${dog.breed}) — рекорды Донино | Coursing Stats`
+  const title = `${dog.name} (${dog.breed}) — рекорды Донино | Курсинг Статс`
   const description = `Рекорды ${dog.name} (${dog.breed}) на полигоне Курсинг Донино: замер скорости и бега 350 м.`
   const url = `${SITE_ORIGIN}/donino-dog/${encodeURIComponent(dog.name)}/${encodeURIComponent(dog.breed)}/`
   const breadcrumbs = [
@@ -287,17 +288,17 @@ export function exhibitionMeta(entry: {
   const city = entry.city || ''
   const n = entry.dogCount
   const title = date
-    ? `${headline} — ${date} | Coursing Stats`
-    : `${headline} | Coursing Stats`
+    ? `${headline} — ${date} | Курсинг Статс`
+    : `${headline} | Курсинг Статс`
+  const locationText = city ? `г. ${city}` : null
+  const dogsText = n != null && n > 0 ? `${pluralizeRu(n, 'собака', 'собаки', 'собак')} в каталоге` : null
   const description = [
-    `Выставка РКФ: ${headline}`,
-    date || null,
-    city || null,
-    n != null && n > 0 ? `${n} собак в протоколе` : null,
-    'Результаты и статистика на Coursing Stats.',
+    locationText,
+    dogsText,
+    'Победители рингов, сертификаты CAC/CACIB и экспертиза судей РКФ.',
   ]
     .filter(Boolean)
-    .join('. ')
+    .join('. ') + '.'
 
   const breadcrumbs = [
     { name: 'Главная', url: '/' },

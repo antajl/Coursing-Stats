@@ -180,11 +180,12 @@ export function sportsEventSchema(options: {
   }
 }
 
-// Organization schema для Coursing Stats
+// Organization schema для Курсинг Статс
 export const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'Coursing Stats',
+  name: 'Курсинг Статс',
+  alternateName: ['Coursing Stats', 'coursing-stats.ru'],
   url: 'https://coursing-stats.ru',
   logo: 'https://coursing-stats.ru/favicons/favicon.svg',
   description:
@@ -203,7 +204,8 @@ export const organizationSchema = {
 export const webSiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  name: 'Coursing Stats',
+  name: 'Курсинг Статс',
+  alternateName: ['Coursing Stats', 'КурсингСтатс', 'coursing-stats.ru'],
   url: 'https://coursing-stats.ru',
   description:
     'Рейтинги собак по курсингу и бегам борзых, рекорды Донино, выставки РКФ, профили и статистика судей.',

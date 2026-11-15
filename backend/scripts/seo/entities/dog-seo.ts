@@ -6,6 +6,7 @@ import {
   SITE_ORIGIN,
   escapeHtml,
   breadcrumbJsonLd,
+  pluralizeRu,
   type BreadcrumbItem,
 } from '../html-shell.js'
 import { formatEventDateRu } from './event-seo.js'
@@ -51,6 +52,9 @@ export function toDogTitleCase(str: string): string {
         return token
       }
       if (/^(RKF|РКФ|FCI|ФЦИ|CACL|CACIL|CACIT|CAC)$/i.test(token)) {
+        return token.toUpperCase()
+      }
+      if (/^([а-яёa-z]\.)+$/i.test(token)) {
         return token.toUpperCase()
       }
       const lower = token.toLowerCase()
@@ -185,26 +189,51 @@ export function dogMetaFromProfile(profile: {
   const id = dog.id ?? ''
   const { primary, secondary } = resolveDogNames(dog.name_lat, dog.name_ru)
   const name = primary || 'Собака'
-  const displayName = secondary && secondary !== name ? `${name} (${secondary})` : name
+  const displayName = secondary && secondary !== name ? `${name} / ${secondary}` : name
   const breed = dog.breed ? toDogTitleCase(dog.breed) : ''
 
   const facts: string[] = []
   const cs = dog.coursing_stats
   const rs = dog.racing_stats
-  if (cs && (cs.total_starts || 0) > 0) {
-    facts.push(`Курсинг: ${cs.total_starts} забегов`)
-  }
-  if (rs && (rs.total_starts || 0) > 0) {
-    facts.push(`Бега: ${rs.total_starts} забегов`)
-  }
-  const medals: string[] = []
+  const coursingStarts = cs?.total_starts || 0
+  const racingStarts = rs?.total_starts || 0
+  const totalStarts = coursingStarts + racingStarts
+
   const gold = (cs?.gold || 0) + (rs?.gold || 0)
   const silver = (cs?.silver || 0) + (rs?.silver || 0)
   const bronze = (cs?.bronze || 0) + (rs?.bronze || 0)
-  if (gold) medals.push(`золото ${gold}`)
-  if (silver) medals.push(`серебро ${silver}`)
-  if (bronze) medals.push(`бронза ${bronze}`)
-  if (medals.length) facts.push(`Медали: ${medals.join(', ')}`)
+  const totalMedals = gold + silver + bronze
+
+  let careerSummary = ''
+  if (totalStarts > 0) {
+    let startsText = ''
+    if (coursingStarts > 0 && racingStarts > 0) {
+      startsText = `${pluralizeRu(totalStarts, 'забег', 'забега', 'забегов')} (${coursingStarts} в курсинге, ${racingStarts} на треке)`
+    } else if (coursingStarts > 0) {
+      startsText = `${pluralizeRu(coursingStarts, 'забег', 'забега', 'забегов')} в курсинге`
+    } else {
+      startsText = `${pluralizeRu(racingStarts, 'забег', 'забега', 'забегов')} на треке`
+    }
+
+    let medalsText = ''
+    if (totalMedals > 0) {
+      if (gold > 0 && silver === 0 && bronze === 0) {
+        medalsText = `${pluralizeRu(gold, 'победа (золото)', 'победы (золото)', 'побед (золото)')}`
+      } else {
+        const medalDetails = [
+          gold ? pluralizeRu(gold, 'золотая', 'золотые', 'золотых') : null,
+          silver ? pluralizeRu(silver, 'серебряная', 'серебряные', 'серебряных') : null,
+          bronze ? pluralizeRu(bronze, 'бронзовая', 'бронзовые', 'бронзовых') : null,
+        ]
+          .filter(Boolean)
+          .join(', ')
+        medalsText = `${pluralizeRu(totalMedals, 'медаль', 'медали', 'медалей')} (${medalDetails})`
+      }
+    }
+
+    careerSummary = medalsText ? `${startsText}, ${medalsText}` : startsText
+    facts.push(careerSummary)
+  }
 
   const recent: DogRecentCompItem[] = [...(profile.competitions || [])]
     .filter((c): c is NonNullable<typeof c> => Boolean(c && (c.title || (c as any).event_id || (c as any).id)))
@@ -221,15 +250,13 @@ export function dogMetaFromProfile(profile: {
       }
     })
 
-  const medalSummary = gold > 0 ? `${gold} побед (золото)` : medals.length > 0 ? medals.join(', ') : ''
-
   const title = breed
-    ? `${displayName} (${breed}) — профиль собаки, результаты забегов и медали | Курсинг Статс (Coursing Stats)`
-    : `${displayName} — профиль собаки, результаты забегов и медали | Курсинг Статс (Coursing Stats)`
+    ? `${displayName} (${breed}) — профиль собаки, результаты забегов и медали | Курсинг Статс`
+    : `${displayName} — профиль собаки, результаты забегов и медали | Курсинг Статс`
   const description =
-    facts.length > 0
-      ? `${displayName}${breed ? ` (${breed})` : ''}: ${medalSummary ? `${medalSummary}, ` : ''}${facts.join('; ')}. Профиль спортивной карьеры собаки, результаты забегов и оценки судей на Курсинг Статс (Coursing Stats).`
-      : `Профиль спортивной карьеры и результаты собаки ${displayName}${breed ? ` (${breed})` : ''}: курсинг, бега борзых, медали и рекорды на Курсинг Статс (Coursing Stats).`
+    careerSummary
+      ? `${displayName}${breed ? ` (${breed})` : ''}: спортивная карьера — ${careerSummary}. Оценки судей по 5 критериям и лучшие результаты.`
+      : `Спортивная карьера собаки ${displayName}${breed ? ` (${breed})` : ''}: курсинг, бега борзых, результаты забегов, медали и рекорды.`
 
   const breadcrumbs = [
     { name: 'Главная', url: '/' },
@@ -305,23 +332,22 @@ export function dogMetaFromShowRanking(entry: {
   const id = entry.id ?? ''
   const { primary, secondary } = resolveDogNames(entry.name_lat, entry.name_ru)
   const name = primary || 'Собака'
-  const displayName = secondary && secondary !== name ? `${name} (${secondary})` : name
+  const displayName = secondary && secondary !== name ? `${name} / ${secondary}` : name
   const breed = entry.breed ? toDogTitleCase(entry.breed) : ''
   const facts: string[] = []
-  if (entry.total_shows != null && entry.total_shows > 0) {
-    facts.push(`Выставки: ${entry.total_shows}`)
-  }
-  if (entry.best_award) {
-    facts.push(`Лучшая награда: ${entry.best_award}`)
-  }
+  const showsCount = entry.total_shows || 0
+  const showsText = showsCount > 0 ? pluralizeRu(showsCount, 'выставка РКФ', 'выставки РКФ', 'выставок РКФ') : ''
+  const awardText = entry.best_award ? `высший титул: ${entry.best_award}` : ''
+  const careerSummary = [showsText, awardText].filter(Boolean).join(', ')
+  if (careerSummary) facts.push(careerSummary)
 
   const title = breed
-    ? `${displayName} (${breed}) — выставочная карьера и награды РКФ | Курсинг Статс (Coursing Stats)`
-    : `${displayName} — выставочная карьера и награды РКФ | Курсинг Статс (Coursing Stats)`
+    ? `${displayName} (${breed}) — выставочная карьера и награды РКФ | Курсинг Статс`
+    : `${displayName} — выставочная карьера и награды РКФ | Курсинг Статс`
   const description =
-    facts.length > 0
-      ? `${displayName}${breed ? ` (${breed})` : ''}: ${facts.join('; ')}. Профиль выставочной карьеры, оценки экспертов и награды РКФ на Курсинг Статс (Coursing Stats).`
-      : `Выставочный профиль и награды собаки ${displayName}${breed ? ` (${breed})` : ''} на выставках РКФ на Coursing Stats.`
+    careerSummary
+      ? `${displayName}${breed ? ` (${breed})` : ''}: выставочные результаты — ${careerSummary}. Оценки экспертов, наградные сертификаты и ринги.`
+      : `Выставочная карьера собаки ${displayName}${breed ? ` (${breed})` : ''}: участие в рингах, награды и титулы.`
 
   const breadcrumbs = [
     { name: 'Главная', url: '/' },

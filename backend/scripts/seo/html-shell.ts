@@ -17,6 +17,23 @@ export type SimpleEntityMeta = {
   sectionLinks: { href: string; label: string }[]
 }
 
+/**
+ * Склонение существительных с числительными в русском языке:
+ * pluralizeRu(1, 'участник', 'участника', 'участников') -> '1 участник'
+ * pluralizeRu(2, 'участник', 'участника', 'участников') -> '2 участника'
+ * pluralizeRu(5, 'участник', 'участника', 'участников') -> '5 участников'
+ */
+export function pluralizeRu(n: number, one: string, twoToFour: string, fivePlus: string): string {
+  const abs = Math.abs(n)
+  const mod10 = abs % 10
+  const mod100 = abs % 100
+  const formatted = String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ' ')
+  if (mod100 >= 11 && mod100 <= 14) return `${formatted} ${fivePlus}`
+  if (mod10 === 1) return `${formatted} ${one}`
+  if (mod10 >= 2 && mod10 <= 4) return `${formatted} ${twoToFour}`
+  return `${formatted} ${fivePlus}`
+}
+
 export function escapeHtml(value: string): string {
   return String(value)
     .replace(/&/g, '&amp;')
@@ -145,6 +162,49 @@ export type ApplyMetaOptions = {
   bodyHtml: string
   jsonLd?: Record<string, unknown> | null
   ogImage?: string
+  ogTitle?: string
+  ogDescription?: string
+}
+
+/** Cleans redundant brand suffix and prefixes for Open Graph cards where og:site_name already displays the brand. */
+export function cleanOgTitle(title: string): string {
+  const cleaned = title
+    .replace(/^Курсинг Статс\s*[—–-]\s*/i, '')
+    .replace(/\s*\|\s*Курсинг Статс.*$/i, '')
+    .replace(/\s*\|\s*Coursing Stats.*$/i, '')
+    .trim()
+  return cleaned || title
+}
+
+/** Cleans trailing brand references, duplicate periods, and leading entity repetition for Open Graph descriptions. */
+export function cleanOgDescription(desc: string, title?: string): string {
+  let cleaned = desc
+    .replace(/\s*на\s+(портале\s+)?(платформе\s+)?(сайте\s+)?(Курсинг Статс|Coursing Stats)\.?/gi, '.')
+    .replace(/\.{2,}/g, '.')
+    .trim()
+
+  if (title) {
+    const rawEntity = cleanOgTitle(title).split(/\s*[—–-]\s*/)[0].trim()
+    if (rawEntity && rawEntity.length > 3) {
+      // Check if description starts with entity name (e.g. "Астерхоф Алекстон (Уиппет):")
+      if (cleaned.toLowerCase().startsWith(rawEntity.toLowerCase())) {
+        cleaned = cleaned.substring(rawEntity.length).replace(/^[:\s–—-]+/, '').trim()
+        if (cleaned) {
+          cleaned = cleaned.charAt(0).toUpperCase() + cleaned.slice(1)
+        }
+      }
+      // Or with "Судья РКФ ..." / "Эксперт РКФ ..." / "Порода ..." / "Справочник ..."
+      const prefixMatch = cleaned.match(/^(Судья РКФ[^:]*|Эксперт РКФ[^:]*|Выставка РКФ[^:]*|Результаты состязания[^:]*|Порода [^:]*|Рейтинг породы [^:]*|Справочник[^:]*):\s*/i)
+      if (prefixMatch) {
+        cleaned = cleaned.substring(prefixMatch[0].length).trim()
+        if (cleaned) {
+          cleaned = cleaned.charAt(0).toUpperCase() + cleaned.slice(1)
+        }
+      }
+    }
+  }
+
+  return cleaned
 }
 
 /** Strip hub/dog patches so SPA fallback never advertises home canonical. */
@@ -157,24 +217,25 @@ export function buildNeutralSpaShell(html: string): string {
   )
   out = replaceTitle(
     out,
-    'Coursing Stats — статистика курсинга, бегов и выставок собак',
+    'Курсинг Статс — статистика курсинга, бегов и выставок собак',
   )
   out = replaceOrInsertMetaDescription(
     out,
-    'Coursing Stats — рейтинги и статистика собак в России: курсинг и бега борзых, рекорды Донино, выставки РКФ, профили и судьи.',
+    'Курсинг Статс — рейтинги и статистика собак в России: курсинг и бега борзых, рекорды Донино, выставки РКФ, профили и судьи.',
   )
   // Do not advertise home URL on the shared SPA fallback shell.
   out = out.replace(/<meta\s+property=["']og:url["'][^>]*>\s*/gi, '')
   out = replaceOrInsertMetaProperty(
     out,
     'og:title',
-    'Coursing Stats — статистика курсинга, бегов и выставок',
+    'Курсинг Статс — статистика курсинга, бегов и выставок',
   )
   out = replaceOrInsertMetaProperty(
     out,
     'og:description',
     'Рейтинги собак: курсинг и бега, рекорды Донино, выставки РКФ, профили и судьи.',
   )
+  out = replaceOrInsertMetaProperty(out, 'og:site_name', 'Курсинг Статс')
   out = setRootBody(out, '')
   return out
 }
@@ -186,7 +247,7 @@ export function buildNeutralSpaShell(html: string): string {
  */
 export function build404Html(spaHtml: string): string {
   let html = spaHtml
-  html = replaceTitle(html, 'Страница не найдена | Coursing Stats')
+  html = replaceTitle(html, 'Страница не найдена | Курсинг Статс')
   html = replaceOrInsertMetaDescription(html, 'Страница не найдена.')
   // Remove canonical link (404 shouldn't have canonical)
   html = html.replace(/<link\s+rel=["']canonical["'][^>]*>\s*/gi, '')
@@ -203,10 +264,11 @@ export function build404Html(spaHtml: string): string {
   html = html.replace(/<script\s+type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>\s*/gi, '')
   html = html.replace(/<meta\s+property=["']og:url["'][^>]*>\s*/gi, '')
   html = html.replace(/<meta\s+name=["']twitter:url["'][^>]*>\s*/gi, '')
-  html = replaceOrInsertMetaProperty(html, 'og:title', 'Страница не найдена | Coursing Stats')
+  html = replaceOrInsertMetaProperty(html, 'og:site_name', 'Курсинг Статс')
+  html = replaceOrInsertMetaProperty(html, 'og:title', 'Страница не найдена | Курсинг Статс')
   html = replaceOrInsertMetaProperty(html, 'og:description', 'Страница не найдена.')
   html = replaceOrInsertMetaProperty(html, 'og:image', `${SITE_ORIGIN}/og-image.png`)
-  html = replaceOrInsertMetaName(html, 'twitter:title', 'Страница не найдена | Coursing Stats')
+  html = replaceOrInsertMetaName(html, 'twitter:title', 'Страница не найдена | Курсинг Статс')
   html = replaceOrInsertMetaName(html, 'twitter:description', 'Страница не найдена.')
   html = replaceOrInsertMetaName(html, 'twitter:image', `${SITE_ORIGIN}/og-image.png`)
 
@@ -247,24 +309,26 @@ export function build404Html(spaHtml: string): string {
 /** Patch SPA shell: title, description, canonical, OG/Twitter, optional JSON-LD, #root body. */
 export function applyMetaToSpaShell(spaHtml: string, options: ApplyMetaOptions): string {
   const ogImage = options.ogImage || `${SITE_ORIGIN}/og-image.png`
+  const ogTitleText = options.ogTitle || cleanOgTitle(options.title)
+  const ogDescText = options.ogDescription || cleanOgDescription(options.description, options.title)
   let html = spaHtml
   html = replaceTitle(html, options.title)
   html = replaceOrInsertMetaDescription(html, options.description)
   html = replaceOrInsertCanonical(html, options.canonicalUrl)
   html = replaceOrInsertMetaProperty(html, 'og:type', 'website')
   html = replaceOrInsertMetaProperty(html, 'og:url', options.canonicalUrl)
-  html = replaceOrInsertMetaProperty(html, 'og:title', options.title)
-  html = replaceOrInsertMetaProperty(html, 'og:description', options.description)
+  html = replaceOrInsertMetaProperty(html, 'og:title', ogTitleText)
+  html = replaceOrInsertMetaProperty(html, 'og:description', ogDescText)
   html = replaceOrInsertMetaProperty(html, 'og:image', ogImage)
   html = replaceOrInsertMetaProperty(html, 'og:image:width', '1200')
   html = replaceOrInsertMetaProperty(html, 'og:image:height', '630')
   html = replaceOrInsertMetaProperty(html, 'og:image:type', 'image/png')
   html = replaceOrInsertMetaProperty(html, 'og:locale', 'ru_RU')
-  html = replaceOrInsertMetaProperty(html, 'og:site_name', 'Coursing Stats')
+  html = replaceOrInsertMetaProperty(html, 'og:site_name', 'Курсинг Статс')
   html = replaceOrInsertMetaName(html, 'twitter:card', 'summary_large_image')
   html = replaceOrInsertMetaName(html, 'twitter:url', options.canonicalUrl)
-  html = replaceOrInsertMetaName(html, 'twitter:title', options.title)
-  html = replaceOrInsertMetaName(html, 'twitter:description', options.description)
+  html = replaceOrInsertMetaName(html, 'twitter:title', ogTitleText)
+  html = replaceOrInsertMetaName(html, 'twitter:description', ogDescText)
   html = replaceOrInsertMetaName(html, 'twitter:image', ogImage)
   if (!html.includes('rel="manifest"')) {
     html = html.replace(/<\/head>/i, '  <link rel="manifest" href="/manifest.webmanifest" />\n</head>')

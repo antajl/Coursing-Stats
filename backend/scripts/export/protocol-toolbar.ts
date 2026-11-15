@@ -130,7 +130,7 @@ export function buildProtocolSeoHead(comp: CompetitionData): string {
   <meta property="og:description" content="${escapeHtml(description)}">
   <meta property="og:image" content="https://coursing-stats.ru/og-image.png">
   <meta property="og:url" content="${canonicalUrl}">
-  <meta property="og:site_name" content="Coursing Stats">
+  <meta property="og:site_name" content="Курсинг Статс">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${escapeHtml(eventTitle)}">
   <meta name="twitter:description" content="${escapeHtml(description)}">

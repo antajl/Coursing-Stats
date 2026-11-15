@@ -5,6 +5,7 @@
 import {
   SITE_ORIGIN,
   breadcrumbJsonLd,
+  pluralizeRu,
   type SimpleEntityMeta,
 } from '../html-shell.js'
 import { toDogTitleCase } from './dog-seo.js'
@@ -27,15 +28,15 @@ export function sportJudgeMeta(judge: {
   const fullName = SPORT_JUDGE_FULL_NAMES[shortName] || null
   const displayName = fullName ? `${fullName} (${shortName})` : shortName
   const facts = [
-    judge.unique_events != null ? `${judge.unique_events} соревнований` : null,
-    judge.unique_breeds != null ? `${judge.unique_breeds} пород` : null,
-    judge.unique_dogs != null ? `${judge.unique_dogs} собак` : null,
+    judge.unique_events != null ? pluralizeRu(judge.unique_events, 'соревнование', 'соревнования', 'соревнований') : null,
+    judge.unique_breeds != null ? pluralizeRu(judge.unique_breeds, 'порода', 'породы', 'пород') : null,
+    judge.unique_dogs != null ? pluralizeRu(judge.unique_dogs, 'собака', 'собаки', 'собак') : null,
   ].filter(Boolean)
-  const title = `Судья РКФ ${displayName} — статистика курсинга и бегов борзых | Coursing Stats`
+  const title = `Судья РКФ ${displayName} — статистика курсинга и бегов борзых | Курсинг Статс`
   const description =
     facts.length > 0
-      ? `Судья РКФ по курсингу и бегам борзых ${displayName}: статистика судейства (${facts.join(', ')}), судимые породы, оценки собак и история забегов на Coursing Stats.`
-      : `Судья РКФ по курсингу и бегам борзых ${displayName}: профиль, статистика судейства, оценки собак и судимые породы на Coursing Stats.`
+      ? `Судья РКФ ${displayName}: ${facts.join(', ')}. Обслуженные турниры, средние баллы по критериям и судейские бригады.`
+      : `Судья РКФ ${displayName}: обслуженные состязания, оценки собак и судимые породы.`
   const judgeSlug = judge.numeric_id != null ? String(judge.numeric_id) : encodeURIComponent(judge.id)
   const url = `${SITE_ORIGIN}/judges/${judgeSlug}/`
   const breadcrumbs = [
@@ -92,15 +93,15 @@ export function showJudgeMeta(judge: {
   const rawName = judge.display_name?.trim() || judge.name?.trim() || judge.id
   const name = toDogTitleCase(rawName)
   const facts = [
-    judge.total_judged != null ? `${judge.total_judged} оценок` : null,
-    judge.unique_breeds != null ? `${judge.unique_breeds} пород` : null,
+    judge.total_judged != null ? pluralizeRu(judge.total_judged, 'оценка', 'оценки', 'оценок') : null,
+    judge.unique_breeds != null ? pluralizeRu(judge.unique_breeds, 'порода', 'породы', 'пород') : null,
     judge.excellent_rate != null ? `${Math.round(judge.excellent_rate * 100)}% отлично` : null,
   ].filter(Boolean)
-  const title = `Эксперт РКФ ${name} — судья выставок собак, статистика и отзывы | Coursing Stats`
+  const title = `Эксперт РКФ ${name} — статистика судейства и оценки на выставках собак | Курсинг Статс`
   const description =
     facts.length > 0
-      ? `Эксперт РКФ / FCI ${name}: статистика судейства на выставках собак (${facts.join(', ')}), строгость оценок, судимые породы и отзывы на Coursing Stats.`
-      : `Эксперт РКФ / FCI ${name}: статистика судейства на выставках собак, строгость оценок (% отлично), породы и история судейства на Coursing Stats.`
+      ? `Эксперт РКФ / FCI ${name}: ${facts.join(', ')}. Распределение титулов и обслуженные ринги.`
+      : `Эксперт РКФ / FCI ${name}: строгость оценок, породы и история судейства.`
   const judgeSlug = judge.numeric_id != null ? String(judge.numeric_id) : encodeURIComponent(judge.id)
   const url = `${SITE_ORIGIN}/shows/judges/${judgeSlug}/`
   const breadcrumbs = [

@@ -25,7 +25,7 @@ export function exhibitionDogProfilePath(dogName: string, breed: string): string
   const breedTrim = breed.trim()
   if (!name || !breedTrim) return null
   const id = stableShowProfileId(name, breedTrim)
-  return `/dog/${id}?name=${encodeURIComponent(name)}&breed=${encodeURIComponent(breedTrim)}`
+  return `/dog/${id}/?name=${encodeURIComponent(name)}&breed=${encodeURIComponent(breedTrim)}`
 }
 
 export function extractGroupNumber(label: string): number | null {

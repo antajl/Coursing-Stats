@@ -6,8 +6,47 @@ interface SEOProps {
   description: string
   keywords?: string
   ogImage?: string
+  ogTitle?: string
+  ogDescription?: string
   noIndex?: boolean
   canonicalUrl?: string
+}
+
+function cleanOgTitle(title: string): string {
+  const cleaned = title
+    .replace(/^Курсинг Статс\s*[—–-]\s*/i, '')
+    .replace(/\s*\|\s*Курсинг Статс.*$/i, '')
+    .replace(/\s*\|\s*Coursing Stats.*$/i, '')
+    .trim()
+  return cleaned || title
+}
+
+function cleanOgDescription(desc: string, title?: string): string {
+  let cleaned = desc
+    .replace(/\s*на\s+(портале\s+)?(платформе\s+)?(сайте\s+)?(Курсинг Статс|Coursing Stats)\.?/gi, '.')
+    .replace(/\.{2,}/g, '.')
+    .trim()
+
+  if (title) {
+    const rawEntity = cleanOgTitle(title).split(/\s*[—–-]\s*/)[0].trim()
+    if (rawEntity && rawEntity.length > 3) {
+      if (cleaned.toLowerCase().startsWith(rawEntity.toLowerCase())) {
+        cleaned = cleaned.substring(rawEntity.length).replace(/^[:\s–—-]+/, '').trim()
+        if (cleaned) {
+          cleaned = cleaned.charAt(0).toUpperCase() + cleaned.slice(1)
+        }
+      }
+      const prefixMatch = cleaned.match(/^(Судья РКФ[^:]*|Эксперт РКФ[^:]*|Выставка РКФ[^:]*|Результаты состязания[^:]*|Порода [^:]*|Рейтинг породы [^:]*|Справочник[^:]*):\s*/i)
+      if (prefixMatch) {
+        cleaned = cleaned.substring(prefixMatch[0].length).trim()
+        if (cleaned) {
+          cleaned = cleaned.charAt(0).toUpperCase() + cleaned.slice(1)
+        }
+      }
+    }
+  }
+
+  return cleaned
 }
 
 /** Короткий дефолт под RU-нишу; на страницах — точечные keywords. */
@@ -42,11 +81,22 @@ function normalizeCanonicalUrl(url?: string): string | undefined {
   }
 }
 
-export function SEO({ title, description, keywords, ogImage, noIndex, canonicalUrl }: SEOProps) {
-  const fullTitle = title.includes('Coursing Stats') ? title : `${title} | Coursing Stats`
+export function SEO({
+  title,
+  description,
+  keywords,
+  ogImage,
+  ogTitle,
+  ogDescription,
+  noIndex,
+  canonicalUrl,
+}: SEOProps) {
+  const fullTitle = title.includes('Курсинг Статс') || title.includes('Coursing Stats') ? title : `${title} | Курсинг Статс`
   const defaultImage = 'https://coursing-stats.ru/og-image.png'
   const siteUrl = 'https://coursing-stats.ru/'
   const normalizedCanonical = normalizeCanonicalUrl(canonicalUrl)
+  const ogTitleText = ogTitle || cleanOgTitle(fullTitle)
+  const ogDescText = ogDescription || cleanOgDescription(description, ogTitleText)
 
   useEffect(() => {
     document.title = fullTitle
@@ -72,20 +122,20 @@ export function SEO({ title, description, keywords, ogImage, noIndex, canonicalU
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
       <meta property="og:url" content={normalizedCanonical || siteUrl} />
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
+      <meta property="og:title" content={ogTitleText} />
+      <meta property="og:description" content={ogDescText} />
       <meta property="og:image" content={ogImage || defaultImage} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:image:type" content="image/png" />
       <meta property="og:locale" content="ru_RU" />
-      <meta property="og:site_name" content="Coursing Stats" />
+      <meta property="og:site_name" content="Курсинг Статс" />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content={normalizedCanonical || siteUrl} />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
+      <meta name="twitter:title" content={ogTitleText} />
+      <meta name="twitter:description" content={ogDescText} />
       <meta name="twitter:image" content={ogImage || defaultImage} />
     </Helmet>
   )

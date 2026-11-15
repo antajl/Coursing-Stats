@@ -116,19 +116,20 @@ export default function AboutPage() {
   return (
     <div className="mx-auto max-w-full space-y-6 pb-8">
       <SEO
-        title="О проекте Coursing Stats — независимый архив соревнований и выставок собак в России"
+        title="О проекте — электронный архив и статистика собак | Курсинг Статс"
         description="Некоммерческий электронный архив соревнований по курсингу, бегов борзых, выставок РКФ и замеров Донино в России. Профили собак, протоколы забегов и статистика."
-        keywords="Coursing Stats, архив соревнований, курсинг, бега борзых, выставки собак, РКФ, протоколы, Донино, рейтинг борзых, Россия"
+        keywords="курсинг статс, coursing stats, архив соревнований, курсинг, бега борзых, выставки собак, РКФ, протоколы, Донино, рейтинг борзых, Россия"
         canonicalUrl="https://coursing-stats.ru/about/"
         jsonLd={{
           '@context': 'https://schema.org',
           '@type': 'AboutPage',
-          name: 'О проекте Coursing Stats',
+          name: 'О проекте Курсинг Статс',
           description: 'Некоммерческий электронный архив соревнований по курсингу, бегов борзых и выставок собак в России',
           url: 'https://coursing-stats.ru/about',
           mainEntity: {
             '@type': 'Organization',
-            name: 'Coursing Stats',
+            name: 'Курсинг Статс',
+            alternateName: ['Coursing Stats', 'coursing-stats.ru'],
             url: 'https://coursing-stats.ru',
             address: {
               '@type': 'PostalAddress',
