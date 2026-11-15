@@ -313,9 +313,7 @@ export default function BreedHubColumns({
                         <tr className="border-b border-old-money-200/60 bg-cream-50/50 text-[11px] font-semibold uppercase tracking-wider text-charcoal-600">
                           <th className="py-2.5 px-2.5 w-16 text-center">Сезон</th>
                           <th className="py-2.5 px-3">Лучшая собака года</th>
-                          <th className="py-2.5 px-2 w-14 text-right">Забеги</th>
-                          <th className="py-2.5 px-2 w-24 text-center">Медали</th>
-                          <th className="py-2.5 px-3 w-20 text-right">Скорость</th>
+                          <th className="py-2.5 px-3 w-36 sm:w-40 text-right">Результаты</th>
                         </tr>
                       </thead>
                       <tbody className="divide-y divide-old-money-100">
@@ -340,7 +338,7 @@ export default function BreedHubColumns({
                                   {item.year}
                                 </Link>
                               </td>
-                              <td className="py-2.5 px-3 min-w-0">
+                              <td className="py-2 px-3 min-w-0">
                                 <div className="flex items-center gap-1.5 min-w-0">
                                   <Link
                                     to={`/dog/${item.dog_id}/`}
@@ -360,27 +358,26 @@ export default function BreedHubColumns({
                                   </span>
                                 )}
                               </td>
-                              <td className="py-2.5 px-2 text-right text-xs font-sans tabular-nums font-semibold text-charcoal-700 whitespace-nowrap">
-                                {item.total_starts}
-                              </td>
-                              <td className="py-2.5 px-2 text-center whitespace-nowrap">
-                                <div className="flex items-center justify-center gap-1">
-                                  <MedalBadge variant="gold" count={item.gold || 0} size="sm" />
-                                  <MedalBadge variant="silver" count={item.silver || 0} size="sm" />
-                                  <MedalBadge variant="bronze" count={item.bronze || 0} size="sm" />
-                                </div>
-                              </td>
-                              <td className="py-2.5 px-3 text-right whitespace-nowrap">
-                                {item.best_speed ? (
-                                  <div className="inline-flex items-baseline gap-0.5 justify-end">
-                                    <span className="font-sans font-bold tabular-nums text-xs text-charcoal-900">
-                                      {item.best_speed.toFixed(1)}
-                                    </span>
-                                    <span className="text-[10px] text-charcoal-500 font-medium">км/ч</span>
+
+                              {/* Колонка результатов: Забеги + Скорость сверху, 3 медали снизу */}
+                              <td className="py-2 px-3 text-right whitespace-nowrap">
+                                <div className="flex flex-col items-end gap-1">
+                                  <div className="flex items-center gap-1 text-[11px] leading-tight font-sans">
+                                    <span className="text-charcoal-600 font-medium">{item.total_starts} заб.</span>
+                                    {item.best_speed && <span className="text-charcoal-400">·</span>}
+                                    {item.best_speed && (
+                                      <span className="inline-flex items-baseline gap-0.5 font-bold text-charcoal-900 text-xs">
+                                        <span>{item.best_speed.toFixed(1)}</span>
+                                        <span className="text-[10px] font-normal text-charcoal-500">км/ч</span>
+                                      </span>
+                                    )}
                                   </div>
-                                ) : (
-                                  <span className="text-charcoal-400 text-xs">—</span>
-                                )}
+                                  <div className="flex items-center justify-end gap-1">
+                                    <MedalBadge variant="gold" count={item.gold || 0} size="sm" />
+                                    <MedalBadge variant="silver" count={item.silver || 0} size="sm" />
+                                    <MedalBadge variant="bronze" count={item.bronze || 0} size="sm" />
+                                  </div>
+                                </div>
                               </td>
                             </tr>
                           )
@@ -389,7 +386,7 @@ export default function BreedHubColumns({
                     </table>
                   </div>
 
-                  {/* Мобильный вид (Фиксированная 3-колоночная сетка метрик без скачков) */}
+                  {/* Мобильный вид */}
                   <ol className="divide-y divide-old-money-100 text-sm sm:hidden">
                     {annualLeaders.map((item) => {
                       const { primary, secondary } = parseDogName(item.name_lat, item.name_ru)
@@ -399,7 +396,7 @@ export default function BreedHubColumns({
 
                       return (
                         <li key={item.year} className="p-3 flex flex-col gap-1.5 hover:bg-cream-50/60 transition-colors">
-                          {/* Верхняя строка: Кликабельный бейдж года (без стрелочки) + Имя собаки + Иконка пола */}
+                          {/* Верхняя строка: Бейдж года + Имя собаки + Иконка пола */}
                           <div className="flex items-center gap-2 min-w-0">
                             <Link
                               to={`/competitions/ranking/${item.year}/?breed=${encodeURIComponent(breedToSlug(canonicalKey))}`}
@@ -424,38 +421,29 @@ export default function BreedHubColumns({
                             </div>
                           </div>
 
+                          {/* Вторая строка: латиница */}
                           {secondary && (
-                            <div className="text-[11px] text-charcoal-500 truncate pl-0.5">
+                            <div className="text-[11px] text-charcoal-500 pl-0.5 truncate">
                               {secondary}
                             </div>
                           )}
 
-                          {/* Нижняя строка: Фиксированная 3-колоночная сетка (Забеги / Медали / Скорость) */}
-                          <div className="grid grid-cols-3 items-center text-xs pt-1.5 border-t border-old-money-100/70 font-sans tabular-nums">
-                            {/* Клетка 1: Количество забегов */}
-                            <div className="text-left text-[11px] text-charcoal-600 font-medium">
+                          {/* Нижняя строка метрик: Забеги + Скорость слева, 3 медали справа */}
+                          <div className="flex items-center justify-between text-xs pt-1.5 border-t border-old-money-100/70 font-sans tabular-nums">
+                            <div className="text-left text-[11px] text-charcoal-600 font-medium flex items-center gap-1">
                               <span>{item.total_starts} заб.</span>
+                              {item.best_speed && <span className="text-charcoal-400">·</span>}
+                              {item.best_speed && (
+                                <span className="inline-flex items-baseline gap-0.5 font-bold text-charcoal-900 text-xs">
+                                  <span>{item.best_speed.toFixed(1)}</span>
+                                  <span className="text-[10px] font-normal text-charcoal-500">км/ч</span>
+                                </span>
+                              )}
                             </div>
-
-                            {/* Клетка 2: 3 иконки медалей (золото, серебро, бронза) */}
-                            <div className="flex items-center justify-center gap-1">
+                            <div className="flex items-center justify-end gap-1">
                               <MedalBadge variant="gold" count={item.gold || 0} size="sm" />
                               <MedalBadge variant="silver" count={item.silver || 0} size="sm" />
                               <MedalBadge variant="bronze" count={item.bronze || 0} size="sm" />
-                            </div>
-
-                            {/* Клетка 3: Скорость текстом */}
-                            <div className="text-right leading-tight">
-                              {item.best_speed ? (
-                                <span className="inline-flex items-baseline gap-0.5 justify-end">
-                                  <span className="font-bold text-charcoal-900 text-xs">
-                                    {item.best_speed.toFixed(1)}
-                                  </span>
-                                  <span className="text-[10px] text-charcoal-500 font-medium">км/ч</span>
-                                </span>
-                              ) : (
-                                <span className="text-charcoal-400 text-xs">—</span>
-                              )}
                             </div>
                           </div>
                         </li>

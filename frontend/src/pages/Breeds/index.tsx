@@ -13,7 +13,9 @@ import EmptyState from '../../components/EmptyState'
 import LoadingCard from '../../components/LoadingCard'
 import BreedCard, { type BreedStatsData } from '../../components/BreedCard'
 import BreedSortDropdown, { type BreedSortKey } from './BreedSortDropdown'
-import BreedGroupDropdown from './BreedGroupDropdown'
+import QuickGroupBar from './QuickGroupBar'
+import QuickBreedBar from '../TopDogs/QuickBreedBar'
+import { matchesBreedFilter } from '../../lib/breedMapping'
 
 function formatBreedsCount(count: number): string {
   const mod10 = count % 10
@@ -26,6 +28,7 @@ function formatBreedsCount(count: number): string {
 
 export default function BreedsDirectory() {
   const [selectedGroup, setSelectedGroup] = useState<string>('all')
+  const [selectedBreed, setSelectedBreed] = useState<string>('all')
   const [searchQuery, setSearchQuery] = useState('')
   const [sortKey, setSortKey] = useState<BreedSortKey>('dogs')
   const [visibleCount, setVisibleCount] = useState(25)
@@ -98,8 +101,53 @@ export default function BreedsDirectory() {
     return map
   }, [leadersBySlug, topPlacementRes, topSpeedRes])
 
+  const allBreedKeys = useMemo(() => CORE_BREED_HUBS.map((b) => b.canonicalKey), [])
+
+  const breedCandidates = useMemo(() => {
+    let list = CORE_BREED_HUBS
+
+    if (selectedGroup !== 'all') {
+      const gNum = Number(selectedGroup)
+      list = list.filter((b) => getBreedFciGroup(b.slug) === gNum)
+    }
+
+    const sorted = list.slice().sort((a, b) => {
+      const dogsA = statsMap[a.slug]?.dogs || 0
+      const dogsB = statsMap[b.slug]?.dogs || 0
+      if (dogsB !== dogsA) return dogsB - dogsA
+      return a.nameRu.localeCompare(b.nameRu, 'ru')
+    })
+
+    return sorted.map((b) => {
+      let label = b.nameRu
+      if (b.slug === 'russian-borzoi') label = 'РПБ'
+      else if (b.slug === 'rhodesian-ridgeback') label = 'Риджбек'
+      else if (b.slug === 'irish-wolfhound') label = 'Ирл. волкодав'
+      else if (b.slug === 'cirneco-delletna') label = 'Чирнеко'
+      else if (b.slug === 'pharaoh-hound') label = 'Фараон'
+      else if (b.slug === 'italian-greyhound') label = 'Левретка'
+      else if (b.slug === 'afghan-hound') label = 'Афган'
+
+      return {
+        key: b.canonicalKey,
+        label,
+        fullName: b.nameRu,
+        estWidth: Math.max(50, Math.min(130, label.length * 8 + 32)),
+      }
+    })
+  }, [selectedGroup, statsMap])
+
   const filteredBreeds = useMemo(() => {
     let list = CORE_BREED_HUBS
+
+    if (selectedBreed !== 'all') {
+      list = list.filter(
+        (b) =>
+          b.slug === selectedBreed ||
+          b.canonicalKey === selectedBreed ||
+          matchesBreedFilter(b.canonicalKey, selectedBreed),
+      )
+    }
 
     if (selectedGroup !== 'all') {
       const gNum = Number(selectedGroup)
@@ -120,7 +168,7 @@ export default function BreedsDirectory() {
     }
 
     return list
-  }, [selectedGroup, searchQuery])
+  }, [selectedBreed, selectedGroup, searchQuery])
 
   const sortedBreeds = useMemo(() => {
     const list = filteredBreeds.slice()
@@ -165,10 +213,10 @@ export default function BreedsDirectory() {
     }
   }, [loading, sortedBreeds.length])
 
-  // Сброс пагинации при смене поиска, группы или сортировки
+  // Сброс пагинации при смене поиска, группы, породы или сортировки
   useEffect(() => {
     setVisibleCount(25)
-  }, [selectedGroup, searchQuery, sortKey])
+  }, [selectedGroup, selectedBreed, searchQuery, sortKey])
 
   // Lazy loading IntersectionObserver
   useEffect(() => {
@@ -186,11 +234,57 @@ export default function BreedsDirectory() {
 
   const listRevealRef = useListReveal(!loading && sortedBreeds.length > 0)
 
-  const hasActiveFilters = searchQuery.trim().length > 0 || selectedGroup !== 'all' || sortKey !== 'dogs'
+  const hasActiveFilters =
+    searchQuery.trim().length > 0 ||
+    selectedGroup !== 'all' ||
+    selectedBreed !== 'all' ||
+    sortKey !== 'dogs'
+
+  const handleSelectGroup = (groupId: string) => {
+    setSelectedGroup(groupId)
+    if (selectedBreed !== 'all' && groupId !== 'all') {
+      const b = CORE_BREED_HUBS.find(
+        (item) => item.slug === selectedBreed || item.canonicalKey === selectedBreed,
+      )
+      if (b && String(getBreedFciGroup(b.slug)) !== groupId) {
+        setSelectedBreed('all')
+      }
+    }
+  }
+
+  const handleSelectBreed = (key: string) => {
+    if (!key || key === 'all') {
+      setSelectedBreed('all')
+      return
+    }
+    const b = CORE_BREED_HUBS.find(
+      (item) =>
+        item.canonicalKey === key ||
+        item.slug === key.toLowerCase() ||
+        matchesBreedFilter(item.canonicalKey, key),
+    )
+    const nextVal = b ? b.slug : key
+    setSelectedBreed(nextVal)
+    if (b && selectedGroup !== 'all') {
+      const gNum = String(getBreedFciGroup(b.slug))
+      if (gNum !== selectedGroup) {
+        setSelectedGroup('all')
+      }
+    }
+  }
+
+  const quickBreedBarValue = useMemo(() => {
+    if (selectedBreed === 'all' || !selectedBreed) return ''
+    const b = CORE_BREED_HUBS.find(
+      (item) => item.slug === selectedBreed || item.canonicalKey === selectedBreed,
+    )
+    return b ? b.canonicalKey : selectedBreed
+  }, [selectedBreed])
 
   const clearFilters = () => {
     setSearchQuery('')
     setSelectedGroup('all')
+    setSelectedBreed('all')
     setSortKey('dogs')
   }
 
@@ -198,12 +292,16 @@ export default function BreedsDirectory() {
     if (searchQuery.trim()) {
       return `По запросу «${searchQuery.trim()}»`
     }
+    if (selectedBreed !== 'all') {
+      const b = CORE_BREED_HUBS.find((item) => item.slug === selectedBreed)
+      return b ? `Порода: ${b.nameRu}` : 'Выбранная порода'
+    }
     if (selectedGroup !== 'all') {
       const g = FCI_GROUPS[Number(selectedGroup)]
       return g ? g.shortName : 'Группа пород'
     }
     return 'Все породы'
-  }, [searchQuery, selectedGroup])
+  }, [searchQuery, selectedBreed, selectedGroup])
 
   const plaque = (
     <DoninoColumnPlaque
@@ -254,55 +352,52 @@ export default function BreedsDirectory() {
         }}
       />
 
-      {/* Toolbar: единый ряд фильтров по классификации FCI/РКФ и поиск */}
+      {/* Toolbar: единый ряд: Поиск + Породы (50%) + Группы (50%) + Сброс */}
       <PageToolbar
         bare
-        topRowClassName="flex-nowrap"
+        topRowClassName="w-full flex-nowrap"
         filters={
-          <div className="flex items-center gap-1.5 sm:gap-2 w-full min-w-0 overflow-x-auto no-scrollbar py-0.5">
-            {/* Поиск породы или кода FCI: компактная кнопка 32px без лишних обёрток */}
-            <ToolbarSearch
-              value={searchQuery}
-              onChange={setSearchQuery}
-              placeholder="Поиск породы или код FCI…"
-            />
+          <div className="flex items-center gap-2 sm:gap-2.5 w-full min-w-0 overflow-x-auto no-scrollbar py-0.5">
+            {/* Поиск породы или кода FCI: компактная кнопка 32px */}
+            <div className="shrink-0">
+              <ToolbarSearch
+                value={searchQuery}
+                onChange={setSearchQuery}
+                placeholder="Поиск породы или код FCI…"
+              />
+            </div>
 
-            {/* Быстрые фильтры основных спортивных групп с префиксом FCI (без цифр) */}
-            {[
-              { id: 'all', label: 'Все группы' },
-              { id: '10', label: 'FCI 10: Борзые' },
-              { id: '5', label: 'FCI 5: Шпицы и аборигенные' },
-              { id: '3', label: 'FCI 3: Терьеры' },
-            ].map((item) => {
-              const active = selectedGroup === item.id
-              return (
-                <button
-                  key={item.id}
-                  type="button"
-                  onClick={() => setSelectedGroup(item.id)}
-                  className={`h-8 rounded-full px-3 text-xs font-semibold whitespace-nowrap cursor-pointer transition-all inline-flex items-center shrink-0 ${
-                    active ? 'cs-glass-pill-active' : 'cs-glass-pill'
-                  }`}
-                >
-                  <span>{item.label}</span>
-                </button>
-              )
-            })}
+            <div className="h-5 w-px bg-old-money-300/80 shrink-0 hidden sm:block" aria-hidden="true" />
 
-            {/* Выпадающий список «Ещё группы» */}
-            <BreedGroupDropdown
-              value={selectedGroup}
-              onChange={setSelectedGroup}
-              counts={groupCounts}
-            />
+            {/* Выбор породы QuickBreedBar (~50% свободного места) */}
+            <div className="flex-1 min-w-0">
+              <QuickBreedBar
+                selectedBreed={quickBreedBarValue}
+                onSelectBreed={handleSelectBreed}
+                candidateBreeds={breedCandidates}
+                breedValues={allBreedKeys}
+              />
+            </div>
 
-            {/* Кнопка сброса при наличии фильтров */}
+            <div className="h-5 w-px bg-old-money-300/80 shrink-0 hidden sm:block" aria-hidden="true" />
+
+            {/* Выбор группы FCI QuickGroupBar (~50% свободного места) */}
+            <div className="flex-1 min-w-0">
+              <QuickGroupBar
+                value={selectedGroup}
+                onChange={handleSelectGroup}
+                counts={groupCounts}
+              />
+            </div>
+
+            {/* Кнопка сброса при наличии активных фильтров */}
             {hasActiveFilters && (
               <button
                 type="button"
                 onClick={clearFilters}
                 className="cs-glass-pill shrink-0 inline-flex h-8 px-2.5 items-center justify-center gap-1 rounded-full text-xs font-semibold !text-charcoal-600 hover:!text-charcoal-900 transition-colors cursor-pointer select-none"
                 title="Сбросить фильтры"
+                aria-label="Сбросить фильтры"
               >
                 <X className="h-3.5 w-3.5" />
                 <span className="hidden sm:inline">Сброс</span>
