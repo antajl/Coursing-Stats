@@ -1,9 +1,18 @@
 {
-  "timestamp": "2026-11-16T18:05:55.351Z",
+  "timestamp": "2026-11-16T18:18:47.295Z",
   "totalProcessed": 50,
   "totalQueue": 400,
   "foundSport": 0,
-  "foundShow": 0,
-  "totalFound": 0,
-  "results": []
+  "foundShow": 1,
+  "totalFound": 1,
+  "results": [
+    {
+      "domain": "show",
+      "id": "213162119",
+      "breed": "ХАСКИ",
+      "name_lat": "ZORRO MARRAMBADZ HE",
+      "name_ru": "",
+      "url": "https://siberianhusky.breedarchive.com/animal/view/zorro-marrambadzhe-8b98383e-c1ee-4d0a-a0da-204a72c0dca4"
+    }
+  ]
 }
