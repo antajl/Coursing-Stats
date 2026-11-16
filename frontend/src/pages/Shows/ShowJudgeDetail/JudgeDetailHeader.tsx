@@ -172,6 +172,20 @@ export function JudgeDetailHeader({
   const sitePctNumber =
     baselineExcellentRate != null ? baselineExcellentRate * 100 : null
 
+  const puppyDiff =
+    periodPuppyStrictness.puppyRate != null
+      ? (periodPuppyStrictness.puppyRate - 0.94) * 100
+      : null
+
+  const puppyVerdictHint =
+    puppyDiff != null
+      ? puppyDiff > 0.5
+        ? `Ставит «оч. персп.» чаще среднего по сайту на ${puppyDiff.toFixed(1)} п.п.`
+        : puppyDiff < -0.5
+          ? `Ставит «оч. персп.» реже среднего по сайту на ${Math.abs(puppyDiff).toFixed(1)} п.п.`
+          : 'Ставит «оч. персп.» на уровне среднего по сайту'
+      : null
+
   return (
     <div className="space-y-4 sm:space-y-5">
       {/* 1. Карточка профиля судьи: фото, имя, реестровые данные РКФ и стиль экспертизы */}
@@ -253,7 +267,11 @@ export function JudgeDetailHeader({
                   title={`Взрослые классы (CAC): ${strictnessBadge.detail}`}
                 >
                   <span className={`h-1.5 w-1.5 rounded-full ${strictnessBadge.dotClass}`} />
-                  <span>{strictnessBadge.label} (взрослые)</span>
+                  <span>
+                    {strictnessBadge.tone !== 'unknown'
+                      ? `${strictnessBadge.label} к взрослым`
+                      : strictnessBadge.label}
+                  </span>
                 </span>
                 {periodPuppyStrictness.puppyGraded >= 15 && (
                   <span
@@ -458,14 +476,25 @@ export function JudgeDetailHeader({
             ) : (
               <div className="w-full">
                 <div className="rounded-xl border border-old-money-200/80 bg-cream-50/40 p-3 sm:p-3.5">
-                  <div className="flex items-center justify-between text-xs font-semibold text-charcoal-600 mb-2">
-                    <span className="flex items-center gap-1.5">
-                      <span className={`h-2 w-2 rounded-full ${puppyStrictnessBadge.dotClass}`} />
-                      Эксперт к щенкам: <strong className="text-charcoal-900">{puppyPct}</strong>
-                      <span className="text-charcoal-400 font-normal">({puppyStrictnessBadge.label})</span>
-                    </span>
-                    <span className="text-charcoal-500">
-                      В среднем по щенкам в РКФ: <strong className="text-charcoal-800">94.0%</strong>
+                  <div className="grid grid-cols-1 md:grid-cols-[auto_1fr_auto] items-center gap-x-2 gap-y-1 text-xs text-charcoal-600 mb-2">
+                    <div className="flex items-center justify-between md:justify-start gap-1.5 font-semibold shrink-0">
+                      <span className="flex items-center gap-1.5">
+                        <span className={`h-2 w-2 rounded-full ${puppyStrictnessBadge.dotClass}`} />
+                        Эксперт: <strong className="text-charcoal-900">{puppyPct}</strong>
+                      </span>
+                      <span className="md:hidden text-charcoal-500 font-medium">
+                        РКФ: <strong className="text-charcoal-800">94.0%</strong>
+                      </span>
+                    </div>
+
+                    {puppyVerdictHint && (
+                      <span className="text-[11px] md:text-xs text-charcoal-500 font-normal text-center truncate">
+                        {puppyVerdictHint}
+                      </span>
+                    )}
+
+                    <span className="hidden md:inline-block text-charcoal-500 font-semibold shrink-0 text-right">
+                      В среднем по РКФ: <strong className="text-charcoal-800">94.0%</strong>
                     </span>
                   </div>
 
@@ -496,15 +525,11 @@ export function JudgeDetailHeader({
                     />
                   </div>
 
-                  <div className="mt-2 flex justify-between text-[11px] font-medium text-charcoal-500">
+                  <div className="mt-1.5 flex justify-between text-[11px] font-medium text-charcoal-500">
                     <span className="text-rose-700">Строгий &lt;90%</span>
                     <span className="text-amber-700">Умеренный 90–95%</span>
                     <span className="text-emerald-700">Лояльный ≥95%</span>
                   </div>
-
-                  <p className="mt-2.5 text-center text-xs text-charcoal-500">
-                    Калибровка по щенкам и бэби: эксперт поставил «Очень перспективный» в {puppyPct} случаев ({periodPuppyStrictness.puppyGraded} щенков)
-                  </p>
                 </div>
               </div>
             )
@@ -517,13 +542,27 @@ export function JudgeDetailHeader({
             ) : (
               <div className="w-full">
                 <div className="rounded-xl border border-old-money-200/80 bg-cream-50/40 p-3 sm:p-3.5">
-                  <div className="flex items-center justify-between text-xs font-semibold text-charcoal-600 mb-2">
-                    <span className="flex items-center gap-1.5">
-                      <span className={`h-2 w-2 rounded-full ${strictnessBadge.dotClass}`} />
-                      Эксперт: <strong className="text-charcoal-900">{excellentPct}</strong>
-                    </span>
+                  <div className="grid grid-cols-1 md:grid-cols-[auto_1fr_auto] items-center gap-x-2 gap-y-1 text-xs text-charcoal-600 mb-2">
+                    <div className="flex items-center justify-between md:justify-start gap-1.5 font-semibold shrink-0">
+                      <span className="flex items-center gap-1.5">
+                        <span className={`h-2 w-2 rounded-full ${strictnessBadge.dotClass}`} />
+                        Эксперт: <strong className="text-charcoal-900">{excellentPct}</strong>
+                      </span>
+                      {sitePct && (
+                        <span className="md:hidden text-charcoal-500 font-medium">
+                          РКФ: <strong className="text-charcoal-800">{sitePct}</strong>
+                        </span>
+                      )}
+                    </div>
+
+                    {strictnessVerdict?.hint && (
+                      <span className="text-[11px] md:text-xs text-charcoal-500 font-normal text-center truncate">
+                        {strictnessVerdict.hint}
+                      </span>
+                    )}
+
                     {sitePct && (
-                      <span className="text-charcoal-500">
+                      <span className="hidden md:inline-block text-charcoal-500 font-semibold shrink-0 text-right">
                         В среднем по РКФ: <strong className="text-charcoal-800">{sitePct}</strong>
                       </span>
                     )}
@@ -562,16 +601,11 @@ export function JudgeDetailHeader({
                     )}
                   </div>
 
-                  <div className="mt-2 flex justify-between text-[11px] font-medium text-charcoal-500">
+                  <div className="mt-1.5 flex justify-between text-[11px] font-medium text-charcoal-500">
                     <span className="text-rose-700">Строгий &lt;88%</span>
                     <span className="text-amber-700">Умеренный 88–95%</span>
                     <span className="text-emerald-700">Лояльный ≥96%</span>
                   </div>
-
-                  <p className="mt-2.5 text-center text-xs text-charcoal-500">
-                    {strictnessVerdict?.hint ??
-                      'Полоса — доля «отлично» у судьи; темная черта — среднее по выставкам'}
-                  </p>
                 </div>
               </div>
             )

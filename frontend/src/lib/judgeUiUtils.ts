@@ -154,7 +154,7 @@ export function getPuppyStrictnessBadge(
 
   if (pct >= 99) {
     return {
-      label: 'Лоялен к щенкам',
+      label: 'Лояльный к щенкам',
       detail: `${pct}% «оч. персп.»`,
       tone: 'soft',
       badgeClass: 'bg-emerald-50 text-emerald-800 border-emerald-200/80',
@@ -177,7 +177,7 @@ export function getPuppyStrictnessBadge(
   }
 
   return {
-    label: 'Строг к щенкам',
+    label: 'Строгий к щенкам',
     detail: `${pct}% «оч. персп.»`,
     tone: 'strict',
     badgeClass: 'bg-rose-50 text-rose-800 border-rose-200/80',
