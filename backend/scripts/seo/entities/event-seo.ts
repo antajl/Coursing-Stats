@@ -291,9 +291,8 @@ export function exhibitionMeta(entry: {
   const city = entry.city || ''
   const n = entry.dogCount
 
-  const datePart = date ? ` — ${date}` : ''
-  const cityPart = city ? ` (${city})` : ''
-  const title = `${headline}${datePart}${cityPart}: результаты выставки собак РКФ, протокол рингов и судьи | Курсинг Статс`
+  const datePart = date ? `, ${date}` : ''
+  const title = `${headline}${datePart} — результаты и судьи РКФ | Курсинг Статс`
 
   const locationText = city ? `г. ${city}` : null
   const dateText = date ? `дата: ${date}` : null
