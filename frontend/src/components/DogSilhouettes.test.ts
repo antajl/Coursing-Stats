@@ -41,11 +41,32 @@ describe('resolveSilhouetteBreed', () => {
     expect(resolveSilhouetteBreed('Бигль')).toBe('beagle');
     expect(resolveSilhouetteBreed('Бордер колли')).toBe('bordercollie');
     expect(resolveSilhouetteBreed('Доберман')).toBe('dobermann');
+
+    // Batch 4 (14 breeds)
+    expect(resolveSilhouetteBreed('Немецкая овчарка')).toBe('germanshepherd');
+    expect(resolveSilhouetteBreed('Лабрадор ретривер')).toBe('labradorretriever');
+    expect(resolveSilhouetteBreed('Золотистый ретривер')).toBe('goldenretriever');
+    expect(resolveSilhouetteBreed('Австралийская овчарка')).toBe('aussieshepherd');
+    expect(resolveSilhouetteBreed('Сибирский хаски')).toBe('siberianhusky');
+    expect(resolveSilhouetteBreed('Сиба-ину')).toBe('shibainu');
+    expect(resolveSilhouetteBreed('Ротвейлер')).toBe('rottweiler');
+    expect(resolveSilhouetteBreed('Бультерьер стандартный')).toBe('bullterrier');
+    expect(resolveSilhouetteBreed('Французский бульдог')).toBe('frenchbulldog');
+    expect(resolveSilhouetteBreed('Мопс')).toBe('pug');
+    expect(resolveSilhouetteBreed('Кавалер кинг чарльз спаниель')).toBe('cavalierkingcharles');
+    expect(resolveSilhouetteBreed('Континентальный той спаниель папийон')).toBe('papillon');
+    expect(resolveSilhouetteBreed('Шелти')).toBe('sheltie');
+    expect(resolveSilhouetteBreed('Чихуахуа')).toBe('chihuahua');
+
+    // Batch 5 (Dalmatian & Poodle)
+    expect(resolveSilhouetteBreed('Далматин')).toBe('dalmatian');
+    expect(resolveSilhouetteBreed('Пудель стандартный черный')).toBe('poodle');
+    expect(resolveSilhouetteBreed('Королевский пудель')).toBe('poodle');
   });
 
   it('returns null for breeds that have not been generated yet (leaving empty frame)', () => {
-    expect(resolveSilhouetteBreed('Немецкая овчарка')).toBeNull();
-    expect(resolveSilhouetteBreed('Сибирский хаски')).toBeNull();
+    expect(resolveSilhouetteBreed('Пекинес')).toBeNull();
+    expect(resolveSilhouetteBreed('Бишон фризе')).toBeNull();
     expect(resolveSilhouetteBreed('Самоед')).toBeNull();
     expect(resolveSilhouetteBreed(null)).toBeNull();
     expect(resolveSilhouetteBreed(undefined)).toBeNull();

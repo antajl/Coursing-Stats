@@ -200,11 +200,11 @@ export default defineConfig(({ mode }) => {
         // connect-src: ws/wss for HMR websocket (same-origin + explicit for some browsers).
         'Content-Security-Policy':
           "default-src 'self'; " +
-          "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://coursing-stats.ru https://www.googletagmanager.com; " +
+          "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://coursing-stats.ru https://www.googletagmanager.com https://mc.yandex.ru; " +
           "style-src 'self' 'unsafe-inline' https://coursing-stats.ru https://fonts.googleapis.com; " +
-          "img-src 'self' data: blob: https://coursing-stats.ru https://*.googleusercontent.com https://*.gstatic.com https://*.breedarchive.com; " +
+          "img-src 'self' data: blob: https://coursing-stats.ru https://*.googleusercontent.com https://*.gstatic.com https://*.breedarchive.com https://mc.yandex.ru; " +
           "font-src 'self' https://fonts.gstatic.com; " +
-          "connect-src 'self' ws: wss: https://coursing-stats.ru https://api.telegram.org https://auth-worker.antajltube.workers.dev https://www.googletagmanager.com; " +
+          "connect-src 'self' ws: wss: https://coursing-stats.ru https://api.telegram.org https://auth-worker.antajltube.workers.dev https://www.googletagmanager.com https://mc.yandex.ru; " +
           "frame-src 'self' https://coursing-stats.ru https://t.me; " +
           "frame-ancestors 'self' https://coursing-stats.ru; " +
           "worker-src 'self' blob:; " +

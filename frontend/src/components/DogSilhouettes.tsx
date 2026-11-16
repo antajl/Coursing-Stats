@@ -46,7 +46,9 @@ export type SilhouetteBreedKey =
   | 'cavalierkingcharles'
   | 'papillon'
   | 'sheltie'
-  | 'chihuahua';
+  | 'chihuahua'
+  | 'dalmatian'
+  | 'poodle';
 
 /**
  * Resolves a raw or canonical breed string to an available vector silhouette key.
@@ -385,6 +387,22 @@ export const resolveSilhouetteBreed = (breed?: string | null): SilhouetteBreedKe
     lower.includes('chihuahua')
   ) {
     return 'chihuahua';
+  }
+
+  // 45. Dalmatian / Далматин
+  if (
+    canon.includes('ДАЛМАТИН') ||
+    canon.includes('ДОЛМАТИН') ||
+    lower.includes('далматин') ||
+    lower.includes('долматин') ||
+    lower.includes('dalmatian')
+  ) {
+    return 'dalmatian';
+  }
+
+  // 46. Poodle / Пудель (все разновидности: стандартный/королевский, малый, карликовый, той)
+  if (canon.includes('ПУДЕЛЬ') || lower.includes('пудель') || lower.includes('poodle')) {
+    return 'poodle';
   }
 
   // No silhouette available yet for this breed
