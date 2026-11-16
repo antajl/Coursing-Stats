@@ -28,6 +28,7 @@ verified: 2026-11-08
 | Show dog card | `shows/indexes/dog-details/{000-255}.json` (уже паки) |
 | History date sort | Даты `DD.MM.YYYY` обязаны сортироваться через ISO `toShowDateIso` / `sortShowHistory` (`show-dates.ts`); прямой `localeCompare` запрещен во избежание сортировки по дню месяца |
 | Show judge detail | `shows/indexes/judge-details/pack-*.json` (`byKey`) |
+| Show Judge Class Scope & Breed List Invariant | В карточке судьи (/shows/judges/:id) список пород и бэйджи количества строго соответствуют срезу («Взрослые», «Щенки», «Все»): щенки показывают точное число щенков (puppy_breeds / puppy_breed_counts) без фантомных взрослых; внутри спойлера породы (ShowJudgeBreedDogsList) работает lazy infinite scroll пачками по 30 собак через IntersectionObserver |
 | Identity | show dog id **≠** competition `dog_id` |
 | Calendar prod | `ui-flags.publicCalendars.shows: true` |
 | Env | Не требуются для рантайма сайта (Turso полностью удален; протоколы на S3) |
