@@ -746,6 +746,15 @@ function prerenderShowJudges(spaHtml: string): number {
         display_name?: string
         total_judged?: number
         unique_breeds?: number
+        excellent_rate?: number
+        city?: string
+        cert_number?: number | string
+        ranks?: string
+        total_dogs?: number
+        breeds?: string[]
+        by_year?: Record<string, number>
+        konura_url?: string
+        photo_url?: string
       }>
     | {
         judges?: Array<{
@@ -755,6 +764,15 @@ function prerenderShowJudges(spaHtml: string): number {
           display_name?: string
           total_judged?: number
           unique_breeds?: number
+          excellent_rate?: number
+          city?: string
+          cert_number?: number | string
+          ranks?: string
+          total_dogs?: number
+          breeds?: string[]
+          by_year?: Record<string, number>
+          konura_url?: string
+          photo_url?: string
         }>
       }
   >(path.join(ROOT, 'data/v1/shows/indexes/judges.json'))
@@ -782,6 +800,14 @@ function prerenderShowJudges(spaHtml: string): number {
       total_judged: j.total_judged,
       unique_breeds: j.unique_breeds,
       excellent_rate: j.excellent_rate,
+      city: j.city,
+      cert_number: j.cert_number,
+      ranks: j.ranks,
+      total_dogs: j.total_dogs,
+      breeds: j.breeds,
+      by_year: j.by_year,
+      konura_url: j.konura_url,
+      photo_url: j.photo_url,
     })
     const html = applyMetaToSpaShell(spaHtml, {
       title: meta.title,
