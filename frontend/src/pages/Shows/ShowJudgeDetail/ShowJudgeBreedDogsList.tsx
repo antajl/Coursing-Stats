@@ -1,7 +1,6 @@
 import { useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
-import RankBadge from '../../../components/RankBadge'
 import DogSexIcon from '../../../components/DogSexIcon'
 import ShowGradeChip from '../../../lib/ShowGradeChip'
 import DoninoColumnPlaque, { DoninoColumnShell } from '../../SpeedRecords/DoninoColumnPlaque'
@@ -10,6 +9,7 @@ import { formatShowGradeDisplay } from '../../../../../backend/lib/show-grades'
 import { showJudgeMergeKeyFromRaw } from '../../../../../backend/lib/show-judge-name'
 import { canonicalBreed, formatBreedSentenceCase } from '../../../lib/breedMapping'
 import { getShowExhibition } from '../../../lib/staticData'
+import type { GradeScope } from '../../../components/ShowJudgeCard'
 
 export interface ShowJudgeBreedDogEntry {
   id: string | number
@@ -112,6 +112,51 @@ function formatDogCount(count: number): string {
   return `${count} собак`
 }
 
+function formatPuppyCount(count: number): string {
+  const mod10 = count % 10
+  const mod100 = count % 100
+  if (mod100 >= 11 && mod100 <= 14) return `${count} щенков`
+  if (mod10 === 1) return `${count} щенок`
+  if (mod10 >= 2 && mod10 <= 4) return `${count} щенка`
+  return `${count} щенков`
+}
+
+export function isPuppyClassOrGrade(dogClass?: string, dogGrade?: string): boolean {
+  if (dogClass) {
+    const c = dogClass.toLowerCase().trim()
+    if (
+      c.includes('бэби') ||
+      c.includes('беби') ||
+      c.includes('baby') ||
+      c.includes('щенок') ||
+      c.includes('щенк') ||
+      c.includes('puppy') ||
+      c === 'б' ||
+      c === 'беб' ||
+      c === 'щен'
+    ) {
+      return true
+    }
+  }
+  if (dogGrade) {
+    const g = dogGrade.toUpperCase().trim()
+    if (
+      g.includes('ОП') ||
+      g.includes('ОЧ.ПЕРСП') ||
+      g.includes('ОЧЕНЬ ПЕРСПЕКТИВНЫЙ') ||
+      g.includes('VERY PROMISING') ||
+      g.includes('ПЕРСП') ||
+      g.includes('ПЕРСПЕКТИВНЫЙ') ||
+      g.includes('PROMISING') ||
+      g.includes('НЕПЕРСП') ||
+      g.includes('НЕ ПЕРСП')
+    ) {
+      return true
+    }
+  }
+  return false
+}
+
 function cleanDogName(rawName: string): { name: string; parsedCatalogNumber?: number } {
   let name = (rawName || '').trim()
   let parsedCatalogNumber: number | undefined
@@ -137,6 +182,8 @@ interface ShowJudgeBreedDogsListProps {
     breed_counts?: Record<string, number>
   }>
   searchQuery?: string
+  gradeScope?: GradeScope
+  embedded?: boolean
 }
 
 export function ShowJudgeBreedDogsList({
@@ -145,6 +192,8 @@ export function ShowJudgeBreedDogsList({
   breed,
   periodExhibitions,
   searchQuery = '',
+  gradeScope = 'adult',
+  embedded = false,
 }: ShowJudgeBreedDogsListProps) {
   const matchingExhibitions = useMemo(() => {
     return periodExhibitions.filter((ex) => {
@@ -213,62 +262,59 @@ export function ShowJudgeBreedDogsList({
     staleTime: 5 * 60 * 1000,
   })
 
+  const scopeFilteredDogs = useMemo(() => {
+    if (!gradeScope || gradeScope === 'all') return dogs
+    if (gradeScope === 'puppy') {
+      return dogs.filter((d) => isPuppyClassOrGrade(d.class, d.grade))
+    }
+    return dogs.filter((d) => !isPuppyClassOrGrade(d.class, d.grade))
+  }, [dogs, gradeScope])
+
   const filteredDogs = useMemo(() => {
     const q = searchQuery.trim().toLowerCase()
-    if (!q) return dogs
-    return dogs.filter(
+    if (!q) return scopeFilteredDogs
+    return scopeFilteredDogs.filter(
       (d) =>
         d.dog_name.toLowerCase().includes(q) ||
         d.class?.toLowerCase().includes(q) ||
         d.owner?.toLowerCase().includes(q) ||
         String(d.catalog_number || '').includes(q),
     )
-  }, [dogs, searchQuery])
+  }, [scopeFilteredDogs, searchQuery])
 
-  return (
-    <DoninoColumnShell
-      plaque={
-        <DoninoColumnPlaque
-          asHeader
-          title={formatBreedSentenceCase(breed).toUpperCase()}
-          count={filteredDogs.length}
-          countLabel={formatDogCount(filteredDogs.length)}
-        />
-      }
-    >
+  const content = (
+    <div className={embedded ? 'bg-cream-50/25 border-t border-old-money-100/70' : ''}>
       {isLoading && (
-        <div className="flex flex-col items-center justify-center gap-2 py-8 text-xs text-charcoal-500">
-          <div className="h-6 w-6 animate-spin rounded-full border-2 border-old-money-300 border-t-camel-600" />
+        <div className="flex flex-col items-center justify-center gap-2 py-6 text-xs text-charcoal-500">
+          <div className="h-5 w-5 animate-spin rounded-full border-2 border-old-money-300 border-t-camel-600" />
           <span>Загрузка списка собак из каталогов РКФ...</span>
         </div>
       )}
 
       {!isLoading && filteredDogs.length === 0 && (
-        <div className="py-6 px-4 text-center text-xs text-charcoal-500">
+        <div className="py-5 px-4 text-center text-xs text-charcoal-500">
           {dogs.length === 0
             ? 'Подробный каталог с кличками собак по данной породе не найден в опубликованных протоколах РКФ.'
-            : `Собаки по запросу «${searchQuery}» не найдены`}
+            : searchQuery
+              ? `Собаки по запросу «${searchQuery}» не найдены`
+              : gradeScope === 'puppy'
+                ? `В ринге не найдено щенков и бэби по породе «${breed}»`
+                : `В ринге не найдено взрослых собак по породе «${breed}»`}
         </div>
       )}
 
       {!isLoading && filteredDogs.length > 0 && (
-        <div className="divide-y divide-cream-100/80">
+        <div className="divide-y divide-old-money-100/50">
           {filteredDogs.map((dog, idx) => {
-            const rank = idx + 1
             const dogProfileUrl = exhibitionDogProfilePath(dog.dog_name, dog.breed)
 
             return (
               <div
                 key={`${dog.exhibition_id}-${dog.catalog_number || dog.dog_name}-${idx}`}
-                className="flex flex-row items-center justify-between p-3 sm:p-3.5 hover:bg-cream-50/50 transition-colors"
+                className="flex flex-row items-center justify-between px-3.5 sm:px-4 py-2.5 sm:py-3 hover:bg-cream-100/50 transition-colors gap-3"
               >
-                {/* Left: Rank Badge */}
-                <div className="w-10 sm:w-12 shrink-0 flex items-center justify-center">
-                  <RankBadge rank={rank} />
-                </div>
-
-                {/* Center: Dog Info */}
-                <div className="min-w-0 flex-1 px-2.5 sm:px-3">
+                {/* Dog Info */}
+                <div className="min-w-0 flex-1">
                   <div className="flex items-center gap-1.5 min-w-0">
                     {dogProfileUrl ? (
                       <Link
@@ -317,6 +363,14 @@ export function ShowJudgeBreedDogsList({
                         </strong>
                       </span>
                     )}
+                    {dog.placement != null && dog.placement > 0 && (
+                      <span
+                        className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-camel-100 text-camel-900 border border-camel-300/80 leading-none shadow-3xs"
+                        title={`Место в классе: ${dog.placement}`}
+                      >
+                        {dog.placement} в классе
+                      </span>
+                    )}
                     {dog.title && (
                       <div className="flex flex-wrap items-center gap-1">
                         {dog.title
@@ -358,6 +412,29 @@ export function ShowJudgeBreedDogsList({
           })}
         </div>
       )}
+    </div>
+  )
+
+  if (embedded) {
+    return content
+  }
+
+  return (
+    <DoninoColumnShell
+      plaque={
+        <DoninoColumnPlaque
+          asHeader
+          title={formatBreedSentenceCase(breed).toUpperCase()}
+          count={filteredDogs.length}
+          countLabel={
+            gradeScope === 'puppy'
+              ? formatPuppyCount(filteredDogs.length)
+              : formatDogCount(filteredDogs.length)
+          }
+        />
+      }
+    >
+      {content}
     </DoninoColumnShell>
   )
 }

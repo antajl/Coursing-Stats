@@ -427,6 +427,7 @@ export default function ShowJudges({ urlYear }: ShowJudgesProps = {}) {
                       city: judge.city,
                       ranks: judge.ranks,
                       breedChips: judge.breeds?.slice(0, 3),
+                      photo_url: judge.photo_url,
                     }}
                     variant="embedded"
                   />

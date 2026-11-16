@@ -1,5 +1,10 @@
-import { Award, Layers, Calendar, CheckCircle2, MapPin } from 'lucide-react'
+import { useState, useEffect } from 'react'
+import { createPortal } from 'react-dom'
+import { Award, Layers, Calendar, CheckCircle2, MapPin, Maximize2, X, ArrowUpRight, ExternalLink } from 'lucide-react'
 import JudgeYearDropdown from '../../../components/ui/JudgeYearDropdown'
+import ShowJudgeGradeScopeDropdown from '../ShowJudgeGradeScopeDropdown'
+import ShowJudgesRatingHint from '../ShowJudgesRatingHint'
+import type { GradeScope } from '../../../components/ShowJudgeCard'
 import {
   GRADE_TILES,
   type GradeFilterKey,
@@ -84,6 +89,8 @@ export function JudgeDetailHeader({
   yearParam,
   availableYears,
   onYearChange,
+  gradeScope,
+  onGradeScopeChange,
   periodExhibitionCount,
   periodBreedCount,
   periodGrades,
@@ -103,14 +110,20 @@ export function JudgeDetailHeader({
   city,
   ranks,
   certNumber,
+  photoUrl,
+  konuraUrl,
 }: {
   judgeName: string
   yearParam: string
   availableYears: string[]
   onYearChange: (year: string) => void
+  gradeScope: GradeScope
+  onGradeScopeChange: (scope: GradeScope) => void
   city?: string
   ranks?: string
   certNumber?: number
+  photoUrl?: string | null
+  konuraUrl?: string | null
   periodExhibitionCount: number
   periodBreedCount: number
   periodGrades: Record<GradeFilterKey, number>
@@ -128,6 +141,22 @@ export function JudgeDetailHeader({
   onSelectBreeds: () => void
   onToggleGrade: (key: GradeFilterKey) => void
 }) {
+  const [isPhotoOpen, setIsPhotoOpen] = useState(false)
+
+  useEffect(() => {
+    if (!isPhotoOpen) return
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setIsPhotoOpen(false)
+    }
+    const prevOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    window.addEventListener('keydown', handleKeyDown)
+    return () => {
+      document.body.style.overflow = prevOverflow
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [isPhotoOpen])
+
   const displayName = formatJudgeDisplayName(judgeName)
   const strictnessBadge = getStrictnessBadge(
     periodStrictness.excellent_rate,
@@ -149,63 +178,108 @@ export function JudgeDetailHeader({
     <div className="min-w-0 rounded-2xl border border-old-money-200/90 bg-white p-4 sm:p-6 md:p-8 shadow-xs">
       {/* Top Profile Header */}
       <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
-        <div className="min-w-0 flex-1">
-          <div className="flex flex-wrap items-center gap-2 mb-1.5">
-            <span className="inline-flex items-center gap-1 rounded-md border border-camel-200/90 bg-cream-100/90 px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wider text-camel-800">
-              <Award className="h-3 w-3 text-camel-600" />
-              Судья РКФ / FCI
-            </span>
-
-            {city && (
-              <span className="inline-flex items-center gap-1 rounded-md border border-old-money-200/80 bg-cream-50/80 px-2 py-0.5 text-[11px] font-medium text-charcoal-700">
-                <MapPin className="h-3 w-3 text-camel-700" />
-                {city}
-              </span>
-            )}
-
-            {certNumber && (
-              <span className="inline-flex items-center gap-1 rounded-md border border-camel-200/90 bg-cream-100/90 px-2 py-0.5 text-[11px] font-semibold text-camel-800">
-                РКФ № {certNumber}
-              </span>
-            )}
-
-            {ranks && (
-              <span className="inline-flex items-center gap-1 rounded-md border border-camel-200/70 bg-cream-100/70 px-2 py-0.5 text-[11px] font-medium text-camel-900">
-                {ranks}
-              </span>
-            )}
-            <span
-              className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-0.5 text-xs font-semibold tracking-tight ${strictnessBadge.badgeClass}`}
-              title={`Взрослые классы (CAC): ${strictnessBadge.detail}`}
+        {/* Left: Avatar + Details */}
+        <div className="flex items-start gap-4 sm:gap-5 md:gap-6 min-w-0 flex-1">
+          {photoUrl && (
+            <button
+              type="button"
+              onClick={() => setIsPhotoOpen(true)}
+              className="group relative h-20 w-20 sm:h-24 sm:w-24 md:h-28 md:w-28 shrink-0 overflow-hidden rounded-2xl border border-cream-200/90 bg-cream-50/60 shadow-xs transition-all hover:border-camel-400 hover:shadow-sm focus-visible:outline-hidden cursor-pointer"
+              aria-label={`Увеличить фото ${displayName}`}
+              title="Нажмите, чтобы открыть фото в полном размере"
             >
-              <span className={`h-1.5 w-1.5 rounded-full ${strictnessBadge.dotClass}`} />
-              <span>{strictnessBadge.label} (взрослые)</span>
-            </span>
-            {periodPuppyStrictness.puppyGraded >= 15 && (
-              <span
-                className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-0.5 text-xs font-semibold tracking-tight ${puppyStrictnessBadge.badgeClass}`}
-                title={`Щенки и бэби: ${puppyStrictnessBadge.detail}`}
-              >
-                <span className={`h-1.5 w-1.5 rounded-full ${puppyStrictnessBadge.dotClass}`} />
-                <span>{puppyStrictnessBadge.label}</span>
+              <img
+                src={photoUrl}
+                alt={displayName}
+                referrerPolicy="no-referrer"
+                className="h-full w-full object-cover object-[center_20%] transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
+                onError={(e) => {
+                  const target = e.currentTarget
+                  if (target.parentElement) target.parentElement.style.display = 'none'
+                }}
+              />
+              <span className="pointer-events-none absolute bottom-1.5 right-1.5 rounded-md bg-charcoal-900/60 p-1 text-white opacity-0 transition-opacity group-hover:opacity-100 backdrop-blur-xs">
+                <Maximize2 className="h-3 w-3" aria-hidden />
               </span>
+            </button>
+          )}
+
+          <div className="min-w-0 flex-1">
+            <div className="flex flex-wrap items-center gap-2 mb-1.5">
+              <span className="inline-flex items-center gap-1 rounded-md border border-camel-200/90 bg-cream-100/90 px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wider text-camel-800">
+                <Award className="h-3 w-3 text-camel-600" />
+                Судья РКФ / FCI
+              </span>
+
+              {city && (
+                <span className="inline-flex items-center gap-1 rounded-md border border-old-money-200/80 bg-cream-50/80 px-2 py-0.5 text-[11px] font-medium text-charcoal-700">
+                  <MapPin className="h-3 w-3 text-camel-700" />
+                  {city}
+                </span>
+              )}
+
+              {certNumber && (
+                <span className="inline-flex items-center gap-1 rounded-md border border-camel-200/90 bg-cream-100/90 px-2 py-0.5 text-[11px] font-semibold text-camel-800">
+                  РКФ № {certNumber}
+                </span>
+              )}
+
+              {ranks && (
+                <span className="inline-flex items-center gap-1 rounded-md border border-camel-200/70 bg-cream-100/70 px-2 py-0.5 text-[11px] font-medium text-camel-900">
+                  {ranks}
+                </span>
+              )}
+              <span
+                className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-0.5 text-xs font-semibold tracking-tight ${strictnessBadge.badgeClass}`}
+                title={`Взрослые классы (CAC): ${strictnessBadge.detail}`}
+              >
+                <span className={`h-1.5 w-1.5 rounded-full ${strictnessBadge.dotClass}`} />
+                <span>{strictnessBadge.label} (взрослые)</span>
+              </span>
+              {periodPuppyStrictness.puppyGraded >= 15 && (
+                <span
+                  className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-0.5 text-xs font-semibold tracking-tight ${puppyStrictnessBadge.badgeClass}`}
+                  title={`Щенки и бэби: ${puppyStrictnessBadge.detail}`}
+                >
+                  <span className={`h-1.5 w-1.5 rounded-full ${puppyStrictnessBadge.dotClass}`} />
+                  <span>{puppyStrictnessBadge.label}</span>
+                </span>
+              )}
+            </div>
+            <h1 className="text-2xl font-bold tracking-tight text-charcoal-900 sm:text-3xl line-clamp-2">
+              {displayName}
+            </h1>
+
+            {konuraUrl && (
+              <div className="mt-2 flex items-center gap-2 text-xs text-charcoal-600 font-medium">
+                <a
+                  href={konuraUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-camel-700 hover:text-camel-900 hover:underline transition-colors"
+                >
+                  <span>Отзывы на Konura.info</span>
+                  <ArrowUpRight className="h-3 w-3 text-camel-600" aria-hidden />
+                </a>
+              </div>
             )}
           </div>
-          <h1 className="text-2xl font-bold tracking-tight text-charcoal-900 sm:text-3xl line-clamp-2">
-            {displayName}
-          </h1>
         </div>
 
-        {/* Year Filter */}
-        <div className="flex items-center justify-between sm:justify-end gap-2 shrink-0 w-full sm:w-auto pt-2 border-t border-old-money-100/70 sm:border-0 sm:pt-0">
-          <span className="text-xs font-semibold uppercase tracking-wider text-charcoal-400 sm:hidden">
-            Период:
-          </span>
+        {/* Year, Scope, and Info Filters */}
+        <div className="flex flex-wrap items-center justify-between sm:justify-end gap-1.5 sm:gap-2 shrink-0 w-full sm:w-auto pt-2 border-t border-old-money-100/70 sm:border-0 sm:pt-0">
+          <ShowJudgeGradeScopeDropdown
+            gradeScope={gradeScope}
+            onGradeScopeChange={onGradeScopeChange}
+          />
           <JudgeYearDropdown
             value={yearParam}
             onChange={onYearChange}
             availableYears={availableYears}
           />
+          <ShowJudgesRatingHint />
         </div>
       </div>
 
@@ -214,7 +288,7 @@ export function JudgeDetailHeader({
         <button
           type="button"
           onClick={onSelectExhibitions}
-          className="group flex items-center justify-between rounded-xl border border-old-money-200/80 bg-cream-50/50 p-3.5 sm:p-4 text-left transition-all hover:border-camel-300 hover:bg-cream-100/70 hover:shadow-2xs"
+          className="group flex items-center justify-between rounded-xl border border-old-money-200/80 bg-cream-50/50 p-3.5 sm:p-4 text-left transition-all hover:border-camel-300 hover:bg-cream-100/70 hover:shadow-2xs cursor-pointer"
         >
           <div>
             <p className="text-xs font-semibold uppercase tracking-wider text-charcoal-500">
@@ -232,7 +306,7 @@ export function JudgeDetailHeader({
         <button
           type="button"
           onClick={onSelectBreeds}
-          className="group flex items-center justify-between rounded-xl border border-old-money-200/80 bg-cream-50/50 p-3.5 sm:p-4 text-left transition-all hover:border-camel-300 hover:bg-cream-100/70 hover:shadow-2xs"
+          className="group flex items-center justify-between rounded-xl border border-old-money-200/80 bg-cream-50/50 p-3.5 sm:p-4 text-left transition-all hover:border-camel-300 hover:bg-cream-100/70 hover:shadow-2xs cursor-pointer"
         >
           <div>
             <p className="text-xs font-semibold uppercase tracking-wider text-charcoal-500">
@@ -247,11 +321,25 @@ export function JudgeDetailHeader({
           </div>
         </button>
 
-        <div className="flex items-center justify-between rounded-xl border border-old-money-200/80 bg-cream-50/50 p-3.5 sm:p-4 text-left">
+        <button
+          type="button"
+          onClick={() => onGradeScopeChange(gradeScope === 'adult' ? 'all' : 'adult')}
+          className={`group flex items-center justify-between rounded-xl border p-3.5 sm:p-4 text-left transition-all cursor-pointer ${
+            gradeScope === 'adult'
+              ? 'border-camel-400 bg-camel-50/70 shadow-2xs ring-1 ring-camel-400/40'
+              : 'border-old-money-200/80 bg-cream-50/50 hover:border-camel-300 hover:bg-cream-100/70 hover:shadow-2xs'
+          }`}
+          title="Фильтровать по взрослым классам (CAC)"
+        >
           <div>
-            <p className="text-xs font-semibold uppercase tracking-wider text-charcoal-500">
-              Взрослые классы
-            </p>
+            <div className="flex items-center gap-1.5">
+              <p className="text-xs font-semibold uppercase tracking-wider text-charcoal-500">
+                Взрослые классы
+              </p>
+              {gradeScope === 'adult' && (
+                <span className="inline-block h-1.5 w-1.5 rounded-full bg-camel-600" />
+              )}
+            </div>
             <div className="mt-1 flex items-baseline gap-1.5">
               <p className={`text-2xl sm:text-3xl font-bold tabular-nums ${strictnessBadge.textClass}`}>
                 {excellentPct ? `${excellentPct}` : '—'}
@@ -264,16 +352,30 @@ export function JudgeDetailHeader({
               {periodStrictness.graded > 0 ? `${periodStrictness.graded.toLocaleString('ru-RU')} оценок` : 'Нет оценок'}
             </p>
           </div>
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-cream-200/60 text-camel-700">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-cream-200/60 text-camel-700 group-hover:bg-camel-200/60 transition-colors">
             <CheckCircle2 className="h-5 w-5" />
           </div>
-        </div>
+        </button>
 
-        <div className="flex items-center justify-between rounded-xl border border-old-money-200/80 bg-cream-50/50 p-3.5 sm:p-4 text-left">
+        <button
+          type="button"
+          onClick={() => onGradeScopeChange(gradeScope === 'puppy' ? 'all' : 'puppy')}
+          className={`group flex items-center justify-between rounded-xl border p-3.5 sm:p-4 text-left transition-all cursor-pointer ${
+            gradeScope === 'puppy'
+              ? 'border-camel-400 bg-camel-50/70 shadow-2xs ring-1 ring-camel-400/40'
+              : 'border-old-money-200/80 bg-cream-50/50 hover:border-camel-300 hover:bg-cream-100/70 hover:shadow-2xs'
+          }`}
+          title="Фильтровать по щенкам и бэби"
+        >
           <div>
-            <p className="text-xs font-semibold uppercase tracking-wider text-charcoal-500">
-              Щенки и бэби
-            </p>
+            <div className="flex items-center gap-1.5">
+              <p className="text-xs font-semibold uppercase tracking-wider text-charcoal-500">
+                Щенки и бэби
+              </p>
+              {gradeScope === 'puppy' && (
+                <span className="inline-block h-1.5 w-1.5 rounded-full bg-camel-600" />
+              )}
+            </div>
             <div className="mt-1 flex items-baseline gap-1.5">
               <p className={`text-2xl sm:text-3xl font-bold tabular-nums ${puppyStrictnessBadge.textClass}`}>
                 {puppyPct ? `${puppyPct}` : '—'}
@@ -286,10 +388,10 @@ export function JudgeDetailHeader({
               {periodPuppyStrictness.puppyGraded > 0 ? `${periodPuppyStrictness.puppyGraded.toLocaleString('ru-RU')} щенков` : 'Нет щенков'}
             </p>
           </div>
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-cream-200/60 text-camel-700">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-cream-200/60 text-camel-700 group-hover:bg-camel-200/60 transition-colors">
             <Award className="h-5 w-5" />
           </div>
-        </div>
+        </button>
       </div>
 
       {/* Interactive Grade Tiles */}
@@ -409,6 +511,63 @@ export function JudgeDetailHeader({
         <p className="mt-3 text-xs text-amber-700">
           Для фильтра оценок по году нужна пересборка индексов (`build-show-indexes`).
         </p>
+      )}
+
+      {/* Full-size Photo Modal (Old Money portal) */}
+      {isPhotoOpen && photoUrl && createPortal(
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-charcoal-950/85 p-4 backdrop-blur-sm animate-in fade-in duration-200"
+          onClick={() => setIsPhotoOpen(false)}
+          role="dialog"
+          aria-modal="true"
+          aria-label={`Фотография судьи ${displayName}`}
+        >
+          <button
+            type="button"
+            onClick={() => setIsPhotoOpen(false)}
+            className="fixed z-[110] flex items-center justify-center gap-1.5 rounded-full border border-white/25 bg-charcoal-900/85 px-3 py-2 text-xs font-semibold text-white shadow-xl backdrop-blur-sm transition-transform active:scale-95 hover:bg-charcoal-800 cursor-pointer min-h-[44px] min-w-[44px]"
+            style={{
+              top: 'max(0.75rem, env(safe-area-inset-top, 0.75rem))',
+              right: 'max(0.75rem, env(safe-area-inset-right, 0.75rem))',
+            }}
+            aria-label="Закрыть фото"
+          >
+            <X className="h-5 w-5 text-white" aria-hidden />
+            <span className="hidden sm:inline">Закрыть</span>
+          </button>
+
+          <div
+            className="relative max-h-[85dvh] max-w-[95vw] sm:max-w-md flex flex-col items-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="overflow-hidden rounded-2xl border border-white/20 bg-charcoal-900 shadow-2xl">
+              <img
+                src={photoUrl}
+                alt={displayName}
+                referrerPolicy="no-referrer"
+                loading="eager"
+                decoding="async"
+                className="max-h-[72dvh] sm:max-h-[78dvh] w-auto max-w-full object-contain select-none block"
+              />
+            </div>
+
+            <div className="mt-3 flex items-center justify-between w-full text-xs text-white/80 px-1 gap-3">
+              <span className="font-medium text-white truncate">{displayName}</span>
+              {konuraUrl && (
+                <a
+                  href={konuraUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-camel-300 hover:text-white transition-colors shrink-0"
+                >
+                  <span>Konura.info</span>
+                  <ExternalLink className="h-3 w-3" aria-hidden />
+                </a>
+              )}
+            </div>
+          </div>
+        </div>,
+        document.body
       )}
     </div>
   )

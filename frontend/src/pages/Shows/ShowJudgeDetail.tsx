@@ -4,6 +4,7 @@ import { SEO } from '../../components/SEO'
 import { useShowJudgeDetails, useShowJudgesStrictnessBaseline } from '../../hooks/useStaticData'
 import { JsonLd, personSchema } from '../../components/JsonLd'
 import { resolveShowJudgeNumericId } from '../../lib/judgeIdMap.generated'
+import type { GradeScope } from '../../components/ShowJudgeCard'
 import {
   GRADE_TILES,
   buildStrictness,
@@ -30,12 +31,33 @@ export default function ShowJudgeDetail() {
   const yearParam = searchParams.get('year') || ''
   const gradeParam = (searchParams.get('grade') || '') as GradeFilterKey | ''
   const breedParam = searchParams.get('breed') || ''
+  const scopeParam = searchParams.get('scope') as GradeScope | null
+  const [gradeScope, setGradeScope] = useState<GradeScope>(() =>
+    scopeParam === 'puppy' || scopeParam === 'all' || scopeParam === 'adult' ? scopeParam : 'adult',
+  )
   const [listTab, setListTab] = useState<ListTab>('breeds')
   const [selectedBreed, setSelectedBreed] = useState(breedParam)
   const [showAllBreeds, setShowAllBreeds] = useState(false)
   const [showAllExhibitions, setShowAllExhibitions] = useState(false)
   const listsRef = useRef<HTMLDivElement>(null)
   const pendingScrollRef = useRef(false)
+
+  useEffect(() => {
+    if (scopeParam && (scopeParam === 'puppy' || scopeParam === 'all' || scopeParam === 'adult')) {
+      setGradeScope(scopeParam)
+    }
+  }, [scopeParam])
+
+  const handleGradeScopeChange = (scope: GradeScope) => {
+    setGradeScope(scope)
+    const next = new URLSearchParams(searchParams)
+    if (scope !== 'adult') {
+      next.set('scope', scope)
+    } else {
+      next.delete('scope')
+    }
+    setSearchParams(next, { replace: true })
+  }
 
   const handleBreedChange = (breed: string) => {
     setSelectedBreed(breed)
@@ -204,9 +226,13 @@ export default function ShowJudgeDetail() {
             city={judge.city}
             ranks={judge.ranks}
             certNumber={judge.cert_number}
+            photoUrl={judge.photo_url}
+            konuraUrl={judge.konura_url}
             yearParam={yearParam}
             availableYears={availableYears}
             onYearChange={setYear}
+            gradeScope={gradeScope}
+            onGradeScopeChange={handleGradeScopeChange}
             periodExhibitionCount={periodExhibitions.length}
             periodBreedCount={periodBreeds.length}
             periodGrades={periodGrades}
@@ -236,6 +262,8 @@ export default function ShowJudgeDetail() {
           judgeName={judge?.display_name || judge?.name}
           selectedBreed={selectedBreed}
           onSelectBreed={handleBreedChange}
+          gradeScope={gradeScope}
+          onGradeScopeChange={handleGradeScopeChange}
           gradeFilter={gradeFilter}
           showAllBreeds={showAllBreeds}
           showAllExhibitions={showAllExhibitions}

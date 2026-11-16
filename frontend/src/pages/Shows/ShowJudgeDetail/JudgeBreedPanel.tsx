@@ -1,9 +1,12 @@
-import { useMemo, useState } from 'react'
-import { ArrowLeft, ArrowUpDown, ChevronDown, ChevronRight, X } from 'lucide-react'
+import { useMemo, useState, useEffect } from 'react'
+import { ArrowUpDown, ChevronDown, X } from 'lucide-react'
 import ToolbarSearch from '../../../components/toolbar/ToolbarSearch'
 import BreedSearchDropdown from '../../../components/ui/BreedSearchDropdown'
+import ShowJudgeGradeScopeDropdown from '../ShowJudgeGradeScopeDropdown'
+import DoninoColumnPlaque, { DoninoColumnShell } from '../../SpeedRecords/DoninoColumnPlaque'
 import { formatBreedSentenceCase } from '../../../lib/breedMapping'
 import { toolbarPillTriggerClass } from '../../../lib/toolbar'
+import type { GradeScope } from '../../../components/ShowJudgeCard'
 import { ShowJudgeBreedDogsList } from './ShowJudgeBreedDogsList'
 
 type BreedRow = { breed: string; count: number }
@@ -24,6 +27,8 @@ export function JudgeBreedPanel({
   periodExhibitions,
   selectedBreed,
   onSelectBreed,
+  gradeScope = 'adult',
+  onGradeScopeChange,
 }: {
   breeds: BreedRow[]
   showAll: boolean
@@ -33,15 +38,32 @@ export function JudgeBreedPanel({
   periodExhibitions?: ExhibitionItem[]
   selectedBreed?: string
   onSelectBreed?: (breed: string) => void
+  gradeScope?: GradeScope
+  onGradeScopeChange?: (scope: GradeScope) => void
 }) {
   const [searchQuery, setSearchQuery] = useState('')
   const [sortMode, setSortMode] = useState<'count' | 'alpha'>('count')
+  const [expandedBreed, setExpandedBreed] = useState<string | null>(null)
   const [internalBreed, setInternalBreed] = useState('')
 
   const activeBreed = selectedBreed !== undefined ? selectedBreed : internalBreed
   const handleSelectBreed = (b: string) => {
     if (onSelectBreed) onSelectBreed(b)
     else setInternalBreed(b)
+    if (b) {
+      setExpandedBreed(b)
+    }
+  }
+
+  // When activeBreed changes externally, auto-expand it
+  useEffect(() => {
+    if (activeBreed) {
+      setExpandedBreed(activeBreed)
+    }
+  }, [activeBreed])
+
+  const toggleBreed = (breed: string) => {
+    setExpandedBreed((prev) => (prev === breed ? null : breed))
   }
 
   const breedNames = useMemo(() => breeds.map((b) => b.breed), [breeds])
@@ -58,8 +80,11 @@ export function JudgeBreedPanel({
 
   const filteredAndSorted = useMemo(() => {
     let list = breeds
+    if (activeBreed) {
+      list = list.filter((b) => b.breed.toLowerCase() === activeBreed.toLowerCase())
+    }
     const q = searchQuery.trim().toLowerCase()
-    if (q && !activeBreed) {
+    if (q) {
       list = list.filter((b) => b.breed.toLowerCase().includes(q))
     }
     return [...list].sort((a, b) => {
@@ -78,18 +103,18 @@ export function JudgeBreedPanel({
     )
   }
 
-  const isFiltering = Boolean(searchQuery.trim()) && !activeBreed
+  const isFiltering = Boolean(searchQuery.trim()) || Boolean(activeBreed)
   const displayed = isFiltering || showAll ? filteredAndSorted : filteredAndSorted.slice(0, 25)
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-3">
       {/* Controls: Search, Breed filter dropdown, and Sort */}
       <div className="flex items-center gap-2 overflow-x-auto no-scrollbar py-0.5 justify-between w-full min-w-0">
         <div className="flex items-center gap-1.5 flex-1 min-w-0">
           <ToolbarSearch
             value={searchQuery}
             onChange={setSearchQuery}
-            placeholder={activeBreed ? 'Поиск по кличке собаки...' : 'Найти породу...'}
+            placeholder="Найти породу..."
           />
 
           <div className="shrink-0 flex items-center gap-1">
@@ -123,110 +148,125 @@ export function JudgeBreedPanel({
               </button>
             )}
           </div>
+
+          {onGradeScopeChange && (
+            <ShowJudgeGradeScopeDropdown
+              gradeScope={gradeScope}
+              onGradeScopeChange={onGradeScopeChange}
+            />
+          )}
         </div>
 
-        {!activeBreed && (
-          <button
-            type="button"
-            onClick={() => setSortMode((prev) => (prev === 'count' ? 'alpha' : 'count'))}
-            className="shrink-0 inline-flex items-center gap-1.5 h-8 sm:h-9 px-3 rounded-lg border border-old-money-200 bg-white text-xs font-semibold text-charcoal-700 hover:bg-cream-50 hover:border-camel-300 transition-colors cursor-pointer"
-          >
-            <ArrowUpDown className="h-3.5 w-3.5 text-camel-600" />
-            <span>
-              {sortMode === 'count' ? 'По количеству (Топ)' : 'По алфавиту (А–Я)'}
-            </span>
-          </button>
-        )}
+        <button
+          type="button"
+          onClick={() => setSortMode((prev) => (prev === 'count' ? 'alpha' : 'count'))}
+          className="shrink-0 inline-flex items-center gap-1.5 h-8 sm:h-9 px-3 rounded-lg border border-old-money-200 bg-white text-xs font-semibold text-charcoal-700 hover:bg-cream-50 hover:border-camel-300 transition-colors cursor-pointer"
+        >
+          <ArrowUpDown className="h-3.5 w-3.5 text-camel-600" />
+          <span>
+            {sortMode === 'count' ? 'По количеству (Топ)' : 'По алфавиту (А–Я)'}
+          </span>
+        </button>
       </div>
 
-      {/* Main content: Selected breed dogs list OR table of all breeds */}
-      {activeBreed ? (
-        <div className="space-y-3">
-          <div className="flex items-center justify-between pb-1">
-            <button
-              type="button"
-              onClick={() => handleSelectBreed('')}
-              className="inline-flex items-center gap-1.5 text-xs font-semibold text-camel-700 hover:text-camel-900 transition-colors cursor-pointer"
-            >
-              <ArrowLeft className="h-3.5 w-3.5" />
-              <span>Назад ко всем породам ({breeds.length})</span>
-            </button>
-            <span className="text-xs text-charcoal-500">
-              Оценок в ринге:{' '}
-              <strong className="font-bold text-charcoal-900">
-                {breeds.find((b) => b.breed === activeBreed)?.count || '—'}
-              </strong>
-            </span>
-          </div>
-
-          <ShowJudgeBreedDogsList
-            judgeId={judgeId || ''}
-            judgeName={judgeName || ''}
-            breed={activeBreed}
-            periodExhibitions={periodExhibitions || []}
-            searchQuery={searchQuery}
-          />
-        </div>
-      ) : filteredAndSorted.length === 0 ? (
+      {filteredAndSorted.length === 0 ? (
         <div className="py-8 text-center text-sm text-charcoal-500">
           Породы по запросу «{searchQuery}» не найдены
         </div>
       ) : (
-        <div className="space-y-1.5">
-          <div className="hidden sm:flex items-center justify-between px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-charcoal-400">
-            <span>Порода (нажмите для просмотра собак)</span>
-            <span>Оценок в ринге</span>
-          </div>
-
-          <div className="divide-y divide-old-money-100/70 rounded-xl border border-old-money-200/80 bg-white overflow-hidden shadow-2xs">
+        /* Unified card shell with plaque header matching the site rating */
+        <DoninoColumnShell
+          plaque={
+            <DoninoColumnPlaque
+              asHeader
+              title="ПОРОДЫ В РИНГЕ"
+              count={filteredAndSorted.length}
+              countLabel={`${filteredAndSorted.length} пород`}
+            />
+          }
+        >
+          <div className="divide-y divide-old-money-100/70">
             {displayed.map((row) => {
+              const isExpanded = expandedBreed === row.breed
               const pct = maxBreedCount > 0 ? (row.count / maxBreedCount) * 100 : 0
-              const shareOfAll = totalEvaluations > 0 ? ((row.count / totalEvaluations) * 100).toFixed(1) : null
+              const shareOfAll =
+                totalEvaluations > 0 ? ((row.count / totalEvaluations) * 100).toFixed(1) : null
 
               return (
-                <button
-                  type="button"
-                  key={row.breed}
-                  onClick={() => handleSelectBreed(row.breed)}
-                  className="group relative flex w-full items-center justify-between gap-3 px-3.5 py-2.5 hover:bg-cream-50/80 transition-colors text-left cursor-pointer"
-                >
-                  {/* Subtle bar indicator */}
+                <div key={row.breed} className="transition-colors">
                   <div
-                    className="absolute inset-y-0 left-0 bg-camel-100/35 transition-all group-hover:bg-camel-200/40 pointer-events-none"
-                    style={{ width: `${Math.max(2, pct)}%` }}
-                  />
+                    role="button"
+                    tabIndex={0}
+                    aria-expanded={isExpanded}
+                    onClick={() => toggleBreed(row.breed)}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault()
+                        toggleBreed(row.breed)
+                      }
+                    }}
+                    className={`group relative flex items-center justify-between gap-3 px-3.5 py-3 transition-colors cursor-pointer select-none ${
+                      isExpanded ? 'bg-cream-100/60' : 'hover:bg-cream-50/60'
+                    }`}
+                  >
+                    {/* Subtle bar indicator */}
+                    <div
+                      className="absolute inset-y-0 left-0 bg-camel-100/35 transition-all group-hover:bg-camel-200/40 pointer-events-none"
+                      style={{ width: `${Math.max(2, pct)}%` }}
+                    />
 
-                  <div className="relative min-w-0 flex-1">
-                    <span className="font-medium text-sm text-charcoal-900 group-hover:text-camel-900 transition-colors">
-                      {formatBreedSentenceCase(row.breed)}
-                    </span>
-                    {shareOfAll && Number(shareOfAll) >= 1 && (
-                      <span className="ml-2 text-[11px] text-charcoal-400 font-normal">
-                        ({shareOfAll}%)
+                    <div className="relative min-w-0 flex-1 flex items-center gap-2.5">
+                      <ChevronDown
+                        className={`h-4 w-4 shrink-0 text-charcoal-400 transition-transform duration-200 ${
+                          isExpanded ? 'rotate-180 text-camel-700' : 'group-hover:text-charcoal-600'
+                        }`}
+                      />
+                      <span className="font-bold text-sm sm:text-[15px] text-charcoal-900 group-hover:text-camel-900 transition-colors">
+                        {formatBreedSentenceCase(row.breed)}
                       </span>
-                    )}
+                      {shareOfAll && Number(shareOfAll) >= 1 && (
+                        <span className="ml-1 text-[11px] text-charcoal-400 font-normal">
+                          ({shareOfAll}%)
+                        </span>
+                      )}
+                    </div>
+
+                    <div className="relative shrink-0 flex items-center gap-1.5">
+                      <span className="text-xs text-charcoal-500 font-medium hidden sm:inline">
+                        Оценок:
+                      </span>
+                      <span
+                        className="inline-flex min-w-[2.25rem] justify-center rounded-md bg-cream-100/90 px-2 py-0.5 text-xs font-bold tabular-nums text-camel-800"
+                        title="Количество оценок по породе"
+                      >
+                        {row.count}
+                      </span>
+                    </div>
                   </div>
 
-                  <div className="relative shrink-0 flex items-center gap-2">
-                    <span
-                      className="inline-flex min-w-[2.25rem] justify-center rounded-md bg-cream-100/90 px-2 py-0.5 text-xs font-bold tabular-nums text-camel-800"
-                      title="Количество оценок по породе"
-                    >
-                      {row.count}
-                    </span>
-                    <ChevronRight className="h-4 w-4 text-charcoal-400 group-hover:text-camel-700 transition-colors" />
-                  </div>
-                </button>
+                  {/* Spoiler: dogs evaluated under this breed */}
+                  {isExpanded && (
+                    <ShowJudgeBreedDogsList
+                      judgeId={judgeId || ''}
+                      judgeName={judgeName || ''}
+                      breed={row.breed}
+                      periodExhibitions={periodExhibitions || []}
+                      searchQuery={searchQuery}
+                      gradeScope={gradeScope}
+                      embedded={true}
+                    />
+                  )}
+                </div>
               )
             })}
           </div>
 
           {!isFiltering && filteredAndSorted.length > 25 && (
-            <div className="pt-2 text-center">
+            <div className="p-3 border-t border-old-money-100/70 text-center bg-cream-50/30">
               <button
                 type="button"
                 onClick={onToggleShowAll}
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-semibold text-camel-700 bg-cream-50 border border-old-money-200 hover:bg-cream-100 hover:text-camel-800 transition-colors cursor-pointer"
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-semibold text-camel-700 bg-white border border-old-money-200 hover:bg-cream-100 hover:text-camel-800 transition-colors cursor-pointer shadow-3xs"
               >
                 {showAll
                   ? 'Свернуть список пород'
@@ -234,7 +274,7 @@ export function JudgeBreedPanel({
               </button>
             </div>
           )}
-        </div>
+        </DoninoColumnShell>
       )}
     </div>
   )

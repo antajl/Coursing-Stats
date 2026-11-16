@@ -2,6 +2,7 @@ import type { RefObject } from 'react'
 import { JudgeBreedPanel } from './JudgeBreedPanel'
 import { JudgeExhibitionPanel } from './JudgeExhibitionPanel'
 import { GRADE_TILES, type GradeFilterKey, type ListTab } from './judgeDetailAggregates'
+import type { GradeScope } from '../../../components/ShowJudgeCard'
 
 type BreedRow = { breed: string; count: number }
 type ExhibitionRow = {
@@ -23,6 +24,8 @@ export function JudgeListsSection({
   judgeName,
   selectedBreed,
   onSelectBreed,
+  gradeScope,
+  onGradeScopeChange,
   gradeFilter,
   showAllBreeds,
   showAllExhibitions,
@@ -40,6 +43,8 @@ export function JudgeListsSection({
   judgeName?: string
   selectedBreed?: string
   onSelectBreed?: (breed: string) => void
+  gradeScope: GradeScope
+  onGradeScopeChange: (scope: GradeScope) => void
   gradeFilter: GradeFilterKey | null
   showAllBreeds: boolean
   showAllExhibitions: boolean
@@ -116,6 +121,8 @@ export function JudgeListsSection({
             periodExhibitions={periodExhibitions}
             selectedBreed={selectedBreed}
             onSelectBreed={onSelectBreed}
+            gradeScope={gradeScope}
+            onGradeScopeChange={onGradeScopeChange}
           />
         ) : (
           <JudgeExhibitionPanel

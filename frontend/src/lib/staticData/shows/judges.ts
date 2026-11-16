@@ -43,6 +43,8 @@ export interface ShowJudge {
   city?: string
   ranks?: string
   cert_number?: number
+  photo_url?: string | null
+  konura_url?: string | null
 }
 
 export interface ShowJudgeDetail {
@@ -58,6 +60,8 @@ export interface ShowJudgeDetail {
   city?: string
   ranks?: string
   cert_number?: number
+  photo_url?: string | null
+  konura_url?: string | null
   puppy_graded?: number
   puppy_rate?: number | null
   total_dogs?: number
