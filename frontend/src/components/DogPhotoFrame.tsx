@@ -53,19 +53,16 @@ export const DogPhotoFrame: React.FC<DogPhotoFrameProps> = ({
     );
   }
 
-  // Frame with verified breed vector silhouette
+  // Frame with verified breed vector silhouette (optically normalized portrait avatar)
   if (silhouetteKey) {
     return (
       <div
-        className={`group relative shrink-0 overflow-hidden rounded-2xl border border-cream-200/90 bg-[#FAF7F0] shadow-xs flex items-end justify-center select-none ${className}`}
+        className={`group relative shrink-0 overflow-hidden rounded-2xl border border-cream-200/90 bg-[#FAF7F0] shadow-xs flex items-center justify-center select-none ${className}`}
         title={breed ? `Порода: ${breed}` : 'Силуэт породы'}
         aria-label={breed ? `Силуэт породы ${breed}` : 'Силуэт породы'}
       >
-        {/* Subtle baseline floor for anatomical stack */}
-        <div className="pointer-events-none absolute bottom-2 sm:bottom-2.5 inset-x-2 sm:inset-x-2.5 h-px bg-cream-300/70" />
-
         {/* Vector silhouette */}
-        <div className="relative z-10 w-full h-full p-1.5 sm:p-2 flex items-center justify-center">
+        <div className="relative z-10 w-full h-full p-2 flex items-center justify-center">
           <DogBreedSilhouette
             breed={breed}
             className="w-full h-full text-camel-700/60 transition-transform duration-300 group-hover:scale-105"

@@ -12,7 +12,27 @@ export type SilhouetteBreedKey =
   | 'basenji'
   | 'welshcorgi'
   | 'deerhound'
-  | 'irishwolfhound';
+  | 'irishwolfhound'
+  | 'azawakh'
+  | 'amstaff'
+  | 'magyaragar'
+  | 'spanishgalgo'
+  | 'ibizanhound'
+  | 'canarianpodenco'
+  | 'chartpolski'
+  | 'rhodesianridgeback'
+  | 'sloughi'
+  | 'tazy'
+  | 'taigan'
+  | 'pharaohhound'
+  | 'hortayaborzaya'
+  | 'cirneco'
+  | 'dachshund'
+  | 'jackrussell'
+  | 'minpinscher'
+  | 'beagle'
+  | 'bordercollie'
+  | 'dobermann';
 
 /**
  * Resolves a raw or canonical breed string to an available vector silhouette key.
@@ -89,6 +109,149 @@ export const resolveSilhouetteBreed = (breed?: string | null): SilhouetteBreedKe
     return 'whippet';
   }
 
+  // 11. Azawakh / Азавак
+  if (canon.includes('АЗАВАК') || lower.includes('азавак') || lower.includes('azawakh')) {
+    return 'azawakh';
+  }
+
+  // 12. Amstaff / Американский стаффордширский терьер
+  if (
+    canon.includes('СТАФФОРДШИРСКИЙ ТЕРЬЕР') ||
+    lower.includes('амстафф') ||
+    lower.includes('amstaff') ||
+    (lower.includes('стаффорд') && !lower.includes('буль'))
+  ) {
+    return 'amstaff';
+  }
+
+  // 13. Magyar Agar / Венгерская борзая (Мадьяр-агар)
+  if (
+    canon.includes('ВЕНГЕРСКАЯ БОРЗАЯ') ||
+    lower.includes('мадьяр') ||
+    lower.includes('magyar') ||
+    lower.includes('венгерская борзая')
+  ) {
+    return 'magyaragar';
+  }
+
+  // 14. Spanish Galgo / Испанский гальго
+  if (canon.includes('ГАЛЬГО') || lower.includes('гальго') || lower.includes('galgo')) {
+    return 'spanishgalgo';
+  }
+
+  // 15. Ibizan Hound / Поденко ибиценко (Ивисская борзая)
+  if (
+    canon.includes('ИБИЦЕНКО') ||
+    lower.includes('ибиценко') ||
+    lower.includes('ивисская') ||
+    lower.includes('ibizan')
+  ) {
+    return 'ibizanhound';
+  }
+
+  // 16. Canarian Podenco / Поденко канарио
+  if (canon.includes('КАНАРИО') || lower.includes('канарио') || lower.includes('canarian')) {
+    return 'canarianpodenco';
+  }
+
+  // 17. Chart Polski / Польский харт (Польская борзая)
+  if (
+    canon.includes('ПОЛЬСКИЙ ХАРТ') ||
+    canon.includes('ПОЛЬСКАЯ БОРЗАЯ') ||
+    lower.includes('польский харт') ||
+    lower.includes('польская борзая') ||
+    lower.includes('chart polski')
+  ) {
+    return 'chartpolski';
+  }
+
+  // 18. Rhodesian Ridgeback / Родезийский риджбек
+  if (
+    canon.includes('РОДЕЗИЙСКИЙ') ||
+    lower.includes('родезийск') ||
+    lower.includes('ridgeback') ||
+    lower.includes('риджбек')
+  ) {
+    return 'rhodesianridgeback';
+  }
+
+  // 19. Sloughi / Слюги (Арабская борзая)
+  if (canon.includes('СЛЮГИ') || lower.includes('слюги') || lower.includes('sloughi')) {
+    return 'sloughi';
+  }
+
+  // 20. Tazy / Тазы (Казахская борзая)
+  if (canon.includes('ТАЗЫ') || lower.includes('тазы') || lower.includes('tazy')) {
+    return 'tazy';
+  }
+
+  // 21. Taigan / Тайган (Киргизская борзая)
+  if (canon.includes('ТАЙГАН') || lower.includes('тайган') || lower.includes('taigan')) {
+    return 'taigan';
+  }
+
+  // 22. Pharaoh Hound / Фараонова собака
+  if (canon.includes('ФАРАОН') || lower.includes('фараон') || lower.includes('pharaoh')) {
+    return 'pharaohhound';
+  }
+
+  // 23. Hortaya Borzaya / Хортая борзая
+  if (canon.includes('ХОРТАЯ') || lower.includes('хортая') || lower.includes('hortaya')) {
+    return 'hortayaborzaya';
+  }
+
+  // 24. Cirneco dell'Etna / Чирнеко дель’Этна
+  if (canon.includes('ЧИРНЕКО') || lower.includes('чирнеко') || lower.includes('cirneco')) {
+    return 'cirneco';
+  }
+
+  // 25. Dachshund / Такса
+  if (canon.includes('ТАКСА') || lower.includes('такса') || lower.includes('dachshund')) {
+    return 'dachshund';
+  }
+
+  // 26. Jack Russell Terrier / Джек-рассел терьер
+  if (
+    canon.includes('ДЖЕК РАССЕЛ') ||
+    canon.includes('ДЖЕК-РАССЕЛ') ||
+    lower.includes('джек рассел') ||
+    lower.includes('джек-рассел') ||
+    lower.includes('jack russell')
+  ) {
+    return 'jackrussell';
+  }
+
+  // 27. Miniature Pinscher / Цвергпинчер
+  if (
+    canon.includes('ЦВЕРГПИНЧЕР') ||
+    lower.includes('цвергпинчер') ||
+    lower.includes('миниатюрный пинчер') ||
+    lower.includes('minpin') ||
+    lower.includes('pinscher')
+  ) {
+    return 'minpinscher';
+  }
+
+  // 28. Beagle / Бигль
+  if (canon.includes('БИГЛЬ') || lower.includes('бигль') || lower.includes('beagle')) {
+    return 'beagle';
+  }
+
+  // 29. Border Collie / Бордер-колли
+  if (
+    canon.includes('БОРДЕР КОЛЛИ') ||
+    canon.includes('БОРДЕР-КОЛЛИ') ||
+    lower.includes('бордер') ||
+    lower.includes('border collie')
+  ) {
+    return 'bordercollie';
+  }
+
+  // 30. Dobermann / Доберман
+  if (canon.includes('ДОБЕРМАН') || lower.includes('доберман') || lower.includes('dobermann')) {
+    return 'dobermann';
+  }
+
   // No silhouette available yet for this breed
   return null;
 };
@@ -100,7 +263,7 @@ export interface DogBreedSilhouetteProps {
 }
 
 /**
- * Vector silhouette of a dog breed with scale normalized to ground level.
+ * Vector silhouette of a dog breed with optical visual weight normalization for avatar frames.
  */
 export const DogBreedSilhouette: React.FC<DogBreedSilhouetteProps> = ({
   breed,
