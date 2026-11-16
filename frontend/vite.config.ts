@@ -13,6 +13,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const DATA_V1_ROOT = path.resolve(__dirname, '../data/v1')
 const require = createRequire(import.meta.url)
 let devArchiveDb: any = null
+let devArchiveSelectStmt: any = null
 
 const CONTENT_TYPES: Record<string, string> = {
   '.json': 'application/json; charset=utf-8',
@@ -80,7 +81,7 @@ function serveDataV1(): Plugin {
               const Database = require('better-sqlite3')
               devArchiveDb = new Database(sqlitePath, { readonly: true })
             }
-            const row = devArchiveDb.prepare('SELECT data FROM exhibitions_rkf WHERE id = ?').get(id)
+            const row = (devArchiveSelectStmt ??= devArchiveDb.prepare('SELECT data FROM exhibitions_rkf WHERE id = ?')).get(id)
             if (row?.data) {
               res.setHeader('Content-Type', 'application/json; charset=utf-8')
               res.setHeader('Content-Encoding', 'gzip')

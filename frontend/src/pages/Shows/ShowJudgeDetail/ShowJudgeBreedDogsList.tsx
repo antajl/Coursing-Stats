@@ -197,10 +197,16 @@ export function ShowJudgeBreedDogsList({
 }: ShowJudgeBreedDogsListProps) {
   const matchingExhibitions = useMemo(() => {
     return periodExhibitions.filter((ex) => {
-      if (!ex.breed_counts) return false
-      return Object.keys(ex.breed_counts).some((b) => isBreedMatch(b, breed))
+      let counts = ex.breed_counts
+      if (gradeScope === 'puppy') {
+        counts = ex.puppy_breed_counts
+      } else if (gradeScope === 'adult') {
+        counts = ex.adult_breed_counts || ex.breed_counts
+      }
+      if (!counts) return false
+      return Object.keys(counts).some((b) => isBreedMatch(b, breed))
     })
-  }, [periodExhibitions, breed])
+  }, [periodExhibitions, breed, gradeScope])
 
   const exhibitionIds = useMemo(
     () => matchingExhibitions.map((e) => String(e.id)).sort(),
@@ -320,9 +326,19 @@ export function ShowJudgeBreedDogsList({
   const content = (
     <div className={embedded ? 'bg-cream-50/25 border-t border-old-money-100/70' : ''}>
       {isLoading && (
-        <div className="flex flex-col items-center justify-center gap-2 py-6 text-xs text-charcoal-500">
-          <div className="h-5 w-5 animate-spin rounded-full border-2 border-old-money-300 border-t-camel-600" />
-          <span>Загрузка списка собак из каталогов РКФ...</span>
+        <div className="p-3.5 sm:p-4 space-y-3 animate-pulse select-none">
+          {[1, 2, 3].map((key) => (
+            <div
+              key={key}
+              className="flex items-center justify-between py-2 border-b border-old-money-100/40 last:border-none"
+            >
+              <div className="space-y-1.5 w-2/3">
+                <div className="h-4 bg-old-money-100/70 rounded w-1/2" />
+                <div className="h-3 bg-old-money-100/40 rounded w-1/3" />
+              </div>
+              <div className="h-6 w-16 bg-old-money-100/50 rounded-full" />
+            </div>
+          ))}
         </div>
       )}
 

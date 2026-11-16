@@ -40,6 +40,7 @@ class ExhibitionsRkfStoreImpl implements ExhibitionsRkfStore {
       );
       
       CREATE INDEX IF NOT EXISTS idx_year ON exhibitions_rkf(year);
+      CREATE INDEX IF NOT EXISTS idx_id ON exhibitions_rkf(id);
     `);
   }
   
