@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/donino-speed-v1",
   "source": "google-sheets",
-  "count": 178,
+  "count": 179,
   "records": [
     {
       "breed": "Уиппет",
@@ -746,7 +746,7 @@
       "speed_km_h": 56,
       "date": "2026-11-11",
       "screenshot_url": "https://disk.yandex.ru/i/qOpnNe24WuC2iw",
-      "status": "new",
+      "status": "normal",
       "track_type": "курсинг",
       "history": []
     },
@@ -974,6 +974,17 @@
       ]
     },
     {
+      "breed": "Уиппет",
+      "sex": "С",
+      "name": "Ива",
+      "speed_km_h": 54,
+      "date": "2026-11-15",
+      "screenshot_url": "https://disk.yandex.ru/i/YKcjKO9QpHsv9g",
+      "status": "new",
+      "track_type": "круг",
+      "history": []
+    },
+    {
       "breed": "Малинуа",
       "sex": "С",
       "name": "Барса",
@@ -1133,7 +1144,7 @@
       "speed_km_h": 53,
       "date": "2026-11-11",
       "screenshot_url": "https://disk.yandex.ru/i/-k2THME468XfLw",
-      "status": "new",
+      "status": "normal",
       "track_type": "курсинг",
       "history": []
     },
