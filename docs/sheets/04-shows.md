@@ -18,6 +18,8 @@ verified: 2026-11-08
 | Bulk протоколы выставок | Все 51 429 протоколов (2019–2026) на S3 CDN (`shows/protocols/*.json`) в gzip |
 | ShowRanking / ShowCalendar | React Query → **CDN**, не Turso |
 | ShowCalendar URL & Prefetch | Дефолтный год не пишется в URL (?tab=archive); активный месяц по умолчанию — последний с протоколами (findLatestMonthWithProtocols); навигация вперед/назад и доступные месяцы в тулбаре ограничены месяцами с протоколами (getMonthsWithProtocols); при открытии пустого месяца сохраняется шапка с кнопкой возврата назад; префетч отложен на 2.5с / по наведению onHoverTab |
+| ShowCalendar Freshness & Hint | Кнопка в тулбаре оформляется единым шрифтом `Об архиве · 16 нояб.` (`text-xs font-semibold`); статус внутри карточки выводится строго в две сбалансированные строки без двойных дат: «В базу внесены все данные РКФ, / опубликованные к {date}», устраняя путаницу между датой сверки и задержкой РКФ; заголовок «Архив выставок РКФ» упразднен |
+| Ingestion & SQLite Archive | `data/local/exhibitions-rkf-archive.sqlite` локальная (не в git); облачный воркфлоу `.github/workflows/update-rkf-shows.yml` удалён; парсинг выполняется локально через `monitor-new-rkf-protocols.ts` с обогащением `enrich-show-dog-details.ts` |
 | All-time `dog-ranking-all-time.json` | ~17.6 MB (~2.2 MB gzip) — Top-100 overall + Top-100 per breed, публикуется на CDN |
 | All-time `dog-ranking-all-time-page0.json` | ~32 KB — Top-100 overall first-paint slice (<20 ms) |
 | ShowRanking all-time filter | При выборе «Все года» (`filterYear = ''`) загружаются `dog-ranking-all-time-page0.json` и `dog-ranking-all-time.json`; без текстового поиска результат строго срезается до Топ-100 (`slice(0, 100)`); fallback на текущий сезон запрещён |
