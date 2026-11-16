@@ -399,19 +399,7 @@ export function JudgeDetailHeader({
 
       {/* Interactive Grade Tiles */}
       {hasGrades && (
-        <div className="mt-6 border-t border-old-money-100 pt-5">
-          <div className="mb-2 flex items-center justify-between text-xs text-charcoal-500">
-            <span className="font-semibold uppercase tracking-wider text-[11px] text-charcoal-400">
-              Оценки по категориям:
-            </span>
-            <span className="text-[11px] font-medium">
-              {gradeScope === 'puppy'
-                ? 'Фокус: щенки и бэби'
-                : gradeScope === 'adult'
-                  ? 'Фокус: взрослые классы'
-                  : 'Все собаки (взрослые + щенки)'}
-            </span>
-          </div>
+        <div className="mt-3.5 sm:mt-4">
           <div className="grid grid-cols-2 gap-2 sm:grid-cols-4 lg:grid-cols-7">
             {GRADE_TILES.map(({ key, label }) => {
               const count = periodGrades[key] || 0
@@ -460,7 +448,7 @@ export function JudgeDetailHeader({
 
       {/* Visual Strictness Indicator Bar */}
       {periodStrictness.graded > 0 && (
-        <div className="mt-6 border-t border-old-money-100 pt-5">
+        <div className="mt-3.5 sm:mt-4">
           {gradeScope === 'puppy' ? (
             /* Puppy strictness calibration */
             periodPuppyStrictness.puppyGraded < 15 ? (
