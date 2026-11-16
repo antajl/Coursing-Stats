@@ -62,10 +62,14 @@ describe('resolveSilhouetteBreed', () => {
     expect(resolveSilhouetteBreed('Далматин')).toBe('dalmatian');
     expect(resolveSilhouetteBreed('Пудель стандартный черный')).toBe('poodle');
     expect(resolveSilhouetteBreed('Королевский пудель')).toBe('poodle');
+
+    // Batch 6 (Pekingese)
+    expect(resolveSilhouetteBreed('Пекинес')).toBe('pekingese');
+    expect(resolveSilhouetteBreed('Pekingese')).toBe('pekingese');
   });
 
   it('returns null for breeds that have not been generated yet (leaving empty frame)', () => {
-    expect(resolveSilhouetteBreed('Пекинес')).toBeNull();
+    expect(resolveSilhouetteBreed('Немецкий боксер')).toBeNull();
     expect(resolveSilhouetteBreed('Бишон фризе')).toBeNull();
     expect(resolveSilhouetteBreed('Самоед')).toBeNull();
     expect(resolveSilhouetteBreed(null)).toBeNull();
