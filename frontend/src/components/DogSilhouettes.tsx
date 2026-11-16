@@ -1,95 +1,134 @@
-/* eslint-disable react-refresh/only-export-components */
-// Dog breed silhouettes for profile cards and tooltips.
-// Breed-specific symbols take precedence; category fallbacks cover remaining breeds.
+import React from 'react';
+import { BREED_SILHOUETTE_PATHS } from './dog-silhouettes-data';
+import { canonicalBreed } from '../lib/breedMapping';
 
-/** Keys matched via breed.toLowerCase().includes(key) */
-const BREED_SILHOUETTES: Record<string, string> = {
-  whippet: 'whippet',
-  уиппет: 'whippet',
+export type SilhouetteBreedKey =
+  | 'whippet'
+  | 'italiangreyhound'
+  | 'greyhound'
+  | 'borzoi'
+  | 'saluki'
+  | 'afghanhound'
+  | 'basenji'
+  | 'welshcorgi'
+  | 'deerhound'
+  | 'irishwolfhound';
+
+/**
+ * Resolves a raw or canonical breed string to an available vector silhouette key.
+ * Returns null if no verified silhouette exists yet for this breed (leaving an empty frame).
+ */
+export const resolveSilhouetteBreed = (breed?: string | null): SilhouetteBreedKey | null => {
+  if (!breed) return null;
+
+  const canon = canonicalBreed(breed);
+  const lower = breed.toLowerCase().trim();
+
+  // 1. Italian Greyhound / Левретка / Малая итальянская борзая
+  if (
+    canon.includes('ИТАЛЬЯНСКАЯ') ||
+    lower.includes('левретк') ||
+    lower.includes('italian greyhound') ||
+    lower.includes('piccolo')
+  ) {
+    return 'italiangreyhound';
+  }
+
+  // 2. Borzoi / РПБ / Русская псовая борзая
+  if (
+    canon.includes('РУССКАЯ ПСОВАЯ') ||
+    lower.includes('рпб') ||
+    lower.includes('borzoi') ||
+    lower.includes('псовая борзая')
+  ) {
+    return 'borzoi';
+  }
+
+  // 3. Saluki / Салюки / Персидская борзая
+  if (canon.includes('САЛЮКИ') || lower.includes('салюки') || lower.includes('saluki')) {
+    return 'saluki';
+  }
+
+  // 4. Afghan Hound / Афганская борзая
+  if (canon.includes('АФГАН') || lower.includes('афган') || lower.includes('afghan')) {
+    return 'afghanhound';
+  }
+
+  // 5. Basenji / Басенджи
+  if (canon.includes('БАСЕНДЖИ') || lower.includes('басенджи') || lower.includes('basenji')) {
+    return 'basenji';
+  }
+
+  // 6. Greyhound / Грейхаунд
+  if (canon.includes('ГРЕЙХАУНД') || lower.includes('грейхаунд') || lower.includes('greyhound')) {
+    return 'greyhound';
+  }
+
+  // 7. Welsh Corgi / Вельш-корги (пемброк и кардиган)
+  if (canon.includes('КОРГИ') || lower.includes('корги') || lower.includes('corgi')) {
+    return 'welshcorgi';
+  }
+
+  // 8. Deerhound / Дирхаунд / Шотландская оленья борзая
+  if (canon.includes('ДИРХАУНД') || lower.includes('дирхаунд') || lower.includes('deerhound')) {
+    return 'deerhound';
+  }
+
+  // 9. Irish Wolfhound / Ирландский волкодав
+  if (
+    canon.includes('ВОЛКОДАВ') ||
+    lower.includes('волкодав') ||
+    lower.includes('wolfhound') ||
+    lower.includes('вольфхаунд')
+  ) {
+    return 'irishwolfhound';
+  }
+
+  // 10. Whippet / Уиппет
+  if (canon.includes('УИППЕТ') || lower.includes('уиппет') || lower.includes('whippet')) {
+    return 'whippet';
+  }
+
+  // No silhouette available yet for this breed
+  return null;
 };
 
-const SMOOTH_COAT_BREEDS = ['greyhound', 'italian greyhound', 'sloughi'];
-const LONG_COAT_BREEDS = ['saluki', 'afghan hound', 'borzoi', 'scottish deerhound'];
+export interface DogBreedSilhouetteProps {
+  breed?: string | null;
+  className?: string;
+  style?: React.CSSProperties;
+}
 
-export const DogSilhouettes = () => (
-  <svg style={{ display: 'none' }}>
-    <defs>
-      {/* Whippet — lean sighthound: deep chest, tucked waist, long legs, rose ear */}
-      <symbol id="silhouette-whippet" viewBox="0 0 100 100">
-        <path
-          fill="currentColor"
-          d="M 44 21 C 42 17 39 16 37 18 C 39 19 42 20 44 21 Z"
-        />
-        <path
-          fill="currentColor"
-          d="M 10 42 C 8 43 8 45 11 45.5 L 17 43.5 C 22 42 26 38.5 28 33.5 C 32 25.5 38.5 21 46.5 20.5 C 50.5 18.5 54.5 19.5 58.5 21.5 C 62.5 19.5 66.5 20.5 70.5 23.5 L 75.5 21.5 C 80.5 19.5 84.5 21 84 25 C 85.5 27 83.5 28.5 80.5 26.5 L 71.5 24.5 C 66 26.5 62 30 59.5 34 L 57.5 36 C 55 33.5 51.5 33.5 49 36.5 L 47 58 L 45 83.5 L 41 84.5 L 42 58 L 44 38.5 C 42 36 39 36.5 37 40 L 35 58 L 33 83.5 L 29 84.5 L 30 56 L 33 38.5 C 30.5 34.5 25.5 35 22 37.5 C 18 39 14 40.5 10 42 Z M 57 36 L 55 58 L 53 83.5 L 49 84.5 L 50 58 L 52 36 C 53.5 34.5 55.5 34.5 57 36 Z"
-        />
-      </symbol>
+/**
+ * Vector silhouette of a dog breed with scale normalized to ground level.
+ */
+export const DogBreedSilhouette: React.FC<DogBreedSilhouetteProps> = ({
+  breed,
+  className = 'w-full h-full text-camel-700/60',
+  style,
+}) => {
+  const key = resolveSilhouetteBreed(breed);
+  if (!key) return null;
+  const path = BREED_SILHOUETTE_PATHS[key];
+  if (!path) return null;
 
-      {/* Smooth-coat silhouette (Greyhound, Italian Greyhound, Sloughi) */}
-      <symbol id="silhouette-smooth" viewBox="0 0 100 100">
-        <path
-          d="M20 70 Q15 50 25 35 Q30 25 40 20 Q50 18 60 20 Q70 25 75 35 Q85 50 80 70 L75 75 Q70 80 60 82 L40 82 Q30 80 25 75 Z"
-          fill="currentColor"
-        />
-        <path
-          d="M40 20 Q45 15 50 18 Q55 15 60 20"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-        />
-      </symbol>
+  return (
+    <svg
+      viewBox="0 0 200 200"
+      className={className}
+      style={style}
+      aria-hidden="true"
+      fill="currentColor"
+      fillRule="evenodd"
+    >
+      <path d={path} />
+    </svg>
+  );
+};
 
-      {/* Long-coat silhouette (Saluki, Afghan Hound, Borzoi, Scottish Deerhound) */}
-      <symbol id="silhouette-long" viewBox="0 0 100 100">
-        <path
-          d="M20 70 Q15 50 25 35 Q30 25 40 20 Q50 18 60 20 Q70 25 75 35 Q85 50 80 70 L75 75 Q70 80 60 82 L40 82 Q30 80 25 75 Z"
-          fill="currentColor"
-        />
-        <path
-          d="M25 35 Q20 40 22 50 Q20 45 25 40"
-          fill="currentColor"
-        />
-        <path
-          d="M75 35 Q80 40 78 50 Q80 45 75 40"
-          fill="currentColor"
-        />
-        <path
-          d="M40 20 Q45 10 50 18 Q55 10 60 20"
-          fill="currentColor"
-        />
-      </symbol>
-
-      {/* Neutral silhouette (unknown breed) */}
-      <symbol id="silhouette-neutral" viewBox="0 0 100 100">
-        <circle cx="50" cy="50" r="30" fill="currentColor" />
-        <path
-          d="M35 40 Q50 35 65 40"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="3"
-        />
-      </symbol>
-    </defs>
-  </svg>
-);
+/** Backward-compatible export for any legacy stub usage */
+export const DogSilhouettes = () => null;
 
 export const getSilhouetteType = (breed?: string | null): string => {
-  if (!breed) return 'neutral';
-
-  const breedLower = breed.toLowerCase().trim();
-
-  for (const [key, type] of Object.entries(BREED_SILHOUETTES)) {
-    if (breedLower.includes(key)) return type;
-  }
-
-  if (SMOOTH_COAT_BREEDS.some((b) => breedLower.includes(b))) {
-    return 'smooth';
-  }
-
-  if (LONG_COAT_BREEDS.some((b) => breedLower.includes(b))) {
-    return 'long';
-  }
-
-  return 'neutral';
+  return resolveSilhouetteBreed(breed);
 };

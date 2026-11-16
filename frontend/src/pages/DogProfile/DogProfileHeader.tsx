@@ -25,6 +25,7 @@ import { useFavorites } from '../../hooks/useFavorites'
 import { createLogger } from '../../lib/logging'
 import HoverTooltip from '../../components/ui/HoverTooltip'
 import DogAggressionBadge from './DogAggressionBadge'
+import { DogPhotoFrame } from '../../components/DogPhotoFrame'
 import type { StandingExplainerInput } from './StandingPlaceExplainer'
 
 const profileLogger = createLogger('dog-profile')
@@ -209,33 +210,14 @@ export function DogProfileHeader({
       <div className="relative min-w-0 overflow-hidden rounded-2xl border border-old-money-200/80 bg-white p-4 sm:p-5 md:p-6 shadow-2xs">
         <div className="relative z-10">
           <div className="grid grid-cols-1 sm:grid-cols-[minmax(0,1fr)_auto] gap-4 sm:gap-6 items-start">
-            {/* Слева: Крупный аватар с закруглёнными углами + имя и метаданные */}
+            {/* Слева: Крупный аватар с закруглёнными углами (фото или породный силуэт) + имя и метаданные */}
             <div className="flex items-start gap-4 sm:gap-5 md:gap-6 min-w-0">
-              {dog.photo_url && (
-                <button
-                  type="button"
-                  onClick={() => setIsPhotoOpen(true)}
-                  className="group relative h-24 w-24 sm:h-28 sm:w-28 md:h-32 md:w-32 shrink-0 overflow-hidden rounded-2xl border border-cream-200/90 bg-cream-50/60 shadow-xs transition-all hover:border-camel-400 hover:shadow-sm focus-visible:outline-hidden cursor-pointer"
-                  aria-label={`Увеличить фото ${primary}`}
-                  title="Нажмите, чтобы открыть фото в полном размере"
-                >
-                  <img
-                    src={dog.photo_url}
-                    alt={primary}
-                    referrerPolicy="no-referrer"
-                    className="h-full w-full object-cover object-[center_20%] transition-transform duration-300 group-hover:scale-105"
-                    loading="lazy"
-                    decoding="async"
-                    onError={(e) => {
-                      const target = e.currentTarget;
-                      if (target.parentElement) target.parentElement.style.display = 'none';
-                    }}
-                  />
-                  <span className="pointer-events-none absolute bottom-1.5 right-1.5 rounded-md bg-charcoal-900/60 p-1 text-white opacity-0 transition-opacity group-hover:opacity-100 backdrop-blur-xs">
-                    <Maximize2 className="h-3 w-3" aria-hidden />
-                  </span>
-                </button>
-              )}
+              <DogPhotoFrame
+                photoUrl={dog.photo_url}
+                breed={dog.breed}
+                name={primary}
+                onPhotoClick={() => setIsPhotoOpen(true)}
+              />
 
               <div className="min-w-0 flex-1">
                 <OwnerCrownName name={formattedPrimary} dogId={dog.id} kind="competition">
