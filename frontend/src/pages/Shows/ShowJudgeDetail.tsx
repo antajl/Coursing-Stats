@@ -85,13 +85,34 @@ export default function ShowJudgeDetail() {
     return judge.exhibitions.filter((ex) => exhibitionYear(ex.date) === yearParam)
   }, [judge, yearParam])
 
+  const scopedExhibitions = useMemo(() => {
+    if (gradeScope === 'all') return periodExhibitions
+    if (gradeScope === 'puppy') {
+      return periodExhibitions.filter((ex) => {
+        const gc = ex.grade_counts || {}
+        return (gc.very_promising || 0) + (gc.promising || 0) > 0
+      })
+    }
+    // 'adult'
+    return periodExhibitions.filter((ex) => {
+      const gc = ex.grade_counts || {}
+      return (
+        (gc.excellent || 0) +
+        (gc.very_good || 0) +
+        (gc.good || 0) +
+        (gc.satisfactory || 0) +
+        (gc.dq || 0) > 0
+      )
+    })
+  }, [periodExhibitions, gradeScope])
+
   const gradeFilter: GradeFilterKey | null =
     gradeParam && GRADE_TILES.some((t) => t.key === gradeParam) ? gradeParam : null
 
   const filteredExhibitions = useMemo(() => {
-    if (!gradeFilter) return periodExhibitions
-    return periodExhibitions.filter((ex) => (ex.grade_counts?.[gradeFilter] || 0) > 0)
-  }, [periodExhibitions, gradeFilter])
+    if (!gradeFilter) return scopedExhibitions
+    return scopedExhibitions.filter((ex) => (ex.grade_counts?.[gradeFilter] || 0) > 0)
+  }, [scopedExhibitions, gradeFilter])
 
   const hasPerExhibitionGrades = useMemo(
     () => periodExhibitions.some((ex) => ex.grade_counts && Object.keys(ex.grade_counts).length > 0),
@@ -281,7 +302,7 @@ export default function ShowJudgeDetail() {
           onListTabChange={setListTab}
           periodBreeds={periodBreeds}
           filteredExhibitions={filteredExhibitions}
-          periodExhibitions={periodExhibitions}
+          periodExhibitions={scopedExhibitions}
           judgeId={judge?.id}
           judgeName={judge?.display_name || judge?.name}
           selectedBreed={selectedBreed}

@@ -179,7 +179,13 @@ export function JudgeBreedPanel({
           plaque={
             <DoninoColumnPlaque
               asHeader
-              title="ПОРОДЫ В РИНГЕ"
+              title={
+                gradeScope === 'puppy'
+                  ? 'ПОРОДЫ В РИНГЕ · ЩЕНКИ И БЭБИ'
+                  : gradeScope === 'all'
+                    ? 'ПОРОДЫ В РИНГЕ · ВСЕ КЛАССЫ'
+                    : 'ПОРОДЫ В РИНГЕ · ВЗРОСЛЫЕ КЛАССЫ'
+              }
               count={filteredAndSorted.length}
               countLabel={`${filteredAndSorted.length} пород`}
             />

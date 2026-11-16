@@ -59,7 +59,7 @@ export default function ShowJudgeGradeScopeDropdown({
       aria-label="Классы собак"
       title={`Классы: ${currentOption.label}`}
     >
-      <span>Классы</span>
+      <span>Классы: {currentOption.triggerLabel}</span>
       <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70 transition-transform" aria-hidden />
     </button>
   )

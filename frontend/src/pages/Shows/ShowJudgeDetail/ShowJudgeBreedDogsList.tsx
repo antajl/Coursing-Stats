@@ -298,14 +298,36 @@ export function ShowJudgeBreedDogsList({
             : searchQuery
               ? `Собаки по запросу «${searchQuery}» не найдены`
               : gradeScope === 'puppy'
-                ? `В ринге не найдено щенков и бэби по породе «${breed}»`
+                ? `В ринге не найдено щенков и бэби по породе «${breed}» (всего в каталогах ${dogs.length} взрослых)`
                 : `В ринге не найдено взрослых собак по породе «${breed}»`}
         </div>
       )}
 
       {!isLoading && filteredDogs.length > 0 && (
-        <div className="divide-y divide-old-money-100/50">
-          {filteredDogs.map((dog, idx) => {
+        <div>
+          <div className="flex items-center justify-between px-3.5 sm:px-4 py-2 bg-cream-100/50 text-[11px] sm:text-xs font-semibold text-charcoal-700 border-b border-old-money-100/70 select-none">
+            <span className="flex items-center gap-1.5">
+              <span className="text-charcoal-500 font-normal">
+                {gradeScope === 'puppy'
+                  ? 'Щенки и бэби:'
+                  : gradeScope === 'all'
+                    ? 'Все собаки:'
+                    : 'Взрослые классы:'}
+              </span>
+              <strong className="text-charcoal-900 font-bold tabular-nums">
+                {gradeScope === 'puppy'
+                  ? formatPuppyCount(filteredDogs.length)
+                  : formatDogCount(filteredDogs.length)}
+              </strong>
+            </span>
+            {dogs.length > filteredDogs.length && (
+              <span className="text-[10.5px] text-charcoal-400 font-normal">
+                из {dogs.length} всего в каталогах
+              </span>
+            )}
+          </div>
+          <div className="divide-y divide-old-money-100/50">
+            {filteredDogs.map((dog, idx) => {
             const dogProfileUrl = exhibitionDogProfilePath(dog.dog_name, dog.breed)
 
             return (
@@ -411,6 +433,7 @@ export function ShowJudgeBreedDogsList({
             )
           })}
         </div>
+      </div>
       )}
     </div>
   )
