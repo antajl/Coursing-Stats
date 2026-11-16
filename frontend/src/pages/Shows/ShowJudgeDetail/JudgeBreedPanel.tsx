@@ -1,5 +1,5 @@
 import { useMemo, useState, useEffect } from 'react'
-import { ArrowUpDown, ChevronDown, X } from 'lucide-react'
+import { ArrowUpDown, ChevronDown, ChevronRight, X } from 'lucide-react'
 import ToolbarSearch from '../../../components/toolbar/ToolbarSearch'
 import BreedSearchDropdown from '../../../components/ui/BreedSearchDropdown'
 import ShowJudgeGradeScopeDropdown from '../ShowJudgeGradeScopeDropdown'
@@ -209,35 +209,42 @@ export function JudgeBreedPanel({
                       isExpanded ? 'bg-cream-100/60' : 'hover:bg-cream-50/60'
                     }`}
                   >
-                    {/* Subtle bar indicator */}
-                    <div
-                      className="absolute inset-y-0 left-0 bg-camel-100/35 transition-all group-hover:bg-camel-200/40 pointer-events-none"
-                      style={{ width: `${Math.max(2, pct)}%` }}
-                    />
+                    {/* Clean bottom micro-progress bar: no cut-off background block */}
+                    <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-old-money-100/40 pointer-events-none">
+                      <div
+                        className="h-full bg-camel-400/60 transition-all duration-300 group-hover:bg-camel-600"
+                        style={{ width: `${Math.max(2, pct)}%` }}
+                      />
+                    </div>
 
                     <div className="relative min-w-0 flex-1 flex items-center gap-2.5">
-                      <ChevronDown
+                      <ChevronRight
                         className={`h-4 w-4 shrink-0 text-charcoal-400 transition-transform duration-200 ${
-                          isExpanded ? 'rotate-180 text-camel-700' : 'group-hover:text-charcoal-600'
+                          isExpanded ? 'rotate-90 text-camel-700' : 'group-hover:text-charcoal-600'
                         }`}
                       />
                       <span className="font-bold text-sm sm:text-[15px] text-charcoal-900 group-hover:text-camel-900 transition-colors">
                         {formatBreedSentenceCase(row.breed)}
                       </span>
                       {shareOfAll && Number(shareOfAll) >= 1 && (
-                        <span className="ml-1 text-[11px] text-charcoal-400 font-normal">
+                        <span
+                          className="ml-1 text-[11px] text-charcoal-400 font-normal cursor-help hover:text-camel-700 transition-colors"
+                          title={`${shareOfAll}% от всех собак в экспертизе судьи`}
+                        >
                           ({shareOfAll}%)
                         </span>
                       )}
                     </div>
 
-                    <div className="relative shrink-0 flex items-center gap-1.5">
-                      <span className="text-xs text-charcoal-500 font-medium hidden sm:inline">
-                        Оценок:
-                      </span>
+                    {/* Clean badge without repeating word "Оценок" */}
+                    <div className="relative shrink-0 flex items-center">
                       <span
-                        className="inline-flex min-w-[2.25rem] justify-center rounded-md bg-cream-100/90 px-2 py-0.5 text-xs font-bold tabular-nums text-camel-800"
-                        title="Количество оценок по породе"
+                        className={`inline-flex min-w-[2.25rem] items-center justify-center rounded-md px-2 py-0.5 text-xs font-bold tabular-nums transition-colors ${
+                          isExpanded
+                            ? 'bg-camel-700 text-white shadow-3xs'
+                            : 'bg-cream-100/90 text-camel-900 border border-camel-200/80 group-hover:bg-camel-100 group-hover:text-camel-950'
+                        }`}
+                        title={`Оценок в ринге: ${row.count}`}
                       >
                         {row.count}
                       </span>

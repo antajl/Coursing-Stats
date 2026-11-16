@@ -359,7 +359,8 @@ export function DogProfileHeader({
       {/* Полноэкранный Lightbox для фото собаки (при клике на аватар) */}
       {isPhotoOpen && dog.photo_url && typeof document !== 'undefined' && createPortal(
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-6 bg-charcoal-950/92 select-none animate-in fade-in duration-200"
+          className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-6 bg-black/95 select-none animate-in fade-in duration-200"
+          style={{ transform: 'translateZ(0)' }}
           role="dialog"
           aria-modal="true"
           aria-label={`Фотография ${primary}`}
@@ -380,7 +381,7 @@ export function DogProfileHeader({
           <button
             type="button"
             onClick={() => setIsPhotoOpen(false)}
-            className="fixed z-[110] flex items-center justify-center gap-1.5 rounded-full border border-white/25 bg-charcoal-900/85 px-3 py-2 text-xs font-semibold text-white shadow-xl backdrop-blur-sm transition-transform active:scale-95 hover:bg-charcoal-800 cursor-pointer min-h-[44px] min-w-[44px]"
+            className="fixed z-[110] flex items-center justify-center gap-1.5 rounded-full border border-white/25 bg-black/80 px-3 py-2 text-xs font-semibold text-white shadow-xl backdrop-blur-sm transition-transform active:scale-95 hover:bg-black/95 cursor-pointer min-h-[44px] min-w-[44px]"
             style={{
               top: 'max(0.75rem, env(safe-area-inset-top, 0.75rem))',
               right: 'max(0.75rem, env(safe-area-inset-right, 0.75rem))',
@@ -407,18 +408,20 @@ export function DogProfileHeader({
               />
             </div>
 
-            {/* Подпись под фото */}
-            <div className="mt-3 flex items-center justify-between w-full text-xs text-white/80 px-1 gap-3">
-              <span className="font-medium text-white truncate">{primary}</span>
+            {/* Подпись под фото в 2 строки: кличка и источник */}
+            <div className="mt-3 flex flex-col items-center text-center gap-1 w-full px-2">
+              <span className="font-semibold text-sm sm:text-base text-white tracking-tight drop-shadow-sm">
+                {primary}
+              </span>
               {dog.pedigree_url && (
                 <a
                   href={dog.pedigree_url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-camel-300 hover:text-white transition-colors shrink-0"
+                  className="inline-flex items-center gap-1.5 text-xs font-medium text-camel-300 hover:text-white transition-colors underline-offset-2 hover:underline"
                 >
-                  <span>The Breed Archive</span>
-                  <ExternalLink className="h-3 w-3" aria-hidden />
+                  <span>Источник фото: The Breed Archive</span>
+                  <ExternalLink className="h-3.5 w-3.5 text-camel-400" aria-hidden />
                 </a>
               )}
             </div>

@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 import { createPortal } from 'react-dom'
 import { Award, Layers, Calendar, CheckCircle2, MapPin, Maximize2, X, ExternalLink } from 'lucide-react'
 import JudgeYearDropdown from '../../../components/ui/JudgeYearDropdown'
-import ShowJudgeGradeScopeDropdown from '../ShowJudgeGradeScopeDropdown'
 import ShowJudgesRatingHint from '../ShowJudgesRatingHint'
 import type { GradeScope } from '../../../components/ShowJudgeCard'
 import {
@@ -254,12 +253,8 @@ export function JudgeDetailHeader({
           </div>
         </div>
 
-        {/* Year, Scope, and Info Filters */}
+        {/* Year and Info Filters */}
         <div className="flex flex-wrap items-center justify-between sm:justify-end gap-1.5 sm:gap-2 shrink-0 w-full sm:w-auto pt-2 border-t border-old-money-100/70 sm:border-0 sm:pt-0">
-          <ShowJudgeGradeScopeDropdown
-            gradeScope={gradeScope}
-            onGradeScopeChange={onGradeScopeChange}
-          />
           <JudgeYearDropdown
             value={yearParam}
             onChange={onYearChange}
@@ -307,34 +302,35 @@ export function JudgeDetailHeader({
           </div>
         </button>
 
+        {/* Card 3: Adult classes */}
         <button
           type="button"
           onClick={() => onGradeScopeChange(gradeScope === 'adult' ? 'all' : 'adult')}
-          className={`group flex items-center justify-between rounded-xl border p-3.5 sm:p-4 text-left transition-all cursor-pointer ${
+          className={`group relative flex items-center justify-between rounded-xl border p-3.5 sm:p-4 text-left transition-all cursor-pointer ${
             gradeScope === 'adult'
-              ? 'border-camel-400 bg-camel-50/70 shadow-2xs ring-1 ring-camel-400/40'
+              ? 'border-camel-500 bg-camel-50/80 shadow-xs ring-2 ring-camel-400/40 text-camel-950'
               : 'border-old-money-200/80 bg-cream-50/50 hover:border-camel-300 hover:bg-cream-100/70 hover:shadow-2xs'
           }`}
           title="Фильтровать по взрослым классам (CAC)"
         >
           <div>
             <div className="flex items-center gap-1.5">
-              <p className="text-xs font-semibold uppercase tracking-wider text-charcoal-500">
+              <p className="text-xs font-bold uppercase tracking-wider text-charcoal-600">
                 Взрослые классы
               </p>
               {gradeScope === 'adult' && (
-                <span className="inline-block h-1.5 w-1.5 rounded-full bg-camel-600" />
+                <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-camel-600 text-white shadow-3xs leading-none">
+                  Выбрано
+                </span>
               )}
             </div>
             <div className="mt-1 flex items-baseline gap-1.5">
               <p className={`text-2xl sm:text-3xl font-bold tabular-nums ${strictnessBadge.textClass}`}>
                 {excellentPct ? `${excellentPct}` : '—'}
               </p>
-              {excellentPct && (
-                <span className="text-[11px] font-medium text-charcoal-400">отлично</span>
-              )}
+              <span className="text-xs text-charcoal-400 font-normal">отлично</span>
             </div>
-            <p className="mt-0.5 text-[11px] text-charcoal-500 font-medium">
+            <p className="mt-0.5 text-xs text-charcoal-500 font-medium">
               {periodStrictness.graded > 0 ? `${periodStrictness.graded.toLocaleString('ru-RU')} оценок` : 'Нет оценок'}
             </p>
           </div>
@@ -343,34 +339,35 @@ export function JudgeDetailHeader({
           </div>
         </button>
 
+        {/* Card 4: Puppy & Baby classes */}
         <button
           type="button"
           onClick={() => onGradeScopeChange(gradeScope === 'puppy' ? 'all' : 'puppy')}
-          className={`group flex items-center justify-between rounded-xl border p-3.5 sm:p-4 text-left transition-all cursor-pointer ${
+          className={`group relative flex items-center justify-between rounded-xl border p-3.5 sm:p-4 text-left transition-all cursor-pointer ${
             gradeScope === 'puppy'
-              ? 'border-camel-400 bg-camel-50/70 shadow-2xs ring-1 ring-camel-400/40'
+              ? 'border-camel-500 bg-camel-50/80 shadow-xs ring-2 ring-camel-400/40 text-camel-950'
               : 'border-old-money-200/80 bg-cream-50/50 hover:border-camel-300 hover:bg-cream-100/70 hover:shadow-2xs'
           }`}
           title="Фильтровать по щенкам и бэби"
         >
           <div>
             <div className="flex items-center gap-1.5">
-              <p className="text-xs font-semibold uppercase tracking-wider text-charcoal-500">
+              <p className="text-xs font-bold uppercase tracking-wider text-charcoal-600">
                 Щенки и бэби
               </p>
               {gradeScope === 'puppy' && (
-                <span className="inline-block h-1.5 w-1.5 rounded-full bg-camel-600" />
+                <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-camel-600 text-white shadow-3xs leading-none">
+                  Выбрано
+                </span>
               )}
             </div>
             <div className="mt-1 flex items-baseline gap-1.5">
               <p className={`text-2xl sm:text-3xl font-bold tabular-nums ${puppyStrictnessBadge.textClass}`}>
                 {puppyPct ? `${puppyPct}` : '—'}
               </p>
-              {puppyPct && (
-                <span className="text-[11px] font-medium text-charcoal-400">оч. персп.</span>
-              )}
+              <span className="text-xs text-charcoal-400 font-normal">оч. персп.</span>
             </div>
-            <p className="mt-0.5 text-[11px] text-charcoal-500 font-medium">
+            <p className="mt-0.5 text-xs text-charcoal-500 font-medium">
               {periodPuppyStrictness.puppyGraded > 0 ? `${periodPuppyStrictness.puppyGraded.toLocaleString('ru-RU')} щенков` : 'Нет щенков'}
             </p>
           </div>
@@ -383,12 +380,29 @@ export function JudgeDetailHeader({
       {/* Interactive Grade Tiles */}
       {hasGrades && (
         <div className="mt-6 border-t border-old-money-100 pt-5">
+          <div className="mb-2 flex items-center justify-between text-xs text-charcoal-500">
+            <span className="font-semibold uppercase tracking-wider text-[11px] text-charcoal-400">
+              Оценки по категориям:
+            </span>
+            <span className="text-[11px] font-medium">
+              {gradeScope === 'puppy'
+                ? 'Фокус: щенки и бэби'
+                : gradeScope === 'adult'
+                  ? 'Фокус: взрослые классы'
+                  : 'Все собаки (взрослые + щенки)'}
+            </span>
+          </div>
           <div className="grid grid-cols-2 gap-2 sm:grid-cols-4 lg:grid-cols-7">
             {GRADE_TILES.map(({ key, label }) => {
               const count = periodGrades[key] || 0
               const active = gradeFilter === key
               const disabled = count === 0
               const accent = GRADE_ACCENTS[key] ?? DEFAULT_GRADE_ACCENT
+
+              const isPuppyGrade = key === 'very_promising' || key === 'promising'
+              const isDimmed =
+                (gradeScope === 'adult' && isPuppyGrade) ||
+                (gradeScope === 'puppy' && !isPuppyGrade)
 
               return (
                 <button
@@ -398,7 +412,9 @@ export function JudgeDetailHeader({
                   aria-pressed={active}
                   title={disabled ? undefined : `Фильтр выставок: ${label}`}
                   onClick={() => onToggleGrade(key)}
-                  className={`flex h-[4.25rem] w-full flex-col items-center justify-center rounded-xl border px-2 transition-all ${
+                  className={`flex flex-col rounded-xl border p-2.5 text-left transition-all cursor-pointer ${
+                    isDimmed ? 'opacity-40 hover:opacity-80' : ''
+                  } ${
                     active
                       ? `${accent.activeBorder} ${accent.activeBg} ring-2 ring-camel-300 shadow-2xs`
                       : disabled
@@ -425,70 +441,132 @@ export function JudgeDetailHeader({
       {/* Visual Strictness Indicator Bar */}
       {periodStrictness.graded > 0 && (
         <div className="mt-6 border-t border-old-money-100 pt-5">
-          {periodStrictness.graded < 30 ? (
-            <p className="text-center text-sm text-charcoal-500 py-2">
-              Мало данных для шкалы строгости (нужно от 30 оценок, сейчас {periodStrictness.graded})
-            </p>
-          ) : (
-            <div className="w-full">
-              <div className="rounded-xl border border-old-money-200/80 bg-cream-50/40 p-3 sm:p-3.5">
-                <div className="flex items-center justify-between text-xs font-semibold text-charcoal-600 mb-2">
-                  <span className="flex items-center gap-1.5">
-                    <span className={`h-2 w-2 rounded-full ${strictnessBadge.dotClass}`} />
-                    Эксперт: <strong className="text-charcoal-900">{excellentPct}</strong>
-                  </span>
-                  {sitePct && (
-                    <span className="text-charcoal-500">
-                      В среднем по РКФ: <strong className="text-charcoal-800">{sitePct}</strong>
+          {gradeScope === 'puppy' ? (
+            /* Puppy strictness calibration */
+            periodPuppyStrictness.puppyGraded < 15 ? (
+              <p className="text-center text-sm text-charcoal-500 py-2">
+                Мало данных по щенкам (нужно от 15 оценок, сейчас {periodPuppyStrictness.puppyGraded})
+              </p>
+            ) : (
+              <div className="w-full">
+                <div className="rounded-xl border border-old-money-200/80 bg-cream-50/40 p-3 sm:p-3.5">
+                  <div className="flex items-center justify-between text-xs font-semibold text-charcoal-600 mb-2">
+                    <span className="flex items-center gap-1.5">
+                      <span className={`h-2 w-2 rounded-full ${puppyStrictnessBadge.dotClass}`} />
+                      Эксперт к щенкам: <strong className="text-charcoal-900">{puppyPct}</strong>
+                      <span className="text-charcoal-400 font-normal">({puppyStrictnessBadge.label})</span>
                     </span>
-                  )}
-                </div>
-
-                {/* Multi-zone progress bar */}
-                <div className="relative h-2.5 overflow-hidden rounded-full bg-cream-200 border border-old-money-200/50">
-                  {/* Visual zones background */}
-                  <div className="absolute inset-0 flex">
-                    <div className="w-[88%] bg-rose-100/50 border-r border-rose-200/50" title="Зона высокой строгости (<88%)" />
-                    <div className="w-[8%] bg-amber-100/50 border-r border-amber-200/50" title="Умеренная зона (88-95%)" />
-                    <div className="w-[4%] bg-emerald-100/50" title="Лояльная зона (≥96%)" />
+                    <span className="text-charcoal-500">
+                      В среднем по щенкам в РКФ: <strong className="text-charcoal-800">94.0%</strong>
+                    </span>
                   </div>
 
-                  {/* Judge's filled value */}
-                  {judgePctNumber != null && (
-                    <div
-                      className={`absolute inset-y-0 left-0 rounded-full transition-all duration-500 opacity-80 ${
-                        judgePctNumber >= 96
-                          ? 'bg-emerald-500'
-                          : judgePctNumber >= 88
-                            ? 'bg-amber-500'
-                            : 'bg-rose-500'
-                      }`}
-                      style={{ width: `${Math.min(100, Math.max(0, judgePctNumber))}%` }}
-                    />
-                  )}
+                  <div className="relative h-2.5 overflow-hidden rounded-full bg-cream-200 border border-old-money-200/50">
+                    <div className="absolute inset-0 flex">
+                      <div className="w-[90%] bg-rose-100/50 border-r border-rose-200/50" title="Строгий к щенкам (<90%)" />
+                      <div className="w-[5%] bg-amber-100/50 border-r border-amber-200/50" title="Умеренный к щенкам (90-95%)" />
+                      <div className="w-[5%] bg-emerald-100/50" title="Лояльный к щенкам (≥95%)" />
+                    </div>
 
-                  {/* Site baseline vertical tick */}
-                  {sitePctNumber != null && (
+                    {periodPuppyStrictness.puppyRate != null && (
+                      <div
+                        className={`absolute inset-y-0 left-0 rounded-full transition-all duration-500 opacity-80 ${
+                          periodPuppyStrictness.puppyRate >= 0.95
+                            ? 'bg-emerald-500'
+                            : periodPuppyStrictness.puppyRate >= 0.9
+                              ? 'bg-amber-500'
+                              : 'bg-rose-500'
+                        }`}
+                        style={{ width: `${Math.min(100, Math.max(0, periodPuppyStrictness.puppyRate * 100))}%` }}
+                      />
+                    )}
+
                     <div
                       className="absolute top-0 bottom-0 w-1 rounded-full bg-charcoal-900 shadow-sm"
-                      style={{ left: `${Math.min(100, Math.max(0, sitePctNumber))}%` }}
-                      title={`Среднее по сайту: ${sitePct}`}
+                      style={{ left: '94%' }}
+                      title="Среднее по РКФ для щенков: 94%"
                     />
-                  )}
-                </div>
+                  </div>
 
-                <div className="mt-2 flex justify-between text-[11px] font-medium text-charcoal-500">
-                  <span className="text-rose-700">Строгий &lt;88%</span>
-                  <span className="text-amber-700">Умеренный 88–95%</span>
-                  <span className="text-emerald-700">Лояльный ≥96%</span>
-                </div>
+                  <div className="mt-2 flex justify-between text-[11px] font-medium text-charcoal-500">
+                    <span className="text-rose-700">Строгий &lt;90%</span>
+                    <span className="text-amber-700">Умеренный 90–95%</span>
+                    <span className="text-emerald-700">Лояльный ≥95%</span>
+                  </div>
 
-                <p className="mt-2.5 text-center text-xs text-charcoal-500">
-                  {strictnessVerdict?.hint ??
-                    'Полоса — доля «отлично» у судьи; темная черта — среднее по выставкам'}
-                </p>
+                  <p className="mt-2.5 text-center text-xs text-charcoal-500">
+                    Калибровка по щенкам и бэби: эксперт поставил «Очень перспективный» в {puppyPct} случаев ({periodPuppyStrictness.puppyGraded} щенков)
+                  </p>
+                </div>
               </div>
-            </div>
+            )
+          ) : (
+            /* Adult CAC strictness calibration */
+            periodStrictness.graded < 30 ? (
+              <p className="text-center text-sm text-charcoal-500 py-2">
+                Мало данных для шкалы строгости (нужно от 30 оценок, сейчас {periodStrictness.graded})
+              </p>
+            ) : (
+              <div className="w-full">
+                <div className="rounded-xl border border-old-money-200/80 bg-cream-50/40 p-3 sm:p-3.5">
+                  <div className="flex items-center justify-between text-xs font-semibold text-charcoal-600 mb-2">
+                    <span className="flex items-center gap-1.5">
+                      <span className={`h-2 w-2 rounded-full ${strictnessBadge.dotClass}`} />
+                      Эксперт: <strong className="text-charcoal-900">{excellentPct}</strong>
+                    </span>
+                    {sitePct && (
+                      <span className="text-charcoal-500">
+                        В среднем по РКФ: <strong className="text-charcoal-800">{sitePct}</strong>
+                      </span>
+                    )}
+                  </div>
+
+                  {/* Multi-zone progress bar */}
+                  <div className="relative h-2.5 overflow-hidden rounded-full bg-cream-200 border border-old-money-200/50">
+                    {/* Visual zones background */}
+                    <div className="absolute inset-0 flex">
+                      <div className="w-[88%] bg-rose-100/50 border-r border-rose-200/50" title="Зона высокой строгости (<88%)" />
+                      <div className="w-[8%] bg-amber-100/50 border-r border-amber-200/50" title="Умеренная зона (88-95%)" />
+                      <div className="w-[4%] bg-emerald-100/50" title="Лояльная зона (≥96%)" />
+                    </div>
+
+                    {/* Judge's filled value */}
+                    {judgePctNumber != null && (
+                      <div
+                        className={`absolute inset-y-0 left-0 rounded-full transition-all duration-500 opacity-80 ${
+                          judgePctNumber >= 96
+                            ? 'bg-emerald-500'
+                            : judgePctNumber >= 88
+                              ? 'bg-amber-500'
+                              : 'bg-rose-500'
+                        }`}
+                        style={{ width: `${Math.min(100, Math.max(0, judgePctNumber))}%` }}
+                      />
+                    )}
+
+                    {/* Site baseline vertical tick */}
+                    {sitePctNumber != null && (
+                      <div
+                        className="absolute top-0 bottom-0 w-1 rounded-full bg-charcoal-900 shadow-sm"
+                        style={{ left: `${Math.min(100, Math.max(0, sitePctNumber))}%` }}
+                        title={`Среднее по сайту: ${sitePct}`}
+                      />
+                    )}
+                  </div>
+
+                  <div className="mt-2 flex justify-between text-[11px] font-medium text-charcoal-500">
+                    <span className="text-rose-700">Строгий &lt;88%</span>
+                    <span className="text-amber-700">Умеренный 88–95%</span>
+                    <span className="text-emerald-700">Лояльный ≥96%</span>
+                  </div>
+
+                  <p className="mt-2.5 text-center text-xs text-charcoal-500">
+                    {strictnessVerdict?.hint ??
+                      'Полоса — доля «отлично» у судьи; темная черта — среднее по выставкам'}
+                  </p>
+                </div>
+              </div>
+            )
           )}
         </div>
       )}
@@ -502,7 +580,8 @@ export function JudgeDetailHeader({
       {/* Full-size Photo Modal (Old Money portal) */}
       {isPhotoOpen && photoUrl && createPortal(
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-charcoal-950/85 p-4 backdrop-blur-sm animate-in fade-in duration-200"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 p-4 select-none animate-in fade-in duration-200"
+          style={{ transform: 'translateZ(0)' }}
           onClick={() => setIsPhotoOpen(false)}
           role="dialog"
           aria-modal="true"
@@ -511,7 +590,7 @@ export function JudgeDetailHeader({
           <button
             type="button"
             onClick={() => setIsPhotoOpen(false)}
-            className="fixed z-[110] flex items-center justify-center gap-1.5 rounded-full border border-white/25 bg-charcoal-900/85 px-3 py-2 text-xs font-semibold text-white shadow-xl backdrop-blur-sm transition-transform active:scale-95 hover:bg-charcoal-800 cursor-pointer min-h-[44px] min-w-[44px]"
+            className="fixed z-[110] flex items-center justify-center gap-1.5 rounded-full border border-white/25 bg-black/80 px-3 py-2 text-xs font-semibold text-white shadow-xl backdrop-blur-sm transition-transform active:scale-95 hover:bg-black/95 cursor-pointer min-h-[44px] min-w-[44px]"
             style={{
               top: 'max(0.75rem, env(safe-area-inset-top, 0.75rem))',
               right: 'max(0.75rem, env(safe-area-inset-right, 0.75rem))',
@@ -537,17 +616,20 @@ export function JudgeDetailHeader({
               />
             </div>
 
-            <div className="mt-3 flex items-center justify-between w-full text-xs text-white/80 px-1 gap-3">
-              <span className="font-medium text-white truncate">{displayName}</span>
+            {/* 2-line caption: Line 1 = Judge Name, Line 2 = Photo Source */}
+            <div className="mt-3 flex flex-col items-center text-center gap-1 w-full px-2">
+              <span className="font-semibold text-sm sm:text-base text-white tracking-tight drop-shadow-sm">
+                {displayName}
+              </span>
               {konuraUrl && (
                 <a
                   href={konuraUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-camel-300 hover:text-white transition-colors shrink-0"
+                  className="inline-flex items-center gap-1.5 text-xs font-medium text-camel-300 hover:text-white transition-colors underline-offset-2 hover:underline"
                 >
                   <span>Источник фото: konura.info</span>
-                  <ExternalLink className="h-3 w-3" aria-hidden />
+                  <ExternalLink className="h-3.5 w-3.5 text-camel-400" aria-hidden />
                 </a>
               )}
             </div>
