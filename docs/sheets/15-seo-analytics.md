@@ -222,6 +222,10 @@ verified: 2026-11-08
    - Google и Яндекс имеют жесткий лимит 50 000 URL на один файл sitemap. При превышении поисковики отбрасывают ссылки или выдают ошибку парсинга.
    - Все крупные категории (например, выставки с 56 000+ URL) нарезаются на чанки до 45 000 URL (`sitemap-shows-1.xml`, `sitemap-shows-2.xml`) и связываются через `sitemap-index.xml`.
    - В `robots.txt` декларируется строго и только `https://coursing-stats.ru/sitemap-index.xml`.
+6. **Schema.org Dataset (Наборы данных):**
+   - Для базы радарных замеров скорости и спринта полигона Донино (`/speed-records/`) используется микроразметка `@type: Dataset`.
+   - В Google Search Console отсутствие поля `license` вызывает предупреждение «Отсутствует поле "license"».
+   - В схеме строго обязательны: `license` (URL открытой лицензии `https://creativecommons.org/licenses/by/4.0/`), `isAccessibleForFree: true`, а также массив `distribution` (`DataDownload` со ссылками на `speed_records.json` и `coursing_records.json`).
 
 ---
 
