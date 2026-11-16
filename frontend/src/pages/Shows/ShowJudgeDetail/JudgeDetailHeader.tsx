@@ -587,6 +587,16 @@ export function JudgeDetailHeader({
           aria-modal="true"
           aria-label={`Фотография судьи ${displayName}`}
         >
+          {/* Полноэкранный кликабельный оверлей для надежного закрытия по тапу в любом месте фона (включая iOS Safari) */}
+          <button
+            type="button"
+            onClick={() => setIsPhotoOpen(false)}
+            className="absolute inset-0 h-full w-full cursor-pointer bg-transparent border-none p-0 -z-10 focus:outline-hidden"
+            aria-label="Закрыть фото"
+            tabIndex={-1}
+          />
+
+          {/* Fixed close button */}
           <button
             type="button"
             onClick={() => setIsPhotoOpen(false)}
@@ -602,23 +612,24 @@ export function JudgeDetailHeader({
           </button>
 
           <div
-            className="relative max-h-[85dvh] max-w-[95vw] sm:max-w-md flex flex-col items-center"
+            className="relative max-h-[85dvh] max-w-[95vw] sm:max-w-xl flex flex-col items-center"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="overflow-hidden rounded-2xl border border-white/20 bg-charcoal-900 shadow-2xl">
+            {/* Крупное портретное фото судьи */}
+            <div className="overflow-hidden rounded-2xl border border-white/20 bg-charcoal-900 shadow-2xl flex items-center justify-center">
               <img
                 src={photoUrl}
                 alt={displayName}
                 referrerPolicy="no-referrer"
                 loading="eager"
                 decoding="async"
-                className="max-h-[72dvh] sm:max-h-[78dvh] w-auto max-w-full object-contain select-none block"
+                className="w-[min(88vw,320px)] sm:w-[380px] md:w-[440px] h-auto max-h-[72dvh] sm:max-h-[78dvh] object-contain select-none block"
               />
             </div>
 
             {/* 2-line caption: Line 1 = Judge Name, Line 2 = Photo Source */}
-            <div className="mt-3 flex flex-col items-center text-center gap-1 w-full px-2">
-              <span className="font-semibold text-sm sm:text-base text-white tracking-tight drop-shadow-sm">
+            <div className="mt-3.5 flex flex-col items-center text-center gap-1 w-full px-2">
+              <span className="font-semibold text-base sm:text-lg text-white tracking-tight drop-shadow-sm">
                 {displayName}
               </span>
               {konuraUrl && (
