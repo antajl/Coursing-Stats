@@ -12,6 +12,7 @@ import {
   competitionsJsonLd,
   DEFAULT_COMPETITION_FAQS,
   DEFAULT_GUIDE_SPEED_FAQS,
+  doninoDatasetJsonLd,
   escapeHtml,
   eventMetaFromEntry,
   exhibitionMeta,
@@ -382,6 +383,22 @@ describe('prerender-seo helpers', () => {
     expect(org).toBeDefined()
     expect(org.logo).toContain('og-image.png')
     expect(org.knowsAbout).toContain('Курсинг')
+  })
+
+  it('doninoDatasetJsonLd outputs valid Dataset schema with license, free access, and distributions', () => {
+    const jsonLd = doninoDatasetJsonLd()
+    const graph = (jsonLd as any)['@graph'] as any[]
+    expect(Array.isArray(graph)).toBe(true)
+    const dataset = graph.find((item) => item['@type'] === 'Dataset')
+    expect(dataset).toBeDefined()
+    expect(dataset.name).toContain('База инструментальных замеров скорости')
+    expect(dataset.license).toBe('https://creativecommons.org/licenses/by/4.0/')
+    expect(dataset.isAccessibleForFree).toBe(true)
+    expect(dataset.creator['@type']).toBe('Organization')
+    expect(Array.isArray(dataset.distribution)).toBe(true)
+    expect(dataset.distribution.length).toBeGreaterThanOrEqual(2)
+    expect(dataset.distribution[0].encodingFormat).toBe('application/json')
+    expect(dataset.distribution[0].contentUrl).toContain('speed_records.json')
   })
 
   it('breedHubMeta generates rich semantic content and FAQPage schema for breed hubs', () => {

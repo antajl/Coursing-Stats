@@ -1,6 +1,7 @@
 import { useMemo, useEffect } from 'react'
 import { useSearchParams, useNavigate, useParams, useLocation, Navigate } from 'react-router-dom'
 import { SEO } from '../../components/SEO'
+import { JsonLd, doninoDatasetSchema } from '../../components/JsonLd'
 import DoninoAttribution from '../../components/DoninoAttribution'
 import { useYandexGoal } from '../../components/YandexMetrica'
 import { useSpeedRecordsPage } from './useSpeedRecordsPage'
@@ -114,6 +115,7 @@ function SpeedRecords() {
         canonicalUrl={canonicalUrl}
         keywords="курсинг донино, курсинг в донино, замеры скорости собак, рекорды скорости донино, бега 350 м, беговой клуб донино, скорость борзых"
       />
+      <JsonLd data={doninoDatasetSchema} />
       <MobileSubNavTabs
         tabs={subNavTabs}
         activeTab="records"

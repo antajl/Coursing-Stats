@@ -215,3 +215,46 @@ export const webSiteSchema = {
     'query-input': 'required name=search_term_string'
   }
 }
+
+// Dataset schema для замеров скорости полигона Донино
+export const doninoDatasetSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Dataset',
+  '@id': 'https://coursing-stats.ru/speed-records/#dataset',
+  name: 'База инструментальных замеров скорости собак пород борзых (Полигон Донино)',
+  description:
+    'База радарных замеров пиковой скорости (км/ч) и времени спринта на 350 м радаром Stalker Pro II бегового клуба «Курсинг в Донино» с 2017 по 2026 год.',
+  url: 'https://coursing-stats.ru/speed-records/',
+  license: 'https://creativecommons.org/licenses/by/4.0/',
+  isAccessibleForFree: true,
+  keywords: [
+    'курсинг',
+    'бега борзых',
+    'скорость собак',
+    'радар Донино',
+    'салюки',
+    'уиппет',
+    'русская псовая борзая',
+    'басенджи',
+    'левретка',
+  ],
+  creator: {
+    '@type': 'Organization',
+    name: 'Беговой клуб «Курсинг в Донино»',
+    url: 'https://coursing-stats.ru/speed-records/',
+  },
+  distribution: [
+    {
+      '@type': 'DataDownload',
+      encodingFormat: 'application/json',
+      contentUrl: 'https://coursing-stats.ru/data/v1/donino/speed_records.json',
+    },
+    {
+      '@type': 'DataDownload',
+      encodingFormat: 'application/json',
+      contentUrl: 'https://coursing-stats.ru/data/v1/donino/coursing_records.json',
+    },
+  ],
+  temporalCoverage: '2017/2026',
+  spatialCoverage: 'Донино, Раменский район, Московская область, Россия',
+}
