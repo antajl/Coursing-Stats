@@ -51,29 +51,44 @@ export const JudgeProfileHero: React.FC<JudgeProfileHeroProps> = ({
   onSelectTab
 }) => {
   return (
-    <div className="min-w-0 rounded-2xl border border-old-money-200/80 bg-white p-4 sm:p-6 md:p-8 shadow-xs">
-      {/* Top Profile Header */}
-      <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
-        <div className="min-w-0 flex-1">
-          <div className="flex flex-wrap items-center gap-2 mb-1.5">
-            <span className="inline-flex items-center gap-1 rounded-md border border-camel-200/90 bg-cream-100/90 px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wider text-camel-800">
-              <Award className="h-3 w-3 text-camel-600" />
-              {role || 'Судья соревнований РКФ'}
-            </span>
+    <div className="space-y-4 sm:space-y-5">
+      {/* 1. Карточка профиля судьи: имя, реестровые данные РКФ и стиль экспертизы */}
+      <div className="min-w-0 rounded-2xl border border-old-money-200/80 bg-white p-4 sm:p-5 md:p-6 shadow-xs">
+        <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+          <div className="min-w-0 flex-1">
+            <h1 className="text-2xl font-bold tracking-tight text-charcoal-900 sm:text-3xl line-clamp-2 leading-tight">
+              {fullName || displayName}
+            </h1>
+
+            {/* Ряд 1: Паспортные реестровые данные судьи */}
+            <div className="mt-2 flex flex-wrap items-center gap-x-2.5 gap-y-1 text-xs text-charcoal-600 font-medium">
+              <span className="inline-flex items-center gap-1 font-semibold text-camel-800">
+                <Award className="h-3.5 w-3.5 text-camel-600 shrink-0" aria-hidden />
+                <span>{role || 'Судья соревнований РКФ'}</span>
+              </span>
 
               {city && (
-                <span className="inline-flex items-center gap-1 rounded-md border border-old-money-200/80 bg-cream-50/80 px-2 py-0.5 text-[11px] font-medium text-charcoal-700">
-                  <MapPin className="h-3 w-3 text-camel-700" />
-                  {city}
-                </span>
+                <>
+                  <span className="text-old-money-300 select-none">·</span>
+                  <span className="inline-flex items-center gap-1 text-charcoal-700">
+                    <MapPin className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
+                    <span>{city}</span>
+                  </span>
+                </>
               )}
 
               {rkfId && (
-                <span className="inline-flex items-center gap-1 rounded-md border border-camel-200/90 bg-cream-100/90 px-2 py-0.5 text-[11px] font-semibold text-camel-800">
-                  РКФ № {rkfId}
-                </span>
+                <>
+                  <span className="text-old-money-300 select-none">·</span>
+                  <span className="font-semibold text-charcoal-800">
+                    РКФ № {rkfId}
+                  </span>
+                </>
               )}
+            </div>
 
+            {/* Ряд 2: Аналитические характеристики стиля судейства и категории */}
+            <div className="mt-2.5 flex flex-wrap items-center gap-2">
               <span
                 className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-0.5 text-xs font-semibold tracking-tight ${strictnessBadge.badgeClass}`}
                 title={strictnessBadge.detail}
@@ -81,41 +96,36 @@ export const JudgeProfileHero: React.FC<JudgeProfileHeroProps> = ({
                 <span className={`h-1.5 w-1.5 rounded-full ${strictnessBadge.dotClass}`} />
                 {strictnessBadge.label}
               </span>
+
+              {categories && categories.length > 0 && categories.map((cat) => (
+                <span
+                  key={cat}
+                  className="inline-flex items-center rounded-full bg-cream-100/70 border border-camel-200/70 px-2.5 py-0.5 text-[11px] font-medium text-camel-900"
+                >
+                  {cat}
+                </span>
+              ))}
             </div>
-
-            <h1 className="text-2xl font-bold tracking-tight text-charcoal-900 sm:text-3xl line-clamp-2">
-              {fullName || displayName}
-            </h1>
-
-            {categories && categories.length > 0 && (
-              <div className="flex flex-wrap items-center gap-1.5 mt-2">
-                {categories.map((cat) => (
-                  <span
-                    key={cat}
-                    className="inline-flex items-center rounded-full bg-cream-100/70 border border-camel-200/70 px-2.5 py-0.5 text-[11px] font-medium text-camel-900"
-                  >
-                    {cat}
-                  </span>
-                ))}
-              </div>
-            )}
           </div>
 
-        {/* Year Filter */}
-        <div className="flex items-center justify-between sm:justify-end gap-2 shrink-0 w-full sm:w-auto pt-2 border-t border-old-money-100/70 sm:border-0 sm:pt-0">
-          <span className="text-xs font-semibold uppercase tracking-wider text-charcoal-400 sm:hidden">
-            Период:
-          </span>
-          <JudgeYearDropdown
-            value={yearParam}
-            onChange={setYear}
-            availableYears={availableYears}
-          />
+          {/* Year Filter */}
+          <div className="flex items-center justify-between sm:justify-end gap-2 shrink-0 w-full sm:w-auto pt-2 border-t border-old-money-100/70 sm:border-0 sm:pt-0">
+            <span className="text-xs font-semibold uppercase tracking-wider text-charcoal-400 sm:hidden">
+              Период:
+            </span>
+            <JudgeYearDropdown
+              value={yearParam}
+              onChange={setYear}
+              availableYears={availableYears}
+            />
+          </div>
         </div>
       </div>
 
-      {/* Primary 4 Key Statistics Cards */}
-      <div className="mt-6 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+      {/* 2. Карточка сводной статистики соревнований */}
+      <div className="min-w-0 rounded-2xl border border-old-money-200/80 bg-white p-4 sm:p-5 md:p-6 shadow-xs">
+        {/* Primary 4 Key Statistics Cards */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
         <div className="flex items-center justify-between rounded-xl border border-old-money-200/80 bg-cream-50/50 p-3.5 sm:p-4 text-left">
           <div>
             <p className="text-xs font-semibold uppercase tracking-wider text-charcoal-500">
@@ -300,5 +310,6 @@ export const JudgeProfileHero: React.FC<JudgeProfileHeroProps> = ({
         </div>
       </div>
     </div>
-  )
+  </div>
+)
 }
