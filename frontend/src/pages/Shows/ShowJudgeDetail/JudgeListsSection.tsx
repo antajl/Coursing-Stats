@@ -21,6 +21,8 @@ export function JudgeListsSection({
   periodExhibitions,
   judgeId,
   judgeName,
+  selectedBreed,
+  onSelectBreed,
   gradeFilter,
   showAllBreeds,
   showAllExhibitions,
@@ -36,6 +38,8 @@ export function JudgeListsSection({
   periodExhibitions?: ExhibitionRow[]
   judgeId?: string
   judgeName?: string
+  selectedBreed?: string
+  onSelectBreed?: (breed: string) => void
   gradeFilter: GradeFilterKey | null
   showAllBreeds: boolean
   showAllExhibitions: boolean
@@ -110,6 +114,8 @@ export function JudgeListsSection({
             judgeId={judgeId}
             judgeName={judgeName}
             periodExhibitions={periodExhibitions}
+            selectedBreed={selectedBreed}
+            onSelectBreed={onSelectBreed}
           />
         ) : (
           <JudgeExhibitionPanel

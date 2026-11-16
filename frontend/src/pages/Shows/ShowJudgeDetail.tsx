@@ -29,11 +29,24 @@ export default function ShowJudgeDetail() {
 
   const yearParam = searchParams.get('year') || ''
   const gradeParam = (searchParams.get('grade') || '') as GradeFilterKey | ''
+  const breedParam = searchParams.get('breed') || ''
   const [listTab, setListTab] = useState<ListTab>('breeds')
+  const [selectedBreed, setSelectedBreed] = useState(breedParam)
   const [showAllBreeds, setShowAllBreeds] = useState(false)
   const [showAllExhibitions, setShowAllExhibitions] = useState(false)
   const listsRef = useRef<HTMLDivElement>(null)
   const pendingScrollRef = useRef(false)
+
+  const handleBreedChange = (breed: string) => {
+    setSelectedBreed(breed)
+    const next = new URLSearchParams(searchParams)
+    if (breed) {
+      next.set('breed', breed)
+    } else {
+      next.delete('breed')
+    }
+    setSearchParams(next, { replace: true })
+  }
 
   const availableYears = useMemo(() => {
     if (!judge) return [] as string[]
@@ -221,6 +234,8 @@ export default function ShowJudgeDetail() {
           periodExhibitions={periodExhibitions}
           judgeId={judge?.id}
           judgeName={judge?.display_name || judge?.name}
+          selectedBreed={selectedBreed}
+          onSelectBreed={handleBreedChange}
           gradeFilter={gradeFilter}
           showAllBreeds={showAllBreeds}
           showAllExhibitions={showAllExhibitions}
