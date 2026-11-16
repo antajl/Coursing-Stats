@@ -327,13 +327,71 @@ describe('prerender-seo helpers', () => {
       excellent_rate: 0.7466,
     })
 
-    expect(meta.title).toContain('Эксперт РКФ Орлова Марина Олеговна')
+    expect(meta.title).toContain('Орлова Марина Олеговна — эксперт РКФ, судья выставок собак')
     expect(meta.title).not.toContain('ОРЛОВА')
     expect(meta.description).toContain('75% отлично')
-    expect(meta.description).toContain('Эксперт РКФ / FCI Орлова Марина Олеговна')
+    expect(meta.description).toContain('Эксперт РКФ Орлова Марина Олеговна')
     const person = (meta.jsonLd as any)['@graph'].find((item: any) => item['@type'] === 'Person')
     expect(person.name).toBe('Орлова Марина Олеговна')
     expect(person.jobTitle).toContain('Эксперт РКФ')
+  })
+
+  it('showJudgeMeta prioritizes surname at index 0, includes initials, and generates rich content for Polivanov', () => {
+    const meta = showJudgeMeta({
+      id: 'поливанов|м|а',
+      numeric_id: 1070,
+      name: 'поливанов мстислав александрович',
+      display_name: 'Поливанов Мстислав Александрович',
+      total_judged: 279,
+      unique_breeds: 1047,
+      excellent_rate: 0.8265,
+      city: 'Казань',
+      cert_number: 5,
+      ranks: 'CACIB FCI',
+      total_dogs: 10338,
+      breeds: ['ВЕЛЬШ КОРГИ ПЕМБРОК', 'ЛАБРАДОР РЕТРИВЕР', 'НЕМЕЦКАЯ ОВЧАРКА'],
+      by_year: { '2026': 36, '2025': 29 },
+      konura_url: 'http://www.konura.info/experts/polivanov-mstislav-aleksandrovich-65.html',
+    })
+
+    // 1. Surname is the very first token in Title (highest SEO priority)
+    expect(meta.title.startsWith('Поливанов')).toBe(true)
+    expect(meta.title).toBe(
+      'Поливанов Мстислав Александрович — эксперт РКФ, судья выставок собак: статистика и отзывы | Курсинг Статс'
+    )
+
+    // 2. H1 has exact semantic keyword match
+    expect(meta.h1).toBe('Поливанов Мстислав Александрович — эксперт РКФ, судья выставок собак')
+
+    // 3. Description contains full name, initials, city, ranks, cert number, and reviews
+    expect(meta.description).toContain('Поливанов Мстислав Александрович (Поливанов М. А.)')
+    expect(meta.description).toContain('г. Казань')
+    expect(meta.description).toContain('ранг CACIB FCI')
+    expect(meta.description).toContain('удостоверение РКФ № 5')
+    expect(meta.description).toContain('отзывы экспонентов')
+
+    // 4. Content HTML contains rich body text for search engines (preventing Thin Content)
+    expect(meta.contentHtml).toBeDefined()
+    expect(meta.contentHtml).toContain('CACIB FCI')
+    expect(meta.contentHtml).toContain('№ <strong>5</strong>')
+    expect(meta.contentHtml).toContain('Казань')
+    expect(meta.contentHtml).toContain('279 выставок')
+    expect(meta.contentHtml).toContain('10 338 собак')
+    expect(meta.contentHtml).toContain('Вельш Корги Пемброк')
+    expect(meta.contentHtml).toContain('Сезон 2026')
+    expect(meta.contentHtml).toContain('Конура')
+
+    // 5. Schema.org Person JSON-LD entity graph contains all aliases for Knowledge Graph
+    const person = (meta.jsonLd as any)['@graph'].find((item: any) => item['@type'] === 'Person')
+    expect(person).toBeDefined()
+    expect(person.name).toBe('Поливанов Мстислав Александрович')
+    expect(person.alternateName).toContain('Поливанов')
+    expect(person.alternateName).toContain('Поливанов М. А.')
+    expect(person.alternateName).toContain('Эксперт Поливанов')
+    expect(person.alternateName).toContain('Судья Поливанов')
+    expect(person.alternateName).toContain('Polivanov Mstislav Aleksandrovich')
+    expect(person.alternateName).toContain('Polivanov M. A.')
+    expect(person.address.addressLocality).toBe('Казань')
   })
 
   it('buildGuideHubHtml renders semantic table with breed speeds and Google AI Overview FAQ', () => {

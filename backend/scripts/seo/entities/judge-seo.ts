@@ -58,17 +58,17 @@ export function sportJudgeMeta(judge: {
     judge.unique_breeds != null ? pluralizeRu(judge.unique_breeds, 'порода', 'породы', 'пород') : null,
     judge.unique_dogs != null ? pluralizeRu(judge.unique_dogs, 'собака', 'собаки', 'собак') : null,
   ].filter(Boolean)
-  const title = `${primaryName} — судья РКФ по курсингу и бегам борзых: статистика соревнований | Курсинг Статс`
+  const title = `${displayName} — судья РКФ по курсингу и бегам борзых: статистика соревнований | Курсинг Статс`
   const description =
     facts.length > 0
-      ? `Судья РКФ ${primaryName}: ${facts.join(', ')}. Обслуженные турниры, средние баллы по критериям и судейские бригады.`
-      : `Судья РКФ ${primaryName}: обслуженные состязания, оценки собак и судимые породы.`
+      ? `Судья РКФ ${displayName}: ${facts.join(', ')}. Обслуженные турниры, средние баллы по критериям и судейские бригады.`
+      : `Судья РКФ ${displayName}: обслуженные состязания, оценки собак и судимые породы.`
   const judgeSlug = judge.numeric_id != null ? String(judge.numeric_id) : encodeURIComponent(judge.id)
   const url = `${SITE_ORIGIN}/judges/${judgeSlug}/`
   const breadcrumbs = [
     { name: 'Главная', url: '/' },
     { name: 'Судьи', url: '/competitions/judges/2026/' },
-    { name: primaryName, url: `/judges/${judgeSlug}/` },
+    { name: displayName, url: `/judges/${judgeSlug}/` },
   ]
   const alternateNames = [
     surname,
@@ -82,7 +82,7 @@ export function sportJudgeMeta(judge: {
   const contentHtml = [
     `<section aria-label="Судейская квалификация">`,
     `<h2>Судейство соревнований по курсингу и бегам борзых</h2>`,
-    `<p><strong>${escapeHtml(primaryName)}</strong> — официальный судья Российской кинологической федерации (РКФ) по беговым дисциплинам борзых (курсинг, рейсинг). ${facts.length > 0 ? `Опыт судейства: ${escapeHtml(facts.join(', '))}.` : ''}</p>`,
+    `<p><strong>${escapeHtml(displayName)}</strong> — официальный судья Российской кинологической федерации (РКФ) по беговым дисциплинам борзых (курсинг, рейсинг). ${facts.length > 0 ? `Опыт судейства: ${escapeHtml(facts.join(', '))}.` : ''}</p>`,
     `</section>`,
   ].join('\n')
 
@@ -110,7 +110,7 @@ export function sportJudgeMeta(judge: {
   return {
     title,
     description,
-    h1: `${primaryName} — судья РКФ по курсингу и бегам`,
+    h1: displayName,
     paragraph: description,
     contentHtml,
     breadcrumbs,
