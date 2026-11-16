@@ -218,6 +218,9 @@ export default function ShowJudgeDetail() {
           onListTabChange={setListTab}
           periodBreeds={periodBreeds}
           filteredExhibitions={filteredExhibitions}
+          periodExhibitions={periodExhibitions}
+          judgeId={judge?.id}
+          judgeName={judge?.display_name || judge?.name}
           gradeFilter={gradeFilter}
           showAllBreeds={showAllBreeds}
           showAllExhibitions={showAllExhibitions}

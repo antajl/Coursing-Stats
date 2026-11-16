@@ -10,6 +10,7 @@ type ExhibitionRow = {
   title: string
   rkf_url?: string
   grade_counts?: Partial<Record<GradeFilterKey, number>>
+  breed_counts?: Record<string, number>
 }
 
 export function JudgeListsSection({
@@ -17,6 +18,9 @@ export function JudgeListsSection({
   onListTabChange,
   periodBreeds,
   filteredExhibitions,
+  periodExhibitions,
+  judgeId,
+  judgeName,
   gradeFilter,
   showAllBreeds,
   showAllExhibitions,
@@ -29,6 +33,9 @@ export function JudgeListsSection({
   onListTabChange: (tab: ListTab) => void
   periodBreeds: BreedRow[]
   filteredExhibitions: ExhibitionRow[]
+  periodExhibitions?: ExhibitionRow[]
+  judgeId?: string
+  judgeName?: string
   gradeFilter: GradeFilterKey | null
   showAllBreeds: boolean
   showAllExhibitions: boolean
@@ -100,6 +107,9 @@ export function JudgeListsSection({
             breeds={periodBreeds}
             showAll={showAllBreeds}
             onToggleShowAll={onToggleShowAllBreeds}
+            judgeId={judgeId}
+            judgeName={judgeName}
+            periodExhibitions={periodExhibitions}
           />
         ) : (
           <JudgeExhibitionPanel

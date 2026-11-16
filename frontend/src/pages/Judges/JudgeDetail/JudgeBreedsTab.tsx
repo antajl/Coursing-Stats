@@ -1,7 +1,11 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { ChevronDown, ExternalLink } from 'lucide-react'
 import ToolbarSearch from '../../../components/toolbar/ToolbarSearch'
 import ProcoursingEventLink from '../../../components/ProcoursingEventLink'
+import RankBadge from '../../../components/RankBadge'
+import DoninoColumnPlaque, { DoninoColumnShell } from '../../SpeedRecords/DoninoColumnPlaque'
+import { formatBreedSentenceCase } from '../../../lib/breedMapping'
 import type { BreedStat } from './types'
 import { CRITERIA_META } from './constants'
 import { formatBreedName, formatDate, getScoreTone } from './utils'
@@ -189,60 +193,103 @@ export const JudgeBreedsTab: React.FC<JudgeBreedsTabProps> = ({
 
                 {/* Expanded Dogs List */}
                 {isOpen && matchingDogs.length > 0 && (
-                  <div className="border-t border-old-money-100 bg-cream-50/30 p-3 sm:p-4 rounded-b-2xl">
-                    <p className="mb-2.5 text-xs font-semibold uppercase tracking-wider text-charcoal-500">
-                      Оцененные собаки ({matchingDogs.length}):
-                    </p>
-                    <div className="space-y-2">
-                      {matchingDogs.map((dog, dogIdx) => {
-                        const dogKey = `${stat.breed}|${dog.name}|${dogIdx}`
-                        const isDogOpen = expandedDogs.has(dogKey)
-                        const dogScore100 = dog.avg_score != null ? (dog.avg_score * 5).toFixed(1) : '—'
-                        const dogTone = getScoreTone(dog.avg_score)
+                  <div className="border-t border-old-money-100 bg-cream-50/20 p-2 sm:p-3 rounded-b-2xl">
+                    <DoninoColumnShell
+                      plaque={
+                        <DoninoColumnPlaque
+                          asHeader
+                          title={formatBreedSentenceCase(stat.breed).toUpperCase()}
+                          count={matchingDogs.length}
+                          countLabel={`${matchingDogs.length} собак`}
+                        />
+                      }
+                    >
+                      <div className="divide-y divide-cream-100/80">
+                        {matchingDogs.map((dog, dogIdx) => {
+                          const dogKey = `${stat.breed}|${dog.name}|${dogIdx}`
+                          const isDogOpen = expandedDogs.has(dogKey)
+                          const rank = dogIdx + 1
+                          const startsCount = dog.total_evaluations || (dog.events ? dog.events.length : 1)
+                          const dogScore100 = dog.avg_score != null ? (dog.avg_score * 5).toFixed(1) : '—'
 
-                        return (
-                          <div
-                            key={dogKey}
-                            className="rounded-xl border border-old-money-200/70 bg-white p-3 transition-colors hover:border-camel-300 shadow-2xs"
-                          >
-                            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                              <button
-                                type="button"
-                                className="text-left group flex-1 min-w-0"
-                                onClick={() => toggleDogExpand(dogKey)}
-                              >
-                                <div className="flex items-center gap-2">
-                                  <span className="text-sm font-bold text-charcoal-900 group-hover:text-camel-800 transition-colors">
-                                    {dog.name}
-                                  </span>
-                                  <ChevronDown
-                                    className={`h-3.5 w-3.5 text-charcoal-400 transition-transform duration-200 ${
-                                      isDogOpen ? 'rotate-180 text-camel-600' : ''
-                                    }`}
-                                  />
+                          return (
+                            <div key={dogKey} className="transition-colors">
+                              <div className="flex flex-row items-center justify-between p-3 sm:p-3.5 hover:bg-cream-50/50 transition-colors">
+                                {/* Left: Rank Badge */}
+                                <div className="w-10 sm:w-12 shrink-0 flex items-center justify-center">
+                                  <RankBadge rank={rank} />
                                 </div>
-                                {dog.name_ru && !dog.name.includes(dog.name_ru) && (
-                                  <p className="text-xs text-charcoal-500 mt-0.5">
-                                    {dog.name_ru}
-                                  </p>
-                                )}
-                              </button>
 
-                              <div className="flex items-center gap-2 shrink-0 self-end sm:self-center">
-                                <span className="text-xs text-charcoal-500 tabular-nums">
-                                  {dog.total_evaluations || (dog.events ? dog.events.length : 1)} заб.
-                                </span>
-                                <div
-                                  className={`inline-flex items-center gap-1 rounded-lg border px-2.5 py-1 text-xs font-bold tabular-nums ${dogTone.badge}`}
-                                >
-                                  <span>{dogScore100} б.</span>
+                                {/* Center: Dog Info */}
+                                <div className="min-w-0 flex-1 px-2.5 sm:px-3">
+                                  <div className="flex items-center gap-1.5 min-w-0">
+                                    <Link
+                                      to={`/dog/${encodeURIComponent(dog.name)}/`}
+                                      className="font-bold text-sm sm:text-[15px] leading-snug text-charcoal-900 truncate hover:text-camel-800 hover:underline transition-colors"
+                                      title={dog.name_ru ? `${dog.name} / ${dog.name_ru}` : dog.name}
+                                    >
+                                      {dog.name}
+                                    </Link>
+                                  </div>
+
+                                  {/* Subtitle 1: Breed + Russian name */}
+                                  <div className="flex items-center gap-1 text-[10.5px] sm:text-xs text-charcoal-500 font-medium mt-0.5">
+                                    <span className="truncate">{formatBreedSentenceCase(stat.breed)}</span>
+                                    {dog.name_ru && !dog.name.includes(dog.name_ru) && (
+                                      <>
+                                        <span className="text-charcoal-300">·</span>
+                                        <span className="truncate text-charcoal-400">{dog.name_ru}</span>
+                                      </>
+                                    )}
+                                  </div>
+
+                                  {/* Subtitle 2: Average Score */}
+                                  <div className="flex items-center gap-1 text-[11px] sm:text-[11.5px] text-charcoal-600 font-medium mt-0.5">
+                                    <span>Ср. балл:</span>
+                                    <strong className="font-bold text-charcoal-900 tabular-nums">
+                                      {dogScore100}
+                                    </strong>
+                                    <span className="text-[10px] text-charcoal-400 font-normal">из 100</span>
+                                    {dog.avg_score != null && (
+                                      <span className="text-[10px] text-charcoal-400 hidden sm:inline">
+                                        ({dog.avg_score.toFixed(2)} из 20)
+                                      </span>
+                                    )}
+                                  </div>
+                                </div>
+
+                                {/* Right: Starts & Criteria toggle */}
+                                <div className="shrink-0 flex flex-col items-end justify-center gap-1 pl-2 text-right">
+                                  <div className="flex items-center gap-1.5 min-w-0 justify-end">
+                                    <span className="text-xs text-charcoal-600 font-medium">Забегов</span>
+                                    <strong className="font-bold text-charcoal-900 tabular-nums text-sm">
+                                      {startsCount}
+                                    </strong>
+                                  </div>
+
+                                  <button
+                                    type="button"
+                                    onClick={() => toggleDogExpand(dogKey)}
+                                    className={`inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-semibold border transition-colors cursor-pointer ${
+                                      isDogOpen
+                                        ? 'bg-camel-100 border-camel-300 text-camel-900'
+                                        : 'bg-cream-100/80 border-old-money-200/60 text-charcoal-700 hover:bg-cream-200/80 hover:text-camel-900'
+                                    }`}
+                                    title="Оценки по критериям и забегам"
+                                  >
+                                    <span>Оценки</span>
+                                    <ChevronDown
+                                      className={`h-3 w-3 transition-transform duration-200 ${
+                                        isDogOpen ? 'rotate-180 text-camel-700' : 'text-charcoal-400'
+                                      }`}
+                                    />
+                                  </button>
                                 </div>
                               </div>
-                            </div>
 
-                            {/* Dog Details Drawer: Criteria Breakdown & Events */}
-                            {isDogOpen && (
-                              <div className="mt-3 pt-3 border-t border-old-money-100 space-y-3">
+                              {/* Dog Details Drawer: Criteria Breakdown & Events */}
+                              {isDogOpen && (
+                                <div className="border-t border-old-money-100/70 bg-cream-50/40 p-3 sm:p-4 space-y-3">
                                 {dog.scores_by_criteria && (
                                   <div>
                                     <p className="text-[11px] font-semibold uppercase tracking-wider text-charcoal-500 mb-2">
@@ -355,7 +402,8 @@ export const JudgeBreedsTab: React.FC<JudgeBreedsTabProps> = ({
                           </div>
                         )
                       })}
-                    </div>
+                      </div>
+                    </DoninoColumnShell>
                   </div>
                 )}
               </div>

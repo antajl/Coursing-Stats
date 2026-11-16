@@ -1,21 +1,40 @@
 import { useMemo, useState } from 'react'
-import { ArrowUpDown } from 'lucide-react'
+import { ArrowUpDown, ChevronDown } from 'lucide-react'
 import ToolbarSearch from '../../../components/toolbar/ToolbarSearch'
 import { formatBreedSentenceCase } from '../../../lib/breedMapping'
+import { ShowJudgeBreedDogsList } from './ShowJudgeBreedDogsList'
 
 type BreedRow = { breed: string; count: number }
+type ExhibitionItem = {
+  id: number
+  date: string
+  title: string
+  rkf_url?: string
+  breed_counts?: Record<string, number>
+}
 
 export function JudgeBreedPanel({
   breeds,
   showAll,
   onToggleShowAll,
+  judgeId,
+  judgeName,
+  periodExhibitions,
 }: {
   breeds: BreedRow[]
   showAll: boolean
   onToggleShowAll: () => void
+  judgeId?: string
+  judgeName?: string
+  periodExhibitions?: ExhibitionItem[]
 }) {
   const [searchQuery, setSearchQuery] = useState('')
   const [sortMode, setSortMode] = useState<'count' | 'alpha'>('count')
+  const [expandedBreed, setExpandedBreed] = useState<string | null>(null)
+
+  const toggleBreed = (breed: string) => {
+    setExpandedBreed((prev) => (prev === breed ? null : breed))
+  }
 
   const totalEvaluations = useMemo(
     () => breeds.reduce((sum, b) => sum + b.count, 0),
@@ -87,39 +106,69 @@ export function JudgeBreedPanel({
 
           <div className="divide-y divide-old-money-100/70 rounded-xl border border-old-money-200/80 bg-white overflow-hidden shadow-2xs">
             {displayed.map((row) => {
+              const isExpanded = expandedBreed === row.breed
               const pct = maxBreedCount > 0 ? (row.count / maxBreedCount) * 100 : 0
               const shareOfAll = totalEvaluations > 0 ? ((row.count / totalEvaluations) * 100).toFixed(1) : null
 
               return (
-                <div
-                  key={row.breed}
-                  className="group relative flex items-center justify-between gap-3 px-3.5 py-2.5 hover:bg-cream-50/60 transition-colors"
-                >
-                  {/* Subtle bar indicator */}
+                <div key={row.breed} className="transition-colors">
                   <div
-                    className="absolute inset-y-0 left-0 bg-camel-100/35 transition-all group-hover:bg-camel-200/40 pointer-events-none"
-                    style={{ width: `${Math.max(2, pct)}%` }}
-                  />
+                    role="button"
+                    tabIndex={0}
+                    aria-expanded={isExpanded}
+                    onClick={() => toggleBreed(row.breed)}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault()
+                        toggleBreed(row.breed)
+                      }
+                    }}
+                    className={`group relative flex items-center justify-between gap-3 px-3.5 py-2.5 transition-colors cursor-pointer select-none ${
+                      isExpanded ? 'bg-cream-100/60' : 'hover:bg-cream-50/60'
+                    }`}
+                  >
+                    {/* Subtle bar indicator */}
+                    <div
+                      className="absolute inset-y-0 left-0 bg-camel-100/35 transition-all group-hover:bg-camel-200/40 pointer-events-none"
+                      style={{ width: `${Math.max(2, pct)}%` }}
+                    />
 
-                  <div className="relative min-w-0 flex-1">
-                    <span className="font-medium text-sm text-charcoal-900 group-hover:text-camel-900 transition-colors">
-                      {formatBreedSentenceCase(row.breed)}
-                    </span>
-                    {shareOfAll && Number(shareOfAll) >= 1 && (
-                      <span className="ml-2 text-[11px] text-charcoal-400 font-normal">
-                        ({shareOfAll}%)
+                    <div className="relative min-w-0 flex-1 flex items-center gap-2">
+                      <ChevronDown
+                        className={`h-4 w-4 shrink-0 text-charcoal-400 transition-transform duration-200 ${
+                          isExpanded ? 'rotate-180 text-camel-700' : 'group-hover:text-charcoal-600'
+                        }`}
+                      />
+                      <span className="font-medium text-sm text-charcoal-900 group-hover:text-camel-900 transition-colors">
+                        {formatBreedSentenceCase(row.breed)}
                       </span>
-                    )}
+                      {shareOfAll && Number(shareOfAll) >= 1 && (
+                        <span className="ml-1 text-[11px] text-charcoal-400 font-normal">
+                          ({shareOfAll}%)
+                        </span>
+                      )}
+                    </div>
+
+                    <div className="relative shrink-0 flex items-center gap-2">
+                      <span
+                        className="inline-flex min-w-[2.25rem] justify-center rounded-md bg-cream-100/90 px-2 py-0.5 text-xs font-bold tabular-nums text-camel-800"
+                        title="Количество оценок по породе"
+                      >
+                        {row.count}
+                      </span>
+                    </div>
                   </div>
 
-                  <div className="relative shrink-0 flex items-center gap-2">
-                    <span
-                      className="inline-flex min-w-[2.25rem] justify-center rounded-md bg-cream-100/90 px-2 py-0.5 text-xs font-bold tabular-nums text-camel-800"
-                      title="Количество оценок по породе"
-                    >
-                      {row.count}
-                    </span>
-                  </div>
+                  {isExpanded && (
+                    <div className="border-t border-old-money-100/70 p-2 sm:p-3 bg-cream-50/20">
+                      <ShowJudgeBreedDogsList
+                        judgeId={judgeId || ''}
+                        judgeName={judgeName || ''}
+                        breed={row.breed}
+                        periodExhibitions={periodExhibitions || []}
+                      />
+                    </div>
+                  )}
                 </div>
               )
             })}
