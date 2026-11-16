@@ -1,5 +1,6 @@
 import React from 'react'
 import { Award, Calendar, Layers, FileText, MapPin } from 'lucide-react'
+import JudgeYearDropdown from '../../../components/ui/JudgeYearDropdown'
 import type { CriteriaStat } from './types'
 import { CRITERIA_META, DISCIPLINES } from './constants'
 import type { getSportJudgeStrictnessBadge } from '../../../lib/judgeUiUtils'
@@ -105,20 +106,11 @@ export const JudgeProfileHero: React.FC<JudgeProfileHeroProps> = ({
           <span className="text-xs font-semibold uppercase tracking-wider text-charcoal-400 sm:hidden">
             Период:
           </span>
-          <select
-            id="judge-year"
-            aria-label="Период"
+          <JudgeYearDropdown
             value={yearParam}
-            onChange={(e) => setYear(e.target.value)}
-            className="h-9 sm:h-10 rounded-xl border border-old-money-200 bg-white px-3 sm:px-3.5 text-xs sm:text-sm font-medium text-charcoal-800 shadow-2xs hover:border-camel-400 focus:border-camel-500 focus:outline-none focus:ring-2 focus:ring-camel-100 transition-colors"
-          >
-            <option value="">Все года</option>
-            {availableYears.map((y) => (
-              <option key={y} value={y}>
-                {y}
-              </option>
-            ))}
-          </select>
+            onChange={setYear}
+            availableYears={availableYears}
+          />
         </div>
       </div>
 
