@@ -47,12 +47,16 @@ export function personSchema({
   url,
   description,
   worksFor = 'Российская Кинологическая Федерация (РКФ)',
+  alternateName,
+  city,
 }: {
   name: string
   jobTitle: string
   url: string
   description?: string
   worksFor?: string
+  alternateName?: string[]
+  city?: string | null
 }): Record<string, unknown> {
   return {
     '@context': 'https://schema.org',
@@ -60,6 +64,8 @@ export function personSchema({
     name,
     jobTitle,
     url,
+    ...(alternateName && alternateName.length > 0 ? { alternateName } : {}),
+    ...(city ? { address: { '@type': 'PostalAddress', addressLocality: city } } : {}),
     ...(description ? { description } : {}),
     ...(worksFor
       ? {

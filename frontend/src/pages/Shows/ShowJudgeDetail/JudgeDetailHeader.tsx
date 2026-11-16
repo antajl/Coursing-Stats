@@ -222,6 +222,7 @@ export function JudgeDetailHeader({
             <div className="min-w-0 flex-1">
               <h1 className="text-2xl font-bold tracking-tight text-charcoal-900 sm:text-3xl line-clamp-2 leading-tight">
                 {displayName}
+                <span className="sr-only"> — эксперт РКФ, судья выставок собак</span>
               </h1>
 
               {/* Ряд 1: Паспортные реестровые данные судьи (РКФ / FCI) */}

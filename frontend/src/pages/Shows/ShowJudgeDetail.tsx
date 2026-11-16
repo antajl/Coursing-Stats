@@ -201,21 +201,45 @@ export default function ShowJudgeDetail() {
   )
 
   const canonicalSlug = judge.numeric_id ?? resolveShowJudgeNumericId(judge.id) ?? encodeURIComponent(judge.id)
+  const judgeDisplayName = judge.display_name || judge.name
+  const parts = judgeDisplayName.trim().split(/\s+/).filter(Boolean)
+  const surname = parts[0] || judgeDisplayName
+  const initials = parts.length >= 3
+    ? `${parts[1][0].toUpperCase()}. ${parts[2][0].toUpperCase()}.`
+    : parts.length === 2
+      ? `${parts[1][0].toUpperCase()}.`
+      : null
+  const withInitials = initials ? `${surname} ${initials}` : null
+
+  const alternateNames = [
+    surname,
+    withInitials,
+    `Эксперт ${surname}`,
+    `Судья ${surname}`,
+    `Эксперт РКФ ${surname}`,
+    `Судья РКФ ${surname}`,
+    `Эксперт ${judgeDisplayName}`,
+    `Судья ${judgeDisplayName}`,
+    `Эксперт РКФ ${judgeDisplayName}`,
+    `Судья РКФ ${judgeDisplayName}`,
+  ].filter((n): n is string => Boolean(n) && n !== judgeDisplayName)
 
   return (
     <>
       <SEO
-        title={`${judge.display_name || judge.name} — судья РКФ: статистика выставок, породы, строгость оценок`}
-        description={`Судья РКФ / FCI ${judge.display_name || judge.name}: статистика судейства на выставках собак (${periodExhibitions.length} выставок, ${periodBreeds.length} пород), строгость оценок (% отлично) и судимые породы.`}
-        keywords={`${judge.display_name || judge.name}, судья, эксперт ркф, отзывы, выставки ркф, cac, bob, строгость`}
+        title={`${judgeDisplayName} — эксперт РКФ, судья выставок собак: статистика и отзывы | Курсинг Статс`}
+        description={`Эксперт РКФ / FCI ${judgeDisplayName}${withInitials && withInitials !== judgeDisplayName ? ` (${withInitials})` : ''}: статистика судейства на выставках собак (${periodExhibitions.length} выставок, ${periodBreeds.length} пород), строгость оценок (% отлично), судимые породы и отзывы экспонентов.`}
+        keywords={`${surname}, ${judgeDisplayName}${withInitials ? `, ${withInitials}` : ''}, эксперт ркф, судья ркф, отзывы, выставки ркф, cac, cacib, bob, породы, строгость`}
         canonicalUrl={`https://coursing-stats.ru/shows/judges/${canonicalSlug}/`}
       />
       <JsonLd
         data={personSchema({
-          name: judge.display_name || judge.name,
-          jobTitle: 'Судья по породам собак РКФ / FCI',
+          name: judgeDisplayName,
+          alternateName: Array.from(new Set(alternateNames)),
+          city: judge.city,
+          jobTitle: 'Эксперт РКФ / Судья по экстерьеру собак FCI международного уровня',
           url: `https://coursing-stats.ru/shows/judges/${canonicalSlug}/`,
-          description: `Эксперт РКФ / FCI ${judge.display_name || judge.name}: статистика судейства на выставках собак, судимые породы.`,
+          description: `Эксперт РКФ / FCI ${judgeDisplayName}: статистика судейства на выставках собак, судимые породы и отзывы экспонентов.`,
           worksFor: 'Российская Кинологическая Федерация (РКФ)',
         })}
       />
