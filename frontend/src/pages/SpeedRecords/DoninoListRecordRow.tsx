@@ -180,23 +180,20 @@ function DoninoListRecordRow({
               </div>
             )
           ) : (
-            <>
-              {(date || breed) && (
-                <div className="mt-0.5 flex min-w-0 items-center gap-1 text-xs text-old-money-500 whitespace-nowrap">
-                  {date && <span className="shrink-0">{formatRecordDate(date)}</span>}
-                  {date && breed && <span className="text-old-money-300">·</span>}
-                  {breed && <span className="truncate donino-home-row-breed">{breed}</span>}
-                </div>
-              )}
-              {trackType && (
-                <div className="mt-0.5 flex min-w-0 items-center text-[11px] text-old-money-500">
-                  <span className="inline-flex items-center gap-0.5 font-medium text-old-money-600">
+            (date || breed || trackType) && (
+              <div className="mt-0.5 flex min-w-0 items-center gap-1 text-[11px] sm:text-xs text-old-money-500 whitespace-nowrap">
+                {date && <span className="shrink-0">{formatRecordDate(date)}</span>}
+                {date && (breed || trackType) && <span className="text-old-money-300">·</span>}
+                {breed && <span className="truncate donino-home-row-breed">{breed}</span>}
+                {breed && trackType && <span className="text-old-money-300">·</span>}
+                {trackType && (
+                  <span className="inline-flex items-center gap-0.5 font-medium text-old-money-600 shrink-0">
                     {getTrackTypeIcon(trackType)}
                     <span>{trackType}</span>
                   </span>
-                </div>
-              )}
-            </>
+                )}
+              </div>
+            )
           )}
         </div>
       </div>

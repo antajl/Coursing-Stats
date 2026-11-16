@@ -70,22 +70,22 @@ const RANK_IMAGES = {
 export default function RankBadge({ rank, delta, className = '', hideDelta = false }: RankBadgeProps) {
   if (rank <= 0) return null
 
-  const deltaElement = !hideDelta && delta ? <DeltaBadge delta={delta} className="mt-1" /> : null
+  const deltaElement = !hideDelta && delta ? <DeltaBadge delta={delta} className="mt-0.5" /> : null
 
   // Top 3: image badge
   if (rank <= 3) {
     const badge = RANK_IMAGES[rank as keyof typeof RANK_IMAGES]
     return (
       <div
-        className={`flex flex-col items-center justify-center ${hideDelta ? 'min-h-0 min-w-0' : 'min-h-[44px] min-w-[44px]'} ${className}`}
+        className={`flex flex-col items-center justify-center ${hideDelta ? 'min-h-0 min-w-0' : 'min-h-[36px] sm:min-h-[38px] min-w-[36px] sm:min-w-[38px]'} ${className}`}
         aria-label={`Rank ${rank}`}
       >
-        <div className="w-9 h-9 sm:w-10 sm:h-10">
+        <div className="w-8 h-8 sm:w-8.5 sm:h-8.5">
           <img
             src={badge.src}
             srcSet={badge.srcSet}
-            width={36}
-            height={30}
+            width={34}
+            height={28}
             alt={`Rank ${rank}`}
             className="w-full h-full object-contain"
             loading="lazy"
@@ -100,10 +100,10 @@ export default function RankBadge({ rank, delta, className = '', hideDelta = fal
   // Rank 4+: text-based, centered, subtle Old Money rounded badge
   return (
     <div
-      className={`${hideDelta ? 'min-h-0 min-w-0' : 'min-h-[44px] min-w-[44px]'} flex flex-col items-center justify-center ${className}`}
+      className={`${hideDelta ? 'min-h-0 min-w-0' : 'min-h-[36px] sm:min-h-[38px] min-w-[36px] sm:min-w-[38px]'} flex flex-col items-center justify-center ${className}`}
       aria-label={`Rank ${rank}`}
     >
-      <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-cream-200/70 border border-old-money-200/60 text-xs font-bold tabular-nums text-charcoal-700 shadow-2xs">
+      <span className="inline-flex items-center justify-center w-6.5 h-6.5 sm:w-7 sm:h-7 rounded-full bg-cream-200/70 border border-old-money-200/60 text-xs font-bold tabular-nums text-charcoal-700 shadow-2xs">
         {rank}
       </span>
       {deltaElement}
