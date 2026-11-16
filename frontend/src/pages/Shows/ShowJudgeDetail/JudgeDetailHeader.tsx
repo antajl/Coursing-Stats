@@ -79,14 +79,6 @@ const GRADE_ACCENTS: Record<
   },
 }
 
-function getJudgeInitials(name: string): string {
-  const parts = name.trim().split(/\s+/)
-  if (parts.length >= 2 && parts[0][0] && parts[1][0]) {
-    return `${parts[0][0]}${parts[1][0]}`.toUpperCase()
-  }
-  return (parts[0]?.[0] || 'Э').toUpperCase()
-}
-
 export function JudgeDetailHeader({
   judgeName,
   yearParam,
@@ -157,61 +149,51 @@ export function JudgeDetailHeader({
     <div className="min-w-0 rounded-2xl border border-old-money-200/90 bg-white p-4 sm:p-6 md:p-8 shadow-xs">
       {/* Top Profile Header */}
       <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
-        <div className="flex items-start gap-3.5 sm:gap-5 min-w-0 flex-1">
-          {/* Монограмма-аватар эксперта */}
-          <div
-            className="flex h-13 w-13 sm:h-16 sm:w-16 shrink-0 items-center justify-center rounded-2xl border border-camel-300/80 bg-cream-100 font-bold tracking-wider text-camel-900 shadow-2xs text-base sm:text-xl select-none"
-            aria-hidden="true"
-          >
-            {getJudgeInitials(displayName)}
-          </div>
-
-          <div className="min-w-0 flex-1">
-            <div className="flex flex-wrap items-center gap-2 mb-1.5">
+        <div className="min-w-0 flex-1">
+          <div className="flex flex-wrap items-center gap-2 mb-1.5">
             <span className="inline-flex items-center gap-1 rounded-md border border-camel-200/90 bg-cream-100/90 px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wider text-camel-800">
               <Award className="h-3 w-3 text-camel-600" />
               Судья РКФ / FCI
             </span>
 
-              {city && (
-                <span className="inline-flex items-center gap-1 rounded-md border border-old-money-200/80 bg-cream-50/80 px-2 py-0.5 text-[11px] font-medium text-charcoal-700">
-                  <MapPin className="h-3 w-3 text-camel-700" />
-                  {city}
-                </span>
-              )}
-
-              {certNumber && (
-                <span className="inline-flex items-center gap-1 rounded-md border border-camel-200/90 bg-cream-100/90 px-2 py-0.5 text-[11px] font-semibold text-camel-800">
-                  РКФ № {certNumber}
-                </span>
-              )}
-
-              {ranks && (
-                <span className="inline-flex items-center gap-1 rounded-md border border-camel-200/70 bg-cream-100/70 px-2 py-0.5 text-[11px] font-medium text-camel-900">
-                  {ranks}
-                </span>
-              )}
-              <span
-                className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-0.5 text-xs font-semibold tracking-tight ${strictnessBadge.badgeClass}`}
-                title={`Взрослые классы (CAC): ${strictnessBadge.detail}`}
-              >
-                <span className={`h-1.5 w-1.5 rounded-full ${strictnessBadge.dotClass}`} />
-                <span>{strictnessBadge.label} (взрослые)</span>
+            {city && (
+              <span className="inline-flex items-center gap-1 rounded-md border border-old-money-200/80 bg-cream-50/80 px-2 py-0.5 text-[11px] font-medium text-charcoal-700">
+                <MapPin className="h-3 w-3 text-camel-700" />
+                {city}
               </span>
-              {periodPuppyStrictness.puppyGraded >= 15 && (
-                <span
-                  className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-0.5 text-xs font-semibold tracking-tight ${puppyStrictnessBadge.badgeClass}`}
-                  title={`Щенки и бэби: ${puppyStrictnessBadge.detail}`}
-                >
-                  <span className={`h-1.5 w-1.5 rounded-full ${puppyStrictnessBadge.dotClass}`} />
-                  <span>{puppyStrictnessBadge.label}</span>
-                </span>
-              )}
-            </div>
-            <h1 className="text-2xl font-bold tracking-tight text-charcoal-900 sm:text-3xl line-clamp-2">
-              {displayName}
-            </h1>
+            )}
+
+            {certNumber && (
+              <span className="inline-flex items-center gap-1 rounded-md border border-camel-200/90 bg-cream-100/90 px-2 py-0.5 text-[11px] font-semibold text-camel-800">
+                РКФ № {certNumber}
+              </span>
+            )}
+
+            {ranks && (
+              <span className="inline-flex items-center gap-1 rounded-md border border-camel-200/70 bg-cream-100/70 px-2 py-0.5 text-[11px] font-medium text-camel-900">
+                {ranks}
+              </span>
+            )}
+            <span
+              className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-0.5 text-xs font-semibold tracking-tight ${strictnessBadge.badgeClass}`}
+              title={`Взрослые классы (CAC): ${strictnessBadge.detail}`}
+            >
+              <span className={`h-1.5 w-1.5 rounded-full ${strictnessBadge.dotClass}`} />
+              <span>{strictnessBadge.label} (взрослые)</span>
+            </span>
+            {periodPuppyStrictness.puppyGraded >= 15 && (
+              <span
+                className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-0.5 text-xs font-semibold tracking-tight ${puppyStrictnessBadge.badgeClass}`}
+                title={`Щенки и бэби: ${puppyStrictnessBadge.detail}`}
+              >
+                <span className={`h-1.5 w-1.5 rounded-full ${puppyStrictnessBadge.dotClass}`} />
+                <span>{puppyStrictnessBadge.label}</span>
+              </span>
+            )}
           </div>
+          <h1 className="text-2xl font-bold tracking-tight text-charcoal-900 sm:text-3xl line-clamp-2">
+            {displayName}
+          </h1>
         </div>
 
         {/* Year Filter */}

@@ -3,7 +3,7 @@ import { useParams, Link, useSearchParams } from 'react-router-dom'
 import { useJudgeDetails } from '../../hooks/useStaticData'
 import { SEO } from '../../components/SEO'
 import { JsonLd, personSchema } from '../../components/JsonLd'
-import { formatJudgeDisplayName, getJudgeInitials, getSportJudgeStrictnessBadge } from '../../lib/judgeUiUtils'
+import { formatJudgeDisplayName, getSportJudgeStrictnessBadge } from '../../lib/judgeUiUtils'
 import { getSportJudgeInfo } from '../../lib/sportJudgesRegistry'
 import { resolveSportJudgeNumericId } from '../../lib/judgeIdMap.generated'
 import { sortArray, type SortState } from '../../lib/judgeSortUtils'
@@ -192,7 +192,6 @@ export default function JudgeDetail() {
   const verified = (judgeData.verified as boolean) ?? info?.verified ?? null
 
   const displayName = formatJudgeDisplayName(judgeName)
-  const initials = getJudgeInitials(fullName || displayName)
   const avgScore = judgeData.avg_score as number | null | undefined
   const totalEvalsRaw = Number(judgeData.total_evaluations) || 0
   /** Листы оценок (собака×проба), как в списке — не сырые критерии. */
