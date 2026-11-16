@@ -133,13 +133,27 @@ export default function ShowJudgeDetail() {
 
   const periodBreeds = useMemo(() => {
     if (!judge) return [] as Array<{ breed: string; count: number }>
-    if (!yearParam) return judge.breeds
+    if (!yearParam) {
+      if (gradeScope === 'puppy') {
+        if (judge.puppy_breeds && judge.puppy_breeds.length > 0) return judge.puppy_breeds
+        return judge.breeds
+          .filter((b) => (b.puppy_count ?? 0) > 0)
+          .map((b) => ({ breed: b.breed, count: b.puppy_count ?? 0 }))
+      }
+      if (gradeScope === 'adult') {
+        if (judge.adult_breeds && judge.adult_breeds.length > 0) return judge.adult_breeds
+        return judge.breeds
+          .filter((b) => (b.adult_count ?? 0) > 0)
+          .map((b) => ({ breed: b.breed, count: b.adult_count ?? 0 }))
+      }
+      return judge.breeds
+    }
     const hasBreedCounts = periodExhibitions.some(
       (ex) => ex.breed_counts && Object.keys(ex.breed_counts).length > 0,
     )
-    if (hasBreedCounts) return sumBreedCounts(periodExhibitions)
+    if (hasBreedCounts) return sumBreedCounts(periodExhibitions, gradeScope)
     return judge.breeds
-  }, [judge, yearParam, periodExhibitions])
+  }, [judge, yearParam, periodExhibitions, gradeScope])
 
   const periodStrictness = useMemo(() => buildStrictness(periodGrades), [periodGrades])
   const periodPuppyStrictness = useMemo(() => buildPuppyStrictness(periodGrades), [periodGrades])

@@ -55,10 +55,16 @@ export function sumGradeCounts(
 
 export function sumBreedCounts(
   exhibitions: ShowJudgeDetailData['exhibitions'],
+  scope?: 'adult' | 'puppy' | 'all',
 ): Array<{ breed: string; count: number }> {
   const map = new Map<string, number>()
   for (const ex of exhibitions) {
-    const bc = ex.breed_counts
+    let bc = ex.breed_counts
+    if (scope === 'puppy') {
+      bc = ex.puppy_breed_counts
+    } else if (scope === 'adult') {
+      bc = ex.adult_breed_counts || ex.breed_counts
+    }
     if (!bc) continue
     for (const [breed, n] of Object.entries(bc)) {
       if (n > 0) map.set(breed, (map.get(breed) || 0) + n)

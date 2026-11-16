@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import { useMemo, useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
 import DogSexIcon from '../../../components/DogSexIcon'
@@ -282,6 +282,41 @@ export function ShowJudgeBreedDogsList({
     )
   }, [scopeFilteredDogs, searchQuery])
 
+  const INITIAL_BATCH_SIZE = 30
+  const BATCH_INCREMENT = 30
+  const [visibleCount, setVisibleCount] = useState(INITIAL_BATCH_SIZE)
+  const sentinelRef = useRef<HTMLDivElement | null>(null)
+
+  // Reset page size when breed, scope, or search query changes
+  useEffect(() => {
+    setVisibleCount(INITIAL_BATCH_SIZE)
+  }, [breed, gradeScope, searchQuery])
+
+  // Lazy loading via IntersectionObserver
+  useEffect(() => {
+    const sentinel = sentinelRef.current
+    if (!sentinel) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const first = entries[0]
+        if (first && first.isIntersecting) {
+          setVisibleCount((prev) => Math.min(prev + BATCH_INCREMENT, filteredDogs.length))
+        }
+      },
+      { rootMargin: '300px' },
+    )
+
+    observer.observe(sentinel)
+    return () => {
+      observer.disconnect()
+    }
+  }, [filteredDogs.length])
+
+  const displayedDogs = useMemo(() => {
+    return filteredDogs.slice(0, visibleCount)
+  }, [filteredDogs, visibleCount])
+
   const content = (
     <div className={embedded ? 'bg-cream-50/25 border-t border-old-money-100/70' : ''}>
       {isLoading && (
@@ -327,7 +362,7 @@ export function ShowJudgeBreedDogsList({
             )}
           </div>
           <div className="divide-y divide-old-money-100/50">
-            {filteredDogs.map((dog, idx) => {
+            {displayedDogs.map((dog, idx) => {
             const dogProfileUrl = exhibitionDogProfilePath(dog.dog_name, dog.breed)
 
             return (
@@ -433,6 +468,34 @@ export function ShowJudgeBreedDogsList({
             )
           })}
         </div>
+
+        {/* Lazy scroll sentinel and fallback control */}
+        {visibleCount < filteredDogs.length && (
+          <div
+            ref={sentinelRef}
+            className="flex items-center justify-between px-3.5 sm:px-4 py-2.5 bg-cream-100/40 border-t border-old-money-100/60 text-xs text-charcoal-600"
+          >
+            <span>
+              Показано <strong className="font-semibold text-charcoal-900 tabular-nums">{displayedDogs.length}</strong> из{' '}
+              <strong className="font-semibold text-charcoal-900 tabular-nums">{filteredDogs.length}</strong> собак
+            </span>
+            <button
+              type="button"
+              onClick={() =>
+                setVisibleCount((prev) => Math.min(prev + BATCH_INCREMENT, filteredDogs.length))
+              }
+              className="rounded-full border border-camel-400 bg-white px-3 py-1 text-xs font-semibold text-camel-900 shadow-3xs transition-all hover:bg-camel-50 hover:border-camel-500 active:scale-95"
+            >
+              Показать ещё {Math.min(BATCH_INCREMENT, filteredDogs.length - visibleCount)}
+            </button>
+          </div>
+        )}
+
+        {visibleCount >= filteredDogs.length && filteredDogs.length > INITIAL_BATCH_SIZE && (
+          <div className="py-2 text-center text-[11px] text-charcoal-400 bg-cream-50/20 border-t border-old-money-100/40">
+            Все {filteredDogs.length} собак загружены
+          </div>
+        )}
       </div>
       )}
     </div>

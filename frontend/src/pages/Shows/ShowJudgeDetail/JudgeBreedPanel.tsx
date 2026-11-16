@@ -235,7 +235,7 @@ export function JudgeBreedPanel({
                       {shareOfAll && Number(shareOfAll) >= 1 && (
                         <span
                           className="ml-1 text-[11px] text-charcoal-400 font-normal cursor-help hover:text-camel-700 transition-colors"
-                          title={`${shareOfAll}% от всех собак в экспертизе судьи`}
+                          title={`${shareOfAll}% от всех ${gradeScope === 'puppy' ? 'щенков' : 'собак'} в экспертизе судьи`}
                         >
                           ({shareOfAll}%)
                         </span>
@@ -250,7 +250,11 @@ export function JudgeBreedPanel({
                             ? 'bg-camel-700 text-white shadow-3xs'
                             : 'bg-cream-100/90 text-camel-900 border border-camel-200/80 group-hover:bg-camel-100 group-hover:text-camel-950'
                         }`}
-                        title={`Оценок в ринге: ${row.count}`}
+                        title={
+                          gradeScope === 'puppy'
+                            ? `Щенков в ринге: ${row.count}`
+                            : `Оценок в ринге: ${row.count}`
+                        }
                       >
                         {row.count}
                       </span>

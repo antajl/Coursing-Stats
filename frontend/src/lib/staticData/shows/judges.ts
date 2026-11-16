@@ -56,7 +56,9 @@ export interface ShowJudgeDetail {
   total_judged: number
   unique_breeds: number
   by_year: Record<string, number>
-  breeds: Array<{ breed: string; count: number }>
+  breeds: Array<{ breed: string; count: number; puppy_count?: number; adult_count?: number }>
+  puppy_breeds?: Array<{ breed: string; count: number }>
+  adult_breeds?: Array<{ breed: string; count: number }>
   city?: string
   ranks?: string
   cert_number?: number
@@ -77,6 +79,8 @@ export interface ShowJudgeDetail {
     grade_counts?: Partial<Record<ShowGradeKey | 'dq', number>>
     /** Породы на выставке (protocol rows) — для фильтра периода. */
     breed_counts?: Record<string, number>
+    puppy_breed_counts?: Record<string, number>
+    adult_breed_counts?: Record<string, number>
   }>
   strictness?: {
     graded: number
