@@ -26,6 +26,7 @@ const SPORT_DOGS_DIR = path.join(DATA_V1_ROOT, 'dogs/by-id');
 const SPORT_DOGS_KEY_DIR = path.join(DATA_V1_ROOT, 'dogs/by-key');
 const SHOW_DETAILS_DIR = path.join(DATA_V1_ROOT, 'shows/indexes/dog-details');
 const REPORT_FILE = 'backend/scripts/breedarchive-scan-results.json';
+const CHECKPOINT_FILE = 'backend/scripts/breedarchive-checkpoint.json';
 
 const DELAY_MS = 100;
 
@@ -91,12 +92,24 @@ function parseArgs(argv: string[]) {
   const dryRun = argv.includes('--dry-run');
   const sportOnly = argv.includes('--sport-only');
   const showOnly = argv.includes('--show-only');
+  const allBreeds = argv.includes('--all-breeds');
+  const titledOnly = argv.includes('--titled-only');
+  const resume = argv.includes('--resume');
   const breedIdx = argv.indexOf('--breed');
   const breedFilter = breedIdx >= 0 ? argv[breedIdx + 1]?.toLowerCase() : null;
   const limitIdx = argv.indexOf('--limit');
   const limit = limitIdx >= 0 ? Number(argv[limitIdx + 1]) : null;
 
-  return { dryRun, sportOnly, showOnly, breedFilter, limit: Number.isFinite(limit) ? limit! : null };
+  return {
+    dryRun,
+    sportOnly,
+    showOnly,
+    allBreeds,
+    titledOnly,
+    resume,
+    breedFilter,
+    limit: Number.isFinite(limit) ? limit! : null,
+  };
 }
 
 function isTargetShowBreed(breed: string): boolean {
@@ -106,15 +119,28 @@ function isTargetShowBreed(breed: string): boolean {
 }
 
 async function main() {
-  const { dryRun, sportOnly, showOnly, breedFilter, limit } = parseArgs(process.argv.slice(2));
+  const { dryRun, sportOnly, showOnly, allBreeds, titledOnly, resume, breedFilter, limit } =
+    parseArgs(process.argv.slice(2));
 
   console.log('=== Breed Archive Comprehensive Scanner ===');
   console.log(`Mode: ${dryRun ? 'DRY-RUN (read-only audit)' : 'APPLY (writing URLs to dog profiles)'}`);
   if (sportOnly) console.log('Scope: Sport dogs only');
   if (showOnly) console.log('Scope: Show dogs only');
+  if (allBreeds) console.log('Breeds: ALL breeds with BreedArchive support');
+  if (titledOnly) console.log('Filter: Titled / award dogs only');
   if (breedFilter) console.log(`Breed filter: "${breedFilter}"`);
+  if (resume) console.log('Resume: Enabled (loading checkpoint)');
   if (limit) console.log(`Limit: ${limit} dogs`);
   console.log('-------------------------------------------');
+
+  const checkpoint =
+    resume && fs.existsSync(CHECKPOINT_FILE)
+      ? JSON.parse(fs.readFileSync(CHECKPOINT_FILE, 'utf8'))
+      : { checkedKeys: [] };
+  const checkedSet = new Set<string>(checkpoint.checkedKeys || []);
+  if (resume && checkedSet.size > 0) {
+    console.log(`Loaded checkpoint: ${checkedSet.size} dogs already processed.`);
+  }
 
   const queue: QueueItem[] = [];
   let sportAlreadyHas = 0;
@@ -173,11 +199,22 @@ async function main() {
           const sub = breedArchiveSubdomain(d.breed);
           if (!sub) continue;
 
-          // Target: sighthounds/coursing breeds OR dogs with awards (BIS/BIG)
+          // Target filter:
           const isSighthound = isTargetShowBreed(d.breed);
-          const hasBigAward = d.best_award === 'BIS' || d.best_award === 'BIG' || (d.titles?.BIS || 0) > 0 || (d.titles?.BIG || 0) > 0;
+          const hasBigAward =
+            d.best_award === 'BIS' || d.best_award === 'BIG' || (d.titles?.BIS || 0) > 0 || (d.titles?.BIG || 0) > 0;
+          const hasAnyTitle =
+            hasBigAward ||
+            d.best_award === 'BOB' ||
+            (d.titles?.BOB || 0) > 0 ||
+            (d.titles?.CAC || 0) > 0 ||
+            (d.titles?.CH || 0) > 0;
 
-          if (!isSighthound && !hasBigAward && !breedFilter) {
+          if (titledOnly && !hasAnyTitle) {
+            continue;
+          }
+
+          if (!allBreeds && !isSighthound && !hasBigAward && !breedFilter) {
             continue;
           }
 
@@ -204,7 +241,12 @@ async function main() {
   console.log(`Already have pedigree_url: Sport=${sportAlreadyHas}, Show=${showAlreadyHas}`);
   console.log(`Total queue size: ${queue.length} dogs`);
 
-  const activeQueue = limit ? queue.slice(0, limit) : queue;
+  const pendingQueue = queue.filter((item) => !checkedSet.has(`${item.domain}:${item.id}`));
+  if (checkedSet.size > 0) {
+    console.log(`Pending after checkpoint filter: ${pendingQueue.length} dogs`);
+  }
+
+  const activeQueue = limit ? pendingQueue.slice(0, limit) : pendingQueue;
   console.log(`Will process: ${activeQueue.length} dogs\n`);
 
   const results: any[] = [];
@@ -212,8 +254,43 @@ async function main() {
   let foundShow = 0;
   const modifiedShards = new Set<string>();
 
+  const saveCheckpoint = async () => {
+    await safeWriteJson(
+      CHECKPOINT_FILE,
+      JSON.stringify(
+        {
+          timestamp: new Date().toISOString(),
+          checkedCount: checkedSet.size,
+          checkedKeys: Array.from(checkedSet),
+        },
+        null,
+        2,
+      ),
+    );
+  };
+
+  let isShuttingDown = false;
+  const handleInterrupt = async () => {
+    if (isShuttingDown) return;
+    isShuttingDown = true;
+    console.log('\nInterrupt signal received. Saving state before exit...');
+    if (!dryRun && modifiedShards.size > 0) {
+      for (const shard of modifiedShards) {
+        const shardFile = path.join(SHOW_DETAILS_DIR, `${shard}.json`);
+        const data = shardsData.get(shard);
+        if (data) await safeWriteJson(shardFile, JSON.stringify(data));
+      }
+    }
+    await saveCheckpoint();
+    console.log('Saved. Exiting.');
+    process.exit(0);
+  };
+  process.on('SIGINT', handleInterrupt);
+  process.on('SIGTERM', handleInterrupt);
+
   for (let i = 0; i < activeQueue.length; i++) {
     const item = activeQueue[i];
+    const key = `${item.domain}:${item.id}`;
     const nameToSearch = item.name_lat || item.name_ru || '';
 
     try {
@@ -264,7 +341,9 @@ async function main() {
       console.error(`✗ Error on [${item.id}] ${item.breed} ${nameToSearch}:`, err instanceof Error ? err.message : err);
     }
 
-    // Flush modified shards every 100 items or at the end
+    checkedSet.add(key);
+
+    // Flush modified shards every 100 items
     if (!dryRun && (i + 1) % 100 === 0 && modifiedShards.size > 0) {
       for (const shard of modifiedShards) {
         const shardFile = path.join(SHOW_DETAILS_DIR, `${shard}.json`);
@@ -276,8 +355,10 @@ async function main() {
       modifiedShards.clear();
     }
 
+    // Report and checkpoint every 50 items or at the end
     if ((i + 1) % 50 === 0 || i === activeQueue.length - 1) {
       console.log(`[Progress ${i + 1}/${activeQueue.length}] Matches: Sport=${foundSport}, Show=${foundShow}`);
+      await saveCheckpoint();
       await safeWriteJson(
         REPORT_FILE,
         JSON.stringify(

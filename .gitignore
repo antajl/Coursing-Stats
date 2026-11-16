@@ -52,6 +52,7 @@ data/v1/donino/dogs/
 # Shows scraper runtime files
 data/v1/shows/scrape-*.log
 data/v1/shows/scrape-*.json
+backend/scripts/breedarchive-checkpoint.json
 
 # Local RKF PDF cache + parsed protocols (not for CDN / git)
 data/local/

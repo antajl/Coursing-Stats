@@ -232,11 +232,27 @@ export function pickExactBreedArchiveHit(
   return null;
 }
 
+// Ensure IPv4 first on platforms/networks where IPv6 hangs
+let dispatcherInitialized = false;
+function ensureIpv4Dispatcher() {
+  if (dispatcherInitialized) return;
+  dispatcherInitialized = true;
+  try {
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    const undici = require('undici');
+    if (undici?.Agent && undici?.setGlobalDispatcher) {
+      undici.setGlobalDispatcher(new undici.Agent({ connect: { family: 4 } }));
+    }
+  } catch {}
+}
+
 export async function searchBreedArchive(
   subdomain: string,
   nameLat: string,
   fetchFn: typeof fetch = fetch,
 ): Promise<BreedArchiveSearchHit[]> {
+  ensureIpv4Dispatcher();
+
   let term = nameLat
     .normalize('NFKC')
     .replace(/[\u2018\u2019\u201A\u201B`]/g, "'")
@@ -245,20 +261,43 @@ export async function searchBreedArchive(
   if (!term) return [];
 
   const url = `https://${subdomain}.breedarchive.com/animal/search?term=${encodeURIComponent(term)}`;
-  const response = await fetchFn(url, {
-    headers: { Accept: 'application/json' },
-  });
 
-  if (!response.ok) {
-    throw new Error(`Breed Archive search failed (${response.status}) for ${subdomain}: ${term}`);
+  let lastError: Error | null = null;
+  for (let attempt = 0; attempt < 3; attempt++) {
+    try {
+      const response = await fetchFn(url, {
+        headers: {
+          Accept: 'application/json',
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+        },
+      });
+
+      if (response.status === 429) {
+        const waitMs = 2000 * Math.pow(2, attempt);
+        console.warn(`[BreedArchive] Rate limited (429) on ${subdomain}, backing off for ${waitMs}ms...`);
+        await new Promise((resolve) => setTimeout(resolve, waitMs));
+        continue;
+      }
+
+      if (!response.ok) {
+        throw new Error(`Breed Archive search failed (${response.status}) for ${subdomain}: ${term}`);
+      }
+
+      const text = await response.text();
+      if (text === 'search term is missing') return [];
+
+      const data = JSON.parse(text) as unknown;
+      if (!Array.isArray(data)) return [];
+      return data as BreedArchiveSearchHit[];
+    } catch (err) {
+      lastError = err instanceof Error ? err : new Error(String(err));
+      if (attempt < 2) {
+        await new Promise((resolve) => setTimeout(resolve, 1000 * (attempt + 1)));
+      }
+    }
   }
 
-  const text = await response.text();
-  if (text === 'search term is missing') return [];
-
-  const data = JSON.parse(text) as unknown;
-  if (!Array.isArray(data)) return [];
-  return data as BreedArchiveSearchHit[];
+  throw lastError || new Error(`Breed Archive search failed for ${subdomain}: ${term}`);
 }
 
 export async function resolveBreedArchiveUrl(
