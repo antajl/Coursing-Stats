@@ -114,6 +114,8 @@ type JudgeRow = {
   city?: string
   ranks?: string
   cert_number?: number
+  photo_url?: string | null
+  konura_url?: string | null
 }
 
 function leanJudgeForList(j: JudgeRow): JudgeRow {
@@ -141,6 +143,8 @@ function leanJudgeForList(j: JudgeRow): JudgeRow {
     by_year_breeds: j.by_year_breeds,
     city: j.city,
     ranks: j.ranks,
+    photo_url: j.photo_url,
+    konura_url: j.konura_url,
   }
 }
 
