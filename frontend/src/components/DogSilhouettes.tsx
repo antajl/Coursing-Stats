@@ -32,7 +32,21 @@ export type SilhouetteBreedKey =
   | 'minpinscher'
   | 'beagle'
   | 'bordercollie'
-  | 'dobermann';
+  | 'dobermann'
+  | 'germanshepherd'
+  | 'labradorretriever'
+  | 'goldenretriever'
+  | 'aussieshepherd'
+  | 'siberianhusky'
+  | 'shibainu'
+  | 'rottweiler'
+  | 'bullterrier'
+  | 'frenchbulldog'
+  | 'pug'
+  | 'cavalierkingcharles'
+  | 'papillon'
+  | 'sheltie'
+  | 'chihuahua';
 
 /**
  * Resolves a raw or canonical breed string to an available vector silhouette key.
@@ -250,6 +264,127 @@ export const resolveSilhouetteBreed = (breed?: string | null): SilhouetteBreedKe
   // 30. Dobermann / Доберман
   if (canon.includes('ДОБЕРМАН') || lower.includes('доберман') || lower.includes('dobermann')) {
     return 'dobermann';
+  }
+
+  // 31. German Shepherd / Немецкая овчарка
+  if (
+    canon.includes('НЕМЕЦКАЯ ОВЧАРКА') ||
+    lower.includes('немецкая овчарка') ||
+    lower.includes('german shepherd') ||
+    lower === 'но' ||
+    lower.startsWith('но ')
+  ) {
+    return 'germanshepherd';
+  }
+
+  // 32. Labrador Retriever / Лабрадор ретривер
+  if (canon.includes('ЛАБРАДОР') || lower.includes('лабрадор') || lower.includes('labrador')) {
+    return 'labradorretriever';
+  }
+
+  // 33. Golden Retriever / Золотистый ретривер
+  if (
+    canon.includes('ЗОЛОТИСТЫЙ РЕТРИВЕР') ||
+    lower.includes('золотистый ретривер') ||
+    lower.includes('голден') ||
+    lower.includes('golden retriever')
+  ) {
+    return 'goldenretriever';
+  }
+
+  // 34. Australian Shepherd / Австралийская овчарка (Аусси)
+  if (
+    canon.includes('АВСТРАЛИЙСКАЯ ОВЧАРКА') ||
+    lower.includes('австралийская овчарка') ||
+    lower.includes('аусси') ||
+    lower.includes('aussie') ||
+    lower.includes('australian shepherd')
+  ) {
+    return 'aussieshepherd';
+  }
+
+  // 35. Siberian Husky / Сибирский хаски
+  if (canon.includes('ХАСКИ') || lower.includes('хаски') || lower.includes('husky')) {
+    return 'siberianhusky';
+  }
+
+  // 36. Shiba Inu / Сиба (Сиба-ину)
+  if (
+    canon.includes('СИБА') ||
+    canon.includes('ШИБА') ||
+    lower.includes('сиба') ||
+    lower.includes('шиба') ||
+    lower.includes('shiba')
+  ) {
+    return 'shibainu';
+  }
+
+  // 37. Rottweiler / Ротвейлер
+  if (canon.includes('РОТВЕЙЛЕР') || lower.includes('ротвейлер') || lower.includes('rottweiler')) {
+    return 'rottweiler';
+  }
+
+  // 38. Bull Terrier / Бультерьер
+  if (
+    (canon.includes('БУЛЬТЕРЬЕР') ||
+      lower.includes('бультерьер') ||
+      lower.includes('bull terrier') ||
+      lower.includes('bullterrier')) &&
+    !lower.includes('стаффорд')
+  ) {
+    return 'bullterrier';
+  }
+
+  // 39. French Bulldog / Французский бульдог
+  if (
+    canon.includes('ФРАНЦУЗСКИЙ БУЛЬДОГ') ||
+    lower.includes('французский бульдог') ||
+    lower.includes('француз') ||
+    lower.includes('french bulldog')
+  ) {
+    return 'frenchbulldog';
+  }
+
+  // 40. Pug / Мопс
+  if (canon.includes('МОПС') || lower.includes('мопс') || lower.includes('pug')) {
+    return 'pug';
+  }
+
+  // 41. Cavalier King Charles Spaniel / Кавалер кинг чарльз спаниель
+  if (canon.includes('КАВАЛЕР') || lower.includes('кавалер') || lower.includes('cavalier')) {
+    return 'cavalierkingcharles';
+  }
+
+  // 42. Papillon / Папийон (Континентальный той-спаниель)
+  if (
+    canon.includes('ПАПИЙОН') ||
+    canon.includes('ПАПИЛЬОН') ||
+    lower.includes('папийон') ||
+    lower.includes('папильон') ||
+    lower.includes('papillon')
+  ) {
+    return 'papillon';
+  }
+
+  // 43. Shetland Sheepdog / Шелти (Шетландская овчарка)
+  if (
+    canon.includes('ШЕЛТИ') ||
+    canon.includes('ШЕТЛАНДСКАЯ ОВЧАРКА') ||
+    lower.includes('шелти') ||
+    lower.includes('sheltie') ||
+    lower.includes('shetland sheepdog')
+  ) {
+    return 'sheltie';
+  }
+
+  // 44. Chihuahua / Чихуахуа
+  if (
+    canon.includes('ЧИХУАХУА') ||
+    lower.includes('чихуахуа') ||
+    lower.includes('чихуа') ||
+    lower.includes('chihuahua')
+  ) {
+    return 'chihuahua';
   }
 
   // No silhouette available yet for this breed

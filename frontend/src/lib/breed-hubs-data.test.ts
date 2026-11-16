@@ -47,6 +47,7 @@ describe('breed-hubs-data', () => {
         'taigan',
         'stepnaya-borzaya',
         'portuguese-podengo',
+        'welsh-terrier',
       ].includes(b.slug)
 
       expect(
