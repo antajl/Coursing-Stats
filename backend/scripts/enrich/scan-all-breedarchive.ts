@@ -94,6 +94,7 @@ function parseArgs(argv: string[]) {
   const showOnly = argv.includes('--show-only');
   const allBreeds = argv.includes('--all-breeds');
   const titledOnly = argv.includes('--titled-only');
+  const bobOnly = argv.includes('--bob-only');
   const resume = argv.includes('--resume');
   const breedIdx = argv.indexOf('--breed');
   const breedFilter = breedIdx >= 0 ? argv[breedIdx + 1]?.toLowerCase() : null;
@@ -106,6 +107,7 @@ function parseArgs(argv: string[]) {
     showOnly,
     allBreeds,
     titledOnly,
+    bobOnly,
     resume,
     breedFilter,
     limit: Number.isFinite(limit) ? limit! : null,
@@ -119,7 +121,7 @@ function isTargetShowBreed(breed: string): boolean {
 }
 
 async function main() {
-  const { dryRun, sportOnly, showOnly, allBreeds, titledOnly, resume, breedFilter, limit } =
+  const { dryRun, sportOnly, showOnly, allBreeds, titledOnly, bobOnly, resume, breedFilter, limit } =
     parseArgs(process.argv.slice(2));
 
   console.log('=== Breed Archive Comprehensive Scanner ===');
@@ -128,6 +130,7 @@ async function main() {
   if (showOnly) console.log('Scope: Show dogs only');
   if (allBreeds) console.log('Breeds: ALL breeds with BreedArchive support');
   if (titledOnly) console.log('Filter: Titled / award dogs only');
+  if (bobOnly) console.log('Filter: BOB (Best of Breed) champions only [Tier 2]');
   if (breedFilter) console.log(`Breed filter: "${breedFilter}"`);
   if (resume) console.log('Resume: Enabled (loading checkpoint)');
   if (limit) console.log(`Limit: ${limit} dogs`);
@@ -203,10 +206,10 @@ async function main() {
           const isSighthound = isTargetShowBreed(d.breed);
           const hasBigAward =
             d.best_award === 'BIS' || d.best_award === 'BIG' || (d.titles?.BIS || 0) > 0 || (d.titles?.BIG || 0) > 0;
+          const isBob = d.best_award === 'BOB' || (d.titles?.BOB || 0) > 0;
           const hasAnyTitle =
             hasBigAward ||
-            d.best_award === 'BOB' ||
-            (d.titles?.BOB || 0) > 0 ||
+            isBob ||
             (d.titles?.CAC || 0) > 0 ||
             (d.titles?.CH || 0) > 0;
 
@@ -214,7 +217,11 @@ async function main() {
             continue;
           }
 
-          if (!allBreeds && !isSighthound && !hasBigAward && !breedFilter) {
+          if (bobOnly && !isBob) {
+            continue;
+          }
+
+          if (!allBreeds && !bobOnly && !isSighthound && !hasBigAward && !breedFilter) {
             continue;
           }
 
