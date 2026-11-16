@@ -10,6 +10,7 @@ import {
   type BreadcrumbItem,
 } from '../html-shell.js'
 import { formatEventDateRu } from './event-seo.js'
+import { transliterateRuToLat } from '../../../lib/text-normalization.js'
 
 export type DogRecentCompItem = {
   eventId?: string | number
@@ -251,12 +252,12 @@ export function dogMetaFromProfile(profile: {
     })
 
   const title = breed
-    ? `${displayName} (${breed}) — профиль собаки, результаты забегов и медали | Курсинг Статс`
-    : `${displayName} — профиль собаки, результаты забегов и медали | Курсинг Статс`
+    ? `${displayName} (${breed}) — родословная, титулы и результаты забегов | Курсинг Статс`
+    : `${displayName} — родословная, титулы и результаты забегов | Курсинг Статс`
   const description =
     careerSummary
-      ? `${displayName}${breed ? ` (${breed})` : ''}: спортивная карьера — ${careerSummary}. Оценки судей по 5 критериям и лучшие результаты.`
-      : `Спортивная карьера собаки ${displayName}${breed ? ` (${breed})` : ''}: курсинг, бега борзых, результаты забегов, медали и рекорды.`
+      ? `${displayName}${breed ? ` (${breed})` : ''}: родословная, титулы и спортивная карьера — ${careerSummary}. Результаты забегов курсинга и оценки судей.`
+      : `Карточка собаки ${displayName}${breed ? ` (${breed})` : ''}: родословная, титулы, результаты забегов курсинга и бегов борзых.`
 
   const breadcrumbs = [
     { name: 'Главная', url: '/' },
@@ -264,11 +265,20 @@ export function dogMetaFromProfile(profile: {
     { name, url: `/dog/${id}/` },
   ]
 
+  const translitName = transliterateRuToLat(name)
+  const translitSecondary = secondary ? transliterateRuToLat(secondary) : null
+
   const alternateNames = Array.from(
     new Set(
-      [secondary, dog.name_ru, dog.name_lat].filter(
-        (n): n is string => Boolean(n && n !== name),
-      ),
+      [
+        secondary,
+        dog.name_ru,
+        dog.name_lat,
+        translitName,
+        toDogTitleCase(translitName),
+        translitSecondary,
+        translitSecondary ? toDogTitleCase(translitSecondary) : null,
+      ].filter((n): n is string => Boolean(n && n !== name && n !== displayName)),
     ),
   )
 
@@ -342,12 +352,12 @@ export function dogMetaFromShowRanking(entry: {
   if (careerSummary) facts.push(careerSummary)
 
   const title = breed
-    ? `${displayName} (${breed}) — выставочная карьера и награды РКФ | Курсинг Статс`
-    : `${displayName} — выставочная карьера и награды РКФ | Курсинг Статс`
+    ? `${displayName} (${breed}) — родословная, выставки РКФ и титулы | Курсинг Статс`
+    : `${displayName} — родословная, выставки РКФ и титулы | Курсинг Статс`
   const description =
     careerSummary
-      ? `${displayName}${breed ? ` (${breed})` : ''}: выставочные результаты — ${careerSummary}. Оценки экспертов, наградные сертификаты и ринги.`
-      : `Выставочная карьера собаки ${displayName}${breed ? ` (${breed})` : ''}: участие в рингах, награды и титулы.`
+      ? `${displayName}${breed ? ` (${breed})` : ''}: родословная, титулы и выставочные результаты — ${careerSummary}. Оценки экспертов, ринги и награды РКФ.`
+      : `Выставочная карьера собаки ${displayName}${breed ? ` (${breed})` : ''}: родословная, участие в рингах, титулы и награды РКФ.`
 
   const breadcrumbs = [
     { name: 'Главная', url: '/' },
@@ -355,11 +365,20 @@ export function dogMetaFromShowRanking(entry: {
     { name, url: `/dog/${id}/` },
   ]
 
+  const translitName = transliterateRuToLat(name)
+  const translitSecondary = secondary ? transliterateRuToLat(secondary) : null
+
   const alternateNames = Array.from(
     new Set(
-      [secondary, entry.name_ru, entry.name_lat].filter(
-        (n): n is string => Boolean(n && n !== name),
-      ),
+      [
+        secondary,
+        entry.name_ru,
+        entry.name_lat,
+        translitName,
+        toDogTitleCase(translitName),
+        translitSecondary,
+        translitSecondary ? toDogTitleCase(translitSecondary) : null,
+      ].filter((n): n is string => Boolean(n && n !== name && n !== displayName)),
     ),
   )
 

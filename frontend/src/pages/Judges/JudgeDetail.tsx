@@ -203,21 +203,43 @@ export default function JudgeDetail() {
 
   const numericId = resolveSportJudgeNumericId(judgeId || judgeName)
   const canonicalJudgeSlug = numericId || encodeURIComponent(judgeId || judgeName)
+  const primaryJudgeName = fullName || displayName
+  const parts = primaryJudgeName.trim().split(/\s+/).filter(Boolean)
+  const surname = parts[0] || primaryJudgeName
+  const initials = parts.length >= 3
+    ? `${parts[1][0].toUpperCase()}. ${parts[2][0].toUpperCase()}.`
+    : parts.length === 2
+      ? `${parts[1][0].toUpperCase()}.`
+      : null
+  const withInitials = initials ? `${surname} ${initials}` : null
+
+  const alternateNames = [
+    surname,
+    withInitials,
+    `Судья ${surname}`,
+    `Судья ${primaryJudgeName}`,
+    displayName,
+    judgeName,
+    fullName,
+  ].filter((n): n is string => Boolean(n && n !== primaryJudgeName))
 
   return (
     <>
       <SEO
-        title={`${seoFullName} — судья по курсингу и бегам борзых | Курсинг Статс`}
-        description={`Судья по курсингу и бегам ${seoFullName}: статистика забегов (${eventCount} соревнований, ${totalEvals} оценок, ${breedCount} пород), средний балл и критерии на Курсинг Статс.`}
-        keywords={`${judgeName}, ${fullName || ''}, ${displayName}, судья, курсинг, бега борзых, статистика, РКФ, оценки, соревнования`}
+        title={`${primaryJudgeName} — судья РКФ по курсингу и бегам борзых: статистика соревнований | Курсинг Статс`}
+        description={`Судья РКФ ${primaryJudgeName}${withInitials && withInitials !== primaryJudgeName ? ` (${withInitials})` : ''}: статистика забегов (${eventCount} турниров, ${totalEvals} оценок, ${breedCount} пород), средние баллы по 5 критериям и строгость оценок на Курсинг Статс.`}
+        keywords={`${surname}, ${primaryJudgeName}${withInitials ? `, ${withInitials}` : ''}, судья ркф, курсинг, бега борзых, статистика, оценки, соревнования`}
         canonicalUrl={`https://coursing-stats.ru/judges/${canonicalJudgeSlug}/`}
       />
       <JsonLd
         data={personSchema({
-          name: fullName || displayName,
-          jobTitle: role || 'Судья соревнований по курсингу и бегам борзых',
+          name: primaryJudgeName,
+          alternateName: Array.from(new Set(alternateNames)),
+          city,
+          jobTitle: role || 'Судья соревнований по курсингу и бегам борзых РКФ',
           url: `https://coursing-stats.ru/judges/${canonicalJudgeSlug}/`,
-          description: `Судья по курсингу и бегам ${seoFullName}: ${eventCount} соревнований, ${totalEvals} оценок, ${breedCount} пород на Курсинг Статс.`,
+          description: `Судья по курсингу и бегам ${primaryJudgeName}: ${eventCount} соревнований, ${totalEvals} оценок, ${breedCount} пород на Курсинг Статс.`,
+          worksFor: 'Российская Кинологическая Федерация (РКФ)',
         })}
       />
 

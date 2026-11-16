@@ -122,7 +122,10 @@ export default function ShowExhibitionDetail() {
   }
 
   const hasCatalog = exhibition.breed_catalog != null && exhibition.breed_catalog.length > 0
-  const seoTitle = `${exhibition.title || 'Выставка'} — ${exhibition.date || ''}`.trim()
+  const headline = (exhibition.title || 'Выставка').trim()
+  const datePart = exhibition.date ? ` — ${exhibition.date}` : ''
+  const locationPart = exhibition.location ? ` (${exhibition.location})` : ''
+  const seoTitle = `${headline}${datePart}${locationPart}: результаты выставки собак РКФ, протокол рингов и судьи | Курсинг Статс`
   const seoDescription = [
     `Выставка РКФ: ${exhibition.title}`,
     exhibition.date || null,

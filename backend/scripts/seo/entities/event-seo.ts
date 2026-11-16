@@ -282,23 +282,41 @@ export function exhibitionMeta(entry: {
   city?: string | null
   dogCount?: number | null
   club?: string | null
+  ranks?: string | null
+  judges?: string[] | null
+  breeds?: string[] | null
 }): SimpleEntityMeta {
   const headline = entry.title?.trim() || `Выставка ${entry.id}`
   const date = entry.date || ''
   const city = entry.city || ''
   const n = entry.dogCount
-  const title = date
-    ? `${headline} — ${date} | Курсинг Статс`
-    : `${headline} | Курсинг Статс`
+
+  const datePart = date ? ` — ${date}` : ''
+  const cityPart = city ? ` (${city})` : ''
+  const title = `${headline}${datePart}${cityPart}: результаты выставки собак РКФ, протокол рингов и судьи | Курсинг Статс`
+
   const locationText = city ? `г. ${city}` : null
+  const dateText = date ? `дата: ${date}` : null
+  const clubText = entry.club ? `организатор: ${entry.club}` : null
+  const ranksText = entry.ranks ? `ранг: ${entry.ranks}` : null
   const dogsText = n != null && n > 0 ? `${pluralizeRu(n, 'собака', 'собаки', 'собак')} в каталоге` : null
-  const description = [
-    locationText,
-    dogsText,
-    'Победители рингов, сертификаты CAC/CACIB и экспертиза судей РКФ.',
-  ]
-    .filter(Boolean)
-    .join('. ') + '.'
+  const judgesText =
+    entry.judges && entry.judges.length > 0
+      ? `судьи: ${entry.judges.slice(0, 4).map((j) => toDogTitleCase(j)).join(', ')}`
+      : null
+
+  const description =
+    [
+      locationText,
+      dateText,
+      clubText,
+      ranksText,
+      dogsText,
+      judgesText,
+      'Каталог участников, победители рингов (CAC, CACIB, BOB), наградные сертификаты и протоколы экспертизы судей РКФ.',
+    ]
+      .filter(Boolean)
+      .join('. ') + '.'
 
   const breadcrumbs = [
     { name: 'Главная', url: '/' },
@@ -308,6 +326,58 @@ export function exhibitionMeta(entry: {
 
   const startDateIso = toIsoDate(date)
   const organizerName = entry.club?.trim() || 'Российская кинологическая федерация (РКФ)'
+
+  // HTML content for SEO (preventing Thin Content)
+  const sections: string[] = []
+
+  const passportLines = [
+    date ? `Дата проведения: <strong>${escapeHtml(date)}</strong>` : null,
+    city ? `Город проведения: <strong>${escapeHtml(city)}</strong>` : null,
+    entry.club ? `Клуб-организатор: <strong>${escapeHtml(entry.club)}</strong>` : null,
+    entry.ranks ? `Ранг выставки: <strong>${escapeHtml(entry.ranks)}</strong>` : null,
+    n != null && n > 0 ? `Количество собак в каталоге: <strong>${pluralizeRu(n, 'собака', 'собаки', 'собак')}</strong>` : null,
+  ].filter(Boolean)
+
+  if (passportLines.length > 0) {
+    sections.push(
+      `<section aria-label="Сведения о выставке">` +
+        `<h2>Сведения о выставке собак</h2>` +
+        `<ul>${passportLines.map((l) => `<li>${l}</li>`).join('')}</ul>` +
+      `</section>`
+    )
+  }
+
+  if (entry.judges && entry.judges.length > 0) {
+    const judgeItems = entry.judges
+      .map((j) => `<li><strong>${escapeHtml(toDogTitleCase(j))}</strong> — эксперт ринга РКФ / FCI</li>`)
+      .join('')
+    sections.push(
+      `<section aria-label="Судейская коллегия">` +
+        `<h2>Судейская коллегия выставки</h2>` +
+        `<p>Экспертизу рингов выставки проводили аттестованные судьи РКФ:</p>` +
+        `<ul>${judgeItems}</ul>` +
+      `</section>`
+    )
+  }
+
+  if (entry.breeds && entry.breeds.length > 0) {
+    const breedList = entry.breeds.slice(0, 25).map((b) => escapeHtml(toDogTitleCase(b))).join(', ')
+    sections.push(
+      `<section aria-label="Породы в рингах">` +
+        `<h2>Породы собак в каталоге выставки</h2>` +
+        `<p>В протоколе выставки представлены ринги пород: ${breedList}${entry.breeds.length > 25 ? ` и другие` : ''}.</p>` +
+      `</section>`
+    )
+  }
+
+  sections.push(
+    `<section aria-label="Протокол и сертификаты">` +
+      `<h2>Результаты и протоколы рингов</h2>` +
+      `<p>В полной версии протокола выставки на Coursing Stats доступны оценки собак (отлично, оч. хор), распределение титулов JCAC, CAC, CACIB, ЧРКФ, побед в классах (КЧК, СС) и победителей лучших в породе (BOB / Best of Breed) и Best in Show.</p>` +
+    `</section>`
+  )
+
+  const contentHtml = sections.join('\n')
 
   const exhibitionNode = startDateIso
     ? {
@@ -334,6 +404,15 @@ export function exhibitionMeta(entry: {
           },
         },
         description,
+        ...(entry.judges && entry.judges.length > 0
+          ? {
+              performer: entry.judges.slice(0, 6).map((j) => ({
+                '@type': 'Person',
+                name: toDogTitleCase(j),
+                jobTitle: 'Судья ринга РКФ',
+              })),
+            }
+          : {}),
       }
     : {
         '@type': 'ItemPage',
@@ -360,8 +439,9 @@ export function exhibitionMeta(entry: {
   return {
     title,
     description,
-    h1: headline,
+    h1: `${headline}${date ? ` (${date})` : ''} — результаты выставки собак РКФ`,
     paragraph: description,
+    contentHtml,
     breadcrumbs,
     jsonLd,
     sectionLinks: [

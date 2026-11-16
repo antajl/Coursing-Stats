@@ -620,11 +620,25 @@ function prerenderDoninoDogs(spaHtml: string): number {
 
 function buildCalendarExhibitionLookup(): Map<
   string,
-  { title?: string | null; date?: string | null; city?: string | null; club?: string | null }
+  {
+    title?: string | null
+    date?: string | null
+    city?: string | null
+    club?: string | null
+    ranks?: string | null
+    breeds?: string | null
+  }
 > {
   const map = new Map<
     string,
-    { title?: string | null; date?: string | null; city?: string | null; club?: string | null }
+    {
+      title?: string | null
+      date?: string | null
+      city?: string | null
+      club?: string | null
+      ranks?: string | null
+      breeds?: string | null
+    }
   >()
   const dir = path.join(ROOT, 'data/v1/shows/calendar-rkf')
   if (!fs.existsSync(dir)) return map
@@ -638,10 +652,19 @@ function buildCalendarExhibitionLookup(): Map<
         date?: string | null
         city?: string | null
         club?: string | null
+        ranks?: string | null
+        breeds?: string | null
       }>
     }>(path.join(dir, file))
     for (const e of doc?.exhibitions || []) {
-      const info = { title: e.title, date: e.date, city: e.city, club: e.club }
+      const info = {
+        title: e.title,
+        date: e.date,
+        city: e.city,
+        club: e.club,
+        ranks: e.ranks,
+        breeds: e.breeds,
+      }
       if (e.id != null) {
         map.set(String(e.id), info)
       }
@@ -675,21 +698,37 @@ function prerenderExhibitions(spaHtml: string): number {
     let city = calMeta?.city || null
     let club = calMeta?.club || null
 
-    const type1 = readJsonFile<{ dogs?: unknown[]; dogs_count?: number }>(
+    let judges: string[] = []
+    let breeds: string[] = []
+    if (calMeta?.breeds) {
+      breeds.push(calMeta.breeds)
+    }
+
+    const type1 = readJsonFile<{ dogs?: Array<{ show_date?: string; judge?: string; breed?: string }>; dogs_count?: number }>(
       path.join(ROOT, 'data/v1/shows/exhibitions', `${id}-type1.json`),
     )
     if (type1) {
       dogCount = Array.isArray(type1.dogs) ? type1.dogs.length : type1.dogs_count ?? null
-      const firstDog = Array.isArray(type1.dogs) ? (type1.dogs[0] as { show_date?: string }) : null
-      if (!date && firstDog?.show_date) date = firstDog.show_date
+      if (Array.isArray(type1.dogs)) {
+        const firstDog = type1.dogs[0]
+        if (!date && firstDog?.show_date) date = firstDog.show_date
+        const jSet = new Set<string>()
+        const bSet = new Set<string>()
+        for (const d of type1.dogs) {
+          if (d.judge) jSet.add(d.judge.replace(/[\-\s]+/g, ' ').trim())
+          if (d.breed) bSet.add(d.breed.trim())
+        }
+        judges = Array.from(jSet)
+        breeds = Array.from(new Set([...breeds, ...bSet]))
+      }
     } else if (index[id]) {
       const fileEx = readJsonFile<{
         title?: string
         date?: string
         city?: string
         club?: string
-        dogs?: unknown[]
-        results?: unknown[]
+        dogs?: Array<{ judge?: string; breed?: string }>
+        results?: Array<{ judge?: string; breed?: string }>
       }>(path.join(ROOT, 'data/v1/shows', index[id]))
       if (fileEx) {
         title = title || fileEx.title || null
@@ -700,6 +739,15 @@ function prerenderExhibitions(spaHtml: string): number {
           (Array.isArray(fileEx.dogs) && fileEx.dogs.length) ||
           (Array.isArray(fileEx.results) && fileEx.results.length) ||
           null
+        const items = (Array.isArray(fileEx.dogs) && fileEx.dogs) || (Array.isArray(fileEx.results) && fileEx.results) || []
+        const jSet = new Set<string>()
+        const bSet = new Set<string>()
+        for (const it of items) {
+          if (it.judge) jSet.add(it.judge.replace(/[\-\s]+/g, ' ').trim())
+          if (it.breed) bSet.add(it.breed.trim())
+        }
+        judges = Array.from(jSet)
+        breeds = Array.from(new Set([...breeds, ...bSet]))
       }
     }
 
@@ -715,7 +763,17 @@ function prerenderExhibitions(spaHtml: string): number {
       }
     }
 
-    const meta = exhibitionMeta({ id, title, date, city, dogCount, club })
+    const meta = exhibitionMeta({
+      id,
+      title,
+      date,
+      city,
+      dogCount,
+      club,
+      ranks: calMeta?.ranks,
+      judges,
+      breeds,
+    })
     const html = applyMetaToSpaShell(spaHtml, {
       title: meta.title,
       description: meta.description,

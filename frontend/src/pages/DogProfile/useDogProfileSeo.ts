@@ -106,8 +106,8 @@ export function useDogProfileSeo({
       .filter(Boolean)
       .join(', ')
     const seoTitle = dogBreed
-      ? `${displayName} (${dogBreed}) — профиль собаки, результаты забегов и медали`
-      : `${displayName} — профиль собаки, результаты забегов и медали`
+      ? `${displayName} (${dogBreed}) — родословная, титулы и результаты забегов | Курсинг Статс`
+      : `${displayName} — родословная, титулы и результаты забегов | Курсинг Статс`
 
     const alternateNames = Array.from(
       new Set(
