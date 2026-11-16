@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo, useRef, useCallback } from 'react'
 import { useSearchParams, useNavigate, useParams, useLocation } from 'react-router-dom'
-import ShowJudgeCard from '../../components/ShowJudgeCard'
+import ShowJudgeCard, { type GradeScope } from '../../components/ShowJudgeCard'
 import { initialSeasonYearFilter, resolveActiveSeason } from '../../lib/season'
 import { useShowJudges, useShowJudgesPage0, useShowBreedAliases } from '../../hooks/useStaticData'
 import EmptyState from '../../components/EmptyState'
@@ -24,6 +24,26 @@ const SHOW_JUDGES_ACTIVE_SEASON = resolveActiveSeason(SHOW_YEARS)
 const FULL_JUDGES_DELAY_MS = 2500
 
 const MIN_GRADED_FOR_RATE = 30
+const MIN_PUPPY_FOR_RATE = 15
+
+function judgePuppyRate(judge: ShowJudge, year: string): number | null {
+  if (year) {
+    const graded = judge.by_year_puppy_graded?.[year] ?? 0
+    const rate = judge.by_year_puppy_rate?.[year]
+    if (typeof rate !== 'number' || graded < MIN_PUPPY_FOR_RATE) return null
+    return rate
+  }
+  if (typeof judge.puppy_rate !== 'number' || (judge.puppy_graded ?? 0) < MIN_PUPPY_FOR_RATE) {
+    return null
+  }
+  return judge.puppy_rate
+}
+
+function judgePuppyPctForCard(judge: ShowJudge, year: string): number | null {
+  const rate = judgePuppyRate(judge, year)
+  return rate == null ? null : rate * 100
+}
+
 
 function judgeExcellentRate(judge: ShowJudge, year: string): number | null {
   if (year) {
@@ -77,6 +97,7 @@ export default function ShowJudges({ urlYear }: ShowJudgesProps = {}) {
     }
   }, [routeYear])
   const [filterBreed, setFilterBreed] = useState('')
+  const [gradeScope, setGradeScope] = useState<GradeScope>('adult')
   const [sortKey, setSortKey] = useState<ShowJudgeSortKey>('exhibitions')
   const [visibleCount, setVisibleCount] = useState(20)
   const [allowFullLoad, setAllowFullLoad] = useState(false)
@@ -177,8 +198,16 @@ export default function ShowJudges({ urlYear }: ShowJudgesProps = {}) {
     return [...filteredJudges].sort((a, b) => {
       const aExhibitions = filterYear ? (a.by_year?.[filterYear] ?? 0) : a.total_judged
       const bExhibitions = filterYear ? (b.by_year?.[filterYear] ?? 0) : b.total_judged
-      const aDogs = filterYear ? (a.by_year_graded?.[filterYear] ?? 0) : (a.graded ?? 0)
-      const bDogs = filterYear ? (b.by_year_graded?.[filterYear] ?? 0) : (b.graded ?? 0)
+      const aAdultDogs = filterYear ? (a.by_year_graded?.[filterYear] ?? 0) : (a.graded ?? 0)
+      const bAdultDogs = filterYear ? (b.by_year_graded?.[filterYear] ?? 0) : (b.graded ?? 0)
+      const aPuppyDogs = filterYear ? (a.by_year_puppy_graded?.[filterYear] ?? 0) : (a.puppy_graded ?? 0)
+      const bPuppyDogs = filterYear ? (b.by_year_puppy_graded?.[filterYear] ?? 0) : (b.puppy_graded ?? 0)
+      const aTotalDogs = filterYear ? (a.by_year_total_dogs?.[filterYear] ?? (aAdultDogs + aPuppyDogs)) : (a.total_dogs ?? (aAdultDogs + aPuppyDogs))
+      const bTotalDogs = filterYear ? (b.by_year_total_dogs?.[filterYear] ?? (bAdultDogs + bPuppyDogs)) : (b.total_dogs ?? (bAdultDogs + bPuppyDogs))
+
+      const aDogs = gradeScope === 'puppy' ? aPuppyDogs : gradeScope === 'all' ? aTotalDogs : aAdultDogs
+      const bDogs = gradeScope === 'puppy' ? bPuppyDogs : gradeScope === 'all' ? bTotalDogs : bAdultDogs
+
       const aBreeds = filterYear
         ? (a.by_year_breeds?.[filterYear] ?? (a.unique_breeds ?? a.breeds?.length ?? 0))
         : (a.unique_breeds ?? a.breeds?.length ?? 0)
@@ -186,8 +215,8 @@ export default function ShowJudges({ urlYear }: ShowJudgesProps = {}) {
         ? (b.by_year_breeds?.[filterYear] ?? (b.unique_breeds ?? b.breeds?.length ?? 0))
         : (b.unique_breeds ?? b.breeds?.length ?? 0)
 
-      const aRate = judgeExcellentRate(a, filterYear)
-      const bRate = judgeExcellentRate(b, filterYear)
+      const aRate = gradeScope === 'puppy' ? judgePuppyRate(a, filterYear) : judgeExcellentRate(a, filterYear)
+      const bRate = gradeScope === 'puppy' ? judgePuppyRate(b, filterYear) : judgeExcellentRate(b, filterYear)
 
       switch (sortKey) {
         case 'dogs': {
@@ -283,6 +312,7 @@ export default function ShowJudges({ urlYear }: ShowJudgesProps = {}) {
     setFilterBreed('')
     setSearchQuery('')
     setSortKey('exhibitions')
+    setGradeScope('adult')
     navigate(`/shows/judges/${SHOW_JUDGES_ACTIVE_SEASON}/`)
   }, [navigate])
 
@@ -324,7 +354,7 @@ export default function ShowJudges({ urlYear }: ShowJudgesProps = {}) {
   if (page0Loading && !hasPage0) {
     return (
       <div className="space-y-4">
-        <SkeletonLoader variant="table" count={5} />
+        <SkeletonLoader variant="card" count={5} />
       </div>
     )
   }
@@ -353,6 +383,8 @@ export default function ShowJudges({ urlYear }: ShowJudgesProps = {}) {
         dogIndex={dogIndex}
         filterBreed={filterBreed}
         onSelectBreed={handleSelectBreed}
+        gradeScope={gradeScope}
+        onGradeScopeChange={setGradeScope}
         onResetFilters={handleResetFilters}
       />
 
@@ -375,8 +407,10 @@ export default function ShowJudges({ urlYear }: ShowJudgesProps = {}) {
                 <div key={judge.id || judge.name} data-list-item>
                   <ShowJudgeCard
                     filterYear={filterYear}
+                    gradeScope={gradeScope}
                     judge={{
                       id: judge.id || judge.name,
+                      numeric_id: judge.numeric_id,
                       name: judge.name,
                       display_name: judge.display_name,
                       exhibitionsCount: filterYear
@@ -387,8 +421,12 @@ export default function ShowJudges({ urlYear }: ShowJudgesProps = {}) {
                         : (judge.unique_breeds ?? judge.breeds?.length ?? 0),
                       excellentPct: judgeExcellentPctForCard(judge, filterYear),
                       graded: filterYear ? judge.by_year_graded?.[filterYear] : judge.graded,
+                      puppyPct: judgePuppyPctForCard(judge, filterYear),
+                      puppyGraded: filterYear ? judge.by_year_puppy_graded?.[filterYear] : judge.puppy_graded,
+                      totalDogs: filterYear ? judge.by_year_total_dogs?.[filterYear] : judge.total_dogs,
                       city: judge.city,
                       ranks: judge.ranks,
+                      breedChips: judge.breeds?.slice(0, 3),
                     }}
                     variant="embedded"
                   />

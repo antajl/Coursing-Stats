@@ -125,8 +125,20 @@ interface ShowRkfCalendarFile {
   exhibitions?: ShowRkfCalendarEntry[]
 }
 
-interface ShowRkfCalendarManifest {
-  years?: Array<{ year: string; count?: number }>
+export interface ShowRkfCalendarManifest {
+  schema?: string
+  source?: string
+  category_id?: number
+  date_from?: string
+  date_to?: string
+  fetched_at?: string
+  count?: number
+  api_count?: number
+  years?: Array<{ year: string; count?: number; lc_protocol_count?: number }>
+}
+
+export async function getShowCalendarManifest(): Promise<ShowRkfCalendarManifest | null> {
+  return fetchJson<ShowRkfCalendarManifest>('shows/calendar-rkf/manifest.json')
 }
 
 function compareRuDatesDesc(a: string, b: string): number {

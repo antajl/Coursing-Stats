@@ -501,9 +501,15 @@ interface ShowJudgeEntry {
   /** Доля «отлично» среди graded (0–1). null если нет оценок. */
   excellent_rate: number | null
   graded: number
+  puppy_graded?: number
+  puppy_rate?: number | null
+  total_dogs?: number
   /** % отлично по годам (0–1), только годы с graded > 0. */
   by_year_excellent?: Record<string, number>
   by_year_graded?: Record<string, number>
+  by_year_puppy_graded?: Record<string, number>
+  by_year_puppy_rate?: Record<string, number>
+  by_year_total_dogs?: Record<string, number>
   by_year_breeds?: Record<string, number>
 }
 
@@ -528,6 +534,12 @@ interface ShowJudgeDetail {
   by_year: Record<string, number>
   breeds: Array<{ breed: string; count: number }>
   exhibitions: ShowJudgeDetailExhibition[]
+  puppy_graded?: number
+  puppy_rate?: number | null
+  total_dogs?: number
+  by_year_puppy_graded?: Record<string, number>
+  by_year_puppy_rate?: Record<string, number>
+  by_year_total_dogs?: Record<string, number>
   strictness?: {
     graded: number
     grades: Record<ShowGradeKey | 'dq', number>
@@ -979,6 +991,9 @@ function buildJudgesIndex(exhibitions: ShowExhibition[]): {
       const belowExcellentRate = adultGraded > 0 ? (adultGraded - excellent) / adultGraded : null
       excellent_rate = excellentRate
 
+      const puppyGraded = (grades.very_promising || 0) + (grades.promising || 0)
+      const puppyRate = puppyGraded > 0 ? (grades.very_promising || 0) / puppyGraded : null
+
       strictness = {
         graded: adultGraded,
         grades,
@@ -987,25 +1002,60 @@ function buildJudgesIndex(exhibitions: ShowExhibition[]): {
       }
     }
 
+    const puppyGraded =
+      strictness?.grades
+        ? (strictness.grades.very_promising || 0) + (strictness.grades.promising || 0)
+        : 0
+    const puppyRate =
+      puppyGraded > 0 && strictness?.grades
+        ? (strictness.grades.very_promising || 0) / puppyGraded
+        : null
+    const totalDogs = (strictness?.graded || 0) + puppyGraded
+
     const byYearExcellentCounts: Record<string, number> = {}
     const byYearGraded: Record<string, number> = {}
+    const byYearPuppyGraded: Record<string, number> = {}
+    const byYearPuppyVpCounts: Record<string, number> = {}
+
     for (const [exId, gMap] of acc.exhibitionGradeCounts) {
       const year = acc.exhibitionYears.get(exId)
       if (!year) continue
       let excellent = 0
       let graded = 0
+      let puppy = 0
+      let puppyVp = 0
       for (const [gk, n] of gMap) {
-        if (gk === 'very_promising' || gk === 'promising') continue
-        graded += n
-        if (gk === 'excellent') excellent += n
+        if (gk === 'very_promising' || gk === 'promising') {
+          puppy += n
+          if (gk === 'very_promising') puppyVp += n
+        } else {
+          graded += n
+          if (gk === 'excellent') excellent += n
+        }
       }
-      if (graded <= 0) continue
-      byYearGraded[year] = (byYearGraded[year] || 0) + graded
-      byYearExcellentCounts[year] = (byYearExcellentCounts[year] || 0) + excellent
+      if (graded > 0) {
+        byYearGraded[year] = (byYearGraded[year] || 0) + graded
+        byYearExcellentCounts[year] = (byYearExcellentCounts[year] || 0) + excellent
+      }
+      if (puppy > 0) {
+        byYearPuppyGraded[year] = (byYearPuppyGraded[year] || 0) + puppy
+        byYearPuppyVpCounts[year] = (byYearPuppyVpCounts[year] || 0) + puppyVp
+      }
     }
     const by_year_excellent: Record<string, number> = {}
     for (const [year, graded] of Object.entries(byYearGraded)) {
       by_year_excellent[year] = (byYearExcellentCounts[year] || 0) / graded
+    }
+
+    const by_year_puppy_rate: Record<string, number> = {}
+    for (const [year, pGraded] of Object.entries(byYearPuppyGraded)) {
+      by_year_puppy_rate[year] = (byYearPuppyVpCounts[year] || 0) / pGraded
+    }
+
+    const by_year_total_dogs: Record<string, number> = {}
+    const allYears = new Set([...Object.keys(byYearGraded), ...Object.keys(byYearPuppyGraded)])
+    for (const yr of allYears) {
+      by_year_total_dogs[yr] = (byYearGraded[yr] || 0) + (byYearPuppyGraded[yr] || 0)
     }
 
     const byYearBreedsSet: Record<string, Set<string>> = {}
@@ -1030,8 +1080,17 @@ function buildJudgesIndex(exhibitions: ShowExhibition[]): {
       by_year: byYear,
       excellent_rate,
       graded: strictness ? strictness.graded : 0,
+      puppy_graded: puppyGraded > 0 ? puppyGraded : undefined,
+      puppy_rate: puppyRate != null ? puppyRate : undefined,
+      total_dogs: totalDogs > 0 ? totalDogs : undefined,
       ...(Object.keys(by_year_excellent).length > 0
         ? { by_year_excellent, by_year_graded: byYearGraded }
+        : {}),
+      ...(Object.keys(byYearPuppyGraded).length > 0
+        ? { by_year_puppy_graded: byYearPuppyGraded, by_year_puppy_rate: by_year_puppy_rate }
+        : {}),
+      ...(Object.keys(by_year_total_dogs).length > 0
+        ? { by_year_total_dogs }
         : {}),
       ...(Object.keys(by_year_breeds).length > 0 ? { by_year_breeds } : {}),
     })
@@ -1045,6 +1104,15 @@ function buildJudgesIndex(exhibitions: ShowExhibition[]): {
       breeds: breedEntries,
       exhibitions: exhibitionList,
       strictness,
+      puppy_graded: puppyGraded > 0 ? puppyGraded : undefined,
+      puppy_rate: puppyRate != null ? puppyRate : undefined,
+      total_dogs: totalDogs > 0 ? totalDogs : undefined,
+      ...(Object.keys(byYearPuppyGraded).length > 0
+        ? { by_year_puppy_graded: byYearPuppyGraded, by_year_puppy_rate: by_year_puppy_rate }
+        : {}),
+      ...(Object.keys(by_year_total_dogs).length > 0
+        ? { by_year_total_dogs }
+        : {}),
     })
   }
 

@@ -7,8 +7,10 @@ import BreedSearchDropdown from '../../components/ui/BreedSearchDropdown'
 import type { DogsIndexEntry } from '../../lib/competingBreeds'
 import QuickBreedBar, { SHOW_CANDIDATE_BREEDS } from '../TopDogs/QuickBreedBar'
 import ShowJudgesRatingHint from './ShowJudgesRatingHint'
+import ShowJudgeGradeScopeDropdown from './ShowJudgeGradeScopeDropdown'
 import { toolbarPillTriggerClass } from '../../lib/toolbar'
 import { formatBreedName } from '../../lib/breedMapping'
+import type { GradeScope } from '../../components/ShowJudgeCard'
 
 export interface ShowJudgesToolbarProps {
   searchQuery: string
@@ -21,6 +23,8 @@ export interface ShowJudgesToolbarProps {
   filterBreed: string
   onSelectBreed: (breed: string) => void
   dogIndex?: DogsIndexEntry[]
+  gradeScope: GradeScope
+  onGradeScopeChange: (scope: GradeScope) => void
   onResetFilters: () => void
 }
 
@@ -34,12 +38,14 @@ export function ShowJudgesToolbar({
   availableBreeds,
   filterBreed,
   onSelectBreed,
+  gradeScope,
+  onGradeScopeChange,
   dogIndex,
   onResetFilters,
 }: ShowJudgesToolbarProps) {
   const [mobileYearOpen, setMobileYearOpen] = useState(false)
 
-  const hasActiveFilters = Boolean(isYearNonDefault || filterBreed || searchQuery.trim())
+  const hasActiveFilters = Boolean(isYearNonDefault || filterBreed || searchQuery.trim() || gradeScope !== 'adult')
 
   return (
     <PageToolbar
@@ -47,7 +53,7 @@ export function ShowJudgesToolbar({
       topRowClassName="flex-nowrap"
       filters={
         <div className="w-full min-w-0">
-          {/* Мобильная компактная строка (32px): Поиск + Год + Порода + Сброс */}
+          {/* Мобильная компактная строка (32px): Поиск + Год + Классы + Порода + Сброс */}
           <div className="flex sm:hidden items-center gap-1.5 w-full min-w-0 overflow-x-auto no-scrollbar py-0.5">
             <ToolbarSearch
               value={searchQuery}
@@ -62,6 +68,12 @@ export function ShowJudgesToolbar({
               onSelectYear={setFilterYear}
               isOpen={mobileYearOpen}
               onOpenChange={setMobileYearOpen}
+            />
+
+            {/* Grade Scope Dropdown */}
+            <ShowJudgeGradeScopeDropdown
+              gradeScope={gradeScope}
+              onGradeScopeChange={onGradeScopeChange}
             />
 
             {/* Breed Dropdown */}
@@ -100,7 +112,7 @@ export function ShowJudgesToolbar({
             </div>
           </div>
 
-          {/* Десктопная строка: Поиск + Год + О судействе + Сброс + Разделитель | + QuickBreedBar edge-to-edge */}
+          {/* Десктопная строка: Поиск + Год + Классы + О судействе + Сброс + Разделитель | + QuickBreedBar edge-to-edge */}
           <div className="hidden sm:flex sm:items-center gap-2 w-full min-w-0">
             <div className="flex items-center gap-1.5 shrink-0">
               <ToolbarSearch
@@ -113,6 +125,12 @@ export function ShowJudgesToolbar({
                 years={showYears as string[]}
                 selectedYear={filterYear}
                 onSelectYear={setFilterYear}
+              />
+
+              {/* Grade Scope Dropdown */}
+              <ShowJudgeGradeScopeDropdown
+                gradeScope={gradeScope}
+                onGradeScopeChange={onGradeScopeChange}
               />
 
               {/* Info button */}

@@ -8,6 +8,7 @@ import {
   GRADE_TILES,
   buildStrictness,
   buildStrictnessVerdict,
+  buildPuppyStrictness,
   emptyGrades,
   exhibitionYear,
   sumBreedCounts,
@@ -85,6 +86,7 @@ export default function ShowJudgeDetail() {
   }, [judge, yearParam, periodExhibitions])
 
   const periodStrictness = useMemo(() => buildStrictness(periodGrades), [periodGrades])
+  const periodPuppyStrictness = useMemo(() => buildPuppyStrictness(periodGrades), [periodGrades])
 
   useEffect(() => {
     if (gradeFilter) setListTab('exhibitions')
@@ -152,6 +154,10 @@ export default function ShowJudgeDetail() {
     periodStrictness.excellent_rate != null
       ? `${(periodStrictness.excellent_rate * 100).toFixed(1)}%`
       : null
+  const puppyPct =
+    periodPuppyStrictness.puppyRate != null
+      ? `${(periodPuppyStrictness.puppyRate * 100).toFixed(1)}%`
+      : null
   const sitePct = baseline ? `${(baseline.excellent_rate * 100).toFixed(1)}%` : null
   const strictnessVerdict = buildStrictnessVerdict(
     periodStrictness.excellent_rate,
@@ -192,6 +198,8 @@ export default function ShowJudgeDetail() {
             periodBreedCount={periodBreeds.length}
             periodGrades={periodGrades}
             periodStrictness={periodStrictness}
+            periodPuppyStrictness={periodPuppyStrictness}
+            puppyPct={puppyPct}
             gradeFilter={gradeFilter}
             hasGrades={hasGrades}
             hasPerExhibitionGrades={hasPerExhibitionGrades}

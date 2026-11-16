@@ -127,3 +127,19 @@ export function buildStrictnessVerdict(
     hint: `Разница с средним % «отлично» по сайту: ${signed} п.п.`,
   }
 }
+
+
+export function buildPuppyStrictness(grades: Record<GradeFilterKey, number>) {
+  const puppyGraded = (grades.very_promising || 0) + (grades.promising || 0);
+  if (puppyGraded === 0) {
+    return {
+      puppyGraded: 0,
+      puppyRate: null,
+    };
+  }
+  const vp = grades.very_promising || 0;
+  return {
+    puppyGraded,
+    puppyRate: vp / puppyGraded,
+  };
+}

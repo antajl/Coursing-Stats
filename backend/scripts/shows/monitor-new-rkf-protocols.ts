@@ -161,6 +161,8 @@ const GRADE_MAP: Record<string, string> = {
   'оч хор': 'ОЧ.ХОР',
   'очень хорошо': 'ОЧ.ХОР',
   'отлично': 'ОТЛ',
+  'отлич.': 'ОТЛ',
+  'отлич': 'ОТЛ',
   'отл.': 'ОТЛ',
   'отл': 'ОТЛ',
   'отл отл': 'ОТЛ',
@@ -172,8 +174,11 @@ const GRADE_MAP: Record<string, string> = {
   'удовл.': 'УДОВЛ',
   'удовл': 'УДОВЛ',
   'удовлетворительно': 'УДОВЛ',
+  'неуд.': 'УДОВЛ',
+  'неуд': 'УДОВЛ',
   'дискв.': 'ДИСКВ',
   'дискв': 'ДИСКВ',
+  'дисквал': 'ДИСКВ',
   'дисквалификация': 'ДИСКВ',
   'дск': 'ДИСКВ',
   'дск.': 'ДИСКВ',
@@ -186,9 +191,16 @@ const GRADE_MAP: Record<string, string> = {
   'о.п.': 'ОП',
   'о.п': 'ОП',
   'оч.п': 'ОП',
+  'о.перс.': 'ОП',
+  'о.перс': 'ОП',
+  'о. перс.': 'ОП',
+  'о. перс': 'ОП',
   'оч.персп.': 'ОП',
+  'оч.персп': 'ОП',
   'очень перспективный': 'ОП',
   'перспективный': 'ПЕРСП',
+  'перспек.': 'ПЕРСП',
+  'перспек': 'ПЕРСП',
   'персп.': 'ПЕРСП',
   'персп': 'ПЕРСП',
   'пер.': 'ПЕРСП',
@@ -199,12 +211,28 @@ const GRADE_MAP: Record<string, string> = {
   'неперсп.': 'НЕПЕРСП',
   'неперсп': 'НЕПЕРСП',
   'непе рсп.': 'НЕПЕРСП',
+  'малопе рсп.': 'НЕПЕРСП',
+  'малоперсп.': 'НЕПЕРСП',
+  'малоперсп': 'НЕПЕРСП',
+  'малоперспективный': 'НЕПЕРСП',
+  'н/о': 'Б/О',
+  'б/о': 'Б/О',
+  'б.о.': 'Б/О',
+  'без оценки': 'Б/О',
+  'не оценено': 'Б/О',
 }
 
 export function normalizeGrade(raw: string): string {
   if (!raw) return ''
-  const t = raw.trim().toLowerCase()
+  const t = raw.trim().toLowerCase().replace(/\s+/g, ' ')
   if (GRADE_MAP[t]) return GRADE_MAP[t]
+  if (/^отлич/i.test(t) || /^отл\b/i.test(t)) return 'ОТЛ'
+  if (/^о[.\s]*перс/i.test(t)) return 'ОП'
+  if (/^мало[.\s]*перс/i.test(t)) return 'НЕПЕРСП'
+  if (/^дисквал/i.test(t)) return 'ДИСКВ'
+  if (/^н\/о$|^не\s*оцен/i.test(t)) return 'Б/О'
+  if (/^уд\b/i.test(t)) return 'УДОВЛ'
+  if (/^хор\b/i.test(t)) return 'ХОР'
   const upper = raw.trim().toUpperCase()
   return upper
 }
@@ -455,14 +483,86 @@ async function main() {
             if (!isBreedFragment(parsedDogs[j].breed)) { prevValid = parsedDogs[j].breed; break; }
           }
 
-          if (b === 'АМЕРИКАНСКАЯ') {
+          if (b.includes('СТАФФОРД')) {
+            if (prevValid.includes('БУЛЬТЕРЬЕР') || nextValid.includes('БУЛЬТЕРЬЕР')) {
+              parsedDogs[idx].breed = 'СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР'
+            } else if (prevValid.includes('СТАФФОРД')) {
+              parsedDogs[idx].breed = prevValid
+            } else {
+              parsedDogs[idx].breed = 'АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР'
+            }
+          } else if (b.includes('СОБАКА') || b.includes('ХОХЛАТАЯ') || b.includes('ГОЛАЯ') || b.includes('ПУХОВАЯ')) {
+            if (prevValid.includes('КИТАЙСКАЯ') || nextValid.includes('КИТАЙСКАЯ')) {
+              parsedDogs[idx].breed = prevValid.includes('КИТАЙСКАЯ') ? prevValid : 'КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА'
+            } else {
+              parsedDogs[idx].breed = 'КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА'
+            }
+          } else if (/ШНАУЦЕР/i.test(b)) {
+            if (prevValid.includes('РИЗЕН') || nextValid.includes('РИЗЕН')) {
+              parsedDogs[idx].breed = b.toLowerCase().includes('черн') ? 'РИЗЕНШНАУЦЕР ЧЕРНЫЙ' : 'РИЗЕНШНАУЦЕР'
+            } else if (prevValid.includes('МИТТЕЛЬ') || nextValid.includes('МИТТЕЛЬ')) {
+              parsedDogs[idx].breed = b.toLowerCase().includes('черн') ? 'МИТТЕЛЬШНАУЦЕР ЧЕРНЫЙ' : 'МИТТЕЛЬШНАУЦЕР'
+            } else {
+              parsedDogs[idx].breed = b.toLowerCase().includes('черн') ? 'ЦВЕРГШНАУЦЕР ЧЕРНЫЙ' : 'ЦВЕРГШНАУЦЕР'
+            }
+          } else if (b === 'АМЕРИКАНСКАЯ') {
             if (prevValid.includes('АКИТА') || nextValid.includes('АКИТА')) parsedDogs[idx].breed = 'АМЕРИКАНСКАЯ АКИТА'
+            else parsedDogs[idx].breed = prevValid || 'АМЕРИКАНСКАЯ АКИТА'
           } else if (b === 'АМЕРИКАНСКИЙ') {
-            if (nextValid.includes('КОКЕР') || nextValid.includes('СПАНИЕЛЬ')) parsedDogs[idx].breed = 'АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ'
-            else if (nextValid.includes('СТАФФОРД') || nextValid.includes('ТЕРЬЕР')) parsedDogs[idx].breed = 'АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР'
+            if (nextValid.includes('КОКЕР') || nextValid.includes('СПАНИЕЛЬ') || prevValid.includes('КОКЕР')) parsedDogs[idx].breed = 'АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ'
+            else if (nextValid.includes('СТАФФОРД') || nextValid.includes('ТЕРЬЕР') || prevValid.includes('СТАФФОРД')) parsedDogs[idx].breed = 'АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР'
+            else parsedDogs[idx].breed = prevValid || 'АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР'
           } else if (b === 'БЕЛЬГИЙСКИЙ') {
             parsedDogs[idx].breed = 'БЕЛЬГИЙСКИЙ ГРИФФОН'
+          } else if (b === 'БРЮССЕЛЬСКИЙ') {
+            parsedDogs[idx].breed = 'БРЮССЕЛЬСКИЙ ГРИФФОН'
+          } else if (b === 'БОРОДАТЫЙ') {
+            parsedDogs[idx].breed = 'БОРОДАТЫЙ КОЛЛИ'
+          } else if (b === 'БЕРНСКИЙ') {
+            parsedDogs[idx].breed = 'БЕРНСКИЙ ЗЕННЕНХУНД'
+          } else if (b === 'АЛЯСКИНСКИЙ') {
+            parsedDogs[idx].breed = 'АЛЯСКИНСКИЙ МАЛАМУТ'
+          } else if (b === 'СИБИРСКИЙ') {
+            parsedDogs[idx].breed = 'СИБИРСКИЙ ХАСКИ'
+          } else if (b === 'ЧЕХОСЛОВАЦКАЯ') {
+            parsedDogs[idx].breed = 'ЧЕХОСЛОВАЦКАЯ ВОЛЧЬЯ СОБАКА'
+          } else if (b === 'МОСКОВСКАЯ' || b === 'СТОРОЖЕВАЯ') {
+            parsedDogs[idx].breed = 'МОСКОВСКАЯ СТОРОЖЕВАЯ'
+          } else if (b === 'ЮЖНОАФРИКАНСКИЙ') {
+            parsedDogs[idx].breed = 'ЮЖНОАФРИКАНСКИЙ БУРБУЛЬ'
+          } else if (b === 'НОРМАНДСКИЙ') {
+            parsedDogs[idx].breed = 'АРТЕЗИАНО-НОРМАНДСКИЙ БАССЕТ'
+          } else if (b === 'АВСТРАЛИЙСКИЙ' || b === 'АВСТРАЛИЙСКАЯ') {
+            if (nextValid.includes('ТЕРЬЕР') || prevValid.includes('ТЕРЬЕР')) parsedDogs[idx].breed = 'АВСТРАЛИЙСКИЙ ТЕРЬЕР'
+            else if (nextValid.includes('КЕЛПИ') || prevValid.includes('КЕЛПИ')) parsedDogs[idx].breed = 'АВСТРАЛИЙСКИЙ КЕЛПИ'
+            else parsedDogs[idx].breed = prevValid || 'АВСТРАЛИЙСКАЯ ОВЧАРКА'
+          } else if (b === 'ИТАЛЬЯНСКИЙ') {
+            if (nextValid.includes('БРАКК') || prevValid.includes('БРАКК')) parsedDogs[idx].breed = 'ИТАЛЬЯНСКИЙ БРАКК'
+            else if (nextValid.includes('СПИН') || prevValid.includes('СПИН')) parsedDogs[idx].breed = 'ИТАЛЬЯНСКИЙ СПИНОНЕ'
+            else parsedDogs[idx].breed = prevValid || 'ИТАЛЬЯНСКИЙ КАНЕ КОРСО'
+          } else if (b === 'АНГЛИЙСКИЙ') {
+            if (nextValid.includes('КОКЕР') || prevValid.includes('КОКЕР')) parsedDogs[idx].breed = 'АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ'
+            else if (nextValid.includes('СЕТТЕР') || prevValid.includes('СЕТТЕР')) parsedDogs[idx].breed = 'АНГЛИЙСКИЙ СЕТТЕР'
+            else if (nextValid.includes('СПРИНГЕР') || prevValid.includes('СПРИНГЕР')) parsedDogs[idx].breed = 'АНГЛИЙСКИЙ СПРИНГЕР СПАНИЕЛЬ'
+            else if (nextValid.includes('ПОЙНТЕР') || prevValid.includes('ПОЙНТЕР')) parsedDogs[idx].breed = 'АНГЛИЙСКИЙ ПОЙНТЕР'
+            else parsedDogs[idx].breed = prevValid || 'АНГЛИЙСКИЙ БУЛЬДОГ'
+          } else if (b === 'НЕМЕЦКИЙ' || b === 'НЕМЕЦКАЯ') {
+            if (nextValid.includes('БОКСЕР') || prevValid.includes('БОКСЕР')) parsedDogs[idx].breed = 'НЕМЕЦКИЙ БОКСЕР'
+            else if (nextValid.includes('ДОГ') || prevValid.includes('ДОГ')) parsedDogs[idx].breed = 'НЕМЕЦКИЙ ДОГ'
+            else if (nextValid.includes('ШПИЦ') || prevValid.includes('ШПИЦ')) parsedDogs[idx].breed = 'НЕМЕЦКИЙ ШПИЦ'
+            else if (nextValid.includes('КУРЦХААР') || prevValid.includes('КУРЦХААР')) parsedDogs[idx].breed = 'НЕМЕЦКИЙ КУРЦХААР'
+            else if (nextValid.includes('ДРАТХААР') || prevValid.includes('ДРАТХААР')) parsedDogs[idx].breed = 'НЕМЕЦКИЙ ДРАТХААР'
+            else if (nextValid.includes('ПИНЧЕР') || prevValid.includes('ПИНЧЕР')) parsedDogs[idx].breed = 'НЕМЕЦКИЙ ПИНЧЕР'
+            else parsedDogs[idx].breed = prevValid || 'НЕМЕЦКАЯ ОВЧАРКА'
+          } else if (b === 'ГОНЧАЯ') {
+            parsedDogs[idx].breed = prevValid || nextValid || 'РУССКАЯ ГОНЧАЯ'
+          } else if (b === 'ТИГРОВЫЙ' || b === 'БЕЛЫЙ' || b === 'ПАЛЕВЫЙ' || b === 'ЧЕРНЫЙ') {
+            parsedDogs[idx].breed = prevValid || nextValid || b
+          } else if (prevValid && prevValid.includes(b)) {
+            parsedDogs[idx].breed = prevValid
           }
+        } else if (b.includes('МИНИАТЮРНЫЙ БУЛЬТЕРЬЕР')) {
+          parsedDogs[idx].breed = 'МИНИАТЮРНЫЙ БУЛЬТЕРЬЕР'
         } else if (b === 'КОКЕР СПАНИЕЛЬ' && parsedDogs[idx - 1]?.breed === 'АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ') {
           parsedDogs[idx].breed = 'АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ'
         } else if (b.includes('КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР')) {

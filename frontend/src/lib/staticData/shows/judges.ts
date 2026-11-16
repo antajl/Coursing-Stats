@@ -24,12 +24,22 @@ export interface ShowJudge {
   unique_breeds?: number
   breeds: string[]
   by_year?: Record<string, number>
-  /** Доля «отлично» (0–1). */
+  /** Доля «отлично» во взрослых классах (0–1). */
   excellent_rate?: number | null
+  /** Всего взрослых оценок (adultGraded). */
   graded?: number
+  /** Число щенков/бэби (оценки «оч. персп.» + «персп.»). */
+  puppy_graded?: number
+  /** Доля «очень перспективный» среди щенков (0–1). */
+  puppy_rate?: number | null
+  /** Всего собак (взрослые + щенки). */
+  total_dogs?: number
   by_year_excellent?: Record<string, number>
   by_year_graded?: Record<string, number>
   by_year_breeds?: Record<string, number>
+  by_year_puppy_graded?: Record<string, number>
+  by_year_puppy_rate?: Record<string, number>
+  by_year_total_dogs?: Record<string, number>
   city?: string
   ranks?: string
   cert_number?: number
@@ -48,6 +58,12 @@ export interface ShowJudgeDetail {
   city?: string
   ranks?: string
   cert_number?: number
+  puppy_graded?: number
+  puppy_rate?: number | null
+  total_dogs?: number
+  by_year_puppy_graded?: Record<string, number>
+  by_year_puppy_rate?: Record<string, number>
+  by_year_total_dogs?: Record<string, number>
   exhibitions: Array<{
     id: number
     date: string
@@ -100,6 +116,14 @@ function normalizeShowJudge(raw: ShowJudge | Record<string, unknown>): ShowJudge
           ? null
           : undefined,
     graded: typeof (raw as ShowJudge).graded === 'number' ? (raw as ShowJudge).graded : undefined,
+    puppy_graded: typeof (raw as ShowJudge).puppy_graded === 'number' ? (raw as ShowJudge).puppy_graded : undefined,
+    puppy_rate:
+      typeof (raw as ShowJudge).puppy_rate === 'number'
+        ? (raw as ShowJudge).puppy_rate
+        : (raw as ShowJudge).puppy_rate === null
+          ? null
+          : undefined,
+    total_dogs: typeof (raw as ShowJudge).total_dogs === 'number' ? (raw as ShowJudge).total_dogs : undefined,
     by_year_excellent:
       raw.by_year_excellent && typeof raw.by_year_excellent === 'object'
         ? (raw.by_year_excellent as Record<string, number>)
@@ -107,6 +131,18 @@ function normalizeShowJudge(raw: ShowJudge | Record<string, unknown>): ShowJudge
     by_year_graded:
       raw.by_year_graded && typeof raw.by_year_graded === 'object'
         ? (raw.by_year_graded as Record<string, number>)
+        : undefined,
+    by_year_puppy_graded:
+      raw.by_year_puppy_graded && typeof raw.by_year_puppy_graded === 'object'
+        ? (raw.by_year_puppy_graded as Record<string, number>)
+        : undefined,
+    by_year_puppy_rate:
+      raw.by_year_puppy_rate && typeof raw.by_year_puppy_rate === 'object'
+        ? (raw.by_year_puppy_rate as Record<string, number>)
+        : undefined,
+    by_year_total_dogs:
+      raw.by_year_total_dogs && typeof raw.by_year_total_dogs === 'object'
+        ? (raw.by_year_total_dogs as Record<string, number>)
         : undefined,
     by_year_breeds:
       raw.by_year_breeds && typeof raw.by_year_breeds === 'object'

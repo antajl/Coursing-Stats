@@ -7,6 +7,7 @@ import EmptyState from '../../components/EmptyState'
 import SkeletonLoader from '../../components/SkeletonLoader'
 import {
   getShowCalendar,
+  getShowCalendarManifest,
   getShowBreedCalendar,
   getShowRkfCalendarYears,
   type ShowRkfCalendarEntry,
@@ -99,6 +100,12 @@ export default function ShowCalendar({ urlYear }: ShowCalendarProps = {}) {
     queryKey: ['showCalendar', filterYear],
     queryFn: () => getShowCalendar(filterYear || undefined),
     staleTime: 5 * 60 * 1000,
+  })
+
+  const { data: calendarManifest } = useQuery({
+    queryKey: ['showCalendarManifest'],
+    queryFn: () => getShowCalendarManifest(),
+    staleTime: 10 * 60 * 1000,
   })
 
   const { data: breedAliases = [] } = useShowBreedAliases()
@@ -469,6 +476,7 @@ export default function ShowCalendar({ urlYear }: ShowCalendarProps = {}) {
           dogIndex={breedDogIndex}
           onClearQuickPreset={() => setQuickPreset(null)}
           availableMonths={availableMonths}
+          calendarUpdatedAt={calendarManifest?.fetched_at}
         />
       }
     />

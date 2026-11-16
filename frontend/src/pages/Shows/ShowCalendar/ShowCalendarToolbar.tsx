@@ -37,6 +37,7 @@ export interface ShowCalendarToolbarProps {
   dogIndex?: DogsIndexEntry[]
   onClearQuickPreset: () => void
   availableMonths?: Set<string>
+  calendarUpdatedAt?: string | null
 }
 
 export function ShowCalendarToolbar({
@@ -58,6 +59,7 @@ export function ShowCalendarToolbar({
   dogIndex,
   onClearQuickPreset,
   availableMonths,
+  calendarUpdatedAt,
 }: ShowCalendarToolbarProps) {
   return (
     <div className="w-full min-w-0">
@@ -113,7 +115,7 @@ export function ShowCalendarToolbar({
         </div>
 
         <div className="ml-auto shrink-0 flex items-center pr-0.5">
-          <ShowCalendarHint compact />
+          <ShowCalendarHint compact updatedAt={calendarUpdatedAt} />
         </div>
       </div>
 
@@ -147,7 +149,7 @@ export function ShowCalendarToolbar({
           )}
 
           <div className="shrink-0">
-            <ShowCalendarHint />
+            <ShowCalendarHint updatedAt={calendarUpdatedAt} />
           </div>
         </div>
 

@@ -67,9 +67,6 @@ export default function ShowJudgeSortDropdown({
     >
       {(close) => (
         <div className="p-1 space-y-0.5 text-xs" role="menu">
-          <div className="px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-charcoal-400 border-b border-old-money-100">
-            Сортировка судей
-          </div>
           {SHOW_JUDGE_SORT_OPTIONS.map((opt) => {
             const isSelected = opt.value === value
             return (

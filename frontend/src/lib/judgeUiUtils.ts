@@ -59,10 +59,10 @@ export function getJudgeInitials(name: string): string {
 
 /**
  * Categorizes a show judge's strictness based on their adult excellent rate:
- * Calibrated against 1,600+ RKF judges and 2.5M+ adult conformation evaluations:
- * - >= 85%: Лояльный (зеленый, верхний квартиль ~25% самых мягких судей)
- * - 76% - 84.9%: Умеренная строгость (янтарный, средние ~50% судей, медиана 80.7%)
- * - < 76%: Строгий (розовый/красный, нижний квартиль ~25% самых требовательных судей)
+ * Calibrated against 1,640+ RKF judges and 2.5M+ adult conformation evaluations:
+ * - >= 96%: Лояльный (верхние ~36% самых мягких судей)
+ * - 88% - 95.9%: Умеренная строгость (средние ~39% судей, медиана 93.4%, среднее по РКФ 90.0%)
+ * - < 88%: Строгий (нижний квартиль ~25% самых требовательных судей)
  * - < 30 оценок: Мало данных
  */
 export function getStrictnessBadge(
@@ -87,7 +87,7 @@ export function getStrictnessBadge(
 
   const pct = Math.round(excellentRate * 100)
 
-  if (pct >= 85) {
+  if (pct >= 96) {
     return {
       label: 'Лояльный',
       detail: `${pct}% «отлично»`,
@@ -99,7 +99,7 @@ export function getStrictnessBadge(
     }
   }
 
-  if (pct >= 76) {
+  if (pct >= 88) {
     return {
       label: 'Умеренный',
       detail: `${pct}% «отлично»`,
@@ -114,6 +114,71 @@ export function getStrictnessBadge(
   return {
     label: 'Строгий',
     detail: `${pct}% «отлично»`,
+    tone: 'strict',
+    badgeClass: 'bg-rose-50 text-rose-800 border-rose-200/80',
+    borderClass: 'border-rose-300',
+    textClass: 'text-rose-700',
+    dotClass: 'bg-rose-500',
+  }
+}
+
+/**
+ * Categorizes a show judge's strictness specifically for puppies and babies:
+ * Based on the proportion of «Очень перспективный» among evaluated puppies:
+ * - >= 99%: Лоялен к щенкам (верхние ~41% судей)
+ * - 94% - 98.9%: Умеренный к щенкам (средние ~38% судей, медиана 97.4%)
+ * - < 94%: Строг к щенкам (~21% требовательных к щенкам судей)
+ * - < 15 щенков: Мало данных
+ */
+export function getPuppyStrictnessBadge(
+  puppyRate: number | null | undefined,
+  puppyGraded?: number | null,
+): StrictnessBadgeInfo {
+  if (
+    puppyRate == null ||
+    Number.isNaN(puppyRate) ||
+    (puppyGraded != null && puppyGraded < 15)
+  ) {
+    return {
+      label: 'Мало данных',
+      detail: puppyGraded ? `Всего ${puppyGraded} щенков` : 'Недостаточно данных по щенкам',
+      tone: 'unknown',
+      badgeClass: 'bg-old-money-50/80 text-charcoal-500 border-old-money-200',
+      borderClass: 'border-old-money-200',
+      textClass: 'text-charcoal-500',
+      dotClass: 'bg-charcoal-400',
+    }
+  }
+
+  const pct = Math.round(puppyRate * 100)
+
+  if (pct >= 99) {
+    return {
+      label: 'Лоялен к щенкам',
+      detail: `${pct}% «оч. персп.»`,
+      tone: 'soft',
+      badgeClass: 'bg-emerald-50 text-emerald-800 border-emerald-200/80',
+      borderClass: 'border-emerald-300',
+      textClass: 'text-emerald-700',
+      dotClass: 'bg-emerald-500',
+    }
+  }
+
+  if (pct >= 94) {
+    return {
+      label: 'Умеренный к щенкам',
+      detail: `${pct}% «оч. персп.»`,
+      tone: 'moderate',
+      badgeClass: 'bg-amber-50 text-amber-800 border-amber-200/80',
+      borderClass: 'border-amber-300',
+      textClass: 'text-amber-700',
+      dotClass: 'bg-amber-500',
+    }
+  }
+
+  return {
+    label: 'Строг к щенкам',
+    detail: `${pct}% «оч. персп.»`,
     tone: 'strict',
     badgeClass: 'bg-rose-50 text-rose-800 border-rose-200/80',
     borderClass: 'border-rose-300',

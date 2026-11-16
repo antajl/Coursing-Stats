@@ -49,6 +49,7 @@ export function parseDogRow($, $row, breedClass, allRows, rowIndex, judges, extr
 
   // Определяем формат по количеству ячеек
   let totalScore, qualification, vc, rawScoresJson;
+  let heats: any[] = [];
   const judgeCount = extractJudgeCount(judges, $);
   let disqualificationReason = null;
   
@@ -74,7 +75,7 @@ export function parseDogRow($, $row, breedClass, allRows, rowIndex, judges, extr
     qualification = scoresData.qualification;
     vc = scoresData.vc;
     rawScoresJson = scoresData.raw_scores_json;
-    const heats = scoresData.heats;
+    heats = scoresData.heats;
     
     // Определяем disqualified из heats
     if (heats.length > 0) {
@@ -114,7 +115,7 @@ export function parseDogRow($, $row, breedClass, allRows, rowIndex, judges, extr
 
     // Сохраняем базовую структуру в raw_scores_json с информацией о забеге
     // Всегда добавляем второй пустой забег для UI
-    const heats = heatNumber ? [{
+    heats = heatNumber ? [{
       heat_number: 1,
       bib_number: heatNumber,
       bib_color: heatColor,
@@ -146,8 +147,7 @@ export function parseDogRow($, $row, breedClass, allRows, rowIndex, judges, extr
   }
 
   // Check if we have valid judge data (fallback for status detection)
-  // heats might not be defined in all code paths
-  const hasValidJudgeData = typeof heats !== 'undefined' && heats && heats.length > 0 && 
+  const hasValidJudgeData = heats && heats.length > 0 && 
     heats.some(h => h.judges && h.judges.length > 0 && 
       h.judges.some(j => j.scores && j.scores.some(s => s !== null)));
   

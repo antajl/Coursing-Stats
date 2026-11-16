@@ -3,8 +3,12 @@ import { ChevronRight } from 'lucide-react'
 import {
   formatJudgeDisplayName,
   getStrictnessBadge,
+  getPuppyStrictnessBadge,
 } from '../lib/judgeUiUtils'
 import { resolveShowJudgeNumericId } from '../lib/judgeIdMap.generated'
+import { formatBreedName } from '../lib/breedMapping'
+
+export type GradeScope = 'adult' | 'puppy' | 'all'
 
 export interface ShowJudgeCardData {
   id: string
@@ -16,6 +20,9 @@ export interface ShowJudgeCardData {
   /** 0–100, null если мало/нет данных */
   excellentPct: number | null
   graded?: number
+  puppyPct?: number | null
+  puppyGraded?: number
+  totalDogs?: number
   city?: string
   ranks?: string
   breedChips?: string[]
@@ -24,6 +31,7 @@ export interface ShowJudgeCardData {
 export interface ShowJudgeCardProps {
   judge: ShowJudgeCardData
   filterYear?: string
+  gradeScope?: GradeScope
   variant?: 'embedded' | 'card'
 }
 
@@ -63,16 +71,49 @@ function formatEvaluationsCount(count: number): string {
   return `${count.toLocaleString('ru-RU')} оценок`
 }
 
+function formatPuppiesCount(count: number): string {
+  const mod10 = count % 10
+  const mod100 = count % 100
+  if (mod100 >= 11 && mod100 <= 14) return `${count.toLocaleString('ru-RU')} щенков`
+  if (mod10 === 1) return `${count.toLocaleString('ru-RU')} щенок`
+  if (mod10 >= 2 && mod10 <= 4) return `${count.toLocaleString('ru-RU')} щенка`
+  return `${count.toLocaleString('ru-RU')} щенков`
+}
+
 export default function ShowJudgeCard({
   judge,
   filterYear,
+  gradeScope = 'adult',
   variant = 'embedded',
 }: ShowJudgeCardProps) {
   const rawName = judge.display_name || judge.name
   const displayName = formatJudgeDisplayName(rawName)
 
-  const excellentRateFraction = judge.excellentPct != null ? judge.excellentPct / 100 : null
-  const strictness = getStrictnessBadge(excellentRateFraction, judge.graded)
+  const isPuppy = gradeScope === 'puppy'
+  const isAll = gradeScope === 'all'
+
+  const adultRateFraction = judge.excellentPct != null ? judge.excellentPct / 100 : null
+  const puppyRateFraction = judge.puppyPct != null ? judge.puppyPct / 100 : null
+
+  const strictness = isPuppy
+    ? getPuppyStrictnessBadge(puppyRateFraction, judge.puppyGraded)
+    : getStrictnessBadge(adultRateFraction, judge.graded)
+
+  const evaluatedCount = isPuppy
+    ? (judge.puppyGraded ?? 0)
+    : isAll
+      ? (judge.totalDogs ?? ((judge.graded || 0) + (judge.puppyGraded || 0)))
+      : (judge.graded ?? 0)
+
+  const formattedEvaluations = isPuppy
+    ? formatPuppiesCount(evaluatedCount)
+    : isAll
+      ? formatDogsCount(evaluatedCount)
+      : formatEvaluationsCount(evaluatedCount)
+
+  const rateValue = isPuppy ? judge.puppyPct : judge.excellentPct
+  const rateLabel = isPuppy ? 'Оч. персп.' : 'Отлично'
+  const dogsLabel = isPuppy ? 'Щенков' : isAll ? 'Всех собак' : 'Взрослых'
 
   const targetId = judge.numeric_id ?? resolveShowJudgeNumericId(judge.id) ?? encodeURIComponent(judge.id)
   const linkTo = `/shows/judges/${targetId}/${filterYear ? '?year=' + filterYear : ''}`
@@ -102,15 +143,21 @@ export default function ShowJudgeCard({
 
           <div className="text-[11.5px] sm:text-xs text-charcoal-500 font-medium truncate mt-0.5">
             <span>{judge.breedsCount.toLocaleString('ru-RU')} {formatBreedsCount(judge.breedsCount)}</span>
+            {judge.breedChips && judge.breedChips.length > 0 && (
+              <span className="text-charcoal-400">
+                {' · '}
+                <span className="text-charcoal-600">{judge.breedChips.map((b) => formatBreedName(b)).join(', ')}</span>
+              </span>
+            )}
           </div>
 
           {/* На мобильных (< md) год и число оценок */}
           <div className="flex md:hidden items-center gap-1.5 text-[10.5px] text-charcoal-600 font-medium mt-1">
             <span>{filterYear && filterYear !== 'all' ? `${filterYear} г.` : 'Все года'}</span>
-            {typeof judge.graded === 'number' && judge.graded > 0 && (
+            {evaluatedCount > 0 && (
               <>
                 <span className="text-old-money-400">·</span>
-                <span>{formatEvaluationsCount(judge.graded)}</span>
+                <span>{formattedEvaluations}</span>
               </>
             )}
           </div>
@@ -131,14 +178,14 @@ export default function ShowJudgeCard({
             </span>
           </div>
 
-          {typeof judge.graded === 'number' && judge.graded > 0 && (
+          {evaluatedCount > 0 && (
             <div className="text-xs text-charcoal-600 font-medium mt-1 truncate">
-              {formatEvaluationsCount(judge.graded)}
+              {formattedEvaluations}
             </div>
           )}
         </div>
 
-        {/* Колонка 3: Метрики (Выставок, Собак, Отлично) */}
+        {/* Колонка 3: Метрики (Выставок, Собак, Отлично/Оч. персп.) */}
         <div className="shrink-0 flex items-center gap-2 sm:gap-3 pl-3 sm:pl-4 border-l border-old-money-200/60 ml-auto">
           {/* Десктопные плашки метрик (>= sm) */}
           <div className="hidden sm:flex items-center gap-1.5 sm:gap-2">
@@ -153,25 +200,25 @@ export default function ShowJudgeCard({
               </span>
             </div>
 
-            {/* Собак */}
+            {/* Собак / Щенков */}
             <div
               className="flex flex-col items-center justify-center w-[4.5rem] shrink-0 rounded-lg bg-cream-100/70 border border-old-money-200/50 px-1 py-1 text-center group-hover:bg-white group-hover:border-camel-300 transition-colors"
-              title={`${(judge.graded || 0).toLocaleString('ru-RU')} собак в каталогах`}
+              title={`${evaluatedCount.toLocaleString('ru-RU')} в каталогах`}
             >
-              <span className="text-[9px] uppercase tracking-wider text-charcoal-500 font-medium">Собак</span>
+              <span className="text-[9px] uppercase tracking-wider text-charcoal-500 font-medium">{dogsLabel}</span>
               <span className="text-sm font-bold tabular-nums text-camel-800">
-                {(judge.graded || 0).toLocaleString('ru-RU')}
+                {evaluatedCount.toLocaleString('ru-RU')}
               </span>
             </div>
 
-            {/* Отлично */}
+            {/* Отлично / Оч. персп. */}
             <div
               className="flex flex-col items-center justify-center w-[4.5rem] shrink-0 rounded-lg bg-cream-100/70 border border-old-money-200/50 px-1 py-1 text-center group-hover:bg-white group-hover:border-camel-300 transition-colors"
               title={strictness.detail}
             >
-              <span className="text-[9px] uppercase tracking-wider text-charcoal-500 font-medium">Отлично</span>
+              <span className="text-[9px] uppercase tracking-wider text-charcoal-500 font-medium">{rateLabel}</span>
               <span className={`text-sm font-bold tabular-nums ${strictness.textClass}`}>
-                {judge.excellentPct != null ? `${judge.excellentPct.toFixed(0)}%` : '—'}
+                {rateValue != null ? `${rateValue.toFixed(0)}%` : '—'}
               </span>
             </div>
           </div>
@@ -185,15 +232,15 @@ export default function ShowJudgeCard({
               </strong>
             </div>
             <div className="flex items-center gap-1 text-[11px] leading-tight">
-              <span className="text-[9.5px] text-charcoal-500 font-normal">Собак:</span>
+              <span className="text-[9.5px] text-charcoal-500 font-normal">{dogsLabel}:</span>
               <strong className="font-bold tabular-nums text-camel-800 text-xs">
-                {(judge.graded || 0).toLocaleString('ru-RU')}
+                {evaluatedCount.toLocaleString('ru-RU')}
               </strong>
             </div>
             <div className="flex items-center gap-1 text-[11px] leading-tight">
-              <span className="text-[9.5px] text-charcoal-500 font-normal">Отлично:</span>
+              <span className="text-[9.5px] text-charcoal-500 font-normal">{rateLabel}:</span>
               <strong className={`font-bold tabular-nums text-xs ${strictness.textClass}`}>
-                {judge.excellentPct != null ? `${judge.excellentPct.toFixed(0)}%` : '—'}
+                {rateValue != null ? `${rateValue.toFixed(0)}%` : '—'}
               </strong>
             </div>
           </div>

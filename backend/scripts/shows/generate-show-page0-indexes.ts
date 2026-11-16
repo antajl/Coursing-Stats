@@ -102,8 +102,14 @@ type JudgeRow = {
   by_year?: Record<string, number>
   excellent_rate?: number | null
   graded?: number
+  puppy_graded?: number
+  puppy_rate?: number | null
+  total_dogs?: number
   by_year_excellent?: Record<string, number>
   by_year_graded?: Record<string, number>
+  by_year_puppy_graded?: Record<string, number>
+  by_year_puppy_rate?: Record<string, number>
+  by_year_total_dogs?: Record<string, number>
   by_year_breeds?: Record<string, number>
   city?: string
   ranks?: string
@@ -124,8 +130,14 @@ function leanJudgeForList(j: JudgeRow): JudgeRow {
     by_year: j.by_year && typeof j.by_year === 'object' ? j.by_year : {},
     excellent_rate: j.excellent_rate,
     graded: j.graded,
+    puppy_graded: j.puppy_graded,
+    puppy_rate: j.puppy_rate,
+    total_dogs: j.total_dogs,
     by_year_excellent: j.by_year_excellent,
     by_year_graded: j.by_year_graded,
+    by_year_puppy_graded: j.by_year_puppy_graded,
+    by_year_puppy_rate: j.by_year_puppy_rate,
+    by_year_total_dogs: j.by_year_total_dogs,
     by_year_breeds: j.by_year_breeds,
     city: j.city,
     ranks: j.ranks,

@@ -141,16 +141,30 @@ export function purgeCorruptedJudges() {
           for (const k of new Set([...Object.keys(g1), ...Object.keys(g2)])) {
             grades[k] = (g1[k] || 0) + (g2[k] || 0)
           }
-          const graded = (targetDetail.strictness.graded || 0) + (oldDetail.strictness.graded || 0)
+          const adultGraded =
+            (grades.excellent || 0) +
+            (grades.very_good || 0) +
+            (grades.good || 0) +
+            (grades.satisfactory || 0) +
+            (grades.dq || 0)
+          const puppyGraded =
+            (grades.very_promising || 0) +
+            (grades.promising || 0)
           const excellent = grades.excellent || 0
           targetDetail.strictness = {
-            graded,
+            graded: adultGraded,
             grades,
-            excellent_rate: graded > 0 ? excellent / graded : 0,
-            below_excellent_rate: graded > 0 ? (graded - excellent) / graded : 0,
+            excellent_rate: adultGraded > 0 ? excellent / adultGraded : 0,
+            below_excellent_rate: adultGraded > 0 ? (adultGraded - excellent) / adultGraded : 0,
           }
+          targetDetail.puppy_graded = puppyGraded
+          targetDetail.puppy_rate = puppyGraded > 0 ? (grades.very_promising || 0) / puppyGraded : null
+          targetDetail.total_dogs = adultGraded + puppyGraded
         } else if (oldDetail.strictness && !targetDetail.strictness) {
           targetDetail.strictness = oldDetail.strictness
+          targetDetail.puppy_graded = oldDetail.puppy_graded
+          targetDetail.puppy_rate = oldDetail.puppy_rate
+          targetDetail.total_dogs = oldDetail.total_dogs
         }
 
         // Merge by_year
@@ -205,9 +219,15 @@ export function purgeCorruptedJudges() {
       if (detail.strictness?.excellent_rate != null) {
         j.excellent_rate = detail.strictness.excellent_rate
       }
+      if (detail.puppy_graded != null) j.puppy_graded = detail.puppy_graded
+      if (detail.puppy_rate != null) j.puppy_rate = detail.puppy_rate
+      if (detail.total_dogs != null) j.total_dogs = detail.total_dogs
       if (detail.by_year) {
         j.by_year = detail.by_year
       }
+      if (detail.by_year_puppy_graded) j.by_year_puppy_graded = detail.by_year_puppy_graded
+      if (detail.by_year_puppy_rate) j.by_year_puppy_rate = detail.by_year_puppy_rate
+      if (detail.by_year_total_dogs) j.by_year_total_dogs = detail.by_year_total_dogs
     }
   }
   cleanedJudges.sort((a, b) => (b.total_judged || 0) - (a.total_judged || 0))

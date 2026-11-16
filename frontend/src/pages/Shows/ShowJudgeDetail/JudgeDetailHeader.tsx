@@ -4,7 +4,7 @@ import {
   type GradeFilterKey,
   type StrictnessVerdict,
 } from './judgeDetailAggregates'
-import { formatJudgeDisplayName, getStrictnessBadge } from '../../../lib/judgeUiUtils'
+import { formatJudgeDisplayName, getStrictnessBadge, getPuppyStrictnessBadge } from '../../../lib/judgeUiUtils'
 
 type PeriodStrictness = {
   graded: number
@@ -78,6 +78,14 @@ const GRADE_ACCENTS: Record<
   },
 }
 
+function getJudgeInitials(name: string): string {
+  const parts = name.trim().split(/\s+/)
+  if (parts.length >= 2 && parts[0][0] && parts[1][0]) {
+    return `${parts[0][0]}${parts[1][0]}`.toUpperCase()
+  }
+  return (parts[0]?.[0] || 'Э').toUpperCase()
+}
+
 export function JudgeDetailHeader({
   judgeName,
   yearParam,
@@ -87,6 +95,8 @@ export function JudgeDetailHeader({
   periodBreedCount,
   periodGrades,
   periodStrictness,
+  periodPuppyStrictness,
+  puppyPct,
   gradeFilter,
   hasGrades,
   hasPerExhibitionGrades,
@@ -112,6 +122,8 @@ export function JudgeDetailHeader({
   periodBreedCount: number
   periodGrades: Record<GradeFilterKey, number>
   periodStrictness: PeriodStrictness
+  periodPuppyStrictness: { puppyGraded: number; puppyRate: number | null }
+  puppyPct: string | null
   gradeFilter: GradeFilterKey | null
   hasGrades: boolean
   hasPerExhibitionGrades: boolean
@@ -128,6 +140,10 @@ export function JudgeDetailHeader({
     periodStrictness.excellent_rate,
     periodStrictness.graded,
   )
+  const puppyStrictnessBadge = getPuppyStrictnessBadge(
+    periodPuppyStrictness.puppyRate,
+    periodPuppyStrictness.puppyGraded,
+  )
 
   const judgePctNumber =
     periodStrictness.excellent_rate != null
@@ -140,8 +156,17 @@ export function JudgeDetailHeader({
     <div className="min-w-0 rounded-2xl border border-old-money-200/90 bg-white p-4 sm:p-6 md:p-8 shadow-xs">
       {/* Top Profile Header */}
       <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
-        <div className="min-w-0 flex-1">
-          <div className="flex flex-wrap items-center gap-2 mb-1.5">
+        <div className="flex items-start gap-3.5 sm:gap-5 min-w-0 flex-1">
+          {/* Монограмма-аватар эксперта */}
+          <div
+            className="flex h-13 w-13 sm:h-16 sm:w-16 shrink-0 items-center justify-center rounded-2xl border border-camel-300/80 bg-cream-100 font-bold tracking-wider text-camel-900 shadow-2xs text-base sm:text-xl select-none"
+            aria-hidden="true"
+          >
+            {getJudgeInitials(displayName)}
+          </div>
+
+          <div className="min-w-0 flex-1">
+            <div className="flex flex-wrap items-center gap-2 mb-1.5">
             <span className="inline-flex items-center gap-1 rounded-md border border-camel-200/90 bg-cream-100/90 px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wider text-camel-800">
               <Award className="h-3 w-3 text-camel-600" />
               Судья РКФ / FCI
@@ -167,16 +192,26 @@ export function JudgeDetailHeader({
               )}
               <span
                 className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-0.5 text-xs font-semibold tracking-tight ${strictnessBadge.badgeClass}`}
-                title={strictnessBadge.detail}
+                title={`Взрослые классы (CAC): ${strictnessBadge.detail}`}
               >
                 <span className={`h-1.5 w-1.5 rounded-full ${strictnessBadge.dotClass}`} />
-                {strictnessBadge.label}
+                <span>{strictnessBadge.label} (взрослые)</span>
               </span>
+              {periodPuppyStrictness.puppyGraded >= 15 && (
+                <span
+                  className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-0.5 text-xs font-semibold tracking-tight ${puppyStrictnessBadge.badgeClass}`}
+                  title={`Щенки и бэби: ${puppyStrictnessBadge.detail}`}
+                >
+                  <span className={`h-1.5 w-1.5 rounded-full ${puppyStrictnessBadge.dotClass}`} />
+                  <span>{puppyStrictnessBadge.label}</span>
+                </span>
+              )}
             </div>
             <h1 className="text-2xl font-bold tracking-tight text-charcoal-900 sm:text-3xl line-clamp-2">
               {displayName}
             </h1>
           </div>
+        </div>
 
         {/* Year Filter */}
         <div className="flex items-center justify-between sm:justify-end gap-2 shrink-0 w-full sm:w-auto pt-2 border-t border-old-money-100/70 sm:border-0 sm:pt-0">
@@ -241,10 +276,18 @@ export function JudgeDetailHeader({
         <div className="flex items-center justify-between rounded-xl border border-old-money-200/80 bg-cream-50/50 p-3.5 sm:p-4 text-left">
           <div>
             <p className="text-xs font-semibold uppercase tracking-wider text-charcoal-500">
-              Всего оценок
+              Взрослые классы
             </p>
-            <p className="mt-1 text-2xl sm:text-3xl font-bold tabular-nums text-charcoal-900">
-              {periodStrictness.graded}
+            <div className="mt-1 flex items-baseline gap-1.5">
+              <p className={`text-2xl sm:text-3xl font-bold tabular-nums ${strictnessBadge.textClass}`}>
+                {excellentPct ? `${excellentPct}` : '—'}
+              </p>
+              {excellentPct && (
+                <span className="text-[11px] font-medium text-charcoal-400">отлично</span>
+              )}
+            </div>
+            <p className="mt-0.5 text-[11px] text-charcoal-500 font-medium">
+              {periodStrictness.graded > 0 ? `${periodStrictness.graded.toLocaleString('ru-RU')} оценок` : 'Нет оценок'}
             </p>
           </div>
           <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-cream-200/60 text-camel-700">
@@ -255,18 +298,21 @@ export function JudgeDetailHeader({
         <div className="flex items-center justify-between rounded-xl border border-old-money-200/80 bg-cream-50/50 p-3.5 sm:p-4 text-left">
           <div>
             <p className="text-xs font-semibold uppercase tracking-wider text-charcoal-500">
-              «Отлично»
+              Щенки и бэби
             </p>
             <div className="mt-1 flex items-baseline gap-1.5">
-              <p className={`text-2xl sm:text-3xl font-bold tabular-nums ${strictnessBadge.textClass}`}>
-                {excellentPct ? `${excellentPct}` : '—'}
+              <p className={`text-2xl sm:text-3xl font-bold tabular-nums ${puppyStrictnessBadge.textClass}`}>
+                {puppyPct ? `${puppyPct}` : '—'}
               </p>
-              {excellentPct && (
-                <span className="text-[11px] font-medium text-charcoal-400">доля</span>
+              {puppyPct && (
+                <span className="text-[11px] font-medium text-charcoal-400">оч. персп.</span>
               )}
             </div>
+            <p className="mt-0.5 text-[11px] text-charcoal-500 font-medium">
+              {periodPuppyStrictness.puppyGraded > 0 ? `${periodPuppyStrictness.puppyGraded.toLocaleString('ru-RU')} щенков` : 'Нет щенков'}
+            </p>
           </div>
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-emerald-50 text-emerald-700">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-cream-200/60 text-camel-700">
             <Award className="h-5 w-5" />
           </div>
         </div>
@@ -340,18 +386,18 @@ export function JudgeDetailHeader({
                 <div className="relative h-2.5 overflow-hidden rounded-full bg-cream-200 border border-old-money-200/50">
                   {/* Visual zones background */}
                   <div className="absolute inset-0 flex">
-                    <div className="w-[76%] bg-rose-100/50 border-r border-rose-200/50" title="Зона высокой строгости (<76%)" />
-                    <div className="w-[9%] bg-amber-100/50 border-r border-amber-200/50" title="Умеренная зона (76-85%)" />
-                    <div className="w-[15%] bg-emerald-100/50" title="Лояльная зона (≥85%)" />
+                    <div className="w-[88%] bg-rose-100/50 border-r border-rose-200/50" title="Зона высокой строгости (<88%)" />
+                    <div className="w-[8%] bg-amber-100/50 border-r border-amber-200/50" title="Умеренная зона (88-95%)" />
+                    <div className="w-[4%] bg-emerald-100/50" title="Лояльная зона (≥96%)" />
                   </div>
 
                   {/* Judge's filled value */}
                   {judgePctNumber != null && (
                     <div
                       className={`absolute inset-y-0 left-0 rounded-full transition-all duration-500 opacity-80 ${
-                        judgePctNumber >= 85
+                        judgePctNumber >= 96
                           ? 'bg-emerald-500'
-                          : judgePctNumber >= 76
+                          : judgePctNumber >= 88
                             ? 'bg-amber-500'
                             : 'bg-rose-500'
                       }`}
@@ -370,9 +416,9 @@ export function JudgeDetailHeader({
                 </div>
 
                 <div className="mt-2 flex justify-between text-[11px] font-medium text-charcoal-500">
-                  <span className="text-rose-700">Строгий &lt;76%</span>
-                  <span className="text-amber-700">Умеренный 76–85%</span>
-                  <span className="text-emerald-700">Лояльный ≥85%</span>
+                  <span className="text-rose-700">Строгий &lt;88%</span>
+                  <span className="text-amber-700">Умеренный 88–95%</span>
+                  <span className="text-emerald-700">Лояльный ≥96%</span>
                 </div>
 
                 <p className="mt-2.5 text-center text-xs text-charcoal-500">

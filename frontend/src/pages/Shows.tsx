@@ -213,7 +213,7 @@ function Shows({ defaultTab, urlYear }: ShowsProps) {
           >
             <div id="archive" className="scroll-mt-20" />
             <div id="calendar" className="scroll-mt-20" />
-            <Suspense fallback={<SkeletonLoader count={6} variant="cards" />}>
+            <Suspense fallback={<SkeletonLoader count={6} variant="card" />}>
               <ShowCalendar urlYear={routeYear} />
             </Suspense>
           </div>
@@ -227,7 +227,7 @@ function Shows({ defaultTab, urlYear }: ShowsProps) {
             aria-hidden={activeTab !== 'judges'}
           >
             <div id="judges" className="scroll-mt-20" />
-            <Suspense fallback={<SkeletonLoader count={6} variant="cards" />}>
+            <Suspense fallback={<SkeletonLoader count={6} variant="card" />}>
               <ShowJudges urlYear={routeYear} />
             </Suspense>
           </div>

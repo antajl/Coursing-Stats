@@ -34,20 +34,42 @@ export const SHOW_JUDGES_HINT_MODAL_CONTENT = (
             <span>Шкала строгости судей</span>
           </div>
           <p className="text-[11px] text-charcoal-600 mt-0.5 leading-snug">
-            Калибровка по 2,5+ млн оценок взрослых классов в каталогах РКФ (порог — от 30 экспертиз):
+            Калибровка по 2,5+ млн оценок каталогов РКФ (порог — от 30 взрослых или 15 щенков):
           </p>
-          <div className="mt-1.5 grid grid-cols-3 gap-1 text-[10.5px]">
-            <div className="rounded border border-rose-200/80 bg-rose-50/70 p-1 text-center">
-              <span className="font-semibold text-rose-800">Строгий</span>
-              <span className="block text-[9.5px] text-rose-700">&lt; 76% отл.</span>
+          <div className="mt-1 space-y-1.5">
+            <div>
+              <span className="text-[10px] font-semibold uppercase tracking-wider text-charcoal-500">Взрослые классы (CAC)</span>
+              <div className="mt-0.5 grid grid-cols-3 gap-1 text-[10.5px]">
+                <div className="rounded border border-rose-200/80 bg-rose-50/70 p-1 text-center">
+                  <span className="font-semibold text-rose-800">Строгий</span>
+                  <span className="block text-[9.5px] text-rose-700">&lt; 88% отл.</span>
+                </div>
+                <div className="rounded border border-amber-200/80 bg-amber-50/70 p-1 text-center">
+                  <span className="font-semibold text-amber-800">Умеренный</span>
+                  <span className="block text-[9.5px] text-amber-700">88–95%</span>
+                </div>
+                <div className="rounded border border-emerald-200/80 bg-emerald-50/70 p-1 text-center">
+                  <span className="font-semibold text-emerald-800">Лояльный</span>
+                  <span className="block text-[9.5px] text-emerald-700">≥ 96% отл.</span>
+                </div>
+              </div>
             </div>
-            <div className="rounded border border-amber-200/80 bg-amber-50/70 p-1 text-center">
-              <span className="font-semibold text-amber-800">Умеренный</span>
-              <span className="block text-[9.5px] text-amber-700">76–85%</span>
-            </div>
-            <div className="rounded border border-emerald-200/80 bg-emerald-50/70 p-1 text-center">
-              <span className="font-semibold text-emerald-800">Лояльный</span>
-              <span className="block text-[9.5px] text-emerald-700">≥ 85% отл.</span>
+            <div>
+              <span className="text-[10px] font-semibold uppercase tracking-wider text-charcoal-500">Щенки и бэби</span>
+              <div className="mt-0.5 grid grid-cols-3 gap-1 text-[10.5px]">
+                <div className="rounded border border-rose-200/80 bg-rose-50/70 p-1 text-center">
+                  <span className="font-semibold text-rose-800">Строг</span>
+                  <span className="block text-[9.5px] text-rose-700">&lt; 94% персп.</span>
+                </div>
+                <div className="rounded border border-amber-200/80 bg-amber-50/70 p-1 text-center">
+                  <span className="font-semibold text-amber-800">Умеренный</span>
+                  <span className="block text-[9.5px] text-amber-700">94–98%</span>
+                </div>
+                <div className="rounded border border-emerald-200/80 bg-emerald-50/70 p-1 text-center">
+                  <span className="font-semibold text-emerald-800">Лоялен</span>
+                  <span className="block text-[9.5px] text-emerald-700">≥ 99% персп.</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>

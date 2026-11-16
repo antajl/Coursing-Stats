@@ -70,7 +70,6 @@ export default function Nav() {
         setSearchOpen((prev) => !prev);
       } else if (e.key === 'Escape') {
         setMobileMenuOpen(false);
-        setSourcesOpen(false);
         setOpenMenu(null);
         setSearchOpen(false);
       }
