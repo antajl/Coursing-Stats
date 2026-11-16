@@ -112,6 +112,19 @@ function formatDogCount(count: number): string {
   return `${count} собак`
 }
 
+function cleanDogName(rawName: string): { name: string; parsedCatalogNumber?: number } {
+  let name = (rawName || '').trim()
+  let parsedCatalogNumber: number | undefined
+
+  const match = name.match(/^\s*\((\d+)\)\s*(.*)$/) || name.match(/^\s*(\d+)[\.\)]\s*(.*)$/)
+  if (match) {
+    parsedCatalogNumber = parseInt(match[1], 10)
+    name = match[2].trim()
+  }
+
+  return { name, parsedCatalogNumber }
+}
+
 interface ShowJudgeBreedDogsListProps {
   judgeId: string
   judgeName: string
@@ -123,6 +136,7 @@ interface ShowJudgeBreedDogsListProps {
     rkf_url?: string
     breed_counts?: Record<string, number>
   }>
+  searchQuery?: string
 }
 
 export function ShowJudgeBreedDogsList({
@@ -130,6 +144,7 @@ export function ShowJudgeBreedDogsList({
   judgeName,
   breed,
   periodExhibitions,
+  searchQuery = '',
 }: ShowJudgeBreedDogsListProps) {
   const matchingExhibitions = useMemo(() => {
     return periodExhibitions.filter((ex) => {
@@ -170,9 +185,12 @@ export function ShowJudgeBreedDogsList({
           const rowJudge = (r.breed_judge || r.judge || '').trim()
           if (!matchesJudge(rowJudge, judgeId, judgeName)) continue
 
+          const { name: cleanedName, parsedCatalogNumber } = cleanDogName(r.dog_name)
+          const catalogNumber = r.catalog_number || parsedCatalogNumber
+
           extractedDogs.push({
-            id: r.dog_breed_id || `${protocol.id}-${r.catalog_number || r.dog_name}`,
-            dog_name: r.dog_name,
+            id: r.dog_breed_id || `${protocol.id}-${catalogNumber || cleanedName}`,
+            dog_name: cleanedName || r.dog_name,
             breed: r.breed,
             class: r.class || '',
             placement: r.placement || 0,
@@ -181,7 +199,7 @@ export function ShowJudgeBreedDogsList({
             sex:
               r.sex ||
               (r.dog_name?.includes('♀') ? 'F' : r.dog_name?.includes('♂') ? 'M' : undefined),
-            catalog_number: r.catalog_number,
+            catalog_number: catalogNumber,
             owner: r.owner,
             exhibition_id: protocol.id,
             exhibition_title: protocol.title || exhibition.title,
@@ -195,14 +213,26 @@ export function ShowJudgeBreedDogsList({
     staleTime: 5 * 60 * 1000,
   })
 
+  const filteredDogs = useMemo(() => {
+    const q = searchQuery.trim().toLowerCase()
+    if (!q) return dogs
+    return dogs.filter(
+      (d) =>
+        d.dog_name.toLowerCase().includes(q) ||
+        d.class?.toLowerCase().includes(q) ||
+        d.owner?.toLowerCase().includes(q) ||
+        String(d.catalog_number || '').includes(q),
+    )
+  }, [dogs, searchQuery])
+
   return (
     <DoninoColumnShell
       plaque={
         <DoninoColumnPlaque
           asHeader
           title={formatBreedSentenceCase(breed).toUpperCase()}
-          count={dogs.length}
-          countLabel={formatDogCount(dogs.length)}
+          count={filteredDogs.length}
+          countLabel={formatDogCount(filteredDogs.length)}
         />
       }
     >
@@ -213,15 +243,17 @@ export function ShowJudgeBreedDogsList({
         </div>
       )}
 
-      {!isLoading && dogs.length === 0 && (
+      {!isLoading && filteredDogs.length === 0 && (
         <div className="py-6 px-4 text-center text-xs text-charcoal-500">
-          Подробный каталог с кличками собак по данной породе не найден в опубликованных протоколах РКФ.
+          {dogs.length === 0
+            ? 'Подробный каталог с кличками собак по данной породе не найден в опубликованных протоколах РКФ.'
+            : `Собаки по запросу «${searchQuery}» не найдены`}
         </div>
       )}
 
-      {!isLoading && dogs.length > 0 && (
+      {!isLoading && filteredDogs.length > 0 && (
         <div className="divide-y divide-cream-100/80">
-          {dogs.map((dog, idx) => {
+          {filteredDogs.map((dog, idx) => {
             const rank = idx + 1
             const dogProfileUrl = exhibitionDogProfilePath(dog.dog_name, dog.breed)
 
