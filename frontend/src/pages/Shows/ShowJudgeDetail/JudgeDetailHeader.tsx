@@ -174,16 +174,16 @@ export function JudgeDetailHeader({
     baselineExcellentRate != null ? baselineExcellentRate * 100 : null
 
   return (
-    <div className="min-w-0 rounded-2xl border border-old-money-200/90 bg-white p-4 sm:p-6 md:p-8 shadow-xs">
+    <div className="min-w-0 rounded-2xl border border-old-money-200/90 bg-white p-4 sm:p-5 md:p-6 shadow-xs">
       {/* Top Profile Header */}
-      <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-[minmax(0,1fr)_auto] gap-4 sm:gap-6 items-start">
         {/* Left: Avatar + Details */}
-        <div className="flex items-start gap-4 sm:gap-5 md:gap-6 min-w-0 flex-1">
+        <div className="flex items-start gap-4 sm:gap-5 md:gap-6 min-w-0">
           {photoUrl && (
             <button
               type="button"
               onClick={() => setIsPhotoOpen(true)}
-              className="group relative h-20 w-20 sm:h-24 sm:w-24 md:h-28 md:w-28 shrink-0 overflow-hidden rounded-2xl border border-cream-200/90 bg-cream-50/60 shadow-xs transition-all hover:border-camel-400 hover:shadow-sm focus-visible:outline-hidden cursor-pointer"
+              className="group relative h-24 w-24 sm:h-28 sm:w-28 md:h-32 md:w-32 shrink-0 overflow-hidden rounded-2xl border border-cream-200/90 bg-cream-50/60 shadow-xs transition-all hover:border-camel-400 hover:shadow-sm focus-visible:outline-hidden cursor-pointer"
               aria-label={`Увеличить фото ${displayName}`}
               title="Нажмите, чтобы открыть фото в полном размере"
             >
@@ -265,7 +265,7 @@ export function JudgeDetailHeader({
       </div>
 
       {/* Primary Key Statistics Cards (4 cards) */}
-      <div className="mt-6 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+      <div className="mt-5 pt-5 border-t border-old-money-100/70 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
         <button
           type="button"
           onClick={onSelectExhibitions}
