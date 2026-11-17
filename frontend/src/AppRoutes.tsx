@@ -2,9 +2,6 @@ import { lazy, Suspense, useState, useEffect } from 'react';
 import { Routes, Route, Navigate, useLocation, useParams } from 'react-router-dom';
 import PageLoader from './components/PageLoader';
 import { isLocalDev } from './lib/env';
-import { usePublicCalendarVisible } from './hooks/useStaticData';
-
-import { resolveShowJudgeNumericId, resolveSportJudgeNumericId } from './lib/judgeIdMap.generated';
 
 import Home from './pages/Home';
 const Competitions = lazy(() => import('./pages/Competitions'));
@@ -18,9 +15,9 @@ const DoninoAnalytics = lazy(() => import('./pages/DoninoAnalytics/index'));
 const DoninoDogProfile = lazy(() => import('./pages/DoninoDogProfile'));
 const Guide = lazy(() => import('./pages/Guide'));
 const About = lazy(() => import('./pages/About'));
-const JudgeDetail = lazy(() => import('./pages/Judges/JudgeDetail'));
+const ShowJudgeRoute = lazy(() => import('./pages/Judges/JudgeRoutes').then((m) => ({ default: m.ShowJudgeRoute })));
+const SportJudgeRoute = lazy(() => import('./pages/Judges/JudgeRoutes').then((m) => ({ default: m.SportJudgeRoute })));
 const ShowExhibitionDetail = lazy(() => import('./pages/Shows/ShowExhibitionDetail'));
-const ShowJudgeDetail = lazy(() => import('./pages/Shows/ShowJudgeDetail'));
 const EventResults = lazy(() => import('./pages/Events/EventResults'));
 const ProtocolBuilder = lazy(() => import('./pages/ProtocolBuilder'));
 const BreedsDirectory = lazy(() => import('./pages/Breeds'));
@@ -221,29 +218,6 @@ function ShowDogIdRedirect() {
   
   // No redirect needed, show the normal profile
   return <UnifiedDogProfile />;
-}
-
-function ShowJudgeRoute() {
-  const { judgeId } = useParams<{ judgeId: string }>();
-  const location = useLocation();
-  if (judgeId === 'all' || (judgeId && /^20\d\d$/.test(judgeId))) {
-    return <Shows defaultTab="judges" urlYear={judgeId} />;
-  }
-  const numericId = resolveShowJudgeNumericId(judgeId);
-  if (numericId != null && String(numericId) !== judgeId) {
-    return <Navigate to={`/shows/judges/${numericId}/${location.search}`} replace />;
-  }
-  return <ShowJudgeDetail />;
-}
-
-function SportJudgeRoute() {
-  const { judgeId } = useParams<{ judgeId: string }>();
-  const location = useLocation();
-  const numericId = resolveSportJudgeNumericId(judgeId);
-  if (numericId != null && String(numericId) !== judgeId) {
-    return <Navigate to={`/judges/${numericId}/${location.search}`} replace />;
-  }
-  return <JudgeDetail />;
 }
 
 export default function AppRoutes() {

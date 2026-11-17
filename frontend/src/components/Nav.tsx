@@ -1,10 +1,11 @@
 import { useLocation } from 'react-router-dom'
-import { useState, useRef, useEffect, useCallback } from 'react'
+import { useState, useRef, useEffect, useCallback, lazy, Suspense } from 'react'
 import { isLocalDev } from '../lib/env'
 import { NavDesktop } from './nav/NavDesktop'
 import { NavMobile } from './nav/NavMobile'
-import QuickSearchModal from './nav/QuickSearchModal'
 import type { OpenMenuId } from './nav/navLinks'
+
+const QuickSearchModal = lazy(() => import('./nav/QuickSearchModal'))
 
 export default function Nav() {
   const location = useLocation();
@@ -103,7 +104,11 @@ export default function Nav() {
         onCloseMobileMenu={() => setMobileMenuOpen(false)}
         onOpenSearch={() => setSearchOpen(true)}
       />
-      <QuickSearchModal isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
+      {searchOpen && (
+        <Suspense fallback={null}>
+          <QuickSearchModal isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
+        </Suspense>
+      )}
     </nav>
   );
 }

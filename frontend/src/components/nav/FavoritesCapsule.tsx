@@ -3,7 +3,6 @@ import { useEffect, useRef, useState } from 'react'
 import { Star } from 'lucide-react'
 import { useFavorites } from '../../hooks/useFavorites'
 import { useClickOutside } from '../../hooks/useClickOutside'
-import { getDogProfileFile } from '../../lib/staticData/dogs'
 import { parseDogName } from '../../lib/dogName'
 import { displayBreed } from '../../lib/breedMapping'
 
@@ -39,6 +38,7 @@ export default function FavoritesCapsule() {
     if (!activeId || cachedMeta) return
     let cancelled = false
     const load = async () => {
+      const { getDogProfileFile } = await import('../../lib/staticData/dogs')
       const file = await getDogProfileFile(activeId)
       if (cancelled) return
       if (file?.dog) {
@@ -59,6 +59,7 @@ export default function FavoritesCapsule() {
     if (!open || favoriteIds.length === 0) return
     let cancelled = false
     const loadAll = async () => {
+      const { getDogProfileFile } = await import('../../lib/staticData/dogs')
       const next: Record<string, { name: string; breed: string }> = { ...listMeta }
       await Promise.all(
         favoriteIds.slice(0, 12).map(async (id) => {

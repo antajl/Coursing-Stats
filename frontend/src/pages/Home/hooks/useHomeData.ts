@@ -1,12 +1,9 @@
 import { useState, useEffect } from 'react'
 import { api } from '../../../services/api'
 import {
-  getShowCalendar,
-  getShowFeatured,
   getShowHomeTop,
   type ShowHomeTopDog,
-  type ShowRkfCalendarEntry,
-} from '../../../lib/staticData'
+} from '../../../lib/staticData/shows/home'
 import { displayBreed } from '../../../lib/breedMapping'
 import type { CalendarEvent } from '../../Events/eventListUtils'
 import type { TopDog, SpeedRecord, CoursingRecord } from '../types'
@@ -114,62 +111,77 @@ export function useHomeData() {
         setHeroLoading(false)
         setSeasonLoading(false)
 
-        // Phase 2 (Background): Secondary tabs (Shows & Donino)
-        const [showHomeTopData, doninoSpeedData, doninoCoursingData] = await Promise.all([
-          getShowHomeTop(String(CURRENT_SEASON)),
-          api.getSpeedRecords('', '', 1000),
-          api.getCoursingRecords('', 1000),
-        ])
-
-        if (!isMounted) return
-
-        if (showHomeTopData.success && showHomeTopData.data) {
-          const payload = showHomeTopData.data
-          const dogs = Array.isArray(payload)
-            ? payload
-            : Array.isArray(payload.dogs)
-              ? payload.dogs
-              : []
-          setTopShowDogs(dogs.slice(0, 3))
-
-          const rawSlides = !Array.isArray(payload) && Array.isArray(payload.breed_slides)
-            ? payload.breed_slides
-            : []
-          if (rawSlides.length > 0) {
-            setShowSlides(
-              rawSlides.map((s) => ({
-                breedKey: s.breed,
-                breedLabel: displayBreed(s.breed).primary || s.breed,
-                dogCount: s.dog_count,
-                dogs: (s.dogs || []).map((d, i) => ({ ...d, rank: d.rank ?? i + 1 })),
-              })),
-            )
-          } else if (dogs.length > 0) {
-            setShowSlides([
-              {
-                breedKey: '',
-                breedLabel: 'Все породы',
-                dogCount: dogs.length,
-                dogs: dogs.slice(0, 3).map((d, i) => ({ ...d, rank: i + 1 })),
-              },
+        // Phase 2 (Background): Secondary tabs (Shows & Donino) deferred to avoid competing with LCP
+        const loadSecondary = async () => {
+          if (!isMounted) return
+          try {
+            const [showHomeTopData, doninoSpeedData, doninoCoursingData] = await Promise.all([
+              getShowHomeTop(String(CURRENT_SEASON)),
+              api.getSpeedRecords('', '', 1000),
+              api.getCoursingRecords('', 1000),
             ])
+
+            if (!isMounted) return
+
+            if (showHomeTopData.success && showHomeTopData.data) {
+              const payload = showHomeTopData.data
+              const dogs = Array.isArray(payload)
+                ? payload
+                : Array.isArray(payload.dogs)
+                  ? payload.dogs
+                  : []
+              setTopShowDogs(dogs.slice(0, 3))
+
+              const rawSlides = !Array.isArray(payload) && Array.isArray(payload.breed_slides)
+                ? payload.breed_slides
+                : []
+              if (rawSlides.length > 0) {
+                setShowSlides(
+                  rawSlides.map((s) => ({
+                    breedKey: s.breed,
+                    breedLabel: displayBreed(s.breed).primary || s.breed,
+                    dogCount: s.dog_count,
+                    dogs: (s.dogs || []).map((d, i) => ({ ...d, rank: d.rank ?? i + 1 })),
+                  })),
+                )
+              } else if (dogs.length > 0) {
+                setShowSlides([
+                  {
+                    breedKey: '',
+                    breedLabel: 'Все породы',
+                    dogCount: dogs.length,
+                    dogs: dogs.slice(0, 3).map((d, i) => ({ ...d, rank: i + 1 })),
+                  },
+                ])
+              }
+            }
+
+            // 3. Process Donino Records
+            if (doninoSpeedData.success) {
+              const validatedSpeedRecords = validateArray<SpeedRecord>(doninoSpeedData.data)
+              if (validatedSpeedRecords) {
+                setDoninoSpeedRecords(validatedSpeedRecords)
+                setDoninoSpeedSlides(buildDoninoSpeedSlides(validatedSpeedRecords))
+              }
+            }
+            if (doninoCoursingData.success) {
+              const validatedCoursingRecords = validateArray<CoursingRecord>(doninoCoursingData.data)
+              if (validatedCoursingRecords) {
+                setDoninoCoursingRecords(validatedCoursingRecords)
+                setDoninoCoursingSlides(buildDoninoCoursingSlides(validatedCoursingRecords))
+              }
+            }
+          } catch (e) {
+            console.warn('Phase 2 background load error:', e)
+          } finally {
+            if (isMounted) setDoninoLoading(false)
           }
         }
 
-        // 3. Process Donino Records
-        if (doninoSpeedData.success) {
-          const validatedSpeedRecords = validateArray<SpeedRecord>(doninoSpeedData.data)
-          if (validatedSpeedRecords) {
-            setDoninoSpeedRecords(validatedSpeedRecords)
-            setDoninoSpeedSlides(buildDoninoSpeedSlides(validatedSpeedRecords))
-          }
-        }
-        if (doninoCoursingData.success) {
-          const validatedCoursingRecords = validateArray<CoursingRecord>(doninoCoursingData.data)
-          if (validatedCoursingRecords) {
-            setDoninoCoursingRecords(validatedCoursingRecords)
-            setDoninoCoursingSlides(buildDoninoCoursingSlides(validatedCoursingRecords))
-          }
+        if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
+          window.requestIdleCallback(() => { void loadSecondary() }, { timeout: 2000 })
+        } else {
+          setTimeout(() => { void loadSecondary() }, 1000)
         }
       } catch (err) {
         if (!isMounted) return
@@ -179,7 +191,6 @@ export function useHomeData() {
         if (isMounted) {
           setHeroLoading(false)
           setSeasonLoading(false)
-          setDoninoLoading(false)
         }
       }
     }

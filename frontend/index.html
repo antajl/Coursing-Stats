@@ -12,7 +12,6 @@
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="CoursingStats" />
-    <link rel="preload" as="image" href="/assets/hero/background-mobile-480.webp" type="image/webp" media="(max-width: 768px)" fetchpriority="high" />
     <meta name="theme-color" content="#F5F1E8" />
     <title data-rh="true">Курсинг Статс — Рейтинг и статистика собак: курсинг, бега, выставки РКФ</title>
     <meta name="description" content="Электронная база и рейтинг собак в России с 2015 года: курсинг, бега борзых, рекорды скорости Донино и выставки РКФ. Результаты состязаний, топ чемпионов и статистика судей." data-rh="true" />
@@ -54,22 +53,40 @@
       })();
     </script>
     
-    <!-- Yandex.Metrika counter -->
+    <!-- Yandex.Metrika counter (Delayed execution for Core Web Vitals / LCP / FCP) -->
     <script type="text/javascript">
-      (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-      m[i].l=1*new Date();
-      for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-      ym(110619327, "init", {
+      window.ym = window.ym || function(){(window.ym.a = window.ym.a || []).push(arguments)};
+      window.ym.l = 1 * new Date();
+      window.ym(110619327, "init", {
         clickmap: true,
         trackLinks: true,
         accurateTrackBounce: true,
         webvisor: true
       });
+
+      (function() {
+        var ymLoaded = false;
+        function loadYM() {
+          if (ymLoaded) return;
+          ymLoaded = true;
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://mc.yandex.ru/metrika/tag.js';
+          document.head.appendChild(s);
+        }
+        var events = ['pointerdown', 'touchstart', 'scroll', 'keydown'];
+        function onInteract() {
+          events.forEach(function(e) { window.removeEventListener(e, onInteract); });
+          loadYM();
+        }
+        events.forEach(function(e) { window.addEventListener(e, onInteract, { passive: true, once: true }); });
+        if ('requestIdleCallback' in window) {
+          window.requestIdleCallback(function() { setTimeout(loadYM, 4500); });
+        } else {
+          setTimeout(loadYM, 5000);
+        }
+      })();
     </script>
-    
     <!-- /Yandex.Metrika counter -->
 
     <!-- Open Graph / Facebook -->

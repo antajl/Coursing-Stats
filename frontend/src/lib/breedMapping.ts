@@ -6,7 +6,7 @@
  * Держать синхронно с backend/src/lib/breed-mapping.ts
  */
 
-import { getBreedHubBySlug, getBreedHubByCanonicalKey } from './breed-hubs-data'
+import { getCanonicalBySlug, getSlugByCanonicalKey } from './breed-slugs'
 
 /** Нормализация без снятия RU/EN хвоста — для алиасов вроде «АКИТА / AMERICAN». */
 /** Очистка артефактов парсинга PDF и опечаток в названиях пород */
@@ -759,8 +759,8 @@ export function resolveBreedParam(rawParam: string | null | undefined): string {
   if (!trimmed) return ''
 
   // 1. Try slug from breed hubs first (whippet, saluki, borzoi, etc.)
-  const bySlug = getBreedHubBySlug(trimmed)
-  if (bySlug) return bySlug.canonicalKey
+  const canonicalBySlug = getCanonicalBySlug(trimmed)
+  if (canonicalBySlug) return canonicalBySlug
 
   // 2. Try canonicalBreed from synonyms
   const canonical = canonicalBreed(trimmed)
@@ -778,7 +778,7 @@ export function resolveBreedParam(rawParam: string | null | undefined): string {
 export function breedToSlug(breedKey: string | null | undefined): string {
   if (!breedKey) return ''
   const canonical = canonicalBreed(breedKey) || breedKey
-  const hub = getBreedHubByCanonicalKey(canonical)
-  if (hub?.slug) return hub.slug
+  const slug = getSlugByCanonicalKey(canonical)
+  if (slug) return slug
   return breedKey
 }
