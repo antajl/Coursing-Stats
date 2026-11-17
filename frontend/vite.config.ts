@@ -165,13 +165,6 @@ export default defineConfig(({ mode }) => {
           entryFileNames: `assets/[name]-${buildStamp}-[hash].js`,
           chunkFileNames: `assets/[name]-${buildStamp}-[hash].js`,
           assetFileNames: 'assets/[name]-[hash][extname]',
-          // Code splitting to separate heavy libraries
-          manualChunks: (id) => {
-            // Separate xlsx library into its own chunk
-            if (id.includes('xlsx-js-style')) {
-              return 'xlsx-vendor';
-            }
-          },
         },
       },
       chunkSizeWarningLimit: 600, // Increase from default 500KB to account for xlsx chunk
