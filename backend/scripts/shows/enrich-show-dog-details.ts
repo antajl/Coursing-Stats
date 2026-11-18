@@ -26,6 +26,8 @@ function expandTranslitVariants(text: string): string[] {
   if (norm.includes(' H ') || norm.endsWith(' H') || norm.startsWith('H ')) {
     res.add(norm.replace(/\bH\b/g, 'KH'))
   }
+  if (norm.includes('EE')) res.add(norm.replace(/EE/g, 'E'))
+  if (norm.endsWith('E')) res.add(norm.replace(/E$/, 'EE'))
   if (norm.includes('V')) res.add(norm.replace(/V/g, 'W'))
   if (norm.includes('W')) res.add(norm.replace(/W/g, 'V'))
   if (norm.includes('DZH')) res.add(norm.replace(/DZH/g, 'J'))
@@ -156,46 +158,42 @@ async function main() {
     }
   }
 
-  // Also index all sport dogs that may not be in existingDogs yet
-  for (const sd of sportDogsMap.values()) {
-    const sdId = String(sd.id)
-    const breed = (sd.breed || '').toUpperCase().replace(/\s+/g, ' ').trim()
-    const cBreed = canonicalBreed(sd.breed || '').toUpperCase().replace(/\s+/g, ' ').trim()
-    const breedVariants = Array.from(new Set([breed, cBreed].filter(Boolean)))
-
-    const names = new Set<string>()
-    for (const raw of [sd.name_lat, sd.name_ru]) {
-      if (!raw) continue
-      names.add(raw.trim())
-      for (const chunk of raw.split('/')) {
-        const trimmed = chunk.trim()
-        if (trimmed.length >= 2) names.add(trimmed)
-      }
-    }
-
-    for (const n of names) {
-      const nameKey = n.toUpperCase().replace(/\s+/g, ' ').trim()
-      const translit = transliterateRuToLat(nameKey)
-      const nameVariants = new Set<string>()
-      for (const base of [nameKey, translit].filter(Boolean)) {
-        for (const v of expandTranslitVariants(base)) {
-          nameVariants.add(v)
-        }
-      }
-
-      for (const nameV of nameVariants) {
-        for (const breedV of breedVariants) {
-          const key = `${nameV}|${breedV}`
-          if (!byNameBreed.has(key)) {
-            byNameBreed.set(key, sdId)
+  // Ensure all name variants of linked sport dogs have direct aliases to their canonical id
+  let directSportAliasesCreated = 0
+  for (const dog of existingDogs.values()) {
+    if (dog.competition_dog_id != null) {
+      const canonicalId = dog.id
+      const sd = sportDogsMap.get(dog.competition_dog_id)
+      if (sd) {
+        const allNames = new Set<string>()
+        for (const raw of [dog.name_lat, dog.name_ru, sd.name_lat, sd.name_ru]) {
+          if (!raw) continue
+          allNames.add(raw.trim())
+          for (const chunk of raw.split('/')) {
+            const trimmed = chunk.trim()
+            if (trimmed.length >= 2) allNames.add(trimmed)
           }
         }
-        let list = byNameOnly.get(nameV)
-        if (!list) { list = []; byNameOnly.set(nameV, list) }
-        list.push({ id: sdId, breed: sd.breed, total_shows: 10 })
+        for (const n of allNames) {
+          for (const v of expandTranslitVariants(n)) {
+            for (const b of [dog.breed, sd.breed].filter(Boolean)) {
+              const hashId = String(stableShowProfileId(v, b))
+              if (hashId !== canonicalId) {
+                const shard = cdnPackShardKey(hashId)
+                const pack = shardsData.get(shard)!
+                if (!pack[hashId] || pack[hashId].alias_to !== canonicalId) {
+                  pack[hashId] = { alias_to: canonicalId }
+                  dirtyShards.add(shard)
+                  directSportAliasesCreated++
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
+  console.log(`Created ${directSportAliasesCreated} direct stableShowProfileId aliases for linked sport dogs`)
 
   // Sort candidate lists by total_shows descending
   for (const list of byNameOnly.values()) {
@@ -223,7 +221,7 @@ async function main() {
     for (const n of nameVariants) {
       for (const b of breedVariants) {
         const id = byNameBreed.get(`${n}|${b}`)
-        if (id) return id
+        if (id && existingDogs.has(id)) return id
       }
     }
 
@@ -233,10 +231,10 @@ async function main() {
       if (candidates.length > 0) {
         const sameBreed = candidates.filter(c => {
           const cCan = canonicalBreed(c.breed).toUpperCase().replace(/\s+/g, ' ').trim()
-          return cCan === cBreedKey || cCan === breedKey
+          return (cCan === cBreedKey || cCan === breedKey) && existingDogs.has(c.id)
         })
         if (sameBreed.length > 0) return sameBreed[0].id
-        return candidates[0].id
+        if (existingDogs.has(candidates[0].id)) return candidates[0].id
       }
     }
 
@@ -259,7 +257,7 @@ async function main() {
         // If it's an alias, verify it points to the best candidate
         if (pack[id].alias_to) {
           const best = findBestCandidate(d.name_lat || '', d.breed || '')
-          if (best && best !== id && pack[id].alias_to !== best) {
+          if (best && best !== id && pack[id].alias_to !== best && existingDogs.has(best)) {
             pack[id] = { alias_to: best }
             dirtyShards.add(shard)
           }
@@ -268,7 +266,7 @@ async function main() {
       }
 
       const best = findBestCandidate(d.name_lat || '', d.breed || '')
-      if (best && best !== id) {
+      if (best && best !== id && existingDogs.has(best)) {
         pack[id] = { alias_to: best }
         dirtyShards.add(shard)
         added2026Aliases++
@@ -326,7 +324,7 @@ async function main() {
       if (pack[id]) {
         if (pack[id].alias_to) {
           const canonicalId = findBestCandidate(name, breed)
-          if (canonicalId && canonicalId !== id && pack[id].alias_to !== canonicalId) {
+          if (canonicalId && canonicalId !== id && pack[id].alias_to !== canonicalId && existingDogs.has(canonicalId)) {
             pack[id] = { alias_to: canonicalId }
             dirtyShards.add(shard)
           }
@@ -335,7 +333,7 @@ async function main() {
       }
 
       const canonicalId = findBestCandidate(name, breed)
-      if (canonicalId && canonicalId !== id) {
+      if (canonicalId && canonicalId !== id && existingDogs.has(canonicalId)) {
         pack[id] = { alias_to: canonicalId }
         dirtyShards.add(shard)
         aliasesCreated++
@@ -344,6 +342,54 @@ async function main() {
   }
 
   console.log(`Completed SQLite scan: ${scannedExhibitions} exhibitions, ${aliasesCreated} aliases created`)
+
+  console.log('=== Step 3.5: Validating and flattening all aliases in shards ===')
+  // Build lookup of all aliases
+  const aliasMap = new Map<string, string>()
+  for (const pack of shardsData.values()) {
+    for (const [id, val] of Object.entries(pack)) {
+      if ((val as any).alias_to) {
+        aliasMap.set(id, String((val as any).alias_to))
+      }
+    }
+  }
+
+  function resolveCanonical(id: string): string {
+    let curr = String(id)
+    let depth = 0
+    while (aliasMap.has(curr) && depth < 10) {
+      curr = aliasMap.get(curr)!
+      depth++
+    }
+    return curr
+  }
+
+  let cleanedDangling = 0
+  let flattenedDepth = 0
+  for (const [shard, pack] of shardsData.entries()) {
+    for (const [id, val] of Object.entries(pack)) {
+      if ((val as any).alias_to) {
+        const directTarget = String((val as any).alias_to)
+        const finalTarget = resolveCanonical(directTarget)
+
+        // 1. If target does not exist in existingDogs, or is self-referencing -> delete alias
+        if (!existingDogs.has(finalTarget) || finalTarget === id) {
+          delete pack[id]
+          dirtyShards.add(shard)
+          cleanedDangling++
+          continue
+        }
+
+        // 2. If depth > 1 -> flatten to direct alias
+        if (directTarget !== finalTarget) {
+          pack[id] = { alias_to: finalTarget }
+          dirtyShards.add(shard)
+          flattenedDepth++
+        }
+      }
+    }
+  }
+  console.log(`Validated aliases: removed ${cleanedDangling} dangling, flattened ${flattenedDepth} depth>1 aliases`)
 
   console.log(`=== Step 4: Saving ${dirtyShards.size} modified dog-details shards ===`)
   for (const shard of dirtyShards) {
@@ -358,9 +404,9 @@ async function main() {
     ['EMEREI HUGO BOSS', 'ПУДЕЛЬ СТАНДАРТНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ', '116566246'],
     ['PIRS BROSNAN IZ BELYKH GYAUROV', 'ИРЛАНДСКИЙ ВОЛКОДАВ', '137099100'],
     ['PUELLO ORIS OM TANTRA', 'ЗОЛОТИСТЫЙ РЕТРИВЕР', '941371398'],
-    ['AL NAFISEH LEON BAKST', 'САЛЮКИ', '1710913263'],
-    ['IMRAN JAZZEE', 'САЛЮКИ', '938108135'],
-    ['IMRAN JAZZE', 'САЛЮКИ', '568225806'],
+    ['AL NAFISEH LEON BAKST', 'САЛЮКИ', String(stableShowProfileId('AL NAFISEH LEON BAKST', 'САЛЮКИ'))],
+    ['IMRAN JAZZEE', 'САЛЮКИ', String(stableShowProfileId('IMRAN JAZZEE', 'САЛЮКИ'))],
+    ['IMRAN JAZZE', 'САЛЮКИ', String(stableShowProfileId('IMRAN JAZZE', 'САЛЮКИ'))],
   ]) {
     const shard = cdnPackShardKey(targetId)
     const pack = shardsData.get(shard)!
@@ -377,16 +423,6 @@ async function main() {
         allAliases.set(id, String((val as any).alias_to))
       }
     }
-  }
-
-  function resolveCanonical(id: string): string {
-    let curr = String(id)
-    let depth = 0
-    while (allAliases.has(curr) && depth < 5) {
-      curr = allAliases.get(curr)!
-      depth++
-    }
-    return curr
   }
 
   const rankingFiles = fs.readdirSync(showIdxDir).filter((f) => /^dog-ranking-.*\.json$/.test(f))
@@ -476,6 +512,7 @@ async function main() {
 
     let lookupAdded = 0
     for (const [key, id] of byNameBreed.entries()) {
+      if (!existingDogs.has(id)) continue
       const canId = resolveCanonical(id)
       const shardKey = getShardForId(canId)
       const shard = lookupShards.get(shardKey)

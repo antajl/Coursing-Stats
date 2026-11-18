@@ -299,7 +299,17 @@ export async function resolveShowDogDetail(opts: {
       if (!rawName) continue
       const nameKey = rawName.toUpperCase().replace(/\s+/g, ' ').trim()
       const translit = transliterateCyrillicToLatin(nameKey).toUpperCase().replace(/\s+/g, ' ').trim()
-      const nameKeys = Array.from(new Set([nameKey, translit].filter(Boolean)))
+      const variants = new Set<string>([nameKey, translit].filter(Boolean))
+      for (const base of Array.from(variants)) {
+        variants.add(base.replace(/([A-ZА-ЯЁ])\1+/g, '$1'))
+        if (base.endsWith('EE')) variants.add(base.slice(0, -1))
+        if (base.endsWith('E') && !base.endsWith('EE')) variants.add(base + 'E')
+        if (base.includes('KH')) variants.add(base.replace(/KH/g, 'H'))
+        if (base.includes('H') && !base.includes('KH')) variants.add(base.replace(/\bH\b/g, 'KH'))
+        if (base.includes('V')) variants.add(base.replace(/V/g, 'W'))
+        if (base.includes('W')) variants.add(base.replace(/W/g, 'V'))
+      }
+      const nameKeys = Array.from(variants)
 
       for (const nk of nameKeys) {
         for (const bk of breedKeys) {

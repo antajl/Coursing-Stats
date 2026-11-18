@@ -41,6 +41,11 @@ export default function DogProfile() {
     }
   }
 
+  // Fallback match from dogs-index: redirect to resolved sport profile
+  if (data.fallbackSportDogId && String(data.fallbackSportDogId) !== String(data.competitionId)) {
+    return <Navigate to={`/dog/${data.fallbackSportDogId}/`} replace />
+  }
+
   // Legacy /shows/dog/{catalog}/{breed} → /dog/{stableId}
   if (!data.showsLoading && data.isLegacyShowRoute && data.showDog) {
     const canonical = showDogProfilePath(data.showDog)

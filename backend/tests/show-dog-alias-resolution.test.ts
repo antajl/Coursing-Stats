@@ -73,6 +73,38 @@ describe('Show dog profile and alias resolution', () => {
     expect(targetDog.name_lat || targetDog.name_ru).toMatch(/Пуэлло Орис|PUELLO ORIS/i)
   })
 
+  it('resolves AL NAFISEH LEON BAKST (392978607) via alias to sport dog 752', () => {
+    const shard = cdnPackShardKey('392978607')
+    const pack = getShard(shard)
+    const entry = pack['392978607']
+    expect(entry).toBeDefined()
+    expect(entry.alias_to).toBe('752')
+
+    const targetShard = cdnPackShardKey('752')
+    const targetPack = getShard(targetShard)
+    const targetDog = targetPack['752']
+    expect(targetDog).toBeDefined()
+    expect(targetDog.name_lat).toBe('AL NAFISEH LEON BAKST')
+    expect(targetDog.competition_dog_id).toBe(752)
+  })
+
+  it('resolves IMRAN JAZZEE (533876167) and IMRAN JAZZE (1978886542) via alias to sport dog 7256', () => {
+    const shard1 = cdnPackShardKey('533876167')
+    const pack1 = getShard(shard1)
+    expect(pack1['533876167']?.alias_to).toBe('7256')
+
+    const shard2 = cdnPackShardKey('1978886542')
+    const pack2 = getShard(shard2)
+    expect(pack2['1978886542']?.alias_to).toBe('7256')
+
+    const targetShard = cdnPackShardKey('7256')
+    const targetPack = getShard(targetShard)
+    const targetDog = targetPack['7256']
+    expect(targetDog).toBeDefined()
+    expect(targetDog.name_lat).toBe('IMRAN JAZZEE')
+    expect(targetDog.competition_dog_id).toBe(7256)
+  })
+
   it('guarantees zero aliases in any ranking files across all years', () => {
     const showIdxDir = path.resolve(__dirname, '../../data/v1/shows/indexes')
     
@@ -105,18 +137,18 @@ describe('Show dog profile and alias resolution', () => {
     expect(violations).toEqual([])
   }, 30000)
 
-  it('guarantees EMEREI HUGO BOSS in 2026 ranking uses canonical id 721631058', () => {
+  it('guarantees top dog (PIRS BROSNAN IZ BELYKH GYAUROV) in 2026 ranking uses canonical id 1394343317', () => {
     const showIdxDir = path.resolve(__dirname, '../../data/v1/shows/indexes')
     const r2026Page0 = JSON.parse(fs.readFileSync(path.join(showIdxDir, 'dog-ranking-2026-page0.json'), 'utf8'))
     const r2026 = JSON.parse(fs.readFileSync(path.join(showIdxDir, 'dog-ranking-2026.json'), 'utf8'))
 
     const top0 = r2026Page0.dogs[0]
-    expect(top0.name_lat).toBe('EMEREI HUGO BOSS')
-    expect(top0.id).toBe('721631058')
+    expect(top0.name_lat).toBe('PIRS BROSNAN IZ BELYKH GYAUROV')
+    expect(top0.id).toBe('1394343317')
 
     const topFull = r2026[0]
-    expect(topFull.name_lat).toBe('EMEREI HUGO BOSS')
-    expect(topFull.id).toBe('721631058')
+    expect(topFull.name_lat).toBe('PIRS BROSNAN IZ BELYKH GYAUROV')
+    expect(topFull.id).toBe('1394343317')
   })
 
   it('guarantees all alias targets in dog-details exist and are not aliases themselves (depth <= 1)', () => {
