@@ -98,6 +98,8 @@ function parseArgs(argv: string[]) {
   const resume = argv.includes('--resume');
   const breedIdx = argv.indexOf('--breed');
   const breedFilter = breedIdx >= 0 ? argv[breedIdx + 1]?.toLowerCase() : null;
+  const yearIdx = argv.indexOf('--year');
+  const yearFilter = yearIdx >= 0 ? Number(argv[yearIdx + 1]) : null;
   const limitIdx = argv.indexOf('--limit');
   const limit = limitIdx >= 0 ? Number(argv[limitIdx + 1]) : null;
 
@@ -110,6 +112,7 @@ function parseArgs(argv: string[]) {
     bobOnly,
     resume,
     breedFilter,
+    yearFilter: Number.isFinite(yearFilter) ? yearFilter! : null,
     limit: Number.isFinite(limit) ? limit! : null,
   };
 }
@@ -121,7 +124,7 @@ function isTargetShowBreed(breed: string): boolean {
 }
 
 async function main() {
-  const { dryRun, sportOnly, showOnly, allBreeds, titledOnly, bobOnly, resume, breedFilter, limit } =
+  const { dryRun, sportOnly, showOnly, allBreeds, titledOnly, bobOnly, resume, breedFilter, yearFilter, limit } =
     parseArgs(process.argv.slice(2));
 
   console.log('=== Breed Archive Comprehensive Scanner ===');
@@ -131,10 +134,27 @@ async function main() {
   if (allBreeds) console.log('Breeds: ALL breeds with BreedArchive support');
   if (titledOnly) console.log('Filter: Titled / award dogs only');
   if (bobOnly) console.log('Filter: BOB (Best of Breed) champions only [Tier 2]');
+  if (yearFilter) console.log(`Year filter: Priority year ${yearFilter}`);
   if (breedFilter) console.log(`Breed filter: "${breedFilter}"`);
   if (resume) console.log('Resume: Enabled (loading checkpoint)');
   if (limit) console.log(`Limit: ${limit} dogs`);
   console.log('-------------------------------------------');
+
+  const yearDogScores = new Map<string, number>();
+  if (yearFilter) {
+    const showYearPath = path.join(DATA_V1_ROOT, `shows/indexes/dog-ranking-${yearFilter}.json`);
+    if (fs.existsSync(showYearPath)) {
+      try {
+        const dogs = JSON.parse(fs.readFileSync(showYearPath, 'utf8'));
+        if (Array.isArray(dogs)) {
+          for (const d of dogs) {
+            yearDogScores.set(String(d.id), d.rank_score || 0);
+          }
+        }
+        console.log(`Loaded ${yearDogScores.size} dogs active in ${yearFilter} ranking.`);
+      } catch {}
+    }
+  }
 
   const checkpoint =
     resume && fs.existsSync(CHECKPOINT_FILE)
@@ -221,6 +241,10 @@ async function main() {
             continue;
           }
 
+          if (yearFilter && !yearDogScores.has(id)) {
+            continue;
+          }
+
           if (!allBreeds && !bobOnly && !isSighthound && !hasBigAward && !breedFilter) {
             continue;
           }
@@ -247,6 +271,10 @@ async function main() {
 
   console.log(`Already have pedigree_url: Sport=${sportAlreadyHas}, Show=${showAlreadyHas}`);
   console.log(`Total queue size: ${queue.length} dogs`);
+
+  if (yearFilter) {
+    queue.sort((a, b) => (yearDogScores.get(b.id) || 0) - (yearDogScores.get(a.id) || 0));
+  }
 
   const pendingQueue = queue.filter((item) => !checkedSet.has(`${item.domain}:${item.id}`));
   if (checkedSet.size > 0) {
@@ -365,7 +393,9 @@ async function main() {
     // Report and checkpoint every 50 items or at the end
     if ((i + 1) % 50 === 0 || i === activeQueue.length - 1) {
       console.log(`[Progress ${i + 1}/${activeQueue.length}] Matches: Sport=${foundSport}, Show=${foundShow}`);
-      await saveCheckpoint();
+      if (!dryRun) {
+        await saveCheckpoint();
+      }
       await safeWriteJson(
         REPORT_FILE,
         JSON.stringify(
