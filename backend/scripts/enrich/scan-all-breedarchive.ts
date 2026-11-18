@@ -100,6 +100,8 @@ function parseArgs(argv: string[]) {
   const breedFilter = breedIdx >= 0 ? argv[breedIdx + 1]?.toLowerCase() : null;
   const yearIdx = argv.indexOf('--year');
   const yearFilter = yearIdx >= 0 ? Number(argv[yearIdx + 1]) : null;
+  const concIdx = argv.indexOf('--concurrency');
+  const concurrency = concIdx >= 0 ? Number(argv[concIdx + 1]) : 5;
   const limitIdx = argv.indexOf('--limit');
   const limit = limitIdx >= 0 ? Number(argv[limitIdx + 1]) : null;
 
@@ -113,6 +115,7 @@ function parseArgs(argv: string[]) {
     resume,
     breedFilter,
     yearFilter: Number.isFinite(yearFilter) ? yearFilter! : null,
+    concurrency: Number.isFinite(concurrency) && concurrency > 0 ? concurrency : 5,
     limit: Number.isFinite(limit) ? limit! : null,
   };
 }
@@ -124,7 +127,7 @@ function isTargetShowBreed(breed: string): boolean {
 }
 
 async function main() {
-  const { dryRun, sportOnly, showOnly, allBreeds, titledOnly, bobOnly, resume, breedFilter, yearFilter, limit } =
+  const { dryRun, sportOnly, showOnly, allBreeds, titledOnly, bobOnly, resume, breedFilter, yearFilter, concurrency, limit } =
     parseArgs(process.argv.slice(2));
 
   console.log('=== Breed Archive Comprehensive Scanner ===');
@@ -136,6 +139,7 @@ async function main() {
   if (bobOnly) console.log('Filter: BOB (Best of Breed) champions only [Tier 2]');
   if (yearFilter) console.log(`Year filter: Priority year ${yearFilter}`);
   if (breedFilter) console.log(`Breed filter: "${breedFilter}"`);
+  console.log(`Concurrency: ${concurrency} parallel workers`);
   if (resume) console.log('Resume: Enabled (loading checkpoint)');
   if (limit) console.log(`Limit: ${limit} dogs`);
   console.log('-------------------------------------------');
@@ -305,16 +309,26 @@ async function main() {
   };
 
   let isShuttingDown = false;
+  let isFlushing = false;
+  const flushModifiedShards = async () => {
+    if (dryRun || isFlushing || modifiedShards.size === 0) return;
+    isFlushing = true;
+    const shardsToFlush = Array.from(modifiedShards);
+    modifiedShards.clear();
+    for (const shard of shardsToFlush) {
+      const shardFile = path.join(SHOW_DETAILS_DIR, `${shard}.json`);
+      const data = shardsData.get(shard);
+      if (data) await safeWriteJson(shardFile, JSON.stringify(data));
+    }
+    isFlushing = false;
+  };
+
   const handleInterrupt = async () => {
     if (isShuttingDown) return;
     isShuttingDown = true;
     console.log('\nInterrupt signal received. Saving state before exit...');
     if (!dryRun && modifiedShards.size > 0) {
-      for (const shard of modifiedShards) {
-        const shardFile = path.join(SHOW_DETAILS_DIR, `${shard}.json`);
-        const data = shardsData.get(shard);
-        if (data) await safeWriteJson(shardFile, JSON.stringify(data));
-      }
+      await flushModifiedShards();
     }
     await saveCheckpoint();
     console.log('Saved. Exiting.');
@@ -323,110 +337,112 @@ async function main() {
   process.on('SIGINT', handleInterrupt);
   process.on('SIGTERM', handleInterrupt);
 
-  for (let i = 0; i < activeQueue.length; i++) {
-    const item = activeQueue[i];
-    const key = `${item.domain}:${item.id}`;
-    const nameToSearch = item.name_lat || item.name_ru || '';
+  let nextQueueIndex = 0;
+  let processedCount = 0;
 
-    try {
-      const url = await resolveBreedArchiveUrl(item.breed, item.name_lat, item.name_ru);
+  const reportProgress = async (currentCount: number) => {
+    console.log(`[Progress ${currentCount}/${activeQueue.length}] Matches: Sport=${foundSport}, Show=${foundShow}`);
+    if (!dryRun) {
+      await saveCheckpoint();
+    }
+    await safeWriteJson(
+      REPORT_FILE,
+      JSON.stringify(
+        {
+          timestamp: new Date().toISOString(),
+          totalProcessed: currentCount,
+          totalQueue: activeQueue.length,
+          foundSport,
+          foundShow,
+          totalFound: foundSport + foundShow,
+          results,
+        },
+        null,
+        2,
+      ),
+    );
+  };
 
-      if (url) {
-        if (item.domain === 'sport') foundSport++;
-        else foundShow++;
+  const worker = async () => {
+    while (nextQueueIndex < activeQueue.length && !isShuttingDown) {
+      const i = nextQueueIndex++;
+      const item = activeQueue[i];
+      const key = `${item.domain}:${item.id}`;
+      const nameToSearch = item.name_lat || item.name_ru || '';
 
-        console.log(`✓ [${item.domain.toUpperCase()}] [${item.id}] ${item.breed} | ${nameToSearch}`);
-        console.log(`  -> ${url}`);
+      try {
+        const url = await resolveBreedArchiveUrl(item.breed, item.name_lat, item.name_ru);
 
-        results.push({
-          domain: item.domain,
-          id: item.id,
-          breed: item.breed,
-          name_lat: item.name_lat,
-          name_ru: item.name_ru,
-          url,
-        });
+        if (url) {
+          if (item.domain === 'sport') foundSport++;
+          else foundShow++;
 
-        if (!dryRun) {
-          if (item.domain === 'sport' && item.filePath) {
-            try {
-              const dog = JSON.parse(fs.readFileSync(item.filePath, 'utf8'));
-              dog.pedigree_url = url;
-              await safeWriteJson(item.filePath, `${JSON.stringify(dog)}\n`);
+          console.log(`✓ [${item.domain.toUpperCase()}] [${item.id}] ${item.breed} | ${nameToSearch}`);
+          console.log(`  -> ${url}`);
 
-              if (item.dogKey) {
-                const keyPath = path.join(SPORT_DOGS_KEY_DIR, `${item.dogKey}.json`);
-                if (fs.existsSync(keyPath)) {
-                  await safeWriteJson(keyPath, `${JSON.stringify(dog)}\n`);
+          results.push({
+            domain: item.domain,
+            id: item.id,
+            breed: item.breed,
+            name_lat: item.name_lat,
+            name_ru: item.name_ru,
+            url,
+          });
+
+          if (!dryRun) {
+            if (item.domain === 'sport' && item.filePath) {
+              try {
+                const dog = JSON.parse(fs.readFileSync(item.filePath, 'utf8'));
+                dog.pedigree_url = url;
+                await safeWriteJson(item.filePath, `${JSON.stringify(dog)}\n`);
+
+                if (item.dogKey) {
+                  const keyPath = path.join(SPORT_DOGS_KEY_DIR, `${item.dogKey}.json`);
+                  if (fs.existsSync(keyPath)) {
+                    await safeWriteJson(keyPath, `${JSON.stringify(dog)}\n`);
+                  }
                 }
+              } catch (err) {
+                console.error(`Failed writing sport dog ${item.id}:`, err);
               }
-            } catch (err) {
-              console.error(`Failed writing sport dog ${item.id}:`, err);
-            }
-          } else if (item.domain === 'show' && item.shard) {
-            const shardObj = shardsData.get(item.shard);
-            if (shardObj && shardObj[item.id]) {
-              shardObj[item.id].pedigree_url = url;
-              modifiedShards.add(item.shard);
+            } else if (item.domain === 'show' && item.shard) {
+              const shardObj = shardsData.get(item.shard);
+              if (shardObj && shardObj[item.id]) {
+                shardObj[item.id].pedigree_url = url;
+                modifiedShards.add(item.shard);
+              }
             }
           }
         }
+      } catch (err) {
+        console.error(`✗ Error on [${item.id}] ${item.breed} ${nameToSearch}:`, err instanceof Error ? err.message : err);
       }
-    } catch (err) {
-      console.error(`✗ Error on [${item.id}] ${item.breed} ${nameToSearch}:`, err instanceof Error ? err.message : err);
-    }
 
-    checkedSet.add(key);
+      checkedSet.add(key);
+      processedCount++;
+      const currentCount = processedCount;
 
-    // Flush modified shards every 100 items
-    if (!dryRun && (i + 1) % 100 === 0 && modifiedShards.size > 0) {
-      for (const shard of modifiedShards) {
-        const shardFile = path.join(SHOW_DETAILS_DIR, `${shard}.json`);
-        const data = shardsData.get(shard);
-        if (data) {
-          await safeWriteJson(shardFile, JSON.stringify(data));
-        }
+      // Flush modified shards every 100 items
+      if (!dryRun && currentCount % 100 === 0 && modifiedShards.size > 0) {
+        await flushModifiedShards();
       }
-      modifiedShards.clear();
-    }
 
-    // Report and checkpoint every 50 items or at the end
-    if ((i + 1) % 50 === 0 || i === activeQueue.length - 1) {
-      console.log(`[Progress ${i + 1}/${activeQueue.length}] Matches: Sport=${foundSport}, Show=${foundShow}`);
-      if (!dryRun) {
-        await saveCheckpoint();
+      // Report and checkpoint every 50 items or at the end
+      if (currentCount % 50 === 0 || currentCount === activeQueue.length) {
+        await reportProgress(currentCount);
       }
-      await safeWriteJson(
-        REPORT_FILE,
-        JSON.stringify(
-          {
-            timestamp: new Date().toISOString(),
-            totalProcessed: i + 1,
-            totalQueue: activeQueue.length,
-            foundSport,
-            foundShow,
-            totalFound: foundSport + foundShow,
-            results,
-          },
-          null,
-          2,
-        ),
-      );
-    }
 
-    await sleep(DELAY_MS);
-  }
+      await sleep(DELAY_MS);
+    }
+  };
+
+  const workers = Array.from({ length: concurrency }, () => worker());
+  await Promise.all(workers);
 
   // Final flush for any remaining modified shards
   if (!dryRun && modifiedShards.size > 0) {
     console.log(`\nFlushing ${modifiedShards.size} modified show shards to disk...`);
-    for (const shard of modifiedShards) {
-      const shardFile = path.join(SHOW_DETAILS_DIR, `${shard}.json`);
-      const data = shardsData.get(shard);
-      if (data) {
-        await safeWriteJson(shardFile, JSON.stringify(data));
-      }
-    }
+    await flushModifiedShards();
   }
 
   console.log('\n=== SCAN COMPLETED ===');
