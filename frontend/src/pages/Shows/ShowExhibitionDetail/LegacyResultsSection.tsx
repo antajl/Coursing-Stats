@@ -6,6 +6,7 @@ import {
   type ShowResultRow,
 } from '../showExhibitionUtils'
 import { BreedResultsPanel } from './CatalogResultsSection'
+import { canonicalBreed, displayBreed } from '../../../lib/breedMapping'
 
 export function LegacyResultsSection({
   results,
@@ -29,8 +30,9 @@ export function LegacyResultsSection({
       const groupKey = hasGroups ? row.breed_group?.trim() || 'Прочие породы' : ''
       if (!map.has(groupKey)) map.set(groupKey, new Map())
       const breeds = map.get(groupKey)!
-      if (!breeds.has(row.breed)) breeds.set(row.breed, [])
-      breeds.get(row.breed)!.push(row)
+      const breedKey = canonicalBreed(row.breed) || row.breed
+      if (!breeds.has(breedKey)) breeds.set(breedKey, [])
+      breeds.get(breedKey)!.push(row)
     }
     return { byGroup: map, hasFciGroups: hasGroups }
   }, [filtered])
@@ -46,18 +48,21 @@ export function LegacyResultsSection({
   const renderBreeds = (breedsMap: Map<string, ShowResultRow[]>) =>
     [...breedsMap.entries()]
       .sort(([a], [b]) => a.localeCompare(b, 'ru'))
-      .map(([breed, breedResults]) => (
-        <details
-          key={breed}
-          className="group/breed rounded-lg border border-old-money-200 bg-white/70"
-          open={forceOpen || breedsMap.size === 1 || undefined}
-        >
-          <summary className="cursor-pointer list-none px-3 py-2 font-semibold marker:content-none">
-            {breed}
-          </summary>
-          <BreedResultsPanel results={breedResults} breed={breed} />
-        </details>
-      ))
+      .map(([breed, breedResults]) => {
+        const breedDisplay = displayBreed(breed).primary || breed
+        return (
+          <details
+            key={breed}
+            className="group/breed rounded-lg border border-old-money-200 bg-white/70"
+            open={forceOpen || breedsMap.size === 1 || undefined}
+          >
+            <summary className="cursor-pointer list-none px-3 py-2 font-semibold marker:content-none">
+              {breedDisplay}
+            </summary>
+            <BreedResultsPanel results={breedResults} breed={breed} />
+          </details>
+        )
+      })
 
   if (!hasFciGroups) {
     const only = [...byGroup.values()][0] ?? new Map()

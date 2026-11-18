@@ -27,6 +27,7 @@ import {
 import { TitleChips } from './TitleChips'
 import { BreedTitleRowView, ExhibitionDogNameLink } from './ExhibitionDogNameLink'
 import { formatJudgeDisplayName } from '../../../lib/judgeUiUtils'
+import { canonicalBreed, displayBreed } from '../../../lib/breedMapping'
 
 function ClassResultsTable({ classes }: { classes: ClassResultGroup[] }) {
   return (
@@ -313,7 +314,9 @@ function BreedAccordionItem({
           aria-hidden
         />
         <div className="min-w-0 flex-1">
-          <div className="font-semibold text-charcoal-900">{catalog.breed}</div>
+          <div className="font-semibold text-charcoal-900">
+            {displayBreed(canonicalBreed(catalog.breed)).primary || catalog.breed}
+          </div>
           {catalog.breed_judge && (
             <div className="mt-0.5 flex items-center gap-1 text-xs text-charcoal-600">
               <UserRound className="h-3 w-3 shrink-0" aria-hidden />

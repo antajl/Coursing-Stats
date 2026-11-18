@@ -4,7 +4,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { stableShowProfileId } from '../../lib/show-dog-profile-id'
 import { cdnPackShardKey } from '../../lib/cdn-packs'
-import { transliterateRuToLat } from '../../lib/text-normalization'
+import { normalizeText, transliterateRuToLat } from '../../lib/text-normalization'
 import { canonicalBreed } from '../../src/lib/breed-mapping'
 
 function splitDogNameDisplay(dogName: string): { ring?: string; name: string } {
@@ -13,14 +13,48 @@ function splitDogNameDisplay(dogName: string): { ring?: string; name: string } {
   return { name: dogName.trim() }
 }
 
+function collapseDuplicates(text: string): string {
+  return text.replace(/([A-ZА-ЯЁ])\1+/g, '$1')
+}
+
+function expandTranslitVariants(text: string): string[] {
+  const norm = text.toUpperCase().replace(/\s+/g, ' ').trim()
+  if (!norm) return []
+  const res = new Set<string>([norm])
+  res.add(collapseDuplicates(norm))
+  if (norm.includes('KH')) res.add(norm.replace(/KH/g, 'H'))
+  if (norm.includes(' H ') || norm.endsWith(' H') || norm.startsWith('H ')) {
+    res.add(norm.replace(/\bH\b/g, 'KH'))
+  }
+  if (norm.includes('V')) res.add(norm.replace(/V/g, 'W'))
+  if (norm.includes('W')) res.add(norm.replace(/W/g, 'V'))
+  if (norm.includes('DZH')) res.add(norm.replace(/DZH/g, 'J'))
+  if (norm.includes('J')) res.add(norm.replace(/J/g, 'DZH'))
+  return Array.from(res)
+}
+
 async function main() {
-  console.log('=== Step 1: Loading existing dogs from dog-details shards ===')
   const detailsDir = 'data/v1/shows/indexes/dog-details'
   const shardsData = new Map<string, Record<string, any>>()
-  const existingDogs = new Map<string, { id: string; name_lat: string; name_ru: string; breed: string; total_shows: number }>()
+  const existingDogs = new Map<string, { id: string; name_lat: string; name_ru: string; breed: string; total_shows: number; competition_dog_id?: number | null }>()
   const byNameBreed = new Map<string, string>() // `${nameKey}|${breedKey}` -> canonicalId
   const byNameOnly = new Map<string, Array<{ id: string; breed: string; total_shows: number }>>()
+  const dirtyShards = new Set<string>()
 
+  // Step 0: Load sport dogs
+  console.log('=== Step 0: Loading sport dogs from dogs-index.json ===')
+  const sportDogsPath = 'data/v1/indexes/dogs-index.json'
+  const sportDogsMap = new Map<number, any>()
+  if (fs.existsSync(sportDogsPath)) {
+    const list = JSON.parse(fs.readFileSync(sportDogsPath, 'utf8'))
+    for (const d of list) {
+      if (d.id != null) sportDogsMap.set(Number(d.id), d)
+    }
+  }
+  console.log(`Loaded ${sportDogsMap.size} sport dogs`)
+
+  console.log('=== Step 1: Loading existing dogs from dog-details shards ===')
+  let cleanedCyrillicNameLat = 0
   for (let i = 0; i < 256; i++) {
     const shard = String(i).padStart(3, '0')
     const file = path.join(detailsDir, `${shard}.json`)
@@ -33,16 +67,59 @@ async function main() {
     for (const [id, dog] of Object.entries(data)) {
       const d = dog as any
       if (d.alias_to) continue
+
+      let nameLat = d.name_lat || ''
+      let nameRu = d.name_ru || ''
+
+      // Clean Cyrillic in name_lat for linked sport dogs
+      if (d.competition_dog_id != null) {
+        const sd = sportDogsMap.get(Number(d.competition_dog_id))
+        if (sd) {
+          if (/[а-яё]/i.test(nameLat) && sd.name_lat && !/[а-яё]/i.test(sd.name_lat)) {
+            d.name_lat = sd.name_lat
+            nameLat = sd.name_lat
+            dirtyShards.add(shard)
+            cleanedCyrillicNameLat++
+          }
+          if (!nameRu && sd.name_ru) {
+            d.name_ru = sd.name_ru.split('/')[0].trim()
+            nameRu = d.name_ru
+            dirtyShards.add(shard)
+          }
+        }
+      }
+
       const dogInfo = {
         id,
-        name_lat: d.name_lat || '',
-        name_ru: d.name_ru || '',
+        name_lat: nameLat,
+        name_ru: nameRu,
         breed: d.breed || '',
         total_shows: d.total_shows || 0,
+        competition_dog_id: d.competition_dog_id != null ? Number(d.competition_dog_id) : null,
       }
       existingDogs.set(id, dogInfo)
 
-      const names = [d.name_lat, d.name_ru].filter(Boolean)
+      const names = new Set<string>([nameLat, nameRu].filter(Boolean))
+      for (const raw of [nameLat, nameRu]) {
+        if (!raw) continue
+        for (const chunk of raw.split('/')) {
+          const trimmed = chunk.trim()
+          if (trimmed.length >= 2) names.add(trimmed)
+        }
+      }
+      if (d.competition_dog_id != null) {
+        const sd = sportDogsMap.get(Number(d.competition_dog_id))
+        if (sd) {
+          for (const raw of [sd.name_lat, sd.name_ru]) {
+            if (!raw) continue
+            for (const chunk of raw.split('/')) {
+              const trimmed = chunk.trim()
+              if (trimmed.length >= 2) names.add(trimmed)
+            }
+          }
+        }
+      }
+
       const rawBreed = (d.breed || '').toUpperCase().replace(/\s+/g, ' ').trim()
       const cBreed = canonicalBreed(d.breed || '').toUpperCase().replace(/\s+/g, ' ').trim()
       const breedVariants = Array.from(new Set([rawBreed, cBreed].filter(Boolean)))
@@ -50,7 +127,12 @@ async function main() {
       for (const n of names) {
         const nameKey = n.toUpperCase().replace(/\s+/g, ' ').trim()
         const translit = transliterateRuToLat(nameKey)
-        const nameVariants = Array.from(new Set([nameKey, translit].filter(Boolean)))
+        const nameVariants = new Set<string>()
+        for (const base of [nameKey, translit].filter(Boolean)) {
+          for (const v of expandTranslitVariants(base)) {
+            nameVariants.add(v)
+          }
+        }
 
         for (const nameV of nameVariants) {
           for (const breedV of breedVariants) {
@@ -74,12 +156,53 @@ async function main() {
     }
   }
 
+  // Also index all sport dogs that may not be in existingDogs yet
+  for (const sd of sportDogsMap.values()) {
+    const sdId = String(sd.id)
+    const breed = (sd.breed || '').toUpperCase().replace(/\s+/g, ' ').trim()
+    const cBreed = canonicalBreed(sd.breed || '').toUpperCase().replace(/\s+/g, ' ').trim()
+    const breedVariants = Array.from(new Set([breed, cBreed].filter(Boolean)))
+
+    const names = new Set<string>()
+    for (const raw of [sd.name_lat, sd.name_ru]) {
+      if (!raw) continue
+      names.add(raw.trim())
+      for (const chunk of raw.split('/')) {
+        const trimmed = chunk.trim()
+        if (trimmed.length >= 2) names.add(trimmed)
+      }
+    }
+
+    for (const n of names) {
+      const nameKey = n.toUpperCase().replace(/\s+/g, ' ').trim()
+      const translit = transliterateRuToLat(nameKey)
+      const nameVariants = new Set<string>()
+      for (const base of [nameKey, translit].filter(Boolean)) {
+        for (const v of expandTranslitVariants(base)) {
+          nameVariants.add(v)
+        }
+      }
+
+      for (const nameV of nameVariants) {
+        for (const breedV of breedVariants) {
+          const key = `${nameV}|${breedV}`
+          if (!byNameBreed.has(key)) {
+            byNameBreed.set(key, sdId)
+          }
+        }
+        let list = byNameOnly.get(nameV)
+        if (!list) { list = []; byNameOnly.set(nameV, list) }
+        list.push({ id: sdId, breed: sd.breed, total_shows: 10 })
+      }
+    }
+  }
+
   // Sort candidate lists by total_shows descending
   for (const list of byNameOnly.values()) {
     list.sort((a, b) => b.total_shows - a.total_shows)
   }
 
-  console.log(`Loaded ${existingDogs.size} canonical dogs across 256 shards`)
+  console.log(`Loaded ${existingDogs.size} canonical dogs across 256 shards (cleaned ${cleanedCyrillicNameLat} Cyrillic name_lat)`)
 
   function findBestCandidate(name: string, breed: string): string | null {
     const nameKey = name.toUpperCase().replace(/\s+/g, ' ').trim()
@@ -87,23 +210,34 @@ async function main() {
     const breedKey = breed.toUpperCase().replace(/\s+/g, ' ').trim()
     const cBreedKey = canonicalBreed(breed).toUpperCase().replace(/\s+/g, ' ').trim()
 
-    // 1. Exact name + breed
-    for (const n of [nameKey, translit].filter(Boolean)) {
-      for (const b of [breedKey, cBreedKey].filter(Boolean)) {
+    const nameVariants = new Set<string>()
+    for (const base of [nameKey, translit].filter(Boolean)) {
+      for (const v of expandTranslitVariants(base)) {
+        nameVariants.add(v)
+      }
+    }
+
+    const breedVariants = Array.from(new Set([breedKey, cBreedKey].filter(Boolean)))
+
+    // 1. Exact or variant name + breed
+    for (const n of nameVariants) {
+      for (const b of breedVariants) {
         const id = byNameBreed.get(`${n}|${b}`)
         if (id) return id
       }
     }
 
     // 2. Name match with matching canonical breed
-    const candidates = byNameOnly.get(nameKey) || byNameOnly.get(translit) || []
-    if (candidates.length > 0) {
-      const sameBreed = candidates.filter(c => {
-        const cCan = canonicalBreed(c.breed).toUpperCase().replace(/\s+/g, ' ').trim()
-        return cCan === cBreedKey || cCan === breedKey
-      })
-      if (sameBreed.length > 0) return sameBreed[0].id
-      return candidates[0].id
+    for (const n of nameVariants) {
+      const candidates = byNameOnly.get(n) || []
+      if (candidates.length > 0) {
+        const sameBreed = candidates.filter(c => {
+          const cCan = canonicalBreed(c.breed).toUpperCase().replace(/\s+/g, ' ').trim()
+          return cCan === cBreedKey || cCan === breedKey
+        })
+        if (sameBreed.length > 0) return sameBreed[0].id
+        return candidates[0].id
+      }
     }
 
     return null
@@ -113,7 +247,6 @@ async function main() {
   const dogs2026Path = 'data/v1/shows/indexes/year-data/dogs-2026.json'
   let added2026Aliases = 0
   let added2026NewDogs = 0
-  const dirtyShards = new Set<string>()
 
   if (fs.existsSync(dogs2026Path)) {
     const dogs2026 = JSON.parse(fs.readFileSync(dogs2026Path, 'utf8'))
@@ -225,6 +358,9 @@ async function main() {
     ['EMEREI HUGO BOSS', 'ПУДЕЛЬ СТАНДАРТНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ', '116566246'],
     ['PIRS BROSNAN IZ BELYKH GYAUROV', 'ИРЛАНДСКИЙ ВОЛКОДАВ', '137099100'],
     ['PUELLO ORIS OM TANTRA', 'ЗОЛОТИСТЫЙ РЕТРИВЕР', '941371398'],
+    ['AL NAFISEH LEON BAKST', 'САЛЮКИ', '1710913263'],
+    ['IMRAN JAZZEE', 'САЛЮКИ', '938108135'],
+    ['IMRAN JAZZE', 'САЛЮКИ', '568225806'],
   ]) {
     const shard = cdnPackShardKey(targetId)
     const pack = shardsData.get(shard)!
@@ -313,6 +449,64 @@ async function main() {
     }
   }
   console.log(`Step 6 complete: ${totalFilesUpdated} ranking files canonicalized.`)
+
+  console.log('=== Step 7: Updating show-dog-lookup shards ===')
+  const lookupDir = path.join(showIdxDir, 'show-dog-lookup')
+  if (fs.existsSync(lookupDir)) {
+    const shardCount = 16
+    const lookupShards = new Map<string, { byCompetitionId: Record<string, string>; byNameBreed: Record<string, string> }>()
+    for (let i = 0; i < shardCount; i++) {
+      const key = i.toString(16)
+      const file = path.join(lookupDir, `${key}.json`)
+      if (fs.existsSync(file)) {
+        const content = JSON.parse(fs.readFileSync(file, 'utf8'))
+        lookupShards.set(key, {
+          byCompetitionId: content.byCompetitionId || {},
+          byNameBreed: content.byNameBreed || {},
+        })
+      } else {
+        lookupShards.set(key, { byCompetitionId: {}, byNameBreed: {} })
+      }
+    }
+
+    function getShardForId(id: string): string {
+      const hash = id.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0)
+      return (hash % shardCount).toString(16)
+    }
+
+    let lookupAdded = 0
+    for (const [key, id] of byNameBreed.entries()) {
+      const canId = resolveCanonical(id)
+      const shardKey = getShardForId(canId)
+      const shard = lookupShards.get(shardKey)
+      if (shard && !shard.byNameBreed[key]) {
+        shard.byNameBreed[key] = canId
+        lookupAdded++
+      }
+    }
+
+    // Ensure competition ID links
+    for (const dog of existingDogs.values()) {
+      if (dog.competition_dog_id != null) {
+        const canId = resolveCanonical(dog.id)
+        const shardKey = getShardForId(canId)
+        const shard = lookupShards.get(shardKey)
+        if (shard) {
+          shard.byCompetitionId[String(dog.competition_dog_id)] = canId
+        }
+      }
+    }
+
+    for (const [shardKey, data] of lookupShards.entries()) {
+      const file = path.join(lookupDir, `${shardKey}.json`)
+      fs.writeFileSync(file, JSON.stringify({
+        schema: 'coursing-stats/show-dog-lookup-v1',
+        shard: shardKey,
+        ...data,
+      }))
+    }
+    console.log(`Step 7 complete: added ${lookupAdded} new name keys to show-dog-lookup shards`)
+  }
 }
 
 main().catch(console.error)
