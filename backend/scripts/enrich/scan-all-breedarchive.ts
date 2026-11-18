@@ -149,10 +149,25 @@ async function main() {
     const showYearPath = path.join(DATA_V1_ROOT, `shows/indexes/dog-ranking-${yearFilter}.json`);
     if (fs.existsSync(showYearPath)) {
       try {
-        const dogs = JSON.parse(fs.readFileSync(showYearPath, 'utf8'));
-        if (Array.isArray(dogs)) {
-          for (const d of dogs) {
+        const parsed = JSON.parse(fs.readFileSync(showYearPath, 'utf8'));
+        const filesToLoad: string[] = [];
+        if (Array.isArray(parsed)) {
+          for (const d of parsed) {
             yearDogScores.set(String(d.id), d.rank_score || 0);
+          }
+        } else if (parsed && Array.isArray(parsed.shards)) {
+          for (const shardRel of parsed.shards) {
+            filesToLoad.push(path.join(DATA_V1_ROOT, 'shows/indexes', shardRel));
+          }
+        }
+        for (const file of filesToLoad) {
+          if (fs.existsSync(file)) {
+            const shardDogs = JSON.parse(fs.readFileSync(file, 'utf8'));
+            if (Array.isArray(shardDogs)) {
+              for (const d of shardDogs) {
+                yearDogScores.set(String(d.id), d.rank_score || 0);
+              }
+            }
           }
         }
         console.log(`Loaded ${yearDogScores.size} dogs active in ${yearFilter} ranking.`);
