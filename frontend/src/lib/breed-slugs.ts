@@ -31,7 +31,8 @@ export const BREED_SLUG_ENTRIES: BreedSlugEntry[] = [
   },
   {
     "slug": "irish-wolfhound",
-    "canonicalKey": "ИРЛАНДСКИЙ ВОЛКОДАВ"
+    "canonicalKey": "ИРЛАНДСКИЙ ВОЛКОДАВ",
+    "aliases": ["ИРЛАНДСКИЙ ВОЛЬФХАУНД"]
   },
   {
     "slug": "deerhound",
@@ -348,7 +349,7 @@ export function getCanonicalBySlug(slug: string): string | undefined {
 export function getSlugByCanonicalKey(key: string): string | undefined {
   const upper = key.toUpperCase().trim();
   const found = BREED_SLUG_ENTRIES.find(
-    (b) => b.canonicalKey === upper || (upper.includes('ТАКСА') && b.canonicalKey === 'ТАКСА'),
+    (b) => b.canonicalKey === upper || (upper.includes('ТАКСА') && b.canonicalKey === 'ТАКСА') || (b.aliases && b.aliases.includes(upper)),
   );
   return found?.slug;
 }

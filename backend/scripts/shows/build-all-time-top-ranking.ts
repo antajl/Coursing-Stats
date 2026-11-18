@@ -63,6 +63,7 @@ export function buildAllTimeTopRanking(): { allTimeCount: number; page0Count: nu
     for (const list of fileList) {
       for (const d of list) {
         const breed = canonicalBreed(d.breed || '')
+        if (!breed || breed === 'БЕЗ ПОРОДЫ') continue
         const nameKey = (d.name_lat || d.name_ru || '').toUpperCase().trim()
         const key = `${nameKey}|${breed.toUpperCase()}`
         let existing = dogsByKey.get(key)

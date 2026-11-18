@@ -9,7 +9,7 @@ import ShowRankingColumns, { type RankedShowDog } from './ShowRankingColumns'
 import type { ShowDogCardData } from './ShowDogCard'
 import { useDebounce } from '../../hooks/useDebounce'
 import { dogNameSearchText, dogQuerySearchTokens } from '../../lib/dogName'
-import { canonicalBreed, breedAliasKey, breedToSlug, resolveBreedParam } from '../../lib/breedMapping'
+import { canonicalBreed, breedAliasKey, breedToSlug, resolveBreedParam, OFFICIAL_BREEDS_SET } from '../../lib/breedMapping'
 import { initialSeasonYearFilter, resolveActiveSeason } from '../../lib/season'
 import { useFavorites } from '../../hooks/useFavorites'
 import { matchesSexFilter } from '../TopDogs/filterUtils'
@@ -229,7 +229,7 @@ export default function ShowRanking({ urlYear }: ShowRankingProps = {}) {
     const counts = new Map<string, number>()
     for (let i = 0; i < allDogs.length; i++) {
       const b = canonicalBreed(allDogs[i].breed)
-      if (b) {
+      if (b && OFFICIAL_BREEDS_SET.has(b)) {
         counts.set(b, (counts.get(b) || 0) + 1)
       }
     }

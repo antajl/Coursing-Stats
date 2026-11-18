@@ -5,6 +5,7 @@ import { fileURLToPath } from 'url'
 import Database from 'better-sqlite3'
 import { showJudgeMergeKeyFromRaw } from '../../lib/show-judge-name'
 import { isBreedFragment } from '../../parsers/shows/parse-rkf-certificate-pdf'
+import { canonicalBreed, OFFICIAL_BREEDS_SET } from '../../src/lib/breed-mapping'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -118,8 +119,10 @@ async function main() {
       const judgeKey = getJudgeKey(rawJudge)
       if (!judgeKey) continue
 
-      const breed = (r.breed || '').trim()
-      if (!breed || isBreedFragment(breed)) continue
+      const rawBreed = (r.breed || '').trim()
+      if (!rawBreed || isBreedFragment(rawBreed)) continue
+      const breed = canonicalBreed(rawBreed)
+      if (!breed || !OFFICIAL_BREEDS_SET.has(breed) || breed === 'БЕЗ ПОРОДЫ') continue
 
       const isPup = checkPup(r.class, r.grade)
 

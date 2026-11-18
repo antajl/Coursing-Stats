@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest'
 import fs from 'node:fs'
 import path from 'node:path'
-import { canonicalBreed, sanitizeBreedName } from '../src/lib/breed-mapping'
+import { canonicalBreed, sanitizeBreedName, matchesBreedSearch, OFFICIAL_BREEDS_SET } from '../src/lib/breed-mapping'
 
 describe('RKF Breed Sanitization & Normalization Invariants', () => {
   it('correctly cleans bizarre glued papillon and phalene variations from PDF reports', () => {
@@ -154,5 +154,114 @@ describe('RKF Breed Sanitization & Normalization Invariants', () => {
     expect(canonicalBreed('Ш')).toBe('')
     expect(canonicalBreed('ТНАЯ')).toBe('')
     expect(canonicalBreed('ИВЕР')).toBe('')
+    expect(canonicalBreed('Южно-африканский бурбуль')).toBe('ЮЖНОАФРИКАНСКИЙ БУРБУЛЬ')
+    expect(canonicalBreed('Южноаф')).toBe('ЮЖНОАФРИКАНСКИЙ БУРБУЛЬ')
+    expect(canonicalBreed('Южноафр')).toBe('ЮЖНОАФРИКАНСКИЙ БУРБУЛЬ')
+    expect(canonicalBreed('Южнорусс')).toBe('ЮЖНОРУССКАЯ ОВЧАРКА')
+    expect(canonicalBreed('Южнорусская бразильский')).toBe('ЮЖНОРУССКАЯ ОВЧАРКА')
+    expect(canonicalBreed('Южнорусская фландрский')).toBe('ЮЖНОРУССКАЯ ОВЧАРКА')
+    expect(canonicalBreed('Эпаньоль короткошерстная')).toBe('БРЕТОНСКИЙ ЭПАНЬОЛЬ')
+    expect(canonicalBreed('Эрдель американский')).toBe('ЭРДЕЛЬТЕРЬЕР')
+    expect(canonicalBreed('Эрдель терьер такса, мини...')).toBe('ЭРДЕЛЬТЕРЬЕР')
+    expect(canonicalBreed('Эрдельте')).toBe('ЭРДЕЛЬТЕРЬЕР')
+    expect(canonicalBreed('Эрдельтерьер миниатюрная')).toBe('ЭРДЕЛЬТЕРЬЕР')
+    expect(canonicalBreed('Эрдельтерьер немецкий')).toBe('ЭРДЕЛЬТЕРЬЕР')
+    expect(canonicalBreed('Ый ретривер')).toBe('ЗОЛОТИСТЫЙ РЕТРИВЕР')
+    expect(canonicalBreed('Ый, с плащом, с подпалом, ...')).toBe('')
+    expect(canonicalBreed('Ь палевый (рыжий)')).toBe('')
+    expect(canonicalBreed('Ьный малый')).toBe('')
+    expect(canonicalBreed('Ьтерье')).toBe('')
+    expect(canonicalBreed('Ья')).toBe('')
+    expect(canonicalBreed('Ья собака')).toBe('')
+  })
+
+  it('verifies that judges.json and breed-calendar indexes contain ZERO corrupt / truncated breed strings', () => {
+    const judgesPath = path.join(process.cwd(), 'data/v1/shows/indexes/judges.json')
+    expect(fs.existsSync(judgesPath)).toBe(true)
+    const judges = JSON.parse(fs.readFileSync(judgesPath, 'utf-8'))
+    const badRegex = /^[ЬЫ]|фален\)|папий.*фален|кавалер.*папий|собака.*фален|хохлат.*фален|^xl$|bordeaux\s+бульдог|deutscher\s+boxer|fox\s+terrier|sussex\s+spaniel|южноаф$|южноафр$|южнорусс$|бразильский.*южнорусская|фландрский.*южнорусская|эрдельте$|эрдель\s+американский/i
+
+    for (const j of judges) {
+      for (const b of (j.breeds || [])) {
+        expect(b).not.toMatch(badRegex)
+        expect(b).not.toMatch(/[a-zA-Z]/)
+      }
+    }
+
+    const calPath = path.join(process.cwd(), 'data/v1/shows/indexes/breed-calendar/2026.json')
+    if (fs.existsSync(calPath)) {
+      const cal = JSON.parse(fs.readFileSync(calPath, 'utf-8'))
+      for (const breed of Object.keys(cal)) {
+        expect(breed).not.toMatch(badRegex)
+        expect(breed).not.toMatch(/[a-zA-Z]/)
+      }
+    }
+  })
+
+  it('verifies matchesBreedSearch supports Russian, English FCI names and abbreviations', () => {
+    // English searches
+    expect(matchesBreedSearch('РУССКАЯ ПСОВАЯ БОРЗАЯ', 'borzoi')).toBe(true)
+    expect(matchesBreedSearch('НЕМЕЦКИЙ БОКСЕР', 'boxer')).toBe(true)
+    expect(matchesBreedSearch('КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН', 'papillon')).toBe(true)
+    expect(matchesBreedSearch('КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ФАЛЕН', 'phalene')).toBe(true)
+    expect(matchesBreedSearch('ЭРДЕЛЬТЕРЬЕР', 'airedale')).toBe(true)
+    expect(matchesBreedSearch('ЮЖНОАФРИКАНСКИЙ БУРБУЛЬ', 'boerboel')).toBe(true)
+    expect(matchesBreedSearch('СУССЕКС СПАНИЕЛЬ', 'sussex spaniel')).toBe(true)
+    expect(matchesBreedSearch('ФОКСТЕРЬЕР Г-Ш', 'fox terrier')).toBe(true)
+    expect(matchesBreedSearch('АМЕРИКАНСКИЙ БУЛЛИ', 'xl')).toBe(true)
+
+    // Russian abbreviations
+    expect(matchesBreedSearch('РУССКАЯ ПСОВАЯ БОРЗАЯ', 'рпб')).toBe(true)
+    expect(matchesBreedSearch('ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА', 'вео')).toBe(true)
+    expect(matchesBreedSearch('СРЕДНЕАЗИАТСКАЯ ОВЧАРКА', 'сао')).toBe(true)
+    expect(matchesBreedSearch('КАВКАЗСКАЯ ОВЧАРКА', 'ко')).toBe(true)
+    expect(matchesBreedSearch('НЕМЕЦКАЯ ОВЧАРКА', 'но')).toBe(true)
+    expect(matchesBreedSearch('АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР', 'аст')).toBe(true)
+    expect(matchesBreedSearch('ДЖЕК РАССЕЛ ТЕРЬЕР', 'дрт')).toBe(true)
+    expect(matchesBreedSearch('ПАРСОН РАССЕЛ ТЕРЬЕР', 'прт')).toBe(true)
+    expect(matchesBreedSearch('КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ', 'ккчс')).toBe(true)
+    expect(matchesBreedSearch('РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР', 'рчт')).toBe(true)
+
+    // Russian partial stems
+    expect(matchesBreedSearch('КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН', 'папий')).toBe(true)
+    expect(matchesBreedSearch('ВЕНГЕРСКАЯ ВЫЖЛА К-Ш', 'выжла')).toBe(true)
+  })
+
+  it('verifies that judge-details packs contain ZERO corrupt breed strings and ZERO Latin', () => {
+    const packsDir = path.join(process.cwd(), 'data/v1/shows/indexes/judge-details')
+    if (!fs.existsSync(packsDir)) return
+
+    const packFiles = fs.readdirSync(packsDir).filter((f) => f.startsWith('pack-') && f.endsWith('.json')).slice(0, 20)
+    const badRegex = /^[ЬЫ]|фален\)|папий.*фален|кавалер.*папий|собака.*фален|хохлат.*фален|^xl$|bordeaux\s+бульдог|deutscher\s+boxer|fox\s+terrier|sussex\s+spaniel|южноаф$|южноафр$|южнорусс$|бразильский.*южнорусская|фландрский.*южнорусская|эрдельте$|эрдель\s+американский/i
+
+    for (const f of packFiles) {
+      const data = JSON.parse(fs.readFileSync(path.join(packsDir, f), 'utf-8'))
+      const byKey = data.byKey || {}
+      for (const judge of Object.values<any>(byKey)) {
+        for (const b of (judge.breeds || [])) {
+          const name = b.breed
+          expect(name).not.toMatch(badRegex)
+          expect(name).not.toMatch(/[a-zA-Z]/)
+          expect(OFFICIAL_BREEDS_SET.has(name)).toBe(true)
+        }
+      }
+    }
+  })
+
+  it('verifies that data/v1/breeds.json contains ONLY clean canonical breeds with ZERO duplicates', () => {
+    const breedsPath = path.join(process.cwd(), 'data/v1/breeds.json')
+    expect(fs.existsSync(breedsPath)).toBe(true)
+    const data = JSON.parse(fs.readFileSync(breedsPath, 'utf-8'))
+    const breeds: string[] = data.breeds || []
+
+    const seen = new Set<string>()
+    for (const b of breeds) {
+      expect(b).not.toMatch(/[a-zA-Z]/)
+      expect(b).not.toMatch(/^[ЬЫ]/)
+      expect(b).not.toMatch(/ВЕСТ-ХАЙЛЕНЛ/)
+      expect(seen.has(b)).toBe(false)
+      expect(OFFICIAL_BREEDS_SET.has(b)).toBe(true)
+      seen.add(b)
+    }
   })
 })

@@ -12,9 +12,8 @@ import {
   getShowRkfCalendarYears,
   type ShowRkfCalendarEntry,
 } from '../../lib/staticData'
-import { canonicalBreed, formatBreedName, matchesBreedFilter, breedToSlug, resolveBreedParam } from '../../lib/breedMapping'
+import { canonicalBreed, formatBreedName, matchesBreedFilter, breedToSlug, resolveBreedParam, OFFICIAL_BREEDS_SET } from '../../lib/breedMapping'
 import { SHOW_CANDIDATE_BREEDS } from '../TopDogs/QuickBreedBar'
-import { useShowBreedAliases } from '../../hooks/useStaticData'
 import type { DogsIndexEntry } from '../../lib/competingBreeds'
 import { useInfiniteScroll } from '../../hooks/useInfiniteScroll'
 import {
@@ -107,9 +106,6 @@ export default function ShowCalendar({ urlYear }: ShowCalendarProps = {}) {
     queryFn: () => getShowCalendarManifest(),
     staleTime: 10 * 60 * 1000,
   })
-
-  const { data: breedAliases = [] } = useShowBreedAliases()
-  const officialBreedsSet = useMemo(() => new Set(breedAliases.map((b) => canonicalBreed(b))), [breedAliases])
 
   // Load breed index for the year (cached, fast)
   const { data: breedCalendarData } = useQuery({
@@ -279,8 +275,7 @@ export default function ShowCalendar({ urlYear }: ShowCalendarProps = {}) {
       const counts = new Map<string, number>()
       for (const [rawBreed, ids] of Object.entries(breedCalendarData.data)) {
         const canon = canonicalBreed(rawBreed)
-        if (!canon || canon.startsWith('*') || canon === 'БЕЗ ПОРОДЫ') continue
-        if (officialBreedsSet.size > 0 && !officialBreedsSet.has(canon)) continue
+        if (!canon || canon.startsWith('*') || canon === 'БЕЗ ПОРОДЫ' || !OFFICIAL_BREEDS_SET.has(canon)) continue
         const count = Array.isArray(ids) ? ids.length : 1
         counts.set(canon, (counts.get(canon) || 0) + count)
       }
@@ -301,7 +296,7 @@ export default function ShowCalendar({ urlYear }: ShowCalendarProps = {}) {
       breedValues: SHOW_CANDIDATE_BREEDS.map((b) => b.key),
       breedDogIndex: undefined,
     }
-  }, [breedCalendarData, officialBreedsSet])
+  }, [breedCalendarData])
 
   // Available cities/locations with count of exhibitions having protocols
   const availableCities = useMemo(() => {

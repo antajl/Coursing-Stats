@@ -2,7 +2,7 @@ import { useState, useEffect, useMemo, useRef, useCallback } from 'react'
 import { useSearchParams, useNavigate, useParams, useLocation } from 'react-router-dom'
 import ShowJudgeCard, { type GradeScope } from '../../components/ShowJudgeCard'
 import { initialSeasonYearFilter, resolveActiveSeason } from '../../lib/season'
-import { useShowJudges, useShowJudgesPage0, useShowBreedAliases } from '../../hooks/useStaticData'
+import { useShowJudges, useShowJudgesPage0 } from '../../hooks/useStaticData'
 import EmptyState from '../../components/EmptyState'
 import SkeletonLoader from '../../components/SkeletonLoader'
 import DoninoColumnPlaque, { DoninoColumnShell } from '../SpeedRecords/DoninoColumnPlaque'
@@ -13,6 +13,7 @@ import {
   matchesBreedFilter,
   formatBreedName,
   canonicalBreed,
+  OFFICIAL_BREEDS_SET,
 } from '../../lib/breedMapping'
 import { ShowJudgesToolbar } from './ShowJudgesToolbar'
 import ShowJudgeSortDropdown, { ShowJudgeSortKey } from './ShowJudgeSortDropdown'
@@ -144,9 +145,6 @@ export default function ShowJudges({ urlYear }: ShowJudgesProps = {}) {
   const judges: ShowJudge[] = fullJudges.length > 0 ? fullJudges : page0Judges
   const judgesPartial = fullJudges.length === 0 && hasPage0
 
-  const { data: breedAliases = [] } = useShowBreedAliases()
-  const officialBreedsSet = useMemo(() => new Set(breedAliases.map((b) => canonicalBreed(b))), [breedAliases])
-
   const { availableBreeds, dogIndex } = useMemo(() => {
     const counts = new Map<string, number>()
     for (let i = 0; i < judges.length; i++) {
@@ -155,8 +153,7 @@ export default function ShowJudges({ urlYear }: ShowJudgesProps = {}) {
       const seenJudgeBreeds = new Set<string>()
       for (let k = 0; k < jb.length; k++) {
         const canon = canonicalBreed(jb[k])
-        if (!canon || canon.startsWith('*') || canon === 'БЕЗ ПОРОДЫ') continue
-        if (officialBreedsSet.size > 0 && !officialBreedsSet.has(canon)) continue
+        if (!canon || canon.startsWith('*') || canon === 'БЕЗ ПОРОДЫ' || !OFFICIAL_BREEDS_SET.has(canon)) continue
         if (!seenJudgeBreeds.has(canon)) {
           seenJudgeBreeds.add(canon)
           counts.set(canon, (counts.get(canon) || 0) + 1)
@@ -175,7 +172,7 @@ export default function ShowJudges({ urlYear }: ShowJudgesProps = {}) {
       return a.localeCompare(b, 'ru')
     })
     return { availableBreeds: breedList, dogIndex: idx }
-  }, [judges === fullJudges ? 'full' : judges.length, officialBreedsSet])
+  }, [judges === fullJudges ? 'full' : judges.length])
 
   const filteredJudges = useMemo(() => {
     const q = searchQuery.trim().toLowerCase()

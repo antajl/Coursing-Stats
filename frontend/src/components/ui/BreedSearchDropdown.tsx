@@ -2,7 +2,14 @@ import { useState, useEffect, useRef, useMemo, type KeyboardEvent } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowUpRight } from 'lucide-react'
 import ModernDropdown from './ModernDropdown'
-import { canonicalBreed, uniqueCanonicalBreeds, displayBreed, matchesBreedFilter } from '../../lib/breedMapping'
+import {
+  canonicalBreed,
+  uniqueCanonicalBreeds,
+  displayBreed,
+  matchesBreedFilter,
+  OFFICIAL_BREEDS_SET,
+  matchesBreedSearch,
+} from '../../lib/breedMapping'
 import { deriveCompetingBreeds, countCompetingBreeds, type DogsIndexEntry } from '../../lib/competingBreeds'
 
 interface BreedSearchDropdownProps {
@@ -40,7 +47,9 @@ export default function BreedSearchDropdown({
     const counts = new Map<string, number>()
     for (const b of safeBreeds) {
       const canon = canonicalBreed(b || '')
-      if (canon) counts.set(canon, (counts.get(canon) || 0) + 1)
+      if (canon && OFFICIAL_BREEDS_SET.has(canon) && canon !== 'БЕЗ ПОРОДЫ') {
+        counts.set(canon, (counts.get(canon) || 0) + 1)
+      }
     }
     const hasCounts = Array.from(counts.values()).some((c) => c > 1)
     if (hasCounts) {
@@ -55,12 +64,12 @@ export default function BreedSearchDropdown({
     const ordered: string[] = []
     for (const b of safeBreeds) {
       const canon = canonicalBreed(b || '')
-      if (canon && !seen.has(canon)) {
+      if (canon && OFFICIAL_BREEDS_SET.has(canon) && canon !== 'БЕЗ ПОРОДЫ' && !seen.has(canon)) {
         seen.add(canon)
         ordered.push(canon)
       }
     }
-    return ordered.length > 0 ? ordered : uniqueCanonicalBreeds(safeBreeds)
+    return ordered.length > 0 ? ordered : uniqueCanonicalBreeds(safeBreeds).filter((b) => OFFICIAL_BREEDS_SET.has(b) && b !== 'БЕЗ ПОРОДЫ')
   }, [breeds, dogIndex, isOpen])
 
   // Count dogs per breed if dogIndex or breeds with multiplicity is provided (only when open)
@@ -73,30 +82,19 @@ export default function BreedSearchDropdown({
     const counts = new Map<string, number>()
     for (const b of safeBreeds) {
       const canon = canonicalBreed(b || '')
-      if (canon) counts.set(canon, (counts.get(canon) || 0) + 1)
+      if (canon && OFFICIAL_BREEDS_SET.has(canon) && canon !== 'БЕЗ ПОРОДЫ') {
+        counts.set(canon, (counts.get(canon) || 0) + 1)
+      }
     }
     const hasMultiplicity = Array.from(counts.values()).some((c) => c > 1)
     return hasMultiplicity ? counts : new Map<string, number>()
   }, [dogIndex, breeds, isOpen])
   
-  // Filter breeds based on search query (only when open)
+  // Filter breeds based on search query (only when open, supports RU / EN / abbreviations)
   const filteredBreeds = useMemo(() => {
     if (!isOpen) return []
     if (!searchQuery) return uniqueBreeds
-    const query = searchQuery.toLowerCase().trim()
-    const canonQuery = canonicalBreed(query).toLowerCase()
-    return uniqueBreeds.filter((breed) => {
-      const display = displayBreed(breed)
-      const bLower = breed.toLowerCase()
-      const pLower = display.primary.toLowerCase()
-      const sLower = display.secondary ? display.secondary.toLowerCase() : ''
-      return (
-        bLower.includes(query) ||
-        pLower.includes(query) ||
-        sLower.includes(query) ||
-        (canonQuery && (bLower.includes(canonQuery) || pLower.includes(canonQuery)))
-      )
-    })
+    return uniqueBreeds.filter((breed) => matchesBreedSearch(breed, searchQuery))
   }, [uniqueBreeds, searchQuery, isOpen])
 
   // Focus input when dropdown opens

@@ -1,4 +1,4 @@
-import { canonicalBreed } from './breedMapping'
+import { canonicalBreed, OFFICIAL_BREEDS_SET } from './breedMapping'
 
 /** Породы собак с хотя бы одним результатом на соревнованиях или выставках (для фильтров рейтинга). */
 export interface DogsIndexEntry {
@@ -16,7 +16,7 @@ export function countCompetingBreeds(dogs: DogsIndexEntry[]): Map<string, number
     // Ошибки парсера: в поле breed попадает номер каталога (напр. "18")
     if (/^\d+$/.test(raw)) continue
     const canon = canonicalBreed(raw)
-    if (!canon || canon.startsWith('*')) continue
+    if (!canon || canon.startsWith('*') || !OFFICIAL_BREEDS_SET.has(canon)) continue
     const weight = dog.dog_count ?? 1
     counts.set(canon, (counts.get(canon) ?? 0) + weight)
   }

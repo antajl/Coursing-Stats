@@ -7,8 +7,8 @@
  */
 
 import { getCanonicalBySlug, getSlugByCanonicalKey } from './breed-slugs'
+import rkfBreedsData from '../data/rkf-breeds.json'
 
-/** Нормализация без снятия RU/EN хвоста — для алиасов вроде «АКИТА / AMERICAN». */
 /** Очистка артефактов парсинга PDF и опечаток в названиях пород */
 export function sanitizeBreedName(raw: string): string {
   if (!raw) return ''
@@ -22,8 +22,32 @@ export function sanitizeBreedName(raw: string): string {
     return 'БЕЗ ПОРОДЫ'
   }
 
+  // Обрывки слов на мягкий знак и Ы (артефакты переноса ячеек таблицы PDF)
+  if (/^ЫЙ\s+РЕТРИВЕР/i.test(str)) return 'ЗОЛОТИСТЫЙ РЕТРИВЕР'
+  if (/^(?:ЛЬ|Ь|Л)НЫЙ\s+ТОЙ/i.test(str)) {
+    if (/ФАЛЕН/i.test(str) && !/ПАПИЙОН/i.test(str)) return 'КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ФАЛЕН'
+    return 'КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН'
+  }
+  if (/^[ЬЫ]/i.test(str)) return ''
+
   // Обрывки окончаний и суффиксов из разорванных таблиц PDF
-  if (/^(?:ТНАЯ|ИВЕР|Ш|СКИЙ|ТНЫЙ|С|Н|ИЙ|КИЙ|НЫЙ|АЯ|ОЙ|ЫЙ|КИНГ)$/i.test(str)) {
+  if (/^(?:ТНАЯ|ИВЕР|Ш|СКИЙ|ТНЫЙ|С|Н|ИЙ|КИЙ|НЫЙ|АЯ|ОЙ|ЫЙ|КИНГ|ТЕРЬЕ|ЮРНАЯ|ЫТ\)?)$/i.test(str)) {
+    return ''
+  }
+
+  // Обрывки и сокращения из протоколов состязаний и выставок
+  if (/^ЮЖНО[- ]*АФРИКАНСКИЙ\s+БУРБУ|^ЮЖНОАФР?|^БУРБУЛЬ(?:\s|$)/i.test(str)) {
+    return 'ЮЖНОАФРИКАНСКИЙ БУРБУЛЬ'
+  }
+  if (/^ЮЖНОРУСС(?:КАЯ)?(?:\s|$)/i.test(str)) {
+    if (/СТЕПНАЯ\s+БОРЗАЯ/i.test(str)) return 'ЮЖНОРУССКАЯ СТЕПНАЯ БОРЗАЯ'
+    return 'ЮЖНОРУССКАЯ ОВЧАРКА'
+  }
+  if (/^ЭРДЕЛЬ/i.test(str)) return 'ЭРДЕЛЬТЕРЬЕР'
+  if (/^ЭПАНЬОЛЬ/i.test(str)) return 'БРЕТОНСКИЙ ЭПАНЬОЛЬ'
+  if (/^АВСТРАЛИЙСКА\s+Я\s+ОВЧАРКА/i.test(str)) return 'АВСТРАЛИЙСКАЯ ОВЧАРКА'
+  if (/^(?:СЕДЫХ|ЛАХИТА|АБРАКИМОВ|СУДЬЯ|ЭКСПЕРТ|РИНГ)/i.test(str)) return ''
+  if (/^(?:СОБАКА|СЕТТЕР|ЗЕННЕНХУНД|С\s+СОЛЬЮ|СЕРЕБРОМ|БЕЖЕВЫЙ|БЕЛО-ЧЕРНЫЙ|ГРИФФОН|ОВЧАРКА|ТЕРЬЕР|РЕТРИВЕР|ГОНЧАЯ|ЛАЙКА|БОРЗАЯ|ДОГ|БУЛЬДОГ|ШПИЦ|ТАКСА|ПУДЕЛЬ)$/i.test(str)) {
     return ''
   }
 
@@ -268,10 +292,10 @@ export function sanitizeBreedName(raw: string): string {
   }
 
   // 6. Отсечение случайно приклеенной предыдущей породы в шапке (mergeBreedCarry)
-  const prefixGarbage = /^(?:КАВАЛЕР|КИТАЙСКАЯ|ХОХЛАТАЯ|СОБАКА|КИНГ|ЧАРЛЬЗ|ЧИХУАХУА|БАСЕНДЖИ|АКИТА|МОПС|КОКЕР|НОРВИЧ|ЛАБРАДОР|БИШОН|БИВЕР|МАЛЬТЕЗЕ|ПЕКИНЕС|PORTUGUESE|CHINESE|CAVALIER|SPANIEL)\s+/i
+  const prefixGarbage = /^(?:КАВАЛЕР|КИТАЙСКАЯ|ХОХЛАТАЯ|СОБАКА|КИНГ|ЧАРЛЬЗ|ЧИХУАХУА|БАСЕНДЖИ|АКИТА|МОПС|КОКЕР|МАЛЬТЕЗЕ|ПЕКИНЕС|PORTUGUESE|CHINESE|CAVALIER|SPANIEL)\s+/i
   if (prefixGarbage.test(str)) {
     const stripped = str.replace(prefixGarbage, '').trim()
-    if (/^(?:КСОЛО|ШОТЛАНДСКИЙ|СКОТЧ|ПУДЕЛЬ|ШПИЦ|ТАКСА|ДОБЕРМАН|БУЛЬДОГ|ЗЕННЕНХУНД|ОВЧАРКА|ТЕРЬЕР|РЕТРИВЕР|СЕТТЕР|БОРЗАЯ|ГОНЧАЯ|ЛАЙКА|ХОТОШО|ВОЛЬФШПИЦ|ВЛЧАК)/i.test(stripped)) {
+    if (/^(?:КСОЛО|ШОТЛАНДСКИЙ|СКОТЧ|ПУДЕЛЬ|ШПИЦ|ТАКСА|ДОБЕРМАН|БУЛЬДОГ|ЗЕННЕНХУНД|ОВЧАРКА|СЕТТЕР|БОРЗАЯ|ГОНЧАЯ|ЛАЙКА|ХОТОШО|ВОЛЬФШПИЦ|ВЛЧАК)/i.test(stripped)) {
       str = stripped
     }
   }
@@ -982,6 +1006,87 @@ export function displayBreed(breed: unknown): BreedDisplay {
   return res
 }
 
+/** Белый список официальных канонических пород РКФ/FCI и признанных спортивных классов */
+export const OFFICIAL_BREEDS_SET = new Set<string>()
+for (const b of (rkfBreedsData.breeds || [])) {
+  if (b.canonicalRu) {
+    const c = b.canonicalRu.toUpperCase().trim()
+    OFFICIAL_BREEDS_SET.add(c)
+    OFFICIAL_BREEDS_SET.add(c.replace(/([КГДЖ])-Ш/g, '$1 Ш'))
+    OFFICIAL_BREEDS_SET.add(c.replace(/([КГДЖ])\s+Ш/g, '$1-Ш'))
+  }
+}
+OFFICIAL_BREEDS_SET.add('БЕЗ ПОРОДЫ')
+OFFICIAL_BREEDS_SET.add('МЕТИС')
+OFFICIAL_BREEDS_SET.add('АМЕРИКАНСКИЙ ПИТБУЛЬТЕРЬЕР')
+OFFICIAL_BREEDS_SET.add('ДРУЖЕСТВЕННЫЕ-МАКСИ')
+OFFICIAL_BREEDS_SET.add('ДРУЖЕСТВЕННЫЕ-МИДИ')
+OFFICIAL_BREEDS_SET.add('ДРУЖЕСТВЕННЫЕ-МИНИ')
+OFFICIAL_BREEDS_SET.add('ПРАЙТЕР')
+OFFICIAL_BREEDS_SET.add('ВЕЛЬШ КОРГИ ПЕМБРОК / КАРДИГАН')
+OFFICIAL_BREEDS_SET.add('НЕМЕЦКАЯ ОВЧАРКА (Д-Ш, К-Ш)')
+OFFICIAL_BREEDS_SET.add('ТАКСА МИНИАТЮРНАЯ (Г-Ш, Д-Ш, Ж-Ш)')
+OFFICIAL_BREEDS_SET.add('ВЕНГЕРСКАЯ ВЫЖЛА')
+OFFICIAL_BREEDS_SET.add('ВЕНГЕРСКАЯ ВЫЖЛА К-Ш')
+OFFICIAL_BREEDS_SET.add('ВЕНГЕРСКАЯ ВЫЖЛА Ж-Ш')
+OFFICIAL_BREEDS_SET.add('ПОДЕНКО ИБИЦЕНКО')
+OFFICIAL_BREEDS_SET.add('ПОДЕНКО ИБИЦЕНКО К-Ш')
+OFFICIAL_BREEDS_SET.add('ПОДЕНКО ИБИЦЕНКО Г-Ш')
+OFFICIAL_BREEDS_SET.add('ИРЛАНДСКИЙ ВОЛКОДАВ')
+OFFICIAL_BREEDS_SET.add('НЕМЕЦКАЯ ОВЧАРКА')
+OFFICIAL_BREEDS_SET.add('НЕМЕЦКАЯ ОВЧАРКА К-Ш')
+OFFICIAL_BREEDS_SET.add('НЕМЕЦКАЯ ОВЧАРКА Д-Ш')
+
+// Автоматическое наполнение алиасов из каталога пород РКФ
+export const CANONICAL_SEARCH_TERMS = new Map<string, string[]>()
+for (const b of (rkfBreedsData.breeds || [])) {
+  const canon = b.canonicalRu.toUpperCase().trim()
+  if (b.nameEn) {
+    const en = b.nameEn.toUpperCase().trim()
+    if (!BREED_ALIAS_BY_KEY[en]) BREED_ALIAS_BY_KEY[en] = canon
+  }
+  if (Array.isArray(b.aliases)) {
+    for (const a of b.aliases) {
+      const aUp = a.toUpperCase().trim()
+      if (!BREED_ALIAS_BY_KEY[aUp]) BREED_ALIAS_BY_KEY[aUp] = canon
+    }
+  }
+
+  // Поисковые термины: русские имена, латинские имена FCI, синонимы и аббревиатуры
+  const terms = new Set<string>()
+  if (b.canonicalRu) terms.add(b.canonicalRu.toLowerCase().trim())
+  if (b.nameRu) terms.add(b.nameRu.toLowerCase().trim())
+  if (b.nameEn) terms.add(b.nameEn.toLowerCase().trim())
+  if (Array.isArray(b.aliases)) {
+    for (const a of b.aliases) {
+      if (a) terms.add(a.toLowerCase().trim())
+    }
+  }
+  const existing = CANONICAL_SEARCH_TERMS.get(canon) || []
+  CANONICAL_SEARCH_TERMS.set(canon, Array.from(new Set([...existing, ...terms])))
+}
+
+/** Проверяет совпадение породы с поисковым запросом (поддерживает русский, английский и аббревиатуры) */
+export function matchesBreedSearch(breed: string, query: string): boolean {
+  if (!query) return true
+  const q = query.toLowerCase().trim()
+  const bLower = breed.toLowerCase().trim()
+  if (bLower.includes(q)) return true
+  const canon = canonicalBreed(breed)
+  if (canon) {
+    if (canon.toLowerCase().includes(q)) return true
+    const canonQ = canonicalBreed(q)
+    if (canonQ && (canonQ === canon || matchesBreedFilter(canon, canonQ))) return true
+    const terms = CANONICAL_SEARCH_TERMS.get(canon)
+    if (terms) {
+      for (const t of terms) {
+        if (t.includes(q)) return true
+      }
+    }
+  }
+  return false
+}
+
 const CANONICAL_BREED_CACHE = new Map<string, string>()
 
 /** Каноническое UPPERCASE-имя для фильтров / индексов. */
@@ -994,6 +1099,10 @@ export function canonicalBreed(breed: unknown): string {
     CANONICAL_BREED_CACHE.set(raw, '')
     return ''
   }
+  if (/^[ЬЫьы]/.test(raw) && !/^ЫЙ\s+РЕТРИВЕР/i.test(raw) && !/^(?:ЛЬ|Ь|Л)НЫЙ\s+ТОЙ/i.test(raw)) {
+    CANONICAL_BREED_CACHE.set(raw, '')
+    return ''
+  }
 
   // 1. Очистка артефактов PDF, сносок со звёздочками и склеек
   const clean = sanitizeBreedName(raw)
@@ -1003,7 +1112,7 @@ export function canonicalBreed(breed: unknown): string {
     return res
   }
 
-  // Сначала полный ключ (до снятия / EN) — иначе «АКИТА / AMERICAN» схлопнется в японскую акиту
+  // 2. Проверка по словарю алиасов и синонимов
   const full = breedNormalizeKey(clean).replace(/\s*\/+\s*$/, '').trim()
   if (BREED_ALIAS_BY_KEY[full]) {
     const res = BREED_ALIAS_BY_KEY[full]
@@ -1011,9 +1120,35 @@ export function canonicalBreed(breed: unknown): string {
     return res
   }
   const key = breedAliasKey(clean).replace(/\s*\/+\s*$/, '').trim()
-  const res = BREED_ALIAS_BY_KEY[key] || key
-  CANONICAL_BREED_CACHE.set(raw, res)
-  return res
+  if (BREED_ALIAS_BY_KEY[key]) {
+    const res = BREED_ALIAS_BY_KEY[key]
+    CANONICAL_BREED_CACHE.set(raw, res)
+    return res
+  }
+
+  // 3. Проверка по белому списку официального каталога пород
+  if (OFFICIAL_BREEDS_SET.has(full)) {
+    CANONICAL_BREED_CACHE.set(raw, full)
+    return full
+  }
+  if (OFFICIAL_BREEDS_SET.has(key)) {
+    CANONICAL_BREED_CACHE.set(raw, key)
+    return key
+  }
+  const noHyphen = key.replace(/([КГДЖ])-Ш/g, '$1 Ш')
+  if (OFFICIAL_BREEDS_SET.has(noHyphen)) {
+    CANONICAL_BREED_CACHE.set(raw, noHyphen)
+    return noHyphen
+  }
+  const withHyphen = key.replace(/([КГДЖ])\s+Ш/g, '$1-Ш')
+  if (OFFICIAL_BREEDS_SET.has(withHyphen)) {
+    CANONICAL_BREED_CACHE.set(raw, withHyphen)
+    return withHyphen
+  }
+
+  // 4. Если строка не распознана как официальная порода — возвращаем пустую строку
+  CANONICAL_BREED_CACHE.set(raw, '')
+  return ''
 }
 
 /** Все сырые варианты, которые мапятся в канон (для SQL IN / фильтров). */
