@@ -83,13 +83,18 @@ export default function BreedSearchDropdown({
   const filteredBreeds = useMemo(() => {
     if (!isOpen) return []
     if (!searchQuery) return uniqueBreeds
-    const query = searchQuery.toLowerCase()
+    const query = searchQuery.toLowerCase().trim()
+    const canonQuery = canonicalBreed(query).toLowerCase()
     return uniqueBreeds.filter((breed) => {
       const display = displayBreed(breed)
+      const bLower = breed.toLowerCase()
+      const pLower = display.primary.toLowerCase()
+      const sLower = display.secondary ? display.secondary.toLowerCase() : ''
       return (
-        breed.toLowerCase().includes(query) ||
-        display.primary.toLowerCase().includes(query) ||
-        (display.secondary && display.secondary.toLowerCase().includes(query))
+        bLower.includes(query) ||
+        pLower.includes(query) ||
+        sLower.includes(query) ||
+        (canonQuery && (bLower.includes(canonQuery) || pLower.includes(canonQuery)))
       )
     })
   }, [uniqueBreeds, searchQuery, isOpen])

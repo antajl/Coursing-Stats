@@ -105,7 +105,11 @@ async function main() {
         if (!dog) continue
         const oldBreed = dog.breed
         const cleanBreed = canonicalBreed(oldBreed)
-        if (cleanBreed && cleanBreed !== oldBreed) {
+        if (!cleanBreed) {
+          changed = true
+          continue
+        }
+        if (cleanBreed !== oldBreed) {
           dog.breed = cleanBreed
           changed = true
         }
@@ -159,23 +163,24 @@ async function main() {
   }
 
   console.log('\n=== Step 3: Verification ===')
-  // Verify no weird papillon breeds remain
+  // Verify no weird breeds remain
   const checkFiles = fs.readdirSync(SHOWS_INDEX_DIR)
     .filter(f => f.startsWith('dog-ranking-') && f.endsWith('.json') && !f.includes('page0'))
   
   const badBreeds = new Set<string>()
+  const badRegex = /фален\)|папий.*фален|кавалер.*папий|собака.*фален|хохлат.*фален|(?:^|[\s"'`])льный той|спаниель-папий|bordeaux\s+бульдог|dogue\s+de\s+bordeaux\s+бульдог|(?:\b|^)xl(?:\b|$)|deutscher\s+boxer|fox\s+terrier|sussex\s+spaniel/i
   for (const f of checkFiles) {
     const raw = JSON.parse(fs.readFileSync(path.join(SHOWS_INDEX_DIR, f), 'utf-8'))
     const dogs = Array.isArray(raw) ? raw : (raw.dogs || [])
     for (const d of dogs) {
-      if (/фален\)|папий.*фален|кавалер.*папий|собака.*фален|хохлат.*фален|льный той|спаниель-папий/i.test(d.breed)) {
+      if (badRegex.test(d.breed)) {
         badBreeds.add(d.breed)
       }
     }
   }
 
   if (badBreeds.size === 0) {
-    console.log('✓ PERFECT: All corrupt papillon/phalene breed strings eliminated from rankings!')
+    console.log('✓ PERFECT: All corrupt / hybrid / non-canonical breed strings eliminated from rankings!')
   } else {
     console.warn(`WARNING: Remaining bad breeds:`, Array.from(badBreeds))
   }

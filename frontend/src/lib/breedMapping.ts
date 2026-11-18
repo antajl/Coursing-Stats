@@ -22,9 +22,206 @@ export function sanitizeBreedName(raw: string): string {
     return 'БЕЗ ПОРОДЫ'
   }
 
+  // Обрывки окончаний и суффиксов из разорванных таблиц PDF
+  if (/^(?:ТНАЯ|ИВЕР|Ш|СКИЙ|ТНЫЙ|С|Н|ИЙ|КИЙ|НЫЙ|АЯ|ОЙ|ЫЙ|КИНГ)$/i.test(str)) {
+    return ''
+  }
+
+  // 1.1 Перевод и нормализация английских названий пород FCI
+  if (/CHIHUAHUA/i.test(str)) {
+    if (/LONG/i.test(str)) return 'ЧИХУАХУА Д-Ш'
+    return 'ЧИХУАХУА К-Ш'
+  }
+    if (/GERMAN\s+SHEPHERD|SHEPHERD\s+DOG/i.test(str)) {
+      if (/LONG/i.test(str)) return 'НЕМЕЦКАЯ ОВЧАРКА Д-Ш'
+      return 'НЕМЕЦКАЯ ОВЧАРКА'
+    }
+    if (/LABRADOR/i.test(str)) return 'ЛАБРАДОР РЕТРИВЕР'
+    if (/GOLDEN\s+RETRIEVER/i.test(str)) return 'ЗОЛОТИСТЫЙ РЕТРИВЕР'
+    if (/VOSTOCHNOEVROPEISKAYA/i.test(str)) return 'ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА'
+    if (/JACK\s+RUSSELL/i.test(str)) return 'ДЖЕК РАССЕЛ ТЕРЬЕР'
+    if (/PARSON\s+RUSSELL/i.test(str)) return 'ПАРСОН РАССЕЛ ТЕРЬЕР'
+    if (/WELSH\s+CORGI/i.test(str)) {
+      if (/CARDIGAN/i.test(str)) return 'ВЕЛЬШ КОРГИ КАРДИГАН'
+      return 'ВЕЛЬШ КОРГИ ПЕМБРОК'
+    }
+    if (/CAUCASIAN/i.test(str)) return 'КАВКАЗСКАЯ ОВЧАРКА'
+    if (/CENTRAL\s+ASIA/i.test(str)) return 'СРЕДНЕАЗИАТСКАЯ ОВЧАРКА'
+    if (/GERMAN\s+SPITZ/i.test(str)) return 'НЕМЕЦКИЙ ШПИЦ'
+    if (/RUSSIAN\s+TOY/i.test(str)) {
+      if (/LONG/i.test(str)) return 'РУССКИЙ ТОЙ Д-Ш'
+      return 'РУССКИЙ ТОЙ Г-Ш'
+    }
+    if (/DACHSHUND/i.test(str)) {
+      if (/KANINCHEN/i.test(str)) return 'ТАКСА КРОЛИЧЬЯ Г-Ш'
+      if (/ZWERG|MINIATURE/i.test(str)) return 'ТАКСА МИНИАТЮРНАЯ Г-Ш'
+      return 'ТАКСА СТАНДАРТНАЯ Г-Ш'
+    }
+    if (/HIGHLAND\s+WHITE|WEST\s+HIGHLAND/i.test(str)) return 'ВЕСТ ХАЙЛЕНД УАЙТ ТЕРЬЕР'
+    if (/GERMAN\s+WIRE[- ]*HAIRED/i.test(str)) return 'НЕМЕЦКАЯ Ж-Ш ЛЕГАВАЯ (ДРАТХААР)'
+    if (/GERMAN\s+SHORT[- ]*HAIRED/i.test(str)) return 'НЕМЕЦКАЯ К-Ш ЛЕГАВАЯ (КУРЦХААР)'
+    if (/SIBERIAN\s+HUSKY/i.test(str)) return 'СИБИРСКИЙ ХАСКИ'
+    if (/SCHNAUZER/i.test(str)) {
+      if (/MINIATURE/i.test(str)) return 'ЦВЕРГШНАУЦЕР'
+      if (/GIANT/i.test(str)) return 'РИЗЕНШНАУЦЕР'
+      return 'ШНАУЦЕР'
+    }
+    if (/RUSSIAN\s+HUNTING|BORZOI/i.test(str)) return 'РУССКАЯ ПСОВАЯ БОРЗАЯ'
+    if (/YORKSHIRE/i.test(str)) return 'ЙОРКШИРСКИЙ ТЕРЬЕР'
+    if (/DOBERMAN/i.test(str)) return 'ДОБЕРМАН'
+    if (/MINIATURE\s+PINSCHER/i.test(str)) return 'ЦВЕРГПИНЧЕР'
+    if (/ROTTWEILER/i.test(str)) return 'РОТВЕЙЛЕР'
+    if (/ST\.?\s*BERNARD/i.test(str)) {
+      if (/LONG/i.test(str)) return 'СЕНБЕРНАР Д-Ш'
+      return 'СЕНБЕРНАР К-Ш'
+    }
+    if (/WEIMARANER/i.test(str)) {
+      if (/LONG/i.test(str)) return 'ВЕЙМАРАНЕР Д-Ш'
+      return 'ВЕЙМАРАНЕР К-Ш'
+    }
+    if (/TIBETAN\s+MASTIFF/i.test(str)) return 'ТИБЕТСКИЙ МАСТИФ'
+    if (/SAMOYED/i.test(str)) return 'САМОЕДСКАЯ СОБАКА'
+    if (/AND\s+THE\s+ABRUZZES|MAREMMA/i.test(str)) return 'МАРЕММО-АБРУЦКАЯ ОВЧАРКА'
+    if (/BICHON\s+FRISE|\bFRISE\b/i.test(str)) return 'БИШОН ФРИЗЕ'
+    if (/BORDER\s+COLLIE/i.test(str)) return 'БОРДЕР КОЛЛИ'
+    if (/BERNESE\s+MOUNTAIN/i.test(str)) return 'БЕРНСКИЙ ЗЕННЕНХУНД'
+    if (/NEWFOUNDL/i.test(str)) return 'НЬЮФАУНДЛЕНД'
+    if (/GERMAN\s+HUNTING|JAGDTERRIER/i.test(str)) return 'НЕМЕЦКИЙ ОХОТНИЧИЙ ТЕРЬЕР (ЯГДТЕРЬЕР)'
+    if (/DOGUE\s+DE\s+BORDEAUX|BORDEAUX/i.test(str)) return 'БОРДОСКИЙ ДОГ'
+    if (/AMERICAN\s+AKITA/i.test(str)) return 'АМЕРИКАНСКАЯ АКИТА'
+    if (/SCHIPPERKE/i.test(str)) return 'СХИППЕРКЕ'
+    if (/PETIT\s+BRABAN[CS]ON|BRABAN[CS]ON/i.test(str)) return 'ПТИ БРАБАНСОН'
+    if (/MINIATURE\s+BULL/i.test(str)) return 'БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ'
+    if (/BULL\s+TERRIER/i.test(str)) return 'БУЛЬТЕРЬЕР'
+    if (/DALMATIAN/i.test(str)) return 'ДАЛМАТИН'
+    if (/JAPANESE\s+SPITZ/i.test(str)) return 'ЯПОНСКИЙ ШПИЦ'
+    if (/JAPANESE\s+CHIN/i.test(str)) return 'ЯПОНСКИЙ ХИН'
+    if (/YAKUTSKAYA\s+LAIKA|YAKUTIAN/i.test(str)) return 'ЯКУТСКАЯ ЛАЙКА'
+    if (/BOSTON\s+TERRIER/i.test(str)) return 'БОСТОН ТЕРЬЕР'
+    if (/NORWICH\s+TERRIER/i.test(str)) return 'НОРВИЧ ТЕРЬЕР'
+    if (/NORFOLK\s+TERRIER/i.test(str)) return 'НОРФОЛК ТЕРЬЕР'
+    if (/CAIRN\s+TERRIER/i.test(str)) return 'КЕРН ТЕРЬЕР'
+    if (/SCOTTISH\s+TERRIER|SCOTCH\s+TERRIER/i.test(str)) return 'ШОТЛАНДСКИЙ ТЕРЬЕР'
+    if (/IRISH\s+TERRIER/i.test(str)) return 'ИРЛАНДСКИЙ ТЕРЬЕР'
+    if (/STAFFORDSHIRE\s+BULL/i.test(str)) return 'СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР'
+    if (/AMERICAN\s+STAFFORDSHIRE/i.test(str)) return 'АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР'
+    if (/ITALIAN\s+CANE\s+CORSO|CANE\s+CORSO/i.test(str)) return 'ИТАЛЬЯНСКИЙ КАНЕ КОРСО'
+    if (/BOBTAIL|OLD\s+ENGLISH\s+SHEEPDOG/i.test(str)) return 'СТАРОАНГЛИЙСКАЯ ОВЧАРКА (БОБТЕЙЛ)'
+    if (/COLLIE/i.test(str)) return 'КОЛЛИ Д-Ш'
+    if (/SHELTIE|SHETLAND/i.test(str)) return 'ШЕЛТИ'
+    if (/BEAGLE/i.test(str)) return 'БИГЛЬ'
+    if (/BASSET/i.test(str)) return 'БАССЕТ ХАУНД'
+    if (/RHODESIAN/i.test(str)) return 'РОДЕЗИЙСКИЙ РИДЖБЕК'
+    if (/GREAT\s+DANE|DEUTSCHE\s+DOGGE/i.test(str)) return 'НЕМЕЦКИЙ ДОГ'
+    if (/BULLMASTIFF/i.test(str)) return 'БУЛЬМАСТИФ'
+    if (/ENGLISH\s+MASTIFF|MASTIFF/i.test(str)) return 'АНГЛИЙСКИЙ МАСТИФ'
+    if (/FRENCH\s+BULLDOG/i.test(str)) return 'ФРАНЦУЗСКИЙ БУЛЬДОГ'
+    if (/ENGLISH\s+BULLDOG|\bBULLDOG\b/i.test(str)) return 'АНГЛИЙСКИЙ БУЛЬДОГ'
+    if (/PUG\b/i.test(str)) return 'МОПС'
+    if (/SHIH\s+TZU/i.test(str)) return 'ШИ ТЦУ'
+    if (/PEKINGESE/i.test(str)) return 'ПЕКИНЕС'
+    if (/MALTESE/i.test(str)) return 'МАЛЬТЕЗЕ'
+    if (/HAVANESE/i.test(str)) return 'ГАВАНСКИЙ БИШОН'
+    if (/COTON\s+DE\s+TULEAR/i.test(str)) return 'КОТОН ДЕ ТУЛЕАР'
+    if (/ALASKAN\s+MALAMUTE|MALAMUTE/i.test(str)) return 'АЛЯСКИНСКИЙ МАЛАМУТ'
+    if (/WHIPPET/i.test(str)) return 'УИППЕТ'
+    if (/GREYHOUND/i.test(str)) return 'ГРЕЙХАУНД'
+    if (/SALUKI/i.test(str)) return 'САЛЮКИ'
+    if (/AFGHAN/i.test(str)) return 'АФГАНСКАЯ БОРЗАЯ'
+    if (/IRISH\s+WOLFHOUND/i.test(str)) return 'ИРЛАНДСКИЙ ВОЛКОДАВ'
+    if (/DEERHOUND/i.test(str)) return 'ДИРХАУНД'
+    if (/ENGLISH\s+SETTER/i.test(str)) return 'АНГЛИЙСКИЙ СЕТТЕР'
+    if (/IRISH\s+SETTER/i.test(str)) return 'ИРЛАНДСКИЙ КРАСНЫЙ СЕТТЕР'
+    if (/GORDON\s+SETTER/i.test(str)) return 'СЕТТЕР ГОРДОН'
+    if (/POINTER/i.test(str)) return 'ПОЙНТЕР'
+    if (/AIREDALE/i.test(str)) return 'ЭРДЕЛЬТЕРЬЕР'
+    if (/BEDLINGTON/i.test(str)) return 'БЕДЛИНГТОН ТЕРЬЕР'
+    if (/AUSTRALIAN\s+SHEPHERD/i.test(str)) return 'АВСТРАЛИЙСКАЯ ОВЧАРКА'
+    if (/AUSTRALIAN\s+CATTLE/i.test(str)) return 'АВСТРАЛИЙСКАЯ ПАСТУШЬЯ СОБАКА'
+    if (/WHITE\s+SWISS/i.test(str)) return 'БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА'
+    if (/LEONBERGER/i.test(str)) return 'ЛЕОНБЕРГЕР'
+    if (/HOVAWART/i.test(str)) return 'ХОВАВАРТ'
+    if (/CHOW\s+CHOW/i.test(str)) return 'ЧАУ ЧАУ'
+    if (/SHIBA/i.test(str)) return 'СИБА'
+    if (/AKITA/i.test(str)) return 'АКИТА'
+    if (/BASENJI/i.test(str)) return 'БАСЕНДЖИ'
+    if (/DOGO\s+ARGENTINO|ARGENTINO/i.test(str)) return 'АРГЕНТИНСКИЙ ДОГ'
+    if (/ROMAGNA\s+WATER|LAGOTTO/i.test(str)) return 'ЛАГОТТО РОМАНЬОЛО'
+    if (/LANDSEER/i.test(str)) return 'ЛАНДСИР'
+    if (/IBIZAN|PODENCO\s+IBICENCO/i.test(str)) return 'ПОДЕНКО ИБИЦЕНКО'
+    if (/BULLY/i.test(str)) return 'АМЕРИКАНСКИЙ БУЛЛИ'
+    if (/LAKELAND/i.test(str)) return 'ЛЕЙКЛЕНД ТЕРЬЕР'
+    if (/SEALYHAM/i.test(str)) return 'СИЛИХЕМ ТЕРЬЕР'
+    if (/PORTUGUESE\s+WARREN|PORTUGUESE\s+PODENGO/i.test(str)) return 'ПОРТУГАЛЬСКИЙ ПОДЕНГУ'
+    if (/PRAZSKY\s+KRYSARIK|KRYSARIK/i.test(str)) return 'ПРАЖСКИЙ КРЫСАРИК'
+    if (/RUSSIAN\s+SALON/i.test(str)) return 'РУССКАЯ САЛОННАЯ СОБАКА'
+    if (/CLUMBER/i.test(str)) return 'КЛАМБЕР СПАНИЕЛЬ'
+    if (/NORWEGIAN\s+ELKHOUND/i.test(str)) return 'НОРВЕЖСКИЙ ЭЛЬКХУНД СЕРЫЙ'
+    if (/TIBETAN\s+SPANIEL/i.test(str)) return 'ТИБЕТСКИЙ СПАНИЕЛЬ'
+    if (/KING\s+CHARLES\s+SPANIEL/i.test(str)) return 'КИНГ ЧАРЛЬЗ СПАНИЕЛЬ'
+    if (/PHARAOH\s+HOUND/i.test(str)) return 'ФАРАОНОВА СОБАКА'
+    if (/SPINONE/i.test(str)) return 'ИТАЛЬЯНСКИЙ СПИНОНЕ'
+    if (/SOUTH\s+RUSSIAN\s+SHEPHERD/i.test(str)) return 'ЮЖНОРУССКАЯ ОВЧАРКА'
+    if (/MOSCOW\s+WATCH/i.test(str)) return 'МОСКОВСКАЯ СТОРОЖЕВАЯ'
+    if (/VALENCIAN/i.test(str)) return 'ВАЛЕНСИЙСКИЙ ТЕРЬЕР'
+    if (/APPENZELL/i.test(str)) return 'АППЕНЦЕЛЛЕР ЗЕННЕНХУНД'
+    if (/SWISS\s+MOUNTAIN/i.test(str)) return 'БОЛЬШОЙ ШВЕЙЦАРСКИЙ ЗЕННЕНХУНД'
+    if (/NEAPOLITAN/i.test(str)) return 'МАСТИНО НАПОЛЕТАНО'
+    if (/BIEWER/i.test(str)) return 'БИВЕР ТЕРЬЕР'
+    if (/KAZAKH/i.test(str)) return 'ТАЙГАН'
+    if (/SCHAPENDOES|NEDERLANDSE/i.test(str)) return 'ГОЛЛАНДСКИЙ СХАПЕНДУС'
+    if (/ШАР\s+ПЕЙ|SHAR\s+PEI/i.test(str)) return 'ШАР ПЕЙ'
+    if (/CONTINENTAL\s+TOY/i.test(str)) return 'КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН'
+    if (/DRAHTHAAR/i.test(str)) return 'НЕМЕЦКАЯ Ж-Ш ЛЕГАВАЯ (ДРАТХААР)'
+    if (/KURZHAAR/i.test(str)) return 'НЕМЕЦКАЯ К-Ш ЛЕГАВАЯ (КУРЦХААР)'
+    if (/KEESHOND/i.test(str)) return 'ВОЛЬФШПИЦ (КЕЕСХОНД)'
+    if (/STAFFORDSHIRE/i.test(str)) return 'АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР'
+    if (/RIDGEBACK/i.test(str)) return 'РОДЕЗИЙСКИЙ РИДЖБЕК'
+    if (/LHASA/i.test(str)) return 'ЛХАССКИЙ АПСО'
+    if (/CANARIO|PRESA/i.test(str)) return 'ПРЕСА КАНАРИО'
+    if (/SCOTIA\s+DUCK/i.test(str)) return 'НОВОШОТЛАНДСКИЙ РЕТРИВЕР'
+    if (/GRIFFON/i.test(str)) return 'БРЮССЕЛЬСКИЙ ГРИФФОН'
+
   // 2. Мешанина из множества пород (сбой переноса строк в PDF)
   if (str.includes('ДОБЕРМАН ДОБЕРМАН ДОБЕРМАН')) {
     return 'БЕРНСКИЙ ЗЕННЕНХУНД'
+  }
+
+  // Обрывки окончаний и суффиксов из разорванных таблиц PDF
+  if (/^(?:ТНАЯ|ИВЕР|Ш|СКИЙ|ТНЫЙ|С|Н|ИЙ|КИЙ|НЫЙ|АЯ|ОЙ|ЫЙ|КИНГ)$/i.test(str)) {
+    return ''
+  }
+
+  // Бордоский дог (в т.ч. артефакты переноса: Bordeaux бульдог, Dogue de bordeaux бульдог)
+  if (/BORDEAUX|БОРДОС/i.test(str)) {
+    return 'БОРДОСКИЙ ДОГ'
+  }
+
+  // Немецкий боксер
+  if (/DEUTSCHER\s+BOXER|GERMAN\s+BOXER|^BOXER(?:\s|$)|^БОКСЕР(?:\s|$)/i.test(str)) {
+    return 'НЕМЕЦКИЙ БОКСЕР'
+  }
+
+  // Суссекс спаниель
+  if (/SUSSEX\s+SPANIEL|СУССЕКС/i.test(str)) {
+    return 'СУССЕКС СПАНИЕЛЬ'
+  }
+
+  // Фокстерьеры
+  if (/FOX\s+TERRIER|ФОКСТЕРЬЕР/i.test(str)) {
+    if (/ТОЙ|TOY/i.test(str)) return 'ТОЙ ФОКСТЕРЬЕР'
+    if (/Ж[- ]*Ш|ЖЕСТК|WIRE/i.test(str)) return 'ФОКСТЕРЬЕР Ж-Ш'
+    return 'ФОКСТЕРЬЕР Г-Ш'
+  }
+
+  // Американский булли (в т.ч. XL, Покет, Стандарт, Классик, XL бульдог)
+  if (/AMERICAN\s+BULLY|АМЕРИКАНСКИЙ\s+БУЛЛИ|(?:\b|^)XL(?:\b|$)|(?:\b|^)ПОКЕТ(?:\b|$)|(?:\b|^)POCKET(?:\b|$)|(?:\b|^)БУЛЛИ(?:\b|$)|(?:\b|^)АБТ(?:\b|$)/i.test(str)) {
+    return 'АМЕРИКАНСКИЙ БУЛЛИ'
+  }
+
+  // Золотистый ретривер со склеенным префиксом предыдущей собаки
+  if (/(?:RETRIEVER|COCKER|SPANIEL|SPRINGER)\s+ЗОЛОТИСТЫЙ\s+РЕТРИВЕР/i.test(str)) {
+    return 'ЗОЛОТИСТЫЙ РЕТРИВЕР'
   }
 
   // 3. Континентальный той спаниель (Папийон / Фален) — обработка ВСЕХ артефактов, обрывков и склеек
@@ -245,6 +442,106 @@ export const BREED_ALIAS_BY_KEY: Record<string, string> = {
   'БЕЗ ПОРОДЫ': 'БЕЗ ПОРОДЫ',
   'SIGHTHOUNDБЕЗ ПОРОДЫ': 'БЕЗ ПОРОДЫ',
   'РПБ': 'РУССКАЯ ПСОВАЯ БОРЗАЯ',
+  'BORZOI': 'РУССКАЯ ПСОВАЯ БОРЗАЯ',
+  'BORZOI-RUSSIAN HUNTING': 'РУССКАЯ ПСОВАЯ БОРЗАЯ',
+  'RUSSIAN HUNTING SIGHTHOUND': 'РУССКАЯ ПСОВАЯ БОРЗАЯ',
+  'РУССКАЯ ПСОВАЯ': 'РУССКАЯ ПСОВАЯ БОРЗАЯ',
+  'ПСОВАЯ БОРЗАЯ': 'РУССКАЯ ПСОВАЯ БОРЗАЯ',
+  'ВЕО': 'ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА',
+  'VOSTOCHNOEVROPEISKAYA OVCHARKA': 'ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА',
+  'VOSTOCHNOEVROPEISKAYA': 'ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА',
+  'САО': 'СРЕДНЕАЗИАТСКАЯ ОВЧАРКА',
+  'CENTRAL ASIA SHEPHERD DOG': 'СРЕДНЕАЗИАТСКАЯ ОВЧАРКА',
+  'CENTRAL ASIAN SHEPHERD': 'СРЕДНЕАЗИАТСКАЯ ОВЧАРКА',
+  'КО': 'КАВКАЗСКАЯ ОВЧАРКА',
+  'CAUCASIAN SHEPHERD DOG': 'КАВКАЗСКАЯ ОВЧАРКА',
+  'CAUCASIAN SHEPHERD': 'КАВКАЗСКАЯ ОВЧАРКА',
+  'НО': 'НЕМЕЦКАЯ ОВЧАРКА',
+  'GERMAN SHEPHERD DOG': 'НЕМЕЦКАЯ ОВЧАРКА',
+  'GERMAN SHEPHERD': 'НЕМЕЦКАЯ ОВЧАРКА',
+  'SHEPHERD DOG DOUBLE': 'НЕМЕЦКАЯ ОВЧАРКА',
+  'SHEPHERD DOG LONG AND': 'НЕМЕЦКАЯ ОВЧАРКА Д-Ш',
+  'GERMAN ДЛИННОШЕРСТНАЯ': 'НЕМЕЦКАЯ ОВЧАРКА Д-Ш',
+  'АСТ': 'АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР',
+  'АМСТАФФ': 'АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР',
+  'АМ.СТАФФ.ТЕРЬЕР': 'АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР',
+  'AMERICAN STAFFORDSHIRE TERRIER': 'АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР',
+  'АБТ': 'АМЕРИКАНСКИЙ БУЛЛИ',
+  'БУЛЛИ': 'АМЕРИКАНСКИЙ БУЛЛИ',
+  'XL': 'АМЕРИКАНСКИЙ БУЛЛИ',
+  'XL БУЛЬДОГ': 'АМЕРИКАНСКИЙ БУЛЛИ',
+  'XL БУЛЬДОГ БУЛЬДОГ': 'АМЕРИКАНСКИЙ БУЛЛИ',
+  'ПОКЕТ': 'АМЕРИКАНСКИЙ БУЛЛИ',
+  'AMERICAN BULLY': 'АМЕРИКАНСКИЙ БУЛЛИ',
+  'AMERICAN BULLY XL': 'АМЕРИКАНСКИЙ БУЛЛИ',
+  'AMERICAN BULLY POCKET': 'АМЕРИКАНСКИЙ БУЛЛИ',
+  'АМЕРИКАНСКИЙ БУЛЛИ XL': 'АМЕРИКАНСКИЙ БУЛЛИ',
+  'АМЕРИКАНСКИЙ БУЛЛИ ПОКЕТ': 'АМЕРИКАНСКИЙ БУЛЛИ',
+  'ДРТ': 'ДЖЕК РАССЕЛ ТЕРЬЕР',
+  'JACK RUSSELL TERRIER': 'ДЖЕК РАССЕЛ ТЕРЬЕР',
+  'RUSSELL TERRIER': 'ДЖЕК РАССЕЛ ТЕРЬЕР',
+  'ПРТ': 'ПАРСОН РАССЕЛ ТЕРЬЕР',
+  'PARSON RUSSELL TERRIER': 'ПАРСОН РАССЕЛ ТЕРЬЕР',
+  'ККЧС': 'КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ',
+  'CAVALIER KING CHARLES SPANIEL': 'КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ',
+  'РЧТ': 'РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР',
+  'ЧЕРНЫЙ ТЕРЬЕР': 'РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР',
+  'РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР': 'РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР',
+  'RUSSIAN BLACK TERRIER': 'РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР',
+  'DEUTSCHER BOXER': 'НЕМЕЦКИЙ БОКСЕР',
+  'GERMAN BOXER': 'НЕМЕЦКИЙ БОКСЕР',
+  'BOXER': 'НЕМЕЦКИЙ БОКСЕР',
+  'БОКСЕР': 'НЕМЕЦКИЙ БОКСЕР',
+  'DOGUE DE BORDEAUX': 'БОРДОСКИЙ ДОГ',
+  'BORDEAUX': 'БОРДОСКИЙ ДОГ',
+  'BORDEAUX БУЛЬДОГ': 'БОРДОСКИЙ ДОГ',
+  'DOGUE DE BORDEAUX БУЛЬДОГ': 'БОРДОСКИЙ ДОГ',
+  'SUSSEX SPANIEL': 'СУССЕКС СПАНИЕЛЬ',
+  'СУССЕКС-СПАНИЕЛЬ': 'СУССЕКС СПАНИЕЛЬ',
+  'FOX TERRIER': 'ФОКСТЕРЬЕР',
+  'FOX TERRIER SMOOTH': 'ФОКСТЕРЬЕР Г-Ш',
+  'FOX TERRIER WIRE': 'ФОКСТЕРЬЕР Ж-Ш',
+  'WIRE FOX TERRIER': 'ФОКСТЕРЬЕР Ж-Ш',
+  'SMOOTH FOX TERRIER': 'ФОКСТЕРЬЕР Г-Ш',
+  'TOY FOX TERRIER': 'ТОЙ ФОКСТЕРЬЕР',
+  'CHIHUAHUA SMOOTH': 'ЧИХУАХУА К-Ш',
+  'CHIHUAHUA LONG': 'ЧИХУАХУА Д-Ш',
+  'ЧИХУАХУА Г.Ш.': 'ЧИХУАХУА К-Ш',
+  'ЧИХУАХУА Г-Ш': 'ЧИХУАХУА К-Ш',
+  'ЧИХУАХУА ГЛАДКОШЕРСТНАЯ': 'ЧИХУАХУА К-Ш',
+  'ЧИХУАХУА ДЛИННОШЕРСТНАЯ': 'ЧИХУАХУА Д-Ш',
+  'DACHSHUND': 'ТАКСА',
+  'DACHSHUND KANINCHEN': 'ТАКСА КРОЛИЧЬЯ Г-Ш',
+  'DACHSHUND ZWERG': 'ТАКСА МИНИАТЮРНАЯ Г-Ш',
+  'DACHSHUND MINIATURE': 'ТАКСА МИНИАТЮРНАЯ Г-Ш',
+  'DACHSHUND STANDARD': 'ТАКСА СТАНДАРТНАЯ Г-Ш',
+  'HIGHLAND WHITE': 'ВЕСТ ХАЙЛЕНД УАЙТ ТЕРЬЕР',
+  'WEST HIGHLAND WHITE TERRIER': 'ВЕСТ ХАЙЛЕНД УАЙТ ТЕРЬЕР',
+  'BORDER COLLIE': 'БОРДЕР КОЛЛИ',
+  'BERNESE MOUNTAIN DOG': 'БЕРНСКИЙ ЗЕННЕНХУНД',
+  'SAMOYED': 'САМОЕДСКАЯ СОБАКА',
+  'TIBETAN MASTIFF': 'ТИБЕТСКИЙ МАСТИФ',
+  'DALMATIAN': 'ДАЛМАТИН',
+  'BOSTON TERRIER': 'БОСТОН ТЕРЬЕР',
+  'STAFFORDSHIRE BULL TERRIER': 'СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР',
+  'PETIT BRABANSON': 'ПТИ БРАБАНСОН',
+  'SCHIPPERKE': 'СХИППЕРКЕ',
+  'JAPANESE SPITZ': 'ЯПОНСКИЙ ШПИЦ',
+  'JAPANESE CHIN': 'ЯПОНСКИЙ ХИН',
+  'YAKUTSKAYA LAIKA': 'ЯКУТСКАЯ ЛАЙКА',
+  'ITALIAN CANE CORSO': 'ИТАЛЬЯНСКИЙ КАНЕ КОРСО',
+  'BULL TERRIER': 'БУЛЬТЕРЬЕР СТАНДАРТНЫЙ',
+  'MINIATURE SCHNAUZER': 'ЦВЕРГШНАУЦЕР',
+  'RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР': 'ЗОЛОТИСТЫЙ РЕТРИВЕР',
+  'COCKER SPANIEL ЗОЛОТИСТЫЙ РЕТРИВЕР': 'ЗОЛОТИСТЫЙ РЕТРИВЕР',
+  'COCKER ЗОЛОТИСТЫЙ РЕТРИВЕР': 'ЗОЛОТИСТЫЙ РЕТРИВЕР',
+  'SPRINGER ЗОЛОТИСТЫЙ РЕТРИВЕР': 'ЗОЛОТИСТЫЙ РЕТРИВЕР',
+  'SPRINGER SPANIEL ЗОЛОТИСТЫЙ РЕТРИВЕР': 'ЗОЛОТИСТЫЙ РЕТРИВЕР',
+  'GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР': 'ЗОЛОТИСТЫЙ РЕТРИВЕР',
+  'SIBERIAN HUSKY': 'СИБИРСКИЙ ХАСКИ',
+  'YORKSHIRE TERRIER': 'ЙОРКШИРСКИЙ ТЕРЬЕР',
+  'MINIATURE PINSCHER': 'ЦВЕРГПИНЧЕР',
+  'GERMAN SPITZ': 'НЕМЕЦКИЙ ШПИЦ',
   'ЛАБРАДОРРЕТРИВЕР': 'ЛАБРАДОР РЕТРИВЕР',
   'ГОЛДЕН РЕТРИВЕР': 'ЗОЛОТИСТЫЙ РЕТРИВЕР',
   'GOLDEN RETRIEVER': 'ЗОЛОТИСТЫЙ РЕТРИВЕР',
@@ -348,8 +645,6 @@ export const BREED_ALIAS_BY_KEY: Record<string, string> = {
   'LEONBERGER': 'ЛЕОНБЕРГЕР',
   'AFFENPINSCHER': 'АФФЕНПИНЧЕР',
   'BRITTANY SPANIEL': 'БРЕТОНСКИЙ ЭПАНЬОЛЬ',
-  'RUSSIAN BLACK TERRIER': 'РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР',
-  'AMERICAN BULLY POCKET': 'АМЕРИКАНСКИЙ БУЛЛИ ПОКЕТ',
   'ЛЕЙКЛЕНДТЕРЬЕР': 'ЛЕЙКЛЕНД ТЕРЬЕР',
 
   // --- малая итальянская борзая / левретка (FCI 200) ---
@@ -393,9 +688,7 @@ export const BREED_ALIAS_BY_KEY: Record<string, string> = {
   'АМЕРИКАНСКИЙ ПИТ БУЛЬТЕРЬЕР': 'АМЕРИКАНСКИЙ ПИТБУЛЬТЕРЬЕР',
 
   // --- сокращения Донино ---
-  АСТ: 'АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР',
   АГТ: 'АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР',
-  РЧТ: 'РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР',
 
   // --- чирнеко: апостроф / дефис ---
   'ЧИРНЕКО ДЕЛЬ ЭТНА': 'ЧИРНЕКО ДЕЛЬ’ЭТНА',
@@ -551,11 +844,6 @@ export const BREED_ALIAS_BY_KEY: Record<string, string> = {
   'КИТАЙСКАЯ ХОХЛАТАЯ': 'КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА',
   'ХОХЛАТАЯ СОБАКА': 'КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА',
   'СОБАКА ГОЛАЯ': 'КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА',
-
-  'ЧИХУАХУА КОРОТКОШЕРСТНАЯ': 'ЧИХУАХУА К-Ш',
-  'ЧИХУАХУА КОРОТКОШЕРСТНЫЙ': 'ЧИХУАХУА К-Ш',
-  'ЧИХУАХУА ДЛИННОШЕРСТНАЯ': 'ЧИХУАХУА Д-Ш',
-  'ЧИХУАХУА ДЛИННОШЕРСТНЫЙ': 'ЧИХУАХУА Д-Ш',
 
   'КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ': 'КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН',
   'КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН-ФАЛЕН)': 'КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН',
