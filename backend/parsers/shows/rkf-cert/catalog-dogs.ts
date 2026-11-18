@@ -210,6 +210,7 @@ function parseItemsColumnAware(items: PdfItem[]): ParsedCertDog[] {
 
     const blockBreed = breedByAnchor.get(i)
     if (blockBreed) dog.breed = blockBreed
+    if (dog.breed) dog.breed = sanitizeBreedName(dog.breed)
     if (isBreedFragment(dog.breed) && lastFullBreed) {
       dog.breed = mergeBreedCarry(lastFullBreed, dog.breed)
     }

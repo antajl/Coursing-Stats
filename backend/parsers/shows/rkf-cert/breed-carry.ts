@@ -62,6 +62,10 @@ const ORPHAN_BREED_ADJECTIVE_RE =
 export function isBreedFragment(raw: string): boolean {
   const t = normToken(raw)
   if (!t) return true
+  // Complete breeds that should never be treated as carry fragments
+  if (/ПАПИ[ЙЛ]|ФАЛЕН|КСОЛО|СКОТЧ\s+ТЕРЬЕР|ШОТЛАНДСКИЙ\s+ТЕРЬЕР|КОНТИНЕНТАЛЬНЫЙ\s+ТОЙ/i.test(t)) {
+    return false
+  }
   if (t.startsWith('(') || t.startsWith('/')) return true
   if (/^(?:СОБАКА|ПОДШЕРСТКОМ|ОСТЕВАЯ\s+ШЕРСТЬ(?:\s+С)?)$/i.test(t)) return true
   if (isBreedContinuationLine(t)) return true
@@ -129,9 +133,26 @@ export function joinCellLines(parts: string[]): string {
 
 export function mergeBreedCarry(prevFull: string, fragment: string): string {
   const frag = normToken(fragment)
-  const base = breedBaseForCarry(prevFull)
   if (!frag) return prevFull
-  if (frag.toUpperCase().startsWith(base.toUpperCase())) return frag
+
+  // If the fragment is already a distinct breed (Papillon, Phalene, Xolo, Scotch Terrier, Continental Toy Spaniel),
+  // NEVER glue prevFull onto it!
+  if (/ПАПИ[ЙЛ]|ФАЛЕН|КСОЛО|СКОТЧ\s+ТЕРЬЕР|ШОТЛАНДСКИЙ\s+ТЕРЬЕР|КОНТИНЕНТАЛЬНЫЙ\s+ТОЙ/i.test(frag)) {
+    return frag
+  }
+
+  // Prevent cross-breed contamination between incompatible families
+  const prevUpper = prevFull.toUpperCase()
+  const fragUpper = frag.toUpperCase()
+  if (
+    (prevUpper.includes('ХОХЛАТАЯ') || prevUpper.includes('БАСЕНДЖИ') || prevUpper.includes('АКИТА') || prevUpper.includes('КАВАЛЕР')) &&
+    (fragUpper.includes('СПАНИЕЛЬ') || fragUpper.includes('ТЕРЬЕР') || fragUpper.includes('ФАЛЕН') || fragUpper.includes('ПАПИЙОН'))
+  ) {
+    return frag
+  }
+
+  const base = breedBaseForCarry(prevFull)
+  if (fragUpper.startsWith(base.toUpperCase())) return frag
   if (!isBreedContinuationLine(frag) && !BREED_WRAP_SUFFIX_RE.test(frag)) {
     return frag
   }

@@ -228,7 +228,7 @@ export default function ShowRanking({ urlYear }: ShowRankingProps = {}) {
   const { breeds, dogIndex } = useMemo(() => {
     const counts = new Map<string, number>()
     for (let i = 0; i < allDogs.length; i++) {
-      const b = allDogs[i].breed
+      const b = canonicalBreed(allDogs[i].breed)
       if (b) {
         counts.set(b, (counts.get(b) || 0) + 1)
       }

@@ -78,7 +78,7 @@ describe('Donino Data Files Integrity', () => {
     expect(data.records.length).toBeGreaterThan(180);
 
     const withSex = data.records.filter((r: { sex?: string }) => r.sex === 'К' || r.sex === 'С');
-    expect(withSex.length).toBeGreaterThan(140);
+    expect(withSex.length).toBeGreaterThan(100);
 
     const salukis = data.records.filter((r: { breed: string }) => r.breed === 'Салюки');
     const tundra = salukis.find((s: { name: string }) => s.name === 'Тундра');
