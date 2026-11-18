@@ -9,6 +9,39 @@ import { isShowAbsenceGrade } from '../../lib/show-grades'
 const DB_PATH = 'data/local/exhibitions-rkf-archive.sqlite'
 const SHOWS_INDEX_DIR = 'data/v1/shows/indexes'
 
+function cleanBreedsRecursive(obj: any): { changed: boolean, count: number } {
+  let changed = false
+  let count = 0
+  if (!obj || typeof obj !== 'object') return { changed, count }
+  if (Array.isArray(obj)) {
+    for (const item of obj) {
+      const res = cleanBreedsRecursive(item)
+      if (res.changed) {
+        changed = true
+        count += res.count
+      }
+    }
+  } else {
+    for (const key in obj) {
+      if (key === 'breed' && typeof obj[key] === 'string') {
+        const canon = canonicalBreed(obj[key])
+        if (canon && canon !== obj[key]) {
+          obj[key] = canon
+          changed = true
+          count++
+        }
+      } else if (typeof obj[key] === 'object' && obj[key] !== null) {
+        const res = cleanBreedsRecursive(obj[key])
+        if (res.changed) {
+          changed = true
+          count += res.count
+        }
+      }
+    }
+  }
+  return { changed, count }
+}
+
 async function main() {
   console.log('=== Step 1: Sanitizing breed names in SQLite archive ===')
   if (fs.existsSync(DB_PATH)) {
@@ -29,37 +62,13 @@ async function main() {
         const row = rows[i]!
         try {
           const raw = JSON.parse(gunzipSync(row.data).toString('utf-8'))
-          let changed = false
+          const res = cleanBreedsRecursive(raw)
 
-          if (raw.results && Array.isArray(raw.results)) {
-            for (const r of raw.results) {
-              if (r.breed) {
-                const canon = canonicalBreed(r.breed)
-                if (canon && canon !== r.breed) {
-                  r.breed = canon
-                  updatedResultsCount++
-                  changed = true
-                }
-              }
-            }
-          }
-
-          if (raw.breed_catalog && Array.isArray(raw.breed_catalog)) {
-            for (const b of raw.breed_catalog) {
-              if (b.breed) {
-                const canon = canonicalBreed(b.breed)
-                if (canon && canon !== b.breed) {
-                  b.breed = canon
-                  changed = true
-                }
-              }
-            }
-          }
-
-          if (changed) {
+          if (res.changed) {
             const compressed = gzipSync(Buffer.from(JSON.stringify(raw), 'utf-8'), { level: 9 })
             updateStmt.run(compressed, row.id, row.year)
             updatedExCount++
+            updatedResultsCount += res.count
           }
         } catch (e) {
           console.error(`Error processing exhibition ${row.id}/${row.year}:`, e)
