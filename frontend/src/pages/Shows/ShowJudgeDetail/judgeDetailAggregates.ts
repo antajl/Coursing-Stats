@@ -1,5 +1,6 @@
 import { SHOW_GRADE_ORDER, type ShowGradeKey } from '../../../../../backend/lib/show-grades'
 import type { ShowJudgeDetail as ShowJudgeDetailData } from '../../../lib/staticData'
+import { canonicalBreed, OFFICIAL_BREEDS_SET } from '../../../lib/breedMapping'
 
 export type GradeFilterKey = ShowGradeKey | 'dq'
 export type ListTab = 'breeds' | 'exhibitions'
@@ -29,6 +30,35 @@ export function exhibitionYear(date: string): string | null {
   const dmy = date.match(/(\d{4})$/)
   if (dmy) return dmy[1]
   return null
+}
+
+export function parseDateToComparable(dateStr?: string | null): number {
+  if (!dateStr) return 0
+  const trimmed = dateStr.trim()
+  const dmy = trimmed.match(/^(\d{1,2})\.(\d{1,2})\.(\d{4})$/)
+  if (dmy) {
+    return Number(`${dmy[3]}${dmy[2].padStart(2, '0')}${dmy[1].padStart(2, '0')}`)
+  }
+  const iso = trimmed.match(/^(\d{4})-(\d{1,2})-(\d{1,2})$/)
+  if (iso) {
+    return Number(`${iso[1]}${iso[2].padStart(2, '0')}${iso[3].padStart(2, '0')}`)
+  }
+  return 0
+}
+
+export function compareExhibitionDates(
+  a: { date?: string; id?: number },
+  b: { date?: string; id?: number },
+  direction: 'desc' | 'asc' = 'desc',
+): number {
+  const numA = parseDateToComparable(a.date)
+  const numB = parseDateToComparable(b.date)
+  if (numA === 0 && numB !== 0) return 1
+  if (numB === 0 && numA !== 0) return -1
+  if (numA !== numB) {
+    return direction === 'desc' ? numB - numA : numA - numB
+  }
+  return direction === 'desc' ? (b.id ?? 0) - (a.id ?? 0) : (a.id ?? 0) - (b.id ?? 0)
 }
 
 export function emptyGrades(): Record<GradeFilterKey, number> {
@@ -66,8 +96,11 @@ export function sumBreedCounts(
       bc = ex.adult_breed_counts || ex.breed_counts
     }
     if (!bc) continue
-    for (const [breed, n] of Object.entries(bc)) {
-      if (n > 0) map.set(breed, (map.get(breed) || 0) + n)
+    for (const [rawBreed, n] of Object.entries(bc)) {
+      if (n <= 0) continue
+      const canon = canonicalBreed(rawBreed)
+      if (!canon || !OFFICIAL_BREEDS_SET.has(canon) || canon === 'БЕЗ ПОРОДЫ') continue
+      map.set(canon, (map.get(canon) || 0) + n)
     }
   }
   return [...map.entries()]

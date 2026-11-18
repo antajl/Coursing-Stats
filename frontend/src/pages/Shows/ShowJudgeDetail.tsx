@@ -5,6 +5,7 @@ import { useShowJudgeDetails, useShowJudgesStrictnessBaseline } from '../../hook
 import { JsonLd, personSchema } from '../../components/JsonLd'
 import { resolveShowJudgeNumericId } from '../../lib/judgeIdMap.generated'
 import type { GradeScope } from '../../components/ShowJudgeCard'
+import { canonicalBreed, OFFICIAL_BREEDS_SET } from '../../lib/breedMapping'
 import {
   GRADE_TILES,
   buildStrictness,
@@ -12,6 +13,7 @@ import {
   buildPuppyStrictness,
   emptyGrades,
   exhibitionYear,
+  compareExhibitionDates,
   sumBreedCounts,
   sumGradeCounts,
   type GradeFilterKey,
@@ -81,8 +83,10 @@ export default function ShowJudgeDetail() {
 
   const periodExhibitions = useMemo(() => {
     if (!judge) return []
-    if (!yearParam) return judge.exhibitions
-    return judge.exhibitions.filter((ex) => exhibitionYear(ex.date) === yearParam)
+    const list = !yearParam
+      ? judge.exhibitions
+      : judge.exhibitions.filter((ex) => exhibitionYear(ex.date) === yearParam)
+    return [...list].sort((a, b) => compareExhibitionDates(a, b, 'desc'))
   }, [judge, yearParam])
 
   const scopedExhibitions = useMemo(() => {
@@ -133,26 +137,42 @@ export default function ShowJudgeDetail() {
 
   const periodBreeds = useMemo(() => {
     if (!judge) return [] as Array<{ breed: string; count: number }>
+    let rawList: Array<{ breed: string; count: number; puppy_count?: number; adult_count?: number }> = []
     if (!yearParam) {
       if (gradeScope === 'puppy') {
-        if (judge.puppy_breeds && judge.puppy_breeds.length > 0) return judge.puppy_breeds
-        return judge.breeds
-          .filter((b) => (b.puppy_count ?? 0) > 0)
-          .map((b) => ({ breed: b.breed, count: b.puppy_count ?? 0 }))
+        if (judge.puppy_breeds && judge.puppy_breeds.length > 0) rawList = judge.puppy_breeds
+        else {
+          rawList = judge.breeds
+            .filter((b) => (b.puppy_count ?? 0) > 0)
+            .map((b) => ({ breed: b.breed, count: b.puppy_count ?? 0 }))
+        }
+      } else if (gradeScope === 'adult') {
+        if (judge.adult_breeds && judge.adult_breeds.length > 0) rawList = judge.adult_breeds
+        else {
+          rawList = judge.breeds
+            .filter((b) => (b.adult_count ?? 0) > 0)
+            .map((b) => ({ breed: b.breed, count: b.adult_count ?? 0 }))
+        }
+      } else {
+        rawList = judge.breeds
       }
-      if (gradeScope === 'adult') {
-        if (judge.adult_breeds && judge.adult_breeds.length > 0) return judge.adult_breeds
-        return judge.breeds
-          .filter((b) => (b.adult_count ?? 0) > 0)
-          .map((b) => ({ breed: b.breed, count: b.adult_count ?? 0 }))
-      }
-      return judge.breeds
+    } else {
+      const hasBreedCounts = periodExhibitions.some(
+        (ex) => ex.breed_counts && Object.keys(ex.breed_counts).length > 0,
+      )
+      if (hasBreedCounts) return sumBreedCounts(periodExhibitions, gradeScope)
+      rawList = judge.breeds
     }
-    const hasBreedCounts = periodExhibitions.some(
-      (ex) => ex.breed_counts && Object.keys(ex.breed_counts).length > 0,
-    )
-    if (hasBreedCounts) return sumBreedCounts(periodExhibitions, gradeScope)
-    return judge.breeds
+
+    const merged = new Map<string, number>()
+    for (const item of rawList) {
+      const canon = canonicalBreed(item.breed)
+      if (!canon || !OFFICIAL_BREEDS_SET.has(canon) || canon === 'БЕЗ ПОРОДЫ') continue
+      merged.set(canon, (merged.get(canon) || 0) + (item.count || 0))
+    }
+    return Array.from(merged.entries())
+      .map(([breed, count]) => ({ breed, count }))
+      .sort((a, b) => b.count - a.count || a.breed.localeCompare(b.breed, 'ru'))
   }, [judge, yearParam, periodExhibitions, gradeScope])
 
   const periodStrictness = useMemo(() => buildStrictness(periodGrades), [periodGrades])

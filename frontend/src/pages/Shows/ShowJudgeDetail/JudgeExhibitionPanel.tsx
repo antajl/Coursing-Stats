@@ -2,9 +2,9 @@ import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
 import { getAvailableExhibitionIds } from '../../../lib/staticData'
-import { ExternalLink, Calendar } from 'lucide-react'
+import { ExternalLink, Calendar, ArrowUpDown } from 'lucide-react'
 import ToolbarSearch from '../../../components/toolbar/ToolbarSearch'
-import { formatDate, type GradeFilterKey } from './judgeDetailAggregates'
+import { formatDate, compareExhibitionDates, type GradeFilterKey } from './judgeDetailAggregates'
 
 type ExhibitionRow = {
   id: number
@@ -26,22 +26,26 @@ export function JudgeExhibitionPanel({
   onToggleShowAll: () => void
 }) {
   const [searchQuery, setSearchQuery] = useState('')
+  const [sortOrder, setSortOrder] = useState<'desc' | 'asc'>('desc')
   const { data: availableIds } = useQuery({
     queryKey: ['available-exhibitions'],
     queryFn: getAvailableExhibitionIds,
     staleTime: Infinity,
   })
 
-  const filtered = useMemo(() => {
+  const filteredAndSorted = useMemo(() => {
+    let list = exhibitions
     const q = searchQuery.trim().toLowerCase()
-    if (!q) return exhibitions
-    return exhibitions.filter(
-      (ex) =>
-        (ex.title && ex.title.toLowerCase().includes(q)) ||
-        (ex.date && ex.date.includes(q)) ||
-        String(ex.id).includes(q),
-    )
-  }, [exhibitions, searchQuery])
+    if (q) {
+      list = list.filter(
+        (ex) =>
+          (ex.title && ex.title.toLowerCase().includes(q)) ||
+          (ex.date && ex.date.includes(q)) ||
+          String(ex.id).includes(q),
+      )
+    }
+    return [...list].sort((a, b) => compareExhibitionDates(a, b, sortOrder))
+  }, [exhibitions, searchQuery, sortOrder])
 
   if (exhibitions.length === 0) {
     return (
@@ -52,20 +56,36 @@ export function JudgeExhibitionPanel({
   }
 
   const isFiltering = Boolean(searchQuery.trim())
-  const displayed = isFiltering || showAll ? filtered : filtered.slice(0, 25)
+  const displayed = isFiltering || showAll ? filteredAndSorted : filteredAndSorted.slice(0, 25)
 
   return (
     <div className="space-y-4">
-      {/* Search exhibitions — строго 1 строка */}
-      <div className="flex items-center gap-2 w-full max-w-sm">
-        <ToolbarSearch
-          value={searchQuery}
-          onChange={setSearchQuery}
-          placeholder="Поиск по названию или дате..."
-        />
+      {/* Controls: Search and Sort — строго в стиле Old Money */}
+      <div className="flex items-center gap-2 overflow-x-auto no-scrollbar py-0.5 justify-between w-full min-w-0">
+        <div className="flex items-center gap-1.5 flex-1 min-w-0 max-w-sm">
+          <ToolbarSearch
+            value={searchQuery}
+            onChange={setSearchQuery}
+            placeholder="Поиск по названию или дате..."
+          />
+        </div>
+
+        <button
+          type="button"
+          onClick={() => setSortOrder((prev) => (prev === 'desc' ? 'asc' : 'desc'))}
+          className="shrink-0 inline-flex items-center gap-1.5 h-8 sm:h-9 px-3 rounded-lg border border-old-money-200 bg-white text-xs font-semibold text-charcoal-700 hover:bg-cream-50 hover:border-camel-300 transition-colors cursor-pointer"
+          title={
+            sortOrder === 'desc'
+              ? 'Сортировка: сначала новые (нажмите для переключения)'
+              : 'Сортировка: сначала старые (нажмите для переключения)'
+          }
+        >
+          <ArrowUpDown className="h-3.5 w-3.5 text-camel-600" />
+          <span>{sortOrder === 'desc' ? 'Сначала новые' : 'Сначала старые'}</span>
+        </button>
       </div>
 
-      {filtered.length === 0 ? (
+      {filteredAndSorted.length === 0 ? (
         <div className="py-8 text-center text-sm text-charcoal-500">
           Выставки по запросу «{searchQuery}» не найдены
         </div>
@@ -127,14 +147,14 @@ export function JudgeExhibitionPanel({
         </div>
       )}
 
-      {!isFiltering && filtered.length > 25 && (
+      {!isFiltering && filteredAndSorted.length > 25 && (
         <div className="pt-2 text-center">
           <button
             type="button"
             onClick={onToggleShowAll}
-            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-semibold text-camel-700 bg-cream-50 border border-old-money-200 hover:bg-cream-100 hover:text-camel-800 transition-colors"
+            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-semibold text-camel-700 bg-cream-50 border border-old-money-200 hover:bg-cream-100 hover:text-camel-800 transition-colors cursor-pointer"
           >
-            {showAll ? 'Свернуть список выставок' : `Показать все выставки (${filtered.length})`}
+            {showAll ? 'Свернуть список выставок' : `Показать все выставки (${filteredAndSorted.length})`}
           </button>
         </div>
       )}
