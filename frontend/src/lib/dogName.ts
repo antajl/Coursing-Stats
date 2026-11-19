@@ -1,3 +1,5 @@
+import { convertKeyboardLayout, transliterateEnToRu } from './searchEngine'
+
 export type ParsedDogName = {
   primary: string
   secondary: string | null
@@ -123,6 +125,25 @@ export function dogQuerySearchTokens(query: string): string[] {
   const q = normalizeNameForSearch(query)
   if (!q) return []
   const seeds = [q, homoglyphCyrillicToLatin(q), transliterateCyrillicToLatin(q)]
+
+  // Поддержка случайной раскладки (QWERTY <-> ЙЦУКЕН)
+  const kb = normalizeNameForSearch(convertKeyboardLayout(q))
+  if (kb && kb !== q) {
+    seeds.push(kb)
+    seeds.push(homoglyphCyrillicToLatin(kb))
+    seeds.push(transliterateCyrillicToLatin(kb))
+  }
+
+  // Поддержка обратной транслитерации латиницы в кириллицу
+  if (/[a-z]/i.test(q)) {
+    const ru = normalizeNameForSearch(transliterateEnToRu(q))
+    if (ru && ru !== q) {
+      seeds.push(ru)
+      seeds.push(homoglyphCyrillicToLatin(ru))
+      seeds.push(transliterateCyrillicToLatin(ru))
+    }
+  }
+
   const tokens = new Set<string>()
   for (const seed of seeds) {
     for (const v of expandLatinSearchVariants(seed)) tokens.add(v)

@@ -1,6 +1,7 @@
 import React, { useState, useMemo, useCallback } from 'react'
 import { Trophy, Timer, Award, ChevronLeft, ChevronRight } from 'lucide-react'
 import { canonicalBreed, formatBreedName, matchesBreedFilter } from '../../lib/breedMapping'
+import { matchesDog } from '../../lib/searchEngine'
 import type { ChampionshipStanding, ChampionshipPromotion } from '../../lib/staticData/donino'
 import { useInfiniteScroll } from '../../hooks/useInfiniteScroll'
 import ChampionshipDogCard from './components/ChampionshipDogCard'
@@ -113,13 +114,8 @@ export default function ChampionshipStandingsTab({
 
   // Dynamic league counts reflecting current breed and search query
   const dynamicLeagueCounts = useMemo(() => {
-    const searchLower = searchQuery.toLowerCase()
     const breedAndSearchFiltered = (standings || []).filter((d) => {
-      const matchesSearch =
-        searchQuery === '' ||
-        String(d.name || '').toLowerCase().includes(searchLower) ||
-        Boolean(d.name_ru && d.name_ru.toLowerCase().includes(searchLower)) ||
-        Boolean(d.name_lat && d.name_lat.toLowerCase().includes(searchLower))
+      const matchesSearch = !searchQuery || matchesDog(d, searchQuery)
       const matchesBreed =
         selectedBreed === '' || matchesBreedFilter(d.breed, selectedBreed)
       const matchesSex =
@@ -147,15 +143,10 @@ export default function ChampionshipStandingsTab({
 
   // Base filtered list before sorting
   const baseFiltered = useMemo(() => {
-    const searchLower = searchQuery.toLowerCase()
     return (standings || []).filter((d) => {
       const matchesLeague =
         selectedLeague === 'all' || d.current_league === selectedLeague
-      const matchesSearch =
-        searchQuery === '' ||
-        String(d.name || '').toLowerCase().includes(searchLower) ||
-        Boolean(d.name_ru && d.name_ru.toLowerCase().includes(searchLower)) ||
-        Boolean(d.name_lat && d.name_lat.toLowerCase().includes(searchLower))
+      const matchesSearch = !searchQuery || matchesDog(d, searchQuery)
       const matchesBreed =
         selectedBreed === '' || matchesBreedFilter(d.breed, selectedBreed)
       const matchesSex =

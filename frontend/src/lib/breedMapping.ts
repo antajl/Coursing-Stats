@@ -1066,18 +1066,24 @@ for (const b of (rkfBreedsData.breeds || [])) {
   CANONICAL_SEARCH_TERMS.set(canon, Array.from(new Set([...existing, ...terms])))
 }
 
-/** Проверяет совпадение породы с поисковым запросом (поддерживает русский, английский и аббревиатуры) */
+import { generateSearchTokens } from './searchEngine'
+
+/** Проверяет совпадение породы с поисковым запросом (поддерживает русский, английский, раскладку и аббревиатуры) */
 export function matchesBreedSearch(breed: string, query: string): boolean {
   if (!query) return true
-  const q = query.toLowerCase().trim()
+  const tokens = generateSearchTokens(query)
+  if (tokens.length === 0) return true
+
   const bLower = breed.toLowerCase().trim()
-  if (bLower.includes(q)) return true
   const canon = canonicalBreed(breed)
-  if (canon) {
-    if (canon.toLowerCase().includes(q)) return true
+  const canonLower = canon ? canon.toLowerCase() : ''
+  const terms = canon ? CANONICAL_SEARCH_TERMS.get(canon) : undefined
+
+  for (const q of tokens) {
+    if (bLower.includes(q)) return true
+    if (canonLower && canonLower.includes(q)) return true
     const canonQ = canonicalBreed(q)
     if (canonQ && (canonQ === canon || matchesBreedFilter(canon, canonQ))) return true
-    const terms = CANONICAL_SEARCH_TERMS.get(canon)
     if (terms) {
       for (const t of terms) {
         if (t.includes(q)) return true

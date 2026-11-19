@@ -7,6 +7,7 @@ import { getBreedFciGroup, FCI_GROUPS } from '../../lib/fciGroups'
 import { useBreedAnnualLeaders, useTopPlacement, useTopSpeed } from '../../hooks/useStaticData'
 import { useListReveal } from '../../hooks/useListReveal'
 import PageToolbar from '../../components/toolbar/PageToolbar'
+import { matchesSearchText } from '../../lib/searchEngine'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
 import ModernDropdown from '../../components/ui/ModernDropdown'
 import BreedSearchDropdown from '../../components/ui/BreedSearchDropdown'
@@ -189,17 +190,14 @@ export default function BreedsDirectory() {
       list = list.filter((b) => getBreedFciGroup(b.slug) === gNum)
     }
 
-    const q = searchQuery.trim().toLowerCase()
+    const q = searchQuery.trim()
     if (q) {
-      list = list.filter((b) => {
-        return (
-          b.nameRu.toLowerCase().includes(q) ||
-          b.nameLat.toLowerCase().includes(q) ||
-          b.canonicalKey.toLowerCase().includes(q) ||
-          b.fci.toLowerCase().includes(q) ||
-          (b.aliases && b.aliases.some((a) => a.toLowerCase().includes(q)))
+      list = list.filter((b) =>
+        matchesSearchText(
+          [b.nameRu, b.nameLat, b.canonicalKey, b.fci, ...(b.aliases || [])],
+          q
         )
-      })
+      )
     }
 
     return list

@@ -17,6 +17,7 @@ import {
 } from '../../lib/breedMapping'
 import { ShowJudgesToolbar } from './ShowJudgesToolbar'
 import ShowJudgeSortDropdown, { ShowJudgeSortKey } from './ShowJudgeSortDropdown'
+import { matchesJudge } from '../../lib/searchEngine'
 
 const SHOW_YEARS = ['2026', '2025', '2024'] as const
 const SHOW_JUDGES_ACTIVE_SEASON = resolveActiveSeason(SHOW_YEARS)
@@ -175,9 +176,9 @@ export default function ShowJudges({ urlYear }: ShowJudgesProps = {}) {
   }, [judges === fullJudges ? 'full' : judges.length])
 
   const filteredJudges = useMemo(() => {
-    const q = searchQuery.trim().toLowerCase()
+    const q = searchQuery.trim()
     return judges.filter((judge) => {
-      if (q && !judge.name.toLowerCase().includes(q)) return false
+      if (q && !matchesJudge(judge, q)) return false
       if (filterBreed && !(judge.breeds || []).some((b) => matchesBreedFilter(b, filterBreed))) {
         return false
       }

@@ -4,7 +4,7 @@ import ToolbarSearch from '../../../components/toolbar/ToolbarSearch'
 import BreedSearchDropdown from '../../../components/ui/BreedSearchDropdown'
 import ShowJudgeGradeScopeDropdown from '../ShowJudgeGradeScopeDropdown'
 import DoninoColumnPlaque, { DoninoColumnShell } from '../../SpeedRecords/DoninoColumnPlaque'
-import { formatBreedSentenceCase } from '../../../lib/breedMapping'
+import { formatBreedSentenceCase, matchesBreedSearch } from '../../../lib/breedMapping'
 import { toolbarPillTriggerClass } from '../../../lib/toolbar'
 import type { GradeScope } from '../../../components/ShowJudgeCard'
 import { ShowJudgeBreedDogsList } from './ShowJudgeBreedDogsList'
@@ -83,9 +83,9 @@ export function JudgeBreedPanel({
     if (activeBreed) {
       list = list.filter((b) => b.breed.toLowerCase() === activeBreed.toLowerCase())
     }
-    const q = searchQuery.trim().toLowerCase()
+    const q = searchQuery.trim()
     if (q) {
-      list = list.filter((b) => b.breed.toLowerCase().includes(q))
+      list = list.filter((b) => matchesBreedSearch(b.breed, q))
     }
     return [...list].sort((a, b) => {
       if (sortMode === 'alpha') {

@@ -8,6 +8,7 @@ import { exhibitionDogProfilePath } from '../ShowExhibitionDetail/exhibitionDeta
 import { formatShowGradeDisplay } from '../../../../../backend/lib/show-grades'
 import { showJudgeMergeKeyFromRaw } from '../../../../../backend/lib/show-judge-name'
 import { canonicalBreed, formatBreedSentenceCase } from '../../../lib/breedMapping'
+import { matchesSearchText } from '../../../lib/searchEngine'
 import { getShowExhibition } from '../../../lib/staticData'
 import type { GradeScope } from '../../../components/ShowJudgeCard'
 
@@ -277,14 +278,13 @@ export function ShowJudgeBreedDogsList({
   }, [dogs, gradeScope])
 
   const filteredDogs = useMemo(() => {
-    const q = searchQuery.trim().toLowerCase()
+    const q = searchQuery.trim()
     if (!q) return scopeFilteredDogs
-    return scopeFilteredDogs.filter(
-      (d) =>
-        d.dog_name.toLowerCase().includes(q) ||
-        d.class?.toLowerCase().includes(q) ||
-        d.owner?.toLowerCase().includes(q) ||
-        String(d.catalog_number || '').includes(q),
+    return scopeFilteredDogs.filter((d) =>
+      matchesSearchText(
+        [d.dog_name, d.class, d.owner, String(d.catalog_number || '')],
+        q
+      )
     )
   }, [scopeFilteredDogs, searchQuery])
 

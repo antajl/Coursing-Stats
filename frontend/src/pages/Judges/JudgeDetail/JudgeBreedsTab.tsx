@@ -6,7 +6,8 @@ import BreedSearchDropdown from '../../../components/ui/BreedSearchDropdown'
 import ProcoursingEventLink from '../../../components/ProcoursingEventLink'
 import RankBadge from '../../../components/RankBadge'
 import DoninoColumnPlaque, { DoninoColumnShell } from '../../SpeedRecords/DoninoColumnPlaque'
-import { formatBreedSentenceCase } from '../../../lib/breedMapping'
+import { formatBreedSentenceCase, matchesBreedSearch } from '../../../lib/breedMapping'
+import { matchesDog } from '../../../lib/searchEngine'
 import { toolbarPillTriggerClass } from '../../../lib/toolbar'
 import type { BreedStat, DogStat } from './types'
 import { CRITERIA_META } from './constants'
@@ -360,16 +361,12 @@ export const JudgeBreedsTab: React.FC<JudgeBreedsTabProps> = ({
     if (selectedBreed) {
       list = list.filter((b) => b.breed.toLowerCase() === selectedBreed.toLowerCase())
     }
-    const q = searchQuery.trim().toLowerCase()
+    const q = searchQuery.trim()
     if (q) {
       list = list.filter(
         (b) =>
-          b.breed.toLowerCase().includes(q) ||
-          (b.dogs || []).some(
-            (d) =>
-              d.name.toLowerCase().includes(q) ||
-              Boolean(d.name_ru && d.name_ru.toLowerCase().includes(q)),
-          ),
+          matchesBreedSearch(b.breed, q) ||
+          (b.dogs || []).some((d) => matchesDog(d, q)),
       )
     }
     return list
@@ -496,13 +493,10 @@ export const JudgeBreedsTab: React.FC<JudgeBreedsTabProps> = ({
         >
           <div className="divide-y divide-old-money-100/70">
             {paginatedBreeds.map((stat) => {
-              const q = searchQuery.trim().toLowerCase()
+              const q = searchQuery.trim()
               const matchingDogs = (stat.dogs || []).filter((dog) => {
                 if (!q) return true
-                return (
-                  dog.name.toLowerCase().includes(q) ||
-                  Boolean(dog.name_ru && dog.name_ru.toLowerCase().includes(q))
-                )
+                return matchesDog(dog, q)
               })
               const isExpanded = expandedBreed === stat.breed
               const tone = getScoreTone(stat.avg_score)

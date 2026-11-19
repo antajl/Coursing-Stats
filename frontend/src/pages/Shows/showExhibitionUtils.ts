@@ -11,6 +11,8 @@ import {
   recoverWrappedPuppyClassAndGrade,
 } from '../../../../backend/lib/show-grades'
 import { dogNameMatchesQuery as dogNameMatchesQueryLib } from '../../lib/dogName'
+import { matchesDog, matchesSearchText } from '../../lib/searchEngine'
+import { matchesBreedSearch } from '../../lib/breedMapping'
 
 export type { ShowAwardKey }
 export { splitShowTitleTokens }
@@ -283,11 +285,9 @@ function normalizeSearchText(value: string | undefined | null): string {
 
 /** Совпадение клички с запросом (номер ринга игнорируется при поиске по имени). */
 export function dogNameMatchesQuery(dogName: string, query: string): boolean {
-  const q = normalizeSearchText(query)
-  if (!q) return true
+  if (!query?.trim()) return true
   const { name } = splitDogNameDisplay(dogName)
-  // name_lat/name_ru часто склеены в dog_name — bilingual match через общий хелпер
-  return dogNameMatchesQueryLib(dogName, name, query)
+  return matchesDog({ name: dogName, aliases: [name] }, query)
 }
 
 /** Совпадение породы (RU/EN) с запросом. */
@@ -296,12 +296,8 @@ export function breedMatchesQuery(
   breedEn: string | undefined,
   query: string
 ): boolean {
-  const q = normalizeSearchText(query)
-  if (!q) return true
-  return (
-    normalizeSearchText(breed).includes(q) ||
-    normalizeSearchText(breedEn).includes(q)
-  )
+  if (!query?.trim()) return true
+  return matchesBreedSearch(breed, query) || (breedEn ? matchesSearchText(breedEn, query) : false)
 }
 
 /**

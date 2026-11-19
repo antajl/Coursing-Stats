@@ -1,5 +1,6 @@
 import { formatRecordDate, getRecordYear, parseRecordDate } from '../../lib/recordDates'
-import { matchesBreedFilter, canonicalBreed } from '../../lib/breedMapping'
+import { matchesBreedFilter, canonicalBreed, matchesBreedSearch } from '../../lib/breedMapping'
+import { matchesDog } from '../../lib/searchEngine'
 import { computeDoninoDeltas } from './doninoRankDelta'
 import type { DogsIndexEntry } from '../../lib/competingBreeds'
 
@@ -121,13 +122,14 @@ export function filterSpeedRecords(baseRecords: any[], options: SpeedFilterOptio
   if (searchQuery) {
     const searchLower = searchQuery.toLowerCase()
     filtered = filtered.filter((record) => {
-      const nameMatch =
-        record.name.toLowerCase().includes(searchLower) ||
-        (Array.isArray((record as { aliases?: string[] }).aliases) &&
-          (record as { aliases?: string[] }).aliases!.some((a) =>
-            a.toLowerCase().includes(searchLower),
-          ))
-      const breedMatch = record.breed.toLowerCase().includes(searchLower)
+      const nameMatch = matchesDog(
+        {
+          name: record.name,
+          aliases: (record as { aliases?: string[] }).aliases,
+        },
+        searchQuery
+      )
+      const breedMatch = matchesBreedSearch(record.breed, searchQuery)
 
       let sexMatch = record.sex.toLowerCase().includes(searchLower)
       if (!sexMatch) {
@@ -219,12 +221,13 @@ export function filterCoursingRecords(baseRecords: any[], options: CoursingFilte
     const query = searchQuery.toLowerCase()
     filtered = filtered.filter(
       (record) =>
-        record.name.toLowerCase().includes(query) ||
-        record.breed.toLowerCase().includes(query) ||
-        (Array.isArray((record as { aliases?: string[] }).aliases) &&
-          (record as { aliases?: string[] }).aliases!.some((a) =>
-            a.toLowerCase().includes(query),
-          ))
+        matchesDog(
+          {
+            name: record.name,
+            aliases: (record as { aliases?: string[] }).aliases,
+          },
+          searchQuery
+        ) || matchesBreedSearch(record.breed, searchQuery)
     )
   }
 

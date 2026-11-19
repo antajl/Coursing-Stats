@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
 import { getAvailableExhibitionIds } from '../../../lib/staticData'
+import { matchesSearchText } from '../../../lib/searchEngine'
 import { ExternalLink, Calendar, ArrowUpDown } from 'lucide-react'
 import ToolbarSearch from '../../../components/toolbar/ToolbarSearch'
 import { formatDate, compareExhibitionDates, type GradeFilterKey } from './judgeDetailAggregates'
@@ -35,13 +36,10 @@ export function JudgeExhibitionPanel({
 
   const filteredAndSorted = useMemo(() => {
     let list = exhibitions
-    const q = searchQuery.trim().toLowerCase()
+    const q = searchQuery.trim()
     if (q) {
-      list = list.filter(
-        (ex) =>
-          (ex.title && ex.title.toLowerCase().includes(q)) ||
-          (ex.date && ex.date.includes(q)) ||
-          String(ex.id).includes(q),
+      list = list.filter((ex) =>
+        matchesSearchText([ex.title, ex.date, String(ex.id)], q)
       )
     }
     return [...list].sort((a, b) => compareExhibitionDates(a, b, sortOrder))

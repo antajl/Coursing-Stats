@@ -13,6 +13,8 @@ import { JudgeProfileHero } from './JudgeDetail/JudgeProfileHero'
 import { JudgeBreedsTab } from './JudgeDetail/JudgeBreedsTab'
 import { JudgeEventsTab } from './JudgeDetail/JudgeEventsTab'
 import { JudgeCriteriaTab } from './JudgeDetail/JudgeCriteriaTab'
+import { matchesSearchText } from '../../lib/searchEngine'
+import { matchesBreedSearch } from '../../lib/breedMapping'
 
 export default function JudgeDetail() {
   const { judgeId } = useParams()
@@ -94,13 +96,12 @@ export default function JudgeDetail() {
     if (eventBreedFilter) {
       list = list.filter((e) => e.breed === eventBreedFilter)
     }
-    const q = eventSearchQuery.trim().toLowerCase()
+    const q = eventSearchQuery.trim()
     if (q) {
       list = list.filter(
         (e) =>
-          e.title.toLowerCase().includes(q) ||
-          e.date.toLowerCase().includes(q) ||
-          e.breed.toLowerCase().includes(q),
+          matchesSearchText([e.title, e.date, e.breed], q) ||
+          matchesBreedSearch(e.breed, q)
       )
     }
     return list

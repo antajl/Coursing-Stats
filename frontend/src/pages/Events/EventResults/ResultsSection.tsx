@@ -13,6 +13,7 @@ import {
 } from './utils'
 import type { QuickBreedItem } from '../../TopDogs/QuickBreedBar'
 import { canonicalBreed, formatBreedName, matchesBreedFilter } from '../../../lib/breedMapping'
+import { matchesSearchText } from '../../../lib/searchEngine'
 import type { DogsIndexEntry } from '../../../lib/competingBreeds'
 import type { Result } from './types'
 import { ResultsToolbar } from './ResultsToolbar'
@@ -136,8 +137,7 @@ export default function ResultsSection({ results, trailing }: ResultsSectionProp
     for (const r of activeResults) {
       const matchesSearch =
         searchQuery === '' ||
-        r.name_ru?.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        r.name_lat?.toLowerCase().includes(searchQuery.toLowerCase())
+        matchesSearchText([r.name_ru, r.name_lat, r.dog?.name, r.dog?.breed], searchQuery)
       const matchesBreed =
         selectedBreed === '' || matchesBreedFilter(canonicalBreed(r.dog.breed), selectedBreed)
       const dogSex = extractDogSex(r)
@@ -157,8 +157,7 @@ export default function ResultsSection({ results, trailing }: ResultsSectionProp
   const filteredResults = activeResults.filter((result) => {
     const matchesSearch =
       searchQuery === '' ||
-      result.name_ru?.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      result.name_lat?.toLowerCase().includes(searchQuery.toLowerCase())
+      matchesSearchText([result.name_ru, result.name_lat, result.dog?.name, result.dog?.breed], searchQuery)
     const matchesBreed =
       selectedBreed === '' || matchesBreedFilter(canonicalBreed(result.dog.breed), selectedBreed)
     const dogSex = extractDogSex(result)

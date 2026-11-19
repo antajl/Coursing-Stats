@@ -13,6 +13,7 @@ import JudgeSortDropdown, { type JudgeSortKey } from './JudgeSortDropdown'
 import DoninoColumnPlaque, { DoninoColumnShell } from '../SpeedRecords/DoninoColumnPlaque'
 import { formatBreedName } from '../../lib/breedMapping'
 import { getSportJudgeInfo } from '../../lib/sportJudgesRegistry'
+import { matchesJudge } from '../../lib/searchEngine'
 
 function formatJudgesCount(count: number): string {
   const mod10 = count % 10
@@ -116,22 +117,14 @@ export default function Judges({ urlYear }: JudgesProps = {}) {
 
   const filteredJudges = judges.filter((judge) => {
     if (!searchQuery.trim()) return true
-    const query = searchQuery.toLowerCase().trim()
-    const nameMatch = judge.name?.toLowerCase().includes(query)
-    const fullNameMatch = (judge.full_name as string)?.toLowerCase().includes(query)
-    const cityMatch = (judge.city as string)?.toLowerCase().includes(query)
     const info = getSportJudgeInfo(judge.name)
-    const infoFullNameMatch = info?.fullName?.toLowerCase().includes(query)
-    const infoCityMatch = info?.city?.toLowerCase().includes(query)
-    const aliasMatch = info?.aliases?.some((a) => a.toLowerCase().includes(query))
-    return Boolean(
-      nameMatch ||
-      fullNameMatch ||
-      cityMatch ||
-      infoFullNameMatch ||
-      infoCityMatch ||
-      aliasMatch
-    )
+    const judgeItem = {
+      name: judge.name,
+      full_name: (judge.full_name as string) || info?.fullName,
+      city: (judge.city as string) || info?.city,
+      aliases: info?.aliases,
+    }
+    return matchesJudge(judgeItem, searchQuery)
   })
 
   const [sortKey, setSortKey] = useState<JudgeSortKey>('evaluations')
