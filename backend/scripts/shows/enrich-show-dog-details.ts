@@ -17,6 +17,33 @@ function collapseDuplicates(text: string): string {
   return text.replace(/([A-ZА-ЯЁ])\1+/g, '$1')
 }
 
+function cleanDogNameVariants(raw: string): string[] {
+  const list: string[] = []
+  const trimmed = raw.trim()
+  if (!trimmed) return list
+  list.push(trimmed)
+
+  if (trimmed.includes('/')) {
+    for (const chunk of trimmed.split('/')) {
+      const c = chunk.trim()
+      if (c.length >= 2 && !list.includes(c)) list.push(c)
+    }
+  }
+
+  for (const v of [...list]) {
+    const withoutSuffix = v.replace(/\s*\([A-Za-zА-Яа-яЁё0-9\-\s]+\)$/i, '').trim()
+    if (withoutSuffix.length >= 2 && !list.includes(withoutSuffix)) list.push(withoutSuffix)
+
+    const withoutRkf = v.replace(/\s*(?:RKF|РКФ|FRX|BLL|BC|B)\s*[\d\s]+.*$/i, '').trim()
+    if (withoutRkf.length >= 2 && !list.includes(withoutRkf)) list.push(withoutRkf)
+
+    const withoutBoth = withoutSuffix.replace(/\s*(?:RKF|РКФ|FRX|BLL|BC|B)\s*[\d\s]+.*$/i, '').trim()
+    if (withoutBoth.length >= 2 && !list.includes(withoutBoth)) list.push(withoutBoth)
+  }
+
+  return list
+}
+
 function expandTranslitVariants(text: string): string[] {
   const norm = text.toUpperCase().replace(/\s+/g, ' ').trim()
   if (!norm) return []
@@ -101,12 +128,11 @@ async function main() {
       }
       existingDogs.set(id, dogInfo)
 
-      const names = new Set<string>([nameLat, nameRu].filter(Boolean))
+      const names = new Set<string>()
       for (const raw of [nameLat, nameRu]) {
         if (!raw) continue
-        for (const chunk of raw.split('/')) {
-          const trimmed = chunk.trim()
-          if (trimmed.length >= 2) names.add(trimmed)
+        for (const variant of cleanDogNameVariants(raw)) {
+          if (variant.length >= 2) names.add(variant)
         }
       }
       if (d.competition_dog_id != null) {
@@ -114,9 +140,8 @@ async function main() {
         if (sd) {
           for (const raw of [sd.name_lat, sd.name_ru]) {
             if (!raw) continue
-            for (const chunk of raw.split('/')) {
-              const trimmed = chunk.trim()
-              if (trimmed.length >= 2) names.add(trimmed)
+            for (const variant of cleanDogNameVariants(raw)) {
+              if (variant.length >= 2) names.add(variant)
             }
           }
         }
@@ -202,39 +227,69 @@ async function main() {
 
   console.log(`Loaded ${existingDogs.size} canonical dogs across 256 shards (cleaned ${cleanedCyrillicNameLat} Cyrillic name_lat)`)
 
-  function findBestCandidate(name: string, breed: string): string | null {
-    const nameKey = name.toUpperCase().replace(/\s+/g, ' ').trim()
-    const translit = transliterateRuToLat(nameKey)
+  function findBestCandidate(name: string, breed: string, ex?: any, row?: any): string | null {
+    const cleanedNames = cleanDogNameVariants(name)
     const breedKey = breed.toUpperCase().replace(/\s+/g, ' ').trim()
     const cBreedKey = canonicalBreed(breed).toUpperCase().replace(/\s+/g, ' ').trim()
-
-    const nameVariants = new Set<string>()
-    for (const base of [nameKey, translit].filter(Boolean)) {
-      for (const v of expandTranslitVariants(base)) {
-        nameVariants.add(v)
-      }
-    }
-
     const breedVariants = Array.from(new Set([breedKey, cBreedKey].filter(Boolean)))
 
     // 1. Exact or variant name + breed
-    for (const n of nameVariants) {
-      for (const b of breedVariants) {
-        const id = byNameBreed.get(`${n}|${b}`)
-        if (id && existingDogs.has(id)) return id
+    for (const cn of cleanedNames) {
+      const nameKey = cn.toUpperCase().replace(/\s+/g, ' ').trim()
+      const translit = transliterateRuToLat(nameKey)
+
+      const nameVariants = new Set<string>()
+      for (const base of [nameKey, translit].filter(Boolean)) {
+        for (const v of expandTranslitVariants(base)) {
+          nameVariants.add(v)
+        }
+      }
+
+      for (const n of nameVariants) {
+        for (const b of breedVariants) {
+          const id = byNameBreed.get(`${n}|${b}`)
+          if (id && existingDogs.has(id)) return id
+        }
+      }
+
+      // 2. Name match with matching canonical breed
+      for (const n of nameVariants) {
+        const candidates = byNameOnly.get(n) || []
+        if (candidates.length > 0) {
+          const sameBreed = candidates.filter(c => {
+            const cCan = canonicalBreed(c.breed).toUpperCase().replace(/\s+/g, ' ').trim()
+            return (cCan === cBreedKey || cCan === breedKey) && existingDogs.has(c.id)
+          })
+          if (sameBreed.length > 0) return sameBreed[0].id
+          if (existingDogs.has(candidates[0].id)) return candidates[0].id
+        }
       }
     }
 
-    // 2. Name match with matching canonical breed
-    for (const n of nameVariants) {
-      const candidates = byNameOnly.get(n) || []
-      if (candidates.length > 0) {
-        const sameBreed = candidates.filter(c => {
-          const cCan = canonicalBreed(c.breed).toUpperCase().replace(/\s+/g, ' ').trim()
-          return (cCan === cBreedKey || cCan === breedKey) && existingDogs.has(c.id)
-        })
-        if (sameBreed.length > 0) return sameBreed[0].id
-        if (existingDogs.has(candidates[0].id)) return candidates[0].id
+    // 3. Match from same exhibition's results (catalog_number or prefix match in same show)
+    if (ex && ex.results && Array.isArray(ex.results) && row) {
+      const catNum = row.catalog_number ? String(row.catalog_number) : (row.ring_number ? String(row.ring_number) : null)
+      const targetNorm = name.toUpperCase().replace(/\s+/g, ' ').trim()
+      const targetTranslit = transliterateRuToLat(targetNorm)
+
+      for (const res of ex.results) {
+        const { ring, name: resName } = splitDogNameDisplay(res.dog_name || '')
+        const resCanBreed = canonicalBreed(res.breed || '').toUpperCase().trim()
+
+        // Match if same catalog number
+        const numMatches = Boolean(catNum && (ring === catNum || res.catalog_number === Number(catNum)))
+        // Or if breed matches and name is a prefix/suffix
+        const resNorm = resName.toUpperCase().replace(/\s+/g, ' ').trim()
+        const resTranslit = transliterateRuToLat(resNorm)
+        const nameMatches = (resCanBreed === cBreedKey || !res.breed) && targetNorm.length >= 8 && (
+          resNorm.startsWith(targetNorm) || targetNorm.startsWith(resNorm) ||
+          resTranslit.startsWith(targetTranslit) || targetTranslit.startsWith(resTranslit)
+        )
+
+        if (numMatches || nameMatches) {
+          const candidateId = findBestCandidate(resName, res.breed || breed)
+          if (candidateId && existingDogs.has(candidateId)) return candidateId
+        }
       }
     }
 
@@ -323,7 +378,7 @@ async function main() {
 
       if (pack[id]) {
         if (pack[id].alias_to) {
-          const canonicalId = findBestCandidate(name, breed)
+          const canonicalId = findBestCandidate(name, breed, ex, r)
           if (canonicalId && canonicalId !== id && pack[id].alias_to !== canonicalId && existingDogs.has(canonicalId)) {
             pack[id] = { alias_to: canonicalId }
             dirtyShards.add(shard)
@@ -332,7 +387,7 @@ async function main() {
         continue
       }
 
-      const canonicalId = findBestCandidate(name, breed)
+      const canonicalId = findBestCandidate(name, breed, ex, r)
       if (canonicalId && canonicalId !== id && existingDogs.has(canonicalId)) {
         pack[id] = { alias_to: canonicalId }
         dirtyShards.add(shard)
@@ -407,6 +462,9 @@ async function main() {
     ['AL NAFISEH LEON BAKST', 'САЛЮКИ', String(stableShowProfileId('AL NAFISEH LEON BAKST', 'САЛЮКИ'))],
     ['IMRAN JAZZEE', 'САЛЮКИ', String(stableShowProfileId('IMRAN JAZZEE', 'САЛЮКИ'))],
     ['IMRAN JAZZE', 'САЛЮКИ', String(stableShowProfileId('IMRAN JAZZE', 'САЛЮКИ'))],
+    ['LOVE AND SPIRIT ZEVS', 'БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА', String(stableShowProfileId('LOVE AND SPIRIT ZEVS', 'БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА'))],
+    ['GOLDI KRAUND DOMINO DLYA DOMA', 'УИППЕТ', String(stableShowProfileId('GOLDI KRAUND DOMINO DLYA DOMA', 'УИППЕТ'))],
+    ['СИМПЛЕ ОБЕССИОН БИТВИН АС', 'РУССКАЯ ПСОВАЯ БОРЗАЯ', String(stableShowProfileId('СИМПЛЕ ОБЕССИОН БИТВИН АС', 'РУССКАЯ ПСОВАЯ БОРЗАЯ'))],
   ]) {
     const shard = cdnPackShardKey(targetId)
     const pack = shardsData.get(shard)!

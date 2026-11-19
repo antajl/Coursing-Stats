@@ -105,6 +105,23 @@ describe('Show dog profile and alias resolution', () => {
     expect(targetDog.competition_dog_id).toBe(7256)
   })
 
+  it('resolves show dogs with catalog suffix or truncation (ZEVS 278973064, DOMINO 1936452394, BORZOI 47441691)', () => {
+    // 1. LOVE AND SPIRIT ZEVS (278973064 -> 1336339678)
+    const zevsShard = cdnPackShardKey('278973064')
+    const zevsPack = getShard(zevsShard)
+    expect(zevsPack['278973064']?.alias_to).toBe('1336339678')
+
+    // 2. GOLDI KRAUND DOMINO DLYA DOMA (1936452394 -> 1373813918)
+    const dominoShard = cdnPackShardKey('1936452394')
+    const dominoPack = getShard(dominoShard)
+    expect(dominoPack['1936452394']?.alias_to).toBe('1373813918')
+
+    // 3. СИМПЛЕ ОБЕССИОН БИТВИН АС (47441691 -> 109536520)
+    const borzoiShard = cdnPackShardKey('47441691')
+    const borzoiPack = getShard(borzoiShard)
+    expect(borzoiPack['47441691']?.alias_to).toBe('109536520')
+  })
+
   it('guarantees zero aliases in any ranking files across all years', () => {
     const showIdxDir = path.resolve(__dirname, '../../data/v1/shows/indexes')
     
