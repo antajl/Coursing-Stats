@@ -45,9 +45,10 @@ class ExhibitionsRkfStoreImpl implements ExhibitionsRkfStore {
   }
   
   read(id: string, year: number): ExhibitionRecord | null {
+    const cleanId = String(id).replace(/\.0$/, '');
     const row = this.db
       .prepare('SELECT data FROM exhibitions_rkf WHERE year = ? AND id = ?')
-      .get(year, id) as { data: Buffer } | undefined;
+      .get(year, cleanId) as { data: Buffer } | undefined;
     
     if (!row) return null;
     
@@ -55,7 +56,7 @@ class ExhibitionsRkfStoreImpl implements ExhibitionsRkfStore {
       const decompressed = gunzipSync(row.data);
       return JSON.parse(decompressed.toString('utf-8')) as ExhibitionRecord;
     } catch (error) {
-      console.error(`Failed to decompress/parse exhibition ${id}/${year}:`, error);
+      console.error(`Failed to decompress/parse exhibition ${cleanId}/${year}:`, error);
       return null;
     }
   }
@@ -65,16 +66,17 @@ class ExhibitionsRkfStoreImpl implements ExhibitionsRkfStore {
       .prepare('SELECT id FROM exhibitions_rkf WHERE year = ? ORDER BY id')
       .all(year) as { id: string }[];
     
-    return rows.map(row => row.id);
+    return rows.map(row => row.id.replace(/\.0$/, ''));
   }
   
   write(id: string, year: number, data: ExhibitionRecord): void {
+    const cleanId = String(id).replace(/\.0$/, '');
     const json = JSON.stringify(data);
     const compressed = gzipSync(Buffer.from(json), { level: 9 });
     
     this.db
       .prepare('INSERT OR REPLACE INTO exhibitions_rkf (id, year, data) VALUES (?, ?, ?)')
-      .run(id, year, compressed);
+      .run(cleanId, year, compressed);
   }
   
   close(): void {

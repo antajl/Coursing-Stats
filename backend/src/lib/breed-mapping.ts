@@ -874,6 +874,12 @@ for (const b of (rkfBreedsData.breeds || [])) {
     OFFICIAL_BREEDS_SET.add(c.replace(/([КГДЖ])-Ш/g, '$1 Ш'))
     OFFICIAL_BREEDS_SET.add(c.replace(/([КГДЖ])\s+Ш/g, '$1-Ш'))
   }
+  if (b.baseBreed) {
+    const bb = b.baseBreed.toUpperCase().trim()
+    OFFICIAL_BREEDS_SET.add(bb)
+    OFFICIAL_BREEDS_SET.add(bb.replace(/([КГДЖ])-Ш/g, '$1 Ш'))
+    OFFICIAL_BREEDS_SET.add(bb.replace(/([КГДЖ])\s+Ш/g, '$1-Ш'))
+  }
 }
 OFFICIAL_BREEDS_SET.add('БЕЗ ПОРОДЫ')
 OFFICIAL_BREEDS_SET.add('МЕТИС')
@@ -908,6 +914,10 @@ for (const b of (rkfBreedsData.breeds || [])) {
     for (const a of b.aliases) {
       const aUp = a.toUpperCase().trim()
       if (!BREED_ALIAS_BY_KEY[aUp]) BREED_ALIAS_BY_KEY[aUp] = canon
+      const noHyphen = aUp.replace(/([КГДЖ])-Ш/g, '$1 Ш')
+      if (!BREED_ALIAS_BY_KEY[noHyphen]) BREED_ALIAS_BY_KEY[noHyphen] = canon
+      const withHyphen = aUp.replace(/([КГДЖ])\s+Ш/g, '$1-Ш')
+      if (!BREED_ALIAS_BY_KEY[withHyphen]) BREED_ALIAS_BY_KEY[withHyphen] = canon
     }
   }
 

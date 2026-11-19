@@ -154,7 +154,7 @@ export default function BreedSearchDropdown({
           {/* Selected breed indicator */}
           {selectedBreed && !searchQuery && (
             <div className="mb-2 px-2 py-1.5 text-xs font-medium text-camel-700 bg-camel-50 rounded-md">
-              Выбрано: {displayBreed(selectedBreed).primary}
+              Выбрано: {displayBreed(selectedBreed).full || displayBreed(selectedBreed).primary}
             </div>
           )}
 
@@ -209,6 +209,11 @@ export default function BreedSearchDropdown({
                   >
                     <span className="truncate">
                       {display.primary}
+                      {display.variety && (
+                        <span className="ml-1.5 text-charcoal-400 font-normal text-xs">
+                          {display.variety}
+                        </span>
+                      )}
                       {display.secondary && (
                         <span className="ml-2 text-charcoal-400 font-normal text-xs">
                           {display.secondary}

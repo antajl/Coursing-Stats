@@ -154,17 +154,19 @@ describe('Show dog profile and alias resolution', () => {
     expect(violations).toEqual([])
   }, 30000)
 
-  it('guarantees top dog (PIRS BROSNAN IZ BELYKH GYAUROV) in 2026 ranking uses canonical id 1394343317', () => {
+  it('guarantees top dog (PIRS BROSNAN IZ BELYKH GYAUROV) in 2026 ranking uses canonical id 1394343317 and has Russian name', () => {
     const showIdxDir = path.resolve(__dirname, '../../data/v1/shows/indexes')
     const r2026Page0 = JSON.parse(fs.readFileSync(path.join(showIdxDir, 'dog-ranking-2026-page0.json'), 'utf8'))
     const r2026 = JSON.parse(fs.readFileSync(path.join(showIdxDir, 'dog-ranking-2026.json'), 'utf8'))
 
     const top0 = r2026Page0.dogs[0]
     expect(top0.name_lat).toBe('PIRS BROSNAN IZ BELYKH GYAUROV')
+    expect(top0.name_ru).toBe('ПИРС БРОСНАН ИЗ БЕЛЫХ ГЯУРОВ')
     expect(top0.id).toBe('1394343317')
 
     const topFull = r2026[0]
     expect(topFull.name_lat).toBe('PIRS BROSNAN IZ BELYKH GYAUROV')
+    expect(topFull.name_ru).toBe('ПИРС БРОСНАН ИЗ БЕЛЫХ ГЯУРОВ')
     expect(topFull.id).toBe('1394343317')
   })
 

@@ -68,7 +68,8 @@ function syncYear(db: Database.Database, targetYear: number, limit: number, dryR
 
   let exported = 0
   for (const row of rows) {
-    const filePath = path.join(TEMP_DIR, `${row.id}.json`)
+    const cleanId = String(row.id).replace(/\.0$/, '')
+    const filePath = path.join(TEMP_DIR, `${cleanId}.json`)
     // row.data is ALREADY gzip compressed in SQLite!
     fs.writeFileSync(filePath, row.data)
     exported++

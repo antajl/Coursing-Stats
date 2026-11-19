@@ -52,6 +52,11 @@ export const DogCardHeader: FC = function DogCardHeader() {
         <span className="text-charcoal-600 font-medium truncate">
           {breedDisplay.primary}
         </span>
+        {breedDisplay.variety && (
+          <span className="text-charcoal-400 font-normal shrink-0">
+            {breedDisplay.variety}
+          </span>
+        )}
         {dog.sex && (
           <>
             <span className="text-charcoal-300 shrink-0" aria-hidden>

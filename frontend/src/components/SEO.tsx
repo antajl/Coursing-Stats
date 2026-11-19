@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async'
 
 interface SEOProps {
   title: string
-  description: string
+  description?: string
   keywords?: string
   ogImage?: string
   ogTitle?: string
@@ -12,7 +12,8 @@ interface SEOProps {
   canonicalUrl?: string
 }
 
-function cleanOgTitle(title: string): string {
+export function cleanOgTitle(title?: string): string {
+  if (!title) return ''
   const cleaned = title
     .replace(/^Курсинг Статс\s*[—–-]\s*/i, '')
     .replace(/\s*\|\s*Курсинг Статс.*$/i, '')
@@ -21,7 +22,8 @@ function cleanOgTitle(title: string): string {
   return cleaned || title
 }
 
-function cleanOgDescription(desc: string, title?: string): string {
+export function cleanOgDescription(desc?: string, title?: string): string {
+  if (!desc) return ''
   let cleaned = desc
     .replace(/\s*на\s+(портале\s+)?(платформе\s+)?(сайте\s+)?(Курсинг Статс|Coursing Stats)\.?/gi, '.')
     .replace(/\.{2,}/g, '.')
@@ -96,7 +98,7 @@ export function SEO({
   const siteUrl = 'https://coursing-stats.ru/'
   const normalizedCanonical = normalizeCanonicalUrl(canonicalUrl)
   const ogTitleText = ogTitle || cleanOgTitle(fullTitle)
-  const ogDescText = ogDescription || cleanOgDescription(description, ogTitleText)
+  const ogDescText = ogDescription || (description ? cleanOgDescription(description, ogTitleText) : '')
 
   useEffect(() => {
     document.title = fullTitle
@@ -112,7 +114,7 @@ export function SEO({
   return (
     <Helmet>
       {/* Управление <title> ведётся через useEffect, чтобы избежать дублирования тега в React 19 */}
-      <meta name="description" content={description} />
+      {description && <meta name="description" content={description} />}
       <meta name="keywords" content={keywords || DEFAULT_KEYWORDS} />
 
       {normalizedCanonical && <link rel="canonical" href={normalizedCanonical} />}
@@ -123,7 +125,7 @@ export function SEO({
       <meta property="og:type" content="website" />
       <meta property="og:url" content={normalizedCanonical || siteUrl} />
       <meta property="og:title" content={ogTitleText} />
-      <meta property="og:description" content={ogDescText} />
+      {ogDescText && <meta property="og:description" content={ogDescText} />}
       <meta property="og:image" content={ogImage || defaultImage} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
@@ -135,7 +137,7 @@ export function SEO({
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content={normalizedCanonical || siteUrl} />
       <meta name="twitter:title" content={ogTitleText} />
-      <meta name="twitter:description" content={ogDescText} />
+      {ogDescText && <meta name="twitter:description" content={ogDescText} />}
       <meta name="twitter:image" content={ogImage || defaultImage} />
     </Helmet>
   )

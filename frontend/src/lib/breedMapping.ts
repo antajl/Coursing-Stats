@@ -956,14 +956,16 @@ export function formatBreedSentenceCase(breed: string): string {
 
 export type BreedDisplay = {
   primary: string
+  variety?: string
   secondary?: string
+  full: string
 }
 
 /**
  * Обиходное имя + официальная подпись (левретка / малинуа / …).
  * Ключи — каноны UPPERCASE после canonicalBreed.
  */
-const BREED_DISPLAY_OVERRIDES: Record<string, BreedDisplay> = {
+const BREED_DISPLAY_OVERRIDES: Record<string, { primary: string; secondary?: string }> = {
   'МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ': {
     primary: 'Левретка',
     secondary: 'Малая итальянская борзая',
@@ -990,18 +992,43 @@ const BREED_DISPLAY_OVERRIDES: Record<string, BreedDisplay> = {
   },
 }
 
+const BREED_CATALOG_MAP = new Map<string, { baseBreed: string; variety: string; nameRu: string }>()
+for (const b of (rkfBreedsData.breeds || [])) {
+  const c = b.canonicalRu.toUpperCase().trim()
+  BREED_CATALOG_MAP.set(c, {
+    baseBreed: b.baseBreed || c,
+    variety: b.variety || '',
+    nameRu: b.nameRu || toSentenceCaseRu(c),
+  })
+}
+
 const DISPLAY_BREED_CACHE = new Map<string, BreedDisplay>()
 
-/** Отображение породы: sentence case + опциональная официальная подпись. */
+/** Отображение породы: sentence case + разветвление разновидности + опциональная официальная подпись. */
 export function displayBreed(breed: unknown): BreedDisplay {
   const raw = String(breed ?? '').trim()
-  if (!raw) return { primary: '' }
+  if (!raw) return { primary: '', full: '' }
   const cached = DISPLAY_BREED_CACHE.get(raw)
   if (cached) return cached
   const canon = canonicalBreed(raw)
-  if (!canon) return { primary: '' }
+  if (!canon) return { primary: '', full: '' }
   const override = BREED_DISPLAY_OVERRIDES[canon]
-  const res = override ? { ...override } : { primary: toSentenceCaseRu(canon) }
+  if (override) {
+    const res: BreedDisplay = { ...override, full: override.primary }
+    DISPLAY_BREED_CACHE.set(raw, res)
+    return res
+  }
+  const catalogEntry = BREED_CATALOG_MAP.get(canon)
+  if (catalogEntry && catalogEntry.variety) {
+    const primary = toSentenceCaseRu(catalogEntry.baseBreed)
+    const variety = catalogEntry.variety
+    const full = `${primary} ${variety}`
+    const res: BreedDisplay = { primary, variety, full }
+    DISPLAY_BREED_CACHE.set(raw, res)
+    return res
+  }
+  const primary = catalogEntry?.nameRu || toSentenceCaseRu(canon)
+  const res: BreedDisplay = { primary, full: primary }
   DISPLAY_BREED_CACHE.set(raw, res)
   return res
 }
@@ -1014,6 +1041,12 @@ for (const b of (rkfBreedsData.breeds || [])) {
     OFFICIAL_BREEDS_SET.add(c)
     OFFICIAL_BREEDS_SET.add(c.replace(/([КГДЖ])-Ш/g, '$1 Ш'))
     OFFICIAL_BREEDS_SET.add(c.replace(/([КГДЖ])\s+Ш/g, '$1-Ш'))
+  }
+  if (b.baseBreed) {
+    const bb = b.baseBreed.toUpperCase().trim()
+    OFFICIAL_BREEDS_SET.add(bb)
+    OFFICIAL_BREEDS_SET.add(bb.replace(/([КГДЖ])-Ш/g, '$1 Ш'))
+    OFFICIAL_BREEDS_SET.add(bb.replace(/([КГДЖ])\s+Ш/g, '$1-Ш'))
   }
 }
 OFFICIAL_BREEDS_SET.add('БЕЗ ПОРОДЫ')
@@ -1049,6 +1082,10 @@ for (const b of (rkfBreedsData.breeds || [])) {
     for (const a of b.aliases) {
       const aUp = a.toUpperCase().trim()
       if (!BREED_ALIAS_BY_KEY[aUp]) BREED_ALIAS_BY_KEY[aUp] = canon
+      const noHyphen = aUp.replace(/([КГДЖ])-Ш/g, '$1 Ш')
+      if (!BREED_ALIAS_BY_KEY[noHyphen]) BREED_ALIAS_BY_KEY[noHyphen] = canon
+      const withHyphen = aUp.replace(/([КГДЖ])\s+Ш/g, '$1-Ш')
+      if (!BREED_ALIAS_BY_KEY[withHyphen]) BREED_ALIAS_BY_KEY[withHyphen] = canon
     }
   }
 
@@ -1201,7 +1238,7 @@ export function uniqueCanonicalBreeds(breeds: Iterable<string | null | undefined
 export function formatBreedName(breed: unknown): string {
   if (!breed) return ''
   const str = String(breed)
-  return displayBreed(str).primary || str
+  return displayBreed(str).full || displayBreed(str).primary || str
 }
 
 /**

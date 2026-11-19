@@ -200,11 +200,24 @@ function ShowDogCardInner({
                     {primary}
                   </h3>
                 </OwnerCrownName>
+                {secondary && (
+                  <span
+                    className="text-[10px] text-charcoal-400 font-normal truncate"
+                    title={secondary}
+                  >
+                    / {secondary}
+                  </span>
+                )}
               </div>
               <div className="flex items-center gap-1 text-[10px]">
                 <span className="text-charcoal-600 font-medium truncate">
                   {breedDisplay.primary}
                 </span>
+                {breedDisplay.variety && (
+                  <span className="text-charcoal-400 font-normal shrink-0">
+                    {breedDisplay.variety}
+                  </span>
+                )}
                 {dog.sex && (
                   <>
                     <span className="text-charcoal-300 shrink-0" aria-hidden>
@@ -258,6 +271,14 @@ function ShowDogCardInner({
                   {primary}
                 </h3>
               </OwnerCrownName>
+              {secondary && (
+                <span
+                  className="text-[11px] text-charcoal-400 font-normal truncate"
+                  title={secondary}
+                >
+                  / {secondary}
+                </span>
+              )}
               <span className="text-charcoal-300 shrink-0" aria-hidden>
                 ·
               </span>
@@ -333,6 +354,8 @@ const ShowDogCardMemo = memo(ShowDogCardInner, (prevProps, nextProps) => {
     prevProps.rank === nextProps.rank &&
     prevProps.dog.overall_rank === nextProps.dog.overall_rank &&
     prevProps.filterYear === nextProps.filterYear &&
+    prevProps.dog.name_ru === nextProps.dog.name_ru &&
+    prevProps.dog.name_lat === nextProps.dog.name_lat &&
     Boolean(prevProps.favorites?.has(getShowDogFavId(prevProps.dog))) ===
       Boolean(nextProps.favorites?.has(getShowDogFavId(nextProps.dog)))
   )

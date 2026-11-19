@@ -241,13 +241,25 @@ export function DogProfileHeader({
                     <Link
                       to={`/breeds/${breedHub.slug}/`}
                       className="font-semibold text-charcoal-800 hover:text-camel-800 hover:underline inline-flex items-center gap-0.5 transition-colors group cursor-pointer"
-                      title={`Хаб породы ${breedDisplay.primary}`}
+                      title={`Хаб породы ${breedDisplay.full || breedDisplay.primary}`}
                     >
                       <span>{breedDisplay.primary}</span>
+                      {breedDisplay.variety && (
+                        <span className="font-normal text-charcoal-500 text-xs ml-1">
+                          {breedDisplay.variety}
+                        </span>
+                      )}
                       <ArrowUpRight className="h-3 w-3 text-camel-600 opacity-60 group-hover:opacity-100 transition-opacity" aria-hidden />
                     </Link>
                   ) : (
-                    <span className="font-semibold text-charcoal-800">{breedDisplay.primary}</span>
+                    <span className="font-semibold text-charcoal-800">
+                      {breedDisplay.primary}
+                      {breedDisplay.variety && (
+                        <span className="font-normal text-charcoal-500 text-xs ml-1">
+                          {breedDisplay.variety}
+                        </span>
+                      )}
+                    </span>
                   )}
                   {dog.sex && (
                     <>

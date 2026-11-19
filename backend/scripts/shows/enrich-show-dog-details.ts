@@ -510,11 +510,23 @@ async function main() {
         modified = true
       }
       const canDog = { ...dog, id: canId }
+      const dogInfo = existingDogs.get(canId)
+      if (dogInfo) {
+        if (dogInfo.name_ru && dogInfo.name_ru !== canDog.name_ru) {
+          canDog.name_ru = dogInfo.name_ru
+          modified = true
+        }
+        if (dogInfo.name_lat && (!canDog.name_lat || (/[а-яё]/i.test(canDog.name_lat) && !/[а-яё]/i.test(dogInfo.name_lat)))) {
+          canDog.name_lat = dogInfo.name_lat
+          modified = true
+        }
+      }
       if (canonicalMap.has(canId)) {
         modified = true
         const prev = canonicalMap.get(canId)
         prev.rank_score = Math.max(prev.rank_score || 0, canDog.rank_score || 0)
         prev.total_shows = Math.max(prev.total_shows || 0, canDog.total_shows || 0)
+        if (canDog.name_ru && !prev.name_ru) prev.name_ru = canDog.name_ru
         if (canDog.titles) {
           prev.titles = prev.titles || {}
           for (const [t, c] of Object.entries(canDog.titles)) {

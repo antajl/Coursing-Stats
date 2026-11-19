@@ -76,4 +76,22 @@ describe('parseDogName', () => {
     expect(res3.primary).toBe('Harley')
     expect(res3.secondary).toBeNull()
   })
+
+  it('prioritizes Russian name as primary and English as secondary when both exist in profile', () => {
+    const res = parseDogName('PIRS BROSNAN IZ BELYKH GYAUROV', 'ПИРС БРОСНАН ИЗ БЕЛЫХ ГЯУРОВ')
+    expect(res.primary).toBe('Пирс Броснан из Белых Гяуров')
+    expect(res.secondary).toBe('Pirs Brosnan Iz Belykh Gyaurov')
+  })
+
+  it('keeps English name as primary with null secondary when dog has no Russian name in profile', () => {
+    const res = parseDogName('BEL ETUAL LIBERA STELLA', null)
+    expect(res.primary).toBe('Bel Etual Libera Stella')
+    expect(res.secondary).toBeNull()
+  })
+
+  it('keeps Russian name as primary with null secondary when dog has only Russian name in profile', () => {
+    const res = parseDogName('НЕМАН ГРЕТ СТАЙЛ КОММАНДОР', 'НЕМАН ГРЕТ СТАЙЛ КОММАНДОР')
+    expect(res.primary).toBe('Неман Грет Стайл Коммандор')
+    expect(res.secondary).toBeNull()
+  })
 })

@@ -351,9 +351,13 @@ function linkShowDogsByUniqueName(
   return { linked }
 }
 
-function loadAliasMapFromDetails(detailsDir: string): Map<string, string> {
-  const map = new Map<string, string>()
-  if (!fs.existsSync(detailsDir)) return map
+function loadDetailsIndex(detailsDir: string): {
+  aliasLookup: Map<string, string>
+  namesLookup: Map<string, { name_lat?: string; name_ru?: string }>
+} {
+  const aliasLookup = new Map<string, string>()
+  const namesLookup = new Map<string, { name_lat?: string; name_ru?: string }>()
+  if (!fs.existsSync(detailsDir)) return { aliasLookup, namesLookup }
   for (let i = 0; i < 256; i++) {
     const shard = String(i).padStart(3, '0')
     const file = path.join(detailsDir, `${shard}.json`)
@@ -362,12 +366,17 @@ function loadAliasMapFromDetails(detailsDir: string): Map<string, string> {
       const pack = JSON.parse(fs.readFileSync(file, 'utf8'))
       for (const [id, dog] of Object.entries(pack)) {
         if ((dog as any).alias_to) {
-          map.set(id, String((dog as any).alias_to))
+          aliasLookup.set(id, String((dog as any).alias_to))
+        } else {
+          const d = dog as any
+          if (d.name_ru || d.name_lat) {
+            namesLookup.set(id, { name_lat: d.name_lat, name_ru: d.name_ru })
+          }
         }
       }
     } catch {}
   }
-  return map
+  return { aliasLookup, namesLookup }
 }
 
 function assignStableProfileIds(dogs: ShowDog[]): Map<string, string> {
@@ -550,9 +559,10 @@ async function main() {
   console.log(`Assigned stable profile ids for ${dogs.length} dogs`)
 
   const detailsDir = path.join(INDEXES_DIR, 'dog-details')
-  const aliasLookup = loadAliasMapFromDetails(detailsDir)
-  if (aliasLookup.size > 0) {
+  const { aliasLookup, namesLookup } = loadDetailsIndex(detailsDir)
+  if (aliasLookup.size > 0 || namesLookup.size > 0) {
     let remapped = 0
+    let namesEnriched = 0
     for (const dog of dogs) {
       let curr = String(dog.id)
       let depth = 0
@@ -564,9 +574,22 @@ async function main() {
         dog.id = curr
         remapped++
       }
+      const names = namesLookup.get(curr)
+      if (names) {
+        if (names.name_ru && !dog.name_ru) {
+          dog.name_ru = names.name_ru
+          namesEnriched++
+        }
+        if (names.name_lat && (!dog.name_lat || (/[а-яё]/i.test(dog.name_lat) && !/[а-яё]/i.test(names.name_lat)))) {
+          dog.name_lat = names.name_lat
+        }
+      }
     }
     if (remapped > 0) {
       console.log(`Remapped ${remapped} dogs to canonical IDs from dog-details`)
+    }
+    if (namesEnriched > 0) {
+      console.log(`Enriched ${namesEnriched} dogs with Russian name from dog-details`)
     }
   }
 

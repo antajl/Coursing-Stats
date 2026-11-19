@@ -86,7 +86,11 @@ export default function ShowExhibitionDetail() {
   if (error || !exhibition) {
     return (
       <div className="mx-auto max-w-full pb-2 sm:pb-4">
-        <SEO title="Выставка не найдена | Курсинг Статс" noIndex />
+        <SEO
+          title="Выставка не найдена | Курсинг Статс"
+          description="Выставка РКФ не найдена в базе данных Курсинг Статс."
+          noIndex
+        />
         <ErrorState
           title="Выставка не найдена"
           message={error || `ID: ${id}`}

@@ -46,6 +46,7 @@
     "build-show-all-time": "npx tsx backend/scripts/shows/build-all-time-top-ranking.ts",
     "enrich-show-judges-konura": "npx tsx backend/scripts/enrich-show-judges-konura.ts",
     "enrich-show-dog-details": "node --max-old-space-size=12288 ./node_modules/tsx/dist/cli.mjs backend/scripts/shows/enrich-show-dog-details.ts",
+    "sync-ranking-dog-names": "node --max-old-space-size=8192 ./node_modules/tsx/dist/cli.mjs backend/scripts/shows/sync-ranking-dog-names.ts",
     "rebuild-show-snapshot": "node backend/scripts/run-with-memory.cjs backend/scripts/build-show-indexes.ts",
     "generate-show-page0": "npx tsx backend/scripts/shows/generate-show-page0-indexes.ts",
     "load-events": "npx tsx backend/scripts/load/load-events.ts",

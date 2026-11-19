@@ -73,7 +73,7 @@ function serveDataV1(): Plugin {
 
     if (!filePath.startsWith(DATA_V1_ROOT) || !fs.existsSync(filePath) || !fs.statSync(filePath).isFile()) {
       if (relativePath.startsWith('shows/protocols/')) {
-        const id = path.basename(relativePath, '.json')
+        const id = path.basename(relativePath, '.json').replace(/\.0$/, '')
         const sqlitePath = path.resolve(__dirname, '../data/local/exhibitions-rkf-archive.sqlite')
         if (fs.existsSync(sqlitePath)) {
           try {

@@ -1,3 +1,5 @@
+import { OFFICIAL_BREEDS_SET } from '../src/lib/breed-mapping'
+
 /**
  * Post-processing: RKF specialty headers sometimes concatenate judge into `breed`
  * while leaving `breed_judge` empty (e.g. «БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА Горан ГЛАДИЧ»).
@@ -173,6 +175,8 @@ export function stripTrailingJudgeFromBreed(
   if (!raw) return { breed: raw, stripped: false }
 
   const upper = raw.toUpperCase()
+  if (OFFICIAL_BREEDS_SET.has(upper)) return { breed: raw, stripped: false }
+
   for (const judge of judgesLongestFirst) {
     const j = judge.replace(/[\u00a0\s]+/g, ' ').trim()
     if (j.length < 4) continue

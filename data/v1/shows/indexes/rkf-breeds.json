@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/rkf-breeds-v1",
-  "updatedAt": "2026-11-18T17:47:07.644Z",
-  "count": 510,
+  "updatedAt": "2026-11-19T15:33:18.608Z",
+  "count": 556,
   "breeds": [
     {
       "id": "австралийская-короткохвостая-пастушья-собака",
@@ -13,7 +13,9 @@
       "aliases": [
         "АВСТРАЛИЙСКАЯ КОРОТКОХВОСТАЯ ПАСТУШЬЯ СОБАКА",
         "AUSTRALIAN STUMPY TAIL CATTLE DOG"
-      ]
+      ],
+      "baseBreed": "АВСТРАЛИЙСКАЯ КОРОТКОХВОСТАЯ ПАСТУШЬЯ СОБАКА",
+      "variety": ""
     },
     {
       "id": "австралийская-овчарка",
@@ -25,7 +27,9 @@
       "aliases": [
         "АВСТРАЛИЙСКАЯ ОВЧАРКА",
         "AUSTRALIAN SHEPHERD"
-      ]
+      ],
+      "baseBreed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "variety": ""
     },
     {
       "id": "австралийская-пастушья-собака",
@@ -36,8 +40,12 @@
       "fciStandard": null,
       "aliases": [
         "АВСТРАЛИЙСКАЯ ПАСТУШЬЯ СОБАКА",
-        "AUSTRALIAN CATTLE DOG"
-      ]
+        "AUSTRALIAN CATTLE DOG",
+        "АВСТРАЛИЙСКИЙ ХИЛЕР",
+        "ГОЛУБОЙ ХИЛЕР"
+      ],
+      "baseBreed": "АВСТРАЛИЙСКАЯ ПАСТУШЬЯ СОБАКА",
+      "variety": ""
     },
     {
       "id": "австралийский-келпи",
@@ -49,7 +57,9 @@
       "aliases": [
         "АВСТРАЛИЙСКИЙ КЕЛПИ",
         "AUSTRALIAN KELPIE"
-      ]
+      ],
+      "baseBreed": "АВСТРАЛИЙСКИЙ КЕЛПИ",
+      "variety": ""
     },
     {
       "id": "австралийский-терьер",
@@ -61,7 +71,9 @@
       "aliases": [
         "АВСТРАЛИЙСКИЙ ТЕРЬЕР",
         "AUSTRALIAN TERRIER"
-      ]
+      ],
+      "baseBreed": "АВСТРАЛИЙСКИЙ ТЕРЬЕР",
+      "variety": ""
     },
     {
       "id": "австралийский-шелковистый-терьер",
@@ -73,7 +85,9 @@
       "aliases": [
         "АВСТРАЛИЙСКИЙ ШЕЛКОВИСТЫЙ ТЕРЬЕР",
         "AUSTRALIAN SILKY TERRIER"
-      ]
+      ],
+      "baseBreed": "АВСТРАЛИЙСКИЙ ШЕЛКОВИСТЫЙ ТЕРЬЕР",
+      "variety": ""
     },
     {
       "id": "австрийская-черно-подпалая-гончая",
@@ -85,7 +99,9 @@
       "aliases": [
         "АВСТРИЙСКАЯ ЧЕРНО-ПОДПАЛАЯ ГОНЧАЯ",
         "AUSTRIAN BLACK AND TAN HOUND"
-      ]
+      ],
+      "baseBreed": "АВСТРИЙСКАЯ ЧЕРНО-ПОДПАЛАЯ ГОНЧАЯ",
+      "variety": ""
     },
     {
       "id": "австрийский-пинчер",
@@ -97,7 +113,9 @@
       "aliases": [
         "АВСТРИЙСКИЙ ПИНЧЕР",
         "AUSTRIAN PINSCHER"
-      ]
+      ],
+      "baseBreed": "АВСТРИЙСКИЙ ПИНЧЕР",
+      "variety": ""
     },
     {
       "id": "азавак",
@@ -109,7 +127,9 @@
       "aliases": [
         "АЗАВАК",
         "AZAWAKH"
-      ]
+      ],
+      "baseBreed": "АЗАВАК",
+      "variety": ""
     },
     {
       "id": "акита",
@@ -121,7 +141,9 @@
       "aliases": [
         "АКИТА",
         "AKITA"
-      ]
+      ],
+      "baseBreed": "АКИТА",
+      "variety": ""
     },
     {
       "id": "альпийский-таксообразный-бракк",
@@ -133,7 +155,9 @@
       "aliases": [
         "АЛЬПИЙСКИЙ ТАКСООБРАЗНЫЙ БРАКК",
         "ALPINE DACHSBRACKE"
-      ]
+      ],
+      "baseBreed": "АЛЬПИЙСКИЙ ТАКСООБРАЗНЫЙ БРАКК",
+      "variety": ""
     },
     {
       "id": "аляскинский-маламут",
@@ -146,7 +170,9 @@
         "АЛЯСКИНСКИЙ МАЛАМУТ",
         "ALASKAN MALAMUTE",
         "МАЛАМУТ"
-      ]
+      ],
+      "baseBreed": "АЛЯСКИНСКИЙ МАЛАМУТ",
+      "variety": ""
     },
     {
       "id": "американская-акита",
@@ -158,13 +184,15 @@
       "aliases": [
         "АМЕРИКАНСКАЯ АКИТА",
         "AMERICAN AKITA"
-      ]
+      ],
+      "baseBreed": "АМЕРИКАНСКАЯ АКИТА",
+      "variety": ""
     },
     {
       "id": "американский-булли",
       "canonicalRu": "АМЕРИКАНСКИЙ БУЛЛИ",
       "nameRu": "Американский булли",
-      "nameEn": "AMERICAN BULLY XL",
+      "nameEn": "AMERICAN BULLY",
       "fciGroup": null,
       "fciStandard": null,
       "aliases": [
@@ -181,7 +209,9 @@
         "АМЕРИКАНСКИЙ БУЛЛИ XL",
         "АМЕРИКАНСКИЙ БУЛЛИ ПОКЕТ",
         "BULLY"
-      ]
+      ],
+      "baseBreed": "АМЕРИКАНСКИЙ БУЛЛИ",
+      "variety": ""
     },
     {
       "id": "американский-булли-классик",
@@ -193,7 +223,9 @@
       "aliases": [
         "АМЕРИКАНСКИЙ БУЛЛИ КЛАССИК",
         "AMERICAN BULLY CLASSIC"
-      ]
+      ],
+      "baseBreed": "АМЕРИКАНСКИЙ БУЛЛИ",
+      "variety": "классик"
     },
     {
       "id": "американский-булли-покет",
@@ -205,7 +237,9 @@
       "aliases": [
         "АМЕРИКАНСКИЙ БУЛЛИ ПОКЕТ",
         "AMERICAN BULLY POCKET"
-      ]
+      ],
+      "baseBreed": "АМЕРИКАНСКИЙ БУЛЛИ",
+      "variety": "покет"
     },
     {
       "id": "американский-булли-стандарт",
@@ -217,7 +251,23 @@
       "aliases": [
         "АМЕРИКАНСКИЙ БУЛЛИ СТАНДАРТ",
         "AMERICAN BULLY STANDARD"
-      ]
+      ],
+      "baseBreed": "АМЕРИКАНСКИЙ БУЛЛИ",
+      "variety": "стандарт"
+    },
+    {
+      "id": "американский-булли-xl",
+      "canonicalRu": "АМЕРИКАНСКИЙ БУЛЛИ XL",
+      "nameRu": "Американский булли xl",
+      "nameEn": "AMERICAN BULLY XL",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "АМЕРИКАНСКИЙ БУЛЛИ XL",
+        "AMERICAN BULLY XL"
+      ],
+      "baseBreed": "АМЕРИКАНСКИЙ БУЛЛИ",
+      "variety": "xl"
     },
     {
       "id": "американский-бульдог",
@@ -229,7 +279,9 @@
       "aliases": [
         "АМЕРИКАНСКИЙ БУЛЬДОГ",
         "AMERICAN BULLDOG"
-      ]
+      ],
+      "baseBreed": "АМЕРИКАНСКИЙ БУЛЬДОГ",
+      "variety": ""
     },
     {
       "id": "американский-водяной-спаниель",
@@ -241,7 +293,9 @@
       "aliases": [
         "АМЕРИКАНСКИЙ ВОДЯНОЙ СПАНИЕЛЬ",
         "AMERICAN WATER SPANIEL"
-      ]
+      ],
+      "baseBreed": "АМЕРИКАНСКИЙ ВОДЯНОЙ СПАНИЕЛЬ",
+      "variety": ""
     },
     {
       "id": "американский-голый-терьер",
@@ -253,7 +307,9 @@
       "aliases": [
         "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
         "AMERICAN HAIRLESS TERRIER"
-      ]
+      ],
+      "baseBreed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
+      "variety": ""
     },
     {
       "id": "американский-кокер-спаниель",
@@ -265,7 +321,27 @@
       "aliases": [
         "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
         "AMERICAN COCKER SPANIEL"
-      ]
+      ],
+      "baseBreed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "variety": ""
+    },
+    {
+      "id": "американский-питбультерьер",
+      "canonicalRu": "АМЕРИКАНСКИЙ ПИТБУЛЬТЕРЬЕР",
+      "nameRu": "Американский питбультерьер",
+      "nameEn": "AMERICAN PIT BULL TERRIER",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "АМЕРИКАНСКИЙ ПИТБУЛЬТЕРЬЕР",
+        "ПИТБУЛЬТЕРЬЕР",
+        "АМЕРИКАНСКИЙ ПИТ БУЛЬТЕРЬЕР",
+        "АМЕРИКАНСКИЙ ПИТ-БУЛЬТЕРЬЕР",
+        "AMERICAN PIT BULL TERRIER",
+        "APBT"
+      ],
+      "baseBreed": "АМЕРИКАНСКИЙ ПИТБУЛЬТЕРЬЕР",
+      "variety": ""
     },
     {
       "id": "американский-стаффордширский-терьер",
@@ -282,7 +358,9 @@
         "АМ.СТАФФ.ТЕРЬЕР",
         "STAFFORDSHIRE TERRIER",
         "AMSTAFF"
-      ]
+      ],
+      "baseBreed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "variety": ""
     },
     {
       "id": "американский-фоксхаунд",
@@ -294,7 +372,9 @@
       "aliases": [
         "АМЕРИКАНСКИЙ ФОКСХАУНД",
         "AMERICAN FOXHOUND"
-      ]
+      ],
+      "baseBreed": "АМЕРИКАНСКИЙ ФОКСХАУНД",
+      "variety": ""
     },
     {
       "id": "английский-кокер-спаниель",
@@ -306,7 +386,9 @@
       "aliases": [
         "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
         "ENGLISH COCKER SPANIEL"
-      ]
+      ],
+      "baseBreed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
+      "variety": ""
     },
     {
       "id": "английский-кокер-спаниель-пятнистые",
@@ -318,7 +400,9 @@
       "aliases": [
         "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ(ПЯТНИСТЫЕ)",
         "ENGLISH COCKER SPANIEL(PARTYCOLOR)"
-      ]
+      ],
+      "baseBreed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ(ПЯТНИСТЫЕ)",
+      "variety": ""
     },
     {
       "id": "английский-кокер-спаниель-рыжие",
@@ -330,7 +414,9 @@
       "aliases": [
         "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ(РЫЖИЕ)",
         "ENGLISH COCKER SPANIEL(RED)"
-      ]
+      ],
+      "baseBreed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ(РЫЖИЕ)",
+      "variety": ""
     },
     {
       "id": "английский-кокер-спаниель-черные-черно-подпалые-шоколадные-и-шоколадно-подпалые",
@@ -342,7 +428,9 @@
       "aliases": [
         "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ(ЧЕРНЫЕ,ЧЕРНО ПОДПАЛЫЕ,ШОКОЛАДНЫЕ И ШОКОЛАДНО ПОДПАЛЫЕ)",
         "ENGLISH COCKER SPANIEL(BLACK,BLACK AND TAN,LIVER AND LIVER TAN)"
-      ]
+      ],
+      "baseBreed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ(ЧЕРНЫЕ,ЧЕРНО ПОДПАЛЫЕ,ШОКОЛАДНЫЕ И ШОКОЛАДНО ПОДПАЛЫЕ)",
+      "variety": ""
     },
     {
       "id": "английский-пойнтер",
@@ -353,8 +441,11 @@
       "fciStandard": null,
       "aliases": [
         "АНГЛИЙСКИЙ ПОЙНТЕР",
-        "ENGLISH POINTER"
-      ]
+        "ENGLISH POINTER",
+        "ПОЙНТЕР"
+      ],
+      "baseBreed": "АНГЛИЙСКИЙ ПОЙНТЕР",
+      "variety": ""
     },
     {
       "id": "английский-сеттер",
@@ -366,7 +457,9 @@
       "aliases": [
         "АНГЛИЙСКИЙ СЕТТЕР",
         "ENGLISH SETTER"
-      ]
+      ],
+      "baseBreed": "АНГЛИЙСКИЙ СЕТТЕР",
+      "variety": ""
     },
     {
       "id": "английский-спрингер-спаниель",
@@ -378,7 +471,9 @@
       "aliases": [
         "АНГЛИЙСКИЙ СПРИНГЕР СПАНИЕЛЬ",
         "ENGLISH SPRINGER SPANIEL"
-      ]
+      ],
+      "baseBreed": "АНГЛИЙСКИЙ СПРИНГЕР СПАНИЕЛЬ",
+      "variety": ""
     },
     {
       "id": "английский-той-терьер",
@@ -390,7 +485,9 @@
       "aliases": [
         "АНГЛИЙСКИЙ ТОЙ ТЕРЬЕР",
         "ENGLISH TOY TERRIER (BLACK & TAN)"
-      ]
+      ],
+      "baseBreed": "АНГЛИЙСКИЙ ТОЙ ТЕРЬЕР",
+      "variety": ""
     },
     {
       "id": "английский-фоксхаунд",
@@ -402,7 +499,9 @@
       "aliases": [
         "АНГЛИЙСКИЙ ФОКСХАУНД",
         "ENGLISH FOXHOUND"
-      ]
+      ],
+      "baseBreed": "АНГЛИЙСКИЙ ФОКСХАУНД",
+      "variety": ""
     },
     {
       "id": "англо-французская-средняя-гончая",
@@ -414,7 +513,9 @@
       "aliases": [
         "АНГЛО-ФРАНЦУЗСКАЯ СРЕДНЯЯ ГОНЧАЯ",
         "MEDIUM ANGLO-FRENCH HOUND"
-      ]
+      ],
+      "baseBreed": "АНГЛО-ФРАНЦУЗСКАЯ СРЕДНЯЯ ГОНЧАЯ",
+      "variety": ""
     },
     {
       "id": "аппенцеллер-зенненхунд",
@@ -426,7 +527,9 @@
       "aliases": [
         "АППЕНЦЕЛЛЕР ЗЕННЕНХУНД",
         "APPENZELL CATTLE DOG"
-      ]
+      ],
+      "baseBreed": "АППЕНЦЕЛЛЕР ЗЕННЕНХУНД",
+      "variety": ""
     },
     {
       "id": "аргентинский-дог",
@@ -438,7 +541,9 @@
       "aliases": [
         "АРГЕНТИНСКИЙ ДОГ",
         "DOGO ARGENTINO"
-      ]
+      ],
+      "baseBreed": "АРГЕНТИНСКИЙ ДОГ",
+      "variety": ""
     },
     {
       "id": "арденнский-бувье",
@@ -450,7 +555,9 @@
       "aliases": [
         "АРДЕННСКИЙ БУВЬЕ",
         "BOUVIER DES ARDENNES"
-      ]
+      ],
+      "baseBreed": "АРДЕННСКИЙ БУВЬЕ",
+      "variety": ""
     },
     {
       "id": "артезиано-нормандский-бассет",
@@ -462,7 +569,9 @@
       "aliases": [
         "АРТЕЗИАНО НОРМАНДСКИЙ БАССЕТ",
         "NORMAND ARTESIEN BASSET"
-      ]
+      ],
+      "baseBreed": "АРТЕЗИАНО НОРМАНДСКИЙ БАССЕТ",
+      "variety": ""
     },
     {
       "id": "артезиано-нормандский-бассет",
@@ -474,7 +583,9 @@
       "aliases": [
         "АРТЕЗИАНО-НОРМАНДСКИЙ БАССЕТ",
         "BASSET ARTESIEN NORMAND"
-      ]
+      ],
+      "baseBreed": "АРТЕЗИАНО-НОРМАНДСКИЙ БАССЕТ",
+      "variety": ""
     },
     {
       "id": "арьежская-легавая",
@@ -486,7 +597,9 @@
       "aliases": [
         "АРЬЕЖСКАЯ ЛЕГАВАЯ",
         "ARIEGE POINTING DOG"
-      ]
+      ],
+      "baseBreed": "АРЬЕЖСКАЯ ЛЕГАВАЯ",
+      "variety": ""
     },
     {
       "id": "арьежуа",
@@ -498,7 +611,9 @@
       "aliases": [
         "АРЬЕЖУА",
         "ARIEGEOIS"
-      ]
+      ],
+      "baseBreed": "АРЬЕЖУА",
+      "variety": ""
     },
     {
       "id": "атласская-горная-собака-аиди",
@@ -510,19 +625,25 @@
       "aliases": [
         "АТЛАССКАЯ ГОРНАЯ СОБАКА (АИДИ)",
         "AIDI (ATLAS MOUNTAIN DOG)"
-      ]
+      ],
+      "baseBreed": "АТЛАССКАЯ ГОРНАЯ СОБАКА (АИДИ)",
+      "variety": ""
     },
     {
       "id": "афганская-аборигенная-борзая",
       "canonicalRu": "АФГАНСКАЯ АБОРИГЕННАЯ БОРЗАЯ",
       "nameRu": "Афганская аборигенная борзая",
-      "nameEn": "ABORIGINAL AFGHAN HOUND",
+      "nameEn": "ABORIGINAL AFGHAN HOUND (BAKHMULL)",
       "fciGroup": null,
       "fciStandard": null,
       "aliases": [
         "АФГАНСКАЯ АБОРИГЕННАЯ БОРЗАЯ",
-        "ABORIGINAL AFGHAN HOUND"
-      ]
+        "ABORIGINAL AFGHAN HOUND",
+        "БАХМУЛЬ",
+        "BAKHMULL"
+      ],
+      "baseBreed": "АФГАНСКАЯ АБОРИГЕННАЯ БОРЗАЯ",
+      "variety": ""
     },
     {
       "id": "афганская-борзая",
@@ -534,7 +655,9 @@
       "aliases": [
         "АФГАНСКАЯ БОРЗАЯ",
         "AFGHAN HOUND"
-      ]
+      ],
+      "baseBreed": "АФГАНСКАЯ БОРЗАЯ",
+      "variety": ""
     },
     {
       "id": "аффенпинчер",
@@ -546,7 +669,23 @@
       "aliases": [
         "АФФЕНПИНЧЕР",
         "AFFENPINSCHER"
-      ]
+      ],
+      "baseBreed": "АФФЕНПИНЧЕР",
+      "variety": ""
+    },
+    {
+      "id": "баварская-гончая",
+      "canonicalRu": "БАВАРСКАЯ ГОНЧАЯ",
+      "nameRu": "Баварская гончая",
+      "nameEn": "BAVARIAN MOUNTAIN SCENT HOUND",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "БАВАРСКАЯ ГОНЧАЯ",
+        "БАВАРСКАЯ ГОРНАЯ ГОНЧАЯ"
+      ],
+      "baseBreed": "БАВАРСКАЯ ГОНЧАЯ",
+      "variety": ""
     },
     {
       "id": "баварская-горная-гончая",
@@ -558,7 +697,9 @@
       "aliases": [
         "БАВАРСКАЯ ГОРНАЯ ГОНЧАЯ",
         "BAVARIAN MOUNTAIN SCENT HOUND"
-      ]
+      ],
+      "baseBreed": "БАВАРСКАЯ ГОРНАЯ ГОНЧАЯ",
+      "variety": ""
     },
     {
       "id": "басенджи",
@@ -571,7 +712,9 @@
       "aliases": [
         "БАСЕНДЖИ",
         "BASENJI"
-      ]
+      ],
+      "baseBreed": "БАСЕНДЖИ",
+      "variety": ""
     },
     {
       "id": "бассет-д-артуа",
@@ -583,7 +726,9 @@
       "aliases": [
         "БАССЕТ Д`АРТУА",
         "BASSET D ARTOIS"
-      ]
+      ],
+      "baseBreed": "БАССЕТ Д`АРТУА",
+      "variety": ""
     },
     {
       "id": "бассет-хаунд",
@@ -595,7 +740,9 @@
       "aliases": [
         "БАССЕТ ХАУНД",
         "BASSET HOUND"
-      ]
+      ],
+      "baseBreed": "БАССЕТ ХАУНД",
+      "variety": ""
     },
     {
       "id": "бедлингтон-терьер",
@@ -607,7 +754,23 @@
       "aliases": [
         "БЕДЛИНГТОН ТЕРЬЕР",
         "BEDLINGTON TERRIER"
-      ]
+      ],
+      "baseBreed": "БЕДЛИНГТОН ТЕРЬЕР",
+      "variety": ""
+    },
+    {
+      "id": "без-породы",
+      "canonicalRu": "БЕЗ ПОРОДЫ",
+      "nameRu": "Без породы",
+      "nameEn": "MIXED / NO BREED",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "БЕЗ ПОРОДЫ",
+        "SIGHTHOUNDБЕЗ ПОРОДЫ"
+      ],
+      "baseBreed": "БЕЗ ПОРОДЫ",
+      "variety": ""
     },
     {
       "id": "белая-швейцарская-овчарка",
@@ -619,7 +782,9 @@
       "aliases": [
         "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
         "WHITE SWISS SHEPHERD DOG"
-      ]
+      ],
+      "baseBreed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
+      "variety": ""
     },
     {
       "id": "бельгийская-овчарка",
@@ -631,7 +796,9 @@
       "aliases": [
         "БЕЛЬГИЙСКАЯ ОВЧАРКА",
         "BELGIAN SHEPHERD DOG"
-      ]
+      ],
+      "baseBreed": "БЕЛЬГИЙСКАЯ ОВЧАРКА",
+      "variety": ""
     },
     {
       "id": "бельгийская-овчарка-грюнендаль",
@@ -646,7 +813,9 @@
         "ГРЮНЕНДАЛЬ",
         "GROENENDAEL",
         "BELGIAN GROENENDAEL"
-      ]
+      ],
+      "baseBreed": "БЕЛЬГИЙСКАЯ ОВЧАРКА ГРЮНЕНДАЛЬ",
+      "variety": ""
     },
     {
       "id": "бельгийская-овчарка-лакенуа",
@@ -661,7 +830,9 @@
         "ЛАКЕНУА",
         "LAEKENOIS",
         "BELGIAN LAEKENOIS"
-      ]
+      ],
+      "baseBreed": "БЕЛЬГИЙСКАЯ ОВЧАРКА ЛАКЕНУА",
+      "variety": ""
     },
     {
       "id": "бельгийская-овчарка-малинуа",
@@ -675,8 +846,11 @@
         "BELGIAN SHEPHERD DOG MALINOIS",
         "МАЛИНУА",
         "MALINOIS",
-        "BELGIAN MALINOIS"
-      ]
+        "BELGIAN MALINOIS",
+        "БЕЛЬГИЙСКАЯ ОВЧАРКА (МАЛИНУА)"
+      ],
+      "baseBreed": "БЕЛЬГИЙСКАЯ ОВЧАРКА",
+      "variety": "малинуа"
     },
     {
       "id": "бельгийская-овчарка-тервюрен",
@@ -692,7 +866,9 @@
         "TERVUEREN",
         "TERVUREN",
         "BELGIAN TERVUEREN"
-      ]
+      ],
+      "baseBreed": "БЕЛЬГИЙСКАЯ ОВЧАРКА ТЕРВЮРЕН",
+      "variety": ""
     },
     {
       "id": "бельгийский-гриффон",
@@ -704,7 +880,9 @@
       "aliases": [
         "БЕЛЬГИЙСКИЙ ГРИФФОН",
         "GRIFFON BELGE"
-      ]
+      ],
+      "baseBreed": "БЕЛЬГИЙСКИЙ ГРИФФОН",
+      "variety": ""
     },
     {
       "id": "бергамская-овчарка",
@@ -716,7 +894,9 @@
       "aliases": [
         "БЕРГАМСКАЯ ОВЧАРКА",
         "BERGAMASCO SHEPHERD DOG"
-      ]
+      ],
+      "baseBreed": "БЕРГАМСКАЯ ОВЧАРКА",
+      "variety": ""
     },
     {
       "id": "бернский-зенненхунд",
@@ -728,7 +908,26 @@
       "aliases": [
         "БЕРНСКИЙ ЗЕННЕНХУНД",
         "BERNESE MOUNTAIN DOG"
-      ]
+      ],
+      "baseBreed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "variety": ""
+    },
+    {
+      "id": "бивер",
+      "canonicalRu": "БИВЕР",
+      "nameRu": "Бивер",
+      "nameEn": "BIEWER TERRIER",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "БИВЕР",
+        "БИВЕР ТЕРЬЕР",
+        "БИВЕР ЙОРК",
+        "BIEWER TERRIER",
+        "BIEWER YORKSHIRE TERRIER"
+      ],
+      "baseBreed": "БИВЕР",
+      "variety": ""
     },
     {
       "id": "бивер-терьер",
@@ -740,7 +939,9 @@
       "aliases": [
         "БИВЕР ТЕРЬЕР",
         "BIEWER TERRIER"
-      ]
+      ],
+      "baseBreed": "БИВЕР ТЕРЬЕР",
+      "variety": ""
     },
     {
       "id": "бигль",
@@ -752,7 +953,9 @@
       "aliases": [
         "БИГЛЬ",
         "BEAGLE"
-      ]
+      ],
+      "baseBreed": "БИГЛЬ",
+      "variety": ""
     },
     {
       "id": "бигль-харриер",
@@ -764,7 +967,9 @@
       "aliases": [
         "БИГЛЬ ХАРРИЕР",
         "BEAGLE HARRIER"
-      ]
+      ],
+      "baseBreed": "БИГЛЬ ХАРРИЕР",
+      "variety": ""
     },
     {
       "id": "билли",
@@ -776,7 +981,9 @@
       "aliases": [
         "БИЛЛИ",
         "BILLY"
-      ]
+      ],
+      "baseBreed": "БИЛЛИ",
+      "variety": ""
     },
     {
       "id": "бишон-фризе",
@@ -790,7 +997,9 @@
         "BICHON FRISE",
         "FRISE",
         "ФРАНЦУЗСКАЯ БОЛОНКА"
-      ]
+      ],
+      "baseBreed": "БИШОН ФРИЗЕ",
+      "variety": ""
     },
     {
       "id": "бладхаунд",
@@ -802,7 +1011,9 @@
       "aliases": [
         "БЛАДХАУНД",
         "BLOODHOUND"
-      ]
+      ],
+      "baseBreed": "БЛАДХАУНД",
+      "variety": ""
     },
     {
       "id": "богемская-овчарка",
@@ -814,7 +1025,9 @@
       "aliases": [
         "БОГЕМСКАЯ ОВЧАРКА",
         "BOHEMIAN SHEPHERD DOG"
-      ]
+      ],
+      "baseBreed": "БОГЕМСКАЯ ОВЧАРКА",
+      "variety": ""
     },
     {
       "id": "богемский-жесткошерстный-легавый-гриффон",
@@ -826,7 +1039,9 @@
       "aliases": [
         "БОГЕМСКИЙ ЖЕСТКОШЕРСТНЫЙ ЛЕГАВЫЙ ГРИФФОН",
         "BOHEMIAN WIRE HAIRED POINTING GRIFFON"
-      ]
+      ],
+      "baseBreed": "БОГЕМСКИЙ ЖЕСТКОШЕРСТНЫЙ ЛЕГАВЫЙ ГРИФФОН",
+      "variety": ""
     },
     {
       "id": "болоньезе",
@@ -838,7 +1053,9 @@
       "aliases": [
         "БОЛОНЬЕЗЕ",
         "BOLOGNESE"
-      ]
+      ],
+      "baseBreed": "БОЛОНЬЕЗЕ",
+      "variety": ""
     },
     {
       "id": "большая-англо-французская-бело-оранжевая-гончая",
@@ -850,7 +1067,9 @@
       "aliases": [
         "БОЛЬШАЯ АНГЛО-ФРАНЦУЗСКАЯ БЕЛО-ОРАНЖЕВАЯ ГОНЧАЯ",
         "GREAT ANGLO-FRENCH WHITE AND ORANGE HOUND"
-      ]
+      ],
+      "baseBreed": "БОЛЬШАЯ АНГЛО-ФРАНЦУЗСКАЯ БЕЛО-ОРАНЖЕВАЯ ГОНЧАЯ",
+      "variety": ""
     },
     {
       "id": "большая-англо-французская-бело-черная-гончая",
@@ -862,7 +1081,9 @@
       "aliases": [
         "БОЛЬШАЯ АНГЛО-ФРАНЦУЗСКАЯ БЕЛО-ЧЕРНАЯ ГОНЧАЯ",
         "GREAT ANGLO-FRENCH WHITE AND BLACK HOUND"
-      ]
+      ],
+      "baseBreed": "БОЛЬШАЯ АНГЛО-ФРАНЦУЗСКАЯ БЕЛО-ЧЕРНАЯ ГОНЧАЯ",
+      "variety": ""
     },
     {
       "id": "большая-англо-французская-трехцветная-гончая",
@@ -874,7 +1095,9 @@
       "aliases": [
         "БОЛЬШАЯ АНГЛО-ФРАНЦУЗСКАЯ ТРЕХЦВЕТНАЯ ГОНЧАЯ",
         "GREAT ANGLO-FRENCH TRICOLOUR HOUND"
-      ]
+      ],
+      "baseBreed": "БОЛЬШАЯ АНГЛО-ФРАНЦУЗСКАЯ ТРЕХЦВЕТНАЯ ГОНЧАЯ",
+      "variety": ""
     },
     {
       "id": "большая-голубая-гасконская-гончая",
@@ -886,7 +1109,9 @@
       "aliases": [
         "БОЛЬШАЯ ГОЛУБАЯ ГАСКОНСКАЯ ГОНЧАЯ",
         "GREAT GASCONY BLUE"
-      ]
+      ],
+      "baseBreed": "БОЛЬШАЯ ГОЛУБАЯ ГАСКОНСКАЯ ГОНЧАЯ",
+      "variety": ""
     },
     {
       "id": "большой-вандейский-бассет-гриффон",
@@ -898,7 +1123,9 @@
       "aliases": [
         "БОЛЬШОЙ ВАНДЕЙСКИЙ БАССЕТ ГРИФФОН",
         "GRAND BASSET GRIFFON VENDEEN"
-      ]
+      ],
+      "baseBreed": "БОЛЬШОЙ ВАНДЕЙСКИЙ БАССЕТ ГРИФФОН",
+      "variety": ""
     },
     {
       "id": "большой-вандейский-гриффон",
@@ -910,7 +1137,9 @@
       "aliases": [
         "БОЛЬШОЙ ВАНДЕЙСКИЙ ГРИФФОН",
         "GRAND GRIFFON VENDEEN"
-      ]
+      ],
+      "baseBreed": "БОЛЬШОЙ ВАНДЕЙСКИЙ ГРИФФОН",
+      "variety": ""
     },
     {
       "id": "большой-мюнстерлендер",
@@ -922,7 +1151,9 @@
       "aliases": [
         "БОЛЬШОЙ МЮНСТЕРЛЕНДЕР",
         "LARGE MUNSTERLANDER"
-      ]
+      ],
+      "baseBreed": "БОЛЬШОЙ МЮНСТЕРЛЕНДЕР",
+      "variety": ""
     },
     {
       "id": "большой-швейцарский-зенненхунд",
@@ -934,7 +1165,9 @@
       "aliases": [
         "БОЛЬШОЙ ШВЕЙЦАРСКИЙ ЗЕННЕНХУНД",
         "GREAT SWISS MOUNTAIN DOG"
-      ]
+      ],
+      "baseBreed": "БОЛЬШОЙ ШВЕЙЦАРСКИЙ ЗЕННЕНХУНД",
+      "variety": ""
     },
     {
       "id": "бордер-колли",
@@ -946,7 +1179,9 @@
       "aliases": [
         "БОРДЕР КОЛЛИ",
         "BORDER COLLIE"
-      ]
+      ],
+      "baseBreed": "БОРДЕР КОЛЛИ",
+      "variety": ""
     },
     {
       "id": "бордер-терьер",
@@ -958,7 +1193,9 @@
       "aliases": [
         "БОРДЕР ТЕРЬЕР",
         "BORDER TERRIER"
-      ]
+      ],
+      "baseBreed": "БОРДЕР ТЕРЬЕР",
+      "variety": ""
     },
     {
       "id": "бордоский-дог",
@@ -976,7 +1213,9 @@
         "FRENCH MASTIFF",
         "БОРДОССКИЙ ДОГ",
         "ФРАНЦУЗСКИЙ МАСТИФ"
-      ]
+      ],
+      "baseBreed": "БОРДОСКИЙ ДОГ",
+      "variety": ""
     },
     {
       "id": "бородатый-колли",
@@ -988,7 +1227,9 @@
       "aliases": [
         "БОРОДАТЫЙ КОЛЛИ",
         "BEARDED COLLIE"
-      ]
+      ],
+      "baseBreed": "БОРОДАТЫЙ КОЛЛИ",
+      "variety": ""
     },
     {
       "id": "босерон",
@@ -1000,7 +1241,9 @@
       "aliases": [
         "БОСЕРОН",
         "BEAUCE SHEEP DOG"
-      ]
+      ],
+      "baseBreed": "БОСЕРОН",
+      "variety": ""
     },
     {
       "id": "боснийская-грубошерстная-гончая-барак",
@@ -1012,7 +1255,9 @@
       "aliases": [
         "БОСНИЙСКАЯ ГРУБОШЕРСТНАЯ ГОНЧАЯ (БАРАК)",
         "BOSNIAN BROKEN-HAIRED HOUND (BARAK)"
-      ]
+      ],
+      "baseBreed": "БОСНИЙСКАЯ ГРУБОШЕРСТНАЯ ГОНЧАЯ (БАРАК)",
+      "variety": ""
     },
     {
       "id": "бостон-терьер",
@@ -1024,7 +1269,9 @@
       "aliases": [
         "БОСТОН ТЕРЬЕР",
         "BOSTON TERRIER"
-      ]
+      ],
+      "baseBreed": "БОСТОН ТЕРЬЕР",
+      "variety": ""
     },
     {
       "id": "бразильская-гончая",
@@ -1036,7 +1283,9 @@
       "aliases": [
         "БРАЗИЛЬСКАЯ ГОНЧАЯ",
         "BRAZILIAN TRACKER"
-      ]
+      ],
+      "baseBreed": "БРАЗИЛЬСКАЯ ГОНЧАЯ",
+      "variety": ""
     },
     {
       "id": "бразильский-терьер",
@@ -1048,7 +1297,9 @@
       "aliases": [
         "БРАЗИЛЬСКИЙ ТЕРЬЕР",
         "BRAZILIAN TERRIER"
-      ]
+      ],
+      "baseBreed": "БРАЗИЛЬСКИЙ ТЕРЬЕР",
+      "variety": ""
     },
     {
       "id": "бразильский-фила",
@@ -1060,7 +1311,9 @@
       "aliases": [
         "БРАЗИЛЬСКИЙ ФИЛА",
         "FILA BRASILEIRO"
-      ]
+      ],
+      "baseBreed": "БРАЗИЛЬСКИЙ ФИЛА",
+      "variety": ""
     },
     {
       "id": "бракк-дюпюи",
@@ -1072,7 +1325,9 @@
       "aliases": [
         "БРАКК ДЮПЮИ",
         "DUPUY POINTER"
-      ]
+      ],
+      "baseBreed": "БРАКК ДЮПЮИ",
+      "variety": ""
     },
     {
       "id": "бретонский-рыжий-бассет",
@@ -1084,7 +1339,9 @@
       "aliases": [
         "БРЕТОНСКИЙ РЫЖИЙ БАССЕТ",
         "BASSET FAUVE DE BRETAGNE"
-      ]
+      ],
+      "baseBreed": "БРЕТОНСКИЙ РЫЖИЙ БАССЕТ",
+      "variety": ""
     },
     {
       "id": "бретонский-рыжий-гриффон",
@@ -1096,13 +1353,15 @@
       "aliases": [
         "БРЕТОНСКИЙ РЫЖИЙ ГРИФФОН",
         "GRIFFON FAUVE DE BRETAGNE"
-      ]
+      ],
+      "baseBreed": "БРЕТОНСКИЙ РЫЖИЙ ГРИФФОН",
+      "variety": ""
     },
     {
       "id": "бретонский-эпаньоль",
       "canonicalRu": "БРЕТОНСКИЙ ЭПАНЬОЛЬ",
       "nameRu": "Бретонский эпаньоль",
-      "nameEn": "BRITTANY SPANIEL (EPAGNEUL BRETON)",
+      "nameEn": "BRITTANY",
       "fciGroup": null,
       "fciStandard": null,
       "aliases": [
@@ -1111,8 +1370,11 @@
         "ЭПАНЬОЛЬ БРЕТОНСКИЙ",
         "ЭПАНЬОЛЬ",
         "BRITTANY SPANIEL",
-        "EPAGNEUL BRETON"
-      ]
+        "EPAGNEUL BRETON",
+        "ЭПАНЬОЛЬ БРЕТОН"
+      ],
+      "baseBreed": "БРЕТОНСКИЙ ЭПАНЬОЛЬ",
+      "variety": ""
     },
     {
       "id": "бриар",
@@ -1124,7 +1386,9 @@
       "aliases": [
         "БРИАР",
         "BRIARD"
-      ]
+      ],
+      "baseBreed": "БРИАР",
+      "variety": ""
     },
     {
       "id": "брохольмер",
@@ -1136,7 +1400,9 @@
       "aliases": [
         "БРОХОЛЬМЕР",
         "BROHOLMER"
-      ]
+      ],
+      "baseBreed": "БРОХОЛЬМЕР",
+      "variety": ""
     },
     {
       "id": "брюссельский-гриффон",
@@ -1148,7 +1414,9 @@
       "aliases": [
         "БРЮССЕЛЬСКИЙ ГРИФФОН",
         "GRIFFON BRUXELLOIS"
-      ]
+      ],
+      "baseBreed": "БРЮССЕЛЬСКИЙ ГРИФФОН",
+      "variety": ""
     },
     {
       "id": "бульдог",
@@ -1160,7 +1428,9 @@
       "aliases": [
         "БУЛЬДОГ",
         "BULLDOG"
-      ]
+      ],
+      "baseBreed": "БУЛЬДОГ",
+      "variety": ""
     },
     {
       "id": "бульмастиф",
@@ -1172,19 +1442,25 @@
       "aliases": [
         "БУЛЬМАСТИФ",
         "BULLMASTIFF"
-      ]
+      ],
+      "baseBreed": "БУЛЬМАСТИФ",
+      "variety": ""
     },
     {
       "id": "бультерьер",
       "canonicalRu": "БУЛЬТЕРЬЕР",
       "nameRu": "Бультерьер",
-      "nameEn": "BULL TERRIER STANDART",
+      "nameEn": "BULL TERRIER",
       "fciGroup": null,
       "fciStandard": null,
       "aliases": [
         "БУЛЬТЕРЬЕР",
-        "BULL TERRIER STANDART"
-      ]
+        "BULL TERRIER STANDART",
+        "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+        "BULL TERRIER"
+      ],
+      "baseBreed": "БУЛЬТЕРЬЕР",
+      "variety": ""
     },
     {
       "id": "бультерьер-миниатюрный",
@@ -1196,7 +1472,9 @@
       "aliases": [
         "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
         "MINIATURE BULL TERRIER"
-      ]
+      ],
+      "baseBreed": "БУЛЬТЕРЬЕР",
+      "variety": "миниатюрный"
     },
     {
       "id": "бурбонская-легавая",
@@ -1208,7 +1486,9 @@
       "aliases": [
         "БУРБОНСКАЯ ЛЕГАВАЯ",
         "BOURBONNAIS POINTING DOG"
-      ]
+      ],
+      "baseBreed": "БУРБОНСКАЯ ЛЕГАВАЯ",
+      "variety": ""
     },
     {
       "id": "бургосская-легавая",
@@ -1220,7 +1500,9 @@
       "aliases": [
         "БУРГОССКАЯ ЛЕГАВАЯ",
         "BURGOS POINTING DOG"
-      ]
+      ],
+      "baseBreed": "БУРГОССКАЯ ЛЕГАВАЯ",
+      "variety": ""
     },
     {
       "id": "валенсийский-терьер",
@@ -1232,7 +1514,9 @@
       "aliases": [
         "ВАЛЕНСИЙСКИЙ ТЕРЬЕР",
         "VALENCIAN TERRIER"
-      ]
+      ],
+      "baseBreed": "ВАЛЕНСИЙСКИЙ ТЕРЬЕР",
+      "variety": ""
     },
     {
       "id": "вандейский-гриффон-брике",
@@ -1244,7 +1528,9 @@
       "aliases": [
         "ВАНДЕЙСКИЙ ГРИФФОН БРИКЕ",
         "BRIQUET GRIFFON VENDEEN"
-      ]
+      ],
+      "baseBreed": "ВАНДЕЙСКИЙ ГРИФФОН БРИКЕ",
+      "variety": ""
     },
     {
       "id": "веймаранер",
@@ -1256,7 +1542,9 @@
       "aliases": [
         "ВЕЙМАРАНЕР",
         "WEIMARANER"
-      ]
+      ],
+      "baseBreed": "ВЕЙМАРАНЕР",
+      "variety": ""
     },
     {
       "id": "веймаранер-д-ш",
@@ -1268,7 +1556,9 @@
       "aliases": [
         "ВЕЙМАРАНЕР Д Ш",
         "WEIMARANER LONG HARIED"
-      ]
+      ],
+      "baseBreed": "ВЕЙМАРАНЕР Д Ш",
+      "variety": ""
     },
     {
       "id": "веймаранер-к-ш",
@@ -1280,7 +1570,24 @@
       "aliases": [
         "ВЕЙМАРАНЕР К Ш",
         "WEIMARANER SHORT HAIRED"
-      ]
+      ],
+      "baseBreed": "ВЕЙМАРАНЕР К Ш",
+      "variety": ""
+    },
+    {
+      "id": "вельш-корги",
+      "canonicalRu": "ВЕЛЬШ КОРГИ",
+      "nameRu": "Вельш корги",
+      "nameEn": "WELSH CORGI",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "ВЕЛЬШ КОРГИ",
+        "WELSH CORGI",
+        "ВЕЛЬШ КОРГИ ПЕМБРОК / КАРДИГАН"
+      ],
+      "baseBreed": "ВЕЛЬШ КОРГИ",
+      "variety": ""
     },
     {
       "id": "вельш-корги-кардиган",
@@ -1295,8 +1602,11 @@
         "КОРГИ КАРДИГАН",
         "КАРДИГАН",
         "CARDIGAN WELSH CORGI",
-        "ВЕЛЬШ-КОРГИ КАРДИГАН"
-      ]
+        "ВЕЛЬШ-КОРГИ КАРДИГАН",
+        "CARDIGAN"
+      ],
+      "baseBreed": "ВЕЛЬШ КОРГИ",
+      "variety": "кардиган"
     },
     {
       "id": "вельш-корги-пемброк",
@@ -1311,8 +1621,11 @@
         "КОРГИ ПЕМБРОК",
         "ПЕМБРОК",
         "PEMBROKE WELSH CORGI",
-        "ВЕЛЬШ-КОРГИ ПЕМБРОК"
-      ]
+        "ВЕЛЬШ-КОРГИ ПЕМБРОК",
+        "PEMBROKE"
+      ],
+      "baseBreed": "ВЕЛЬШ КОРГИ",
+      "variety": "пемброк"
     },
     {
       "id": "вельш-спрингер-спаниель",
@@ -1324,7 +1637,9 @@
       "aliases": [
         "ВЕЛЬШ СПРИНГЕР СПАНИЕЛЬ",
         "WELSH SPRINGER SPANIEL"
-      ]
+      ],
+      "baseBreed": "ВЕЛЬШ СПРИНГЕР СПАНИЕЛЬ",
+      "variety": ""
     },
     {
       "id": "вельш-терьер",
@@ -1336,7 +1651,9 @@
       "aliases": [
         "ВЕЛЬШ ТЕРЬЕР",
         "WELSH TERRIER"
-      ]
+      ],
+      "baseBreed": "ВЕЛЬШ ТЕРЬЕР",
+      "variety": ""
     },
     {
       "id": "венгерская-борзая",
@@ -1348,7 +1665,25 @@
       "aliases": [
         "ВЕНГЕРСКАЯ БОРЗАЯ",
         "HUNGARIAN GREYHOUND"
-      ]
+      ],
+      "baseBreed": "ВЕНГЕРСКАЯ БОРЗАЯ",
+      "variety": ""
+    },
+    {
+      "id": "венгерская-выжла",
+      "canonicalRu": "ВЕНГЕРСКАЯ ВЫЖЛА",
+      "nameRu": "Венгерская выжла",
+      "nameEn": "HUNGARIAN VIZSLA",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "ВЕНГЕРСКАЯ ВЫЖЛА",
+        "ВЫЖЛА",
+        "HUNGARIAN SHORT-HAIRED POINTER (VIZSLA)",
+        "HUNGARIAN VIZSLA"
+      ],
+      "baseBreed": "ВЕНГЕРСКАЯ ВЫЖЛА",
+      "variety": ""
     },
     {
       "id": "венгерская-выжла-ж-ш",
@@ -1360,19 +1695,26 @@
       "aliases": [
         "ВЕНГЕРСКАЯ ВЫЖЛА Ж Ш",
         "HUNGARIAN WIRE HAIRED POINTER (VIZSLA)"
-      ]
+      ],
+      "baseBreed": "ВЕНГЕРСКАЯ ВЫЖЛА Ж Ш",
+      "variety": ""
     },
     {
       "id": "венгерская-выжла-ж-ш",
       "canonicalRu": "ВЕНГЕРСКАЯ ВЫЖЛА Ж-Ш",
       "nameRu": "Венгерская выжла ж-ш",
-      "nameEn": "HUNGARIAN WIRE-HAIRED POINTER (VIZSLA)",
+      "nameEn": "HUNGARIAN WIRE-HAIRED VIZSLA",
       "fciGroup": null,
       "fciStandard": null,
       "aliases": [
         "ВЕНГЕРСКАЯ ВЫЖЛА Ж-Ш",
-        "HUNGARIAN WIRE-HAIRED POINTER (VIZSLA)"
-      ]
+        "HUNGARIAN WIRE-HAIRED POINTER (VIZSLA)",
+        "ВЕНГЕРСКАЯ ВЫЖЛА Ж Ш",
+        "ВЕНГЕРСКАЯ ЖЕСТКОШЕРСТНАЯ ЛЕГАВАЯ",
+        "ВЕНГЕРСКАЯ ЖЕСТКОШЕРСТНАЯ ВЫЖЛА"
+      ],
+      "baseBreed": "ВЕНГЕРСКАЯ ВЫЖЛА",
+      "variety": "ж-ш"
     },
     {
       "id": "венгерская-выжла-к-ш",
@@ -1384,19 +1726,28 @@
       "aliases": [
         "ВЕНГЕРСКАЯ ВЫЖЛА К Ш",
         "HUNGARIAN SHORT HAIRED POINTER (VIZSLA)"
-      ]
+      ],
+      "baseBreed": "ВЕНГЕРСКАЯ ВЫЖЛА К Ш",
+      "variety": ""
     },
     {
       "id": "венгерская-выжла-к-ш",
       "canonicalRu": "ВЕНГЕРСКАЯ ВЫЖЛА К-Ш",
       "nameRu": "Венгерская выжла к-ш",
-      "nameEn": "HUNGARIAN SHORT-HAIRED POINTER (VIZSLA)",
+      "nameEn": "HUNGARIAN SHORT-HAIRED VIZSLA",
       "fciGroup": null,
       "fciStandard": null,
       "aliases": [
         "ВЕНГЕРСКАЯ ВЫЖЛА К-Ш",
-        "HUNGARIAN SHORT-HAIRED POINTER (VIZSLA)"
-      ]
+        "HUNGARIAN SHORT-HAIRED POINTER (VIZSLA)",
+        "ВЕНГЕРСКАЯ ВЫЖЛА К Ш",
+        "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
+        "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ ЛЕГАВАЯ",
+        "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ ЛЕГАВАЯ (ВЫЖЛА)",
+        "ВЕНГЕРСКАЯ ВЫЖЛА КОРОТКОШЕРСТНАЯ"
+      ],
+      "baseBreed": "ВЕНГЕРСКАЯ ВЫЖЛА",
+      "variety": "к-ш"
     },
     {
       "id": "венгерская-трансильванская-гончая",
@@ -1408,7 +1759,9 @@
       "aliases": [
         "ВЕНГЕРСКАЯ ТРАНСИЛЬВАНСКАЯ ГОНЧАЯ",
         "HUNGARIAN HOUND – TRANSYLVANIAN SCENT HOUND"
-      ]
+      ],
+      "baseBreed": "ВЕНГЕРСКАЯ ТРАНСИЛЬВАНСКАЯ ГОНЧАЯ",
+      "variety": ""
     },
     {
       "id": "вест-хайленд-уайт-терьер",
@@ -1424,7 +1777,9 @@
         "ВЕСТИК",
         "HIGHLAND WHITE",
         "ВЕСТИ"
-      ]
+      ],
+      "baseBreed": "ВЕСТ ХАЙЛЕНД УАЙТ ТЕРЬЕР",
+      "variety": ""
     },
     {
       "id": "вестфальский-таксообразный-бракк",
@@ -1436,7 +1791,9 @@
       "aliases": [
         "ВЕСТФАЛЬСКИЙ ТАКСООБРАЗНЫЙ БРАКК",
         "WESTPHALIAN DACHSBBRACKE"
-      ]
+      ],
+      "baseBreed": "ВЕСТФАЛЬСКИЙ ТАКСООБРАЗНЫЙ БРАКК",
+      "variety": ""
     },
     {
       "id": "волчья-собака-саарлоса",
@@ -1448,13 +1805,33 @@
       "aliases": [
         "ВОЛЧЬЯ СОБАКА СААРЛОСА",
         "SAARLOOSWOLFHOND"
-      ]
+      ],
+      "baseBreed": "ВОЛЧЬЯ СОБАКА СААРЛОСА",
+      "variety": ""
+    },
+    {
+      "id": "вольфшпиц-кеесхонд",
+      "canonicalRu": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
+      "nameRu": "Вольфшпиц (кеесхонд)",
+      "nameEn": "KEESHOND (WOLFSPITZ)",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "ВОЛЬФШПИЦ (КЕЕСХОНД)",
+        "КЕЕСХОНД",
+        "ВОЛЬФШПИЦ",
+        "НЕМЕЦКИЙ ВОЛЬФШПИЦ (КЕЕСХОНД)",
+        "KEESHOND",
+        "WOLFSPITZ"
+      ],
+      "baseBreed": "НЕМЕЦКИЙ ШПИЦ",
+      "variety": "вольфшпиц (кеесхонд)"
     },
     {
       "id": "восточноевропейская-овчарка",
       "canonicalRu": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "nameRu": "Восточноевропейская овчарка",
-      "nameEn": "VOSTOCHNOEVROPEISKAYA OVCHARKA (EAST EUROPEAN SHEPHERD DOG)",
+      "nameEn": "EAST EUROPEAN SHEPHERD",
       "fciGroup": null,
       "fciStandard": null,
       "aliases": [
@@ -1464,7 +1841,9 @@
         "VOSTOCHNOEVROPEISKAYA OVCHARKA",
         "VOSTOCHNOEVROPEISKAYA",
         "EAST EUROPEAN SHEPHERD"
-      ]
+      ],
+      "baseBreed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "variety": ""
     },
     {
       "id": "восточносибирская-лайка",
@@ -1476,7 +1855,9 @@
       "aliases": [
         "ВОСТОЧНОСИБИРСКАЯ ЛАЙКА",
         "VOSTOCHNOSIBIRSKAYA LAIKA (EAST SIBERIAN LAIKA)"
-      ]
+      ],
+      "baseBreed": "ВОСТОЧНОСИБИРСКАЯ ЛАЙКА",
+      "variety": ""
     },
     {
       "id": "все-породы",
@@ -1487,7 +1868,9 @@
       "fciStandard": null,
       "aliases": [
         "ВСЕ ПОРОДЫ"
-      ]
+      ],
+      "baseBreed": "ВСЕ ПОРОДЫ",
+      "variety": ""
     },
     {
       "id": "ганноверская-гончая",
@@ -1498,8 +1881,11 @@
       "fciStandard": null,
       "aliases": [
         "ГАННОВЕРСКАЯ ГОНЧАЯ",
-        "HANOVERIAN SCENT HOUND"
-      ]
+        "HANOVERIAN SCENT HOUND",
+        "ГАННОВЕРСКАЯ СЛЕДОВАЯ ГОНЧАЯ"
+      ],
+      "baseBreed": "ГАННОВЕРСКАЯ ГОНЧАЯ",
+      "variety": ""
     },
     {
       "id": "гасконско-сентонжская-гончая-большая",
@@ -1511,7 +1897,9 @@
       "aliases": [
         "ГАСКОНСКО СЕНТОНЖСКАЯ ГОНЧАЯ БОЛЬШАЯ",
         "GASCON SAINTONGEOIS GREAT"
-      ]
+      ],
+      "baseBreed": "ГАСКОНСКО СЕНТОНЖСКАЯ ГОНЧАЯ БОЛЬШАЯ",
+      "variety": ""
     },
     {
       "id": "гасконь-сентонжуа",
@@ -1523,7 +1911,9 @@
       "aliases": [
         "ГАСКОНЬ СЕНТОНЖУА",
         "GASCON SAINTONGEOIS"
-      ]
+      ],
+      "baseBreed": "ГАСКОНЬ СЕНТОНЖУА",
+      "variety": ""
     },
     {
       "id": "голландская-к-ш-собака",
@@ -1535,7 +1925,9 @@
       "aliases": [
         "ГОЛЛАНДСКАЯ К Ш СОБАКА",
         "DUTCH SMOUSHOND"
-      ]
+      ],
+      "baseBreed": "ГОЛЛАНДСКАЯ К Ш СОБАКА",
+      "variety": ""
     },
     {
       "id": "голландская-к-ш-собака",
@@ -1547,7 +1939,9 @@
       "aliases": [
         "ГОЛЛАНДСКАЯ К-Ш СОБАКА",
         "DUTCH SHORT-HAIRED DOG"
-      ]
+      ],
+      "baseBreed": "ГОЛЛАНДСКАЯ К-Ш СОБАКА",
+      "variety": ""
     },
     {
       "id": "голландская-овчарка",
@@ -1559,7 +1953,9 @@
       "aliases": [
         "ГОЛЛАНДСКАЯ ОВЧАРКА",
         "DUTCH SHEPHERD DOG"
-      ]
+      ],
+      "baseBreed": "ГОЛЛАНДСКАЯ ОВЧАРКА",
+      "variety": ""
     },
     {
       "id": "голландская-овчарка-к-ш",
@@ -1571,7 +1967,9 @@
       "aliases": [
         "ГОЛЛАНДСКАЯ ОВЧАРКА К Ш",
         "DUTCH SHEPHERD DOG SHORT HAIRED"
-      ]
+      ],
+      "baseBreed": "ГОЛЛАНДСКАЯ ОВЧАРКА К Ш",
+      "variety": ""
     },
     {
       "id": "голландский-схапендус",
@@ -1583,7 +1981,9 @@
       "aliases": [
         "ГОЛЛАНДСКИЙ СХАПЕНДУС",
         "SCHAPENDOES"
-      ]
+      ],
+      "baseBreed": "ГОЛЛАНДСКИЙ СХАПЕНДУС",
+      "variety": ""
     },
     {
       "id": "голубой-гасконский-бассет",
@@ -1595,7 +1995,9 @@
       "aliases": [
         "ГОЛУБОЙ ГАСКОНСКИЙ БАССЕТ",
         "BLUE GASCONY BASSET"
-      ]
+      ],
+      "baseBreed": "ГОЛУБОЙ ГАСКОНСКИЙ БАССЕТ",
+      "variety": ""
     },
     {
       "id": "голубой-гасконский-гриффон",
@@ -1607,7 +2009,9 @@
       "aliases": [
         "ГОЛУБОЙ ГАСКОНСКИЙ ГРИФФОН",
         "BLUE GASCONY GRIFFON"
-      ]
+      ],
+      "baseBreed": "ГОЛУБОЙ ГАСКОНСКИЙ ГРИФФОН",
+      "variety": ""
     },
     {
       "id": "голубой-пикардийский-спаниель",
@@ -1619,7 +2023,9 @@
       "aliases": [
         "ГОЛУБОЙ ПИКАРДИЙСКИЙ СПАНИЕЛЬ",
         "BLUE PICARDY SPANIEL"
-      ]
+      ],
+      "baseBreed": "ГОЛУБОЙ ПИКАРДИЙСКИЙ СПАНИЕЛЬ",
+      "variety": ""
     },
     {
       "id": "гончая-артуа",
@@ -1631,7 +2037,9 @@
       "aliases": [
         "ГОНЧАЯ АРТУА",
         "ARTOIS HOUND"
-      ]
+      ],
+      "baseBreed": "ГОНЧАЯ АРТУА",
+      "variety": ""
     },
     {
       "id": "гончая-гамильтона",
@@ -1643,7 +2051,9 @@
       "aliases": [
         "ГОНЧАЯ ГАМИЛЬТОНА",
         "HAMILTONSTOVARE"
-      ]
+      ],
+      "baseBreed": "ГОНЧАЯ ГАМИЛЬТОНА",
+      "variety": ""
     },
     {
       "id": "гончая-хигена",
@@ -1655,7 +2065,9 @@
       "aliases": [
         "ГОНЧАЯ ХИГЕНА",
         "HYGEN HOUND"
-      ]
+      ],
+      "baseBreed": "ГОНЧАЯ ХИГЕНА",
+      "variety": ""
     },
     {
       "id": "гончая-шиллера",
@@ -1667,7 +2079,9 @@
       "aliases": [
         "ГОНЧАЯ ШИЛЛЕРА",
         "SCHILLERSTOVARE"
-      ]
+      ],
+      "baseBreed": "ГОНЧАЯ ШИЛЛЕРА",
+      "variety": ""
     },
     {
       "id": "грейхаунд",
@@ -1679,7 +2093,9 @@
       "aliases": [
         "ГРЕЙХАУНД",
         "GREYHOUND"
-      ]
+      ],
+      "baseBreed": "ГРЕЙХАУНД",
+      "variety": ""
     },
     {
       "id": "гренландская-собака",
@@ -1691,7 +2107,9 @@
       "aliases": [
         "ГРЕНЛАНДСКАЯ СОБАКА",
         "GREENLAND DOG"
-      ]
+      ],
+      "baseBreed": "ГРЕНЛАНДСКАЯ СОБАКА",
+      "variety": ""
     },
     {
       "id": "греческая-гончая",
@@ -1703,7 +2121,9 @@
       "aliases": [
         "ГРЕЧЕСКАЯ ГОНЧАЯ",
         "GREEK HAREHOUND"
-      ]
+      ],
+      "baseBreed": "ГРЕЧЕСКАЯ ГОНЧАЯ",
+      "variety": ""
     },
     {
       "id": "гриффон-буле",
@@ -1715,7 +2135,9 @@
       "aliases": [
         "ГРИФФОН БУЛЕ",
         "FRENCH WOOLLY HAIRED POINTING GRIFFON"
-      ]
+      ],
+      "baseBreed": "ГРИФФОН БУЛЕ",
+      "variety": ""
     },
     {
       "id": "гриффон-кортальса",
@@ -1727,7 +2149,9 @@
       "aliases": [
         "ГРИФФОН КОРТАЛЬСА",
         "WIRE HAIRED POINTING GRIFFON KORTHALS"
-      ]
+      ],
+      "baseBreed": "ГРИФФОН КОРТАЛЬСА",
+      "variety": ""
     },
     {
       "id": "гриффон-ниверне",
@@ -1739,7 +2163,9 @@
       "aliases": [
         "ГРИФФОН НИВЕРНЕ",
         "GRIFFON NIVERNAIS"
-      ]
+      ],
+      "baseBreed": "ГРИФФОН НИВЕРНЕ",
+      "variety": ""
     },
     {
       "id": "далматин",
@@ -1751,7 +2177,9 @@
       "aliases": [
         "ДАЛМАТИН",
         "DALMATIAN"
-      ]
+      ],
+      "baseBreed": "ДАЛМАТИН",
+      "variety": ""
     },
     {
       "id": "датско-шведская-фермерская-собака",
@@ -1763,7 +2191,9 @@
       "aliases": [
         "ДАТСКО ШВЕДСКАЯ ФЕРМЕРСКАЯ СОБАКА",
         "DANISH SWEDISH FARMDOG"
-      ]
+      ],
+      "baseBreed": "ДАТСКО ШВЕДСКАЯ ФЕРМЕРСКАЯ СОБАКА",
+      "variety": ""
     },
     {
       "id": "датско-шведская-фермерская-собака",
@@ -1775,7 +2205,9 @@
       "aliases": [
         "ДАТСКО-ШВЕДСКАЯ ФЕРМЕРСКАЯ СОБАКА",
         "DANISH-SWEDISH FARMDOG"
-      ]
+      ],
+      "baseBreed": "ДАТСКО-ШВЕДСКАЯ ФЕРМЕРСКАЯ СОБАКА",
+      "variety": ""
     },
     {
       "id": "денди-динмонт-терьер",
@@ -1787,7 +2219,9 @@
       "aliases": [
         "ДЕНДИ ДИНМОНТ ТЕРЬЕР",
         "DANDIE DINMONT TERRIER"
-      ]
+      ],
+      "baseBreed": "ДЕНДИ ДИНМОНТ ТЕРЬЕР",
+      "variety": ""
     },
     {
       "id": "джек-рассел-терьер",
@@ -1805,7 +2239,9 @@
         "ДЖЕК-РАССЕЛ ТЕРЬЕР",
         "ДЖЕК-РАССЕЛ-ТЕРЬЕР",
         "ДЖЕК РАССЕЛ-ТЕРЬЕР"
-      ]
+      ],
+      "baseBreed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "variety": ""
     },
     {
       "id": "дирхаунд",
@@ -1816,8 +2252,11 @@
       "fciStandard": null,
       "aliases": [
         "ДИРХАУНД",
-        "DEERHOUND"
-      ]
+        "DEERHOUND",
+        "ДИРХАУНД (ШОТЛАНДСКАЯ БОРЗАЯ)"
+      ],
+      "baseBreed": "ДИРХАУНД",
+      "variety": ""
     },
     {
       "id": "доберман",
@@ -1837,7 +2276,9 @@
         "ДОБЕРМАН-ПИНЧЕР",
         "ДОБЕРМАН ПИНЧЕР",
         "DOBERMAN PINSCHER"
-      ]
+      ],
+      "baseBreed": "ДОБЕРМАН",
+      "variety": ""
     },
     {
       "id": "доберман-коричнево-подпалый",
@@ -1849,7 +2290,9 @@
       "aliases": [
         "ДОБЕРМАН КОРИЧНЕВО ПОДПАЛЫЙ",
         "DOBERMANN BROWN & TAN"
-      ]
+      ],
+      "baseBreed": "ДОБЕРМАН КОРИЧНЕВО ПОДПАЛЫЙ",
+      "variety": ""
     },
     {
       "id": "доберман-черно-подпалый",
@@ -1861,7 +2304,9 @@
       "aliases": [
         "ДОБЕРМАН ЧЕРНО ПОДПАЛЫЙ",
         "DOBERMANN BLACK & TAN"
-      ]
+      ],
+      "baseBreed": "ДОБЕРМАН ЧЕРНО ПОДПАЛЫЙ",
+      "variety": ""
     },
     {
       "id": "древер",
@@ -1873,7 +2318,9 @@
       "aliases": [
         "ДРЕВЕР",
         "DREVER"
-      ]
+      ],
+      "baseBreed": "ДРЕВЕР",
+      "variety": ""
     },
     {
       "id": "дрентская-куропаточная-собака",
@@ -1885,7 +2332,51 @@
       "aliases": [
         "ДРЕНТСКАЯ КУРОПАТОЧНАЯ СОБАКА",
         "DRENTSCHE PARTRIDGE DOG"
-      ]
+      ],
+      "baseBreed": "ДРЕНТСКАЯ КУРОПАТОЧНАЯ СОБАКА",
+      "variety": ""
+    },
+    {
+      "id": "дружественные-макси",
+      "canonicalRu": "ДРУЖЕСТВЕННЫЕ-МАКСИ",
+      "nameRu": "Дружественные макси",
+      "nameEn": "FRIENDLY MAXI",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "ДРУЖЕСТВЕННЫЕ-МАКСИ",
+        "ДРУЖЕСТВЕННЫЕ - МАКСИ"
+      ],
+      "baseBreed": "ДРУЖЕСТВЕННЫЕ",
+      "variety": "макси"
+    },
+    {
+      "id": "дружественные-миди",
+      "canonicalRu": "ДРУЖЕСТВЕННЫЕ-МИДИ",
+      "nameRu": "Дружественные миди",
+      "nameEn": "FRIENDLY MIDI",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "ДРУЖЕСТВЕННЫЕ-МИДИ",
+        "ДРУЖЕСТВЕННЫЕ - МИДИ"
+      ],
+      "baseBreed": "ДРУЖЕСТВЕННЫЕ",
+      "variety": "миди"
+    },
+    {
+      "id": "дружественные-мини",
+      "canonicalRu": "ДРУЖЕСТВЕННЫЕ-МИНИ",
+      "nameRu": "Дружественные мини",
+      "nameEn": "FRIENDLY MINI",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "ДРУЖЕСТВЕННЫЕ-МИНИ",
+        "ДРУЖЕСТВЕННЫЕ - МИНИ"
+      ],
+      "baseBreed": "ДРУЖЕСТВЕННЫЕ",
+      "variety": "мини"
     },
     {
       "id": "евразиер",
@@ -1897,7 +2388,9 @@
       "aliases": [
         "ЕВРАЗИЕР",
         "EURASIER"
-      ]
+      ],
+      "baseBreed": "ЕВРАЗИЕР",
+      "variety": ""
     },
     {
       "id": "жесткошерстная-штирийская-гончая",
@@ -1909,7 +2402,9 @@
       "aliases": [
         "ЖЕСТКОШЕРСТНАЯ ШТИРИЙСКАЯ ГОНЧАЯ",
         "STYRIAN COARSE-HAIRED HOUND"
-      ]
+      ],
+      "baseBreed": "ЖЕСТКОШЕРСТНАЯ ШТИРИЙСКАЯ ГОНЧАЯ",
+      "variety": ""
     },
     {
       "id": "западносибирская-лайка",
@@ -1921,7 +2416,9 @@
       "aliases": [
         "ЗАПАДНОСИБИРСКАЯ ЛАЙКА",
         "ZAPADNOSIBIRSKAYA LAIKA (WEST SIBERIAN LAIKA)"
-      ]
+      ],
+      "baseBreed": "ЗАПАДНОСИБИРСКАЯ ЛАЙКА",
+      "variety": ""
     },
     {
       "id": "золотистый-ретривер",
@@ -1938,7 +2435,9 @@
         "RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР",
         "COCKER SPANIEL ЗОЛОТИСТЫЙ РЕТРИВЕР",
         "ГОЛДЕН-РЕТРИВЕР"
-      ]
+      ],
+      "baseBreed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "variety": ""
     },
     {
       "id": "ирландский-водяной-спаниель",
@@ -1950,7 +2449,24 @@
       "aliases": [
         "ИРЛАНДСКИЙ ВОДЯНОЙ СПАНИЕЛЬ",
         "IRISH WATER SPANIEL"
-      ]
+      ],
+      "baseBreed": "ИРЛАНДСКИЙ ВОДЯНОЙ СПАНИЕЛЬ",
+      "variety": ""
+    },
+    {
+      "id": "ирландский-волкодав",
+      "canonicalRu": "ИРЛАНДСКИЙ ВОЛКОДАВ",
+      "nameRu": "Ирландский волкодав",
+      "nameEn": "IRISH WOLFHOUND",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "ИРЛАНДСКИЙ ВОЛКОДАВ",
+        "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
+        "IRISH WOLFHOUND"
+      ],
+      "baseBreed": "ИРЛАНДСКИЙ ВОЛКОДАВ",
+      "variety": ""
     },
     {
       "id": "ирландский-вольфхаунд",
@@ -1963,7 +2479,9 @@
         "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
         "IRISH WOLFHOUND",
         "ИРЛАНДСКИЙ ВОЛКОДАВ"
-      ]
+      ],
+      "baseBreed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
+      "variety": ""
     },
     {
       "id": "ирландский-глен-оф-имал-терьер",
@@ -1975,7 +2493,9 @@
       "aliases": [
         "ИРЛАНДСКИЙ ГЛЕН ОФ ИМАЛ ТЕРЬЕР",
         "IRISH GLEN OF IMAAL TERRIER"
-      ]
+      ],
+      "baseBreed": "ИРЛАНДСКИЙ ГЛЕН ОФ ИМАЛ ТЕРЬЕР",
+      "variety": ""
     },
     {
       "id": "ирландский-красно-белый-сеттер",
@@ -1987,7 +2507,9 @@
       "aliases": [
         "ИРЛАНДСКИЙ КРАСНО БЕЛЫЙ СЕТТЕР",
         "IRISH RED AND WHITE SETTER"
-      ]
+      ],
+      "baseBreed": "ИРЛАНДСКИЙ КРАСНО БЕЛЫЙ СЕТТЕР",
+      "variety": ""
     },
     {
       "id": "ирландский-красно-белый-сеттер",
@@ -1999,7 +2521,9 @@
       "aliases": [
         "ИРЛАНДСКИЙ КРАСНО-БЕЛЫЙ СЕТТЕР",
         "IRISH RED AND WHITE SETTER"
-      ]
+      ],
+      "baseBreed": "ИРЛАНДСКИЙ КРАСНО-БЕЛЫЙ СЕТТЕР",
+      "variety": ""
     },
     {
       "id": "ирландский-красный-сеттер",
@@ -2011,7 +2535,9 @@
       "aliases": [
         "ИРЛАНДСКИЙ КРАСНЫЙ СЕТТЕР",
         "IRISH RED SETTER"
-      ]
+      ],
+      "baseBreed": "ИРЛАНДСКИЙ КРАСНЫЙ СЕТТЕР",
+      "variety": ""
     },
     {
       "id": "ирландский-мягкошерстный-пшеничный-терьер",
@@ -2022,8 +2548,13 @@
       "fciStandard": null,
       "aliases": [
         "ИРЛАНДСКИЙ МЯГКОШЕРСТНЫЙ ПШЕНИЧНЫЙ ТЕРЬЕР",
-        "IRISH SOFT COATED WHEATEN TERRIER"
-      ]
+        "IRISH SOFT COATED WHEATEN TERRIER",
+        "ИРЛАНДСКИЙ МЯГКОШЕРСТНЫЙ",
+        "ПШЕНИЧНЫЙ ТЕРЬЕР",
+        "SOFT COATED WHEATEN TERRIER"
+      ],
+      "baseBreed": "ИРЛАНДСКИЙ МЯГКОШЕРСТНЫЙ ПШЕНИЧНЫЙ ТЕРЬЕР",
+      "variety": ""
     },
     {
       "id": "ирландский-терьер",
@@ -2035,7 +2566,9 @@
       "aliases": [
         "ИРЛАНДСКИЙ ТЕРЬЕР",
         "IRISH TERRIER"
-      ]
+      ],
+      "baseBreed": "ИРЛАНДСКИЙ ТЕРЬЕР",
+      "variety": ""
     },
     {
       "id": "исландская-овчарка",
@@ -2047,19 +2580,27 @@
       "aliases": [
         "ИСЛАНДСКАЯ ОВЧАРКА",
         "ICELANDIC SHEEPDOG"
-      ]
+      ],
+      "baseBreed": "ИСЛАНДСКАЯ ОВЧАРКА",
+      "variety": ""
     },
     {
       "id": "испанская-борзая",
       "canonicalRu": "ИСПАНСКАЯ БОРЗАЯ",
       "nameRu": "Испанская борзая",
-      "nameEn": "SPANISH GREYHOUND",
+      "nameEn": "SPANISH GREYHOUND (GALGO ESPANOL)",
       "fciGroup": null,
       "fciStandard": null,
       "aliases": [
         "ИСПАНСКАЯ БОРЗАЯ",
-        "SPANISH GREYHOUND"
-      ]
+        "SPANISH GREYHOUND",
+        "ГАЛЬГО",
+        "ИСПАНСКИЙ ГАЛЬГО",
+        "ИСПАНСКАЯ БОРЗАЯ (ГАЛЬГО)",
+        "GALGO ESPANOL"
+      ],
+      "baseBreed": "ИСПАНСКАЯ БОРЗАЯ",
+      "variety": ""
     },
     {
       "id": "испанская-водяная-собака",
@@ -2071,7 +2612,9 @@
       "aliases": [
         "ИСПАНСКАЯ ВОДЯНАЯ СОБАКА",
         "SPANISH WATER DOG"
-      ]
+      ],
+      "baseBreed": "ИСПАНСКАЯ ВОДЯНАЯ СОБАКА",
+      "variety": ""
     },
     {
       "id": "испанская-гончая",
@@ -2083,7 +2626,9 @@
       "aliases": [
         "ИСПАНСКАЯ ГОНЧАЯ",
         "SPANISH HOUND"
-      ]
+      ],
+      "baseBreed": "ИСПАНСКАЯ ГОНЧАЯ",
+      "variety": ""
     },
     {
       "id": "испанский-алано",
@@ -2095,7 +2640,9 @@
       "aliases": [
         "ИСПАНСКИЙ АЛАНО",
         "SPANISH ALANO"
-      ]
+      ],
+      "baseBreed": "ИСПАНСКИЙ АЛАНО",
+      "variety": ""
     },
     {
       "id": "испанский-мастиф",
@@ -2107,7 +2654,9 @@
       "aliases": [
         "ИСПАНСКИЙ МАСТИФ",
         "SPANISH MASTIFF"
-      ]
+      ],
+      "baseBreed": "ИСПАНСКИЙ МАСТИФ",
+      "variety": ""
     },
     {
       "id": "истрийская-ж-ш-гончая",
@@ -2119,7 +2668,9 @@
       "aliases": [
         "ИСТРИЙСКАЯ Ж Ш ГОНЧАЯ",
         "ISTRIAN WIRE HAIRED HOUND"
-      ]
+      ],
+      "baseBreed": "ИСТРИЙСКАЯ Ж Ш ГОНЧАЯ",
+      "variety": ""
     },
     {
       "id": "истрийская-ж-ш-гончая",
@@ -2131,7 +2682,9 @@
       "aliases": [
         "ИСТРИЙСКАЯ Ж-Ш ГОНЧАЯ",
         "ISTRIAN WIRE-HAIRED HOUND"
-      ]
+      ],
+      "baseBreed": "ИСТРИЙСКАЯ Ж-Ш ГОНЧАЯ",
+      "variety": ""
     },
     {
       "id": "истрийская-к-ш-гончая",
@@ -2143,7 +2696,9 @@
       "aliases": [
         "ИСТРИЙСКАЯ К-Ш ГОНЧАЯ",
         "ISTRIAN SHORT-HAIRED HOUND"
-      ]
+      ],
+      "baseBreed": "ИСТРИЙСКАЯ К-Ш ГОНЧАЯ",
+      "variety": ""
     },
     {
       "id": "итальянская-ж-ш-гончая",
@@ -2155,7 +2710,9 @@
       "aliases": [
         "ИТАЛЬЯНСКАЯ Ж Ш ГОНЧАЯ",
         "ITALIAN ROUGH HAIRED HOUND"
-      ]
+      ],
+      "baseBreed": "ИТАЛЬЯНСКАЯ Ж Ш ГОНЧАЯ",
+      "variety": ""
     },
     {
       "id": "итальянская-ж-ш-гончая",
@@ -2167,7 +2724,9 @@
       "aliases": [
         "ИТАЛЬЯНСКАЯ Ж-Ш ГОНЧАЯ",
         "ITALIAN WIRE-HAIRED HOUND"
-      ]
+      ],
+      "baseBreed": "ИТАЛЬЯНСКАЯ Ж-Ш ГОНЧАЯ",
+      "variety": ""
     },
     {
       "id": "итальянская-к-ш-гончая",
@@ -2179,7 +2738,9 @@
       "aliases": [
         "ИТАЛЬЯНСКАЯ К-Ш ГОНЧАЯ",
         "ITALIAN SHORT-HAIRED HOUND"
-      ]
+      ],
+      "baseBreed": "ИТАЛЬЯНСКАЯ К-Ш ГОНЧАЯ",
+      "variety": ""
     },
     {
       "id": "итальянский-бракк",
@@ -2191,7 +2752,9 @@
       "aliases": [
         "ИТАЛЬЯНСКИЙ БРАКК",
         "ITALIAN POINTING DOG (BRACCO ITALIANO)"
-      ]
+      ],
+      "baseBreed": "ИТАЛЬЯНСКИЙ БРАКК",
+      "variety": ""
     },
     {
       "id": "итальянский-вольпино",
@@ -2203,19 +2766,41 @@
       "aliases": [
         "ИТАЛЬЯНСКИЙ ВОЛЬПИНО",
         "ITALIAN VOLPINO"
-      ]
+      ],
+      "baseBreed": "ИТАЛЬЯНСКИЙ ВОЛЬПИНО",
+      "variety": ""
     },
     {
       "id": "итальянский-кане-корсо",
       "canonicalRu": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "nameRu": "Итальянский кане корсо",
-      "nameEn": "ITALIAN CANE CORSO",
+      "nameEn": "CANE CORSO",
       "fciGroup": null,
       "fciStandard": null,
       "aliases": [
         "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
-        "ITALIAN CANE CORSO"
-      ]
+        "ITALIAN CANE CORSO",
+        "КАНЕ КОРСО",
+        "КАНЕ-КОРСО",
+        "CANE CORSO"
+      ],
+      "baseBreed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "variety": ""
+    },
+    {
+      "id": "итальянский-сегуджио-короткошерстный",
+      "canonicalRu": "ИТАЛЬЯНСКИЙ СЕГУДЖИО (КОРОТКОШЕРСТНЫЙ)",
+      "nameRu": "Итальянский сегуджио (короткошерстный)",
+      "nameEn": "ITALIAN SHORT-HAIRED HOUND",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "ИТАЛЬЯНСКИЙ СЕГУДЖИО (КОРОТКОШЕРСТНЫЙ)",
+        "ИТАЛЬЯНСКАЯ КОРОТКОШЕРСТНАЯ ГОНЧАЯ",
+        "SEGUGIO ITALIANO A PELO RASO"
+      ],
+      "baseBreed": "ИТАЛЬЯНСКИЙ СЕГУДЖИО",
+      "variety": "к-ш"
     },
     {
       "id": "итальянский-спиноне",
@@ -2227,7 +2812,9 @@
       "aliases": [
         "ИТАЛЬЯНСКИЙ СПИНОНЕ",
         "ITALIAN SPINONE"
-      ]
+      ],
+      "baseBreed": "ИТАЛЬЯНСКИЙ СПИНОНЕ",
+      "variety": ""
     },
     {
       "id": "йоркширский-терьер",
@@ -2239,7 +2826,9 @@
       "aliases": [
         "ЙОРКШИРСКИЙ ТЕРЬЕР",
         "YORKSHIRE TERRIER"
-      ]
+      ],
+      "baseBreed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "variety": ""
     },
     {
       "id": "кавалер-кинг-чарльз-спаниель",
@@ -2259,13 +2848,15 @@
         "CAVALIER KING",
         "ККЧС",
         "CAVALIER SPANIEL"
-      ]
+      ],
+      "baseBreed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "variety": ""
     },
     {
       "id": "кавказская-овчарка",
       "canonicalRu": "КАВКАЗСКАЯ ОВЧАРКА",
       "nameRu": "Кавказская овчарка",
-      "nameEn": "KAVKAZSKAYA OVCHARKA (CAUCASIAN SHEPHERD DOG)",
+      "nameEn": "CAUCASIAN SHEPHERD DOG",
       "fciGroup": null,
       "fciStandard": null,
       "aliases": [
@@ -2275,7 +2866,9 @@
         "CAUCASIAN SHEPHERD DOG",
         "CAUCASIAN SHEPHERD",
         "КАВКАЗЕЦ"
-      ]
+      ],
+      "baseBreed": "КАВКАЗСКАЯ ОВЧАРКА",
+      "variety": ""
     },
     {
       "id": "каи",
@@ -2287,7 +2880,9 @@
       "aliases": [
         "КАИ",
         "KAI"
-      ]
+      ],
+      "baseBreed": "КАИ",
+      "variety": ""
     },
     {
       "id": "канадская-эскимосская-собака",
@@ -2299,7 +2894,9 @@
       "aliases": [
         "КАНАДСКАЯ ЭСКИМОССКАЯ СОБАКА",
         "CANADIAN ESKIMO DOG"
-      ]
+      ],
+      "baseBreed": "КАНАДСКАЯ ЭСКИМОССКАЯ СОБАКА",
+      "variety": ""
     },
     {
       "id": "кангальская-овчарка",
@@ -2311,7 +2908,9 @@
       "aliases": [
         "КАНГАЛЬСКАЯ ОВЧАРКА",
         "KANGAL SHEPHERD DOG"
-      ]
+      ],
+      "baseBreed": "КАНГАЛЬСКАЯ ОВЧАРКА",
+      "variety": ""
     },
     {
       "id": "караванная-борзая",
@@ -2323,7 +2922,9 @@
       "aliases": [
         "КАРАВАННАЯ БОРЗАЯ",
         "CARAVAN HOUND"
-      ]
+      ],
+      "baseBreed": "КАРАВАННАЯ БОРЗАЯ",
+      "variety": ""
     },
     {
       "id": "карельская-лайка",
@@ -2335,7 +2936,9 @@
       "aliases": [
         "КАРЕЛЬСКАЯ ЛАЙКА",
         "KARELSKAYA LAIKA (KARELIAN LAIKA)"
-      ]
+      ],
+      "baseBreed": "КАРЕЛЬСКАЯ ЛАЙКА",
+      "variety": ""
     },
     {
       "id": "карельская-медвежья-собака",
@@ -2347,7 +2950,9 @@
       "aliases": [
         "КАРЕЛЬСКАЯ МЕДВЕЖЬЯ СОБАКА",
         "KARELIAN BEAR DOG"
-      ]
+      ],
+      "baseBreed": "КАРЕЛЬСКАЯ МЕДВЕЖЬЯ СОБАКА",
+      "variety": ""
     },
     {
       "id": "карстская-овчарка",
@@ -2359,7 +2964,9 @@
       "aliases": [
         "КАРСТСКАЯ ОВЧАРКА",
         "KARST SHEPHERD DOG"
-      ]
+      ],
+      "baseBreed": "КАРСТСКАЯ ОВЧАРКА",
+      "variety": ""
     },
     {
       "id": "кастро-лаборейро",
@@ -2371,7 +2978,9 @@
       "aliases": [
         "КАСТРО ЛАБОРЕЙРО",
         "CAO DE CASTRO LABOREIRO"
-      ]
+      ],
+      "baseBreed": "КАСТРО ЛАБОРЕЙРО",
+      "variety": ""
     },
     {
       "id": "каталонская-овчарка",
@@ -2383,7 +2992,9 @@
       "aliases": [
         "КАТАЛОНСКАЯ ОВЧАРКА",
         "CATALONIAN SHEEPDOG"
-      ]
+      ],
+      "baseBreed": "КАТАЛОНСКАЯ ОВЧАРКА",
+      "variety": ""
     },
     {
       "id": "керн-терьер",
@@ -2395,7 +3006,9 @@
       "aliases": [
         "КЕРН ТЕРЬЕР",
         "CAIRN TERRIER"
-      ]
+      ],
+      "baseBreed": "КЕРН ТЕРЬЕР",
+      "variety": ""
     },
     {
       "id": "керри-блю-терьер",
@@ -2407,7 +3020,9 @@
       "aliases": [
         "КЕРРИ БЛЮ ТЕРЬЕР",
         "KERRY BLUE TERRIER"
-      ]
+      ],
+      "baseBreed": "КЕРРИ БЛЮ ТЕРЬЕР",
+      "variety": ""
     },
     {
       "id": "кинг-чарльз-спаниель",
@@ -2423,7 +3038,9 @@
         "КИНГ-ЧАРЛЬЗ-СПАНИЕЛЬ",
         "КИНГ ЧАРЛЗ СПАНИЕЛЬ",
         "KING CHARLES"
-      ]
+      ],
+      "baseBreed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "variety": ""
     },
     {
       "id": "кинтамани-бали-дог",
@@ -2435,7 +3052,9 @@
       "aliases": [
         "КИНТАМАНИ БАЛИ ДОГ",
         "KINTAMANI-BALI DOG"
-      ]
+      ],
+      "baseBreed": "КИНТАМАНИ БАЛИ ДОГ",
+      "variety": ""
     },
     {
       "id": "кисю",
@@ -2447,7 +3066,9 @@
       "aliases": [
         "КИСЮ",
         "KISHU"
-      ]
+      ],
+      "baseBreed": "КИСЮ",
+      "variety": ""
     },
     {
       "id": "китайская-хохлатая-собака",
@@ -2466,7 +3087,9 @@
         "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА (ПУХОВКА)",
         "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА(ПУХ)",
         "CHINESE CRESTED"
-      ]
+      ],
+      "baseBreed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
+      "variety": ""
     },
     {
       "id": "китайская-хохлатая-собака-пух",
@@ -2478,7 +3101,9 @@
       "aliases": [
         "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА(ПУХ)",
         "CHINESE CRESTED DOG(PUFF)"
-      ]
+      ],
+      "baseBreed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА(ПУХ)",
+      "variety": ""
     },
     {
       "id": "кламбер-спаниель",
@@ -2490,7 +3115,9 @@
       "aliases": [
         "КЛАМБЕР СПАНИЕЛЬ",
         "CLUMBER SPANIEL"
-      ]
+      ],
+      "baseBreed": "КЛАМБЕР СПАНИЕЛЬ",
+      "variety": ""
     },
     {
       "id": "колли-д-ш",
@@ -2502,7 +3129,9 @@
       "aliases": [
         "КОЛЛИ Д Ш",
         "COLLIE ROUGH"
-      ]
+      ],
+      "baseBreed": "КОЛЛИ Д Ш",
+      "variety": ""
     },
     {
       "id": "колли-д-ш",
@@ -2514,7 +3143,9 @@
       "aliases": [
         "КОЛЛИ Д-Ш",
         "COLLIE ROUGH"
-      ]
+      ],
+      "baseBreed": "КОЛЛИ Д-Ш",
+      "variety": ""
     },
     {
       "id": "колли-к-ш",
@@ -2526,7 +3157,9 @@
       "aliases": [
         "КОЛЛИ К Ш",
         "COLLIE SMOOTH"
-      ]
+      ],
+      "baseBreed": "КОЛЛИ К Ш",
+      "variety": ""
     },
     {
       "id": "колли-к-ш",
@@ -2538,7 +3171,9 @@
       "aliases": [
         "КОЛЛИ К-Ш",
         "COLLIE SMOOTH"
-      ]
+      ],
+      "baseBreed": "КОЛЛИ К-Ш",
+      "variety": ""
     },
     {
       "id": "комондор",
@@ -2550,7 +3185,9 @@
       "aliases": [
         "КОМОНДОР",
         "KOMONDOR"
-      ]
+      ],
+      "baseBreed": "КОМОНДОР",
+      "variety": ""
     },
     {
       "id": "континентальный-бульдог",
@@ -2562,7 +3199,9 @@
       "aliases": [
         "КОНТИНЕНТАЛЬНЫЙ БУЛЬДОГ",
         "CONTINENTAL BULLDOG"
-      ]
+      ],
+      "baseBreed": "КОНТИНЕНТАЛЬНЫЙ БУЛЬДОГ",
+      "variety": ""
     },
     {
       "id": "континентальный-той-спаниель",
@@ -2574,12 +3213,14 @@
       "aliases": [
         "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ",
         "CONTINENTAL TOY SPANIEL"
-      ]
+      ],
+      "baseBreed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ",
+      "variety": ""
     },
     {
       "id": "континентальный-той-спаниель-папийон",
       "canonicalRu": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН",
-      "nameRu": "Папийон",
+      "nameRu": "Континентальный той спаниель папийон",
       "nameEn": "CONTINENTAL TOY SPANIEL PAPILLON",
       "fciGroup": 9,
       "fciStandard": 77,
@@ -2604,13 +3245,16 @@
         "СПАНИЕЛЬ ПАПИЙОН",
         "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ, ПАПИЙОН",
         "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ",
-        "PAPILLON"
-      ]
+        "PAPILLON",
+        "ПАПИЛЛОН"
+      ],
+      "baseBreed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ",
+      "variety": "папийон"
     },
     {
       "id": "континентальный-той-спаниель-фален",
       "canonicalRu": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ФАЛЕН",
-      "nameRu": "Фален",
+      "nameRu": "Континентальный той спаниель фален",
       "nameEn": "CONTINENTAL TOY SPANIEL PHALENE",
       "fciGroup": 9,
       "fciStandard": 77,
@@ -2629,7 +3273,9 @@
         "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ -ФАЛЕН",
         "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ, ФАЛЕН",
         "PHALENE"
-      ]
+      ],
+      "baseBreed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ",
+      "variety": "фален"
     },
     {
       "id": "корейская-собака-чиндо",
@@ -2641,7 +3287,9 @@
       "aliases": [
         "КОРЕЙСКАЯ СОБАКА ЧИНДО",
         "KOREA JINDO DOG"
-      ]
+      ],
+      "baseBreed": "КОРЕЙСКАЯ СОБАКА ЧИНДО",
+      "variety": ""
     },
     {
       "id": "котон-де-тулеар",
@@ -2653,7 +3301,9 @@
       "aliases": [
         "КОТОН ДЕ ТУЛЕАР",
         "COTON DE TULEAR"
-      ]
+      ],
+      "baseBreed": "КОТОН ДЕ ТУЛЕАР",
+      "variety": ""
     },
     {
       "id": "кромфорлендер",
@@ -2665,7 +3315,9 @@
       "aliases": [
         "КРОМФОРЛЕНДЕР",
         "KROMFOHRLANDER"
-      ]
+      ],
+      "baseBreed": "КРОМФОРЛЕНДЕР",
+      "variety": ""
     },
     {
       "id": "ксолоитцкуинтли",
@@ -2676,44 +3328,64 @@
       "fciStandard": null,
       "aliases": [
         "КСОЛОИТЦКУИНТЛИ",
-        "XOLOITZCUINTLE"
-      ]
+        "XOLOITZCUINTLE",
+        "МЕКСИКАНСКАЯ ГОЛАЯ СОБАКА",
+        "XOLO"
+      ],
+      "baseBreed": "КСОЛОИТЦКУИНТЛИ",
+      "variety": ""
     },
     {
       "id": "ксолоитцкуинтли-миниатюрный",
       "canonicalRu": "КСОЛОИТЦКУИНТЛИ (МИНИАТЮРНЫЙ)",
       "nameRu": "Ксолоитцкуинтли (миниатюрный)",
-      "nameEn": "XOLOITZCUINTLE (MINIATURE)",
+      "nameEn": "XOLOITZCUINTLE MINIATURE",
       "fciGroup": null,
       "fciStandard": null,
       "aliases": [
         "КСОЛОИТЦКУИНТЛИ (МИНИАТЮРНЫЙ)",
-        "XOLOITZCUINTLE (MINIATURE)"
-      ]
+        "XOLOITZCUINTLE (MINIATURE)",
+        "КСОЛОИТЦКУИНТЛИ МИНИАТЮРНЫЙ",
+        "КСОЛОИТЦКУИНТЛИ МИНИ",
+        "XOLOITZCUINTLE MINIATURE"
+      ],
+      "baseBreed": "КСОЛОИТЦКУИНТЛИ",
+      "variety": "миниатюрный"
     },
     {
       "id": "ксолоитцкуинтли-средний",
       "canonicalRu": "КСОЛОИТЦКУИНТЛИ (СРЕДНИЙ)",
       "nameRu": "Ксолоитцкуинтли (средний)",
-      "nameEn": "XOLOITZCUINTLE (INTERMEDIATE)",
+      "nameEn": "XOLOITZCUINTLE INTERMEDIATE",
       "fciGroup": null,
       "fciStandard": null,
       "aliases": [
         "КСОЛОИТЦКУИНТЛИ (СРЕДНИЙ)",
-        "XOLOITZCUINTLE (INTERMEDIATE)"
-      ]
+        "XOLOITZCUINTLE (INTERMEDIATE)",
+        "КСОЛОИТЦКУИНТЛИ СРЕДНИЙ",
+        "КСОЛОИТЦКУИНТЛИ МЕДИО",
+        "XOLOITZCUINTLE INTERMEDIATE"
+      ],
+      "baseBreed": "КСОЛОИТЦКУИНТЛИ",
+      "variety": "средний"
     },
     {
       "id": "ксолоитцкуинтли-стандартный",
       "canonicalRu": "КСОЛОИТЦКУИНТЛИ (СТАНДАРТНЫЙ)",
       "nameRu": "Ксолоитцкуинтли (стандартный)",
-      "nameEn": "XOLOITZCUINTLE (STANDARD)",
+      "nameEn": "XOLOITZCUINTLE STANDARD",
       "fciGroup": null,
       "fciStandard": null,
       "aliases": [
         "КСОЛОИТЦКУИНТЛИ (СТАНДАРТНЫЙ)",
-        "XOLOITZCUINTLE (STANDARD)"
-      ]
+        "XOLOITZCUINTLE (STANDARD)",
+        "КСОЛОИТЦКУИНТЛИ СТАНДАРТНЫЙ",
+        "КСОЛОИТЦКУИНТЛИ СТАНДАРТ",
+        "КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ СОБАКА) СТАНДАРТ",
+        "XOLOITZCUINTLE STANDARD"
+      ],
+      "baseBreed": "КСОЛОИТЦКУИНТЛИ",
+      "variety": "стандартный"
     },
     {
       "id": "ксолоитцкуинтли-миниатюрный",
@@ -2733,7 +3405,9 @@
         "МЕКСИКАНСКАЯ ГОЛАЯ СОБАКА (МИНИ)",
         "МЕКСИКАНСКАЯ ГОЛАЯ СОБАКА МИНИАТЮРНАЯ",
         "XOLOITZCUINTLE (MINIATURE)"
-      ]
+      ],
+      "baseBreed": "КСОЛОИТЦКУИНТЛИ МИНИАТЮРНЫЙ",
+      "variety": ""
     },
     {
       "id": "ксолоитцкуинтли-средний",
@@ -2751,7 +3425,9 @@
         "КСОЛОИТЦКУИНТЛИ (МЕДИО)",
         "МЕКСИКАНСКАЯ ГОЛАЯ СОБАКА СРЕДНЯЯ",
         "XOLOITZCUINTLE (INTERMEDIATE)"
-      ]
+      ],
+      "baseBreed": "КСОЛОИТЦКУИНТЛИ СРЕДНИЙ",
+      "variety": ""
     },
     {
       "id": "ксолоитцкуинтли-стандартный",
@@ -2773,7 +3449,9 @@
         "МЕКСИКАНСКАЯ ГОЛАЯ СОБАКА (СТАНДАРТ)",
         "КСОЛОИТСКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ СОБАКА) СТАНДАРТНАЯ",
         "XOLOITZCUINTLE (STANDARD)"
-      ]
+      ],
+      "baseBreed": "КСОЛОИТЦКУИНТЛИ СТАНДАРТНЫЙ",
+      "variety": ""
     },
     {
       "id": "кувас",
@@ -2785,7 +3463,9 @@
       "aliases": [
         "КУВАС",
         "KUVASZ"
-      ]
+      ],
+      "baseBreed": "КУВАС",
+      "variety": ""
     },
     {
       "id": "курчавошерстный-ретривер",
@@ -2797,7 +3477,9 @@
       "aliases": [
         "КУРЧАВОШЕРСТНЫЙ РЕТРИВЕР",
         "CURLY COATED RETRIEVER"
-      ]
+      ],
+      "baseBreed": "КУРЧАВОШЕРСТНЫЙ РЕТРИВЕР",
+      "variety": ""
     },
     {
       "id": "лабрадор-ретривер",
@@ -2811,7 +3493,9 @@
         "LABRADOR RETRIEVER",
         "ЛАБРАДОР",
         "LABRADOR"
-      ]
+      ],
+      "baseBreed": "ЛАБРАДОР РЕТРИВЕР",
+      "variety": ""
     },
     {
       "id": "лаготто-романьоло",
@@ -2823,7 +3507,9 @@
       "aliases": [
         "ЛАГОТТО РОМАНЬОЛО",
         "ROMAGNA WATER DOG (LAGOTTO ROMAGNOLO)"
-      ]
+      ],
+      "baseBreed": "ЛАГОТТО РОМАНЬОЛО",
+      "variety": ""
     },
     {
       "id": "ландсир",
@@ -2835,7 +3521,9 @@
       "aliases": [
         "ЛАНДСИР",
         "LANDSEER"
-      ]
+      ],
+      "baseBreed": "ЛАНДСИР",
+      "variety": ""
     },
     {
       "id": "ланкаширский-хилер",
@@ -2847,7 +3535,9 @@
       "aliases": [
         "ЛАНКАШИРСКИЙ ХИЛЕР",
         "LANCASHIRE HEELER"
-      ]
+      ],
+      "baseBreed": "ЛАНКАШИРСКИЙ ХИЛЕР",
+      "variety": ""
     },
     {
       "id": "лапландская-оленегонная-собака",
@@ -2859,7 +3549,9 @@
       "aliases": [
         "ЛАПЛАНДСКАЯ ОЛЕНЕГОННАЯ СОБАКА",
         "LAPPONIAN HERDER"
-      ]
+      ],
+      "baseBreed": "ЛАПЛАНДСКАЯ ОЛЕНЕГОННАЯ СОБАКА",
+      "variety": ""
     },
     {
       "id": "лейкленд-терьер",
@@ -2871,7 +3563,9 @@
       "aliases": [
         "ЛЕЙКЛЕНД ТЕРЬЕР",
         "LAKELAND TERRIER"
-      ]
+      ],
+      "baseBreed": "ЛЕЙКЛЕНД ТЕРЬЕР",
+      "variety": ""
     },
     {
       "id": "леонбергер",
@@ -2883,7 +3577,9 @@
       "aliases": [
         "ЛЕОНБЕРГЕР",
         "LEONBERGER"
-      ]
+      ],
+      "baseBreed": "ЛЕОНБЕРГЕР",
+      "variety": ""
     },
     {
       "id": "литовская-гончая",
@@ -2895,7 +3591,9 @@
       "aliases": [
         "ЛИТОВСКАЯ ГОНЧАЯ",
         "LITHUANIAN HOUND"
-      ]
+      ],
+      "baseBreed": "ЛИТОВСКАЯ ГОНЧАЯ",
+      "variety": ""
     },
     {
       "id": "лхасский-апсо",
@@ -2907,7 +3605,9 @@
       "aliases": [
         "ЛХАССКИЙ АПСО",
         "LHASA APSO"
-      ]
+      ],
+      "baseBreed": "ЛХАССКИЙ АПСО",
+      "variety": ""
     },
     {
       "id": "майоркская-овчарка",
@@ -2919,7 +3619,9 @@
       "aliases": [
         "МАЙОРКСКАЯ ОВЧАРКА",
         "MAJORCA SHEPHERD DOG"
-      ]
+      ],
+      "baseBreed": "МАЙОРКСКАЯ ОВЧАРКА",
+      "variety": ""
     },
     {
       "id": "майоркская-овчарка-к-ш",
@@ -2931,7 +3633,9 @@
       "aliases": [
         "МАЙОРКСКАЯ ОВЧАРКА К Ш",
         "MAJORCA SHEPHERD DOG SHORT HAIRED"
-      ]
+      ],
+      "baseBreed": "МАЙОРКСКАЯ ОВЧАРКА К Ш",
+      "variety": ""
     },
     {
       "id": "майоркский-мастиф",
@@ -2943,7 +3647,9 @@
       "aliases": [
         "МАЙОРКСКИЙ МАСТИФ",
         "MAJORCA MASTIFF"
-      ]
+      ],
+      "baseBreed": "МАЙОРКСКИЙ МАСТИФ",
+      "variety": ""
     },
     {
       "id": "малая-голубая-гасконская-гончая",
@@ -2955,19 +3661,26 @@
       "aliases": [
         "МАЛАЯ ГОЛУБАЯ ГАСКОНСКАЯ ГОНЧАЯ",
         "SMALL BLUE GASCONY"
-      ]
+      ],
+      "baseBreed": "МАЛАЯ ГОЛУБАЯ ГАСКОНСКАЯ ГОНЧАЯ",
+      "variety": ""
     },
     {
       "id": "малая-итальянская-борзая",
       "canonicalRu": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
       "nameRu": "Малая итальянская борзая",
-      "nameEn": "ITALIAN SIGHTHOUND",
+      "nameEn": "ITALIAN GREYHOUND",
       "fciGroup": null,
       "fciStandard": null,
       "aliases": [
         "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
-        "ITALIAN SIGHTHOUND"
-      ]
+        "ITALIAN SIGHTHOUND",
+        "ЛЕВРЕТКА",
+        "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
+        "PICCOLO LEVRIERO ITALIANO"
+      ],
+      "baseBreed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
+      "variety": ""
     },
     {
       "id": "малая-львиная-собака",
@@ -2979,7 +3692,9 @@
       "aliases": [
         "МАЛАЯ ЛЬВИНАЯ СОБАКА",
         "LITTLE LION DOG"
-      ]
+      ],
+      "baseBreed": "МАЛАЯ ЛЬВИНАЯ СОБАКА",
+      "variety": ""
     },
     {
       "id": "малая-швейцарская-гончая",
@@ -2991,7 +3706,9 @@
       "aliases": [
         "МАЛАЯ ШВЕЙЦАРСКАЯ ГОНЧАЯ",
         "SMALL SWISS HOUND"
-      ]
+      ],
+      "baseBreed": "МАЛАЯ ШВЕЙЦАРСКАЯ ГОНЧАЯ",
+      "variety": ""
     },
     {
       "id": "малый-вандейский-бассет-гриффон",
@@ -3003,7 +3720,9 @@
       "aliases": [
         "МАЛЫЙ ВАНДЕЙСКИЙ БАССЕТ ГРИФФОН",
         "PETIT BASSET GRIFFON VENDEEN"
-      ]
+      ],
+      "baseBreed": "МАЛЫЙ ВАНДЕЙСКИЙ БАССЕТ ГРИФФОН",
+      "variety": ""
     },
     {
       "id": "малый-мюнстерлендер",
@@ -3015,7 +3734,9 @@
       "aliases": [
         "МАЛЫЙ МЮНСТЕРЛЕНДЕР",
         "KLEINER MUNSTERLANDER"
-      ]
+      ],
+      "baseBreed": "МАЛЫЙ МЮНСТЕРЛЕНДЕР",
+      "variety": ""
     },
     {
       "id": "мальтезе",
@@ -3027,7 +3748,9 @@
       "aliases": [
         "МАЛЬТЕЗЕ",
         "MALTESE"
-      ]
+      ],
+      "baseBreed": "МАЛЬТЕЗЕ",
+      "variety": ""
     },
     {
       "id": "манчестер-терьер",
@@ -3039,7 +3762,9 @@
       "aliases": [
         "МАНЧЕСТЕР ТЕРЬЕР",
         "MANCHESTER TERRIER"
-      ]
+      ],
+      "baseBreed": "МАНЧЕСТЕР ТЕРЬЕР",
+      "variety": ""
     },
     {
       "id": "мареммо-абруцкая-овчарка",
@@ -3051,7 +3776,9 @@
       "aliases": [
         "МАРЕММО АБРУЦКАЯ ОВЧАРКА",
         "MAREMMA AND THE ABRUZZES SHEEPDOG"
-      ]
+      ],
+      "baseBreed": "МАРЕММО АБРУЦКАЯ ОВЧАРКА",
+      "variety": ""
     },
     {
       "id": "мареммо-абруцкая-овчарка",
@@ -3063,7 +3790,9 @@
       "aliases": [
         "МАРЕММО-АБРУЦКАЯ ОВЧАРКА",
         "MAREMMA AND THE ABRUZZES SHEEPDOG"
-      ]
+      ],
+      "baseBreed": "МАРЕММО-АБРУЦКАЯ ОВЧАРКА",
+      "variety": ""
     },
     {
       "id": "мареммская-гончая",
@@ -3075,7 +3804,9 @@
       "aliases": [
         "МАРЕММСКАЯ ГОНЧАЯ",
         "MAREMMA HOUND"
-      ]
+      ],
+      "baseBreed": "МАРЕММСКАЯ ГОНЧАЯ",
+      "variety": ""
     },
     {
       "id": "мастиф",
@@ -3087,7 +3818,24 @@
       "aliases": [
         "МАСТИФ",
         "MASTIFF"
-      ]
+      ],
+      "baseBreed": "МАСТИФ",
+      "variety": ""
+    },
+    {
+      "id": "метис",
+      "canonicalRu": "МЕТИС",
+      "nameRu": "Метис",
+      "nameEn": "CROSSBREED",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "МЕТИС",
+        "CROSSBREED",
+        "MIX"
+      ],
+      "baseBreed": "МЕТИС",
+      "variety": ""
     },
     {
       "id": "миниатюрная-американская-овчарка",
@@ -3099,7 +3847,9 @@
       "aliases": [
         "МИНИАТЮРНАЯ АМЕРИКАНСКАЯ ОВЧАРКА",
         "MINIATURE AMERICAN SHEPHERD"
-      ]
+      ],
+      "baseBreed": "МИНИАТЮРНАЯ АМЕРИКАНСКАЯ ОВЧАРКА",
+      "variety": ""
     },
     {
       "id": "мопс",
@@ -3111,7 +3861,9 @@
       "aliases": [
         "МОПС",
         "PUG"
-      ]
+      ],
+      "baseBreed": "МОПС",
+      "variety": ""
     },
     {
       "id": "мопс-бежевый",
@@ -3123,7 +3875,9 @@
       "aliases": [
         "МОПС БЕЖЕВЫЙ",
         "PUG FAWN"
-      ]
+      ],
+      "baseBreed": "МОПС БЕЖЕВЫЙ",
+      "variety": ""
     },
     {
       "id": "мопс-черный",
@@ -3135,19 +3889,24 @@
       "aliases": [
         "МОПС ЧЕРНЫЙ",
         "PUG BLACK"
-      ]
+      ],
+      "baseBreed": "МОПС ЧЕРНЫЙ",
+      "variety": ""
     },
     {
       "id": "московская-сторожевая",
       "canonicalRu": "МОСКОВСКАЯ СТОРОЖЕВАЯ",
       "nameRu": "Московская сторожевая",
-      "nameEn": "MOSKOVSKAYA STOROZHEVAYA (MOSCOW WATCH DOG)",
+      "nameEn": "MOSCOW WATCHDOG",
       "fciGroup": null,
       "fciStandard": null,
       "aliases": [
         "МОСКОВСКАЯ СТОРОЖЕВАЯ",
-        "MOSKOVSKAYA STOROZHEVAYA (MOSCOW WATCH DOG)"
-      ]
+        "MOSKOVSKAYA STOROZHEVAYA (MOSCOW WATCH DOG)",
+        "MOSCOW WATCHDOG"
+      ],
+      "baseBreed": "МОСКОВСКАЯ СТОРОЖЕВАЯ",
+      "variety": ""
     },
     {
       "id": "муди",
@@ -3159,7 +3918,9 @@
       "aliases": [
         "МУДИ",
         "MUDI"
-      ]
+      ],
+      "baseBreed": "МУДИ",
+      "variety": ""
     },
     {
       "id": "неаполитанский-мастиф",
@@ -3171,7 +3932,9 @@
       "aliases": [
         "НЕАПОЛИТАНСКИЙ МАСТИФ",
         "NEAPOLITAN MASTIFF"
-      ]
+      ],
+      "baseBreed": "НЕАПОЛИТАНСКИЙ МАСТИФ",
+      "variety": ""
     },
     {
       "id": "немецкая-гончая",
@@ -3183,19 +3946,26 @@
       "aliases": [
         "НЕМЕЦКАЯ ГОНЧАЯ",
         "GERMAN HOUND"
-      ]
+      ],
+      "baseBreed": "НЕМЕЦКАЯ ГОНЧАЯ",
+      "variety": ""
     },
     {
       "id": "немецкая-д-ш-легавая-лангхаар",
       "canonicalRu": "НЕМЕЦКАЯ Д-Ш ЛЕГАВАЯ (ЛАНГХААР)",
       "nameRu": "Немецкая д-ш легавая (лангхаар)",
-      "nameEn": "GERMAN LONG-HAIRED POINTING DOG",
+      "nameEn": "GERMAN LONG-HAIRED POINTING DOG (LANGHAAR)",
       "fciGroup": null,
       "fciStandard": null,
       "aliases": [
         "НЕМЕЦКАЯ Д-Ш ЛЕГАВАЯ (ЛАНГХААР)",
-        "GERMAN LONG-HAIRED POINTING DOG"
-      ]
+        "GERMAN LONG-HAIRED POINTING DOG",
+        "ЛАНГХААР",
+        "НЕМЕЦКАЯ ДЛИННОШЕРСТНАЯ ЛЕГАВАЯ (ЛАНГХААР)",
+        "LANGHAAR"
+      ],
+      "baseBreed": "НЕМЕЦКАЯ Д-Ш ЛЕГАВАЯ (ЛАНГХААР)",
+      "variety": ""
     },
     {
       "id": "немецкая-ж-ш-легавая-дратхаар",
@@ -3207,13 +3977,15 @@
       "aliases": [
         "НЕМЕЦКАЯ Ж Ш ЛЕГАВАЯ (ДРАТХААР)",
         "GERMAN WIRE HAIRED POINTING DOG (DEUTSCH DRAHTHAAR)"
-      ]
+      ],
+      "baseBreed": "НЕМЕЦКАЯ Ж Ш ЛЕГАВАЯ (ДРАТХААР)",
+      "variety": ""
     },
     {
       "id": "немецкая-ж-ш-легавая-дратхаар",
       "canonicalRu": "НЕМЕЦКАЯ Ж-Ш ЛЕГАВАЯ (ДРАТХААР)",
       "nameRu": "Немецкая ж-ш легавая (дратхаар)",
-      "nameEn": "GERMAN WIRE-HAIRED POINTING DOG (DRATHAAR)",
+      "nameEn": "GERMAN WIRE-HAIRED POINTING DOG (DRAHTHAAR)",
       "fciGroup": null,
       "fciStandard": null,
       "aliases": [
@@ -3221,8 +3993,13 @@
         "GERMAN WIRE-HAIRED POINTING DOG (DRATHAAR)",
         "ДРАТХААР",
         "DEUTSCH DRAHTHAAR",
-        "GERMAN WIREHAIRED POINTER"
-      ]
+        "GERMAN WIREHAIRED POINTER",
+        "НЕМЕЦКАЯ ЖЕСТКОШЕРСТНАЯ ЛЕГАВАЯ (ДРАТХААР)",
+        "НЕМЕЦКАЯ ЖЕСТКОШЕРСТНАЯ ЛЕГАВАЯ",
+        "DRAHTHAAR"
+      ],
+      "baseBreed": "НЕМЕЦКАЯ Ж-Ш ЛЕГАВАЯ (ДРАТХААР)",
+      "variety": ""
     },
     {
       "id": "немецкая-к-ш-легавая-курцхаар",
@@ -3234,7 +4011,9 @@
       "aliases": [
         "НЕМЕЦКАЯ К Ш ЛЕГАВАЯ (КУРЦХААР)",
         "GERMAN SHORT HAIRED POINTING DOG (DEUTSCH KURZHAAR)"
-      ]
+      ],
+      "baseBreed": "НЕМЕЦКАЯ К Ш ЛЕГАВАЯ (КУРЦХААР)",
+      "variety": ""
     },
     {
       "id": "немецкая-к-ш-легавая-курцхаар",
@@ -3248,8 +4027,13 @@
         "GERMAN SHORT-HAIRED POINTING DOG (KURZHAAR)",
         "КУРЦХААР",
         "DEUTSCH KURZHAAR",
-        "GERMAN SHORTHAIRED POINTER"
-      ]
+        "GERMAN SHORTHAIRED POINTER",
+        "НЕМЕЦКАЯ КОРОТКОШЕРСТНАЯ ЛЕГАВАЯ (КУРЦХААР)",
+        "НЕМЕЦКАЯ КОРОТКОШЕРСТНАЯ ЛЕГАВАЯ",
+        "KURZHAAR"
+      ],
+      "baseBreed": "НЕМЕЦКАЯ К-Ш ЛЕГАВАЯ (КУРЦХААР)",
+      "variety": ""
     },
     {
       "id": "немецкая-овчарка",
@@ -3267,8 +4051,13 @@
         "SHEPHERD DOG DOUBLE",
         "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
         "НЕМЕЦКАЯ ОВЧАРКА К Ш",
-        "НЕМЕЦ"
-      ]
+        "НЕМЕЦ",
+        "DEUTSCHER SCHAFERHUND",
+        "НЕМЕЦКАЯ ОВЧАРКА (Д Ш, К Ш)",
+        "НЕМЕЦКАЯ ОВЧАРКА (Д-Ш, К-Ш)"
+      ],
+      "baseBreed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "variety": ""
     },
     {
       "id": "немецкая-овчарка-д-ш",
@@ -3280,7 +4069,24 @@
       "aliases": [
         "НЕМЕЦКАЯ ОВЧАРКА Д Ш",
         "GERMAN SHEPHERD DOG LONG DOUBLE COAT"
-      ]
+      ],
+      "baseBreed": "НЕМЕЦКАЯ ОВЧАРКА Д Ш",
+      "variety": ""
+    },
+    {
+      "id": "немецкая-овчарка-д-ш",
+      "canonicalRu": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
+      "nameRu": "Немецкая овчарка д-ш",
+      "nameEn": "GERMAN SHEPHERD LONG-HAIRED",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
+        "НЕМЕЦКАЯ ОВЧАРКА Д Ш",
+        "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ"
+      ],
+      "baseBreed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "variety": "д-ш"
     },
     {
       "id": "немецкая-овчарка-к-ш",
@@ -3292,7 +4098,26 @@
       "aliases": [
         "НЕМЕЦКАЯ ОВЧАРКА К Ш",
         "GERMAN SHEPHERD DOG DOUBLE COAT"
-      ]
+      ],
+      "baseBreed": "НЕМЕЦКАЯ ОВЧАРКА К Ш",
+      "variety": ""
+    },
+    {
+      "id": "немецкая-овчарка-к-ш",
+      "canonicalRu": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "nameRu": "Немецкая овчарка к-ш",
+      "nameEn": "GERMAN SHEPHERD SHORT-HAIRED",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+        "НЕМЕЦКАЯ ОВЧАРКА К Ш",
+        "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+        "НЕМЕЦКАЯ ОВЧАРКА (СТАНДАРТНАЯ)",
+        "НЕМЕЦКАЯ ОВЧАРКА (К/Ш)"
+      ],
+      "baseBreed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "variety": "к-ш"
     },
     {
       "id": "немецкий-боксер",
@@ -3309,7 +4134,9 @@
         "GERMAN BOXER",
         "НЕМЕЦКИЙ БОКСЕР РЫЖИЙ",
         "НЕМЕЦКИЙ БОКСЕР ТИГРОВЫЙ"
-      ]
+      ],
+      "baseBreed": "НЕМЕЦКИЙ БОКСЕР",
+      "variety": ""
     },
     {
       "id": "немецкий-боксер-рыжий",
@@ -3321,7 +4148,9 @@
       "aliases": [
         "НЕМЕЦКИЙ БОКСЕР РЫЖИЙ",
         "BOXER RED"
-      ]
+      ],
+      "baseBreed": "НЕМЕЦКИЙ БОКСЕР РЫЖИЙ",
+      "variety": ""
     },
     {
       "id": "немецкий-боксер-тигровый",
@@ -3333,7 +4162,9 @@
       "aliases": [
         "НЕМЕЦКИЙ БОКСЕР ТИГРОВЫЙ",
         "BOXER BRINDLE"
-      ]
+      ],
+      "baseBreed": "НЕМЕЦКИЙ БОКСЕР ТИГРОВЫЙ",
+      "variety": ""
     },
     {
       "id": "немецкий-вольфшпиц-кеесхонд",
@@ -3351,7 +4182,9 @@
         "ВОЛЬФШПИЦ (КЕЕСХОНД)",
         "НЕМЕЦКИЙ ВОЛЬФШПИЦ",
         "НЕМЕЦКИЙ ШПИЦ ВОЛЬФШПИЦ"
-      ]
+      ],
+      "baseBreed": "НЕМЕЦКИЙ ВОЛЬФШПИЦ (КЕЕСХОНД)",
+      "variety": ""
     },
     {
       "id": "немецкий-дог",
@@ -3366,7 +4199,9 @@
         "DEUTSCHE DOGGE",
         "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
         "НЕМЕЦКИЙ ДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ"
-      ]
+      ],
+      "baseBreed": "НЕМЕЦКИЙ ДОГ",
+      "variety": ""
     },
     {
       "id": "немецкий-дог-голубой",
@@ -3378,7 +4213,9 @@
       "aliases": [
         "НЕМЕЦКИЙ ДОГ ГОЛУБОЙ",
         "DEUTSCHE DOGGE BLUE"
-      ]
+      ],
+      "baseBreed": "НЕМЕЦКИЙ ДОГ ГОЛУБОЙ",
+      "variety": ""
     },
     {
       "id": "немецкий-дог-палевый-тигровый",
@@ -3390,7 +4227,9 @@
       "aliases": [
         "НЕМЕЦКИЙ ДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
         "DEUTSCHE DOGGE FAWN, BRINDLE"
-      ]
+      ],
+      "baseBreed": "НЕМЕЦКИЙ ДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
+      "variety": ""
     },
     {
       "id": "немецкий-дог-черный-мраморный-плащевой",
@@ -3402,19 +4241,26 @@
       "aliases": [
         "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ, ПЛАЩЕВОЙ",
         "DEUTSCHE DOGGE BLACK, HARLEQUIN, OVERLAY"
-      ]
+      ],
+      "baseBreed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ, ПЛАЩЕВОЙ",
+      "variety": ""
     },
     {
       "id": "немецкий-охотничий-терьер-ягдтерьер",
       "canonicalRu": "НЕМЕЦКИЙ ОХОТНИЧИЙ ТЕРЬЕР (ЯГДТЕРЬЕР)",
       "nameRu": "Немецкий охотничий терьер (ягдтерьер)",
-      "nameEn": "GERMAN HUNTING TERRIER",
+      "nameEn": "GERMAN HUNTING TERRIER (JAGDTERRIER)",
       "fciGroup": null,
       "fciStandard": null,
       "aliases": [
         "НЕМЕЦКИЙ ОХОТНИЧИЙ ТЕРЬЕР (ЯГДТЕРЬЕР)",
-        "GERMAN HUNTING TERRIER"
-      ]
+        "GERMAN HUNTING TERRIER",
+        "ЯГДТЕРЬЕР",
+        "JAGDTERRIER",
+        "DEUTSCHER JAGDTERRIER"
+      ],
+      "baseBreed": "НЕМЕЦКИЙ ОХОТНИЧИЙ ТЕРЬЕР (ЯГДТЕРЬЕР)",
+      "variety": ""
     },
     {
       "id": "немецкий-пинчер",
@@ -3426,7 +4272,9 @@
       "aliases": [
         "НЕМЕЦКИЙ ПИНЧЕР",
         "GERMAN PINSCHER"
-      ]
+      ],
+      "baseBreed": "НЕМЕЦКИЙ ПИНЧЕР",
+      "variety": ""
     },
     {
       "id": "немецкий-спаниель",
@@ -3438,7 +4286,9 @@
       "aliases": [
         "НЕМЕЦКИЙ СПАНИЕЛЬ",
         "GERMAN SPANIEL"
-      ]
+      ],
+      "baseBreed": "НЕМЕЦКИЙ СПАНИЕЛЬ",
+      "variety": ""
     },
     {
       "id": "немецкий-шпиц",
@@ -3449,8 +4299,28 @@
       "fciStandard": null,
       "aliases": [
         "НЕМЕЦКИЙ ШПИЦ",
-        "GERMAN SPITZ"
-      ]
+        "GERMAN SPITZ",
+        "DEUTSCHER SPITZ"
+      ],
+      "baseBreed": "НЕМЕЦКИЙ ШПИЦ",
+      "variety": ""
+    },
+    {
+      "id": "немецкий-шпиц-большой",
+      "canonicalRu": "НЕМЕЦКИЙ ШПИЦ БОЛЬШОЙ",
+      "nameRu": "Немецкий шпиц большой",
+      "nameEn": "GERMAN GIANT SPITZ (GROSSSPITZ)",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "НЕМЕЦКИЙ ШПИЦ БОЛЬШОЙ",
+        "ГРОСШПИЦ",
+        "GROSSSPITZ",
+        "НЕМЕЦКИЙ ШПИЦ БОЛЬШОЙ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
+        "НЕМЕЦКИЙ ШПИЦ БОЛЬШОЙ БЕЛЫЙ"
+      ],
+      "baseBreed": "НЕМЕЦКИЙ ШПИЦ",
+      "variety": "большой"
     },
     {
       "id": "немецкий-шпиц-большой-черный-коричневый",
@@ -3462,7 +4332,28 @@
       "aliases": [
         "НЕМЕЦКИЙ ШПИЦ БОЛЬШОЙ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
         "GERMAN SPITZ GIANT BLACK, BROWN"
-      ]
+      ],
+      "baseBreed": "НЕМЕЦКИЙ ШПИЦ БОЛЬШОЙ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
+      "variety": ""
+    },
+    {
+      "id": "немецкий-шпиц-малый",
+      "canonicalRu": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ",
+      "nameRu": "Немецкий шпиц малый",
+      "nameEn": "GERMAN MINIATURE SPITZ (KLEINSPITZ)",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ",
+        "КЛЯЙНШПИЦ",
+        "KLEINSPITZ",
+        "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ БЕЛЫЙ",
+        "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
+        "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДР.ОКРАСЫ",
+        "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРОКРАСЫ"
+      ],
+      "baseBreed": "НЕМЕЦКИЙ ШПИЦ",
+      "variety": "малый"
     },
     {
       "id": "немецкий-шпиц-малый-белый",
@@ -3474,7 +4365,9 @@
       "aliases": [
         "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ БЕЛЫЙ",
         "GERMAN SPITZ MINIATURE WHITE"
-      ]
+      ],
+      "baseBreed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ БЕЛЫЙ",
+      "variety": ""
     },
     {
       "id": "немецкий-шпиц-малый-оранжевый-серый-и-др-окрасы",
@@ -3486,7 +4379,9 @@
       "aliases": [
         "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДР.ОКРАСЫ",
         "GERMAN SPITZ MINIATURE ORANGE, GREY & OTHER COLOR"
-      ]
+      ],
+      "baseBreed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДР.ОКРАСЫ",
+      "variety": ""
     },
     {
       "id": "немецкий-шпиц-малый-черный-коричневый",
@@ -3498,7 +4393,28 @@
       "aliases": [
         "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
         "GERMAN SPITZ MINIATURE BLACK, BROWN"
-      ]
+      ],
+      "baseBreed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
+      "variety": ""
+    },
+    {
+      "id": "немецкий-шпиц-средний",
+      "canonicalRu": "НЕМЕЦКИЙ ШПИЦ СРЕДНИЙ",
+      "nameRu": "Немецкий шпиц средний",
+      "nameEn": "GERMAN MEDIUM SPITZ (MITTELSPITZ)",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "НЕМЕЦКИЙ ШПИЦ СРЕДНИЙ",
+        "МИТТЕЛЬШПИЦ",
+        "MITTELSPITZ",
+        "НЕМЕЦКИЙ ШПИЦ СРЕДНИЙ БЕЛЫЙ",
+        "НЕМЕЦКИЙ ШПИЦ СРЕДНИЙ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
+        "НЕМЕЦКИЙ ШПИЦ СРЕДНИЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДР.ОКРАСЫ",
+        "НЕМЕЦКИЙ ШПИЦ СРЕДНИЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРОКРАСЫ"
+      ],
+      "baseBreed": "НЕМЕЦКИЙ ШПИЦ",
+      "variety": "средний"
     },
     {
       "id": "немецкий-шпиц-средний-белый",
@@ -3510,7 +4426,9 @@
       "aliases": [
         "НЕМЕЦКИЙ ШПИЦ СРЕДНИЙ БЕЛЫЙ",
         "GERMAN SPITZ MEDIUM WHITE"
-      ]
+      ],
+      "baseBreed": "НЕМЕЦКИЙ ШПИЦ СРЕДНИЙ БЕЛЫЙ",
+      "variety": ""
     },
     {
       "id": "немецкий-шпиц-средний-оранжевый-серый-и-др-окрасы",
@@ -3522,7 +4440,9 @@
       "aliases": [
         "НЕМЕЦКИЙ ШПИЦ СРЕДНИЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДР.ОКРАСЫ",
         "GERMAN SPITZ MEDIUM ORANGE, GREY & OTHER COLOR"
-      ]
+      ],
+      "baseBreed": "НЕМЕЦКИЙ ШПИЦ СРЕДНИЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДР.ОКРАСЫ",
+      "variety": ""
     },
     {
       "id": "немецкий-шпиц-средний-черный-коричневый",
@@ -3534,12 +4454,14 @@
       "aliases": [
         "НЕМЕЦКИЙ ШПИЦ СРЕДНИЙ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
         "GERMAN SPITZ MEDIUM BLACK, BROWN"
-      ]
+      ],
+      "baseBreed": "НЕМЕЦКИЙ ШПИЦ СРЕДНИЙ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
+      "variety": ""
     },
     {
       "id": "немецкий-шпиц-той-померанский",
       "canonicalRu": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "nameRu": "Померанский шпиц",
+      "nameRu": "Немецкий шпиц той (померанский)",
       "nameEn": "GERMAN TOY SPITZ (POMERANIAN)",
       "fciGroup": 5,
       "fciStandard": 97,
@@ -3559,8 +4481,13 @@
         "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
         "ПОМЕРАНЕЦ",
         "GERMAN SPITZ TOY",
-        "POMERANIAN"
-      ]
+        "POMERANIAN",
+        "ШПИЦ ТОЙ",
+        "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+        "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ"
+      ],
+      "baseBreed": "НЕМЕЦКИЙ ШПИЦ",
+      "variety": "той (померанский)"
     },
     {
       "id": "немецкий-штихельхаар",
@@ -3572,7 +4499,9 @@
       "aliases": [
         "НЕМЕЦКИЙ ШТИХЕЛЬХААР",
         "GERMAN ROUGH-HAIRED POINTING DOG"
-      ]
+      ],
+      "baseBreed": "НЕМЕЦКИЙ ШТИХЕЛЬХААР",
+      "variety": ""
     },
     {
       "id": "ненецкая-оленегонная-лайка",
@@ -3584,7 +4513,9 @@
       "aliases": [
         "НЕНЕЦКАЯ ОЛЕНЕГОННАЯ ЛАЙКА",
         "NENETSKAYA OLENEGONNAYA LAIKA (NENETS REINDEER HERDING LAIKA)"
-      ]
+      ],
+      "baseBreed": "НЕНЕЦКАЯ ОЛЕНЕГОННАЯ ЛАЙКА",
+      "variety": ""
     },
     {
       "id": "нидерландский-койкерхондье",
@@ -3596,7 +4527,9 @@
       "aliases": [
         "НИДЕРЛАНДСКИЙ КОЙКЕРХОНДЬЕ",
         "NEDERLANDSE KOOIKERHONDJE"
-      ]
+      ],
+      "baseBreed": "НИДЕРЛАНДСКИЙ КОЙКЕРХОНДЬЕ",
+      "variety": ""
     },
     {
       "id": "новошотландский-ретривер",
@@ -3608,7 +4541,9 @@
       "aliases": [
         "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
         "NOVA SCOTIA DUCK TOLLING RETRIEVER"
-      ]
+      ],
+      "baseBreed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
+      "variety": ""
     },
     {
       "id": "норботтеншпиц",
@@ -3620,7 +4555,9 @@
       "aliases": [
         "НОРБОТТЕНШПИЦ",
         "NORRBOTTENSPITZ"
-      ]
+      ],
+      "baseBreed": "НОРБОТТЕНШПИЦ",
+      "variety": ""
     },
     {
       "id": "норвежская-гончая-дункер",
@@ -3632,7 +4569,9 @@
       "aliases": [
         "НОРВЕЖСКАЯ ГОНЧАЯ ДУНКЕР",
         "NORWEGIAN HOUND (DUNKER)"
-      ]
+      ],
+      "baseBreed": "НОРВЕЖСКАЯ ГОНЧАЯ ДУНКЕР",
+      "variety": ""
     },
     {
       "id": "норвежский-бухунд",
@@ -3644,7 +4583,9 @@
       "aliases": [
         "НОРВЕЖСКИЙ БУХУНД",
         "NORWEGIAN BUHUND"
-      ]
+      ],
+      "baseBreed": "НОРВЕЖСКИЙ БУХУНД",
+      "variety": ""
     },
     {
       "id": "норвежский-лундехунд",
@@ -3656,7 +4597,9 @@
       "aliases": [
         "НОРВЕЖСКИЙ ЛУНДЕХУНД",
         "NORWEGIAN LUNDEHUND"
-      ]
+      ],
+      "baseBreed": "НОРВЕЖСКИЙ ЛУНДЕХУНД",
+      "variety": ""
     },
     {
       "id": "норвежский-элькхунд-серый",
@@ -3668,7 +4611,9 @@
       "aliases": [
         "НОРВЕЖСКИЙ ЭЛЬКХУНД СЕРЫЙ",
         "NORWEGIAN ELKHOUND GREY"
-      ]
+      ],
+      "baseBreed": "НОРВЕЖСКИЙ ЭЛЬКХУНД СЕРЫЙ",
+      "variety": ""
     },
     {
       "id": "норвежский-элькхунд-черный",
@@ -3680,7 +4625,9 @@
       "aliases": [
         "НОРВЕЖСКИЙ ЭЛЬКХУНД ЧЕРНЫЙ",
         "NORWEGIAN ELKHOUND BLACK"
-      ]
+      ],
+      "baseBreed": "НОРВЕЖСКИЙ ЭЛЬКХУНД ЧЕРНЫЙ",
+      "variety": ""
     },
     {
       "id": "норвич-терьер",
@@ -3695,7 +4642,9 @@
         "NORWICH TERRIER",
         "НОРВИЧ-ТЕРЬЕР",
         "НОРВИЧТЕРЬЕР"
-      ]
+      ],
+      "baseBreed": "НОРВИЧ ТЕРЬЕР",
+      "variety": ""
     },
     {
       "id": "норфолк-терьер",
@@ -3710,7 +4659,9 @@
         "NORFOLK TERRIER",
         "НОРФОЛК-ТЕРЬЕР",
         "НОРФОЛКТЕРЬЕР"
-      ]
+      ],
+      "baseBreed": "НОРФОЛК ТЕРЬЕР",
+      "variety": ""
     },
     {
       "id": "ньюфаундленд",
@@ -3722,7 +4673,9 @@
       "aliases": [
         "НЬЮФАУНДЛЕНД",
         "NEWFOUNDLAND"
-      ]
+      ],
+      "baseBreed": "НЬЮФАУНДЛЕНД",
+      "variety": ""
     },
     {
       "id": "овернский-пойнтер",
@@ -3734,7 +4687,9 @@
       "aliases": [
         "ОВЕРНСКИЙ ПОЙНТЕР",
         "AUVERGNE POINTER"
-      ]
+      ],
+      "baseBreed": "ОВЕРНСКИЙ ПОЙНТЕР",
+      "variety": ""
     },
     {
       "id": "оттерхаунд",
@@ -3746,7 +4701,9 @@
       "aliases": [
         "ОТТЕРХАУНД",
         "OTTERHOUND"
-      ]
+      ],
+      "baseBreed": "ОТТЕРХАУНД",
+      "variety": ""
     },
     {
       "id": "парсон-рассел-терьер",
@@ -3761,7 +4718,9 @@
         "ПРТ",
         "PARSON RUSSELL",
         "ПАРСОН-РАССЕЛ-ТЕРЬЕР"
-      ]
+      ],
+      "baseBreed": "ПАРСОН РАССЕЛ ТЕРЬЕР",
+      "variety": ""
     },
     {
       "id": "пекинес",
@@ -3773,7 +4732,9 @@
       "aliases": [
         "ПЕКИНЕС",
         "PEKINGESE"
-      ]
+      ],
+      "baseBreed": "ПЕКИНЕС",
+      "variety": ""
     },
     {
       "id": "перуанская-голая-собака",
@@ -3785,7 +4746,9 @@
       "aliases": [
         "ПЕРУАНСКАЯ ГОЛАЯ СОБАКА",
         "PERUVIAN HAIRLESS DOG"
-      ]
+      ],
+      "baseBreed": "ПЕРУАНСКАЯ ГОЛАЯ СОБАКА",
+      "variety": ""
     },
     {
       "id": "перуанская-голая-собака-большая",
@@ -3797,7 +4760,9 @@
       "aliases": [
         "ПЕРУАНСКАЯ ГОЛАЯ СОБАКА (БОЛЬШАЯ)",
         "PERUVIAN HAIRLESS DOG (LARGE)"
-      ]
+      ],
+      "baseBreed": "ПЕРУАНСКАЯ ГОЛАЯ СОБАКА (БОЛЬШАЯ)",
+      "variety": ""
     },
     {
       "id": "перуанская-голая-собака-малая",
@@ -3809,7 +4774,9 @@
       "aliases": [
         "ПЕРУАНСКАЯ ГОЛАЯ СОБАКА (МАЛАЯ)",
         "PERUVIAN HAIRLESS DOG (SMALL)"
-      ]
+      ],
+      "baseBreed": "ПЕРУАНСКАЯ ГОЛАЯ СОБАКА (МАЛАЯ)",
+      "variety": ""
     },
     {
       "id": "перуанская-голая-собака-средняя",
@@ -3821,7 +4788,9 @@
       "aliases": [
         "ПЕРУАНСКАЯ ГОЛАЯ СОБАКА (СРЕДНЯЯ)",
         "PERUVIAN HAIRLESS DOG (MEDIUM)"
-      ]
+      ],
+      "baseBreed": "ПЕРУАНСКАЯ ГОЛАЯ СОБАКА (СРЕДНЯЯ)",
+      "variety": ""
     },
     {
       "id": "пикардийская-овчарка",
@@ -3833,7 +4802,9 @@
       "aliases": [
         "ПИКАРДИЙСКАЯ ОВЧАРКА",
         "PICARDY SHEEPDOG"
-      ]
+      ],
+      "baseBreed": "ПИКАРДИЙСКАЯ ОВЧАРКА",
+      "variety": ""
     },
     {
       "id": "пикардийский-спаниель",
@@ -3845,7 +4816,9 @@
       "aliases": [
         "ПИКАРДИЙСКИЙ СПАНИЕЛЬ",
         "PICARDY SPANIEL"
-      ]
+      ],
+      "baseBreed": "ПИКАРДИЙСКИЙ СПАНИЕЛЬ",
+      "variety": ""
     },
     {
       "id": "пиренейская-горная-собака",
@@ -3857,7 +4830,9 @@
       "aliases": [
         "ПИРЕНЕЙСКАЯ ГОРНАЯ СОБАКА",
         "PYRENEAN MOUNTAIN DOG"
-      ]
+      ],
+      "baseBreed": "ПИРЕНЕЙСКАЯ ГОРНАЯ СОБАКА",
+      "variety": ""
     },
     {
       "id": "пиренейская-овчарка-д-ш",
@@ -3869,7 +4844,9 @@
       "aliases": [
         "ПИРЕНЕЙСКАЯ ОВЧАРКА Д Ш",
         "PYRENEAN SHEEPDOG LONG HAIRED"
-      ]
+      ],
+      "baseBreed": "ПИРЕНЕЙСКАЯ ОВЧАРКА Д Ш",
+      "variety": ""
     },
     {
       "id": "пиренейская-овчарка-д-ш",
@@ -3881,7 +4858,9 @@
       "aliases": [
         "ПИРЕНЕЙСКАЯ ОВЧАРКА Д-Ш",
         "PYRENEAN SHEEPDOG LONG-HAIRED"
-      ]
+      ],
+      "baseBreed": "ПИРЕНЕЙСКАЯ ОВЧАРКА Д-Ш",
+      "variety": ""
     },
     {
       "id": "пиренейская-овчарка-с-гладкой-шерстью-на-морде",
@@ -3893,7 +4872,9 @@
       "aliases": [
         "ПИРЕНЕЙСКАЯ ОВЧАРКА С ГЛАДКОЙ ШЕРСТЬЮ НА МОРДЕ",
         "PYRENEAN SHEEPDOG SMOOTH-FACED"
-      ]
+      ],
+      "baseBreed": "ПИРЕНЕЙСКАЯ ОВЧАРКА С ГЛАДКОЙ ШЕРСТЬЮ НА МОРДЕ",
+      "variety": ""
     },
     {
       "id": "пиренейский-мастиф",
@@ -3905,19 +4886,25 @@
       "aliases": [
         "ПИРЕНЕЙСКИЙ МАСТИФ",
         "PYRENEAN MASTIFF"
-      ]
+      ],
+      "baseBreed": "ПИРЕНЕЙСКИЙ МАСТИФ",
+      "variety": ""
     },
     {
       "id": "поденко-ибиценко",
       "canonicalRu": "ПОДЕНКО ИБИЦЕНКО",
       "nameRu": "Поденко ибиценко",
-      "nameEn": "IBIZAN PODENCO",
+      "nameEn": "IBIZAN HOUND",
       "fciGroup": null,
       "fciStandard": null,
       "aliases": [
         "ПОДЕНКО ИБИЦЕНКО",
-        "IBIZAN PODENCO"
-      ]
+        "IBIZAN PODENCO",
+        "IBIZAN HOUND",
+        "PODENCO IBICENCO"
+      ],
+      "baseBreed": "ПОДЕНКО ИБИЦЕНКО",
+      "variety": ""
     },
     {
       "id": "поденко-ибиценко-г-ш",
@@ -3929,7 +4916,9 @@
       "aliases": [
         "ПОДЕНКО ИБИЦЕНКО Г Ш",
         "PODENCO IBICENCO SMOOTH HAIRED"
-      ]
+      ],
+      "baseBreed": "ПОДЕНКО ИБИЦЕНКО Г Ш",
+      "variety": ""
     },
     {
       "id": "поденко-ибиценко-ж-ш",
@@ -3941,7 +4930,42 @@
       "aliases": [
         "ПОДЕНКО ИБИЦЕНКО Ж Ш",
         "PODENCO IBICENCO ROUGH HAIRED"
-      ]
+      ],
+      "baseBreed": "ПОДЕНКО ИБИЦЕНКО Ж Ш",
+      "variety": ""
+    },
+    {
+      "id": "поденко-ибиценко-ж-ш",
+      "canonicalRu": "ПОДЕНКО ИБИЦЕНКО Ж-Ш",
+      "nameRu": "Поденко ибиценко ж-ш",
+      "nameEn": "IBIZAN HOUND WIRE-HAIRED",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "ПОДЕНКО ИБИЦЕНКО Ж-Ш",
+        "ПОДЕНКО ИБИЦЕНКО Ж Ш",
+        "ПОДЕНКО ИБИЦЕНКО ЖЕСТКОШЕРСТНЫЙ"
+      ],
+      "baseBreed": "ПОДЕНКО ИБИЦЕНКО",
+      "variety": "ж-ш"
+    },
+    {
+      "id": "поденко-ибиценко-к-ш",
+      "canonicalRu": "ПОДЕНКО ИБИЦЕНКО К-Ш",
+      "nameRu": "Поденко ибиценко к-ш",
+      "nameEn": "IBIZAN HOUND SMOOTH-HAIRED",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "ПОДЕНКО ИБИЦЕНКО К-Ш",
+        "ПОДЕНКО ИБИЦЕНКО К Ш",
+        "ПОДЕНКО ИБИЦЕНКО Г-Ш",
+        "ПОДЕНКО ИБИЦЕНКО Г Ш",
+        "ПОДЕНКО ИБИЦЕНКО (К-Ш, Г-Ш)",
+        "ПОДЕНКО ИБИЦЕНКО (К Ш, Г Ш)"
+      ],
+      "baseBreed": "ПОДЕНКО ИБИЦЕНКО",
+      "variety": "к-ш"
     },
     {
       "id": "поденко-канарио",
@@ -3953,7 +4977,9 @@
       "aliases": [
         "ПОДЕНКО КАНАРИО",
         "CANARIAN WARREN HOUND"
-      ]
+      ],
+      "baseBreed": "ПОДЕНКО КАНАРИО",
+      "variety": ""
     },
     {
       "id": "польская-борзая",
@@ -3965,7 +4991,9 @@
       "aliases": [
         "ПОЛЬСКАЯ БОРЗАЯ",
         "POLISH GREYHOUND"
-      ]
+      ],
+      "baseBreed": "ПОЛЬСКАЯ БОРЗАЯ",
+      "variety": ""
     },
     {
       "id": "польская-гончая",
@@ -3977,7 +5005,9 @@
       "aliases": [
         "ПОЛЬСКАЯ ГОНЧАЯ",
         "POLISH HOUND"
-      ]
+      ],
+      "baseBreed": "ПОЛЬСКАЯ ГОНЧАЯ",
+      "variety": ""
     },
     {
       "id": "польская-низинная-овчарка",
@@ -3989,7 +5019,9 @@
       "aliases": [
         "ПОЛЬСКАЯ НИЗИННАЯ ОВЧАРКА",
         "POLISH LOWLAND SHEEPDOG"
-      ]
+      ],
+      "baseBreed": "ПОЛЬСКАЯ НИЗИННАЯ ОВЧАРКА",
+      "variety": ""
     },
     {
       "id": "польская-охотничья-собака",
@@ -4001,7 +5033,9 @@
       "aliases": [
         "ПОЛЬСКАЯ ОХОТНИЧЬЯ СОБАКА",
         "POLISH HUNTING DOG"
-      ]
+      ],
+      "baseBreed": "ПОЛЬСКАЯ ОХОТНИЧЬЯ СОБАКА",
+      "variety": ""
     },
     {
       "id": "польская-подгалянская-овчарка",
@@ -4013,7 +5047,9 @@
       "aliases": [
         "ПОЛЬСКАЯ ПОДГАЛЯНСКАЯ ОВЧАРКА",
         "TATRA SHEPHERD DOG"
-      ]
+      ],
+      "baseBreed": "ПОЛЬСКАЯ ПОДГАЛЯНСКАЯ ОВЧАРКА",
+      "variety": ""
     },
     {
       "id": "понт-одемерский-спаниель",
@@ -4025,7 +5061,9 @@
       "aliases": [
         "ПОНТ-ОДЕМЕРСКИЙ СПАНИЕЛЬ",
         "PONT-AUDEMER SPANIEL"
-      ]
+      ],
+      "baseBreed": "ПОНТ-ОДЕМЕРСКИЙ СПАНИЕЛЬ",
+      "variety": ""
     },
     {
       "id": "порселен",
@@ -4037,7 +5075,9 @@
       "aliases": [
         "ПОРСЕЛЕН",
         "PORCELAINE"
-      ]
+      ],
+      "baseBreed": "ПОРСЕЛЕН",
+      "variety": ""
     },
     {
       "id": "португальская-водяная-собака",
@@ -4049,7 +5089,9 @@
       "aliases": [
         "ПОРТУГАЛЬСКАЯ ВОДЯНАЯ СОБАКА",
         "PORTUGUESE WATER DOG"
-      ]
+      ],
+      "baseBreed": "ПОРТУГАЛЬСКАЯ ВОДЯНАЯ СОБАКА",
+      "variety": ""
     },
     {
       "id": "португальская-легавая",
@@ -4061,7 +5103,9 @@
       "aliases": [
         "ПОРТУГАЛЬСКАЯ ЛЕГАВАЯ",
         "PORTUGUESE POINTING DOG"
-      ]
+      ],
+      "baseBreed": "ПОРТУГАЛЬСКАЯ ЛЕГАВАЯ",
+      "variety": ""
     },
     {
       "id": "португальская-овчарка",
@@ -4073,7 +5117,9 @@
       "aliases": [
         "ПОРТУГАЛЬСКАЯ ОВЧАРКА",
         "PORTUGUESE SHEEPDOG"
-      ]
+      ],
+      "baseBreed": "ПОРТУГАЛЬСКАЯ ОВЧАРКА",
+      "variety": ""
     },
     {
       "id": "португальский-поденгу",
@@ -4085,7 +5131,9 @@
       "aliases": [
         "ПОРТУГАЛЬСКИЙ ПОДЕНГУ",
         "PORTUGUESE PODENGO"
-      ]
+      ],
+      "baseBreed": "ПОРТУГАЛЬСКИЙ ПОДЕНГУ",
+      "variety": ""
     },
     {
       "id": "португальский-поденгу-гладкая-и-короткая-шерсть-большой",
@@ -4097,7 +5145,9 @@
       "aliases": [
         "ПОРТУГАЛЬСКИЙ ПОДЕНГУ ГЛАДКАЯ И КОРОТКАЯ ШЕРСТЬ (БОЛЬШОЙ)",
         "PORTUGUESE PODENGO SMOOTH & SHORT HAIRED (LARGE)"
-      ]
+      ],
+      "baseBreed": "ПОРТУГАЛЬСКИЙ ПОДЕНГУ ГЛАДКАЯ И КОРОТКАЯ ШЕРСТЬ (БОЛЬШОЙ)",
+      "variety": ""
     },
     {
       "id": "португальский-поденгу-гладкая-и-короткая-шерсть-малый",
@@ -4109,7 +5159,9 @@
       "aliases": [
         "ПОРТУГАЛЬСКИЙ ПОДЕНГУ ГЛАДКАЯ И КОРОТКАЯ ШЕРСТЬ (МАЛЫЙ)",
         "PORTUGUESE PODENGO SMOOTH & SHORT HAIRED (SMALL)"
-      ]
+      ],
+      "baseBreed": "ПОРТУГАЛЬСКИЙ ПОДЕНГУ ГЛАДКАЯ И КОРОТКАЯ ШЕРСТЬ (МАЛЫЙ)",
+      "variety": ""
     },
     {
       "id": "португальский-поденгу-гладкая-и-короткая-шерсть-средний",
@@ -4121,7 +5173,9 @@
       "aliases": [
         "ПОРТУГАЛЬСКИЙ ПОДЕНГУ ГЛАДКАЯ И КОРОТКАЯ ШЕРСТЬ (СРЕДНИЙ)",
         "PORTUGUESE PODENGO SMOOTH & SHORT HAIRED (MEDIUM)"
-      ]
+      ],
+      "baseBreed": "ПОРТУГАЛЬСКИЙ ПОДЕНГУ ГЛАДКАЯ И КОРОТКАЯ ШЕРСТЬ (СРЕДНИЙ)",
+      "variety": ""
     },
     {
       "id": "португальский-поденгу-длинная-и-жесткая-шерсть-малый",
@@ -4133,7 +5187,9 @@
       "aliases": [
         "ПОРТУГАЛЬСКИЙ ПОДЕНГУ ДЛИННАЯ И ЖЕСТКАЯ ШЕРСТЬ (МАЛЫЙ)",
         "PORTUGUESE PODENGO LONG & WIRE HAIRED (SMALL)"
-      ]
+      ],
+      "baseBreed": "ПОРТУГАЛЬСКИЙ ПОДЕНГУ ДЛИННАЯ И ЖЕСТКАЯ ШЕРСТЬ (МАЛЫЙ)",
+      "variety": ""
     },
     {
       "id": "посавская-гончая",
@@ -4145,7 +5201,9 @@
       "aliases": [
         "ПОСАВСКАЯ ГОНЧАЯ",
         "POSAVATZ HOUND"
-      ]
+      ],
+      "baseBreed": "ПОСАВСКАЯ ГОНЧАЯ",
+      "variety": ""
     },
     {
       "id": "пражский-крысарик",
@@ -4157,7 +5215,22 @@
       "aliases": [
         "ПРАЖСКИЙ КРЫСАРИК",
         "PRAGUE RATTER"
-      ]
+      ],
+      "baseBreed": "ПРАЖСКИЙ КРЫСАРИК",
+      "variety": ""
+    },
+    {
+      "id": "прайтер",
+      "canonicalRu": "ПРАЙТЕР",
+      "nameRu": "Прайтер",
+      "nameEn": "PRATTER",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "ПРАЙТЕР"
+      ],
+      "baseBreed": "ПРАЙТЕР",
+      "variety": ""
     },
     {
       "id": "преса-канарио",
@@ -4169,7 +5242,9 @@
       "aliases": [
         "ПРЕСА КАНАРИО",
         "PRESA CANARIO"
-      ]
+      ],
+      "baseBreed": "ПРЕСА КАНАРИО",
+      "variety": ""
     },
     {
       "id": "прямошерстный-ретривер",
@@ -4181,7 +5256,9 @@
       "aliases": [
         "ПРЯМОШЕРСТНЫЙ РЕТРИВЕР",
         "FLAT COATED RETRIEVER"
-      ]
+      ],
+      "baseBreed": "ПРЯМОШЕРСТНЫЙ РЕТРИВЕР",
+      "variety": ""
     },
     {
       "id": "пти-брабансон",
@@ -4193,7 +5270,9 @@
       "aliases": [
         "ПТИ БРАБАНСОН",
         "PETIT BRABANCON"
-      ]
+      ],
+      "baseBreed": "ПТИ БРАБАНСОН",
+      "variety": ""
     },
     {
       "id": "пуатевен",
@@ -4205,7 +5284,9 @@
       "aliases": [
         "ПУАТЕВЕН",
         "POITEVIN"
-      ]
+      ],
+      "baseBreed": "ПУАТЕВЕН",
+      "variety": ""
     },
     {
       "id": "пудель",
@@ -4216,8 +5297,33 @@
       "fciStandard": null,
       "aliases": [
         "ПУДЕЛЬ",
-        "POODLE"
-      ]
+        "POODLE",
+        "CANICHE"
+      ],
+      "baseBreed": "ПУДЕЛЬ",
+      "variety": ""
+    },
+    {
+      "id": "пудель-миниатюрный",
+      "canonicalRu": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
+      "nameRu": "Пудель миниатюрный",
+      "nameEn": "MINIATURE POODLE",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "ПУДЕЛЬ МИНИАТЮРНЫЙ",
+        "ПУДЕЛЬ КАРЛИКОВЫЙ",
+        "ПУДЕЛЬ МИНИАТЮРНЫЙ (КАРЛИКОВЫЙ)",
+        "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+        "ПУДЕЛЬ МИНИАТЮРНЫЙ РЫЖИЙ, СЕРЫЙ",
+        "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНО ПОДПАЛЫЙ",
+        "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНО-ПОДПАЛЫЙ",
+        "ПУДЕЛЬ МИНИАТЮРНЫЙ ДРУГИЕ ОКРАСЫ",
+        "POODLE MINIATURE",
+        "MINIATURE POODLE"
+      ],
+      "baseBreed": "ПУДЕЛЬ",
+      "variety": "миниатюрный"
     },
     {
       "id": "пудель-миниатюрный-другие-окрасы",
@@ -4229,7 +5335,9 @@
       "aliases": [
         "ПУДЕЛЬ МИНИАТЮРНЫЙ ДРУГИЕ ОКРАСЫ",
         "POODLE MINIATURE OTHER COLOURS"
-      ]
+      ],
+      "baseBreed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ДРУГИЕ ОКРАСЫ",
+      "variety": ""
     },
     {
       "id": "пудель-миниатюрный-рыжий-серый",
@@ -4241,7 +5349,9 @@
       "aliases": [
         "ПУДЕЛЬ МИНИАТЮРНЫЙ РЫЖИЙ, СЕРЫЙ",
         "POODLE MINIATURE FAWN, GREY"
-      ]
+      ],
+      "baseBreed": "ПУДЕЛЬ МИНИАТЮРНЫЙ РЫЖИЙ, СЕРЫЙ",
+      "variety": ""
     },
     {
       "id": "пудель-миниатюрный-черно-подпалый",
@@ -4253,7 +5363,9 @@
       "aliases": [
         "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНО ПОДПАЛЫЙ",
         "POODLE MINIATURE BLACK & TAN"
-      ]
+      ],
+      "baseBreed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНО ПОДПАЛЫЙ",
+      "variety": ""
     },
     {
       "id": "пудель-миниатюрный-черный-белый-коричневый",
@@ -4265,7 +5377,31 @@
       "aliases": [
         "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
         "POODLE MINIATURE BLACK, WHITE, BROWN"
-      ]
+      ],
+      "baseBreed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "variety": ""
+    },
+    {
+      "id": "пудель-средний",
+      "canonicalRu": "ПУДЕЛЬ СРЕДНИЙ",
+      "nameRu": "Пудель средний",
+      "nameEn": "MEDIUM POODLE",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "ПУДЕЛЬ СРЕДНИЙ",
+        "ПУДЕЛЬ МАЛЫЙ",
+        "ПУДЕЛЬ СРЕДНИЙ (МАЛЫЙ)",
+        "ПУДЕЛЬ СРЕДНИЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+        "ПУДЕЛЬ СРЕДНИЙ РЫЖИЙ, СЕРЫЙ",
+        "ПУДЕЛЬ СРЕДНИЙ ЧЕРНО ПОДПАЛЫЙ",
+        "ПУДЕЛЬ СРЕДНИЙ ЧЕРНО-ПОДПАЛЫЙ",
+        "ПУДЕЛЬ СРЕДНИЙ ДРУГИЕ ОКРАСЫ",
+        "POODLE MEDIUM",
+        "MEDIUM POODLE"
+      ],
+      "baseBreed": "ПУДЕЛЬ",
+      "variety": "средний"
     },
     {
       "id": "пудель-средний-другие-окрасы",
@@ -4277,7 +5413,9 @@
       "aliases": [
         "ПУДЕЛЬ СРЕДНИЙ ДРУГИЕ ОКРАСЫ",
         "POODLE MEDIUM OTHER COLOURS"
-      ]
+      ],
+      "baseBreed": "ПУДЕЛЬ СРЕДНИЙ ДРУГИЕ ОКРАСЫ",
+      "variety": ""
     },
     {
       "id": "пудель-средний-рыжий-серый",
@@ -4289,7 +5427,9 @@
       "aliases": [
         "ПУДЕЛЬ СРЕДНИЙ РЫЖИЙ, СЕРЫЙ",
         "POODLE MEDIUM FAWN, GREY"
-      ]
+      ],
+      "baseBreed": "ПУДЕЛЬ СРЕДНИЙ РЫЖИЙ, СЕРЫЙ",
+      "variety": ""
     },
     {
       "id": "пудель-средний-черно-подпалый",
@@ -4301,7 +5441,9 @@
       "aliases": [
         "ПУДЕЛЬ СРЕДНИЙ ЧЕРНО ПОДПАЛЫЙ",
         "POODLE MEDIUM BLACK & TAN"
-      ]
+      ],
+      "baseBreed": "ПУДЕЛЬ СРЕДНИЙ ЧЕРНО ПОДПАЛЫЙ",
+      "variety": ""
     },
     {
       "id": "пудель-средний-черный-белый-коричневый",
@@ -4313,7 +5455,30 @@
       "aliases": [
         "ПУДЕЛЬ СРЕДНИЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
         "POODLE MEDIUM BLACK, WHITE, BROWN"
-      ]
+      ],
+      "baseBreed": "ПУДЕЛЬ СРЕДНИЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "variety": ""
+    },
+    {
+      "id": "пудель-стандартный",
+      "canonicalRu": "ПУДЕЛЬ СТАНДАРТНЫЙ",
+      "nameRu": "Пудель стандартный",
+      "nameEn": "STANDARD POODLE",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "ПУДЕЛЬ СТАНДАРТНЫЙ",
+        "ПУДЕЛЬ БОЛЬШОЙ",
+        "ПУДЕЛЬ СТАНДАРТНЫЙ (БОЛЬШОЙ)",
+        "ПУДЕЛЬ СТАНДАРТНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+        "ПУДЕЛЬ СТАНДАРТНЫЙ РЫЖИЙ, СЕРЫЙ",
+        "ПУДЕЛЬ СТАНДАРТНЫЙ ДРУГИЕ ОКРАСЫ",
+        "POODLE STANDARD",
+        "STANDARD POODLE",
+        "POODLE LARGE"
+      ],
+      "baseBreed": "ПУДЕЛЬ",
+      "variety": "стандартный"
     },
     {
       "id": "пудель-стандартный-другие-окрасы",
@@ -4325,7 +5490,9 @@
       "aliases": [
         "ПУДЕЛЬ СТАНДАРТНЫЙ ДРУГИЕ ОКРАСЫ",
         "POODLE STANDARD OTHER COLOURS"
-      ]
+      ],
+      "baseBreed": "ПУДЕЛЬ СТАНДАРТНЫЙ ДРУГИЕ ОКРАСЫ",
+      "variety": ""
     },
     {
       "id": "пудель-стандартный-рыжий-серый",
@@ -4337,7 +5504,9 @@
       "aliases": [
         "ПУДЕЛЬ СТАНДАРТНЫЙ РЫЖИЙ, СЕРЫЙ",
         "POODLE STANDARD FAWN, GREY"
-      ]
+      ],
+      "baseBreed": "ПУДЕЛЬ СТАНДАРТНЫЙ РЫЖИЙ, СЕРЫЙ",
+      "variety": ""
     },
     {
       "id": "пудель-стандартный-черный-белый-коричневый",
@@ -4349,19 +5518,28 @@
       "aliases": [
         "ПУДЕЛЬ СТАНДАРТНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
         "POODLE STANDARD BLACK, WHITE, BROWN"
-      ]
+      ],
+      "baseBreed": "ПУДЕЛЬ СТАНДАРТНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "variety": ""
     },
     {
       "id": "пудель-той",
       "canonicalRu": "ПУДЕЛЬ ТОЙ",
       "nameRu": "Пудель той",
-      "nameEn": "POODLE TOY",
+      "nameEn": "TOY POODLE",
       "fciGroup": null,
       "fciStandard": null,
       "aliases": [
         "ПУДЕЛЬ ТОЙ",
-        "POODLE TOY"
-      ]
+        "POODLE TOY",
+        "ТОЙ ПУДЕЛЬ",
+        "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+        "ПУДЕЛЬ ТОЙ РЫЖИЙ, СЕРЫЙ",
+        "ПУДЕЛЬ ТОЙ ДРУГИЕ ОКРАСЫ",
+        "TOY POODLE"
+      ],
+      "baseBreed": "ПУДЕЛЬ",
+      "variety": "той"
     },
     {
       "id": "пудель-той-другие-окрасы",
@@ -4373,7 +5551,9 @@
       "aliases": [
         "ПУДЕЛЬ ТОЙ ДРУГИЕ ОКРАСЫ",
         "POODLE TOY OTHER COLOURS"
-      ]
+      ],
+      "baseBreed": "ПУДЕЛЬ ТОЙ ДРУГИЕ ОКРАСЫ",
+      "variety": ""
     },
     {
       "id": "пудель-той-рыжий-серый",
@@ -4385,7 +5565,9 @@
       "aliases": [
         "ПУДЕЛЬ ТОЙ РЫЖИЙ, СЕРЫЙ",
         "POODLE TOY FAWN, GREY"
-      ]
+      ],
+      "baseBreed": "ПУДЕЛЬ ТОЙ РЫЖИЙ, СЕРЫЙ",
+      "variety": ""
     },
     {
       "id": "пудель-той-черный-белый-коричневый",
@@ -4397,7 +5579,9 @@
       "aliases": [
         "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
         "POODLE TOY BLACK, WHITE, BROWN"
-      ]
+      ],
+      "baseBreed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "variety": ""
     },
     {
       "id": "пудельпойнтер",
@@ -4409,7 +5593,9 @@
       "aliases": [
         "ПУДЕЛЬПОЙНТЕР",
         "PUDELPOINTER"
-      ]
+      ],
+      "baseBreed": "ПУДЕЛЬПОЙНТЕР",
+      "variety": ""
     },
     {
       "id": "пули",
@@ -4421,7 +5607,9 @@
       "aliases": [
         "ПУЛИ",
         "PULI"
-      ]
+      ],
+      "baseBreed": "ПУЛИ",
+      "variety": ""
     },
     {
       "id": "пули-белый",
@@ -4433,7 +5621,9 @@
       "aliases": [
         "ПУЛИ БЕЛЫЙ",
         "PULI WHITE"
-      ]
+      ],
+      "baseBreed": "ПУЛИ БЕЛЫЙ",
+      "variety": ""
     },
     {
       "id": "пули-другие-окрасы",
@@ -4445,7 +5635,9 @@
       "aliases": [
         "ПУЛИ ДРУГИЕ ОКРАСЫ",
         "PULI OTHER COLORS"
-      ]
+      ],
+      "baseBreed": "ПУЛИ ДРУГИЕ ОКРАСЫ",
+      "variety": ""
     },
     {
       "id": "пуми",
@@ -4457,7 +5649,9 @@
       "aliases": [
         "ПУМИ",
         "PUMI"
-      ]
+      ],
+      "baseBreed": "ПУМИ",
+      "variety": ""
     },
     {
       "id": "рафейро-до-алентейжо",
@@ -4469,7 +5663,9 @@
       "aliases": [
         "РАФЕЙРО ДО АЛЕНТЕЙЖО",
         "RAFEIRO DO ALENTEJO"
-      ]
+      ],
+      "baseBreed": "РАФЕЙРО ДО АЛЕНТЕЙЖО",
+      "variety": ""
     },
     {
       "id": "ризеншнауцер",
@@ -4481,8 +5677,11 @@
       "aliases": [
         "РИЗЕНШНАУЦЕР",
         "GIANT SCHNAUZER",
-        "ГИГАНТСКИЙ ШНАУЦЕР"
-      ]
+        "ГИГАНТСКИЙ ШНАУЦЕР",
+        "RIESENSCHNAUZER"
+      ],
+      "baseBreed": "РИЗЕНШНАУЦЕР",
+      "variety": ""
     },
     {
       "id": "ризеншнауцер-п-с",
@@ -4494,7 +5693,25 @@
       "aliases": [
         "РИЗЕНШНАУЦЕР П С",
         "GIANT SCHNAUZER P S"
-      ]
+      ],
+      "baseBreed": "РИЗЕНШНАУЦЕР П С",
+      "variety": ""
+    },
+    {
+      "id": "ризеншнауцер-перец-с-солью",
+      "canonicalRu": "РИЗЕНШНАУЦЕР ПЕРЕЦ С СОЛЬЮ",
+      "nameRu": "Ризеншнауцер перец с солью",
+      "nameEn": "GIANT SCHNAUZER PEPPER AND SALT",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "РИЗЕНШНАУЦЕР ПЕРЕЦ С СОЛЬЮ",
+        "РИЗЕНШНАУЦЕР П-С",
+        "РИЗЕНШНАУЦЕР П С",
+        "РИЗЕНШНАУЦЕР П/С"
+      ],
+      "baseBreed": "РИЗЕНШНАУЦЕР",
+      "variety": "перец с солью"
     },
     {
       "id": "ризеншнауцер-черный",
@@ -4505,8 +5722,11 @@
       "fciStandard": null,
       "aliases": [
         "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
-        "GIANT SCHNAUZER BLACK"
-      ]
+        "GIANT SCHNAUZER BLACK",
+        "RIESENSCHNAUZER BLACK"
+      ],
+      "baseBreed": "РИЗЕНШНАУЦЕР",
+      "variety": "черный"
     },
     {
       "id": "родезийский-риджбек",
@@ -4518,7 +5738,9 @@
       "aliases": [
         "РОДЕЗИЙСКИЙ РИДЖБЕК",
         "RHODESIAN RIDGEBACK"
-      ]
+      ],
+      "baseBreed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+      "variety": ""
     },
     {
       "id": "ротвейлер",
@@ -4530,7 +5752,9 @@
       "aliases": [
         "РОТВЕЙЛЕР",
         "ROTTWEILER"
-      ]
+      ],
+      "baseBreed": "РОТВЕЙЛЕР",
+      "variety": ""
     },
     {
       "id": "румынская-буковинская-овчарка",
@@ -4542,7 +5766,9 @@
       "aliases": [
         "РУМЫНСКАЯ БУКОВИНСКАЯ ОВЧАРКА",
         "ROMANIAN BUCOVINA SHEPHERD"
-      ]
+      ],
+      "baseBreed": "РУМЫНСКАЯ БУКОВИНСКАЯ ОВЧАРКА",
+      "variety": ""
     },
     {
       "id": "румынская-карпатская-овчарка",
@@ -4554,7 +5780,9 @@
       "aliases": [
         "РУМЫНСКАЯ КАРПАТСКАЯ ОВЧАРКА",
         "ROMANIAN CARPATHIAN SHEPHERD DOG"
-      ]
+      ],
+      "baseBreed": "РУМЫНСКАЯ КАРПАТСКАЯ ОВЧАРКА",
+      "variety": ""
     },
     {
       "id": "румынская-миоритская-овчарка",
@@ -4566,7 +5794,9 @@
       "aliases": [
         "РУМЫНСКАЯ МИОРИТСКАЯ ОВЧАРКА",
         "ROMANIAN MIORITIC SHEPHERD DOG"
-      ]
+      ],
+      "baseBreed": "РУМЫНСКАЯ МИОРИТСКАЯ ОВЧАРКА",
+      "variety": ""
     },
     {
       "id": "русская-гончая",
@@ -4578,7 +5808,9 @@
       "aliases": [
         "РУССКАЯ ГОНЧАЯ",
         "RUSSKAYA GONCHAYA (RUSSIAN HOUND)"
-      ]
+      ],
+      "baseBreed": "РУССКАЯ ГОНЧАЯ",
+      "variety": ""
     },
     {
       "id": "русская-пегая-гончая",
@@ -4590,13 +5822,15 @@
       "aliases": [
         "РУССКАЯ ПЕГАЯ ГОНЧАЯ",
         "RUSSKAYA PEGAYA GONCHAYA (RUSSIAN PIED HOUND)"
-      ]
+      ],
+      "baseBreed": "РУССКАЯ ПЕГАЯ ГОНЧАЯ",
+      "variety": ""
     },
     {
       "id": "русская-псовая-борзая",
       "canonicalRu": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "nameRu": "Русская псовая борзая",
-      "nameEn": "RUSSKAYA PSOVAYA BORZAYA (BORZOI)",
+      "nameEn": "BORZOI (RUSSIAN HUNTING SIGHTHOUND)",
       "fciGroup": null,
       "fciStandard": null,
       "aliases": [
@@ -4608,8 +5842,11 @@
         "RUSSIAN HUNTING SIGHTHOUND",
         "РУССКАЯ ПСОВАЯ",
         "ПСОВАЯ БОРЗАЯ",
-        "БОРЗАЯ"
-      ]
+        "БОРЗАЯ",
+        "RUSSKAYA PSOVAYA BORZAYA"
+      ],
+      "baseBreed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "variety": ""
     },
     {
       "id": "русская-салонная-собака",
@@ -4620,8 +5857,11 @@
       "fciStandard": null,
       "aliases": [
         "РУССКАЯ САЛОННАЯ СОБАКА",
-        "RUSSIAN SALON DOG"
-      ]
+        "RUSSIAN SALON DOG",
+        "РУСАЛКА"
+      ],
+      "baseBreed": "РУССКАЯ САЛОННАЯ СОБАКА",
+      "variety": ""
     },
     {
       "id": "русская-салонная-собака-остальные-окрасы",
@@ -4633,7 +5873,9 @@
       "aliases": [
         "РУССКАЯ САЛОННАЯ СОБАКА (ОСТАЛЬНЫЕ ОКРАСЫ)",
         "RUSSKAYA SALONNAYA SOBAKA (RUSSIAN SALON DOG) OTHER COLOUR"
-      ]
+      ],
+      "baseBreed": "РУССКАЯ САЛОННАЯ СОБАКА (ОСТАЛЬНЫЕ ОКРАСЫ)",
+      "variety": ""
     },
     {
       "id": "русская-салонная-собака-рыжий-палевый-кремовый-рыже-белый-палево-белый-кремово-белый",
@@ -4645,19 +5887,25 @@
       "aliases": [
         "РУССКАЯ САЛОННАЯ СОБАКА (РЫЖИЙ, ПАЛЕВЫЙ, КРЕМОВЫЙ, РЫЖЕ БЕЛЫЙ, ПАЛЕВО БЕЛЫЙ, КРЕМОВО БЕЛЫЙ)",
         "RUSSKAYA SALONNAYA SOBAKA (RUSSIAN SALON DOG) RED, FAWN, CREAM, RED &WHITE, FAWN &WHITE, CREAM & WHITE"
-      ]
+      ],
+      "baseBreed": "РУССКАЯ САЛОННАЯ СОБАКА (РЫЖИЙ, ПАЛЕВЫЙ, КРЕМОВЫЙ, РЫЖЕ БЕЛЫЙ, ПАЛЕВО БЕЛЫЙ, КРЕМОВО БЕЛЫЙ)",
+      "variety": ""
     },
     {
       "id": "русская-цветная-болонка",
       "canonicalRu": "РУССКАЯ ЦВЕТНАЯ БОЛОНКА",
       "nameRu": "Русская цветная болонка",
-      "nameEn": "RUSSKAYA TSVETNAYA BOLONKA (RUSSIAN COLOURED BICHON)",
+      "nameEn": "RUSSIAN TSVETNAYA BOLONKA",
       "fciGroup": null,
       "fciStandard": null,
       "aliases": [
         "РУССКАЯ ЦВЕТНАЯ БОЛОНКА",
-        "RUSSKAYA TSVETNAYA BOLONKA (RUSSIAN COLOURED BICHON)"
-      ]
+        "RUSSKAYA TSVETNAYA BOLONKA (RUSSIAN COLOURED BICHON)",
+        "ЦВЕТНАЯ БОЛОНКА",
+        "RUSSIAN TSVETNAYA BOLONKA"
+      ],
+      "baseBreed": "РУССКАЯ ЦВЕТНАЯ БОЛОНКА",
+      "variety": ""
     },
     {
       "id": "русский-охотничий-спаниель",
@@ -4669,7 +5917,9 @@
       "aliases": [
         "РУССКИЙ ОХОТНИЧИЙ СПАНИЕЛЬ",
         "RUSSKIY OHOTNICHIY SPANIEL (RUSSIAN HUNTING SPANIEL)"
-      ]
+      ],
+      "baseBreed": "РУССКИЙ ОХОТНИЧИЙ СПАНИЕЛЬ",
+      "variety": ""
     },
     {
       "id": "русский-той",
@@ -4680,8 +5930,11 @@
       "fciStandard": null,
       "aliases": [
         "РУССКИЙ ТОЙ",
-        "RUSSIAN TOY"
-      ]
+        "RUSSIAN TOY",
+        "РУССКИЙ ТОЙ-ТЕРЬЕР"
+      ],
+      "baseBreed": "РУССКИЙ ТОЙ",
+      "variety": ""
     },
     {
       "id": "русский-той-г-ш",
@@ -4693,7 +5946,25 @@
       "aliases": [
         "РУССКИЙ ТОЙ Г Ш",
         "RUSSKIY TOY (RUSSIAN TOY) SMOOTH HAIRED"
-      ]
+      ],
+      "baseBreed": "РУССКИЙ ТОЙ Г Ш",
+      "variety": ""
+    },
+    {
+      "id": "русский-той-г-ш",
+      "canonicalRu": "РУССКИЙ ТОЙ Г-Ш",
+      "nameRu": "Русский той г-ш",
+      "nameEn": "RUSSIAN TOY SMOOTH-HAIRED",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "РУССКИЙ ТОЙ Г-Ш",
+        "РУССКИЙ ТОЙ Г Ш",
+        "РУССКИЙ ТОЙ К-Ш",
+        "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ"
+      ],
+      "baseBreed": "РУССКИЙ ТОЙ",
+      "variety": "г-ш"
     },
     {
       "id": "русский-той-д-ш",
@@ -4705,7 +5976,24 @@
       "aliases": [
         "РУССКИЙ ТОЙ Д Ш",
         "RUSSKIY TOY (RUSSIAN TOY) LONG HAIRED"
-      ]
+      ],
+      "baseBreed": "РУССКИЙ ТОЙ Д Ш",
+      "variety": ""
+    },
+    {
+      "id": "русский-той-д-ш",
+      "canonicalRu": "РУССКИЙ ТОЙ Д-Ш",
+      "nameRu": "Русский той д-ш",
+      "nameEn": "RUSSIAN TOY LONG-HAIRED",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "РУССКИЙ ТОЙ Д-Ш",
+        "РУССКИЙ ТОЙ Д Ш",
+        "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ"
+      ],
+      "baseBreed": "РУССКИЙ ТОЙ",
+      "variety": "д-ш"
     },
     {
       "id": "русский-черный-терьер",
@@ -4717,7 +6005,9 @@
       "aliases": [
         "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
         "RUSSKIY СHIORNY TERRIER (RUSSIAN BLACK TERRIER)"
-      ]
+      ],
+      "baseBreed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
+      "variety": ""
     },
     {
       "id": "русский-чёрный-терьер",
@@ -4733,7 +6023,9 @@
         "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
         "ЧЕРНЫЙ ТЕРЬЕР",
         "BLACK RUSSIAN TERRIER"
-      ]
+      ],
+      "baseBreed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "variety": ""
     },
     {
       "id": "русско-европейская-лайка",
@@ -4745,7 +6037,9 @@
       "aliases": [
         "РУССКО ЕВРОПЕЙСКАЯ ЛАЙКА",
         "RUSSKO EVROPEISKAYA LAIKA (RUSSIAN EUROPEAN LAIKA)"
-      ]
+      ],
+      "baseBreed": "РУССКО ЕВРОПЕЙСКАЯ ЛАЙКА",
+      "variety": ""
     },
     {
       "id": "русско-европейская-лайка",
@@ -4757,7 +6051,9 @@
       "aliases": [
         "РУССКО-ЕВРОПЕЙСКАЯ ЛАЙКА",
         "RUSSIAN-EUROPEAN LAIKA"
-      ]
+      ],
+      "baseBreed": "РУССКО-ЕВРОПЕЙСКАЯ ЛАЙКА",
+      "variety": ""
     },
     {
       "id": "салюки",
@@ -4769,7 +6065,9 @@
       "aliases": [
         "САЛЮКИ",
         "SALUKI"
-      ]
+      ],
+      "baseBreed": "САЛЮКИ",
+      "variety": ""
     },
     {
       "id": "самоед",
@@ -4784,7 +6082,9 @@
         "САМОЕДСКАЯ СОБАКА",
         "SAMOYED DOG",
         "SAMOYEDE"
-      ]
+      ],
+      "baseBreed": "САМОЕД",
+      "variety": ""
     },
     {
       "id": "сан-мигельская-пастушья-собака",
@@ -4796,7 +6096,9 @@
       "aliases": [
         "САН-МИГЕЛЬСКАЯ ПАСТУШЬЯ СОБАКА",
         "SAO MIGUEL CATTLE DOG"
-      ]
+      ],
+      "baseBreed": "САН-МИГЕЛЬСКАЯ ПАСТУШЬЯ СОБАКА",
+      "variety": ""
     },
     {
       "id": "сен-жерменский-пойнтер",
@@ -4808,7 +6110,9 @@
       "aliases": [
         "СЕН-ЖЕРМЕНСКИЙ ПОЙНТЕР",
         "ST. GERMAIN POINTER"
-      ]
+      ],
+      "baseBreed": "СЕН-ЖЕРМЕНСКИЙ ПОЙНТЕР",
+      "variety": ""
     },
     {
       "id": "сенбернар",
@@ -4820,7 +6124,9 @@
       "aliases": [
         "СЕНБЕРНАР",
         "ST. BERNARD"
-      ]
+      ],
+      "baseBreed": "СЕНБЕРНАР",
+      "variety": ""
     },
     {
       "id": "сенбернар-д-ш",
@@ -4832,7 +6138,9 @@
       "aliases": [
         "СЕНБЕРНАР Д Ш",
         "ST. BERNARD LONG HAIRED"
-      ]
+      ],
+      "baseBreed": "СЕНБЕРНАР Д Ш",
+      "variety": ""
     },
     {
       "id": "сенбернар-к-ш",
@@ -4844,7 +6152,9 @@
       "aliases": [
         "СЕНБЕРНАР К Ш",
         "ST. BERNARD SHORT HAIRED"
-      ]
+      ],
+      "baseBreed": "СЕНБЕРНАР К Ш",
+      "variety": ""
     },
     {
       "id": "сербская-гончая",
@@ -4856,7 +6166,9 @@
       "aliases": [
         "СЕРБСКАЯ ГОНЧАЯ",
         "SERBIAN HOUND"
-      ]
+      ],
+      "baseBreed": "СЕРБСКАЯ ГОНЧАЯ",
+      "variety": ""
     },
     {
       "id": "сербская-трехцветная-гончая",
@@ -4868,7 +6180,9 @@
       "aliases": [
         "СЕРБСКАЯ ТРЕХЦВЕТНАЯ ГОНЧАЯ",
         "SERBIAN TRICOLOUR HOUND"
-      ]
+      ],
+      "baseBreed": "СЕРБСКАЯ ТРЕХЦВЕТНАЯ ГОНЧАЯ",
+      "variety": ""
     },
     {
       "id": "сеттер-гордон",
@@ -4880,7 +6194,9 @@
       "aliases": [
         "СЕТТЕР ГОРДОН",
         "GORDON SETTER"
-      ]
+      ],
+      "baseBreed": "СЕТТЕР ГОРДОН",
+      "variety": ""
     },
     {
       "id": "сиба",
@@ -4891,8 +6207,12 @@
       "fciStandard": null,
       "aliases": [
         "СИБА",
-        "SHIBA"
-      ]
+        "SHIBA",
+        "СИБА ИНУ",
+        "SHIBA INU"
+      ],
+      "baseBreed": "СИБА",
+      "variety": ""
     },
     {
       "id": "сибирский-хаски",
@@ -4904,7 +6224,9 @@
       "aliases": [
         "СИБИРСКИЙ ХАСКИ",
         "SIBERIAN HUSKY"
-      ]
+      ],
+      "baseBreed": "СИБИРСКИЙ ХАСКИ",
+      "variety": ""
     },
     {
       "id": "сикоку",
@@ -4916,7 +6238,9 @@
       "aliases": [
         "СИКОКУ",
         "SHIKOKU"
-      ]
+      ],
+      "baseBreed": "СИКОКУ",
+      "variety": ""
     },
     {
       "id": "силихем-терьер",
@@ -4928,7 +6252,9 @@
       "aliases": [
         "СИЛИХЕМ ТЕРЬЕР",
         "SEALYHAM TERRIER"
-      ]
+      ],
+      "baseBreed": "СИЛИХЕМ ТЕРЬЕР",
+      "variety": ""
     },
     {
       "id": "скай-терьер",
@@ -4940,7 +6266,9 @@
       "aliases": [
         "СКАЙ ТЕРЬЕР",
         "SKYE TERRIER"
-      ]
+      ],
+      "baseBreed": "СКАЙ ТЕРЬЕР",
+      "variety": ""
     },
     {
       "id": "словацкая-гончая",
@@ -4952,7 +6280,9 @@
       "aliases": [
         "СЛОВАЦКАЯ ГОНЧАЯ",
         "SLOVAKIAN HOUND"
-      ]
+      ],
+      "baseBreed": "СЛОВАЦКАЯ ГОНЧАЯ",
+      "variety": ""
     },
     {
       "id": "словацкая-грубошерстная-легавая",
@@ -4964,7 +6294,9 @@
       "aliases": [
         "СЛОВАЦКАЯ ГРУБОШЕРСТНАЯ ЛЕГАВАЯ",
         "WIREHAIRED SLOVAKIAN POINTER"
-      ]
+      ],
+      "baseBreed": "СЛОВАЦКАЯ ГРУБОШЕРСТНАЯ ЛЕГАВАЯ",
+      "variety": ""
     },
     {
       "id": "словацкий-чувач",
@@ -4976,7 +6308,9 @@
       "aliases": [
         "СЛОВАЦКИЙ ЧУВАЧ",
         "SLOVAKIAN CHUVACH"
-      ]
+      ],
+      "baseBreed": "СЛОВАЦКИЙ ЧУВАЧ",
+      "variety": ""
     },
     {
       "id": "слюги",
@@ -4988,7 +6322,9 @@
       "aliases": [
         "СЛЮГИ",
         "SLOUGHI"
-      ]
+      ],
+      "baseBreed": "СЛЮГИ",
+      "variety": ""
     },
     {
       "id": "смоландская-гончая",
@@ -5000,13 +6336,15 @@
       "aliases": [
         "СМОЛАНДСКАЯ ГОНЧАЯ",
         "SMALANDSTOVARE"
-      ]
+      ],
+      "baseBreed": "СМОЛАНДСКАЯ ГОНЧАЯ",
+      "variety": ""
     },
     {
       "id": "среднеазиатская-овчарка",
       "canonicalRu": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "nameRu": "Среднеазиатская овчарка",
-      "nameEn": "SREDNEASIATSKAYA OVCHARKA (CENTRAL ASIA SHEPHERD DOG)",
+      "nameEn": "CENTRAL ASIA SHEPHERD DOG",
       "fciGroup": null,
       "fciStandard": null,
       "aliases": [
@@ -5020,7 +6358,9 @@
         "CENTRAL ASIA",
         "АЗИАТ",
         "CENTRAL ASIAN SHEPHERD DOG"
-      ]
+      ],
+      "baseBreed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "variety": ""
     },
     {
       "id": "стабихун",
@@ -5032,7 +6372,9 @@
       "aliases": [
         "СТАБИХУН",
         "STABIJHOUN"
-      ]
+      ],
+      "baseBreed": "СТАБИХУН",
+      "variety": ""
     },
     {
       "id": "староанглийская-овчарка",
@@ -5047,7 +6389,26 @@
         "СТАРОАНГЛИЙСКАЯ ОВЧАРКА (БОБТЕЙЛ)",
         "БОБТЕЙЛ",
         "BOBTAIL"
-      ]
+      ],
+      "baseBreed": "СТАРОАНГЛИЙСКАЯ ОВЧАРКА",
+      "variety": ""
+    },
+    {
+      "id": "староанглийская-овчарка-бобтейл",
+      "canonicalRu": "СТАРОАНГЛИЙСКАЯ ОВЧАРКА (БОБТЕЙЛ)",
+      "nameRu": "Староанглийская овчарка (бобтейл)",
+      "nameEn": "OLD ENGLISH SHEEPDOG (BOBTAIL)",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "СТАРОАНГЛИЙСКАЯ ОВЧАРКА (БОБТЕЙЛ)",
+        "БОБТЕЙЛ",
+        "СТАРОАНГЛИЙСКАЯ ОВЧАРКА",
+        "BOBTAIL",
+        "OLD ENGLISH SHEEPDOG"
+      ],
+      "baseBreed": "СТАРОАНГЛИЙСКАЯ ОВЧАРКА (БОБТЕЙЛ)",
+      "variety": ""
     },
     {
       "id": "стародатская-легавая",
@@ -5059,7 +6420,9 @@
       "aliases": [
         "СТАРОДАТСКАЯ ЛЕГАВАЯ",
         "OLD DANISH POINTING DOG"
-      ]
+      ],
+      "baseBreed": "СТАРОДАТСКАЯ ЛЕГАВАЯ",
+      "variety": ""
     },
     {
       "id": "стаффордширский-бультерьер",
@@ -5070,8 +6433,11 @@
       "fciStandard": null,
       "aliases": [
         "СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР",
-        "STAFFORDSHIRE BULL TERRIER"
-      ]
+        "STAFFORDSHIRE BULL TERRIER",
+        "АНГЛИЙСКИЙ СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР"
+      ],
+      "baseBreed": "СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР",
+      "variety": ""
     },
     {
       "id": "суссекс-спаниель",
@@ -5084,7 +6450,9 @@
         "СУССЕКС СПАНИЕЛЬ",
         "SUSSEX SPANIEL",
         "СУССЕКС-СПАНИЕЛЬ"
-      ]
+      ],
+      "baseBreed": "СУССЕКС СПАНИЕЛЬ",
+      "variety": ""
     },
     {
       "id": "схипперке",
@@ -5096,7 +6464,9 @@
       "aliases": [
         "СХИППЕРКЕ",
         "SCHIPPERKE"
-      ]
+      ],
+      "baseBreed": "СХИППЕРКЕ",
+      "variety": ""
     },
     {
       "id": "тазы",
@@ -5108,7 +6478,9 @@
       "aliases": [
         "ТАЗЫ",
         "KAZAKH TAZY"
-      ]
+      ],
+      "baseBreed": "ТАЗЫ",
+      "variety": ""
     },
     {
       "id": "тайваньская-собака",
@@ -5120,7 +6492,9 @@
       "aliases": [
         "ТАЙВАНЬСКАЯ СОБАКА",
         "TAIWAN DOG"
-      ]
+      ],
+      "baseBreed": "ТАЙВАНЬСКАЯ СОБАКА",
+      "variety": ""
     },
     {
       "id": "тайган",
@@ -5132,7 +6506,9 @@
       "aliases": [
         "ТАЙГАН",
         "TAYGAN"
-      ]
+      ],
+      "baseBreed": "ТАЙГАН",
+      "variety": ""
     },
     {
       "id": "тайский-бангкеу-дог",
@@ -5144,7 +6520,9 @@
       "aliases": [
         "ТАЙСКИЙ БАНГКЕУ ДОГ",
         "THAI BANGKAEW DOG"
-      ]
+      ],
+      "baseBreed": "ТАЙСКИЙ БАНГКЕУ ДОГ",
+      "variety": ""
     },
     {
       "id": "тайский-риджбек",
@@ -5156,7 +6534,9 @@
       "aliases": [
         "ТАЙСКИЙ РИДЖБЕК",
         "THAI RIDGEBACK DOG"
-      ]
+      ],
+      "baseBreed": "ТАЙСКИЙ РИДЖБЕК",
+      "variety": ""
     },
     {
       "id": "такса",
@@ -5167,8 +6547,11 @@
       "fciStandard": null,
       "aliases": [
         "ТАКСА",
-        "DACHSHUND"
-      ]
+        "DACHSHUND",
+        "TECKEL"
+      ],
+      "baseBreed": "ТАКСА",
+      "variety": ""
     },
     {
       "id": "такса-кроличья-г-ш",
@@ -5180,7 +6563,23 @@
       "aliases": [
         "ТАКСА КРОЛИЧЬЯ Г Ш",
         "DACHSHUND KANINCHEN SMOOTH HAIRED"
-      ]
+      ],
+      "baseBreed": "ТАКСА КРОЛИЧЬЯ Г Ш",
+      "variety": ""
+    },
+    {
+      "id": "такса-кроличья-г-ш",
+      "canonicalRu": "ТАКСА КРОЛИЧЬЯ Г-Ш",
+      "nameRu": "Такса кроличья г-ш",
+      "nameEn": "RABBIT SMOOTH-HAIRED DACHSHUND",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "ТАКСА КРОЛИЧЬЯ Г-Ш",
+        "ТАКСА КРОЛИЧЬЯ Г Ш"
+      ],
+      "baseBreed": "ТАКСА",
+      "variety": "кроличья г-ш"
     },
     {
       "id": "такса-кроличья-д-ш",
@@ -5192,7 +6591,23 @@
       "aliases": [
         "ТАКСА КРОЛИЧЬЯ Д Ш",
         "DACHSHUND KANINCHEN LONG HAIRED"
-      ]
+      ],
+      "baseBreed": "ТАКСА КРОЛИЧЬЯ Д Ш",
+      "variety": ""
+    },
+    {
+      "id": "такса-кроличья-д-ш",
+      "canonicalRu": "ТАКСА КРОЛИЧЬЯ Д-Ш",
+      "nameRu": "Такса кроличья д-ш",
+      "nameEn": "RABBIT LONG-HAIRED DACHSHUND",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "ТАКСА КРОЛИЧЬЯ Д-Ш",
+        "ТАКСА КРОЛИЧЬЯ Д Ш"
+      ],
+      "baseBreed": "ТАКСА",
+      "variety": "кроличья д-ш"
     },
     {
       "id": "такса-кроличья-ж-ш",
@@ -5204,7 +6619,39 @@
       "aliases": [
         "ТАКСА КРОЛИЧЬЯ Ж Ш",
         "DACHSHUND KANINCHEN WIRE HAIRED"
-      ]
+      ],
+      "baseBreed": "ТАКСА КРОЛИЧЬЯ Ж Ш",
+      "variety": ""
+    },
+    {
+      "id": "такса-кроличья-ж-ш",
+      "canonicalRu": "ТАКСА КРОЛИЧЬЯ Ж-Ш",
+      "nameRu": "Такса кроличья ж-ш",
+      "nameEn": "RABBIT WIRE-HAIRED DACHSHUND",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "ТАКСА КРОЛИЧЬЯ Ж-Ш",
+        "ТАКСА КРОЛИЧЬЯ Ж Ш"
+      ],
+      "baseBreed": "ТАКСА",
+      "variety": "кроличья ж-ш"
+    },
+    {
+      "id": "такса-миниатюрная",
+      "canonicalRu": "ТАКСА МИНИАТЮРНАЯ",
+      "nameRu": "Такса миниатюрная",
+      "nameEn": "MINIATURE DACHSHUND",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "ТАКСА МИНИАТЮРНАЯ",
+        "ТАКСА МИНИАТЮРНАЯ (Г Ш, Д Ш, Ж Ш)",
+        "ТАКСА МИНИАТЮРНАЯ (Г Ш, Ж Ш)",
+        "ТАКСА КАРЛИКОВАЯ"
+      ],
+      "baseBreed": "ТАКСА",
+      "variety": "миниатюрная"
     },
     {
       "id": "такса-миниатюрная-г-ш",
@@ -5216,7 +6663,25 @@
       "aliases": [
         "ТАКСА МИНИАТЮРНАЯ Г Ш",
         "DACHSHUND MINIATURE SMOOTH HAIRED"
-      ]
+      ],
+      "baseBreed": "ТАКСА МИНИАТЮРНАЯ Г Ш",
+      "variety": ""
+    },
+    {
+      "id": "такса-миниатюрная-г-ш",
+      "canonicalRu": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
+      "nameRu": "Такса миниатюрная г-ш",
+      "nameEn": "MINIATURE SMOOTH-HAIRED DACHSHUND",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "ТАКСА МИНИАТЮРНАЯ Г-Ш",
+        "ТАКСА МИНИАТЮРНАЯ Г Ш",
+        "ТАКСА КАРЛИКОВАЯ Г-Ш",
+        "ТАКСА КАРЛИКОВАЯ Г Ш"
+      ],
+      "baseBreed": "ТАКСА",
+      "variety": "миниатюрная г-ш"
     },
     {
       "id": "такса-миниатюрная-д-ш",
@@ -5228,7 +6693,25 @@
       "aliases": [
         "ТАКСА МИНИАТЮРНАЯ Д Ш",
         "DACHSHUND MINIATURE LONG HAIRED"
-      ]
+      ],
+      "baseBreed": "ТАКСА МИНИАТЮРНАЯ Д Ш",
+      "variety": ""
+    },
+    {
+      "id": "такса-миниатюрная-д-ш",
+      "canonicalRu": "ТАКСА МИНИАТЮРНАЯ Д-Ш",
+      "nameRu": "Такса миниатюрная д-ш",
+      "nameEn": "MINIATURE LONG-HAIRED DACHSHUND",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "ТАКСА МИНИАТЮРНАЯ Д-Ш",
+        "ТАКСА МИНИАТЮРНАЯ Д Ш",
+        "ТАКСА КАРЛИКОВАЯ Д-Ш",
+        "ТАКСА КАРЛИКОВАЯ Д Ш"
+      ],
+      "baseBreed": "ТАКСА",
+      "variety": "миниатюрная д-ш"
     },
     {
       "id": "такса-миниатюрная-ж-ш",
@@ -5240,7 +6723,25 @@
       "aliases": [
         "ТАКСА МИНИАТЮРНАЯ Ж Ш",
         "DACHSHUND MINIATURE WIRE HAIRED"
-      ]
+      ],
+      "baseBreed": "ТАКСА МИНИАТЮРНАЯ Ж Ш",
+      "variety": ""
+    },
+    {
+      "id": "такса-миниатюрная-ж-ш",
+      "canonicalRu": "ТАКСА МИНИАТЮРНАЯ Ж-Ш",
+      "nameRu": "Такса миниатюрная ж-ш",
+      "nameEn": "MINIATURE WIRE-HAIRED DACHSHUND",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "ТАКСА МИНИАТЮРНАЯ Ж-Ш",
+        "ТАКСА МИНИАТЮРНАЯ Ж Ш",
+        "ТАКСА КАРЛИКОВАЯ Ж-Ш",
+        "ТАКСА КАРЛИКОВАЯ Ж Ш"
+      ],
+      "baseBreed": "ТАКСА",
+      "variety": "миниатюрная ж-ш"
     },
     {
       "id": "такса-стандартная-г-ш",
@@ -5252,7 +6753,25 @@
       "aliases": [
         "ТАКСА СТАНДАРТНАЯ Г Ш",
         "DACHSHUND STANDARD SMOOTH HAIRED"
-      ]
+      ],
+      "baseBreed": "ТАКСА СТАНДАРТНАЯ Г Ш",
+      "variety": ""
+    },
+    {
+      "id": "такса-стандартная-г-ш",
+      "canonicalRu": "ТАКСА СТАНДАРТНАЯ Г-Ш",
+      "nameRu": "Такса стандартная г-ш",
+      "nameEn": "STANDARD SMOOTH-HAIRED DACHSHUND",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "ТАКСА СТАНДАРТНАЯ Г-Ш",
+        "ТАКСА СТАНДАРТНАЯ Г Ш",
+        "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+        "ТАКСА Г-Ш"
+      ],
+      "baseBreed": "ТАКСА",
+      "variety": "стандартная г-ш"
     },
     {
       "id": "такса-стандартная-д-ш",
@@ -5264,7 +6783,25 @@
       "aliases": [
         "ТАКСА СТАНДАРТНАЯ Д Ш",
         "DACHSHUND STANDARD LONG HAIRED"
-      ]
+      ],
+      "baseBreed": "ТАКСА СТАНДАРТНАЯ Д Ш",
+      "variety": ""
+    },
+    {
+      "id": "такса-стандартная-д-ш",
+      "canonicalRu": "ТАКСА СТАНДАРТНАЯ Д-Ш",
+      "nameRu": "Такса стандартная д-ш",
+      "nameEn": "STANDARD LONG-HAIRED DACHSHUND",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "ТАКСА СТАНДАРТНАЯ Д-Ш",
+        "ТАКСА СТАНДАРТНАЯ Д Ш",
+        "ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
+        "ТАКСА Д-Ш"
+      ],
+      "baseBreed": "ТАКСА",
+      "variety": "стандартная д-ш"
     },
     {
       "id": "такса-стандартная-ж-ш",
@@ -5276,7 +6813,25 @@
       "aliases": [
         "ТАКСА СТАНДАРТНАЯ Ж Ш",
         "DACHSHUND STANDARD WIRE HAIRED"
-      ]
+      ],
+      "baseBreed": "ТАКСА СТАНДАРТНАЯ Ж Ш",
+      "variety": ""
+    },
+    {
+      "id": "такса-стандартная-ж-ш",
+      "canonicalRu": "ТАКСА СТАНДАРТНАЯ Ж-Ш",
+      "nameRu": "Такса стандартная ж-ш",
+      "nameEn": "STANDARD WIRE-HAIRED DACHSHUND",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "ТАКСА СТАНДАРТНАЯ Ж-Ш",
+        "ТАКСА СТАНДАРТНАЯ Ж Ш",
+        "ТАКСА СТАНДАРТНАЯ ЖЕСТКОШЕРСТНАЯ",
+        "ТАКСА Ж-Ш"
+      ],
+      "baseBreed": "ТАКСА",
+      "variety": "стандартная ж-ш"
     },
     {
       "id": "тибетский-мастиф",
@@ -5288,7 +6843,9 @@
       "aliases": [
         "ТИБЕТСКИЙ МАСТИФ",
         "TIBETAN MASTIFF (DO KHYI)"
-      ]
+      ],
+      "baseBreed": "ТИБЕТСКИЙ МАСТИФ",
+      "variety": ""
     },
     {
       "id": "тибетский-спаниель",
@@ -5300,7 +6857,9 @@
       "aliases": [
         "ТИБЕТСКИЙ СПАНИЕЛЬ",
         "TIBETAN SPANIEL"
-      ]
+      ],
+      "baseBreed": "ТИБЕТСКИЙ СПАНИЕЛЬ",
+      "variety": ""
     },
     {
       "id": "тибетский-терьер",
@@ -5312,7 +6871,9 @@
       "aliases": [
         "ТИБЕТСКИЙ ТЕРЬЕР",
         "TIBETAN TERRIER"
-      ]
+      ],
+      "baseBreed": "ТИБЕТСКИЙ ТЕРЬЕР",
+      "variety": ""
     },
     {
       "id": "тирольская-гончая",
@@ -5324,7 +6885,9 @@
       "aliases": [
         "ТИРОЛЬСКАЯ ГОНЧАЯ",
         "TYROLEAN HOUND"
-      ]
+      ],
+      "baseBreed": "ТИРОЛЬСКАЯ ГОНЧАЯ",
+      "variety": ""
     },
     {
       "id": "той-фокстерьер",
@@ -5337,7 +6900,9 @@
         "ТОЙ ФОКСТЕРЬЕР",
         "TOY FOX TERRIER",
         "АМЕРИКАНСКИЙ ТОЙ-ФОКСТЕРЬЕР"
-      ]
+      ],
+      "baseBreed": "ТОЙ ФОКСТЕРЬЕР",
+      "variety": ""
     },
     {
       "id": "торняк",
@@ -5349,7 +6914,9 @@
       "aliases": [
         "ТОРНЯК",
         "TORNJAK"
-      ]
+      ],
+      "baseBreed": "ТОРНЯК",
+      "variety": ""
     },
     {
       "id": "тоса",
@@ -5361,7 +6928,9 @@
       "aliases": [
         "ТОСА",
         "TOSA"
-      ]
+      ],
+      "baseBreed": "ТОСА",
+      "variety": ""
     },
     {
       "id": "трансмонтанский-мастиф",
@@ -5373,7 +6942,9 @@
       "aliases": [
         "ТРАНСМОНТАНСКИЙ МАСТИФ",
         "TRANSMONTANO MASTIFF"
-      ]
+      ],
+      "baseBreed": "ТРАНСМОНТАНСКИЙ МАСТИФ",
+      "variety": ""
     },
     {
       "id": "тыва-ыт-тувинская-собака",
@@ -5385,7 +6956,9 @@
       "aliases": [
         "ТЫВА ЫТ (ТУВИНСКАЯ СОБАКА)",
         "TYVA YT"
-      ]
+      ],
+      "baseBreed": "ТЫВА ЫТ (ТУВИНСКАЯ СОБАКА)",
+      "variety": ""
     },
     {
       "id": "уиппет",
@@ -5397,7 +6970,9 @@
       "aliases": [
         "УИППЕТ",
         "WHIPPET"
-      ]
+      ],
+      "baseBreed": "УИППЕТ",
+      "variety": ""
     },
     {
       "id": "уругвайский-симаррон",
@@ -5409,7 +6984,9 @@
       "aliases": [
         "УРУГВАЙСКИЙ СИМАРРОН",
         "CIMARRÓN URUGUAYO"
-      ]
+      ],
+      "baseBreed": "УРУГВАЙСКИЙ СИМАРРОН",
+      "variety": ""
     },
     {
       "id": "фараонова-собака",
@@ -5421,7 +6998,9 @@
       "aliases": [
         "ФАРАОНОВА СОБАКА",
         "PHARAOH HOUND"
-      ]
+      ],
+      "baseBreed": "ФАРАОНОВА СОБАКА",
+      "variety": ""
     },
     {
       "id": "филд-спаниель",
@@ -5433,7 +7012,9 @@
       "aliases": [
         "ФИЛД СПАНИЕЛЬ",
         "FIELD SPANIEL"
-      ]
+      ],
+      "baseBreed": "ФИЛД СПАНИЕЛЬ",
+      "variety": ""
     },
     {
       "id": "финская-гончая",
@@ -5445,7 +7026,9 @@
       "aliases": [
         "ФИНСКАЯ ГОНЧАЯ",
         "FINNISH HOUND"
-      ]
+      ],
+      "baseBreed": "ФИНСКАЯ ГОНЧАЯ",
+      "variety": ""
     },
     {
       "id": "финский-лаппхунд",
@@ -5457,7 +7040,9 @@
       "aliases": [
         "ФИНСКИЙ ЛАППХУНД",
         "FINNISH LAPPONIAN DOG"
-      ]
+      ],
+      "baseBreed": "ФИНСКИЙ ЛАППХУНД",
+      "variety": ""
     },
     {
       "id": "финский-шпиц",
@@ -5469,7 +7054,9 @@
       "aliases": [
         "ФИНСКИЙ ШПИЦ",
         "FINNISH SPITZ"
-      ]
+      ],
+      "baseBreed": "ФИНСКИЙ ШПИЦ",
+      "variety": ""
     },
     {
       "id": "фландрский-бувье",
@@ -5481,7 +7068,23 @@
       "aliases": [
         "ФЛАНДРСКИЙ БУВЬЕ",
         "BOUVIER DES FLANDRES"
-      ]
+      ],
+      "baseBreed": "ФЛАНДРСКИЙ БУВЬЕ",
+      "variety": ""
+    },
+    {
+      "id": "фокстерьер",
+      "canonicalRu": "ФОКСТЕРЬЕР",
+      "nameRu": "Фокстерьер",
+      "nameEn": "FOX TERRIER",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "ФОКСТЕРЬЕР",
+        "FOX TERRIER"
+      ],
+      "baseBreed": "ФОКСТЕРЬЕР",
+      "variety": ""
     },
     {
       "id": "фокстерьер-г-ш",
@@ -5493,21 +7096,27 @@
       "aliases": [
         "ФОКСТЕРЬЕР Г Ш",
         "FOX TERRIER (SMOOTH)"
-      ]
+      ],
+      "baseBreed": "ФОКСТЕРЬЕР Г Ш",
+      "variety": ""
     },
     {
       "id": "фокстерьер-г-ш",
       "canonicalRu": "ФОКСТЕРЬЕР Г-Ш",
       "nameRu": "Фокстерьер г-ш",
-      "nameEn": "FOX TERRIER SMOOTH",
+      "nameEn": "SMOOTH FOX TERRIER",
       "fciGroup": null,
       "fciStandard": null,
       "aliases": [
         "ФОКСТЕРЬЕР Г-Ш",
         "FOX TERRIER SMOOTH",
         "SMOOTH FOX TERRIER",
-        "ФОКСТЕРЬЕР ГЛАДКОШЕРСТНЫЙ"
-      ]
+        "ФОКСТЕРЬЕР ГЛАДКОШЕРСТНЫЙ",
+        "ФОКСТЕРЬЕР Г Ш",
+        "ФОКС-ТЕРЬЕР ГЛАДКОШЕРСТНЫЙ"
+      ],
+      "baseBreed": "ФОКСТЕРЬЕР",
+      "variety": "г-ш"
     },
     {
       "id": "фокстерьер-ж-ш",
@@ -5519,21 +7128,26 @@
       "aliases": [
         "ФОКСТЕРЬЕР Ж Ш",
         "FOX TERRIER (WIRE)"
-      ]
+      ],
+      "baseBreed": "ФОКСТЕРЬЕР Ж Ш",
+      "variety": ""
     },
     {
       "id": "фокстерьер-ж-ш",
       "canonicalRu": "ФОКСТЕРЬЕР Ж-Ш",
       "nameRu": "Фокстерьер ж-ш",
-      "nameEn": "FOX TERRIER WIRE",
+      "nameEn": "WIRE FOX TERRIER",
       "fciGroup": null,
       "fciStandard": null,
       "aliases": [
         "ФОКСТЕРЬЕР Ж-Ш",
         "FOX TERRIER WIRE",
         "WIRE FOX TERRIER",
-        "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ"
-      ]
+        "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+        "ФОКСТЕРЬЕР Ж Ш"
+      ],
+      "baseBreed": "ФОКСТЕРЬЕР",
+      "variety": "ж-ш"
     },
     {
       "id": "французская-бело-оранжевая-гончая",
@@ -5545,7 +7159,9 @@
       "aliases": [
         "ФРАНЦУЗСКАЯ БЕЛО-ОРАНЖЕВАЯ ГОНЧАЯ",
         "FRENCH WHITE AND ORANGE HOUND"
-      ]
+      ],
+      "baseBreed": "ФРАНЦУЗСКАЯ БЕЛО-ОРАНЖЕВАЯ ГОНЧАЯ",
+      "variety": ""
     },
     {
       "id": "французская-бело-черная-гончая",
@@ -5557,7 +7173,9 @@
       "aliases": [
         "ФРАНЦУЗСКАЯ БЕЛО-ЧЕРНАЯ ГОНЧАЯ",
         "FRENCH WHITE AND BLACK HOUND"
-      ]
+      ],
+      "baseBreed": "ФРАНЦУЗСКАЯ БЕЛО-ЧЕРНАЯ ГОНЧАЯ",
+      "variety": ""
     },
     {
       "id": "французская-водяная-собака-барбе",
@@ -5569,7 +7187,9 @@
       "aliases": [
         "ФРАНЦУЗСКАЯ ВОДЯНАЯ СОБАКА (БАРБЕ)",
         "FRENCH WATER DOG (BARBET)"
-      ]
+      ],
+      "baseBreed": "ФРАНЦУЗСКАЯ ВОДЯНАЯ СОБАКА (БАРБЕ)",
+      "variety": ""
     },
     {
       "id": "французская-легавая-гасконского-типа",
@@ -5581,7 +7201,9 @@
       "aliases": [
         "ФРАНЦУЗСКАЯ ЛЕГАВАЯ ГАСКОНСКОГО ТИПА",
         "FRENCH POINTING DOG - GASCON TYPE"
-      ]
+      ],
+      "baseBreed": "ФРАНЦУЗСКАЯ ЛЕГАВАЯ ГАСКОНСКОГО ТИПА",
+      "variety": ""
     },
     {
       "id": "французская-легавая-пиренейского-типа",
@@ -5593,7 +7215,9 @@
       "aliases": [
         "ФРАНЦУЗСКАЯ ЛЕГАВАЯ ПИРЕНЕЙСКОГО ТИПА",
         "FRENCH POINTING DOG PYRENEAN TYPE"
-      ]
+      ],
+      "baseBreed": "ФРАНЦУЗСКАЯ ЛЕГАВАЯ ПИРЕНЕЙСКОГО ТИПА",
+      "variety": ""
     },
     {
       "id": "французская-трехцветная-гончая",
@@ -5605,7 +7229,9 @@
       "aliases": [
         "ФРАНЦУЗСКАЯ ТРЕХЦВЕТНАЯ ГОНЧАЯ",
         "FRENCH TRICOLOUR HOUND"
-      ]
+      ],
+      "baseBreed": "ФРАНЦУЗСКАЯ ТРЕХЦВЕТНАЯ ГОНЧАЯ",
+      "variety": ""
     },
     {
       "id": "французский-бульдог",
@@ -5617,7 +7243,9 @@
       "aliases": [
         "ФРАНЦУЗСКИЙ БУЛЬДОГ",
         "FRENCH BULLDOG"
-      ]
+      ],
+      "baseBreed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "variety": ""
     },
     {
       "id": "французский-спаниель",
@@ -5629,7 +7257,9 @@
       "aliases": [
         "ФРАНЦУЗСКИЙ СПАНИЕЛЬ",
         "FRENCH SPANIEL"
-      ]
+      ],
+      "baseBreed": "ФРАНЦУЗСКИЙ СПАНИЕЛЬ",
+      "variety": ""
     },
     {
       "id": "фризская-водяная-собака",
@@ -5641,7 +7271,9 @@
       "aliases": [
         "ФРИЗСКАЯ ВОДЯНАЯ СОБАКА",
         "WETTERHOUN"
-      ]
+      ],
+      "baseBreed": "ФРИЗСКАЯ ВОДЯНАЯ СОБАКА",
+      "variety": ""
     },
     {
       "id": "хаванез",
@@ -5653,7 +7285,9 @@
       "aliases": [
         "ХАВАНЕЗ",
         "HAVANESE"
-      ]
+      ],
+      "baseBreed": "ХАВАНЕЗ",
+      "variety": ""
     },
     {
       "id": "хальденская-гончая",
@@ -5665,7 +7299,9 @@
       "aliases": [
         "ХАЛЬДЕНСКАЯ ГОНЧАЯ",
         "HALDENSTOVARE"
-      ]
+      ],
+      "baseBreed": "ХАЛЬДЕНСКАЯ ГОНЧАЯ",
+      "variety": ""
     },
     {
       "id": "ханаанская-собака",
@@ -5677,7 +7313,9 @@
       "aliases": [
         "ХАНААНСКАЯ СОБАКА",
         "CANAAN DOG"
-      ]
+      ],
+      "baseBreed": "ХАНААНСКАЯ СОБАКА",
+      "variety": ""
     },
     {
       "id": "харриер",
@@ -5689,7 +7327,9 @@
       "aliases": [
         "ХАРРИЕР",
         "HARRIER"
-      ]
+      ],
+      "baseBreed": "ХАРРИЕР",
+      "variety": ""
     },
     {
       "id": "ховаварт",
@@ -5701,7 +7341,9 @@
       "aliases": [
         "ХОВАВАРТ",
         "HOVAWART"
-      ]
+      ],
+      "baseBreed": "ХОВАВАРТ",
+      "variety": ""
     },
     {
       "id": "хоккайдо",
@@ -5713,7 +7355,9 @@
       "aliases": [
         "ХОККАЙДО",
         "HOKKAIDO"
-      ]
+      ],
+      "baseBreed": "ХОККАЙДО",
+      "variety": ""
     },
     {
       "id": "хорватская-овчарка",
@@ -5725,7 +7369,9 @@
       "aliases": [
         "ХОРВАТСКАЯ ОВЧАРКА",
         "CROATIAN SHEPHERD DOG"
-      ]
+      ],
+      "baseBreed": "ХОРВАТСКАЯ ОВЧАРКА",
+      "variety": ""
     },
     {
       "id": "хортая-борзая",
@@ -5737,7 +7383,9 @@
       "aliases": [
         "ХОРТАЯ БОРЗАЯ",
         "HORTAYA BORZAYA"
-      ]
+      ],
+      "baseBreed": "ХОРТАЯ БОРЗАЯ",
+      "variety": ""
     },
     {
       "id": "хотошо-бурятская-собака",
@@ -5749,7 +7397,9 @@
       "aliases": [
         "ХОТОШО (БУРЯТСКАЯ СОБАКА)",
         "HOTOSHO (BURYATIAN DOG)"
-      ]
+      ],
+      "baseBreed": "ХОТОШО (БУРЯТСКАЯ СОБАКА)",
+      "variety": ""
     },
     {
       "id": "цвергпинчер",
@@ -5763,7 +7413,9 @@
         "MINIATURE PINSCHER",
         "МИНИАТЮРНЫЙ ПИНЧЕР",
         "ЦВЕРГ-ПИНЧЕР"
-      ]
+      ],
+      "baseBreed": "ЦВЕРГПИНЧЕР",
+      "variety": ""
     },
     {
       "id": "цвергшнауцер",
@@ -5776,8 +7428,11 @@
         "ЦВЕРГШНАУЦЕР",
         "MINIATURE SCHNAUZER",
         "МИНИАТЮРНЫЙ ШНАУЦЕР",
-        "ЦВЕРГ-ШНАУЦЕР"
-      ]
+        "ЦВЕРГ-ШНАУЦЕР",
+        "ZWERGSCHNAUZER"
+      ],
+      "baseBreed": "ЦВЕРГШНАУЦЕР",
+      "variety": ""
     },
     {
       "id": "цвергшнауцер-белый",
@@ -5788,8 +7443,11 @@
       "fciStandard": null,
       "aliases": [
         "ЦВЕРГШНАУЦЕР БЕЛЫЙ",
-        "MINIATURE SCHNAUZER WHITE"
-      ]
+        "MINIATURE SCHNAUZER WHITE",
+        "ZWERGSCHNAUZER WHITE"
+      ],
+      "baseBreed": "ЦВЕРГШНАУЦЕР",
+      "variety": "белый"
     },
     {
       "id": "цвергшнауцер-п-с",
@@ -5801,7 +7459,26 @@
       "aliases": [
         "ЦВЕРГШНАУЦЕР П С",
         "MINIATURE SCHNAUZER P S"
-      ]
+      ],
+      "baseBreed": "ЦВЕРГШНАУЦЕР П С",
+      "variety": ""
+    },
+    {
+      "id": "цвергшнауцер-перец-с-солью",
+      "canonicalRu": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С СОЛЬЮ",
+      "nameRu": "Цвергшнауцер перец с солью",
+      "nameEn": "MINIATURE SCHNAUZER PEPPER AND SALT",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "ЦВЕРГШНАУЦЕР ПЕРЕЦ С СОЛЬЮ",
+        "ЦВЕРГШНАУЦЕР П-С",
+        "ЦВЕРГШНАУЦЕР П С",
+        "ЦВЕРГШНАУЦЕР ПЕРЕЦ",
+        "ЦВЕРГШНАУЦЕР П/С"
+      ],
+      "baseBreed": "ЦВЕРГШНАУЦЕР",
+      "variety": "перец с солью"
     },
     {
       "id": "цвергшнауцер-черный",
@@ -5812,8 +7489,11 @@
       "fciStandard": null,
       "aliases": [
         "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
-        "MINIATURE SCHNAUZER BLACK"
-      ]
+        "MINIATURE SCHNAUZER BLACK",
+        "ZWERGSCHNAUZER BLACK"
+      ],
+      "baseBreed": "ЦВЕРГШНАУЦЕР",
+      "variety": "черный"
     },
     {
       "id": "цвергшнауцер-черный-с-серебристым-подпалом",
@@ -5825,7 +7505,26 @@
       "aliases": [
         "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
         "MINIATURE SCHNAUZER BLACK & SILVER"
-      ]
+      ],
+      "baseBreed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
+      "variety": ""
+    },
+    {
+      "id": "цвергшнауцер-черный-с-серебром",
+      "canonicalRu": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
+      "nameRu": "Цвергшнауцер черный с серебром",
+      "nameEn": "MINIATURE SCHNAUZER BLACK AND SILVER",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
+        "ЦВЕРГШНАУЦЕР Ч-С",
+        "ЦВЕРГШНАУЦЕР Ч С",
+        "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
+        "ЦВЕРГШНАУЦЕР Ч/С"
+      ],
+      "baseBreed": "ЦВЕРГШНАУЦЕР",
+      "variety": "черный с серебром"
     },
     {
       "id": "чау-чау",
@@ -5837,7 +7536,9 @@
       "aliases": [
         "ЧАУ ЧАУ",
         "CHOW CHOW"
-      ]
+      ],
+      "baseBreed": "ЧАУ ЧАУ",
+      "variety": ""
     },
     {
       "id": "черно-подпалый-кунхаунд",
@@ -5849,7 +7550,9 @@
       "aliases": [
         "ЧЕРНО ПОДПАЛЫЙ КУНХАУНД",
         "BLACK AND TAN COONHOUND"
-      ]
+      ],
+      "baseBreed": "ЧЕРНО ПОДПАЛЫЙ КУНХАУНД",
+      "variety": ""
     },
     {
       "id": "черно-подпалый-кунхаунд",
@@ -5861,7 +7564,9 @@
       "aliases": [
         "ЧЕРНО-ПОДПАЛЫЙ КУНХАУНД",
         "BLACK AND TAN COONHOUND"
-      ]
+      ],
+      "baseBreed": "ЧЕРНО-ПОДПАЛЫЙ КУНХАУНД",
+      "variety": ""
     },
     {
       "id": "черногорская-горная-гончая",
@@ -5873,7 +7578,9 @@
       "aliases": [
         "ЧЕРНОГОРСКАЯ ГОРНАЯ ГОНЧАЯ",
         "MONTENEGRIN MOUNTAIN HOUND"
-      ]
+      ],
+      "baseBreed": "ЧЕРНОГОРСКАЯ ГОРНАЯ ГОНЧАЯ",
+      "variety": ""
     },
     {
       "id": "чесапик-бей-ретривер",
@@ -5885,7 +7592,9 @@
       "aliases": [
         "ЧЕСАПИК БЕЙ РЕТРИВЕР",
         "CHESAPEAKE BAY RETRIEVER"
-      ]
+      ],
+      "baseBreed": "ЧЕСАПИК БЕЙ РЕТРИВЕР",
+      "variety": ""
     },
     {
       "id": "чехословацкая-волчья-собака",
@@ -5897,7 +7606,9 @@
       "aliases": [
         "ЧЕХОСЛОВАЦКАЯ ВОЛЧЬЯ СОБАКА",
         "CZECHOSLOVAKIAN WOLFDOG"
-      ]
+      ],
+      "baseBreed": "ЧЕХОСЛОВАЦКАЯ ВОЛЧЬЯ СОБАКА",
+      "variety": ""
     },
     {
       "id": "чешский-терьер",
@@ -5909,19 +7620,27 @@
       "aliases": [
         "ЧЕШСКИЙ ТЕРЬЕР",
         "CZECH TERRIER"
-      ]
+      ],
+      "baseBreed": "ЧЕШСКИЙ ТЕРЬЕР",
+      "variety": ""
     },
     {
       "id": "чирнеко-дель-этна",
       "canonicalRu": "ЧИРНЕКО ДЕЛЬ’ЭТНА",
-      "nameRu": "Чирнеко дель’этна",
-      "nameEn": "CIRNECO DELL’ETNA",
+      "nameRu": "Чирнеко дель’Этна",
+      "nameEn": "CIRNECO DELL'ETNA",
       "fciGroup": null,
       "fciStandard": null,
       "aliases": [
         "ЧИРНЕКО ДЕЛЬ’ЭТНА",
-        "CIRNECO DELL’ETNA"
-      ]
+        "CIRNECO DELL’ETNA",
+        "ЧИРНЕКО ДЕЛЬ ЭТНА",
+        "ЧИРНЕКО ДЕЛЬ'ЭТНА",
+        "CIRNECO DELL'ETNA",
+        "ЧИРНЕКО"
+      ],
+      "baseBreed": "ЧИРНЕКО ДЕЛЬ’ЭТНА",
+      "variety": ""
     },
     {
       "id": "чихуахуа",
@@ -5933,7 +7652,9 @@
       "aliases": [
         "ЧИХУАХУА",
         "CHIHUAHUA"
-      ]
+      ],
+      "baseBreed": "ЧИХУАХУА",
+      "variety": ""
     },
     {
       "id": "чихуахуа-д-ш",
@@ -5945,7 +7666,24 @@
       "aliases": [
         "ЧИХУАХУА Д Ш",
         "CHIHUAHUA LONG HAIRED"
-      ]
+      ],
+      "baseBreed": "ЧИХУАХУА Д Ш",
+      "variety": ""
+    },
+    {
+      "id": "чихуахуа-д-ш",
+      "canonicalRu": "ЧИХУАХУА Д-Ш",
+      "nameRu": "Чихуахуа д-ш",
+      "nameEn": "CHIHUAHUA LONG-HAIRED",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "ЧИХУАХУА Д-Ш",
+        "ЧИХУАХУА Д Ш",
+        "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ"
+      ],
+      "baseBreed": "ЧИХУАХУА",
+      "variety": "д-ш"
     },
     {
       "id": "чихуахуа-к-ш",
@@ -5957,7 +7695,26 @@
       "aliases": [
         "ЧИХУАХУА К Ш",
         "CHIHUAHUA SMOOTH HAIRED"
-      ]
+      ],
+      "baseBreed": "ЧИХУАХУА К Ш",
+      "variety": ""
+    },
+    {
+      "id": "чихуахуа-к-ш",
+      "canonicalRu": "ЧИХУАХУА К-Ш",
+      "nameRu": "Чихуахуа к-ш",
+      "nameEn": "CHIHUAHUA SMOOTH-HAIRED",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "ЧИХУАХУА К-Ш",
+        "ЧИХУАХУА К Ш",
+        "ЧИХУАХУА Г-Ш",
+        "ЧИХУАХУА ГЛАДКОШЕРСТНЫЙ",
+        "ЧИХУАХУА КОРОТКОШЕРСТНЫЙ"
+      ],
+      "baseBreed": "ЧИХУАХУА",
+      "variety": "к-ш"
     },
     {
       "id": "чукотская-ездовая-лайка",
@@ -5969,7 +7726,9 @@
       "aliases": [
         "ЧУКОТСКАЯ ЕЗДОВАЯ ЛАЙКА",
         "CHUKOTKA SLED DOG"
-      ]
+      ],
+      "baseBreed": "ЧУКОТСКАЯ ЕЗДОВАЯ ЛАЙКА",
+      "variety": ""
     },
     {
       "id": "чунцин",
@@ -5981,7 +7740,9 @@
       "aliases": [
         "ЧУНЦИН",
         "CHONGQING DOG"
-      ]
+      ],
+      "baseBreed": "ЧУНЦИН",
+      "variety": ""
     },
     {
       "id": "шакало-псовая-собака-шалайка",
@@ -5993,7 +7754,9 @@
       "aliases": [
         "ШАКАЛО ПСОВАЯ СОБАКА ШАЛАЙКА",
         "SHAKALO PSOVAYA SOBAKA – SHALAYKA"
-      ]
+      ],
+      "baseBreed": "ШАКАЛО ПСОВАЯ СОБАКА ШАЛАЙКА",
+      "variety": ""
     },
     {
       "id": "шакало-псовая-собака-шалайка",
@@ -6005,7 +7768,9 @@
       "aliases": [
         "ШАКАЛО-ПСОВАЯ СОБАКА – ШАЛАЙКА",
         "SHALAIKA (JACKAL-DOG HYBRID)"
-      ]
+      ],
+      "baseBreed": "ШАКАЛО-ПСОВАЯ СОБАКА – ШАЛАЙКА",
+      "variety": ""
     },
     {
       "id": "шар-пей",
@@ -6017,7 +7782,9 @@
       "aliases": [
         "ШАР ПЕЙ",
         "SHAR PEI"
-      ]
+      ],
+      "baseBreed": "ШАР ПЕЙ",
+      "variety": ""
     },
     {
       "id": "шведский-белый-элькхунд",
@@ -6029,7 +7796,9 @@
       "aliases": [
         "ШВЕДСКИЙ БЕЛЫЙ ЭЛЬКХУНД",
         "SWEDISH WHITE ELKHOUND"
-      ]
+      ],
+      "baseBreed": "ШВЕДСКИЙ БЕЛЫЙ ЭЛЬКХУНД",
+      "variety": ""
     },
     {
       "id": "шведский-вальхунд",
@@ -6041,7 +7810,9 @@
       "aliases": [
         "ШВЕДСКИЙ ВАЛЬХУНД",
         "SWEDISH VALLHUND"
-      ]
+      ],
+      "baseBreed": "ШВЕДСКИЙ ВАЛЬХУНД",
+      "variety": ""
     },
     {
       "id": "шведский-лаппхунд",
@@ -6053,7 +7824,9 @@
       "aliases": [
         "ШВЕДСКИЙ ЛАППХУНД",
         "SWEDISH LAPPHUND"
-      ]
+      ],
+      "baseBreed": "ШВЕДСКИЙ ЛАППХУНД",
+      "variety": ""
     },
     {
       "id": "швейцарская-гончая",
@@ -6065,7 +7838,9 @@
       "aliases": [
         "ШВЕЙЦАРСКАЯ ГОНЧАЯ",
         "SWISS HOUND"
-      ]
+      ],
+      "baseBreed": "ШВЕЙЦАРСКАЯ ГОНЧАЯ",
+      "variety": ""
     },
     {
       "id": "шелти",
@@ -6077,7 +7852,9 @@
       "aliases": [
         "ШЕЛТИ",
         "SHETLAND SHEEPDOG"
-      ]
+      ],
+      "baseBreed": "ШЕЛТИ",
+      "variety": ""
     },
     {
       "id": "ши-тцу",
@@ -6091,7 +7868,24 @@
         "SHIH TZU",
         "ШИ-ТЦУ",
         "SHIH-TZU"
-      ]
+      ],
+      "baseBreed": "ШИ ТЦУ",
+      "variety": ""
+    },
+    {
+      "id": "ши-тцу",
+      "canonicalRu": "ШИ-ТЦУ",
+      "nameRu": "Ши-тцу",
+      "nameEn": "SHIH TZU",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "ШИ-ТЦУ",
+        "ШИ ТЦУ",
+        "SHIH TZU"
+      ],
+      "baseBreed": "ШИ-ТЦУ",
+      "variety": ""
     },
     {
       "id": "шнауцер",
@@ -6105,8 +7899,11 @@
         "SCHNAUZER",
         "МИТТЕЛЬШНАУЦЕР",
         "СРЕДНИЙ ШНАУЦЕР",
-        "STANDARD SCHNAUZER"
-      ]
+        "STANDARD SCHNAUZER",
+        "MITTELSCHNAUZER"
+      ],
+      "baseBreed": "ШНАУЦЕР",
+      "variety": ""
     },
     {
       "id": "шнауцер-п-с",
@@ -6118,7 +7915,29 @@
       "aliases": [
         "ШНАУЦЕР П С",
         "SCHNAUZER P S"
-      ]
+      ],
+      "baseBreed": "ШНАУЦЕР П С",
+      "variety": ""
+    },
+    {
+      "id": "шнауцер-перец-с-солью",
+      "canonicalRu": "ШНАУЦЕР ПЕРЕЦ С СОЛЬЮ",
+      "nameRu": "Шнауцер перец с солью",
+      "nameEn": "SCHNAUZER PEPPER AND SALT",
+      "fciGroup": null,
+      "fciStandard": null,
+      "aliases": [
+        "ШНАУЦЕР ПЕРЕЦ С СОЛЬЮ",
+        "ШНАУЦЕР П-С",
+        "ШНАУЦЕР П С",
+        "ШНАУЦЕР П/С",
+        "МИТТЕЛЬШНАУЦЕР ПЕРЕЦ С СОЛЬЮ",
+        "МИТТЕЛЬШНАУЦЕР П-С",
+        "МИТТЕЛЬШНАУЦЕР П С",
+        "МИТТЕЛЬШНАУЦЕР"
+      ],
+      "baseBreed": "ШНАУЦЕР",
+      "variety": "перец с солью"
     },
     {
       "id": "шнауцер-черный",
@@ -6129,8 +7948,11 @@
       "fciStandard": null,
       "aliases": [
         "ШНАУЦЕР ЧЕРНЫЙ",
-        "SCHNAUZER BLACK"
-      ]
+        "SCHNAUZER BLACK",
+        "МИТТЕЛЬШНАУЦЕР ЧЕРНЫЙ"
+      ],
+      "baseBreed": "ШНАУЦЕР",
+      "variety": "черный"
     },
     {
       "id": "шотландский-терьер",
@@ -6147,7 +7969,9 @@
         "СКОТЧ-ТЕРЬЕР",
         "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР)",
         "ШОТЛАНДСКИЙ ТЕРЬЕР (СКОТЧ ТЕРЬЕР)"
-      ]
+      ],
+      "baseBreed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
+      "variety": ""
     },
     {
       "id": "шьен-партиколор-а-пуаль-фризе",
@@ -6159,7 +7983,9 @@
       "aliases": [
         "ШЬЕН ПАРТИКОЛОР А ПУАЛЬ ФРИЗЕ",
         "CHIEN PARTICOLORE A POIL FRISE"
-      ]
+      ],
+      "baseBreed": "ШЬЕН ПАРТИКОЛОР А ПУАЛЬ ФРИЗЕ",
+      "variety": ""
     },
     {
       "id": "шьен-партиколор-а-пуаль-фризе-миниатюрный",
@@ -6171,7 +7997,9 @@
       "aliases": [
         "ШЬЕН ПАРТИКОЛОР А ПУАЛЬ ФРИЗЕ МИНИАТЮРНЫЙ",
         "CHIEN PARTICOLORE A POIL FRISE MINIATURE"
-      ]
+      ],
+      "baseBreed": "ШЬЕН ПАРТИКОЛОР А ПУАЛЬ ФРИЗЕ МИНИАТЮРНЫЙ",
+      "variety": ""
     },
     {
       "id": "шьен-партиколор-а-пуаль-фризе-средний",
@@ -6183,7 +8011,9 @@
       "aliases": [
         "ШЬЕН ПАРТИКОЛОР А ПУАЛЬ ФРИЗЕ СРЕДНИЙ",
         "CHIEN PARTICOLORE A POIL FRISE MEDIUM"
-      ]
+      ],
+      "baseBreed": "ШЬЕН ПАРТИКОЛОР А ПУАЛЬ ФРИЗЕ СРЕДНИЙ",
+      "variety": ""
     },
     {
       "id": "шьен-партиколор-а-пуаль-фризе-стандартный",
@@ -6195,7 +8025,9 @@
       "aliases": [
         "ШЬЕН ПАРТИКОЛОР А ПУАЛЬ ФРИЗЕ СТАНДАРТНЫЙ",
         "CHIEN PARTICOLORE A POIL FRISE STANDART"
-      ]
+      ],
+      "baseBreed": "ШЬЕН ПАРТИКОЛОР А ПУАЛЬ ФРИЗЕ СТАНДАРТНЫЙ",
+      "variety": ""
     },
     {
       "id": "шьен-партиколор-а-пуаль-фризе-той",
@@ -6207,19 +8039,25 @@
       "aliases": [
         "ШЬЕН ПАРТИКОЛОР А ПУАЛЬ ФРИЗЕ ТОЙ",
         "CHIEN PARTICOLORE A POIL FRISE TOY"
-      ]
+      ],
+      "baseBreed": "ШЬЕН ПАРТИКОЛОР А ПУАЛЬ ФРИЗЕ ТОЙ",
+      "variety": ""
     },
     {
       "id": "энтлебухер-зенненхунд",
       "canonicalRu": "ЭНТЛЕБУХЕР ЗЕННЕНХУНД",
       "nameRu": "Энтлебухер зенненхунд",
-      "nameEn": "ENTLEBUCH CATTLE DOG",
+      "nameEn": "ENTLEBUCHER MOUNTAIN DOG",
       "fciGroup": null,
       "fciStandard": null,
       "aliases": [
         "ЭНТЛЕБУХЕР ЗЕННЕНХУНД",
-        "ENTLEBUCH CATTLE DOG"
-      ]
+        "ENTLEBUCH CATTLE DOG",
+        "ЭНТЛЕБУХЕР",
+        "ENTLEBUCHER SENNENHUND"
+      ],
+      "baseBreed": "ЭНТЛЕБУХЕР ЗЕННЕНХУНД",
+      "variety": ""
     },
     {
       "id": "эрдельтерьер",
@@ -6233,7 +8071,9 @@
         "AIREDALE TERRIER",
         "ЭРДЕЛЬ ТЕРЬЕР",
         "ЭРДЕЛЬ"
-      ]
+      ],
+      "baseBreed": "ЭРДЕЛЬТЕРЬЕР",
+      "variety": ""
     },
     {
       "id": "эстонская-гончая",
@@ -6245,7 +8085,9 @@
       "aliases": [
         "ЭСТОНСКАЯ ГОНЧАЯ",
         "ESTONIAN HOUND"
-      ]
+      ],
+      "baseBreed": "ЭСТОНСКАЯ ГОНЧАЯ",
+      "variety": ""
     },
     {
       "id": "эштрельская-горная-собака",
@@ -6257,7 +8099,9 @@
       "aliases": [
         "ЭШТРЕЛЬСКАЯ ГОРНАЯ СОБАКА",
         "ESTRELA MOUNTAIN DOG"
-      ]
+      ],
+      "baseBreed": "ЭШТРЕЛЬСКАЯ ГОРНАЯ СОБАКА",
+      "variety": ""
     },
     {
       "id": "эштрельская-горная-собака-к-ш",
@@ -6269,7 +8113,9 @@
       "aliases": [
         "ЭШТРЕЛЬСКАЯ ГОРНАЯ СОБАКА К Ш",
         "ESTRELA MOUNTAIN DOG SHORT HAIRED"
-      ]
+      ],
+      "baseBreed": "ЭШТРЕЛЬСКАЯ ГОРНАЯ СОБАКА К Ш",
+      "variety": ""
     },
     {
       "id": "югославская-овчарка-шарпланина",
@@ -6281,13 +8127,15 @@
       "aliases": [
         "ЮГОСЛАВСКАЯ ОВЧАРКА ШАРПЛАНИНА",
         "YUGOSLAVIAN SHEPHERD DOG - SHARPLANINA"
-      ]
+      ],
+      "baseBreed": "ЮГОСЛАВСКАЯ ОВЧАРКА ШАРПЛАНИНА",
+      "variety": ""
     },
     {
       "id": "южноафриканский-бурбуль",
       "canonicalRu": "ЮЖНОАФРИКАНСКИЙ БУРБУЛЬ",
       "nameRu": "Южноафриканский бурбуль",
-      "nameEn": "SOUTH AFRICAN BOERBOEL",
+      "nameEn": "BOERBOEL",
       "fciGroup": null,
       "fciStandard": null,
       "aliases": [
@@ -6296,7 +8144,9 @@
         "БУРБУЛЬ",
         "ЮЖНО-АФРИКАНСКИЙ БУРБУЛЬ",
         "BOERBOEL"
-      ]
+      ],
+      "baseBreed": "ЮЖНОАФРИКАНСКИЙ БУРБУЛЬ",
+      "variety": ""
     },
     {
       "id": "южнорусская-овчарка",
@@ -6310,7 +8160,9 @@
         "YUZHNORUSSKAYA OVCHARKA (SOUTH RUSSIAN SHEEPHERD DOG)",
         "ЮЖНО-РУССКАЯ ОВЧАРКА",
         "SOUTH RUSSIAN SHEPHERD DOG"
-      ]
+      ],
+      "baseBreed": "ЮЖНОРУССКАЯ ОВЧАРКА",
+      "variety": ""
     },
     {
       "id": "южнорусская-степная-борзая",
@@ -6322,7 +8174,9 @@
       "aliases": [
         "ЮЖНОРУССКАЯ СТЕПНАЯ БОРЗАЯ",
         "SOUTH RUSSIAN STEPPE SIGHTHOUND"
-      ]
+      ],
+      "baseBreed": "ЮЖНОРУССКАЯ СТЕПНАЯ БОРЗАЯ",
+      "variety": ""
     },
     {
       "id": "якутская-лайка",
@@ -6334,7 +8188,9 @@
       "aliases": [
         "ЯКУТСКАЯ ЛАЙКА",
         "YAKUTSKAYA LAIKA (YAKUTIAN LAIKA)"
-      ]
+      ],
+      "baseBreed": "ЯКУТСКАЯ ЛАЙКА",
+      "variety": ""
     },
     {
       "id": "ямтхунд",
@@ -6346,7 +8202,9 @@
       "aliases": [
         "ЯМТХУНД",
         "JAMTHUND"
-      ]
+      ],
+      "baseBreed": "ЯМТХУНД",
+      "variety": ""
     },
     {
       "id": "японский-терьер",
@@ -6358,7 +8216,9 @@
       "aliases": [
         "ЯПОНСКИЙ ТЕРЬЕР",
         "JAPANESE TERRIER"
-      ]
+      ],
+      "baseBreed": "ЯПОНСКИЙ ТЕРЬЕР",
+      "variety": ""
     },
     {
       "id": "японский-хин",
@@ -6370,7 +8230,9 @@
       "aliases": [
         "ЯПОНСКИЙ ХИН",
         "JAPANESE CHIN"
-      ]
+      ],
+      "baseBreed": "ЯПОНСКИЙ ХИН",
+      "variety": ""
     },
     {
       "id": "японский-шпиц",
@@ -6382,7 +8244,9 @@
       "aliases": [
         "ЯПОНСКИЙ ШПИЦ",
         "JAPANESE SPITZ"
-      ]
+      ],
+      "baseBreed": "ЯПОНСКИЙ ШПИЦ",
+      "variety": ""
     }
   ]
 }
