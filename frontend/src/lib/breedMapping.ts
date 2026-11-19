@@ -1037,16 +1037,12 @@ export function displayBreed(breed: unknown): BreedDisplay {
 export const OFFICIAL_BREEDS_SET = new Set<string>()
 for (const b of (rkfBreedsData.breeds || [])) {
   if (b.canonicalRu) {
-    const c = b.canonicalRu.toUpperCase().trim()
+    const c = b.canonicalRu.toUpperCase().trim().replace(/([КГДЖ])\s+Ш/g, '$1-Ш')
     OFFICIAL_BREEDS_SET.add(c)
-    OFFICIAL_BREEDS_SET.add(c.replace(/([КГДЖ])-Ш/g, '$1 Ш'))
-    OFFICIAL_BREEDS_SET.add(c.replace(/([КГДЖ])\s+Ш/g, '$1-Ш'))
   }
   if (b.baseBreed) {
-    const bb = b.baseBreed.toUpperCase().trim()
+    const bb = b.baseBreed.toUpperCase().trim().replace(/([КГДЖ])\s+Ш/g, '$1-Ш')
     OFFICIAL_BREEDS_SET.add(bb)
-    OFFICIAL_BREEDS_SET.add(bb.replace(/([КГДЖ])-Ш/g, '$1 Ш'))
-    OFFICIAL_BREEDS_SET.add(bb.replace(/([КГДЖ])\s+Ш/g, '$1-Ш'))
   }
 }
 OFFICIAL_BREEDS_SET.add('БЕЗ ПОРОДЫ')
@@ -1147,6 +1143,13 @@ export function canonicalBreed(breed: unknown): string {
     return ''
   }
 
+  const upper = raw.toUpperCase().trim()
+  const hyphenated = upper.replace(/([КГДЖ])\s+Ш/g, '$1-Ш')
+  if (OFFICIAL_BREEDS_SET.has(hyphenated)) {
+    CANONICAL_BREED_CACHE.set(raw, hyphenated)
+    return hyphenated
+  }
+
   // 1. Очистка артефактов PDF, сносок со звёздочками и склеек
   const clean = sanitizeBreedName(raw)
   if (!clean || clean === 'БЕЗ ПОРОДЫ') {
@@ -1210,17 +1213,23 @@ export function breedDbVariants(filterBreed: string): string[] {
 export function matchesBreedFilter(rowBreed: string | null | undefined, filterBreed: unknown): boolean {
   if (!filterBreed) return true
   if (!rowBreed) return false
-  const canonRow = breedAliasKey(canonicalBreed(rowBreed))
-  const canonFilter = breedAliasKey(canonicalBreed(filterBreed))
+  const rowRaw = String(rowBreed).trim()
+  const filterRaw = String(filterBreed).trim()
+  if (!rowRaw || !filterRaw) return false
+  if (rowRaw.toUpperCase() === filterRaw.toUpperCase()) return true
+
+  const canonRow = breedAliasKey(canonicalBreed(rowRaw) || rowRaw)
+  const canonFilter = breedAliasKey(canonicalBreed(filterRaw) || filterRaw)
   if (canonRow === canonFilter) return true
 
-  // Support base-breed matching for sport varieties (e.g. Podenco Ibicenco, German Shepherd, Vizsla, Xoloitzcuintli)
+  // Support base-breed matching for sport varieties (e.g. Podenco Ibicenco, German Shepherd, Vizsla, Xoloitzcuintli, Dachshund, Poodle)
   if (canonRow.startsWith(canonFilter + ' ') || canonFilter.startsWith(canonRow + ' ')) return true
   if (canonRow.startsWith(canonFilter + '(') || canonFilter.startsWith(canonRow + '(')) return true
   if (canonFilter.includes('ВЫЖЛА') && canonRow.includes('ВЫЖЛА')) return true
   if (canonFilter.includes('КСОЛОИТЦКУИНТЛИ') && canonRow.includes('КСОЛОИТЦКУИНТЛИ')) return true
   if (canonFilter.includes('ПИТ') && canonFilter.includes('БУЛЬ') && canonRow.includes('ПИТ') && canonRow.includes('БУЛЬ')) return true
   if (canonFilter.includes('ТАКСА') && canonRow.includes('ТАКСА')) return true
+  if (canonFilter.includes('ПУДЕЛЬ') && canonRow.includes('ПУДЕЛЬ')) return true
   return false
 }
 
