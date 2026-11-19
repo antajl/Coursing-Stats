@@ -309,18 +309,18 @@ async function main() {
   const modifiedShards = new Set<string>();
 
   const saveCheckpoint = async () => {
-    await safeWriteJson(
-      CHECKPOINT_FILE,
-      JSON.stringify(
-        {
+    try {
+      await safeWriteJson(
+        CHECKPOINT_FILE,
+        JSON.stringify({
           timestamp: new Date().toISOString(),
           checkedCount: checkedSet.size,
           checkedKeys: Array.from(checkedSet),
-        },
-        null,
-        2,
-      ),
-    );
+        }),
+      );
+    } catch (e) {
+      console.error('Non-fatal error saving checkpoint:', e);
+    }
   };
 
   let isShuttingDown = false;
@@ -437,14 +437,18 @@ async function main() {
       processedCount++;
       const currentCount = processedCount;
 
-      // Flush modified shards every 100 items
-      if (!dryRun && currentCount % 100 === 0 && modifiedShards.size > 0) {
-        await flushModifiedShards();
-      }
+      try {
+        // Flush modified shards every 100 items
+        if (!dryRun && currentCount % 100 === 0 && modifiedShards.size > 0) {
+          await flushModifiedShards();
+        }
 
-      // Report and checkpoint every 50 items or at the end
-      if (currentCount % 50 === 0 || currentCount === activeQueue.length) {
-        await reportProgress(currentCount);
+        // Report and checkpoint every 50 items or at the end
+        if (currentCount % 50 === 0 || currentCount === activeQueue.length) {
+          await reportProgress(currentCount);
+        }
+      } catch (flushErr) {
+        console.error('Non-fatal error in flush/checkpoint:', flushErr);
       }
 
       await sleep(DELAY_MS);
