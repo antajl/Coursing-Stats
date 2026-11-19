@@ -270,6 +270,33 @@ export async function getShowDogDetail(id: string, depth = 0): Promise<ApiResult
   return { success: true, data: hydrateShowDog(raw as ShowDog) }
 }
 
+function cleanShowDogNameVariants(rawName: string): string[] {
+  const variants = new Set<string>()
+  const norm = rawName.toUpperCase().replace(/\s+/g, ' ').trim()
+  if (!norm) return []
+  variants.add(norm)
+
+  if (norm.includes('/')) {
+    for (const chunk of norm.split('/')) {
+      const c = chunk.trim()
+      if (c.length >= 2) variants.add(c)
+    }
+  }
+
+  for (const v of Array.from(variants)) {
+    const withoutSuffix = v.replace(/\s*\([A-ZА-ЯЁ0-9\-\s]+\)$/i, '').trim()
+    if (withoutSuffix.length >= 2) variants.add(withoutSuffix)
+
+    const withoutRkf = v.replace(/\s*(?:RKF|РКФ|FRX|BLL|BC|B)\s*[\d\s]+.*$/i, '').trim()
+    if (withoutRkf.length >= 2) variants.add(withoutRkf)
+
+    const withoutBoth = withoutSuffix.replace(/\s*(?:RKF|РКФ|FRX|BLL|BC|B)\s*[\d\s]+.*$/i, '').trim()
+    if (withoutBoth.length >= 2) variants.add(withoutBoth)
+  }
+
+  return Array.from(variants)
+}
+
 /** Найти id выставочной собаки по competition id или кличке+породе, затем загрузить detail. */
 export async function resolveShowDogDetail(opts: {
   profileId?: string | null
@@ -297,25 +324,27 @@ export async function resolveShowDogDetail(opts: {
 
     for (const rawName of [opts.nameLat, opts.nameRu]) {
       if (!rawName) continue
-      const nameKey = rawName.toUpperCase().replace(/\s+/g, ' ').trim()
-      const translit = transliterateCyrillicToLatin(nameKey).toUpperCase().replace(/\s+/g, ' ').trim()
-      const variants = new Set<string>([nameKey, translit].filter(Boolean))
-      for (const base of Array.from(variants)) {
-        variants.add(base.replace(/([A-ZА-ЯЁ])\1+/g, '$1'))
-        if (base.endsWith('EE')) variants.add(base.slice(0, -1))
-        if (base.endsWith('E') && !base.endsWith('EE')) variants.add(base + 'E')
-        if (base.includes('KH')) variants.add(base.replace(/KH/g, 'H'))
-        if (base.includes('H') && !base.includes('KH')) variants.add(base.replace(/\bH\b/g, 'KH'))
-        if (base.includes('V')) variants.add(base.replace(/V/g, 'W'))
-        if (base.includes('W')) variants.add(base.replace(/W/g, 'V'))
-      }
-      const nameKeys = Array.from(variants)
+      for (const baseName of cleanShowDogNameVariants(rawName)) {
+        const nameKey = baseName.toUpperCase().replace(/\s+/g, ' ').trim()
+        const translit = transliterateCyrillicToLatin(nameKey).toUpperCase().replace(/\s+/g, ' ').trim()
+        const variants = new Set<string>([nameKey, translit].filter(Boolean))
+        for (const base of Array.from(variants)) {
+          variants.add(base.replace(/([A-ZА-ЯЁ])\1+/g, '$1'))
+          if (base.endsWith('EE')) variants.add(base.slice(0, -1))
+          if (base.endsWith('E') && !base.endsWith('EE')) variants.add(base + 'E')
+          if (base.includes('KH')) variants.add(base.replace(/KH/g, 'H'))
+          if (base.includes('H') && !base.includes('KH')) variants.add(base.replace(/\bH\b/g, 'KH'))
+          if (base.includes('V')) variants.add(base.replace(/V/g, 'W'))
+          if (base.includes('W')) variants.add(base.replace(/W/g, 'V'))
+        }
+        const nameKeys = Array.from(variants)
 
-      for (const nk of nameKeys) {
-        for (const bk of breedKeys) {
-          const key = `${nk}|${bk}`
-          const id = lookup.byNameBreed[key]
-          if (id) return getShowDogDetail(id)
+        for (const nk of nameKeys) {
+          for (const bk of breedKeys) {
+            const key = `${nk}|${bk}`
+            const id = lookup.byNameBreed[key]
+            if (id) return getShowDogDetail(id)
+          }
         }
       }
     }
