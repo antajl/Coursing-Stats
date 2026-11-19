@@ -43,6 +43,7 @@ import {
   collapseShowDogsByExactName,
   collapseShowDogsByTranslit,
   collapseShowDogsByNamePrefix,
+  mergeDogGroup,
 } from '../lib/show-dog-dedupe'
 import { getExhibitionsRkfStore } from '../lib/exhibitions-rkf-store'
 import { canonicalBreed } from '../src/lib/breed-mapping'
@@ -354,10 +355,14 @@ function linkShowDogsByUniqueName(
 function loadDetailsIndex(detailsDir: string): {
   aliasLookup: Map<string, string>
   namesLookup: Map<string, { name_lat?: string; name_ru?: string }>
+  breedLookup: Map<string, string>
+  namesToBreed: Map<string, string>
 } {
   const aliasLookup = new Map<string, string>()
   const namesLookup = new Map<string, { name_lat?: string; name_ru?: string }>()
-  if (!fs.existsSync(detailsDir)) return { aliasLookup, namesLookup }
+  const breedLookup = new Map<string, string>()
+  const namesToBreed = new Map<string, string>()
+  if (!fs.existsSync(detailsDir)) return { aliasLookup, namesLookup, breedLookup, namesToBreed }
   for (let i = 0; i < 256; i++) {
     const shard = String(i).padStart(3, '0')
     const file = path.join(detailsDir, `${shard}.json`)
@@ -372,11 +377,15 @@ function loadDetailsIndex(detailsDir: string): {
           if (d.name_ru || d.name_lat) {
             namesLookup.set(id, { name_lat: d.name_lat, name_ru: d.name_ru })
           }
+          if (d.breed) {
+            breedLookup.set(id, d.breed)
+            if (d.name_lat) namesToBreed.set(d.name_lat.toUpperCase().trim(), d.breed)
+          }
         }
       }
     } catch {}
   }
-  return { aliasLookup, namesLookup }
+  return { aliasLookup, namesLookup, breedLookup, namesToBreed }
 }
 
 function assignStableProfileIds(dogs: ShowDog[]): Map<string, string> {
@@ -559,10 +568,11 @@ async function main() {
   console.log(`Assigned stable profile ids for ${dogs.length} dogs`)
 
   const detailsDir = path.join(INDEXES_DIR, 'dog-details')
-  const { aliasLookup, namesLookup } = loadDetailsIndex(detailsDir)
-  if (aliasLookup.size > 0 || namesLookup.size > 0) {
+  const { aliasLookup, namesLookup, breedLookup, namesToBreed } = loadDetailsIndex(detailsDir)
+  if (aliasLookup.size > 0 || namesLookup.size > 0 || breedLookup.size > 0) {
     let remapped = 0
     let namesEnriched = 0
+    let breedsEnriched = 0
     for (const dog of dogs) {
       let curr = String(dog.id)
       let depth = 0
@@ -573,6 +583,22 @@ async function main() {
       if (curr !== String(dog.id)) {
         dog.id = curr
         remapped++
+      }
+      if (!dog.breed) {
+        const knownBreed = breedLookup.get(curr) || namesToBreed.get((dog.name_lat || '').toUpperCase().trim())
+        if (knownBreed) {
+          const canon = canonicalBreed(knownBreed)
+          if (canon) {
+            dog.breed = canon
+            breedsEnriched++
+          }
+        }
+      }
+      if (dog.breed) {
+        const canon = canonicalBreed(dog.breed)
+        if (canon) {
+          dog.breed = canon
+        }
       }
       const names = namesLookup.get(curr)
       if (names) {
@@ -587,11 +613,38 @@ async function main() {
     }
     if (remapped > 0) {
       console.log(`Remapped ${remapped} dogs to canonical IDs from dog-details`)
+      // Merge dogs that now share the same canonical ID
+      const byId = new Map<string, ShowDog[]>()
+      for (const d of dogs) {
+        const id = String(d.id)
+        if (!byId.has(id)) byId.set(id, [])
+        byId.get(id)!.push(d)
+      }
+      const merged: ShowDog[] = []
+      let idCollapses = 0
+      for (const group of byId.values()) {
+        if (group.length === 1) {
+          merged.push(group[0]!)
+        } else {
+          merged.push(mergeDogGroup(group as any))
+          idCollapses += group.length - 1
+        }
+      }
+      if (idCollapses > 0) {
+        console.log(`Merged ${idCollapses} duplicate cards sharing canonical ID`)
+        dogs = merged.sort(compareShowDogs)
+      }
+    }
+    if (breedsEnriched > 0) {
+      console.log(`Enriched ${breedsEnriched} dogs with breed from dog-details`)
     }
     if (namesEnriched > 0) {
       console.log(`Enriched ${namesEnriched} dogs with Russian name from dog-details`)
     }
   }
+
+  // Filter out any remaining records with missing / empty breed or corrupt Latin strings
+  dogs = dogs.filter(dog => Boolean(dog.breed && dog.breed.trim() && !/[a-zA-Z]/.test(dog.breed)))
 
   // Save year-specific ranking
   const PAGES_LIMIT_BYTES = 25 * 1024 * 1024

@@ -117,7 +117,7 @@ export function pickCanonicalShowBreed<T extends ShowDogDedupeFields>(dogs: T[])
   return best || cleanShowBreedLabel(dogs[0]?.breed || '')
 }
 
-function mergeDogGroup<T extends ShowDogDedupeFields>(group: T[]): T {
+export function mergeDogGroup<T extends ShowDogDedupeFields>(group: T[]): T {
   const sorted = [...group].sort((a, b) => (b.total_shows || 0) - (a.total_shows || 0))
   const base = {
     ...sorted[0]!,
