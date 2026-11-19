@@ -1,2058 +1,1602 @@
 {
-  "timestamp": "2026-11-19T00:51:21.231Z",
+  "timestamp": "2026-11-19T01:05:53.650Z",
   "totalProcessed": 4500,
   "totalQueue": 4500,
   "foundSport": 0,
-  "foundShow": 256,
-  "totalFound": 256,
+  "foundShow": 199,
+  "totalFound": 199,
   "results": [
     {
       "domain": "show",
-      "id": "750297214",
-      "breed": "ТИБЕТСКИЙ МАСТИФ",
-      "name_lat": "NASLEDIYE TIBETA FRANTSISK DLYA KAIM KAMAL",
-      "name_ru": "",
-      "url": "https://tibetanmastiff.breedarchive.com/animal/view/naslediye-tibeta-frantsisk-dlya-kaim-kamal-b0c16077-88e5-4322-b545-22f03529a3fb"
-    },
-    {
-      "domain": "show",
-      "id": "227831421",
-      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР / NOVA SCOTIA",
-      "name_lat": "BRILLIANT BLIK AELINA MELANIE JOLIE",
-      "name_ru": "",
-      "url": "https://nsdtr.breedarchive.com/animal/view/brilliant-blik-aelina-melanie-jolie-f1838b68-ef14-445c-9c97-70677c46cf85"
-    },
-    {
-      "domain": "show",
-      "id": "1280014723",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
-      "name_lat": "BOSS AKELA",
-      "name_ru": "",
-      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/boss-akela-82dd3d5b-60fb-4608-8567-cc1107833987"
-    },
-    {
-      "domain": "show",
-      "id": "877544848",
-      "breed": "SIBERIAN HUSKY",
-      "name_lat": "SNOW IMAGE MY HERO",
-      "name_ru": "",
-      "url": "https://siberianhusky.breedarchive.com/animal/view/snow-image-my-hero-7b3ab2ae-71ce-4afc-812a-ab0d97c35099"
-    },
-    {
-      "domain": "show",
-      "id": "1306517903",
-      "breed": "КИТАЙСКАЯ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
-      "name_lat": "FUNNY PONITAIL GOLDEN KING",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/funny-ponitail-golden-king-99eb6fa8-4c10-4170-bf05-18832ae1c993"
-    },
-    {
-      "domain": "show",
-      "id": "1425953938",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ - ПАПИЙОН",
-      "name_lat": "MONICA D'ORO",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/monica-doro-35f95ba1-d8f8-44b3-953c-d27d7b182a91"
-    },
-    {
-      "domain": "show",
-      "id": "853621170",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "name_lat": "MISTYCOR KERRY GLORIOUS LODESTAR",
-      "name_ru": "",
-      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/mistycor-kerry-glorious-lodestar-0ddb861c-6065-4ba2-8dc3-27713b886ec7"
-    },
-    {
-      "domain": "show",
-      "id": "1643722949",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
-      "name_lat": "БОСС АКЕЛА",
-      "name_ru": "",
-      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/boss-akela-82dd3d5b-60fb-4608-8567-cc1107833987"
-    },
-    {
-      "domain": "show",
-      "id": "535846093",
-      "breed": "BORZOI - RUSSIAN HUNTING",
-      "name_lat": "SIMPLE OBSESSION NUMBER ONE",
-      "name_ru": "",
-      "url": "https://borzoi.breedarchive.com/animal/view/simple-obsession-number-one-3fd80f57-8f32-4844-9f74-8ec6047e0866"
-    },
-    {
-      "domain": "show",
-      "id": "705075920",
-      "breed": "SHEPHERD DOG",
-      "name_lat": "ПАНДОРА",
-      "name_ru": "",
-      "url": "https://germanshepherd.breedarchive.com/animal/view/pandora-48176205-e232-4946-99c2-6f770a4261c9"
-    },
-    {
-      "domain": "show",
-      "id": "1583390674",
-      "breed": "КИТАЙСКАЯ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
-      "name_lat": "OLIVER TEVS",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/oliver-tevs-8f6775d3-c331-4f93-9b02-b95269baeda4"
-    },
-    {
-      "domain": "show",
-      "id": "1389119701",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "name_lat": "NATALI LATOZH DIAMOND FON BARON DE MAYK",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/natali-latozh-diamond-fon-baron-de-mayk-eb83e242-4184-49d7-a52c-d765d69f45a9"
-    },
-    {
-      "domain": "show",
-      "id": "137058262",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
-      "name_lat": "DOM CORGI ONIX IN THE GOLD",
-      "name_ru": "",
-      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/dom-corgi-onix-in-the-gold-9079be67-5054-41d2-aec3-1b738d768c80"
-    },
-    {
-      "domain": "show",
-      "id": "201310678",
-      "breed": "КИНГ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
-      "name_lat": "БЕЛЛА КЕРАЙ БРУНЕЛЛА",
-      "name_ru": "БЕЛЛА КЕРАЙ БРУНЕЛЛА",
-      "url": "https://papillon.breedarchive.com/animal/view/bella-keray-brunella-03e45b0d-248e-4c83-a3f1-7b1045da46c1"
-    },
-    {
-      "domain": "show",
-      "id": "1868522967",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
-      "name_lat": "SOLAR SATELLITE KEYSI",
-      "name_ru": "",
-      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/solar-satellite-keysi-93ba1fee-7ea6-4f6c-975b-0a134aa6e56d"
-    },
-    {
-      "domain": "show",
-      "id": "1597380572",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ - ПАПИЙОН",
-      "name_lat": "TERRIS UNICUM ZEMFIRA",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/terris-unicum-zemfira-f9618f38-bdcd-4402-8c6c-77c5e7b180d8"
-    },
-    {
-      "domain": "show",
-      "id": "1015868911",
-      "breed": "ШЕЛТИ",
-      "name_lat": "MARVITHOLL HAPPY LIFE",
-      "name_ru": "",
-      "url": "https://sheltie.breedarchive.com/animal/view/marvitholl-happy-life-eac78aae-256e-4c80-86e9-b0c59119336a"
-    },
-    {
-      "domain": "show",
-      "id": "1445265909",
-      "breed": "КАВАЛЕР ФАЛЕН) ПАПИЙОН",
-      "name_lat": "VILMA YABLONEVAYA MAGIYA",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/vilma-yablonevaya-magiya-2f2fadaf-80c5-438a-9a59-194acc79ed33"
-    },
-    {
-      "domain": "show",
-      "id": "1196416762",
-      "breed": "ПАПИЙОН",
-      "name_lat": "LUXURY FAVORITE KLARISSA HAPPY GIRL",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/luxury-favorite-klarissa-happy-girl-a08ddaf1-ce4d-4167-b293-9b9959dc3bab"
-    },
-    {
-      "domain": "show",
-      "id": "1451489078",
-      "breed": "БОСТОН ТЕРЬЕР",
-      "name_lat": "ELITE BOSTON ARON",
-      "name_ru": "",
-      "url": "https://bostonterrier.breedarchive.com/animal/view/elite-boston-aron-e9227100-98e1-4a10-bc28-640e23b71417"
-    },
-    {
-      "domain": "show",
-      "id": "1808229287",
-      "breed": "ШЕЛТИ",
-      "name_lat": "SHOW ELVERAS CHARMING MY WAY UP",
-      "name_ru": "",
-      "url": "https://sheltie.breedarchive.com/animal/view/show-elveras-charming-my-way-up-94c16df1-c82b-46cc-97a9-f279fae9c1bc"
-    },
-    {
-      "domain": "show",
-      "id": "1272783556",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "name_lat": "CHOCO FAIRY TALE GALILEO",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/choco-fairy-tale-galileo-7818e074-bd7f-41c8-b41c-0a896f100e58"
-    },
-    {
-      "domain": "show",
-      "id": "1073792469",
-      "breed": "БОКСЕР",
-      "name_lat": "RUS LA FLER CAPO DI TUTTI CAPI",
-      "name_ru": "",
-      "url": "https://boxer.breedarchive.com/animal/view/rus-la-fler-capo-di-tutti-capi-a19304ed-2a0a-462b-990f-41c1547949f8"
-    },
-    {
-      "domain": "show",
-      "id": "1754641683",
-      "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
-      "name_lat": "огу RAMBOL BLACK STAR",
-      "name_ru": "",
-      "url": "https://americanhairlessterrier.breedarchive.com/animal/view/rambol-black-star-9a590dbc-c0bd-45c7-b59f-27872ec9e81d"
-    },
-    {
-      "domain": "show",
-      "id": "1829854730",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "name_lat": "AMELIA",
-      "name_ru": "",
-      "url": "https://siberianhusky.breedarchive.com/animal/view/amelia-6b4a7454-cf81-4e0d-bb14-19a3bbbb7907"
-    },
-    {
-      "domain": "show",
-      "id": "1292496176",
+      "id": "1955647409",
       "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН",
-      "name_lat": "OLIVER TEVS",
+      "name_lat": "ZVEZDNY MEDVED I AM PRINCESS AFINA",
       "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/oliver-tevs-8f6775d3-c331-4f93-9b02-b95269baeda4"
+      "url": "https://papillon.breedarchive.com/animal/view/zvezdny-medved-i-am-princess-afina-403b50de-61e5-414d-9154-e6ff4b645650"
     },
     {
       "domain": "show",
-      "id": "705593665",
-      "breed": "КИТАЙСКАЯ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
-      "name_lat": "ШАНТАЛЬ ЧАРОДЕЙКА БЕЛОЙ МАГИИ",
-      "name_ru": "ШАНТАЛЬ ЧАРОДЕЙКА БЕЛОЙ МАГИИ",
-      "url": "https://papillon.breedarchive.com/animal/view/shantal-charodeyka-beloy-magii-2f9c3598-f8ca-4110-b1ab-9ca9e6eab185"
-    },
-    {
-      "domain": "show",
-      "id": "1567801412",
-      "breed": "СОБАКА КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
-      "name_lat": "RUDZHINA RI SHER",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/rudzhina-ri-sher-c7069ae2-de4b-4dc8-b7a8-2cd89a05c01d"
-    },
-    {
-      "domain": "show",
-      "id": "1614275967",
-      "breed": "СОБАКА КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
-      "name_lat": "АРИАДНА",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/ariadna-142ed34c-acd8-4e61-a466-b43ffba7bcc6"
-    },
-    {
-      "domain": "show",
-      "id": "1152887327",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "name_lat": "ВЕНТО ЛИБЕРО МАНС АНДЕР БЕЛАТ",
-      "name_ru": "",
-      "url": "https://siberianhusky.breedarchive.com/animal/view/vento-libero-mans-ander-belat-e326cc03-387c-4552-9ffa-85c54cfe5093"
-    },
-    {
-      "domain": "show",
-      "id": "1270710409",
-      "breed": "КИТАЙСКАЯ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
-      "name_lat": "TILA'S THE FRUIT OF LOVE",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/tilas-the-fruit-of-love-3ccb5eeb-6055-4fa1-8ed3-f1be25405d63"
-    },
-    {
-      "domain": "show",
-      "id": "102656148",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "name_lat": "A'VIGDORS CLODIA",
-      "name_ru": "",
-      "url": "https://frenchbulldog.breedarchive.com/animal/view/avigdors-clodia-a07f00f2-d84d-4d8e-8896-7fa7a486b273"
-    },
-    {
-      "domain": "show",
-      "id": "16808731",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
-      "name_lat": "ZONENVEL`T LION HEART",
-      "name_ru": "",
-      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/zonenvelt-lion-heart-e4ca19f2-a48d-4425-a322-f2a6b7890324"
-    },
-    {
-      "domain": "show",
-      "id": "34988785",
-      "breed": "BORZOI - RUSSIAN HUNTING",
-      "name_lat": "FONEZEL OPIUM DUSHI",
-      "name_ru": "",
-      "url": "https://borzoi.breedarchive.com/animal/view/fonezel-opium-dushi-264771c3-46fa-444f-8cff-be0121169508"
-    },
-    {
-      "domain": "show",
-      "id": "505092369",
-      "breed": "БОСТОН ТЕРЬЕР",
-      "name_lat": "OKEANSKIY VETER FLIBUSTIER",
-      "name_ru": "",
-      "url": "https://bostonterrier.breedarchive.com/animal/view/okeanskiy-veter-flibustier-e22be202-d77b-45b0-a316-a8d1a8e239bb"
-    },
-    {
-      "domain": "show",
-      "id": "1850731199",
-      "breed": "ПЕКИНЕС",
-      "name_lat": "IMAGE DREAM DOMINIKANA",
-      "name_ru": "",
-      "url": "https://pekingese.breedarchive.com/animal/view/image-dream-dominikana-f97df2de-5c8f-4f03-8d14-fbf14b43b157"
-    },
-    {
-      "domain": "show",
-      "id": "162519793",
-      "breed": "БЕДЛИНГТОН ТЕРЬЕР",
-      "name_lat": "GRETTA IZ MOSKOVSKOY BEMTY",
-      "name_ru": "",
-      "url": "https://bedlingtonterrier.breedarchive.com/animal/view/gretta-iz-moskovskoy-bemty-5cbe03f2-c94f-4b0d-9270-38ec6c0a5cfb"
-    },
-    {
-      "domain": "show",
-      "id": "1768144826",
-      "breed": "СОБАКА КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
-      "name_lat": "ФИОРЕ ВОЛАНТРЕ ПРИМАВЕРА",
-      "name_ru": "ФИОРЕ ВОЛАНТРЕ ПРИМАВЕРА",
-      "url": "https://papillon.breedarchive.com/animal/view/fiore-volantre-primavera-4c839453-85e5-4752-be83-ada9cfdab037"
-    },
-    {
-      "domain": "show",
-      "id": "731986600",
-      "breed": "ТИБЕТСКИЙ ТЕРЬЕР",
-      "name_lat": "FESTRAIT SPECIAL ANGEL FROM HEAVEN",
-      "name_ru": "",
-      "url": "https://tibetanterrier.breedarchive.com/animal/view/festrait-special-angel-from-heaven-92540d17-c236-4df1-b0f8-973c261c8d6a"
-    },
-    {
-      "domain": "show",
-      "id": "781579798",
-      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
-      "name_lat": "MANITOU’S TIME TO SHINE",
-      "name_ru": "",
-      "url": "https://nsdtr.breedarchive.com/animal/view/manitous-time-to-shine-70a20c94-de1e-4ec5-9da0-79d78ada8f55"
-    },
-    {
-      "domain": "show",
-      "id": "273637511",
-      "breed": "БОКСЕР",
-      "name_lat": "GALAXION MASTER KLASS OT ALMADINAKS",
-      "name_ru": "",
-      "url": "https://boxer.breedarchive.com/animal/view/galaxion-master-klass-ot-almadinaks-4f349700-993b-4e7c-91dc-3d8671b67d28"
-    },
-    {
-      "domain": "show",
-      "id": "92443744",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
-      "name_lat": "МАКШЕРРИ МИЛАГРЕ",
-      "name_ru": "",
-      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/maksherri-milagre-b67e59e0-ed89-4422-ad2c-6a6200be0e3d"
-    },
-    {
-      "domain": "show",
-      "id": "136287259",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК / WELSH CORGI",
-      "name_lat": "TALISMAN VASILISY RIVER DANCE",
-      "name_ru": "",
-      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/talisman-vasilisy-river-dance-e228b779-b028-47e0-8833-3ff52cd343ae"
-    },
-    {
-      "domain": "show",
-      "id": "133782563",
-      "breed": "BORZOI - RUSSIAN HUNTING",
-      "name_lat": "SOLOVYEV KORVET",
-      "name_ru": "",
-      "url": "https://borzoi.breedarchive.com/animal/view/solovyev-korvet-4ff7e6c8-e5b6-40d8-a45b-daf3ce029a76"
-    },
-    {
-      "domain": "show",
-      "id": "1668214056",
-      "breed": "ПАПИЙОН",
-      "name_lat": "LENSKY TAJ",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/lensky-taj-e79c0c9c-758c-4603-9290-6dafe5e08df0"
-    },
-    {
-      "domain": "show",
-      "id": "276795186",
-      "breed": "БОСТОН ТЕРЬЕР",
-      "name_lat": "ZVEZDA KINO BINOM FANTAZII",
-      "name_ru": "ЗВЕЗДА КИНО БИНОМ ФАНТАЗИИ",
-      "url": "https://bostonterrier.breedarchive.com/animal/view/zvezda-kino-binom-fantazii-da0fa7a3-511e-4f76-adeb-c338003a09b0"
-    },
-    {
-      "domain": "show",
-      "id": "208550211",
-      "breed": "КИТАЙСКАЯ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
-      "name_lat": "МЕЙКЕЛЬ",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/meykel-fae057d4-cc10-44e9-8b33-5d17b3f62fe4"
-    },
-    {
-      "domain": "show",
-      "id": "197212488",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "name_lat": "STAY WITH",
-      "name_ru": "",
-      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/stay-with-30314227-e2e2-41a3-90d2-e5aa096d0cb5"
-    },
-    {
-      "domain": "show",
-      "id": "1922124360",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
-      "name_lat": "БАРРА'С БРИТТ РИАНТЕ ЛОРИАНА",
-      "name_ru": "",
-      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/barras-britt-riante-loriana-9eccebe7-e772-45b7-8da9-4b85677bc581"
-    },
-    {
-      "domain": "show",
-      "id": "1566478394",
-      "breed": "BORZOI - RUSSIAN HUNTING",
-      "name_lat": "ВАЖНАЯ ПЕРСОНА БЛАГОДАР",
-      "name_ru": "ВАЖНАЯ ПЕРСОНА БЛАГОДАР",
-      "url": "https://borzoi.breedarchive.com/animal/view/vazhnaya-persona-blagodar-3b6fb0fc-7487-4e8f-b4cb-3de6cc179c63"
-    },
-    {
-      "domain": "show",
-      "id": "1016371287",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "name_lat": "DRAGONJOY TRINITY",
-      "name_ru": "",
-      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/dragonjoy-trinity-47886c6b-8599-46c2-ae24-90bd3528c600"
-    },
-    {
-      "domain": "show",
-      "id": "1628787814",
-      "breed": "FRENCH BULLDOG",
-      "name_lat": "БАРБАРА",
-      "name_ru": "",
-      "url": "https://frenchbulldog.breedarchive.com/animal/view/barbara-c9769db0-902a-4a56-a876-d993432fd821"
-    },
-    {
-      "domain": "show",
-      "id": "1737571691",
-      "breed": "КАВАЛЕР КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
-      "name_lat": "АЛЬ ДЕ ЛИОН МЯТА",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/al-de-lion-myata-4bd4f093-2598-4a34-bc08-e24dd35b5832"
-    },
-    {
-      "domain": "show",
-      "id": "263366509",
-      "breed": "ТИБЕТСКИЙ МАСТИФ",
-      "name_lat": "ПЕНТАРА ГРЕТТА",
-      "name_ru": "",
-      "url": "https://tibetanmastiff.breedarchive.com/animal/view/pentara-gretta-c2dc37ac-e8b2-471c-a5fd-d19be86e9afe"
-    },
-    {
-      "domain": "show",
-      "id": "1495346031",
-      "breed": "БОСТОН ТЕРЬЕР",
-      "name_lat": "BEST-RED-STARVOM WAMBACHTAL",
-      "name_ru": "",
-      "url": "https://bostonterrier.breedarchive.com/animal/view/best-red-star-vom-wambachtal-5adac34f-0ae7-487f-9dbe-02cc54480f41"
-    },
-    {
-      "domain": "show",
-      "id": "261587577",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН)",
-      "name_lat": "VALENCIA FIRST LADY DI TALE MARI",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/valencia-first-lady-di-tale-mari-dc9f6956-9f62-403b-84bd-46447596429d"
-    },
-    {
-      "domain": "show",
-      "id": "70432897",
-      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
-      "name_lat": "FIRE SHADOW BEAUTIFUL MAY ME DREAM",
-      "name_ru": "",
-      "url": "https://nsdtr.breedarchive.com/animal/view/fire-shadow-beautiful-may-me-dream-cc2b9046-d411-4c22-918d-6f93d518d72e"
-    },
-    {
-      "domain": "show",
-      "id": "1383635610",
-      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР / NOVA SCOTIA",
-      "name_lat": "FIRE SHADOW NEWMIRI MY SOUL",
-      "name_ru": "",
-      "url": "https://nsdtr.breedarchive.com/animal/view/fire-shadow-newmiri-my-soul-da915182-0f17-464b-8879-0d599168326e"
-    },
-    {
-      "domain": "show",
-      "id": "137056161",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
-      "name_lat": "HEI-SHE ZARA",
-      "name_ru": "",
-      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/hei-she-zara-2b9c5793-4025-4b03-9f27-3bdb88a60727"
-    },
-    {
-      "domain": "show",
-      "id": "652338082",
-      "breed": "TIBETAN MASTIFF",
-      "name_lat": "DZHOZIAS LUC",
-      "name_ru": "",
-      "url": "https://tibetanmastiff.breedarchive.com/animal/view/dzhozias-luc-9fbce6b4-8486-4944-bd7d-06a888fe7fb9"
-    },
-    {
-      "domain": "show",
-      "id": "84322211",
-      "breed": "СОБАКА ФАЛЕН) ПАПИЙОН",
-      "name_lat": "LINA",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/lina-558fc635-1039-410e-b0ea-5abdea84193a"
-    },
-    {
-      "domain": "show",
-      "id": "457258662",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "name_lat": "ICE FANTASY LUXURY CHERRY",
-      "name_ru": "",
-      "url": "https://siberianhusky.breedarchive.com/animal/view/ice-fantasy-luxury-cherry-6be0dfdb-76b8-4b4a-bdd5-dabcd975881d"
-    },
-    {
-      "domain": "show",
-      "id": "149331121",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "name_lat": "SEMICVETIK RIHANNA RADA",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/semicvetik-rihanna-rada-d01508aa-3b57-4b11-b877-3e57536b4882"
-    },
-    {
-      "domain": "show",
-      "id": "1974418102",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "name_lat": "HUSQUISHER ONE OF A KIND",
-      "name_ru": "",
-      "url": "https://siberianhusky.breedarchive.com/animal/view/husquisher-one-of-a-kind-8f744140-be71-451f-b965-37fe7dda0afd"
-    },
-    {
-      "domain": "show",
-      "id": "1464938936",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ - ПАПИЙОН",
-      "name_lat": "STILISSIMO CICERO GOLDEN RAIN",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/stilissimo-cicero-golden-rain-098d63a0-439b-43f1-8fae-1a19c3967bd0"
-    },
-    {
-      "domain": "show",
-      "id": "1051631809",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "name_lat": "SERDTSE SIBIRI DANA",
-      "name_ru": "",
-      "url": "https://siberianhusky.breedarchive.com/animal/view/serdtse-sibiri-dana-b982446b-9b44-4ee7-8946-d75cc92b3625"
-    },
-    {
-      "domain": "show",
-      "id": "1128482514",
-      "breed": "BORZOI - RUSSIAN HUNTING",
-      "name_lat": "KUTEZH",
-      "name_ru": "",
-      "url": "https://borzoi.breedarchive.com/animal/view/kutezh-bb2d0f87-6cb6-46bb-a1f8-9ce0c6e5dfc2"
-    },
-    {
-      "domain": "show",
-      "id": "161280960",
-      "breed": "СОБАКА КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
-      "name_lat": "LENSKY PARAGON",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/lensky-paragon-4f3b459f-0197-40ae-8b81-dbd7096dec9a"
-    },
-    {
-      "domain": "show",
-      "id": "1472293347",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
-      "name_lat": "PASTUSHOK PRIBOYA FLAME FAVORITE JOY",
-      "name_ru": "",
-      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/pastushok-priboya-flame-favorite-joy-606a86c0-9112-444f-9f1a-6a922858e863"
-    },
-    {
-      "domain": "show",
-      "id": "290234875",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "name_lat": "VELOURS DE JULIE DIAMOND LAVE STYLE WINNERS",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/velours-de-julie-diamond-lave-style-winners-fc2048de-62fb-4676-a742-52d6f70c971f"
-    },
-    {
-      "domain": "show",
-      "id": "1493380557",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "name_lat": "SNOW STAIL NOTA BENE",
-      "name_ru": "",
-      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/snow-stail-nota-bene-9b38caa1-0f4b-4a6e-91c5-4311d2ca665e"
-    },
-    {
-      "domain": "show",
-      "id": "932050799",
-      "breed": "ШЕЛТИ",
-      "name_lat": "MARVITHOLL MUSCAT WINE",
-      "name_ru": "",
-      "url": "https://sheltie.breedarchive.com/animal/view/marvitholl-muscat-wine-37b55606-9b21-47e4-84f5-d8e0fe62954a"
-    },
-    {
-      "domain": "show",
-      "id": "1074734960",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "name_lat": "HILLBERRY FOXGLOVE",
-      "name_ru": "",
-      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/hillberry-foxglove-dbc2a3c3-3183-4a04-a9a1-89bea5a2ad8c"
-    },
-    {
-      "domain": "show",
-      "id": "1648583806",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "name_lat": "STYLE LIFE CINNAMON ROSE",
-      "name_ru": "",
-      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/style-life-cinnamon-rose-6507fc9b-9213-4603-a859-78258804e455"
-    },
-    {
-      "domain": "show",
-      "id": "825463461",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
-      "name_lat": "CRAZYBOX HARD ROK",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/crazybox-hard-rok-8093f9f7-b526-40e7-a97c-703b066a4eae"
-    },
-    {
-      "domain": "show",
-      "id": "139259930",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "name_lat": "BOGEMA PRESENTS MARCEL AS GOOD AS GOLD",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/bogema-presents-marcel-as-good-as-gold-0c72fa6a-c89b-48a6-bd53-2c4f4e070305"
-    },
-    {
-      "domain": "show",
-      "id": "3550258",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
-      "name_lat": "KEKSBAND HO LA LA",
-      "name_ru": "",
-      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/keksband-ho-la-la-cfc3d50a-dada-4e5c-a40b-fb3ce09f2a96"
-    },
-    {
-      "domain": "show",
-      "id": "983030082",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "name_lat": "AMANSI ONCE UPON A TIME ( )",
-      "name_ru": "",
-      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/amansi-once-upon-a-time-0a8a7e96-1157-438b-b43c-87f7fad5c75c"
-    },
-    {
-      "domain": "show",
-      "id": "25359759",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ-",
-      "name_lat": "VELLARI ROSE IZ SVERKAJUSHEGO MIRA",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/vellari-rose-iz-sverkajushego-mira-e39fb2d2-f686-43dd-b155-5cf59dd497d9"
-    },
-    {
-      "domain": "show",
-      "id": "139218352",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "name_lat": "GALE BRIGHT BELL",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/gale-bright-bell-86589a05-85d7-4103-8837-3749884283eb"
-    },
-    {
-      "domain": "show",
-      "id": "1040944065",
-      "breed": "WELSH CORGI PEMBROKE",
-      "name_lat": "GORDON'S SHELL BARSELONA",
-      "name_ru": "",
-      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/gordons-shell-barselona-eb8696f7-a7c2-4417-92f8-c03e70fd12d9"
-    },
-    {
-      "domain": "show",
-      "id": "316679634",
-      "breed": "БОСТОН ТЕРЬЕР",
-      "name_lat": "TAISIYA IZ KUNTSEVSKOGO DVORIKA",
-      "name_ru": "",
-      "url": "https://bostonterrier.breedarchive.com/animal/view/taisiya-iz-kuntsevskogo-dvorika-08de11cc-a6bf-423c-b0b0-b900b8337aa1"
-    },
-    {
-      "domain": "show",
-      "id": "560841446",
-      "breed": "КАВАЛЕР КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
-      "name_lat": "FAYSHOW KNIAZSHNA",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/fayshow-kniazshna-6939933d-c410-4709-a62e-193d362f4069"
-    },
-    {
-      "domain": "show",
-      "id": "606333676",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН)",
-      "name_lat": "SUNSHINE PAWS JIZEL",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/sunshine-paws-jizel-65b7577c-d177-4f62-aace-37cff497615d"
-    },
-    {
-      "domain": "show",
-      "id": "633159669",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
-      "name_lat": "AETHWY BLUEBERRY HILL",
-      "name_ru": "",
-      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/aethwy-blueberry-hill-d12143d2-6e4d-4c5f-9cef-f34b6456736c"
-    },
-    {
-      "domain": "show",
-      "id": "599989249",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
-      "name_lat": "NUWARA ELIYA VELYA LAVELYA",
-      "name_ru": "",
-      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/nuwara-eliya-velya-lavelya-dffed7ee-c929-48a4-bc51-3d13655d690a"
-    },
-    {
-      "domain": "show",
-      "id": "1441562645",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "name_lat": "MISTYCOR MASTERPIECE",
-      "name_ru": "",
-      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/mistycor-masterpiece-f76fca12-d561-4579-814e-fb4f2e2031f9"
-    },
-    {
-      "domain": "show",
-      "id": "484651042",
-      "breed": "КАВАЛЕР КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
-      "name_lat": "МЕЙКЕЛЬ",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/meykel-fae057d4-cc10-44e9-8b33-5d17b3f62fe4"
-    },
-    {
-      "domain": "show",
-      "id": "1572542504",
-      "breed": "ПАПИЙОН",
-      "name_lat": "LUXURY FAVORITE VICTORIOUS DIP",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/luxury-favorite-victorious-dip-6d002444-8fd0-4627-abae-9d9be8086b84"
-    },
-    {
-      "domain": "show",
-      "id": "1831308099",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "name_lat": "ФЛОРА",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/flora-8fc94711-c0c0-40d2-a063-6e4631951a04"
-    },
-    {
-      "domain": "show",
-      "id": "1318000491",
-      "breed": "КАВАЛЕР КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
-      "name_lat": "LORA NI",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/lora-ni-861a3a57-0369-40fa-af99-529404155883"
-    },
-    {
-      "domain": "show",
-      "id": "1975468396",
-      "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
-      "name_lat": "SHANTARIEL' ODERIKA TILER",
-      "name_ru": "",
-      "url": "https://americanhairlessterrier.breedarchive.com/animal/view/shantariel-oderika-tiler-e46bf63d-54c9-4e87-8b2c-e058c6388f5b"
-    },
-    {
-      "domain": "show",
-      "id": "935745689",
-      "breed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "name_lat": "ISTINA OT NEVSKOGO HOBBITA",
-      "name_ru": "",
-      "url": "https://kingcharlesspaniel.breedarchive.com/animal/view/istina-ot-nevskogo-hobbita-61e28e86-e5e6-4a2d-8817-ba7b66bc1526"
-    },
-    {
-      "domain": "show",
-      "id": "927967411",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ-",
-      "name_lat": "ARI DE PARI JEANNETTE JOLI",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/ari-de-pari-jeannette-joli-b9dfc133-1301-4d32-b583-0e08f1ca8a11"
-    },
-    {
-      "domain": "show",
-      "id": "427855290",
-      "breed": "КИТАЙСКАЯ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
-      "name_lat": "LORA NI",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/lora-ni-861a3a57-0369-40fa-af99-529404155883"
-    },
-    {
-      "domain": "show",
-      "id": "1031779778",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "name_lat": "ANTARANA YASU IZANAMI",
-      "name_ru": "",
-      "url": "https://siberianhusky.breedarchive.com/animal/view/antarana-yasu-izanami-4b458e3d-c604-4596-82a6-b763394f38f8"
-    },
-    {
-      "domain": "show",
-      "id": "44578259",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "name_lat": "FLEUR REBELLE BRAVE DRAGON",
-      "name_ru": "",
-      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/fleur-rebelle-brave-dragon-5b79b039-efee-4555-a8ad-af675348d7b5"
-    },
-    {
-      "domain": "show",
-      "id": "325206792",
-      "breed": "BORZOI - RUSSIAN HUNTING",
-      "name_lat": "ЧЕРЕМША",
-      "name_ru": "",
-      "url": "https://borzoi.breedarchive.com/animal/view/cheremsha-d8e9ef26-4261-4f9d-beac-e1575ab8614f"
-    },
-    {
-      "domain": "show",
-      "id": "1354030111",
-      "breed": "ПЕКИНЕС",
-      "name_lat": "VIKA",
-      "name_ru": "",
-      "url": "https://pekingese.breedarchive.com/animal/view/vika-31c1de0e-2809-44b2-b30d-21b8e183eaf9"
-    },
-    {
-      "domain": "show",
-      "id": "853183257",
-      "breed": "ТИБЕТСКИЙ ТЕРЬЕР",
-      "name_lat": "FESTRAIT ZIP GAN BOOGIE",
-      "name_ru": "",
-      "url": "https://tibetanterrier.breedarchive.com/animal/view/festrait-zip-gan-boogie-a6de070e-a668-4fa3-9305-afc68d861e78"
-    },
-    {
-      "domain": "show",
-      "id": "281282601",
-      "breed": "BORZOI - RUSSIAN HUNTING",
-      "name_lat": "З-ДАРА",
-      "name_ru": "",
-      "url": "https://borzoi.breedarchive.com/animal/view/z-dara-11c219c8-6480-42dd-ba0b-164f5d7b32e1"
-    },
-    {
-      "domain": "show",
-      "id": "1152592708",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
-      "name_lat": "DOM CORGI CHAIN REACTION",
-      "name_ru": "",
-      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/dom-corgi-chain-reaction-8f345b92-ff73-4196-8e14-b54ca222fc35"
-    },
-    {
-      "domain": "show",
-      "id": "1675930388",
-      "breed": "БОСТОН ТЕРЬЕР",
-      "name_lat": "ZVEZDA KINO ZLATANA",
-      "name_ru": "",
-      "url": "https://bostonterrier.breedarchive.com/animal/view/zvezda-kino-zlatana-ec0b6ab8-cca3-45cf-9924-a7c93dac82ba"
-    },
-    {
-      "domain": "show",
-      "id": "386659692",
-      "breed": "ШЕЛТИ",
-      "name_lat": "СВИРЕЛИ ЗВУК ИЗ ТВЕРСКОЙ СКАЗКИ",
-      "name_ru": "СВИРЕЛИ ЗВУК ИЗ ТВЕРСКОЙ СКАЗКИ",
-      "url": "https://sheltie.breedarchive.com/animal/view/svireli-zvuk-iz-tverskoy-skazki-de4d3566-9f9d-4349-96a6-b6563f5cfed1"
-    },
-    {
-      "domain": "show",
-      "id": "388667263",
-      "breed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "name_lat": "ALETA BOKS OSTIN CLASSICS",
-      "name_ru": "",
-      "url": "https://kingcharlesspaniel.breedarchive.com/animal/view/aleta-boks-ostin-classics-5d332133-eb8e-4413-bc66-3633b26bbcf7"
-    },
-    {
-      "domain": "show",
-      "id": "122716816",
-      "breed": "КИТАЙСКАЯ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
-      "name_lat": "EKSLIBRIS BAGRATION",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/ekslibris-bagration-79e005b7-7e57-4f1f-ae33-00174d0679b2"
-    },
-    {
-      "domain": "show",
-      "id": "1730225815",
-      "breed": "ШЕЛТИ",
-      "name_lat": "REGI V NOCHI S EGERSKOY SLOBODY",
-      "name_ru": "",
-      "url": "https://sheltie.breedarchive.com/animal/view/regi-v-nochi-s-egerskoy-slobody-d6040b73-863c-4e95-9f53-e46e4e7e05c5"
-    },
-    {
-      "domain": "show",
-      "id": "1525872799",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
-      "name_lat": "OPHELIA DEL BOHEX",
-      "name_ru": "",
-      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/ophelia-del-bohex-9a857987-e692-4f05-9b80-16f32a7692b2"
-    },
-    {
-      "domain": "show",
-      "id": "219442340",
-      "breed": "БОСТОН ТЕРЬЕР",
-      "name_lat": "RHEA TERRA BALTIKA",
-      "name_ru": "",
-      "url": "https://bostonterrier.breedarchive.com/animal/view/rhea-terra-baltika-24376e66-2a4a-472a-a1f5-5013f433f526"
-    },
-    {
-      "domain": "show",
-      "id": "1843737817",
-      "breed": "GERMAN SHEPHERD",
-      "name_lat": "АЛЬФ",
-      "name_ru": "",
-      "url": "https://germanshepherd.breedarchive.com/animal/view/alf-ac13d11f-daa0-4b7b-9ba0-e2fbfdeedca7"
-    },
-    {
-      "domain": "show",
-      "id": "306249180",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ / GERMAN",
-      "name_lat": "ПАЛАДИН",
-      "name_ru": "",
-      "url": "https://germanshepherd.breedarchive.com/animal/view/paladin-4497a00c-cbaa-492c-a585-0729707e9afb"
-    },
-    {
-      "domain": "show",
-      "id": "372178145",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "name_lat": "BERRY MIX WEASLEY",
-      "name_ru": "",
-      "url": "https://siberianhusky.breedarchive.com/animal/view/berry-mix-weasley-c7d7ea18-a18e-4595-a71b-6eb8b2ac52fa"
-    },
-    {
-      "domain": "show",
-      "id": "37676495",
-      "breed": "ШЕЛТИ",
-      "name_lat": "SHELMERT ANAIS",
-      "name_ru": "",
-      "url": "https://sheltie.breedarchive.com/animal/view/shelmert-anais-70111c4c-9eb1-4dc5-a456-adf49e4225ea"
-    },
-    {
-      "domain": "show",
-      "id": "229581876",
-      "breed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "name_lat": "INGENIOUS BEAUTY DES TROIS MAILLETS",
-      "name_ru": "",
-      "url": "https://kingcharlesspaniel.breedarchive.com/animal/view/ingenious-beauty-des-trois-maillets-91ac7775-d000-4010-9b98-4a7d243cbd9d"
-    },
-    {
-      "domain": "show",
-      "id": "1082461821",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
-      "name_lat": "DOM CORGI NORBERTINA WINNER",
-      "name_ru": "",
-      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/dom-corgi-norbertina-winner-09511dce-356d-4da9-a8e0-128484a65a77"
-    },
-    {
-      "domain": "show",
-      "id": "831869984",
-      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
-      "name_lat": "BELL AND FIRE VICTORI",
-      "name_ru": "",
-      "url": "https://nsdtr.breedarchive.com/animal/view/bell-and-fire-victori-6cce528d-1c97-4dc6-9ddb-57935cfa6eaf"
-    },
-    {
-      "domain": "show",
-      "id": "936012603",
-      "breed": "ТИБЕТСКИЙ МАСТИФ",
-      "name_lat": "DALASSA VARUH",
-      "name_ru": "",
-      "url": "https://tibetanmastiff.breedarchive.com/animal/view/dalassa-varuh-0b39a215-fe85-4f9d-8bf4-2ed969317697"
-    },
-    {
-      "domain": "show",
-      "id": "333176397",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "name_lat": "LAIF SPRING PRETTY PRINCESS",
-      "name_ru": "",
-      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/laif-spring-pretty-princess-d54be7e6-62c1-4b87-a960-3cf51fb0fd48"
-    },
-    {
-      "domain": "show",
-      "id": "1413935190",
-      "breed": "КАВАЛЕР ФАЛЕН) ПАПИЙОН",
-      "name_lat": "ERMAK POKORITEL SERDETS",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/ermak-pokoritel-serdets-aafddb77-c2c6-4e3a-8dca-541230557d79"
-    },
-    {
-      "domain": "show",
-      "id": "1108535663",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "name_lat": "T-LESARK MELANGE OF EVELANGE",
-      "name_ru": "",
-      "url": "https://siberianhusky.breedarchive.com/animal/view/t-lesark-melange-of-evelange-d913bbb6-e7f3-44ae-9a41-21fee25dfbd1"
-    },
-    {
-      "domain": "show",
-      "id": "570558620",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "name_lat": "NADYM S GOLUBOY ZVEZDY",
-      "name_ru": "",
-      "url": "https://siberianhusky.breedarchive.com/animal/view/nadym-s-goluboy-zvezdy-311c5be7-f4a1-4d92-bef6-5703a0b07f66"
-    },
-    {
-      "domain": "show",
-      "id": "1761598780",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "name_lat": "TREASURE DREAM AFTER STORM",
-      "name_ru": "",
-      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/treasure-dream-after-storm-0e3e48bd-c83e-45c2-9ddb-a5554747913d"
-    },
-    {
-      "domain": "show",
-      "id": "143570388",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН",
-      "name_lat": "DOMINO'S FIRE'N FLAME ON CLEARLAKE",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/dominos-fire-n-flame-on-clearlake-f52fafff-3020-43db-9595-5da1dc4391fa"
-    },
-    {
-      "domain": "show",
-      "id": "169440213",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "name_lat": "INTER WIN FLORIZEL",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/inter-win-florizel-58c3b778-b96c-400f-8097-68ab84960849"
-    },
-    {
-      "domain": "show",
-      "id": "1992381747",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "name_lat": "SOLIFERT JE TE SERAI FIDELE EYVA",
-      "name_ru": "",
-      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/solifert-je-te-serai-fidele-eyva-c405510b-6c82-4f51-8a9a-6028dce2c32f"
-    },
-    {
-      "domain": "show",
-      "id": "1033962307",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ – ПАПИЙОН",
-      "name_lat": "NAT DE FLEUR RAPHAEL",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/nat-de-fleur-raphael-749a39c3-eaee-4590-9556-5ed47228edc8"
-    },
-    {
-      "domain": "show",
-      "id": "1119078067",
-      "breed": "КАВАЛЕР КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
-      "name_lat": "АРЧЕР ФЛОК ИСТОРИЯ ЛЮБВИ",
-      "name_ru": "АРЧЕР ФЛОК ИСТОРИЯ ЛЮБВИ",
-      "url": "https://papillon.breedarchive.com/animal/view/archer-flok-istoriya-lyubvi-ebcf5eaf-d8fd-4279-a51b-f205255bdb9f"
-    },
-    {
-      "domain": "show",
-      "id": "1282869187",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
-      "name_lat": "FARVATER EGOZA LETNYAYA GROZA",
-      "name_ru": "",
-      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/farvater-egoza-letnyaya-groza-88094453-9885-46bf-aafe-243a4c10eb42"
-    },
-    {
-      "domain": "show",
-      "id": "800287295",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "name_lat": "НИККИ ФАНТАСТИК МЭН",
-      "name_ru": "НИККИ ФАНТАСТИК МЭН",
-      "url": "https://papillon.breedarchive.com/animal/view/nikki-fantastik-men-00fc4638-3d34-4b3d-9e87-0b0534918d1f"
-    },
-    {
-      "domain": "show",
-      "id": "133126613",
-      "breed": "ШЕЛТИ",
-      "name_lat": "GORDON'S SHELL FLUORITE ICE",
-      "name_ru": "",
-      "url": "https://sheltie.breedarchive.com/animal/view/gordons-shell-fluorite-ice-b03e104f-bd37-417c-b814-a52b66beadb0"
-    },
-    {
-      "domain": "show",
-      "id": "1560128005",
-      "breed": "RUSSIAN HUNTING",
-      "name_lat": "ДОБРЫНЯ",
-      "name_ru": "",
-      "url": "https://borzoi.breedarchive.com/animal/view/dobrynya-5f042941-796c-4574-b48f-16a2a153583e"
-    },
-    {
-      "domain": "show",
-      "id": "949375497",
-      "breed": "БОКСЕР",
-      "name_lat": "SHOW LEADER IRINA",
-      "name_ru": "",
-      "url": "https://boxer.breedarchive.com/animal/view/show-leader-irina-4c56c901-46db-4506-983b-805ad9ed8dc4"
-    },
-    {
-      "domain": "show",
-      "id": "728609046",
-      "breed": "БОСТОН ТЕРЬЕР",
-      "name_lat": "ЗВЕЗДА КИНО В ВОСТОРГЕ ОТ ТЕБЯ",
-      "name_ru": "",
-      "url": "https://bostonterrier.breedarchive.com/animal/view/zvezda-kino-v-vostorge-ot-tebya-ced0bf80-4c60-4c47-81ef-969d58b124ff"
-    },
-    {
-      "domain": "show",
-      "id": "1520803095",
-      "breed": "КИТАЙСКАЯ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
-      "name_lat": "NEW DRIVE OT NEVSKOGO DUETA",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/new-drive-ot-nevskogo-dueta-7e732f9f-3cd6-48a1-ab28-2f98addd9808"
-    },
-    {
-      "domain": "show",
-      "id": "1653093661",
-      "breed": "ХАСКИ",
-      "name_lat": "SILVER QUARTZ FORTITUDE",
-      "name_ru": "",
-      "url": "https://siberianhusky.breedarchive.com/animal/view/silver-quartz-fortitude-50a8adfb-bc15-4516-bfe6-9b368d905fda"
-    },
-    {
-      "domain": "show",
-      "id": "1223886122",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
-      "name_lat": "КАССАНДРА",
-      "name_ru": "",
-      "url": "https://germanshepherd.breedarchive.com/animal/view/kassandra-40af8162-240c-46af-9704-b9f1be435395"
-    },
-    {
-      "domain": "show",
-      "id": "623568173",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
-      "name_lat": "BARRA'S BRITT KAROL EMIL DIVIN",
-      "name_ru": "БАРРА'С БРИТТ КАРОЛЬ ЭМИЛЬ ДИВИН",
-      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/barras-britt-karol-emil-divin-274938de-287e-4040-ba53-0ad6f7dad3c2"
-    },
-    {
-      "domain": "show",
-      "id": "691759670",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
-      "name_lat": "FELANGRY ZIGZAG",
-      "name_ru": "",
-      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/felangry-zigzag-a496b47f-8316-47eb-a0ae-ce7ed91dfc21"
-    },
-    {
-      "domain": "show",
-      "id": "1960974654",
-      "breed": "СОБАКА ФАЛЕН) ПАПИЙОН",
-      "name_lat": "OLIVER TEVS",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/oliver-tevs-8f6775d3-c331-4f93-9b02-b95269baeda4"
-    },
-    {
-      "domain": "show",
-      "id": "70902849",
-      "breed": "SHEPHERD DOG DOUBLE COAT",
-      "name_lat": "SANTA MARIA",
-      "name_ru": "",
-      "url": "https://germanshepherd.breedarchive.com/animal/view/santa-maria-ca5df3ae-ba3b-4409-97ff-789e66eb273d"
-    },
-    {
-      "domain": "show",
-      "id": "591919434",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "name_lat": "ARTOLI ZEST IN CAKE",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/artoli-zest-in-cake-50f48ce6-eb00-4053-8f92-eada390a19ae"
-    },
-    {
-      "domain": "show",
-      "id": "383073613",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "name_lat": "FLEUR REBELLEVELVET WILLIAM",
-      "name_ru": "",
-      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/fleur-rebelle-velvet-william-a5eec6ad-9483-486b-a0bc-08b924ffecd8"
-    },
-    {
-      "domain": "show",
-      "id": "1246199629",
-      "breed": "СОБАКА ФАЛЕН) ПАПИЙОН",
-      "name_lat": "BOOM IN HELL NOSFERATU VON ZALEVSKI",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/boom-in-hell-nosferatu-von-zalevski-996733a6-f3d7-45e4-a08a-95880b7bcb50"
-    },
-    {
-      "domain": "show",
-      "id": "18105960",
-      "breed": "КАВАЛЕР ФАЛЕН) ПАПИЙОН",
-      "name_lat": "INTER WIN ELIXIR OF SUCCESS",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/inter-win-elixir-of-success-fe5b146e-5f3a-4b92-b840-49c52bbd1eb1"
-    },
-    {
-      "domain": "show",
-      "id": "121801576",
-      "breed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "name_lat": "TESLA OT NEVSKOGO HOBBITA",
-      "name_ru": "",
-      "url": "https://kingcharlesspaniel.breedarchive.com/animal/view/tesla-ot-nevskogo-hobbita-1f42a118-e808-4f74-8378-7a23aa39bfc8"
-    },
-    {
-      "domain": "show",
-      "id": "1858837099",
-      "breed": "BORZOI - RUSSIAN HUNTING",
-      "name_lat": "ДОБРЫНЯ",
-      "name_ru": "",
-      "url": "https://borzoi.breedarchive.com/animal/view/dobrynya-5f042941-796c-4574-b48f-16a2a153583e"
-    },
-    {
-      "domain": "show",
-      "id": "1274600046",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
-      "name_lat": "FELANGRY KEEP IT SMILE",
-      "name_ru": "",
-      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/felangry-keep-it-smile-3ce4049b-7165-431f-9b1b-a932a9e36f41"
-    },
-    {
-      "domain": "show",
-      "id": "1447811184",
-      "breed": "RUSSIAN HUNTING",
-      "name_lat": "CAVALLIERIK HARIZMATICA СКАЗКА СЕВЕРА",
-      "name_ru": "",
-      "url": "https://borzoi.breedarchive.com/animal/view/cavallierik-harizmatica-73d31302-afc9-470e-9419-7d305386c651"
-    },
-    {
-      "domain": "show",
-      "id": "343238257",
-      "breed": "WELSH CORGI CARDIGAN",
-      "name_lat": "INGERMANLANDIJA VIGOROS RON",
-      "name_ru": "",
-      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/ingermanlandija-vigoros-ron-285bcc49-166f-45ed-9dd7-e2e95fda6c28"
-    },
-    {
-      "domain": "show",
-      "id": "635199096",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "name_lat": "PERFECT STORY CHILLATTAS OREO",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/perfect-story-chillattas-oreo-69ad719e-aa78-4c77-9959-dd272b94737a"
-    },
-    {
-      "domain": "show",
-      "id": "425259385",
-      "breed": "ЯПОНСКИЙ ХИН / JAPANESE",
-      "name_lat": "AIKEMUNO RUO",
-      "name_ru": "",
-      "url": "https://japanesechin.breedarchive.com/animal/view/aikemuno-ruo-61494d4b-eee6-4a25-b5dc-4f0e6b9abbaf"
-    },
-    {
-      "domain": "show",
-      "id": "1534192761",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "name_lat": "NATTI HUSKY INTELLEKT DRIVE LIFE",
-      "name_ru": "",
-      "url": "https://siberianhusky.breedarchive.com/animal/view/natti-husky-intellekt-drive-life-4f6253b7-9bec-4d4c-a33f-8ce66074ace7"
-    },
-    {
-      "domain": "show",
-      "id": "1366232959",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "name_lat": "MISTYCOR EXTRA ORDINARY",
-      "name_ru": "",
-      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/mistycor-extra-ordinary-73e9f13d-0d70-4ae0-a1eb-45c58ad93e76"
-    },
-    {
-      "domain": "show",
-      "id": "683598722",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "name_lat": "KAMELIYA IZ IMPERII ADAMANT",
-      "name_ru": "",
-      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/kameliya-iz-imperii-adamant-d951da08-740a-4a08-94c0-5bbfdbac510f"
-    },
-    {
-      "domain": "show",
-      "id": "251316869",
-      "breed": "СОБАКА ФАЛЕН) ПАПИЙОН",
-      "name_lat": "TERRIS UNICUM ZHAKKARD",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/terris-unicum-zhakkard-e05d60b0-d848-47cf-91bf-fcf9e2b84543"
-    },
-    {
-      "domain": "show",
-      "id": "1799959686",
-      "breed": "RUSSIAN HUNTING SPANIEL",
-      "name_lat": "СКИФ",
-      "name_ru": "",
-      "url": "https://borzoi.breedarchive.com/animal/view/skif-33a552e2-5444-414a-9a76-0b5c7e1d6566"
-    },
-    {
-      "domain": "show",
-      "id": "198420348",
-      "breed": "БОСТОН ТЕРЬЕР",
-      "name_lat": "OKEANSKIY VETER VOZDUSHNIY POCELUY",
-      "name_ru": "",
-      "url": "https://bostonterrier.breedarchive.com/animal/view/okeanskiy-veter-vozdushniy-poceluy-80a0f5f5-3b93-4a81-9490-78ca5c758176"
-    },
-    {
-      "domain": "show",
-      "id": "1047012747",
-      "breed": "КАРДИГАН / WELSH",
-      "name_lat": "KEKSBAND MINE ALL MINE",
-      "name_ru": "",
-      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/keksband-mine-all-mine-34a99898-e4e7-4807-bfd6-a2d627f63cac"
-    },
-    {
-      "domain": "show",
-      "id": "1749398923",
-      "breed": "CIRNECO DELL’ETNA",
-      "name_lat": "VENTURA",
-      "name_ru": "",
-      "url": "https://cirneco.breedarchive.com/animal/view/ventura-5c3098cb-f7b9-4dec-b6a5-49036952d97c"
-    },
-    {
-      "domain": "show",
-      "id": "418710670",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "name_lat": "BERRY MIX MAGNIFICENT",
-      "name_ru": "",
-      "url": "https://siberianhusky.breedarchive.com/animal/view/berry-mix-magnificent-1cbe2fa3-b1ad-414c-9456-39ce0a5c1a18"
-    },
-    {
-      "domain": "show",
-      "id": "893632657",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "name_lat": "ВЕНТО ЛИБЕРО ЮВИЛЛИ УРС ПОЕГ",
-      "name_ru": "ВЕНТО ЛИБЕРО ЮВИЛЛИ УРС ПОЕГ",
-      "url": "https://siberianhusky.breedarchive.com/animal/view/vento-libero-yuvilli-urs-poeg-01462d30-7b36-446d-ae80-9fc3137fc8ce"
-    },
-    {
-      "domain": "show",
-      "id": "1002753172",
-      "breed": "GERMAN SHEPHERD DOG",
-      "name_lat": "КЕНТ",
-      "name_ru": "",
-      "url": "https://germanshepherd.breedarchive.com/animal/view/kent-a9a2725d-6e40-45e0-b279-376222d97210"
-    },
-    {
-      "domain": "show",
-      "id": "1353204619",
-      "breed": "ПАПИЙОН / CONTINENTAL TOY",
-      "name_lat": "MONICA D'ORO",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/monica-doro-35f95ba1-d8f8-44b3-953c-d27d7b182a91"
-    },
-    {
-      "domain": "show",
-      "id": "670176925",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
-      "name_lat": "ORMAI ENFIS",
-      "name_ru": "",
-      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/ormai-enfis-2d3dcf68-a542-4aa9-8b38-5ce6b720f40c"
-    },
-    {
-      "domain": "show",
-      "id": "1717574571",
-      "breed": "PHARAOH HOUND",
-      "name_lat": "VELES-A WISE PILGRIM",
-      "name_ru": "",
-      "url": "https://pharaohhound.breedarchive.com/animal/view/veles-a-wise-pilgrim-8e87803c-bbc7-4850-b651-2541b2c55f1b"
-    },
-    {
-      "domain": "show",
-      "id": "821064620",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "name_lat": "VELOURS DE JULIE CHESLAV NOBLE",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/velours-de-julie-cheslav-noble-d0c4e3e2-3ef6-4500-bf9c-40cb4bf5fd0d"
-    },
-    {
-      "domain": "show",
-      "id": "525659055",
-      "breed": "БОСТОН ТЕРЬЕР",
-      "name_lat": "РОТЕРР ГРИФФ ДИАДЕМА",
-      "name_ru": "РОТЕРР ГРИФФ ДИАДЕМА",
-      "url": "https://bostonterrier.breedarchive.com/animal/view/roterr-griff-diadema-5e8d55c7-bd53-4876-b1f5-e6eb94c59a82"
-    },
-    {
-      "domain": "show",
-      "id": "274966451",
-      "breed": "SHEPHERD DOG",
-      "name_lat": "SANTA",
-      "name_ru": "",
-      "url": "https://germanshepherd.breedarchive.com/animal/view/santa-ae5f8590-4eae-40a9-b926-acfc6542525b"
-    },
-    {
-      "domain": "show",
-      "id": "726573760",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "name_lat": "SENSATION FAIER STALKER",
-      "name_ru": "",
-      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/sensation-faier-stalker-8c6480be-bd51-428a-ac81-6d6feb65e5c5"
-    },
-    {
-      "domain": "show",
-      "id": "40270273",
-      "breed": "КАВАЛЕР ФАЛЕН) ПАПИЙОН",
-      "name_lat": "МЕЙКЕЛЬ",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/meykel-fae057d4-cc10-44e9-8b33-5d17b3f62fe4"
-    },
-    {
-      "domain": "show",
-      "id": "384607170",
-      "breed": "КИТАЙСКАЯ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
-      "name_lat": "ФЛОРА",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/flora-8fc94711-c0c0-40d2-a063-6e4631951a04"
-    },
-    {
-      "domain": "show",
-      "id": "699632325",
-      "breed": "BORZOI - RUSSIAN HUNTING",
-      "name_lat": "БАРСКАЯ ПРИХОТЬ НЕТ ТЕБЯ ПРЕКРАСНЕЙ",
-      "name_ru": "БАРСКАЯ ПРИХОТЬ НЕТ ТЕБЯ ПРЕКРАСНЕЙ",
-      "url": "https://borzoi.breedarchive.com/animal/view/barskaya-prikhot-net-tebya-prekrasney-2c35c164-a1bf-48f4-aa5e-3b52b4d48ab3"
-    },
-    {
-      "domain": "show",
-      "id": "1882473428",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ-",
-      "name_lat": "МАРТИНИ ФИЕРО",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/martini-fiero-7a41aa8f-7bf0-47a7-869b-07361e6fc2af"
-    },
-    {
-      "domain": "show",
-      "id": "919027157",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
-      "name_lat": "NUWARA ELIYA VRANGEL",
-      "name_ru": "",
-      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/nuwara-eliya-vrangel-1cd97c17-6c40-42a1-885d-3d1cc82ba06d"
-    },
-    {
-      "domain": "show",
-      "id": "1869057494",
-      "breed": "ПЕМБРОК / WELSH",
-      "name_lat": "MISTYCO R ONE IN A MILLION",
-      "name_ru": "",
-      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/mistycor-one-in-a-million-8c68e170-2b68-40ae-be9e-6300711d12ef"
-    },
-    {
-      "domain": "show",
-      "id": "1019064536",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "name_lat": "MAGICKOR AMBASSADOR FOR AKSWELL ( )",
-      "name_ru": "",
-      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/magickor-ambassador-for-akswell-9f76a167-0424-4a52-8de6-18f2bd465c72"
-    },
-    {
-      "domain": "show",
-      "id": "464061651",
-      "breed": "БОСТОН ТЕРЬЕР",
-      "name_lat": "JUSTICE'S VIT-AL FIN HIT RACE",
-      "name_ru": "",
-      "url": "https://bostonterrier.breedarchive.com/animal/view/justices-vit-al-fin-hit-race-15eac7db-8dd9-4656-a332-9f882469d576"
-    },
-    {
-      "domain": "show",
-      "id": "1657235418",
-      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
-      "name_lat": "LOREVY MURZILKA",
-      "name_ru": "",
-      "url": "https://nsdtr.breedarchive.com/animal/view/lorevy-murzilka-1bc78679-0a35-48c4-a871-12e6a6b3c864"
-    },
-    {
-      "domain": "show",
-      "id": "1861443809",
-      "breed": "КИТАЙСКАЯ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
-      "name_lat": "LILIYAN'S YAMIRA MON AMI",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/liliyans-yamira-mon-ami-d79037cc-c4d0-49c2-bb04-35697629174d"
-    },
-    {
-      "domain": "show",
-      "id": "1624763879",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
-      "name_lat": "VAN LEN TIME ZLATA",
-      "name_ru": "",
-      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/van-len-time-zlata-e724ffbb-2ddf-4279-bbfa-61faa979b936"
-    },
-    {
-      "domain": "show",
-      "id": "157273065",
-      "breed": "РОТВЕЙЛЕР / ROTTWEILER",
-      "name_lat": "BAGIRA",
-      "name_ru": "",
-      "url": "https://rottweiler.breedarchive.com/animal/view/bagira-0a96d720-da72-4d2c-94a5-e737702bf8a7"
-    },
-    {
-      "domain": "show",
-      "id": "1930179306",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
-      "name_lat": "ARAGORN",
-      "name_ru": "",
-      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/aragorn-0efb0c2e-4001-4c7a-9a67-7715a64a999e"
-    },
-    {
-      "domain": "show",
-      "id": "1560672237",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "name_lat": "МИСТЕРИЯ ЕВАНГЕЛИНА",
-      "name_ru": "МИСТЕРИЯ ЕВАНГЕЛИНА",
-      "url": "https://papillon.breedarchive.com/animal/view/misteriya-evangelina-7f2315af-fc6f-47da-b5af-11fcf59d1728"
-    },
-    {
-      "domain": "show",
-      "id": "1934921454",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "name_lat": "ШИК И ШАРМ АВЕ МАРИЯ",
-      "name_ru": "ШИК И ШАРМ АВЕ МАРИЯ",
-      "url": "https://papillon.breedarchive.com/animal/view/shik-i-sharm-ave-mariya-57718566-077b-40f7-bf3e-d7529c4dd360"
-    },
-    {
-      "domain": "show",
-      "id": "459715824",
-      "breed": "ШЕЛТИ",
-      "name_lat": "SMILE ANGEL OCHAROVASH KA",
-      "name_ru": "",
-      "url": "https://sheltie.breedarchive.com/animal/view/smile-angel-ocharovashka-7d2e8410-e011-46ab-a41b-0609987ae54e"
-    },
-    {
-      "domain": "show",
-      "id": "1334346231",
-      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
-      "name_lat": "BELL AND FIRE VIP SENSATION",
-      "name_ru": "",
-      "url": "https://nsdtr.breedarchive.com/animal/view/bell-and-fire-vip-sensation-58fef912-6a10-4c52-99b4-ab2af0cef07d"
-    },
-    {
-      "domain": "show",
-      "id": "1420179446",
-      "breed": "ШЕЛТИ",
-      "name_lat": "MARVITHOLL VENDETTA",
-      "name_ru": "",
-      "url": "https://sheltie.breedarchive.com/animal/view/marvitholl-vendetta-54364806-bc2b-4f9b-8fb2-88c0b72769a5"
-    },
-    {
-      "domain": "show",
-      "id": "1639108086",
-      "breed": "КАВАЛЕР КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
-      "name_lat": "ГЕРМЕС",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/germes-26d0c69b-2885-4c61-b6f4-bd7eed3ad49a"
-    },
-    {
-      "domain": "show",
-      "id": "1076096628",
-      "breed": "КАВАЛЕР КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
-      "name_lat": "ALLER BEST BINGO BONGO",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/aller-best-bingo-bongo-49c6d97a-fdfb-4cd9-aa73-26544fc5eaeb"
-    },
-    {
-      "domain": "show",
-      "id": "1667191393",
-      "breed": "КАРДИГАН",
-      "name_lat": "AETHWY WALK THE EARTH",
-      "name_ru": "",
-      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/aethwy-walk-the-earth-e8d7710d-dcb7-4651-96fe-f457fe647aea"
-    },
-    {
-      "domain": "show",
-      "id": "1990708329",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
-      "name_lat": "BE MY LUCKY WED'MAK",
-      "name_ru": "",
-      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/be-my-lucky-wedmak-dc605377-05c2-4813-ad0c-a65029f20806"
-    },
-    {
-      "domain": "show",
-      "id": "1380047469",
-      "breed": "БОСТОН ТЕРЬЕР",
-      "name_lat": "BOSTON STYLE LOENDS POWER OF LOVE",
-      "name_ru": "",
-      "url": "https://bostonterrier.breedarchive.com/animal/view/boston-style-loends-power-of-love-24fed922-483b-4920-b7a3-60168645ad23"
-    },
-    {
-      "domain": "show",
-      "id": "1644724487",
-      "breed": "КИТАЙСКАЯ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
-      "name_lat": "АРМАНИКА ЧЕЛИТА",
-      "name_ru": "АРМАНИКА ЧЕЛИТА",
-      "url": "https://papillon.breedarchive.com/animal/view/armanika-chelita-7149d871-9072-4674-8774-10aac0945b72"
-    },
-    {
-      "domain": "show",
-      "id": "441067046",
-      "breed": "WELSH CORGI PEMBROKE",
-      "name_lat": "GINGER ELF SPIRIT OF ECSTASY",
-      "name_ru": "",
-      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/ginger-elf-spirit-of-ecstasy-8a95d84e-644d-4c8f-a64e-455236f02d19"
-    },
-    {
-      "domain": "show",
-      "id": "955006247",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
-      "name_lat": "БАРРА С БРИТТ РИАНТЕ ЛОРИАНА",
-      "name_ru": "",
-      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/barras-britt-riante-loriana-9eccebe7-e772-45b7-8da9-4b85677bc581"
-    },
-    {
-      "domain": "show",
-      "id": "1617337151",
-      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
-      "name_lat": "FIRE SHADOW NILS THE BRAVE",
-      "name_ru": "",
-      "url": "https://nsdtr.breedarchive.com/animal/view/fire-shadow-nils-the-brave-f509482a-5e87-458a-95e0-dc5f8b7974ef"
-    },
-    {
-      "domain": "show",
-      "id": "457733734",
-      "breed": "CIRNECO DELL’ETNA",
-      "name_lat": "PEPE",
-      "name_ru": "",
-      "url": "https://cirneco.breedarchive.com/animal/view/pepe-f6967a2b-94b5-4035-899a-30c2d98ba2d0"
-    },
-    {
-      "domain": "show",
-      "id": "1909562727",
-      "breed": "BORZOI - RUSSIAN HUNTING",
-      "name_lat": "CAVALLIERIK EGOIST",
-      "name_ru": "",
-      "url": "https://borzoi.breedarchive.com/animal/view/cavallierik-egoist-f4542523-9c08-44c2-864b-1a4381b5a297"
-    },
-    {
-      "domain": "show",
-      "id": "880196719",
-      "breed": "КАВАЛЕР КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
-      "name_lat": "VIVAT MARKO KIERA MAI",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/vivat-marko-kiera-mai-9442c97b-d16d-4f9b-b133-61fcdab6bc0a"
-    },
-    {
-      "domain": "show",
-      "id": "1101021563",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "name_lat": "ETUAL GOLD PRIMA PETTY",
-      "name_ru": "",
-      "url": "https://siberianhusky.breedarchive.com/animal/view/etual-gold-prima-petty-564018db-55e5-428a-9926-ae9cec9a5132"
-    },
-    {
-      "domain": "show",
-      "id": "1702374783",
-      "breed": "СОБАКА ФАЛЕН) ПАПИЙОН",
-      "name_lat": "КРАСНЫЙ АМУЛЕТ ЗУМЕР",
-      "name_ru": "КРАСНЫЙ АМУЛЕТ ЗУМЕР",
-      "url": "https://papillon.breedarchive.com/animal/view/krasnyy-amulet-zumer-04e2b556-cf77-416a-96b4-8d12fb144ad0"
-    },
-    {
-      "domain": "show",
-      "id": "200336781",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
-      "name_lat": "ZONENVELT ZORRO",
-      "name_ru": "",
-      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/zonenvelt-zorro-f53fc2c0-408a-4aaf-8167-90d544f3b4eb"
-    },
-    {
-      "domain": "show",
-      "id": "270112656",
-      "breed": "КИТАЙСКАЯ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
-      "name_lat": "ЗЛАТО СКИФОВ ИЗ ТУЛЬСКОЙ ГУБЕРНИИ",
-      "name_ru": "ЗЛАТО СКИФОВ ИЗ ТУЛЬСКОЙ ГУБЕРНИИ",
-      "url": "https://papillon.breedarchive.com/animal/view/zlato-skifov-iz-tulskoy-gubernii-243c04e7-d6e8-411d-894f-6a366aa5bd07"
-    },
-    {
-      "domain": "show",
-      "id": "1197082515",
-      "breed": "GERMAN SHEPHERD DOG",
-      "name_lat": "АЛЬФ",
-      "name_ru": "",
-      "url": "https://germanshepherd.breedarchive.com/animal/view/alf-ac13d11f-daa0-4b7b-9ba0-e2fbfdeedca7"
-    },
-    {
-      "domain": "show",
-      "id": "215975575",
-      "breed": "BORZOI - RUSSIAN HUNTING",
-      "name_lat": "APRIORI LEDY-KILLER",
-      "name_ru": "",
-      "url": "https://borzoi.breedarchive.com/animal/view/apriori-ledy-killer-072bd77b-4e66-4f59-af64-b81df8fec649"
-    },
-    {
-      "domain": "show",
-      "id": "181959838",
-      "breed": "БОСТОН ТЕРЬЕР",
-      "name_lat": "ALMADINAKS SIMVOLIKA",
-      "name_ru": "",
-      "url": "https://bostonterrier.breedarchive.com/animal/view/almadinaks-simvolika-15c96e89-b564-4bb9-9178-e6b719e331ef"
-    },
-    {
-      "domain": "show",
-      "id": "1576180128",
-      "breed": "BORZOI - RUSSIAN HUNTING",
-      "name_lat": "BORZIE-SENAVIAN VIRAZH",
-      "name_ru": "",
-      "url": "https://borzoi.breedarchive.com/animal/view/borzie-senavian-virazh-50aa9c3e-3fb3-485f-ac6a-9523666c4072"
-    },
-    {
-      "domain": "show",
-      "id": "1317024165",
-      "breed": "КАРДИГАН",
-      "name_lat": "WIND OF GRAND KVENTIN",
-      "name_ru": "",
-      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/wind-of-grand-kventin-5e3d8ef2-8ee6-4be9-bc7c-f106056de918"
-    },
-    {
-      "domain": "show",
-      "id": "721672632",
-      "breed": "GERMAN SHEPHERD DOG",
-      "name_lat": "БОННИЕ",
-      "name_ru": "",
-      "url": "https://germanshepherd.breedarchive.com/animal/view/bonnie-8f67e920-297a-442f-85c4-98af64a11342"
-    },
-    {
-      "domain": "show",
-      "id": "747203285",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "name_lat": "CHARODEY IZ SEVERNOY LIGI CHEMPIONOV",
-      "name_ru": "ЧАРОДЕЙ ИЗ СЕВЕРНОЙ ЛИГИ ЧЕМПИОНОВ",
-      "url": "https://siberianhusky.breedarchive.com/animal/view/charodey-iz-severnoy-ligi-chempionov-28a100e3-82b0-4a92-8190-060a15e1e1aa"
-    },
-    {
-      "domain": "show",
-      "id": "1355640539",
-      "breed": "BORZOI - RUSSIAN HUNTING",
-      "name_lat": "SHAYTANKA SO SHKODNOGO DVORA",
-      "name_ru": "",
-      "url": "https://borzoi.breedarchive.com/animal/view/shaytanka-so-shkodnogo-dvora-1104358f-01ec-4016-a653-49ba50d44341"
-    },
-    {
-      "domain": "show",
-      "id": "693445867",
-      "breed": "ТИБЕТСКИЙ МАСТИФ",
-      "name_lat": "НИКА",
+      "id": "435460646",
+      "breed": "БОРДЕР КОЛЛИ",
+      "name_lat": "ГАБРИЭЛЛА",
       "name_ru": "",
-      "url": "https://tibetanmastiff.breedarchive.com/animal/view/nika-1744db0b-4853-4c28-a7cf-7db6e15ed6a8"
+      "url": "https://bordercollie.breedarchive.com/animal/view/gabriella-fd7fb6c6-86a3-47a6-b307-45509f085a4c"
     },
     {
       "domain": "show",
-      "id": "1943005677",
-      "breed": "WELSH CORGI PEMBROKE",
-      "name_lat": "ЛОРЕТТА",
+      "id": "1173848878",
+      "breed": "ПСОВАЯ БОРЗАЯ",
+      "name_lat": "FONEZEL KAVALIER DE LOVE",
       "name_ru": "",
-      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/loretta-aed1b289-9747-4255-a2bf-38c43cb3ef28"
+      "url": "https://borzoi.breedarchive.com/animal/view/fonezel-kavalier-de-love-1a814428-f8f4-4f16-add0-d5229650f98c"
     },
     {
       "domain": "show",
-      "id": "1010477560",
+      "id": "1950085682",
       "breed": "КИНГ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
-      "name_lat": "WALT DISNEY OT NEVSKOGO DUETA",
+      "name_lat": "TINNERMANS EVERETT",
       "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/walt-disney-ot-nevskogo-dueta-a7b1eb46-0d50-42ac-8864-5776f6594bc5"
+      "url": "https://papillon.breedarchive.com/animal/view/tinnermans-everett-7a78b55b-3a1b-4c6b-9a0a-7392759e2406"
     },
     {
       "domain": "show",
-      "id": "289309201",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "name_lat": "SEMICVETIK DOLORES JULIA",
+      "id": "109632058",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "name_lat": "ZONENVELT RAFAELLA INDIE SWEET",
       "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/semicvetik-dolores-julia-dd2275c3-b09b-4dfb-a514-46b906ade06a"
+      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/zonenvelt-rafaella-indie-sweet-933006a5-8d86-48b9-acc0-b048d6586d04"
     },
     {
       "domain": "show",
-      "id": "1488098326",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "name_lat": "ВЕНТО ЛИБЕРО ВЕНТУ ДИ СИМА",
+      "id": "120361294",
+      "breed": "КАВАЛЕР КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
+      "name_lat": "FLY PAPILLON EVA POLNA",
       "name_ru": "",
-      "url": "https://siberianhusky.breedarchive.com/animal/view/vento-libero-ventu-di-sima-c92037af-0e69-4b04-b635-023cfa9b0bba"
+      "url": "https://papillon.breedarchive.com/animal/view/fly-papillon-eva-polna-4c30546f-31d5-4d4a-8214-d084df0e6295"
     },
     {
       "domain": "show",
-      "id": "1381731376",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "name_lat": "HUSKY HAVEN CHESTITY",
+      "id": "1679195988",
+      "breed": "КАВАЛЕР КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
+      "name_lat": "ВАЛЕАН ГРИФФ РИКА ФЛАВИЯ",
       "name_ru": "",
-      "url": "https://siberianhusky.breedarchive.com/animal/view/husky-haven-chestity-74caf6ba-edc3-45c6-b71a-3194fc433c74"
+      "url": "https://papillon.breedarchive.com/animal/view/valean-griff-rika-flaviya-6aea5f9a-e9b8-4a8b-9acc-f0855292e4b9"
     },
     {
       "domain": "show",
-      "id": "1446964785",
+      "id": "179653486",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "name_lat": "LUXBERRY SHADBERRY MAGIC",
+      "name_ru": "",
+      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/luxberry-shadberry-magic-c9dca3a9-2bab-4ce7-859c-f9f7f7c6920d"
+    },
+    {
+      "domain": "show",
+      "id": "1372552322",
+      "breed": "ПАПИЙОН",
+      "name_lat": "ZHASMIN FAYRITALE BEAUTY",
+      "name_ru": "",
+      "url": "https://papillon.breedarchive.com/animal/view/zhasmin-fayritale-beauty-bcedc929-f09b-403a-b7d7-c08439bc69a6"
+    },
+    {
+      "domain": "show",
+      "id": "256775575",
+      "breed": "ШЕЛТИ",
+      "name_lat": "ARROW OF DANCING QUEEN",
+      "name_ru": "",
+      "url": "https://sheltie.breedarchive.com/animal/view/arrow-of-dancing-queen-dcc97a5d-fa37-4499-bb1b-a168de37a7ef"
+    },
+    {
+      "domain": "show",
+      "id": "1588934042",
+      "breed": "BORZOI - RUSSIAN HUNTING",
+      "name_lat": "BARLEY DE KASSAN ATAKA",
+      "name_ru": "",
+      "url": "https://borzoi.breedarchive.com/animal/view/barley-de-kassan-ataka-41970190-114c-4c8a-9a26-88befde8a8f5"
+    },
+    {
+      "domain": "show",
+      "id": "346143154",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
-      "name_lat": "ГЕРДА",
+      "name_lat": "GERDA",
       "name_ru": "",
       "url": "https://germanshepherd.breedarchive.com/animal/view/gerda-70e039bb-53a9-482b-a764-bf7e3adf158d"
     },
     {
       "domain": "show",
-      "id": "795350067",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
-      "name_lat": "MAL BAGUSHY YUVENTA",
+      "id": "1123551930",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ / GERMAN",
+      "name_lat": "GRETTA",
       "name_ru": "",
-      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/mal-bagushy-yuventa-264d21ea-9988-44ed-b526-449dba5fe8a5"
+      "url": "https://germanshepherd.breedarchive.com/animal/view/gretta-3198a706-0c30-4a85-a33f-dd825892cc9e"
     },
     {
       "domain": "show",
-      "id": "28077879",
-      "breed": "РОТВЕЙЛЕР",
-      "name_lat": "SAMBA IZ DOMA TORRA",
-      "name_ru": "",
-      "url": "https://rottweiler.breedarchive.com/animal/view/samba-iz-doma-torra-826e1e23-5d95-4e09-8995-545aafc85b13"
-    },
-    {
-      "domain": "show",
-      "id": "1207220305",
-      "breed": "континентальный той спаниель",
-      "name_lat": "DOMINO’S FIRE ‘N FLAME ON CLEARLAKE",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/dominos-fire-n-flame-on-clearlake-f52fafff-3020-43db-9595-5da1dc4391fa"
-    },
-    {
-      "domain": "show",
-      "id": "1002053227",
-      "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР / AMERICAN",
-      "name_lat": "WUDNWAY ULANA RUS FOREVA",
-      "name_ru": "",
-      "url": "https://americanhairlessterrier.breedarchive.com/animal/view/wudnway-ulana-rus-foreva-57c8965c-12e7-4f43-ab9f-fd78b5f83682"
-    },
-    {
-      "domain": "show",
-      "id": "600935344",
-      "breed": "SIBERIAN HUSKY",
-      "name_lat": "LUXURY LIFE OBERON",
-      "name_ru": "",
-      "url": "https://siberianhusky.breedarchive.com/animal/view/luxury-life-oberon-ee389639-fb11-4298-93fc-941ac51071be"
-    },
-    {
-      "domain": "show",
-      "id": "1091383733",
-      "breed": "ШЕЛТИ",
-      "name_lat": "SHOW ELVERAS EXCLUSIVE STYLE",
-      "name_ru": "",
-      "url": "https://sheltie.breedarchive.com/animal/view/show-elveras-exclusive-style-70d0b409-f63c-49fe-a174-e649f69eb09c"
-    },
-    {
-      "domain": "show",
-      "id": "687649475",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "name_lat": "INSAIT LIDE",
-      "name_ru": "",
-      "url": "https://siberianhusky.breedarchive.com/animal/view/insait-lide-5c9c34aa-fcd9-4ad9-adb6-225b30ed824c"
-    },
-    {
-      "domain": "show",
-      "id": "4698059",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "name_lat": "STYLE LIFE LENA'S DREAM",
-      "name_ru": "",
-      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/style-life-lenas-dream-fd09767d-d5c6-4af5-9f23-65fe8f647015"
-    },
-    {
-      "domain": "show",
-      "id": "9797859",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
-      "name_lat": "LENSKY PIKACHU",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/lensky-pikachu-67ea1708-16e0-47fc-847a-717539e89091"
-    },
-    {
-      "domain": "show",
-      "id": "699208680",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "name_lat": "USAIN SAINT LEO IZ ZAMKA PRIORA",
-      "name_ru": "",
-      "url": "https://miniaturepinscher.breedarchive.com/animal/view/usain-saint-leo-iz-zamka-priora-e7b13a35-d282-48c7-9a8e-108a9da5a345"
-    },
-    {
-      "domain": "show",
-      "id": "1022764273",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "name_lat": "УЛЬТРА С ГОЛУБОЙ ЗВЕЗДЫ",
-      "name_ru": "",
-      "url": "https://siberianhusky.breedarchive.com/animal/view/ultra-s-goluboy-zvezdy-c52979d6-afa1-495a-912e-4f82b4a8eb0b"
-    },
-    {
-      "domain": "show",
-      "id": "801373380",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
-      "name_lat": "DOM CORGI WILD AFRICA",
-      "name_ru": "",
-      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/dom-corgi-wild-africa-565eecab-0393-4d92-83d3-ceeea86551d3"
-    },
-    {
-      "domain": "show",
-      "id": "1892494910",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "name_lat": "LAIF SPRING MY ONE AND ONLY ( )",
-      "name_ru": "",
-      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/laif-spring-my-one-and-only-9529dfd1-34e5-4dc7-99f2-17250cbb4d24"
-    },
-    {
-      "domain": "show",
-      "id": "1432534283",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "name_lat": "OLGIVAN SHOW ANIMAGUS",
-      "name_ru": "",
-      "url": "https://siberianhusky.breedarchive.com/animal/view/olgivan-show-animagus-cc39272f-7f92-45be-aea5-1fd84f6bcd4c"
-    },
-    {
-      "domain": "show",
-      "id": "1324887841",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ – ПАПИЙОН",
-      "name_lat": "NAT DE FLEUR PANSI",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/nat-de-fleur-pansi-873164d7-945d-4ac9-bb71-efca6938cd8a"
-    },
-    {
-      "domain": "show",
-      "id": "1157792309",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН)",
-      "name_lat": "FLOWER OF LIFE TRINITY SWEET HEART",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/flower-of-life-trinity-sweet-heart-9fe89b0c-bf1d-45c1-8414-1047cfbc9d6b"
-    },
-    {
-      "domain": "show",
-      "id": "1354915391",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "name_lat": "LUXBERRY ORIGINAL PRANKSTER",
-      "name_ru": "",
-      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/luxberry-original-prankster-ee14f97f-fa8f-4934-89f1-14c519507556"
-    },
-    {
-      "domain": "show",
-      "id": "1999165256",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
-      "name_lat": "LUXBERRY EVANGELISTA",
-      "name_ru": "",
-      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/luxberry-evangelista-0e52f3ae-950d-416e-a6aa-b6073a4c6fb6"
-    },
-    {
-      "domain": "show",
-      "id": "1719574356",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
-      "name_lat": "LUXBERRY SHOW OF PERFECTION",
-      "name_ru": "",
-      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/luxberry-show-of-perfection-fa3c72b7-a72b-4472-9168-36d3d8b62fb1"
-    },
-    {
-      "domain": "show",
-      "id": "1621422170",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
-      "name_lat": "GERAN’S I AM PEACE MAN",
-      "name_ru": "",
-      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/gerans-i-am-peace-man-3123f114-58fc-4196-9ef0-b31e990601e1"
-    },
-    {
-      "domain": "show",
-      "id": "545963134",
-      "breed": "WELSH CORGI CARDIGAN",
-      "name_lat": "KEKSBAND HI SALLY CARRERA",
-      "name_ru": "",
-      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/keksband-hi-sally-carrera-1bab5ea7-4d5a-447a-b57a-f6e383bd9120"
-    },
-    {
-      "domain": "show",
-      "id": "183594374",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ – ПАПИЙОН",
-      "name_lat": "LILIYAN’S YAMIRA MON AMI",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/liliyans-yamira-mon-ami-d79037cc-c4d0-49c2-bb04-35697629174d"
-    },
-    {
-      "domain": "show",
-      "id": "342951056",
-      "breed": "WELSH CORGI PEMBROKE",
-      "name_lat": "ULTRA MAGIC IZ IMPERII ADAMANT",
-      "name_ru": "",
-      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/ultra-magic-iz-imperii-adamant-bd0e25c0-e998-430e-8c1d-c9e5f52d0ac5"
-    },
-    {
-      "domain": "show",
-      "id": "915727764",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "name_lat": "AMULETTE STAR SNOW WINNER",
-      "name_ru": "",
-      "url": "https://siberianhusky.breedarchive.com/animal/view/amulette-star-snow-winner-b458f545-4865-4ec5-9555-4e4c3ba39c0a"
-    },
-    {
-      "domain": "show",
-      "id": "556096956",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "name_lat": "OLGIVAN SHOW JUDE",
-      "name_ru": "",
-      "url": "https://siberianhusky.breedarchive.com/animal/view/olgivan-show-jude-e968587f-fed9-4d9f-9daa-e222892430e7"
-    },
-    {
-      "domain": "show",
-      "id": "1556775380",
-      "breed": "КАВАЛЕР КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
-      "name_lat": "SNEZHNOE TANGO FASHION STYLE",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/snezhnoe-tango-fashion-style-f9157902-c9c3-49f6-96ed-70f01ef8b379"
-    },
-    {
-      "domain": "show",
-      "id": "1809883869",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "name_lat": "ALEANT'TAR RIVER SONG",
-      "name_ru": "АЛЕАНТ'ТАР РИВЕР СОНГ",
-      "url": "https://siberianhusky.breedarchive.com/animal/view/aleanttar-river-song-89486f4c-acd9-405d-af06-20af3bf98e6a"
-    },
-    {
-      "domain": "show",
-      "id": "1850329584",
-      "breed": "ШЕЛТИ",
-      "name_lat": "SIRIUSGATE ZIMNEE CHUDO",
-      "name_ru": "",
-      "url": "https://sheltie.breedarchive.com/animal/view/siriusgate-zimnee-chudo-4e5967a8-d174-428e-a093-c4abeca0b0fc"
-    },
-    {
-      "domain": "show",
-      "id": "361570830",
+      "id": "1040796865",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "name_lat": "BAYADERKA OT NEVSKOGO DUETA",
+      "name_lat": "CHRISTIAN DIOR OT NEVSKOGO DUETA",
       "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/bayaderka-ot-nevskogo-dueta-a7cc3d94-e960-40a7-8e97-b76c6b7cf5af"
+      "url": "https://papillon.breedarchive.com/animal/view/christian-dior-ot-nevskogo-dueta-cf7764ee-1147-45ff-86ff-a353ffbd5a89"
     },
     {
       "domain": "show",
-      "id": "37166514",
+      "id": "940308172",
       "breed": "СИБИРСКИЙ ХАСКИ",
-      "name_lat": "SEMARGL YAN KUPALA",
+      "name_lat": "ICE AND FIRE OF SILVER WAY",
       "name_ru": "",
-      "url": "https://siberianhusky.breedarchive.com/animal/view/semargl-yan-kupala-0fff841f-a3b2-41e2-9e1e-fadd18f55f48"
+      "url": "https://siberianhusky.breedarchive.com/animal/view/ice-and-fire-of-silver-way-79c4fc83-3f15-46b0-b661-5766837b0011"
     },
     {
       "domain": "show",
-      "id": "1019747786",
-      "breed": "ШЕЛТИ / SHETLAND",
-      "name_lat": "АЛЬТАИР ИЗ СТАРОЙ ШУИ",
+      "id": "26336717",
+      "breed": "BORZOI - RUSSIAN HUNTING",
+      "name_lat": "KIPREY IZ SELA TSAREVO",
       "name_ru": "",
-      "url": "https://sheltie.breedarchive.com/animal/view/altair-iz-staroy-shui-655b734a-f8c4-4944-9214-499038048de0"
+      "url": "https://borzoi.breedarchive.com/animal/view/kiprey-iz-sela-tsarevo-efaea8cb-67c1-4f65-a459-74664b65b485"
     },
     {
       "domain": "show",
-      "id": "1195185758",
-      "breed": "СОБАКА КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
+      "id": "1851414223",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "name_lat": "AMAROK OF MIRAEL LIEN LEILANI",
+      "name_ru": "",
+      "url": "https://siberianhusky.breedarchive.com/animal/view/amarok-of-mirael-lien-leilani-f01dbd93-4aa6-4f40-938f-3a45642a8772"
+    },
+    {
+      "domain": "show",
+      "id": "833956077",
+      "breed": "ЯПОНСКИЙ ХИН",
+      "name_lat": "MONACO DOBRY ROK",
+      "name_ru": "",
+      "url": "https://japanesechin.breedarchive.com/animal/view/monaco-dobry-rok-4402c2f7-1ef0-4f62-8f1c-1a18b1377a60"
+    },
+    {
+      "domain": "show",
+      "id": "423138288",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "name_lat": "GOLDWIND YUSTA",
+      "name_ru": "",
+      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/goldwind-yusta-3bf7456b-5957-416f-bce9-6bb8954044ba"
+    },
+    {
+      "domain": "show",
+      "id": "886375415",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "name_lat": "SPICY FLAVOR NOVELLA",
+      "name_ru": "",
+      "url": "https://papillon.breedarchive.com/animal/view/spicy-flavor-novella-c578cb21-f635-4d76-8217-e0e414b4f4e9"
+    },
+    {
+      "domain": "show",
+      "id": "1478151939",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА, МАЛИНУА",
+      "name_lat": "YAROSLAV MUDRYI",
+      "name_ru": "",
+      "url": "https://belgianshepherd.breedarchive.com/animal/view/yaroslav-mudryi-fc024c99-1801-43a6-84b0-a8d033a49276"
+    },
+    {
+      "domain": "show",
+      "id": "33873413",
+      "breed": "ШЕЛТИ",
+      "name_lat": "SHINING CHARM WALTER ELEMENT",
+      "name_ru": "",
+      "url": "https://sheltie.breedarchive.com/animal/view/shining-charm-walter-element-1a67ccd7-4e30-47db-8ec6-500b7d6a471d"
+    },
+    {
+      "domain": "show",
+      "id": "1222815501",
+      "breed": "ШЕЛТИ",
+      "name_lat": "STASYLINE DOMINICA",
+      "name_ru": "",
+      "url": "https://sheltie.breedarchive.com/animal/view/stasyline-dominica-9f0acafa-ff80-4574-91dc-56b0a29e9b1f"
+    },
+    {
+      "domain": "show",
+      "id": "1594967568",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "name_lat": "GOL*D VS EFFECT",
+      "name_ru": "",
+      "url": "https://tibetanmastiff.breedarchive.com/animal/view/gold-vs-effect-5133cf05-b04a-4bb6-9d84-5a4728f7bd42"
+    },
+    {
+      "domain": "show",
+      "id": "130322207",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "name_lat": "MAJOR POINT BLUES AND ROYALS",
+      "name_ru": "",
+      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/major-point-blues-and-royals-f65efdfa-b16a-491a-acb3-a8325d140e80"
+    },
+    {
+      "domain": "show",
+      "id": "607003702",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "name_lat": "NIMRAS EYTEL SHINDJU",
+      "name_ru": "",
+      "url": "https://tibetanmastiff.breedarchive.com/animal/view/nimras-eytel-shindju-5a5be036-604b-4bcd-ba38-b6ae39a490a1"
+    },
+    {
+      "domain": "show",
+      "id": "136922936",
+      "breed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "name_lat": "LINCOLN OT NEVSKOGO HOBBITA",
+      "name_ru": "",
+      "url": "https://kingcharlesspaniel.breedarchive.com/animal/view/lincoln-ot-nevskogo-hobbita-b2258623-ca9e-40b8-87ee-eb716353f3df"
+    },
+    {
+      "domain": "show",
+      "id": "104610621",
+      "breed": "RUSSIAN HUNTING",
+      "name_lat": "BORZIE-SENAVIAN AZARTA",
+      "name_ru": "",
+      "url": "https://borzoi.breedarchive.com/animal/view/borzie-senavian-azarta-197dfb9b-cdb9-4eb4-9e24-c4cd234d2c44"
+    },
+    {
+      "domain": "show",
+      "id": "1368074053",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "name_lat": "TEMNIY SHOKOLAD OT NEVSKOGO DUETA",
+      "name_ru": "",
+      "url": "https://papillon.breedarchive.com/animal/view/temniy-shokolad-ot-nevskogo-dueta-5a169389-3747-4399-9ff9-487a8b824309"
+    },
+    {
+      "domain": "show",
+      "id": "395269960",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "name_lat": "GOLDWIND MUNA KIMI",
+      "name_ru": "",
+      "url": "https://siberianhusky.breedarchive.com/animal/view/goldwind-muna-kimi-40aae67a-0683-4e1b-b773-3b88d128d62f"
+    },
+    {
+      "domain": "show",
+      "id": "910332260",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "name_lat": "WAVES CARRY LA WANDA GAUCHO",
+      "name_ru": "",
+      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/waves-carry-la-wanda-gaucho-827026db-e934-40a0-92b4-d8f650a992a2"
+    },
+    {
+      "domain": "show",
+      "id": "233780586",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "name_lat": "SILENZIO'S KENNY",
+      "name_ru": "",
+      "url": "https://papillon.breedarchive.com/animal/view/silenzios-kenny-afcd814f-550c-4ebb-ac0a-acd8d59982b8"
+    },
+    {
+      "domain": "show",
+      "id": "335103098",
+      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
+      "name_lat": "SEVENTH MIRACLE VADERA'S TEAM",
+      "name_ru": "",
+      "url": "https://nsdtr.breedarchive.com/animal/view/seventh-miracle-vaderas-team-6bf981bf-55af-4820-b45c-57aeb7a5349e"
+    },
+    {
+      "domain": "show",
+      "id": "289881478",
+      "breed": "ШЕЛТИ",
+      "name_lat": "BARHATNIJ SEZON EMILY DITMAR",
+      "name_ru": "",
+      "url": "https://sheltie.breedarchive.com/animal/view/barhatnij-sezon-emily-ditmar-13b3a6ce-1fbc-4e87-b2dd-56f1f37b35cd"
+    },
+    {
+      "domain": "show",
+      "id": "866499720",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "name_lat": "WAGGERLAND ZIG ZAG",
+      "name_ru": "",
+      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/waggerland-zig-zag-5331ec64-9ee3-4e5f-b077-e7461aed264e"
+    },
+    {
+      "domain": "show",
+      "id": "197793432",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "name_lat": "MONICA D'ORO",
       "name_ru": "",
       "url": "https://papillon.breedarchive.com/animal/view/monica-doro-35f95ba1-d8f8-44b3-953c-d27d7b182a91"
     },
     {
       "domain": "show",
-      "id": "1953145213",
-      "breed": "ТИБЕТСКИЙ МАСТИФ",
-      "name_lat": "AMATO DIO GERA",
-      "name_ru": "",
-      "url": "https://tibetanmastiff.breedarchive.com/animal/view/amato-dio-gera-c51d062c-8ff5-4ac6-9d88-a2b8f8904084"
-    },
-    {
-      "domain": "show",
-      "id": "1391105939",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "name_lat": "НОЛЬДИ",
-      "name_ru": "",
-      "url": "https://siberianhusky.breedarchive.com/animal/view/noldi-8c9dd7d6-6be6-4c41-bbbf-2e35f1c22dd7"
-    },
-    {
-      "domain": "show",
-      "id": "14155488",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН",
-      "name_lat": "VI AMORE MIROSLAVA",
-      "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/vi-amore-miroslava-3d23f5c5-0879-4476-9750-b84aa2658056"
-    },
-    {
-      "domain": "show",
-      "id": "1156475621",
+      "id": "833899931",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "name_lat": "MON MAGNIFIQUE REBEKKA REINBOW",
+      "name_lat": "DARFIL URBAN CHIC",
       "name_ru": "",
-      "url": "https://papillon.breedarchive.com/animal/view/mon-magnifique-rebekka-reinbow-8d49dce1-6545-4221-8914-4f3b522dcb27"
+      "url": "https://papillon.breedarchive.com/animal/view/darfil-urban-chic-7774edc2-c401-43c7-97a7-7d141c641dc4"
     },
     {
       "domain": "show",
-      "id": "141174098",
-      "breed": "ШЕЛТИ",
-      "name_lat": "STASYLINE KISS FROM DENNIS",
-      "name_ru": "",
-      "url": "https://sheltie.breedarchive.com/animal/view/stasyline-kiss-from-dennis-33aead17-c5e1-45a2-8899-c3df359bc011"
-    },
-    {
-      "domain": "show",
-      "id": "980704143",
+      "id": "1843206299",
       "breed": "КАРДИГАН / WELSH",
-      "name_lat": "VISHENKA FOR DOM CORGI OT SERYH PSOV",
+      "name_lat": "DOM CORGI LIMITED EDITION",
       "name_ru": "",
-      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/vishenka-for-dom-corgi-ot-seryh-psov-44fc5ca6-9676-4ef8-80cd-761b04e2c820"
+      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/dom-corgi-limited-edition-42832383-78ad-4dd2-9f6e-c50802034a64"
+    },
+    {
+      "domain": "show",
+      "id": "189225119",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "name_lat": "MIRUVOR GRACEFUL LYNX",
+      "name_ru": "",
+      "url": "https://siberianhusky.breedarchive.com/animal/view/miruvor-graceful-lynx-1252090c-b9e0-4348-8199-26e3660ab105"
+    },
+    {
+      "domain": "show",
+      "id": "38110880",
+      "breed": "БОСТОН ТЕРЬЕР",
+      "name_lat": "PEACE AND LOVE DU GRAND FRESNOY",
+      "name_ru": "",
+      "url": "https://bostonterrier.breedarchive.com/animal/view/peace-and-love-du-grand-fresnoy-a3cd82b0-0472-4382-ae41-ebff50776815"
+    },
+    {
+      "domain": "show",
+      "id": "1119530666",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "name_lat": "АЛЬБА",
+      "name_ru": "",
+      "url": "https://tibetanmastiff.breedarchive.com/animal/view/alba-836e1a4f-3fe0-4237-8efb-b154948cfd67"
+    },
+    {
+      "domain": "show",
+      "id": "1950413003",
+      "breed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "name_lat": "MARGARITA OT NEVSKOGO HOBBITA",
+      "name_ru": "",
+      "url": "https://kingcharlesspaniel.breedarchive.com/animal/view/margarita-ot-nevskogo-hobbita-09449f74-7b81-48cf-bc5e-4c4b0cb77927"
+    },
+    {
+      "domain": "show",
+      "id": "347109068",
+      "breed": "ШЕЛТИ",
+      "name_lat": "ADAMANT BOHEMIA CLASSIC",
+      "name_ru": "",
+      "url": "https://sheltie.breedarchive.com/animal/view/adamant-bohemia-classic-a5436c9d-467a-4cd3-a545-cae6ae6b754e"
+    },
+    {
+      "domain": "show",
+      "id": "258187744",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА, МАЛИНУА",
+      "name_lat": "YAROSLAV MUDRYI (ЯРОСЛАВ МУДРЫЙ)",
+      "name_ru": "",
+      "url": "https://belgianshepherd.breedarchive.com/animal/view/yaroslav-mudryi-fc024c99-1801-43a6-84b0-a8d033a49276"
+    },
+    {
+      "domain": "show",
+      "id": "478427618",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
+      "name_lat": "PERFECT STORY APPLAUSE TO ME",
+      "name_ru": "",
+      "url": "https://papillon.breedarchive.com/animal/view/perfect-story-applause-to-me-23a9d8f8-2d14-4593-8536-6f3d0b7aeed8"
+    },
+    {
+      "domain": "show",
+      "id": "5775331",
+      "breed": "БОРДЕР КОЛЛИ",
+      "name_lat": "SEVEN SEAS I.-C.RAVEN DOUBLE DREAM",
+      "name_ru": "",
+      "url": "https://bordercollie.breedarchive.com/animal/view/seven-seas-i-c-raven-double-dream-ebb2683d-3e57-4b28-a7a2-a381003b2fd8"
+    },
+    {
+      "domain": "show",
+      "id": "1605018103",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "name_lat": "T-LESARK ADAM",
+      "name_ru": "Т-ЛЕСАРК АДАМ",
+      "url": "https://siberianhusky.breedarchive.com/animal/view/t-lesark-adam-cce3f38d-52a8-4c1d-aa8f-c45b5c83a29b"
+    },
+    {
+      "domain": "show",
+      "id": "1030213117",
+      "breed": "БОСТОН ТЕРЬЕР",
+      "name_lat": "LJUBAVA NASTBOR BAKS",
+      "name_ru": "",
+      "url": "https://bostonterrier.breedarchive.com/animal/view/ljubava-nastbor-baks-5695b0d3-9722-4dba-9464-356ca1e08dbe"
+    },
+    {
+      "domain": "show",
+      "id": "1054235906",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН) ПАПИЙОН",
+      "name_lat": "GRILYAZH NUAR OT NEVSKOGO DUETA",
+      "name_ru": "",
+      "url": "https://papillon.breedarchive.com/animal/view/grilyazh-nuar-ot-nevskogo-dueta-9d84d668-1192-40fb-81f2-cc4638715e7a"
+    },
+    {
+      "domain": "show",
+      "id": "1826665506",
+      "breed": "ПСОВАЯ БОРЗАЯ",
+      "name_lat": "ПЕРМЬ ВЕЛИКАЯ АДРЕНАЛИН",
+      "name_ru": "Пермь Великая Адреналин",
+      "url": "https://borzoi.breedarchive.com/animal/view/perm-velikaya-adrenalin-2bc97464-a307-4d82-b25c-846effde260a"
+    },
+    {
+      "domain": "show",
+      "id": "1654268217",
+      "breed": "BORZOI - RUSSIAN HUNTING",
+      "name_lat": "ЗОЛОТОЙ ВЕК БАГРО",
+      "name_ru": "ЗОЛОТОЙ ВЕК БАГРО",
+      "url": "https://borzoi.breedarchive.com/animal/view/zolotoy-vek-bagro-2028a3d4-c5ec-46bc-bd8b-d45281191167"
+    },
+    {
+      "domain": "show",
+      "id": "533988929",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "name_lat": "FIRST LADY OF OUR GALAXY",
+      "name_ru": "",
+      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/first-lady-of-our-galaxy-d6fbef8a-a569-40a7-8c44-5ba7461f67b5"
+    },
+    {
+      "domain": "show",
+      "id": "775705213",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "name_lat": "GOLDWIND ULTRAMARIN",
+      "name_ru": "",
+      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/goldwind-ultramarin-e908fe8c-67c0-41f7-afb2-5f3477a7389b"
+    },
+    {
+      "domain": "show",
+      "id": "1629191034",
+      "breed": "ШЕЛТИ",
+      "name_lat": "GALAXY MASTER BOHEMIA CLASSIC",
+      "name_ru": "",
+      "url": "https://sheltie.breedarchive.com/animal/view/galaxy-master-bohemia-classic-29042641-5b20-4934-8ea2-3fdaaa080bd6"
+    },
+    {
+      "domain": "show",
+      "id": "256283595",
+      "breed": "ШЕЛТИ",
+      "name_lat": "АЛЕАНДР ЛАСТОЧКА",
+      "name_ru": "",
+      "url": "https://sheltie.breedarchive.com/animal/view/aleandr-lastochka-9afceea4-fb5d-4a92-97fc-490d3e25c089"
+    },
+    {
+      "domain": "show",
+      "id": "461212368",
+      "breed": "КАВАЛЕР КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
+      "name_lat": "POYUSCIY VETER BET",
+      "name_ru": "",
+      "url": "https://papillon.breedarchive.com/animal/view/poyusciy-veter-bet-bf4be400-4cba-443f-97fc-10ca4ed5f9f0"
+    },
+    {
+      "domain": "show",
+      "id": "309977634",
+      "breed": "ШЕЛТИ",
+      "name_lat": "LAREN'S HOME BIG BEST",
+      "name_ru": "",
+      "url": "https://sheltie.breedarchive.com/animal/view/larens-home-big-best-86c0c1cc-014a-4d40-a720-25a5207975f3"
+    },
+    {
+      "domain": "show",
+      "id": "85154851",
+      "breed": "ШЕЛТИ",
+      "name_lat": "SHOW ELVERAS ZHELANA",
+      "name_ru": "",
+      "url": "https://sheltie.breedarchive.com/animal/view/show-elveras-zhelana-690c71bf-adef-4753-b0f1-848a79799866"
+    },
+    {
+      "domain": "show",
+      "id": "631843118",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Короткошерстная",
+      "name_lat": "LJUSTIKHOF NAGAYNA",
+      "name_ru": "",
+      "url": "https://germanshepherd.breedarchive.com/animal/view/ljustikhof-nagayna-974a992b-219e-4e7c-a581-4568f97d6e2a"
+    },
+    {
+      "domain": "show",
+      "id": "1837229623",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "name_lat": "BERYLLOS YOU LOVE MISTYCOR",
+      "name_ru": "",
+      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/beryllos-you-love-mistycor-5895d882-9c59-444c-8059-7bd919598869"
+    },
+    {
+      "domain": "show",
+      "id": "1266440764",
+      "breed": "РОТВЕЙЛЕР",
+      "name_lat": "FACE IZ TVERSKOGO DOMA",
+      "name_ru": "",
+      "url": "https://rottweiler.breedarchive.com/animal/view/face-iz-tverskogo-doma-1b5e9f38-6ee7-450c-8497-879a1745a776"
+    },
+    {
+      "domain": "show",
+      "id": "233474908",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА – МАЛИНУА",
+      "name_lat": "MALINUTS ZATEYA",
+      "name_ru": "",
+      "url": "https://belgianshepherd.breedarchive.com/animal/view/malinuts-zateya-d2218e05-2b04-45d9-928d-bf9d4bb3282e"
+    },
+    {
+      "domain": "show",
+      "id": "1829756023",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "name_lat": "DRAGONJOY UNDER THE CHERRY MOON",
+      "name_ru": "",
+      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/dragonjoy-under-the-cherry-moon-6a4cf87c-b43d-4f9b-9322-3a5c7ee01ddf"
+    },
+    {
+      "domain": "show",
+      "id": "212143512",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН)",
+      "name_lat": "KASSANDRA",
+      "name_ru": "",
+      "url": "https://papillon.breedarchive.com/animal/view/kassandra-27d569d5-6bad-4834-ad01-bf338b5e13fd"
+    },
+    {
+      "domain": "show",
+      "id": "1857464790",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ -",
+      "name_lat": "ZAGADKA NOYABRYA OT NEVSKOGO DUETA",
+      "name_ru": "",
+      "url": "https://papillon.breedarchive.com/animal/view/zagadka-noyabrya-ot-nevskogo-dueta-253d578d-d13a-4aaf-acde-be1006e21e65"
+    },
+    {
+      "domain": "show",
+      "id": "1236001495",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
+      "name_lat": "LENSKYI ARAGON",
+      "name_ru": "",
+      "url": "https://papillon.breedarchive.com/animal/view/lenskyi-aragon-1d869651-24c2-4a84-86e4-ec8bd257ba5d"
+    },
+    {
+      "domain": "show",
+      "id": "888787681",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "name_lat": "STYLE LIFE TIGERHEART",
+      "name_ru": "",
+      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/style-life-tigerheart-4d17aa43-9cc6-415e-a4c5-662a39d588dc"
+    },
+    {
+      "domain": "show",
+      "id": "1775052008",
+      "breed": "КАРДИГАН / WELSH",
+      "name_lat": "AETHWY UNIVERSAL MIND",
+      "name_ru": "",
+      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/aethwy-universal-mind-da2bbf92-711f-468a-beb2-d738f0774a48"
+    },
+    {
+      "domain": "show",
+      "id": "613501410",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "name_lat": "LISJA STAJA ASTI MARTINI",
+      "name_ru": "",
+      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/lisja-staja-asti-martini-181e681d-0150-4ac9-920a-7369a08b9ecf"
+    },
+    {
+      "domain": "show",
+      "id": "480397668",
+      "breed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ / KING",
+      "name_lat": "RUSSISCH GEIST GENTLY KISS",
+      "name_ru": "",
+      "url": "https://kingcharlesspaniel.breedarchive.com/animal/view/russisch-geist-gently-kiss-b7f9c780-86bf-4794-9645-d27840933933"
+    },
+    {
+      "domain": "show",
+      "id": "643895583",
+      "breed": "Вельш корги кардиган",
+      "name_lat": "Pax Tecum Desire Loiv",
+      "name_ru": "",
+      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/pax-tecum-desire-loiv-a0c42b87-1663-4620-bd61-63bab459cc64"
+    },
+    {
+      "domain": "show",
+      "id": "102521901",
+      "breed": "КАРДИГАН",
+      "name_lat": "GLASSHOUSE JUST WHAT I NEEDED",
+      "name_ru": "",
+      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/glasshouse-just-what-i-needed-fc90e6f1-b4ef-4eb3-b058-4772821a7069"
+    },
+    {
+      "domain": "show",
+      "id": "358859061",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "name_lat": "AIRYSHIRE BONNY BELLE AT EMEISHANQUIN",
+      "name_ru": "",
+      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/airyshire-bonny-belle-at-emeishanquin-b7d589a7-2f02-4570-ba6e-e74429eb74c5"
+    },
+    {
+      "domain": "show",
+      "id": "1438089791",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "name_lat": "KARTEF NOEL VILLEN",
+      "name_ru": "",
+      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/kartef-noel-villen-956ab602-52b5-4409-8d3e-48e67d7c64f8"
+    },
+    {
+      "domain": "show",
+      "id": "1781850689",
+      "breed": "ШЕЛТИ / SHETLAND",
+      "name_lat": "SHOW ELVERAS DOMINIC",
+      "name_ru": "",
+      "url": "https://sheltie.breedarchive.com/animal/view/show-elveras-dominic-b9d1dc5d-4b01-4227-bcec-37dafbbf1b33"
+    },
+    {
+      "domain": "show",
+      "id": "1579395146",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "name_lat": "INTER WIN RUSSIAN DOLL",
+      "name_ru": "",
+      "url": "https://papillon.breedarchive.com/animal/view/inter-win-russian-doll-9b259c2b-2a29-4a4c-8b84-e14877cbd35b"
+    },
+    {
+      "domain": "show",
+      "id": "1784730962",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "name_lat": "ZONENVELT REBBEKA DZHENIS",
+      "name_ru": "",
+      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/zonenvelt-rebbeka-dzhenis-87cd64a2-4233-4518-b158-b288ba5e856a"
+    },
+    {
+      "domain": "show",
+      "id": "252204122",
+      "breed": "ШЕЛТИ / SHETLAND",
+      "name_lat": "BALLADA O GRAZEL IZ ANGARSKOI JEMCHUJINY",
+      "name_ru": "",
+      "url": "https://sheltie.breedarchive.com/animal/view/ballada-o-grazel-iz-angarskoi-jemchujiny-f4165045-a3b6-43db-ac97-bfc015c88d19"
+    },
+    {
+      "domain": "show",
+      "id": "364784747",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "name_lat": "ALFA",
+      "name_ru": "",
+      "url": "https://siberianhusky.breedarchive.com/animal/view/alfa-e65c3d12-7741-40f7-91b5-c6cbae72047c"
+    },
+    {
+      "domain": "show",
+      "id": "1570889836",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "name_lat": "SAPPHIRE FEHU ABSINTHE FAIRY",
+      "name_ru": "",
+      "url": "https://siberianhusky.breedarchive.com/animal/view/sapphire-fehu-absinthe-fairy-fdb34b77-4e61-443f-be39-f5ddba1a2691"
+    },
+    {
+      "domain": "show",
+      "id": "1000811385",
+      "breed": "ШЕЛТИ",
+      "name_lat": "SHELMERT ZOLOTKO",
+      "name_ru": "",
+      "url": "https://sheltie.breedarchive.com/animal/view/shelmert-zolotko-b8cb2f31-b0b5-4783-aeda-0155cbac31ac"
+    },
+    {
+      "domain": "show",
+      "id": "663705727",
+      "breed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "name_lat": "LACKY KINGS DAISY",
+      "name_ru": "",
+      "url": "https://kingcharlesspaniel.breedarchive.com/animal/view/lacky-kings-daisy-eac45a74-994f-42fc-9fcd-4ca79fb8a249"
+    },
+    {
+      "domain": "show",
+      "id": "768607387",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "name_lat": "БУСОЛЬ",
+      "name_ru": "",
+      "url": "https://siberianhusky.breedarchive.com/animal/view/busol-8a76caea-828d-40f9-82c5-605ca3571c55"
+    },
+    {
+      "domain": "show",
+      "id": "816197528",
+      "breed": "ПСОВАЯ БОРЗАЯ",
+      "name_lat": "SHARADA IZ RAZDOLIA",
+      "name_ru": "",
+      "url": "https://borzoi.breedarchive.com/animal/view/sharada-iz-razdolia-64fa36ff-d3a6-4e1b-8c40-44addcc1f0ef"
+    },
+    {
+      "domain": "show",
+      "id": "182584474",
+      "breed": "RUSSIAN HUNTING",
+      "name_lat": "HOLLI BOB YANTAR'",
+      "name_ru": "",
+      "url": "https://borzoi.breedarchive.com/animal/view/holli-bob-yantar-93c6f8f7-21fb-4f4d-b131-136ffaf5050e"
+    },
+    {
+      "domain": "show",
+      "id": "28512210",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "name_lat": "FEST HAUER ED- YAN",
+      "name_ru": "",
+      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/fest-hauer-ed-yan-dc8caaf6-d284-4fe6-af83-29fdee5d5ce0"
+    },
+    {
+      "domain": "show",
+      "id": "817198555",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
+      "name_lat": "VAENGA ESENIYA ONUA",
+      "name_ru": "",
+      "url": "https://papillon.breedarchive.com/animal/view/vaenga-eseniya-onua-5b6a4c08-a9a7-4f6f-9900-4ffb10432529"
+    },
+    {
+      "domain": "show",
+      "id": "804453339",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "name_lat": "MAJOR POINT XMRSX",
+      "name_ru": "",
+      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/major-point-x-mrsx-7766265e-8a45-4959-9ff3-9fdb29775bc6"
+    },
+    {
+      "domain": "show",
+      "id": "1471508700",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН)",
+      "name_lat": "YARKAYA BABOCHKA ORFEY",
+      "name_ru": "",
+      "url": "https://papillon.breedarchive.com/animal/view/yarkaya-babochka-orfey-5636fc7d-7b6c-4abd-9439-9bcb323ae795"
+    },
+    {
+      "domain": "show",
+      "id": "1301195762",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "name_lat": "POYUSCIY VETER ELESSA",
+      "name_ru": "",
+      "url": "https://papillon.breedarchive.com/animal/view/poyusciy-veter-elessa-ba59c40c-2921-4577-9203-6dc42dd6fb1b"
+    },
+    {
+      "domain": "show",
+      "id": "1085048097",
+      "breed": "WELSH CORGI CARDIGAN",
+      "name_lat": "FELANGRY NEFERTITI",
+      "name_ru": "",
+      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/felangry-nefertiti-1d7e170f-bb00-437f-a647-80c657a40ec1"
+    },
+    {
+      "domain": "show",
+      "id": "392450602",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
+      "name_lat": "OLVISTAR SNOW WHITE",
+      "name_ru": "",
+      "url": "https://papillon.breedarchive.com/animal/view/olvistar-snow-white-d3590a09-d18e-47f5-b099-3524079914b5"
+    },
+    {
+      "domain": "show",
+      "id": "1922116916",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
+      "name_lat": "SEMICVETIK HARMONY FOR ALL",
+      "name_ru": "",
+      "url": "https://papillon.breedarchive.com/animal/view/semicvetik-harmony-for-all-c2388481-e846-4078-b446-2ec185f8d459"
+    },
+    {
+      "domain": "show",
+      "id": "1070689641",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "name_lat": "КОРОЛЕВА МАРГО ИЗ ТУЛЬСКОЙ ГУБЕРНИИ",
+      "name_ru": "КОРОЛЕВА МАРГО ИЗ ТУЛЬСКОЙ ГУБЕРНИИ",
+      "url": "https://papillon.breedarchive.com/animal/view/koroleva-margo-iz-tulskoy-gubernii-941e3bed-3bae-43b5-91a0-8d00d47060d0"
+    },
+    {
+      "domain": "show",
+      "id": "1392160676",
+      "breed": "ШЕЛТИ",
+      "name_lat": "HARWISH ICE QUEEN",
+      "name_ru": "",
+      "url": "https://sheltie.breedarchive.com/animal/view/harwish-ice-queen-4a77d0d8-759f-4d8a-8e24-88658025dc9e"
+    },
+    {
+      "domain": "show",
+      "id": "982160302",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
+      "name_lat": "RAISING BREEDS BEST IN SHOW",
+      "name_ru": "",
+      "url": "https://papillon.breedarchive.com/animal/view/raising-breeds-best-in-show-8569b178-4395-49ed-9f21-4a97ddff6ad7"
+    },
+    {
+      "domain": "show",
+      "id": "1314713779",
+      "breed": "ПСОВАЯ БОРЗАЯ",
+      "name_lat": "MARTA IZ RAZDOLIA",
+      "name_ru": "",
+      "url": "https://borzoi.breedarchive.com/animal/view/marta-iz-razdolia-6443058f-205c-4b85-8b7e-bfd6a69f980f"
+    },
+    {
+      "domain": "show",
+      "id": "1452787405",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "name_lat": "FAVORIT SIBIRI BE MY ANGEL",
+      "name_ru": "",
+      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/favorit-sibiri-be-my-angel-68cbc43b-2006-46ce-9289-b094e9cf6a60"
+    },
+    {
+      "domain": "show",
+      "id": "1925800184",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "name_lat": "AKSY OMA IMPOSSIBLE IS POSSIBLE",
+      "name_ru": "",
+      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/aksy-oma-impossible-is-possible-707ed3c6-9a6f-4867-96ff-44d0fcf9eba1"
+    },
+    {
+      "domain": "show",
+      "id": "269853185",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ - ПАПИЙОН",
+      "name_lat": "PERFECT STORY HONEY BEE",
+      "name_ru": "",
+      "url": "https://papillon.breedarchive.com/animal/view/perfect-story-honey-bee-6b7b58bd-d755-435c-9494-f6aaddc2abd1"
+    },
+    {
+      "domain": "show",
+      "id": "1034274817",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "name_lat": "SPRING SHOW ZEALOUS KISS DIOR",
+      "name_ru": "",
+      "url": "https://papillon.breedarchive.com/animal/view/spring-show-zealous-kiss-dior-2988f5d0-ab8a-4831-853f-130dc2a55777"
+    },
+    {
+      "domain": "show",
+      "id": "764028930",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "name_lat": "КОНТИНЕНТОВ ANGEL TIBETA ZVEZDA",
+      "name_ru": "",
+      "url": "https://tibetanmastiff.breedarchive.com/animal/view/angel-tibeta-zvezda-4ef0f6c9-cda4-4ba5-994b-e5ed287eba72"
+    },
+    {
+      "domain": "show",
+      "id": "1112619778",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "name_lat": "LUXBERRY INDEPENDENT GIRL",
+      "name_ru": "",
+      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/luxberry-independent-girl-d5ec3c4f-5ece-4c25-8df3-b2490e342c6e"
+    },
+    {
+      "domain": "show",
+      "id": "1870864386",
+      "breed": "SIBERIAN HUSKY",
+      "name_lat": "MOON ECLIPSE ANTARES",
+      "name_ru": "",
+      "url": "https://siberianhusky.breedarchive.com/animal/view/moon-eclipse-antares-fa19341e-8ae9-4714-8916-80d4252f9861"
+    },
+    {
+      "domain": "show",
+      "id": "1356727301",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "name_lat": "FELANGRY LODGI BOOMER",
+      "name_ru": "",
+      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/felangry-lodgi-boomer-5927fb94-9e2e-49ac-9294-78ca10cca794"
+    },
+    {
+      "domain": "show",
+      "id": "517154822",
+      "breed": "КИНГ ФАЛЕН) ПАПИЙОН",
+      "name_lat": "BOGEMA PRESENT'S DAVE BRIGHT SUNSHINE",
+      "name_ru": "",
+      "url": "https://papillon.breedarchive.com/animal/view/bogema-presents-dave-bright-sunshine-9eb672b9-5ea0-4c50-9e37-cf60fff899c8"
+    },
+    {
+      "domain": "show",
+      "id": "1039453447",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "name_lat": "DOM CORGI WINNING DANCE",
+      "name_ru": "",
+      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/dom-corgi-winning-dance-bbedd415-5527-4229-9d34-7c3649e553e7"
+    },
+    {
+      "domain": "show",
+      "id": "1437228040",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК / WELSH CORGI",
+      "name_lat": "AIRYSHIRE BRIGHT SIDE OF THE SUN",
+      "name_ru": "",
+      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/airyshire-bright-side-of-the-sun-23095fac-bd51-4968-a7e2-2e6a80c22445"
+    },
+    {
+      "domain": "show",
+      "id": "1921935883",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "name_lat": "LILIYAN S ZANY NEIL MORRIS",
+      "name_ru": "",
+      "url": "https://papillon.breedarchive.com/animal/view/liliyans-zany-neil-morris-e056e0e6-b023-4e47-9457-7926a35e65ef"
+    },
+    {
+      "domain": "show",
+      "id": "200417804",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "name_lat": "WALLFUGH I WANT IT ALL",
+      "name_ru": "",
+      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/wallfugh-i-want-it-all-c8b81687-3989-4960-a490-36f3668dd594"
+    },
+    {
+      "domain": "show",
+      "id": "760452364",
+      "breed": "Вельш корги пемброк",
+      "name_lat": "АНДВОЛ ШАРИС",
+      "name_ru": "",
+      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/andvol-sharis-49021035-8656-490f-91c8-d7ca23778c9f"
+    },
+    {
+      "domain": "show",
+      "id": "1447214349",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "name_lat": "ВАНИЛЬНОЕ ОБЛАЧКО",
+      "name_ru": "",
+      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/vanilnoe-oblachko-c49b9d3f-95b9-4fd5-bdf4-212f5487c02f"
+    },
+    {
+      "domain": "show",
+      "id": "484888846",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "name_lat": "VI AMORE LIBERTY",
+      "name_ru": "",
+      "url": "https://papillon.breedarchive.com/animal/view/vi-amore-liberty-80db62c8-15bb-4277-bf6d-d7b7c568bb64"
+    },
+    {
+      "domain": "show",
+      "id": "1008792846",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
+      "name_lat": "KRISTIAN PART OF MY SOUL",
+      "name_ru": "",
+      "url": "https://papillon.breedarchive.com/animal/view/kristian-part-of-my-soul-e5ca442d-435a-4b7d-a941-2846a6de361a"
+    },
+    {
+      "domain": "show",
+      "id": "530113551",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "name_lat": "Alfawish Kris",
+      "name_ru": "",
+      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/alfawish-kris-47b35f8e-25c8-4a6d-96da-4f9c52095018"
+    },
+    {
+      "domain": "show",
+      "id": "1635549455",
+      "breed": "WELSH CORGI PEMBROKE",
+      "name_lat": "ПАНДОРА",
+      "name_ru": "",
+      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/pandora-0a12bcf5-eeb5-474b-a2c9-7d9080f5cf8b"
+    },
+    {
+      "domain": "show",
+      "id": "1818197007",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "name_lat": "KARTEF DESERT ROSE",
+      "name_ru": "",
+      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/kartef-desert-rose-7ee9305d-c9e7-48dc-a1e8-cd652a0f86ac"
+    },
+    {
+      "domain": "show",
+      "id": "382637330",
+      "breed": "Вельш корги кардиган",
+      "name_lat": "TimPride Out Of The Blue",
+      "name_ru": "",
+      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/tim-pride-out-of-the-blue-7613655b-db22-4db2-8b8e-49914e52875b"
+    },
+    {
+      "domain": "show",
+      "id": "568880914",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "name_lat": "TIM PRIDE BARSELONA",
+      "name_ru": "",
+      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/tim-pride-barselona-94cd119d-bd18-4ac3-a4e9-ec98f44c3504"
+    },
+    {
+      "domain": "show",
+      "id": "268361235",
+      "breed": "ШЕЛТИ",
+      "name_lat": "ГАЛАКТИКА ДЛЯ ЯРБУРГ ИЗ СТАРОЙ ШУИ",
+      "name_ru": "",
+      "url": "https://sheltie.breedarchive.com/animal/view/galaktika-dlya-yarburg-iz-staroy-shui-cffbf004-8c24-4255-8c55-38cace235ff8"
+    },
+    {
+      "domain": "show",
+      "id": "451616275",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "name_lat": "GINGER ELF CROWN O’KENYA",
+      "name_ru": "",
+      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/ginger-elf-crown-o-kenya-98fecf03-aa81-48d2-833f-19b3e0c98dc5"
+    },
+    {
+      "domain": "show",
+      "id": "1188435475",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "name_lat": "INTER WIN TALISMAN",
+      "name_ru": "",
+      "url": "https://papillon.breedarchive.com/animal/view/inter-win-talisman-92d4f137-85d4-4376-bc2f-59c0d4451655"
+    },
+    {
+      "domain": "show",
+      "id": "128629012",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "name_lat": "GRETA IZ ZVEZDNOGO GRAFSTVA",
+      "name_ru": "",
+      "url": "https://papillon.breedarchive.com/animal/view/greta-iz-zvezdnogo-grafstva-a283d7ad-39f2-484f-98c9-de22157e48be"
+    },
+    {
+      "domain": "show",
+      "id": "952828437",
+      "breed": "ПСОВАЯ БОРЗАЯ",
+      "name_lat": "ПЕРМЬ ВЕЛИКАЯ САФЬЯНА",
+      "name_ru": "",
+      "url": "https://borzoi.breedarchive.com/animal/view/perm-velikaya-safyana-52619468-8f03-4edb-bfbd-a4a63b059e55"
+    },
+    {
+      "domain": "show",
+      "id": "214392854",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "name_lat": "GOLDEN GEDEON ZHETEM",
+      "name_ru": "",
+      "url": "https://papillon.breedarchive.com/animal/view/golden-gedeon-zhetem-5e37f477-b780-4096-8d68-3e36c03e0c04"
+    },
+    {
+      "domain": "show",
+      "id": "1066922774",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "name_lat": "SOLIFERT GELGEIS",
+      "name_ru": "",
+      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/solifert-gelgeis-7449706d-8027-4c48-9efa-cb2d1938fd25"
+    },
+    {
+      "domain": "show",
+      "id": "1246806039",
+      "breed": "BORZOI - RUSSIAN HUNTING",
+      "name_lat": "МЕТЕЛЬ АВГУСТА НОСФЕРАТУ",
+      "name_ru": "МЕТЕЛЬ АВГУСТА НОСФЕРАТУ",
+      "url": "https://borzoi.breedarchive.com/animal/view/metel-avgusta-nosferatu-e064469a-4f7f-42eb-8910-45f2780ca347"
+    },
+    {
+      "domain": "show",
+      "id": "106035737",
+      "breed": "КАРДИГАН / WELSH",
+      "name_lat": "VICTORY YARVIX AGNES FOR TIM PRIDE",
+      "name_ru": "",
+      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/victory-yarvix-agnes-for-tim-pride-d988a1fd-92fe-4f88-838a-ab0ed577e0db"
+    },
+    {
+      "domain": "show",
+      "id": "1954758680",
+      "breed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "name_lat": "BONITOS COMPANEROS DELUXE TIT FOR TAT",
+      "name_ru": "",
+      "url": "https://kingcharlesspaniel.breedarchive.com/animal/view/bonitos-companeros-deluxe-tit-for-tat-1b86d9fc-dc19-4a5c-a9a7-0ab7fa8457a7"
+    },
+    {
+      "domain": "show",
+      "id": "1818950938",
+      "breed": "BORZOI - RUSSIAN HUNTING",
+      "name_lat": "CAVALLIERIK DICTATOR",
+      "name_ru": "",
+      "url": "https://borzoi.breedarchive.com/animal/view/cavallierik-dictator-41bae0e6-2655-4bcd-8cc2-12fe841fd550"
+    },
+    {
+      "domain": "show",
+      "id": "829746715",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН",
+      "name_lat": "LATOYA STYLE AMELIA BLESSED",
+      "name_ru": "",
+      "url": "https://papillon.breedarchive.com/animal/view/latoya-style-amelia-blessed-8edb8507-d44d-4356-8771-7e5cc12f9973"
+    },
+    {
+      "domain": "show",
+      "id": "1614732315",
+      "breed": "ПСОВАЯ БОРЗАЯ",
+      "name_lat": "МЕТЕЛЬ АВГУСТА НОЧЬ ЛЮДМИЛА",
+      "name_ru": "",
+      "url": "https://borzoi.breedarchive.com/animal/view/metel-avgusta-noch-lyudmila-eb3415ba-f479-491b-a88f-a8d733e7875e"
+    },
+    {
+      "domain": "show",
+      "id": "503764765",
+      "breed": "КИТАЙСКАЯ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
+      "name_lat": "NAT DE FLEUR CENTRAL GRAND WINNER",
+      "name_ru": "",
+      "url": "https://papillon.breedarchive.com/animal/view/nat-de-fleur-central-grand-winner-f9aa209d-6564-40ee-b37d-abf1fefe59ce"
+    },
+    {
+      "domain": "show",
+      "id": "1221472541",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "name_lat": "АССОЛЬ",
+      "name_ru": "",
+      "url": "https://frenchbulldog.breedarchive.com/animal/view/assol-c130c161-686c-460a-880e-bc0160ab7c17"
+    },
+    {
+      "domain": "show",
+      "id": "1943513375",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "name_lat": "ALICE VENTI 'DIS GIRL IS ON FIRE",
+      "name_ru": "",
+      "url": "https://siberianhusky.breedarchive.com/animal/view/alice-venti-dis-girl-is-on-fire-bb81390c-5a7f-493a-9cea-99a8cbd02d32"
+    },
+    {
+      "domain": "show",
+      "id": "1722824993",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "name_lat": "STYLE LIFE UNICORN QUEEN",
+      "name_ru": "",
+      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/style-life-unicorn-queen-6552324d-cbf0-47b5-bb2f-a99b18eb503e"
+    },
+    {
+      "domain": "show",
+      "id": "341194019",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "name_lat": "ВИОЛА",
+      "name_ru": "",
+      "url": "https://germanshepherd.breedarchive.com/animal/view/viola-dbd07a1b-0efe-4f0f-8da3-bd04544eee3a"
+    },
+    {
+      "domain": "show",
+      "id": "233106212",
+      "breed": "ШЕЛТИ / SHETLAND",
+      "name_lat": "VALERINA ROSS DRIADELLA",
+      "name_ru": "",
+      "url": "https://sheltie.breedarchive.com/animal/view/valerina-ross-driadella-0edc9dc3-32a0-4ed3-ad27-0dc75e6bbb8f"
+    },
+    {
+      "domain": "show",
+      "id": "307985700",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "name_lat": "BADGERWOODS ESCHE RAZ POZDRAVLYAYU",
+      "name_ru": "",
+      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/badgerwoods-esche-raz-pozdravlyayu-cdd479ed-6f9b-4b47-9cfc-3b0bfa146cbf"
+    },
+    {
+      "domain": "show",
+      "id": "938476068",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "name_lat": "БАРРА'С БРИТТ ЖУЖАННА БЕЛАЯ ЛИЛИЯ",
+      "name_ru": "БАРРА'С БРИТТ ЖУЖАННА БЕЛАЯ ЛИЛИЯ",
+      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/barras-britt-zhuzhanna-belaya-liliya-563f6570-5653-467d-bd3c-7231e968bd38"
+    },
+    {
+      "domain": "show",
+      "id": "24932645",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "name_lat": "INGERMANLANDIJA ALL THAT FELANGRY WANTS",
+      "name_ru": "",
+      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/ingermanlandija-all-that-felangry-wants-0fcb25b9-c827-400e-8701-6840d2f61bf0"
+    },
+    {
+      "domain": "show",
+      "id": "1163493669",
+      "breed": "BORZOI - RUSSIAN HUNTING",
+      "name_lat": "НЕНАГЛЯДНАЯ МАЙЯ",
+      "name_ru": "",
+      "url": "https://borzoi.breedarchive.com/animal/view/nenaglyadnaya-mayya-5a6ef66f-71b5-4281-8447-c4647763665c"
+    },
+    {
+      "domain": "show",
+      "id": "19673638",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "name_lat": "BOL'SHAYA MEDVEDICA S POLYARNOY DINASTII",
+      "name_ru": "",
+      "url": "https://siberianhusky.breedarchive.com/animal/view/bolshaya-medvedica-s-polyarnoy-dinastii-92387d3d-b637-4f62-8fe9-33095f1a7b4a"
+    },
+    {
+      "domain": "show",
+      "id": "175279916",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "name_lat": "BOSS",
+      "name_ru": "",
+      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/boss-15e2a33a-1748-421b-bf47-ec95c6533d53"
+    },
+    {
+      "domain": "show",
+      "id": "282094124",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "name_lat": "BRAUNI",
+      "name_ru": "",
+      "url": "https://siberianhusky.breedarchive.com/animal/view/brauni-de449246-06fa-4095-a132-9965e293d709"
+    },
+    {
+      "domain": "show",
+      "id": "1446724397",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "name_lat": "MAKSHERRI DON JUAN",
+      "name_ru": "",
+      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/maksherri-don-juan-5220e4e6-f44b-4bed-a2db-799b4891e519"
+    },
+    {
+      "domain": "show",
+      "id": "1898992686",
+      "breed": "Вельш корги кардиган",
+      "name_lat": "Wind Of Grand Marsel III",
+      "name_ru": "",
+      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/wind-of-grand-marsel-iii-7744b904-3adb-4e34-b317-c97dcbd9bd87"
+    },
+    {
+      "domain": "show",
+      "id": "496506671",
+      "breed": "КИТАЙСКАЯ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
+      "name_lat": "KAPLYA SOLNTSA IRVIN",
+      "name_ru": "",
+      "url": "https://papillon.breedarchive.com/animal/view/kaplya-solntsa-irvin-bd001650-ef9b-4e48-80a9-54358fc1622a"
+    },
+    {
+      "domain": "show",
+      "id": "1445361969",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "name_lat": "LAKRITSA OT SERYH PSOV",
+      "name_ru": "",
+      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/lakritsa-ot-seryh-psov-8f7b2bbf-0e6c-47fb-9e9a-ad035cc30cff"
+    },
+    {
+      "domain": "show",
+      "id": "1940131890",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН",
+      "name_lat": "RIDER ON THE STORM OT NEVSKOGO DUETA",
+      "name_ru": "",
+      "url": "https://papillon.breedarchive.com/animal/view/rider-on-the-storm-ot-nevskogo-dueta-73c6cc73-8c3f-4bac-9fd5-f473b54ebbd7"
+    },
+    {
+      "domain": "show",
+      "id": "355849524",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
+      "name_lat": "SHISHKIN SHARM AFRODITA",
+      "name_ru": "",
+      "url": "https://papillon.breedarchive.com/animal/view/shishkin-sharm-afrodita-94729404-6e50-4877-bf0e-6aa68d0cc905"
+    },
+    {
+      "domain": "show",
+      "id": "163369781",
+      "breed": "IBIZAN PODENCO SMOOTH",
+      "name_lat": "ADELAIDA",
+      "name_ru": "",
+      "url": "https://ibizanhound.breedarchive.com/animal/view/adelaida-dd776d0b-2f6a-4375-a491-430602544eb1"
+    },
+    {
+      "domain": "show",
+      "id": "806232117",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "name_lat": "ВЕНТО ЛИБЕРО ЖЕТАР РИС БАРТ",
+      "name_ru": "ВЕНТО ЛИБЕРО ЖЕТАР РИС БАРТ",
+      "url": "https://siberianhusky.breedarchive.com/animal/view/vento-libero-zhetar-ris-bart-6f446286-d3b3-465f-b543-d769477224cb"
+    },
+    {
+      "domain": "show",
+      "id": "1349534778",
+      "breed": "ПАПИЙОН",
+      "name_lat": "FLY PAPILLON OZZY OSBOURNE",
+      "name_ru": "",
+      "url": "https://papillon.breedarchive.com/animal/view/fly-papillon-ozzy-osbourne-1af5c694-9c09-4da1-bd4e-5ae0fb73b432"
+    },
+    {
+      "domain": "show",
+      "id": "1496940602",
+      "breed": "Вельш корги пемброк",
+      "name_lat": "АНДВОЛ САНСАРА",
+      "name_ru": "",
+      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/andvol-sansara-22678ee2-1803-4af6-9af6-0e2e1ef0f6d9"
+    },
+    {
+      "domain": "show",
+      "id": "1539841082",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "name_lat": "EGOIST ONLINE OT NEVSKOGO DUETA",
+      "name_ru": "",
+      "url": "https://papillon.breedarchive.com/animal/view/egoist-online-ot-nevskogo-dueta-a9e1def9-4609-47f1-b0c4-e4d08ae0cca3"
+    },
+    {
+      "domain": "show",
+      "id": "1207383100",
+      "breed": "КАВАЛЕР КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
+      "name_lat": "DZHERMANOTTA ROYALS FRENCH CHIC",
+      "name_ru": "",
+      "url": "https://papillon.breedarchive.com/animal/view/dzhermanotta-royals-french-chic-a3780a14-1ca8-475a-a5b7-89b838aecd8c"
+    },
+    {
+      "domain": "show",
+      "id": "286675517",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "name_lat": "JEWELLERY FIRE FOR BERRY MIX",
+      "name_ru": "",
+      "url": "https://siberianhusky.breedarchive.com/animal/view/jewellery-fire-for-berry-mix-a9fdd13d-f71d-47ae-8285-333f8c6ba26b"
+    },
+    {
+      "domain": "show",
+      "id": "301807165",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "name_lat": "TERRIS UNICUM NIZHINSKAYA",
+      "name_ru": "",
+      "url": "https://papillon.breedarchive.com/animal/view/terris-unicum-nizhinskaya-c0b8f255-cd06-4ae9-a575-2f3c3d544b58"
+    },
+    {
+      "domain": "show",
+      "id": "1664274497",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "name_lat": "НОВЕЛЛЕТТА ВЕСТАР САПФИР",
+      "name_ru": "",
+      "url": "https://papillon.breedarchive.com/animal/view/novelletta-vestar-sapfir-75e8afd1-fbf1-4125-9c60-b1bf1db28261"
+    },
+    {
+      "domain": "show",
+      "id": "1049961028",
+      "breed": "КАВАЛЕР ФАЛЕН) ПАПИЙОН",
+      "name_lat": "LE CHARME POMPON EYE VELICHESTVO",
+      "name_ru": "",
+      "url": "https://papillon.breedarchive.com/animal/view/le-charme-pompon-eye-velichestvo-c0629dd2-5a90-47ff-8179-dac24b45134d"
+    },
+    {
+      "domain": "show",
+      "id": "825796421",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "name_lat": "HUSKY HAVEN REBECCA MADER",
+      "name_ru": "",
+      "url": "https://siberianhusky.breedarchive.com/animal/view/husky-haven-rebecca-mader-41b160c7-a726-4e01-9e56-b61d81c065a5"
+    },
+    {
+      "domain": "show",
+      "id": "844856646",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "name_lat": "BRIANA",
+      "name_ru": "",
+      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/briana-7bcd16bc-6984-4a9f-ba9d-6f5133d9ea26"
+    },
+    {
+      "domain": "show",
+      "id": "309888584",
+      "breed": "Вельш корги кардиган",
+      "name_lat": "Grand Marko déjà vu",
+      "name_ru": "",
+      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/grand-marko-deja-vu-83b874ac-c077-427b-a368-b2a833cde3c0"
+    },
+    {
+      "domain": "show",
+      "id": "1846722633",
+      "breed": "КИТАЙСКАЯ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
+      "name_lat": "SEMICVETIK ERIC CLAPTON",
+      "name_ru": "",
+      "url": "https://papillon.breedarchive.com/animal/view/semicvetik-eric-clapton-53f89008-1a18-4e51-a1d1-e461027588ea"
+    },
+    {
+      "domain": "show",
+      "id": "872789067",
+      "breed": "КАВАЛЕР КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
+      "name_lat": "АНОРИОН С ТЕПЛОГО ДОМА",
+      "name_ru": "",
+      "url": "https://papillon.breedarchive.com/animal/view/anorion-s-teplogo-doma-b06e28c6-e553-4086-8c5c-35c6d4ee0f0b"
+    },
+    {
+      "domain": "show",
+      "id": "2000421707",
+      "breed": "GERMAN SHEPHERD DOG",
+      "name_lat": "КЛЕОПАТРА",
+      "name_ru": "",
+      "url": "https://germanshepherd.breedarchive.com/animal/view/kleopatra-0fb57c08-5b0e-40ef-9822-876f48e35143"
+    },
+    {
+      "domain": "show",
+      "id": "445442892",
+      "breed": "ПАПИЙОН",
+      "name_lat": "ТИННЕРМАНС МУСКАТ",
+      "name_ru": "",
+      "url": "https://papillon.breedarchive.com/animal/view/tinnermans-muskat-bad6b79c-fc98-4e1f-9ca6-21065e33444f"
+    },
+    {
+      "domain": "show",
+      "id": "1344629325",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "name_lat": "DRUG VETRA S TSAREVA KURGANA",
+      "name_ru": "",
+      "url": "https://siberianhusky.breedarchive.com/animal/view/drug-vetra-s-tsareva-kurgana-afde150f-986b-483b-8e5c-fa2672b0bbc0"
+    },
+    {
+      "domain": "show",
+      "id": "1571323724",
+      "breed": "КИТАЙСКАЯ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
+      "name_lat": "BRESAR'S YOU'LL NEVER WALK ALONE",
+      "name_ru": "",
+      "url": "https://papillon.breedarchive.com/animal/view/bresars-youll-never-walk-alone-615d02d2-9cde-4508-83fb-2807aba328c2"
+    },
+    {
+      "domain": "show",
+      "id": "21650254",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "name_lat": "АНДВОЛ РЕЗЕДА",
+      "name_ru": "АНДВОЛ РЕЗЕДА",
+      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/andvol-rezeda-7fa289f6-d2a0-4461-86ff-0516ea77e8e4"
+    },
+    {
+      "domain": "show",
+      "id": "1381277262",
+      "breed": "БЕДЛИНГТОН ТЕРЬЕР",
+      "name_lat": "ЗОЛТА ЗЕННА СОЛНЕЧНАЯ УЛЫБКА",
+      "name_ru": "",
+      "url": "https://bedlingtonterrier.breedarchive.com/animal/view/zolta-zenna-solnechnaya-ulybka-8ac56be5-a30b-4cec-9f7b-b0c94f89b20c"
+    },
+    {
+      "domain": "show",
+      "id": "1992747854",
+      "breed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "name_lat": "SIRIUS BLACK TIE AFFAIR",
+      "name_ru": "",
+      "url": "https://kingcharlesspaniel.breedarchive.com/animal/view/sirius-black-tie-affair-c3296d2b-4e62-4a4c-b809-8d74e3d450c5"
+    },
+    {
+      "domain": "show",
+      "id": "8014415",
+      "breed": "ШЕЛТИ",
+      "name_lat": "АЛЕАНДР ЯУЗА",
+      "name_ru": "",
+      "url": "https://sheltie.breedarchive.com/animal/view/aleandr-yauza-c01ff75b-6218-4502-b512-c137d8f835d0"
+    },
+    {
+      "domain": "show",
+      "id": "1224544847",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "name_lat": "MAJOR POINT ZELDA",
+      "name_ru": "",
+      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/major-point-zelda-d5b77a4d-f4be-4590-8665-3a4afc2dea33"
+    },
+    {
+      "domain": "show",
+      "id": "679535950",
+      "breed": "КАРДИГАН / WELSH",
+      "name_lat": "HOLIDAY IZ DOMA VENGRE",
+      "name_ru": "",
+      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/holiday-iz-doma-vengre-46bad738-11be-473e-b1de-8bb8598b32a0"
+    },
+    {
+      "domain": "show",
+      "id": "457511249",
+      "breed": "ШЕЛТИ",
+      "name_lat": "ALEANDR UNDINA",
+      "name_ru": "",
+      "url": "https://sheltie.breedarchive.com/animal/view/aleandr-undina-02d3cbd1-aebf-4de6-b19e-bf928a853094"
+    },
+    {
+      "domain": "show",
+      "id": "336021078",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "name_lat": "РОНДО БОРСАЛИНА НЭНСИ",
+      "name_ru": "",
+      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/rondo-borsalina-nensi-2f12d9be-4699-4f20-b111-2a3c76bb6892"
+    },
+    {
+      "domain": "show",
+      "id": "130650711",
+      "breed": "ШЕЛТИ / SHETLAND",
+      "name_lat": "ВЕЛУНД",
+      "name_ru": "",
+      "url": "https://sheltie.breedarchive.com/animal/view/velund-b7bb0f82-8ebc-4dba-a242-0c6ae9298ef9"
+    },
+    {
+      "domain": "show",
+      "id": "911456343",
+      "breed": "ПСОВАЯ БОРЗАЯ",
+      "name_lat": "AZARTNAYA OKHOTA AFINA",
+      "name_ru": "",
+      "url": "https://borzoi.breedarchive.com/animal/view/azartnaya-okhota-afina-390907e2-78a1-427f-869e-2e2e68558dc5"
+    },
+    {
+      "domain": "show",
+      "id": "1919979096",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "name_lat": "POKORITEL ZARI TEHANU THE FIRE DRAGON",
+      "name_ru": "",
+      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/pokoritel-zari-tehanu-the-fire-dragon-316bee5f-ccef-4e4b-afb1-1566820e70ce"
+    },
+    {
+      "domain": "show",
+      "id": "414543449",
+      "breed": "БОСТОН ТЕРЬЕР",
+      "name_lat": "ABSOLUTELY CHARMING TOP AS ALWAYS",
+      "name_ru": "",
+      "url": "https://bostonterrier.breedarchive.com/animal/view/absolutely-charming-top-as-always-68151e40-51f0-422c-b532-20f36790ffa8"
+    },
+    {
+      "domain": "show",
+      "id": "560982361",
+      "breed": "ПАПИЙОН",
+      "name_lat": "НОРРИС СО ЗВЕЗДЫ ВАЛЕНТИНЫ",
+      "name_ru": "",
+      "url": "https://papillon.breedarchive.com/animal/view/norris-so-zvezdy-valentiny-fb2af751-2c53-4306-a2e7-e195d2d527b2"
+    },
+    {
+      "domain": "show",
+      "id": "310474074",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "name_lat": "RUELVEN DEW VIVID RUSSULA",
+      "name_ru": "",
+      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/ruelven-dew-vivid-russula-91880006-605b-4506-8b24-321a7fb76f2d"
+    },
+    {
+      "domain": "show",
+      "id": "694136667",
+      "breed": "CENTRAL ASIA SHEPHERD DOG",
+      "name_lat": "АЛАНА",
+      "name_ru": "",
+      "url": "https://germanshepherd.breedarchive.com/animal/view/alana-09753ab2-fa37-48f3-a5dc-ebf1b6ee61e6"
+    },
+    {
+      "domain": "show",
+      "id": "859276891",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "name_lat": "АДЕЛИНА",
+      "name_ru": "",
+      "url": "https://tibetanmastiff.breedarchive.com/animal/view/adelina-2c16aa39-2d9d-41b6-be9e-87d9b7e56fa5"
+    },
+    {
+      "domain": "show",
+      "id": "1305216604",
+      "breed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "name_lat": "RUSSISCH GEIST DZHUL GOLDI UITNI",
+      "name_ru": "",
+      "url": "https://kingcharlesspaniel.breedarchive.com/animal/view/russisch-geist-dzhul-goldi-uitni-acb6356f-a103-43c7-8d08-e6140b4e6e25"
+    },
+    {
+      "domain": "show",
+      "id": "1470165089",
+      "breed": "ШЕЛТИ / SHETLAND",
+      "name_lat": "OTLICHNYY VYBOR UILIAM",
+      "name_ru": "",
+      "url": "https://sheltie.breedarchive.com/animal/view/otlichnyy-vybor-uiliam-60bc56c5-6fa4-457b-b934-6ca4ac5a169f"
+    },
+    {
+      "domain": "show",
+      "id": "463478114",
+      "breed": "ШЕЛТИ",
+      "name_lat": "HARWISH KNOW HOW",
+      "name_ru": "",
+      "url": "https://sheltie.breedarchive.com/animal/view/harwish-know-how-83cc6a84-7677-4120-a8c2-7671b6e908c9"
+    },
+    {
+      "domain": "show",
+      "id": "486302818",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "name_lat": "TEREMOK UNO-DOS-TRES-QUATRO",
+      "name_ru": "",
+      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/teremok-uno-dos-tres-quatro-1a97854c-a43c-4ba2-99c1-9d0f8d728da8"
+    },
+    {
+      "domain": "show",
+      "id": "1739579234",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "name_lat": "BAMBITO ANRUS HOUSE",
+      "name_ru": "",
+      "url": "https://siberianhusky.breedarchive.com/animal/view/bambito-anrus-house-eb2cda23-971a-4a03-90dd-f97da49ad76a"
+    },
+    {
+      "domain": "show",
+      "id": "1775807074",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "name_lat": "АРГО ЗОЛОТОЕ РУНО",
+      "name_ru": "",
+      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/argo-zolotoe-runo-fba0c75a-569f-4a4c-b7ca-4806be0420c2"
+    },
+    {
+      "domain": "show",
+      "id": "21506659",
+      "breed": "КИТАЙСКАЯ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
+      "name_lat": "СНЕЖНОЕ ТАНГО ТИЛЬДА",
+      "name_ru": "СНЕЖНОЕ ТАНГО ТИЛЬДА",
+      "url": "https://papillon.breedarchive.com/animal/view/snezhnoe-tango-tilda-9dc4dea6-8a72-4cee-ba38-a8239689e61a"
+    },
+    {
+      "domain": "show",
+      "id": "387212643",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "name_lat": "STELLIUM GILT GIRL",
+      "name_ru": "",
+      "url": "https://cardiganwelshcorgi.breedarchive.com/animal/view/stellium-gilt-girl-0dcd648d-c0bc-42df-894f-289183244050"
+    },
+    {
+      "domain": "show",
+      "id": "669441889",
+      "breed": "RUSSIAN HUNTING",
+      "name_lat": "КНЯЖНА ВЕРА-НИКА",
+      "name_ru": "",
+      "url": "https://borzoi.breedarchive.com/animal/view/knyazhna-vera-nika-1c1ca103-6a9e-4b9c-a9af-e8aeb4cdd7f9"
+    },
+    {
+      "domain": "show",
+      "id": "29776226",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "name_lat": "TALISMAN VOSTOKA SICILIA",
+      "name_ru": "",
+      "url": "https://tibetanmastiff.breedarchive.com/animal/view/talisman-vostoka-sicilia-3066a35e-6d96-4c77-8b1f-992973fcc195"
+    },
+    {
+      "domain": "show",
+      "id": "235373670",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
+      "name_lat": "ANI DE SEBANIRI GLORY WAY",
+      "name_ru": "",
+      "url": "https://papillon.breedarchive.com/animal/view/ani-de-sebaniri-glory-way-e634d0f1-2fbd-4f39-86d7-660e62519096"
+    },
+    {
+      "domain": "show",
+      "id": "171120999",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "name_lat": "MISTYCOR DESTINADA A BRILLAR",
+      "name_ru": "",
+      "url": "https://pembrokewelshcorgi.breedarchive.com/animal/view/mistycor-destinada-a-brillar-1a6f7cf4-0899-431a-a83a-8cb7e3475641"
+    },
+    {
+      "domain": "show",
+      "id": "1239407975",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "name_lat": "ЗЕНА",
+      "name_ru": "",
+      "url": "https://germanshepherd.breedarchive.com/animal/view/zena-df545972-c690-4b8d-8792-4343fa2079c9"
     }
   ]
 }
