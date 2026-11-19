@@ -49,7 +49,9 @@ export type SilhouetteBreedKey =
   | 'chihuahua'
   | 'dalmatian'
   | 'poodle'
-  | 'pekingese';
+  | 'pekingese'
+  | 'pomeranian'
+  | 'centralasianshepherd';
 
 /**
  * Resolves a raw or canonical breed string to an available vector silhouette key.
@@ -414,6 +416,31 @@ export const resolveSilhouetteBreed = (breed?: string | null): SilhouetteBreedKe
     lower.includes('pekinese')
   ) {
     return 'pekingese';
+  }
+
+  // 48. Pomeranian / Немецкий шпиц (Померанский)
+  if (
+    canon.includes('ШПИЦ') ||
+    canon.includes('ПОМЕРАНСКИЙ') ||
+    lower.includes('шпиц') ||
+    lower.includes('померан') ||
+    lower.includes('pomeranian') ||
+    lower.includes('spitz')
+  ) {
+    return 'pomeranian';
+  }
+
+  // 49. Central Asian Shepherd Dog / Среднеазиатская овчарка (САО, Алабай)
+  if (
+    canon.includes('СРЕДНЕАЗИАТСКАЯ') ||
+    canon.includes('АЛАБАЙ') ||
+    canon.includes('САО') ||
+    lower.includes('среднеазиатская') ||
+    lower.includes('алабай') ||
+    lower.includes('сао') ||
+    lower.includes('central asian shepherd')
+  ) {
+    return 'centralasianshepherd';
   }
 
   // No silhouette available yet for this breed
