@@ -1,5 +1,6 @@
 import { useState, useMemo, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
+import PlacementMedalBadge from '../../components/PlacementMedalBadge'
 import {
   Award,
   ChevronDown,
@@ -118,8 +119,22 @@ export function formatAllExpertsButton(count: number): string {
   return `Показать всех ${count} экспертов`
 }
 
-export function DogJudgesSection({ judgeStats }: DogJudgesSectionProps) {
+export function DogJudgesSection({ judgeStats, competitions }: DogJudgesSectionProps) {
   const [expandedJudgeKey, setExpandedJudgeKey] = useState<string | null>(null)
+
+  const eventPlacementMap = useMemo(() => {
+    const map = new Map<string | number, number>()
+    ;(competitions || []).forEach((c) => {
+      if (c.event_id != null && c.placement != null) {
+        const pl = typeof c.placement === 'number' ? c.placement : parseInt(String(c.placement), 10)
+        if (Number.isFinite(pl) && pl > 0) {
+          map.set(String(c.event_id), pl)
+          map.set(Number(c.event_id), pl)
+        }
+      }
+    })
+    return map
+  }, [competitions])
 
   // 1. Оставляем только курсинг (где оценивают баллами)
   const coursingJudges = useMemo(() => {
@@ -202,17 +217,17 @@ export function DogJudgesSection({ judgeStats }: DogJudgesSectionProps) {
             </div>
 
             <div className="flex items-center gap-2 mt-0.5 text-[11px] leading-tight flex-wrap text-charcoal-600">
-              <span className="text-charcoal-500">
-                места:{' '}
-                <strong className="text-charcoal-800 font-semibold">
-                  {(judge.placements && judge.placements.length > 0
-                    ? judge.placements
-                    : judge.avg_placement != null
-                      ? [Math.round(judge.avg_placement)]
-                      : []
-                  ).join(', ')}
-                </strong>
-              </span>
+              <div className="flex items-center gap-1 shrink-0">
+                <span className="text-charcoal-500 mr-0.5">места:</span>
+                {(judge.placements && judge.placements.length > 0
+                  ? judge.placements
+                  : judge.avg_placement != null
+                    ? [Math.round(judge.avg_placement)]
+                    : []
+                ).map((pl, idx) => (
+                  <PlacementMedalBadge key={idx} place={pl} size="xs" />
+                ))}
+              </div>
 
               <span className="text-old-money-300">•</span>
 
@@ -264,36 +279,44 @@ export function DogJudgesSection({ judgeStats }: DogJudgesSectionProps) {
             <div className="text-[10px] font-semibold text-charcoal-500 uppercase tracking-wider px-1">
               Результаты под этим экспертом (кликните для перехода в протокол):
             </div>
-            {judge.events.map((ev, eIdx) => (
-              <Link
-                key={eIdx}
-                to={`/event/${ev.event_id}/`}
-                className="group flex items-center justify-between gap-2.5 p-2 rounded-lg bg-white/90 hover:bg-white border border-old-money-200/70 hover:border-old-money-300 transition-colors shadow-2xs"
-                title="Открыть протокол состязания"
-              >
-                <div className="min-w-0 flex-1">
-                  <div className="font-semibold text-charcoal-900 group-hover:text-camel-800 transition-colors truncate flex items-center gap-1.5">
-                    <span className="truncate">{ev.title}</span>
-                    <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity text-camel-600 shrink-0" aria-hidden />
+            {judge.events.map((ev, eIdx) => {
+              const evPlacement = eventPlacementMap.get(ev.event_id)
+              return (
+                <Link
+                  key={eIdx}
+                  to={`/event/${ev.event_id}/`}
+                  className="group flex items-center justify-between gap-2.5 p-2 rounded-lg bg-white/90 hover:bg-white border border-old-money-200/70 hover:border-old-money-300 transition-colors shadow-2xs"
+                  title="Открыть протокол состязания"
+                >
+                  <div className="min-w-0 flex-1">
+                    <div className="font-semibold text-charcoal-900 group-hover:text-camel-800 transition-colors truncate flex items-center gap-1.5">
+                      <span className="truncate">{ev.title}</span>
+                      <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity text-camel-600 shrink-0" aria-hidden />
+                    </div>
+                    <div className="text-[10px] text-charcoal-400 mt-0.5">{ev.date}</div>
                   </div>
-                  <div className="text-[10px] text-charcoal-400 mt-0.5">{ev.date}</div>
-                </div>
-                <div className="text-right shrink-0">
-                  {ev.avg_score != null ? (
-                    <div className="font-bold text-charcoal-900 tabular-nums text-xs">
-                      {ev.avg_score.toFixed(1)} б.
+                  <div className="flex items-center gap-2 shrink-0">
+                    {evPlacement != null && (
+                      <PlacementMedalBadge place={evPlacement} size="xs" />
+                    )}
+                    <div className="text-right">
+                      {ev.avg_score != null ? (
+                        <div className="font-bold text-charcoal-900 tabular-nums text-xs">
+                          {ev.avg_score.toFixed(1)} б.
+                        </div>
+                      ) : (
+                        <div className="text-charcoal-400">—</div>
+                      )}
+                      {ev.scores && ev.scores.length > 0 && (
+                        <div className="text-[9px] text-charcoal-400 tabular-nums">
+                          забеги: {ev.scores.join(' / ')}
+                        </div>
+                      )}
                     </div>
-                  ) : (
-                    <div className="text-charcoal-400">—</div>
-                  )}
-                  {ev.scores && ev.scores.length > 0 && (
-                    <div className="text-[9px] text-charcoal-400 tabular-nums">
-                      забеги: {ev.scores.join(' / ')}
-                    </div>
-                  )}
-                </div>
-              </Link>
-            ))}
+                  </div>
+                </Link>
+              )
+            })}
           </div>
         )}
       </div>

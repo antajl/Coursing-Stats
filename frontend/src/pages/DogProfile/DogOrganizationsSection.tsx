@@ -1,5 +1,6 @@
 import { useState, useMemo, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
+import PlacementMedalBadge from '../../components/PlacementMedalBadge'
 import {
   Trophy,
   Building2,
@@ -389,6 +390,23 @@ export function DogOrganizationsSection({
             </div>
 
             <div className="flex items-center gap-2 mt-0.5 text-[11px] leading-tight flex-wrap text-charcoal-600">
+              <div className="flex items-center gap-1 shrink-0">
+                <span className="text-charcoal-500 mr-0.5">места:</span>
+                {(org.placements && org.placements.length > 0
+                  ? org.placements.slice(0, 5)
+                  : []
+                ).map((pl, idx) => (
+                  <PlacementMedalBadge key={idx} place={pl} size="xs" />
+                ))}
+                {org.placements && org.placements.length > 5 && (
+                  <span className="text-[10px] text-charcoal-400 font-normal">
+                    +{org.placements.length - 5}
+                  </span>
+                )}
+              </div>
+
+              <span className="text-old-money-300">•</span>
+
               <span className="text-charcoal-500">
                 победы:{' '}
                 <strong className="text-charcoal-800 font-semibold">
@@ -474,14 +492,9 @@ export function DogOrganizationsSection({
 
                   <div className="text-right shrink-0">
                     {ev.placement ? (
-                      <div className="flex items-center gap-1 justify-end">
-                        <span
-                          className={`inline-flex items-center justify-center px-1.5 py-0.5 rounded text-[10px] font-bold ${
-                            isWin
-                              ? 'bg-amber-100 text-amber-900 border border-amber-300'
-                              : 'bg-old-money-100 text-charcoal-700'
-                          }`}
-                        >
+                      <div className="flex items-center gap-1.5 justify-end">
+                        <PlacementMedalBadge place={ev.placement} size="xs" />
+                        <span className="text-[11px] font-semibold text-charcoal-700 tabular-nums">
                           {ev.placement}-е место
                         </span>
                       </div>
