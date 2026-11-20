@@ -52,6 +52,18 @@ export default function BreedHub() {
 
   // Load annual champions history (2015-2026)
   const { data: annualLeadersRes, isLoading: annualLeadersLoading } = useBreedAnnualLeaders()
+  const coursingLeaders = useMemo(() => {
+    if (!slug) return []
+    const bySlug = annualLeadersRes?.data?.coursing_by_slug || annualLeadersRes?.data?.leaders_by_slug
+    if (!bySlug) return []
+    return (bySlug[slug] || []) as AnnualDogLeader[]
+  }, [slug, annualLeadersRes])
+
+  const racingLeaders = useMemo(() => {
+    if (!slug || !annualLeadersRes?.data?.racing_by_slug) return []
+    return (annualLeadersRes.data.racing_by_slug[slug] || []) as AnnualDogLeader[]
+  }, [slug, annualLeadersRes])
+
   const annualLeaders = useMemo(() => {
     if (!slug || !annualLeadersRes?.data?.leaders_by_slug) return []
     return (annualLeadersRes.data.leaders_by_slug[slug] || []) as AnnualDogLeader[]
@@ -335,8 +347,10 @@ export default function BreedHub() {
         </div>
       </div>
 
-      {/* Колонки состязаний и Донино: на десктопе рядом, на мобильном свайп жестами */}
+      {/* Колонки состязаний и Донино: на десктопе 3 параллельные колонки (Курсинг | Рейсинг | Донино), на мобильном свайп жестами */}
       <BreedHubColumns
+        coursingLeaders={coursingLeaders}
+        racingLeaders={racingLeaders}
         annualLeaders={annualLeaders}
         annualLeadersLoading={annualLeadersLoading}
         speedRecords={speedRecords}

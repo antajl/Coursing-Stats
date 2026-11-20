@@ -83,7 +83,9 @@ export function DogProfileHeader({
   )
   const hasTitles =
     showTitles.some((t) => !isCertificateToken(t.title)) ||
-    competitionTitles.some((t) => !isCertificateToken(t.title))
+    competitionTitles.some((t) => !isCertificateToken(t.title)) ||
+    Boolean(coursingTitles?.some((t) => !isCertificateToken(t.title))) ||
+    Boolean(racingTitles?.some((t) => !isCertificateToken(t.title)))
   const { isFavorite, toggleFavorite } = useFavorites()
   const [loadingFavorite, setLoadingFavorite] = useState(false)
   const dogId = String(dog.id)
@@ -348,6 +350,8 @@ export function DogProfileHeader({
             <div className="mt-4 pt-3.5 border-t border-cream-200/70">
               <DogProfileAwardsBar
                 competitionTitles={competitionTitles}
+                coursingTitles={coursingTitles}
+                racingTitles={racingTitles}
                 showTitles={showTitles}
                 achievements={achievements}
                 titleExplanations={titleExplanations}

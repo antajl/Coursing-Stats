@@ -5,8 +5,8 @@ import { ShowsColumn } from './ShowsColumn'
 import { EmptyDisciplineColumn } from './EmptyDisciplineColumn'
 import { DoninoSpeedColumn } from './DoninoSpeedColumn'
 import { DoninoCoursingColumn } from './DoninoCoursingColumn'
-import { DogJudgesSection, type DogJudgesStats } from './DogJudgesSection'
-import { DogOrganizationsSection } from './DogOrganizationsSection'
+import { DogAnalyticsSection } from './DogAnalyticsSection'
+import type { DogJudgesStats } from './DogJudgesSection'
 import { CollapsibleSection } from '../../components/ui/CollapsibleSection'
 import type { ShowDogCardData } from '../Shows/ShowDogCard'
 import type { ProfileHeaderRank } from './DogProfileHeader'
@@ -151,19 +151,10 @@ export const DogDisciplinesDesktopView: React.FC<DogDisciplinesDesktopViewProps>
         </div>
       </div>
 
-      {/* Десктопная секция судей */}
-      {judgeStats && (
-        <div id="judges" className="scroll-mt-20 hidden md:block">
-          <DogJudgesSection judgeStats={judgeStats} competitions={events} />
-        </div>
-      )}
-
-      {/* Десктопная секция организаций */}
-      {events && events.length > 0 && (
-        <div id="organizations" className="scroll-mt-20 hidden md:block">
-          <DogOrganizationsSection competitions={events} />
-        </div>
-      )}
+      {/* Десктопная секция аналитики: Оценки судей и Победы по организациям в компактных табах */}
+      <div id="analytics" className="scroll-mt-20 hidden md:block">
+        <DogAnalyticsSection judgeStats={judgeStats} competitions={events} />
+      </div>
 
       {/* Десктопное Донино: CollapsibleSection внизу */}
       {(hasSpeedRecords || hasCoursingRecords) && !showCoursingColumn && !showRacingColumn && (
