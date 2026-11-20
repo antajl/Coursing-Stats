@@ -9,14 +9,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="CoursingStats" />
-    <link rel="preload" as="image" href="/assets/hero/background-mobile-480.webp" type="image/webp" media="(max-width: 768px)" fetchpriority="high" />
     <meta name="theme-color" content="#F5F1E8" />
     <title data-rh="true">Страница не найдена | Курсинг Статс</title>
   <meta name="description" content="Страница не найдена." data-rh="true" />
   <meta name="keywords" content="курсинг статс, coursing stats, курсинг, бега борзых, статистика курсинга, рейтинг собак, рекорды Донино, выставки, РКФ" data-rh="true" />
-    <meta name="author" content="Курсинг Статс (Coursing Stats)" />
+    <meta name="author" content="Курсинг Статс" />
 
     <!-- LLM & AI Agents Auto-discovery (https://llmstxt.org/) -->
     <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLM Summary" />
@@ -53,37 +53,55 @@
       })();
     </script>
     
-    <!-- Yandex.Metrika counter -->
+    <!-- Yandex.Metrika counter (Delayed execution for Core Web Vitals / LCP / FCP) -->
     <script type="text/javascript">
-      (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-      m[i].l=1*new Date();
-      for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-      ym(110619327, "init", {
+      window.ym = window.ym || function(){(window.ym.a = window.ym.a || []).push(arguments)};
+      window.ym.l = 1 * new Date();
+      window.ym(110619327, "init", {
         clickmap: true,
         trackLinks: true,
         accurateTrackBounce: true,
         webvisor: true
       });
+
+      (function() {
+        var ymLoaded = false;
+        function loadYM() {
+          if (ymLoaded) return;
+          ymLoaded = true;
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://mc.yandex.ru/metrika/tag.js';
+          document.head.appendChild(s);
+        }
+        var events = ['pointerdown', 'touchstart', 'scroll', 'keydown'];
+        function onInteract() {
+          events.forEach(function(e) { window.removeEventListener(e, onInteract); });
+          loadYM();
+        }
+        events.forEach(function(e) { window.addEventListener(e, onInteract, { passive: true, once: true }); });
+        if ('requestIdleCallback' in window) {
+          window.requestIdleCallback(function() { setTimeout(loadYM, 4500); });
+        } else {
+          setTimeout(loadYM, 5000);
+        }
+      })();
     </script>
-    
     <!-- /Yandex.Metrika counter -->
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" data-rh="true" />
-    <meta property="og:title" content="Страница не найдена | Курсинг Статс" data-rh="true" />
+  <meta property="og:site_name" content="Курсинг Статс" data-rh="true" />
+  <meta property="og:title" content="Страница не найдена | Курсинг Статс" data-rh="true" />
   <meta property="og:description" content="Страница не найдена." data-rh="true" />
   <meta property="og:image" content="https://coursing-stats.ru/og-image.png" data-rh="true" />
   <meta property="og:image:width" content="1200" data-rh="true" />
-    <meta property="og:image:height" content="630" data-rh="true" />
-    <meta property="og:image:type" content="image/png" data-rh="true" />
-    <meta property="og:locale" content="ru_RU" data-rh="true" />
-    
-    <!-- Twitter -->
+  <meta property="og:image:height" content="630" data-rh="true" />
+  <meta property="og:image:type" content="image/png" data-rh="true" />
+  <meta property="og:locale" content="ru_RU" data-rh="true" />
+  <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" data-rh="true" />
-    <meta name="twitter:title" content="Страница не найдена | Курсинг Статс" data-rh="true" />
+  <meta name="twitter:title" content="Страница не найдена | Курсинг Статс" data-rh="true" />
   <meta name="twitter:description" content="Страница не найдена." data-rh="true" />
   <meta name="twitter:image" content="https://coursing-stats.ru/og-image.png" data-rh="true" />
   <!-- Preconnect & Fonts (Non-blocking) -->
@@ -175,15 +193,14 @@
         }, true);
       })();
     </script>
-    <script type="module" crossorigin src="/assets/index-1794759150967-Cx7naxD-.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime-1794759150967-hePW80VL.js">
-    <link rel="modulepreload" crossorigin href="/assets/jsx-runtime-1794759150967-DTUS-TXL.js">
-    <link rel="modulepreload" crossorigin href="/assets/preload-helper-1794759150967-Czpn1I53.js">
-    <link rel="modulepreload" crossorigin href="/assets/createLucideIcon-1794759150967-P58Bn42U.js">
-    <link rel="modulepreload" crossorigin href="/assets/show-award-ranking-1794759150967-C94ZeFXB.js">
-    <link rel="stylesheet" crossorigin href="/assets/index-DBrJNRKa.css">
-    <meta name="robots" content="noindex, nofollow" />
-  <meta property="og:site_name" content="Курсинг Статс" data-rh="true" />
+    <script type="module" crossorigin src="/assets/index-1795197539011-B4TyQvL8.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime-1795197539011-hePW80VL.js">
+    <link rel="modulepreload" crossorigin href="/assets/jsx-runtime-1795197539011-BsmBmSIm.js">
+    <link rel="modulepreload" crossorigin href="/assets/preload-helper-1795197539011-Czpn1I53.js">
+    <link rel="modulepreload" crossorigin href="/assets/createLucideIcon-1795197539011-D7A4ET5M.js">
+    <link rel="modulepreload" crossorigin href="/assets/breedMapping-1795197539011-BUYTtWZv.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-BMtBCVIQ.css">
+      <meta name="robots" content="noindex, nofollow" />
 </head>
   <body>
     <noscript><img src="https://mc.yandex.ru/watch/110619327" style="position:absolute; left:-9999px;" alt="" /></noscript>

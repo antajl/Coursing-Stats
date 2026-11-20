@@ -1038,18 +1038,34 @@ function main(): void {
   fs.writeFileSync(public404, html404, 'utf8')
   console.log(`[prerender-seo] Generated 404.html (${Buffer.byteLength(html404, 'utf8')} bytes)`)
 
+  const hubsOnly = process.argv.includes('--hubs-only')
+  if (hubsOnly) {
+    console.log('[prerender-seo] Running in --hubs-only mode (saving S3 storage & request billing)...')
+  }
+
   const hubs = prerenderHubs(shellForPages)
   const breedHubs = prerenderBreedHubs(shellForPages)
   const redirects = prerenderStaticRedirects()
-  const profilesDir = resolveProfilesDir()
-  const competitionDogs = prerenderCompetitionDogs(shellForPages, profilesDir)
-  const showOnlyDogs = prerenderShowOnlyDogs(shellForPages)
+
+  let competitionDogs = 0
+  let showOnlyDogs = 0
+  let events = 0
+  let judges = 0
+  let donino = 0
+  let exhibitions = 0
+  let showJudges = 0
+
+  if (!hubsOnly) {
+    const profilesDir = resolveProfilesDir()
+    competitionDogs = prerenderCompetitionDogs(shellForPages, profilesDir)
+    showOnlyDogs = prerenderShowOnlyDogs(shellForPages)
+    events = prerenderEvents(shellForPages)
+    judges = prerenderSportJudges(shellForPages)
+    donino = prerenderDoninoDogs(shellForPages)
+    exhibitions = prerenderExhibitions(shellForPages)
+    showJudges = prerenderShowJudges(shellForPages)
+  }
   const dogs = competitionDogs + showOnlyDogs
-  const events = prerenderEvents(shellForPages)
-  const judges = prerenderSportJudges(shellForPages)
-  const donino = prerenderDoninoDogs(shellForPages)
-  const exhibitions = prerenderExhibitions(shellForPages)
-  const showJudges = prerenderShowJudges(shellForPages)
 
   // Ensure available-exhibitions.json is generated and placed into dist
   saveAvailableExhibitionsIndex()

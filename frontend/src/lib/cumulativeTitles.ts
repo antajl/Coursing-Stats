@@ -353,7 +353,7 @@ export function evaluateCumulativeTitles(data: DogCareerData): CumulativeEvaluat
     badge: 'ГЧР',
     domain: 'supreme',
     status: gchrShowCompleted ? 'completed' : 'in_progress',
-    progressPercent: gchrShowCompleted ? 100 : (chrCompleted ? 50 : 0) + (effectiveKchk / 4) * 25,
+    progressPercent: gchrShowCompleted ? 100 : Math.round((chrCompleted ? 50 : 0) + (effectiveKchk / 4) * 25),
     fulfilledBasis: gchrShowCompleted ? 'Выполнены нормы титулов «Чемпион России» и «Чемпион НКП/породы»' : undefined,
     rulesSummary: 'Диплом «Чемпион России» + Диплом «Чемпион НКП» (или «Чемпион породы» для пород без НКП).',
     requirements: [
