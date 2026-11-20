@@ -51,7 +51,10 @@ export type SilhouetteBreedKey =
   | 'poodle'
   | 'pekingese'
   | 'pomeranian'
-  | 'centralasianshepherd';
+  | 'centralasianshepherd'
+  | 'canecorso'
+  | 'yorkshireterrier'
+  | 'veo';
 
 export type SilhouetteBreed = SilhouetteBreedKey;
 
@@ -443,6 +446,40 @@ export const resolveSilhouetteBreed = (breed?: string | null): SilhouetteBreedKe
     lower.includes('central asian shepherd')
   ) {
     return 'centralasianshepherd';
+  }
+
+  // 50. Cane Corso / Итальянский кане-корсо
+  if (
+    canon.includes('КАНЕ КОРСО') ||
+    canon.includes('КАНЕ-КОРСО') ||
+    lower.includes('кане корсо') ||
+    lower.includes('кане-корсо') ||
+    lower.includes('cane corso')
+  ) {
+    return 'canecorso';
+  }
+
+  // 51. Yorkshire Terrier / Йоркширский терьер (Йорк)
+  if (
+    canon.includes('ЙОРКШИРСКИЙ') ||
+    canon.includes('ЙОРК') ||
+    lower.includes('йоркширский') ||
+    lower.includes('йорк') ||
+    lower.includes('yorkshire terrier') ||
+    lower.includes('yorkie')
+  ) {
+    return 'yorkshireterrier';
+  }
+
+  // 52. East-European Shepherd / Восточноевропейская овчарка (ВЕО)
+  if (
+    canon.includes('ВОСТОЧНОЕВРОПЕЙСКАЯ') ||
+    canon.includes('ВЕО') ||
+    lower.includes('восточноевропейская') ||
+    lower.includes('вео') ||
+    lower.includes('east-european shepherd')
+  ) {
+    return 'veo';
   }
 
   // No silhouette available yet for this breed

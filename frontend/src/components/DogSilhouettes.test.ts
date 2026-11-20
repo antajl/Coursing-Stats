@@ -66,6 +66,11 @@ describe('resolveSilhouetteBreed', () => {
     // Batch 6 (Pekingese)
     expect(resolveSilhouetteBreed('Пекинес')).toBe('pekingese');
     expect(resolveSilhouetteBreed('Pekingese')).toBe('pekingese');
+
+    // Batch 7 (Cane Corso, York, VEO)
+    expect(resolveSilhouetteBreed('Итальянский кане корсо')).toBe('canecorso');
+    expect(resolveSilhouetteBreed('Йоркширский терьер')).toBe('yorkshireterrier');
+    expect(resolveSilhouetteBreed('Восточноевропейская овчарка')).toBe('veo');
   });
 
   it('returns null for breeds that have not been generated yet (leaving empty frame)', () => {
