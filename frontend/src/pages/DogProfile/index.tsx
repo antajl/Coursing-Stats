@@ -1,5 +1,6 @@
 import React from 'react'
 import { Navigate, useLocation } from 'react-router-dom'
+import { ArrowRight } from 'lucide-react'
 import { isShowOnlyProfileId, showDogProfilePath } from '../../lib/showDogProfilePath'
 import LoadingCard from '../../components/LoadingCard'
 import NotFound from '../NotFound'
@@ -12,11 +13,13 @@ import { ShowsColumn } from './ShowsColumn'
 import { EmptyDisciplineColumn } from './EmptyDisciplineColumn'
 import { DoninoSpeedColumn } from './DoninoSpeedColumn'
 import { DoninoCoursingColumn } from './DoninoCoursingColumn'
-import { DogAnalyticsSection } from './DogAnalyticsSection'
+import { MobileSubNavTabs } from '../../components/ui/MobileSubNavTabs'
+import { DogJudgesSection } from './DogJudgesSection'
+import { DogOrganizationsSection } from './DogOrganizationsSection'
 import { DogDisciplinesMobileView } from './DogDisciplinesMobileView'
 import { DogDisciplinesDesktopView } from './DogDisciplinesDesktopView'
 import { useDogProfileData } from './useDogProfileData'
-import type { DisciplineTabId } from './types'
+import type { DisciplineTabId, DogProfileMainTabId } from './types'
 
 export default function DogProfile() {
   const location = useLocation()
@@ -70,62 +73,44 @@ export default function DogProfile() {
     return <NotFound />
   }
 
-  const renderTabContent = (tabId: DisciplineTabId) => {
+  const renderDisciplineTabContent = (tabId: DisciplineTabId) => {
     switch (tabId) {
       case 'coursing':
         return data.showCoursingColumn ? (
-          <>
-            <CoursingColumn
-              hasCoursingData={data.hasCoursingData}
-              hasCourseMedals={data.hasCourseMedals}
-              coursing={data.coursing}
-              coursingEvents={data.coursingEvents}
-              visibleCoursingEvents={data.visibleCoursingEvents}
-              eventResultsUrls={data.eventResultsUrls}
-              bestScoreEventId={data.bestScoreEventId}
-              bestJudgeScoreEventId={data.bestJudgeScoreEventId}
-              avgJudgeScoreEventId={data.avgJudgeScoreEventId}
-              showAllCoursingEvents={data.showAllCoursingEvents}
-              onToggleShowAll={() => data.setShowAllCoursingEvents((v) => !v)}
-              rank={data.headerRanks.find((r) => r.key === 'coursing')}
-              breed={data.headerBreed}
-            />
-            <div className="mt-6">
-              <DogAnalyticsSection
-                judgeStats={data.judgeStats}
-                competitions={data.events}
-                defaultTab="judges"
-              />
-            </div>
-          </>
+          <CoursingColumn
+            hasCoursingData={data.hasCoursingData}
+            hasCourseMedals={data.hasCourseMedals}
+            coursing={data.coursing}
+            coursingEvents={data.coursingEvents}
+            visibleCoursingEvents={data.visibleCoursingEvents}
+            eventResultsUrls={data.eventResultsUrls}
+            bestScoreEventId={data.bestScoreEventId}
+            bestJudgeScoreEventId={data.bestJudgeScoreEventId}
+            avgJudgeScoreEventId={data.avgJudgeScoreEventId}
+            showAllCoursingEvents={data.showAllCoursingEvents}
+            onToggleShowAll={() => data.setShowAllCoursingEvents((v) => !v)}
+            rank={data.headerRanks.find((r) => r.key === 'coursing')}
+            breed={data.headerBreed}
+          />
         ) : (
           <EmptyDisciplineColumn title="Курсинг / БЗМП" theme="forest" />
         )
       case 'racing':
         return data.showRacingColumn ? (
-          <>
-            <RacingColumn
-              hasRacingData={data.hasRacingData}
-              hasRacingMedals={data.hasRacingMedals}
-              racing={data.racing}
-              racingEvents={data.racingEvents}
-              visibleRacingEvents={data.visibleRacingEvents}
-              eventResultsUrls={data.eventResultsUrls}
-              bestSpeedEventId={data.bestSpeedEventId}
-              avgSpeedEventId={data.avgSpeedEventId}
-              showAllRacingEvents={data.showAllRacingEvents}
-              onToggleShowAll={() => data.setShowAllRacingEvents((v) => !v)}
-              rank={data.headerRanks.find((r) => r.key === 'racing')}
-              breed={data.headerBreed}
-            />
-            <div className="mt-6">
-              <DogAnalyticsSection
-                judgeStats={data.judgeStats}
-                competitions={data.events}
-                defaultTab="organizations"
-              />
-            </div>
-          </>
+          <RacingColumn
+            hasRacingData={data.hasRacingData}
+            hasRacingMedals={data.hasRacingMedals}
+            racing={data.racing}
+            racingEvents={data.racingEvents}
+            visibleRacingEvents={data.visibleRacingEvents}
+            eventResultsUrls={data.eventResultsUrls}
+            bestSpeedEventId={data.bestSpeedEventId}
+            avgSpeedEventId={data.avgSpeedEventId}
+            showAllRacingEvents={data.showAllRacingEvents}
+            onToggleShowAll={() => data.setShowAllRacingEvents((v) => !v)}
+            rank={data.headerRanks.find((r) => r.key === 'racing')}
+            breed={data.headerBreed}
+          />
         ) : (
           <EmptyDisciplineColumn title="Бега борзых" theme="warm-blue" />
         )
@@ -138,28 +123,6 @@ export default function DogProfile() {
           />
         ) : (
           <EmptyDisciplineColumn title="Выставки" theme="camel" />
-        )
-      case 'donino':
-        return (
-          <div className="space-y-4">
-            {data.hasSpeedRecords && data.speedStats ? (
-              <DoninoSpeedColumn
-                speedStats={data.speedStats}
-                visibleSpeedHistory={data.visibleSpeedHistory}
-                showAllSpeedHistory={data.showAllSpeedHistory}
-                onToggleShowAll={() => data.setShowAllSpeedHistory((v) => !v)}
-              />
-            ) : null}
-
-            {data.hasCoursingRecords && data.coursingStats ? (
-              <DoninoCoursingColumn
-                coursingStats={data.coursingStats}
-                visibleCoursingDoninoHistory={data.visibleCoursingDoninoHistory}
-                showAllCoursingDoninoHistory={data.showAllCoursingDoninoHistory}
-                onToggleShowAll={() => data.setShowAllCoursingDoninoHistory((v) => !v)}
-              />
-            ) : null}
-          </div>
         )
       default:
         return null
@@ -198,106 +161,247 @@ export default function DogProfile() {
           ],
         }}
       />
-      <div ref={data.exportRef}>
-        <DogProfileHeader
-          dog={data.headerDog}
-          showTitles={data.titleGroups.show}
-          competitionTitles={data.titleGroups.competition}
-          coursingTitles={data.titleGroups.coursing}
-          racingTitles={data.titleGroups.racing}
-          titleExplanations={data.titleExplanations}
-          showRuName={Boolean(data.showRuName)}
-          exporting={data.exporting}
-          onExport={data.handleExport}
-          ranks={data.headerRanks}
-          explainers={{
-            coursing: data.hasCoursingData
-              ? {
-                  gold: data.coursing.gold,
-                  silver: data.coursing.silver,
-                  bronze: data.coursing.bronze,
-                  total_starts: data.coursing.total_starts,
-                  avg_judge_score: data.coursing.avg_judge_score,
-                  best_judge_score: data.coursing.best_judge_score,
-                }
-              : null,
-            racing: data.hasRacingData
-              ? {
-                  best_speed: data.racing.best_speed,
-                  avg_speed: data.racing.avg_speed,
-                  racing_starts: data.racing.total_starts,
-                  racing_gold: data.racing.gold,
-                  racing_silver: data.racing.silver,
-                  racing_bronze: data.racing.bronze,
-                }
-              : null,
-            shows: data.showDog
-              ? {
-                  total_shows: data.showDog.total_shows,
-                  rank_score: data.showDog.rank_score ?? null,
-                  best_award: data.showDog.best_award ?? null,
-                  best_grade: data.showDog.best_grade ?? null,
-                }
-              : null,
+
+      {/* Главные вкладки в самом верху страницы (такие же, как в Соревнованиях: Профиль, Судьи, Организации, Донино) */}
+      {data.mainTabs.length > 1 && (
+        <MobileSubNavTabs<DogProfileMainTabId>
+          tabs={data.mainTabs}
+          activeTab={data.activeMainTab}
+          onChange={(tabId) => {
+            data.setActiveMainTab(tabId)
+            if (typeof window !== 'undefined') {
+              window.history.replaceState(
+                null,
+                '',
+                tabId === 'profile' ? location.pathname : `#${tabId}`,
+              )
+            }
           }}
+          ariaLabel="Разделы собаки"
         />
+      )}
 
-        {/* Мобильный вид: вкладки и свайп-трек */}
-        <DogDisciplinesMobileView
-          availableTabs={data.availableTabs}
-          activeDiscipline={data.activeDiscipline}
-          setActiveDiscipline={data.setActiveDiscipline}
-          renderTabContent={renderTabContent}
-        />
+      {/* Страница 1: Профиль (информационная карточка собаки + 3 блока рядом) */}
+      {data.activeMainTab === 'profile' && (
+        <div ref={data.exportRef}>
+          <DogProfileHeader
+            dog={data.headerDog}
+            supremeTitles={data.titleGroups.supreme}
+            showTitles={data.titleGroups.show}
+            competitionTitles={data.titleGroups.competition}
+            coursingTitles={data.titleGroups.coursing}
+            racingTitles={data.titleGroups.racing}
+            titleExplanations={data.titleExplanations}
+            showRuName={Boolean(data.showRuName)}
+            exporting={data.exporting}
+            onExport={data.handleExport}
+            ranks={data.headerRanks}
+            explainers={{
+              coursing: data.hasCoursingData
+                ? {
+                    gold: data.coursing.gold,
+                    silver: data.coursing.silver,
+                    bronze: data.coursing.bronze,
+                    total_starts: data.coursing.total_starts,
+                    avg_judge_score: data.coursing.avg_judge_score,
+                    best_judge_score: data.coursing.best_judge_score,
+                  }
+                : null,
+              racing: data.hasRacingData
+                ? {
+                    best_speed: data.racing.best_speed,
+                    avg_speed: data.racing.avg_speed,
+                    racing_starts: data.racing.total_starts,
+                    racing_gold: data.racing.gold,
+                    racing_silver: data.racing.silver,
+                    racing_bronze: data.racing.bronze,
+                  }
+                : null,
+              shows: data.showDog
+                ? {
+                    total_shows: data.showDog.total_shows,
+                    rank_score: data.showDog.rank_score ?? null,
+                    best_award: data.showDog.best_award ?? null,
+                    best_grade: data.showDog.best_grade ?? null,
+                  }
+                : null,
+            }}
+          />
 
-        {/* Десктопный вид: 3 колонки рядом и рекорды Донино */}
-        <DogDisciplinesDesktopView
-          showCoursingColumn={data.showCoursingColumn}
-          hasCoursingData={data.hasCoursingData}
-          hasCourseMedals={data.hasCourseMedals}
-          coursing={data.coursing}
-          coursingEvents={data.coursingEvents}
-          visibleCoursingEvents={data.visibleCoursingEvents}
-          eventResultsUrls={data.eventResultsUrls}
-          bestScoreEventId={data.bestScoreEventId}
-          bestJudgeScoreEventId={data.bestJudgeScoreEventId}
-          avgJudgeScoreEventId={data.avgJudgeScoreEventId}
-          showAllCoursingEvents={data.showAllCoursingEvents}
-          onToggleShowAllCoursingEvents={() => data.setShowAllCoursingEvents((v) => !v)}
-          headerRanks={data.headerRanks}
-          headerBreed={data.headerBreed}
-          showRacingColumn={data.showRacingColumn}
-          hasRacingData={data.hasRacingData}
-          hasRacingMedals={data.hasRacingMedals}
-          racing={data.racing}
-          racingEvents={data.racingEvents}
-          visibleRacingEvents={data.visibleRacingEvents}
-          bestSpeedEventId={data.bestSpeedEventId}
-          avgSpeedEventId={data.avgSpeedEventId}
-          showAllRacingEvents={data.showAllRacingEvents}
-          onToggleShowAllRacingEvents={() => data.setShowAllRacingEvents((v) => !v)}
-          showDog={data.showDog}
-          judgeStats={data.judgeStats}
-          events={data.events}
-          hasSpeedRecords={data.hasSpeedRecords}
-          hasCoursingRecords={data.hasCoursingRecords}
-          speedStats={data.speedStats}
-          coursingStats={data.coursingStats}
-          visibleSpeedHistory={data.visibleSpeedHistory}
-          showAllSpeedHistory={data.showAllSpeedHistory}
-          onToggleShowAllSpeedHistory={() => data.setShowAllSpeedHistory((v) => !v)}
-          visibleCoursingDoninoHistory={data.visibleCoursingDoninoHistory}
-          showAllCoursingDoninoHistory={data.showAllCoursingDoninoHistory}
-          onToggleShowAllCoursingDoninoHistory={() => data.setShowAllCoursingDoninoHistory((v) => !v)}
-        />
+          {/* Мобильный вид: вкладки дисциплин и свайп-трек */}
+          <DogDisciplinesMobileView
+            availableTabs={data.availableTabs}
+            activeDiscipline={data.activeDiscipline}
+            setActiveDiscipline={data.setActiveDiscipline}
+            renderTabContent={renderDisciplineTabContent}
+          />
 
-        {/* Дисклеймер об источниках спортивных результатов */}
-        <footer className="mt-8 rounded-xl border border-old-money-100 bg-cream-50/30 p-3 text-center sm:text-left">
-          <p className="text-[11px] sm:text-xs leading-relaxed text-charcoal-500">
-            <strong>Примечание:</strong> спортивная статистика и результаты состязаний систематизированы на основе открытых протоколов организаторов, полевых секретариатов и материалов ProCoursing.ru. Сведения могут содержать ошибки или быть неполными из-за фрагментарности открытых источников и ручного ведения ранних баз организаторами. Проект является независимым архивом и не является официальным сайтом РКФ.
-          </p>
-        </footer>
-      </div>
+          {/* Десктопный вид: 3 блока рядом (курсинг, бега, выставки) и история этих блоков под ними */}
+          <DogDisciplinesDesktopView
+            showCoursingColumn={data.showCoursingColumn}
+            hasCoursingData={data.hasCoursingData}
+            hasCourseMedals={data.hasCourseMedals}
+            coursing={data.coursing}
+            coursingEvents={data.coursingEvents}
+            visibleCoursingEvents={data.visibleCoursingEvents}
+            eventResultsUrls={data.eventResultsUrls}
+            bestScoreEventId={data.bestScoreEventId}
+            bestJudgeScoreEventId={data.bestJudgeScoreEventId}
+            avgJudgeScoreEventId={data.avgJudgeScoreEventId}
+            showAllCoursingEvents={data.showAllCoursingEvents}
+            onToggleShowAllCoursingEvents={() => data.setShowAllCoursingEvents((v) => !v)}
+            headerRanks={data.headerRanks}
+            headerBreed={data.headerBreed}
+            showRacingColumn={data.showRacingColumn}
+            hasRacingData={data.hasRacingData}
+            hasRacingMedals={data.hasRacingMedals}
+            racing={data.racing}
+            racingEvents={data.racingEvents}
+            visibleRacingEvents={data.visibleRacingEvents}
+            bestSpeedEventId={data.bestSpeedEventId}
+            avgSpeedEventId={data.avgSpeedEventId}
+            showAllRacingEvents={data.showAllRacingEvents}
+            onToggleShowAllRacingEvents={() => data.setShowAllRacingEvents((v) => !v)}
+            showDog={data.showDog}
+          />
+        </div>
+      )}
+
+      {/* Страница 2: Судьи */}
+      {data.activeMainTab === 'judges' && (
+        <div className="space-y-4">
+          <div className="rounded-2xl border border-old-money-200/90 bg-cream-50/80 p-3.5 sm:p-4 flex items-center justify-between gap-3 shadow-2xs">
+            <div className="min-w-0">
+              <div className="text-[11px] uppercase tracking-wider text-charcoal-500 font-semibold">
+                Судейская статистика собаки
+              </div>
+              <h1 className="text-lg sm:text-xl font-bold font-serif text-charcoal-900 truncate mt-0.5">
+                {data.displayName}
+              </h1>
+              <div className="text-xs text-charcoal-600 mt-0.5">
+                {data.dogBreed}
+              </div>
+            </div>
+            <button
+              type="button"
+              onClick={() => {
+                data.setActiveMainTab('profile')
+                if (typeof window !== 'undefined') {
+                  window.history.replaceState(null, '', location.pathname)
+                }
+              }}
+              className="shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-old-money-200 bg-white text-xs font-semibold text-charcoal-700 hover:bg-cream-100 hover:text-charcoal-950 transition-colors cursor-pointer"
+            >
+              <span>В профиль</span>
+              <ArrowRight className="w-3.5 h-3.5 text-camel-700" />
+            </button>
+          </div>
+
+          <DogJudgesSection
+            judgeStats={data.judgeStats}
+            competitions={data.events}
+          />
+        </div>
+      )}
+
+      {/* Страница 3: Организации */}
+      {data.activeMainTab === 'organizations' && (
+        <div className="space-y-4">
+          <div className="rounded-2xl border border-old-money-200/90 bg-cream-50/80 p-3.5 sm:p-4 flex items-center justify-between gap-3 shadow-2xs">
+            <div className="min-w-0">
+              <div className="text-[11px] uppercase tracking-wider text-charcoal-500 font-semibold">
+                Победы по организациям
+              </div>
+              <h1 className="text-lg sm:text-xl font-bold font-serif text-charcoal-900 truncate mt-0.5">
+                {data.displayName}
+              </h1>
+              <div className="text-xs text-charcoal-600 mt-0.5">
+                {data.dogBreed}
+              </div>
+            </div>
+            <button
+              type="button"
+              onClick={() => {
+                data.setActiveMainTab('profile')
+                if (typeof window !== 'undefined') {
+                  window.history.replaceState(null, '', location.pathname)
+                }
+              }}
+              className="shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-old-money-200 bg-white text-xs font-semibold text-charcoal-700 hover:bg-cream-100 hover:text-charcoal-950 transition-colors cursor-pointer"
+            >
+              <span>В профиль</span>
+              <ArrowRight className="w-3.5 h-3.5 text-camel-700" />
+            </button>
+          </div>
+
+          <DogOrganizationsSection
+            competitions={data.events}
+          />
+        </div>
+      )}
+
+      {/* Страница 4: Донино (только если есть замеры Донино) */}
+      {data.activeMainTab === 'donino' && (
+        <div className="space-y-4">
+          <div className="rounded-2xl border border-old-money-200/90 bg-cream-50/80 p-3.5 sm:p-4 flex items-center justify-between gap-3 shadow-2xs">
+            <div className="min-w-0">
+              <div className="text-[11px] uppercase tracking-wider text-charcoal-500 font-semibold">
+                Рекорды полигона Донино
+              </div>
+              <h1 className="text-lg sm:text-xl font-bold font-serif text-charcoal-900 truncate mt-0.5">
+                {data.displayName}
+              </h1>
+              <div className="text-xs text-charcoal-600 mt-0.5">
+                {data.dogBreed}
+              </div>
+            </div>
+            <button
+              type="button"
+              onClick={() => {
+                data.setActiveMainTab('profile')
+                if (typeof window !== 'undefined') {
+                  window.history.replaceState(null, '', location.pathname)
+                }
+              }}
+              className="shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-old-money-200 bg-white text-xs font-semibold text-charcoal-700 hover:bg-cream-100 hover:text-charcoal-950 transition-colors cursor-pointer"
+            >
+              <span>В профиль</span>
+              <ArrowRight className="w-3.5 h-3.5 text-camel-700" />
+            </button>
+          </div>
+
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
+            {data.hasSpeedRecords && data.speedStats ? (
+              <DoninoSpeedColumn
+                speedStats={data.speedStats}
+                visibleSpeedHistory={data.visibleSpeedHistory}
+                showAllSpeedHistory={data.showAllSpeedHistory}
+                onToggleShowAll={() => data.setShowAllSpeedHistory((v) => !v)}
+              />
+            ) : (
+              <EmptyDisciplineColumn title="Замер скорости" theme="warm-blue" />
+            )}
+
+            {data.hasCoursingRecords && data.coursingStats ? (
+              <DoninoCoursingColumn
+                coursingStats={data.coursingStats}
+                visibleCoursingDoninoHistory={data.visibleCoursingDoninoHistory}
+                showAllCoursingDoninoHistory={data.showAllCoursingDoninoHistory}
+                onToggleShowAll={() => data.setShowAllCoursingDoninoHistory((v) => !v)}
+              />
+            ) : (
+              <EmptyDisciplineColumn title="Бега борзых (350 м)" theme="forest" />
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* Дисклеймер об источниках спортивных результатов */}
+      <footer className="mt-8 rounded-xl border border-old-money-100 bg-cream-50/30 p-3 text-center sm:text-left">
+        <p className="text-[11px] sm:text-xs leading-relaxed text-charcoal-500">
+          <strong>Примечание:</strong> спортивная статистика и результаты состязаний систематизированы на основе открытых протоколов организаторов, полевых секретариатов и материалов ProCoursing.ru. Сведения могут содержать ошибки или быть неполными из-за фрагментарности открытых источников и ручного ведения ранних баз организаторами. Проект является независимым архивом и не является официальным сайтом РКФ.
+        </p>
+      </footer>
     </>
   )
 }

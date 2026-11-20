@@ -64,6 +64,7 @@ export interface CumulativeEvaluationResult {
   completed: CumulativeTitle[]
   inProgress: CumulativeTitle[]
   all: CumulativeTitle[]
+  officialSupremeTitles: Array<{ title: string; count: number }>
   officialCoursingTitles: Array<{ title: string; count: number }>
   officialRacingTitles: Array<{ title: string; count: number }>
   officialSportTitles: Array<{ title: string; count: number }>
@@ -589,15 +590,22 @@ export function evaluateCumulativeTitles(data: DogCareerData): CumulativeEvaluat
   // 4. СБОРКА ОФИЦИАЛЬНЫХ СПИСКОВ ТИТУЛОВ ДЛЯ ШАПКИ ПРОФИЛЯ
   // =========================================================================
 
+  // 4.0 ВЫСШИЕ ЗВАНИЯ (межсекторальные / мультиспорт: АЧР, ГЧР РК, ГЧРКФ РК, C.I.C.)
+  const officialSupremeTitles: Array<{ title: string; count: number }> = []
+
+  if (absoluteCompleted) {
+    officialSupremeTitles.push({ title: 'АЧР', count: 1 })
+  }
+  if (gchrSportCompleted) {
+    officialSupremeTitles.push({ title: 'ГЧР РК', count: 1 })
+  }
+  if (gchrkfCompleted) {
+    officialSupremeTitles.push({ title: 'ГЧРКФ РК', count: 1 })
+  }
+
   // 4.1 КУРСИНГ (титулы без суффиксов, строка в UI называется «Курсинг»)
   const officialCoursingTitles: Array<{ title: string; count: number }> = []
 
-  if (gchrSportCompleted) {
-    officialCoursingTitles.push({ title: 'ГЧР РК', count: 1 })
-  }
-  if (gchrkfCompleted) {
-    officialCoursingTitles.push({ title: 'ГЧРКФ РК', count: 1 })
-  }
   if (coursingEval.hasChr) {
     officialCoursingTitles.push({ title: 'ЧР РК', count: 1 })
   }
@@ -618,12 +626,6 @@ export function evaluateCumulativeTitles(data: DogCareerData): CumulativeEvaluat
   // 4.2 РЕЙСИНГ (титулы без суффиксов, строка в UI называется «Рейсинг»)
   const officialRacingTitles: Array<{ title: string; count: number }> = []
 
-  if (gchrSportCompleted) {
-    officialRacingTitles.push({ title: 'ГЧР РК', count: 1 })
-  }
-  if (gchrkfCompleted) {
-    officialRacingTitles.push({ title: 'ГЧРКФ РК', count: 1 })
-  }
   if (racingEval.hasChr) {
     officialRacingTitles.push({ title: 'ЧР РК', count: 1 })
   }
@@ -694,15 +696,22 @@ export function evaluateCumulativeTitles(data: DogCareerData): CumulativeEvaluat
     for (const item of data.competitionTitles) {
       if (
         (item.title.includes('C.I.C') || item.title.includes('ИНТЕР')) &&
-        !officialSportTitles.some((t) => t.title.includes('C.I.C'))
+        !officialSupremeTitles.some((t) => t.title.includes('C.I.C'))
       ) {
+        officialSupremeTitles.push({ title: item.title, count: item.count })
         officialSportTitles.push({ title: item.title, count: item.count })
-        officialCoursingTitles.push({ title: item.title, count: item.count })
       }
     }
   }
 
+  officialSupremeTitles.sort((a, b) => compareDogProfileTitles(a.title, b.title))
   officialSportTitles.sort((a, b) => compareDogProfileTitles(a.title, b.title))
+
+  // Тултипы высших званий
+  titleExplanations['supreme:АЧР'] =
+    'Абсолютный чемпион России: высшее звание РКФ (Гранд чемпион России по выставкам + Чемпион по рабочим качествам)'
+  titleExplanations['supreme:ГЧР РК'] = gchrBasis
+  titleExplanations['supreme:ГЧРКФ РК'] = gchrkfBasis
 
   // Тултипы с контекстом дисциплины (для всплывающих подсказок в шапке)
   titleExplanations['coursing:ЧР РК'] = coursingEval.hasChr
@@ -711,7 +720,6 @@ export function evaluateCumulativeTitles(data: DogCareerData): CumulativeEvaluat
   titleExplanations['coursing:НЧ РК'] = coursingEval.nchBasis || 'Национальный чемпион по курсингу борзых'
   titleExplanations['coursing:ЧРКФ РК'] = `Титул «Чемпион РКФ по рабочим качествам» в курсинге борзых (${coursingEval.chrkfCount} побед)`
   titleExplanations['coursing:ПЧРКФ РК'] = `1-е место на Монопородном Чемпионате РКФ по курсингу борзых`
-  titleExplanations['coursing:ГЧРКФ РК'] = gchrkfBasis
 
   titleExplanations['racing:ЧР РК'] = racingEval.hasChr
     ? `1-е место на Чемпионате России по бегам борзых (${racingEval.chrEvent?.date_start || ''})`
@@ -719,7 +727,6 @@ export function evaluateCumulativeTitles(data: DogCareerData): CumulativeEvaluat
   titleExplanations['racing:НЧ РК'] = racingEval.nchBasis || 'Национальный чемпион по бегам борзых'
   titleExplanations['racing:ЧРКФ РК'] = `Титул «Чемпион РКФ по рабочим качествам» в бегах борзых (${racingEval.chrkfCount} побед)`
   titleExplanations['racing:ПЧРКФ РК'] = `1-е место на Монопородном Чемпионате РКФ по бегам борзых`
-  titleExplanations['racing:ГЧРКФ РК'] = gchrkfBasis
 
   // ВЫСТАВКИ: строго официальные титулы РКФ
   const officialShowTitles: Array<{ title: string; count: number }> = []
@@ -753,6 +760,7 @@ export function evaluateCumulativeTitles(data: DogCareerData): CumulativeEvaluat
     completed,
     inProgress,
     all: titles,
+    officialSupremeTitles,
     officialCoursingTitles,
     officialRacingTitles,
     officialSportTitles,

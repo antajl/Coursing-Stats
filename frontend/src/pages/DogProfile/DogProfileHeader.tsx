@@ -48,6 +48,7 @@ type DogProfileHeaderProps = {
   dog: any
   showTitles: DogTitle[]
   competitionTitles: DogTitle[]
+  supremeTitles?: DogTitle[]
   coursingTitles?: DogTitle[]
   racingTitles?: DogTitle[]
   showRuName: boolean
@@ -67,6 +68,7 @@ export function DogProfileHeader({
   dog,
   showTitles,
   competitionTitles,
+  supremeTitles,
   coursingTitles,
   racingTitles,
   showRuName,
@@ -84,6 +86,7 @@ export function DogProfileHeader({
   const hasTitles =
     showTitles.some((t) => !isCertificateToken(t.title)) ||
     competitionTitles.some((t) => !isCertificateToken(t.title)) ||
+    Boolean(supremeTitles?.some((t) => !isCertificateToken(t.title))) ||
     Boolean(coursingTitles?.some((t) => !isCertificateToken(t.title))) ||
     Boolean(racingTitles?.some((t) => !isCertificateToken(t.title)))
   const { isFavorite, toggleFavorite } = useFavorites()
@@ -349,6 +352,7 @@ export function DogProfileHeader({
           {(hasTitles || achievements.length > 0) && (
             <div className="mt-4 pt-3.5 border-t border-cream-200/70">
               <DogProfileAwardsBar
+                supremeTitles={supremeTitles}
                 competitionTitles={competitionTitles}
                 coursingTitles={coursingTitles}
                 racingTitles={racingTitles}

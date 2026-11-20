@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { Crown } from 'lucide-react'
 import HoverTooltip from '../../components/ui/HoverTooltip'
 import { matchShowAwardToken } from '../../../../backend/lib/show-award-ranking'
 import { competitionTitleDisplayName } from '../../../../backend/lib/competition-titles'
@@ -25,6 +26,7 @@ function cleanDisciplineSuffix(title: string): string {
 }
 
 type DogProfileAwardsBarProps = {
+  supremeTitles?: DogTitle[]
   coursingTitles?: DogTitle[]
   racingTitles?: DogTitle[]
   competitionTitles?: DogTitle[]
@@ -34,6 +36,7 @@ type DogProfileAwardsBarProps = {
 }
 
 export function DogProfileAwardsBar({
+  supremeTitles = [],
   coursingTitles = [],
   racingTitles = [],
   competitionTitles = [],
@@ -42,19 +45,26 @@ export function DogProfileAwardsBar({
   titleExplanations = {},
 }: DogProfileAwardsBarProps): ReactNode {
   // Оставляем ТОЛЬКО официальные чемпионские звания РКФ/FCI (без сертификатов, без расстановок дня BIS/BIG/ЛПП и без клубных лиг)
+  const pureSupremeTitles = supremeTitles.filter(
+    (item) => isOfficialDogTitleToken(item.title, 'sport') || isOfficialDogTitleToken(item.title, 'show'),
+  )
   const pureCoursingTitles = coursingTitles.filter((item) => isOfficialDogTitleToken(item.title, 'sport'))
   const pureRacingTitles = racingTitles.filter((item) => isOfficialDogTitleToken(item.title, 'sport'))
   const pureCompTitles = competitionTitles.filter((item) => isOfficialDogTitleToken(item.title, 'sport'))
   const pureShowTitles = showTitles.filter((item) => isOfficialDogTitleToken(item.title, 'show'))
 
+  const hasSupreme = pureSupremeTitles.length > 0
   const hasCoursing = pureCoursingTitles.length > 0
   const hasRacing = pureRacingTitles.length > 0
   const hasComp = pureCompTitles.length > 0
   const hasShow = pureShowTitles.length > 0
   const hasAchievements = achievements.length > 0
 
-  if (!hasCoursing && !hasRacing && !hasComp && !hasShow && !hasAchievements) return null
+  if (!hasSupreme && !hasCoursing && !hasRacing && !hasComp && !hasShow && !hasAchievements) return null
 
+  const sortedSupreme = [...pureSupremeTitles].sort((a, b) =>
+    compareDogProfileTitles(a.title, b.title),
+  )
   const sortedCoursing = [...pureCoursingTitles].sort((a, b) =>
     compareDogProfileTitles(a.title, b.title),
   )
@@ -69,6 +79,7 @@ export function DogProfileAwardsBar({
   )
 
   const renderChip = (item: DogTitle, keyPrefix: string) => {
+    const isSupreme = keyPrefix === 'supreme'
     const isShow = keyPrefix === 'show'
     const showKey = matchShowAwardToken(item.title)
     // ВАЖНО: для выставок титул «ЧР» — это Чемпион России (не путать с «ЧР РК»)
@@ -78,8 +89,8 @@ export function DogProfileAwardsBar({
           : (showKey ? item.title : item.title))
       : competitionTitleDisplayName(item.title)
 
-    // В строках «Курсинг» и «Рейсинг» опускаем суффиксы дисциплин (КБ / ББ)
-    const badgeTitle = (keyPrefix === 'coursing' || keyPrefix === 'racing')
+    // В строках «Курсинг», «Рейсинг» и «Высшие звания» опускаем суффиксы дисциплин (КБ / ББ)
+    const badgeTitle = (keyPrefix === 'coursing' || keyPrefix === 'racing' || keyPrefix === 'supreme')
       ? cleanDisciplineSuffix(rawBadgeTitle)
       : rawBadgeTitle
 
@@ -90,6 +101,10 @@ export function DogProfileAwardsBar({
       titleExplanations[badgeTitle] ||
       titleExplanations[item.title]
 
+    const chipClass = isSupreme
+      ? 'border border-amber-500/80 bg-gradient-to-r from-amber-50 via-cream-50 to-amber-100/60 text-amber-950 font-bold shadow-2xs hover:border-amber-600'
+      : titleBadgeClass(badgeTitle)
+
     return (
       <HoverTooltip
         key={`${keyPrefix}-${badgeTitle}`}
@@ -97,8 +112,9 @@ export function DogProfileAwardsBar({
           explanation ? (
             <div className="flex flex-col gap-1 max-w-xs text-left">
               <div className="flex items-center gap-1.5 font-bold text-xs text-charcoal-900">
-                <span className={`px-1.5 py-0.5 rounded text-[11px] font-semibold ${titleBadgeClass(badgeTitle)}`}>
-                  {badgeTitle}
+                <span className={`inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[11px] font-semibold ${chipClass}`}>
+                  {isSupreme && <Crown className="h-3 w-3 text-amber-600 shrink-0" aria-hidden />}
+                  <span>{badgeTitle}</span>
                 </span>
                 <span className="text-[11px] font-medium leading-snug">
                   {awardTooltipForDogTitle(item.title, item.count, isShow)}
@@ -118,10 +134,11 @@ export function DogProfileAwardsBar({
         portal
       >
         <span
-          className={`inline-flex shrink-0 items-center rounded-md px-2 py-0.5 text-[11px] font-semibold tabular-nums whitespace-nowrap transition-transform hover:scale-105 ${titleBadgeClass(badgeTitle)}`}
+          className={`inline-flex shrink-0 items-center gap-1 rounded-md px-2 py-0.5 text-[11px] font-semibold tabular-nums whitespace-nowrap transition-transform hover:scale-105 ${chipClass}`}
           tabIndex={0}
         >
-          {line}
+          {isSupreme && <Crown className="h-3 w-3 text-amber-600 shrink-0" aria-hidden />}
+          <span>{line}</span>
         </span>
       </HoverTooltip>
     )
@@ -129,11 +146,23 @@ export function DogProfileAwardsBar({
 
   return (
     <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3 lg:gap-6">
-      {/* СЛЕВА: Титулы курсинга, рейсинга и выставок */}
-      {(hasCoursing || hasRacing || hasComp || hasShow) && (
+      {/* СЛЕВА: Титулы высших званий, курсинга, рейсинга и выставок */}
+      {(hasSupreme || hasCoursing || hasRacing || hasComp || hasShow) && (
         <div className="space-y-1.5 min-w-0 flex-1">
+          {hasSupreme && (
+            <div className="grid grid-cols-[6.5rem_1fr] items-baseline gap-2">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-amber-700/90 select-none flex items-center gap-1">
+                <Crown className="h-3 w-3 text-amber-600 shrink-0" aria-hidden />
+                <span>Высшие</span>
+              </span>
+              <div className="flex flex-wrap items-center gap-1.5 min-w-0">
+                {sortedSupreme.map((item) => renderChip(item, 'supreme'))}
+              </div>
+            </div>
+          )}
+
           {hasCoursing && (
-            <div className="grid grid-cols-[5rem_1fr] items-baseline gap-2">
+            <div className="grid grid-cols-[6.5rem_1fr] items-baseline gap-2">
               <span className="text-[10px] font-bold uppercase tracking-wider text-charcoal-400 select-none">
                 Курсинг
               </span>
@@ -144,7 +173,7 @@ export function DogProfileAwardsBar({
           )}
 
           {hasRacing && (
-            <div className="grid grid-cols-[5rem_1fr] items-baseline gap-2">
+            <div className="grid grid-cols-[6.5rem_1fr] items-baseline gap-2">
               <span className="text-[10px] font-bold uppercase tracking-wider text-charcoal-400 select-none">
                 Рейсинг
               </span>
@@ -155,7 +184,7 @@ export function DogProfileAwardsBar({
           )}
 
           {hasComp && !hasCoursing && !hasRacing && (
-            <div className="grid grid-cols-[5rem_1fr] items-baseline gap-2">
+            <div className="grid grid-cols-[6.5rem_1fr] items-baseline gap-2">
               <span className="text-[10px] font-bold uppercase tracking-wider text-charcoal-400 select-none">
                 Спорт
               </span>
@@ -166,7 +195,7 @@ export function DogProfileAwardsBar({
           )}
 
           {hasShow && (
-            <div className="grid grid-cols-[5rem_1fr] items-baseline gap-2">
+            <div className="grid grid-cols-[6.5rem_1fr] items-baseline gap-2">
               <span className="text-[10px] font-bold uppercase tracking-wider text-charcoal-400 select-none">
                 Выставки
               </span>

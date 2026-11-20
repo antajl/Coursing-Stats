@@ -141,6 +141,7 @@ describe('evaluateCumulativeTitles', () => {
       completed,
       inProgress,
       officialSportTitles,
+      officialSupremeTitles,
       officialCoursingTitles,
       officialRacingTitles,
       officialShowTitles,
@@ -187,17 +188,20 @@ describe('evaluateCumulativeTitles', () => {
       { title: 'ПЧРКФ РК (КБ)', count: 1 },
     ])
 
-    // 5.1 Official coursing titles (without (КБ) suffix)
-    expect(officialCoursingTitles).toEqual([
+    // 5.0 Official supreme multi-discipline titles
+    expect(officialSupremeTitles).toEqual([
       { title: 'ГЧРКФ РК', count: 1 },
+    ])
+
+    // 5.1 Official coursing titles (pure coursing without duplicate supreme or (КБ) suffix)
+    expect(officialCoursingTitles).toEqual([
       { title: 'НЧ РК', count: 1 },
       { title: 'ЧРКФ РК', count: 1 },
       { title: 'ПЧРКФ РК', count: 1 },
     ])
 
-    // 5.2 Official racing titles (without (ББ) suffix)
+    // 5.2 Official racing titles (pure racing without duplicate supreme or (ББ) suffix)
     expect(officialRacingTitles).toEqual([
-      { title: 'ГЧРКФ РК', count: 1 },
       { title: 'ЧР РК', count: 1 },
       { title: 'НЧ РК', count: 1 },
       { title: 'ЧРКФ РК', count: 2 },

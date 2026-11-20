@@ -1,6 +1,6 @@
 import { useState, useRef, useMemo, useEffect } from 'react'
 import { useParams, useLocation, useSearchParams } from 'react-router-dom'
-import { Rabbit, Gauge, Sparkles, Timer } from 'lucide-react'
+import { Rabbit, Gauge, Sparkles, Timer, Scale, Trophy } from 'lucide-react'
 import {
   useDogProfile,
   useDogEvents,
@@ -23,7 +23,7 @@ import { useYandexGoal } from '../../components/YandexMetrica'
 import { buildEventResultsUrlMap } from '../../lib/procoursingLinks'
 import type { ShowDogCardData } from '../Shows/ShowDogCard'
 import type { DogJudgesStats } from './DogJudgesSection'
-import type { DisciplineTabId, DisciplineTabItem } from './types'
+import type { DisciplineTabId, DisciplineTabItem, DogProfileMainTabId, DogProfileMainTabItem } from './types'
 import {
   HISTORY_DEFAULT,
   computeSpeedStats,
@@ -249,15 +249,17 @@ export function useDogProfileData() {
     })
   }, [headerDog?.id, headerBreed, events, rawTitleGroups.competition, showDog?.titles, showDog?.history])
 
-  // Строго официальные титулы РКФ с разделением по спортивным дисциплинам и выставкам
+  // Строго официальные титулы РКФ с разделением по высшим званиям, спортивным дисциплинам и выставкам
   const titleGroups = useMemo(() => {
     return {
+      supreme: cumulativeTitles.officialSupremeTitles,
       coursing: cumulativeTitles.officialCoursingTitles,
       racing: cumulativeTitles.officialRacingTitles,
       competition: cumulativeTitles.officialSportTitles,
       show: cumulativeTitles.officialShowTitles,
     }
   }, [
+    cumulativeTitles.officialSupremeTitles,
     cumulativeTitles.officialCoursingTitles,
     cumulativeTitles.officialRacingTitles,
     cumulativeTitles.officialSportTitles,
@@ -297,6 +299,52 @@ export function useDogProfileData() {
         (Array.isArray(showDog.history) && showDog.history.length > 0)),
   )
 
+  const hasValidCompetitionStarts = useMemo(() => {
+    return events.some((e) => e.placement != null && Number(e.placement) > 0)
+  }, [events])
+
+  const hasDonino = hasSpeedRecords || hasCoursingRecords
+
+  const mainTabs = useMemo(() => {
+    const tabs: DogProfileMainTabItem[] = [
+      { id: 'profile', label: 'Профиль' },
+    ]
+    if (judgeStats && Array.isArray(judgeStats.judges) && judgeStats.judges.length > 0) {
+      tabs.push({ id: 'judges', label: 'Судьи' })
+    }
+    if (hasValidCompetitionStarts) {
+      tabs.push({ id: 'organizations', label: 'Организации' })
+    }
+    if (hasDonino) {
+      tabs.push({ id: 'donino', label: 'Донино' })
+    }
+    return tabs
+  }, [judgeStats, hasValidCompetitionStarts, hasDonino])
+
+  const [activeMainTab, setActiveMainTab] = useState<DogProfileMainTabId>(() => {
+    const hash = typeof window !== 'undefined' ? window.location.hash.replace(/^#/, '') : ''
+    if (hash === 'judges') return 'judges'
+    if (hash === 'organizations' || hash === 'orgs') return 'organizations'
+    if (hash === 'donino' || hash === 'speeds') return 'donino'
+    return 'profile'
+  })
+
+  // Sync main tab when URL hash changes
+  useEffect(() => {
+    const hash = location.hash.replace(/^#/, '')
+    if (!hash) return
+    if (hash === 'judges') {
+      setActiveMainTab('judges')
+    } else if (hash === 'organizations' || hash === 'orgs') {
+      setActiveMainTab('organizations')
+    } else if (hash === 'donino' || hash === 'speeds') {
+      setActiveMainTab('donino')
+    } else if (hash === 'profile' || hash === 'coursing' || hash === 'racing' || hash === 'shows') {
+      setActiveMainTab('profile')
+    }
+  }, [location.hash])
+
+  // Disciplines available on mobile inside the "Профиль" tab
   const availableTabs = useMemo(() => {
     const tabs: DisciplineTabItem[] = []
 
@@ -327,15 +375,6 @@ export function useDogProfileData() {
         theme: 'camel',
       })
     }
-    if ((hasSpeedRecords || hasCoursingRecords) && !showCoursingColumn && !showRacingColumn) {
-      tabs.push({
-        id: 'donino',
-        label: 'Донино',
-        icon: Timer,
-        count: speedRecords.length + coursingRecords.length,
-        theme: 'forest',
-      })
-    }
     return tabs
   }, [
     showCoursingColumn,
@@ -347,10 +386,6 @@ export function useDogProfileData() {
     hasShowData,
     showDog?.total_shows,
     showDog?.history?.length,
-    hasSpeedRecords,
-    hasCoursingRecords,
-    speedRecords.length,
-    coursingRecords.length,
   ])
 
   const [activeDiscipline, setActiveDiscipline] = useState<DisciplineTabId>(() => {
@@ -358,13 +393,9 @@ export function useDogProfileData() {
     if (hash === 'shows') return 'shows'
     if (hash === 'racing') return 'racing'
     if (hash === 'coursing' || hash === 'competitions') return 'coursing'
-    if (hash === 'donino' || hash === 'speeds') return 'donino'
-    if (hash === 'judges') return 'judges'
-    if (fromSpeedRecords || fromCoursingRecords) return 'donino'
     if (showCoursingColumn) return 'coursing'
     if (showRacingColumn) return 'racing'
     if (hasShowData) return 'shows'
-    if (hasSpeedRecords || hasCoursingRecords) return 'donino'
     return 'coursing'
   })
 
@@ -376,8 +407,6 @@ export function useDogProfileData() {
     if (hash === 'shows') targetTab = 'shows'
     else if (hash === 'racing') targetTab = 'racing'
     else if (hash === 'coursing' || hash === 'competitions') targetTab = 'coursing'
-    else if (hash === 'donino' || hash === 'speeds') targetTab = 'donino'
-    else if (hash === 'judges') targetTab = 'judges'
 
     if (targetTab && availableTabs.some((t) => t.id === targetTab)) {
       setActiveDiscipline(targetTab)
@@ -386,13 +415,9 @@ export function useDogProfileData() {
 
   useEffect(() => {
     if (availableTabs.length > 0 && !availableTabs.some((t) => t.id === activeDiscipline)) {
-      if ((fromSpeedRecords || fromCoursingRecords) && availableTabs.some((t) => t.id === 'donino')) {
-        setActiveDiscipline('donino')
-      } else {
-        setActiveDiscipline(availableTabs[0].id)
-      }
+      setActiveDiscipline(availableTabs[0].id)
     }
-  }, [availableTabs, activeDiscipline, fromSpeedRecords, fromCoursingRecords])
+  }, [availableTabs, activeDiscipline])
 
   const handleExport = async () => {
     if (!exportRef.current || exporting) return
@@ -524,12 +549,17 @@ export function useDogProfileData() {
     showRacingColumn,
     hasSpeedRecords,
     hasCoursingRecords,
+    hasDonino,
     judgeStats,
     bestScoreEventId,
     bestJudgeScoreEventId,
     avgJudgeScoreEventId,
     bestSpeedEventId,
     avgSpeedEventId,
+    mainTabs,
+    activeMainTab,
+    setActiveMainTab,
+    hasValidCompetitionStarts,
     availableTabs,
     activeDiscipline,
     setActiveDiscipline,
