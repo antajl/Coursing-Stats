@@ -123,7 +123,11 @@ export interface BreedAnnualLeadersData {
   generated_at: string;
   total_breeds: number;
   breeds_with_data: number;
+  breeds_with_coursing?: number;
+  breeds_with_racing?: number;
   total_entries: number;
+  coursing_by_slug?: Record<string, AnnualDogLeader[]>;
+  racing_by_slug?: Record<string, AnnualDogLeader[]>;
   leaders_by_slug: Record<string, AnnualDogLeader[]>;
 }
 
