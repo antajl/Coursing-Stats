@@ -20,7 +20,7 @@ JSON from CDN only — **no** Worker/D1 runtime
 
 ### S3 Cache policy
 
-`/assets/*` 1y immutable, HTML no-cache, `/data/v1/` 1h ([sheet 09](docs/sheets/09-ops-deploy.md))
+`/assets/*` 1y immutable, HTML no-cache, `/data/v1/` 1h ([sheet 09](../sheets/09-ops-deploy.md))
 
 ### Truth
 
@@ -28,7 +28,7 @@ JSON from CDN only — **no** Worker/D1 runtime
 
 ### CDN packs
 
-`dog-profiles/pack-*`, show `judge-details/pack-*` ([ADR-014](docs/decisions/014-cdn-packs-vs-turso.md))
+`dog-profiles/pack-*`, show `judge-details/pack-*` ([ADR-014](../decisions/014-cdn-packs-vs-turso.md))
 
 ### Pages slim
 
@@ -44,7 +44,7 @@ ON in `data/v1/ui-flags.json` (competitions + shows)
 
 ### Legacy scripts & Drafts
 
-Одноразовые исторические скрипты черновиков состязаний (2021–2022), утилиты Turso и Elo полностью удалены из кодовой базы ([ADR-015](docs/decisions/015-legacy-code-cleanup.md)). Запрещено захламлять кодовую базу устаревшими черновиками; ввод ведётся строго через `yarn ingest-competition`
+Одноразовые исторические скрипты черновиков состязаний (2021–2022), утилиты Turso и Elo полностью удалены из кодовой базы ([ADR-015](../decisions/015-legacy-code-cleanup.md)). Запрещено захламлять кодовую базу устаревшими черновиками; ввод ведётся строго через `yarn ingest-competition`
 
 ### S3 Asset Compression
 

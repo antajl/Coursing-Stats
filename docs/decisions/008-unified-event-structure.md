@@ -6,6 +6,9 @@
 **Reason:** Not relevant anymore, no longer planned  
 **Decision:** Unify competitions and exhibitions into single event structure
 
+> [!WARNING]
+> **DEPRECATED (ОТКЛОНЕНО):** Решение признано нецелесообразным и отменено 2026-09-28. Соревнования (`competitions`), выставки (`shows`) и Донино имеют принципиально разную структуру и строго изолированы по разным доменам. Единая структура событий запрещена правилами чистоты доменов.
+
 ## Context
 
 Currently data is stored in separate directories with different schemas:

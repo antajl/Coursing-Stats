@@ -6,6 +6,9 @@
 **Reason:** Not prioritized; possible future consideration  
 **Decision:** Implement automatic monitoring of RKF calendar for new exhibitions and reports
 
+> [!NOTE]
+> **DEPRECATED (ОТКЛОНЕНО):** Решение отменено 2026-09-28. Фоновый постоянный скрапинг календаря РКФ через GitHub Actions каждые 6 часов не используется, чтобы избежать блокировок и хрупких сбоев. Обновление ведётся контролируемыми скриптами.
+
 ## Context
 
 Current workflow:
