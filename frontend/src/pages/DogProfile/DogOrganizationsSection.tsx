@@ -1,699 +1,432 @@
 import { useState, useMemo, useEffect, useRef } from 'react'
-import { Link } from 'react-router-dom'
-import PlacementMedalBadge from '../../components/PlacementMedalBadge'
 import {
   Trophy,
-  Building2,
   TrendingUp,
   TrendingDown,
   ChevronDown,
   ChevronUp,
-  ExternalLink,
-  MapPin,
+  ChevronLeft,
+  ChevronRight,
 } from 'lucide-react'
 import type { DogProfileEventItem } from './DogJudgesSection'
+import {
+  type DogOrgItem,
+  type OrgDisciplineFilter,
+  computeDogOrganizationStats,
+  formatOrgsCount,
+  formatWinsCount,
+  formatStartsCount,
+  formatShowMoreOrgs,
+} from './dogOrganizationsStats'
+import { DogOrganizationRow } from './components/DogOrganizationRow'
 
-export interface DogOrgEventDetail {
-  event_id: number | string
-  title: string
-  date: string
-  location?: string | null
-  placement: number | null
-  total_score: number | null
-  event_type?: string
-  competition_kind?: string | null
-  results_url?: string | null
-}
-
-export interface DogOrgItem {
-  org_name: string
-  org_key: string
-  short_name: string
-  locations: string[]
-  starts_count: number
-  wins_count: number
-  win_rate: number
-  delta_vs_career: number
-  avg_placement: number | null
-  placements: number[]
-  events: DogOrgEventDetail[]
-}
-
-export interface DogOrgStats {
-  total_starts: number
-  total_wins: number
-  career_win_rate: number
-  orgs_count: number
-  higher_than_career: DogOrgItem[]
-  lower_than_career: DogOrgItem[]
-}
-
-export type OrgDisciplineFilter = 'all' | 'coursing' | 'racing'
+export * from './dogOrganizationsStats'
 
 interface DogOrganizationsSectionProps {
   competitions?: DogProfileEventItem[]
   initialDiscipline?: OrgDisciplineFilter
 }
 
-const PLACEMENT_STYLES: Record<number, { bg: string; text: string; border: string }> = {
-  1: { bg: 'bg-amber-100', text: 'text-amber-900', border: 'border-amber-300' },
-  2: { bg: 'bg-slate-200', text: 'text-slate-800', border: 'border-slate-300' },
-  3: { bg: 'bg-amber-50', text: 'text-amber-800', border: 'border-amber-200' },
-}
-
-/**
- * Нормализация и сопоставление названия организации
- */
-export function normalizeOrgName(rawOrg?: string | null, title?: string | null, location?: string | null): string {
-  if (rawOrg && rawOrg.trim()) {
-    return rawOrg.trim()
-  }
-  const t = title || ''
-  const loc = location || ''
-  if (/НКП|РПБ/i.test(t)) return 'НКП «Русская псовая борзая»'
-  if (/Ярослав|Левково|Левцово/i.test(t) || /Ярослав|Левково|Левцово/i.test(loc)) {
-    return 'ОО «Ярославский областной клуб спортивно-прикладного собаководства»'
-  }
-  if (/Михайловское/i.test(t) || /Михайловское/i.test(loc)) return 'Курсинг в Михайловском'
-  if (/Донино/i.test(t) || /Донино/i.test(loc)) return 'Курсинг в Донино'
-  if (/Суханово/i.test(t) || /Суханово/i.test(loc)) return 'РООКО Кинологический союз «Арта»'
-  if (/Головинка/i.test(t) || /Головинка/i.test(loc)) return 'РКОО «Калужский областной клуб собаководства»'
-  if (/Новый Милет/i.test(t) || /Новый Милет/i.test(loc)) return 'МОРОО «Федерация спортивно-прикладного собаководства»'
-  if (/Ставрополь/i.test(t) || /Ставрополь/i.test(loc)) {
-    return 'ОО «Региональное кинологическое общество Ставропольского края «Альянс»'
-  }
-  if (/Мартовский Заяц/i.test(t)) return 'ОООК КЦ «Элита» (РАЛББ)'
-  if (loc.trim()) return loc.trim()
-  return 'Другие организаторы'
-}
-
-/**
- * Лаконичное название клуба для плашек и карточек
- */
-export function formatOrgDisplayName(orgName: string): { primary: string; secondary?: string } {
-  const clean = orgName.trim()
-  if (clean.includes('Федерация спортивно-прикладного собаководства Пермского')) {
-    return { primary: 'ФСПС Пермского края', secondary: clean }
-  }
-  if (clean.includes('Федерация спортивно-прикладного собаководства')) {
-    return { primary: 'МОРОО «ФСПС»', secondary: clean }
-  }
-  if (clean.includes('Кинологический союз «Арта»')) {
-    return { primary: 'РООКО «Арта»', secondary: clean }
-  }
-  if (clean.includes('Русский простор')) {
-    return { primary: 'МОКО «Русский простор»', secondary: clean }
-  }
-  if (clean.includes('Альянс')) {
-    return { primary: 'РКО СК «Альянс» (Ставрополь)', secondary: clean }
-  }
-  if (clean.includes('Ярославский областной клуб')) {
-    return { primary: 'ЯОКСПС (Ярославль)', secondary: clean }
-  }
-  if (clean.includes('Радонежье')) {
-    return { primary: 'СПГОО «Радонежье»', secondary: clean }
-  }
-  if (clean.includes('Элита') || clean.includes('РАЛББ')) {
-    return { primary: 'КЦ «Элита» (РАЛББ)', secondary: clean }
-  }
-  if (clean.includes('Сириус')) {
-    return { primary: 'ВГООКС «Сириус»', secondary: clean }
-  }
-  if (clean.includes('Русская псовая борзая') || clean.includes('РПБ')) {
-    return { primary: 'НКП «РПБ»', secondary: clean }
-  }
-  if (clean.includes('Кеннел-клуб Санкт-Петербурга')) {
-    return { primary: 'Кеннел-клуб СПб', secondary: clean }
-  }
-  if (clean.includes('Союз охотников и рыболовов Свердловской')) {
-    return { primary: 'СООиР (Свердловск)', secondary: clean }
-  }
-  if (clean.includes('Республиканский клуб собаководов')) {
-    return { primary: 'РКСиО', secondary: clean }
-  }
-  if (clean.includes('Калужский областной клуб')) {
-    return { primary: 'КОКС (Калуга)', secondary: clean }
-  }
-  if (clean.includes('Артемида')) {
-    return { primary: 'КОС «Артемида»', secondary: clean }
-  }
-  if (clean.includes('Виннер')) {
-    return { primary: 'КС «Виннер»', secondary: clean }
-  }
-  if (clean.includes('Фауна')) {
-    return { primary: 'КЛЖ «Фауна»', secondary: clean }
-  }
-  return { primary: clean }
-}
-
-export function formatOrgsCount(count: number): string {
-  const mod10 = Math.abs(count) % 10
-  const mod100 = Math.abs(count) % 100
-  if (mod100 >= 11 && mod100 <= 19) return `${count} организаций`
-  if (mod10 === 1) return `${count} организация`
-  if (mod10 >= 2 && mod10 <= 4) return `${count} организации`
-  return `${count} организаций`
-}
-
-export function formatAllOrgsButton(count: number): string {
-  const mod10 = Math.abs(count) % 10
-  const mod100 = Math.abs(count) % 100
-  if (mod10 === 1 && mod100 !== 11) {
-    return `Показать ${count} организацию`
-  }
-  return `Показать все ${count} организаций`
-}
-
-export function formatWinsCount(count: number): string {
-  const mod10 = Math.abs(count) % 10
-  const mod100 = Math.abs(count) % 100
-  if (mod100 >= 11 && mod100 <= 19) return `${count} золотых наград`
-  if (mod10 === 1) return `${count} золотая награда`
-  if (mod10 >= 2 && mod10 <= 4) return `${count} золотые награды`
-  return `${count} золотых наград`
-}
-
-export function formatStartsCount(count: number): string {
-  const mod10 = Math.abs(count) % 10
-  const mod100 = Math.abs(count) % 100
-  if (mod100 >= 11 && mod100 <= 19) return `${count} стартов`
-  if (mod10 === 1) return `${count} старт`
-  if (mod10 >= 2 && mod10 <= 4) return `${count} старта`
-  return `${count} стартов`
-}
-
-export function computeDogOrganizationStats(
-  competitions: DogProfileEventItem[] = [],
-  discipline: OrgDisciplineFilter = 'all',
-): DogOrgStats | null {
-  if (!competitions || competitions.length === 0) return null
-
-  // 1. Фильтрация по дисциплине при необходимости
-  let filteredComps = competitions
-  if (discipline === 'coursing') {
-    filteredComps = competitions.filter(
-      (c) => c.event_type === 'coursing' || c.event_type === 'bzmp' || !c.event_type,
-    )
-  } else if (discipline === 'racing') {
-    filteredComps = competitions.filter((c) => c.event_type === 'racing')
-  }
-
-  // 2. Учитываем завершённые старты, где определено место собаки
-  const validComps = filteredComps.filter((c) => {
-    if (typeof c.placement === 'number' && c.placement > 0) return true
-    if (typeof c.placement === 'string') {
-      const p = parseInt(c.placement, 10)
-      return !Number.isNaN(p) && p > 0
-    }
-    return false
-  })
-
-  if (validComps.length === 0) return null
-
-  const totalStarts = validComps.length
-  let totalWins = 0
-
-  type OrgAccumulator = {
-    org_name: string
-    short_name: string
-    locations: Set<string>
-    starts_count: number
-    wins_count: number
-    placements: number[]
-    events: DogOrgEventDetail[]
-  }
-
-  const orgMap = new Map<string, OrgAccumulator>()
-
-  for (const comp of validComps) {
-    const rawPlacement = typeof comp.placement === 'number' ? comp.placement : parseInt(String(comp.placement), 10)
-    const placement = !Number.isNaN(rawPlacement) && rawPlacement > 0 ? rawPlacement : null
-    const isWin = placement === 1
-    if (isWin) totalWins += 1
-
-    const rawOrg = (comp.host_club || '').trim()
-    const orgName = normalizeOrgName(rawOrg, comp.title, comp.location)
-    const displayInfo = formatOrgDisplayName(orgName)
-
-    let entry = orgMap.get(orgName)
-    if (!entry) {
-      entry = {
-        org_name: orgName,
-        short_name: displayInfo.primary,
-        locations: new Set<string>(),
-        starts_count: 0,
-        wins_count: 0,
-        placements: [],
-        events: [],
-      }
-      orgMap.set(orgName, entry)
-    }
-
-    entry.starts_count += 1
-    if (isWin) entry.wins_count += 1
-    if (placement) entry.placements.push(placement)
-
-    if (comp.location && comp.location.trim()) {
-      const locClean = comp.location
-        .replace(/^(Московская|Калужская|Свердловская|Ярославская)\s+область,?\s*/i, '')
-        .replace(/^[А-Яа-я\s]+р-н,?\s*/i, '')
-        .trim()
-      entry.locations.add(locClean || comp.location.trim())
-    }
-
-    const rawScore = comp.total_score != null
-      ? (typeof comp.total_score === 'number' ? comp.total_score : parseFloat(String(comp.total_score)))
-      : null
-    const totalScore = rawScore != null && !Number.isNaN(rawScore) ? rawScore : null
-
-    entry.events.push({
-      event_id: comp.event_id ?? '',
-      title: comp.title || 'Состязание',
-      date: comp.date_start || '',
-      location: comp.location || null,
-      placement: placement,
-      total_score: totalScore,
-      event_type: comp.event_type,
-      competition_kind: comp.competition_kind,
-      results_url: comp.results_url || null,
-    })
-  }
-
-  const careerWinRate = totalStarts > 0 ? Math.round((totalWins / totalStarts) * 100) : 0
-
-  const allOrgs: DogOrgItem[] = []
-  for (const entry of orgMap.values()) {
-    const winRate = entry.starts_count > 0 ? Math.round((entry.wins_count / entry.starts_count) * 100) : 0
-    const deltaVsCareer = winRate - careerWinRate
-    const avgPlacement = entry.placements.length > 0
-      ? entry.placements.reduce((a, b) => a + b, 0) / entry.placements.length
-      : null
-
-    allOrgs.push({
-      org_name: entry.org_name,
-      org_key: entry.org_name.toLowerCase().replace(/[^a-zа-яё0-9]+/g, '-'),
-      short_name: entry.short_name,
-      locations: Array.from(entry.locations),
-      starts_count: entry.starts_count,
-      wins_count: entry.wins_count,
-      win_rate: winRate,
-      delta_vs_career: deltaVsCareer,
-      avg_placement: avgPlacement,
-      placements: entry.placements,
-      events: entry.events.sort((a, b) => (b.date || '').localeCompare(a.date || '')),
-    })
-  }
-
-  const higherThanCareer: DogOrgItem[] = []
-  const lowerThanCareer: DogOrgItem[] = []
-
-  for (const org of allOrgs) {
-    if (org.win_rate >= careerWinRate && org.wins_count > 0) {
-      higherThanCareer.push(org)
-    } else {
-      lowerThanCareer.push(org)
-    }
-  }
-
-  higherThanCareer.sort((a, b) => b.win_rate - a.win_rate || b.wins_count - a.wins_count || b.delta_vs_career - a.delta_vs_career)
-  lowerThanCareer.sort((a, b) => b.starts_count - a.starts_count || a.win_rate - b.win_rate)
-
-  return {
-    total_starts: totalStarts,
-    total_wins: totalWins,
-    career_win_rate: careerWinRate,
-    orgs_count: allOrgs.length,
-    higher_than_career: higherThanCareer,
-    lower_than_career: lowerThanCareer,
-  }
-}
-
 export function DogOrganizationsSection({
-  competitions,
+  competitions = [],
   initialDiscipline = 'all',
 }: DogOrganizationsSectionProps) {
-  const [expandedOrgKey, setExpandedOrgKey] = useState<string | null>(null)
-  const [disciplineFilter, setDisciplineFilter] = useState<OrgDisciplineFilter>(initialDiscipline)
+  const [selectedDiscipline, setSelectedDiscipline] = useState<OrgDisciplineFilter>(initialDiscipline)
+  const [expandedOrgs, setExpandedOrgs] = useState<Set<string>>(new Set())
 
-  // Проверяем, участвовала ли собака в обеих дисциплинах
-  const hasCoursing = useMemo(
-    () => (competitions || []).some((c) => c.event_type === 'coursing' || c.event_type === 'bzmp' || !c.event_type),
-    [competitions],
-  )
-  const hasRacing = useMemo(
-    () => (competitions || []).some((c) => c.event_type === 'racing'),
-    [competitions],
-  )
-  const showDisciplineToggle = hasCoursing && hasRacing
+  const toggleOrg = (orgKey: string) => {
+    setExpandedOrgs((prev) => {
+      const next = new Set(prev)
+      if (next.has(orgKey)) {
+        next.delete(orgKey)
+      } else {
+        next.add(orgKey)
+      }
+      return next
+    })
+  }
 
-  const orgStats = useMemo(
-    () => computeDogOrganizationStats(competitions, disciplineFilter),
-    [competitions, disciplineFilter],
-  )
+  // Считаем доступность дисциплин у собаки
+  const { hasCoursing, hasRacing } = useMemo(() => {
+    let coursing = false
+    let racing = false
+    for (const c of competitions) {
+      if (c.event_type === 'racing') racing = true
+      else coursing = true
+    }
+    return { hasCoursing: coursing, hasRacing: racing }
+  }, [competitions])
 
-  if (!orgStats || orgStats.orgs_count === 0) {
+  const showDisciplineFilter = hasCoursing && hasRacing
+
+  // Вычисляем аналитику побед по организациям
+  const orgStats = useMemo(() => {
+    return computeDogOrganizationStats(competitions, selectedDiscipline)
+  }, [competitions, selectedDiscipline])
+
+  // Ограничение начального отображения для длинных списков
+  const INITIAL_LIMIT = 5
+  const EXPAND_THRESHOLD = 6
+
+  const [isHigherExpanded, setIsHigherExpanded] = useState(false)
+  const [isLowerExpanded, setIsLowerExpanded] = useState(false)
+
+  // Мобильная карусель: вкладка 0 (Выше обычного) или 1 (Сложнее победить) со свайпом
+  const [activeMobileTab, setActiveMobileTab] = useState<0 | 1>(0)
+  const trackRef = useRef<HTMLDivElement>(null)
+  const touchStartRef = useRef<{ x: number; y: number; time: number } | null>(null)
+  const gestureLockRef = useRef<'horizontal' | 'vertical' | null>(null)
+  const hadMovedRef = useRef(false)
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartRef.current = {
+      x: e.touches[0].clientX,
+      y: e.touches[0].clientY,
+      time: Date.now(),
+    }
+    gestureLockRef.current = null
+    hadMovedRef.current = false
+    if (trackRef.current) {
+      trackRef.current.style.transition = 'none'
+    }
+  }
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (!touchStartRef.current) return
+    const dx = e.touches[0].clientX - touchStartRef.current.x
+    const dy = e.touches[0].clientY - touchStartRef.current.y
+
+    if (Math.abs(dx) > 7 || Math.abs(dy) > 7) {
+      hadMovedRef.current = true
+    }
+
+    if (!gestureLockRef.current) {
+      if (Math.abs(dx) < 7 && Math.abs(dy) < 7) return
+      if (Math.abs(dy) >= Math.abs(dx)) {
+        gestureLockRef.current = 'vertical'
+        return
+      }
+      gestureLockRef.current = 'horizontal'
+    }
+
+    if (gestureLockRef.current === 'horizontal' && trackRef.current) {
+      const isAtLeftEdge = activeMobileTab === 0 && dx > 0
+      const isAtRightEdge = activeMobileTab === 1 && dx < 0
+      const appliedDx = isAtLeftEdge || isAtRightEdge ? dx * 0.22 : dx
+      const baseOffset = activeMobileTab === 0 ? '0%' : '-100%'
+      trackRef.current.style.transform = `translate3d(calc(${baseOffset} + ${appliedDx}px), 0, 0)`
+    }
+  }
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (!touchStartRef.current) return
+    const isHorizontal = gestureLockRef.current === 'horizontal'
+    const dx = e.changedTouches[0].clientX - touchStartRef.current.x
+    const dt = Date.now() - touchStartRef.current.time
+    const velocity = Math.abs(dx) / (dt || 1)
+
+    touchStartRef.current = null
+    gestureLockRef.current = null
+
+    if (isHorizontal && trackRef.current) {
+      let target: 0 | 1 = activeMobileTab
+      if ((dx < -35 || (dx < -15 && velocity > 0.2)) && activeMobileTab === 0) {
+        target = 1
+      } else if ((dx > 35 || (dx > 15 && velocity > 0.2)) && activeMobileTab === 1) {
+        target = 0
+      }
+      setActiveMobileTab(target)
+      trackRef.current.style.transition = 'transform 320ms cubic-bezier(0.16, 1, 0.3, 1)'
+      trackRef.current.style.transform = `translate3d(${target === 0 ? '0%' : '-100%'}, 0, 0)`
+    } else if (trackRef.current) {
+      trackRef.current.style.transition = 'transform 320ms cubic-bezier(0.16, 1, 0.3, 1)'
+      trackRef.current.style.transform = `translate3d(${activeMobileTab === 0 ? '0%' : '-100%'}, 0, 0)`
+    }
+  }
+
+  const handleTouchCancel = () => {
+    touchStartRef.current = null
+    gestureLockRef.current = null
+    if (trackRef.current) {
+      trackRef.current.style.transition = 'transform 320ms cubic-bezier(0.16, 1, 0.3, 1)'
+      trackRef.current.style.transform = `translate3d(${activeMobileTab === 0 ? '0%' : '-100%'}, 0, 0)`
+    }
+  }
+
+  const handleClickCapture = (e: React.MouseEvent) => {
+    if (hadMovedRef.current) {
+      e.preventDefault()
+      e.stopPropagation()
+    }
+  }
+
+  useEffect(() => {
+    if (trackRef.current) {
+      trackRef.current.style.transition = 'transform 320ms cubic-bezier(0.16, 1, 0.3, 1)'
+      trackRef.current.style.transform = `translate3d(${activeMobileTab === 0 ? '0%' : '-100%'}, 0, 0)`
+    }
+  }, [activeMobileTab])
+
+  if (!orgStats || orgStats.total_starts === 0) {
     return null
   }
 
-  const toggleOrg = (orgKey: string) => {
-    setExpandedOrgKey((prev) => (prev === orgKey ? null : orgKey))
-  }
+  const visibleHigher =
+    isHigherExpanded || orgStats.higher_than_career.length <= EXPAND_THRESHOLD
+      ? orgStats.higher_than_career
+      : orgStats.higher_than_career.slice(0, INITIAL_LIMIT)
 
-  const renderOrgRow = (
-    org: DogOrgItem,
-    variant: 'higher' | 'lower',
-  ) => {
-    const isExpanded = expandedOrgKey === org.org_key
+  const visibleLower =
+    isLowerExpanded || orgStats.lower_than_career.length <= EXPAND_THRESHOLD
+      ? orgStats.lower_than_career
+      : orgStats.lower_than_career.slice(0, INITIAL_LIMIT)
 
-    return (
-      <div key={org.org_key} className="transition-colors hover:bg-cream-50/60">
+  const renderOrgRow = (org: DogOrgItem, variant: 'higher' | 'lower') => (
+    <DogOrganizationRow
+      key={org.org_key}
+      org={org}
+      variant={variant}
+      isExpanded={expandedOrgs.has(org.org_key)}
+      onToggle={() => toggleOrg(org.org_key)}
+    />
+  )
+
+  const higherCard = (
+    <div className="rounded-2xl border border-old-money-200/90 bg-white overflow-hidden shadow-2xs h-full flex flex-col">
+      <div className="relative px-3.5 py-2.5 bg-forest-50/70 border-b border-old-money-200/80 flex items-center justify-between select-none">
+        <div className="flex items-center gap-1.5 min-w-0 pr-24 md:pr-0">
+          <Trophy className="w-3.5 h-3.5 text-forest-700 shrink-0" aria-hidden />
+          <h3 className="text-xs font-semibold uppercase tracking-wider text-charcoal-800 truncate">
+            Выше обычного
+          </h3>
+          <span className="text-[11px] text-forest-800 font-semibold tabular-nums ml-0.5">
+            {formatOrgsCount(orgStats.higher_than_career.length)}
+          </span>
+        </div>
+
+        {/* На мобилке: правый язычок для перехода к «Сложнее победить» */}
         <button
           type="button"
-          onClick={() => toggleOrg(org.org_key)}
-          className="w-full text-left px-3.5 py-2.5 sm:px-4 sm:py-2.5 flex items-center justify-between gap-3 cursor-pointer min-h-[44px]"
-          aria-expanded={isExpanded}
+          onClick={() => setActiveMobileTab(1)}
+          className="md:hidden absolute right-0 top-1/2 -translate-y-1/2 z-20 inline-flex items-center gap-1 bg-[#fbf7f0]/95 text-camel-950 font-bold text-[11px] py-1 pl-2.5 pr-2 rounded-l-full border-y border-l border-camel-400/60 shadow-xs backdrop-blur-md transition-all hover:bg-camel-100/90 active:scale-95 cursor-pointer touch-manipulation select-none"
+          title="Перейти: Сложнее победить"
+          aria-label="Перейти: Сложнее победить"
         >
-          {/* Левая часть: Название, площадки, победы и дельта */}
-          <div className="min-w-0 flex-1">
-            <div className="flex items-baseline gap-1.5 flex-wrap">
-              <span className="font-semibold text-charcoal-900 text-xs sm:text-sm truncate" title={org.org_name}>
-                {org.short_name}
-              </span>
-              <span className="text-[11px] text-charcoal-400 font-normal shrink-0">
-                {org.starts_count} сост.
-              </span>
-              {org.locations.length > 0 && (
-                <span className="text-[11px] text-charcoal-400 shrink-0">
-                  · {org.locations.join(', ')}
-                </span>
-              )}
-            </div>
+          <span className="tracking-tight text-rose-900 font-semibold">Сложнее</span>
+          <span className="text-[9px] tabular-nums font-bold px-1 py-0 rounded-full bg-rose-200/80 text-rose-950 shrink-0">
+            {orgStats.lower_than_career.length}
+          </span>
+          <ChevronRight className="w-3.5 h-3.5 text-rose-800 shrink-0" aria-hidden />
+        </button>
+      </div>
 
-            <div className="flex items-center gap-2 mt-0.5 text-[11px] leading-tight flex-wrap text-charcoal-600">
-              <div className="flex items-center gap-1 shrink-0">
-                <span className="text-charcoal-500 mr-0.5">места:</span>
-                {(org.placements && org.placements.length > 0
-                  ? org.placements.slice(0, 5)
-                  : []
-                ).map((pl, idx) => (
-                  <PlacementMedalBadge key={idx} place={pl} size="xs" />
-                ))}
-                {org.placements && org.placements.length > 5 && (
-                  <span className="text-[10px] text-charcoal-400 font-normal">
-                    +{org.placements.length - 5}
+      {orgStats.higher_than_career.length > 0 ? (
+        <>
+          <div className="divide-y divide-old-money-100 flex-1">
+            {visibleHigher.map((org) => renderOrgRow(org, 'higher'))}
+          </div>
+          {orgStats.higher_than_career.length > EXPAND_THRESHOLD && (
+            <button
+              type="button"
+              onClick={() => setIsHigherExpanded((prev) => !prev)}
+              className="w-full py-2.5 px-3 bg-cream-50/70 hover:bg-cream-100/80 border-t border-old-money-200/70 text-xs font-semibold text-charcoal-700 hover:text-camel-900 transition-colors flex items-center justify-center gap-1.5 cursor-pointer touch-manipulation min-h-[44px]"
+            >
+              {isHigherExpanded ? (
+                <>
+                  <span>Свернуть</span>
+                  <ChevronUp className="w-3.5 h-3.5 text-charcoal-500" aria-hidden />
+                </>
+              ) : (
+                <>
+                  <span>
+                    {formatShowMoreOrgs(orgStats.higher_than_career.length - INITIAL_LIMIT)}
                   </span>
-                )}
-              </div>
-
-              <span className="text-old-money-300">•</span>
-
-              <span className="text-charcoal-500">
-                победы:{' '}
-                <strong className="text-charcoal-800 font-semibold">
-                  {org.wins_count}
-                </strong>{' '}
-                из {org.starts_count}
-              </span>
-
-              <span className="text-old-money-300">•</span>
-
-              {/* Дельта к карьере — чистый цветной текст */}
-              {variant === 'higher' ? (
-                <span className="font-medium text-forest-700">
-                  {org.delta_vs_career > 0
-                    ? `+${org.delta_vs_career}% к ср.`
-                    : '= ср. карьеры'}
-                </span>
-              ) : (
-                <span className="font-medium text-rose-700">
-                  {org.wins_count === 0
-                    ? 'без побед'
-                    : `${org.delta_vs_career}% от ср.`}
-                </span>
+                  <ChevronDown className="w-3.5 h-3.5 text-charcoal-500" aria-hidden />
+                </>
               )}
-            </div>
-          </div>
+            </button>
+          )}
+        </>
+      ) : (
+        <div className="p-4 text-center text-xs text-charcoal-400 flex-1 flex items-center justify-center">
+          Пока нет организаций с процентом побед выше среднего
+        </div>
+      )}
+    </div>
+  )
 
-          {/* Правая часть: Чистый Win Rate и шеврон */}
-          <div className="flex items-center gap-2 shrink-0">
-            <div className="text-right tabular-nums">
-              <div className={`text-xs sm:text-sm font-bold leading-tight ${variant === 'higher' ? 'text-forest-900' : 'text-charcoal-800'}`}>
-                {org.win_rate}%
-              </div>
-              <div className="text-[9px] text-charcoal-400 uppercase tracking-wide leading-none mt-0.5">
-                win rate
-              </div>
-            </div>
-
-            <div className="text-charcoal-400 ml-1">
-              {isExpanded ? (
-                <ChevronUp className="w-3.5 h-3.5" aria-hidden />
-              ) : (
-                <ChevronDown className="w-3.5 h-3.5" aria-hidden />
-              )}
-            </div>
-          </div>
+  const lowerCard = (
+    <div className="rounded-2xl border border-old-money-200/90 bg-white overflow-hidden shadow-2xs h-full flex flex-col">
+      <div className="relative px-3.5 py-2.5 bg-rose-50/70 border-b border-old-money-200/80 flex items-center justify-between select-none">
+        {/* На мобилке: левый язычок для перехода к «Выше обычного» */}
+        <button
+          type="button"
+          onClick={() => setActiveMobileTab(0)}
+          className="md:hidden absolute left-0 top-1/2 -translate-y-1/2 z-20 inline-flex items-center gap-1 bg-[#fbf7f0]/95 text-camel-950 font-bold text-[11px] py-1 pl-2 pr-2.5 rounded-r-full border-y border-r border-camel-400/60 shadow-xs backdrop-blur-md transition-all hover:bg-camel-100/90 active:scale-95 cursor-pointer touch-manipulation select-none"
+          title="Перейти: Выше обычного"
+          aria-label="Перейти: Выше обычного"
+        >
+          <ChevronLeft className="w-3.5 h-3.5 text-forest-800 shrink-0" aria-hidden />
+          <span className="tracking-tight text-forest-900 font-semibold">Выше</span>
+          <span className="text-[9px] tabular-nums font-bold px-1 py-0 rounded-full bg-forest-200/80 text-forest-950 shrink-0">
+            {orgStats.higher_than_career.length}
+          </span>
         </button>
 
-        {/* Раскрывающийся список турниров с прямыми кликабельными ссылками на протоколы */}
-        {isExpanded && (
-          <div className="border-t border-old-money-100 bg-cream-50/70 p-2.5 sm:p-3 space-y-1.5 text-xs">
-            <div className="text-[10px] font-semibold text-charcoal-500 uppercase tracking-wider px-1">
-              Состязания в этой организации (кликните для перехода в протокол):
-            </div>
-            {org.events.map((ev, eIdx) => {
-              const isWin = ev.placement === 1
-              return (
-                <Link
-                  key={eIdx}
-                  to={`/event/${ev.event_id}/`}
-                  className={`group flex items-center justify-between gap-2.5 p-2 rounded-lg border transition-colors shadow-2xs ${
-                    isWin
-                      ? 'bg-amber-50/70 hover:bg-amber-50 border-amber-200/90'
-                      : 'bg-white/90 hover:bg-white border-old-money-200/70'
-                  }`}
-                  title="Открыть протокол состязания"
-                >
-                  <div className="min-w-0 flex-1">
-                    <div className="font-semibold text-charcoal-900 group-hover:text-camel-800 transition-colors truncate flex items-center gap-1.5">
-                      {isWin && (
-                        <Trophy className="w-3.5 h-3.5 text-amber-600 shrink-0" aria-hidden />
-                      )}
-                      <span className="truncate">{ev.title}</span>
-                      <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity text-camel-600 shrink-0" aria-hidden />
-                    </div>
-                    <div className="text-[10px] text-charcoal-400 mt-0.5 flex items-center gap-2 flex-wrap">
-                      <span>{ev.date}</span>
-                      {ev.location && (
-                        <span className="truncate text-charcoal-500">• {ev.location}</span>
-                      )}
-                    </div>
-                  </div>
-
-                  <div className="text-right shrink-0">
-                    {ev.placement ? (
-                      <div className="flex items-center gap-1.5 justify-end">
-                        <PlacementMedalBadge place={ev.placement} size="xs" />
-                        <span className="text-[11px] font-semibold text-charcoal-700 tabular-nums">
-                          {ev.placement}-е место
-                        </span>
-                      </div>
-                    ) : (
-                      <div className="text-charcoal-400">—</div>
-                    )}
-                    {ev.total_score != null && (
-                      <div className="text-[10px] text-charcoal-400 tabular-nums mt-0.5">
-                        {ev.total_score} б.
-                      </div>
-                    )}
-                  </div>
-                </Link>
-              )
-            })}
-          </div>
-        )}
+        <div className="flex items-center gap-1.5 min-w-0 md:pl-0 pl-24 justify-end md:justify-start w-full">
+          <TrendingDown className="w-3.5 h-3.5 text-rose-700 shrink-0" aria-hidden />
+          <h3 className="text-xs font-semibold uppercase tracking-wider text-charcoal-800 truncate">
+            Сложнее победить
+          </h3>
+          <span className="text-[11px] text-rose-800 font-semibold tabular-nums ml-0.5">
+            {formatOrgsCount(orgStats.lower_than_career.length)}
+          </span>
+        </div>
       </div>
-    )
-  }
 
-  // Ленивая подгрузка организаций порциями по 15 при скролле (без лишних кликов и скрытия)
-  const INITIAL_BATCH = 15
-  const BATCH_INCREMENT = 15
-
-  const [visibleHigherCount, setVisibleHigherCount] = useState(INITIAL_BATCH)
-  const [visibleLowerCount, setVisibleLowerCount] = useState(INITIAL_BATCH)
-
-  const higherSentinelRef = useRef<HTMLDivElement>(null)
-  const lowerSentinelRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    if (visibleHigherCount >= orgStats.higher_than_career.length) return
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setVisibleHigherCount((prev) =>
-            Math.min(prev + BATCH_INCREMENT, orgStats.higher_than_career.length),
-          )
-        }
-      },
-      { threshold: 0.1, rootMargin: '300px' },
-    )
-    const el = higherSentinelRef.current
-    if (el) observer.observe(el)
-    return () => observer.disconnect()
-  }, [visibleHigherCount, orgStats.higher_than_career.length])
-
-  useEffect(() => {
-    if (visibleLowerCount >= orgStats.lower_than_career.length) return
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setVisibleLowerCount((prev) =>
-            Math.min(prev + BATCH_INCREMENT, orgStats.lower_than_career.length),
-          )
-        }
-      },
-      { threshold: 0.1, rootMargin: '300px' },
-    )
-    const el = lowerSentinelRef.current
-    if (el) observer.observe(el)
-    return () => observer.disconnect()
-  }, [visibleLowerCount, orgStats.lower_than_career.length])
-
-  const visibleHigher = orgStats.higher_than_career.slice(0, visibleHigherCount)
-  const visibleLower = orgStats.lower_than_career.slice(0, visibleLowerCount)
+      {orgStats.lower_than_career.length > 0 ? (
+        <>
+          <div className="divide-y divide-old-money-100 flex-1">
+            {visibleLower.map((org) => renderOrgRow(org, 'lower'))}
+          </div>
+          {orgStats.lower_than_career.length > EXPAND_THRESHOLD && (
+            <button
+              type="button"
+              onClick={() => setIsLowerExpanded((prev) => !prev)}
+              className="w-full py-2.5 px-3 bg-cream-50/70 hover:bg-cream-100/80 border-t border-old-money-200/70 text-xs font-semibold text-charcoal-700 hover:text-camel-900 transition-colors flex items-center justify-center gap-1.5 cursor-pointer touch-manipulation min-h-[44px]"
+            >
+              {isLowerExpanded ? (
+                <>
+                  <span>Свернуть</span>
+                  <ChevronUp className="w-3.5 h-3.5 text-charcoal-500" aria-hidden />
+                </>
+              ) : (
+                <>
+                  <span>
+                    {formatShowMoreOrgs(orgStats.lower_than_career.length - INITIAL_LIMIT)}
+                  </span>
+                  <ChevronDown className="w-3.5 h-3.5 text-charcoal-500" aria-hidden />
+                </>
+              )}
+            </button>
+          )}
+        </>
+      ) : (
+        <div className="p-4 text-center text-xs text-charcoal-400 flex-1 flex items-center justify-center">
+          Пока нет организаций со сложной статистикой
+        </div>
+      )}
+    </div>
+  )
 
   return (
-    <section
-      aria-label="Победы по организациям"
-      className="card-refined p-4 sm:p-5 md:p-6 mb-6 rounded-2xl bg-gradient-to-b from-white to-cream-50/40 border border-old-money-200/90 shadow-xs"
-    >
-      {/* Лаконичный заголовок с базовым уровнем собаки */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4 pb-3 border-b border-old-money-200/80">
+    <div className="space-y-3">
+      {/* Шапка секции со средним Win Rate и переключателем дисциплин */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 px-1">
         <div>
-          <h2 className="text-base md:text-lg font-serif font-semibold text-charcoal-900 leading-tight">
-            Победы по организациям
-          </h2>
+          <div className="flex items-center gap-2 flex-wrap">
+            <h2 className="text-sm sm:text-base font-bold text-charcoal-900">
+              Статистика побед по клубам и организациям
+            </h2>
+            <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-50/90 text-amber-950 border border-amber-300/80 shadow-2xs whitespace-nowrap shrink-0 tabular-nums">
+              <Trophy className="w-3.5 h-3.5 text-amber-600 shrink-0" aria-hidden />
+              <span>{orgStats.total_wins}</span>
+              <span className="text-amber-800/80 font-normal whitespace-nowrap">из {orgStats.total_starts}</span>
+            </span>
+          </div>
           <p className="text-xs text-charcoal-500 mt-0.5">
-            Базовый уровень: <strong>{orgStats.career_win_rate}% побед</strong> ({orgStats.total_wins} из{' '}
-            {orgStats.total_starts} состязаний)
-            {disciplineFilter === 'coursing'
-              ? ' в курсинге'
-              : disciplineFilter === 'racing'
-                ? ' в бегах борзых'
-                : ' по всем состязаниям'}
+            {formatWinsCount(orgStats.total_wins)} в {formatOrgsCount(orgStats.orgs_count)} · общий Win Rate собаки:{' '}
+            <strong className="text-charcoal-800 font-semibold">{orgStats.career_win_rate}%</strong>
           </p>
         </div>
 
-        <div className="flex items-center gap-2.5 flex-wrap self-start sm:self-auto">
-          {/* Сегментированный переключатель дисциплины (если собака выступала в обеих) */}
-          {showDisciplineToggle && (
-            <div
-              role="group"
-              aria-label="Фильтр по дисциплине"
-              className="inline-flex items-center p-0.5 rounded-xl border border-old-money-200 bg-cream-100/70 text-xs shadow-2xs"
+        {/* Переключатель курсинг / рейсинг при наличии обеих дисциплин */}
+        {showDisciplineFilter && (
+          <div className="inline-flex items-center p-0.5 rounded-xl bg-cream-100/90 border border-old-money-200/60 text-xs shrink-0 select-none">
+            <button
+              type="button"
+              onClick={() => setSelectedDiscipline('all')}
+              className={`px-2.5 py-1 rounded-lg font-medium transition-all cursor-pointer ${
+                selectedDiscipline === 'all'
+                  ? 'bg-white text-camel-950 shadow-xs border border-old-money-200/80 font-semibold'
+                  : 'text-charcoal-600 hover:text-charcoal-900'
+              }`}
             >
-              <button
-                type="button"
-                onClick={() => setDisciplineFilter('all')}
-                className={`px-2.5 py-1 rounded-lg font-medium transition-all cursor-pointer min-h-[32px] sm:min-h-0 ${
-                  disciplineFilter === 'all'
-                    ? 'bg-white text-charcoal-900 shadow-2xs font-semibold'
-                    : 'text-charcoal-600 hover:text-charcoal-900'
-                }`}
-              >
-                Все
-              </button>
-              <button
-                type="button"
-                onClick={() => setDisciplineFilter('coursing')}
-                className={`px-2.5 py-1 rounded-lg font-medium transition-all cursor-pointer min-h-[32px] sm:min-h-0 ${
-                  disciplineFilter === 'coursing'
-                    ? 'bg-white text-charcoal-900 shadow-2xs font-semibold'
-                    : 'text-charcoal-600 hover:text-charcoal-900'
-                }`}
-              >
-                Курсинг
-              </button>
-              <button
-                type="button"
-                onClick={() => setDisciplineFilter('racing')}
-                className={`px-2.5 py-1 rounded-lg font-medium transition-all cursor-pointer min-h-[32px] sm:min-h-0 ${
-                  disciplineFilter === 'racing'
-                    ? 'bg-white text-charcoal-900 shadow-2xs font-semibold'
-                    : 'text-charcoal-600 hover:text-charcoal-900'
-                }`}
-              >
-                Бега
-              </button>
-            </div>
-          )}
-
-          <div className="flex items-center gap-1.5 text-xs text-charcoal-600 font-medium bg-cream-100/70 px-2.5 py-1 rounded-xl border border-old-money-200/70">
-            <Building2 className="w-3.5 h-3.5 text-camel-700" aria-hidden />
-            <span>{formatOrgsCount(orgStats.orgs_count)}</span>
+              Все ({orgStats.total_starts})
+            </button>
+            <button
+              type="button"
+              onClick={() => setSelectedDiscipline('coursing')}
+              className={`px-2.5 py-1 rounded-lg font-medium transition-all cursor-pointer ${
+                selectedDiscipline === 'coursing'
+                  ? 'bg-white text-camel-950 shadow-xs border border-old-money-200/80 font-semibold'
+                  : 'text-charcoal-600 hover:text-charcoal-900'
+              }`}
+            >
+              Курсинг
+            </button>
+            <button
+              type="button"
+              onClick={() => setSelectedDiscipline('racing')}
+              className={`px-2.5 py-1 rounded-lg font-medium transition-all cursor-pointer ${
+                selectedDiscipline === 'racing'
+                  ? 'bg-white text-camel-950 shadow-xs border border-old-money-200/80 font-semibold'
+                  : 'text-charcoal-600 hover:text-charcoal-900'
+              }`}
+            >
+              Рейсинг
+            </button>
           </div>
-        </div>
+        )}
       </div>
 
-      {/* 2 сбалансированных списка без отдельных дыр и дублирующих надписей */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-5 items-start">
-        {/* Колонка 1: Выше обычного */}
-        <div className="rounded-2xl border border-old-money-200/90 bg-white overflow-hidden shadow-2xs">
-          <div className="px-3.5 py-2.5 bg-forest-50/70 border-b border-old-money-200/80 flex items-center justify-between">
-            <div className="flex items-center gap-1.5">
-              <Trophy className="w-3.5 h-3.5 text-forest-700" aria-hidden />
-              <h3 className="text-xs font-semibold uppercase tracking-wider text-charcoal-800">
-                Выше обычного
-              </h3>
-            </div>
-            <span className="text-[11px] text-forest-800 font-semibold tabular-nums">
-              {formatOrgsCount(orgStats.higher_than_career.length)}
-            </span>
-          </div>
+      {/* Десктоп: 2 колонки рядом */}
+      <div className="hidden md:grid md:grid-cols-2 gap-3 items-start">
+        {higherCard}
+        {lowerCard}
+      </div>
 
-          {visibleHigher.length > 0 ? (
-            <div className="divide-y divide-old-money-100">
-              {visibleHigher.map((org) => renderOrgRow(org, 'higher'))}
-              {visibleHigherCount < orgStats.higher_than_career.length && (
-                <div ref={higherSentinelRef} className="h-4" aria-hidden="true" />
-              )}
-            </div>
-          ) : (
-            <div className="p-4 text-center text-xs text-charcoal-400">
-              Пока нет организаций с процентом побед выше среднего
-            </div>
-          )}
+      {/* Мобильный вид: горизонтальный свайп между колонками */}
+      <div
+        className="block md:hidden relative overflow-x-clip touch-pan-y select-none"
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+        onTouchCancel={handleTouchCancel}
+        onClickCapture={handleClickCapture}
+      >
+        <div
+          ref={trackRef}
+          className="flex flex-nowrap w-full min-w-0 items-stretch gap-0"
+          style={{
+            transform: activeMobileTab === 0 ? 'translate3d(0%, 0, 0)' : 'translate3d(-100%, 0, 0)',
+            willChange: 'transform',
+          }}
+        >
+          <div className="w-full max-w-full min-w-0 shrink-0 basis-full">{higherCard}</div>
+          <div className="w-full max-w-full min-w-0 shrink-0 basis-full">{lowerCard}</div>
         </div>
 
-        {/* Колонка 2: Сложнее победить */}
-        <div className="rounded-2xl border border-old-money-200/90 bg-white overflow-hidden shadow-2xs">
-          <div className="px-3.5 py-2.5 bg-rose-50/70 border-b border-old-money-200/80 flex items-center justify-between">
-            <div className="flex items-center gap-1.5">
-              <TrendingDown className="w-3.5 h-3.5 text-rose-700" aria-hidden />
-              <h3 className="text-xs font-semibold uppercase tracking-wider text-charcoal-800">
-                Сложнее победить
-              </h3>
-            </div>
-            <span className="text-[11px] text-rose-800 font-semibold tabular-nums">
-              {formatOrgsCount(orgStats.lower_than_career.length)}
-            </span>
-          </div>
-
-          {visibleLower.length > 0 ? (
-            <div className="divide-y divide-old-money-100">
-              {visibleLower.map((org) => renderOrgRow(org, 'lower'))}
-              {visibleLowerCount < orgStats.lower_than_career.length && (
-                <div ref={lowerSentinelRef} className="h-4" aria-hidden="true" />
-              )}
-            </div>
-          ) : (
-            <div className="p-4 text-center text-xs text-charcoal-400">
-              Все состязания завершились победами собаки
-            </div>
-          )}
+        {/* Точки-индикаторы положения свайпа */}
+        <div className="flex items-center justify-center gap-1.5 pt-2" aria-hidden="true">
+          <button
+            type="button"
+            onClick={() => setActiveMobileTab(0)}
+            className={`h-1.5 rounded-full transition-all duration-200 cursor-pointer ${
+              activeMobileTab === 0 ? 'w-5 bg-camel-600' : 'w-1.5 bg-old-money-300'
+            }`}
+            aria-label="Слайд: Выше обычного"
+          />
+          <button
+            type="button"
+            onClick={() => setActiveMobileTab(1)}
+            className={`h-1.5 rounded-full transition-all duration-200 cursor-pointer ${
+              activeMobileTab === 1 ? 'w-5 bg-camel-600' : 'w-1.5 bg-old-money-300'
+            }`}
+            aria-label="Слайд: Сложнее победить"
+          />
         </div>
       </div>
-    </section>
+    </div>
   )
 }

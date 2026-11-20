@@ -61,7 +61,14 @@ describe('Dog Profile Navigation Tabs & Achievements Tab invariants', () => {
 
   it('guarantees zero emojis in DogAchievementsTab in accordance with Old Money design', () => {
     const achievementsPath = path.resolve(__dirname, 'DogAchievementsTab.tsx')
-    const achievementsSource = fs.readFileSync(achievementsPath, 'utf-8')
+    const achievementsDir = path.resolve(__dirname, 'Achievements')
+    let achievementsSource = fs.readFileSync(achievementsPath, 'utf-8')
+    if (fs.existsSync(achievementsDir)) {
+      const files = fs.readdirSync(achievementsDir).filter((f) => f.endsWith('.tsx') || f.endsWith('.ts'))
+      for (const file of files) {
+        achievementsSource += '\n' + fs.readFileSync(path.join(achievementsDir, file), 'utf-8')
+      }
+    }
 
     // Invariant: strictly zero emojis
     // Check against standard emoji ranges

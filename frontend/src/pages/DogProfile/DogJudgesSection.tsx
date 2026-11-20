@@ -5,6 +5,8 @@ import {
   Award,
   ChevronDown,
   ChevronUp,
+  ChevronLeft,
+  ChevronRight,
   Trophy,
   AlertCircle,
   TrendingUp,
@@ -117,6 +119,15 @@ export function formatAllExpertsButton(count: number): string {
     return `Показать всех ${count} эксперта`
   }
   return `Показать всех ${count} экспертов`
+}
+
+export function formatShowMoreExperts(count: number): string {
+  const mod10 = Math.abs(count) % 10
+  const mod100 = Math.abs(count) % 100
+  if (mod100 >= 11 && mod100 <= 19) return `Показать ещё ${count} экспертов`
+  if (mod10 === 1) return `Показать ещё ${count} эксперта`
+  if (mod10 >= 2 && mod10 <= 4) return `Показать ещё ${count} эксперта`
+  return `Показать ещё ${count} экспертов`
 }
 
 export function DogJudgesSection({ judgeStats, competitions }: DogJudgesSectionProps) {
@@ -323,48 +334,246 @@ export function DogJudgesSection({ judgeStats, competitions }: DogJudgesSectionP
     )
   }
 
-  // Ленивая подгрузка экспертов порциями по 15 при скролле (без лишних кликов и скрытия)
-  const INITIAL_BATCH = 15
-  const BATCH_INCREMENT = 15
+  // Ограничение начального отображения для длинных списков
+  const INITIAL_LIMIT = 5
+  const EXPAND_THRESHOLD = 6
 
-  const [visibleHigherCount, setVisibleHigherCount] = useState(INITIAL_BATCH)
-  const [visibleLowerCount, setVisibleLowerCount] = useState(INITIAL_BATCH)
+  const [isHigherExpanded, setIsHigherExpanded] = useState(false)
+  const [isLowerExpanded, setIsLowerExpanded] = useState(false)
 
-  const higherSentinelRef = useRef<HTMLDivElement>(null)
-  const lowerSentinelRef = useRef<HTMLDivElement>(null)
+  // Мобильная карусель: вкладка 0 (Выше обычного) или 1 (Строже обычного) со свайпом
+  const [activeMobileTab, setActiveMobileTab] = useState<0 | 1>(0)
+  const trackRef = useRef<HTMLDivElement>(null)
+  const touchStartRef = useRef<{ x: number; y: number; time: number } | null>(null)
+  const gestureLockRef = useRef<'horizontal' | 'vertical' | null>(null)
+  const hadMovedRef = useRef(false)
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartRef.current = {
+      x: e.touches[0].clientX,
+      y: e.touches[0].clientY,
+      time: Date.now(),
+    }
+    gestureLockRef.current = null
+    hadMovedRef.current = false
+    if (trackRef.current) {
+      trackRef.current.style.transition = 'none'
+    }
+  }
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (!touchStartRef.current) return
+    const dx = e.touches[0].clientX - touchStartRef.current.x
+    const dy = e.touches[0].clientY - touchStartRef.current.y
+
+    if (Math.abs(dx) > 7 || Math.abs(dy) > 7) {
+      hadMovedRef.current = true
+    }
+
+    if (!gestureLockRef.current) {
+      if (Math.abs(dx) < 7 && Math.abs(dy) < 7) return
+      if (Math.abs(dy) >= Math.abs(dx)) {
+        gestureLockRef.current = 'vertical'
+        return
+      }
+      gestureLockRef.current = 'horizontal'
+    }
+
+    if (gestureLockRef.current === 'horizontal' && trackRef.current) {
+      const isAtLeftEdge = activeMobileTab === 0 && dx > 0
+      const isAtRightEdge = activeMobileTab === 1 && dx < 0
+      const appliedDx = isAtLeftEdge || isAtRightEdge ? dx * 0.22 : dx
+      const baseOffset = activeMobileTab === 0 ? '0%' : '-100%'
+      trackRef.current.style.transform = `translate3d(calc(${baseOffset} + ${appliedDx}px), 0, 0)`
+    }
+  }
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (!touchStartRef.current) return
+    const isHorizontal = gestureLockRef.current === 'horizontal'
+    const dx = e.changedTouches[0].clientX - touchStartRef.current.x
+    const dt = Date.now() - touchStartRef.current.time
+    const velocity = Math.abs(dx) / (dt || 1)
+
+    touchStartRef.current = null
+    gestureLockRef.current = null
+
+    if (isHorizontal && trackRef.current) {
+      let target: 0 | 1 = activeMobileTab
+      if ((dx < -35 || (dx < -15 && velocity > 0.2)) && activeMobileTab === 0) {
+        target = 1
+      } else if ((dx > 35 || (dx > 15 && velocity > 0.2)) && activeMobileTab === 1) {
+        target = 0
+      }
+      setActiveMobileTab(target)
+      trackRef.current.style.transition = 'transform 320ms cubic-bezier(0.16, 1, 0.3, 1)'
+      trackRef.current.style.transform = `translate3d(${target === 0 ? '0%' : '-100%'}, 0, 0)`
+    } else if (trackRef.current) {
+      trackRef.current.style.transition = 'transform 320ms cubic-bezier(0.16, 1, 0.3, 1)'
+      trackRef.current.style.transform = `translate3d(${activeMobileTab === 0 ? '0%' : '-100%'}, 0, 0)`
+    }
+  }
+
+  const handleTouchCancel = () => {
+    touchStartRef.current = null
+    gestureLockRef.current = null
+    if (trackRef.current) {
+      trackRef.current.style.transition = 'transform 320ms cubic-bezier(0.16, 1, 0.3, 1)'
+      trackRef.current.style.transform = `translate3d(${activeMobileTab === 0 ? '0%' : '-100%'}, 0, 0)`
+    }
+  }
+
+  const handleClickCapture = (e: React.MouseEvent) => {
+    if (hadMovedRef.current) {
+      e.preventDefault()
+      e.stopPropagation()
+    }
+  }
 
   useEffect(() => {
-    if (visibleHigherCount >= higherThanCareer.length) return
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setVisibleHigherCount((prev) => Math.min(prev + BATCH_INCREMENT, higherThanCareer.length))
-        }
-      },
-      { threshold: 0.1, rootMargin: '300px' },
-    )
-    const el = higherSentinelRef.current
-    if (el) observer.observe(el)
-    return () => observer.disconnect()
-  }, [visibleHigherCount, higherThanCareer.length])
+    if (trackRef.current) {
+      trackRef.current.style.transition = 'transform 320ms cubic-bezier(0.16, 1, 0.3, 1)'
+      trackRef.current.style.transform = `translate3d(${activeMobileTab === 0 ? '0%' : '-100%'}, 0, 0)`
+    }
+  }, [activeMobileTab])
 
-  useEffect(() => {
-    if (visibleLowerCount >= lowerThanCareer.length) return
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setVisibleLowerCount((prev) => Math.min(prev + BATCH_INCREMENT, lowerThanCareer.length))
-        }
-      },
-      { threshold: 0.1, rootMargin: '300px' },
-    )
-    const el = lowerSentinelRef.current
-    if (el) observer.observe(el)
-    return () => observer.disconnect()
-  }, [visibleLowerCount, lowerThanCareer.length])
+  const visibleHigher =
+    isHigherExpanded || higherThanCareer.length <= EXPAND_THRESHOLD
+      ? higherThanCareer
+      : higherThanCareer.slice(0, INITIAL_LIMIT)
 
-  const visibleHigher = higherThanCareer.slice(0, visibleHigherCount)
-  const visibleLower = lowerThanCareer.slice(0, visibleLowerCount)
+  const visibleLower =
+    isLowerExpanded || lowerThanCareer.length <= EXPAND_THRESHOLD
+      ? lowerThanCareer
+      : lowerThanCareer.slice(0, INITIAL_LIMIT)
+
+  const higherCard = (
+    <div className="rounded-2xl border border-old-money-200/90 bg-white overflow-hidden shadow-2xs h-full flex flex-col">
+      <div className="relative px-3.5 py-2.5 bg-forest-50/70 border-b border-old-money-200/80 flex items-center justify-between select-none">
+        <div className="flex items-center gap-1.5 min-w-0 pr-24 md:pr-0">
+          <Trophy className="w-3.5 h-3.5 text-forest-700 shrink-0" aria-hidden />
+          <h3 className="text-xs font-semibold uppercase tracking-wider text-charcoal-800 truncate">
+            Выше обычного
+          </h3>
+          <span className="text-[11px] text-forest-800 font-semibold tabular-nums ml-0.5">
+            {formatExpertsCount(higherThanCareer.length)}
+          </span>
+        </div>
+
+        {/* На мобилке: правый язычок в стиле HomeSubSectionTab для перехода к «Строже обычного» */}
+        <button
+          type="button"
+          onClick={() => setActiveMobileTab(1)}
+          className="md:hidden absolute right-0 top-1/2 -translate-y-1/2 z-20 inline-flex items-center gap-1 bg-[#fbf7f0]/95 text-camel-950 font-bold text-[11px] py-1 pl-2.5 pr-2 rounded-l-full border-y border-l border-camel-400/60 shadow-xs backdrop-blur-md transition-all hover:bg-camel-100/90 active:scale-95 cursor-pointer touch-manipulation select-none"
+          title="Перейти: Строже обычного"
+          aria-label="Перейти: Строже обычного"
+        >
+          <span className="tracking-tight text-rose-900 font-semibold">Строже</span>
+          <span className="text-[9px] tabular-nums font-bold px-1 py-0 rounded-full bg-rose-200/80 text-rose-950 shrink-0">
+            {lowerThanCareer.length}
+          </span>
+          <ChevronRight className="w-3.5 h-3.5 text-rose-800 shrink-0" aria-hidden />
+        </button>
+      </div>
+
+      {higherThanCareer.length > 0 ? (
+        <>
+          <div className="divide-y divide-old-money-100 flex-1">
+            {visibleHigher.map((judge) => renderJudgeRow(judge, 'higher'))}
+          </div>
+          {higherThanCareer.length > EXPAND_THRESHOLD && (
+            <button
+              type="button"
+              onClick={() => setIsHigherExpanded((prev) => !prev)}
+              className="w-full py-2.5 px-3 bg-cream-50/70 hover:bg-cream-100/80 border-t border-old-money-200/70 text-xs font-semibold text-charcoal-700 hover:text-camel-900 transition-colors flex items-center justify-center gap-1.5 cursor-pointer touch-manipulation min-h-[44px]"
+            >
+              {isHigherExpanded ? (
+                <>
+                  <span>Свернуть</span>
+                  <ChevronUp className="w-3.5 h-3.5 text-charcoal-500" aria-hidden />
+                </>
+              ) : (
+                <>
+                  <span>
+                    {formatShowMoreExperts(higherThanCareer.length - INITIAL_LIMIT)}
+                  </span>
+                  <ChevronDown className="w-3.5 h-3.5 text-charcoal-500" aria-hidden />
+                </>
+              )}
+            </button>
+          )}
+        </>
+      ) : (
+        <div className="p-4 text-center text-xs text-charcoal-400 flex-1 flex items-center justify-center">
+          Все оценки соответствуют среднему уровню
+        </div>
+      )}
+    </div>
+  )
+
+  const lowerCard = (
+    <div className="rounded-2xl border border-old-money-200/90 bg-white overflow-hidden shadow-2xs h-full flex flex-col">
+      <div className="relative px-3.5 py-2.5 bg-rose-50/70 border-b border-old-money-200/80 flex items-center justify-between select-none">
+        {/* На мобилке: левый язычок в стиле HomeSubSectionTab для перехода к «Выше обычного» */}
+        <button
+          type="button"
+          onClick={() => setActiveMobileTab(0)}
+          className="md:hidden absolute left-0 top-1/2 -translate-y-1/2 z-20 inline-flex items-center gap-1 bg-[#fbf7f0]/95 text-camel-950 font-bold text-[11px] py-1 pl-2 pr-2.5 rounded-r-full border-y border-r border-camel-400/60 shadow-xs backdrop-blur-md transition-all hover:bg-camel-100/90 active:scale-95 cursor-pointer touch-manipulation select-none"
+          title="Перейти: Выше обычного"
+          aria-label="Перейти: Выше обычного"
+        >
+          <ChevronLeft className="w-3.5 h-3.5 text-forest-800 shrink-0" aria-hidden />
+          <span className="tracking-tight text-forest-900 font-semibold">Выше</span>
+          <span className="text-[9px] tabular-nums font-bold px-1 py-0 rounded-full bg-forest-200/80 text-forest-950 shrink-0">
+            {higherThanCareer.length}
+          </span>
+        </button>
+
+        <div className="flex items-center gap-1.5 min-w-0 md:pl-0 pl-24 justify-end md:justify-start w-full">
+          <AlertCircle className="w-3.5 h-3.5 text-rose-700 shrink-0" aria-hidden />
+          <h3 className="text-xs font-semibold uppercase tracking-wider text-charcoal-800 truncate">
+            Строже обычного
+          </h3>
+          <span className="text-[11px] text-rose-800 font-semibold tabular-nums ml-0.5">
+            {formatExpertsCount(lowerThanCareer.length)}
+          </span>
+        </div>
+      </div>
+
+      {lowerThanCareer.length > 0 ? (
+        <>
+          <div className="divide-y divide-old-money-100 flex-1">
+            {visibleLower.map((judge) => renderJudgeRow(judge, 'lower'))}
+          </div>
+          {lowerThanCareer.length > EXPAND_THRESHOLD && (
+            <button
+              type="button"
+              onClick={() => setIsLowerExpanded((prev) => !prev)}
+              className="w-full py-2.5 px-3 bg-cream-50/70 hover:bg-cream-100/80 border-t border-old-money-200/70 text-xs font-semibold text-charcoal-700 hover:text-camel-900 transition-colors flex items-center justify-center gap-1.5 cursor-pointer touch-manipulation min-h-[44px]"
+            >
+              {isLowerExpanded ? (
+                <>
+                  <span>Свернуть</span>
+                  <ChevronUp className="w-3.5 h-3.5 text-charcoal-500" aria-hidden />
+                </>
+              ) : (
+                <>
+                  <span>
+                    {formatShowMoreExperts(lowerThanCareer.length - INITIAL_LIMIT)}
+                  </span>
+                  <ChevronDown className="w-3.5 h-3.5 text-charcoal-500" aria-hidden />
+                </>
+              )}
+            </button>
+          )}
+        </>
+      ) : (
+        <div className="p-4 text-center text-xs text-charcoal-400 flex-1 flex items-center justify-center">
+          Нет явно выраженных строгих оценок
+        </div>
+      )}
+    </div>
+  )
 
   return (
     <section
@@ -372,79 +581,67 @@ export function DogJudgesSection({ judgeStats, competitions }: DogJudgesSectionP
       className="card-refined p-4 sm:p-5 md:p-6 mb-6 rounded-2xl bg-gradient-to-b from-white to-cream-50/40 border border-old-money-200/90 shadow-xs"
     >
       {/* Лаконичный заголовок с базовым уровнем собаки */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4 pb-3 border-b border-old-money-200/80">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 pb-3.5 border-b border-old-money-200/80">
         <div>
           <h2 className="text-base md:text-lg font-serif font-semibold text-charcoal-900 leading-tight">
             Оценки судей
           </h2>
-          <p className="text-xs text-charcoal-500 mt-0.5">
+          <p className="text-xs text-charcoal-500 mt-1">
             Базовый уровень: в среднем <strong>{careerAvgPlace.toFixed(1)} место</strong> ·{' '}
             <strong>{careerAvgScore.toFixed(1)} б.</strong>
           </p>
         </div>
 
-        <div className="flex items-center gap-1.5 text-xs text-charcoal-600 font-medium bg-cream-100/70 px-2.5 py-1 rounded-xl border border-old-money-200/70 self-start sm:self-auto">
+        <div className="inline-flex items-center gap-1.5 h-8 px-3 rounded-full text-xs text-charcoal-700 font-medium bg-cream-100/70 border border-old-money-200/80 shadow-2xs self-start sm:self-auto">
           <Scale className="w-3.5 h-3.5 text-camel-700" aria-hidden />
-          <span>{formatExpertsCount(coursingJudges.length)}</span>
+          <span className="tabular-nums font-semibold">{formatExpertsCount(coursingJudges.length)}</span>
         </div>
       </div>
 
-      {/* 2 сбалансированных списка без отдельных дыр и дублирующих надписей */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-5 items-start">
-        {/* Колонка 1: Выше обычного */}
-        <div className="rounded-2xl border border-old-money-200/90 bg-white overflow-hidden shadow-2xs">
-          <div className="px-3.5 py-2.5 bg-forest-50/70 border-b border-old-money-200/80 flex items-center justify-between">
-            <div className="flex items-center gap-1.5">
-              <Trophy className="w-3.5 h-3.5 text-forest-700" aria-hidden />
-              <h3 className="text-xs font-semibold uppercase tracking-wider text-charcoal-800">
-                Выше обычного
-              </h3>
-            </div>
-            <span className="text-[11px] text-forest-800 font-semibold tabular-nums">
-              {formatExpertsCount(higherThanCareer.length)}
-            </span>
-          </div>
+      {/* Десктопная сетка из 2 колонок (>= md) */}
+      <div className="hidden md:grid md:grid-cols-2 gap-4 lg:gap-5 items-start">
+        {higherCard}
+        {lowerCard}
+      </div>
 
-          {visibleHigher.length > 0 ? (
-            <div className="divide-y divide-old-money-100">
-              {visibleHigher.map((judge) => renderJudgeRow(judge, 'higher'))}
-              {visibleHigherCount < higherThanCareer.length && (
-                <div ref={higherSentinelRef} className="h-4" aria-hidden="true" />
-              )}
-            </div>
-          ) : (
-            <div className="p-4 text-center text-xs text-charcoal-400">
-              Все оценки соответствуют среднему уровню
-            </div>
-          )}
+      {/* Мобильная карусель со свайпом влево/вправо (< md) */}
+      <div
+        className="block md:hidden w-full overflow-hidden touch-pan-y"
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+        onTouchCancel={handleTouchCancel}
+        onClickCapture={handleClickCapture}
+      >
+        <div
+          ref={trackRef}
+          className="flex flex-nowrap w-full items-stretch transition-transform"
+          style={{
+            transform: `translate3d(${activeMobileTab === 0 ? '0%' : '-100%'}, 0, 0)`,
+          }}
+        >
+          <div className="w-full shrink-0 basis-full pr-1">{higherCard}</div>
+          <div className="w-full shrink-0 basis-full pl-1">{lowerCard}</div>
         </div>
 
-        {/* Колонка 2: Строже обычного */}
-        <div className="rounded-2xl border border-old-money-200/90 bg-white overflow-hidden shadow-2xs">
-          <div className="px-3.5 py-2.5 bg-rose-50/70 border-b border-old-money-200/80 flex items-center justify-between">
-            <div className="flex items-center gap-1.5">
-              <AlertCircle className="w-3.5 h-3.5 text-rose-700" aria-hidden />
-              <h3 className="text-xs font-semibold uppercase tracking-wider text-charcoal-800">
-                Строже обычного
-              </h3>
-            </div>
-            <span className="text-[11px] text-rose-800 font-semibold tabular-nums">
-              {formatExpertsCount(lowerThanCareer.length)}
-            </span>
-          </div>
-
-          {visibleLower.length > 0 ? (
-            <div className="divide-y divide-old-money-100">
-              {visibleLower.map((judge) => renderJudgeRow(judge, 'lower'))}
-              {visibleLowerCount < lowerThanCareer.length && (
-                <div ref={lowerSentinelRef} className="h-4" aria-hidden="true" />
-              )}
-            </div>
-          ) : (
-            <div className="p-4 text-center text-xs text-charcoal-400">
-              Нет явно выраженных строгих оценок
-            </div>
-          )}
+        {/* Точки-индикаторы свайпа */}
+        <div className="flex items-center justify-center gap-1.5 mt-2.5" aria-hidden="true">
+          <button
+            type="button"
+            onClick={() => setActiveMobileTab(0)}
+            className={`h-1.5 rounded-full transition-all duration-200 cursor-pointer ${
+              activeMobileTab === 0 ? 'w-5 bg-camel-600' : 'w-1.5 bg-old-money-300'
+            }`}
+            aria-label="Слайд: Выше обычного"
+          />
+          <button
+            type="button"
+            onClick={() => setActiveMobileTab(1)}
+            className={`h-1.5 rounded-full transition-all duration-200 cursor-pointer ${
+              activeMobileTab === 1 ? 'w-5 bg-camel-600' : 'w-1.5 bg-old-money-300'
+            }`}
+            aria-label="Слайд: Строже обычного"
+          />
         </div>
       </div>
     </section>

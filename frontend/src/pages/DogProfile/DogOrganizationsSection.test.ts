@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest'
 import {
   formatOrgsCount,
   formatAllOrgsButton,
+  formatShowMoreOrgs,
   formatWinsCount,
   formatStartsCount,
   formatOrgDisplayName,
@@ -38,6 +39,19 @@ describe('formatAllOrgsButton', () => {
     expect(formatAllOrgsButton(11)).toBe('Показать все 11 организаций')
     expect(formatAllOrgsButton(21)).toBe('Показать 21 организацию')
     expect(formatAllOrgsButton(22)).toBe('Показать все 22 организаций')
+  })
+})
+
+describe('formatShowMoreOrgs', () => {
+  it('correctly formats show more button text with accusative/genitive forms', () => {
+    expect(formatShowMoreOrgs(1)).toBe('Показать ещё 1 организацию')
+    expect(formatShowMoreOrgs(2)).toBe('Показать ещё 2 организации')
+    expect(formatShowMoreOrgs(4)).toBe('Показать ещё 4 организации')
+    expect(formatShowMoreOrgs(5)).toBe('Показать ещё 5 организаций')
+    expect(formatShowMoreOrgs(11)).toBe('Показать ещё 11 организаций')
+    expect(formatShowMoreOrgs(21)).toBe('Показать ещё 21 организацию')
+    expect(formatShowMoreOrgs(22)).toBe('Показать ещё 22 организации')
+    expect(formatShowMoreOrgs(25)).toBe('Показать ещё 25 организаций')
   })
 })
 

@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest'
 import {
   formatExpertsCount,
   formatAllExpertsButton,
+  formatShowMoreExperts,
 } from './DogJudgesSection'
 
 describe('formatExpertsCount', () => {
@@ -47,5 +48,18 @@ describe('formatAllExpertsButton', () => {
     expect(formatAllExpertsButton(21)).toBe('Показать всех 21 эксперта')
     expect(formatAllExpertsButton(22)).toBe('Показать всех 22 экспертов')
     expect(formatAllExpertsButton(25)).toBe('Показать всех 25 экспертов')
+  })
+})
+
+describe('formatShowMoreExperts', () => {
+  it('correctly formats show more button text with accusative forms', () => {
+    expect(formatShowMoreExperts(1)).toBe('Показать ещё 1 эксперта')
+    expect(formatShowMoreExperts(2)).toBe('Показать ещё 2 эксперта')
+    expect(formatShowMoreExperts(4)).toBe('Показать ещё 4 эксперта')
+    expect(formatShowMoreExperts(5)).toBe('Показать ещё 5 экспертов')
+    expect(formatShowMoreExperts(11)).toBe('Показать ещё 11 экспертов')
+    expect(formatShowMoreExperts(21)).toBe('Показать ещё 21 эксперта')
+    expect(formatShowMoreExperts(22)).toBe('Показать ещё 22 эксперта')
+    expect(formatShowMoreExperts(25)).toBe('Показать ещё 25 экспертов')
   })
 })
