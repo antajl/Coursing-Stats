@@ -1,7 +1,8 @@
 import React from 'react'
 
 export interface PlacementMedalBadgeProps {
-  place: number | string | null | undefined
+  place?: number | string | null | undefined
+  placement?: number | string | null | undefined
   size?: 'xs' | 'sm' | 'md'
   className?: string
 }
@@ -26,12 +27,14 @@ export function getPlacementToneClass(place: number): string {
   return 'placement-badge-neutral border border-old-money-400'
 }
 
-export default function PlacementMedalBadge({
+export function PlacementMedalBadge({
   place,
+  placement,
   size = 'xs',
   className = '',
 }: PlacementMedalBadgeProps) {
-  const num = typeof place === 'number' ? place : parseInt(String(place).replace(/^#/, ''), 10)
+  const raw = place ?? placement
+  const num = typeof raw === 'number' ? raw : parseInt(String(raw).replace(/^#/, ''), 10)
   if (!Number.isFinite(num) || num <= 0) return null
 
   const toneClass = getPlacementToneClass(num)
@@ -47,3 +50,5 @@ export default function PlacementMedalBadge({
     </span>
   )
 }
+
+export default PlacementMedalBadge

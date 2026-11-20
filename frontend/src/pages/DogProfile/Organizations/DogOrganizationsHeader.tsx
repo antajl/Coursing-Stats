@@ -1,4 +1,3 @@
-import { Trophy } from 'lucide-react'
 import {
   type DogOrgStatsResult,
   type OrgDisciplineFilter,
@@ -25,18 +24,11 @@ export function DogOrganizationsHeader({
 }: DogOrganizationsHeaderProps) {
   return (
     <div className="flex flex-col gap-2 px-1">
-      {/* Строка 1: Заголовок + значок побед + десктопный фильтр дисциплин */}
+      {/* Строка 1: Заголовок + десктопный фильтр дисциплин */}
       <div className="flex items-center justify-between gap-3">
-        <div className="flex items-center gap-2 flex-wrap">
-          <h2 className="text-sm sm:text-base font-bold text-charcoal-900">
-            Статистика побед по клубам и организациям
-          </h2>
-          <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-50/90 text-amber-950 border border-amber-300/80 shadow-2xs whitespace-nowrap shrink-0 tabular-nums">
-            <Trophy className="w-3.5 h-3.5 text-amber-600 shrink-0" aria-hidden />
-            <span>{orgStats.total_wins}</span>
-            <span className="text-amber-800/80 font-normal whitespace-nowrap">из {orgStats.total_starts}</span>
-          </span>
-        </div>
+        <h2 className="text-sm sm:text-base font-bold text-charcoal-900">
+          Статистика побед по клубам и организациям
+        </h2>
 
         {/* Десктопная сегментная строка: чистый сдержанный Old Money переключатель */}
         {showDisciplineFilter && (
