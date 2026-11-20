@@ -20,7 +20,7 @@ function main() {
   buildTopIndexes(db);
   buildTopSpeedIndexes(db);
   buildYearsIndex(db);
-  buildBreedAnnualLeaders();
+  buildBreedAnnualLeaders(db);
   const { rows, judgesData } = buildJudgesSummary(db);
   buildJudgeDetails(rows, judgesData);
   buildDogProfiles(db);

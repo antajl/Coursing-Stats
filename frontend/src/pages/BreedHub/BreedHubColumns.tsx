@@ -188,9 +188,9 @@ export default function BreedHubColumns({
       actionPlacement="right"
       action={
         <Link
-          to={`/competitions/ranking/2026/?breed=${encodeURIComponent(breedToSlug(canonicalKey))}`}
+          to={`/competitions/ranking/2026/?breed=${encodeURIComponent(breedToSlug(canonicalKey))}&tab=racing`}
           className="inline-flex items-center gap-1 text-xs font-semibold text-camel-800 hover:text-camel-950 transition-colors cursor-pointer shrink-0"
-          title={`Полный рейтинг породы ${breedNameRu}`}
+          title={`Рейтинг рейсинга породы ${breedNameRu}`}
         >
           <span>Рейтинг</span>
           <ArrowUpRight className="h-3.5 w-3.5 text-camel-700" aria-hidden />
@@ -302,7 +302,7 @@ export default function BreedHubColumns({
                 <p className="text-xs text-old-money-600 py-6 text-center">Загрузка архива по годам…</p>
               ) : annualLeaders.length === 0 ? (
                 <div className="py-8 text-center text-xs text-old-money-600 px-4">
-                  <p>В открытых протоколах состязаний с 2015 года забегов породы пока не зафиксировано.</p>
+                  <p>В открытых протоколах состязаний по рейсингу с 2015 года забегов породы пока не зафиксировано.</p>
                 </div>
               ) : (
                 <>
@@ -327,13 +327,13 @@ export default function BreedHubColumns({
                             <tr
                               key={item.year}
                               className="hover:bg-cream-50/60 transition-colors"
-                              title={`Чемпион ${item.year} года: ${item.gold} золотых побед из ${item.total_starts} стартов${item.best_speed ? `, пиковая скорость ${item.best_speed.toFixed(1)} км/ч` : ''}`}
+                              title={`Чемпион рейсинга ${item.year} года: ${item.gold} золотых побед из ${item.total_starts} стартов${item.best_speed ? `, пиковая скорость ${item.best_speed.toFixed(1)} км/ч` : ''}`}
                             >
                               <td className="py-2.5 px-2.5 text-center whitespace-nowrap">
                                 <Link
-                                  to={`/competitions/ranking/${item.year}/?breed=${encodeURIComponent(breedToSlug(canonicalKey))}`}
+                                  to={`/competitions/ranking/${item.year}/?breed=${encodeURIComponent(breedToSlug(canonicalKey))}&tab=racing`}
                                   className="inline-block px-2.5 py-0.5 rounded-full font-bold font-sans tabular-nums text-xs bg-camel-100 hover:bg-camel-200 active:scale-95 text-camel-950 border border-camel-200/80 transition-all shadow-2xs cursor-pointer"
-                                  title={`Открыть рейтинг соревнований ${item.year} года`}
+                                  title={`Открыть рейтинг рейсинга ${item.year} года`}
                                 >
                                   {item.year}
                                 </Link>
@@ -399,9 +399,9 @@ export default function BreedHubColumns({
                           {/* Верхняя строка: Бейдж года + Имя собаки + Иконка пола */}
                           <div className="flex items-center gap-2 min-w-0">
                             <Link
-                              to={`/competitions/ranking/${item.year}/?breed=${encodeURIComponent(breedToSlug(canonicalKey))}`}
+                              to={`/competitions/ranking/${item.year}/?breed=${encodeURIComponent(breedToSlug(canonicalKey))}&tab=racing`}
                               className="px-2.5 py-0.5 rounded-full font-bold font-sans tabular-nums text-xs bg-camel-100 hover:bg-camel-200 active:scale-95 text-camel-950 border border-camel-200/80 shrink-0 transition-all shadow-2xs cursor-pointer"
-                              title={`Открыть рейтинг соревнований ${item.year} года`}
+                              title={`Открыть рейтинг рейсинга ${item.year} года`}
                             >
                               {item.year}
                             </Link>

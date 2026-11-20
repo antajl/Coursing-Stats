@@ -306,7 +306,17 @@ export default function TopDogs({ urlYear }: TopDogsProps = {}) {
     navigate(`/competitions/ranking/${activeSeason}/`)
   }, [activeSeason, navigate])
 
-  const [selectedMobileColumn, setSelectedMobileColumn] = useState<'coursing' | 'racing' | null>(null)
+  const [selectedMobileColumn, setSelectedMobileColumn] = useState<'coursing' | 'racing' | null>(() => {
+    const colParam = searchParams.get('tab') || searchParams.get('col')
+    return colParam === 'racing' || colParam === 'coursing' ? colParam : null
+  })
+
+  useEffect(() => {
+    const colParam = searchParams.get('tab') || searchParams.get('col')
+    if (colParam === 'racing' || colParam === 'coursing') {
+      setSelectedMobileColumn(colParam)
+    }
+  }, [searchParams])
   const activeMobileColumn =
     selectedMobileColumn ?? (filteredCombined.length === 0 && filteredSpeed.length > 0 ? 'racing' : 'coursing')
 

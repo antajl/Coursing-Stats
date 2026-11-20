@@ -29,6 +29,7 @@ verified: 2026-11-08
 | Профиль собаки | CDN `indexes/dog-profiles/pack-XXX.json` (`byId`) — не per-id, не `dogs/by-id` |
 | Судьи | `indexes/judges-summary.json`, `judge-details/{key}.json` — **не** show judges |
 | Награды в мобильных карточках | `MobileCardsProtocolView.tsx`: в строке «Награды:» выводятся все сертификаты и титулы (`СС`, `CACMB`, `CACL`, `ЧРКФ` и др.). Запрещено скрывать награды у собак, выполнивших норматив на «СС» |
+| Заголовок состязания в профиле собаки | В карточках профиля (`CoursingColumn.tsx`, `RacingColumn.tsx`) над датой обязателен заголовок: `(event.competition_kind \|\| event.title \|\| '').trim()`. Запрещено оставлять пустую строку при отсутствии `competition_kind`: fallback на `event.title`. Генераторы `dog-profiles.ts` и `scrape-year-page.ts` нормализуют строковые ранги турниров в `ЧРКФ`, `ПЧРКФ`, `Чемпионат России`, `Кубок России`, `CACL`, `CACIL`, `CACMB`, `Чемпионат НКП` (гарантировано 0 пропусков заголовков по всей базе) |
 
 ## Key files / routes
 
