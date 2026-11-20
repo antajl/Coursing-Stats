@@ -5,7 +5,7 @@ import { competitionTitleDisplayName } from '../../../../backend/lib/competition
 import {
   compareDogProfileTitles,
   formatTitleLine,
-  isCertificateToken,
+  isOfficialDogTitleToken,
   titleBadgeClass,
   type DogTitle,
 } from '../../lib/qualificationTitles'
@@ -24,16 +24,18 @@ type DogProfileAwardsBarProps = {
   competitionTitles: DogTitle[]
   showTitles: DogTitle[]
   achievements?: DogAchievementItem[]
+  titleExplanations?: Record<string, string>
 }
 
 export function DogProfileAwardsBar({
   competitionTitles,
   showTitles,
   achievements = [],
+  titleExplanations = {},
 }: DogProfileAwardsBarProps): ReactNode {
-  // Оставляем только полноценные титулы (без обычных/кандидатских сертификатов)
-  const pureCompTitles = competitionTitles.filter((item) => !isCertificateToken(item.title))
-  const pureShowTitles = showTitles.filter((item) => !isCertificateToken(item.title))
+  // Оставляем ТОЛЬКО официальные чемпионские звания РКФ/FCI (без сертификатов, без расстановок дня BIS/BIG/ЛПП и без клубных лиг)
+  const pureCompTitles = competitionTitles.filter((item) => isOfficialDogTitleToken(item.title, 'sport'))
+  const pureShowTitles = showTitles.filter((item) => isOfficialDogTitleToken(item.title, 'show'))
 
   const hasComp = pureCompTitles.length > 0
   const hasShow = pureShowTitles.length > 0
@@ -49,14 +51,39 @@ export function DogProfileAwardsBar({
   )
 
   const renderChip = (item: DogTitle, keyPrefix: string) => {
+    const isShow = keyPrefix === 'show'
     const showKey = matchShowAwardToken(item.title)
-    const badgeTitle = showKey ? item.title : competitionTitleDisplayName(item.title)
+    // ВАЖНО: для выставок титул «ЧР» — это Чемпион России (не путать с «ЧР РК»)
+    const badgeTitle = isShow
+      ? (/^(ЧР|ЮЧР|ВЧР|ЧРКФ|ЮЧРКФ|ВЧРКФ|ГЧР|ЮГЧР|ВГЧР|ЧНКП|ЮЧНКП|ВЧНКП|ЧП|ЮЧП|ВЧП|ШОУ ЧР)$/i.test(item.title)
+          ? item.title
+          : (showKey ? item.title : item.title))
+      : competitionTitleDisplayName(item.title)
     const line = formatTitleLine({ title: badgeTitle, count: item.count })
+    const explanation = titleExplanations[badgeTitle] || titleExplanations[item.title]
 
     return (
       <HoverTooltip
         key={`${keyPrefix}-${badgeTitle}`}
-        label={awardTooltipForDogTitle(item.title, item.count)}
+        label={
+          explanation ? (
+            <div className="flex flex-col gap-1 max-w-xs text-left">
+              <div className="flex items-center gap-1.5 font-bold text-xs text-charcoal-900">
+                <span className={`px-1.5 py-0.5 rounded text-[11px] font-semibold ${titleBadgeClass(badgeTitle)}`}>
+                  {badgeTitle}
+                </span>
+                <span className="text-[11px] font-medium leading-snug">
+                  {awardTooltipForDogTitle(item.title, item.count, isShow)}
+                </span>
+              </div>
+              <p className="text-[11px] leading-snug text-charcoal-600 font-normal border-t border-cream-200/80 pt-1 mt-0.5">
+                {explanation}
+              </p>
+            </div>
+          ) : (
+            awardTooltipForDogTitle(item.title, item.count, isShow)
+          )
+        }
         placement="top"
         variant="site"
         delayMs={0}

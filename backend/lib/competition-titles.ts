@@ -141,54 +141,60 @@ export function competitionTitleKey(raw: string): CompetitionTitleKey {
   const t = raw.trim().toLowerCase().replace(/\s+/g, ' ')
   if (!t || /^\d+$/.test(t) || /^[vв]$/i.test(t) || /^(вк|b|б)$/i.test(t)) return ''
 
+  // Снимаем суффикс дисциплины ((кб), (бб), (бзмп), (lc), (lr)) и год для нормализации ключа
+  const clean = t
+    .replace(/\s*\((?:кб|бб|бзмп|lc|lr)\)/gi, '')
+    .replace(/\s+20\d\d/g, '')
+    .trim()
+
   // Кумулятивы — раньше «чемпион россии», иначе гранд/национальный съест ЧР
   if (
-    /^гчр(\s+рк)?$/.test(t) ||
-    (/гранд/.test(t) && /чемпион/.test(t) && /россии/.test(t) && !/ркф/.test(t))
+    /^гчр(\s+рк)?$/.test(clean) ||
+    (/гранд/.test(clean) && /чемпион/.test(clean) && /россии/.test(clean) && !/ркф/.test(clean))
   ) {
     return 'grand_champion_russia'
   }
   if (
-    /^гчркф(\s+рк)?$/.test(t) ||
-    (/гранд/.test(t) && /чемпион/.test(t) && /ркф/.test(t))
+    /^гчркф(\s+рк)?$/.test(clean) ||
+    (/гранд/.test(clean) && /чемпион/.test(clean) && /ркф/.test(clean))
   ) {
     return 'grand_champion_rkf'
   }
-  if (/^нч(\s+рк)?$/.test(t) || (/национальн/.test(t) && /чемпион/.test(t))) {
+  if (/^нч(\s+рк)?$/.test(clean) || (/национальн/.test(clean) && /чемпион/.test(clean))) {
     return 'national_champion'
   }
   if (
-    /^пч(\s+рк)?$/.test(t) ||
-    (/породн/.test(t) && /чемпион/.test(t) && !/ркф/.test(t))
+    /^пч(\s+рк)?$/.test(clean) ||
+    (/породн/.test(clean) && /чемпион/.test(clean) && !/ркф/.test(clean))
   ) {
     return 'breed_champion'
   }
 
   // Титулы дня на статусных мероприятиях
   if (
-    /^чр(\s+рк)?$/.test(t) ||
-    (/чемпион/.test(t) && /россии/.test(t) && !/ркф/.test(t) && !/гранд/.test(t) && !/национальн/.test(t))
+    /^чр(\s+рк)?$/.test(clean) ||
+    (/чемпион/.test(clean) && /россии/.test(clean) && !/ркф/.test(clean) && !/гранд/.test(clean) && !/национальн/.test(clean))
   ) {
     return 'champion_russia'
   }
-  if (/^пкр(\s+рк)?$/.test(t) || (/(?:кубок|кубк)/.test(t) && /россии/.test(t))) {
+  if (/^пкр(\s+рк)?$/.test(clean) || (/(?:кубок|кубк)/.test(clean) && /россии/.test(clean))) {
     return 'cup_russia'
   }
   if (
-    /^пчркф(\s+рк)?$/.test(t) ||
-    (/чемпион/.test(t) && /ркф/.test(t) && (/пород/.test(t) || / в пород/.test(t)))
+    /^пчркф(\s+рк)?$/.test(clean) ||
+    (/чемпион/.test(clean) && /ркф/.test(clean) && (/пород/.test(clean) || / в пород/.test(clean)))
   ) {
     return 'breed_champion_rkf'
   }
-  if (/^чркф(\s+рк)?$/.test(t) || (/чемпион/.test(t) && /ркф/.test(t) && !/гранд/.test(t))) {
+  if (/^чркф(\s+рк)?$/.test(clean) || (/чемпион/.test(clean) && /ркф/.test(clean) && !/гранд/.test(clean))) {
     return 'champion_rkf'
   }
 
   // FCI career label in protocols
   if (
-    (/international/.test(t) && /champion/.test(t)) ||
-    /\bc\.?i\.?c\b/.test(t) ||
-    /интерчемпион/.test(t)
+    (/international/.test(clean) && /champion/.test(clean)) ||
+    /\bc\.?i\.?c\b/.test(clean) ||
+    /интерчемпион/.test(clean)
   ) {
     return 'international'
   }
@@ -250,16 +256,29 @@ export function isKnownCompetitionTitleKey(key: string): boolean {
   return Object.prototype.hasOwnProperty.call(COMPETITION_TITLE_BADGE, key)
 }
 
-/** Короткий бейдж для чипа. */
+/** Короткий бейдж для чипа. Сохраняет дисциплину (КБ, ББ, БЗМП), если она была указана. */
 export function competitionTitleDisplayName(raw: string, key = competitionTitleKey(raw)): string {
-  if (COMPETITION_TITLE_BADGE[key]) return COMPETITION_TITLE_BADGE[key]
+  const tagMatch = raw.match(/\((КБ|ББ|БЗМП|LC|LR)\)/i)
+  const tag = tagMatch ? ` (${tagMatch[1].toUpperCase()})` : ''
+  if (COMPETITION_TITLE_BADGE[key]) return `${COMPETITION_TITLE_BADGE[key]}${tag}`
   return raw.trim()
 }
 
-/** Полная подпись для тултипа. */
+/** Полная подпись для тултипа. Дополняет расшифровкой дисциплины. */
 export function competitionTitleLabel(raw: string, key = competitionTitleKey(raw)): string {
-  if (COMPETITION_TITLE_LABELS[key]) return COMPETITION_TITLE_LABELS[key]
-  return raw.trim()
+  const baseLabel = COMPETITION_TITLE_LABELS[key] || raw.trim()
+  const tagMatch = raw.match(/\((КБ|ББ|БЗМП|LC|LR)\)/i)
+  if (!tagMatch) return baseLabel
+  const code = tagMatch[1].toUpperCase()
+  const discName =
+    code === 'КБ' || code === 'LC'
+      ? 'курсинг борзых'
+      : code === 'ББ' || code === 'LR'
+        ? 'бега борзых'
+        : code === 'БЗМП'
+          ? 'бега за механической приманкой'
+          : code
+  return `${baseLabel} (${discName})`
 }
 
 export function competitionTitleRank(raw: string): number {
@@ -267,10 +286,16 @@ export function competitionTitleRank(raw: string): number {
   return COMPETITION_TITLE_RANK[key] ?? 10
 }
 
-/** Сортировка: круче → выше, затем по алфавиту. */
+/** Сортировка: круче → выше, затем курсинг (КБ) перед бегами (ББ), затем по алфавиту. */
 export function compareCompetitionTitles(a: string, b: string): number {
   const rankDiff = competitionTitleRank(b) - competitionTitleRank(a)
   if (rankDiff !== 0) return rankDiff
+
+  const aKb = a.includes('КБ') || a.includes('LC')
+  const bKb = b.includes('КБ') || b.includes('LC')
+  if (aKb && !bKb) return -1
+  if (!aKb && bKb) return 1
+
   return competitionTitleDisplayName(a).localeCompare(competitionTitleDisplayName(b), 'ru')
 }
 

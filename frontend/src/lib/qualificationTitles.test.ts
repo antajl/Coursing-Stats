@@ -3,6 +3,7 @@ import {
   buildDogProfileTitleGroups,
   classifyDogProfileTitle,
   isCertificateToken,
+  isOfficialDogTitleToken,
   mergeDogProfileTitles,
   resolveCompetitionTitles,
   resolveShowTitles,
@@ -150,5 +151,36 @@ describe('isCertificateToken', () => {
     expect(isCertificateToken('ПКР РК')).toBe(false)
     expect(isCertificateToken('ПЧРКФ РК')).toBe(false)
     expect(isCertificateToken('C.I.C.')).toBe(false)
+  })
+
+  it('correctly filters official dog title tokens by domain including discipline variants', () => {
+    // Sport discipline-partitioned titles
+    expect(isOfficialDogTitleToken('ЧР РК (ББ)', 'sport')).toBe(true)
+    expect(isOfficialDogTitleToken('ЧР РК (КБ)', 'sport')).toBe(true)
+    expect(isOfficialDogTitleToken('НЧ РК (КБ)', 'sport')).toBe(true)
+    expect(isOfficialDogTitleToken('НЧ РК (ББ)', 'sport')).toBe(true)
+    expect(isOfficialDogTitleToken('ЧРКФ РК (КБ)', 'sport')).toBe(true)
+    expect(isOfficialDogTitleToken('ЧРКФ РК (ББ)', 'sport')).toBe(true)
+    expect(isOfficialDogTitleToken('ПЧРКФ РК (КБ)', 'sport')).toBe(true)
+    expect(isOfficialDogTitleToken('ГЧРКФ РК', 'sport')).toBe(true)
+    expect(isOfficialDogTitleToken('ГЧР РК', 'sport')).toBe(true)
+
+    // Sport non-official items
+    expect(isOfficialDogTitleToken('Абсолют', 'sport')).toBe(false)
+    expect(isOfficialDogTitleToken('CACL', 'sport')).toBe(false)
+    expect(isOfficialDogTitleToken('RegCACL', 'sport')).toBe(false)
+    expect(isOfficialDogTitleToken('CACLBr', 'sport')).toBe(false)
+
+    // Show official titles
+    expect(isOfficialDogTitleToken('ЧР', 'show')).toBe(true)
+    expect(isOfficialDogTitleToken('ЧРКФ', 'show')).toBe(true)
+    expect(isOfficialDogTitleToken('ГЧР', 'show')).toBe(true)
+
+    // Show day placements & certificates (must be false)
+    expect(isOfficialDogTitleToken('BIS', 'show')).toBe(false)
+    expect(isOfficialDogTitleToken('BIG', 'show')).toBe(false)
+    expect(isOfficialDogTitleToken('ЛПП', 'show')).toBe(false)
+    expect(isOfficialDogTitleToken('CAC', 'show')).toBe(false)
+    expect(isOfficialDogTitleToken('CW', 'show')).toBe(false)
   })
 })

@@ -72,6 +72,81 @@ export function isCertificateToken(rawTitle: string): boolean {
   return false
 }
 
+/**
+ * Проверяет, является ли токен официальным титулом/званием чемпиона РКФ/FCI.
+ * Отсекает:
+ * 1) Сертификаты: CAC, JCAC, VCAC, CACIB, CACL, RegCACL, CACMB, CW, СС, КЧК и др.
+ * 2) Ринговые победы дня: BIS, BIG, BOB, ЛПП, BOS, ЛЮ, ЛВ, ЛЩ, ЛБ.
+ * 3) Клубные зачёты/лиги Донино: Абсолют, Чемпионы, Прогресс, Юниор.
+ */
+export function isOfficialDogTitleToken(rawTitle: string, domain?: 'sport' | 'show'): boolean {
+  if (!rawTitle) return false
+  const norm = rawTitle.trim().toUpperCase().replace(/\s+/g, ' ')
+
+  // 1. Отсекаем сертификаты
+  if (isCertificateToken(rawTitle)) return false
+
+  // 2. Отсекаем ринговые расстановки выставок
+  const ringAwards = new Set([
+    'BIS',
+    'BIG',
+    'BOB',
+    'ЛПП',
+    'BOS',
+    'ЛЮ',
+    'ЛВ',
+    'ЛЩ',
+    'ЛБ',
+    'BIS_JUNIOR',
+    'BIS_VETERAN',
+    'BIS_PUPPY',
+    'BIS_BABY',
+    'BEST IN SHOW',
+    'BEST IN GROUP',
+    'ЛУЧШИЙ ПРЕДСТАВИТЕЛЬ ПОРОДЫ',
+  ])
+  if (ringAwards.has(norm)) return false
+
+  // 3. Отсекаем клубные лиги Донино
+  const clubLeagues = new Set([
+    'АБСОЛЮТ',
+    'ЧЕМПИОНЫ',
+    'ПРОГРЕСС',
+    'ЮНИОР',
+    'LEAGUE_ABSOLUTE',
+    'LEAGUE_CHAMPIONS',
+    'LEAGUE_PROGRESS',
+    'LEAGUE_JUNIOR',
+  ])
+  if (clubLeagues.has(norm)) return false
+
+  // 4. Проверяем доменные официальные титулы
+  if (domain === 'show') {
+    return (
+      /^(ЧР|ЮЧР|ВЧР|ЧРКФ|ЮЧРКФ|ВЧРКФ|ГЧР|ЮГЧР|ВГЧР|ЧНКП|ЮЧНКП|ВЧНКП|ЧП|ЮЧП|ВЧП|ШОУ ЧР)$/i.test(norm) ||
+      norm.includes('ПОБЕДИТЕЛЬ') ||
+      norm.includes('ИНТЕРЧЕМПИОН') ||
+      norm.includes('C.I.B') ||
+      norm.includes('C.I.E')
+    )
+  }
+
+  if (domain === 'sport') {
+    return (
+      /^(ЧР|НЧ|ПКР|ЧРКФ|ПЧРКФ|ПЧ|ГЧР|ГЧРКФ|АЧР)(\s+РК)?(\s*\((?:КБ|ББ|БЗМП|LC|LR)\))?(\s+20\d\d)?$/i.test(norm) ||
+      norm.includes('C.I.C') ||
+      norm.includes('ИНТЕРНАЦИОНАЛЬНЫЙ')
+    )
+  }
+
+  return (
+    /^(ЧР|ЮЧР|ВЧР|ЧРКФ|ЮЧРКФ|ВЧРКФ|ГЧР|ЮГЧР|ВГЧР|ЧНКП|ЮЧНКП|ВЧНКП|ЧП|ЮЧП|ВЧП|НЧ|ПКР|ПЧ|АЧР)(\s+РК)?(\s*\((?:КБ|ББ|БЗМП|LC|LR)\))?(\s+20\d\d)?$/i.test(norm) ||
+    norm.includes('C.I.C') ||
+    norm.includes('C.I.B') ||
+    norm.includes('C.I.E')
+  )
+}
+
 export function parseQualificationTitles(qualification: string | null | undefined): string[] {
   if (!qualification?.trim()) return []
   return qualification
@@ -204,6 +279,23 @@ export function mergeDogProfileTitles(
 
 /** Ранг для сортировки: вес выставки или ранг титула соревнований. */
 export function dogProfileTitleRank(title: string): number {
+  const norm = title
+    .trim()
+    .toUpperCase()
+    .replace(/\s*\((?:КБ|ББ|БЗМП|LC|LR)\)/gi, '')
+    .replace(/\s+20\d\d/g, '')
+    .trim()
+
+  if (norm === 'ГЧР' || norm === 'ГЧР РК') return 140
+  if (norm === 'ГЧРКФ' || norm === 'ГЧРКФ РК') return 135
+  if (norm === 'ЧР' || norm === 'ЧР РК') return 120
+  if (norm === 'НЧ' || norm === 'НЧ РК') return 115
+  if (norm === 'ПКР' || norm === 'ПКР РК') return 110
+  if (norm === 'ЮЧР') return 100
+  if (norm === 'ЧРКФ' || norm === 'ЧРКФ РК') return 100
+  if (norm === 'ВЧР') return 95
+  if (norm === 'ПЧ' || norm === 'ПЧ РК') return 95
+  if (norm === 'ПЧРКФ' || norm === 'ПЧРКФ РК') return 90
   const showKey = matchShowAwardToken(title)
   if (showKey) return SHOW_AWARD_WEIGHTS[showKey]
   return competitionTitleRank(title)

@@ -77,7 +77,7 @@ export function classifyCompetitionTitle(raw: string): AwardCategory {
 
   // Собирательные (кумулятивные) — гранды / НЧ / ПЧ / C.I.C.
   if (
-    /^(НЧ|ПЧ|ГЧР|ГЧРКФ)(\s+РК)?$/.test(compact) ||
+    /^(НЧ|ПЧ|ГЧР|ГЧРКФ|АЧР)(\s+РК)?(\s*\((?:КБ|ББ|БЗМП|LC|LR)\))?$/.test(compact) ||
     compact.includes('НАЦИОНАЛЬНЫЙ ЧЕМПИОН') ||
     compact.includes('ПОРОДНЫЙ ЧЕМПИОН') ||
     compact.includes('ГРАНД ЧЕМПИОН') ||
@@ -91,7 +91,7 @@ export function classifyCompetitionTitle(raw: string): AwardCategory {
 
   // Крутые титулы соревнования (ранг мероприятия / рабочие качества)
   if (
-    /^(ЧР|ПКР|ЧРКФ|ПЧРКФ)(\s+РК)?$/.test(compact) ||
+    /^(ЧР|ПКР|ЧРКФ|ПЧРКФ)(\s+РК)?(\s*\((?:КБ|ББ|БЗМП|LC|LR)\))?$/.test(compact) ||
     compact.startsWith('ЧЕМПИОН РОССИИ') ||
     compact.startsWith('ПОБЕДИТЕЛЬ КУБКА РОССИИ') ||
     compact.startsWith('ЧЕМПИОН РКФ') ||

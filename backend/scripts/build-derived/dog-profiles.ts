@@ -21,8 +21,11 @@ type CompetitionHistoryRow = {
   title: string | null;
   event_type: string | null;
   competition_kind: string | null;
+  rank_label?: string | null;
+  full_title?: string | null;
   results_url: string | null;
   location: string | null;
+  host_club: string | null;
   event_judges: string | null;
   dog_id: number;
   placement: number | null;
@@ -32,6 +35,52 @@ type CompetitionHistoryRow = {
   status_reason: string | null;
   raw_scores_json: string | null;
 };
+
+function resolveEventHostClub(row: { host_club?: string | null; title?: string | null; location?: string | null }): string | null {
+  if (row.host_club && row.host_club.trim()) {
+    return row.host_club.trim();
+  }
+  const title = row.title || '';
+  const loc = row.location || '';
+  if (/НКП|РПБ/i.test(title)) return 'НКП «Русская псовая борзая»';
+  if (/Ярослав|Левково|Левцово/i.test(title) || /Ярослав|Левково|Левцово/i.test(loc)) {
+    return 'ОО «Ярославский областной клуб спортивно-прикладного собаководства»';
+  }
+  if (/Михайловское/i.test(title) || /Михайловское/i.test(loc)) return 'Курсинг в Михайловском';
+  if (/Донино/i.test(title) || /Донино/i.test(loc)) return 'Курсинг в Донино';
+  if (/Суханово/i.test(title) || /Суханово/i.test(loc)) return 'РООКО Кинологический союз «Арта»';
+  if (/Головинка/i.test(title) || /Головинка/i.test(loc)) return 'РКОО «Калужский областной клуб собаководства»';
+  if (/Новый Милет/i.test(title) || /Новый Милет/i.test(loc)) return 'МОРОО «Федерация спортивно-прикладного собаководства»';
+  if (/Ставрополь/i.test(title) || /Ставрополь/i.test(loc)) {
+    return 'ОО «Региональное кинологическое общество Ставропольского края «Альянс»';
+  }
+  if (/Мартовский Заяц/i.test(title)) return 'ОООК КЦ «Элита» (РАЛББ)';
+  return null;
+}
+
+function resolveCompetitionKind(
+  kind: string | null | undefined,
+  title: string | null | undefined,
+  rankLabel?: string | null | undefined,
+  fullTitle?: string | null | undefined,
+): string | null {
+  if (kind && kind.trim()) return kind.trim();
+  const text = [title, rankLabel, fullTitle].filter(Boolean).join(' ');
+  const upper = text.toUpperCase();
+  if (upper.includes('ЧЕМПИОНАТ РОССИИ') || upper.includes(' ЧР ') || upper.startsWith('ЧР ')) return 'Чемпионат России';
+  if (upper.includes('КУБОК РОССИИ') || upper.includes(' КР ') || upper.startsWith('КР ')) return 'Кубок России';
+  if (upper.includes('МОНОПОРОДН') || upper.includes('МОНОРОДН') || upper.includes('ПЧРКФ')) return 'ПЧРКФ';
+  if (upper.includes('ЧРКФ') || upper.includes('ЧЕМПИОНАТ РКФ') || upper.includes('ЧЕМПИОНАТЫ РКФ')) return 'ЧРКФ';
+  if (upper.includes('ЧЕМПИОНАТ НКП')) return 'Чемпионат НКП';
+  if (upper.includes('CACIL')) return 'CACIL';
+  if (upper.includes('CACL')) return 'CACL';
+  if (upper.includes('CACIB')) return 'CACIB';
+  if (upper.includes('CACMB') || upper.includes('САСМВ')) return 'CACMB';
+  if (upper.includes('CAC')) return 'CAC';
+  if (upper.includes('КУБОК')) return 'Кубок';
+  if (upper.includes('ДРУЖЕСТВЕННЫЕ')) return 'Дружественные забеги';
+  return null;
+}
 
 function extractJudgeSums(rawScoresJson: string | null): number[] {
   if (!rawScoresJson) return [];
@@ -660,7 +709,8 @@ export function buildDogProfiles(db: Database.Database) {
     .prepare(
       `SELECT
         e.id AS event_id, e.date_start, e.date_end, e.title, e.event_type, e.competition_kind,
-        e.results_url, e.location, e.judges AS event_judges, r.dog_id, r.placement, r.total_score, r.qualification, r.status, r.status_reason, r.raw_scores_json
+        e.rank_label, e.full_title,
+        e.results_url, e.location, e.host_club, e.judges AS event_judges, r.dog_id, r.placement, r.total_score, r.qualification, r.status, r.status_reason, r.raw_scores_json
        FROM events e
        JOIN results r ON e.id = r.event_id
        WHERE r.status NOT IN ${RACING_EXCLUDED_STATUSES_SQL}
@@ -847,9 +897,10 @@ export function buildDogProfiles(db: Database.Database) {
         date_end: row.date_end,
         title: row.title,
         event_type: effectiveEventType,
-        competition_kind: row.competition_kind,
+        competition_kind: resolveCompetitionKind(row.competition_kind, row.title, row.rank_label, row.full_title),
         results_url: row.results_url,
         location: row.location,
+        host_club: resolveEventHostClub(row),
         placement: row.placement,
         total_score: row.total_score,
         qualification: row.qualification?.trim() ? row.qualification.trim() : null,

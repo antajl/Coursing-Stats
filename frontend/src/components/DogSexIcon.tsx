@@ -1,7 +1,7 @@
 import { Mars, Venus } from 'lucide-react'
 
 interface DogSexIconProps {
-  sex: string
+  sex?: string | null
   className?: string
   size?: number
   strokeWidth?: number
@@ -15,7 +15,7 @@ export default function DogSexIcon({
   strokeWidth = 2,
   variant = 'colored',
 }: DogSexIconProps) {
-  const s = sex.trim().toLowerCase()
+  const s = String(sex ?? '').trim().toLowerCase()
   const isFemale = s === 'сука' || s === 'с' || s === 'female' || s === 'f'
   const isMale = s === 'кобель' || s === 'к' || s === 'male' || s === 'm'
 

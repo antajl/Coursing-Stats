@@ -28,6 +28,7 @@ type DogEvent = {
   event_id?: string | number | null
   event_type?: string
   competition_kind?: string | null
+  title?: string | null
   date_start?: string | null
   placement?: number | string | null
   total_score?: number | string | null
@@ -241,15 +242,16 @@ export function CoursingColumn({
             {visibleCoursingEvents.map((event, idx) => {
               const cardClass =
                 'block border-b border-forest-200/80 py-2 transition-colors last:border-b-0 hover:bg-forest-50/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-camel-500'
+              const headline = (event.competition_kind || event.title || '').trim()
               const cardBody = (
                 <>
-                  <div className="min-w-0 flex-shrink-0">
-                    {event.competition_kind ? (
+                  {headline ? (
+                    <div className="min-w-0 flex-shrink-0">
                       <div className="break-words text-xs font-bold uppercase tracking-wide text-forest-700">
-                        {event.competition_kind}
+                        {headline}
                       </div>
-                    ) : null}
-                  </div>
+                    </div>
+                  ) : null}
                   <HistoryMetaRow
                     date={
                       event.date_start

@@ -1107,7 +1107,7 @@ export function matchesBreedSearch(breed: string, query: string): boolean {
   const tokens = generateSearchTokens(query)
   if (tokens.length === 0) return true
 
-  const bLower = breed.toLowerCase().trim()
+  const bLower = String(breed ?? '').toLowerCase().trim()
   const canon = canonicalBreed(breed)
   const canonLower = canon ? canon.toLowerCase() : ''
   const terms = canon ? CANONICAL_SEARCH_TERMS.get(canon) : undefined

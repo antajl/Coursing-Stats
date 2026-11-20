@@ -6,6 +6,7 @@ import { EmptyDisciplineColumn } from './EmptyDisciplineColumn'
 import { DoninoSpeedColumn } from './DoninoSpeedColumn'
 import { DoninoCoursingColumn } from './DoninoCoursingColumn'
 import { DogJudgesSection, type DogJudgesStats } from './DogJudgesSection'
+import { DogOrganizationsSection } from './DogOrganizationsSection'
 import { CollapsibleSection } from '../../components/ui/CollapsibleSection'
 import type { ShowDogCardData } from '../Shows/ShowDogCard'
 import type { ProfileHeaderRank } from './DogProfileHeader'
@@ -154,6 +155,13 @@ export const DogDisciplinesDesktopView: React.FC<DogDisciplinesDesktopViewProps>
       {judgeStats && (
         <div id="judges" className="scroll-mt-20 hidden md:block">
           <DogJudgesSection judgeStats={judgeStats} competitions={events} />
+        </div>
+      )}
+
+      {/* Десктопная секция организаций */}
+      {events && events.length > 0 && (
+        <div id="organizations" className="scroll-mt-20 hidden md:block">
+          <DogOrganizationsSection competitions={events} />
         </div>
       )}
 

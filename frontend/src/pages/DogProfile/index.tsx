@@ -13,6 +13,7 @@ import { EmptyDisciplineColumn } from './EmptyDisciplineColumn'
 import { DoninoSpeedColumn } from './DoninoSpeedColumn'
 import { DoninoCoursingColumn } from './DoninoCoursingColumn'
 import { DogJudgesSection } from './DogJudgesSection'
+import { DogOrganizationsSection } from './DogOrganizationsSection'
 import { DogDisciplinesMobileView } from './DogDisciplinesMobileView'
 import { DogDisciplinesDesktopView } from './DogDisciplinesDesktopView'
 import { useDogProfileData } from './useDogProfileData'
@@ -95,26 +96,38 @@ export default function DogProfile() {
                 <DogJudgesSection judgeStats={data.judgeStats} competitions={data.events} />
               </div>
             )}
+            {data.events && data.events.length > 0 && (
+              <div className="mt-6">
+                <DogOrganizationsSection competitions={data.events} />
+              </div>
+            )}
           </>
         ) : (
           <EmptyDisciplineColumn title="Курсинг / БЗМП" theme="forest" />
         )
       case 'racing':
         return data.showRacingColumn ? (
-          <RacingColumn
-            hasRacingData={data.hasRacingData}
-            hasRacingMedals={data.hasRacingMedals}
-            racing={data.racing}
-            racingEvents={data.racingEvents}
-            visibleRacingEvents={data.visibleRacingEvents}
-            eventResultsUrls={data.eventResultsUrls}
-            bestSpeedEventId={data.bestSpeedEventId}
-            avgSpeedEventId={data.avgSpeedEventId}
-            showAllRacingEvents={data.showAllRacingEvents}
-            onToggleShowAll={() => data.setShowAllRacingEvents((v) => !v)}
-            rank={data.headerRanks.find((r) => r.key === 'racing')}
-            breed={data.headerBreed}
-          />
+          <>
+            <RacingColumn
+              hasRacingData={data.hasRacingData}
+              hasRacingMedals={data.hasRacingMedals}
+              racing={data.racing}
+              racingEvents={data.racingEvents}
+              visibleRacingEvents={data.visibleRacingEvents}
+              eventResultsUrls={data.eventResultsUrls}
+              bestSpeedEventId={data.bestSpeedEventId}
+              avgSpeedEventId={data.avgSpeedEventId}
+              showAllRacingEvents={data.showAllRacingEvents}
+              onToggleShowAll={() => data.setShowAllRacingEvents((v) => !v)}
+              rank={data.headerRanks.find((r) => r.key === 'racing')}
+              breed={data.headerBreed}
+            />
+            {data.events && data.events.length > 0 && (
+              <div className="mt-6">
+                <DogOrganizationsSection competitions={data.events} />
+              </div>
+            )}
+          </>
         ) : (
           <EmptyDisciplineColumn title="Бега борзых" theme="warm-blue" />
         )
@@ -192,6 +205,7 @@ export default function DogProfile() {
           dog={data.headerDog}
           showTitles={data.titleGroups.show}
           competitionTitles={data.titleGroups.competition}
+          titleExplanations={data.titleExplanations}
           showRuName={Boolean(data.showRuName)}
           exporting={data.exporting}
           onExport={data.handleExport}

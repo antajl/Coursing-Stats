@@ -58,6 +58,7 @@ type DogProfileHeaderProps = {
     racing?: StandingExplainerInput | null
     shows?: StandingExplainerInput | null
   }
+  titleExplanations?: Record<string, string>
 }
 
 export function DogProfileHeader({
@@ -68,6 +69,7 @@ export function DogProfileHeader({
   exporting,
   onExport,
   ranks = [],
+  titleExplanations,
 }: DogProfileHeaderProps) {
   const { primary, secondary } = parseDogName(dog.name_lat, dog.name_ru)
   const breedDisplay = displayBreed(dog.breed)
@@ -344,6 +346,7 @@ export function DogProfileHeader({
                 competitionTitles={competitionTitles}
                 showTitles={showTitles}
                 achievements={achievements}
+                titleExplanations={titleExplanations}
               />
             </div>
           )}

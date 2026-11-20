@@ -76,9 +76,36 @@ export function awardTooltipForToken(token: string): ReactNode {
 }
 
 /** Тултип чипа шапки профиля (выставка или курсинг/беги). */
-export function awardTooltipForDogTitle(title: string, count?: number): ReactNode {
+export function awardTooltipForDogTitle(title: string, count?: number, isShow?: boolean): ReactNode {
+  if (isShow && title === 'ЧР') {
+    return (
+      <AwardTooltipRow
+        badge="ЧР"
+        label="Чемпион России по красоте (выполнена норма РКФ: 6+ CAC от разных судей)"
+        badgeClass="border border-camel-500 bg-camel-100 text-camel-800 font-bold"
+      />
+    )
+  }
+  if (isShow && title === 'ЧРКФ') {
+    return (
+      <AwardTooltipRow
+        badge="ЧРКФ"
+        label="Чемпион РКФ по красоте"
+        badgeClass="border border-camel-400 bg-camel-100 text-camel-700 font-semibold"
+      />
+    )
+  }
+  if (title === 'ЧР') {
+    return (
+      <AwardTooltipRow
+        badge="ЧР"
+        label="Чемпион России (выполнена норма РКФ)"
+        badgeClass="border border-camel-500 bg-camel-100 text-camel-800 font-bold"
+      />
+    )
+  }
   const showKey = matchShowAwardToken(title)
-  if (showKey) return awardTooltipForKey(showKey, count)
+  if (showKey && isShow) return awardTooltipForKey(showKey, count)
   return awardTooltipForCompetitionTitle(title, count)
 }
 

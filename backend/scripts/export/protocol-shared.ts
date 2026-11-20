@@ -13,7 +13,7 @@ export interface JudgeScore {
 export interface Heat {
   heat_number?: number;
   bib_number?: number;
-  bib_color?: string;
+  bib_color?: string | number | null;
   judges?: JudgeScore[];
   total?: number;
   time?: number | null;
@@ -227,7 +227,7 @@ export function getRacingRaceNumber(heat?: Heat | null): string {
 
 export function renderRacingBibCell(heat?: Heat | null): string {
   if (!heat) return '<td></td>';
-  const color = (heat.bib_color || '').toLowerCase();
+  const color = String(heat.bib_color ?? '').toLowerCase();
   let num = heat.bib_number != null ? String(heat.bib_number) : '';
   let bg = '#ffffff';
   let textColor = '#000000';

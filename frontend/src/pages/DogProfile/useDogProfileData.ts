@@ -14,6 +14,10 @@ import { transliterateCyrillicToLatin } from '../../lib/dogName'
 import {
   buildDogProfileTitleGroups,
 } from '../../lib/qualificationTitles'
+import {
+  evaluateCumulativeTitles,
+  type CumulativeTitle,
+} from '../../lib/cumulativeTitles'
 import { toPng } from 'html-to-image'
 import { useYandexGoal } from '../../components/YandexMetrica'
 import { buildEventResultsUrlMap } from '../../lib/procoursingLinks'
@@ -190,6 +194,29 @@ export function useDogProfileData() {
     }
   }, [isShowOnly, dog, showDog, loading, showsLoading, queryName, queryBreed, fallbackSportDogId])
 
+  // Объединённый объект собаки для шапки
+  const headerDog = useMemo(() => {
+    if (dog) {
+      return {
+        ...dog,
+        pedigree_url: (dog as any).pedigree_url || showDog?.pedigree_url || null,
+        photo_url: (dog as any).photo_url || (showDog as any)?.photo_url || null,
+      }
+    }
+    if (showDog) {
+      return {
+        id: showDog.competition_dog_id ?? showDog.id,
+        name_lat: showDog.name_lat,
+        name_ru: showDog.name_ru,
+        breed: showDog.breed,
+        sex: showDog.sex,
+        pedigree_url: showDog.pedigree_url || null,
+        photo_url: (showDog as any)?.photo_url || null,
+      }
+    }
+    return null
+  }, [dog, showDog])
+
   // Расчёт и асинхронная дозагрузка рангов
   const headerRanks = useDogProfileRanks({
     dog,
@@ -200,8 +227,8 @@ export function useDogProfileData() {
     profileId,
   })
 
-  // Объединение выставочных и спортивных титулов
-  const titleGroups = useMemo(() => {
+  // Базовые группы выставочных и спортивных титулов
+  const rawTitleGroups = useMemo(() => {
     return buildDogProfileTitleGroups({
       competitionIndexed: dog?.titles,
       competitions: events,
@@ -209,6 +236,30 @@ export function useDogProfileData() {
       showHistory: showDog?.history,
     })
   }, [dog, showDog, events])
+
+  // Автоматический расчёт накопительных званий РКФ по регламенту
+  const cumulativeTitles = useMemo(() => {
+    return evaluateCumulativeTitles({
+      dogId: headerDog?.id,
+      breed: headerBreed,
+      competitions: events,
+      competitionTitles: rawTitleGroups.competition,
+      showTitles: showDog?.titles,
+      showHistory: showDog?.history,
+    })
+  }, [headerDog?.id, headerBreed, events, rawTitleGroups.competition, showDog?.titles, showDog?.history])
+
+  // Строго официальные титулы РКФ с разделением по спортивным дисциплинам и выставкам
+  const titleGroups = useMemo(() => {
+    return {
+      competition: cumulativeTitles.officialSportTitles,
+      show: cumulativeTitles.officialShowTitles,
+    }
+  }, [cumulativeTitles.officialSportTitles, cumulativeTitles.officialShowTitles])
+
+  const titleExplanations = useMemo(() => {
+    return cumulativeTitles.titleExplanations
+  }, [cumulativeTitles.titleExplanations])
 
   const titles = useMemo(
     () => [...titleGroups.show, ...titleGroups.competition].map((t) => ({ title: t })),
@@ -357,28 +408,6 @@ export function useDogProfileData() {
     }
   }
 
-  const headerDog = useMemo(() => {
-    if (dog) {
-      return {
-        ...dog,
-        pedigree_url: (dog as any).pedigree_url || showDog?.pedigree_url || null,
-        photo_url: (dog as any).photo_url || (showDog as any)?.photo_url || null,
-      }
-    }
-    if (showDog) {
-      return {
-        id: showDog.competition_dog_id ?? showDog.id,
-        name_lat: showDog.name_lat,
-        name_ru: showDog.name_ru,
-        breed: showDog.breed,
-        sex: showDog.sex,
-        pedigree_url: showDog.pedigree_url || null,
-        photo_url: (showDog as any)?.photo_url || null,
-      }
-    }
-    return null
-  }, [dog, showDog])
-
   const hasCourseMedals =
     (coursing.gold || 0) > 0 || (coursing.silver || 0) > 0 || (coursing.bronze || 0) > 0
   const hasRacingMedals =
@@ -473,6 +502,8 @@ export function useDogProfileData() {
     headerBreed,
     headerRanks,
     titleGroups,
+    titleExplanations,
+    cumulativeTitles,
     showRuName,
     hasCoursingData,
     hasCourseMedals,
