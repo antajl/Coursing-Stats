@@ -100,6 +100,61 @@ function getInitialContainerWidth(): number {
   return 600
 }
 
+function playCollapseGhosts(
+  container: HTMLElement,
+  excludeEl: HTMLElement | null,
+  targetLeft: number,
+) {
+  if (typeof document === 'undefined' || !container) return
+  const pills = Array.from(
+    container.querySelectorAll<HTMLElement>('[data-breed-pill], [data-more-btn]'),
+  )
+  if (pills.length === 0) return
+
+  const containerRect = container.getBoundingClientRect()
+  const ghostWrapper = document.createElement('div')
+  ghostWrapper.setAttribute('aria-hidden', 'true')
+  ghostWrapper.style.position = 'absolute'
+  ghostWrapper.style.top = '0'
+  ghostWrapper.style.left = '0'
+  ghostWrapper.style.width = '100%'
+  ghostWrapper.style.height = '100%'
+  ghostWrapper.style.pointerEvents = 'none'
+  ghostWrapper.style.zIndex = '5'
+  ghostWrapper.style.overflow = 'hidden'
+
+  pills.forEach((p) => {
+    if (excludeEl && p === excludeEl) return
+    const rect = p.getBoundingClientRect()
+    const clone = p.cloneNode(true) as HTMLElement
+    clone.style.position = 'absolute'
+    clone.style.top = `${rect.top - containerRect.top}px`
+    clone.style.left = `${rect.left - containerRect.left}px`
+    clone.style.width = `${rect.width}px`
+    clone.style.height = `${rect.height}px`
+    clone.style.margin = '0'
+    clone.style.pointerEvents = 'none'
+    ghostWrapper.appendChild(clone)
+
+    const deltaX = targetLeft - rect.left
+    clone.animate(
+      [
+        { transform: 'translateX(0px) scale(1)', opacity: '1' },
+        { transform: `translateX(${deltaX * 0.75}px) scale(0.35)`, opacity: '0' },
+      ],
+      {
+        duration: 180,
+        easing: 'cubic-bezier(0.35, 0, 0.25, 1)',
+      },
+    )
+  })
+
+  container.appendChild(ghostWrapper)
+  setTimeout(() => {
+    ghostWrapper.remove()
+  }, 220)
+}
+
 export default function QuickBreedBar({
   selectedBreed,
   onSelectBreed,
@@ -353,63 +408,110 @@ export default function QuickBreedBar({
     }
   }, [containerWidth, measured, normalizedSelected, targetBreed, selectedLabel, candidates])
 
-  const isAnimatingRef = useRef(false)
+  const isTransitioningRef = useRef(false)
   const prevSelectedRef = useRef(normalizedSelected)
+  const flyFromRef = useRef<{ left: number } | null>(null)
 
   useLayoutEffect(() => {
     const prev = prevSelectedRef.current
     prevSelectedRef.current = normalizedSelected
+    isTransitioningRef.current = false
 
     if (prefersReducedMotion() || !containerRef.current) return
 
     const container = containerRef.current
 
-    // Если порода только что была выбрана: пружинящий вход выбранного чипа и хаба
+    // Если порода только что была выбрана:
     if (!prev && normalizedSelected) {
+      const from = flyFromRef.current
+      flyFromRef.current = null
+
       const selectedPill = container.querySelector<HTMLElement>('[data-selected-pill]')
-      if (selectedPill) {
+      const hubLink = container.querySelector<HTMLElement>('[data-hub-link]')
+
+      if (from && selectedPill) {
+        // FLIP: выбранная пилюля летит из точки клика прямо в свой финальный слот (200мс)
+        const toRect = selectedPill.getBoundingClientRect()
+        const deltaX = from.left - toRect.left
+
         selectedPill.animate(
           [
-            { transform: 'scale(0.85)', opacity: 0.7 },
-            { transform: 'scale(1)', opacity: 1 },
+            { transform: `translateX(${deltaX}px)`, boxShadow: '0 4px 16px rgba(120, 80, 30, 0.20)' },
+            { transform: 'translateX(0px)', boxShadow: 'none' },
           ],
           {
-            duration: 220,
+            duration: 200,
             easing: 'cubic-bezier(0.16, 1, 0.3, 1)',
           }
         )
-      }
-      const hubLink = container.querySelector<HTMLElement>('[data-hub-link]')
-      if (hubLink) {
-        hubLink.animate(
+
+        const crossIcon = selectedPill.querySelector<HTMLElement>('[data-cross-icon]')
+        if (crossIcon) {
+          crossIcon.animate(
+            [
+              { opacity: 0, transform: 'scale(0.5)' },
+              { opacity: 1, transform: 'scale(1)' },
+            ],
+            { duration: 170, easing: 'ease-out' }
+          )
+        }
+
+        // Кнопка «Хаб породы ↗» летит ВМЕСТЕ с пилюлей и проявляется ОДНОВРЕМЕННО
+        if (hubLink) {
+          hubLink.animate(
+            [
+              { transform: `translateX(${deltaX}px)`, opacity: 0 },
+              { transform: 'translateX(0px)', opacity: 1 },
+            ],
+            {
+              duration: 210,
+              easing: 'cubic-bezier(0.16, 1, 0.3, 1)',
+            }
+          )
+        }
+      } else if (selectedPill) {
+        // Порода выбрана через внешний фильтр (без прямого клика по плашке)
+        selectedPill.animate(
           [
-            { opacity: 0, transform: 'translateX(-8px)' },
-            { opacity: 1, transform: 'translateX(0px)' },
+            { transform: 'scale(0.94) translateX(-4px)', opacity: 0 },
+            { transform: 'scale(1) translateX(0px)', opacity: 1 },
           ],
           {
-            duration: 240,
-            delay: 40,
-            easing: 'ease-out',
-            fill: 'forwards',
+            duration: 170,
+            easing: 'cubic-bezier(0.16, 1, 0.3, 1)',
           }
         )
+        if (hubLink) {
+          hubLink.animate(
+            [
+              { opacity: 0, transform: 'translateX(-4px)' },
+              { opacity: 1, transform: 'translateX(0px)' },
+            ],
+            { duration: 170, easing: 'ease-out' }
+          )
+        }
       }
     }
 
     // Если вернулись ко «Всем породам»: каскадный веерный выезд плашек слева направо
     if (prev && !normalizedSelected) {
+      flyFromRef.current = null
+
+      if (typeof container.getAnimations === 'function') {
+        container.getAnimations({ subtree: true }).forEach((anim) => anim.cancel())
+      }
+
       const allPills = Array.from(container.querySelectorAll<HTMLElement>('[data-breed-pill]'))
       allPills.forEach((el, index) => {
         el.animate(
           [
-            { opacity: 0, transform: 'translateX(-15px) scale(0.92)' },
+            { opacity: 0, transform: 'translateX(-10px) scale(0.96)' },
             { opacity: 1, transform: 'translateX(0px) scale(1)' },
           ],
           {
-            duration: 220,
-            delay: index * 16,
+            duration: 180,
+            delay: Math.min(index * 12, 100),
             easing: 'cubic-bezier(0.16, 1, 0.3, 1)',
-            fill: 'forwards',
           }
         )
       })
@@ -417,14 +519,13 @@ export default function QuickBreedBar({
       if (moreBtn) {
         moreBtn.animate(
           [
-            { opacity: 0, transform: 'translateX(-10px)' },
+            { opacity: 0, transform: 'translateX(-6px)' },
             { opacity: 1, transform: 'translateX(0px)' },
           ],
           {
-            duration: 220,
-            delay: allPills.length * 16,
+            duration: 180,
+            delay: Math.min(allPills.length * 12, 120),
             easing: 'ease-out',
-            fill: 'forwards',
           }
         )
       }
@@ -437,7 +538,7 @@ export default function QuickBreedBar({
       return
     }
 
-    if (isAnimatingRef.current) return
+    if (isTransitioningRef.current) return
 
     const clickedEl =
       e?.currentTarget ||
@@ -450,79 +551,23 @@ export default function QuickBreedBar({
 
     const container = containerRef.current
     const allBtn = container.querySelector<HTMLElement>('[data-all-btn]')
-    const moreBtn = container.querySelector<HTMLElement>('[data-more-btn]')
-    const allPills = Array.from(container.querySelectorAll<HTMLElement>('[data-breed-pill]'))
+    const allRect = allBtn?.getBoundingClientRect()
+    const targetLeft = allRect ? allRect.right + GAP : 0
 
-    if (!allBtn) {
-      onSelectBreed(breedKey)
-      return
-    }
+    isTransitioningRef.current = true
 
-    isAnimatingRef.current = true
-
-    const allRect = allBtn.getBoundingClientRect()
     const clickedRect = clickedEl.getBoundingClientRect()
+    flyFromRef.current = { left: clickedRect.left }
 
-    // Точка назначения выбранной плашки — сразу справа от кнопки «Все породы»
-    const targetLeft = allRect.right + GAP
-    const deltaX = targetLeft - clickedRect.left
-    const targetCenterX = targetLeft + clickedRect.width / 2
+    // Запускаем схлопывание остальных плашек влево
+    playCollapseGhosts(container, clickedEl, targetLeft)
 
-    // Превращаем выбранную плашку в активную и поднимаем z-index над остальными
-    clickedEl.classList.remove('cs-glass-pill')
-    clickedEl.classList.add('cs-glass-pill-active')
-    clickedEl.style.zIndex = '30'
-    clickedEl.style.pointerEvents = 'none'
-
-    // Плавный полёт выбранной плашки влево на своё новое место
-    const flyAnim = clickedEl.animate(
-      [
-        { transform: 'translateX(0px)', boxShadow: '0 2px 8px rgba(120, 80, 30, 0.12)' },
-        { transform: `translateX(${deltaX}px)`, boxShadow: '0 4px 16px rgba(120, 80, 30, 0.20)' },
-      ],
-      {
-        duration: 280,
-        easing: 'cubic-bezier(0.16, 1, 0.3, 1)',
-        fill: 'forwards',
-      }
-    )
-
-    // Все остальные плашки и кнопка «Ещё породы» улетают под неё
-    const otherElements = allPills.filter((el) => el !== clickedEl)
-    if (moreBtn) otherElements.push(moreBtn)
-
-    otherElements.forEach((el) => {
-      el.style.pointerEvents = 'none'
-      const elRect = el.getBoundingClientRect()
-      const elCenterX = elRect.left + elRect.width / 2
-      const suckDeltaX = targetCenterX - elCenterX
-
-      el.animate(
-        [
-          { transform: 'translateX(0px) scale(1)', opacity: 1 },
-          { transform: `translateX(${suckDeltaX * 0.75}px) scale(0.35)`, opacity: 0 },
-        ],
-        {
-          duration: 240,
-          easing: 'cubic-bezier(0.35, 0, 0.25, 1)',
-          fill: 'forwards',
-        }
-      )
-    })
-
-    const finish = () => {
-      isAnimatingRef.current = false
-      onSelectBreed(breedKey)
-    }
-
-    flyAnim.onfinish = finish
-    setTimeout(() => {
-      if (isAnimatingRef.current) finish()
-    }, 350)
+    // Мгновенно передаем выбор в React: выбранная плашка и хаб монтируются и летят на своё место
+    onSelectBreed(breedKey)
   }
 
   const handleDropdownSelect = (breedKey: string) => {
-    if (isAnimatingRef.current) return
+    if (isTransitioningRef.current) return
 
     if (prefersReducedMotion() || !containerRef.current) {
       onSelectBreed(breedKey)
@@ -532,57 +577,18 @@ export default function QuickBreedBar({
     const container = containerRef.current
     const allBtn = container.querySelector<HTMLElement>('[data-all-btn]')
     const moreBtn = container.querySelector<HTMLElement>('[data-more-btn]')
-    const allPills = Array.from(container.querySelectorAll<HTMLElement>('[data-breed-pill]'))
+    const allRect = allBtn?.getBoundingClientRect()
+    const targetLeft = allRect ? allRect.right + GAP : 0
+    const moreRect = moreBtn?.getBoundingClientRect()
 
-    if (!allBtn || (allPills.length === 0 && !moreBtn)) {
-      onSelectBreed(breedKey)
-      return
+    isTransitioningRef.current = true
+
+    if (moreRect) {
+      flyFromRef.current = { left: moreRect.left }
     }
 
-    isAnimatingRef.current = true
-
-    const allRect = allBtn.getBoundingClientRect()
-    const targetLeft = allRect.right + GAP
-
-    const collapsingElements = [...allPills]
-    if (moreBtn) collapsingElements.push(moreBtn)
-
-    let completed = 0
-    const total = collapsingElements.length
-
-    const finish = () => {
-      if (isAnimatingRef.current) {
-        isAnimatingRef.current = false
-        onSelectBreed(breedKey)
-      }
-    }
-
-    collapsingElements.forEach((el) => {
-      el.style.pointerEvents = 'none'
-      const elRect = el.getBoundingClientRect()
-      const deltaX = targetLeft - elRect.left
-
-      const anim = el.animate(
-        [
-          { transform: 'translateX(0px) scale(1)', opacity: 1 },
-          { transform: `translateX(${deltaX * 0.65}px) scale(0.35)`, opacity: 0 },
-        ],
-        {
-          duration: 240,
-          easing: 'cubic-bezier(0.35, 0, 0.25, 1)',
-          fill: 'forwards',
-        }
-      )
-
-      anim.onfinish = () => {
-        completed++
-        if (completed === total) finish()
-      }
-    })
-
-    setTimeout(() => {
-      if (isAnimatingRef.current) finish()
-    }, 350)
+    playCollapseGhosts(container, null, targetLeft)
+    onSelectBreed(breedKey)
   }
 
   return (
@@ -632,7 +638,7 @@ export default function QuickBreedBar({
       {/* Основной адаптивный контейнер */}
       <div
         ref={containerRef}
-        className={`flex items-center gap-[5px] flex-nowrap min-w-0 w-full py-2 -my-2 overflow-visible ${className}`.trim()}
+        className={`flex items-center gap-[5px] flex-nowrap min-w-0 w-full py-2 -my-2 relative overflow-visible ${className}`.trim()}
         role="toolbar"
         aria-label="Быстрый выбор породы"
       >
