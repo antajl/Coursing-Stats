@@ -257,4 +257,57 @@ describe('evaluateCumulativeTitles', () => {
     expect(abs?.status).toBe('in_progress')
     expect(abs?.progressPercent).toBeGreaterThanOrEqual(50)
   })
+
+  it('correctly classifies Grand Champion of Russia (ГЧР) under supreme titles, not under regular show titles', () => {
+    const data: DogCareerData = {
+      dogId: 5727,
+      breed: 'УИППЕТ',
+      showTitles: { CAC: 6, CHRKF: 2, YCHRKF: 4, KCHK: 4, GCHR: 1 },
+      showHistory: [
+        { date: '19.02.2025', title: 'CAC', judge: 'Судья 1' },
+        { date: '22.03.2025', title: 'CAC', judge: 'Судья 2' },
+        { date: '29.03.2025', title: 'CAC', judge: 'Судья 3' },
+        { date: '05.04.2025', title: 'CAC', judge: 'Судья 4' },
+        { date: '12.04.2025', title: 'CAC', judge: 'Судья 5' },
+        { date: '19.04.2025', title: 'CAC', judge: 'Судья 6' },
+      ],
+      competitions: [
+        {
+          placement: 1,
+          event_type: 'coursing',
+          competition_kind: 'Чемпионат России',
+          qualification: 'Чемпион России',
+          status: 'finished',
+          date_start: '2025-05-10',
+        },
+      ],
+    }
+
+    const { completed, officialSupremeTitles, officialShowTitles, titleExplanations } =
+      evaluateCumulativeTitles(data)
+
+    // GCHR must be classified as supreme
+    const gchr = completed.find((t) => t.id === 'grand-ch-russia')
+    expect(gchr).toBeDefined()
+    expect(gchr?.status).toBe('completed')
+    expect(gchr?.domain).toBe('supreme')
+
+    // Absolute Champion must also be earned because dog has GCHR + CHR RK
+    const abs = completed.find((t) => t.id === 'absolute-ch-russia')
+    expect(abs).toBeDefined()
+    expect(abs?.status).toBe('completed')
+
+    // Supreme titles row must have both ACH and GCHR
+    expect(officialSupremeTitles.map((t) => t.title)).toEqual(['АЧР', 'ГЧР'])
+
+    // Regular show titles must NOT contain GCHR (only regular show titles like CHR, CHRKF, YCHRKF)
+    expect(officialShowTitles.some((t) => t.title === 'ГЧР')).toBe(false)
+    expect(officialShowTitles.map((t) => t.title)).toContain('ЧР')
+    expect(officialShowTitles.map((t) => t.title)).toContain('ЧРКФ')
+    expect(officialShowTitles.map((t) => t.title)).toContain('ЮЧРКФ')
+
+    // Explanation for supreme:ГЧР must be present
+    expect(titleExplanations['supreme:ГЧР']).toBeDefined()
+    expect(titleExplanations['supreme:ГЧР']).toContain('Гранд чемпион России по красоте')
+  })
 })

@@ -351,7 +351,7 @@ export function evaluateCumulativeTitles(data: DogCareerData): CumulativeEvaluat
     id: 'grand-ch-russia',
     title: 'Гранд чемпион России по красоте',
     badge: 'ГЧР',
-    domain: 'show',
+    domain: 'supreme',
     status: gchrShowCompleted ? 'completed' : 'in_progress',
     progressPercent: gchrShowCompleted ? 100 : (chrCompleted ? 50 : 0) + (effectiveKchk / 4) * 25,
     fulfilledBasis: gchrShowCompleted ? 'Выполнены нормы титулов «Чемпион России» и «Чемпион НКП/породы»' : undefined,
@@ -581,7 +581,7 @@ export function evaluateCumulativeTitles(data: DogCareerData): CumulativeEvaluat
     id: 'grand-ch-rkf-sport',
     title: 'Гранд чемпион РКФ по рабочим качествам',
     badge: 'ГЧРКФ РК',
-    domain: 'sport',
+    domain: 'supreme',
     status: gchrkfCompleted ? 'completed' : 'in_progress',
     progressPercent: gchrkfCompleted ? 100 : ((coursingEval.chrkfCount >= 1 ? 50 : 0) + (racingEval.chrkfCount >= 1 ? 50 : 0)),
     fulfilledBasis: gchrkfCompleted ? gchrkfBasis : undefined,
@@ -616,7 +616,7 @@ export function evaluateCumulativeTitles(data: DogCareerData): CumulativeEvaluat
     id: 'grand-ch-sport',
     title: 'Гранд чемпион России по рабочим качествам',
     badge: 'ГЧР РК',
-    domain: 'sport',
+    domain: 'supreme',
     status: gchrSportCompleted ? 'completed' : 'in_progress',
     progressPercent: gchrSportCompleted ? 100 : (racingEval.hasChr ? 50 : 0) + (coursingEval.hasChr ? 50 : 0),
     fulfilledBasis: gchrSportCompleted ? gchrBasis : undefined,
@@ -671,7 +671,7 @@ export function evaluateCumulativeTitles(data: DogCareerData): CumulativeEvaluat
   // 4. СБОРКА ОФИЦИАЛЬНЫХ СПИСКОВ ТИТУЛОВ ДЛЯ ШАПКИ ПРОФИЛЯ
   // =========================================================================
 
-  // 4.0 ВЫСШИЕ ЗВАНИЯ (межсекторальные / мультиспорт: АЧР, ГЧР РК, ГЧРКФ РК, C.I.C.)
+  // 4.0 ВЫСШИЕ ЗВАНИЯ (межсекторальные / мультиспорт / гранды: АЧР, ГЧР РК, ГЧРКФ РК, ГЧР, C.I.C., C.I.B., C.I.E.)
   const officialSupremeTitles: Array<{ title: string; count: number }> = []
 
   if (absoluteCompleted) {
@@ -682,6 +682,9 @@ export function evaluateCumulativeTitles(data: DogCareerData): CumulativeEvaluat
   }
   if (gchrkfCompleted) {
     officialSupremeTitles.push({ title: 'ГЧРКФ РК', count: 1 })
+  }
+  if (gchrShowCompleted) {
+    officialSupremeTitles.push({ title: 'ГЧР', count: 1 })
   }
 
   // 4.1 КУРСИНГ (титулы без суффиксов, строка в UI называется «Курсинг»)
@@ -785,6 +788,26 @@ export function evaluateCumulativeTitles(data: DogCareerData): CumulativeEvaluat
     }
   }
 
+  // Международные выставочные титулы (C.I.B., C.I.E.) и подтверждённые гранд-титулы из счётчиков
+  if (data.showTitles) {
+    for (const [k, v] of Object.entries(data.showTitles)) {
+      if (!v || v <= 0) continue
+      const token = SHOW_AWARD_BADGE[k as ShowAwardKey] || k
+      const isSupremeShow =
+        token === 'ГЧР' ||
+        k === 'GCHR' ||
+        token.includes('C.I.B') ||
+        token.includes('C.I.E') ||
+        token.includes('ИНТЕР')
+      if (isSupremeShow) {
+        const canonical = token === 'GCHR' || token === 'ГЧР' ? 'ГЧР' : token
+        if (!officialSupremeTitles.some((t) => t.title === canonical)) {
+          officialSupremeTitles.push({ title: canonical, count: v })
+        }
+      }
+    }
+  }
+
   officialSupremeTitles.sort((a, b) => compareDogProfileTitles(a.title, b.title))
   officialSportTitles.sort((a, b) => compareDogProfileTitles(a.title, b.title))
 
@@ -793,6 +816,10 @@ export function evaluateCumulativeTitles(data: DogCareerData): CumulativeEvaluat
     'Абсолютный чемпион России: высшее звание РКФ (Гранд чемпион России по выставкам + Чемпион по рабочим качествам)'
   titleExplanations['supreme:ГЧР РК'] = gchrBasis
   titleExplanations['supreme:ГЧРКФ РК'] = gchrkfBasis
+  titleExplanations['supreme:ГЧР'] =
+    'Гранд чемпион России по красоте: высший титул в экстерьере (выполнены требования званий «Чемпион России» и «Чемпион НКП/породы»)'
+  titleExplanations['ГЧР'] =
+    'Гранд чемпион России по красоте: высший титул в экстерьере (выполнены требования званий «Чемпион России» и «Чемпион НКП/породы»)'
 
   // Тултипы с контекстом дисциплины (для всплывающих подсказок в шапке)
   titleExplanations['coursing:ЧР РК'] = coursingEval.hasChr
@@ -809,12 +836,9 @@ export function evaluateCumulativeTitles(data: DogCareerData): CumulativeEvaluat
   titleExplanations['racing:ЧРКФ РК'] = `Титул «Чемпион РКФ по рабочим качествам» в бегах борзых (${racingEval.chrkfCount} побед)`
   titleExplanations['racing:ПЧРКФ РК'] = `1-е место на Монопородном Чемпионате РКФ по бегам борзых`
 
-  // ВЫСТАВКИ: строго официальные титулы РКФ
+  // ВЫСТАВКИ: строго официальные титулы РКФ (высшие звания ГЧР, C.I.B., C.I.E. вынесены в officialSupremeTitles)
   const officialShowTitles: Array<{ title: string; count: number }> = []
 
-  if (gchrShowCompleted) {
-    officialShowTitles.push({ title: 'ГЧР', count: 1 })
-  }
   if (chrCompleted) {
     officialShowTitles.push({ title: 'ЧР', count: 1 })
   }
@@ -826,6 +850,13 @@ export function evaluateCumulativeTitles(data: DogCareerData): CumulativeEvaluat
     for (const [k, v] of Object.entries(data.showTitles)) {
       if (!v || v <= 0) continue
       const token = SHOW_AWARD_BADGE[k as ShowAwardKey] || k
+      const isSupremeShow =
+        token === 'ГЧР' ||
+        k === 'GCHR' ||
+        token.includes('C.I.B') ||
+        token.includes('C.I.E') ||
+        token.includes('ИНТЕР')
+      if (isSupremeShow) continue
       if (isOfficialDogTitleToken(token, 'show') && !officialShowTitles.some((t) => t.title === token)) {
         officialShowTitles.push({ title: token, count: v })
       }

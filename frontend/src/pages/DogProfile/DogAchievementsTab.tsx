@@ -399,7 +399,7 @@ export function DogAchievementsTab({
             {supremeTitles.length > 0 && (
               <div className="px-4 py-3 sm:px-5 sm:py-3.5">
                 <div className="text-[11px] font-bold uppercase tracking-wider text-amber-800 mb-2">
-                  Высшие звания (междисциплинарные и пожизненные)
+                  Высшие звания
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-2.5">
                   {supremeTitles.map((item) =>
