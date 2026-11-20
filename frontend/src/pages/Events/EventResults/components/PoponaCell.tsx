@@ -8,11 +8,12 @@ const BIB_LABELS: Record<string, string> = {
   black: 'Чёрная попона',
   yellow: 'Жёлтая попона',
   green: 'Зелёная попона',
+  stripes: 'Полосатая попона',
 }
 
 interface PoponaCellProps {
   number?: number | string | null
-  color?: string | null
+  color?: string | number | null
   /** Slightly smaller for dense coursing heat headers */
   compact?: boolean
   /** Победитель очного заезда (лучшее время среди участников заезда) */
@@ -22,11 +23,11 @@ interface PoponaCellProps {
 
 /** Ячейка попоны как в протоколе: цветной фон + цифра */
 export default function PoponaCell({ number, color, compact = false, isWinner = false, isRacing = false }: PoponaCellProps) {
-  if (number == null && !color) {
+  if (number == null && color == null) {
     return null
   }
 
-  const normalized = normalizeBibColorName(color ?? undefined, isRacing)
+  const normalized = normalizeBibColorName(color, isRacing)
   const colorTitle = normalized ? (BIB_LABELS[normalized] || normalized) : undefined
   const winnerTitle = isWinner ? ' · 1-е место в заезде' : ''
   const title =

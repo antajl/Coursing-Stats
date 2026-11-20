@@ -9,6 +9,7 @@ export const BIB_COLOR_LABELS: Record<string, string> = {
   black: 'Чёрная попона',
   yellow: 'Жёлтая попона',
   green: 'Зелёная попона',
+  stripes: 'Полосатая попона',
 }
 
 export function getHeatDistance(heat: Heat, rawScores: RawScores | null): number | null {
@@ -23,7 +24,7 @@ export function getHeatDistance(heat: Heat, rawScores: RawScores | null): number
 
 export interface ProtocolHeatBadgeProps {
   heatNumber?: number | string | null
-  bibColor?: string | null
+  bibColor?: string | number | null
   bibNumber?: number | string | null
   distance?: number | null
   isRacing?: boolean
@@ -39,13 +40,14 @@ export default function ProtocolHeatBadge({
   isRacing = false,
   size = 'md',
 }: ProtocolHeatBadgeProps) {
-  const normalized = normalizeBibColorName(bibColor ?? undefined, isRacing)
+  const normalized = normalizeBibColorName(bibColor, isRacing)
   const isRed = normalized === 'red'
   const isBlue = normalized === 'blue'
   const isBlack = normalized === 'black'
   const isWhite = normalized === 'white'
   const isYellow = normalized === 'yellow'
   const isGreen = normalized === 'green'
+  const isStripes = normalized === 'stripes'
 
   const colorClass = isRed
     ? 'bg-rose-600 text-white border-rose-700'
@@ -59,7 +61,9 @@ export default function ProtocolHeatBadge({
             ? 'bg-amber-300 text-charcoal-900 border-amber-400'
             : isGreen
               ? 'bg-emerald-600 text-white border-emerald-700'
-              : 'bg-old-money-100 text-charcoal-800 border-old-money-300'
+              : isStripes
+                ? 'bg-white text-charcoal-900 border-charcoal-900 border-dashed'
+                : 'bg-old-money-100 text-charcoal-800 border-old-money-300'
 
   const label = heatNumber != null ? String(heatNumber) : '—'
   const colorName = normalized ? (BIB_COLOR_LABELS[normalized] || normalized) : 'Попона'

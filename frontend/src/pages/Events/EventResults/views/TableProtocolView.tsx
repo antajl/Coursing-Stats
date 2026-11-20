@@ -5,10 +5,7 @@ import QualificationBadges from '../components/QualificationBadges'
 import DogSexIcon from '../../../../components/DogSexIcon'
 import {
   parseRawScores,
-  normalizeBibColorName,
   extractDogSex,
-  bibColorStyle,
-  bibTextClass,
   formatGroupTitle,
 } from '../utils'
 import { displayStatusReason } from '../../../../lib/statusReason'
@@ -221,6 +218,7 @@ export default function TableProtocolView({
                       bibColor={heat.bib_color}
                       bibNumber={heat.bib_number}
                       distance={dist}
+                      isRacing={true}
                     />
                     <span className="text-[11px] font-semibold text-rose-600 italic leading-snug">
                       {heat.disqualification_reason || statusReason || 'Сход'}
@@ -233,6 +231,7 @@ export default function TableProtocolView({
                       bibColor={heat.bib_color}
                       bibNumber={heat.bib_number}
                       distance={dist}
+                      isRacing={true}
                     />
                     <div className="flex flex-col min-w-0">
                       <span className="font-mono text-xs sm:text-sm font-bold text-charcoal-900 whitespace-nowrap leading-tight">

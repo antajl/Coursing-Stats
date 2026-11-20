@@ -46,7 +46,7 @@ export interface Judge {
 export interface Heat {
   heat_number?: number
   bib_number?: number | string
-  bib_color?: string
+  bib_color?: string | number | null
   time?: number | string
   speed_kmh?: number
   disqualified?: boolean

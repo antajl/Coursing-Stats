@@ -16,7 +16,7 @@ export function formatDateLong(dateStr: string | null | undefined): string {
 
 export function normalizeBreed(b: string): string {
   if (!b) return ''
-  const s = b.trim().toLowerCase()
+  const s = String(b).trim().toLowerCase()
   if (s.includes('уиппет')) return 'Уиппет'
   if (s.includes('грейхаунд')) return 'Грейхаунд'
   if (s.includes('левретка')) return 'Левретка'
@@ -193,12 +193,26 @@ export function isCoursingFormat(rawScores: RawScores | null): boolean {
   )
 }
 
-export function normalizeBibColorName(bibColor: string | undefined, isRacing: boolean = false): string | null {
-  const c = bibColor?.toLowerCase() ?? ''
+export function normalizeBibColorName(bibColor: string | number | null | undefined, isRacing: boolean = false): string | null {
+  if (bibColor == null) return null
+  const c = String(bibColor).trim().toLowerCase()
+  if (!c) return null
+
+  // Numeric box / bib representation
+  // In coursing/bzmp: 1 = red, 2 = white, 3 = blue
+  // In racing: 1 = red, 2 = blue, 3 = white, 4 = black, 5 = yellow, 6 = stripes/green
+  if (c === '1') return 'red'
+  if (c === '2') return isRacing ? 'blue' : 'white'
+  if (c === '3') return isRacing ? 'white' : 'blue'
+  if (c === '4') return 'black'
+  if (c === '5') return 'yellow'
+  if (c === '6') return isRacing ? 'stripes' : 'green'
+
   if (c === 'red' || c === '#ff0000') return 'red'
   if (c === 'blue' || c === '#0000ff' || c === '#00a2e8' || c === '#00ccff' || c === '#00ffff') return 'blue'
   if (c === 'black' || c === '#000000' || c === '#000') return 'black'
   if (c === 'green' || c === '#00ff00' || c === '#008000') return 'green'
+  if (c === 'stripes' || c === 'striped') return 'stripes'
   // In racing (6 boxes), box 5 is yellow
   if (isRacing && (c === 'yellow' || c === '#ffff00')) return 'yellow'
   // In coursing/bzmp there are no yellow bibs: pairs run strictly in red and white (3rd dog in blue).
@@ -216,30 +230,34 @@ export function normalizeBibColorName(bibColor: string | undefined, isRacing: bo
     c === '#f2f2f2' ||
     c === '#eaeaea'
   ) return 'white'
-  if (!c) return null
-  return bibColor!
+  return String(bibColor).trim()
 }
 
-export function bibColorStyle(bibColor: string | undefined, isRacing: boolean = false): CSSProperties {
+export function bibColorStyle(bibColor: string | number | null | undefined, isRacing: boolean = false): CSSProperties {
   const normalized = normalizeBibColorName(bibColor, isRacing)
+  const isCustomHex = typeof bibColor === 'string' && bibColor.startsWith('#')
   const backgroundColor =
     normalized === 'red' ? '#ef4444' :
-    normalized === 'white' ? '#ffffff' :
+    normalized === 'white' || normalized === 'stripes' ? '#ffffff' :
     normalized === 'blue' ? '#3b82f6' :
     normalized === 'black' ? '#111827' :
     normalized === 'green' ? '#22c55e' :
     normalized === 'yellow' ? '#eab308' :
-    bibColor?.startsWith('#') ? bibColor! :
+    isCustomHex ? bibColor :
     '#9ca3af'
   return {
     backgroundColor,
-    border: normalized === 'white' ? '1px solid #d1d5db' : '1px solid rgba(0,0,0,0.15)',
+    border: normalized === 'white'
+      ? '1px solid #d1d5db'
+      : normalized === 'stripes'
+        ? '1px dashed #111827'
+        : '1px solid rgba(0,0,0,0.15)',
   }
 }
 
-export function bibTextClass(bibColor: string | undefined, isRacing: boolean = false): string {
+export function bibTextClass(bibColor: string | number | null | undefined, isRacing: boolean = false): string {
   const normalized = normalizeBibColorName(bibColor, isRacing)
-  if (normalized === 'white' || normalized === 'yellow') return 'text-charcoal-900'
+  if (normalized === 'white' || normalized === 'yellow' || normalized === 'stripes') return 'text-charcoal-900'
   if (normalized === 'red' || normalized === 'blue' || normalized === 'black' || normalized === 'green') return 'text-white'
   return 'text-charcoal-900'
 }
