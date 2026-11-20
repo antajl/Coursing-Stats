@@ -4,6 +4,7 @@ import { ChevronDown, X, ArrowUpRight } from 'lucide-react'
 import BreedSearchDropdown from '../../components/ui/BreedSearchDropdown'
 import { canonicalBreed, displayBreed, matchesBreedFilter } from '../../lib/breedMapping'
 import { getBreedHubByCanonicalKey, getBreedHubBySlug } from '../../lib/breed-hubs-data'
+import { prefersReducedMotion } from '../../lib/motion'
 import type { DogsIndexEntry } from '../../lib/competingBreeds'
 
 export interface QuickBreedItem {
@@ -352,12 +353,236 @@ export default function QuickBreedBar({
     }
   }, [containerWidth, measured, normalizedSelected, targetBreed, selectedLabel, candidates])
 
-  const handlePillClick = (breedKey: string) => {
+  const isAnimatingRef = useRef(false)
+  const prevSelectedRef = useRef(normalizedSelected)
+
+  useLayoutEffect(() => {
+    const prev = prevSelectedRef.current
+    prevSelectedRef.current = normalizedSelected
+
+    if (prefersReducedMotion() || !containerRef.current) return
+
+    const container = containerRef.current
+
+    // Если порода только что была выбрана: пружинящий вход выбранного чипа и хаба
+    if (!prev && normalizedSelected) {
+      const selectedPill = container.querySelector<HTMLElement>('[data-selected-pill]')
+      if (selectedPill) {
+        selectedPill.animate(
+          [
+            { transform: 'scale(0.85)', opacity: 0.7 },
+            { transform: 'scale(1)', opacity: 1 },
+          ],
+          {
+            duration: 220,
+            easing: 'cubic-bezier(0.16, 1, 0.3, 1)',
+          }
+        )
+      }
+      const hubLink = container.querySelector<HTMLElement>('[data-hub-link]')
+      if (hubLink) {
+        hubLink.animate(
+          [
+            { opacity: 0, transform: 'translateX(-8px)' },
+            { opacity: 1, transform: 'translateX(0px)' },
+          ],
+          {
+            duration: 240,
+            delay: 40,
+            easing: 'ease-out',
+            fill: 'forwards',
+          }
+        )
+      }
+    }
+
+    // Если вернулись ко «Всем породам»: каскадный веерный выезд плашек слева направо
+    if (prev && !normalizedSelected) {
+      const allPills = Array.from(container.querySelectorAll<HTMLElement>('[data-breed-pill]'))
+      allPills.forEach((el, index) => {
+        el.animate(
+          [
+            { opacity: 0, transform: 'translateX(-15px) scale(0.92)' },
+            { opacity: 1, transform: 'translateX(0px) scale(1)' },
+          ],
+          {
+            duration: 220,
+            delay: index * 16,
+            easing: 'cubic-bezier(0.16, 1, 0.3, 1)',
+            fill: 'forwards',
+          }
+        )
+      })
+      const moreBtn = container.querySelector<HTMLElement>('[data-more-btn]')
+      if (moreBtn) {
+        moreBtn.animate(
+          [
+            { opacity: 0, transform: 'translateX(-10px)' },
+            { opacity: 1, transform: 'translateX(0px)' },
+          ],
+          {
+            duration: 220,
+            delay: allPills.length * 16,
+            easing: 'ease-out',
+            fill: 'forwards',
+          }
+        )
+      }
+    }
+  }, [normalizedSelected])
+
+  const handlePillClick = (breedKey: string, e?: React.MouseEvent<HTMLButtonElement>) => {
     if (matchesBreedFilter(normalizedSelected, breedKey)) {
       onSelectBreed('')
-    } else {
+      return
+    }
+
+    if (isAnimatingRef.current) return
+
+    const clickedEl =
+      e?.currentTarget ||
+      containerRef.current?.querySelector<HTMLElement>(`[data-breed-pill="${breedKey}"]`)
+
+    if (prefersReducedMotion() || !containerRef.current || !clickedEl) {
+      onSelectBreed(breedKey)
+      return
+    }
+
+    const container = containerRef.current
+    const allBtn = container.querySelector<HTMLElement>('[data-all-btn]')
+    const moreBtn = container.querySelector<HTMLElement>('[data-more-btn]')
+    const allPills = Array.from(container.querySelectorAll<HTMLElement>('[data-breed-pill]'))
+
+    if (!allBtn) {
+      onSelectBreed(breedKey)
+      return
+    }
+
+    isAnimatingRef.current = true
+
+    const allRect = allBtn.getBoundingClientRect()
+    const clickedRect = clickedEl.getBoundingClientRect()
+
+    // Точка назначения выбранной плашки — сразу справа от кнопки «Все породы»
+    const targetLeft = allRect.right + GAP
+    const deltaX = targetLeft - clickedRect.left
+    const targetCenterX = targetLeft + clickedRect.width / 2
+
+    // Превращаем выбранную плашку в активную и поднимаем z-index над остальными
+    clickedEl.classList.remove('cs-glass-pill')
+    clickedEl.classList.add('cs-glass-pill-active')
+    clickedEl.style.zIndex = '30'
+    clickedEl.style.pointerEvents = 'none'
+
+    // Плавный полёт выбранной плашки влево на своё новое место
+    const flyAnim = clickedEl.animate(
+      [
+        { transform: 'translateX(0px)', boxShadow: '0 2px 8px rgba(120, 80, 30, 0.12)' },
+        { transform: `translateX(${deltaX}px)`, boxShadow: '0 4px 16px rgba(120, 80, 30, 0.20)' },
+      ],
+      {
+        duration: 280,
+        easing: 'cubic-bezier(0.16, 1, 0.3, 1)',
+        fill: 'forwards',
+      }
+    )
+
+    // Все остальные плашки и кнопка «Ещё породы» улетают под неё
+    const otherElements = allPills.filter((el) => el !== clickedEl)
+    if (moreBtn) otherElements.push(moreBtn)
+
+    otherElements.forEach((el) => {
+      el.style.pointerEvents = 'none'
+      const elRect = el.getBoundingClientRect()
+      const elCenterX = elRect.left + elRect.width / 2
+      const suckDeltaX = targetCenterX - elCenterX
+
+      el.animate(
+        [
+          { transform: 'translateX(0px) scale(1)', opacity: 1 },
+          { transform: `translateX(${suckDeltaX * 0.75}px) scale(0.35)`, opacity: 0 },
+        ],
+        {
+          duration: 240,
+          easing: 'cubic-bezier(0.35, 0, 0.25, 1)',
+          fill: 'forwards',
+        }
+      )
+    })
+
+    const finish = () => {
+      isAnimatingRef.current = false
       onSelectBreed(breedKey)
     }
+
+    flyAnim.onfinish = finish
+    setTimeout(() => {
+      if (isAnimatingRef.current) finish()
+    }, 350)
+  }
+
+  const handleDropdownSelect = (breedKey: string) => {
+    if (isAnimatingRef.current) return
+
+    if (prefersReducedMotion() || !containerRef.current) {
+      onSelectBreed(breedKey)
+      return
+    }
+
+    const container = containerRef.current
+    const allBtn = container.querySelector<HTMLElement>('[data-all-btn]')
+    const moreBtn = container.querySelector<HTMLElement>('[data-more-btn]')
+    const allPills = Array.from(container.querySelectorAll<HTMLElement>('[data-breed-pill]'))
+
+    if (!allBtn || (allPills.length === 0 && !moreBtn)) {
+      onSelectBreed(breedKey)
+      return
+    }
+
+    isAnimatingRef.current = true
+
+    const allRect = allBtn.getBoundingClientRect()
+    const targetLeft = allRect.right + GAP
+
+    const collapsingElements = [...allPills]
+    if (moreBtn) collapsingElements.push(moreBtn)
+
+    let completed = 0
+    const total = collapsingElements.length
+
+    const finish = () => {
+      if (isAnimatingRef.current) {
+        isAnimatingRef.current = false
+        onSelectBreed(breedKey)
+      }
+    }
+
+    collapsingElements.forEach((el) => {
+      el.style.pointerEvents = 'none'
+      const elRect = el.getBoundingClientRect()
+      const deltaX = targetLeft - elRect.left
+
+      const anim = el.animate(
+        [
+          { transform: 'translateX(0px) scale(1)', opacity: 1 },
+          { transform: `translateX(${deltaX * 0.65}px) scale(0.35)`, opacity: 0 },
+        ],
+        {
+          duration: 240,
+          easing: 'cubic-bezier(0.35, 0, 0.25, 1)',
+          fill: 'forwards',
+        }
+      )
+
+      anim.onfinish = () => {
+        completed++
+        if (completed === total) finish()
+      }
+    })
+
+    setTimeout(() => {
+      if (isAnimatingRef.current) finish()
+    }, 350)
   }
 
   return (
@@ -495,6 +720,7 @@ export default function QuickBreedBar({
             {/* Кнопка: Все породы (не светится) */}
             <button
               type="button"
+              data-all-btn="true"
               onClick={() => onSelectBreed('')}
               className="cs-glass-pill inline-flex h-8 shrink-0 items-center rounded-full px-2.5 text-xs font-medium transition-all cursor-pointer whitespace-nowrap"
               aria-pressed={false}
@@ -506,6 +732,7 @@ export default function QuickBreedBar({
             {/* Выбранная порода (светится) */}
             <button
               type="button"
+              data-selected-pill="true"
               onClick={() => onSelectBreed('')}
               className="cs-glass-pill-active inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full px-2.5 text-xs font-semibold whitespace-nowrap cursor-pointer transition-all"
               aria-pressed={true}
@@ -517,15 +744,17 @@ export default function QuickBreedBar({
 
             {/* Ссылка на хаб выбранной породы */}
             {showHubLink && selectedHub && (
-              <Link
-                to={`/breeds/${selectedHub.slug}/`}
-                className="cs-glass-pill inline-flex h-8 shrink-0 items-center gap-1 rounded-full px-2.5 text-xs font-semibold text-camel-900 border border-camel-300/80 bg-camel-50 hover:bg-camel-100 transition-colors whitespace-nowrap cursor-pointer"
-                title={`Хаб породы ${selectedHub.nameRu}`}
-                aria-label={`Открыть хаб породы ${selectedHub.nameRu}`}
-              >
-                <span>Хаб породы</span>
-                <ArrowUpRight className="h-3.5 w-3.5 text-camel-700" aria-hidden="true" />
-              </Link>
+              <div data-hub-link="true" className="shrink-0 flex items-center">
+                <Link
+                  to={`/breeds/${selectedHub.slug}/`}
+                  className="cs-glass-pill inline-flex h-8 shrink-0 items-center gap-1 rounded-full px-2.5 text-xs font-semibold text-camel-900 border border-camel-300/80 bg-camel-50 hover:bg-camel-100 transition-colors whitespace-nowrap cursor-pointer"
+                  title={`Хаб породы ${selectedHub.nameRu}`}
+                  aria-label={`Открыть хаб породы ${selectedHub.nameRu}`}
+                >
+                  <span>Хаб породы</span>
+                  <ArrowUpRight className="h-3.5 w-3.5 text-camel-700" aria-hidden="true" />
+                </Link>
+              </div>
             )}
           </>
         ) : (
@@ -538,6 +767,7 @@ export default function QuickBreedBar({
             {/* Кнопка: Все породы */}
             <button
               type="button"
+              data-all-btn="true"
               onClick={() => onSelectBreed('')}
               className="cs-glass-pill-active inline-flex h-8 shrink-0 items-center rounded-full px-2.5 text-xs font-medium transition-all cursor-pointer whitespace-nowrap"
               aria-pressed={true}
@@ -550,7 +780,8 @@ export default function QuickBreedBar({
               <button
                 key={breed.key}
                 type="button"
-                onClick={() => handlePillClick(breed.key)}
+                data-breed-pill={breed.key}
+                onClick={(e) => handlePillClick(breed.key, e)}
                 title={breed.fullName}
                 className="cs-glass-pill inline-flex h-8 shrink-0 items-center rounded-full px-2.5 text-xs font-medium transition-all cursor-pointer whitespace-nowrap"
                 aria-pressed={false}
@@ -561,11 +792,11 @@ export default function QuickBreedBar({
             ))}
 
             {/* Выпадающий поиск по всем породам */}
-            <div className="ml-auto shrink-0 flex items-center">
+            <div data-more-btn="true" className="ml-auto shrink-0 flex items-center">
               <BreedSearchDropdown
                 breeds={breedValues}
                 selectedBreed={selectedBreed}
-                onSelect={onSelectBreed}
+                onSelect={handleDropdownSelect}
                 dogIndex={dogIndex}
                 align="right"
                 trigger={
