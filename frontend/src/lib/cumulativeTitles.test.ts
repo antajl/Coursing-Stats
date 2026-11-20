@@ -137,8 +137,15 @@ describe('evaluateCumulativeTitles', () => {
       ],
     }
 
-    const { completed, inProgress, officialSportTitles, officialShowTitles, titleExplanations } =
-      evaluateCumulativeTitles(data)
+    const {
+      completed,
+      inProgress,
+      officialSportTitles,
+      officialCoursingTitles,
+      officialRacingTitles,
+      officialShowTitles,
+      titleExplanations,
+    } = evaluateCumulativeTitles(data)
 
     // 1. WGCH RKF (ГЧРКФ РК) must be completed because dog has ЧРКФ in coursing AND in racing
     const gchrkf = completed.find((t) => t.id === 'grand-ch-rkf-sport')
