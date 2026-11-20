@@ -1,6 +1,5 @@
-import { useState, useRef, useMemo, useEffect } from 'react'
-import { useParams, useLocation, useSearchParams } from 'react-router-dom'
-import { Rabbit, Gauge, Sparkles, Timer, Scale, Trophy } from 'lucide-react'
+import { useState, useMemo, useEffect } from 'react'
+import { useParams, useSearchParams } from 'react-router-dom'
 import {
   useDogProfile,
   useDogEvents,
@@ -9,21 +8,15 @@ import {
   useDogCoursingRecords,
   useCoursingRecordsByBreed,
 } from '../../hooks/useStaticData'
-import { resolveShowDogDetail, fetchJson } from '../../lib/staticData'
-import { transliterateCyrillicToLatin } from '../../lib/dogName'
 import {
   buildDogProfileTitleGroups,
 } from '../../lib/qualificationTitles'
 import {
   evaluateCumulativeTitles,
-  type CumulativeTitle,
 } from '../../lib/cumulativeTitles'
-import { toPng } from 'html-to-image'
 import { useYandexGoal } from '../../components/YandexMetrica'
 import { buildEventResultsUrlMap } from '../../lib/procoursingLinks'
-import type { ShowDogCardData } from '../Shows/ShowDogCard'
 import type { DogJudgesStats } from './DogJudgesSection'
-import type { DisciplineTabId, DisciplineTabItem, DogProfileMainTabId, DogProfileMainTabItem } from './types'
 import {
   HISTORY_DEFAULT,
   computeSpeedStats,
@@ -31,8 +24,11 @@ import {
 } from './dogProfileStats'
 import { useDogProfileRanks } from './useDogProfileRanks'
 import { useDogProfileSeo } from './useDogProfileSeo'
+import { useDogProfileShowResolver } from './useDogProfileShowResolver'
+import { useDogProfileTabs } from './useDogProfileTabs'
+import { useDogProfileExport } from './useDogProfileExport'
 import { isShowOnlyProfileId } from '../../lib/showDogProfilePath'
-import { resolveBreedParam, canonicalBreed } from '../../lib/breedMapping'
+import { resolveBreedParam } from '../../lib/breedMapping'
 
 const EMPTY_ARRAY: never[] = []
 
@@ -43,20 +39,12 @@ export function useDogProfileData() {
   const showRouteBreed = params.breed ? decodeURIComponent(params.breed) : undefined
   const isLegacyShowRoute = Boolean(showRouteDogId && showRouteBreed)
 
-  const location = useLocation()
-  const [exporting, setExporting] = useState(false)
   const [showAllSpeedHistory, setShowAllSpeedHistory] = useState(false)
   const [showAllCoursingDoninoHistory, setShowAllCoursingDoninoHistory] = useState(false)
   const [showAllCoursingEvents, setShowAllCoursingEvents] = useState(false)
   const [showAllRacingEvents, setShowAllRacingEvents] = useState(false)
-  const [showDog, setShowDog] = useState<ShowDogCardData | null>(null)
-  const [showsLoading, setShowsLoading] = useState(true)
 
-  const exportRef = useRef<HTMLDivElement>(null)
   const { reachGoal } = useYandexGoal()
-
-  const fromSpeedRecords = location.state?.from === 'speed-records'
-  const fromCoursingRecords = location.state?.from === 'coursing-records'
 
   const [searchParams] = useSearchParams()
   const queryName = searchParams.get('name')
@@ -65,8 +53,9 @@ export function useDogProfileData() {
   const profileId = competitionId || ''
   const isShowOnly = isShowOnlyProfileId(profileId)
   const sportDogId = isShowOnly ? '' : profileId
-  const [fallbackSportDogId, setFallbackSportDogId] = useState<string | null>(null)
-  const effectiveSportDogId = sportDogId || fallbackSportDogId || ''
+
+  const [preSportId, setPreSportId] = useState<string | null>(null)
+  const effectiveSportDogId = sportDogId || preSportId || ''
 
   const { data: dogDataResult, isLoading: loading } = useDogProfile(effectiveSportDogId)
   const { data: eventsData } = useDogEvents(effectiveSportDogId)
@@ -90,6 +79,27 @@ export function useDogProfileData() {
       : EMPTY_ARRAY
     : EMPTY_ARRAY
 
+  // Выставки и автопоиск спорт-собаки
+  const { showDog, showsLoading, fallbackSportDogId } = useDogProfileShowResolver({
+    profileId,
+    competitionId,
+    effectiveSportDogId,
+    dog,
+    loading,
+    isLegacyShowRoute,
+    showRouteDogId,
+    showRouteBreed,
+    queryName,
+    queryBreed,
+    isShowOnly,
+  })
+
+  useEffect(() => {
+    if (fallbackSportDogId && fallbackSportDogId !== preSportId) {
+      setPreSportId(fallbackSportDogId)
+    }
+  }, [fallbackSportDogId, preSportId])
+
   const headerBreed = dog?.breed || showDog?.breed || showRouteBreed || ''
   const { data: breedRecordsData } = useSpeedRecordsByBreed(dog?.breed || showDog?.breed || '')
   const breedRecords = breedRecordsData?.success
@@ -108,91 +118,6 @@ export function useDogProfileData() {
   useEffect(() => {
     if (dog || showDog) reachGoal('dog_profile_view')
   }, [dog, showDog, reachGoal])
-
-  // Выставки: detail-шард по id / competition / кличка+порода
-  useEffect(() => {
-    let cancelled = false
-    const loadShows = async () => {
-      setShowsLoading(true)
-      try {
-        const result = await resolveShowDogDetail({
-          profileId: profileId || (isLegacyShowRoute ? showRouteDogId : null),
-          competitionId: dog?.id ? String(dog.id) : (effectiveSportDogId || competitionId),
-          nameLat: dog?.name_lat || queryName || '',
-          nameRu: dog?.name_ru || queryName || '',
-          breed: dog?.breed || showRouteBreed || queryBreed,
-        })
-        if (!cancelled) {
-          setShowDog(result.success && result.data ? result.data : null)
-        }
-      } catch {
-        if (!cancelled) setShowDog(null)
-      } finally {
-        if (!cancelled) setShowsLoading(false)
-      }
-    }
-    if (isLegacyShowRoute || !loading) loadShows()
-    return () => {
-      cancelled = true
-    }
-  }, [competitionId, effectiveSportDogId, dog, loading, showRouteDogId, showRouteBreed, isLegacyShowRoute, profileId, queryName, queryBreed])
-
-  // Fallback: If show-only profile ID didn't resolve to showDog or sportDog, but queryName exists,
-  // search in dogs-index.json to avoid 404 if the dog exists in the sport database.
-  useEffect(() => {
-    if (!isShowOnly || dog || showDog || loading || showsLoading || !queryName || fallbackSportDogId) {
-      return
-    }
-    let cancelled = false
-    const matchSportDog = async () => {
-      try {
-        const dogs = await fetchJson<Array<{ id: number; name_lat: string; name_ru?: string; breed: string }>>('indexes/dogs-index.json')
-        if (cancelled || !Array.isArray(dogs)) return
-        const qName = queryName.toUpperCase().replace(/\s+/g, ' ').trim()
-        const qTranslit = transliterateCyrillicToLatin(qName).toUpperCase().replace(/\s+/g, ' ').trim()
-        const qBreed = (queryBreed || '').toUpperCase().replace(/\s+/g, ' ').trim()
-        const qCanBreed = canonicalBreed(qBreed).toUpperCase().replace(/\s+/g, ' ').trim()
-
-        const nameVariants = new Set<string>([qName, qTranslit].filter(Boolean))
-        for (const base of Array.from(nameVariants)) {
-          nameVariants.add(base.replace(/([A-ZА-ЯЁ])\1+/g, '$1'))
-          if (base.endsWith('EE')) nameVariants.add(base.slice(0, -1))
-          if (base.endsWith('E') && !base.endsWith('EE')) nameVariants.add(base + 'E')
-        }
-
-        for (const d of dogs) {
-          const dBreed = (d.breed || '').toUpperCase().replace(/\s+/g, ' ').trim()
-          const dCanBreed = canonicalBreed(dBreed).toUpperCase().replace(/\s+/g, ' ').trim()
-          const breedMatches = !qBreed || dBreed === qBreed || dCanBreed === qCanBreed || dBreed === qCanBreed || dCanBreed === qBreed
-          if (!breedMatches) continue
-
-          const dNames = [d.name_lat, d.name_ru]
-            .filter(Boolean)
-            .flatMap((n) => (n as string).split('/'))
-            .map((chunk) => chunk.trim().toUpperCase().replace(/\s+/g, ' '))
-            .filter(Boolean)
-
-          const matched = dNames.some((dn) => {
-            if (nameVariants.has(dn)) return true
-            const dnTranslit = transliterateCyrillicToLatin(dn).toUpperCase().replace(/\s+/g, ' ').trim()
-            if (nameVariants.has(dnTranslit)) return true
-            return false
-          })
-
-          if (matched) {
-            setFallbackSportDogId(String(d.id))
-            break
-          }
-        }
-      } catch {
-        // Ignore fallback errors
-      }
-    }
-    matchSportDog()
-    return () => {
-      cancelled = true
-    }
-  }, [isShowOnly, dog, showDog, loading, showsLoading, queryName, queryBreed, fallbackSportDogId])
 
   // Объединённый объект собаки для шапки
   const headerDog = useMemo(() => {
@@ -309,147 +234,33 @@ export function useDogProfileData() {
 
   const hasDonino = hasSpeedRecords || hasCoursingRecords
 
-  const mainTabs = useMemo(() => {
-    const tabs: DogProfileMainTabItem[] = [
-      { id: 'profile', label: 'Профиль' },
-      { id: 'achievements', label: 'Достижения' },
-    ]
-    // Вкладка «Судьи» отображается ТОЛЬКО если собака участвовала в курсинге
-    if (hasCoursingStarts && judgeStats && Array.isArray(judgeStats.judges) && judgeStats.judges.length > 0) {
-      tabs.push({ id: 'judges', label: 'Судьи' })
-    }
-    // Вкладка «Организации» отображается ТОЛЬКО если у собаки есть старты в состязаниях
-    if (hasValidCompetitionStarts) {
-      tabs.push({ id: 'organizations', label: 'Организации' })
-    }
-    return tabs
-  }, [hasCoursingStarts, judgeStats, hasValidCompetitionStarts])
-
-  const [activeMainTab, setActiveMainTab] = useState<DogProfileMainTabId>(() => {
-    const hash = typeof window !== 'undefined' ? window.location.hash.replace(/^#/, '') : ''
-    if (hash === 'achievements' || hash === 'awards' || hash === 'titles') return 'achievements'
-    if (hash === 'judges') return 'judges'
-    if (hash === 'organizations' || hash === 'orgs') return 'organizations'
-    return 'profile'
-  })
-
-  // Sync main tab when URL hash changes
-  useEffect(() => {
-    const hash = location.hash.replace(/^#/, '')
-    if (!hash) return
-    if (hash === 'achievements' || hash === 'awards' || hash === 'titles') {
-      setActiveMainTab('achievements')
-    } else if (hash === 'judges' && hasCoursingStarts && judgeStats?.judges?.length) {
-      setActiveMainTab('judges')
-    } else if ((hash === 'organizations' || hash === 'orgs') && hasValidCompetitionStarts) {
-      setActiveMainTab('organizations')
-    } else if (hash === 'profile' || hash === 'coursing' || hash === 'racing' || hash === 'shows' || hash === 'donino' || hash === 'speeds') {
-      setActiveMainTab('profile')
-    }
-  }, [location.hash, hasCoursingStarts, judgeStats, hasValidCompetitionStarts])
-
-  // Fallback to profile if current tab is not available for this dog
-  useEffect(() => {
-    if (mainTabs.length > 0 && !mainTabs.some((t) => t.id === activeMainTab)) {
-      setActiveMainTab('profile')
-    }
-  }, [mainTabs, activeMainTab])
-
-  // Disciplines available on mobile inside the "Профиль" tab
-  const availableTabs = useMemo(() => {
-    const tabs: DisciplineTabItem[] = []
-
-    if (showCoursingColumn) {
-      tabs.push({
-        id: 'coursing',
-        label: 'Курсинг',
-        icon: Rabbit,
-        count: coursing.total_starts || coursingEvents.length || 0,
-        theme: 'forest',
-      })
-    }
-    if (showRacingColumn) {
-      tabs.push({
-        id: 'racing',
-        label: 'Бега',
-        icon: Gauge,
-        count: racing.total_starts || racingEvents.length || 0,
-        theme: 'warm-blue',
-      })
-    }
-    if (hasShowData) {
-      tabs.push({
-        id: 'shows',
-        label: 'Выставки',
-        icon: Sparkles,
-        count: showDog?.total_shows || showDog?.history?.length || 0,
-        theme: 'camel',
-      })
-    }
-    return tabs
-  }, [
+  // Вкладки профиля и мобильные подвкладки
+  const {
+    mainTabs,
+    activeMainTab,
+    setActiveMainTab,
+    availableTabs,
+    activeDiscipline,
+    setActiveDiscipline,
+  } = useDogProfileTabs({
+    hasCoursingStarts,
+    judgeStats,
+    hasValidCompetitionStarts,
     showCoursingColumn,
-    coursing.total_starts,
-    coursingEvents.length,
+    coursingTotalStarts: coursing.total_starts,
+    coursingEventsCount: coursingEvents.length,
     showRacingColumn,
-    racing.total_starts,
-    racingEvents.length,
+    racingTotalStarts: racing.total_starts,
+    racingEventsCount: racingEvents.length,
     hasShowData,
-    showDog?.total_shows,
-    showDog?.history?.length,
-  ])
-
-  const [activeDiscipline, setActiveDiscipline] = useState<DisciplineTabId>(() => {
-    const hash = typeof window !== 'undefined' ? window.location.hash.replace(/^#/, '') : ''
-    if (hash === 'shows') return 'shows'
-    if (hash === 'racing') return 'racing'
-    if (hash === 'coursing' || hash === 'competitions') return 'coursing'
-    if (showCoursingColumn) return 'coursing'
-    if (showRacingColumn) return 'racing'
-    if (hasShowData) return 'shows'
-    return 'coursing'
+    showDog,
   })
 
-  // Sync mobile discipline tab when URL hash changes
-  useEffect(() => {
-    const hash = location.hash.replace(/^#/, '')
-    if (!hash) return
-    let targetTab: DisciplineTabId | null = null
-    if (hash === 'shows') targetTab = 'shows'
-    else if (hash === 'racing') targetTab = 'racing'
-    else if (hash === 'coursing' || hash === 'competitions') targetTab = 'coursing'
-
-    if (targetTab && availableTabs.some((t) => t.id === targetTab)) {
-      setActiveDiscipline(targetTab)
-    }
-  }, [location.hash, availableTabs])
-
-  useEffect(() => {
-    if (availableTabs.length > 0 && !availableTabs.some((t) => t.id === activeDiscipline)) {
-      setActiveDiscipline(availableTabs[0].id)
-    }
-  }, [availableTabs, activeDiscipline])
-
-  const handleExport = async () => {
-    if (!exportRef.current || exporting) return
-    try {
-      setExporting(true)
-      const dataUrl = await toPng(exportRef.current, {
-        quality: 1,
-        pixelRatio: 2,
-        filter: (node) =>
-          !(node instanceof HTMLElement && node.dataset.exportIgnore !== undefined),
-      })
-      const link = document.createElement('a')
-      link.download = `${(dog?.name_lat || showDog?.name_lat || 'dog').replace(/\s+/g, '_')}_profile.png`
-      link.href = dataUrl
-      link.click()
-    } catch (err) {
-      console.error('Export failed:', err)
-    } finally {
-      setExporting(false)
-    }
-  }
+  // Экспорт постера профиля в PNG
+  const { exporting, exportRef, handleExport } = useDogProfileExport({
+    dogNameLat: dog?.name_lat,
+    showDogNameLat: showDog?.name_lat,
+  })
 
   const hasCourseMedals =
     (coursing.gold || 0) > 0 || (coursing.silver || 0) > 0 || (coursing.bronze || 0) > 0

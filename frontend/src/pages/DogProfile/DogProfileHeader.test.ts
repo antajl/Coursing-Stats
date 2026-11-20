@@ -41,7 +41,11 @@ describe('Dog Profile Navigation Tabs & Achievements Tab invariants', () => {
 
   it('enforces Achievements tab between Profile and Judges and conditional Judges visibility', () => {
     const hookPath = path.resolve(__dirname, 'useDogProfileData.ts')
-    const hookSource = fs.readFileSync(hookPath, 'utf-8')
+    const tabsPath = path.resolve(__dirname, 'useDogProfileTabs.ts')
+    let hookSource = fs.readFileSync(hookPath, 'utf-8')
+    if (fs.existsSync(tabsPath)) {
+      hookSource += '\n' + fs.readFileSync(tabsPath, 'utf-8')
+    }
 
     // 1. Achievements tab is strictly placed 2nd
     expect(hookSource).toContain("{ id: 'profile', label: 'Профиль' },")

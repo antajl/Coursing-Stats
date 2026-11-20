@@ -1,0 +1,128 @@
+import { useState, useEffect } from 'react'
+import { resolveShowDogDetail, fetchJson } from '../../lib/staticData'
+import { transliterateCyrillicToLatin } from '../../lib/dogName'
+import { canonicalBreed } from '../../lib/breedMapping'
+import type { ShowDogCardData } from '../Shows/ShowDogCard'
+
+export interface UseDogProfileShowResolverProps {
+  profileId: string
+  competitionId?: string
+  effectiveSportDogId?: string
+  dog: any | null
+  loading: boolean
+  isLegacyShowRoute: boolean
+  showRouteDogId?: string
+  showRouteBreed?: string
+  queryName: string | null
+  queryBreed: string | null
+  isShowOnly: boolean
+}
+
+export function useDogProfileShowResolver({
+  profileId,
+  competitionId,
+  effectiveSportDogId,
+  dog,
+  loading,
+  isLegacyShowRoute,
+  showRouteDogId,
+  showRouteBreed,
+  queryName,
+  queryBreed,
+  isShowOnly,
+}: UseDogProfileShowResolverProps) {
+  const [showDog, setShowDog] = useState<ShowDogCardData | null>(null)
+  const [showsLoading, setShowsLoading] = useState(true)
+  const [fallbackSportDogId, setFallbackSportDogId] = useState<string | null>(null)
+
+  // Выставки: detail-шард по id / competition / кличка+порода
+  useEffect(() => {
+    let cancelled = false
+    const loadShows = async () => {
+      setShowsLoading(true)
+      try {
+        const result = await resolveShowDogDetail({
+          profileId: profileId || (isLegacyShowRoute ? showRouteDogId : null),
+          competitionId: dog?.id ? String(dog.id) : (effectiveSportDogId || competitionId),
+          nameLat: dog?.name_lat || queryName || '',
+          nameRu: dog?.name_ru || queryName || '',
+          breed: dog?.breed || showRouteBreed || queryBreed,
+        })
+        if (!cancelled) {
+          setShowDog(result.success && result.data ? result.data : null)
+        }
+      } catch {
+        if (!cancelled) setShowDog(null)
+      } finally {
+        if (!cancelled) setShowsLoading(false)
+      }
+    }
+    if (isLegacyShowRoute || !loading) loadShows()
+    return () => {
+      cancelled = true
+    }
+  }, [competitionId, effectiveSportDogId, dog, loading, showRouteDogId, showRouteBreed, isLegacyShowRoute, profileId, queryName, queryBreed])
+
+  // Fallback: If show-only profile ID didn't resolve to showDog or sportDog, but queryName exists,
+  // search in dogs-index.json to avoid 404 if the dog exists in the sport database.
+  useEffect(() => {
+    if (!isShowOnly || dog || showDog || loading || showsLoading || !queryName || fallbackSportDogId) {
+      return
+    }
+    let cancelled = false
+    const matchSportDog = async () => {
+      try {
+        const dogs = await fetchJson<Array<{ id: number; name_lat: string; name_ru?: string; breed: string }>>('indexes/dogs-index.json')
+        if (cancelled || !Array.isArray(dogs)) return
+        const qName = queryName.toUpperCase().replace(/\s+/g, ' ').trim()
+        const qTranslit = transliterateCyrillicToLatin(qName).toUpperCase().replace(/\s+/g, ' ').trim()
+        const qBreed = (queryBreed || '').toUpperCase().replace(/\s+/g, ' ').trim()
+        const qCanBreed = canonicalBreed(qBreed).toUpperCase().replace(/\s+/g, ' ').trim()
+
+        const nameVariants = new Set<string>([qName, qTranslit].filter(Boolean))
+        for (const base of Array.from(nameVariants)) {
+          nameVariants.add(base.replace(/([A-ZА-ЯЁ])\1+/g, '$1'))
+          if (base.endsWith('EE')) nameVariants.add(base.slice(0, -1))
+          if (base.endsWith('E') && !base.endsWith('EE')) nameVariants.add(base + 'E')
+        }
+
+        for (const d of dogs) {
+          const dBreed = (d.breed || '').toUpperCase().replace(/\s+/g, ' ').trim()
+          const dCanBreed = canonicalBreed(dBreed).toUpperCase().replace(/\s+/g, ' ').trim()
+          const breedMatches = !qBreed || dBreed === qBreed || dCanBreed === qCanBreed || dBreed === qCanBreed || dCanBreed === qBreed
+          if (!breedMatches) continue
+
+          const dNames = [d.name_lat, d.name_ru]
+            .filter(Boolean)
+            .flatMap((n) => (n as string).split('/'))
+            .map((chunk) => chunk.trim().toUpperCase().replace(/\s+/g, ' '))
+            .filter(Boolean)
+
+          const matched = dNames.some((dn) => {
+            if (nameVariants.has(dn)) return true
+            const dnTranslit = transliterateCyrillicToLatin(dn).toUpperCase().replace(/\s+/g, ' ').trim()
+            if (nameVariants.has(dnTranslit)) return true
+            return false
+          })
+
+          if (matched) {
+            setFallbackSportDogId(String(d.id))
+            break
+          }
+        }
+      } catch {
+        // Ignore fallback errors
+      }
+    }
+    matchSportDog()
+    return () => {
+      cancelled = true
+    }
+  }, [isShowOnly, dog, showDog, loading, showsLoading, queryName, queryBreed, fallbackSportDogId])
+
+  return {
+    showDog,
+    showsLoading,
+    fallbackSportDogId,
+  }
+}
