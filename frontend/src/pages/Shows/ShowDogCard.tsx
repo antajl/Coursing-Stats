@@ -200,14 +200,6 @@ function ShowDogCardInner({
                     {primary}
                   </h3>
                 </OwnerCrownName>
-                {secondary && (
-                  <span
-                    className="text-[10px] text-charcoal-400 font-normal truncate"
-                    title={secondary}
-                  >
-                    / {secondary}
-                  </span>
-                )}
               </div>
               <div className="flex items-center gap-1 text-[10px]">
                 <span className="text-charcoal-600 font-medium truncate">
@@ -271,14 +263,6 @@ function ShowDogCardInner({
                   {primary}
                 </h3>
               </OwnerCrownName>
-              {secondary && (
-                <span
-                  className="text-[11px] text-charcoal-400 font-normal truncate"
-                  title={secondary}
-                >
-                  / {secondary}
-                </span>
-              )}
               <span className="text-charcoal-300 shrink-0" aria-hidden>
                 ·
               </span>
