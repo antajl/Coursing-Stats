@@ -1,11 +1,9 @@
 import type { ReactNode } from 'react'
-import { Crown } from 'lucide-react'
 import HoverTooltip from '../../components/ui/HoverTooltip'
 import { matchShowAwardToken } from '../../../../backend/lib/show-award-ranking'
 import { competitionTitleDisplayName } from '../../../../backend/lib/competition-titles'
 import {
   compareDogProfileTitles,
-  dogProfileTitleRank,
   formatTitleLine,
   isOfficialDogTitleToken,
   titleBadgeClass,
@@ -103,7 +101,6 @@ export function DogProfileAwardsBar({
       titleExplanations[item.title]
 
     const chipClass = titleBadgeClass(badgeTitle)
-    const isCrown = isSupreme || dogProfileTitleRank(badgeTitle) >= 125
     const fullTitleName = getFullTitleLabel(badgeTitle, isShow)
 
     return (
@@ -115,7 +112,6 @@ export function DogProfileAwardsBar({
               <span
                 className={`inline-flex shrink-0 items-center gap-1 rounded-md px-1.5 py-0.5 text-[11px] tabular-nums whitespace-nowrap ${chipClass}`}
               >
-                {isCrown && <Crown className="h-3 w-3 text-amber-600 shrink-0" aria-hidden />}
                 <span>{line}</span>
               </span>
               <span className="text-xs font-bold leading-snug text-charcoal-900">
@@ -138,7 +134,6 @@ export function DogProfileAwardsBar({
           className={`inline-flex shrink-0 items-center gap-1 rounded-md px-2 py-0.5 text-[11px] tabular-nums whitespace-nowrap transition-transform hover:scale-105 ${chipClass}`}
           tabIndex={0}
         >
-          {isCrown && <Crown className="h-3 w-3 text-amber-600 shrink-0" aria-hidden />}
           <span>{line}</span>
         </span>
       </HoverTooltip>
@@ -146,15 +141,14 @@ export function DogProfileAwardsBar({
   }
 
   return (
-    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3 lg:gap-6">
+    <div className="flex flex-col gap-2.5">
       {/* СЛЕВА: Титулы высших званий, курсинга, рейсинга и выставок */}
       {(hasSupreme || hasCoursing || hasRacing || hasComp || hasShow) && (
-        <div className="space-y-1.5 min-w-0 flex-1">
+        <div className="space-y-1.5 min-w-0">
           {hasSupreme && (
-            <div className="grid grid-cols-[6.5rem_1fr] items-baseline gap-2">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-amber-700/90 select-none flex items-center gap-1">
-                <Crown className="h-3 w-3 text-amber-600 shrink-0" aria-hidden />
-                <span>Высшие</span>
+            <div className="grid grid-cols-[4.75rem_1fr] items-baseline gap-2">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-amber-700/90 select-none whitespace-nowrap">
+                Высшие
               </span>
               <div className="flex flex-wrap items-center gap-1.5 min-w-0">
                 {sortedSupreme.map((item) => renderChip(item, 'supreme'))}
@@ -163,8 +157,8 @@ export function DogProfileAwardsBar({
           )}
 
           {hasCoursing && (
-            <div className="grid grid-cols-[6.5rem_1fr] items-baseline gap-2">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-charcoal-400 select-none">
+            <div className="grid grid-cols-[4.75rem_1fr] items-baseline gap-2">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-charcoal-400 select-none whitespace-nowrap">
                 Курсинг
               </span>
               <div className="flex flex-wrap items-center gap-1.5 min-w-0">
@@ -174,8 +168,8 @@ export function DogProfileAwardsBar({
           )}
 
           {hasRacing && (
-            <div className="grid grid-cols-[6.5rem_1fr] items-baseline gap-2">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-charcoal-400 select-none">
+            <div className="grid grid-cols-[4.75rem_1fr] items-baseline gap-2">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-charcoal-400 select-none whitespace-nowrap">
                 Рейсинг
               </span>
               <div className="flex flex-wrap items-center gap-1.5 min-w-0">
@@ -185,8 +179,8 @@ export function DogProfileAwardsBar({
           )}
 
           {hasComp && !hasCoursing && !hasRacing && (
-            <div className="grid grid-cols-[6.5rem_1fr] items-baseline gap-2">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-charcoal-400 select-none">
+            <div className="grid grid-cols-[4.75rem_1fr] items-baseline gap-2">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-charcoal-400 select-none whitespace-nowrap">
                 Спорт
               </span>
               <div className="flex flex-wrap items-center gap-1.5 min-w-0">
@@ -196,8 +190,8 @@ export function DogProfileAwardsBar({
           )}
 
           {hasShow && (
-            <div className="grid grid-cols-[6.5rem_1fr] items-baseline gap-2">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-charcoal-400 select-none">
+            <div className="grid grid-cols-[4.75rem_1fr] items-baseline gap-2">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-charcoal-400 select-none whitespace-nowrap">
                 Выставки
               </span>
               <div className="flex flex-wrap items-center gap-1.5 min-w-0">
@@ -208,9 +202,9 @@ export function DogProfileAwardsBar({
         </div>
       )}
 
-      {/* СПРАВА: Сезонные ачивки рейтинга (вертикально друг под другом, параллельно строкам титулов) */}
+      {/* СПРАВА: Сезонные ачивки рейтинга */}
       {hasAchievements && (
-        <div className="flex flex-col gap-1.5 shrink-0 items-start lg:items-end justify-center">
+        <div className="flex flex-wrap items-center gap-1.5 pt-1.5 border-t border-cream-200/60">
           {achievements.slice(0, 3).map((ach) => (
             <HoverTooltip key={ach.id} label={ach.tooltip} placement="top" portal>
               <div

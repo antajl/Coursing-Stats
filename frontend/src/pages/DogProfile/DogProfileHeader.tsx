@@ -217,11 +217,11 @@ export function DogProfileHeader({
 
   return (
     <div className="relative mb-6">
-      {/* Главная карточка профиля собаки (Вариант 1: Паспортный аватар слева) */}
+      {/* Главная карточка профиля собаки */}
       <div className="relative min-w-0 overflow-hidden rounded-2xl border border-old-money-200/80 bg-white p-4 sm:p-5 md:p-6 shadow-2xs">
         <div className="relative z-10">
-          <div className="grid grid-cols-1 sm:grid-cols-[minmax(0,1fr)_auto] gap-4 sm:gap-6 items-start">
-            {/* Слева: Крупный аватар с закруглёнными углами (фото или породный силуэт) + имя и метаданные */}
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_auto] gap-4 sm:gap-6 items-start">
+            {/* Слева: Крупный аватар + имя, метаданные и кнопки действий прямо под ними */}
             <div className="flex items-start gap-4 sm:gap-5 md:gap-6 min-w-0">
               <DogPhotoFrame
                 photoUrl={dog.photo_url}
@@ -314,54 +314,54 @@ export function DogProfileHeader({
                     </>
                   ) : null}
                 </div>
+
+                {/* РЯД 3: Кнопки действий прямо под кличкой и метаданными */}
+                <div className="mt-3.5 flex flex-wrap items-center gap-2">
+                  <button
+                    type="button"
+                    onClick={handleToggleFavorite}
+                    disabled={loadingFavorite}
+                    className={`inline-flex items-center gap-1.5 rounded-xl border px-3.5 py-1.5 text-xs font-semibold transition-all disabled:opacity-50 min-h-[36px] cursor-pointer ${
+                      favorite
+                        ? 'border-amber-400 bg-amber-50 text-amber-800 hover:bg-amber-100'
+                        : 'border-old-money-200/90 bg-cream-50/60 text-charcoal-700 hover:bg-cream-100 hover:text-charcoal-900'
+                    }`}
+                    aria-label={favorite ? 'Удалить из избранного' : 'Добавить в избранное'}
+                    title={favorite ? 'Удалить из избранного' : 'Добавить в избранное'}
+                  >
+                    <StarIcon className={`h-3.5 w-3.5 shrink-0 ${favorite ? 'fill-current text-amber-500' : 'text-charcoal-400'}`} aria-hidden />
+                    <span>{favorite ? 'В избранном' : 'В избранное'}</span>
+                  </button>
+                  <a
+                    href={`https://t.me/coursing_stats_bot?start=dog_${dog.id}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 rounded-xl border border-old-money-200/90 bg-cream-50/60 px-3.5 py-1.5 text-xs font-semibold text-charcoal-700 hover:bg-cream-100 hover:text-charcoal-900 transition-all min-h-[36px] cursor-pointer"
+                    aria-label="Отслеживать собаку в Telegram"
+                    title="Отслеживать собаку в Telegram: результаты и место в топе"
+                  >
+                    <img src={TELEGRAM_FAVICON} alt="" width={14} height={14} className="h-3.5 w-3.5 shrink-0 rounded-full" />
+                    <span>Отслеживать</span>
+                  </a>
+                </div>
               </div>
             </div>
 
-            {/* Справа: Компактные кнопки действий */}
-            <div className="flex items-center gap-2 self-start shrink-0">
-              <button
-                type="button"
-                onClick={handleToggleFavorite}
-                disabled={loadingFavorite}
-                className={`inline-flex items-center gap-1.5 rounded-xl border px-3 py-1.5 text-xs font-semibold transition-all disabled:opacity-50 min-h-[36px] ${
-                  favorite
-                    ? 'border-amber-400 bg-amber-50 text-amber-800 hover:bg-amber-100'
-                    : 'border-old-money-200/90 bg-cream-50/60 text-charcoal-700 hover:bg-cream-100 hover:text-charcoal-900'
-                }`}
-                aria-label={favorite ? 'Удалить из избранного' : 'Добавить в избранное'}
-                title={favorite ? 'Удалить из избранного' : 'Добавить в избранное'}
-              >
-                <StarIcon className={`h-3.5 w-3.5 shrink-0 ${favorite ? 'fill-current text-amber-500' : 'text-charcoal-400'}`} aria-hidden />
-                <span>{favorite ? 'В избранном' : 'В избранное'}</span>
-              </button>
-              <a
-                href={`https://t.me/coursing_stats_bot?start=dog_${dog.id}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 rounded-xl border border-old-money-200/90 bg-cream-50/60 px-3 py-1.5 text-xs font-semibold text-charcoal-700 hover:bg-cream-100 hover:text-charcoal-900 transition-all min-h-[36px]"
-                aria-label="Отслеживать собаку в Telegram"
-                title="Отслеживать собаку в Telegram: результаты и место в топе"
-              >
-                <img src={TELEGRAM_FAVICON} alt="" width={14} height={14} className="h-3.5 w-3.5 shrink-0 rounded-full" />
-                <span>Отслеживать</span>
-              </a>
-            </div>
+            {/* Справа: Блок всех титулов и наград в правом верхнем углу */}
+            {(hasTitles || achievements.length > 0) && (
+              <div className="w-full lg:w-auto shrink-0 lg:max-w-md xl:max-w-lg lg:ml-auto pt-3 lg:pt-0 border-t border-cream-200/70 lg:border-t-0">
+                <DogProfileAwardsBar
+                  supremeTitles={supremeTitles}
+                  competitionTitles={competitionTitles}
+                  coursingTitles={coursingTitles}
+                  racingTitles={racingTitles}
+                  showTitles={showTitles}
+                  achievements={achievements}
+                  titleExplanations={titleExplanations}
+                />
+              </div>
+            )}
           </div>
-
-          {/* РЯД 3: Титулы слева + Ачивки рейтингов справа в одном блоке */}
-          {(hasTitles || achievements.length > 0) && (
-            <div className="mt-4 pt-3.5 border-t border-cream-200/70">
-              <DogProfileAwardsBar
-                supremeTitles={supremeTitles}
-                competitionTitles={competitionTitles}
-                coursingTitles={coursingTitles}
-                racingTitles={racingTitles}
-                showTitles={showTitles}
-                achievements={achievements}
-                titleExplanations={titleExplanations}
-              />
-            </div>
-          )}
         </div>
       </div>
 
