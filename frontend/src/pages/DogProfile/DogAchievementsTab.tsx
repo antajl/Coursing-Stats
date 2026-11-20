@@ -76,6 +76,7 @@ export function DogAchievementsTab({
 
   const totalCacl = certs.caclEventsCoursing.length + certs.caclEventsRacing.length
   const totalCac = certs.cacShowEvents.length || (showDog?.titles?.CAC ?? 0)
+  const totalCertificates = totalCacl + totalCac
 
   // 4. Рейтинги на сайте
   const coursingRank = ranks.find((r) => r.key === 'coursing')
@@ -119,7 +120,7 @@ export function DogAchievementsTab({
           <div className="flex items-center gap-2.5 min-w-0">
             <div className="relative inline-flex shrink-0">
               <span
-                className={`inline-flex shrink-0 items-center justify-center min-w-[76px] sm:min-w-[82px] rounded-lg px-2.5 py-0.5 text-xs font-bold tabular-nums text-center whitespace-nowrap tracking-tight ${chipClass}`}
+                className={`inline-flex shrink-0 items-center justify-center w-[92px] sm:w-[96px] rounded-lg px-2 py-0.5 text-xs font-bold tabular-nums text-center whitespace-nowrap tracking-tight ${chipClass}`}
               >
                 {item.title}
               </span>
@@ -188,18 +189,18 @@ export function DogAchievementsTab({
               toggleTitle(id)
             }
           }}
-          className="px-4 py-2.5 sm:px-4 sm:py-3 flex items-center justify-between gap-3 cursor-pointer select-none hover:bg-cream-100/50 transition-colors"
+          className="px-3.5 py-2 sm:px-4 sm:py-2 flex items-center justify-between gap-2.5 cursor-pointer select-none hover:bg-cream-100/50 transition-colors"
           aria-expanded={isExpanded}
         >
           <div className="min-w-0">
             <div className={`text-xs font-bold uppercase tracking-wider ${themeText}`}>
               {title}
             </div>
-            <p className="text-xs text-charcoal-600 mt-0.5">{subtitle}</p>
+            <p className="text-xs text-charcoal-600 truncate mt-0.5">{subtitle}</p>
           </div>
 
           <div className="flex items-center gap-2 shrink-0">
-            <span className="text-sm font-bold text-charcoal-900 tabular-nums">
+            <span className="text-xs sm:text-sm font-bold text-charcoal-900 tabular-nums">
               {badgeText}
             </span>
             {eventsList.length > 0 && (
@@ -213,36 +214,33 @@ export function DogAchievementsTab({
           </div>
         </div>
 
-        {extraNote && !isExpanded && (
-          <div className="px-4 pb-3 text-xs text-charcoal-500">{extraNote}</div>
+        {extraNote && isExpanded && (
+          <div className="px-3.5 pb-2 text-xs text-charcoal-500">{extraNote}</div>
         )}
 
         {isExpanded && eventsList.length > 0 && (
-          <div className="px-4 pb-4 pt-2 border-t border-cream-200/80 bg-white space-y-2 animate-in fade-in duration-150">
-            {extraNote && <div className="text-xs text-charcoal-500 mb-2">{extraNote}</div>}
-            <div className="space-y-1.5">
-              {eventsList.map((ev, i) => (
-                <div
-                  key={i}
-                  className="text-xs text-charcoal-700 flex items-center justify-between gap-2"
-                >
-                  <span className="truncate">{ev.title}</span>
-                  <div className="flex items-center gap-1.5 shrink-0">
-                    {ev.date && <span className="text-[11px] text-charcoal-400">{ev.date}</span>}
-                    {ev.eventId && eventResultsUrls[ev.eventId] && (
-                      <Link
-                        to={eventResultsUrls[ev.eventId]}
-                        className="text-camel-700 hover:text-camel-900 inline-flex items-center p-0.5"
-                        title="Открыть протокол"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        <ExternalLink className="w-3.5 h-3.5" />
-                      </Link>
-                    )}
-                  </div>
+          <div className="px-3.5 pb-3 pt-2 border-t border-cream-200/80 bg-white space-y-1.5 animate-in fade-in duration-150">
+            {eventsList.map((ev, i) => (
+              <div
+                key={i}
+                className="text-xs text-charcoal-700 flex items-center justify-between gap-2"
+              >
+                <span className="truncate">{ev.title}</span>
+                <div className="flex items-center gap-1.5 shrink-0">
+                  {ev.date && <span className="text-[11px] text-charcoal-400">{ev.date}</span>}
+                  {ev.eventId && eventResultsUrls[ev.eventId] && (
+                    <Link
+                      to={eventResultsUrls[ev.eventId]}
+                      className="text-camel-700 hover:text-camel-900 inline-flex items-center p-0.5"
+                      title="Открыть протокол"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <ExternalLink className="w-3.5 h-3.5" />
+                    </Link>
+                  )}
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         )}
       </div>
@@ -288,7 +286,7 @@ export function DogAchievementsTab({
                   >
                     <div className="flex items-center gap-2.5 min-w-0">
                       <span
-                        className={`inline-flex shrink-0 items-center justify-center min-w-[76px] sm:min-w-[82px] rounded-lg px-2.5 py-0.5 text-xs font-bold tabular-nums text-center whitespace-nowrap tracking-tight ${chipClass}`}
+                        className={`inline-flex shrink-0 items-center justify-center w-[92px] sm:w-[96px] rounded-lg px-2 py-0.5 text-xs font-bold tabular-nums text-center whitespace-nowrap tracking-tight ${chipClass}`}
                       >
                         {title.badge}
                       </span>
@@ -374,292 +372,288 @@ export function DogAchievementsTab({
         </div>
       )}
 
-      {/* РАЗДЕЛ 2: ОФОРМЛЕННЫЕ ОФИЦИАЛЬНЫЕ ЗВАНИЯ И ТИТУЛЫ (РКФ / FCI) */}
-      <div className="rounded-2xl border border-old-money-200/90 bg-white overflow-hidden shadow-2xs">
-        <div className="px-4 py-3 sm:px-5 sm:py-3 border-b border-old-money-100 bg-cream-50/50 flex items-center justify-between">
-          <h2 className="text-sm sm:text-base font-bold text-charcoal-900">
-            Оформленные официальные чемпионские звания
-          </h2>
-          <span className="rounded-full bg-cream-200/80 text-charcoal-800 text-xs font-bold px-2.5 py-0.5">
-            {totalTitlesCount}
-          </span>
+      {/* СЕТКА: ОФОРМЛЕННЫЕ ЗВАНИЯ (СЛЕВА) И СЕРТИФИКАТЫ / ДОПУСКИ (СПРАВА) */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
+        {/* РАЗДЕЛ 2: ОФОРМЛЕННЫЕ ОФИЦИАЛЬНЫЕ ЗВАНИЯ И ТИТУЛЫ (РКФ / FCI) */}
+        <div className="rounded-2xl border border-old-money-200/90 bg-white overflow-hidden shadow-2xs">
+          <div className="px-4 py-3 sm:px-5 sm:py-3 border-b border-old-money-100 bg-cream-50/50 flex items-center justify-between">
+            <h2 className="text-sm sm:text-base font-bold text-charcoal-900">
+              Оформленные официальные чемпионские звания
+            </h2>
+            <span className="rounded-full bg-cream-200/80 text-charcoal-800 text-xs font-bold px-2.5 py-0.5">
+              {totalTitlesCount}
+            </span>
+          </div>
+
+          {totalTitlesCount === 0 ? (
+            <div className="p-8 text-center text-charcoal-500 text-sm">
+              У собаки пока нет оформленных чемпионских титулов. Выполняйте квалификационные нормативы в состязаниях и выставках!
+            </div>
+          ) : (
+            <div className="divide-y divide-old-money-100">
+              {/* 1. Высшие звания */}
+              {supremeTitles.length > 0 && (
+                <div className="px-4 py-3 sm:px-5 sm:py-3.5">
+                  <div className="text-[11px] font-bold uppercase tracking-wider text-amber-800 mb-2">
+                    Высшие звания
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-2 sm:gap-2.5">
+                    {supremeTitles.map((item) =>
+                      renderCompletedTitleCard(
+                        item,
+                        'supreme',
+                        'border-amber-200/90',
+                        'bg-amber-50/40',
+                      ),
+                    )}
+                  </div>
+                </div>
+              )}
+
+              {/* 2. Курсинг борзых */}
+              {coursingTitles.length > 0 && (
+                <div className="px-4 py-3 sm:px-5 sm:py-3.5">
+                  <div className="text-[11px] font-bold uppercase tracking-wider text-forest-800 mb-2">
+                    Курсинг борзых
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-2 sm:gap-2.5">
+                    {coursingTitles.map((item) =>
+                      renderCompletedTitleCard(
+                        item,
+                        'coursing',
+                        'border-old-money-200/80',
+                        'bg-white',
+                      ),
+                    )}
+                  </div>
+                </div>
+              )}
+
+              {/* 3. Бега борзых (рейсинг) */}
+              {racingTitles.length > 0 && (
+                <div className="px-4 py-3 sm:px-5 sm:py-3.5">
+                  <div className="text-[11px] font-bold uppercase tracking-wider text-sky-800 mb-2">
+                    Бега борзых (рейсинг)
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-2 sm:gap-2.5">
+                    {racingTitles.map((item) =>
+                      renderCompletedTitleCard(
+                        item,
+                        'racing',
+                        'border-old-money-200/80',
+                        'bg-white',
+                      ),
+                    )}
+                  </div>
+                </div>
+              )}
+
+              {/* 4. Выставки РКФ */}
+              {showTitles.length > 0 && (
+                <div className="px-4 py-3 sm:px-5 sm:py-3.5">
+                  <div className="text-[11px] font-bold uppercase tracking-wider text-camel-800 mb-2">
+                    Выставки РКФ (экстерьер)
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-2 sm:gap-2.5">
+                    {showTitles.map((item) =>
+                      renderCompletedTitleCard(
+                        item,
+                        'show',
+                        'border-old-money-200/80',
+                        'bg-white',
+                      ),
+                    )}
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
         </div>
 
-        {totalTitlesCount === 0 ? (
-          <div className="p-8 text-center text-charcoal-500 text-sm">
-            У собаки пока нет оформленных чемпионских титулов. Выполняйте квалификационные нормативы в состязаниях и выставках!
-          </div>
-        ) : (
-          <div className="divide-y divide-old-money-100">
-            {/* 1. Высшие звания */}
-            {supremeTitles.length > 0 && (
-              <div className="px-4 py-3 sm:px-5 sm:py-3.5">
-                <div className="text-[11px] font-bold uppercase tracking-wider text-amber-800 mb-2">
-                  Высшие звания
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-2.5">
-                  {supremeTitles.map((item) =>
-                    renderCompletedTitleCard(
-                      item,
-                      'supreme',
-                      'border-amber-200/90',
-                      'bg-amber-50/40',
-                    ),
-                  )}
-                </div>
-              </div>
-            )}
-
-            {/* 2. Курсинг борзых */}
-            {coursingTitles.length > 0 && (
-              <div className="px-4 py-3 sm:px-5 sm:py-3.5">
-                <div className="text-[11px] font-bold uppercase tracking-wider text-forest-800 mb-2">
-                  Курсинг борзых
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-2.5">
-                  {coursingTitles.map((item) =>
-                    renderCompletedTitleCard(
-                      item,
-                      'coursing',
-                      'border-old-money-200/80',
-                      'bg-white',
-                    ),
-                  )}
-                </div>
-              </div>
-            )}
-
-            {/* 3. Бега борзых (рейсинг) */}
-            {racingTitles.length > 0 && (
-              <div className="px-4 py-3 sm:px-5 sm:py-3.5">
-                <div className="text-[11px] font-bold uppercase tracking-wider text-sky-800 mb-2">
-                  Бега борзых (рейсинг)
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-2.5">
-                  {racingTitles.map((item) =>
-                    renderCompletedTitleCard(
-                      item,
-                      'racing',
-                      'border-old-money-200/80',
-                      'bg-white',
-                    ),
-                  )}
-                </div>
-              </div>
-            )}
-
-            {/* 4. Выставки РКФ */}
-            {showTitles.length > 0 && (
-              <div className="px-4 py-3 sm:px-5 sm:py-3.5">
-                <div className="text-[11px] font-bold uppercase tracking-wider text-camel-800 mb-2">
-                  Выставки РКФ (экстерьер)
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-2.5">
-                  {showTitles.map((item) =>
-                    renderCompletedTitleCard(
-                      item,
-                      'show',
-                      'border-old-money-200/80',
-                      'bg-white',
-                    ),
-                  )}
-                </div>
-              </div>
-            )}
-          </div>
-        )}
-      </div>
-
-      {/* РАЗДЕЛ 3: ОФИЦИАЛЬНЫЕ СЕРТИФИКАТЫ И ДОПУСКИ РКФ */}
-      <div className="rounded-2xl border border-old-money-200/90 bg-white overflow-hidden shadow-2xs">
-        <div className="px-4 py-3 sm:px-5 sm:py-3 border-b border-old-money-100 bg-cream-50/50 flex items-center justify-between">
-          <h2 className="text-sm sm:text-base font-bold text-charcoal-900">
-            Официальные сертификаты и квалификационные допуски
-          </h2>
-        </div>
-
-        <div className="p-4 sm:p-5 space-y-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
-            {/* CACL Курсинг */}
-            {renderCertificateCard(
-              'cert-cacl-coursing',
-              'CACL · Курсинг борзых',
-              `${certs.caclEventsCoursing.length} серт.`,
-              'Кандидат в чемпионы России по рабочим качествам собак (курсинг)',
-              certs.caclEventsCoursing,
-              'forest',
-            )}
-
-            {/* CACL Бега борзых */}
-            {renderCertificateCard(
-              'cert-cacl-racing',
-              'CACL · Бега борзых',
-              `${certs.caclEventsRacing.length} серт.`,
-              'Кандидат в чемпионы России по рабочим качествам собак (рейсинг)',
-              certs.caclEventsRacing,
-              'sky',
-            )}
-
-            {/* CAC Выставки */}
-            {renderCertificateCard(
-              'cert-cac-shows',
-              'CAC · Выставки РКФ',
-              `${totalCac} серт.`,
-              'Кандидат в чемпионы России по красоте (экстерьер)',
-              certs.cacShowEvents,
-              'camel',
-              certs.uniqueCacJudgesCount > 0
-                ? `Подтверждено под ${certs.uniqueCacJudgesCount} разными судьями РКФ`
-                : undefined,
-            )}
-
-            {/* Беговой допуск РКФ */}
-            <div className="rounded-xl border border-old-money-200/80 px-4 py-3 sm:py-3.5 bg-cream-50/30">
-              <div className="flex items-center justify-between">
-                <span className="text-xs font-bold uppercase tracking-wider text-forest-800">
-                  Беговой допуск РКФ
+        {/* ПРАВАЯ КОЛОНКА: СЕРТИФИКАТЫ + ДОСТИЖЕНИЯ В РЕЙТИНГЕ */}
+        <div className="space-y-6">
+          {/* РАЗДЕЛ 3: ОФИЦИАЛЬНЫЕ СЕРТИФИКАТЫ РКФ */}
+          <div className="rounded-2xl border border-old-money-200/90 bg-white overflow-hidden shadow-2xs">
+            <div className="px-4 py-3 sm:px-5 sm:py-3 border-b border-old-money-100 bg-cream-50/50 flex items-center justify-between">
+              <h2 className="text-sm sm:text-base font-bold text-charcoal-900">
+                Официальные сертификаты и квалификационные допуски
+              </h2>
+              {totalCertificates > 0 && (
+                <span className="rounded-full bg-cream-200/80 text-charcoal-800 text-xs font-bold px-2.5 py-0.5">
+                  {totalCertificates}
                 </span>
-                <span className="text-xs font-semibold text-forest-700 bg-forest-50 px-2 py-0.5 rounded-md border border-forest-200">
-                  {certs.hasRunningClearanceCoursing || certs.hasRunningClearanceRacing
-                    ? 'Оформлен'
-                    : 'Не подтверждён'}
-                </span>
-              </div>
-              <p className="text-xs text-charcoal-600 mt-1">
-                Квалификационная беговая книжка борзой для участия в официальных состязаниях
-              </p>
-              <div className="mt-2 text-xs text-charcoal-500 space-y-0.5">
-                <div>Курсинг (КБ): {certs.hasRunningClearanceCoursing ? 'квалифицирован' : '—'}</div>
-                <div>Бега (ББ): {certs.hasRunningClearanceRacing ? 'квалифицирован' : '—'}</div>
-              </div>
+              )}
+            </div>
+
+            <div className="p-2.5 sm:p-3 space-y-2">
+              {/* CACL Курсинг */}
+              {renderCertificateCard(
+                'cert-cacl-coursing',
+                'CACL · Курсинг борзых',
+                `${certs.caclEventsCoursing.length} серт.`,
+                'Кандидат в чемпионы России (курсинг)',
+                certs.caclEventsCoursing,
+                'forest',
+              )}
+
+              {/* CACL Бега борзых */}
+              {renderCertificateCard(
+                'cert-cacl-racing',
+                'CACL · Бега борзых',
+                `${certs.caclEventsRacing.length} серт.`,
+                'Кандидат в чемпионы России (рейсинг)',
+                certs.caclEventsRacing,
+                'sky',
+              )}
+
+              {/* CAC Выставки */}
+              {renderCertificateCard(
+                'cert-cac-shows',
+                'CAC · Выставки РКФ',
+                `${totalCac} серт.`,
+                certs.uniqueCacJudgesCount > 0
+                  ? `Кандидат в ЧР по красоте · ${certs.uniqueCacJudgesCount} судей`
+                  : 'Кандидат в чемпионы России по красоте',
+                certs.cacShowEvents,
+                'camel',
+                certs.uniqueCacJudgesCount > 0
+                  ? `Подтверждено под ${certs.uniqueCacJudgesCount} разными судьями РКФ`
+                  : undefined,
+              )}
             </div>
           </div>
-        </div>
-      </div>
 
-      {/* РАЗДЕЛ 4: ДОСТИЖЕНИЯ И РЕКОРДЫ В РЕЙТИНГЕ COURSINGSTATS */}
-      <div className="rounded-2xl border border-old-money-200/90 bg-white overflow-hidden shadow-2xs">
-        <div className="px-4 py-3 sm:px-5 sm:py-3 border-b border-old-money-100 bg-cream-50/50 flex items-center justify-between">
-          <h2 className="text-sm sm:text-base font-bold text-charcoal-900">
-            Достижения и рекорды в рейтинге CoursingStats
-          </h2>
-        </div>
+          {/* РАЗДЕЛ 4: ДОСТИЖЕНИЯ И РЕКОРДЫ В РЕЙТИНГЕ COURSINGSTATS */}
+          <div className="rounded-2xl border border-old-money-200/90 bg-white overflow-hidden shadow-2xs">
+            <div className="px-4 py-3 sm:px-5 sm:py-3 border-b border-old-money-100 bg-cream-50/50 flex items-center justify-between">
+              <h2 className="text-sm sm:text-base font-bold text-charcoal-900">
+                Достижения и рекорды в рейтинге CoursingStats
+              </h2>
+            </div>
 
-        <div className="p-4 sm:p-5 grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4">
-          {/* Курсинг рейтинг */}
-          <div className="rounded-xl border border-forest-200/80 bg-forest-50/20 p-4">
-            <div className="text-forest-800 text-xs font-bold uppercase tracking-wider">
-              <span>Курсинг / БЗМП</span>
-            </div>
-            <div className="mt-2.5">
-              <div className="text-xl font-bold text-charcoal-900">
-                {coursingRank?.yearBreedRank
-                  ? `#${coursingRank.yearBreedRank} в сезоне`
-                  : coursingRank?.breedRank
-                    ? `#${coursingRank.breedRank} в породе`
-                    : 'В зачёте состязаний'}
-              </div>
-              <div className="text-xs text-charcoal-500 mt-0.5">
-                {breed || 'порода'} · {coursingRank?.rank ? `№${coursingRank.rank} за всё время` : ''}
-              </div>
-            </div>
-            <div className="mt-3 pt-3 border-t border-forest-200/60 text-xs text-charcoal-700 space-y-1">
-              <div className="flex justify-between">
-                <span>Побед (1-е место):</span>
-                <strong className="text-charcoal-900">{coursingStats?.gold || 0}</strong>
-              </div>
-              <div className="flex justify-between">
-                <span>Лучший балл:</span>
-                <strong className="text-charcoal-900">{coursingStats?.best_judge_score || '—'}</strong>
-              </div>
-              <div className="flex justify-between">
-                <span>Средний балл:</span>
-                <strong className="text-charcoal-900">{coursingStats?.avg_judge_score || '—'}</strong>
-              </div>
-            </div>
-            <Link
-              to="/competitions/"
-              className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-forest-800 hover:text-forest-950 transition-colors"
-            >
-              <span>Рейтинг сезона</span>
-              <ArrowUpRight className="w-3.5 h-3.5" />
-            </Link>
-          </div>
+            <div className="p-2.5 sm:p-3 space-y-2">
+              {/* Курсинг рейтинг */}
+              <div className="rounded-xl border border-forest-200/80 bg-forest-50/20 px-3 py-2 sm:px-3.5 sm:py-2.5 flex items-center justify-between gap-2.5">
+                <div className="flex items-center gap-2.5 min-w-0">
+                  <span className="inline-flex shrink-0 items-center justify-center w-[82px] rounded-lg px-2 py-0.5 text-xs font-bold uppercase tracking-wider bg-forest-100/90 text-forest-900 border border-forest-200/80">
+                    Курсинг
+                  </span>
+                  <div className="min-w-0">
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <span className="text-xs sm:text-sm font-bold text-charcoal-900 tabular-nums">
+                        {coursingRank?.yearBreedRank
+                          ? `#${coursingRank.yearBreedRank} в сезоне`
+                          : coursingRank?.breedRank
+                            ? `#${coursingRank.breedRank} в породе`
+                            : 'В зачёте'}
+                      </span>
+                      {coursingStats?.gold ? (
+                        <span className="text-[11px] text-forest-800 font-semibold tabular-nums hidden sm:inline">
+                          • {coursingStats.gold} {coursingStats.gold === 1 ? 'победа' : 'побед'}
+                        </span>
+                      ) : null}
+                      {coursingStats?.best_judge_score ? (
+                        <span className="text-[11px] text-charcoal-500 tabular-nums hidden md:inline">
+                          • макс: {coursingStats.best_judge_score} б.
+                        </span>
+                      ) : null}
+                    </div>
+                    <div className="text-[10px] sm:text-[11px] text-charcoal-500 truncate mt-0.5">
+                      {breed || 'порода'}{coursingRank?.rank ? ` · №${coursingRank.rank} за всё время` : ''}
+                      {coursingStats?.avg_judge_score ? ` · ср. балл: ${coursingStats.avg_judge_score}` : ''}
+                    </div>
+                  </div>
+                </div>
 
-          {/* Бега борзых рейтинг */}
-          <div className="rounded-xl border border-sky-200/80 bg-sky-50/20 p-4">
-            <div className="text-sky-800 text-xs font-bold uppercase tracking-wider">
-              <span>Бега борзых (рейсинг)</span>
-            </div>
-            <div className="mt-2.5">
-              <div className="text-xl font-bold text-charcoal-900">
-                {racingRank?.yearBreedRank
-                  ? `#${racingRank.yearBreedRank} по скорости`
-                  : racingStats?.best_speed
-                    ? `${racingStats.best_speed} км/ч`
-                    : 'В зачёте бегов'}
+                <Link
+                  to="/competitions/"
+                  className="shrink-0 p-1.5 text-forest-800 hover:text-forest-950 hover:bg-forest-100/60 rounded-md transition-colors"
+                  title="Рейтинг сезона"
+                >
+                  <ArrowUpRight className="w-4 h-4" />
+                </Link>
               </div>
-              <div className="text-xs text-charcoal-500 mt-0.5">
-                {breed || 'порода'} · {racingRank?.rank ? `№${racingRank.rank} за всё время` : ''}
-              </div>
-            </div>
-            <div className="mt-3 pt-3 border-t border-sky-200/60 text-xs text-charcoal-700 space-y-1">
-              <div className="flex justify-between">
-                <span>Побед (1-е место):</span>
-                <strong className="text-charcoal-900">{racingStats?.gold || 0}</strong>
-              </div>
-              <div className="flex justify-between">
-                <span>Рекорд скорости:</span>
-                <strong className="text-charcoal-900">{racingStats?.best_speed ? `${racingStats.best_speed} км/ч` : '—'}</strong>
-              </div>
-              <div className="flex justify-between">
-                <span>Средняя скорость:</span>
-                <strong className="text-charcoal-900">{racingStats?.avg_speed ? `${racingStats.avg_speed} км/ч` : '—'}</strong>
-              </div>
-            </div>
-            <Link
-              to="/competitions/"
-              className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-sky-800 hover:text-sky-950 transition-colors"
-            >
-              <span>Рейтинг скорости</span>
-              <ArrowUpRight className="w-3.5 h-3.5" />
-            </Link>
-          </div>
 
-          {/* Выставки рейтинг */}
-          <div className="rounded-xl border border-camel-200/80 bg-camel-50/20 p-4">
-            <div className="text-camel-800 text-xs font-bold uppercase tracking-wider">
-              <span>Выставки РКФ</span>
+              {/* Бега борзых рейтинг */}
+              <div className="rounded-xl border border-sky-200/80 bg-sky-50/20 px-3 py-2 sm:px-3.5 sm:py-2.5 flex items-center justify-between gap-2.5">
+                <div className="flex items-center gap-2.5 min-w-0">
+                  <span className="inline-flex shrink-0 items-center justify-center w-[82px] rounded-lg px-2 py-0.5 text-xs font-bold uppercase tracking-wider bg-sky-100/90 text-sky-900 border border-sky-200/80">
+                    Рейсинг
+                  </span>
+                  <div className="min-w-0">
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <span className="text-xs sm:text-sm font-bold text-charcoal-900 tabular-nums">
+                        {racingRank?.yearBreedRank
+                          ? `#${racingRank.yearBreedRank} по скорости`
+                          : racingStats?.best_speed
+                            ? `${racingStats.best_speed} км/ч`
+                            : 'В зачёте'}
+                      </span>
+                      {racingStats?.gold ? (
+                        <span className="text-[11px] text-sky-800 font-semibold tabular-nums hidden sm:inline">
+                          • {racingStats.gold} {racingStats.gold === 1 ? 'победа' : 'побед'}
+                        </span>
+                      ) : null}
+                      {racingStats?.best_speed ? (
+                        <span className="text-[11px] text-charcoal-500 tabular-nums hidden md:inline">
+                          • рекорд: {racingStats.best_speed} км/ч
+                        </span>
+                      ) : null}
+                    </div>
+                    <div className="text-[10px] sm:text-[11px] text-charcoal-500 truncate mt-0.5">
+                      {breed || 'порода'}{racingRank?.rank ? ` · №${racingRank.rank} за всё время` : ''}
+                      {racingStats?.avg_speed ? ` · ср. скорость: ${racingStats.avg_speed} км/ч` : ''}
+                    </div>
+                  </div>
+                </div>
+
+                <Link
+                  to="/competitions/"
+                  className="shrink-0 p-1.5 text-sky-800 hover:text-sky-950 hover:bg-sky-100/60 rounded-md transition-colors"
+                  title="Рейтинг скорости"
+                >
+                  <ArrowUpRight className="w-4 h-4" />
+                </Link>
+              </div>
+
+              {/* Выставки рейтинг */}
+              <div className="rounded-xl border border-camel-200/80 bg-camel-50/20 px-3 py-2 sm:px-3.5 sm:py-2.5 flex items-center justify-between gap-2.5">
+                <div className="flex items-center gap-2.5 min-w-0">
+                  <span className="inline-flex shrink-0 items-center justify-center w-[82px] rounded-lg px-2 py-0.5 text-xs font-bold uppercase tracking-wider bg-camel-100/90 text-camel-900 border border-camel-200/80">
+                    Выставки
+                  </span>
+                  <div className="min-w-0">
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <span className="text-xs sm:text-sm font-bold text-charcoal-900 tabular-nums">
+                        {showDog?.best_award || (showDog?.total_shows ? `${showDog.total_shows} выставок` : 'В каталоге')}
+                      </span>
+                      {showDog?.total_shows ? (
+                        <span className="text-[11px] text-camel-800 font-semibold tabular-nums hidden sm:inline">
+                          • {showDog.total_shows} {showDog.total_shows === 1 ? 'выставка' : 'выставок'}
+                        </span>
+                      ) : null}
+                      {(showDog?.bis_count || 0) + (showDog?.big_count || 0) + (showDog?.bob_count || 0) > 0 ? (
+                        <span className="text-[11px] text-charcoal-500 tabular-nums hidden md:inline">
+                          • побед в ринге: {(showDog?.bis_count || 0) + (showDog?.big_count || 0) + (showDog?.bob_count || 0)}
+                        </span>
+                      ) : null}
+                    </div>
+                    <div className="text-[10px] sm:text-[11px] text-charcoal-500 truncate mt-0.5">
+                      {showRank?.rank ? `№${showRank.rank} за всё время` : 'Рейтинг экстерьера'}
+                      {showDog?.rank_score ? ` · рейтинговый балл: ${showDog.rank_score}` : ''}
+                    </div>
+                  </div>
+                </div>
+
+                <Link
+                  to="/shows/"
+                  className="shrink-0 p-1.5 text-camel-800 hover:text-camel-950 hover:bg-camel-100/60 rounded-md transition-colors"
+                  title="Рейтинг выставок"
+                >
+                  <ArrowUpRight className="w-4 h-4" />
+                </Link>
+              </div>
             </div>
-            <div className="mt-2.5">
-              <div className="text-xl font-bold text-charcoal-900">
-                {showDog?.best_award || (showDog?.total_shows ? `${showDog.total_shows} выставок` : 'В каталоге')}
-              </div>
-              <div className="text-xs text-charcoal-500 mt-0.5">
-                {showRank?.rank ? `№${showRank.rank} за всё время` : 'Рейтинг экстерьера'}
-              </div>
-            </div>
-            <div className="mt-3 pt-3 border-t border-camel-200/60 text-xs text-charcoal-700 space-y-1">
-              <div className="flex justify-between">
-                <span>Всего выставок:</span>
-                <strong className="text-charcoal-900">{showDog?.total_shows || 0}</strong>
-              </div>
-              <div className="flex justify-between">
-                <span>Побед в ринге:</span>
-                <strong className="text-charcoal-900">{(showDog?.bis_count || 0) + (showDog?.big_count || 0) + (showDog?.bob_count || 0)}</strong>
-              </div>
-              <div className="flex justify-between">
-                <span>Рейтинговый балл:</span>
-                <strong className="text-charcoal-900">{showDog?.rank_score || '—'}</strong>
-              </div>
-            </div>
-            <Link
-              to="/shows/"
-              className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-camel-800 hover:text-camel-950 transition-colors"
-            >
-              <span>Рейтинг выставок</span>
-              <ArrowUpRight className="w-3.5 h-3.5" />
-            </Link>
           </div>
         </div>
       </div>
