@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import { Trophy, Zap, Gauge, ArrowUpRight, ChevronLeft, ChevronRight } from 'lucide-react'
+import { ArrowUpRight, ChevronLeft, ChevronRight } from 'lucide-react'
 import DoninoColumnPlaque from '../SpeedRecords/DoninoColumnPlaque'
 import { formatSeasonsCount } from './utils'
 import { breedToSlug } from '../../lib/breedMapping'
@@ -48,7 +48,6 @@ export default function BreedHubColumns({
       id: ColumnTabId
       label: string
       count: number
-      icon: typeof Trophy
       rankingUrl: string
       actionTitle: string
     }> = []
@@ -57,7 +56,6 @@ export default function BreedHubColumns({
         id: 'coursing',
         label: 'Курсинг',
         count: coursingList.length,
-        icon: Trophy,
         rankingUrl: `/competitions/ranking/2026/?breed=${encodeURIComponent(breedToSlug(canonicalKey))}&tab=coursing`,
         actionTitle: `Рейтинг курсинга породы ${breedNameRu}`,
       })
@@ -67,7 +65,6 @@ export default function BreedHubColumns({
         id: 'racing',
         label: 'Рейсинг',
         count: racingList.length,
-        icon: Zap,
         rankingUrl: `/competitions/ranking/2026/?breed=${encodeURIComponent(breedToSlug(canonicalKey))}&tab=racing`,
         actionTitle: `Рейтинг рейсинга породы ${breedNameRu}`,
       })
@@ -77,7 +74,6 @@ export default function BreedHubColumns({
         id: 'donino',
         label: 'Донино',
         count: doninoList.length,
-        icon: Gauge,
         rankingUrl: `/speed-records/?breed=${encodeURIComponent(breedToSlug(canonicalKey))}`,
         actionTitle: `Рекорды Донино породы ${breedNameRu}`,
       })
@@ -98,7 +94,6 @@ export default function BreedHubColumns({
     () => activeTabs.find((t) => t.id === activeMobileTab) || activeTabs[0],
     [activeTabs, activeMobileTab],
   )
-  const ActiveIcon = activeTabObj?.icon || Trophy
 
   const activeTabIndex = useMemo(() => {
     const idx = activeTabs.findIndex((t) => t.id === activeMobileTab)
@@ -293,7 +288,6 @@ export default function BreedHubColumns({
                   title={activeTabObj.actionTitle}
                 >
                   <div className="inline-flex items-center justify-center gap-1 text-xs font-bold uppercase tracking-wider text-camel-900 group-hover:underline truncate max-w-full">
-                    <ActiveIcon className="w-3.5 h-3.5 text-camel-700 shrink-0" aria-hidden />
                     <span className="truncate">{activeTabObj.label}</span>
                   </div>
                   {activeTabObj.count > 0 && (
@@ -341,7 +335,7 @@ export default function BreedHubColumns({
 
           {/* Горизонтальный свайп между списками */}
           <div
-            className="w-full relative overflow-x-clip touch-pan-y select-none"
+            className="w-full relative overflow-hidden touch-pan-y select-none"
             onTouchStart={(e) => startDrag(e.touches[0].clientX, e.touches[0].clientY)}
             onTouchMove={(e) => moveDrag(e.touches[0].clientX, e.touches[0].clientY)}
             onTouchEnd={(e) => endDrag(e.changedTouches[0].clientX)}
@@ -356,7 +350,7 @@ export default function BreedHubColumns({
           >
             <div
               ref={trackRef}
-              className="flex flex-nowrap w-full min-w-0 items-stretch gap-0"
+              className="flex flex-nowrap w-full min-w-0 items-stretch gap-0 [transform:translateZ(0)] [backface-visibility:hidden]"
               style={{
                 transform: activeTabs.length <= 1 ? 'none' : `translate3d(${getSlideOffset(activeTabIndex)}, 0, 0)`,
                 willChange: activeTabs.length > 1 ? 'transform' : 'auto',
@@ -364,13 +358,14 @@ export default function BreedHubColumns({
             >
               {/* Колонка 1: Курсинг по годам */}
               {hasCoursing && (
-                <div className="w-full max-w-full min-w-0 shrink-0 basis-full flex flex-col bg-white">
+                <div className="w-full max-w-full min-w-0 shrink-0 basis-full flex flex-col bg-white [contain:content]">
                   <div className="flex-1 min-w-0 flex flex-col justify-start">
                     {annualLeadersLoading ? (
                       <p className="text-xs text-old-money-600 py-6 text-center">Загрузка архива по годам…</p>
                     ) : (
                       <MobileDogLeaderCards
-                        items={coursingList}
+                        years={allYears}
+                        byYear={coursingByYear}
                         mode="coursing"
                         canonicalKey={canonicalKey}
                       />
@@ -381,13 +376,14 @@ export default function BreedHubColumns({
 
               {/* Колонка 2: Рейсинг по годам */}
               {hasRacing && (
-                <div className="w-full max-w-full min-w-0 shrink-0 basis-full flex flex-col bg-white">
+                <div className="w-full max-w-full min-w-0 shrink-0 basis-full flex flex-col bg-white [contain:content]">
                   <div className="flex-1 min-w-0 flex flex-col justify-start">
                     {annualLeadersLoading ? (
                       <p className="text-xs text-old-money-600 py-6 text-center">Загрузка архива рейсинга…</p>
                     ) : (
                       <MobileDogLeaderCards
-                        items={racingList}
+                        years={allYears}
+                        byYear={racingByYear}
                         mode="racing"
                         canonicalKey={canonicalKey}
                       />
@@ -398,13 +394,14 @@ export default function BreedHubColumns({
 
               {/* Колонка 3: Донино по годам */}
               {hasDonino && (
-                <div className="w-full max-w-full min-w-0 shrink-0 basis-full flex flex-col bg-white">
+                <div className="w-full max-w-full min-w-0 shrink-0 basis-full flex flex-col bg-white [contain:content]">
                   <div className="flex-1 min-w-0 flex flex-col justify-start">
                     {doninoLoading ? (
                       <p className="text-xs text-old-money-600 py-6 text-center">Загрузка архива Донино…</p>
                     ) : (
                       <MobileDoninoCards
-                        items={doninoList}
+                        years={allYears}
+                        byYear={doninoByYear}
                         canonicalKey={canonicalKey}
                         breedNameRu={breedNameRu}
                       />

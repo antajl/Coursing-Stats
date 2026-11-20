@@ -15,12 +15,27 @@ export function useBreedHubSwipe({
   const touchStartRef = useRef<{ x: number; y: number; time: number } | null>(null)
   const gestureLockRef = useRef<'horizontal' | 'vertical' | null>(null)
   const hadMovedRef = useRef(false)
+  const isSwipingRef = useRef(false)
+  const rafRef = useRef<number | null>(null)
 
   const getSlideOffset = useCallback((slideIndex: number) => {
     return slideIndex === 0 ? '0%' : `-${slideIndex * 100}%`
   }, [])
 
   useEffect(() => {
+    return () => {
+      if (rafRef.current) {
+        cancelAnimationFrame(rafRef.current)
+        rafRef.current = null
+      }
+    }
+  }, [])
+
+  useEffect(() => {
+    if (isSwipingRef.current) {
+      isSwipingRef.current = false
+      return
+    }
     if (trackRef.current && (typeof window === 'undefined' || window.innerWidth < 1024)) {
       trackRef.current.style.transition = 'transform 320ms cubic-bezier(0.16, 1, 0.3, 1)'
       trackRef.current.style.transform = `translate3d(${getSlideOffset(activeTabIndex)}, 0, 0)`
@@ -29,6 +44,10 @@ export function useBreedHubSwipe({
 
   const startDrag = (clientX: number, clientY: number) => {
     if (activeTabsCount <= 1 || (typeof window !== 'undefined' && window.innerWidth >= 1024)) return
+    if (rafRef.current) {
+      cancelAnimationFrame(rafRef.current)
+      rafRef.current = null
+    }
     touchStartRef.current = { x: clientX, y: clientY, time: Date.now() }
     gestureLockRef.current = null
     hadMovedRef.current = false
@@ -63,11 +82,20 @@ export function useBreedHubSwipe({
       const isAtRightEdge = activeTabIndex === activeTabsCount - 1 && dx < 0
       const appliedDx = isAtLeftEdge || isAtRightEdge ? dx * 0.22 : dx
       const base = getSlideOffset(activeTabIndex)
-      trackRef.current.style.transform = `translate3d(calc(${base} + ${appliedDx}px), 0, 0)`
+      if (rafRef.current) cancelAnimationFrame(rafRef.current)
+      rafRef.current = requestAnimationFrame(() => {
+        if (trackRef.current) {
+          trackRef.current.style.transform = `translate3d(calc(${base} + ${appliedDx}px), 0, 0)`
+        }
+      })
     }
   }
 
   const endDrag = (clientX: number) => {
+    if (rafRef.current) {
+      cancelAnimationFrame(rafRef.current)
+      rafRef.current = null
+    }
     if (!touchStartRef.current || activeTabsCount <= 1 || (typeof window !== 'undefined' && window.innerWidth >= 1024)) return
 
     const isHorizontal = gestureLockRef.current === 'horizontal'
@@ -91,23 +119,28 @@ export function useBreedHubSwipe({
         targetIndex = activeTabIndex - 1
       }
 
-      track.style.transition = 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)'
+      isSwipingRef.current = true
+      track.style.transition = 'transform 320ms cubic-bezier(0.16, 1, 0.3, 1)'
       track.style.transform = `translate3d(${getSlideOffset(targetIndex)}, 0, 0)`
 
       if (targetIndex !== activeTabIndex) {
         onTabChange(targetIndex)
       }
     } else if (track) {
-      track.style.transition = 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)'
+      track.style.transition = 'transform 320ms cubic-bezier(0.16, 1, 0.3, 1)'
       track.style.transform = `translate3d(${getSlideOffset(activeTabIndex)}, 0, 0)`
     }
   }
 
   const cancelDrag = () => {
+    if (rafRef.current) {
+      cancelAnimationFrame(rafRef.current)
+      rafRef.current = null
+    }
     touchStartRef.current = null
     gestureLockRef.current = null
     if (trackRef.current && activeTabsCount > 1) {
-      trackRef.current.style.transition = 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)'
+      trackRef.current.style.transition = 'transform 320ms cubic-bezier(0.16, 1, 0.3, 1)'
       trackRef.current.style.transform = `translate3d(${getSlideOffset(activeTabIndex)}, 0, 0)`
     }
   }

@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import { Link } from 'react-router-dom'
 import DogSexIcon from '../../../components/DogSexIcon'
 import MedalBadge from '../../../components/MedalBadge'
@@ -29,7 +30,7 @@ function DesktopEmptyCell({ year }: { year?: number }) {
   )
 }
 
-export function DesktopCoursingCell({
+export const DesktopCoursingCell = memo(function DesktopCoursingCell({
   item,
   year,
   canonicalKey,
@@ -91,9 +92,9 @@ export function DesktopCoursingCell({
       </div>
     </div>
   )
-}
+})
 
-export function DesktopRacingCell({
+export const DesktopRacingCell = memo(function DesktopRacingCell({
   item,
   year,
   canonicalKey,
@@ -164,13 +165,13 @@ export function DesktopRacingCell({
       </div>
     </div>
   )
-}
+})
 
 interface DesktopDoninoCellProps extends DesktopCellProps<AnnualDoninoLeader> {
   breedNameRu: string
 }
 
-export function DesktopDoninoCell({
+export const DesktopDoninoCell = memo(function DesktopDoninoCell({
   item,
   year,
   canonicalKey,
@@ -232,4 +233,4 @@ export function DesktopDoninoCell({
       </div>
     </div>
   )
-}
+})
