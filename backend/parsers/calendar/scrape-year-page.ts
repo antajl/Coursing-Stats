@@ -72,22 +72,20 @@ export function typeFromRankLabel(rankLabel: string): string | null {
 }
 
 export function extractCompetitionKind(rankLabel: string): string | null {
-  const competitionCodes = [
-    'Чемпионат России',
-    'ПЧРКФ',
-    'ЧРКФ',
-    'CACL',
-    'CACIB',
-    'CACMB',
-    'CAC',
-    'Кубок России',
-    'Кубок',
-  ];
-
-  const upperLabel = rankLabel.toUpperCase();
-  for (const code of competitionCodes) {
-    if (upperLabel.includes(code.toUpperCase())) return code;
-  }
+  if (!rankLabel) return null;
+  const upper = rankLabel.toUpperCase();
+  if (upper.includes('ЧЕМПИОНАТ РОССИИ') || upper.includes(' ЧР ') || upper.startsWith('ЧР ')) return 'Чемпионат России';
+  if (upper.includes('КУБОК РОССИИ') || upper.includes(' КР ') || upper.startsWith('КР ')) return 'Кубок России';
+  if (upper.includes('МОНОПОРОДН') || upper.includes('МОНОРОДН') || upper.includes('ПЧРКФ')) return 'ПЧРКФ';
+  if (upper.includes('ЧРКФ') || upper.includes('ЧЕМПИОНАТ РКФ') || upper.includes('ЧЕМПИОНАТЫ РКФ')) return 'ЧРКФ';
+  if (upper.includes('ЧЕМПИОНАТ НКП')) return 'Чемпионат НКП';
+  if (upper.includes('CACIL')) return 'CACIL';
+  if (upper.includes('CACL')) return 'CACL';
+  if (upper.includes('CACIB')) return 'CACIB';
+  if (upper.includes('CACMB') || upper.includes('САСМВ')) return 'CACMB';
+  if (upper.includes('CAC')) return 'CAC';
+  if (upper.includes('КУБОК')) return 'Кубок';
+  if (upper.includes('ДРУЖЕСТВЕННЫЕ')) return 'Дружественные забеги';
   return null;
 }
 
