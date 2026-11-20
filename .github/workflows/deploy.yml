@@ -146,6 +146,11 @@ jobs:
               --include "*.html" \
               --size-only \
               --cache-control "public, max-age=0, must-revalidate"
+
+            # Purge stale dog HTML directory from S3 so SPA fallback serves the latest bundle directly
+            aws s3 rm s3://${{ secrets.S3_BUCKET }}/dog/ \
+              --recursive \
+              --endpoint-url https://storage.yandexcloud.net || true
           fi
 
           # 4. Critical SPA entrypoints (index.html, 404.html and ALL prerendered hubs including breeds/:slug)
@@ -160,7 +165,7 @@ jobs:
             --acl public-read \
             --cache-control "public, max-age=0, must-revalidate"
 
-          find frontend/dist -name "index.html" -not -path "frontend/dist/index.html" | while read -r hubFile; do
+          find frontend/dist -maxdepth 3 -name "index.html" -not -path "frontend/dist/index.html" | while read -r hubFile; do
             relPath="${hubFile#frontend/dist/}"
             aws s3 cp "$hubFile" "s3://${{ secrets.S3_BUCKET }}/$relPath" \
               --endpoint-url https://storage.yandexcloud.net \
