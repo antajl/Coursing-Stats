@@ -47,8 +47,11 @@ export interface DogOrgStats {
   lower_than_career: DogOrgItem[]
 }
 
+export type OrgDisciplineFilter = 'all' | 'coursing' | 'racing'
+
 interface DogOrganizationsSectionProps {
   competitions?: DogProfileEventItem[]
+  initialDiscipline?: OrgDisciplineFilter
 }
 
 const PLACEMENT_STYLES: Record<number, { bg: string; text: string; border: string }> = {
@@ -178,11 +181,24 @@ export function formatStartsCount(count: number): string {
   return `${count} стартов`
 }
 
-export function computeDogOrganizationStats(competitions: DogProfileEventItem[] = []): DogOrgStats | null {
+export function computeDogOrganizationStats(
+  competitions: DogProfileEventItem[] = [],
+  discipline: OrgDisciplineFilter = 'all',
+): DogOrgStats | null {
   if (!competitions || competitions.length === 0) return null
 
-  // Учитываем завершённые старты, где определено место собаки
-  const validComps = competitions.filter((c) => {
+  // 1. Фильтрация по дисциплине при необходимости
+  let filteredComps = competitions
+  if (discipline === 'coursing') {
+    filteredComps = competitions.filter(
+      (c) => c.event_type === 'coursing' || c.event_type === 'bzmp' || !c.event_type,
+    )
+  } else if (discipline === 'racing') {
+    filteredComps = competitions.filter((c) => c.event_type === 'racing')
+  }
+
+  // 2. Учитываем завершённые старты, где определено место собаки
+  const validComps = filteredComps.filter((c) => {
     if (typeof c.placement === 'number' && c.placement > 0) return true
     if (typeof c.placement === 'string') {
       const p = parseInt(c.placement, 10)
@@ -311,11 +327,29 @@ export function computeDogOrganizationStats(competitions: DogProfileEventItem[] 
   }
 }
 
-export function DogOrganizationsSection({ competitions }: DogOrganizationsSectionProps) {
+export function DogOrganizationsSection({
+  competitions,
+  initialDiscipline = 'all',
+}: DogOrganizationsSectionProps) {
   const [expandedOrgKey, setExpandedOrgKey] = useState<string | null>(null)
   const [showAllOrgs, setShowAllOrgs] = useState(false)
+  const [disciplineFilter, setDisciplineFilter] = useState<OrgDisciplineFilter>(initialDiscipline)
 
-  const orgStats = useMemo(() => computeDogOrganizationStats(competitions), [competitions])
+  // Проверяем, участвовала ли собака в обеих дисциплинах
+  const hasCoursing = useMemo(
+    () => (competitions || []).some((c) => c.event_type === 'coursing' || c.event_type === 'bzmp' || !c.event_type),
+    [competitions],
+  )
+  const hasRacing = useMemo(
+    () => (competitions || []).some((c) => c.event_type === 'racing'),
+    [competitions],
+  )
+  const showDisciplineToggle = hasCoursing && hasRacing
+
+  const orgStats = useMemo(
+    () => computeDogOrganizationStats(competitions, disciplineFilter),
+    [competitions, disciplineFilter],
+  )
 
   if (!orgStats || orgStats.orgs_count === 0) {
     return null
@@ -529,13 +563,63 @@ export function DogOrganizationsSection({ competitions }: DogOrganizationsSectio
           </h2>
           <p className="text-xs text-charcoal-500 mt-0.5">
             Базовый уровень собаки: в среднем <strong>{orgStats.career_win_rate}% побед</strong> (
-            {formatWinsCount(orgStats.total_wins)} в {formatStartsCount(orgStats.total_starts)}) по всем турнирам
+            {formatWinsCount(orgStats.total_wins)} в {formatStartsCount(orgStats.total_starts)})
+            {disciplineFilter === 'coursing'
+              ? ' в курсинге'
+              : disciplineFilter === 'racing'
+                ? ' в бегах борзых'
+                : ' по всем состязаниям'}
           </p>
         </div>
 
-        <div className="flex items-center gap-1.5 text-xs text-charcoal-600 font-medium bg-cream-100/70 px-3 py-1.5 rounded-xl border border-old-money-200/70 self-start sm:self-auto">
-          <Building2 className="w-3.5 h-3.5 text-camel-700" aria-hidden />
-          <span>{formatOrgsCount(orgStats.orgs_count)}</span>
+        <div className="flex items-center gap-2.5 flex-wrap self-start sm:self-auto">
+          {/* Сегментированный переключатель дисциплины (если собака выступала в обеих) */}
+          {showDisciplineToggle && (
+            <div
+              role="group"
+              aria-label="Фильтр по дисциплине"
+              className="inline-flex items-center p-0.5 rounded-xl border border-old-money-200 bg-cream-100/70 text-xs shadow-2xs"
+            >
+              <button
+                type="button"
+                onClick={() => setDisciplineFilter('all')}
+                className={`px-2.5 py-1 rounded-lg font-medium transition-all cursor-pointer min-h-[32px] sm:min-h-0 ${
+                  disciplineFilter === 'all'
+                    ? 'bg-white text-charcoal-900 shadow-2xs font-semibold'
+                    : 'text-charcoal-600 hover:text-charcoal-900'
+                }`}
+              >
+                Все
+              </button>
+              <button
+                type="button"
+                onClick={() => setDisciplineFilter('coursing')}
+                className={`px-2.5 py-1 rounded-lg font-medium transition-all cursor-pointer min-h-[32px] sm:min-h-0 ${
+                  disciplineFilter === 'coursing'
+                    ? 'bg-white text-charcoal-900 shadow-2xs font-semibold'
+                    : 'text-charcoal-600 hover:text-charcoal-900'
+                }`}
+              >
+                Курсинг
+              </button>
+              <button
+                type="button"
+                onClick={() => setDisciplineFilter('racing')}
+                className={`px-2.5 py-1 rounded-lg font-medium transition-all cursor-pointer min-h-[32px] sm:min-h-0 ${
+                  disciplineFilter === 'racing'
+                    ? 'bg-white text-charcoal-900 shadow-2xs font-semibold'
+                    : 'text-charcoal-600 hover:text-charcoal-900'
+                }`}
+              >
+                Бега
+              </button>
+            </div>
+          )}
+
+          <div className="flex items-center gap-1.5 text-xs text-charcoal-600 font-medium bg-cream-100/70 px-3 py-1.5 rounded-xl border border-old-money-200/70">
+            <Building2 className="w-3.5 h-3.5 text-camel-700" aria-hidden />
+            <span>{formatOrgsCount(orgStats.orgs_count)}</span>
+          </div>
         </div>
       </div>
 
