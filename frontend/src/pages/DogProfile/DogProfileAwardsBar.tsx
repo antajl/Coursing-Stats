@@ -5,12 +5,13 @@ import { matchShowAwardToken } from '../../../../backend/lib/show-award-ranking'
 import { competitionTitleDisplayName } from '../../../../backend/lib/competition-titles'
 import {
   compareDogProfileTitles,
+  dogProfileTitleRank,
   formatTitleLine,
   isOfficialDogTitleToken,
   titleBadgeClass,
   type DogTitle,
 } from '../../lib/qualificationTitles'
-import { awardTooltipForDogTitle } from '../../lib/awardTooltip'
+import { getFullTitleLabel } from '../../lib/awardTooltip'
 
 export interface DogAchievementItem {
   id: string
@@ -101,32 +102,32 @@ export function DogProfileAwardsBar({
       titleExplanations[badgeTitle] ||
       titleExplanations[item.title]
 
-    const chipClass = isSupreme
-      ? 'border border-amber-500/80 bg-gradient-to-r from-amber-50 via-cream-50 to-amber-100/60 text-amber-950 font-bold shadow-2xs hover:border-amber-600'
-      : titleBadgeClass(badgeTitle)
+    const chipClass = titleBadgeClass(badgeTitle)
+    const isCrown = isSupreme || dogProfileTitleRank(badgeTitle) >= 125
+    const fullTitleName = getFullTitleLabel(badgeTitle, isShow)
 
     return (
       <HoverTooltip
         key={`${keyPrefix}-${badgeTitle}`}
         label={
-          explanation ? (
-            <div className="flex flex-col gap-1 max-w-xs text-left">
-              <div className="flex items-center gap-1.5 font-bold text-xs text-charcoal-900">
-                <span className={`inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[11px] font-semibold ${chipClass}`}>
-                  {isSupreme && <Crown className="h-3 w-3 text-amber-600 shrink-0" aria-hidden />}
-                  <span>{badgeTitle}</span>
-                </span>
-                <span className="text-[11px] font-medium leading-snug">
-                  {awardTooltipForDogTitle(item.title, item.count, isShow)}
-                </span>
-              </div>
-              <p className="text-[11px] leading-snug text-charcoal-600 font-normal border-t border-cream-200/80 pt-1 mt-0.5">
+          <div className="flex flex-col gap-1.5 max-w-sm text-left">
+            <div className="flex items-center gap-2">
+              <span
+                className={`inline-flex shrink-0 items-center gap-1 rounded-md px-1.5 py-0.5 text-[11px] tabular-nums whitespace-nowrap ${chipClass}`}
+              >
+                {isCrown && <Crown className="h-3 w-3 text-amber-600 shrink-0" aria-hidden />}
+                <span>{line}</span>
+              </span>
+              <span className="text-xs font-bold leading-snug text-charcoal-900">
+                {fullTitleName}
+              </span>
+            </div>
+            {explanation && (
+              <p className="text-[11px] leading-snug text-charcoal-600 font-normal border-t border-cream-200/80 pt-1.5 mt-0.5">
                 {explanation}
               </p>
-            </div>
-          ) : (
-            awardTooltipForDogTitle(item.title, item.count, isShow)
-          )
+            )}
+          </div>
         }
         placement="top"
         variant="site"
@@ -134,10 +135,10 @@ export function DogProfileAwardsBar({
         portal
       >
         <span
-          className={`inline-flex shrink-0 items-center gap-1 rounded-md px-2 py-0.5 text-[11px] font-semibold tabular-nums whitespace-nowrap transition-transform hover:scale-105 ${chipClass}`}
+          className={`inline-flex shrink-0 items-center gap-1 rounded-md px-2 py-0.5 text-[11px] tabular-nums whitespace-nowrap transition-transform hover:scale-105 ${chipClass}`}
           tabIndex={0}
         >
-          {isSupreme && <Crown className="h-3 w-3 text-amber-600 shrink-0" aria-hidden />}
+          {isCrown && <Crown className="h-3 w-3 text-amber-600 shrink-0" aria-hidden />}
           <span>{line}</span>
         </span>
       </HoverTooltip>

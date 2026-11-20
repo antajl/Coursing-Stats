@@ -286,16 +286,23 @@ export function dogProfileTitleRank(title: string): number {
     .replace(/\s+20\d\d/g, '')
     .trim()
 
-  if (norm === 'ГЧР' || norm === 'ГЧР РК') return 140
+  if (norm === 'АЧР') return 150
+  if (norm === 'ГЧР РК') return 140
   if (norm === 'ГЧРКФ' || norm === 'ГЧРКФ РК') return 135
+  if (norm.includes('C.I.C') || norm.includes('C.I.B') || norm.includes('C.I.E') || norm.includes('ИНТЕР')) return 130
+  if (norm === 'ГЧР') return 125
   if (norm === 'ЧР' || norm === 'ЧР РК') return 120
   if (norm === 'НЧ' || norm === 'НЧ РК') return 115
   if (norm === 'ПКР' || norm === 'ПКР РК') return 110
-  if (norm === 'ЮЧР') return 100
+  if (norm === 'ЧНКП') return 105
   if (norm === 'ЧРКФ' || norm === 'ЧРКФ РК') return 100
-  if (norm === 'ВЧР') return 95
   if (norm === 'ПЧ' || norm === 'ПЧ РК') return 95
   if (norm === 'ПЧРКФ' || norm === 'ПЧРКФ РК') return 90
+  if (norm === 'ЧП') return 90
+  if (norm === 'ЮЧР') return 85
+  if (norm === 'ВЧР') return 85
+  if (norm === 'ЮЧРКФ' || norm === 'ВЧРКФ') return 80
+  if (norm === 'ЮЧНКП' || norm === 'ВЧНКП') return 75
   const showKey = matchShowAwardToken(title)
   if (showKey) return SHOW_AWARD_WEIGHTS[showKey]
   return competitionTitleRank(title)
@@ -322,17 +329,43 @@ export function classifyDogProfileTitle(title: string): AwardCategory {
   return 'other'
 }
 
-/** Класс бейджа по строке титула (протокол, профиль, справка). */
+/**
+ * Класс бейджа по строке титула с градацией силы звания РКФ/FCI:
+ * Тир 1 (≥125): Высшие и гранд-титулы (АЧР, ГЧР РК, ГЧРКФ РК, C.I.C., C.I.B., ГЧР) -> Золото/Янтарь Old Money
+ * Тир 2 (110..124): Чемпионы России и Национальные (ЧР РК, ЧР, НЧ РК, ПКР РК, ЧНКП) -> Насыщенный коньяк border-2
+ * Тир 3 (90..109): Чемпионы Федерации и Породные (ЧРКФ РК, ЧРКФ, ПЧРКФ РК, ПЧ РК, ЧП) -> Классический camel
+ * Тир 4 (70..89): Юниорские и ветеранские чемпионы (ЮЧР, ВЧР, ЮЧРКФ, ВЧРКФ, ЮЧНКП) -> Сдержанный серый графит
+ */
 export function titleBadgeClass(title: string): string {
   const upper = title.trim().toUpperCase()
-  const category = classifyDogProfileTitle(title)
   const showKey = matchShowAwardToken(title)
-  const topPrestige =
+  const isBis =
     showKey === 'BIS' ||
     (showKey != null && showKey.startsWith('BIS_')) ||
     upper === 'BIS' ||
     upper.startsWith('BEST IN SHOW')
-  return categoryBadgeClass(category, { topPrestige })
+
+  if (isBis) {
+    return 'border-2 border-camel-400 bg-camel-100 text-camel-700'
+  }
+
+  // Для официальных чемпионских званий применяем градацию по силе титула
+  const rank = dogProfileTitleRank(title)
+  if (rank >= 125) {
+    return 'border-2 border-amber-500/90 bg-gradient-to-r from-amber-100/70 via-cream-50 to-amber-50 text-amber-950 font-bold shadow-2xs hover:border-amber-600'
+  }
+  if (rank >= 110) {
+    return 'border-2 border-camel-600 bg-cream-100/90 text-camel-900 font-bold shadow-2xs hover:border-camel-700'
+  }
+  if (rank >= 90) {
+    return 'border border-camel-400/90 bg-cream-50 text-charcoal-800 font-semibold hover:border-camel-500'
+  }
+  if (rank >= 70) {
+    return 'border border-old-money-200 bg-cream-50/70 text-charcoal-600 font-medium hover:border-old-money-300'
+  }
+
+  const category = classifyDogProfileTitle(title)
+  return categoryBadgeClass(category)
 }
 
 /** Класс бейджа по ключу выставочной награды. */

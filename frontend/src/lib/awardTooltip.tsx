@@ -75,6 +75,41 @@ export function awardTooltipForToken(token: string): ReactNode {
   )
 }
 
+/** Полная официальная расшифровка титула без бейджа (для заголовка тултипа). */
+export function getFullTitleLabel(title: string, isShow?: boolean): string {
+  const clean = title.replace(/\s*\((?:КБ|ББ|БЗМП|LC|LR)\)/gi, '').trim()
+  if (clean === 'АЧР') return 'Абсолютный чемпион России'
+  if (clean === 'ГЧР РК') return 'Гранд чемпион России по рабочим качествам собак'
+  if (clean === 'ГЧРКФ РК' || clean === 'ГЧРКФ') return 'Гранд чемпион РКФ по рабочим качествам собак'
+  if (clean === 'ГЧР') return 'Гранд чемпион России по красоте'
+  if (clean === 'C.I.C.') return 'Интернациональный чемпион по рабочим качествам (FCI)'
+  if (clean === 'C.I.B.') return 'Интернациональный чемпион по красоте (FCI)'
+  if (clean === 'C.I.E.') return 'Интернациональный выставочный чемпион (FCI)'
+  if (clean === 'ЧР') return isShow ? 'Чемпион России по красоте' : 'Чемпион России по рабочим качествам собак'
+  if (clean === 'ЧР РК') return 'Чемпион России по рабочим качествам собак'
+  if (clean === 'НЧ РК' || clean === 'НЧ') return 'Национальный чемпион по рабочим качествам собак'
+  if (clean === 'ПКР РК' || clean === 'ПКР') return 'Победитель Кубка России по рабочим качествам собак'
+  if (clean === 'ЧРКФ РК') return 'Чемпион РКФ по рабочим качествам собак'
+  if (clean === 'ЧРКФ') return 'Чемпион РКФ по красоте'
+  if (clean === 'ПЧРКФ РК') return 'Чемпион РКФ по рабочим качествам в породе'
+  if (clean === 'ПЧ РК' || clean === 'ПЧ') return 'Породный чемпион по рабочим качествам собак'
+  if (clean === 'ЧНКП') return 'Чемпион Национального клуба породы'
+  if (clean === 'ЧП') return 'Чемпион породы'
+  if (clean === 'ЮЧР') return 'Юный чемпион России'
+  if (clean === 'ВЧР') return 'Ветеран-чемпион России'
+  if (clean === 'ЮЧРКФ') return 'Юный чемпион РКФ'
+  if (clean === 'ВЧРКФ') return 'Ветеран-чемпион РКФ'
+  if (clean === 'ЮЧНКП') return 'Юный чемпион Национального клуба породы'
+  if (clean === 'ВЧНКП') return 'Ветеран-чемпион Национального клуба породы'
+
+  const showKey = matchShowAwardToken(clean)
+  if (showKey && SHOW_AWARD_LABELS[showKey]) return SHOW_AWARD_LABELS[showKey]
+  const compKey = competitionTitleKey(clean)
+  if (COMPETITION_TITLE_LABELS[compKey]) return COMPETITION_TITLE_LABELS[compKey]
+
+  return clean
+}
+
 /** Тултип чипа шапки профиля (выставка или курсинг/беги). */
 export function awardTooltipForDogTitle(title: string, count?: number, isShow?: boolean): ReactNode {
   if (isShow && title === 'ЧР') {
