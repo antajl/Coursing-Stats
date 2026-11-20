@@ -117,11 +117,21 @@ export function DogAchievementsTab({
           aria-expanded={isExpanded}
         >
           <div className="flex items-center gap-2.5 min-w-0">
-            <span
-              className={`inline-flex shrink-0 items-center justify-center w-[72px] sm:w-[76px] rounded-lg px-1 py-0.5 text-xs font-bold tabular-nums text-center whitespace-nowrap ${chipClass}`}
-            >
-              {item.title} {item.count > 1 ? `×${item.count}` : ''}
-            </span>
+            <div className="relative inline-flex shrink-0">
+              <span
+                className={`inline-flex shrink-0 items-center justify-center w-[74px] sm:w-[78px] rounded-lg px-1 py-0.5 text-xs font-bold tabular-nums text-center whitespace-nowrap ${chipClass}`}
+              >
+                {item.title}
+              </span>
+              {item.count > 1 && (
+                <span
+                  className="absolute -top-1.5 -right-1.5 inline-flex items-center justify-center px-1 min-w-[17px] h-4 text-[9.5px] font-extrabold leading-none rounded-full bg-charcoal-800 text-white shadow-2xs border border-white"
+                  title={`Оформлено ${item.count} раза`}
+                >
+                  ×{item.count}
+                </span>
+              )}
+            </div>
             <h4 className="text-sm font-bold text-charcoal-900 leading-snug">{fullLabel}</h4>
           </div>
 
@@ -278,7 +288,7 @@ export function DogAchievementsTab({
                   >
                     <div className="flex items-center gap-2.5 min-w-0">
                       <span
-                        className={`inline-flex shrink-0 items-center justify-center w-[72px] sm:w-[76px] rounded-lg px-1 py-0.5 text-xs font-bold tabular-nums text-center whitespace-nowrap ${chipClass}`}
+                        className={`inline-flex shrink-0 items-center justify-center w-[74px] sm:w-[78px] rounded-lg px-1 py-0.5 text-xs font-bold tabular-nums text-center whitespace-nowrap ${chipClass}`}
                       >
                         {title.badge}
                       </span>
