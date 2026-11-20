@@ -48,6 +48,8 @@ type DogProfileHeaderProps = {
   dog: any
   showTitles: DogTitle[]
   competitionTitles: DogTitle[]
+  coursingTitles?: DogTitle[]
+  racingTitles?: DogTitle[]
   showRuName: boolean
   exporting: boolean
   onBack?: () => void
@@ -65,6 +67,8 @@ export function DogProfileHeader({
   dog,
   showTitles,
   competitionTitles,
+  coursingTitles,
+  racingTitles,
   showRuName,
   exporting,
   onExport,
