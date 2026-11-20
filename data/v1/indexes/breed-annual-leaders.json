@@ -1,9 +1,9 @@
 {
   "schema": "coursing-stats/breed-annual-leaders-v1",
-  "generated_at": "2026-11-16T20:12:44.486Z",
+  "generated_at": "2026-11-20T12:29:33.948Z",
   "total_breeds": 82,
   "breeds_with_data": 67,
-  "total_entries": 317,
+  "total_entries": 314,
   "leaders_by_slug": {
     "whippet": [
       {
@@ -928,58 +928,6 @@
       }
     ],
     "irish-wolfhound": [
-      {
-        "year": 2026,
-        "dog_id": 5745,
-        "name_lat": "DARING CAPITAN ORLIKOVA",
-        "name_ru": "ДЭЙРИНГ КАПИТАН ОРЛИКОВА",
-        "sex": "F",
-        "gold": 3,
-        "silver": 0,
-        "bronze": 0,
-        "total_starts": 3,
-        "best_speed": null,
-        "rating_score": 83.02
-      },
-      {
-        "year": 2025,
-        "dog_id": 5745,
-        "name_lat": "DARING CAPITAN ORLIKOVA",
-        "name_ru": "ДЭЙРИНГ КАПИТАН ОРЛИКОВА",
-        "sex": "F",
-        "gold": 3,
-        "silver": 3,
-        "bronze": 0,
-        "total_starts": 6,
-        "best_speed": null,
-        "rating_score": 85.45
-      },
-      {
-        "year": 2024,
-        "dog_id": 5747,
-        "name_lat": "DEVUSHKA V IRLANDSKOY YUBKE",
-        "name_ru": "ДЕВУШКА В ИРЛАНДСКОЙ ЮБКЕ",
-        "sex": "F",
-        "gold": 4,
-        "silver": 0,
-        "bronze": 0,
-        "total_starts": 4,
-        "best_speed": null,
-        "rating_score": 86.94
-      },
-      {
-        "year": 2023,
-        "dog_id": 5746,
-        "name_lat": "ELAN LAN BYSTRAYA",
-        "name_ru": "ЕЛАНЬ ЛАНЬ БЫСТРАЯ",
-        "sex": "F",
-        "gold": 5,
-        "silver": 0,
-        "bronze": 0,
-        "total_starts": 5,
-        "best_speed": null,
-        "rating_score": 88.7
-      },
       {
         "year": 2022,
         "dog_id": 10970,
@@ -3455,6 +3403,19 @@
         "total_starts": 1,
         "best_speed": null,
         "rating_score": 85.98
+      },
+      {
+        "year": 2022,
+        "dog_id": 11101,
+        "name_lat": "VILANTA DIAMOND GRACE KELLY (M)",
+        "name_ru": "ВИЛАНТА ДАЙМОНД ГРЕЙС КЕЛЛИ (М)",
+        "sex": "F",
+        "gold": 1,
+        "silver": 0,
+        "bronze": 0,
+        "total_starts": 1,
+        "best_speed": null,
+        "rating_score": 86.31
       }
     ],
     "white-swiss-shepherd": [

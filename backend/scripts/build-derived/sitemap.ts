@@ -205,8 +205,9 @@ export function renderSitemapXml(urls: SitemapUrl[]): string {
   for (const page of urls) {
     xml += '  <url>\n'
     xml += `    <loc>${xmlEscape(SITE_BASE_URL + page.loc)}</loc>\n`
-    xml += `    <changefreq>${page.changefreq}</changefreq>\n`
-    xml += `    <priority>${page.priority}</priority>\n`
+    if (page.lastmod) {
+      xml += `    <lastmod>${page.lastmod}</lastmod>\n`
+    }
     xml += '  </url>\n'
   }
   xml += '</urlset>'
@@ -260,39 +261,94 @@ export function loadProtocolIds(): string[] {
   }
 }
 
-/** CDN-indexable exhibitions: shows/index.json + numeric type1 protocol files. */
-export function loadExhibitionIdsForSitemap(): string[] {
-  const ids = new Set<string>()
+export function loadExhibitionsByYear(): Record<string, string[]> {
+  const byYear: Record<string, string[]> = {
+    '2026': [],
+    '2025': [],
+    '2024': [],
+    '2023': [],
+    '2022': [],
+    '2021': [],
+    archive: [],
+  }
+
+  const seen = new Set<string>()
 
   // 1. All parsed exhibitions from SQLite archive
   const archivePath = path.join(ROOT, 'data/local/exhibitions-rkf-archive.sqlite')
   if (fs.existsSync(archivePath)) {
     try {
       const db = new Database(archivePath, { readonly: true })
-      const rows = db.prepare('SELECT id FROM exhibitions_rkf').all() as { id: string }[]
-      for (const r of rows) ids.add(String(r.id))
+      const rows = db.prepare('SELECT id, year FROM exhibitions_rkf').all() as {
+        id: string | number
+        year: number
+      }[]
+      for (const r of rows) {
+        const idStr = String(r.id)
+        if (seen.has(idStr)) continue
+        seen.add(idStr)
+        const y = Number(r.year) || 0
+        if (y === 2026) byYear['2026'].push(idStr)
+        else if (y === 2025) byYear['2025'].push(idStr)
+        else if (y === 2024) byYear['2024'].push(idStr)
+        else if (y === 2023) byYear['2023'].push(idStr)
+        else if (y === 2022) byYear['2022'].push(idStr)
+        else if (y === 2021) byYear['2021'].push(idStr)
+        else byYear.archive.push(idStr)
+      }
       db.close()
     } catch {
       /* ignore */
     }
   }
+
+  // 2. shows/index.json
   const indexPath = path.join(ROOT, 'data/v1/shows/index.json')
   if (fs.existsSync(indexPath)) {
     try {
       const index = JSON.parse(fs.readFileSync(indexPath, 'utf8')) as Record<string, string>
-      for (const id of Object.keys(index)) ids.add(id)
+      for (const [id, relPath] of Object.entries(index)) {
+        if (seen.has(id)) continue
+        seen.add(id)
+        const m = String(relPath).match(/\b(20\d\d)\b/)
+        const y = m ? Number(m[1]) : 0
+        if (y === 2026) byYear['2026'].push(id)
+        else if (y === 2025) byYear['2025'].push(id)
+        else if (y === 2024) byYear['2024'].push(id)
+        else if (y === 2023) byYear['2023'].push(id)
+        else if (y === 2022) byYear['2022'].push(id)
+        else if (y === 2021) byYear['2021'].push(id)
+        else byYear.archive.push(id)
+      }
     } catch {
       /* ignore */
     }
   }
+
+  // 3. type1 files
   const exhDir = path.join(ROOT, 'data/v1/shows/exhibitions')
   if (fs.existsSync(exhDir)) {
     for (const file of fs.readdirSync(exhDir)) {
       const m = file.match(/^(\d+)-type1\.json$/i)
-      if (m) ids.add(m[1])
+      if (m && !seen.has(m[1])) {
+        seen.add(m[1])
+        byYear.archive.push(m[1])
+      }
     }
   }
-  return [...ids].sort((a, b) => (Number(a) || 0) - (Number(b) || 0))
+
+  for (const k of Object.keys(byYear)) {
+    byYear[k].sort((a, b) => (Number(a) || 0) - (Number(b) || 0))
+  }
+
+  return byYear
+}
+
+/** CDN-indexable exhibitions: shows/index.json + numeric type1 protocol files. */
+export function loadExhibitionIdsForSitemap(): string[] {
+  const byYear = loadExhibitionsByYear()
+  const all = Object.values(byYear).flat()
+  return all.sort((a, b) => (Number(a) || 0) - (Number(b) || 0))
 }
 
 export function saveAvailableExhibitionsIndex(): string[] {
@@ -409,11 +465,6 @@ export function buildSitemap(db: Database.Database) {
       changefreq: 'weekly',
       priority: '0.85',
     })),
-    ...doninoDogs.map((d) => ({
-      loc: `/donino-dog/${encodeURIComponent(d.name)}/${encodeURIComponent(d.breed)}/`,
-      changefreq: 'monthly',
-      priority: '0.5',
-    })),
   ]
   const eventUrls: SitemapUrl[] = eventIds.map((id) => ({
     loc: `/event/${id}/`,
@@ -425,11 +476,18 @@ export function buildSitemap(db: Database.Database) {
     changefreq: 'monthly',
     priority: '0.7',
   }))
-  const dogUrls: SitemapUrl[] = dogs.map((d) => ({
-    loc: `/dog/${d.id}/`,
-    changefreq: 'monthly',
-    priority: '0.6',
-  }))
+  const dogUrls: SitemapUrl[] = [
+    ...dogs.map((d) => ({
+      loc: `/dog/${d.id}/`,
+      changefreq: 'monthly',
+      priority: '0.6',
+    })),
+    ...doninoDogs.map((d) => ({
+      loc: `/donino-dog/${encodeURIComponent(d.name)}/${encodeURIComponent(d.breed)}/`,
+      changefreq: 'monthly',
+      priority: '0.5',
+    })),
+  ]
   const judgeUrls: SitemapUrl[] = [
     ...sportJudgeNames.map((name) => {
       const slug = sportJudgeMap[name] != null ? String(sportJudgeMap[name]) : encodeURIComponent(name)
@@ -448,11 +506,6 @@ export function buildSitemap(db: Database.Database) {
       }
     }),
   ]
-  const showUrls: SitemapUrl[] = exhibitionIds.map((id) => ({
-    loc: `/shows/exhibition/${encodeURIComponent(id)}/`,
-    changefreq: 'monthly',
-    priority: '0.55',
-  }))
 
   fs.mkdirSync(PUBLIC_DIR, { recursive: true })
   fs.writeFileSync(path.join(PUBLIC_DIR, 'sitemap-main.xml'), renderSitemapXml(mainUrls), 'utf-8')
@@ -461,28 +514,59 @@ export function buildSitemap(db: Database.Database) {
   fs.writeFileSync(path.join(PUBLIC_DIR, 'sitemap-dogs.xml'), renderSitemapXml(dogUrls), 'utf-8')
   fs.writeFileSync(path.join(PUBLIC_DIR, 'sitemap-judges.xml'), renderSitemapXml(judgeUrls), 'utf-8')
 
-  const MAX_CHUNK = 45000
+  const exhibitionsByYear = loadExhibitionsByYear()
+  const showsIndexEntries: Array<{ loc: string; lastmod: string }> = []
+
+  const showSitemapConfigs: Array<{
+    key: string
+    filename: string
+    lastmod: string
+  }> = [
+    { key: '2026', filename: 'sitemap-shows-2026.xml', lastmod: now },
+    { key: '2025', filename: 'sitemap-shows-2025.xml', lastmod: '2025-12-31' },
+    { key: '2024', filename: 'sitemap-shows-2024.xml', lastmod: '2024-12-31' },
+    { key: '2023', filename: 'sitemap-shows-2023.xml', lastmod: '2023-12-31' },
+    { key: '2022', filename: 'sitemap-shows-2022.xml', lastmod: '2022-12-31' },
+    { key: '2021', filename: 'sitemap-shows-2021.xml', lastmod: '2021-12-31' },
+    { key: 'archive', filename: 'sitemap-shows-archive.xml', lastmod: '2020-12-31' },
+  ]
+
+  for (const cfg of showSitemapConfigs) {
+    const ids = exhibitionsByYear[cfg.key] || []
+    const showUrls: SitemapUrl[] = ids.map((id) => ({
+      loc: `/shows/exhibition/${encodeURIComponent(id)}/`,
+    }))
+    fs.writeFileSync(path.join(PUBLIC_DIR, cfg.filename), renderSitemapXml(showUrls), 'utf-8')
+    showsIndexEntries.push({ loc: `/${cfg.filename}`, lastmod: cfg.lastmod })
+  }
+
+  // Backward compatibility: also write sitemap-shows.xml (2026 current season)
+  const shows2026Urls = (exhibitionsByYear['2026'] || []).map((id) => ({
+    loc: `/shows/exhibition/${encodeURIComponent(id)}/`,
+  }))
+  fs.writeFileSync(path.join(PUBLIC_DIR, 'sitemap-shows.xml'), renderSitemapXml(shows2026Urls), 'utf-8')
+
+  // Clean up obsolete chunks if they exist
+  const legacyChunks = ['sitemap-shows-1.xml', 'sitemap-shows-2.xml']
+  for (const f of legacyChunks) {
+    const p = path.join(PUBLIC_DIR, f)
+    if (fs.existsSync(p)) {
+      try {
+        fs.unlinkSync(p)
+      } catch {
+        /* ignore */
+      }
+    }
+  }
+
   const indexEntries = [
     { loc: '/sitemap-main.xml', lastmod: now },
     { loc: '/sitemap-events.xml', lastmod: now },
     { loc: '/sitemap-protocols.xml', lastmod: now },
     { loc: '/sitemap-dogs.xml', lastmod: now },
     { loc: '/sitemap-judges.xml', lastmod: now },
+    ...showsIndexEntries,
   ]
-
-  if (showUrls.length > MAX_CHUNK) {
-    const totalChunks = Math.ceil(showUrls.length / MAX_CHUNK)
-    for (let c = 0; c < totalChunks; c++) {
-      const chunkUrls = showUrls.slice(c * MAX_CHUNK, (c + 1) * MAX_CHUNK)
-      const chunkName = `sitemap-shows-${c + 1}.xml`
-      fs.writeFileSync(path.join(PUBLIC_DIR, chunkName), renderSitemapXml(chunkUrls), 'utf-8')
-      indexEntries.push({ loc: `/${chunkName}`, lastmod: now })
-    }
-    fs.writeFileSync(path.join(PUBLIC_DIR, 'sitemap-shows.xml'), renderSitemapXml(showUrls.slice(0, MAX_CHUNK)), 'utf-8')
-  } else {
-    fs.writeFileSync(path.join(PUBLIC_DIR, 'sitemap-shows.xml'), renderSitemapXml(showUrls), 'utf-8')
-    indexEntries.push({ loc: '/sitemap-shows.xml', lastmod: now })
-  }
 
   const indexXml = renderSitemapIndexXml(indexEntries)
   fs.writeFileSync(path.join(PUBLIC_DIR, 'sitemap-index.xml'), indexXml, 'utf-8')
@@ -492,5 +576,5 @@ export function buildSitemap(db: Database.Database) {
   console.log(
     `  → frontend/public/sitemap.xml (${urls.length} urls; events=${eventIds.length}, protocols=${protocolIds.length}, exhibitions=${exhibitionIds.length}, showJudges=${showJudgeIds.length})`,
   )
-  console.log(`  → generated modular sitemaps + sitemap-index.xml`)
+  console.log(`  → generated modular sitemaps (12 files) + sitemap-index.xml`)
 }

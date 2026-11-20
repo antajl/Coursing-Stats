@@ -1,11 +1,16 @@
 import { describe, expect, it } from 'vitest'
+import fs from 'node:fs'
+import path from 'node:path'
 import {
   collectSitemapUrls,
   loadExhibitionIdsForSitemap,
+  loadExhibitionsByYear,
   loadProtocolIds,
   renderSitemapIndexXml,
   renderSitemapXml,
 } from '../scripts/build-derived/sitemap'
+
+const ROOT = path.resolve(__dirname, '../..')
 
 describe('sitemap collectors', () => {
   it('includes event, protocol, exhibition, breed hubs and show-judge locs from fixtures', () => {
@@ -71,5 +76,58 @@ describe('sitemap collectors', () => {
     // Repo has thousands of type1 protocols + index.json
     expect(ids.length).toBeGreaterThan(50)
     expect(ids.some((id) => /^\d+$/.test(id))).toBe(true)
+  })
+
+  it('loadExhibitionsByYear groups exhibitions by year with none exceeding 10k cap', () => {
+    const byYear = loadExhibitionsByYear()
+    const expectedKeys = ['2026', '2025', '2024', '2023', '2022', '2021', 'archive']
+    for (const key of expectedKeys) {
+      expect(byYear).toHaveProperty(key)
+      expect(Array.isArray(byYear[key])).toBe(true)
+      expect(byYear[key].length).toBeLessThanOrEqual(10000)
+    }
+    expect(byYear['2026'].length).toBeGreaterThan(100)
+  })
+
+  it('verifies generated modular sitemaps adhere to 12 files and <= 10k URL capacity', () => {
+    const publicDir = path.join(ROOT, 'frontend/public')
+    const indexXml = fs.readFileSync(path.join(publicDir, 'sitemap-index.xml'), 'utf8')
+    expect(indexXml).toContain('<sitemapindex')
+    expect(indexXml).toContain('sitemap-main.xml')
+    expect(indexXml).toContain('sitemap-events.xml')
+    expect(indexXml).toContain('sitemap-protocols.xml')
+    expect(indexXml).toContain('sitemap-dogs.xml')
+    expect(indexXml).toContain('sitemap-judges.xml')
+    expect(indexXml).toContain('sitemap-shows-2026.xml')
+    expect(indexXml).toContain('sitemap-shows-archive.xml')
+
+    // Legacy chunks must be absent
+    expect(fs.existsSync(path.join(publicDir, 'sitemap-shows-1.xml'))).toBe(false)
+    expect(fs.existsSync(path.join(publicDir, 'sitemap-shows-2.xml'))).toBe(false)
+
+    // Check URL cap <= 10000 for each child sitemap
+    const childSitemaps = [
+      'sitemap-main.xml',
+      'sitemap-events.xml',
+      'sitemap-protocols.xml',
+      'sitemap-dogs.xml',
+      'sitemap-judges.xml',
+      'sitemap-shows-2026.xml',
+      'sitemap-shows-2025.xml',
+      'sitemap-shows-2024.xml',
+      'sitemap-shows-2023.xml',
+      'sitemap-shows-2022.xml',
+      'sitemap-shows-2021.xml',
+      'sitemap-shows-archive.xml',
+    ]
+    for (const file of childSitemaps) {
+      const filePath = path.join(publicDir, file)
+      expect(fs.existsSync(filePath), `${file} should exist`).toBe(true)
+      const xml = fs.readFileSync(filePath, 'utf8')
+      const count = (xml.match(/<loc>/g) || []).length
+      expect(count, `${file} count ${count} should be <= 10000`).toBeLessThanOrEqual(10000)
+      expect(xml).not.toContain('<priority>')
+      expect(xml).not.toContain('<changefreq>')
+    }
   })
 })
