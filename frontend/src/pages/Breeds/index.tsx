@@ -1,4 +1,4 @@
-import { useState, useMemo, useRef, useEffect } from 'react'
+import { useState, useMemo, useRef, useEffect, useLayoutEffect } from 'react'
 import { ChevronDown, Check, Layers } from 'lucide-react'
 import { SEO } from '../../components/SEO'
 import { JsonLd, breadcrumbListSchema, itemPageSchema } from '../../components/JsonLd'
@@ -35,7 +35,18 @@ export default function BreedsDirectory() {
   const [selectedBreed, setSelectedBreed] = useState<string>('all')
   const [searchQuery, setSearchQuery] = useState('')
   const [sortKey, setSortKey] = useState<BreedSortKey>('dogs')
-  const [visibleCount, setVisibleCount] = useState(25)
+  const [visibleCount, setVisibleCount] = useState(() => {
+    try {
+      const lastSlug = sessionStorage.getItem('cs_last_breed_slug')
+      if (lastSlug) {
+        const idx = CORE_BREED_HUBS.findIndex((b) => b.slug === lastSlug)
+        if (idx >= 0) {
+          return Math.max(25, idx + 20)
+        }
+      }
+    } catch {}
+    return 25
+  })
   const [isInitialLoad, setIsInitialLoad] = useState(true)
 
   const observerRef = useRef<IntersectionObserver | null>(null)
@@ -246,8 +257,13 @@ export default function BreedsDirectory() {
     }
   }, [loading, sortedBreeds.length])
 
-  // Сброс пагинации при смене поиска, группы, породы или сортировки
+  const isFilterMountRef = useRef(true)
+  // Сброс пагинации при смене поиска, группы, породы или сортировки (пропускаем начальный mount)
   useEffect(() => {
+    if (isFilterMountRef.current) {
+      isFilterMountRef.current = false
+      return
+    }
     setVisibleCount(25)
   }, [selectedGroup, selectedBreed, searchQuery, sortKey])
 
@@ -264,6 +280,50 @@ export default function BreedsDirectory() {
     }
     return () => observerRef.current?.disconnect()
   }, [sortedBreeds.length])
+
+  // Автоматическая прокрутка к последней просмотренной породе при возврате назад
+  const hasRestoredScrollRef = useRef(false)
+  useLayoutEffect(() => {
+    if (hasRestoredScrollRef.current) return
+
+    let lastSlug: string | null = null
+    try {
+      lastSlug = sessionStorage.getItem('cs_last_breed_slug')
+    } catch {}
+
+    if (!lastSlug && typeof window !== 'undefined' && window.location.hash) {
+      lastSlug = window.location.hash.replace(/^#breed-/, '').replace(/^#/, '')
+    }
+
+    if (!lastSlug) return
+
+    const targetId = `breed-${lastSlug}`
+    const el = document.getElementById(targetId)
+
+    if (el) {
+      el.scrollIntoView({ block: 'center', behavior: 'instant' })
+      if (!loading) {
+        hasRestoredScrollRef.current = true
+        try {
+          sessionStorage.removeItem('cs_last_breed_slug')
+        } catch {}
+      }
+    } else {
+      const raf = requestAnimationFrame(() => {
+        const elRetry = document.getElementById(targetId)
+        if (elRetry) {
+          elRetry.scrollIntoView({ block: 'center', behavior: 'instant' })
+        }
+        if (!loading) {
+          hasRestoredScrollRef.current = true
+          try {
+            sessionStorage.removeItem('cs_last_breed_slug')
+          } catch {}
+        }
+      })
+      return () => cancelAnimationFrame(raf)
+    }
+  }, [loading, sortedBreeds])
 
   const listRevealRef = useListReveal(!loading && sortedBreeds.length > 0)
 
@@ -560,7 +620,12 @@ export default function BreedsDirectory() {
             bodyClassName="flex flex-col divide-y divide-old-money-100"
           >
             {sortedBreeds.slice(0, visibleCount).map((breed) => (
-              <div key={breed.slug} data-list-item>
+              <div
+                key={breed.slug}
+                id={`breed-${breed.slug}`}
+                data-list-item
+                data-breed-slug={breed.slug}
+              >
                 <BreedCard
                   breed={breed}
                   stats={statsMap[breed.slug]}

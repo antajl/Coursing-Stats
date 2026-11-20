@@ -56,6 +56,24 @@ export function useListReveal(ready: boolean) {
         return
       }
 
+      // Если страница уже прокручена (пользователь вернулся назад) или возвращается к сохраненной породе,
+      // пропускаем анимацию скрытия opacity:0, чтобы предотвратить пустой экран при скролле.
+      let isReturning = false
+      try {
+        isReturning = Boolean(sessionStorage.getItem('cs_last_breed_slug'))
+      } catch {}
+
+      const isScrolledOrReturning =
+        isReturning ||
+        (typeof window !== 'undefined' &&
+          (window.scrollY > 40 || Boolean(window.location.hash)))
+
+      if (isScrolledOrReturning) {
+        doneRef.current = true
+        items.forEach(showListItem)
+        return
+      }
+
       doneRef.current = true
 
       if (prefersReducedMotion()) {

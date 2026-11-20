@@ -23,7 +23,14 @@ export function ScrollToHash() {
     prevPathnameRef.current = pathname
     prevHashRef.current = hash
 
-    if (navType !== 'POP' && (isNewPath || isHashCleared)) {
+    // If navigating to /breeds/ and we have a last viewed breed to scroll to,
+    // do not force window.scrollTo(0, 0)
+    let hasLastBreed = false
+    try {
+      hasLastBreed = pathname === '/breeds/' && Boolean(sessionStorage.getItem('cs_last_breed_slug'))
+    } catch {}
+
+    if (navType !== 'POP' && !hash && !hasLastBreed && (isNewPath || isHashCleared)) {
       window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
     }
   }, [pathname, hash, navType])

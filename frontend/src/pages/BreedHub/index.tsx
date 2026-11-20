@@ -285,6 +285,11 @@ export default function BreedHub() {
             <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-1">
               <Link
                 to="/breeds/"
+                onClick={() => {
+                  try {
+                    sessionStorage.setItem('cs_last_breed_slug', breedInfo.slug)
+                  } catch {}
+                }}
                 className="cs-glass-pill inline-flex h-6 items-center gap-1 rounded-full px-2 text-[10.5px] font-semibold text-charcoal-700 hover:text-camel-800 cursor-pointer"
                 title="Вернуться в каталог пород"
               >

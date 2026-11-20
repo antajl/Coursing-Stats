@@ -52,7 +52,15 @@ export default function BreedCard({
   const hasStats = Boolean(stats && (stats.dogs > 0 || stats.starts > 0 || stats.seasonsCount > 0))
 
   return (
-    <Link to={`/breeds/${breed.slug}/`} className={shellClass}>
+    <Link
+      to={`/breeds/${breed.slug}/`}
+      className={shellClass}
+      onClick={() => {
+        try {
+          sessionStorage.setItem('cs_last_breed_slug', breed.slug)
+        } catch {}
+      }}
+    >
       <div className="flex items-center justify-between gap-3 sm:gap-5 w-full py-0.5">
         {/* Колонка 1: Порода (FCI + Название + Латинское) */}
         <div className="flex flex-col justify-center min-w-0 flex-1">
