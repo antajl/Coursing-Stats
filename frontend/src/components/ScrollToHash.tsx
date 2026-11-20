@@ -1,17 +1,34 @@
-import { useEffect, useRef } from 'react'
-import { useLocation } from 'react-router-dom'
+import { useEffect, useLayoutEffect, useRef } from 'react'
+import { useLocation, useNavigationType } from 'react-router-dom'
 
 /**
- * Global router listener for smooth scrolling to URL hash targets (#id).
- * Handles:
- * 1. Immediate scrolling if the element is already in the DOM.
- * 2. Retrying with requestAnimationFrame / timeouts to handle lazy-loaded (Suspense) tabs.
- * 3. Does not interfere with normal scrolling when no hash is present.
+ * Global router listener for:
+ * 1. Resetting window scroll to top (0, 0) on page navigation (PUSH / REPLACE)
+ *    so newly opened pages always start at the very top instead of inheriting
+ *    the previous page's scroll position.
+ * 2. Smooth scrolling to URL hash targets (#id) with retry polling for lazy-loaded tabs.
+ * 3. Preserving browser native scroll restoration on history Back/Forward (POP).
  */
 export function ScrollToHash() {
   const { pathname, hash } = useLocation()
+  const navType = useNavigationType()
   const lastScrolledHash = useRef<string | null>(null)
+  const prevPathnameRef = useRef<string>(pathname)
+  const prevHashRef = useRef<string>(hash)
 
+  // 1. Reset scroll to top synchronously before DOM paint on pathname change (PUSH / REPLACE)
+  useLayoutEffect(() => {
+    const isNewPath = prevPathnameRef.current !== pathname
+    const isHashCleared = Boolean(prevHashRef.current && !hash)
+    prevPathnameRef.current = pathname
+    prevHashRef.current = hash
+
+    if (navType !== 'POP' && (isNewPath || isHashCleared)) {
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+    }
+  }, [pathname, hash, navType])
+
+  // 2. Hash scroll handling with retry polling
   useEffect(() => {
     if (!hash) {
       lastScrolledHash.current = null
