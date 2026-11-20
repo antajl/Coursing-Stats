@@ -1,18 +1,10 @@
 import { useState, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import {
-  Trophy,
-  Medal,
-  Award,
   CheckCircle2,
   Clock,
   ArrowUpRight,
   ChevronDown,
-  Sparkles,
-  Zap,
-  Rabbit,
-  Target,
-  ShieldCheck,
   ExternalLink,
 } from 'lucide-react'
 import { titleBadgeClass } from '../../lib/qualificationTitles'
@@ -121,12 +113,12 @@ export function DogAchievementsTab({
               toggleTitle(key)
             }
           }}
-          className="p-3.5 flex items-center justify-between gap-3 cursor-pointer select-none hover:bg-black/[0.02] transition-colors"
+          className="px-3.5 py-2 sm:px-4 sm:py-2.5 flex items-center justify-between gap-2.5 cursor-pointer select-none hover:bg-black/[0.02] transition-colors"
           aria-expanded={isExpanded}
         >
-          <div className="flex items-center gap-3 min-w-0">
+          <div className="flex items-center gap-2.5 min-w-0">
             <span
-              className={`inline-flex shrink-0 items-center justify-center rounded-lg px-2.5 py-1 text-xs font-bold tabular-nums whitespace-nowrap ${chipClass}`}
+              className={`inline-flex shrink-0 items-center justify-center rounded-lg px-2 py-0.5 text-xs font-bold tabular-nums whitespace-nowrap ${chipClass}`}
             >
               {item.title} {item.count > 1 ? `×${item.count}` : ''}
             </span>
@@ -147,7 +139,7 @@ export function DogAchievementsTab({
         </div>
 
         {isExpanded && explanation && (
-          <div className="px-3.5 pb-3.5 pt-2 text-xs text-charcoal-600 border-t border-old-money-100/70 bg-cream-50/40 leading-relaxed animate-in fade-in duration-150">
+          <div className="px-3.5 pb-2.5 pt-1.5 text-xs text-charcoal-600 border-t border-old-money-100/70 bg-cream-50/40 leading-relaxed animate-in fade-in duration-150">
             <span className="font-semibold text-charcoal-800">Нормативное основание: </span>
             <span>{explanation}</span>
           </div>
@@ -186,7 +178,7 @@ export function DogAchievementsTab({
               toggleTitle(id)
             }
           }}
-          className="p-4 flex items-center justify-between gap-3 cursor-pointer select-none hover:bg-cream-100/50 transition-colors"
+          className="px-4 py-2.5 sm:px-4 sm:py-3 flex items-center justify-between gap-3 cursor-pointer select-none hover:bg-cream-100/50 transition-colors"
           aria-expanded={isExpanded}
         >
           <div className="min-w-0">
@@ -252,18 +244,10 @@ export function DogAchievementsTab({
       {/* РАЗДЕЛ 1: ТИТУЛЫ В ПРОЦЕССЕ («ПОЧТИ ПОЛУЧИЛ» / ПЕРСПЕКТИВЫ) */}
       {inProgressTitles.length > 0 && (
         <div className="rounded-2xl border border-amber-200/80 bg-amber-50/30 overflow-hidden shadow-2xs">
-          <div className="px-5 py-4 border-b border-amber-200/60 bg-amber-50/60 flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <Target className="w-5 h-5 text-amber-700 shrink-0" aria-hidden />
-              <div>
-                <h2 className="text-base font-bold text-amber-950">
-                  В шаге от титула (перспективы оформления)
-                </h2>
-                <p className="text-xs text-amber-800/80">
-                  Звания РКФ, нормативы по которым частично выполнены: осталось завершить 1–2 шага
-                </p>
-              </div>
-            </div>
+          <div className="px-4 py-3 sm:px-5 sm:py-3 border-b border-amber-200/60 bg-amber-50/60 flex items-center justify-between">
+            <h2 className="text-sm sm:text-base font-bold text-amber-950">
+              В шаге от титула
+            </h2>
             <span className="rounded-full bg-amber-200/70 text-amber-900 text-xs font-bold px-2.5 py-0.5">
               {inProgressTitles.length}
             </span>
@@ -289,10 +273,10 @@ export function DogAchievementsTab({
                         toggleTitle(title.id)
                       }
                     }}
-                    className="p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 cursor-pointer select-none hover:bg-amber-100/30 transition-colors"
+                    className="px-4 py-2.5 sm:px-5 sm:py-2.5 flex items-center justify-between gap-3 cursor-pointer select-none hover:bg-amber-100/30 transition-colors"
                     aria-expanded={isExpanded}
                   >
-                    <div className="flex items-start gap-3 min-w-0">
+                    <div className="flex items-center gap-3 min-w-0">
                       <span
                         className={`inline-flex shrink-0 items-center justify-center rounded-lg px-2.5 py-1 text-xs font-bold tabular-nums whitespace-nowrap ${chipClass}`}
                       >
@@ -300,7 +284,7 @@ export function DogAchievementsTab({
                       </span>
                       <div className="min-w-0">
                         <div className="flex items-center gap-2 flex-wrap">
-                          <h3 className="text-sm sm:text-base font-bold text-charcoal-900">
+                          <h3 className="text-sm font-bold text-charcoal-900 leading-snug">
                             {title.title}
                           </h3>
                           {isSupreme && (
@@ -309,22 +293,22 @@ export function DogAchievementsTab({
                             </span>
                           )}
                         </div>
-                        <p className="text-xs text-charcoal-600 mt-0.5 leading-relaxed">
+                        <p className="text-xs text-charcoal-600 leading-snug mt-0.5">
                           {title.rulesSummary}
                         </p>
                       </div>
                     </div>
 
-                    <div className="flex items-center gap-3 shrink-0 self-start sm:self-center">
+                    <div className="flex items-center gap-2.5 shrink-0">
                       <div className="text-right">
                         <span className="text-sm font-bold text-amber-900 tabular-nums">
                           {title.progressPercent}%
                         </span>
-                        <div className="text-[10px] text-charcoal-400 uppercase tracking-wide">
+                        <div className="text-[10px] text-charcoal-400 uppercase tracking-wide leading-none">
                           выполнено
                         </div>
                       </div>
-                      <div className="p-1 rounded-lg text-charcoal-400 min-h-[36px] min-w-[36px] flex items-center justify-center">
+                      <div className="p-1 rounded-lg text-charcoal-400 flex items-center justify-center">
                         <ChevronDown
                           className={`w-4 h-4 transition-transform duration-200 ${
                             isExpanded ? 'rotate-180 text-amber-800' : 'text-charcoal-400'
@@ -336,8 +320,8 @@ export function DogAchievementsTab({
                   </div>
 
                   {/* Шкала прогресса */}
-                  <div className="px-4 sm:px-5 pb-3">
-                    <div className="w-full bg-cream-200/70 rounded-full h-2 overflow-hidden">
+                  <div className="px-4 sm:px-5 pb-2.5">
+                    <div className="w-full bg-cream-200/70 rounded-full h-1.5 overflow-hidden">
                       <div
                         className={`h-full rounded-full transition-all duration-500 ${
                           title.progressPercent >= 75
@@ -378,8 +362,7 @@ export function DogAchievementsTab({
                       </div>
 
                       {title.nextStepAdvice && (
-                        <div className="mt-3 rounded-xl bg-amber-100/70 border border-amber-300/80 p-3 text-xs text-amber-950 flex items-start gap-2">
-                          <Target className="w-4 h-4 text-amber-700 shrink-0 mt-0.5" aria-hidden />
+                        <div className="mt-3 rounded-xl bg-amber-100/70 border border-amber-300/80 p-3 text-xs text-amber-950">
                           <div>
                             <span className="font-semibold text-amber-900">Что осталось сделать: </span>
                             <span>{title.nextStepAdvice}</span>
@@ -397,18 +380,10 @@ export function DogAchievementsTab({
 
       {/* РАЗДЕЛ 2: ОФОРМЛЕННЫЕ ОФИЦИАЛЬНЫЕ ЗВАНИЯ И ТИТУЛЫ (РКФ / FCI) */}
       <div className="rounded-2xl border border-old-money-200/90 bg-white overflow-hidden shadow-2xs">
-        <div className="px-5 py-4 border-b border-old-money-100 bg-cream-50/50 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Trophy className="w-5 h-5 text-amber-600 shrink-0" aria-hidden />
-            <div>
-              <h2 className="text-base font-bold text-charcoal-900">
-                Оформленные официальные чемпионские звания
-              </h2>
-              <p className="text-xs text-charcoal-500">
-                Титулы системы РКФ и FCI: нажмите на строку звания для просмотра оснований
-              </p>
-            </div>
-          </div>
+        <div className="px-4 py-3 sm:px-5 sm:py-3 border-b border-old-money-100 bg-cream-50/50 flex items-center justify-between">
+          <h2 className="text-sm sm:text-base font-bold text-charcoal-900">
+            Оформленные официальные чемпионские звания
+          </h2>
           <span className="rounded-full bg-cream-200/80 text-charcoal-800 text-xs font-bold px-2.5 py-0.5">
             {totalTitlesCount}
           </span>
@@ -422,12 +397,11 @@ export function DogAchievementsTab({
           <div className="divide-y divide-old-money-100">
             {/* 1. Высшие звания */}
             {supremeTitles.length > 0 && (
-              <div className="p-4 sm:p-5">
-                <div className="text-[11px] font-bold uppercase tracking-wider text-amber-800 mb-3 flex items-center gap-1.5">
-                  <Sparkles className="w-3.5 h-3.5 text-amber-600 shrink-0" aria-hidden />
-                  <span>Высшие звания (междисциплинарные и пожизненные)</span>
+              <div className="px-4 py-3 sm:px-5 sm:py-3.5">
+                <div className="text-[11px] font-bold uppercase tracking-wider text-amber-800 mb-2">
+                  Высшие звания (междисциплинарные и пожизненные)
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-2.5">
                   {supremeTitles.map((item) =>
                     renderCompletedTitleCard(
                       item,
@@ -442,12 +416,11 @@ export function DogAchievementsTab({
 
             {/* 2. Курсинг борзых */}
             {coursingTitles.length > 0 && (
-              <div className="p-4 sm:p-5">
-                <div className="text-[11px] font-bold uppercase tracking-wider text-forest-800 mb-3 flex items-center gap-1.5">
-                  <Rabbit className="w-3.5 h-3.5 text-forest-600 shrink-0" aria-hidden />
-                  <span>Курсинг борзых</span>
+              <div className="px-4 py-3 sm:px-5 sm:py-3.5">
+                <div className="text-[11px] font-bold uppercase tracking-wider text-forest-800 mb-2">
+                  Курсинг борзых
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-2.5">
                   {coursingTitles.map((item) =>
                     renderCompletedTitleCard(
                       item,
@@ -462,12 +435,11 @@ export function DogAchievementsTab({
 
             {/* 3. Бега борзых (рейсинг) */}
             {racingTitles.length > 0 && (
-              <div className="p-4 sm:p-5">
-                <div className="text-[11px] font-bold uppercase tracking-wider text-sky-800 mb-3 flex items-center gap-1.5">
-                  <Zap className="w-3.5 h-3.5 text-sky-600 shrink-0" aria-hidden />
-                  <span>Бега борзых (рейсинг)</span>
+              <div className="px-4 py-3 sm:px-5 sm:py-3.5">
+                <div className="text-[11px] font-bold uppercase tracking-wider text-sky-800 mb-2">
+                  Бега борзых (рейсинг)
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-2.5">
                   {racingTitles.map((item) =>
                     renderCompletedTitleCard(
                       item,
@@ -482,12 +454,11 @@ export function DogAchievementsTab({
 
             {/* 4. Выставки РКФ */}
             {showTitles.length > 0 && (
-              <div className="p-4 sm:p-5">
-                <div className="text-[11px] font-bold uppercase tracking-wider text-camel-800 mb-3 flex items-center gap-1.5">
-                  <Award className="w-3.5 h-3.5 text-camel-700 shrink-0" aria-hidden />
-                  <span>Выставки РКФ (экстерьер)</span>
+              <div className="px-4 py-3 sm:px-5 sm:py-3.5">
+                <div className="text-[11px] font-bold uppercase tracking-wider text-camel-800 mb-2">
+                  Выставки РКФ (экстерьер)
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-2.5">
                   {showTitles.map((item) =>
                     renderCompletedTitleCard(
                       item,
@@ -505,22 +476,14 @@ export function DogAchievementsTab({
 
       {/* РАЗДЕЛ 3: ОФИЦИАЛЬНЫЕ СЕРТИФИКАТЫ И ДОПУСКИ РКФ */}
       <div className="rounded-2xl border border-old-money-200/90 bg-white overflow-hidden shadow-2xs">
-        <div className="px-5 py-4 border-b border-old-money-100 bg-cream-50/50 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <ShieldCheck className="w-5 h-5 text-forest-700 shrink-0" aria-hidden />
-            <div>
-              <h2 className="text-base font-bold text-charcoal-900">
-                Официальные сертификаты и квалификационные допуски
-              </h2>
-              <p className="text-xs text-charcoal-500">
-                Квалификационные сертификаты кандидата в чемпионы (CACL, CACIL, CAC) и рабочий допуск
-              </p>
-            </div>
-          </div>
+        <div className="px-4 py-3 sm:px-5 sm:py-3 border-b border-old-money-100 bg-cream-50/50 flex items-center justify-between">
+          <h2 className="text-sm sm:text-base font-bold text-charcoal-900">
+            Официальные сертификаты и квалификационные допуски
+          </h2>
         </div>
 
         <div className="p-4 sm:p-5 space-y-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
             {/* CACL Курсинг */}
             {renderCertificateCard(
               'cert-cacl-coursing',
@@ -555,7 +518,7 @@ export function DogAchievementsTab({
             )}
 
             {/* Беговой допуск РКФ */}
-            <div className="rounded-xl border border-old-money-200/80 p-4 bg-cream-50/30">
+            <div className="rounded-xl border border-old-money-200/80 px-4 py-3 sm:py-3.5 bg-cream-50/30">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-bold uppercase tracking-wider text-forest-800">
                   Беговой допуск РКФ
@@ -580,28 +543,19 @@ export function DogAchievementsTab({
 
       {/* РАЗДЕЛ 4: ДОСТИЖЕНИЯ И РЕКОРДЫ В РЕЙТИНГЕ COURSINGSTATS */}
       <div className="rounded-2xl border border-old-money-200/90 bg-white overflow-hidden shadow-2xs">
-        <div className="px-5 py-4 border-b border-old-money-100 bg-cream-50/50 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Medal className="w-5 h-5 text-amber-700 shrink-0" aria-hidden />
-            <div>
-              <h2 className="text-base font-bold text-charcoal-900">
-                Достижения и рекорды в рейтинге CoursingStats
-              </h2>
-              <p className="text-xs text-charcoal-500">
-                Места в сезоне {coursingRank?.yearRank ? '2026' : ''}, подиумы в породе и пиковые показатели карьеры
-              </p>
-            </div>
-          </div>
+        <div className="px-4 py-3 sm:px-5 sm:py-3 border-b border-old-money-100 bg-cream-50/50 flex items-center justify-between">
+          <h2 className="text-sm sm:text-base font-bold text-charcoal-900">
+            Достижения и рекорды в рейтинге CoursingStats
+          </h2>
         </div>
 
-        <div className="p-4 sm:p-5 grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="p-4 sm:p-5 grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4">
           {/* Курсинг рейтинг */}
           <div className="rounded-xl border border-forest-200/80 bg-forest-50/20 p-4">
-            <div className="flex items-center gap-2 text-forest-800 text-xs font-bold uppercase tracking-wider">
-              <Rabbit className="w-4 h-4 text-forest-600" aria-hidden />
+            <div className="text-forest-800 text-xs font-bold uppercase tracking-wider">
               <span>Курсинг / БЗМП</span>
             </div>
-            <div className="mt-3">
+            <div className="mt-2.5">
               <div className="text-xl font-bold text-charcoal-900">
                 {coursingRank?.yearBreedRank
                   ? `#${coursingRank.yearBreedRank} в сезоне`
@@ -638,11 +592,10 @@ export function DogAchievementsTab({
 
           {/* Бега борзых рейтинг */}
           <div className="rounded-xl border border-sky-200/80 bg-sky-50/20 p-4">
-            <div className="flex items-center gap-2 text-sky-800 text-xs font-bold uppercase tracking-wider">
-              <Zap className="w-4 h-4 text-sky-600" aria-hidden />
+            <div className="text-sky-800 text-xs font-bold uppercase tracking-wider">
               <span>Бега борзых (рейсинг)</span>
             </div>
-            <div className="mt-3">
+            <div className="mt-2.5">
               <div className="text-xl font-bold text-charcoal-900">
                 {racingRank?.yearBreedRank
                   ? `#${racingRank.yearBreedRank} по скорости`
@@ -679,11 +632,10 @@ export function DogAchievementsTab({
 
           {/* Выставки рейтинг */}
           <div className="rounded-xl border border-camel-200/80 bg-camel-50/20 p-4">
-            <div className="flex items-center gap-2 text-camel-800 text-xs font-bold uppercase tracking-wider">
-              <Award className="w-4 h-4 text-camel-700" aria-hidden />
+            <div className="text-camel-800 text-xs font-bold uppercase tracking-wider">
               <span>Выставки РКФ</span>
             </div>
-            <div className="mt-3">
+            <div className="mt-2.5">
               <div className="text-xl font-bold text-charcoal-900">
                 {showDog?.best_award || (showDog?.total_shows ? `${showDog.total_shows} выставок` : 'В каталоге')}
               </div>
