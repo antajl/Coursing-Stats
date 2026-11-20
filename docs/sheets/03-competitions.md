@@ -90,6 +90,15 @@ Reparse по id из URL `/event/:id`: `npx tsx backend/scripts/import/reparse-c
   - `results_pdf_url` — ссылка на `protocol.pdf` на Google Диске.
 - **Отказ от Яндекс Диска:** Все новые ссылки и замена старых ссылок делаются на **Google Диск** (`disk.yandex.ru` запрещён для новых файлов).
 
+## Нормализация цветов попон забегов (Competition Heat Bib Normalization)
+
+- В протоколах соревнований (`raw_scores_json.heats`) значение `bib_color` в исторических состязаниях может быть числовым (`1`, `2`, `3`), строковым кодом или именем цвета.
+- Функции нормализации цвета (`normalizeBibColorName`, `bibColorStyle`, `bibTextClass` в `EventResults/utils.ts`, `ProtocolHeatBadge.tsx`, `PoponaCell.tsx`) обязаны безопасно приводить `bib_color` к строке и поддерживать числовые коды попон:
+  - **Курсинг / БЗМП:** `1` = `red` (красная), `2` = `white` (белая), `3` = `blue` (синяя).
+  - **Рейсинг (6 боксов):** `1` = `red`, `2` = `blue`, `3` = `white`, `4` = `black`, `5` = `yellow`, `6` = `stripes` (полосатая).
+- Прямой вызов строковых методов (`bibColor?.toLowerCase()`) без предварительного приведения к строке `String(bibColor ?? '')` строго запрещён во избежание падений `TypeError: e?.toLowerCase is not a function`.
+- Гарантируется авто-тестом `backend/tests/competition-integrity.test.ts` по всем 193 протоколам соревнований на диске.
+
 ## See also
 
 [01-three-domains](01-three-domains.md) · [02-data-pipeline](02-data-pipeline.md) · [06-parsers](06-parsers.md) · [07-frontend](07-frontend.md) · [ROADMAP](../ROADMAP.md) · [COMMUNITY_CHRONICLE_2026.md](../COMMUNITY_CHRONICLE_2026.md) · ADR-014
