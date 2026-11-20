@@ -5,6 +5,7 @@ import { SEO } from '../../components/SEO'
 import { JsonLd, itemPageSchema, breadcrumbListSchema, faqPageSchema } from '../../components/JsonLd'
 import { CORE_BREED_HUBS, getBreedHubBySlug } from '../../lib/breed-hubs-data'
 import { time350ToSpeedKmh } from '../../lib/recordDates'
+import { computeDoninoAnnualLeaders } from '../../lib/doninoAnnualLeaders'
 import {
   useTopPlacement,
   useTopSpeed,
@@ -74,6 +75,11 @@ export default function BreedHub() {
     if (!slug || !annualLeadersRes?.data?.leaders_by_slug) return []
     return (annualLeadersRes.data.leaders_by_slug[slug] || []) as AnnualDogLeader[]
   }, [slug, annualLeadersRes])
+
+  const doninoAnnualLeaders = useMemo(() => {
+    if (!breedInfo) return []
+    return computeDoninoAnnualLeaders(doninoSpeedRes?.data, doninoCoursingRes?.data)
+  }, [breedInfo, doninoSpeedRes, doninoCoursingRes])
 
   const speedRecords = useMemo(() => {
     if (!breedInfo) return []
@@ -406,6 +412,7 @@ export default function BreedHub() {
       <BreedHubColumns
         coursingLeaders={coursingLeaders}
         racingLeaders={racingLeaders}
+        doninoLeaders={doninoAnnualLeaders}
         annualLeaders={annualLeaders}
         annualLeadersLoading={annualLeadersLoading}
         speedRecords={speedRecords}

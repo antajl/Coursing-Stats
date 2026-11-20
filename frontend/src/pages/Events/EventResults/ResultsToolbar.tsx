@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { X, ChevronDown } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 import ToolbarSearch from '../../../components/toolbar/ToolbarSearch'
 import QuickBreedBar, { type QuickBreedItem } from '../../TopDogs/QuickBreedBar'
 import BreedSearchDropdown from '../../../components/ui/BreedSearchDropdown'
@@ -24,8 +24,8 @@ export interface ResultsToolbarProps {
   setSelectedLeague: (l: string) => void
   leagueCounts: Record<string, number>
   activeResultsCount: number
-  isFiltered: boolean
-  handleResetFilters: () => void
+  isFiltered?: boolean
+  handleResetFilters?: () => void
   trailing?: React.ReactNode
 }
 
@@ -44,8 +44,8 @@ export function ResultsToolbar({
   setSelectedLeague,
   leagueCounts,
   activeResultsCount,
-  isFiltered,
-  handleResetFilters,
+  isFiltered: _isFiltered,
+  handleResetFilters: _handleResetFilters,
   trailing,
 }: ResultsToolbarProps) {
   const [sexDropdownOpen, setSexDropdownOpen] = useState(false)
@@ -239,17 +239,7 @@ export function ResultsToolbar({
         )}
 
         <div className="ml-auto shrink-0 flex items-center gap-1.5">
-          {isFiltered && (
-            <button
-              type="button"
-              onClick={handleResetFilters}
-              className="cs-glass-pill relative shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full !text-charcoal-500 hover:!text-charcoal-800 before:absolute before:-inset-1.5 before:content-[''] cursor-pointer select-none"
-              title="Сбросить фильтры"
-              aria-label="Сбросить фильтры"
-            >
-              <X className="h-4 w-4" />
-            </button>
-          )}
+
 
           {trailing && <div className="shrink-0 flex items-center gap-1.5">{trailing}</div>}
         </div>
@@ -289,18 +279,7 @@ export function ResultsToolbar({
           </div>
         )}
 
-        {/* Сброс фильтров — слева перед разделителем */}
-        {isFiltered && (
-          <button
-            type="button"
-            onClick={handleResetFilters}
-            className="cs-glass-pill shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full !text-charcoal-500 hover:!text-charcoal-800 transition-colors cursor-pointer select-none"
-            title="Сбросить фильтры"
-            aria-label="Сбросить фильтры"
-          >
-            <X className="h-4 w-4" />
-          </button>
-        )}
+
 
         {breeds.length > 1 && (
           <>

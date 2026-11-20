@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import {
   Trophy,
@@ -332,7 +332,6 @@ export function DogOrganizationsSection({
   initialDiscipline = 'all',
 }: DogOrganizationsSectionProps) {
   const [expandedOrgKey, setExpandedOrgKey] = useState<string | null>(null)
-  const [showAllOrgs, setShowAllOrgs] = useState(false)
   const [disciplineFilter, setDisciplineFilter] = useState<OrgDisciplineFilter>(initialDiscipline)
 
   // Проверяем, участвовала ли собака в обеих дисциплинах
@@ -504,31 +503,67 @@ export function DogOrganizationsSection({
     )
   }
 
-  const maxVisibleCount = 4
-  const visibleHigher = showAllOrgs
-    ? orgStats.higher_than_career
-    : orgStats.higher_than_career.slice(0, maxVisibleCount)
-  const visibleLower = showAllOrgs
-    ? orgStats.lower_than_career
-    : orgStats.lower_than_career.slice(0, maxVisibleCount)
-  const hasMore =
-    orgStats.higher_than_career.length > maxVisibleCount ||
-    orgStats.lower_than_career.length > maxVisibleCount
+  // Ленивая подгрузка организаций порциями по 15 при скролле (без лишних кликов и скрытия)
+  const INITIAL_BATCH = 15
+  const BATCH_INCREMENT = 15
+
+  const [visibleHigherCount, setVisibleHigherCount] = useState(INITIAL_BATCH)
+  const [visibleLowerCount, setVisibleLowerCount] = useState(INITIAL_BATCH)
+
+  const higherSentinelRef = useRef<HTMLDivElement>(null)
+  const lowerSentinelRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (visibleHigherCount >= orgStats.higher_than_career.length) return
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setVisibleHigherCount((prev) =>
+            Math.min(prev + BATCH_INCREMENT, orgStats.higher_than_career.length),
+          )
+        }
+      },
+      { threshold: 0.1, rootMargin: '300px' },
+    )
+    const el = higherSentinelRef.current
+    if (el) observer.observe(el)
+    return () => observer.disconnect()
+  }, [visibleHigherCount, orgStats.higher_than_career.length])
+
+  useEffect(() => {
+    if (visibleLowerCount >= orgStats.lower_than_career.length) return
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setVisibleLowerCount((prev) =>
+            Math.min(prev + BATCH_INCREMENT, orgStats.lower_than_career.length),
+          )
+        }
+      },
+      { threshold: 0.1, rootMargin: '300px' },
+    )
+    const el = lowerSentinelRef.current
+    if (el) observer.observe(el)
+    return () => observer.disconnect()
+  }, [visibleLowerCount, orgStats.lower_than_career.length])
+
+  const visibleHigher = orgStats.higher_than_career.slice(0, visibleHigherCount)
+  const visibleLower = orgStats.lower_than_career.slice(0, visibleLowerCount)
 
   return (
     <section
       aria-label="Победы по организациям"
       className="card-refined p-4 sm:p-5 md:p-6 mb-6 rounded-2xl bg-gradient-to-b from-white to-cream-50/40 border border-old-money-200/90 shadow-xs"
     >
-      {/* Заголовок с карьерными ориентирами собаки */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 pb-3 border-b border-old-money-200/80">
+      {/* Лаконичный заголовок с базовым уровнем собаки */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4 pb-3 border-b border-old-money-200/80">
         <div>
           <h2 className="text-base md:text-lg font-serif font-semibold text-charcoal-900 leading-tight">
-            Победы собаки по организациям
+            Победы по организациям
           </h2>
           <p className="text-xs text-charcoal-500 mt-0.5">
-            Базовый уровень собаки: в среднем <strong>{orgStats.career_win_rate}% побед</strong> (
-            {formatWinsCount(orgStats.total_wins)} в {formatStartsCount(orgStats.total_starts)})
+            Базовый уровень: <strong>{orgStats.career_win_rate}% побед</strong> ({orgStats.total_wins} из{' '}
+            {orgStats.total_starts} состязаний)
             {disciplineFilter === 'coursing'
               ? ' в курсинге'
               : disciplineFilter === 'racing'
@@ -581,22 +616,22 @@ export function DogOrganizationsSection({
             </div>
           )}
 
-          <div className="flex items-center gap-1.5 text-xs text-charcoal-600 font-medium bg-cream-100/70 px-3 py-1.5 rounded-xl border border-old-money-200/70">
+          <div className="flex items-center gap-1.5 text-xs text-charcoal-600 font-medium bg-cream-100/70 px-2.5 py-1 rounded-xl border border-old-money-200/70">
             <Building2 className="w-3.5 h-3.5 text-camel-700" aria-hidden />
             <span>{formatOrgsCount(orgStats.orgs_count)}</span>
           </div>
         </div>
       </div>
 
-      {/* 2 цельных списка в стиле сайта (без отдельных карточек и дыр) */}
+      {/* 2 сбалансированных списка без отдельных дыр и дублирующих надписей */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-5 items-start">
-        {/* Колонка 1: Побеждает чаще обычного */}
+        {/* Колонка 1: Выше обычного */}
         <div className="rounded-2xl border border-old-money-200/90 bg-white overflow-hidden shadow-2xs">
           <div className="px-3.5 py-2.5 bg-forest-50/70 border-b border-old-money-200/80 flex items-center justify-between">
             <div className="flex items-center gap-1.5">
               <Trophy className="w-3.5 h-3.5 text-forest-700" aria-hidden />
               <h3 className="text-xs font-semibold uppercase tracking-wider text-charcoal-800">
-                Побеждает чаще обычного
+                Выше обычного
               </h3>
             </div>
             <span className="text-[11px] text-forest-800 font-semibold tabular-nums">
@@ -607,6 +642,9 @@ export function DogOrganizationsSection({
           {visibleHigher.length > 0 ? (
             <div className="divide-y divide-old-money-100">
               {visibleHigher.map((org) => renderOrgRow(org, 'higher'))}
+              {visibleHigherCount < orgStats.higher_than_career.length && (
+                <div ref={higherSentinelRef} className="h-4" aria-hidden="true" />
+              )}
             </div>
           ) : (
             <div className="p-4 text-center text-xs text-charcoal-400">
@@ -632,6 +670,9 @@ export function DogOrganizationsSection({
           {visibleLower.length > 0 ? (
             <div className="divide-y divide-old-money-100">
               {visibleLower.map((org) => renderOrgRow(org, 'lower'))}
+              {visibleLowerCount < orgStats.lower_than_career.length && (
+                <div ref={lowerSentinelRef} className="h-4" aria-hidden="true" />
+              )}
             </div>
           ) : (
             <div className="p-4 text-center text-xs text-charcoal-400">
@@ -640,28 +681,6 @@ export function DogOrganizationsSection({
           )}
         </div>
       </div>
-
-      {/* Кнопка Показать все / Свернуть */}
-      {hasMore && (
-        <div className="mt-4 pt-3 text-center border-t border-old-money-100 flex items-center justify-center min-h-[44px]">
-          <button
-            type="button"
-            onClick={() => setShowAllOrgs((v) => !v)}
-            className="inline-flex items-center gap-1.5 text-xs font-semibold text-camel-700 hover:text-camel-900 transition-colors cursor-pointer group"
-          >
-            <span className="group-hover:underline">
-              {showAllOrgs
-                ? 'Свернуть до основных'
-                : formatAllOrgsButton(orgStats.orgs_count)}
-            </span>
-            {showAllOrgs ? (
-              <ChevronUp className="w-3.5 h-3.5 text-camel-600 transition-transform group-hover:-translate-y-0.5" aria-hidden />
-            ) : (
-              <ChevronDown className="w-3.5 h-3.5 text-camel-600 transition-transform group-hover:translate-y-0.5" aria-hidden />
-            )}
-          </button>
-        </div>
-      )}
     </section>
   )
 }

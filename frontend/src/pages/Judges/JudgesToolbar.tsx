@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ChevronDown, X } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 import PageToolbar from '../../components/toolbar/PageToolbar'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
 import ModernDropdown from '../../components/ui/ModernDropdown'
@@ -29,8 +29,8 @@ export interface JudgesToolbarProps {
   dogIndex: DogsIndexEntry[]
   filterDiscipline: string
   setFilterDiscipline: (disc: string) => void
-  hasActiveFilters: boolean
-  clearFilters: () => void
+  hasActiveFilters?: boolean
+  clearFilters?: () => void
 }
 
 export function JudgesToolbar({
@@ -46,8 +46,8 @@ export function JudgesToolbar({
   dogIndex,
   filterDiscipline,
   setFilterDiscipline,
-  hasActiveFilters,
-  clearFilters,
+  hasActiveFilters: _hasActiveFilters,
+  clearFilters: _clearFilters,
 }: JudgesToolbarProps) {
   const [mobileYearOpen, setMobileYearOpen] = useState(false)
   const [mobileDisciplineOpen, setMobileDisciplineOpen] = useState(false)
@@ -156,17 +156,7 @@ export function JudgesToolbar({
             />
 
             <div className="ml-auto shrink-0 flex items-center gap-1.5">
-              {hasActiveFilters && (
-                <button
-                  type="button"
-                  onClick={clearFilters}
-                  className="cs-glass-pill shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full !text-charcoal-500 hover:!text-charcoal-800 transition-colors cursor-pointer select-none"
-                  title="Сбросить фильтры"
-                  aria-label="Сбросить фильтры"
-                >
-                  <X className="h-4 w-4" />
-                </button>
-              )}
+
               <JudgesRatingHint compact />
             </div>
           </div>
@@ -208,18 +198,7 @@ export function JudgesToolbar({
               {/* Кнопка «О судействе» */}
               <JudgesRatingHint embedded />
 
-              {/* Reset Filters button — слева перед разделителем */}
-              {hasActiveFilters && (
-                <button
-                  type="button"
-                  onClick={clearFilters}
-                  className="cs-glass-pill shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full !text-charcoal-500 hover:!text-charcoal-800 transition-colors cursor-pointer select-none"
-                  title="Сбросить все фильтры"
-                  aria-label="Сбросить все фильтры"
-                >
-                  <X className="h-4 w-4" />
-                </button>
-              )}
+
             </div>
 
             <div className="h-5 w-px bg-old-money-300 shrink-0 mx-0.5" aria-hidden="true" />

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { X, ChevronDown } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 import ToolbarSearch from '../../../components/toolbar/ToolbarSearch'
 import ModernDropdown from '../../../components/ui/ModernDropdown'
 import BreedSearchDropdown from '../../../components/ui/BreedSearchDropdown'
@@ -22,8 +22,8 @@ interface ChampionshipToolbarProps {
   candidateBreeds: QuickBreedItem[]
   breedValues: string[]
   dogIndex: { breed: string; competition_count: number }[]
-  hasActiveFilters: boolean
-  onResetFilters: () => void
+  hasActiveFilters?: boolean
+  onResetFilters?: () => void
 }
 
 export default function ChampionshipToolbar({
@@ -39,8 +39,8 @@ export default function ChampionshipToolbar({
   candidateBreeds,
   breedValues,
   dogIndex,
-  hasActiveFilters,
-  onResetFilters,
+  hasActiveFilters: _hasActiveFilters,
+  onResetFilters: _onResetFilters,
 }: ChampionshipToolbarProps) {
   const [sexDropdownOpen, setSexDropdownOpen] = useState(false)
   const [leagueDropdownOpen, setLeagueDropdownOpen] = useState(false)
@@ -222,19 +222,7 @@ export default function ChampionshipToolbar({
           />
         </div>
 
-        {/* Сброс */}
-        {hasActiveFilters && (
-          <div className="ml-auto shrink-0">
-            <button
-              type="button"
-              onClick={onResetFilters}
-              className="cs-glass-pill inline-flex h-8 w-8 items-center justify-center rounded-full text-charcoal-600 hover:text-charcoal-900 shrink-0 cursor-pointer"
-              title="Сбросить все фильтры"
-            >
-              <X className="h-4 w-4" />
-            </button>
-          </div>
-        )}
+
       </div>
 
       {/* 2. Десктопная консоль: Поиск + Пол + Разделитель + QuickBreedBar + Лига + Сброс */}
@@ -292,17 +280,7 @@ export default function ChampionshipToolbar({
           </ModernDropdown>
         </div>
 
-        {/* Reset button — слева перед разделителем */}
-        {hasActiveFilters && (
-          <button
-            type="button"
-            onClick={onResetFilters}
-            className="cs-glass-pill inline-flex h-8 w-8 items-center justify-center rounded-full !text-charcoal-500 hover:!text-charcoal-800 transition-colors shrink-0 cursor-pointer select-none"
-            title="Сбросить все фильтры"
-          >
-            <X className="h-4 w-4" />
-          </button>
-        )}
+
 
         <div className="h-5 w-px bg-old-money-300 shrink-0 mx-0.5" aria-hidden="true" />
 

@@ -1,5 +1,5 @@
 import { useState, type ReactNode } from 'react'
-import { ChevronDown, X } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 import DogSexIcon from '../../components/DogSexIcon'
 import PageToolbar from '../../components/toolbar/PageToolbar'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
@@ -29,7 +29,7 @@ interface TopDogsFiltersProps {
   onScoreFromChange?: (value: string) => void
   filterSpeedFrom?: string
   onSpeedFromChange?: (value: string) => void
-  onResetFilters: () => void
+  onResetFilters?: () => void
   onResetPanelFilters?: () => void
   dropdownRef?: React.RefObject<HTMLDivElement>
   trailing?: ReactNode
@@ -52,7 +52,7 @@ export default function TopDogsFilters({
   filterSex,
   onSexChange,
   dogIndex,
-  onResetFilters,
+  onResetFilters: _onResetFilters,
   dropdownRef,
   trailing,
   activeMobileColumn,
@@ -65,7 +65,6 @@ export default function TopDogsFilters({
 
   const isYearNonDefault = filterYear !== '' && filterYear !== currentSeason
   const isSexActive = Boolean(filterSex)
-  const hasActiveFilters = isYearNonDefault || Boolean(filterBreed) || Boolean(filterSex) || Boolean(searchQuery.trim())
 
   const sexTriggerLabel = filterSex === 'm' ? 'Кобели' : filterSex === 'f' ? 'Суки' : 'Пол'
 
@@ -191,18 +190,7 @@ export default function TopDogsFilters({
 
         {/* Правая часть: Сброс + Кнопка дисциплины + Инфо */}
         <div className="ml-auto shrink-0 flex items-center gap-1.5">
-          {/* Сброс фильтров (если активны) */}
-          {hasActiveFilters && (
-            <button
-              type="button"
-              onClick={onResetFilters}
-              className="cs-glass-pill shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full !text-charcoal-500 hover:!text-charcoal-800 transition-colors cursor-pointer select-none"
-              title="Сбросить фильтры"
-              aria-label="Сбросить фильтры"
-            >
-              <X className="h-4 w-4" />
-            </button>
-          )}
+
 
           {/* Кнопка Инфо о рейтинге (i) */}
           {trailing && <div className="shrink-0">{trailing}</div>}
@@ -243,18 +231,7 @@ export default function TopDogsFilters({
                 {/* Кнопка Инфо о рейтинге (i) — слева */}
                 {trailing && <div className="shrink-0">{trailing}</div>}
 
-                {/* Сброс фильтров (если активны) — слева перед разделителем */}
-                {hasActiveFilters && (
-                  <button
-                    type="button"
-                    onClick={onResetFilters}
-                    className="cs-glass-pill shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full !text-charcoal-500 hover:!text-charcoal-800 transition-colors cursor-pointer select-none"
-                    title="Сбросить фильтры"
-                    aria-label="Сбросить фильтры"
-                  >
-                    <X className="h-4 w-4" />
-                  </button>
-                )}
+
               </div>
 
               <div className="h-5 w-px bg-old-money-300 shrink-0 mx-0.5" aria-hidden="true" />

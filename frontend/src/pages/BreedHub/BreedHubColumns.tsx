@@ -2,11 +2,12 @@ import { useState, useRef, useEffect, useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { Trophy, Zap, Gauge, ArrowUpRight } from 'lucide-react'
 import DoninoColumnPlaque from '../SpeedRecords/DoninoColumnPlaque'
-import DoninoListRecordRow from '../SpeedRecords/DoninoListRecordRow'
 import DogSexIcon from '../../components/DogSexIcon'
 import MedalBadge from '../../components/MedalBadge'
 import { parseDogName } from '../../lib/dogName'
+import { formatRecordDate } from '../../lib/recordDates'
 import type { AnnualDogLeader } from '../../hooks/useStaticData'
+import type { AnnualDoninoLeader } from '../../lib/doninoAnnualLeaders'
 import { breedToSlug } from '../../lib/breedMapping'
 
 export interface SpeedRecordItem {
@@ -27,8 +28,9 @@ interface BreedHubColumnsProps {
   annualLeaders?: AnnualDogLeader[]
   coursingLeaders?: AnnualDogLeader[]
   racingLeaders?: AnnualDogLeader[]
+  doninoLeaders?: AnnualDoninoLeader[]
   annualLeadersLoading: boolean
-  speedRecords: SpeedRecordItem[]
+  speedRecords?: SpeedRecordItem[]
   doninoLoading: boolean
   canonicalKey: string
   breedNameRu: string
@@ -43,23 +45,14 @@ function formatSeasonsCount(count: number): string {
   return `${count} сезонов`
 }
 
-function formatRecordsCount(count: number): string {
-  const mod10 = count % 10
-  const mod100 = count % 100
-  if (mod100 >= 11 && mod100 <= 14) return `${count} рекордов`
-  if (mod10 === 1) return `${count} рекорд`
-  if (mod10 >= 2 && mod10 <= 4) return `${count} рекорда`
-  return `${count} рекордов`
-}
-
 type ColumnTabId = 'coursing' | 'racing' | 'donino'
 
 export default function BreedHubColumns({
   annualLeaders,
   coursingLeaders,
   racingLeaders,
+  doninoLeaders,
   annualLeadersLoading,
-  speedRecords,
   doninoLoading,
   canonicalKey,
   breedNameRu,
@@ -69,7 +62,7 @@ export default function BreedHubColumns({
     [coursingLeaders, annualLeaders],
   )
   const racingList = useMemo(() => racingLeaders || [], [racingLeaders])
-  const doninoList = useMemo(() => speedRecords || [], [speedRecords])
+  const doninoList = useMemo(() => doninoLeaders || [], [doninoLeaders])
 
   const hasCoursing = coursingList.length > 0 || annualLeadersLoading
   const hasRacing = racingList.length > 0
@@ -269,10 +262,10 @@ export default function BreedHubColumns({
       title={
         <span className="inline-flex items-center gap-1.5 truncate">
           <Gauge className="w-3.5 h-3.5 text-camel-700 shrink-0" aria-hidden />
-          <span className="truncate">Рекорды Донино (км/ч)</span>
+          <span className="truncate">Донино по годам</span>
           {doninoList.length > 0 && (
             <span className="text-old-money-500 font-semibold text-[11px] sm:text-xs normal-case tracking-normal shrink-0">
-              · {formatRecordsCount(doninoList.length)}
+              · {formatSeasonsCount(doninoList.length)}
             </span>
           )}
         </span>
@@ -280,9 +273,9 @@ export default function BreedHubColumns({
       actionPlacement="right"
       action={
         <Link
-          to="/speed-records/"
+          to={`/speed-records/?breed=${encodeURIComponent(breedToSlug(canonicalKey))}`}
           className="inline-flex items-center gap-1 text-xs font-semibold text-camel-800 hover:text-camel-950 transition-colors cursor-pointer shrink-0"
-          title="Открыть общую таблицу рекордов полигона Донино"
+          title={`Рекорды Донино породы ${breedNameRu}`}
         >
           <span>Все рекорды</span>
           <ArrowUpRight className="h-3.5 w-3.5 text-camel-700" aria-hidden />
@@ -304,19 +297,21 @@ export default function BreedHubColumns({
     return map
   }, [racingList])
 
+  const doninoByYear = useMemo(() => {
+    const map = new Map<number, AnnualDoninoLeader>()
+    doninoList.forEach((item) => map.set(item.year, item))
+    return map
+  }, [doninoList])
+
   const allYears = useMemo(() => {
     const set = new Set<number>()
     coursingList.forEach((item) => set.add(item.year))
     racingList.forEach((item) => set.add(item.year))
+    doninoList.forEach((item) => set.add(item.year))
     return Array.from(set).sort((a, b) => b - a)
-  }, [coursingList, racingList])
+  }, [coursingList, racingList, doninoList])
 
-  const totalRowsCount = useMemo(() => {
-    const counts: number[] = []
-    if (hasCoursing || hasRacing) counts.push(allYears.length)
-    if (hasDonino) counts.push(doninoList.length)
-    return counts.length > 0 ? Math.max(...counts) : 0
-  }, [hasCoursing, hasRacing, hasDonino, allYears.length, doninoList.length])
+  const totalRowsCount = allYears.length
 
   // Рендерер ячейки Курсинга на десктопе
   const renderDesktopCoursingCell = (item?: AnnualDogLeader, year?: number) => {
@@ -472,28 +467,72 @@ export default function BreedHubColumns({
   }
 
   // Рендерер ячейки Донино на десктопе
-  const renderDesktopDoninoCell = (item?: SpeedRecordItem, rowIndex?: number) => {
-    if (!item) return null
+  const renderDesktopDoninoCell = (item?: AnnualDoninoLeader, year?: number) => {
+    if (!item) {
+      if (year == null) return null
+      return (
+        <div className="flex items-center gap-2 w-full min-w-0 opacity-40">
+          <div className="w-14 shrink-0 text-center">
+            <span className="inline-block px-2 py-0.5 rounded-full font-medium font-sans tabular-nums text-xs text-old-money-400 bg-cream-50 border border-old-money-200/50">
+              {year}
+            </span>
+          </div>
+          <div className="flex-1 min-w-0 text-xs text-old-money-400 italic">
+            —
+          </div>
+        </div>
+      )
+    }
+
+    const isMale = item.sex === 'M' || item.sex === 'К'
+    const isFemale = item.sex === 'F' || item.sex === 'С'
+    const sexVal = isMale ? 'm' : isFemale ? 'f' : ''
+    const tooltipTitle = `Лидер скорости Донино ${item.year} года: ${item.bestSpeed.toFixed(1)} км/ч (${item.runsCount} зам.)`
+
     return (
-      <div className="w-full min-w-0 [&_.donino-list-row-link]:border-b-0 [&_.donino-list-row-screen]:border-b-0">
-        <DoninoListRecordRow
-          key={`donino-${item.breed || breedNameRu}-${item.name}-${rowIndex}`}
-          mode={item.mode || 'speed'}
-          name={item.name || ''}
-          breed={item.breed || breedNameRu}
-          sex={item.sex}
-          date={item.date}
-          status={item.status}
-          history={item.history}
-          speedKmh={item.speed_km_h}
-          timeSeconds={item.time_seconds}
-          screenshotUrl={item.screenshot_url}
-          trackType={item.track_type}
-          rank={(rowIndex ?? 0) + 1}
-          embedded
-          hideBreed
-          compact
-        />
+      <div className="flex items-center gap-2 w-full min-w-0" title={tooltipTitle}>
+        <div className="w-14 shrink-0 text-center">
+          <Link
+            to={`/speed-records/${item.year}/?breed=${encodeURIComponent(breedToSlug(canonicalKey))}`}
+            className="inline-block px-2 py-0.5 rounded-full font-bold font-sans tabular-nums text-xs bg-camel-100 hover:bg-camel-200 active:scale-95 text-camel-950 border border-camel-200/80 transition-all shadow-2xs cursor-pointer"
+            title={`Открыть рекорды Донино (${item.year} г.)`}
+          >
+            {item.year}
+          </Link>
+        </div>
+
+        <div className="flex-1 min-w-0 overflow-hidden">
+          <div className="flex items-center gap-1 min-w-0">
+            <Link
+              to={`/donino-dog/${encodeURIComponent(item.name)}/${encodeURIComponent(item.breed || breedNameRu)}/`}
+              state={{ from: 'speed-records' }}
+              className="font-medium text-camel-950 hover:text-camel-800 hover:underline truncate block text-sm"
+              title={item.name}
+            >
+              {item.name}
+            </Link>
+            {sexVal && (
+              <span title={isMale ? 'Кобель' : 'Сука'} className="inline-flex shrink-0">
+                <DogSexIcon sex={sexVal} size={12} variant="colored" />
+              </span>
+            )}
+          </div>
+          <span className="text-[11px] text-charcoal-500 block leading-tight truncate">
+            {item.trackType || 'прямая'}{item.bestDate ? ` · ${formatRecordDate(item.bestDate)}` : ''}
+          </span>
+        </div>
+
+        <div className="w-[114px] xl:w-[124px] shrink-0 text-right flex flex-col items-end gap-0.5">
+          <div className="text-[11px] font-sans font-medium text-charcoal-600 leading-tight">
+            {item.runsCount} зам.
+          </div>
+          <div className="flex items-center justify-end">
+            <span className="inline-flex items-baseline gap-0.5 font-bold text-camel-700 text-xs sm:text-[13px] tabular-nums">
+              <span>{item.bestSpeed.toFixed(1)}</span>
+              <span className="text-[10px] font-normal text-charcoal-500">км/ч</span>
+            </span>
+          </div>
+        </div>
       </div>
     )
   }
@@ -582,6 +621,73 @@ export default function BreedHubColumns({
     )
   }
 
+  // Мобильный вид для Донино (карточки по годам)
+  const renderMobileDoninoCards = (items: AnnualDoninoLeader[]) => {
+    if (items.length === 0) {
+      return (
+        <div className="py-8 text-center text-xs text-old-money-600 px-4">
+          <p>В открытых протоколах тренировочного комплекса Донино заездов породы пока не зафиксировано.</p>
+        </div>
+      )
+    }
+
+    return (
+      <ol className="divide-y divide-old-money-100 text-sm">
+        {items.map((item) => {
+          const isMale = item.sex === 'M' || item.sex === 'К'
+          const isFemale = item.sex === 'F' || item.sex === 'С'
+          const sexVal = isMale ? 'm' : isFemale ? 'f' : ''
+
+          return (
+            <li key={item.year} className="p-3 flex flex-col gap-1.5 hover:bg-cream-50/60 transition-colors">
+              <div className="flex items-center gap-2 min-w-0">
+                <Link
+                  to={`/speed-records/${item.year}/?breed=${encodeURIComponent(breedToSlug(canonicalKey))}`}
+                  className="px-2.5 py-0.5 rounded-full font-bold font-sans tabular-nums text-xs bg-camel-100 hover:bg-camel-200 active:scale-95 text-camel-950 border border-camel-200/80 shrink-0 transition-all shadow-2xs cursor-pointer"
+                  title={`Открыть рекорды Донино (${item.year} г.)`}
+                >
+                  {item.year}
+                </Link>
+
+                <div className="flex items-center gap-1.5 min-w-0 flex-1">
+                  <Link
+                    to={`/donino-dog/${encodeURIComponent(item.name)}/${encodeURIComponent(item.breed || breedNameRu)}/`}
+                    state={{ from: 'speed-records' }}
+                    className="font-medium text-camel-950 hover:text-camel-800 hover:underline truncate text-sm"
+                    title={item.name}
+                  >
+                    {item.name}
+                  </Link>
+                  {sexVal && (
+                    <span title={isMale ? 'Кобель' : 'Сука'} className="inline-flex shrink-0">
+                      <DogSexIcon sex={sexVal} size={12} variant="colored" />
+                    </span>
+                  )}
+                </div>
+              </div>
+
+              <div className="text-[11px] text-charcoal-500 pl-0.5 truncate">
+                {item.trackType || 'прямая'}{item.bestDate ? ` · ${formatRecordDate(item.bestDate)}` : ''}
+              </div>
+
+              <div className="flex items-center justify-between text-xs pt-1.5 border-t border-old-money-100/70 font-sans tabular-nums">
+                <div className="text-left text-[11px] text-charcoal-600 font-medium flex items-center gap-1">
+                  <span>{item.runsCount} зам.</span>
+                </div>
+                <div className="flex items-center justify-end">
+                  <span className="inline-flex items-baseline gap-0.5 font-bold text-camel-700 text-xs sm:text-[13px]">
+                    <span>{item.bestSpeed.toFixed(1)}</span>
+                    <span className="text-[10px] font-normal text-charcoal-500">км/ч</span>
+                  </span>
+                </div>
+              </div>
+            </li>
+          )
+        })}
+      </ol>
+    )
+  }
+
   // Расчет классов адаптивной сетки десктопа (слитные колонки без внешних отступов)
   const totalColumnsCount = (hasCoursing ? 1 : 0) + (hasRacing ? 1 : 0) + (hasDonino ? 1 : 0)
   const desktopGridClass =
@@ -638,15 +744,14 @@ export default function BreedHubColumns({
             <p className="text-xs text-old-money-600 py-8 text-center">Данных по породе пока нет.</p>
           ) : (
             <div className="divide-y divide-old-money-100">
-              {Array.from({ length: totalRowsCount }).map((_, rowIndex) => {
-                const year = allYears[rowIndex]
-                const coursingItem = year != null ? coursingByYear.get(year) : undefined
-                const racingItem = year != null ? racingByYear.get(year) : undefined
-                const doninoItem = doninoList[rowIndex]
+              {allYears.map((year) => {
+                const coursingItem = coursingByYear.get(year)
+                const racingItem = racingByYear.get(year)
+                const doninoItem = doninoByYear.get(year)
 
                 return (
                   <div
-                    key={`desktop-row-${year ?? rowIndex}`}
+                    key={`desktop-row-${year}`}
                     className={`grid ${desktopGridClass} divide-x divide-[rgba(195,168,128,0.50)] hover:bg-cream-50/50 transition-colors items-center min-h-[52px]`}
                   >
                     {hasCoursing && (
@@ -660,8 +765,8 @@ export default function BreedHubColumns({
                       </div>
                     )}
                     {hasDonino && (
-                      <div className="min-w-0 h-full flex items-center [&>.donino-list-row]:w-full [&_.donino-list-row-link]:border-b-0 [&_.donino-list-row-screen]:border-b-0">
-                        {renderDesktopDoninoCell(doninoItem, rowIndex)}
+                      <div className="px-3 py-2 min-w-0 h-full flex items-center">
+                        {renderDesktopDoninoCell(doninoItem, year)}
                       </div>
                     )}
                   </div>
@@ -727,36 +832,15 @@ export default function BreedHubColumns({
               </div>
             )}
 
-            {/* Колонка 3: Рекорды Донино */}
+            {/* Колонка 3: Донино по годам */}
             {hasDonino && (
               <div className="w-full max-w-full min-w-0 shrink-0 basis-full flex flex-col bg-white">
                 {doninoPlaque}
                 <div className="flex-1 min-w-0 flex flex-col justify-start">
                   {doninoLoading ? (
-                    <p className="text-xs text-old-money-600 py-6 text-center">Загрузка замеров скорости…</p>
+                    <p className="text-xs text-old-money-600 py-6 text-center">Загрузка архива Донино…</p>
                   ) : (
-                    <div className="flex flex-col justify-start divide-y divide-old-money-100 [&>*:last-child_.donino-list-row-link]:border-b-0 [&>*:last-child_.donino-list-row-screen]:border-b-0">
-                      {doninoList.map((r, i) => (
-                        <DoninoListRecordRow
-                          key={`donino-mobile-${r.breed || breedNameRu}-${r.name}-${i}`}
-                          mode={r.mode || 'speed'}
-                          name={r.name || ''}
-                          breed={r.breed || breedNameRu}
-                          sex={r.sex}
-                          date={r.date}
-                          status={r.status}
-                          history={r.history}
-                          speedKmh={r.speed_km_h}
-                          timeSeconds={r.time_seconds}
-                          screenshotUrl={r.screenshot_url}
-                          trackType={r.track_type}
-                          rank={i + 1}
-                          embedded
-                          hideBreed
-                          compact
-                        />
-                      ))}
-                    </div>
+                    renderMobileDoninoCards(doninoList)
                   )}
                 </div>
               </div>

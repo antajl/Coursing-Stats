@@ -67,4 +67,29 @@ describe('computeDoninoAnnualLeaders', () => {
     expect(computeDoninoAnnualLeaders([], [])).toEqual([])
     expect(computeDoninoAnnualLeaders(undefined, undefined)).toEqual([])
   })
+
+  it('correctly calculates Saluki real database annual leaders for 2026 and 2025', async () => {
+    const fs = await import('fs')
+    const speed = JSON.parse(fs.readFileSync('frontend/public/data/v1/donino/speed_records.json', 'utf8')).records
+    const coursing = JSON.parse(fs.readFileSync('frontend/public/data/v1/donino/coursing_records.json', 'utf8')).records
+
+    const salukiSpeed = speed.filter((r: any) => (r.breed || '').toLowerCase().includes('салюки'))
+    const salukiCoursing = coursing.filter((r: any) => (r.breed || '').toLowerCase().includes('салюки'))
+
+    const leaders = computeDoninoAnnualLeaders(salukiSpeed, salukiCoursing)
+
+    expect(leaders).toHaveLength(2)
+
+    // 2026: Тайга at 55 km/h
+    expect(leaders[0].year).toBe(2026)
+    expect(leaders[0].name).toBe('Тайга')
+    expect(leaders[0].bestSpeed).toBe(55)
+    expect(leaders[0].runsCount).toBe(5) // 1 speed + 4 coursing runs in 2026
+
+    // 2025: Тайга at 54 km/h
+    expect(leaders[1].year).toBe(2025)
+    expect(leaders[1].name).toBe('Тайга')
+    expect(leaders[1].bestSpeed).toBe(54)
+    expect(leaders[1].runsCount).toBe(2)
+  })
 })

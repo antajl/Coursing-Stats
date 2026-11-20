@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { CANDIDATE_BREEDS, SHOW_CANDIDATE_BREEDS } from './QuickBreedBar'
+import { CANDIDATE_BREEDS } from './QuickBreedBar'
 import { canonicalBreed, displayBreed, matchesBreedFilter } from '../../lib/breedMapping'
 import { getBreedHubByCanonicalKey, getBreedHubBySlug } from '../../lib/breed-hubs-data'
 

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Info, FileText, ChevronDown, X, Calendar, ChevronRight } from 'lucide-react'
+import { Info, FileText, ChevronDown, Calendar, ChevronRight } from 'lucide-react'
 import { toolbarPillTriggerClass } from '../../lib/toolbar'
 import PageToolbar from '../../components/toolbar/PageToolbar'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
@@ -71,7 +71,7 @@ export type EventsToolbarProps = {
   filterWithProtocol: boolean
   onFilterWithProtocolChange: (value: boolean) => void
   sortedYears: string[]
-  onResetFilters: () => void
+  onResetFilters?: () => void
   availableMonthsByYear?: Record<string, string[] | Set<string>>
   /** When omitted (loading), stats row is hidden. */
   stats?: {
@@ -93,18 +93,13 @@ export default function EventsToolbar({
   filterWithProtocol,
   onFilterWithProtocolChange: _onFilterWithProtocolChange,
   sortedYears,
-  onResetFilters,
+  onResetFilters: _onResetFilters,
   availableMonthsByYear,
   stats,
 }: EventsToolbarProps) {
   const [disciplineDropdownOpen, setDisciplineDropdownOpen] = useState(false)
   const disciplineLabel =
     DISCIPLINE_OPTIONS.find((d) => d.value === filterDiscipline)?.label || 'Дисциплина'
-
-  const isYearNonDefault = filterYear !== '' && filterYear !== CURRENT_SEASON
-  const hasActiveFilters = Boolean(
-    isYearNonDefault || filterMonth || filterDiscipline || searchQuery || filterWithProtocol,
-  )
 
   const handleDisciplineToggle = (d: string) => {
     onFilterDisciplineChange(filterDiscipline === d ? '' : d)
@@ -238,17 +233,7 @@ export default function EventsToolbar({
             <span>2027</span>
             <ChevronRight className="h-3.5 w-3.5 text-camel-700 shrink-0 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
           </Link>
-          {hasActiveFilters && (
-            <button
-              type="button"
-              onClick={onResetFilters}
-              className="cs-glass-pill shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full !text-charcoal-500 hover:!text-charcoal-800 transition-colors cursor-pointer select-none"
-              title="Сбросить фильтры"
-              aria-label="Сбросить фильтры"
-            >
-              <X className="h-4 w-4" />
-            </button>
-          )}
+
           <div className="shrink-0">{trailingMobile}</div>
         </div>
       </div>
@@ -276,17 +261,7 @@ export default function EventsToolbar({
           <div className="shrink-0">{trailing}</div>
 
           {/* Сброс фильтров */}
-          {hasActiveFilters && (
-            <button
-              type="button"
-              onClick={onResetFilters}
-              className="cs-glass-pill shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full !text-charcoal-500 hover:!text-charcoal-800 transition-colors cursor-pointer select-none"
-              title="Сбросить фильтры"
-              aria-label="Сбросить фильтры"
-            >
-              <X className="h-4 w-4" />
-            </button>
-          )}
+
         </div>
 
         {/* Разделитель перед выбором типа соревнования */}

@@ -1,5 +1,5 @@
 import { useState, type ReactNode } from 'react'
-import { X, ChevronDown } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 import PageToolbar from '../../components/toolbar/PageToolbar'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
 import YearDropdown from '../../components/ui/YearDropdown'
@@ -25,7 +25,7 @@ interface ShowRankingFiltersProps {
   filterSex?: string
   onSexChange: (value: string) => void
   dogIndex?: DogsIndexEntry[]
-  onResetFilters: () => void
+  onResetFilters?: () => void
   trailing?: ReactNode
   dropdownRef?: React.RefObject<HTMLDivElement | null>
 }
@@ -43,7 +43,7 @@ export default function ShowRankingFilters({
   filterSex = '',
   onSexChange,
   dogIndex,
-  onResetFilters,
+  onResetFilters: _onResetFilters,
   trailing,
   dropdownRef,
 }: ShowRankingFiltersProps) {
@@ -53,7 +53,6 @@ export default function ShowRankingFilters({
 
   const isYearNonDefault = filterYear !== currentSeason && Boolean(filterYear)
   const isSexActive = Boolean(filterSex)
-  const hasAnyFilter = Boolean(searchQuery.trim() || isYearNonDefault || filterBreed || filterSex)
 
   const sexTriggerLabel = filterSex === 'm' ? 'Кобели' : filterSex === 'f' ? 'Суки' : 'Пол'
 
@@ -180,17 +179,7 @@ export default function ShowRankingFilters({
               </div>
 
               <div className="ml-auto shrink-0 flex items-center gap-1.5">
-                {hasAnyFilter && (
-                  <button
-                    type="button"
-                    onClick={onResetFilters}
-                    className="cs-glass-pill shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full !text-charcoal-500 hover:!text-charcoal-800 transition-colors cursor-pointer select-none"
-                    title="Сбросить все фильтры"
-                    aria-label="Сбросить все фильтры"
-                  >
-                    <X className="h-4 w-4" />
-                  </button>
-                )}
+
                 {trailing ?? <ShowRatingHint compact />}
               </div>
             </div>
@@ -225,17 +214,7 @@ export default function ShowRankingFilters({
                 {trailing ?? <ShowRatingHint embedded />}
 
                 {/* Сброс фильтров */}
-                {hasAnyFilter && (
-                  <button
-                    type="button"
-                    onClick={onResetFilters}
-                    className="cs-glass-pill shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full !text-charcoal-500 hover:!text-charcoal-800 transition-colors cursor-pointer select-none"
-                    title="Сбросить все фильтры"
-                    aria-label="Сбросить все фильтры"
-                  >
-                    <X className="h-4 w-4" />
-                  </button>
-                )}
+
               </div>
 
               {/* Разделитель между левыми контролами и породами на десктопе */}

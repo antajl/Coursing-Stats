@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react'
-import { ChevronDown, X } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 import PageToolbar from '../../components/toolbar/PageToolbar'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
 import QuickBreedBar from '../TopDogs/QuickBreedBar'
@@ -37,9 +37,9 @@ interface DoninoPageToolbarProps {
   onYearChange?: (year: string) => void
   onBreedChange?: (breed: string) => void
   currentSeason?: string
-  onClearFilters: () => void
+  onClearFilters?: () => void
   onClearPanelFilters: () => void
-  hasActiveFilters: boolean
+  hasActiveFilters?: boolean
   dogIndex?: DogsIndexEntry[]
   speedRecords?: { name: string; sex: string; breed: string; speed_km_h: number; date: string; screenshot_url?: string }[]
   coursingRecords?: { name: string; breed: string; time_seconds: number; date: string }[]
@@ -72,9 +72,9 @@ export default function DoninoPageToolbar({
   onYearChange,
   onBreedChange,
   currentSeason = '2026',
-  onClearFilters,
+  onClearFilters: _onClearFilters,
   onClearPanelFilters,
-  hasActiveFilters,
+  hasActiveFilters: _hasActiveFilters,
   dogIndex: propDogIndex,
 }: DoninoPageToolbarProps) {
   const [mobileYearDropdownOpen, setMobileYearDropdownOpen] = useState(false)
@@ -222,17 +222,7 @@ export default function DoninoPageToolbar({
                 />
               ) : null}
 
-              {hasActiveFilters && (
-                <button
-                  type="button"
-                  onClick={onClearFilters}
-                  className="cs-glass-pill shrink-0 inline-flex h-8 items-center gap-1.5 rounded-full px-2.5 text-xs font-semibold !text-charcoal-600 hover:!text-charcoal-900 transition-colors cursor-pointer select-none"
-                  title="Сбросить все фильтры"
-                >
-                  <X className="h-3.5 w-3.5" />
-                  <span>Сбросить</span>
-                </button>
-              )}
+
             </div>
 
             {/* Десктопная панель фильтров: второй ряд */}
@@ -280,17 +270,7 @@ export default function DoninoPageToolbar({
                 />
               ) : null}
 
-              {hasActiveFilters && (
-                <button
-                  type="button"
-                  onClick={onClearFilters}
-                  className="cs-glass-pill shrink-0 inline-flex h-8 items-center gap-1.5 rounded-full px-3 text-xs font-semibold !text-charcoal-600 hover:!text-charcoal-900 transition-colors cursor-pointer select-none"
-                  title="Сбросить все фильтры"
-                >
-                  <X className="h-3.5 w-3.5" />
-                  <span>Сбросить</span>
-                </button>
-              )}
+
 
               {/* Разделитель между фильтрами и породами на десктопе */}
               <div className="h-5 w-px bg-old-money-300 shrink-0 mx-0.5" aria-hidden="true" />

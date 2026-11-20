@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import {
   Award,
@@ -120,7 +120,6 @@ export function formatAllExpertsButton(count: number): string {
 
 export function DogJudgesSection({ judgeStats }: DogJudgesSectionProps) {
   const [expandedJudgeKey, setExpandedJudgeKey] = useState<string | null>(null)
-  const [showAllJudges, setShowAllJudges] = useState(false)
 
   // 1. Оставляем только курсинг (где оценивают баллами)
   const coursingJudges = useMemo(() => {
@@ -301,44 +300,81 @@ export function DogJudgesSection({ judgeStats }: DogJudgesSectionProps) {
     )
   }
 
-  // Определяем, сколько экспертов показывать в компактном виде (по 4 в каждой колонке)
-  const maxVisibleCount = 4
-  const visibleHigher = showAllJudges ? higherThanCareer : higherThanCareer.slice(0, maxVisibleCount)
-  const visibleLower = showAllJudges ? lowerThanCareer : lowerThanCareer.slice(0, maxVisibleCount)
-  const hasMore = higherThanCareer.length > maxVisibleCount || lowerThanCareer.length > maxVisibleCount
+  // Ленивая подгрузка экспертов порциями по 15 при скролле (без лишних кликов и скрытия)
+  const INITIAL_BATCH = 15
+  const BATCH_INCREMENT = 15
+
+  const [visibleHigherCount, setVisibleHigherCount] = useState(INITIAL_BATCH)
+  const [visibleLowerCount, setVisibleLowerCount] = useState(INITIAL_BATCH)
+
+  const higherSentinelRef = useRef<HTMLDivElement>(null)
+  const lowerSentinelRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (visibleHigherCount >= higherThanCareer.length) return
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setVisibleHigherCount((prev) => Math.min(prev + BATCH_INCREMENT, higherThanCareer.length))
+        }
+      },
+      { threshold: 0.1, rootMargin: '300px' },
+    )
+    const el = higherSentinelRef.current
+    if (el) observer.observe(el)
+    return () => observer.disconnect()
+  }, [visibleHigherCount, higherThanCareer.length])
+
+  useEffect(() => {
+    if (visibleLowerCount >= lowerThanCareer.length) return
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setVisibleLowerCount((prev) => Math.min(prev + BATCH_INCREMENT, lowerThanCareer.length))
+        }
+      },
+      { threshold: 0.1, rootMargin: '300px' },
+    )
+    const el = lowerSentinelRef.current
+    if (el) observer.observe(el)
+    return () => observer.disconnect()
+  }, [visibleLowerCount, lowerThanCareer.length])
+
+  const visibleHigher = higherThanCareer.slice(0, visibleHigherCount)
+  const visibleLower = lowerThanCareer.slice(0, visibleLowerCount)
 
   return (
     <section
       aria-label="Судейская статистика"
       className="card-refined p-4 sm:p-5 md:p-6 mb-6 rounded-2xl bg-gradient-to-b from-white to-cream-50/40 border border-old-money-200/90 shadow-xs"
     >
-      {/* Заголовок с карьерными ориентирами собаки */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 pb-3 border-b border-old-money-200/80">
+      {/* Лаконичный заголовок с базовым уровнем собаки */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4 pb-3 border-b border-old-money-200/80">
         <div>
           <h2 className="text-base md:text-lg font-serif font-semibold text-charcoal-900 leading-tight">
-            Оценки судей в сравнении с карьерой собаки
+            Оценки судей
           </h2>
           <p className="text-xs text-charcoal-500 mt-0.5">
-            Базовый уровень собаки: в среднем <strong>{careerAvgPlace.toFixed(1)} место</strong> и{' '}
-            <strong>{careerAvgScore.toFixed(1)} б.</strong> по всем турнирам
+            Базовый уровень: в среднем <strong>{careerAvgPlace.toFixed(1)} место</strong> ·{' '}
+            <strong>{careerAvgScore.toFixed(1)} б.</strong>
           </p>
         </div>
 
-        <div className="flex items-center gap-1.5 text-xs text-charcoal-600 font-medium bg-cream-100/70 px-3 py-1.5 rounded-xl border border-old-money-200/70 self-start sm:self-auto">
+        <div className="flex items-center gap-1.5 text-xs text-charcoal-600 font-medium bg-cream-100/70 px-2.5 py-1 rounded-xl border border-old-money-200/70 self-start sm:self-auto">
           <Scale className="w-3.5 h-3.5 text-camel-700" aria-hidden />
           <span>{formatExpertsCount(coursingJudges.length)}</span>
         </div>
       </div>
 
-      {/* 2 цельных списка в стиле сайта (без отдельных карточек и дыр) */}
+      {/* 2 сбалансированных списка без отдельных дыр и дублирующих надписей */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-5 items-start">
-        {/* Колонка 1: Выше карьерного уровня */}
+        {/* Колонка 1: Выше обычного */}
         <div className="rounded-2xl border border-old-money-200/90 bg-white overflow-hidden shadow-2xs">
           <div className="px-3.5 py-2.5 bg-forest-50/70 border-b border-old-money-200/80 flex items-center justify-between">
             <div className="flex items-center gap-1.5">
               <Trophy className="w-3.5 h-3.5 text-forest-700" aria-hidden />
               <h3 className="text-xs font-semibold uppercase tracking-wider text-charcoal-800">
-                Оценки выше обычного
+                Выше обычного
               </h3>
             </div>
             <span className="text-[11px] text-forest-800 font-semibold tabular-nums">
@@ -349,6 +385,9 @@ export function DogJudgesSection({ judgeStats }: DogJudgesSectionProps) {
           {visibleHigher.length > 0 ? (
             <div className="divide-y divide-old-money-100">
               {visibleHigher.map((judge) => renderJudgeRow(judge, 'higher'))}
+              {visibleHigherCount < higherThanCareer.length && (
+                <div ref={higherSentinelRef} className="h-4" aria-hidden="true" />
+              )}
             </div>
           ) : (
             <div className="p-4 text-center text-xs text-charcoal-400">
@@ -357,13 +396,13 @@ export function DogJudgesSection({ judgeStats }: DogJudgesSectionProps) {
           )}
         </div>
 
-        {/* Колонка 2: Ниже карьерного уровня (Строже обычного) */}
+        {/* Колонка 2: Строже обычного */}
         <div className="rounded-2xl border border-old-money-200/90 bg-white overflow-hidden shadow-2xs">
           <div className="px-3.5 py-2.5 bg-rose-50/70 border-b border-old-money-200/80 flex items-center justify-between">
             <div className="flex items-center gap-1.5">
               <AlertCircle className="w-3.5 h-3.5 text-rose-700" aria-hidden />
               <h3 className="text-xs font-semibold uppercase tracking-wider text-charcoal-800">
-                Оценки строже обычного
+                Строже обычного
               </h3>
             </div>
             <span className="text-[11px] text-rose-800 font-semibold tabular-nums">
@@ -374,6 +413,9 @@ export function DogJudgesSection({ judgeStats }: DogJudgesSectionProps) {
           {visibleLower.length > 0 ? (
             <div className="divide-y divide-old-money-100">
               {visibleLower.map((judge) => renderJudgeRow(judge, 'lower'))}
+              {visibleLowerCount < lowerThanCareer.length && (
+                <div ref={lowerSentinelRef} className="h-4" aria-hidden="true" />
+              )}
             </div>
           ) : (
             <div className="p-4 text-center text-xs text-charcoal-400">
@@ -382,28 +424,6 @@ export function DogJudgesSection({ judgeStats }: DogJudgesSectionProps) {
           )}
         </div>
       </div>
-
-      {/* Кнопка Показать всех / Свернуть в едином стиле сайта */}
-      {hasMore && (
-        <div className="mt-4 pt-3 text-center border-t border-old-money-100 flex items-center justify-center min-h-[44px]">
-          <button
-            type="button"
-            onClick={() => setShowAllJudges((v) => !v)}
-            className="inline-flex items-center gap-1.5 text-xs font-semibold text-camel-700 hover:text-camel-900 transition-colors cursor-pointer group"
-          >
-            <span className="group-hover:underline">
-              {showAllJudges
-                ? 'Свернуть до основных'
-                : formatAllExpertsButton(coursingJudges.length)}
-            </span>
-            {showAllJudges ? (
-              <ChevronUp className="w-3.5 h-3.5 text-camel-600 transition-transform group-hover:-translate-y-0.5" aria-hidden />
-            ) : (
-              <ChevronDown className="w-3.5 h-3.5 text-camel-600 transition-transform group-hover:translate-y-0.5" aria-hidden />
-            )}
-          </button>
-        </div>
-      )}
     </section>
   )
 }

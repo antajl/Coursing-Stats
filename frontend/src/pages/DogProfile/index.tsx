@@ -1,6 +1,5 @@
 import React from 'react'
 import { Navigate, useLocation } from 'react-router-dom'
-import { ArrowRight } from 'lucide-react'
 import { isShowOnlyProfileId, showDogProfilePath } from '../../lib/showDogProfilePath'
 import LoadingCard from '../../components/LoadingCard'
 import NotFound from '../NotFound'
@@ -269,130 +268,43 @@ export default function DogProfile() {
 
       {/* Страница 2: Судьи */}
       {data.activeMainTab === 'judges' && (
-        <div className="space-y-4">
-          <div className="rounded-2xl border border-old-money-200/90 bg-cream-50/80 p-3.5 sm:p-4 flex items-center justify-between gap-3 shadow-2xs">
-            <div className="min-w-0">
-              <div className="text-[11px] uppercase tracking-wider text-charcoal-500 font-semibold">
-                Судейская статистика собаки
-              </div>
-              <h1 className="text-lg sm:text-xl font-bold font-serif text-charcoal-900 truncate mt-0.5">
-                {data.displayName}
-              </h1>
-              <div className="text-xs text-charcoal-600 mt-0.5">
-                {data.dogBreed}
-              </div>
-            </div>
-            <button
-              type="button"
-              onClick={() => {
-                data.setActiveMainTab('profile')
-                if (typeof window !== 'undefined') {
-                  window.history.replaceState(null, '', location.pathname)
-                }
-              }}
-              className="shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-old-money-200 bg-white text-xs font-semibold text-charcoal-700 hover:bg-cream-100 hover:text-charcoal-950 transition-colors cursor-pointer"
-            >
-              <span>В профиль</span>
-              <ArrowRight className="w-3.5 h-3.5 text-camel-700" />
-            </button>
-          </div>
-
-          <DogJudgesSection
-            judgeStats={data.judgeStats}
-            competitions={data.events}
-          />
-        </div>
+        <DogJudgesSection
+          judgeStats={data.judgeStats}
+          competitions={data.events}
+        />
       )}
 
       {/* Страница 3: Организации */}
       {data.activeMainTab === 'organizations' && (
-        <div className="space-y-4">
-          <div className="rounded-2xl border border-old-money-200/90 bg-cream-50/80 p-3.5 sm:p-4 flex items-center justify-between gap-3 shadow-2xs">
-            <div className="min-w-0">
-              <div className="text-[11px] uppercase tracking-wider text-charcoal-500 font-semibold">
-                Победы по организациям
-              </div>
-              <h1 className="text-lg sm:text-xl font-bold font-serif text-charcoal-900 truncate mt-0.5">
-                {data.displayName}
-              </h1>
-              <div className="text-xs text-charcoal-600 mt-0.5">
-                {data.dogBreed}
-              </div>
-            </div>
-            <button
-              type="button"
-              onClick={() => {
-                data.setActiveMainTab('profile')
-                if (typeof window !== 'undefined') {
-                  window.history.replaceState(null, '', location.pathname)
-                }
-              }}
-              className="shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-old-money-200 bg-white text-xs font-semibold text-charcoal-700 hover:bg-cream-100 hover:text-charcoal-950 transition-colors cursor-pointer"
-            >
-              <span>В профиль</span>
-              <ArrowRight className="w-3.5 h-3.5 text-camel-700" />
-            </button>
-          </div>
-
-          <DogOrganizationsSection
-            competitions={data.events}
-          />
-        </div>
+        <DogOrganizationsSection
+          competitions={data.events}
+        />
       )}
 
       {/* Страница 4: Донино (только если есть замеры Донино) */}
       {data.activeMainTab === 'donino' && (
-        <div className="space-y-4">
-          <div className="rounded-2xl border border-old-money-200/90 bg-cream-50/80 p-3.5 sm:p-4 flex items-center justify-between gap-3 shadow-2xs">
-            <div className="min-w-0">
-              <div className="text-[11px] uppercase tracking-wider text-charcoal-500 font-semibold">
-                Рекорды полигона Донино
-              </div>
-              <h1 className="text-lg sm:text-xl font-bold font-serif text-charcoal-900 truncate mt-0.5">
-                {data.displayName}
-              </h1>
-              <div className="text-xs text-charcoal-600 mt-0.5">
-                {data.dogBreed}
-              </div>
-            </div>
-            <button
-              type="button"
-              onClick={() => {
-                data.setActiveMainTab('profile')
-                if (typeof window !== 'undefined') {
-                  window.history.replaceState(null, '', location.pathname)
-                }
-              }}
-              className="shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-old-money-200 bg-white text-xs font-semibold text-charcoal-700 hover:bg-cream-100 hover:text-charcoal-950 transition-colors cursor-pointer"
-            >
-              <span>В профиль</span>
-              <ArrowRight className="w-3.5 h-3.5 text-camel-700" />
-            </button>
-          </div>
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
+          {data.hasSpeedRecords && data.speedStats ? (
+            <DoninoSpeedColumn
+              speedStats={data.speedStats}
+              visibleSpeedHistory={data.visibleSpeedHistory}
+              showAllSpeedHistory={data.showAllSpeedHistory}
+              onToggleShowAll={() => data.setShowAllSpeedHistory((v) => !v)}
+            />
+          ) : (
+            <EmptyDisciplineColumn title="Замер скорости" theme="warm-blue" />
+          )}
 
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
-            {data.hasSpeedRecords && data.speedStats ? (
-              <DoninoSpeedColumn
-                speedStats={data.speedStats}
-                visibleSpeedHistory={data.visibleSpeedHistory}
-                showAllSpeedHistory={data.showAllSpeedHistory}
-                onToggleShowAll={() => data.setShowAllSpeedHistory((v) => !v)}
-              />
-            ) : (
-              <EmptyDisciplineColumn title="Замер скорости" theme="warm-blue" />
-            )}
-
-            {data.hasCoursingRecords && data.coursingStats ? (
-              <DoninoCoursingColumn
-                coursingStats={data.coursingStats}
-                visibleCoursingDoninoHistory={data.visibleCoursingDoninoHistory}
-                showAllCoursingDoninoHistory={data.showAllCoursingDoninoHistory}
-                onToggleShowAll={() => data.setShowAllCoursingDoninoHistory((v) => !v)}
-              />
-            ) : (
-              <EmptyDisciplineColumn title="Бега борзых (350 м)" theme="forest" />
-            )}
-          </div>
+          {data.hasCoursingRecords && data.coursingStats ? (
+            <DoninoCoursingColumn
+              coursingStats={data.coursingStats}
+              visibleCoursingDoninoHistory={data.visibleCoursingDoninoHistory}
+              showAllCoursingDoninoHistory={data.showAllCoursingDoninoHistory}
+              onToggleShowAll={() => data.setShowAllCoursingDoninoHistory((v) => !v)}
+            />
+          ) : (
+            <EmptyDisciplineColumn title="Бега борзых (350 м)" theme="forest" />
+          )}
         </div>
       )}
 

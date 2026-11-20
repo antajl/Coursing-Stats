@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ChevronDown, X } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 import PageToolbar from '../../components/toolbar/PageToolbar'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
 import YearDropdown from '../../components/ui/YearDropdown'
@@ -25,7 +25,7 @@ export interface ShowJudgesToolbarProps {
   dogIndex?: DogsIndexEntry[]
   gradeScope: GradeScope
   onGradeScopeChange: (scope: GradeScope) => void
-  onResetFilters: () => void
+  onResetFilters?: () => void
 }
 
 export function ShowJudgesToolbar({
@@ -41,11 +41,9 @@ export function ShowJudgesToolbar({
   gradeScope,
   onGradeScopeChange,
   dogIndex,
-  onResetFilters,
+  onResetFilters: _onResetFilters,
 }: ShowJudgesToolbarProps) {
   const [mobileYearOpen, setMobileYearOpen] = useState(false)
-
-  const hasActiveFilters = Boolean(isYearNonDefault || filterBreed || searchQuery.trim() || gradeScope !== 'adult')
 
   return (
     <PageToolbar
@@ -97,17 +95,7 @@ export function ShowJudgesToolbar({
 
             {/* Reset Filters and Info button on mobile */}
             <div className="ml-auto shrink-0 flex items-center gap-1.5">
-              {hasActiveFilters && (
-                <button
-                  type="button"
-                  onClick={onResetFilters}
-                  className="cs-glass-pill shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full !text-charcoal-500 hover:!text-charcoal-800 transition-colors cursor-pointer select-none"
-                  title="Сбросить фильтры"
-                  aria-label="Сбросить фильтры"
-                >
-                  <X className="h-4 w-4" />
-                </button>
-              )}
+
               <ShowJudgesRatingHint compact />
             </div>
           </div>
@@ -136,18 +124,7 @@ export function ShowJudgesToolbar({
               {/* Info button */}
               <ShowJudgesRatingHint />
 
-              {/* Reset Filters button — слева перед разделителем */}
-              {hasActiveFilters && (
-                <button
-                  type="button"
-                  onClick={onResetFilters}
-                  className="cs-glass-pill shrink-0 inline-flex h-8 items-center gap-1.5 rounded-full px-3 text-xs font-semibold !text-charcoal-600 hover:!text-charcoal-900 transition-colors cursor-pointer select-none"
-                  title="Сбросить все фильтры"
-                >
-                  <X className="h-3.5 w-3.5" />
-                  <span>Сбросить</span>
-                </button>
-              )}
+
             </div>
 
             {/* Разделитель между левыми контролами и породами */}

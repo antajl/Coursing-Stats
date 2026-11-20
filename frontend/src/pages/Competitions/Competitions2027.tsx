@@ -1,6 +1,6 @@
 import { useState, useMemo, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { Calendar, ChevronLeft, X, Info, ChevronDown, History } from 'lucide-react'
+import { Calendar, ChevronLeft, Info, ChevronDown, History } from 'lucide-react'
 import { SEO } from '../../components/SEO'
 import { JsonLd, breadcrumbListSchema } from '../../components/JsonLd'
 import { useEvents } from '../../hooks/useApi'
@@ -129,8 +129,6 @@ export default function Competitions2027() {
     setSearchQuery('')
     setFilterDiscipline('')
   }
-
-  const hasActiveFilters = Boolean(searchQuery || filterDiscipline)
 
   const filteredEvents = useMemo(() => {
     return events
@@ -342,17 +340,7 @@ export default function Competitions2027() {
         </div>
 
         <div className="ml-auto shrink-0 flex items-center gap-1.5">
-          {hasActiveFilters && (
-            <button
-              type="button"
-              onClick={handleResetFilters}
-              className="cs-glass-pill shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full !text-charcoal-500 hover:!text-charcoal-800 transition-colors cursor-pointer select-none"
-              title="Сбросить фильтры"
-              aria-label="Сбросить фильтры"
-            >
-              <X className="h-4 w-4" />
-            </button>
-          )}
+
 
           <Link
             to="/competitions/archive/"
@@ -378,17 +366,7 @@ export default function Competitions2027() {
           <div className="shrink-0">{infoButtonDesktop}</div>
 
           {/* Сброс фильтров */}
-          {hasActiveFilters && (
-            <button
-              type="button"
-              onClick={handleResetFilters}
-              className="cs-glass-pill shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full !text-charcoal-500 hover:!text-charcoal-800 transition-colors cursor-pointer select-none"
-              title="Сбросить фильтры"
-              aria-label="Сбросить фильтры"
-            >
-              <X className="h-4 w-4" />
-            </button>
-          )}
+
         </div>
 
         {/* Разделитель перед выбором дисциплины */}

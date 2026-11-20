@@ -1,5 +1,5 @@
 import { useState, useMemo, useRef, useEffect } from 'react'
-import { X, ChevronDown, Check, Layers } from 'lucide-react'
+import { ChevronDown, Check, Layers } from 'lucide-react'
 import { SEO } from '../../components/SEO'
 import { JsonLd, breadcrumbListSchema, itemPageSchema } from '../../components/JsonLd'
 import { CORE_BREED_HUBS } from '../../lib/breed-hubs-data'
@@ -267,11 +267,6 @@ export default function BreedsDirectory() {
 
   const listRevealRef = useListReveal(!loading && sortedBreeds.length > 0)
 
-  const hasActiveFilters =
-    searchQuery.trim().length > 0 ||
-    selectedGroup !== 'all' ||
-    selectedBreed !== 'all' ||
-    sortKey !== 'dogs'
 
   const handleSelectGroup = (groupId: string) => {
     setSelectedGroup(groupId)
@@ -312,12 +307,6 @@ export default function BreedsDirectory() {
     return b ? b.canonicalKey : selectedBreed
   }, [selectedBreed])
 
-  const clearFilters = () => {
-    setSearchQuery('')
-    setSelectedGroup('all')
-    setSelectedBreed('all')
-    setSortKey('dogs')
-  }
 
   const plaqueTitle = useMemo(() => {
     if (searchQuery.trim()) {
@@ -501,18 +490,7 @@ export default function BreedsDirectory() {
           />
         </div>
 
-        {/* Сброс фильтров */}
-        {hasActiveFilters && (
-          <button
-            type="button"
-            onClick={clearFilters}
-            className="cs-glass-pill shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full !text-charcoal-500 hover:!text-charcoal-800 transition-colors cursor-pointer select-none ml-auto"
-            title="Сбросить фильтры"
-            aria-label="Сбросить фильтры"
-          >
-            <X className="h-4 w-4" />
-          </button>
-        )}
+
       </div>
 
       {/* 2. Десктопный тулбар: две симметричные половины (ровно 50% / 50%) с центральным разделителем */}
@@ -559,19 +537,7 @@ export default function BreedsDirectory() {
                   />
                 </div>
 
-                {/* Кнопка сброса при наличии активных фильтров */}
-                {hasActiveFilters && (
-                  <button
-                    type="button"
-                    onClick={clearFilters}
-                    className="cs-glass-pill shrink-0 inline-flex h-8 px-2.5 items-center justify-center gap-1 rounded-full text-xs font-semibold !text-charcoal-600 hover:!text-charcoal-900 transition-colors cursor-pointer select-none"
-                    title="Сбросить фильтры"
-                    aria-label="Сбросить фильтры"
-                  >
-                    <X className="h-3.5 w-3.5" />
-                    <span className="hidden sm:inline">Сброс</span>
-                  </button>
-                )}
+
               </div>
             </div>
           }
