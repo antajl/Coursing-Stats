@@ -26,6 +26,7 @@ verified: 2026-11-08
 | Raw all-time `dog-ranking.json` (>220 MB) | Исключён из CDN (`publish-exclude.js`) во избежание превышения лимитов |
 | Lookup | `show-dog-lookup/{0-f}.json` шарды (~обход 25 MB) |
 | Show dog card | `shows/indexes/dog-details/{000-255}.json` (уже паки) |
+| Show Dog Single Name Invariant | В списках и карточках рейтингов выставок (`ShowDogCard.tsx`) отображается строго одиночное имя (`primary` из `parseDogName`: русское при наличии, иначе латиница). Двойное имя через слэш (`/ secondary`) в карточках списков запрещено и выводится только в шапке профиля собаки (`DogProfileHeader.tsx`). Полное имя сохраняется в HTML-атрибуте `title` для всплывающей подсказки |
 | History date sort | Даты `DD.MM.YYYY` обязаны сортироваться через ISO `toShowDateIso` / `sortShowHistory` (`show-dates.ts`); прямой `localeCompare` запрещен во избежание сортировки по дню месяца |
 | Show judge detail | `shows/indexes/judge-details/pack-*.json` (`byKey`) |
 | Show Judge Class Scope & Breed List Invariant | В карточке судьи (/shows/judges/:id) список пород и бэйджи количества строго соответствуют срезу («Взрослые», «Щенки», «Все»): щенки показывают точное число щенков (puppy_breeds / puppy_breed_counts) без фантомных взрослых; внутри спойлера породы (ShowJudgeBreedDogsList) работает lazy infinite scroll пачками по 30 собак через IntersectionObserver |
