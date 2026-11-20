@@ -273,9 +273,6 @@ export default function BreedHubColumns({
               >
                 <ChevronLeft className="w-3.5 h-3.5 text-camel-800 shrink-0" aria-hidden />
                 <span className="tracking-tight">{prevTab.label}</span>
-                <span className="text-[9px] tabular-nums font-bold px-1 py-0 rounded-full bg-camel-200/70 text-camel-900 shrink-0">
-                  {prevTab.count}
-                </span>
               </button>
             )}
 
@@ -316,9 +313,6 @@ export default function BreedHubColumns({
                 aria-label={`Перейти: ${nextTab.label}`}
               >
                 <span className="tracking-tight">{nextTab.label}</span>
-                <span className="text-[9px] tabular-nums font-bold px-1 py-0 rounded-full bg-camel-200/70 text-camel-900 shrink-0">
-                  {nextTab.count}
-                </span>
                 <ChevronRight className="w-3.5 h-3.5 text-camel-800 shrink-0" aria-hidden />
               </button>
             ) : activeTabObj && activeTabs.length === 1 ? (
