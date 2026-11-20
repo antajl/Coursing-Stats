@@ -81,12 +81,19 @@ export function DogProfileAwardsBar({
     const isSupreme = keyPrefix === 'supreme'
     const isShow = keyPrefix === 'show'
     const showKey = matchShowAwardToken(item.title)
-    // ВАЖНО: для выставок титул «ЧР» — это Чемпион России (не путать с «ЧР РК»)
-    const rawBadgeTitle = isShow
-      ? (/^(ЧР|ЮЧР|ВЧР|ЧРКФ|ЮЧРКФ|ВЧРКФ|ГЧР|ЮГЧР|ВГЧР|ЧНКП|ЮЧНКП|ВЧНКП|ЧП|ЮЧП|ВЧП|ШОУ ЧР)$/i.test(item.title)
-          ? item.title
-          : (showKey ? item.title : item.title))
-      : competitionTitleDisplayName(item.title)
+    // ВАЖНО: для выставок титул «ЧР» — это Чемпион России (не путать с «ЧР РК»),
+    // а для высших званий титул «ГЧР» — это выставочный Гранд чемпион (не путать со спортивным «ГЧР РК»).
+    const isExplicitShowOrSupremeToken =
+      /^(АЧР|ГЧР|ЮГЧР|ВГЧР|ЧР|ЮЧР|ВЧР|ЧРКФ|ЮЧРКФ|ВЧРКФ|ЧНКП|ЮЧНКП|ВЧНКП|ЧП|ЮЧП|ВЧП|ШОУ ЧР|C\.I\.B\.?|C\.I\.E\.?|C\.I\.C\.?|ГЧР РК|ГЧРКФ РК)$/i.test(
+        item.title,
+      )
+
+    const rawBadgeTitle =
+      isShow || (isSupreme && isExplicitShowOrSupremeToken)
+        ? (isExplicitShowOrSupremeToken
+            ? item.title
+            : (showKey ? item.title : item.title))
+        : competitionTitleDisplayName(item.title)
 
     // В строках «Курсинг», «Рейсинг» и «Высшие звания» опускаем суффиксы дисциплин (КБ / ББ)
     const badgeTitle = (keyPrefix === 'coursing' || keyPrefix === 'racing' || keyPrefix === 'supreme')
