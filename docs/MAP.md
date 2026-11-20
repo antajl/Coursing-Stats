@@ -7,7 +7,7 @@ verified: 2026-10-01
 
 # MAP — куда смотреть
 
-**Правило:** `AGENTS.md` → `docs/ROADMAP.md` (стратегия) / этот файл → **один** sheet. Не искать правду в git history старых `docs/site|wiki|bot`.
+**Правило:** `AGENTS.md` → `docs/ROADMAP.md` (стратегия) / `docs/invariants/` (правила доменов) / этот файл → **один** sheet. Не искать правду в git history старых `docs/site|wiki|bot`.
 
 ## Прод-факты (проверено 2026-10-01)
 
@@ -49,6 +49,18 @@ verified: 2026-10-01
 | История с ProCoursing, обращения сообщества и правовой статус | [COMMUNITY_CHRONICLE_2026.md](COMMUNITY_CHRONICLE_2026.md) |
 | Архитектурные решения (ADR) | [decisions/](decisions/) — слои CDN-паков: [014](decisions/014-cdn-packs-vs-turso.md) |
 | Термины и понятия | [GLOSSARY.md](GLOSSARY.md) |
+
+## Инварианты по доменам (docs/invariants/)
+
+| Домен | Файл инвариантов | Описание |
+|-------|------------------|----------|
+| UI & дизайн-система | [invariants/ui-design.md](invariants/ui-design.md) | Old Money, верстка, мобилка, FLIP-анимации, карусели, скролл, кнопки |
+| Соревнования и рейсинг | [invariants/competitions-racing.md](invariants/competitions-racing.md) | Протоколы, забеги, попоны, медали, зачет сезона vs CS-v2, титулы |
+| Выставки РКФ | [invariants/shows-rkf.md](invariants/shows-rkf.md) | 56k статических протоколов, Главный ринг, парсинг PDF, нормализация судей |
+| Донино | [invariants/donino.md](invariants/donino.md) | Замеры скорости km/h vs 350m, чемпионаты, синхронизация Google Sheets |
+| Судьи | [invariants/judges.md](invariants/judges.md) | Профили судей, Proper Case фамилий, расчет строгости, ленивая отрисовка |
+| Идентичность собак | [invariants/dogs-identity.md](invariants/dogs-identity.md) | Связи спорт↔выставки (`competition-links.json`), двуязычные клички, дедупликация |
+| Ops, деплой, тесты | [invariants/ops-deploy.md](invariants/ops-deploy.md) | S3 CDN, двухуровневый пререндер, gzip сжатие, Vite dev стриминг |
 
 ## Skills (коротко)
 
