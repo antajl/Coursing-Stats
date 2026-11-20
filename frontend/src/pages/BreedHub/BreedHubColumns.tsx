@@ -309,13 +309,6 @@ export default function BreedHubColumns({
                   {/* Десктопный вид (Таблица) */}
                   <div className="hidden sm:block flex-1 min-w-0">
                     <table className="w-full text-left text-sm table-auto h-full">
-                      <thead>
-                        <tr className="border-b border-old-money-200/60 bg-cream-50/50 text-[11px] font-semibold uppercase tracking-wider text-charcoal-600">
-                          <th className="py-2.5 px-2.5 w-16 text-center">Сезон</th>
-                          <th className="py-2.5 px-3">Лучшая собака года</th>
-                          <th className="py-2.5 px-3 w-36 sm:w-40 text-right">Результаты</th>
-                        </tr>
-                      </thead>
                       <tbody className="divide-y divide-old-money-100">
                         {annualLeaders.map((item) => {
                           const { primary, secondary } = parseDogName(item.name_lat, item.name_ru)

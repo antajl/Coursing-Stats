@@ -20,29 +20,47 @@ export interface DogAchievementItem {
   tooltip: string
 }
 
+function cleanDisciplineSuffix(title: string): string {
+  return title.replace(/\s*\((?:КБ|ББ|БЗМП|LC|LR)\)/gi, '').trim()
+}
+
 type DogProfileAwardsBarProps = {
-  competitionTitles: DogTitle[]
+  coursingTitles?: DogTitle[]
+  racingTitles?: DogTitle[]
+  competitionTitles?: DogTitle[]
   showTitles: DogTitle[]
   achievements?: DogAchievementItem[]
   titleExplanations?: Record<string, string>
 }
 
 export function DogProfileAwardsBar({
-  competitionTitles,
+  coursingTitles = [],
+  racingTitles = [],
+  competitionTitles = [],
   showTitles,
   achievements = [],
   titleExplanations = {},
 }: DogProfileAwardsBarProps): ReactNode {
   // Оставляем ТОЛЬКО официальные чемпионские звания РКФ/FCI (без сертификатов, без расстановок дня BIS/BIG/ЛПП и без клубных лиг)
+  const pureCoursingTitles = coursingTitles.filter((item) => isOfficialDogTitleToken(item.title, 'sport'))
+  const pureRacingTitles = racingTitles.filter((item) => isOfficialDogTitleToken(item.title, 'sport'))
   const pureCompTitles = competitionTitles.filter((item) => isOfficialDogTitleToken(item.title, 'sport'))
   const pureShowTitles = showTitles.filter((item) => isOfficialDogTitleToken(item.title, 'show'))
 
+  const hasCoursing = pureCoursingTitles.length > 0
+  const hasRacing = pureRacingTitles.length > 0
   const hasComp = pureCompTitles.length > 0
   const hasShow = pureShowTitles.length > 0
   const hasAchievements = achievements.length > 0
 
-  if (!hasComp && !hasShow && !hasAchievements) return null
+  if (!hasCoursing && !hasRacing && !hasComp && !hasShow && !hasAchievements) return null
 
+  const sortedCoursing = [...pureCoursingTitles].sort((a, b) =>
+    compareDogProfileTitles(a.title, b.title),
+  )
+  const sortedRacing = [...pureRacingTitles].sort((a, b) =>
+    compareDogProfileTitles(a.title, b.title),
+  )
   const sortedComp = [...pureCompTitles].sort((a, b) =>
     compareDogProfileTitles(a.title, b.title),
   )
@@ -54,13 +72,23 @@ export function DogProfileAwardsBar({
     const isShow = keyPrefix === 'show'
     const showKey = matchShowAwardToken(item.title)
     // ВАЖНО: для выставок титул «ЧР» — это Чемпион России (не путать с «ЧР РК»)
-    const badgeTitle = isShow
+    const rawBadgeTitle = isShow
       ? (/^(ЧР|ЮЧР|ВЧР|ЧРКФ|ЮЧРКФ|ВЧРКФ|ГЧР|ЮГЧР|ВГЧР|ЧНКП|ЮЧНКП|ВЧНКП|ЧП|ЮЧП|ВЧП|ШОУ ЧР)$/i.test(item.title)
           ? item.title
           : (showKey ? item.title : item.title))
       : competitionTitleDisplayName(item.title)
+
+    // В строках «Курсинг» и «Рейсинг» опускаем суффиксы дисциплин (КБ / ББ)
+    const badgeTitle = (keyPrefix === 'coursing' || keyPrefix === 'racing')
+      ? cleanDisciplineSuffix(rawBadgeTitle)
+      : rawBadgeTitle
+
     const line = formatTitleLine({ title: badgeTitle, count: item.count })
-    const explanation = titleExplanations[badgeTitle] || titleExplanations[item.title]
+    const explanation =
+      titleExplanations[`${keyPrefix}:${badgeTitle}`] ||
+      titleExplanations[`${keyPrefix}:${item.title}`] ||
+      titleExplanations[badgeTitle] ||
+      titleExplanations[item.title]
 
     return (
       <HoverTooltip
@@ -101,11 +129,33 @@ export function DogProfileAwardsBar({
 
   return (
     <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3 lg:gap-6">
-      {/* СЛЕВА: Титулы спорта и выставок */}
-      {(hasComp || hasShow) && (
+      {/* СЛЕВА: Титулы курсинга, рейсинга и выставок */}
+      {(hasCoursing || hasRacing || hasComp || hasShow) && (
         <div className="space-y-1.5 min-w-0 flex-1">
-          {hasComp && (
-            <div className="grid grid-cols-[4.5rem_1fr] sm:grid-cols-[5rem_1fr] items-baseline gap-2">
+          {hasCoursing && (
+            <div className="grid grid-cols-[5rem_1fr] items-baseline gap-2">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-charcoal-400 select-none">
+                Курсинг
+              </span>
+              <div className="flex flex-wrap items-center gap-1.5 min-w-0">
+                {sortedCoursing.map((item) => renderChip(item, 'coursing'))}
+              </div>
+            </div>
+          )}
+
+          {hasRacing && (
+            <div className="grid grid-cols-[5rem_1fr] items-baseline gap-2">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-charcoal-400 select-none">
+                Рейсинг
+              </span>
+              <div className="flex flex-wrap items-center gap-1.5 min-w-0">
+                {sortedRacing.map((item) => renderChip(item, 'racing'))}
+              </div>
+            </div>
+          )}
+
+          {hasComp && !hasCoursing && !hasRacing && (
+            <div className="grid grid-cols-[5rem_1fr] items-baseline gap-2">
               <span className="text-[10px] font-bold uppercase tracking-wider text-charcoal-400 select-none">
                 Спорт
               </span>
@@ -116,7 +166,7 @@ export function DogProfileAwardsBar({
           )}
 
           {hasShow && (
-            <div className="grid grid-cols-[4.5rem_1fr] sm:grid-cols-[5rem_1fr] items-baseline gap-2">
+            <div className="grid grid-cols-[5rem_1fr] items-baseline gap-2">
               <span className="text-[10px] font-bold uppercase tracking-wider text-charcoal-400 select-none">
                 Выставки
               </span>

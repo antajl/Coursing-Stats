@@ -64,6 +64,8 @@ export interface CumulativeEvaluationResult {
   completed: CumulativeTitle[]
   inProgress: CumulativeTitle[]
   all: CumulativeTitle[]
+  officialCoursingTitles: Array<{ title: string; count: number }>
+  officialRacingTitles: Array<{ title: string; count: number }>
   officialSportTitles: Array<{ title: string; count: number }>
   officialShowTitles: Array<{ title: string; count: number }>
   titleExplanations: Record<string, string>
@@ -587,50 +589,91 @@ export function evaluateCumulativeTitles(data: DogCareerData): CumulativeEvaluat
   // 4. СБОРКА ОФИЦИАЛЬНЫХ СПИСКОВ ТИТУЛОВ ДЛЯ ШАПКИ ПРОФИЛЯ
   // =========================================================================
 
-  // СПОРТ: строго официальные титулы с разделением по дисциплинам
+  // 4.1 КУРСИНГ (титулы без суффиксов, строка в UI называется «Курсинг»)
+  const officialCoursingTitles: Array<{ title: string; count: number }> = []
+
+  if (gchrSportCompleted) {
+    officialCoursingTitles.push({ title: 'ГЧР РК', count: 1 })
+  }
+  if (gchrkfCompleted) {
+    officialCoursingTitles.push({ title: 'ГЧРКФ РК', count: 1 })
+  }
+  if (coursingEval.hasChr) {
+    officialCoursingTitles.push({ title: 'ЧР РК', count: 1 })
+  }
+  if (coursingEval.nchCompleted) {
+    officialCoursingTitles.push({ title: 'НЧ РК', count: 1 })
+  }
+  if (coursingEval.pkrCount > 0) {
+    officialCoursingTitles.push({ title: 'ПКР РК', count: coursingEval.pkrCount })
+  }
+  if (coursingEval.chrkfCount > 0) {
+    officialCoursingTitles.push({ title: 'ЧРКФ РК', count: coursingEval.chrkfCount })
+  }
+  if (coursingEval.pchrkfCount > 0) {
+    officialCoursingTitles.push({ title: 'ПЧРКФ РК', count: coursingEval.pchrkfCount })
+  }
+  officialCoursingTitles.sort((a, b) => compareDogProfileTitles(a.title, b.title))
+
+  // 4.2 РЕЙСИНГ (титулы без суффиксов, строка в UI называется «Рейсинг»)
+  const officialRacingTitles: Array<{ title: string; count: number }> = []
+
+  if (gchrSportCompleted) {
+    officialRacingTitles.push({ title: 'ГЧР РК', count: 1 })
+  }
+  if (gchrkfCompleted) {
+    officialRacingTitles.push({ title: 'ГЧРКФ РК', count: 1 })
+  }
+  if (racingEval.hasChr) {
+    officialRacingTitles.push({ title: 'ЧР РК', count: 1 })
+  }
+  if (racingEval.nchCompleted) {
+    officialRacingTitles.push({ title: 'НЧ РК', count: 1 })
+  }
+  if (racingEval.pkrCount > 0) {
+    officialRacingTitles.push({ title: 'ПКР РК', count: racingEval.pkrCount })
+  }
+  if (racingEval.chrkfCount > 0) {
+    officialRacingTitles.push({ title: 'ЧРКФ РК', count: racingEval.chrkfCount })
+  }
+  if (racingEval.pchrkfCount > 0) {
+    officialRacingTitles.push({ title: 'ПЧРКФ РК', count: racingEval.pchrkfCount })
+  }
+  officialRacingTitles.sort((a, b) => compareDogProfileTitles(a.title, b.title))
+
+  // 4.3 СПОРТ (общий список для совместимости с дисциплинарными суффиксами)
   const officialSportTitles: Array<{ title: string; count: number }> = []
 
-  // Гранды рабочих качеств
   if (gchrSportCompleted) {
     officialSportTitles.push({ title: 'ГЧР РК', count: 1 })
   }
   if (gchrkfCompleted) {
     officialSportTitles.push({ title: 'ГЧРКФ РК', count: 1 })
   }
-
-  // Чемпионы России
   if (coursingEval.hasChr) {
     officialSportTitles.push({ title: 'ЧР РК (КБ)', count: 1 })
   }
   if (racingEval.hasChr) {
     officialSportTitles.push({ title: 'ЧР РК (ББ)', count: 1 })
   }
-
-  // Национальные чемпионы
   if (coursingEval.nchCompleted) {
     officialSportTitles.push({ title: 'НЧ РК (КБ)', count: 1 })
   }
   if (racingEval.nchCompleted) {
     officialSportTitles.push({ title: 'НЧ РК (ББ)', count: 1 })
   }
-
-  // Кубок России
   if (coursingEval.pkrCount > 0) {
     officialSportTitles.push({ title: 'ПКР РК (КБ)', count: coursingEval.pkrCount })
   }
   if (racingEval.pkrCount > 0) {
     officialSportTitles.push({ title: 'ПКР РК (ББ)', count: racingEval.pkrCount })
   }
-
-  // Чемпионы РКФ
   if (coursingEval.chrkfCount > 0) {
     officialSportTitles.push({ title: 'ЧРКФ РК (КБ)', count: coursingEval.chrkfCount })
   }
   if (racingEval.chrkfCount > 0) {
     officialSportTitles.push({ title: 'ЧРКФ РК (ББ)', count: racingEval.chrkfCount })
   }
-
-  // Монопородные чемпионы РКФ
   if (coursingEval.pchrkfCount > 0) {
     officialSportTitles.push({ title: 'ПЧРКФ РК (КБ)', count: coursingEval.pchrkfCount })
   }
@@ -643,6 +686,7 @@ export function evaluateCumulativeTitles(data: DogCareerData): CumulativeEvaluat
     for (const item of data.competitionTitles) {
       if (isOfficialDogTitleToken(item.title, 'sport') && !officialSportTitles.some((t) => t.title === item.title)) {
         officialSportTitles.push({ title: item.title, count: item.count })
+        officialCoursingTitles.push({ title: item.title, count: item.count })
       }
     }
   } else if (data.competitionTitles?.length) {
@@ -653,11 +697,29 @@ export function evaluateCumulativeTitles(data: DogCareerData): CumulativeEvaluat
         !officialSportTitles.some((t) => t.title.includes('C.I.C'))
       ) {
         officialSportTitles.push({ title: item.title, count: item.count })
+        officialCoursingTitles.push({ title: item.title, count: item.count })
       }
     }
   }
 
   officialSportTitles.sort((a, b) => compareDogProfileTitles(a.title, b.title))
+
+  // Тултипы с контекстом дисциплины (для всплывающих подсказок в шапке)
+  titleExplanations['coursing:ЧР РК'] = coursingEval.hasChr
+    ? `1-е место на Чемпионате России по курсингу борзых (${coursingEval.chrEvent?.date_start || ''})`
+    : 'Чемпион России по курсингу борзых'
+  titleExplanations['coursing:НЧ РК'] = coursingEval.nchBasis || 'Национальный чемпион по курсингу борзых'
+  titleExplanations['coursing:ЧРКФ РК'] = `Титул «Чемпион РКФ по рабочим качествам» в курсинге борзых (${coursingEval.chrkfCount} побед)`
+  titleExplanations['coursing:ПЧРКФ РК'] = `1-е место на Монопородном Чемпионате РКФ по курсингу борзых`
+  titleExplanations['coursing:ГЧРКФ РК'] = gchrkfBasis
+
+  titleExplanations['racing:ЧР РК'] = racingEval.hasChr
+    ? `1-е место на Чемпионате России по бегам борзых (${racingEval.chrEvent?.date_start || ''})`
+    : 'Чемпион России по бегам борзых'
+  titleExplanations['racing:НЧ РК'] = racingEval.nchBasis || 'Национальный чемпион по бегам борзых'
+  titleExplanations['racing:ЧРКФ РК'] = `Титул «Чемпион РКФ по рабочим качествам» в бегах борзых (${racingEval.chrkfCount} побед)`
+  titleExplanations['racing:ПЧРКФ РК'] = `1-е место на Монопородном Чемпионате РКФ по бегам борзых`
+  titleExplanations['racing:ГЧРКФ РК'] = gchrkfBasis
 
   // ВЫСТАВКИ: строго официальные титулы РКФ
   const officialShowTitles: Array<{ title: string; count: number }> = []
@@ -691,6 +753,8 @@ export function evaluateCumulativeTitles(data: DogCareerData): CumulativeEvaluat
     completed,
     inProgress,
     all: titles,
+    officialCoursingTitles,
+    officialRacingTitles,
     officialSportTitles,
     officialShowTitles,
     titleExplanations,
