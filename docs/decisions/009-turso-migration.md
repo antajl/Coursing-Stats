@@ -5,7 +5,12 @@
 **Updated:** 2026-10-25 (Turso removed; static S3 CDN protocols in gzip)
 **Decision:** Replace JSON CDN with Turso SQLite for exhibitions-rkf data
 
-## Context
+> [!WARNING]
+> **ИСТОРИЧЕСКИЙ ДОКУМЕНТ — SUPERSEDED BY ADR-014 & ADR-015:**
+> База данных Turso **ПОЛНОСТЬЮ УДАЛЕНА ИЗ ПРОЕКТА** в октябре–ноябре 2026 года.
+> Все протоколы выставок отдаются исключительно статически из Yandex Object Storage S3 CDN в сжатом виде gzip (`/data/v1/shows/protocols/{id}.json`). В проде нет никаких серверных баз данных или рантайм-обращений к Turso / D1.
+
+## Context (Historical)
 
 Current architecture (INTENDED):
 |- Local SQLite (`exhibitions-rkf-archive.sqlite`, 189 MB) → JSON generation → CDN
