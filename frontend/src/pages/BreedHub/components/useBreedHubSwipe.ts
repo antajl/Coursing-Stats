@@ -1,0 +1,131 @@
+import { useRef, useCallback, useEffect } from 'react'
+
+interface UseBreedHubSwipeProps {
+  activeTabsCount: number
+  activeTabIndex: number
+  onTabChange: (targetIndex: number) => void
+}
+
+export function useBreedHubSwipe({
+  activeTabsCount,
+  activeTabIndex,
+  onTabChange,
+}: UseBreedHubSwipeProps) {
+  const trackRef = useRef<HTMLDivElement>(null)
+  const touchStartRef = useRef<{ x: number; y: number; time: number } | null>(null)
+  const gestureLockRef = useRef<'horizontal' | 'vertical' | null>(null)
+  const hadMovedRef = useRef(false)
+
+  const getSlideOffset = useCallback((slideIndex: number) => {
+    return slideIndex === 0 ? '0%' : `-${slideIndex * 100}%`
+  }, [])
+
+  useEffect(() => {
+    if (trackRef.current && (typeof window === 'undefined' || window.innerWidth < 1024)) {
+      trackRef.current.style.transition = 'transform 320ms cubic-bezier(0.16, 1, 0.3, 1)'
+      trackRef.current.style.transform = `translate3d(${getSlideOffset(activeTabIndex)}, 0, 0)`
+    }
+  }, [activeTabIndex, getSlideOffset])
+
+  const startDrag = (clientX: number, clientY: number) => {
+    if (activeTabsCount <= 1 || (typeof window !== 'undefined' && window.innerWidth >= 1024)) return
+    touchStartRef.current = { x: clientX, y: clientY, time: Date.now() }
+    gestureLockRef.current = null
+    hadMovedRef.current = false
+    if (trackRef.current) {
+      trackRef.current.style.transition = 'none'
+    }
+  }
+
+  const moveDrag = (clientX: number, clientY: number) => {
+    if (!touchStartRef.current || activeTabsCount <= 1 || (typeof window !== 'undefined' && window.innerWidth >= 1024)) return
+    const touch = touchStartRef.current
+    const dx = clientX - touch.x
+    const dy = clientY - touch.y
+
+    if (Math.abs(dx) > 7 || Math.abs(dy) > 7) {
+      hadMovedRef.current = true
+    }
+
+    if (!gestureLockRef.current) {
+      const absDx = Math.abs(dx)
+      const absDy = Math.abs(dy)
+      if (absDx < 7 && absDy < 7) return
+      if (absDy >= absDx) {
+        gestureLockRef.current = 'vertical'
+        return
+      }
+      gestureLockRef.current = 'horizontal'
+    }
+
+    if (gestureLockRef.current === 'horizontal' && trackRef.current) {
+      const isAtLeftEdge = activeTabIndex === 0 && dx > 0
+      const isAtRightEdge = activeTabIndex === activeTabsCount - 1 && dx < 0
+      const appliedDx = isAtLeftEdge || isAtRightEdge ? dx * 0.22 : dx
+      const base = getSlideOffset(activeTabIndex)
+      trackRef.current.style.transform = `translate3d(calc(${base} + ${appliedDx}px), 0, 0)`
+    }
+  }
+
+  const endDrag = (clientX: number) => {
+    if (!touchStartRef.current || activeTabsCount <= 1 || (typeof window !== 'undefined' && window.innerWidth >= 1024)) return
+
+    const isHorizontal = gestureLockRef.current === 'horizontal'
+    const dx = clientX - touchStartRef.current.x
+    const dt = Date.now() - touchStartRef.current.time
+    const velocity = Math.abs(dx) / (dt || 1)
+
+    touchStartRef.current = null
+    gestureLockRef.current = null
+
+    const track = trackRef.current
+
+    if (isHorizontal && track) {
+      const isSwipeLeft = dx < -35 || (dx < -15 && velocity > 0.2)
+      const isSwipeRight = dx > 35 || (dx > 15 && velocity > 0.2)
+      let targetIndex = activeTabIndex
+
+      if (isSwipeLeft && activeTabIndex < activeTabsCount - 1) {
+        targetIndex = activeTabIndex + 1
+      } else if (isSwipeRight && activeTabIndex > 0) {
+        targetIndex = activeTabIndex - 1
+      }
+
+      track.style.transition = 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)'
+      track.style.transform = `translate3d(${getSlideOffset(targetIndex)}, 0, 0)`
+
+      if (targetIndex !== activeTabIndex) {
+        onTabChange(targetIndex)
+      }
+    } else if (track) {
+      track.style.transition = 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)'
+      track.style.transform = `translate3d(${getSlideOffset(activeTabIndex)}, 0, 0)`
+    }
+  }
+
+  const cancelDrag = () => {
+    touchStartRef.current = null
+    gestureLockRef.current = null
+    if (trackRef.current && activeTabsCount > 1) {
+      trackRef.current.style.transition = 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)'
+      trackRef.current.style.transform = `translate3d(${getSlideOffset(activeTabIndex)}, 0, 0)`
+    }
+  }
+
+  const handleClickCapture = (e: React.MouseEvent) => {
+    if (hadMovedRef.current) {
+      e.preventDefault()
+      e.stopPropagation()
+    }
+  }
+
+  return {
+    trackRef,
+    getSlideOffset,
+    startDrag,
+    moveDrag,
+    endDrag,
+    cancelDrag,
+    handleClickCapture,
+  }
+}

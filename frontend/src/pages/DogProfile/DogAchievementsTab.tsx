@@ -119,7 +119,7 @@ export function DogAchievementsTab({
           <div className="flex items-center gap-2.5 min-w-0">
             <div className="relative inline-flex shrink-0">
               <span
-                className={`inline-flex shrink-0 items-center justify-center w-[74px] sm:w-[78px] rounded-lg px-1 py-0.5 text-xs font-bold tabular-nums text-center whitespace-nowrap ${chipClass}`}
+                className={`inline-flex shrink-0 items-center justify-center min-w-[76px] sm:min-w-[82px] rounded-lg px-2.5 py-0.5 text-xs font-bold tabular-nums text-center whitespace-nowrap tracking-tight ${chipClass}`}
               >
                 {item.title}
               </span>
@@ -288,7 +288,7 @@ export function DogAchievementsTab({
                   >
                     <div className="flex items-center gap-2.5 min-w-0">
                       <span
-                        className={`inline-flex shrink-0 items-center justify-center w-[74px] sm:w-[78px] rounded-lg px-1 py-0.5 text-xs font-bold tabular-nums text-center whitespace-nowrap ${chipClass}`}
+                        className={`inline-flex shrink-0 items-center justify-center min-w-[76px] sm:min-w-[82px] rounded-lg px-2.5 py-0.5 text-xs font-bold tabular-nums text-center whitespace-nowrap tracking-tight ${chipClass}`}
                       >
                         {title.badge}
                       </span>

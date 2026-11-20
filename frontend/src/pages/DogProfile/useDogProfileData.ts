@@ -322,19 +322,14 @@ export function useDogProfileData() {
     if (hasValidCompetitionStarts) {
       tabs.push({ id: 'organizations', label: 'Организации' })
     }
-    // Вкладка «Донино» отображается ТОЛЬКО если у собаки есть подтверждённые замеры Донино
-    if (hasDonino) {
-      tabs.push({ id: 'donino', label: 'Донино' })
-    }
     return tabs
-  }, [hasCoursingStarts, judgeStats, hasValidCompetitionStarts, hasDonino])
+  }, [hasCoursingStarts, judgeStats, hasValidCompetitionStarts])
 
   const [activeMainTab, setActiveMainTab] = useState<DogProfileMainTabId>(() => {
     const hash = typeof window !== 'undefined' ? window.location.hash.replace(/^#/, '') : ''
     if (hash === 'achievements' || hash === 'awards' || hash === 'titles') return 'achievements'
     if (hash === 'judges') return 'judges'
     if (hash === 'organizations' || hash === 'orgs') return 'organizations'
-    if (hash === 'donino' || hash === 'speeds') return 'donino'
     return 'profile'
   })
 
@@ -348,12 +343,10 @@ export function useDogProfileData() {
       setActiveMainTab('judges')
     } else if ((hash === 'organizations' || hash === 'orgs') && hasValidCompetitionStarts) {
       setActiveMainTab('organizations')
-    } else if ((hash === 'donino' || hash === 'speeds') && hasDonino) {
-      setActiveMainTab('donino')
-    } else if (hash === 'profile' || hash === 'coursing' || hash === 'racing' || hash === 'shows') {
+    } else if (hash === 'profile' || hash === 'coursing' || hash === 'racing' || hash === 'shows' || hash === 'donino' || hash === 'speeds') {
       setActiveMainTab('profile')
     }
-  }, [location.hash, hasCoursingStarts, judgeStats, hasValidCompetitionStarts, hasDonino])
+  }, [location.hash, hasCoursingStarts, judgeStats, hasValidCompetitionStarts])
 
   // Fallback to profile if current tab is not available for this dog
   useEffect(() => {

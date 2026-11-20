@@ -10,8 +10,6 @@ import { CoursingColumn } from './CoursingColumn'
 import { RacingColumn } from './RacingColumn'
 import { ShowsColumn } from './ShowsColumn'
 import { EmptyDisciplineColumn } from './EmptyDisciplineColumn'
-import { DoninoSpeedColumn } from './DoninoSpeedColumn'
-import { DoninoCoursingColumn } from './DoninoCoursingColumn'
 import { MobileSubNavTabs } from '../../components/ui/MobileSubNavTabs'
 import { DogAchievementsTab } from './DogAchievementsTab'
 import { DogJudgesSection } from './DogJudgesSection'
@@ -298,33 +296,6 @@ export default function DogProfile() {
         <DogOrganizationsSection
           competitions={data.events}
         />
-      )}
-
-      {/* Страница 4: Донино (только если есть замеры Донино) */}
-      {data.activeMainTab === 'donino' && (
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
-          {data.hasSpeedRecords && data.speedStats ? (
-            <DoninoSpeedColumn
-              speedStats={data.speedStats}
-              visibleSpeedHistory={data.visibleSpeedHistory}
-              showAllSpeedHistory={data.showAllSpeedHistory}
-              onToggleShowAll={() => data.setShowAllSpeedHistory((v) => !v)}
-            />
-          ) : (
-            <EmptyDisciplineColumn title="Замер скорости" theme="warm-blue" />
-          )}
-
-          {data.hasCoursingRecords && data.coursingStats ? (
-            <DoninoCoursingColumn
-              coursingStats={data.coursingStats}
-              visibleCoursingDoninoHistory={data.visibleCoursingDoninoHistory}
-              showAllCoursingDoninoHistory={data.showAllCoursingDoninoHistory}
-              onToggleShowAll={() => data.setShowAllCoursingDoninoHistory((v) => !v)}
-            />
-          ) : (
-            <EmptyDisciplineColumn title="Бега борзых (350 м)" theme="forest" />
-          )}
-        </div>
       )}
 
       {/* Дисклеймер об источниках спортивных результатов */}
