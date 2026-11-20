@@ -4,22 +4,36 @@
 
 ---
 
-## Быстрый старт (куда смотреть)
+## Навигация (куда смотреть)
 
 | Документ | Назначение |
 |----------|------------|
 | **[MAP.md](MAP.md)** | **Главный навигатор (роутер):** таблица «Задача → 1 файл». Начните отсюда |
 | **[ROADMAP.md](ROADMAP.md)** | Стратегический план развития и 4 ветки рефакторинга |
-| **[QUICK-REFERENCE.md](QUICK-REFERENCE.md)** | 5-минутный обзор, частые команды и типовые ошибки |
-| **[GLOSSARY.md](GLOSSARY.md)** | Термины, акронимы и ключевые инварианты («Законы проекта») |
-| **[INDEX.md](INDEX.md)** | Полный алфавитный реестр документов со статусами и датами верификации |
+| **[invariants/](invariants/)** | Каталоги технических инвариантов по 7 доменам (UI, спорт, выставки, Донино, судьи, собаки, ops) |
+| **[GLOSSARY.md](GLOSSARY.md)** | Термины, акронимы и ключевые цинологические понятия («Законы проекта») |
 | **[COMMUNITY_CHRONICLE_2026.md](COMMUNITY_CHRONICLE_2026.md)** | Хроника сообщества, ProCoursing, обращения владельцев и правовой статус |
+| **[AGENTS.md](../AGENTS.md)** | Точка входа для AI-агентов, системные факты и протокол «лёрн и коммит» |
+
+---
+
+## Каталоги инвариантов (`docs/invariants/`)
+
+Жесткие технические правила и ограничения по каждому направлению разработки:
+
+- **[ui-design.md](invariants/ui-design.md)** — Old Money дизайн, цвета, типографика, FLIP-анимации, 120 FPS карусели, touch targets ≥ 44px
+- **[competitions-racing.md](invariants/competitions-racing.md)** — курсинг, рейсинг, попоны (bibs), забеги (не старты), медали, зачет сезона vs CS-v2
+- **[shows-rkf.md](invariants/shows-rkf.md)** — 56k статических протоколов, Главный ринг (Main Ring), парсинг PDF, нормализация судей
+- **[donino.md](invariants/donino.md)** — замеры скорости km/h vs 350m, чемпионаты, синхронизация Google Sheets, домен runningdog.ru
+- **[judges.md](invariants/judges.md)** — профили судей, Proper Case фамилий, расчет строгости, ленивая отрисовка списков (chunking 25–30)
+- **[dogs-identity.md](invariants/dogs-identity.md)** — связи спорт↔выставки (`competition-links.json`), двуязычные клички, фильтрация собак без результатов
+- **[ops-deploy.md](invariants/ops-deploy.md)** — S3 CDN, двухуровневый пререндер, gzip сжатие, Vite dev стриминг, запрет живых HTTP в тестах
 
 ---
 
 ## Шпаргалки по разделам (`docs/sheets/`)
 
-Единый источник правды по реализации компонентов системы:
+Архитектурное устройство компонентов и модулей:
 
 - **[00 — Overview](sheets/00-overview.md)** — архитектура, стек, ограничения
 - **[01 — Three Domains](sheets/01-three-domains.md)** — границы Соревнований, Выставок и Донино
@@ -51,9 +65,9 @@
 - **[ADR-004](decisions/004-home-page-refactoring.md)** — Рефакторинг главной страницы
 - **[ADR-005](decisions/005-telegram-bot-integration.md)** — Интеграция Telegram-бота
 - **[ADR-006](decisions/006-pdf-processing-optimization.md)** — Оптимизация обработки PDF выставок
-- **[ADR-007](decisions/007-exhibitions-rkf-sqlite-migration.md)** — Миграция каталогов РКФ в SQLite
+- **[ADR-007](decisions/007-exhibitions-rkf-sqlite-migration.md)** — *[Superseded]* Миграция каталогов РКФ в SQLite (заменено на статический S3 CDN)
 - **[ADR-008](decisions/008-unified-event-structure.md)** — *[Deprecated]* Унификация структуры событий
-- **[ADR-009](decisions/009-turso-migration.md)** — *[Superseded]* Хранение протоколов выставок в Turso libSQL (заменено на S3 CDN)
+- **[ADR-009](decisions/009-turso-migration.md)** — *[Superseded]* Хранение протоколов выставок в Turso libSQL (Turso полностью удален, заменен на S3 CDN)
 - **[ADR-010](decisions/010-automatic-rkf-monitoring.md)** — *[Deprecated]* Автомониторинг календаря РКФ
 - **[ADR-012](decisions/012-typescript-strict-and-structured-logging.md)** — Строгий TypeScript и структурированное логирование
 - **[ADR-013](decisions/013-ai-readable-documentation-architecture.md)** — Архитектура документации (MAP + sheets)
