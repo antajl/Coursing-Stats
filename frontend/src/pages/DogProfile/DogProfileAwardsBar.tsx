@@ -108,15 +108,9 @@ export function DogProfileAwardsBar({
         key={`${keyPrefix}-${badgeTitle}`}
         label={
           <div className="flex flex-col gap-1.5 max-w-sm text-left">
-            <div className="flex items-center gap-2">
-              <span
-                className={`inline-flex shrink-0 items-center gap-1 rounded-md px-1.5 py-0.5 text-[11px] tabular-nums whitespace-nowrap ${chipClass}`}
-              >
-                <span>{line}</span>
-              </span>
-              <span className="text-xs font-bold leading-snug text-charcoal-900">
-                {fullTitleName}
-              </span>
+            <div className="text-xs font-bold leading-snug text-charcoal-900">
+              {fullTitleName}
+              {item.count > 1 ? ` (×${item.count})` : ''}
             </div>
             {explanation && (
               <p className="text-[11px] leading-snug text-charcoal-600 font-normal border-t border-cream-200/80 pt-1.5 mt-0.5">

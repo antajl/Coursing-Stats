@@ -8,7 +8,6 @@ import {
   Clock,
   ArrowUpRight,
   ChevronDown,
-  ChevronUp,
   Sparkles,
   Zap,
   Rabbit,
@@ -19,7 +18,7 @@ import {
 } from 'lucide-react'
 import { titleBadgeClass } from '../../lib/qualificationTitles'
 import { getFullTitleLabel } from '../../lib/awardTooltip'
-import type { CumulativeEvaluationResult, CumulativeTitle } from '../../lib/cumulativeTitles'
+import type { CumulativeEvaluationResult } from '../../lib/cumulativeTitles'
 import type { ProfileHeaderRank } from './DogProfileHeader'
 import type { ShowDogCardData } from '../Shows/ShowDogCard'
 
@@ -50,6 +49,7 @@ export function DogAchievementsTab({
   eventResultsUrls = {},
   breed,
 }: DogAchievementsTabProps) {
+  // По умолчанию ВСЕ спойлеры скрыты: {}
   const [expandedTitles, setExpandedTitles] = useState<Record<string, boolean>>({})
 
   const toggleTitle = (id: string) => {
@@ -90,6 +90,163 @@ export function DogAchievementsTab({
   const coursingRank = ranks.find((r) => r.key === 'coursing')
   const racingRank = ranks.find((r) => r.key === 'racing')
   const showRank = ranks.find((r) => r.key === 'shows')
+
+  // Хелпер для отрисовки спойлера оформленного титула
+  const renderCompletedTitleCard = (
+    item: { title: string; count: number },
+    category: 'supreme' | 'coursing' | 'racing' | 'show',
+    borderColor: string,
+    bgColor: string,
+  ) => {
+    const key = `completed-${category}-${item.title}`
+    const isExpanded = Boolean(expandedTitles[key])
+    const isShow = category === 'show'
+    const explanation =
+      cumulativeTitles.titleExplanations[`${category}:${item.title}`] ||
+      cumulativeTitles.titleExplanations[item.title]
+    const chipClass = titleBadgeClass(item.title)
+    const fullLabel = getFullTitleLabel(item.title, isShow)
+
+    return (
+      <div
+        key={key}
+        className={`rounded-xl border transition-colors overflow-hidden ${borderColor} ${bgColor}`}
+      >
+        <div
+          role="button"
+          tabIndex={0}
+          onClick={() => toggleTitle(key)}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault()
+              toggleTitle(key)
+            }
+          }}
+          className="p-3.5 flex items-center justify-between gap-3 cursor-pointer select-none hover:bg-black/[0.02] transition-colors"
+          aria-expanded={isExpanded}
+        >
+          <div className="flex items-center gap-3 min-w-0">
+            <span
+              className={`inline-flex shrink-0 items-center justify-center rounded-lg px-2.5 py-1 text-xs font-bold tabular-nums whitespace-nowrap ${chipClass}`}
+            >
+              {item.title} {item.count > 1 ? `×${item.count}` : ''}
+            </span>
+            <h4 className="text-sm font-bold text-charcoal-900 leading-snug">{fullLabel}</h4>
+          </div>
+
+          <div className="flex items-center gap-1.5 shrink-0 text-charcoal-400">
+            <span className="text-[11px] hidden sm:inline text-charcoal-500 font-normal">
+              {isExpanded ? 'Свернуть' : 'Подробнее'}
+            </span>
+            <ChevronDown
+              className={`w-4 h-4 transition-transform duration-200 ${
+                isExpanded ? 'rotate-180 text-charcoal-700' : 'text-charcoal-400'
+              }`}
+              aria-hidden
+            />
+          </div>
+        </div>
+
+        {isExpanded && explanation && (
+          <div className="px-3.5 pb-3.5 pt-2 text-xs text-charcoal-600 border-t border-old-money-100/70 bg-cream-50/40 leading-relaxed animate-in fade-in duration-150">
+            <span className="font-semibold text-charcoal-800">Нормативное основание: </span>
+            <span>{explanation}</span>
+          </div>
+        )}
+      </div>
+    )
+  }
+
+  // Хелпер для отрисовки спойлера сертификатов
+  const renderCertificateCard = (
+    id: string,
+    title: string,
+    badgeText: string,
+    subtitle: string,
+    eventsList: Array<{ eventId?: number | string; title: string; date?: string }>,
+    disciplineTheme: 'forest' | 'sky' | 'camel',
+    extraNote?: string,
+  ) => {
+    const isExpanded = Boolean(expandedTitles[id])
+    const themeText =
+      disciplineTheme === 'forest'
+        ? 'text-forest-800'
+        : disciplineTheme === 'sky'
+          ? 'text-sky-800'
+          : 'text-camel-800'
+
+    return (
+      <div className="rounded-xl border border-old-money-200/80 bg-cream-50/30 overflow-hidden">
+        <div
+          role="button"
+          tabIndex={0}
+          onClick={() => toggleTitle(id)}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault()
+              toggleTitle(id)
+            }
+          }}
+          className="p-4 flex items-center justify-between gap-3 cursor-pointer select-none hover:bg-cream-100/50 transition-colors"
+          aria-expanded={isExpanded}
+        >
+          <div className="min-w-0">
+            <div className={`text-xs font-bold uppercase tracking-wider ${themeText}`}>
+              {title}
+            </div>
+            <p className="text-xs text-charcoal-600 mt-0.5">{subtitle}</p>
+          </div>
+
+          <div className="flex items-center gap-2 shrink-0">
+            <span className="text-sm font-bold text-charcoal-900 tabular-nums">
+              {badgeText}
+            </span>
+            {eventsList.length > 0 && (
+              <ChevronDown
+                className={`w-4 h-4 transition-transform duration-200 ${
+                  isExpanded ? 'rotate-180 text-charcoal-700' : 'text-charcoal-400'
+                }`}
+                aria-hidden
+              />
+            )}
+          </div>
+        </div>
+
+        {extraNote && !isExpanded && (
+          <div className="px-4 pb-3 text-xs text-charcoal-500">{extraNote}</div>
+        )}
+
+        {isExpanded && eventsList.length > 0 && (
+          <div className="px-4 pb-4 pt-2 border-t border-cream-200/80 bg-white space-y-2 animate-in fade-in duration-150">
+            {extraNote && <div className="text-xs text-charcoal-500 mb-2">{extraNote}</div>}
+            <div className="space-y-1.5">
+              {eventsList.map((ev, i) => (
+                <div
+                  key={i}
+                  className="text-xs text-charcoal-700 flex items-center justify-between gap-2"
+                >
+                  <span className="truncate">{ev.title}</span>
+                  <div className="flex items-center gap-1.5 shrink-0">
+                    {ev.date && <span className="text-[11px] text-charcoal-400">{ev.date}</span>}
+                    {ev.eventId && eventResultsUrls[ev.eventId] && (
+                      <Link
+                        to={eventResultsUrls[ev.eventId]}
+                        className="text-camel-700 hover:text-camel-900 inline-flex items-center p-0.5"
+                        title="Открыть протокол"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <ExternalLink className="w-3.5 h-3.5" />
+                      </Link>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    )
+  }
 
   return (
     <div className="space-y-6">
@@ -171,13 +328,27 @@ export function DogAchievementsTab({
 
           <div className="divide-y divide-amber-200/50 bg-white/70">
             {inProgressTitles.map((title) => {
-              const isExpanded = expandedTitles[title.id] ?? true
+              // ВСЕ СПОЙЛЕРЫ СКРЫТЫ ПО УМОЛЧАНИЮ
+              const isExpanded = Boolean(expandedTitles[title.id])
               const chipClass = titleBadgeClass(title.badge)
               const isSupreme = title.domain === 'supreme'
 
               return (
-                <div key={title.id} className="p-4 sm:p-5 transition-colors">
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <div key={title.id} className="transition-colors">
+                  {/* КЛИК НА ВСЮ СТРОКУ ТИТУЛА */}
+                  <div
+                    role="button"
+                    tabIndex={0}
+                    onClick={() => toggleTitle(title.id)}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault()
+                        toggleTitle(title.id)
+                      }
+                    }}
+                    className="p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 cursor-pointer select-none hover:bg-amber-100/30 transition-colors"
+                    aria-expanded={isExpanded}
+                  >
                     <div className="flex items-start gap-3 min-w-0">
                       <span
                         className={`inline-flex shrink-0 items-center justify-center rounded-lg px-2.5 py-1 text-xs font-bold tabular-nums whitespace-nowrap ${chipClass}`}
@@ -210,37 +381,35 @@ export function DogAchievementsTab({
                           выполнено
                         </div>
                       </div>
-                      <button
-                        type="button"
-                        onClick={() => toggleTitle(title.id)}
-                        className="p-1 rounded-lg text-charcoal-400 hover:text-charcoal-700 hover:bg-cream-100 min-h-[36px] min-w-[36px] flex items-center justify-center cursor-pointer"
-                        aria-label={isExpanded ? 'Свернуть детали' : 'Развернуть детали'}
-                      >
-                        {isExpanded ? (
-                          <ChevronUp className="w-4 h-4" />
-                        ) : (
-                          <ChevronDown className="w-4 h-4" />
-                        )}
-                      </button>
+                      <div className="p-1 rounded-lg text-charcoal-400 min-h-[36px] min-w-[36px] flex items-center justify-center">
+                        <ChevronDown
+                          className={`w-4 h-4 transition-transform duration-200 ${
+                            isExpanded ? 'rotate-180 text-amber-800' : 'text-charcoal-400'
+                          }`}
+                          aria-hidden
+                        />
+                      </div>
                     </div>
                   </div>
 
                   {/* Шкала прогресса */}
-                  <div className="mt-3 w-full bg-cream-200/70 rounded-full h-2 overflow-hidden">
-                    <div
-                      className={`h-full rounded-full transition-all duration-500 ${
-                        title.progressPercent >= 75
-                          ? 'bg-gradient-to-r from-forest-500 to-forest-600'
-                          : 'bg-gradient-to-r from-amber-500 to-amber-600'
-                      }`}
-                      style={{ width: `${title.progressPercent}%` }}
-                    />
+                  <div className="px-4 sm:px-5 pb-3">
+                    <div className="w-full bg-cream-200/70 rounded-full h-2 overflow-hidden">
+                      <div
+                        className={`h-full rounded-full transition-all duration-500 ${
+                          title.progressPercent >= 75
+                            ? 'bg-gradient-to-r from-forest-500 to-forest-600'
+                            : 'bg-gradient-to-r from-amber-500 to-amber-600'
+                        }`}
+                        style={{ width: `${title.progressPercent}%` }}
+                      />
+                    </div>
                   </div>
 
-                  {/* Детали условий и следующий шаг */}
+                  {/* Детали условий и следующий шаг (скрыто по умолчанию) */}
                   {isExpanded && (
-                    <div className="mt-4 pt-3.5 border-t border-cream-200/70 space-y-2.5">
-                      <div className="space-y-1.5">
+                    <div className="px-4 sm:px-5 pb-5 pt-1 border-t border-amber-200/40 space-y-2.5 animate-in fade-in duration-150">
+                      <div className="space-y-1.5 pt-2">
                         {title.requirements.map((req, rIdx) => (
                           <div
                             key={rIdx}
@@ -266,7 +435,7 @@ export function DogAchievementsTab({
                       </div>
 
                       {title.nextStepAdvice && (
-                        <div className="mt-3 rounded-xl bg-amber-100/60 border border-amber-300/80 p-3 text-xs text-amber-950 flex items-start gap-2">
+                        <div className="mt-3 rounded-xl bg-amber-100/70 border border-amber-300/80 p-3 text-xs text-amber-950 flex items-start gap-2">
                           <Target className="w-4 h-4 text-amber-700 shrink-0 mt-0.5" aria-hidden />
                           <div>
                             <span className="font-semibold text-amber-900">Что осталось сделать: </span>
@@ -293,7 +462,7 @@ export function DogAchievementsTab({
                 Оформленные официальные чемпионские звания
               </h2>
               <p className="text-xs text-charcoal-500">
-                Титулы системы РКФ и FCI с подтверждёнными основаниями выдачи
+                Титулы системы РКФ и FCI: нажмите на строку звания для просмотра оснований
               </p>
             </div>
           </div>
@@ -316,32 +485,14 @@ export function DogAchievementsTab({
                   <span>Высшие звания (междисциплинарные и пожизненные)</span>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  {supremeTitles.map((item) => {
-                    const explanation =
-                      cumulativeTitles.titleExplanations[`supreme:${item.title}`] ||
-                      cumulativeTitles.titleExplanations[item.title]
-                    const chipClass = titleBadgeClass(item.title)
-                    const fullLabel = getFullTitleLabel(item.title, false)
-
-                    return (
-                      <div
-                        key={`supreme-${item.title}`}
-                        className="rounded-xl border border-amber-200/90 bg-amber-50/40 p-3.5 flex items-start gap-3"
-                      >
-                        <span className={`inline-flex shrink-0 items-center justify-center rounded-lg px-2 py-0.5 text-xs font-bold tabular-nums whitespace-nowrap ${chipClass}`}>
-                          {item.title}
-                        </span>
-                        <div className="min-w-0">
-                          <h4 className="text-sm font-bold text-charcoal-900">{fullLabel}</h4>
-                          {explanation && (
-                            <p className="text-xs text-charcoal-600 mt-1 leading-relaxed">
-                              {explanation}
-                            </p>
-                          )}
-                        </div>
-                      </div>
-                    )
-                  })}
+                  {supremeTitles.map((item) =>
+                    renderCompletedTitleCard(
+                      item,
+                      'supreme',
+                      'border-amber-200/90',
+                      'bg-amber-50/40',
+                    ),
+                  )}
                 </div>
               </div>
             )}
@@ -354,32 +505,14 @@ export function DogAchievementsTab({
                   <span>Курсинг борзых</span>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  {coursingTitles.map((item) => {
-                    const explanation =
-                      cumulativeTitles.titleExplanations[`coursing:${item.title}`] ||
-                      cumulativeTitles.titleExplanations[item.title]
-                    const chipClass = titleBadgeClass(item.title)
-                    const fullLabel = getFullTitleLabel(item.title, false)
-
-                    return (
-                      <div
-                        key={`coursing-${item.title}`}
-                        className="rounded-xl border border-old-money-200/80 bg-white p-3.5 flex items-start gap-3"
-                      >
-                        <span className={`inline-flex shrink-0 items-center justify-center rounded-lg px-2 py-0.5 text-xs font-bold tabular-nums whitespace-nowrap ${chipClass}`}>
-                          {item.title} {item.count > 1 ? `×${item.count}` : ''}
-                        </span>
-                        <div className="min-w-0">
-                          <h4 className="text-sm font-bold text-charcoal-900">{fullLabel}</h4>
-                          {explanation && (
-                            <p className="text-xs text-charcoal-600 mt-1 leading-relaxed">
-                              {explanation}
-                            </p>
-                          )}
-                        </div>
-                      </div>
-                    )
-                  })}
+                  {coursingTitles.map((item) =>
+                    renderCompletedTitleCard(
+                      item,
+                      'coursing',
+                      'border-old-money-200/80',
+                      'bg-white',
+                    ),
+                  )}
                 </div>
               </div>
             )}
@@ -392,32 +525,14 @@ export function DogAchievementsTab({
                   <span>Бега борзых (рейсинг)</span>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  {racingTitles.map((item) => {
-                    const explanation =
-                      cumulativeTitles.titleExplanations[`racing:${item.title}`] ||
-                      cumulativeTitles.titleExplanations[item.title]
-                    const chipClass = titleBadgeClass(item.title)
-                    const fullLabel = getFullTitleLabel(item.title, false)
-
-                    return (
-                      <div
-                        key={`racing-${item.title}`}
-                        className="rounded-xl border border-old-money-200/80 bg-white p-3.5 flex items-start gap-3"
-                      >
-                        <span className={`inline-flex shrink-0 items-center justify-center rounded-lg px-2 py-0.5 text-xs font-bold tabular-nums whitespace-nowrap ${chipClass}`}>
-                          {item.title} {item.count > 1 ? `×${item.count}` : ''}
-                        </span>
-                        <div className="min-w-0">
-                          <h4 className="text-sm font-bold text-charcoal-900">{fullLabel}</h4>
-                          {explanation && (
-                            <p className="text-xs text-charcoal-600 mt-1 leading-relaxed">
-                              {explanation}
-                            </p>
-                          )}
-                        </div>
-                      </div>
-                    )
-                  })}
+                  {racingTitles.map((item) =>
+                    renderCompletedTitleCard(
+                      item,
+                      'racing',
+                      'border-old-money-200/80',
+                      'bg-white',
+                    ),
+                  )}
                 </div>
               </div>
             )}
@@ -430,24 +545,14 @@ export function DogAchievementsTab({
                   <span>Выставки РКФ (экстерьер)</span>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  {showTitles.map((item) => {
-                    const chipClass = titleBadgeClass(item.title)
-                    const fullLabel = getFullTitleLabel(item.title, true)
-
-                    return (
-                      <div
-                        key={`show-${item.title}`}
-                        className="rounded-xl border border-old-money-200/80 bg-white p-3.5 flex items-start gap-3"
-                      >
-                        <span className={`inline-flex shrink-0 items-center justify-center rounded-lg px-2 py-0.5 text-xs font-bold tabular-nums whitespace-nowrap ${chipClass}`}>
-                          {item.title} {item.count > 1 ? `×${item.count}` : ''}
-                        </span>
-                        <div className="min-w-0">
-                          <h4 className="text-sm font-bold text-charcoal-900">{fullLabel}</h4>
-                        </div>
-                      </div>
-                    )
-                  })}
+                  {showTitles.map((item) =>
+                    renderCompletedTitleCard(
+                      item,
+                      'show',
+                      'border-old-money-200/80',
+                      'bg-white',
+                    ),
+                  )}
                 </div>
               </div>
             )}
@@ -474,96 +579,37 @@ export function DogAchievementsTab({
         <div className="p-4 sm:p-5 space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {/* CACL Курсинг */}
-            <div className="rounded-xl border border-old-money-200/80 p-4 bg-cream-50/30">
-              <div className="flex items-center justify-between">
-                <span className="text-xs font-bold uppercase tracking-wider text-forest-800">
-                  CACL · Курсинг борзых
-                </span>
-                <span className="text-sm font-bold text-charcoal-900 tabular-nums">
-                  {certs.caclEventsCoursing.length} серт.
-                </span>
-              </div>
-              <p className="text-xs text-charcoal-600 mt-1">
-                Кандидат в чемпионы России по рабочим качествам собак (курсинг)
-              </p>
-              {certs.caclEventsCoursing.length > 0 && (
-                <div className="mt-3 space-y-1.5 pt-2 border-t border-cream-200">
-                  {certs.caclEventsCoursing.map((ev, i) => (
-                    <div key={i} className="text-xs text-charcoal-700 flex items-center justify-between gap-2">
-                      <span className="truncate">{ev.title}</span>
-                      <div className="flex items-center gap-1.5 shrink-0">
-                        {ev.date && <span className="text-[11px] text-charcoal-400">{ev.date}</span>}
-                        {ev.eventId && eventResultsUrls[ev.eventId] && (
-                          <Link
-                            to={eventResultsUrls[ev.eventId]}
-                            className="text-camel-700 hover:text-camel-900"
-                            title="Открыть протокол состязания"
-                          >
-                            <ExternalLink className="w-3 h-3" />
-                          </Link>
-                        )}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
+            {renderCertificateCard(
+              'cert-cacl-coursing',
+              'CACL · Курсинг борзых',
+              `${certs.caclEventsCoursing.length} серт.`,
+              'Кандидат в чемпионы России по рабочим качествам собак (курсинг)',
+              certs.caclEventsCoursing,
+              'forest',
+            )}
 
             {/* CACL Бега борзых */}
-            <div className="rounded-xl border border-old-money-200/80 p-4 bg-cream-50/30">
-              <div className="flex items-center justify-between">
-                <span className="text-xs font-bold uppercase tracking-wider text-sky-800">
-                  CACL · Бега борзых
-                </span>
-                <span className="text-sm font-bold text-charcoal-900 tabular-nums">
-                  {certs.caclEventsRacing.length} серт.
-                </span>
-              </div>
-              <p className="text-xs text-charcoal-600 mt-1">
-                Кандидат в чемпионы России по рабочим качествам собак (рейсинг)
-              </p>
-              {certs.caclEventsRacing.length > 0 && (
-                <div className="mt-3 space-y-1.5 pt-2 border-t border-cream-200">
-                  {certs.caclEventsRacing.map((ev, i) => (
-                    <div key={i} className="text-xs text-charcoal-700 flex items-center justify-between gap-2">
-                      <span className="truncate">{ev.title}</span>
-                      <div className="flex items-center gap-1.5 shrink-0">
-                        {ev.date && <span className="text-[11px] text-charcoal-400">{ev.date}</span>}
-                        {ev.eventId && eventResultsUrls[ev.eventId] && (
-                          <Link
-                            to={eventResultsUrls[ev.eventId]}
-                            className="text-camel-700 hover:text-camel-900"
-                            title="Открыть протокол забега"
-                          >
-                            <ExternalLink className="w-3 h-3" />
-                          </Link>
-                        )}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
+            {renderCertificateCard(
+              'cert-cacl-racing',
+              'CACL · Бега борзых',
+              `${certs.caclEventsRacing.length} серт.`,
+              'Кандидат в чемпионы России по рабочим качествам собак (рейсинг)',
+              certs.caclEventsRacing,
+              'sky',
+            )}
 
             {/* CAC Выставки */}
-            <div className="rounded-xl border border-old-money-200/80 p-4 bg-cream-50/30">
-              <div className="flex items-center justify-between">
-                <span className="text-xs font-bold uppercase tracking-wider text-camel-800">
-                  CAC · Выставки РКФ
-                </span>
-                <span className="text-sm font-bold text-charcoal-900 tabular-nums">
-                  {totalCac} серт.
-                </span>
-              </div>
-              <p className="text-xs text-charcoal-600 mt-1">
-                Кандидат в чемпионы России по красоте (экстерьер)
-              </p>
-              {certs.uniqueCacJudgesCount > 0 && (
-                <div className="mt-2 text-xs text-charcoal-500">
-                  Подтверждено под {certs.uniqueCacJudgesCount} разными судьями РКФ
-                </div>
-              )}
-            </div>
+            {renderCertificateCard(
+              'cert-cac-shows',
+              'CAC · Выставки РКФ',
+              `${totalCac} серт.`,
+              'Кандидат в чемпионы России по красоте (экстерьер)',
+              certs.cacShowEvents,
+              'camel',
+              certs.uniqueCacJudgesCount > 0
+                ? `Подтверждено под ${certs.uniqueCacJudgesCount} разными судьями РКФ`
+                : undefined,
+            )}
 
             {/* Беговой допуск РКФ */}
             <div className="rounded-xl border border-old-money-200/80 p-4 bg-cream-50/30">
