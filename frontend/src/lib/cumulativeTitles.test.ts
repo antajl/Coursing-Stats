@@ -187,6 +187,22 @@ describe('evaluateCumulativeTitles', () => {
       { title: 'ПЧРКФ РК (КБ)', count: 1 },
     ])
 
+    // 5.1 Official coursing titles (without (КБ) suffix)
+    expect(officialCoursingTitles).toEqual([
+      { title: 'ГЧРКФ РК', count: 1 },
+      { title: 'НЧ РК', count: 1 },
+      { title: 'ЧРКФ РК', count: 1 },
+      { title: 'ПЧРКФ РК', count: 1 },
+    ])
+
+    // 5.2 Official racing titles (without (ББ) suffix)
+    expect(officialRacingTitles).toEqual([
+      { title: 'ГЧРКФ РК', count: 1 },
+      { title: 'ЧР РК', count: 1 },
+      { title: 'НЧ РК', count: 1 },
+      { title: 'ЧРКФ РК', count: 2 },
+    ])
+
     // 6. Non-official certificates and leagues are strictly excluded
     expect(officialSportTitles.some((t) => t.title.includes('Абсолют'))).toBe(false)
     expect(officialSportTitles.some((t) => t.title.includes('CACL'))).toBe(false)

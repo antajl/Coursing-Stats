@@ -104,15 +104,21 @@ describe('breed-hubs-data', () => {
 
   it('breed annual leaders index has valid structure and historical records', () => {
     expect(annualLeaders.schema).toBe('coursing-stats/breed-annual-leaders-v1')
-    expect(annualLeaders.breeds_with_data).toBeGreaterThanOrEqual(30)
-    expect(annualLeaders.total_entries).toBeGreaterThanOrEqual(150)
+    expect(annualLeaders.breeds_with_data).toBeGreaterThanOrEqual(50)
+    expect(annualLeaders.total_entries).toBeGreaterThanOrEqual(300)
 
-    const leadersBySlug = annualLeaders.leaders_by_slug as Record<string, any[]>
-    expect(leadersBySlug.whippet.length).toBeGreaterThanOrEqual(8)
-    expect(leadersBySlug.saluki.length).toBeGreaterThanOrEqual(8)
-    expect(leadersBySlug.borzoi.length).toBeGreaterThanOrEqual(8)
+    const coursingBySlug = (annualLeaders.coursing_by_slug || annualLeaders.leaders_by_slug) as Record<string, any[]>
+    expect(coursingBySlug.whippet.length).toBe(12)
+    expect(coursingBySlug.saluki.length).toBe(12)
+    expect(coursingBySlug.borzoi.length).toBe(12)
 
-    for (const leader of leadersBySlug.whippet) {
+    const racingBySlug = annualLeaders.racing_by_slug as Record<string, any[]>
+    expect(racingBySlug).toBeDefined()
+    expect(racingBySlug.whippet.length).toBeGreaterThanOrEqual(8)
+    expect(racingBySlug.saluki.length).toBeGreaterThanOrEqual(8)
+    expect(racingBySlug.borzoi.length).toBeGreaterThanOrEqual(8)
+
+    for (const leader of coursingBySlug.whippet) {
       expect(leader.year).toBeGreaterThanOrEqual(2015)
       expect(leader.dog_id).toBeGreaterThan(0)
       expect(leader.name_lat).toBeTruthy()
