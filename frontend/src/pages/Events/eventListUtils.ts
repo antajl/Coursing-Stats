@@ -27,7 +27,7 @@ export interface CalendarEvent {
 
 export function getEventDiscipline(event: { event_type?: string | null; competition_kind?: string | null }): string {
   if (event.event_type === 'other') return 'other';
-  const kind = (event.competition_kind || '').trim().toLowerCase();
+  const kind = String(event.competition_kind ?? '').trim().toLowerCase();
   if (kind === 'клубный чемпионат' || kind === 'дружественные забеги') {
     return 'other';
   }

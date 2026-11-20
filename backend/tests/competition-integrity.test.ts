@@ -3,6 +3,18 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { countDuplicateCompetitionGroups } from '../lib/competition-fingerprint'
+import {
+  groupResultsByBreedClass,
+  groupRacingResults,
+  parseRawScores,
+  getBestTimesByRace,
+  isRacingFormat,
+  isCoursingFormat,
+  normalizeBibColorName,
+  bibColorStyle,
+  bibTextClass,
+} from '../../frontend/src/pages/Events/EventResults/utils'
+import { getHeatDistance } from '../../frontend/src/pages/Events/EventResults/components/ProtocolHeatBadge'
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..')
 const V1 = path.join(ROOT, 'data/v1')
@@ -104,5 +116,53 @@ describe('competition integrity', () => {
     // 1464 should resolve to canonical 20240833
     expect(eventsById['1464']).toBeDefined()
     expect(eventsById['1464']?.results_file).toContain('20240833')
+  })
+
+  it('ensures all 193 competition protocols on disk render without runtime errors in frontend views and bib normalization', () => {
+    const allCompFiles = walkJsonFiles(COMPS_DIR)
+    const errors: string[] = []
+
+    for (const compPath of allCompFiles) {
+      try {
+        const data = JSON.parse(fs.readFileSync(compPath, 'utf-8'))
+        const results = data.results || []
+
+        const isMultiDiscipline = (() => {
+          const hasRacing = results.some((r: any) => isRacingFormat(parseRawScores(r.raw_scores_json)))
+          const hasCoursing = results.some((r: any) => isCoursingFormat(parseRawScores(r.raw_scores_json)))
+          return hasRacing && hasCoursing
+        })()
+
+        const isRacing = isMultiDiscipline
+          ? false
+          : results.some((r: any) => isRacingFormat(parseRawScores(r.raw_scores_json)))
+
+        if (isRacing) {
+          groupRacingResults(results)
+          getBestTimesByRace(results)
+        } else {
+          groupResultsByBreedClass(results)
+        }
+
+        for (const r of results) {
+          const raw = parseRawScores(r.raw_scores_json)
+          if (raw && raw.heats) {
+            for (const h of raw.heats) {
+              normalizeBibColorName(h.bib_color, false)
+              normalizeBibColorName(h.bib_color, true)
+              bibColorStyle(h.bib_color, false)
+              bibColorStyle(h.bib_color, true)
+              bibTextClass(h.bib_color, false)
+              bibTextClass(h.bib_color, true)
+              getHeatDistance(h, raw)
+            }
+          }
+        }
+      } catch (err: any) {
+        errors.push(`${compPath}: ${err.message}`)
+      }
+    }
+
+    expect(errors).toEqual([])
   })
 })
