@@ -252,10 +252,17 @@ export function useDogProfileData() {
   // Строго официальные титулы РКФ с разделением по спортивным дисциплинам и выставкам
   const titleGroups = useMemo(() => {
     return {
+      coursing: cumulativeTitles.officialCoursingTitles,
+      racing: cumulativeTitles.officialRacingTitles,
       competition: cumulativeTitles.officialSportTitles,
       show: cumulativeTitles.officialShowTitles,
     }
-  }, [cumulativeTitles.officialSportTitles, cumulativeTitles.officialShowTitles])
+  }, [
+    cumulativeTitles.officialCoursingTitles,
+    cumulativeTitles.officialRacingTitles,
+    cumulativeTitles.officialSportTitles,
+    cumulativeTitles.officialShowTitles,
+  ])
 
   const titleExplanations = useMemo(() => {
     return cumulativeTitles.titleExplanations
