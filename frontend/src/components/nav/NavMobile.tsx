@@ -55,7 +55,7 @@ export function NavMobile({
   return (
     <>
       {/* Мобильная верхняя планка в шапке */}
-      <div className="md:hidden flex items-center justify-between h-12 pl-2 pr-2 gap-2">
+      <div className="md:hidden flex items-center justify-between h-12 pl-2 pr-0 gap-2">
         <Link
           to="/"
           className="flex items-center min-w-0 shrink-0"
@@ -91,14 +91,15 @@ export function NavMobile({
           >
             <Icons.search className="w-5 h-5 text-camel-700" aria-hidden />
           </button>
-          <FavoritesCapsule />
+          <FavoritesCapsule isMobile />
           <button
             type="button"
             onClick={onToggleMobileMenu}
             aria-expanded={mobileMenuOpen}
             aria-controls="mobile-drawer"
             aria-label="Навигационное меню"
-            className="cs-glass-pill w-11 h-11 rounded-full flex items-center justify-center cursor-pointer"
+            title="Навигационное меню"
+            className="cs-glass-pill w-10 h-11 rounded-l-full rounded-r-none border-r-0 flex items-center justify-center shrink-0 cursor-pointer touch-manipulation relative before:absolute before:-inset-y-0 before:-left-2 before:right-0 before:content-[''] active:scale-95 transition-all pl-1 pr-1.5"
           >
             <svg className="w-5 h-5 text-old-money-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {mobileMenuOpen ? (

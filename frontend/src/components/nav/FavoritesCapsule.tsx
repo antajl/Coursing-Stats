@@ -15,11 +15,16 @@ function shortCapsuleLabel(name: string, max = 11): string {
   return candidate.length > max ? `${candidate.slice(0, max - 1)}…` : candidate
 }
 
+type FavoritesCapsuleProps = {
+  isMobile?: boolean
+}
+
 /**
  * Капсула «моя собака» в шапке: активное избранное → ссылка на профиль.
  * На /account приглушена — там уже фокус на избранном.
+ * На мобильных (isMobile) — компактная круглая кнопка w-11 h-11 вровень с соседними иконками.
  */
-export default function FavoritesCapsule() {
+export default function FavoritesCapsule({ isMobile = false }: FavoritesCapsuleProps) {
   const { pathname } = useLocation()
   const onAccount = pathname === '/account' || pathname.startsWith('/account/')
   const { activeId, favoriteIds, ready, setActive, getMeta, setMeta } = useFavorites()
@@ -99,8 +104,8 @@ export default function FavoritesCapsule() {
   const multi = favoriteIds.length > 1
 
   const shellClass = onAccount
-    ? 'cs-glass-pill flex items-center h-11 md:h-9 overflow-hidden rounded-full opacity-60'
-    : 'cs-glass-pill flex items-center h-11 md:h-9 overflow-hidden rounded-full group'
+    ? 'cs-glass-pill flex items-center h-9 overflow-hidden rounded-full opacity-60'
+    : 'cs-glass-pill flex items-center h-9 overflow-hidden rounded-full group'
 
   const linkHover = onAccount
     ? 'flex shrink-0 items-center gap-1.5 h-full px-2.5 2xl:px-3 hover:bg-black/5 text-xs font-semibold transition-colors'
@@ -110,61 +115,97 @@ export default function FavoritesCapsule() {
     ? 'h-3.5 w-3.5 shrink-0 fill-current text-charcoal-400'
     : 'h-3.5 w-3.5 shrink-0 fill-current text-amber-500 animate-favorite-star-pop'
 
+  const mobileStarClass = onAccount
+    ? 'w-5 h-5 shrink-0 fill-current text-charcoal-400'
+    : 'w-5 h-5 shrink-0 fill-current text-amber-500 animate-favorite-star-pop'
+
   return (
     <div ref={containerRef} className="relative shrink-0 animate-fade-in-scale" key={activeId}>
-      <div className={shellClass}>
-        <Link
-          to={`/dog/${activeId}/`}
-          className={linkHover}
-          title={fullTitle}
-          aria-label={`Избранная собака: ${fullTitle}`}
-        >
-          <Star className={starClass} aria-hidden />
-          <span className="hidden max-w-[6.5rem] truncate text-xs font-semibold leading-none 2xl:inline">
-            {shortLabel}
-          </span>
-        </Link>
-        {multi ? (
+      {isMobile ? (
+        multi ? (
           <button
             type="button"
-            className={
-              onAccount
-                ? 'flex items-center justify-center h-full shrink-0 border-l border-charcoal-300/60 px-1.5 text-[10px] font-bold text-charcoal-500 hover:bg-charcoal-200/40 transition-colors'
-                : 'flex items-center justify-center h-full shrink-0 border-l border-white/60 px-1.5 text-[10px] font-bold text-charcoal-500 hover:text-charcoal-800 hover:bg-white/40 transition-colors'
-            }
-            aria-expanded={open}
-            aria-label="Выбрать другую избранную собаку"
-            title={fullTitle}
             onClick={() => setOpen((v) => !v)}
+            aria-expanded={open}
+            aria-label={`Избранное: ${fullTitle}`}
+            title={fullTitle}
+            className={`cs-glass-pill w-11 h-11 rounded-full flex items-center justify-center shrink-0 cursor-pointer active:scale-95 transition-all ${
+              onAccount ? 'opacity-60' : ''
+            }`}
           >
-            ▾
+            <Star className={mobileStarClass} aria-hidden />
           </button>
-        ) : null}
-      </div>
+        ) : (
+          <Link
+            to={`/dog/${activeId}/`}
+            aria-label={`Избранная собака: ${fullTitle}`}
+            title={fullTitle}
+            className={`cs-glass-pill w-11 h-11 rounded-full flex items-center justify-center shrink-0 cursor-pointer active:scale-95 transition-all no-underline ${
+              onAccount ? 'opacity-60' : ''
+            }`}
+          >
+            <Star className={mobileStarClass} aria-hidden />
+          </Link>
+        )
+      ) : (
+        <div className={shellClass}>
+          <Link
+            to={`/dog/${activeId}/`}
+            className={linkHover}
+            title={fullTitle}
+            aria-label={`Избранная собака: ${fullTitle}`}
+          >
+            <Star className={starClass} aria-hidden />
+            <span className="hidden max-w-[6.5rem] truncate text-xs font-semibold leading-none 2xl:inline">
+              {shortLabel}
+            </span>
+          </Link>
+          {multi ? (
+            <button
+              type="button"
+              className={
+                onAccount
+                  ? 'flex items-center justify-center h-full shrink-0 border-l border-charcoal-300/60 px-1.5 text-[10px] font-bold text-charcoal-500 hover:bg-charcoal-200/40 transition-colors'
+                  : 'flex items-center justify-center h-full shrink-0 border-l border-white/60 px-1.5 text-[10px] font-bold text-charcoal-500 hover:text-charcoal-800 hover:bg-white/40 transition-colors'
+              }
+              aria-expanded={open}
+              aria-label="Выбрать другую избранную собаку"
+              title={fullTitle}
+              onClick={() => setOpen((v) => !v)}
+            >
+              ▾
+            </button>
+          ) : null}
+        </div>
+      )}
       {open && favoriteIds.length > 1 ? (
-        <div className="absolute right-0 z-[100] mt-1 flex max-h-64 w-56 flex-col overflow-hidden rounded-xl border-2 border-old-money-200 bg-white shadow-xl">
-          <div className="overflow-auto">
+        <div className="absolute right-0 top-full mt-1.5 z-[100] flex max-h-64 w-60 flex-col overflow-hidden rounded-xl border border-old-money-200 bg-cream-50/95 backdrop-blur-md shadow-xl animate-fade-in-scale">
+          <div className="overflow-auto divide-y divide-old-money-100">
             {favoriteIds.map((id) => {
               const m = listMeta[id] || getMeta(id) || (id === activeId ? meta : null)
               const label = m?.name && m.name !== '…' ? m.name : `…`
               const b = m?.breed ? displayBreed(m.breed).primary : ''
+              const isCurr = id === activeId
               return (
-                <button
+                <Link
                   key={id}
-                  type="button"
-                  className={`block w-full border-b border-old-money-100 px-3 py-2 text-left text-xs last:border-0 hover:bg-old-money-50 ${
-                    id === activeId
-                      ? 'bg-amber-50 font-semibold'
-                      : 'text-charcoal-700'
+                  to={`/dog/${id}/`}
+                  className={`block w-full px-3.5 py-2.5 text-left text-xs transition-colors no-underline ${
+                    isCurr
+                      ? 'bg-amber-50/80 font-semibold text-charcoal-900 border-l-2 border-amber-500'
+                      : 'text-charcoal-700 hover:bg-cream-100 hover:text-charcoal-900'
                   }`}
                   onClick={() => {
                     setActive(id)
                     setOpen(false)
                   }}
                 >
-                  {label}
-                  {b ? <span className="block text-[10px] font-normal text-charcoal-500">{b}</span> : null}
-                </button>
+                  <div className="flex items-center gap-1.5 font-medium text-charcoal-900">
+                    {isCurr && <Star className="w-3.5 h-3.5 fill-current text-amber-500 shrink-0" aria-hidden />}
+                    <span className="truncate">{label}</span>
+                  </div>
+                  {b ? <span className="block text-[10px] text-charcoal-500 mt-0.5 truncate">{b}</span> : null}
+                </Link>
               )
             })}
           </div>

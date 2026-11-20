@@ -21,7 +21,7 @@ interface UseClickOutsideOptions {
  * ```
  */
 export function useClickOutside<T extends HTMLElement>(
-  ref: RefObject<T>,
+  ref: RefObject<T | null> | RefObject<T>,
   options: UseClickOutsideOptions
 ): void {
   const { onClickOutside, enabled = true } = options

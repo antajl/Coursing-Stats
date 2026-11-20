@@ -106,4 +106,25 @@ describe('iOS Safari & Mobile Modal/Backdrop Invariants Audit', () => {
     const appSource = fs.readFileSync(appPath, 'utf-8')
     expect(appSource).toContain('min-h-dvh')
   })
+
+  it('guarantees NavMobile header buttons geometry: round favorites capsule and tab-shaped menu button', () => {
+    const navPath = path.join(root, 'components/nav/NavMobile.tsx')
+    const navSource = fs.readFileSync(navPath, 'utf-8')
+
+    // Passes isMobile to FavoritesCapsule
+    expect(navSource).toContain('<FavoritesCapsule isMobile />')
+
+    // Rightmost menu button is styled as a half-pill edge tab (полу-пилюля / язычок за границу экрана)
+    expect(navSource).toContain('rounded-l-full')
+    expect(navSource).toContain('rounded-r-none')
+    expect(navSource).toContain('border-r-0')
+    expect(navSource).toContain('shrink-0')
+    expect(navSource).toContain('before:-left-2')
+
+    const favPath = path.join(root, 'components/nav/FavoritesCapsule.tsx')
+    const favSource = fs.readFileSync(favPath, 'utf-8')
+
+    // Mobile favorites button is circular (w-11 h-11 rounded-full), never horizontally bloated
+    expect(favSource).toContain('w-11 h-11 rounded-full')
+  })
 })
