@@ -1,0 +1,174 @@
+# CoursingStats Quick Reference
+
+5-minute overview of the CoursingStats project.
+
+## What is CoursingStats?
+
+Static React site for dog competition statistics:
+- **Competitions:** Coursing, BZMP, racing (procoursing.ru)
+- **Shows:** RKF exhibitions (rankings, calendars, protocols)
+- **Donino:** Speed measurements and 350m coursing records
+- **Bot:** Telegram bot (@coursing_stats_bot)
+
+## Architecture
+
+### Three Domains
+1. **Competitions** — procoursing.ru data, calendars, protocols, rankings (medals, CS points; Elo removed)
+2. **Shows** — RKF exhibitions, S3 CDN for compressed protocols, CDN for rankings
+3. **Donino** — Speed records, separate dog identity
+
+### Tech Stack
+- **Frontend:** React 19 + Vite + Tailwind CSS
+- **Backend:** Node.js + TypeScript + SQLite (local dev only)
+- **Bot:** Cloudflare Workers + Grammy + KV
+- **Data:** JSON in `data/v1/` (canonical source in git) + S3 CDN for exhibition protocols
+- **Package Manager:** yarn@1.22.22
+
+### Deployment
+- **Public site:** Yandex Object Storage (S3 API) via GitHub Actions (`.github/workflows/deploy.yml`)
+- **CDN root:** `https://coursing-stats.ru/data/v1/`
+- **Bot:** Manual deploy to Cloudflare Workers (`cd bot; yarn run deploy`)
+- **Repository:** `antajl/Coursing-Stats`
+
+## Critical Commands
+
+### Development
+```bash
+# Install dependencies
+yarn install
+
+# Run backend tests
+yarn test
+
+# Run bot tests
+cd bot
+yarn test
+
+# Build all data
+yarn run build-all-data
+
+# Start frontend dev server
+yarn run dev
+```
+
+### Bot Deployment
+```bash
+cd bot
+yarn run build
+yarn test
+yarn run deploy  # Manual only
+```
+
+## Data Flow
+
+```
+procoursing / Google Sheets / RKF PDF
+    → data/v1/ (canonical in git)
+    → build-all-data
+    → generated indexes
+    → Yandex Object Storage (coursing-stats.ru CDN)
+```
+
+## Common Pitfalls
+
+### 1. Dog Identity Across Domains
+- **WRONG:** Assume numeric ID equality between competition and show dogs
+- **RIGHT:** Use explicit mappings (competition_dog_id, dog_links, stable project logic)
+- **Skill:** `sport-show-linkage` — always use when linking sport↔show dogs
+
+### 2. S3 CDN Violations
+- **WRONG:** Using external runtime databases (Turso, D1) on production
+- **RIGHT:** 100% static JSON from S3 CDN (protocols at /data/v1/shows/protocols/{id}.json in gzip)
+- **Reason:** Production is CDN-only, no Worker/D1 runtime
+
+### 3. Combined Season Ranking (Olympic Cascade)
+- **WRONG:** Pure CS sorting or merging medals and points into a single weighted score
+- **RIGHT:** Olympic cascade: 1) Gold medals desc → 2) standingScore desc → 3) CS v2 (rating_score) desc tie-break → 4) run count desc (Elo strictly removed)
+
+### 4. Show Ranking Validation
+- **Current:** Year-based files (dog-ranking-2017.json, dog-ranking-2018.json, etc.)
+- **NOT:** Monolithic dog-ranking.json or numeric shards (dog-ranking-01.json)
+
+## Emergency Procedures
+
+### Build Failure
+```bash
+# 1. Check data integrity
+yarn run build-all-data
+
+# 2. Run tests
+yarn test
+
+# 3. Check git status
+git status
+```
+
+### Bot Issues
+```bash
+# Check bot health
+curl https://<worker>.workers.dev/health
+
+# View logs in Cloudflare Dashboard
+```
+
+### Data Issues
+```bash
+# Rebuild show year
+yarn run rebuild-show-year --year=2026
+
+# Rebuild exhibition snapshot (12 GB heap wrapper)
+yarn run rebuild-show-snapshot
+```
+
+## Key Files
+
+### Configuration
+- `AGENTS.md` — Agent instructions & skill router
+- `.mcp.json` — MCP server configuration (GitHub, Cloudflare)
+- `package.json` — dependencies and scripts
+
+### Data
+- `data/v1/manifest.json` — project statistics
+- `data/v1/calendar/` — competition calendars
+- `data/v1/competitions/` — competition protocols
+- `data/v1/shows/` — exhibition data
+- `data/v1/donino/` — speed records
+
+### Scripts
+- `backend/scripts/build-all-data.ts` — main data build pipeline
+- `backend/scripts/shows/download-rkf-reports.ts` — RKF PDF download
+- `backend/scripts/auto-process-pdf.ts` — PDF processing automation
+
+## Documentation
+
+- **[ROADMAP.md](ROADMAP.md)** — План развития и 4 ветки рефакторинга
+- **[MAP.md](MAP.md)** — Detailed documentation router
+- **[AGENTS.md](../AGENTS.md)** — Agent instructions and forbidden patterns
+
+## Skills
+
+Project-specific skills (auto-activated by context):
+- `three-domains` — routing across Competitions/Shows/Donino
+- `competition-ingest` — safe competition and protocol ingestion
+- `competitions-domain` — competitions-specific logic
+- `shows-domain` — exhibitions-specific logic
+- `donino-domain` — Donino-specific logic
+- `sport-show-linkage` — safe dog identity linking
+- `coursing-stats-parsers` — procoursing.ru parsers
+- `shows-pdf-pipeline` — RKF PDF processing
+- `coursing-stats-dev` — build-all-data, CDN pipeline, publish gates
+- `bot-add-handler` — Telegram bot handlers & keyboards
+- `bot-deploy` — Telegram bot Cloudflare deployment
+- `workers-best-practices` — Workers & KV patterns
+- `old-money-design` — Saluki / Old Money UI design system
+- `smart-commit-and-learn` — Autonomous invariant learning & atomic English Conventional Commits
+
+Global skills (auto-activated):
+- `ponytail` — minimal code, YAGNI, stdlib first
+- `verification-before-completion` — verify with tests before claiming done
+- `incremental-implementation` — thin vertical slices
+- `old-money-design` — Old Money UI aesthetic, no emojis, WCAG targets
+
+## Last Verified
+
+2026-11-08 — All systems operational, documentation verified, Yandex Object Storage deployment active.
