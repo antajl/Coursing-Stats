@@ -53,6 +53,8 @@ export type SilhouetteBreedKey =
   | 'pomeranian'
   | 'centralasianshepherd';
 
+export type SilhouetteBreed = SilhouetteBreedKey;
+
 /**
  * Resolves a raw or canonical breed string to an available vector silhouette key.
  * Returns null if no verified silhouette exists yet for this breed (leaving an empty frame).
