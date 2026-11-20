@@ -11,7 +11,6 @@ import {
   AlertCircle,
   TrendingUp,
   TrendingDown,
-  Scale,
   ExternalLink,
 } from 'lucide-react'
 
@@ -576,37 +575,43 @@ export function DogJudgesSection({ judgeStats, competitions }: DogJudgesSectionP
   )
 
   return (
-    <section
-      aria-label="Судейская статистика"
-      className="card-refined p-4 sm:p-5 md:p-6 mb-6 rounded-2xl bg-gradient-to-b from-white to-cream-50/40 border border-old-money-200/90 shadow-xs"
-    >
-      {/* Лаконичный заголовок с базовым уровнем собаки */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 pb-3.5 border-b border-old-money-200/80">
-        <div>
-          <h2 className="text-base md:text-lg font-serif font-semibold text-charcoal-900 leading-tight">
-            Оценки судей
-          </h2>
-          <p className="text-xs text-charcoal-500 mt-1">
-            Базовый уровень: в среднем <strong>{careerAvgPlace.toFixed(1)} место</strong> ·{' '}
-            <strong>{careerAvgScore.toFixed(1)} б.</strong>
+    <div className="space-y-3">
+      {/* Шапка секции в стиле Old Money (без лишних рамок и бейджей) */}
+      <div className="px-1 space-y-1">
+        {/* Строка 1: Заголовок */}
+        <h2 className="text-sm sm:text-base font-bold text-charcoal-900">
+          Оценки судей
+        </h2>
+
+        {/* Строка 2 (Десктоп sm+): Базовый уровень + счетчик */}
+        <div className="hidden sm:flex sm:items-center sm:justify-between gap-2 pt-0.5">
+          <p className="text-xs text-charcoal-500">
+            Базовый уровень собаки: в среднем <strong className="text-charcoal-800 font-semibold">{careerAvgPlace.toFixed(1)} место</strong> ·{' '}
+            <strong className="text-charcoal-800 font-semibold">{careerAvgScore.toFixed(1)} б.</strong> (в оценках {formatExpertsCount(coursingJudges.length)})
           </p>
         </div>
 
-        <div className="inline-flex items-center gap-1.5 h-8 px-3 rounded-full text-xs text-charcoal-700 font-medium bg-cream-100/70 border border-old-money-200/80 shadow-2xs self-start sm:self-auto">
-          <Scale className="w-3.5 h-3.5 text-camel-700" aria-hidden />
-          <span className="tabular-nums font-semibold">{formatExpertsCount(coursingJudges.length)}</span>
+        {/* Строка 2 (Мобилка < sm): Компактная типографика в одну строку */}
+        <div className="flex sm:hidden items-center justify-between gap-1.5 pt-0.5">
+          <span className="text-xs text-charcoal-600 truncate">
+            Базовый уровень: <strong className="text-charcoal-800 font-semibold">{careerAvgPlace.toFixed(1)} место</strong> ·{' '}
+            <strong className="text-charcoal-800 font-semibold">{careerAvgScore.toFixed(1)} б.</strong>
+          </span>
+          <span className="text-xs text-charcoal-500 shrink-0 font-medium">
+            ({formatExpertsCount(coursingJudges.length)})
+          </span>
         </div>
       </div>
 
-      {/* Десктопная сетка из 2 колонок (>= md) */}
-      <div className="hidden md:grid md:grid-cols-2 gap-4 lg:gap-5 items-start">
+      {/* Десктоп: 2 колонки рядом */}
+      <div className="hidden md:grid md:grid-cols-2 gap-3 items-start">
         {higherCard}
         {lowerCard}
       </div>
 
-      {/* Мобильная карусель со свайпом влево/вправо (< md) */}
+      {/* Мобильный вид: горизонтальный свайп между колонками */}
       <div
-        className="block md:hidden w-full overflow-hidden touch-pan-y"
+        className="block md:hidden relative overflow-x-clip touch-pan-y select-none"
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
@@ -615,17 +620,18 @@ export function DogJudgesSection({ judgeStats, competitions }: DogJudgesSectionP
       >
         <div
           ref={trackRef}
-          className="flex flex-nowrap w-full items-stretch transition-transform"
+          className="flex flex-nowrap w-full min-w-0 items-stretch gap-0"
           style={{
-            transform: `translate3d(${activeMobileTab === 0 ? '0%' : '-100%'}, 0, 0)`,
+            transform: activeMobileTab === 0 ? 'translate3d(0%, 0, 0)' : 'translate3d(-100%, 0, 0)',
+            willChange: 'transform',
           }}
         >
-          <div className="w-full shrink-0 basis-full pr-1">{higherCard}</div>
-          <div className="w-full shrink-0 basis-full pl-1">{lowerCard}</div>
+          <div className="w-full max-w-full min-w-0 shrink-0 basis-full">{higherCard}</div>
+          <div className="w-full max-w-full min-w-0 shrink-0 basis-full">{lowerCard}</div>
         </div>
 
-        {/* Точки-индикаторы свайпа */}
-        <div className="flex items-center justify-center gap-1.5 mt-2.5" aria-hidden="true">
+        {/* Точки-индикаторы положения свайпа */}
+        <div className="flex items-center justify-center gap-1.5 pt-2" aria-hidden="true">
           <button
             type="button"
             onClick={() => setActiveMobileTab(0)}
@@ -644,6 +650,6 @@ export function DogJudgesSection({ judgeStats, competitions }: DogJudgesSectionP
           />
         </div>
       </div>
-    </section>
+    </div>
   )
 }
