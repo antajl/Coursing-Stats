@@ -1,6 +1,13 @@
-import { useMemo } from 'react'
+import { useMemo, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { Trophy, ArrowUpRight, HelpCircle, ChevronLeft } from 'lucide-react'
+import {
+  Trophy,
+  ArrowUpRight,
+  HelpCircle,
+  ChevronLeft,
+  ChevronDown,
+  ChevronUp,
+} from 'lucide-react'
 import { SEO } from '../../components/SEO'
 import { JsonLd, itemPageSchema, breadcrumbListSchema, faqPageSchema } from '../../components/JsonLd'
 import { CORE_BREED_HUBS, getBreedHubBySlug } from '../../lib/breed-hubs-data'
@@ -37,6 +44,7 @@ interface TopPlacementItem {
 export default function BreedHub() {
   const { slug } = useParams<{ slug: string }>()
   const breedInfo = useMemo(() => (slug ? getBreedHubBySlug(slug) : undefined), [slug])
+  const [isDescExpanded, setIsDescExpanded] = useState(false)
 
   // Ссылка на международную базу родословных The Breed Archive (если поддерживается для породы)
   const breedArchiveUrl = useMemo(
@@ -269,11 +277,12 @@ export default function BreedHub() {
         }}
       />
 
-      {/* Breed Profile Card: стиль Old Money как в карточке судьи и профиле собаки */}
-      <div className="cs-glass-card rounded-2xl border border-old-money-200/80 bg-white p-4 sm:p-6 md:p-7 shadow-xs">
-        <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3 mb-3">
-          <div className="min-w-0 flex-1">
-            <div className="flex flex-wrap items-center gap-2 mb-1.5">
+      {/* Breed Profile Card: двухколоночный сплит (инфо и спойлер истории слева, строчный реестр метрик справа) */}
+      <div className="cs-glass-card rounded-2xl border border-old-money-200/80 bg-white p-4 sm:p-5 md:p-6 shadow-xs">
+        <div className="lg:grid lg:grid-cols-[1.3fr_1fr] lg:gap-6 items-center">
+          {/* Левая колонка: навигация, название, кнопки, лид и спойлер «О породе и истории» */}
+          <div className="min-w-0">
+            <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-1">
               <Link
                 to="/breeds/"
                 className="cs-glass-pill inline-flex h-6 items-center gap-1 rounded-full px-2 text-[10.5px] font-semibold text-charcoal-700 hover:text-camel-800 cursor-pointer"
@@ -294,115 +303,94 @@ export default function BreedHub() {
                 </span>
               )}
             </div>
-            <h1 className="text-xl sm:text-2xl lg:text-3xl font-serif font-bold text-charcoal-900 tracking-tight">
-              {breedInfo.nameRu}
-            </h1>
-          </div>
 
-          <div className="flex items-center gap-2 shrink-0 flex-wrap">
-            <Link
-              to={`/competitions/ranking/2026/?breed=${breedInfo.slug}`}
-              className="cs-glass-pill inline-flex h-8 items-center gap-1.5 rounded-full px-3 text-xs font-semibold shrink-0 cursor-pointer text-charcoal-700 hover:text-camel-800"
-              title={`Полный рейтинг породы ${breedInfo.nameRu}`}
-            >
-              <Trophy className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
-              <span>Рейтинг соревнований</span>
-              <ArrowUpRight className="h-3.5 w-3.5 text-charcoal-400" aria-hidden />
-            </Link>
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2.5 mb-2 mt-0.5">
+              <h1 className="text-xl sm:text-2xl lg:text-3xl font-serif font-bold text-charcoal-900 tracking-tight">
+                {breedInfo.nameRu}
+              </h1>
+              <div className="flex items-center gap-1.5 shrink-0 flex-wrap">
+                <Link
+                  to={`/competitions/ranking/2026/?breed=${breedInfo.slug}`}
+                  className="cs-glass-pill inline-flex h-7 sm:h-8 items-center gap-1.5 rounded-full px-2.5 sm:px-3 text-xs font-semibold shrink-0 cursor-pointer text-charcoal-700 hover:text-camel-800"
+                  title={`Полный рейтинг породы ${breedInfo.nameRu}`}
+                >
+                  <Trophy className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
+                  <span>Рейтинг</span>
+                  <ArrowUpRight className="h-3.5 w-3.5 text-charcoal-400" aria-hidden />
+                </Link>
 
-            {breedArchiveUrl && (
-              <a
-                href={breedArchiveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="cs-glass-pill inline-flex h-8 items-center gap-1.5 rounded-full px-3 text-xs font-semibold shrink-0 cursor-pointer text-charcoal-700 hover:text-camel-800"
-                title={`Международная база родословных The Breed Archive (${breedInfo.nameLat})`}
-              >
-                <img
-                  src="/assets/icons/breedarchive.webp"
-                  alt=""
-                  className="h-3.5 w-3.5 rounded-xs shrink-0"
-                  loading="lazy"
-                />
-                <span>Breed Archive</span>
-                <ArrowUpRight className="h-3.5 w-3.5 text-charcoal-400" aria-hidden />
-              </a>
+                {breedArchiveUrl && (
+                  <a
+                    href={breedArchiveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="cs-glass-pill inline-flex h-7 sm:h-8 items-center gap-1.5 rounded-full px-2.5 sm:px-3 text-xs font-semibold shrink-0 cursor-pointer text-charcoal-700 hover:text-camel-800"
+                    title={`Международная база родословных The Breed Archive (${breedInfo.nameLat})`}
+                  >
+                    <img
+                      src="/assets/icons/breedarchive.webp"
+                      alt=""
+                      className="h-3.5 w-3.5 rounded-xs shrink-0"
+                      loading="lazy"
+                    />
+                    <span>Archive</span>
+                    <ArrowUpRight className="h-3.5 w-3.5 text-charcoal-400" aria-hidden />
+                  </a>
+                )}
+              </div>
+            </div>
+
+            <p className="text-xs sm:text-sm font-medium text-charcoal-800 leading-snug">
+              {breedInfo.lead}
+            </p>
+
+            {isDescExpanded && (
+              <p className="text-xs text-charcoal-600 leading-relaxed mt-2 pt-2 border-t border-old-money-100">
+                {breedInfo.description}
+              </p>
             )}
-          </div>
-        </div>
 
-        <p className="text-xs sm:text-sm font-medium text-charcoal-800 mb-1 leading-relaxed max-w-4xl">
-          {breedInfo.lead}
-        </p>
-        <p className="text-xs sm:text-sm text-charcoal-600 leading-relaxed max-w-4xl">
-          {breedInfo.description}
-        </p>
-
-        {/* Real Live Database Statistics Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 pt-3.5 border-t border-old-money-200/60 mt-3.5">
-          <div className="rounded-xl bg-cream-100/70 border border-old-money-200/50 p-2 sm:p-2.5 text-center">
-            <div className="text-[10px] font-semibold uppercase tracking-wider text-charcoal-500 mb-0.5">
-              Собак в состязаниях
-            </div>
-            <div className="text-base sm:text-lg font-bold font-sans tabular-nums text-charcoal-900">
-              {placementAllLoading ? (
-                <span className="text-charcoal-400">…</span>
-              ) : (
-                breedStats.totalDogs.toLocaleString('ru-RU')
-              )}
-            </div>
-            <div className="text-[10px] text-charcoal-500 mt-0.5 hidden sm:block">
-              в базе состязаний
-            </div>
+            <button
+              type="button"
+              onClick={() => setIsDescExpanded(!isDescExpanded)}
+              className="min-h-[44px] sm:min-h-0 inline-flex items-center gap-1 text-[11px] font-semibold text-camel-800 hover:text-camel-900 mt-1 cursor-pointer"
+            >
+              <span>{isDescExpanded ? 'Свернуть историю' : 'О породе и истории'}</span>
+              {isDescExpanded ? <ChevronUp className="h-3 w-3" /> : <ChevronDown className="h-3 w-3" />}
+            </button>
           </div>
 
-          <div className="rounded-xl bg-cream-100/70 border border-old-money-200/50 p-2 sm:p-2.5 text-center">
-            <div className="text-[10px] font-semibold uppercase tracking-wider text-charcoal-500 mb-0.5">
-              Всего забегов
+          {/* Правая колонка: строчный реестр 4 ключевых метрик */}
+          <div className="mt-3 lg:mt-0 rounded-xl bg-cream-50/80 border border-old-money-200/80 px-3.5 py-1.5 divide-y divide-old-money-200/60 shadow-2xs">
+            <div className="flex items-center justify-between py-1.5 text-xs">
+              <span className="text-charcoal-600 font-medium">Собак в состязаниях</span>
+              <span className="font-bold font-sans tabular-nums text-charcoal-900 text-sm">
+                {placementAllLoading ? '…' : breedStats.totalDogs.toLocaleString('ru-RU')}
+              </span>
             </div>
-            <div className="text-base sm:text-lg font-bold font-sans tabular-nums text-charcoal-900">
-              {placementAllLoading ? (
-                <span className="text-charcoal-400">…</span>
-              ) : (
-                breedStats.totalStarts.toLocaleString('ru-RU')
-              )}
+            <div className="flex items-center justify-between py-1.5 text-xs">
+              <span className="text-charcoal-600 font-medium">Всего забегов</span>
+              <span className="font-bold font-sans tabular-nums text-charcoal-900 text-sm">
+                {placementAllLoading ? '…' : breedStats.totalStarts.toLocaleString('ru-RU')}
+              </span>
             </div>
-            <div className="text-[10px] text-charcoal-500 mt-0.5 hidden sm:block">
-              в протоколах состязаний
+            <div className="flex items-center justify-between py-1.5 text-xs">
+              <span className="text-charcoal-600 font-medium">Побед (1-е места)</span>
+              <span className="font-bold font-sans tabular-nums text-camel-800 text-sm">
+                {placementAllLoading ? '…' : breedStats.totalGold.toLocaleString('ru-RU')}
+              </span>
             </div>
-          </div>
-
-          <div className="rounded-xl bg-cream-100/70 border border-old-money-200/50 p-2 sm:p-2.5 text-center">
-            <div className="text-[10px] font-semibold uppercase tracking-wider text-charcoal-500 mb-0.5">
-              Побед (золото)
-            </div>
-            <div className="text-base sm:text-lg font-bold font-sans tabular-nums text-camel-800">
-              {placementAllLoading ? (
-                <span className="text-charcoal-400">…</span>
-              ) : (
-                breedStats.totalGold.toLocaleString('ru-RU')
-              )}
-            </div>
-            <div className="text-[10px] text-charcoal-500 mt-0.5 hidden sm:block">
-              1-х мест на турнирах
-            </div>
-          </div>
-
-          <div className="rounded-xl bg-cream-100/70 border border-old-money-200/50 p-2 sm:p-2.5 text-center">
-            <div className="text-[10px] font-semibold uppercase tracking-wider text-charcoal-500 mb-0.5">
-              {breedStats.maxSpeed > 0 ? 'Рекорд скорости' : 'Сезоны состязаний'}
-            </div>
-            <div className="text-base sm:text-lg font-bold font-sans tabular-nums text-charcoal-900">
-              {speedAllLoading || doninoLoading ? (
-                <span className="text-charcoal-400">…</span>
-              ) : breedStats.maxSpeed > 0 ? (
-                `${breedStats.maxSpeed % 1 === 0 ? breedStats.maxSpeed : breedStats.maxSpeed.toFixed(1)} км/ч`
-              ) : (
-                breedStats.yearsSpan || 'Архив'
-              )}
-            </div>
-            <div className="text-[10px] text-charcoal-500 mt-0.5 hidden sm:block">
-              {breedStats.maxSpeed > 0 ? 'полигон и состязания' : 'период активности'}
+            <div className="flex items-center justify-between py-1.5 text-xs">
+              <span className="text-charcoal-600 font-medium">Рекорд скорости</span>
+              <span className="font-bold font-sans tabular-nums text-charcoal-900 text-sm">
+                {speedAllLoading || doninoLoading ? (
+                  '…'
+                ) : breedStats.maxSpeed > 0 ? (
+                  `${breedStats.maxSpeed % 1 === 0 ? breedStats.maxSpeed : breedStats.maxSpeed.toFixed(1)} км/ч`
+                ) : (
+                  breedStats.yearsSpan || 'Архив'
+                )}
+              </span>
             </div>
           </div>
         </div>
