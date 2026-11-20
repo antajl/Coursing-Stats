@@ -359,115 +359,80 @@ export function DogOrganizationsSection({
     setExpandedOrgKey((prev) => (prev === orgKey ? null : orgKey))
   }
 
-  const renderOrgCard = (
+  const renderOrgRow = (
     org: DogOrgItem,
     variant: 'higher' | 'lower',
   ) => {
     const isExpanded = expandedOrgKey === org.org_key
 
     return (
-      <div
-        key={org.org_key}
-        className="rounded-xl bg-white border border-old-money-200/90 shadow-2xs transition-all hover:border-old-money-300 overflow-hidden"
-      >
+      <div key={org.org_key} className="transition-colors hover:bg-cream-50/60">
         <button
           type="button"
           onClick={() => toggleOrg(org.org_key)}
-          className="w-full text-left p-3.5 flex items-center justify-between gap-3 cursor-pointer min-h-[52px]"
+          className="w-full text-left px-3.5 py-2.5 sm:px-4 sm:py-2.5 flex items-center justify-between gap-3 cursor-pointer min-h-[44px]"
           aria-expanded={isExpanded}
         >
-          {/* Левая часть: Название, площадки и места */}
+          {/* Левая часть: Название, площадки, победы и дельта */}
           <div className="min-w-0 flex-1">
-            <div className="flex items-center gap-2 flex-wrap">
-              <span className="font-semibold text-charcoal-900 text-sm truncate" title={org.org_name}>
+            <div className="flex items-baseline gap-1.5 flex-wrap">
+              <span className="font-semibold text-charcoal-900 text-xs sm:text-sm truncate" title={org.org_name}>
                 {org.short_name}
               </span>
-              <span className="text-[11px] text-charcoal-400 font-medium">
+              <span className="text-[11px] text-charcoal-400 font-normal shrink-0">
                 {org.starts_count} сост.
               </span>
+              {org.locations.length > 0 && (
+                <span className="text-[11px] text-charcoal-400 shrink-0">
+                  · {org.locations.join(', ')}
+                </span>
+              )}
             </div>
 
-            {/* Локации проведения состязаний */}
-            {org.locations.length > 0 && (
-              <div className="flex items-center gap-1 text-[11px] text-charcoal-500 mt-0.5 truncate">
-                <MapPin className="w-3 h-3 text-camel-600 shrink-0" aria-hidden />
-                <span className="truncate">{org.locations.join(' · ')}</span>
-              </div>
-            )}
+            <div className="flex items-center gap-2 mt-0.5 text-[11px] leading-tight flex-wrap text-charcoal-600">
+              <span className="text-charcoal-500">
+                победы:{' '}
+                <strong className="text-charcoal-800 font-semibold">
+                  {org.wins_count}
+                </strong>{' '}
+                из {org.starts_count}
+              </span>
 
-            {/* Места собаки + Дельта побед */}
-            <div className="grid grid-cols-[auto_1fr] items-center gap-x-2.5 gap-y-1 mt-1.5">
-              {/* Места собаки */}
-              <div className="flex items-center gap-1 shrink-0">
-                <span className="text-[11px] text-charcoal-500 mr-0.5">Места:</span>
-                {org.placements.slice(0, 5).map((pl, idx) => {
-                  const s = PLACEMENT_STYLES[pl] || {
-                    bg: 'bg-old-money-100',
-                    text: 'text-charcoal-700',
-                    border: 'border-old-money-300',
-                  }
-                  return (
-                    <span
-                      key={idx}
-                      className={`inline-flex items-center justify-center w-5 h-5 rounded-full text-[10px] font-bold border ${s.bg} ${s.text} ${s.border}`}
-                      title={`${pl}-е место`}
-                    >
-                      {pl}
-                    </span>
-                  )
-                })}
-                {org.placements.length > 5 && (
-                  <span className="text-[10px] text-charcoal-400 font-medium ml-0.5">
-                    +{org.placements.length - 5}
-                  </span>
-                )}
-              </div>
+              <span className="text-old-money-300">•</span>
 
-              {/* Плашка побед по отношению к карьере */}
-              <div className="min-w-0 flex items-center">
-                {variant === 'higher' ? (
-                  <span className="inline-flex items-center gap-1 text-[10px] font-medium px-2 py-0.5 rounded-md bg-forest-50 text-forest-800 border border-forest-200 truncate">
-                    <TrendingUp className="w-3 h-3 text-forest-600 shrink-0" aria-hidden />
-                    <span className="truncate">
-                      {org.delta_vs_career > 0
-                        ? `+${org.delta_vs_career}% к ср. карьеры`
-                        : '= ср. карьеры'}
-                    </span>
-                  </span>
-                ) : (
-                  <span className="inline-flex items-center gap-1 text-[10px] font-medium px-2 py-0.5 rounded-md bg-rose-50 text-rose-800 border border-rose-200 truncate">
-                    <TrendingDown className="w-3 h-3 text-rose-600 shrink-0" aria-hidden />
-                    <span className="truncate">
-                      {org.wins_count === 0
-                        ? 'без побед'
-                        : `${org.delta_vs_career}% от ср. карьеры`}
-                    </span>
-                  </span>
-                )}
-              </div>
+              {/* Дельта к карьере — чистый цветной текст */}
+              {variant === 'higher' ? (
+                <span className="font-medium text-forest-700">
+                  {org.delta_vs_career > 0
+                    ? `+${org.delta_vs_career}% к ср.`
+                    : '= ср. карьеры'}
+                </span>
+              ) : (
+                <span className="font-medium text-rose-700">
+                  {org.wins_count === 0
+                    ? 'без побед'
+                    : `${org.delta_vs_career}% от ср.`}
+                </span>
+              )}
             </div>
           </div>
 
-          {/* Правая часть: Процент побед */}
-          <div className="flex items-center gap-2.5 shrink-0">
-            <div
-              className={`text-right px-2.5 py-1 rounded-lg border tabular-nums ${
-                variant === 'higher'
-                  ? 'bg-forest-50/90 text-forest-900 border-forest-200'
-                  : 'bg-cream-100/90 text-charcoal-700 border-old-money-200'
-              }`}
-            >
-              <div className="text-xs font-bold leading-tight">{org.win_rate}%</div>
-              <div className="text-[9px] font-medium opacity-75 uppercase tracking-wide">
-                {org.wins_count}/{org.starts_count} побед
+          {/* Правая часть: Чистый Win Rate и шеврон */}
+          <div className="flex items-center gap-2 shrink-0">
+            <div className="text-right tabular-nums">
+              <div className={`text-xs sm:text-sm font-bold leading-tight ${variant === 'higher' ? 'text-forest-900' : 'text-charcoal-800'}`}>
+                {org.win_rate}%
+              </div>
+              <div className="text-[9px] text-charcoal-400 uppercase tracking-wide leading-none mt-0.5">
+                win rate
               </div>
             </div>
 
-            <div className="text-charcoal-400">
+            <div className="text-charcoal-400 ml-1">
               {isExpanded ? (
-                <ChevronUp className="w-4 h-4" aria-hidden />
+                <ChevronUp className="w-3.5 h-3.5" aria-hidden />
               ) : (
-                <ChevronDown className="w-4 h-4" aria-hidden />
+                <ChevronDown className="w-3.5 h-3.5" aria-hidden />
               )}
             </div>
           </div>
@@ -475,8 +440,8 @@ export function DogOrganizationsSection({
 
         {/* Раскрывающийся список турниров с прямыми кликабельными ссылками на протоколы */}
         {isExpanded && (
-          <div className="border-t border-old-money-200/70 bg-cream-50/70 p-3 space-y-2 text-xs">
-            <div className="text-[11px] font-semibold text-charcoal-500 uppercase tracking-wider px-1">
+          <div className="border-t border-old-money-100 bg-cream-50/70 p-2.5 sm:p-3 space-y-1.5 text-xs">
+            <div className="text-[10px] font-semibold text-charcoal-500 uppercase tracking-wider px-1">
               Состязания в этой организации (кликните для перехода в протокол):
             </div>
             {org.events.map((ev, eIdx) => {
@@ -485,10 +450,10 @@ export function DogOrganizationsSection({
                 <Link
                   key={eIdx}
                   to={`/event/${ev.event_id}/`}
-                  className={`group flex items-center justify-between gap-3 p-2 rounded-lg border transition-colors shadow-2xs ${
+                  className={`group flex items-center justify-between gap-2.5 p-2 rounded-lg border transition-colors shadow-2xs ${
                     isWin
-                      ? 'bg-amber-50/60 hover:bg-amber-50/90 border-amber-200/80 hover:border-amber-300'
-                      : 'bg-white/80 hover:bg-white border-old-money-200/60 hover:border-old-money-300'
+                      ? 'bg-amber-50/70 hover:bg-amber-50 border-amber-200/90'
+                      : 'bg-white/90 hover:bg-white border-old-money-200/70'
                   }`}
                   title="Открыть протокол состязания"
                 >
@@ -500,7 +465,7 @@ export function DogOrganizationsSection({
                       <span className="truncate">{ev.title}</span>
                       <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity text-camel-600 shrink-0" aria-hidden />
                     </div>
-                    <div className="text-[11px] text-charcoal-400 mt-0.5 flex items-center gap-2 flex-wrap">
+                    <div className="text-[10px] text-charcoal-400 mt-0.5 flex items-center gap-2 flex-wrap">
                       <span>{ev.date}</span>
                       {ev.location && (
                         <span className="truncate text-charcoal-500">• {ev.location}</span>
@@ -512,7 +477,7 @@ export function DogOrganizationsSection({
                     {ev.placement ? (
                       <div className="flex items-center gap-1 justify-end">
                         <span
-                          className={`inline-flex items-center justify-center px-2 py-0.5 rounded-md text-[11px] font-bold ${
+                          className={`inline-flex items-center justify-center px-1.5 py-0.5 rounded text-[10px] font-bold ${
                             isWin
                               ? 'bg-amber-100 text-amber-900 border border-amber-300'
                               : 'bg-old-money-100 text-charcoal-700'
@@ -623,56 +588,56 @@ export function DogOrganizationsSection({
         </div>
       </div>
 
-      {/* Ровно 2 колонки: слева Побеждает чаще обычного, справа Сложнее победить */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6 items-start">
+      {/* 2 цельных списка в стиле сайта (без отдельных карточек и дыр) */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-5 items-start">
         {/* Колонка 1: Побеждает чаще обычного */}
-        <div className="space-y-2.5">
-          <div className="flex items-center justify-between px-1">
+        <div className="rounded-2xl border border-old-money-200/90 bg-white overflow-hidden shadow-2xs">
+          <div className="px-3.5 py-2.5 bg-forest-50/70 border-b border-old-money-200/80 flex items-center justify-between">
             <div className="flex items-center gap-1.5">
               <Trophy className="w-3.5 h-3.5 text-forest-700" aria-hidden />
               <h3 className="text-xs font-semibold uppercase tracking-wider text-charcoal-800">
                 Побеждает чаще обычного
               </h3>
             </div>
-            <span className="text-[11px] text-forest-800 bg-forest-50 px-2 py-0.5 rounded-full font-medium border border-forest-200">
+            <span className="text-[11px] text-forest-800 font-semibold tabular-nums">
               {formatOrgsCount(orgStats.higher_than_career.length)}
             </span>
           </div>
 
-          <div className="space-y-2">
-            {visibleHigher.length > 0 ? (
-              visibleHigher.map((org) => renderOrgCard(org, 'higher'))
-            ) : (
-              <div className="p-4 rounded-xl border border-dashed border-old-money-200 text-center text-xs text-charcoal-400">
-                Пока нет организаций с процентом побед выше среднего
-              </div>
-            )}
-          </div>
+          {visibleHigher.length > 0 ? (
+            <div className="divide-y divide-old-money-100">
+              {visibleHigher.map((org) => renderOrgRow(org, 'higher'))}
+            </div>
+          ) : (
+            <div className="p-4 text-center text-xs text-charcoal-400">
+              Пока нет организаций с процентом побед выше среднего
+            </div>
+          )}
         </div>
 
         {/* Колонка 2: Сложнее победить */}
-        <div className="space-y-2.5">
-          <div className="flex items-center justify-between px-1">
+        <div className="rounded-2xl border border-old-money-200/90 bg-white overflow-hidden shadow-2xs">
+          <div className="px-3.5 py-2.5 bg-rose-50/70 border-b border-old-money-200/80 flex items-center justify-between">
             <div className="flex items-center gap-1.5">
               <TrendingDown className="w-3.5 h-3.5 text-rose-700" aria-hidden />
               <h3 className="text-xs font-semibold uppercase tracking-wider text-charcoal-800">
                 Сложнее победить
               </h3>
             </div>
-            <span className="text-[11px] text-rose-800 bg-rose-50 px-2 py-0.5 rounded-full font-medium border border-rose-200">
+            <span className="text-[11px] text-rose-800 font-semibold tabular-nums">
               {formatOrgsCount(orgStats.lower_than_career.length)}
             </span>
           </div>
 
-          <div className="space-y-2">
-            {visibleLower.length > 0 ? (
-              visibleLower.map((org) => renderOrgCard(org, 'lower'))
-            ) : (
-              <div className="p-4 rounded-xl border border-dashed border-old-money-200 text-center text-xs text-charcoal-400">
-                Все состязания завершились победами собаки
-              </div>
-            )}
-          </div>
+          {visibleLower.length > 0 ? (
+            <div className="divide-y divide-old-money-100">
+              {visibleLower.map((org) => renderOrgRow(org, 'lower'))}
+            </div>
+          ) : (
+            <div className="p-4 text-center text-xs text-charcoal-400">
+              Все состязания завершились победами собаки
+            </div>
+          )}
         </div>
       </div>
 

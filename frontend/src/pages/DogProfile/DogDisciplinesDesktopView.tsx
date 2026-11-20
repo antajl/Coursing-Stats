@@ -3,14 +3,8 @@ import { CoursingColumn } from './CoursingColumn'
 import { RacingColumn } from './RacingColumn'
 import { ShowsColumn } from './ShowsColumn'
 import { EmptyDisciplineColumn } from './EmptyDisciplineColumn'
-import { DoninoSpeedColumn } from './DoninoSpeedColumn'
-import { DoninoCoursingColumn } from './DoninoCoursingColumn'
-import { DogAnalyticsSection } from './DogAnalyticsSection'
-import type { DogJudgesStats } from './DogJudgesSection'
-import { CollapsibleSection } from '../../components/ui/CollapsibleSection'
 import type { ShowDogCardData } from '../Shows/ShowDogCard'
 import type { ProfileHeaderRank } from './DogProfileHeader'
-import type { DogSpeedRecordStats, DogCoursingDoninoStats } from './dogProfileStats'
 
 interface DogDisciplinesDesktopViewProps {
   showCoursingColumn: boolean
@@ -38,18 +32,6 @@ interface DogDisciplinesDesktopViewProps {
   showAllRacingEvents: boolean
   onToggleShowAllRacingEvents: () => void
   showDog: ShowDogCardData | null
-  judgeStats: DogJudgesStats | null
-  events: any[]
-  hasSpeedRecords: boolean
-  hasCoursingRecords: boolean
-  speedStats: DogSpeedRecordStats | null
-  coursingStats: DogCoursingDoninoStats | null
-  visibleSpeedHistory: any[]
-  showAllSpeedHistory: boolean
-  onToggleShowAllSpeedHistory: () => void
-  visibleCoursingDoninoHistory: any[]
-  showAllCoursingDoninoHistory: boolean
-  onToggleShowAllCoursingDoninoHistory: () => void
 }
 
 export const DogDisciplinesDesktopView: React.FC<DogDisciplinesDesktopViewProps> = ({
@@ -78,24 +60,10 @@ export const DogDisciplinesDesktopView: React.FC<DogDisciplinesDesktopViewProps>
   showAllRacingEvents,
   onToggleShowAllRacingEvents,
   showDog,
-  judgeStats,
-  events,
-  hasSpeedRecords,
-  hasCoursingRecords,
-  speedStats,
-  coursingStats,
-  visibleSpeedHistory,
-  showAllSpeedHistory,
-  onToggleShowAllSpeedHistory,
-  visibleCoursingDoninoHistory,
-  showAllCoursingDoninoHistory,
-  onToggleShowAllCoursingDoninoHistory,
 }) => {
   return (
-    <>
-      {/* Десктопный вид: 3 колонки рядом */}
-      <div className="mb-6 hidden items-stretch gap-4 lg:grid lg:grid-cols-3 lg:gap-5 xl:gap-6">
-        <div id="coursing" className="scroll-mt-20 flex flex-col h-full">
+    <div className="mb-6 hidden items-stretch gap-4 lg:grid lg:grid-cols-3 lg:gap-5 xl:gap-6">
+      <div id="coursing" className="scroll-mt-20 flex flex-col h-full">
         {showCoursingColumn ? (
           <CoursingColumn
             hasCoursingData={hasCoursingData}
@@ -115,9 +83,9 @@ export const DogDisciplinesDesktopView: React.FC<DogDisciplinesDesktopViewProps>
         ) : (
           <EmptyDisciplineColumn title="Курсинг / БЗМП" theme="forest" />
         )}
+      </div>
 
-        </div>
-        <div id="racing" className="scroll-mt-20 flex flex-col h-full">
+      <div id="racing" className="scroll-mt-20 flex flex-col h-full">
         {showRacingColumn ? (
           <RacingColumn
             hasRacingData={hasRacingData}
@@ -136,9 +104,9 @@ export const DogDisciplinesDesktopView: React.FC<DogDisciplinesDesktopViewProps>
         ) : (
           <EmptyDisciplineColumn title="Бега борзых" theme="warm-blue" />
         )}
+      </div>
 
-        </div>
-        <div id="shows" className="scroll-mt-20 flex flex-col h-full">
+      <div id="shows" className="scroll-mt-20 flex flex-col h-full">
         {showDog ? (
           <ShowsColumn
             dog={showDog}
@@ -148,48 +116,7 @@ export const DogDisciplinesDesktopView: React.FC<DogDisciplinesDesktopViewProps>
         ) : (
           <EmptyDisciplineColumn title="Выставки" theme="camel" />
         )}
-        </div>
       </div>
-
-      {/* Десктопная секция аналитики: Оценки судей и Победы по организациям в компактных табах */}
-      <div id="analytics" className="scroll-mt-20 hidden md:block">
-        <DogAnalyticsSection judgeStats={judgeStats} competitions={events} />
-      </div>
-
-      {/* Десктопное Донино: CollapsibleSection внизу */}
-      {(hasSpeedRecords || hasCoursingRecords) && !showCoursingColumn && !showRacingColumn && (
-        <div id="donino" className="scroll-mt-20 hidden md:block">
-          <CollapsibleSection
-            title="Рекорды Донино"
-            defaultOpen={false}
-            className="mb-6"
-          >
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
-              {hasSpeedRecords && speedStats ? (
-                <DoninoSpeedColumn
-                  speedStats={speedStats}
-                  visibleSpeedHistory={visibleSpeedHistory}
-                  showAllSpeedHistory={showAllSpeedHistory}
-                  onToggleShowAll={onToggleShowAllSpeedHistory}
-                />
-              ) : (
-                <EmptyDisciplineColumn title="Замер скорости" theme="warm-blue" />
-              )}
-
-              {hasCoursingRecords && coursingStats ? (
-                <DoninoCoursingColumn
-                  coursingStats={coursingStats}
-                  visibleCoursingDoninoHistory={visibleCoursingDoninoHistory}
-                  showAllCoursingDoninoHistory={showAllCoursingDoninoHistory}
-                  onToggleShowAll={onToggleShowAllCoursingDoninoHistory}
-                />
-              ) : (
-                <EmptyDisciplineColumn title="Бега борзых (350 м)" theme="forest" />
-              )}
-            </div>
-          </CollapsibleSection>
-        </div>
-      )}
-    </>
+    </div>
   )
 }
