@@ -1,6 +1,6 @@
 import type { LucideIcon } from 'lucide-react'
 
-export type DogProfileMainTabId = 'profile' | 'judges' | 'organizations' | 'donino'
+export type DogProfileMainTabId = 'profile' | 'achievements' | 'judges' | 'organizations' | 'donino'
 
 export type DisciplineTabId =
   | 'coursing'

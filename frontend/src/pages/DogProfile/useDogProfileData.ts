@@ -299,6 +299,10 @@ export function useDogProfileData() {
         (Array.isArray(showDog.history) && showDog.history.length > 0)),
   )
 
+  const hasCoursingStarts = useMemo(() => {
+    return hasCoursingData || coursingEvents.length > 0 || (coursing.total_starts || 0) > 0
+  }, [hasCoursingData, coursingEvents.length, coursing.total_starts])
+
   const hasValidCompetitionStarts = useMemo(() => {
     return events.some((e) => e.placement != null && Number(e.placement) > 0)
   }, [events])
@@ -308,21 +312,26 @@ export function useDogProfileData() {
   const mainTabs = useMemo(() => {
     const tabs: DogProfileMainTabItem[] = [
       { id: 'profile', label: 'Профиль' },
+      { id: 'achievements', label: 'Достижения' },
     ]
-    if (judgeStats && Array.isArray(judgeStats.judges) && judgeStats.judges.length > 0) {
+    // Вкладка «Судьи» отображается ТОЛЬКО если собака участвовала в курсинге
+    if (hasCoursingStarts && judgeStats && Array.isArray(judgeStats.judges) && judgeStats.judges.length > 0) {
       tabs.push({ id: 'judges', label: 'Судьи' })
     }
+    // Вкладка «Организации» отображается ТОЛЬКО если у собаки есть старты в состязаниях
     if (hasValidCompetitionStarts) {
       tabs.push({ id: 'organizations', label: 'Организации' })
     }
+    // Вкладка «Донино» отображается ТОЛЬКО если у собаки есть подтверждённые замеры Донино
     if (hasDonino) {
       tabs.push({ id: 'donino', label: 'Донино' })
     }
     return tabs
-  }, [judgeStats, hasValidCompetitionStarts, hasDonino])
+  }, [hasCoursingStarts, judgeStats, hasValidCompetitionStarts, hasDonino])
 
   const [activeMainTab, setActiveMainTab] = useState<DogProfileMainTabId>(() => {
     const hash = typeof window !== 'undefined' ? window.location.hash.replace(/^#/, '') : ''
+    if (hash === 'achievements' || hash === 'awards' || hash === 'titles') return 'achievements'
     if (hash === 'judges') return 'judges'
     if (hash === 'organizations' || hash === 'orgs') return 'organizations'
     if (hash === 'donino' || hash === 'speeds') return 'donino'
@@ -333,16 +342,25 @@ export function useDogProfileData() {
   useEffect(() => {
     const hash = location.hash.replace(/^#/, '')
     if (!hash) return
-    if (hash === 'judges') {
+    if (hash === 'achievements' || hash === 'awards' || hash === 'titles') {
+      setActiveMainTab('achievements')
+    } else if (hash === 'judges' && hasCoursingStarts && judgeStats?.judges?.length) {
       setActiveMainTab('judges')
-    } else if (hash === 'organizations' || hash === 'orgs') {
+    } else if ((hash === 'organizations' || hash === 'orgs') && hasValidCompetitionStarts) {
       setActiveMainTab('organizations')
-    } else if (hash === 'donino' || hash === 'speeds') {
+    } else if ((hash === 'donino' || hash === 'speeds') && hasDonino) {
       setActiveMainTab('donino')
     } else if (hash === 'profile' || hash === 'coursing' || hash === 'racing' || hash === 'shows') {
       setActiveMainTab('profile')
     }
-  }, [location.hash])
+  }, [location.hash, hasCoursingStarts, judgeStats, hasValidCompetitionStarts, hasDonino])
+
+  // Fallback to profile if current tab is not available for this dog
+  useEffect(() => {
+    if (mainTabs.length > 0 && !mainTabs.some((t) => t.id === activeMainTab)) {
+      setActiveMainTab('profile')
+    }
+  }, [mainTabs, activeMainTab])
 
   // Disciplines available on mobile inside the "Профиль" tab
   const availableTabs = useMemo(() => {

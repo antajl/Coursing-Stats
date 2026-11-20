@@ -13,6 +13,7 @@ import { EmptyDisciplineColumn } from './EmptyDisciplineColumn'
 import { DoninoSpeedColumn } from './DoninoSpeedColumn'
 import { DoninoCoursingColumn } from './DoninoCoursingColumn'
 import { MobileSubNavTabs } from '../../components/ui/MobileSubNavTabs'
+import { DogAchievementsTab } from './DogAchievementsTab'
 import { DogJudgesSection } from './DogJudgesSection'
 import { DogOrganizationsSection } from './DogOrganizationsSection'
 import { DogDisciplinesMobileView } from './DogDisciplinesMobileView'
@@ -269,7 +270,22 @@ export default function DogProfile() {
         </div>
       )}
 
-      {/* Страница 2: Судьи */}
+      {/* Страница 2: Достижения */}
+      {data.activeMainTab === 'achievements' && (
+        <DogAchievementsTab
+          dog={data.headerDog}
+          cumulativeTitles={data.cumulativeTitles}
+          ranks={data.headerRanks}
+          coursingStats={data.dog?.coursing_stats}
+          racingStats={data.dog?.racing_stats}
+          showDog={data.showDog}
+          events={data.events}
+          eventResultsUrls={data.eventResultsUrls}
+          breed={data.headerBreed}
+        />
+      )}
+
+      {/* Страница 3: Судьи */}
       {data.activeMainTab === 'judges' && (
         <DogJudgesSection
           judgeStats={data.judgeStats}

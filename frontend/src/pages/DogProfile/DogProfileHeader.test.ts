@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest'
 import fs from 'node:fs'
 import path from 'node:path'
 import { DogProfileHeader } from './DogProfileHeader'
+import { DogAchievementsTab } from './DogAchievementsTab'
 
 describe('DogProfileHeader Lightbox mobile & iOS Safari invariants', () => {
   it('exports DogProfileHeader component', () => {
@@ -30,5 +31,47 @@ describe('DogProfileHeader Lightbox mobile & iOS Safari invariants', () => {
 
     // 5. Invariant: Heavy full-screen backdrop-blur-md is omitted to avoid WebKit GPU stalls on iOS ProMotion
     expect(source).not.toContain('backdrop-blur-md')
+  })
+})
+
+describe('Dog Profile Navigation Tabs & Achievements Tab invariants', () => {
+  it('exports DogAchievementsTab component', () => {
+    expect(typeof DogAchievementsTab).toBe('function')
+  })
+
+  it('enforces Achievements tab between Profile and Judges and conditional Judges visibility', () => {
+    const hookPath = path.resolve(__dirname, 'useDogProfileData.ts')
+    const hookSource = fs.readFileSync(hookPath, 'utf-8')
+
+    // 1. Achievements tab is strictly placed 2nd
+    expect(hookSource).toContain("{ id: 'profile', label: 'Профиль' },")
+    expect(hookSource).toContain("{ id: 'achievements', label: 'Достижения' },")
+
+    // 2. Judges tab strictly requires coursing starts (no coursing = no judges tab)
+    expect(hookSource).toContain('hasCoursingStarts')
+    expect(hookSource).toContain("if (hasCoursingStarts && judgeStats && Array.isArray(judgeStats.judges)")
+
+    // 3. Organizations tab strictly requires valid competition starts
+    expect(hookSource).toContain('if (hasValidCompetitionStarts)')
+
+    // 4. Fallback safe check when active tab is not in mainTabs
+    expect(hookSource).toContain("if (mainTabs.length > 0 && !mainTabs.some((t) => t.id === activeMainTab))")
+    expect(hookSource).toContain("setActiveMainTab('profile')")
+  })
+
+  it('guarantees zero emojis in DogAchievementsTab in accordance with Old Money design', () => {
+    const achievementsPath = path.resolve(__dirname, 'DogAchievementsTab.tsx')
+    const achievementsSource = fs.readFileSync(achievementsPath, 'utf-8')
+
+    // Invariant: strictly zero emojis
+    // Check against standard emoji ranges
+    const emojiRegex = /[\u{1F300}-\u{1F9FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}]/u
+    expect(emojiRegex.test(achievementsSource)).toBe(false)
+
+    // Key sections must exist
+    expect(achievementsSource).toContain('В шаге от титула')
+    expect(achievementsSource).toContain('Оформленные официальные чемпионские звания')
+    expect(achievementsSource).toContain('Официальные сертификаты и квалификационные допуски')
+    expect(achievementsSource).toContain('Достижения и рекорды в рейтинге CoursingStats')
   })
 })

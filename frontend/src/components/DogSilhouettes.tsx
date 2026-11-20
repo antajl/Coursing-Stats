@@ -54,7 +54,15 @@ export type SilhouetteBreedKey =
   | 'centralasianshepherd'
   | 'canecorso'
   | 'yorkshireterrier'
-  | 'veo';
+  | 'veo'
+  | 'schnauzer'
+  | 'englishcockerspaniel'
+  | 'bernesemountain'
+  | 'bichon'
+  | 'maltese'
+  | 'samoyed'
+  | 'shihtzu'
+  | 'akita';
 
 export type SilhouetteBreed = SilhouetteBreedKey;
 
@@ -189,12 +197,16 @@ export const resolveSilhouetteBreed = (breed?: string | null): SilhouetteBreedKe
     return 'chartpolski';
   }
 
-  // 18. Rhodesian Ridgeback / Родезийский риджбек
+  // 18. Rhodesian Ridgeback / Родезийский риджбек (исключая тайского риджбека)
   if (
-    canon.includes('РОДЕЗИЙСКИЙ') ||
-    lower.includes('родезийск') ||
-    lower.includes('ridgeback') ||
-    lower.includes('риджбек')
+    !canon.includes('ТАЙСКИЙ') &&
+    !lower.includes('тайск') &&
+    !lower.includes('thai') &&
+    (canon.includes('РОДЕЗИЙСКИЙ') ||
+      lower.includes('родезийск') ||
+      lower.includes('rhodesian') ||
+      lower.includes('ridgeback') ||
+      lower.includes('риджбек'))
   ) {
     return 'rhodesianridgeback';
   }
@@ -480,6 +492,84 @@ export const resolveSilhouetteBreed = (breed?: string | null): SilhouetteBreedKe
     lower.includes('east-european shepherd')
   ) {
     return 'veo';
+  }
+
+  // 53. Schnauzer / Цвергшнауцер, миттельшнауцер, ризеншнауцер
+  if (
+    canon.includes('ШНАУЦЕР') ||
+    lower.includes('шнауцер') ||
+    lower.includes('schnauzer')
+  ) {
+    return 'schnauzer';
+  }
+
+  // 54. English Cocker Spaniel / Английский кокер-спаниель
+  if (
+    (canon.includes('КОКЕР') && (canon.includes('АНГЛИЙСКИЙ') || !canon.includes('АМЕРИКАНСКИЙ'))) ||
+    lower.includes('английский кокер') ||
+    lower.includes('english cocker')
+  ) {
+    return 'englishcockerspaniel';
+  }
+
+  // 55. Bernese Mountain Dog / Бернский зенненхунд
+  if (
+    canon.includes('БЕРНСКИЙ') ||
+    canon.includes('ЗЕННЕНХУНД') ||
+    lower.includes('бернский') ||
+    lower.includes('зенненхунд') ||
+    lower.includes('bernese')
+  ) {
+    return 'bernesemountain';
+  }
+
+  // 56. Bichon Frise / Бишон фризе
+  if (
+    canon.includes('БИШОН') ||
+    lower.includes('бишон') ||
+    lower.includes('bichon')
+  ) {
+    return 'bichon';
+  }
+
+  // 57. Maltese / Мальтезе (Мальтийская болонка)
+  if (
+    canon.includes('МАЛЬТЕЗЕ') ||
+    canon.includes('МАЛЬТИЙСКАЯ БОЛОНКА') ||
+    lower.includes('мальтезе') ||
+    lower.includes('мальтийская болонка') ||
+    lower.includes('maltese')
+  ) {
+    return 'maltese';
+  }
+
+  // 58. Samoyed / Самоед (Самоедская собака)
+  if (
+    canon.includes('САМОЕД') ||
+    lower.includes('самоед') ||
+    lower.includes('samoyed')
+  ) {
+    return 'samoyed';
+  }
+
+  // 59. Shih Tzu / Ши-тцу
+  if (
+    canon.includes('ШИ ТЦУ') ||
+    canon.includes('ШИ-ТЦУ') ||
+    lower.includes('ши тцу') ||
+    lower.includes('ши-тцу') ||
+    lower.includes('shih tzu')
+  ) {
+    return 'shihtzu';
+  }
+
+  // 60. Akita / Акита (Акита-ину)
+  if (
+    canon.includes('АКИТА') ||
+    lower.includes('акита') ||
+    lower.includes('akita')
+  ) {
+    return 'akita';
   }
 
   // No silhouette available yet for this breed

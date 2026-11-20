@@ -71,12 +71,22 @@ describe('resolveSilhouetteBreed', () => {
     expect(resolveSilhouetteBreed('Итальянский кане корсо')).toBe('canecorso');
     expect(resolveSilhouetteBreed('Йоркширский терьер')).toBe('yorkshireterrier');
     expect(resolveSilhouetteBreed('Восточноевропейская овчарка')).toBe('veo');
+
+    // Batch 8 (Schnauzer, Cocker, Bernese, Bichon, Maltese, Samoyed, Shih Tzu, Akita)
+    expect(resolveSilhouetteBreed('Цвергшнауцер черный')).toBe('schnauzer');
+    expect(resolveSilhouetteBreed('Английский кокер спаниель')).toBe('englishcockerspaniel');
+    expect(resolveSilhouetteBreed('Бернский зенненхунд')).toBe('bernesemountain');
+    expect(resolveSilhouetteBreed('Бишон фризе')).toBe('bichon');
+    expect(resolveSilhouetteBreed('Мальтезе')).toBe('maltese');
+    expect(resolveSilhouetteBreed('Самоед')).toBe('samoyed');
+    expect(resolveSilhouetteBreed('Ши-тцу')).toBe('shihtzu');
+    expect(resolveSilhouetteBreed('Акита')).toBe('akita');
   });
 
   it('returns null for breeds that have not been generated yet (leaving empty frame)', () => {
     expect(resolveSilhouetteBreed('Немецкий боксер')).toBeNull();
-    expect(resolveSilhouetteBreed('Бишон фризе')).toBeNull();
-    expect(resolveSilhouetteBreed('Самоед')).toBeNull();
+    expect(resolveSilhouetteBreed('Тайский риджбек')).toBeNull();
+    expect(resolveSilhouetteBreed('Ирландский терьер')).toBeNull();
     expect(resolveSilhouetteBreed(null)).toBeNull();
     expect(resolveSilhouetteBreed(undefined)).toBeNull();
     expect(resolveSilhouetteBreed('')).toBeNull();

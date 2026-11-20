@@ -60,6 +60,16 @@ export interface DogCareerData {
   }> | null
 }
 
+export interface DogCertificatesSummary {
+  caclEventsCoursing: Array<{ eventId?: number | string; title: string; date?: string; judge?: string }>
+  caclEventsRacing: Array<{ eventId?: number | string; title: string; date?: string; judge?: string }>
+  cacilEvents: Array<{ eventId?: number | string; title: string; date?: string; judge?: string; discipline: string }>
+  cacShowEvents: Array<{ exhibitionId?: number | string; title: string; date?: string; judge?: string }>
+  uniqueCacJudgesCount: number
+  hasRunningClearanceCoursing: boolean
+  hasRunningClearanceRacing: boolean
+}
+
 export interface CumulativeEvaluationResult {
   completed: CumulativeTitle[]
   inProgress: CumulativeTitle[]
@@ -70,6 +80,7 @@ export interface CumulativeEvaluationResult {
   officialSportTitles: Array<{ title: string; count: number }>
   officialShowTitles: Array<{ title: string; count: number }>
   titleExplanations: Record<string, string>
+  certificates: DogCertificatesSummary
 }
 
 /**
@@ -443,6 +454,41 @@ export function evaluateCumulativeTitles(data: DogCareerData): CumulativeEvaluat
       ],
     })
     titleExplanations['НЧ РК (КБ)'] = coursingEval.nchBasis
+  } else if (coursingEval.chrkfCount > 0 || coursingEval.caclCount > 0 || coursingEval.pkrCount > 0) {
+    const progress = Math.min(
+      85,
+      coursingEval.chrkfCount >= 1 ? (coursingEval.caclCount >= 1 ? 75 : 50) : Math.round((coursingEval.caclCount / 2) * 40),
+    )
+    titles.push({
+      id: 'national-ch-sport-coursing',
+      title: 'Национальный чемпион по курсингу борзых',
+      badge: 'НЧ РК (КБ)',
+      domain: 'sport',
+      status: 'in_progress',
+      progressPercent: progress,
+      rulesSummary: 'Накопительный титул: 2 × ЧРКФ РК у разных судей либо 1 × ЧРКФ РК + 2 × CACL в курсинге.',
+      requirements: [
+        {
+          text: '1-й сертификат «Чемпион РКФ» или «ПКР»',
+          completed: coursingEval.chrkfCount >= 1 || coursingEval.pkrCount >= 1,
+          details: coursingEval.chrkfCount >= 1
+            ? `Выполнено (${coursingEval.chrkfCount} ЧРКФ)`
+            : coursingEval.pkrCount >= 1
+              ? 'Выполнено (1 ПКР)'
+              : 'Требуется победа ранга ЧРКФ/ПКР',
+        },
+        {
+          text: '2-й сертификат «Чемпион РКФ» у другого судьи ИЛИ 2 × CACL',
+          completed: false,
+          details: coursingEval.caclCount > 0
+            ? `В зачёте: ${coursingEval.caclCount} CACL (требуется ещё ${Math.max(0, 2 - coursingEval.caclCount)} CACL)`
+            : 'Требуется 2-й ЧРКФ под другим экспертом либо 2 CACL',
+        },
+      ],
+      nextStepAdvice: coursingEval.chrkfCount >= 1
+        ? 'Для оформления НЧ РК остался 1 ЧРКФ под другим экспертом либо 2 CACL в курсинге.'
+        : 'Требуется получить сертификат ЧРКФ или 2 CACL.',
+    })
   }
 
   // 2.4 НАЦИОНАЛЬНЫЙ ЧЕМПИОН ПО БЕГАМ БОРЗЫХ (НЧ РК (ББ))
@@ -465,6 +511,41 @@ export function evaluateCumulativeTitles(data: DogCareerData): CumulativeEvaluat
       ],
     })
     titleExplanations['НЧ РК (ББ)'] = racingEval.nchBasis
+  } else if (racingEval.chrkfCount > 0 || racingEval.caclCount > 0 || racingEval.pkrCount > 0) {
+    const progress = Math.min(
+      85,
+      racingEval.chrkfCount >= 1 ? (racingEval.caclCount >= 1 ? 75 : 50) : Math.round((racingEval.caclCount / 2) * 40),
+    )
+    titles.push({
+      id: 'national-ch-sport-racing',
+      title: 'Национальный чемпион по бегам борзых',
+      badge: 'НЧ РК (ББ)',
+      domain: 'sport',
+      status: 'in_progress',
+      progressPercent: progress,
+      rulesSummary: 'Накопительный титул: 2 × ЧРКФ РК у разных судей либо 1 × ЧРКФ РК + 2 × CACL в бегах.',
+      requirements: [
+        {
+          text: '1-й сертификат «Чемпион РКФ» или «ПКР»',
+          completed: racingEval.chrkfCount >= 1 || racingEval.pkrCount >= 1,
+          details: racingEval.chrkfCount >= 1
+            ? `Выполнено (${racingEval.chrkfCount} ЧРКФ)`
+            : racingEval.pkrCount >= 1
+              ? 'Выполнено (1 ПКР)'
+              : 'Требуется победа ранга ЧРКФ/ПКР в бегах',
+        },
+        {
+          text: '2-й сертификат «Чемпион РКФ» у другого судьи ИЛИ 2 × CACL',
+          completed: false,
+          details: racingEval.caclCount > 0
+            ? `В зачёте: ${racingEval.caclCount} CACL (требуется ещё ${Math.max(0, 2 - racingEval.caclCount)} CACL)`
+            : 'Требуется 2-й ЧРКФ под другим экспертом либо 2 CACL в бегах',
+        },
+      ],
+      nextStepAdvice: racingEval.chrkfCount >= 1
+        ? 'Для оформления НЧ РК по бегам остался 1 ЧРКФ под другим экспертом либо 2 CACL.'
+        : 'Требуется получить сертификат ЧРКФ или 2 CACL в бегах.',
+    })
   }
 
   // 2.5 ЧЕМПИОН РКФ ПО ДИСЦИПЛИНАМ (ЧРКФ РК)
@@ -756,6 +837,51 @@ export function evaluateCumulativeTitles(data: DogCareerData): CumulativeEvaluat
   const completed = titles.filter((t) => t.status === 'completed')
   const inProgress = titles.filter((t) => t.status === 'in_progress')
 
+  const caclEventsCoursing = coursingEvents
+    .filter((c) => (c.qualification || '').includes('CACL'))
+    .map((c) => ({
+      eventId: c.event_id,
+      title: c.title || 'Состязание по курсингу',
+      date: c.date_start || undefined,
+      judge: c.judges || undefined,
+    }))
+
+  const caclEventsRacing = racingEvents
+    .filter((c) => (c.qualification || '').includes('CACL'))
+    .map((c) => ({
+      eventId: c.event_id,
+      title: c.title || 'Состязание по бегам',
+      date: c.date_start || undefined,
+      judge: c.judges || undefined,
+    }))
+
+  const cacilEvents = allCompetitions
+    .filter((c) => (c.qualification || '').includes('CACIL'))
+    .map((c) => ({
+      eventId: c.event_id,
+      title: c.title || 'Международное состязание',
+      date: c.date_start || undefined,
+      judge: c.judges || undefined,
+      discipline: c.event_type === 'racing' ? 'Бега борзых' : 'Курсинг борзых',
+    }))
+
+  const cacShowEvents = cacExhibitions.map((e) => ({
+    exhibitionId: undefined,
+    title: e.title || 'Выставка РКФ',
+    date: e.date || undefined,
+    judge: e.judge,
+  }))
+
+  const certificates: DogCertificatesSummary = {
+    caclEventsCoursing,
+    caclEventsRacing,
+    cacilEvents,
+    cacShowEvents,
+    uniqueCacJudgesCount,
+    hasRunningClearanceCoursing: coursingEvents.some((c) => c.status !== 'dns' && c.status !== 'disqualified'),
+    hasRunningClearanceRacing: racingEvents.some((c) => c.status !== 'dns' && c.status !== 'disqualified'),
+  }
+
   return {
     completed,
     inProgress,
@@ -766,5 +892,6 @@ export function evaluateCumulativeTitles(data: DogCareerData): CumulativeEvaluat
     officialSportTitles,
     officialShowTitles,
     titleExplanations,
+    certificates,
   }
 }
