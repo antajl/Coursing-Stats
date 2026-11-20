@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { ChevronDown, X, ArrowUpRight } from 'lucide-react'
 import BreedSearchDropdown from '../../components/ui/BreedSearchDropdown'
 import { canonicalBreed, displayBreed, matchesBreedFilter } from '../../lib/breedMapping'
-import { getBreedHubByCanonicalKey } from '../../lib/breed-hubs-data'
+import { getBreedHubByCanonicalKey, getBreedHubBySlug } from '../../lib/breed-hubs-data'
 import type { DogsIndexEntry } from '../../lib/competingBreeds'
 
 export interface QuickBreedItem {
@@ -131,13 +131,16 @@ export default function QuickBreedBar({
       })
     if (dogIndex && dogIndex.length > 0) {
       const counts = new Map<string, number>()
-      dogIndex.forEach((d) => counts.set(d.breed, (counts.get(d.breed) || 0) + (d.competition_count || 1)))
+      dogIndex.forEach((d) => {
+        const bKey = d.breed || ''
+        counts.set(bKey, (counts.get(bKey) || 0) + (d.competition_count || 1))
+      })
       remainingBreeds.sort((a, b) => (counts.get(b) || 0) - (counts.get(a) || 0))
     }
     const extraCandidates: QuickBreedItem[] = remainingBreeds.map((cb) => {
       const disp = displayBreed(cb)
-      const label = disp.short || disp.primary || cb
-      const fullName = disp.primary || cb
+      const label = disp.primary || cb
+      const fullName = disp.full || disp.primary || cb
       return {
         key: cb,
         label,
@@ -255,21 +258,66 @@ export default function QuickBreedBar({
     [selectedBreed],
   )
 
+  const targetBreed = useMemo(() => {
+    if (!normalizedSelected) return null
+    return candidates.find((b) => matchesBreedFilter(normalizedSelected, b.key)) || null
+  }, [normalizedSelected, candidates])
+
   const selectedDisplay = useMemo(() => {
     if (!normalizedSelected) return null
     return displayBreed(normalizedSelected).primary || selectedBreed
   }, [normalizedSelected, selectedBreed])
 
+  const selectedLabel = useMemo(() => {
+    if (!normalizedSelected) return ''
+    if (targetBreed) return targetBreed.label
+    const disp = displayBreed(normalizedSelected)
+    return disp.primary || selectedBreed
+  }, [normalizedSelected, targetBreed, selectedBreed])
+
+  const selectedFullName = useMemo(() => {
+    if (!normalizedSelected) return ''
+    if (targetBreed) return targetBreed.fullName
+    const disp = displayBreed(normalizedSelected)
+    return disp.full || disp.primary || selectedBreed
+  }, [normalizedSelected, targetBreed, selectedBreed])
+
   const selectedHub = useMemo(
-    () => (selectedBreed ? getBreedHubByCanonicalKey(selectedBreed) : undefined),
-    [selectedBreed]
+    () => {
+      if (!selectedBreed) return undefined
+      return (
+        getBreedHubBySlug(selectedBreed) ||
+        getBreedHubByCanonicalKey(normalizedSelected || canonicalBreed(selectedBreed))
+      )
+    },
+    [selectedBreed, normalizedSelected]
   )
 
   // Расчет: минимальный режим vs обычный + сколько плашек точно помещается
-  const { isMinimal, visibleBreeds, rareBreedChip } = useMemo(() => {
+  const { isMinimal, visibleBreeds } = useMemo(() => {
     const avail = Math.max(0, containerWidth - BUFFER)
     const allW = measured?.allW ?? 88
     const moreW = measured?.moreW ?? 105
+
+    // Если выбрана порода, в строке отображаются только 2-3 кнопки:
+    // [Все породы] (не светится) + [Выбранная порода ✕] (светится) + [Хаб породы ↗] (если доступен)
+    // Все остальные пилюли и кнопка «Ещё породы» скрываются!
+    if (normalizedSelected) {
+      const selW = targetBreed
+        ? (measured?.widths[targetBreed.key] ?? targetBreed.estWidth)
+        : Math.max(60, Math.min(130, (selectedLabel.length || 0) * 8 + 36))
+      const needed = allW + GAP + selW
+      if (avail < needed) {
+        return {
+          isMinimal: true,
+          visibleBreeds: [] as QuickBreedItem[],
+        }
+      }
+      return {
+        isMinimal: false,
+        visibleBreeds: [] as QuickBreedItem[],
+      }
+    }
 
     // Минимальная ширина для обычной строки: [Все породы] + gap + [Ещё породы]
     const normalMinNeeded = allW + GAP + moreW
@@ -279,43 +327,14 @@ export default function QuickBreedBar({
       return {
         isMinimal: true,
         visibleBreeds: [] as QuickBreedItem[],
-        rareBreedChip: null as string | null,
       }
     }
 
     let remaining = avail - normalMinNeeded
 
-    // 1. Если выбрана порода, резервируем место под неё В ПЕРВУЮ ОЧЕРЕДЬ
-    let rareChip: string | null = null
-    const targetBreed = normalizedSelected
-      ? candidates.find((b) => matchesBreedFilter(normalizedSelected, b.key)) || null
-      : null
-
-    if (normalizedSelected) {
-      if (targetBreed) {
-        // Кандидат выбран: гарантируем ему место в строке
-        const selW = measured?.widths[targetBreed.key] ?? targetBreed.estWidth
-        remaining = Math.max(0, remaining - (GAP + selW))
-      } else {
-        // Редкая порода не из кандидатов: резервируем чип с ограничением ширины
-        rareChip = selectedDisplay
-        const rareCost = GAP + Math.max(60, Math.min(130, (selectedDisplay?.length || 0) * 7.5 + 36))
-        remaining = Math.max(0, remaining - rareCost)
-      }
-    }
-
-    // 2. Заполняем оставшееся пространство остальными плашками кандидатов
+    // Заполняем оставшееся пространство плашками кандидатов
     const visible: QuickBreedItem[] = []
-    let isSelectedInVisible = false
-
-    // Если выбранная порода — кандидат, она всегда входит в visible
-    if (targetBreed) {
-      visible.push(targetBreed)
-      isSelectedInVisible = true
-    }
-
     for (const breed of candidates) {
-      if (targetBreed && matchesBreedFilter(targetBreed.key, breed.key)) continue
       const bW = measured?.widths[breed.key] ?? breed.estWidth
       const cost = GAP + bW
       if (remaining >= cost) {
@@ -327,17 +346,11 @@ export default function QuickBreedBar({
       }
     }
 
-    // Если кандидат не вошёл в visible, показываем его через rareChip
-    if (normalizedSelected && !isSelectedInVisible && !rareChip) {
-      rareChip = selectedDisplay
-    }
-
     return {
       isMinimal: false,
       visibleBreeds: visible,
-      rareBreedChip: rareChip,
     }
-  }, [containerWidth, measured, normalizedSelected, selectedDisplay, candidates])
+  }, [containerWidth, measured, normalizedSelected, targetBreed, selectedLabel, candidates])
 
   const handlePillClick = (breedKey: string) => {
     if (matchesBreedFilter(normalizedSelected, breedKey)) {
@@ -417,9 +430,9 @@ export default function QuickBreedBar({
                       type="button"
                       className="inline-flex items-center gap-1 cursor-pointer max-w-[130px] truncate"
                       title="Сменить породу"
-                      aria-label={`Выбрана порода: ${selectedDisplay}. Нажмите для смены.`}
+                      aria-label={`Выбрана порода: ${selectedFullName}. Нажмите для смены.`}
                     >
-                      <span className="truncate">{selectedDisplay}</span>
+                      <span className="truncate">{selectedLabel}</span>
                       <ChevronDown className="h-3.5 w-3.5 opacity-70 shrink-0" aria-hidden />
                     </button>
                   }
@@ -432,7 +445,7 @@ export default function QuickBreedBar({
                   }}
                   className="rounded-full p-0.5 hover:bg-camel-200/60 text-camel-950 transition-colors shrink-0 cursor-pointer"
                   title="Сбросить породу"
-                  aria-label={`Сбросить фильтр породы ${selectedDisplay}`}
+                  aria-label={`Сбросить фильтр породы ${selectedFullName}`}
                 >
                   <X className="h-3.5 w-3.5" aria-hidden />
                 </button>
@@ -471,66 +484,36 @@ export default function QuickBreedBar({
               />
             </div>
           )
-        ) : (
-          /* ОБЫЧНЫЙ АДАПТИВНЫЙ РЕЖИМ: плашки заполняют все свободное пространство */
+        ) : normalizedSelected ? (
+          /* КОГДА ВЫБРАНА ПОРОДА:
+           * 1. Кнопка «Все породы» (не светится / idle) — возврат ко всем породам
+           * 2. Выбранная порода (светится / active) — клик или крестик сбрасывает породу
+           * 3. Кнопка «Хаб породы ↗» (если доступен хаб)
+           * Все остальные породы и кнопка «Ещё породы» скрыты!
+           */
           <>
-            {/* Кнопка: Все породы */}
+            {/* Кнопка: Все породы (не светится) */}
             <button
               type="button"
               onClick={() => onSelectBreed('')}
-              className={`inline-flex h-8 shrink-0 items-center rounded-full px-2.5 text-xs font-medium transition-all cursor-pointer whitespace-nowrap ${
-                !normalizedSelected
-                  ? "cs-glass-pill-active"
-                  : "cs-glass-pill"
-              }`}
-              aria-pressed={!normalizedSelected}
+              className="cs-glass-pill inline-flex h-8 shrink-0 items-center rounded-full px-2.5 text-xs font-medium transition-all cursor-pointer whitespace-nowrap"
+              aria-pressed={false}
+              title="Показать все породы"
             >
               Все породы
             </button>
 
-            {/* Топ-породы, которые помещаются в текущую ширину */}
-            {visibleBreeds.map((breed) => {
-              const isActive = matchesBreedFilter(normalizedSelected, breed.key)
-              return (
-                <button
-                  key={breed.key}
-                  type="button"
-                  onClick={() => handlePillClick(breed.key)}
-                  title={breed.fullName}
-                  className={`inline-flex h-8 shrink-0 items-center rounded-full px-2.5 text-xs font-medium transition-all cursor-pointer whitespace-nowrap ${
-                    isActive
-                      ? "cs-glass-pill-active"
-                      : "cs-glass-pill"
-                  }`}
-                  aria-pressed={isActive}
-                  aria-label={`Фильтр по породе ${breed.fullName}`}
-                >
-                  {breed.label}
-                </button>
-              )
-            })}
-
-            {/* Чип для выбранной редкой породы или породы, не вошедшей в visible */}
-            {rareBreedChip && (
-              <span
-                className="cs-glass-pill-active inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full px-2.5 text-xs font-semibold whitespace-nowrap max-w-[160px] sm:max-w-[200px]"
-                title={`Выбрана порода: ${rareBreedChip}`}
-              >
-                <span className="truncate max-w-[120px] sm:max-w-[150px]">{rareBreedChip}</span>
-                <button
-                  type="button"
-                  onClick={(e) => {
-                    e.stopPropagation()
-                    onSelectBreed('')
-                  }}
-                  className="rounded-full p-0.5 hover:bg-camel-200/60 text-camel-950 transition-colors cursor-pointer shrink-0"
-                  title="Сбросить породу"
-                  aria-label={`Сбросить фильтр породы ${rareBreedChip}`}
-                >
-                  <X className="h-3.5 w-3.5" aria-hidden />
-                </button>
-              </span>
-            )}
+            {/* Выбранная порода (светится) */}
+            <button
+              type="button"
+              onClick={() => onSelectBreed('')}
+              className="cs-glass-pill-active inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full px-2.5 text-xs font-semibold whitespace-nowrap cursor-pointer transition-all"
+              aria-pressed={true}
+              title={`Выбрана порода: ${selectedFullName}. Нажмите, чтобы сбросить.`}
+            >
+              <span>{selectedLabel}</span>
+              <X className="h-3.5 w-3.5 opacity-80 hover:opacity-100 shrink-0" aria-hidden="true" />
+            </button>
 
             {/* Ссылка на хаб выбранной породы */}
             {showHubLink && selectedHub && (
@@ -541,9 +524,41 @@ export default function QuickBreedBar({
                 aria-label={`Открыть хаб породы ${selectedHub.nameRu}`}
               >
                 <span>Хаб породы</span>
-                <ArrowUpRight className="h-3.5 w-3.5 text-camel-700" aria-hidden />
+                <ArrowUpRight className="h-3.5 w-3.5 text-camel-700" aria-hidden="true" />
               </Link>
             )}
+          </>
+        ) : (
+          /* ОБЫЧНЫЙ АДАПТИВНЫЙ РЕЖИМ (порода не выбрана):
+           * 1. «Все породы» (подсвечена / active)
+           * 2. Пилюли популярных пород-кандидатов (не подсвечены / idle)
+           * 3. «Ещё породы» (выпадающий поиск)
+           */
+          <>
+            {/* Кнопка: Все породы */}
+            <button
+              type="button"
+              onClick={() => onSelectBreed('')}
+              className="cs-glass-pill-active inline-flex h-8 shrink-0 items-center rounded-full px-2.5 text-xs font-medium transition-all cursor-pointer whitespace-nowrap"
+              aria-pressed={true}
+            >
+              Все породы
+            </button>
+
+            {/* Топ-породы, которые помещаются в текущую ширину */}
+            {visibleBreeds.map((breed) => (
+              <button
+                key={breed.key}
+                type="button"
+                onClick={() => handlePillClick(breed.key)}
+                title={breed.fullName}
+                className="cs-glass-pill inline-flex h-8 shrink-0 items-center rounded-full px-2.5 text-xs font-medium transition-all cursor-pointer whitespace-nowrap"
+                aria-pressed={false}
+                aria-label={`Фильтр по породе ${breed.fullName}`}
+              >
+                {breed.label}
+              </button>
+            ))}
 
             {/* Выпадающий поиск по всем породам */}
             <div className="ml-auto shrink-0 flex items-center">

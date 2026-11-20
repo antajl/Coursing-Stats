@@ -82,7 +82,7 @@ function DoninoListRecordRow({
   }, [mode, timeSeconds])
 
   const rowClass = embedded
-    ? `donino-list-row donino-list-row--embedded${compact ? ' flex-1 min-h-0' : ''}`
+    ? 'donino-list-row donino-list-row--embedded'
     : 'donino-list-row'
 
   const hasSparkline =
@@ -95,13 +95,13 @@ function DoninoListRecordRow({
       <SpeedHistorySparkline
         current={{ speed_km_h: speedKmh ?? 0, date: date ?? '' }}
         history={history}
-        className="h-7 w-[85px] min-[380px]:w-[105px] sm:h-10 sm:w-full sm:max-w-[170px]"
+        className={compact ? 'h-6 w-14 sm:w-16' : 'h-7 w-[85px] min-[380px]:w-[105px] sm:h-10 sm:w-full sm:max-w-[170px]'}
       />
     ) : (
       <CoursingHistorySparkline
         current={{ time_seconds: timeSeconds ?? 0, date: date ?? '' }}
         history={history}
-        className="h-7 w-[85px] min-[380px]:w-[105px] sm:h-10 sm:w-full sm:max-w-[170px]"
+        className={compact ? 'h-6 w-14 sm:w-16' : 'h-7 w-[85px] min-[380px]:w-[105px] sm:h-10 sm:w-full sm:max-w-[170px]'}
       />
     )
 
@@ -200,7 +200,7 @@ function DoninoListRecordRow({
 
       {/* Компактный график по центру в одну строку */}
       {hasSparkline && (
-        <div className="donino-list-row-chart shrink-0 flex items-center justify-center sm:flex-1 sm:px-2">
+        <div className={`donino-list-row-chart shrink-0 flex items-center justify-center ${compact ? 'px-1' : 'sm:flex-1 sm:px-2'}`}>
           {sparkline}
         </div>
       )}

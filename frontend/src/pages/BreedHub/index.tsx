@@ -4,10 +4,12 @@ import { Trophy, ArrowUpRight, HelpCircle, ChevronLeft } from 'lucide-react'
 import { SEO } from '../../components/SEO'
 import { JsonLd, itemPageSchema, breadcrumbListSchema, faqPageSchema } from '../../components/JsonLd'
 import { CORE_BREED_HUBS, getBreedHubBySlug } from '../../lib/breed-hubs-data'
+import { time350ToSpeedKmh } from '../../lib/recordDates'
 import {
   useTopPlacement,
   useTopSpeed,
   useSpeedRecordsByBreed,
+  useCoursingRecordsByBreed,
   useBreedAnnualLeaders,
   type AnnualDogLeader,
 } from '../../hooks/useStaticData'
@@ -45,10 +47,14 @@ export default function BreedHub() {
   const { data: topPlacementAllRes, isLoading: placementAllLoading } = useTopPlacement('all')
   const { data: topSpeedAllRes, isLoading: speedAllLoading } = useTopSpeed('all')
 
-  // Load Donino speed records
-  const { data: doninoSpeedRes, isLoading: doninoLoading } = useSpeedRecordsByBreed(
+  // Load Donino speed records and coursing 350m records
+  const { data: doninoSpeedRes, isLoading: doninoSpeedLoading } = useSpeedRecordsByBreed(
     breedInfo?.canonicalKey || '',
   )
+  const { data: doninoCoursingRes, isLoading: doninoCoursingLoading } = useCoursingRecordsByBreed(
+    breedInfo?.canonicalKey || '',
+  )
+  const doninoLoading = doninoSpeedLoading || doninoCoursingLoading
 
   // Load annual champions history (2015-2026)
   const { data: annualLeadersRes, isLoading: annualLeadersLoading } = useBreedAnnualLeaders()
@@ -70,12 +76,61 @@ export default function BreedHub() {
   }, [slug, annualLeadersRes])
 
   const speedRecords = useMemo(() => {
-    if (!breedInfo || !doninoSpeedRes?.data) return []
-    const list = Array.isArray(doninoSpeedRes.data)
+    if (!breedInfo) return []
+    const speedList: SpeedRecordItem[] = Array.isArray(doninoSpeedRes?.data)
       ? doninoSpeedRes.data
-      : (doninoSpeedRes.data as any)?.records || []
-    return (list as SpeedRecordItem[]).slice(0, 10)
-  }, [breedInfo, doninoSpeedRes])
+      : (doninoSpeedRes?.data as any)?.records || []
+    const coursingList: any[] = Array.isArray(doninoCoursingRes?.data)
+      ? doninoCoursingRes.data
+      : (doninoCoursingRes?.data as any)?.records || []
+
+    const map = new Map<string, SpeedRecordItem & { best_speed?: number }>()
+
+    // 1. Радарные замеры максимальной скорости на прямой
+    for (const s of speedList) {
+      const normName = (s.name || '').trim().toLowerCase()
+      if (!normName) continue
+      map.set(normName, {
+        ...s,
+        mode: 'speed',
+        speed_km_h: s.speed_km_h,
+        best_speed: s.speed_km_h,
+      })
+    }
+
+    // 2. Объединяем с бегами 350 м (пересчёт времени в скорость по формуле полигона: 350 / t * 3.6)
+    for (const c of coursingList) {
+      const normName = (c.name || '').trim().toLowerCase()
+      if (!normName) continue
+      const speedFromTime = c.time_seconds ? time350ToSpeedKmh(c.time_seconds) : 0
+      if (map.has(normName)) {
+        const existing = map.get(normName)!
+        if (c.time_seconds) existing.time_seconds = c.time_seconds
+        if (speedFromTime > (existing.best_speed || 0)) {
+          existing.best_speed = speedFromTime
+        }
+      } else {
+        map.set(normName, {
+          name: c.name,
+          breed: c.breed || breedInfo.canonicalKey,
+          sex: c.sex,
+          date: c.date,
+          status: c.status,
+          history: c.history,
+          speed_km_h: speedFromTime,
+          best_speed: speedFromTime,
+          time_seconds: c.time_seconds,
+          screenshot_url: c.screenshot_url,
+          track_type: c.track_type || '350 м',
+          mode: 'coursing',
+        })
+      }
+    }
+
+    return Array.from(map.values())
+      .sort((a, b) => (b.best_speed || b.speed_km_h || 0) - (a.best_speed || a.speed_km_h || 0))
+      .slice(0, 15)
+  }, [breedInfo, doninoSpeedRes, doninoCoursingRes])
 
   // Real live database statistics calculated across all-time records
   const breedStats = useMemo(() => {

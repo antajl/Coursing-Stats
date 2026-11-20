@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect, useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { Trophy, Zap, Gauge, ArrowUpRight } from 'lucide-react'
-import DoninoColumnPlaque, { DoninoColumnShell } from '../SpeedRecords/DoninoColumnPlaque'
+import DoninoColumnPlaque from '../SpeedRecords/DoninoColumnPlaque'
 import DoninoListRecordRow from '../SpeedRecords/DoninoListRecordRow'
 import DogSexIcon from '../../components/DogSexIcon'
 import MedalBadge from '../../components/MedalBadge'
@@ -14,11 +14,13 @@ export interface SpeedRecordItem {
   name?: string
   sex?: string
   speed_km_h?: number
+  time_seconds?: number
   date?: string
   track_type?: string
   status?: string
   history?: unknown
   screenshot_url?: string
+  mode?: 'speed' | 'coursing'
 }
 
 interface BreedHubColumnsProps {
@@ -41,13 +43,13 @@ function formatSeasonsCount(count: number): string {
   return `${count} сезонов`
 }
 
-function formatRunsCount(count: number): string {
+function formatRecordsCount(count: number): string {
   const mod10 = count % 10
   const mod100 = count % 100
-  if (mod100 >= 11 && mod100 <= 14) return `${count} замеров`
-  if (mod10 === 1) return `${count} замер`
-  if (mod10 >= 2 && mod10 <= 4) return `${count} замера`
-  return `${count} замеров`
+  if (mod100 >= 11 && mod100 <= 14) return `${count} рекордов`
+  if (mod10 === 1) return `${count} рекорд`
+  if (mod10 >= 2 && mod10 <= 4) return `${count} рекорда`
+  return `${count} рекордов`
 }
 
 type ColumnTabId = 'coursing' | 'racing' | 'donino'
@@ -270,7 +272,7 @@ export default function BreedHubColumns({
           <span className="truncate">Рекорды Донино (км/ч)</span>
           {doninoList.length > 0 && (
             <span className="text-old-money-500 font-semibold text-[11px] sm:text-xs normal-case tracking-normal shrink-0">
-              · {formatRunsCount(doninoList.length)}
+              · {formatRecordsCount(doninoList.length)}
             </span>
           )}
         </span>
@@ -289,8 +291,215 @@ export default function BreedHubColumns({
     />
   )
 
-  // Общий рендерер таблицы чемпионов сезона (без двойного заголовка)
-  const renderChampionsTable = (items: AnnualDogLeader[], mode: 'coursing' | 'racing') => {
+  // Сводные данные по годам для выравнивания строк десктопа
+  const coursingByYear = useMemo(() => {
+    const map = new Map<number, AnnualDogLeader>()
+    coursingList.forEach((item) => map.set(item.year, item))
+    return map
+  }, [coursingList])
+
+  const racingByYear = useMemo(() => {
+    const map = new Map<number, AnnualDogLeader>()
+    racingList.forEach((item) => map.set(item.year, item))
+    return map
+  }, [racingList])
+
+  const allYears = useMemo(() => {
+    const set = new Set<number>()
+    coursingList.forEach((item) => set.add(item.year))
+    racingList.forEach((item) => set.add(item.year))
+    return Array.from(set).sort((a, b) => b - a)
+  }, [coursingList, racingList])
+
+  const totalRowsCount = useMemo(() => {
+    const counts: number[] = []
+    if (hasCoursing || hasRacing) counts.push(allYears.length)
+    if (hasDonino) counts.push(doninoList.length)
+    return counts.length > 0 ? Math.max(...counts) : 0
+  }, [hasCoursing, hasRacing, hasDonino, allYears.length, doninoList.length])
+
+  // Рендерер ячейки Курсинга на десктопе
+  const renderDesktopCoursingCell = (item?: AnnualDogLeader, year?: number) => {
+    if (!item) {
+      if (year == null) return null
+      return (
+        <div className="flex items-center gap-2 w-full min-w-0 opacity-40">
+          <div className="w-14 shrink-0 text-center">
+            <span className="inline-block px-2 py-0.5 rounded-full font-medium font-sans tabular-nums text-xs text-old-money-400 bg-cream-50 border border-old-money-200/50">
+              {year}
+            </span>
+          </div>
+          <div className="flex-1 min-w-0 text-xs text-old-money-400 italic">
+            —
+          </div>
+        </div>
+      )
+    }
+
+    const { primary, secondary } = parseDogName(item.name_lat, item.name_ru)
+    const isMale = item.sex === 'M' || item.sex === 'К'
+    const isFemale = item.sex === 'F' || item.sex === 'С'
+    const sexVal = isMale ? 'm' : isFemale ? 'f' : ''
+    const tooltipTitle = `Чемпион курсинга ${item.year} года: ${item.gold} золотых побед из ${item.total_starts} стартов`
+
+    return (
+      <div className="flex items-center gap-2 w-full min-w-0" title={tooltipTitle}>
+        <div className="w-14 shrink-0 text-center">
+          <Link
+            to={`/competitions/ranking/${item.year}/?breed=${encodeURIComponent(breedToSlug(canonicalKey))}&tab=coursing`}
+            className="inline-block px-2 py-0.5 rounded-full font-bold font-sans tabular-nums text-xs bg-camel-100 hover:bg-camel-200 active:scale-95 text-camel-950 border border-camel-200/80 transition-all shadow-2xs cursor-pointer"
+            title={`Открыть рейтинг ${item.year} года`}
+          >
+            {item.year}
+          </Link>
+        </div>
+
+        <div className="flex-1 min-w-0 overflow-hidden">
+          <div className="flex items-center gap-1 min-w-0">
+            <Link
+              to={`/dog/${item.dog_id}/`}
+              className="font-medium text-camel-950 hover:text-camel-800 hover:underline truncate block text-sm"
+              title={primary}
+            >
+              {primary}
+            </Link>
+            {sexVal && (
+              <span title={isMale ? 'Кобель' : 'Сука'} className="inline-flex shrink-0">
+                <DogSexIcon sex={sexVal} size={12} variant="colored" />
+              </span>
+            )}
+          </div>
+          {secondary && (
+            <span className="text-[11px] text-charcoal-500 block leading-tight truncate" title={secondary}>
+              {secondary}
+            </span>
+          )}
+        </div>
+
+        <div className="w-[114px] xl:w-[124px] shrink-0 text-right flex flex-col items-end gap-0.5">
+          <div className="text-[11px] font-sans font-medium text-charcoal-600 leading-tight">
+            {item.total_starts} заб.
+          </div>
+          <div className="flex items-center justify-end gap-0.5 sm:gap-1">
+            <MedalBadge variant="gold" count={item.gold || 0} size="sm" />
+            <MedalBadge variant="silver" count={item.silver || 0} size="sm" />
+            <MedalBadge variant="bronze" count={item.bronze || 0} size="sm" />
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  // Рендерер ячейки Рейсинга на десктопе
+  const renderDesktopRacingCell = (item?: AnnualDogLeader, year?: number) => {
+    if (!item) {
+      if (year == null) return null
+      return (
+        <div className="flex items-center gap-2 w-full min-w-0 opacity-40">
+          <div className="w-14 shrink-0 text-center">
+            <span className="inline-block px-2 py-0.5 rounded-full font-medium font-sans tabular-nums text-xs text-old-money-400 bg-cream-50 border border-old-money-200/50">
+              {year}
+            </span>
+          </div>
+          <div className="flex-1 min-w-0 text-xs text-old-money-400 italic">
+            —
+          </div>
+        </div>
+      )
+    }
+
+    const { primary, secondary } = parseDogName(item.name_lat, item.name_ru)
+    const isMale = item.sex === 'M' || item.sex === 'К'
+    const isFemale = item.sex === 'F' || item.sex === 'С'
+    const sexVal = isMale ? 'm' : isFemale ? 'f' : ''
+    const tooltipTitle = `Чемпион рейсинга ${item.year} года: ${item.gold} золотых побед из ${item.total_starts} стартов${item.best_speed ? `, пиковая скорость ${item.best_speed.toFixed(1)} км/ч` : ''}`
+
+    return (
+      <div className="flex items-center gap-2 w-full min-w-0" title={tooltipTitle}>
+        <div className="w-14 shrink-0 text-center">
+          <Link
+            to={`/competitions/ranking/${item.year}/?breed=${encodeURIComponent(breedToSlug(canonicalKey))}&tab=racing`}
+            className="inline-block px-2 py-0.5 rounded-full font-bold font-sans tabular-nums text-xs bg-camel-100 hover:bg-camel-200 active:scale-95 text-camel-950 border border-camel-200/80 transition-all shadow-2xs cursor-pointer"
+            title={`Открыть рейтинг ${item.year} года`}
+          >
+            {item.year}
+          </Link>
+        </div>
+
+        <div className="flex-1 min-w-0 overflow-hidden">
+          <div className="flex items-center gap-1 min-w-0">
+            <Link
+              to={`/dog/${item.dog_id}/`}
+              className="font-medium text-camel-950 hover:text-camel-800 hover:underline truncate block text-sm"
+              title={primary}
+            >
+              {primary}
+            </Link>
+            {sexVal && (
+              <span title={isMale ? 'Кобель' : 'Сука'} className="inline-flex shrink-0">
+                <DogSexIcon sex={sexVal} size={12} variant="colored" />
+              </span>
+            )}
+          </div>
+          {secondary && (
+            <span className="text-[11px] text-charcoal-500 block leading-tight truncate" title={secondary}>
+              {secondary}
+            </span>
+          )}
+        </div>
+
+        <div className="w-[114px] xl:w-[124px] shrink-0 text-right flex flex-col items-end gap-0.5">
+          <div className="flex items-center justify-end gap-1 text-[11px] leading-tight font-sans">
+            <span className="text-charcoal-600 font-medium">{item.total_starts} заб.</span>
+            {item.best_speed && (
+              <>
+                <span className="text-charcoal-300">·</span>
+                <span className="inline-flex items-baseline gap-0.5 font-bold text-charcoal-900 text-xs">
+                  <span>{item.best_speed.toFixed(1)}</span>
+                  <span className="text-[10px] font-normal text-charcoal-500">км/ч</span>
+                </span>
+              </>
+            )}
+          </div>
+          <div className="flex items-center justify-end gap-0.5 sm:gap-1">
+            <MedalBadge variant="gold" count={item.gold || 0} size="sm" />
+            <MedalBadge variant="silver" count={item.silver || 0} size="sm" />
+            <MedalBadge variant="bronze" count={item.bronze || 0} size="sm" />
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  // Рендерер ячейки Донино на десктопе
+  const renderDesktopDoninoCell = (item?: SpeedRecordItem, rowIndex?: number) => {
+    if (!item) return null
+    return (
+      <div className="w-full min-w-0 [&_.donino-list-row-link]:border-b-0 [&_.donino-list-row-screen]:border-b-0">
+        <DoninoListRecordRow
+          key={`donino-${item.breed || breedNameRu}-${item.name}-${rowIndex}`}
+          mode={item.mode || 'speed'}
+          name={item.name || ''}
+          breed={item.breed || breedNameRu}
+          sex={item.sex}
+          date={item.date}
+          status={item.status}
+          history={item.history}
+          speedKmh={item.speed_km_h}
+          timeSeconds={item.time_seconds}
+          screenshotUrl={item.screenshot_url}
+          trackType={item.track_type}
+          rank={(rowIndex ?? 0) + 1}
+          embedded
+          hideBreed
+          compact
+        />
+      </div>
+    )
+  }
+
+  // Мобильный вид (карточки состязаний)
+  const renderMobileCards = (items: AnnualDogLeader[], mode: 'coursing' | 'racing') => {
     const isRacing = mode === 'racing'
     const tabParam = isRacing ? 'racing' : 'coursing'
 
@@ -307,156 +516,79 @@ export default function BreedHubColumns({
     }
 
     return (
-      <>
-        {/* Десктопный вид: таблица без лишнего thead (начинается прямо под плашкой) */}
-        <div className="hidden sm:block flex-1 min-w-0">
-          <table className="w-full text-left text-sm table-auto h-full">
-            <tbody className="divide-y divide-old-money-100">
-              {items.map((item) => {
-                const { primary, secondary } = parseDogName(item.name_lat, item.name_ru)
-                const isMale = item.sex === 'M' || item.sex === 'К'
-                const isFemale = item.sex === 'F' || item.sex === 'С'
-                const sexVal = isMale ? 'm' : isFemale ? 'f' : ''
+      <ol className="divide-y divide-old-money-100 text-sm">
+        {items.map((item) => {
+          const { primary, secondary } = parseDogName(item.name_lat, item.name_ru)
+          const isMale = item.sex === 'M' || item.sex === 'К'
+          const isFemale = item.sex === 'F' || item.sex === 'С'
+          const sexVal = isMale ? 'm' : isFemale ? 'f' : ''
 
-                const tooltipTitle = isRacing
-                  ? `Чемпион рейсинга ${item.year} года: ${item.gold} золотых побед из ${item.total_starts} стартов${item.best_speed ? `, пиковая скорость ${item.best_speed.toFixed(1)} км/ч` : ''}`
-                  : `Чемпион курсинга ${item.year} года: ${item.gold} золотых побед из ${item.total_starts} стартов`
+          return (
+            <li key={item.year} className="p-3 flex flex-col gap-1.5 hover:bg-cream-50/60 transition-colors">
+              <div className="flex items-center gap-2 min-w-0">
+                <Link
+                  to={`/competitions/ranking/${item.year}/?breed=${encodeURIComponent(breedToSlug(canonicalKey))}&tab=${tabParam}`}
+                  className="px-2.5 py-0.5 rounded-full font-bold font-sans tabular-nums text-xs bg-camel-100 hover:bg-camel-200 active:scale-95 text-camel-950 border border-camel-200/80 shrink-0 transition-all shadow-2xs cursor-pointer"
+                  title={`Открыть рейтинг ${item.year} года`}
+                >
+                  {item.year}
+                </Link>
 
-                return (
-                  <tr
-                    key={item.year}
-                    className="hover:bg-cream-50/60 transition-colors"
-                    title={tooltipTitle}
-                  >
-                    <td className="py-2.5 px-2.5 text-center whitespace-nowrap w-16">
-                      <Link
-                        to={`/competitions/ranking/${item.year}/?breed=${encodeURIComponent(breedToSlug(canonicalKey))}&tab=${tabParam}`}
-                        className="inline-block px-2.5 py-0.5 rounded-full font-bold font-sans tabular-nums text-xs bg-camel-100 hover:bg-camel-200 active:scale-95 text-camel-950 border border-camel-200/80 transition-all shadow-2xs cursor-pointer"
-                        title={`Открыть рейтинг ${item.year} года`}
-                      >
-                        {item.year}
-                      </Link>
-                    </td>
-                    <td className="py-2 px-3 min-w-0">
-                      <div className="flex items-center gap-1.5 min-w-0">
-                        <Link
-                          to={`/dog/${item.dog_id}/`}
-                          className="font-medium text-camel-950 hover:text-camel-800 hover:underline truncate block"
-                        >
-                          {primary}
-                        </Link>
-                        {sexVal && (
-                          <span title={isMale ? 'Кобель' : 'Сука'} className="inline-flex shrink-0">
-                            <DogSexIcon sex={sexVal} size={12} variant="colored" />
-                          </span>
-                        )}
-                      </div>
-                      {secondary && (
-                        <span className="text-[11px] text-charcoal-500 block leading-tight truncate">
-                          {secondary}
-                        </span>
-                      )}
-                    </td>
-
-                    {/* Колонка результатов */}
-                    <td className="py-2 px-3 text-right whitespace-nowrap w-36 sm:w-40">
-                      <div className="flex flex-col items-end gap-1">
-                        <div className="flex items-center gap-1 text-[11px] leading-tight font-sans">
-                          <span className="text-charcoal-600 font-medium">{item.total_starts} заб.</span>
-                          {isRacing && item.best_speed && <span className="text-charcoal-400">·</span>}
-                          {isRacing && item.best_speed && (
-                            <span className="inline-flex items-baseline gap-0.5 font-bold text-charcoal-900 text-xs">
-                              <span>{item.best_speed.toFixed(1)}</span>
-                              <span className="text-[10px] font-normal text-charcoal-500">км/ч</span>
-                            </span>
-                          )}
-                        </div>
-                        <div className="flex items-center justify-end gap-1">
-                          <MedalBadge variant="gold" count={item.gold || 0} size="sm" />
-                          <MedalBadge variant="silver" count={item.silver || 0} size="sm" />
-                          <MedalBadge variant="bronze" count={item.bronze || 0} size="sm" />
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                )
-              })}
-            </tbody>
-          </table>
-        </div>
-
-        {/* Мобильный вид (список карточек) */}
-        <ol className="divide-y divide-old-money-100 text-sm sm:hidden">
-          {items.map((item) => {
-            const { primary, secondary } = parseDogName(item.name_lat, item.name_ru)
-            const isMale = item.sex === 'M' || item.sex === 'К'
-            const isFemale = item.sex === 'F' || item.sex === 'С'
-            const sexVal = isMale ? 'm' : isFemale ? 'f' : ''
-
-            return (
-              <li key={item.year} className="p-3 flex flex-col gap-1.5 hover:bg-cream-50/60 transition-colors">
-                <div className="flex items-center gap-2 min-w-0">
+                <div className="flex items-center gap-1.5 min-w-0 flex-1">
                   <Link
-                    to={`/competitions/ranking/${item.year}/?breed=${encodeURIComponent(breedToSlug(canonicalKey))}&tab=${tabParam}`}
-                    className="px-2.5 py-0.5 rounded-full font-bold font-sans tabular-nums text-xs bg-camel-100 hover:bg-camel-200 active:scale-95 text-camel-950 border border-camel-200/80 shrink-0 transition-all shadow-2xs cursor-pointer"
-                    title={`Открыть рейтинг ${item.year} года`}
+                    to={`/dog/${item.dog_id}/`}
+                    className="font-medium text-camel-950 hover:text-camel-800 hover:underline truncate text-sm"
+                    title={primary}
                   >
-                    {item.year}
+                    {primary}
                   </Link>
-
-                  <div className="flex items-center gap-1.5 min-w-0 flex-1">
-                    <Link
-                      to={`/dog/${item.dog_id}/`}
-                      className="font-medium text-camel-950 hover:text-camel-800 hover:underline truncate text-sm"
-                    >
-                      {primary}
-                    </Link>
-                    {sexVal && (
-                      <span title={isMale ? 'Кобель' : 'Сука'} className="inline-flex shrink-0">
-                        <DogSexIcon sex={sexVal} size={12} variant="colored" />
-                      </span>
-                    )}
-                  </div>
+                  {sexVal && (
+                    <span title={isMale ? 'Кобель' : 'Сука'} className="inline-flex shrink-0">
+                      <DogSexIcon sex={sexVal} size={12} variant="colored" />
+                    </span>
+                  )}
                 </div>
+              </div>
 
-                {secondary && (
-                  <div className="text-[11px] text-charcoal-500 pl-0.5 truncate">
-                    {secondary}
-                  </div>
-                )}
+              {secondary && (
+                <div className="text-[11px] text-charcoal-500 pl-0.5 truncate" title={secondary}>
+                  {secondary}
+                </div>
+              )}
 
-                <div className="flex items-center justify-between text-xs pt-1.5 border-t border-old-money-100/70 font-sans tabular-nums">
-                  <div className="text-left text-[11px] text-charcoal-600 font-medium flex items-center gap-1">
-                    <span>{item.total_starts} заб.</span>
-                    {isRacing && item.best_speed && <span className="text-charcoal-400">·</span>}
-                    {isRacing && item.best_speed && (
+              <div className="flex items-center justify-between text-xs pt-1.5 border-t border-old-money-100/70 font-sans tabular-nums">
+                <div className="text-left text-[11px] text-charcoal-600 font-medium flex items-center gap-1">
+                  <span>{item.total_starts} заб.</span>
+                  {isRacing && item.best_speed && (
+                    <>
+                      <span className="text-charcoal-400">·</span>
                       <span className="inline-flex items-baseline gap-0.5 font-bold text-charcoal-900 text-xs">
                         <span>{item.best_speed.toFixed(1)}</span>
                         <span className="text-[10px] font-normal text-charcoal-500">км/ч</span>
                       </span>
-                    )}
-                  </div>
-                  <div className="flex items-center justify-end gap-1">
-                    <MedalBadge variant="gold" count={item.gold || 0} size="sm" />
-                    <MedalBadge variant="silver" count={item.silver || 0} size="sm" />
-                    <MedalBadge variant="bronze" count={item.bronze || 0} size="sm" />
-                  </div>
+                    </>
+                  )}
                 </div>
-              </li>
-            )
-          })}
-        </ol>
-      </>
+                <div className="flex items-center justify-end gap-1">
+                  <MedalBadge variant="gold" count={item.gold || 0} size="sm" />
+                  <MedalBadge variant="silver" count={item.silver || 0} size="sm" />
+                  <MedalBadge variant="bronze" count={item.bronze || 0} size="sm" />
+                </div>
+              </div>
+            </li>
+          )
+        })}
+      </ol>
     )
   }
 
-  // Расчет классов адаптивной сетки десктопа
+  // Расчет классов адаптивной сетки десктопа (слитные колонки без внешних отступов)
   const totalColumnsCount = (hasCoursing ? 1 : 0) + (hasRacing ? 1 : 0) + (hasDonino ? 1 : 0)
   const desktopGridClass =
     totalColumnsCount >= 3
-      ? 'lg:grid-cols-3 lg:gap-4 xl:gap-5'
+      ? 'lg:grid-cols-3'
       : totalColumnsCount === 2
-      ? 'lg:grid-cols-2 lg:gap-6'
+      ? 'lg:grid-cols-2'
       : 'lg:grid-cols-1'
 
   return (
@@ -488,95 +620,148 @@ export default function BreedHubColumns({
         </div>
       )}
 
-      {/* Контейнер колонок: на десктопе до 3 колонок в ряд, на мобильном плавный свайп жестами */}
-      <div
-        className="w-full relative overflow-x-clip lg:overflow-visible touch-pan-y select-none"
-        onTouchStart={(e) => startDrag(e.touches[0].clientX, e.touches[0].clientY)}
-        onTouchMove={(e) => moveDrag(e.touches[0].clientX, e.touches[0].clientY)}
-        onTouchEnd={(e) => endDrag(e.changedTouches[0].clientX)}
-        onTouchCancel={cancelDrag}
-        onMouseDown={(e) => {
-          if (e.button === 0) startDrag(e.clientX, e.clientY)
-        }}
-        onMouseMove={(e) => moveDrag(e.clientX, e.clientY)}
-        onMouseUp={(e) => endDrag(e.clientX)}
-        onMouseLeave={cancelDrag}
-        onClickCapture={(e) => {
-          if (hadMovedRef.current) {
-            e.preventDefault()
-            e.stopPropagation()
-          }
-        }}
-      >
+      {/* Единый монолитный блок (на десктопе сплошные сквозные горизонтальные полоски через весь блок, на мобильном свайп-жесты) */}
+      <div className="rounded-2xl border border-[rgba(195,168,128,0.70)] bg-white shadow-2xs overflow-hidden">
+        {/* ================= ДЕСКТОПНЫЙ ВИД (>= 1024px): строки объединены сквозными горизонтальными линиями ================= */}
+        <div className="hidden lg:block w-full">
+          {/* Шапка таблицы: плашки дисциплин */}
+          <div className={`grid ${desktopGridClass} divide-x divide-[rgba(195,168,128,0.50)] bg-cream-100/90`}>
+            {hasCoursing && <div>{coursingPlaque}</div>}
+            {hasRacing && <div>{racingPlaque}</div>}
+            {hasDonino && <div>{doninoPlaque}</div>}
+          </div>
+
+          {/* Строки таблицы со сквозными полосками через весь блок */}
+          {annualLeadersLoading ? (
+            <p className="text-xs text-old-money-600 py-8 text-center">Загрузка архива состязаний…</p>
+          ) : totalRowsCount === 0 ? (
+            <p className="text-xs text-old-money-600 py-8 text-center">Данных по породе пока нет.</p>
+          ) : (
+            <div className="divide-y divide-old-money-100">
+              {Array.from({ length: totalRowsCount }).map((_, rowIndex) => {
+                const year = allYears[rowIndex]
+                const coursingItem = year != null ? coursingByYear.get(year) : undefined
+                const racingItem = year != null ? racingByYear.get(year) : undefined
+                const doninoItem = doninoList[rowIndex]
+
+                return (
+                  <div
+                    key={`desktop-row-${year ?? rowIndex}`}
+                    className={`grid ${desktopGridClass} divide-x divide-[rgba(195,168,128,0.50)] hover:bg-cream-50/50 transition-colors items-center min-h-[52px]`}
+                  >
+                    {hasCoursing && (
+                      <div className="px-3 py-2 min-w-0 h-full flex items-center">
+                        {renderDesktopCoursingCell(coursingItem, year)}
+                      </div>
+                    )}
+                    {hasRacing && (
+                      <div className="px-3 py-2 min-w-0 h-full flex items-center">
+                        {renderDesktopRacingCell(racingItem, year)}
+                      </div>
+                    )}
+                    {hasDonino && (
+                      <div className="min-w-0 h-full flex items-center [&>.donino-list-row]:w-full [&_.donino-list-row-link]:border-b-0 [&_.donino-list-row-screen]:border-b-0">
+                        {renderDesktopDoninoCell(doninoItem, rowIndex)}
+                      </div>
+                    )}
+                  </div>
+                )
+              })}
+            </div>
+          )}
+        </div>
+
+        {/* ================= МОБИЛЬНЫЙ ВИД (< 1024px): горизонтальный свайп между колонками ================= */}
         <div
-          ref={trackRef}
-          className={`flex flex-nowrap w-full min-w-0 items-start gap-4 lg:grid ${desktopGridClass} lg:items-stretch lg:!transform-none`}
-          style={{
-            transform:
-              typeof window !== 'undefined' && window.innerWidth >= 1024
-                ? 'none'
-                : activeTabs.length <= 1
-                ? 'none'
-                : `translate3d(${getSlideOffset(activeTabIndex)}, 0, 0)`,
-            willChange: activeTabs.length > 1 ? 'transform' : 'auto',
+          className="block lg:hidden w-full relative overflow-x-clip touch-pan-y select-none"
+          onTouchStart={(e) => startDrag(e.touches[0].clientX, e.touches[0].clientY)}
+          onTouchMove={(e) => moveDrag(e.touches[0].clientX, e.touches[0].clientY)}
+          onTouchEnd={(e) => endDrag(e.changedTouches[0].clientX)}
+          onTouchCancel={cancelDrag}
+          onMouseDown={(e) => {
+            if (e.button === 0) startDrag(e.clientX, e.clientY)
+          }}
+          onMouseMove={(e) => moveDrag(e.clientX, e.clientY)}
+          onMouseUp={(e) => endDrag(e.clientX)}
+          onMouseLeave={cancelDrag}
+          onClickCapture={(e) => {
+            if (hadMovedRef.current) {
+              e.preventDefault()
+              e.stopPropagation()
+            }
           }}
         >
-          {/* Колонка 1: Курсинг по годам */}
-          {hasCoursing && (
-            <div className="w-full max-w-full min-w-0 shrink-0 basis-full lg:w-auto lg:min-w-0 lg:shrink lg:basis-auto lg:h-full">
-              <DoninoColumnShell plaque={coursingPlaque} className="h-full flex flex-col" bodyClassName="flex-1 flex flex-col">
-                {annualLeadersLoading ? (
-                  <p className="text-xs text-old-money-600 py-6 text-center">Загрузка архива по годам…</p>
-                ) : (
-                  renderChampionsTable(coursingList, 'coursing')
-                )}
-              </DoninoColumnShell>
-            </div>
-          )}
+          <div
+            ref={trackRef}
+            className="flex flex-nowrap w-full min-w-0 items-stretch gap-0"
+            style={{
+              transform: activeTabs.length <= 1 ? 'none' : `translate3d(${getSlideOffset(activeTabIndex)}, 0, 0)`,
+              willChange: activeTabs.length > 1 ? 'transform' : 'auto',
+            }}
+          >
+            {/* Колонка 1: Курсинг по годам */}
+            {hasCoursing && (
+              <div className="w-full max-w-full min-w-0 shrink-0 basis-full flex flex-col bg-white">
+                {coursingPlaque}
+                <div className="flex-1 min-w-0 flex flex-col justify-start">
+                  {annualLeadersLoading ? (
+                    <p className="text-xs text-old-money-600 py-6 text-center">Загрузка архива по годам…</p>
+                  ) : (
+                    renderMobileCards(coursingList, 'coursing')
+                  )}
+                </div>
+              </div>
+            )}
 
-          {/* Колонка 2: Рейсинг по годам (круговой трек РКФ) */}
-          {hasRacing && (
-            <div className="w-full max-w-full min-w-0 shrink-0 basis-full lg:w-auto lg:min-w-0 lg:shrink lg:basis-auto lg:h-full">
-              <DoninoColumnShell plaque={racingPlaque} className="h-full flex flex-col" bodyClassName="flex-1 flex flex-col">
-                {annualLeadersLoading ? (
-                  <p className="text-xs text-old-money-600 py-6 text-center">Загрузка архива рейсинга…</p>
-                ) : (
-                  renderChampionsTable(racingList, 'racing')
-                )}
-              </DoninoColumnShell>
-            </div>
-          )}
+            {/* Колонка 2: Рейсинг по годам */}
+            {hasRacing && (
+              <div className="w-full max-w-full min-w-0 shrink-0 basis-full flex flex-col bg-white">
+                {racingPlaque}
+                <div className="flex-1 min-w-0 flex flex-col justify-start">
+                  {annualLeadersLoading ? (
+                    <p className="text-xs text-old-money-600 py-6 text-center">Загрузка архива рейсинга…</p>
+                  ) : (
+                    renderMobileCards(racingList, 'racing')
+                  )}
+                </div>
+              </div>
+            )}
 
-          {/* Колонка 3: Рекорды Донино (замеры скорости на прямой) */}
-          {hasDonino && (
-            <div className="w-full max-w-full min-w-0 shrink-0 basis-full lg:w-auto lg:min-w-0 lg:shrink lg:basis-auto lg:h-full">
-              <DoninoColumnShell plaque={doninoPlaque} className="h-full flex flex-col" bodyClassName="flex-1 flex flex-col justify-between">
-                {doninoLoading ? (
-                  <p className="text-xs text-old-money-600 py-6 text-center">Загрузка замеров скорости…</p>
-                ) : (
-                  <div className="flex-1 flex flex-col justify-between divide-y divide-old-money-100 [&>*:last-child_.donino-list-row-link]:border-b-0 [&>*:last-child_.donino-list-row-screen]:border-b-0">
-                    {doninoList.map((r, i) => (
-                      <DoninoListRecordRow
-                        key={`donino-${r.breed || breedNameRu}-${r.name}-${i}`}
-                        mode="speed"
-                        name={r.name || ''}
-                        breed={r.breed || breedNameRu}
-                        sex={r.sex}
-                        date={r.date}
-                        status={r.status}
-                        history={r.history}
-                        speedKmh={r.speed_km_h}
-                        screenshotUrl={r.screenshot_url}
-                        trackType={r.track_type}
-                        rank={i + 1}
-                        embedded
-                      />
-                    ))}
-                  </div>
-                )}
-              </DoninoColumnShell>
-            </div>
-          )}
+            {/* Колонка 3: Рекорды Донино */}
+            {hasDonino && (
+              <div className="w-full max-w-full min-w-0 shrink-0 basis-full flex flex-col bg-white">
+                {doninoPlaque}
+                <div className="flex-1 min-w-0 flex flex-col justify-start">
+                  {doninoLoading ? (
+                    <p className="text-xs text-old-money-600 py-6 text-center">Загрузка замеров скорости…</p>
+                  ) : (
+                    <div className="flex flex-col justify-start divide-y divide-old-money-100 [&>*:last-child_.donino-list-row-link]:border-b-0 [&>*:last-child_.donino-list-row-screen]:border-b-0">
+                      {doninoList.map((r, i) => (
+                        <DoninoListRecordRow
+                          key={`donino-mobile-${r.breed || breedNameRu}-${r.name}-${i}`}
+                          mode={r.mode || 'speed'}
+                          name={r.name || ''}
+                          breed={r.breed || breedNameRu}
+                          sex={r.sex}
+                          date={r.date}
+                          status={r.status}
+                          history={r.history}
+                          speedKmh={r.speed_km_h}
+                          timeSeconds={r.time_seconds}
+                          screenshotUrl={r.screenshot_url}
+                          trackType={r.track_type}
+                          rank={i + 1}
+                          embedded
+                          hideBreed
+                          compact
+                        />
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>
