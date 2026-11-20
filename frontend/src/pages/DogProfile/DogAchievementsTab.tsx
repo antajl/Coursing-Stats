@@ -13,7 +13,6 @@ import {
   Rabbit,
   Target,
   ShieldCheck,
-  FileText,
   ExternalLink,
 } from 'lucide-react'
 import { titleBadgeClass } from '../../lib/qualificationTitles'
@@ -250,62 +249,6 @@ export function DogAchievementsTab({
 
   return (
     <div className="space-y-6">
-      {/* ПАНЕЛЬ СВОДКИ ДОСТИЖЕНИЙ */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
-        <div className="rounded-2xl border border-old-money-200/90 bg-white p-3.5 sm:p-4 shadow-2xs">
-          <div className="flex items-center gap-2 text-charcoal-400 text-xs font-medium">
-            <Trophy className="w-4 h-4 text-amber-600 shrink-0" aria-hidden />
-            <span>Титулы РКФ</span>
-          </div>
-          <div className="mt-2 text-2xl sm:text-3xl font-bold tracking-tight text-charcoal-900 tabular-nums">
-            {totalTitlesCount}
-          </div>
-          <div className="text-[11px] text-charcoal-500 mt-0.5">
-            {supremeTitles.length > 0 ? `${supremeTitles.length} высших званий` : 'официальных наград'}
-          </div>
-        </div>
-
-        <div className="rounded-2xl border border-old-money-200/90 bg-white p-3.5 sm:p-4 shadow-2xs">
-          <div className="flex items-center gap-2 text-charcoal-400 text-xs font-medium">
-            <FileText className="w-4 h-4 text-camel-700 shrink-0" aria-hidden />
-            <span>Сертификаты</span>
-          </div>
-          <div className="mt-2 text-2xl sm:text-3xl font-bold tracking-tight text-charcoal-900 tabular-nums">
-            {totalCacl + totalCac + certs.cacilEvents.length}
-          </div>
-          <div className="text-[11px] text-charcoal-500 mt-0.5">
-            {totalCacl > 0 ? `${totalCacl} CACL` : ''} {totalCac > 0 ? `${totalCac} CAC` : ''}
-          </div>
-        </div>
-
-        <div className="rounded-2xl border border-old-money-200/90 bg-white p-3.5 sm:p-4 shadow-2xs">
-          <div className="flex items-center gap-2 text-charcoal-400 text-xs font-medium">
-            <Target className="w-4 h-4 text-forest-700 shrink-0" aria-hidden />
-            <span>В шаге от звания</span>
-          </div>
-          <div className="mt-2 text-2xl sm:text-3xl font-bold tracking-tight text-charcoal-900 tabular-nums">
-            {inProgressTitles.length}
-          </div>
-          <div className="text-[11px] text-charcoal-500 mt-0.5">
-            {inProgressTitles.length > 0 ? 'титулов в процессе' : 'все нормы закрыты'}
-          </div>
-        </div>
-
-        <div className="rounded-2xl border border-old-money-200/90 bg-white p-3.5 sm:p-4 shadow-2xs">
-          <div className="flex items-center gap-2 text-charcoal-400 text-xs font-medium">
-            <Medal className="w-4 h-4 text-amber-700 shrink-0" aria-hidden />
-            <span>Побед (1-е места)</span>
-          </div>
-          <div className="mt-2 text-2xl sm:text-3xl font-bold tracking-tight text-charcoal-900 tabular-nums">
-            {(coursingStats?.gold || 0) + (racingStats?.gold || 0)}
-          </div>
-          <div className="text-[11px] text-charcoal-500 mt-0.5">
-            {coursingStats?.gold ? `${coursingStats.gold} курсинг` : ''}{' '}
-            {racingStats?.gold ? `${racingStats.gold} бега` : ''}
-          </div>
-        </div>
-      </div>
-
       {/* РАЗДЕЛ 1: ТИТУЛЫ В ПРОЦЕССЕ («ПОЧТИ ПОЛУЧИЛ» / ПЕРСПЕКТИВЫ) */}
       {inProgressTitles.length > 0 && (
         <div className="rounded-2xl border border-amber-200/80 bg-amber-50/30 overflow-hidden shadow-2xs">
