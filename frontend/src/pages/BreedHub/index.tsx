@@ -7,6 +7,7 @@ import {
   ChevronLeft,
   ChevronDown,
   ChevronUp,
+  BookOpen,
 } from 'lucide-react'
 import { SEO } from '../../components/SEO'
 import { JsonLd, itemPageSchema, breadcrumbListSchema, faqPageSchema } from '../../components/JsonLd'
@@ -280,9 +281,10 @@ export default function BreedHub() {
       {/* Breed Profile Card: двухколоночный сплит (инфо и спойлер истории слева, строчный реестр метрик справа) */}
       <div className="cs-glass-card rounded-2xl border border-old-money-200/80 bg-white p-4 sm:p-5 md:p-6 shadow-xs">
         <div className="lg:grid lg:grid-cols-[1.3fr_1fr] lg:gap-6 items-center">
-          {/* Левая колонка: навигация, название, кнопки, лид и спойлер «О породе и истории» */}
+          {/* Левая колонка: навигация, название, лид, единый тулбар кнопок и спойлер истории */}
           <div className="min-w-0">
-            <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-1">
+            {/* Навигационная цепочка и паспортные метаданные породы */}
+            <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-2 text-xs">
               <Link
                 to="/breeds/"
                 onClick={() => {
@@ -290,79 +292,89 @@ export default function BreedHub() {
                     sessionStorage.setItem('cs_last_breed_slug', breedInfo.slug)
                   } catch {}
                 }}
-                className="cs-glass-pill inline-flex h-6 items-center gap-1 rounded-full px-2 text-[10.5px] font-semibold text-charcoal-700 hover:text-camel-800 cursor-pointer"
+                className="inline-flex items-center gap-1 font-medium text-charcoal-500 hover:text-camel-800 transition-colors group cursor-pointer"
                 title="Вернуться в каталог пород"
               >
-                <ChevronLeft className="h-3 w-3" />
+                <ChevronLeft className="h-3.5 w-3.5 text-camel-700 transition-transform group-hover:-translate-x-0.5" aria-hidden />
                 <span>Каталог пород</span>
               </Link>
-              <span className="inline-flex items-center rounded-md border border-camel-200/90 bg-cream-100/90 px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wider text-camel-800 shrink-0">
+              <span className="text-old-money-300 select-none">/</span>
+              <span className="inline-flex items-center rounded-md border border-camel-200/90 bg-cream-100/90 px-1.5 py-0.5 text-[11px] font-semibold uppercase tracking-wider text-camel-800 shrink-0">
                 {breedInfo.fci}
               </span>
-              <span className="text-xs text-charcoal-500 font-sans tracking-wide">
+              <span className="text-charcoal-500 font-sans tracking-wide">
                 {breedInfo.nameLat}
               </span>
               {breedStats.yearsSpan && (
-                <span className="text-xs text-charcoal-400 font-sans tabular-nums hidden sm:inline">
+                <span className="text-charcoal-400 font-sans tabular-nums hidden sm:inline">
                   · Сезоны {breedStats.yearsSpan}
                 </span>
               )}
             </div>
 
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2.5 mb-2 mt-0.5">
-              <h1 className="text-xl sm:text-2xl lg:text-3xl font-serif font-bold text-charcoal-900 tracking-tight">
-                {breedInfo.nameRu}
-              </h1>
-              <div className="flex items-center gap-1.5 shrink-0 flex-wrap">
-                <Link
-                  to={`/competitions/ranking/2026/?breed=${breedInfo.slug}`}
-                  className="cs-glass-pill inline-flex h-7 sm:h-8 items-center gap-1.5 rounded-full px-2.5 sm:px-3 text-xs font-semibold shrink-0 cursor-pointer text-charcoal-700 hover:text-camel-800"
-                  title={`Полный рейтинг породы ${breedInfo.nameRu}`}
-                >
-                  <Trophy className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
-                  <span>Рейтинг</span>
-                  <ArrowUpRight className="h-3.5 w-3.5 text-charcoal-400" aria-hidden />
-                </Link>
+            {/* Название породы */}
+            <h1 className="text-2xl sm:text-3xl font-serif font-bold text-charcoal-900 tracking-tight leading-tight">
+              {breedInfo.nameRu}
+            </h1>
 
-                {breedArchiveUrl && (
-                  <a
-                    href={breedArchiveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="cs-glass-pill inline-flex h-7 sm:h-8 items-center gap-1.5 rounded-full px-2.5 sm:px-3 text-xs font-semibold shrink-0 cursor-pointer text-charcoal-700 hover:text-camel-800"
-                    title={`Международная база родословных The Breed Archive (${breedInfo.nameLat})`}
-                  >
-                    <img
-                      src="/assets/icons/breedarchive.webp"
-                      alt=""
-                      className="h-3.5 w-3.5 rounded-xs shrink-0"
-                      loading="lazy"
-                    />
-                    <span>Archive</span>
-                    <ArrowUpRight className="h-3.5 w-3.5 text-charcoal-400" aria-hidden />
-                  </a>
-                )}
-              </div>
-            </div>
-
-            <p className="text-xs sm:text-sm font-medium text-charcoal-800 leading-snug">
+            {/* Краткий лид о породе */}
+            <p className="text-xs sm:text-sm font-medium text-charcoal-800 leading-snug mt-1.5">
               {breedInfo.lead}
             </p>
 
+            {/* Единая строка действий: все кнопки одинаковой высоты (h-8), стиля и размера */}
+            <div className="flex flex-wrap items-center gap-2 mt-3 pt-2.5 border-t border-old-money-100/80">
+              <Link
+                to={`/competitions/ranking/2026/?breed=${breedInfo.slug}`}
+                className="cs-glass-pill inline-flex h-8 items-center gap-1.5 rounded-full px-3 text-xs font-semibold shrink-0 cursor-pointer text-charcoal-700 hover:text-camel-800 transition-all active:scale-95"
+                title={`Полный рейтинг породы ${breedInfo.nameRu}`}
+              >
+                <Trophy className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
+                <span>Рейтинг</span>
+                <ArrowUpRight className="h-3.5 w-3.5 text-charcoal-400" aria-hidden />
+              </Link>
+
+              {breedArchiveUrl && (
+                <a
+                  href={breedArchiveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="cs-glass-pill inline-flex h-8 items-center gap-1.5 rounded-full px-3 text-xs font-semibold shrink-0 cursor-pointer text-charcoal-700 hover:text-camel-800 transition-all active:scale-95"
+                  title={`Международная база родословных The Breed Archive (${breedInfo.nameLat})`}
+                >
+                  <img
+                    src="/assets/icons/breedarchive.webp"
+                    alt=""
+                    className="h-3.5 w-3.5 rounded-xs shrink-0"
+                    loading="lazy"
+                  />
+                  <span>Archive</span>
+                  <ArrowUpRight className="h-3.5 w-3.5 text-charcoal-400" aria-hidden />
+                </a>
+              )}
+
+              <button
+                type="button"
+                onClick={() => setIsDescExpanded(!isDescExpanded)}
+                className="cs-glass-pill inline-flex h-8 items-center gap-1.5 rounded-full px-3 text-xs font-semibold shrink-0 cursor-pointer text-charcoal-700 hover:text-camel-800 transition-all active:scale-95"
+                aria-expanded={isDescExpanded}
+              >
+                <BookOpen className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
+                <span>{isDescExpanded ? 'Свернуть историю' : 'О породе и истории'}</span>
+                {isDescExpanded ? (
+                  <ChevronUp className="h-3.5 w-3.5 text-charcoal-400" aria-hidden />
+                ) : (
+                  <ChevronDown className="h-3.5 w-3.5 text-charcoal-400" aria-hidden />
+                )}
+              </button>
+            </div>
+
+            {/* Разворачиваемое полное описание и история породы */}
             {isDescExpanded && (
-              <p className="text-xs text-charcoal-600 leading-relaxed mt-2 pt-2 border-t border-old-money-100">
+              <p className="text-xs text-charcoal-600 leading-relaxed mt-2.5 pt-2 border-t border-old-money-100 animate-in fade-in duration-200">
                 {breedInfo.description}
               </p>
             )}
-
-            <button
-              type="button"
-              onClick={() => setIsDescExpanded(!isDescExpanded)}
-              className="min-h-[44px] sm:min-h-0 inline-flex items-center gap-1 text-[11px] font-semibold text-camel-800 hover:text-camel-900 mt-1 cursor-pointer"
-            >
-              <span>{isDescExpanded ? 'Свернуть историю' : 'О породе и истории'}</span>
-              {isDescExpanded ? <ChevronUp className="h-3 w-3" /> : <ChevronDown className="h-3 w-3" />}
-            </button>
           </div>
 
           {/* Правая колонка: строчный реестр 4 ключевых метрик */}
