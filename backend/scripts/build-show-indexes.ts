@@ -1703,6 +1703,16 @@ async function main() {
   )
 
   safeWriteFileSync(
+    path.join(INDEXES_DIR, 'competition-links.json'),
+    JSON.stringify({
+      schema: 'coursing-stats/competition-show-links-v1',
+      count: Object.keys(byCompetitionId).length,
+      byCompetitionId,
+    }),
+  )
+  console.log(`  Saved competition-links.json (${Object.keys(byCompetitionId).length} links)`)
+
+  safeWriteFileSync(
     path.join(INDEXES_DIR, 'dog-all-time-ranks.json'),
     JSON.stringify({
       schema: 'coursing-stats/show-dog-all-time-ranks-v1',

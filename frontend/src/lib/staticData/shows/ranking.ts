@@ -199,15 +199,25 @@ type ShowDogLookup = {
   byNameBreed?: Record<string, string>
 }
 
-let showDogLookupCache: ShowDogLookup | null | undefined
+let competitionLinksCache: Promise<Record<string, string> | null> | null = null
+
+async function getCompetitionShowLinks(): Promise<Record<string, string> | null> {
+  if (!competitionLinksCache) {
+    competitionLinksCache = fetchJson<{ byCompetitionId?: Record<string, string> }>(
+      'shows/indexes/competition-links.json',
+    )
+      .then((file) => file?.byCompetitionId ?? null)
+      .catch(() => null)
+  }
+  return competitionLinksCache
+}
+
+let showDogLookupCache: Promise<ShowDogLookup | null> | null = null
 
 async function getShowDogLookup(): Promise<ShowDogLookup | null> {
-  // DEV: не кэшируем lookup — иначе после rebuild виден старый competition→show id
-  if (import.meta.env.DEV) {
-    return await loadShardedLookup()
+  if (!showDogLookupCache) {
+    showDogLookupCache = loadShardedLookup()
   }
-  if (showDogLookupCache !== undefined) return showDogLookupCache
-  showDogLookupCache = await loadShardedLookup()
   return showDogLookupCache
 }
 
@@ -310,6 +320,24 @@ export async function resolveShowDogDetail(opts: {
     if (direct.success) return direct
   }
 
+  // 1. Быстрый поиск по competitionId через лёгкий микро-индекс (~17 KB)
+  if (opts.competitionId != null) {
+    const compLinks = await getCompetitionShowLinks()
+    if (compLinks) {
+      const id = compLinks[String(opts.competitionId)]
+      if (id) return getShowDogDetail(id)
+    }
+    // Если собака имеет официальный competitionId и не привязана к выставкам в индексе связей,
+    // не запускаем тяжелый 195 МБ lookup по кличке/породе для чисто спортивной собаки.
+    if (!opts.profileId || String(opts.profileId) === String(opts.competitionId)) {
+      return { success: false, error: 'Show dog not found' }
+    }
+  }
+
+  if (!opts.breed || (!opts.nameLat && !opts.nameRu)) {
+    return { success: false, error: 'Show dog not found' }
+  }
+
   const lookup = await getShowDogLookup()
 
   if (opts.competitionId != null && lookup?.byCompetitionId) {
@@ -365,7 +393,7 @@ export async function getShowDogAllTimeRank(opts: {
   showId?: string | number | null
   competitionId?: string | number | null
 }): Promise<number | null> {
-  if (showAllTimeRanksCache === undefined || import.meta.env.DEV) {
+  if (showAllTimeRanksCache === undefined) {
     showAllTimeRanksCache =
       (await fetchJson<ShowAllTimeRanksFile>('shows/indexes/dog-all-time-ranks.json')) ?? null
   }

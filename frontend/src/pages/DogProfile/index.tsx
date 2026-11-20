@@ -60,7 +60,10 @@ export default function DogProfile() {
   }
 
   const waitingCompetition = Boolean(data.competitionId) && data.loading
-  if (waitingCompetition || data.showsLoading) {
+  // Не блокируем экран профиля, если спортивная собака уже успешно загрузилась.
+  // Выставки подгружаются асинхронно в фоне.
+  const waitingShows = !data.dog && data.showsLoading
+  if (waitingCompetition || waitingShows) {
     return <LoadingCard count={3} variant="profile" />
   }
 
