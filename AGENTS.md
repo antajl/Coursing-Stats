@@ -8,13 +8,12 @@
 ## Quick Start (30 seconds)
 
 1. **[docs/ROADMAP.md](docs/ROADMAP.md)** — План развития и 4 ветки рефакторинга (читать обязательно)
-2. **[docs/QUICK-REFERENCE.md](docs/QUICK-REFERENCE.md)** — 5-minute overview, critical commands
-3. **[docs/MAP.md](docs/MAP.md)** — Куда смотреть (detailed task → file router)
-4. **[docs/invariants/](docs/invariants/)** — Специализированные каталоги инвариантов по 7 доменам
-5. **[docs/GLOSSARY.md](docs/GLOSSARY.md)** — Глоссарий, термины и понятия
-6. **[docs/sheets/](docs/sheets/)** — Шпаргалки 00–16
-7. **[docs/decisions/](docs/decisions/)** — Почему приняты решения (ADRs)
-8. **Skills:** `.agents/skills/*/SKILL.md` — Domain-specific skills (включая `competition-ingest`, `old-money-design`, `smart-commit-and-learn`)
+2. **[docs/MAP.md](docs/MAP.md)** — Куда смотреть (detailed task → file router)
+3. **[docs/invariants/](docs/invariants/)** — Специализированные каталоги инвариантов по 7 доменам
+4. **[docs/GLOSSARY.md](docs/GLOSSARY.md)** — Глоссарий, термины и понятия
+5. **[docs/sheets/](docs/sheets/)** — Шпаргалки 00–16
+6. **[docs/decisions/](docs/decisions/)** — Почему приняты решения (ADRs)
+7. **Skills:** `.agents/skills/*/SKILL.md` — Domain-specific skills (включая `competition-ingest`, `old-money-design`, `smart-commit-and-learn`)
 
 ---
 
