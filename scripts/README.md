@@ -1,6 +1,6 @@
 # Скрипты для Windows
 
-Папка содержит вспомогательные `.bat` файлы. Запуск двойным кликом или из корня репозитория.
+Папка содержит вспомогательные `.bat` и `.ts` файлы для автоматизации. Запуск двойным кликом или из корня репозитория.
 
 ## update-donino.bat
 
@@ -16,45 +16,24 @@ scripts\update-donino.bat
 2. **Бега 350 м** (сек) → `coursing_records.json`  
    `backend/scripts/speed/export-coursing-from-sheets.ts`
 
-После обновления локально смотри `npm run dev`. На прод — `deploy-to-github.bat`.
+После обновления локально проверяется через `yarn run dev`. Отправка на прод — через `git push origin main`.
 
-## Календари на проде (show / hide)
+## Управление публичными календарями
 
-Флаги в `data/v1/ui-flags.json`. Локально (`npm run dev`) календари **всегда** видны. На проде — только если флаг `true`. Протоколы `/event` и `/shows/exhibition` этими скриптами **не** открываются.
+Флаги доступности календарей на проде хранятся в `data/v1/ui-flags.json`. Локально (`yarn run dev`) календари **всегда** видны разработчику. На проде — только если соответствующий флаг установлен в `true`.
 
-| Скрипт | Действие |
-|--------|----------|
-| `show-calendar-competitions.bat` | Показать календарь соревнований на проде |
-| `hide-calendar-competitions.bat` | Скрыть (только локалка) |
-| `show-calendar-shows.bat` | Показать календарь выставок на проде |
-| `hide-calendar-shows.bat` | Скрыть (только локалка) |
-
-После bat:
-
-```bat
-scripts\deploy-to-github.bat "ui: show competitions calendar"
-```
-
-Статус без изменений:
-
-```bat
+```bash
+# Проверить статус публичных календарей:
 npx tsx scripts/set-public-calendar.ts status
+
+# Включить/выключить спортивный календарь:
+npx tsx scripts/set-public-calendar.ts competitions enable
+npx tsx scripts/set-public-calendar.ts competitions disable
+
+# Включить/выключить выставочный календарь:
+npx tsx scripts/set-public-calendar.ts shows enable
+npx tsx scripts/set-public-calendar.ts shows disable
 ```
-
-## deploy-to-github.bat
-
-Коммит и push в GitHub — CI задеплоит сайт на Cloudflare Pages.
-
-```bat
-scripts\deploy-to-github.bat
-scripts\deploy-to-github.bat "Описание изменений"
-```
-
-- `git add -A` (пути из `.gitignore` не попадают)
-- коммит с сообщением (по умолчанию: `Update Donino records from Google Sheets`)
-- если нечего коммитить — пушит текущую ветку
-- `git push` без `--force`
-- CI: `build-all-data` → Pages → https://coursing-stats.ru
 
 ## start-servers.bat
 
@@ -62,10 +41,10 @@ scripts\deploy-to-github.bat "Описание изменений"
 scripts\start-servers.bat
 ```
 
-Запускает `npm run dev` (Vite :5173 + admin API :8787).
+Проверяет зависимости через `yarn install` и запускает локальный dev-сервер (`yarn run dev` на Vite `:5173`).
 
 ## Требования
 
-- Node.js 18+ (лучше 22)
-- `npm install` в корне (bat сделает сам при необходимости)
-- для push — настроенный `git remote`
+- Node.js 18+ (рекомендуется 20–22)
+- Пакетный менеджер: **yarn@1.22.22**
+- Для push — настроенный `git remote origin`
