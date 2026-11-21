@@ -4,12 +4,21 @@ interface UseHorizontalSwipeProps {
   activeTabsCount: number
   activeTabIndex: number
   onTabChange: (targetIndex: number) => void
+  gapPx?: number
+}
+
+export function calculateSlideOffset(slideIndex: number, gapPx = 0): string {
+  if (slideIndex === 0) return '0%'
+  return gapPx > 0
+    ? `calc(-${slideIndex * 100}% - ${slideIndex * gapPx}px)`
+    : `-${slideIndex * 100}%`
 }
 
 export function useHorizontalSwipe({
   activeTabsCount,
   activeTabIndex,
   onTabChange,
+  gapPx = 0,
 }: UseHorizontalSwipeProps) {
   const trackRef = useRef<HTMLDivElement>(null)
   const touchStartRef = useRef<{ x: number; y: number; time: number } | null>(null)
@@ -18,9 +27,10 @@ export function useHorizontalSwipe({
   const isSwipingRef = useRef(false)
   const rafRef = useRef<number | null>(null)
 
-  const getSlideOffset = useCallback((slideIndex: number) => {
-    return slideIndex === 0 ? '0%' : `-${slideIndex * 100}%`
-  }, [])
+  const getSlideOffset = useCallback(
+    (slideIndex: number) => calculateSlideOffset(slideIndex, gapPx),
+    [gapPx],
+  )
 
   useEffect(() => {
     return () => {

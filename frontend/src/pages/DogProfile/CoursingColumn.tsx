@@ -114,7 +114,12 @@ export function CoursingColumn({
   return (
     <DisciplineColumnShell>
       {hasCoursingData && (
-        <DisciplineStatsCard theme={THEME} title="Курсинг / БЗМП" rankBadge={headerLink}>
+        <DisciplineStatsCard
+          theme={THEME}
+          title="Курсинг / БЗМП"
+          rankBadge={headerLink}
+          rankingUrl={rankingUrl}
+        >
           <div className="flex h-full flex-col justify-between gap-3">
             {/* Верх: Подиум (Рейтинг + Медали) */}
             <Link

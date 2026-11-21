@@ -136,7 +136,12 @@ export function ShowsColumn({ dog, rank, breed }: ShowsColumnProps) {
 
   return (
     <DisciplineColumnShell>
-      <DisciplineStatsCard theme={THEME} title="Выставки" rankBadge={headerLink}>
+      <DisciplineStatsCard
+        theme={THEME}
+        title="Выставки"
+        rankBadge={headerLink}
+        rankingUrl={rankingUrl}
+      >
         <div className="flex h-full flex-col justify-between gap-3">
           {/* Верх: Подиум со статусом в породе и числом выставок */}
           <Link

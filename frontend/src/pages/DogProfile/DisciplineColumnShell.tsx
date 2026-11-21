@@ -1,5 +1,15 @@
-import type { ReactNode } from 'react'
-import { ChevronRight } from 'lucide-react'
+import { createContext, useContext, type ReactNode } from 'react'
+import { Link } from 'react-router-dom'
+import { ChevronRight, ChevronLeft, ArrowUpRight } from 'lucide-react'
+import type { DisciplineTabId } from './types'
+
+export interface DisciplineMobileNav {
+  prevTab?: { id: DisciplineTabId; label: string; count?: number } | null
+  nextTab?: { id: DisciplineTabId; label: string; count?: number } | null
+  onNavigateTab?: (id: DisciplineTabId) => void
+}
+
+export const DisciplineMobileNavContext = createContext<DisciplineMobileNav | null>(null)
 
 export type DisciplineTheme = 'forest' | 'warm-blue' | 'camel'
 
@@ -80,26 +90,91 @@ export function DisciplineStatsCard({
   theme,
   title,
   rankBadge,
+  rankingUrl,
   children,
 }: {
   theme: DisciplineTheme
   title: string
   rankBadge?: ReactNode
+  rankingUrl?: string
   children: ReactNode
 }) {
   const t = THEME[theme]
+  const nav = useContext(DisciplineMobileNavContext)
+  const prevTab = nav?.prevTab
+  const nextTab = nav?.nextTab
+  const onNavigateTab = nav?.onNavigateTab
+
   return (
     <div
-      className={`flex h-[20.5rem] shrink-0 flex-col overflow-hidden rounded-xl border bg-white p-3.5 sm:p-4 md:h-[21rem] ${t.cardBorder}`}
+      className={`relative flex h-[20.5rem] shrink-0 flex-col overflow-hidden rounded-xl border bg-white p-3.5 sm:p-4 md:h-[21rem] mb-7 lg:mb-0 ${t.cardBorder}`}
     >
-      <div className="mb-4 flex items-center justify-between gap-1.5 shrink-0 min-w-0">
-        <h2 className="text-base sm:text-lg font-bold tracking-tight text-charcoal-800 md:text-xl truncate shrink min-w-0">
-          {title}
-        </h2>
-        {rankBadge}
+        <div className="relative mb-4 flex min-h-[36px] items-center justify-between gap-1.5 shrink-0 min-w-0">
+          {/* Левый язычок (стиль HomeSubSectionTab / BreedHub: прикреплён к левому краю карточки) */}
+          {prevTab && (
+            <button
+              type="button"
+              onClick={() => onNavigateTab?.(prevTab.id)}
+              className="lg:hidden absolute -left-3.5 sm:-left-4 top-1/2 -translate-y-1/2 z-20 inline-flex items-center gap-1 bg-[#fbf7f0]/95 text-camel-950 font-bold text-[11px] py-1 pl-2.5 pr-2.5 rounded-r-full border-y border-r border-camel-400/60 shadow-xs backdrop-blur-md transition-all hover:bg-camel-100/90 active:scale-95 cursor-pointer touch-manipulation select-none"
+              title={`Перейти: ${prevTab.label}`}
+              aria-label={`Перейти: ${prevTab.label}`}
+            >
+              <ChevronLeft className="w-3.5 h-3.5 text-camel-800 shrink-0" aria-hidden />
+              <span className="tracking-tight">{prevTab.label}</span>
+            </button>
+          )}
+
+          {/* Мобильный заголовок: по центру 2 строки (название + ссылка на рейтинг, как в /breeds/whippet/) */}
+          <div
+            className={`lg:hidden flex min-w-0 flex-1 flex-col items-center justify-center text-center leading-tight ${
+              prevTab || nextTab ? 'px-16 sm:px-20' : 'px-2'
+            }`}
+          >
+            {rankingUrl ? (
+              <Link
+                to={rankingUrl}
+                className="group flex flex-col items-center justify-center max-w-full transition-colors hover:text-camel-950"
+                title={`Открыть рейтинг: ${title}`}
+              >
+                <div className="text-xs font-bold uppercase tracking-wider text-charcoal-900 group-hover:underline truncate max-w-full">
+                  {title}
+                </div>
+                <div className="mt-0.5 inline-flex items-center justify-center gap-0.5 text-[10px] font-bold text-camel-800 group-hover:underline">
+                  <span>Рейтинг</span>
+                  <ArrowUpRight className="h-2.5 w-2.5 text-camel-700 shrink-0" aria-hidden />
+                </div>
+              </Link>
+            ) : (
+              <div className="text-xs font-bold uppercase tracking-wider text-charcoal-900 truncate max-w-full">
+                {title}
+              </div>
+            )}
+          </div>
+
+          {/* Десктопный заголовок: название слева, кнопка-бейдж справа */}
+          <div className="hidden lg:flex min-w-0 flex-1 items-center justify-between gap-1.5">
+            <h2 className="text-base sm:text-lg font-bold tracking-tight text-charcoal-800 md:text-xl truncate shrink min-w-0">
+              {title}
+            </h2>
+            {rankBadge}
+          </div>
+
+          {/* Правый язычок (стиль HomeSubSectionTab / BreedHub: прикреплён к правому краю карточки) */}
+          {nextTab && (
+            <button
+              type="button"
+              onClick={() => onNavigateTab?.(nextTab.id)}
+              className="lg:hidden absolute -right-3.5 sm:-right-4 top-1/2 -translate-y-1/2 z-20 inline-flex items-center gap-1 bg-[#fbf7f0]/95 text-camel-950 font-bold text-[11px] py-1 pl-2.5 pr-2.5 rounded-l-full border-y border-l border-camel-400/60 shadow-xs backdrop-blur-md transition-all hover:bg-camel-100/90 active:scale-95 cursor-pointer touch-manipulation select-none"
+              title={`Перейти: ${nextTab.label}`}
+              aria-label={`Перейти: ${nextTab.label}`}
+            >
+              <span className="tracking-tight">{nextTab.label}</span>
+              <ChevronRight className="w-3.5 h-3.5 text-camel-800 shrink-0" aria-hidden />
+            </button>
+          )}
+        </div>
+        <div className="flex min-h-0 flex-1 flex-col overflow-hidden">{children}</div>
       </div>
-      <div className="flex min-h-0 flex-1 flex-col overflow-hidden">{children}</div>
-    </div>
   )
 }
 

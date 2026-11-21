@@ -107,7 +107,12 @@ export function RacingColumn({
   return (
     <DisciplineColumnShell>
       {hasRacingData && (
-        <DisciplineStatsCard theme={THEME} title="Бега борзых" rankBadge={headerLink}>
+        <DisciplineStatsCard
+          theme={THEME}
+          title="Бега борзых"
+          rankBadge={headerLink}
+          rankingUrl={rankingUrl}
+        >
           <div className="flex h-full flex-col justify-between gap-3">
             {/* Верх: Подиум (Рейтинг + Медали) */}
             <Link

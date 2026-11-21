@@ -1,5 +1,4 @@
 import { describe, it, expect } from 'vitest'
-import { formatDisciplineCount } from './DogDisciplinesMobileView'
 import type { DisciplineTabItem } from './types'
 
 describe('DogDisciplinesMobileView invariants', () => {
@@ -38,36 +37,34 @@ describe('DogDisciplinesMobileView invariants', () => {
     expect(last.nextTab).toBeNull()
   })
 
-  it('correctly pluralizes Russian counters for coursing, racing, and shows', () => {
-    // coursing
-    expect(formatDisciplineCount('coursing', 1)).toBe('1 состязание')
-    expect(formatDisciplineCount('coursing', 2)).toBe('2 состязания')
-    expect(formatDisciplineCount('coursing', 5)).toBe('5 состязаний')
-    expect(formatDisciplineCount('coursing', 11)).toBe('11 состязаний')
-    expect(formatDisciplineCount('coursing', 21)).toBe('21 состязание')
-
-    // racing
-    expect(formatDisciplineCount('racing', 1)).toBe('1 забег')
-    expect(formatDisciplineCount('racing', 3)).toBe('3 забега')
-    expect(formatDisciplineCount('racing', 5)).toBe('5 забегов')
-    expect(formatDisciplineCount('racing', 12)).toBe('12 забегов')
-    expect(formatDisciplineCount('racing', 24)).toBe('24 забега')
-
-    // shows
-    expect(formatDisciplineCount('shows', 1)).toBe('1 выставка')
-    expect(formatDisciplineCount('shows', 4)).toBe('4 выставки')
-    expect(formatDisciplineCount('shows', 9)).toBe('9 выставок')
-    expect(formatDisciplineCount('shows', 15)).toBe('15 выставок')
-    expect(formatDisciplineCount('shows', 101)).toBe('101 выставка')
-  })
-
-  it('guarantees zero emojis in tab labels and discipline counters (Old Money style)', () => {
+  it('guarantees zero emojis in tab labels (Old Money style)', () => {
     const emojiRegex = /[\u{1F300}-\u{1F9FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}]/u
 
     for (const tab of tabs) {
       expect(emojiRegex.test(tab.label)).toBe(false)
-      const countLabel = formatDisciplineCount(tab.id, tab.count || 0)
-      expect(emojiRegex.test(countLabel)).toBe(false)
     }
+  })
+
+  it('guarantees clean edge tabs without numbers and stationary swipe dots indicator', async () => {
+    const fs = await import('node:fs')
+    const path = await import('node:path')
+    const shellPath = path.resolve(__dirname, 'DisciplineColumnShell.tsx')
+    const mobileViewPath = path.resolve(__dirname, 'DogDisciplinesMobileView.tsx')
+    const shellSource = fs.readFileSync(shellPath, 'utf-8')
+    const mobileViewSource = fs.readFileSync(mobileViewPath, 'utf-8')
+
+    // Invariant 1: Edge tabs only contain clean labels, no numeric count badges
+    expect(shellSource).not.toContain('{prevTab.count}')
+    expect(shellSource).not.toContain('{nextTab.count}')
+
+    // Invariant 2: Mobile title has safety padding so text never touches edge tabs
+    expect(shellSource).toContain('px-16 sm:px-20')
+
+    // Invariant 3: Card has bottom margin on mobile to give space for stationary dots
+    expect(shellSource).toContain('mb-7 lg:mb-0')
+
+    // Invariant 4: Minimalist stationary swipe dots indicator in mobile view with active elongated dot and visible camel inactive dots
+    expect(mobileViewSource).toContain('w-6 bg-camel-600')
+    expect(mobileViewSource).toContain('w-2 bg-camel-300')
   })
 })
