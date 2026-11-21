@@ -32,6 +32,18 @@ describe('DogProfileHeader Lightbox mobile & iOS Safari invariants', () => {
     // 5. Invariant: Heavy full-screen backdrop-blur-md is omitted to avoid WebKit GPU stalls on iOS ProMotion
     expect(source).not.toContain('backdrop-blur-md')
   })
+
+  it('guarantees share button with native Web Share and clipboard fallback', () => {
+    const filePath = path.resolve(__dirname, 'DogProfileHeader.tsx')
+    const source = fs.readFileSync(filePath, 'utf-8')
+
+    // Invariant: Share button exists with proper accessibility and Old Money styling
+    expect(source).toContain('Поделиться')
+    expect(source).toContain('handleShare')
+    expect(source).toContain('navigator.share')
+    expect(source).toContain('navigator.clipboard')
+    expect(source).toContain('min-h-[36px]')
+  })
 })
 
 describe('Dog Profile Navigation Tabs & Achievements Tab invariants', () => {

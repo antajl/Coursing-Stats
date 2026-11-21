@@ -11,15 +11,6 @@ import {
 } from '../../lib/qualificationTitles'
 import { getFullTitleLabel } from '../../lib/awardTooltip'
 
-export interface DogAchievementItem {
-  id: string
-  label: string
-  sublabel?: string
-  icon: ReactNode
-  color: string
-  tooltip: string
-}
-
 function cleanDisciplineSuffix(title: string): string {
   return title.replace(/\s*\((?:КБ|ББ|БЗМП|LC|LR)\)/gi, '').trim()
 }
@@ -30,7 +21,6 @@ type DogProfileAwardsBarProps = {
   racingTitles?: DogTitle[]
   competitionTitles?: DogTitle[]
   showTitles: DogTitle[]
-  achievements?: DogAchievementItem[]
   titleExplanations?: Record<string, string>
 }
 
@@ -40,7 +30,6 @@ export function DogProfileAwardsBar({
   racingTitles = [],
   competitionTitles = [],
   showTitles,
-  achievements = [],
   titleExplanations = {},
 }: DogProfileAwardsBarProps): ReactNode {
   // Оставляем ТОЛЬКО официальные чемпионские звания РКФ/FCI (без сертификатов, без расстановок дня BIS/BIG/ЛПП и без клубных лиг)
@@ -57,9 +46,8 @@ export function DogProfileAwardsBar({
   const hasRacing = pureRacingTitles.length > 0
   const hasComp = pureCompTitles.length > 0
   const hasShow = pureShowTitles.length > 0
-  const hasAchievements = achievements.length > 0
 
-  if (!hasSupreme && !hasCoursing && !hasRacing && !hasComp && !hasShow && !hasAchievements) return null
+  if (!hasSupreme && !hasCoursing && !hasRacing && !hasComp && !hasShow) return null
 
   const sortedSupreme = [...pureSupremeTitles].sort((a, b) =>
     compareDogProfileTitles(a.title, b.title),
@@ -200,26 +188,6 @@ export function DogProfileAwardsBar({
               </div>
             </div>
           )}
-        </div>
-      )}
-
-      {/* СПРАВА: Сезонные ачивки рейтинга */}
-      {hasAchievements && (
-        <div className="flex flex-wrap items-center gap-1.5 pt-1.5 border-t border-cream-200/60">
-          {achievements.slice(0, 3).map((ach) => (
-            <HoverTooltip key={ach.id} label={ach.tooltip} placement="top" portal>
-              <div
-                className={`cs-glass-pill inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[11px] font-semibold tabular-nums whitespace-nowrap transition-transform hover:scale-105 cursor-default ${ach.color}`}
-                tabIndex={0}
-              >
-                {ach.icon}
-                <span className="truncate">{ach.label}</span>
-                {ach.sublabel && (
-                  <span className="text-[10px] font-normal text-charcoal-500 truncate">· {ach.sublabel}</span>
-                )}
-              </div>
-            </HoverTooltip>
-          ))}
         </div>
       )}
     </div>

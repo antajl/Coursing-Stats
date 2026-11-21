@@ -3,16 +3,12 @@ import { createPortal } from 'react-dom'
 import { Link } from 'react-router-dom'
 import {
   Star as StarIcon,
-  Crown,
-  Trophy,
-  Medal,
-  Award,
-  Zap,
-  Sparkles,
   ExternalLink,
   Maximize2,
   X,
   ArrowUpRight,
+  Share2,
+  Check,
 } from 'lucide-react'
 import OwnerCrownName from '../../components/OwnerCrownName'
 import DogSexIcon from '../../components/DogSexIcon'
@@ -94,6 +90,40 @@ export function DogProfileHeader({
   const dogId = String(dog.id)
   const favorite = isFavorite(dogId)
   const [isPhotoOpen, setIsPhotoOpen] = useState(false)
+  const [copied, setCopied] = useState(false)
+
+  const handleShare = async () => {
+    const url = typeof window !== 'undefined' ? window.location.href : ''
+    if (typeof navigator !== 'undefined' && navigator.share) {
+      try {
+        await navigator.share({
+          title: primary,
+          text: `${primary} — результаты, титулы и статистика на CoursingStats`,
+          url,
+        })
+        return
+      } catch (err: unknown) {
+        if ((err as Error)?.name === 'AbortError') return
+      }
+    }
+
+    try {
+      if (typeof navigator !== 'undefined' && navigator.clipboard) {
+        await navigator.clipboard.writeText(url)
+      } else if (typeof document !== 'undefined') {
+        const input = document.createElement('textarea')
+        input.value = url
+        document.body.appendChild(input)
+        input.select()
+        document.execCommand('copy')
+        document.body.removeChild(input)
+      }
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    } catch {
+      // ignore
+    }
+  }
 
   useEffect(() => {
     if (!isPhotoOpen) return
@@ -121,96 +151,60 @@ export function DogProfileHeader({
     }
   }
 
-  // Достижения и рейтинги
-  const achievements = useMemo(() => {
-    const items: Array<{
-      id: string
-      label: string
-      sublabel?: string
-      icon: React.ReactNode
-      color: string
-      tooltip: string
-    }> = []
-
-    const coursing = ranks.find((r) => r.key === 'coursing')
-    const racing = ranks.find((r) => r.key === 'racing')
-    const shows = ranks.find((r) => r.key === 'shows')
-
-    // 1. Подиум в породе (курсинг)
-    if (coursing?.yearBreedRank === 1) {
-      items.push({
-        id: 'coursing-breed-1',
-        label: 'Топ-1 в породе',
-        sublabel: 'Курсинг 2026',
-        icon: <Crown className="h-3.5 w-3.5 text-amber-600 shrink-0" />,
-        color: 'text-charcoal-900',
-        tooltip: '№1 среди всех собак породы в сезоне по курсингу',
-      })
-    } else if (coursing?.yearBreedRank === 2) {
-      items.push({
-        id: 'coursing-breed-2',
-        label: 'Топ-2 в породе',
-        sublabel: 'Курсинг 2026',
-        icon: <Medal className="h-3.5 w-3.5 text-camel-700 shrink-0" />,
-        color: 'text-charcoal-900',
-        tooltip: '№2 среди всех собак породы в сезоне по курсингу',
-      })
-    } else if (coursing?.yearBreedRank === 3) {
-      items.push({
-        id: 'coursing-breed-3',
-        label: 'Топ-3 в породе',
-        sublabel: 'Курсинг 2026',
-        icon: <Medal className="h-3.5 w-3.5 text-amber-700 shrink-0" />,
-        color: 'text-charcoal-900',
-        tooltip: '№3 среди всех собак породы в сезоне по курсингу',
-      })
-    } else if (coursing?.yearBreedRank && coursing.yearBreedRank <= 5) {
-      items.push({
-        id: 'coursing-breed-top5',
-        label: `Топ-${coursing.yearBreedRank} в породе`,
-        sublabel: 'Курсинг 2026',
-        icon: <Award className="h-3.5 w-3.5 text-camel-700 shrink-0" />,
-        color: 'text-charcoal-800',
-        tooltip: `Входит в топ-${coursing.yearBreedRank} собак породы в сезоне`,
-      })
-    }
-
-    // 2. Бега борзых (рейсинг)
-    if (racing?.yearBreedRank && racing.yearBreedRank <= 3) {
-      items.push({
-        id: 'racing-breed-podium',
-        label: `Топ-${racing.yearBreedRank} в бегах`,
-        sublabel: 'Рейсинг 2026',
-        icon: <Zap className="h-3.5 w-3.5 text-camel-700 shrink-0" />,
-        color: 'text-charcoal-900',
-        tooltip: `${racing.yearBreedRank} место в рейтинге по максимальной скорости в бегах`,
-      })
-    } else if (racing?.yearBreedRank && racing.yearBreedRank <= 5) {
-      items.push({
-        id: 'racing-breed-top5',
-        label: `Топ-${racing.yearBreedRank} в бегах`,
-        sublabel: 'Рейсинг 2026',
-        icon: <Zap className="h-3.5 w-3.5 text-camel-700 shrink-0" />,
-        color: 'text-charcoal-800',
-        tooltip: `Входит в топ-${racing.yearBreedRank} собак породы по скорости в бегах`,
-      })
-    }
-
-    // 3. Выставки (если топ в породе)
-    const showRank = shows?.yearBreedRank || shows?.breedRank
-    if (showRank && showRank <= 5) {
-      items.push({
-        id: 'shows-breed-podium',
-        label: `Топ-${showRank} выставок`,
-        sublabel: 'РКФ',
-        icon: <Sparkles className="h-3.5 w-3.5 text-camel-700 shrink-0" />,
-        color: 'text-charcoal-800',
-        tooltip: `${showRank} место в рейтинге выставок РКФ в породе`,
-      })
-    }
-
-    return items
-  }, [ranks])
+  const renderActionButtons = (isMobileGrid = false) => (
+    <>
+      <button
+        type="button"
+        onClick={handleToggleFavorite}
+        disabled={loadingFavorite}
+        className={`inline-flex items-center justify-center gap-1 sm:gap-1.5 rounded-xl border px-1.5 sm:px-3.5 py-1.5 text-[11px] sm:text-xs font-semibold transition-all disabled:opacity-50 min-h-[36px] cursor-pointer ${
+          isMobileGrid ? 'w-full' : ''
+        } ${
+          favorite
+            ? 'border-amber-400 bg-amber-50 text-amber-800 hover:bg-amber-100'
+            : 'border-old-money-200/90 bg-cream-50/60 text-charcoal-700 hover:bg-cream-100 hover:text-charcoal-900'
+        }`}
+        aria-label={favorite ? 'Удалить из избранного' : 'Добавить в избранное'}
+        title={favorite ? 'Удалить из избранного' : 'Добавить в избранное'}
+      >
+        <StarIcon className={`h-3.5 w-3.5 shrink-0 ${favorite ? 'fill-current text-amber-500' : 'text-charcoal-400'}`} aria-hidden />
+        <span className="truncate">{favorite ? 'В избранном' : 'В избранное'}</span>
+      </button>
+      <a
+        href={`https://t.me/coursing_stats_bot?start=dog_${dog.id}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`inline-flex items-center justify-center gap-1 sm:gap-1.5 rounded-xl border border-old-money-200/90 bg-cream-50/60 px-1.5 sm:px-3.5 py-1.5 text-[11px] sm:text-xs font-semibold text-charcoal-700 hover:bg-cream-100 hover:text-charcoal-900 transition-all min-h-[36px] cursor-pointer ${
+          isMobileGrid ? 'w-full' : ''
+        }`}
+        aria-label="Отслеживать собаку в Telegram"
+        title="Отслеживать собаку в Telegram: результаты и место в топе"
+      >
+        <img src={TELEGRAM_FAVICON} alt="" width={14} height={14} className="h-3.5 w-3.5 shrink-0 rounded-full" />
+        <span className="truncate">Отслеживать</span>
+      </a>
+      <button
+        type="button"
+        onClick={handleShare}
+        className={`inline-flex items-center justify-center gap-1 sm:gap-1.5 rounded-xl border px-1.5 sm:px-3.5 py-1.5 text-[11px] sm:text-xs font-semibold transition-all min-h-[36px] cursor-pointer ${
+          isMobileGrid ? 'w-full' : ''
+        } ${
+          copied
+            ? 'border-forest-400 bg-forest-50 text-forest-800'
+            : 'border-old-money-200/90 bg-cream-50/60 text-charcoal-700 hover:bg-cream-100 hover:text-charcoal-900'
+        }`}
+        aria-label={copied ? 'Ссылка скопирована' : 'Поделиться профилем собаки'}
+        title={copied ? 'Ссылка скопирована в буфер обмена' : 'Поделиться профилем собаки'}
+      >
+        {copied ? (
+          <Check className="h-3.5 w-3.5 shrink-0 text-forest-600" aria-hidden />
+        ) : (
+          <Share2 className="h-3.5 w-3.5 shrink-0 text-charcoal-500" aria-hidden />
+        )}
+        <span className="truncate">{copied ? 'Скопировано' : 'Поделиться'}</span>
+      </button>
+    </>
+  )
 
   const formattedPrimary = formatNameWithNonBreakingSpaces(primary)
   const isMale = dog.sex === 'M' || dog.sex?.toLowerCase() === 'кобель'
@@ -315,40 +309,20 @@ export function DogProfileHeader({
                   ) : null}
                 </div>
 
-                {/* РЯД 3: Кнопки действий прямо под кличкой и метаданными */}
-                <div className="mt-3.5 flex flex-wrap items-center gap-2">
-                  <button
-                    type="button"
-                    onClick={handleToggleFavorite}
-                    disabled={loadingFavorite}
-                    className={`inline-flex items-center gap-1.5 rounded-xl border px-3.5 py-1.5 text-xs font-semibold transition-all disabled:opacity-50 min-h-[36px] cursor-pointer ${
-                      favorite
-                        ? 'border-amber-400 bg-amber-50 text-amber-800 hover:bg-amber-100'
-                        : 'border-old-money-200/90 bg-cream-50/60 text-charcoal-700 hover:bg-cream-100 hover:text-charcoal-900'
-                    }`}
-                    aria-label={favorite ? 'Удалить из избранного' : 'Добавить в избранное'}
-                    title={favorite ? 'Удалить из избранного' : 'Добавить в избранное'}
-                  >
-                    <StarIcon className={`h-3.5 w-3.5 shrink-0 ${favorite ? 'fill-current text-amber-500' : 'text-charcoal-400'}`} aria-hidden />
-                    <span>{favorite ? 'В избранном' : 'В избранное'}</span>
-                  </button>
-                  <a
-                    href={`https://t.me/coursing_stats_bot?start=dog_${dog.id}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 rounded-xl border border-old-money-200/90 bg-cream-50/60 px-3.5 py-1.5 text-xs font-semibold text-charcoal-700 hover:bg-cream-100 hover:text-charcoal-900 transition-all min-h-[36px] cursor-pointer"
-                    aria-label="Отслеживать собаку в Telegram"
-                    title="Отслеживать собаку в Telegram: результаты и место в топе"
-                  >
-                    <img src={TELEGRAM_FAVICON} alt="" width={14} height={14} className="h-3.5 w-3.5 shrink-0 rounded-full" />
-                    <span>Отслеживать</span>
-                  </a>
+                {/* РЯД 3: Кнопки действий прямо под кличкой и метаданными (на планшетах и десктопах) */}
+                <div className="mt-3.5 hidden sm:flex flex-wrap items-center gap-2">
+                  {renderActionButtons(false)}
                 </div>
               </div>
             </div>
 
-            {/* Справа: Блок всех титулов и наград в правом верхнем углу */}
-            {(hasTitles || achievements.length > 0) && (
+            {/* На смартфонах: все 3 кнопки действий в один ровный аккуратный ряд во всю ширину */}
+            <div className="sm:hidden grid grid-cols-3 gap-1.5 sm:gap-2 w-full pt-1">
+              {renderActionButtons(true)}
+            </div>
+
+            {/* Справа: Блок всех официальных титулов и наград в правом верхнем углу */}
+            {hasTitles && (
               <div className="w-full lg:w-auto shrink-0 lg:max-w-md xl:max-w-lg lg:ml-auto pt-3 lg:pt-0 border-t border-cream-200/70 lg:border-t-0">
                 <DogProfileAwardsBar
                   supremeTitles={supremeTitles}
@@ -356,7 +330,6 @@ export function DogProfileHeader({
                   coursingTitles={coursingTitles}
                   racingTitles={racingTitles}
                   showTitles={showTitles}
-                  achievements={achievements}
                   titleExplanations={titleExplanations}
                 />
               </div>
