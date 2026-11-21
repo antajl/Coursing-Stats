@@ -41,7 +41,6 @@ yarn run test-parser-fixtures        # Test parsers on real HTML
 | `analyze-other-collision.ts` | Analyze ID collisions in other fields | `npx tsx backend/scripts/audit/analyze-other-collision.ts` |
 | `check-data-completeness.ts` | Verify data completeness across all sources | `npx tsx backend/scripts/audit/check-data-completeness.ts` |
 | `check-id-collisions.ts` | Find duplicate IDs in database | `npx tsx backend/scripts/audit/check-id-collisions.ts` |
-| `check-turso-progress.ts` | Check Turso migration progress | `npx tsx backend/scripts/audit/check-turso-progress.ts` |
 | `compare-dog-names.ts` | Compare dog names across sources | `npx tsx backend/scripts/audit/compare-dog-names.ts` |
 | `diagnose-id-collisions.ts` | Diagnose specific ID collision issues | `npx tsx backend/scripts/audit/diagnose-id-collisions.ts` |
 | `verify-collision-fix.ts` | Verify collision fixes are working | `npx tsx backend/scripts/audit/verify-collision-fix.ts` |
@@ -196,7 +195,6 @@ These scripts currently live at `backend/scripts/` root and should be moved to a
 - `analyze-other-collision.ts`
 - `check-data-completeness.ts`
 - `check-id-collisions.ts`
-- `check-turso-progress.ts`
 - `compare-dog-names.ts`
 - `diagnose-id-collisions.ts`
 - `verify-collision-fix.ts`
