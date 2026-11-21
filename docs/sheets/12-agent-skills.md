@@ -40,7 +40,6 @@ verified: 2026-11-08
 | `workers-best-practices` | правила разработки и проверки Cloudflare Workers |
 | `old-money-design` | дизайн-система Old Money, цвета, типографика, адаптивность, запрет эмодзи |
 | `smart-commit-and-learn` | автономное обучение инвариантам проекта и умные Conventional Commits (без эмодзи) |
-| `remove-turso-and-migrate-to-s3` | регламент удаления рантайм-БД и отдачи протоколов через статический S3 CDN |
 | `code-review` | параллельный аудит стандартов и спецификаций изменений |
 | `accessibility` / `fixing-accessibility` | аудит и исправление доступности по WCAG 2.2 |
 
