@@ -1,6 +1,6 @@
 import React from 'react'
 import type { BreedHubMeta } from '../../lib/breed-hubs-data'
-import type { BreedStatsData, BreedCardDesignVariant } from '../../components/BreedCard/types'
+import type { BreedStatsData } from '../../components/BreedCard/types'
 import BreedCard from '../../components/BreedCard'
 import EmptyState from '../../components/EmptyState'
 import DoninoColumnPlaque, { DoninoColumnShell } from '../SpeedRecords/DoninoColumnPlaque'
@@ -17,7 +17,6 @@ export interface BreedsListProps {
   plaqueTitle: string
   loadMoreRef: React.RefObject<HTMLDivElement | null>
   loading: boolean
-  layoutVariant?: BreedCardDesignVariant
 }
 
 export const BreedsList: React.FC<BreedsListProps> = ({
@@ -29,7 +28,6 @@ export const BreedsList: React.FC<BreedsListProps> = ({
   plaqueTitle,
   loadMoreRef,
   loading,
-  layoutVariant = 'passport',
 }) => {
   const listRevealRef = useListReveal(!loading && sortedBreeds.length > 0)
 
@@ -78,7 +76,6 @@ export const BreedsList: React.FC<BreedsListProps> = ({
               breed={breed}
               stats={statsMap[breed.slug]}
               variant="embedded"
-              layoutVariant={layoutVariant}
             />
           </div>
         ))}

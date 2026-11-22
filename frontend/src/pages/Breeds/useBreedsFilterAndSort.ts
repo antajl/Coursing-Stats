@@ -360,7 +360,7 @@ export function useBreedsFilterAndSort() {
     }
     if (selectedGroup !== 'all') {
       const g = FCI_GROUPS[Number(selectedGroup)]
-      return g ? g.shortName : 'Группа пород'
+      return g ? g.name : 'Группа пород'
     }
     return 'Все породы'
   }, [searchQuery, selectedBreed, selectedGroup])
