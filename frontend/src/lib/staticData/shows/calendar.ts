@@ -97,6 +97,8 @@ export interface ShowRkfCalendarEntry {
   city?: string
   club?: string
   ranks?: string
+  /** Формат выставки: 'all_breed' | 'mono' | 'specialty' */
+  scope?: 'all_breed' | 'mono' | 'specialty'
   /** НКП / национальный клуб породы (mono). */
   national_breed_club_name?: string
   /** Породы через запятую — fallback подзаголовка. */

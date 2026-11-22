@@ -1,5 +1,6 @@
 import type { ShowRkfCalendarEntry } from '../../lib/staticData'
 import { matchesBreedFilter } from '../../lib/breedMapping'
+import { classifyShowScope } from '../../lib/showTypes'
 
 /** Collapse whitespace so merge keys stay stable across catalog quirks. */
 export function normalizeWs(value: string | null | undefined): string {
@@ -48,10 +49,10 @@ export function rkfClubMergeKey(entry: ShowRkfCalendarEntry): string {
 export const rkfMonoMergeKey = rkfClubMergeKey
 
 /** Prestige score to choose the best representative exhibition for a group card. */
-export function exhibitionPrestige(entry: ShowRkfCalendarEntry): number {
+export function exhibitionPrestige(entry: ShowRkfCalendarEntry, preferMono = false): number {
   const ranks = (entry.ranks || entry.rank || '').toUpperCase()
   const title = (entry.title || '').toUpperCase()
-  const hasMono = Boolean(entry.national_breed_club_name || entry.breeds)
+  const hasMono = Boolean(entry.national_breed_club_name || entry.breeds || classifyShowScope(entry).isMono)
 
   let score = 0
   if (ranks.includes('ОСОБЫМ СТАТУСОМ') || title.includes('ОСОБЫМ СТАТУСОМ')) score += 1000
@@ -61,9 +62,13 @@ export function exhibitionPrestige(entry: ShowRkfCalendarEntry): number {
   else if (ranks.includes('ПОБЕДИТЕЛЬ КЛУБА') || ranks.includes('ПК')) score += 300
   else if (ranks.includes('КЧК')) score += 200
 
-  // All-breed shows are more representative of the club event than a single mono show
-  if (!hasMono) {
-    score += 400
+  if (preferMono) {
+    if (hasMono) score += 2000
+  } else {
+    // All-breed shows are more representative of the club event than a single mono show by default
+    if (!hasMono) {
+      score += 400
+    }
   }
 
   if (entry.has_lc_protocol || entry.has_report_link || entry.reports_link) {
@@ -74,9 +79,13 @@ export function exhibitionPrestige(entry: ShowRkfCalendarEntry): number {
 }
 
 /** Sort children inside an expanded group: all-breed first, group shows second, mono by breed third. */
-export function compareGroupChildren(a: ShowRkfCalendarEntry, b: ShowRkfCalendarEntry): number {
-  const pA = exhibitionPrestige(a)
-  const pB = exhibitionPrestige(b)
+export function compareGroupChildren(
+  a: ShowRkfCalendarEntry,
+  b: ShowRkfCalendarEntry,
+  preferMono = false,
+): number {
+  const pA = exhibitionPrestige(a, preferMono)
+  const pB = exhibitionPrestige(b, preferMono)
   if (pA !== pB) return pB - pA
 
   const lA = a.breeds || a.national_breed_club_name || a.title || ''
@@ -158,6 +167,7 @@ export function exhibitionHasProtocol(entry: ShowRkfCalendarEntry): boolean {
 /** Group filtered calendar rows by club event; single-child groups render like flat rows. */
 export function groupRkfMonoVariants(
   exhibitions: ShowRkfCalendarEntry[],
+  preferMono = false,
 ): RkfCalendarGroup[] {
   const map = new Map<string, ShowRkfCalendarEntry[]>()
   const order: string[] = []
@@ -172,7 +182,7 @@ export function groupRkfMonoVariants(
   }
 
   return order.map((key) => {
-    const children = [...map.get(key)!].sort(compareGroupChildren)
+    const children = [...map.get(key)!].sort((a, b) => compareGroupChildren(a, b, preferMono))
     return {
       key,
       representative: children[0]!,

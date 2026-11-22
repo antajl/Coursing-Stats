@@ -4,6 +4,7 @@ import ToolbarSearch from '../../../components/toolbar/ToolbarSearch'
 import BreedSearchDropdown from '../../../components/ui/BreedSearchDropdown'
 import type { DogsIndexEntry } from '../../../lib/competingBreeds'
 import CitySearchDropdown, { type CityOption } from './CitySearchDropdown'
+import ShowScopeDropdown, { type ShowScopeFilter } from './ShowScopeDropdown'
 import QuickBreedBar, {
   SHOW_CANDIDATE_BREEDS,
   type QuickBreedItem,
@@ -32,6 +33,8 @@ export interface ShowCalendarToolbarProps {
   filterCity?: string
   onCityChange?: (city: string) => void
   cities?: CityOption[]
+  filterScope?: ShowScopeFilter
+  onScopeChange?: (scope: ShowScopeFilter) => void
   breedValues: string[]
   candidateBreeds?: QuickBreedItem[]
   dogIndex?: DogsIndexEntry[]
@@ -54,6 +57,8 @@ export function ShowCalendarToolbar({
   filterCity = '',
   onCityChange,
   cities = [],
+  filterScope = 'all',
+  onScopeChange,
   breedValues,
   candidateBreeds = SHOW_CANDIDATE_BREEDS,
   dogIndex,
@@ -89,6 +94,15 @@ export function ShowCalendarToolbar({
             cities={cities}
             selectedCity={filterCity}
             onSelect={onCityChange}
+            compact
+            className="!px-2.5 sm:!px-3.5"
+          />
+        )}
+
+        {onScopeChange && (
+          <ShowScopeDropdown
+            selectedScope={filterScope}
+            onSelect={onScopeChange}
             compact
             className="!px-2.5 sm:!px-3.5"
           />
@@ -145,6 +159,13 @@ export function ShowCalendarToolbar({
               cities={cities}
               selectedCity={filterCity}
               onSelect={onCityChange}
+            />
+          )}
+
+          {onScopeChange && (
+            <ShowScopeDropdown
+              selectedScope={filterScope}
+              onSelect={onScopeChange}
             />
           )}
 

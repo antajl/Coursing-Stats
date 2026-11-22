@@ -3,7 +3,11 @@ import { useSearchParams, useLocation, useNavigate, useParams } from 'react-rout
 import { useQuery } from '@tanstack/react-query'
 import SkeletonLoader from '../../components/SkeletonLoader'
 import { getShowDogRanking, getShowDogRankingPage0 } from '../../lib/staticData'
-import { compareShowDogs } from '../../../../backend/lib/show-award-ranking'
+import {
+  compareShowDogs,
+  compareShowDogsMono,
+  showMonoRankScore,
+} from '../../../../backend/lib/show-award-ranking'
 import ShowRankingFilters from './ShowRankingFilters'
 import ShowRankingColumns, { type RankedShowDog } from './ShowRankingColumns'
 import type { ShowDogCardData } from './ShowDogCard'
@@ -35,6 +39,50 @@ export type ShowRankingProps = {
   urlYear?: string
 }
 
+function filterShowDogs(
+  dogs: RankedShowDog[],
+  filterBreed: string,
+  filterSex: string,
+  debouncedSearchQuery: string,
+): RankedShowDog[] {
+  if (dogs.length === 0) return []
+
+  const targetBreedKey = filterBreed ? breedAliasKey(canonicalBreed(filterBreed)) : ''
+  const searchTokens = debouncedSearchQuery ? dogQuerySearchTokens(debouncedSearchQuery) : []
+  const searchLower = debouncedSearchQuery ? debouncedSearchQuery.toLowerCase() : ''
+
+  const hasBreed = Boolean(targetBreedKey)
+  const hasSearch = searchTokens.length > 0
+  const hasSex = Boolean(filterSex)
+
+  if (!hasBreed && !hasSearch && !hasSex) {
+    return dogs
+  }
+
+  const filtered = dogs.filter((dog) => {
+    if (hasBreed) {
+      if (!dog.breed) return false
+      if (breedAliasKey(canonicalBreed(dog.breed)) !== targetBreedKey) return false
+    }
+    if (hasSex) {
+      if (!matchesSexFilter(dog.sex, filterSex)) return false
+    }
+    if (hasSearch) {
+      const haystack = dogNameSearchText(dog.name_lat, dog.name_ru)
+      const nameMatch = searchTokens.some((token) => haystack.includes(token))
+      const breedMatch = dog.breed.toLowerCase().includes(searchLower)
+      if (!nameMatch && !breedMatch) return false
+    }
+    return true
+  })
+
+  return filtered.map((dog, i) => ({
+    ...dog,
+    overall_rank: dog.overall_rank ?? dog.rank,
+    rank: i + 1,
+  }))
+}
+
 export default function ShowRanking({ urlYear }: ShowRankingProps = {}) {
   const { year: routeYearParam } = useParams<{ year?: string }>()
   const routeYear = urlYear ?? routeYearParam
@@ -56,8 +104,21 @@ export default function ShowRanking({ urlYear }: ShowRankingProps = {}) {
       setFilterYear((prev) => (prev !== target ? target : prev))
     }
   }, [routeYear])
+
   const [filterBreed, setFilterBreed] = useState(() => resolveBreedParam(searchParams.get('breed')))
   const [filterSex, setFilterSex] = useState(() => searchParams.get('sex') || '')
+  const [selectedMobileColumn, setSelectedMobileColumn] = useState<'general' | 'mono' | null>(() => {
+    const colParam = searchParams.get('scope') || searchParams.get('col')
+    return colParam === 'mono' || colParam === 'general' ? colParam : null
+  })
+
+  useEffect(() => {
+    const colParam = searchParams.get('scope') || searchParams.get('col')
+    if (colParam === 'mono' || colParam === 'general') {
+      setSelectedMobileColumn(colParam)
+    }
+  }, [searchParams])
+
   const [allowFullLoad, setAllowFullLoad] = useState(false)
   const dropdownRef = useRef<HTMLDivElement>(null)
 
@@ -92,7 +153,8 @@ export default function ShowRanking({ urlYear }: ShowRankingProps = {}) {
     const hasActiveFilters =
       Boolean(searchQuery.trim()) ||
       Boolean(filterBreed) ||
-      Boolean(filterSex)
+      Boolean(filterSex) ||
+      selectedMobileColumn === 'mono'
 
     if (hasActiveFilters || page0Failed) {
       setAllowFullLoad(true)
@@ -117,7 +179,7 @@ export default function ShowRanking({ urlYear }: ShowRankingProps = {}) {
         window.cancelIdleCallback(idleId)
       }
     }
-  }, [rankingYear, isPage0Fetched, isPage0Error, page0Failed, searchQuery, filterBreed, filterSex])
+  }, [rankingYear, isPage0Fetched, isPage0Error, page0Failed, searchQuery, filterBreed, filterSex, selectedMobileColumn])
 
   const {
     data: rankingData,
@@ -158,6 +220,16 @@ export default function ShowRanking({ urlYear }: ShowRankingProps = {}) {
         const next = new URLSearchParams(prev)
         let changed = false
 
+        // Scope / Mobile column
+        const currentScope = next.get('scope') || ''
+        if (selectedMobileColumn === 'mono' && currentScope !== 'mono') {
+          next.set('scope', 'mono')
+          changed = true
+        } else if (selectedMobileColumn !== 'mono' && currentScope === 'mono') {
+          next.delete('scope')
+          changed = true
+        }
+
         // Breed
         const targetBreedSlug = breedToSlug(filterBreed)
         const currentBreed = next.get('breed') || ''
@@ -194,7 +266,7 @@ export default function ShowRanking({ urlYear }: ShowRankingProps = {}) {
       },
       { replace: true },
     )
-  }, [filterBreed, filterSex, searchQuery, setSearchParams])
+  }, [selectedMobileColumn, filterBreed, filterSex, searchQuery, setSearchParams, location.pathname])
 
   // Respond to browser back/forward navigation
   useEffect(() => {
@@ -251,8 +323,8 @@ export default function ShowRanking({ urlYear }: ShowRankingProps = {}) {
     new Set(['2017', '2018', '2019', '2021', '2022', '2023', '2024', '2025', '2026']),
   ).sort((a, b) => Number(b) - Number(a))
 
-  // Avoid cloning 80k objects when rank is already present
-  const rankedDogs = useMemo<RankedShowDog[]>(() => {
+  // 1. Общий рейтинг РКФ
+  const rankedGeneralDogs = useMemo<RankedShowDog[]>(() => {
     if (allDogs.length > 0 && typeof allDogs[0].rank === 'number') {
       return allDogs as RankedShowDog[]
     }
@@ -261,52 +333,43 @@ export default function ShowRanking({ urlYear }: ShowRankingProps = {}) {
       .map((dog, i) => ({ ...dog, rank: i + 1 }))
   }, [allDogs])
 
-  // Optimized filter loop: precalculates all invariants outside the 58k loop
-  const filteredDogs = useMemo(() => {
-    if (rankedDogs.length === 0) return []
+  // 2. Монопородный рейтинг НКП (без всепородных BIG/BIS)
+  const rankedMonoDogs = useMemo<RankedShowDog[]>(() => {
+    return allDogs
+      .map((dog) => ({
+        ...dog,
+        rank_score: showMonoRankScore(dog.titles),
+      }))
+      .filter((dog) => (dog.rank_score ?? 0) > 0)
+      .sort(compareShowDogsMono)
+      .map((dog, i) => ({ ...dog, rank: i + 1 }))
+  }, [allDogs])
 
-    const targetBreedKey = filterBreed ? breedAliasKey(canonicalBreed(filterBreed)) : ''
-    const searchTokens = debouncedSearchQuery ? dogQuerySearchTokens(debouncedSearchQuery) : []
-    const searchLower = debouncedSearchQuery ? debouncedSearchQuery.toLowerCase() : ''
+  const filteredGeneralDogs = useMemo(
+    () => filterShowDogs(rankedGeneralDogs, filterBreed, filterSex, debouncedSearchQuery),
+    [rankedGeneralDogs, filterBreed, filterSex, debouncedSearchQuery],
+  )
 
-    const hasBreed = Boolean(targetBreedKey)
-    const hasSearch = searchTokens.length > 0
-    const hasSex = Boolean(filterSex)
-
-    if (!hasBreed && !hasSearch && !hasSex) {
-      return rankedDogs
-    }
-
-    const filtered = rankedDogs.filter((dog) => {
-      if (hasBreed) {
-        if (!dog.breed) return false
-        if (breedAliasKey(canonicalBreed(dog.breed)) !== targetBreedKey) return false
-      }
-      if (hasSex) {
-        if (!matchesSexFilter(dog.sex, filterSex)) return false
-      }
-      if (hasSearch) {
-        const haystack = dogNameSearchText(dog.name_lat, dog.name_ru)
-        const nameMatch = searchTokens.some((token) => haystack.includes(token))
-        const breedMatch = dog.breed.toLowerCase().includes(searchLower)
-        if (!nameMatch && !breedMatch) return false
-      }
-      return true
-    })
-
-    return filtered.map((dog, i) => ({
-      ...dog,
-      overall_rank: dog.overall_rank ?? dog.rank,
-      rank: i + 1,
-    }))
-  }, [rankedDogs, filterBreed, filterSex, debouncedSearchQuery])
+  const filteredMonoDogs = useMemo(
+    () => filterShowDogs(rankedMonoDogs, filterBreed, filterSex, debouncedSearchQuery),
+    [rankedMonoDogs, filterBreed, filterSex, debouncedSearchQuery],
+  )
 
   const isAllTimeWithoutSearch = rankingYear === '' && !debouncedSearchQuery.trim()
 
-  const displayedDogs = useMemo(
-    () => (isAllTimeWithoutSearch ? filteredDogs.slice(0, 100) : filteredDogs),
-    [isAllTimeWithoutSearch, filteredDogs],
+  const displayedGeneralDogs = useMemo(
+    () => (isAllTimeWithoutSearch ? filteredGeneralDogs.slice(0, 100) : filteredGeneralDogs),
+    [isAllTimeWithoutSearch, filteredGeneralDogs],
   )
+
+  const displayedMonoDogs = useMemo(
+    () => (isAllTimeWithoutSearch ? filteredMonoDogs.slice(0, 100) : filteredMonoDogs),
+    [isAllTimeWithoutSearch, filteredMonoDogs],
+  )
+
+  const activeMobileColumn =
+    selectedMobileColumn ??
+    (displayedGeneralDogs.length === 0 && displayedMonoDogs.length > 0 ? 'mono' : 'general')
 
   const handleYearChange = useCallback((newYear: string) => {
     setFilterYear(newYear)
@@ -321,6 +384,7 @@ export default function ShowRanking({ urlYear }: ShowRankingProps = {}) {
     setFilterYear(SHOW_ACTIVE_SEASON)
     setFilterBreed('')
     setFilterSex('')
+    setSelectedMobileColumn(null)
     setSearchQuery('')
     navigate(`/shows/ranking/${SHOW_ACTIVE_SEASON}/`)
   }, [navigate])
@@ -368,7 +432,8 @@ export default function ShowRanking({ urlYear }: ShowRankingProps = {}) {
         </div>
       ) : (
         <ShowRankingColumns
-          dogs={displayedDogs}
+          generalDogs={displayedGeneralDogs}
+          monoDogs={displayedMonoDogs}
           filterYear={rankingYear}
           filterBreed={filterBreed}
           favorites={favorites}
@@ -377,6 +442,8 @@ export default function ShowRanking({ urlYear }: ShowRankingProps = {}) {
               console.error('Failed to toggle favorite:', error)
             })
           }}
+          activeMobileColumn={activeMobileColumn}
+          onMobileColumnChange={setSelectedMobileColumn}
         />
       )}
     </div>

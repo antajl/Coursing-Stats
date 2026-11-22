@@ -12,10 +12,13 @@ import { showDogProfilePath, isShowOnlyProfileId, stableShowProfileId, SHOW_PROF
 import { renderShowAwardChips } from '../../lib/awardChipRender'
 import { showAwardBadgeClass } from '../../lib/qualificationTitles'
 import {
+  bestShowMonoAward,
   presentShowAwards,
   SHOW_AWARD_BADGE,
+  SHOW_MONO_AWARD_ORDER,
   type ShowTitleCounts,
 } from '../../../../backend/lib/show-award-ranking'
+import type { ShowScopeFilter } from './ShowCalendar/ShowScopeDropdown'
 import type { FavoriteDogMeta } from '../../hooks/useFavorites'
 
 export interface ShowDogCardData {
@@ -114,6 +117,7 @@ interface ShowDogCardProps {
    * Пусто = все годы → бейдж из history / year_*.
    */
   filterYear?: string
+  filterScope?: ShowScopeFilter
   favorites?: Set<string>
   onToggleFavorite?: (dogId: string, meta: FavoriteDogMeta) => void
 }
@@ -128,14 +132,30 @@ function ShowDogCardInner({
   dog,
   rank,
   filterYear = '',
+  filterScope = 'all',
   favorites,
   onToggleFavorite,
 }: ShowDogCardProps) {
   const { primary, secondary } = parseDogName(dog.name_lat, dog.name_ru)
   const breedDisplay = displayBreed(dog.breed)
-  const yearBadge = showYearBadge(dog, filterYear)
+  const isAllTime = !filterYear || filterYear === 'all'
+  const yearBadge = isAllTime ? showYearBadge(dog, '') : null
   const href = showDogProfilePath(dog)
-  const awards = useMemo(() => presentShowAwards(dog.titles), [dog.titles])
+
+  const isMonoScope = filterScope === 'mono'
+  const awards = useMemo(() => {
+    if (isMonoScope) {
+      return SHOW_MONO_AWARD_ORDER.filter((key) => (dog.titles[key] || 0) > 0)
+    }
+    return presentShowAwards(dog.titles)
+  }, [dog.titles, isMonoScope])
+
+  const effectiveBestAward = useMemo(() => {
+    if (isMonoScope) {
+      return bestShowMonoAward(dog.titles) || dog.best_award
+    }
+    return dog.best_award
+  }, [dog.titles, dog.best_award, isMonoScope])
 
   const isTop3 = rank != null && rank > 0 && rank <= 3
   const top3Wash = isTop3 ? TOP3_WASH[rank as 1 | 2 | 3] : ''
@@ -144,7 +164,7 @@ function ShowDogCardInner({
   const isFav = Boolean(favorites?.has(favId))
 
   const shellBase =
-    'group relative flex min-h-[5rem] sm:h-[5.25rem] flex-row items-stretch border-0 bg-transparent px-3 sm:px-4 py-1.5 shadow-none transition-colors duration-150 hover:bg-camel-100/60'
+    'group relative flex min-h-[5.25rem] sm:min-h-[5.5rem] flex-row items-stretch border-0 bg-transparent px-3 sm:px-4 py-1.5 shadow-none transition-colors duration-150 hover:bg-camel-100/60'
   const shellClass = isTop3
     ? `${shellBase} overflow-visible ${top3Wash}`.trim()
     : `${shellBase} overflow-hidden`.trim()
@@ -234,7 +254,7 @@ function ShowDogCardInner({
             <div className="flex items-center justify-between gap-2 min-w-0">
               <div className="flex min-h-0 min-w-0 flex-1 flex-nowrap items-center gap-1 overflow-hidden">
                 {awards.length > 0 ? (
-                  renderShowAwardChips({ titles: dog.titles, maxVisible: 3, nowrap: true })
+                  renderShowAwardChips({ titles: dog.titles, keys: awards as any, maxVisible: 3, nowrap: true })
                 ) : (
                   <span className="text-[10px] text-charcoal-400">Участник рингов</span>
                 )}
@@ -249,7 +269,8 @@ function ShowDogCardInner({
 
         {/* Десктопная раскладка (>= sm) */}
         <div className="hidden sm:flex flex-row items-stretch w-full min-w-0">
-          <div className="flex min-h-0 min-w-0 flex-1 flex-col justify-center gap-1.5">
+          <div className="flex min-h-0 min-w-0 flex-1 flex-col justify-center gap-1 overflow-hidden pr-2">
+            {/* Кличка собаки */}
             <div className="flex items-center gap-1.5 min-w-0">
               <OwnerCrownName
                 name={primary}
@@ -257,18 +278,24 @@ function ShowDogCardInner({
                 kind="competition"
               >
                 <h3
-                  className="text-xs font-bold leading-snug text-charcoal-900 truncate"
+                  className="text-xs sm:text-[13px] font-bold leading-snug text-charcoal-900 truncate"
                   title={secondary ? `${primary} / ${secondary}` : primary}
                 >
                   {primary}
                 </h3>
               </OwnerCrownName>
-              <span className="text-charcoal-300 shrink-0" aria-hidden>
-                ·
-              </span>
-              <span className="text-[10px] text-charcoal-600 font-medium truncate">
+            </div>
+
+            {/* Порода собаки под кличкой */}
+            <div className="flex items-center gap-1 text-[10.5px]">
+              <span className="text-charcoal-600 font-medium truncate">
                 {breedDisplay.primary}
               </span>
+              {breedDisplay.variety && (
+                <span className="text-charcoal-400 font-normal shrink-0">
+                  {breedDisplay.variety}
+                </span>
+              )}
               {dog.sex && (
                 <>
                   <span className="text-charcoal-300 shrink-0" aria-hidden>
@@ -282,16 +309,17 @@ function ShowDogCardInner({
                   <span className="text-charcoal-300 shrink-0" aria-hidden>
                     ·
                   </span>
-                  <span className="text-[10px] text-charcoal-500 shrink-0">
+                  <span className="text-charcoal-500 shrink-0">
                     {yearBadge.label}
                   </span>
                 </>
               )}
             </div>
 
+            {/* Выставочные награды */}
             <div className="flex min-h-0 min-w-0 flex-1 flex-nowrap items-center gap-1 overflow-hidden">
               {awards.length > 0 ? (
-                renderShowAwardChips({ titles: dog.titles, maxVisible: 6, nowrap: true })
+                renderShowAwardChips({ titles: dog.titles, keys: awards as any, maxVisible: 5, nowrap: true })
               ) : (
                 <span className="text-[10px] text-charcoal-400">Участник рингов</span>
               )}
@@ -300,17 +328,17 @@ function ShowDogCardInner({
 
           {/* Правая колонка статистики выставок */}
           <div className="mr-7 flex min-h-0 min-w-[7.5rem] sm:min-w-[8.5rem] shrink-0 flex-col justify-center items-end gap-1 border-l border-old-money-200/60 pl-3">
-            {dog.best_award ? (
+            {effectiveBestAward ? (
               <div className="flex items-center gap-1 leading-none">
                 <span className="text-[9px] uppercase tracking-wide text-charcoal-500">
                   лучшая:
                 </span>
                 <span
                   className={`inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold ${showAwardBadgeClass(
-                    dog.best_award as any,
+                    effectiveBestAward as any,
                   )}`}
                 >
-                  {SHOW_AWARD_BADGE[dog.best_award as any] || dog.best_award}
+                  {SHOW_AWARD_BADGE[effectiveBestAward as any] || effectiveBestAward}
                 </span>
               </div>
             ) : (
@@ -335,9 +363,11 @@ const ShowDogCardMemo = memo(ShowDogCardInner, (prevProps, nextProps) => {
   return (
     prevProps.dog.id === nextProps.dog.id &&
     prevProps.dog.total_shows === nextProps.dog.total_shows &&
+    prevProps.dog.rank_score === nextProps.dog.rank_score &&
     prevProps.rank === nextProps.rank &&
     prevProps.dog.overall_rank === nextProps.dog.overall_rank &&
     prevProps.filterYear === nextProps.filterYear &&
+    prevProps.filterScope === nextProps.filterScope &&
     prevProps.dog.name_ru === nextProps.dog.name_ru &&
     prevProps.dog.name_lat === nextProps.dog.name_lat &&
     Boolean(prevProps.favorites?.has(getShowDogFavId(prevProps.dog))) ===

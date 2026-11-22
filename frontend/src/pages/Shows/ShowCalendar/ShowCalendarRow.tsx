@@ -1,6 +1,7 @@
 import { ChevronDown, ChevronRight, ChevronUp } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import type { ShowRkfCalendarEntry } from '../../../lib/staticData'
+import { classifyShowScope } from '../../../lib/showTypes'
 import {
   collectGroupRanks,
   exhibitionHasProtocol,
@@ -12,6 +13,15 @@ import { formatShowDateParts } from '../showCalendarDate'
 
 const RANK_CHIP =
   'inline-flex h-5 max-w-full shrink-0 items-center justify-center rounded-md bg-old-money-100/90 px-1.5 font-mono text-xs font-semibold text-charcoal-600 truncate'
+
+const RANK_CHIP_MONO =
+  'inline-flex h-5 max-w-full shrink-0 items-center justify-center rounded-md bg-amber-100/90 border border-amber-300/80 px-1.5 font-mono text-xs font-semibold text-amber-950 truncate'
+
+function isMonoRankToken(rank: string): boolean {
+  return /(?:^|[^\p{L}\p{N}])(кчк|чк|пк|пп|спешиалти|specialty)(?:$|[^\p{L}\p{N}])|победитель клуба|победитель породы|в каждом классе/iu.test(
+    rank,
+  )
+}
 
 function formatShowCount(count: number): string {
   const mod10 = count % 10
@@ -52,6 +62,7 @@ export function ShowCalendarRow({
   const navigate = useNavigate()
   const exhibition = group.representative
   const isMulti = group.children.length > 1
+  const isMonoShow = !isMulti && classifyShowScope(exhibition).isMono
   const dateParts = formatShowDateParts(exhibition.date, exhibition.date_end)
   const isLc = group.hasLc
   const hasProtocol = group.hasProtocol
@@ -158,6 +169,13 @@ export function ShowCalendarRow({
                 </span>
               )}
 
+              {/* Плашка монопородной выставки */}
+              {isMonoShow && (
+                <span className="inline-flex items-center rounded bg-amber-100 text-amber-950 border border-amber-300/80 px-1.5 py-0.5 text-[10.5px] font-bold uppercase tracking-wider shrink-0">
+                  МОНО
+                </span>
+              )}
+
               <span
                 className={`min-w-0 leading-[1.3em] text-[13.5px] sm:text-sm font-semibold truncate text-charcoal-900 group-hover:text-camel-800 transition-colors`}
               >
@@ -167,7 +185,11 @@ export function ShowCalendarRow({
               {ranks.length > 0 && (
                 <div className="flex w-full sm:w-auto min-w-0 max-w-full flex-wrap items-center gap-1">
                   {ranks.slice(0, 4).map((rank) => (
-                    <span key={rank} className={RANK_CHIP} title={rank}>
+                    <span
+                      key={rank}
+                      className={isMonoRankToken(rank) ? RANK_CHIP_MONO : RANK_CHIP}
+                      title={rank}
+                    >
                       {rank}
                     </span>
                   ))}
@@ -326,6 +348,11 @@ export function ShowCalendarRow({
               >
                 <div className="min-w-0 flex-1">
                   <div className="flex flex-wrap items-center gap-1.5">
+                    {classifyShowScope(child).isMono && (
+                      <span className="inline-flex items-center rounded bg-amber-50 text-amber-900 border border-amber-200/90 px-1 py-0.2 text-[9.5px] font-bold uppercase tracking-wider shrink-0">
+                        МОНО
+                      </span>
+                    )}
                     <span className="text-[13px] font-semibold text-charcoal-900 group-hover/child:text-camel-800 transition-colors">
                       {childHeading}
                     </span>

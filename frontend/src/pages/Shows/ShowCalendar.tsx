@@ -28,6 +28,7 @@ import {
   ShowCalendarToolbar,
   type QuickPreset,
 } from './ShowCalendar/ShowCalendarToolbar'
+import type { ShowScopeFilter } from './ShowCalendar/ShowScopeDropdown'
 import {
   ShowCalendarMonthList,
   type ShowCalendarFlatRow,
@@ -84,6 +85,11 @@ export default function ShowCalendar({ urlYear }: ShowCalendarProps = {}) {
   })
   const [filterBreed, setFilterBreed] = useState(() => resolveBreedParam(searchParams.get('breed')))
   const [filterCity, setFilterCity] = useState(() => searchParams.get('city') || '')
+  const [filterScope, setFilterScope] = useState<ShowScopeFilter>(() => {
+    const param = searchParams.get('scope') || searchParams.get('format')
+    if (param === 'mono' || param === 'all_breed') return param
+    return 'all'
+  })
 
   const [searchQuery, setSearchQuery] = useState(() => searchParams.get('search') || '')
   const [quickPreset, setQuickPreset] = useState<QuickPreset>(null)
@@ -147,6 +153,7 @@ export default function ShowCalendar({ urlYear }: ShowCalendarProps = {}) {
         const currentMonth = prev.get('month') || ''
         const currentBreed = prev.get('breed') || ''
         const currentCity = prev.get('city') || ''
+        const currentScope = prev.get('scope') || ''
         const currentSearch = prev.get('search') || ''
 
         const targetYear = filterYear && filterYear !== CURRENT_SEASON ? filterYear : null
@@ -158,6 +165,7 @@ export default function ShowCalendar({ urlYear }: ShowCalendarProps = {}) {
               : null
         const targetBreed = filterBreed ? breedToSlug(filterBreed) : null
         const targetCity = filterCity.trim() || null
+        const targetScope = filterScope && filterScope !== 'all' ? filterScope : null
         const targetSearch = searchQuery.trim() || null
 
         let changed = false
@@ -198,6 +206,16 @@ export default function ShowCalendar({ urlYear }: ShowCalendarProps = {}) {
           changed = true
         }
 
+        if (targetScope !== null) {
+          if (currentScope !== targetScope) {
+            params.set('scope', targetScope)
+            changed = true
+          }
+        } else if (currentScope) {
+          params.delete('scope')
+          changed = true
+        }
+
         if (targetSearch !== null) {
           if (currentSearch !== targetSearch) {
             params.set('search', targetSearch)
@@ -212,7 +230,7 @@ export default function ShowCalendar({ urlYear }: ShowCalendarProps = {}) {
       },
       { replace: true },
     )
-  }, [filterMonth, filterBreed, filterCity, searchQuery, setSearchParams])
+  }, [filterMonth, filterBreed, filterCity, filterScope, searchQuery, setSearchParams])
 
   // Sync URL changes back to state (e.g. browser back/forward or tab switch)
   useEffect(() => {
@@ -224,6 +242,11 @@ export default function ShowCalendar({ urlYear }: ShowCalendarProps = {}) {
     const cityFromUrl = searchParams.get('city') || ''
     if (cityFromUrl !== filterCity) {
       setFilterCity(cityFromUrl)
+    }
+
+    const scopeFromUrl = (searchParams.get('scope') || searchParams.get('format') || 'all') as ShowScopeFilter
+    if (scopeFromUrl !== filterScope) {
+      setFilterScope(scopeFromUrl)
     }
 
     if (routeYear === undefined) {
@@ -249,7 +272,7 @@ export default function ShowCalendar({ urlYear }: ShowCalendarProps = {}) {
 
   useEffect(() => {
     setExpandedKeys(new Set())
-  }, [filterYear, filterMonth, filterBreed, filterCity, searchQuery, quickPreset])
+  }, [filterYear, filterMonth, filterBreed, filterCity, filterScope, searchQuery, quickPreset])
 
   // Build matching exhibition IDs for the selected breed
   const allowedExhibitionIds = useMemo(() => {
@@ -315,7 +338,7 @@ export default function ShowCalendar({ urlYear }: ShowCalendarProps = {}) {
       .sort((a, b) => b.count - a.count || a.city.localeCompare(b.city, 'ru'))
   }, [exhibitions])
 
-  const isGlobalSearch = Boolean(searchQuery.trim() || filterBreed || filterCity || quickPreset)
+  const isGlobalSearch = Boolean(searchQuery.trim() || filterBreed || filterCity || filterScope !== 'all' || quickPreset)
   const isAllMonthsSelected = filterMonth === 'all'
 
   const effectiveMonths = useMemo(() => {
@@ -369,11 +392,12 @@ export default function ShowCalendar({ urlYear }: ShowCalendarProps = {}) {
         filterBreed,
         allowedExhibitionIds,
         filterCity,
+        filterScope,
         filterLcOnly: true,
         searchQuery,
         quickPreset,
       }),
-    [exhibitions, searchQuery, quickPreset, filterMonth, effectiveMonths, filterBreed, filterCity, allowedExhibitionIds],
+    [exhibitions, searchQuery, quickPreset, filterMonth, effectiveMonths, filterBreed, filterCity, filterScope, allowedExhibitionIds],
   )
 
   const monthGroups = useMemo(
@@ -467,6 +491,8 @@ export default function ShowCalendar({ urlYear }: ShowCalendarProps = {}) {
           filterCity={filterCity}
           onCityChange={setFilterCity}
           cities={availableCities}
+          filterScope={filterScope}
+          onScopeChange={setFilterScope}
           breedValues={breedValues}
           dogIndex={breedDogIndex}
           onClearQuickPreset={() => setQuickPreset(null)}

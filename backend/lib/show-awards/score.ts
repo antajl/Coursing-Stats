@@ -36,9 +36,172 @@ export function showRankScore(titles: ShowTitleCounts): number {
   return SHOW_AWARD_ORDER.reduce((sum, key) => sum + (titles[key] || 0) * SHOW_AWARD_WEIGHTS[key], 0)
 }
 
+/**
+ * Веса наград для клубного (монопородного) рейтинга НКП:
+ * Исключаются всепородные BIG (5 000) и BIS (10 000).
+ * Ключевой селекционный вес отдается победам под породниками: КЧК, ПК, CW, титулам НКП.
+ */
+export const SHOW_MONO_AWARD_WEIGHTS: Record<ShowAwardKey, number> = {
+  BIS: 0,
+  BIG: 0,
+  BIS_JUNIOR: 0,
+  BIS_VETERAN: 0,
+  BIS_PUPPY: 0,
+  BIS_BABY: 0,
+  BOB: 2_000,
+  BOS: 1_500,
+  LB: 800,
+  LSH: 800,
+  LYU: 900,
+  LV: 850,
+  CACIB: 0,
+  CAC: 0,
+  JCAC: 0,
+  VCAC: 0,
+  CHRKF: 0,
+  YCHRKF: 0,
+  VCHRKF: 0,
+  R_CACIB: 0,
+  R_CAC: 0,
+  R_JCAC: 0,
+  R_VCAC: 0,
+  P_RUSSIA: 0,
+  P_MOSCOW: 0,
+  YP_RUSSIA: 0,
+  YP_MOSCOW: 0,
+  VP_RUSSIA: 0,
+  VP_MOSCOW: 0,
+  KCHP: 1_800,
+  YKCHP: 1_200,
+  VKCHP: 1_000,
+  KCHK: 600,
+  YKCHK: 450,
+  VKCHK: 400,
+  CW: 200,
+  SS: 100,
+  YSS: 70,
+  VSS: 60,
+}
+
+/**
+ * Веса наград для всепородного (САС / CACIB) рейтинга:
+ * Исключаются монопородные клубные титулы (КЧК, ПК, СС).
+ */
+export const SHOW_CAC_AWARD_WEIGHTS: Record<ShowAwardKey, number> = {
+  ...SHOW_AWARD_WEIGHTS,
+  KCHP: 0,
+  YKCHP: 0,
+  VKCHP: 0,
+  KCHK: 0,
+  YKCHK: 0,
+  VKCHK: 0,
+  SS: 0,
+  YSS: 0,
+  VSS: 0,
+}
+
+export function showMonoRankScore(titles: ShowTitleCounts): number {
+  return SHOW_AWARD_ORDER.reduce(
+    (sum, key) => sum + (titles[key] || 0) * (SHOW_MONO_AWARD_WEIGHTS[key] || 0),
+    0,
+  )
+}
+
+export function showCacRankScore(titles: ShowTitleCounts): number {
+  return SHOW_AWARD_ORDER.reduce(
+    (sum, key) => sum + (titles[key] || 0) * (SHOW_CAC_AWARD_WEIGHTS[key] || 0),
+    0,
+  )
+}
+
+export function compareShowDogsMono(
+  a: { rank_score?: number; titles: ShowTitleCounts; total_shows: number },
+  b: { rank_score?: number; titles: ShowTitleCounts; total_shows: number },
+): number {
+  const scoreA = showMonoRankScore(a.titles)
+  const scoreB = showMonoRankScore(b.titles)
+  if (scoreB !== scoreA) return scoreB - scoreA
+
+  const monoTieBreakKeys: ShowAwardKey[] = [
+    'KCHP',
+    'BOB',
+    'BOS',
+    'KCHK',
+    'YKCHP',
+    'YKCHK',
+    'VKCHP',
+    'VKCHK',
+    'CW',
+    'SS',
+    'YSS',
+    'VSS',
+  ]
+  for (const key of monoTieBreakKeys) {
+    const diff = (b.titles[key] || 0) - (a.titles[key] || 0)
+    if (diff !== 0) return diff
+  }
+
+  return b.total_shows - a.total_shows
+}
+
+export function compareShowDogsCac(
+  a: { rank_score?: number; titles: ShowTitleCounts; total_shows: number },
+  b: { rank_score?: number; titles: ShowTitleCounts; total_shows: number },
+): number {
+  const scoreA = showCacRankScore(a.titles)
+  const scoreB = showCacRankScore(b.titles)
+  if (scoreB !== scoreA) return scoreB - scoreA
+
+  const cacTieBreakKeys: ShowAwardKey[] = [
+    'BIS',
+    'BIG',
+    'BOB',
+    'BOS',
+    'CACIB',
+    'CAC',
+    'JCAC',
+    'VCAC',
+    'CHRKF',
+    'CW',
+  ]
+  for (const key of cacTieBreakKeys) {
+    const diff = (b.titles[key] || 0) - (a.titles[key] || 0)
+    if (diff !== 0) return diff
+  }
+
+  return b.total_shows - a.total_shows
+}
+
 /** Лучшая категория награды по иерархии (не счётчик). */
 export function bestShowAward(titles: ShowTitleCounts): ShowAwardKey | null {
   for (const key of SHOW_AWARD_ORDER) {
+    if ((titles[key] || 0) > 0) return key
+  }
+  return null
+}
+
+export const SHOW_MONO_AWARD_ORDER: ShowAwardKey[] = [
+  'KCHP',
+  'YKCHP',
+  'VKCHP',
+  'BOB',
+  'BOS',
+  'LYU',
+  'LV',
+  'KCHK',
+  'YKCHK',
+  'VKCHK',
+  'CW',
+  'SS',
+  'YSS',
+  'VSS',
+  'LSH',
+  'LB',
+]
+
+/** Лучшая награда по иерархии монопородного рейтинга НКП. */
+export function bestShowMonoAward(titles: ShowTitleCounts): ShowAwardKey | null {
+  for (const key of SHOW_MONO_AWARD_ORDER) {
     if ((titles[key] || 0) > 0) return key
   }
   return null

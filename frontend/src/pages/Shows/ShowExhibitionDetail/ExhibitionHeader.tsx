@@ -4,9 +4,11 @@ import LazyImage from '../../../components/LazyImage'
 import HoverTooltip from '../../../components/ui/HoverTooltip'
 import { resolveRkfOnlineExhibitionUrl, rkfExhibitionResultsUrl } from '../../../lib/rkfLinks'
 import { getClubTooltip, getFederationTooltip, getRankTooltip } from '../showMetaTooltips'
+import { classifyShowScope } from '../../../lib/showTypes'
 import type { ShowExhibition } from './types'
 
 export function ExhibitionHeader({ exhibition }: { exhibition: ShowExhibition }) {
+  const scopeInfo = classifyShowScope(exhibition)
   const uniqueDogsCount = new Set(exhibition.results.map((r) => (r.dog_name || '').trim().toLowerCase()).filter(Boolean)).size
   const dogsCount = uniqueDogsCount || exhibition.results.length
   const breedsCount =
@@ -32,6 +34,19 @@ export function ExhibitionHeader({ exhibition }: { exhibition: ShowExhibition })
       <div className="min-w-0 rounded-xl border border-old-money-200 bg-gradient-to-br from-cream-50 to-white px-4 py-4 md:px-5 md:py-4.5">
         <div className="flex items-start justify-between gap-3">
           <div className="min-w-0 flex-1">
+            {scopeInfo.isMono && (
+              <div className="mb-2 flex flex-wrap items-center gap-1.5">
+                <span className="inline-flex items-center rounded bg-amber-100 text-amber-950 border border-amber-300/80 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider shrink-0">
+                  МОНОПОРОДНАЯ ВЫСТАВКА
+                </span>
+                {scopeInfo.nkpName && (
+                  <span className="inline-flex items-center rounded bg-camel-100/90 text-camel-950 border border-camel-200/90 px-2 py-0.5 text-xs font-semibold shrink-0">
+                    НКП: {scopeInfo.nkpName}
+                  </span>
+                )}
+              </div>
+            )}
+
             <h1 className="min-w-0 font-serif text-lg font-bold leading-tight tracking-tight text-charcoal-900 md:text-xl">
               {rkfUrl ? (
                 <a
@@ -65,8 +80,15 @@ export function ExhibitionHeader({ exhibition }: { exhibition: ShowExhibition })
               <div className="flex items-center gap-2 rounded-lg bg-white/60 px-3 py-2 shrink-0">
                 <PawPrint className="h-4 w-4 text-camel-600" />
                 <div>
-                  <div className="text-[10px] uppercase tracking-wide text-old-money-500">Пород</div>
-                  <div className="text-sm font-semibold text-charcoal-900">{breedsCount}</div>
+                  <div className="text-[10px] uppercase tracking-wide text-old-money-500">
+                    {scopeInfo.isMono && scopeInfo.targetBreed ? 'Порода' : 'Пород'}
+                  </div>
+                  <div
+                    className="text-sm font-semibold text-charcoal-900 truncate max-w-[140px] sm:max-w-[200px]"
+                    title={scopeInfo.isMono && scopeInfo.targetBreed ? scopeInfo.targetBreed : undefined}
+                  >
+                    {scopeInfo.isMono && scopeInfo.targetBreed ? scopeInfo.targetBreed : breedsCount}
+                  </div>
                 </div>
               </div>
               <div className="flex items-center gap-2 rounded-lg bg-white/60 px-3 py-2 min-w-0 flex-1">

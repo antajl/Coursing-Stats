@@ -7,6 +7,7 @@ import {
   groupRkfMonoVariants,
   type RkfCalendarGroup,
 } from './showCalendarGroup'
+import { classifyShowScope, type ShowExhibitionScope } from '../../lib/showTypes'
 
 export function parseShowDate(dateStr: string): Date | null {
   if (!dateStr) return null
@@ -131,6 +132,7 @@ export function filterShowCalendarGroups(
     filterBreed?: string
     allowedExhibitionIds?: Set<number> | null
     filterCity?: string
+    filterScope?: 'all' | ShowExhibitionScope
     filterLcOnly: boolean
     searchQuery: string
     quickPreset: 'upcoming30' | null
@@ -184,8 +186,20 @@ export function filterShowCalendarGroups(
     cityFiltered = breedFiltered.filter((ex) => exhibitionMatchesCity(ex, opts.filterCity!))
   }
 
-  const baseFiltered = opts.filterLcOnly ? cityFiltered.filter(exhibitionHasProtocol) : cityFiltered
-  const groups = groupRkfMonoVariants(baseFiltered)
+  let scopeFiltered = cityFiltered
+  if (opts.filterScope && opts.filterScope !== 'all') {
+    scopeFiltered = cityFiltered.filter((ex) => {
+      const scopeInfo = classifyShowScope(ex)
+      if (opts.filterScope === 'mono') return scopeInfo.isMono
+      if (opts.filterScope === 'all_breed') return scopeInfo.isAllBreed
+      if (opts.filterScope === 'specialty') return scopeInfo.isSpecialty
+      return true
+    })
+  }
+
+  const baseFiltered = opts.filterLcOnly ? scopeFiltered.filter(exhibitionHasProtocol) : scopeFiltered
+  const preferMono = opts.filterScope === 'mono' || Boolean(opts.filterBreed)
+  const groups = groupRkfMonoVariants(baseFiltered, preferMono)
   return groups.filter((group) => {
     if (opts.filterLcOnly && !group.hasProtocol) return false
     if (upcomingRange) {

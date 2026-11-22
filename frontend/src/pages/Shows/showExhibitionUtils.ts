@@ -99,6 +99,10 @@ const CLASS_NAMES_RU: Record<string, string> = {
   'champion class': 'Класс чемпионов',
   'veteran class': 'Класс ветеранов',
   'breeding class': 'Разводящий класс',
+  'winners class': 'Класс победителей',
+  'winner class': 'Класс победителей',
+  'club champion class': 'Класс чемпионов НКП',
+  'nkp champion class': 'Класс чемпионов НКП',
 }
 
 export function extractRingNumber(row: ShowResultRow): number {
@@ -151,11 +155,15 @@ export function normalizeShowResults(rows: ShowResultRow[]): ShowResultRow[] {
 
 export function localizeShowClass(classText: string): string {
   if (!classText) return '—'
-  if (CYRILLIC_RE.test(classText)) return classText
-  const match = classText.match(/^(\d+)\s+(.+)$/i)
-  if (!match) return classText
-  const ru = CLASS_NAMES_RU[match[2].toLowerCase()]
-  return ru ? `${match[1]} ${ru}` : classText
+  const trimmed = classText.trim()
+  if (/чемпион.*нкп/i.test(trimmed)) return 'Класс чемпионов НКП'
+  if (/победител/i.test(trimmed)) return 'Класс победителей'
+  if (CYRILLIC_RE.test(trimmed)) return trimmed
+  const match = trimmed.match(/^(\d+)?\s*(.+)$/i)
+  if (!match) return trimmed
+  const key = (match[2] || '').toLowerCase()
+  const ru = CLASS_NAMES_RU[key]
+  return ru ? (match[1] ? `${match[1]} ${ru}` : ru) : trimmed
 }
 
 export function resultsForBreed(
@@ -242,6 +250,7 @@ export function buildGroupMap(catalog: BreedCatalogRow[]): Map<string, BreedCata
 
 /** Есть ли реальные группы FCI (иначе «Прочие породы» — лишняя обёртка). */
 export function catalogHasFciGroups(catalog: BreedCatalogRow[]): boolean {
+  if (catalog.length <= 1) return false
   return catalog.some((row) => Boolean(row.breed_group?.trim()))
 }
 
