@@ -187,6 +187,7 @@ export default function DogProfile() {
         <div ref={data.exportRef}>
           <DogProfileHeader
             dog={data.headerDog}
+            passportData={data.passportData}
             supremeTitles={data.titleGroups.supreme}
             showTitles={data.titleGroups.show}
             competitionTitles={data.titleGroups.competition}

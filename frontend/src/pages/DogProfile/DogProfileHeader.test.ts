@@ -44,6 +44,16 @@ describe('DogProfileHeader Lightbox mobile & iOS Safari invariants', () => {
     expect(source).toContain('navigator.clipboard')
     expect(source).toContain('min-h-[36px]')
   })
+
+  it('guarantees dog passport button and modal integration', () => {
+    const filePath = path.resolve(__dirname, 'DogProfileHeader.tsx')
+    const source = fs.readFileSync(filePath, 'utf-8')
+
+    expect(source).toContain('DogPassportModal')
+    expect(source).toContain('passportData')
+    expect(source).toContain('setIsPassportOpen')
+    expect(source).toContain('Паспорт')
+  })
 })
 
 describe('Dog Profile Navigation Tabs & Achievements Tab invariants', () => {

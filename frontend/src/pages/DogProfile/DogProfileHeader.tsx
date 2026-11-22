@@ -9,7 +9,10 @@ import {
   ArrowUpRight,
   Share2,
   Check,
+  FileText,
 } from 'lucide-react'
+import { DogPassportModal } from './components/Passport/DogPassportModal'
+import type { DogPassportData } from './components/Passport/passportTypes'
 import OwnerCrownName from '../../components/OwnerCrownName'
 import DogSexIcon from '../../components/DogSexIcon'
 import { isCertificateToken, type DogTitle } from '../../lib/qualificationTitles'
@@ -42,6 +45,7 @@ export type ProfileHeaderRank = {
 type DogProfileHeaderProps = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   dog: any
+  passportData?: DogPassportData
   showTitles: DogTitle[]
   competitionTitles: DogTitle[]
   supremeTitles?: DogTitle[]
@@ -62,6 +66,7 @@ type DogProfileHeaderProps = {
 
 export function DogProfileHeader({
   dog,
+  passportData,
   showTitles,
   competitionTitles,
   supremeTitles,
@@ -91,6 +96,7 @@ export function DogProfileHeader({
   const favorite = isFavorite(dogId)
   const [isPhotoOpen, setIsPhotoOpen] = useState(false)
   const [copied, setCopied] = useState(false)
+  const [isPassportOpen, setIsPassportOpen] = useState(false)
 
   const handleShare = async () => {
     const url = typeof window !== 'undefined' ? window.location.href : ''
@@ -183,6 +189,20 @@ export function DogProfileHeader({
         <img src={TELEGRAM_FAVICON} alt="" width={14} height={14} className="h-3.5 w-3.5 shrink-0 rounded-full" />
         <span className="truncate">Отслеживать</span>
       </a>
+      {passportData && (
+        <button
+          type="button"
+          onClick={() => setIsPassportOpen(true)}
+          className={`inline-flex items-center justify-center gap-1 sm:gap-1.5 rounded-xl border border-old-money-200/90 bg-cream-50/60 px-1.5 sm:px-3.5 py-1.5 text-[11px] sm:text-xs font-semibold text-charcoal-700 hover:bg-cream-100 hover:text-charcoal-900 transition-all min-h-[36px] cursor-pointer ${
+            isMobileGrid ? 'w-full' : ''
+          }`}
+          aria-label="Паспорт собаки"
+          title="Открыть паспорт собаки для сохранения и публикации"
+        >
+          <FileText className="h-3.5 w-3.5 shrink-0 text-[#8C6D37]" aria-hidden />
+          <span className="truncate">Паспорт</span>
+        </button>
+      )}
       <button
         type="button"
         onClick={handleShare}
@@ -316,8 +336,8 @@ export function DogProfileHeader({
               </div>
             </div>
 
-            {/* На смартфонах: все 3 кнопки действий в один ровный аккуратный ряд во всю ширину */}
-            <div className="sm:hidden grid grid-cols-3 gap-1.5 sm:gap-2 w-full pt-1">
+            {/* На смартфонах: кнопки действий аккуратной сеткой 2x2 во всю ширину */}
+            <div className="sm:hidden grid grid-cols-2 gap-1.5 sm:gap-2 w-full pt-1">
               {renderActionButtons(true)}
             </div>
 
@@ -410,6 +430,14 @@ export function DogProfileHeader({
           </div>
         </div>,
         document.body
+      )}
+
+      {isPassportOpen && passportData && (
+        <DogPassportModal
+          isOpen={isPassportOpen}
+          onClose={() => setIsPassportOpen(false)}
+          data={passportData}
+        />
       )}
     </div>
   )

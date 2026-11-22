@@ -27,6 +27,7 @@ import { useDogProfileSeo } from './useDogProfileSeo'
 import { useDogProfileShowResolver } from './useDogProfileShowResolver'
 import { useDogProfileTabs } from './useDogProfileTabs'
 import { useDogProfileExport } from './useDogProfileExport'
+import { buildDogPassportData } from './components/Passport/useDogPassportData'
 import { isShowOnlyProfileId } from '../../lib/showDogProfilePath'
 import { resolveBreedParam } from '../../lib/breedMapping'
 
@@ -283,6 +284,23 @@ export function useDogProfileData() {
   const bestSpeedEventId = racing.best_speed_event_id || null
   const avgSpeedEventId = racing.avg_speed_event_id || null
 
+  const passportData = useMemo(() => {
+    return buildDogPassportData({
+      dog: headerDog,
+      showDog,
+      supremeTitles: titleGroups.supreme,
+      competitionTitles: titleGroups.competition,
+      coursingTitles: titleGroups.coursing,
+      racingTitles: titleGroups.racing,
+      showTitles: titleGroups.show,
+      coursing,
+      racing,
+      speedStats,
+      coursingStats,
+      ranks: headerRanks,
+    })
+  }, [headerDog, showDog, titleGroups, coursing, racing, speedStats, coursingStats, headerRanks])
+
   const {
     dogName,
     displayName,
@@ -395,5 +413,6 @@ export function useDogProfileData() {
     keywords,
     alternateNames,
     fallbackSportDogId,
+    passportData,
   }
 }
