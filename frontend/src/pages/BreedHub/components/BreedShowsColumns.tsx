@@ -145,7 +145,10 @@ export default function BreedShowsColumns({
   const gridClass = hasShowsCac && hasShowsMono ? 'lg:grid-cols-2' : 'lg:grid-cols-1'
 
   return (
-    <div>
+    <div
+      id="shows"
+      className="rounded-2xl border border-[rgba(195,168,128,0.70)] bg-white shadow-2xs overflow-hidden scroll-mt-24 md:scroll-mt-28"
+    >
       {/* ================= ДЕСКТОПНЫЙ ВИД (>= 1024px): 2 широкие колонки (САС | Моно) ================= */}
       <div className="hidden lg:block w-full">
         {/* Шапка таблицы: 2 плашки дисциплин */}

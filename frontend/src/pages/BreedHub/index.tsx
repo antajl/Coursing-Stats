@@ -30,8 +30,8 @@ import { matchesBreedFilter } from '../../lib/breedMapping'
 import { getBreedArchiveUrl } from '../../lib/breedArchive'
 import DoninoColumnPlaque, { DoninoColumnShell } from '../SpeedRecords/DoninoColumnPlaque'
 import BreedHubColumns, { type SpeedRecordItem } from './BreedHubColumns'
-import { BreedShowsSection } from './components/BreedShowsSection'
-import { BreedHubJumpBar } from './components/BreedHubJumpBar'
+import BreedShowsColumns from './components/BreedShowsColumns'
+import { BreedHallOfFame, type SportAllTimeDog, type RacingAllTimeDog } from './components/BreedHallOfFame'
 
 interface TopPlacementItem {
   dog_id: number
@@ -101,6 +101,63 @@ export default function BreedHub() {
     if (!slug || !annualLeadersRes?.data?.shows_all_time_by_slug) return []
     return (annualLeadersRes.data.shows_all_time_by_slug[slug] || []) as ShowAllTimeDog[]
   }, [slug, annualLeadersRes])
+
+  const showsMonoAllTimeTop = useMemo(() => {
+    if (slug && annualLeadersRes?.data?.shows_mono_all_time_by_slug?.[slug]) {
+      return annualLeadersRes.data.shows_mono_all_time_by_slug[slug] as ShowAllTimeDog[]
+    }
+    // Fallback: derive from showsAllTimeTop if indexed mono list is not yet in client cache
+    if (!showsAllTimeTop || showsAllTimeTop.length === 0) return []
+    const monoFiltered = showsAllTimeTop
+      .filter((d) => {
+        const t = d.titles
+        if (!t) return false
+        return Boolean(
+          t.P_RUSSIA || t.P_MOSCOW || t.VP_RUSSIA || t.VP_MOSCOW ||
+          t.KCHK || t.VKCHK || t.YKCHK || t.SS || t.VSS || t.YSS
+        )
+      })
+      .sort((a, b) => {
+        const calc = (d: ShowAllTimeDog) => {
+          const t = d.titles || {}
+          return (
+            ((t.P_RUSSIA || 0) + (t.P_MOSCOW || 0) + (t.VP_RUSSIA || 0) + (t.VP_MOSCOW || 0)) * 5000 +
+            ((t.KCHK || 0) + (t.VKCHK || 0) + (t.YKCHK || 0)) * 1000 +
+            ((t.SS || 0) + (t.VSS || 0) + (t.YSS || 0)) * 300
+          )
+        }
+        return calc(b) - calc(a)
+      })
+    return monoFiltered.slice(0, 5)
+  }, [slug, annualLeadersRes, showsAllTimeTop])
+
+  const sportCoursingAllTime = useMemo(() => {
+    if (!breedInfo || !topPlacementAllRes?.data?.items) return []
+    const matching = (topPlacementAllRes.data.items as TopPlacementItem[]).filter((d) =>
+      matchesBreedFilter(d.breed, breedInfo.canonicalKey),
+    )
+    const sorted = [...matching].sort((a, b) => {
+      const g = (b.gold || 0) - (a.gold || 0)
+      if (g !== 0) return g
+      const s = (b.silver || 0) - (a.silver || 0)
+      if (s !== 0) return s
+      const br = (b.bronze || 0) - (a.bronze || 0)
+      if (br !== 0) return br
+      return (b.total_starts || 0) - (a.total_starts || 0)
+    })
+    return sorted.slice(0, 5) as SportAllTimeDog[]
+  }, [breedInfo, topPlacementAllRes])
+
+  const sportRacingAllTime = useMemo(() => {
+    if (!breedInfo || !topSpeedAllRes?.data?.items) return []
+    const matching = (topSpeedAllRes.data.items as any[]).filter((d) =>
+      matchesBreedFilter(d.breed, breedInfo.canonicalKey),
+    )
+    const sorted = [...matching].sort(
+      (a, b) => (Number(b.best_speed) || 0) - (Number(a.best_speed) || 0),
+    )
+    return sorted.slice(0, 5) as RacingAllTimeDog[]
+  }, [breedInfo, topSpeedAllRes])
 
   const showsStats = useMemo(() => {
     if (!slug || !annualLeadersRes?.data?.shows_stats_by_slug) return null
@@ -509,15 +566,19 @@ export default function BreedHub() {
         </div>
       </div>
 
-      {/* Панель быстрой навигации (Sticky Jump Bar) */}
-      <BreedHubJumpBar
-        hasSport={Boolean(coursingLeaders.length || racingLeaders.length || doninoAnnualLeaders.length)}
-        hasShows={Boolean(showsCacLeaders.length || showsMonoLeaders.length || showsAllTimeTop.length)}
-        hasHallOfFame={showsAllTimeTop.length > 0}
-        hasFaq={breedInfo.faqs.length > 0}
+      {/* 1. Зал славы породы: Топ-5 собак всех времён (Спорт слева | Выставки справа) */}
+      <BreedHallOfFame
+        breedNameRu={breedInfo.nameRu}
+        breedSlug={breedInfo.slug}
+        canonicalKey={breedInfo.canonicalKey}
+        sportCoursingDogs={sportCoursingAllTime}
+        sportRacingDogs={sportRacingAllTime}
+        showsAllBreedDogs={showsAllTimeTop}
+        showsMonoDogs={showsMonoAllTimeTop}
+        isLoading={placementAllLoading || speedAllLoading || annualLeadersLoading}
       />
 
-      {/* 1. Блок спортивных дисциплин и рекордов скорости: на десктопе 3 параллельные колонки (Курсинг | Рейсинг | Донино), на мобильном свайп жестами */}
+      {/* 2. Блок спортивных дисциплин и рекордов скорости: на десктопе 3 параллельные колонки (Курсинг | Рейсинг | Донино), на мобильном свайп жестами */}
       <BreedHubColumns
         coursingLeaders={coursingLeaders}
         racingLeaders={racingLeaders}
@@ -531,16 +592,14 @@ export default function BreedHub() {
         breedSlug={breedInfo.slug}
       />
 
-      {/* 2. Блок выставок РКФ и монопородных смотров НКП: на десктопе 2 широкие колонки (САС | Моно), Зал славы и племенной смотр НКП */}
-      <BreedShowsSection
-        breedNameRu={breedInfo.nameRu}
-        breedSlug={breedInfo.slug}
-        canonicalKey={breedInfo.canonicalKey}
+      {/* 3. Блок выставок РКФ по годам: на десктопе 2 широкие колонки (Шоу САС | Моно НКП) */}
+      <BreedShowsColumns
         showsCacLeaders={showsCacLeaders}
         showsMonoLeaders={showsMonoLeaders}
-        allTimeDogs={showsAllTimeTop}
-        showStats={showsStats}
-        isLoading={annualLeadersLoading}
+        annualLeadersLoading={annualLeadersLoading}
+        canonicalKey={breedInfo.canonicalKey}
+        breedNameRu={breedInfo.nameRu}
+        breedSlug={breedInfo.slug}
       />
 
       {/* Частые вопросы о породе в спорте */}

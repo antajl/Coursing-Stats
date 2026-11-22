@@ -168,6 +168,7 @@ export interface BreedAnnualLeadersData {
   shows_cac_by_slug?: Record<string, AnnualShowDogLeader[]>;
   shows_mono_by_slug?: Record<string, AnnualShowDogLeader[]>;
   shows_all_time_by_slug?: Record<string, ShowAllTimeDog[]>;
+  shows_mono_all_time_by_slug?: Record<string, ShowAllTimeDog[]>;
   shows_stats_by_slug?: Record<string, BreedShowStats>;
 }
 
