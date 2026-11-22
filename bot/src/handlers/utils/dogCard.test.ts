@@ -93,7 +93,7 @@ describe('formatDogCard', () => {
         title_counts: { BIS: 1, BIG: 1, BOB: 5, CAC: 7, CHRKF: 1 },
       },
     });
-    expect(text).toContain('BIS, BIG, ЛПП ×5, CAC ×7, ЧРКФ');
+    expect(text).toContain('BIS, BIG, BOB ×5, CAC ×7, ЧРКФ');
   });
 
   it('does not dump competition history', () => {
