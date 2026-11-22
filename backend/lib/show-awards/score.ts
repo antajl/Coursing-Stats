@@ -100,11 +100,45 @@ export const SHOW_CAC_AWARD_WEIGHTS: Record<ShowAwardKey, number> = {
   VSS: 0,
 }
 
+export type ShowMonoAgeCategory = 'all' | 'adult' | 'junior' | 'veteran'
+
+export const SHOW_MONO_ADULT_KEYS: ShowAwardKey[] = ['KCHP', 'KCHK', 'SS']
+export const SHOW_MONO_JUNIOR_KEYS: ShowAwardKey[] = ['YKCHP', 'YKCHK', 'YSS']
+export const SHOW_MONO_VETERAN_KEYS: ShowAwardKey[] = ['VKCHP', 'VKCHK', 'VSS']
+
 export function showMonoRankScore(titles: ShowTitleCounts): number {
   return SHOW_AWARD_ORDER.reduce(
     (sum, key) => sum + (titles[key] || 0) * (SHOW_MONO_AWARD_WEIGHTS[key] || 0),
     0,
   )
+}
+
+export function showMonoRankScoreForCategory(
+  titles: ShowTitleCounts,
+  category: ShowMonoAgeCategory = 'all',
+): number {
+  if (category === 'junior') {
+    return (
+      (titles.YKCHP || 0) * (SHOW_MONO_AWARD_WEIGHTS.YKCHP || 0) +
+      (titles.YKCHK || 0) * (SHOW_MONO_AWARD_WEIGHTS.YKCHK || 0) +
+      (titles.YSS || 0) * (SHOW_MONO_AWARD_WEIGHTS.YSS || 0)
+    )
+  }
+  if (category === 'veteran') {
+    return (
+      (titles.VKCHP || 0) * (SHOW_MONO_AWARD_WEIGHTS.VKCHP || 0) +
+      (titles.VKCHK || 0) * (SHOW_MONO_AWARD_WEIGHTS.VKCHK || 0) +
+      (titles.VSS || 0) * (SHOW_MONO_AWARD_WEIGHTS.VSS || 0)
+    )
+  }
+  if (category === 'adult') {
+    return (
+      (titles.KCHP || 0) * (SHOW_MONO_AWARD_WEIGHTS.KCHP || 0) +
+      (titles.KCHK || 0) * (SHOW_MONO_AWARD_WEIGHTS.KCHK || 0) +
+      (titles.SS || 0) * (SHOW_MONO_AWARD_WEIGHTS.SS || 0)
+    )
+  }
+  return showMonoRankScore(titles)
 }
 
 export function showCacRankScore(titles: ShowTitleCounts): number {
@@ -117,26 +151,22 @@ export function showCacRankScore(titles: ShowTitleCounts): number {
 export function compareShowDogsMono(
   a: { rank_score?: number; titles: ShowTitleCounts; total_shows: number },
   b: { rank_score?: number; titles: ShowTitleCounts; total_shows: number },
+  category: ShowMonoAgeCategory = 'all',
 ): number {
-  const scoreA = showMonoRankScore(a.titles)
-  const scoreB = showMonoRankScore(b.titles)
+  const scoreA = showMonoRankScoreForCategory(a.titles, category)
+  const scoreB = showMonoRankScoreForCategory(b.titles, category)
   if (scoreB !== scoreA) return scoreB - scoreA
 
-  const monoTieBreakKeys: ShowAwardKey[] = [
-    'KCHP',
-    'BOB',
-    'BOS',
-    'KCHK',
-    'YKCHP',
-    'YKCHK',
-    'VKCHP',
-    'VKCHK',
-    'CW',
-    'SS',
-    'YSS',
-    'VSS',
-  ]
-  for (const key of monoTieBreakKeys) {
+  const tieBreakKeys =
+    category === 'junior'
+      ? SHOW_MONO_JUNIOR_KEYS
+      : category === 'veteran'
+        ? SHOW_MONO_VETERAN_KEYS
+        : category === 'adult'
+          ? SHOW_MONO_ADULT_KEYS
+          : SHOW_MONO_AWARD_ORDER
+
+  for (const key of tieBreakKeys) {
     const diff = (b.titles[key] || 0) - (a.titles[key] || 0)
     if (diff !== 0) return diff
   }
@@ -193,8 +223,20 @@ export const SHOW_MONO_AWARD_ORDER: ShowAwardKey[] = [
 ]
 
 /** Лучшая награда по иерархии монопородного рейтинга НКП. */
-export function bestShowMonoAward(titles: ShowTitleCounts): ShowAwardKey | null {
-  for (const key of SHOW_MONO_AWARD_ORDER) {
+export function bestShowMonoAward(
+  titles: ShowTitleCounts,
+  category: ShowMonoAgeCategory = 'all',
+): ShowAwardKey | null {
+  const order =
+    category === 'junior'
+      ? SHOW_MONO_JUNIOR_KEYS
+      : category === 'veteran'
+        ? SHOW_MONO_VETERAN_KEYS
+        : category === 'adult'
+          ? SHOW_MONO_ADULT_KEYS
+          : SHOW_MONO_AWARD_ORDER
+
+  for (const key of order) {
     if ((titles[key] || 0) > 0) return key
   }
   return null

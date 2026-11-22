@@ -33,11 +33,12 @@ describe('matchShowAwardToken', () => {
     expect(matchShowAwardToken('BEST IN SHOW PUPPY')).toBe('BIS_PUPPY')
   })
 
-  it('uses Russian badges for BOB/BOS', async () => {
+  it('uses uniform international badges for BOB/BOS and BIS Junior', async () => {
     const { SHOW_AWARD_BADGE, displayShowAwardToken } = await import('../lib/show-award-ranking')
-    expect(SHOW_AWARD_BADGE.BOB).toBe('ЛПП')
-    expect(SHOW_AWARD_BADGE.BOS).toBe('ЛППП')
-    expect(displayShowAwardToken('BOB/ЛПП')).toBe('ЛПП')
+    expect(SHOW_AWARD_BADGE.BOB).toBe('BOB')
+    expect(SHOW_AWARD_BADGE.BOS).toBe('BOS')
+    expect(SHOW_AWARD_BADGE.BIS_JUNIOR).toBe('BIS-J')
+    expect(displayShowAwardToken('BOB/ЛПП')).toBe('BOB')
   })
 
   it('accepts Latin and Cyrillic CAC family (and mixed)', () => {

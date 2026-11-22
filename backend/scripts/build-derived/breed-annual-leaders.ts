@@ -187,6 +187,7 @@ export function buildBreedAnnualLeaders(dbInput?: Database.Database): {
   const showsCacBySlug: Record<string, AnnualShowDogLeader[]> = {};
   const showsMonoBySlug: Record<string, AnnualShowDogLeader[]> = {};
   const showsAllTimeBySlug: Record<string, ShowAllTimeDog[]> = {};
+  const showsMonoAllTimeBySlug: Record<string, ShowAllTimeDog[]> = {};
   const showsStatsBySlug: Record<string, BreedShowStats> = {};
 
   for (const hub of CORE_BREED_HUBS) {
@@ -196,6 +197,7 @@ export function buildBreedAnnualLeaders(dbInput?: Database.Database): {
     showsCacBySlug[hub.slug] = [];
     showsMonoBySlug[hub.slug] = [];
     showsAllTimeBySlug[hub.slug] = [];
+    showsMonoAllTimeBySlug[hub.slug] = [];
     showsStatsBySlug[hub.slug] = {
       total_dogs: 0,
       total_shows: 0,
@@ -414,6 +416,25 @@ export function buildBreedAnnualLeaders(dbInput?: Database.Database): {
       competition_dog_id: d.competition_dog_id != null ? Number(d.competition_dog_id) : null,
     }));
 
+    const monoMatchingAllTime = matchingAllTime
+      .map((d) => ({ ...d, mono_score: calcMonoScore(d.titles) }))
+      .filter((d) => (d.mono_score || 0) > 0)
+      .sort((a, b) => (b.mono_score || 0) - (a.mono_score || 0));
+
+    showsMonoAllTimeBySlug[hub.slug] = monoMatchingAllTime.slice(0, 5).map((d, idx) => ({
+      rank: idx + 1,
+      dog_id: String(d.id),
+      name_lat: d.name_lat,
+      name_ru: d.name_ru || null,
+      sex: d.sex || null,
+      total_shows: Number(d.total_shows) || 0,
+      rank_score: Number(d.rank_score) || 0,
+      mono_score: Number(d.mono_score) || 0,
+      best_award: d.best_award || null,
+      titles: d.titles || {},
+      competition_dog_id: d.competition_dog_id != null ? Number(d.competition_dog_id) : null,
+    }));
+
     let totalShows = 0;
     let totalBis = 0;
     let totalBig = 0;
@@ -470,6 +491,7 @@ export function buildBreedAnnualLeaders(dbInput?: Database.Database): {
     shows_cac_by_slug: showsCacBySlug,
     shows_mono_by_slug: showsMonoBySlug,
     shows_all_time_by_slug: showsAllTimeBySlug,
+    shows_mono_all_time_by_slug: showsMonoAllTimeBySlug,
     shows_stats_by_slug: showsStatsBySlug,
   };
 

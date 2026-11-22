@@ -98,7 +98,7 @@ describe('groupMainRing — merging split fragments and deduplication', () => {
     const bisBabyTab = tabs.find((t) => t.id === 'BIS_BABY:')
     expect(bisBabyTab).toBeDefined()
     expect(bisBabyTab?.label).toBe('ЛУЧШИЙ БЕБИ / BEST IN SHOW BABY')
-    expect(bisBabyTab?.shortLabel).toBe('BIS-Б')
+    expect(bisBabyTab?.shortLabel).toBe('BIS-B')
     // Deduplicated DOG A
     expect(bisBabyTab?.rows).toHaveLength(2)
     expect(bisBabyTab?.rows.map((r) => r.place)).toEqual([1, 2])

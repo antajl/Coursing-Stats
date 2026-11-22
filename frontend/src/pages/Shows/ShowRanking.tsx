@@ -7,6 +7,8 @@ import {
   compareShowDogs,
   compareShowDogsMono,
   showMonoRankScore,
+  showMonoRankScoreForCategory,
+  type ShowMonoAgeCategory,
 } from '../../../../backend/lib/show-award-ranking'
 import ShowRankingFilters from './ShowRankingFilters'
 import ShowRankingColumns, { type RankedShowDog } from './ShowRankingColumns'
@@ -107,6 +109,10 @@ export default function ShowRanking({ urlYear }: ShowRankingProps = {}) {
 
   const [filterBreed, setFilterBreed] = useState(() => resolveBreedParam(searchParams.get('breed')))
   const [filterSex, setFilterSex] = useState(() => searchParams.get('sex') || '')
+  const [monoAgeCategory, setMonoAgeCategory] = useState<ShowMonoAgeCategory>(() => {
+    const ageParam = searchParams.get('mono_age')
+    return ageParam === 'adult' || ageParam === 'junior' || ageParam === 'veteran' ? ageParam : 'all'
+  })
   const [selectedMobileColumn, setSelectedMobileColumn] = useState<'general' | 'mono' | null>(() => {
     const colParam = searchParams.get('scope') || searchParams.get('col')
     return colParam === 'mono' || colParam === 'general' ? colParam : null
@@ -117,6 +123,12 @@ export default function ShowRanking({ urlYear }: ShowRankingProps = {}) {
     if (colParam === 'mono' || colParam === 'general') {
       setSelectedMobileColumn(colParam)
     }
+  }, [searchParams])
+
+  useEffect(() => {
+    const ageParam = searchParams.get('mono_age')
+    const target = ageParam === 'adult' || ageParam === 'junior' || ageParam === 'veteran' ? ageParam : 'all'
+    setMonoAgeCategory((prev) => (prev !== target ? target : prev))
   }, [searchParams])
 
   const [allowFullLoad, setAllowFullLoad] = useState(false)
@@ -154,6 +166,7 @@ export default function ShowRanking({ urlYear }: ShowRankingProps = {}) {
       Boolean(searchQuery.trim()) ||
       Boolean(filterBreed) ||
       Boolean(filterSex) ||
+      monoAgeCategory !== 'all' ||
       selectedMobileColumn === 'mono'
 
     if (hasActiveFilters || page0Failed) {
@@ -179,7 +192,7 @@ export default function ShowRanking({ urlYear }: ShowRankingProps = {}) {
         window.cancelIdleCallback(idleId)
       }
     }
-  }, [rankingYear, isPage0Fetched, isPage0Error, page0Failed, searchQuery, filterBreed, filterSex, selectedMobileColumn])
+  }, [rankingYear, isPage0Fetched, isPage0Error, page0Failed, searchQuery, filterBreed, filterSex, monoAgeCategory, selectedMobileColumn])
 
   const {
     data: rankingData,
@@ -230,6 +243,16 @@ export default function ShowRanking({ urlYear }: ShowRankingProps = {}) {
           changed = true
         }
 
+        // Mono age category
+        const currentMonoAge = next.get('mono_age') || 'all'
+        if (monoAgeCategory !== 'all' && currentMonoAge !== monoAgeCategory) {
+          next.set('mono_age', monoAgeCategory)
+          changed = true
+        } else if (monoAgeCategory === 'all' && currentMonoAge !== 'all') {
+          next.delete('mono_age')
+          changed = true
+        }
+
         // Breed
         const targetBreedSlug = breedToSlug(filterBreed)
         const currentBreed = next.get('breed') || ''
@@ -266,7 +289,7 @@ export default function ShowRanking({ urlYear }: ShowRankingProps = {}) {
       },
       { replace: true },
     )
-  }, [selectedMobileColumn, filterBreed, filterSex, searchQuery, setSearchParams, location.pathname])
+  }, [selectedMobileColumn, monoAgeCategory, filterBreed, filterSex, searchQuery, setSearchParams, location.pathname])
 
   // Respond to browser back/forward navigation
   useEffect(() => {
@@ -333,17 +356,17 @@ export default function ShowRanking({ urlYear }: ShowRankingProps = {}) {
       .map((dog, i) => ({ ...dog, rank: i + 1 }))
   }, [allDogs])
 
-  // 2. Монопородный рейтинг НКП (без всепородных BIG/BIS)
+  // 2. Монопородный рейтинг НКП (без всепородных BIG/BIS) с поддержкой возрастных лиг
   const rankedMonoDogs = useMemo<RankedShowDog[]>(() => {
     return allDogs
       .map((dog) => ({
         ...dog,
-        rank_score: showMonoRankScore(dog.titles),
+        rank_score: showMonoRankScoreForCategory(dog.titles, monoAgeCategory),
       }))
       .filter((dog) => (dog.rank_score ?? 0) > 0)
-      .sort(compareShowDogsMono)
+      .sort((a, b) => compareShowDogsMono(a, b, monoAgeCategory))
       .map((dog, i) => ({ ...dog, rank: i + 1 }))
-  }, [allDogs])
+  }, [allDogs, monoAgeCategory])
 
   const filteredGeneralDogs = useMemo(
     () => filterShowDogs(rankedGeneralDogs, filterBreed, filterSex, debouncedSearchQuery),
@@ -436,6 +459,8 @@ export default function ShowRanking({ urlYear }: ShowRankingProps = {}) {
           monoDogs={displayedMonoDogs}
           filterYear={rankingYear}
           filterBreed={filterBreed}
+          monoAgeCategory={monoAgeCategory}
+          onMonoAgeCategoryChange={setMonoAgeCategory}
           favorites={favorites}
           onToggleFavorite={(dogId, meta) => {
             void toggleFavorite(dogId, meta).catch((error) => {

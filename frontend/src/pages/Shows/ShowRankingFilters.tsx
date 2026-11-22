@@ -11,6 +11,7 @@ import type { DogsIndexEntry } from '../../lib/competingBreeds'
 import BreedSearchDropdown from '../../components/ui/BreedSearchDropdown'
 import { formatBreedName } from '../../lib/breedMapping'
 import { toolbarPillTriggerClass } from '../../lib/toolbar'
+import type { ShowMonoAgeCategory } from '../../../../backend/lib/show-award-ranking'
 
 interface ShowRankingFiltersProps {
   searchQuery: string
@@ -24,6 +25,8 @@ interface ShowRankingFiltersProps {
   breedValues: string[]
   filterSex?: string
   onSexChange: (value: string) => void
+  filterAge?: ShowMonoAgeCategory
+  onAgeChange?: (age: ShowMonoAgeCategory) => void
   dogIndex?: DogsIndexEntry[]
   onResetFilters?: () => void
   trailing?: ReactNode
@@ -42,6 +45,8 @@ export default function ShowRankingFilters({
   breedValues,
   filterSex = '',
   onSexChange,
+  filterAge = 'all',
+  onAgeChange,
   dogIndex,
   onResetFilters: _onResetFilters,
   trailing,
@@ -50,11 +55,22 @@ export default function ShowRankingFilters({
   const [mobileYearDropdownOpen, setMobileYearDropdownOpen] = useState(false)
   const [mobileSexOpen, setMobileSexOpen] = useState(false)
   const [desktopSexOpen, setDesktopSexOpen] = useState(false)
+  const [mobileAgeOpen, setMobileAgeOpen] = useState(false)
+  const [desktopAgeOpen, setDesktopAgeOpen] = useState(false)
 
   const isYearNonDefault = filterYear !== currentSeason && Boolean(filterYear)
   const isSexActive = Boolean(filterSex)
+  const isAgeActive = Boolean(filterAge && filterAge !== 'all')
 
   const sexTriggerLabel = filterSex === 'm' ? 'Кобели' : filterSex === 'f' ? 'Суки' : 'Пол'
+  const ageTriggerLabel =
+    filterAge === 'adult'
+      ? 'Взрослые'
+      : filterAge === 'junior'
+        ? 'Юниоры'
+        : filterAge === 'veteran'
+          ? 'Ветераны'
+          : 'Возраст'
 
   const sexTrigger = (
     <button
@@ -66,6 +82,47 @@ export default function ShowRankingFilters({
       <span>{sexTriggerLabel}</span>
       <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
     </button>
+  )
+
+  const ageTrigger = (
+    <button
+      type="button"
+      className={`shrink-0 ${toolbarPillTriggerClass(isAgeActive)}`}
+    >
+      <span>{ageTriggerLabel}</span>
+      <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
+    </button>
+  )
+
+  const renderAgeMenu = (setOpen: (v: boolean) => void) => (
+    <div className="p-1 min-w-[135px]" role="menu">
+      {[
+        { key: 'all', label: 'Все' },
+        { key: 'adult', label: 'Взрослые' },
+        { key: 'junior', label: 'Юниоры' },
+        { key: 'veteran', label: 'Ветераны' },
+      ].map((item) => {
+        const isSelected = (!filterAge && item.key === 'all') || filterAge === item.key
+        return (
+          <button
+            key={item.key}
+            type="button"
+            role="menuitem"
+            onClick={() => {
+              onAgeChange?.(item.key as ShowMonoAgeCategory)
+              setOpen(false)
+            }}
+            className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
+              isSelected
+                ? 'bg-camel-100 text-camel-950 font-semibold'
+                : 'text-charcoal-700 hover:bg-camel-100'
+            }`}
+          >
+            {item.label}
+          </button>
+        )
+      })}
+    </div>
   )
 
   const renderSexMenu = (setOpen: (v: boolean) => void) => (
@@ -159,6 +216,17 @@ export default function ShowRankingFilters({
               </div>
 
               <div className="shrink-0">
+                <ModernDropdown
+                  trigger={ageTrigger}
+                  isOpen={mobileAgeOpen}
+                  onOpenChange={setMobileAgeOpen}
+                  width="135px"
+                >
+                  {renderAgeMenu(setMobileAgeOpen)}
+                </ModernDropdown>
+              </div>
+
+              <div className="shrink-0">
                 <BreedSearchDropdown
                   breeds={breedValues}
                   selectedBreed={filterBreed}
@@ -208,6 +276,15 @@ export default function ShowRankingFilters({
                   width="130px"
                 >
                   {renderSexMenu(setDesktopSexOpen)}
+                </ModernDropdown>
+
+                <ModernDropdown
+                  trigger={ageTrigger}
+                  isOpen={desktopAgeOpen}
+                  onOpenChange={setDesktopAgeOpen}
+                  width="135px"
+                >
+                  {renderAgeMenu(setDesktopAgeOpen)}
                 </ModernDropdown>
 
                 {/* Кнопка «О рейтинге» — слева, сразу после выбора года и пола */}

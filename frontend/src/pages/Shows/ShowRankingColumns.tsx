@@ -8,14 +8,24 @@ import DoninoColumnPlaque, { DoninoColumnShell } from '../SpeedRecords/DoninoCol
 import ShowDogCard, { type ShowDogCardData } from './ShowDogCard'
 import { displayBreed } from '../../lib/breedMapping'
 import type { FavoriteDogMeta } from '../../hooks/useFavorites'
+import type { ShowMonoAgeCategory } from '../../../../backend/lib/show-award-ranking'
 
 export type RankedShowDog = ShowDogCardData & { rank: number }
+
+const MONO_AGE_OPTIONS: Array<{ key: ShowMonoAgeCategory; label: string }> = [
+  { key: 'all', label: 'Все' },
+  { key: 'adult', label: 'Взрослые' },
+  { key: 'junior', label: 'Юниоры' },
+  { key: 'veteran', label: 'Ветераны' },
+]
 
 interface ShowRankingColumnsProps {
   generalDogs: RankedShowDog[]
   monoDogs: RankedShowDog[]
   filterYear: string
   filterBreed?: string
+  monoAgeCategory?: ShowMonoAgeCategory
+  onMonoAgeCategoryChange?: (category: ShowMonoAgeCategory) => void
   favorites?: Set<string>
   onToggleFavorite?: (dogId: string, meta: FavoriteDogMeta) => void
   activeMobileColumn?: 'general' | 'mono'
@@ -32,6 +42,8 @@ export default function ShowRankingColumns({
   monoDogs,
   filterYear,
   filterBreed,
+  monoAgeCategory = 'all',
+  onMonoAgeCategoryChange,
   favorites,
   onToggleFavorite,
   activeMobileColumn: activeMobileColumnProp,
@@ -120,6 +132,7 @@ export default function ShowRankingColumns({
           rank={dog.rank}
           filterYear={filterYear}
           filterScope="mono"
+          monoAgeCategory={monoAgeCategory}
           favorites={favorites}
           onToggleFavorite={onToggleFavorite}
         />
@@ -202,6 +215,8 @@ export default function ShowRankingColumns({
               </button>
             )}
           </div>
+
+          {/* Горизонтальный свайп списков собак внутри блока */}
 
           {/* Горизонтальный свайп списков собак внутри блока */}
           <div

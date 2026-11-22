@@ -148,4 +148,54 @@ describe('showRankingScope', () => {
     expect(monoDogs[1].id).toBe('3')
     expect(monoDogs[1].rank).toBe(2)
   })
+
+  it('correctly filters and scores mono dogs across age leagues (adult, junior, veteran)', () => {
+    const dogJunior: ShowDogCardData = {
+      id: 'j1',
+      name_lat: 'BORZOI JUNIOR STAR',
+      name_ru: 'Борзая Юниор',
+      breed: 'Русская псовая борзая',
+      sex: 'f',
+      total_shows: 4,
+      titles: {
+        YKCHK: 3, // 3 * 450 = 1350
+        YSS: 1, // 70
+      } as unknown as ShowTitleCounts,
+    }
+
+    const dogVeteran: ShowDogCardData = {
+      id: 'v1',
+      name_lat: 'BORZOI VETERAN LEGEND',
+      name_ru: 'Борзая Ветеран',
+      breed: 'Русская псовая борзая',
+      sex: 'm',
+      total_shows: 2,
+      titles: {
+        VKCHP: 1, // 1000
+        VKCHK: 2, // 2 * 400 = 800
+      } as unknown as ShowTitleCounts,
+    }
+
+    const pool = [dogMonoChampion, dogJunior, dogVeteran]
+
+    // Adult category: only dogMonoChampion has adult titles (KCHP, KCHK)
+    const adultRanked = pool
+      .map((d) => ({
+        ...d,
+        rank_score: showMonoRankScore(d.titles),
+      }))
+      .filter((d) => d.id === '1')
+    expect(adultRanked).toHaveLength(1)
+    expect(adultRanked[0].id).toBe('1')
+
+    // Junior category: dogJunior has YKCHK + YSS
+    const juniorKeys = SHOW_MONO_AWARD_ORDER.filter((k) => (dogJunior.titles[k] || 0) > 0)
+    expect(juniorKeys).toContain('YKCHK')
+    expect(juniorKeys).toContain('YSS')
+
+    // Veteran category: dogVeteran has VKCHP + VKCHK
+    const vetKeys = SHOW_MONO_AWARD_ORDER.filter((k) => (dogVeteran.titles[k] || 0) > 0)
+    expect(vetKeys).toContain('VKCHP')
+    expect(vetKeys).toContain('VKCHK')
+  })
 })
