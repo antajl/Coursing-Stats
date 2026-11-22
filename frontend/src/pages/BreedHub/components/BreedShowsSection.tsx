@@ -38,7 +38,10 @@ export const BreedShowsSection = memo(function BreedShowsSection({
   const monoCount = showStats?.total_mono_exhibitions || 0
 
   return (
-    <div className="rounded-2xl border border-[rgba(195,168,128,0.70)] bg-white shadow-2xs overflow-hidden">
+    <div
+      id="shows"
+      className="rounded-2xl border border-[rgba(195,168,128,0.70)] bg-white shadow-2xs overflow-hidden scroll-mt-24 md:scroll-mt-28"
+    >
         {/* Верхняя часть: Таблица ежегодных лидеров САС и Моно НКП */}
         {hasAnnualLeaders && (
           <BreedShowsColumns
@@ -54,7 +57,7 @@ export const BreedShowsSection = memo(function BreedShowsSection({
         {/* Нижняя часть: Зал славы Топ-5 всех времён и блок НКП */}
         <div className={`${hasAnnualLeaders ? 'border-t border-[rgba(195,168,128,0.70)]' : ''} grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-old-money-100`}>
           {/* Левая колонка: Зал славы всех времён (All-Time Top-5 собак) */}
-          <div className="p-3.5 sm:p-4">
+          <div id="hall-of-fame" className="p-3.5 sm:p-4 scroll-mt-24 md:scroll-mt-28">
             <div className="flex items-center justify-between mb-2.5">
               <h3 className="text-xs sm:text-sm font-semibold text-charcoal-900 inline-flex items-center gap-1.5">
                 <Crown className="w-3.5 h-3.5 text-amber-700 shrink-0" aria-hidden />

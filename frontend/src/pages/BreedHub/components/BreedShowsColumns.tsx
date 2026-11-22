@@ -1,8 +1,8 @@
 import { useState, useEffect, useMemo } from 'react'
-import { Link } from 'react-router-dom'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { ChevronLeft, ChevronRight, ChevronDown, ChevronUp } from 'lucide-react'
 import { breedToSlug } from '../../../lib/breedMapping'
 import type { AnnualShowDogLeader } from '../../../hooks/useStaticData'
+import { formatSeasonsCount } from '../utils'
 import { useBreedHubSwipe } from './useBreedHubSwipe'
 import { BreedDisciplinePlaque } from './BreedDisciplinePlaque'
 import { DesktopShowsCacCell, DesktopShowsMonoCell } from './DesktopRowCells'
@@ -125,6 +125,19 @@ export default function BreedShowsColumns({
     return Array.from(set).sort((a, b) => b - a)
   }, [showsCacLeaders, showsMonoLeaders])
 
+  const DEFAULT_VISIBLE_SEASONS = 3
+  const [isArchiveExpanded, setIsArchiveExpanded] = useState(false)
+
+  const visibleYears = useMemo(() => {
+    if (isArchiveExpanded || allYears.length <= DEFAULT_VISIBLE_SEASONS) {
+      return allYears
+    }
+    return allYears.slice(0, DEFAULT_VISIBLE_SEASONS)
+  }, [allYears, isArchiveExpanded])
+
+  const hasMoreSeasons = allYears.length > DEFAULT_VISIBLE_SEASONS
+  const remainingSeasonsCount = allYears.length - DEFAULT_VISIBLE_SEASONS
+
   if (showsCacLeaders.length === 0 && showsMonoLeaders.length === 0 && !annualLeadersLoading) {
     return null
   }
@@ -166,7 +179,7 @@ export default function BreedShowsColumns({
           <p className="text-xs text-old-money-600 py-8 text-center">Выставочных данных пока нет.</p>
         ) : (
           <div className="divide-y divide-old-money-100">
-            {allYears.map((year) => {
+            {visibleYears.map((year) => {
               const showsCacItem = showsCacByYear.get(year)
               const showsMonoItem = showsMonoByYear.get(year)
 
@@ -264,18 +277,18 @@ export default function BreedShowsColumns({
               <div key={tab.id} className="w-full shrink-0 min-w-full">
                 {tab.id === 'shows_cac' && (
                   <MobileShowLeaderCards
-                    items={showsCacLeaders}
+                    years={visibleYears}
+                    byYear={showsCacByYear}
                     canonicalKey={canonicalKey}
-                    discipline="shows_cac"
-                    loading={annualLeadersLoading}
+                    mode="shows_cac"
                   />
                 )}
                 {tab.id === 'shows_mono' && (
                   <MobileShowLeaderCards
-                    items={showsMonoLeaders}
+                    years={visibleYears}
+                    byYear={showsMonoByYear}
                     canonicalKey={canonicalKey}
-                    discipline="shows_mono"
-                    loading={annualLeadersLoading}
+                    mode="shows_mono"
                   />
                 )}
               </div>
@@ -283,6 +296,30 @@ export default function BreedShowsColumns({
           </div>
         </div>
       </div>
+
+      {/* Кнопка раскрытия/сворачивания архива выставок (по умолчанию видны 3 сезона) */}
+      {hasMoreSeasons && (
+        <button
+          type="button"
+          onClick={() => setIsArchiveExpanded(!isArchiveExpanded)}
+          className="w-full py-2.5 px-4 bg-cream-50/70 hover:bg-cream-100/90 active:bg-cream-200/60 text-xs font-semibold text-charcoal-700 hover:text-camel-800 border-t border-[rgba(195,168,128,0.55)] transition-all flex items-center justify-center gap-1.5 cursor-pointer select-none"
+          aria-expanded={isArchiveExpanded}
+        >
+          {isArchiveExpanded ? (
+            <>
+              <span>Свернуть до последних сезонов</span>
+              <ChevronUp className="w-3.5 h-3.5 text-camel-700" aria-hidden />
+            </>
+          ) : (
+            <>
+              <span>
+                Показать весь архив с {allYears[allYears.length - 1]} года (ещё {formatSeasonsCount(remainingSeasonsCount)})
+              </span>
+              <ChevronDown className="w-3.5 h-3.5 text-camel-700" aria-hidden />
+            </>
+          )}
+        </button>
+      )}
     </div>
   )
 }
