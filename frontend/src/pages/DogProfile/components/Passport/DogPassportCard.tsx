@@ -6,6 +6,11 @@ import {
   RacingPillar,
   ShowPillar,
 } from './PassportPillars'
+import {
+  StoryCoursingCard,
+  StoryRacingCard,
+  StoryShowsCard,
+} from './StoryDisciplinePillars'
 import { DogBreedSilhouette, resolveSilhouetteBreed } from '../../../../components/DogSilhouettes'
 import { formatNameWithNonBreakingSpaces } from '../../../../lib/dogName'
 import { PassportTitlesSection } from './PassportTitlesSection'
@@ -52,9 +57,9 @@ export const DogPassportCard = forwardRef<HTMLDivElement, DogPassportCardProps>(
     }, [data.dogUrl])
 
     const renderHero = () => (
-      <div className="flex items-start gap-4">
+      <div className="flex items-start gap-3.5">
         {/* Аватар собаки */}
-        <div className="relative shrink-0 overflow-hidden rounded-xl border-2 border-[#C5B7A1] bg-[#F7F4EE] shadow-xs h-24 w-24 sm:h-28 sm:w-28 flex items-center justify-center">
+        <div className="relative shrink-0 overflow-hidden rounded-xl border-2 border-[#C5B7A1] bg-[#F7F4EE] shadow-xs h-20 w-20 flex items-center justify-center">
           {resolvedPhotoUrl && !imgError ? (
             <img
               src={resolvedPhotoUrl}
@@ -65,7 +70,7 @@ export const DogPassportCard = forwardRef<HTMLDivElement, DogPassportCardProps>(
               className="h-full w-full object-cover object-[center_20%]"
             />
           ) : silhouetteKey ? (
-            <DogBreedSilhouette breedKey={silhouetteKey} size={84} />
+            <DogBreedSilhouette breedKey={silhouetteKey} size={70} />
           ) : (
             <div className="text-center font-serif text-2xl font-bold text-[#8C7E6A]">
               {data.namePrimary.slice(0, 1)}
@@ -76,15 +81,15 @@ export const DogPassportCard = forwardRef<HTMLDivElement, DogPassportCardProps>(
         {/* Инфо собаки */}
         <div className="min-w-0 flex-1">
           {/* Русская кличка в приоритете */}
-          <h2 className="font-serif text-xl sm:text-2xl font-bold text-[#1C1917] tracking-tight leading-snug break-words">
+          <h2 className="font-serif text-lg font-bold text-[#1C1917] tracking-tight leading-snug break-words">
             {formattedName}
           </h2>
           {data.nameSecondary && (
-            <div className="text-xs sm:text-sm font-medium text-[#78716C] italic mt-0.5 break-words">
+            <div className="text-xs font-medium text-[#78716C] italic mt-0.5 break-words">
               {data.nameSecondary}
             </div>
           )}
-          <div className="mt-2 flex flex-wrap items-center gap-x-2 text-xs text-[#57534E] font-medium">
+          <div className="mt-1.5 flex flex-wrap items-center gap-x-1.5 text-[11px] text-[#57534E] font-medium leading-none">
             <span className="font-semibold text-[#1C1917]">{data.breedPrimary}</span>
             {data.breedVariety && <span className="text-[#78716C]">({data.breedVariety})</span>}
             <span className="text-[#C5B7A1]">·</span>
@@ -96,9 +101,9 @@ export const DogPassportCard = forwardRef<HTMLDivElement, DogPassportCardProps>(
       </div>
     )
 
-    const renderTitles = () => {
+    const renderTitles = (compact = false) => {
       if (!showTitles || !data.titles || data.titles.length === 0) return null
-      return <PassportTitlesSection titles={data.titles} />
+      return <PassportTitlesSection titles={data.titles} compact={compact} />
     }
 
     const renderFooter = () => (
@@ -132,45 +137,35 @@ export const DogPassportCard = forwardRef<HTMLDivElement, DogPassportCardProps>(
           className="w-[480px] bg-[#FAF7F2] p-3 text-[#1C1917] select-none font-sans"
         >
           <div className="rounded-2xl border-2 border-[#C3B5A1] p-1.5 bg-[#FAF7F2]">
-            <div className="rounded-xl border border-[#DFD7CB] bg-[#FDFCFA] p-4 sm:p-5 shadow-xs flex flex-col justify-between min-h-[820px]">
+            <div className="rounded-xl border border-[#DFD7CB] bg-[#FDFCFA] p-4 sm:p-5 shadow-xs flex flex-col">
               <div>
                 {/* Шапка */}
-                <div className="text-center pb-2.5 border-b border-[#EAE3D6]">
-                  <div className="font-serif text-[11px] font-bold tracking-[0.25em] text-[#8C6D37] uppercase">
-                    Курсинг Статс
+                <div className="flex items-center justify-between border-b border-[#EAE3D6] pb-2 mb-3">
+                  <div className="flex items-center gap-1.5 min-w-0">
+                    <div className="font-serif text-[11px] font-bold tracking-[0.2em] text-[#8C6D37] uppercase shrink-0">
+                      Курсинг Статс
+                    </div>
+                    <span className="text-[#C5B7A1]">·</span>
+                    <span className="text-[10px] text-[#78716C] font-serif truncate">
+                      Цифровая база данных
+                    </span>
                   </div>
-                  <h1 className="font-serif text-lg font-bold text-[#1C1917] mt-0.5">
-                    Паспорт собаки
-                  </h1>
-                  <div className="text-[9px] text-[#8C7E6A] tracking-wider uppercase mt-0.5">
-                    Курсинг · Рейсинг · Выставки
+                  <div className="text-[10px] text-[#8C7E6A] font-serif font-semibold shrink-0">
+                    Паспорт № CS-{data.id}
                   </div>
                 </div>
 
-                {/* Профиль */}
-                <div className="mt-3.5">{renderHero()}</div>
+                {/* Профиль собаки */}
+                <div className="mt-1">{renderHero()}</div>
 
-                {/* Титулы */}
-                {renderTitles()}
+                {/* Титулы: компактный однострочный вид */}
+                {renderTitles(true)}
 
-                {/* Дисциплины (Курсинг, Рейсинг и Выставки) */}
-                <div className="mt-3.5 space-y-2">
-                  {showCoursing && showRacing ? (
-                    <div className="grid grid-cols-2 gap-2">
-                      <CoursingPillar coursing={data.coursing} />
-                      <RacingPillar racing={data.racing} />
-                    </div>
-                  ) : (
-                    <>
-                      {showCoursing && <CoursingPillar coursing={data.coursing} />}
-                      {showRacing && <RacingPillar racing={data.racing} />}
-                    </>
-                  )}
-                  {showShows && (
-                    <div>
-                      <ShowPillar shows={data.shows} />
-                    </div>
-                  )}
+                {/* Дисциплины (Курсинг, Рейсинг и Выставки в едином мобильном дизайне) */}
+                <div className="mt-3 space-y-2">
+                  {showCoursing && <StoryCoursingCard coursing={data.coursing} />}
+                  {showRacing && <StoryRacingCard racing={data.racing} />}
+                  {showShows && <StoryShowsCard shows={data.shows} />}
                 </div>
               </div>
 

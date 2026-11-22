@@ -52,7 +52,7 @@ export const CoursingPillar: React.FC<CoursingPillarProps> = ({ coursing }) => {
             <div className="text-[9px] font-semibold uppercase tracking-wider text-[#52735E]">
               Лучший результат
             </div>
-            <div className="font-serif text-2xl font-bold text-[#1F432E] mt-0.5 leading-none">
+            <div className="font-serif text-2xl font-bold text-[#1F432E] mt-0.5 leading-none whitespace-nowrap">
               {coursing.bestScore ? `${coursing.bestScore} б.` : `${coursing.totalStarts} состязаний`}
             </div>
           </div>
@@ -130,7 +130,7 @@ export const RacingPillar: React.FC<RacingPillarProps> = ({ racing }) => {
             <div className="text-[9px] font-semibold uppercase tracking-wider text-[#4A6D94]">
               Рекорд скорости
             </div>
-            <div className="font-serif text-2xl font-bold text-[#1A3859] mt-0.5 leading-none">
+            <div className="font-serif text-2xl font-bold text-[#1A3859] mt-0.5 leading-none whitespace-nowrap">
               {racing.bestSpeed ? `${racing.bestSpeed} км/ч` : `${racing.totalStarts} забегов`}
             </div>
           </div>

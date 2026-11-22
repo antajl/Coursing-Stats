@@ -4,9 +4,13 @@ import { titleBadgeClass } from '../../../../lib/qualificationTitles'
 
 interface PassportTitlesSectionProps {
   titles: DogPassportTitle[]
+  compact?: boolean
 }
 
-export const PassportTitlesSection: React.FC<PassportTitlesSectionProps> = ({ titles }) => {
+export const PassportTitlesSection: React.FC<PassportTitlesSectionProps> = ({
+  titles,
+  compact = false,
+}) => {
   if (!titles || titles.length === 0) return null
 
   const sections = [
@@ -38,10 +42,13 @@ export const PassportTitlesSection: React.FC<PassportTitlesSectionProps> = ({ ti
 
   if (sections.length === 0) return null
 
+  const labelColClass = compact ? 'grid-cols-[4.25rem_1fr] gap-1.5' : 'grid-cols-[4.75rem_1fr] gap-2'
+  const chipPadClass = compact ? 'px-1.5 py-0.2 text-[10px]' : 'px-2 py-0.5 text-[11px]'
+
   return (
     <div className="mt-2.5 pt-2 border-t border-[#EAE3D6] space-y-1.5">
       {sections.map((sec) => (
-        <div key={sec.key} className="grid grid-cols-[4.75rem_1fr] items-center gap-2">
+        <div key={sec.key} className={`grid ${labelColClass} items-center`}>
           <span
             className={`text-[10px] uppercase tracking-wider select-none whitespace-nowrap ${sec.labelClass}`}
           >
@@ -54,14 +61,14 @@ export const PassportTitlesSection: React.FC<PassportTitlesSectionProps> = ({ ti
               return (
                 <div
                   key={i}
-                  className={`inline-flex shrink-0 items-center gap-1 rounded-md px-2 py-0.5 text-[11px] tabular-nums whitespace-nowrap shadow-2xs ${chipClass}`}
+                  className={`inline-flex shrink-0 items-center gap-1 rounded-md tabular-nums whitespace-nowrap shadow-2xs ${chipPadClass} ${chipClass}`}
                   title={item.label}
                 >
                   <span className="font-bold">
                     {item.badge}
                     {countSuffix}
                   </span>
-                  {item.display && item.display !== item.badge && (
+                  {!compact && item.display && item.display !== item.badge && (
                     <span className="text-[9.5px] opacity-75 font-normal ml-0.5">
                       · {item.display}
                     </span>
