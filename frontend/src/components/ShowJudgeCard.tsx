@@ -6,7 +6,6 @@ import {
   getPuppyStrictnessBadge,
 } from '../lib/judgeUiUtils'
 import { resolveShowJudgeNumericId } from '../lib/judgeIdMap.generated'
-import { formatBreedName } from '../lib/breedMapping'
 
 export type GradeScope = 'adult' | 'puppy' | 'all'
 
@@ -25,7 +24,6 @@ export interface ShowJudgeCardData {
   totalDogs?: number
   city?: string
   ranks?: string
-  breedChips?: string[]
   photo_url?: string | null
 }
 
@@ -154,12 +152,6 @@ export default function ShowJudgeCard({
 
             <div className="text-[11.5px] sm:text-xs text-charcoal-500 font-medium truncate mt-0.5">
               <span>{judge.breedsCount.toLocaleString('ru-RU')} {formatBreedsCount(judge.breedsCount)}</span>
-              {judge.breedChips && judge.breedChips.length > 0 && (
-                <span className="text-charcoal-400">
-                  {' · '}
-                  <span className="text-charcoal-600">{judge.breedChips.map((b) => formatBreedName(b)).join(', ')}</span>
-                </span>
-              )}
             </div>
 
             {/* На мобильных (< md) год, число оценок и стиль судейства */}

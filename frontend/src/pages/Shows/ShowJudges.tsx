@@ -424,7 +424,6 @@ export default function ShowJudges({ urlYear }: ShowJudgesProps = {}) {
                       totalDogs: filterYear ? judge.by_year_total_dogs?.[filterYear] : judge.total_dogs,
                       city: judge.city,
                       ranks: judge.ranks,
-                      breedChips: judge.breeds?.slice(0, 3),
                       photo_url: judge.photo_url,
                     }}
                     variant="embedded"
