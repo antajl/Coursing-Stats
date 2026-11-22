@@ -35,6 +35,7 @@ verified: 2026-10-01
 | Импорт соревнований, протоколов, собак | [.agents/skills/competition-ingest/SKILL.md](../.agents/skills/competition-ingest/SKILL.md) |
 | Бега борзых, sex, breed_class, кворум | [sheets/13-racing-standards.md](sheets/13-racing-standards.md) |
 | Выставки, RKF, протоколы выставок S3 | [sheets/04-shows.md](sheets/04-shows.md) |
+| Разделение монопородок и всепородных выставок | [SHOW_MONO_ALLBREED_PLAN.md](SHOW_MONO_ALLBREED_PLAN.md) |
 | Донино speed ≠ 350m | [sheets/05-donino.md](sheets/05-donino.md) |
 | Парсеры procoursing | [sheets/06-parsers.md](sheets/06-parsers.md) |
 | Routes, ui-flags, React Query | [sheets/07-frontend.md](sheets/07-frontend.md) |

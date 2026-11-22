@@ -17,15 +17,20 @@
 
 ---
 
-## Automatic Skill Usage
+## Core Principles & Skills
 
-The following global skills are automatically activated during development:
+### Guiding Principles (соблюдать всегда):
+- **ponytail** — самое простое рабочее решение (YAGNI, stdlib first, минимум кода и зависимостей).
+- **unslop** — постоянная защита интерфейса от «AI-мусора» (vibecoded slop): строго запрещены фиолетовые/неоновые градиенты, цветные размытия (glow/blob), случайные отступы, кричащий капс и шаблонные бейджи. Только осознанный, выверенный крафт, где хром спокоен, а акцент держит контент.
+- **verification-before-completion** — обязательная проверка тестами и сборкой ПЕРЕД тем, как заявить о готовности.
+- **incremental-implementation** — разработка тонкими вертикальными слоями с верификацией каждого шага.
+- **file-budget (< 300 строк)** — размер одного файла в коде (компонент, страница, утилита) не должен превышать 250–300 строк. При приближении к лимиту сразу декомпозировать: выносить подкомпоненты, хуки (`use*`), утилиты и типы в отдельные файлы. Запрещено плодить «файлы-мамонты».
 
-- **ponytail** — Forces laziest working solution (YAGNI, stdlib first, minimal code). Triggers on any coding/refactoring.
-- **verification-before-completion** — Requires verification evidence before claiming completion. Triggers before claiming done/fixed.
-- **incremental-implementation** — Builds in thin vertical slices with testing between each. Triggers on multi-file changes.
-- **old-money-design** — Enforces Old Money UI aesthetic (no emojis, camel palette, Lucide icons, 2K/FHD/mobile rules, touch targets ≥ 44px). Triggers on UI/styling work.
-- **smart-commit-and-learn** — Autonomous invariant learning and intelligent atomic English Conventional Commits on demand. Triggers on "лёрн, коммит и пуш" or architectural decisions.
+### Automatic Domain Skills (.agents/skills/*):
+- **old-money-design** — правила эстетики Old Money (строго zero эмодзи, палитра camel, Lucide icons, touch targets ≥ 44px).
+- **unslop** — очистка и превращение AI-кода в авторский интерфейс продукта (`.agents/skills/unslop/SKILL.md`).
+- **smart-commit-and-learn** — фиксация инвариантов и атомарные Conventional Commits на английском языке по запросу.
+- **competition-ingest** — пайплайн безопасного ввода протоколов и соревнований.
 
 ---
 
@@ -88,11 +93,12 @@ CoursingStats — статистика соревнований (procoursing), �
 
 ```bash
 yarn dev                      # Vite dev-сервер :5173
+cd frontend; yarn build       # Проверка типов TypeScript и сборки React-фронтенда
 yarn test:fast                # Быстрый прогон тестов (3 сек, Vitest)
 yarn test                     # Полный прогон всех тестов (~13 сек)
 yarn run ingest-competition <draft.json> # Безопасный импорт состязания с авто-сопоставлением
 yarn export-protocol <eventId> [outDir]  # Экспорт векторного HTML/PDF протокола
-yarn run build-all-data       # Полная пересборка всех индексов и publish-gates
+yarn run build-all-data       # Полная пересборка всех индексов и publish-gates (тяжелая)
 cd bot; yarn test; yarn build # Проверка Telegram-бота
 ```
 *В PowerShell разделять команды через `;`, а не `&&`.*
@@ -130,6 +136,7 @@ cd bot; yarn test; yarn build # Проверка Telegram-бота
 
 | Область | Критерий готовности |
 |---------|---------------------|
+| **Фронтенд (UI)** | `cd frontend; yarn build` проходит без ошибок TypeScript и сборки Vite |
 | **Сайт / данные** | `yarn run build-all-data` + `yarn test:fast` проходят успешно |
 | **Бот** | `cd bot; yarn run build` + `yarn test` зеленые |
 | **Парсеры** | `yarn run test-parser-fixtures` проходит |
