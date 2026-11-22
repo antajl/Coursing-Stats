@@ -150,9 +150,13 @@ function ShowDogCardInner({
     return presentShowAwards(dog.titles)
   }, [dog.titles, isMonoScope])
 
+  const monoAwardsCount = useMemo(() => {
+    return SHOW_MONO_AWARD_ORDER.reduce((acc, key) => acc + (dog.titles[key] || 0), 0)
+  }, [dog.titles])
+
   const effectiveBestAward = useMemo(() => {
     if (isMonoScope) {
-      return bestShowMonoAward(dog.titles) || dog.best_award
+      return bestShowMonoAward(dog.titles)
     }
     return dog.best_award
   }, [dog.titles, dog.best_award, isMonoScope])
@@ -260,8 +264,17 @@ function ShowDogCardInner({
                 )}
               </div>
               <div className="flex items-center justify-end gap-1 text-[11px] font-semibold text-charcoal-700 tabular-nums shrink-0 min-w-[2.25rem]">
-                <span className="tabular-nums text-right">{dog.total_shows || 0}</span>
-                <span className="text-[9px] font-normal text-charcoal-500">выст.</span>
+                {isMonoScope ? (
+                  <>
+                    <span className="tabular-nums text-right">{monoAwardsCount}</span>
+                    <span className="text-[9px] font-normal text-charcoal-500">титул.</span>
+                  </>
+                ) : (
+                  <>
+                    <span className="tabular-nums text-right">{dog.total_shows || 0}</span>
+                    <span className="text-[9px] font-normal text-charcoal-500">выст.</span>
+                  </>
+                )}
               </div>
             </div>
           </div>
@@ -347,9 +360,11 @@ function ShowDogCardInner({
               </div>
             )}
             <div className="flex shrink-0 items-center gap-1.5 h-6 text-xs text-charcoal-600">
-              <span className="text-[11px] text-charcoal-500">Выставок:</span>
+              <span className="text-[11px] text-charcoal-500">
+                {isMonoScope ? 'Титулов НКП:' : 'Выставок:'}
+              </span>
               <span className="inline-block w-[3ch] text-right text-sm font-bold tabular-nums leading-none text-charcoal-800">
-                {dog.total_shows || 0}
+                {isMonoScope ? monoAwardsCount : dog.total_shows || 0}
               </span>
             </div>
           </div>

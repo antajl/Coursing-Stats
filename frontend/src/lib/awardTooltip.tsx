@@ -105,7 +105,8 @@ export function getFullTitleLabel(title: string, isShow?: boolean): string {
   const showKey = matchShowAwardToken(clean)
   if (showKey && SHOW_AWARD_LABELS[showKey]) return SHOW_AWARD_LABELS[showKey]
   const compKey = competitionTitleKey(clean)
-  if (COMPETITION_TITLE_LABELS[compKey]) return COMPETITION_TITLE_LABELS[compKey]
+  const compLabel = competitionTitleLabel(clean, compKey)
+  if (compLabel) return compLabel
 
   return clean
 }

@@ -9,32 +9,32 @@ import {
 import { EMPTY_SHOW_TITLES } from '../lib/show-awards/order'
 
 describe('Show Mono vs CAC ranking scoring & comparators', () => {
-  it('correctly calculates mono rank score ignoring all-breed BIS and BIG', () => {
+  it('correctly calculates mono rank score ignoring all-breed BIS, BIG, CAC and BOB', () => {
     const allBreedChamp = {
       ...EMPTY_SHOW_TITLES,
       BIS: 1, // 0 in mono
       BIG: 2, // 0 in mono
       CAC: 5, // 0 in mono
-      BOB: 2, // 2 * 2000 = 4000
+      BOB: 2, // 0 in mono (awarded at all-breed shows, not exclusive to mono)
     }
     const monoChamp = {
       ...EMPTY_SHOW_TITLES,
       KCHP: 1, // 1800
       KCHK: 2, // 2 * 600 = 1200
-      CW: 3, // 3 * 200 = 600
-      BOB: 1, // 2000
+      CW: 3, // 0 in mono (all-breed class winner)
+      BOB: 1, // 0 in mono
       SS: 2, // 2 * 100 = 200
     }
 
     // In overall ranking, allBreedChamp wins due to BIS (10000) + BIG (10000)
     expect(showRankScore(allBreedChamp)).toBeGreaterThan(showRankScore(monoChamp))
 
-    // In mono ranking, monoChamp wins decisively!
+    // In mono ranking, monoChamp wins decisively while all-breed dog gets 0 points!
     const monoScoreAllBreed = showMonoRankScore(allBreedChamp)
     const monoScoreMonoChamp = showMonoRankScore(monoChamp)
 
-    expect(monoScoreAllBreed).toBe(4000) // only BOB
-    expect(monoScoreMonoChamp).toBe(1800 + 1200 + 600 + 2000 + 200) // 5800
+    expect(monoScoreAllBreed).toBe(0) // all-breed dog with no club titles gets 0 in mono
+    expect(monoScoreMonoChamp).toBe(1800 + 1200 + 200) // 3200 (KCHP: 1800 + 2*KCHK: 1200 + 2*SS: 200)
     expect(monoScoreMonoChamp).toBeGreaterThan(monoScoreAllBreed)
 
     expect(
