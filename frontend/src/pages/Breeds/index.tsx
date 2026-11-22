@@ -1,14 +1,9 @@
-import { useState, useMemo } from 'react'
 import { SEO } from '../../components/SEO'
 import { JsonLd, breadcrumbListSchema, itemPageSchema } from '../../components/JsonLd'
 import LoadingCard from '../../components/LoadingCard'
-import { CORE_BREED_HUBS } from '../../lib/breed-hubs-data'
-import type { BreedCardDesignVariant } from '../../components/BreedCard/types'
 import { useBreedsFilterAndSort } from './useBreedsFilterAndSort'
 import BreedsToolbar from './BreedsToolbar'
 import BreedsList from './BreedsList'
-import BreedsCatalogSummary from './BreedsCatalogSummary'
-import BreedsVariantSwitcher from './BreedsVariantSwitcher'
 
 export default function BreedsDirectory() {
   const {
@@ -34,44 +29,6 @@ export default function BreedsDirectory() {
     handleSelectGroup,
     handleSelectBreed,
   } = useBreedsFilterAndSort()
-
-  const [cardVariant, setCardVariant] = useState<BreedCardDesignVariant>(() => {
-    try {
-      return (sessionStorage.getItem('cs_breed_card_variant') as BreedCardDesignVariant) || 'passport'
-    } catch {
-      return 'passport'
-    }
-  })
-
-  const [showSummary, setShowSummary] = useState(true)
-
-  const handleVariantChange = (v: BreedCardDesignVariant) => {
-    setCardVariant(v)
-    try {
-      sessionStorage.setItem('cs_breed_card_variant', v)
-    } catch {}
-  }
-
-  const summaryData = useMemo(() => {
-    let totalDogs = 0
-    let totalStarts = 0
-    let maxSpeed = 0
-
-    for (const s of Object.values(statsMap)) {
-      totalDogs += s.dogs || 0
-      totalStarts += s.starts || 0
-      if (s.maxSpeed && s.maxSpeed > maxSpeed) {
-        maxSpeed = s.maxSpeed
-      }
-    }
-
-    return {
-      totalBreeds: CORE_BREED_HUBS.length,
-      totalDogs,
-      totalStarts,
-      maxSpeed,
-    }
-  }, [statsMap])
 
   const seoTitle = 'Каталог пород собак: курсинг, бега борзых и БЗМП | Курсинг Статс'
   const seoDesc =
@@ -121,24 +78,6 @@ export default function BreedsDirectory() {
         allBreedKeys={allBreedKeys}
       />
 
-      {/* Интерактивный переключатель вариантов прямо на странице */}
-      <BreedsVariantSwitcher
-        currentVariant={cardVariant}
-        onChangeVariant={handleVariantChange}
-        showSummary={showSummary}
-        onToggleSummary={() => setShowSummary((prev) => !prev)}
-      />
-
-      {/* Сводный баннер каталога пород */}
-      {showSummary && (
-        <BreedsCatalogSummary
-          totalBreeds={summaryData.totalBreeds}
-          totalDogs={summaryData.totalDogs}
-          totalStarts={summaryData.totalStarts}
-          maxSpeed={summaryData.maxSpeed}
-        />
-      )}
-
       <BreedsList
         sortedBreeds={sortedBreeds}
         statsMap={statsMap}
@@ -148,7 +87,6 @@ export default function BreedsDirectory() {
         plaqueTitle={plaqueTitle}
         loadMoreRef={loadMoreRef}
         loading={loading}
-        layoutVariant={cardVariant}
       />
     </div>
   )

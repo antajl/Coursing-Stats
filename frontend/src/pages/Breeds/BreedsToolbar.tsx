@@ -1,13 +1,11 @@
 import React from 'react'
-import { ChevronDown, Check, Layers } from 'lucide-react'
-import { FCI_GROUPS } from '../../lib/fciGroups'
+import { ChevronDown } from 'lucide-react'
 import { CORE_BREED_HUBS } from '../../lib/breed-hubs-data'
 import PageToolbar from '../../components/toolbar/PageToolbar'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
-import ModernDropdown from '../../components/ui/ModernDropdown'
 import BreedSearchDropdown from '../../components/ui/BreedSearchDropdown'
 import QuickBreedBar from '../TopDogs/QuickBreedBar'
-import QuickGroupBar from './QuickGroupBar'
+import FciGroupDropdown from './FciGroupDropdown'
 import { toolbarPillTriggerClass } from '../../lib/toolbar'
 
 export interface BreedsToolbarProps {
@@ -41,7 +39,7 @@ export const BreedsToolbar: React.FC<BreedsToolbarProps> = ({
 }) => {
   return (
     <>
-      {/* 1. Мобильная панель фильтров: Поиск + Группа ▾ + Порода ▾ + Сброс */}
+      {/* 1. Мобильная панель фильтров: Поиск + Группа FCI ▾ + Порода ▾ */}
       <div className="flex items-center gap-1.5 w-full md:hidden py-1 overflow-x-auto no-scrollbar">
         {/* Поиск */}
         <div className="shrink-0">
@@ -52,88 +50,14 @@ export const BreedsToolbar: React.FC<BreedsToolbarProps> = ({
           />
         </div>
 
-        {/* Выпадающий список групп FCI */}
+        {/* Выпадающий список групп FCI сразу после поиска */}
         <div className="shrink-0">
-          <ModernDropdown
-            trigger={
-              <button
-                type="button"
-                className={toolbarPillTriggerClass(selectedGroup !== 'all', 'shrink-0')}
-                aria-label="Выбрать группу пород"
-              >
-                <Layers className="h-3.5 w-3.5 opacity-70" aria-hidden="true" />
-                <span className="truncate max-w-[95px] sm:max-w-[120px]">
-                  {selectedGroup !== 'all'
-                    ? (selectedGroup === '0' ? 'Спорт' : `FCI ${selectedGroup}`)
-                    : 'Группы'}
-                </span>
-                <ChevronDown className="h-3.5 w-3.5 opacity-70 shrink-0" aria-hidden="true" />
-              </button>
-            }
-            width="280px"
-            closeOnScroll
-            portal
-          >
-            {(close) => (
-              <div className="p-1 space-y-0.5 text-xs" role="menu">
-                {/* Все группы */}
-                <button
-                  type="button"
-                  role="menuitem"
-                  onClick={() => {
-                    handleSelectGroup('all')
-                    close()
-                  }}
-                  className={`w-full flex items-center justify-between px-2.5 py-1.5 rounded-md text-left transition-colors cursor-pointer ${
-                    selectedGroup === 'all'
-                      ? 'bg-camel-100/90 text-camel-950 font-semibold'
-                      : 'text-charcoal-700 hover:bg-cream-100/80'
-                  }`}
-                >
-                  <div className="flex items-center gap-2">
-                    <span>Все группы пород</span>
-                    <span className="text-[10px] tabular-nums font-sans px-1.5 py-0.2 rounded-full bg-cream-100 text-charcoal-500">
-                      {groupCounts['all'] || 82}
-                    </span>
-                  </div>
-                  {selectedGroup === 'all' && <Check className="h-3.5 w-3.5 text-camel-700 shrink-0 ml-1.5" />}
-                </button>
-
-                {/* Список групп по порядку FCI */}
-                {sortedGroupKeys.map((key) => {
-                  const group = FCI_GROUPS[Number(key)]
-                  const count = groupCounts[key] || 0
-                  if (count === 0) return null
-                  const isSelected = selectedGroup === key
-
-                  return (
-                    <button
-                      key={key}
-                      type="button"
-                      role="menuitem"
-                      onClick={() => {
-                        handleSelectGroup(isSelected ? 'all' : key)
-                        close()
-                      }}
-                      className={`w-full flex items-center justify-between px-2.5 py-1.5 rounded-md text-left transition-colors cursor-pointer ${
-                        isSelected
-                          ? 'bg-camel-100/90 text-camel-950 font-semibold'
-                          : 'text-charcoal-700 hover:bg-cream-100/80'
-                      }`}
-                    >
-                      <div className="flex items-center gap-2 truncate">
-                        <span className="truncate">{group.name}</span>
-                        <span className="text-[10px] tabular-nums font-sans px-1.5 py-0.2 rounded-full bg-cream-100 text-charcoal-500 shrink-0">
-                          {count}
-                        </span>
-                      </div>
-                      {isSelected && <Check className="h-3.5 w-3.5 text-camel-700 shrink-0 ml-1.5" />}
-                    </button>
-                  )
-                })}
-              </div>
-            )}
-          </ModernDropdown>
+          <FciGroupDropdown
+            selectedGroup={selectedGroup}
+            onSelectGroup={handleSelectGroup}
+            groupCounts={groupCounts}
+            sortedGroupKeys={sortedGroupKeys}
+          />
         </div>
 
         {/* Выпадающий список пород */}
@@ -141,7 +65,7 @@ export const BreedsToolbar: React.FC<BreedsToolbarProps> = ({
           <BreedSearchDropdown
             breeds={mobileBreedList}
             selectedBreed={quickBreedBarValue}
-            onSelect={handleSelectBreed}
+            onSelectBreed={handleSelectBreed}
             trigger={
               <button
                 type="button"
@@ -160,49 +84,45 @@ export const BreedsToolbar: React.FC<BreedsToolbarProps> = ({
         </div>
       </div>
 
-      {/* 2. Десктопный тулбар: две симметричные половины (ровно 50% / 50%) с центральным разделителем */}
+      {/* 2. Десктопный тулбар: Поиск + Группа FCI ▾ сразу после поиска + Разделитель + QuickBreedBar (Породы) */}
       <div className="hidden md:block">
         <PageToolbar
           bare
           topRowClassName="w-full flex-nowrap"
           filters={
-            <div className="flex items-center w-full min-w-0 py-2 -my-2 overflow-x-auto md:overflow-visible no-scrollbar">
-              {/* Левая половина: ровно 50% ширины страницы (Поиск + Породы) */}
-              <div className="flex-1 min-w-0 flex items-center gap-1.5 sm:gap-2">
-                <div className="shrink-0">
-                  <ToolbarSearch
-                    value={searchQuery}
-                    onChange={setSearchQuery}
-                    placeholder="Поиск породы или код FCI…"
-                  />
-                </div>
-
-                <div className="h-5 w-px bg-old-money-300/80 shrink-0 hidden sm:block" aria-hidden="true" />
-
-                <div className="flex-1 min-w-0">
-                  <QuickBreedBar
-                    selectedBreed={quickBreedBarValue}
-                    onSelectBreed={handleSelectBreed}
-                    candidateBreeds={breedCandidates}
-                    breedValues={allBreedKeys}
-                    strictFilterByBreedValues={selectedGroup !== 'all'}
-                    showHubLink={false}
-                  />
-                </div>
+            <div className="flex items-center w-full min-w-0 py-2 -my-2">
+              {/* 1. Поиск */}
+              <div className="shrink-0">
+                <ToolbarSearch
+                  value={searchQuery}
+                  onChange={setSearchQuery}
+                  placeholder="Поиск породы или код FCI…"
+                />
               </div>
 
-              {/* Центральный разделитель: строго зафиксирован ровно по центру 50% */}
-              <div className="h-5 w-px bg-old-money-300/80 shrink-0 mx-2 sm:mx-2.5 hidden md:block" aria-hidden="true" />
+              {/* 2. Выпадающий список групп FCI сразу после поиска */}
+              <div className="shrink-0 ml-1.5 sm:ml-2">
+                <FciGroupDropdown
+                  selectedGroup={selectedGroup}
+                  onSelectGroup={handleSelectGroup}
+                  groupCounts={groupCounts}
+                  sortedGroupKeys={sortedGroupKeys}
+                />
+              </div>
 
-              {/* Правая половина: ровно 50% ширины страницы (Группы + Сброс) */}
-              <div className="flex-1 min-w-0 flex items-center gap-1.5 sm:gap-2">
-                <div className="flex-1 min-w-0">
-                  <QuickGroupBar
-                    value={selectedGroup}
-                    onChange={handleSelectGroup}
-                    counts={groupCounts}
-                  />
-                </div>
+              {/* Разделитель */}
+              <div className="h-5 w-px bg-old-money-300/80 shrink-0 mx-2.5 sm:mx-3 hidden sm:block" aria-hidden="true" />
+
+              {/* 3. Породы (QuickBreedBar) следуют после и занимают всё свободное место */}
+              <div className="flex-1 min-w-0">
+                <QuickBreedBar
+                  selectedBreed={quickBreedBarValue}
+                  onSelectBreed={handleSelectBreed}
+                  candidateBreeds={breedCandidates}
+                  breedValues={allBreedKeys}
+                  strictFilterByBreedValues={selectedGroup !== 'all'}
+                  showHubLink={false}
+                />
               </div>
             </div>
           }
@@ -211,4 +131,5 @@ export const BreedsToolbar: React.FC<BreedsToolbarProps> = ({
     </>
   )
 }
+
 export default BreedsToolbar
