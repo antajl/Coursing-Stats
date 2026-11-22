@@ -138,11 +138,11 @@ export function CompletedTitlesRegistry({
             </div>
           )}
 
-          {/* 2. Курсинг борзых */}
+          {/* 2. Курсинг */}
           {coursingTitles.length > 0 && (
             <div className="px-4 py-3 sm:px-5 sm:py-3.5">
               <div className="text-[11px] font-bold uppercase tracking-wider text-forest-800 mb-2">
-                Курсинг борзых
+                Курсинг
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-2 sm:gap-2.5">
                 {coursingTitles.map((item) =>
@@ -157,11 +157,11 @@ export function CompletedTitlesRegistry({
             </div>
           )}
 
-          {/* 3. Бега борзых (рейсинг) */}
+          {/* 3. Рейсинг */}
           {racingTitles.length > 0 && (
             <div className="px-4 py-3 sm:px-5 sm:py-3.5">
               <div className="text-[11px] font-bold uppercase tracking-wider text-sky-800 mb-2">
-                Бега борзых (рейсинг)
+                Рейсинг
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-2 sm:gap-2.5">
                 {racingTitles.map((item) =>

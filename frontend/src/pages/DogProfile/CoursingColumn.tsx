@@ -100,24 +100,15 @@ export function CoursingColumn({
   const startsCount = coursingEvents.length
   const competitionsCount = startsCount || (typeof coursing.total_starts === 'number' ? coursing.total_starts : 0)
 
-  const headerLink = (
-    <Link
-      to={rankingUrl}
-      className="shrink-0 inline-flex items-center gap-1 rounded-full border border-forest-200/90 bg-forest-50/80 px-2.5 py-0.5 text-xs font-semibold text-forest-800 transition-colors hover:bg-forest-100 hover:border-forest-300"
-      title="Открыть рейтинг курсинга"
-    >
-      <span>Рейтинг</span>
-      <ArrowRight className="h-3 w-3 text-forest-600 shrink-0" />
-    </Link>
-  )
+  const isBzmp = coursingEvents.length > 0 && coursingEvents.every((e) => e.competition_kind === 'bzmp' || e.event_type === 'bzmp')
+  const columnTitle = isBzmp ? 'БЗМП' : 'Курсинг'
 
   return (
     <DisciplineColumnShell>
       {hasCoursingData && (
         <DisciplineStatsCard
           theme={THEME}
-          title="Курсинг / БЗМП"
-          rankBadge={headerLink}
+          title={columnTitle}
           rankingUrl={rankingUrl}
         >
           <div className="flex h-full flex-col justify-between gap-3">

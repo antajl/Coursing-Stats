@@ -45,7 +45,7 @@ export const DogDisciplinesMobileView: React.FC<DogDisciplinesMobileViewProps> =
   return (
     <div className="mb-6 block lg:hidden w-full">
       {availableTabs.length === 0 ? (
-        <EmptyDisciplineColumn title="Курсинг / БЗМП" theme="forest" />
+        <EmptyDisciplineColumn title="Курсинг" theme="forest" />
       ) : (
         <div
           className="w-full relative overflow-hidden touch-pan-y select-none"

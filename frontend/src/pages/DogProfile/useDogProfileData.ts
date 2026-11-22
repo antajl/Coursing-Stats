@@ -225,6 +225,15 @@ export function useDogProfileData() {
         (Array.isArray(showDog.history) && showDog.history.length > 0)),
   )
 
+  const isBzmp = useMemo(() => {
+    return (
+      coursingEvents.length > 0 &&
+      coursingEvents.every(
+        (e: any) => e.competition_kind === 'bzmp' || e.event_type === 'bzmp',
+      )
+    )
+  }, [coursingEvents])
+
   const hasCoursingStarts = useMemo(() => {
     return hasCoursingData || coursingEvents.length > 0 || (coursing.total_starts || 0) > 0
   }, [hasCoursingData, coursingEvents.length, coursing.total_starts])
@@ -250,6 +259,7 @@ export function useDogProfileData() {
     showCoursingColumn,
     coursingTotalStarts: coursing.total_starts,
     coursingEventsCount: coursingEvents.length,
+    isBzmp,
     showRacingColumn,
     racingTotalStarts: racing.total_starts,
     racingEventsCount: racingEvents.length,

@@ -1,6 +1,6 @@
 import { createContext, useContext, type ReactNode } from 'react'
 import { Link } from 'react-router-dom'
-import { ChevronRight, ChevronLeft, ArrowUpRight } from 'lucide-react'
+import { ChevronRight, ChevronLeft } from 'lucide-react'
 import type { DisciplineTabId } from './types'
 
 export interface DisciplineMobileNav {
@@ -124,7 +124,7 @@ export function DisciplineStatsCard({
             </button>
           )}
 
-          {/* Мобильный заголовок: по центру 2 строки (название + ссылка на рейтинг, как в /breeds/whippet/) */}
+          {/* Мобильный заголовок: по центру название дисциплины */}
           <div
             className={`lg:hidden flex min-w-0 flex-1 flex-col items-center justify-center text-center leading-tight ${
               prevTab || nextTab ? 'px-16 sm:px-20' : 'px-2'
@@ -138,10 +138,6 @@ export function DisciplineStatsCard({
               >
                 <div className="text-xs font-bold uppercase tracking-wider text-charcoal-900 group-hover:underline truncate max-w-full">
                   {title}
-                </div>
-                <div className="mt-0.5 inline-flex items-center justify-center gap-0.5 text-[10px] font-bold text-camel-800 group-hover:underline">
-                  <span>Рейтинг</span>
-                  <ArrowUpRight className="h-2.5 w-2.5 text-camel-700 shrink-0" aria-hidden />
                 </div>
               </Link>
             ) : (

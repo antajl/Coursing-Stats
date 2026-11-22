@@ -375,6 +375,89 @@ export function evaluateCumulativeTitles(data: DogCareerData): CumulativeEvaluat
     titleExplanations['ГЧР'] = 'Выполнены нормы титулов «Чемпион России» и «Чемпион НКП/породы»'
   }
 
+  // 1.4 ЧЕМПИОН НАЦИОНАЛЬНОГО КЛУБА ПОРОДЫ (ЧНКП)
+  const chnkpBasis = `Набрано ${effectiveKchk} КЧК на монопородных выставках НКП (норма: 4)`
+  titles.push({
+    id: 'ch-nkp',
+    title: 'Чемпион Национального клуба породы',
+    badge: 'ЧНКП',
+    domain: 'show',
+    status: chnkpCompleted ? 'completed' : 'in_progress',
+    progressPercent: chnkpCompleted ? 100 : Math.min(100, Math.round((effectiveKchk / 4) * 100)),
+    fulfilledBasis: chnkpCompleted ? chnkpBasis : undefined,
+    rulesSummary: '4 сертификата КЧК под разными судьями (или 1 КЧП/ПК = 2 КЧК, 3 СС = 1 КЧК).',
+    requirements: [
+      {
+        text: '4 сертификата КЧК на монопородных выставках',
+        completed: chnkpCompleted,
+        currentCount: effectiveKchk,
+        targetCount: 4,
+        details: ssCount > 0 ? `КЧК: ${kchkCount}, СС: ${ssCount} (засчитано как ${effectiveKchk} КЧК)` : `КЧК: ${kchkCount}`,
+      },
+    ],
+  })
+  if (chnkpCompleted) {
+    titleExplanations['ЧНКП'] = chnkpBasis
+  }
+
+  // 1.5 ЮНЫЙ ЧЕМПИОН НАЦИОНАЛЬНОГО КЛУБА ПОРОДЫ (ЮЧНКП)
+  const yssCount = data.showTitles?.YSS ?? 0
+  const ykchkCount = (data.showTitles?.YKCHK ?? 0) + ((data.showTitles?.YKCHP ?? 0) * 2)
+  const effectiveYkchk = ykchkCount + (yssCount >= 2 ? 1 : 0)
+  const jchnkpCompleted = effectiveYkchk >= 3
+  const jchnkpBasis = `Набрано ${effectiveYkchk} ЮКЧК на монопородных выставках НКП (норма: 3)`
+  titles.push({
+    id: 'jch-nkp',
+    title: 'Юный чемпион Национального клуба породы',
+    badge: 'ЮЧНКП',
+    domain: 'show',
+    status: jchnkpCompleted ? 'completed' : 'in_progress',
+    progressPercent: jchnkpCompleted ? 100 : Math.min(100, Math.round((effectiveYkchk / 3) * 100)),
+    fulfilledBasis: jchnkpCompleted ? jchnkpBasis : undefined,
+    rulesSummary: '3 сертификата ЮКЧК под разными судьями (или 1 ЮКЧП = 2 ЮКЧК, 3 ЮСС = 1 ЮКЧК).',
+    requirements: [
+      {
+        text: '3 сертификата ЮКЧК на монопородных выставках',
+        completed: jchnkpCompleted,
+        currentCount: effectiveYkchk,
+        targetCount: 3,
+        details: yssCount > 0 ? `ЮКЧК: ${data.showTitles?.YKCHK ?? 0}, ЮСС: ${yssCount}` : `ЮКЧК: ${effectiveYkchk}`,
+      },
+    ],
+  })
+  if (jchnkpCompleted) {
+    titleExplanations['ЮЧНКП'] = jchnkpBasis
+  }
+
+  // 1.6 ВЕТЕРАН ЧЕМПИОН НАЦИОНАЛЬНОГО КЛУБА ПОРОДЫ (ВЧНКП)
+  const vssCount = data.showTitles?.VSS ?? 0
+  const vkchkCount = (data.showTitles?.VKCHK ?? 0) + ((data.showTitles?.VKCHP ?? 0) * 2)
+  const effectiveVkchk = vkchkCount + (vssCount >= 2 ? 1 : 0)
+  const vchnkpCompleted = effectiveVkchk >= 3
+  const vchnkpBasis = `Набрано ${effectiveVkchk} ВКЧК на монопородных выставках НКП (норма: 3)`
+  titles.push({
+    id: 'vch-nkp',
+    title: 'Ветеран чемпион Национального клуба породы',
+    badge: 'ВЧНКП',
+    domain: 'show',
+    status: vchnkpCompleted ? 'completed' : 'in_progress',
+    progressPercent: vchnkpCompleted ? 100 : Math.min(100, Math.round((effectiveVkchk / 3) * 100)),
+    fulfilledBasis: vchnkpCompleted ? vchnkpBasis : undefined,
+    rulesSummary: '3 сертификата ВКЧК под разными судьями (или 1 ВКЧП = 2 ВКЧК, 3 ВСС = 1 ВКЧК).',
+    requirements: [
+      {
+        text: '3 сертификата ВКЧК на монопородных выставках',
+        completed: vchnkpCompleted,
+        currentCount: effectiveVkchk,
+        targetCount: 3,
+        details: vssCount > 0 ? `ВКЧК: ${data.showTitles?.VKCHK ?? 0}, ВСС: ${vssCount}` : `ВКЧК: ${effectiveVkchk}`,
+      },
+    ],
+  })
+  if (vchnkpCompleted) {
+    titleExplanations['ВЧНКП'] = vchnkpBasis
+  }
+
   // =========================================================================
   // 2. СПОРТИВНЫЙ ДОМЕН (КУРСИНГ И БЕГА БОРЗЫХ) — РАЗДЕЛЕНИЕ ПО ДИСЦИПЛИНАМ
   // =========================================================================
@@ -844,6 +927,18 @@ export function evaluateCumulativeTitles(data: DogCareerData): CumulativeEvaluat
   }
   if (chrkfCompleted) {
     officialShowTitles.push({ title: 'ЧРКФ', count: Math.max(1, data.showTitles?.CHRKF ?? 0) })
+  }
+  if (chnkpCompleted) {
+    officialShowTitles.push({ title: 'ЧНКП', count: 1 })
+    titleExplanations['ЧНКП'] = chnkpBasis
+  }
+  if (jchnkpCompleted) {
+    officialShowTitles.push({ title: 'ЮЧНКП', count: 1 })
+    titleExplanations['ЮЧНКП'] = jchnkpBasis
+  }
+  if (vchnkpCompleted) {
+    officialShowTitles.push({ title: 'ВЧНКП', count: 1 })
+    titleExplanations['ВЧНКП'] = vchnkpBasis
   }
 
   if (data.showTitles) {

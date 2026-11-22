@@ -73,10 +73,10 @@ describe('buildDogPassportData invariants', () => {
       },
     })
 
-    // 1. Identity & Name Case
+    // 1. Identity & Name Case (Русская кличка в приоритете)
     expect(data.id).toBe('1234')
-    expect(data.namePrimary).toBe('Al-Zubeyr Hurayrah')
-    expect(data.nameSecondary).toBe('Аль-Зубейр Хурайра')
+    expect(data.namePrimary).toBe('Аль-Зубейр Хурайра')
+    expect(data.nameSecondary).toBe('Al-Zubeyr Hurayrah')
     expect(data.breedPrimary).toBe('Салюки')
     expect(data.sex).toBe('M')
     expect(data.photoUrl).toBe('https://saluki.breedarchive.com/photo/download/82564')
@@ -84,7 +84,7 @@ describe('buildDogPassportData invariants', () => {
     // 2. Titles formatted
     const badges = data.titles.map((t) => t.badge)
     expect(badges).toContain('Supreme Champion')
-    expect(badges).toContain('ЧРКФ РК (КБ)')
+    expect(badges).toContain('ЧРКФ РК')
 
     // 3. Coursing stats
     expect(data.coursing.hasData).toBe(true)

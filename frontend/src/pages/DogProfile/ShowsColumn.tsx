@@ -8,7 +8,6 @@ import {
   SHOW_AWARD_LABELS,
   type ShowAwardKey,
 } from '../../../../backend/lib/show-award-ranking'
-import { bestShowGradeLabel } from '../../../../backend/lib/show-grades'
 import { sortShowHistory } from '../../../../backend/lib/show-dates'
 import { ShowGradeChip } from '../../lib/ShowGradeChip'
 import type { ShowDogCardData } from '../Shows/ShowDogCard'
@@ -25,15 +24,14 @@ import {
 import { HistoryMetaRow } from './HistoryPlacement'
 import { breedToSlug } from '../../lib/breedMapping'
 import type { ProfileHeaderRank } from './DogProfileHeader'
+import {
+  formatShowsCount,
+  resolveBestAwardExhibitionId,
+  resolveBestGradeLabel,
+  type ShowHistoryEntry,
+} from './showsColumnUtils'
 
-export type ShowHistoryEntry = {
-  date: string
-  exhibition_id: number
-  exhibition_title?: string
-  placement: number
-  title?: string
-  grade?: string
-}
+export type { ShowHistoryEntry }
 
 type ShowsColumnProps = {
   dog: ShowDogCardData & { history?: ShowHistoryEntry[] }
@@ -42,57 +40,6 @@ type ShowsColumnProps = {
 }
 
 const THEME = 'camel' as const
-
-function formatShowsCount(count: number): string {
-  const mod10 = count % 10
-  const mod100 = count % 100
-  if (mod100 >= 11 && mod100 <= 19) return `${count} выставок`
-  if (mod10 === 1) return `${count} выставка`
-  if (mod10 >= 2 && mod10 <= 4) return `${count} выставки`
-  return `${count} выставок`
-}
-
-function resolveBestGradeLabel(dog: ShowsColumnProps['dog']): string | null {
-  if (dog.best_grade?.trim()) return dog.best_grade.trim()
-  const history = Array.isArray(dog.history) ? dog.history : []
-  return bestShowGradeLabel(history.map((h) => h.grade))
-}
-
-function resolveBestAwardExhibitionId(
-  history: ShowHistoryEntry[],
-  bestKey: ShowAwardKey | null,
-  bestBadge: string | null,
-): number | null {
-  if (!history || history.length === 0) return null
-
-  // 1. Поиск выставки с высшей наградой bestKey
-  if (bestKey) {
-    const matched = history.find((entry) => {
-      if (!entry.exhibition_id) return false
-      try {
-        const parsed = parseShowTitles(entry.title || '')
-        if (parsed[bestKey] && parsed[bestKey] > 0) return true
-      } catch {
-        // ignore
-      }
-      if (bestBadge && entry.title && entry.title.includes(bestBadge)) {
-        return true
-      }
-      return false
-    })
-    if (matched?.exhibition_id) return matched.exhibition_id
-  }
-
-  // 2. Fallback: выставка с отличной оценкой
-  const bestGradeMatch = history.find(
-    (entry) => entry.exhibition_id && /отл/i.test(entry.grade || ''),
-  )
-  if (bestGradeMatch?.exhibition_id) return bestGradeMatch.exhibition_id
-
-  // 3. Fallback: первая выставка в истории с ID
-  const fallback = history.find((entry) => Boolean(entry.exhibition_id))
-  return fallback?.exhibition_id ?? null
-}
 
 export function ShowsColumn({ dog, rank, breed }: ShowsColumnProps) {
   const t = disciplineTheme(THEME)
@@ -123,23 +70,11 @@ export function ShowsColumn({ dog, rank, breed }: ShowsColumnProps) {
       : null
   const hasHistory = allTimeRank != null
 
-  const headerLink = (
-    <Link
-      to={rankingUrl}
-      className="shrink-0 inline-flex items-center gap-1 rounded-full border border-camel-200/90 bg-camel-100/70 px-2.5 py-0.5 text-xs font-semibold text-camel-900 transition-colors hover:bg-camel-100 hover:border-camel-300"
-      title="Открыть рейтинг выставок"
-    >
-      <span>Рейтинг</span>
-      <ArrowRight className="h-3 w-3 text-camel-700 shrink-0" />
-    </Link>
-  )
-
   return (
     <DisciplineColumnShell>
       <DisciplineStatsCard
         theme={THEME}
         title="Выставки"
-        rankBadge={headerLink}
         rankingUrl={rankingUrl}
       >
         <div className="flex h-full flex-col justify-between gap-3">

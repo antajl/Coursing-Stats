@@ -81,7 +81,7 @@ export const DogDisciplinesDesktopView: React.FC<DogDisciplinesDesktopViewProps>
             breed={headerBreed}
           />
         ) : (
-          <EmptyDisciplineColumn title="Курсинг / БЗМП" theme="forest" />
+          <EmptyDisciplineColumn title="Курсинг" theme="forest" />
         )}
       </div>
 
@@ -102,7 +102,7 @@ export const DogDisciplinesDesktopView: React.FC<DogDisciplinesDesktopViewProps>
             breed={headerBreed}
           />
         ) : (
-          <EmptyDisciplineColumn title="Бега борзых" theme="warm-blue" />
+          <EmptyDisciplineColumn title="Рейсинг" theme="warm-blue" />
         )}
       </div>
 

@@ -93,24 +93,12 @@ export function RacingColumn({
   const hasAnyRank = has2026 || hasHistory || rank?.rank != null
   const startsCount = racingEvents.length
 
-  const headerLink = (
-    <Link
-      to={rankingUrl}
-      className="shrink-0 inline-flex items-center gap-1 rounded-full border border-warm-blue-200/90 bg-warm-blue-50/80 px-2.5 py-0.5 text-xs font-semibold text-warm-blue-800 transition-colors hover:bg-warm-blue-100 hover:border-warm-blue-300"
-      title="Открыть рейтинг бегов"
-    >
-      <span>Рейтинг</span>
-      <ArrowRight className="h-3 w-3 text-warm-blue-600 shrink-0" />
-    </Link>
-  )
-
   return (
     <DisciplineColumnShell>
       {hasRacingData && (
         <DisciplineStatsCard
           theme={THEME}
-          title="Бега борзых"
-          rankBadge={headerLink}
+          title="Рейсинг"
           rankingUrl={rankingUrl}
         >
           <div className="flex h-full flex-col justify-between gap-3">

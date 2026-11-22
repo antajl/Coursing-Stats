@@ -1,9 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { createPortal } from 'react-dom'
 import { toPng } from 'html-to-image'
-import { Download, Share2, X, Smartphone, FileText, Check } from 'lucide-react'
-import type { DogPassportData, PassportFormat } from './passportTypes'
+import { Download, Share2, X, Smartphone, FileText, Check, Copy } from 'lucide-react'
+import type { DogPassportData, PassportFormat, PassportSectionsConfig } from './passportTypes'
 import { DogPassportCard } from './DogPassportCard'
+import { PassportSectionsBar } from './PassportSectionsBar'
 
 export interface DogPassportModalProps {
   isOpen: boolean
@@ -11,14 +12,36 @@ export interface DogPassportModalProps {
   data: DogPassportData
 }
 
+/** Автоматический выбор формата: на десктопах по умолчанию А4, на смартфонах — Stories 9:16 */
+function getPreferredPassportFormat(): PassportFormat {
+  if (typeof window !== 'undefined' && window.innerWidth >= 768) {
+    return 'certificate'
+  }
+  return 'story'
+}
+
 export const DogPassportModal: React.FC<DogPassportModalProps> = ({ isOpen, onClose, data }) => {
-  const [format, setFormat] = useState<PassportFormat>('story')
+  const [format, setFormat] = useState<PassportFormat>(getPreferredPassportFormat)
   const [exporting, setExporting] = useState(false)
   const [downloaded, setDownloaded] = useState(false)
+  const [copied, setCopied] = useState(false)
+  const [sections, setSections] = useState<PassportSectionsConfig>({
+    coursing: data.coursing.hasData,
+    racing: data.racing.hasData,
+    shows: data.shows.hasData,
+    titles: data.titles.length > 0,
+  })
   const cardRef = useRef<HTMLDivElement>(null)
+  const scrollContainerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     if (!isOpen) return
+    // При открытии автоматически выставляем рекомендованный формат под текущее устройство
+    setFormat(getPreferredPassportFormat())
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollTop = 0
+    }
+
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose()
     }
@@ -30,6 +53,12 @@ export const DogPassportModal: React.FC<DogPassportModalProps> = ({ isOpen, onCl
       window.removeEventListener('keydown', handleKeyDown)
     }
   }, [isOpen, onClose])
+
+  useEffect(() => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollTop = 0
+    }
+  }, [format])
 
   if (!isOpen) return null
 
@@ -91,6 +120,37 @@ export const DogPassportModal: React.FC<DogPassportModalProps> = ({ isOpen, onCl
     handleDownload()
   }
 
+  const handleCopy = async () => {
+    if (!cardRef.current || exporting) return
+    setExporting(true)
+    try {
+      const dataUrl = await toPng(cardRef.current, {
+        quality: 0.98,
+        pixelRatio: 2,
+        cacheBust: true,
+      })
+      const res = await fetch(dataUrl)
+      const blob = await res.blob()
+
+      if (
+        typeof navigator !== 'undefined' &&
+        navigator.clipboard &&
+        typeof ClipboardItem !== 'undefined'
+      ) {
+        await navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })])
+        setCopied(true)
+        setTimeout(() => setCopied(false), 2500)
+        return
+      }
+    } catch (err) {
+      console.error('Failed to copy passport to clipboard', err)
+    } finally {
+      setExporting(false)
+    }
+    // Fallback к скачиванию, если буфер недоступен
+    handleDownload()
+  }
+
   return createPortal(
     <div
       role="dialog"
@@ -101,7 +161,7 @@ export const DogPassportModal: React.FC<DogPassportModalProps> = ({ isOpen, onCl
         if (e.target === e.currentTarget) onClose()
       }}
     >
-      <div className="relative w-full max-w-4xl max-h-[94vh] flex flex-col rounded-2xl border border-[#D5C9B8] bg-[#FAF8F5] shadow-2xl overflow-hidden">
+      <div className="relative w-full max-w-5xl max-h-[94vh] flex flex-col rounded-2xl border border-[#D5C9B8] bg-[#FAF8F5] shadow-2xl overflow-hidden">
         {/* Шапка модального окна */}
         <div className="flex items-center justify-between border-b border-[#EAE3D6] px-4 sm:px-6 py-3 bg-white shrink-0">
           <div className="flex items-center gap-3">
@@ -154,10 +214,20 @@ export const DogPassportModal: React.FC<DogPassportModalProps> = ({ isOpen, onCl
           </button>
         </div>
 
+        {/* Панель настройки разделов диплома */}
+        <PassportSectionsBar
+          sections={sections}
+          setSections={setSections}
+          hasTitles={data.titles.length > 0}
+        />
+
         {/* Область интерактивного предпросмотра карточки */}
-        <div className="flex-1 overflow-auto p-4 sm:p-6 flex items-center justify-center bg-[#F3EFEA]/60">
+        <div
+          ref={scrollContainerRef}
+          className="flex-1 overflow-auto p-3 sm:p-6 bg-[#F3EFEA]/60 flex justify-center items-start"
+        >
           <div className="inline-block transition-transform">
-            <DogPassportCard ref={cardRef} data={data} format={format} />
+            <DogPassportCard ref={cardRef} data={data} format={format} sections={sections} />
           </div>
         </div>
 
@@ -168,6 +238,26 @@ export const DogPassportModal: React.FC<DogPassportModalProps> = ({ isOpen, onCl
           </div>
 
           <div className="flex items-center gap-2">
+            <button
+              type="button"
+              onClick={handleCopy}
+              disabled={exporting}
+              className="inline-flex items-center gap-1.5 rounded-xl border border-[#D5C9B8] bg-[#FAF8F5] px-3 sm:px-4 py-2 text-xs font-semibold text-[#1C1917] hover:bg-[#F2ECE1] transition-all disabled:opacity-50 cursor-pointer min-h-[38px]"
+              title="Скопировать изображение в буфер обмена для быстрой отправки в Telegram или чаты"
+            >
+              {copied ? (
+                <>
+                  <Check className="h-3.5 w-3.5 text-[#1F432E]" aria-hidden />
+                  <span className="text-[#1F432E]">Скопировано!</span>
+                </>
+              ) : (
+                <>
+                  <Copy className="h-3.5 w-3.5 text-[#8C6D37]" aria-hidden />
+                  <span>Скопировать</span>
+                </>
+              )}
+            </button>
+
             <button
               type="button"
               onClick={handleShare}

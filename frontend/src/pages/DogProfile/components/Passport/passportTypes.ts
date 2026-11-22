@@ -11,6 +11,7 @@ export interface DogPassportHighlight {
 
 export interface DogPassportCoursingStats {
   hasData: boolean
+  disciplineTitle?: string
   totalStarts: number
   gold: number
   silver: number
@@ -54,12 +55,25 @@ export interface DogPassportShowStats {
   bigCount: number
   bobCount: number
   rankScore?: number | null
+  breedRank?: number | null
   yearBreedRank?: number | null
+}
+
+export type DogPassportTitleCategory = 'supreme' | 'coursing' | 'racing' | 'shows'
+
+export interface PassportSectionsConfig {
+  coursing: boolean
+  racing: boolean
+  shows: boolean
+  titles: boolean
 }
 
 export interface DogPassportTitle {
   badge: string
   label: string
+  display?: string
+  category: DogPassportTitleCategory
+  count?: number
 }
 
 export interface DogPassportData {

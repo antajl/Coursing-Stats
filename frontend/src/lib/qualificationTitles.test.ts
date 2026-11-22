@@ -24,7 +24,7 @@ describe('mergeDogProfileTitles', () => {
     expect(byTitle['ЧРКФ РК']).toBe(1)
     expect(byTitle.ЧРКФ).toBe(1)
     expect(byTitle.BIS).toBe(1)
-    expect(byTitle.ЛПП).toBe(5)
+    expect(byTitle.BOB).toBe(5)
     expect(byTitle.RegCACL).toBe(2)
     expect(titles[0]?.title).toBe('BIS')
   })
@@ -48,7 +48,7 @@ describe('buildDogProfileTitleGroups', () => {
       showTitles: { ...EMPTY_SHOW_TITLES, BIS: 1, BIG: 1, BOB: 5, CAC: 7, CHRKF: 1 },
     })
 
-    expect(groups.show.map((t) => t.title)).toEqual(['BIS', 'BIG', 'ЛПП', 'CAC', 'ЧРКФ'])
+    expect(groups.show.map((t) => t.title)).toEqual(['BIS', 'BIG', 'BOB', 'CAC', 'ЧРКФ'])
     expect(groups.competition.map((t) => t.title)).toEqual(['ЧРКФ РК', 'RegCACL'])
   })
 
@@ -90,7 +90,7 @@ describe('buildDogProfileTitleGroups', () => {
     })
     const byTitle = Object.fromEntries(titles.map((t) => [t.title, t.count]))
     expect(byTitle.CAC).toBe(3)
-    expect(byTitle.ЛПП).toBe(1)
+    expect(byTitle.BOB).toBe(1)
     expect(byTitle.CW).toBe(1)
   })
 })

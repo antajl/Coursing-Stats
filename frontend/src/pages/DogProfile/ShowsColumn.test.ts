@@ -1,7 +1,12 @@
 import { describe, expect, it } from 'vitest'
 import { sortShowHistory } from '../../../../backend/lib/show-dates'
+import { ShowsColumn } from './ShowsColumn'
 
 describe('ShowsColumn history sorting', () => {
+  it('exports ShowsColumn component correctly', () => {
+    expect(typeof ShowsColumn).toBe('function')
+  })
+
   it('sorts history entries in strictly descending chronological order (newest first)', () => {
     // Exact scrambled case from user screenshot
     const rawHistory = [

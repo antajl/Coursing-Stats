@@ -94,7 +94,7 @@ export default function DogProfile() {
             breed={data.headerBreed}
           />
         ) : (
-          <EmptyDisciplineColumn title="Курсинг / БЗМП" theme="forest" />
+          <EmptyDisciplineColumn title="Курсинг" theme="forest" />
         )
       case 'racing':
         return data.showRacingColumn ? (
@@ -113,7 +113,7 @@ export default function DogProfile() {
             breed={data.headerBreed}
           />
         ) : (
-          <EmptyDisciplineColumn title="Бега борзых" theme="warm-blue" />
+          <EmptyDisciplineColumn title="Рейсинг" theme="warm-blue" />
         )
       case 'shows':
         return data.showDog ? (

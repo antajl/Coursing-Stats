@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
-import type { DogPassportData, DogPassportHighlight, DogPassportTitle } from './passportTypes'
-import { toDogTitleCase } from '../../../../lib/dogName'
+import type { DogPassportData, DogPassportHighlight, DogPassportTitle, DogPassportTitleCategory } from './passportTypes'
+import { toDogTitleCase, parseDogName } from '../../../../lib/dogName'
 import { displayBreed } from '../../../../lib/breedMapping'
 import { presentShowAwards } from '../../../../../../backend/lib/show-award-ranking'
 import { competitionTitleDisplayName } from '../../../../../../backend/lib/competition-titles'
@@ -36,6 +36,81 @@ function extractTitleString(t: string | DogTitle): string {
   return (t?.title || '').trim()
 }
 
+export function getShortTitleDisplay(badge: string): string {
+  if (badge.startsWith('ГЧРКФ РК') || badge === 'ГЧРКФ') return 'Гранд чемпион РКФ'
+  if (badge.startsWith('ЧРКФ РК')) return 'Чемпион РКФ'
+  if (badge.startsWith('ПЧРКФ РК')) return 'Чемпион в породе'
+  if (badge.startsWith('ЧР РК')) return 'Чемпион России'
+  if (badge.startsWith('НЧ РК') || badge === 'НЧ') return 'Нац. чемпион'
+  if (badge.startsWith('ПКР РК') || badge === 'ПКР') return 'Победитель Кубка России'
+  if (badge.startsWith('ПЧ РК') || badge === 'ПЧ') return 'Чемпион породы'
+  if (badge === 'ЧР') return 'Чемпион России'
+  if (badge === 'ЧРКФ') return 'Чемпион РКФ'
+  if (badge === 'ЧНКП') return 'Чемпион НКП'
+  if (badge === 'ЮЧР') return 'Юный чемпион России'
+  if (badge === 'ВЧР') return 'Ветеран-чемпион России'
+  if (badge === 'ЮЧРКФ') return 'Юный чемпион РКФ'
+  if (badge === 'ВЧРКФ') return 'Ветеран-чемпион РКФ'
+  return badge
+}
+
+function extractItems(
+  items: (string | DogTitle)[],
+  category: DogPassportTitleCategory,
+): DogPassportTitle[] {
+  const result: DogPassportTitle[] = []
+  const seen = new Set<string>()
+  const isShow = category === 'shows'
+
+  for (const item of items) {
+    const rawTitle = typeof item === 'string' ? item : item?.title || ''
+    const count = typeof item === 'object' && item && item.count ? item.count : 1
+    if (!rawTitle) continue
+
+    const isExplicitShowOrSupremeToken =
+      /^(АЧР|ГЧР|ЮГЧР|ВГЧР|ЧР|ЮЧР|ВЧР|ЧРКФ|ЮЧРКФ|ВЧРКФ|ЧНКП|ЮЧНКП|ВЧНКП|ЧП|ЮЧП|ВЧП|ШОУ ЧР|C\.I\.B\.?|C\.I\.E\.?|C\.I\.C\.?|ГЧР РК|ГЧРКФ РК)$/i.test(
+        rawTitle,
+      )
+
+    const badge =
+      isShow || (category === 'supreme' && isExplicitShowOrSupremeToken)
+        ? rawTitle
+        : competitionTitleDisplayName(rawTitle)
+
+    // Убираем суффиксы (КБ / ББ) в строках курсинга и рейсинга
+    const cleanBadge = (category === 'coursing' || category === 'racing' || category === 'supreme')
+      ? badge.replace(/\s*\((?:КБ|ББ|БЗМП|LC|LR)\)/gi, '').trim()
+      : badge
+
+    const label = getFullTitleLabel(rawTitle, isShow) || getFullTitleLabel(cleanBadge, isShow) || cleanBadge
+    const display = getShortTitleDisplay(cleanBadge)
+
+    const key = `${category}-${cleanBadge}`
+    if (seen.has(key)) continue
+    seen.add(key)
+
+    result.push({
+      badge: cleanBadge,
+      label,
+      display,
+      category,
+      count,
+    })
+  }
+
+  return result
+}
+
+export function formatPassportTitle(rawTitle: string): DogPassportTitle {
+  const badge = competitionTitleDisplayName(rawTitle)
+  const isCoursing = rawTitle.includes('(КБ)') || badge.includes('(КБ)')
+  const isRacing = rawTitle.includes('(ББ)') || badge.includes('(ББ)')
+  const display = getShortTitleDisplay(badge)
+  const label = getFullTitleLabel(rawTitle) || getFullTitleLabel(badge) || badge
+  const category: DogPassportTitleCategory = isCoursing ? 'coursing' : isRacing ? 'racing' : 'shows'
+  return { badge, label, display, category }
+}
+
 export function buildDogPassportData({
   dog,
   showDog,
@@ -49,42 +124,34 @@ export function buildDogPassportData({
   racing,
   speedStats,
   coursingStats,
+  ranks = [],
 }: UseDogPassportDataParams): DogPassportData {
   const dogId = dog?.id || showDog?.id || '0'
-  const rawPrimary = dog?.name_lat || dog?.name_ru || showDog?.name_lat || showDog?.name_ru || 'Собака'
-  const namePrimary = toDogTitleCase(rawPrimary)
+  const rawLat = dog?.name_lat || showDog?.name_lat || null
+  const rawRu = dog?.name_ru || showDog?.name_ru || null
+  const { primary, secondary } = parseDogName(rawLat, rawRu)
 
-  let nameSecondary: string | null = null
-  if (dog?.name_ru && dog.name_lat && dog.name_ru !== dog.name_lat) {
-    nameSecondary = toDogTitleCase(dog.name_ru)
-  } else if (showDog?.name_ru && showDog.name_lat && showDog.name_ru !== showDog.name_lat) {
-    nameSecondary = toDogTitleCase(showDog.name_ru)
-  }
+  const namePrimary = primary || 'Собака'
+  const nameSecondary = secondary
 
   const rawBreed = dog?.breed || showDog?.breed || ''
   const breedDisplay = displayBreed(rawBreed)
   const breedPrimary = breedDisplay.primary || rawBreed
   const breedVariety = breedDisplay.variety || null
 
-  // Официальные звания с человекочитаемыми расшифровками
-  const rawTitles = [
-    ...supremeTitles.map(extractTitleString),
-    ...competitionTitles.map(extractTitleString),
-    ...coursingTitles.map(extractTitleString),
-    ...racingTitles.map(extractTitleString),
-    ...showTitles.map(extractTitleString),
-  ].filter(Boolean)
+  // Официальные звания сгруппированные по категориям без урезания
+  const titles: DogPassportTitle[] = [
+    ...extractItems(supremeTitles, 'supreme'),
+    ...extractItems(coursingTitles, 'coursing'),
+    ...extractItems(racingTitles, 'racing'),
+    ...extractItems(showTitles, 'shows'),
+  ]
 
-  const seenBadges = new Set<string>()
-  const titles: DogPassportTitle[] = []
-  for (const t of rawTitles) {
-    const badge = competitionTitleDisplayName(t)
-    if (seenBadges.has(badge)) continue
-    seenBadges.add(badge)
-    const full = getFullTitleLabel(t) || getFullTitleLabel(badge)
-    titles.push({ badge, label: full || badge })
-    if (titles.length >= 8) break
-  }
+  // Определение названия дисциплины курсинга/БЗМП
+  const isBzmp =
+    events.length > 0 &&
+    events.every((e: any) => e.competition_kind === 'bzmp' || e.event_type === 'bzmp')
+  const coursingDisciplineTitle = isBzmp ? 'БЗМП' : 'Курсинг'
 
   // 1. Курсинг (отдельно от рейсинга)
   const cStats = dog?.coursing_stats || coursing || {}
@@ -183,6 +250,7 @@ export function buildDogPassportData({
     titles,
     coursing: {
       hasData: coursingStarts > 0,
+      disciplineTitle: coursingDisciplineTitle,
       totalStarts: coursingStarts,
       gold: coursingGold,
       silver: coursingSilver,
@@ -223,6 +291,14 @@ export function buildDogPassportData({
       bigCount,
       bobCount,
       rankScore: showDog?.rank_score || null,
+      breedRank:
+        showDog?.breed_rank ||
+        (ranks && ranks.find((r) => r.key === 'shows')?.breedRank) ||
+        null,
+      yearBreedRank:
+        showDog?.year_breed_rank ||
+        (ranks && ranks.find((r) => r.key === 'shows')?.yearBreedRank) ||
+        null,
     },
     highlights,
     dogUrl,

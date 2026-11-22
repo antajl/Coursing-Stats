@@ -17,6 +17,7 @@ export interface UseDogProfileTabsProps {
   showCoursingColumn: boolean
   coursingTotalStarts?: number
   coursingEventsCount: number
+  isBzmp?: boolean
   showRacingColumn: boolean
   racingTotalStarts?: number
   racingEventsCount: number
@@ -31,6 +32,7 @@ export function useDogProfileTabs({
   showCoursingColumn,
   coursingTotalStarts,
   coursingEventsCount,
+  isBzmp = false,
   showRacingColumn,
   racingTotalStarts,
   racingEventsCount,
@@ -92,7 +94,7 @@ export function useDogProfileTabs({
     if (showCoursingColumn) {
       tabs.push({
         id: 'coursing',
-        label: 'Курсинг',
+        label: isBzmp ? 'БЗМП' : 'Курсинг',
         icon: Rabbit,
         count: coursingTotalStarts || coursingEventsCount || 0,
         theme: 'forest',
@@ -101,7 +103,7 @@ export function useDogProfileTabs({
     if (showRacingColumn) {
       tabs.push({
         id: 'racing',
-        label: 'Бега',
+        label: 'Рейсинг',
         icon: Gauge,
         count: racingTotalStarts || racingEventsCount || 0,
         theme: 'warm-blue',
@@ -121,6 +123,7 @@ export function useDogProfileTabs({
     showCoursingColumn,
     coursingTotalStarts,
     coursingEventsCount,
+    isBzmp,
     showRacingColumn,
     racingTotalStarts,
     racingEventsCount,
