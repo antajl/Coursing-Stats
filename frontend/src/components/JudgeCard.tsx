@@ -101,25 +101,18 @@ export default function JudgeCard({
       <div className="grid grid-cols-[minmax(0,1fr)_auto] md:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)_auto] items-center gap-3 sm:gap-5 w-full py-0.5">
         {/* Колонка 1: Судья (Имя + Породы) */}
         <div className="flex flex-col justify-center min-w-0">
-          <div className="flex items-center gap-2 min-w-0">
+          <div className="min-w-0">
             <h3 className="text-sm sm:text-base font-bold leading-snug text-charcoal-900 group-hover:text-camel-800 transition-colors truncate">
               {displayName}
             </h3>
-            {/* На мобильных бейдж строгости рядом с именем */}
-            <span
-              className={`inline-flex md:hidden items-center gap-1 rounded-full border px-2 py-0.25 text-[9.5px] font-medium tracking-tight shrink-0 ${strictness.badgeClass}`}
-            >
-              <span className={`h-1.5 w-1.5 rounded-full ${strictness.dotClass}`} />
-              <span>{strictness.label}</span>
-            </span>
           </div>
 
           <div className="text-[11.5px] sm:text-xs text-charcoal-500 font-medium truncate mt-0.5">
             <span>{totalBreeds} {formatBreedsCount(totalBreeds)}</span>
           </div>
 
-          {/* На мобильных (< md) стаж и забеги */}
-          <div className="flex md:hidden items-center gap-1.5 text-[10.5px] text-charcoal-600 font-medium mt-1">
+          {/* На мобильных (< md) стаж, забеги и стиль судейства */}
+          <div className="flex md:hidden items-center flex-wrap gap-1.5 text-[10.5px] text-charcoal-600 font-medium mt-1">
             {yearsActiveLabel && <span>{yearsActiveLabel}</span>}
             {typeof judge.total_evaluations_count === 'number' && judge.total_evaluations_count > 0 && (
               <>
@@ -127,6 +120,13 @@ export default function JudgeCard({
                 <span>{formatRunsCount(judge.total_evaluations_count)}</span>
               </>
             )}
+            <span
+              className={`inline-flex items-center gap-1 rounded-full border px-1.5 py-0.25 text-[9.5px] font-medium tracking-tight shrink-0 ml-0.5 ${strictness.badgeClass}`}
+              title={strictness.detail}
+            >
+              <span className={`h-1.5 w-1.5 rounded-full ${strictness.dotClass}`} />
+              <span>{strictness.label}</span>
+            </span>
           </div>
         </div>
 

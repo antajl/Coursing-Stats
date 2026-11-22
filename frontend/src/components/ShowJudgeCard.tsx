@@ -146,17 +146,10 @@ export default function ShowJudgeCard({
             </div>
           )}
           <div className="flex flex-col justify-center min-w-0 flex-1">
-            <div className="flex items-center gap-2 min-w-0">
+            <div className="min-w-0">
               <h3 className="text-sm sm:text-base font-bold leading-snug text-charcoal-900 group-hover:text-camel-800 transition-colors truncate">
                 {displayName}
               </h3>
-              {/* На мобильных бейдж строгости рядом с именем */}
-              <span
-                className={`inline-flex md:hidden items-center gap-1 rounded-full border px-2 py-0.25 text-[9.5px] font-medium tracking-tight shrink-0 ${strictness.badgeClass}`}
-              >
-                <span className={`h-1.5 w-1.5 rounded-full ${strictness.dotClass}`} />
-                <span>{strictness.label}</span>
-              </span>
             </div>
 
             <div className="text-[11.5px] sm:text-xs text-charcoal-500 font-medium truncate mt-0.5">
@@ -169,8 +162,8 @@ export default function ShowJudgeCard({
               )}
             </div>
 
-            {/* На мобильных (< md) год и число оценок */}
-            <div className="flex md:hidden items-center gap-1.5 text-[10.5px] text-charcoal-600 font-medium mt-1">
+            {/* На мобильных (< md) год, число оценок и стиль судейства */}
+            <div className="flex md:hidden items-center flex-wrap gap-1.5 text-[10.5px] text-charcoal-600 font-medium mt-1">
               <span>{filterYear && filterYear !== 'all' ? `${filterYear} г.` : 'Все года'}</span>
               {evaluatedCount > 0 && (
                 <>
@@ -178,6 +171,13 @@ export default function ShowJudgeCard({
                   <span>{formattedEvaluations}</span>
                 </>
               )}
+              <span
+                className={`inline-flex items-center gap-1 rounded-full border px-1.5 py-0.25 text-[9.5px] font-medium tracking-tight shrink-0 ml-0.5 ${strictness.badgeClass}`}
+                title={strictness.detail}
+              >
+                <span className={`h-1.5 w-1.5 rounded-full ${strictness.dotClass}`} />
+                <span>{strictness.label}</span>
+              </span>
             </div>
           </div>
         </div>
