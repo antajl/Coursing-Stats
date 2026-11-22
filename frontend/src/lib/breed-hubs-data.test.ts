@@ -103,7 +103,7 @@ describe('breed-hubs-data', () => {
   })
 
   it('breed annual leaders index has valid structure and historical records', () => {
-    expect(annualLeaders.schema).toBe('coursing-stats/breed-annual-leaders-v1')
+    expect(annualLeaders.schema).toBe('coursing-stats/breed-annual-leaders-v2')
     expect(annualLeaders.breeds_with_data).toBeGreaterThanOrEqual(50)
     expect(annualLeaders.total_entries).toBeGreaterThanOrEqual(300)
 
@@ -124,5 +124,22 @@ describe('breed-hubs-data', () => {
       expect(leader.name_lat).toBeTruthy()
       expect(leader.total_starts).toBeGreaterThan(0)
     }
+
+    // Shows CAC & Monobreed Leaders & All-Time Top
+    const showsCacBySlug = (annualLeaders as any).shows_cac_by_slug as Record<string, any[]>
+    const showsMonoBySlug = (annualLeaders as any).shows_mono_by_slug as Record<string, any[]>
+    const showsAllTimeBySlug = (annualLeaders as any).shows_all_time_by_slug as Record<string, any[]>
+    const showsStatsBySlug = (annualLeaders as any).shows_stats_by_slug as Record<string, any>
+
+    expect(showsCacBySlug).toBeDefined()
+    expect(showsMonoBySlug).toBeDefined()
+    expect(showsAllTimeBySlug).toBeDefined()
+    expect(showsStatsBySlug).toBeDefined()
+
+    expect(showsCacBySlug.whippet.length).toBeGreaterThan(0)
+    expect(showsMonoBySlug.whippet.length).toBeGreaterThan(0)
+    expect(showsAllTimeBySlug.whippet.length).toBeGreaterThan(0)
+    expect(showsStatsBySlug.whippet.total_dogs).toBeGreaterThan(0)
+    expect(showsStatsBySlug.whippet.total_mono_exhibitions).toBeGreaterThan(0)
   })
 })

@@ -2,6 +2,8 @@ import { useMemo, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import {
   Trophy,
+  Award,
+  Crown,
   ArrowUpRight,
   HelpCircle,
   ChevronDown,
@@ -20,11 +22,15 @@ import {
   useCoursingRecordsByBreed,
   useBreedAnnualLeaders,
   type AnnualDogLeader,
+  type AnnualShowDogLeader,
+  type ShowAllTimeDog,
+  type BreedShowStats,
 } from '../../hooks/useStaticData'
 import { matchesBreedFilter } from '../../lib/breedMapping'
 import { getBreedArchiveUrl } from '../../lib/breedArchive'
 import DoninoColumnPlaque, { DoninoColumnShell } from '../SpeedRecords/DoninoColumnPlaque'
 import BreedHubColumns, { type SpeedRecordItem } from './BreedHubColumns'
+import { BreedShowsSection } from './components/BreedShowsSection'
 
 interface TopPlacementItem {
   dog_id: number
@@ -45,6 +51,7 @@ export default function BreedHub() {
   const { slug } = useParams<{ slug: string }>()
   const breedInfo = useMemo(() => (slug ? getBreedHubBySlug(slug) : undefined), [slug])
   const [isDescExpanded, setIsDescExpanded] = useState(false)
+  const [statsMode, setStatsMode] = useState<'sport' | 'shows'>('sport')
 
   // Ссылка на международную базу родословных The Breed Archive (если поддерживается для породы)
   const breedArchiveUrl = useMemo(
@@ -77,6 +84,26 @@ export default function BreedHub() {
   const racingLeaders = useMemo(() => {
     if (!slug || !annualLeadersRes?.data?.racing_by_slug) return []
     return (annualLeadersRes.data.racing_by_slug[slug] || []) as AnnualDogLeader[]
+  }, [slug, annualLeadersRes])
+
+  const showsCacLeaders = useMemo(() => {
+    if (!slug || !annualLeadersRes?.data?.shows_cac_by_slug) return []
+    return (annualLeadersRes.data.shows_cac_by_slug[slug] || []) as AnnualShowDogLeader[]
+  }, [slug, annualLeadersRes])
+
+  const showsMonoLeaders = useMemo(() => {
+    if (!slug || !annualLeadersRes?.data?.shows_mono_by_slug) return []
+    return (annualLeadersRes.data.shows_mono_by_slug[slug] || []) as AnnualShowDogLeader[]
+  }, [slug, annualLeadersRes])
+
+  const showsAllTimeTop = useMemo(() => {
+    if (!slug || !annualLeadersRes?.data?.shows_all_time_by_slug) return []
+    return (annualLeadersRes.data.shows_all_time_by_slug[slug] || []) as ShowAllTimeDog[]
+  }, [slug, annualLeadersRes])
+
+  const showsStats = useMemo(() => {
+    if (!slug || !annualLeadersRes?.data?.shows_stats_by_slug) return null
+    return (annualLeadersRes.data.shows_stats_by_slug[slug] || null) as BreedShowStats | null
   }, [slug, annualLeadersRes])
 
   const annualLeaders = useMemo(() => {
@@ -235,14 +262,17 @@ export default function BreedHub() {
     )
   }
 
-  const seoTitle = `${breedInfo.nameRu} (${breedInfo.nameLat}) — лучшие собаки по годам, результаты забегов и рекорды | Курсинг Статс`
-  const seoDesc = `Персональный хаб породы ${breedInfo.nameRu} (${breedInfo.nameLat}) в курсинге, бегах борзых и БЗМП: зал славы чемпионов по годам с 2015 года, замеры скорости в Донино (км/ч), статистика побед и регламент состязаний.`
+  const seoTitle = `${breedInfo.nameRu} (${breedInfo.nameLat}) — спорт, выставки РКФ, лучшие собаки по годам и рекорды | Курсинг Статс`
+  const seoDesc = `Персональный хаб породы ${breedInfo.nameRu} (${breedInfo.nameLat}) в курсинге, бегах борзых, выставках РКФ и смотрах НКП: зал славы чемпионов с 2015 года, замеры скорости в Донино (км/ч), рейтинг САС и монопородок.`
   const seoKeywords = [
     breedInfo.nameRu.toLowerCase(),
     breedInfo.nameLat.toLowerCase(),
     breedInfo.canonicalKey.toLowerCase(),
     `курсинг ${breedInfo.nameRu.toLowerCase()}`,
     `бега ${breedInfo.nameRu.toLowerCase()}`,
+    `выставки ${breedInfo.nameRu.toLowerCase()}`,
+    `монопородка ${breedInfo.nameRu.toLowerCase()}`,
+    `рейтинг нкп ${breedInfo.nameRu.toLowerCase()}`,
     `скорость ${breedInfo.nameRu.toLowerCase()}`,
     `рейтинг ${breedInfo.nameRu.toLowerCase()}`,
     `чемпионы ${breedInfo.nameRu.toLowerCase()}`,
@@ -305,15 +335,35 @@ export default function BreedHub() {
               {breedInfo.lead}
             </p>
 
-            {/* Единая строка действий: в мобильной версии строго 1 строка (flex-nowrap), на десктопе авто-ширина */}
-            <div className="flex flex-nowrap items-center gap-1.5 sm:gap-2 mt-2.5 pt-2 border-t border-old-money-100/80">
+            {/* Единая строка действий: Спорт, САС, Моно НКП, Archive, История */}
+            <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mt-2.5 pt-2 border-t border-old-money-100/80">
               <Link
                 to={`/competitions/ranking/2026/?breed=${breedInfo.slug}`}
-                className="cs-glass-pill flex-1 sm:flex-initial inline-flex h-8 items-center justify-center gap-1 sm:gap-1.5 rounded-full px-2 sm:px-3 text-xs font-semibold shrink-0 cursor-pointer text-charcoal-700 hover:text-camel-800 transition-all active:scale-95"
-                title={`Полный рейтинг породы ${breedInfo.nameRu}`}
+                className="cs-glass-pill inline-flex h-8 items-center justify-center gap-1 sm:gap-1.5 rounded-full px-2 sm:px-3 text-xs font-semibold shrink-0 cursor-pointer text-charcoal-700 hover:text-camel-800 transition-all active:scale-95"
+                title={`Спортивный рейтинг породы ${breedInfo.nameRu}`}
               >
                 <Trophy className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
-                <span>Рейтинг</span>
+                <span>Спорт</span>
+                <ArrowUpRight className="h-3.5 w-3.5 text-charcoal-400 shrink-0" aria-hidden />
+              </Link>
+
+              <Link
+                to={`/shows/?tab=ranking&breed=${breedInfo.slug}&scope=all_breed`}
+                className="cs-glass-pill inline-flex h-8 items-center justify-center gap-1 sm:gap-1.5 rounded-full px-2 sm:px-3 text-xs font-semibold shrink-0 cursor-pointer text-charcoal-700 hover:text-camel-800 transition-all active:scale-95"
+                title={`Выставочный рейтинг САС породы ${breedInfo.nameRu}`}
+              >
+                <Award className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
+                <span>САС</span>
+                <ArrowUpRight className="h-3.5 w-3.5 text-charcoal-400 shrink-0" aria-hidden />
+              </Link>
+
+              <Link
+                to={`/shows/?tab=calendar&breed=${breedInfo.slug}&scope=mono`}
+                className="cs-glass-pill inline-flex h-8 items-center justify-center gap-1 sm:gap-1.5 rounded-full px-2 sm:px-3 text-xs font-semibold shrink-0 cursor-pointer text-charcoal-700 hover:text-camel-800 transition-all active:scale-95"
+                title={`Календарь монопородных выставок НКП породы ${breedInfo.nameRu}`}
+              >
+                <Crown className="h-3.5 w-3.5 text-amber-700 shrink-0" aria-hidden />
+                <span>Моно НКП</span>
                 <ArrowUpRight className="h-3.5 w-3.5 text-charcoal-400 shrink-0" aria-hidden />
               </Link>
 
@@ -322,7 +372,7 @@ export default function BreedHub() {
                   href={breedArchiveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="cs-glass-pill flex-1 sm:flex-initial inline-flex h-8 items-center justify-center gap-1 sm:gap-1.5 rounded-full px-2 sm:px-3 text-xs font-semibold shrink-0 cursor-pointer text-charcoal-700 hover:text-camel-800 transition-all active:scale-95"
+                  className="cs-glass-pill inline-flex h-8 items-center justify-center gap-1 sm:gap-1.5 rounded-full px-2 sm:px-3 text-xs font-semibold shrink-0 cursor-pointer text-charcoal-700 hover:text-camel-800 transition-all active:scale-95"
                   title={`Международная база родословных The Breed Archive (${breedInfo.nameLat})`}
                 >
                   <img
@@ -339,7 +389,7 @@ export default function BreedHub() {
               <button
                 type="button"
                 onClick={() => setIsDescExpanded(!isDescExpanded)}
-                className="cs-glass-pill flex-1 sm:flex-initial inline-flex h-8 items-center justify-center gap-1 sm:gap-1.5 rounded-full px-2 sm:px-3 text-xs font-semibold shrink-0 cursor-pointer text-charcoal-700 hover:text-camel-800 transition-all active:scale-95"
+                className="cs-glass-pill inline-flex h-8 items-center justify-center gap-1 sm:gap-1.5 rounded-full px-2 sm:px-3 text-xs font-semibold shrink-0 cursor-pointer text-charcoal-700 hover:text-camel-800 transition-all active:scale-95"
                 aria-expanded={isDescExpanded}
               >
                 <BookOpen className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
@@ -361,43 +411,104 @@ export default function BreedHub() {
             )}
           </div>
 
-          {/* Правая колонка: вертикальный отсек с реестром 4 ключевых метрик без внутренней пилюли */}
-          <div className="bg-cream-50/50 px-4 py-2.5 sm:px-5 sm:py-3 md:px-6 flex flex-col justify-center divide-y divide-old-money-200/50">
-            <div className="flex items-center justify-between py-1 sm:py-1.5 text-xs">
-              <span className="text-charcoal-600 font-medium">Собак в состязаниях</span>
-              <span className="font-bold font-sans tabular-nums text-charcoal-900 text-sm">
-                {placementAllLoading ? '…' : breedStats.totalDogs.toLocaleString('ru-RU')}
-              </span>
+          {/* Правая колонка: вертикальный отсек с реестром 4 ключевых метрик (Спорт vs Выставки) */}
+          <div className="bg-cream-50/50 px-4 py-2.5 sm:px-5 sm:py-3 md:px-6 flex flex-col justify-center">
+            <div className="flex items-center justify-between pb-1.5 mb-1 border-b border-old-money-200/50">
+              <div className="inline-flex rounded-lg bg-cream-100/90 p-0.5 text-[11px] font-semibold">
+                <button
+                  type="button"
+                  onClick={() => setStatsMode('sport')}
+                  className={`px-2 py-0.5 rounded-md transition-all cursor-pointer ${
+                    statsMode === 'sport'
+                      ? 'bg-white shadow-2xs text-charcoal-900 font-bold'
+                      : 'text-charcoal-500 hover:text-charcoal-800'
+                  }`}
+                >
+                  Спорт
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setStatsMode('shows')}
+                  className={`px-2 py-0.5 rounded-md transition-all cursor-pointer ${
+                    statsMode === 'shows'
+                      ? 'bg-white shadow-2xs text-charcoal-900 font-bold'
+                      : 'text-charcoal-500 hover:text-charcoal-800'
+                  }`}
+                >
+                  Выставки
+                </button>
+              </div>
+              <span className="text-[10px] text-charcoal-400 font-medium">Паспорт породы</span>
             </div>
-            <div className="flex items-center justify-between py-1 sm:py-1.5 text-xs">
-              <span className="text-charcoal-600 font-medium">Всего забегов</span>
-              <span className="font-bold font-sans tabular-nums text-charcoal-900 text-sm">
-                {placementAllLoading ? '…' : breedStats.totalStarts.toLocaleString('ru-RU')}
-              </span>
-            </div>
-            <div className="flex items-center justify-between py-1 sm:py-1.5 text-xs">
-              <span className="text-charcoal-600 font-medium">Побед (1-е места)</span>
-              <span className="font-bold font-sans tabular-nums text-camel-800 text-sm">
-                {placementAllLoading ? '…' : breedStats.totalGold.toLocaleString('ru-RU')}
-              </span>
-            </div>
-            <div className="flex items-center justify-between py-1 sm:py-1.5 text-xs">
-              <span className="text-charcoal-600 font-medium">Рекорд скорости</span>
-              <span className="font-bold font-sans tabular-nums text-charcoal-900 text-sm">
-                {speedAllLoading || doninoLoading ? (
-                  '…'
-                ) : breedStats.maxSpeed > 0 ? (
-                  `${breedStats.maxSpeed % 1 === 0 ? breedStats.maxSpeed : breedStats.maxSpeed.toFixed(1)} км/ч`
-                ) : (
-                  breedStats.yearsSpan || 'Архив'
-                )}
-              </span>
+
+            <div className="divide-y divide-old-money-200/50">
+              {statsMode === 'sport' ? (
+                <>
+                  <div className="flex items-center justify-between py-1 sm:py-1.5 text-xs">
+                    <span className="text-charcoal-600 font-medium">Собак в состязаниях</span>
+                    <span className="font-bold font-sans tabular-nums text-charcoal-900 text-sm">
+                      {placementAllLoading ? '…' : breedStats.totalDogs.toLocaleString('ru-RU')}
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between py-1 sm:py-1.5 text-xs">
+                    <span className="text-charcoal-600 font-medium">Всего забегов</span>
+                    <span className="font-bold font-sans tabular-nums text-charcoal-900 text-sm">
+                      {placementAllLoading ? '…' : breedStats.totalStarts.toLocaleString('ru-RU')}
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between py-1 sm:py-1.5 text-xs">
+                    <span className="text-charcoal-600 font-medium">Побед (1-е места)</span>
+                    <span className="font-bold font-sans tabular-nums text-camel-800 text-sm">
+                      {placementAllLoading ? '…' : breedStats.totalGold.toLocaleString('ru-RU')}
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between py-1 sm:py-1.5 text-xs">
+                    <span className="text-charcoal-600 font-medium">Рекорд скорости</span>
+                    <span className="font-bold font-sans tabular-nums text-charcoal-900 text-sm">
+                      {speedAllLoading || doninoLoading ? (
+                        '…'
+                      ) : breedStats.maxSpeed > 0 ? (
+                        `${breedStats.maxSpeed % 1 === 0 ? breedStats.maxSpeed : breedStats.maxSpeed.toFixed(1)} км/ч`
+                      ) : (
+                        breedStats.yearsSpan || 'Архив'
+                      )}
+                    </span>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="flex items-center justify-between py-1 sm:py-1.5 text-xs">
+                    <span className="text-charcoal-600 font-medium">Собак на выставках</span>
+                    <span className="font-bold font-sans tabular-nums text-charcoal-900 text-sm">
+                      {annualLeadersLoading ? '…' : (showsStats?.total_dogs || 0).toLocaleString('ru-RU')}
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between py-1 sm:py-1.5 text-xs">
+                    <span className="text-charcoal-600 font-medium">Выходов в ринг</span>
+                    <span className="font-bold font-sans tabular-nums text-charcoal-900 text-sm">
+                      {annualLeadersLoading ? '…' : (showsStats?.total_entries || 0).toLocaleString('ru-RU')}
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between py-1 sm:py-1.5 text-xs">
+                    <span className="text-charcoal-600 font-medium">Побед BIS (Главный ринг)</span>
+                    <span className="font-bold font-sans tabular-nums text-amber-800 text-sm">
+                      {annualLeadersLoading ? '…' : (showsStats?.total_bis_wins || 0).toLocaleString('ru-RU')}
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between py-1 sm:py-1.5 text-xs">
+                    <span className="text-charcoal-600 font-medium">Монопородных смотров НКП</span>
+                    <span className="font-bold font-sans tabular-nums text-camel-900 text-sm">
+                      {annualLeadersLoading ? '…' : (showsStats?.total_mono_exhibitions || 0).toLocaleString('ru-RU')}
+                    </span>
+                  </div>
+                </>
+              )}
             </div>
           </div>
         </div>
       </div>
 
-      {/* Колонки состязаний и Донино: на десктопе 3 параллельные колонки (Курсинг | Рейсинг | Донино), на мобильном свайп жестами */}
+      {/* 1. Блок спортивных дисциплин и рекордов скорости: на десктопе 3 параллельные колонки (Курсинг | Рейсинг | Донино), на мобильном свайп жестами */}
       <BreedHubColumns
         coursingLeaders={coursingLeaders}
         racingLeaders={racingLeaders}
@@ -408,6 +519,19 @@ export default function BreedHub() {
         doninoLoading={doninoLoading}
         canonicalKey={breedInfo.canonicalKey}
         breedNameRu={breedInfo.nameRu}
+        breedSlug={breedInfo.slug}
+      />
+
+      {/* 2. Блок выставок РКФ и монопородных смотров НКП: на десктопе 2 широкие колонки (САС | Моно), Зал славы и племенной смотр НКП */}
+      <BreedShowsSection
+        breedNameRu={breedInfo.nameRu}
+        breedSlug={breedInfo.slug}
+        canonicalKey={breedInfo.canonicalKey}
+        showsCacLeaders={showsCacLeaders}
+        showsMonoLeaders={showsMonoLeaders}
+        allTimeDogs={showsAllTimeTop}
+        showStats={showsStats}
+        isLoading={annualLeadersLoading}
       />
 
       {/* Частые вопросы о породе в спорте */}

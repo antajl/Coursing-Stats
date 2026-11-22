@@ -1,4 +1,4 @@
-import type { AnnualDogLeader } from '../../hooks/useStaticData'
+import type { AnnualDogLeader, AnnualShowDogLeader } from '../../hooks/useStaticData'
 import type { AnnualDoninoLeader } from '../../lib/doninoAnnualLeaders'
 
 export interface SpeedRecordItem {
@@ -15,16 +15,19 @@ export interface SpeedRecordItem {
   mode?: 'speed' | 'coursing'
 }
 
-export type ColumnTabId = 'coursing' | 'racing' | 'donino'
+export type ColumnTabId = 'coursing' | 'racing' | 'shows_cac' | 'shows_mono' | 'donino'
 
 export interface BreedHubColumnsProps {
   annualLeaders?: AnnualDogLeader[]
   coursingLeaders?: AnnualDogLeader[]
   racingLeaders?: AnnualDogLeader[]
   doninoLeaders?: AnnualDoninoLeader[]
+  showsCacLeaders?: AnnualShowDogLeader[]
+  showsMonoLeaders?: AnnualShowDogLeader[]
   annualLeadersLoading: boolean
   speedRecords?: SpeedRecordItem[]
   doninoLoading: boolean
   canonicalKey: string
   breedNameRu: string
+  breedSlug?: string
 }

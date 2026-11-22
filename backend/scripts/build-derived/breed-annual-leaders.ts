@@ -11,6 +11,8 @@ import { loadInferredSexMap } from '../../src/lib/dog-sex';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../..');
 const INDEXES_DIR = path.join(ROOT, 'data/v1/indexes');
 const PUBLIC_INDEXES_DIR = path.join(ROOT, 'frontend/public/data/v1/indexes');
+const SHOW_INDEXES_DIR = path.join(ROOT, 'data/v1/shows/indexes');
+const SHOW_CALENDAR_DIR = path.join(ROOT, 'data/v1/shows/calendar');
 
 export interface AnnualDogLeader {
   year: number;
@@ -24,6 +26,79 @@ export interface AnnualDogLeader {
   total_starts: number;
   best_speed?: number | null;
   rating_score?: number | null;
+}
+
+export interface AnnualShowDogLeader {
+  year: number;
+  dog_id: string;
+  name_lat: string;
+  name_ru?: string | null;
+  sex?: string | null;
+  total_shows: number;
+  rank_score: number;
+  mono_score?: number;
+  best_award?: string | null;
+  titles?: Record<string, number>;
+  competition_dog_id?: number | null;
+}
+
+export interface ShowAllTimeDog {
+  rank: number;
+  dog_id: string;
+  name_lat: string;
+  name_ru?: string | null;
+  sex?: string | null;
+  total_shows: number;
+  rank_score: number;
+  best_award?: string | null;
+  titles?: Record<string, number>;
+  competition_dog_id?: number | null;
+}
+
+export interface BreedShowStats {
+  total_dogs: number;
+  total_shows: number;
+  total_bis: number;
+  total_big: number;
+  total_bob: number;
+  total_mono_exhibitions: number;
+}
+
+function calcMonoScore(titles?: Record<string, number>): number {
+  if (!titles) return 0;
+  return (
+    (titles.P_RUSSIA || 0) * 1800 +
+    (titles.P_MOSCOW || 0) * 1800 +
+    (titles.KCHK || 0) * 600 +
+    (titles.KCHP || 0) * 600 +
+    (titles.YKCHK || 0) * 450 +
+    (titles.VKCHK || 0) * 400 +
+    (titles.CW || 0) * 100 +
+    (titles.SS || 0) * 100
+  );
+}
+
+function loadShowDogsForYear(year: number): any[] {
+  const manifestPath = path.join(SHOW_INDEXES_DIR, `dog-ranking-${year}.json`);
+  if (!fs.existsSync(manifestPath)) return [];
+  try {
+    const raw = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+    if (Array.isArray(raw)) return raw;
+    if (raw && Array.isArray(raw.shards)) {
+      const out: any[] = [];
+      for (const shard of raw.shards) {
+        const shardPath = path.join(SHOW_INDEXES_DIR, shard);
+        if (fs.existsSync(shardPath)) {
+          out.push(...JSON.parse(fs.readFileSync(shardPath, 'utf8')));
+        }
+      }
+      return out;
+    }
+    return [];
+  } catch (err) {
+    console.warn(`[breed-annual-leaders] Failed to load shows for year ${year}:`, err);
+    return [];
+  }
 }
 
 export function buildBreedAnnualLeaders(dbInput?: Database.Database): {
@@ -109,11 +184,26 @@ export function buildBreedAnnualLeaders(dbInput?: Database.Database): {
   const coursingBySlug: Record<string, AnnualDogLeader[]> = {};
   const racingBySlug: Record<string, AnnualDogLeader[]> = {};
   const leadersBySlug: Record<string, AnnualDogLeader[]> = {};
+  const showsCacBySlug: Record<string, AnnualShowDogLeader[]> = {};
+  const showsMonoBySlug: Record<string, AnnualShowDogLeader[]> = {};
+  const showsAllTimeBySlug: Record<string, ShowAllTimeDog[]> = {};
+  const showsStatsBySlug: Record<string, BreedShowStats> = {};
 
   for (const hub of CORE_BREED_HUBS) {
     coursingBySlug[hub.slug] = [];
     racingBySlug[hub.slug] = [];
     leadersBySlug[hub.slug] = [];
+    showsCacBySlug[hub.slug] = [];
+    showsMonoBySlug[hub.slug] = [];
+    showsAllTimeBySlug[hub.slug] = [];
+    showsStatsBySlug[hub.slug] = {
+      total_dogs: 0,
+      total_shows: 0,
+      total_bis: 0,
+      total_big: 0,
+      total_bob: 0,
+      total_mono_exhibitions: 0,
+    };
   }
 
   for (const year of sortedYears) {
@@ -137,6 +227,9 @@ export function buildBreedAnnualLeaders(dbInput?: Database.Database): {
 
     // Racing items for this year
     const inYearRacing = racingItems.filter((d) => d.year === year);
+
+    // Shows items for this year (2017-2026)
+    const showDogsThisYear = loadShowDogsForYear(year);
 
     for (const hub of CORE_BREED_HUBS) {
       // 1. Coursing leader
@@ -211,7 +304,138 @@ export function buildBreedAnnualLeaders(dbInput?: Database.Database): {
           leadersBySlug[hub.slug].push(racingLeader);
         }
       }
+
+      // 3. Shows CAC / All-Breed leader and Monobreed NKP leader
+      if (showDogsThisYear.length > 0) {
+        const matchingShows = showDogsThisYear.filter((d) =>
+          matchesBreedFilter(d.breed || '', hub.canonicalKey),
+        );
+
+        if (matchingShows.length > 0) {
+          // A. CAC leader: sorted by rank_score descending
+          matchingShows.sort((a, b) => (b.rank_score || 0) - (a.rank_score || 0));
+          const topCac = matchingShows[0];
+          if (topCac && (topCac.rank_score || 0) > 0) {
+            showsCacBySlug[hub.slug].push({
+              year,
+              dog_id: String(topCac.id),
+              name_lat: topCac.name_lat || `DOG_${topCac.id}`,
+              name_ru: topCac.name_ru || null,
+              sex: topCac.sex || null,
+              total_shows: Number(topCac.total_shows) || 0,
+              rank_score: Number(topCac.rank_score) || 0,
+              best_award: topCac.best_award || null,
+              titles: topCac.titles || {},
+              competition_dog_id: topCac.competition_dog_id != null ? Number(topCac.competition_dog_id) : null,
+            });
+          }
+
+          // B. Mono leader: sorted by calcMonoScore descending
+          const withMonoScore = matchingShows
+            .map((d) => ({ ...d, mono_score: calcMonoScore(d.titles) }))
+            .filter((d) => d.mono_score > 0)
+            .sort((a, b) => b.mono_score - a.mono_score);
+
+          if (withMonoScore.length > 0) {
+            const topMono = withMonoScore[0];
+            showsMonoBySlug[hub.slug].push({
+              year,
+              dog_id: String(topMono.id),
+              name_lat: topMono.name_lat || `DOG_${topMono.id}`,
+              name_ru: topMono.name_ru || null,
+              sex: topMono.sex || null,
+              total_shows: Number(topMono.total_shows) || 0,
+              rank_score: Number(topMono.rank_score) || 0,
+              mono_score: topMono.mono_score,
+              best_award: topMono.best_award || null,
+              titles: topMono.titles || {},
+              competition_dog_id: topMono.competition_dog_id != null ? Number(topMono.competition_dog_id) : null,
+            });
+          }
+        }
+      }
     }
+  }
+
+  // Load all-time show rankings for top-5 and aggregate statistics
+  const allTimeFile = path.join(SHOW_INDEXES_DIR, 'dog-ranking-all-time.json');
+  let allTimeDogs: any[] = [];
+  if (fs.existsSync(allTimeFile)) {
+    try {
+      const raw = JSON.parse(fs.readFileSync(allTimeFile, 'utf8'));
+      allTimeDogs = raw.dogs || (Array.isArray(raw) ? raw : []);
+    } catch (err) {
+      console.warn('[breed-annual-leaders] Failed to load all-time show dogs:', err);
+    }
+  }
+
+  // Load monobreed exhibition count in season 2026
+  const breedCalPath = path.join(SHOW_INDEXES_DIR, 'breed-calendar/2026.json');
+  const cal2026Path = path.join(SHOW_CALENDAR_DIR, '2026.json');
+  const monoCountByBreed = new Map<string, number>();
+
+  if (fs.existsSync(breedCalPath) && fs.existsSync(cal2026Path)) {
+    try {
+      const breedCal = JSON.parse(fs.readFileSync(breedCalPath, 'utf8'));
+      const cal2026 = JSON.parse(fs.readFileSync(cal2026Path, 'utf8'));
+      const monoExIds = new Set<number>(
+        cal2026.exhibitions
+          .filter((e: any) => e.title && (e.title.toLowerCase().includes('монопород') || e.rank === 'КЧК' || e.rank === 'ПК'))
+          .map((e: any) => Number(e.id))
+      );
+      for (const [b, ids] of Object.entries(breedCal)) {
+        if (Array.isArray(ids)) {
+          const count = ids.filter((id) => monoExIds.has(Number(id))).length;
+          monoCountByBreed.set(b, count);
+        }
+      }
+    } catch (err) {
+      console.warn('[breed-annual-leaders] Failed to load breed calendar:', err);
+    }
+  }
+
+  for (const hub of CORE_BREED_HUBS) {
+    const matchingAllTime = allTimeDogs.filter((d) =>
+      matchesBreedFilter(d.breed || '', hub.canonicalKey),
+    );
+
+    matchingAllTime.sort((a, b) => (b.rank_score || 0) - (a.rank_score || 0));
+
+    showsAllTimeBySlug[hub.slug] = matchingAllTime.slice(0, 5).map((d, idx) => ({
+      rank: idx + 1,
+      dog_id: String(d.id),
+      name_lat: d.name_lat,
+      name_ru: d.name_ru || null,
+      sex: d.sex || null,
+      total_shows: Number(d.total_shows) || 0,
+      rank_score: Number(d.rank_score) || 0,
+      best_award: d.best_award || null,
+      titles: d.titles || {},
+      competition_dog_id: d.competition_dog_id != null ? Number(d.competition_dog_id) : null,
+    }));
+
+    let totalShows = 0;
+    let totalBis = 0;
+    let totalBig = 0;
+    let totalBob = 0;
+    for (const d of matchingAllTime) {
+      totalShows += Number(d.total_shows) || 0;
+      if (d.titles) {
+        totalBis += Number(d.titles.BIS) || 0;
+        totalBig += Number(d.titles.BIG) || 0;
+        totalBob += Number(d.titles.BOB) || 0;
+      }
+    }
+
+    const monoCount = monoCountByBreed.get(hub.canonicalKey) || 0;
+    showsStatsBySlug[hub.slug] = {
+      total_dogs: matchingAllTime.length,
+      total_shows: totalShows,
+      total_bis: totalBis,
+      total_big: totalBig,
+      total_bob: totalBob,
+      total_mono_exhibitions: monoCount,
+    };
   }
 
   let totalEntries = 0;
@@ -233,7 +457,7 @@ export function buildBreedAnnualLeaders(dbInput?: Database.Database): {
   }
 
   const payload = {
-    schema: 'coursing-stats/breed-annual-leaders-v1',
+    schema: 'coursing-stats/breed-annual-leaders-v2',
     generated_at: new Date().toISOString(),
     total_breeds: CORE_BREED_HUBS.length,
     breeds_with_data: coursingBreedsWithHistory,
@@ -243,6 +467,10 @@ export function buildBreedAnnualLeaders(dbInput?: Database.Database): {
     coursing_by_slug: coursingBySlug,
     racing_by_slug: racingBySlug,
     leaders_by_slug: leadersBySlug,
+    shows_cac_by_slug: showsCacBySlug,
+    shows_mono_by_slug: showsMonoBySlug,
+    shows_all_time_by_slug: showsAllTimeBySlug,
+    shows_stats_by_slug: showsStatsBySlug,
   };
 
   const json = JSON.stringify(payload, null, 2);

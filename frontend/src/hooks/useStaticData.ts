@@ -118,6 +118,42 @@ export interface AnnualDogLeader {
   rating_score?: number | null;
 }
 
+export interface AnnualShowDogLeader {
+  year: number;
+  dog_id: string;
+  name_lat: string;
+  name_ru?: string | null;
+  sex?: string | null;
+  total_shows: number;
+  rank_score: number;
+  mono_score?: number;
+  best_award?: string | null;
+  titles?: Record<string, number>;
+  competition_dog_id?: number | null;
+}
+
+export interface ShowAllTimeDog {
+  rank: number;
+  dog_id: string;
+  name_lat: string;
+  name_ru?: string | null;
+  sex?: string | null;
+  total_shows: number;
+  rank_score: number;
+  best_award?: string | null;
+  titles?: Record<string, number>;
+  competition_dog_id?: number | null;
+}
+
+export interface BreedShowStats {
+  total_dogs: number;
+  total_shows: number;
+  total_bis: number;
+  total_big: number;
+  total_bob: number;
+  total_mono_exhibitions: number;
+}
+
 export interface BreedAnnualLeadersData {
   schema: string;
   generated_at: string;
@@ -129,6 +165,10 @@ export interface BreedAnnualLeadersData {
   coursing_by_slug?: Record<string, AnnualDogLeader[]>;
   racing_by_slug?: Record<string, AnnualDogLeader[]>;
   leaders_by_slug: Record<string, AnnualDogLeader[]>;
+  shows_cac_by_slug?: Record<string, AnnualShowDogLeader[]>;
+  shows_mono_by_slug?: Record<string, AnnualShowDogLeader[]>;
+  shows_all_time_by_slug?: Record<string, ShowAllTimeDog[]>;
+  shows_stats_by_slug?: Record<string, BreedShowStats>;
 }
 
 export function useBreedAnnualLeaders() {
