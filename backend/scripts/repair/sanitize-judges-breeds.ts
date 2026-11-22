@@ -8,7 +8,37 @@ const PUBLIC_INDEXES_DIR = 'frontend/public/data/v1/shows/indexes'
 const PACKS_DIR = path.join(INDEXES_DIR, 'judge-details')
 const PUBLIC_PACKS_DIR = path.join(PUBLIC_INDEXES_DIR, 'judge-details')
 
-function sanitizeJudgesIndex() {
+function loadJudgeBreedCounts(): Map<string, Map<string, number>> {
+  const map = new Map<string, Map<string, number>>()
+  if (!fs.existsSync(PACKS_DIR)) return map
+  const files = fs.readdirSync(PACKS_DIR).filter((f) => f.startsWith('pack-') && f.endsWith('.json'))
+  for (const file of files) {
+    const fullPath = path.join(PACKS_DIR, file)
+    const content = JSON.parse(fs.readFileSync(fullPath, 'utf8'))
+    const byKey = content.byKey || {}
+    for (const [key, judge] of Object.entries<any>(byKey)) {
+      const bMap = new Map<string, number>()
+      if (Array.isArray(judge.breeds)) {
+        for (const row of judge.breeds) {
+          const rawName = typeof row === 'string' ? row : row.breed
+          const canon = canonicalBreed(rawName)
+          if (!canon) continue
+          const cnt = typeof row === 'object' && row.count ? Number(row.count) : 1
+          bMap.set(canon, (bMap.get(canon) || 0) + cnt)
+        }
+      }
+      map.set(key, bMap)
+      try {
+        const decoded = Buffer.from(key, 'base64url').toString('utf8')
+        map.set(decoded, bMap)
+      } catch {}
+      if (judge.id) map.set(judge.id, bMap)
+    }
+  }
+  return map
+}
+
+function sanitizeJudgesIndex(judgeBreedCounts?: Map<string, Map<string, number>>) {
   console.log('=== 1. Sanitizing breeds in judges.json & judges-page0.json ===')
   const judgesPath = path.join(INDEXES_DIR, 'judges.json')
   const judges: any[] = JSON.parse(fs.readFileSync(judgesPath, 'utf8'))
@@ -30,7 +60,13 @@ function sanitizeJudgesIndex() {
       }
     }
 
-    const cleanedArray = Array.from(cleanSet).sort((a, b) => a.localeCompare(b, 'ru'))
+    const bCounts = judgeBreedCounts?.get(j.id)
+    const cleanedArray = Array.from(cleanSet).sort((a, b) => {
+      const countA = bCounts?.get(a) ?? 0
+      const countB = bCounts?.get(b) ?? 0
+      if (countB !== countA) return countB - countA
+      return a.localeCompare(b, 'ru')
+    })
     j.breeds = cleanedArray
     j.unique_breeds = cleanedArray.length
     totalCleanedBreeds += cleanedArray.length
@@ -189,8 +225,9 @@ function sanitizeJudgeDetailsPacks() {
 }
 
 function main() {
-  sanitizeJudgesIndex()
   sanitizeJudgeDetailsPacks()
+  const judgeBreedCounts = loadJudgeBreedCounts()
+  sanitizeJudgesIndex(judgeBreedCounts)
 }
 
 main()

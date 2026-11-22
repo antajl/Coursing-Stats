@@ -127,8 +127,8 @@ function leanJudgeForList(j: JudgeRow): JudgeRow {
     display_name: j.display_name,
     total_judged: j.total_judged ?? 0,
     unique_breeds: typeof j.unique_breeds === 'number' ? j.unique_breeds : breeds.length,
-    // Card shows at most 2 breed chips; full breed list lives in judges.json / details
-    breeds: breeds.slice(0, 2),
+    // Card shows at most 3 breed chips; full breed list lives in judges.json / details
+    breeds: breeds.slice(0, 3),
     by_year: j.by_year && typeof j.by_year === 'object' ? j.by_year : {},
     excellent_rate: j.excellent_rate,
     graded: j.graded,
