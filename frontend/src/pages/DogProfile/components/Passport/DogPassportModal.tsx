@@ -105,8 +105,8 @@ export const DogPassportModal: React.FC<DogPassportModalProps> = ({ isOpen, onCl
         navigator.canShare({ files: [file] })
       ) {
         await navigator.share({
-          title: `${data.namePrimary} — Паспорт собаки`,
-          text: `Паспорт спортивных и выставочных достижений ${data.namePrimary} на CoursingStats`,
+          title: `${data.namePrimary} — Карточка собаки`,
+          text: `Карточка спортивных и выставочных достижений ${data.namePrimary} на CoursingStats`,
           files: [file],
         })
         return
@@ -166,7 +166,7 @@ export const DogPassportModal: React.FC<DogPassportModalProps> = ({ isOpen, onCl
         <div className="flex items-center justify-between border-b border-[#EAE3D6] px-4 sm:px-6 py-3 bg-white shrink-0">
           <div className="flex items-center gap-3">
             <h3 id="passport-modal-title" className="font-serif text-base sm:text-lg font-bold text-[#1C1917]">
-              Паспорт собаки
+              Карточка собаки
             </h3>
             <span className="hidden sm:inline text-xs text-[#8C7E6A]">·</span>
             <span className="hidden sm:inline text-xs text-[#78716C] font-medium">

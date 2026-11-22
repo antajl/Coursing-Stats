@@ -151,7 +151,7 @@ export const DogPassportCard = forwardRef<HTMLDivElement, DogPassportCardProps>(
                     </span>
                   </div>
                   <div className="text-[10px] text-[#8C7E6A] font-serif font-semibold shrink-0">
-                    Паспорт № CS-{data.id}
+                    Карточка № CS-{data.id}
                   </div>
                 </div>
 
@@ -198,7 +198,7 @@ export const DogPassportCard = forwardRef<HTMLDivElement, DogPassportCardProps>(
                   </span>
                 </div>
                 <div className="text-[10px] text-[#8C7E6A] font-serif font-semibold">
-                  Паспорт № CS-{data.id}
+                  Карточка № CS-{data.id}
                 </div>
               </div>
 
