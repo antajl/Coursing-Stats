@@ -1,15 +1,37 @@
 export type PassportFormat = 'story' | 'certificate'
 
-export interface DogPassportSportStats {
+export interface DogPassportHighlight {
+  placement: number
+  title: string
+  year?: string | number
+  score?: number | string
+  qualification?: string
+  discipline: 'coursing' | 'racing' | 'bzmp' | 'show'
+}
+
+export interface DogPassportCoursingStats {
   hasData: boolean
   totalStarts: number
   gold: number
   silver: number
   bronze: number
   bestScore?: number | null
-  avgScore?: number | null
+  avgJudgeScore?: number | null
+  bestJudgeScore?: number | null
+  breedRank?: number | null
+  yearBreedRank?: number | null
+}
+
+export interface DogPassportRacingStats {
+  hasData: boolean
+  totalStarts: number
+  gold: number
+  silver: number
+  bronze: number
   bestSpeed?: number | null
-  rank?: number | null
+  avgSpeed?: number | null
+  breedRank?: number | null
+  yearBreedRank?: number | null
 }
 
 export interface DogPassportDoninoStats {
@@ -32,6 +54,12 @@ export interface DogPassportShowStats {
   bigCount: number
   bobCount: number
   rankScore?: number | null
+  yearBreedRank?: number | null
+}
+
+export interface DogPassportTitle {
+  badge: string
+  label: string
 }
 
 export interface DogPassportData {
@@ -42,10 +70,13 @@ export interface DogPassportData {
   breedVariety?: string | null
   sex?: string | null
   photoUrl?: string | null
-  titles: string[]
-  sport: DogPassportSportStats
+  pedigreeUrl?: string | null
+  titles: DogPassportTitle[]
+  coursing: DogPassportCoursingStats
+  racing: DogPassportRacingStats
   donino: DogPassportDoninoStats
   shows: DogPassportShowStats
+  highlights: DogPassportHighlight[]
   dogUrl: string
   issueDate: string
 }

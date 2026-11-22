@@ -288,6 +288,7 @@ export function useDogProfileData() {
     return buildDogPassportData({
       dog: headerDog,
       showDog,
+      events,
       supremeTitles: titleGroups.supreme,
       competitionTitles: titleGroups.competition,
       coursingTitles: titleGroups.coursing,
@@ -299,7 +300,7 @@ export function useDogProfileData() {
       coursingStats,
       ranks: headerRanks,
     })
-  }, [headerDog, showDog, titleGroups, coursing, racing, speedStats, coursingStats, headerRanks])
+  }, [headerDog, showDog, events, titleGroups, coursing, racing, speedStats, coursingStats, headerRanks])
 
   const {
     dogName,

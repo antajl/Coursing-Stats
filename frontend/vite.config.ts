@@ -165,6 +165,7 @@ export default defineConfig(({ mode }) => {
       cssMinify: 'esbuild',
     },
     server: {
+      host: true,
       allowedHosts: true,
       watch: {
         ignored: ['**/data/v1/**', '**/data/local/**'],
@@ -189,9 +190,9 @@ export default defineConfig(({ mode }) => {
           "default-src 'self'; " +
           "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://coursing-stats.ru https://www.googletagmanager.com https://mc.yandex.ru; " +
           "style-src 'self' 'unsafe-inline' https://coursing-stats.ru https://fonts.googleapis.com; " +
-          "img-src 'self' data: blob: https://coursing-stats.ru https://*.googleusercontent.com https://*.gstatic.com https://*.breedarchive.com https://mc.yandex.ru; " +
+          "img-src 'self' data: blob: https://coursing-stats.ru https://*.googleusercontent.com https://*.gstatic.com https://*.breedarchive.com https://wsrv.nl https://mc.yandex.ru; " +
           "font-src 'self' https://fonts.gstatic.com; " +
-          "connect-src 'self' ws: wss: https://coursing-stats.ru https://api.telegram.org https://auth-worker.antajltube.workers.dev https://www.googletagmanager.com https://mc.yandex.ru; " +
+          "connect-src 'self' ws: wss: https://coursing-stats.ru https://api.telegram.org https://auth-worker.antajltube.workers.dev https://www.googletagmanager.com https://wsrv.nl https://mc.yandex.ru; " +
           "frame-src 'self' https://coursing-stats.ru https://t.me; " +
           "frame-ancestors 'self' https://coursing-stats.ru; " +
           "worker-src 'self' blob:; " +

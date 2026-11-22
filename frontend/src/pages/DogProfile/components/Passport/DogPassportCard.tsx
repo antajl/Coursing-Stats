@@ -1,7 +1,13 @@
-import React, { useState, useEffect, forwardRef } from 'react'
+import React, { useState, useEffect, useMemo, forwardRef } from 'react'
 import QRCode from 'qrcode'
 import type { DogPassportData, PassportFormat } from './passportTypes'
-import { SportPillar, DoninoPillar, ShowPillar } from './PassportPillars'
+import {
+  CoursingPillar,
+  RacingPillar,
+  DoninoPillar,
+  ShowPillar,
+  HighlightsPillar,
+} from './PassportPillars'
 import { DogBreedSilhouette, resolveSilhouetteBreed } from '../../../../components/DogSilhouettes'
 import { formatNameWithNonBreakingSpaces } from '../../../../lib/dogName'
 
@@ -13,9 +19,19 @@ export interface DogPassportCardProps {
 export const DogPassportCard = forwardRef<HTMLDivElement, DogPassportCardProps>(
   ({ data, format }, ref) => {
     const [qrDataUrl, setQrDataUrl] = useState<string>('')
+    const [imgError, setImgError] = useState(false)
     const silhouetteKey = resolveSilhouetteBreed(data.breedPrimary)
     const isMale = data.sex === 'M' || data.sex?.toLowerCase() === 'кобель'
     const formattedName = formatNameWithNonBreakingSpaces(data.namePrimary)
+
+    const resolvedPhotoUrl = useMemo(() => {
+      if (!data.photoUrl) return null
+      // Для картинок с breedarchive используем wsrv.nl с поддержкой CORS для чистого рендеринга и экспорта в PNG
+      if (data.photoUrl.includes('breedarchive.com')) {
+        return `https://wsrv.nl/?url=${encodeURIComponent(data.photoUrl)}&w=320&h=320&fit=cover`
+      }
+      return data.photoUrl
+    }, [data.photoUrl])
 
     useEffect(() => {
       QRCode.toDataURL(data.dogUrl, {
@@ -34,11 +50,13 @@ export const DogPassportCard = forwardRef<HTMLDivElement, DogPassportCardProps>(
       <div className="flex items-start gap-4">
         {/* Аватар собаки */}
         <div className="relative shrink-0 overflow-hidden rounded-xl border-2 border-[#C5B7A1] bg-[#F7F4EE] shadow-xs h-24 w-24 sm:h-28 sm:w-28 flex items-center justify-center">
-          {data.photoUrl ? (
+          {resolvedPhotoUrl && !imgError ? (
             <img
-              src={data.photoUrl}
+              src={resolvedPhotoUrl}
               alt={data.namePrimary}
               crossOrigin="anonymous"
+              referrerPolicy="no-referrer"
+              onError={() => setImgError(true)}
               className="h-full w-full object-cover object-[center_20%]"
             />
           ) : silhouetteKey ? (
@@ -68,6 +86,11 @@ export const DogPassportCard = forwardRef<HTMLDivElement, DogPassportCardProps>(
             <span className="text-[#C5B7A1]">·</span>
             <span className="text-[#8C7E6A]">ID: #{data.id}</span>
           </div>
+          {data.pedigreeUrl && (
+            <div className="mt-1 text-[11px] text-[#8C6D37] font-medium">
+              Реестр родословных: The Breed Archive
+            </div>
+          )}
         </div>
       </div>
     )
@@ -75,7 +98,7 @@ export const DogPassportCard = forwardRef<HTMLDivElement, DogPassportCardProps>(
     const renderTitles = () => {
       if (!data.titles || data.titles.length === 0) return null
       return (
-        <div className="mt-3 pt-3 border-t border-[#EAE3D6]">
+        <div className="mt-3 pt-2.5 border-t border-[#EAE3D6]">
           <div className="text-[10px] font-serif font-bold text-[#8C6D37] tracking-wider uppercase mb-1.5">
             Официальные звания
           </div>
@@ -84,8 +107,9 @@ export const DogPassportCard = forwardRef<HTMLDivElement, DogPassportCardProps>(
               <span
                 key={i}
                 className="rounded border border-[#D5C9B8] bg-[#F7F3EB] px-2 py-0.5 font-serif text-[10px] font-semibold text-[#634E27]"
+                title={title.label}
               >
-                {title}
+                {title.label || title.badge}
               </span>
             ))}
           </div>
@@ -94,13 +118,13 @@ export const DogPassportCard = forwardRef<HTMLDivElement, DogPassportCardProps>(
     }
 
     const renderFooter = () => (
-      <div className="mt-4 pt-3 border-t border-[#EAE3D6] flex items-center justify-between gap-3">
+      <div className="mt-3 pt-2.5 border-t border-[#EAE3D6] flex items-center justify-between gap-3">
         <div className="min-w-0 flex-1 text-[10px] text-[#78716C] leading-relaxed">
           <div className="font-serif font-semibold text-[#1C1917]">
             CoursingStats · Цифровой реестр
           </div>
           <div>Официальная верифицированная запись базы данных</div>
-          <div className="text-[#8C7E6A] mt-0.5">Дата: {data.issueDate}</div>
+          <div className="text-[#8C7E6A] mt-0.5">Дата фиксации: {data.issueDate}</div>
         </div>
 
         {qrDataUrl && (
@@ -108,7 +132,7 @@ export const DogPassportCard = forwardRef<HTMLDivElement, DogPassportCardProps>(
             <img
               src={qrDataUrl}
               alt="QR Code"
-              className="h-14 w-14 sm:h-16 sm:w-16 rounded border border-[#D5C9B8] bg-white p-0.5 shadow-2xs"
+              className="h-12 w-12 sm:h-14 sm:w-14 rounded border border-[#D5C9B8] bg-white p-0.5 shadow-2xs"
             />
             <div className="text-[8px] text-[#8C7E6A] font-medium mt-0.5">coursing-stats.ru</div>
           </div>
@@ -121,14 +145,13 @@ export const DogPassportCard = forwardRef<HTMLDivElement, DogPassportCardProps>(
       return (
         <div
           ref={ref}
-          className="w-[460px] min-h-[818px] bg-[#FAF7F2] p-3 text-[#1C1917] select-none font-sans"
+          className="w-[480px] min-h-[960px] bg-[#FAF7F2] p-3 text-[#1C1917] select-none font-sans"
         >
-          {/* Внешняя геральдическая двойная рамка */}
           <div className="rounded-2xl border-2 border-[#C3B5A1] p-1.5 bg-[#FAF7F2]">
-            <div className="rounded-xl border border-[#DFD7CB] bg-[#FDFCFA] p-5 shadow-xs flex flex-col justify-between min-h-[790px]">
+            <div className="rounded-xl border border-[#DFD7CB] bg-[#FDFCFA] p-4 sm:p-5 shadow-xs flex flex-col justify-between min-h-[930px]">
               <div>
                 {/* Шапка */}
-                <div className="text-center pb-3 border-b border-[#EAE3D6]">
+                <div className="text-center pb-2.5 border-b border-[#EAE3D6]">
                   <div className="font-serif text-[11px] font-bold tracking-[0.25em] text-[#8C6D37] uppercase">
                     CoursingStats
                   </div>
@@ -136,21 +159,27 @@ export const DogPassportCard = forwardRef<HTMLDivElement, DogPassportCardProps>(
                     Паспорт собаки
                   </h1>
                   <div className="text-[9px] text-[#8C7E6A] tracking-wider uppercase mt-0.5">
-                    Спорт · Скорость · Выставки
+                    Курсинг · Рейсинг · Скорость · Выставки
                   </div>
                 </div>
 
                 {/* Профиль */}
-                <div className="mt-4">{renderHero()}</div>
+                <div className="mt-3.5">{renderHero()}</div>
 
                 {/* Титулы */}
                 {renderTitles()}
 
-                {/* Три дисциплины */}
-                <div className="mt-4 space-y-2.5">
-                  <SportPillar sport={data.sport} />
-                  <DoninoPillar donino={data.donino} />
-                  <ShowPillar shows={data.shows} />
+                {/* Дисциплины */}
+                <div className="mt-3.5 space-y-2">
+                  <HighlightsPillar highlights={data.highlights} />
+                  <div className="grid grid-cols-2 gap-2">
+                    <CoursingPillar coursing={data.coursing} />
+                    <RacingPillar racing={data.racing} />
+                  </div>
+                  <div className="grid grid-cols-2 gap-2">
+                    <DoninoPillar donino={data.donino} />
+                    <ShowPillar shows={data.shows} />
+                  </div>
                 </div>
               </div>
 
@@ -166,20 +195,20 @@ export const DogPassportCard = forwardRef<HTMLDivElement, DogPassportCardProps>(
     return (
       <div
         ref={ref}
-        className="w-[840px] min-h-[520px] bg-[#FAF7F2] p-3 text-[#1C1917] select-none font-sans"
+        className="w-[880px] min-h-[560px] bg-[#FAF7F2] p-3 text-[#1C1917] select-none font-sans"
       >
         <div className="rounded-2xl border-2 border-[#C3B5A1] p-1.5 bg-[#FAF7F2]">
-          <div className="rounded-xl border border-[#DFD7CB] bg-[#FDFCFA] p-5 shadow-xs flex flex-col justify-between min-h-[492px]">
+          <div className="rounded-xl border border-[#DFD7CB] bg-[#FDFCFA] p-5 shadow-xs flex flex-col justify-between min-h-[532px]">
             <div>
               {/* Шапка */}
-              <div className="flex items-center justify-between border-b border-[#EAE3D6] pb-2.5 mb-4">
+              <div className="flex items-center justify-between border-b border-[#EAE3D6] pb-2 mb-3.5">
                 <div className="flex items-center gap-2">
                   <div className="font-serif text-xs font-bold tracking-[0.2em] text-[#8C6D37] uppercase">
                     CoursingStats
                   </div>
                   <span className="text-[#C5B7A1]">·</span>
                   <span className="text-[11px] text-[#78716C] font-serif">
-                    Единый реестр спортивных и выставочных достижений
+                    Единый реестр спортивных, скоростных и выставочных достижений
                   </span>
                 </div>
                 <div className="text-[10px] text-[#8C7E6A] font-serif font-semibold">
@@ -187,16 +216,20 @@ export const DogPassportCard = forwardRef<HTMLDivElement, DogPassportCardProps>(
                 </div>
               </div>
 
-              {/* Сетка: 2 колонки (Слева Hero + Титулы, Справа 3 Pillars) */}
-              <div className="grid grid-cols-[330px_minmax(0,1fr)] gap-5 items-start">
+              {/* Сетка: 2 колонки */}
+              <div className="grid grid-cols-[320px_minmax(0,1fr)] gap-4 items-start">
                 <div>
                   {renderHero()}
                   {renderTitles()}
                 </div>
 
-                <div className="space-y-2.5">
-                  <SportPillar sport={data.sport} />
-                  <div className="grid grid-cols-2 gap-2.5">
+                <div className="space-y-2">
+                  <HighlightsPillar highlights={data.highlights} />
+                  <div className="grid grid-cols-2 gap-2">
+                    <CoursingPillar coursing={data.coursing} />
+                    <RacingPillar racing={data.racing} />
+                  </div>
+                  <div className="grid grid-cols-2 gap-2">
                     <DoninoPillar donino={data.donino} />
                     <ShowPillar shows={data.shows} />
                   </div>

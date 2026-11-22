@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
+import { createPortal } from 'react-dom'
 import { toPng } from 'html-to-image'
 import { Download, Share2, X, Smartphone, FileText, Check } from 'lucide-react'
 import type { DogPassportData, PassportFormat } from './passportTypes'
@@ -39,6 +40,7 @@ export const DogPassportModal: React.FC<DogPassportModalProps> = ({ isOpen, onCl
       const dataUrl = await toPng(cardRef.current, {
         quality: 0.98,
         pixelRatio: 2,
+        cacheBust: true,
       })
       const link = document.createElement('a')
       const cleanName = (data.namePrimary || 'dog').toLowerCase().replace(/[^a-zа-я0-9]/gi, '_')
@@ -61,6 +63,7 @@ export const DogPassportModal: React.FC<DogPassportModalProps> = ({ isOpen, onCl
       const dataUrl = await toPng(cardRef.current, {
         quality: 0.95,
         pixelRatio: 2,
+        cacheBust: true,
       })
       const res = await fetch(dataUrl)
       const blob = await res.blob()
@@ -88,19 +91,19 @@ export const DogPassportModal: React.FC<DogPassportModalProps> = ({ isOpen, onCl
     handleDownload()
   }
 
-  return (
+  return createPortal(
     <div
       role="dialog"
       aria-modal="true"
       aria-labelledby="passport-modal-title"
-      className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-charcoal-900/70 backdrop-blur-xs animate-in fade-in duration-200"
+      className="fixed inset-0 z-[9999] flex items-center justify-center p-2 sm:p-4 bg-charcoal-900/80 backdrop-blur-xs animate-in fade-in duration-200"
       onClick={(e) => {
         if (e.target === e.currentTarget) onClose()
       }}
     >
-      <div className="relative w-full max-w-4xl max-h-[92vh] flex flex-col rounded-2xl border border-[#D5C9B8] bg-[#FAF8F5] shadow-2xl overflow-hidden">
+      <div className="relative w-full max-w-4xl max-h-[94vh] flex flex-col rounded-2xl border border-[#D5C9B8] bg-[#FAF8F5] shadow-2xl overflow-hidden">
         {/* Шапка модального окна */}
-        <div className="flex items-center justify-between border-b border-[#EAE3D6] px-4 sm:px-6 py-3.5 bg-white shrink-0">
+        <div className="flex items-center justify-between border-b border-[#EAE3D6] px-4 sm:px-6 py-3 bg-white shrink-0">
           <div className="flex items-center gap-3">
             <h3 id="passport-modal-title" className="font-serif text-base sm:text-lg font-bold text-[#1C1917]">
               Паспорт собаки
@@ -159,7 +162,7 @@ export const DogPassportModal: React.FC<DogPassportModalProps> = ({ isOpen, onCl
         </div>
 
         {/* Подвал с кнопками экспорта */}
-        <div className="flex flex-wrap items-center justify-between gap-3 border-t border-[#EAE3D6] px-4 sm:px-6 py-3.5 bg-white shrink-0">
+        <div className="flex flex-wrap items-center justify-between gap-3 border-t border-[#EAE3D6] px-4 sm:px-6 py-3 bg-white shrink-0">
           <div className="text-xs text-[#78716C]">
             Изображение формируется локально в высоком разрешении (2x Retina)
           </div>
@@ -198,6 +201,7 @@ export const DogPassportModal: React.FC<DogPassportModalProps> = ({ isOpen, onCl
           </div>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   )
 }
