@@ -7,6 +7,7 @@ import { matchesBreedFilter } from '../../src/lib/breed-mapping';
 import { CORE_BREED_HUBS } from '../../../frontend/src/lib/breed-hubs-data';
 import { RACING_EXCLUDED_STATUSES_SQL } from '../../src/lib/racing-status';
 import { loadInferredSexMap } from '../../src/lib/dog-sex';
+import { showMonoRankScore, showCacRankScore } from '../../lib/show-awards/score';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../..');
 const INDEXES_DIR = path.join(ROOT, 'data/v1/indexes');
@@ -62,20 +63,6 @@ export interface BreedShowStats {
   total_big: number;
   total_bob: number;
   total_mono_exhibitions: number;
-}
-
-function calcMonoScore(titles?: Record<string, number>): number {
-  if (!titles) return 0;
-  return (
-    (titles.P_RUSSIA || 0) * 1800 +
-    (titles.P_MOSCOW || 0) * 1800 +
-    (titles.KCHK || 0) * 600 +
-    (titles.KCHP || 0) * 600 +
-    (titles.YKCHK || 0) * 450 +
-    (titles.VKCHK || 0) * 400 +
-    (titles.CW || 0) * 100 +
-    (titles.SS || 0) * 100
-  );
 }
 
 function loadShowDogsForYear(year: number): any[] {
@@ -314,8 +301,13 @@ export function buildBreedAnnualLeaders(dbInput?: Database.Database): {
         );
 
         if (matchingShows.length > 0) {
-          // A. CAC leader: sorted by rank_score descending
-          matchingShows.sort((a, b) => (b.rank_score || 0) - (a.rank_score || 0));
+          // A. CAC leader: sorted by showCacRankScore descending
+          matchingShows.sort((a, b) => {
+            const scA = showCacRankScore((a.titles || {}) as any);
+            const scB = showCacRankScore((b.titles || {}) as any);
+            if (scB !== scA) return scB - scA;
+            return (b.rank_score || 0) - (a.rank_score || 0);
+          });
           const topCac = matchingShows[0];
           if (topCac && (topCac.rank_score || 0) > 0) {
             showsCacBySlug[hub.slug].push({
@@ -332,9 +324,9 @@ export function buildBreedAnnualLeaders(dbInput?: Database.Database): {
             });
           }
 
-          // B. Mono leader: sorted by calcMonoScore descending
+          // B. Mono leader: sorted by showMonoRankScore descending
           const withMonoScore = matchingShows
-            .map((d) => ({ ...d, mono_score: calcMonoScore(d.titles) }))
+            .map((d) => ({ ...d, mono_score: showMonoRankScore((d.titles || {}) as any) }))
             .filter((d) => d.mono_score > 0)
             .sort((a, b) => b.mono_score - a.mono_score);
 
@@ -401,7 +393,12 @@ export function buildBreedAnnualLeaders(dbInput?: Database.Database): {
       matchesBreedFilter(d.breed || '', hub.canonicalKey),
     );
 
-    matchingAllTime.sort((a, b) => (b.rank_score || 0) - (a.rank_score || 0));
+    matchingAllTime.sort((a, b) => {
+      const scA = showCacRankScore((a.titles || {}) as any);
+      const scB = showCacRankScore((b.titles || {}) as any);
+      if (scB !== scA) return scB - scA;
+      return (b.rank_score || 0) - (a.rank_score || 0);
+    });
 
     showsAllTimeBySlug[hub.slug] = matchingAllTime.slice(0, 5).map((d, idx) => ({
       rank: idx + 1,
@@ -417,7 +414,7 @@ export function buildBreedAnnualLeaders(dbInput?: Database.Database): {
     }));
 
     const monoMatchingAllTime = matchingAllTime
-      .map((d) => ({ ...d, mono_score: calcMonoScore(d.titles) }))
+      .map((d) => ({ ...d, mono_score: showMonoRankScore((d.titles || {}) as any) }))
       .filter((d) => (d.mono_score || 0) > 0)
       .sort((a, b) => (b.mono_score || 0) - (a.mono_score || 0));
 

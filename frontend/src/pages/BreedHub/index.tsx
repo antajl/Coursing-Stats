@@ -113,17 +113,16 @@ export default function BreedHub() {
         const t = d.titles
         if (!t) return false
         return Boolean(
-          t.P_RUSSIA || t.P_MOSCOW || t.VP_RUSSIA || t.VP_MOSCOW ||
-          t.KCHK || t.VKCHK || t.YKCHK || t.SS || t.VSS || t.YSS
+          t.KCHK || t.VKCHK || t.YKCHK || t.KCHP || t.VKCHP || t.YKCHP || t.SS || t.VSS || t.YSS
         )
       })
       .sort((a, b) => {
         const calc = (d: ShowAllTimeDog) => {
           const t = d.titles || {}
           return (
-            ((t.P_RUSSIA || 0) + (t.P_MOSCOW || 0) + (t.VP_RUSSIA || 0) + (t.VP_MOSCOW || 0)) * 5000 +
-            ((t.KCHK || 0) + (t.VKCHK || 0) + (t.YKCHK || 0)) * 1000 +
-            ((t.SS || 0) + (t.VSS || 0) + (t.YSS || 0)) * 300
+            ((t.KCHP || 0) + (t.VKCHP || 0) + (t.YKCHP || 0)) * 1800 +
+            ((t.KCHK || 0) + (t.VKCHK || 0) + (t.YKCHK || 0)) * 600 +
+            ((t.SS || 0) + (t.VSS || 0) + (t.YSS || 0)) * 100
           )
         }
         return calc(b) - calc(a)

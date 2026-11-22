@@ -12,30 +12,43 @@ export const ShowsHallOfFameBadges = memo(function ShowsHallOfFameBadges({
   titles = {},
 }: ShowsHallOfFameBadgesProps) {
   if (isMono) {
-    const pkCount =
-      (titles.P_RUSSIA || 0) +
-      (titles.P_MOSCOW || 0) +
-      (titles.VP_RUSSIA || 0) +
-      (titles.VP_MOSCOW || 0) +
-      (titles.YP_RUSSIA || 0) +
-      (titles.YP_MOSCOW || 0)
-    const kchkCount =
-      (titles.KCHK || 0) +
-      (titles.VKCHK || 0) +
-      (titles.YKCHK || 0) +
-      (titles.KCHP || 0) +
-      (titles.VKCHP || 0) +
-      (titles.YKCHP || 0)
-    const ssCount =
-      (titles.SS || 0) +
-      (titles.VSS || 0) +
-      (titles.YSS || 0)
+    const kchk = titles.KCHK || 0
+    const vkchk = titles.VKCHK || 0
+    const ykchk = titles.YKCHK || 0
+    const kchkCount = kchk + vkchk + ykchk
+
+    const kchp = titles.KCHP || 0
+    const vkchp = titles.VKCHP || 0
+    const ykchp = titles.YKCHP || 0
+    const kchpCount = kchp + vkchp + ykchp
+
+    const ss = titles.SS || 0
+    const vss = titles.VSS || 0
+    const yss = titles.YSS || 0
+    const ssCount = ss + vss + yss
+
+    const effectiveKchk = kchk + kchp * 2 + Math.floor(ss / 3)
+    const isChNkp = effectiveKchk >= 4
+
+    const effectiveYkchk = ykchk + ykchp * 2 + Math.floor(yss / 3)
+    const isYchNkp = !isChNkp && effectiveYkchk >= 3
+
+    const effectiveVkchk = vkchk + vkchp * 2 + Math.floor(vss / 3)
+    const isVchNkp = !isChNkp && !isYchNkp && effectiveVkchk >= 3
+
+    const normativeBadge = isChNkp
+      ? { badge: 'ЧНКП ✓', title: `Норматив Чемпиона Клуба (ЧНКП) выполнен: зачтено ${effectiveKchk} КЧК при норме 4` }
+      : isYchNkp
+        ? { badge: 'ЮЧНКП ✓', title: `Норматив Юного Чемпиона Клуба выполнен: зачтено ${effectiveYkchk} ЮКЧК при норме 3` }
+        : isVchNkp
+          ? { badge: 'ВЧНКП ✓', title: `Норматив Ветерана Чемпиона Клуба выполнен: зачтено ${effectiveVkchk} ВКЧК при норме 3` }
+          : null
 
     return (
       <div className="flex items-center justify-end gap-1 flex-nowrap shrink-0">
-        {pkCount > 0 && (
+        {normativeBadge && (
           <HoverTooltip
-            label={awardTooltipForKey('P_RUSSIA', pkCount)}
+            label={normativeBadge.title}
             placement="top"
             variant="site"
             delayMs={0}
@@ -43,9 +56,9 @@ export const ShowsHallOfFameBadges = memo(function ShowsHallOfFameBadges({
           >
             <span
               tabIndex={0}
-              className="inline-flex items-center px-1.5 py-0.5 rounded font-sans font-bold text-[10px] leading-none bg-amber-100 text-amber-900 border border-amber-300 cursor-help"
+              className="inline-flex items-center px-1.5 py-0.5 rounded font-sans font-bold text-[10px] leading-none bg-amber-500/15 text-amber-900 border border-amber-500/60 cursor-help"
             >
-              ПК {pkCount > 1 ? pkCount : ''}
+              {normativeBadge.badge}
             </span>
           </HoverTooltip>
         )}
@@ -65,7 +78,23 @@ export const ShowsHallOfFameBadges = memo(function ShowsHallOfFameBadges({
             </span>
           </HoverTooltip>
         )}
-        {pkCount === 0 && kchkCount === 0 && ssCount > 0 && (
+        {kchkCount === 0 && kchpCount > 0 && (
+          <HoverTooltip
+            label={awardTooltipForKey('KCHP', kchpCount)}
+            placement="top"
+            variant="site"
+            delayMs={0}
+            portal
+          >
+            <span
+              tabIndex={0}
+              className="inline-flex items-center px-1.5 py-0.5 rounded font-sans font-medium text-[10px] leading-none bg-cream-100 text-charcoal-700 border border-cream-300 cursor-help"
+            >
+              КЧП {kchpCount}
+            </span>
+          </HoverTooltip>
+        )}
+        {kchkCount === 0 && kchpCount === 0 && ssCount > 0 && (
           <HoverTooltip
             label={awardTooltipForKey('SS', ssCount)}
             placement="top"
@@ -93,6 +122,7 @@ export const ShowsHallOfFameBadges = memo(function ShowsHallOfFameBadges({
   const bob = titles.BOB || 0
   const bos = titles.BOS || 0
   const chrkf = (titles.CHRKF || 0) + (titles.VCHRKF || 0) + (titles.YCHRKF || 0)
+  const pRussia = (titles.P_RUSSIA || 0) + (titles.P_MOSCOW || 0)
 
   return (
     <div className="flex items-center justify-end gap-1 flex-nowrap shrink-0">
@@ -160,7 +190,7 @@ export const ShowsHallOfFameBadges = memo(function ShowsHallOfFameBadges({
           </span>
         </HoverTooltip>
       )}
-      {((bis === 0 && big === 0) || (bis === 0 && big > 0) || (bis > 0 && big === 0)) && bob > 0 && (
+      {bob > 0 && (
         <HoverTooltip
           label={awardTooltipForKey('BOB', bob)}
           placement="top"
@@ -205,6 +235,22 @@ export const ShowsHallOfFameBadges = memo(function ShowsHallOfFameBadges({
             className="inline-flex items-center px-1.5 py-0.5 rounded font-sans font-medium text-[10px] leading-none bg-cream-100 text-charcoal-700 border border-cream-300 cursor-help"
           >
             ЧРКФ {chrkf > 1 ? chrkf : ''}
+          </span>
+        </HoverTooltip>
+      )}
+      {bis === 0 && bisV === 0 && bisJ === 0 && big === 0 && bob === 0 && bos === 0 && chrkf === 0 && pRussia > 0 && (
+        <HoverTooltip
+          label={awardTooltipForKey('P_RUSSIA', pRussia)}
+          placement="top"
+          variant="site"
+          delayMs={0}
+          portal
+        >
+          <span
+            tabIndex={0}
+            className="inline-flex items-center px-1.5 py-0.5 rounded font-sans font-medium text-[10px] leading-none bg-cream-100 text-charcoal-700 border border-cream-300 cursor-help"
+          >
+            П «России» {pRussia > 1 ? pRussia : ''}
           </span>
         </HoverTooltip>
       )}
