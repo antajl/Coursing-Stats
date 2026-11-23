@@ -1,6 +1,9 @@
 // CoursingStats • Web Dashboard Controller (my.coursing-stats.ru)
 import { MOCK_APPLICATIONS } from './mockData.js';
 import { renderKpiSummary, renderCardHtml, attachCardEvents } from './render.js';
+import { initPwa } from './pwa.js';
+import { initApprovals } from './approvals.js';
+import { initTabs } from './tabs.js';
 
 let apps = [];
 let currentFilter = 'all';
@@ -9,6 +12,9 @@ let isMockMode = true;
 document.addEventListener('DOMContentLoaded', () => {
   initData();
   setupEvents();
+  initTabs();
+  initApprovals();
+  initPwa(showToast);
 });
 
 function initData() {

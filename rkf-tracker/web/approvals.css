@@ -1,0 +1,224 @@
+/* RKF Competition Approvals Section Styles (Old Money Aesthetic) */
+.section-nav-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+  overflow-x: auto;
+}
+
+.section-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.section-tab-btn:hover {
+  color: var(--text-main);
+  background: var(--camel-light);
+}
+
+.section-tab-btn.active {
+  color: #FFFFFF;
+  background: var(--text-main);
+  border-color: var(--text-main);
+}
+
+.section-tab-badge {
+  font-size: 11px;
+  padding: 1px 6px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.08);
+  font-weight: 700;
+}
+
+.section-tab-btn.active .section-tab-badge {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+/* Approvals Grid & Rows */
+.approvals-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.approval-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 18px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.15s ease;
+}
+
+.approval-card:hover {
+  transform: translateY(-0.5px);
+  box-shadow: 0 3px 8px rgba(34, 31, 31, 0.06);
+}
+
+.approval-card.status-approved {
+  border-left: 4px solid #10B981;
+}
+
+.approval-card.status-pending {
+  border-left: 4px solid #F59E0B;
+}
+
+.approval-card.status-revision {
+  border-left: 4px solid #E11D48;
+}
+
+.approval-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.approval-badges {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.badge-discipline {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: #EAE3D2;
+  color: #4A4237;
+}
+
+.badge-rank {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: #F1ECE1;
+  color: var(--text-muted);
+}
+
+.badge-status {
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 4px;
+}
+
+.badge-status.approved {
+  background: var(--emerald-bg);
+  border: 1px solid var(--emerald-border);
+  color: var(--emerald-text);
+}
+
+.badge-status.pending {
+  background: var(--amber-bg);
+  border: 1px solid var(--amber-border);
+  color: var(--amber-text);
+}
+
+.badge-status.revision {
+  background: var(--rose-bg);
+  border: 1px solid var(--rose-border);
+  color: var(--rose-text);
+}
+
+.approval-date {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.approval-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+
+.approval-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  padding: 8px 12px;
+  background: #F4EFE6;
+  border-radius: 6px;
+  font-size: 12.5px;
+  margin-bottom: 8px;
+}
+
+.approval-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.approval-meta-label {
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-soft);
+  font-weight: 600;
+}
+
+.approval-meta-value {
+  font-size: 12.5px;
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.approval-comment {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.4;
+  padding-left: 2px;
+}
+
+.approval-comment strong {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+/* Install Button Highlight */
+.btn-install {
+  background: #A9604B;
+  color: #FFFFFF;
+  border: 1px solid #93503D;
+  transition: all 0.15s ease;
+}
+
+.btn-install:hover {
+  background: #93503D;
+  color: #FFFFFF;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .approval-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .approval-meta {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
