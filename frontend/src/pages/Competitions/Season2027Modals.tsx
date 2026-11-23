@@ -18,6 +18,31 @@ export interface CalendarChangelog {
   entries: ChangelogEntry[]
 }
 
+export const DEFAULT_CHANGELOG: CalendarChangelog = {
+  season: 2027,
+  last_checked_at: '2026-11-23T16:00:00.000Z',
+  entries: [
+    {
+      date: '2026-11-23',
+      version: '1.1',
+      title: 'Обновление утвержденного плана РКФ (2026-11-23)',
+      summary: 'Синхронизация с официальным реестром РКФ.',
+      changes: ['Добавлено 2 новых состязания (ЧРКФ по курсингу и бегам в Санкт-Петербурге)'],
+    },
+    {
+      date: '2026-11-15',
+      version: '1.0',
+      title: 'Первичный план РКФ 2027',
+      summary: 'Утвержденный календарный план состязаний РКФ по курсингу, бегам борзых и БЗМП на 2027 год.',
+      changes: [
+        'Опубликовано 42 национальных состязания РКФ (ЧР, ПКР, ЧРКФ)',
+        'Для 6 состязаний зафиксирован статус «на согласовании комиссии»',
+        'Исключены предварительные квалификационные и тренировочные забеги',
+      ],
+    },
+  ],
+}
+
 export function formatChangelogDate(isoString: string): string {
   try {
     const d = new Date(isoString)

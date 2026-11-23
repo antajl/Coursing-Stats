@@ -1,6 +1,6 @@
 import { useState, useMemo, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { Calendar, ChevronLeft, Info, ChevronDown, History } from 'lucide-react'
+import { ChevronLeft, ChevronDown } from 'lucide-react'
 import { SEO } from '../../components/SEO'
 import { JsonLd, breadcrumbListSchema } from '../../components/JsonLd'
 import { useEvents } from '../../hooks/useApi'
@@ -21,54 +21,17 @@ import {
   compareEventsAsc,
 } from '../Events/eventListUtils'
 import { DISCIPLINE_OPTIONS } from '../Events/EventsToolbar'
+import {
+  type CalendarChangelog,
+  DEFAULT_CHANGELOG,
+  Season2027ToolbarButtons,
+} from './Season2027Modals'
 
 const DISCIPLINE_DOT: Record<string, string> = {
   coursing: 'bg-forest-500',
   bzmp: 'bg-blue-500',
   racing: 'bg-rose-400',
   other: 'bg-amber-400',
-}
-
-interface ChangelogEntry {
-  date: string
-  version?: string
-  title: string
-  summary: string
-  changes: string[]
-}
-
-interface CalendarChangelog {
-  season: number
-  last_checked_at: string
-  entries: ChangelogEntry[]
-}
-
-const DEFAULT_CHANGELOG: CalendarChangelog = {
-  season: 2027,
-  last_checked_at: '2026-11-15T00:00:00.000Z',
-  entries: [
-    {
-      date: '2026-11-15',
-      version: '1.0',
-      title: 'Первичный план РКФ 2027',
-      summary: 'Утвержденный календарный план состязаний РКФ по курсингу, бегам борзых и БЗМП на 2027 год.',
-      changes: [
-        'Опубликовано 42 национальных состязания РКФ (ЧР, ПКР, ЧРКФ)',
-        'Для 6 состязаний зафиксирован статус «на согласовании комиссии»',
-        'Исключены предварительные квалификационные и тренировочные забеги',
-      ],
-    },
-  ],
-}
-
-function formatChangelogDate(isoString: string): string {
-  try {
-    const d = new Date(isoString)
-    if (isNaN(d.getTime())) return '15.11.2026'
-    return d.toLocaleDateString('ru-RU', { day: '2-digit', month: '2-digit', year: 'numeric' })
-  } catch {
-    return '15.11.2026'
-  }
 }
 
 export default function Competitions2027() {
@@ -164,113 +127,9 @@ export default function Competitions2027() {
 
   const monthGroups = useMemo(() => groupEventsByMonth(filteredEvents), [filteredEvents])
 
-  const renderModalContent = () => (
-    <div className="p-3.5 space-y-2.5 text-charcoal-800">
-      <div className="flex items-center justify-between border-b border-old-money-200/80 pb-2">
-        <div className="flex items-center gap-1.5 text-xs font-bold text-charcoal-900">
-          <Calendar className="h-4 w-4 text-camel-700 shrink-0" aria-hidden />
-          <span>Сезон 2027</span>
-        </div>
-        <span className="text-[11px] font-semibold text-camel-900 bg-camel-100/80 border border-camel-300/80 rounded-full px-2 py-0.5">
-          {events.length} состязаний в плане РКФ
-        </span>
-      </div>
-
-      <div>
-        <div className="text-xs font-semibold text-charcoal-900">
-          Будущие соревнования по курсингу и бегам 2027 года
-        </div>
-        <p className="mt-1 text-[11px] leading-relaxed text-charcoal-700">
-          Предварительный график и утвержденный календарный план состязаний Российской кинологической федерации (РКФ) по дисциплинам курсинг борзых, бега борзых и бега за механической приманкой (БЗМП).
-        </p>
-      </div>
-
-      <div className="border-t border-old-money-200/80 pt-2 text-[10.5px] leading-relaxed text-charcoal-600 flex items-start gap-1.5">
-        <Info className="h-3.5 w-3.5 text-camel-700 shrink-0 mt-0.5" aria-hidden />
-        <p>
-          <strong className="text-charcoal-800 font-semibold">Справочно:</strong> даты, ранги и клубы согласованы спорткомитетом РКФ. Судейские бригады дополняются по мере утверждения. После сдачи отчетов результаты переносятся в архив с начислением рейтинговых очков.
-        </p>
-      </div>
-
-      {/* История изменений плана РКФ / Ченджлог */}
-      <div className="border-t border-old-money-200/80 pt-2 space-y-1.5">
-        <div className="flex items-center justify-between text-[11px] font-semibold text-charcoal-900">
-          <span className="flex items-center gap-1.5">
-            <History className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
-            <span>История обновлений плана</span>
-          </span>
-          <span className="text-[10px] text-charcoal-500 font-normal">
-            Сверка: {formatChangelogDate(changelog.last_checked_at)}
-          </span>
-        </div>
-
-        <div className="space-y-1.5 max-h-44 overflow-y-auto pr-1">
-          {changelog.entries.map((entry, idx) => (
-            <div
-              key={`${entry.date}-${idx}`}
-              className="rounded-lg bg-cream-50/80 p-2 border border-old-money-100 text-[10.5px] leading-relaxed text-charcoal-700 space-y-1"
-            >
-              <div className="flex items-center justify-between font-semibold text-charcoal-900">
-                <span>{entry.title}</span>
-                <span className="text-[9.5px] font-mono text-camel-800 bg-camel-100/70 px-1.5 py-0.2 rounded">
-                  {entry.date}
-                </span>
-              </div>
-              <ul className="list-disc list-inside text-charcoal-600 space-y-0.5 text-[10px]">
-                {entry.changes.map((change, cIdx) => (
-                  <li key={cIdx}>{change}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  )
-
-  const infoButtonDesktop = (
-    <ModernDropdown
-      closeOnScroll
-      trigger={
-        <button
-          type="button"
-          className="cs-glass-pill inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full px-3.5 text-xs font-semibold transition-all cursor-pointer whitespace-nowrap select-none text-charcoal-800 hover:text-charcoal-900"
-          aria-label="О сезоне 2027 и календарном плане"
-        >
-          <Info className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
-          <span>О сезоне 2027</span>
-        </button>
-      }
-      width="380px"
-      portal
-    >
-      {() => renderModalContent()}
-    </ModernDropdown>
-  )
-
-  const infoButtonMobile = (
-    <ModernDropdown
-      closeOnScroll
-      trigger={
-        <button
-          type="button"
-          className="cs-glass-pill inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-xs font-semibold transition-all cursor-pointer select-none"
-          aria-label="О сезоне 2027"
-          title="О сезоне 2027"
-        >
-          <Info className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
-        </button>
-      }
-      width="320px"
-      portal
-    >
-      {() => renderModalContent()}
-    </ModernDropdown>
-  )
-
   const toolbarFilters = (
     <div className="w-full min-w-0">
-      {/* Мобильная строка (32px): Поиск + О сезоне + Дисциплина + В архив */}
+      {/* Мобильная строка (32px): Поиск + Кнопки сезона/изменений + Дисциплина + В архив */}
       <div className="flex sm:hidden items-center gap-1.5 w-full min-w-0">
         <ToolbarSearch
           value={searchQuery}
@@ -278,7 +137,7 @@ export default function Competitions2027() {
           placeholder="Поиск 2027…"
         />
 
-        <div className="shrink-0">{infoButtonMobile}</div>
+        <Season2027ToolbarButtons eventsCount={events.length} changelog={changelog} isMobile />
 
         <div className="shrink-0">
           <ModernDropdown
@@ -362,8 +221,8 @@ export default function Competitions2027() {
             placeholder="Город, клуб, дисциплина…"
           />
 
-          {/* Кнопка «О сезоне 2027» — справа от поиска */}
-          <div className="shrink-0">{infoButtonDesktop}</div>
+          {/* Кнопки «О сезоне 2027» и «Изменения» — справа от поиска */}
+          <Season2027ToolbarButtons eventsCount={events.length} changelog={changelog} />
 
           {/* Сброс фильтров */}
 
