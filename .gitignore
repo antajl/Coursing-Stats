@@ -213,3 +213,8 @@ frontend/.tunnel-url
 
 # Google Search Console OAuth Tokens
 .gsc-tokens.json
+
+# RKF Tracker local credentials and state
+scripts/rkf-tracker/config.json
+scripts/rkf-tracker/state.json
+scripts/rkf-tracker/received.json
