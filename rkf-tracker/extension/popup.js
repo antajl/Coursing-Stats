@@ -85,12 +85,17 @@ function setupEventListeners() {
         'rkf_last_refresh_timestamp'
       ]);
       currentApps = [];
-      mainDashboard.style.display = 'none';
-      statusBadge.style.display = 'none';
-      authCard.style.display = 'block';
+      showAuthScreen();
       showToast('Вы вышли из аккаунта');
     });
   }
+}
+
+function showAuthScreen() {
+  document.body.classList.add('is-logged-out');
+  authCard.style.display = 'block';
+  mainDashboard.style.display = 'none';
+  statusBadge.style.display = 'none';
 }
 
 async function checkAuthAndInit() {
@@ -102,9 +107,7 @@ async function checkAuthAndInit() {
     // Try to auto-grab from existing rkf.online tabs
     const autoGrabbed = await checkAuthFromTabs();
     if (!autoGrabbed) {
-      authCard.style.display = 'block';
-      mainDashboard.style.display = 'none';
-      statusBadge.style.display = 'none';
+      showAuthScreen();
     }
   }
 }
@@ -160,6 +163,7 @@ async function checkAuthFromTabs() {
 }
 
 async function showDashboard(store) {
+  document.body.classList.remove('is-logged-out');
   authCard.style.display = 'none';
   mainDashboard.style.display = 'block';
   statusBadge.style.display = 'inline-flex';
