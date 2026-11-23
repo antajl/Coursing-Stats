@@ -23,15 +23,40 @@ const errorModal = document.getElementById('error-modal');
 
 // Init
 document.addEventListener('DOMContentLoaded', async () => {
+  // Check if opened as standalone browser tab
+  if (window.innerWidth > 800 || new URLSearchParams(window.location.search).get('mode') === 'tab') {
+    document.body.classList.add('is-tab-mode');
+  }
+
   setupEventListeners();
+  setupStorageSync();
   checkAuthAndInit();
 });
 
 function setupEventListeners() {
   btnRefresh.addEventListener('click', triggerRefresh);
   btnFullscreen.addEventListener('click', () => {
-    chrome.tabs.create({ url: chrome.runtime.getURL('popup.html') });
+    chrome.tabs.create({ url: chrome.runtime.getURL('popup.html?mode=tab') });
   });
+
+  // Graceful fallback for brand link if my.coursing-stats.ru is not yet deployed
+  const brandLink = document.getElementById('brand-link');
+  if (brandLink) {
+    brandLink.addEventListener('click', async (e) => {
+      e.preventDefault();
+      const targetUrl = 'https://my.coursing-stats.ru';
+      const fallbackUrl = 'https://coursing-stats.ru';
+      try {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 1200);
+        await fetch(targetUrl, { method: 'HEAD', mode: 'no-cors', signal: controller.signal });
+        clearTimeout(timeoutId);
+        chrome.tabs.create({ url: targetUrl });
+      } catch (_) {
+        chrome.tabs.create({ url: fallbackUrl });
+      }
+    });
+  }
 
   searchInput.addEventListener('input', handleSearch);
 
@@ -367,6 +392,72 @@ function determineStatusGroup(status) {
   return 'active';
 }
 
+function setupStorageSync() {
+  chrome.storage.onChanged.addListener((changes, area) => {
+    if (area === 'local') {
+      if (changes.rkfToken) {
+        if (!changes.rkfToken.newValue) {
+          currentApps = [];
+          showAuthScreen();
+        } else {
+          checkAuthAndInit();
+        }
+      }
+      if (changes.cached_apps && changes.cached_apps.newValue) {
+        currentApps = changes.cached_apps.newValue;
+        renderApps(currentApps, currentMeta);
+      }
+      if (changes.rkf_received_docs && changes.rkf_received_docs.newValue) {
+        const recMap = changes.rkf_received_docs.newValue || {};
+        for (const app of currentApps) {
+          app.isReceived = !!recMap[app.barcode];
+        }
+        renderApps(currentApps, currentMeta);
+      }
+    }
+  });
+}
+
+const CYNOLOGICAL_ACRONYMS = new Set([
+  'РКФ', 'РК', 'ФЦИ', 'FCI', 'ЧРКФ', 'ЮЧРКФ', 'ВЧРКФ', 'ЧР', 'ЮЧР', 'ВЧР',
+  'ГЧР', 'ГЧРКФ', 'ЧФ', 'ЮЧФ', 'КЧК', 'ЮКЧК', 'СС', 'ЮСС', 'CAC', 'CACIB',
+  'CACL', 'RCAC', 'RCACIB', 'RCACL', 'BIS', 'JBIS', 'VBIS', 'BIG', 'BOB',
+  'BOS', 'BJ', 'BV', 'CW', 'ЛПП', 'ЛЮ', 'ЛВ', 'ЛЩ', 'ЛБ', 'ПК'
+]);
+
+const LOWERCASE_PARTICLES = new Set([
+  'по', 'в', 'и', 'на', 'с', 'со', 'для', 'из', 'от', 'до', 'де', 'дэ', 'ла', 'ле', 'аль', 'эль', 'ван', 'дер', 'фон'
+]);
+
+function formatDogName(name) {
+  if (!name) return '';
+  return name.trim().split(/\s+/).map((word, idx) => {
+    return word.split('-').map(part => {
+      const clean = part.toLowerCase();
+      if (idx > 0 && (clean === 'дэ' || clean === 'аль' || clean === 'де')) {
+        return clean.charAt(0).toUpperCase() + clean.slice(1);
+      }
+      return clean.charAt(0).toUpperCase() + clean.slice(1);
+    }).join('-');
+  }).join(' ');
+}
+
+function formatDocTitle(title) {
+  if (!title) return '';
+  return title.split(/\s+/).map((word, idx) => {
+    const raw = word.replace(/[(),]/g, '');
+    const up = raw.toUpperCase();
+    if (CYNOLOGICAL_ACRONYMS.has(up)) {
+      return word.toUpperCase();
+    }
+    const low = raw.toLowerCase();
+    if (idx > 0 && LOWERCASE_PARTICLES.has(low)) {
+      return word.toLowerCase();
+    }
+    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+  }).join(' ');
+}
+
 function renderApps(apps, meta) {
   const timeStr = new Date(meta.lastUpdated).toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit' });
   lblTime.innerHTML = `Обновлено: <strong>${timeStr}</strong>`;
@@ -409,11 +500,11 @@ function renderRowHtml(app, userUuid) {
   const rkfLink = userUuid
     ? `https://rkf.online/user/${userUuid}/documents/application/registry?barcode=${app.barcode}`
     : `https://rkf.online`;
-  const dogDisplay = app.dogName || 'Собака не указана';
-  const docTitle = app.documentName || 'Документ РКФ';
+  const dogDisplay = formatDogName(app.dogName) || 'Собака не указана';
+  const docTitle = formatDocTitle(app.documentName) || 'Документ РКФ';
 
   return `
-    <div class="app-row ${app.isReceived ? 'is-collected' : ''}" id="row-${app.barcode}" data-barcode="${app.barcode}" data-filter-group="${filterGroup}" data-is-ready="${app.statusGroup === 'ready'}">
+    <div class="app-row status-${app.statusGroup} ${app.isReceived ? 'is-collected' : ''}" id="row-${app.barcode}" data-barcode="${app.barcode}" data-filter-group="${filterGroup}" data-is-ready="${app.statusGroup === 'ready'}">
       <div class="row-main">
         <!-- 1. Checkbox "Забрали" -->
         <div class="col-check">
