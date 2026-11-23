@@ -30,6 +30,7 @@ export default function Nav() {
     location.pathname.startsWith('/donino-');
   const isShowsActive =
     location.pathname === '/shows' || location.pathname.startsWith('/shows/')
+  const isTrackerActive = location.pathname.startsWith('/tracker');
   const isGuideActive = location.pathname === '/guide';
   const isAboutActive = location.pathname === '/about';
 
@@ -81,6 +82,7 @@ export default function Nav() {
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
+
 
   if (location.pathname.startsWith('/tracker')) {
     const currentTab = (searchParams.get('tab') as TrackerTab) || 'applications';

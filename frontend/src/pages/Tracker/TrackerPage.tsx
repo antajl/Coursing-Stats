@@ -60,7 +60,7 @@ export default function TrackerPage() {
   }, []);
 
   return (
-    <main className="cs-page-shell max-w-7xl mx-auto px-4 sm:px-6 py-6 min-h-[calc(100vh-64px)]">
+    <div className="space-y-4">
       {currentTab === 'applications' ? (
         <TrackerApplications
           applications={MOCK_APPLICATIONS}
@@ -80,6 +80,6 @@ export default function TrackerPage() {
         onClose={() => setAuthModalOpen(false)}
         onAuthChange={handleAuthChange}
       />
-    </main>
+    </div>
   );
 }
