@@ -72,7 +72,10 @@ const server = http.createServer((req, res) => {
 
   // Serve static files
   if (pathname === '/') pathname = '/index.html';
-  const filePath = path.join(WEB_DIR, pathname);
+  let filePath = path.join(WEB_DIR, pathname);
+  if (pathname.startsWith('/shared/')) {
+    filePath = path.join(path.dirname(WEB_DIR), pathname);
+  }
 
   fs.stat(filePath, (err, stats) => {
     if (err || !stats.isFile()) {
