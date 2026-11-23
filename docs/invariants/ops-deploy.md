@@ -158,8 +158,8 @@ Workers + Grammy + KV; aggregates only
 
 ### RKF Tracker & Browser Extension Isolation Invariant
 
-1) **Изоляция от S3 и прода:** Внутренние утилиты мониторинга личного кабинета РКФ (`extension/`, `scripts/rkf-tracker/`) полностью изолированы от сборки и деплоя публичного сайта. В `.github/workflows/deploy.yml` настроен `paths-ignore: - 'extension/**'`, а локальные конфигурации с токенами (`config.json`, `state.json`, `received.json`) занесены в `.gitignore`.
-2) **Zero Server & Zero Liability для Chrome Extension:** Расширение для браузера на Manifest V3 функционирует на 100% клиентской стороне браузера без сторонних бэкендов. Токены сессии извлекаются напрямую из активной вкладки `rkf.online` (`content_script` -> `chrome.storage.local`) и опрашивают API РКФ напрямую через разрешения `host_permissions`. Никакие учетные данные пользователей не передаются и не сохраняются на серверах проекта.
+1) **Изоляция от S3 и прода:** Внутренние утилиты мониторинга личного кабинета РКФ (`rkf-tracker/`, включающая `extension/`, `desktop/`, `bot/`, `web/`) полностью изолированы от сборки и деплоя публичного сайта. В `.github/workflows/deploy.yml` настроен `paths-ignore: - 'rkf-tracker/**'`, а локальные конфигурации с токенами (`config.json`, `state.json`, `received.json`) занесены в `.gitignore`.
+2) **Zero Server & Zero Liability для Chrome Extension:** Расширение для браузера на Manifest V3 функционирует на 100% клиентской стороне браузера без сторонних бэкендов. Токены сессии извлекаются напрямую из активной вкладки `rkf.online` (`content_script` -> `chrome.storage.local`) и опрашивают API РКФ напрямую через разрешения `host_permissions` (`https://rkf.online/*`, `https://*.rkf.online/*`). Никакие учетные данные пользователей не передаются и не сохраняются на серверах проекта.
 3) **Защита от спама и рейт-лимиты РКФ:** Для предотвращения блокировки IP-адресов пользователей или аккаунтов со стороны шлюзов РКФ, в UI трекера (как в расширении, так и в десктопном дашборде) жестко зафиксирован кулдаун не менее 60 секунд на кнопку ручного обновления с сохранением таймера в `localStorage` / `chrome.storage.local`.
 
 ---
