@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "cd frontend && yarn run dev",
     "dev:my": "node rkf-tracker/web/server.cjs",
+    "pack-extension": "node backend/scripts/ops/pack-extension.cjs",
     "generate-favicon": "npx tsx backend/scripts/generate-favicon.ts",
     "export-archive": "npx tsx backend/scripts/export/export-data-archive.ts",
     "export-competitions": "npx tsx backend/scripts/export/export-competitions-local.ts",
