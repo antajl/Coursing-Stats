@@ -1,0 +1,235 @@
+/* Applications List */
+.apps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+/* Row Card — Full soft colored background inside without harsh borders */
+.app-row {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 6px 10px;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.app-row:hover {
+  transform: translateY(-0.5px);
+  box-shadow: 0 2px 5px rgba(34, 31, 31, 0.07);
+}
+
+.app-row.status-ready {
+  background: #ECFDF5;
+  border-color: #A7F3D0;
+}
+.app-row.status-ready:hover {
+  background: #E1FBEF;
+  border-color: #6EE7B7;
+}
+
+.app-row.status-active {
+  background: #FFFBEB;
+  border-color: #FDE68A;
+}
+.app-row.status-active:hover {
+  background: #FEF3C7;
+  border-color: #FCD34D;
+}
+
+.app-row.status-rejected {
+  background: #FFF1F2;
+  border-color: #FECDD3;
+}
+.app-row.status-rejected:hover {
+  background: #FFE4E6;
+  border-color: #FDA4AF;
+}
+
+.app-row.is-collected {
+  opacity: 0.82;
+  background: #F5F5F4 !important;
+  border-color: #E7E5E4 !important;
+}
+.app-row.is-collected:hover {
+  background: #ECEBE9 !important;
+  opacity: 1;
+}
+
+/* Fixed Table Columns (Horizontal) */
+.row-main {
+  display: grid;
+  grid-template-columns: 18px 250px 1fr 140px 14px;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Column 1: Checkbox */
+.col-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+}
+
+.check-btn {
+  width: 15px;
+  height: 15px;
+  border: 1.5px solid #C89D66;
+  border-radius: 3px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: #FFFFFF;
+  transition: all 0.15s;
+  flex-shrink: 0;
+}
+
+.check-btn.checked {
+  background: #047857;
+  border-color: #047857;
+}
+
+.check-btn svg {
+  stroke: #FFFFFF;
+  width: 9px;
+  height: 9px;
+  display: none;
+}
+
+.check-btn.checked svg {
+  display: block;
+}
+
+/* Column 2: Dog Info */
+.col-dog {
+  width: 250px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.dog-name {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-main);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+
+.dog-pedigree {
+  font-size: 9.5px;
+  color: var(--text-soft);
+  font-family: monospace;
+  line-height: 1.15;
+}
+
+/* Column 3: Document Title & Barcode */
+.col-doc {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.doc-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-main);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.25;
+}
+
+.doc-meta {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 9.5px;
+  color: var(--text-muted);
+  line-height: 1.15;
+}
+
+.barcode-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-family: monospace;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.barcode-link:hover {
+  color: var(--camel);
+  text-decoration: underline;
+}
+
+/* Column 4: Status Badge */
+.col-status {
+  width: 140px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.badge {
+  font-size: 9.5px;
+  font-weight: 600;
+  padding: 2.5px 7px;
+  border-radius: 4px;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+  border: 1px solid transparent;
+  text-align: center;
+}
+
+.badge-ready {
+  background: rgba(4, 120, 87, 0.12);
+  color: #065F46;
+  border-color: rgba(4, 120, 87, 0.28);
+}
+.badge-active {
+  background: rgba(180, 83, 9, 0.12);
+  color: #92400E;
+  border-color: rgba(180, 83, 9, 0.28);
+}
+.badge-rejected {
+  background: rgba(190, 18, 60, 0.12);
+  color: #9F1239;
+  border-color: rgba(190, 18, 60, 0.28);
+}
+
+/* Column 5: Chevron Arrow */
+.col-chevron {
+  width: 14px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chevron-icon {
+  width: 14px;
+  height: 14px;
+  stroke: var(--text-soft);
+  transition: transform 0.2s ease, stroke 0.15s ease;
+}
+
+.app-row:hover .chevron-icon {
+  stroke: var(--text-main);
+}
+
+.app-row.is-open .chevron-icon {
+  transform: rotate(180deg);
+  stroke: var(--camel);
+}

@@ -1,0 +1,82 @@
+/* Error Modal */
+.error-modal-backdrop {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(34, 31, 31, 0.4);
+  backdrop-filter: blur(2px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.error-modal {
+  background: #FFFFFF;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  max-width: 440px;
+  width: 100%;
+  padding: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.error-modal h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--rose);
+  margin-bottom: 6px;
+}
+
+.error-modal p {
+  font-size: 12px;
+  color: var(--text-main);
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.error-modal .hint {
+  font-size: 11px;
+  color: var(--text-muted);
+  background: var(--bg);
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: 1px solid var(--border);
+  margin-bottom: 14px;
+}
+
+.error-modal .btn-close {
+  background: var(--text-main);
+  color: #FAF8F5;
+  border: none;
+  padding: 6px 14px;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  float: right;
+}
+
+/* Toast */
+.toast {
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  background: var(--text-main);
+  color: #FAF8F5;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  opacity: 0;
+  transform: translateY(6px);
+  transition: all 0.2s ease;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}

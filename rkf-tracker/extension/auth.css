@@ -1,0 +1,131 @@
+/* Compact Logged-Out / Auth State */
+body.is-logged-out {
+  width: 440px;
+  min-height: 270px;
+  max-height: 380px;
+  padding: 16px 18px;
+}
+
+body.is-logged-out .btn-refresh,
+body.is-logged-out #btn-fullscreen,
+body.is-logged-out #btn-settings,
+body.is-logged-out .status-badge {
+  display: none !important;
+}
+
+/* Smooth View Transitions */
+.auth-card,
+#main-dashboard {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.auth-card.fade-in,
+#main-dashboard.fade-in {
+  animation: smoothViewFadeIn 0.24s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes smoothViewFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Auth Card */
+.auth-card {
+  background: transparent;
+  border: none;
+  padding: 16px 4px 6px 4px;
+  text-align: center;
+  margin-top: 4px;
+}
+
+.auth-icon {
+  width: 44px;
+  height: 44px;
+  margin: 0 auto 10px auto;
+  border-radius: 10px;
+  background: var(--camel-bg);
+  color: var(--camel-hover);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(200, 157, 102, 0.25);
+}
+
+.auth-card h2 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 5px;
+}
+
+.auth-card p {
+  font-size: 12px;
+  color: var(--text-muted);
+  max-width: 380px;
+  margin: 0 auto 16px auto;
+  line-height: 1.45;
+}
+
+.auth-actions {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-primary {
+  background: var(--text-main);
+  color: #FFFFFF;
+  border: none;
+  padding: 7px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.btn-primary:hover {
+  background: #3B332A;
+}
+
+.manual-token-link {
+  margin-top: 14px;
+}
+
+.manual-token-link a {
+  font-size: 11px;
+  color: var(--text-soft);
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.manual-token-link a:hover {
+  color: var(--camel);
+}
+
+.manual-token-wrap {
+  margin-top: 10px;
+  display: flex;
+  gap: 6px;
+  max-width: 380px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.manual-token-wrap input {
+  flex: 1;
+  padding: 5px 9px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 11.5px;
+  background: #FFFFFF;
+  color: var(--text-main);
+}
