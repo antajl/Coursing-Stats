@@ -1,0 +1,10 @@
+# Binaries & build artifacts
+*.exe
+*.dll
+*.pdb
+dist/
+
+# Local state & secrets
+config.json
+state.json
+received.json

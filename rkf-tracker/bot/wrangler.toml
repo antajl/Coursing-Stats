@@ -1,0 +1,37 @@
+name = "coursing-stats-tracker-bot"
+main = "src/worker.ts"
+compatibility_date = "2025-11-01"
+
+[vars]
+WEBAPP_URL = "https://my.coursing-stats.ru"
+SITE_URL = "https://coursing-stats.ru"
+BOT_USERNAME = "coursing_stats_tracker_bot"
+
+[[kv_namespaces]]
+binding = "KV_STORAGE"
+id = "dc8298e10534438898ab1f56c6ffc0c6"
+
+[triggers]
+crons = ["0 * * * *"]
+
+[observability]
+enabled = true
+
+[observability.logs]
+enabled = true
+persist = true
+invocation_logs = true
+
+[build]
+command = "tsc"
+
+exclude = [
+  "backend/**",
+  "frontend/**",
+  "data/**",
+  "docs/**",
+  ".github/**",
+  "node_modules/**",
+  "*.md",
+  "*.lock"
+]
