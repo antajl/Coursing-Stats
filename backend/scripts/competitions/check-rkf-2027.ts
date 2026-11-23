@@ -81,8 +81,42 @@ interface EventDiff {
   rulesAdded: Array<{ event: CalendarEvent2027; newRules: string }>;
 }
 
-const ATTACHMENT_URL = 'https://info.rkf.online/attachment/0a0cafba-68a6-4cfb-80f0-01407d9bff0f';
 const SOURCE_URL = 'https://info.rkf.online/article/fb2b53ca-bdf2-5e35-bea2-2e973592e2d7';
+
+export async function resolveLatest2027AttachmentUrl(sourceUrl: string = SOURCE_URL): Promise<string> {
+  console.log(`[check-rkf-2027] Resolving latest 2027 attachment URL from ${sourceUrl}...`);
+  const res = await fetch(sourceUrl, {
+    headers: {
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) CoursingStatsBot/1.0 (+https://coursing-stats.ru)',
+    },
+  });
+
+  if (!res.ok) {
+    throw new Error(`Failed to fetch RKF source article: HTTP ${res.status} ${res.statusText}`);
+  }
+
+  const html = await res.text();
+
+  // Pattern 1: header file icon title "Utility_National_2027*.xlsx"
+  const titleMatch = html.match(/href=["'](\/attachment\/[a-f0-9\-]+)["'][^>]*title=["'][^"']*Utility_National_2027/i);
+  if (titleMatch) {
+    return `https://info.rkf.online${titleMatch[1]}`;
+  }
+
+  // Pattern 2: section 2027 link "Национальные сертификатные состязания"
+  const secMatch = html.match(/<strong>2027<\/strong>[\s\S]*?href=["'](https?:\/\/info\.rkf\.online\/attachment\/[a-f0-9\-]+)["'][^>]*>Национальные сертификатные состязания/i);
+  if (secMatch) {
+    return secMatch[1];
+  }
+
+  // Pattern 3: any attachment right after 2027 header
+  const any2027Match = html.match(/<strong>2027<\/strong>[\s\S]*?href=["'](\/attachment\/[a-f0-9\-]+)["']/i);
+  if (any2027Match) {
+    return `https://info.rkf.online${any2027Match[1]}`;
+  }
+
+  throw new Error('Failed to resolve 2027 schedule attachment link from RKF article.');
+}
 
 const MONTH_NAMES: Record<string, string> = {
   '01': '01-январь',
@@ -375,8 +409,9 @@ async function main() {
   const changelog: CalendarChangelog = JSON.parse(fs.readFileSync(changelogPath, 'utf-8'));
   const calendarData: { events: CalendarEvent2027[] } = JSON.parse(fs.readFileSync(calendarPath, 'utf-8'));
 
-  console.log(`[check-rkf-2027] Fetching RKF attachment: ${ATTACHMENT_URL}`);
-  const res = await fetch(ATTACHMENT_URL, {
+  const attachmentUrl = await resolveLatest2027AttachmentUrl(SOURCE_URL);
+  console.log(`[check-rkf-2027] Fetching RKF attachment: ${attachmentUrl}`);
+  const res = await fetch(attachmentUrl, {
     headers: {
       'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) CoursingStatsBot/1.0 (+https://coursing-stats.ru)',
     },
@@ -408,6 +443,7 @@ async function main() {
   if (!hasDiffs) {
     console.log('[check-rkf-2027] No semantic differences found in competition rows.');
     if (shaChanged) {
+      changelog.attachment_url = attachmentUrl;
       changelog.source_sha256 = currentSha256;
       changelog.last_checked_at = new Date().toISOString();
       fs.writeFileSync(changelogPath, JSON.stringify(changelog, null, 2), 'utf-8');
@@ -528,6 +564,7 @@ async function main() {
       changes: changeList,
     });
 
+    changelog.attachment_url = attachmentUrl;
     changelog.source_sha256 = currentSha256;
     changelog.last_checked_at = new Date().toISOString();
 
