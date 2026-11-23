@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "CoursingStats • Заявки РКФ",
-  "version": "1.0.0",
-  "description": "Удобный трекер статусов заявок и титулов для личного кабинета RKF.Online в стиле CoursingStats",
+  "version": "1.1.0",
+  "description": "Удобный трекер статусов заявок и мониторинг соревнований РКФ в стиле CoursingStats",
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
@@ -10,7 +10,7 @@
   },
   "action": {
     "default_popup": "popup.html",
-    "default_title": "Заявки РКФ",
+    "default_title": "Заявки и соревнования РКФ",
     "default_icon": {
       "16": "icons/icon16.png",
       "48": "icons/icon48.png",
@@ -29,7 +29,9 @@
   },
   "host_permissions": [
     "https://rkf.online/*",
-    "https://*.rkf.online/*"
+    "https://*.rkf.online/*",
+    "https://coursing-stats.ru/*",
+    "https://*.coursing-stats.ru/*"
   ],
   "content_scripts": [
     {

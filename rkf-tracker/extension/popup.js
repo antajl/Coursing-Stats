@@ -2,6 +2,7 @@
 import { checkAuthFromTabs, fetchAppsData } from './api.js';
 import { renderApps, handleSearch } from './render.js';
 import { setupSettings } from './settings.js';
+import { initCompetitions } from './competitions.js';
 
 const COOLDOWN_SECONDS = 60;
 let currentFilter = 'all';
@@ -21,55 +22,77 @@ const btnFullscreen = document.getElementById('btn-fullscreen');
 const searchInput = document.getElementById('search-input');
 const toast = document.getElementById('toast');
 const errorModal = document.getElementById('error-modal');
+const guideModal = document.getElementById('guide-modal');
 
-// Init
 document.addEventListener('DOMContentLoaded', async () => {
   if (window.innerWidth > 800 || new URLSearchParams(window.location.search).get('mode') === 'tab') {
     document.body.classList.add('is-tab-mode');
   }
-
   setupEventListeners();
   setupSettings(showToast, handleLogout, openFullscreenTab);
   setupStorageSync();
   checkAuthAndInit();
+  initCompetitions(showToast);
 });
 
 function setupEventListeners() {
   btnRefresh.addEventListener('click', triggerRefresh);
   btnFullscreen.addEventListener('click', openFullscreenTab);
 
-  // Brand link with fallback
+  // Tabs navigation
+  const tabApps = document.getElementById('tab-btn-apps');
+  const tabComps = document.getElementById('tab-btn-competitions');
+  const secApps = document.getElementById('section-apps');
+  const secComps = document.getElementById('section-competitions');
+
+  tabApps.addEventListener('click', () => {
+    tabApps.classList.add('active');
+    tabComps.classList.remove('active');
+    secApps.style.display = 'block';
+    secComps.style.display = 'none';
+  });
+
+  tabComps.addEventListener('click', () => {
+    tabComps.classList.add('active');
+    tabApps.classList.remove('active');
+    secApps.style.display = 'none';
+    secComps.style.display = 'block';
+  });
+
+  // Installation guide
+  document.getElementById('btn-guide').addEventListener('click', () => { guideModal.style.display = 'flex'; });
+  const hideGuide = () => { guideModal.style.display = 'none'; };
+  document.getElementById('btn-close-guide').addEventListener('click', hideGuide);
+  document.getElementById('btn-guide-ok').addEventListener('click', hideGuide);
+
+  // Brand link
   const brandLink = document.getElementById('brand-link');
   if (brandLink) {
     brandLink.addEventListener('click', async (e) => {
       e.preventDefault();
-      const targetUrl = 'https://my.coursing-stats.ru';
-      const fallbackUrl = 'https://coursing-stats.ru';
       try {
-        const controller = new AbortController();
-        const timeoutId = setTimeout(() => controller.abort(), 1200);
-        await fetch(targetUrl, { method: 'HEAD', mode: 'no-cors', signal: controller.signal });
-        clearTimeout(timeoutId);
-        chrome.tabs.create({ url: targetUrl });
+        const c = new AbortController();
+        const tid = setTimeout(() => c.abort(), 1200);
+        await fetch('https://my.coursing-stats.ru', { method: 'HEAD', mode: 'no-cors', signal: c.signal });
+        clearTimeout(tid);
+        chrome.tabs.create({ url: 'https://my.coursing-stats.ru' });
       } catch (_) {
-        chrome.tabs.create({ url: fallbackUrl });
+        chrome.tabs.create({ url: 'https://coursing-stats.ru' });
       }
     });
   }
 
   searchInput.addEventListener('input', () => handleSearch(currentFilter));
 
-  // Filters
-  document.querySelectorAll('.filter-bar .filter-pill').forEach(pill => {
+  document.querySelectorAll('.filter-bar .filter-pill').forEach((pill) => {
     pill.addEventListener('click', () => {
-      document.querySelectorAll('.filter-bar .filter-pill').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.filter-bar .filter-pill').forEach((p) => p.classList.remove('active'));
       pill.classList.add('active');
       currentFilter = pill.getAttribute('data-filter');
       handleSearch(currentFilter);
     });
   });
 
-  // Auth actions
   document.getElementById('btn-open-rkf').addEventListener('click', () => {
     chrome.tabs.create({ url: 'https://rkf.online' });
   });
@@ -103,9 +126,6 @@ function openFullscreenTab() {
 function showAuthScreen() {
   document.body.classList.add('is-logged-out');
   authCard.style.display = 'block';
-  authCard.classList.remove('fade-in');
-  void authCard.offsetWidth;
-  authCard.classList.add('fade-in');
   mainDashboard.style.display = 'none';
   statusBadge.style.display = 'none';
 }
@@ -130,16 +150,11 @@ async function showDashboard(store) {
   document.body.classList.remove('is-logged-out');
   authCard.style.display = 'none';
   mainDashboard.style.display = 'block';
-  mainDashboard.classList.remove('fade-in');
-  void mainDashboard.offsetWidth;
-  mainDashboard.classList.add('fade-in');
   statusBadge.style.display = 'inline-flex';
 
   const lastTime = parseInt(store.rkf_last_refresh_timestamp || '0', 10);
   const elapsed = Math.floor((Date.now() - lastTime) / 1000);
-  if (elapsed < COOLDOWN_SECONDS) {
-    startCooldown(COOLDOWN_SECONDS - elapsed);
-  }
+  if (elapsed < COOLDOWN_SECONDS) startCooldown(COOLDOWN_SECONDS - elapsed);
 
   if (store.cached_apps && store.cached_apps.length > 0) {
     currentApps = store.cached_apps;
@@ -190,7 +205,7 @@ async function handleToggleCheck(barcode, isChecked) {
   const isReady = row.getAttribute('data-is-ready') === 'true';
   row.setAttribute('data-filter-group', isChecked ? 'collected' : (isReady ? 'to_pickup' : 'active'));
 
-  const app = currentApps.find(a => a.barcode === barcode);
+  const app = currentApps.find((a) => a.barcode === barcode);
   if (app) app.isReceived = isChecked;
 
   const { rkf_received_docs = {} } = await chrome.storage.local.get('rkf_received_docs');

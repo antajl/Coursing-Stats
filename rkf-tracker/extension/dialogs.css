@@ -57,6 +57,127 @@
   float: right;
 }
 
+/* Guide Modal */
+.guide-modal-backdrop {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(18, 19, 22, 0.65);
+  backdrop-filter: blur(3px);
+  z-index: 2100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.guide-modal {
+  background-color: var(--color-surface, #18191c);
+  border: 1px solid var(--color-border, #292a2d);
+  border-radius: 10px;
+  max-width: 520px;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.4);
+}
+
+.guide-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.guide-header h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text, #f0ede6);
+  margin: 0;
+}
+
+.guide-close-btn {
+  background: transparent;
+  border: none;
+  color: var(--color-text-muted, #9e9b94);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.guide-close-btn:hover { color: var(--color-text, #f0ede6); }
+
+.guide-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.guide-step {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  padding: 10px 12px;
+}
+
+.guide-step-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: rgba(194, 166, 117, 0.2);
+  color: var(--color-accent, #c2a675);
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.guide-step-body { flex: 1; }
+
+.guide-step-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text, #f0ede6);
+  margin-bottom: 2px;
+}
+
+.guide-step-text {
+  font-size: 11px;
+  color: var(--color-text-muted, #9e9b94);
+  line-height: 1.45;
+}
+
+.guide-step-code {
+  display: inline-block;
+  padding: 1px 5px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 3px;
+  font-family: monospace;
+  font-size: 11px;
+  color: var(--color-accent, #c2a675);
+}
+
+.guide-security-note {
+  font-size: 11px;
+  color: #74c69d;
+  background: rgba(45, 106, 79, 0.15);
+  border: 1px solid rgba(116, 198, 157, 0.25);
+  border-radius: 5px;
+  padding: 8px 10px;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.guide-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
 /* Toast */
 .toast {
   position: fixed;

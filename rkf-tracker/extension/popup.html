@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CoursingStats • Заявки РКФ</title>
+  <title>CoursingStats • Заявки и соревнования РКФ</title>
   <link rel="stylesheet" href="theme.css">
   <link rel="stylesheet" href="auth.css">
   <link rel="stylesheet" href="filters.css">
@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="timeline.css">
   <link rel="stylesheet" href="settings.css">
   <link rel="stylesheet" href="dialogs.css">
+  <link rel="stylesheet" href="competitions.css">
 </head>
 <body>
   <div class="app-wrap">
@@ -19,8 +20,8 @@
       <div class="brand">
         <img src="icons/logo-badge.svg" alt="КурсингСтатс" class="brand-logo-img">
         <div class="brand-text">
-          <h1>Заявки РКФ</h1>
-          <span class="subtext">Трекер <a href="https://my.coursing-stats.ru" target="_blank" class="sublink" id="brand-link" title="Перейти на сайт">КурсингСтатс</a></span>
+          <h1>КурсингСтатс</h1>
+          <span class="subtext">Трекер <a href="https://my.coursing-stats.ru" target="_blank" class="sublink" id="brand-link" title="Перейти на сайт">РКФ Онлайн</a></span>
         </div>
       </div>
 
@@ -38,6 +39,14 @@
             <path d="M16 21h5v-5"/>
           </svg>
           <span id="btn-refresh-text">Обновить</span>
+        </button>
+
+        <button class="btn-icon" id="btn-guide" title="Инструкция по установке">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
         </button>
 
         <button class="btn-icon" id="btn-fullscreen" title="Открыть в отдельной вкладке">
@@ -58,49 +67,94 @@
       </div>
     </header>
 
-    <!-- Not Authenticated View -->
-    <div class="auth-card" id="auth-card" style="display: none;">
-      <div class="auth-icon">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-          <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+    <!-- Main Navigation Tabs -->
+    <nav class="main-tabs" id="main-tabs">
+      <button class="main-tab-btn active" id="tab-btn-apps" data-target="section-apps">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+          <line x1="16" y1="13" x2="8" y2="13"/>
+          <line x1="16" y1="17" x2="8" y2="17"/>
         </svg>
-      </div>
-      <h2>Требуется вход в РКФ Онлайн</h2>
-      <p>Откройте сайт <strong>rkf.online</strong> и войдите в свой личный кабинет. Расширение автоматически подхватит авторизацию.</p>
-      <div class="auth-actions">
-        <button class="btn-primary" id="btn-open-rkf">Войти через RKF.Online</button>
-      </div>
-      <div class="manual-token-link">
-        <a href="#" id="toggle-manual-token">Ввести токен вручную</a>
-      </div>
-      <div class="manual-token-wrap" id="manual-token-wrap" style="display: none;">
-        <input type="text" id="manual-token-input" placeholder="Bearer токен из заголовка Authorization...">
-        <button class="btn-primary" id="btn-save-manual-token">Сохранить</button>
-      </div>
-    </div>
+        <span>Заявки на титулы</span>
+      </button>
+      <button class="main-tab-btn" id="tab-btn-competitions" data-target="section-competitions">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="8" r="7"/>
+          <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+        </svg>
+        <span>Соревнования РКФ</span>
+        <span class="tab-badge" id="tab-competitions-count" style="display: none;">0</span>
+      </button>
+    </nav>
 
-    <!-- Main Dashboard View -->
-    <div id="main-dashboard" style="display: none;">
-      <!-- Filter Tabs -->
-      <div class="filter-bar">
-        <div class="filter-pill active" data-filter="all">Все <span class="count" id="cnt-all">(0)</span></div>
-        <div class="filter-pill pill-active" data-filter="active">В обработке <span class="count" id="cnt-active">(0)</span></div>
-        <div class="filter-pill pill-pickup" data-filter="to_pickup">Готовы к выдаче <span class="count" id="cnt-pickup">(0)</span></div>
-        <div class="filter-pill" data-filter="collected">Забрали <span class="count" id="cnt-collected">(0)</span></div>
-        <div class="filter-pill pill-danger" data-filter="rejected" style="display: none;">Отклонено <span class="count" id="cnt-rejected">(0)</span></div>
+    <!-- SECTION 1: Personal Applications -->
+    <section id="section-apps">
+      <!-- Not Authenticated View -->
+      <div class="auth-card" id="auth-card" style="display: none;">
+        <div class="auth-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+          </svg>
+        </div>
+        <h2>Требуется вход в РКФ Онлайн</h2>
+        <p>Откройте сайт <strong>rkf.online</strong> и войдите в свой личный кабинет. Расширение автоматически подхватит авторизацию.</p>
+        <div class="auth-actions">
+          <button class="btn-primary" id="btn-open-rkf">Войти через RKF.Online</button>
+        </div>
+        <div class="manual-token-link">
+          <a href="#" id="toggle-manual-token">Ввести токен вручную</a>
+        </div>
+        <div class="manual-token-wrap" id="manual-token-wrap" style="display: none;">
+          <input type="text" id="manual-token-input" placeholder="Bearer токен из заголовка Authorization...">
+          <button class="btn-primary" id="btn-save-manual-token">Сохранить</button>
+        </div>
       </div>
 
-      <!-- Search -->
-      <div class="search-wrap">
-        <input type="text" class="search-input" id="search-input" placeholder="Поиск по кличке собаки, названию титула или номеру...">
+      <!-- Main Dashboard View -->
+      <div id="main-dashboard" style="display: none;">
+        <div class="filter-bar">
+          <div class="filter-pill active" data-filter="all">Все <span class="count" id="cnt-all">(0)</span></div>
+          <div class="filter-pill pill-active" data-filter="active">В обработке <span class="count" id="cnt-active">(0)</span></div>
+          <div class="filter-pill pill-pickup" data-filter="to_pickup">Готовы к выдаче <span class="count" id="cnt-pickup">(0)</span></div>
+          <div class="filter-pill" data-filter="collected">Забрали <span class="count" id="cnt-collected">(0)</span></div>
+          <div class="filter-pill pill-danger" data-filter="rejected" style="display: none;">Отклонено <span class="count" id="cnt-rejected">(0)</span></div>
+        </div>
+
+        <div class="search-wrap">
+          <input type="text" class="search-input" id="search-input" placeholder="Поиск по кличке собаки, названию титула или номеру...">
+        </div>
+
+        <div class="apps-list" id="apps-list">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: RKF Competitions & Trials -->
+    <section id="section-competitions" class="comp-wrap" style="display: none;">
+      <div class="comp-toolbar">
+        <div class="comp-search-wrap">
+          <input type="text" class="comp-search-input" id="comp-search-input" placeholder="Поиск по городу, клубу, дисциплине, рангу...">
+        </div>
+        <select class="comp-year-select" id="comp-year-select" title="Сезон соревнований">
+          <option value="2027" selected>2027</option>
+          <option value="2026">2026</option>
+        </select>
       </div>
 
-      <!-- Applications List -->
-      <div class="apps-list" id="apps-list">
+      <div class="comp-filter-bar">
+        <div class="comp-filter-pill active" data-comp-filter="all">Все <span class="count" id="comp-cnt-all">(0)</span></div>
+        <div class="comp-filter-pill" data-comp-filter="approved">Утверждено <span class="count" id="comp-cnt-approved">(0)</span></div>
+        <div class="comp-filter-pill" data-comp-filter="pending">На согласовании <span class="count" id="comp-cnt-pending">(0)</span></div>
+        <div class="comp-filter-pill" data-comp-filter="tracked">Отслеживаемые <span class="count" id="comp-cnt-tracked">(0)</span></div>
+      </div>
+
+      <div class="comp-list" id="comp-list">
         <!-- Rendered dynamically -->
       </div>
-    </div>
+    </section>
 
     <!-- Settings Modal -->
     <div class="settings-modal-backdrop" id="settings-modal" style="display: none;">
@@ -174,6 +228,47 @@
         </div>
         <div class="settings-footer">
           <button class="btn-primary" id="btn-save-settings">Готово</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Installation Guide Modal -->
+    <div class="guide-modal-backdrop" id="guide-modal" style="display: none;">
+      <div class="guide-modal">
+        <div class="guide-header">
+          <h3>Установка расширения за 3 шага</h3>
+          <button class="guide-close-btn" id="btn-close-guide" title="Закрыть">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+        <div class="guide-steps">
+          <div class="guide-step">
+            <div class="guide-step-num">1</div>
+            <div class="guide-step-body">
+              <div class="guide-step-title">Распакуйте архив</div>
+              <div class="guide-step-text">Скачайте и распакуйте архив <span class="guide-step-code">coursingstats-tracker.zip</span> в любую постоянную папку на компьютере.</div>
+            </div>
+          </div>
+          <div class="guide-step">
+            <div class="guide-step-num">2</div>
+            <div class="guide-step-body">
+              <div class="guide-step-title">Включите режим разработчика</div>
+              <div class="guide-step-text">Перейдите по адресу <span class="guide-step-code">chrome://extensions/</span> и включите тумблер «Режим разработчика» в правом верхнем углу.</div>
+            </div>
+          </div>
+          <div class="guide-step">
+            <div class="guide-step-num">3</div>
+            <div class="guide-step-body">
+              <div class="guide-step-title">Загрузите расширение</div>
+              <div class="guide-step-text">Нажмите «Загрузить распакованное расширение» и выберите распакованную папку. Закрепите значок на панели браузера.</div>
+            </div>
+          </div>
+        </div>
+        <div class="guide-security-note">
+          100% Client-side: расширение работает полностью локально в браузере и не передает данные на сторонние серверы.
+        </div>
+        <div class="guide-footer">
+          <button class="btn-primary" id="btn-guide-ok">Понятно</button>
         </div>
       </div>
     </div>
