@@ -1,14 +1,17 @@
-import { useLocation } from 'react-router-dom'
+import { useLocation, useSearchParams } from 'react-router-dom'
 import { useState, useRef, useEffect, useCallback, lazy, Suspense } from 'react'
 import { isLocalDev } from '../lib/env'
 import { NavDesktop } from './nav/NavDesktop'
 import { NavMobile } from './nav/NavMobile'
+import { NavTracker } from './nav/NavTracker'
+import type { TrackerTab } from '../pages/Tracker/trackerTypes'
 import type { OpenMenuId } from './nav/navLinks'
 
 const QuickSearchModal = lazy(() => import('./nav/QuickSearchModal'))
 
 export default function Nav() {
   const location = useLocation();
+  const [searchParams, setSearchParams] = useSearchParams();
   const [searchOpen, setSearchOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState<OpenMenuId>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -78,6 +81,24 @@ export default function Nav() {
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
+
+  if (location.pathname.startsWith('/tracker')) {
+    const currentTab = (searchParams.get('tab') as TrackerTab) || 'applications';
+    const isLive = typeof window !== 'undefined' && Boolean(localStorage.getItem('cs_rkf_token'));
+    return (
+      <nav className="nav-glass sticky top-0 z-50 relative print:hidden">
+        <NavTracker
+          activeTab={currentTab}
+          onSelectTab={(tab) => setSearchParams({ tab })}
+          competitionsCount={72}
+          isLive={isLive}
+          onRefresh={() => window.dispatchEvent(new CustomEvent('tracker-refresh'))}
+          isRefreshing={false}
+          onOpenAuth={() => window.dispatchEvent(new CustomEvent('tracker-open-auth'))}
+        />
+      </nav>
+    );
+  }
 
   return (
     <nav className="nav-glass sticky top-0 z-50 relative print:hidden">

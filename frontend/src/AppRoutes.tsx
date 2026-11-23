@@ -22,6 +22,7 @@ const EventResults = lazy(() => import('./pages/Events/EventResults'));
 const ProtocolBuilder = lazy(() => import('./pages/ProtocolBuilder'));
 const BreedsDirectory = lazy(() => import('./pages/Breeds'));
 const BreedHub = lazy(() => import('./pages/BreedHub'));
+const TrackerPage = lazy(() => import('./pages/Tracker/TrackerPage'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 function LegacyProcoursingRedirect() {
@@ -279,6 +280,7 @@ export default function AppRoutes() {
         <Route path="/ratings/:slug" element={<BreedHub />} />
         <Route path="/guide" element={<Guide />} />
         <Route path="/about" element={<About />} />
+        <Route path="/tracker" element={<TrackerPage />} />
         <Route path="/donino-dog/:name/:breed" element={<DoninoDogProfile />} />
         <Route path="/judges" element={<LegacyJudgesListRedirect />} />
         <Route path="/judges/:judgeId" element={<SportJudgeRoute />} />
