@@ -81,12 +81,24 @@ describe('resolveSilhouetteBreed', () => {
     expect(resolveSilhouetteBreed('Самоед')).toBe('samoyed');
     expect(resolveSilhouetteBreed('Ши-тцу')).toBe('shihtzu');
     expect(resolveSilhouetteBreed('Акита')).toBe('akita');
+
+    // Batch 9 (Thai Ridgeback, Irish Terrier, Boxer, Staffbull)
+    expect(resolveSilhouetteBreed('Тайский риджбек')).toBe('thairidgeback');
+    expect(resolveSilhouetteBreed('Thai Ridgeback')).toBe('thairidgeback');
+    expect(resolveSilhouetteBreed('Ирландский терьер')).toBe('irishterrier');
+    expect(resolveSilhouetteBreed('Irish Terrier')).toBe('irishterrier');
+    expect(resolveSilhouetteBreed('Немецкий боксер')).toBe('boxer');
+    expect(resolveSilhouetteBreed('Боксёр')).toBe('boxer');
+    expect(resolveSilhouetteBreed('Boxer')).toBe('boxer');
+    expect(resolveSilhouetteBreed('Стаффордширский бультерьер')).toBe('staffbull');
+    expect(resolveSilhouetteBreed('Стаффбуль')).toBe('staffbull');
+    expect(resolveSilhouetteBreed('Staffordshire Bull Terrier')).toBe('staffbull');
   });
 
   it('returns null for breeds that have not been generated yet (leaving empty frame)', () => {
-    expect(resolveSilhouetteBreed('Немецкий боксер')).toBeNull();
-    expect(resolveSilhouetteBreed('Тайский риджбек')).toBeNull();
-    expect(resolveSilhouetteBreed('Ирландский терьер')).toBeNull();
+    expect(resolveSilhouetteBreed('Колли')).toBeNull();
+    expect(resolveSilhouetteBreed('Кавказская овчарка')).toBeNull();
+    expect(resolveSilhouetteBreed('Эрдельтерьер')).toBeNull();
     expect(resolveSilhouetteBreed(null)).toBeNull();
     expect(resolveSilhouetteBreed(undefined)).toBeNull();
     expect(resolveSilhouetteBreed('')).toBeNull();

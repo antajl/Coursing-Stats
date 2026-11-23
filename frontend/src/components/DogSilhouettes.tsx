@@ -62,7 +62,11 @@ export type SilhouetteBreedKey =
   | 'maltese'
   | 'samoyed'
   | 'shihtzu'
-  | 'akita';
+  | 'akita'
+  | 'thairidgeback'
+  | 'irishterrier'
+  | 'boxer'
+  | 'staffbull';
 
 export type SilhouetteBreed = SilhouetteBreedKey;
 
@@ -146,6 +150,19 @@ export const resolveSilhouetteBreed = (breed?: string | null): SilhouetteBreedKe
     return 'azawakh';
   }
 
+  // Staffordshire Bull Terrier / Стаффордширский бультерьер (Стаффбуль)
+  if (
+    canon.includes('СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР') ||
+    lower.includes('стаффордширский бультерьер') ||
+    lower.includes('стаффбуль') ||
+    lower.includes('staffordshire bull terrier') ||
+    lower.includes('staffbull') ||
+    lower.includes('staffie') ||
+    lower.includes('staffy')
+  ) {
+    return 'staffbull';
+  }
+
   // 12. Amstaff / Американский стаффордширский терьер
   if (
     canon.includes('СТАФФОРДШИРСКИЙ ТЕРЬЕР') ||
@@ -197,6 +214,16 @@ export const resolveSilhouetteBreed = (breed?: string | null): SilhouetteBreedKe
     return 'chartpolski';
   }
 
+  // Thai Ridgeback / Тайский риджбек
+  if (
+    canon.includes('ТАЙСКИЙ РИДЖБЕК') ||
+    lower.includes('тайский риджбек') ||
+    lower.includes('thai ridgeback') ||
+    (lower.includes('риджбек') && lower.includes('тайск'))
+  ) {
+    return 'thairidgeback';
+  }
+
   // 18. Rhodesian Ridgeback / Родезийский риджбек (исключая тайского риджбека)
   if (
     !canon.includes('ТАЙСКИЙ') &&
@@ -244,6 +271,15 @@ export const resolveSilhouetteBreed = (breed?: string | null): SilhouetteBreedKe
   // 25. Dachshund / Такса
   if (canon.includes('ТАКСА') || lower.includes('такса') || lower.includes('dachshund')) {
     return 'dachshund';
+  }
+
+  // Irish Terrier / Ирландский терьер
+  if (
+    canon.includes('ИРЛАНДСКИЙ ТЕРЬЕР') ||
+    lower.includes('ирландский терьер') ||
+    lower.includes('irish terrier')
+  ) {
+    return 'irishterrier';
   }
 
   // 26. Jack Russell Terrier / Джек-рассел терьер
@@ -570,6 +606,18 @@ export const resolveSilhouetteBreed = (breed?: string | null): SilhouetteBreedKe
     lower.includes('akita')
   ) {
     return 'akita';
+  }
+
+  // German Boxer / Немецкий боксер
+  if (
+    canon.includes('БОКСЕР') ||
+    canon.includes('БОКСЁР') ||
+    lower.includes('боксер') ||
+    lower.includes('боксёр') ||
+    lower.includes('boxer') ||
+    lower.includes('german boxer')
+  ) {
+    return 'boxer';
   }
 
   // No silhouette available yet for this breed
