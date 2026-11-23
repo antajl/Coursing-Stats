@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CoursingStats • Заявки и состязания РКФ</title>
+  <title>CoursingStats Tracker • Заявки и состязания РКФ</title>
   <link rel="manifest" href="manifest.webmanifest">
   <meta name="theme-color" content="#252320">
   <meta name="mobile-web-app-capable" content="yes">
@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="shell.css">
   <link rel="stylesheet" href="dashboard.css">
   <link rel="stylesheet" href="cards.css">
+  <link rel="stylesheet" href="timeline.css">
   <link rel="stylesheet" href="modal.css">
   <link rel="stylesheet" href="approvals.css">
 </head>
@@ -22,20 +23,22 @@
   <div class="grain-overlay"></div>
 
   <div class="page-wrapper">
-    <!-- Authentic CoursingStats Navbar -->
+    <!-- Autonomous CoursingStats Tracker Navbar -->
     <header class="site-navbar">
       <div class="navbar-inner">
-        <a href="https://coursing-stats.ru" class="nav-brand" title="КурсингСтатс — на главную">
-          <img src="brand/logo.svg" alt="КурсингСтатс" class="nav-logo-img">
+        <a href="/" class="nav-brand" title="CoursingStats Tracker">
+          <img src="brand/logo.svg" alt="CoursingStats Tracker" class="nav-logo-img">
         </a>
 
-        <nav class="nav-links">
-          <a href="https://coursing-stats.ru/" class="nav-link">Главная</a>
-          <a href="https://coursing-stats.ru/competitions" class="nav-link">Соревнования</a>
-          <a href="https://coursing-stats.ru/shows" class="nav-link">Выставки</a>
-          <a href="https://coursing-stats.ru/speed-records" class="nav-link">Курсинг Донино</a>
-          <a href="https://coursing-stats.ru/guide" class="nav-link">Справка</a>
-          <a href="/" class="nav-link active">Трекер РКФ</a>
+        <!-- Service Internal Navigation Tabs -->
+        <nav class="nav-links app-nav-tabs" aria-label="Разделы трекера">
+          <button class="nav-link-btn active" data-tab="applications">
+            Заявки на титулы
+          </button>
+          <button class="nav-link-btn" data-tab="approvals">
+            Соревнования РКФ
+            <span class="nav-badge" id="nav-competitions-count">72</span>
+          </button>
         </nav>
 
         <div class="nav-actions">
@@ -76,32 +79,19 @@
 
     <!-- Main Content -->
     <main class="main-content">
-      <!-- Breadcrumbs -->
+      <!-- Autonomous Breadcrumbs -->
       <nav class="breadcrumbs" aria-label="Навигация по разделам">
-        <a href="https://coursing-stats.ru/">Главная</a>
+        <span>CoursingStats Tracker</span>
         <span class="bc-sep">›</span>
-        <span>Личный кабинет</span>
-        <span class="bc-sep">›</span>
-        <span class="bc-current" id="bc-current-section">Заявки РКФ</span>
-      </nav>
-
-      <!-- Section Tabs: Applications vs Approvals -->
-      <nav class="section-nav-tabs" aria-label="Вкладки сервиса">
-        <button class="section-tab-btn active" data-tab="applications">
-          Заявки РКФ (Личный кабинет)
-        </button>
-        <button class="section-tab-btn" data-tab="approvals">
-          Согласование состязаний
-          <span class="section-tab-badge" id="badge-approvals-count">9</span>
-        </button>
+        <span class="bc-current" id="bc-current-section">Заявки на титулы</span>
       </nav>
 
       <!-- TAB 1: RKF Applications View -->
       <div id="view-applications" class="tab-view">
         <section class="dashboard-hero">
           <div class="hero-titles">
-            <h1>Заявки РКФ</h1>
-            <p>Мониторинг изготовления чемпионских титулов, сертификатов и документов в РКФ Онлайн</p>
+            <h1>Заявки на титулы РКФ</h1>
+            <p>Мониторинг изготовления чемпионских титулов, сертификатов и выписок в РКФ Онлайн</p>
           </div>
         </section>
 
@@ -151,10 +141,18 @@
       <div id="view-approvals" class="tab-view" style="display: none;">
         <section class="dashboard-hero">
           <div class="hero-titles">
-            <h1>Согласование состязаний РКФ</h1>
-            <p>Реестр рассмотрения графиков состязаний, испытаний и тестирований (info.rkf.online)</p>
+            <h1>Соревнования РКФ</h1>
+            <p>Официальный график и мониторинг согласования состязаний борзых (info.rkf.online)</p>
           </div>
         </section>
+
+        <!-- Sighthound Discipline Tabs -->
+        <div class="discipline-bar">
+          <button class="discipline-pill active" data-discipline="all">Все дисциплины <span class="pill-count" id="cnt-disc-all">(72)</span></button>
+          <button class="discipline-pill" data-discipline="Курсинг борзых">Курсинг борзых <span class="pill-count" id="cnt-disc-coursing">(39)</span></button>
+          <button class="discipline-pill" data-discipline="Бега борзых">Бега борзых <span class="pill-count" id="cnt-disc-racing">(14)</span></button>
+          <button class="discipline-pill" data-discipline="bzmp">БЗМП <span class="pill-count" id="cnt-disc-bzmp">(19)</span></button>
+        </div>
 
         <!-- KPI Grid for Approvals -->
         <section class="kpi-grid">
@@ -171,7 +169,7 @@
             <span class="kpi-value" id="appr-kpi-pending">0</span>
           </div>
           <div class="kpi-card">
-            <span class="kpi-label">Требуют доработки</span>
+            <span class="kpi-label">На рассмотрении</span>
             <span class="kpi-value" id="appr-kpi-revision">0</span>
           </div>
         </section>
@@ -180,9 +178,8 @@
         <section class="toolbar">
           <div class="filter-pills">
             <button class="filter-pill approval-pill active" data-status-filter="all">Все <span class="pill-count" id="cnt-appr-all">(0)</span></button>
-            <button class="filter-pill approval-pill pill-ready" data-status-filter="approved">Утверждено <span class="pill-count" id="cnt-appr-approved">(0)</span></button>
-            <button class="filter-pill approval-pill pill-active" data-status-filter="pending">На согласовании <span class="pill-count" id="cnt-appr-pending">(0)</span></button>
-            <button class="filter-pill approval-pill" data-status-filter="revision">Доработка <span class="pill-count" id="cnt-appr-revision">(0)</span></button>
+            <button class="filter-pill approval-pill pill-ready" data-status-filter="APPROVED">Утверждено <span class="pill-count" id="cnt-appr-approved">(0)</span></button>
+            <button class="filter-pill approval-pill pill-active" data-status-filter="PENDING">На согласовании <span class="pill-count" id="cnt-appr-pending">(0)</span></button>
           </div>
 
           <div class="search-box">
@@ -190,7 +187,7 @@
               <circle cx="11" cy="11" r="8"/>
               <line x1="21" y1="21" x2="16.65" y2="16.65"/>
             </svg>
-            <input type="text" id="approval-search-input" placeholder="Поиск по клубу, городу, дисциплине или номеру заявки..." class="search-input">
+            <input type="text" id="approval-search-input" placeholder="Поиск по клубу, городу, дисциплине, рангу или судье..." class="search-input">
           </div>
         </section>
 
@@ -200,17 +197,11 @@
       </div>
     </main>
 
-    <!-- Site Footer -->
+    <!-- Autonomous Footer -->
     <footer class="site-footer">
       <div class="footer-inner">
-        <span>CoursingStats • Личный кабинет собаковода</span>
-        <div class="footer-links">
-          <a href="https://coursing-stats.ru/competitions" class="footer-link">Соревнования</a>
-          <a href="https://coursing-stats.ru/shows" class="footer-link">Выставки</a>
-          <a href="https://coursing-stats.ru/speed-records" class="footer-link">Донино</a>
-          <a href="https://coursing-stats.ru/guide" class="footer-link">Справка</a>
-        </div>
-        <span class="footer-disclaimer">Неофициальный сервис мониторинга личного кабинета rkf.online</span>
+        <span>CoursingStats Tracker • Мониторинг личного кабинета и реестров РКФ</span>
+        <span class="footer-disclaimer">Неофициальный сервис аналитики и отслеживания статусов rkf.online</span>
       </div>
     </footer>
   </div>

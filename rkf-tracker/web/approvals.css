@@ -1,50 +1,43 @@
 /* RKF Competition Approvals Section Styles (Old Money Aesthetic) */
-.section-nav-tabs {
+.discipline-bar {
   display: flex;
   gap: 8px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 8px;
+  margin-bottom: 14px;
   overflow-x: auto;
+  padding-bottom: 2px;
 }
 
-.section-tab-btn {
+.discipline-pill {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-  font-size: 13.5px;
+  gap: 6px;
+  padding: 6px 14px;
+  font-size: 13px;
   font-weight: 600;
-  color: var(--text-muted);
-  background: transparent;
-  border: 1px solid transparent;
   border-radius: 6px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
   cursor: pointer;
   transition: all 0.15s ease;
   white-space: nowrap;
 }
 
-.section-tab-btn:hover {
-  color: var(--text-main);
+.discipline-pill:hover {
   background: var(--camel-light);
+  color: var(--text-main);
+  border-color: var(--border-hover);
 }
 
-.section-tab-btn.active {
-  color: #FFFFFF;
+.discipline-pill.active {
   background: var(--text-main);
   border-color: var(--text-main);
+  color: #FFFFFF;
 }
 
-.section-tab-badge {
+.discipline-pill .pill-count {
   font-size: 11px;
-  padding: 1px 6px;
-  border-radius: 10px;
-  background: rgba(0, 0, 0, 0.08);
-  font-weight: 700;
-}
-
-.section-tab-btn.active .section-tab-badge {
-  background: rgba(255, 255, 255, 0.22);
+  opacity: 0.8;
 }
 
 /* Approvals Grid & Rows */
@@ -76,8 +69,8 @@
   border-left: 4px solid #F59E0B;
 }
 
-.approval-card.status-revision {
-  border-left: 4px solid #E11D48;
+.approval-card.status-neutral {
+  border-left: 4px solid #94A3B8;
 }
 
 .approval-header {
@@ -116,6 +109,15 @@
   color: var(--text-muted);
 }
 
+.badge-req {
+  font-size: 10.5px;
+  font-weight: 500;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: #F3ECE0;
+  color: var(--text-soft);
+}
+
 .badge-status {
   font-size: 11.5px;
   font-weight: 700;
@@ -135,14 +137,14 @@
   color: var(--amber-text);
 }
 
-.badge-status.revision {
-  background: var(--rose-bg);
-  border: 1px solid var(--rose-border);
-  color: var(--rose-text);
+.badge-status.neutral {
+  background: #F1F5F9;
+  border: 1px solid #CBD5E1;
+  color: #475569;
 }
 
 .approval-date {
-  font-size: 12.5px;
+  font-size: 13px;
   font-weight: 700;
   color: var(--text-main);
 }
@@ -209,6 +211,50 @@
 .btn-install:hover {
   background: #93503D;
   color: #FFFFFF;
+}
+
+/* Header Autonomous Navigation Tabs */
+.app-nav-tabs {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-link-btn {
+  background: transparent;
+  border: none;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-muted);
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-link-btn:hover {
+  color: var(--text-main);
+  background: var(--camel-light);
+}
+
+.nav-link-btn.active {
+  color: #FFFFFF;
+  background: var(--text-main);
+}
+
+.nav-badge {
+  font-size: 11px;
+  padding: 1px 6px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.08);
+  font-weight: 700;
+}
+
+.nav-link-btn.active .nav-badge {
+  background: rgba(255, 255, 255, 0.22);
 }
 
 /* Responsive adjustments */

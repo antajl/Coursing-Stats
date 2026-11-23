@@ -254,39 +254,3 @@
   transform: rotate(180deg);
   stroke: var(--camel);
 }
-
-/* Timeline Accordion */
-.timeline {
-  margin-top: 10px;
-  padding-top: 10px;
-  border-top: 1px dashed var(--border);
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.t-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 11.5px;
-}
-
-.t-date {
-  color: var(--text-soft);
-  font-family: monospace;
-  min-width: 75px;
-}
-
-.t-bullet {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--camel);
-  flex-shrink: 0;
-}
-
-.t-status {
-  font-weight: 500;
-  color: var(--text-main);
-}
