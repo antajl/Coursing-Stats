@@ -88,6 +88,21 @@ namespace CoursingStats.RkfTracker
                 return;
             }
 
+            if (path == "/api/desktop/open-external")
+            {
+                string target = req.QueryString["url"];
+                if (!string.IsNullOrEmpty(target) && (target.StartsWith("http://") || target.StartsWith("https://")))
+                {
+                    try
+                    {
+                        System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(target) { UseShellExecute = true });
+                    }
+                    catch { }
+                }
+                SendJson(res, new { ok = true });
+                return;
+            }
+
             if (path == "/api/desktop/check-now")
             {
                 int changes = poller.PollOnce();
