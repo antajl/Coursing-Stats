@@ -17,6 +17,7 @@ const STATIC_ASSETS = [
   './mockData.js',
   './rkf-competitions-2026.json',
   './approvals.js',
+  './auth.js',
   './pwa.js',
   './brand/logo.svg',
   './brand/logo-badge.svg',

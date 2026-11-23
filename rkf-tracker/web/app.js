@@ -4,19 +4,19 @@ import { renderKpiSummary, renderCardHtml, attachCardEvents } from './render.js'
 import { initPwa } from './pwa.js';
 import { initApprovals } from './approvals.js';
 import { initTabs } from './tabs.js';
-import { initDesktopIntegration } from './desktopIntegration.js';
+import { initAuth, openAuthModal } from './auth.js';
 
 let apps = [];
 let currentFilter = 'all';
 let isMockMode = true;
 
 document.addEventListener('DOMContentLoaded', () => {
-  initDesktopIntegration();
   initData();
   setupEvents();
   initTabs();
   initApprovals();
   initPwa(showToast);
+  initAuth(initData, showToast);
 });
 
 function initData() {
@@ -84,40 +84,10 @@ function setupEvents() {
         openAuthModal();
       } else {
         localStorage.removeItem('cs_rkf_token');
+        localStorage.removeItem('cs_rkf_user_email');
         showToast('Включен демо-режим');
         initData();
       }
-    });
-  }
-
-  // Auth modal
-  const btnAuth = document.getElementById('btn-auth');
-  const btnCloseModal = document.getElementById('btn-close-auth-modal');
-  const btnSaveToken = document.getElementById('btn-save-token');
-  const btnLogoutWeb = document.getElementById('btn-logout-web');
-
-  if (btnAuth) btnAuth.addEventListener('click', openAuthModal);
-  if (btnCloseModal) btnCloseModal.addEventListener('click', closeAuthModal);
-
-  if (btnSaveToken) {
-    btnSaveToken.addEventListener('click', () => {
-      const raw = document.getElementById('token-input').value.trim();
-      const token = raw.replace(/^Bearer\s+/i, '');
-      if (token) {
-        localStorage.setItem('cs_rkf_token', token);
-        closeAuthModal();
-        showToast('Токен сохранен, выполняется синхронизация...');
-        initData();
-      }
-    });
-  }
-
-  if (btnLogoutWeb) {
-    btnLogoutWeb.addEventListener('click', () => {
-      localStorage.removeItem('cs_rkf_token');
-      closeAuthModal();
-      showToast('Токен удален, активирован демо-режим');
-      initData();
     });
   }
 }
@@ -209,16 +179,6 @@ function filterAndSearch() {
 
     row.style.display = (matchesFilter && matchesSearch) ? 'block' : 'none';
   });
-}
-
-function openAuthModal() {
-  const modal = document.getElementById('auth-modal');
-  if (modal) modal.style.display = 'flex';
-}
-
-function closeAuthModal() {
-  const modal = document.getElementById('auth-modal');
-  if (modal) modal.style.display = 'none';
 }
 
 function showToast(msg) {

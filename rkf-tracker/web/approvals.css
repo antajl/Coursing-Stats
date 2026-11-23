@@ -40,89 +40,120 @@
   opacity: 0.8;
 }
 
-/* Approvals Grid & Rows */
+/* Compact Horizontal Competition Rows (42-46px) */
 .approvals-container {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
 }
 
-.approval-card {
+.comp-row {
+  display: grid;
+  grid-template-columns: 80px 1fr 140px 36px;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  padding: 6px 14px;
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 14px 18px;
+  border-radius: 6px;
   box-shadow: var(--shadow-sm);
   transition: all 0.15s ease;
 }
 
-.approval-card:hover {
+.comp-row:hover {
+  background: #FFFFFF;
+  border-color: var(--border-hover);
   transform: translateY(-0.5px);
-  box-shadow: 0 3px 8px rgba(34, 31, 31, 0.06);
+  box-shadow: 0 2px 6px rgba(34, 31, 31, 0.05);
 }
 
-.approval-card.status-approved {
-  border-left: 4px solid #10B981;
+/* Status Left Tints */
+.comp-row.status-approved {
+  border-left: 3px solid #10B981;
 }
 
-.approval-card.status-pending {
-  border-left: 4px solid #F59E0B;
+.comp-row.status-delayed {
+  border-left: 3px solid #E11D48;
 }
 
-.approval-card.status-neutral {
-  border-left: 4px solid #94A3B8;
+.comp-row.status-pending {
+  border-left: 3px solid #F59E0B;
 }
 
-.approval-header {
+/* 1. Date Column */
+.comp-col-date {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-bottom: 8px;
 }
 
-.approval-badges {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  flex-wrap: wrap;
-}
-
-.badge-discipline {
-  font-size: 11px;
+.date-badge {
+  font-size: 11.5px;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-  padding: 2px 7px;
-  border-radius: 4px;
-  background: #EAE3D2;
   color: #4A4237;
+  background: #EFE8DA;
+  padding: 3px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  letter-spacing: -0.01em;
+}
+
+/* 2. Main Content Column */
+.comp-col-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.comp-title-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.comp-club {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-main);
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .badge-rank {
-  font-size: 11px;
-  font-weight: 600;
-  padding: 2px 7px;
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 1px 6px;
   border-radius: 4px;
   background: #F1ECE1;
   color: var(--text-muted);
+  flex-shrink: 0;
 }
 
-.badge-req {
-  font-size: 10.5px;
-  font-weight: 500;
-  padding: 2px 6px;
-  border-radius: 4px;
-  background: #F3ECE0;
+.comp-sub-line {
+  font-size: 11px;
   color: var(--text-soft);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 3. Status Column */
+.comp-col-status {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .badge-status {
-  font-size: 11.5px;
+  font-size: 11px;
   font-weight: 700;
-  padding: 3px 9px;
+  padding: 3px 8px;
   border-radius: 4px;
+  white-space: nowrap;
 }
 
 .badge-status.approved {
@@ -131,140 +162,94 @@
   color: var(--emerald-text);
 }
 
+.badge-status.delayed {
+  background: var(--rose-bg);
+  border: 1px solid var(--rose-border);
+  color: var(--rose-text);
+}
+
 .badge-status.pending {
   background: var(--amber-bg);
   border: 1px solid var(--amber-border);
   color: var(--amber-text);
 }
 
-.badge-status.neutral {
-  background: #F1F5F9;
-  border: 1px solid #CBD5E1;
-  color: #475569;
-}
-
-.approval-date {
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--text-main);
-}
-
-.approval-title {
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--text-main);
-  line-height: 1.35;
-  margin-bottom: 8px;
-}
-
-.approval-meta {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 10px;
-  padding: 8px 12px;
-  background: #F4EFE6;
-  border-radius: 6px;
-  font-size: 12.5px;
-  margin-bottom: 8px;
-}
-
-.approval-meta-item {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.approval-meta-label {
-  font-size: 10.5px;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: var(--text-soft);
-  font-weight: 600;
-}
-
-.approval-meta-value {
-  font-size: 12.5px;
-  color: var(--text-main);
-  font-weight: 600;
-}
-
-.approval-comment {
-  font-size: 12px;
-  color: var(--text-muted);
-  line-height: 1.4;
-  padding-left: 2px;
-}
-
-.approval-comment strong {
-  color: var(--text-main);
-  font-weight: 600;
-}
-
-/* Install Button Highlight */
-.btn-install {
-  background: #A9604B;
-  color: #FFFFFF;
-  border: 1px solid #93503D;
-  transition: all 0.15s ease;
-}
-
-.btn-install:hover {
-  background: #93503D;
-  color: #FFFFFF;
-}
-
-/* Header Autonomous Navigation Tabs */
-.app-nav-tabs {
+/* 4. Action Column: Track Bell */
+.comp-col-action {
   display: flex;
   align-items: center;
-  gap: 4px;
+  justify-content: center;
 }
 
-.nav-link-btn {
-  background: transparent;
-  border: none;
-  font-size: 13.5px;
-  font-weight: 600;
-  color: var(--text-muted);
-  padding: 6px 12px;
+.btn-track {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
   border-radius: 6px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text-soft);
   cursor: pointer;
   transition: all 0.15s ease;
+}
+
+.btn-track:hover {
+  background: var(--camel-light);
+  color: var(--camel-hover);
+  border-color: var(--border-hover);
+}
+
+.btn-track.active {
+  background: #FDF3E7;
+  border-color: var(--camel);
+  color: #B0854E;
+}
+
+/* Subscribed Filter Button */
+.btn-filter-sub {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
 }
 
-.nav-link-btn:hover {
+.btn-filter-sub:hover {
+  border-color: var(--camel);
   color: var(--text-main);
-  background: var(--camel-light);
 }
 
-.nav-link-btn.active {
-  color: #FFFFFF;
-  background: var(--text-main);
+.btn-filter-sub.active {
+  background: #FDF3E7;
+  border-color: var(--camel);
+  color: #B0854E;
 }
 
-.nav-badge {
-  font-size: 11px;
-  padding: 1px 6px;
-  border-radius: 10px;
-  background: rgba(0, 0, 0, 0.08);
-  font-weight: 700;
-}
-
-.nav-link-btn.active .nav-badge {
-  background: rgba(255, 255, 255, 0.22);
-}
-
-/* Responsive adjustments */
+/* Mobile Responsive */
 @media (max-width: 768px) {
-  .approval-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .approval-meta {
-    grid-template-columns: 1fr;
+  .comp-row {
+    grid-template-columns: 68px 1fr 32px;
     gap: 8px;
+    min-height: auto;
+    padding: 8px 10px;
+  }
+  .comp-col-status {
+    grid-column: 2;
+    justify-content: flex-start;
+    margin-top: 2px;
+  }
+  .comp-col-action {
+    grid-column: 3;
+    grid-row: 1 / span 2;
   }
 }

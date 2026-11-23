@@ -8,7 +8,6 @@
   <meta name="theme-color" content="#252320">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="РКФ Трекер">
   <link rel="apple-touch-icon" href="icons/icon-192.png">
   <link rel="icon" type="image/svg+xml" href="brand/logo-badge.svg">
@@ -42,7 +41,7 @@
         </nav>
 
         <div class="nav-actions">
-          <button class="btn btn-install" id="btn-install-pwa" style="display: none;" title="Установить RKF Tracker как приложение Windows">
+          <button class="btn btn-secondary btn-install" id="btn-install-pwa" style="display: none;" title="Установить RKF Tracker как приложение Windows">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
               <polyline points="7 10 12 15 17 10"/>
@@ -146,40 +145,54 @@
           </div>
         </section>
 
-        <!-- Sighthound Discipline Tabs -->
+        <!-- Sighthound Discipline Tabs (3 separate disciplines only) -->
         <div class="discipline-bar">
-          <button class="discipline-pill active" data-discipline="all">Все дисциплины <span class="pill-count" id="cnt-disc-all">(72)</span></button>
-          <button class="discipline-pill" data-discipline="Курсинг борзых">Курсинг борзых <span class="pill-count" id="cnt-disc-coursing">(39)</span></button>
-          <button class="discipline-pill" data-discipline="Бега борзых">Бега борзых <span class="pill-count" id="cnt-disc-racing">(14)</span></button>
-          <button class="discipline-pill" data-discipline="bzmp">БЗМП <span class="pill-count" id="cnt-disc-bzmp">(19)</span></button>
+          <button class="discipline-pill active" data-discipline="Курсинг борзых">
+            Курсинг борзых <span class="pill-count" id="cnt-disc-coursing">(39)</span>
+          </button>
+          <button class="discipline-pill" data-discipline="Бега борзых">
+            Бега борзых <span class="pill-count" id="cnt-disc-racing">(14)</span>
+          </button>
+          <button class="discipline-pill" data-discipline="bzmp">
+            БЗМП <span class="pill-count" id="cnt-disc-bzmp">(19)</span>
+          </button>
         </div>
 
         <!-- KPI Grid for Approvals -->
         <section class="kpi-grid">
           <div class="kpi-card">
             <span class="kpi-label">Всего состязаний</span>
-            <span class="kpi-value" id="appr-kpi-total">0</span>
+            <span class="kpi-value" id="appr-kpi-total">72</span>
           </div>
           <div class="kpi-card kpi-pickup">
             <span class="kpi-label">Утверждено</span>
-            <span class="kpi-value" id="appr-kpi-approved">0</span>
+            <span class="kpi-value" id="appr-kpi-approved">55</span>
+          </div>
+          <div class="kpi-card kpi-delayed">
+            <span class="kpi-label">Задержано</span>
+            <span class="kpi-value" id="appr-kpi-delayed">7</span>
           </div>
           <div class="kpi-card kpi-active">
             <span class="kpi-label">На согласовании</span>
-            <span class="kpi-value" id="appr-kpi-pending">0</span>
-          </div>
-          <div class="kpi-card">
-            <span class="kpi-label">На рассмотрении</span>
-            <span class="kpi-value" id="appr-kpi-revision">0</span>
+            <span class="kpi-value" id="appr-kpi-pending">10</span>
           </div>
         </section>
 
         <!-- Toolbar: Approvals Filters + Search -->
         <section class="toolbar">
           <div class="filter-pills">
-            <button class="filter-pill approval-pill active" data-status-filter="all">Все <span class="pill-count" id="cnt-appr-all">(0)</span></button>
-            <button class="filter-pill approval-pill pill-ready" data-status-filter="APPROVED">Утверждено <span class="pill-count" id="cnt-appr-approved">(0)</span></button>
-            <button class="filter-pill approval-pill pill-active" data-status-filter="PENDING">На согласовании <span class="pill-count" id="cnt-appr-pending">(0)</span></button>
+            <button class="filter-pill approval-pill active" data-status-filter="all">Все <span class="pill-count" id="cnt-appr-all">(72)</span></button>
+            <button class="filter-pill approval-pill pill-ready" data-status-filter="APPROVED">Утверждено <span class="pill-count" id="cnt-appr-approved">(55)</span></button>
+            <button class="filter-pill approval-pill" data-status-filter="DELAYED">Задержано <span class="pill-count" id="cnt-appr-delayed">(7)</span></button>
+            <button class="filter-pill approval-pill pill-active" data-status-filter="PENDING">На согласовании <span class="pill-count" id="cnt-appr-pending">(10)</span></button>
+            <button class="btn-filter-sub" id="btn-filter-subscribed" title="Показать только отслеживаемые турниры">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+              </svg>
+              <span>Мои подписки</span>
+              <span class="pill-count" id="cnt-appr-subscribed">(0)</span>
+            </button>
           </div>
 
           <div class="search-box">
@@ -187,11 +200,11 @@
               <circle cx="11" cy="11" r="8"/>
               <line x1="21" y1="21" x2="16.65" y2="16.65"/>
             </svg>
-            <input type="text" id="approval-search-input" placeholder="Поиск по клубу, городу, дисциплине, рангу или судье..." class="search-input">
+            <input type="text" id="approval-search-input" placeholder="Поиск по клубу, городу, дисциплине, рангу..." class="search-input">
           </div>
         </section>
 
-        <!-- Approvals List -->
+        <!-- Compact Approvals Horizontal List -->
         <section class="approvals-container" id="approvals-container"></section>
         <div id="approvals-empty" style="display: none; padding: 24px; text-align: center; color: var(--text-soft); font-size: 13px;">Мероприятий по заданным фильтрам не найдено.</div>
       </div>
@@ -206,23 +219,50 @@
     </footer>
   </div>
 
-  <!-- Auth Modal -->
+  <!-- Auth Modal (Email + Password) -->
   <div class="modal-backdrop" id="auth-modal" style="display: none;">
     <div class="modal-card">
       <div class="modal-header">
-        <h3>Авторизация в РКФ Онлайн</h3>
+        <h3>Личный кабинет РКФ Онлайн</h3>
         <button class="btn-close-modal" id="btn-close-auth-modal">&times;</button>
       </div>
       <div class="modal-body">
-        <p class="modal-desc">Укажите Bearer-токен сессии с сайта rkf.online для синхронизации заявок вашего аккаунта.</p>
-        <div class="input-group">
-          <label for="token-input">Токен авторизации (Authorization Header):</label>
-          <input type="password" id="token-input" placeholder="ey..." class="text-input">
-          <span class="input-hint">Токен сохраняется исключительно в вашем браузере (localStorage).</span>
+        <!-- Login Form Section -->
+        <div id="auth-form-section">
+          <p class="modal-desc">Введите логин и пароль от rkf.online для синхронизации ваших заявок на чемпионские титулы и сертификаты.</p>
+          
+          <div class="input-group">
+            <label for="auth-email">E-mail в РКФ Онлайн:</label>
+            <input type="email" id="auth-email" placeholder="example@mail.ru" class="text-input" autocomplete="username">
+          </div>
+
+          <div class="input-group" style="margin-top: 8px;">
+            <label for="auth-password">Пароль от rkf.online:</label>
+            <input type="password" id="auth-password" placeholder="••••••••" class="text-input" autocomplete="current-password">
+          </div>
+
+          <div id="auth-error-msg" class="auth-error" style="display: none; margin-top: 8px;"></div>
+
+          <div class="auth-trust-note" style="margin-top: 10px;">
+            Безопасное соединение. Авторизация выполняется напрямую через защищенный шлюз rkf.online. Пароль не сохраняется на сервере.
+          </div>
+
+          <div class="modal-actions">
+            <button class="btn btn-primary" id="btn-login-submit">
+              <span id="btn-login-text">Войти в личный кабинет</span>
+            </button>
+          </div>
         </div>
-        <div class="modal-actions">
-          <button class="btn-danger-subtle" id="btn-logout-web">Очистить токен</button>
-          <button class="btn btn-primary" id="btn-save-token">Сохранить</button>
+
+        <!-- Logged In Section -->
+        <div id="auth-logged-section" style="display: none;">
+          <p class="modal-desc">Вы успешно подключили личный кабинет РКФ Онлайн.</p>
+          <div class="auth-trust-note">
+            Аккаунт: <strong id="logged-user-email"></strong>
+          </div>
+          <div class="modal-actions">
+            <button class="btn-danger-subtle" id="btn-logout-web">Выйти из аккаунта</button>
+          </div>
         </div>
       </div>
     </div>

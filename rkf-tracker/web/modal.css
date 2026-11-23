@@ -1,4 +1,4 @@
-/* Auth Modal & Feedback Toast */
+/* Auth Modal & Feedback Toast (Old Money Aesthetic) */
 .modal-backdrop {
   position: fixed;
   inset: 0;
@@ -14,10 +14,10 @@
 .modal-card {
   background: #FFFFFF;
   border: 1px solid var(--border);
-  border-radius: 12px;
-  max-width: 480px;
+  border-radius: 10px;
+  max-width: 440px;
   width: 100%;
-  padding: 24px;
+  padding: 22px;
   box-shadow: 0 16px 36px rgba(34, 31, 31, 0.16);
 }
 
@@ -25,13 +25,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   padding-bottom: 10px;
   border-bottom: 1px solid var(--border-subtle);
 }
 
 .modal-header h3 {
-  font-size: 16px;
+  font-size: 15.5px;
   font-weight: 700;
   color: var(--text-main);
 }
@@ -41,8 +41,9 @@
   border: none;
   cursor: pointer;
   color: var(--text-soft);
-  font-size: 14px;
-  padding: 4px 8px;
+  font-size: 18px;
+  line-height: 1;
+  padding: 2px 6px;
   border-radius: 4px;
   transition: all 0.15s;
 }
@@ -55,11 +56,11 @@
 .modal-body {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
 }
 
 .modal-desc {
-  font-size: 13px;
+  font-size: 12.5px;
   color: var(--text-muted);
   line-height: 1.45;
 }
@@ -67,11 +68,11 @@
 .input-group {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 5px;
 }
 
 .input-group label {
-  font-size: 12px;
+  font-size: 11.5px;
   font-weight: 600;
   color: var(--text-main);
 }
@@ -85,23 +86,40 @@
   background: #FFFFFF;
   color: var(--text-main);
   outline: none;
+  transition: border-color 0.15s;
 }
 
 .text-input:focus {
   border-color: var(--camel);
 }
 
-.input-hint {
+.auth-error {
+  font-size: 11.5px;
+  color: var(--rose-text);
+  background: var(--rose-bg);
+  border: 1px solid var(--rose-border);
+  padding: 6px 10px;
+  border-radius: 6px;
+  line-height: 1.35;
+}
+
+.auth-trust-note {
   font-size: 11px;
   color: var(--text-soft);
+  background: #FAF8F5;
+  border: 1px solid #EFE8DA;
+  padding: 8px 10px;
+  border-radius: 6px;
+  line-height: 1.4;
 }
 
 .modal-actions {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-top: 6px;
-  padding-top: 14px;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 4px;
+  padding-top: 12px;
   border-top: 1px solid var(--border-subtle);
 }
 
@@ -113,7 +131,7 @@
   font-weight: 600;
   cursor: pointer;
   padding: 6px 10px;
-  border-radius: 4px;
+  border-radius: 6px;
 }
 
 .btn-danger-subtle:hover {
