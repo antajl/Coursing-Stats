@@ -3,7 +3,7 @@ import type { Env, UserRecord } from '../types.js';
 import { getUserIndex, getUser, saveUser } from '../storage/index.js';
 import { fetchRkfApplications } from './rkf-api.js';
 import { detectStatusChanges, formatChangeMessage } from './diff-engine.js';
-import { searchCompetitionStatus, formatCompetitionAlert } from './competition-tracker.js';
+import { findCompetitionById, formatApprovalAlert } from './competition-tracker.js';
 
 export async function runBackgroundPolling(env: Env): Promise<{ checkedUsers: number; alertsSent: number }> {
   const token = env.BOT_TOKEN || env.TELEGRAM_BOT_TOKEN;
@@ -58,20 +58,20 @@ export async function runBackgroundPolling(env: Env): Promise<{ checkedUsers: nu
       }
     }
 
-    // 2. Check Competition Subscriptions (Track 4)
+    // 2. Check Competition Subscriptions (2026 Calendar)
     if (user.competitions && user.competitions.length > 0) {
       for (const comp of user.competitions) {
         try {
-          const res = await searchCompetitionStatus(comp.query);
-          if (res && res.isApproved && comp.lastStatus !== res.status) {
-            const text = formatCompetitionAlert(comp, res);
+          const ev = findCompetitionById(comp.id);
+          if (ev && ev.status === 'APPROVED' && comp.lastStatus !== 'APPROVED') {
+            const text = formatApprovalAlert(ev);
             const ok = await sendTelegramMessage(token, user.chatId, text);
             if (ok) alertsSent++;
-            comp.lastStatus = res.status;
+            comp.lastStatus = ev.status;
             userModified = true;
           }
         } catch {
-          // Ignore individual competition check errors
+          // Ignore individual check errors
         }
       }
     }

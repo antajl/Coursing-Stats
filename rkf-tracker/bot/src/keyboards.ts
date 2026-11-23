@@ -8,7 +8,7 @@ export function getMainMenuKeyboard(webAppUrl: string = 'https://my.coursing-sta
     .text('Статус мониторинга', 'cmd_status')
     .text('Список заявок', 'cmd_apps')
     .row()
-    .text('Состязания РКФ', 'cmd_competitions')
+    .text('Состязания РКФ 2026', 'cmd_competitions')
     .text('Помощь / Инструкция', 'cmd_help');
 }
 
@@ -16,6 +16,7 @@ export function getReplyMenuKeyboard(webAppUrl: string = 'https://my.coursing-st
   return new Keyboard()
     .webApp('Мои заявки', webAppUrl)
     .text('/status')
+    .text('/competitions')
     .text('/help')
     .resized()
     .persistent();
@@ -38,8 +39,21 @@ export function getApplicationActionKeyboard(
 
 export function getCompetitionsMenuKeyboard(): InlineKeyboard {
   return new InlineKeyboard()
-    .text('Добавить отслеживание', 'comp_add_prompt')
+    .text('Курсинг (39)', 'comp_disc:coursing')
+    .text('Бега борзых (14)', 'comp_disc:racing')
+    .row()
+    .text('БЗМП (19)', 'comp_disc:bzmp')
+    .text('Все состязания', 'comp_disc:all')
     .row()
     .text('Мои подписки', 'comp_list')
     .text('Главное меню', 'cmd_start');
+}
+
+export function getEventActionKeyboard(eventId: string, isSubscribed: boolean): InlineKeyboard {
+  const label = isSubscribed ? '[x] Отписаться' : '[+] Отслеживать статус';
+  const action = isSubscribed ? `comp_unsub:${eventId}` : `comp_sub:${eventId}`;
+
+  return new InlineKeyboard()
+    .text(label, action)
+    .text('К списку', 'cmd_competitions');
 }
