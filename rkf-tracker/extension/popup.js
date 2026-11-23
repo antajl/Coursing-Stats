@@ -16,7 +16,6 @@ const lblTime = document.getElementById('lbl-time');
 const btnRefresh = document.getElementById('btn-refresh');
 const btnRefreshText = document.getElementById('btn-refresh-text');
 const btnFullscreen = document.getElementById('btn-fullscreen');
-const btnSidepanel = document.getElementById('btn-sidepanel');
 const btnSettings = document.getElementById('btn-settings');
 const searchInput = document.getElementById('search-input');
 const appsList = document.getElementById('apps-list');
@@ -26,23 +25,10 @@ const settingsModal = document.getElementById('settings-modal');
 
 // Init
 document.addEventListener('DOMContentLoaded', async () => {
-  const urlParams = new URLSearchParams(window.location.search);
-  const mode = urlParams.get('mode');
-
-  // Detect mode: sidepanel vs tab vs standard popup
-  if (mode === 'sidepanel' || window.innerWidth <= 640) {
-    document.body.classList.add('is-sidepanel');
-  } else if (mode === 'tab' || window.innerWidth > 800) {
+  // Check if opened as standalone browser tab
+  if (window.innerWidth > 800 || new URLSearchParams(window.location.search).get('mode') === 'tab') {
     document.body.classList.add('is-tab-mode');
   }
-
-  window.addEventListener('resize', () => {
-    if (window.innerWidth <= 640) {
-      document.body.classList.add('is-sidepanel');
-    } else if (!new URLSearchParams(window.location.search).get('mode')) {
-      document.body.classList.remove('is-sidepanel');
-    }
-  });
 
   setupEventListeners();
   setupStorageSync();
@@ -151,11 +137,6 @@ function setupEventListeners() {
     });
   }
 
-  document.getElementById('btn-mode-sidepanel').addEventListener('click', () => {
-    closeSettingsModal();
-    openInSidePanel();
-  });
-
   const btnModeTab = document.getElementById('btn-mode-tab');
   if (btnModeTab) {
     btnModeTab.addEventListener('click', () => {
@@ -163,11 +144,6 @@ function setupEventListeners() {
       chrome.tabs.create({ url: chrome.runtime.getURL('popup.html?mode=tab') });
     });
   }
-
-  document.getElementById('btn-mode-window').addEventListener('click', () => {
-    closeSettingsModal();
-    openInDetachedWindow();
-  });
 
   const btnLogout = document.getElementById('btn-logout');
   if (btnLogout) {
@@ -186,31 +162,6 @@ function setupEventListeners() {
       showToast('Вы вышли из аккаунта');
     });
   }
-}
-
-async function openInSidePanel() {
-  try {
-    if (chrome.sidePanel && chrome.sidePanel.open) {
-      const win = await chrome.windows.getCurrent();
-      await chrome.sidePanel.open({ windowId: win.id });
-    } else {
-      chrome.tabs.create({ url: chrome.runtime.getURL('popup.html?mode=tab') });
-    }
-  } catch (err) {
-    console.warn('SidePanel open fallback:', err);
-    chrome.tabs.create({ url: chrome.runtime.getURL('popup.html?mode=tab') });
-  }
-}
-
-function openInDetachedWindow() {
-  chrome.windows.create({
-    url: chrome.runtime.getURL('popup.html?mode=tab'),
-    type: 'popup',
-    width: 520,
-    height: 720,
-    top: 60,
-    left: 60
-  });
 }
 
 async function openSettingsModal() {
