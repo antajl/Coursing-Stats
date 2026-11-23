@@ -141,7 +141,7 @@ namespace CoursingStats.RkfTracker
                 ProcessStartInfo psi = new ProcessStartInfo
                 {
                     FileName = "msedge.exe",
-                    Arguments = string.Format("--app=\"{0}\" --window-size=850,850", url),
+                    Arguments = string.Format("--app=\"{0}\" --window-size=1100,720", url),
                     UseShellExecute = true
                 };
                 Process.Start(psi);
