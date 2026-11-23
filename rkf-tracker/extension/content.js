@@ -18,13 +18,16 @@ function extractAuth() {
     }
 
     if (apikey) {
-      chrome.storage.local.set({
-        rkfToken: apikey,
-        profileId: profileId,
-        userUuid: userUuid,
-        lastAuthSync: Date.now()
-      });
-      return { apikey, profileId, userUuid };
+      const cleanToken = apikey.replace(/^["']|["']$/g, '').replace(/^Bearer\s+/i, '').trim();
+      if (cleanToken) {
+        chrome.storage.local.set({
+          rkfToken: cleanToken,
+          profileId: profileId,
+          userUuid: userUuid,
+          lastAuthSync: Date.now()
+        });
+        return { apikey: cleanToken, profileId, userUuid };
+      }
     }
   } catch (err) {}
   return null;

@@ -215,6 +215,6 @@ frontend/.tunnel-url
 .gsc-tokens.json
 
 # RKF Tracker local credentials and state
-scripts/rkf-tracker/config.json
-scripts/rkf-tracker/state.json
-scripts/rkf-tracker/received.json
+rkf-tracker/**/config.json
+rkf-tracker/**/state.json
+rkf-tracker/**/received.json

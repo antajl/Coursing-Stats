@@ -92,14 +92,35 @@ async function checkAuthAndInit() {
 
 async function checkAuthFromTabs() {
   try {
-    const tabs = await chrome.tabs.query({ url: '*://*.rkf.online/*' });
+    const tabs = await chrome.tabs.query({
+      url: [
+        'https://rkf.online/*',
+        'https://*.rkf.online/*',
+        '*://rkf.online/*',
+        '*://*.rkf.online/*'
+      ]
+    });
+
     if (tabs && tabs.length > 0) {
       for (const tab of tabs) {
         try {
-          const res = await chrome.tabs.sendMessage(tab.id, { type: 'GET_RKF_AUTH' });
+          // 1. Try direct message if content script is active
+          let res = null;
+          try {
+            res = await chrome.tabs.sendMessage(tab.id, { type: 'GET_RKF_AUTH' });
+          } catch (_) {
+            // Tab was opened before extension loaded: dynamically inject content.js
+            await chrome.scripting.executeScript({
+              target: { tabId: tab.id },
+              files: ['content.js']
+            });
+            res = await chrome.tabs.sendMessage(tab.id, { type: 'GET_RKF_AUTH' });
+          }
+
           if (res && res.apikey) {
+            const cleanKey = String(res.apikey).replace(/^["']|["']$/g, '').replace(/^Bearer\s+/i, '').trim();
             await chrome.storage.local.set({
-              rkfToken: res.apikey,
+              rkfToken: cleanKey,
               profileId: res.profileId || '',
               userUuid: res.userUuid || ''
             });
@@ -108,10 +129,14 @@ async function checkAuthFromTabs() {
             showDashboard(store);
             return true;
           }
-        } catch (e) {}
+        } catch (e) {
+          console.warn('Error reading auth from tab:', e);
+        }
       }
     }
-  } catch (err) {}
+  } catch (err) {
+    console.error('checkAuthFromTabs error:', err);
+  }
   return false;
 }
 
@@ -143,8 +168,9 @@ async function fetchData(token, profileId, userUuid) {
   btnRefreshText.innerText = 'Запрос...';
   setStatusState('syncing');
 
+  const cleanToken = String(token || '').replace(/^["']|["']$/g, '').replace(/^Bearer\s+/i, '').trim();
   const headers = {
-    authorization: `Bearer ${token}`,
+    authorization: `Bearer ${cleanToken}`,
     accept: 'application/json'
   };
 
@@ -159,19 +185,19 @@ async function fetchData(token, profileId, userUuid) {
     const [feed6, feed9, ownerDocsRes, healthDocsRes] = await Promise.all([
       fetchFeed(6, headers),
       fetchFeed(9, headers),
-      fetch('https://rkf.online/api/requests/get_rkf_document_request/ownergetrkfdocumentrequest/register_of_requests', { headers }).then(r => r.json()).catch(() => ({})),
+      fetch('https://rkf.online/api/requests/get_rkf_document_request/ownergetrkfdocumentrequest/register_of_requests', { headers }).then(r => r.json()).catch(e => { console.warn('ownerDocsRes error:', e); return {}; }),
       fetch('https://rkf.online/api/requests/dog_health_check_request/ownerdoghealthcheckrequest/register_of_requests', {
         method: 'POST', headers: { ...headers, 'content-type': 'application/json' }, body: JSON.stringify({ type_id: 1 })
-      }).then(r => r.json()).catch(() => ({}))
+      }).then(r => r.json()).catch(e => { console.warn('healthDocsRes error:', e); return {}; })
     ]);
 
     // Build metadata map
     const metaMap = {};
     for (const doc of (ownerDocsRes.result || [])) {
-      if (doc.barcode) metaMap[doc.barcode] = { dogName: doc.dog_name, documentName: doc.document_short_name, pedigreeNumber: doc.pedigree_number };
+      if (doc.barcode) metaMap[doc.barcode] = { dogName: doc.dog_name, documentName: doc.document_short_name, pedigreeNumber: doc.pedigree_number, status: doc.status_name, date: doc.date_change || doc.date_create };
     }
     for (const doc of (healthDocsRes.result || [])) {
-      if (doc.barcode) metaMap[doc.barcode] = { dogName: doc.dog_name, documentName: doc.type_name || 'Проверка на дисплазию', pedigreeNumber: doc.pedigree_number };
+      if (doc.barcode) metaMap[doc.barcode] = { dogName: doc.dog_name, documentName: doc.type_name || 'Проверка на дисплазию', pedigreeNumber: doc.pedigree_number, status: doc.status_name, date: doc.date_change || doc.date_create };
     }
 
     // Process notifications (the 9 active applications)
@@ -206,6 +232,21 @@ async function fetchData(token, profileId, userUuid) {
 
       if (status) {
         applications[barcode].history.push({ date: item.create_date, status });
+      }
+    }
+
+    // Fallback: If notifications feed returned 0 applications, seed directly from register_of_requests!
+    if (Object.keys(applications).length === 0 && Object.keys(metaMap).length > 0) {
+      for (const [barcode, m] of Object.entries(metaMap)) {
+        applications[barcode] = {
+          barcode,
+          dogName: m.dogName || '',
+          documentName: m.documentName || 'Заявка РКФ',
+          pedigreeNumber: m.pedigreeNumber || '',
+          history: [
+            { date: m.date || new Date().toISOString(), status: m.status || 'В обработке' }
+          ]
+        };
       }
     }
 
@@ -276,14 +317,22 @@ async function fetchFeed(filterType, headers) {
   let all = [];
   let page = 1;
   while (true) {
-    const res = await fetch(`https://rkf.online/api/article/articles_feed?start_element=${page}&size=50&filter_type=${filterType}`, { headers });
-    if (!res.ok) break;
-    const d = await res.json();
-    const list = d.result?.articles || [];
-    if (!list.length) break;
-    all = all.concat(list);
-    if (all.length >= (d.result?.articles_count || 0)) break;
-    page += list.length;
+    try {
+      const res = await fetch(`https://rkf.online/api/article/articles_feed?start_element=${page}&size=50&filter_type=${filterType}`, { headers });
+      if (!res.ok) {
+        console.warn(`[RKF] feed ${filterType} error: HTTP ${res.status}`);
+        break;
+      }
+      const d = await res.json();
+      const list = d.result?.articles || [];
+      if (!list.length) break;
+      all = all.concat(list);
+      if (all.length >= (d.result?.articles_count || 0)) break;
+      page += list.length;
+    } catch (err) {
+      console.warn(`[RKF] feed ${filterType} network error:`, err);
+      break;
+    }
   }
   return all;
 }

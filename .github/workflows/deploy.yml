@@ -6,7 +6,7 @@ on:
       - main
     paths-ignore:
       - 'bot/**'
-      - 'extension/**'
+      - 'rkf-tracker/**'
   workflow_dispatch:
     inputs:
       full_sync:

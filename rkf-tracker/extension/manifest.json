@@ -27,11 +27,15 @@
     "default_path": "popup.html"
   },
   "host_permissions": [
+    "https://rkf.online/*",
     "https://*.rkf.online/*"
   ],
   "content_scripts": [
     {
-      "matches": ["https://*.rkf.online/*"],
+      "matches": [
+        "https://rkf.online/*",
+        "https://*.rkf.online/*"
+      ],
       "js": ["content.js"],
       "run_at": "document_idle"
     }
