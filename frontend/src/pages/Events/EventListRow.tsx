@@ -238,7 +238,7 @@ export default function EventListRow({ event }: EventListRowProps) {
             )}
           </div>
 
-          <div className="flex flex-col items-end justify-center gap-1.5 w-[5.8rem] shrink-0">
+          <div className="flex flex-col items-end justify-center gap-1.5 min-w-[5.8rem] w-auto shrink-0">
             {participants > 0 ? (
               <span
                 className="inline-flex h-5.5 items-center justify-center gap-1 rounded-full border border-old-money-200/90 bg-white px-2 font-mono text-[11px] font-semibold tabular-nums text-charcoal-700 shadow-2xs"
@@ -258,13 +258,13 @@ export default function EventListRow({ event }: EventListRowProps) {
               </span>
             ) : event.notes ? (
               <span
-                className="inline-flex items-center text-[10.5px] font-medium text-amber-900 bg-amber-50 border border-amber-300/80 rounded-full px-2 py-0.5 select-none text-right"
+                className="inline-flex items-center whitespace-nowrap text-[10.5px] font-medium text-amber-900 bg-amber-50 border border-amber-300/80 rounded-full px-2 py-0.5 select-none text-right"
                 title={event.notes}
               >
                 {event.notes === 'на согласовании комиссии' ? 'На согласовании' : event.notes}
               </span>
             ) : (
-              <span className="inline-flex items-center text-[11px] font-medium text-charcoal-400 select-none">
+              <span className="inline-flex items-center whitespace-nowrap text-[11px] font-medium text-charcoal-400 select-none">
                 {cancelled ? 'Отменено' : 'В плане РКФ'}
               </span>
             )}
@@ -300,13 +300,13 @@ export default function EventListRow({ event }: EventListRowProps) {
           </span>
         ) : event.notes ? (
           <span
-            className="text-[10px] font-medium text-amber-900 bg-amber-50 border border-amber-300/80 rounded-full px-1.5 py-0.2 shrink-0 ml-auto select-none"
+            className="text-[10px] whitespace-nowrap font-medium text-amber-900 bg-amber-50 border border-amber-300/80 rounded-full px-2 py-0.5 shrink-0 ml-auto select-none"
             title={event.notes}
           >
             {event.notes === 'на согласовании комиссии' ? 'На согласовании' : event.notes}
           </span>
         ) : (
-          <span className="text-[10.5px] font-medium text-charcoal-400 shrink-0 ml-auto select-none">
+          <span className="text-[10.5px] whitespace-nowrap font-medium text-charcoal-400 shrink-0 ml-auto select-none">
             {cancelled ? 'Отменено' : 'В плане РКФ'}
           </span>
         )}
