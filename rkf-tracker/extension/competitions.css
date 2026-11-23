@@ -193,7 +193,7 @@
 
 .status-approved { background-color: var(--emerald-bg); border: 1px solid var(--emerald-border); color: var(--emerald); }
 .status-pending { background-color: var(--amber-bg); border: 1px solid var(--amber-border); color: var(--amber); }
-.status-delayed { background-color: #FEF2F2; border: 1px solid #FECACA; color: #DC2626; }
+.status-delayed { background-color: #FEE2E2; border: 1px solid #F87171; color: #B91C1C; font-weight: 700; }
 .status-rejected { background-color: var(--rose-bg); border: 1px solid var(--rose-border); color: var(--rose); }
 
 /* Track Button */

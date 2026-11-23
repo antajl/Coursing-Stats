@@ -2,7 +2,7 @@
 import { renderCompetitionsList, getCompetitionStatus } from './competitions-render.js';
 
 let activeYear = 2026;
-let currentDiscipline = 'all';
+let currentDiscipline = 'Курсинг борзых';
 let currentFilter = 'all';
 let searchQuery = '';
 let allEvents = [];
@@ -40,13 +40,14 @@ function setupDomListeners() {
     });
   }
 
-  // Discipline buttons
+  // 3 Discipline buttons
   const discBtns = document.querySelectorAll('.comp-disc-btn');
   discBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
       discBtns.forEach((b) => b.classList.remove('active'));
       btn.classList.add('active');
-      currentDiscipline = btn.getAttribute('data-disc') || 'all';
+      currentDiscipline = btn.getAttribute('data-disc') || 'Курсинг борзых';
+      updateFilterCounters();
       applyAndRender();
     });
   });
@@ -122,7 +123,6 @@ async function fetchYearEvents(year) {
 }
 
 function updateDisciplineCounters() {
-  const cntAll = document.getElementById('disc-cnt-all');
   const cntCoursing = document.getElementById('disc-cnt-coursing');
   const cntRacing = document.getElementById('disc-cnt-racing');
   const cntBzmp = document.getElementById('disc-cnt-bzmp');
@@ -131,7 +131,6 @@ function updateDisciplineCounters() {
   const rCount = allEvents.filter((ev) => isMatchDiscipline(ev, 'Бега борзых')).length;
   const bCount = allEvents.filter((ev) => isMatchDiscipline(ev, 'БЗМП')).length;
 
-  if (cntAll) cntAll.textContent = `(${allEvents.length})`;
   if (cntCoursing) cntCoursing.textContent = `(${cCount})`;
   if (cntRacing) cntRacing.textContent = `(${rCount})`;
   if (cntBzmp) cntBzmp.textContent = `(${bCount})`;
@@ -144,12 +143,14 @@ function updateFilterCounters() {
   const cntDelayed = document.getElementById('comp-cnt-delayed');
   const cntTracked = document.getElementById('comp-cnt-tracked');
 
+  const discEvents = allEvents.filter((ev) => isMatchDiscipline(ev, currentDiscipline));
+
   let approved = 0;
   let pending = 0;
   let delayed = 0;
   let tracked = 0;
 
-  for (const ev of allEvents) {
+  for (const ev of discEvents) {
     const st = getCompetitionStatus(ev).key;
     if (st === 'approved') approved++;
     else if (st === 'delayed') delayed++;
@@ -158,7 +159,7 @@ function updateFilterCounters() {
     if (trackedIds.has(String(ev.id))) tracked++;
   }
 
-  if (cntAll) cntAll.textContent = `(${allEvents.length})`;
+  if (cntAll) cntAll.textContent = `(${discEvents.length})`;
   if (cntApproved) cntApproved.textContent = `(${approved})`;
   if (cntPending) cntPending.textContent = `(${pending})`;
   if (cntDelayed) cntDelayed.textContent = `(${delayed})`;
@@ -179,7 +180,6 @@ function updateTrackedBadge() {
 }
 
 function isMatchDiscipline(ev, disc) {
-  if (disc === 'all') return true;
   const target = (ev.discipline || ev.sheetName || '').toLowerCase();
   if (disc === 'БЗМП') {
     return target.includes('бзмп') || target.includes('приманк');

@@ -1,17 +1,28 @@
 // RKF Competitions Card & List Renderer (ES Module)
 
 export function getCompetitionStatus(ev) {
-  const reg = (ev.reglament || '').toLowerCase();
-  const notes = (ev.notes || '').toLowerCase();
-
-  if (ev.status === 'APPROVED' || reg.includes('утвержден')) {
-    return { key: 'approved', label: 'Утверждено', badgeClass: 'status-approved' };
-  }
-  if (reg.includes('опоздан') || notes.includes('задержан') || reg.includes('задержан')) {
+  const st = (ev.status || '').toUpperCase();
+  if (st === 'DELAYED') {
     return { key: 'delayed', label: 'Задержано', badgeClass: 'status-delayed' };
   }
-  if (ev.status === 'REJECTED' || reg.includes('отклон') || reg.includes('отказ')) {
+  if (st === 'APPROVED' || ev.confirmed === 1) {
+    return { key: 'approved', label: 'Утверждено', badgeClass: 'status-approved' };
+  }
+  if (st === 'PENDING') {
+    return { key: 'pending', label: 'На согласовании', badgeClass: 'status-pending' };
+  }
+  if (st === 'REJECTED') {
     return { key: 'rejected', label: 'Отклонено', badgeClass: 'status-rejected' };
+  }
+
+  const sum = (ev.summary || '').toLowerCase();
+  const reg = (ev.reglament || '').toLowerCase();
+  const notes = (ev.notes || '').toLowerCase();
+  if (sum.includes('задержано') || reg.includes('опоздан') || notes.includes('задержан')) {
+    return { key: 'delayed', label: 'Задержано', badgeClass: 'status-delayed' };
+  }
+  if (reg.includes('утвержден')) {
+    return { key: 'approved', label: 'Утверждено', badgeClass: 'status-approved' };
   }
   return { key: 'pending', label: 'На согласовании', badgeClass: 'status-pending' };
 }
