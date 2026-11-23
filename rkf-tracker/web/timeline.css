@@ -33,3 +33,11 @@
   font-weight: 500;
   color: var(--text-main);
 }
+
+.app-row .timeline {
+  margin-top: 8px;
+  padding: 10px 14px;
+  background: rgba(247, 242, 234, 0.7);
+  border: 1px dashed rgba(210, 192, 168, 0.7);
+  border-radius: 8px;
+}

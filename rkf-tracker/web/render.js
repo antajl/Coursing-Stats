@@ -17,7 +17,7 @@ export function renderKpiSummary(apps) {
   if (cntPickup) cntPickup.innerText = `(${toPickupCount})`;
   if (cntCollected) cntCollected.innerText = `(${collectedCount})`;
 
-  // Top KPI widgets
+  // KPI widgets
   const kpiTotal = document.getElementById('kpi-total');
   const kpiActive = document.getElementById('kpi-active');
   const kpiPickup = document.getElementById('kpi-pickup');
@@ -31,7 +31,6 @@ export function renderKpiSummary(apps) {
 
 export function renderCardHtml(app) {
   const isCollected = app.isReceived;
-  const statusClass = app.statusGroup === 'ready' ? 'status-ready' : (app.statusGroup === 'rejected' ? 'status-rejected' : 'status-active');
   const collectedClass = isCollected ? 'is-collected' : '';
   const checkedClass = isCollected ? 'checked' : '';
 
@@ -40,17 +39,18 @@ export function renderCardHtml(app) {
 
   const formattedDog = formatDogName(app.dogName);
   const formattedDoc = formatDocTitle(app.documentName);
-  const updatedDate = app.lastUpdated ? new Date(app.lastUpdated).toLocaleDateString('ru-RU') : '';
+  const updatedDate = app.lastUpdated ? new Date(app.lastUpdated).toLocaleDateString('ru-RU', { day: '2-digit', month: '2-digit' }) : '—';
 
   return `
-    <article class="app-row ${statusClass} ${collectedClass}" data-barcode="${app.barcode}">
+    <article class="app-row ${collectedClass}" data-barcode="${app.barcode}">
       <div class="row-main">
-        <div class="col-check">
-          <div class="check-btn ${checkedClass}" title="${isCollected ? 'Отметить как не забранный' : 'Отметить как забранный'}">
+        <div class="col-date-check">
+          <div class="check-btn ${checkedClass}" title="${isCollected ? 'Отметить как не полученный' : 'Отметить как полученный на руки'}">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
               <polyline points="20 6 9 17 4 12"></polyline>
             </svg>
           </div>
+          <span class="row-date-badge">${updatedDate}</span>
         </div>
 
         <div class="col-dog">
@@ -69,8 +69,6 @@ export function renderCardHtml(app) {
                 <line x1="10" y1="14" x2="21" y2="3"/>
               </svg>
             </a>
-            <span class="meta-dot">•</span>
-            <span class="meta-date">${updatedDate}</span>
           </div>
         </div>
 
@@ -78,10 +76,13 @@ export function renderCardHtml(app) {
           <span class="badge ${badgeClass}">${badgeText}</span>
         </div>
 
-        <div class="col-chevron">
-          <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-            <polyline points="6 9 12 15 18 9"></polyline>
-          </svg>
+        <div class="col-action">
+          <button type="button" class="btn-details" title="История статусов">
+            <span>История</span>
+            <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
         </div>
       </div>
 

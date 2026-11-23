@@ -23,6 +23,16 @@ export default {
       });
     }
 
+    // Webhook info endpoint
+    if (url.pathname === '/webhook-info') {
+      const infoRes = await fetch(`https://api.telegram.org/bot${token}/getWebhookInfo`);
+      const infoData = await infoRes.json();
+      return new Response(JSON.stringify(infoData), {
+        status: 200,
+        headers: { 'content-type': 'application/json' }
+      });
+    }
+
     // Webhook registration endpoint
     if (url.pathname === '/set-webhook') {
       const webhookUrl = `${url.origin}/webhook`;

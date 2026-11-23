@@ -1,4 +1,6 @@
 // Controller for RKF Competition Approvals Section (info.rkf.online data)
+import { renderCompactRowHtml } from './approvalsRow.js';
+
 let competitionsList = [];
 let currentDiscipline = 'Курсинг борзых';
 let currentStatus = 'all';
@@ -44,12 +46,19 @@ function setupApprovalEvents() {
   // Discipline pills (3 separate disciplines only)
   document.querySelectorAll('.discipline-pill').forEach((pill) => {
     pill.addEventListener('click', () => {
-      document.querySelectorAll('.discipline-pill').forEach((p) => p.classList.remove('active'));
-      pill.classList.add('active');
+      document.querySelectorAll('.discipline-pill').forEach((p) => {
+        p.classList.remove('active', 'cs-glass-pill-active');
+        p.classList.add('cs-glass-pill');
+      });
+      pill.classList.remove('cs-glass-pill');
+      pill.classList.add('active', 'cs-glass-pill-active');
       currentDiscipline = pill.getAttribute('data-discipline');
       showOnlySubscribed = false;
       const subBtn = document.getElementById('btn-filter-subscribed');
-      if (subBtn) subBtn.classList.remove('active');
+      if (subBtn) {
+        subBtn.classList.remove('active', 'cs-glass-pill-active');
+        subBtn.classList.add('cs-glass-pill');
+      }
       filterApprovals();
     });
   });
@@ -57,8 +66,12 @@ function setupApprovalEvents() {
   // Status pills
   document.querySelectorAll('.approval-pill').forEach((pill) => {
     pill.addEventListener('click', () => {
-      document.querySelectorAll('.approval-pill').forEach((p) => p.classList.remove('active'));
-      pill.classList.add('active');
+      document.querySelectorAll('.approval-pill').forEach((p) => {
+        p.classList.remove('active', 'cs-glass-pill-active');
+        p.classList.add('cs-glass-pill');
+      });
+      pill.classList.remove('cs-glass-pill');
+      pill.classList.add('active', 'cs-glass-pill-active');
       currentStatus = pill.getAttribute('data-status-filter');
       filterApprovals();
     });
@@ -69,7 +82,13 @@ function setupApprovalEvents() {
   if (subBtn) {
     subBtn.addEventListener('click', () => {
       showOnlySubscribed = !showOnlySubscribed;
-      subBtn.classList.toggle('active', showOnlySubscribed);
+      if (showOnlySubscribed) {
+        subBtn.classList.remove('cs-glass-pill');
+        subBtn.classList.add('active', 'cs-glass-pill-active');
+      } else {
+        subBtn.classList.remove('active', 'cs-glass-pill-active');
+        subBtn.classList.add('cs-glass-pill');
+      }
       filterApprovals();
     });
   }
@@ -87,7 +106,18 @@ export function renderApprovals() {
   const container = document.getElementById('approvals-container');
   if (!container) return;
 
-  container.innerHTML = competitionsList.map((item) => renderCompactRowHtml(item)).join('');
+  const headerHtml = `
+    <div class="comp-table-header">
+      <div>Дата</div>
+      <div>Клуб и ранг состязания</div>
+      <div>Город / Федерация</div>
+      <div>Статус РКФ</div>
+      <div style="text-align: right;">Следить</div>
+    </div>
+  `;
+
+  const subSet = getSubscribedSet();
+  container.innerHTML = headerHtml + competitionsList.map((item) => renderCompactRowHtml(item, subSet.has(item.id), formatShortDate(item.dateRaw))).join('');
 
   // Attach subscription click handlers
   container.querySelectorAll('.btn-track').forEach((btn) => {
@@ -155,62 +185,6 @@ function formatShortDate(dateRaw) {
     if (mIdx >= 0 && mIdx < 12) return `${days} ${months[mIdx]}`;
   }
   return dateRaw;
-}
-
-function renderCompactRowHtml(item) {
-  const isApproved = item.status === 'APPROVED';
-  const isDelayed = item.status === 'DELAYED';
-  const statusClass = isApproved ? 'approved' : (isDelayed ? 'delayed' : 'pending');
-  const statusText = isApproved ? 'Утверждено' : (isDelayed ? 'Задержано' : 'На согласовании');
-
-  const subscribedSet = getSubscribedSet();
-  const isSubscribed = subscribedSet.has(item.id);
-  const trackBtnClass = isSubscribed ? 'btn-track active' : 'btn-track';
-  const trackTitle = isSubscribed ? 'Отслеживается (нажмите для отмены)' : 'Отслеживать состязание';
-
-  const shortDate = formatShortDate(item.dateRaw);
-  const reglamentText = item.reglament ? ` • Регламент: ${escapeHtml(item.reglament)}` : '';
-
-  return `
-    <div class="comp-row status-${statusClass}" data-id="${item.id}"
-      data-discipline="${escapeHtml(item.discipline)}"
-      data-club="${escapeHtml(item.club)}"
-      data-location="${escapeHtml(item.location)}"
-      data-rank="${escapeHtml(item.rank)}"
-      data-status="${item.status}">
-      
-      <!-- 1. Date Block -->
-      <div class="comp-col-date">
-        <span class="date-badge">${escapeHtml(shortDate)}</span>
-      </div>
-
-      <!-- 2. Club & Rank Center Block -->
-      <div class="comp-col-main">
-        <div class="comp-title-line">
-          <span class="comp-club">${escapeHtml(item.club)}</span>
-          <span class="badge-rank">${escapeHtml(item.rank)}</span>
-        </div>
-        <div class="comp-sub-line">
-          <span>${escapeHtml(item.location)}</span>${reglamentText}
-        </div>
-      </div>
-
-      <!-- 3. Status Block -->
-      <div class="comp-col-status">
-        <span class="badge-status ${statusClass}">${statusText}</span>
-      </div>
-
-      <!-- 4. Track Bell Action Button -->
-      <div class="comp-col-action">
-        <button class="${trackBtnClass}" data-id="${item.id}" title="${trackTitle}" aria-label="${trackTitle}">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="${isSubscribed ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2">
-            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
-            <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
-          </svg>
-        </button>
-      </div>
-    </div>
-  `;
 }
 
 function filterApprovals() {

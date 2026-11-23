@@ -50,8 +50,12 @@ function setupEvents() {
   // Filter pills
   document.querySelectorAll('.filter-pill').forEach(pill => {
     pill.addEventListener('click', () => {
-      document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
-      pill.classList.add('active');
+      document.querySelectorAll('.filter-pill').forEach(p => {
+        p.classList.remove('active', 'cs-glass-pill-active');
+        p.classList.add('cs-glass-pill');
+      });
+      pill.classList.remove('cs-glass-pill');
+      pill.classList.add('active', 'cs-glass-pill-active');
       currentFilter = pill.getAttribute('data-filter');
       filterAndSearch();
     });
@@ -94,40 +98,40 @@ function setupEvents() {
 
 async function fetchLiveData(token) {
   const syncDot = document.getElementById('sync-dot');
-  const btnRefreshText = document.getElementById('btn-refresh-text');
+  const btnRefresh = document.getElementById('btn-refresh');
   if (syncDot) syncDot.classList.add('syncing');
-  if (btnRefreshText) btnRefreshText.innerText = 'Запрос...';
 
   try {
-    const res = await fetch('/api/rkf/article/articles_feed?start_element=1&size=50&filter_type=6', {
-      headers: { authorization: `Bearer ${token}` }
+    const res = await fetch('/api/rkf/applications/list', {
+      headers: {
+        'authorization': `Bearer ${token}`
+      }
     });
+
     if (res.ok) {
-      const feedData = await res.json();
+      const data = await res.json();
       const storedReceived = new Set(JSON.parse(localStorage.getItem('cs_received_barcodes') || '[]'));
-      const items = feedData.articles || feedData.data || [];
-      apps = items.map(it => ({
-        barcode: String(it.barcode || it.id || ''),
-        dogName: it.dog_name || it.title || 'Борзая',
-        documentName: it.document_title || it.document_name || 'Сертификат',
-        pedigreeNumber: it.pedigree_number || '',
-        currentStatus: it.status_name || it.status || 'В обработке',
-        lastUpdated: it.updated_at || it.created_at || new Date().toISOString(),
-        statusGroup: (it.status_code === 10 || (it.status_name || '').toLowerCase().includes('готов')) ? 'ready' : 'active',
-        isReceived: storedReceived.has(String(it.barcode || it.id || '')),
-        history: it.history || []
+      apps = (data.items || []).map(app => ({
+        barcode: app.barcode,
+        dogName: app.dog?.name || 'Без клички',
+        pedigreeNumber: app.dog?.pedigree || '',
+        documentName: app.service?.title || 'Заявка',
+        currentStatus: app.status?.name || 'В обработке',
+        statusGroup: app.status?.is_ready ? 'ready' : (app.status?.is_rejected ? 'rejected' : 'active'),
+        lastUpdated: app.updated_at,
+        history: (app.history || []).map(h => ({ date: h.created_at, status: h.name })),
+        isReceived: storedReceived.has(app.barcode)
       }));
       render();
       showToast('Синхронизировано с РКФ!');
       updateModeBadge('Обновлено: ' + new Date().toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit' }), true);
     } else {
-      showToast('Ошибка авторизации в РКФ (проверьте токен)');
+      showToast('Ошибка авторизации в РКФ (проверьте данные входа)');
     }
   } catch (err) {
     showToast('Сетевая ошибка при обращении к прокси');
   } finally {
     if (syncDot) syncDot.classList.remove('syncing');
-    if (btnRefreshText) btnRefreshText.innerText = 'Синхронизировать';
   }
 }
 
@@ -150,7 +154,16 @@ function render() {
   renderKpiSummary(apps);
   const container = document.getElementById('apps-container');
   if (container) {
-    container.innerHTML = apps.map(app => renderCardHtml(app)).join('');
+    const headerHtml = `
+      <div class="app-table-header">
+        <div>Дата / Вручен</div>
+        <div>Кличка / № РКФ</div>
+        <div>Документ / Трек-номер</div>
+        <div>Статус в РКФ</div>
+        <div style="text-align: right;">Действия</div>
+      </div>
+    `;
+    container.innerHTML = headerHtml + apps.map(app => renderCardHtml(app)).join('');
     attachCardEvents(handleToggleReceived);
     filterAndSearch();
   }
