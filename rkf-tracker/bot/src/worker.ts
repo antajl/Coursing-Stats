@@ -9,13 +9,23 @@ let cachedBot: ReturnType<typeof createBot> | null = null;
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
-    const token = env.BOT_TOKEN || env.TELEGRAM_BOT_TOKEN;
+    const rawToken = env.BOT_TOKEN || env.TELEGRAM_BOT_TOKEN;
+    const token = rawToken ? rawToken.trim() : '';
 
     if (!token) {
       return new Response('BOT_TOKEN is not configured', { status: 500 });
     }
 
     // Health check endpoint
+    if (url.pathname === '/get-me') {
+      const meRes = await fetch(`https://api.telegram.org/bot${token}/getMe`);
+      const meData = await meRes.text();
+      return new Response(meData, {
+        status: meRes.status,
+        headers: { 'content-type': 'application/json' }
+      });
+    }
+
     if (url.pathname === '/health') {
       return new Response(JSON.stringify({ status: 'ok', worker: 'coursing-stats-tracker-bot' }), {
         status: 200,
