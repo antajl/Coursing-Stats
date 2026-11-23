@@ -72,6 +72,25 @@ function setupEventListeners() {
   document.getElementById('btn-close-error').addEventListener('click', () => {
     errorModal.style.display = 'none';
   });
+
+  const btnLogout = document.getElementById('btn-logout');
+  if (btnLogout) {
+    btnLogout.addEventListener('click', async () => {
+      await chrome.storage.local.remove([
+        'rkfToken',
+        'profileId',
+        'userUuid',
+        'cached_apps',
+        'cached_time',
+        'rkf_last_refresh_timestamp'
+      ]);
+      currentApps = [];
+      mainDashboard.style.display = 'none';
+      statusBadge.style.display = 'none';
+      authCard.style.display = 'block';
+      showToast('Вы вышли из аккаунта');
+    });
+  }
 }
 
 async function checkAuthAndInit() {
