@@ -2,10 +2,19 @@
   "schema": "coursing-stats/calendar-changelog-v1",
   "season": 2027,
   "source_url": "https://info.rkf.online/article/fb2b53ca-bdf2-5e35-bea2-2e973592e2d7",
-  "attachment_url": "https://info.rkf.online/attachment/0a0cafba-68a6-4cfb-80f0-01407d9bff0f",
-  "last_checked_at": "2026-11-15T00:00:00.000Z",
-  "source_sha256": "f14086c01ada2747ce4f723146f19583a80520ba805fa5b57037ca76bc6afe45",
+  "attachment_url": "https://info.rkf.online/attachment/df4d0943-c2aa-4082-be5c-38c26c1763cd",
+  "last_checked_at": "2026-11-23T16:16:03.009Z",
+  "source_sha256": "80652a0a76502f9b2551bd14671e12dd75c06173969dcf047b5314bef503a75a",
   "entries": [
+    {
+      "date": "2026-11-23",
+      "version": "1.1",
+      "title": "Обновление утвержденного плана РКФ (2026-11-23)",
+      "summary": "Синхронизация с официальным реестром РКФ. Изменений: 1.",
+      "changes": [
+        "Добавлено 2 новых состязаний"
+      ]
+    },
     {
       "date": "2026-11-15",
       "version": "1.0",
