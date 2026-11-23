@@ -156,17 +156,12 @@ export function resolveApprovalStatus(reglament = '', summary = '', decision = '
 
   if (text.includes('отклон') || text.includes('отказ')) return APPROVAL_STATUS.REJECTED;
   if (text.includes('отмен')) return APPROVAL_STATUS.CANCELLED;
-  if (text.includes('задержан') || text.includes('доработк') || text.includes('на согласовани') || text.includes('на рассмотрени')) {
-    return APPROVAL_STATUS.PENDING;
-  }
+  if (text.includes('задержан')) return APPROVAL_STATUS.DELAYED;
   if (text.includes('утвержден') || text.includes('в графике') || text.includes('согласован')) {
     return APPROVAL_STATUS.APPROVED;
   }
-  if (summary.includes('принята')) {
-    // If summary has incoming number but reglament not yet approved
-    return text.includes('утвержден') ? APPROVAL_STATUS.APPROVED : APPROVAL_STATUS.PENDING;
-  }
-  return APPROVAL_STATUS.UNKNOWN;
+  // Если заявка принята секретаритом либо статус еще не указан — состязание на согласовании
+  return APPROVAL_STATUS.PENDING;
 }
 
 function generateEventId(date, discipline, club, location) {

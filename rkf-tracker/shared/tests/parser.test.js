@@ -24,9 +24,9 @@ describe('RKF Calendar In-Memory Parser (Track 4)', () => {
     expect(coursingApproved.reglament).toContain('утвержден');
     expect(coursingApproved.summary).toContain('2404/1');
 
-    const coursingPending = events.find(e => e.club.includes('Альянс'));
-    expect(coursingPending.status).toBe(APPROVAL_STATUS.PENDING);
-    expect(coursingPending.summary).toContain('Задержано');
+    const coursingDelayed = events.find(e => e.club.includes('Альянс'));
+    expect(coursingDelayed.status).toBe(APPROVAL_STATUS.DELAYED);
+    expect(coursingDelayed.summary).toContain('Задержано');
 
     const coursingRejected = events.find(e => e.club.includes('ТГОО'));
     expect(coursingRejected.status).toBe(APPROVAL_STATUS.REJECTED);
@@ -59,7 +59,7 @@ describe('RKF Calendar In-Memory Parser (Track 4)', () => {
     expect(diff.hasChanges).toBe(true);
     expect(diff.newlyApproved.length).toBe(1);
     expect(diff.newlyApproved[0].event.club).toContain('Альянс');
-    expect(diff.newlyApproved[0].previousStatus).toBe(APPROVAL_STATUS.PENDING);
+    expect(diff.newlyApproved[0].previousStatus).toBe(APPROVAL_STATUS.DELAYED);
   });
 
   it('filters events by search query, discipline and city', () => {
