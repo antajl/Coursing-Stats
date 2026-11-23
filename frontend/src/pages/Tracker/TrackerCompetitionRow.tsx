@@ -19,7 +19,7 @@ export function TrackerCompetitionRow({
   const statusBadgeCls = isApproved
     ? 'bg-emerald-50 text-emerald-800 border-emerald-200/90'
     : isDelayed
-    ? 'bg-rose-50 text-rose-800 border-rose-200/90'
+    ? 'bg-rose-100 text-rose-800 border-rose-300 font-bold'
     : 'bg-amber-50 text-amber-800 border-amber-200/90';
 
   const statusText = isApproved
@@ -31,10 +31,10 @@ export function TrackerCompetitionRow({
   const shortDate = formatShortDate(comp.dateRaw);
 
   return (
-    <div className="grid grid-cols-[72px_1fr_auto_36px] sm:grid-cols-[84px_1fr_130px_36px] items-center gap-2 sm:gap-3 px-3 sm:px-4 py-2 min-h-[44px] hover:bg-sand-50/50 transition-colors text-xs">
+    <div className="grid grid-cols-[72px_1fr_auto_36px] sm:grid-cols-[84px_1fr_130px_36px] items-center gap-2 sm:gap-3 px-3 sm:px-4 py-2 min-h-[44px] hover:bg-cream-100/50 transition-colors text-xs">
       {/* Date Block */}
       <div className="shrink-0">
-        <span className="inline-block px-2 py-0.5 rounded-md font-mono font-bold text-[11px] bg-sand-100 text-charcoal-700">
+        <span className="inline-block px-2 py-0.5 rounded-md font-mono font-bold text-[11px] bg-cream-100 text-charcoal-700 border border-old-money-200/60">
           {shortDate}
         </span>
       </div>
@@ -45,7 +45,7 @@ export function TrackerCompetitionRow({
           <span className="font-semibold text-charcoal-900 truncate text-[12.5px]">
             {comp.club}
           </span>
-          <span className="px-1.5 py-0.5 rounded text-[10px] font-mono font-bold bg-sand-200/80 text-charcoal-700 shrink-0">
+          <span className="px-1.5 py-0.5 rounded text-[10px] font-mono font-bold bg-cream-200 text-charcoal-700 shrink-0">
             {comp.rank}
           </span>
         </div>
@@ -70,7 +70,7 @@ export function TrackerCompetitionRow({
           className={`w-7 h-7 rounded-lg flex items-center justify-center transition-colors ${
             isSubscribed
               ? 'bg-amber-50 text-camel-800 border border-camel-300'
-              : 'text-charcoal-400 hover:text-camel-700 hover:bg-sand-100/60'
+              : 'text-charcoal-400 hover:text-camel-700 hover:bg-cream-100'
           }`}
           title={isSubscribed ? 'Отписаться от турнира' : 'Отслеживать состязание'}
           aria-label="Отслеживать"
