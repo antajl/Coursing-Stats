@@ -16,17 +16,33 @@ const lblTime = document.getElementById('lbl-time');
 const btnRefresh = document.getElementById('btn-refresh');
 const btnRefreshText = document.getElementById('btn-refresh-text');
 const btnFullscreen = document.getElementById('btn-fullscreen');
+const btnSidepanel = document.getElementById('btn-sidepanel');
+const btnSettings = document.getElementById('btn-settings');
 const searchInput = document.getElementById('search-input');
 const appsList = document.getElementById('apps-list');
 const toast = document.getElementById('toast');
 const errorModal = document.getElementById('error-modal');
+const settingsModal = document.getElementById('settings-modal');
 
 // Init
 document.addEventListener('DOMContentLoaded', async () => {
-  // Check if opened as standalone browser tab
-  if (window.innerWidth > 800 || new URLSearchParams(window.location.search).get('mode') === 'tab') {
+  const urlParams = new URLSearchParams(window.location.search);
+  const mode = urlParams.get('mode');
+
+  // Detect mode: sidepanel vs tab vs standard popup
+  if (mode === 'sidepanel' || window.innerWidth <= 640) {
+    document.body.classList.add('is-sidepanel');
+  } else if (mode === 'tab' || window.innerWidth > 800) {
     document.body.classList.add('is-tab-mode');
   }
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth <= 640) {
+      document.body.classList.add('is-sidepanel');
+    } else if (!new URLSearchParams(window.location.search).get('mode')) {
+      document.body.classList.remove('is-sidepanel');
+    }
+  });
 
   setupEventListeners();
   setupStorageSync();
@@ -38,6 +54,10 @@ function setupEventListeners() {
   btnFullscreen.addEventListener('click', () => {
     chrome.tabs.create({ url: chrome.runtime.getURL('popup.html?mode=tab') });
   });
+
+  if (btnSidepanel) {
+    btnSidepanel.addEventListener('click', openInSidePanel);
+  }
 
   // Graceful fallback for brand link if my.coursing-stats.ru is not yet deployed
   const brandLink = document.getElementById('brand-link');
@@ -75,7 +95,10 @@ function setupEventListeners() {
     chrome.tabs.create({ url: 'https://rkf.online' });
   });
 
-  document.getElementById('btn-check-auth').addEventListener('click', checkAuthFromTabs);
+  const btnSidepanelAuth = document.getElementById('btn-sidepanel-auth');
+  if (btnSidepanelAuth) {
+    btnSidepanelAuth.addEventListener('click', openInSidePanel);
+  }
 
   document.getElementById('toggle-manual-token').addEventListener('click', (e) => {
     e.preventDefault();
@@ -98,9 +121,58 @@ function setupEventListeners() {
     errorModal.style.display = 'none';
   });
 
+  // Settings modal
+  if (btnSettings) {
+    btnSettings.addEventListener('click', openSettingsModal);
+  }
+  document.getElementById('btn-close-settings').addEventListener('click', closeSettingsModal);
+  document.getElementById('btn-save-settings').addEventListener('click', saveSettingsAndClose);
+
+  document.getElementById('btn-test-sound').addEventListener('click', () => {
+    playHarmonicChime();
+  });
+
+  const btnTestNotify = document.getElementById('btn-test-notify');
+  if (btnTestNotify) {
+    btnTestNotify.addEventListener('click', () => {
+      const soundEnabled = document.getElementById('setting-sound').checked;
+      chrome.notifications.create(`rkf_test_${Date.now()}`, {
+        type: 'basic',
+        iconUrl: 'icons/icon128.png',
+        title: 'РКФ: Изготовлено',
+        message: 'Бель Этуаль Кайла • Чемпион РКФ по рабочим качествам\n(Тестовое уведомление CoursingStats)',
+        priority: 2,
+        silent: !soundEnabled
+      });
+      if (soundEnabled) {
+        playHarmonicChime();
+      }
+      showToast('Тестовое уведомление отправлено в Windows');
+    });
+  }
+
+  document.getElementById('btn-mode-sidepanel').addEventListener('click', () => {
+    closeSettingsModal();
+    openInSidePanel();
+  });
+
+  const btnModeTab = document.getElementById('btn-mode-tab');
+  if (btnModeTab) {
+    btnModeTab.addEventListener('click', () => {
+      closeSettingsModal();
+      chrome.tabs.create({ url: chrome.runtime.getURL('popup.html?mode=tab') });
+    });
+  }
+
+  document.getElementById('btn-mode-window').addEventListener('click', () => {
+    closeSettingsModal();
+    openInDetachedWindow();
+  });
+
   const btnLogout = document.getElementById('btn-logout');
   if (btnLogout) {
     btnLogout.addEventListener('click', async () => {
+      closeSettingsModal();
       await chrome.storage.local.remove([
         'rkfToken',
         'profileId',
@@ -116,9 +188,105 @@ function setupEventListeners() {
   }
 }
 
+async function openInSidePanel() {
+  try {
+    if (chrome.sidePanel && chrome.sidePanel.open) {
+      const win = await chrome.windows.getCurrent();
+      await chrome.sidePanel.open({ windowId: win.id });
+    } else {
+      chrome.tabs.create({ url: chrome.runtime.getURL('popup.html?mode=tab') });
+    }
+  } catch (err) {
+    console.warn('SidePanel open fallback:', err);
+    chrome.tabs.create({ url: chrome.runtime.getURL('popup.html?mode=tab') });
+  }
+}
+
+function openInDetachedWindow() {
+  chrome.windows.create({
+    url: chrome.runtime.getURL('popup.html?mode=tab'),
+    type: 'popup',
+    width: 520,
+    height: 720,
+    top: 60,
+    left: 60
+  });
+}
+
+async function openSettingsModal() {
+  const store = await chrome.storage.local.get(['pref_interval', 'pref_notify', 'pref_sound']);
+  const interval = store.pref_interval !== undefined ? store.pref_interval : 60;
+  const notify = store.pref_notify !== undefined ? store.pref_notify : true;
+  const sound = store.pref_sound !== undefined ? store.pref_sound : true;
+
+  document.getElementById('setting-interval').value = String(interval);
+  document.getElementById('setting-notify').checked = !!notify;
+  document.getElementById('setting-sound').checked = !!sound;
+
+  settingsModal.style.display = 'flex';
+}
+
+function closeSettingsModal() {
+  settingsModal.style.display = 'none';
+}
+
+async function saveSettingsAndClose() {
+  const parsed = parseInt(document.getElementById('setting-interval').value, 10);
+  const intervalVal = isNaN(parsed) ? 60 : parsed;
+  const notifyVal = document.getElementById('setting-notify').checked;
+  const soundVal = document.getElementById('setting-sound').checked;
+
+  await chrome.storage.local.set({
+    pref_interval: intervalVal,
+    pref_notify: notifyVal,
+    pref_sound: soundVal
+  });
+
+  closeSettingsModal();
+  showToast('Настройки сохранены');
+}
+
+function playHarmonicChime() {
+  try {
+    const AudioCtx = window.AudioContext || window.webkitAudioContext;
+    if (!AudioCtx) return;
+    const ctx = new AudioCtx();
+    const now = ctx.currentTime;
+
+    // First soft harmonic (587.33 Hz - D5)
+    const osc1 = ctx.createOscillator();
+    const gain1 = ctx.createGain();
+    osc1.type = 'sine';
+    osc1.frequency.setValueAtTime(587.33, now);
+    gain1.gain.setValueAtTime(0.12, now);
+    gain1.gain.exponentialRampToValueAtTime(0.001, now + 0.45);
+    osc1.connect(gain1);
+    gain1.connect(ctx.destination);
+    osc1.start(now);
+    osc1.stop(now + 0.45);
+
+    // Second bell harmonic (880.00 Hz - A5)
+    const osc2 = ctx.createOscillator();
+    const gain2 = ctx.createGain();
+    osc2.type = 'sine';
+    osc2.frequency.setValueAtTime(880, now + 0.12);
+    gain2.gain.setValueAtTime(0.14, now + 0.12);
+    gain2.gain.exponentialRampToValueAtTime(0.001, now + 0.65);
+    osc2.connect(gain2);
+    gain2.connect(ctx.destination);
+    osc2.start(now + 0.12);
+    osc2.stop(now + 0.65);
+  } catch (e) {
+    console.warn('Web Audio error:', e);
+  }
+}
+
 function showAuthScreen() {
   document.body.classList.add('is-logged-out');
   authCard.style.display = 'block';
+  authCard.classList.remove('fade-in');
+  void authCard.offsetWidth; // trigger reflow
+  authCard.classList.add('fade-in');
   mainDashboard.style.display = 'none';
   statusBadge.style.display = 'none';
 }
@@ -191,6 +359,9 @@ async function showDashboard(store) {
   document.body.classList.remove('is-logged-out');
   authCard.style.display = 'none';
   mainDashboard.style.display = 'block';
+  mainDashboard.classList.remove('fade-in');
+  void mainDashboard.offsetWidth; // trigger reflow
+  mainDashboard.classList.add('fade-in');
   statusBadge.style.display = 'inline-flex';
 
   // Cooldown restore

@@ -43,11 +43,10 @@
           </svg>
         </button>
 
-        <button class="btn-icon" id="btn-logout" title="Выйти из аккаунта и очистить данные">
+        <button class="btn-icon" id="btn-settings" title="Настройки трекера">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
-            <polyline points="16 17 21 12 16 7"/>
-            <line x1="21" y1="12" x2="9" y2="12"/>
+            <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/>
+            <circle cx="12" cy="12" r="3"/>
           </svg>
         </button>
       </div>
@@ -64,8 +63,8 @@
       <h2>Требуется вход в РКФ Онлайн</h2>
       <p>Откройте сайт <strong>rkf.online</strong> и войдите в свой личный кабинет. Расширение автоматически подхватит авторизацию.</p>
       <div class="auth-actions">
-        <button class="btn-primary" id="btn-open-rkf">Открыть RKF.Online</button>
-        <button class="btn-secondary" id="btn-check-auth">Проверить снова</button>
+        <button class="btn-primary" id="btn-open-rkf">Войти через RKF.Online</button>
+        <button class="btn-secondary" id="btn-sidepanel-auth" title="Закрепить трекер сбоку в браузере, чтобы окно не скрывалось">Открыть сбоку</button>
       </div>
       <div class="manual-token-link">
         <a href="#" id="toggle-manual-token">Ввести токен вручную</a>
@@ -95,6 +94,90 @@
       <!-- Applications List -->
       <div class="apps-list" id="apps-list">
         <!-- Rendered dynamically -->
+      </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div class="settings-modal-backdrop" id="settings-modal" style="display: none;">
+      <div class="settings-modal">
+        <div class="settings-header">
+          <h3>Настройки мониторинга</h3>
+          <button class="settings-close-icon" id="btn-close-settings" title="Закрыть">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+        <div class="settings-body">
+          <div class="setting-group">
+            <label class="setting-label" for="setting-interval">Частота проверки в фоне:</label>
+            <select class="setting-select" id="setting-interval">
+              <option value="15">Каждые 15 минут (Максимально часто)</option>
+              <option value="60" selected>Каждый 1 час (Рекомендуется)</option>
+              <option value="240">Каждые 4 часа (В течение дня)</option>
+              <option value="1440">1 раз в сутки (Раз в день)</option>
+              <option value="0">Отключить авто-проверку (Только вручную)</option>
+            </select>
+            <div class="setting-note">Режим 1 раз в час полностью безопасен для РКФ и не нагружает систему.</div>
+          </div>
+
+          <div class="setting-group">
+            <div class="setting-row-sound">
+              <label class="setting-checkbox-label">
+                <input type="checkbox" id="setting-notify" checked>
+                <span class="setting-checkbox-text">Всплывающие уведомления Windows</span>
+              </label>
+              <button class="btn-preview-sound" id="btn-test-notify" type="button" title="Проверить уведомление Windows">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                <span>Тест</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="setting-group">
+            <div class="setting-row-sound">
+              <label class="setting-checkbox-label">
+                <input type="checkbox" id="setting-sound" checked>
+                <span class="setting-checkbox-text">Звуковой сигнал</span>
+              </label>
+              <button class="btn-preview-sound" id="btn-test-sound" type="button" title="Прослушать сигнал">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+                <span>Тест</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="setting-group setting-display-modes">
+            <div class="setting-subhead">Режим окна трекера:</div>
+            <div class="setting-mode-btns">
+              <button class="btn-mode" id="btn-mode-sidepanel" type="button">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M15 3v18"/></svg>
+                Боковая панель
+              </button>
+              <button class="btn-mode" id="btn-mode-tab" type="button">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+                Во весь экран
+              </button>
+              <button class="btn-mode" id="btn-mode-window" type="button">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg>
+                Отдельное окно
+              </button>
+            </div>
+          </div>
+
+          <div class="setting-group setting-account">
+            <div class="setting-subhead">Аккаунт:</div>
+            <button class="btn-logout-danger" id="btn-logout" type="button">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+                <polyline points="16 17 21 12 16 7"/>
+                <line x1="21" y1="12" x2="9" y2="12"/>
+              </svg>
+              Выйти из аккаунта
+            </button>
+          </div>
+        </div>
+        <div class="settings-footer">
+          <button class="btn-primary" id="btn-save-settings">Готово</button>
+        </div>
       </div>
     </div>
 
