@@ -3,54 +3,98 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CoursingStats • Личный кабинет заявок РКФ (my.coursing-stats.ru)</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>CoursingStats • Заявки РКФ (Личный кабинет)</title>
+  <link rel="stylesheet" href="shell.css">
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="cards.css">
+  <link rel="stylesheet" href="modal.css">
 </head>
 <body>
-  <div class="page-container">
-    <!-- Header -->
-    <header class="site-header">
-      <div class="brand">
-        <a href="https://coursing-stats.ru" class="brand-link" title="Вернуться на главный сайт CoursingStats">
-          <svg class="brand-logo" viewBox="0 0 40 40" width="34" height="34" fill="none">
-            <rect width="40" height="40" rx="9" fill="#C89D66"/>
-            <text x="20" y="26" fill="#FAF8F5" font-size="16" font-weight="800" font-family="-apple-system, sans-serif" text-anchor="middle">CS</text>
-          </svg>
+  <div class="grain-overlay"></div>
+
+  <div class="page-wrapper">
+    <!-- Authentic CoursingStats Navbar -->
+    <header class="site-navbar">
+      <div class="navbar-inner">
+        <a href="https://coursing-stats.ru" class="nav-brand" title="КурсингСтатс — на главную">
+          <img src="brand/logo.svg" alt="КурсингСтатс" class="nav-logo-img">
         </a>
-        <div class="brand-titles">
-          <h1>Заявки РКФ</h1>
-          <span class="subdomain-badge">my.coursing-stats.ru</span>
+
+        <nav class="nav-links">
+          <a href="https://coursing-stats.ru/" class="nav-link">Главная</a>
+          <a href="https://coursing-stats.ru/competitions" class="nav-link">Соревнования</a>
+          <a href="https://coursing-stats.ru/shows" class="nav-link">Выставки</a>
+          <a href="https://coursing-stats.ru/speed-records" class="nav-link">Курсинг Донино</a>
+          <a href="https://coursing-stats.ru/guide" class="nav-link">Справка</a>
+          <a href="/" class="nav-link active">Заявки РКФ</a>
+        </nav>
+
+        <div class="nav-actions">
+          <div class="sync-status" id="sync-status">
+            <span class="sync-dot mock" id="sync-dot"></span>
+            <span class="sync-time" id="sync-time">Демо-режим</span>
+          </div>
+
+          <button class="btn btn-secondary" id="btn-toggle-mock" title="Переключить источник данных">
+            Демо
+          </button>
+
+          <button class="btn btn-primary" id="btn-refresh" title="Синхронизировать данные с РКФ Онлайн">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+              <path d="M3 3v5h5"/>
+              <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/>
+              <path d="M16 21h5v-5"/>
+            </svg>
+            <span id="btn-refresh-text">Обновить</span>
+          </button>
+
+          <button class="btn btn-secondary" id="btn-auth" title="Управление авторизацией РКФ">
+            Аккаунт
+          </button>
         </div>
-      </div>
-
-      <div class="header-actions">
-        <div class="sync-status" id="sync-status">
-          <span class="sync-dot" id="sync-dot"></span>
-          <span class="sync-time" id="sync-time">Автономный режим</span>
-        </div>
-
-        <button class="btn btn-secondary" id="btn-toggle-mock" title="Переключить на тестовые демо-данные">
-          Демо-данные
-        </button>
-
-        <button class="btn btn-primary" id="btn-refresh">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
-            <path d="M3 3v5h5"/>
-            <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/>
-            <path d="M16 21h5v-5"/>
-          </svg>
-          <span id="btn-refresh-text">Синхронизировать</span>
-        </button>
-
-        <button class="btn btn-outline" id="btn-auth" title="Управление токеном РКФ">
-          Аккаунт
-        </button>
       </div>
     </header>
 
     <!-- Main Content -->
     <main class="main-content">
+      <!-- Breadcrumbs -->
+      <nav class="breadcrumbs" aria-label="Навигация по разделам">
+        <a href="https://coursing-stats.ru/">Главная</a>
+        <span class="bc-sep">›</span>
+        <span>Личный кабинет</span>
+        <span class="bc-sep">›</span>
+        <span class="bc-current">Заявки РКФ</span>
+      </nav>
+
+      <!-- Hero Header -->
+      <section class="dashboard-hero">
+        <div class="hero-titles">
+          <h1>Заявки РКФ</h1>
+          <p>Мониторинг изготовления чемпионских титулов, сертификатов и документов в РКФ Онлайн</p>
+        </div>
+      </section>
+
+      <!-- KPI Summary Cards -->
+      <section class="kpi-grid">
+        <div class="kpi-card">
+          <span class="kpi-label">Всего заявок</span>
+          <span class="kpi-value" id="kpi-total">0</span>
+        </div>
+        <div class="kpi-card kpi-active">
+          <span class="kpi-label">В обработке</span>
+          <span class="kpi-value" id="kpi-active">0</span>
+        </div>
+        <div class="kpi-card kpi-pickup">
+          <span class="kpi-label">Готовы к выдаче</span>
+          <span class="kpi-value" id="kpi-pickup">0</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-label">Получены на руки</span>
+          <span class="kpi-value" id="kpi-collected">0</span>
+        </div>
+      </section>
+
       <!-- Toolbar: Filters + Search -->
       <section class="toolbar">
         <div class="filter-pills" id="filter-pills">
@@ -65,7 +109,7 @@
             <circle cx="11" cy="11" r="8"/>
             <line x1="21" y1="21" x2="16.65" y2="16.65"/>
           </svg>
-          <input type="text" id="search-input" placeholder="Поиск по кличке собаки, названию титула или номеру заявки..." class="search-input">
+          <input type="text" id="search-input" placeholder="Поиск по кличке собаки, титулу или номеру заявки..." class="search-input">
         </div>
       </section>
 
@@ -75,13 +119,16 @@
       </section>
     </main>
 
-    <!-- Footer -->
+    <!-- Site Footer -->
     <footer class="site-footer">
       <div class="footer-inner">
         <span>CoursingStats • Личный кабинет собаковода</span>
-        <span class="separator">•</span>
-        <a href="https://coursing-stats.ru" target="_blank" class="footer-link">Главный портал</a>
-        <span class="separator">•</span>
+        <div class="footer-links">
+          <a href="https://coursing-stats.ru/competitions" class="footer-link">Соревнования</a>
+          <a href="https://coursing-stats.ru/shows" class="footer-link">Выставки</a>
+          <a href="https://coursing-stats.ru/speed-records" class="footer-link">Донино</a>
+          <a href="https://coursing-stats.ru/guide" class="footer-link">Справка</a>
+        </div>
         <span class="footer-disclaimer">Неофициальный сервис мониторинга личного кабинета rkf.online</span>
       </div>
     </footer>
@@ -95,24 +142,23 @@
         <button class="btn-close-modal" id="btn-close-auth-modal">✕</button>
       </div>
       <div class="modal-body">
-        <p class="modal-desc">Для синхронизации с вашим личным кабинетом укажите Bearer-токен сессии с сайта rkf.online или используйте Chrome-расширение.</p>
+        <p class="modal-desc">Укажите Bearer-токен сессии с сайта rkf.online для синхронизации заявок вашего аккаунта.</p>
         <div class="input-group">
           <label for="token-input">Токен авторизации (Authorization Header):</label>
-          <input type="text" id="token-input" placeholder="Вставьте токен..." class="form-input">
+          <input type="password" id="token-input" placeholder="ey..." class="text-input">
+          <span class="input-hint">Токен сохраняется исключительно в вашем браузере (localStorage).</span>
         </div>
-        <div class="modal-hint">
-          Подсказка: если у вас установлено расширение «CoursingStats • Заявки РКФ», авторизация происходит автоматически без ручного ввода.
+        <div class="modal-actions">
+          <button class="btn-danger-subtle" id="btn-logout-web">Очистить токен</button>
+          <button class="btn btn-primary" id="btn-save-token">Сохранить</button>
         </div>
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-outline" id="btn-logout-web">Очистить токен</button>
-        <button class="btn btn-primary" id="btn-save-token">Сохранить</button>
       </div>
     </div>
   </div>
 
+  <!-- Toast -->
   <div class="toast" id="toast"></div>
 
-  <script src="app.js"></script>
+  <script type="module" src="app.js"></script>
 </body>
 </html>
