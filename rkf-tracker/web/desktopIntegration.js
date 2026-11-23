@@ -18,9 +18,12 @@ export async function initDesktopIntegration() {
     }
   });
 
-  // Remove PWA install button since this is already the desktop app
+  // Remove PWA install button and external navbar links in desktop mode
   const pwaBtn = document.getElementById('btn-install-pwa');
   if (pwaBtn) pwaBtn.remove();
+
+  const navLinks = document.querySelector('.nav-links');
+  if (navLinks) navLinks.style.display = 'none';
 
   // Fix breadcrumbs so they don't navigate away
   const breadcrumbs = document.querySelector('.breadcrumbs');
