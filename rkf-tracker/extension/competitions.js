@@ -1,8 +1,8 @@
 // RKF Competitions & Trials Controller (ES Module)
-import { renderCompetitionsList } from './competitions-render.js';
+import { renderCompetitionsList, getCompetitionStatus } from './competitions-render.js';
 
-const CDN_BASE_URL = 'https://coursing-stats.ru/data/v1/calendar';
-let activeYear = 2027;
+let activeYear = 2026;
+let currentDiscipline = 'all';
 let currentFilter = 'all';
 let searchQuery = '';
 let allEvents = [];
@@ -35,11 +35,23 @@ function setupDomListeners() {
   const yearSelect = document.getElementById('comp-year-select');
   if (yearSelect) {
     yearSelect.addEventListener('change', (e) => {
-      activeYear = parseInt(e.target.value, 10) || 2027;
+      activeYear = parseInt(e.target.value, 10) || 2026;
       switchYear(activeYear);
     });
   }
 
+  // Discipline buttons
+  const discBtns = document.querySelectorAll('.comp-disc-btn');
+  discBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      discBtns.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentDiscipline = btn.getAttribute('data-disc') || 'all';
+      applyAndRender();
+    });
+  });
+
+  // Status filter pills
   const pills = document.querySelectorAll('.comp-filter-pill');
   pills.forEach((pill) => {
     pill.addEventListener('click', () => {
@@ -59,11 +71,25 @@ export async function switchYear(year) {
   }
 
   allEvents = await fetchYearEvents(year);
+  updateDisciplineCounters();
   updateFilterCounters();
   applyAndRender();
 }
 
 async function fetchYearEvents(year) {
+  if (year === 2026) {
+    try {
+      const url = chrome.runtime?.getURL ? chrome.runtime.getURL('rkf-competitions-2026.json') : './rkf-competitions-2026.json';
+      const res = await fetch(url);
+      if (res.ok) {
+        const data = await res.json();
+        if (Array.isArray(data) && data.length > 0) return data;
+      }
+    } catch (e) {
+      console.warn('[Competitions] Local 2026 load failed:', e);
+    }
+  }
+
   const cacheKey = 'cached_calendar_' + year;
   const timeKey = 'cached_calendar_time_' + year;
 
@@ -75,23 +101,19 @@ async function fetchYearEvents(year) {
       return cached[cacheKey];
     }
 
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 6000);
-    const res = await fetch(`${CDN_BASE_URL}/${year}.json`, { signal: controller.signal });
-    clearTimeout(timeoutId);
+    const c = new AbortController();
+    const tid = setTimeout(() => c.abort(), 6000);
+    const res = await fetch(`https://coursing-stats.ru/data/v1/calendar/${year}.json`, { signal: c.signal });
+    clearTimeout(tid);
 
     if (res.ok) {
       const data = await res.json();
       const events = Array.isArray(data.events) ? data.events : [];
-      await chrome.storage.local.set({
-        [cacheKey]: events,
-        [timeKey]: Date.now()
-      });
+      await chrome.storage.local.set({ [cacheKey]: events, [timeKey]: Date.now() });
       return events;
     }
     if (cached[cacheKey]) return cached[cacheKey];
   } catch (err) {
-    console.warn('[Competitions] Fetch error, checking cache:', err);
     const cached = await chrome.storage.local.get(cacheKey);
     if (cached[cacheKey]) return cached[cacheKey];
   }
@@ -99,20 +121,48 @@ async function fetchYearEvents(year) {
   return [];
 }
 
+function updateDisciplineCounters() {
+  const cntAll = document.getElementById('disc-cnt-all');
+  const cntCoursing = document.getElementById('disc-cnt-coursing');
+  const cntRacing = document.getElementById('disc-cnt-racing');
+  const cntBzmp = document.getElementById('disc-cnt-bzmp');
+
+  const cCount = allEvents.filter((ev) => isMatchDiscipline(ev, 'Курсинг борзых')).length;
+  const rCount = allEvents.filter((ev) => isMatchDiscipline(ev, 'Бега борзых')).length;
+  const bCount = allEvents.filter((ev) => isMatchDiscipline(ev, 'БЗМП')).length;
+
+  if (cntAll) cntAll.textContent = `(${allEvents.length})`;
+  if (cntCoursing) cntCoursing.textContent = `(${cCount})`;
+  if (cntRacing) cntRacing.textContent = `(${rCount})`;
+  if (cntBzmp) cntBzmp.textContent = `(${bCount})`;
+}
+
 function updateFilterCounters() {
   const cntAll = document.getElementById('comp-cnt-all');
   const cntApproved = document.getElementById('comp-cnt-approved');
   const cntPending = document.getElementById('comp-cnt-pending');
+  const cntDelayed = document.getElementById('comp-cnt-delayed');
   const cntTracked = document.getElementById('comp-cnt-tracked');
 
-  const approvedCount = allEvents.filter((ev) => ev.confirmed === 1).length;
-  const pendingCount = allEvents.filter((ev) => ev.confirmed !== 1).length;
-  const trackedCount = allEvents.filter((ev) => trackedIds.has(String(ev.id))).length;
+  let approved = 0;
+  let pending = 0;
+  let delayed = 0;
+  let tracked = 0;
+
+  for (const ev of allEvents) {
+    const st = getCompetitionStatus(ev).key;
+    if (st === 'approved') approved++;
+    else if (st === 'delayed') delayed++;
+    else pending++;
+
+    if (trackedIds.has(String(ev.id))) tracked++;
+  }
 
   if (cntAll) cntAll.textContent = `(${allEvents.length})`;
-  if (cntApproved) cntApproved.textContent = `(${approvedCount})`;
-  if (cntPending) cntPending.textContent = `(${pendingCount})`;
-  if (cntTracked) cntTracked.textContent = `(${trackedCount})`;
+  if (cntApproved) cntApproved.textContent = `(${approved})`;
+  if (cntPending) cntPending.textContent = `(${pending})`;
+  if (cntDelayed) cntDelayed.textContent = `(${delayed})`;
+  if (cntTracked) cntTracked.textContent = `(${tracked})`;
   updateTrackedBadge();
 }
 
@@ -128,29 +178,41 @@ function updateTrackedBadge() {
   }
 }
 
+function isMatchDiscipline(ev, disc) {
+  if (disc === 'all') return true;
+  const target = (ev.discipline || ev.sheetName || '').toLowerCase();
+  if (disc === 'БЗМП') {
+    return target.includes('бзмп') || target.includes('приманк');
+  }
+  return target.includes(disc.toLowerCase());
+}
+
 function applyAndRender() {
   const container = document.getElementById('comp-list');
   if (!container) return;
 
   const filtered = allEvents.filter((ev) => {
-    const isApproved = ev.confirmed === 1;
+    if (!isMatchDiscipline(ev, currentDiscipline)) return false;
+
+    const statusKey = getCompetitionStatus(ev).key;
     const isTracked = trackedIds.has(String(ev.id));
 
-    if (currentFilter === 'approved' && !isApproved) return false;
-    if (currentFilter === 'pending' && isApproved) return false;
+    if (currentFilter === 'approved' && statusKey !== 'approved') return false;
+    if (currentFilter === 'pending' && statusKey !== 'pending') return false;
+    if (currentFilter === 'delayed' && statusKey !== 'delayed') return false;
     if (currentFilter === 'tracked' && !isTracked) return false;
 
     if (searchQuery) {
       const haystack = [
         ev.title,
-        ev.full_title,
-        ev.region,
+        ev.rank,
+        ev.discipline,
         ev.location,
-        ev.host_club,
-        ev.competition_kind,
-        ev.competition_type,
-        ev.rank_label,
-        ev.judges
+        ev.club,
+        ev.reglament,
+        ev.summary,
+        ev.judges,
+        ev.notes
       ].filter(Boolean).join(' ').toLowerCase();
 
       if (!haystack.includes(searchQuery)) return false;

@@ -1,5 +1,21 @@
 // RKF Competitions Card & List Renderer (ES Module)
 
+export function getCompetitionStatus(ev) {
+  const reg = (ev.reglament || '').toLowerCase();
+  const notes = (ev.notes || '').toLowerCase();
+
+  if (ev.status === 'APPROVED' || reg.includes('утвержден')) {
+    return { key: 'approved', label: 'Утверждено', badgeClass: 'status-approved' };
+  }
+  if (reg.includes('опоздан') || notes.includes('задержан') || reg.includes('задержан')) {
+    return { key: 'delayed', label: 'Задержано', badgeClass: 'status-delayed' };
+  }
+  if (ev.status === 'REJECTED' || reg.includes('отклон') || reg.includes('отказ')) {
+    return { key: 'rejected', label: 'Отклонено', badgeClass: 'status-rejected' };
+  }
+  return { key: 'pending', label: 'На согласовании', badgeClass: 'status-pending' };
+}
+
 export function renderCompetitionsList(container, events, trackedIds, onToggleTrack) {
   if (!container) return;
 
@@ -7,7 +23,7 @@ export function renderCompetitionsList(container, events, trackedIds, onToggleTr
     container.innerHTML = `
       <div class="comp-empty-state">
         <div class="comp-empty-title">Мероприятия не найдены</div>
-        <div class="comp-empty-desc">Попробуйте изменить поисковый запрос или фильтр статуса.</div>
+        <div class="comp-empty-desc">Попробуйте изменить поисковый запрос, дисциплину или статус.</div>
       </div>
     `;
     return;
@@ -18,21 +34,25 @@ export function renderCompetitionsList(container, events, trackedIds, onToggleTr
 }
 
 function createEventCardHtml(ev, trackedIds) {
-  const isApproved = ev.confirmed === 1;
+  const statusInfo = getCompetitionStatus(ev);
   const isTracked = trackedIds.has(String(ev.id));
-  const dateFormatted = formatDates(ev.date_start, ev.date_end);
-  const statusBadge = isApproved
-    ? '<span class="comp-status-badge status-approved">Утверждено РКФ</span>'
-    : '<span class="comp-status-badge status-pending">На согласовании</span>';
+  const dateFormatted = ev.dateRaw || formatDates(ev.date_start, ev.date_end);
 
+  const statusBadge = `<span class="comp-status-badge ${statusInfo.badgeClass}">${statusInfo.label}</span>`;
   const trackBtnClass = isTracked ? 'btn-track active' : 'btn-track';
   const trackBtnText = isTracked ? 'Отслеживается' : 'Отслеживать';
 
-  const discipline = ev.competition_type || (ev.event_type === 'racing' ? 'Гонки (Рейсинг)' : 'Курсинг борзых');
-  const rank = ev.competition_kind || ev.rank_label || 'Сертификатные';
-  const location = ev.location || ev.region || 'Россия';
-  const club = ev.host_club || 'Организатор уточняется';
+  const discipline = ev.discipline || ev.sheetName || 'Курсинг';
+  const rank = ev.rank || ev.competition_kind || 'Сертификатные';
+  const location = ev.location || ev.region || 'Локация уточняется';
+  const club = ev.club || ev.host_club || 'Организатор уточняется';
+
+  const reglament = ev.reglament ? `<div class="comp-meta-line"><span class="comp-meta-label">Регламент:</span> <span class="comp-meta-val">${escapeHtml(ev.reglament)}</span></div>` : '';
+  const summary = ev.summary ? `<div class="comp-meta-line"><span class="comp-meta-label">Заявка:</span> <span class="comp-meta-val">${escapeHtml(ev.summary)}</span></div>` : '';
   const judges = ev.judges ? `<div class="comp-meta-line"><span class="comp-meta-label">Судьи:</span> <span class="comp-meta-val">${escapeHtml(ev.judges)}</span></div>` : '';
+  const notes = ev.notes ? `<div class="comp-meta-line"><span class="comp-meta-label">Примечание:</span> <span class="comp-meta-val">${escapeHtml(ev.notes)}</span></div>` : '';
+
+  const title = ev.title || `${rank} • ${discipline}`;
 
   return `
     <article class="comp-card" id="comp-card-${ev.id}">
@@ -49,7 +69,7 @@ function createEventCardHtml(ev, trackedIds) {
         </div>
       </div>
 
-      <h3 class="comp-title">${escapeHtml(ev.title || ev.full_title)}</h3>
+      <h3 class="comp-title">${escapeHtml(title)}</h3>
 
       <div class="comp-tags-row">
         <span class="comp-tag">${escapeHtml(discipline)}</span>
@@ -65,11 +85,14 @@ function createEventCardHtml(ev, trackedIds) {
           <span class="comp-meta-label">Клуб:</span>
           <span class="comp-meta-val">${escapeHtml(club)}</span>
         </div>
+        ${reglament}
+        ${summary}
         ${judges}
+        ${notes}
       </div>
 
       <div class="comp-card-footer">
-        <span class="comp-id-sub">№ ${ev.id} в календаре</span>
+        <span class="comp-id-sub">№ ${escapeHtml(ev.id)} • ${escapeHtml(ev.sheetName || 'РКФ')}</span>
         <a href="https://coursing-stats.ru/calendar" target="_blank" class="comp-link-portal">
           Открыть в календаре
           <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
