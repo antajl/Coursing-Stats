@@ -1,5 +1,6 @@
 // Keyboards and WebApp buttons (Strict Zero Emoji & Old Money Ergonomics)
 import { InlineKeyboard, Keyboard } from 'grammy';
+import { getDisciplineCounts } from './services/competition-tracker.js';
 
 export function getMainMenuKeyboard(
   webAppUrl: string = 'https://coursing-stats.ru/tracker/',
@@ -91,14 +92,15 @@ export function getAuthHowKeyboard(): InlineKeyboard {
 }
 
 export function getCompetitionsMenuKeyboard(): InlineKeyboard {
+  const counts = getDisciplineCounts();
   return new InlineKeyboard()
-    .text('Курсинг (39)', 'comp_disc:coursing')
-    .text('Бега борзых (14)', 'comp_disc:racing')
+    .text(`Курсинг (${counts.coursing})`, 'comp_disc:coursing')
+    .text(`Бега борзых (${counts.racing})`, 'comp_disc:racing')
     .row()
-    .text('БЗМП (19)', 'comp_disc:bzmp')
-    .text('Все состязания (72)', 'comp_disc:all')
+    .text(`БЗМП (${counts.bzmp})`, 'comp_disc:bzmp')
+    .text(`Все состязания (${counts.total})`, 'comp_disc:all')
     .row()
-    .text('Только утвержденные', 'comp_disc:approved')
+    .text(`Утвержденные (${counts.approved})`, 'comp_disc:approved')
     .text('Мои подписки', 'comp_list')
     .row()
     .text('« В главное меню', 'cmd_start');

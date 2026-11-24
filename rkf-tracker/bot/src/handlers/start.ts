@@ -5,16 +5,18 @@ import { getMainMenuKeyboard } from '../keyboards.js';
 import { getUser, saveUser, createDefaultUser } from '../storage/index.js';
 import { handleTokenBinding } from './auth-link.js';
 import { renderSingleBubble } from './render-bubble.js';
+import { getDisciplineCounts } from '../services/competition-tracker.js';
 
 export function buildStartText(user: UserRecord | null): string {
   const isLinked = Boolean(user && user.rkfToken);
   if (!isLinked) {
+    const totalComps = getDisciplineCounts().total;
     return (
       `CoursingStats Tracker\n` +
       `Мониторинг документов и официальных состязаний РКФ\n` +
       `— — — — — — — — — — — — — — —\n` +
       `• Статус: Аккаунт не привязан\n` +
-      `• Календарь 2026: 72 состязания (курсинг, бега, БЗМП)\n\n` +
+      `• Календарь 2026: ${totalComps} состязаний (курсинг, бега, БЗМП)\n\n` +
       `Сервис автоматически отслеживает готовность дипломов на rkf.online и официальное утверждение состязаний в графиках РКФ.\n\n` +
       `Для начала работы подключите аккаунт РКФ удобным способом:`
     );

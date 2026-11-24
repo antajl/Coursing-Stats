@@ -27,8 +27,10 @@ export const TARGET_DISCIPLINES = [
 export const STATUS_RUSSIAN: Record<string, string> = {
   APPROVED: 'Утверждено',
   PENDING: 'На согласовании',
+  DELAYED: 'Задержано',
   REJECTED: 'Отклонено',
-  CANCELLED: 'Отменено'
+  CANCELLED: 'Отменено',
+  UNKNOWN: 'На согласовании'
 };
 
 export function getAllCompetitions(): CompetitionEvent[] {
@@ -87,6 +89,7 @@ export function getDisciplineCounts() {
   let bzmp = 0;
   let approved = 0;
   let pending = 0;
+  let delayed = 0;
 
   for (const ev of all) {
     const d = ev.discipline.toLowerCase();
@@ -95,10 +98,11 @@ export function getDisciplineCounts() {
     else if (d.includes('приманк') || d.includes('бзмп')) bzmp++;
 
     if (ev.status === 'APPROVED') approved++;
+    else if (ev.status === 'DELAYED') delayed++;
     else if (ev.status === 'PENDING') pending++;
   }
 
-  return { total: all.length, coursing, racing, bzmp, approved, pending };
+  return { total: all.length, coursing, racing, bzmp, approved, pending, delayed };
 }
 
 export function formatCompetitionCard(ev: CompetitionEvent): string {

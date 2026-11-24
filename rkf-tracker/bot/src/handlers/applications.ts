@@ -1,32 +1,42 @@
 // Handler: /apps and /ready commands (Strict Zero Emoji & Single-Bubble UX)
-import type { Composer } from 'grammy';
+import { InlineKeyboard, type Composer } from 'grammy';
 import type { BotContext, ApplicationItem } from '../types.js';
 import { getUser, saveUser, createDefaultUser } from '../storage/index.js';
 import { fetchRkfApplications } from '../services/rkf-api.js';
 import {
-  getApplicationActionKeyboard,
   getMainMenuKeyboard,
   getAuthPromptKeyboard,
   getBackToMenuKeyboard
 } from '../keyboards.js';
 import { renderSingleBubble } from './render-bubble.js';
 
+const APPS_PAGE_SIZE = 4;
+
 export function registerApplicationsHandler(composer: Composer<BotContext>): void {
   composer.command(['apps', 'ready'], async (ctx) => {
     const onlyReady = ctx.message?.text?.includes('/ready') || false;
-    await showApplications(ctx, onlyReady, false);
+    await showApplications(ctx, onlyReady, 0);
   });
 
   composer.callbackQuery('cmd_apps', async (ctx) => {
     await ctx.answerCallbackQuery({ text: 'Загрузка списка заявок из РКФ Онлайн...' });
-    await showApplications(ctx, false, true);
+    await showApplications(ctx, false, 0);
   });
 
-  composer.callbackQuery(/^(mark_rec|unmark_rec):(\d+)$/, async (ctx) => {
+  composer.callbackQuery(/^apps_p:(all|ready):(\d+)$/, async (ctx) => {
+    await ctx.answerCallbackQuery({ text: 'Переход на страницу...' });
+    const onlyReady = ctx.match?.[1] === 'ready';
+    const page = ctx.match ? parseInt(ctx.match[2], 10) : 0;
+    await showApplications(ctx, onlyReady, page);
+  });
+
+  composer.callbackQuery(/^(mark_rec|unmark_rec):(\d+):(all|ready):(\d+)$/, async (ctx) => {
     const match = ctx.match;
     if (!match) return;
     const action = match[1];
     const barcode = match[2];
+    const onlyReady = match[3] === 'ready';
+    const page = parseInt(match[4], 10) || 0;
     const userId = ctx.from?.id;
     if (!userId) return;
 
@@ -44,19 +54,46 @@ export function registerApplicationsHandler(composer: Composer<BotContext>): voi
     }
 
     await saveUser(ctx.env.KV_STORAGE, user);
-
-    const webAppUrl = ctx.env.WEBAPP_URL || 'https://coursing-stats.ru/tracker/';
-    try {
-      await ctx.editMessageReplyMarkup({
-        reply_markup: getApplicationActionKeyboard(barcode, action === 'mark_rec', webAppUrl)
-      });
-    } catch {
-      // Content did not change
-    }
+    await showApplications(ctx, onlyReady, page);
   });
 }
 
-async function showApplications(ctx: BotContext, onlyReady: boolean, isEdit: boolean): Promise<void> {
+function buildAppsKeyboard(
+  slice: ApplicationItem[],
+  page: number,
+  totalPages: number,
+  onlyReady: boolean,
+  webAppUrl: string
+): InlineKeyboard {
+  const kb = new InlineKeyboard();
+  const mode = onlyReady ? 'ready' : 'all';
+
+  for (const app of slice) {
+    if (app.statusGroup === 'ready') {
+      const label = app.isReceived
+        ? `[x] Забрали #${app.barcode}`
+        : `[+] Забрали #${app.barcode}`;
+      const action = app.isReceived
+        ? `unmark_rec:${app.barcode}:${mode}:${page}`
+        : `mark_rec:${app.barcode}:${mode}:${page}`;
+      kb.text(label, action).row();
+    }
+  }
+
+  if (totalPages > 1) {
+    if (page > 0) kb.text('« Пред.', `apps_p:${mode}:${page - 1}`);
+    kb.text(`${page + 1} / ${totalPages}`, `apps_p:${mode}:${page}`);
+    if (page < totalPages - 1) kb.text('След. »', `apps_p:${mode}:${page + 1}`);
+    kb.row();
+  }
+
+  return kb
+    .webApp('Открыть в WebApp', webAppUrl)
+    .row()
+    .text('« В главное меню', 'cmd_start');
+}
+
+async function showApplications(ctx: BotContext, onlyReady: boolean, page: number = 0): Promise<void> {
   const userId = ctx.from?.id;
   if (!userId) return;
 
@@ -114,11 +151,13 @@ async function showApplications(ctx: BotContext, onlyReady: boolean, isEdit: boo
     return;
   }
 
-  const displayLimit = 4;
-  const slice = apps.slice(0, displayLimit);
+  const totalPages = Math.max(1, Math.ceil(apps.length / APPS_PAGE_SIZE));
+  const safePage = Math.min(Math.max(0, page), totalPages - 1);
+  const startIdx = safePage * APPS_PAGE_SIZE;
+  const slice = apps.slice(startIdx, startIdx + APPS_PAGE_SIZE);
 
   let text =
-    `Документы rkf.online (${apps.length}):\n` +
+    `Документы rkf.online (${apps.length}) • Стр. ${safePage + 1}/${totalPages}:\n` +
     `— — — — — — — — — — — — — — —\n\n`;
 
   for (let i = 0; i < slice.length; i++) {
@@ -134,15 +173,11 @@ async function showApplications(ctx: BotContext, onlyReady: boolean, isEdit: boo
     const dog = app.dogName ? ` • ${app.dogName}` : '';
 
     text +=
-      `${i + 1}. ${statusBadge}${receivedTag}\n` +
+      `${startIdx + i + 1}. ${statusBadge}${receivedTag}\n` +
       `   ${app.documentName}${dog}\n` +
       `   Заявка: #${app.barcode} • ${app.currentStatus}\n\n`;
   }
 
-  if (apps.length > displayLimit) {
-    text += `Еще ${apps.length - displayLimit} заявок доступны в веб-кабинете.\n`;
-  }
-
-  const kb = getMainMenuKeyboard(webAppUrl, true);
+  const kb = buildAppsKeyboard(slice, safePage, totalPages, onlyReady, webAppUrl);
   await renderSingleBubble(ctx, user, text, kb);
 }
