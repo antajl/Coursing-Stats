@@ -13,6 +13,7 @@ namespace CoursingStats.RkfTracker
         private static LocalServer server;
         private static Poller poller;
         private static System.Threading.Timer pollTimer;
+        private static MainWindow mainWindow;
         private static int port = 4199;
         private static string baseDir;
 
@@ -44,6 +45,10 @@ namespace CoursingStats.RkfTracker
                 server = new LocalServer(port, webDir, poller);
                 server.Start();
 
+                string icoPath = Path.Combine(baseDir, "app.ico");
+                string appUrl = string.Format("http://127.0.0.1:{0}/index.html", port);
+
+                mainWindow = new MainWindow(appUrl, icoPath);
                 SetupTray();
 
                 // Background poll every 60 minutes
@@ -52,7 +57,7 @@ namespace CoursingStats.RkfTracker
                 bool isMinimized = args.Length > 0 && args[0].ToLowerInvariant().Contains("minimized");
                 if (!isMinimized)
                 {
-                    OpenDashboard();
+                    mainWindow.ShowAndActivate();
                 }
 
                 Application.Run();
@@ -117,6 +122,7 @@ namespace CoursingStats.RkfTracker
 
             menu.Items.Add(new ToolStripMenuItem("Выход", null, (s, e) =>
             {
+                if (mainWindow != null) mainWindow.ForceClose();
                 trayIcon.Visible = false;
                 Application.Exit();
             }));
@@ -135,20 +141,16 @@ namespace CoursingStats.RkfTracker
 
         public static void OpenDashboard()
         {
-            string url = string.Format("http://127.0.0.1:{0}/", port);
-            try
+            if (mainWindow != null)
             {
-                ProcessStartInfo psi = new ProcessStartInfo
+                if (mainWindow.InvokeRequired)
                 {
-                    FileName = "msedge.exe",
-                    Arguments = string.Format("--app=\"{0}\" --window-size=1100,720", url),
-                    UseShellExecute = true
-                };
-                Process.Start(psi);
-            }
-            catch
-            {
-                try { Process.Start(url); } catch { }
+                    mainWindow.Invoke(new Action(() => mainWindow.ShowAndActivate()));
+                }
+                else
+                {
+                    mainWindow.ShowAndActivate();
+                }
             }
         }
     }

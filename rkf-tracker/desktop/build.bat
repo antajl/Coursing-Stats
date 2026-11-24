@@ -13,8 +13,8 @@ if not exist "%CSC%" (
     exit /b 1
 )
 
-echo [2/3] Compiling RkfTracker.exe...
-"%CSC%" /nologo /target:winexe /optimize+ /win32icon:app.ico /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll /r:System.Web.Extensions.dll /out:RkfTracker.exe Program.cs LocalServer.cs Poller.cs AutostartHelper.cs
+echo [2/3] Compiling RkfTracker.exe with embedded WebView2...
+"%CSC%" /nologo /target:winexe /optimize+ /win32icon:app.ico /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll /r:System.Web.Extensions.dll /r:lib\Microsoft.Web.WebView2.Core.dll /r:lib\Microsoft.Web.WebView2.WinForms.dll /out:RkfTracker.exe Program.cs MainWindow.cs LocalServer.cs Poller.cs AutostartHelper.cs
 
 if %ERRORLEVEL% neq 0 (
     echo Compilation failed!
@@ -25,6 +25,13 @@ echo [3/3] Preparing portable distribution in dist...
 if not exist "dist" mkdir "dist"
 copy /y "RkfTracker.exe" "dist\" >nul
 copy /y "app.ico" "dist\" >nul
+copy /y "lib\Microsoft.Web.WebView2.Core.dll" "dist\" >nul
+copy /y "lib\Microsoft.Web.WebView2.WinForms.dll" "dist\" >nul
+copy /y "lib\runtimes\win-x64\native\WebView2Loader.dll" "dist\" >nul
+
+if not exist "dist\runtimes\win-x64\native" mkdir "dist\runtimes\win-x64\native"
+copy /y "lib\runtimes\win-x64\native\WebView2Loader.dll" "dist\runtimes\win-x64\native\" >nul
+
 copy /y "config.example.json" "dist\" >nul
 if exist "config.json" copy /y "config.json" "dist\" >nul
 if not exist "dist\web" mkdir "dist\web"
