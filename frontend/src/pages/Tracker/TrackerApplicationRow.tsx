@@ -47,7 +47,7 @@ export function TrackerApplicationRow({
     >
       <div
         onClick={onToggleAccordion}
-        className="grid grid-cols-[20px_minmax(0,1fr)_auto] sm:grid-cols-[20px_16rem_minmax(0,1fr)_10rem_20px] items-center gap-2.5 sm:gap-4 px-3 sm:px-4 py-1.5 sm:py-2 min-h-[44px] cursor-pointer select-none text-xs"
+        className="grid grid-cols-[20px_minmax(0,1fr)_auto] sm:grid-cols-[20px_16rem_minmax(0,1fr)_auto_20px] items-center gap-2.5 sm:gap-4 px-3 sm:px-4 py-1.5 sm:py-2 min-h-[44px] cursor-pointer select-none text-xs"
       >
         {/* 1. Чекбокс «Забрано» (доступен только после изготовления документа) */}
         <div className="w-5 h-5 min-w-[20px] min-h-[20px] flex items-center justify-center shrink-0">
@@ -105,8 +105,8 @@ export function TrackerApplicationRow({
         </div>
 
         {/* 4. Статус заявки и дата (чистая типографика со статусным индикатором) */}
-        <div className="flex flex-col items-end justify-center min-w-[110px] sm:min-w-[130px] shrink-0 text-right">
-          <div className="flex items-center gap-1.5">
+        <div className="flex flex-col items-end justify-center shrink-0 text-right">
+          <div className="inline-flex items-center gap-1.5 whitespace-nowrap">
             <span
               className={`w-2 h-2 rounded-full shrink-0 ${
                 isReady
@@ -117,7 +117,7 @@ export function TrackerApplicationRow({
               }`}
             />
             <span
-              className={`text-xs font-semibold tracking-tight ${
+              className={`text-xs font-semibold tracking-tight whitespace-nowrap ${
                 isReady
                   ? 'text-emerald-900'
                   : isRejected
@@ -128,7 +128,7 @@ export function TrackerApplicationRow({
               {app.currentStatus}
             </span>
           </div>
-          <span className="font-mono text-xs text-charcoal-600 font-medium mt-0.5">
+          <span className="font-mono text-xs text-charcoal-600 font-medium mt-0.5 whitespace-nowrap">
             {formatDate(app.lastUpdated)}
           </span>
         </div>
