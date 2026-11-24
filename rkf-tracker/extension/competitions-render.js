@@ -76,16 +76,14 @@ function createEventCardHtml(ev, trackedIds) {
   const isTracked = trackedIds.has(String(ev.id));
   const dateFormatted = ev.dateRaw || formatDates(ev.date_start, ev.date_end);
 
-  const statusBadge = `<span class="comp-status-badge ${statusInfo.badgeClass}">${statusInfo.label}</span>`;
   const trackBtnClass = isTracked ? 'btn-track active' : 'btn-track';
-  const trackBtnText = isTracked ? 'Отслеживается' : 'Отслеживать';
+  const trackTitle = isTracked ? 'Отслеживается (нажмите для отмены)' : 'Отслеживать состязание';
 
-  const discipline = ev.discipline || ev.sheetName || 'Курсинг';
-  const rank = ev.rank || ev.competition_kind || 'Сертификатные';
+  const rank = ev.rank || ev.competition_kind || '';
   const location = ev.location || ev.region || 'Локация уточняется';
   const club = ev.club || ev.host_club || 'Организатор уточняется';
 
-  // Meta items in compact 2-column or inline list
+  // Meta items in compact inline row
   const metaItems = [];
   if (location) metaItems.push(`<span class="comp-meta-item"><strong class="comp-lbl">Где:</strong> ${escapeHtml(location)}</span>`);
   if (club) metaItems.push(`<span class="comp-meta-item"><strong class="comp-lbl">Клуб:</strong> ${escapeHtml(club)}</span>`);
@@ -95,11 +93,17 @@ function createEventCardHtml(ev, trackedIds) {
   if (ev.notes) metaItems.push(`<span class="comp-meta-item comp-meta-note"><strong class="comp-lbl">Прим:</strong> ${escapeHtml(ev.notes)}</span>`);
 
   // Title without redundant discipline repeat if already clear
-  const rawTitle = ev.title || rank;
+  const rawTitle = ev.title || rank || 'Соревнование РКФ';
   const cleanTitle = rawTitle.replace(/\s*•\s*(Курсинг борзых|Бега борзых|Бега за механической приманкой|БЗМП)/i, '').trim();
 
-  // Action link (only shown when matched to protocol on site, or compact archive link)
-  const actionLink = renderCardActionLink(ev);
+  // Protocol badge link next to title (same as website)
+  const eventId = ev.site_event_id || getCompetitionEventId(ev.id);
+  const protocolBadge = eventId
+    ? `<a href="https://coursing-stats.ru/event/${eventId}/" target="_blank" class="comp-title-protocol-badge" title="Открыть протокол соревнований на сайте">
+         <span>Протокол</span>
+         <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+       </a>`
+    : '';
 
   return `
     <article class="comp-card" id="comp-card-${ev.id}">
@@ -107,16 +111,19 @@ function createEventCardHtml(ev, trackedIds) {
         <div class="comp-head-left">
           <span class="comp-date-badge">${escapeHtml(dateFormatted)}</span>
           <h3 class="comp-title">${escapeHtml(cleanTitle)}</h3>
+          ${protocolBadge}
           ${rank ? `<span class="comp-tag tag-rank">${escapeHtml(rank)}</span>` : ''}
         </div>
         <div class="comp-head-right">
-          ${actionLink}
-          ${statusBadge}
-          <button class="${trackBtnClass}" data-event-id="${ev.id}" title="Добавить в отслеживаемые">
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+          <div class="comp-status-row ${statusInfo.badgeClass}">
+            <span class="comp-status-dot"></span>
+            <span class="comp-status-text">${statusInfo.label}</span>
+          </div>
+          <button class="${trackBtnClass}" data-event-id="${ev.id}" title="${trackTitle}" aria-label="Отслеживать">
+            <svg class="bell-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
             </svg>
-            <span>${trackBtnText}</span>
           </button>
         </div>
       </div>
@@ -126,23 +133,6 @@ function createEventCardHtml(ev, trackedIds) {
       </div>
     </article>
   `;
-}
-
-function renderCardActionLink(ev) {
-  const eventId = ev.site_event_id || getCompetitionEventId(ev.id);
-  if (eventId) {
-    return `
-      <a href="https://coursing-stats.ru/event/${eventId}/" target="_blank" class="comp-link-protocol" title="Открыть протокол состязания на сайте">
-        Протокол
-        <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-          <polyline points="15 3 21 3 21 9"/>
-          <line x1="10" y1="14" x2="21" y2="3"/>
-        </svg>
-      </a>
-    `;
-  }
-  return '';
 }
 
 function attachEventCardHandlers(container, onToggleTrack) {

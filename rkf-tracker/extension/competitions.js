@@ -266,12 +266,12 @@ async function handleToggleTrack(eventId, btn) {
   if (isNowTracked) {
     trackedIds.add(String(eventId));
     btn.classList.add('active');
-    btn.querySelector('span').textContent = 'Отслеживается';
+    btn.title = 'Отслеживается (нажмите для отмены)';
     if (showToastCallback) showToastCallback('Мероприятие добавлено в мониторинг');
   } else {
     trackedIds.delete(String(eventId));
     btn.classList.remove('active');
-    btn.querySelector('span').textContent = 'Отслеживать';
+    btn.title = 'Отслеживать состязание';
     if (showToastCallback) showToastCallback('Мероприятие удалено из мониторинга');
   }
 

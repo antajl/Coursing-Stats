@@ -1,55 +1,4 @@
-/* Old Money Style Main Tabs & RKF Competitions View */
-
-.main-tabs {
-  display: flex;
-  background: linear-gradient(180deg, #F9F5EF 0%, #F4ECE0 100%);
-  border: 1px solid rgba(210, 192, 168, 0.65);
-  border-radius: 9999px;
-  padding: 3.5px;
-  gap: 4px;
-  margin-bottom: 9px;
-  box-shadow: inset 0 1px 2px rgba(70, 45, 15, 0.04);
-}
-
-.main-tab-btn {
-  flex: 1;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 7px;
-  padding: 6px 14px;
-  background: transparent;
-  border: 1px solid transparent;
-  border-radius: 9999px;
-  color: #685E53;
-  font-family: inherit;
-  font-size: 12px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.main-tab-btn:hover {
-  color: #201202;
-  background: rgba(255, 255, 255, 0.45);
-}
-
-.main-tab-btn.active {
-  background: linear-gradient(135deg, rgba(235, 202, 148, 0.98) 0%, rgba(214, 172, 110, 0.92) 100%);
-  border: 1px solid rgba(175, 128, 60, 0.98);
-  color: #201202;
-  font-weight: 700;
-  box-shadow: inset 0 1.5px 1px 0 #ffffff,
-              inset 0 0 0 1px rgba(255, 240, 200, 0.85),
-              0 3px 12px 0 rgba(120, 80, 30, 0.12);
-}
-
-.main-tab-btn.active svg {
-  stroke: #201202;
-}
-
-.tab-badge { display: none !important; }
-
+/* Competitions View */
 .comp-wrap {
   display: flex;
   flex-direction: column;
@@ -191,45 +140,125 @@
 .comp-head-right {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 8px;
   flex-shrink: 0;
 }
 
-.comp-status-badge {
-  font-size: 9.5px;
-  padding: 1.5px 6px;
-  border-radius: 4px;
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-.status-approved { background-color: var(--emerald-bg); border: 1px solid var(--emerald-border); color: var(--emerald); }
-.status-pending { background-color: var(--amber-bg); border: 1px solid var(--amber-border); color: var(--amber); }
-.status-delayed { background-color: #FEE2E2; border: 1px solid #F87171; color: #B91C1C; font-weight: 700; }
-.status-rejected { background-color: var(--rose-bg); border: 1px solid var(--rose-border); color: var(--rose); }
-
-/* Track Button */
-.btn-track {
+/* Status Indicator with Dot (Identical to Web Tracker /tracker?tab=competitions) */
+.comp-status-row {
   display: inline-flex;
   align-items: center;
-  gap: 3px;
-  padding: 2px 6px;
-  background-color: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  color: var(--text-muted);
-  font-size: 10px;
-  cursor: pointer;
-  transition: all 0.15s ease;
+  gap: 5px;
+  min-width: 95px;
+  justify-content: flex-end;
+  user-select: none;
+}
+
+.comp-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.comp-status-text {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
   white-space: nowrap;
 }
 
-.btn-track:hover { color: var(--text-main); border-color: var(--camel); }
+/* Status variants matching Old Money web colors */
+.comp-status-row.status-approved .comp-status-dot {
+  background-color: #059669;
+  box-shadow: 0 0 0 2px rgba(5, 150, 105, 0.22);
+}
+.comp-status-row.status-approved .comp-status-text {
+  color: #064E3B;
+}
+
+.comp-status-row.status-delayed .comp-status-dot {
+  background-color: #E11D48;
+  box-shadow: 0 0 0 2px rgba(225, 29, 72, 0.22);
+}
+.comp-status-row.status-delayed .comp-status-text {
+  color: #9F1239;
+}
+
+.comp-status-row.status-pending .comp-status-dot {
+  background-color: #D97706;
+  box-shadow: 0 0 0 2px rgba(217, 119, 6, 0.22);
+}
+.comp-status-row.status-pending .comp-status-text {
+  color: #78350F;
+}
+
+.comp-status-row.status-rejected .comp-status-dot {
+  background-color: #BE123C;
+  box-shadow: 0 0 0 2px rgba(190, 18, 60, 0.22);
+}
+.comp-status-row.status-rejected .comp-status-text {
+  color: #881337;
+}
+
+/* Bell Track Button (Identical to Web Tracker) */
+.btn-track {
+  width: 25px;
+  height: 25px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  background: transparent;
+  color: #8C827A;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.18s cubic-bezier(0.22, 1, 0.36, 1);
+  flex-shrink: 0;
+}
+
+.btn-track:hover {
+  color: #C89D66;
+  background: rgba(247, 238, 219, 0.6);
+  border-color: rgba(210, 192, 168, 0.6);
+  transform: translateY(-0.5px);
+}
+
 .btn-track.active {
-  background-color: var(--camel-bg);
-  border-color: var(--camel);
-  color: var(--camel-hover);
-  font-weight: 600;
+  background: linear-gradient(135deg, rgba(254, 243, 199, 0.95) 0%, rgba(253, 230, 138, 0.90) 100%);
+  border-color: rgba(175, 128, 60, 0.85);
+  color: #78350F;
+  box-shadow: 0 1px 3px rgba(120, 80, 30, 0.12);
+}
+
+.btn-track.active .bell-icon {
+  fill: #B45309;
+  stroke: #78350F;
+}
+
+/* Protocol badge next to title */
+.comp-title-protocol-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 2.5px;
+  padding: 1px 5px;
+  font-size: 9px;
+  font-weight: 700;
+  color: #78350F;
+  background: #FEF3C7;
+  border: 1px solid #FCD34D;
+  border-radius: 4px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+}
+
+.comp-title-protocol-badge:hover {
+  background: #FDE68A;
+  border-color: #F59E0B;
+  color: #451A03;
+  transform: translateY(-0.5px);
 }
 
 /* Meta Details Row (Clean Wrap) */
