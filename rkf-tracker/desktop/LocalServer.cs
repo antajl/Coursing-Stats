@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Text;
@@ -92,38 +93,40 @@ namespace CoursingStats.RkfTracker
                 return;
             }
 
-            if (path == "/api/desktop/status")
-            {
-                SendJson(res, new { ok = true, autostart = AutostartHelper.IsEnabled() });
-                return;
-            }
-
-            if (path == "/api/desktop/show")
-            {
-                Program.OpenDashboard();
-                SendJson(res, new { ok = true });
-                return;
-            }
+            if (path == "/api/desktop/status") { SendJson(res, new { ok = true, autostart = AutostartHelper.IsEnabled() }); return; }
+            if (path == "/api/desktop/show") { Program.OpenDashboard(); SendJson(res, new { ok = true }); return; }
+            if (path == "/api/desktop/check-now") { SendJson(res, new { ok = true, changes = poller.PollOnce() }); return; }
+            if (path == "/api/desktop/auth/logout") { poller.SaveToken(string.Empty); SendJson(res, new { ok = true }); return; }
+            if (path == "/api/desktop/auth/start-web-login") { Program.StartWebLogin(); SendJson(res, new { ok = true }); return; }
 
             if (path == "/api/desktop/open-external")
             {
                 string target = req.QueryString["url"];
                 if (!string.IsNullOrEmpty(target) && (target.StartsWith("http://") || target.StartsWith("https://")))
                 {
-                    try
-                    {
-                        System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(target) { UseShellExecute = true });
-                    }
-                    catch { }
+                    try { System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(target) { UseShellExecute = true }); } catch { }
                 }
                 SendJson(res, new { ok = true });
                 return;
             }
 
-            if (path == "/api/desktop/check-now")
+            if (path == "/api/desktop/auth/login" && req.HttpMethod == "POST")
             {
-                int changes = poller.PollOnce();
-                SendJson(res, new { ok = true, changes = changes });
+                var body = ParseJsonBody(req);
+                string email = body != null && body.ContainsKey("email") ? Convert.ToString(body["email"]) : "";
+                string password = body != null && body.ContainsKey("password") ? Convert.ToString(body["password"]) : "";
+                var authRes = AuthService.Authenticate(email, password);
+                if (authRes.ok) poller.SaveToken(authRes.apikey);
+                SendJson(res, authRes, authRes.ok ? 200 : 422);
+                return;
+            }
+
+            if (path == "/api/desktop/auth/save-token" && req.HttpMethod == "POST")
+            {
+                var body = ParseJsonBody(req);
+                string token = body != null && body.ContainsKey("token") ? Convert.ToString(body["token"]).Trim() : "";
+                if (!string.IsNullOrEmpty(token)) { poller.SaveToken(token); SendJson(res, new { ok = true }); }
+                else { SendJson(res, new { ok = false, error = "Токен не может быть пустым" }, 400); }
                 return;
             }
 
@@ -227,13 +230,32 @@ namespace CoursingStats.RkfTracker
             }
         }
 
-        private void SendJson(HttpListenerResponse res, object data)
+        private void SendJson(HttpListenerResponse res, object data, int statusCode = 200)
         {
-            string txt = json.Serialize(data);
-            byte[] b = Encoding.UTF8.GetBytes(txt);
-            res.ContentType = "application/json; charset=utf-8";
-            res.OutputStream.Write(b, 0, b.Length);
-            res.Close();
+            try
+            {
+                res.StatusCode = statusCode;
+                byte[] b = Encoding.UTF8.GetBytes(json.Serialize(data));
+                res.ContentType = "application/json; charset=utf-8";
+                res.OutputStream.Write(b, 0, b.Length);
+            }
+            catch { }
+            finally
+            {
+                try { res.Close(); } catch { }
+            }
+        }
+
+        private Dictionary<string, object> ParseJsonBody(HttpListenerRequest req)
+        {
+            try
+            {
+                using (var sr = new StreamReader(req.InputStream, req.ContentEncoding ?? Encoding.UTF8))
+                {
+                    return json.Deserialize<Dictionary<string, object>>(sr.ReadToEnd());
+                }
+            }
+            catch { return new Dictionary<string, object>(); }
         }
     }
 }

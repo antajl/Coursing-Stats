@@ -191,45 +191,102 @@
     </footer>
   </div>
 
-  <!-- Auth Modal (Email + Password) -->
+  <!-- Auth Modal (Multi-variant Login) -->
   <div class="modal-backdrop" id="auth-modal" style="display: none;">
     <div class="modal-card">
       <div class="modal-header">
-        <h3>Личный кабинет РКФ Онлайн</h3>
+        <h3>Подключение аккаунта РКФ</h3>
         <button class="btn-close-modal" id="btn-close-auth-modal">&times;</button>
       </div>
       <div class="modal-body">
         <!-- Login Form Section -->
         <div id="auth-form-section">
-          <p class="modal-desc">Введите логин и пароль от rkf.online для синхронизации ваших заявок на чемпионские титулы и сертификаты.</p>
-          
-          <div class="input-group">
-            <label for="auth-email">E-mail в РКФ Онлайн:</label>
-            <input type="email" id="auth-email" placeholder="example@mail.ru" class="text-input" autocomplete="username">
+          <!-- Auth Tabs -->
+          <div class="auth-tabs-nav">
+            <button type="button" class="auth-tab-pill active" id="tab-auth-pwd" data-pane="auth-pane-pwd">По паролю</button>
+            <button type="button" class="auth-tab-pill" id="tab-auth-web" data-pane="auth-pane-web">Через сайт РКФ</button>
+            <button type="button" class="auth-tab-pill" id="tab-auth-token" data-pane="auth-pane-token">По токену</button>
           </div>
 
-          <div class="input-group" style="margin-top: 8px;">
-            <label for="auth-password">Пароль от rkf.online:</label>
-            <input type="password" id="auth-password" placeholder="••••••••" class="text-input" autocomplete="current-password">
+          <!-- Pane 1: Email + Password -->
+          <div id="auth-pane-pwd" class="auth-pane">
+            <p class="modal-desc" style="margin-top: 6px;">Введите логин и пароль от rkf.online для синхронизации ваших заявок на чемпионские титулы и сертификаты.</p>
+            
+            <div class="input-group" style="margin-top: 8px;">
+              <label for="auth-email">E-mail в РКФ Онлайн:</label>
+              <input type="email" id="auth-email" placeholder="example@mail.ru" class="text-input" autocomplete="username">
+            </div>
+
+            <div class="input-group" style="margin-top: 8px;">
+              <label for="auth-password">Пароль от rkf.online:</label>
+              <input type="password" id="auth-password" placeholder="••••••••" class="text-input" autocomplete="current-password">
+            </div>
+
+            <div class="auth-trust-note" style="margin-top: 10px;">
+              Безопасное соединение. Авторизация выполняется напрямую через защищенный шлюз rkf.online. Пароль не сохраняется на сервере.
+            </div>
+
+            <div class="modal-actions">
+              <button class="cs-glass-pill-active" style="height: 38px; width: 100%; font-size: 13px;" id="btn-login-submit">
+                <span id="btn-login-text">Войти по паролю</span>
+              </button>
+            </div>
           </div>
 
+          <!-- Pane 2: Web Login (Official Site) -->
+          <div id="auth-pane-web" class="auth-pane" style="display: none;">
+            <p class="modal-desc" style="margin-top: 6px;">Авторизуйтесь на официальном сайте rkf.online. Подходит для входа с двухфакторной аутентификацией или если вы предпочитаете официальную форму входа.</p>
+
+            <div class="auth-web-box" style="margin-top: 8px;">
+              <div class="auth-web-feature">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Форма входа открывается непосредственно на защищенном сайте rkf.online</span>
+              </div>
+              <div class="auth-web-feature">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>При успешном входе трекер автоматически сохранит ключ сессии и вернет вас в дашборд</span>
+              </div>
+              <div class="auth-web-feature">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Пароль вводится исключительно в браузере РКФ и не проходит через сторонние формы</span>
+              </div>
+            </div>
+
+            <div class="modal-actions">
+              <button class="cs-glass-pill-active" style="height: 38px; width: 100%; font-size: 13px;" id="btn-open-web-login">
+                <span>Открыть страницу входа rkf.online</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Pane 3: Direct Token Input -->
+          <div id="auth-pane-token" class="auth-pane" style="display: none;">
+            <p class="modal-desc" style="margin-top: 6px;">Вставьте сессионный API-токен rkf.online (например, скопированный из браузерного расширения CoursingStats Tracker в 1 клик).</p>
+
+            <div class="input-group" style="margin-top: 8px;">
+              <label for="auth-token-input">API-токен сессии:</label>
+              <input type="text" id="auth-token-input" placeholder="Вставьте токен rkf.online" class="text-input" spellcheck="false" autocomplete="off">
+            </div>
+
+            <div class="auth-trust-note" style="margin-top: 10px;">
+              Ключ сохраняется локально на вашем компьютере и используется исключительно для фоновой проверки статусов ваших заявок.
+            </div>
+
+            <div class="modal-actions">
+              <button class="cs-glass-pill-active" style="height: 38px; width: 100%; font-size: 13px;" id="btn-token-submit">
+                <span>Подключить по токену</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Common Error Message -->
           <div id="auth-error-msg" class="auth-error" style="display: none; margin-top: 8px;"></div>
-
-          <div class="auth-trust-note" style="margin-top: 10px;">
-            Безопасное соединение. Авторизация выполняется напрямую через защищенный шлюз rkf.online. Пароль не сохраняется на сервере.
-          </div>
-
-          <div class="modal-actions">
-            <button class="cs-glass-pill-active" style="height: 38px; width: 100%; font-size: 13px;" id="btn-login-submit">
-              <span id="btn-login-text">Войти в личный кабинет</span>
-            </button>
-          </div>
         </div>
 
         <!-- Logged In Section -->
         <div id="auth-logged-section" style="display: none;">
           <p class="modal-desc">Вы успешно подключили личный кабинет РКФ Онлайн.</p>
-          <div class="auth-trust-note">
+          <div class="auth-trust-note" style="margin-top: 8px;">
             Аккаунт: <strong id="logged-user-email"></strong>
           </div>
           <div class="modal-actions">

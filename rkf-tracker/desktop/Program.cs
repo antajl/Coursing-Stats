@@ -238,5 +238,21 @@ namespace CoursingStats.RkfTracker
                 }
             }
         }
+
+        public static void StartWebLogin()
+        {
+            if (mainWindow != null)
+            {
+                mainWindow.StartWebLogin();
+            }
+        }
+
+        public static void SaveTokenFromWeb(string token)
+        {
+            if (poller != null)
+            {
+                poller.SaveToken(token);
+            }
+        }
     }
 }

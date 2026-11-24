@@ -45,6 +45,23 @@ namespace CoursingStats.RkfTracker
             return string.Empty;
         }
 
+        public void SaveToken(string token)
+        {
+            try
+            {
+                string cfgPath = Path.Combine(baseDir, "config.json");
+                var dict = new Dictionary<string, object>();
+                if (File.Exists(cfgPath))
+                {
+                    string txt = File.ReadAllText(cfgPath, Encoding.UTF8);
+                    dict = json.Deserialize<Dictionary<string, object>>(txt) ?? new Dictionary<string, object>();
+                }
+                dict["token"] = token ?? string.Empty;
+                File.WriteAllText(cfgPath, json.Serialize(dict), Encoding.UTF8);
+            }
+            catch { }
+        }
+
         public Dictionary<string, string> LoadState()
         {
             string p = Path.Combine(baseDir, "state.json");

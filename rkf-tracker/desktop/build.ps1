@@ -35,7 +35,8 @@ $sources = @(
     (Join-Path $desktopDir "MainWindow.cs"),
     (Join-Path $desktopDir "LocalServer.cs"),
     (Join-Path $desktopDir "Poller.cs"),
-    (Join-Path $desktopDir "AutostartHelper.cs")
+    (Join-Path $desktopDir "AutostartHelper.cs"),
+    (Join-Path $desktopDir "AuthService.cs")
 )
 $exePath = Join-Path $desktopDir "RkfTracker.exe"
 $icoPath = Join-Path $desktopDir "app.ico"
