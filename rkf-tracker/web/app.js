@@ -1,4 +1,4 @@
-// CoursingStats • Web Dashboard Controller (my.coursing-stats.ru)
+// CoursingStats • Web Dashboard Controller (coursing-stats.ru/tracker/)
 import { MOCK_APPLICATIONS } from './mockData.js';
 import { renderKpiSummary, renderCardHtml, attachCardEvents } from './render.js';
 import { initPwa } from './pwa.js';
@@ -134,22 +134,55 @@ function handleToggleReceived(barcode) {
 }
 
 function render() {
-  renderKpiSummary(apps);
   const container = document.getElementById('apps-container');
-  if (container) {
-    const headerHtml = `
-      <div class="app-table-header">
-        <div>Дата / Вручен</div>
-        <div>Кличка / № РКФ</div>
-        <div>Документ / Трек-номер</div>
-        <div>Статус в РКФ</div>
-        <div style="text-align: right;">Действия</div>
+  if (!container) return;
+
+  const token = localStorage.getItem('cs_rkf_token');
+  if (!token) {
+    renderKpiSummary([]);
+    container.innerHTML = `
+      <div class="auth-required-state">
+        <div class="auth-req-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>Требуется подключение</span>
+        </div>
+        <h3 class="auth-req-title">Личный кабинет РКФ Онлайн не подключен</h3>
+        <p class="auth-req-desc">Войдите через официальный сайт РКФ Онлайн для автоматического отслеживания статусов ваших заявок на чемпионские титулы, сертификаты и выписки.</p>
+        <button type="button" class="auth-req-btn" id="btn-open-login-from-state">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+          <span>Подключить личный кабинет РКФ</span>
+        </button>
       </div>
     `;
-    container.innerHTML = headerHtml + apps.map(app => renderCardHtml(app)).join('');
-    attachCardEvents(handleToggleReceived);
-    filterAndSearch();
+    const btn = document.getElementById('btn-open-login-from-state');
+    if (btn) btn.addEventListener('click', openAuthModal);
+    return;
   }
+
+  renderKpiSummary(apps);
+
+  if (apps.length === 0) {
+    container.innerHTML = `
+      <div class="auth-required-state" style="padding: 36px 20px;">
+        <h4 style="margin: 0; font-size: 14px; color: var(--text-main); font-weight: 700;">Активных заявок не найдено</h4>
+        <p style="margin: 6px 0 0 0; font-size: 12px; color: var(--text-soft);">В вашем личном кабинете РКФ Онлайн нет текущих заявок на титулы.</p>
+      </div>
+    `;
+    return;
+  }
+
+  const headerHtml = `
+    <div class="app-table-header">
+      <div>Дата / Вручен</div>
+      <div>Кличка / № РКФ</div>
+      <div>Документ / Трек-номер</div>
+      <div>Статус в РКФ</div>
+      <div style="text-align: right;">Действия</div>
+    </div>
+  `;
+  container.innerHTML = headerHtml + apps.map(app => renderCardHtml(app)).join('');
+  attachCardEvents(handleToggleReceived);
+  filterAndSearch();
 }
 
 function filterAndSearch() {

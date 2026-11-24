@@ -21,10 +21,9 @@
         <img src="icons/logo-badge.svg" alt="КурсингСтатс" class="brand-logo-img">
         <div class="brand-text">
           <h1>КурсингСтатс</h1>
-          <span class="subtext">Трекер <a href="https://my.coursing-stats.ru" target="_blank" class="sublink" id="brand-link" title="Перейти на сайт">РКФ Онлайн</a></span>
+          <span class="subtext">Трекер <a href="https://coursing-stats.ru/tracker/" target="_blank" class="sublink" id="brand-link" title="Перейти на сайт">РКФ Онлайн</a></span>
         </div>
       </div>
-
       <div class="top-actions">
         <div class="status-badge" id="status-badge" style="display: none;">
           <div class="status-dot" id="status-dot" title="Связь с РКФ Онлайн активна"></div>
@@ -65,7 +64,6 @@
         <span>Соревнования РКФ</span>
       </button>
     </nav>
-
     <!-- Tab Content Wrap -->
     <main class="tab-content-container">
       <!-- SECTION 1: Personal Applications -->
@@ -83,8 +81,10 @@
           <div class="auth-actions">
             <button class="btn-primary" id="btn-open-rkf">Войти на rkf.online</button>
           </div>
+          <div class="auth-alt-hint">
+            <button class="auth-link-btn" id="btn-open-settings-from-auth" type="button">Ввести токен вручную в настройках</button>
+          </div>
         </div>
-
         <!-- Main Dashboard View -->
         <div id="main-dashboard" style="display: none;">
           <!-- Account Banner & 1-Click Action Hub -->
@@ -294,7 +294,6 @@
     <!-- Toast -->
     <div class="toast" id="toast"></div>
   </div>
-
   <script type="module" src="popup.js"></script>
 </body>
 </html>

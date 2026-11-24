@@ -66,7 +66,7 @@ export function registerAuthHandler(composer: Composer<BotContext>): void {
       else if (parsed.apikey) token = parsed.apikey;
     } catch {}
 
-    const webAppUrl = ctx.env.WEBAPP_URL || 'https://my.coursing-stats.ru';
+    const webAppUrl = ctx.env.WEBAPP_URL || 'https://coursing-stats.ru/tracker/';
     const linkRes = await linkUserToken(ctx, userId, chatId, token, 'Защищенный WebApp');
     if (linkRes.ok) {
       await ctx.reply(
@@ -90,7 +90,7 @@ export function registerAuthHandler(composer: Composer<BotContext>): void {
   // Auth selection hub
   composer.callbackQuery('cmd_auth_prompt', async (ctx) => {
     await ctx.answerCallbackQuery();
-    const webAppUrl = ctx.env.WEBAPP_URL || 'https://my.coursing-stats.ru';
+    const webAppUrl = ctx.env.WEBAPP_URL || 'https://coursing-stats.ru/tracker/';
     try {
       await ctx.editMessageText(getAuthPromptText(), { reply_markup: getAuthPromptKeyboard(webAppUrl) });
     } catch {
@@ -101,7 +101,7 @@ export function registerAuthHandler(composer: Composer<BotContext>): void {
   // Method 1: WebApp login modal
   composer.callbackQuery('cmd_auth_login', async (ctx) => {
     await ctx.answerCallbackQuery();
-    const webAppUrl = ctx.env.WEBAPP_URL || 'https://my.coursing-stats.ru';
+    const webAppUrl = ctx.env.WEBAPP_URL || 'https://coursing-stats.ru/tracker/';
     try {
       await ctx.editMessageText(getAuthLoginText(webAppUrl), { reply_markup: getAuthLoginKeyboard(webAppUrl) });
     } catch {
@@ -131,7 +131,7 @@ export function registerAuthHandler(composer: Composer<BotContext>): void {
 
   // Secure /login command: directs to WebApp without exposing password in chat
   composer.command('login', async (ctx) => {
-    const webAppUrl = ctx.env.WEBAPP_URL || 'https://my.coursing-stats.ru';
+    const webAppUrl = ctx.env.WEBAPP_URL || 'https://coursing-stats.ru/tracker/';
     try {
       await ctx.deleteMessage();
     } catch {}
@@ -156,7 +156,7 @@ export function registerAuthHandler(composer: Composer<BotContext>): void {
       return;
     }
 
-    const webAppUrl = ctx.env.WEBAPP_URL || 'https://my.coursing-stats.ru';
+    const webAppUrl = ctx.env.WEBAPP_URL || 'https://coursing-stats.ru/tracker/';
     await ctx.reply(getAuthPromptText(), { reply_markup: getAuthPromptKeyboard(webAppUrl) });
   });
 
@@ -218,7 +218,7 @@ async function processDirectToken(ctx: BotContext, userId: number, chatId: numbe
     return;
   }
 
-  const webAppUrl = ctx.env.WEBAPP_URL || 'https://my.coursing-stats.ru';
+  const webAppUrl = ctx.env.WEBAPP_URL || 'https://coursing-stats.ru/tracker/';
   await ctx.api.editMessageText(
     chatId,
     checking.message_id,

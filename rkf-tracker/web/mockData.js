@@ -1,4 +1,4 @@
-// Demo applications dataset with real canine records for my.coursing-stats.ru
+// Demo applications dataset with real canine records for coursing-stats.ru/tracker/
 export const MOCK_APPLICATIONS = [
   {
     barcode: "2200000498194",

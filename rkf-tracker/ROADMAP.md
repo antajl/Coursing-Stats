@@ -17,7 +17,7 @@
 
 ```
 d:\Site\CoursingStats\rkf-tracker\
-├── web/            # Портал my.coursing-stats.ru + PWA (установка на ПК в 1 клик)
+├── web/            # Раздел coursing-stats.ru/tracker/ + PWA (установка на ПК в 1 клик)
 ├── bot/            # Telegram-бот @coursing_stats_tracker_bot (push-уведомления)
 ├── extension/      # Chrome-расширение Manifest V3 (автоподхват сессии из вкладки)
 ├── desktop/        # Локальный трей-клиент / CLI прототип
@@ -35,7 +35,7 @@ d:\Site\CoursingStats\rkf-tracker\
 
 ## 3. Пять ключевых направлений (Tracks)
 
-### Track 1: Портал `my.coursing-stats.ru` (Web & PWA)
+### Track 1: Раздел трекера `coursing-stats.ru/tracker/` (Web & PWA)
 - **Статус:** Каркас готов, Old Money стиль сайта внедрен, локальный сервер `yarn dev:my` на порту 4200.
 - **Что сделано:**
   - Полный дизайн в стиле CoursingStats: навбар с логотипом, хлебные крошки, сводка из 4 KPI-карточек, футер, тёплый фон с микрозерном (`grain-overlay`).
@@ -54,7 +54,7 @@ d:\Site\CoursingStats\rkf-tracker\
   - Авторизация пользователя: безопасная привязка API токена rkf.online с мгновенным удалением сообщения из чата (`ctx.deleteMessage()`) ради защиты от утечек.
   - Фоновый воркер (Cloudflare Workers Cron Trigger): периодический опрос API РКФ (ежечасно) с вычислением diff статусов через `diff-engine.ts`.
   - Шаблоны уведомлений: алерты при смене статуса («[ГОТОВО К ВЫДАЧЕ]», «[ОТКЛОНЕНО]») и утверждении состязаний («[УТВЕРЖДЕНО СОСТЯЗАНИЕ РКФ]»).
-  - Кнопка «Мои заявки» внутри чата — открытие дашборда `my.coursing-stats.ru` как **Telegram Mini App** (нативно внутри мессенджера).
+  - Кнопка «Мои заявки» внутри чата — открытие дашборда `coursing-stats.ru/tracker/` как **Telegram Mini App** (нативно внутри мессенджера).
   - Строгое соблюдение Old Money эстетики и ZERO эмодзи во всех сообщениях и клавиатурах.
 
 ### Track 3: Расширение для Chrome (CoursingStats Tracker)

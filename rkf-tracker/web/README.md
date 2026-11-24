@@ -1,4 +1,4 @@
-# RKF Tracker • Web Dashboard (`my.coursing-stats.ru`)
+# RKF Tracker • Web Dashboard (`coursing-stats.ru/tracker/`)
 
 Веб-приложение для мониторинга заявок и титулов РКФ.
 

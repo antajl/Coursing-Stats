@@ -3,7 +3,7 @@ main = "src/worker.ts"
 compatibility_date = "2025-11-01"
 
 [vars]
-WEBAPP_URL = "https://my.coursing-stats.ru"
+WEBAPP_URL = "https://coursing-stats.ru/tracker/"
 SITE_URL = "https://coursing-stats.ru"
 BOT_USERNAME = "coursing_stats_notify_bot"
 

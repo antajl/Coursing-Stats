@@ -66,7 +66,7 @@ jobs:
           echo "Setting chat menu button on Telegram..."
           MENU_RES=$(curl -s -X POST "https://api.telegram.org/bot${TRACKER_BOT_TOKEN}/setChatMenuButton" \
             -H "Content-Type: application/json" \
-            -d '{"menu_button":{"type":"web_app","text":"Кабинет","web_app":{"url":"https://my.coursing-stats.ru"}}}')
+            -d '{"menu_button":{"type":"web_app","text":"Кабинет","web_app":{"url":"https://coursing-stats.ru/tracker/"}}}')
           echo "Menu button response: $MENU_RES"
           echo "Current Webhook info from Telegram:"
           curl -s "https://api.telegram.org/bot${TRACKER_BOT_TOKEN}/getWebhookInfo"

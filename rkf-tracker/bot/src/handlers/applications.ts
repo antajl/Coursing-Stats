@@ -44,7 +44,7 @@ export function registerApplicationsHandler(composer: Composer<BotContext>): voi
 
     await saveUser(ctx.env.KV_STORAGE, user);
 
-    const webAppUrl = ctx.env.WEBAPP_URL || 'https://my.coursing-stats.ru';
+    const webAppUrl = ctx.env.WEBAPP_URL || 'https://coursing-stats.ru/tracker/';
     try {
       await ctx.editMessageReplyMarkup({
         reply_markup: getApplicationActionKeyboard(barcode, action === 'mark_rec', webAppUrl)
@@ -60,7 +60,7 @@ async function showApplications(ctx: BotContext, onlyReady: boolean, isEdit: boo
   if (!userId) return;
 
   const user = await getUser(ctx.env.KV_STORAGE, userId);
-  const webAppUrl = ctx.env.WEBAPP_URL || 'https://my.coursing-stats.ru';
+  const webAppUrl = ctx.env.WEBAPP_URL || 'https://coursing-stats.ru/tracker/';
 
   if (!user || !user.rkfToken) {
     const notLinkedText =

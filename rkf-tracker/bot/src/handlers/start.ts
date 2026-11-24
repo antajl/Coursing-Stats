@@ -37,7 +37,7 @@ export function registerStartHandler(composer: Composer<BotContext>): void {
       await saveUser(ctx.env.KV_STORAGE, user);
     }
 
-    const webAppUrl = ctx.env.WEBAPP_URL || 'https://my.coursing-stats.ru';
+    const webAppUrl = ctx.env.WEBAPP_URL || 'https://coursing-stats.ru/tracker/';
     const match = (ctx.match || '').trim();
 
     // Deep link handling for seamless binding: /start bind_<id|token>
@@ -110,7 +110,7 @@ export function registerStartHandler(composer: Composer<BotContext>): void {
     if (!userId) return;
 
     const user = await getUser(ctx.env.KV_STORAGE, userId);
-    const webAppUrl = ctx.env.WEBAPP_URL || 'https://my.coursing-stats.ru';
+    const webAppUrl = ctx.env.WEBAPP_URL || 'https://coursing-stats.ru/tracker/';
     const text = buildStartText(user);
     const isLinked = Boolean(user && user.rkfToken);
 

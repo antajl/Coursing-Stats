@@ -113,7 +113,7 @@ export default {
 
       // Set native WebApp menu button
       try {
-        const webAppUrl = env.WEBAPP_URL || 'https://my.coursing-stats.ru';
+        const webAppUrl = env.WEBAPP_URL || 'https://coursing-stats.ru/tracker/';
         await fetch(`https://api.telegram.org/bot${token}/setChatMenuButton`, {
           method: 'POST',
           headers: { 'content-type': 'application/json' },

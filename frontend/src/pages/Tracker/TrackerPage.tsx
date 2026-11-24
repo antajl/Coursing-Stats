@@ -56,7 +56,7 @@ export default function TrackerPage() {
     return () => clearTimeout(timer);
   }, [extensionToast]);
 
-  // 1. Auto-login from query parameter: /tracker?token=xxx
+  // 1. Auto-login from query parameter: /tracker?token=xxx or open auth: ?action=login
   useEffect(() => {
     const token = searchParams.get('token');
     if (token) {
@@ -64,6 +64,12 @@ export default function TrackerPage() {
       setIsLive(true);
       const nextParams = new URLSearchParams(searchParams);
       nextParams.delete('token');
+      setSearchParams(nextParams, { replace: true });
+    } else if (searchParams.get('action') === 'login' || searchParams.get('auth') === '1') {
+      setAuthModalOpen(true);
+      const nextParams = new URLSearchParams(searchParams);
+      nextParams.delete('action');
+      nextParams.delete('auth');
       setSearchParams(nextParams, { replace: true });
     }
   }, [searchParams, setSearchParams]);

@@ -14,20 +14,20 @@ describe('keyboards (Old Money / Zero Emoji compliance)', () => {
   const emojiRegex = /[\u{1F300}-\u{1FAFF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}]/u;
 
   it('main menu keyboard contains no emojis and includes WebApp button', () => {
-    const kbUnlinked = getMainMenuKeyboard('https://my.coursing-stats.ru', false);
+    const kbUnlinked = getMainMenuKeyboard('https://coursing-stats.ru/tracker/', false);
     const jsonUnlinked = JSON.stringify(kbUnlinked);
     expect(emojiRegex.test(jsonUnlinked)).toBe(false);
     expect(jsonUnlinked).toContain('web_app');
     expect(jsonUnlinked).toContain('cmd_auth_prompt');
 
-    const kbLinked = getMainMenuKeyboard('https://my.coursing-stats.ru', true);
+    const kbLinked = getMainMenuKeyboard('https://coursing-stats.ru/tracker/', true);
     const jsonLinked = JSON.stringify(kbLinked);
     expect(emojiRegex.test(jsonLinked)).toBe(false);
     expect(jsonLinked).toContain('cmd_apps');
   });
 
   it('auth onboarding keyboards contain no emojis', () => {
-    const promptKb = getAuthPromptKeyboard('https://my.coursing-stats.ru');
+    const promptKb = getAuthPromptKeyboard('https://coursing-stats.ru/tracker/');
     const promptJson = JSON.stringify(promptKb);
     expect(emojiRegex.test(promptJson)).toBe(false);
     expect(promptJson).toContain('web_app');
@@ -76,7 +76,7 @@ describe('keyboards (Old Money / Zero Emoji compliance)', () => {
   });
 
   it('reply menu keyboard contains no emojis (backward compat)', () => {
-    const kb = getReplyMenuKeyboard('https://my.coursing-stats.ru');
+    const kb = getReplyMenuKeyboard('https://coursing-stats.ru/tracker/');
     const json = JSON.stringify(kb);
     expect(emojiRegex.test(json)).toBe(false);
     expect(json).toContain('web_app');

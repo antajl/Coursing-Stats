@@ -2,7 +2,7 @@
 import { InlineKeyboard, Keyboard } from 'grammy';
 
 export function getMainMenuKeyboard(
-  webAppUrl: string = 'https://my.coursing-stats.ru',
+  webAppUrl: string = 'https://coursing-stats.ru/tracker/',
   isLinked: boolean = false
 ): InlineKeyboard {
   const kb = new InlineKeyboard();
@@ -18,7 +18,7 @@ export function getMainMenuKeyboard(
   return kb.text('Статус мониторинга', 'cmd_status').text('Справка / Помощь', 'cmd_help');
 }
 
-export function getReplyMenuKeyboard(webAppUrl: string = 'https://my.coursing-stats.ru'): Keyboard {
+export function getReplyMenuKeyboard(webAppUrl: string = 'https://coursing-stats.ru/tracker/'): Keyboard {
   return new Keyboard()
     .webApp('Мои заявки', webAppUrl)
     .text('/status')
@@ -42,7 +42,7 @@ export function getStatusKeyboard(isLinked: boolean): InlineKeyboard {
   return kb.text('« В главное меню', 'cmd_start');
 }
 
-export function getAuthPromptKeyboard(webAppUrl: string = 'https://my.coursing-stats.ru'): InlineKeyboard {
+export function getAuthPromptKeyboard(webAppUrl: string = 'https://coursing-stats.ru/tracker/'): InlineKeyboard {
   return new InlineKeyboard()
     .text('Подключить с ПК в 1 клик (без ввода паролей)', 'cmd_auth_ext')
     .row()
@@ -53,7 +53,7 @@ export function getAuthPromptKeyboard(webAppUrl: string = 'https://my.coursing-s
     .text('« В главное меню', 'cmd_start');
 }
 
-export function getAuthLoginKeyboard(webAppUrl: string = 'https://my.coursing-stats.ru'): InlineKeyboard {
+export function getAuthLoginKeyboard(webAppUrl: string = 'https://coursing-stats.ru/tracker/'): InlineKeyboard {
   return new InlineKeyboard()
     .webApp('Открыть форму привязки (WebApp)', `${webAppUrl}?action=login`)
     .row()
@@ -143,7 +143,7 @@ export function getEventActionKeyboard(
 export function getApplicationActionKeyboard(
   barcode: string,
   isReceived: boolean,
-  webAppUrl: string = 'https://my.coursing-stats.ru'
+  webAppUrl: string = 'https://coursing-stats.ru/tracker/'
 ): InlineKeyboard {
   const toggleLabel = isReceived ? '[x] Снять отметку "Забрали"' : '[+] Отметить как забрали';
   const toggleAction = isReceived ? `unmark_rec:${barcode}` : `mark_rec:${barcode}`;
