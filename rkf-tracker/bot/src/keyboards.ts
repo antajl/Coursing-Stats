@@ -34,6 +34,13 @@ export function getBackToMenuKeyboard(): InlineKeyboard {
   return new InlineKeyboard().text('« В главное меню', 'cmd_start');
 }
 
+export function getRebindConfirmationKeyboard(): InlineKeyboard {
+  return new InlineKeyboard()
+    .text('Заменить на новый аккаунт', 'cmd_rebind_confirm')
+    .row()
+    .text('Оставить текущий аккаунт', 'cmd_rebind_cancel');
+}
+
 export function getAccountKeyboard(isLinked: boolean): InlineKeyboard {
   const kb = new InlineKeyboard();
   if (isLinked) {

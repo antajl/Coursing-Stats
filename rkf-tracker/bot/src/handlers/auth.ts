@@ -16,10 +16,13 @@ import {
   getAuthExtText,
   getAuthBookmarkletText
 } from './auth-views.js';
-import { linkUserToken, processDirectToken } from './auth-link.js';
-export { linkUserToken } from './auth-link.js';
+import { linkUserToken, processDirectToken, handleTokenBinding } from './auth-link.js';
+import { registerRebindHandlers } from './auth-rebind.js';
+export { linkUserToken, handleTokenBinding } from './auth-link.js';
 
 export function registerAuthHandler(composer: Composer<BotContext>): void {
+  registerRebindHandlers(composer);
+
   // Mini App data receiver: Telegram.WebApp.sendData()
   composer.on('message:web_app_data', async (ctx) => {
     const userId = ctx.from?.id;
@@ -34,7 +37,6 @@ export function registerAuthHandler(composer: Composer<BotContext>): void {
       else if (parsed.apikey) token = parsed.apikey;
     } catch {}
 
-    const webAppUrl = ctx.env.WEBAPP_URL || 'https://coursing-stats.ru/tracker/';
     const initialUser = (await getUser(ctx.env.KV_STORAGE, userId)) || createDefaultUser(userId, chatId);
     await ctx.replyWithChatAction('typing').catch(() => {});
     await renderSingleBubble(
@@ -47,29 +49,7 @@ export function registerAuthHandler(composer: Composer<BotContext>): void {
       `Пожалуйста, подождите несколько секунд.`
     );
 
-    const linkRes = await linkUserToken(ctx, userId, chatId, token, 'Защищенный WebApp');
-    const user = (await getUser(ctx.env.KV_STORAGE, userId)) || initialUser;
-    if (linkRes.ok) {
-      await renderSingleBubble(
-        ctx,
-        user,
-        `[УСПЕШНО] Аккаунт rkf.online подключен!\n` +
-        `— — — — — — — — — — — — — — —\n` +
-        `• Способ: Защищенный вход WebApp\n` +
-        `• Найдено заявок: ${linkRes.count}\n` +
-        `• Готово к выдаче: ${linkRes.ready}\n` +
-        `• Режим: автоматический ежечасный мониторинг`,
-        getMainMenuKeyboard(webAppUrl, true)
-      );
-    } else {
-      await renderSingleBubble(
-        ctx,
-        user,
-        `[ОШИБКА] Не удалось верифицировать полученную сессию РКФ.\n` +
-        `Пожалуйста, попробуйте войти снова.`,
-        getAuthPromptKeyboard(webAppUrl)
-      );
-    }
+    await handleTokenBinding(ctx, userId, chatId, token, 'Защищенный WebApp');
   });
 
   // Auth selection hub

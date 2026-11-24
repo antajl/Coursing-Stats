@@ -3,6 +3,7 @@ import {
   getMainMenuKeyboard,
   getReplyMenuKeyboard,
   getBackToMenuKeyboard,
+  getRebindConfirmationKeyboard,
   getStatusKeyboard,
   getAuthPromptKeyboard,
   getAuthHowKeyboard,
@@ -82,5 +83,13 @@ describe('keyboards (Old Money / Zero Emoji compliance)', () => {
     expect(emojiRegex.test(json)).toBe(false);
     expect(json).toContain('web_app');
     expect(json).toContain('Мои заявки');
+  });
+
+  it('rebind confirmation keyboard contains no emojis and correct actions', () => {
+    const kb = getRebindConfirmationKeyboard();
+    const json = JSON.stringify(kb);
+    expect(emojiRegex.test(json)).toBe(false);
+    expect(json).toContain('cmd_rebind_confirm');
+    expect(json).toContain('cmd_rebind_cancel');
   });
 });

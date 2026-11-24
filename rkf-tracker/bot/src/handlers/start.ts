@@ -3,7 +3,7 @@ import type { Composer } from 'grammy';
 import type { BotContext, UserRecord } from '../types.js';
 import { getMainMenuKeyboard } from '../keyboards.js';
 import { getUser, saveUser, createDefaultUser } from '../storage/index.js';
-import { linkUserToken } from './auth.js';
+import { handleTokenBinding } from './auth-link.js';
 import { renderSingleBubble } from './render-bubble.js';
 
 export function buildStartText(user: UserRecord | null): string {
@@ -97,32 +97,8 @@ export function registerStartHandler(composer: Composer<BotContext>): void {
         }
       }
 
-      const linkRes = await linkUserToken(ctx, userId, chatId, tokenToLink, sourceLabel);
-      if (linkRes.ok) {
-        user = (await getUser(ctx.env.KV_STORAGE, userId)) || user;
-        await renderSingleBubble(
-          ctx,
-          user,
-          `[УСПЕШНО] Аккаунт rkf.online привязан!\n` +
-          `— — — — — — — — — — — — — — —\n` +
-          `• Способ: ${sourceLabel}\n` +
-          `• Найдено заявок: ${linkRes.count}\n` +
-          `• Готово к выдаче: ${linkRes.ready}\n` +
-          `• Режим: автоматический ежечасный мониторинг\n\n` +
-          `Данные обновлены в главном меню:`,
-          getMainMenuKeyboard(webAppUrl, true)
-        );
-        return;
-      } else {
-        await renderSingleBubble(
-          ctx,
-          user,
-          `[ОШИБКА] Не удалось верифицировать полученную сессию РКФ.\n` +
-          `Пожалуйста, войдите в аккаунт на rkf.online и нажмите кнопку привязки еще раз.`,
-          getMainMenuKeyboard(webAppUrl, false)
-        );
-        return;
-      }
+      await handleTokenBinding(ctx, userId, chatId, tokenToLink, sourceLabel);
+      return;
     }
 
     const isLinked = Boolean(user && user.rkfToken);

@@ -2,7 +2,11 @@
 import type { BotContext } from '../types.js';
 import { getUser, saveUser, createDefaultUser } from '../storage/index.js';
 import { validateRkfToken, fetchRkfApplications } from '../services/rkf-api.js';
-import { getMainMenuKeyboard, getBackToMenuKeyboard } from '../keyboards.js';
+import {
+  getMainMenuKeyboard,
+  getBackToMenuKeyboard,
+  getRebindConfirmationKeyboard
+} from '../keyboards.js';
 import { renderSingleBubble } from './render-bubble.js';
 
 export async function linkUserToken(
@@ -39,6 +43,103 @@ export async function linkUserToken(
   return { ok: true, count, ready };
 }
 
+export async function handleTokenBinding(
+  ctx: BotContext,
+  userId: number,
+  chatId: number,
+  rawToken: string,
+  sourceLabel: string = 'Аккаунт rkf.online'
+): Promise<void> {
+  const clean = rawToken.replace(/^["']|["']$/g, '').replace(/^Bearer\s+/i, '').trim();
+  let user = (await getUser(ctx.env.KV_STORAGE, userId)) || createDefaultUser(userId, chatId);
+  const webAppUrl = ctx.env.WEBAPP_URL || 'https://coursing-stats.ru/tracker/';
+
+  // Scenario 1: Same account already linked
+  if (user.rkfToken && user.rkfToken === clean) {
+    const linkRes = await linkUserToken(ctx, userId, chatId, clean, sourceLabel);
+    user = (await getUser(ctx.env.KV_STORAGE, userId)) || user;
+    await renderSingleBubble(
+      ctx,
+      user,
+      `Этот аккаунт уже привязан к Telegram\n` +
+      `— — — — — — — — — — — — — — —\n` +
+      `• Способ: ${sourceLabel}\n` +
+      `• Статус: Данный профиль rkf.online уже подключен к вашему боту.\n` +
+      `• Всего заявок: ${linkRes.count} (Готово к выдаче: ${linkRes.ready})\n` +
+      `• Мониторинг: активен (ежечасная проверка)\n\n` +
+      `Повторная привязка не требуется. Данные обновлены в главном меню:`,
+      getMainMenuKeyboard(webAppUrl, true)
+    );
+    return;
+  }
+
+  // Scenario 2: Different account already linked -> Ask confirmation
+  if (user.rkfToken && user.rkfToken !== clean) {
+    const isValid = await validateRkfToken(clean);
+    if (!isValid) {
+      await renderSingleBubble(
+        ctx,
+        user,
+        `[ОШИБКА] Не удалось верифицировать полученную сессию РКФ.\n` +
+        `Пожалуйста, войдите в аккаунт на rkf.online и нажмите кнопку привязки еще раз.`,
+        getMainMenuKeyboard(webAppUrl, true)
+      );
+      return;
+    }
+
+    await ctx.env.KV_STORAGE.put(
+      `rebind:pending:${userId}`,
+      JSON.stringify({ token: clean, sourceLabel }),
+      { expirationTtl: 600 }
+    );
+
+    const cachedApps = Object.values(user.cachedApps || {});
+    const total = cachedApps.length;
+    const ready = cachedApps.filter(a => a.statusGroup === 'ready').length;
+    const comps = user.competitions?.length || 0;
+
+    await renderSingleBubble(
+      ctx,
+      user,
+      `Внимание: смена профиля\n` +
+      `— — — — — — — — — — — — — — —\n` +
+      `К вашему Telegram уже подключен другой профиль rkf.online:\n` +
+      `• Всего заявок: ${total} (Готово к выдаче: ${ready})\n` +
+      `• Отслеживание состязаний: ${comps} активных\n\n` +
+      `Вы собираетесь привязать другой аккаунт РКФ.\n` +
+      `Заменить текущий профиль на новый?`,
+      getRebindConfirmationKeyboard()
+    );
+    return;
+  }
+
+  // Scenario 3: First time binding
+  const linkRes = await linkUserToken(ctx, userId, chatId, clean, sourceLabel);
+  if (linkRes.ok) {
+    user = (await getUser(ctx.env.KV_STORAGE, userId)) || user;
+    await renderSingleBubble(
+      ctx,
+      user,
+      `[УСПЕШНО] Аккаунт rkf.online привязан!\n` +
+      `— — — — — — — — — — — — — — —\n` +
+      `• Способ: ${sourceLabel}\n` +
+      `• Найдено заявок: ${linkRes.count}\n` +
+      `• Готово к выдаче: ${linkRes.ready}\n` +
+      `• Режим: автоматический ежечасный мониторинг\n\n` +
+      `Данные обновлены в главном меню:`,
+      getMainMenuKeyboard(webAppUrl, true)
+    );
+  } else {
+    await renderSingleBubble(
+      ctx,
+      user,
+      `[ОШИБКА] Не удалось верифицировать полученную сессию РКФ.\n` +
+      `Пожалуйста, войдите в аккаунт на rkf.online и нажмите кнопку привязки еще раз.`,
+      getMainMenuKeyboard(webAppUrl, false)
+    );
+  }
+}
+
 export async function processDirectToken(
   ctx: BotContext,
   userId: number,
@@ -55,27 +156,5 @@ export async function processDirectToken(
     `• Статус: Проверяем сессию и загружаем документы...\n\n` +
     `Пожалуйста, подождите несколько секунд.`
   );
-  const res = await linkUserToken(ctx, userId, chatId, rawToken, 'Прямой ввод');
-  const webAppUrl = ctx.env.WEBAPP_URL || 'https://coursing-stats.ru/tracker/';
-
-  if (!res.ok) {
-    await renderSingleBubble(
-      ctx,
-      user,
-      `[ОШИБКА] Ключ не принят API RKF.\nПроверьте актуальность авторизации и попробуйте снова.`,
-      getBackToMenuKeyboard()
-    );
-    return;
-  }
-
-  await renderSingleBubble(
-    ctx,
-    user,
-    `[УСПЕШНО] Аккаунт rkf.online подключен!\n` +
-    `— — — — — — — — — — — — — — —\n` +
-    `• Найдено заявок: ${res.count}\n` +
-    `• Готово к выдаче: ${res.ready}\n` +
-    `• Мониторинг: ежечасный автоматический опрос`,
-    getMainMenuKeyboard(webAppUrl, true)
-  );
+  await handleTokenBinding(ctx, userId, chatId, rawToken, 'Прямой ввод');
 }
