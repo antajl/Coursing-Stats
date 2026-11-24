@@ -1,46 +1,108 @@
-// Handler: /competitions and /track_event commands (2026 Calendar & Track 4)
+// Handler: /competitions and /track_event commands (Strict Zero Emoji & Single-Bubble UX)
 import type { Composer } from 'grammy';
-import type { BotContext, CompetitionSubscription } from '../types.js';
+import type { BotContext } from '../types.js';
 import { getUser, saveUser, createDefaultUser } from '../storage/index.js';
 import {
   getDisciplineCounts,
   filterCompetitions,
   findCompetitionById,
-  formatCompetitionCard,
-  STATUS_RUSSIAN
+  formatCompetitionCard
 } from '../services/competition-tracker.js';
 import {
   getCompetitionsMenuKeyboard,
-  getEventActionKeyboard,
-  getMainMenuKeyboard
+  getCompetitionsPageKeyboard,
+  getEventActionKeyboard
 } from '../keyboards.js';
+import {
+  PAGE_SIZE,
+  getFilterParams,
+  buildCompetitionsHubText,
+  buildCompetitionsPageText
+} from './competitions-render.js';
+import {
+  subscribeToEvent,
+  unsubscribeFromEvent,
+  showUserSubscriptions
+} from './competitions-actions.js';
 
 export function registerCompetitionsHandler(composer: Composer<BotContext>): void {
-  // Main competitions dashboard
   composer.command('competitions', async (ctx) => {
-    await showCompetitionsHub(ctx);
+    await showCompetitionsHub(ctx, false);
   });
 
   composer.callbackQuery('cmd_competitions', async (ctx) => {
     await ctx.answerCallbackQuery();
-    await showCompetitionsHub(ctx);
+    await showCompetitionsHub(ctx, true);
   });
 
-  // Discipline filters
-  composer.callbackQuery(/^comp_disc:(coursing|racing|bzmp|all)$/, async (ctx) => {
+  // Discipline list & pagination
+  composer.callbackQuery(/^comp_disc:(coursing|racing|bzmp|all|approved)$/, async (ctx) => {
     await ctx.answerCallbackQuery();
     const disc = ctx.match ? ctx.match[1] : 'all';
-    await showDisciplineEvents(ctx, disc);
+    await showCompetitionsPage(ctx, disc, 0, true);
   });
 
-  // Track event by ID command: /track_event <id>
+  composer.callbackQuery(/^comp_p:(coursing|racing|bzmp|all|approved):(\d+)$/, async (ctx) => {
+    await ctx.answerCallbackQuery();
+    const disc = ctx.match ? ctx.match[1] : 'all';
+    const page = ctx.match ? parseInt(ctx.match[2], 10) : 0;
+    await showCompetitionsPage(ctx, disc, page, true);
+  });
+
+  // 1-click toggle subscription within the competitions browser
+  composer.callbackQuery(/^(csub_on|csub_off):([^:]+):(coursing|racing|bzmp|all|approved):(\d+)$/, async (ctx) => {
+    const action = ctx.match ? ctx.match[1] : '';
+    const eventId = ctx.match ? ctx.match[2] : '';
+    const disc = ctx.match ? ctx.match[3] : 'all';
+    const page = ctx.match ? parseInt(ctx.match[4], 10) : 0;
+
+    const userId = ctx.from?.id;
+    const chatId = ctx.chat?.id;
+    if (!userId || !chatId) {
+      await ctx.answerCallbackQuery();
+      return;
+    }
+
+    let user = await getUser(ctx.env.KV_STORAGE, userId);
+    if (!user) user = createDefaultUser(userId, chatId);
+    user.competitions = user.competitions || [];
+
+    if (action === 'csub_on') {
+      const ev = findCompetitionById(eventId);
+      if (ev && !user.competitions.some(c => c.id === eventId)) {
+        user.competitions.push({
+          id: ev.id,
+          query: ev.location,
+          title: `${ev.discipline} (${ev.rank})`,
+          city: ev.location,
+          date: ev.dateRaw,
+          lastStatus: ev.status,
+          createdAt: new Date().toISOString()
+        });
+        await saveUser(ctx.env.KV_STORAGE, user);
+        await ctx.answerCallbackQuery({ text: `Подписка оформлена: ${ev.location}` });
+      } else {
+        await ctx.answerCallbackQuery({ text: 'Уже в подписках' });
+      }
+    } else {
+      user.competitions = user.competitions.filter(c => c.id !== eventId);
+      await saveUser(ctx.env.KV_STORAGE, user);
+      await ctx.answerCallbackQuery({ text: 'Подписка отменена' });
+    }
+
+    await showCompetitionsPage(ctx, disc, page, true);
+  });
+
+  // Track event by ID or keyword command: /track_event <id>
   composer.command(['track_event', 'track'], async (ctx) => {
     const raw = (ctx.message?.text || '').replace(/^\/(track_event|track)/, '').trim();
     if (!raw) {
       await ctx.reply(
-        'Укажите ID состязания или город/клуб для поиска:\n' +
-        'Пример по ID: /track_event ev_td6lum\n' +
-        'Пример по поиску: /track Ставрополь'
+        `Отслеживание состязаний РКФ 2026\n` +
+        `— — — — — — — — — — — — — — —\n` +
+        `Укажите ID мероприятия или город для поиска:\n` +
+        `• По ID: /track_event ev_td6lum\n` +
+        `• Поиск по городу: /track Ставрополь`
       );
       return;
     }
@@ -51,21 +113,27 @@ export function registerCompetitionsHandler(composer: Composer<BotContext>): voi
       return;
     }
 
-    // Search by query
     const results = filterCompetitions({ query: raw, limit: 3 });
     if (results.length === 0) {
-      await ctx.reply(`Состязаний по запросу "${raw}" в календаре 2026 года не найдено.`);
+      await ctx.reply(`Состязаний по запросу "${raw}" в календаре 2026 года не найдено.`, {
+        reply_markup: getCompetitionsMenuKeyboard()
+      });
       return;
     }
 
-    await ctx.reply(`Найдено мероприятий в календаре 2026: ${results.length}`);
     for (const item of results) {
       const card = formatCompetitionCard(item);
       await ctx.reply(card, { reply_markup: getEventActionKeyboard(item.id, false) });
     }
   });
 
-  // Callback subscribe/unsubscribe
+  composer.command(['untrack', 'untrack_event'], async (ctx) => {
+    const raw = (ctx.message?.text || '').replace(/^\/(untrack_event|untrack)/, '').trim();
+    if (raw) {
+      await unsubscribeFromEvent(ctx, raw);
+    }
+  });
+
   composer.callbackQuery(/^comp_sub:(.+)$/, async (ctx) => {
     const eventId = ctx.match ? ctx.match[1] : '';
     await ctx.answerCallbackQuery();
@@ -78,137 +146,50 @@ export function registerCompetitionsHandler(composer: Composer<BotContext>): voi
     await unsubscribeFromEvent(ctx, eventId);
   });
 
-  // My subscriptions list
   composer.callbackQuery('comp_list', async (ctx) => {
     await ctx.answerCallbackQuery();
     await showUserSubscriptions(ctx);
   });
 }
 
-async function showCompetitionsHub(ctx: BotContext): Promise<void> {
+async function showCompetitionsHub(ctx: BotContext, isEdit: boolean): Promise<void> {
   const counts = getDisciplineCounts();
-  const text =
-    `Календарь состязаний РКФ 2026:\n\n` +
-    `Всего мероприятий в графике: ${counts.total}\n` +
-    `• Курсинг борзых: ${counts.coursing}\n` +
-    `• Бега борзых (круг): ${counts.racing}\n` +
-    `• Бега за мех. приманкой (БЗМП): ${counts.bzmp}\n\n` +
-    `Статусы согласования:\n` +
-    `• Официально утверждено: ${counts.approved}\n` +
-    `• На согласовании РКФ: ${counts.pending}\n\n` +
-    `Выберите категорию для просмотра или подписки на статус:`;
+  const text = buildCompetitionsHubText(counts);
+  const kb = getCompetitionsMenuKeyboard();
 
-  await ctx.reply(text, { reply_markup: getCompetitionsMenuKeyboard() });
+  if (isEdit) {
+    try {
+      await ctx.editMessageText(text, { reply_markup: kb });
+      return;
+    } catch {}
+  }
+  await ctx.reply(text, { reply_markup: kb });
 }
 
-async function showDisciplineEvents(ctx: BotContext, discKey: string): Promise<void> {
-  const discMap: Record<string, string> = {
-    coursing: 'курсинг',
-    racing: 'бега борзых',
-    bzmp: 'приманк'
-  };
-
-  const discFilter = discMap[discKey] || 'all';
-  const events = filterCompetitions({ discipline: discFilter, limit: 5 });
-
-  if (events.length === 0) {
-    await ctx.reply('Мероприятий в выбранной категории не найдено.');
-    return;
-  }
-
-  await ctx.reply(`Показаны ближайшие мероприятия (${events.length}):`);
-  for (const ev of events) {
-    const card = formatCompetitionCard(ev);
-    await ctx.reply(card, { reply_markup: getEventActionKeyboard(ev.id, false) });
-  }
-}
-
-async function subscribeToEvent(ctx: BotContext, eventId: string): Promise<void> {
+async function showCompetitionsPage(
+  ctx: BotContext,
+  discKey: string,
+  page: number,
+  isEdit: boolean
+): Promise<void> {
   const userId = ctx.from?.id;
-  const chatId = ctx.chat?.id;
-  if (!userId || !chatId) return;
+  const user = userId ? await getUser(ctx.env.KV_STORAGE, userId) : null;
+  const subIds = new Set((user?.competitions || []).map(c => c.id));
 
-  const ev = findCompetitionById(eventId);
-  if (!ev) {
-    await ctx.reply('Состязание с указанным ID не найдено в реестре 2026.');
-    return;
+  const events = filterCompetitions(getFilterParams(discKey));
+  const total = events.length;
+  const totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
+  const p = Math.min(Math.max(0, page), totalPages - 1);
+  const pageEvents = events.slice(p * PAGE_SIZE, (p + 1) * PAGE_SIZE);
+
+  const text = buildCompetitionsPageText(pageEvents, p, totalPages, total, subIds, discKey);
+  const kb = getCompetitionsPageKeyboard(pageEvents, p, totalPages, subIds, discKey);
+
+  if (isEdit) {
+    try {
+      await ctx.editMessageText(text, { reply_markup: kb });
+      return;
+    } catch {}
   }
-
-  let user = await getUser(ctx.env.KV_STORAGE, userId);
-  if (!user) user = createDefaultUser(userId, chatId);
-
-  user.competitions = user.competitions || [];
-  if (user.competitions.some(c => c.id === eventId)) {
-    await ctx.reply(`Вы уже подписаны на состязание "${ev.discipline}" (${ev.location}).`);
-    return;
-  }
-
-  const sub: CompetitionSubscription = {
-    id: ev.id,
-    query: ev.location,
-    title: `${ev.discipline} (${ev.rank})`,
-    city: ev.location,
-    date: ev.dateRaw,
-    lastStatus: ev.status,
-    createdAt: new Date().toISOString()
-  };
-
-  user.competitions.push(sub);
-  await saveUser(ctx.env.KV_STORAGE, user);
-
-  const st = STATUS_RUSSIAN[ev.status] || ev.status;
-  await ctx.reply(
-    `[ПОДПИСКА ОФОРМЛЕНА]\n` +
-    `Мероприятие: ${sub.title}\n` +
-    `Дата: ${ev.dateRaw}\n` +
-    `Место: ${ev.location}\n` +
-    `Текущий статус: ${st}\n\n` +
-    `Бот уведомит вас личным сообщением при изменении статуса согласования РКФ.`,
-    { reply_markup: getEventActionKeyboard(ev.id, true) }
-  );
-}
-
-async function unsubscribeFromEvent(ctx: BotContext, eventId: string): Promise<void> {
-  const userId = ctx.from?.id;
-  if (!userId) return;
-
-  const user = await getUser(ctx.env.KV_STORAGE, userId);
-  if (!user || !user.competitions) return;
-
-  user.competitions = user.competitions.filter(c => c.id !== eventId);
-  await saveUser(ctx.env.KV_STORAGE, user);
-
-  await ctx.reply('Подписка на состязание отменена.', {
-    reply_markup: getCompetitionsMenuKeyboard()
-  });
-}
-
-async function showUserSubscriptions(ctx: BotContext): Promise<void> {
-  const userId = ctx.from?.id;
-  if (!userId) return;
-
-  const user = await getUser(ctx.env.KV_STORAGE, userId);
-  const subs = user?.competitions || [];
-  const webAppUrl = ctx.env.WEBAPP_URL || 'https://my.coursing-stats.ru';
-
-  if (subs.length === 0) {
-    await ctx.reply(
-      'У вас пока нет активных подписок на состязания РКФ 2026 года.\n\n' +
-      'Выберите состязание в меню состязаний или отправьте:\n' +
-      '/track_event [id]',
-      { reply_markup: getCompetitionsMenuKeyboard() }
-    );
-    return;
-  }
-
-  let text = `Ваши отслеживаемые состязания РКФ (${subs.length}):\n\n`;
-  for (let i = 0; i < subs.length; i++) {
-    const s = subs[i];
-    const city = s.city ? `, ${s.city}` : '';
-    const date = s.date ? ` (${s.date})` : '';
-    const st = STATUS_RUSSIAN[s.lastStatus] || s.lastStatus;
-    text += `${i + 1}. ${s.title}${city}${date}\n   Статус: ${st}\n   Отписаться: /untrack ${s.id}\n\n`;
-  }
-
-  await ctx.reply(text, { reply_markup: getMainMenuKeyboard(webAppUrl) });
+  await ctx.reply(text, { reply_markup: kb });
 }
