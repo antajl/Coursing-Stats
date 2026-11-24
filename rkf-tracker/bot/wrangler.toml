@@ -24,14 +24,3 @@ invocation_logs = true
 
 [build]
 command = "tsc"
-
-exclude = [
-  "backend/**",
-  "frontend/**",
-  "data/**",
-  "docs/**",
-  ".github/**",
-  "node_modules/**",
-  "*.md",
-  "*.lock"
-]

@@ -5,6 +5,7 @@
   "main": "src/worker.ts",
   "scripts": {
     "dev": "wrangler dev",
+    "dev:polling": "tsx src/local-dev.ts",
     "deploy": "wrangler deploy",
     "build": "tsc",
     "test": "vitest",
