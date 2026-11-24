@@ -31,6 +31,9 @@ describe('keyboards (Old Money / Zero Emoji compliance)', () => {
     const promptJson = JSON.stringify(promptKb);
     expect(emojiRegex.test(promptJson)).toBe(false);
     expect(promptJson).toContain('cmd_auth_login');
+    expect(promptJson).toContain('cmd_auth_ext');
+    expect(promptJson).toContain('cmd_auth_bookmarklet');
+    expect(promptJson).toContain('cmd_auth_manual');
     expect(promptJson).toContain('cmd_start');
 
     const howKb = getAuthHowKeyboard();
