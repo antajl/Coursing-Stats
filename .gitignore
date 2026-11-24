@@ -29,6 +29,9 @@ bot/.dev.vars
 rkf-tracker/**/config.json
 rkf-tracker/**/state.json
 rkf-tracker/**/received.json
+rkf-tracker/desktop/lib/
+rkf-tracker/desktop/bin/
+rkf-tracker/desktop/obj/
 !rkf-tracker/**/config.example.json
 
 # ==========================================
