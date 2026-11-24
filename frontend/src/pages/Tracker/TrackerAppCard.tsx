@@ -9,6 +9,7 @@ interface TrackerAppCardProps {
   subtitle: string;
   description: string;
   features: string[];
+  visual?: React.ReactNode;
   action: React.ReactNode;
 }
 
@@ -21,6 +22,7 @@ export function TrackerAppCard({
   subtitle,
   description,
   features,
+  visual,
   action,
 }: TrackerAppCardProps) {
   return (
@@ -54,6 +56,8 @@ export function TrackerAppCard({
             </li>
           ))}
         </ul>
+
+        {visual && <div className="pt-2">{visual}</div>}
       </div>
 
       <div className="pt-5 mt-4 border-t border-old-money-100">{action}</div>

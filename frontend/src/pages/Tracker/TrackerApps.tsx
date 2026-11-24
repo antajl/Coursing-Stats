@@ -11,6 +11,12 @@ import {
 } from 'lucide-react';
 import { getStoredToken } from './trackerData';
 import { TrackerAppCard } from './TrackerAppCard';
+import {
+  TelegramBotVisual,
+  ExtensionVisual,
+  WindowsToastVisual,
+  PwaHomeVisual,
+} from './TrackerAppVisuals';
 
 const EXTENSION_ZIP_URL =
   'https://github.com/antajl/Coursing-Stats/releases/download/v1.0.0-tracker/CoursingStats-Tracker-Chrome-Extension.zip';
@@ -74,29 +80,8 @@ export function TrackerApps() {
   };
 
   return (
-    <div className="space-y-6 max-w-5xl mx-auto py-2">
-      {/* Hero Header */}
-      <div className="rounded-2xl border border-old-money-200/90 bg-gradient-to-b from-cream-100/90 via-cream-50/60 to-white p-6 sm:p-8 shadow-sm">
-        <div className="flex items-center gap-2 mb-2">
-          <span className="px-2.5 py-0.5 rounded-full bg-camel-100 text-[11px] font-bold text-camel-900 uppercase tracking-wider">
-            Экосистема РКФ Трекера
-          </span>
-          <span className="text-xs text-charcoal-400">•</span>
-          <span className="text-xs text-charcoal-600 font-medium">
-            4 способа мониторинга
-          </span>
-        </div>
-        <h2 className="text-xl sm:text-2xl font-bold text-charcoal-900 tracking-tight">
-          Отслеживание дипломов и соревнований на всех устройствах
-        </h2>
-        <p className="mt-2 text-xs sm:text-sm text-charcoal-600 max-w-3xl leading-relaxed">
-          Вам больше не нужно каждый день вручную заходить в личный кабинет РКФ Онлайн и проверять
-          статусы. Выберите удобный формат: Telegram-бот для мгновенных push-уведомлений, автономная
-          программа в трее Windows, расширение для браузера или мобильное приложение.
-        </p>
-      </div>
-
-      {/* 4 Cards Grid */}
+    <div className="space-y-5 max-w-5xl mx-auto py-1">
+      {/* 4 Cards Grid - Straight to practical tools */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
         {/* Card 1: Telegram Bot */}
         <TrackerAppCard
@@ -112,6 +97,7 @@ export function TrackerApps() {
             'Отслеживание согласования состязаний (РКФ)',
             'Быстрая привязка через защищенный код',
           ]}
+          visual={<TelegramBotVisual />}
           action={
             <a
               href={token ? `${TELEGRAM_BOT_URL}?start=bind_${encodeURIComponent(token)}` : TELEGRAM_BOT_URL}
@@ -140,6 +126,7 @@ export function TrackerApps() {
             'Умная кнопка «Обновить» с таймером кулдауна',
             'Прямая синхронизация с сайтом CoursingStats',
           ]}
+          visual={<ExtensionVisual />}
           action={
             <a
               href={EXTENSION_ZIP_URL}
@@ -168,6 +155,7 @@ export function TrackerApps() {
             'Формат Portable: запускается сразу, не требует установки',
             'Потребляет менее 30 МБ оперативной памяти',
           ]}
+          visual={<WindowsToastVisual />}
           action={
             <a
               href={DESKTOP_EXE_URL}
@@ -196,6 +184,7 @@ export function TrackerApps() {
             'Полноэкранный режим без элементов управления браузера',
             'Мгновенная загрузка из локального кэша',
           ]}
+          visual={<PwaHomeVisual />}
           action={
             <div className="space-y-2">
               <button
