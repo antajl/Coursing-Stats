@@ -35,8 +35,20 @@ export function registerAuthHandler(composer: Composer<BotContext>): void {
     } catch {}
 
     const webAppUrl = ctx.env.WEBAPP_URL || 'https://coursing-stats.ru/tracker/';
+    const initialUser = (await getUser(ctx.env.KV_STORAGE, userId)) || createDefaultUser(userId, chatId);
+    await ctx.replyWithChatAction('typing').catch(() => {});
+    await renderSingleBubble(
+      ctx,
+      initialUser,
+      `Привязка аккаунта rkf.online\n` +
+      `— — — — — — — — — — — — — — —\n` +
+      `• Способ: Защищенный вход WebApp\n` +
+      `• Статус: Проверяем сессию и загружаем документы...\n\n` +
+      `Пожалуйста, подождите несколько секунд.`
+    );
+
     const linkRes = await linkUserToken(ctx, userId, chatId, token, 'Защищенный WebApp');
-    const user = (await getUser(ctx.env.KV_STORAGE, userId)) || createDefaultUser(userId, chatId);
+    const user = (await getUser(ctx.env.KV_STORAGE, userId)) || initialUser;
     if (linkRes.ok) {
       await renderSingleBubble(
         ctx,

@@ -125,7 +125,7 @@ async function connectTelegramBot(btn) {
       showToast('Токен не найден. Войдите на rkf.online');
       return;
     }
-    showToast('Открываем Telegram...');
+    showToast('Открываем Telegram... Нажмите «Запустить» в боте', 3500);
     if (btn) btn.disabled = true;
 
     try {
@@ -281,10 +281,10 @@ async function triggerRefresh() {
   showToast('Заявки успешно синхронизированы!');
 }
 
-function showToast(text) {
+function showToast(text, duration = 2000) {
   toast.innerText = text;
   toast.classList.add('show');
-  setTimeout(() => toast.classList.remove('show'), 2000);
+  setTimeout(() => toast.classList.remove('show'), duration);
 }
 
 function showErrorModal(title, desc, hint) {

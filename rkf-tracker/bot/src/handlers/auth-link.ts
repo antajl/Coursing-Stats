@@ -46,6 +46,15 @@ export async function processDirectToken(
   rawToken: string
 ): Promise<void> {
   const user = (await getUser(ctx.env.KV_STORAGE, userId)) || createDefaultUser(userId, chatId);
+  await ctx.replyWithChatAction('typing').catch(() => {});
+  await renderSingleBubble(
+    ctx,
+    user,
+    `Привязка аккаунта rkf.online\n` +
+    `— — — — — — — — — — — — — — —\n` +
+    `• Статус: Проверяем сессию и загружаем документы...\n\n` +
+    `Пожалуйста, подождите несколько секунд.`
+  );
   const res = await linkUserToken(ctx, userId, chatId, rawToken, 'Прямой ввод');
   const webAppUrl = ctx.env.WEBAPP_URL || 'https://coursing-stats.ru/tracker/';
 

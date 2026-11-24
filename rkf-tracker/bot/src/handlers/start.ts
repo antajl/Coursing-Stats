@@ -66,6 +66,21 @@ export function registerStartHandler(composer: Composer<BotContext>): void {
 
       if (payload.startsWith('tk_')) {
         sourceLabel = 'Компьютер (Расширение / Приложение)';
+      }
+
+      // Instant user feedback (< 100ms): chat action + progress bubble
+      await ctx.replyWithChatAction('typing').catch(() => {});
+      await renderSingleBubble(
+        ctx,
+        user,
+        `Привязка аккаунта rkf.online\n` +
+        `— — — — — — — — — — — — — — —\n` +
+        `• Способ: ${sourceLabel}\n` +
+        `• Статус: Проверяем сессию и загружаем документы...\n\n` +
+        `Пожалуйста, подождите несколько секунд.`
+      );
+
+      if (payload.startsWith('tk_')) {
         const savedToken = await ctx.env.KV_STORAGE.get(`pair:ticket:${payload}`);
         if (savedToken) {
           tokenToLink = savedToken;
