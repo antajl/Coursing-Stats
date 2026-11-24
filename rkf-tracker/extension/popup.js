@@ -171,7 +171,7 @@ async function checkAuthAndInit() {
 async function showDashboard(store) {
   document.body.classList.remove('is-logged-out');
   authCard.style.display = 'none';
-  mainDashboard.style.display = 'block';
+  mainDashboard.style.display = 'flex';
   statusBadge.style.display = 'inline-flex';
 
   const lastTime = parseInt(store.rkf_last_refresh_timestamp || '0', 10);
