@@ -10,7 +10,7 @@ export function TrackerDownloadModal({ isOpen, onClose }: TrackerDownloadModalPr
 
   const downloadExeUrl = 'https://github.com/antajl/Coursing-Stats/releases/download/v1.0.0-tracker/CoursingStats-Tracker-Windows-x64.exe';
   const downloadZipUrl = 'https://github.com/antajl/Coursing-Stats/releases/download/v1.0.0-tracker/CoursingStats-Tracker-Chrome-Extension.zip';
-  const botUrl = 'https://t.me/coursing_stats_tracker_bot';
+  const botUrl = 'https://t.me/coursing_stats_notify_bot';
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-charcoal-900/60 backdrop-blur-sm">
@@ -97,7 +97,7 @@ export function TrackerDownloadModal({ isOpen, onClose }: TrackerDownloadModalPr
             <div className="flex-1 min-w-0">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-bold text-charcoal-900">
-                  Телеграм-бот @coursing_stats_tracker_bot
+                  Телеграм-бот @coursing_stats_notify_bot
                 </span>
                 <span className="text-[10px] font-mono px-2 py-0.5 rounded-md bg-emerald-100 font-bold text-emerald-800">
                   Уведомления

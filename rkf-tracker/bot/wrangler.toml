@@ -5,7 +5,7 @@ compatibility_date = "2025-11-01"
 [vars]
 WEBAPP_URL = "https://my.coursing-stats.ru"
 SITE_URL = "https://coursing-stats.ru"
-BOT_USERNAME = "coursing_stats_tracker_bot"
+BOT_USERNAME = "coursing_stats_notify_bot"
 
 [[kv_namespaces]]
 binding = "KV_STORAGE"

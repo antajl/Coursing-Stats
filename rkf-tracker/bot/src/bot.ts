@@ -6,10 +6,10 @@ import { createBotComposer } from './handlers/index.js';
 export function createBot(token: string, env: Env): Bot<BotContext> {
   const bot = new Bot<BotContext>(token, {
     botInfo: {
-      id: 8937199085,
+      id: 9278827269,
       is_bot: true,
-      first_name: 'RKF Tracker Bot',
-      username: 'coursing_stats_tracker_bot',
+      first_name: 'CoursingStats Tracker',
+      username: 'coursing_stats_notify_bot',
       can_join_groups: false,
       can_read_all_group_messages: false,
       supports_inline_queries: false,
