@@ -46,14 +46,19 @@ export async function runBackgroundPolling(env: Env): Promise<{ checkedUsers: nu
         }
         user.cachedApps = nextCache;
         user.lastCheckedAt = new Date().toISOString();
+        user.authExpiredNotifiedAt = undefined;
         userModified = true;
       } catch (err: any) {
-        if (err?.message === 'AUTH_EXPIRED') {
-          await sendTelegramMessage(
+        if (err?.message === 'AUTH_EXPIRED' && !user.authExpiredNotifiedAt) {
+          const sent = await sendTelegramMessage(
             token,
             user.chatId,
             '[ВНИМАНИЕ] Срок действия токена RKF.Online истек. Пожалуйста, обновите токен через команду /auth.'
           );
+          if (sent) {
+            user.authExpiredNotifiedAt = new Date().toISOString();
+            userModified = true;
+          }
         }
       }
     }

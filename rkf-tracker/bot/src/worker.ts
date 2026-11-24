@@ -3,21 +3,41 @@ import type { Update } from 'grammy/types';
 import type { Env } from './types.js';
 import { createBot } from './bot.js';
 import { runBackgroundPolling } from './services/poller.js';
-import { handleAuthLogin, handleAuthTicket } from './worker-auth.js';
+import { handleAuthLogin, handleAuthTicket, handleApplicationsList, handleSyncState } from './worker-auth.js';
 
 let cachedBot: ReturnType<typeof createBot> | null = null;
+
+function buildCorsHeaders(request: Request): Record<string, string> {
+  const origin = request.headers.get('Origin') || '';
+  const isAllowed =
+    origin === 'https://coursing-stats.ru' ||
+    /^https:\/\/([a-z0-9-]+\.)?coursing-stats\.ru$/i.test(origin) ||
+    /^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/i.test(origin) ||
+    origin.startsWith('chrome-extension://') ||
+    origin.startsWith('moz-extension://');
+
+  return {
+    'Access-Control-Allow-Origin': isAllowed ? origin : 'https://coursing-stats.ru',
+    'Access-Control-Allow-Methods': 'GET, POST, PUT, OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+    'Vary': 'Origin',
+  };
+}
+
+function isAdminAuthorized(request: Request, env: Env): boolean {
+  const secret = env.ADMIN_SECRET?.trim();
+  if (!secret) return false;
+  const authHeader = request.headers.get('Authorization')?.replace(/^Bearer\s+/i, '').trim();
+  const headerSecret = request.headers.get('X-Admin-Secret')?.trim();
+  return authHeader === secret || headerSecret === secret;
+}
 
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
     const rawToken = env.BOT_TOKEN || env.TELEGRAM_BOT_TOKEN;
     const token = rawToken ? rawToken.trim() : '';
-
-    const corsHeaders = {
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type, Authorization'
-    };
+    const corsHeaders = buildCorsHeaders(request);
 
     if (request.method === 'OPTIONS') {
       return new Response(null, { headers: corsHeaders });
@@ -36,24 +56,12 @@ export default {
       return handleAuthTicket(request, env, corsHeaders);
     }
 
-    // Health check endpoint
-    if (url.pathname === '/get-me') {
-      const meRes = await fetch(`https://api.telegram.org/bot${token}/getMe`);
-      const meData = await meRes.text();
-      return new Response(meData, {
-        status: meRes.status,
-        headers: { 'content-type': 'application/json' }
-      });
+    if (url.pathname === '/api/applications' && request.method === 'GET') {
+      return handleApplicationsList(request, corsHeaders);
     }
 
-    if (url.pathname === '/debug') {
-      const lastUpdate = await env.KV_STORAGE.get('debug:last_update') || 'none';
-      const lastError = await env.KV_STORAGE.get('debug:last_error') || 'none';
-      const lastBotCatch = await env.KV_STORAGE.get('debug:last_bot_catch') || 'none';
-      return new Response(JSON.stringify({ lastUpdate, lastError, lastBotCatch }, null, 2), {
-        status: 200,
-        headers: { 'content-type': 'application/json' }
-      });
+    if (url.pathname === '/api/sync' && (request.method === 'GET' || request.method === 'PUT')) {
+      return handleSyncState(request, env, corsHeaders);
     }
 
     if (url.pathname === '/health') {
@@ -64,31 +72,50 @@ export default {
       });
     }
 
-    // Webhook info endpoint
-    if (url.pathname === '/webhook-info') {
-      const infoRes = await fetch(`https://api.telegram.org/bot${token}/getWebhookInfo`);
-      const infoData = await infoRes.json();
-      return new Response(JSON.stringify(infoData), {
-        status: 200,
-        headers: { 'content-type': 'application/json' }
-      });
-    }
+    // Admin-only diagnostic & webhook endpoints
+    if (url.pathname === '/get-me' || url.pathname === '/webhook-info' || url.pathname === '/set-webhook') {
+      if (!isAdminAuthorized(request, env)) {
+        return new Response(JSON.stringify({ error: 'Unauthorized' }), {
+          status: 401,
+          headers: { 'content-type': 'application/json' }
+        });
+      }
 
-    // Webhook registration endpoint
-    if (url.pathname === '/set-webhook') {
+      if (url.pathname === '/get-me') {
+        const meRes = await fetch(`https://api.telegram.org/bot${token}/getMe`);
+        const meData = await meRes.text();
+        return new Response(meData, {
+          status: meRes.status,
+          headers: { 'content-type': 'application/json' }
+        });
+      }
+
+      if (url.pathname === '/webhook-info') {
+        const infoRes = await fetch(`https://api.telegram.org/bot${token}/getWebhookInfo`);
+        const infoData = await infoRes.json();
+        return new Response(JSON.stringify(infoData), {
+          status: 200,
+          headers: { 'content-type': 'application/json' }
+        });
+      }
+
+      // /set-webhook
       const webhookUrl = `${url.origin}/webhook`;
+      const webhookPayload: Record<string, unknown> = {
+        url: webhookUrl,
+        allowed_updates: ['message', 'callback_query'],
+        drop_pending_updates: true
+      };
+      if (env.WEBHOOK_SECRET?.trim()) {
+        webhookPayload.secret_token = env.WEBHOOK_SECRET.trim();
+      }
       const whRes = await fetch(`https://api.telegram.org/bot${token}/setWebhook`, {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({
-          url: webhookUrl,
-          allowed_updates: ['message', 'callback_query'],
-          drop_pending_updates: true
-        })
+        body: JSON.stringify(webhookPayload)
       });
       const whData: any = await whRes.json();
 
-      // Register bot commands list in Telegram menu
       try {
         await fetch(`https://api.telegram.org/bot${token}/setMyCommands`, {
           method: 'POST',
@@ -111,7 +138,6 @@ export default {
         console.error('[set-webhook] Failed to set bot commands:', cmdErr);
       }
 
-      // Set native WebApp menu button
       try {
         const webAppUrl = env.WEBAPP_URL || 'https://coursing-stats.ru/tracker/';
         await fetch(`https://api.telegram.org/bot${token}/setChatMenuButton`, {
@@ -137,36 +163,30 @@ export default {
 
     // Telegram webhook handler
     if (request.method === 'POST' && (url.pathname === '/webhook' || url.pathname === '/')) {
+      const expectedSecret = env.WEBHOOK_SECRET?.trim();
+      if (expectedSecret) {
+        const incomingSecret = request.headers.get('X-Telegram-Bot-Api-Secret-Token');
+        if (incomingSecret !== expectedSecret) {
+          return new Response('Forbidden', { status: 403 });
+        }
+      }
+
       try {
         const update: Update = await request.json();
-        try {
-          await env.KV_STORAGE.put('debug:last_update', JSON.stringify(update), { expirationTtl: 3600 });
-        } catch {}
 
         if (!cachedBot) {
           cachedBot = createBot(token, env);
-          cachedBot.catch(async (err) => {
-            const msg = `BotError: ${err.message || String(err.error)} | Update: ${err.ctx?.update?.update_id}`;
-            console.error('[bot.catch]', msg);
-            try {
-              await env.KV_STORAGE.put('debug:last_bot_catch', msg, { expirationTtl: 3600 });
-            } catch {}
+          cachedBot.catch((err) => {
+            console.error('[bot.catch]', `Update ${err.ctx?.update?.update_id}:`, err.message || String(err.error));
           });
         }
 
         await cachedBot.handleUpdate(update);
         return new Response('OK', { status: 200 });
       } catch (err: any) {
-        const errMsg = err?.message || String(err);
-        console.error('[Webhook error]', err);
-        try {
-          await env.KV_STORAGE.put('debug:last_error', `${errMsg} | stack: ${err?.stack || ''}`, { expirationTtl: 3600 });
-        } catch {}
-        return new Response(JSON.stringify({
-          error: errMsg,
-          stack: err?.stack || ''
-        }), {
-          status: 200,
+        console.error('[Webhook error]', err?.message || String(err));
+        return new Response(JSON.stringify({ ok: false }), {
+          status: 500,
           headers: { 'content-type': 'application/json' }
         });
       }

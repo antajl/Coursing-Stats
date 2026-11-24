@@ -43,12 +43,15 @@ export interface UserRecord {
   competitions: CompetitionSubscription[];
   cachedApps: Record<string, { status: string; statusGroup: StatusGroup; lastUpdated: string }>;
   lastBotMessageId?: number;
+  authExpiredNotifiedAt?: string;
 }
 
 export interface Env {
   KV_STORAGE: KVNamespace;
   BOT_TOKEN?: string;
   TELEGRAM_BOT_TOKEN?: string;
+  WEBHOOK_SECRET?: string;
+  ADMIN_SECRET?: string;
   WEBAPP_URL?: string;
   BOT_USERNAME?: string;
   SITE_URL?: string;

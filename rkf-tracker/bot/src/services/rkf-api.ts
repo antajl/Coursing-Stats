@@ -15,7 +15,10 @@ export function determineStatusGroup(status: string): StatusGroup {
 async function fetchFeed(filterType: number, headers: Record<string, string>): Promise<any[]> {
   let all: any[] = [];
   let page = 1;
-  while (true) {
+  let iterations = 0;
+  const MAX_ITERATIONS = 10;
+  while (iterations < MAX_ITERATIONS) {
+    iterations++;
     try {
       const url = `https://rkf.online/api/article/articles_feed?start_element=${page}&size=50&filter_type=${filterType}`;
       const res = await fetch(url, { headers });

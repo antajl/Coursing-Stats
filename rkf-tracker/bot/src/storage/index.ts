@@ -2,7 +2,6 @@
 import type { UserRecord } from '../types.js';
 
 const USER_PREFIX = 'user:';
-const INDEX_KEY = 'users:index';
 
 export async function getUser(kv: KVNamespace | undefined, userId: number): Promise<UserRecord | null> {
   if (!kv) return null;
@@ -20,7 +19,6 @@ export async function saveUser(kv: KVNamespace | undefined, user: UserRecord): P
   if (!kv) return;
   try {
     await kv.put(`${USER_PREFIX}${user.userId}`, JSON.stringify(user));
-    await addUserToIndex(kv, user.userId);
   } catch (err) {
     console.error('[KV saveUser error]', err);
   }
@@ -30,9 +28,6 @@ export async function deleteUser(kv: KVNamespace | undefined, userId: number): P
   if (!kv) return;
   try {
     await kv.delete(`${USER_PREFIX}${userId}`);
-    const index = await getUserIndex(kv);
-    const updated = index.filter(id => id !== userId);
-    await kv.put(INDEX_KEY, JSON.stringify(updated));
   } catch (err) {
     console.error('[KV deleteUser error]', err);
   }
@@ -41,25 +36,20 @@ export async function deleteUser(kv: KVNamespace | undefined, userId: number): P
 export async function getUserIndex(kv: KVNamespace | undefined): Promise<number[]> {
   if (!kv) return [];
   try {
-    const data = await kv.get(INDEX_KEY);
-    if (!data) return [];
-    return JSON.parse(data) as number[];
+    const ids: number[] = [];
+    let cursor: string | undefined = undefined;
+    do {
+      const listRes: KVNamespaceListResult<unknown, string> = await kv.list({ prefix: USER_PREFIX, cursor });
+      for (const key of listRes.keys) {
+        const num = Number(key.name.slice(USER_PREFIX.length));
+        if (Number.isFinite(num) && num > 0) ids.push(num);
+      }
+      cursor = listRes.list_complete ? undefined : listRes.cursor;
+    } while (cursor);
+    return ids;
   } catch (err) {
     console.error('[KV getUserIndex error]', err);
     return [];
-  }
-}
-
-async function addUserToIndex(kv: KVNamespace | undefined, userId: number): Promise<void> {
-  if (!kv) return;
-  try {
-    const index = await getUserIndex(kv);
-    if (!index.includes(userId)) {
-      index.push(userId);
-      await kv.put(INDEX_KEY, JSON.stringify(index));
-    }
-  } catch (err) {
-    console.error('[KV addUserToIndex error]', err);
   }
 }
 

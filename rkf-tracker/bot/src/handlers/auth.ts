@@ -177,7 +177,7 @@ export function registerAuthHandler(composer: Composer<BotContext>): void {
     const text = ctx.message.text.trim();
     if (text.startsWith('/')) return next();
 
-    if (text.length >= 30 && !text.includes(' ') && !text.startsWith('http')) {
+    if (/^[A-Za-z0-9._-]{40,}$/.test(text) && !text.startsWith('http')) {
       const userId = ctx.from?.id;
       const chatId = ctx.chat?.id;
       if (!userId || !chatId) return next();

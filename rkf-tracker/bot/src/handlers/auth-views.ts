@@ -1,6 +1,6 @@
 // Text templates and guides for the authentication methods (Strict Zero Emoji)
 export const BOOKMARKLET_CODE =
-  `javascript:(function(){var k=(localStorage.getItem('apikey')||'').replace(/['"]/g,'').trim();if(!k){alert('Сначала войдите в аккаунт на rkf.online, затем нажмите эту закладку.');return;}window.location.href='https://t.me/coursing_stats_notify_bot?start=bind_'+encodeURIComponent(k);})();`;
+  `javascript:(function(){var k=(localStorage.getItem('apikey')||'').replace(/['"]/g,'').trim();if(!k){alert('Сначала войдите в аккаунт на rkf.online, затем нажмите эту закладку.');return;}fetch('https://coursing-stats-tracker-bot.antajltube.workers.dev/api/auth/ticket',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({apikey:k})}).then(function(r){return r.json()}).then(function(d){if(d&&d.ok&&d.botUrl){window.location.href=d.botUrl;}else{alert('Не удалось создать ссылку привязки. Попробуйте через сайт coursing-stats.ru/tracker.');}}).catch(function(){alert('Ошибка сети при подключении к CoursingStats Tracker.');});})();`;
 
 export function getAuthPromptText(): string {
   return (

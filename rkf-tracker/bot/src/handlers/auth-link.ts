@@ -23,6 +23,7 @@ export async function linkUserToken(
   let user = (await getUser(ctx.env.KV_STORAGE, userId)) || createDefaultUser(userId, chatId);
   user.rkfToken = clean;
   user.linkedAt = new Date().toISOString();
+  user.authExpiredNotifiedAt = undefined;
 
   try {
     const apps = await fetchRkfApplications(clean, user.receivedBarcodes);

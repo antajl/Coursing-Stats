@@ -45,10 +45,27 @@ const mockKV: any = {
   },
 };
 
-const token =
-  process.env.BOT_TOKEN ||
-  process.env.TELEGRAM_BOT_TOKEN ||
-  '9278827269:AAHAUakH_YNafGBw5kEjBJqlnlfo8mt7IN4';
+function loadLocalEnv(): void {
+  const envPath = path.resolve(__dirname, '../.env');
+  if (!fs.existsSync(envPath)) return;
+  for (const line of fs.readFileSync(envPath, 'utf8').split(/\r?\n/)) {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith('#')) continue;
+    const eqIdx = trimmed.indexOf('=');
+    if (eqIdx <= 0) continue;
+    const key = trimmed.slice(0, eqIdx).trim();
+    const val = trimmed.slice(eqIdx + 1).trim().replace(/^["']|["']$/g, '');
+    if (!process.env[key]) process.env[key] = val;
+  }
+}
+
+loadLocalEnv();
+
+const token = process.env.BOT_TOKEN || process.env.TELEGRAM_BOT_TOKEN;
+if (!token) {
+  console.error('Error: BOT_TOKEN or TELEGRAM_BOT_TOKEN must be set in environment or rkf-tracker/bot/.env');
+  process.exit(1);
+}
 
 console.log('--- CoursingStats RKF Tracker Bot Local Runner ---');
 console.log('Using bot token:', token.slice(0, 10) + '...' + token.slice(-5));
