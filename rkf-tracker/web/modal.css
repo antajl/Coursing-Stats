@@ -199,27 +199,91 @@
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
 }
 
-.auth-web-box {
-  background: #FAF8F5;
-  border: 1px solid var(--border-subtle);
-  border-radius: 8px;
-  padding: 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+/* Primary Official RKF Login Card */
+.auth-primary-box {
+  background: linear-gradient(135deg, #FAF7F2 0%, #F5EFEB 100%);
+  border: 1px solid rgba(185, 155, 115, 0.45);
+  border-radius: 10px;
+  padding: 14px 16px;
+  box-shadow: 0 2px 8px rgba(34, 31, 31, 0.04);
+  margin-bottom: 10px;
 }
 
-.auth-web-feature {
-  display: flex;
-  align-items: flex-start;
+.auth-primary-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(4, 120, 87, 0.08);
+  border: 1px solid rgba(4, 120, 87, 0.22);
+  color: #047857;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 12px;
+  margin-bottom: 6px;
+}
+
+.auth-primary-title {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #241708;
+  margin: 0;
+}
+
+.auth-btn-primary {
+  width: 100%;
+  height: 40px;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.auth-btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(139, 69, 19, 0.2);
+}
+
+/* Alternate / Fallback Login Accordion */
+.auth-alt-accordion {
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 8px;
+  margin-top: 4px;
+}
+
+.auth-alt-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  padding: 6px 4px;
   font-size: 11.5px;
-  color: var(--text-muted);
-  line-height: 1.4;
+  font-weight: 600;
+  color: var(--text-soft);
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.15s ease;
 }
 
-.auth-web-feature svg {
-  color: var(--camel);
-  flex-shrink: 0;
-  margin-top: 1px;
+.auth-alt-toggle:hover {
+  color: var(--text-main);
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.alt-chevron {
+  transition: transform 0.2s ease;
+}
+
+.auth-alt-toggle.open .alt-chevron {
+  transform: rotate(180deg);
+}
+
+.auth-alt-content {
+  padding: 4px 0 2px 0;
 }

@@ -26,6 +26,10 @@ namespace CoursingStats.RkfTracker
 
         private static Mutex appMutex;
 
+        public static volatile string LastWebLoginToken = null;
+        public static volatile bool IsWebLoginActive = false;
+        public static volatile bool IsWebLoginCanceled = false;
+
         [STAThread]
         static void Main(string[] args)
         {
@@ -241,10 +245,40 @@ namespace CoursingStats.RkfTracker
 
         public static void StartWebLogin()
         {
+            if (mainWindow != null && mainWindow.InvokeRequired)
+            {
+                mainWindow.BeginInvoke(new Action(StartWebLogin));
+                return;
+            }
+
+            IsWebLoginActive = true;
+            IsWebLoginCanceled = false;
+            LastWebLoginToken = null;
+
+            string icoPath = Path.Combine(baseDir, "app.ico");
+            var loginWin = new LoginWindow(icoPath);
+            loginWin.Show(mainWindow);
+        }
+
+        public static void OnWebLoginCompleted(string token)
+        {
+            LastWebLoginToken = token;
+            IsWebLoginActive = false;
+            IsWebLoginCanceled = false;
+            if (poller != null)
+            {
+                poller.SaveToken(token);
+            }
             if (mainWindow != null)
             {
-                mainWindow.StartWebLogin();
+                mainWindow.ShowAndActivate();
             }
+        }
+
+        public static void OnWebLoginCanceled()
+        {
+            IsWebLoginActive = false;
+            IsWebLoginCanceled = true;
         }
 
         public static void SaveTokenFromWeb(string token)

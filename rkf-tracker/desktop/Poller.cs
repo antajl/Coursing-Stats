@@ -62,6 +62,24 @@ namespace CoursingStats.RkfTracker
             catch { }
         }
 
+        public void SaveTelegramTicket(string ticket)
+        {
+            try
+            {
+                string cfgPath = Path.Combine(baseDir, "config.json");
+                var dict = new Dictionary<string, object>();
+                if (File.Exists(cfgPath))
+                {
+                    string txt = File.ReadAllText(cfgPath, Encoding.UTF8);
+                    dict = json.Deserialize<Dictionary<string, object>>(txt) ?? new Dictionary<string, object>();
+                }
+                dict["telegram_ticket"] = ticket ?? string.Empty;
+                dict["telegram_ticket_created"] = DateTime.UtcNow.ToString("o");
+                File.WriteAllText(cfgPath, json.Serialize(dict), Encoding.UTF8);
+            }
+            catch { }
+        }
+
         public Dictionary<string, string> LoadState()
         {
             string p = Path.Combine(baseDir, "state.json");

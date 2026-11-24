@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Net;
 using System.Text;
@@ -98,6 +99,36 @@ namespace CoursingStats.RkfTracker
             if (path == "/api/desktop/check-now") { SendJson(res, new { ok = true, changes = poller.PollOnce() }); return; }
             if (path == "/api/desktop/auth/logout") { poller.SaveToken(string.Empty); SendJson(res, new { ok = true }); return; }
             if (path == "/api/desktop/auth/start-web-login") { Program.StartWebLogin(); SendJson(res, new { ok = true }); return; }
+
+            if (path == "/api/desktop/auth/poll-web-login")
+            {
+                if (!string.IsNullOrEmpty(Program.LastWebLoginToken))
+                {
+                    string token = Program.LastWebLoginToken;
+                    Program.LastWebLoginToken = null;
+                    SendJson(res, new { ok = true, status = "success", token = token });
+                }
+                else if (Program.IsWebLoginCanceled)
+                {
+                    Program.IsWebLoginCanceled = false;
+                    SendJson(res, new { ok = false, status = "canceled" });
+                }
+                else
+                {
+                    SendJson(res, new { ok = true, status = Program.IsWebLoginActive ? "active" : "idle" });
+                }
+                return;
+            }
+
+            if (path == "/api/desktop/telegram/bind-url")
+            {
+                string ticket = Guid.NewGuid().ToString("N").Substring(0, 16);
+                string url = "https://t.me/coursing_stats_notify_bot?start=bind_tk_" + ticket;
+                poller.SaveTelegramTicket(ticket);
+                try { Process.Start(new ProcessStartInfo(url) { UseShellExecute = true }); } catch { }
+                SendJson(res, new { ok = true, ticket = ticket, url = url });
+                return;
+            }
 
             if (path == "/api/desktop/open-external")
             {

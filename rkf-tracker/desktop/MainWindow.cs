@@ -14,7 +14,6 @@ namespace CoursingStats.RkfTracker
         private readonly string startUrl;
         private bool isForceExit;
         private readonly bool startsMinimized;
-        private bool isWebLoginActive;
 
         public MainWindow(string url, string iconPath, bool isMinimized = false)
         {
@@ -60,7 +59,6 @@ namespace CoursingStats.RkfTracker
                 webView.CoreWebView2.Settings.IsStatusBarEnabled = false;
 
                 webView.CoreWebView2.NavigationStarting += OnNavigationStarting;
-                webView.CoreWebView2.NavigationCompleted += OnNavigationCompleted;
                 webView.CoreWebView2.Navigate(startUrl);
             }
             catch (Exception ex)
@@ -77,15 +75,6 @@ namespace CoursingStats.RkfTracker
 
             if (uri.StartsWith("http://127.0.0.1:") || uri.StartsWith("http://localhost:"))
             {
-                if (isWebLoginActive && !uri.Contains("/api/desktop/auth/start-web-login"))
-                {
-                    isWebLoginActive = false;
-                }
-                return;
-            }
-
-            if (isWebLoginActive && (uri.StartsWith("https://rkf.online") || uri.StartsWith("https://my.rkf.online")))
-            {
                 return;
             }
 
@@ -95,62 +84,6 @@ namespace CoursingStats.RkfTracker
                 Process.Start(new ProcessStartInfo(uri) { UseShellExecute = true });
             }
             catch { }
-        }
-
-        private async void OnNavigationCompleted(object sender, CoreWebView2NavigationCompletedEventArgs e)
-        {
-            if (!isWebLoginActive || webView == null || webView.CoreWebView2 == null) return;
-
-            try
-            {
-                string res = await webView.ExecuteScriptAsync("localStorage.getItem('apikey')");
-                if (!string.IsNullOrEmpty(res) && res != "null" && res != "\"\"")
-                {
-                    string token = res.Trim('"', ' ', '\r', '\n');
-                    if (!string.IsNullOrEmpty(token))
-                    {
-                        CompleteWebLogin(token);
-                        return;
-                    }
-                }
-
-                string injectJs =
-                    "(function() {" +
-                    "  if (document.getElementById('cs-back-bar')) return;" +
-                    "  const b = document.createElement('div');" +
-                    "  b.id = 'cs-back-bar';" +
-                    "  b.style.cssText = 'position:fixed;bottom:16px;right:16px;z-index:999999;background:#201202;color:#F9F6F0;padding:7px 12px;border-radius:20px;font-family:sans-serif;font-size:12px;font-weight:600;box-shadow:0 4px 14px rgba(0,0,0,0.3);display:flex;align-items:center;gap:8px;cursor:pointer;';" +
-                    "  b.innerHTML = '<span>CoursingStats</span><button style=\"background:#8B4513;color:#fff;border:none;padding:2px 8px;border-radius:10px;cursor:pointer;font-size:11px;\">« В трекер</button>';" +
-                    "  b.onclick = function() { window.location.href = '" + startUrl + "'; };" +
-                    "  document.body.appendChild(b);" +
-                    "})();";
-                await webView.ExecuteScriptAsync(injectJs);
-            }
-            catch { }
-        }
-
-        public void StartWebLogin()
-        {
-            if (this.InvokeRequired)
-            {
-                this.BeginInvoke(new Action(StartWebLogin));
-                return;
-            }
-            isWebLoginActive = true;
-            ShowAndActivate();
-            if (webView != null && webView.CoreWebView2 != null)
-            {
-                webView.CoreWebView2.Navigate("https://rkf.online/login");
-            }
-        }
-
-        private void CompleteWebLogin(string token)
-        {
-            isWebLoginActive = false;
-            Program.SaveTokenFromWeb(token);
-            string sep = startUrl.Contains("?") ? "&" : "?";
-            string target = startUrl + sep + "token=" + Uri.EscapeDataString(token);
-            webView.CoreWebView2.Navigate(target);
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)

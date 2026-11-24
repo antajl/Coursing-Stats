@@ -1,6 +1,7 @@
 ﻿# CoursingStats • RKF Tracker Desktop Build Script
 $ErrorActionPreference = "Stop"
 $desktopDir = $PSScriptRoot
+Stop-Process -Name "RkfTracker" -Force -ErrorAction SilentlyContinue
 
 Write-Host "[1/4] Checking dependencies..."
 $libDir = Join-Path $desktopDir "lib"
@@ -33,6 +34,7 @@ Write-Host "[3/4] Compiling RkfTracker.exe..."
 $sources = @(
     (Join-Path $desktopDir "Program.cs"),
     (Join-Path $desktopDir "MainWindow.cs"),
+    (Join-Path $desktopDir "LoginWindow.cs"),
     (Join-Path $desktopDir "LocalServer.cs"),
     (Join-Path $desktopDir "Poller.cs"),
     (Join-Path $desktopDir "AutostartHelper.cs"),

@@ -21,14 +21,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function initData() {
   const token = localStorage.getItem('cs_rkf_token');
+  const tgCard = document.getElementById('tg-bridge-card');
 
   if (token) {
     isMockMode = false;
     updateModeBadge('Личный кабинет РКФ', true);
+    if (tgCard) tgCard.style.display = 'flex';
     fetchLiveData(token);
   } else {
     isMockMode = false;
     updateModeBadge('Не подключен', false);
+    if (tgCard) tgCard.style.display = 'none';
     apps = [];
     render();
   }
