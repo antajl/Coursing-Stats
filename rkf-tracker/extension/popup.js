@@ -65,19 +65,19 @@ function setupEventListeners() {
   document.getElementById('btn-close-guide').addEventListener('click', hideGuide);
   document.getElementById('btn-guide-ok').addEventListener('click', hideGuide);
 
-  // Brand link
+  // Brand link -> Opens Web Tracker with auto-token handover
   const brandLink = document.getElementById('brand-link');
   if (brandLink) {
     brandLink.addEventListener('click', async (e) => {
       e.preventDefault();
       try {
-        const c = new AbortController();
-        const tid = setTimeout(() => c.abort(), 1200);
-        await fetch('https://my.coursing-stats.ru', { method: 'HEAD', mode: 'no-cors', signal: c.signal });
-        clearTimeout(tid);
-        chrome.tabs.create({ url: 'https://my.coursing-stats.ru' });
+        const store = await chrome.storage.local.get(['rkfToken']);
+        const url = store.rkfToken
+          ? `https://coursing-stats.ru/tracker?token=${encodeURIComponent(store.rkfToken)}`
+          : 'https://coursing-stats.ru/tracker';
+        chrome.tabs.create({ url });
       } catch (_) {
-        chrome.tabs.create({ url: 'https://coursing-stats.ru' });
+        chrome.tabs.create({ url: 'https://coursing-stats.ru/tracker' });
       }
     });
   }
