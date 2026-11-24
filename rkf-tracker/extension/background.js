@@ -8,7 +8,7 @@ chrome.runtime.onInstalled.addListener(async () => {
   const store = await chrome.storage.local.get(['pref_interval', 'pref_notify', 'pref_sound']);
   const interval = store.pref_interval ? parseInt(store.pref_interval, 10) : DEFAULT_INTERVAL_MINUTES;
   const prefNotify = store.pref_notify !== undefined ? store.pref_notify : true;
-  const prefSound = store.prefSound !== undefined ? store.pref_sound : true;
+  const prefSound = store.pref_sound !== undefined ? store.pref_sound : true;
 
   await chrome.storage.local.set({
     pref_interval: interval,
@@ -201,8 +201,9 @@ async function performBackgroundCheck(store) {
     }
     cleanHist.sort((a, b) => new Date(a.date) - new Date(b.date));
     app.history = cleanHist;
-    app.currentStatus = cleanHist[cleanHist.length - 1]?.status || 'Неизвестно';
-    app.lastUpdated = cleanHist[cleanHist.length - 1]?.date || new Date().toISOString();
+    const metaFallback = metaMap[app.barcode] || {};
+    app.currentStatus = cleanHist[cleanHist.length - 1]?.status || metaFallback.status || 'В обработке';
+    app.lastUpdated = cleanHist[cleanHist.length - 1]?.date || metaFallback.date || new Date().toISOString();
     app.statusGroup = determineStatusGroup(app.currentStatus);
     app.isReceived = !!receivedMap[app.barcode];
   }
@@ -275,7 +276,7 @@ async function fetchFeedBackground(filterType, headers) {
 
 function determineStatusGroup(status) {
   const s = (status || '').toLowerCase();
-  if (s.includes('изготовлен') || s.includes('выдан') || s.includes('выполнен')) return 'ready';
+  if (s.includes('изготовлен') || s.includes('выдан') || s.includes('выполнен') || s.includes('готов')) return 'ready';
   if (s.includes('отклон') || s.includes('отказ')) return 'rejected';
   return 'active';
 }

@@ -25,6 +25,7 @@ namespace CoursingStats.RkfTracker
             this.webDir = webDirectory;
             this.poller = pollerInstance;
             listener.Prefixes.Add(string.Format("http://127.0.0.1:{0}/", port));
+            listener.Prefixes.Add(string.Format("http://localhost:{0}/", port));
         }
 
         public void Start()
@@ -75,7 +76,15 @@ namespace CoursingStats.RkfTracker
         {
             var req = ctx.Request;
             var res = ctx.Response;
-            res.Headers["Access-Control-Allow-Origin"] = "*";
+            string origin = req.Headers["Origin"];
+            if (!string.IsNullOrEmpty(origin) && (origin.StartsWith("http://127.0.0.1") || origin.StartsWith("http://localhost")))
+            {
+                res.Headers["Access-Control-Allow-Origin"] = origin;
+            }
+            else
+            {
+                res.Headers["Access-Control-Allow-Origin"] = string.Format("http://127.0.0.1:{0}", port);
+            }
             res.Headers["Access-Control-Allow-Methods"] = "GET, POST, OPTIONS";
             res.Headers["Access-Control-Allow-Headers"] = "Content-Type, Authorization";
 
@@ -97,6 +106,39 @@ namespace CoursingStats.RkfTracker
             if (path == "/api/desktop/status") { SendJson(res, new { ok = true, autostart = AutostartHelper.IsEnabled() }); return; }
             if (path == "/api/desktop/show") { Program.OpenDashboard(); SendJson(res, new { ok = true }); return; }
             if (path == "/api/desktop/check-now") { SendJson(res, new { ok = true, changes = poller.PollOnce() }); return; }
+            if (path == "/api/desktop/test-notification") { Program.ShowTestNotification(); SendJson(res, new { ok = true }); return; }
+            if (path == "/api/desktop/settings")
+            {
+                if (req.HttpMethod == "POST")
+                {
+                    var body = ParseJsonBody(req);
+                    if (body != null)
+                    {
+                        if (body.ContainsKey("interval"))
+                        {
+                            int interval = Convert.ToInt32(body["interval"]);
+                            poller.SaveIntervalMinutes(interval);
+                            Program.SetPollInterval(interval);
+                        }
+                        if (body.ContainsKey("autostart"))
+                        {
+                            bool autostart = Convert.ToBoolean(body["autostart"]);
+                            AutostartHelper.SetEnabled(autostart);
+                        }
+                    }
+                    SendJson(res, new { ok = true });
+                }
+                else
+                {
+                    SendJson(res, new {
+                        ok = true,
+                        interval = poller.GetIntervalMinutes(),
+                        autostart = AutostartHelper.IsEnabled(),
+                        notifications = true
+                    });
+                }
+                return;
+            }
             if (path == "/api/desktop/auth/logout") { poller.SaveToken(string.Empty); SendJson(res, new { ok = true }); return; }
             if (path == "/api/desktop/auth/start-web-login") { Program.StartWebLogin(); SendJson(res, new { ok = true }); return; }
 
@@ -122,11 +164,37 @@ namespace CoursingStats.RkfTracker
 
             if (path == "/api/desktop/telegram/bind-url")
             {
-                string ticket = Guid.NewGuid().ToString("N").Substring(0, 16);
-                string url = "https://t.me/coursing_stats_notify_bot?start=bind_tk_" + ticket;
-                poller.SaveTelegramTicket(ticket);
-                try { Process.Start(new ProcessStartInfo(url) { UseShellExecute = true }); } catch { }
-                SendJson(res, new { ok = true, ticket = ticket, url = url });
+                string rkfToken = poller.GetToken();
+                if (string.IsNullOrEmpty(rkfToken))
+                {
+                    SendJson(res, new { ok = false, error = "Сначала войдите в РКФ Онлайн" }, 401);
+                    return;
+                }
+                try
+                {
+                    var ticketReq = (HttpWebRequest)WebRequest.Create("https://coursing-stats-tracker-bot.antajltube.workers.dev/api/auth/ticket");
+                    ticketReq.Method = "POST";
+                    ticketReq.ContentType = "application/json";
+                    ticketReq.Timeout = 10000;
+                    byte[] payload = Encoding.UTF8.GetBytes(json.Serialize(new { apikey = rkfToken }));
+                    using (var os = ticketReq.GetRequestStream()) os.Write(payload, 0, payload.Length);
+                    using (var ticketRes = (HttpWebResponse)ticketReq.GetResponse())
+                    using (var sr = new StreamReader(ticketRes.GetResponseStream(), Encoding.UTF8))
+                    {
+                        var data = json.Deserialize<Dictionary<string, object>>(sr.ReadToEnd());
+                        if (data != null && data.ContainsKey("botUrl"))
+                        {
+                            string botUrl = Convert.ToString(data["botUrl"]);
+                            string ticket = data.ContainsKey("ticket") ? Convert.ToString(data["ticket"]) : "";
+                            poller.SaveTelegramTicket(ticket);
+                            try { Process.Start(new ProcessStartInfo(botUrl) { UseShellExecute = true }); } catch { }
+                            SendJson(res, new { ok = true, ticket = ticket, url = botUrl });
+                            return;
+                        }
+                    }
+                }
+                catch { }
+                SendJson(res, new { ok = false, error = "Не удалось создать ссылку привязки Telegram" }, 502);
                 return;
             }
 
@@ -222,11 +290,12 @@ namespace CoursingStats.RkfTracker
                 if (path == "/" || string.IsNullOrEmpty(path)) path = "/index.html";
 
                 string relPath = path.TrimStart('/').Replace('/', Path.DirectorySeparatorChar);
-                string fullPath = Path.Combine(webDir, relPath);
+                string rootFull = Path.GetFullPath(webDir);
+                string fullPath = Path.GetFullPath(Path.Combine(rootFull, relPath));
 
-                if (!File.Exists(fullPath))
+                if (!fullPath.StartsWith(rootFull, StringComparison.OrdinalIgnoreCase) || !File.Exists(fullPath))
                 {
-                    res.StatusCode = 404;
+                    res.StatusCode = File.Exists(fullPath) ? 403 : 404;
                     byte[] b = Encoding.UTF8.GetBytes("Файл не найден");
                     res.OutputStream.Write(b, 0, b.Length);
                     return;

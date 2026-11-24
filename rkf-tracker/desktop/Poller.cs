@@ -45,6 +45,43 @@ namespace CoursingStats.RkfTracker
             return string.Empty;
         }
 
+        public int GetIntervalMinutes()
+        {
+            try
+            {
+                string cfgPath = Path.Combine(baseDir, "config.json");
+                if (!File.Exists(cfgPath)) cfgPath = Path.Combine(baseDir, "config.example.json");
+                if (File.Exists(cfgPath))
+                {
+                    string txt = File.ReadAllText(cfgPath, Encoding.UTF8);
+                    var dict = json.Deserialize<Dictionary<string, object>>(txt);
+                    if (dict != null && dict.ContainsKey("interval"))
+                    {
+                        return Convert.ToInt32(dict["interval"]);
+                    }
+                }
+            }
+            catch { }
+            return 60;
+        }
+
+        public void SaveIntervalMinutes(int interval)
+        {
+            try
+            {
+                string cfgPath = Path.Combine(baseDir, "config.json");
+                var dict = new Dictionary<string, object>();
+                if (File.Exists(cfgPath))
+                {
+                    string txt = File.ReadAllText(cfgPath, Encoding.UTF8);
+                    dict = json.Deserialize<Dictionary<string, object>>(txt) ?? new Dictionary<string, object>();
+                }
+                dict["interval"] = interval;
+                File.WriteAllText(cfgPath, json.Serialize(dict), Encoding.UTF8);
+            }
+            catch { }
+        }
+
         public void SaveToken(string token)
         {
             try
@@ -170,6 +207,19 @@ namespace CoursingStats.RkfTracker
 
                 SaveState(newState);
                 Log(string.Format("Проверка завершена. Актуально заявок: {0}, изменений: {1}.", newState.Count, changesCount));
+            }
+            catch (WebException wex)
+            {
+                var resp = wex.Response as HttpWebResponse;
+                if (resp != null && (resp.StatusCode == HttpStatusCode.Unauthorized || resp.StatusCode == HttpStatusCode.Forbidden))
+                {
+                    Log("Сессия RKF Online истекла (HTTP " + (int)resp.StatusCode + "). Требуется повторный вход.");
+                    OnStatusChanged("AUTH", "", "Сессия RKF Online истекла — войдите заново");
+                }
+                else
+                {
+                    Log("Ошибка при обращении к API РКФ: " + wex.Message);
+                }
             }
             catch (Exception ex)
             {

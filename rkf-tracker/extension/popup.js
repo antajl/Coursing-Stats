@@ -111,12 +111,8 @@ function openFullscreenTab() {
 }
 
 function openWebTracker() {
-  chrome.storage.local.get(['rkfToken']).then((store) => {
-    const url = store.rkfToken
-      ? `https://coursing-stats.ru/tracker?token=${encodeURIComponent(store.rkfToken)}`
-      : 'https://coursing-stats.ru/tracker';
-    chrome.tabs.create({ url });
-  }).catch(() => chrome.tabs.create({ url: 'https://coursing-stats.ru/tracker' }));
+  // Token is transferred securely via site-bridge.js postMessage without exposing it in URL/history
+  chrome.tabs.create({ url: 'https://coursing-stats.ru/tracker/' });
 }
 
 async function connectTelegramBot(btn) {
@@ -129,20 +125,17 @@ async function connectTelegramBot(btn) {
     showToast('Открываем Telegram... Нажмите «Запустить» в боте', 3500);
     if (btn) btn.disabled = true;
 
-    try {
-      const resp = await fetch('https://coursing-stats-tracker-bot.antajltube.workers.dev/api/auth/ticket', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ apikey: store.rkfToken })
-      });
-      const data = await resp.json();
-      if (data?.ok && data?.botUrl) {
-        chrome.tabs.create({ url: data.botUrl });
-        return;
-      }
-    } catch (_) {}
-
-    chrome.tabs.create({ url: `https://t.me/coursing_stats_notify_bot?start=bind_${encodeURIComponent(store.rkfToken)}` });
+    const resp = await fetch('https://coursing-stats-tracker-bot.antajltube.workers.dev/api/auth/ticket', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ apikey: store.rkfToken })
+    });
+    const data = await resp.json();
+    if (data?.ok && data?.botUrl) {
+      chrome.tabs.create({ url: data.botUrl });
+      return;
+    }
+    showToast('Не удалось создать одноразовую ссылку привязки');
   } catch (_) {
     showToast('Ошибка привязки Telegram');
   } finally {

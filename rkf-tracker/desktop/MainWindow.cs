@@ -20,8 +20,14 @@ namespace CoursingStats.RkfTracker
             this.startUrl = url;
             this.startsMinimized = isMinimized;
             this.Text = "CoursingStats • RKF Tracker";
-            this.Size = new Size(1100, 720);
-            this.MinimumSize = new Size(850, 550);
+
+            // Calculate comfortable default desktop window size based on screen working area
+            Rectangle wa = Screen.PrimaryScreen.WorkingArea;
+            int defaultW = Math.Min(1280, (int)(wa.Width * 0.85));
+            int defaultH = Math.Min(820, (int)(wa.Height * 0.85));
+
+            this.Size = new Size(defaultW, defaultH);
+            this.MinimumSize = new Size(720, 480);
             this.StartPosition = FormStartPosition.CenterScreen;
 
             if (File.Exists(iconPath))
@@ -48,21 +54,31 @@ namespace CoursingStats.RkfTracker
         {
             try
             {
+                string baseDir = AppDomain.CurrentDomain.BaseDirectory;
+                Action<string> log = m => {
+                    try { File.AppendAllText(Path.Combine(baseDir, "debug_lifecycle.log"), DateTime.Now.ToString("HH:mm:ss.fff") + ": [MainWindow] " + m + "\n"); } catch { }
+                };
+                log("InitializeWebView start");
                 string localAppData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
                 string userDataFolder = Path.Combine(localAppData, "CoursingStatsTracker", "WebViewProfile");
 
                 var environment = await CoreWebView2Environment.CreateAsync(null, userDataFolder, null);
+                log("CoreWebView2Environment created");
                 await webView.EnsureCoreWebView2Async(environment);
+                log("EnsureCoreWebView2Async completed");
 
                 webView.CoreWebView2.Settings.AreDefaultContextMenusEnabled = false;
                 webView.CoreWebView2.Settings.AreBrowserAcceleratorKeysEnabled = false;
                 webView.CoreWebView2.Settings.IsStatusBarEnabled = false;
 
                 webView.CoreWebView2.NavigationStarting += OnNavigationStarting;
+                log("Navigating to " + startUrl);
                 webView.CoreWebView2.Navigate(startUrl);
             }
             catch (Exception ex)
             {
+                string baseDir = AppDomain.CurrentDomain.BaseDirectory;
+                try { File.AppendAllText(Path.Combine(baseDir, "debug_lifecycle.log"), DateTime.Now.ToString("HH:mm:ss.fff") + ": [MainWindow EXCEPTION] " + ex.ToString() + "\n"); } catch { }
                 MessageBox.Show("Ошибка инициализации интерфейса WebView2:\n\n" + ex.Message,
                     "CoursingStats Tracker", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

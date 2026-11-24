@@ -105,8 +105,9 @@ function createEventCardHtml(ev, trackedIds) {
        </a>`
     : '';
 
+  const safeId = escapeHtml(String(ev.id || ''));
   return `
-    <article class="comp-card" id="comp-card-${ev.id}">
+    <article class="comp-card" id="comp-card-${safeId}">
       <div class="comp-card-top">
         <div class="comp-head-left">
           <span class="comp-date-badge">${escapeHtml(dateFormatted)}</span>
@@ -119,7 +120,7 @@ function createEventCardHtml(ev, trackedIds) {
             <span class="comp-status-dot"></span>
             <span class="comp-status-text">${statusInfo.label}</span>
           </div>
-          <button class="${trackBtnClass}" data-event-id="${ev.id}" title="${trackTitle}" aria-label="Отслеживать">
+          <button class="${trackBtnClass}" data-event-id="${safeId}" title="${trackTitle}" aria-label="Отслеживать">
             <svg class="bell-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
               <path d="M13.73 21a2 2 0 0 1-3.46 0"/>

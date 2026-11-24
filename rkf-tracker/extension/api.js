@@ -2,7 +2,7 @@
 
 export function determineStatusGroup(status) {
   const s = (status || '').toLowerCase();
-  if (s.includes('изготовлен') || s.includes('выдан') || s.includes('выполнен')) return 'ready';
+  if (s.includes('изготовлен') || s.includes('выдан') || s.includes('выполнен') || s.includes('готов')) return 'ready';
   if (s.includes('отклон') || s.includes('отказ')) return 'rejected';
   return 'active';
 }
@@ -177,8 +177,9 @@ export async function fetchAppsData(token, profileId, userUuid, receivedMap = {}
     }
     cleanHist.sort((a, b) => new Date(a.date) - new Date(b.date));
     app.history = cleanHist;
-    app.currentStatus = cleanHist[cleanHist.length - 1]?.status || 'Неизвестно';
-    app.lastUpdated = cleanHist[cleanHist.length - 1]?.date || new Date().toISOString();
+    const metaFallback = metaMap[app.barcode] || {};
+    app.currentStatus = cleanHist[cleanHist.length - 1]?.status || metaFallback.status || 'В обработке';
+    app.lastUpdated = cleanHist[cleanHist.length - 1]?.date || metaFallback.date || new Date().toISOString();
     app.statusGroup = determineStatusGroup(app.currentStatus);
     app.isReceived = !!receivedMap[app.barcode];
   }
