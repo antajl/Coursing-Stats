@@ -110,7 +110,7 @@ namespace CoursingStats.RkfTracker
                 mainWindow.ShowAndActivate();
             }
 
-            Application.Run(mainWindow);
+            Application.Run();
 
             if (pollTimer != null) pollTimer.Dispose();
             if (server != null) server.Stop();
