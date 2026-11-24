@@ -119,7 +119,7 @@ export function TrackerApplications({
           <div className="flex items-center gap-2.5">
             <Key className="w-4 h-4 text-amber-700 shrink-0" />
             <span>
-              Показаны демонстрационные заявки. Чтобы видеть ваши реальные документы, подключите токен RKF.Online.
+              Подключите аккаунт РКФ Онлайн для отслеживания ваших дипломов и заявок. Пароль вводить не нужно.
             </span>
           </div>
           <div className="flex items-center gap-2 shrink-0">
@@ -159,8 +159,24 @@ export function TrackerApplications({
         </div>
 
         {filteredApps.length === 0 ? (
-          <div className="p-8 text-center text-xs text-charcoal-500">
-            Заявок по выбранным параметрам не найдено
+          <div className="p-8 text-center text-xs text-charcoal-500 space-y-3">
+            <div>
+              {getStoredToken()
+                ? (query || filter !== 'all' ? 'Заявок по выбранным параметрам не найдено' : 'Заявок не найдено')
+                : 'Подключите аккаунт РКФ Онлайн для отображения ваших заявок'}
+            </div>
+            {!getStoredToken() && (
+              <div>
+                <button
+                  type="button"
+                  onClick={() => window.dispatchEvent(new CustomEvent('tracker-open-auth'))}
+                  className="px-4 py-2 rounded-xl bg-camel-700 hover:bg-camel-800 text-white font-semibold text-xs transition-colors cursor-pointer inline-flex items-center gap-1.5 shadow-sm"
+                >
+                  <Key className="w-3.5 h-3.5" />
+                  <span>Подключить</span>
+                </button>
+              </div>
+            )}
           </div>
         ) : (
           <div className="divide-y divide-sand-200/60">

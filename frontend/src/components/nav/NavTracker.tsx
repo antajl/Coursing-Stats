@@ -98,10 +98,10 @@ export function NavTracker({
             className={`w-2 h-2 rounded-full ${
               isLive
                 ? 'bg-emerald-500 ring-2 ring-emerald-500/20'
-                : 'bg-amber-400'
+                : 'bg-charcoal-400'
             }`}
           />
-          <span className="font-medium">{isLive ? 'РКФ Онлайн' : 'Демо'}</span>
+          <span className="font-medium">{isLive ? 'РКФ Онлайн' : 'Не подключен'}</span>
         </div>
 
         {/* Download Ecosystem Button */}

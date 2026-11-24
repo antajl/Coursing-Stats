@@ -21,20 +21,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function initData() {
   const token = localStorage.getItem('cs_rkf_token');
-  const storedReceived = JSON.parse(localStorage.getItem('cs_received_barcodes') || '[]');
-  const receivedSet = new Set(storedReceived);
 
   if (token) {
     isMockMode = false;
     updateModeBadge('Личный кабинет РКФ', true);
     fetchLiveData(token);
   } else {
-    isMockMode = true;
-    updateModeBadge('Демо-режим', false);
-    apps = MOCK_APPLICATIONS.map(app => ({
-      ...app,
-      isReceived: receivedSet.has(app.barcode)
-    }));
+    isMockMode = false;
+    updateModeBadge('Не подключен', false);
+    apps = [];
     render();
   }
 }
@@ -75,22 +70,7 @@ function setupEvents() {
       if (token) {
         fetchLiveData(token);
       } else {
-        showToast('В демо-режиме показаны тестовые данные');
-      }
-    });
-  }
-
-  // Mock toggle
-  const btnMock = document.getElementById('btn-toggle-mock');
-  if (btnMock) {
-    btnMock.addEventListener('click', () => {
-      if (isMockMode) {
         openAuthModal();
-      } else {
-        localStorage.removeItem('cs_rkf_token');
-        localStorage.removeItem('cs_rkf_user_email');
-        showToast('Включен демо-режим');
-        initData();
       }
     });
   }

@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { X, Key, HelpCircle, Check, Trash2, ArrowUpRight } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { X, Key, HelpCircle, Check, Trash2, ArrowUpRight, Puzzle } from 'lucide-react';
 import { getStoredToken, setStoredAuth, clearStoredAuth } from './trackerData';
 
 interface TrackerAuthModalProps {
@@ -12,25 +12,51 @@ export function TrackerAuthModal({ isOpen, onClose, onAuthChange }: TrackerAuthM
   const [tokenInput, setTokenInput] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
   const [showHelp, setShowHelp] = useState(false);
+  const [extensionToken, setExtensionToken] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!isOpen) return;
+
+    // Ping extension bridge to query token
+    window.postMessage({ type: 'CS_GET_EXTENSION_TOKEN' }, '*');
+
+    const handleMessage = (e: MessageEvent) => {
+      if (!e.data) return;
+      if (
+        e.data.type === 'CS_EXTENSION_TOKEN_RESPONSE' ||
+        e.data.type === 'CS_EXTENSION_TOKEN_AVAILABLE' ||
+        e.data.type === 'RKF_TRACKER_TOKEN_SYNC' ||
+        e.data.type === 'RKF_TOKEN_TRANSFER'
+      ) {
+        if (e.data.token && typeof e.data.token === 'string' && e.data.token.length >= 20) {
+          setExtensionToken(e.data.token);
+          if (!tokenInput) {
+            setTokenInput(e.data.token);
+          }
+        }
+      }
+    };
+
+    window.addEventListener('message', handleMessage);
+    return () => window.removeEventListener('message', handleMessage);
+  }, [isOpen, tokenInput]);
 
   if (!isOpen) return null;
 
   const currentToken = getStoredToken();
 
-  const handleSaveToken = (e?: React.FormEvent) => {
+  const handleSaveToken = (e?: React.FormEvent, directToken?: string) => {
     if (e) e.preventDefault();
-    const cleanToken = tokenInput.trim().replace(/^Bearer\s+/i, '');
-
+    const tokenToUse = directToken || tokenInput;
+    const cleanToken = tokenToUse.trim().replace(/^Bearer\s+/i, '');
     if (!cleanToken) {
       setErrorMsg('Вставьте токен авторизации');
       return;
     }
-
     if (cleanToken.length < 20) {
       setErrorMsg('Слишком короткий токен (проверьте правильность)');
       return;
     }
-
     setStoredAuth(cleanToken, 'rkf.online');
     setTokenInput('');
     setErrorMsg('');
@@ -143,6 +169,22 @@ export function TrackerAuthModal({ isOpen, onClose, onAuthChange }: TrackerAuthM
                 />
               </div>
 
+              {extensionToken && (
+                <div className="p-3 rounded-xl bg-amber-50/90 border border-amber-200/90 flex items-center justify-between gap-3 text-xs">
+                  <div className="flex items-center gap-2 text-amber-900 font-medium">
+                    <Puzzle className="w-4 h-4 text-amber-700 shrink-0" />
+                    <span>Найдено расширение с активным токеном</span>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => handleSaveToken(undefined, extensionToken)}
+                    className="cs-glass-pill-active px-3 py-1 rounded-full text-[11px] font-semibold shrink-0 cursor-pointer"
+                  >
+                    Подключить сразу
+                  </button>
+                </div>
+              )}
+
               {errorMsg && (
                 <div className="p-3 rounded-lg bg-rose-50 border border-rose-200 text-xs text-rose-800">
                   {errorMsg}
@@ -181,7 +223,7 @@ export function TrackerAuthModal({ isOpen, onClose, onAuthChange }: TrackerAuthM
                   <p className="font-semibold text-charcoal-900">Как получить токен за 10 секунд:</p>
                   <ol className="list-decimal pl-4 space-y-1">
                     <li>
-                      <strong>Через расширение CoursingStats (самый простой способ):</strong> откройте расширение в браузере и нажмите «Копировать токен».
+                      <strong>Через расширение CoursingStats (самый простой способ):</strong> откройте расширение в браузере и нажмите «Копировать токен» или войдите прямо на этой странице.
                     </li>
                     <li>
                       <strong>Вручную на сайте РКФ:</strong> войдите на{' '}
@@ -193,7 +235,7 @@ export function TrackerAuthModal({ isOpen, onClose, onAuthChange }: TrackerAuthM
                       >
                         rkf.online <ArrowUpRight className="w-3 h-3" />
                       </a>
-                      , нажмите клавишу <strong>F12</strong> (Инструменты разработчика) $\to$ вкладка <strong>Application</strong> (Приложение) $\to$ слева <strong>Local Storage</strong> $\to$ скопируйте значение <code>access_token</code>.
+                      , нажмите клавишу <strong>F12</strong> (Инструменты разработчика) → вкладка <strong>Application</strong> (Приложение) → слева <strong>Local Storage</strong> → скопируйте значение <code>access_token</code>.
                     </li>
                   </ol>
                 </div>

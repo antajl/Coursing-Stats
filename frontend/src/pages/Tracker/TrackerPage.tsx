@@ -1,8 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import type { TrackerTab, TrackerCompetition } from './trackerTypes';
+import type { TrackerTab, TrackerCompetition, TrackerApplication } from './trackerTypes';
 import {
-  MOCK_APPLICATIONS,
   getReceivedBarcodes,
   toggleReceivedBarcode,
   getSubscribedCompetitions,
@@ -27,10 +26,35 @@ export default function TrackerPage() {
   const [authModalOpen, setAuthModalOpen] = useState(false);
   const [downloadModalOpen, setDownloadModalOpen] = useState(false);
   const [, setIsLive] = useState(() => Boolean(getStoredToken()));
+  const [extensionToast, setExtensionToast] = useState<{ secondsLeft: number } | null>(null);
+
+  const [applications, setApplications] = useState<TrackerApplication[]>(() => {
+    const token = getStoredToken();
+    if (!token) return [];
+    try {
+      const stored = localStorage.getItem('cs_rkf_applications');
+      return stored ? JSON.parse(stored) : [];
+    } catch {
+      return [];
+    }
+  });
 
   useEffect(() => {
     document.title = 'РКФ Трекер — Заявки и Соревнования | CoursingStats';
   }, []);
+
+  // Countdown timer for extension sync toast -> auto reload
+  useEffect(() => {
+    if (!extensionToast) return;
+    if (extensionToast.secondsLeft <= 0) {
+      window.location.reload();
+      return;
+    }
+    const timer = setTimeout(() => {
+      setExtensionToast((prev) => (prev ? { secondsLeft: prev.secondsLeft - 1 } : null));
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, [extensionToast]);
 
   // 1. Auto-login from query parameter: /tracker?token=xxx
   useEffect(() => {
@@ -44,15 +68,41 @@ export default function TrackerPage() {
     }
   }, [searchParams, setSearchParams]);
 
-  // 2. Auto-login from Chrome Extension message transfer
+  // 2. Auto-login from Chrome Extension message transfer / site-bridge
   useEffect(() => {
     const handleExtensionMessage = (event: MessageEvent) => {
-      if (event.data && event.data.type === 'RKF_TOKEN_TRANSFER' && event.data.token) {
-        setStoredAuth(event.data.token.trim(), 'rkf.online');
+      if (!event.data) return;
+      const { type, token, applications: extApps } = event.data;
+      if (
+        (type === 'RKF_TOKEN_TRANSFER' ||
+          type === 'RKF_TRACKER_TOKEN_SYNC' ||
+          type === 'CS_EXTENSION_TOKEN_AVAILABLE' ||
+          type === 'CS_EXTENSION_TOKEN_RESPONSE') &&
+        token &&
+        typeof token === 'string' &&
+        token.trim().length >= 20
+      ) {
+        const prevToken = getStoredToken();
+        const isNewToken = !prevToken || prevToken !== token.trim();
+        setStoredAuth(token.trim(), 'rkf.online');
         setIsLive(true);
+
+        if (Array.isArray(extApps) && extApps.length > 0) {
+          try {
+            localStorage.setItem('cs_rkf_applications', JSON.stringify(extApps));
+            setApplications(extApps);
+          } catch {}
+        }
+
+        if (isNewToken) {
+          setExtensionToast({ secondsLeft: 4 });
+        }
       }
     };
+
     window.addEventListener('message', handleExtensionMessage);
+    // Ping bridge to ask for token if extension is present
+    window.postMessage({ type: 'CS_GET_EXTENSION_TOKEN' }, '*');
     return () => window.removeEventListener('message', handleExtensionMessage);
   }, []);
 
@@ -133,7 +183,7 @@ export default function TrackerPage() {
 
       {currentTab === 'applications' ? (
         <TrackerApplications
-          applications={MOCK_APPLICATIONS}
+          applications={applications}
           onToggleReceived={handleToggleReceived}
           receivedSet={receivedSet}
         />
@@ -143,6 +193,29 @@ export default function TrackerPage() {
           subscribedSet={subscribedSet}
           onToggleSubscribed={handleToggleSubscribed}
         />
+      )}
+
+      {/* Extension token auto-sync notification toast */}
+      {extensionToast && (
+        <aside
+          role="status"
+          aria-live="polite"
+          className="fixed bottom-6 right-6 z-50 max-w-sm p-4 rounded-xl bg-sand-100 border border-camel-400 shadow-xl flex items-center justify-between gap-3 text-xs text-charcoal-900"
+        >
+          <div>
+            <div className="font-semibold text-charcoal-950">Аккаунт подхвачен из расширения</div>
+            <div className="text-charcoal-600 mt-0.5">
+              Обновление страницы через {extensionToast.secondsLeft} сек...
+            </div>
+          </div>
+          <button
+            type="button"
+            onClick={() => window.location.reload()}
+            className="px-3 py-1.5 rounded-lg bg-camel-700 hover:bg-camel-800 text-white font-medium text-xs transition-colors shrink-0 cursor-pointer"
+          >
+            Обновить
+          </button>
+        </aside>
       )}
 
       <TrackerAuthModal
