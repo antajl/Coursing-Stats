@@ -88,6 +88,7 @@ body.is-tab-mode .app-wrap {
   min-height: 0;
   position: relative;
   overflow: hidden;
+  padding-top: 4px; margin-top: -4px;
 }
 
 /* Header */
