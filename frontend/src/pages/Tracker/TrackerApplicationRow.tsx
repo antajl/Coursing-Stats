@@ -47,10 +47,10 @@ export function TrackerApplicationRow({
     >
       <div
         onClick={onToggleAccordion}
-        className="grid grid-cols-[20px_minmax(0,1fr)_auto] sm:grid-cols-[20px_16rem_minmax(0,1fr)_auto_20px] items-center gap-2.5 sm:gap-4 px-3 sm:px-4 py-1.5 sm:py-2 min-h-[44px] cursor-pointer select-none text-xs"
+        className="grid grid-cols-[36px_minmax(0,1fr)_auto] sm:grid-cols-[36px_16rem_minmax(0,1fr)_auto_20px] items-center gap-2 sm:gap-3 px-2.5 sm:px-4 py-2 min-h-[52px] cursor-pointer select-none text-xs"
       >
-        {/* 1. Чекбокс «Забрано» (доступен только после изготовления документа) */}
-        <div className="w-5 h-5 min-w-[20px] min-h-[20px] flex items-center justify-center shrink-0">
+        {/* 1. Чекбокс «Забрано» (44px touch target, доступен только после изготовления) */}
+        <div className="w-9 h-9 flex items-center justify-center shrink-0">
           {isReady ? (
             <button
               type="button"
@@ -58,15 +58,19 @@ export function TrackerApplicationRow({
                 e.stopPropagation();
                 onToggleReceived(app.barcode);
               }}
-              className={`w-5 h-5 rounded-md border-[1.5px] flex items-center justify-center transition-all cursor-pointer ${
-                isCollected
-                  ? 'bg-emerald-700 border-emerald-700 text-white shadow-2xs'
-                  : 'border-old-money-400 hover:border-camel-600 bg-white shadow-2xs'
-              }`}
+              className={`w-9 h-9 rounded-lg flex items-center justify-center transition-all cursor-pointer group/chk`}
               title={isCollected ? 'Отметить как неполученный' : 'Отметить как забранный'}
               aria-label={isCollected ? 'Отметить как неполученный' : 'Отметить как забранный'}
             >
-              {isCollected && <Check className="w-3.5 h-3.5 stroke-[3]" />}
+              <span
+                className={`w-5 h-5 rounded-md border-[1.5px] flex items-center justify-center transition-all ${
+                  isCollected
+                    ? 'bg-emerald-700 border-emerald-700 text-white shadow-2xs'
+                    : 'border-old-money-400 group-hover/chk:border-camel-600 bg-white shadow-2xs'
+                }`}
+              >
+                {isCollected && <Check className="w-3.5 h-3.5 stroke-[3]" />}
+              </span>
             </button>
           ) : (
             <span
@@ -76,13 +80,27 @@ export function TrackerApplicationRow({
           )}
         </div>
 
-        {/* 2. Кличка собаки и номер РКФ (фиксированная ширина 16rem для строгой вертикали) */}
+        {/* 2. Кличка собаки, номер РКФ и (на мобильном) название документа */}
         <div className="min-w-0 pr-1 sm:pr-2">
           <div className="font-semibold text-charcoal-900 text-[13.5px] leading-tight truncate sm:whitespace-normal">
-            {app.dogName}
+            {app.dogName || 'Собака не указана'}
           </div>
-          <div className="font-mono text-xs text-charcoal-600 font-medium mt-0.5">
-            {app.pedigreeNumber ? `РКФ ${app.pedigreeNumber}` : 'Без номера'}
+          <div className="sm:hidden text-[12px] text-charcoal-700 font-medium leading-snug mt-0.5 line-clamp-2">
+            {docTitle}
+          </div>
+          <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5 font-mono text-[11px] sm:text-xs text-charcoal-500 font-medium mt-0.5">
+            <span>{app.pedigreeNumber ? `РКФ ${app.pedigreeNumber}` : 'Без номера'}</span>
+            <a
+              href={getRkfApplicationUrl(app.barcode)}
+              target="_blank"
+              rel="noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="sm:hidden inline-flex items-center gap-0.5 text-camel-800 hover:underline"
+              title="Открыть заявку в личном кабинете РКФ Онлайн"
+            >
+              <span>№ {app.barcode}</span>
+              <ExternalLink className="w-2.5 h-2.5 opacity-80" />
+            </a>
           </div>
         </div>
 

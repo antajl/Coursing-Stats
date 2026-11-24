@@ -6,6 +6,7 @@ import {
   Trophy,
   Award,
   Zap,
+  Bell,
   BookOpen,
   Info,
   X,
@@ -237,6 +238,15 @@ export function NavMobile({
                   >
                     <Zap className={`w-4 h-4 shrink-0 ${isSpeedRecordsActive ? 'text-camel-700' : 'text-charcoal-500'}`} aria-hidden="true" />
                     <span>Курсинг Донино</span>
+                  </Link>
+
+                  <Link
+                    to="/tracker/"
+                    onClick={onCloseMobileMenu}
+                    className="min-h-[44px] px-3.5 py-2.5 rounded-xl flex items-center gap-3 text-sm font-semibold transition-all text-charcoal-700 hover:bg-cream-100 hover:text-charcoal-900"
+                  >
+                    <Bell className="w-4 h-4 shrink-0 text-camel-700" aria-hidden="true" />
+                    <span>РКФ Трекер</span>
                   </Link>
 
                   <Link

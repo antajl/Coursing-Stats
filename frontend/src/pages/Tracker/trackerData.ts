@@ -1,3 +1,7 @@
+import type { TrackerApplication } from './trackerTypes';
+
+export const TRACKER_WORKER_URL = 'https://coursing-stats-tracker-bot.antajltube.workers.dev';
+
 export function getReceivedBarcodes(): Set<string> {
   try {
     return new Set(JSON.parse(localStorage.getItem('cs_received_barcodes') || '[]'));
@@ -76,60 +80,103 @@ export async function authenticateRkf(
   const cleanEmail = email.trim();
   const cleanPass = pass.trim();
 
-  // 1. Direct POST to RKF Online
+  // Route through the Cloudflare Worker auth proxy because rkf.online blocks browser CORS
   try {
-    const res = await fetch('https://rkf.online/api/Authentication', {
+    const res = await fetch(`${TRACKER_WORKER_URL}/api/auth/login`, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-      },
-      body: JSON.stringify({
-        email: cleanEmail,
-        password: cleanPass,
-        is_remember_me: true,
-      }),
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: cleanEmail, password: cleanPass }),
     });
-
     const data = await res.json().catch(() => ({}));
-    const token = data.result?.apikey || data.apikey || data.access_token;
+    const token = data.apikey || data.token || data.result?.apikey || data.access_token;
     if (res.ok && token) {
       return { ok: true, token };
     }
-
-    if (res.status === 422 || res.status === 401 || res.status === 400) {
-      const err =
-        data.errors?.authentication ||
-        data.errors?.error ||
-        data.message ||
-        'Неверная почта или пароль на rkf.online';
-      return { ok: false, error: err };
+    if (data.error) {
+      return { ok: false, error: data.error };
+    }
+    if (res.status === 401 || res.status === 422 || res.status === 400) {
+      return { ok: false, error: 'Неверная почта или пароль на rkf.online' };
     }
   } catch {
-    // 2. Fallback to API proxy (Cloudflare Worker or Vite dev server) if direct CORS is blocked
-    try {
-      const fbRes = await fetch('/api/auth/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: cleanEmail, password: cleanPass }),
-      });
-      const fbData = await fbRes.json().catch(() => ({}));
-      const fbToken = fbData.apikey || fbData.token;
-      if (fbRes.ok && fbToken) {
-        return { ok: true, token: fbToken };
-      }
-      if (fbData.error) {
-        return { ok: false, error: fbData.error };
-      }
-    } catch {}
-
     return {
       ok: false,
       error:
-        'Сетевая ошибка при обращении к серверу РКФ. Установите расширение браузера для входа в 1 клик.',
+        'Сетевая ошибка при обращении к серверу РКФ. Проверьте подключение к интернету или попробуйте позже.',
     };
   }
 
   return { ok: false, error: 'Неверный логин или пароль на rkf.online' };
+}
+
+export async function fetchTrackerApplications(token: string): Promise<{
+  ok: boolean;
+  applications?: TrackerApplication[];
+  authExpired?: boolean;
+  error?: string;
+}> {
+  try {
+    const res = await fetch(`${TRACKER_WORKER_URL}/api/applications`, {
+      method: 'GET',
+      headers: {
+        Authorization: `Bearer ${token}`,
+        Accept: 'application/json',
+      },
+    });
+    const data = await res.json().catch(() => ({}));
+    if (res.status === 401 || data.error === 'AUTH_EXPIRED') {
+      return { ok: false, authExpired: true, error: 'Срок действия сессии истек. Войдите заново.' };
+    }
+    if (res.ok && Array.isArray(data.applications)) {
+      try {
+        localStorage.setItem('cs_rkf_applications', JSON.stringify(data.applications));
+        localStorage.setItem('cs_rkf_last_sync', String(Date.now()));
+      } catch {}
+      return { ok: true, applications: data.applications };
+    }
+    return { ok: false, error: data.error || 'Не удалось загрузить заявки из РКФ' };
+  } catch {
+    return { ok: false, error: 'Ошибка сети при загрузке заявок' };
+  }
+}
+
+export async function fetchSyncedState(token: string): Promise<{
+  receivedBarcodes: string[];
+  subscribedCompetitions: string[];
+} | null> {
+  try {
+    const res = await fetch(`${TRACKER_WORKER_URL}/api/sync`, {
+      method: 'GET',
+      headers: { Authorization: `Bearer ${token}`, Accept: 'application/json' },
+    });
+    if (!res.ok) return null;
+    const data = await res.json();
+    if (!data?.ok) return null;
+    return {
+      receivedBarcodes: Array.isArray(data.receivedBarcodes) ? data.receivedBarcodes : [],
+      subscribedCompetitions: Array.isArray(data.subscribedCompetitions) ? data.subscribedCompetitions : [],
+    };
+  } catch {
+    return null;
+  }
+}
+
+export async function pushSyncedState(
+  token: string,
+  receivedBarcodes: string[],
+  subscribedCompetitions: string[]
+): Promise<void> {
+  try {
+    await fetch(`${TRACKER_WORKER_URL}/api/sync`, {
+      method: 'PUT',
+      headers: {
+        Authorization: `Bearer ${token}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ receivedBarcodes, subscribedCompetitions }),
+    });
+  } catch {
+    // Non-blocking background sync
+  }
 }
 

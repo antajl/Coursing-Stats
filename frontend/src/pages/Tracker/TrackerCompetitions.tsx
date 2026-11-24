@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import type { TrackerCompetition, DisciplineKey, CompetitionStatusFilter } from './trackerTypes';
 import { TrackerCompetitionRow } from './TrackerCompetitionRow';
 import { TrackerCompetitionsToolbar } from './TrackerCompetitionsToolbar';
@@ -19,23 +19,78 @@ export function TrackerCompetitions({
   subscribedSet,
   onToggleSubscribed,
 }: TrackerCompetitionsProps) {
+  const [season, setSeason] = useState<'2026' | '2027'>('2026');
+  const [events2027, setEvents2027] = useState<TrackerCompetition[] | null>(null);
   const [discipline, setDiscipline] = useState<DisciplineKey>('Курсинг борзых');
   const [statusFilter, setStatusFilter] = useState<CompetitionStatusFilter>('all');
   const [sortBy, setSortBy] = useState<SortOption>('date_desc');
   const [onlySubscribed, setOnlySubscribed] = useState(false);
   const [query, setQuery] = useState('');
 
+  useEffect(() => {
+    if (season !== '2027' || events2027 !== null) return;
+    let cancelled = false;
+    fetch('/data/v1/calendar/2027.json')
+      .then((r) => (r.ok ? r.json() : { events: [] }))
+      .then((data) => {
+        if (cancelled) return;
+        const list = Array.isArray(data?.events) ? data.events : [];
+        const mapped: TrackerCompetition[] = list.map((ev: any) => {
+          const dStart = String(ev.date_start || '');
+          const dEnd = String(ev.date_end || dStart);
+          const s = dStart.split('-');
+          const e = dEnd.split('-');
+          const dateRaw =
+            s.length === 3
+              ? e.length === 3 && dEnd !== dStart && s[1] === e[1]
+                ? `${s[2]}-${e[2]}.${s[1]}.${s[0]}`
+                : `${s[2]}.${s[1]}.${s[0]}`
+              : '';
+          const notesStr = String(ev.notes || '').toLowerCase();
+          const status: TrackerCompetition['status'] = notesStr.includes('задержан')
+            ? 'DELAYED'
+            : ev.confirmed === 1
+            ? 'APPROVED'
+            : 'PENDING';
+          return {
+            id: String(ev.id),
+            sheetName: ev.competition_type || '',
+            dateRaw,
+            discipline: ev.competition_type || (ev.event_type === 'coursing' ? 'Курсинг борзых' : 'Бега борзых'),
+            rank: ev.competition_kind || '',
+            location: ev.location || ev.region || '',
+            club: ev.host_club || ev.title || '',
+            status,
+            reglament: ev.rules_file || '',
+            summary: '',
+            judges: ev.judges || '',
+            notes: ev.notes || '',
+            eventId: typeof ev.id === 'number' ? ev.id : undefined,
+          };
+        });
+        setEvents2027(mapped);
+      })
+      .catch(() => {
+        if (!cancelled) setEvents2027([]);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [season, events2027]);
+
+  const activeList = season === '2027' ? (events2027 || []) : competitions;
+
   const coursingCount = useMemo(
-    () => competitions.filter((c) => c.discipline === 'Курсинг борзых').length,
-    [competitions]
+    () => activeList.filter((c) => c.discipline === 'Курсинг борзых').length,
+    [activeList]
   );
   const racingCount = useMemo(
-    () => competitions.filter((c) => c.discipline === 'Бега борзых').length,
-    [competitions]
+    () => activeList.filter((c) => c.discipline === 'Бега борзых').length,
+    [activeList]
   );
   const bzmpCount = useMemo(
-    () => competitions.filter((c) => c.discipline.includes('механической')).length,
-    [competitions]
+    () => activeList.filter((c) => c.discipline.includes('механической')).length,
+    [activeList]
   );
 
   const disciplineItems: { key: DisciplineKey; label: string }[] = [
@@ -53,7 +108,7 @@ export function TrackerCompetitions({
 
   const filteredCompetitions = useMemo(() => {
     const q = query.toLowerCase().trim();
-    const result = competitions.filter((comp) => {
+    const result = activeList.filter((comp) => {
       // 1. Single Discipline match (strictly matches one selected discipline)
       if (discipline === 'БЗМП') {
         if (!comp.discipline.includes('механической') && !comp.discipline.includes('БЗМП')) {
@@ -80,12 +135,27 @@ export function TrackerCompetitions({
     });
 
     // 5. Explicit Sorting
+    const statusWeight = (st: TrackerCompetition['status'], mode: 'delayed_first' | 'approved_first') => {
+      if (mode === 'delayed_first') {
+        return st === 'DELAYED' ? 0 : st === 'PENDING' ? 1 : 2;
+      }
+      return st === 'APPROVED' ? 0 : st === 'PENDING' ? 1 : 2;
+    };
+
     result.sort((a, b) => {
       if (sortBy === 'date_asc') {
         return parseDateScore(a.dateRaw) - parseDateScore(b.dateRaw);
       }
       if (sortBy === 'date_desc') {
         return parseDateScore(b.dateRaw) - parseDateScore(a.dateRaw);
+      }
+      if (sortBy === 'status_delayed') {
+        const diff = statusWeight(a.status, 'delayed_first') - statusWeight(b.status, 'delayed_first');
+        return diff !== 0 ? diff : parseDateScore(b.dateRaw) - parseDateScore(a.dateRaw);
+      }
+      if (sortBy === 'status_approved') {
+        const diff = statusWeight(a.status, 'approved_first') - statusWeight(b.status, 'approved_first');
+        return diff !== 0 ? diff : parseDateScore(b.dateRaw) - parseDateScore(a.dateRaw);
       }
       if (sortBy === 'club_asc') {
         return a.club.localeCompare(b.club, 'ru');
@@ -94,11 +164,13 @@ export function TrackerCompetitions({
     });
 
     return result;
-  }, [competitions, discipline, statusFilter, onlySubscribed, query, subscribedSet, sortBy]);
+  }, [activeList, discipline, statusFilter, onlySubscribed, query, subscribedSet, sortBy]);
 
   return (
     <div className="space-y-3">
       <TrackerCompetitionsToolbar
+        season={season}
+        onSeasonChange={setSeason}
         query={query}
         onQueryChange={setQuery}
         discipline={discipline}
@@ -118,7 +190,7 @@ export function TrackerCompetitions({
       <div className="cs-glass-card bg-white rounded-2xl overflow-hidden shadow-2xs">
         <div className="relative flex min-h-9 items-center justify-between border-b border-[rgba(195,168,128,0.55)] bg-cream-100/90 px-3 sm:px-4 py-1.5">
           <span className="text-[11.5px] font-bold uppercase tracking-wider text-charcoal-700">
-            График согласования РКФ 2026
+            График согласования РКФ {season}
           </span>
         </div>
 

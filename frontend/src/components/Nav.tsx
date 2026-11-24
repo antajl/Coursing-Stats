@@ -6,6 +6,7 @@ import { NavMobile } from './nav/NavMobile'
 import { NavTracker } from './nav/NavTracker'
 import type { TrackerTab } from '../pages/Tracker/trackerTypes'
 import type { OpenMenuId } from './nav/navLinks'
+import trackerCompetitions2026 from '../pages/Tracker/rkf-competitions-2026.json'
 
 const QuickSearchModal = lazy(() => import('./nav/QuickSearchModal'))
 
@@ -30,9 +31,18 @@ export default function Nav() {
     location.pathname.startsWith('/donino-');
   const isShowsActive =
     location.pathname === '/shows' || location.pathname.startsWith('/shows/')
-  const isTrackerActive = location.pathname.startsWith('/tracker');
   const isGuideActive = location.pathname === '/guide';
   const isAboutActive = location.pathname === '/about';
+  const [trackerRefreshing, setTrackerRefreshing] = useState(false);
+
+  useEffect(() => {
+    const onSyncState = (e: Event) => {
+      const detail = (e as CustomEvent<{ syncing?: boolean }>).detail;
+      setTrackerRefreshing(Boolean(detail?.syncing));
+    };
+    window.addEventListener('tracker-sync-state', onSyncState);
+    return () => window.removeEventListener('tracker-sync-state', onSyncState);
+  }, []);
 
   const menuCallbacks = useRef<Record<string, (open: boolean) => void>>({});
   const setMenuOpen = useCallback((id: Exclude<OpenMenuId, null>) => {
@@ -92,10 +102,10 @@ export default function Nav() {
         <NavTracker
           activeTab={currentTab}
           onSelectTab={(tab) => setSearchParams({ tab })}
-          competitionsCount={72}
+          competitionsCount={trackerCompetitions2026.length}
           isLive={isLive}
           onRefresh={() => window.dispatchEvent(new CustomEvent('tracker-refresh'))}
-          isRefreshing={false}
+          isRefreshing={trackerRefreshing}
           onOpenAuth={() => window.dispatchEvent(new CustomEvent('tracker-open-auth'))}
         />
       </nav>

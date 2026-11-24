@@ -7,6 +7,8 @@ import { toolbarPillTriggerClass } from '../../lib/toolbar';
 import { SORT_OPTIONS, type SortOption } from './trackerCompetitionUtils';
 
 interface TrackerCompetitionsToolbarProps {
+  season: '2026' | '2027';
+  onSeasonChange: (s: '2026' | '2027') => void;
   query: string;
   onQueryChange: (q: string) => void;
   discipline: DisciplineKey;
@@ -23,6 +25,8 @@ interface TrackerCompetitionsToolbarProps {
 }
 
 export function TrackerCompetitionsToolbar({
+  season,
+  onSeasonChange,
   query,
   onQueryChange,
   discipline,
@@ -37,6 +41,7 @@ export function TrackerCompetitionsToolbar({
   onToggleOnlySubscribed,
   subscribedCount,
 }: TrackerCompetitionsToolbarProps) {
+  const [seasonOpen, setSeasonOpen] = useState(false);
   const [disciplineOpen, setDisciplineOpen] = useState(false);
   const [statusOpen, setStatusOpen] = useState(false);
   const [sortOpen, setSortOpen] = useState(false);
@@ -54,6 +59,45 @@ export function TrackerCompetitionsToolbar({
         placeholder="Поиск по клубу, городу, рангу..."
         width="280px"
       />
+
+      {/* 1.5 Season Dropdown */}
+      <ModernDropdown
+        isOpen={seasonOpen}
+        onOpenChange={setSeasonOpen}
+        width="110px"
+        trigger={
+          <button
+            type="button"
+            className={toolbarPillTriggerClass(season !== '2026', '!h-8 !px-3')}
+          >
+            <span>{season}</span>
+            <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" />
+          </button>
+        }
+      >
+        {(close) => (
+          <div className="p-1 space-y-0.5" role="menu">
+            {(['2026', '2027'] as const).map((yr) => (
+              <button
+                key={yr}
+                type="button"
+                onClick={() => {
+                  onSeasonChange(yr);
+                  close();
+                }}
+                className={`w-full flex items-center justify-between px-3 py-1.5 text-xs rounded-md text-left transition-colors ${
+                  season === yr
+                    ? 'bg-camel-100 text-camel-950 font-semibold'
+                    : 'text-charcoal-700 hover:bg-cream-200/60'
+                }`}
+              >
+                <span>{yr}</span>
+                {season === yr && <Check className="h-3.5 w-3.5 text-camel-700 shrink-0" />}
+              </button>
+            ))}
+          </div>
+        )}
+      </ModernDropdown>
 
       {/* 2. Discipline Dropdown */}
       <ModernDropdown

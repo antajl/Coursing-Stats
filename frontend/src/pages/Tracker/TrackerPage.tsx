@@ -8,6 +8,9 @@ import {
   toggleSubscribedCompetition,
   getStoredToken,
   setStoredAuth,
+  fetchTrackerApplications,
+  fetchSyncedState,
+  pushSyncedState,
 } from './trackerData';
 import { TrackerApplications } from './TrackerApplications';
 import { TrackerCompetitions } from './TrackerCompetitions';
@@ -28,6 +31,8 @@ export default function TrackerPage() {
   const [downloadModalOpen, setDownloadModalOpen] = useState(false);
   const [, setIsLive] = useState(() => Boolean(getStoredToken()));
   const [extensionToast, setExtensionToast] = useState<{ secondsLeft: number } | null>(null);
+  const [syncError, setSyncError] = useState<string | null>(null);
+  const [authExpired, setAuthExpired] = useState(false);
 
   const [applications, setApplications] = useState<TrackerApplication[]>(() => {
     const token = getStoredToken();
@@ -44,11 +49,11 @@ export default function TrackerPage() {
     document.title = 'РКФ Трекер — Заявки и Соревнования | CoursingStats';
   }, []);
 
-  // Countdown timer for extension sync toast -> auto reload
+  // Auto-dismiss extension sync toast without hard page reload
   useEffect(() => {
     if (!extensionToast) return;
     if (extensionToast.secondsLeft <= 0) {
-      window.location.reload();
+      setExtensionToast(null);
       return;
     }
     const timer = setTimeout(() => {
@@ -116,16 +121,75 @@ export default function TrackerPage() {
   const handleToggleReceived = useCallback((barcode: string) => {
     const updated = toggleReceivedBarcode(barcode);
     setReceivedSet(new Set(updated));
+    const token = getStoredToken();
+    if (token) {
+      void pushSyncedState(token, Array.from(updated), Array.from(getSubscribedCompetitions()));
+    }
   }, []);
 
   const handleToggleSubscribed = useCallback((id: string) => {
     const updated = toggleSubscribedCompetition(id);
     setSubscribedSet(new Set(updated));
+    const token = getStoredToken();
+    if (token) {
+      void pushSyncedState(token, Array.from(getReceivedBarcodes()), Array.from(updated));
+    }
   }, []);
 
-  const handleAuthChange = useCallback(() => {
-    setIsLive(Boolean(getStoredToken()));
+  const syncApplications = useCallback(async () => {
+    const token = getStoredToken();
+    if (!token) {
+      setApplications([]);
+      setSyncError(null);
+      setAuthExpired(false);
+      return;
+    }
+    window.dispatchEvent(new CustomEvent('tracker-sync-state', { detail: { syncing: true } }));
+    try {
+      const [res, cloudState] = await Promise.all([
+        fetchTrackerApplications(token),
+        fetchSyncedState(token),
+      ]);
+      if (cloudState) {
+        const mergedReceived = new Set([...getReceivedBarcodes(), ...cloudState.receivedBarcodes]);
+        const mergedSubs = new Set([...getSubscribedCompetitions(), ...cloudState.subscribedCompetitions]);
+        localStorage.setItem('cs_received_barcodes', JSON.stringify(Array.from(mergedReceived)));
+        localStorage.setItem('cs_subscribed_competitions', JSON.stringify(Array.from(mergedSubs)));
+        setReceivedSet(mergedReceived);
+        setSubscribedSet(mergedSubs);
+      }
+      if (res.ok && res.applications) {
+        setApplications(res.applications);
+        setSyncError(null);
+        setAuthExpired(false);
+      } else if (res.authExpired) {
+        setAuthExpired(true);
+        setSyncError(res.error || 'Срок действия сессии РКФ Онлайн истек. Войдите заново.');
+        setIsLive(false);
+      } else if (res.error) {
+        setSyncError(res.error);
+      }
+    } finally {
+      window.dispatchEvent(new CustomEvent('tracker-sync-state', { detail: { syncing: false } }));
+    }
   }, []);
+
+  useEffect(() => {
+    if (getStoredToken()) {
+      void syncApplications();
+    }
+  }, [syncApplications]);
+
+  const handleAuthChange = useCallback(() => {
+    const hasToken = Boolean(getStoredToken());
+    setIsLive(hasToken);
+    if (hasToken) {
+      void syncApplications();
+    } else {
+      localStorage.removeItem('cs_rkf_applications');
+      setApplications([]);
+    }
+  }, [syncApplications]);
 
   useEffect(() => {
     const handleOpenAuth = () => setAuthModalOpen(true);
@@ -134,6 +198,7 @@ export default function TrackerPage() {
       setReceivedSet(getReceivedBarcodes());
       setSubscribedSet(getSubscribedCompetitions());
       setIsLive(Boolean(getStoredToken()));
+      void syncApplications();
     };
 
     window.addEventListener('tracker-open-auth', handleOpenAuth);
@@ -144,7 +209,7 @@ export default function TrackerPage() {
       window.removeEventListener('tracker-open-download', handleOpenDownload);
       window.removeEventListener('tracker-refresh', handleRefresh);
     };
-  }, []);
+  }, [syncApplications]);
 
   return (
     <div className="space-y-4">
@@ -202,6 +267,8 @@ export default function TrackerPage() {
           applications={applications}
           onToggleReceived={handleToggleReceived}
           receivedSet={receivedSet}
+          syncError={syncError}
+          authExpired={authExpired}
         />
       )}
 
@@ -227,15 +294,15 @@ export default function TrackerPage() {
           <div>
             <div className="font-semibold text-charcoal-950">Аккаунт подхвачен из расширения</div>
             <div className="text-charcoal-600 mt-0.5">
-              Обновление страницы через {extensionToast.secondsLeft} сек...
+              Данные синхронизированы автоматически
             </div>
           </div>
           <button
             type="button"
-            onClick={() => window.location.reload()}
+            onClick={() => setExtensionToast(null)}
             className="px-3 py-1.5 rounded-lg bg-camel-700 hover:bg-camel-800 text-white font-medium text-xs transition-colors shrink-0 cursor-pointer"
           >
-            Обновить
+            Готово
           </button>
         </aside>
       )}

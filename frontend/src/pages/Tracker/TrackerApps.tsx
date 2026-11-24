@@ -9,7 +9,7 @@ import {
   ArrowUpRight,
   Sparkles,
 } from 'lucide-react';
-import { getStoredToken } from './trackerData';
+import { getStoredToken, TRACKER_WORKER_URL } from './trackerData';
 import { TrackerAppCard } from './TrackerAppCard';
 import {
   TelegramBotVisual,
@@ -36,7 +36,33 @@ export function TrackerApps() {
   const [deferredPrompt, setDeferredPrompt] = useState<any>(() => globalDeferredPrompt);
   const [pwaInstalled, setPwaInstalled] = useState(false);
   const [installHint, setInstallHint] = useState<string | null>(null);
+  const [tgConnecting, setTgConnecting] = useState(false);
   const token = getStoredToken();
+
+  const handleOpenTelegramBot = async () => {
+    if (!token) {
+      window.open(TELEGRAM_BOT_URL, '_blank', 'noopener,noreferrer');
+      return;
+    }
+    setTgConnecting(true);
+    try {
+      const res = await fetch(`${TRACKER_WORKER_URL}/api/auth/ticket`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ apikey: token }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (res.ok && data?.botUrl) {
+        window.open(data.botUrl, '_blank', 'noopener,noreferrer');
+        return;
+      }
+    } catch {
+      // Fallback to bot root without leaking raw token in URL
+    } finally {
+      setTgConnecting(false);
+    }
+    window.open(TELEGRAM_BOT_URL, '_blank', 'noopener,noreferrer');
+  };
 
   useEffect(() => {
     const handleBeforeInstall = (e: Event) => {
@@ -99,16 +125,22 @@ export function TrackerApps() {
           ]}
           visual={<TelegramBotVisual />}
           action={
-            <a
-              href={token ? `${TELEGRAM_BOT_URL}?start=bind_${encodeURIComponent(token)}` : TELEGRAM_BOT_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="w-full min-h-[44px] h-11 rounded-xl bg-sky-600 hover:bg-sky-700 text-white font-semibold text-xs flex items-center justify-center gap-2 transition-colors shadow-sm cursor-pointer"
+            <button
+              type="button"
+              onClick={handleOpenTelegramBot}
+              disabled={tgConnecting}
+              className="w-full min-h-[44px] h-11 rounded-xl bg-sky-600 hover:bg-sky-700 disabled:opacity-60 text-white font-semibold text-xs flex items-center justify-center gap-2 transition-colors shadow-sm cursor-pointer"
             >
               <Bot className="w-4 h-4" />
-              <span>{token ? 'Привязать аккаунт в Telegram' : 'Открыть бота в Telegram'}</span>
+              <span>
+                {tgConnecting
+                  ? 'Подготовка безопасной ссылки...'
+                  : token
+                  ? 'Привязать аккаунт в Telegram'
+                  : 'Открыть бота в Telegram'}
+              </span>
               <ArrowUpRight className="w-3.5 h-3.5 opacity-80" />
-            </a>
+            </button>
           }
         />
 
@@ -128,16 +160,21 @@ export function TrackerApps() {
           ]}
           visual={<ExtensionVisual />}
           action={
-            <a
-              href={EXTENSION_ZIP_URL}
-              download
-              target="_blank"
-              rel="noreferrer"
-              className="w-full min-h-[44px] h-11 rounded-xl cs-glass-pill-active font-semibold text-xs flex items-center justify-center gap-2 transition-all cursor-pointer"
-            >
-              <Download className="w-4 h-4 text-camel-700" />
-              <span>Скачать расширение (.zip)</span>
-            </a>
+            <div className="space-y-2">
+              <a
+                href={EXTENSION_ZIP_URL}
+                download
+                target="_blank"
+                rel="noreferrer"
+                className="w-full min-h-[44px] h-11 rounded-xl cs-glass-pill-active font-semibold text-xs flex items-center justify-center gap-2 transition-all cursor-pointer"
+              >
+                <Download className="w-4 h-4 text-camel-700" />
+                <span>Скачать расширение (.zip)</span>
+              </a>
+              <p className="text-[11px] text-charcoal-500 leading-snug">
+                Распакуйте архив, откройте <code className="font-mono text-charcoal-700">chrome://extensions</code>, включите «Режим разработчика» и перетащите папку.
+              </p>
+            </div>
           }
         />
 

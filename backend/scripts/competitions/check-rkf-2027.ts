@@ -327,39 +327,39 @@ function hasAnyChanges(diff: EventDiff): boolean {
 
 function formatTelegramAlert(diff: EventDiff, totalRows: number): string {
   const parts: string[] = [];
-  parts.push('<b>📅 Обновление календарного плана РКФ 2027</b>\n');
+  parts.push('<b>Обновление календарного плана РКФ 2027</b>\n');
   parts.push(`В официальном файле РКФ обнаружены изменения (всего стартов в плане: <b>${totalRows}</b>):`);
 
   const summaryItems: string[] = [];
-  if (diff.added.length > 0) summaryItems.push(`➕ Новых стартов: <b>${diff.added.length}</b>`);
-  if (diff.removed.length > 0) summaryItems.push(`➖ Отменено / удалено: <b>${diff.removed.length}</b>`);
-  if (diff.dateChanges.length > 0) summaryItems.push(`📅 Перенос дат: <b>${diff.dateChanges.length}</b>`);
-  if (diff.notesChanges.length > 0) summaryItems.push(`⚖️ Изменение статуса комиссии: <b>${diff.notesChanges.length}</b>`);
-  if (diff.locationChanges.length > 0) summaryItems.push(`📍 Изменение места: <b>${diff.locationChanges.length}</b>`);
-  if (diff.rulesAdded.length > 0) summaryItems.push(`📜 Опубликован регламент: <b>${diff.rulesAdded.length}</b>`);
+  if (diff.added.length > 0) summaryItems.push(`• Новых стартов: <b>${diff.added.length}</b>`);
+  if (diff.removed.length > 0) summaryItems.push(`• Отменено / удалено: <b>${diff.removed.length}</b>`);
+  if (diff.dateChanges.length > 0) summaryItems.push(`• Перенос дат: <b>${diff.dateChanges.length}</b>`);
+  if (diff.notesChanges.length > 0) summaryItems.push(`• Изменение статуса комиссии: <b>${diff.notesChanges.length}</b>`);
+  if (diff.locationChanges.length > 0) summaryItems.push(`• Изменение места: <b>${diff.locationChanges.length}</b>`);
+  if (diff.rulesAdded.length > 0) summaryItems.push(`• Опубликован регламент: <b>${diff.rulesAdded.length}</b>`);
 
   parts.push(summaryItems.join('\n'));
   parts.push('\n<blockquote expandable>');
 
   for (const a of diff.added) {
-    parts.push(`➕ <b>${a.dateStart}</b>: ${a.rank} (${a.discipline}) — ${a.club} (${a.location})`);
+    parts.push(`[+] <b>${a.dateStart}</b>: ${a.rank} (${a.discipline}) — ${a.club} (${a.location})`);
   }
   for (const r of diff.removed) {
-    parts.push(`➖ <b>${r.date_start}</b>: ${r.title} — ${r.host_club}`);
+    parts.push(`[-] <b>${r.date_start}</b>: ${r.title} — ${r.host_club}`);
   }
   for (const d of diff.dateChanges) {
-    parts.push(`📅 <b>${d.event.title}</b>: ${d.oldDate} ➔ <b>${d.newDate}</b>`);
+    parts.push(`[ДАТА] <b>${d.event.title}</b>: ${d.oldDate} -> <b>${d.newDate}</b>`);
   }
   for (const n of diff.notesChanges) {
     const oldStatus = n.oldNotes || 'утверждено';
     const newStatus = n.newNotes || 'утверждено';
-    parts.push(`⚖️ <b>${n.event.title}</b>: «${oldStatus}» ➔ <b>«${newStatus}»</b>`);
+    parts.push(`[СТАТУС] <b>${n.event.title}</b>: «${oldStatus}» -> <b>«${newStatus}»</b>`);
   }
   for (const l of diff.locationChanges) {
-    parts.push(`📍 <b>${l.event.title}</b>: ${l.oldLoc} ➔ <b>${l.newLoc}</b>`);
+    parts.push(`[МЕСТО] <b>${l.event.title}</b>: ${l.oldLoc} -> <b>${l.newLoc}</b>`);
   }
   for (const ru of diff.rulesAdded) {
-    parts.push(`📜 <b>${ru.event.title}</b>: прикреплён регламент`);
+    parts.push(`[РЕГЛАМЕНТ] <b>${ru.event.title}</b>: прикреплен регламент`);
   }
 
   parts.push('</blockquote>\n');

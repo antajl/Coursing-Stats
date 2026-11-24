@@ -35,5 +35,5 @@ export interface TrackerCompetition {
 
 export type TrackerTab = 'applications' | 'competitions' | 'apps';
 export type DisciplineKey = 'Курсинг борзых' | 'Бега борзых' | 'БЗМП';
-export type ApplicationFilter = 'all' | 'active' | 'to_pickup' | 'collected';
+export type ApplicationFilter = 'all' | 'active' | 'to_pickup' | 'collected' | 'rejected';
 export type CompetitionStatusFilter = 'all' | 'APPROVED' | 'DELAYED' | 'PENDING';

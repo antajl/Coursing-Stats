@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { RotateCw, User, LogIn, Download } from 'lucide-react';
+import { RotateCw, User, LogIn, ArrowLeft } from 'lucide-react';
 import type { TrackerTab } from '../../pages/Tracker/trackerTypes';
 
 interface NavTrackerProps {
@@ -38,8 +38,6 @@ export function NavTracker({
     return `${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`;
   });
 
-  const [isSyncing, setIsSyncing] = useState(false);
-
   useEffect(() => {
     if (cooldown <= 0) return;
     const timer = setInterval(() => {
@@ -54,27 +52,28 @@ export function NavTracker({
     return () => clearInterval(timer);
   }, [cooldown]);
 
-  const handleOpenDownload = () => {
-    window.dispatchEvent(new CustomEvent('tracker-open-download'));
-  };
+  useEffect(() => {
+    if (!isRefreshing) {
+      const last = localStorage.getItem('cs_rkf_last_sync');
+      if (last) {
+        const d = new Date(Number(last));
+        setLastSyncStr(`${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`);
+      }
+    }
+  }, [isRefreshing]);
 
   const handleTriggerRefresh = () => {
-    if (cooldown > 0 || isSyncing || isRefreshing) return;
-    setIsSyncing(true);
+    if (cooldown > 0 || isRefreshing) return;
     onRefresh();
 
     const now = Date.now();
     localStorage.setItem('cs_rkf_last_sync_timestamp', String(now));
     const d = new Date(now);
     setLastSyncStr(`${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`);
-
-    setTimeout(() => {
-      setIsSyncing(false);
-      setCooldown(60);
-    }, 1000);
+    setCooldown(60);
   };
 
-  const activeSync = isRefreshing || isSyncing;
+  const activeSync = isRefreshing;
 
   return (
     <div className="flex relative h-16 w-full items-center justify-between pl-2 pr-2 sm:pl-3 sm:pr-3 lg:pl-4 lg:pr-4">
@@ -156,8 +155,17 @@ export function NavTracker({
         </button>
       </div>
 
-      {/* 3. Right: Auth/Account, and Adjacent Synchronization Block */}
+      {/* 3. Right: Site link, Auth/Account, and Adjacent Synchronization Block */}
       <div className="flex shrink-0 items-center gap-2 lg:gap-2.5">
+        <Link
+          to="/"
+          className="inline-flex items-center gap-1 h-9 px-2.5 rounded-full text-charcoal-600 hover:text-charcoal-900 hover:bg-cream-100/80 text-xs font-medium transition-colors no-underline"
+          title="Вернуться на основной портал CoursingStats"
+          aria-label="На основной сайт"
+        >
+          <ArrowLeft className="w-3.5 h-3.5" />
+          <span className="hidden lg:inline">На сайт</span>
+        </Link>
         {/* Account / Login Management Button (Renamed from Токен) */}
         <button
           type="button"
