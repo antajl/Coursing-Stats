@@ -42,3 +42,20 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           workingDirectory: 'rkf-tracker/bot'
           command: deploy
+          secrets: |
+            BOT_TOKEN
+        env:
+          BOT_TOKEN: ${{ secrets.TRACKER_BOT_TOKEN }}
+
+      - name: Register Telegram Webhook and Commands
+        env:
+          TRACKER_BOT_TOKEN: ${{ secrets.TRACKER_BOT_TOKEN }}
+        run: |
+          echo "Registering Webhook on Telegram..."
+          curl -s -f -X POST "https://api.telegram.org/bot${TRACKER_BOT_TOKEN}/setWebhook" \
+            -H "Content-Type: application/json" \
+            -d '{"url":"https://coursing-stats-tracker-bot.antajltube.workers.dev/webhook","allowed_updates":["message","callback_query"]}' || true
+          echo "Registering bot commands on Telegram..."
+          curl -s -f -X POST "https://api.telegram.org/bot${TRACKER_BOT_TOKEN}/setMyCommands" \
+            -H "Content-Type: application/json" \
+            -d '{"commands":[{"command":"start","description":"Главное меню"},{"command":"status","description":"Статус мониторинга"},{"command":"apps","description":"Список заявок и документов"},{"command":"ready","description":"Готовые к выдаче дипломы"},{"command":"competitions","description":"Отслеживание состязаний"},{"command":"track","description":"Подписаться на состязание"},{"command":"auth","description":"Привязать токен rkf.online"},{"command":"logout","description":"Сбросить авторизацию"},{"command":"help","description":"Справка и инструкция"}]}' || true

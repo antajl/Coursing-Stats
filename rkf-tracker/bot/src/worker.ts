@@ -90,7 +90,6 @@ export default {
       try {
         if (!cachedBot) {
           cachedBot = createBot(token, env);
-          await cachedBot.init();
         }
 
         const update: Update = await request.json();
