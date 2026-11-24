@@ -185,6 +185,10 @@ Workers + Grammy + KV; aggregates only
 2) **Двухуровневая модель UI-скиллов:** Проектные UI-скиллы (`old-money-design`, `accessibility`, `react-performance`, `react-composition-patterns`) сохраняются модульными с разделением на компактный `SKILL.md` (< 40 КБ) и каталоги углубленных спецификаций (`rules/`, `references/`). Это предотвращает усечение лимитами `read_file` (46 080 байт) и исключает шум в контексте при точечных задачах.
 3) **Пошаговая разработка vs Рой (Incremental over Swarm):** Для исследовательских задач и проектирования новых продуктов с нуля (0-to-1) применяется строго последовательная разработка вертикальными слоями одним агентом. Использование параллельных роев (Swarm) запрещено во избежание конфликтов несовместимых веток и рассинхронизации структур данных.
 
+### RKF Tracker Bot Single-Bubble Ergonomics & MenuButton Invariant
+
+В Telegram-боте RKF Tracker (`rkf-tracker/bot/`, Cloudflare Workers + Grammy) вся навигация по разделам (`cmd_start`, `cmd_status`, `cmd_competitions`, `cmd_apps`, `cmd_help`, `cmd_auth_prompt`, `cmd_auth_how`) обязана выполняться строго по принципу Single-Bubble через `ctx.editMessageText()` без дублирования сообщений в чате. Нижняя громоздкая `ReplyKeyboardMarkup` исключена в пользу нативной кнопки Telegram MenuButton (`setChatMenuButton`, WebApp `https://my.coursing-stats.ru`). Все хэндлеры и вспомогательные модули строго подчиняются ограничению file-budget (< 250 строк на файл). Допустимы только локальные коммиты (`git push` выполняется исключительно по прямому запросу пользователя).
+
 ---
 
 ## Domain Forbidden Rules
