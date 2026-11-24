@@ -11,7 +11,7 @@ export function getMainMenuKeyboard(
     kb.webApp('Открыть личный кабинет (WebApp)', webAppUrl).row()
       .text('Список заявок', 'cmd_apps').text('Состязания РКФ 2026', 'cmd_competitions').row();
   } else {
-    kb.webApp('Войти в РКФ Онлайн (на телефоне)', `${webAppUrl}?action=login`).row()
+    kb.webApp('Кабинет трекера (привязать профиль)', `${webAppUrl}?action=login`).row()
       .text('Состязания РКФ 2026', 'cmd_competitions').text('Подключить с ПК', 'cmd_auth_prompt').row();
   }
 
@@ -44,9 +44,9 @@ export function getStatusKeyboard(isLinked: boolean): InlineKeyboard {
 
 export function getAuthPromptKeyboard(webAppUrl: string = 'https://my.coursing-stats.ru'): InlineKeyboard {
   return new InlineKeyboard()
-    .webApp('Войти в РКФ Онлайн (на телефоне)', `${webAppUrl}?action=login`)
+    .text('Подключить с ПК в 1 клик (без ввода паролей)', 'cmd_auth_ext')
     .row()
-    .text('Подключить в 1 клик с компьютера', 'cmd_auth_ext')
+    .webApp('Привязать на телефоне (WebApp)', `${webAppUrl}?action=login`)
     .row()
     .text('Умная закладка без расширений', 'cmd_auth_bookmarklet')
     .row()
@@ -55,7 +55,7 @@ export function getAuthPromptKeyboard(webAppUrl: string = 'https://my.coursing-s
 
 export function getAuthLoginKeyboard(webAppUrl: string = 'https://my.coursing-stats.ru'): InlineKeyboard {
   return new InlineKeyboard()
-    .webApp('Войти в РКФ Онлайн (на телефоне)', `${webAppUrl}?action=login`)
+    .webApp('Открыть форму привязки (WebApp)', `${webAppUrl}?action=login`)
     .row()
     .text('« Назад к выбору', 'cmd_auth_prompt')
     .text('« В главное меню', 'cmd_start');

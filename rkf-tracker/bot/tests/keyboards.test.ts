@@ -31,7 +31,7 @@ describe('keyboards (Old Money / Zero Emoji compliance)', () => {
     const promptJson = JSON.stringify(promptKb);
     expect(emojiRegex.test(promptJson)).toBe(false);
     expect(promptJson).toContain('web_app');
-    expect(promptJson).toContain('Войти в РКФ Онлайн (на телефоне)');
+    expect(promptJson).toContain('Привязать на телефоне (WebApp)');
     expect(promptJson).toContain('cmd_auth_ext');
     expect(promptJson).toContain('cmd_auth_bookmarklet');
     expect(promptJson).toContain('cmd_start');
