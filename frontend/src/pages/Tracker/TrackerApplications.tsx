@@ -1,7 +1,9 @@
 import { useState, useMemo } from 'react';
+import { Key } from 'lucide-react';
 import type { TrackerApplication, ApplicationFilter } from './trackerTypes';
 import { TrackerApplicationRow } from './TrackerApplicationRow';
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch';
+import { getStoredToken } from './trackerData';
 
 interface TrackerApplicationsProps {
   applications: TrackerApplication[];
@@ -111,7 +113,35 @@ export function TrackerApplications({
         </button>
       </div>
 
-      {/* 2. Monolithic Table Card */}
+      {/* 2. Zero-Auth Educational Callout for Applications */}
+      {!getStoredToken() && (
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 p-3.5 rounded-xl bg-amber-50/80 border border-amber-200/70 text-charcoal-800 text-xs">
+          <div className="flex items-center gap-2.5">
+            <Key className="w-4 h-4 text-amber-700 shrink-0" />
+            <span>
+              Показаны демонстрационные заявки. Чтобы видеть ваши реальные документы, подключите токен RKF.Online.
+            </span>
+          </div>
+          <div className="flex items-center gap-2 shrink-0">
+            <button
+              type="button"
+              onClick={() => window.dispatchEvent(new CustomEvent('tracker-open-auth'))}
+              className="px-3 py-1.5 rounded-lg bg-camel-700 hover:bg-camel-800 text-white font-medium text-xs transition-colors cursor-pointer"
+            >
+              Подключить токен
+            </button>
+            <button
+              type="button"
+              onClick={() => window.dispatchEvent(new CustomEvent('tracker-open-download'))}
+              className="px-2.5 py-1.5 rounded-lg bg-cream-200 hover:bg-cream-300 text-charcoal-800 font-medium text-xs transition-colors cursor-pointer"
+            >
+              Расширение
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* 3. Monolithic Table Card */}
       <div className="cs-glass-card bg-white rounded-2xl overflow-hidden">
         {/* Table Header Bar (matching ShowCalendarMonthList header) */}
         <div className="relative flex min-h-10 items-center justify-between gap-1.5 border-b border-[rgba(195,168,128,0.55)] bg-cream-100/90 px-3 sm:px-4 py-1.5">

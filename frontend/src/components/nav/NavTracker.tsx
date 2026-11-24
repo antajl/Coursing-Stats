@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { RotateCw, User } from 'lucide-react';
+import { RotateCw, Key, Download } from 'lucide-react';
 import type { TrackerTab } from '../../pages/Tracker/trackerTypes';
 
 interface NavTrackerProps {
@@ -15,20 +15,24 @@ interface NavTrackerProps {
 export function NavTracker({
   activeTab,
   onSelectTab,
-  competitionsCount: _competitionsCount,
+  competitionsCount,
   isLive,
   onRefresh,
   isRefreshing,
   onOpenAuth,
 }: NavTrackerProps) {
+  const handleOpenDownload = () => {
+    window.dispatchEvent(new CustomEvent('tracker-open-download'));
+  };
+
   return (
     <div className="flex relative h-16 w-full items-center justify-between pl-2 pr-2 sm:pl-3 sm:pr-3 lg:pl-4 lg:pr-4">
       {/* 1. Left: Brand Logo (identical to NavDesktop.tsx) */}
       <Link
         to="/tracker"
         className="flex min-w-0 shrink-0 items-center transition-all duration-300 hover:opacity-90 active:scale-95"
-        aria-label="Главная страница Курсинг Статс"
-        title="Курсинг Статс"
+        aria-label="Главная страница РКФ Трекер"
+        title="РКФ Трекер"
       >
         <img
           src="/assets/brand/logo.svg"
@@ -52,16 +56,16 @@ export function NavTracker({
         />
       </Link>
 
-      {/* 2. Center: STRICTLY Two Internal Tracker Navigation Tabs (identical to NavDesktop.tsx) */}
-      <div className="absolute left-1/2 flex -translate-x-1/2 items-center gap-0.5 xl:gap-1">
+      {/* 2. Center: Two Navigation Tabs (desktop only, synchronized with page) */}
+      <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-1">
         <button
           type="button"
           onClick={() => onSelectTab('applications')}
-          className={`group relative flex shrink-0 items-center whitespace-nowrap py-2 px-2.5 text-xs font-semibold transition-colors duration-300 lg:px-3.5 lg:text-sm 2xl:px-5 ${
-            activeTab === 'applications' ? 'text-camel-700' : 'text-charcoal-700 hover:text-charcoal-900'
+          className={`group relative flex shrink-0 items-center whitespace-nowrap py-2 px-3 text-xs lg:text-sm font-semibold transition-colors duration-200 cursor-pointer ${
+            activeTab === 'applications' ? 'text-camel-800' : 'text-charcoal-700 hover:text-charcoal-900'
           }`}
         >
-          <span className="relative z-10">Заявки на титулы</span>
+          <span>Заявки на титулы</span>
           <span
             className={`pointer-events-none absolute bottom-0 left-0 h-0.5 bg-camel-600 transition-[width] duration-300 ease-out ${
               activeTab === 'applications' ? 'w-full' : 'w-0 group-hover:w-full'
@@ -72,11 +76,12 @@ export function NavTracker({
         <button
           type="button"
           onClick={() => onSelectTab('competitions')}
-          className={`group relative flex shrink-0 items-center whitespace-nowrap py-2 px-2.5 text-xs font-semibold transition-colors duration-300 lg:px-3.5 lg:text-sm 2xl:px-5 ${
-            activeTab === 'competitions' ? 'text-camel-700' : 'text-charcoal-700 hover:text-charcoal-900'
+          className={`group relative flex shrink-0 items-center gap-1.5 whitespace-nowrap py-2 px-3 text-xs lg:text-sm font-semibold transition-colors duration-200 cursor-pointer ${
+            activeTab === 'competitions' ? 'text-camel-800' : 'text-charcoal-700 hover:text-charcoal-900'
           }`}
         >
-          <span className="relative z-10">Соревнования РКФ</span>
+          <span>Соревнования РКФ</span>
+          <span className="text-[11px] font-mono opacity-80">{competitionsCount}</span>
           <span
             className={`pointer-events-none absolute bottom-0 left-0 h-0.5 bg-camel-600 transition-[width] duration-300 ease-out ${
               activeTab === 'competitions' ? 'w-full' : 'w-0 group-hover:w-full'
@@ -85,8 +90,8 @@ export function NavTracker({
         </button>
       </div>
 
-      {/* 3. Right: Sync status, Refresh button, Account button (matching NavDesktop.tsx right block) */}
-      <div className="flex shrink-0 items-center gap-1.5 lg:gap-2 2xl:gap-2.5">
+      {/* 3. Right: Ecosystem Download, Auth Token, Status Indicator, Refresh button */}
+      <div className="flex shrink-0 items-center gap-1.5 lg:gap-2">
         {/* Status Indicator */}
         <div className="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-cream-100 text-[11.5px] text-charcoal-700 border border-old-money-200/60 shadow-2xs">
           <span
@@ -96,15 +101,37 @@ export function NavTracker({
                 : 'bg-amber-400'
             }`}
           />
-          <span className="font-medium">{isLive ? 'РКФ Онлайн' : 'Демо-режим'}</span>
+          <span className="font-medium">{isLive ? 'РКФ Онлайн' : 'Демо'}</span>
         </div>
+
+        {/* Download Ecosystem Button */}
+        <button
+          type="button"
+          onClick={handleOpenDownload}
+          className="cs-glass-pill flex items-center justify-center gap-1.5 h-9 px-3 rounded-full text-charcoal-700 hover:text-charcoal-900 hover:border-camel-300 text-xs font-semibold transition-all shrink-0 active:scale-95 cursor-pointer"
+          title="Скачать программу для Windows, расширение для браузера или подключить бота"
+        >
+          <Download className="w-3.5 h-3.5 text-camel-700" />
+          <span className="hidden sm:inline">Скачать / Бот</span>
+        </button>
+
+        {/* Token Management Button */}
+        <button
+          type="button"
+          onClick={onOpenAuth}
+          className="cs-glass-pill flex items-center justify-center gap-1.5 h-9 px-3 rounded-full text-charcoal-700 hover:text-charcoal-900 hover:border-camel-300 text-xs font-semibold transition-all shrink-0 active:scale-95 cursor-pointer"
+          title="Подключить или изменить токен РКФ.Онлайн"
+        >
+          <Key className="w-3.5 h-3.5 text-camel-700" />
+          <span className="hidden sm:inline">Токен</span>
+        </button>
 
         {/* Refresh Button */}
         <button
           type="button"
           onClick={onRefresh}
           disabled={isRefreshing}
-          className="cs-glass-pill flex items-center justify-center gap-1.5 h-9 w-9 rounded-full text-charcoal-700 text-xs font-semibold group cursor-pointer shrink-0 disabled:opacity-50"
+          className="cs-glass-pill flex items-center justify-center h-9 w-9 rounded-full text-charcoal-700 text-xs font-semibold group cursor-pointer shrink-0 disabled:opacity-50"
           title="Синхронизировать данные"
           aria-label="Синхронизировать"
         >
@@ -113,17 +140,6 @@ export function NavTracker({
               isRefreshing ? 'animate-spin' : 'group-hover:rotate-45'
             }`}
           />
-        </button>
-
-        {/* Account Button */}
-        <button
-          type="button"
-          onClick={onOpenAuth}
-          className="cs-glass-pill flex items-center justify-center gap-1.5 h-9 px-2.5 2xl:px-3 rounded-full text-charcoal-700 hover:text-charcoal-900 hover:border-camel-300 text-xs font-semibold transition-all shrink-0 active:scale-95"
-          title="Управление входом в РКФ Онлайн"
-        >
-          <User className="w-3.5 h-3.5 text-camel-700" />
-          <span className="hidden sm:inline">Аккаунт</span>
         </button>
       </div>
     </div>
