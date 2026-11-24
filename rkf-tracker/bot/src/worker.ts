@@ -27,7 +27,8 @@ export default {
     }
 
     if (url.pathname === '/health') {
-      return new Response(JSON.stringify({ status: 'ok', worker: 'coursing-stats-tracker-bot' }), {
+      const botId = token.split(':')[0] || 'none';
+      return new Response(JSON.stringify({ status: 'ok', worker: 'coursing-stats-tracker-bot', bot_id: botId }), {
         status: 200,
         headers: { 'content-type': 'application/json' }
       });
