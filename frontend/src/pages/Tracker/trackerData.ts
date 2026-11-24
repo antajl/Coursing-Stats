@@ -44,12 +44,27 @@ export function getStoredEmail(): string | null {
   return localStorage.getItem('cs_rkf_user_email');
 }
 
-export function setStoredAuth(token: string, email: string): void {
+export const DEFAULT_RKF_USER_UUID = 'f4ef4ce4cffe4e18b3fed35e2536d64b';
+
+export function getStoredUserUuid(): string {
+  return localStorage.getItem('cs_rkf_user_uuid') || DEFAULT_RKF_USER_UUID;
+}
+
+export function getRkfApplicationUrl(barcode: string): string {
+  const uuid = getStoredUserUuid();
+  return `https://rkf.online/user/${uuid}/documents/application/registry?barcode=${barcode}`;
+}
+
+export function setStoredAuth(token: string, email: string, userUuid?: string): void {
   localStorage.setItem('cs_rkf_token', token);
   localStorage.setItem('cs_rkf_user_email', email);
+  if (userUuid) {
+    localStorage.setItem('cs_rkf_user_uuid', userUuid);
+  }
 }
 
 export function clearStoredAuth(): void {
   localStorage.removeItem('cs_rkf_token');
   localStorage.removeItem('cs_rkf_user_email');
+  localStorage.removeItem('cs_rkf_user_uuid');
 }

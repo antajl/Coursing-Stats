@@ -72,7 +72,7 @@ export default function TrackerPage() {
   useEffect(() => {
     const handleExtensionMessage = (event: MessageEvent) => {
       if (!event.data) return;
-      const { type, token, applications: extApps } = event.data;
+      const { type, token, applications: extApps, userUuid } = event.data;
       if (
         (type === 'RKF_TOKEN_TRANSFER' ||
           type === 'RKF_TRACKER_TOKEN_SYNC' ||
@@ -84,7 +84,7 @@ export default function TrackerPage() {
       ) {
         const prevToken = getStoredToken();
         const isNewToken = !prevToken || prevToken !== token.trim();
-        setStoredAuth(token.trim(), 'rkf.online');
+        setStoredAuth(token.trim(), 'rkf.online', userUuid);
         setIsLive(true);
 
         if (Array.isArray(extApps) && extApps.length > 0) {
