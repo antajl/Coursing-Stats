@@ -58,37 +58,37 @@ body.is-tab-mode .app-wrap {
   min-height: 100vh;
 }
 
-/* Tab Panels & Transition Animations */
+/* Tab Panels & Smooth Transition Animations */
+.tab-content-container {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  flex: 1;
+  min-height: 0;
+  position: relative;
+  overflow: hidden;
+  padding-top: 4px;
+  margin-top: -4px;
+}
+
 .tab-section {
+  grid-area: 1 / 1;
   display: flex;
   flex-direction: column;
-  flex: 1;
   min-height: 0;
   overflow: hidden;
   opacity: 0;
-  transform: translateY(4px);
+  transform: translateY(6px);
   pointer-events: none;
-  transition: opacity 0.22s cubic-bezier(0.22, 1, 0.36, 1), transform 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+  visibility: hidden;
+  transition: opacity 0.22s cubic-bezier(0.22, 1, 0.36, 1), transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.22s ease;
 }
 
 .tab-section.active {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
-}
-
-.tab-section:not(.active) {
-  display: none !important;
-}
-
-.tab-content-container {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  min-height: 0;
-  position: relative;
-  overflow: hidden;
-  padding-top: 4px; margin-top: -4px;
+  visibility: visible;
 }
 
 /* Header */
