@@ -98,6 +98,9 @@ function createEventCardHtml(ev, trackedIds) {
   const rawTitle = ev.title || rank;
   const cleanTitle = rawTitle.replace(/\s*•\s*(Курсинг борзых|Бега борзых|Бега за механической приманкой|БЗМП)/i, '').trim();
 
+  // Action link (only shown when matched to protocol on site, or compact archive link)
+  const actionLink = renderCardActionLink(ev);
+
   return `
     <article class="comp-card" id="comp-card-${ev.id}">
       <div class="comp-card-top">
@@ -107,6 +110,7 @@ function createEventCardHtml(ev, trackedIds) {
           ${rank ? `<span class="comp-tag tag-rank">${escapeHtml(rank)}</span>` : ''}
         </div>
         <div class="comp-head-right">
+          ${actionLink}
           ${statusBadge}
           <button class="${trackBtnClass}" data-event-id="${ev.id}" title="Добавить в отслеживаемые">
             <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -120,10 +124,6 @@ function createEventCardHtml(ev, trackedIds) {
       <div class="comp-meta-row">
         ${metaItems.join('')}
       </div>
-
-      <div class="comp-card-footer">
-        ${renderCardActionLink(ev)}
-      </div>
     </article>
   `;
 }
@@ -132,9 +132,9 @@ function renderCardActionLink(ev) {
   const eventId = ev.site_event_id || getCompetitionEventId(ev.id);
   if (eventId) {
     return `
-      <a href="https://coursing-stats.ru/event/${eventId}/" target="_blank" class="comp-link-portal comp-link-protocol" title="Перейти к протоколу состязания на сайте">
-        Протокол на сайте
-        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <a href="https://coursing-stats.ru/event/${eventId}/" target="_blank" class="comp-link-protocol" title="Открыть протокол состязания на сайте">
+        Протокол
+        <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
           <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
           <polyline points="15 3 21 3 21 9"/>
           <line x1="10" y1="14" x2="21" y2="3"/>
@@ -142,18 +142,7 @@ function renderCardActionLink(ev) {
       </a>
     `;
   }
-
-  const year = ev.year || '2026';
-  return `
-    <a href="https://coursing-stats.ru/competitions/archive/${year}/" target="_blank" class="comp-link-portal" title="Открыть архив соревнований на сайте">
-      Архив соревнований
-      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-        <polyline points="15 3 21 3 21 9"/>
-        <line x1="10" y1="14" x2="21" y2="3"/>
-      </svg>
-    </a>
-  `;
+  return '';
 }
 
 function attachEventCardHandlers(container, onToggleTrack) {
