@@ -21,6 +21,7 @@ node_modules/
 # Bot & Cloudflare secrets
 bot/.dev.vars
 !bot/.dev.vars.example
+rkf-tracker/bot/test-bundle/
 
 # Google Search Console OAuth tokens
 .gsc-tokens.json
