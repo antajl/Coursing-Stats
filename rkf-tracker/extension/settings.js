@@ -63,6 +63,23 @@ export function setupSettings(showToast, onLogout, onOpenTab) {
       showToast('Вы вышли из аккаунта');
     });
   }
+
+  const copySettingsBtn = document.getElementById('btn-copy-token-settings');
+  if (copySettingsBtn) {
+    copySettingsBtn.addEventListener('click', async () => {
+      const store = await chrome.storage.local.get(['rkfToken']);
+      if (!store.rkfToken) {
+        showToast('Токен отсутствует. Войдите в РКФ Онлайн.');
+        return;
+      }
+      try {
+        await navigator.clipboard.writeText(store.rkfToken);
+        showToast('Токен скопирован в буфер обмена!');
+      } catch {
+        showToast('Не удалось скопировать токен');
+      }
+    });
+  }
 }
 
 export async function openSettingsModal() {

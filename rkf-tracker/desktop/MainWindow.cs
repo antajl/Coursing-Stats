@@ -13,10 +13,12 @@ namespace CoursingStats.RkfTracker
         private readonly WebView2 webView;
         private readonly string startUrl;
         private bool isForceExit;
+        private readonly bool startsMinimized;
 
-        public MainWindow(string url, string iconPath)
+        public MainWindow(string url, string iconPath, bool isMinimized = false)
         {
             this.startUrl = url;
+            this.startsMinimized = isMinimized;
             this.Text = "CoursingStats • RKF Tracker";
             this.Size = new Size(1100, 720);
             this.MinimumSize = new Size(850, 550);
@@ -31,6 +33,15 @@ namespace CoursingStats.RkfTracker
             this.Controls.Add(webView);
 
             InitializeWebView();
+        }
+
+        protected override void OnShown(EventArgs e)
+        {
+            base.OnShown(e);
+            if (startsMinimized)
+            {
+                this.Hide();
+            }
         }
 
         private async void InitializeWebView()

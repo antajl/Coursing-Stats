@@ -52,6 +52,7 @@ $refs = @(
 $argsList = @(
     "/nologo",
     "/target:winexe",
+    "/platform:x64",
     "/optimize+",
     "/win32icon:$icoPath",
     "/out:$exePath"

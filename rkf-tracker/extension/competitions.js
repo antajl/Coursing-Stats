@@ -24,12 +24,37 @@ async function loadTrackedFromStorage() {
 }
 
 function setupDomListeners() {
+  const searchWrap = document.getElementById('comp-search-wrap');
+  const searchBtn = document.getElementById('comp-search-btn');
   const searchInput = document.getElementById('comp-search-input');
-  if (searchInput) {
+  const searchClear = document.getElementById('comp-search-clear');
+
+  if (searchBtn && searchWrap && searchInput) {
+    searchBtn.addEventListener('click', () => {
+      const isExpanded = searchWrap.classList.toggle('expanded');
+      if (isExpanded) {
+        searchInput.focus();
+      } else if (!searchInput.value.trim()) {
+        searchQuery = '';
+        applyAndRender();
+      }
+    });
+
     searchInput.addEventListener('input', (e) => {
       searchQuery = (e.target.value || '').trim().toLowerCase();
+      if (searchClear) searchClear.style.display = searchQuery ? 'inline-flex' : 'none';
       applyAndRender();
     });
+
+    if (searchClear) {
+      searchClear.addEventListener('click', () => {
+        searchInput.value = '';
+        searchQuery = '';
+        searchClear.style.display = 'none';
+        searchInput.focus();
+        applyAndRender();
+      });
+    }
   }
 
   const yearSelect = document.getElementById('comp-year-select');
@@ -40,28 +65,22 @@ function setupDomListeners() {
     });
   }
 
-  // 3 Discipline buttons
-  const discBtns = document.querySelectorAll('.comp-disc-btn');
-  discBtns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      discBtns.forEach((b) => b.classList.remove('active'));
-      btn.classList.add('active');
-      currentDiscipline = btn.getAttribute('data-disc') || 'Курсинг борзых';
+  const discSelect = document.getElementById('comp-discipline-select');
+  if (discSelect) {
+    discSelect.addEventListener('change', (e) => {
+      currentDiscipline = e.target.value || 'Курсинг борзых';
       updateFilterCounters();
       applyAndRender();
     });
-  });
+  }
 
-  // Status filter pills
-  const pills = document.querySelectorAll('.comp-filter-pill');
-  pills.forEach((pill) => {
-    pill.addEventListener('click', () => {
-      pills.forEach((p) => p.classList.remove('active'));
-      pill.classList.add('active');
-      currentFilter = pill.getAttribute('data-comp-filter') || 'all';
+  const statusSelect = document.getElementById('comp-status-select');
+  if (statusSelect) {
+    statusSelect.addEventListener('change', (e) => {
+      currentFilter = e.target.value || 'all';
       applyAndRender();
     });
-  });
+  }
 }
 
 export async function switchYear(year) {
@@ -123,25 +142,23 @@ async function fetchYearEvents(year) {
 }
 
 function updateDisciplineCounters() {
-  const cntCoursing = document.getElementById('disc-cnt-coursing');
-  const cntRacing = document.getElementById('disc-cnt-racing');
-  const cntBzmp = document.getElementById('disc-cnt-bzmp');
+  const discSelect = document.getElementById('comp-discipline-select');
+  if (!discSelect) return;
 
   const cCount = allEvents.filter((ev) => isMatchDiscipline(ev, 'Курсинг борзых')).length;
   const rCount = allEvents.filter((ev) => isMatchDiscipline(ev, 'Бега борзых')).length;
   const bCount = allEvents.filter((ev) => isMatchDiscipline(ev, 'БЗМП')).length;
 
-  if (cntCoursing) cntCoursing.textContent = `(${cCount})`;
-  if (cntRacing) cntRacing.textContent = `(${rCount})`;
-  if (cntBzmp) cntBzmp.textContent = `(${bCount})`;
+  for (const opt of discSelect.options) {
+    if (opt.value === 'Курсинг борзых') opt.textContent = `Курсинг борзых (${cCount})`;
+    else if (opt.value === 'Бега борзых') opt.textContent = `Бега борзых (${rCount})`;
+    else if (opt.value === 'БЗМП') opt.textContent = `БЗМП (${bCount})`;
+  }
 }
 
 function updateFilterCounters() {
-  const cntAll = document.getElementById('comp-cnt-all');
-  const cntApproved = document.getElementById('comp-cnt-approved');
-  const cntPending = document.getElementById('comp-cnt-pending');
-  const cntDelayed = document.getElementById('comp-cnt-delayed');
-  const cntTracked = document.getElementById('comp-cnt-tracked');
+  const statusSelect = document.getElementById('comp-status-select');
+  if (!statusSelect) return;
 
   const discEvents = allEvents.filter((ev) => isMatchDiscipline(ev, currentDiscipline));
 
@@ -159,11 +176,13 @@ function updateFilterCounters() {
     if (trackedIds.has(String(ev.id))) tracked++;
   }
 
-  if (cntAll) cntAll.textContent = `(${discEvents.length})`;
-  if (cntApproved) cntApproved.textContent = `(${approved})`;
-  if (cntPending) cntPending.textContent = `(${pending})`;
-  if (cntDelayed) cntDelayed.textContent = `(${delayed})`;
-  if (cntTracked) cntTracked.textContent = `(${tracked})`;
+  for (const opt of statusSelect.options) {
+    if (opt.value === 'all') opt.textContent = `Все статусы (${discEvents.length})`;
+    else if (opt.value === 'approved') opt.textContent = `Утверждено (${approved})`;
+    else if (opt.value === 'pending') opt.textContent = `На согласовании (${pending})`;
+    else if (opt.value === 'delayed') opt.textContent = `Задержано (${delayed})`;
+    else if (opt.value === 'tracked') opt.textContent = `Отслеживаемые (${tracked})`;
+  }
   updateTrackedBadge();
 }
 

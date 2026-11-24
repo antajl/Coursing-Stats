@@ -23,6 +23,13 @@ namespace CoursingStats.RkfTracker
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
+            AppDomain.CurrentDomain.UnhandledException += (s, e) => {
+                try { File.WriteAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "crash.log"), e.ExceptionObject.ToString()); } catch { }
+            };
+            Application.ThreadException += (s, e) => {
+                try { File.WriteAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "crash.log"), e.Exception.ToString()); } catch { }
+            };
+
             bool createdNew;
             using (Mutex mutex = new Mutex(true, "Global\\CoursingStatsRkfTrackerMutex", out createdNew))
             {
@@ -48,19 +55,14 @@ namespace CoursingStats.RkfTracker
                 string icoPath = Path.Combine(baseDir, "app.ico");
                 string appUrl = string.Format("http://127.0.0.1:{0}/index.html", port);
 
-                mainWindow = new MainWindow(appUrl, icoPath);
+                bool isMinimized = args.Length > 0 && args[0].ToLowerInvariant().Contains("minimized");
+                mainWindow = new MainWindow(appUrl, icoPath, isMinimized);
                 SetupTray();
 
                 // Background poll every 60 minutes
                 pollTimer = new System.Threading.Timer(_ => poller.PollOnce(), null, 5000, 3600000);
 
-                bool isMinimized = args.Length > 0 && args[0].ToLowerInvariant().Contains("minimized");
-                if (!isMinimized)
-                {
-                    mainWindow.ShowAndActivate();
-                }
-
-                Application.Run();
+                Application.Run(mainWindow);
 
                 if (pollTimer != null) pollTimer.Dispose();
                 if (server != null) server.Stop();

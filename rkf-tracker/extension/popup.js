@@ -22,7 +22,6 @@ const btnFullscreen = document.getElementById('btn-fullscreen');
 const searchInput = document.getElementById('search-input');
 const toast = document.getElementById('toast');
 const errorModal = document.getElementById('error-modal');
-const guideModal = document.getElementById('guide-modal');
 
 document.addEventListener('DOMContentLoaded', async () => {
   if (window.innerWidth > 800 || new URLSearchParams(window.location.search).get('mode') === 'tab') {
@@ -39,31 +38,27 @@ function setupEventListeners() {
   btnRefresh.addEventListener('click', triggerRefresh);
   btnFullscreen.addEventListener('click', openFullscreenTab);
 
-  // Tabs navigation
+  // Tabs navigation with smooth animation
   const tabApps = document.getElementById('tab-btn-apps');
   const tabComps = document.getElementById('tab-btn-competitions');
   const secApps = document.getElementById('section-apps');
   const secComps = document.getElementById('section-competitions');
 
   tabApps.addEventListener('click', () => {
+    if (tabApps.classList.contains('active')) return;
     tabApps.classList.add('active');
     tabComps.classList.remove('active');
-    secApps.style.display = 'block';
-    secComps.style.display = 'none';
+    secComps.classList.remove('active');
+    secApps.classList.add('active');
   });
 
   tabComps.addEventListener('click', () => {
+    if (tabComps.classList.contains('active')) return;
     tabComps.classList.add('active');
     tabApps.classList.remove('active');
-    secApps.style.display = 'none';
-    secComps.style.display = 'block';
+    secApps.classList.remove('active');
+    secComps.classList.add('active');
   });
-
-  // Installation guide
-  document.getElementById('btn-guide').addEventListener('click', () => { guideModal.style.display = 'flex'; });
-  const hideGuide = () => { guideModal.style.display = 'none'; };
-  document.getElementById('btn-close-guide').addEventListener('click', hideGuide);
-  document.getElementById('btn-guide-ok').addEventListener('click', hideGuide);
 
   // Brand link -> Opens Web Tracker with auto-token handover
   const brandLink = document.getElementById('brand-link');
@@ -82,7 +77,39 @@ function setupEventListeners() {
     });
   }
 
-  searchInput.addEventListener('input', () => handleSearch(currentFilter));
+  // Apps Expandable Search
+  const appsSearchWrap = document.getElementById('apps-search-wrap');
+  const appsSearchBtn = document.getElementById('apps-search-btn');
+  const appsSearchClear = document.getElementById('apps-search-clear');
+
+  if (appsSearchBtn && appsSearchWrap && searchInput) {
+    appsSearchBtn.addEventListener('click', () => {
+      const isExpanded = appsSearchWrap.classList.toggle('expanded');
+      if (isExpanded) {
+        searchInput.focus();
+      } else if (!searchInput.value.trim()) {
+        handleSearch(currentFilter);
+      }
+    });
+
+    searchInput.addEventListener('input', () => {
+      if (appsSearchClear) {
+        appsSearchClear.style.display = searchInput.value ? 'inline-flex' : 'none';
+      }
+      handleSearch(currentFilter);
+    });
+
+    if (appsSearchClear) {
+      appsSearchClear.addEventListener('click', () => {
+        searchInput.value = '';
+        appsSearchClear.style.display = 'none';
+        searchInput.focus();
+        handleSearch(currentFilter);
+      });
+    }
+  } else if (searchInput) {
+    searchInput.addEventListener('input', () => handleSearch(currentFilter));
+  }
 
   document.querySelectorAll('.filter-bar .filter-pill').forEach((pill) => {
     pill.addEventListener('click', () => {
@@ -96,12 +123,6 @@ function setupEventListeners() {
   document.getElementById('btn-open-rkf').addEventListener('click', () => {
     chrome.tabs.create({ url: 'https://rkf.online' });
   });
-
-  const copyBtn = document.getElementById('btn-copy-token');
-  if (copyBtn) copyBtn.addEventListener('click', copyTokenToClipboard);
-
-  const copySettingsBtn = document.getElementById('btn-copy-token-settings');
-  if (copySettingsBtn) copySettingsBtn.addEventListener('click', copyTokenToClipboard);
 
   document.getElementById('toggle-manual-token').addEventListener('click', (e) => {
     e.preventDefault();
@@ -298,28 +319,4 @@ function showErrorModal(title, desc, hint) {
   document.getElementById('err-desc').innerText = desc;
   document.getElementById('err-hint').innerText = hint;
   errorModal.style.display = 'flex';
-}
-
-async function copyTokenToClipboard() {
-  const store = await chrome.storage.local.get(['rkfToken']);
-  if (!store.rkfToken) {
-    showToast('Токен отсутствует. Войдите в РКФ Онлайн.');
-    return;
-  }
-  try {
-    await navigator.clipboard.writeText(store.rkfToken);
-    showToast('Токен скопирован в буфер обмена!');
-  } catch (err) {
-    try {
-      const textarea = document.createElement('textarea');
-      textarea.value = store.rkfToken;
-      document.body.appendChild(textarea);
-      textarea.select();
-      document.execCommand('copy');
-      document.body.removeChild(textarea);
-      showToast('Токен скопирован в буфер обмена!');
-    } catch {
-      showToast('Не удалось скопировать токен');
-    }
-  }
 }

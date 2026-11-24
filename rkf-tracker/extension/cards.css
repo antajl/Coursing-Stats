@@ -3,6 +3,10 @@
   display: flex;
   flex-direction: column;
   gap: 3px;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding-right: 2px;
 }
 
 /* Row Card — Full soft colored background inside without harsh borders */

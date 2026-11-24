@@ -26,6 +26,16 @@ export default {
       });
     }
 
+    if (url.pathname === '/debug') {
+      const lastUpdate = await env.KV_STORAGE.get('debug:last_update') || 'none';
+      const lastError = await env.KV_STORAGE.get('debug:last_error') || 'none';
+      const lastBotCatch = await env.KV_STORAGE.get('debug:last_bot_catch') || 'none';
+      return new Response(JSON.stringify({ lastUpdate, lastError, lastBotCatch }, null, 2), {
+        status: 200,
+        headers: { 'content-type': 'application/json' }
+      });
+    }
+
     if (url.pathname === '/health') {
       const botId = token.split(':')[0] || 'none';
       return new Response(JSON.stringify({ status: 'ok', worker: 'coursing-stats-tracker-bot', bot_id: botId }), {
@@ -90,17 +100,32 @@ export default {
     // Telegram webhook handler
     if (request.method === 'POST' && (url.pathname === '/webhook' || url.pathname === '/')) {
       try {
+        const update: Update = await request.json();
+        try {
+          await env.KV_STORAGE.put('debug:last_update', JSON.stringify(update), { expirationTtl: 3600 });
+        } catch {}
+
         if (!cachedBot) {
           cachedBot = createBot(token, env);
+          cachedBot.catch(async (err) => {
+            const msg = `BotError: ${err.message || String(err.error)} | Update: ${err.ctx?.update?.update_id}`;
+            console.error('[bot.catch]', msg);
+            try {
+              await env.KV_STORAGE.put('debug:last_bot_catch', msg, { expirationTtl: 3600 });
+            } catch {}
+          });
         }
 
-        const update: Update = await request.json();
         await cachedBot.handleUpdate(update);
         return new Response('OK', { status: 200 });
       } catch (err: any) {
+        const errMsg = err?.message || String(err);
         console.error('[Webhook error]', err);
+        try {
+          await env.KV_STORAGE.put('debug:last_error', `${errMsg} | stack: ${err?.stack || ''}`, { expirationTtl: 3600 });
+        } catch {}
         return new Response(JSON.stringify({
-          error: err?.message || String(err),
+          error: errMsg,
           stack: err?.stack || ''
         }), {
           status: 200,
