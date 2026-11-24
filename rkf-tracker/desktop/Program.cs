@@ -2,6 +2,7 @@ using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
+using System.Net;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
@@ -12,17 +13,8 @@ namespace CoursingStats.RkfTracker
 {
     static class Program
     {
-        [DllImport("user32.dll", SetLastError = true, CharSet = CharSet.Auto)]
-        private static extern uint RegisterWindowMessage(string lpString);
-
-        [DllImport("user32.dll", SetLastError = true)]
-        private static extern bool PostMessage(IntPtr hWnd, uint Msg, IntPtr wParam, IntPtr lParam);
-
         [DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
         private static extern bool SetDllDirectory(string lpPathName);
-
-        private static readonly IntPtr HWND_BROADCAST = (IntPtr)0xffff;
-        public static readonly uint WM_SHOW_TRACKER = RegisterWindowMessage("CoursingStats_ShowTrackerWindow");
 
         private static NotifyIcon trayIcon;
         private static LocalServer server;
@@ -31,6 +23,8 @@ namespace CoursingStats.RkfTracker
         private static MainWindow mainWindow;
         private static int port = 4199;
         private static string baseDir;
+
+        private static Mutex appMutex;
 
         [STAThread]
         static void Main(string[] args)
@@ -51,21 +45,27 @@ namespace CoursingStats.RkfTracker
             };
 
             bool createdNew;
-            using (Mutex mutex = new Mutex(true, "Global\\CoursingStatsRkfTrackerMutex", out createdNew))
+            appMutex = new Mutex(true, "Local\\CoursingStatsRkfTrackerMutex", out createdNew);
+            if (!createdNew)
             {
-                if (!createdNew)
+                try
                 {
-                    PostMessage(HWND_BROADCAST, WM_SHOW_TRACKER, IntPtr.Zero, IntPtr.Zero);
-                    return;
+                    using (var wc = new WebClient())
+                    {
+                        wc.DownloadString(string.Format("http://127.0.0.1:{0}/api/desktop/show", port));
+                    }
                 }
-
-                RunApplication(args);
+                catch { }
+                return;
             }
+
+            RunApplication(args);
         }
 
         [MethodImpl(MethodImplOptions.NoInlining)]
         private static void RunApplication(string[] args)
         {
+            try { File.AppendAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "debug_lifecycle.log"), "3. RunApplication entry\n"); } catch { }
             baseDir = AppDomain.CurrentDomain.BaseDirectory;
 
             // Direct native WebView2 loader resolution
@@ -102,8 +102,10 @@ namespace CoursingStats.RkfTracker
             mainWindow = new MainWindow(appUrl, icoPath, isMinimized);
             SetupTray();
 
-            // Background poll every 60 minutes
-            pollTimer = new System.Threading.Timer(_ => poller.PollOnce(), null, 5000, 3600000);
+            // Background poll every 60 minutes (safely wrapped)
+            pollTimer = new System.Threading.Timer(_ => {
+                try { poller.PollOnce(); } catch { }
+            }, null, 5000, 3600000);
 
             if (!isMinimized)
             {
@@ -204,8 +206,22 @@ namespace CoursingStats.RkfTracker
 
         private static void OnStatusChanged(string barcode, string oldStatus, string newStatus)
         {
-            string msg = string.Format("Заявка №{0}:\n{1}", barcode, newStatus);
-            trayIcon.ShowBalloonTip(6000, "РКФ: Изменение статуса", msg, ToolTipIcon.Info);
+            try
+            {
+                string msg = string.Format("Заявка №{0}:\n{1}", barcode, newStatus);
+                if (mainWindow != null && mainWindow.InvokeRequired)
+                {
+                    mainWindow.BeginInvoke(new Action(() =>
+                    {
+                        try { if (trayIcon != null) trayIcon.ShowBalloonTip(6000, "РКФ: Изменение статуса", msg, ToolTipIcon.Info); } catch { }
+                    }));
+                }
+                else
+                {
+                    if (trayIcon != null) trayIcon.ShowBalloonTip(6000, "РКФ: Изменение статуса", msg, ToolTipIcon.Info);
+                }
+            }
+            catch { }
         }
 
         public static void OpenDashboard()

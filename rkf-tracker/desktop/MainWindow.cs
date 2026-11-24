@@ -63,7 +63,7 @@ namespace CoursingStats.RkfTracker
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ошибка инициализации интерфейса WebView2: " + ex.Message,
+                MessageBox.Show("Ошибка инициализации интерфейса WebView2:\n\n" + ex.Message,
                     "CoursingStats Tracker", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -84,16 +84,6 @@ namespace CoursingStats.RkfTracker
                 Process.Start(new ProcessStartInfo(uri) { UseShellExecute = true });
             }
             catch { }
-        }
-
-        protected override void WndProc(ref Message m)
-        {
-            if (m.Msg == (int)Program.WM_SHOW_TRACKER)
-            {
-                ShowAndActivate();
-                return;
-            }
-            base.WndProc(ref m);
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)

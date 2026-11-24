@@ -53,7 +53,17 @@ namespace CoursingStats.RkfTracker
                 try
                 {
                     var ctx = listener.GetContext();
-                    ThreadPool.QueueUserWorkItem(_ => ProcessRequest(ctx));
+                    ThreadPool.QueueUserWorkItem(_ =>
+                    {
+                        try
+                        {
+                            ProcessRequest(ctx);
+                        }
+                        catch
+                        {
+                            try { ctx.Response.Close(); } catch { }
+                        }
+                    });
                 }
                 catch { break; }
             }
@@ -85,6 +95,13 @@ namespace CoursingStats.RkfTracker
             if (path == "/api/desktop/status")
             {
                 SendJson(res, new { ok = true, autostart = AutostartHelper.IsEnabled() });
+                return;
+            }
+
+            if (path == "/api/desktop/show")
+            {
+                Program.OpenDashboard();
+                SendJson(res, new { ok = true });
                 return;
             }
 
@@ -166,26 +183,32 @@ namespace CoursingStats.RkfTracker
         private void ServeStatic(HttpListenerContext ctx, string path)
         {
             var res = ctx.Response;
-            if (path == "/" || string.IsNullOrEmpty(path)) path = "/index.html";
-
-            string relPath = path.TrimStart('/').Replace('/', Path.DirectorySeparatorChar);
-            string fullPath = Path.Combine(webDir, relPath);
-
-            if (!File.Exists(fullPath))
+            try
             {
-                res.StatusCode = 404;
-                byte[] b = Encoding.UTF8.GetBytes("Файл не найден");
-                res.OutputStream.Write(b, 0, b.Length);
-                res.Close();
-                return;
-            }
+                if (path == "/" || string.IsNullOrEmpty(path)) path = "/index.html";
 
-            res.ContentType = GetMimeType(Path.GetExtension(fullPath));
-            using (FileStream fs = File.OpenRead(fullPath))
-            {
-                fs.CopyTo(res.OutputStream);
+                string relPath = path.TrimStart('/').Replace('/', Path.DirectorySeparatorChar);
+                string fullPath = Path.Combine(webDir, relPath);
+
+                if (!File.Exists(fullPath))
+                {
+                    res.StatusCode = 404;
+                    byte[] b = Encoding.UTF8.GetBytes("Файл не найден");
+                    res.OutputStream.Write(b, 0, b.Length);
+                    return;
+                }
+
+                res.ContentType = GetMimeType(Path.GetExtension(fullPath));
+                using (FileStream fs = File.OpenRead(fullPath))
+                {
+                    fs.CopyTo(res.OutputStream);
+                }
             }
-            res.Close();
+            catch { }
+            finally
+            {
+                try { res.Close(); } catch { }
+            }
         }
 
         private string GetMimeType(string ext)
