@@ -91,6 +91,24 @@ export default {
         console.error('[set-webhook] Failed to set bot commands:', cmdErr);
       }
 
+      // Set native WebApp menu button
+      try {
+        const webAppUrl = env.WEBAPP_URL || 'https://my.coursing-stats.ru';
+        await fetch(`https://api.telegram.org/bot${token}/setChatMenuButton`, {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({
+            menu_button: {
+              type: 'web_app',
+              text: 'Кабинет',
+              web_app: { url: webAppUrl }
+            }
+          })
+        });
+      } catch (menuErr) {
+        console.error('[set-webhook] Failed to set menu button:', menuErr);
+      }
+
       return new Response(JSON.stringify(whData), {
         status: whRes.ok ? 200 : 500,
         headers: { 'content-type': 'application/json' }

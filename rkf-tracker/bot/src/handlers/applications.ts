@@ -1,19 +1,24 @@
-// Handler: /apps and /ready commands (Strict Zero Emoji)
+// Handler: /apps and /ready commands (Strict Zero Emoji & Single-Bubble UX)
 import type { Composer } from 'grammy';
 import type { BotContext, ApplicationItem } from '../types.js';
 import { getUser, saveUser } from '../storage/index.js';
 import { fetchRkfApplications } from '../services/rkf-api.js';
-import { getApplicationActionKeyboard, getMainMenuKeyboard } from '../keyboards.js';
+import {
+  getApplicationActionKeyboard,
+  getMainMenuKeyboard,
+  getAuthPromptKeyboard,
+  getBackToMenuKeyboard
+} from '../keyboards.js';
 
 export function registerApplicationsHandler(composer: Composer<BotContext>): void {
   composer.command(['apps', 'ready'], async (ctx) => {
     const onlyReady = ctx.message?.text?.includes('/ready') || false;
-    await showApplications(ctx, onlyReady);
+    await showApplications(ctx, onlyReady, false);
   });
 
   composer.callbackQuery('cmd_apps', async (ctx) => {
     await ctx.answerCallbackQuery();
-    await showApplications(ctx, false);
+    await showApplications(ctx, false, true);
   });
 
   composer.callbackQuery(/^(mark_rec|unmark_rec):(\d+)$/, async (ctx) => {
@@ -34,7 +39,7 @@ export function registerApplicationsHandler(composer: Composer<BotContext>): voi
       await ctx.answerCallbackQuery({ text: 'Отмечено как забрали' });
     } else {
       user.receivedBarcodes = user.receivedBarcodes.filter(b => b !== barcode);
-      await ctx.answerCallbackQuery({ text: 'Отметка "Забрали" снята' });
+      await ctx.answerCallbackQuery({ text: 'Отметка снята' });
     }
 
     await saveUser(ctx.env.KV_STORAGE, user);
@@ -45,12 +50,12 @@ export function registerApplicationsHandler(composer: Composer<BotContext>): voi
         reply_markup: getApplicationActionKeyboard(barcode, action === 'mark_rec', webAppUrl)
       });
     } catch {
-      // Ignore if markup did not change
+      // Content did not change
     }
   });
 }
 
-async function showApplications(ctx: BotContext, onlyReady: boolean): Promise<void> {
+async function showApplications(ctx: BotContext, onlyReady: boolean, isEdit: boolean): Promise<void> {
   const userId = ctx.from?.id;
   if (!userId) return;
 
@@ -58,10 +63,19 @@ async function showApplications(ctx: BotContext, onlyReady: boolean): Promise<vo
   const webAppUrl = ctx.env.WEBAPP_URL || 'https://my.coursing-stats.ru';
 
   if (!user || !user.rkfToken) {
-    await ctx.reply(
-      'Для просмотра ваших документов необходимо привязать аккаунт rkf.online командой /auth.',
-      { reply_markup: getMainMenuKeyboard(webAppUrl) }
-    );
+    const notLinkedText =
+      `Документы rkf.online\n` +
+      `— — — — — — — — — — — — — — —\n` +
+      `Для просмотра списка ваших заявок подключите аккаунт rkf.online.\n\n` +
+      `Бот будет отображать актуальные статусы и присылать push-уведомления при готовности документов.`;
+
+    if (isEdit) {
+      try {
+        await ctx.editMessageText(notLinkedText, { reply_markup: getAuthPromptKeyboard(webAppUrl) });
+        return;
+      } catch {}
+    }
+    await ctx.reply(notLinkedText, { reply_markup: getAuthPromptKeyboard(webAppUrl) });
     return;
   }
 
@@ -69,11 +83,18 @@ async function showApplications(ctx: BotContext, onlyReady: boolean): Promise<vo
   try {
     apps = await fetchRkfApplications(user.rkfToken, user.receivedBarcodes || []);
   } catch (err: any) {
-    if (err?.message === 'AUTH_EXPIRED') {
-      await ctx.reply('Срок действия токена истек. Пожалуйста, обновите авторизацию через /auth.');
-      return;
+    const errorMsg =
+      err?.message === 'AUTH_EXPIRED'
+        ? `Срок действия токена истек.\nПожалуйста, обновите авторизацию через /auth.`
+        : `Временная ошибка связи с API RKF.\nПожалуйста, повторите запрос через минуту.`;
+
+    if (isEdit) {
+      try {
+        await ctx.editMessageText(errorMsg, { reply_markup: getBackToMenuKeyboard() });
+        return;
+      } catch {}
     }
-    await ctx.reply('Временная ошибка при запросе к API RKF. Попробуйте повторить через минуту.');
+    await ctx.reply(errorMsg, { reply_markup: getBackToMenuKeyboard() });
     return;
   }
 
@@ -83,47 +104,54 @@ async function showApplications(ctx: BotContext, onlyReady: boolean): Promise<vo
 
   if (apps.length === 0) {
     const emptyMsg = onlyReady
-      ? 'На данный момент готовых к выдаче документов нет.'
-      : 'В вашем личном кабинете rkf.online не найдено активных заявок.';
-    await ctx.reply(emptyMsg, { reply_markup: getMainMenuKeyboard(webAppUrl) });
+      ? `Готовые документы rkf.online\n— — — — — — — — — — — — — — —\nНа данный момент готовых к выдаче документов нет.`
+      : `Документы rkf.online\n— — — — — — — — — — — — — — —\nВ вашем личном кабинете rkf.online активных заявок не найдено.`;
+
+    if (isEdit) {
+      try {
+        await ctx.editMessageText(emptyMsg, { reply_markup: getMainMenuKeyboard(webAppUrl, true) });
+        return;
+      } catch {}
+    }
+    await ctx.reply(emptyMsg, { reply_markup: getMainMenuKeyboard(webAppUrl, true) });
     return;
   }
 
-  // Display top 5 most recent documents
-  const displayLimit = 5;
+  const displayLimit = 4;
   const slice = apps.slice(0, displayLimit);
 
-  await ctx.reply(
-    `Найдено документов: ${apps.length} (показаны первые ${slice.length}):`
-  );
+  let text =
+    `Документы rkf.online (${apps.length}):\n` +
+    `— — — — — — — — — — — — — — —\n\n`;
 
-  for (const app of slice) {
-    const statusBadge = app.statusGroup === 'ready'
-      ? '[ГОТОВО К ВЫДАЧЕ]'
-      : app.statusGroup === 'rejected'
-        ? '[ОТКЛОНЕНО]'
-        : '[В ОБРАБОТКЕ]';
+  for (let i = 0; i < slice.length; i++) {
+    const app = slice[i];
+    const statusBadge =
+      app.statusGroup === 'ready'
+        ? '[ГОТОВО К ВЫДАЧЕ]'
+        : app.statusGroup === 'rejected'
+          ? '[ОТКЛОНЕНО]'
+          : '[В ОБРАБОТКЕ]';
 
-    const receivedTag = app.isReceived ? ' (Забрали)' : '';
-    const dogLine = app.dogName ? `\nСобака: ${app.dogName}` : '';
-    const pedLine = app.pedigreeNumber ? `\nРодословная: ${app.pedigreeNumber}` : '';
+    const receivedTag = app.isReceived ? ' • Забрали' : '';
+    const dog = app.dogName ? ` • ${app.dogName}` : '';
 
-    const text =
-      `${statusBadge}${receivedTag}\n` +
-      `Документ: ${app.documentName}\n` +
-      `Номер заявки: ${app.barcode}${dogLine}${pedLine}\n` +
-      `Текущий статус: ${app.currentStatus}\n` +
-      `Дата обновления: ${new Date(app.lastUpdated).toLocaleDateString('ru-RU')}`;
-
-    await ctx.reply(text, {
-      reply_markup: getApplicationActionKeyboard(app.barcode, app.isReceived, webAppUrl)
-    });
+    text +=
+      `${i + 1}. ${statusBadge}${receivedTag}\n` +
+      `   ${app.documentName}${dog}\n` +
+      `   Заявка: #${app.barcode} • ${app.currentStatus}\n\n`;
   }
 
   if (apps.length > displayLimit) {
-    await ctx.reply(
-      `Еще ${apps.length - displayLimit} заявок доступны в веб-кабинете «Мои заявки».`,
-      { reply_markup: getMainMenuKeyboard(webAppUrl) }
-    );
+    text += `Еще ${apps.length - displayLimit} заявок доступны в веб-кабинете.\n`;
   }
+
+  const kb = getMainMenuKeyboard(webAppUrl, true);
+  if (isEdit) {
+    try {
+      await ctx.editMessageText(text, { reply_markup: kb });
+      return;
+    } catch {}
+  }
+  await ctx.reply(text, { reply_markup: kb });
 }

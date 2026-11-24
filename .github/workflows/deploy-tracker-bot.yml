@@ -63,5 +63,10 @@ jobs:
             -H "Content-Type: application/json" \
             -d '{"commands":[{"command":"start","description":"Главное меню"},{"command":"status","description":"Статус мониторинга"},{"command":"apps","description":"Список заявок и документов"},{"command":"ready","description":"Готовые к выдаче дипломы"},{"command":"competitions","description":"Отслеживание состязаний"},{"command":"track","description":"Подписаться на состязание"},{"command":"auth","description":"Привязать токен rkf.online"},{"command":"logout","description":"Сбросить авторизацию"},{"command":"help","description":"Справка и инструкция"}]}')
           echo "Commands response: $CMD_RES"
+          echo "Setting chat menu button on Telegram..."
+          MENU_RES=$(curl -s -X POST "https://api.telegram.org/bot${TRACKER_BOT_TOKEN}/setChatMenuButton" \
+            -H "Content-Type: application/json" \
+            -d '{"menu_button":{"type":"web_app","text":"Кабинет","web_app":{"url":"https://my.coursing-stats.ru"}}}')
+          echo "Menu button response: $MENU_RES"
           echo "Current Webhook info from Telegram:"
           curl -s "https://api.telegram.org/bot${TRACKER_BOT_TOKEN}/getWebhookInfo"

@@ -40,6 +40,18 @@ export function registerStartHandler(composer: Composer<BotContext>): void {
     const text = buildStartText(user);
     const isLinked = Boolean(user && user.rkfToken);
 
+    try {
+      await ctx.setChatMenuButton({
+        menu_button: {
+          type: 'web_app',
+          text: 'Кабинет',
+          web_app: { url: webAppUrl }
+        }
+      });
+    } catch {
+      // Ignore if setChatMenuButton fails in test environments
+    }
+
     await ctx.reply(text, {
       reply_markup: getMainMenuKeyboard(webAppUrl, isLinked)
     });
