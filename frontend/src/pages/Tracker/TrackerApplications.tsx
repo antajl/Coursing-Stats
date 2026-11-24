@@ -143,18 +143,10 @@ export function TrackerApplications({
 
       {/* 3. Monolithic Table Card */}
       <div className="cs-glass-card bg-white rounded-2xl overflow-hidden">
-        {/* Table Header Bar (matching ShowCalendarMonthList header) */}
-        <div className="relative flex min-h-10 items-center justify-between gap-1.5 border-b border-[rgba(195,168,128,0.55)] bg-cream-100/90 px-3 sm:px-4 py-1.5">
-          <div className="flex items-center gap-2">
-            <span className="text-[11.5px] font-bold uppercase tracking-wider text-charcoal-700">
-              Реестр заявок РКФ Онлайн
-            </span>
-            <span className="px-1.5 py-0.5 text-[10px] font-mono font-bold rounded-md bg-sand-200/80 text-charcoal-700">
-              {filteredApps.length}
-            </span>
-          </div>
-          <span className="text-[11px] text-charcoal-500 font-medium hidden sm:inline">
-            Кликните по строке для просмотра истории
+        {/* Table Header Bar */}
+        <div className="relative flex min-h-9 items-center justify-between border-b border-[rgba(195,168,128,0.55)] bg-cream-100/90 px-3 sm:px-4 py-1.5">
+          <span className="text-[11.5px] font-bold uppercase tracking-wider text-charcoal-700">
+            Реестр заявок РКФ Онлайн
           </span>
         </div>
 

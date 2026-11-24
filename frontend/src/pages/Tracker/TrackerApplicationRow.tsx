@@ -18,8 +18,8 @@ function formatDocumentTitle(title: string): string {
     const lowered = title.toLowerCase();
     const capitalized = lowered.charAt(0).toUpperCase() + lowered.slice(1);
     return capitalized.replace(
-      /\b(ркф|чркф|гчркф|чр|саст|cacl|cacit|ючр|вчр|по рк)\b/gi,
-      (m) => m.toUpperCase()
+      /(?<![а-яёА-ЯЁa-zA-Z0-9])(россии|ркф|чркф|гчркф|нч рк|нч|чр|саст|cacl|cacit|ючр|вчр|рк)(?![а-яёА-ЯЁa-zA-Z0-9])/gi,
+      (m) => (m.toLowerCase() === 'россии' ? 'России' : m.toUpperCase())
     );
   }
   return title;
@@ -35,11 +35,6 @@ export function TrackerApplicationRow({
 }: TrackerApplicationRowProps) {
   const isReady = app.statusGroup === 'ready';
   const isRejected = app.statusGroup === 'rejected';
-  const badgeCls = isReady
-    ? 'bg-emerald-50 text-emerald-800 border-emerald-200/90'
-    : isRejected
-    ? 'bg-rose-50 text-rose-800 border-rose-300/80 font-bold'
-    : 'bg-amber-50 text-amber-800 border-amber-200/90';
 
   const docTitle = formatDocumentTitle(app.documentName);
 
@@ -51,7 +46,7 @@ export function TrackerApplicationRow({
     >
       <div
         onClick={onToggleAccordion}
-        className="grid grid-cols-[24px_minmax(0,1fr)_auto] sm:grid-cols-[24px_minmax(220px,1.2fr)_minmax(260px,1.5fr)_130px_28px] items-center gap-2.5 sm:gap-4 px-3 sm:px-4 py-2.5 min-h-[50px] cursor-pointer select-none text-xs"
+        className="grid grid-cols-[20px_minmax(0,1fr)_auto] sm:grid-cols-[20px_minmax(220px,1.2fr)_minmax(260px,1.5fr)_auto_24px] items-center gap-2.5 sm:gap-4 px-3 sm:px-4 py-1.5 sm:py-2 min-h-[44px] cursor-pointer select-none text-xs"
       >
         {/* 1. Чекбокс «Забрано» */}
         <button
@@ -60,29 +55,30 @@ export function TrackerApplicationRow({
             e.stopPropagation();
             onToggleReceived(app.barcode);
           }}
-          className={`w-4.5 h-4.5 rounded-md border flex items-center justify-center transition-all cursor-pointer shrink-0 ${
+          className={`w-5 h-5 min-w-[20px] min-h-[20px] rounded-md border-[1.5px] flex items-center justify-center transition-all cursor-pointer shrink-0 ${
             isCollected
-              ? 'bg-emerald-600 border-emerald-600 text-white shadow-2xs'
-              : 'border-old-money-300 hover:border-camel-600 bg-white'
+              ? 'bg-emerald-700 border-emerald-700 text-white shadow-2xs'
+              : 'border-old-money-400 hover:border-camel-600 bg-white shadow-2xs'
           }`}
           title={isCollected ? 'Отметить как неполученный' : 'Отметить как забранный'}
+          aria-label={isCollected ? 'Отметить как неполученный' : 'Отметить как забранный'}
         >
           {isCollected && <Check className="w-3.5 h-3.5 stroke-[3]" />}
         </button>
 
         {/* 2. Кличка собаки и номер РКФ */}
         <div className="min-w-0 pr-1 sm:pr-2">
-          <div className="font-semibold text-charcoal-900 text-[13px] sm:text-[13.5px] leading-snug">
+          <div className="font-semibold text-charcoal-900 text-[13.5px] leading-tight truncate sm:whitespace-normal">
             {app.dogName}
           </div>
-          <div className="font-mono text-[11px] text-charcoal-500 mt-0.5">
+          <div className="font-mono text-xs text-charcoal-600 font-medium mt-0.5">
             {app.pedigreeNumber ? `РКФ ${app.pedigreeNumber}` : 'Без номера'}
           </div>
         </div>
 
         {/* 3. Название документа и ссылка на штрихкод */}
         <div className="hidden sm:block min-w-0 pr-2">
-          <div className="text-charcoal-800 font-medium text-xs leading-snug">
+          <div className="text-charcoal-800 font-medium text-[13px] leading-tight">
             {docTitle}
           </div>
           <a
@@ -90,21 +86,38 @@ export function TrackerApplicationRow({
             target="_blank"
             rel="noreferrer"
             onClick={(e) => e.stopPropagation()}
-            className="inline-flex items-center gap-1 font-mono text-[11px] text-camel-800 hover:underline mt-0.5"
+            className="inline-flex items-center gap-1 font-mono text-xs text-charcoal-700 hover:text-camel-800 font-medium hover:underline mt-0.5"
           >
             <span>№ {app.barcode}</span>
-            <ExternalLink className="w-2.5 h-2.5 opacity-70" />
+            <ExternalLink className="w-3 h-3 text-camel-700 opacity-80" />
           </a>
         </div>
 
-        {/* 4. Статус заявки и дата */}
-        <div className="flex flex-col items-end shrink-0">
-          <span
-            className={`inline-flex items-center justify-center w-[116px] sm:w-[124px] py-1 rounded-full border text-[11px] font-semibold tracking-wide whitespace-nowrap text-center ${badgeCls}`}
-          >
-            {app.currentStatus}
-          </span>
-          <span className="text-[10px] font-mono text-charcoal-400 mt-1">
+        {/* 4. Статус заявки и дата (чистая типографика со статусным индикатором) */}
+        <div className="flex flex-col items-end justify-center min-w-[110px] sm:min-w-[130px] shrink-0 text-right">
+          <div className="flex items-center gap-1.5">
+            <span
+              className={`w-2 h-2 rounded-full shrink-0 ${
+                isReady
+                  ? 'bg-emerald-600 ring-2 ring-emerald-600/20'
+                  : isRejected
+                  ? 'bg-rose-600 ring-2 ring-rose-600/20'
+                  : 'bg-amber-600 ring-2 ring-amber-600/20'
+              }`}
+            />
+            <span
+              className={`text-xs font-semibold tracking-tight ${
+                isReady
+                  ? 'text-emerald-900'
+                  : isRejected
+                  ? 'text-rose-900 font-bold'
+                  : 'text-amber-900'
+              }`}
+            >
+              {app.currentStatus}
+            </span>
+          </div>
+          <span className="font-mono text-xs text-charcoal-600 font-medium mt-0.5">
             {formatDate(app.lastUpdated)}
           </span>
         </div>
