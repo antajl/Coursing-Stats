@@ -17,6 +17,7 @@ chrome.runtime.onInstalled.addListener(async () => {
   });
 
   setupPeriodicAlarm(interval);
+  updateExtensionBadge();
 });
 
 // Re-register alarm on browser startup
@@ -24,15 +25,37 @@ chrome.runtime.onStartup.addListener(async () => {
   const { pref_interval } = await chrome.storage.local.get('pref_interval');
   const interval = pref_interval ? parseInt(pref_interval, 10) : DEFAULT_INTERVAL_MINUTES;
   setupPeriodicAlarm(interval);
+  updateExtensionBadge();
 });
 
-// Listen to preference changes (e.g. user changes interval in popup)
+// Listen to storage changes (preferences, apps cache, received marks)
 chrome.storage.onChanged.addListener((changes, area) => {
-  if (area === 'local' && changes.pref_interval) {
-    const newInterval = parseInt(changes.pref_interval.newValue, 10) || DEFAULT_INTERVAL_MINUTES;
-    setupPeriodicAlarm(newInterval);
+  if (area === 'local') {
+    if (changes.pref_interval) {
+      const newInterval = parseInt(changes.pref_interval.newValue, 10) || DEFAULT_INTERVAL_MINUTES;
+      setupPeriodicAlarm(newInterval);
+    }
+    if (changes.cached_apps || changes.rkf_received_docs) {
+      updateExtensionBadge();
+    }
   }
 });
+
+async function updateExtensionBadge() {
+  try {
+    const store = await chrome.storage.local.get(['cached_apps', 'rkf_received_docs']);
+    const apps = store.cached_apps || [];
+    const received = store.rkf_received_docs || {};
+    const readyCount = apps.filter(a => a.statusGroup === 'ready' && !received[a.barcode]).length;
+    if (readyCount > 0) {
+      chrome.action.setBadgeText({ text: String(readyCount) });
+      chrome.action.setBadgeBackgroundColor({ color: '#047857' });
+      if (chrome.action.setBadgeTextColor) chrome.action.setBadgeTextColor({ color: '#FFFFFF' });
+    } else {
+      chrome.action.setBadgeText({ text: '' });
+    }
+  } catch (_) {}
+}
 
 function setupPeriodicAlarm(intervalMinutes) {
   if (intervalMinutes <= 0) {
@@ -201,12 +224,13 @@ async function performBackgroundCheck(store) {
     }
   }
 
-  // Update storage cache
+  // Update storage cache & badge
   const sortedApps = Object.values(applications);
   await chrome.storage.local.set({
     cached_apps: sortedApps,
     cached_time: new Date().toISOString()
   });
+  await updateExtensionBadge();
 }
 
 function showStatusNotification(app, prevStatus, soundEnabled) {
@@ -256,42 +280,24 @@ function determineStatusGroup(status) {
   return 'active';
 }
 
-const CYNOLOGICAL_ACRONYMS = new Set([
-  'РКФ', 'РК', 'ФЦИ', 'FCI', 'ЧРКФ', 'ЮЧРКФ', 'ВЧРКФ', 'ЧР', 'ЮЧР', 'ВЧР',
-  'ГЧР', 'ГЧРКФ', 'ЧФ', 'ЮЧФ', 'КЧК', 'ЮКЧК', 'СС', 'ЮСС', 'CAC', 'CACIB',
-  'CACL', 'RCAC', 'RCACIB', 'RCACL', 'BIS', 'JBIS', 'VBIS', 'BIG', 'BOB',
-  'BOS', 'BJ', 'BV', 'CW', 'ЛПП', 'ЛЮ', 'ЛВ', 'ЛЩ', 'ЛБ', 'ПК'
+const ACRONYMS = new Set([
+  'РКФ', 'РК', 'ФЦИ', 'FCI', 'ЧРКФ', 'ЮЧРКФ', 'ВЧРКФ', 'ЧР', 'ЮЧР', 'ВЧР', 'ГЧР', 'ГЧРКФ',
+  'ЧФ', 'ЮЧФ', 'КЧК', 'ЮКЧК', 'СС', 'ЮСС', 'CAC', 'CACIB', 'CACL', 'RCAC', 'RCACIB', 'RCACL',
+  'BIS', 'JBIS', 'VBIS', 'BIG', 'BOB', 'BOS', 'BJ', 'BV', 'CW', 'ЛПП', 'ЛЮ', 'ЛВ', 'ЛЩ', 'ЛБ', 'ПК'
 ]);
-
-const LOWERCASE_PARTICLES = new Set([
-  'по', 'в', 'и', 'на', 'с', 'со', 'для', 'из', 'от', 'до', 'де', 'дэ', 'ла', 'ле', 'аль', 'эль', 'ван', 'дер', 'фон'
-]);
+const PARTICLES = new Set(['по', 'в', 'и', 'на', 'с', 'со', 'для', 'из', 'от', 'до', 'де', 'дэ', 'ла', 'ле', 'аль', 'эль', 'ван', 'дер', 'фон']);
 
 function formatDogName(name) {
   if (!name) return '';
-  return name.trim().split(/\s+/).map((word, idx) => {
-    return word.split('-').map(part => {
-      const clean = part.toLowerCase();
-      if (idx > 0 && (clean === 'дэ' || clean === 'аль' || clean === 'де')) {
-        return clean.charAt(0).toUpperCase() + clean.slice(1);
-      }
-      return clean.charAt(0).toUpperCase() + clean.slice(1);
-    }).join('-');
-  }).join(' ');
+  return name.trim().split(/\s+/).map(w => w.split('-').map(p => p.charAt(0).toUpperCase() + p.slice(1).toLowerCase()).join('-')).join(' ');
 }
 
 function formatDocTitle(title) {
   if (!title) return '';
   return title.split(/\s+/).map((word, idx) => {
     const raw = word.replace(/[(),]/g, '');
-    const up = raw.toUpperCase();
-    if (CYNOLOGICAL_ACRONYMS.has(up)) {
-      return word.toUpperCase();
-    }
-    const low = raw.toLowerCase();
-    if (idx > 0 && LOWERCASE_PARTICLES.has(low)) {
-      return word.toLowerCase();
-    }
+    if (ACRONYMS.has(raw.toUpperCase())) return word.toUpperCase();
+    if (idx > 0 && PARTICLES.has(raw.toLowerCase())) return word.toLowerCase();
     return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
   }).join(' ');
 }

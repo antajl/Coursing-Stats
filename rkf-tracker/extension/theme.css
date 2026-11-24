@@ -226,6 +226,11 @@ body.is-tab-mode #btn-fullscreen { display: none !important; }
   box-shadow: 0 0 0 3px rgba(190, 18, 60, 0.25);
 }
 
+.status-dot.maintenance {
+  background: #D97706;
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.25);
+}
+
 @keyframes pulse {
   0% { transform: scale(0.9); opacity: 0.8; }
   50% { transform: scale(1.2); opacity: 1; }

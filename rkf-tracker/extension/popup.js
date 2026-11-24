@@ -183,6 +183,7 @@ async function showDashboard(store) {
     currentApps = store.cached_apps;
     currentMeta = { lastUpdated: store.cached_time || new Date().toISOString(), userUuid: store.userUuid };
     renderApps(currentApps, currentMeta, handleToggleCheck);
+    updateBadge(currentApps, store.rkf_received_docs || {});
     handleSearch(currentFilter);
   }
 
@@ -204,13 +205,21 @@ async function fetchData(token, profileId, userUuid) {
 
     await chrome.storage.local.set({ cached_apps: sortedApps, cached_time: nowIso });
     renderApps(currentApps, currentMeta, handleToggleCheck);
+    updateBadge(currentApps, receivedMap);
     handleSearch(currentFilter);
     setStatusState('ok');
   } catch (err) {
-    setStatusState('error');
     if (err.message === 'AUTH_EXPIRED') {
+      setStatusState('error');
       showErrorModal('Сессия в РКФ Онлайн истекла', 'Авторизационный токен устарел.', 'Откройте rkf.online в браузере для автоматического обновления.');
+    } else if (currentApps && currentApps.length > 0) {
+      const timeStr = currentMeta?.lastUpdated
+        ? new Date(currentMeta.lastUpdated).toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit' })
+        : '';
+      setStatusState('maintenance', timeStr);
+      showToast('РКФ Онлайн временно недоступен • Показана копия');
     } else {
+      setStatusState('error');
       showErrorModal('Ошибка связи с RKF.Online', 'Не удалось получить данные с серверов РКФ.', 'Проверьте интернет или повторите через минуту.');
     }
   } finally {
@@ -222,12 +231,15 @@ async function fetchData(token, profileId, userUuid) {
 async function handleToggleCheck(barcode, isChecked) {
   await toggleAppReceived(barcode, isChecked, currentApps);
   showToast(isChecked ? 'Отмечено: документ забран' : 'Отметка снята');
+  const { rkf_received_docs = {} } = await chrome.storage.local.get('rkf_received_docs');
+  updateBadge(currentApps, rkf_received_docs);
   handleSearch(currentFilter);
 }
 
 async function handleLogout() {
   await chrome.storage.local.remove(['rkfToken', 'profileId', 'userUuid', 'cached_apps', 'cached_time', 'rkf_last_refresh_timestamp']);
   currentApps = [];
+  if (chrome.action?.setBadgeText) chrome.action.setBadgeText({ text: '' });
   showAuthScreen();
 }
 
@@ -246,8 +258,23 @@ function setupStorageSync() {
   });
 }
 
-function setStatusState(state) {
-  statusDot.className = 'status-dot' + (state === 'syncing' ? ' syncing' : state === 'error' ? ' error' : '');
+function updateBadge(apps, receivedMap) {
+  if (!chrome.action?.setBadgeText) return;
+  const readyCount = (apps || []).filter(a => a.statusGroup === 'ready' && !(receivedMap || {})[a.barcode]).length;
+  chrome.action.setBadgeText({ text: readyCount > 0 ? String(readyCount) : '' });
+  chrome.action.setBadgeBackgroundColor({ color: '#047857' });
+  if (chrome.action.setBadgeTextColor) chrome.action.setBadgeTextColor({ color: '#FFFFFF' });
+}
+
+function setStatusState(state, info) {
+  statusDot.className = 'status-dot' + (state === 'syncing' ? ' syncing' : state === 'error' ? ' error' : state === 'maintenance' ? ' maintenance' : '');
+  const lblTime = document.getElementById('lbl-time');
+  if (state === 'maintenance') {
+    statusDot.title = 'Сервера РКФ Онлайн временно недоступны (регламент)';
+    if (lblTime && info) lblTime.innerHTML = `РКФ регламент &bull; <strong>копия ${info}</strong>`;
+  } else if (state === 'ok') {
+    statusDot.title = 'Связь с РКФ Онлайн активна';
+  }
 }
 
 function startCooldown(seconds) {
