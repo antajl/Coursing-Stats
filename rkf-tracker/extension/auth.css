@@ -109,22 +109,24 @@ body.is-logged-out .status-badge {
   color: var(--camel);
 }
 
-/* Account Hub Footer — Old Money Pill Footer */
+/* Account Hub Footer — Docked to bottom boundary of extension */
 .account-hub-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  padding: 6px 12px;
-  margin-top: 8px;
-  margin-bottom: 0;
+  padding: 8px 14px;
+  margin: 6px -14px -10px -14px;
   flex-shrink: 0;
-  background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(200, 157, 102, 0.25);
-  border-radius: 10px;
-  box-shadow: 0 1px 3px rgba(32, 18, 2, 0.03);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(200, 157, 102, 0.28);
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 -2px 8px rgba(32, 18, 2, 0.04);
 }
 
 .account-hub-status {
