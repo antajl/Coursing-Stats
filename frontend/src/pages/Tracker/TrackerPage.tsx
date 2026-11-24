@@ -141,42 +141,36 @@ export default function TrackerPage() {
 
   return (
     <div className="space-y-4">
-      {/* Old Money Page Tabs (Image 1 replica: clean baseline with solid brown active indicator) */}
-      <div className="flex items-center gap-6 sm:gap-8 border-b border-old-money-200/80 pt-1 pb-0 mb-3 select-none">
+      {/* Mobile-only Page Tabs (on md+ desktop tabs are housed in sticky NavTracker) */}
+      <div className="flex md:hidden items-center gap-6 border-b border-old-money-200/80 pt-1 pb-0 mb-3 select-none">
         <button
           type="button"
           onClick={() => setSearchParams({ tab: 'applications' })}
-          className={`group relative pb-2.5 text-base sm:text-lg font-serif transition-colors duration-200 cursor-pointer ${
+          className={`group relative pb-2 text-sm font-semibold transition-colors duration-200 cursor-pointer ${
             currentTab === 'applications'
               ? 'text-camel-950 font-bold'
-              : 'text-charcoal-600 hover:text-charcoal-900 font-medium'
+              : 'text-charcoal-600 hover:text-charcoal-900'
           }`}
         >
           <span>Заявки на титулы</span>
           {currentTab === 'applications' && (
-            <span className="absolute bottom-0 left-0 w-full h-[2.5px] bg-[#8B4513] rounded-full" />
+            <span className="absolute bottom-0 left-0 w-full h-[2px] bg-camel-600 rounded-full" />
           )}
         </button>
 
         <button
           type="button"
           onClick={() => setSearchParams({ tab: 'competitions' })}
-          className={`group relative pb-2.5 text-base sm:text-lg font-serif transition-colors duration-200 cursor-pointer flex items-center gap-2 ${
+          className={`group relative pb-2 text-sm font-semibold transition-colors duration-200 cursor-pointer flex items-center gap-1.5 ${
             currentTab === 'competitions'
               ? 'text-camel-950 font-bold'
-              : 'text-charcoal-600 hover:text-charcoal-900 font-medium'
+              : 'text-charcoal-600 hover:text-charcoal-900'
           }`}
         >
           <span>Соревнования РКФ</span>
-          <span
-            className={`text-xs font-mono font-medium transition-colors ${
-              currentTab === 'competitions' ? 'text-camel-800' : 'text-charcoal-400'
-            }`}
-          >
-            {competitions.length}
-          </span>
+          <span className="text-xs font-mono opacity-80">{competitions.length}</span>
           {currentTab === 'competitions' && (
-            <span className="absolute bottom-0 left-0 w-full h-[2.5px] bg-[#8B4513] rounded-full" />
+            <span className="absolute bottom-0 left-0 w-full h-[2px] bg-camel-600 rounded-full" />
           )}
         </button>
       </div>

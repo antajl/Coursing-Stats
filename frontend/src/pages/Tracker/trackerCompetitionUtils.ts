@@ -6,8 +6,8 @@ export interface SortItem {
 }
 
 export const SORT_OPTIONS: SortItem[] = [
-  { id: 'date_desc', label: 'По дате: сперва ближайшие' },
-  { id: 'date_asc', label: 'По дате: сперва дальние' },
+  { id: 'date_desc', label: 'По дате: новые' },
+  { id: 'date_asc', label: 'По дате: старые' },
   { id: 'status_delayed', label: 'Сначала задержанные' },
   { id: 'status_approved', label: 'Сначала утвержденные' },
   { id: 'club_asc', label: 'По клубу (А—Я)' },
@@ -24,6 +24,19 @@ export function parseDateScore(raw: string): number {
     return new Date(year, month, day).getTime();
   }
   return 0;
+}
+
+export function formatDateParts(raw: string): { dayLine: string; monthLine: string } {
+  if (!raw) return { dayLine: '—', monthLine: '' };
+  const months = ['ЯНВ', 'ФЕВ', 'МАР', 'АПР', 'МАЙ', 'ИЮН', 'ИЮЛ', 'АВГ', 'СЕН', 'ОКТ', 'НОЯ', 'ДЕК'];
+  const m = raw.match(/^([0-9\-]+)\.([0-9]{2})/);
+  if (m) {
+    const dayLine = m[1].replace('-', '–');
+    const mIdx = parseInt(m[2], 10) - 1;
+    const monthLine = mIdx >= 0 && mIdx < 12 ? months[mIdx] : '';
+    return { dayLine, monthLine };
+  }
+  return { dayLine: raw, monthLine: '' };
 }
 
 export function formatShortDate(raw: string): string {

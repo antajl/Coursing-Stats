@@ -153,7 +153,7 @@ export function TrackerCompetitionsToolbar({
             className={toolbarPillTriggerClass(sortBy !== 'date_desc', '!h-8 !px-3')}
           >
             <ArrowUpDown className="h-3 w-3 shrink-0 opacity-70" />
-            <span className="truncate max-w-[130px]">{activeSortLabel}</span>
+            <span className="truncate max-w-[145px] sm:max-w-[160px]">{activeSortLabel}</span>
             <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" />
           </button>
         }
