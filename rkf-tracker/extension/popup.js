@@ -25,6 +25,7 @@ const errorModal = document.getElementById('error-modal');
 
 document.addEventListener('DOMContentLoaded', async () => {
   if (window.innerWidth > 800 || new URLSearchParams(window.location.search).get('mode') === 'tab') {
+    document.documentElement.classList.add('is-tab-mode');
     document.body.classList.add('is-tab-mode');
   }
   setupEventListeners();
