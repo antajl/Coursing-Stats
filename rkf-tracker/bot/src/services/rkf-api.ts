@@ -33,6 +33,43 @@ async function fetchFeed(filterType: number, headers: Record<string, string>): P
   return all;
 }
 
+export async function authenticateRkfUser(
+  email: string,
+  password: string
+): Promise<{ ok: boolean; apikey?: string; error?: string }> {
+  try {
+    const res = await fetch('https://rkf.online/api/Authentication', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+        'accept': 'application/json',
+        'origin': 'https://rkf.online',
+        'referer': 'https://rkf.online/login',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+      },
+      body: JSON.stringify({
+        email: email.trim(),
+        password: password.trim(),
+        is_remember_me: true
+      })
+    });
+
+    const data: any = await res.json().catch(() => ({}));
+    if (res.status === 200 && (data.result?.apikey || data.apikey)) {
+      return { ok: true, apikey: data.result?.apikey || data.apikey };
+    }
+
+    const err =
+      data.errors?.authentication ||
+      data.errors?.error ||
+      data.message ||
+      'Неверная почта или пароль на rkf.online';
+    return { ok: false, error: err };
+  } catch {
+    return { ok: false, error: 'Сетевая ошибка при обращении к серверу РКФ' };
+  }
+}
+
 export async function validateRkfToken(token: string): Promise<boolean> {
   const clean = String(token || '').replace(/^["']|["']$/g, '').replace(/^Bearer\s+/i, '').trim();
   if (!clean || clean.length < 10) return false;

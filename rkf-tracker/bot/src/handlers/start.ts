@@ -3,6 +3,7 @@ import type { Composer } from 'grammy';
 import type { BotContext, UserRecord } from '../types.js';
 import { getMainMenuKeyboard } from '../keyboards.js';
 import { getUser, saveUser, createDefaultUser } from '../storage/index.js';
+import { linkUserToken } from './auth.js';
 
 export function buildStartText(user: UserRecord | null): string {
   const isLinked = Boolean(user && user.rkfToken);
@@ -37,6 +38,45 @@ export function registerStartHandler(composer: Composer<BotContext>): void {
     }
 
     const webAppUrl = ctx.env.WEBAPP_URL || 'https://my.coursing-stats.ru';
+    const match = (ctx.match || '').trim();
+
+    // Deep link handling for seamless binding: /start bind_<id|token>
+    if (match.startsWith('bind_')) {
+      const payload = match.slice(5).trim();
+      let tokenToLink = payload;
+      let sourceLabel = 'Сайт РКФ (Закладка)';
+
+      if (payload.startsWith('tk_')) {
+        sourceLabel = 'Расширение для ПК';
+        const savedToken = await ctx.env.KV_STORAGE.get(`pair:ticket:${payload}`);
+        if (savedToken) {
+          tokenToLink = savedToken;
+          await ctx.env.KV_STORAGE.delete(`pair:ticket:${payload}`);
+        } else {
+          await ctx.reply(
+            `[ОШИБКА] Ссылка привязки устарела или уже была использована.\n` +
+            `Пожалуйста, нажмите «Подключить Telegram» в расширении еще раз.`,
+            { reply_markup: getMainMenuKeyboard(webAppUrl, false) }
+          );
+          return;
+        }
+      }
+
+      const linkRes = await linkUserToken(ctx, userId, chatId, tokenToLink, sourceLabel);
+      if (linkRes.ok) {
+        await ctx.reply(
+          `[УСПЕШНО] Аккаунт rkf.online привязан!\n` +
+          `— — — — — — — — — — — — — — —\n` +
+          `• Способ: ${sourceLabel}\n` +
+          `• Найдено заявок: ${linkRes.count}\n` +
+          `• Готово к выдаче: ${linkRes.ready}\n` +
+          `• Режим: автоматический ежечасный мониторинг`,
+          { reply_markup: getMainMenuKeyboard(webAppUrl, true) }
+        );
+        return;
+      }
+    }
+
     const text = buildStartText(user);
     const isLinked = Boolean(user && user.rkfToken);
 

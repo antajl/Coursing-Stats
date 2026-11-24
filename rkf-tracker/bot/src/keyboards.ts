@@ -42,9 +42,20 @@ export function getStatusKeyboard(isLinked: boolean): InlineKeyboard {
 
 export function getAuthPromptKeyboard(webAppUrl: string = 'https://my.coursing-stats.ru'): InlineKeyboard {
   return new InlineKeyboard()
-    .webApp('Открыть через браузер', webAppUrl)
+    .text('1. Вход по E-mail и паролю', 'cmd_auth_login')
     .row()
-    .text('Как скопировать токен', 'cmd_auth_how')
+    .text('2. Через расширение для ПК', 'cmd_auth_ext')
+    .row()
+    .text('3. Через сайт РКФ (Закладка)', 'cmd_auth_bookmarklet')
+    .row()
+    .text('4. Ввести токен вручную', 'cmd_auth_manual')
+    .row()
+    .text('« В главное меню', 'cmd_start');
+}
+
+export function getAuthSubmenuKeyboard(): InlineKeyboard {
+  return new InlineKeyboard()
+    .text('« Назад к выбору способа', 'cmd_auth_prompt')
     .text('« В главное меню', 'cmd_start');
 }
 
