@@ -207,6 +207,59 @@
   border-color: var(--rose);
 }
 
+.setting-advanced {
+  padding-top: 8px;
+  border-top: 1px dashed var(--border);
+}
+
+.advanced-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  user-select: none;
+  margin-bottom: 2px;
+  transition: color 0.15s ease;
+}
+
+.advanced-toggle:hover {
+  color: var(--text-main);
+}
+
+.advanced-arrow {
+  color: var(--text-soft);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.advanced-toggle.expanded .advanced-arrow {
+  transform: rotate(180deg);
+}
+
+.advanced-settings-body {
+  padding-top: 4px;
+}
+
+.manual-token-field {
+  display: flex;
+  gap: 6px;
+}
+
+.manual-token-field input {
+  flex: 1;
+  padding: 5px 9px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 11px;
+  outline: none;
+  background: #FFFFFF;
+  color: var(--text-main);
+  transition: border-color 0.15s ease;
+}
+
+.manual-token-field input:focus {
+  border-color: var(--camel);
+}
+
 .settings-footer {
   margin-top: 14px;
   padding-top: 10px;

@@ -87,30 +87,6 @@
         </div>
         <!-- Main Dashboard View -->
         <div id="main-dashboard" style="display: none;">
-          <!-- Account Banner & 1-Click Action Hub -->
-          <div class="account-hub-bar" id="account-hub-bar">
-            <div class="account-hub-status">
-              <span class="hub-status-dot"></span>
-              <span class="hub-status-title">Аккаунт РКФ Онлайн активен</span>
-            </div>
-            <div class="account-hub-actions">
-              <button class="hub-btn hub-btn-web" id="btn-open-web-tracker" type="button" title="Открыть персональный трекер на сайте с автоматическим входом">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                  <polyline points="15 3 21 3 21 9"/>
-                  <line x1="10" y1="14" x2="21" y2="3"/>
-                </svg>
-                <span>Открыть трекер на сайте</span>
-              </button>
-              <button class="hub-btn hub-btn-tg" id="btn-connect-telegram" type="button" title="Привязать бота в Telegram в 1 клик для push-уведомлений">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M21.5 2L2 9.5l7 3.5L12.5 21l3-6.5L21.5 2z"/>
-                </svg>
-                <span>Подключить Telegram-бота</span>
-              </button>
-            </div>
-          </div>
-
           <!-- Unified Toolbar: Expandable Search + Status Filter Pills -->
           <div class="toolbar-row">
             <div class="search-expand-wrap" id="apps-search-wrap">
@@ -137,6 +113,30 @@
           <div class="apps-list" id="apps-list">
             <!-- Rendered dynamically -->
           </div>
+
+          <!-- Account Footer & 1-Click Action Hub -->
+          <footer class="account-hub-bar" id="account-hub-bar">
+            <div class="account-hub-status">
+              <span class="hub-status-dot"></span>
+              <span class="hub-status-title">Аккаунт РКФ Онлайн активен</span>
+            </div>
+            <div class="account-hub-actions">
+              <button class="hub-btn hub-btn-web" id="btn-open-web-tracker" type="button" title="Открыть персональный трекер на сайте с автоматическим входом">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15 3 21 3 21 9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+                <span>Открыть трекер на сайте</span>
+              </button>
+              <button class="hub-btn hub-btn-tg" id="btn-connect-telegram" type="button" title="Привязать бота в Telegram в 1 клик для push-уведомлений">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21.5 2L2 9.5l7 3.5L12.5 21l3-6.5L21.5 2z"/>
+                </svg>
+                <span>Подключить Telegram-бота</span>
+              </button>
+            </div>
+          </footer>
         </div>
       </section>
 

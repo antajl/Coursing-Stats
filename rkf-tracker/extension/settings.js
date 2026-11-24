@@ -3,6 +3,7 @@ import { playHarmonicChime } from './audio.js';
 
 export function setupSettings(showToast, onLogout, onOpenTab) {
   const btnSettings = document.getElementById('btn-settings');
+  const btnSettingsFromAuth = document.getElementById('btn-open-settings-from-auth');
   const btnCloseSettings = document.getElementById('btn-close-settings');
   const btnSaveSettings = document.getElementById('btn-save-settings');
   const btnTestSound = document.getElementById('btn-test-sound');
@@ -10,9 +11,8 @@ export function setupSettings(showToast, onLogout, onOpenTab) {
   const btnModeTab = document.getElementById('btn-mode-tab');
   const btnLogout = document.getElementById('btn-logout');
 
-  if (btnSettings) {
-    btnSettings.addEventListener('click', openSettingsModal);
-  }
+  if (btnSettings) btnSettings.addEventListener('click', openSettingsModal);
+  if (btnSettingsFromAuth) btnSettingsFromAuth.addEventListener('click', openSettingsModal);
 
   if (btnCloseSettings) {
     btnCloseSettings.addEventListener('click', closeSettingsModal);
@@ -110,7 +110,7 @@ export function setupSettings(showToast, onLogout, onOpenTab) {
 }
 
 export async function openSettingsModal() {
-  const store = await chrome.storage.local.get(['pref_interval', 'pref_notify', 'pref_sound']);
+  const store = await chrome.storage.local.get(['pref_interval', 'pref_notify', 'pref_sound', 'rkfToken']);
   const interval = store.pref_interval !== undefined ? store.pref_interval : 60;
   const notify = store.pref_notify !== undefined ? store.pref_notify : true;
   const sound = store.pref_sound !== undefined ? store.pref_sound : true;
@@ -118,6 +118,20 @@ export async function openSettingsModal() {
   document.getElementById('setting-interval').value = String(interval);
   document.getElementById('setting-notify').checked = !!notify;
   document.getElementById('setting-sound').checked = !!sound;
+
+  // Toggle account section (only visible when logged in)
+  const accountSec = document.querySelector('.setting-account');
+  if (accountSec) {
+    accountSec.style.display = store.rkfToken ? 'flex' : 'none';
+  }
+
+  // Auto-expand "Для специалистов" if user is logged out so they can immediately paste token
+  const advBody = document.getElementById('advanced-settings-body');
+  const toggleAdv = document.getElementById('toggle-advanced-settings');
+  if (advBody && toggleAdv && !store.rkfToken) {
+    advBody.style.display = 'block';
+    toggleAdv.classList.add('expanded');
+  }
 
   document.getElementById('settings-modal').style.display = 'flex';
 }
