@@ -4,6 +4,7 @@ import { getUser, saveUser, createDefaultUser } from '../storage/index.js';
 import { findCompetitionById, STATUS_RUSSIAN } from '../services/competition-tracker.js';
 import { getCompetitionsMenuKeyboard, getEventActionKeyboard } from '../keyboards.js';
 import { buildSubscriptionsText } from './competitions-render.js';
+import { renderSingleBubble } from './render-bubble.js';
 
 export async function subscribeToEvent(ctx: BotContext, eventId: string): Promise<void> {
   const userId = ctx.from?.id;
@@ -68,16 +69,13 @@ export async function unsubscribeFromEvent(ctx: BotContext, eventId: string): Pr
 
 export async function showUserSubscriptions(ctx: BotContext): Promise<void> {
   const userId = ctx.from?.id;
-  if (!userId) return;
+  const chatId = ctx.chat?.id || userId;
+  if (!userId || !chatId) return;
 
-  const user = await getUser(ctx.env.KV_STORAGE, userId);
+  const user = (await getUser(ctx.env.KV_STORAGE, userId)) || createDefaultUser(userId, chatId);
   const subs = user?.competitions || [];
   const text = buildSubscriptionsText(subs);
   const kb = getCompetitionsMenuKeyboard();
 
-  try {
-    await ctx.editMessageText(text, { reply_markup: kb });
-  } catch {
-    await ctx.reply(text, { reply_markup: kb });
-  }
+  await renderSingleBubble(ctx, user, text, kb);
 }

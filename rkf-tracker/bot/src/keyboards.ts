@@ -9,13 +9,15 @@ export function getMainMenuKeyboard(
 
   if (isLinked) {
     kb.webApp('Открыть личный кабинет (WebApp)', webAppUrl).row()
-      .text('Список заявок', 'cmd_apps').text('Состязания РКФ 2026', 'cmd_competitions').row();
+      .text('Список заявок', 'cmd_apps').text('Состязания РКФ 2026', 'cmd_competitions').row()
+      .text('Управление аккаунтом', 'cmd_account').text('Справка / Помощь', 'cmd_help');
   } else {
     kb.webApp('Кабинет трекера (привязать профиль)', `${webAppUrl}?action=login`).row()
-      .text('Состязания РКФ 2026', 'cmd_competitions').text('Подключить с ПК', 'cmd_auth_prompt').row();
+      .text('Подключить с ПК', 'cmd_auth_prompt').text('Состязания РКФ 2026', 'cmd_competitions').row()
+      .text('Справка / Помощь', 'cmd_help');
   }
 
-  return kb.text('Статус мониторинга', 'cmd_status').text('Справка / Помощь', 'cmd_help');
+  return kb;
 }
 
 export function getReplyMenuKeyboard(webAppUrl: string = 'https://coursing-stats.ru/tracker/'): Keyboard {
@@ -32,14 +34,22 @@ export function getBackToMenuKeyboard(): InlineKeyboard {
   return new InlineKeyboard().text('« В главное меню', 'cmd_start');
 }
 
-export function getStatusKeyboard(isLinked: boolean): InlineKeyboard {
+export function getAccountKeyboard(isLinked: boolean): InlineKeyboard {
   const kb = new InlineKeyboard();
   if (isLinked) {
-    kb.text('Список заявок', 'cmd_apps').row();
+    kb.text('Список заявок', 'cmd_apps')
+      .text('Перепривязать аккаунт', 'cmd_auth_prompt')
+      .row()
+      .text('Отключить аккаунт (Выйти)', 'cmd_logout')
+      .row();
   } else {
     kb.text('Подключить аккаунт', 'cmd_auth_prompt').row();
   }
   return kb.text('« В главное меню', 'cmd_start');
+}
+
+export function getStatusKeyboard(isLinked: boolean): InlineKeyboard {
+  return getAccountKeyboard(isLinked);
 }
 
 export function getAuthPromptKeyboard(webAppUrl: string = 'https://coursing-stats.ru/tracker/'): InlineKeyboard {

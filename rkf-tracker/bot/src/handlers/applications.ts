@@ -1,7 +1,7 @@
 // Handler: /apps and /ready commands (Strict Zero Emoji & Single-Bubble UX)
 import type { Composer } from 'grammy';
 import type { BotContext, ApplicationItem } from '../types.js';
-import { getUser, saveUser } from '../storage/index.js';
+import { getUser, saveUser, createDefaultUser } from '../storage/index.js';
 import { fetchRkfApplications } from '../services/rkf-api.js';
 import {
   getApplicationActionKeyboard,
@@ -9,6 +9,7 @@ import {
   getAuthPromptKeyboard,
   getBackToMenuKeyboard
 } from '../keyboards.js';
+import { renderSingleBubble } from './render-bubble.js';
 
 export function registerApplicationsHandler(composer: Composer<BotContext>): void {
   composer.command(['apps', 'ready'], async (ctx) => {
@@ -59,7 +60,7 @@ async function showApplications(ctx: BotContext, onlyReady: boolean, isEdit: boo
   const userId = ctx.from?.id;
   if (!userId) return;
 
-  const user = await getUser(ctx.env.KV_STORAGE, userId);
+  let user = await getUser(ctx.env.KV_STORAGE, userId);
   const webAppUrl = ctx.env.WEBAPP_URL || 'https://coursing-stats.ru/tracker/';
 
   if (!user || !user.rkfToken) {
@@ -69,27 +70,21 @@ async function showApplications(ctx: BotContext, onlyReady: boolean, isEdit: boo
       `Для просмотра списка ваших заявок подключите аккаунт rkf.online.\n\n` +
       `Бот будет отображать актуальные статусы и присылать push-уведомления при готовности документов.`;
 
-    if (isEdit) {
-      try {
-        await ctx.editMessageText(notLinkedText, { reply_markup: getAuthPromptKeyboard(webAppUrl) });
-        return;
-      } catch {}
+    if (!user) {
+      const chatId = ctx.chat?.id || userId;
+      user = createDefaultUser(userId, chatId);
     }
-    await ctx.reply(notLinkedText, { reply_markup: getAuthPromptKeyboard(webAppUrl) });
+    await renderSingleBubble(ctx, user, notLinkedText, getAuthPromptKeyboard(webAppUrl));
     return;
   }
 
-  if (isEdit) {
+  if (ctx.callbackQuery?.message) {
     try {
       await ctx.editMessageText(
         `Документы rkf.online\n` +
         `— — — — — — — — — — — — — — —\n` +
         `Запрашиваем актуальные данные из РКФ Онлайн, пожалуйста, подождите...`
       );
-    } catch {}
-  } else {
-    try {
-      await ctx.replyWithChatAction('typing');
     } catch {}
   }
 
@@ -102,13 +97,7 @@ async function showApplications(ctx: BotContext, onlyReady: boolean, isEdit: boo
         ? `Срок действия токена истек.\nПожалуйста, обновите авторизацию через /auth.`
         : `Временная ошибка связи с API RKF.\nПожалуйста, повторите запрос через минуту.`;
 
-    if (isEdit) {
-      try {
-        await ctx.editMessageText(errorMsg, { reply_markup: getBackToMenuKeyboard() });
-        return;
-      } catch {}
-    }
-    await ctx.reply(errorMsg, { reply_markup: getBackToMenuKeyboard() });
+    await renderSingleBubble(ctx, user, errorMsg, getBackToMenuKeyboard());
     return;
   }
 
@@ -121,13 +110,7 @@ async function showApplications(ctx: BotContext, onlyReady: boolean, isEdit: boo
       ? `Готовые документы rkf.online\n— — — — — — — — — — — — — — —\nНа данный момент готовых к выдаче документов нет.`
       : `Документы rkf.online\n— — — — — — — — — — — — — — —\nВ вашем личном кабинете rkf.online активных заявок не найдено.`;
 
-    if (isEdit) {
-      try {
-        await ctx.editMessageText(emptyMsg, { reply_markup: getMainMenuKeyboard(webAppUrl, true) });
-        return;
-      } catch {}
-    }
-    await ctx.reply(emptyMsg, { reply_markup: getMainMenuKeyboard(webAppUrl, true) });
+    await renderSingleBubble(ctx, user, emptyMsg, getMainMenuKeyboard(webAppUrl, true));
     return;
   }
 
@@ -161,11 +144,5 @@ async function showApplications(ctx: BotContext, onlyReady: boolean, isEdit: boo
   }
 
   const kb = getMainMenuKeyboard(webAppUrl, true);
-  if (isEdit) {
-    try {
-      await ctx.editMessageText(text, { reply_markup: kb });
-      return;
-    } catch {}
-  }
-  await ctx.reply(text, { reply_markup: kb });
+  await renderSingleBubble(ctx, user, text, kb);
 }

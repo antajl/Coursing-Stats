@@ -1,14 +1,15 @@
-// Handler: /status command (Strict Zero Emoji & Single-Bubble UX)
+// Handler: /status and /account command (Strict Zero Emoji & Single-Bubble UX)
 import type { Composer } from 'grammy';
 import type { BotContext, UserRecord } from '../types.js';
-import { getUser } from '../storage/index.js';
-import { getStatusKeyboard } from '../keyboards.js';
+import { getUser, createDefaultUser, saveUser } from '../storage/index.js';
+import { getAccountKeyboard } from '../keyboards.js';
+import { renderSingleBubble } from './render-bubble.js';
 
 export function buildStatusText(user: UserRecord | null): string {
   if (!user || !user.rkfToken) {
     const comps = user?.competitions?.length || 0;
     return (
-      `Статус мониторинга RKF Tracker\n` +
+      `Личный кабинет RKF Tracker\n` +
       `— — — — — — — — — — — — — — —\n` +
       `• Аккаунт РКФ: Не привязан\n` +
       `• Отслеживание состязаний: ${comps} активных\n` +
@@ -27,7 +28,7 @@ export function buildStatusText(user: UserRecord | null): string {
     : 'еще не выполнялась';
 
   return (
-    `Статус мониторинга RKF Tracker\n` +
+    `Управление аккаунтом РКФ\n` +
     `— — — — — — — — — — — — — — —\n` +
     `• Аккаунт РКФ: Подключен\n` +
     `• Всего заявок: ${totalCount}\n` +
@@ -36,41 +37,41 @@ export function buildStatusText(user: UserRecord | null): string {
     `• Подписок на состязания: ${compsCount}\n` +
     `• Последняя проверка: ${lastCheck} (МСК)\n` +
     `• Фоновый опрос: каждый час (автоматически)\n\n` +
-    `Все заявки доступны в интерактивном веб-кабинете.`
+    `Полный интерактивный дашборд доступен в Кабинете на сайте.`
   );
 }
 
 export function registerStatusHandler(composer: Composer<BotContext>): void {
-  composer.command('status', async (ctx) => {
+  composer.command(['status', 'account'], async (ctx) => {
     const userId = ctx.from?.id;
-    if (!userId) return;
+    const chatId = ctx.chat?.id;
+    if (!userId || !chatId) return;
 
-    const user = await getUser(ctx.env.KV_STORAGE, userId);
+    let user = await getUser(ctx.env.KV_STORAGE, userId);
+    if (!user) {
+      user = createDefaultUser(userId, chatId);
+      await saveUser(ctx.env.KV_STORAGE, user);
+    }
     const isLinked = Boolean(user && user.rkfToken);
     const text = buildStatusText(user);
 
-    await ctx.reply(text, {
-      reply_markup: getStatusKeyboard(isLinked)
-    });
+    await renderSingleBubble(ctx, user, text, getAccountKeyboard(isLinked));
   });
 
-  composer.callbackQuery('cmd_status', async (ctx) => {
-    await ctx.answerCallbackQuery({ text: 'Обновление статуса...' });
+  composer.callbackQuery(['cmd_status', 'cmd_account'], async (ctx) => {
+    await ctx.answerCallbackQuery({ text: 'Кабинет аккаунта...' });
     const userId = ctx.from?.id;
-    if (!userId) return;
+    const chatId = ctx.chat?.id;
+    if (!userId || !chatId) return;
 
-    const user = await getUser(ctx.env.KV_STORAGE, userId);
+    let user = await getUser(ctx.env.KV_STORAGE, userId);
+    if (!user) {
+      user = createDefaultUser(userId, chatId);
+      await saveUser(ctx.env.KV_STORAGE, user);
+    }
     const isLinked = Boolean(user && user.rkfToken);
     const text = buildStatusText(user);
 
-    try {
-      await ctx.editMessageText(text, {
-        reply_markup: getStatusKeyboard(isLinked)
-      });
-    } catch {
-      await ctx.reply(text, {
-        reply_markup: getStatusKeyboard(isLinked)
-      });
-    }
+    await renderSingleBubble(ctx, user, text, getAccountKeyboard(isLinked));
   });
 }

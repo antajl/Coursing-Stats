@@ -4,23 +4,41 @@ import type { BotContext, UserRecord } from '../types.js';
 import { getMainMenuKeyboard } from '../keyboards.js';
 import { getUser, saveUser, createDefaultUser } from '../storage/index.js';
 import { linkUserToken } from './auth.js';
+import { renderSingleBubble } from './render-bubble.js';
 
 export function buildStartText(user: UserRecord | null): string {
   const isLinked = Boolean(user && user.rkfToken);
-  let statusLine = '• Статус: Аккаунт не привязан (доступен поиск состязаний)';
-  if (isLinked && user) {
-    const total = Object.keys(user.cachedApps || {}).length;
-    const ready = Object.values(user.cachedApps || {}).filter(a => a.statusGroup === 'ready').length;
-    statusLine = `• Статус: Аккаунт подключен • Заявок: ${total} • Готово: ${ready}`;
+  if (!isLinked) {
+    return (
+      `CoursingStats Tracker\n` +
+      `Мониторинг документов и официальных состязаний РКФ\n` +
+      `— — — — — — — — — — — — — — —\n` +
+      `• Статус: Аккаунт не привязан\n` +
+      `• Календарь 2026: 72 состязания (курсинг, бега, БЗМП)\n\n` +
+      `Сервис автоматически отслеживает готовность дипломов на rkf.online и официальное утверждение состязаний в графиках РКФ.\n\n` +
+      `Для начала работы подключите аккаунт РКФ удобным способом:`
+    );
   }
+
+  const cachedApps = Object.values(user?.cachedApps || {});
+  const total = cachedApps.length;
+  const ready = cachedApps.filter(a => a.statusGroup === 'ready').length;
+  const inProgress = cachedApps.filter(a => a.statusGroup === 'active').length;
+  const comps = user?.competitions?.length || 0;
+  const lastCheck = user?.lastCheckedAt
+    ? new Date(user.lastCheckedAt).toLocaleString('ru-RU', { timeZone: 'Europe/Moscow' })
+    : 'еще не выполнялась';
 
   return (
     `CoursingStats Tracker\n` +
     `Мониторинг документов и официальных состязаний РКФ\n` +
     `— — — — — — — — — — — — — — —\n` +
-    `${statusLine}\n` +
-    `• Календарь 2026: 72 состязания (курсинг, бега, БЗМП)\n\n` +
-    `Сервис автоматически отслеживает готовность дипломов на rkf.online и официальное утверждение состязаний в графиках РКФ.\n\n` +
+    `• Аккаунт РКФ: Подключен\n` +
+    `• Всего заявок: ${total} (Готово к выдаче: ${ready})\n` +
+    `• В обработке: ${inProgress}\n` +
+    `• Отслеживание турниров: ${comps} активных\n` +
+    `• Фоновый робот: активен (проверка каждый час)\n` +
+    `• Обновлено: ${lastCheck} (МСК)\n\n` +
     `Выберите раздел в меню:`
   );
 }
@@ -53,10 +71,12 @@ export function registerStartHandler(composer: Composer<BotContext>): void {
           tokenToLink = savedToken;
           await ctx.env.KV_STORAGE.delete(`pair:ticket:${payload}`);
         } else {
-          await ctx.reply(
+          await renderSingleBubble(
+            ctx,
+            user,
             `[ОШИБКА] Ссылка привязки устарела или уже была использована.\n` +
             `Пожалуйста, нажмите «Подключить Telegram» на компьютере еще раз.`,
-            { reply_markup: getMainMenuKeyboard(webAppUrl, false) }
+            getMainMenuKeyboard(webAppUrl, false)
           );
           return;
         }
@@ -64,29 +84,33 @@ export function registerStartHandler(composer: Composer<BotContext>): void {
 
       const linkRes = await linkUserToken(ctx, userId, chatId, tokenToLink, sourceLabel);
       if (linkRes.ok) {
-        await ctx.reply(
+        user = (await getUser(ctx.env.KV_STORAGE, userId)) || user;
+        await renderSingleBubble(
+          ctx,
+          user,
           `[УСПЕШНО] Аккаунт rkf.online привязан!\n` +
           `— — — — — — — — — — — — — — —\n` +
           `• Способ: ${sourceLabel}\n` +
           `• Найдено заявок: ${linkRes.count}\n` +
           `• Готово к выдаче: ${linkRes.ready}\n` +
-          `• Режим: автоматический ежечасный мониторинг`,
-          { reply_markup: getMainMenuKeyboard(webAppUrl, true) }
+          `• Режим: автоматический ежечасный мониторинг\n\n` +
+          `Данные обновлены в главном меню:`,
+          getMainMenuKeyboard(webAppUrl, true)
         );
         return;
       } else {
-        await ctx.reply(
+        await renderSingleBubble(
+          ctx,
+          user,
           `[ОШИБКА] Не удалось верифицировать полученную сессию РКФ.\n` +
           `Пожалуйста, войдите в аккаунт на rkf.online и нажмите кнопку привязки еще раз.`,
-          { reply_markup: getMainMenuKeyboard(webAppUrl, false) }
+          getMainMenuKeyboard(webAppUrl, false)
         );
         return;
       }
     }
 
-    const text = buildStartText(user);
     const isLinked = Boolean(user && user.rkfToken);
-
     try {
       await ctx.setChatMenuButton({
         menu_button: {
@@ -95,13 +119,10 @@ export function registerStartHandler(composer: Composer<BotContext>): void {
           web_app: { url: webAppUrl }
         }
       });
-    } catch {
-      // Ignore if setChatMenuButton fails in test environments
-    }
+    } catch {}
 
-    await ctx.reply(text, {
-      reply_markup: getMainMenuKeyboard(webAppUrl, isLinked)
-    });
+    const text = buildStartText(user);
+    await renderSingleBubble(ctx, user, text, getMainMenuKeyboard(webAppUrl, isLinked));
   });
 
   composer.callbackQuery('cmd_start', async (ctx) => {
@@ -110,16 +131,12 @@ export function registerStartHandler(composer: Composer<BotContext>): void {
     if (!userId) return;
 
     const user = await getUser(ctx.env.KV_STORAGE, userId);
-    const webAppUrl = ctx.env.WEBAPP_URL || 'https://coursing-stats.ru/tracker/';
-    const text = buildStartText(user);
-    const isLinked = Boolean(user && user.rkfToken);
+    if (!user) return;
 
-    try {
-      await ctx.editMessageText(text, {
-        reply_markup: getMainMenuKeyboard(webAppUrl, isLinked)
-      });
-    } catch {
-      // Content did not change
-    }
+    const webAppUrl = ctx.env.WEBAPP_URL || 'https://coursing-stats.ru/tracker/';
+    const isLinked = Boolean(user && user.rkfToken);
+    const text = buildStartText(user);
+
+    await renderSingleBubble(ctx, user, text, getMainMenuKeyboard(webAppUrl, isLinked));
   });
 }

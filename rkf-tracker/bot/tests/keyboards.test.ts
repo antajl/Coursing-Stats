@@ -24,6 +24,7 @@ describe('keyboards (Old Money / Zero Emoji compliance)', () => {
     const jsonLinked = JSON.stringify(kbLinked);
     expect(emojiRegex.test(jsonLinked)).toBe(false);
     expect(jsonLinked).toContain('cmd_apps');
+    expect(jsonLinked).toContain('cmd_account');
   });
 
   it('auth onboarding keyboards contain no emojis', () => {

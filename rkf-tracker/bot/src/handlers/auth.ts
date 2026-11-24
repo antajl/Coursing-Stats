@@ -2,7 +2,6 @@
 import type { Composer } from 'grammy';
 import type { BotContext } from '../types.js';
 import { getUser, saveUser, createDefaultUser } from '../storage/index.js';
-import { validateRkfToken, fetchRkfApplications } from '../services/rkf-api.js';
 import {
   getMainMenuKeyboard,
   getAuthPromptKeyboard,
@@ -10,46 +9,15 @@ import {
   getAuthSubmenuKeyboard,
   getBackToMenuKeyboard
 } from '../keyboards.js';
+import { renderSingleBubble } from './render-bubble.js';
 import {
   getAuthPromptText,
   getAuthLoginText,
   getAuthExtText,
   getAuthBookmarkletText
 } from './auth-views.js';
-
-export async function linkUserToken(
-  ctx: BotContext,
-  userId: number,
-  chatId: number,
-  rawToken: string,
-  sourceLabel: string = 'Аккаунт rkf.online'
-): Promise<{ ok: boolean; count: number; ready: number }> {
-  const clean = rawToken.replace(/^["']|["']$/g, '').replace(/^Bearer\s+/i, '').trim();
-  const isValid = await validateRkfToken(clean);
-  if (!isValid) return { ok: false, count: 0, ready: 0 };
-
-  let user = (await getUser(ctx.env.KV_STORAGE, userId)) || createDefaultUser(userId, chatId);
-  user.rkfToken = clean;
-  user.linkedAt = new Date().toISOString();
-
-  try {
-    const apps = await fetchRkfApplications(clean, user.receivedBarcodes);
-    user.cachedApps = {};
-    for (const app of apps) {
-      user.cachedApps[app.barcode] = {
-        status: app.currentStatus,
-        statusGroup: app.statusGroup,
-        lastUpdated: app.lastUpdated
-      };
-    }
-    user.lastCheckedAt = new Date().toISOString();
-  } catch {}
-
-  await saveUser(ctx.env.KV_STORAGE, user);
-  const count = Object.keys(user.cachedApps || {}).length;
-  const ready = Object.values(user.cachedApps || {}).filter(a => a.statusGroup === 'ready').length;
-  return { ok: true, count, ready };
-}
+import { linkUserToken, processDirectToken } from './auth-link.js';
+export { linkUserToken } from './auth-link.js';
 
 export function registerAuthHandler(composer: Composer<BotContext>): void {
   // Mini App data receiver: Telegram.WebApp.sendData()
@@ -68,21 +36,26 @@ export function registerAuthHandler(composer: Composer<BotContext>): void {
 
     const webAppUrl = ctx.env.WEBAPP_URL || 'https://coursing-stats.ru/tracker/';
     const linkRes = await linkUserToken(ctx, userId, chatId, token, 'Защищенный WebApp');
+    const user = (await getUser(ctx.env.KV_STORAGE, userId)) || createDefaultUser(userId, chatId);
     if (linkRes.ok) {
-      await ctx.reply(
+      await renderSingleBubble(
+        ctx,
+        user,
         `[УСПЕШНО] Аккаунт rkf.online подключен!\n` +
         `— — — — — — — — — — — — — — —\n` +
         `• Способ: Защищенный вход WebApp\n` +
         `• Найдено заявок: ${linkRes.count}\n` +
         `• Готово к выдаче: ${linkRes.ready}\n` +
         `• Режим: автоматический ежечасный мониторинг`,
-        { reply_markup: getMainMenuKeyboard(webAppUrl, true) }
+        getMainMenuKeyboard(webAppUrl, true)
       );
     } else {
-      await ctx.reply(
+      await renderSingleBubble(
+        ctx,
+        user,
         `[ОШИБКА] Не удалось верифицировать полученную сессию РКФ.\n` +
         `Пожалуйста, попробуйте войти снова.`,
-        { reply_markup: getAuthPromptKeyboard(webAppUrl) }
+        getAuthPromptKeyboard(webAppUrl)
       );
     }
   });
@@ -162,23 +135,48 @@ export function registerAuthHandler(composer: Composer<BotContext>): void {
 
   composer.command('logout', async (ctx) => {
     const userId = ctx.from?.id;
-    if (!userId) return;
+    const chatId = ctx.chat?.id;
+    if (!userId || !chatId) return;
 
-    const user = await getUser(ctx.env.KV_STORAGE, userId);
-    if (!user || !user.rkfToken) {
-      await ctx.reply('Аккаунт РКФ не был привязан.', { reply_markup: getBackToMenuKeyboard() });
-      return;
-    }
+    let user = await getUser(ctx.env.KV_STORAGE, userId);
+    if (!user) user = createDefaultUser(userId, chatId);
 
     user.rkfToken = undefined;
     user.cachedApps = {};
     await saveUser(ctx.env.KV_STORAGE, user);
 
-    await ctx.reply(
+    const webAppUrl = ctx.env.WEBAPP_URL || 'https://coursing-stats.ru/tracker/';
+    await renderSingleBubble(
+      ctx,
+      user,
       `Авторизация успешно сброшена.\n` +
       `— — — — — — — — — — — — — — —\n` +
       `Токен и сохраненные данные удалены из базы бота.`,
-      { reply_markup: getBackToMenuKeyboard() }
+      getMainMenuKeyboard(webAppUrl, false)
+    );
+  });
+
+  composer.callbackQuery('cmd_logout', async (ctx) => {
+    await ctx.answerCallbackQuery({ text: 'Выход из профиля...' });
+    const userId = ctx.from?.id;
+    const chatId = ctx.chat?.id;
+    if (!userId || !chatId) return;
+
+    let user = await getUser(ctx.env.KV_STORAGE, userId);
+    if (!user) user = createDefaultUser(userId, chatId);
+
+    user.rkfToken = undefined;
+    user.cachedApps = {};
+    await saveUser(ctx.env.KV_STORAGE, user);
+
+    const webAppUrl = ctx.env.WEBAPP_URL || 'https://coursing-stats.ru/tracker/';
+    await renderSingleBubble(
+      ctx,
+      user,
+      `Авторизация успешно сброшена.\n` +
+      `— — — — — — — — — — — — — — —\n` +
+      `Токен и сохраненные заявки удалены из бота.`,
+      getMainMenuKeyboard(webAppUrl, false)
     );
   });
 
@@ -202,31 +200,4 @@ export function registerAuthHandler(composer: Composer<BotContext>): void {
 
     return next();
   });
-}
-
-async function processDirectToken(ctx: BotContext, userId: number, chatId: number, rawToken: string): Promise<void> {
-  const checking = await ctx.reply('[Проверка] Выполняется верификация сессии в API RKF...');
-  const res = await linkUserToken(ctx, userId, chatId, rawToken, 'Прямой ввод');
-
-  if (!res.ok) {
-    await ctx.api.editMessageText(
-      chatId,
-      checking.message_id,
-      `[ОШИБКА] Ключ не принят API RKF.\nПроверьте актуальность авторизации и попробуйте снова.`,
-      { reply_markup: getBackToMenuKeyboard() }
-    );
-    return;
-  }
-
-  const webAppUrl = ctx.env.WEBAPP_URL || 'https://coursing-stats.ru/tracker/';
-  await ctx.api.editMessageText(
-    chatId,
-    checking.message_id,
-    `[УСПЕШНО] Аккаунт rkf.online подключен!\n` +
-    `— — — — — — — — — — — — — — —\n` +
-    `• Найдено заявок: ${res.count}\n` +
-    `• Готово к выдаче: ${res.ready}\n` +
-    `• Мониторинг: ежечасный автоматический опрос`,
-    { reply_markup: getMainMenuKeyboard(webAppUrl, true) }
-  );
 }

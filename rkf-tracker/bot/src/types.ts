@@ -42,6 +42,7 @@ export interface UserRecord {
   receivedBarcodes: string[];
   competitions: CompetitionSubscription[];
   cachedApps: Record<string, { status: string; statusGroup: StatusGroup; lastUpdated: string }>;
+  lastBotMessageId?: number;
 }
 
 export interface Env {

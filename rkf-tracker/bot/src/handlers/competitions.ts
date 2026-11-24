@@ -24,6 +24,7 @@ import {
   unsubscribeFromEvent,
   showUserSubscriptions
 } from './competitions-actions.js';
+import { renderSingleBubble } from './render-bubble.js';
 
 export function registerCompetitionsHandler(composer: Composer<BotContext>): void {
   composer.command('competitions', async (ctx) => {
@@ -153,17 +154,16 @@ export function registerCompetitionsHandler(composer: Composer<BotContext>): voi
 }
 
 async function showCompetitionsHub(ctx: BotContext, isEdit: boolean): Promise<void> {
+  const userId = ctx.from?.id;
+  const chatId = ctx.chat?.id || userId;
+  if (!userId || !chatId) return;
+
+  const user = (await getUser(ctx.env.KV_STORAGE, userId)) || createDefaultUser(userId, chatId);
   const counts = getDisciplineCounts();
   const text = buildCompetitionsHubText(counts);
   const kb = getCompetitionsMenuKeyboard();
 
-  if (isEdit) {
-    try {
-      await ctx.editMessageText(text, { reply_markup: kb });
-      return;
-    } catch {}
-  }
-  await ctx.reply(text, { reply_markup: kb });
+  await renderSingleBubble(ctx, user, text, kb);
 }
 
 async function showCompetitionsPage(
@@ -173,7 +173,10 @@ async function showCompetitionsPage(
   isEdit: boolean
 ): Promise<void> {
   const userId = ctx.from?.id;
-  const user = userId ? await getUser(ctx.env.KV_STORAGE, userId) : null;
+  const chatId = ctx.chat?.id || userId;
+  if (!userId || !chatId) return;
+
+  const user = (await getUser(ctx.env.KV_STORAGE, userId)) || createDefaultUser(userId, chatId);
   const subIds = new Set((user?.competitions || []).map(c => c.id));
 
   const events = filterCompetitions(getFilterParams(discKey));
@@ -185,11 +188,5 @@ async function showCompetitionsPage(
   const text = buildCompetitionsPageText(pageEvents, p, totalPages, total, subIds, discKey);
   const kb = getCompetitionsPageKeyboard(pageEvents, p, totalPages, subIds, discKey);
 
-  if (isEdit) {
-    try {
-      await ctx.editMessageText(text, { reply_markup: kb });
-      return;
-    } catch {}
-  }
-  await ctx.reply(text, { reply_markup: kb });
+  await renderSingleBubble(ctx, user, text, kb);
 }
