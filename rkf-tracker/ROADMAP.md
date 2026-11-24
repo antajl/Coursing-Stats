@@ -46,7 +46,7 @@ d:\Site\CoursingStats\rkf-tracker\
   - Реализовать кнопку «Установить на ПК» (обработчик `beforeinstallprompt`).
   - Настроить безопасную работу с токенами и привязку сессии к профилю собаковода.
 
-### Track 2: Telegram-бот (`@coursing_stats_tracker_bot`)
+### Track 2: Telegram-бот (`@coursing_stats_notify_bot`)
 - **Статус:** Реализован и протестирован в `rkf-tracker/bot/`. Выделенный Cloudflare KV `dc8298e10534438898ab1f56c6ffc0c6` создан, настроен CI/CD workflow `.github/workflows/deploy-tracker-bot.yml`.
 - **Целевая аудитория:** 90% мобильных пользователей (уведомления в карман на выставках и в дороге).
 - **Что сделано:**
