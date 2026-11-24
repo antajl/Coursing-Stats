@@ -1,6 +1,14 @@
 import { useState, useEffect } from 'react';
-import { X, Key, HelpCircle, Check, Trash2, ArrowUpRight, Puzzle } from 'lucide-react';
-import { getStoredToken, setStoredAuth, clearStoredAuth } from './trackerData';
+import { X, Key, Check, Puzzle } from 'lucide-react';
+import {
+  getStoredToken,
+  getStoredEmail,
+  setStoredAuth,
+  clearStoredAuth,
+} from './trackerData';
+import { TrackerAuthActive } from './TrackerAuthActive';
+import { TrackerAuthPasswordForm } from './TrackerAuthPasswordForm';
+import { TrackerAuthManualToken } from './TrackerAuthManualToken';
 
 interface TrackerAuthModalProps {
   isOpen: boolean;
@@ -8,11 +16,13 @@ interface TrackerAuthModalProps {
   onAuthChange: () => void;
 }
 
+const EXTENSION_ZIP_URL =
+  'https://github.com/antajl/Coursing-Stats/releases/download/v1.0.0-tracker/CoursingStats-Tracker-Chrome-Extension.zip';
+
 export function TrackerAuthModal({ isOpen, onClose, onAuthChange }: TrackerAuthModalProps) {
-  const [tokenInput, setTokenInput] = useState('');
-  const [errorMsg, setErrorMsg] = useState('');
-  const [showHelp, setShowHelp] = useState(false);
   const [extensionToken, setExtensionToken] = useState<string | null>(null);
+  const [extensionUserUuid, setExtensionUserUuid] = useState<string | null>(null);
+  const [errorMsg, setErrorMsg] = useState('');
 
   useEffect(() => {
     if (!isOpen) return;
@@ -22,16 +32,17 @@ export function TrackerAuthModal({ isOpen, onClose, onAuthChange }: TrackerAuthM
 
     const handleMessage = (e: MessageEvent) => {
       if (!e.data) return;
+      const { type, token, userUuid } = e.data;
       if (
-        e.data.type === 'CS_EXTENSION_TOKEN_RESPONSE' ||
-        e.data.type === 'CS_EXTENSION_TOKEN_AVAILABLE' ||
-        e.data.type === 'RKF_TRACKER_TOKEN_SYNC' ||
-        e.data.type === 'RKF_TOKEN_TRANSFER'
+        type === 'CS_EXTENSION_TOKEN_RESPONSE' ||
+        type === 'CS_EXTENSION_TOKEN_AVAILABLE' ||
+        type === 'RKF_TRACKER_TOKEN_SYNC' ||
+        type === 'RKF_TOKEN_TRANSFER'
       ) {
-        if (e.data.token && typeof e.data.token === 'string' && e.data.token.length >= 20) {
-          setExtensionToken(e.data.token);
-          if (!tokenInput) {
-            setTokenInput(e.data.token);
+        if (token && typeof token === 'string' && token.trim().length >= 20) {
+          setExtensionToken(token.trim());
+          if (userUuid && typeof userUuid === 'string') {
+            setExtensionUserUuid(userUuid);
           }
         }
       }
@@ -39,44 +50,33 @@ export function TrackerAuthModal({ isOpen, onClose, onAuthChange }: TrackerAuthM
 
     window.addEventListener('message', handleMessage);
     return () => window.removeEventListener('message', handleMessage);
-  }, [isOpen, tokenInput]);
+  }, [isOpen]);
 
   if (!isOpen) return null;
 
   const currentToken = getStoredToken();
+  const currentEmail = getStoredEmail();
 
-  const handleSaveToken = (e?: React.FormEvent, directToken?: string) => {
-    if (e) e.preventDefault();
-    const tokenToUse = directToken || tokenInput;
-    const cleanToken = tokenToUse.trim().replace(/^Bearer\s+/i, '');
-    if (!cleanToken) {
-      setErrorMsg('Вставьте токен авторизации');
-      return;
-    }
-    if (cleanToken.length < 20) {
-      setErrorMsg('Слишком короткий токен (проверьте правильность)');
-      return;
-    }
-    setStoredAuth(cleanToken, 'rkf.online');
-    setTokenInput('');
+  const handlePasswordSuccess = (token: string, email: string) => {
+    setStoredAuth(token, email);
     setErrorMsg('');
     onAuthChange();
     onClose();
   };
 
-  const handleImportFromClipboard = async () => {
-    try {
-      const text = await navigator.clipboard.readText();
-      const cleanToken = text.trim().replace(/^Bearer\s+/i, '');
-      if (cleanToken.length >= 20) {
-        setTokenInput(cleanToken);
-        setErrorMsg('');
-      } else {
-        setErrorMsg('В буфере обмена нет подходящего токена');
-      }
-    } catch {
-      setErrorMsg('Не удалось получить доступ к буферу обмена');
-    }
+  const handleSyncExtension = () => {
+    if (!extensionToken) return;
+    setStoredAuth(extensionToken, 'rkf.online', extensionUserUuid || undefined);
+    setErrorMsg('');
+    onAuthChange();
+    onClose();
+  };
+
+  const handleManualTokenSave = (token: string) => {
+    setStoredAuth(token, 'rkf.online');
+    setErrorMsg('');
+    onAuthChange();
+    onClose();
   };
 
   const handleLogout = () => {
@@ -86,10 +86,10 @@ export function TrackerAuthModal({ isOpen, onClose, onAuthChange }: TrackerAuthM
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-charcoal-900/60 backdrop-blur-sm">
-      <div className="w-full max-w-lg bg-white rounded-2xl shadow-xl border border-old-money-200/90 overflow-hidden">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-charcoal-900/60 backdrop-blur-sm animate-fade-in">
+      <div className="w-full max-w-lg bg-white rounded-2xl shadow-xl border border-old-money-200/90 overflow-hidden flex flex-col max-h-[92vh]">
         {/* Header */}
-        <div className="flex items-center justify-between px-6 py-4 border-b border-old-money-100 bg-cream-50">
+        <div className="flex items-center justify-between px-6 py-4 border-b border-old-money-100 bg-cream-50 shrink-0">
           <div className="flex items-center gap-2">
             <Key className="w-4 h-4 text-camel-700" />
             <h3 className="text-sm font-bold text-charcoal-900">
@@ -99,148 +99,92 @@ export function TrackerAuthModal({ isOpen, onClose, onAuthChange }: TrackerAuthM
           <button
             type="button"
             onClick={onClose}
-            className="w-8 h-8 rounded-full flex items-center justify-center text-charcoal-400 hover:text-charcoal-700 hover:bg-cream-200/60 transition-colors"
+            aria-label="Закрыть"
+            className="w-8 h-8 rounded-full flex items-center justify-center text-charcoal-400 hover:text-charcoal-700 hover:bg-cream-200/60 transition-colors cursor-pointer"
           >
             <X className="w-4 h-4" />
           </button>
         </div>
 
         {/* Body */}
-        <div className="p-6 space-y-4">
+        <div className="p-6 space-y-4 overflow-y-auto">
           {currentToken ? (
-            <div className="space-y-4">
-              <div className="p-4 rounded-xl bg-emerald-50/70 border border-emerald-200/80 text-xs space-y-2">
-                <div className="flex items-center gap-2 font-semibold text-emerald-900">
-                  <Check className="w-4 h-4 text-emerald-600" />
-                  <span>Токен активен и сохранён в браузере</span>
-                </div>
-                <p className="text-emerald-800/90 leading-relaxed font-mono break-all text-[11px]">
-                  {currentToken.slice(0, 16)}••••••••••••••••{currentToken.slice(-12)}
-                </p>
-              </div>
-
-              <div className="flex items-center justify-between pt-2">
-                <button
-                  type="button"
-                  onClick={handleLogout}
-                  className="px-4 py-2 rounded-full text-xs font-semibold text-rose-700 border border-rose-200 hover:bg-rose-50 transition-colors flex items-center gap-1.5"
-                >
-                  <Trash2 className="w-3.5 h-3.5" />
-                  <span>Отвязать токен (Выйти)</span>
-                </button>
-                <button
-                  type="button"
-                  onClick={onClose}
-                  className="cs-glass-pill-active px-5 py-2 rounded-full text-xs font-semibold"
-                >
-                  Готово
-                </button>
-              </div>
-            </div>
+            <TrackerAuthActive
+              token={currentToken}
+              email={currentEmail}
+              onLogout={handleLogout}
+              onClose={onClose}
+            />
           ) : (
-            <form onSubmit={handleSaveToken} className="space-y-4">
-              <p className="text-xs text-charcoal-600 leading-relaxed">
-                Для отслеживания ваших персональных заявок на чемпионские титулы и сертификаты
-                вставьте сессионный токен из личного кабинета РКФ Онлайн. Пароль от аккаунта вводить не нужно.
-              </p>
-
-              <div className="space-y-1.5">
-                <div className="flex items-center justify-between">
-                  <label className="text-xs font-semibold text-charcoal-800">
-                    Токен доступа (Bearer Token)
-                  </label>
-                  <button
-                    type="button"
-                    onClick={handleImportFromClipboard}
-                    className="text-[11px] font-semibold text-camel-700 hover:text-camel-800 hover:underline cursor-pointer"
-                  >
-                    Вставить из буфера
-                  </button>
-                </div>
-                <textarea
-                  rows={3}
-                  value={tokenInput}
-                  onChange={(e) => {
-                    setTokenInput(e.target.value);
-                    setErrorMsg('');
-                  }}
-                  placeholder="Вставьте токен: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
-                  className="w-full px-3 py-2 text-xs font-mono rounded-xl border border-old-money-200 bg-white text-charcoal-900 focus:border-camel-600 focus:ring-1 focus:ring-camel-600 outline-none transition-all placeholder:text-charcoal-300 resize-none"
-                />
-              </div>
-
-              {extensionToken && (
-                <div className="p-3 rounded-xl bg-amber-50/90 border border-amber-200/90 flex items-center justify-between gap-3 text-xs">
-                  <div className="flex items-center gap-2 text-amber-900 font-medium">
-                    <Puzzle className="w-4 h-4 text-amber-700 shrink-0" />
-                    <span>Найдено расширение с активным токеном</span>
-                  </div>
-                  <button
-                    type="button"
-                    onClick={() => handleSaveToken(undefined, extensionToken)}
-                    className="cs-glass-pill-active px-3 py-1 rounded-full text-[11px] font-semibold shrink-0 cursor-pointer"
-                  >
-                    Подключить сразу
-                  </button>
-                </div>
-              )}
-
+            <div className="space-y-4">
               {errorMsg && (
-                <div className="p-3 rounded-lg bg-rose-50 border border-rose-200 text-xs text-rose-800">
+                <div className="p-3 rounded-xl bg-rose-50 border border-rose-200 text-xs text-rose-800 leading-relaxed">
                   {errorMsg}
                 </div>
               )}
 
-              <div className="flex items-center justify-between gap-3 pt-1">
-                <button
-                  type="button"
-                  onClick={() => setShowHelp(!showHelp)}
-                  className="text-xs font-semibold text-charcoal-600 hover:text-charcoal-900 flex items-center gap-1 cursor-pointer"
-                >
-                  <HelpCircle className="w-3.5 h-3.5 text-camel-700" />
-                  <span>Где взять токен?</span>
-                </button>
-
-                <div className="flex items-center gap-2">
+              {/* Блок 1: Если расширение обнаружено через postMessage */}
+              {extensionToken && (
+                <div className="p-4 sm:p-5 rounded-2xl bg-emerald-50/90 border border-emerald-200/90 space-y-3">
+                  <div className="flex items-start gap-3">
+                    <div className="w-9 h-9 rounded-xl bg-emerald-100 flex items-center justify-center shrink-0 text-emerald-700">
+                      <Puzzle className="w-5 h-5" />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <h4 className="text-xs font-bold text-emerald-950 leading-snug">
+                        Обнаружено расширение CoursingStats с активным аккаунтом РКФ
+                      </h4>
+                      <p className="text-[11.5px] text-emerald-800/90 mt-1 leading-relaxed">
+                        Сессия rkf.online готова к безопасной синхронизации без ввода логина и пароля.
+                      </p>
+                    </div>
+                  </div>
                   <button
                     type="button"
-                    onClick={onClose}
-                    className="px-4 py-2 rounded-full text-xs font-semibold text-charcoal-600 hover:bg-cream-100 transition-colors"
+                    onClick={handleSyncExtension}
+                    className="w-full min-h-[44px] px-4 py-2.5 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-semibold flex items-center justify-center gap-2 shadow-sm transition-all cursor-pointer"
                   >
-                    Отмена
+                    <Check className="w-4 h-4" />
+                    <span>Синхронизировать в 1 клик</span>
                   </button>
-                  <button
-                    type="submit"
-                    className="cs-glass-pill-active px-5 py-2 rounded-full text-xs font-semibold cursor-pointer"
-                  >
-                    Подключить
-                  </button>
-                </div>
-              </div>
-
-              {showHelp && (
-                <div className="mt-3 p-3.5 rounded-xl bg-cream-100/70 border border-old-money-200/80 text-[11.5px] text-charcoal-700 space-y-2 leading-relaxed">
-                  <p className="font-semibold text-charcoal-900">Как получить токен за 10 секунд:</p>
-                  <ol className="list-decimal pl-4 space-y-1">
-                    <li>
-                      <strong>Через расширение CoursingStats (самый простой способ):</strong> откройте расширение в браузере и нажмите «Копировать токен» или войдите прямо на этой странице.
-                    </li>
-                    <li>
-                      <strong>Вручную на сайте РКФ:</strong> войдите на{' '}
-                      <a
-                        href="https://rkf.online"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-camel-700 underline font-semibold inline-flex items-center gap-0.5"
-                      >
-                        rkf.online <ArrowUpRight className="w-3 h-3" />
-                      </a>
-                      , нажмите клавишу <strong>F12</strong> (Инструменты разработчика) → вкладка <strong>Application</strong> (Приложение) → слева <strong>Local Storage</strong> → скопируйте значение <code>access_token</code>.
-                    </li>
-                  </ol>
                 </div>
               )}
-            </form>
+
+              {/* Блок 2: Форма входа по E-mail и паролю от РКФ Онлайн */}
+              <TrackerAuthPasswordForm
+                hasExtension={Boolean(extensionToken)}
+                onSuccess={handlePasswordSuccess}
+                onError={setErrorMsg}
+              />
+
+              {/* Блок 3: Альтернатива без ввода пароля */}
+              <div className="p-3.5 rounded-xl border border-old-money-200/80 bg-cream-50/60 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <div className="min-w-0">
+                  <span className="text-xs font-bold text-charcoal-900 block">
+                    Альтернатива без ввода пароля
+                  </span>
+                  <p className="text-[11px] text-charcoal-600 leading-relaxed mt-0.5">
+                    Расширение подхватит ваш уже открытый сеанс на rkf.online без ввода пароля.
+                  </p>
+                </div>
+                <a
+                  href={EXTENSION_ZIP_URL}
+                  download
+                  target="_blank"
+                  rel="noreferrer"
+                  className="min-h-[44px] px-3.5 py-2 rounded-xl border border-old-money-200 bg-white hover:bg-cream-100 text-charcoal-800 text-[11.5px] font-semibold flex items-center justify-center gap-1.5 shrink-0 transition-colors cursor-pointer whitespace-nowrap"
+                >
+                  <Puzzle className="w-3.5 h-3.5 text-camel-700" />
+                  <span>Установить расширение</span>
+                </a>
+              </div>
+
+              {/* Блок 4: Скрытый подвал (Ручной ввод токена) */}
+              <TrackerAuthManualToken
+                onSaveToken={handleManualTokenSave}
+                onError={setErrorMsg}
+              />
+            </div>
           )}
         </div>
       </div>
