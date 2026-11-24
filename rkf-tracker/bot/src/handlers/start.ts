@@ -105,7 +105,7 @@ export function registerStartHandler(composer: Composer<BotContext>): void {
   });
 
   composer.callbackQuery('cmd_start', async (ctx) => {
-    await ctx.answerCallbackQuery();
+    await ctx.answerCallbackQuery({ text: 'Главное меню...' });
     const userId = ctx.from?.id;
     if (!userId) return;
 

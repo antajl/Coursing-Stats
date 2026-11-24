@@ -17,7 +17,7 @@ export function registerApplicationsHandler(composer: Composer<BotContext>): voi
   });
 
   composer.callbackQuery('cmd_apps', async (ctx) => {
-    await ctx.answerCallbackQuery();
+    await ctx.answerCallbackQuery({ text: 'Загрузка списка заявок из РКФ Онлайн...' });
     await showApplications(ctx, false, true);
   });
 
@@ -77,6 +77,20 @@ async function showApplications(ctx: BotContext, onlyReady: boolean, isEdit: boo
     }
     await ctx.reply(notLinkedText, { reply_markup: getAuthPromptKeyboard(webAppUrl) });
     return;
+  }
+
+  if (isEdit) {
+    try {
+      await ctx.editMessageText(
+        `Документы rkf.online\n` +
+        `— — — — — — — — — — — — — — —\n` +
+        `Запрашиваем актуальные данные из РКФ Онлайн, пожалуйста, подождите...`
+      );
+    } catch {}
+  } else {
+    try {
+      await ctx.replyWithChatAction('typing');
+    } catch {}
   }
 
   let apps: ApplicationItem[] = [];

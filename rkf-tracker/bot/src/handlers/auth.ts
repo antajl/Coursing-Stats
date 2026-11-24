@@ -89,7 +89,7 @@ export function registerAuthHandler(composer: Composer<BotContext>): void {
 
   // Auth selection hub
   composer.callbackQuery('cmd_auth_prompt', async (ctx) => {
-    await ctx.answerCallbackQuery();
+    await ctx.answerCallbackQuery({ text: 'Выбор способа привязки...' });
     const webAppUrl = ctx.env.WEBAPP_URL || 'https://coursing-stats.ru/tracker/';
     try {
       await ctx.editMessageText(getAuthPromptText(), { reply_markup: getAuthPromptKeyboard(webAppUrl) });
@@ -100,7 +100,7 @@ export function registerAuthHandler(composer: Composer<BotContext>): void {
 
   // Method 1: WebApp login modal
   composer.callbackQuery('cmd_auth_login', async (ctx) => {
-    await ctx.answerCallbackQuery();
+    await ctx.answerCallbackQuery({ text: 'Форма входа...' });
     const webAppUrl = ctx.env.WEBAPP_URL || 'https://coursing-stats.ru/tracker/';
     try {
       await ctx.editMessageText(getAuthLoginText(webAppUrl), { reply_markup: getAuthLoginKeyboard(webAppUrl) });
@@ -111,7 +111,7 @@ export function registerAuthHandler(composer: Composer<BotContext>): void {
 
   // Method 2: Browser Extension / Desktop guide
   composer.callbackQuery('cmd_auth_ext', async (ctx) => {
-    await ctx.answerCallbackQuery();
+    await ctx.answerCallbackQuery({ text: 'Инструкция для ПК...' });
     try {
       await ctx.editMessageText(getAuthExtText(), { reply_markup: getAuthSubmenuKeyboard() });
     } catch {
@@ -121,7 +121,7 @@ export function registerAuthHandler(composer: Composer<BotContext>): void {
 
   // Method 3: Bookmarklet guide
   composer.callbackQuery('cmd_auth_bookmarklet', async (ctx) => {
-    await ctx.answerCallbackQuery();
+    await ctx.answerCallbackQuery({ text: 'Код закладки...' });
     try {
       await ctx.editMessageText(getAuthBookmarkletText(), { parse_mode: 'HTML', reply_markup: getAuthSubmenuKeyboard() });
     } catch {

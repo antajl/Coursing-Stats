@@ -26,7 +26,7 @@ export function registerHelpHandler(composer: Composer<BotContext>): void {
   });
 
   composer.callbackQuery('cmd_help', async (ctx) => {
-    await ctx.answerCallbackQuery();
+    await ctx.answerCallbackQuery({ text: 'Справка...' });
     try {
       await ctx.editMessageText(HELP_TEXT, {
         reply_markup: getBackToMenuKeyboard()

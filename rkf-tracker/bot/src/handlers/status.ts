@@ -55,7 +55,7 @@ export function registerStatusHandler(composer: Composer<BotContext>): void {
   });
 
   composer.callbackQuery('cmd_status', async (ctx) => {
-    await ctx.answerCallbackQuery();
+    await ctx.answerCallbackQuery({ text: 'Обновление статуса...' });
     const userId = ctx.from?.id;
     if (!userId) return;
 

@@ -31,19 +31,19 @@ export function registerCompetitionsHandler(composer: Composer<BotContext>): voi
   });
 
   composer.callbackQuery('cmd_competitions', async (ctx) => {
-    await ctx.answerCallbackQuery();
+    await ctx.answerCallbackQuery({ text: 'Календарь состязаний 2026...' });
     await showCompetitionsHub(ctx, true);
   });
 
   // Discipline list & pagination
   composer.callbackQuery(/^comp_disc:(coursing|racing|bzmp|all|approved)$/, async (ctx) => {
-    await ctx.answerCallbackQuery();
+    await ctx.answerCallbackQuery({ text: 'Загрузка мероприятий...' });
     const disc = ctx.match ? ctx.match[1] : 'all';
     await showCompetitionsPage(ctx, disc, 0, true);
   });
 
   composer.callbackQuery(/^comp_p:(coursing|racing|bzmp|all|approved):(\d+)$/, async (ctx) => {
-    await ctx.answerCallbackQuery();
+    await ctx.answerCallbackQuery({ text: 'Переход на страницу...' });
     const disc = ctx.match ? ctx.match[1] : 'all';
     const page = ctx.match ? parseInt(ctx.match[2], 10) : 0;
     await showCompetitionsPage(ctx, disc, page, true);
@@ -136,18 +136,18 @@ export function registerCompetitionsHandler(composer: Composer<BotContext>): voi
 
   composer.callbackQuery(/^comp_sub:(.+)$/, async (ctx) => {
     const eventId = ctx.match ? ctx.match[1] : '';
-    await ctx.answerCallbackQuery();
+    await ctx.answerCallbackQuery({ text: 'Оформление подписки...' });
     await subscribeToEvent(ctx, eventId);
   });
 
   composer.callbackQuery(/^comp_unsub:(.+)$/, async (ctx) => {
     const eventId = ctx.match ? ctx.match[1] : '';
-    await ctx.answerCallbackQuery();
+    await ctx.answerCallbackQuery({ text: 'Отмена подписки...' });
     await unsubscribeFromEvent(ctx, eventId);
   });
 
   composer.callbackQuery('comp_list', async (ctx) => {
-    await ctx.answerCallbackQuery();
+    await ctx.answerCallbackQuery({ text: 'Загрузка ваших подписок...' });
     await showUserSubscriptions(ctx);
   });
 }
