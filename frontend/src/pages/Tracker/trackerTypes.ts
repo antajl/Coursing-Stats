@@ -30,6 +30,7 @@ export interface TrackerCompetition {
   judges?: string;
   notes?: string;
   updatedAt?: string;
+  eventId?: number;
 }
 
 export type TrackerTab = 'applications' | 'competitions';
