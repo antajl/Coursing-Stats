@@ -1,5 +1,6 @@
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { RotateCw, Key, Download } from 'lucide-react';
+import { RotateCw, User, LogIn, Download } from 'lucide-react';
 import type { TrackerTab } from '../../pages/Tracker/trackerTypes';
 
 interface NavTrackerProps {
@@ -21,9 +22,59 @@ export function NavTracker({
   isRefreshing,
   onOpenAuth,
 }: NavTrackerProps) {
+  const [cooldown, setCooldown] = useState<number>(() => {
+    if (typeof window === 'undefined') return 0;
+    const last = localStorage.getItem('cs_rkf_last_sync_timestamp');
+    if (!last) return 0;
+    const elapsed = Math.floor((Date.now() - Number(last)) / 1000);
+    return elapsed < 60 ? 60 - elapsed : 0;
+  });
+
+  const [lastSyncStr, setLastSyncStr] = useState<string | null>(() => {
+    if (typeof window === 'undefined') return null;
+    const last = localStorage.getItem('cs_rkf_last_sync_timestamp');
+    if (!last) return null;
+    const d = new Date(Number(last));
+    return `${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`;
+  });
+
+  const [isSyncing, setIsSyncing] = useState(false);
+
+  useEffect(() => {
+    if (cooldown <= 0) return;
+    const timer = setInterval(() => {
+      setCooldown((prev) => {
+        if (prev <= 1) {
+          clearInterval(timer);
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+    return () => clearInterval(timer);
+  }, [cooldown]);
+
   const handleOpenDownload = () => {
     window.dispatchEvent(new CustomEvent('tracker-open-download'));
   };
+
+  const handleTriggerRefresh = () => {
+    if (cooldown > 0 || isSyncing || isRefreshing) return;
+    setIsSyncing(true);
+    onRefresh();
+
+    const now = Date.now();
+    localStorage.setItem('cs_rkf_last_sync_timestamp', String(now));
+    const d = new Date(now);
+    setLastSyncStr(`${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`);
+
+    setTimeout(() => {
+      setIsSyncing(false);
+      setCooldown(60);
+    }, 1000);
+  };
+
+  const activeSync = isRefreshing || isSyncing;
 
   return (
     <div className="flex relative h-16 w-full items-center justify-between pl-2 pr-2 sm:pl-3 sm:pr-3 lg:pl-4 lg:pr-4">
@@ -90,18 +141,31 @@ export function NavTracker({
         </button>
       </div>
 
-      {/* 3. Right: Ecosystem Download, Auth Token, Status Indicator, Refresh button */}
+      {/* 3. Right: Ecosystem Download, Auth/Account, Status Indicator, Smart Refresh button */}
       <div className="flex shrink-0 items-center gap-1.5 lg:gap-2">
-        {/* Status Indicator */}
-        <div className="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-cream-100 text-[11.5px] text-charcoal-700 border border-old-money-200/60 shadow-2xs">
+        {/* Status Indicator with dynamic Dot and Last Sync Time */}
+        <div className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-cream-100 text-[11.5px] text-charcoal-700 border border-old-money-200/60 shadow-2xs">
           <span
-            className={`w-2 h-2 rounded-full ${
-              isLive
-                ? 'bg-emerald-500 ring-2 ring-emerald-500/20'
-                : 'bg-charcoal-400'
+            className={`w-2 h-2 rounded-full transition-colors ${
+              !isLive
+                ? 'bg-charcoal-400'
+                : activeSync
+                ? 'bg-amber-500 animate-pulse ring-2 ring-amber-500/20'
+                : 'bg-emerald-500 ring-2 ring-emerald-500/20'
             }`}
           />
-          <span className="font-medium">{isLive ? 'РКФ Онлайн' : 'Не подключен'}</span>
+          <span className="font-medium">
+            {!isLive
+              ? 'Не подключен'
+              : activeSync
+              ? 'Синхронизация...'
+              : 'РКФ Онлайн'}
+          </span>
+          {isLive && lastSyncStr && !activeSync && (
+            <span className="text-[10.5px] font-mono text-charcoal-500 opacity-90 pl-0.5">
+              {lastSyncStr}
+            </span>
+          )}
         </div>
 
         {/* Download Ecosystem Button */}
@@ -115,31 +179,47 @@ export function NavTracker({
           <span className="hidden sm:inline">Скачать / Бот</span>
         </button>
 
-        {/* Token Management Button */}
+        {/* Account / Login Management Button (Renamed from Токен) */}
         <button
           type="button"
           onClick={onOpenAuth}
           className="cs-glass-pill flex items-center justify-center gap-1.5 h-9 px-3 rounded-full text-charcoal-700 hover:text-charcoal-900 hover:border-camel-300 text-xs font-semibold transition-all shrink-0 active:scale-95 cursor-pointer"
-          title="Подключить или изменить токен РКФ.Онлайн"
+          title={isLive ? 'Управление аккаунтом РКФ Онлайн' : 'Войти в личный кабинет РКФ Онлайн'}
         >
-          <Key className="w-3.5 h-3.5 text-camel-700" />
-          <span className="hidden sm:inline">Токен</span>
+          {isLive ? (
+            <>
+              <User className="w-3.5 h-3.5 text-camel-700" />
+              <span className="hidden sm:inline">Аккаунт</span>
+            </>
+          ) : (
+            <>
+              <LogIn className="w-3.5 h-3.5 text-camel-700" />
+              <span className="hidden sm:inline">Войти</span>
+            </>
+          )}
         </button>
 
-        {/* Refresh Button */}
+        {/* Smart Refresh Button (Matches Extension Behavior with Cooldown) */}
         <button
           type="button"
-          onClick={onRefresh}
-          disabled={isRefreshing}
-          className="cs-glass-pill flex items-center justify-center h-9 w-9 rounded-full text-charcoal-700 text-xs font-semibold group cursor-pointer shrink-0 disabled:opacity-50"
-          title="Синхронизировать данные"
+          onClick={handleTriggerRefresh}
+          disabled={activeSync || cooldown > 0}
+          className="cs-glass-pill flex items-center justify-center gap-1.5 h-9 px-3 rounded-full text-charcoal-700 hover:text-charcoal-900 hover:border-camel-300 text-xs font-semibold transition-all shrink-0 active:scale-95 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed group"
+          title={
+            cooldown > 0
+              ? `Повторное обновление будет доступно через ${cooldown} сек.`
+              : 'Синхронизировать данные с РКФ Онлайн'
+          }
           aria-label="Синхронизировать"
         >
           <RotateCw
-            className={`w-4 h-4 text-camel-700 transition-transform ${
-              isRefreshing ? 'animate-spin' : 'group-hover:rotate-45'
+            className={`w-3.5 h-3.5 text-camel-700 transition-transform ${
+              activeSync ? 'animate-spin' : 'group-hover:rotate-45'
             }`}
           />
+          <span className="hidden sm:inline">
+            {activeSync ? 'Запрос...' : cooldown > 0 ? `${cooldown} сек...` : 'Обновить'}
+          </span>
         </button>
       </div>
     </div>
