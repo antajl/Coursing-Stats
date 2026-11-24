@@ -19,7 +19,7 @@ export function TrackerCompetitions({
   subscribedSet,
   onToggleSubscribed,
 }: TrackerCompetitionsProps) {
-  const [discipline, setDiscipline] = useState<DisciplineKey>('all');
+  const [discipline, setDiscipline] = useState<DisciplineKey>('Курсинг борзых');
   const [statusFilter, setStatusFilter] = useState<CompetitionStatusFilter>('all');
   const [sortBy, setSortBy] = useState<SortOption>('date_desc');
   const [onlySubscribed, setOnlySubscribed] = useState(false);
@@ -38,11 +38,10 @@ export function TrackerCompetitions({
     [competitions]
   );
 
-  const disciplineItems = [
-    { key: 'all' as const, label: `Все (${competitions.length})` },
-    { key: 'Курсинг борзых' as const, label: `Курсинг (${coursingCount})` },
-    { key: 'Бега борзых' as const, label: `Бега борзых (${racingCount})` },
-    { key: 'БЗМП' as const, label: `БЗМП (${bzmpCount})` },
+  const disciplineItems: { key: DisciplineKey; label: string }[] = [
+    { key: 'Курсинг борзых', label: `Курсинг (${coursingCount})` },
+    { key: 'Бега борзых', label: `Бега борзых (${racingCount})` },
+    { key: 'БЗМП', label: `БЗМП (${bzmpCount})` },
   ];
 
   const statusItems: { key: CompetitionStatusFilter; label: string; color: string }[] = [
@@ -55,15 +54,13 @@ export function TrackerCompetitions({
   const filteredCompetitions = useMemo(() => {
     const q = query.toLowerCase().trim();
     const result = competitions.filter((comp) => {
-      // 1. Discipline match
-      if (discipline !== 'all') {
-        if (discipline === 'БЗМП') {
-          if (!comp.discipline.includes('механической') && !comp.discipline.includes('БЗМП')) {
-            return false;
-          }
-        } else if (comp.discipline !== discipline) {
+      // 1. Single Discipline match (strictly matches one selected discipline)
+      if (discipline === 'БЗМП') {
+        if (!comp.discipline.includes('механической') && !comp.discipline.includes('БЗМП')) {
           return false;
         }
+      } else if (comp.discipline !== discipline) {
+        return false;
       }
 
       // 2. Status match

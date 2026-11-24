@@ -63,7 +63,7 @@ export function TrackerCompetitionsToolbar({
         trigger={
           <button
             type="button"
-            className={toolbarPillTriggerClass(discipline !== 'all', '!h-8 !px-3')}
+            className={toolbarPillTriggerClass(true, '!h-8 !px-3')}
           >
             <span className="truncate max-w-[130px]">{activeDisciplineLabel}</span>
             <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" />
