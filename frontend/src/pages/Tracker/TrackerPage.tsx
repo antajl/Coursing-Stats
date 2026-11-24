@@ -11,6 +11,7 @@ import {
 } from './trackerData';
 import { TrackerApplications } from './TrackerApplications';
 import { TrackerCompetitions } from './TrackerCompetitions';
+import { TrackerApps } from './TrackerApps';
 import { TrackerAuthModal } from './TrackerAuthModal';
 import { TrackerDownloadModal } from './TrackerDownloadModal';
 import rawCompetitions from './rkf-competitions-2026.json';
@@ -179,20 +180,41 @@ export default function TrackerPage() {
             <span className="absolute bottom-0 left-0 w-full h-[2px] bg-camel-600 rounded-full" />
           )}
         </button>
+
+        <button
+          type="button"
+          onClick={() => setSearchParams({ tab: 'apps' })}
+          className={`group relative pb-2 text-sm font-semibold transition-colors duration-200 cursor-pointer flex items-center gap-1.5 ${
+            currentTab === 'apps'
+              ? 'text-camel-950 font-bold'
+              : 'text-charcoal-600 hover:text-charcoal-900'
+          }`}
+        >
+          <span>Приложения и бот</span>
+          {currentTab === 'apps' && (
+            <span className="absolute bottom-0 left-0 w-full h-[2px] bg-camel-600 rounded-full" />
+          )}
+        </button>
       </div>
 
-      {currentTab === 'applications' ? (
+      {currentTab === 'applications' && (
         <TrackerApplications
           applications={applications}
           onToggleReceived={handleToggleReceived}
           receivedSet={receivedSet}
         />
-      ) : (
+      )}
+
+      {currentTab === 'competitions' && (
         <TrackerCompetitions
           competitions={competitions}
           subscribedSet={subscribedSet}
           onToggleSubscribed={handleToggleSubscribed}
         />
+      )}
+
+      {currentTab === 'apps' && (
+        <TrackerApps />
       )}
 
       {/* Extension token auto-sync notification toast */}

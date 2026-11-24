@@ -139,46 +139,25 @@ export function NavTracker({
             }`}
           />
         </button>
-      </div>
 
-      {/* 3. Right: Ecosystem Download, Auth/Account, Status Indicator, Smart Refresh button */}
-      <div className="flex shrink-0 items-center gap-1.5 lg:gap-2">
-        {/* Status Indicator with dynamic Dot and Last Sync Time */}
-        <div className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-cream-100 text-[11.5px] text-charcoal-700 border border-old-money-200/60 shadow-2xs">
-          <span
-            className={`w-2 h-2 rounded-full transition-colors ${
-              !isLive
-                ? 'bg-charcoal-400'
-                : activeSync
-                ? 'bg-amber-500 animate-pulse ring-2 ring-amber-500/20'
-                : 'bg-emerald-500 ring-2 ring-emerald-500/20'
-            }`}
-          />
-          <span className="font-medium">
-            {!isLive
-              ? 'Не подключен'
-              : activeSync
-              ? 'Синхронизация...'
-              : 'РКФ Онлайн'}
-          </span>
-          {isLive && lastSyncStr && !activeSync && (
-            <span className="text-[10.5px] font-mono text-charcoal-500 opacity-90 pl-0.5">
-              {lastSyncStr}
-            </span>
-          )}
-        </div>
-
-        {/* Download Ecosystem Button */}
         <button
           type="button"
-          onClick={handleOpenDownload}
-          className="cs-glass-pill flex items-center justify-center gap-1.5 h-9 px-3 rounded-full text-charcoal-700 hover:text-charcoal-900 hover:border-camel-300 text-xs font-semibold transition-all shrink-0 active:scale-95 cursor-pointer"
-          title="Скачать программу для Windows, расширение для браузера или подключить бота"
+          onClick={() => onSelectTab('apps')}
+          className={`group relative flex shrink-0 items-center whitespace-nowrap py-2 px-3 text-xs lg:text-sm font-semibold transition-colors duration-200 cursor-pointer ${
+            activeTab === 'apps' ? 'text-camel-800' : 'text-charcoal-700 hover:text-charcoal-900'
+          }`}
         >
-          <Download className="w-3.5 h-3.5 text-camel-700" />
-          <span className="hidden sm:inline">Скачать / Бот</span>
+          <span>Приложения и бот</span>
+          <span
+            className={`pointer-events-none absolute bottom-0 left-0 h-0.5 bg-camel-600 transition-[width] duration-300 ease-out ${
+              activeTab === 'apps' ? 'w-full' : 'w-0 group-hover:w-full'
+            }`}
+          />
         </button>
+      </div>
 
+      {/* 3. Right: Auth/Account, and Adjacent Synchronization Block */}
+      <div className="flex shrink-0 items-center gap-2 lg:gap-2.5">
         {/* Account / Login Management Button (Renamed from Токен) */}
         <button
           type="button"
@@ -199,28 +178,56 @@ export function NavTracker({
           )}
         </button>
 
-        {/* Smart Refresh Button (Matches Extension Behavior with Cooldown) */}
-        <button
-          type="button"
-          onClick={handleTriggerRefresh}
-          disabled={activeSync || cooldown > 0}
-          className="cs-glass-pill flex items-center justify-center gap-1.5 h-9 px-3 rounded-full text-charcoal-700 hover:text-charcoal-900 hover:border-camel-300 text-xs font-semibold transition-all shrink-0 active:scale-95 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed group"
-          title={
-            cooldown > 0
-              ? `Повторное обновление будет доступно через ${cooldown} сек.`
-              : 'Синхронизировать данные с РКФ Онлайн'
-          }
-          aria-label="Синхронизировать"
-        >
-          <RotateCw
-            className={`w-3.5 h-3.5 text-camel-700 transition-transform ${
-              activeSync ? 'animate-spin' : 'group-hover:rotate-45'
-            }`}
-          />
-          <span className="hidden sm:inline">
-            {activeSync ? 'Запрос...' : cooldown > 0 ? `${cooldown} сек...` : 'Обновить'}
-          </span>
-        </button>
+        {/* Consolidated Synchronization Block: Status Badge + Refresh Button adjacent */}
+        <div className="flex items-center gap-1.5 pl-1.5 border-l border-old-money-200/60">
+          {/* Status Indicator with dynamic Dot and Last Sync Time */}
+          <div className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-cream-100 text-[11.5px] text-charcoal-700 border border-old-money-200/60 shadow-2xs">
+            <span
+              className={`w-2 h-2 rounded-full transition-colors ${
+                !isLive
+                  ? 'bg-charcoal-400'
+                  : activeSync
+                  ? 'bg-amber-500 animate-pulse ring-2 ring-amber-500/20'
+                  : 'bg-emerald-500 ring-2 ring-emerald-500/20'
+              }`}
+            />
+            <span className="font-medium">
+              {!isLive
+                ? 'Не подключен'
+                : activeSync
+                ? 'Синхронизация...'
+                : 'РКФ Онлайн'}
+            </span>
+            {isLive && lastSyncStr && !activeSync && (
+              <span className="text-[10.5px] font-mono text-charcoal-500 opacity-90 pl-0.5">
+                {lastSyncStr}
+              </span>
+            )}
+          </div>
+
+          {/* Smart Refresh Button (Matches Extension Behavior with Cooldown) */}
+          <button
+            type="button"
+            onClick={handleTriggerRefresh}
+            disabled={activeSync || cooldown > 0}
+            className="cs-glass-pill flex items-center justify-center gap-1.5 h-9 px-3 rounded-full text-charcoal-700 hover:text-charcoal-900 hover:border-camel-300 text-xs font-semibold transition-all shrink-0 active:scale-95 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed group"
+            title={
+              cooldown > 0
+                ? `Повторное обновление будет доступно через ${cooldown} сек.`
+                : 'Синхронизировать данные с РКФ Онлайн'
+            }
+            aria-label="Синхронизировать"
+          >
+            <RotateCw
+              className={`w-3.5 h-3.5 text-camel-700 transition-transform ${
+                activeSync ? 'animate-spin' : 'group-hover:rotate-45'
+              }`}
+            />
+            <span className="hidden sm:inline">
+              {activeSync ? 'Запрос...' : cooldown > 0 ? `${cooldown} сек...` : 'Обновить'}
+            </span>
+          </button>
+        </div>
       </div>
     </div>
   );
