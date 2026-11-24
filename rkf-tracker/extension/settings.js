@@ -80,6 +80,33 @@ export function setupSettings(showToast, onLogout, onOpenTab) {
       }
     });
   }
+
+  // Toggle "Для специалистов" section
+  const toggleAdv = document.getElementById('toggle-advanced-settings');
+  const advBody = document.getElementById('advanced-settings-body');
+  if (toggleAdv && advBody) {
+    toggleAdv.addEventListener('click', () => {
+      const isVisible = advBody.style.display !== 'none';
+      advBody.style.display = isVisible ? 'none' : 'block';
+      toggleAdv.classList.toggle('expanded', !isVisible);
+    });
+  }
+
+  // Manual token save in specialist section
+  const btnSaveManual = document.getElementById('btn-save-manual-token');
+  const manualInput = document.getElementById('manual-token-input');
+  if (btnSaveManual && manualInput) {
+    btnSaveManual.addEventListener('click', () => {
+      const raw = manualInput.value.trim();
+      const token = raw.replace(/^Bearer\s+/i, '');
+      if (token) {
+        chrome.storage.local.set({ rkfToken: token }, () => {
+          showToast('Токен сохранен!');
+          closeSettingsModal();
+        });
+      }
+    });
+  }
 }
 
 export async function openSettingsModal() {

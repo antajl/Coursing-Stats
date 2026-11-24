@@ -1,6 +1,6 @@
 // CoursingStats RKF Tracker — Main Popup Orchestrator (ES Module)
 import { checkAuthFromTabs, fetchAppsData } from './api.js';
-import { renderApps, handleSearch } from './render.js';
+import { renderApps, handleSearch, toggleAppReceived } from './render.js';
 import { setupSettings } from './settings.js';
 import { initCompetitions } from './competitions.js';
 
@@ -44,38 +44,27 @@ function setupEventListeners() {
   const secApps = document.getElementById('section-apps');
   const secComps = document.getElementById('section-competitions');
 
-  tabApps.addEventListener('click', () => {
-    if (tabApps.classList.contains('active')) return;
-    tabApps.classList.add('active');
-    tabComps.classList.remove('active');
-    secComps.classList.remove('active');
-    secApps.classList.add('active');
-  });
+  const switchTab = (toComps) => {
+    tabApps.classList.toggle('active', !toComps);
+    tabComps.classList.toggle('active', toComps);
+    secApps.classList.toggle('active', !toComps);
+    secComps.classList.toggle('active', toComps);
+  };
+  tabApps.addEventListener('click', () => switchTab(false));
+  tabComps.addEventListener('click', () => switchTab(true));
 
-  tabComps.addEventListener('click', () => {
-    if (tabComps.classList.contains('active')) return;
-    tabComps.classList.add('active');
-    tabApps.classList.remove('active');
-    secApps.classList.remove('active');
-    secComps.classList.add('active');
-  });
-
-  // Brand link -> Opens Web Tracker with auto-token handover
+  // Web tracker and Bot buttons
   const brandLink = document.getElementById('brand-link');
-  if (brandLink) {
-    brandLink.addEventListener('click', async (e) => {
-      e.preventDefault();
-      try {
-        const store = await chrome.storage.local.get(['rkfToken']);
-        const url = store.rkfToken
-          ? `https://coursing-stats.ru/tracker?token=${encodeURIComponent(store.rkfToken)}`
-          : 'https://coursing-stats.ru/tracker';
-        chrome.tabs.create({ url });
-      } catch (_) {
-        chrome.tabs.create({ url: 'https://coursing-stats.ru/tracker' });
-      }
-    });
-  }
+  if (brandLink) brandLink.addEventListener('click', (e) => { e.preventDefault(); openWebTracker(); });
+
+  const btnWebTracker = document.getElementById('btn-open-web-tracker');
+  if (btnWebTracker) btnWebTracker.addEventListener('click', openWebTracker);
+
+  const btnConnectTg = document.getElementById('btn-connect-telegram');
+  if (btnConnectTg) btnConnectTg.addEventListener('click', () => connectTelegramBot(btnConnectTg));
+
+  const btnOpenRkf = document.getElementById('btn-open-rkf');
+  if (btnOpenRkf) btnOpenRkf.addEventListener('click', () => chrome.tabs.create({ url: 'https://rkf.online' }));
 
   // Apps Expandable Search
   const appsSearchWrap = document.getElementById('apps-search-wrap');
@@ -84,21 +73,13 @@ function setupEventListeners() {
 
   if (appsSearchBtn && appsSearchWrap && searchInput) {
     appsSearchBtn.addEventListener('click', () => {
-      const isExpanded = appsSearchWrap.classList.toggle('expanded');
-      if (isExpanded) {
-        searchInput.focus();
-      } else if (!searchInput.value.trim()) {
-        handleSearch(currentFilter);
-      }
+      if (appsSearchWrap.classList.toggle('expanded')) searchInput.focus();
+      else if (!searchInput.value.trim()) handleSearch(currentFilter);
     });
-
     searchInput.addEventListener('input', () => {
-      if (appsSearchClear) {
-        appsSearchClear.style.display = searchInput.value ? 'inline-flex' : 'none';
-      }
+      if (appsSearchClear) appsSearchClear.style.display = searchInput.value ? 'inline-flex' : 'none';
       handleSearch(currentFilter);
     });
-
     if (appsSearchClear) {
       appsSearchClear.addEventListener('click', () => {
         searchInput.value = '';
@@ -120,34 +101,52 @@ function setupEventListeners() {
     });
   });
 
-  document.getElementById('btn-open-rkf').addEventListener('click', () => {
-    chrome.tabs.create({ url: 'https://rkf.online' });
-  });
-
-  document.getElementById('toggle-manual-token').addEventListener('click', (e) => {
-    e.preventDefault();
-    const wrap = document.getElementById('manual-token-wrap');
-    wrap.style.display = wrap.style.display === 'none' ? 'flex' : 'none';
-  });
-
-  document.getElementById('btn-save-manual-token').addEventListener('click', () => {
-    const raw = document.getElementById('manual-token-input').value.trim();
-    const token = raw.replace(/^Bearer\s+/i, '');
-    if (token) {
-      chrome.storage.local.set({ rkfToken: token }, () => {
-        showToast('Токен сохранен!');
-        checkAuthAndInit();
-      });
-    }
-  });
-
-  document.getElementById('btn-close-error').addEventListener('click', () => {
-    errorModal.style.display = 'none';
-  });
+  const btnCloseError = document.getElementById('btn-close-error');
+  if (btnCloseError) btnCloseError.addEventListener('click', () => { errorModal.style.display = 'none'; });
 }
 
 function openFullscreenTab() {
   chrome.tabs.create({ url: chrome.runtime.getURL('popup.html?mode=tab') });
+}
+
+function openWebTracker() {
+  chrome.storage.local.get(['rkfToken']).then((store) => {
+    const url = store.rkfToken
+      ? `https://coursing-stats.ru/tracker?token=${encodeURIComponent(store.rkfToken)}`
+      : 'https://coursing-stats.ru/tracker';
+    chrome.tabs.create({ url });
+  }).catch(() => chrome.tabs.create({ url: 'https://coursing-stats.ru/tracker' }));
+}
+
+async function connectTelegramBot(btn) {
+  try {
+    const store = await chrome.storage.local.get(['rkfToken']);
+    if (!store.rkfToken) {
+      showToast('Токен не найден. Войдите на rkf.online');
+      return;
+    }
+    showToast('Открываем Telegram...');
+    if (btn) btn.disabled = true;
+
+    try {
+      const resp = await fetch('https://coursing-stats-tracker-bot.antajltube.workers.dev/api/auth/ticket', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ apikey: store.rkfToken })
+      });
+      const data = await resp.json();
+      if (data?.ok && data?.botUrl) {
+        chrome.tabs.create({ url: data.botUrl });
+        return;
+      }
+    } catch (_) {}
+
+    chrome.tabs.create({ url: `https://t.me/coursing_stats_notify_bot?start=bind_${encodeURIComponent(store.rkfToken)}` });
+  } catch (_) {
+    showToast('Ошибка привязки Telegram');
+  } finally {
+    if (btn) setTimeout(() => { btn.disabled = false; }, 1500);
+  }
 }
 
 function showAuthScreen() {
@@ -157,20 +156,16 @@ function showAuthScreen() {
   statusBadge.style.display = 'none';
 }
 
+const STORE_KEYS = ['rkfToken', 'profileId', 'userUuid', 'cached_apps', 'cached_time', 'rkf_last_refresh_timestamp'];
+
 async function checkAuthAndInit() {
-  const store = await chrome.storage.local.get(['rkfToken', 'profileId', 'userUuid', 'cached_apps', 'cached_time', 'rkf_last_refresh_timestamp']);
-  if (store.rkfToken) {
-    showDashboard(store);
-  } else {
-    const auto = await checkAuthFromTabs();
-    if (auto) {
-      showToast('Авторизация из вкладки РКФ успешна!');
-      const updated = await chrome.storage.local.get(['rkfToken', 'profileId', 'userUuid', 'cached_apps', 'cached_time', 'rkf_last_refresh_timestamp']);
-      showDashboard(updated);
-    } else {
-      showAuthScreen();
-    }
+  let store = await chrome.storage.local.get(STORE_KEYS);
+  if (!store.rkfToken && (await checkAuthFromTabs())) {
+    showToast('Авторизация из вкладки РКФ успешна!');
+    store = await chrome.storage.local.get(STORE_KEYS);
   }
+  if (store.rkfToken) showDashboard(store);
+  else showAuthScreen();
 }
 
 async function showDashboard(store) {
@@ -224,22 +219,7 @@ async function fetchData(token, profileId, userUuid) {
 }
 
 async function handleToggleCheck(barcode, isChecked) {
-  const row = document.getElementById('row-' + barcode);
-  const chk = document.getElementById('chk-' + barcode);
-  chk.classList.toggle('checked', isChecked);
-  row.classList.toggle('is-collected', isChecked);
-
-  const isReady = row.getAttribute('data-is-ready') === 'true';
-  row.setAttribute('data-filter-group', isChecked ? 'collected' : (isReady ? 'to_pickup' : 'active'));
-
-  const app = currentApps.find((a) => a.barcode === barcode);
-  if (app) app.isReceived = isChecked;
-
-  const { rkf_received_docs = {} } = await chrome.storage.local.get('rkf_received_docs');
-  if (isChecked) rkf_received_docs[barcode] = new Date().toISOString();
-  else delete rkf_received_docs[barcode];
-
-  await chrome.storage.local.set({ rkf_received_docs, cached_apps: currentApps });
+  await toggleAppReceived(barcode, isChecked, currentApps);
   showToast(isChecked ? 'Отмечено: документ забран' : 'Отметка снята');
   handleSearch(currentFilter);
 }
@@ -252,28 +232,21 @@ async function handleLogout() {
 
 function setupStorageSync() {
   chrome.storage.onChanged.addListener((changes, area) => {
-    if (area === 'local') {
-      if (changes.rkfToken) {
-        if (!changes.rkfToken.newValue) {
-          currentApps = [];
-          showAuthScreen();
-        } else {
-          checkAuthAndInit();
-        }
-      }
-      if (changes.cached_apps && changes.cached_apps.newValue) {
-        currentApps = changes.cached_apps.newValue;
-        renderApps(currentApps, currentMeta, handleToggleCheck);
-        handleSearch(currentFilter);
-      }
+    if (area !== 'local') return;
+    if (changes.rkfToken) {
+      if (!changes.rkfToken.newValue) { currentApps = []; showAuthScreen(); }
+      else checkAuthAndInit();
+    }
+    if (changes.cached_apps?.newValue) {
+      currentApps = changes.cached_apps.newValue;
+      renderApps(currentApps, currentMeta, handleToggleCheck);
+      handleSearch(currentFilter);
     }
   });
 }
 
 function setStatusState(state) {
-  statusDot.className = 'status-dot';
-  if (state === 'syncing') statusDot.classList.add('syncing');
-  else if (state === 'error') statusDot.classList.add('error');
+  statusDot.className = 'status-dot' + (state === 'syncing' ? ' syncing' : state === 'error' ? ' error' : '');
 }
 
 function startCooldown(seconds) {

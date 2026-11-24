@@ -137,3 +137,23 @@ export function handleSearch(currentFilter) {
     row.style.display = (matchFilter && matchQuery) ? 'block' : 'none';
   });
 }
+
+export async function toggleAppReceived(barcode, isChecked, currentApps) {
+  const row = document.getElementById('row-' + barcode);
+  const chk = document.getElementById('chk-' + barcode);
+  if (chk) chk.classList.toggle('checked', isChecked);
+  if (row) {
+    row.classList.toggle('is-collected', isChecked);
+    const isReady = row.getAttribute('data-is-ready') === 'true';
+    row.setAttribute('data-filter-group', isChecked ? 'collected' : (isReady ? 'to_pickup' : 'active'));
+  }
+
+  const app = currentApps.find((a) => a.barcode === barcode);
+  if (app) app.isReceived = isChecked;
+
+  const { rkf_received_docs = {} } = await chrome.storage.local.get('rkf_received_docs');
+  if (isChecked) rkf_received_docs[barcode] = new Date().toISOString();
+  else delete rkf_received_docs[barcode];
+
+  await chrome.storage.local.set({ rkf_received_docs, cached_apps: currentApps });
+}
