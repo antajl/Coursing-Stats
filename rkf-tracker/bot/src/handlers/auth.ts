@@ -1,11 +1,12 @@
-// Handler: /auth, /login and the 4 onboarding methods (Strict Zero Emoji & Single-Bubble UX)
+// Handler: /auth, /login and WebApp authentication (Strict Zero Emoji & Single-Bubble UX)
 import type { Composer } from 'grammy';
 import type { BotContext } from '../types.js';
 import { getUser, saveUser, createDefaultUser } from '../storage/index.js';
-import { validateRkfToken, fetchRkfApplications, authenticateRkfUser } from '../services/rkf-api.js';
+import { validateRkfToken, fetchRkfApplications } from '../services/rkf-api.js';
 import {
   getMainMenuKeyboard,
   getAuthPromptKeyboard,
+  getAuthLoginKeyboard,
   getAuthSubmenuKeyboard,
   getBackToMenuKeyboard
 } from '../keyboards.js';
@@ -13,8 +14,7 @@ import {
   getAuthPromptText,
   getAuthLoginText,
   getAuthExtText,
-  getAuthBookmarkletText,
-  getAuthManualText
+  getAuthBookmarkletText
 } from './auth-views.js';
 
 export async function linkUserToken(
@@ -52,7 +52,42 @@ export async function linkUserToken(
 }
 
 export function registerAuthHandler(composer: Composer<BotContext>): void {
-  // Method 0: Main auth selection hub
+  // Mini App data receiver: Telegram.WebApp.sendData()
+  composer.on('message:web_app_data', async (ctx) => {
+    const userId = ctx.from?.id;
+    const chatId = ctx.chat?.id;
+    if (!userId || !chatId) return;
+
+    const rawData = ctx.message.web_app_data.data;
+    let token = rawData;
+    try {
+      const parsed = JSON.parse(rawData);
+      if (parsed.token) token = parsed.token;
+      else if (parsed.apikey) token = parsed.apikey;
+    } catch {}
+
+    const webAppUrl = ctx.env.WEBAPP_URL || 'https://my.coursing-stats.ru';
+    const linkRes = await linkUserToken(ctx, userId, chatId, token, 'Защищенный WebApp');
+    if (linkRes.ok) {
+      await ctx.reply(
+        `[УСПЕШНО] Аккаунт rkf.online подключен!\n` +
+        `— — — — — — — — — — — — — — —\n` +
+        `• Способ: Защищенный вход WebApp\n` +
+        `• Найдено заявок: ${linkRes.count}\n` +
+        `• Готово к выдаче: ${linkRes.ready}\n` +
+        `• Режим: автоматический ежечасный мониторинг`,
+        { reply_markup: getMainMenuKeyboard(webAppUrl, true) }
+      );
+    } else {
+      await ctx.reply(
+        `[ОШИБКА] Не удалось верифицировать полученную сессию РКФ.\n` +
+        `Пожалуйста, попробуйте войти снова.`,
+        { reply_markup: getAuthPromptKeyboard(webAppUrl) }
+      );
+    }
+  });
+
+  // Auth selection hub
   composer.callbackQuery('cmd_auth_prompt', async (ctx) => {
     await ctx.answerCallbackQuery();
     const webAppUrl = ctx.env.WEBAPP_URL || 'https://my.coursing-stats.ru';
@@ -63,18 +98,18 @@ export function registerAuthHandler(composer: Composer<BotContext>): void {
     }
   });
 
-  // Method 1: Email + Password guide
+  // Method 1: WebApp login modal
   composer.callbackQuery('cmd_auth_login', async (ctx) => {
     await ctx.answerCallbackQuery();
     const webAppUrl = ctx.env.WEBAPP_URL || 'https://my.coursing-stats.ru';
     try {
-      await ctx.editMessageText(getAuthLoginText(webAppUrl), { reply_markup: getAuthSubmenuKeyboard() });
+      await ctx.editMessageText(getAuthLoginText(webAppUrl), { reply_markup: getAuthLoginKeyboard(webAppUrl) });
     } catch {
-      await ctx.reply(getAuthLoginText(webAppUrl), { reply_markup: getAuthSubmenuKeyboard() });
+      await ctx.reply(getAuthLoginText(webAppUrl), { reply_markup: getAuthLoginKeyboard(webAppUrl) });
     }
   });
 
-  // Method 2: Browser Extension guide
+  // Method 2: Browser Extension / Desktop guide
   composer.callbackQuery('cmd_auth_ext', async (ctx) => {
     await ctx.answerCallbackQuery();
     try {
@@ -94,65 +129,16 @@ export function registerAuthHandler(composer: Composer<BotContext>): void {
     }
   });
 
-  // Method 4: Manual token guide
-  composer.callbackQuery('cmd_auth_manual', async (ctx) => {
-    await ctx.answerCallbackQuery();
-    try {
-      await ctx.editMessageText(getAuthManualText(), { reply_markup: getAuthSubmenuKeyboard() });
-    } catch {
-      await ctx.reply(getAuthManualText(), { reply_markup: getAuthSubmenuKeyboard() });
-    }
-  });
-
-  // /login command: /login <email> <password>
+  // Secure /login command: directs to WebApp without exposing password in chat
   composer.command('login', async (ctx) => {
-    const userId = ctx.from?.id;
-    const chatId = ctx.chat?.id;
-    if (!userId || !chatId) return;
-
+    const webAppUrl = ctx.env.WEBAPP_URL || 'https://my.coursing-stats.ru';
     try {
       await ctx.deleteMessage();
     } catch {}
 
-    const text = (ctx.message?.text || '').replace(/^\/login/, '').trim();
-    const parts = text.split(/\s+/);
-    if (parts.length < 2) {
-      await ctx.reply(
-        `Вход по логину и паролю:\n` +
-        `Отправьте команду в формате: /login <ваш_email> <ваш_пароль>\n\n` +
-        `Бот немедленно удалит сообщение из чата ради вашей безопасности.`,
-        { reply_markup: getAuthSubmenuKeyboard() }
-      );
-      return;
-    }
-
-    const email = parts[0];
-    const password = parts.slice(1).join(' ');
-    const checking = await ctx.reply('[Проверка] Авторизация в API RKF...');
-
-    const res = await authenticateRkfUser(email, password);
-    if (!res.ok || !res.apikey) {
-      await ctx.api.editMessageText(
-        chatId,
-        checking.message_id,
-        `[ОШИБКА] ${res.error || 'Неверный E-mail или пароль на rkf.online'}.`,
-        { reply_markup: getAuthSubmenuKeyboard() }
-      );
-      return;
-    }
-
-    const linkRes = await linkUserToken(ctx, userId, chatId, res.apikey, 'Логин и пароль');
-    const webAppUrl = ctx.env.WEBAPP_URL || 'https://my.coursing-stats.ru';
-    await ctx.api.editMessageText(
-      chatId,
-      checking.message_id,
-      `[УСПЕШНО] Аккаунт rkf.online подключен!\n` +
-      `— — — — — — — — — — — — — — —\n` +
-      `• Заявок найдено: ${linkRes.count}\n` +
-      `• Готово к выдаче: ${linkRes.ready}\n` +
-      `• Мониторинг: ежечасный опрос дипломов и состязаний`,
-      { reply_markup: getMainMenuKeyboard(webAppUrl, true) }
-    );
+    await ctx.reply(getAuthLoginText(webAppUrl), {
+      reply_markup: getAuthLoginKeyboard(webAppUrl)
+    });
   });
 
   composer.command('auth', async (ctx) => {
@@ -166,7 +152,7 @@ export function registerAuthHandler(composer: Composer<BotContext>): void {
       try {
         await ctx.deleteMessage();
       } catch {}
-      await processManualToken(ctx, userId, chatId, rawToken);
+      await processDirectToken(ctx, userId, chatId, rawToken);
       return;
     }
 
@@ -196,6 +182,7 @@ export function registerAuthHandler(composer: Composer<BotContext>): void {
     );
   });
 
+  // Silent direct token listener (for automated pasting or scripts)
   composer.on('message:text', async (ctx, next) => {
     const text = ctx.message.text.trim();
     if (text.startsWith('/')) return next();
@@ -209,7 +196,7 @@ export function registerAuthHandler(composer: Composer<BotContext>): void {
         await ctx.deleteMessage();
       } catch {}
 
-      await processManualToken(ctx, userId, chatId, text);
+      await processDirectToken(ctx, userId, chatId, text);
       return;
     }
 
@@ -217,15 +204,15 @@ export function registerAuthHandler(composer: Composer<BotContext>): void {
   });
 }
 
-async function processManualToken(ctx: BotContext, userId: number, chatId: number, rawToken: string): Promise<void> {
-  const checking = await ctx.reply('[Проверка] Выполняется верификация токена в API RKF...');
-  const res = await linkUserToken(ctx, userId, chatId, rawToken, 'Прямой ввод токена');
+async function processDirectToken(ctx: BotContext, userId: number, chatId: number, rawToken: string): Promise<void> {
+  const checking = await ctx.reply('[Проверка] Выполняется верификация сессии в API RKF...');
+  const res = await linkUserToken(ctx, userId, chatId, rawToken, 'Прямой ввод');
 
   if (!res.ok) {
     await ctx.api.editMessageText(
       chatId,
       checking.message_id,
-      `[ОШИБКА] Токен не принят API RKF.\nПроверьте актуальность токена и попробуйте снова.`,
+      `[ОШИБКА] Ключ не принят API RKF.\nПроверьте актуальность авторизации и попробуйте снова.`,
       { reply_markup: getBackToMenuKeyboard() }
     );
     return;

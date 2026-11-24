@@ -47,7 +47,7 @@ export function registerStartHandler(composer: Composer<BotContext>): void {
       let sourceLabel = 'Сайт РКФ (Закладка)';
 
       if (payload.startsWith('tk_')) {
-        sourceLabel = 'Расширение для ПК';
+        sourceLabel = 'Компьютер (Расширение / Приложение)';
         const savedToken = await ctx.env.KV_STORAGE.get(`pair:ticket:${payload}`);
         if (savedToken) {
           tokenToLink = savedToken;
@@ -55,7 +55,7 @@ export function registerStartHandler(composer: Composer<BotContext>): void {
         } else {
           await ctx.reply(
             `[ОШИБКА] Ссылка привязки устарела или уже была использована.\n` +
-            `Пожалуйста, нажмите «Подключить Telegram» в расширении еще раз.`,
+            `Пожалуйста, нажмите «Подключить Telegram» на компьютере еще раз.`,
             { reply_markup: getMainMenuKeyboard(webAppUrl, false) }
           );
           return;
@@ -72,6 +72,13 @@ export function registerStartHandler(composer: Composer<BotContext>): void {
           `• Готово к выдаче: ${linkRes.ready}\n` +
           `• Режим: автоматический ежечасный мониторинг`,
           { reply_markup: getMainMenuKeyboard(webAppUrl, true) }
+        );
+        return;
+      } else {
+        await ctx.reply(
+          `[ОШИБКА] Не удалось верифицировать полученную сессию РКФ.\n` +
+          `Пожалуйста, войдите в аккаунт на rkf.online и нажмите кнопку привязки еще раз.`,
+          { reply_markup: getMainMenuKeyboard(webAppUrl, false) }
         );
         return;
       }

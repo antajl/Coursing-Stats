@@ -5,12 +5,14 @@ export function getMainMenuKeyboard(
   webAppUrl: string = 'https://my.coursing-stats.ru',
   isLinked: boolean = false
 ): InlineKeyboard {
-  const kb = new InlineKeyboard().webApp('Открыть личный кабинет (WebApp)', webAppUrl).row();
+  const kb = new InlineKeyboard();
 
   if (isLinked) {
-    kb.text('Список заявок', 'cmd_apps').text('Состязания РКФ 2026', 'cmd_competitions').row();
+    kb.webApp('Открыть личный кабинет (WebApp)', webAppUrl).row()
+      .text('Список заявок', 'cmd_apps').text('Состязания РКФ 2026', 'cmd_competitions').row();
   } else {
-    kb.text('Состязания РКФ 2026', 'cmd_competitions').text('Подключить аккаунт', 'cmd_auth_prompt').row();
+    kb.webApp('Войти в РКФ Онлайн (на телефоне)', `${webAppUrl}?action=login`).row()
+      .text('Состязания РКФ 2026', 'cmd_competitions').text('Подключить с ПК', 'cmd_auth_prompt').row();
   }
 
   return kb.text('Статус мониторинга', 'cmd_status').text('Справка / Помощь', 'cmd_help');
@@ -42,14 +44,20 @@ export function getStatusKeyboard(isLinked: boolean): InlineKeyboard {
 
 export function getAuthPromptKeyboard(webAppUrl: string = 'https://my.coursing-stats.ru'): InlineKeyboard {
   return new InlineKeyboard()
-    .text('1. Вход по E-mail и паролю', 'cmd_auth_login')
+    .webApp('Войти в РКФ Онлайн (на телефоне)', `${webAppUrl}?action=login`)
     .row()
-    .text('2. Через расширение для ПК', 'cmd_auth_ext')
+    .text('Подключить в 1 клик с компьютера', 'cmd_auth_ext')
     .row()
-    .text('3. Через сайт РКФ (Закладка)', 'cmd_auth_bookmarklet')
+    .text('Умная закладка без расширений', 'cmd_auth_bookmarklet')
     .row()
-    .text('4. Ввести токен вручную', 'cmd_auth_manual')
+    .text('« В главное меню', 'cmd_start');
+}
+
+export function getAuthLoginKeyboard(webAppUrl: string = 'https://my.coursing-stats.ru'): InlineKeyboard {
+  return new InlineKeyboard()
+    .webApp('Войти в РКФ Онлайн (на телефоне)', `${webAppUrl}?action=login`)
     .row()
+    .text('« Назад к выбору', 'cmd_auth_prompt')
     .text('« В главное меню', 'cmd_start');
 }
 

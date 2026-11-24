@@ -30,11 +30,12 @@ describe('keyboards (Old Money / Zero Emoji compliance)', () => {
     const promptKb = getAuthPromptKeyboard('https://my.coursing-stats.ru');
     const promptJson = JSON.stringify(promptKb);
     expect(emojiRegex.test(promptJson)).toBe(false);
-    expect(promptJson).toContain('cmd_auth_login');
+    expect(promptJson).toContain('web_app');
+    expect(promptJson).toContain('Войти в РКФ Онлайн (на телефоне)');
     expect(promptJson).toContain('cmd_auth_ext');
     expect(promptJson).toContain('cmd_auth_bookmarklet');
-    expect(promptJson).toContain('cmd_auth_manual');
     expect(promptJson).toContain('cmd_start');
+    expect(promptJson).not.toContain('cmd_auth_manual');
 
     const howKb = getAuthHowKeyboard();
     const howJson = JSON.stringify(howKb);

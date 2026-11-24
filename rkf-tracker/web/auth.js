@@ -30,6 +30,11 @@ export function initAuth(onAuthSuccess, showToast) {
   // Handle auto-return with token in query (?token=...)
   handleUrlToken(onAuthSuccess, showToast);
 
+  // Auto-open login modal when opened from Telegram via ?action=login
+  if (window.location.search.includes('action=login') || window.location.search.includes('auth=1')) {
+    openAuthModal();
+  }
+
   // Variant 1: Password login
   if (btnSubmit) {
     btnSubmit.addEventListener('click', () => handlePasswordLogin(onAuthSuccess, showToast));
@@ -89,11 +94,17 @@ async function handlePasswordLogin(onAuthSuccess, showToast) {
   if (errEl) errEl.style.display = 'none';
   if (submitText) submitText.innerText = 'Вход...';
 
+  const tgUser = window.Telegram?.WebApp?.initDataUnsafe?.user;
+  const isDesktop = window.location.port === '4200' && window.chrome?.webview;
+  const endpoint = isDesktop
+    ? '/api/desktop/auth/login'
+    : 'https://coursing-stats-tracker-bot.antajltube.workers.dev/api/auth/login';
+
   try {
-    const res = await fetch('/api/desktop/auth/login', {
+    const res = await fetch(endpoint, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email: email, password: password })
+      body: JSON.stringify({ email: email, password: password, userId: tgUser?.id })
     });
     const data = await res.json().catch(() => ({}));
 
@@ -102,6 +113,15 @@ async function handlePasswordLogin(onAuthSuccess, showToast) {
       localStorage.setItem('cs_rkf_token', token);
       localStorage.setItem('cs_rkf_user_email', email);
       closeAuthModal();
+
+      if (window.Telegram?.WebApp) {
+        try {
+          if (window.Telegram.WebApp.sendData) {
+            window.Telegram.WebApp.sendData(JSON.stringify({ action: 'auth', token: token }));
+          }
+        } catch (e) {}
+      }
+
       if (typeof showToast === 'function') showToast('Успешный вход в РКФ Онлайн');
       if (typeof onAuthSuccess === 'function') onAuthSuccess(token);
     } else {
@@ -109,7 +129,7 @@ async function handlePasswordLogin(onAuthSuccess, showToast) {
       showError(errEl, msg);
     }
   } catch (err) {
-    showError(errEl, 'Ошибка подключения к локальному сервису авторизации');
+    showError(errEl, 'Ошибка подключения к сервису авторизации РКФ');
   } finally {
     if (submitText) submitText.innerText = 'Войти по паролю';
   }
