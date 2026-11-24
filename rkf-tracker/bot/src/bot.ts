@@ -22,6 +22,10 @@ export function createBot(token: string, env: Env): Bot<BotContext> {
     await next();
   });
 
+  bot.catch((err) => {
+    console.error(`[bot.catch] Error in update ${err.ctx?.update?.update_id}:`, err.error);
+  });
+
   bot.use(createBotComposer());
 
   return bot;

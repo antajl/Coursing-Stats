@@ -97,7 +97,13 @@ export default {
         return new Response('OK', { status: 200 });
       } catch (err: any) {
         console.error('[Webhook error]', err);
-        return new Response('Internal error', { status: 500 });
+        return new Response(JSON.stringify({
+          error: err?.message || String(err),
+          stack: err?.stack || ''
+        }), {
+          status: 200,
+          headers: { 'content-type': 'application/json' }
+        });
       }
     }
 
