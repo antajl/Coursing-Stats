@@ -1,71 +1,118 @@
-/* Filter Tabs */
+/* Filter Tabs in Old Money Style */
 .filter-bar {
   display: flex;
-  gap: 4px;
-  margin-bottom: 6px;
+  gap: 5px;
+  margin-bottom: 7px;
   flex-wrap: wrap;
   align-items: center;
 }
 
 .filter-pill {
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  padding: 3px 8px;
-  border-radius: 4px;
-  font-size: 10.5px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 242, 232, 0.85) 100%);
+  border: 1px solid rgba(210, 192, 168, 0.65);
+  padding: 3.5px 10px;
+  border-radius: 9999px;
+  font-size: 11px;
   font-weight: 600;
-  color: var(--text-muted);
+  color: #4a3822;
   cursor: pointer;
-  transition: all 0.15s ease;
+  transition: all 0.2s cubic-bezier(0.22, 1, 0.36, 1);
   display: inline-flex;
   align-items: center;
   gap: 4px;
   user-select: none;
+  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.85), 0 1px 2px rgba(70, 45, 15, 0.03);
 }
 
 .filter-pill:hover {
-  border-color: var(--border-hover);
-  color: var(--text-main);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(252, 246, 236, 0.92) 100%);
+  border-color: rgba(185, 155, 115, 0.80);
+  color: #241708;
+  transform: translateY(-0.5px);
+  box-shadow: inset 0 1px 1px 0 #ffffff, 0 2px 6px rgba(70, 45, 15, 0.06);
+}
+
+.filter-pill:active {
+  transform: translateY(0.5px);
+  background: rgba(238, 228, 210, 0.92);
 }
 
 .filter-pill.active {
-  background: var(--text-main);
-  border-color: var(--text-main);
-  color: #FAF8F5;
+  background: linear-gradient(135deg, rgba(235, 202, 148, 0.98) 0%, rgba(214, 172, 110, 0.92) 100%);
+  border: 1px solid rgba(175, 128, 60, 0.98);
+  color: #201202;
+  font-weight: 700;
+  box-shadow: inset 0 1.5px 1px 0 #ffffff, inset 0 0 0 1px rgba(255, 240, 200, 0.85), 0 2px 8px rgba(120, 80, 30, 0.12);
+}
+
+.filter-pill.active .count {
+  color: #201202;
+  font-weight: 700;
 }
 
 .filter-pill .count {
-  font-size: 9.5px;
+  font-size: 10px;
   opacity: 0.85;
 }
 
 .filter-pill.pill-pickup.active {
-  background: var(--emerald);
-  border-color: var(--emerald);
+  background: linear-gradient(135deg, rgba(209, 250, 229, 0.98) 0%, rgba(167, 243, 208, 0.90) 100%);
+  border-color: #059669;
+  color: #064e3b;
 }
 
 .filter-pill.pill-active.active {
-  background: var(--amber);
-  border-color: var(--amber);
+  background: linear-gradient(135deg, rgba(254, 243, 199, 0.98) 0%, rgba(253, 230, 138, 0.90) 100%);
+  border-color: #d97706;
+  color: #78350f;
 }
 
-/* Search */
+/* Search Bar in Physical Glass Style */
 .search-wrap {
-  margin-bottom: 6px;
+  position: relative;
+  margin-bottom: 7px;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon-btn {
+  position: absolute;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  border-radius: 9999px;
+  border: 1px solid rgba(210, 192, 168, 0.65);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 242, 232, 0.85) 100%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #5c4832;
+  cursor: pointer;
+  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.85), 0 1px 2px rgba(70, 45, 15, 0.04);
+  pointer-events: none;
 }
 
 .search-input {
   width: 100%;
-  padding: 4.5px 8px;
-  border: 1px solid var(--border);
-  border-radius: 5px;
+  padding: 5px 24px 5px 32px;
+  border: 1px solid rgba(210, 192, 168, 0.65);
+  border-radius: 9999px;
   font-size: 11px;
-  background: var(--card-bg);
-  color: var(--text-main);
+  font-weight: 500;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(252, 248, 242, 0.85) 100%);
+  color: #241708;
   outline: none;
-  transition: border-color 0.15s;
+  box-shadow: inset 0 1px 2px rgba(70, 45, 15, 0.04);
+  transition: all 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.search-input::placeholder {
+  color: #8C827A;
+  font-weight: 400;
 }
 
 .search-input:focus {
-  border-color: var(--camel);
+  border-color: rgba(175, 128, 60, 0.98);
+  background: #ffffff;
+  box-shadow: inset 0 1px 1px 0 #ffffff, 0 0 0 2px rgba(200, 157, 102, 0.22);
 }

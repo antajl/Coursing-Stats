@@ -97,6 +97,12 @@ function setupEventListeners() {
     chrome.tabs.create({ url: 'https://rkf.online' });
   });
 
+  const copyBtn = document.getElementById('btn-copy-token');
+  if (copyBtn) copyBtn.addEventListener('click', copyTokenToClipboard);
+
+  const copySettingsBtn = document.getElementById('btn-copy-token-settings');
+  if (copySettingsBtn) copySettingsBtn.addEventListener('click', copyTokenToClipboard);
+
   document.getElementById('toggle-manual-token').addEventListener('click', (e) => {
     e.preventDefault();
     const wrap = document.getElementById('manual-token-wrap');
@@ -292,4 +298,28 @@ function showErrorModal(title, desc, hint) {
   document.getElementById('err-desc').innerText = desc;
   document.getElementById('err-hint').innerText = hint;
   errorModal.style.display = 'flex';
+}
+
+async function copyTokenToClipboard() {
+  const store = await chrome.storage.local.get(['rkfToken']);
+  if (!store.rkfToken) {
+    showToast('Токен отсутствует. Войдите в РКФ Онлайн.');
+    return;
+  }
+  try {
+    await navigator.clipboard.writeText(store.rkfToken);
+    showToast('Токен скопирован в буфер обмена!');
+  } catch (err) {
+    try {
+      const textarea = document.createElement('textarea');
+      textarea.value = store.rkfToken;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textarea);
+      showToast('Токен скопирован в буфер обмена!');
+    } catch {
+      showToast('Не удалось скопировать токен');
+    }
+  }
 }

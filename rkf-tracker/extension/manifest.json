@@ -31,7 +31,9 @@
     "https://rkf.online/*",
     "https://*.rkf.online/*",
     "https://coursing-stats.ru/*",
-    "https://*.coursing-stats.ru/*"
+    "https://*.coursing-stats.ru/*",
+    "http://localhost/*",
+    "http://127.0.0.1/*"
   ],
   "content_scripts": [
     {
@@ -41,6 +43,16 @@
       ],
       "js": ["content.js"],
       "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://coursing-stats.ru/*",
+        "https://*.coursing-stats.ru/*",
+        "http://localhost/*",
+        "http://127.0.0.1/*"
+      ],
+      "js": ["site-bridge.js"],
+      "run_at": "document_start"
     }
   ]
 }
