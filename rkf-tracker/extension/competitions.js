@@ -206,6 +206,17 @@ function isMatchDiscipline(ev, disc) {
   return target.includes(disc.toLowerCase());
 }
 
+function getEventDateSortKey(ev) {
+  if (ev.date_start) return ev.date_start;
+  const raw = ev.dateRaw || '';
+  // Match "DD.MM.YYYY" or "DD-DD.MM.YYYY"
+  const m = raw.match(/(\d{2})\.(\d{2})\.(\d{4})/);
+  if (m) {
+    return `${m[3]}-${m[2]}-${m[1]}`;
+  }
+  return '1970-01-01';
+}
+
 function applyAndRender() {
   const container = document.getElementById('comp-list');
   if (!container) return;
@@ -238,6 +249,13 @@ function applyAndRender() {
     }
 
     return true;
+  });
+
+  // Sort descending: from latest to earliest (от самых поздних к ранним)
+  filtered.sort((a, b) => {
+    const dateA = getEventDateSortKey(a);
+    const dateB = getEventDateSortKey(b);
+    return dateB.localeCompare(dateA);
   });
 
   renderCompetitionsList(container, filtered, trackedIds, handleToggleTrack);

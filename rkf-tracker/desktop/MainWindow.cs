@@ -86,6 +86,16 @@ namespace CoursingStats.RkfTracker
             catch { }
         }
 
+        protected override void WndProc(ref Message m)
+        {
+            if (m.Msg == (int)Program.WM_SHOW_TRACKER)
+            {
+                ShowAndActivate();
+                return;
+            }
+            base.WndProc(ref m);
+        }
+
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             if (!isForceExit)

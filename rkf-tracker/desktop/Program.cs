@@ -2,6 +2,9 @@ using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -9,6 +12,18 @@ namespace CoursingStats.RkfTracker
 {
     static class Program
     {
+        [DllImport("user32.dll", SetLastError = true, CharSet = CharSet.Auto)]
+        private static extern uint RegisterWindowMessage(string lpString);
+
+        [DllImport("user32.dll", SetLastError = true)]
+        private static extern bool PostMessage(IntPtr hWnd, uint Msg, IntPtr wParam, IntPtr lParam);
+
+        [DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+        private static extern bool SetDllDirectory(string lpPathName);
+
+        private static readonly IntPtr HWND_BROADCAST = (IntPtr)0xffff;
+        public static readonly uint WM_SHOW_TRACKER = RegisterWindowMessage("CoursingStats_ShowTrackerWindow");
+
         private static NotifyIcon trayIcon;
         private static LocalServer server;
         private static Poller poller;
@@ -22,12 +37,17 @@ namespace CoursingStats.RkfTracker
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            AppDomain.CurrentDomain.AssemblyResolve += ResolveAssemblies;
 
             AppDomain.CurrentDomain.UnhandledException += (s, e) => {
-                try { File.WriteAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "crash.log"), e.ExceptionObject.ToString()); } catch { }
+                string msg = e.ExceptionObject != null ? e.ExceptionObject.ToString() : "Неизвестная ошибка";
+                try { File.WriteAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "crash.log"), msg); } catch { }
+                MessageBox.Show("Ошибка запуска приложения:\n\n" + msg, "CoursingStats Tracker", MessageBoxButtons.OK, MessageBoxIcon.Error);
             };
             Application.ThreadException += (s, e) => {
-                try { File.WriteAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "crash.log"), e.Exception.ToString()); } catch { }
+                string msg = e.Exception != null ? e.Exception.ToString() : "Неизвестная ошибка";
+                try { File.WriteAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "crash.log"), msg); } catch { }
+                MessageBox.Show("Ошибка приложения:\n\n" + msg, "CoursingStats Tracker", MessageBoxButtons.OK, MessageBoxIcon.Error);
             };
 
             bool createdNew;
@@ -35,39 +55,86 @@ namespace CoursingStats.RkfTracker
             {
                 if (!createdNew)
                 {
-                    OpenDashboard();
+                    PostMessage(HWND_BROADCAST, WM_SHOW_TRACKER, IntPtr.Zero, IntPtr.Zero);
                     return;
                 }
 
-                baseDir = AppDomain.CurrentDomain.BaseDirectory;
-                string webDir = Path.Combine(baseDir, "web");
-                if (!Directory.Exists(webDir))
-                {
-                    webDir = Path.GetFullPath(Path.Combine(baseDir, "..", "web"));
-                }
-
-                poller = new Poller(baseDir);
-                poller.StatusChanged += OnStatusChanged;
-
-                server = new LocalServer(port, webDir, poller);
-                server.Start();
-
-                string icoPath = Path.Combine(baseDir, "app.ico");
-                string appUrl = string.Format("http://127.0.0.1:{0}/index.html", port);
-
-                bool isMinimized = args.Length > 0 && args[0].ToLowerInvariant().Contains("minimized");
-                mainWindow = new MainWindow(appUrl, icoPath, isMinimized);
-                SetupTray();
-
-                // Background poll every 60 minutes
-                pollTimer = new System.Threading.Timer(_ => poller.PollOnce(), null, 5000, 3600000);
-
-                Application.Run(mainWindow);
-
-                if (pollTimer != null) pollTimer.Dispose();
-                if (server != null) server.Stop();
-                if (trayIcon != null) trayIcon.Dispose();
+                RunApplication(args);
             }
+        }
+
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        private static void RunApplication(string[] args)
+        {
+            baseDir = AppDomain.CurrentDomain.BaseDirectory;
+
+            // Direct native WebView2 loader resolution
+            string[] loaderDirs = new string[]
+            {
+                baseDir,
+                Path.Combine(baseDir, "runtimes", "win-x64", "native"),
+                Path.Combine(baseDir, "lib", "runtimes", "win-x64", "native"),
+                Path.Combine(baseDir, "dist", "runtimes", "win-x64", "native")
+            };
+            foreach (var lDir in loaderDirs)
+            {
+                if (File.Exists(Path.Combine(lDir, "WebView2Loader.dll")))
+                {
+                    try { SetDllDirectory(lDir); } catch { }
+                    break;
+                }
+            }
+
+            string webDir = Path.Combine(baseDir, "web");
+            if (!Directory.Exists(webDir)) webDir = Path.Combine(baseDir, "dist", "web");
+            if (!Directory.Exists(webDir)) webDir = Path.GetFullPath(Path.Combine(baseDir, "..", "web"));
+
+            poller = new Poller(baseDir);
+            poller.StatusChanged += OnStatusChanged;
+
+            server = new LocalServer(port, webDir, poller);
+            server.Start();
+
+            string icoPath = Path.Combine(baseDir, "app.ico");
+            string appUrl = string.Format("http://127.0.0.1:{0}/index.html", port);
+
+            bool isMinimized = args.Length > 0 && args[0].ToLowerInvariant().Contains("minimized");
+            mainWindow = new MainWindow(appUrl, icoPath, isMinimized);
+            SetupTray();
+
+            // Background poll every 60 minutes
+            pollTimer = new System.Threading.Timer(_ => poller.PollOnce(), null, 5000, 3600000);
+
+            if (!isMinimized)
+            {
+                mainWindow.ShowAndActivate();
+            }
+
+            Application.Run(mainWindow);
+
+            if (pollTimer != null) pollTimer.Dispose();
+            if (server != null) server.Stop();
+            if (trayIcon != null) trayIcon.Dispose();
+        }
+
+        private static Assembly ResolveAssemblies(object sender, ResolveEventArgs args)
+        {
+            string shortName = args.Name.Split(',')[0].Trim();
+            string dir = AppDomain.CurrentDomain.BaseDirectory;
+            string[] candidates = new string[]
+            {
+                Path.Combine(dir, shortName + ".dll"),
+                Path.Combine(dir, "lib", shortName + ".dll"),
+                Path.Combine(dir, "dist", shortName + ".dll")
+            };
+            foreach (var path in candidates)
+            {
+                if (File.Exists(path))
+                {
+                    try { return Assembly.LoadFrom(path); } catch { }
+                }
+            }
+            return null;
         }
 
         private static void SetupTray()

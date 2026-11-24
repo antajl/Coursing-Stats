@@ -21,7 +21,13 @@ if %ERRORLEVEL% neq 0 (
     exit /b %ERRORLEVEL%
 )
 
-echo [3/3] Preparing portable distribution in dist...
+echo [3/3] Preparing portable distribution in dist and desktop...
+copy /y "lib\Microsoft.Web.WebView2.Core.dll" ".\" >nul
+copy /y "lib\Microsoft.Web.WebView2.WinForms.dll" ".\" >nul
+copy /y "lib\runtimes\win-x64\native\WebView2Loader.dll" ".\" >nul
+if not exist "runtimes\win-x64\native" mkdir "runtimes\win-x64\native"
+copy /y "lib\runtimes\win-x64\native\WebView2Loader.dll" "runtimes\win-x64\native\" >nul
+
 if not exist "dist" mkdir "dist"
 copy /y "RkfTracker.exe" "dist\" >nul
 copy /y "app.ico" "dist\" >nul

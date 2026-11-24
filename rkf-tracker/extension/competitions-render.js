@@ -1,5 +1,32 @@
 // RKF Competitions Card & List Renderer (ES Module)
 
+/** Сопоставление мероприятий графика РКФ с протоколами соревнований (/event/:id) */
+const EVENT_LINK_MAP = {
+  ev_15cgms: 2026003, // 03-04.10.2026 СПГОО «Радонежье» Курсинг
+  ev_td6lum: 1300,    // 04-05.04.2026 Ярославль Курсинг
+  ev_amzre: 1301,     // 04-05.04.2026 Ярославль БЗМП
+  ev_5c2n7: 1302,     // 11-12.04.2026 Ставрополь Курсинг
+  ev_svlj07: 1303,    // 11-12.04.2026 Ставрополь БЗМП
+  ev_4h5z4l: 1304,    // 18-19.04.2026 Казань Курсинг
+  ev_g7da21: 1305,    // 18-19.04.2026 Казань БЗМП
+  ev_l9qhz: 1310,     // 25-26.04.2026 Донино Курсинг
+  ev_lds8ed: 1311,    // 25-26.04.2026 Донино БЗМП
+  ev_mzwbyq: 1312,    // 01-02.05.2026 Пермь Курсинг
+  ev_4x1xye: 1313,    // 01-02.05.2026 Пермь БЗМП
+  ev_is4ldm: 1317,    // 23-24.05.2026 Арта Курсинг
+  ev_qu374a: 2026001, // 27-28.06.2026 Суханово Монопородный
+  ev_1x75ga: 1550,    // 01-02.08.2026 Донино Бега
+  ev_b76v6g: 2026002, // 22-23.08.2026 Суханово Кубок
+  ev_47z3pe: 2022002, // 26-27.09.2026 Донино Бега
+  ev_elkduj: 2022003, // 10-11.10.2026 Донино Курсинг
+  ev_gsoenj: 2022004  // 10-11.10.2026 Донино БЗМП
+};
+
+export function getCompetitionEventId(id) {
+  if (!id) return null;
+  return EVENT_LINK_MAP[id] || null;
+}
+
 export function getCompetitionStatus(ev) {
   const st = (ev.status || '').toUpperCase();
   if (st === 'DELAYED') {
@@ -67,16 +94,17 @@ function createEventCardHtml(ev, trackedIds) {
   if (ev.summary) metaItems.push(`<span class="comp-meta-item"><strong class="comp-lbl">Заявка:</strong> ${escapeHtml(ev.summary)}</span>`);
   if (ev.notes) metaItems.push(`<span class="comp-meta-item comp-meta-note"><strong class="comp-lbl">Прим:</strong> ${escapeHtml(ev.notes)}</span>`);
 
-  const title = ev.title || `${rank} • ${discipline}`;
+  // Title without redundant discipline repeat if already clear
+  const rawTitle = ev.title || rank;
+  const cleanTitle = rawTitle.replace(/\s*•\s*(Курсинг борзых|Бега борзых|Бега за механической приманкой|БЗМП)/i, '').trim();
 
   return `
     <article class="comp-card" id="comp-card-${ev.id}">
       <div class="comp-card-top">
         <div class="comp-head-left">
           <span class="comp-date-badge">${escapeHtml(dateFormatted)}</span>
-          <h3 class="comp-title">${escapeHtml(title)}</h3>
-          <span class="comp-tag tag-rank">${escapeHtml(rank)}</span>
-          <span class="comp-tag">${escapeHtml(discipline)}</span>
+          <h3 class="comp-title">${escapeHtml(cleanTitle)}</h3>
+          ${rank ? `<span class="comp-tag tag-rank">${escapeHtml(rank)}</span>` : ''}
         </div>
         <div class="comp-head-right">
           ${statusBadge}
@@ -94,17 +122,37 @@ function createEventCardHtml(ev, trackedIds) {
       </div>
 
       <div class="comp-card-footer">
-        <span class="comp-id-sub">№ ${escapeHtml(ev.id)} • ${escapeHtml(ev.sheetName || 'РКФ')}</span>
-        <a href="https://coursing-stats.ru/calendar" target="_blank" class="comp-link-portal">
-          Открыть в календаре
-          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-            <polyline points="15 3 21 3 21 9"/>
-            <line x1="10" y1="14" x2="21" y2="3"/>
-          </svg>
-        </a>
+        ${renderCardActionLink(ev)}
       </div>
     </article>
+  `;
+}
+
+function renderCardActionLink(ev) {
+  const eventId = ev.site_event_id || getCompetitionEventId(ev.id);
+  if (eventId) {
+    return `
+      <a href="https://coursing-stats.ru/event/${eventId}/" target="_blank" class="comp-link-portal comp-link-protocol" title="Перейти к протоколу состязания на сайте">
+        Протокол на сайте
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+          <polyline points="15 3 21 3 21 9"/>
+          <line x1="10" y1="14" x2="21" y2="3"/>
+        </svg>
+      </a>
+    `;
+  }
+
+  const year = ev.year || '2026';
+  return `
+    <a href="https://coursing-stats.ru/competitions/archive/${year}/" target="_blank" class="comp-link-portal" title="Открыть архив соревнований на сайте">
+      Архив соревнований
+      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+        <polyline points="15 3 21 3 21 9"/>
+        <line x1="10" y1="14" x2="21" y2="3"/>
+      </svg>
+    </a>
   `;
 }
 

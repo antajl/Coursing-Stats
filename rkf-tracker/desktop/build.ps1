@@ -63,7 +63,14 @@ if ($LASTEXITCODE -ne 0) {
     throw "Compilation failed with exit code $LASTEXITCODE"
 }
 
-Write-Host "[4/4] Preparing portable distribution in dist..."
+Write-Host "[4/4] Preparing portable distribution in dist and desktop..."
+Copy-Item -Path $coreDll -Destination $desktopDir -Force
+Copy-Item -Path $wfDll -Destination $desktopDir -Force
+Copy-Item -Path $loaderDll -Destination $desktopDir -Force
+$desktopRuntimes = Join-Path $desktopDir "runtimes\win-x64\native"
+if (-not (Test-Path $desktopRuntimes)) { New-Item -ItemType Directory -Path $desktopRuntimes | Out-Null }
+Copy-Item -Path $loaderDll -Destination $desktopRuntimes -Force
+
 $distDir = Join-Path $desktopDir "dist"
 if (-not (Test-Path $distDir)) { New-Item -ItemType Directory -Path $distDir | Out-Null }
 
