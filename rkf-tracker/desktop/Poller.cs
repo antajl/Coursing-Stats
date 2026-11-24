@@ -94,6 +94,8 @@ namespace CoursingStats.RkfTracker
                 var archive = FetchFeed(token, 9);
                 articles.AddRange(archive);
 
+                var seenBarcodes = new HashSet<string>();
+
                 foreach (var art in articles)
                 {
                     string content = (art.ContainsKey("content") ? Convert.ToString(art["content"]) : "") +
@@ -103,13 +105,20 @@ namespace CoursingStats.RkfTracker
                     string barcode = ExtractBarcode(content, link);
                     if (string.IsNullOrEmpty(barcode)) continue;
 
+                    // Deduplicate: feeds are reverse-chronological (newest first).
+                    // If we have already seen this barcode in the current poll, ignore older historical entries.
+                    if (seenBarcodes.Contains(barcode)) continue;
+                    seenBarcodes.Add(barcode);
+
                     string status = ExtractStatus(content);
                     if (string.IsNullOrEmpty(status)) continue;
 
                     if (!oldState.ContainsKey(barcode))
                     {
                         newState[barcode] = status;
-                        if (oldState.Count > 0)
+                        // Never notify for historical, rejected, or completed applications discovered in archive.
+                        // Only notify for fresh active applications when state is already initialized.
+                        if (oldState.Count > 0 && status != "Отклонена" && status != "Аннулирована" && status != "Изготовлено")
                         {
                             changesCount++;
                             OnStatusChanged(barcode, "Новая заявка", status);
