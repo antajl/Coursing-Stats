@@ -235,6 +235,16 @@
 .btn-track.active .bell-icon {
   fill: #B45309;
   stroke: #78350F;
+  animation: bell-ring 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes bell-ring {
+  0% { transform: rotate(0); }
+  20% { transform: rotate(14deg); }
+  40% { transform: rotate(-12deg); }
+  60% { transform: rotate(8deg); }
+  80% { transform: rotate(-4deg); }
+  100% { transform: rotate(0); }
 }
 
 /* Protocol badge next to title */

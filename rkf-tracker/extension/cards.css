@@ -17,13 +17,17 @@
   padding: 6px 10px;
   box-shadow: var(--shadow-sm);
   cursor: pointer;
-  transition: all 0.18s ease;
+  transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.2s cubic-bezier(0.22, 1, 0.36, 1), padding 0.22s ease, opacity 0.22s ease, filter 0.22s ease, background-color 0.2s ease, border-color 0.2s ease;
   user-select: none;
 }
 
 .app-row:hover {
-  transform: translateY(-0.5px);
-  box-shadow: 0 2px 5px rgba(34, 31, 31, 0.07);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(34, 31, 31, 0.08);
+}
+
+.app-row:active {
+  transform: translateY(0.5px);
 }
 
 .app-row.status-ready { background: #ECFDF5; border-color: #A7F3D0; }
@@ -96,13 +100,23 @@
   justify-content: center;
   cursor: pointer;
   background: #FFFFFF;
-  transition: all 0.15s;
+  transition: all 0.2s cubic-bezier(0.22, 1, 0.36, 1);
   flex-shrink: 0;
+}
+
+.check-btn:hover {
+  border-color: #B28247;
+  transform: scale(1.08);
+}
+
+.check-btn:active {
+  transform: scale(0.92);
 }
 
 .check-btn.checked {
   background: #047857;
   border-color: #047857;
+  animation: check-pop 0.28s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .check-btn svg {
@@ -114,6 +128,18 @@
 
 .check-btn.checked svg {
   display: block;
+  animation: checkmark-in 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes check-pop {
+  0% { transform: scale(0.85); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+@keyframes checkmark-in {
+  0% { opacity: 0; transform: scale(0.5); }
+  100% { opacity: 1; transform: scale(1); }
 }
 
 /* Column 2: Dog Info */

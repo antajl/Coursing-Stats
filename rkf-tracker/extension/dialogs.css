@@ -181,23 +181,24 @@
 /* Toast */
 .toast {
   position: fixed;
-  bottom: 12px;
-  right: 12px;
-  background: var(--text-main);
+  bottom: 14px;
+  right: 14px;
+  background: linear-gradient(135deg, #241708 0%, #1A1005 100%);
   color: #FAF8F5;
-  padding: 6px 12px;
-  border-radius: 5px;
+  border: 1px solid rgba(210, 192, 168, 0.4);
+  padding: 6px 14px;
+  border-radius: 9999px;
   font-size: 11px;
-  font-weight: 500;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.15);
   opacity: 0;
-  transform: translateY(6px);
-  transition: all 0.2s ease;
+  transform: translateY(8px) scale(0.96);
+  transition: opacity 0.25s cubic-bezier(0.22, 1, 0.36, 1), transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
   pointer-events: none;
   z-index: 1000;
 }
 
 .toast.show {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }
