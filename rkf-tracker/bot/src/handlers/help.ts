@@ -1,37 +1,40 @@
-// Handler: /help command (Strict Zero Emoji)
+// Handler: /help command (Strict Zero Emoji & Single-Bubble UX)
 import type { Composer } from 'grammy';
 import type { BotContext } from '../types.js';
-import { getMainMenuKeyboard } from '../keyboards.js';
+import { getBackToMenuKeyboard } from '../keyboards.js';
+
+export const HELP_TEXT =
+  `Справочник CoursingStats Tracker\n` +
+  `— — — — — — — — — — — — — — —\n` +
+  `Основные команды:\n` +
+  `• /start — главное меню и сводка\n` +
+  `• /status — состояние мониторинга и заявок\n` +
+  `• /apps — список документов rkf.online\n` +
+  `• /ready — документы, готовые к выдаче\n` +
+  `• /competitions — состязания РКФ 2026\n` +
+  `• /track <id|город> — подписаться на состязание\n` +
+  `• /auth — привязать токен rkf.online\n` +
+  `• /logout — сбросить авторизацию\n` +
+  `• /help — эта справка\n\n` +
+  `Интерактивный дашборд «Кабинет» доступен по кнопке слева от поля ввода текста.`;
 
 export function registerHelpHandler(composer: Composer<BotContext>): void {
-  const helpText =
-    `Справочник команд CoursingStats Tracker:\n\n` +
-    `/status — состояние мониторинга, подключенный аккаунт и сводка заявок\n` +
-    `/auth — привязка аккаунта rkf.online по API токену\n` +
-    `/logout — сброс сохраненной авторизации\n` +
-    `/apps — просмотр текущих заявок и документов\n` +
-    `/ready — список документов, готовых к выдаче\n` +
-    `/competitions — отслеживание утверждения соревнований РКФ\n` +
-    `/track [название] — подписаться на утверждение состязания\n` +
-    `/help — показать эту справку\n\n` +
-    `Как получить токен rkf.online:\n` +
-    `1. Войдите в личный кабинет на rkf.online в браузере.\n` +
-    `2. Откройте DevTools (F12) -> вкладка Application / Хранилище -> Local Storage -> ключ "apikey".\n` +
-    `3. Либо установите расширение CoursingStats Tracker для Chrome, которое копирует токен автоматически в 1 клик.\n` +
-    `4. Отправьте команду /auth и вставьте полученный токен. Бот немедленно удалит сообщение с токеном из чата ради безопасности.`;
-
   composer.command('help', async (ctx) => {
-    const webAppUrl = ctx.env.WEBAPP_URL || 'https://my.coursing-stats.ru';
-    await ctx.reply(helpText, {
-      reply_markup: getMainMenuKeyboard(webAppUrl)
+    await ctx.reply(HELP_TEXT, {
+      reply_markup: getBackToMenuKeyboard()
     });
   });
 
   composer.callbackQuery('cmd_help', async (ctx) => {
     await ctx.answerCallbackQuery();
-    const webAppUrl = ctx.env.WEBAPP_URL || 'https://my.coursing-stats.ru';
-    await ctx.reply(helpText, {
-      reply_markup: getMainMenuKeyboard(webAppUrl)
-    });
+    try {
+      await ctx.editMessageText(HELP_TEXT, {
+        reply_markup: getBackToMenuKeyboard()
+      });
+    } catch {
+      await ctx.reply(HELP_TEXT, {
+        reply_markup: getBackToMenuKeyboard()
+      });
+    }
   });
 }

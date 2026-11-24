@@ -1,55 +1,76 @@
-// Handler: /status command (Strict Zero Emoji)
+// Handler: /status command (Strict Zero Emoji & Single-Bubble UX)
 import type { Composer } from 'grammy';
-import type { BotContext } from '../types.js';
+import type { BotContext, UserRecord } from '../types.js';
 import { getUser } from '../storage/index.js';
-import { getMainMenuKeyboard } from '../keyboards.js';
+import { getStatusKeyboard } from '../keyboards.js';
+
+export function buildStatusText(user: UserRecord | null): string {
+  if (!user || !user.rkfToken) {
+    const comps = user?.competitions?.length || 0;
+    return (
+      `Статус мониторинга RKF Tracker\n` +
+      `— — — — — — — — — — — — — — —\n` +
+      `• Аккаунт РКФ: Не привязан\n` +
+      `• Отслеживание состязаний: ${comps} активных\n` +
+      `• Периодичность опроса: раз в час\n\n` +
+      `Для автоматического мониторинга дипломов и сертификатов подключите аккаунт rkf.online.`
+    );
+  }
+
+  const cachedApps = Object.values(user.cachedApps || {});
+  const readyCount = cachedApps.filter(a => a.statusGroup === 'ready').length;
+  const inProgressCount = cachedApps.filter(a => a.statusGroup === 'active').length;
+  const totalCount = cachedApps.length;
+  const compsCount = user.competitions?.length || 0;
+  const lastCheck = user.lastCheckedAt
+    ? new Date(user.lastCheckedAt).toLocaleString('ru-RU', { timeZone: 'Europe/Moscow' })
+    : 'еще не выполнялась';
+
+  return (
+    `Статус мониторинга RKF Tracker\n` +
+    `— — — — — — — — — — — — — — —\n` +
+    `• Аккаунт РКФ: Подключен\n` +
+    `• Всего заявок: ${totalCount}\n` +
+    `• Готово к выдаче: ${readyCount}\n` +
+    `• В обработке: ${inProgressCount}\n` +
+    `• Подписок на состязания: ${compsCount}\n` +
+    `• Последняя проверка: ${lastCheck} (МСК)\n` +
+    `• Фоновый опрос: каждый час (автоматически)\n\n` +
+    `Все заявки доступны в интерактивном веб-кабинете.`
+  );
+}
 
 export function registerStatusHandler(composer: Composer<BotContext>): void {
-  const handler = async (ctx: BotContext) => {
+  composer.command('status', async (ctx) => {
     const userId = ctx.from?.id;
     if (!userId) return;
 
     const user = await getUser(ctx.env.KV_STORAGE, userId);
-    const webAppUrl = ctx.env.WEBAPP_URL || 'https://my.coursing-stats.ru';
-
-    if (!user || !user.rkfToken) {
-      const notLinkedMsg =
-        `Статус мониторинга:\n` +
-        `- Аккаунт РКФ: НЕ ПРИВЯЗАН\n` +
-        `- Отслеживание состязаний: ${user?.competitions.length || 0} активных\n\n` +
-        `Чтобы получать уведомления о готовности дипломов и сертификатов, привяжите токен через команду /auth.`;
-      await ctx.reply(notLinkedMsg, {
-        reply_markup: getMainMenuKeyboard(webAppUrl)
-      });
-      return;
-    }
-
-    const cachedApps = Object.values(user.cachedApps || {});
-    const readyCount = cachedApps.filter(a => a.statusGroup === 'ready').length;
-    const totalCount = cachedApps.length;
-    const compsCount = user.competitions?.length || 0;
-    const lastCheck = user.lastCheckedAt
-      ? new Date(user.lastCheckedAt).toLocaleString('ru-RU', { timeZone: 'Europe/Moscow' })
-      : 'еще не выполнялась';
-
-    const text =
-      `Статус мониторинга RKF Tracker:\n` +
-      `- Аккаунт РКФ: Подключен\n` +
-      `- Всего отслеживаемых заявок: ${totalCount}\n` +
-      `- Готово к выдаче: ${readyCount}\n` +
-      `- Подписок на состязания: ${compsCount}\n` +
-      `- Последняя проверка: ${lastCheck} (МСК)\n` +
-      `- Периодичность опроса: раз в час (автоматически)\n\n` +
-      `Для детального просмотра откройте веб-кабинет «Мои заявки».`;
+    const isLinked = Boolean(user && user.rkfToken);
+    const text = buildStatusText(user);
 
     await ctx.reply(text, {
-      reply_markup: getMainMenuKeyboard(webAppUrl)
+      reply_markup: getStatusKeyboard(isLinked)
     });
-  };
+  });
 
-  composer.command('status', handler);
   composer.callbackQuery('cmd_status', async (ctx) => {
     await ctx.answerCallbackQuery();
-    await handler(ctx);
+    const userId = ctx.from?.id;
+    if (!userId) return;
+
+    const user = await getUser(ctx.env.KV_STORAGE, userId);
+    const isLinked = Boolean(user && user.rkfToken);
+    const text = buildStatusText(user);
+
+    try {
+      await ctx.editMessageText(text, {
+        reply_markup: getStatusKeyboard(isLinked)
+      });
+    } catch {
+      await ctx.reply(text, {
+        reply_markup: getStatusKeyboard(isLinked)
+      });
+    }
   });
 }

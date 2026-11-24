@@ -1,11 +1,65 @@
-// Handler: /auth and /logout commands (Strict Zero Emoji)
+// Handler: /auth, /logout and onboarding prompts (Strict Zero Emoji & Single-Bubble UX)
 import type { Composer } from 'grammy';
 import type { BotContext } from '../types.js';
 import { getUser, saveUser, createDefaultUser } from '../storage/index.js';
 import { validateRkfToken, fetchRkfApplications } from '../services/rkf-api.js';
-import { getMainMenuKeyboard } from '../keyboards.js';
+import {
+  getMainMenuKeyboard,
+  getAuthPromptKeyboard,
+  getAuthHowKeyboard,
+  getBackToMenuKeyboard
+} from '../keyboards.js';
 
 export function registerAuthHandler(composer: Composer<BotContext>): void {
+  // Onboarding prompt modal (in-place)
+  composer.callbackQuery('cmd_auth_prompt', async (ctx) => {
+    await ctx.answerCallbackQuery();
+    const webAppUrl = ctx.env.WEBAPP_URL || 'https://my.coursing-stats.ru';
+    const text =
+      `Подключение аккаунта rkf.online\n` +
+      `— — — — — — — — — — — — — — —\n` +
+      `Бот автоматически отслеживает готовность чемпионских дипломов и сертификатов, присылая уведомления при изменении статусов.\n\n` +
+      `Способы подключения:\n` +
+      `1. Веб-кабинет: откройте кабинет в браузере и авторизуйтесь\n` +
+      `2. Прямой ввод: пришлите токен rkf.online сообщением в этот чат или командой /auth <токен>\n\n` +
+      `Сообщение с токеном будет немедленно удалено из чата ради безопасности.`;
+
+    try {
+      await ctx.editMessageText(text, {
+        reply_markup: getAuthPromptKeyboard(webAppUrl)
+      });
+    } catch {
+      await ctx.reply(text, {
+        reply_markup: getAuthPromptKeyboard(webAppUrl)
+      });
+    }
+  });
+
+  // Step-by-step token extraction instructions (in-place)
+  composer.callbackQuery('cmd_auth_how', async (ctx) => {
+    await ctx.answerCallbackQuery();
+    const text =
+      `Как скопировать токен rkf.online\n` +
+      `— — — — — — — — — — — — — — —\n` +
+      `1. Откройте сайт rkf.online в браузере на компьютере и войдите в свой аккаунт.\n` +
+      `2. Нажмите клавишу F12 (или «Просмотреть код» в меню браузера).\n` +
+      `3. Перейдите во вкладку «Приложение» (Application) или «Хранилище» (Storage).\n` +
+      `4. В левом меню раскройте «Локальное хранилище» (Local Storage) и выберите «https://rkf.online».\n` +
+      `5. Найдите ключ "apikey" и скопируйте его длинное значение.\n` +
+      `6. Отправьте скопированный токен в этот чат. Бот сразу удалит сообщение ради безопасности.\n\n` +
+      `Также доступно расширение CoursingStats Tracker для Chrome, копирующее токен в 1 клик.`;
+
+    try {
+      await ctx.editMessageText(text, {
+        reply_markup: getAuthHowKeyboard()
+      });
+    } catch {
+      await ctx.reply(text, {
+        reply_markup: getAuthHowKeyboard()
+      });
+    }
+  });
+
   composer.command('auth', async (ctx) => {
     const userId = ctx.from?.id;
     const chatId = ctx.chat?.id;
@@ -23,15 +77,18 @@ export function registerAuthHandler(composer: Composer<BotContext>): void {
       return;
     }
 
+    const webAppUrl = ctx.env.WEBAPP_URL || 'https://my.coursing-stats.ru';
     const text =
-      `Привязка аккаунта rkf.online:\n\n` +
+      `Подключение аккаунта rkf.online\n` +
+      `— — — — — — — — — — — — — — —\n` +
       `Отправьте ваш API-токен одним сообщением в формате:\n` +
-      `/auth <ваш_токен>\n\n` +
+      `/auth <токен>\n\n` +
       `Либо просто пришлите токен следующим сообщением.\n` +
-      `Бот сразу удалит сообщение с токеном из чата для безопасности.\n\n` +
-      `Как взять токен: на rkf.online в DevTools (F12) -> Local Storage -> "apikey" или через расширение CoursingStats Tracker.`;
+      `Бот сразу удалит сообщение с токеном из чата ради безопасности.`;
 
-    await ctx.reply(text);
+    await ctx.reply(text, {
+      reply_markup: getAuthPromptKeyboard(webAppUrl)
+    });
   });
 
   composer.command('logout', async (ctx) => {
@@ -40,7 +97,9 @@ export function registerAuthHandler(composer: Composer<BotContext>): void {
 
     const user = await getUser(ctx.env.KV_STORAGE, userId);
     if (!user || !user.rkfToken) {
-      await ctx.reply('Аккаунт РКФ не был привязан.');
+      await ctx.reply('Аккаунт РКФ не был привязан.', {
+        reply_markup: getBackToMenuKeyboard()
+      });
       return;
     }
 
@@ -48,10 +107,12 @@ export function registerAuthHandler(composer: Composer<BotContext>): void {
     user.cachedApps = {};
     await saveUser(ctx.env.KV_STORAGE, user);
 
-    const webAppUrl = ctx.env.WEBAPP_URL || 'https://my.coursing-stats.ru';
-    await ctx.reply('Авторизация успешно сброшена. Токен удален из базы бота.', {
-      reply_markup: getMainMenuKeyboard(webAppUrl)
-    });
+    await ctx.reply(
+      `Авторизация успешно сброшена.\n` +
+      `— — — — — — — — — — — — — — —\n` +
+      `Токен и сохраненные данные удалены из базы бота.`,
+      { reply_markup: getBackToMenuKeyboard() }
+    );
   });
 
   // Text message listener for direct token paste
@@ -61,7 +122,7 @@ export function registerAuthHandler(composer: Composer<BotContext>): void {
       return next();
     }
 
-    // Typical JWT / Bearer tokens are > 30 chars and contain base64 or alphanumeric
+    // Typical JWT / Bearer tokens are > 30 chars and contain alphanumeric/base64
     if (text.length >= 30 && !text.includes(' ') && !text.startsWith('http')) {
       const userId = ctx.from?.id;
       const chatId = ctx.chat?.id;
@@ -90,7 +151,9 @@ async function processToken(ctx: BotContext, userId: number, chatId: number, raw
     await ctx.api.editMessageText(
       chatId,
       checkingMsg.message_id,
-      '[ОШИБКА] Токен не принят API RKF. Проверьте актуальность токена и попробуйте снова.'
+      `[ОШИБКА] Токен не принят API RKF.\n\n` +
+      `Проверьте актуальность токена и попробуйте снова.`,
+      { reply_markup: getBackToMenuKeyboard() }
     );
     return;
   }
@@ -121,16 +184,19 @@ async function processToken(ctx: BotContext, userId: number, chatId: number, raw
 
   await saveUser(ctx.env.KV_STORAGE, user);
 
+  const total = Object.keys(user.cachedApps).length;
+  const ready = Object.values(user.cachedApps).filter(a => a.statusGroup === 'ready').length;
   const webAppUrl = ctx.env.WEBAPP_URL || 'https://my.coursing-stats.ru';
+
   await ctx.api.editMessageText(
     chatId,
     checkingMsg.message_id,
-    `[УСПЕШНО] Аккаунт rkf.online привязан!\n\n` +
-    `Найдено заявок: ${Object.keys(user.cachedApps).length}\n` +
-    `Бот будет ежечасно проверять статус ваших документов и присылать уведомления.`
+    `[УСПЕШНО] Аккаунт rkf.online подключен!\n` +
+    `— — — — — — — — — — — — — — —\n` +
+    `• Найдено заявок: ${total}\n` +
+    `• Готово к выдаче: ${ready}\n` +
+    `• Режим: автоматический ежечасный мониторинг\n\n` +
+    `Бот будет присылать push-уведомления при готовности документов.`,
+    { reply_markup: getMainMenuKeyboard(webAppUrl, true) }
   );
-
-  await ctx.reply('Используйте меню или откройте веб-кабинет «Мои заявки»:', {
-    reply_markup: getMainMenuKeyboard(webAppUrl)
-  });
 }
