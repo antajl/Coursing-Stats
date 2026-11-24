@@ -55,7 +55,7 @@ jobs:
           echo "Registering Webhook on Telegram..."
           WH_RES=$(curl -s -X POST "https://api.telegram.org/bot${TRACKER_BOT_TOKEN}/setWebhook" \
             -H "Content-Type: application/json" \
-            -d '{"url":"https://coursing-stats-tracker-bot.antajltube.workers.dev/webhook","allowed_updates":["message","callback_query"]}')
+            -d '{"url":"https://coursing-stats-tracker-bot.antajltube.workers.dev/webhook","allowed_updates":["message","callback_query"],"drop_pending_updates":true}')
           echo "Webhook response: $WH_RES"
           echo "Registering bot commands on Telegram..."
           CMD_RES=$(curl -s -X POST "https://api.telegram.org/bot${TRACKER_BOT_TOKEN}/setMyCommands" \
