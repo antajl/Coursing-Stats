@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/donino-speed-v1",
   "source": "google-sheets",
-  "count": 179,
+  "count": 181,
   "records": [
     {
       "breed": "Уиппет",
@@ -752,6 +752,25 @@
     },
     {
       "breed": "Уиппет",
+      "sex": "С",
+      "name": "Асти",
+      "speed_km_h": 56,
+      "date": "2026-11-22",
+      "screenshot_url": "https://disk.yandex.ru/i/qvzzXD9EB1Y2kw",
+      "status": "improved",
+      "track_type": "курсинг",
+      "history": [
+        {
+          "speed_km_h": 55,
+          "date": "2026-09-13",
+          "track_type": "курсинг",
+          "screenshot_url": "https://disk.yandex.ru/i/yr_p7BmyrKITRw"
+        }
+      ],
+      "dog_id": 9458
+    },
+    {
+      "breed": "Уиппет",
       "sex": "К",
       "name": "Кеша",
       "speed_km_h": 56,
@@ -810,18 +829,6 @@
     },
     {
       "breed": "Уиппет",
-      "sex": "С",
-      "name": "Асти",
-      "speed_km_h": 55,
-      "date": "2026-09-13",
-      "screenshot_url": "https://disk.yandex.ru/i/yr_p7BmyrKITRw",
-      "status": "normal",
-      "track_type": "курсинг",
-      "history": [],
-      "dog_id": 9458
-    },
-    {
-      "breed": "Уиппет",
       "sex": "К",
       "name": "Сайгон",
       "speed_km_h": 55,
@@ -842,6 +849,24 @@
       "track_type": "круг",
       "history": [],
       "dog_id": 9673
+    },
+    {
+      "breed": "Уиппет",
+      "sex": "К",
+      "name": "Ричи",
+      "speed_km_h": 55,
+      "date": "2026-11-22",
+      "screenshot_url": "https://disk.yandex.ru/i/83pK7S_ITLnVEQ",
+      "status": "improved",
+      "track_type": "курсинг",
+      "history": [
+        {
+          "speed_km_h": 53,
+          "date": "2026-08-29",
+          "track_type": "курсинг",
+          "screenshot_url": "https://disk.yandex.ru/i/B75Ar9dxsE_60g"
+        }
+      ]
     },
     {
       "breed": "Уиппет",
@@ -980,7 +1005,7 @@
       "speed_km_h": 54,
       "date": "2026-11-15",
       "screenshot_url": "https://disk.yandex.ru/i/YKcjKO9QpHsv9g",
-      "status": "new",
+      "status": "normal",
       "track_type": "круг",
       "history": []
     },
@@ -1080,17 +1105,6 @@
     },
     {
       "breed": "Уиппет",
-      "sex": "К",
-      "name": "Ричи",
-      "speed_km_h": 53,
-      "date": "2026-08-29",
-      "screenshot_url": "https://disk.yandex.ru/i/B75Ar9dxsE_60g",
-      "status": "normal",
-      "track_type": "курсинг",
-      "history": []
-    },
-    {
-      "breed": "Уиппет",
       "sex": "С",
       "name": "Элли",
       "speed_km_h": 53,
@@ -1147,6 +1161,37 @@
       "status": "normal",
       "track_type": "курсинг",
       "history": []
+    },
+    {
+      "breed": "Фараонова собака",
+      "sex": "К",
+      "name": "Джед",
+      "speed_km_h": 53,
+      "date": "2026-11-22",
+      "screenshot_url": "https://disk.yandex.ru/i/hYv2W0VNOgGolw",
+      "status": "improved",
+      "track_type": "прямая",
+      "history": [
+        {
+          "speed_km_h": 50,
+          "date": "2025-07-23",
+          "track_type": null,
+          "screenshot_url": "https://disk.yandex.ru/i/1g6JVcfC9XGQ9w"
+        },
+        {
+          "speed_km_h": 52,
+          "date": "2025-11-22",
+          "track_type": null,
+          "screenshot_url": "https://disk.yandex.ru/i/7PrV87uw8LtrLw"
+        },
+        {
+          "speed_km_h": 52,
+          "date": "2026-06-07",
+          "track_type": "прямая",
+          "screenshot_url": "https://disk.yandex.ru/i/Sd4DDmREPAqUBQ"
+        }
+      ],
+      "dog_id": 9174
     },
     {
       "breed": "Поденко ибиценко",
@@ -1208,31 +1253,6 @@
     {
       "breed": "Фараонова собака",
       "sex": "К",
-      "name": "Джед",
-      "speed_km_h": 52,
-      "date": "2026-06-07",
-      "screenshot_url": "https://disk.yandex.ru/i/Sd4DDmREPAqUBQ",
-      "status": "improved",
-      "track_type": "прямая",
-      "history": [
-        {
-          "speed_km_h": 50,
-          "date": "2025-07-23",
-          "track_type": null,
-          "screenshot_url": "https://disk.yandex.ru/i/1g6JVcfC9XGQ9w"
-        },
-        {
-          "speed_km_h": 52,
-          "date": "2025-11-22",
-          "track_type": null,
-          "screenshot_url": "https://disk.yandex.ru/i/7PrV87uw8LtrLw"
-        }
-      ],
-      "dog_id": 9174
-    },
-    {
-      "breed": "Фараонова собака",
-      "sex": "К",
       "name": "Эрен Йегер",
       "speed_km_h": 52,
       "date": "2026-06-20",
@@ -1287,6 +1307,37 @@
         }
       ],
       "dog_id": 9182
+    },
+    {
+      "breed": "Фараонова собака",
+      "sex": "С",
+      "name": "Гела",
+      "speed_km_h": 52,
+      "date": "2026-11-22",
+      "screenshot_url": "https://disk.yandex.ru/i/mPJrxqriy6Ub4w",
+      "status": "improved",
+      "track_type": "прямая",
+      "history": [
+        {
+          "speed_km_h": 48,
+          "date": "2025-07-23",
+          "track_type": null,
+          "screenshot_url": "https://disk.yandex.ru/i/CbyIh-kwSZDw8Q"
+        },
+        {
+          "speed_km_h": 51,
+          "date": "2025-12-07",
+          "track_type": null,
+          "screenshot_url": "https://disk.yandex.ru/i/6xW33C49HtMbRg"
+        },
+        {
+          "speed_km_h": 50,
+          "date": "2026-07-05",
+          "track_type": "круг",
+          "screenshot_url": "https://disk.yandex.ru/i/wRzCjov4apsWyA"
+        }
+      ],
+      "dog_id": 9186
     },
     {
       "breed": "Поденко ибиценко",
@@ -1427,31 +1478,6 @@
       "dog_id": 9184
     },
     {
-      "breed": "Фараонова собака",
-      "sex": "С",
-      "name": "Гела",
-      "speed_km_h": 51,
-      "date": "2025-12-07",
-      "screenshot_url": "https://disk.yandex.ru/i/6xW33C49HtMbRg",
-      "status": "improved",
-      "track_type": null,
-      "history": [
-        {
-          "speed_km_h": 48,
-          "date": "2025-07-23",
-          "track_type": null,
-          "screenshot_url": "https://disk.yandex.ru/i/CbyIh-kwSZDw8Q"
-        },
-        {
-          "speed_km_h": 50,
-          "date": "2026-07-05",
-          "track_type": "круг",
-          "screenshot_url": "https://disk.yandex.ru/i/wRzCjov4apsWyA"
-        }
-      ],
-      "dog_id": 9186
-    },
-    {
       "breed": "Уиппет",
       "sex": "С",
       "name": "Лия",
@@ -1480,6 +1506,17 @@
         }
       ],
       "dog_id": 9200
+    },
+    {
+      "breed": "Уиппет",
+      "sex": "С",
+      "name": "Эли",
+      "speed_km_h": 50,
+      "date": "2026-11-22",
+      "screenshot_url": "https://disk.yandex.ru/i/4Cn8KIDEb-eDmA",
+      "status": "new",
+      "track_type": "курсинг",
+      "history": []
     },
     {
       "breed": "Чирнеко дель Этна",
@@ -1889,6 +1926,17 @@
         }
       ],
       "dog_id": 9213
+    },
+    {
+      "breed": "Левретка",
+      "sex": "К",
+      "name": "Ярс",
+      "speed_km_h": 46,
+      "date": "2026-11-22",
+      "screenshot_url": "https://disk.yandex.ru/i/0Q2JUBCFnbWDYw",
+      "status": "new",
+      "track_type": "прямая",
+      "history": []
     },
     {
       "breed": "Малинуа",
