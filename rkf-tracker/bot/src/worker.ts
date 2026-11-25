@@ -3,6 +3,7 @@ import type { Update } from 'grammy/types';
 import type { Env } from './types.js';
 import { createBot } from './bot.js';
 import { runBackgroundPolling } from './services/poller.js';
+import { getLiveCompetitions } from './services/calendar-sync.js';
 import { handleAuthLogin, handleAuthTicket, handleApplicationsList, handleSyncState } from './worker-auth.js';
 
 let cachedBot: ReturnType<typeof createBot> | null = null;
@@ -12,6 +13,7 @@ function buildCorsHeaders(request: Request): Record<string, string> {
   const isAllowed =
     origin === 'https://coursing-stats.ru' ||
     /^https:\/\/([a-z0-9-]+\.)?coursing-stats\.ru$/i.test(origin) ||
+    /^https:\/\/[a-z0-9-]+\.trycloudflare\.com$/i.test(origin) ||
     /^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/i.test(origin) ||
     origin.startsWith('chrome-extension://') ||
     origin.startsWith('moz-extension://');
@@ -62,6 +64,28 @@ export default {
 
     if (url.pathname === '/api/sync' && (request.method === 'GET' || request.method === 'PUT')) {
       return handleSyncState(request, env, corsHeaders);
+    }
+
+    if (url.pathname === '/api/competitions' && request.method === 'GET') {
+      const data = await getLiveCompetitions(env.KV_STORAGE);
+      return new Response(
+        JSON.stringify({
+          ok: true,
+          season: '2026',
+          updatedAt: data.updatedAt,
+          source: data.source,
+          count: data.events.length,
+          events: data.events,
+        }),
+        {
+          status: 200,
+          headers: {
+            ...corsHeaders,
+            'content-type': 'application/json',
+            'cache-control': 'public, max-age=300',
+          },
+        },
+      );
     }
 
     if (url.pathname === '/health') {

@@ -3,7 +3,8 @@ import type { Env, UserRecord } from '../types.js';
 import { getUserIndex, getUser, saveUser } from '../storage/index.js';
 import { fetchRkfApplications } from './rkf-api.js';
 import { detectStatusChanges, formatChangeMessage } from './diff-engine.js';
-import { findCompetitionById, formatApprovalAlert } from './competition-tracker.js';
+import { formatApprovalAlert, formatCompetitionStatusChangeAlert, type CompetitionEvent } from './competition-tracker.js';
+import { syncRkfCalendar, getLiveCompetitions } from './calendar-sync.js';
 
 export async function runBackgroundPolling(env: Env): Promise<{ checkedUsers: number; alertsSent: number }> {
   const token = env.BOT_TOKEN || env.TELEGRAM_BOT_TOKEN;
@@ -11,6 +12,18 @@ export async function runBackgroundPolling(env: Env): Promise<{ checkedUsers: nu
     console.error('[Poller] No Telegram bot token configured');
     return { checkedUsers: 0, alertsSent: 0 };
   }
+
+  // 0. Sync latest RKF 2026 calendar into KV_STORAGE before checking user subscriptions
+  let liveEvents: CompetitionEvent[] = [];
+  try {
+    const snap = await syncRkfCalendar(env.KV_STORAGE);
+    liveEvents = snap.events;
+  } catch (err) {
+    console.warn('[Poller] Calendar sync failed, falling back to cached:', err);
+    const cached = await getLiveCompetitions(env.KV_STORAGE);
+    liveEvents = cached.events;
+  }
+  const eventMap = new Map(liveEvents.map((ev) => [ev.id, ev]));
 
   const userIds = await getUserIndex(env.KV_STORAGE);
   let checkedUsers = 0;
@@ -67,11 +80,21 @@ export async function runBackgroundPolling(env: Env): Promise<{ checkedUsers: nu
     if (user.competitions && user.competitions.length > 0) {
       for (const comp of user.competitions) {
         try {
-          const ev = findCompetitionById(comp.id);
-          if (ev && ev.status === 'APPROVED' && comp.lastStatus !== 'APPROVED') {
+          const ev = eventMap.get(comp.id);
+          if (!ev) continue;
+          if (ev.status === 'APPROVED' && comp.lastStatus !== 'APPROVED') {
             const text = formatApprovalAlert(ev);
             const ok = await sendTelegramMessage(token, user.chatId, text);
             if (ok) alertsSent++;
+            comp.lastStatus = ev.status;
+            userModified = true;
+          } else if (comp.lastStatus && ev.status !== comp.lastStatus) {
+            const text = formatCompetitionStatusChangeAlert(ev, comp.lastStatus);
+            const ok = await sendTelegramMessage(token, user.chatId, text);
+            if (ok) alertsSent++;
+            comp.lastStatus = ev.status;
+            userModified = true;
+          } else if (!comp.lastStatus) {
             comp.lastStatus = ev.status;
             userModified = true;
           }

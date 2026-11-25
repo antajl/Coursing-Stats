@@ -7,7 +7,7 @@ export async function handleAuthLogin(request: Request, env: Env, corsHeaders: R
   try {
     const body: any = await request.json();
     const email = String(body.email || '').trim();
-    const password = String(body.password || '').trim();
+    const password = String(body.password || '');
     const userId = body.userId ? Number(body.userId) : null;
 
     if (!email || !password) {
@@ -19,8 +19,14 @@ export async function handleAuthLogin(request: Request, env: Env, corsHeaders: R
 
     const authRes = await authenticateRkfUser(email, password);
     if (!authRes.ok || !authRes.apikey) {
+      const httpStatus =
+        authRes.statusCode && authRes.statusCode >= 500
+          ? 502
+          : authRes.statusCode === 403 || authRes.statusCode === 429
+          ? authRes.statusCode
+          : 401;
       return new Response(JSON.stringify({ ok: false, error: authRes.error || 'Неверный логин или пароль' }), {
-        status: 401,
+        status: httpStatus,
         headers: { 'content-type': 'application/json', ...corsHeaders }
       });
     }

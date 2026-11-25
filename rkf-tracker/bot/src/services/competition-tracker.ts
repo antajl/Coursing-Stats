@@ -134,3 +134,18 @@ export function formatApprovalAlert(ev: CompetitionEvent): string {
     `\nСостязание официально включено в утвержденный график РКФ.`
   );
 }
+
+export function formatCompetitionStatusChangeAlert(ev: CompetitionEvent, prevStatus?: string): string {
+  const prevLabel = prevStatus ? (STATUS_RUSSIAN[prevStatus] || prevStatus) : 'Неизвестно';
+  const nextLabel = STATUS_RUSSIAN[ev.status] || ev.status;
+  return (
+    `[ИЗМЕНЕНИЕ СТАТУСА СОСТЯЗАНИЯ РКФ]\n\n` +
+    `• Статус: ${prevLabel} -> ${nextLabel}\n` +
+    `• Дисциплина: ${ev.discipline}\n` +
+    `• Дата: ${ev.dateRaw}\n` +
+    `• Место: ${ev.location}\n` +
+    `• Клуб: ${ev.club}\n` +
+    (ev.reglament ? `• Регламент: ${ev.reglament}\n` : '') +
+    (ev.notes ? `• Примечание: ${ev.notes}\n` : '')
+  );
+}

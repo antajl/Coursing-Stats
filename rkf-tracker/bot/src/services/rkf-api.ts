@@ -39,7 +39,7 @@ async function fetchFeed(filterType: number, headers: Record<string, string>): P
 export async function authenticateRkfUser(
   email: string,
   password: string
-): Promise<{ ok: boolean; apikey?: string; error?: string }> {
+): Promise<{ ok: boolean; apikey?: string; statusCode?: number; error?: string }> {
   try {
     const res = await fetch('https://rkf.online/api/Authentication', {
       method: 'POST',
@@ -52,24 +52,39 @@ export async function authenticateRkfUser(
       },
       body: JSON.stringify({
         email: email.trim(),
-        password: password.trim(),
+        password,
         is_remember_me: true
       })
     });
 
-    const data: any = await res.json().catch(() => ({}));
+    const rawText = await res.text();
+    let data: any = {};
+    try {
+      data = JSON.parse(rawText);
+    } catch {
+      return {
+        ok: false,
+        statusCode: res.status,
+        error: `Сервер rkf.online вернул неожиданный ответ (HTTP ${res.status}). Попробуйте вход через расширение.`
+      };
+    }
+
     if (res.status === 200 && (data.result?.apikey || data.apikey)) {
       return { ok: true, apikey: data.result?.apikey || data.apikey };
     }
 
+    const errorsObj = data.errors && typeof data.errors === 'object' ? Object.values(data.errors).filter(Boolean).join('; ') : '';
     const err =
       data.errors?.authentication ||
       data.errors?.error ||
+      errorsObj ||
       data.message ||
-      'Неверная почта или пароль на rkf.online';
-    return { ok: false, error: err };
+      (res.status === 422 || res.status === 401
+        ? 'Неверная почта или пароль на rkf.online'
+        : `Ошибка авторизации на rkf.online (HTTP ${res.status})`);
+    return { ok: false, statusCode: res.status, error: err };
   } catch {
-    return { ok: false, error: 'Сетевая ошибка при обращении к серверу РКФ' };
+    return { ok: false, statusCode: 502, error: 'Сетевая ошибка при обращении к серверу РКФ' };
   }
 }
 
