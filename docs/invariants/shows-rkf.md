@@ -133,6 +133,12 @@ description: Правила выставок РКФ: 56k статических 
 3) **Чистота выставочных индексов `breed-annual-leaders`:**
    - Построение лидеров по годам (`shows_cac_by_slug`, `shows_mono_by_slug`, `shows_all_time_by_slug`, `shows_mono_all_time_by_slug`) в `breed-annual-leaders.ts` обязано производиться исключительно через канонические функции `showMonoRankScore` и `showCacRankScore` из `backend/lib/show-awards/score.ts`. Запрещено внедрять самописные формулы с начислением очков за всепородные выставки или промежуточные классы (`CW`) в монопородный зачёт.
 
+### Show Title Calculation, JCAC/VCAC Isolation & Tooltip Completeness Invariant
+
+1) **Запрет подстрочного поиска сертификатов (`CAC` vs `JCAC`/`VCAC`):** При разборе выставочной истории в `frontend/src/lib/cumulativeTitles/showHelpers.ts` строго запрещено проверять наличие `CAC` через `.includes('CAC')` (подстрока ловила `JCAC`, `VCAC`, `R.JCAC`, `CACIB` и искажала счётчик взрослых `CAC`). Токены обязаны разбираться строго через `parseShowTitles` и `splitShowTitleTokens` из `backend/lib/show-award-ranking.ts` с раздельным выводом `CAC`, `JCAC` и `VCAC` в `CertificatesSection.tsx`.
+2) **Актуальные схемы РКФ (ред. 18.06.2025, с 01.07.2025):** В расчёте (`showEvaluator.ts`, `showClubEvaluator.ts`) учитываются `ЮЧР` (3 `JCAC`), `ЮЧРКФ` (1 `ЮЧРКФ` или 2 `ЮЧФ`), `ЮГЧР`, `ВЧР` (3 `VCAC`), `ВЧРКФ`, `ВГЧР`, льготы для `ЧР` (4 `CAC` при наличии `ЮЧР` или на `CACIB` / `ЧРКФ ОС`, 1 `CAC` при победе на «России»/«Евразии»), удвоение сертификатов на главных шоу, зачёт `2 R.CAC = 1 CAC` / `2 R.JCAC = 1 JCAC` / `2 R.VCAC = 1 VCAC` и `2 СС = 1 КЧК` (не 3). В «В шаге от титула» попадают только титулы с `progressPercent > 0`.
+3) **Гарантия раскрытия пояснений (`titleExplanations`):** Модуль `explanations.ts` обязан заполнять `titleExplanations[title]` и `titleExplanations['show:' + title]` для каждого официального титула (включая пришедшие напрямую из `showTitles`, например `ЮЧРКФ`), а `CompletedTitlesRegistry.tsx` обязан иметь резервный текст, чтобы клик по строке титула никогда не раскрывал пустой блок.
+
 ---
 
 ## Domain Forbidden Rules
