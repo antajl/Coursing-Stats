@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { X, Key, Check, Puzzle } from 'lucide-react';
 import {
   getStoredToken,
@@ -85,8 +86,8 @@ export function TrackerAuthModal({ isOpen, onClose, onAuthChange }: TrackerAuthM
     onClose();
   };
 
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-charcoal-900/60 backdrop-blur-sm animate-fade-in">
+  return createPortal(
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-charcoal-900/60 backdrop-blur-sm animate-fade-in">
       <div className="w-full max-w-lg bg-white rounded-2xl shadow-xl border border-old-money-200/90 overflow-hidden flex flex-col max-h-[92vh]">
         {/* Header */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-old-money-100 bg-cream-50 shrink-0">
@@ -188,6 +189,7 @@ export function TrackerAuthModal({ isOpen, onClose, onAuthChange }: TrackerAuthM
           )}
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }

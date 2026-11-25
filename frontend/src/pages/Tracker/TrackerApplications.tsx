@@ -3,6 +3,7 @@ import { Key, AlertTriangle } from 'lucide-react';
 import type { TrackerApplication, ApplicationFilter } from './trackerTypes';
 import { TrackerApplicationRow } from './TrackerApplicationRow';
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch';
+import { TrackerSyncBar } from './TrackerSyncBar';
 import { getStoredToken } from './trackerData';
 
 interface TrackerApplicationsProps {
@@ -11,6 +12,9 @@ interface TrackerApplicationsProps {
   receivedSet: Set<string>;
   syncError?: string | null;
   authExpired?: boolean;
+  isLive?: boolean;
+  isRefreshing?: boolean;
+  onOpenAuth?: () => void;
 }
 
 export function TrackerApplications({
@@ -19,6 +23,9 @@ export function TrackerApplications({
   receivedSet,
   syncError,
   authExpired,
+  isLive = false,
+  isRefreshing = false,
+  onOpenAuth,
 }: TrackerApplicationsProps) {
   const [filter, setFilter] = useState<ApplicationFilter>('all');
   const [query, setQuery] = useState('');
@@ -81,6 +88,14 @@ export function TrackerApplications({
 
   return (
     <div className="space-y-3">
+      {/* 0a. Compact Account & Sync Status Bar (when connected) */}
+      {(hasToken || isLive) && onOpenAuth && (
+        <TrackerSyncBar
+          isRefreshing={isRefreshing}
+          onOpenAuth={onOpenAuth}
+        />
+      )}
+
       {/* 0. Compact Old Money KPI Summary Strip (when connected) */}
       {hasToken && (
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3">

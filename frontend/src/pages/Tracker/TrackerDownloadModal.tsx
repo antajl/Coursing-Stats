@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { X, Download, Bot, Puzzle, Monitor, Smartphone, Globe, PlusSquare } from 'lucide-react';
 
 interface TrackerDownloadModalProps {
@@ -66,8 +67,8 @@ export function TrackerDownloadModal({ isOpen, onClose }: TrackerDownloadModalPr
   const downloadZipUrl = 'https://github.com/antajl/Coursing-Stats/releases/download/v1.0.0-tracker/CoursingStats-Tracker-Chrome-Extension.zip';
   const botUrl = 'https://t.me/coursing_stats_notify_bot';
 
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-charcoal-900/60 backdrop-blur-sm">
+  return createPortal(
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-charcoal-900/60 backdrop-blur-sm">
       <div className="w-full max-w-lg bg-white rounded-2xl shadow-xl border border-old-money-200/90 overflow-hidden max-h-[90vh] flex flex-col">
         {/* Header */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-old-money-100 bg-cream-50 shrink-0">
@@ -207,6 +208,7 @@ export function TrackerDownloadModal({ isOpen, onClose }: TrackerDownloadModalPr
           </a>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }

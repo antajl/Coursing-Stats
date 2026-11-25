@@ -78,14 +78,13 @@ export async function authenticateRkf(
   pass: string
 ): Promise<{ ok: boolean; token?: string; error?: string }> {
   const cleanEmail = email.trim();
-  const cleanPass = pass.trim();
 
   // Route through the Cloudflare Worker auth proxy because rkf.online blocks browser CORS
   try {
     const res = await fetch(`${TRACKER_WORKER_URL}/api/auth/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email: cleanEmail, password: cleanPass }),
+      body: JSON.stringify({ email: cleanEmail, password: pass }),
     });
     const data = await res.json().catch(() => ({}));
     const token = data.apikey || data.token || data.result?.apikey || data.access_token;
@@ -177,6 +176,27 @@ export async function pushSyncedState(
     });
   } catch {
     // Non-blocking background sync
+  }
+}
+
+export async function fetchLiveCompetitions(): Promise<{
+  events: TrackerCompetition[];
+  updatedAt: string | null;
+} | null> {
+  try {
+    const res = await fetch(`${TRACKER_WORKER_URL}/api/competitions`, {
+      method: 'GET',
+      headers: { Accept: 'application/json' },
+    });
+    if (!res.ok) return null;
+    const data = await res.json();
+    if (!data?.ok || !Array.isArray(data.events) || data.events.length === 0) return null;
+    return {
+      events: data.events as TrackerCompetition[],
+      updatedAt: typeof data.updatedAt === 'string' ? data.updatedAt : null,
+    };
+  } catch {
+    return null;
   }
 }
 

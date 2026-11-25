@@ -11,25 +11,30 @@ import {
   fetchTrackerApplications,
   fetchSyncedState,
   pushSyncedState,
+  fetchLiveCompetitions,
 } from './trackerData';
 import { TrackerApplications } from './TrackerApplications';
 import { TrackerCompetitions } from './TrackerCompetitions';
 import { TrackerApps } from './TrackerApps';
 import { TrackerAuthModal } from './TrackerAuthModal';
 import { TrackerDownloadModal } from './TrackerDownloadModal';
+import { TrackerSubNav } from './TrackerSubNav';
 import rawCompetitions from './rkf-competitions-2026.json';
 
-const competitions = rawCompetitions as TrackerCompetition[];
+const initialCompetitions = rawCompetitions as TrackerCompetition[];
 
 export default function TrackerPage() {
   const [searchParams, setSearchParams] = useSearchParams();
   const currentTab = (searchParams.get('tab') as TrackerTab) || 'applications';
 
+  const [competitions, setCompetitions] = useState<TrackerCompetition[]>(initialCompetitions);
+  const [competitionsUpdatedAt, setCompetitionsUpdatedAt] = useState<string | null>(null);
   const [receivedSet, setReceivedSet] = useState<Set<string>>(() => getReceivedBarcodes());
   const [subscribedSet, setSubscribedSet] = useState<Set<string>>(() => getSubscribedCompetitions());
   const [authModalOpen, setAuthModalOpen] = useState(false);
   const [downloadModalOpen, setDownloadModalOpen] = useState(false);
-  const [, setIsLive] = useState(() => Boolean(getStoredToken()));
+  const [isLive, setIsLive] = useState(() => Boolean(getStoredToken()));
+  const [isRefreshing, setIsRefreshing] = useState(false);
   const [extensionToast, setExtensionToast] = useState<{ secondsLeft: number } | null>(null);
   const [syncError, setSyncError] = useState<string | null>(null);
   const [authExpired, setAuthExpired] = useState(false);
@@ -47,6 +52,19 @@ export default function TrackerPage() {
 
   useEffect(() => {
     document.title = 'РКФ Трекер — Заявки и Соревнования | CoursingStats';
+  }, []);
+
+  useEffect(() => {
+    let cancelled = false;
+    void fetchLiveCompetitions().then((live) => {
+      if (!cancelled && live && live.events.length > 0) {
+        setCompetitions(live.events);
+        setCompetitionsUpdatedAt(live.updatedAt);
+      }
+    });
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   // Auto-dismiss extension sync toast without hard page reload
@@ -144,6 +162,7 @@ export default function TrackerPage() {
       setAuthExpired(false);
       return;
     }
+    setIsRefreshing(true);
     window.dispatchEvent(new CustomEvent('tracker-sync-state', { detail: { syncing: true } }));
     try {
       const [res, cloudState] = await Promise.all([
@@ -170,6 +189,7 @@ export default function TrackerPage() {
         setSyncError(res.error);
       }
     } finally {
+      setIsRefreshing(false);
       window.dispatchEvent(new CustomEvent('tracker-sync-state', { detail: { syncing: false } }));
     }
   }, []);
@@ -211,55 +231,18 @@ export default function TrackerPage() {
     };
   }, [syncApplications]);
 
+  const isTelegramMiniApp =
+    typeof window !== 'undefined' &&
+    Boolean((window as unknown as { Telegram?: { WebApp?: { initData?: string } } }).Telegram?.WebApp?.initData);
+
   return (
     <div className="space-y-4">
-      {/* Mobile-only Page Tabs (on md+ desktop tabs are housed in sticky NavTracker) */}
-      <div className="flex md:hidden items-center gap-6 border-b border-old-money-200/80 pt-1 pb-0 mb-3 select-none">
-        <button
-          type="button"
-          onClick={() => setSearchParams({ tab: 'applications' })}
-          className={`group relative pb-2 text-sm font-semibold transition-colors duration-200 cursor-pointer ${
-            currentTab === 'applications'
-              ? 'text-camel-950 font-bold'
-              : 'text-charcoal-600 hover:text-charcoal-900'
-          }`}
-        >
-          <span>Заявки на титулы</span>
-          {currentTab === 'applications' && (
-            <span className="absolute bottom-0 left-0 w-full h-[2px] bg-camel-600 rounded-full" />
-          )}
-        </button>
-
-        <button
-          type="button"
-          onClick={() => setSearchParams({ tab: 'competitions' })}
-          className={`group relative pb-2 text-sm font-semibold transition-colors duration-200 cursor-pointer flex items-center gap-1.5 ${
-            currentTab === 'competitions'
-              ? 'text-camel-950 font-bold'
-              : 'text-charcoal-600 hover:text-charcoal-900'
-          }`}
-        >
-          <span>Соревнования РКФ</span>
-          <span className="text-xs font-mono opacity-80">{competitions.length}</span>
-          {currentTab === 'competitions' && (
-            <span className="absolute bottom-0 left-0 w-full h-[2px] bg-camel-600 rounded-full" />
-          )}
-        </button>
-
-        <button
-          type="button"
-          onClick={() => setSearchParams({ tab: 'apps' })}
-          className={`group relative pb-2 text-sm font-semibold transition-colors duration-200 cursor-pointer flex items-center gap-1.5 ${
-            currentTab === 'apps'
-              ? 'text-camel-950 font-bold'
-              : 'text-charcoal-600 hover:text-charcoal-900'
-          }`}
-        >
-          <span>Приложения и бот</span>
-          {currentTab === 'apps' && (
-            <span className="absolute bottom-0 left-0 w-full h-[2px] bg-camel-600 rounded-full" />
-          )}
-        </button>
+      <div className={isTelegramMiniApp ? 'md:hidden' : ''}>
+        <TrackerSubNav
+          activeTab={currentTab}
+          onSelectTab={(tab) => setSearchParams({ tab })}
+          competitionsCount={competitions.length}
+        />
       </div>
 
       {currentTab === 'applications' && (
@@ -269,6 +252,9 @@ export default function TrackerPage() {
           receivedSet={receivedSet}
           syncError={syncError}
           authExpired={authExpired}
+          isLive={isLive}
+          isRefreshing={isRefreshing}
+          onOpenAuth={() => setAuthModalOpen(true)}
         />
       )}
 
@@ -277,6 +263,7 @@ export default function TrackerPage() {
           competitions={competitions}
           subscribedSet={subscribedSet}
           onToggleSubscribed={handleToggleSubscribed}
+          updatedAt={competitionsUpdatedAt}
         />
       )}
 

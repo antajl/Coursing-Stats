@@ -199,13 +199,6 @@ export function NavDesktop({
 
       <div className="flex shrink-0 items-center gap-1.5 lg:gap-2 2xl:gap-2.5">
         <Link
-          to="/tracker/"
-          className="cs-glass-pill hidden xl:flex items-center justify-center gap-1.5 h-9 px-2.5 2xl:px-3 rounded-full text-charcoal-700 hover:text-charcoal-900 hover:border-camel-300 text-xs font-semibold transition-all shrink-0 no-underline active:scale-95"
-          title="РКФ Трекер: заявки на титулы и график состязаний"
-        >
-          <span>Трекер</span>
-        </Link>
-        <Link
           to="/breeds/"
           className="cs-glass-pill flex items-center justify-center gap-1.5 h-9 px-2.5 2xl:px-3 rounded-full text-charcoal-700 hover:text-charcoal-900 hover:border-camel-300 text-xs font-semibold transition-all shrink-0 no-underline active:scale-95"
           title="Каталог пород и персональные хабы"

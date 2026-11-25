@@ -20,9 +20,8 @@ export function TrackerAuthPasswordForm({
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const cleanEmail = email.trim();
-    const cleanPassword = password.trim();
 
-    if (!cleanEmail || !cleanPassword) {
+    if (!cleanEmail || !password) {
       onError('Укажите E-mail и пароль');
       return;
     }
@@ -31,7 +30,7 @@ export function TrackerAuthPasswordForm({
     onError('');
 
     try {
-      const res = await authenticateRkf(cleanEmail, cleanPassword);
+      const res = await authenticateRkf(cleanEmail, password);
       if (res.ok && res.token) {
         onSuccess(res.token, cleanEmail);
         setEmail('');

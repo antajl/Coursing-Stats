@@ -76,11 +76,11 @@ export function NavTracker({
   const activeSync = isRefreshing;
 
   return (
-    <div className="flex relative h-16 w-full items-center justify-between pl-2 pr-2 sm:pl-3 sm:pr-3 lg:pl-4 lg:pr-4">
-      {/* 1. Left: Brand Logo (identical to NavDesktop.tsx) */}
+    <div className="flex relative h-14 sm:h-16 w-full items-center justify-between px-2 sm:px-3 lg:px-4 gap-1.5 sm:gap-2">
+      {/* 1. Left: Brand Logo (full wordmark on mobile & xl+, compact badge on md-lg) */}
       <Link
         to="/tracker"
-        className="flex min-w-0 shrink-0 items-center transition-all duration-300 hover:opacity-90 active:scale-95"
+        className="flex min-w-0 shrink items-center transition-all duration-300 hover:opacity-90 active:scale-95"
         aria-label="Главная страница РКФ Трекер"
         title="РКФ Трекер"
       >
@@ -89,7 +89,7 @@ export function NavTracker({
           width={348}
           height={62}
           alt="Курсинг Статс"
-          className="hidden xl:block h-[52px] xl:h-[55px] 2xl:h-[58px] w-auto"
+          className="block sm:hidden xl:block h-7 sm:h-[52px] xl:h-[55px] 2xl:h-[58px] w-auto"
           style={{ objectFit: 'contain' }}
           loading="eager"
           decoding="async"
@@ -99,7 +99,7 @@ export function NavTracker({
           width={60}
           height={62}
           alt="Курсинг Статс"
-          className="block xl:hidden h-[46px] w-auto drop-shadow-xs"
+          className="hidden sm:block xl:hidden h-[46px] w-auto drop-shadow-xs"
           style={{ objectFit: 'contain' }}
           loading="eager"
           decoding="async"
@@ -156,23 +156,28 @@ export function NavTracker({
       </div>
 
       {/* 3. Right: Site link, Auth/Account, and Adjacent Synchronization Block */}
-      <div className="flex shrink-0 items-center gap-2 lg:gap-2.5">
+      <div className="flex shrink-0 items-center gap-1 sm:gap-2 lg:gap-2.5">
         <Link
           to="/"
-          className="inline-flex items-center gap-1 h-9 px-2.5 rounded-full text-charcoal-600 hover:text-charcoal-900 hover:bg-cream-100/80 text-xs font-medium transition-colors no-underline"
+          className="cs-glass-pill inline-flex items-center justify-center gap-1 h-8 sm:h-9 px-2 sm:px-2.5 rounded-full text-charcoal-700 hover:text-charcoal-900 hover:border-camel-300 text-[11.5px] sm:text-xs font-semibold transition-all shrink-0 active:scale-95 no-underline"
           title="Вернуться на основной портал CoursingStats"
           aria-label="На основной сайт"
         >
-          <ArrowLeft className="w-3.5 h-3.5" />
-          <span className="hidden lg:inline">На сайт</span>
+          <ArrowLeft className="w-3.5 h-3.5 text-camel-700" />
+          <span>Сайт</span>
         </Link>
-        {/* Account / Login Management Button (Renamed from Токен) */}
+        {/* Account / Login Management Button */}
         <button
           type="button"
           onClick={onOpenAuth}
-          className="cs-glass-pill flex items-center justify-center gap-1.5 h-9 px-3 rounded-full text-charcoal-700 hover:text-charcoal-900 hover:border-camel-300 text-xs font-semibold transition-all shrink-0 active:scale-95 cursor-pointer"
+          className="cs-glass-pill flex items-center justify-center gap-1 sm:gap-1.5 h-8 sm:h-9 px-2 sm:px-3 rounded-full text-charcoal-700 hover:text-charcoal-900 hover:border-camel-300 text-[11.5px] sm:text-xs font-semibold transition-all shrink-0 active:scale-95 cursor-pointer"
           title={isLive ? 'Управление аккаунтом РКФ Онлайн' : 'Войти в личный кабинет РКФ Онлайн'}
         >
+          <span
+            className={`sm:hidden w-2 h-2 rounded-full shrink-0 ${
+              !isLive ? 'bg-charcoal-400' : activeSync ? 'bg-amber-500 animate-pulse' : 'bg-emerald-500'
+            }`}
+          />
           {isLive ? (
             <>
               <User className="w-3.5 h-3.5 text-camel-700" />
@@ -181,13 +186,13 @@ export function NavTracker({
           ) : (
             <>
               <LogIn className="w-3.5 h-3.5 text-camel-700" />
-              <span className="hidden sm:inline">Войти</span>
+              <span>Войти</span>
             </>
           )}
         </button>
 
         {/* Consolidated Synchronization Block: Status Badge + Refresh Button adjacent */}
-        <div className="flex items-center gap-1.5 pl-1.5 border-l border-old-money-200/60">
+        <div className="flex items-center gap-1.5 sm:pl-1.5 sm:border-l sm:border-old-money-200/60">
           {/* Status Indicator with dynamic Dot and Last Sync Time */}
           <div className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-cream-100 text-[11.5px] text-charcoal-700 border border-old-money-200/60 shadow-2xs">
             <span
@@ -218,7 +223,7 @@ export function NavTracker({
             type="button"
             onClick={handleTriggerRefresh}
             disabled={activeSync || cooldown > 0}
-            className="cs-glass-pill flex items-center justify-center gap-1.5 h-9 px-3 rounded-full text-charcoal-700 hover:text-charcoal-900 hover:border-camel-300 text-xs font-semibold transition-all shrink-0 active:scale-95 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed group"
+            className="cs-glass-pill flex items-center justify-center gap-1.5 h-8 w-8 sm:w-auto sm:h-9 sm:px-3 rounded-full text-charcoal-700 hover:text-charcoal-900 hover:border-camel-300 text-xs font-semibold transition-all shrink-0 active:scale-95 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed group"
             title={
               cooldown > 0
                 ? `Повторное обновление будет доступно через ${cooldown} сек.`

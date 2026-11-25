@@ -1,6 +1,6 @@
 import { useState, useMemo, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { ChevronLeft, ChevronDown } from 'lucide-react'
+import { ChevronLeft, ChevronDown, Bell } from 'lucide-react'
 import { SEO } from '../../components/SEO'
 import { JsonLd, breadcrumbListSchema } from '../../components/JsonLd'
 import { useEvents } from '../../hooks/useApi'
@@ -199,7 +199,14 @@ export default function Competitions2027() {
         </div>
 
         <div className="ml-auto shrink-0 flex items-center gap-1.5">
-
+          <Link
+            to="/tracker/?tab=competitions"
+            className="cs-glass-pill inline-flex h-8 shrink-0 items-center gap-1 rounded-full px-2.5 text-xs font-semibold text-charcoal-700 hover:border-camel-300 hover:text-charcoal-900 no-underline"
+            title="Статусы согласования и подписка в РКФ Трекере"
+          >
+            <Bell className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden="true" />
+            <span>Трекер</span>
+          </Link>
 
           <Link
             to="/competitions/archive/"
@@ -221,8 +228,16 @@ export default function Competitions2027() {
             placeholder="Город, клуб, дисциплина…"
           />
 
-          {/* Кнопки «О сезоне 2027» и «Изменения» — справа от поиска */}
+          {/* Кнопки «О сезоне 2027», «Изменения» и переход в «РКФ Трекер» */}
           <Season2027ToolbarButtons eventsCount={events.length} changelog={changelog} />
+          <Link
+            to="/tracker/?tab=competitions"
+            className="cs-glass-pill inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full px-3 text-xs font-semibold text-charcoal-700 hover:border-camel-300 hover:text-charcoal-900 no-underline"
+            title="Статусы согласования и подписка на турниры в РКФ Трекере"
+          >
+            <Bell className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden="true" />
+            <span>РКФ Трекер</span>
+          </Link>
 
           {/* Сброс фильтров */}
 

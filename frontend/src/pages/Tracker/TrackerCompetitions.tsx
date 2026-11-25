@@ -12,12 +12,14 @@ interface TrackerCompetitionsProps {
   competitions: TrackerCompetition[];
   subscribedSet: Set<string>;
   onToggleSubscribed: (id: string) => void;
+  updatedAt?: string | null;
 }
 
 export function TrackerCompetitions({
   competitions,
   subscribedSet,
   onToggleSubscribed,
+  updatedAt,
 }: TrackerCompetitionsProps) {
   const [season, setSeason] = useState<'2026' | '2027'>('2026');
   const [events2027, setEvents2027] = useState<TrackerCompetition[] | null>(null);
@@ -188,10 +190,18 @@ export function TrackerCompetitions({
 
       {/* Monolithic Glass Table */}
       <div className="cs-glass-card bg-white rounded-2xl overflow-hidden shadow-2xs">
-        <div className="relative flex min-h-9 items-center justify-between border-b border-[rgba(195,168,128,0.55)] bg-cream-100/90 px-3 sm:px-4 py-1.5">
+        <div className="relative flex min-h-9 items-center justify-between gap-2 border-b border-[rgba(195,168,128,0.55)] bg-cream-100/90 px-3 sm:px-4 py-1.5">
           <span className="text-[11.5px] font-bold uppercase tracking-wider text-charcoal-700">
             График согласования РКФ {season}
           </span>
+          {season === '2026' && updatedAt && (
+            <span className="text-[11px] font-mono text-charcoal-500 shrink-0">
+              {new Date(updatedAt).toLocaleTimeString('ru-RU', {
+                hour: '2-digit',
+                minute: '2-digit',
+              })}
+            </span>
+          )}
         </div>
 
         {filteredCompetitions.length === 0 ? (

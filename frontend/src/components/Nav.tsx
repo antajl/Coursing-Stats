@@ -94,7 +94,11 @@ export default function Nav() {
   }, []);
 
 
-  if (location.pathname.startsWith('/tracker')) {
+  const isTelegramMiniApp =
+    typeof window !== 'undefined' &&
+    Boolean((window as unknown as { Telegram?: { WebApp?: { initData?: string } } }).Telegram?.WebApp?.initData);
+
+  if (location.pathname.startsWith('/tracker') && isTelegramMiniApp) {
     const currentTab = (searchParams.get('tab') as TrackerTab) || 'applications';
     const isLive = typeof window !== 'undefined' && Boolean(localStorage.getItem('cs_rkf_token'));
     return (

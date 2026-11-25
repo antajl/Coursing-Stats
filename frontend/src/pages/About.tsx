@@ -1,5 +1,7 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import {
+  Bell,
   Bot,
   Check,
   Code2,
@@ -309,6 +311,34 @@ export default function AboutPage() {
           </div>
         </section>
       </div>
+
+      {/* RKF Tracker section */}
+      <section className="rounded-xl border border-old-money-200/90 bg-white/80 p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div className="flex items-start gap-3">
+          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-camel-200 bg-sand-100 text-camel-800">
+            <Bell className="h-5 w-5" aria-hidden />
+          </span>
+          <div>
+            <div className="flex flex-wrap items-center gap-2">
+              <h2 className="font-serif text-base font-bold text-charcoal-900">
+                РКФ Трекер
+              </h2>
+              <span className="rounded-full border border-camel-200/80 bg-sand-100 px-2 py-0.5 text-[10px] font-semibold text-camel-900">
+                @coursing_stats_notify_bot
+              </span>
+            </div>
+            <p className="mt-1 text-xs leading-relaxed text-charcoal-600">
+              Мониторинг изготовления дипломов и сертификатов в личном кабинете rkf.online, график согласования состязаний РКФ, расширение для браузера и уведомления в Telegram.
+            </p>
+          </div>
+        </div>
+        <Link
+          to="/tracker/"
+          className="cs-glass-pill-active inline-flex min-h-[40px] shrink-0 items-center justify-center gap-1.5 rounded-xl px-4 py-2 text-xs font-semibold no-underline"
+        >
+          <span>Открыть Трекер</span>
+        </Link>
+      </section>
 
       {/* Legal disclaimer */}
       <footer className="rounded-xl border border-old-money-100 bg-cream-50/30 p-3 text-center sm:text-left">
