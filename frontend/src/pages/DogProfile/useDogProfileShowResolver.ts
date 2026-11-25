@@ -35,18 +35,30 @@ export function useDogProfileShowResolver({
   const [showsLoading, setShowsLoading] = useState(true)
   const [fallbackSportDogId, setFallbackSportDogId] = useState<string | null>(null)
 
-  // Выставки: detail-шард по id / competition / кличка+порода
+  const resolvedCompId = dog?.id ? String(dog.id) : (effectiveSportDogId || competitionId)
+  const resolvedNameLat = dog?.name_lat || queryName || ''
+  const resolvedNameRu = dog?.name_ru || queryName || ''
+  const resolvedBreed = dog?.breed || showRouteBreed || queryBreed || ''
+
+  // Выставки: запускаем сразу параллельно со спортом по id / competitionId, не дожидаясь окончания loading
   useEffect(() => {
     let cancelled = false
+    const hasIdLookup = Boolean(profileId || (isLegacyShowRoute && showRouteDogId) || resolvedCompId)
+    const hasNameLookup = Boolean(resolvedBreed && (resolvedNameLat || resolvedNameRu))
+    if (!hasIdLookup && !( !loading && hasNameLookup )) {
+      if (!loading) setShowsLoading(false)
+      return
+    }
+
     const loadShows = async () => {
       setShowsLoading(true)
       try {
         const result = await resolveShowDogDetail({
           profileId: profileId || (isLegacyShowRoute ? showRouteDogId : null),
-          competitionId: dog?.id ? String(dog.id) : (effectiveSportDogId || competitionId),
-          nameLat: dog?.name_lat || queryName || '',
-          nameRu: dog?.name_ru || queryName || '',
-          breed: dog?.breed || showRouteBreed || queryBreed,
+          competitionId: resolvedCompId,
+          nameLat: resolvedNameLat,
+          nameRu: resolvedNameRu,
+          breed: resolvedBreed || undefined,
         })
         if (!cancelled) {
           setShowDog(result.success && result.data ? result.data : null)
@@ -54,14 +66,19 @@ export function useDogProfileShowResolver({
       } catch {
         if (!cancelled) setShowDog(null)
       } finally {
-        if (!cancelled) setShowsLoading(false)
+        if (!cancelled) {
+          // Если спорт ещё грузится и собака не найдена по ID, оставляем индикатор до прихода кличка+порода
+          if (!loading || hasNameLookup || hasIdLookup) {
+            setShowsLoading(false)
+          }
+        }
       }
     }
-    if (isLegacyShowRoute || !loading) loadShows()
+    loadShows()
     return () => {
       cancelled = true
     }
-  }, [competitionId, effectiveSportDogId, dog, loading, showRouteDogId, showRouteBreed, isLegacyShowRoute, profileId, queryName, queryBreed])
+  }, [resolvedCompId, resolvedNameLat, resolvedNameRu, resolvedBreed, loading, showRouteDogId, isLegacyShowRoute, profileId])
 
   // Fallback: If show-only profile ID didn't resolve to showDog or sportDog, but queryName exists,
   // search in dogs-index.json to avoid 404 if the dog exists in the sport database.

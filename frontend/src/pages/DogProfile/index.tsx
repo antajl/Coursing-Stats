@@ -278,6 +278,7 @@ export default function DogProfile() {
           coursingStats={data.dog?.coursing_stats}
           racingStats={data.dog?.racing_stats}
           showDog={data.showDog}
+          showsLoading={data.showsLoading}
           events={data.events}
           eventResultsUrls={data.eventResultsUrls}
           breed={data.headerBreed}

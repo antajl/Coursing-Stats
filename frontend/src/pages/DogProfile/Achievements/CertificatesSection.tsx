@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ChevronDown, ExternalLink } from 'lucide-react'
+import { localExhibitionPath } from '../../../lib/env'
 import type { CumulativeEvaluationResult } from '../../../lib/cumulativeTitles'
 
 export type TitleCertificates = NonNullable<CumulativeEvaluationResult['certificates']>
@@ -35,7 +36,7 @@ export function CertificatesSection({
     title: string,
     badgeText: string,
     subtitle: string,
-    eventsList: Array<{ eventId?: number | string; title: string; date?: string }>,
+    eventsList: Array<{ eventId?: number | string; exhibitionId?: number | string; title: string; date?: string }>,
     disciplineTheme: 'forest' | 'sky' | 'camel',
     extraNote?: string,
   ) => {
@@ -98,16 +99,16 @@ export function CertificatesSection({
                 <span className="truncate">{ev.title}</span>
                 <div className="flex items-center gap-1.5 shrink-0">
                   {ev.date && <span className="text-[11px] text-charcoal-400">{ev.date}</span>}
-                  {ev.eventId && eventResultsUrls[ev.eventId] && (
+                  {(ev.eventId && eventResultsUrls[ev.eventId]) || ev.exhibitionId ? (
                     <Link
-                      to={eventResultsUrls[ev.eventId]}
+                      to={ev.eventId && eventResultsUrls[ev.eventId] ? eventResultsUrls[ev.eventId] : `${localExhibitionPath}/${ev.exhibitionId}`}
                       className="text-camel-700 hover:text-camel-900 inline-flex items-center p-0.5"
                       title="Открыть протокол"
                       onClick={(e) => e.stopPropagation()}
                     >
                       <ExternalLink className="w-3.5 h-3.5" />
                     </Link>
-                  )}
+                  ) : null}
                 </div>
               </div>
             ))}

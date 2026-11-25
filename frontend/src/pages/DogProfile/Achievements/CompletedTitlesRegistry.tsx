@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { ChevronDown } from 'lucide-react'
 import { titleBadgeClass } from '../../../lib/qualificationTitles'
 import { getFullTitleLabel } from '../../../lib/awardTooltip'
+import { TitleEvidenceList } from './TitleEvidenceList'
 import type { CumulativeEvaluationResult } from '../../../lib/cumulativeTitles'
 
 export interface CompletedTitlesRegistryProps {
@@ -11,6 +12,7 @@ export interface CompletedTitlesRegistryProps {
   racingTitles: { title: string; count: number }[]
   showTitles: { title: string; count: number }[]
   totalTitlesCount: number
+  eventResultsUrls?: Record<string | number, string>
 }
 
 export function CompletedTitlesRegistry({
@@ -20,6 +22,7 @@ export function CompletedTitlesRegistry({
   racingTitles,
   showTitles,
   totalTitlesCount,
+  eventResultsUrls = {},
 }: CompletedTitlesRegistryProps) {
   const [expandedTitles, setExpandedTitles] = useState<Record<string, boolean>>({})
 
@@ -39,6 +42,10 @@ export function CompletedTitlesRegistry({
     const explanation =
       cumulativeTitles.titleExplanations[`${category}:${item.title}`] ||
       cumulativeTitles.titleExplanations[item.title]
+    const evidence =
+      cumulativeTitles.titleEvidence?.[`${category}:${item.title}`] ||
+      cumulativeTitles.titleEvidence?.[item.title] ||
+      []
     const chipClass = titleBadgeClass(item.title)
     const fullLabel = getFullTitleLabel(item.title, isShow)
 
@@ -93,9 +100,17 @@ export function CompletedTitlesRegistry({
         </div>
 
         {isExpanded && (
-          <div className="px-3.5 pb-2.5 pt-1.5 text-xs text-charcoal-600 border-t border-old-money-100/70 bg-cream-50/40 leading-relaxed animate-in fade-in duration-150">
-            <span className="font-semibold text-charcoal-800">Нормативное основание: </span>
-            <span>{explanation || `Официальное звание РКФ/FCI «${fullLabel}»`}</span>
+          <div className="px-3.5 pb-3 pt-2 text-xs text-charcoal-600 border-t border-old-money-100/70 bg-cream-50/40 leading-relaxed animate-in fade-in duration-150 space-y-2">
+            <div>
+              <span className="font-semibold text-charcoal-800">Нормативное основание: </span>
+              <span>{explanation || `Официальное звание РКФ/FCI «${fullLabel}»`}</span>
+            </div>
+
+            <TitleEvidenceList
+              heading="На каких мероприятиях заработан"
+              items={evidence}
+              eventResultsUrls={eventResultsUrls}
+            />
           </div>
         )}
       </div>

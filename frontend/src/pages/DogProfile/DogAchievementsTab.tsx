@@ -1,4 +1,5 @@
 import { useMemo } from 'react'
+import { Loader2 } from 'lucide-react'
 import type { CumulativeEvaluationResult } from '../../lib/cumulativeTitles'
 import type { ProfileHeaderRank } from './DogProfileHeader'
 import type { ShowDogCardData } from '../Shows/ShowDogCard'
@@ -17,6 +18,7 @@ export interface DogAchievementsTabProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   racingStats?: any
   showDog?: ShowDogCardData | null
+  showsLoading?: boolean
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   events?: any[]
   eventResultsUrls?: Record<string | number, string>
@@ -29,6 +31,7 @@ export function DogAchievementsTab({
   coursingStats = {},
   racingStats = {},
   showDog,
+  showsLoading = false,
   events = [],
   eventResultsUrls = {},
   breed,
@@ -75,8 +78,15 @@ export function DogAchievementsTab({
 
   return (
     <div className="space-y-6">
+      {showsLoading && (
+        <div className="rounded-xl border border-camel-200/80 bg-cream-50/80 px-3.5 py-2 flex items-center gap-2 text-xs text-charcoal-600">
+          <Loader2 className="w-3.5 h-3.5 animate-spin text-camel-700 shrink-0" aria-hidden />
+          <span>Загружаем выставочные титулы и сертификаты...</span>
+        </div>
+      )}
+
       {/* РАЗДЕЛ 1: В ШАГЕ ОТ ТИТУЛА */}
-      <OneStepAwaySection inProgressTitles={inProgressTitles} />
+      <OneStepAwaySection inProgressTitles={inProgressTitles} eventResultsUrls={eventResultsUrls} />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
         {/* ЛЕВАЯ КОЛОНКА: ОФИЦИАЛЬНЫЕ ТИТУЛЫ */}
@@ -87,6 +97,7 @@ export function DogAchievementsTab({
           racingTitles={racingTitles}
           showTitles={showTitles}
           totalTitlesCount={totalTitlesCount}
+          eventResultsUrls={eventResultsUrls}
         />
 
         {/* ПРАВАЯ КОЛОНКА: СЕРТИФИКАТЫ + ДОСТИЖЕНИЯ В РЕЙТИНГЕ */}
