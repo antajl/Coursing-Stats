@@ -92,10 +92,10 @@ export function CompletedTitlesRegistry({
           </div>
         </div>
 
-        {isExpanded && explanation && (
+        {isExpanded && (
           <div className="px-3.5 pb-2.5 pt-1.5 text-xs text-charcoal-600 border-t border-old-money-100/70 bg-cream-50/40 leading-relaxed animate-in fade-in duration-150">
             <span className="font-semibold text-charcoal-800">Нормативное основание: </span>
-            <span>{explanation}</span>
+            <span>{explanation || `Официальное звание РКФ/FCI «${fullLabel}»`}</span>
           </div>
         )}
       </div>

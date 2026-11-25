@@ -53,16 +53,25 @@ export function DogAchievementsTab({
   const certs = cumulativeTitles.certificates || {
     caclEventsCoursing: [],
     caclEventsRacing: [],
+    caclBrEventsCoursing: [],
+    caclBrEventsRacing: [],
     cacilEvents: [],
     cacShowEvents: [],
+    jcacShowEvents: [],
+    vcacShowEvents: [],
     uniqueCacJudgesCount: 0,
+    uniqueJcacJudgesCount: 0,
+    uniqueVcacJudgesCount: 0,
     hasRunningClearanceCoursing: false,
     hasRunningClearanceRacing: false,
   }
 
   const totalCacl = certs.caclEventsCoursing.length + certs.caclEventsRacing.length
-  const totalCac = certs.cacShowEvents.length || (showDog?.titles?.CAC ?? 0)
-  const totalCertificates = totalCacl + totalCac
+  const totalCaclBr = (certs.caclBrEventsCoursing?.length ?? 0) + (certs.caclBrEventsRacing?.length ?? 0)
+  const totalCac = certs.cacShowEvents.length > 0 ? certs.cacShowEvents.length : (showDog?.titles?.CAC ?? 0)
+  const totalJcac = (certs.jcacShowEvents?.length ?? 0) > 0 ? (certs.jcacShowEvents?.length ?? 0) : (showDog?.titles?.JCAC ?? 0)
+  const totalVcac = (certs.vcacShowEvents?.length ?? 0) > 0 ? (certs.vcacShowEvents?.length ?? 0) : (showDog?.titles?.VCAC ?? 0)
+  const totalCertificates = totalCacl + totalCaclBr + certs.cacilEvents.length + totalCac + totalJcac + totalVcac
 
   return (
     <div className="space-y-6">
@@ -86,6 +95,8 @@ export function DogAchievementsTab({
             certs={certs}
             totalCertificates={totalCertificates}
             totalCac={totalCac}
+            totalJcac={totalJcac}
+            totalVcac={totalVcac}
             events={events}
             eventResultsUrls={eventResultsUrls}
           />

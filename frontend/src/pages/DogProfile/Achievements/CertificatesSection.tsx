@@ -9,6 +9,8 @@ export interface CertificatesSectionProps {
   certs: TitleCertificates
   totalCertificates: number
   totalCac: number
+  totalJcac?: number
+  totalVcac?: number
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   events: any[]
   eventResultsUrls: Record<string | number, string>
@@ -18,6 +20,8 @@ export function CertificatesSection({
   certs,
   totalCertificates,
   totalCac,
+  totalJcac = 0,
+  totalVcac = 0,
   eventResultsUrls,
 }: CertificatesSectionProps) {
   const [expandedTitles, setExpandedTitles] = useState<Record<string, boolean>>({})
@@ -147,20 +151,68 @@ export function CertificatesSection({
           'sky',
         )}
 
+        {/* CACIL Международные состязания */}
+        {certs.cacilEvents.length > 0 &&
+          renderCertificateCard(
+            'cert-cacil',
+            'CACIL · Международные состязания FCI',
+            `${certs.cacilEvents.length} серт.`,
+            'Кандидат в Интернациональные чемпионы (C.I.C.)',
+            certs.cacilEvents,
+            'forest',
+          )}
+
+        {/* CACLBr Породные сертификаты */}
+        {((certs.caclBrEventsCoursing?.length ?? 0) > 0 || (certs.caclBrEventsRacing?.length ?? 0) > 0) &&
+          renderCertificateCard(
+            'cert-cacl-br',
+            'CACLBr · Породный чемпион по РК',
+            `${(certs.caclBrEventsCoursing?.length ?? 0) + (certs.caclBrEventsRacing?.length ?? 0)} серт.`,
+            'Кандидат в Породные чемпионы по рабочим качествам (ПЧ РК)',
+            [...(certs.caclBrEventsCoursing ?? []), ...(certs.caclBrEventsRacing ?? [])],
+            'forest',
+          )}
+
         {/* CAC Выставки */}
         {renderCertificateCard(
           'cert-cac-shows',
           'CAC · Выставки РКФ',
           `${totalCac} серт.`,
           certs.uniqueCacJudgesCount > 0
-            ? `Кандидат в ЧР по красоте · ${certs.uniqueCacJudgesCount} судей`
+            ? `Кандидат в ЧР по красоте · ${certs.uniqueCacJudgesCount} выст.`
             : 'Кандидат в чемпионы России по красоте',
           certs.cacShowEvents,
           'camel',
           certs.uniqueCacJudgesCount > 0
-            ? `Подтверждено под ${certs.uniqueCacJudgesCount} разными судьями РКФ`
+            ? `Засчитано на ${certs.uniqueCacJudgesCount} выставках РКФ`
             : undefined,
         )}
+
+        {/* JCAC Выставки (Юниоры) */}
+        {totalJcac > 0 &&
+          renderCertificateCard(
+            'cert-jcac-shows',
+            'JCAC · Юниоры (выставки РКФ)',
+            `${totalJcac} серт.`,
+            (certs.uniqueJcacJudgesCount ?? 0) > 0
+              ? `Кандидат в Юные чемпионы России · ${certs.uniqueJcacJudgesCount} выст.`
+              : 'Кандидат в Юные чемпионы России по красоте',
+            certs.jcacShowEvents ?? [],
+            'camel',
+          )}
+
+        {/* VCAC Выставки (Ветераны) */}
+        {totalVcac > 0 &&
+          renderCertificateCard(
+            'cert-vcac-shows',
+            'VCAC · Ветераны (выставки РКФ)',
+            `${totalVcac} серт.`,
+            (certs.uniqueVcacJudgesCount ?? 0) > 0
+              ? `Кандидат в Ветераны-чемпионы России · ${certs.uniqueVcacJudgesCount} выст.`
+              : 'Кандидат в Ветераны-чемпионы России по красоте',
+            certs.vcacShowEvents ?? [],
+            'camel',
+          )}
       </div>
     </div>
   )
