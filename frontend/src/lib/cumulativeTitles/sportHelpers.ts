@@ -2,7 +2,7 @@
  * Вспомогательные функции парсинга спортивных квалификаций, судей и регионов РФ.
  */
 
-import type { DogCompetitionEntry } from './types'
+import type { DogCompetitionEntry, TitleEvidenceItem } from './types'
 
 export function splitQualTokens(qualification?: string | null): string[] {
   if (!qualification || typeof qualification !== 'string') return []
@@ -69,4 +69,45 @@ export function hasThreeDistinctJudgeEvents(primary: DogCompetitionEntry[], cacl
   const combined = [...primary.slice(0, 1), ...cacl]
   const distinctJudges = countDistinctJudgeSets(combined)
   return distinctJudges >= 3 || combined.some((e) => extractJudges(e.judges).length === 0)
+}
+
+export function toSportEvidence(
+  ev: DogCompetitionEntry,
+  award: string,
+  fallbackTitle: string,
+): TitleEvidenceItem {
+  return {
+    kind: 'sport',
+    title: ev.title || fallbackTitle,
+    date: ev.date_start || undefined,
+    eventId: ev.event_id,
+    award,
+    note: ev.judges ? `Судьи: ${ev.judges}` : undefined,
+  }
+}
+
+export function buildNchEvidence(
+  scheme: 1 | 2 | 3 | 4 | 5 | 6 | null,
+  pkrEvents: DogCompetitionEntry[],
+  chrkfEvents: DogCompetitionEntry[],
+  caclEvents: DogCompetitionEntry[],
+): TitleEvidenceItem[] {
+  const items: TitleEvidenceItem[] = []
+  if (scheme === 1) {
+    if (pkrEvents[0]) items.push(toSportEvidence(pkrEvents[0], 'ПКР РК', 'Кубок России'))
+    if (chrkfEvents[0]) items.push(toSportEvidence(chrkfEvents[0], 'ЧРКФ РК', 'Чемпионат РКФ'))
+  } else if (scheme === 2) {
+    pkrEvents.slice(0, 2).forEach((e) => items.push(toSportEvidence(e, 'ПКР РК', 'Кубок России')))
+  } else if (scheme === 3) {
+    if (pkrEvents[0]) items.push(toSportEvidence(pkrEvents[0], 'ПКР РК', 'Кубок России'))
+    caclEvents.slice(0, 2).forEach((e) => items.push(toSportEvidence(e, 'CACL', 'Состязание CACL')))
+  } else if (scheme === 4) {
+    chrkfEvents.slice(0, 2).forEach((e) => items.push(toSportEvidence(e, 'ЧРКФ РК', 'Чемпионат РКФ')))
+  } else if (scheme === 5) {
+    if (chrkfEvents[0]) items.push(toSportEvidence(chrkfEvents[0], 'ЧРКФ РК', 'Чемпионат РКФ'))
+    caclEvents.slice(0, 2).forEach((e) => items.push(toSportEvidence(e, 'CACL', 'Состязание CACL')))
+  } else if (scheme === 6) {
+    caclEvents.slice(0, 5).forEach((e) => items.push(toSportEvidence(e, 'CACL', 'Состязание CACL')))
+  }
+  return items
 }

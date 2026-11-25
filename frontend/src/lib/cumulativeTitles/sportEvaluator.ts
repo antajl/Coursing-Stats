@@ -4,8 +4,9 @@
  * (в ред. от 14.09.2022, в силе с 15.12.2022, актуально на 2026 год).
  */
 
-import type { CumulativeTitle, DogCompetitionEntry } from './types'
+import type { CumulativeTitle, DogCompetitionEntry, TitleEvidenceItem } from './types'
 import {
+  buildNchEvidence,
   countDistinctJudgeSets,
   extractJudges,
   hasExactCertToken,
@@ -13,6 +14,7 @@ import {
   hasTwoDistinctJudgeEvents,
   isValidSportResult,
   normalizeSubjectName,
+  toSportEvidence,
 } from './sportHelpers'
 
 export interface DisciplineEvaluation {
@@ -162,12 +164,18 @@ export function evaluateDiscipline(
 export function buildDisciplineTitles(
   evalData: DisciplineEvaluation,
   idSuffix: 'coursing' | 'racing',
-): { titles: CumulativeTitle[]; explanations: Record<string, string> } {
+): {
+  titles: CumulativeTitle[]
+  explanations: Record<string, string>
+  evidence: Record<string, TitleEvidenceItem[]>
+} {
   const titles: CumulativeTitle[] = []
   const explanations: Record<string, string> = {}
+  const evidence: Record<string, TitleEvidenceItem[]> = {}
   const { code, disciplineName } = evalData
   const shortDisc = idSuffix === 'coursing' ? 'курсингу' : 'бегам'
   const prepDisc = idSuffix === 'coursing' ? 'в курсинге' : 'в бегах'
+  const prefix = idSuffix
 
   if (evalData.hasChr) {
     const basis = `1-е место на Чемпионате России по ${shortDisc} борзых (${evalData.chrEvent?.date_start || ''})`
@@ -184,6 +192,9 @@ export function buildDisciplineTitles(
       requirements: [{ text: `1-е место на Чемпионате России по ${shortDisc}`, completed: true, details: evalData.chrEvent?.title || 'Чемпионат России' }],
     })
     explanations[`ЧР РК (${code})`] = basis
+    if (evalData.chrEvent) {
+      evidence[`${prefix}:ЧР РК`] = [toSportEvidence(evalData.chrEvent, '1-е место · ЧР РК', 'Чемпионат России')]
+    }
   }
 
   if (evalData.nchCompleted) {
@@ -199,11 +210,19 @@ export function buildDisciplineTitles(
       requirements: [{ text: `Норма титула ${prepDisc}`, completed: true, details: evalData.nchBasis }],
     })
     explanations[`НЧ РК (${code})`] = evalData.nchBasis
+    const nchItems = buildNchEvidence(evalData.nchScheme, evalData.pkrEvents, evalData.chrkfEvents, evalData.caclEvents)
+    if (nchItems.length > 0) evidence[`${prefix}:НЧ РК`] = nchItems
   } else if (evalData.chrkfCount > 0 || evalData.caclCount > 0 || evalData.pkrCount > 0) {
     const hasMajor = evalData.chrkfCount >= 1 || evalData.pkrCount >= 1
     const caclProgress = Math.min(80, Math.round((evalData.caclCount / 5) * 80))
     const comboProgress = hasMajor ? (evalData.caclCount >= 1 ? 75 : 50) : Math.round((evalData.caclCount / 2) * 40)
     const majorLabel = evalData.chrkfCount >= 1 ? `Выполнено (${evalData.chrkfCount} ЧРКФ)` : evalData.pkrCount >= 1 ? `Выполнено (${evalData.pkrCount} ПКР)` : 'Нет побед ранга ЧРКФ/ПКР (можно закрыть схемой 6: 5 × CACL)'
+
+    const progressEvs: TitleEvidenceItem[] = [
+      ...evalData.pkrEvents.map((e) => toSportEvidence(e, 'ПКР РК', 'Кубок России')),
+      ...evalData.chrkfEvents.map((e) => toSportEvidence(e, 'ЧРКФ РК', 'Чемпионат РКФ')),
+      ...evalData.caclEvents.map((e) => toSportEvidence(e, 'CACL', 'Состязание CACL')),
+    ]
 
     titles.push({
       id: `national-ch-sport-${idSuffix}`,
@@ -226,8 +245,9 @@ export function buildDisciplineTitles(
         },
       ],
       nextStepAdvice: hasMajor
-        ? `Для оформления НЧ РК по ${shortDisc} остался 1 ЧРКФ/ПКР под другим экспертом либо ${Math.max(0, 2 - evalData.caclCount)} CACL.`
-        : `До закрытия по схеме 6 осталось: ${Math.max(0, 5 - evalData.caclCount)} CACL (всего в 5 субъектах РФ у 4 судей), либо получите 1 ЧРКФ/ПКР.`,
+        ? `1 ЧРКФ/ПКР под другим экспертом либо ${Math.max(1, 2 - evalData.caclCount)} CACL.`
+        : `${Math.max(1, 5 - evalData.caclCount)} CACL (всего в 5 субъектах РФ у 4 судей), либо 1 ЧРКФ/ПКР.`,
+      evidence: progressEvs.length > 0 ? progressEvs : undefined,
     })
   }
 
@@ -244,6 +264,7 @@ export function buildDisciplineTitles(
       requirements: [{ text: '3 сертификата CACLBr', completed: true, details: evalData.pchBasis }],
     })
     explanations[`ПЧ РК (${code})`] = evalData.pchBasis
+    evidence[`${prefix}:ПЧ РК`] = evalData.caclBrEvents.slice(0, 3).map((e) => toSportEvidence(e, 'CACLBr', 'Монопородные состязания'))
   } else if (evalData.caclBrCount > 0) {
     titles.push({
       id: `breed-ch-sport-${idSuffix}`,
@@ -254,13 +275,23 @@ export function buildDisciplineTitles(
       progressPercent: Math.min(90, Math.round((evalData.caclBrCount / 3) * 100)),
       rulesSummary: `3 сертификата CACLBr на 3 разных состязаниях под ≥ 2 разными судьями ${prepDisc} (п. 3.3.2).`,
       requirements: [{ text: '3 сертификата CACLBr у ≥ 2 судей', completed: false, currentCount: evalData.caclBrCount, targetCount: 3, details: `В зачёте: ${evalData.caclBrCount}/3 CACLBr (судей: ${evalData.uniqueCaclBrJudgesCount})` }],
-      nextStepAdvice: `Для оформления ПЧ РК осталось получить ${Math.max(0, 3 - evalData.caclBrCount)} сертификата CACLBr ${prepDisc}.`,
+      nextStepAdvice: `${Math.max(1, 3 - evalData.caclBrCount)} CACLBr ${prepDisc} (у ≥ 2 разных судей).`,
+      evidence: evalData.caclBrEvents.map((e) => toSportEvidence(e, 'CACLBr', 'Монопородные состязания')),
     })
   }
 
-  if (evalData.chrkfCount > 0) explanations[`ЧРКФ РК (${code})`] = `Титул «Чемпион РКФ по рабочим качествам» в дисциплине «${disciplineName}» (${evalData.chrkfCount} побед)`
-  if (evalData.pchrkfCount > 0) explanations[`ПЧРКФ РК (${code})`] = `1-е место на Монопородном Чемпионате РКФ (${disciplineName})`
-  if (evalData.pkrCount > 0) explanations[`ПКР РК (${code})`] = `1-е место на Кубке России (${disciplineName})`
+  if (evalData.chrkfCount > 0) {
+    explanations[`ЧРКФ РК (${code})`] = `Победа (1-е место) на Чемпионате РКФ в дисциплине «${disciplineName}» при норме ≥ 75% баллов (${evalData.chrkfCount} раз — титул присваивается за каждую победу).`
+    evidence[`${prefix}:ЧРКФ РК`] = evalData.chrkfEvents.map((e) => toSportEvidence(e, '1-е место · ЧРКФ', 'Чемпионат РКФ'))
+  }
+  if (evalData.pchrkfCount > 0) {
+    explanations[`ПЧРКФ РК (${code})`] = `1-е место на Монопородном Чемпионате РКФ в дисциплине «${disciplineName}» при норме ≥ 75% баллов (${evalData.pchrkfCount} раз).`
+    evidence[`${prefix}:ПЧРКФ РК`] = evalData.pchrkfEvents.map((e) => toSportEvidence(e, '1-е место · ПЧРКФ', 'Монопородный ЧРКФ'))
+  }
+  if (evalData.pkrCount > 0) {
+    explanations[`ПКР РК (${code})`] = `1-е место на Кубке России в дисциплине «${disciplineName}» при норме ≥ 75% баллов (${evalData.pkrCount} раз — разыгрывается 1 раз в год).`
+    evidence[`${prefix}:ПКР РК`] = evalData.pkrEvents.map((e) => toSportEvidence(e, '1-е место · ПКР', 'Кубок России'))
+  }
 
-  return { titles, explanations }
+  return { titles, explanations, evidence }
 }

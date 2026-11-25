@@ -8,7 +8,7 @@
  * — Правила бегов и курсинга борзых РКФ / FCI
  */
 
-import type { CumulativeEvaluationResult, CumulativeTitle, DogCareerData, DogCertificatesSummary } from './types'
+import type { CumulativeEvaluationResult, CumulativeTitle, DogCareerData, DogCertificatesSummary, TitleEvidenceItem } from './types'
 import { buildDisciplineTitles, evaluateDiscipline } from './sportEvaluator'
 import { evaluateShowTitles } from './showEvaluator'
 import { evaluateSupremeAndOfficialLists } from './supremeEvaluator'
@@ -19,11 +19,13 @@ export * from './types'
 export function evaluateCumulativeTitles(data: DogCareerData): CumulativeEvaluationResult {
   const titles: CumulativeTitle[] = []
   const titleExplanations: Record<string, string> = {}
+  const titleEvidence: Record<string, TitleEvidenceItem[]> = {}
 
   // 1. Выставочный домен
   const showEval = evaluateShowTitles(data)
   titles.push(...showEval.titles)
   Object.assign(titleExplanations, showEval.explanations)
+  Object.assign(titleEvidence, showEval.evidence)
 
   // 2. Спортивный домен (Курсинг / БЗМП и Бега борзых)
   const allCompetitions = data.competitions ?? []
@@ -37,11 +39,17 @@ export function evaluateCumulativeTitles(data: DogCareerData): CumulativeEvaluat
   const racingOut = buildDisciplineTitles(racingEval, 'racing')
   titles.push(...coursingOut.titles, ...racingOut.titles)
   Object.assign(titleExplanations, coursingOut.explanations, racingOut.explanations)
+  Object.assign(titleEvidence, coursingOut.evidence, racingOut.evidence)
 
   // 3. Высшие звания и официальные списки
   const supreme = evaluateSupremeAndOfficialLists(data, coursingEval, racingEval, showEval)
   titles.push(...supreme.titles)
   Object.assign(titleExplanations, supreme.explanations)
+  for (const [k, items] of Object.entries(supreme.evidence)) {
+    if (!titleEvidence[k] || titleEvidence[k]!.length === 0) {
+      titleEvidence[k] = items
+    }
+  }
 
   populateTitleExplanations(
     titleExplanations,
@@ -111,6 +119,7 @@ export function evaluateCumulativeTitles(data: DogCareerData): CumulativeEvaluat
     officialSportTitles: supreme.officialSportTitles,
     officialShowTitles: supreme.officialShowTitles,
     titleExplanations,
+    titleEvidence,
     certificates,
   }
 }

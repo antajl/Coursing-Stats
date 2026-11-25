@@ -22,6 +22,7 @@ export interface CumulativeTitle {
   rulesSummary: string
   requirements: CumulativeRequirement[]
   nextStepAdvice?: string
+  evidence?: TitleEvidenceItem[]
 }
 
 export type InProgressTitle = CumulativeTitle
@@ -67,6 +68,16 @@ export interface CertificateEventItem {
   judge?: string
 }
 
+export interface TitleEvidenceItem {
+  kind: 'sport' | 'show'
+  title: string
+  date?: string
+  eventId?: number | string
+  exhibitionId?: number | string
+  award?: string
+  note?: string
+}
+
 export interface DogCertificatesSummary {
   caclEventsCoursing: Array<{ eventId?: number | string; title: string; date?: string; judge?: string }>
   caclEventsRacing: Array<{ eventId?: number | string; title: string; date?: string; judge?: string }>
@@ -93,5 +104,6 @@ export interface CumulativeEvaluationResult {
   officialSportTitles: Array<{ title: string; count: number }>
   officialShowTitles: Array<{ title: string; count: number }>
   titleExplanations: Record<string, string>
+  titleEvidence?: Record<string, TitleEvidenceItem[]>
   certificates: DogCertificatesSummary
 }

@@ -3,7 +3,7 @@
  */
 
 import { parseShowTitles, splitShowTitleTokens } from '../../../../backend/lib/show-award-ranking'
-import type { DogCareerData } from './types'
+import type { DogCareerData, TitleEvidenceItem } from './types'
 
 export interface ShowCertEvent {
   exhibitionId?: number | string
@@ -33,6 +33,14 @@ export interface ParsedShowCareer {
   ychfWithoutJcacCount: number
   vchfExhibitions: ShowCertEvent[]
   vchfWithoutVcacCount: number
+  chrkfExhibitions: ShowCertEvent[]
+  ychrkfExhibitions: ShowCertEvent[]
+  vchrkfExhibitions: ShowCertEvent[]
+  nkpAdultExhibitions: ShowCertEvent[]
+  nkpJuniorExhibitions: ShowCertEvent[]
+  nkpVeteranExhibitions: ShowCertEvent[]
+  cacibExhibitions: ShowCertEvent[]
+  winnerRussiaExhibitions: ShowCertEvent[]
   hasWinnerRussiaOrEurasia: boolean
   cacCount: number
   jcacCount: number
@@ -105,6 +113,17 @@ function countUniqueJudgesOrShows(events: ShowCertEvent[], fallbackCount: number
   return { count, hasExact }
 }
 
+export function toShowEvidence(ev: ShowCertEvent, award: string, note?: string): TitleEvidenceItem {
+  return {
+    kind: 'show',
+    title: ev.title || 'Выставка РКФ',
+    date: ev.date || undefined,
+    exhibitionId: ev.exhibitionId,
+    award,
+    note: note || (ev.hasExplicitJudge ? `Судья: ${ev.judge}` : undefined),
+  }
+}
+
 export function parseShowCareer(data: DogCareerData): ParsedShowCareer {
   const showHistory = data.showHistory ?? []
   const cacExhibitions: ShowCertEvent[] = []
@@ -113,6 +132,14 @@ export function parseShowCareer(data: DogCareerData): ParsedShowCareer {
   const chfExhibitions: ShowCertEvent[] = []
   const ychfExhibitions: ShowCertEvent[] = []
   const vchfExhibitions: ShowCertEvent[] = []
+  const chrkfExhibitions: ShowCertEvent[] = []
+  const ychrkfExhibitions: ShowCertEvent[] = []
+  const vchrkfExhibitions: ShowCertEvent[] = []
+  const nkpAdultExhibitions: ShowCertEvent[] = []
+  const nkpJuniorExhibitions: ShowCertEvent[] = []
+  const nkpVeteranExhibitions: ShowCertEvent[] = []
+  const cacibExhibitions: ShowCertEvent[] = []
+  const winnerRussiaExhibitions: ShowCertEvent[] = []
 
   let histRCac = 0
   let histRJcac = 0
@@ -139,23 +166,24 @@ export function parseShowCareer(data: DogCareerData): ParsedShowCareer {
     const doubleAdult = isDoubleCertShow(exTitle, true)
     const doubleAge = isDoubleCertShow(exTitle, false)
 
-    if (parsed.CAC > 0) {
-      cacExhibitions.push({ exhibitionId: entry.exhibition_id, title: exTitle, date, judge, hasExplicitJudge, weight: doubleAdult ? 2 : 1, isSpecialStatus: specialStatus })
-    } else if (parsed.R_CAC > 0 && doubleAdult) {
-      cacExhibitions.push({ exhibitionId: entry.exhibition_id, title: `${exTitle} (R.CAC)`, date, judge, hasExplicitJudge, weight: 1, isSpecialStatus: specialStatus })
+    const baseEv: ShowCertEvent = {
+      exhibitionId: entry.exhibition_id,
+      title: exTitle,
+      date,
+      judge,
+      hasExplicitJudge,
+      weight: 1,
+      isSpecialStatus: specialStatus,
     }
 
-    if (parsed.JCAC > 0) {
-      jcacExhibitions.push({ exhibitionId: entry.exhibition_id, title: exTitle, date, judge, hasExplicitJudge, weight: doubleAge ? 2 : 1, isSpecialStatus: specialStatus })
-    } else if (parsed.R_JCAC > 0 && doubleAge) {
-      jcacExhibitions.push({ exhibitionId: entry.exhibition_id, title: `${exTitle} (R.JCAC)`, date, judge, hasExplicitJudge, weight: 1, isSpecialStatus: specialStatus })
-    }
+    if (parsed.CAC > 0) cacExhibitions.push({ ...baseEv, weight: doubleAdult ? 2 : 1 })
+    else if (parsed.R_CAC > 0 && doubleAdult) cacExhibitions.push({ ...baseEv, title: `${exTitle} (R.CAC)` })
 
-    if (parsed.VCAC > 0) {
-      vcacExhibitions.push({ exhibitionId: entry.exhibition_id, title: exTitle, date, judge, hasExplicitJudge, weight: doubleAge ? 2 : 1, isSpecialStatus: specialStatus })
-    } else if (parsed.R_VCAC > 0 && doubleAge) {
-      vcacExhibitions.push({ exhibitionId: entry.exhibition_id, title: `${exTitle} (R.VCAC)`, date, judge, hasExplicitJudge, weight: 1, isSpecialStatus: specialStatus })
-    }
+    if (parsed.JCAC > 0) jcacExhibitions.push({ ...baseEv, weight: doubleAge ? 2 : 1 })
+    else if (parsed.R_JCAC > 0 && doubleAge) jcacExhibitions.push({ ...baseEv, title: `${exTitle} (R.JCAC)` })
+
+    if (parsed.VCAC > 0) vcacExhibitions.push({ ...baseEv, weight: doubleAge ? 2 : 1 })
+    else if (parsed.R_VCAC > 0 && doubleAge) vcacExhibitions.push({ ...baseEv, title: `${exTitle} (R.VCAC)` })
 
     if (!doubleAdult) histRCac += parsed.R_CAC
     if (!doubleAge) {
@@ -168,19 +196,16 @@ export function parseShowCareer(data: DogCareerData): ParsedShowCareer {
     if (parsed.YCHRKF > 0 && parsed.JCAC === 0) histYchrkfWithoutJcac += parsed.YCHRKF
     histVchrkf += parsed.VCHRKF
     if (parsed.VCHRKF > 0 && parsed.VCAC === 0) histVchrkfWithoutVcac += parsed.VCHRKF
-
+    if (parsed.CHRKF > 0) chrkfExhibitions.push(baseEv)
+    if (parsed.YCHRKF > 0) ychrkfExhibitions.push(baseEv)
+    if (parsed.VCHRKF > 0) vchrkfExhibitions.push(baseEv)
+    if (parsed.CACIB > 0) cacibExhibitions.push(baseEv)
+    if (parsed.KCHK > 0 || parsed.KCHP > 0 || parsed.SS > 0) nkpAdultExhibitions.push(baseEv)
+    if (parsed.YKCHK > 0 || parsed.YKCHP > 0 || parsed.YSS > 0) nkpJuniorExhibitions.push(baseEv)
+    if (parsed.VKCHK > 0 || parsed.VKCHP > 0 || parsed.VSS > 0) nkpVeteranExhibitions.push(baseEv)
     if (parsed.P_RUSSIA > 0 || /победитель\s*[«"]?(еврази|росси)/i.test(rawTitle)) {
       hasWinnerRussiaOrEurasia = true
-    }
-
-    const baseEv: ShowCertEvent = {
-      exhibitionId: entry.exhibition_id,
-      title: exTitle,
-      date,
-      judge,
-      hasExplicitJudge,
-      weight: 1,
-      isSpecialStatus: specialStatus,
+      winnerRussiaExhibitions.push(baseEv)
     }
     if (tokens.includes('ЧФ')) chfExhibitions.push(baseEv)
     if (tokens.includes('ЮЧФ')) {
@@ -242,6 +267,14 @@ export function parseShowCareer(data: DogCareerData): ParsedShowCareer {
     ychfWithoutJcacCount,
     vchfExhibitions,
     vchfWithoutVcacCount,
+    chrkfExhibitions,
+    ychrkfExhibitions,
+    vchrkfExhibitions,
+    nkpAdultExhibitions,
+    nkpJuniorExhibitions,
+    nkpVeteranExhibitions,
+    cacibExhibitions,
+    winnerRussiaExhibitions,
     hasWinnerRussiaOrEurasia: hasWinnerRussiaOrEurasia || (data.showTitles?.P_RUSSIA ?? 0) > 0,
     cacCount,
     jcacCount,

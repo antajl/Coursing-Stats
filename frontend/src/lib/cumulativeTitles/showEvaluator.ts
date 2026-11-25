@@ -3,13 +3,14 @@
  * (Положение о титулах РКФ, в ред. от 18.06.2025, с 01.07.2025, актуально на 2026 год).
  */
 
-import type { CumulativeTitle, DogCareerData } from './types'
-import { parseShowCareer, type ParsedShowCareer } from './showHelpers'
+import type { CumulativeTitle, DogCareerData, TitleEvidenceItem } from './types'
+import { parseShowCareer, toShowEvidence, type ParsedShowCareer } from './showHelpers'
 import { evaluateClubAndGrandShowTitles } from './showClubEvaluator'
 
 export interface ShowEvaluationOutput {
   titles: CumulativeTitle[]
   explanations: Record<string, string>
+  evidence: Record<string, TitleEvidenceItem[]>
   parsed: ParsedShowCareer
   jchrCompleted: boolean
   chrCompleted: boolean
@@ -37,6 +38,7 @@ function judgesNote(count: number, hasExact: boolean): string {
 export function evaluateShowTitles(data: DogCareerData): ShowEvaluationOutput {
   const titles: CumulativeTitle[] = []
   const explanations: Record<string, string> = {}
+  const evidence: Record<string, TitleEvidenceItem[]> = {}
   const p = parseShowCareer(data)
 
   // 1. ЮЧР: 3 JCAC у 3 разных судей (2 R.JCAC = 1 JCAC однократно; либо 3 ЮЧРКФ/ЮЧФ без CAC)
@@ -76,9 +78,13 @@ export function evaluateShowTitles(data: DogCareerData): ShowEvaluationOutput {
           details: judgesNote(p.uniqueJcacJudgesCount, p.hasExactJcacJudges),
         },
       ],
-      nextStepAdvice: jchrCompleted ? undefined : `Для закрытия ЮЧР осталось набрать ${Math.max(0, 3 - effectiveJcac)} JCAC под новым судьёй.`,
+      nextStepAdvice: jchrCompleted ? undefined : `${Math.max(1, 3 - effectiveJcac)} JCAC под новым судьёй.`,
     })
-    if (jchrCompleted) explanations['ЮЧР'] = jchrBasis
+    if (jchrCompleted) {
+      explanations['ЮЧР'] = jchrBasis
+      const evs = p.jcacExhibitions.map((e) => toShowEvidence(e, e.weight > 1 ? `JCAC ×${e.weight}` : 'JCAC'))
+      if (evs.length) evidence['show:ЮЧР'] = evs
+    }
   }
 
   // 2. ЮЧРКФ: 1 ЮЧРКФ или 2 ЮЧФ 2 разных федераций
@@ -86,9 +92,11 @@ export function evaluateShowTitles(data: DogCareerData): ShowEvaluationOutput {
   const jchrkfDisplayCount = p.ychrkfCount + jchrkfFromYchf
   const jchrkfCompleted = p.ychrkfCount >= 1 || p.ychfExhibitions.length >= 2
   const jchrkfBasis =
-    p.ychrkfCount >= 1
-      ? `Сертификат ЮЧРКФ на выставке ранга ЧРКФ (${p.ychrkfCount} шт.)${p.ychfExhibitions.length >= 2 ? ` + ${p.ychfExhibitions.length} сертификата ЮЧФ разных федераций` : ''}`
-      : `${p.ychfExhibitions.length} сертификатов Юного чемпиона федерации (норма: 2 ЮЧФ разных федераций под разными судьями)`
+    p.ychrkfCount >= 1 && jchrkfFromYchf >= 1
+      ? `Титул многократный (итого ×${jchrkfDisplayCount}): ${p.ychrkfCount} раз по прямому сертификату ЮЧРКФ и ещё ${jchrkfFromYchf} раз обменом ${p.ychfExhibitions.length} ЮЧФ (при условии разных федераций и разных судей).`
+      : p.ychrkfCount >= 1
+        ? `Получен прямой сертификат ЮЧРКФ на выставке ранга ЧРКФ (${p.ychrkfCount} раз — каждый сертификат ЮЧРКФ даёт отдельный титул).`
+        : `Набрано ${p.ychfExhibitions.length} сертификатов ЮЧФ (2 ЮЧФ от 2 разных федераций под 2 разными судьями дают 1 титул ЮЧРКФ).`
 
   if (jchrkfCompleted || p.ychfExhibitions.length > 0) {
     titles.push({
@@ -109,9 +117,16 @@ export function evaluateShowTitles(data: DogCareerData): ShowEvaluationOutput {
           details: p.ychrkfCount > 0 ? `ЮЧРКФ: ${p.ychrkfCount}` : `ЮЧФ: ${p.ychfExhibitions.length}/2`,
         },
       ],
-      nextStepAdvice: jchrkfCompleted ? undefined : 'Остался 1 сертификат ЮЧФ другой федерации либо 1 ЮЧРКФ.',
+      nextStepAdvice: jchrkfCompleted ? undefined : '1 сертификат ЮЧФ другой федерации либо 1 ЮЧРКФ.',
     })
-    if (jchrkfCompleted) explanations['ЮЧРКФ'] = jchrkfBasis
+    if (jchrkfCompleted) {
+      explanations['ЮЧРКФ'] = jchrkfBasis
+      const evs: TitleEvidenceItem[] = [
+        ...p.ychrkfExhibitions.map((e) => toShowEvidence(e, 'ЮЧРКФ')),
+        ...p.ychfExhibitions.map((e) => toShowEvidence(e, 'ЮЧФ', 'В паре 2 ЮЧФ разных федераций дают 1 ЮЧРКФ')),
+      ]
+      if (evs.length) evidence['show:ЮЧРКФ'] = evs
+    }
   }
 
   // 3. ЧР ПО КРАСОТЕ
@@ -138,6 +153,10 @@ export function evaluateShowTitles(data: DogCareerData): ShowEvaluationOutput {
 
   if (chrCompleted || effectiveCac > 0 || p.rCacCount > 0) {
     const targetCac = jchrCompleted || p.hasYearSpan || p.allCacAreSpecialStatus ? 4 : 6
+    const chrEvs: TitleEvidenceItem[] = [
+      ...p.winnerRussiaExhibitions.map((e) => toShowEvidence(e, 'Победитель')),
+      ...p.cacExhibitions.map((e) => toShowEvidence(e, e.weight > 1 ? `CAC ×${e.weight}` : 'CAC')),
+    ]
     titles.push({
       id: 'ch-russia',
       title: 'Чемпион России по красоте',
@@ -157,18 +176,32 @@ export function evaluateShowTitles(data: DogCareerData): ShowEvaluationOutput {
           details: fulfillsChrScheme6 ? 'Выполнена экспресс-норма 6+ CAC' : jchrCompleted ? 'Льгота по титулу ЮЧР (годичный интервал не нужен)' : p.allCacAreSpecialStatus ? 'Все CAC на выставках CACIB / ЧРКФ ОС' : `Интервал: ${p.spanDays} дн. (требуется 365 либо ЮЧР / 6 CAC)`,
         },
       ],
-      nextStepAdvice: chrCompleted ? undefined : `Необходимо получить ещё ${Math.max(1, targetCac - effectiveCac)} CAC под новыми экспертами.`,
+      nextStepAdvice: chrCompleted ? undefined : `${Math.max(1, targetCac - effectiveCac)} CAC под новыми экспертами.`,
+      evidence: chrEvs.length > 0 ? chrEvs : undefined,
     })
-    if (chrCompleted) explanations['ЧР'] = chrBasis
+    if (chrCompleted) {
+      explanations['ЧР'] = chrBasis
+      if (chrEvs.length) evidence['show:ЧР'] = chrEvs
+    }
   }
 
   // 4. ЧРКФ ПО КРАСОТЕ
   const chfCount = Math.max(p.chfExhibitions.length, data.showTitles?.CHF ?? 0)
+  const chrkfFromChf = Math.floor(chfCount / 3)
   const chrkfCompleted = p.chrkfCount >= 1 || chfCount >= 3
-  const chrkfDisplayCount = Math.max(p.chrkfCount, Math.floor(chfCount / 3))
-  const chrkfBasis = p.chrkfCount >= 1 ? `1 сертификат ЧРКФ на выставке ранга ЧРКФ (${p.chrkfCount} шт.)` : `${chfCount} сертификатов Чемпиона федерации (норма: 3 ЧФ разных федераций)`
+  const chrkfDisplayCount = p.chrkfCount + chrkfFromChf
+  const chrkfBasis =
+    p.chrkfCount >= 1 && chrkfFromChf >= 1
+      ? `Титул многократный (итого ×${chrkfDisplayCount}): ${p.chrkfCount} раз по прямому сертификату ЧРКФ и ещё ${chrkfFromChf} раз обменом ${chfCount} ЧФ (по 3 ЧФ разных федераций).`
+      : p.chrkfCount >= 1
+        ? `Получен прямой сертификат ЧРКФ на выставке ранга ЧРКФ / ЧРКФ ОС / CACIB (${p.chrkfCount} раз — каждый ЧРКФ даёт отдельный титул).`
+        : `Набрано ${chfCount} сертификатов ЧФ (3 ЧФ от 3 разных федераций минимум под 2 разными судьями дают 1 титул ЧРКФ).`
 
   if (chrkfCompleted || chfCount > 0) {
+    const chrkfEvs: TitleEvidenceItem[] = [
+      ...p.chrkfExhibitions.map((e) => toShowEvidence(e, 'ЧРКФ')),
+      ...p.chfExhibitions.map((e) => toShowEvidence(e, 'ЧФ', '3 ЧФ разных федераций дают 1 ЧРКФ')),
+    ]
     titles.push({
       id: 'ch-rkf',
       title: 'Чемпион РКФ по красоте',
@@ -179,9 +212,13 @@ export function evaluateShowTitles(data: DogCareerData): ShowEvaluationOutput {
       fulfilledBasis: chrkfCompleted ? chrkfBasis : undefined,
       rulesSummary: '1 сертификат ЧРКФ на выставке ранга ЧРКФ либо 3 сертификата ЧФ трёх разных федераций.',
       requirements: [{ text: 'Сертификат «Чемпион РКФ» или 3 «Чемпион Федерации»', completed: chrkfCompleted, currentCount: p.chrkfCount > 0 ? p.chrkfCount : chfCount, targetCount: p.chrkfCount > 0 ? 1 : 3, details: p.chrkfCount > 0 ? `ЧРКФ: ${p.chrkfCount}` : `ЧФ: ${chfCount}/3` }],
-      nextStepAdvice: chrkfCompleted ? undefined : `Осталось ${Math.max(0, 3 - chfCount)} ЧФ других федераций или 1 ЧРКФ.`,
+      nextStepAdvice: chrkfCompleted ? undefined : `${Math.max(1, 3 - chfCount)} ЧФ других федераций или 1 ЧРКФ.`,
+      evidence: chrkfEvs.length > 0 ? chrkfEvs : undefined,
     })
-    if (chrkfCompleted) explanations['ЧРКФ'] = chrkfBasis
+    if (chrkfCompleted) {
+      explanations['ЧРКФ'] = chrkfBasis
+      if (chrkfEvs.length) evidence['show:ЧРКФ'] = chrkfEvs
+    }
   }
 
   // 5. ВЧР и ВЧРКФ
@@ -199,14 +236,24 @@ export function evaluateShowTitles(data: DogCareerData): ShowEvaluationOutput {
       fulfilledBasis: vchrCompleted ? vchrBasis : undefined,
       rulesSummary: '3 VCAC у 3 разных судей в классе ветеранов (2 R.VCAC = 1 VCAC однократно).',
       requirements: [{ text: '3 сертификата VCAC у 3 разных судей', completed: vchrCompleted, currentCount: effectiveVcac, targetCount: 3, details: `В наличии: ${p.vcacCount} VCAC · ${judgesNote(p.uniqueVcacJudgesCount, p.hasExactVcacJudges)}` }],
-      nextStepAdvice: vchrCompleted ? undefined : `Осталось получить ${Math.max(0, 3 - effectiveVcac)} VCAC.`,
+      nextStepAdvice: vchrCompleted ? undefined : `${Math.max(1, 3 - effectiveVcac)} VCAC под новым судьёй.`,
     })
-    if (vchrCompleted) explanations['ВЧР'] = vchrBasis
+    if (vchrCompleted) {
+      explanations['ВЧР'] = vchrBasis
+      const evs = p.vcacExhibitions.map((e) => toShowEvidence(e, e.weight > 1 ? `VCAC ×${e.weight}` : 'VCAC'))
+      if (evs.length) evidence['show:ВЧР'] = evs
+    }
   }
 
+  const vchrkfFromVchf = Math.floor(p.vchfExhibitions.length / 2)
   const vchrkfCompleted = p.vchrkfCount >= 1 || p.vchfExhibitions.length >= 2
-  const vchrkfDisplayCount = p.vchrkfCount + Math.floor(p.vchfExhibitions.length / 2)
-  const vchrkfBasis = p.vchrkfCount >= 1 ? `Сертификат ВЧРКФ на выставке ранга ЧРКФ (${p.vchrkfCount} шт.)` : `${p.vchfExhibitions.length} сертификатов Ветеран-чемпион федерации (норма: 2 ВЧФ)`
+  const vchrkfDisplayCount = p.vchrkfCount + vchrkfFromVchf
+  const vchrkfBasis =
+    p.vchrkfCount >= 1 && vchrkfFromVchf >= 1
+      ? `Титул многократный (итого ×${vchrkfDisplayCount}): ${p.vchrkfCount} раз по прямому сертификату ВЧРКФ и ещё ${vchrkfFromVchf} раз обменом ${p.vchfExhibitions.length} ВЧФ (при условии разных федераций и судей).`
+      : p.vchrkfCount >= 1
+        ? `Получен прямой сертификат ВЧРКФ на выставке ранга ЧРКФ (${p.vchrkfCount} раз).`
+        : `Набрано ${p.vchfExhibitions.length} сертификатов ВЧФ (2 ВЧФ от 2 разных федераций под 2 разными судьями дают 1 титул ВЧРКФ).`
   if (vchrkfCompleted || p.vchfExhibitions.length > 0) {
     titles.push({
       id: 'vch-rkf',
@@ -219,17 +266,26 @@ export function evaluateShowTitles(data: DogCareerData): ShowEvaluationOutput {
       rulesSummary: '1 сертификат ВЧРКФ либо 2 сертификата ВЧФ 2 разных федераций под разными судьями.',
       requirements: [{ text: 'Сертификат ВЧРКФ или 2 ВЧФ', completed: vchrkfCompleted, currentCount: p.vchrkfCount > 0 ? p.vchrkfCount : p.vchfExhibitions.length, targetCount: p.vchrkfCount > 0 ? 1 : 2, details: p.vchrkfCount > 0 ? `ВЧРКФ: ${p.vchrkfCount}` : `ВЧФ: ${p.vchfExhibitions.length}/2` }],
     })
-    if (vchrkfCompleted) explanations['ВЧРКФ'] = vchrkfBasis
+    if (vchrkfCompleted) {
+      explanations['ВЧРКФ'] = vchrkfBasis
+      const evs: TitleEvidenceItem[] = [
+        ...p.vchrkfExhibitions.map((e) => toShowEvidence(e, 'ВЧРКФ')),
+        ...p.vchfExhibitions.map((e) => toShowEvidence(e, 'ВЧФ', 'В паре 2 ВЧФ разных федераций дают 1 ВЧРКФ')),
+      ]
+      if (evs.length) evidence['show:ВЧРКФ'] = evs
+    }
   }
 
   // 6. НКП и Гранды красоты
-  const clubAndGrand = evaluateClubAndGrandShowTitles(data, { chrCompleted, jchrCompleted, vchrCompleted })
+  const clubAndGrand = evaluateClubAndGrandShowTitles(data, { chrCompleted, jchrCompleted, vchrCompleted }, p)
   titles.push(...clubAndGrand.titles)
   Object.assign(explanations, clubAndGrand.explanations)
+  Object.assign(evidence, clubAndGrand.evidence)
 
   return {
     titles,
     explanations,
+    evidence,
     parsed: p,
     jchrCompleted,
     chrCompleted,

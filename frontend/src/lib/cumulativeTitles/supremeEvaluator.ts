@@ -4,12 +4,12 @@
  */
 
 import { compareDogProfileTitles, isOfficialDogTitleToken } from '../qualificationTitles'
-import { SHOW_AWARD_BADGE, type ShowAwardKey } from '../../../../backend/lib/show-award-ranking'
-import type { CumulativeTitle, DogCareerData, DogCompetitionEntry } from './types'
+import { SHOW_AWARD_BADGE, parseShowTitles, type ShowAwardKey } from '../../../../backend/lib/show-award-ranking'
+import type { CumulativeTitle, DogCareerData, DogCompetitionEntry, TitleEvidenceItem } from './types'
 import type { DisciplineEvaluation } from './sportEvaluator'
-import { hasExactCertToken, isValidSportResult } from './sportHelpers'
+import { hasExactCertToken, isValidSportResult, toSportEvidence } from './sportHelpers'
 import type { ShowEvaluationOutput } from './showEvaluator'
-import { parseDateMs } from './showHelpers'
+import { parseDateMs, toShowEvidence } from './showHelpers'
 
 export function evaluateSupremeAndOfficialLists(
   data: DogCareerData,
@@ -19,11 +19,16 @@ export function evaluateSupremeAndOfficialLists(
 ) {
   const titles: CumulativeTitle[] = []
   const explanations: Record<string, string> = {}
+  const evidence: Record<string, TitleEvidenceItem[]> = {}
   const allCompetitions = data.competitions ?? []
 
   // 1. ГЧРКФ РК
   const gchrkfCompleted = coursingEval.chrkfCount >= 1 && racingEval.chrkfCount >= 1
   const gchrkfBasis = `Оформляется при наличии сертификатов «Чемпион РКФ по рабочим качествам» (WCH RKF) в двух различных дисциплинах: Курсинг борзых (${coursingEval.chrkfCount} ЧРКФ) + Бега борзых (${racingEval.chrkfCount} ЧРКФ)`
+  const gchrkfEvs: TitleEvidenceItem[] = []
+  if (coursingEval.chrkfEvents[0]) gchrkfEvs.push(toSportEvidence(coursingEval.chrkfEvents[0], 'ЧРКФ РК (Курсинг)', 'Чемпионат РКФ'))
+  if (racingEval.chrkfEvents[0]) gchrkfEvs.push(toSportEvidence(racingEval.chrkfEvents[0], 'ЧРКФ РК (Рейсинг)', 'Чемпионат РКФ'))
+
   if (gchrkfCompleted || coursingEval.chrkfCount > 0 || racingEval.chrkfCount > 0) {
     titles.push({
       id: 'grand-ch-rkf-sport',
@@ -50,13 +55,26 @@ export function evaluateSupremeAndOfficialLists(
           details: racingEval.chrkfCount >= 1 ? `Выполнено (${racingEval.chrkfCount} ЧРКФ)` : 'Требуется победа ранга ЧРКФ в бегах',
         },
       ],
+      nextStepAdvice: gchrkfCompleted
+        ? undefined
+        : coursingEval.chrkfCount >= 1
+          ? '1 победа ЧРКФ РК по бегам борзых (ББ).'
+          : '1 победа ЧРКФ РК по курсингу борзых (КБ).',
+      evidence: gchrkfEvs.length > 0 ? gchrkfEvs : undefined,
     })
-    if (gchrkfCompleted) explanations['ГЧРКФ РК'] = gchrkfBasis
+    if (gchrkfCompleted) {
+      explanations['ГЧРКФ РК'] = gchrkfBasis
+      if (gchrkfEvs.length) evidence['supreme:ГЧРКФ РК'] = gchrkfEvs
+    }
   }
 
   // 2. ГЧР РК
   const gchrSportCompleted = coursingEval.hasChr && racingEval.hasChr
   const gchrBasis = 'Получены титулы Чемпиона России по двум разным дисциплинам (Курсинг борзых + Бега борзых)'
+  const gchrSportEvs: TitleEvidenceItem[] = []
+  if (coursingEval.chrEvent) gchrSportEvs.push(toSportEvidence(coursingEval.chrEvent, 'ЧР РК (Курсинг)', 'Чемпионат России'))
+  if (racingEval.chrEvent) gchrSportEvs.push(toSportEvidence(racingEval.chrEvent, 'ЧР РК (Рейсинг)', 'Чемпионат России'))
+
   if (gchrSportCompleted || coursingEval.hasChr || racingEval.hasChr) {
     titles.push({
       id: 'grand-ch-sport',
@@ -71,14 +89,31 @@ export function evaluateSupremeAndOfficialLists(
         { text: 'Чемпион России по бегам борзых (ЧР РК ББ)', completed: racingEval.hasChr, details: racingEval.hasChr ? '1-е место на Чемпионате России по бегам' : 'Не выполнен' },
         { text: 'Чемпион России по курсингу борзых (ЧР РК КБ)', completed: coursingEval.hasChr, details: coursingEval.hasChr ? '1-е место на Чемпионате России по курсингу' : 'Участие в Чемпионате России по курсингу' },
       ],
+      nextStepAdvice: gchrSportCompleted
+        ? undefined
+        : racingEval.hasChr
+          ? '1-е место на Чемпионате России по курсингу борзых (КБ).'
+          : '1-е место на Чемпионате России по бегам борзых (ББ).',
+      evidence: gchrSportEvs.length > 0 ? gchrSportEvs : undefined,
     })
-    if (gchrSportCompleted) explanations['ГЧР РК'] = gchrBasis
+    if (gchrSportCompleted) {
+      explanations['ГЧР РК'] = gchrBasis
+      if (gchrSportEvs.length) evidence['supreme:ГЧР РК'] = gchrSportEvs
+    }
   }
 
   // 3. АЧР
   const sportLegCompleted = coursingEval.hasChr || racingEval.hasChr || coursingEval.nchCompleted || racingEval.nchCompleted
   const absoluteCompleted = showEval.gchrShowCompleted && sportLegCompleted
   const achBasis = 'Выполнены требования высшего стандарта: Гранд чемпион России по красоте + Чемпион по рабочим качествам'
+  const achEvs: TitleEvidenceItem[] = [...(showEval.evidence['supreme:ГЧР'] ?? [])]
+  if (coursingEval.chrEvent) achEvs.push(toSportEvidence(coursingEval.chrEvent, 'ЧР РК (Курсинг)', 'Чемпионат России'))
+  if (racingEval.chrEvent) achEvs.push(toSportEvidence(racingEval.chrEvent, 'ЧР РК (Рейсинг)', 'Чемпионат России'))
+  if (!coursingEval.chrEvent && !racingEval.chrEvent) {
+    if (coursingEval.nchCompleted && coursingEval.chrkfEvents[0]) achEvs.push(toSportEvidence(coursingEval.chrkfEvents[0], 'НЧ РК (Курсинг)', 'Состязания'))
+    if (racingEval.nchCompleted && racingEval.chrkfEvents[0]) achEvs.push(toSportEvidence(racingEval.chrkfEvents[0], 'НЧ РК (Рейсинг)', 'Состязания'))
+  }
+
   if (absoluteCompleted || showEval.gchrShowCompleted || sportLegCompleted) {
     titles.push({
       id: 'absolute-ch-russia',
@@ -93,8 +128,17 @@ export function evaluateSupremeAndOfficialLists(
         { text: 'Спортивное звание (ЧР РК или НЧ РК)', completed: sportLegCompleted, details: sportLegCompleted ? 'Выполнено в состязаниях' : 'Требуется титул в состязаниях' },
         { text: 'Гранд чемпион России по красоте (ГЧР)', completed: showEval.gchrShowCompleted, details: showEval.gchrShowCompleted ? 'Выполнено' : 'Требуется завершить ГЧР по выставкам' },
       ],
+      nextStepAdvice: absoluteCompleted
+        ? undefined
+        : sportLegCompleted
+          ? 'Закрыть «Гранд чемпион России по красоте» (ГЧР: ЧР + ЧНКП).'
+          : 'Закрыть спортивный титул ЧР РК или НЧ РК.',
+      evidence: achEvs.length > 0 ? achEvs : undefined,
     })
-    if (absoluteCompleted) explanations['АЧР'] = achBasis
+    if (absoluteCompleted) {
+      explanations['АЧР'] = achBasis
+      if (achEvs.length) evidence['supreme:АЧР'] = achEvs
+    }
   }
 
   // 4. C.I.C.
@@ -226,9 +270,39 @@ export function evaluateSupremeAndOfficialLists(
   officialSportTitles.sort((a, b) => compareDogProfileTitles(a.title, b.title))
   officialShowTitles.sort((a, b) => compareDogProfileTitles(a.title, b.title))
 
+  if (hasExplicitCic && cacilValidEvents.length > 0) {
+    evidence['supreme:C.I.C.'] = cacilValidEvents.map((c) => toSportEvidence(c, 'CACIL', 'Международные состязания'))
+  }
+  if (showEval.parsed.cacibExhibitions.length > 0) {
+    const cacibEvs = showEval.parsed.cacibExhibitions.map((e) => toShowEvidence(e, 'CACIB'))
+    evidence['supreme:C.I.B.'] = cacibEvs
+    evidence['supreme:C.I.E.'] = cacibEvs
+  }
+
+  for (const h of data.showHistory ?? []) {
+    const parsed = parseShowTitles(h.title || '')
+    for (const [k, cnt] of Object.entries(parsed)) {
+      if (!cnt || cnt <= 0) continue
+      const badge = SHOW_AWARD_BADGE[k as ShowAwardKey]
+      if (!badge) continue
+      const key = `show:${badge}`
+      if (!evidence[key]) evidence[key] = []
+      if (['ЧРКФ', 'ЮЧРКФ', 'ВЧРКФ'].includes(badge)) continue
+      evidence[key].push({
+        kind: 'show',
+        title: h.exhibition_title || 'Выставка РКФ',
+        date: h.date || undefined,
+        exhibitionId: h.exhibition_id,
+        award: badge,
+        note: h.judge ? `Судья: ${h.judge}` : undefined,
+      })
+    }
+  }
+
   return {
     titles,
     explanations,
+    evidence,
     cacilValidEvents,
     officialSupremeTitles,
     officialCoursingTitles,

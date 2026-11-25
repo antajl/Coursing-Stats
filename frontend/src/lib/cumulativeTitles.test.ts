@@ -29,10 +29,12 @@ describe('evaluateCumulativeTitles', () => {
     expect(chrkf).toBeDefined()
     expect(chrkf?.status).toBe('completed')
 
-    // Grand champion is in progress
+    // Grand champion is in progress with concrete remaining КЧК advice
     const gchr = inProgress.find((t) => t.id === 'grand-ch-russia')
     expect(gchr).toBeDefined()
     expect(gchr?.status).toBe('in_progress')
+    expect(gchr?.nextStepAdvice).toContain('3 КЧК')
+    expect(gchr?.evidence?.length).toBeGreaterThan(0)
 
     expect(officialShowTitles.map((t) => t.title)).toEqual(['ЧР', 'ЧРКФ'])
   })
@@ -348,9 +350,18 @@ describe('evaluateCumulativeTitles', () => {
     expect(res.titleExplanations['ЮЧРКФ']).toBeTruthy()
     expect(res.titleExplanations['show:ЮЧРКФ']).toBeTruthy()
 
-    // Coursing НЧ РК completed via Scheme 4, Racing НЧ РК in progress with 2 CACL
+    // Title evidence must trace exact exhibitions and competitions
+    expect(res.titleEvidence?.['show:ЮЧРКФ']).toHaveLength(3)
+    expect(res.titleEvidence?.['show:ЮЧР']).toHaveLength(3)
+    expect(res.titleEvidence?.['coursing:ЧРКФ РК']).toHaveLength(2)
+    expect(res.titleEvidence?.['coursing:НЧ РК']).toHaveLength(2)
+
+    // Coursing НЧ РК completed via Scheme 4, Racing НЧ РК in progress with 2 CACL and evidence
     expect(res.officialCoursingTitles.map((t) => t.title)).toContain('НЧ РК')
-    expect(res.inProgress.find((t) => t.id === 'national-ch-sport-racing')).toBeDefined()
+    const racingNch = res.inProgress.find((t) => t.id === 'national-ch-sport-racing')
+    expect(racingNch).toBeDefined()
+    expect(racingNch?.evidence).toHaveLength(2)
+    expect(racingNch?.nextStepAdvice).toBeTruthy()
   })
 
   it('supports ЧР exemption with ЮЧР (4 CAC without 1-year span), ЮГЧР, ВЧР, and all 6 НЧ РК schemes + ПЧ РК', () => {
