@@ -41,10 +41,9 @@ body {
   background-color: var(--bg-base);
   background-image: radial-gradient(ellipse 160% 90% at 50% 15%, #FAF8F4 0%, #ECE6D8 100%);
   color: var(--text-main);
-  min-width: 850px;
-  min-height: 550px;
   line-height: 1.5;
-  overflow-x: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 /* Subtle Grain Texture Overlay matching coursing-stats.ru */

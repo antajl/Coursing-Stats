@@ -1,0 +1,30 @@
+/* Badges for status indicators */
+.badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2.5px 10px;
+  border-radius: 9999px;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid transparent;
+}
+
+.badge-ready {
+  background: var(--emerald-bg);
+  color: var(--emerald-text);
+  border-color: var(--emerald-border);
+}
+
+.badge-active {
+  background: var(--amber-bg);
+  color: var(--amber-text);
+  border-color: var(--amber-border);
+}
+
+.badge-rejected {
+  background: var(--rose-bg);
+  color: var(--rose-text);
+  border-color: var(--rose-border);
+}

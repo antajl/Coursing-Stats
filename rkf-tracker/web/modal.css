@@ -206,7 +206,7 @@
   border-radius: 10px;
   padding: 14px 16px;
   box-shadow: 0 2px 8px rgba(34, 31, 31, 0.04);
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .auth-primary-badge {
@@ -224,60 +224,81 @@
 }
 
 .auth-primary-title {
-  font-size: 13.5px;
+  font-size: 14px;
   font-weight: 700;
   color: #241708;
   margin: 0;
 }
 
-.auth-btn-primary {
+.auth-btn-main {
+  all: unset;
+  box-sizing: border-box;
   width: 100%;
-  height: 40px;
+  height: 44px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #B28247 0%, #8B5A2B 100%);
+  color: #FFFFFF;
+  border: 1px solid rgba(120, 69, 24, 0.4);
+  box-shadow: 0 2px 8px rgba(139, 69, 19, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.25);
+  font-family: inherit;
   font-size: 13px;
   font-weight: 600;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   cursor: pointer;
-  transition: all 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.2s ease, background 0.2s ease;
+  user-select: none;
 }
 
-.auth-btn-primary:hover {
+.auth-btn-main:hover {
+  background: linear-gradient(135deg, #BD8D52 0%, #966332 100%);
   transform: translateY(-1px);
-  box-shadow: 0 3px 10px rgba(139, 69, 19, 0.2);
+  box-shadow: 0 4px 14px rgba(139, 69, 19, 0.35);
+}
+
+.auth-btn-main:active {
+  transform: translateY(0.5px);
+  box-shadow: 0 1px 4px rgba(139, 69, 19, 0.2);
 }
 
 /* Alternate / Fallback Login Accordion */
 .auth-alt-accordion {
   border-top: 1px solid var(--border-subtle);
-  padding-top: 8px;
-  margin-top: 4px;
+  padding-top: 10px;
+  margin-top: 6px;
 }
 
 .auth-alt-toggle {
+  all: unset;
+  box-sizing: border-box;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: none;
-  border: none;
-  padding: 6px 4px;
-  font-size: 11.5px;
+  background: #FAF8F5;
+  border: 1px solid rgba(210, 192, 168, 0.6);
+  border-radius: 8px;
+  padding: 9px 12px;
+  font-family: inherit;
+  font-size: 12px;
   font-weight: 600;
-  color: var(--text-soft);
+  color: #4A3822;
   cursor: pointer;
-  border-radius: 6px;
-  transition: all 0.15s ease;
+  transition: all 0.2s ease;
+  user-select: none;
 }
 
 .auth-alt-toggle:hover {
-  color: var(--text-main);
-  background: rgba(0, 0, 0, 0.02);
+  background: #F5EFEB;
+  border-color: rgba(185, 155, 115, 0.85);
+  color: #241708;
 }
 
 .alt-chevron {
   transition: transform 0.2s ease;
+  color: var(--text-soft);
 }
 
 .auth-alt-toggle.open .alt-chevron {
@@ -287,3 +308,30 @@
 .auth-alt-content {
   padding: 4px 0 2px 0;
 }
+
+.auth-btn-submit {
+  all: unset;
+  box-sizing: border-box;
+  width: 100%;
+  height: 38px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #B28247 0%, #8B5A2B 100%);
+  color: #FFFFFF;
+  border: 1px solid rgba(120, 69, 24, 0.4);
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.auth-btn-submit:hover {
+  background: linear-gradient(135deg, #BD8D52 0%, #966332 100%);
+  transform: translateY(-0.5px);
+}
+
+

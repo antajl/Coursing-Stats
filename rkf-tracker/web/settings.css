@@ -1,0 +1,96 @@
+/* Settings Modal Elements (Old Money Aesthetic) */
+.setting-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.setting-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.setting-select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 12.5px;
+  background: #FFFFFF;
+  color: var(--text-main);
+  outline: none;
+  font-family: inherit;
+  transition: border-color 0.15s;
+}
+
+.setting-select:focus {
+  border-color: var(--camel);
+}
+
+.setting-hint {
+  font-size: 11px;
+  color: var(--text-soft);
+  line-height: 1.35;
+}
+
+.setting-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.setting-check-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  color: var(--text-main);
+  cursor: pointer;
+  user-select: none;
+}
+
+.setting-account-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 12px;
+  background: #FAF8F5;
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+}
+
+.setting-account-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.setting-account-badge {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.btn-subtle-test {
+  all: unset;
+  box-sizing: border-box;
+  padding: 4px 10px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #784518;
+  background: rgba(185, 155, 115, 0.15);
+  border: 1px solid rgba(185, 155, 115, 0.35);
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.15s ease;
+}
+
+.btn-subtle-test:hover {
+  background: rgba(185, 155, 115, 0.28);
+}

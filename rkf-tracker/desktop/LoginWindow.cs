@@ -56,7 +56,7 @@ namespace CoursingStats.RkfTracker
                 webView.CoreWebView2.NavigationStarting += OnNavigationStarting;
                 webView.CoreWebView2.NavigationCompleted += async (s, e) => await CheckTokenAsync();
 
-                webView.CoreWebView2.Navigate("https://rkf.online/login");
+                webView.CoreWebView2.Navigate("https://rkf.online/auth/login");
                 pollTimer.Start();
             }
             catch (Exception ex)

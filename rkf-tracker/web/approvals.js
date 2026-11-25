@@ -1,5 +1,6 @@
 // Controller for RKF Competition Approvals Section (info.rkf.online data)
 import { renderCompactRowHtml } from './approvalsRow.js';
+import { setupSearchPopover } from './searchPopover.js';
 
 let competitionsList = [];
 let currentDiscipline = 'Курсинг борзых';
@@ -14,13 +15,39 @@ export async function initApprovals() {
 
 async function loadCompetitionsData() {
   try {
+    const liveRes = await fetch('https://coursing-stats-tracker-bot.antal250599.workers.dev/api/competitions');
+    if (liveRes.ok) {
+      const payload = await liveRes.json();
+      if (payload?.ok && Array.isArray(payload.events) && payload.events.length > 0) {
+        competitionsList = payload.events.sort((a, b) => parseCompDate(b.dateRaw) - parseCompDate(a.dateRaw));
+        return;
+      }
+    }
+  } catch (err) {
+    console.warn('[Approvals] Live fetch failed, falling back to local JSON:', err);
+  }
+  try {
     const res = await fetch('./rkf-competitions-2026.json');
     if (res.ok) {
-      competitionsList = await res.json();
+      const data = await res.json();
+      // Sort descending by date (from latest / most recent to earliest)
+      competitionsList = (data || []).sort((a, b) => parseCompDate(b.dateRaw) - parseCompDate(a.dateRaw));
     }
   } catch (err) {
     console.warn('[Approvals] Failed to fetch competitions JSON:', err);
   }
+}
+
+function parseCompDate(dateRaw) {
+  if (!dateRaw) return 0;
+  const m = String(dateRaw).match(/(?:[0-9]+-)?([0-9]{1,2})\.([0-9]{2})\.([0-9]{4})/);
+  if (m) {
+    const day = parseInt(m[1], 10);
+    const month = parseInt(m[2], 10);
+    const year = parseInt(m[3], 10);
+    return new Date(year, month - 1, day).getTime();
+  }
+  return 0;
 }
 
 function getSubscribedSet() {
@@ -93,11 +120,17 @@ function setupApprovalEvents() {
     });
   }
 
-  // Search input
-  const searchInput = document.getElementById('approval-search-input');
-  if (searchInput) {
-    searchInput.addEventListener('input', filterApprovals);
-  }
+  // Expandable Search Popover (Exact parity with ToolbarSearch.tsx)
+  setupSearchPopover({
+    wrapperId: 'search-wrapper-appr',
+    triggerBtnId: 'btn-search-trigger-appr',
+    dropdownId: 'search-dropdown-appr',
+    inputId: 'approval-search-input',
+    activeTextId: 'search-active-text-appr',
+    clearTriggerId: 'btn-search-clear-appr',
+    clearDdId: 'btn-dd-clear-appr',
+    onSearch: () => filterApprovals()
+  });
 }
 
 export function renderApprovals() {

@@ -52,12 +52,15 @@ $refs = @(
     "/r:$wfDll"
 )
 
+$manifestPath = Join-Path $desktopDir "app.manifest"
+
 $argsList = @(
     "/nologo",
     "/target:winexe",
     "/platform:x64",
     "/optimize+",
     "/win32icon:$icoPath",
+    "/win32manifest:$manifestPath",
     "/out:$exePath"
 ) + $refs + $sources
 
@@ -95,6 +98,10 @@ if (Test-Path (Join-Path $desktopDir "config.json")) {
 $distWebDir = Join-Path $distDir "web"
 if (-not (Test-Path $distWebDir)) { New-Item -ItemType Directory -Path $distWebDir | Out-Null }
 Copy-Item -Path (Join-Path $desktopDir "..\web\*") -Destination $distWebDir -Recurse -Force
+
+$desktopWebDir = Join-Path $desktopDir "web"
+if (-not (Test-Path $desktopWebDir)) { New-Item -ItemType Directory -Path $desktopWebDir | Out-Null }
+Copy-Item -Path (Join-Path $desktopDir "..\web\*") -Destination $desktopWebDir -Recurse -Force
 
 Write-Host "Build successful: $exePath"
 Write-Host "Portable release ready: $distDir"

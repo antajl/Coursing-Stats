@@ -7,6 +7,21 @@ export function initPwa(onToast) {
 }
 
 function registerServiceWorker(onToast) {
+  // If running inside desktop client (WebView2 / localhost), disable SW caching completely
+  if (window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost') {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(regs => {
+        for (const reg of regs) reg.unregister();
+      });
+      if ('caches' in window) {
+        caches.keys().then(keys => {
+          for (const key of keys) caches.delete(key);
+        });
+      }
+    }
+    return;
+  }
+
   if (!('serviceWorker' in navigator)) {
     return;
   }

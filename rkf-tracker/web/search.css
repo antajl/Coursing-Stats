@@ -1,0 +1,130 @@
+/* search.css — Expandable ToolbarSearch Popover (Old Money Parity) */
+.search-popover-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.search-trigger-btn {
+  height: 34px;
+  min-width: 34px;
+  padding: 0 10px;
+  gap: 6px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.search-trigger-btn.has-value {
+  padding: 0 12px;
+  background: linear-gradient(135deg, rgba(235, 202, 148, 0.98) 0%, rgba(214, 172, 110, 0.92) 100%);
+  border-color: rgba(175, 128, 60, 0.98);
+  color: #201202;
+}
+
+.search-active-text {
+  font-size: 11.5px;
+  font-weight: 600;
+  max-width: 110px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.search-clear-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  font-size: 14px;
+  line-height: 1;
+  color: #4A3822;
+  cursor: pointer;
+  margin-left: 2px;
+  margin-right: -4px;
+}
+
+.search-clear-btn:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.search-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  z-index: 100;
+  background: #FFFFFF;
+  border: 1px solid rgba(210, 192, 168, 0.60);
+  border-radius: 12px;
+  padding: 6px;
+  box-shadow: 0 8px 24px rgba(70, 45, 15, 0.12);
+  min-width: 290px;
+  animation: fadeInDown 0.15s ease-out;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.search-dropdown-inner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 36px;
+  background: #FAF8F5;
+  border: 1px solid rgba(210, 192, 168, 0.50);
+  border-radius: 9999px;
+  padding: 0 12px;
+  transition: border-color 0.15s;
+}
+
+.search-dropdown-inner:focus-within {
+  border-color: var(--camel);
+  background: #FFFFFF;
+  box-shadow: 0 0 0 2px rgba(182, 130, 49, 0.15);
+}
+
+.search-dd-icon {
+  color: var(--text-soft);
+  flex-shrink: 0;
+}
+
+.search-dd-input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-main);
+  font-family: inherit;
+}
+
+.search-dd-input::placeholder {
+  color: #9C8F80;
+}
+
+.search-dd-clear {
+  all: unset;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  font-size: 13px;
+  color: var(--text-soft);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.search-dd-clear:hover {
+  background: rgba(0, 0, 0, 0.08);
+  color: var(--text-main);
+}

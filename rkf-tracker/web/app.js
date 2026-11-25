@@ -4,7 +4,9 @@ import { renderKpiSummary, renderCardHtml, attachCardEvents } from './render.js'
 import { initPwa } from './pwa.js';
 import { initApprovals } from './approvals.js';
 import { initTabs } from './tabs.js';
-import { initAuth, openAuthModal } from './auth.js';
+import { initAuth, openAuthModal, triggerLogout } from './auth.js';
+import { initSettings } from './settings.js';
+import { setupSearchPopover } from './searchPopover.js';
 
 let apps = [];
 let currentFilter = 'all';
@@ -17,6 +19,14 @@ document.addEventListener('DOMContentLoaded', () => {
   initApprovals();
   initPwa(showToast);
   initAuth(initData, showToast);
+  initSettings({
+    showToast,
+    onLogout: () => triggerLogout(initData, showToast),
+    getAccountInfo: () => ({
+      token: localStorage.getItem('cs_rkf_token'),
+      email: localStorage.getItem('cs_rkf_user_email')
+    })
+  });
 });
 
 function initData() {
@@ -59,11 +69,17 @@ function setupEvents() {
     });
   });
 
-  // Search input
-  const searchInput = document.getElementById('search-input');
-  if (searchInput) {
-    searchInput.addEventListener('input', filterAndSearch);
-  }
+  // Expandable Search Popover (Exact parity with ToolbarSearch.tsx)
+  setupSearchPopover({
+    wrapperId: 'search-wrapper-apps',
+    triggerBtnId: 'btn-search-trigger-apps',
+    dropdownId: 'search-dropdown-apps',
+    inputId: 'search-input',
+    activeTextId: 'search-active-text-apps',
+    clearTriggerId: 'btn-search-clear-apps',
+    clearDdId: 'btn-dd-clear-apps',
+    onSearch: () => filterAndSearch()
+  });
 
   // Refresh button
   const btnRefresh = document.getElementById('btn-refresh');

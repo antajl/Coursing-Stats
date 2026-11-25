@@ -1,0 +1,43 @@
+/* Timeline Accordion Styles */
+.timeline {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.t-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11.5px;
+}
+
+.t-date {
+  color: var(--text-soft);
+  font-family: monospace;
+  min-width: 75px;
+}
+
+.t-bullet {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--camel);
+  flex-shrink: 0;
+}
+
+.t-status {
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.app-row .timeline {
+  margin-top: 8px;
+  padding: 10px 14px;
+  background: rgba(247, 242, 234, 0.7);
+  border: 1px dashed rgba(210, 192, 168, 0.7);
+  border-radius: 8px;
+}

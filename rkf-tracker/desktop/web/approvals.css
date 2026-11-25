@@ -1,0 +1,247 @@
+/* RKF Competition Approvals Section Styles (Old Money Aesthetic) */
+
+.discipline-bar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+  overflow-x: auto;
+  padding-bottom: 2px;
+}
+
+.discipline-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  font-size: 12.5px;
+  height: 36px;
+}
+
+.discipline-pill .pill-count {
+  font-size: 11px;
+  opacity: 0.85;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Monolithic Table Card */
+.approvals-container {
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  border-radius: 16px;
+  border: 1px solid rgba(195, 168, 128, 0.75);
+  box-shadow:
+    inset 0 1.5px 1px 0 #ffffff,
+    inset 0 0 0 1px rgba(255, 250, 235, 0.90),
+    0 3px 14px 0 rgba(70, 45, 15, 0.05),
+    0 1px 3px 0 rgba(70, 45, 15, 0.03);
+  overflow: hidden;
+}
+
+/* Table Header */
+.comp-table-header {
+  display: grid;
+  grid-template-columns: 85px 1fr 180px 140px 44px;
+  align-items: center;
+  gap: 12px;
+  min-height: 40px;
+  padding: 8px 16px;
+  background: rgba(247, 242, 234, 0.9);
+  border-bottom: 1px solid rgba(195, 168, 128, 0.55);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  user-select: none;
+}
+
+/* Compact Horizontal Competition Rows (44-48px) */
+.comp-row {
+  display: grid;
+  grid-template-columns: 85px 1fr 180px 140px 44px;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  padding: 6px 16px;
+  background: #FFFFFF;
+  border-bottom: 1px solid rgba(229, 218, 198, 0.55);
+  transition: background 0.15s ease;
+  user-select: none;
+}
+
+.comp-row:last-child {
+  border-bottom: none;
+}
+
+.comp-row:hover {
+  background: rgba(243, 231, 213, 0.45);
+}
+
+/* 1. Date Column */
+.comp-col-date {
+  display: flex;
+  align-items: center;
+}
+
+.date-badge {
+  font-size: 11px;
+  font-weight: 700;
+  color: #4A4237;
+  background: rgba(245, 240, 232, 0.9);
+  border: 1px solid rgba(210, 192, 168, 0.60);
+  padding: 3px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+  letter-spacing: -0.01em;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 2. Main Content Column */
+.comp-col-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.comp-title-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.comp-club {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-main);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.badge-rank {
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: #F1ECE1;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.comp-sub-line {
+  font-size: 11px;
+  color: var(--text-soft);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 3. Location Column */
+.comp-col-location {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.comp-city {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-main);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.comp-federation {
+  font-size: 10.5px;
+  color: var(--text-soft);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 4. Status Column */
+.comp-col-status {
+  display: flex;
+  align-items: center;
+}
+
+.badge-status {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2.5px 10px;
+  border-radius: 9999px;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+}
+
+.badge-status.approved {
+  background: var(--emerald-bg);
+  border: 1px solid var(--emerald-border);
+  color: var(--emerald-text);
+}
+
+.badge-status.delayed {
+  background: #FFE4E6;
+  border: 1px solid #FDA4AF;
+  color: #BE123C;
+  font-weight: 700;
+}
+
+.badge-status.pending {
+  background: var(--amber-bg);
+  border: 1px solid var(--amber-border);
+  color: var(--amber-text);
+}
+
+/* 5. Action Column: Track Bell */
+.comp-col-action {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.btn-track {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 9999px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text-soft);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-track:hover {
+  background: rgba(243, 231, 213, 0.6);
+  color: var(--camel-hover);
+  border-color: rgba(210, 192, 168, 0.60);
+}
+
+.btn-track.active {
+  background: #FDF3E7;
+  border-color: var(--camel);
+  color: #B0854E;
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+  .comp-table-header,
+  .comp-row {
+    grid-template-columns: 75px 1fr 120px 36px;
+    gap: 8px;
+  }
+  .comp-col-location {
+    display: none;
+  }
+}

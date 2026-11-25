@@ -114,7 +114,7 @@ function stopPollingWebLogin() {
 
 function fallbackWebLogin(showToast) {
   stopPollingWebLogin();
-  window.open('https://rkf.online/login', '_blank');
+  window.open('https://rkf.online/auth/login', '_blank');
   if (typeof showToast === 'function') {
     showToast('Сайт rkf.online открыт в браузере. Вставьте токен в блок ниже.');
   }
@@ -244,6 +244,10 @@ function handleUrlToken(onAuthSuccess, showToast) {
 
 function showError(el, message) {
   if (el) { el.innerText = message; el.style.display = 'block'; }
+}
+
+export function triggerLogout(onAuthSuccess, showToast) {
+  handleLogout(onAuthSuccess, showToast);
 }
 
 export function openAuthModal() {

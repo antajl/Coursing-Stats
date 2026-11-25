@@ -16,6 +16,18 @@ namespace CoursingStats.RkfTracker
         [DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
         private static extern bool SetDllDirectory(string lpPathName);
 
+        [DllImport("shcore.dll")]
+        private static extern int SetProcessDpiAwareness(int awareness);
+
+        [DllImport("user32.dll")]
+        private static extern bool SetProcessDPIAware();
+
+        private static void EnableDpiAwareness()
+        {
+            try { SetProcessDpiAwareness(2); }
+            catch { try { SetProcessDPIAware(); } catch { } }
+        }
+
         private static NotifyIcon trayIcon;
         private static LocalServer server;
         private static Poller poller;
@@ -33,6 +45,7 @@ namespace CoursingStats.RkfTracker
         [STAThread]
         static void Main(string[] args)
         {
+            EnableDpiAwareness();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             AppDomain.CurrentDomain.AssemblyResolve += ResolveAssemblies;
@@ -69,7 +82,6 @@ namespace CoursingStats.RkfTracker
         [MethodImpl(MethodImplOptions.NoInlining)]
         private static void RunApplication(string[] args)
         {
-            try { File.AppendAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "debug_lifecycle.log"), "3. RunApplication entry\n"); } catch { }
             baseDir = AppDomain.CurrentDomain.BaseDirectory;
 
             // Direct native WebView2 loader resolution
@@ -239,6 +251,35 @@ namespace CoursingStats.RkfTracker
                 else
                 {
                     mainWindow.ShowAndActivate();
+                }
+            }
+        }
+
+        public static void ShowTestNotification()
+        {
+            if (mainWindow != null && mainWindow.InvokeRequired)
+            {
+                mainWindow.BeginInvoke(new Action(ShowTestNotification));
+                return;
+            }
+            if (trayIcon != null)
+            {
+                trayIcon.ShowBalloonTip(4000, "CoursingStats Tracker", "Тестовое уведомление: система мониторинга работает штатно.", ToolTipIcon.Info);
+            }
+        }
+
+        public static void SetPollInterval(int minutes)
+        {
+            if (pollTimer != null)
+            {
+                if (minutes <= 0)
+                {
+                    pollTimer.Change(Timeout.Infinite, Timeout.Infinite);
+                }
+                else
+                {
+                    long ms = (long)minutes * 60 * 1000;
+                    pollTimer.Change(ms, ms);
                 }
             }
         }

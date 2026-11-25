@@ -99,6 +99,17 @@ export async function switchYear(year) {
 async function fetchYearEvents(year) {
   if (year === 2026) {
     try {
+      const liveRes = await fetch('https://coursing-stats-tracker-bot.antal250599.workers.dev/api/competitions');
+      if (liveRes.ok) {
+        const payload = await liveRes.json();
+        if (payload?.ok && Array.isArray(payload.events) && payload.events.length > 0) {
+          return payload.events;
+        }
+      }
+    } catch (e) {
+      console.warn('[Competitions] Live 2026 fetch failed, falling back to bundled JSON:', e);
+    }
+    try {
       const url = chrome.runtime?.getURL ? chrome.runtime.getURL('rkf-competitions-2026.json') : './rkf-competitions-2026.json';
       const res = await fetch(url);
       if (res.ok) {
