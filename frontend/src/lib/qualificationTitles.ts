@@ -123,7 +123,7 @@ export function isOfficialDogTitleToken(rawTitle: string, domain?: 'sport' | 'sh
   // 4. Проверяем доменные официальные титулы
   if (domain === 'show') {
     return (
-      /^(ЧР|ЮЧР|ВЧР|ЧРКФ|ЮЧРКФ|ВЧРКФ|ГЧР|ЮГЧР|ВГЧР|ЧНКП|ЮЧНКП|ВЧНКП|ЧП|ЮЧП|ВЧП|ШОУ ЧР)$/i.test(norm) ||
+      /^(ЧР|ЮЧР|ВЧР|ЧРКФ|ЮЧРКФ|ВЧРКФ|ГЧР|ЮГЧР|ВГЧР|ГЧ РКФ|ЮГЧ РКФ|ВГЧ РКФ|ЧНКП|ЮЧНКП|ВЧНКП|ЧП|ЮЧП|ВЧП|ШОУ ЧР|ШЧР|ЮШЧР|ВШЧР|ШЧРГ|ЮШЧРГ|ВШЧРГ)$/i.test(norm) ||
       norm.includes('ПОБЕДИТЕЛЬ') ||
       norm.includes('ИНТЕРЧЕМПИОН') ||
       norm.includes('C.I.B') ||
@@ -290,19 +290,21 @@ export function dogProfileTitleRank(title: string): number {
   if (norm === 'ГЧР РК') return 140
   if (norm === 'ГЧРКФ' || norm === 'ГЧРКФ РК') return 135
   if (norm.includes('C.I.C') || norm.includes('C.I.B') || norm.includes('C.I.E') || norm.includes('ИНТЕР')) return 130
-  if (norm === 'ГЧР') return 125
-  if (norm === 'ЧР' || norm === 'ЧР РК') return 120
+  if (norm === 'ГЧР' || norm === 'ГЧ РКФ') return 125
+  if (norm === 'ЧР' || norm === 'ЧР РК' || norm === 'ШЧР') return 120
   if (norm === 'НЧ' || norm === 'НЧ РК') return 115
   if (norm === 'ПКР' || norm === 'ПКР РК') return 110
+  if (norm === 'ЮГЧР' || norm === 'ВГЧР' || norm === 'ЮГЧ РКФ' || norm === 'ВГЧ РКФ') return 108
   if (norm === 'ЧНКП') return 105
-  if (norm === 'ЧРКФ' || norm === 'ЧРКФ РК') return 100
+  if (norm === 'ЧРКФ' || norm === 'ЧРКФ РК' || norm === 'ШЧРГ') return 100
   if (norm === 'ПЧ' || norm === 'ПЧ РК') return 95
   if (norm === 'ПЧРКФ' || norm === 'ПЧРКФ РК') return 90
   if (norm === 'ЧП') return 90
+  if (norm === 'ЮШЧР' || norm === 'ВШЧР') return 86
   if (norm === 'ЮЧР') return 85
   if (norm === 'ВЧР') return 85
-  if (norm === 'ЮЧРКФ' || norm === 'ВЧРКФ') return 80
-  if (norm === 'ЮЧНКП' || norm === 'ВЧНКП') return 75
+  if (norm === 'ЮЧРКФ' || norm === 'ВЧРКФ' || norm === 'ЮШЧРГ' || norm === 'ВШЧРГ') return 80
+  if (norm === 'ЮЧНКП' || norm === 'ВЧНКП' || norm === 'ЮЧП' || norm === 'ВЧП') return 75
   const showKey = matchShowAwardToken(title)
   if (showKey) return SHOW_AWARD_WEIGHTS[showKey]
   return competitionTitleRank(title)

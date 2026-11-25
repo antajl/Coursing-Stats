@@ -101,6 +101,19 @@ export function getFullTitleLabel(title: string, isShow?: boolean): string {
   if (clean === 'ВЧРКФ') return 'Ветеран-чемпион РКФ'
   if (clean === 'ЮЧНКП') return 'Юный чемпион Национального клуба породы'
   if (clean === 'ВЧНКП') return 'Ветеран-чемпион Национального клуба породы'
+  if (clean === 'ЮГЧР') return 'Юный гранд чемпион России'
+  if (clean === 'ВГЧР') return 'Ветеран гранд чемпион России'
+  if (clean === 'ЮЧП') return 'Юный чемпион породы'
+  if (clean === 'ВЧП') return 'Ветеран-чемпион породы'
+  if (clean === 'ШЧР') return 'Шоу-чемпион России'
+  if (clean === 'ЮШЧР') return 'Юный шоу-чемпион России'
+  if (clean === 'ВШЧР') return 'Ветеран шоу-чемпион России'
+  if (clean === 'ШЧРГ') return 'Шоу-чемпион региона'
+  if (clean === 'ЮШЧРГ') return 'Юный шоу-чемпион региона'
+  if (clean === 'ВШЧРГ') return 'Ветеран шоу-чемпион региона'
+  if (clean === 'ГЧ РКФ') return 'Гранд чемпион РКФ'
+  if (clean === 'ЮГЧ РКФ') return 'Юный гранд чемпион РКФ'
+  if (clean === 'ВГЧ РКФ') return 'Ветеран гранд чемпион РКФ'
 
   const showKey = matchShowAwardToken(clean)
   if (showKey && SHOW_AWARD_LABELS[showKey]) return SHOW_AWARD_LABELS[showKey]

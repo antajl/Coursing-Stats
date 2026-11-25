@@ -310,4 +310,94 @@ describe('evaluateCumulativeTitles', () => {
     expect(titleExplanations['supreme:ГЧР']).toBeDefined()
     expect(titleExplanations['supreme:ГЧР']).toContain('Гранд чемпион России по красоте')
   })
+
+  it('accurately separates JCAC from CAC, evaluates ЮЧР, and guarantees ЮЧРКФ explanations for dog 10742 (BEL ETUAL KAYALA)', () => {
+    const data: DogCareerData = {
+      dogId: 10742,
+      breed: 'САЛЮКИ',
+      showTitles: { BOB: 6, CAC: 2, JCAC: 6, YCHRKF: 2 },
+      showHistory: [
+        { date: '06.09.2026', exhibition_id: 98739, exhibition_title: 'Монопородная выставка клуба МОО ОЛС "Конгур"', title: '', grade: 'ОТЛ' },
+        { date: '25.07.2026', exhibition_id: 101427, exhibition_title: 'Выставка клуба РОО "КОМПАНЬОН"', title: 'ЛПП, JCAC, ЮЧФ', grade: 'ОТЛ' },
+        { date: '25.07.2026', exhibition_id: 101239, exhibition_title: 'Выставка клуба МКОО "Золотое Сечение"', title: 'ЛПП, JCAC, ЮЧФ', grade: 'ОТЛ' },
+        { date: '25.07.2026', exhibition_id: 92307, exhibition_title: 'Выставка клуба РОО "КОМПАНЬОН"', title: 'ЛПП, CAC, ЧФ', grade: 'ОТЛ' },
+        { date: '19.07.2026', exhibition_id: 92385, exhibition_title: 'Выставка клуба РОО КК "СТОЛИЦА"', title: 'JCAC, ЮЧРКФ', grade: 'ОТЛ' },
+      ],
+      competitions: [
+        { event_id: 2026003, event_type: 'coursing', competition_kind: 'ЧРКФ', placement: 1, qualification: 'Чемпион РКФ, RegCACL', status: 'finished', judges: 'Судья А' },
+        { event_id: 2022003, event_type: 'coursing', competition_kind: 'ЧРКФ', placement: 1, qualification: 'Чемпион РКФ, RegCACL', status: 'finished', judges: 'Судья Б' },
+        { event_id: 2022002, event_type: 'racing', competition_kind: 'ЧРКФ', placement: 2, qualification: 'CACL, RegCACL', status: 'finished', judges: 'Куликова Г.В.' },
+        { event_id: 2022000, event_type: 'racing', competition_kind: 'Чемпионат России', placement: 2, qualification: 'CACL, RegCACL', status: 'attended', judges: 'Полякова Г.Б.' },
+      ],
+    }
+
+    const res = evaluateCumulativeTitles(data)
+
+    // JCAC must NOT leak into adult CAC
+    expect(res.certificates.cacShowEvents).toHaveLength(1)
+    expect(res.certificates.jcacShowEvents).toHaveLength(3)
+
+    // ЮЧР must be completed from 3 JCAC on 3 distinct shows, while adult ЧР must remain in_progress (1 CAC)
+    expect(res.officialShowTitles.map((t) => t.title)).toContain('ЮЧР')
+    expect(res.officialShowTitles.map((t) => t.title)).not.toContain('ЧР')
+    expect(res.inProgress.find((t) => t.id === 'ch-russia')).toBeDefined()
+
+    // ЮЧРКФ must be ×2 (1 ЮЧРКФ + 2 ЮЧФ) and MUST have a non-empty explanation for both keys
+    const ychrkf = res.officialShowTitles.find((t) => t.title === 'ЮЧРКФ')
+    expect(ychrkf?.count).toBe(2)
+    expect(res.titleExplanations['ЮЧРКФ']).toBeTruthy()
+    expect(res.titleExplanations['show:ЮЧРКФ']).toBeTruthy()
+
+    // Coursing НЧ РК completed via Scheme 4, Racing НЧ РК in progress with 2 CACL
+    expect(res.officialCoursingTitles.map((t) => t.title)).toContain('НЧ РК')
+    expect(res.inProgress.find((t) => t.id === 'national-ch-sport-racing')).toBeDefined()
+  })
+
+  it('supports ЧР exemption with ЮЧР (4 CAC without 1-year span), ЮГЧР, ВЧР, and all 6 НЧ РК schemes + ПЧ РК', () => {
+    const data: DogCareerData = {
+      dogId: 99999,
+      breed: 'УИППЕТ',
+      showTitles: { YKCHK: 3, VKCHK: 3 },
+      showHistory: [
+        { date: '01.02.2025', exhibition_id: 1, title: 'JCAC', judge: 'Судья 1' },
+        { date: '10.02.2025', exhibition_id: 2, title: 'JCAC', judge: 'Судья 2' },
+        { date: '20.02.2025', exhibition_id: 3, title: 'JCAC', judge: 'Судья 3' },
+        { date: '01.06.2025', exhibition_id: 4, title: 'CAC', judge: 'Судья 1' },
+        { date: '10.06.2025', exhibition_id: 5, title: 'CAC', judge: 'Судья 2' },
+        { date: '20.06.2025', exhibition_id: 6, title: 'CAC', judge: 'Судья 3' },
+        { date: '30.06.2025', exhibition_id: 7, title: 'CAC', judge: 'Судья 4' },
+        { date: '01.08.2025', exhibition_id: 8, title: 'VCAC', judge: 'Судья 5' },
+        { date: '10.08.2025', exhibition_id: 9, title: 'VCAC', judge: 'Судья 6' },
+        { date: '20.08.2025', exhibition_id: 10, title: 'VCAC', judge: 'Судья 7' },
+      ],
+      competitions: [
+        // Coursing: Scheme 6 (5 CACL in 5 RF subjects under 4 judges) + 3 CACLBr (ПЧ РК)
+        { event_id: 1, event_type: 'coursing', status: 'finished', qualification: 'CACL', judges: 'Судья А', location: 'Московская область, д. Донино' },
+        { event_id: 2, event_type: 'coursing', status: 'finished', qualification: 'CACL', judges: 'Судья Б', location: 'Ярославская область, с. Первитино' },
+        { event_id: 3, event_type: 'coursing', status: 'finished', qualification: 'CACL', judges: 'Судья В', location: 'Свердловская область, с. Кадниково' },
+        { event_id: 4, event_type: 'coursing', status: 'finished', qualification: 'CACL', judges: 'Судья Г', location: 'Ленинградская область' },
+        { event_id: 5, event_type: 'coursing', status: 'finished', qualification: 'CACL', judges: 'Судья А', location: 'Ставропольский край, Ставрополь' },
+        { event_id: 6, event_type: 'coursing', status: 'finished', qualification: 'CACLBr', judges: 'Судья Д' },
+        { event_id: 7, event_type: 'coursing', status: 'finished', qualification: 'CACL Br', judges: 'Судья Е' },
+        { event_id: 8, event_type: 'coursing', status: 'finished', qualification: 'CACLBr', judges: 'Судья Д' },
+        // Racing: Scheme 1 (ПКР + ЧРКФ) + R.CACL must NOT trigger CACL
+        { event_id: 9, event_type: 'racing', competition_kind: 'Кубок России', placement: 1, status: 'finished', qualification: 'Победитель Кубка России', judges: 'Судья 1' },
+        { event_id: 10, event_type: 'racing', competition_kind: 'ЧРКФ', placement: 1, status: 'finished', qualification: 'Чемпион РКФ', judges: 'Судья 2' },
+        { event_id: 11, event_type: 'racing', status: 'finished', qualification: 'R.CACL', judges: 'Судья 3' },
+      ],
+    }
+
+    const res = evaluateCumulativeTitles(data)
+
+    expect(res.officialShowTitles.map((t) => t.title)).toContain('ЮЧР')
+    expect(res.officialShowTitles.map((t) => t.title)).toContain('ЧР')
+    expect(res.officialShowTitles.map((t) => t.title)).toContain('ВЧР')
+    expect(res.officialSupremeTitles.map((t) => t.title)).toContain('ЮГЧР')
+    expect(res.officialSupremeTitles.map((t) => t.title)).toContain('ВГЧР')
+
+    expect(res.completed.find((t) => t.id === 'national-ch-sport-coursing')?.fulfilledBasis).toContain('Схема №6')
+    expect(res.completed.find((t) => t.id === 'national-ch-sport-racing')?.fulfilledBasis).toContain('Схема №1')
+    expect(res.officialCoursingTitles.map((t) => t.title)).toContain('ПЧ РК')
+    expect(res.certificates.caclEventsRacing).toHaveLength(0)
+  })
 })
