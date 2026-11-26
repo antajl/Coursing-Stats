@@ -11,8 +11,9 @@ function xmlEscape(value: string): string {
 
 export type SitemapUrl = {
   loc: string
-  changefreq: string
-  priority: string
+  changefreq?: string
+  priority?: string
+  lastmod?: string
 }
 
 export type SitemapUrlSources = {

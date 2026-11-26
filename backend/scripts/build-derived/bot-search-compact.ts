@@ -1,7 +1,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { DATA_V1_ROOT, writeIndex } from './shared';
+import { writeIndex } from './shared';
+import { DATA_V1_ROOT } from '../../lib/local-data/paths';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const DOGS_INDEX_PATH = path.join(DATA_V1_ROOT, 'indexes/dogs-index.json');

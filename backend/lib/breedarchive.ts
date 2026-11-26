@@ -1,6 +1,6 @@
 /** Breed Archive (breedarchive.com) — поиск карточек собак по registered name. */
-import { canonicalBreed } from '../src/lib/breed-mapping.ts';
-import { transliterateRuToLat } from './text-normalization.ts';
+import { canonicalBreed } from '../src/lib/breed-mapping';
+import { transliterateRuToLat } from './text-normalization';
 
 export interface BreedArchiveSearchHit {
   label: string;

@@ -7,7 +7,7 @@ export {
   resetLocalDataCache,
   resetNodeDataStore,
 } from './node-data-store';
-export { getWorkerDataStore, resetWorkerDataStore, DEFAULT_SNAPSHOT_URL } from './worker-db';
+export { getWorkerDataStore, resetWorkerDataStore, DEFAULT_SNAPSHOT_GZ_URL } from './worker-db';
 export type { WorkerDataEnv, WorkerDataStore } from './worker-db';
 export type { DataDb, DataStoreEnv } from './types';
 export { SNAPSHOT_KEY } from './constants';

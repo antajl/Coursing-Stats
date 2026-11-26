@@ -13,7 +13,7 @@ import {
   bestShowAward,
   mergeShowTitles,
   showRankScore,
-  type ShowTitles,
+  type ShowTitleCounts as ShowTitles,
 } from './show-award-ranking'
 import { bestShowGradeLabel } from './show-grades'
 import { sortShowHistory } from './show-dates'
