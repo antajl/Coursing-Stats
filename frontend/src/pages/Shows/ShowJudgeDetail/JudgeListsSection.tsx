@@ -4,7 +4,14 @@ import { JudgeExhibitionPanel } from './JudgeExhibitionPanel'
 import { GRADE_TILES, type GradeFilterKey, type ListTab } from './judgeDetailAggregates'
 import type { GradeScope } from '../../../components/ShowJudgeCard'
 
-type BreedRow = { breed: string; count: number }
+type BreedRow = {
+  breed: string
+  count: number
+  excellent_count?: number
+  adult_graded?: number
+  bob_count?: number
+  cac_count?: number
+}
 type ExhibitionRow = {
   id: number
   date: string

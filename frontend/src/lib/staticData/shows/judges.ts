@@ -56,7 +56,16 @@ export interface ShowJudgeDetail {
   total_judged: number
   unique_breeds: number
   by_year: Record<string, number>
-  breeds: Array<{ breed: string; count: number; puppy_count?: number; adult_count?: number }>
+  breeds: Array<{
+    breed: string
+    count: number
+    puppy_count?: number
+    adult_count?: number
+    excellent_count?: number
+    adult_graded?: number
+    bob_count?: number
+    cac_count?: number
+  }>
   puppy_breeds?: Array<{ breed: string; count: number }>
   adult_breeds?: Array<{ breed: string; count: number }>
   city?: string

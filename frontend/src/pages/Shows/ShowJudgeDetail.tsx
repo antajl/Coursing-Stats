@@ -136,7 +136,29 @@ export default function ShowJudgeDetail() {
   }, [judge, yearParam, periodExhibitions, hasPerExhibitionGrades])
 
   const periodBreeds = useMemo(() => {
-    if (!judge) return [] as Array<{ breed: string; count: number }>
+    if (!judge) return [] as Array<{
+      breed: string
+      count: number
+      excellent_count?: number
+      adult_graded?: number
+      bob_count?: number
+      cac_count?: number
+    }>
+    const statsByCanon = new Map<string, { excellent: number; graded: number; bob: number; cac: number }>()
+    if (!yearParam) {
+      for (const item of judge.breeds) {
+        const canon = canonicalBreed(item.breed)
+        if (!canon || !OFFICIAL_BREEDS_SET.has(canon) || canon === 'БЕЗ ПОРОДЫ') continue
+        const prev = statsByCanon.get(canon) || { excellent: 0, graded: 0, bob: 0, cac: 0 }
+        statsByCanon.set(canon, {
+          excellent: prev.excellent + (item.excellent_count || 0),
+          graded: prev.graded + (item.adult_graded || 0),
+          bob: prev.bob + (item.bob_count || 0),
+          cac: prev.cac + (item.cac_count || 0),
+        })
+      }
+    }
+
     let rawList: Array<{ breed: string; count: number; puppy_count?: number; adult_count?: number }> = []
     if (!yearParam) {
       if (gradeScope === 'puppy') {
@@ -171,7 +193,16 @@ export default function ShowJudgeDetail() {
       merged.set(canon, (merged.get(canon) || 0) + (item.count || 0))
     }
     return Array.from(merged.entries())
-      .map(([breed, count]) => ({ breed, count }))
+      .map(([breed, count]) => {
+        const st = statsByCanon.get(breed)
+        return {
+          breed,
+          count,
+          ...(st && st.graded > 0 ? { excellent_count: st.excellent, adult_graded: st.graded } : {}),
+          ...(st && st.bob > 0 ? { bob_count: st.bob } : {}),
+          ...(st && st.cac > 0 ? { cac_count: st.cac } : {}),
+        }
+      })
       .sort((a, b) => b.count - a.count || a.breed.localeCompare(b.breed, 'ru'))
   }, [judge, yearParam, periodExhibitions, gradeScope])
 

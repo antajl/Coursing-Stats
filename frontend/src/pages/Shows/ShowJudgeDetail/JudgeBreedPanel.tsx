@@ -9,7 +9,14 @@ import { toolbarPillTriggerClass } from '../../../lib/toolbar'
 import type { GradeScope } from '../../../components/ShowJudgeCard'
 import { ShowJudgeBreedDogsList } from './ShowJudgeBreedDogsList'
 
-type BreedRow = { breed: string; count: number }
+type BreedRow = {
+  breed: string
+  count: number
+  excellent_count?: number
+  adult_graded?: number
+  bob_count?: number
+  cac_count?: number
+}
 type ExhibitionItem = {
   id: number
   date: string
@@ -242,8 +249,32 @@ export function JudgeBreedPanel({
                       )}
                     </div>
 
-                    {/* Clean badge without repeating word "Оценок" */}
-                    <div className="relative shrink-0 flex items-center">
+                    {/* Clean badge with optional per-breed strictness & title summary */}
+                    <div className="relative shrink-0 flex items-center gap-1.5">
+                      {gradeScope !== 'puppy' && row.adult_graded && row.adult_graded >= 5 ? (
+                        <span
+                          className={`inline-flex items-center rounded-md px-1.5 py-0.5 text-[11px] font-semibold tabular-nums border ${
+                            ((row.excellent_count || 0) / row.adult_graded) >= 0.78
+                              ? 'bg-emerald-50/80 text-emerald-800 border-emerald-200/80'
+                              : ((row.excellent_count || 0) / row.adult_graded) <= 0.6
+                                ? 'bg-amber-50/80 text-amber-800 border-amber-200/80'
+                                : 'bg-white text-charcoal-600 border-old-money-200/80'
+                          }`}
+                          title={`«Отлично»: ${row.excellent_count || 0} из ${row.adult_graded} взрослых${row.bob_count ? ` · ЛПП: ${row.bob_count}` : ''}${row.cac_count ? ` · CAC: ${row.cac_count}` : ''}`}
+                        >
+                          {Math.round(((row.excellent_count || 0) / row.adult_graded) * 100)}% отл.
+                        </span>
+                      ) : null}
+                      {(row.bob_count || row.cac_count) ? (
+                        <span
+                          className="hidden sm:inline-flex items-center gap-1 rounded-md px-1.5 py-0.5 text-[11px] font-medium tabular-nums bg-cream-50 text-charcoal-600 border border-old-money-200/70"
+                          title={`Титулов по породе под судейством: ЛПП ${row.bob_count || 0}, CAC ${row.cac_count || 0}`}
+                        >
+                          {row.bob_count ? `ЛПП ${row.bob_count}` : ''}
+                          {row.bob_count && row.cac_count ? ' · ' : ''}
+                          {row.cac_count ? `CAC ${row.cac_count}` : ''}
+                        </span>
+                      ) : null}
                       <span
                         className={`inline-flex min-w-[2.25rem] items-center justify-center rounded-md px-2 py-0.5 text-xs font-bold tabular-nums transition-colors ${
                           isExpanded
