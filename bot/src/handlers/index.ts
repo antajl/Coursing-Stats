@@ -11,6 +11,7 @@ import { createFavorites } from './favorites';
 import { createComparison } from './comparison';
 import { createDogs } from './dogs';
 import { createGuide } from './guide';
+import { createTracker } from '../tracker/handlers';
 import type { KVNamespace } from './context';
 
 /**
@@ -19,11 +20,12 @@ import type { KVNamespace } from './context';
  * @param api - клиент API Coursing Stats
  * @param cache - опциональное KV хранилище для кэширования
  */
-export function setupHandlers(bot: Bot, api: CoursingStatsAPI, cache?: KVNamespace) {
+export function setupHandlers(bot: Bot, api: CoursingStatsAPI, cache?: KVNamespace, encSecret?: string) {
   // Setup middleware
   setupMiddleware(bot, cache);
 
   // Install all modules in order
+  bot.use(createTracker(cache, encSecret));
   bot.use(createCommands(api, cache));
   bot.use(createSearch(api, cache));
   bot.use(createRatings(api, cache));

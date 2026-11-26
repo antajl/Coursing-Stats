@@ -2,6 +2,8 @@ import { Bot } from 'grammy';
 import type { Update } from '@grammyjs/types';
 import { setupHandlers } from './handlers/index';
 import { CoursingStatsAPI } from './api';
+import { handleTrackerHttpRequest } from './tracker/workerAuth';
+import { runTrackerCron } from './tracker/poller';
 
 // Global bot instance to avoid recreation on each request
 let globalBot: Bot | null = null;
@@ -12,6 +14,8 @@ export interface Env {
   SITE_URL: string;
   WEBHOOK_SECRET: string;
   CACHE: KVNamespace;
+  TRACKER_KV?: KVNamespace;
+  TOKEN_ENC_KEY?: string;
 }
 
 // Rate limiting configuration
@@ -80,6 +84,11 @@ export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     try {
       const url = new URL(request.url);
+
+      const trackerResponse = await handleTrackerHttpRequest(request, env);
+      if (trackerResponse) {
+        return trackerResponse;
+      }
 
       // Health check: CDN reachable + KV writable
       if (url.pathname === '/health') {
@@ -155,9 +164,10 @@ export default {
                   { command: 'start', description: 'Главное меню' },
                   { command: 'search', description: 'Поиск собаки по кличке' },
                   { command: 'breed', description: 'Поиск собак по породе' },
-                  { command: 'ratings', description: 'Рейтинги и топы (включая Elo)' },
+                  { command: 'ratings', description: 'Рейтинги и топы' },
                   { command: 'archive', description: 'Архив соревнований и выставок' },
                   { command: 'donino', description: 'Рекорды Донино' },
+                  { command: 'apps', description: 'Мои заявки и трекер РКФ' },
                   { command: 'favorites', description: 'Избранные собаки' },
                   { command: 'help', description: 'Справка и правила' },
                 ],
@@ -183,7 +193,7 @@ export default {
 
         await globalBot.init();
 
-        setupHandlers(globalBot, globalApi, env.CACHE);
+        setupHandlers(globalBot, globalApi, env.CACHE, env.TOKEN_ENC_KEY);
       }
 
       // Handle webhook
@@ -211,7 +221,7 @@ export default {
                 } else if (update.message?.chat?.id) {
                   await globalBot.api.sendMessage(
                     update.message.chat.id,
-                    '⏳ Слишком много запросов. Подождите минуту и попробуйте снова.'
+                    'Слишком много запросов. Подождите минуту и попробуйте снова.'
                   );
                 }
               } catch {
@@ -233,5 +243,9 @@ export default {
     } catch (error) {
       return new Response('Internal Server Error', { status: 500 });
     }
+  },
+
+  async scheduled(_event: any, env: Env, ctx: any): Promise<void> {
+    ctx.waitUntil(runTrackerCron(env));
   },
 };

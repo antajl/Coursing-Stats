@@ -4,7 +4,7 @@ import { Dog } from './types';
 
 export function getPersistentReplyKeyboard(): Keyboard {
   return new Keyboard()
-    .text('🏠 Главное меню')
+    .text('Главное меню')
     .text('🔍 Поиск собаки')
     .resized()
     .persistent()
@@ -19,7 +19,9 @@ export function getMainInlineMenu(): InlineKeyboard {
     .text(`${unicodeIcons.donino} Донино`, 'donino_records')
     .text(`${unicodeIcons.favorites} Избранное`, 'favorites')
     .row()
+    .text('📋 Заявки РКФ', 'tracker_menu')
     .text(`${unicodeIcons.book} Справка`, 'guide_menu')
+    .row()
     .webApp(`${unicodeIcons.website} Приложение`, 'https://coursing-stats.ru');
 
   return keyboard;
@@ -57,7 +59,7 @@ export function getShowsMenu(): InlineKeyboard {
 export function getGuideMenu(): InlineKeyboard {
   return new InlineKeyboard()
     .text('🏆 Соревнования', 'guide_titles')
-    .text('🎪 Выставки', 'guide_shows')
+    .text('🏅 Выставки', 'guide_shows')
     .row()
     .text('📋 Протоколы', 'guide_protocol')
     .text('📊 Рейтинг', 'guide_rating')
@@ -76,8 +78,6 @@ export function getCategoriesMenu(): InlineKeyboard {
   return new InlineKeyboard()
     .text(`${unicodeIcons.ratings} По очкам`, 'rating_score')
     .text(`${unicodeIcons.ratings} По местам`, 'rating_placement')
-    .row()
-    .text(`${unicodeIcons.ratings} Elo-рейтинг`, 'rating_elo')
     .row()
     .text(`${unicodeIcons.back} Назад`, 'competitions_menu');
 }

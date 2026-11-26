@@ -5,6 +5,9 @@ compatibility_date = "2025-11-01"
 [vars]
 SITE_URL = "https://coursing-stats.ru"
 
+[triggers]
+crons = ["*/15 * * * *"]
+
 # For local development: set BOT_TOKEN in .dev.vars or environment variable
 # BOT_TOKEN = "your_bot_token_here"
 
