@@ -1,26 +1,25 @@
 import React from 'react'
-import { ChevronDown, MoreVertical, Trash2 } from 'lucide-react'
+import { AlertTriangle, ChevronDown, Trash2 } from 'lucide-react'
 import type {
-  DogParticipant,
+  ActiveAwardsMenuState,
+  ActiveDogSexMenuState,
+  ActiveRunMenuState,
+  ActiveSearchDogState,
   CategoryGroup,
   CompetitionKind,
   CoursingScores,
+  DogParticipant,
   RunStatus,
-  ActiveRunMenuState,
-  ActiveSearchDogState,
-  ActiveAwardsMenuState,
-  ActiveDogSexMenuState
 } from './types'
-import {
-  createRunData,
-  calculateRoundSum,
-  getDogOverallStatus
-} from './types'
+import { getDogOverallStatus, normalizeDogNameKey } from './types'
+import { CoursingRunBox } from './components/CoursingRunBox'
+import { RacingRunInputs } from './components/RacingRunInputs'
 
 interface ProtocolParticipantRowProps {
   dog: DogParticipant
   category: CategoryGroup
   kind: CompetitionKind
+  duplicateNames: Set<string>
   updateDog: (categoryId: string, dogId: string, updates: Partial<DogParticipant>) => void
   removeDogFromCategory: (categoryId: string, dogId: string) => void
   updateRunField: (
@@ -45,12 +44,7 @@ interface ProtocolParticipantRowProps {
     status: RunStatus,
     reason?: string
   ) => void
-  updateRunReason: (
-    categoryId: string,
-    dogId: string,
-    runIndex: number,
-    reason: string
-  ) => void
+  updateRunReason: (categoryId: string, dogId: string, runIndex: number, reason: string) => void
   activeAwardsMenu: ActiveAwardsMenuState | null
   setActiveAwardsMenu: (state: ActiveAwardsMenuState | null) => void
   activeSearchDog: ActiveSearchDogState | null
@@ -61,18 +55,11 @@ interface ProtocolParticipantRowProps {
   setActiveDogSexMenu: (state: ActiveDogSexMenuState | null) => void
 }
 
-const COURSING_CRITERIA: Array<keyof CoursingScores> = [
-  'speed',
-  'enthusiasm',
-  'intelligence',
-  'agility',
-  'endurance'
-]
-
 export const ProtocolParticipantRow: React.FC<ProtocolParticipantRowProps> = ({
   dog,
   category,
   kind,
+  duplicateNames,
   updateDog,
   removeDogFromCategory,
   updateRunField,
@@ -87,348 +74,201 @@ export const ProtocolParticipantRow: React.FC<ProtocolParticipantRowProps> = ({
   setSearchQuery,
   activeRunMenu,
   setActiveRunMenu,
-  setActiveDogSexMenu
+  setActiveDogSexMenu,
 }) => {
-  const isDogAbsent = (dog.runs || []).slice(0, category.runsCount).some(r => r?.status === 'absent')
+  const isDogAbsent = (dog.runs || []).slice(0, category.runsCount).some((r) => r?.status === 'absent')
   const isDogActive =
     activeAwardsMenu?.dogId === dog.id ||
     activeSearchDog?.dogId === dog.id ||
     activeRunMenu?.dogId === dog.id
+  const normalizedName = normalizeDogNameKey(dog.dogName)
+  const isDuplicate = Boolean(normalizedName && duplicateNames.has(normalizedName))
+  const overall = getDogOverallStatus(dog, category.runsCount)
 
-  const runSlotWidth = category.runsCount === 3 ? 236 : category.runsCount === 1 ? 300 : 264
+  const openSearchPortal = (el: HTMLInputElement, val: string) => {
+    setSearchQuery(val)
+    const rect = el.getBoundingClientRect()
+    setActiveSearchDog({
+      catId: category.id,
+      dogId: dog.id,
+      rect: { top: rect.top, bottom: rect.bottom, left: rect.left, width: rect.width },
+    })
+  }
 
   return (
     <div
-      className={`bg-om-50/70 hover:bg-cream-50 rounded-lg border border-om-200/70 p-2 transition-all shadow-2xs min-w-max ${
+      className={`bg-om-50/75 hover:bg-cream-50 rounded-xl border border-om-200 p-3 xl:p-2 transition-colors shadow-2xs ${
         isDogActive ? 'relative z-30' : 'relative z-0'
       }`}
     >
-      <div className="flex items-center gap-3 text-xs min-w-max">
-        {/* Номер по каталогу, кличка собаки с автокомплитом и пол */}
-        <div className="relative flex items-center gap-1.5 shrink-0">
+      <div className="flex flex-col xl:flex-row xl:items-center gap-2.5 xl:gap-2 text-xs">
+        {/* Строка 1: № по каталогу + Кличка (автоподбор) + Пол + (удаление на < xl) */}
+        <div className="flex flex-wrap sm:flex-nowrap items-center gap-1.5 min-w-0">
           <input
             type="text"
             value={dog.catalogNumber}
-            onChange={e => updateDog(category.id, dog.id, { catalogNumber: e.target.value })}
-            className="w-9 px-1 py-1 text-center font-bold bg-cream-50 rounded border border-om-200 text-xs text-char-900 shrink-0"
+            onChange={(e) => updateDog(category.id, dog.id, { catalogNumber: e.target.value })}
+            className="w-12 xl:w-10 min-h-[44px] xl:min-h-[36px] px-1 text-center font-bold bg-white rounded-lg border border-om-300/90 text-xs text-charcoal-900 shrink-0 tabular-nums focus:outline-none focus:ring-2 focus:ring-camel-500/40"
             placeholder="№"
+            aria-label="Номер по каталогу"
             title="Номер по каталогу"
           />
 
-          <div className="relative w-56 sm:w-60 md:w-64 lg:w-72 shrink-0">
+          <div className="relative flex-1 min-w-[160px] xl:w-52 xl:flex-none">
             <input
               type="text"
               value={dog.dogName}
-              onChange={e => {
+              onChange={(e) => {
                 updateDog(category.id, dog.id, { dogName: e.target.value })
-                setSearchQuery(e.target.value)
-                const rect = e.currentTarget.getBoundingClientRect()
-                setActiveSearchDog({
-                  catId: category.id,
-                  dogId: dog.id,
-                  rect: { top: rect.top, bottom: rect.bottom, left: rect.left, width: rect.width }
-                })
+                openSearchPortal(e.currentTarget, e.target.value)
               }}
-              onFocus={e => {
-                setSearchQuery(dog.dogName)
-                const rect = e.currentTarget.getBoundingClientRect()
-                setActiveSearchDog({
-                  catId: category.id,
-                  dogId: dog.id,
-                  rect: { top: rect.top, bottom: rect.bottom, left: rect.left, width: rect.width }
-                })
-              }}
-              className="w-full px-2 py-1 bg-cream-50 rounded border border-om-200 text-xs font-semibold text-char-900 focus:ring-1 focus:ring-camel-500 focus:outline-none"
+              onFocus={(e) => openSearchPortal(e.currentTarget, dog.dogName)}
+              className={`w-full min-h-[44px] xl:min-h-[36px] px-2.5 bg-white rounded-lg border text-xs font-semibold text-charcoal-900 placeholder:text-charcoal-500 focus:outline-none focus:ring-2 focus:ring-camel-500/40 ${
+                isDuplicate ? 'border-terracotta-400 pr-16' : 'border-om-300/90'
+              }`}
               placeholder="Кличка собаки"
+              aria-label="Кличка собаки"
             />
+            {isDuplicate && (
+              <span
+                className="absolute right-1.5 top-1/2 -translate-y-1/2 inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded bg-terracotta-100 text-terracotta-800 text-[10px] font-semibold pointer-events-none"
+                title="Похожая кличка уже добавлена в этом протоколе"
+              >
+                <AlertTriangle className="w-3 h-3" aria-hidden="true" />
+                <span>Дубль</span>
+              </span>
+            )}
           </div>
 
           <button
             type="button"
-            onClick={e => {
+            onClick={(e) => {
               const rect = e.currentTarget.getBoundingClientRect()
               setActiveDogSexMenu({
                 catId: category.id,
                 dogId: dog.id,
-                rect: { top: rect.top, bottom: rect.bottom, left: rect.left, right: rect.right, width: rect.width }
+                rect: {
+                  top: rect.top,
+                  bottom: rect.bottom,
+                  left: rect.left,
+                  right: rect.right,
+                  width: rect.width,
+                },
               })
             }}
-            className="w-[92px] px-2 py-1 bg-cream-50 hover:bg-cream-100 rounded border border-om-200 text-xs text-char-800 shrink-0 font-medium flex items-center justify-between transition-colors cursor-pointer"
+            className="min-h-[44px] xl:min-h-[36px] w-24 xl:w-[88px] px-2.5 bg-white hover:bg-cream-100 rounded-lg border border-om-300/90 text-xs text-charcoal-800 shrink-0 font-semibold flex items-center justify-between transition-colors cursor-pointer"
             title="Пол собаки"
           >
             <span className="truncate">{dog.sex === 'male' ? 'Кобель' : 'Сука'}</span>
-            <ChevronDown className="w-3 h-3 text-char-400 shrink-0" />
+            <ChevronDown className="w-3.5 h-3.5 text-charcoal-500 shrink-0" />
+          </button>
+
+          <button
+            type="button"
+            onClick={() => removeDogFromCategory(category.id, dog.id)}
+            disabled={category.dogs.length <= 1}
+            className="xl:hidden min-w-[44px] min-h-[44px] flex items-center justify-center text-charcoal-500 hover:text-terracotta-700 hover:bg-terracotta-50 rounded-lg border border-transparent hover:border-terracotta-200 transition-colors disabled:opacity-25 shrink-0 cursor-pointer"
+            aria-label="Удалить собаку"
+            title="Удалить собаку"
+          >
+            <Trash2 className="w-4 h-4" />
           </button>
         </div>
 
-        {/* Блок баллов забегов (курсинг) или времени (рейсинг) */}
+        {/* Блок забегов (курсинг) или заездов (рейсинг) */}
         {kind === 'coursing' ? (
-          <div className="flex items-center gap-1.5 shrink-0">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 xl:flex xl:items-center xl:gap-1.5 min-w-0">
             {Array.from({ length: category.runsCount }).map((_, rIdx) => {
-              if (isDogAbsent && rIdx > 0) {
-                return <div key={rIdx} style={{ width: runSlotWidth }} className="shrink-0" />
-              }
-
-              const prevCancelled = (dog.runs || []).slice(0, rIdx).some(pr => pr?.status === 'withdrawn')
-              if (prevCancelled) {
-                return <div key={rIdx} style={{ width: runSlotWidth }} className="shrink-0" />
-              }
-
-              const run = dog.runs[rIdx] || createRunData()
-              const sum = calculateRoundSum(run.scores)
-              const blanketColor = run.blanket || 'red'
-              const blanketTitle = blanketColor === 'red' ? 'Красная' : blanketColor === 'blue' ? 'Синяя' : 'Белая'
-              const blanketBg = blanketColor === 'red'
-                ? 'bg-rose-50 border-rose-300 text-rose-950 focus-within:ring-rose-400'
-                : blanketColor === 'blue'
-                ? 'bg-sky-50 border-sky-300 text-sky-950 focus-within:ring-sky-400'
-                : 'bg-white border-om-300 text-char-900 focus-within:ring-camel-400'
-
-              const isWithdrawn = run.status === 'withdrawn'
-              const isAbsent = run.status === 'absent'
+              if (isDogAbsent && rIdx > 0) return null
+              const prevWithdrawn = (dog.runs || []).slice(0, rIdx).some((pr) => pr?.status === 'withdrawn')
+              if (prevWithdrawn) return null
 
               return (
-                <div
+                <CoursingRunBox
                   key={rIdx}
-                  className="flex items-center rounded border border-om-200 transition-all bg-cream-50 px-1.5 py-0.5 gap-1 shrink-0"
-                  style={{ width: runSlotWidth }}
-                >
-                  {isAbsent ? (
-                    <div className="flex items-center justify-between gap-1 bg-om-100/70 border border-om-200 rounded px-2.5 py-1 flex-1 min-w-0">
-                      <span className="text-xs font-normal text-char-500">Неявка</span>
-                      <button
-                        type="button"
-                        onClick={() => setRunStatus(category.id, dog.id, rIdx, 'normal')}
-                        className="text-char-400 hover:text-char-700 text-xs px-1 py-0.5 rounded hover:bg-om-200/50 cursor-pointer"
-                        title="Вернуть ввод оценок"
-                      >
-                        ✕
-                      </button>
-                    </div>
-                  ) : (
-                    <>
-                      <div
-                        className={`flex items-center rounded border px-1 py-0.5 gap-1 transition-all shrink-0 ${blanketBg}`}
-                        title={`Забег ${rIdx + 1}. Попона: ${blanketTitle}. Нажмите на кружок для смены цвета`}
-                      >
-                        <button
-                          type="button"
-                          onClick={() => cycleBlanket(category.id, dog.id, rIdx)}
-                          className="w-3 h-3 rounded-full shrink-0 ring-1 cursor-pointer transition-transform hover:scale-115 active:scale-90"
-                          style={{ backgroundColor: blanketColor === 'red' ? '#e11d48' : blanketColor === 'blue' ? '#0284c7' : '#ffffff' }}
-                          title={`Попона: ${blanketTitle}. Нажмите для смены цвета`}
-                        />
-                        <input
-                          type="text"
-                          inputMode="numeric"
-                          pattern="[0-9]*"
-                          value={run.heat}
-                          onChange={e => {
-                            const val = e.target.value.replace(/\D/g, '').slice(0, 3)
-                            updateRunField(category.id, dog.id, rIdx, 'heat', val)
-                          }}
-                          maxLength={3}
-                          className="w-6 text-[11px] text-center bg-transparent font-bold focus:outline-none"
-                          placeholder="№"
-                          title={`Номер забега (${blanketTitle} попона)`}
-                        />
-                      </div>
-
-                      {isWithdrawn && (
-                        <div className="flex items-center gap-1 bg-om-100/60 border border-om-200 rounded px-1.5 py-0.5 flex-1 min-w-0">
-                          <span className="text-[10px] font-medium text-char-600 uppercase tracking-wide shrink-0">
-                            Дискв:
-                          </span>
-                          <input
-                            type="text"
-                            value={run.reason || ''}
-                            onChange={e => updateRunReason(category.id, dog.id, rIdx, e.target.value)}
-                            className="w-full px-1 py-0.2 bg-white border border-om-200 rounded text-[11px] text-char-800 focus:outline-none focus:ring-1 focus:ring-camel-500 font-medium truncate"
-                            placeholder="Причина (травма...)"
-                            title="Причина дисквалификации"
-                          />
-                          <button
-                            type="button"
-                            onClick={() => setRunStatus(category.id, dog.id, rIdx, 'normal')}
-                            className="text-char-400 hover:text-char-700 text-xs px-0.5 shrink-0 cursor-pointer"
-                            title="Вернуть ввод оценок"
-                          >
-                            ✕
-                          </button>
-                        </div>
-                      )}
-                    </>
-                  )}
-
-                  {!isWithdrawn && !isAbsent && (
-                    <div className="flex items-center gap-0.5 shrink-0">
-                      {COURSING_CRITERIA.map(c => (
-                        <input
-                          key={c}
-                          type="number"
-                          min={0}
-                          max={20}
-                          value={run.scores[c]}
-                          onChange={e => updateRunScore(category.id, dog.id, rIdx, c, e.target.value)}
-                          className={`${
-                            category.runsCount === 3 ? 'w-[22px] text-[10px]' : 'w-[26px] text-[11px]'
-                          } text-center py-0.5 px-0 bg-om-50 border border-om-200 rounded font-bold tabular-nums [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none focus:outline-none focus:ring-1 focus:ring-camel-500`}
-                          placeholder="0"
-                          title={
-                            c === 'speed' ? 'Скорость (0-20)' :
-                            c === 'enthusiasm' ? 'Энтузиазм (0-20)' :
-                            c === 'intelligence' ? 'Интеллект (0-20)' :
-                            c === 'agility' ? 'Маневренность (0-20)' : 'Выносливость (0-20)'
-                          }
-                        />
-                      ))}
-                    </div>
-                  )}
-
-                  {!isWithdrawn && !isAbsent && (
-                    <span
-                      className="text-[10px] font-bold text-camel-800 text-center w-5 shrink-0"
-                      title={`Сумма баллов за забег ${rIdx + 1}`}
-                    >
-                      {sum}
-                    </span>
-                  )}
-
-                  <button
-                    type="button"
-                    onClick={e => {
-                      e.stopPropagation()
-                      if (activeRunMenu && activeRunMenu.dogId === dog.id && activeRunMenu.rIdx === rIdx) {
-                        setActiveRunMenu(null)
-                      } else {
-                        const rect = e.currentTarget.getBoundingClientRect()
-                        setActiveRunMenu({
-                          catId: category.id,
-                          dogId: dog.id,
-                          rIdx,
-                          rect: {
-                            top: rect.top,
-                            bottom: rect.bottom,
-                            left: rect.left,
-                            right: rect.right
-                          }
-                        })
-                      }
-                    }}
-                    className="text-char-500 hover:text-char-900 hover:bg-om-200/80 p-0.5 rounded transition-colors focus:outline-none cursor-pointer shrink-0"
-                    title="Опции забега (баллы, дисквалификация, неявка)"
-                  >
-                    <MoreVertical className="w-3.5 h-3.5" />
-                  </button>
-                </div>
+                  catId={category.id}
+                  dog={dog}
+                  rIdx={rIdx}
+                  runsCount={category.runsCount}
+                  activeRunMenu={activeRunMenu}
+                  setActiveRunMenu={setActiveRunMenu}
+                  updateRunField={updateRunField}
+                  cycleBlanket={cycleBlanket}
+                  updateRunScore={updateRunScore}
+                  setRunStatus={setRunStatus}
+                  updateRunReason={updateRunReason}
+                />
               )
             })}
           </div>
         ) : (
-          <div className="flex items-center gap-1.5 bg-cream-50 px-2 py-1 rounded border border-om-200 text-xs shrink-0" style={{ width: 264 }}>
-            <input
-              type="text"
-              value={dog.racing_box}
-              onChange={e => updateDog(category.id, dog.id, { racing_box: e.target.value })}
-              className="w-8 px-1 py-0.5 bg-om-50 border border-om-200 rounded text-center text-[11px]"
-              placeholder="Бокс"
-              title="Бокс"
-            />
-            <input
-              type="text"
-              value={dog.racing_time1}
-              onChange={e => updateDog(category.id, dog.id, { racing_time1: e.target.value })}
-              className="w-14 px-1 py-0.5 bg-om-50 border border-om-200 rounded text-center font-mono text-[11px]"
-              placeholder="Заезд 1"
-              title="Время заезд 1"
-            />
-            <input
-              type="text"
-              value={dog.racing_time2}
-              onChange={e => updateDog(category.id, dog.id, { racing_time2: e.target.value })}
-              className="w-14 px-1 py-0.5 bg-om-50 border border-om-200 rounded text-center font-mono text-[11px]"
-              placeholder="Заезд 2"
-              title="Время заезд 2"
-            />
-            <input
-              type="text"
-              value={dog.racing_final_time}
-              onChange={e => updateDog(category.id, dog.id, { racing_final_time: e.target.value })}
-              className="w-16 px-1 py-0.5 bg-om-50 border border-camel-300 rounded text-center font-mono font-bold text-xs"
-              placeholder="Финал"
-              title="Итоговое время"
-            />
-          </div>
+          <RacingRunInputs catId={category.id} dog={dog} updateDog={updateDog} />
         )}
 
-        {/* Правая колонка: Итог, Меню титулов, Удаление */}
-        <div className="flex items-center gap-1.5 shrink-0 ml-auto">
-          {(() => {
-            const overall = getDogOverallStatus(dog, category.runsCount)
-            return (
-              <div
-                className={`border px-1.5 py-0.5 rounded text-center w-20 shrink-0 ${
-                  overall.type === 'withdrawn' ? 'bg-om-100/80 border-om-200 text-char-600' :
-                  overall.type === 'absent' ? 'bg-om-100/60 border-om-200 text-char-400' :
-                  overall.type === 'disqualified' ? 'bg-om-100/80 border-om-200 text-char-600' :
-                  'bg-camel-100/80 border-camel-300 text-char-900'
-                }`}
-                title={overall.reason ? `Статус: ${overall.label} (${overall.reason})` : 'Итоговая сумма баллов'}
-              >
-                <span className={`text-xs tabular-nums truncate block ${overall.type === 'normal' ? 'font-bold' : 'font-medium'}`}>
-                  {overall.type === 'absent' ? 'Неявка' : (overall.type === 'withdrawn' || overall.type === 'disqualified') ? 'Дискв.' : overall.label}
-                </span>
-              </div>
-            )
-          })()}
+        {/* Итог, Титулы и Удаление (десктоп) */}
+        <div className="flex items-center justify-between xl:justify-end gap-2 pt-2 border-t border-om-200/70 xl:pt-0 xl:border-0 xl:ml-auto shrink-0">
+          <div
+            className={`min-h-[44px] xl:min-h-[36px] flex items-center justify-center border px-3 xl:px-2 rounded-lg text-center min-w-[76px] xl:w-[74px] shrink-0 ${
+              overall.type === 'withdrawn' || overall.type === 'disqualified'
+                ? 'bg-terracotta-50 border-terracotta-200 text-terracotta-800'
+                : overall.type === 'absent'
+                ? 'bg-om-100 border-om-200 text-charcoal-600'
+                : 'bg-camel-100 border-camel-300 text-charcoal-900'
+            }`}
+            title={overall.reason ? `Статус: ${overall.label} (${overall.reason})` : 'Итоговая сумма баллов'}
+          >
+            <span className={`text-xs tabular-nums ${overall.type === 'normal' ? 'font-bold' : 'font-semibold'}`}>
+              {overall.label}
+            </span>
+          </div>
 
-          {isDogAbsent ? (
-            <div className="w-28 shrink-0" />
+          {!isDogAbsent ? (
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation()
+                if (activeAwardsMenu && activeAwardsMenu.dogId === dog.id) {
+                  setActiveAwardsMenu(null)
+                } else {
+                  const rect = e.currentTarget.getBoundingClientRect()
+                  setActiveAwardsMenu({
+                    catId: category.id,
+                    dogId: dog.id,
+                    rect: {
+                      top: rect.top,
+                      bottom: rect.bottom,
+                      left: rect.left,
+                      right: rect.right,
+                      width: rect.width,
+                    },
+                  })
+                }
+              }}
+              className={`min-h-[44px] xl:min-h-[36px] flex-1 xl:flex-none xl:w-28 flex items-center justify-between gap-1.5 px-3 xl:px-2 rounded-lg border text-xs font-semibold transition-all cursor-pointer ${
+                (dog.awards || []).length > 0
+                  ? 'bg-camel-600 text-white border-camel-700 shadow-2xs'
+                  : 'bg-white text-charcoal-700 border-om-300/90 hover:border-camel-400'
+              }`}
+              title={(dog.awards || []).length > 0 ? `Титулы: ${(dog.awards || []).join(', ')}` : 'Назначить титулы и сертификаты'}
+            >
+              <span className="truncate flex-1 text-left">
+                {(dog.awards || []).length > 0 ? (dog.awards || []).join(', ') : 'Титулы'}
+              </span>
+              <ChevronDown className="w-3.5 h-3.5 opacity-80 shrink-0" />
+            </button>
           ) : (
-            <div className="relative w-28 shrink-0">
-              <button
-                type="button"
-                onClick={e => {
-                  e.stopPropagation()
-                  if (activeAwardsMenu && activeAwardsMenu.dogId === dog.id) {
-                    setActiveAwardsMenu(null)
-                  } else {
-                    const rect = e.currentTarget.getBoundingClientRect()
-                    setActiveAwardsMenu({
-                      catId: category.id,
-                      dogId: dog.id,
-                      rect: {
-                        top: rect.top,
-                        bottom: rect.bottom,
-                        left: rect.left,
-                        right: rect.right,
-                        width: rect.width
-                      }
-                    })
-                  }
-                }}
-                className={`w-full flex items-center justify-between gap-1 px-2 py-1 rounded border text-[11px] font-semibold transition-all cursor-pointer ${
-                  (dog.awards || []).length > 0
-                    ? 'bg-camel-600 text-white border-camel-700 shadow-2xs'
-                    : 'bg-cream-50 text-char-600 border-om-200 hover:border-camel-400'
-                }`}
-                title={(dog.awards || []).length > 0 ? `Титулы: ${(dog.awards || []).join(', ')}` : 'Назначить титулы и сертификаты'}
-              >
-                <span className="truncate flex-1 text-left">
-                  {(dog.awards || []).length > 0 ? (dog.awards || []).join(', ') : 'Титулы'}
-                </span>
-                <ChevronDown className="w-2.5 h-2.5 opacity-70 shrink-0" />
-              </button>
-            </div>
+            <div className="xl:w-28 shrink-0" />
           )}
 
           <button
+            type="button"
             onClick={() => removeDogFromCategory(category.id, dog.id)}
             disabled={category.dogs.length <= 1}
-            className="w-7 h-7 flex items-center justify-center text-char-400 hover:text-terracotta-600 transition-colors rounded disabled:opacity-20 shrink-0"
+            className="hidden xl:flex w-9 h-9 items-center justify-center text-charcoal-500 hover:text-terracotta-700 hover:bg-terracotta-50 transition-colors rounded-lg disabled:opacity-25 shrink-0 cursor-pointer"
+            aria-label="Удалить собаку"
             title="Удалить собаку"
           >
-            <Trash2 className="w-3.5 h-3.5" />
+            <Trash2 className="w-4 h-4" />
           </button>
         </div>
       </div>

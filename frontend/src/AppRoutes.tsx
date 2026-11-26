@@ -238,14 +238,8 @@ export default function AppRoutes() {
         <Route path="/calendar/2027/" element={<Navigate to="/competitions/archive/2027/" replace />} />
         <Route path="/competitions/:id" element={<CompetitionsParamRoute />} />
         <Route path="/competitions/:tab/:year" element={<CompetitionsYearRoute />} />
-        <Route
-          path="/protocol-builder"
-          element={isLocalDev ? <ProtocolBuilder /> : <Navigate to="/competitions/ranking/2026/" replace />}
-        />
-        <Route
-          path="/protocol-builder/*"
-          element={isLocalDev ? <ProtocolBuilder /> : <Navigate to="/competitions/ranking/2026/" replace />}
-        />
+        <Route path="/protocol-builder" element={<ProtocolBuilder />} />
+        <Route path="/protocol-builder/*" element={<ProtocolBuilder />} />
         <Route path="/procoursing" element={<LegacyProcoursingRedirect />} />
         <Route path="/shows" element={<ShowsBaseRoute />} />
         <Route path="/shows/judges/:judgeId" element={<ShowJudgeRoute />} />

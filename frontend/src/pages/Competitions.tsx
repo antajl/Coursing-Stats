@@ -3,7 +3,6 @@ import { Navigate, useSearchParams, useNavigate, useParams, useLocation } from '
 import { SEO } from '../components/SEO'
 import { JsonLd, breadcrumbListSchema, faqPageSchema } from '../components/JsonLd'
 import { usePublicCalendarVisible } from '../hooks/useStaticData'
-import { isLocalDev } from '../lib/env'
 import LoadingCard from '../components/LoadingCard'
 import { MobileSubNavTabs } from '../components/ui/MobileSubNavTabs'
 import { getLastSectionTab, setLastSectionTab } from '../lib/navState'
@@ -45,7 +44,7 @@ function Competitions({ defaultTab }: CompetitionsProps) {
     }
 
     if (targetTab === 'builder' || targetTab === 'protocol-builder') {
-      redirectPath = isLocalDev ? '/protocol-builder/' : `/competitions/ranking/2026/${currentHash}`
+      redirectPath = '/protocol-builder/'
     } else if (!calendarVisible && targetTab === 'archive') {
       targetTab = 'ranking'
     }
@@ -63,7 +62,7 @@ function Competitions({ defaultTab }: CompetitionsProps) {
   } else if (rawTabParam === 'calendar') {
     redirectPath = `/competitions/archive/2026/${currentHash}`
   } else if (rawTabParam === 'builder' || rawTabParam === 'protocol-builder') {
-    redirectPath = isLocalDev ? '/protocol-builder/' : `/competitions/ranking/2026/${currentHash}`
+    redirectPath = '/protocol-builder/'
   } else if (!calendarVisible && rawTabParam === 'archive') {
     redirectPath = `/competitions/ranking/2026/${currentHash}`
   }
@@ -119,9 +118,7 @@ function Competitions({ defaultTab }: CompetitionsProps) {
 
   const handleTabChange = useCallback((newTab: string) => {
     if (newTab === 'builder') {
-      if (isLocalDev) {
-        navigate('/protocol-builder/')
-      }
+      navigate('/protocol-builder/')
       return
     }
     if (newTab === activeTab) return
@@ -159,7 +156,7 @@ function Competitions({ defaultTab }: CompetitionsProps) {
     { id: 'ranking', label: 'Рейтинг' },
     ...(calendarVisible ? [{ id: 'archive', label: 'Архив' }] : []),
     { id: 'judges', label: 'Судьи' },
-    ...(isLocalDev ? [{ id: 'builder', label: 'Конструктор' }] : []),
+    { id: 'builder', label: 'Конструктор' },
   ]
 
   const competitionFaqs = [

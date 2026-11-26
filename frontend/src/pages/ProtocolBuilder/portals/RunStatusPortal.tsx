@@ -33,47 +33,46 @@ export const RunStatusPortal: React.FC<RunStatusPortalProps> = ({
       />
       <div
         data-portal-menu
-        className="fixed z-50 w-52 bg-cream-50 rounded-xl border border-om-300 shadow-2xl p-1 text-xs ring-1 ring-char-900/10 animate-in fade-in zoom-in-95 duration-100"
+        className="fixed z-50 w-56 bg-cream-50 rounded-2xl border border-om-300 shadow-2xl p-1.5 text-xs ring-1 ring-charcoal-900/10"
         style={{
           top:
-            window.innerHeight - activeRunMenu.rect.bottom < 130
-              ? Math.max(10, activeRunMenu.rect.top - 110)
+            window.innerHeight - activeRunMenu.rect.bottom < 170
+              ? Math.max(10, activeRunMenu.rect.top - 160)
               : activeRunMenu.rect.bottom + 4,
-          left: Math.max(10, Math.min(activeRunMenu.rect.right - 208, window.innerWidth - 220))
+          left: Math.max(10, Math.min(activeRunMenu.rect.right - 224, window.innerWidth - 235)),
         }}
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="px-2.5 py-1 text-[10px] font-bold text-camel-800 uppercase tracking-wider border-b border-om-200/70 mb-1 flex items-center justify-between">
+        <div className="px-2.5 py-1.5 text-[10px] font-bold text-camel-800 uppercase tracking-wider border-b border-om-200/80 mb-1 flex items-center justify-between">
           <span>Статус забега</span>
           <button
             type="button"
             onClick={onClose}
-            className="text-char-400 hover:text-char-700 p-0.5 rounded focus:outline-none cursor-pointer"
+            className="min-w-[36px] min-h-[36px] flex items-center justify-center text-charcoal-600 hover:text-charcoal-900 rounded-lg cursor-pointer"
+            aria-label="Закрыть"
           >
-            <X className="w-3 h-3" />
+            <X className="w-3.5 h-3.5" />
           </button>
         </div>
 
-        <div className="space-y-0.5">
+        <div className="space-y-1">
           <button
             type="button"
             onClick={() => {
               onSetStatus(activeRunMenu.catId, activeRunMenu.dogId, activeRunMenu.rIdx, 'normal')
               onClose()
             }}
-            className={`w-full text-left px-2.5 py-1.5 rounded-lg font-medium flex items-center justify-between transition-colors cursor-pointer text-xs ${
+            className={`w-full min-h-[44px] text-left px-3 py-1.5 rounded-xl font-medium flex items-center justify-between transition-colors cursor-pointer text-xs ${
               currentRunStatus === 'normal'
-                ? 'bg-camel-100/70 text-camel-900'
-                : 'hover:bg-om-100 text-char-800'
+                ? 'bg-camel-100/80 text-camel-950'
+                : 'hover:bg-om-100 text-charcoal-800'
             }`}
           >
             <div>
               <div className="font-semibold leading-tight">Оценки (баллы)</div>
-              <div className="text-[10px] text-char-400 font-normal">Баллы по 5 критериям</div>
+              <div className="text-[11px] text-charcoal-600 font-normal">5 критериев М/Р/В/П/Э</div>
             </div>
-            {currentRunStatus === 'normal' && (
-              <Check className="w-3.5 h-3.5 text-camel-700 shrink-0" />
-            )}
+            {currentRunStatus === 'normal' && <Check className="w-4 h-4 text-camel-700 shrink-0" />}
           </button>
 
           <button
@@ -82,22 +81,20 @@ export const RunStatusPortal: React.FC<RunStatusPortalProps> = ({
               onSetStatus(activeRunMenu.catId, activeRunMenu.dogId, activeRunMenu.rIdx, 'withdrawn')
               onClose()
             }}
-            className={`w-full text-left px-2.5 py-1.5 rounded-lg font-medium flex items-center justify-between transition-colors cursor-pointer text-xs ${
+            className={`w-full min-h-[44px] text-left px-3 py-1.5 rounded-xl font-medium flex items-center justify-between transition-colors cursor-pointer text-xs ${
               currentRunStatus === 'withdrawn'
-                ? 'bg-terracotta-100/70 text-terracotta-900'
-                : 'hover:bg-terracotta-50 text-terracotta-700'
+                ? 'bg-terracotta-100/80 text-terracotta-950'
+                : 'hover:bg-terracotta-50 text-terracotta-800'
             }`}
           >
             <div className="flex items-center gap-2.5">
-              <Ban className="w-3.5 h-3.5 text-terracotta-600 shrink-0" />
+              <Ban className="w-4 h-4 text-terracotta-700 shrink-0" />
               <div>
                 <div className="font-semibold leading-tight">Дисквалификация</div>
-                <div className="text-[10px] text-char-400 font-normal">Собака снята с забега</div>
+                <div className="text-[11px] text-charcoal-600 font-normal">Собака снята с забега</div>
               </div>
             </div>
-            {currentRunStatus === 'withdrawn' && (
-              <Check className="w-3.5 h-3.5 text-terracotta-700 shrink-0" />
-            )}
+            {currentRunStatus === 'withdrawn' && <Check className="w-4 h-4 text-terracotta-700 shrink-0" />}
           </button>
 
           <button
@@ -106,22 +103,20 @@ export const RunStatusPortal: React.FC<RunStatusPortalProps> = ({
               onSetStatus(activeRunMenu.catId, activeRunMenu.dogId, activeRunMenu.rIdx, 'absent')
               onClose()
             }}
-            className={`w-full text-left px-2.5 py-1.5 rounded-lg font-medium flex items-center justify-between transition-colors cursor-pointer text-xs ${
+            className={`w-full min-h-[44px] text-left px-3 py-1.5 rounded-xl font-medium flex items-center justify-between transition-colors cursor-pointer text-xs ${
               currentRunStatus === 'absent'
-                ? 'bg-om-200/80 text-char-900'
-                : 'hover:bg-om-100 text-char-700'
+                ? 'bg-om-200/80 text-charcoal-950'
+                : 'hover:bg-om-100 text-charcoal-800'
             }`}
           >
             <div className="flex items-center gap-2.5">
-              <Clock className="w-3.5 h-3.5 text-char-400 shrink-0" />
+              <Clock className="w-4 h-4 text-charcoal-600 shrink-0" />
               <div>
                 <div className="font-semibold leading-tight">Неявка</div>
-                <div className="text-[10px] text-char-400 font-normal">Не явилась на старт</div>
+                <div className="text-[11px] text-charcoal-600 font-normal">Не явилась на старт</div>
               </div>
             </div>
-            {currentRunStatus === 'absent' && (
-              <Check className="w-3.5 h-3.5 text-char-700 shrink-0" />
-            )}
+            {currentRunStatus === 'absent' && <Check className="w-4 h-4 text-charcoal-800 shrink-0" />}
           </button>
         </div>
       </div>

@@ -1,5 +1,4 @@
 import { Icons } from '../../lib/icons'
-import { isLocalDev } from '../../lib/env'
 import { DEFAULT_ACTIVE_SEASON } from '../../lib/season'
 import type { NavMenuItem } from '../NavMenuDropdown'
 
@@ -75,16 +74,13 @@ export function competitionsMenuItems(calendarVisible: boolean): NavMenuItem[] {
       icon: Icons.club,
       isActive: competitionTabActive('judges'),
     },
-    ...(isLocalDev
-      ? [
-          {
-            to: '/protocol-builder',
-            label: 'Конструктор протокола',
-            icon: Icons.fileText,
-            isActive: (pathname: string) => pathname === '/protocol-builder',
-          },
-        ]
-      : []),
+    {
+      to: '/protocol-builder/',
+      label: 'Конструктор протокола',
+      icon: Icons.fileText,
+      isActive: (pathname: string) =>
+        pathname === '/protocol-builder' || pathname.startsWith('/protocol-builder/'),
+    },
   ]
 }
 

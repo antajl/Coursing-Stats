@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom'
 import { FolderPlus } from 'lucide-react'
 import { usePublicCalendarVisible } from '../../hooks/useStaticData'
-import { isLocalDev } from '../../lib/env'
 import { MobileSubNavTabs } from '../../components/ui/MobileSubNavTabs'
+import { SEO } from '../../components/SEO'
 import { useProtocolBuilderState } from './useProtocolBuilderState'
 import { ProtocolHeaderPanel } from './ProtocolHeaderPanel'
 import { ProtocolCategoryCard } from './ProtocolCategoryCard'
@@ -15,7 +15,7 @@ export {
   ALL_KNOWN_BREEDS,
   CLASSES,
   TITLES_LIST,
-  type BreedGroupItem
+  type BreedGroupItem,
 } from './constants'
 
 export default function ProtocolBuilder() {
@@ -25,13 +25,18 @@ export default function ProtocolBuilder() {
 
   return (
     <>
-      {/* Mobile-only tab switcher */}
+      <SEO
+        title="Конструктор протокола соревнований — Курсинг и рейсинг РКФ | Курсинг Статс"
+        description="Онлайн-конструктор протоколов по курсингу и бегам борзых (рейсингу): ввод оценок по 5 критериям М/Р/В/П/Э, попоны, дисквалификации, автосохранение и экспорт в PDF, Excel и JSON."
+        canonicalUrl="https://coursing-stats.ru/protocol-builder/"
+      />
+
       <MobileSubNavTabs
         tabs={[
           { id: 'ranking', label: 'Рейтинг' },
           ...(calendarVisible ? [{ id: 'archive', label: 'Архив' }] : []),
           { id: 'judges', label: 'Судьи' },
-          ...(isLocalDev ? [{ id: 'builder', label: 'Конструктор' }] : []),
+          { id: 'builder', label: 'Конструктор' },
         ]}
         activeTab="builder"
         onChange={(tabId) => {
@@ -54,24 +59,28 @@ export default function ProtocolBuilder() {
           setIsDownloadOpen={state.setIsDownloadOpen}
           isExportingPDF={state.isExportingPDF}
           downloadMenuRef={state.downloadMenuRef}
+          importError={state.importError}
+          setImportError={state.setImportError}
           handleDownloadPDF={state.handleDownloadPDF}
           handlePrint={state.handlePrint}
-          handleResetToDefault={state.handleResetToDefault}
+          onLoadSample={state.loadSampleProtocol}
+          onImportJson={state.importFromJsonText}
+          onResetConfirmed={state.resetProtocol}
         />
 
-        {/* Рабочая область категорий (скрывается при печати) */}
         <div className="space-y-4 print:hidden">
-          <div className="flex items-center justify-between">
-            <h2 className="text-xs font-bold uppercase tracking-wider text-char-900">
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <h2 className="text-xs font-bold uppercase tracking-wider text-charcoal-900">
               Категории соревнований ({state.categories.length})
             </h2>
 
             <button
+              type="button"
               onClick={state.addCategory}
-              className="flex items-center gap-1.5 px-3 py-1.5 bg-camel-600 hover:bg-camel-700 text-white rounded-lg text-xs font-medium shadow-xs transition-all"
+              className="min-h-[44px] sm:min-h-[38px] flex items-center gap-1.5 px-4 bg-camel-600 hover:bg-camel-700 text-white rounded-full text-xs font-semibold shadow-xs transition-all cursor-pointer"
             >
-              <FolderPlus className="w-3.5 h-3.5" />
-              Добавить категорию
+              <FolderPlus className="w-4 h-4" />
+              <span>Добавить категорию</span>
             </button>
           </div>
 
@@ -82,6 +91,7 @@ export default function ProtocolBuilder() {
                 category={category}
                 kind={state.kind}
                 categoriesCount={state.categories.length}
+                duplicateNames={state.duplicateNames}
                 customBreedCatIds={state.customBreedCatIds}
                 setCustomBreedCatIds={state.setCustomBreedCatIds}
                 customClassCatIds={state.customClassCatIds}
@@ -114,7 +124,6 @@ export default function ProtocolBuilder() {
           </div>
         </div>
 
-        {/* Сводная ведомость результатов (для печати и PDF) */}
         <ProtocolPrintView
           printableRef={state.printableRef}
           header={state.header}
@@ -122,7 +131,6 @@ export default function ProtocolBuilder() {
           categories={state.categories}
         />
 
-        {/* Выпадающие меню и порталы автокомплита */}
         <ProtocolDropdownPortals
           categories={state.categories}
           activeRunMenu={state.activeRunMenu}

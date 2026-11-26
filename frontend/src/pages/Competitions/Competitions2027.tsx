@@ -4,7 +4,6 @@ import { ChevronLeft, ChevronDown, Bell } from 'lucide-react'
 import { SEO } from '../../components/SEO'
 import { JsonLd, breadcrumbListSchema } from '../../components/JsonLd'
 import { useEvents } from '../../hooks/useApi'
-import { isLocalDev } from '../../lib/env'
 import PageToolbar from '../../components/toolbar/PageToolbar'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
 import ToolbarTip from '../../components/toolbar/ToolbarTip'
@@ -56,7 +55,7 @@ export default function Competitions2027() {
     { id: 'ranking', label: 'Рейтинг' },
     { id: 'archive', label: 'Архив' },
     { id: 'judges', label: 'Судьи' },
-    ...(isLocalDev ? [{ id: 'builder', label: 'Конструктор' }] : []),
+    { id: 'builder', label: 'Конструктор' },
   ]
 
   const handleTabChange = (newTab: string) => {

@@ -17,6 +17,22 @@ export interface CoursingScores {
   endurance: number | ''
 }
 
+export interface CoursingCriterionMeta {
+  key: keyof CoursingScores
+  short: 'М' | 'Р' | 'В' | 'П' | 'Э'
+  label: string
+  csvShort: string
+}
+
+/** Canonical FCI/RKF order matching protocol tables and dog analytics */
+export const COURSING_CRITERIA_META: readonly CoursingCriterionMeta[] = [
+  { key: 'agility', short: 'М', label: 'Маневренность', csvShort: 'Ман' },
+  { key: 'speed', short: 'Р', label: 'Резвость', csvShort: 'Резв' },
+  { key: 'endurance', short: 'В', label: 'Выносливость', csvShort: 'Вын' },
+  { key: 'intelligence', short: 'П', label: 'Преследование', csvShort: 'Преслед' },
+  { key: 'enthusiasm', short: 'Э', label: 'Энтузиазм', csvShort: 'Энт' },
+]
+
 export type RunStatus = 'normal' | 'withdrawn' | 'absent'
 
 export interface RunData {
@@ -32,14 +48,11 @@ export interface DogParticipant {
   catalogNumber: string
   dogName: string
   sex: 'male' | 'female' | ''
-  // Забеги для курсинга (динамический массив: 1, 2, 3 забега)
   runs: RunData[]
-  // Для рейсинга
   racing_box: string
   racing_time1: string
   racing_time2: string
   racing_final_time: string
-  // Итог
   disqualified: boolean
   comment: string
   awards: string[]
@@ -50,7 +63,6 @@ export interface CategoryGroup {
   breed: string
   className: string
   sex: 'male' | 'female' | 'mixed'
-  // Количество забегов в категории: по умолчанию 1, можно включить 2 и 3
   runsCount: 1 | 2 | 3
   dogs: DogParticipant[]
 }
@@ -61,7 +73,7 @@ export function createEmptyScores(): CoursingScores {
     enthusiasm: '',
     intelligence: '',
     agility: '',
-    endurance: ''
+    endurance: '',
   }
 }
 
@@ -76,7 +88,7 @@ export function createRunData(
     blanket,
     scores: createEmptyScores(),
     status,
-    reason
+    reason,
   }
 }
 
@@ -99,15 +111,15 @@ export function createNewParticipant(catalogNum: number = 1, runsCount = 1): Dog
     racing_final_time: '',
     disqualified: false,
     comment: '',
-    awards: []
+    awards: [],
   }
 }
 
 export function createNewCategory(
-  breed: string = 'Басенджи',
+  breed: string = 'Уиппет',
   className: string = 'Стандартный',
   sex: 'male' | 'female' | 'mixed' = 'male',
-  initialDogsCount: number = 2,
+  initialDogsCount: number = 1,
   startingCatalogNum: number = 1,
   runsCount: 1 | 2 | 3 = 2
 ): CategoryGroup {
@@ -121,20 +133,26 @@ export function createNewCategory(
     className,
     sex,
     runsCount,
-    dogs
+    dogs,
   }
+}
+
+export function getCanonicalScoreValues(scores?: CoursingScores | null): Array<number | ''> {
+  if (!scores) return ['', '', '', '', '']
+  return COURSING_CRITERIA_META.map((c) => scores[c.key])
 }
 
 export function calculateRoundSum(scores?: CoursingScores | null): number {
   if (!scores) return 0
-  const nums = [scores.speed, scores.enthusiasm, scores.intelligence, scores.agility, scores.endurance]
-  return nums.reduce<number>((acc, v) => acc + (typeof v === 'number' ? v : 0), 0)
+  return COURSING_CRITERIA_META.reduce<number>((acc, c) => {
+    const v = scores[c.key]
+    return acc + (typeof v === 'number' ? v : 0)
+  }, 0)
 }
 
 export function hasRoundScores(scores?: CoursingScores | null): boolean {
   if (!scores) return false
-  const nums = [scores.speed, scores.enthusiasm, scores.intelligence, scores.agility, scores.endurance]
-  return nums.some(v => typeof v === 'number')
+  return COURSING_CRITERIA_META.some((c) => typeof scores[c.key] === 'number')
 }
 
 export function calculateTotalScore(p?: DogParticipant | null, runsCount: number = 1): number {
@@ -160,7 +178,7 @@ export function getDogOverallStatus(p?: DogParticipant | null, runsCount: number
     return { type: 'normal', label: '0' }
   }
   if (p.disqualified) {
-    return { type: 'disqualified', label: 'ДИСКВ.', reason: p.comment || '' }
+    return { type: 'disqualified', label: 'Дискв.', reason: p.comment || '' }
   }
 
   const activeRuns = (p.runs || []).slice(0, runsCount)
@@ -168,33 +186,67 @@ export function getDogOverallStatus(p?: DogParticipant | null, runsCount: number
     return { type: 'normal', label: '0' }
   }
 
-  // Если все забеги неявка
-  if (activeRuns.every(r => r?.status === 'absent')) {
-    return { type: 'absent', label: 'НЕЯВКА' }
+  if (activeRuns.every((r) => r?.status === 'absent')) {
+    return { type: 'absent', label: 'Неявка' }
   }
 
-  // Если была дисквалификация в каком-то забеге
-  const withdrawnRun = activeRuns.find(r => r?.status === 'withdrawn')
+  const withdrawnRun = activeRuns.find((r) => r?.status === 'withdrawn')
   if (withdrawnRun) {
     return {
       type: 'withdrawn',
-      label: 'ДИСКВ.',
-      reason: withdrawnRun.reason || p.comment || ''
+      label: 'Дискв.',
+      reason: withdrawnRun.reason || p.comment || '',
     }
   }
 
-  // Если неявка в каком-то забеге
-  const absentRun = activeRuns.find(r => r?.status === 'absent')
+  const absentRun = activeRuns.find((r) => r?.status === 'absent')
   if (absentRun) {
-    return { type: 'absent', label: 'НЕЯВКА' }
+    return { type: 'absent', label: 'Неявка' }
   }
 
   return { type: 'normal', label: String(calculateTotalScore(p, runsCount)) }
 }
 
+export function sortCategoryDogsForReport(dogs: DogParticipant[], runsCount: number): DogParticipant[] {
+  return [...(dogs || [])].sort((a, b) => {
+    const statusA = getDogOverallStatus(a, runsCount)
+    const statusB = getDogOverallStatus(b, runsCount)
+    const isFinA = statusA.type === 'normal'
+    const isFinB = statusB.type === 'normal'
+    if (isFinA && !isFinB) return -1
+    if (!isFinA && isFinB) return 1
+    if (!isFinA && !isFinB) {
+      if (statusA.type === 'withdrawn' && statusB.type === 'absent') return -1
+      if (statusA.type === 'absent' && statusB.type === 'withdrawn') return 1
+      return 0
+    }
+    return calculateTotalScore(b, runsCount) - calculateTotalScore(a, runsCount)
+  })
+}
+
 export function formatCategoryTitle(cat: CategoryGroup): string {
-  const sexLabel = cat.sex === 'male' ? 'Кобели' : (cat.sex === 'female' ? 'Суки' : 'Микс')
+  const sexLabel = cat.sex === 'male' ? 'Кобели' : cat.sex === 'female' ? 'Суки' : 'Микс'
   return `${cat.breed} — ${cat.className} — ${sexLabel}`
+}
+
+export function normalizeDogNameKey(name: string): string {
+  return name.trim().replace(/\s+/g, ' ').toLowerCase()
+}
+
+export function findDuplicateDogNames(categories: CategoryGroup[]): Set<string> {
+  const counts = new Map<string, number>()
+  for (const cat of categories) {
+    for (const dog of cat.dogs) {
+      const key = normalizeDogNameKey(dog.dogName)
+      if (!key) continue
+      counts.set(key, (counts.get(key) || 0) + 1)
+    }
+  }
+  const dupes = new Set<string>()
+  for (const [k, count] of counts.entries()) {
+    if (count > 1) dupes.add(k)
+  }
+  return dupes
 }
 
 export interface ActiveRunMenuState {
@@ -226,4 +278,3 @@ export interface ActiveDogSexMenuState {
   dogId: string
   rect: { top: number; bottom: number; left: number; right: number; width: number }
 }
-

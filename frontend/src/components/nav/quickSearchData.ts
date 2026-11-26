@@ -1,5 +1,4 @@
 import type { NavigationRouteItem, BreedHubSearchItem } from './quickSearchTypes'
-import { isLocalDev } from '../../lib/env'
 import { CORE_BREED_HUBS, type BreedHubDefinition } from '../../lib/breed-hubs-data'
 
 /** Реестр всех разделов сайта с синонимами, сокращениями и ключевыми словами */
@@ -39,22 +38,18 @@ export const SITE_NAVIGATION_ROUTES: NavigationRouteItem[] = [
       'спорт', 'судьи соревнований', 'judges', 'суд',
     ],
   },
-  ...(isLocalDev
-    ? [
-        {
-          id: 'protocol-builder',
-          title: 'Конструктор протокола',
-          subtitle: 'Векторный экспорт протоколов соревнований в HTML и PDF',
-          to: '/protocol-builder',
-          icon: 'fileText' as const,
-          keywords: [
-            'конструктор', 'протокол', 'протоколы', 'билдер', 'создать протокол', 'бланк',
-            'экспорт', 'печать', 'печать протокола', 'pdf', 'пдф', 'генератор', 'builder',
-            'protocol', 'п', 'прот',
-          ],
-        },
-      ]
-    : []),
+  {
+    id: 'protocol-builder',
+    title: 'Конструктор протокола',
+    subtitle: 'Векторный экспорт протоколов соревнований в PDF, Excel и JSON',
+    to: '/protocol-builder/',
+    icon: 'fileText' as const,
+    keywords: [
+      'конструктор', 'протокол', 'протоколы', 'билдер', 'создать протокол', 'бланк',
+      'экспорт', 'печать', 'печать протокола', 'pdf', 'пдф', 'генератор', 'builder',
+      'protocol', 'п', 'прот',
+    ],
+  },
   {
     id: 'shows-ranking',
     title: 'Рейтинг выставок РКФ',
@@ -384,5 +379,5 @@ export const QUICK_NAV_SHORTCUTS = [
   { label: 'Рекорды Донино', to: '/speed-records/2026/', icon: 'speed' as const },
   { label: 'Календарь', to: '/competitions/archive/2026/', icon: 'calendar' as const },
   { label: 'Судьи', to: '/competitions/judges/2026/', icon: 'club' as const },
-  ...(isLocalDev ? [{ label: 'Конструктор', to: '/protocol-builder', icon: 'fileText' as const }] : []),
+  { label: 'Конструктор', to: '/protocol-builder/', icon: 'fileText' as const },
 ]

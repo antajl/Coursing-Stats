@@ -1,6 +1,5 @@
 import { useLocation, useSearchParams } from 'react-router-dom'
 import { useState, useRef, useEffect, useCallback, lazy, Suspense } from 'react'
-import { isLocalDev } from '../lib/env'
 import { NavDesktop } from './nav/NavDesktop'
 import { NavMobile } from './nav/NavMobile'
 import { NavTracker } from './nav/NavTracker'
@@ -20,7 +19,8 @@ export default function Nav() {
     location.pathname === '/competitions' ||
     location.pathname.startsWith('/competitions/') ||
     location.pathname === '/procoursing' ||
-    (isLocalDev && (location.pathname === '/protocol-builder' || location.pathname.startsWith('/protocol-builder/'))) ||
+    location.pathname === '/protocol-builder' ||
+    location.pathname.startsWith('/protocol-builder/') ||
     location.pathname.startsWith('/event/')
   const isSpeedRecordsActive =
     location.pathname === '/speed-records' ||

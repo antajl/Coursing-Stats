@@ -1,15 +1,7 @@
-import React from 'react'
-import {
-  Download,
-  Printer,
-  FileSpreadsheet,
-  FileText,
-  FileCode,
-  RotateCcw,
-  ChevronDown
-} from 'lucide-react'
-import type { CompetitionHeader, CategoryGroup, CompetitionKind } from './types'
-import { exportToCSV, exportToJSON } from './exportHelpers'
+import React, { useRef, useState } from 'react'
+import { RotateCcw, Sparkles, Upload, X } from 'lucide-react'
+import type { CategoryGroup, CompetitionHeader, CompetitionKind } from './types'
+import { ProtocolDownloadMenu } from './components/ProtocolDownloadMenu'
 
 export interface ProtocolHeaderPanelProps {
   header: CompetitionHeader
@@ -21,9 +13,13 @@ export interface ProtocolHeaderPanelProps {
   setIsDownloadOpen: React.Dispatch<React.SetStateAction<boolean>>
   isExportingPDF: boolean
   downloadMenuRef: React.RefObject<HTMLDivElement | null>
+  importError: string | null
+  setImportError: (err: string | null) => void
   handleDownloadPDF: () => void
   handlePrint: () => void
-  handleResetToDefault: () => void
+  onLoadSample: () => void
+  onImportJson: (jsonText: string) => boolean
+  onResetConfirmed: () => void
 }
 
 export const ProtocolHeaderPanel: React.FC<ProtocolHeaderPanelProps> = ({
@@ -36,149 +32,168 @@ export const ProtocolHeaderPanel: React.FC<ProtocolHeaderPanelProps> = ({
   setIsDownloadOpen,
   isExportingPDF,
   downloadMenuRef,
+  importError,
+  setImportError,
   handleDownloadPDF,
   handlePrint,
-  handleResetToDefault
+  onLoadSample,
+  onImportJson,
+  onResetConfirmed,
 }) => {
+  const [confirmResetOpen, setConfirmResetOpen] = useState(false)
+  const fileInputRef = useRef<HTMLInputElement>(null)
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0]
+    e.target.value = ''
+    if (!file) return
+    const reader = new FileReader()
+    reader.onload = () => {
+      if (typeof reader.result === 'string') {
+        onImportJson(reader.result)
+      }
+    }
+    reader.readAsText(file, 'utf-8')
+  }
+
   return (
-    <div className="bg-cream-50/90 backdrop-blur-sm rounded-xl p-3.5 md:p-4 border border-om-200 shadow-sm space-y-3 print:hidden">
-      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-om-200/70 pb-2.5">
-        <span className="text-xs font-bold uppercase tracking-wider text-camel-800">
-          Параметры турнира
-        </span>
+    <div className="bg-cream-50/95 rounded-2xl p-4 border border-om-200 shadow-sm space-y-3.5 print:hidden">
+      <div className="flex flex-wrap items-center justify-between gap-2.5 border-b border-om-200/80 pb-3">
+        <div>
+          <h1 className="text-base sm:text-lg font-serif font-bold text-charcoal-900 leading-tight">
+            Конструктор протокола соревнований
+          </h1>
+          <p className="text-xs text-charcoal-600 mt-0.5">
+            Черновик автоматически сохраняется в браузере
+          </p>
+        </div>
 
-        {/* Единая кнопка скачивания и меню форматов */}
-        <div className="flex items-center gap-2">
-          <div className="relative inline-block text-left" ref={downloadMenuRef}>
-            <button
-              type="button"
-              onClick={() => setIsDownloadOpen((prev) => !prev)}
-              disabled={isExportingPDF}
-              className="flex items-center gap-1.5 px-3.5 py-1.5 bg-camel-600 hover:bg-camel-700 active:bg-camel-800 disabled:opacity-75 text-white text-xs font-semibold rounded-lg shadow-xs transition-all focus:outline-none focus:ring-2 focus:ring-camel-500/40 cursor-pointer"
-            >
-              <Download className={`w-3.5 h-3.5 ${isExportingPDF ? 'animate-bounce' : ''}`} />
-              <span>{isExportingPDF ? 'Формирование PDF...' : 'Скачать'}</span>
-              <ChevronDown
-                className={`w-3 h-3 transition-transform duration-200 ${
-                  isDownloadOpen ? 'rotate-180' : ''
-                }`}
-              />
-            </button>
-
-            {isDownloadOpen && (
-              <div className="absolute right-0 top-full mt-1.5 w-60 bg-cream-50 rounded-xl border border-om-300 shadow-xl z-50 py-1 divide-y divide-om-100 ring-1 ring-char-900/10 animate-in fade-in zoom-in-95 duration-100">
-                <div className="px-3 py-1.5 text-[10px] font-bold text-camel-800 uppercase tracking-wider bg-om-100/60">
-                  Формат для скачивания
-                </div>
-
-                <div className="py-1">
-                  <button
-                    type="button"
-                    onClick={handleDownloadPDF}
-                    className="w-full text-left px-3 py-2 hover:bg-camel-100/70 text-xs flex items-center gap-2.5 transition-colors group cursor-pointer"
-                  >
-                    <div className="w-6 h-6 rounded bg-terracotta-100 text-terracotta-700 flex items-center justify-center shrink-0 group-hover:bg-terracotta-200">
-                      <FileText className="w-3.5 h-3.5" />
-                    </div>
-                    <div>
-                      <div className="font-semibold text-char-900">PDF документ (.pdf)</div>
-                      <div className="text-[10px] text-char-500">Скачать файл протокола</div>
-                    </div>
-                  </button>
-
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setIsDownloadOpen(false)
-                      exportToCSV(header, kind, categories)
-                    }}
-                    className="w-full text-left px-3 py-2 hover:bg-camel-100/70 text-xs flex items-center gap-2.5 transition-colors group cursor-pointer"
-                  >
-                    <div className="w-6 h-6 rounded bg-forest-100 text-forest-700 flex items-center justify-center shrink-0 group-hover:bg-forest-200">
-                      <FileSpreadsheet className="w-3.5 h-3.5" />
-                    </div>
-                    <div>
-                      <div className="font-semibold text-char-900">Таблица Excel (.csv)</div>
-                      <div className="text-[10px] text-char-500">Для Excel и Google Таблиц</div>
-                    </div>
-                  </button>
-
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setIsDownloadOpen(false)
-                      exportToJSON(header, kind, categories)
-                    }}
-                    className="w-full text-left px-3 py-2 hover:bg-camel-100/70 text-xs flex items-center gap-2.5 transition-colors group cursor-pointer"
-                  >
-                    <div className="w-6 h-6 rounded bg-camel-100 text-camel-800 flex items-center justify-center shrink-0 group-hover:bg-camel-200">
-                      <FileCode className="w-3.5 h-3.5" />
-                    </div>
-                    <div>
-                      <div className="font-semibold text-char-900">Данные JSON (.json)</div>
-                      <div className="text-[10px] text-char-500">Структурированный экспорт</div>
-                    </div>
-                  </button>
-                </div>
-
-                <div className="py-1">
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setIsDownloadOpen(false)
-                      handlePrint()
-                    }}
-                    className="w-full text-left px-3 py-1.5 hover:bg-cream-100 text-xs flex items-center gap-2.5 text-char-700 transition-colors cursor-pointer"
-                  >
-                    <Printer className="w-3.5 h-3.5 text-char-400 ml-1.5 mr-0.5" />
-                    <span>Печать на принтер (Ctrl+P)</span>
-                  </button>
-                </div>
-              </div>
-            )}
-          </div>
+        <div className="flex flex-wrap items-center gap-2">
+          <input
+            ref={fileInputRef}
+            type="file"
+            accept=".json,application/json"
+            onChange={handleFileChange}
+            className="hidden"
+          />
 
           <button
-            onClick={handleResetToDefault}
-            className="flex items-center gap-1.5 px-3 py-1.5 bg-cream-50 hover:bg-terracotta-50 text-char-600 hover:text-terracotta-700 text-xs font-medium rounded-lg border border-om-200 hover:border-terracotta-300 shadow-xs transition-all ml-auto sm:ml-2"
-            title="Стереть все введённые данные и вернуть шаблон по умолчанию"
+            type="button"
+            onClick={() => fileInputRef.current?.click()}
+            className="min-h-[44px] sm:min-h-[38px] flex items-center gap-1.5 px-3 bg-white hover:bg-cream-100 text-charcoal-800 text-xs font-semibold rounded-full border border-om-300 shadow-2xs transition-colors cursor-pointer"
+            title="Загрузить ранее сохранённый JSON-файл протокола"
+          >
+            <Upload className="w-3.5 h-3.5 text-camel-700" />
+            <span>Открыть JSON</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={onLoadSample}
+            className="min-h-[44px] sm:min-h-[38px] flex items-center gap-1.5 px-3 bg-white hover:bg-cream-100 text-charcoal-800 text-xs font-semibold rounded-full border border-om-300 shadow-2xs transition-colors cursor-pointer"
+            title="Заполнить пример с готовыми баллами для знакомства"
+          >
+            <Sparkles className="w-3.5 h-3.5 text-camel-700" />
+            <span>Загрузить пример</span>
+          </button>
+
+          <ProtocolDownloadMenu
+            header={header}
+            kind={kind}
+            categories={categories}
+            isDownloadOpen={isDownloadOpen}
+            setIsDownloadOpen={setIsDownloadOpen}
+            isExportingPDF={isExportingPDF}
+            downloadMenuRef={downloadMenuRef}
+            handleDownloadPDF={handleDownloadPDF}
+            handlePrint={handlePrint}
+          />
+
+          <button
+            type="button"
+            onClick={() => setConfirmResetOpen((prev) => !prev)}
+            className="min-h-[44px] sm:min-h-[38px] flex items-center gap-1.5 px-3 bg-white hover:bg-terracotta-50 text-charcoal-700 hover:text-terracotta-700 text-xs font-semibold rounded-full border border-om-300 hover:border-terracotta-300 shadow-2xs transition-all cursor-pointer"
+            title="Очистить протокол"
           >
             <RotateCcw className="w-3.5 h-3.5" />
-            <span>Сбросить всё</span>
+            <span>Очистить</span>
           </button>
         </div>
       </div>
 
-      <div className="flex items-center justify-between">
-        <span className="text-xs font-semibold text-char-600">Метаданные</span>
+      {confirmResetOpen && (
+        <div className="flex flex-wrap items-center justify-between gap-2 px-3.5 py-2.5 rounded-xl bg-terracotta-50 border border-terracotta-200 text-xs">
+          <span className="font-semibold text-terracotta-900">
+            Удалить все введённые данные и очистить текущий протокол?
+          </span>
+          <div className="flex items-center gap-2 ml-auto">
+            <button
+              type="button"
+              onClick={() => setConfirmResetOpen(false)}
+              className="min-h-[40px] px-3 rounded-lg border border-om-300 bg-white text-charcoal-800 font-semibold hover:bg-cream-100 cursor-pointer"
+            >
+              Отмена
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                setConfirmResetOpen(false)
+                onResetConfirmed()
+              }}
+              className="min-h-[40px] px-3 rounded-lg bg-terracotta-600 text-white font-semibold hover:bg-terracotta-700 cursor-pointer"
+            >
+              Да, очистить
+            </button>
+          </div>
+        </div>
+      )}
 
-        <div className="flex items-center bg-om-100 p-0.5 rounded-lg border border-om-200 text-xs">
+      {importError && (
+        <div className="flex items-center justify-between gap-2 px-3.5 py-2.5 rounded-xl bg-terracotta-50 border border-terracotta-200 text-xs text-terracotta-900">
+          <span>{importError}</span>
           <button
+            type="button"
+            onClick={() => setImportError(null)}
+            className="min-w-[36px] min-h-[36px] flex items-center justify-center rounded-lg hover:bg-terracotta-100 cursor-pointer"
+            aria-label="Скрыть ошибку"
+          >
+            <X className="w-4 h-4" />
+          </button>
+        </div>
+      )}
+
+      <div className="flex flex-wrap items-center justify-between gap-2">
+        <span className="text-xs font-semibold text-charcoal-700">Дисциплина и реквизиты</span>
+
+        <div className="flex items-center bg-om-100 p-1 rounded-full border border-om-200 text-xs">
+          <button
+            type="button"
             onClick={() => {
               setKind('coursing')
               if (header.title === 'Соревнования по рейсингу') {
                 setHeader((prev) => ({ ...prev, title: 'Соревнования по курсингу' }))
               }
             }}
-            className={`px-3 py-1 rounded-md transition-all font-medium ${
+            className={`min-h-[38px] sm:min-h-[32px] px-3.5 rounded-full transition-all font-semibold cursor-pointer ${
               kind === 'coursing'
-                ? 'bg-cream-50 text-char-900 shadow-xs font-semibold'
-                : 'text-char-500 hover:text-char-800'
+                ? 'bg-white text-charcoal-900 shadow-xs'
+                : 'text-charcoal-600 hover:text-charcoal-900'
             }`}
           >
             Курсинг (баллы)
           </button>
           <button
+            type="button"
             onClick={() => {
               setKind('racing')
               if (header.title === 'Соревнования по курсингу') {
                 setHeader((prev) => ({ ...prev, title: 'Соревнования по рейсингу' }))
               }
             }}
-            className={`px-3 py-1 rounded-md transition-all font-medium ${
+            className={`min-h-[38px] sm:min-h-[32px] px-3.5 rounded-full transition-all font-semibold cursor-pointer ${
               kind === 'racing'
-                ? 'bg-cream-50 text-char-900 shadow-xs font-semibold'
-                : 'text-char-500 hover:text-char-800'
+                ? 'bg-white text-charcoal-900 shadow-xs'
+                : 'text-charcoal-600 hover:text-charcoal-900'
             }`}
           >
             Рейсинг (время)
@@ -187,70 +202,70 @@ export const ProtocolHeaderPanel: React.FC<ProtocolHeaderPanelProps> = ({
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 text-xs">
-        <div>
-          <label className="block text-char-600 font-medium mb-0.5">Название соревнований</label>
+        <label className="block">
+          <span className="block text-charcoal-700 font-semibold mb-1">Название соревнований</span>
           <input
             type="text"
             value={header.title}
             onChange={(e) => setHeader({ ...header, title: e.target.value })}
-            placeholder="Название соревнований"
-            className="w-full px-2.5 py-1.5 bg-om-50 rounded-lg border border-om-200 text-char-900 placeholder:text-char-400 focus:outline-none focus:ring-1 focus:ring-camel-500"
+            placeholder="Например: Чемпионат РКФ по курсингу"
+            className="w-full min-h-[44px] sm:min-h-[38px] px-3 bg-white rounded-lg border border-om-300/90 text-charcoal-900 placeholder:text-charcoal-400 focus:outline-none focus:ring-2 focus:ring-camel-500/40"
           />
-        </div>
+        </label>
 
-        <div>
-          <label className="block text-char-600 font-medium mb-0.5">Ранг соревнований</label>
+        <label className="block">
+          <span className="block text-charcoal-700 font-semibold mb-1">Ранг соревнований</span>
           <input
             type="text"
             value={header.rank}
             onChange={(e) => setHeader({ ...header, rank: e.target.value })}
-            placeholder="Ранг соревнований (Сертификатные, ЧРКФ и т.д.)"
-            className="w-full px-2.5 py-1.5 bg-om-50 rounded-lg border border-om-200 text-char-900 placeholder:text-char-400 focus:outline-none focus:ring-1 focus:ring-camel-500"
+            placeholder="Сертификатные, ЧРКФ, CACIT..."
+            className="w-full min-h-[44px] sm:min-h-[38px] px-3 bg-white rounded-lg border border-om-300/90 text-charcoal-900 placeholder:text-charcoal-400 focus:outline-none focus:ring-2 focus:ring-camel-500/40"
           />
-        </div>
+        </label>
 
-        <div>
-          <label className="block text-char-600 font-medium mb-0.5">Дата проведения</label>
+        <label className="block">
+          <span className="block text-charcoal-700 font-semibold mb-1">Дата проведения</span>
           <input
             type="date"
             value={header.date}
             onChange={(e) => setHeader({ ...header, date: e.target.value })}
-            className="w-full px-2.5 py-1.5 bg-om-50 rounded-lg border border-om-200 text-char-900 focus:outline-none focus:ring-1 focus:ring-camel-500"
+            className="w-full min-h-[44px] sm:min-h-[38px] px-3 bg-white rounded-lg border border-om-300/90 text-charcoal-900 focus:outline-none focus:ring-2 focus:ring-camel-500/40"
           />
-        </div>
+        </label>
 
-        <div>
-          <label className="block text-char-600 font-medium mb-0.5">Место / Регион</label>
+        <label className="block">
+          <span className="block text-charcoal-700 font-semibold mb-1">Место / Регион</span>
           <input
             type="text"
             value={header.location}
             onChange={(e) => setHeader({ ...header, location: e.target.value })}
-            placeholder="Город, место проведения"
-            className="w-full px-2.5 py-1.5 bg-om-50 rounded-lg border border-om-200 text-char-900 placeholder:text-char-400 focus:outline-none focus:ring-1 focus:ring-camel-500"
+            placeholder="Город, регион или поле"
+            className="w-full min-h-[44px] sm:min-h-[38px] px-3 bg-white rounded-lg border border-om-300/90 text-charcoal-900 placeholder:text-charcoal-400 focus:outline-none focus:ring-2 focus:ring-camel-500/40"
           />
-        </div>
+        </label>
 
-        <div>
-          <label className="block text-char-600 font-medium mb-0.5">Организатор (Клуб)</label>
+        <label className="block">
+          <span className="block text-charcoal-700 font-semibold mb-1">Организатор (Клуб)</span>
           <input
             type="text"
             value={header.club}
             onChange={(e) => setHeader({ ...header, club: e.target.value })}
-            placeholder="Кинологический клуб / Организатор"
-            className="w-full px-2.5 py-1.5 bg-om-50 rounded-lg border border-om-200 text-char-900 placeholder:text-char-400 focus:outline-none focus:ring-1 focus:ring-camel-500"
+            placeholder="Название кинологического клуба"
+            className="w-full min-h-[44px] sm:min-h-[38px] px-3 bg-white rounded-lg border border-om-300/90 text-charcoal-900 placeholder:text-charcoal-400 focus:outline-none focus:ring-2 focus:ring-camel-500/40"
           />
-        </div>
+        </label>
 
-        <div>
-          <label className="block text-char-600 font-medium mb-0.5">Судьи</label>
+        <label className="block">
+          <span className="block text-charcoal-700 font-semibold mb-1">Судьи</span>
           <input
             type="text"
             value={header.judges}
             onChange={(e) => setHeader({ ...header, judges: e.target.value })}
-            placeholder="Судейская коллегия / ФИО судей"
-            className="w-full px-2.5 py-1.5 bg-om-50 rounded-lg border border-om-200 text-char-900 placeholder:text-char-400 focus:outline-none focus:ring-1 focus:ring-camel-500"
+            placeholder="ФИО судей через запятую"
+            className="w-full min-h-[44px] sm:min-h-[38px] px-3 bg-white rounded-lg border border-om-300/90 text-charcoal-900 placeholder:text-charcoal-400 focus:outline-none focus:ring-2 focus:ring-camel-500/40"
           />
-        </div>
+        </label>
       </div>
     </div>
   )
