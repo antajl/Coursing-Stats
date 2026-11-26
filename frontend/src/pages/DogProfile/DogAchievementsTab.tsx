@@ -86,7 +86,11 @@ export function DogAchievementsTab({
       )}
 
       {/* РАЗДЕЛ 1: В ШАГЕ ОТ ТИТУЛА */}
-      <OneStepAwaySection inProgressTitles={inProgressTitles} eventResultsUrls={eventResultsUrls} />
+      <OneStepAwaySection
+        inProgressTitles={inProgressTitles}
+        eventResultsUrls={eventResultsUrls}
+        breed={breed}
+      />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
         {/* ЛЕВАЯ КОЛОНКА: ОФИЦИАЛЬНЫЕ ТИТУЛЫ */}

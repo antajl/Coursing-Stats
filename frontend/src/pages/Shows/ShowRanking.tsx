@@ -11,7 +11,10 @@ import {
   type ShowMonoAgeCategory,
 } from '../../../../backend/lib/show-award-ranking'
 import ShowRankingFilters from './ShowRankingFilters'
+import ShowRatingHint from './ShowRatingHint'
 import ShowRankingColumns, { type RankedShowDog } from './ShowRankingColumns'
+import { CopySeasonSummaryButton } from '../../components/ui/CopySeasonSummaryButton'
+import { buildShowTop3Summary } from '../../lib/seasonSummaryCopy'
 import type { ShowDogCardData } from './ShowDogCard'
 import { useDebounce } from '../../hooks/useDebounce'
 import { dogNameSearchText, dogQuerySearchTokens } from '../../lib/dogName'
@@ -450,6 +453,18 @@ export default function ShowRanking({ urlYear }: ShowRankingProps = {}) {
     isRankingFetched &&
     (rankingError || (rankingData && !rankingData.success))
 
+  const showSummaryText = useMemo(() => {
+    const qs = filterBreed ? `?breed=${encodeURIComponent(breedToSlug(filterBreed))}` : ''
+    const seasonSlug = rankingYear || 'all'
+    return buildShowTop3Summary({
+      generalDogs: displayedGeneralDogs,
+      monoDogs: displayedMonoDogs,
+      filterYear: rankingYear,
+      filterBreed,
+      url: `https://coursing-stats.ru/shows/ranking/${seasonSlug}/${qs}`,
+    })
+  }, [displayedGeneralDogs, displayedMonoDogs, rankingYear, filterBreed])
+
   return (
     <div className="max-w-full mx-auto pb-2 sm:pb-4">
       <ShowRankingFilters
@@ -464,9 +479,17 @@ export default function ShowRanking({ urlYear }: ShowRankingProps = {}) {
         breedValues={breeds}
         filterSex={filterSex}
         onSexChange={setFilterSex}
+        filterAge={monoAgeCategory}
+        onAgeChange={setMonoAgeCategory}
         dogIndex={dogIndex}
         onResetFilters={handleResetFilters}
         dropdownRef={dropdownRef}
+        trailing={
+          <div className="flex items-center gap-1.5 shrink-0">
+            <ShowRatingHint embedded />
+            <CopySeasonSummaryButton text={showSummaryText} />
+          </div>
+        }
       />
 
       {showListSkeleton ? (

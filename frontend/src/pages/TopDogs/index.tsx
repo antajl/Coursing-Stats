@@ -22,6 +22,8 @@ import {
 import { buildCombinedRanking } from './mergeCombinedRanking'
 import { useFavorites } from '../../hooks/useFavorites'
 import { breedToSlug, resolveBreedParam } from '../../lib/breedMapping'
+import { buildSportTop3Summary } from '../../lib/seasonSummaryCopy'
+import { CopySeasonSummaryButton } from '../../components/ui/CopySeasonSummaryButton'
 
 export type TopDogsProps = {
   urlYear?: string
@@ -322,6 +324,18 @@ export default function TopDogs({ urlYear }: TopDogsProps = {}) {
 
   const showListSkeleton = isInitialLoad && loading
 
+  const sportSummaryText = useMemo(() => {
+    const qs = filterBreed ? `?breed=${encodeURIComponent(breedToSlug(filterBreed))}` : ''
+    const seasonSlug = filterYear ? filterYear : 'all'
+    return buildSportTop3Summary({
+      coursingDogs: displayedCombined,
+      racingDogs: displayedSpeed as unknown as import('../../lib/seasonSummaryCopy').SportSummaryDog[],
+      filterYear,
+      filterBreed,
+      url: `https://coursing-stats.ru/competitions/ranking/${seasonSlug}/${qs}`,
+    })
+  }, [displayedCombined, displayedSpeed, filterYear, filterBreed])
+
   return (
     <div className="max-w-full mx-auto pb-2 sm:pb-4">
       {!isEmbedded && (
@@ -354,7 +368,12 @@ export default function TopDogs({ urlYear }: TopDogsProps = {}) {
         onResetFilters={handleResetFilters}
         onResetPanelFilters={handleResetPanelFilters}
         dropdownRef={dropdownRef}
-        trailing={<CoursingRatingHint embedded variant="unified" />}
+        trailing={
+          <div className="flex items-center gap-1.5 shrink-0">
+            <CoursingRatingHint embedded variant="unified" />
+            <CopySeasonSummaryButton text={sportSummaryText} />
+          </div>
+        }
         activeMobileColumn={activeMobileColumn}
         onMobileColumnChange={setSelectedMobileColumn}
         coursingCount={displayedCombined.length}
