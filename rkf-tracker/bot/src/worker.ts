@@ -5,6 +5,7 @@ import { createBot } from './bot.js';
 import { runBackgroundPolling } from './services/poller.js';
 import { getLiveCompetitions } from './services/calendar-sync.js';
 import { handleAuthLogin, handleAuthTicket, handleApplicationsList, handleSyncState } from './worker-auth.js';
+import { setTokenEncryptionSecret } from './storage/index.js';
 
 let cachedBot: ReturnType<typeof createBot> | null = null;
 
@@ -48,6 +49,7 @@ export default {
     if (!token) {
       return new Response('BOT_TOKEN is not configured', { status: 500 });
     }
+    setTokenEncryptionSecret(env.TOKEN_ENC_KEY || token);
 
     // Auth API endpoints for WebApp and Extension
     if (url.pathname === '/api/auth/login' && request.method === 'POST') {

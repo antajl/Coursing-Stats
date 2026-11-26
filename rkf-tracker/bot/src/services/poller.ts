@@ -1,10 +1,15 @@
 // Background poller orchestrator for Cloudflare Workers Cron Trigger
+// Respects Cloudflare subrequest limits via round-robin cursor and bounded concurrency.
 import type { Env, UserRecord } from '../types.js';
-import { getUserIndex, getUser, saveUser } from '../storage/index.js';
+import { getUserIndex, getUser, saveUser, setTokenEncryptionSecret } from '../storage/index.js';
 import { fetchRkfApplications } from './rkf-api.js';
 import { detectStatusChanges, formatChangeMessage } from './diff-engine.js';
 import { formatApprovalAlert, formatCompetitionStatusChangeAlert, type CompetitionEvent } from './competition-tracker.js';
 import { syncRkfCalendar, getLiveCompetitions } from './calendar-sync.js';
+
+const POLL_CURSOR_KEY = 'poll:rkf_cursor';
+const MAX_RKF_POLLS_PER_CRON = 8;
+const POLL_BATCH_SIZE = 4;
 
 export async function runBackgroundPolling(env: Env): Promise<{ checkedUsers: number; alertsSent: number }> {
   const token = env.BOT_TOKEN || env.TELEGRAM_BOT_TOKEN;
@@ -13,7 +18,10 @@ export async function runBackgroundPolling(env: Env): Promise<{ checkedUsers: nu
     return { checkedUsers: 0, alertsSent: 0 };
   }
 
-  // 0. Sync latest RKF 2026 calendar into KV_STORAGE before checking user subscriptions
+  const encSecret = env.TOKEN_ENC_KEY || token;
+  setTokenEncryptionSecret(encSecret);
+
+  // 0. Sync latest RKF 2026 calendar ONCE per cron cycle
   let liveEvents: CompetitionEvent[] = [];
   try {
     const snap = await syncRkfCalendar(env.KV_STORAGE);
@@ -26,35 +34,44 @@ export async function runBackgroundPolling(env: Env): Promise<{ checkedUsers: nu
   const eventMap = new Map(liveEvents.map((ev) => [ev.id, ev]));
 
   const userIds = await getUserIndex(env.KV_STORAGE);
+  if (userIds.length === 0) return { checkedUsers: 0, alertsSent: 0 };
+
+  let cursor = 0;
+  if (env.KV_STORAGE) {
+    const rawCursor = await env.KV_STORAGE.get(POLL_CURSOR_KEY).catch(() => null);
+    const parsed = rawCursor ? Number(rawCursor) : 0;
+    if (Number.isFinite(parsed) && parsed >= 0 && parsed < userIds.length) {
+      cursor = parsed;
+    }
+  }
+
+  // Rotate list so every user gets fair RKF application polling across cron ticks
+  const rotatedIds = [...userIds.slice(cursor), ...userIds.slice(0, cursor)];
+
   let checkedUsers = 0;
   let alertsSent = 0;
+  let rkfPollsPerformed = 0;
 
-  for (const userId of userIds) {
-    const user = await getUser(env.KV_STORAGE, userId);
-    if (!user || !user.notificationsEnabled) continue;
-
-    checkedUsers++;
+  async function processSingleUser(user: UserRecord, pollRkfApps: boolean): Promise<number> {
+    let sent = 0;
     let userModified = false;
 
-    // 1. Check RKF Applications
-    if (user.rkfToken) {
+    if (pollRkfApps && user.rkfToken) {
       try {
         const apps = await fetchRkfApplications(user.rkfToken, user.receivedBarcodes || []);
         const changes = detectStatusChanges(user.cachedApps || {}, apps, user.receivedBarcodes || []);
 
         for (const change of changes) {
           const text = formatChangeMessage(change);
-          const ok = await sendTelegramMessage(token, user.chatId, text);
-          if (ok) alertsSent++;
+          if (await sendTelegramMessage(token!, user.chatId, text)) sent++;
         }
 
-        // Update cache
         const nextCache: UserRecord['cachedApps'] = {};
         for (const app of apps) {
           nextCache[app.barcode] = {
             status: app.currentStatus,
             statusGroup: app.statusGroup,
-            lastUpdated: app.lastUpdated
+            lastUpdated: app.lastUpdated,
           };
         }
         user.cachedApps = nextCache;
@@ -63,12 +80,12 @@ export async function runBackgroundPolling(env: Env): Promise<{ checkedUsers: nu
         userModified = true;
       } catch (err: any) {
         if (err?.message === 'AUTH_EXPIRED' && !user.authExpiredNotifiedAt) {
-          const sent = await sendTelegramMessage(
-            token,
+          const ok = await sendTelegramMessage(
+            token!,
             user.chatId,
-            '[ВНИМАНИЕ] Срок действия токена RKF.Online истек. Пожалуйста, обновите токен через команду /auth.'
+            'Срок действия токена RKF.Online истек. Обновите токен через /auth.'
           );
-          if (sent) {
+          if (ok) {
             user.authExpiredNotifiedAt = new Date().toISOString();
             userModified = true;
           }
@@ -76,22 +93,19 @@ export async function runBackgroundPolling(env: Env): Promise<{ checkedUsers: nu
       }
     }
 
-    // 2. Check Competition Subscriptions (2026 Calendar)
     if (user.competitions && user.competitions.length > 0) {
       for (const comp of user.competitions) {
         try {
           const ev = eventMap.get(comp.id);
           if (!ev) continue;
           if (ev.status === 'APPROVED' && comp.lastStatus !== 'APPROVED') {
-            const text = formatApprovalAlert(ev);
-            const ok = await sendTelegramMessage(token, user.chatId, text);
-            if (ok) alertsSent++;
+            if (await sendTelegramMessage(token!, user.chatId, formatApprovalAlert(ev))) sent++;
             comp.lastStatus = ev.status;
             userModified = true;
           } else if (comp.lastStatus && ev.status !== comp.lastStatus) {
-            const text = formatCompetitionStatusChangeAlert(ev, comp.lastStatus);
-            const ok = await sendTelegramMessage(token, user.chatId, text);
-            if (ok) alertsSent++;
+            if (await sendTelegramMessage(token!, user.chatId, formatCompetitionStatusChangeAlert(ev, comp.lastStatus))) {
+              sent++;
+            }
             comp.lastStatus = ev.status;
             userModified = true;
           } else if (!comp.lastStatus) {
@@ -99,14 +113,59 @@ export async function runBackgroundPolling(env: Env): Promise<{ checkedUsers: nu
             userModified = true;
           }
         } catch {
-          // Ignore individual check errors
+          // Ignore per-competition diff failures
         }
       }
     }
 
     if (userModified) {
-      await saveUser(env.KV_STORAGE, user);
+      await saveUser(env.KV_STORAGE, user, encSecret);
     }
+    return sent;
+  }
+
+  const usersLoaded = await Promise.all(
+    rotatedIds.map((id) => getUser(env.KV_STORAGE, id, encSecret)),
+  );
+
+  const tasks: Array<{ user: UserRecord; pollRkf: boolean }> = [];
+  let scannedCount = 0;
+
+  for (const user of usersLoaded) {
+    scannedCount++;
+    if (!user || !user.notificationsEnabled) continue;
+    checkedUsers++;
+
+    const wantsRkfPoll = Boolean(user.rkfToken) && rkfPollsPerformed < MAX_RKF_POLLS_PER_CRON;
+    if (wantsRkfPoll) rkfPollsPerformed++;
+    if (wantsRkfPoll || (user.competitions && user.competitions.length > 0)) {
+      tasks.push({ user, pollRkf: wantsRkfPoll });
+    }
+    if (rkfPollsPerformed >= MAX_RKF_POLLS_PER_CRON && tasks.length >= MAX_RKF_POLLS_PER_CRON) {
+      // Finish competition-only checks for remaining users in queue, skip extra external RKF polls
+      for (let j = scannedCount; j < usersLoaded.length; j++) {
+        const rem = usersLoaded[j];
+        if (!rem || !rem.notificationsEnabled) continue;
+        checkedUsers++;
+        if (rem.competitions && rem.competitions.length > 0) {
+          tasks.push({ user: rem, pollRkf: false });
+        }
+      }
+      break;
+    }
+  }
+
+  for (let i = 0; i < tasks.length; i += POLL_BATCH_SIZE) {
+    const batch = tasks.slice(i, i + POLL_BATCH_SIZE);
+    const results = await Promise.allSettled(batch.map((t) => processSingleUser(t.user, t.pollRkf)));
+    for (const res of results) {
+      if (res.status === 'fulfilled') alertsSent += res.value;
+    }
+  }
+
+  if (env.KV_STORAGE && userIds.length > 0) {
+    const nextCursor = (cursor + Math.min(scannedCount, userIds.length)) % userIds.length;
+    await env.KV_STORAGE.put(POLL_CURSOR_KEY, String(nextCursor)).catch(() => {});
   }
 
   return { checkedUsers, alertsSent };

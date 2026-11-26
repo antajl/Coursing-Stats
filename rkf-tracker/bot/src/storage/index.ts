@@ -1,24 +1,50 @@
-// Storage operations with Cloudflare KV (fail-safe resilient)
+// Storage operations with Cloudflare KV and transparent AES-GCM token encryption
 import type { UserRecord } from '../types.js';
+import { decryptSecret, encryptSecret } from '../crypto.js';
 
 const USER_PREFIX = 'user:';
+let runtimeEncSecret = '';
 
-export async function getUser(kv: KVNamespace | undefined, userId: number): Promise<UserRecord | null> {
+export function setTokenEncryptionSecret(secret?: string): void {
+  if (secret && secret.trim()) {
+    runtimeEncSecret = secret.trim();
+  }
+}
+
+export async function getUser(
+  kv: KVNamespace | undefined,
+  userId: number,
+  encSecret?: string,
+): Promise<UserRecord | null> {
   if (!kv) return null;
   try {
     const data = await kv.get(`${USER_PREFIX}${userId}`);
     if (!data) return null;
-    return JSON.parse(data) as UserRecord;
+    const record = JSON.parse(data) as UserRecord;
+    const secret = encSecret || runtimeEncSecret;
+    if (record.rkfToken && secret) {
+      record.rkfToken = await decryptSecret(record.rkfToken, secret);
+    }
+    return record;
   } catch (err) {
     console.error('[KV getUser error]', err);
     return null;
   }
 }
 
-export async function saveUser(kv: KVNamespace | undefined, user: UserRecord): Promise<void> {
+export async function saveUser(
+  kv: KVNamespace | undefined,
+  user: UserRecord,
+  encSecret?: string,
+): Promise<void> {
   if (!kv) return;
   try {
-    await kv.put(`${USER_PREFIX}${user.userId}`, JSON.stringify(user));
+    const secret = encSecret || runtimeEncSecret;
+    const toStore: UserRecord = { ...user };
+    if (toStore.rkfToken && secret) {
+      toStore.rkfToken = await encryptSecret(toStore.rkfToken, secret);
+    }
+    await kv.put(`${USER_PREFIX}${user.userId}`, JSON.stringify(toStore));
   } catch (err) {
     console.error('[KV saveUser error]', err);
   }
@@ -46,6 +72,7 @@ export async function getUserIndex(kv: KVNamespace | undefined): Promise<number[
       }
       cursor = listRes.list_complete ? undefined : listRes.cursor;
     } while (cursor);
+    ids.sort((a, b) => a - b);
     return ids;
   } catch (err) {
     console.error('[KV getUserIndex error]', err);

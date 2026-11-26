@@ -2,6 +2,49 @@
 import type { Env } from './types.js';
 import { authenticateRkfUser, fetchRkfApplications } from './services/rkf-api.js';
 import { getUser, saveUser, createDefaultUser } from './storage/index.js';
+import { encryptSecret } from './crypto.js';
+
+async function verifyTelegramWebAppUserId(initData: string, botToken: string): Promise<number | null> {
+  try {
+    const params = new URLSearchParams(initData);
+    const hash = params.get('hash');
+    if (!hash) return null;
+    params.delete('hash');
+    const dataCheckString = Array.from(params.entries())
+      .sort(([a], [b]) => a.localeCompare(b))
+      .map(([k, v]) => `${k}=${v}`)
+      .join('\n');
+
+    const enc = new TextEncoder();
+    const secretKey = await crypto.subtle.importKey(
+      'raw',
+      enc.encode('WebAppData'),
+      { name: 'HMAC', hash: 'SHA-256' },
+      false,
+      ['sign']
+    );
+    const secret = await crypto.subtle.sign('HMAC', secretKey, enc.encode(botToken));
+    const signingKey = await crypto.subtle.importKey(
+      'raw',
+      secret,
+      { name: 'HMAC', hash: 'SHA-256' },
+      false,
+      ['sign']
+    );
+    const sig = await crypto.subtle.sign('HMAC', signingKey, enc.encode(dataCheckString));
+    const computedHash = Array.from(new Uint8Array(sig))
+      .map((b) => b.toString(16).padStart(2, '0'))
+      .join('');
+    if (computedHash !== hash) return null;
+
+    const userJson = params.get('user');
+    if (!userJson) return null;
+    const parsed = JSON.parse(userJson);
+    return typeof parsed?.id === 'number' ? parsed.id : null;
+  } catch {
+    return null;
+  }
+}
 
 export async function handleAuthLogin(request: Request, env: Env, corsHeaders: Record<string, string>): Promise<Response> {
   try {
@@ -9,6 +52,18 @@ export async function handleAuthLogin(request: Request, env: Env, corsHeaders: R
     const email = String(body.email || '').trim();
     const password = String(body.password || '');
     const userId = body.userId ? Number(body.userId) : null;
+    const initData = typeof body.initData === 'string' ? body.initData : '';
+
+    if (userId) {
+      const botToken = env.BOT_TOKEN || env.TELEGRAM_BOT_TOKEN || '';
+      const verifiedUserId = botToken && initData ? await verifyTelegramWebAppUserId(initData, botToken) : null;
+      if (!verifiedUserId || verifiedUserId !== userId) {
+        return new Response(JSON.stringify({ ok: false, error: 'Для привязки Telegram используйте WebApp или /api/auth/ticket' }), {
+          status: 403,
+          headers: { 'content-type': 'application/json', ...corsHeaders }
+        });
+      }
+    }
 
     if (!email || !password) {
       return new Response(JSON.stringify({ ok: false, error: 'Укажите E-mail и пароль' }), {
@@ -62,7 +117,9 @@ export async function handleAuthTicket(request: Request, env: Env, corsHeaders: 
     }
 
     const ticket = 'tk_' + crypto.randomUUID().replace(/-/g, '').slice(0, 16);
-    await env.KV_STORAGE.put(`pair:ticket:${ticket}`, apikey, { expirationTtl: 600 });
+    const encSecret = env.TOKEN_ENC_KEY || env.BOT_TOKEN || env.TELEGRAM_BOT_TOKEN;
+    const storedTicketValue = encSecret ? await encryptSecret(apikey, encSecret) : apikey;
+    await env.KV_STORAGE.put(`pair:ticket:${ticket}`, storedTicketValue, { expirationTtl: 600 });
     const botName = env.BOT_USERNAME || 'coursing_stats_notify_bot';
 
     return new Response(JSON.stringify({ ok: true, ticket, botUrl: `https://t.me/${botName}?start=bind_${ticket}` }), {

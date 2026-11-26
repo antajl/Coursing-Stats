@@ -52,6 +52,7 @@ export interface Env {
   TELEGRAM_BOT_TOKEN?: string;
   WEBHOOK_SECRET?: string;
   ADMIN_SECRET?: string;
+  TOKEN_ENC_KEY?: string;
   WEBAPP_URL?: string;
   BOT_USERNAME?: string;
   SITE_URL?: string;

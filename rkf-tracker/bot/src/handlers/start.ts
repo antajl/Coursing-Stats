@@ -6,6 +6,7 @@ import { getUser, saveUser, createDefaultUser } from '../storage/index.js';
 import { handleTokenBinding } from './auth-link.js';
 import { renderSingleBubble } from './render-bubble.js';
 import { getDisciplineCounts } from '../services/competition-tracker.js';
+import { decryptSecret } from '../crypto.js';
 
 export function buildStartText(user: UserRecord | null): string {
   const isLinked = Boolean(user && user.rkfToken);
@@ -83,7 +84,9 @@ export function registerStartHandler(composer: Composer<BotContext>): void {
       );
 
       if (payload.startsWith('tk_')) {
-        const savedToken = await ctx.env.KV_STORAGE.get(`pair:ticket:${payload}`);
+        const rawTicketVal = await ctx.env.KV_STORAGE.get(`pair:ticket:${payload}`);
+        const encSecret = ctx.env.TOKEN_ENC_KEY || ctx.env.BOT_TOKEN || ctx.env.TELEGRAM_BOT_TOKEN;
+        const savedToken = rawTicketVal ? await decryptSecret(rawTicketVal, encSecret) : undefined;
         if (savedToken) {
           tokenToLink = savedToken;
           await ctx.env.KV_STORAGE.delete(`pair:ticket:${payload}`);
