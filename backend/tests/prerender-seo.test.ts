@@ -4,8 +4,10 @@ import {
   breadcrumbJsonLd,
   breedHubMeta,
   build404Html,
+  buildAssetLoaderScript,
   buildCompetitionsHubHtml,
   buildDogBodyHtml,
+  buildEntitySpaShell,
   buildGuideHubHtml,
   buildHubBodyHtml,
   buildNeutralSpaShell,
@@ -16,6 +18,7 @@ import {
   escapeHtml,
   eventMetaFromEntry,
   exhibitionMeta,
+  extractBundleAssets,
   guideJsonLd,
   homepageJsonLd,
   HUB_PAGES,
@@ -555,5 +558,75 @@ describe('prerender-seo helpers', () => {
     expect(toIsoDate('20.10.19 СЕЗОН В НИЖНЕМ')).toBe('2019-10-20')
     expect(toIsoDate('')).toBeUndefined()
     expect(toIsoDate(null)).toBeUndefined()
+  })
+
+  it('extractBundleAssets, buildAssetLoaderScript, and buildEntitySpaShell decouple entity HTML from bundle hashes', () => {
+    const shellWithPreload = SPA_SHELL.replace(
+      '</head>',
+      '    <link rel="modulepreload" crossorigin href="/assets/vendor-abc123.js">\n  </head>',
+    )
+    const extracted = extractBundleAssets(shellWithPreload)
+    expect(extracted.scripts).toEqual(['/assets/index-abc123.js'])
+    expect(extracted.preloads).toEqual(['/assets/vendor-abc123.js'])
+    expect(extracted.css).toEqual(['/assets/index-abc123.css'])
+
+    const loader = buildAssetLoaderScript(extracted)
+    expect(loader).toContain('/assets/index-abc123.js')
+    expect(loader).toContain('/assets/vendor-abc123.js')
+    expect(loader).toContain('/assets/index-abc123.css')
+
+    const entityShell = buildEntitySpaShell(shellWithPreload)
+    expect(entityShell).toContain('<script src="/assets/loader.js"></script>')
+    expect(entityShell).not.toContain('index-abc123.js')
+    expect(entityShell).not.toContain('vendor-abc123.js')
+    expect(entityShell).not.toContain('index-abc123.css')
+    expect(entityShell).toContain('id="root"')
+  })
+
+  it('buildEntitySpaShell keeps entity HTML identical when bundle hashes change', async () => {
+    const os = await import('node:os')
+    const fs = await import('node:fs')
+    const path = await import('node:path')
+    const { EntityWriteTracker } = await import('../scripts/seo/incremental-state')
+
+    const buildA = SPA_SHELL
+    const buildB = SPA_SHELL.replace(/abc123/g, 'xyz999')
+
+    const pageA = applyMetaToSpaShell(buildEntitySpaShell(buildA), {
+      title: 'Тестовая собака | Курсинг Статс',
+      description: 'Описание собаки',
+      canonicalUrl: 'https://coursing-stats.ru/dog/42/',
+      bodyHtml: '<main><h1>Тест</h1></main>',
+    })
+    const pageB = applyMetaToSpaShell(buildEntitySpaShell(buildB), {
+      title: 'Тестовая собака | Курсинг Статс',
+      description: 'Описание собаки',
+      canonicalUrl: 'https://coursing-stats.ru/dog/42/',
+      bodyHtml: '<main><h1>Тест</h1></main>',
+    })
+    expect(pageA).toBe(pageB)
+
+    const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'seo-inc-'))
+    try {
+      const tracker1 = new EntityWriteTracker()
+      const file42 = path.join(tmpDir, 'dog/42/index.html')
+      tracker1.recordAndMaybeWrite('dog/42/index.html', pageA, file42, true)
+      tracker1.recordAndMaybeWrite('dog/99/index.html', pageA, path.join(tmpDir, 'dog/99/index.html'), true)
+      expect(tracker1.deltaPaths).toEqual(['dog/42/index.html', 'dog/99/index.html'])
+
+      // Second run with new frontend hash and dog/99 removed: dog/42 skipped, dog/99 marked deleted
+      fs.unlinkSync(file42)
+      const tracker2 = new EntityWriteTracker({
+        prevState: tracker1.nextState,
+        skipUnchangedDiskWrites: true,
+      })
+      tracker2.recordAndMaybeWrite('dog/42/index.html', pageB, file42, true)
+      expect(tracker2.deltaPaths).toEqual([])
+      expect(tracker2.unchangedCount).toBe(1)
+      expect(fs.existsSync(file42)).toBe(false)
+      expect(tracker2.getDeletedPaths()).toEqual(['dog/99/index.html'])
+    } finally {
+      fs.rmSync(tmpDir, { recursive: true, force: true })
+    }
   })
 });

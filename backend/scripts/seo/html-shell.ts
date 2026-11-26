@@ -207,6 +207,65 @@ export function cleanOgDescription(desc: string, title?: string): string {
   return cleaned
 }
 
+export type ExtractedBundleAssets = {
+  css: string[]
+  preloads: string[]
+  scripts: string[]
+}
+
+function extractAttr(attrs: string, name: string): string | null {
+  const re = new RegExp(`\\b${name}=["']([^"']+)["']`, 'i')
+  return attrs.match(re)?.[1] ?? null
+}
+
+/**
+ * Extracts Vite-emitted /assets/* CSS stylesheets, modulepreloads, and module entry scripts
+ * from the built SPA index.html so entity HTML pages can load them via /assets/loader.js.
+ */
+export function extractBundleAssets(spaHtml: string): ExtractedBundleAssets {
+  const css: string[] = []
+  const preloads: string[] = []
+  const scripts: string[] = []
+
+  for (const m of spaHtml.matchAll(/<link\b([^>]*)>/gi)) {
+    const attrs = m[1] || ''
+    const rel = extractAttr(attrs, 'rel')?.toLowerCase()
+    const href = extractAttr(attrs, 'href')
+    if (!href || !href.startsWith('/assets/')) continue
+    if (rel === 'stylesheet' && href.endsWith('.css')) css.push(href)
+    else if (rel === 'modulepreload' && href.endsWith('.js')) preloads.push(href)
+  }
+
+  for (const m of spaHtml.matchAll(/<script\b([^>]*)>[\s\S]*?<\/script>/gi)) {
+    const attrs = m[1] || ''
+    const type = extractAttr(attrs, 'type')?.toLowerCase()
+    const src = extractAttr(attrs, 'src')
+    if (type === 'module' && src && src.startsWith('/assets/') && src.endsWith('.js')) {
+      scripts.push(src)
+    }
+  }
+
+  return { css, preloads, scripts }
+}
+
+/**
+ * Generates /assets/loader.js (~400B) that injects the current Vite CSS, modulepreload,
+ * and module entrypoint chunks into <head>. Long-tail entity pages link only to this
+ * stable path, decoupling ~25,000 prerendered HTML files from frontend chunk hashes.
+ */
+export function buildAssetLoaderScript(assets: ExtractedBundleAssets): string {
+  return (
+    `(function(){var h=document.head||document.documentElement;` +
+    `var c=${JSON.stringify(assets.css)};` +
+    `for(var i=0;i<c.length;i++){var l=document.createElement("link");l.rel="stylesheet";l.crossOrigin="anonymous";l.href=c[i];h.appendChild(l);}` +
+    `var p=${JSON.stringify(assets.preloads)};` +
+    `for(var j=0;j<p.length;j++){var m=document.createElement("link");m.rel="modulepreload";m.crossOrigin="anonymous";m.href=p[j];h.appendChild(m);}` +
+    `var s=${JSON.stringify(assets.scripts)};` +
+    `for(var k=0;k<s.length;k++){var e=document.createElement("script");e.type="module";e.crossOrigin="anonymous";e.src=s[k];h.appendChild(e);}` +
+    `})();\n`
+  )
+}
+
 /** Strip hub/dog patches so SPA fallback never advertises home canonical. */
 export function buildNeutralSpaShell(html: string): string {
   let out = html
@@ -237,6 +296,33 @@ export function buildNeutralSpaShell(html: string): string {
   )
   out = replaceOrInsertMetaProperty(out, 'og:site_name', 'Курсинг Статс')
   out = setRootBody(out, '')
+  return out
+}
+
+/**
+ * Decoupled SPA shell for ~25,000 long-tail entity pages (dogs, events, judges, exhibitions, donino):
+ * strips hashed /assets/*.js and *.css tags and inserts stable <script src="/assets/loader.js">
+ * so pure frontend builds never invalidate entity HTML hashes.
+ */
+export function buildEntitySpaShell(spaHtml: string): string {
+  let out = buildNeutralSpaShell(spaHtml)
+  out = out.replace(/<link\b([^>]*)>\s*/gi, (full, attrs: string) => {
+    const rel = extractAttr(attrs, 'rel')?.toLowerCase()
+    const href = extractAttr(attrs, 'href')
+    if (!href || !href.startsWith('/assets/')) return full
+    if (rel === 'stylesheet' && href.endsWith('.css')) return ''
+    if (rel === 'modulepreload' && href.endsWith('.js')) return ''
+    return full
+  })
+  out = out.replace(/<script\b([^>]*)>[\s\S]*?<\/script>\s*/gi, (full, attrs: string) => {
+    const type = extractAttr(attrs, 'type')?.toLowerCase()
+    const src = extractAttr(attrs, 'src')
+    if (type === 'module' && src && src.startsWith('/assets/') && src.endsWith('.js')) return ''
+    return full
+  })
+  if (!out.includes('/assets/loader.js')) {
+    out = out.replace(/<\/head>/i, '  <script src="/assets/loader.js"></script>\n  </head>')
+  }
   return out
 }
 

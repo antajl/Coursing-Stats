@@ -31,8 +31,10 @@ import {
   applyMetaToSpaShell,
   breadcrumbJsonLd,
   build404Html,
+  buildAssetLoaderScript,
   buildCompetitionsHubHtml,
   buildDogBodyHtml,
+  buildEntitySpaShell,
   buildGuideHubHtml,
   buildHubBodyHtml,
   buildShowsHubHtml,
@@ -44,6 +46,7 @@ import {
   buildSimpleEntityBodyHtml,
   breedHubMeta,
   competitionsJsonLd,
+  extractBundleAssets,
   guideJsonLd,
   homepageJsonLd,
   DEFAULT_COMPETITION_FAQS,
@@ -57,6 +60,13 @@ import {
   showJudgeMeta,
   sportJudgeMeta,
 } from './prerender-html.js'
+import {
+  EntityWriteTracker,
+  loadSeoState,
+  parseCliValue,
+  saveSeoState,
+  writeLineList,
+} from './incremental-state.js'
 import { CORE_BREED_HUBS } from '../../../frontend/src/lib/breed-hubs-data.js'
 import { loadExhibitionIdsForSitemap, saveAvailableExhibitionsIndex } from '../build-derived/sitemap.js'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
@@ -83,6 +93,8 @@ function isSafePathForPlatform(filePath: string): boolean {
   return !/[<>:"|?*]/.test(pathWithoutDrive)
 }
 
+const hubPathsWritten: string[] = []
+
 function writeHtml(filePath: string, html: string): void {
   if (!isSafePathForPlatform(filePath)) {
     // Skip writing files with characters forbidden on Windows NTFS (e.g. '|', '*').
@@ -91,6 +103,15 @@ function writeHtml(filePath: string, html: string): void {
   }
   ensureDir(path.dirname(filePath))
   fs.writeFileSync(filePath, html, 'utf8')
+  const rel = path.relative(DIST, filePath).replace(/\\/g, '/')
+  if (rel && !rel.startsWith('..')) {
+    hubPathsWritten.push(rel)
+  }
+}
+
+function writeEntityHtml(tracker: EntityWriteTracker, relPath: string, html: string): void {
+  const outFile = path.join(DIST, ...relPath.split('/'))
+  tracker.recordAndMaybeWrite(relPath, html, outFile, isSafePathForPlatform(outFile))
 }
 
 function resolveProfilesDir(): string {
@@ -131,7 +152,11 @@ function listDogProfileEntries(dir: string): Array<{ id: string; profile: Parame
   return out
 }
 
-function prerenderCompetitionDogs(spaHtml: string, profilesDir: string): number {
+function prerenderCompetitionDogs(
+  spaHtml: string,
+  profilesDir: string,
+  tracker: EntityWriteTracker,
+): number {
   const entries = listDogProfileEntries(profilesDir)
   let written = 0
   for (const { id: fileId, profile: rawProfile } of entries) {
@@ -151,7 +176,7 @@ function prerenderCompetitionDogs(spaHtml: string, profilesDir: string): number 
       bodyHtml: buildDogBodyHtml(meta.body),
       jsonLd: meta.jsonLd || breadcrumbJsonLd(meta.breadcrumbs),
     })
-    writeHtml(path.join(DIST, 'dog', id, 'index.html'), html)
+    writeEntityHtml(tracker, `dog/${id}/index.html`, html)
     written++
   }
   return written
@@ -302,7 +327,7 @@ function collectShowOnlyDogs(): Map<string, ShowRankingEntry> {
   return map
 }
 
-function prerenderShowOnlyDogs(spaHtml: string): number {
+function prerenderShowOnlyDogs(spaHtml: string, tracker: EntityWriteTracker): number {
   const dogs = collectShowOnlyDogs()
   if (dogs.size === 0) return 0
 
@@ -318,8 +343,8 @@ function prerenderShowOnlyDogs(spaHtml: string): number {
 
   for (const [id, entry] of ranked) {
     if (written >= maxExtra) break
-    const outFile = path.join(DIST, 'dog', id, 'index.html')
-    if (fs.existsSync(outFile)) {
+    const relPath = `dog/${id}/index.html`
+    if (tracker.has(relPath)) {
       skippedExisting++
       writtenIds.add(id)
       continue
@@ -333,7 +358,7 @@ function prerenderShowOnlyDogs(spaHtml: string): number {
       bodyHtml: buildDogBodyHtml(meta.body),
       jsonLd: meta.jsonLd || breadcrumbJsonLd(meta.breadcrumbs),
     })
-    writeHtml(outFile, html)
+    writeEntityHtml(tracker, relPath, html)
     written++
     writtenIds.add(id)
   }
@@ -350,9 +375,12 @@ function prerenderShowOnlyDogs(spaHtml: string): number {
       const migrations = JSON.parse(fs.readFileSync(migrationsPath, 'utf8')) as Array<{ old_id: string; new_id: string }>
       for (const m of migrations) {
         if (m.old_id && m.new_id) {
-          const canonicalUrl = `${SITE_ORIGIN}/dog/${m.new_id}/`
-          writeHtml(path.join(DIST, 'dog', m.old_id, 'index.html'), buildRedirectHtml(canonicalUrl))
-          aliasWritten++
+          const aliasRel = `dog/${m.old_id}/index.html`
+          if (!tracker.has(aliasRel)) {
+            const canonicalUrl = `${SITE_ORIGIN}/dog/${m.new_id}/`
+            writeEntityHtml(tracker, aliasRel, buildRedirectHtml(canonicalUrl))
+            aliasWritten++
+          }
         }
       }
     } catch {}
@@ -371,9 +399,12 @@ function prerenderShowOnlyDogs(spaHtml: string): number {
       const canonicalTarget = dogs.get(targetId)?.competition_dog_id != null
         ? String(dogs.get(targetId)!.competition_dog_id)
         : targetId
-      const canonicalUrl = `${SITE_ORIGIN}/dog/${canonicalTarget}/`
-      writeHtml(path.join(DIST, 'dog', aliasId, 'index.html'), buildRedirectHtml(canonicalUrl))
-      aliasWritten++
+      const aliasRel = `dog/${aliasId}/index.html`
+      if (!tracker.has(aliasRel)) {
+        const canonicalUrl = `${SITE_ORIGIN}/dog/${canonicalTarget}/`
+        writeEntityHtml(tracker, aliasRel, buildRedirectHtml(canonicalUrl))
+        aliasWritten++
+      }
     }
   }
   console.log(`[prerender-seo] Generated ${aliasWritten} dog alias redirects`)
@@ -394,7 +425,7 @@ function readJsonFile<T>(filePath: string): T | null {
   }
 }
 
-function prerenderEvents(spaHtml: string): number {
+function prerenderEvents(spaHtml: string, tracker: EntityWriteTracker): number {
   const index = readJsonFile<
     Record<
       string,
@@ -524,13 +555,13 @@ function prerenderEvents(spaHtml: string): number {
       bodyHtml: buildSimpleEntityBodyHtml(meta),
       jsonLd: meta.jsonLd || breadcrumbJsonLd(meta.breadcrumbs),
     })
-    writeHtml(path.join(DIST, 'event', id, 'index.html'), html)
+    writeEntityHtml(tracker, `event/${id}/index.html`, html)
     written++
   }
   return written
 }
 
-function prerenderSportJudges(spaHtml: string): number {
+function prerenderSportJudges(spaHtml: string, tracker: EntityWriteTracker): number {
   const summary = readJsonFile<{
     judges?: Array<{
       id?: string
@@ -567,19 +598,21 @@ function prerenderSportJudges(spaHtml: string): number {
     })
 
     // Write canonical page under numeric slug if available
-    writeHtml(path.join(DIST, 'judges', judgeSlug, 'index.html'), html)
+    writeEntityHtml(tracker, `judges/${judgeSlug}/index.html`, html)
     written++
 
     // If numeric slug is used and differs from legacy ID, write 301 static redirect at legacy path
     if (numericId != null && String(numericId) !== id) {
-      const redirectHtml = buildRedirectHtml(canonicalUrl)
-      writeHtml(path.join(DIST, 'judges', staticSeoPathSegment(id), 'index.html'), redirectHtml)
+      const legacyRel = `judges/${staticSeoPathSegment(id)}/index.html`
+      if (!tracker.has(legacyRel)) {
+        writeEntityHtml(tracker, legacyRel, buildRedirectHtml(canonicalUrl))
+      }
     }
   }
   return written
 }
 
-function prerenderDoninoDogs(spaHtml: string): number {
+function prerenderDoninoDogs(spaHtml: string, tracker: EntityWriteTracker): number {
   const pairs = new Map<string, { name: string; breed: string }>()
   for (const file of ['donino/speed_records.json', 'donino/coursing_records.json']) {
     const doc = readJsonFile<
@@ -603,14 +636,9 @@ function prerenderDoninoDogs(spaHtml: string): number {
       bodyHtml: buildSimpleEntityBodyHtml(meta),
       jsonLd: meta.jsonLd || breadcrumbJsonLd(meta.breadcrumbs),
     })
-    writeHtml(
-      path.join(
-        DIST,
-        'donino-dog',
-        staticSeoPathSegment(dog.name),
-        staticSeoPathSegment(dog.breed),
-        'index.html',
-      ),
+    writeEntityHtml(
+      tracker,
+      `donino-dog/${staticSeoPathSegment(dog.name)}/${staticSeoPathSegment(dog.breed)}/index.html`,
       html,
     )
     written++
@@ -676,7 +704,7 @@ function buildCalendarExhibitionLookup(): Map<
   return map
 }
 
-function prerenderExhibitions(spaHtml: string): number {
+function prerenderExhibitions(spaHtml: string, tracker: EntityWriteTracker): number {
   // On by default after CDN slim/packs (~15k files est. with full set; under Pages 20k).
   // Disable with PRERENDER_EXHIBITIONS=0; optional PRERENDER_EXHIBITIONS_MAX.
   if (process.env.PRERENDER_EXHIBITIONS === '0') return 0
@@ -781,7 +809,7 @@ function prerenderExhibitions(spaHtml: string): number {
       bodyHtml: buildSimpleEntityBodyHtml(meta),
       jsonLd: meta.jsonLd || breadcrumbJsonLd(meta.breadcrumbs),
     })
-    writeHtml(path.join(DIST, 'shows', 'exhibition', id, 'index.html'), html)
+    writeEntityHtml(tracker, `shows/exhibition/${id}/index.html`, html)
     written++
   }
   if (ids.length > written) {
@@ -792,7 +820,7 @@ function prerenderExhibitions(spaHtml: string): number {
   return written
 }
 
-function prerenderShowJudges(spaHtml: string): number {
+function prerenderShowJudges(spaHtml: string, tracker: EntityWriteTracker): number {
   // On by default after CDN slim/packs. Disable with PRERENDER_SHOW_JUDGES=0.
   if (process.env.PRERENDER_SHOW_JUDGES === '0') return 0
 
@@ -876,13 +904,15 @@ function prerenderShowJudges(spaHtml: string): number {
     })
 
     // Write canonical page under numeric slug (e.g. /shows/judges/1001/)
-    writeHtml(path.join(DIST, 'shows', 'judges', judgeSlug, 'index.html'), html)
+    writeEntityHtml(tracker, `shows/judges/${judgeSlug}/index.html`, html)
     written++
 
     // If numeric slug is used, write 301 static redirect at legacy path (/shows/judges/гаврилова|я|а/)
     if (numericId != null && String(numericId) !== id) {
-      const redirectHtml = buildRedirectHtml(canonicalUrl)
-      writeHtml(path.join(DIST, 'shows', 'judges', staticSeoPathSegment(id), 'index.html'), redirectHtml)
+      const legacyRel = `shows/judges/${staticSeoPathSegment(id)}/index.html`
+      if (!tracker.has(legacyRel)) {
+        writeEntityHtml(tracker, legacyRel, buildRedirectHtml(canonicalUrl))
+      }
     }
   }
   if (judges.length > written) {
@@ -1031,6 +1061,16 @@ function main(): void {
   const shellForPages = buildNeutralSpaShell(spaHtml)
   writeHtml(path.join(DIST, 'spa-shell', 'index.html'), shellForPages)
 
+  // Stable asset loader script decoupled from Vite chunk hashes for ~25k long-tail entity pages.
+  const bundleAssets = extractBundleAssets(spaHtml)
+  const loaderScript = buildAssetLoaderScript(bundleAssets)
+  const loaderOutPath = path.join(DIST, 'assets', 'loader.js')
+  ensureDir(path.dirname(loaderOutPath))
+  fs.writeFileSync(loaderOutPath, loaderScript, 'utf8')
+  console.log(
+    `[prerender-seo] Generated assets/loader.js (${Buffer.byteLength(loaderScript, 'utf8')} bytes, scripts=${bundleAssets.scripts.length}, css=${bundleAssets.css.length})`,
+  )
+
   // Standalone 404 for Yandex Object Storage (error_document: 404.html)
   const html404 = build404Html(spaHtml)
   writeHtml(path.join(DIST, '404.html'), html404)
@@ -1038,7 +1078,15 @@ function main(): void {
   fs.writeFileSync(public404, html404, 'utf8')
   console.log(`[prerender-seo] Generated 404.html (${Buffer.byteLength(html404, 'utf8')} bytes)`)
 
-  const hubsOnly = process.argv.includes('--hubs-only')
+  const argv = process.argv.slice(2)
+  const hubsOnly = argv.includes('--hubs-only')
+  const forceEntities = argv.includes('--force-entities')
+  const stateInPath = parseCliValue(argv, '--state-in')
+  const stateOutPath = parseCliValue(argv, '--state-out')
+  const deltaOutPath = parseCliValue(argv, '--delta-out')
+  const deleteOutPath = parseCliValue(argv, '--delete-out')
+  const hubsOutPath = parseCliValue(argv, '--hubs-out')
+
   if (hubsOnly) {
     console.log('[prerender-seo] Running in --hubs-only mode (saving S3 storage & request billing)...')
   }
@@ -1046,6 +1094,13 @@ function main(): void {
   const hubs = prerenderHubs(shellForPages)
   const breedHubs = prerenderBreedHubs(shellForPages)
   const redirects = prerenderStaticRedirects()
+
+  const { map: prevState } = loadSeoState(stateInPath)
+  const tracker = new EntityWriteTracker({
+    prevState,
+    forceAll: forceEntities,
+    skipUnchangedDiskWrites: Boolean(deltaOutPath || stateOutPath),
+  })
 
   let competitionDogs = 0
   let showOnlyDogs = 0
@@ -1056,16 +1111,31 @@ function main(): void {
   let showJudges = 0
 
   if (!hubsOnly) {
+    const shellForEntities = buildEntitySpaShell(spaHtml)
     const profilesDir = resolveProfilesDir()
-    competitionDogs = prerenderCompetitionDogs(shellForPages, profilesDir)
-    showOnlyDogs = prerenderShowOnlyDogs(shellForPages)
-    events = prerenderEvents(shellForPages)
-    judges = prerenderSportJudges(shellForPages)
-    donino = prerenderDoninoDogs(shellForPages)
-    exhibitions = prerenderExhibitions(shellForPages)
-    showJudges = prerenderShowJudges(shellForPages)
+    competitionDogs = prerenderCompetitionDogs(shellForEntities, profilesDir, tracker)
+    showOnlyDogs = prerenderShowOnlyDogs(shellForEntities, tracker)
+    events = prerenderEvents(shellForEntities, tracker)
+    judges = prerenderSportJudges(shellForEntities, tracker)
+    donino = prerenderDoninoDogs(shellForEntities, tracker)
+    exhibitions = prerenderExhibitions(shellForEntities, tracker)
+    showJudges = prerenderShowJudges(shellForEntities, tracker)
   }
   const dogs = competitionDogs + showOnlyDogs
+
+  const deletedPaths = hubsOnly ? [] : tracker.getDeletedPaths()
+  if (stateOutPath && !hubsOnly) {
+    saveSeoState(stateOutPath, tracker.nextState)
+  }
+  if (deltaOutPath) {
+    writeLineList(deltaOutPath, tracker.deltaPaths)
+  }
+  if (deleteOutPath) {
+    writeLineList(deleteOutPath, deletedPaths)
+  }
+  if (hubsOutPath) {
+    writeLineList(hubsOutPath, Array.from(new Set(hubPathsWritten)))
+  }
 
   // Ensure available-exhibitions.json is generated and placed into dist
   saveAvailableExhibitionsIndex()
@@ -1097,7 +1167,7 @@ function main(): void {
   const elapsed = Date.now() - started
 
   console.log(
-    `[prerender-seo] hubs=${hubs} breedHubs=${breedHubs} redirects=${redirects} dogs=${dogs} (competition=${competitionDogs}, show-only=${showOnlyDogs}) events=${events} judges=${judges} donino=${donino} exhibitions=${exhibitions} showJudges=${showJudges} elapsed=${elapsed}ms`,
+    `[prerender-seo] hubs=${hubs} breedHubs=${breedHubs} redirects=${redirects} dogs=${dogs} (competition=${competitionDogs}, show-only=${showOnlyDogs}) events=${events} judges=${judges} donino=${donino} exhibitions=${exhibitions} showJudges=${showJudges} delta=${tracker.deltaPaths.length} unchanged=${tracker.unchangedCount} deleted=${deletedPaths.length} elapsed=${elapsed}ms`,
   )
 }
 
