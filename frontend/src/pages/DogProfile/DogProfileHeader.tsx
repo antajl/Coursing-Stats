@@ -187,18 +187,19 @@ export function DogProfileHeader({
         <button
           type="button"
           onClick={() => setIsPassportOpen(true)}
-          className="inline-flex items-center justify-center rounded-xl border border-old-money-200/90 bg-cream-50/60 text-charcoal-700 hover:bg-cream-100 hover:text-charcoal-900 transition-all min-h-[36px] min-w-[36px] h-9 w-9 sm:h-9.5 sm:w-9.5 cursor-pointer shadow-2xs touch-manipulation"
+          className="relative inline-flex items-center justify-center gap-1.5 rounded-full border border-old-money-200/90 bg-cream-50/80 px-3 text-charcoal-800 hover:border-camel-400 hover:bg-cream-100 hover:text-charcoal-950 transition-all min-h-[36px] h-9 sm:h-9.5 cursor-pointer shadow-2xs touch-manipulation before:absolute before:-inset-y-1.5 before:inset-x-0 before:content-[''] md:before:hidden"
           aria-label="Карточка собаки (Паспорт)"
           title="Скачать карточку собаки (A4 или Stories) — Паспорт достижений"
         >
-          <Download className="h-4 w-4 shrink-0 text-[#8C6D37]" aria-hidden />
+          <Download className="h-3.5 w-3.5 shrink-0 text-camel-700" aria-hidden />
+          <span className="text-xs font-semibold whitespace-nowrap">Карточка</span>
         </button>
       )}
 
       <button
         type="button"
         onClick={handleShare}
-        className={`inline-flex items-center justify-center rounded-xl border transition-all min-h-[36px] min-w-[36px] h-9 w-9 sm:h-9.5 sm:w-9.5 cursor-pointer shadow-2xs touch-manipulation ${
+        className={`relative inline-flex items-center justify-center rounded-xl border transition-all min-h-[36px] min-w-[36px] h-9 w-9 sm:h-9.5 sm:w-9.5 cursor-pointer shadow-2xs touch-manipulation before:absolute before:-inset-1.5 before:content-[''] md:before:hidden ${
           copied
             ? 'border-forest-400 bg-forest-50 text-forest-800'
             : 'border-old-money-200/90 bg-cream-50/60 text-charcoal-700 hover:bg-cream-100 hover:text-charcoal-900'

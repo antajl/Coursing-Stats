@@ -61,6 +61,30 @@ export const DogDisciplinesMobileView: React.FC<DogDisciplinesMobileViewProps> =
           onMouseLeave={cancelDrag}
           onClickCapture={handleClickCapture}
         >
+          {/* Стационарный индикатор пагинации над свайп-треком: не зависит от высоты шапки и не ездит при свайпе */}
+          {availableTabs.length > 1 && (
+            <div
+              className="flex items-center justify-center gap-2 pb-2 select-none"
+              role="tablist"
+              aria-label="Индикатор выбранной дисциплины"
+            >
+              {availableTabs.map((t, idx) => (
+                <button
+                  key={t.id}
+                  type="button"
+                  onClick={() => setActiveDiscipline(t.id)}
+                  className={`relative h-1.5 rounded-full transition-all duration-300 cursor-pointer touch-manipulation before:absolute before:-inset-y-3 before:-inset-x-2 before:content-[''] ${
+                    idx === activeIndex
+                      ? 'w-6 bg-camel-600 shadow-2xs'
+                      : 'w-2 bg-camel-300 hover:bg-camel-400'
+                  }`}
+                  title={`Перейти: ${t.label}`}
+                  aria-label={`Перейти: ${t.label}`}
+                />
+              ))}
+            </div>
+          )}
+
           <div
             ref={trackRef}
             className="flex flex-nowrap w-full min-w-0 items-start gap-4 [transform:translateZ(0)] [backface-visibility:hidden]"
@@ -102,30 +126,6 @@ export const DogDisciplinesMobileView: React.FC<DogDisciplinesMobileViewProps> =
               )
             })}
           </div>
-
-          {/* Стационарный индикатор пагинации свайпа (остаётся на месте при горизонтальном свайпе карточек) */}
-          {availableTabs.length > 1 && (
-            <div
-              className="pointer-events-auto absolute top-[21rem] md:top-[21.5rem] left-0 right-0 z-30 flex items-center justify-center gap-2 py-1 select-none"
-              role="tablist"
-              aria-label="Индикатор выбранной дисциплины"
-            >
-              {availableTabs.map((t, idx) => (
-                <button
-                  key={t.id}
-                  type="button"
-                  onClick={() => setActiveDiscipline(t.id)}
-                  className={`h-1.5 rounded-full transition-all duration-300 cursor-pointer touch-manipulation ${
-                    idx === activeIndex
-                      ? 'w-6 bg-camel-600 shadow-2xs'
-                      : 'w-2 bg-camel-300 hover:bg-camel-400'
-                  }`}
-                  title={`Перейти: ${t.label}`}
-                  aria-label={`Перейти: ${t.label}`}
-                />
-              ))}
-            </div>
-          )}
         </div>
       )}
     </div>

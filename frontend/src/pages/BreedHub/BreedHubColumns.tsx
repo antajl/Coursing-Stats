@@ -128,6 +128,7 @@ export default function BreedHubColumns({
     onTabChange: (targetIndex) => {
       setActiveMobileTab(activeTabs[targetIndex].id)
     },
+    gapPx: 16,
   })
 
   // Сводные данные по годам для выравнивания строк десктопа
@@ -318,10 +319,9 @@ export default function BreedHubColumns({
           )}
         </div>
 
-        {/* Свайп-контейнер со слайдами */}
+        {/* Свайп-контейнер со слайдами (единая физика useHorizontalSwipe с зазором 16px) */}
         <div
-          ref={trackRef}
-          className="relative w-full overflow-hidden touch-pan-y"
+          className="relative w-full overflow-hidden touch-pan-y select-none"
           onMouseDown={(e) => startDrag(e.clientX, e.clientY)}
           onMouseMove={(e) => moveDrag(e.clientX, e.clientY)}
           onMouseUp={(e) => endDrag(e.clientX)}
@@ -339,15 +339,18 @@ export default function BreedHubColumns({
           onClickCapture={handleClickCapture}
         >
           <div
-            className="flex w-full"
+            ref={trackRef}
+            className="flex flex-nowrap w-full min-w-0 gap-4 [transform:translateZ(0)] [backface-visibility:hidden]"
             style={{
-              transform: `translate3d(${getSlideOffset(activeTabIndex)}%, 0, 0)`,
-              transition: 'transform 260ms cubic-bezier(0.25, 1, 0.5, 1)',
-              willChange: 'transform',
+              transform:
+                activeTabs.length <= 1
+                  ? 'none'
+                  : `translate3d(${getSlideOffset(activeTabIndex)}, 0, 0)`,
+              willChange: activeTabs.length > 1 ? 'transform' : 'auto',
             }}
           >
             {activeTabs.map((tab) => (
-              <div key={tab.id} className="w-full shrink-0 min-w-full">
+              <div key={tab.id} className="w-full max-w-full min-w-0 shrink-0 basis-full">
                 {tab.id === 'coursing' && (
                   <MobileDogLeaderCards
                     years={visibleYears}
