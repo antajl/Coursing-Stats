@@ -632,7 +632,7 @@ function loadDogMetadataFromById(): Map<number, DogProfileMeta> {
       name_ru: (data.name_ru as string | null | undefined) ?? null,
       breed: (data.breed as string | null | undefined) ?? null,
       sex: (data.sex as string | null | undefined) ?? null,
-      owner: (data.owner as string | null | undefined) ?? null,
+      owner: null,
       pedigree_url: (data.pedigree_url as string | null | undefined) ?? null,
       photo_url: (data.photo_url as string | null | undefined) ?? null,
     });
@@ -877,7 +877,7 @@ export function buildDogProfiles(db: Database.Database) {
         if (!raw) return null;
         return /кобел|male|^m$/i.test(raw) ? 'M' : (/сук|female|^f$/i.test(raw) ? 'F' : raw);
       })(),
-      owner: fromFile?.owner ?? fromDb?.owner ?? null,
+      owner: null,
       pedigree_url: fromFile && 'pedigree_url' in fromFile ? fromFile.pedigree_url : (fromDb?.pedigree_url ?? null),
       photo_url: fromFile?.photo_url ?? null,
     };

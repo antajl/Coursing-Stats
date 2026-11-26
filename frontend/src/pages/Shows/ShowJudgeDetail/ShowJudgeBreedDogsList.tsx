@@ -41,7 +41,6 @@ function isBreedMatch(b1: string, b2: string): boolean {
 function matchesJudge(rowJudge: string | undefined, judgeId: string, judgeName: string): boolean {
   if (!rowJudge) return true
   const normRow = rowJudge.toLowerCase().trim()
-  const normId = judgeId.toLowerCase().trim()
   const normName = judgeName.toLowerCase().trim()
   if (showJudgeMergeKeyFromRaw(rowJudge) === judgeId) return true
   if (normRow.includes(normName) || normName.includes(normRow)) return true
@@ -181,6 +180,8 @@ interface ShowJudgeBreedDogsListProps {
     title: string
     rkf_url?: string
     breed_counts?: Record<string, number>
+    puppy_breed_counts?: Record<string, number>
+    adult_breed_counts?: Record<string, number>
   }>
   searchQuery?: string
   gradeScope?: GradeScope
@@ -242,7 +243,7 @@ export function ShowJudgeBreedDogsList({
           if (!matchesJudge(rowJudge, judgeId, judgeName)) continue
 
           const { name: cleanedName, parsedCatalogNumber } = cleanDogName(r.dog_name)
-          const catalogNumber = r.catalog_number || parsedCatalogNumber
+          const catalogNumber = (r as any).catalog_number || parsedCatalogNumber
 
           extractedDogs.push({
             id: r.dog_breed_id || `${protocol.id}-${catalogNumber || cleanedName}`,
@@ -256,7 +257,6 @@ export function ShowJudgeBreedDogsList({
               r.sex ||
               (r.dog_name?.includes('♀') ? 'F' : r.dog_name?.includes('♂') ? 'M' : undefined),
             catalog_number: catalogNumber,
-            owner: r.owner,
             exhibition_id: protocol.id,
             exhibition_title: protocol.title || exhibition.title,
             exhibition_date: protocol.date || exhibition.date,
@@ -282,7 +282,7 @@ export function ShowJudgeBreedDogsList({
     if (!q) return scopeFilteredDogs
     return scopeFilteredDogs.filter((d) =>
       matchesSearchText(
-        [d.dog_name, d.class, d.owner, String(d.catalog_number || '')],
+        [d.dog_name, d.class, String(d.catalog_number || '')],
         q
       )
     )

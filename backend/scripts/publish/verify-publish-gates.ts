@@ -336,6 +336,26 @@ function main() {
     }
   }
 
+  // Gate: ensure zero non-empty owner PII in dog-profiles packs and consistent 1x show titles
+  const dogProfilesDir = path.join(dataRoot, 'indexes/dog-profiles')
+  if (fs.existsSync(dogProfilesDir)) {
+    let ownerLeaks = 0
+    for (const name of fs.readdirSync(dogProfilesDir)) {
+      if (!name.endsWith('.json')) continue
+      const pack = readJson(path.join(dogProfilesDir, name)) as { byId?: Record<string, { dog?: { owner?: unknown } }> }
+      const entries = pack.byId ? Object.values(pack.byId) : [pack as { dog?: { owner?: unknown } }]
+      for (const entry of entries) {
+        const own = entry?.dog?.owner
+        if (own != null && String(own).trim() !== '') ownerLeaks++
+      }
+    }
+    gates.push(
+      ownerLeaks === 0
+        ? { ok: true, label: 'no_owner_pii', detail: '0 non-empty owner fields in dog-profiles' }
+        : { ok: false, label: 'no_owner_pii', detail: `found ${ownerLeaks} non-empty owner values in dog-profiles` },
+    )
+  }
+
   const oversized: Array<{ path: string; bytes: number }> = []
   const fileEntries: Array<{ path: string; bytes: number; sha256?: string }> = []
   const relFiles = walkFiles(dataRoot)

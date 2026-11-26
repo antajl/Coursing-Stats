@@ -195,9 +195,9 @@ export function BreedResultsPanel({
                     <div className="mt-1 font-semibold text-charcoal-800">
                       <ExhibitionDogNameLink dogName={row.dog_name} breed={row.breed || breed} />
                     </div>
-                    {row.owner ? (
+                    {row.judge ? (
                       <div className="mt-0.5 text-xs text-charcoal-500">
-                        Судья: {row.owner}
+                        Судья: {row.judge}
                       </div>
                     ) : null}
                   </li>
