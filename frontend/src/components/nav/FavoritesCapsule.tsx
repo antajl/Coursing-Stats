@@ -51,7 +51,15 @@ export default function FavoritesCapsule({ isMobile = false }: FavoritesCapsuleP
         const { primary } = parseDogName(d.name_lat || '', d.name_ru)
         setMeta(activeId, { name: primary, breed: d.breed || '' })
       } else {
-        setMeta(activeId, { name: `Собака #${activeId}`, breed: '' })
+        const { getShowDogDetail } = await import('../../lib/staticData/shows/ranking')
+        const showRes = await getShowDogDetail(activeId)
+        if (cancelled) return
+        if (showRes.success && showRes.data) {
+          const { primary } = parseDogName(showRes.data.name_lat || '', showRes.data.name_ru)
+          setMeta(activeId, { name: primary, breed: showRes.data.breed || '' })
+        } else {
+          setMeta(activeId, { name: `Собака #${activeId}`, breed: '' })
+        }
       }
     }
     void load()
@@ -81,7 +89,15 @@ export default function FavoritesCapsule({ isMobile = false }: FavoritesCapsuleP
             next[id] = { name: primary, breed: d.breed || '' }
             setMeta(id, next[id])
           } else {
-            next[id] = { name: `#${id}`, breed: '' }
+            const { getShowDogDetail } = await import('../../lib/staticData/shows/ranking')
+            const showRes = await getShowDogDetail(id)
+            if (showRes.success && showRes.data) {
+              const { primary } = parseDogName(showRes.data.name_lat || '', showRes.data.name_ru)
+              next[id] = { name: primary, breed: showRes.data.breed || '' }
+              setMeta(id, next[id])
+            } else {
+              next[id] = { name: `#${id}`, breed: '' }
+            }
           }
         }),
       )

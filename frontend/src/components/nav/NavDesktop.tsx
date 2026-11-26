@@ -210,12 +210,12 @@ export function NavDesktop({
         <button
           type="button"
           onClick={onOpenSearch}
-          className="cs-glass-pill flex items-center justify-center gap-1.5 h-9 w-9 2xl:w-auto 2xl:px-3 rounded-full text-charcoal-700 text-xs font-semibold group cursor-pointer shrink-0"
-          title="Быстрый поиск (Ctrl+K)"
-          aria-label="Быстрый поиск по базе"
+          className="cs-glass-pill flex items-center justify-center gap-1.5 h-9 w-9 md:w-auto md:px-3.5 rounded-full text-charcoal-700 hover:text-charcoal-900 hover:border-camel-300 text-xs font-semibold group cursor-pointer shrink-0 transition-all"
+          title="Поиск по всей базе: собаки, судьи, породы (Ctrl+K)"
+          aria-label="Поиск по всей базе"
         >
           <Icons.search className="w-4 h-4 text-camel-700 transition-transform group-hover:scale-110" aria-hidden />
-          <span className="hidden 2xl:inline">Поиск</span>
+          <span className="hidden md:inline">Поиск</span>
         </button>
         <FavoritesCapsule />
       </div>

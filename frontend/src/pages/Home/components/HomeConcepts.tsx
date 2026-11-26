@@ -5,6 +5,8 @@ import type { HeroStats, HeroShowStats } from '../../../components/Hero'
 interface HomeConceptsProps {
   stats: HeroStats | null
   showStats: HeroShowStats | null
+  maxDoninoSpeed?: number | null
+  breedHubsCount?: number
   loading?: boolean
 }
 
@@ -23,7 +25,13 @@ function formatNum(value: number | undefined | null): string {
 //    Каждый сектор получает ~93px высоты, свободное дыхание и чистую сетку
 // 3. Полное отсутствие промежуточных тавтологий и дублирующих кнопок
 // =========================================================================
-export function ConceptSymmetricFinal({ stats, showStats }: HomeConceptsProps) {
+export function ConceptSymmetricFinal({ stats, showStats, maxDoninoSpeed, breedHubsCount }: HomeConceptsProps) {
+  const breedsLabel = stats?.breeds
+    ? `${stats.breeds} пород и ${breedHubsCount || 82} хаба →`
+    : 'Каталог пород →'
+  const speedRecordLabel = maxDoninoSpeed && maxDoninoSpeed > 0
+    ? `${Number.isInteger(maxDoninoSpeed) ? maxDoninoSpeed : maxDoninoSpeed.toFixed(1)} км/ч`
+    : '—'
   return (
     <div className="home-v2-monolith-shell w-[330px] xl:w-[360px] 2xl:w-[380px] 3xl:w-[420px] flex flex-col pointer-events-auto text-left select-none">
       {/* 1. ВЕРХНЯЯ ПОЛОСА: Чистая цельная плашка точно по высоте и форме левых табов */}
@@ -38,7 +46,7 @@ export function ConceptSymmetricFinal({ stats, showStats }: HomeConceptsProps) {
           title="Каталог пород и персональные хабы"
         >
           <ShieldCheck className="w-3 h-3 text-camel-700" aria-hidden />
-          <span>83 породы & хабы →</span>
+          <span>{breedsLabel}</span>
         </Link>
       </div>
 
@@ -136,12 +144,12 @@ export function ConceptSymmetricFinal({ stats, showStats }: HomeConceptsProps) {
             </div>
             <div className="grid grid-cols-3 text-center divide-x divide-camel-200/50">
               <div className="px-1">
-                <div className="text-[13px] 2xl:text-[14px] font-bold text-charcoal-900 tabular-nums">до 65 км/ч</div>
+                <div className="text-[13px] 2xl:text-[14px] font-bold text-charcoal-900 tabular-nums">{speedRecordLabel}</div>
                 <div className="text-[8px] 2xl:text-[8.5px] text-charcoal-600 font-semibold uppercase tracking-wider">рекорд</div>
               </div>
               <div className="px-1">
                 <div className="text-[13px] 2xl:text-[14px] font-bold text-charcoal-900 tabular-nums">
-                  {stats ? formatNum(stats.donino_records) : '398'}
+                  {stats ? formatNum(stats.donino_records) : '—'}
                 </div>
                 <div className="text-[8px] 2xl:text-[8.5px] text-charcoal-600 font-semibold uppercase tracking-wider">замеров</div>
               </div>

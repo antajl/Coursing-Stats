@@ -6,7 +6,6 @@ import { NavMobile } from './nav/NavMobile'
 import { NavTracker } from './nav/NavTracker'
 import type { TrackerTab } from '../pages/Tracker/trackerTypes'
 import type { OpenMenuId } from './nav/navLinks'
-import trackerCompetitions2026 from '../pages/Tracker/rkf-competitions-2026.json'
 
 const QuickSearchModal = lazy(() => import('./nav/QuickSearchModal'))
 
@@ -22,7 +21,7 @@ export default function Nav() {
     location.pathname.startsWith('/competitions/') ||
     location.pathname === '/procoursing' ||
     (isLocalDev && (location.pathname === '/protocol-builder' || location.pathname.startsWith('/protocol-builder/'))) ||
-    (isLocalDev && location.pathname.startsWith('/event/'))
+    location.pathname.startsWith('/event/')
   const isSpeedRecordsActive =
     location.pathname === '/speed-records' ||
     location.pathname.startsWith('/speed-records/') ||
@@ -106,7 +105,7 @@ export default function Nav() {
         <NavTracker
           activeTab={currentTab}
           onSelectTab={(tab) => setSearchParams({ tab })}
-          competitionsCount={trackerCompetitions2026.length}
+          competitionsCount={72}
           isLive={isLive}
           onRefresh={() => window.dispatchEvent(new CustomEvent('tracker-refresh'))}
           isRefreshing={trackerRefreshing}
