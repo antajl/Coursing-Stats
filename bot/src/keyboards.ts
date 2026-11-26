@@ -55,16 +55,14 @@ export function getShowsMenu(): InlineKeyboard {
     .text(`${unicodeIcons.back} Назад`, 'main_menu');
 }
 
-// Guide sub-menu (5 sections)
+// Guide sub-menu (4 canonical sections synced with web /guide)
 export function getGuideMenu(): InlineKeyboard {
   return new InlineKeyboard()
     .text('🏆 Соревнования', 'guide_titles')
     .text('🏅 Выставки', 'guide_shows')
     .row()
-    .text('📋 Протоколы', 'guide_protocol')
-    .text('📊 Рейтинг', 'guide_rating')
-    .row()
-    .text('ℹ️ О сайте', 'guide_site')
+    .text('⏱ Скорость и Донино', 'guide_donino')
+    .text('📊 Рейтинг сайта', 'guide_rating')
     .row()
     .text(`${unicodeIcons.back} Назад`, 'main_menu');
 }

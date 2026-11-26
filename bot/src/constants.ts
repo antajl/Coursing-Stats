@@ -42,6 +42,7 @@ export const HANDLER_CALLBACK_PATTERNS: RegExp[] = [
   /^remove_favorite:\d+$/,
   /^guide_titles$/,
   /^guide_shows$/,
+  /^guide_donino$/,
   /^guide_protocol$/,
   /^guide_rating$/,
   /^guide_site$/,

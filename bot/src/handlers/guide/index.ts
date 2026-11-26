@@ -179,8 +179,26 @@ function renderSiteGuide(): string {
 `.trim();
 }
 
+function renderDoninoGuide(): string {
+  return `
+<b>⏱ Скорость и Донино — Замеры и бега 350 м</b>
+
+Беговой полигон «Курсинг в Донино» объединяет два формата:
+
+<b>1. Радарные замеры скорости (км/ч):</b>
+• Фиксируется пиковая скорость собаки на трассе (прямая или круг).
+• Результаты и спарклайны прогресса хранятся отдельно от спортивных квалификаций.
+
+<b>2. Спринт 350 м и Клубный чемпионат:</b>
+• Точный хронометраж дистанции 350 м (секунды + расчётная средняя скорость).
+• Система 3 соревновательных лиг (Прогресс, Чемпионов, Абсолют) с переходами между этапами.
+
+<a href="https://coursing-stats.ru/guide?tab=donino">🌐 Регламент Донино на сайте</a>
+`.trim();
+}
+
 /**
- * Обработчики справки (Guide) с 5 разделами
+ * Обработчики справки (Guide), синхронизированные с 4 разделами сайта + обратной совместимостью
  * Данные загружаются динамически из CDN (data/v1/guide.json), синхронизируясь с сайтом
  * @param api - клиент API Coursing Stats
  * @param cache - опциональное KV хранилище для кэширования
@@ -209,6 +227,18 @@ export function createGuide(api: CoursingStatsAPI, cache?: KVNamespace) {
     const guideData = await api.getGuide();
     const text = renderShowTitles(guideData);
     
+    await safeEditOrReply(ctx, text, {
+      parse_mode: 'HTML',
+      reply_markup: getNavigationButtons('guide_menu', 'main_menu')
+    }, cache);
+  });
+
+  /**
+   * Раздел "Скорость и Донино" — Замеры км/ч и спринт 350 м
+   */
+  guide.callbackQuery('guide_donino', async (ctx) => {
+    const text = renderDoninoGuide();
+
     await safeEditOrReply(ctx, text, {
       parse_mode: 'HTML',
       reply_markup: getNavigationButtons('guide_menu', 'main_menu')
