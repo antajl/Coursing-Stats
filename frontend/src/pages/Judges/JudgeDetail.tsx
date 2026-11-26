@@ -20,7 +20,7 @@ export default function JudgeDetail() {
   const { judgeId } = useParams()
   const [searchParams, setSearchParams] = useSearchParams()
   const [breedSort, setBreedSort] = useState<SortState>({ field: 'evaluations_count', direction: 'desc' })
-  const [criteriaSort, setCriteriaSort] = useState<SortState>({ field: 'evaluations_count', direction: 'desc' })
+  const [criteriaSort] = useState<SortState>({ field: 'evaluations_count', direction: 'desc' })
   const [searchQuery, setSearchQuery] = useState('')
   const [eventSearchQuery, setEventSearchQuery] = useState('')
   const [listTab, setListTab] = useState<ListTab>('breeds')
@@ -200,7 +200,6 @@ export default function JudgeDetail() {
   const breedCount = sortedBreeds.length
   const eventCount = distinctEventCount
   const strictnessBadge = getSportJudgeStrictnessBadge(avgScore, totalEvals)
-  const seoFullName = fullName ? `${fullName} (${displayName})` : displayName
 
   const numericId = resolveSportJudgeNumericId(judgeId || judgeName)
   const canonicalJudgeSlug = numericId || encodeURIComponent(judgeId || judgeName)

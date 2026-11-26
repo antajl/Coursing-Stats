@@ -10,7 +10,7 @@ export const DEFAULT_ACTIVE_SEASON = '2026'
  * функция возвращает последний год с фактическими данными (например, 2026).
  */
 export function resolveActiveSeason(
-  availableYears?: (string | number)[] | null,
+  availableYears?: readonly (string | number)[] | null,
   calendarYear: number = new Date().getFullYear(),
 ): string {
   const currentStr = String(calendarYear)

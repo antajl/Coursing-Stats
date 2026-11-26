@@ -10,7 +10,6 @@ interface ShowPillarProps {
 }
 
 export const ShowPillar: React.FC<ShowPillarProps> = ({ shows }) => {
-  const ringWins = (shows.bisCount || 0) + (shows.bigCount || 0) + (shows.bobCount || 0)
   const rankLabel = shows.yearBreedRank
     ? `#${shows.yearBreedRank} в рейтинге`
     : shows.breedRank

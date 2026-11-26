@@ -11,7 +11,6 @@ import { showYearBadge } from '../../lib/season'
 import { showDogProfilePath, isShowOnlyProfileId, stableShowProfileId, SHOW_PROFILE_ID_BASE } from '../../lib/showDogProfilePath'
 import { renderShowAwardChips } from '../../lib/awardChipRender'
 import {
-  presentShowAwards,
   SHOW_GENERAL_AWARD_ORDER,
   SHOW_MONO_AWARD_ORDER,
   SHOW_MONO_ADULT_KEYS,
@@ -43,6 +42,11 @@ export interface ShowDogCardData {
   breed_rank?: number
   /** Место в общем рейтинге РКФ (до применения фильтров по породе/группе). */
   overall_rank?: number
+  bis_count?: number
+  big_count?: number
+  bob_count?: number
+  pedigree_url?: string | null
+  photo_url?: string | null
   titles: ShowTitleCounts
   competition_dog_id?: number | null
   /** Catalog/ring # for legacy /shows/dog/{catalog}/{breed} URLs. */

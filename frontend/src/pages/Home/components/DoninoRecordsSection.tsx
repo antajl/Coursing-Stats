@@ -61,7 +61,7 @@ function DoninoRecordsSectionInner({
                     mode="speed"
                     name={record.name}
                     breed={record.breed}
-                    sex={record.sex}
+                    sex={record.sex ?? undefined}
                     date={record.date}
                     status={record.status}
                     history={record.history}
@@ -87,7 +87,7 @@ function DoninoRecordsSectionInner({
                     mode="coursing"
                     name={record.name}
                     breed={record.breed}
-                    sex={record.sex}
+                    sex={record.sex ?? undefined}
                     date={record.date}
                     status={record.status}
                     history={record.history}

@@ -3,7 +3,6 @@ import {
   cleanMainRingLabel,
   extractGroupNumber,
   groupMainRing,
-  mainRingTabShortLabel,
 } from './exhibitionDetailUtils'
 import type { MainRingRow } from './types'
 

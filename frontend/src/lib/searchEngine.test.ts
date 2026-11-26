@@ -4,7 +4,6 @@ import {
   generateSearchTokens,
   matchesDog,
   matchesJudge,
-  matchesSearchText,
   transliterateEnToRu,
   transliterateRuToEn,
 } from './searchEngine'

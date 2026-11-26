@@ -14,8 +14,8 @@ interface ShowsHallOfFameColumnProps {
 }
 
 export const ShowsHallOfFameColumn = memo(function ShowsHallOfFameColumn({
-  breedNameRu,
-  breedSlug,
+  breedNameRu: _breedNameRu,
+  breedSlug: _breedSlug,
   showsAllBreedDogs = [],
   showsMonoDogs = [],
 }: ShowsHallOfFameColumnProps) {

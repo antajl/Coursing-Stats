@@ -36,6 +36,7 @@ export default function DoninoDogProfile() {
 
   useEffect(() => {
     async function fetchDogData() {
+      if (!name || !breed) return
       try {
         setLoading(true)
         const result = await api.getDoninoDog(name, breed)
@@ -54,9 +55,7 @@ export default function DoninoDogProfile() {
       }
     }
 
-    if (name && breed) {
-      fetchDogData()
-    }
+    fetchDogData()
   }, [name, breed])
 
   // Calculate derived values with useMemo (must be before early returns)
@@ -73,7 +72,7 @@ export default function DoninoDogProfile() {
     if (!data?.speedRecords) return []
     return dedupeByRecordDate(
       data.speedRecords,
-      (candidate, existing) => candidate.speed_km_h > existing.speed_km_h
+      (candidate: any, existing: any) => candidate.speed_km_h > existing.speed_km_h
     )
   }, [speedTimeline, data?.speedRecords])
 
@@ -87,7 +86,7 @@ export default function DoninoDogProfile() {
     if (!data?.coursingRecords) return []
     return dedupeByRecordDate(
       data.coursingRecords,
-      (candidate, existing) => candidate.time_seconds < existing.time_seconds
+      (candidate: any, existing: any) => candidate.time_seconds < existing.time_seconds
     )
   }, [coursingTimeline, data?.coursingRecords])
 

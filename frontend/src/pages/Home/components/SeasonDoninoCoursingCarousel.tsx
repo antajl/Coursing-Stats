@@ -74,7 +74,6 @@ export default function SeasonDoninoCoursingCarousel({
             status={record.status}
             history={record.history}
             timeSeconds={record.time_seconds}
-            trackLength={record.track_length}
             latestDateInDataset={null}
             rank={record.rank}
           />

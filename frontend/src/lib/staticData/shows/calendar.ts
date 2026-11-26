@@ -329,8 +329,8 @@ export async function getShowFeatured(
   const res = await fetchJson<{ schema?: string; shows?: ShowRkfCalendarEntry[] } | ShowRkfCalendarEntry[]>(
     'shows/indexes/featured-shows.json',
   )
-  if (res.success && res.data) {
-    const list = Array.isArray(res.data) ? res.data : res.data.shows ?? []
+  if (res) {
+    const list = Array.isArray(res) ? res : res.shows ?? []
     if (list.length > 0) {
       return { success: true, data: list }
     }

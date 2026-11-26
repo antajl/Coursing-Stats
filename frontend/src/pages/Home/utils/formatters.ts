@@ -49,7 +49,7 @@ export function competitionMetric(dog: TopDog, tab: RankingTab): string {
   return formatIndex(dog.rating_score ?? dog.avg_judge_score)
 }
 
-export function competitionMeta(dog: TopDog, tab: RankingTab): string {
+export function competitionMeta(_dog: TopDog, _tab: RankingTab): string {
   // Only show year, breed is passed separately
   return '2026'
 }
@@ -58,11 +58,12 @@ export function showHomeMetric(dog: ShowHomeTopDog): string {
   // Format titles from object counters (e.g., { BIS: 2, CAC: 1 })
   if (dog.titles && typeof dog.titles === 'object') {
     const titleEntries = Object.entries(dog.titles)
-      .filter(([_, count]) => count > 0)
+      .filter(([_, count]) => (count ?? 0) > 0)
       .slice(0, 2)
       .map(([title, count]) => {
+        const n = count ?? 0
         // Only show count if > 1
-        return count > 1 ? `${title}×${count}` : title
+        return n > 1 ? `${title}×${n}` : title
       })
     
     if (titleEntries.length > 0) {

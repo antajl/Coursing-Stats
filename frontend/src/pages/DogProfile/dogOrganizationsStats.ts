@@ -35,6 +35,8 @@ export interface DogOrgStats {
   lower_than_career: DogOrgItem[]
 }
 
+export type DogOrgStatsResult = DogOrgStats
+
 export type OrgDisciplineFilter = 'all' | 'coursing' | 'racing'
 
 export const PLACEMENT_STYLES: Record<number, { bg: string; text: string; border: string }> = {

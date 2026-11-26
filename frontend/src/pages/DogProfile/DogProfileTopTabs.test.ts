@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import type { DogProfileMainTabId, DogProfileMainTabItem, DisciplineTabId } from './types'
+import type { DogProfileMainTabId, DogProfileMainTabItem } from './types'
 
 describe('DogProfileTopTabs invariants', () => {
   it('supports all canonical main top tabs: profile, achievements, judges, organizations', () => {

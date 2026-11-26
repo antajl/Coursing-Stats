@@ -149,14 +149,12 @@ export default function ShowCalendar({ urlYear }: ShowCalendarProps = {}) {
 
     setSearchParams(
       (prev) => {
-        const currentYear = prev.get('year')
         const currentMonth = prev.get('month') || ''
         const currentBreed = prev.get('breed') || ''
         const currentCity = prev.get('city') || ''
         const currentScope = prev.get('scope') || ''
         const currentSearch = prev.get('search') || ''
 
-        const targetYear = filterYear && filterYear !== CURRENT_SEASON ? filterYear : null
         const targetMonth =
           filterMonth === 'all'
             ? 'all'

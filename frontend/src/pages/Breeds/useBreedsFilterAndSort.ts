@@ -1,5 +1,5 @@
 import { useState, useMemo, useRef, useEffect, useLayoutEffect } from 'react'
-import { CORE_BREED_HUBS, type BreedHubMeta } from '../../lib/breed-hubs-data'
+import { CORE_BREED_HUBS } from '../../lib/breed-hubs-data'
 import { getBreedFciGroup, FCI_GROUPS } from '../../lib/fciGroups'
 import { useBreedAnnualLeaders, useTopPlacement, useTopSpeed } from '../../hooks/useStaticData'
 import { matchesSearchText } from '../../lib/searchEngine'
@@ -68,7 +68,10 @@ export function useBreedsFilterAndSort() {
         maxSpeed: 0,
         seasonsCount: leaders.length,
         latestLeader: leaders[0]
-          ? { year: leaders[0].year, dog_name: leaders[0].dog_name }
+          ? {
+              year: leaders[0].year,
+              dog_name: leaders[0].dog_name || leaders[0].name_ru || leaders[0].name_lat || '',
+            }
           : undefined,
       }
     }

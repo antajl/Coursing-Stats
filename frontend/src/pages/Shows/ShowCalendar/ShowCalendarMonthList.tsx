@@ -12,7 +12,7 @@ export interface ShowCalendarMonthListProps {
   expandedKeys: Set<string>
   onToggleExpanded: (key: string) => void
   hasMore: boolean
-  loadMoreRef: RefObject<HTMLDivElement>
+  loadMoreRef: RefObject<HTMLDivElement | null>
   prevMonthLabel?: string | null
   nextMonthLabel?: string | null
   onGoPrev?: () => void

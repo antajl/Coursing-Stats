@@ -1,4 +1,4 @@
-import { useRef, useCallback, useEffect } from 'react'
+import { useRef, useEffect } from 'react'
 import { SEO } from '../components/SEO'
 import { JsonLd, organizationSchema, webSiteSchema } from '../components/JsonLd'
 import { useGSAP, riseIn } from '../lib/motion'
@@ -7,9 +7,9 @@ import HomeStatsPills from '../components/HomeStatsPills'
 import { useHomeData } from './Home/hooks/useHomeData'
 import { SeasonTopSection } from './Home/components/SeasonTopSection'
 import { HomeFooter } from './Home/components/HomeFooter'
-import { formatDate } from './Home/utils/formatters'
-import { ANIMATION, IMAGES } from '../lib/constants'
+import { ANIMATION } from '../lib/constants'
 import { ConceptSymmetricFinal } from './Home/components/HomeConcepts'
+import { CORE_BREED_HUBS } from '../lib/breed-hubs-data'
 
 export default function Home() {
   const pageRef = useRef<HTMLDivElement>(null)
@@ -31,9 +31,6 @@ export default function Home() {
       window.removeEventListener('resize', applyLock)
     }
   }, [])
-
-  // Memoize formatDate to prevent unnecessary re-renders
-  const memoizedFormatDate = useCallback(formatDate, [])
 
   const {
     stats,
@@ -117,7 +114,17 @@ export default function Home() {
         hideScrollCue={true}
         disableScrollFade={true}
         reverseLayout={true}
-        children={<ConceptSymmetricFinal stats={stats} showStats={showStats} />}
+        children={
+          <ConceptSymmetricFinal
+            stats={stats}
+            showStats={showStats}
+            breedHubsCount={CORE_BREED_HUBS.length}
+            maxDoninoSpeed={doninoSpeedRecords.reduce(
+              (max, r) => Math.max(max, Number(r.speed_km_h) || 0),
+              0,
+            ) || null}
+          />
+        }
         metrics={
           /* Left block: Double Podium Rankings */
           <div className="pointer-events-auto shrink-0 w-full md:w-[clamp(900px,53vw,1040px)] 3xl:w-[clamp(980px,58vw,1360px)] max-w-[calc(100vw-340px)] mr-auto">

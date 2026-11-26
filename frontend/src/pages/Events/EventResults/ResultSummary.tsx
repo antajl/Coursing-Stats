@@ -3,7 +3,6 @@ import DogNameLink from './components/DogNameLink'
 import QualificationBadges from './components/QualificationBadges'
 import HoverTooltip from '../../../components/ui/HoverTooltip'
 import { displayStatusReason } from '../../../lib/statusReason'
-import { hasDisqualifiedHeat, parseRawScores } from './utils'
 import type { Result } from './types'
 
 interface ResultSummaryProps {
@@ -60,7 +59,7 @@ export function normalizeQualificationAndVc(result: Result): { qualification?: s
   return { qualification: qual, vc }
 }
 
-export function VcBadge({ vc, corner = false }: { vc: string; corner?: boolean }) {
+export function VcBadge({ vc, corner: _corner = false }: { vc: string; corner?: boolean }) {
   return (
     <HoverTooltip label="Высшая квалификация" placement="top" portal>
       <span className="inline-flex items-center justify-center rounded-md border border-camel-200 bg-camel-100 px-1.5 py-0.5 text-xs font-semibold leading-none text-camel-800 shadow-xs cursor-help select-none whitespace-nowrap">

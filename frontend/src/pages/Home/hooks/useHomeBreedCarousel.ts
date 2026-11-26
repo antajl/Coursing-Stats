@@ -45,10 +45,10 @@ export type HomeBreedCarouselApi = {
     onBlurCapture: (e: FocusEvent<HTMLDivElement>) => void
   }
   touchHandlers: {
-    onTouchStart: (e: TouchEvent<HTMLDivElement>) => void
-    onTouchMove: (e: TouchEvent<HTMLDivElement>) => void
-    onTouchEnd: (e: TouchEvent<HTMLDivElement>) => void
-    onTouchCancel: (e: TouchEvent<HTMLDivElement>) => void
+    onTouchStart?: (e: TouchEvent<HTMLDivElement>) => void
+    onTouchMove?: (e: TouchEvent<HTMLDivElement>) => void
+    onTouchEnd?: (e: TouchEvent<HTMLDivElement>) => void
+    onTouchCancel?: (e: TouchEvent<HTMLDivElement>) => void
     onClickCapture: (e: MouseEvent<HTMLDivElement>) => void
   }
 }
@@ -393,6 +393,10 @@ export function useHomeBreedCarousel(slideCount: number): HomeBreedCarouselApi {
     onTouchCancel: undefined,
     onClickCapture,
   }
+  void onTouchStart
+  void onTouchMove
+  void onTouchEnd
+  void onTouchCancel
 
   return {
     index,

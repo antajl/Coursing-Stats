@@ -9,6 +9,7 @@ export interface MainRingRow {
   catalog_number: number
   dog_name: string
   pedigree?: string
+  judge?: string
   award_badge?: string
 }
 

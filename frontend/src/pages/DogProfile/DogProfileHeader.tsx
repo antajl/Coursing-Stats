@@ -4,12 +4,10 @@ import { Link } from 'react-router-dom'
 import {
   Star as StarIcon,
   ExternalLink,
-  Maximize2,
   X,
   ArrowUpRight,
   Share2,
   Check,
-  FileText,
   Download,
 } from 'lucide-react'
 import { DogPassportModal } from './components/Passport/DogPassportModal'
@@ -23,7 +21,6 @@ import { displayBreed } from '../../lib/breedMapping'
 import { getBreedHubByCanonicalKey } from '../../lib/breed-hubs-data'
 import { useFavorites } from '../../hooks/useFavorites'
 import { createLogger } from '../../lib/logging'
-import HoverTooltip from '../../components/ui/HoverTooltip'
 import DogAggressionBadge from './DogAggressionBadge'
 import { DogPhotoFrame } from '../../components/DogPhotoFrame'
 import type { StandingExplainerInput } from './StandingPlaceExplainer'
@@ -74,9 +71,9 @@ export function DogProfileHeader({
   coursingTitles,
   racingTitles,
   showRuName,
-  exporting,
-  onExport,
-  ranks = [],
+  exporting: _exporting,
+  onExport: _onExport,
+  ranks: _ranks = [],
   titleExplanations,
 }: DogProfileHeaderProps) {
   const { primary, secondary } = parseDogName(dog.name_lat, dog.name_ru)
@@ -152,7 +149,7 @@ export function DogProfileHeader({
     try {
       await toggleFavorite(dogId)
     } catch (err) {
-      profileLogger.error('Failed to toggle favorite', { error: err })
+      profileLogger.error('Failed to toggle favorite', err instanceof Error ? err : undefined)
     } finally {
       setLoadingFavorite(false)
     }

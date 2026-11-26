@@ -34,23 +34,25 @@ export default function DogSexIcon({
 
   if (isFemale) {
     return (
-      <Venus
-        size={size}
-        strokeWidth={strokeWidth}
-        className={mergedClass}
-        aria-label="Сука"
-        title="Сука"
-      />
+      <span className="inline-flex shrink-0" title="Сука">
+        <Venus
+          size={size}
+          strokeWidth={strokeWidth}
+          className={mergedClass}
+          aria-label="Сука"
+        />
+      </span>
     )
   }
 
   return (
-    <Mars
-      size={size}
-      strokeWidth={strokeWidth}
-      className={mergedClass}
-      aria-label="Кобель"
-      title="Кобель"
-    />
+    <span className="inline-flex shrink-0" title="Кобель">
+      <Mars
+        size={size}
+        strokeWidth={strokeWidth}
+        className={mergedClass}
+        aria-label="Кобель"
+      />
+    </span>
   )
 }

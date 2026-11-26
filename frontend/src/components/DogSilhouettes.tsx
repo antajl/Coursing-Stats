@@ -661,5 +661,5 @@ export const DogBreedSilhouette: React.FC<DogBreedSilhouetteProps> = ({
 export const DogSilhouettes = () => null;
 
 export const getSilhouetteType = (breed?: string | null): string => {
-  return resolveSilhouetteBreed(breed);
+  return resolveSilhouetteBreed(breed) ?? 'saluki';
 };

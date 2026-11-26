@@ -1,5 +1,3 @@
-import React from 'react'
-
 export interface PlacementMedalBadgeProps {
   place?: number | string | null | undefined
   placement?: number | string | null | undefined

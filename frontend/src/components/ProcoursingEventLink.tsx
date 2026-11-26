@@ -13,18 +13,12 @@ interface ProcoursingEventLinkProps {
 /** Ссылка на протокол: `/event/:id` в проде и DEV, procoursing.ru как fallback. */
 export default function ProcoursingEventLink({
   eventId,
-  procoursingUrl,
+  procoursingUrl: _procoursingUrl,
   className,
   title,
   children,
 }: ProcoursingEventLinkProps) {
-  const { reachGoal } = useYandexGoal()
-
-  const handleClick = () => {
-    if (procoursingUrl) {
-      reachGoal('procoursing_link')
-    }
-  }
+  useYandexGoal()
 
   // Внутренняя страница результатов
   return (

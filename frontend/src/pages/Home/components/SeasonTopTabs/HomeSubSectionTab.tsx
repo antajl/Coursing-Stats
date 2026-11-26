@@ -10,7 +10,7 @@ export interface HomeSubSectionTabProps {
 export function HomeSubSectionTab({
   targetLabel,
   direction = 'right',
-  isNudging = false,
+  isNudging: _isNudging = false,
   onToggle,
 }: HomeSubSectionTabProps) {
   const isLeft = direction === 'left'

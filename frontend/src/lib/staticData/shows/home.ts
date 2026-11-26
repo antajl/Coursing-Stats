@@ -4,6 +4,7 @@ export type ShowHeroStats = {
   exhibitions: number
   appearances: number
   dogs: number
+  unique_dogs?: number
   judges: number
   breeds: number
 }

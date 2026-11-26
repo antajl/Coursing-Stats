@@ -10,11 +10,11 @@ import {
 } from '../utils'
 import { displayStatusReason } from '../../../../lib/statusReason'
 import { normalizeQualificationAndVc } from '../ResultSummary'
-import { parseDogName, toDogTitleCase } from '../../../../lib/dogName'
+import { parseDogName } from '../../../../lib/dogName'
 import HoverTooltip from '../../../../components/ui/HoverTooltip'
 import { useInfiniteScroll } from '../../../../hooks/useInfiniteScroll'
 import ProtocolHeatBadge, { getHeatDistance } from '../components/ProtocolHeatBadge'
-import type { Result, Heat, RawScores } from '../types'
+import type { Result } from '../types'
 
 interface TableProtocolViewProps {
   groupedResults?: Record<string, Result[]>
@@ -33,15 +33,6 @@ const CRITERIA_TITLES: Record<string, string> = {
   Э: 'Энтузиазм (макс. 20)',
 }
 
-const BIB_COLOR_LABELS: Record<string, string> = {
-  red: 'Красная попона',
-  white: 'Белая попона',
-  blue: 'Синяя попона',
-  black: 'Чёрная попона',
-  yellow: 'Жёлтая попона',
-  green: 'Зелёная попона',
-}
-
 function breedCountLabel(count: number): string {
   const mod10 = count % 10
   const mod100 = count % 100
@@ -54,7 +45,7 @@ export default function TableProtocolView({
   groupedResults,
   sortedGroupKeys,
   results,
-  bestTimesByRace,
+  bestTimesByRace: _bestTimesByRace,
   isRacing = false,
 }: TableProtocolViewProps) {
   // Собираем все результаты для точного вычисления максимального числа заездов

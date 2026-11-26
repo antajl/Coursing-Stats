@@ -9,7 +9,6 @@ import {
   DisciplineColumnShell,
   DisciplineHistoryCard,
   DisciplineStatsCard,
-  disciplineTheme,
 } from './DisciplineColumnShell'
 import { HistoryMetaRow } from './HistoryPlacement'
 import type { ProfileHeaderRank } from './DogProfileHeader'
@@ -76,7 +75,6 @@ export function RacingColumn({
   rank,
   breed,
 }: RacingColumnProps) {
-  const t = disciplineTheme(THEME)
   if (!hasRacingData && racingEvents.length === 0) return null
 
   const dogBreed = breed || ''
@@ -88,10 +86,9 @@ export function RacingColumn({
     ? procoursingUrlForEventId(eventResultsUrls, avgSpeedEventId)
     : null
 
+  const startsCount = racingEvents.length
   const has2026 = rank?.yearBreedRank != null && rank.yearBreedRank > 0
   const hasHistory = rank?.breedRank != null && rank.breedRank > 0
-  const hasAnyRank = has2026 || hasHistory || rank?.rank != null
-  const startsCount = racingEvents.length
 
   return (
     <DisciplineColumnShell>

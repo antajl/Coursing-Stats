@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo, forwardRef } from 'react'
+import { useState, useEffect, useMemo, forwardRef } from 'react'
 import QRCode from 'qrcode'
 import type { DogPassportData, PassportFormat, PassportSectionsConfig } from './passportTypes'
 import {
@@ -70,7 +70,7 @@ export const DogPassportCard = forwardRef<HTMLDivElement, DogPassportCardProps>(
               className="h-full w-full object-cover object-[center_20%]"
             />
           ) : silhouetteKey ? (
-            <DogBreedSilhouette breedKey={silhouetteKey} size={70} />
+            <DogBreedSilhouette breed={data.breedPrimary} className="h-[70px] w-[70px] text-camel-700/60" />
           ) : (
             <div className="text-center font-serif text-2xl font-bold text-[#8C7E6A]">
               {data.namePrimary.slice(0, 1)}
@@ -215,7 +215,7 @@ export const DogPassportCard = forwardRef<HTMLDivElement, DogPassportCardProps>(
                       className="h-full w-full object-cover object-[center_20%]"
                     />
                   ) : silhouetteKey ? (
-                    <DogBreedSilhouette breedKey={silhouetteKey} size={80} />
+                    <DogBreedSilhouette breed={data.breedPrimary} className="h-20 w-20 text-camel-700/60" />
                   ) : (
                     <div className="text-center font-serif text-2xl font-bold text-[#8C7E6A]">
                       {data.namePrimary.slice(0, 1)}

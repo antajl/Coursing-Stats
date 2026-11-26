@@ -3,7 +3,7 @@
  * Run in browser console: import('./lib/colorContrastAudit').then(m => m.runAudit())
  */
 
-import { verifyWCAGAA, contrastRatio } from './colorContrast'
+import { contrastRatio } from './colorContrast'
 
 interface ColorPair {
   fg: string

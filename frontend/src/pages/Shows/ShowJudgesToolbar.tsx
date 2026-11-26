@@ -34,7 +34,7 @@ export function ShowJudgesToolbar({
   filterYear,
   setFilterYear,
   showYears,
-  isYearNonDefault,
+  isYearNonDefault: _isYearNonDefault,
   availableBreeds,
   filterBreed,
   onSelectBreed,

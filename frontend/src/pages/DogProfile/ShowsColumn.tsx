@@ -1,4 +1,4 @@
-import { useState, useMemo, memo } from 'react'
+import { useState, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { Crown, ArrowRight, Award } from 'lucide-react'
 import {
@@ -16,7 +16,6 @@ import { localExhibitionPath } from '../../lib/env'
 import { HISTORY_DEFAULT } from './dogProfileStats'
 import {
   DisciplineColumnShell,
-  DisciplineFooterRow,
   DisciplineHistoryCard,
   DisciplineStatsCard,
   disciplineTheme,
@@ -42,7 +41,7 @@ type ShowsColumnProps = {
 const THEME = 'camel' as const
 
 export function ShowsColumn({ dog, rank, breed }: ShowsColumnProps) {
-  const t = disciplineTheme(THEME)
+  disciplineTheme(THEME)
   const [showAll, setShowAll] = useState(false)
   const bestKey = (dog.best_award as ShowAwardKey | null) ?? null
   const bestLabel = bestKey ? SHOW_AWARD_LABELS[bestKey] : null

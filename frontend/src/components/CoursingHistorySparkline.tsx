@@ -102,8 +102,8 @@ export default function CoursingHistorySparkline({
       className={`h-10 w-full max-w-[200px] ${className}`}
       role="img"
       aria-label={`История времени 350 м: от ${formatTime(minTime)} с (${time350ToSpeedKmh(minTime).toFixed(1)} км/ч) до ${formatTime(maxTime)} с (${time350ToSpeedKmh(maxTime).toFixed(1)} км/ч)`}
-      title={points.map(pointTooltip).join(' → ')}
     >
+      <title>{points.map(pointTooltip).join(' → ')}</title>
       <defs>
         <linearGradient id={gradientId} x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stopColor="#c4956a" stopOpacity="0.35" />

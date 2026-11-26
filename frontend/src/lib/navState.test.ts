@@ -25,10 +25,9 @@ describe('navState', () => {
       },
     }
 
-    // @ts-expect-error mock window for node vitest environment
     globalThis.window = {
-      localStorage: mockLocalStorage,
-    }
+      localStorage: mockLocalStorage as unknown as Storage,
+    } as unknown as Window & typeof globalThis
   })
 
   it('returns default tabs when storage is empty', () => {

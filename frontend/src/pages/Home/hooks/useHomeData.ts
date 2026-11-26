@@ -7,7 +7,6 @@ import {
 import { displayBreed } from '../../../lib/breedMapping'
 import type { CalendarEvent } from '../../Events/eventListUtils'
 import type { TopDog, SpeedRecord, CoursingRecord } from '../types'
-import { pickFeaturedEvents, pickFeaturedShows } from '../utils/dataHelpers'
 import { validateHeroStats, validateHeroShowStats, validateArray } from '../utils/validators'
 import { buildCombinedRanking } from '../../TopDogs/mergeCombinedRanking'
 import { buildTopBreedSlides, type BreedSlide } from '../utils/breedSeasonSlides'
@@ -43,8 +42,8 @@ const CURRENT_SEASON = Number(resolveActiveSeason())
 export function useHomeData() {
   const [stats, setStats] = useState<HeroStats | null>(null)
   const [showStats, setShowStats] = useState<HeroShowStats | null>(null)
-  const [featuredEvents, setFeaturedEvents] = useState<CalendarEvent[]>([])
-  const [featuredShows, setFeaturedShows] = useState<ShowRkfCalendarEntry[]>([])
+  const featuredEvents: CalendarEvent[] = []
+  const featuredShows: Record<string, unknown>[] = []
   const [competitionSlides, setCompetitionSlides] = useState<BreedSlide<CombinedRankingDog>[]>([])
   const [racingSlides, setRacingSlides] = useState<BreedSlide<any>[]>([])
   const [showSlides, setShowSlides] = useState<BreedSlide<ShowHomeTopDog>[]>([])
@@ -96,15 +95,15 @@ export function useHomeData() {
         const score = extractTopDogs(scoreData.success ? scoreData.data : null)
         if (placement.length > 0 || score.length > 0) {
           const combined = buildCombinedRanking(
-            placement as Record<string, unknown>[],
-            score as Record<string, unknown>[],
+            placement as unknown as Record<string, unknown>[],
+            score as unknown as Record<string, unknown>[],
           )
           setCompetitionSlides(buildTopBreedSlides(combined, 5, 3))
         }
 
         const speedDogs = extractTopDogs(speedData.success ? speedData.data : null)
         if (speedDogs.length > 0) {
-          setRacingSlides(buildTopBreedSlides(speedDogs as Record<string, unknown>[], 5, 3))
+          setRacingSlides(buildTopBreedSlides(speedDogs as unknown as Record<string, unknown>[], 5, 3))
         }
 
         // Unblock critical view immediately for minimal LCP

@@ -13,6 +13,10 @@ export interface BreedHubDefinition {
   faqs: Array<{ question: string; answer: string }>
 }
 
+export type BreedHubItem = BreedHubDefinition
+export type BreedHubMeta = BreedHubDefinition
+export type BreedHubInfo = BreedHubDefinition
+
 export const CORE_BREED_HUBS: BreedHubDefinition[] = [
   {
     "slug": "whippet",

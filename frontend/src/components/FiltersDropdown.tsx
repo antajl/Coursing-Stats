@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect, type ReactNode } from 'react'
 
 /**
  * Единая кнопка + панель "Больше фильтров".
@@ -9,18 +9,20 @@ import { useState, useRef, useEffect } from 'react'
  * заголовок панели, разный футер). Теперь это один компонент: страница
  * передаёт только содержимое полей (children) и обработчик сброса
  * (onReset), всё остальное — общее и не может разойтись в будущем.
- *
- * @param {React.ReactNode} children - содержимое полей фильтра, специфичное для страницы
- * @param {() => void} onReset - обработчик кнопки "Сбросить"
- * @param {string} [label] - текст на кнопке-триггере
  */
-export default function FiltersDropdown({ children, onReset, label = 'Больше фильтров' }) {
+interface FiltersDropdownProps {
+  children: ReactNode
+  onReset: () => void
+  label?: string
+}
+
+export default function FiltersDropdown({ children, onReset, label = 'Больше фильтров' }: FiltersDropdownProps) {
   const [open, setOpen] = useState(false)
-  const ref = useRef(null)
+  const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    function handleClickOutside(event) {
-      if (ref.current && !ref.current.contains(event.target)) {
+    function handleClickOutside(event: MouseEvent) {
+      if (ref.current && event.target instanceof Node && !ref.current.contains(event.target)) {
         setOpen(false)
       }
     }
@@ -29,7 +31,7 @@ export default function FiltersDropdown({ children, onReset, label = 'Больш
   }, [])
 
   useEffect(() => {
-    const handleEsc = (e) => {
+    const handleEsc = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         setOpen(false)
       }

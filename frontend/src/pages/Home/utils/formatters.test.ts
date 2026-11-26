@@ -1,10 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import {
-  formatStarts,
-  formatScore,
-  formatIndex,
-  formatSpeed,
-} from './formatters'
+import { formatStarts } from './formatters'
 
 describe('formatters', () => {
   describe('formatStarts', () => {

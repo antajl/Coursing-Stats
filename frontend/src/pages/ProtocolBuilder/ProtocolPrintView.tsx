@@ -276,7 +276,7 @@ export const ProtocolPrintView: React.FC<ProtocolPrintViewProps> = ({
                                             key={rIdx}
                                             className="py-1.5 px-1 text-center text-terracotta-700 font-semibold italic text-[11px]"
                                           >
-                                            {runStatus === 'disqualified'
+                                            {(runStatus as string) === 'disqualified'
                                               ? 'Дисквалифицирован'
                                               : runStatus === 'withdrawn'
                                               ? 'Снят'

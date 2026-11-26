@@ -25,7 +25,7 @@ export const TOP3_BAR: Record<1 | 2 | 3, string> = {
 }
 
 /** Vertical accent outside the row (needs parent list gutter, e.g. pl-[3px]). */
-export function Top3AccentBar({ rank }: { rank: number }) {
+export function Top3AccentBar({ rank: _rank }: { rank: number }) {
   return null
 }
 

@@ -1,8 +1,7 @@
 import { useMemo } from 'react'
 import type { DogPassportData, DogPassportHighlight, DogPassportTitle, DogPassportTitleCategory } from './passportTypes'
-import { toDogTitleCase, parseDogName } from '../../../../lib/dogName'
+import { parseDogName } from '../../../../lib/dogName'
 import { displayBreed } from '../../../../lib/breedMapping'
-import { presentShowAwards } from '../../../../../../backend/lib/show-award-ranking'
 import { competitionTitleDisplayName } from '../../../../../../backend/lib/competition-titles'
 import { getFullTitleLabel } from '../../../../lib/awardTooltip'
 import type { DogTitle } from '../../../../lib/qualificationTitles'
@@ -29,11 +28,6 @@ export interface UseDogPassportDataParams {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   coursingStats?: any
   ranks?: ProfileHeaderRank[]
-}
-
-function extractTitleString(t: string | DogTitle): string {
-  if (typeof t === 'string') return t.trim()
-  return (t?.title || '').trim()
 }
 
 export function getShortTitleDisplay(badge: string): string {
@@ -116,7 +110,7 @@ export function buildDogPassportData({
   showDog,
   events = [],
   supremeTitles = [],
-  competitionTitles = [],
+  competitionTitles: _competitionTitles = [],
   coursingTitles = [],
   racingTitles = [],
   showTitles = [],
@@ -194,14 +188,10 @@ export function buildDogPassportData({
   let bobCount = 0
 
   if (showDog) {
-    try {
-      const awards = presentShowAwards(showDog)
-      bisCount = awards.bis || 0
-      bigCount = awards.big || 0
-      bobCount = awards.bob || 0
-    } catch {
-      // fallback
-    }
+    const t = showDog.titles || {}
+    bisCount = (t.BIS || 0) + (t.BIS_JUNIOR || 0) + (t.BIS_PUPPY || 0) + (t.BIS_BABY || 0) + (t.BIS_VETERAN || 0)
+    bigCount = t.BIG || 0
+    bobCount = t.BOB || 0
   }
 
   // 5. Главные турнирные победы (Highlights)

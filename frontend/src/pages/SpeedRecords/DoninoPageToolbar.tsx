@@ -29,7 +29,7 @@ interface DoninoPageToolbarProps {
   onFilterMaxTimeChange: (value: string) => void
   statsGroupBy: GroupBy
   onStatsGroupByChange: (value: GroupBy) => void
-  dropdownRef: React.RefObject<HTMLDivElement>
+  dropdownRef: React.RefObject<HTMLDivElement | null>
   years: string[]
   breeds: string[]
   sexes: string[]

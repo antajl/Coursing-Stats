@@ -6,6 +6,8 @@ declare global {
       method: 'init' | 'reachGoal' | string,
       ...args: (Record<string, unknown> | string | number | boolean)[]
     ) => void
+    gtag?: (...args: any[]) => void
+    dataLayer?: any[]
   }
 }
 

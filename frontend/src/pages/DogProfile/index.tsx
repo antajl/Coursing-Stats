@@ -1,4 +1,3 @@
-import React from 'react'
 import { Navigate, useLocation } from 'react-router-dom'
 import { isShowOnlyProfileId, showDogProfilePath } from '../../lib/showDogProfilePath'
 import LoadingCard from '../../components/LoadingCard'
@@ -280,13 +279,13 @@ export default function DogProfile() {
           showDog={data.showDog}
           showsLoading={data.showsLoading}
           events={data.events}
-          eventResultsUrls={data.eventResultsUrls}
+          eventResultsUrls={Object.fromEntries(data.eventResultsUrls)}
           breed={data.headerBreed}
         />
       )}
 
       {/* Страница 3: Судьи */}
-      {data.activeMainTab === 'judges' && (
+      {data.activeMainTab === 'judges' && data.judgeStats && (
         <DogJudgesSection
           judgeStats={data.judgeStats}
           competitions={data.events}

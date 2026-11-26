@@ -18,7 +18,8 @@ export function DogOrganizationRow({
 }: DogOrganizationRowProps) {
   const isPositive = variant === 'higher'
   const deltaColor = isPositive ? 'text-forest-700 font-semibold' : 'text-rose-700 font-semibold'
-  const deltaSign = org.delta_to_career > 0 ? `+${org.delta_to_career}%` : `${org.delta_to_career}%`
+  const deltaSign = org.delta_vs_career > 0 ? `+${org.delta_vs_career}%` : `${org.delta_vs_career}%`
+  const locationText = org.locations.filter(Boolean).join(', ')
 
   return (
     <div className="transition-colors">
@@ -38,12 +39,12 @@ export function DogOrganizationRow({
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-1.5 flex-wrap">
             <span className="text-xs sm:text-sm font-semibold text-charcoal-900 leading-snug">
-              {org.display_name}
+              {org.short_name || org.org_name}
             </span>
-            {org.location && (
+            {locationText && (
               <span className="inline-flex items-center gap-0.5 text-[11px] text-charcoal-500 font-normal">
                 <MapPin className="w-3 h-3 text-charcoal-400 shrink-0" aria-hidden />
-                <span className="truncate max-w-[140px] sm:max-w-[200px]">{org.location}</span>
+                <span className="truncate max-w-[140px] sm:max-w-[200px]">{locationText}</span>
               </span>
             )}
           </div>
@@ -76,9 +77,9 @@ export function DogOrganizationRow({
         </div>
       </div>
 
-      {isExpanded && org.starts.length > 0 && (
+      {isExpanded && org.events.length > 0 && (
         <div className="px-3.5 sm:px-4 py-2 border-t border-old-money-100/70 bg-cream-50/40 space-y-1.5 animate-in fade-in duration-150">
-          {org.starts.map((start, idx) => {
+          {org.events.map((start, idx) => {
             const hasPlace = start.placement !== null && start.placement !== undefined
             const eventLink = start.event_id ? `/competitions/${start.event_id}` : null
 
@@ -96,13 +97,13 @@ export function DogOrganizationRow({
                     </span>
                   )}
                   <span className="font-medium text-charcoal-900 truncate">
-                    {start.event_title || 'Состязание'}
+                    {start.title || 'Состязание'}
                   </span>
                 </div>
 
                 <div className="flex items-center gap-2 shrink-0 text-charcoal-500 text-[11px] tabular-nums">
                   {start.date && <span>{start.date}</span>}
-                  {start.score ? <span>{start.score} б.</span> : null}
+                  {start.total_score ? <span>{start.total_score} б.</span> : null}
                   {eventLink && (
                     <Link
                       to={eventLink}

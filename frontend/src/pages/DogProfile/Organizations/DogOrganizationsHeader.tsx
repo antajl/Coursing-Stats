@@ -2,7 +2,6 @@ import {
   type DogOrgStatsResult,
   type OrgDisciplineFilter,
   formatOrgsCount,
-  formatWinsCount,
 } from '../dogOrganizationsStats'
 
 export interface DogOrganizationsHeaderProps {

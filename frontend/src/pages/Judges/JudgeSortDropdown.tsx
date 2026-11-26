@@ -34,7 +34,7 @@ interface JudgeSortDropdownProps {
 export default function JudgeSortDropdown({
   value,
   onChange,
-  compact = false,
+  compact: _compact = false,
 }: JudgeSortDropdownProps) {
   const [open, setOpen] = useState(false)
   const currentOption = JUDGE_SORT_OPTIONS.find((o) => o.value === value) || JUDGE_SORT_OPTIONS[0]

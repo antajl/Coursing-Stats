@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { X, ArrowUpRight } from 'lucide-react'
-import type { BreedHubInfo } from '../../../lib/breed-hubs-data'
+import type { BreedHubInfo } from '../../../../lib/breed-hubs-data'
 
 interface SelectedBreedBarProps {
   onSelectBreed: (breed: string) => void

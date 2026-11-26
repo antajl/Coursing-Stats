@@ -38,7 +38,7 @@ export default function EventListCard({
                   {formatDate(event.date_start)}
                 </span>
                 <div className="flex flex-col min-w-0 flex-1">
-                  <span className="font-semibold text-charcoal-900 line-clamp-2 hover:underline decoration-camel-500 decoration-1 underline-offset-2 text-xs leading-snug" title={event.title || event.full_title}>
+                  <span className="font-semibold text-charcoal-900 line-clamp-2 hover:underline decoration-camel-500 decoration-1 underline-offset-2 text-xs leading-snug" title={event.title || event.full_title || undefined}>
                     {event.title || event.full_title}
                   </span>
                 </div>

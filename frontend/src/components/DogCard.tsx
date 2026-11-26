@@ -142,7 +142,7 @@ const DogCardMemo = memo(DogCardInner, (prevProps, nextProps) => {
     prevProps.rank === nextProps.rank &&
     prevProps.variant === nextProps.variant
   )
-}) as NamedExoticComponent<DogCardProps> & DogCardComposition
+}) as unknown as NamedExoticComponent<DogCardProps> & DogCardComposition
 
 // Attach compound components to memoized component
 DogCardMemo.Header = DogCardHeader

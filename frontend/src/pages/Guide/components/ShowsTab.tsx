@@ -4,8 +4,6 @@ import {
   ChevronRight,
   ChevronUp,
   Lightbulb,
-  Search,
-  X,
 } from 'lucide-react'
 import {
   SHOW_ABBREVIATIONS,
@@ -22,7 +20,6 @@ import { executeSmartShowSearch } from '../smartShowSearch'
 import {
   AbbreviationsDropdown,
   GuideSearchHeader,
-  GuideTopicsTicker,
   OfficialSourcesList,
   RefTag,
   SectionCard,

@@ -28,7 +28,7 @@ export const DesktopShowsCacCell = memo(function DesktopShowsCacCell({
   const bob = item.titles?.BOB || 0
   const bos = item.titles?.BOS || 0
   const chrkf = (item.titles?.CHRKF || 0) + (item.titles?.VCHRKF || 0) + (item.titles?.YCHRKF || 0)
-  const tooltipTitle = `Лидер всепородных выставок САС ${item.year} года: ${item.total_shows} выставок, ${item.rank_score.toLocaleString('ru-RU')} очков`
+  const tooltipTitle = `Лидер всепородных выставок САС ${item.year} года: ${item.total_shows} выставок, ${(item.rank_score ?? 0).toLocaleString('ru-RU')} очков`
   const slug = breedToSlug(canonicalKey)
   const dogProfileId = item.competition_dog_id != null ? item.competition_dog_id : item.dog_id
 
@@ -185,7 +185,7 @@ export const DesktopShowsCacCell = memo(function DesktopShowsCacCell({
           )}
           {bis === 0 && bisV === 0 && bisJ === 0 && big === 0 && bob === 0 && bos === 0 && chrkf === 0 && (
             <span className="text-[11px] font-sans font-medium text-camel-800 tabular-nums">
-              {item.rank_score.toLocaleString('ru-RU')}
+              {(item.rank_score ?? 0).toLocaleString('ru-RU')}
             </span>
           )}
         </div>

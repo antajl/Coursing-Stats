@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useCallback } from 'react'
+import { useState, useMemo, useCallback } from 'react'
 import { Trophy, Timer, Award, ChevronLeft, ChevronRight } from 'lucide-react'
 import { canonicalBreed, formatBreedName, matchesBreedFilter } from '../../lib/breedMapping'
 import { matchesDog } from '../../lib/searchEngine'
@@ -175,8 +175,6 @@ export default function ChampionshipStandingsTab({
       return timeA - timeB
     })
   }, [baseFiltered])
-
-  const filtered = sortMode === 'time' ? filteredByTime : filteredByPoints
 
   const listLength = Math.max(filteredByTime.length, filteredByPoints.length)
   const { visibleCount, loadMoreRef, hasMore } = useInfiniteScroll(

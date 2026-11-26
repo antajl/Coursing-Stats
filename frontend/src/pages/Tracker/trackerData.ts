@@ -1,4 +1,4 @@
-import type { TrackerApplication } from './trackerTypes';
+import type { TrackerApplication, TrackerCompetition } from './trackerTypes';
 
 export const TRACKER_WORKER_URL = 'https://coursing-stats-tracker-bot.antajltube.workers.dev';
 
@@ -48,15 +48,16 @@ export function getStoredEmail(): string | null {
   return localStorage.getItem('cs_rkf_user_email');
 }
 
-export const DEFAULT_RKF_USER_UUID = 'f4ef4ce4cffe4e18b3fed35e2536d64b';
-
 export function getStoredUserUuid(): string {
-  return localStorage.getItem('cs_rkf_user_uuid') || DEFAULT_RKF_USER_UUID;
+  return localStorage.getItem('cs_rkf_user_uuid') || '';
 }
 
 export function getRkfApplicationUrl(barcode: string): string {
   const uuid = getStoredUserUuid();
-  return `https://rkf.online/user/${uuid}/documents/application/registry?barcode=${barcode}`;
+  if (!uuid) {
+    return 'https://rkf.online';
+  }
+  return `https://rkf.online/user/${uuid}/documents/application/registry?barcode=${encodeURIComponent(barcode)}`;
 }
 
 export function setStoredAuth(token: string, email: string, userUuid?: string): void {

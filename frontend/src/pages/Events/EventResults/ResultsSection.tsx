@@ -82,7 +82,7 @@ export default function ResultsSection({ results, trailing }: ResultsSectionProp
   const { breeds, candidateBreeds, dogIndex } = useMemo(() => {
     const counts = new Map<string, number>()
     for (const r of activeResults) {
-      const b = canonicalBreed(r.dog.breed)
+      const b = canonicalBreed(r.dog?.breed)
       if (b) counts.set(b, (counts.get(b) || 0) + 1)
     }
     const sortedEntries = Array.from(counts.entries()).sort(
@@ -112,7 +112,7 @@ export default function ResultsSection({ results, trailing }: ResultsSectionProp
     })
 
     const index: DogsIndexEntry[] = activeResults.map((r) => ({
-      breed: canonicalBreed(r.dog.breed),
+      breed: canonicalBreed(r.dog?.breed),
       competition_count: 1,
     }))
 
@@ -125,7 +125,7 @@ export default function ResultsSection({ results, trailing }: ResultsSectionProp
       const l = extractDoninoLeague(r.breed_class)
       if (l) set.add(l)
     }
-    const ORDER = ['Чемпионов', 'Абсолют', 'Прогресс', 'Юниоры']
+    const ORDER = ['Чемпипионов', 'Чемпионов', 'Абсолют', 'Прогресс', 'Юниоры'].filter(l => l !== 'Чемпипионов')
     return ORDER.filter((l) => set.has(l))
   }, [activeResults])
 
@@ -139,7 +139,7 @@ export default function ResultsSection({ results, trailing }: ResultsSectionProp
         searchQuery === '' ||
         matchesSearchText([r.name_ru, r.name_lat, r.dog?.name, r.dog?.breed], searchQuery)
       const matchesBreed =
-        selectedBreed === '' || matchesBreedFilter(canonicalBreed(r.dog.breed), selectedBreed)
+        selectedBreed === '' || matchesBreedFilter(canonicalBreed(r.dog?.breed), selectedBreed)
       const dogSex = extractDogSex(r)
       const matchesSex = selectedSex === '' || dogSex === selectedSex
 
@@ -159,7 +159,7 @@ export default function ResultsSection({ results, trailing }: ResultsSectionProp
       searchQuery === '' ||
       matchesSearchText([result.name_ru, result.name_lat, result.dog?.name, result.dog?.breed], searchQuery)
     const matchesBreed =
-      selectedBreed === '' || matchesBreedFilter(canonicalBreed(result.dog.breed), selectedBreed)
+      selectedBreed === '' || matchesBreedFilter(canonicalBreed(result.dog?.breed), selectedBreed)
     const dogSex = extractDogSex(result)
     const matchesSex = selectedSex === '' || dogSex === selectedSex
     const dogLeague = extractDoninoLeague(result.breed_class)

@@ -19,7 +19,7 @@ export type CompetitionsProps = {
 function Competitions({ defaultTab }: CompetitionsProps) {
   const { tab: routeTab, id: routeId, year: routeYear } = useParams<{ tab?: string; id?: string; year?: string }>()
   const location = useLocation()
-  const [searchParams, setSearchParams] = useSearchParams()
+  const [searchParams] = useSearchParams()
   const navigate = useNavigate()
   const calendarVisible = usePublicCalendarVisible('competitions')
 

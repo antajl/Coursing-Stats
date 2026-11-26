@@ -48,8 +48,8 @@ describe('buildDogPassportData invariants', () => {
           event_date: '2026-08-20',
         },
       ],
-      supremeTitles: [{ title: 'Supreme Champion', date: '2026-05-01' }],
-      coursingTitles: [{ title: 'ЧРКФ РК (КБ)', date: '2025-10-10' }],
+      supremeTitles: [{ title: 'Supreme Champion', count: 1 }],
+      coursingTitles: [{ title: 'ЧРКФ РК (КБ)', count: 1 }],
       speedStats: {
         bestSpeed: 57.8,
         avgSpeed: 55.4,

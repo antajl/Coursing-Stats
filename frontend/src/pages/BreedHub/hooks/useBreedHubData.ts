@@ -112,7 +112,7 @@ export function useBreedHubData(slug: string | undefined, breedInfo: BreedHubIte
 
   const sportCoursingAllTime = useMemo(() => {
     if (!breedInfo || !topPlacementAllRes?.data?.items) return []
-    const matching = (topPlacementAllRes.data.items as TopPlacementItem[]).filter((d) =>
+    const matching = (topPlacementAllRes.data.items as unknown as TopPlacementItem[]).filter((d) =>
       matchesBreedFilter(d.breed, breedInfo.canonicalKey),
     )
     const sorted = [...matching].sort((a, b) => {
@@ -212,7 +212,7 @@ export function useBreedHubData(slug: string | undefined, breedInfo: BreedHubIte
     if (!breedInfo || !topPlacementAllRes?.data?.items) {
       return { totalDogs: 0, totalStarts: 0, totalGold: 0, yearsSpan: '', maxSpeed: 0 }
     }
-    const matchingPlacement = (topPlacementAllRes.data.items as TopPlacementItem[]).filter((d) =>
+    const matchingPlacement = (topPlacementAllRes.data.items as unknown as TopPlacementItem[]).filter((d) =>
       matchesBreedFilter(d.breed, breedInfo.canonicalKey),
     )
 

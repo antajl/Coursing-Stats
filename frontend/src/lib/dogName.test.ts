@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { toDogTitleCase, formatDogNameCase, parseDogName } from './dogName'
+import { toDogTitleCase, parseDogName } from './dogName'
 
 describe('toDogTitleCase', () => {
   it('converts uppercase Cyrillic names to Title Case', () => {

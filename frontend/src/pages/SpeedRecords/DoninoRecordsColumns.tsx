@@ -44,9 +44,9 @@ interface DoninoRecordsColumnsProps {
 export default function DoninoRecordsColumns({
   speedRecords,
   coursingRecords,
-  sortField,
-  sortDirection,
-  onSort,
+  sortField: _sortField,
+  sortDirection: _sortDirection,
+  onSort: _onSort,
   resetScrollKey,
 }: DoninoRecordsColumnsProps) {
   const [mobileTab, setMobileTab] = useState<'speed' | 'coursing'>('speed')

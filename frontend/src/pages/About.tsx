@@ -16,6 +16,7 @@ import {
 } from 'lucide-react'
 import { ExternalHref } from './Guide/components/GuideUi'
 import { SEO } from '../components/SEO'
+import { JsonLd } from '../components/JsonLd'
 
 function ContactCard({
   label,
@@ -122,7 +123,9 @@ export default function AboutPage() {
         description="Некоммерческий электронный архив соревнований по курсингу, бегов борзых, выставок РКФ и замеров Донино в России. Профили собак, протоколы забегов и статистика."
         keywords="курсинг статс, coursing stats, архив соревнований, курсинг, бега борзых, выставки собак, РКФ, протоколы, Донино, рейтинг борзых, Россия"
         canonicalUrl="https://coursing-stats.ru/about/"
-        jsonLd={{
+      />
+      <JsonLd
+        data={{
           '@context': 'https://schema.org',
           '@type': 'AboutPage',
           name: 'О проекте Курсинг Статс',

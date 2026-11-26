@@ -1,4 +1,3 @@
-import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import {
   Calendar,
@@ -11,7 +10,6 @@ import {
   BookOpen,
   FileText,
 } from 'lucide-react'
-import HoverTooltip from '../../../components/ui/HoverTooltip'
 import { canonicalBreed } from '../../../lib/breedMapping'
 import { resolveSportJudgeNumericId } from '../../../lib/judgeIdMap.generated'
 import { formatDate } from './utils'

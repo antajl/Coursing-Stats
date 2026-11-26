@@ -64,20 +64,6 @@ export const SHOW_RATING_MODAL_CONTENT = (
   </div>
 )
 
-const TOOLTIP_CONTENT = (
-  <div className="max-w-[20rem] space-y-2 text-charcoal-800">
-    <p className="text-[12px] font-semibold leading-tight text-charcoal-900">
-      Рейтинг выставок РКФ
-    </p>
-    <p className="text-[11px] leading-snug text-charcoal-700">
-      Рассчитывается по взвешенной системе наград: BIS → BIG → BOB → BOS → CACIB / CAC.
-    </p>
-    <p className="text-[10.5px] text-charcoal-600 border-t border-old-money-200/80 pt-1.5">
-      Нажмите для подробного описания формулы и иерархии титулов.
-    </p>
-  </div>
-)
-
 interface ShowRatingHintProps {
   embedded?: boolean
   compact?: boolean

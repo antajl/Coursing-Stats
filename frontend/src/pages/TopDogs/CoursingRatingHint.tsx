@@ -1,4 +1,4 @@
-import { Info, Award, Zap, BarChart2, FileText } from 'lucide-react'
+import { Info, Award, Zap, FileText } from 'lucide-react'
 import ModernDropdown from '../../components/ui/ModernDropdown'
 import HoverTooltip from '../../components/ui/HoverTooltip'
 

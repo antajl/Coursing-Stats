@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { api } from '../services/api'
-import { getShowCalendar, getShowFeatured, getShowHomeTop, type ShowHomeTopDog, type ShowRkfCalendarEntry } from '../lib/staticData'
+import { getShowFeatured, getShowHomeTop, type ShowHomeTopDog, type ShowRkfCalendarEntry } from '../lib/staticData'
 import type { CalendarEvent } from '../pages/Events/eventListUtils'
 
 const CURRENT_SEASON = new Date().getFullYear()
@@ -9,7 +9,7 @@ interface HeroStats {
   events: number
   results: number
   dogs: number
-  unique_dogs: number
+  unique_dogs?: number
   judges: number
   breeds: number
   donino_records: number
@@ -19,7 +19,7 @@ interface HeroShowStats {
   exhibitions: number
   appearances: number
   dogs: number
-  unique_dogs: number
+  unique_dogs?: number
   judges: number
   breeds: number
 }

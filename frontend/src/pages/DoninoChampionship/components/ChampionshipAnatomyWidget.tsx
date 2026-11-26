@@ -1,4 +1,4 @@
-import React, { useMemo, memo } from 'react'
+import { useMemo, memo } from 'react'
 import { Link } from 'react-router-dom'
 import { formatBreedName } from '../../../lib/breedMapping'
 import { parseDogName } from '../../../lib/dogName'

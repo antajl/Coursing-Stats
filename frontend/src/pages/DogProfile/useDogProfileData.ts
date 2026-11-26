@@ -63,8 +63,8 @@ export function useDogProfileData() {
   const { data: speedRecordsData } = useDogSpeedRecords(effectiveSportDogId)
   const { data: coursingRecordsData } = useDogCoursingRecords(effectiveSportDogId)
 
-  const dog = dogDataResult?.success ? dogDataResult.data : null
-  const events = eventsData?.success
+  const dog: Record<string, any> | null = dogDataResult?.success ? dogDataResult.data : null
+  const events: Array<Record<string, any>> = eventsData?.success
     ? (Array.isArray(eventsData.data) ? eventsData.data : EMPTY_ARRAY)
     : EMPTY_ARRAY
   const eventResultsUrls = useMemo(() => buildEventResultsUrlMap(events), [events])
@@ -121,10 +121,19 @@ export function useDogProfileData() {
   }, [dog, showDog, reachGoal])
 
   // Объединённый объект собаки для шапки
-  const headerDog = useMemo(() => {
+  const headerDog = useMemo<{
+    id: string | number
+    name_lat?: string | null
+    name_ru?: string | null
+    breed?: string | null
+    sex?: string | null
+    pedigree_url: string | null
+    photo_url: string | null
+  } | null>(() => {
     if (dog) {
       return {
         ...dog,
+        id: (dog as any).id ?? competitionId ?? '',
         pedigree_url: (dog as any).pedigree_url || showDog?.pedigree_url || null,
         photo_url: (dog as any).photo_url || (showDog as any)?.photo_url || null,
       }
@@ -141,7 +150,7 @@ export function useDogProfileData() {
       }
     }
     return null
-  }, [dog, showDog])
+  }, [dog, showDog, competitionId])
 
   // Расчёт и асинхронная дозагрузка рангов
   const headerRanks = useDogProfileRanks({
@@ -197,12 +206,15 @@ export function useDogProfileData() {
   }, [cumulativeTitles.titleExplanations])
 
   const titles = useMemo(
-    () => [...titleGroups.show, ...titleGroups.competition].map((t) => ({ title: t })),
+    () =>
+      [...titleGroups.show, ...titleGroups.competition].map((t) => ({
+        title: typeof t === 'string' ? t : (t as { title: string }).title,
+      })),
     [titleGroups],
   )
 
-  const coursing = dog?.coursing_stats || {}
-  const racing = dog?.racing_stats || {}
+  const coursing = (dog?.coursing_stats || {}) as Record<string, any>
+  const racing = (dog?.racing_stats || {}) as Record<string, any>
   const judgeStats = (dog?.judge_stats as DogJudgesStats | undefined) || null
   const hasCoursingData = (coursing.total_starts || 0) > 0
   const hasRacingData = (racing.total_starts || 0) > 0

@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 import { Zap, Timer, Users, Award } from 'lucide-react'
 import { formatBreedName } from '../../lib/breedMapping'
@@ -30,7 +29,7 @@ export default function AnalyticsOverviewCard({
   totalUniqueDogs,
   speedDogs,
   coursingDogs,
-  championshipCount,
+  championshipCount: _championshipCount,
 }: AnalyticsOverviewCardProps) {
   return (
     <div className="rounded-2xl border border-old-money-200 bg-white/95 p-3.5 sm:p-4 shadow-2xs space-y-3">

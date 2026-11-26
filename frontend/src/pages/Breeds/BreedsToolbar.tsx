@@ -65,7 +65,7 @@ export const BreedsToolbar: React.FC<BreedsToolbarProps> = ({
           <BreedSearchDropdown
             breeds={mobileBreedList}
             selectedBreed={quickBreedBarValue}
-            onSelectBreed={handleSelectBreed}
+            onSelect={handleSelectBreed}
             trigger={
               <button
                 type="button"

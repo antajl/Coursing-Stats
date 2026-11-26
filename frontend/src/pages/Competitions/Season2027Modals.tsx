@@ -1,4 +1,3 @@
-import React from 'react'
 import { Calendar, History, Info, Sparkles, ExternalLink } from 'lucide-react'
 import ModernDropdown from '../../components/ui/ModernDropdown'
 

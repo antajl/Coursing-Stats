@@ -140,7 +140,7 @@ export const JudgeDetailResponseSchema = z.object({
 
 // Схемы для статических данных из data/v1
 export const TopItemsResponseSchema = z.object({
-  items: z.array(z.record(z.unknown())),
+  items: z.array(z.record(z.string(), z.unknown())),
   count: z.number().optional(),
 });
 
@@ -178,7 +178,7 @@ export const DogProfileDataSchema = z.object({
       points: z.number(),
     }).optional(),
   }),
-  competitions: z.array(z.record(z.unknown())),
+  competitions: z.array(z.record(z.string(), z.unknown())),
 });
 
 // Типы для TypeScript

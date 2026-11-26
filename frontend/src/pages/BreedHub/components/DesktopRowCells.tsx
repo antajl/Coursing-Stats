@@ -2,12 +2,10 @@ import { memo } from 'react'
 import { Link } from 'react-router-dom'
 import DogSexIcon from '../../../components/DogSexIcon'
 import MedalBadge from '../../../components/MedalBadge'
-import HoverTooltip from '../../../components/ui/HoverTooltip'
-import { awardTooltipForKey } from '../../../lib/awardTooltip'
 import { parseDogName } from '../../../lib/dogName'
 import { formatRecordDate } from '../../../lib/recordDates'
 import { breedToSlug } from '../../../lib/breedMapping'
-import type { AnnualDogLeader, AnnualShowDogLeader } from '../../../hooks/useStaticData'
+import type { AnnualDogLeader } from '../../../hooks/useStaticData'
 import type { AnnualDoninoLeader } from '../../../lib/doninoAnnualLeaders'
 
 export interface DesktopCellProps<T> {

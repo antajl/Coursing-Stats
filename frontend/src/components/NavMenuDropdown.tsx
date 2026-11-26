@@ -110,7 +110,7 @@ export function NavMenuDropdown({
 
   useEffect(() => {
     if (!open) return
-    const onDocClick = (e: MouseEvent) => {
+    const onDocClick = (e: globalThis.MouseEvent) => {
       if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
         pinnedRef.current = false
         onOpenChange(false)

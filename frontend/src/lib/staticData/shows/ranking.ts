@@ -1,29 +1,10 @@
 import {
-  bestShowAward,
-  compareShowDogs,
-  expandShowTitles,
-  mergeShowTitles,
   showDogDetailShard,
-  showRankScore,
   type ShowTitleCounts,
 } from '../../../../../backend/lib/show-award-ranking'
-import { bestShowGradeLabel } from '../../../../../backend/lib/show-grades'
 import { canonicalBreed } from '../../breedMapping'
 import { transliterateCyrillicToLatin } from '../../dogName'
 import { type ApiResult, fetchJson } from '../core'
-
-/** Годовые индексы рейтинга на CDN; all-time dog-ranking.json >25 MB и не деплоится. */
-const SHOW_RANKING_YEARS = [
-  '2017',
-  '2018',
-  '2019',
-  '2021',
-  '2022',
-  '2023',
-  '2024',
-  '2025',
-  '2026',
-] as const
 
 interface ShowDog {
   id: string
@@ -68,62 +49,6 @@ function hydrateShowDog(raw: ShowDog & { titles?: Partial<ShowTitleCounts> }): S
     titles: (raw.titles as ShowTitleCounts) || ({} as ShowTitleCounts),
     history: Array.isArray(raw.history) ? raw.history : [],
   }
-}
-
-function mergeShowDogRankings(parts: ShowDog[][]): ShowDog[] {
-  const dogMap = new Map<string, ShowDog>()
-
-  for (const list of parts) {
-    for (const dog of list) {
-      // RKF даёт разные ring id на разных выставках — ключ по полной кличке + породе
-      const nameKey = (dog.name_lat || dog.name_ru || '').toUpperCase().replace(/\s+/g, ' ').trim()
-      const breedKey = (dog.breed || dog.breed_en || '').toUpperCase().replace(/\s+/g, ' ').trim()
-      const key = `${nameKey}|${breedKey}`
-      const existing = dogMap.get(key)
-      if (!existing) {
-        dogMap.set(key, {
-          ...dog,
-          titles: { ...dog.titles },
-          history: [...(dog.history ?? [])],
-        })
-        continue
-      }
-
-      existing.total_shows += dog.total_shows
-      existing.titles = mergeShowTitles(existing.titles, dog.titles)
-      existing.rank_score = showRankScore(existing.titles)
-      existing.best_award = bestShowAward(existing.titles)
-      existing.history = [...(existing.history ?? []), ...(dog.history ?? [])].sort((a, b) =>
-        String(b.date || '').localeCompare(String(a.date || '')),
-      )
-      existing.best_grade = bestShowGradeLabel(existing.history.map((h) => h.grade))
-
-      const placement = dog.best_placement ?? 0
-      if (
-        placement > 0 &&
-        (existing.best_placement == null ||
-          existing.best_placement === 0 ||
-          placement < existing.best_placement)
-      ) {
-        existing.best_placement = placement
-      }
-      if (dog.breed_group && !existing.breed_group) {
-        existing.breed_group = dog.breed_group
-      }
-      if (dog.name_ru && !existing.name_ru) {
-        existing.name_ru = dog.name_ru
-      }
-      if (dog.sex && !existing.sex) {
-        existing.sex = dog.sex
-      }
-      if (dog.competition_dog_id != null && existing.competition_dog_id == null) {
-        existing.competition_dog_id = dog.competition_dog_id
-      }
-      if (Number(dog.id) < Number(existing.id)) existing.id = dog.id
-    }
-  }
-
-  return [...dogMap.values()].sort(compareShowDogs)
 }
 
 async function loadShowDogRankingYear(year: string): Promise<ShowDog[] | null> {
@@ -212,53 +137,10 @@ async function getCompetitionShowLinks(): Promise<Record<string, string> | null>
   return competitionLinksCache
 }
 
-let showDogLookupCache: Promise<ShowDogLookup | null> | null = null
-
 async function getShowDogLookup(): Promise<ShowDogLookup | null> {
-  if (!showDogLookupCache) {
-    showDogLookupCache = loadShardedLookup()
-  }
-  return showDogLookupCache
-}
-
-async function loadShardedLookup(): Promise<ShowDogLookup | null> {
-  const byCompetitionId: Record<string, string> = {}
-  const byNameBreed: Record<string, string> = {}
-  
-  // Load all 16 shards (0-f)
-  const shardKeys = Array.from({ length: 16 }, (_, i) => i.toString(16))
-  console.debug('[show-dog-lookup] Loading shards:', shardKeys)
-  
-  const shards = await Promise.all(
-    shardKeys.map(async (key) => {
-      const result = await fetchJson<{ byCompetitionId?: Record<string, string>, byNameBreed?: Record<string, string> }>(
-        `shows/indexes/show-dog-lookup/${key}.json`
-      )
-      console.debug('[show-dog-lookup] Shard', key, ':', result ? 'loaded' : 'null', 
-        result ? `(comp: ${Object.keys(result.byCompetitionId || {}).length}, name: ${Object.keys(result.byNameBreed || {}).length})` : '')
-      return result
-    })
-  )
-  
-  console.debug('[show-dog-lookup] Loaded shards:', shards.filter(s => s != null).length, '/', shards.length)
-  
-  for (const shard of shards) {
-    if (shard?.byCompetitionId) {
-      Object.assign(byCompetitionId, shard.byCompetitionId)
-    }
-    if (shard?.byNameBreed) {
-      Object.assign(byNameBreed, shard.byNameBreed)
-    }
-  }
-  
-  console.debug('[show-dog-lookup] Total entries:', Object.keys(byCompetitionId).length, 'competition,', Object.keys(byNameBreed).length, 'name keys')
-  
-  if (Object.keys(byCompetitionId).length === 0 && Object.keys(byNameBreed).length === 0) {
-    console.warn('[show-dog-lookup] No entries found!')
-    return null
-  }
-  
-  return { byCompetitionId, byNameBreed }
+  // Never fetch all 16 show-dog-lookup shards (~186 MB) into browser memory.
+  // Resolution uses direct dog-details/{shard} or competition-links.json (~17 KB).
+  return null
 }
 
 /** Полная карточка выставочной собаки (titles + history) из шарда dog-details/. */

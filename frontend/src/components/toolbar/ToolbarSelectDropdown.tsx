@@ -1,4 +1,4 @@
-import { useId, useRef, useState, type ReactNode } from 'react'
+import { useId, useRef, useState } from 'react'
 import { ChevronDown } from 'lucide-react'
 import { TOOLBAR_CHIP, TOOLBAR_CHIP_ACTIVE, TOOLBAR_CHIP_IDLE } from '../../lib/toolbar'
 import { useClickOutside } from '../../hooks/useClickOutside'

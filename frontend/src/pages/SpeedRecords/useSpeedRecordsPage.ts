@@ -4,7 +4,7 @@ import { useSpeedRecords, useCoursingRecords } from '../../hooks/useStaticData'
 import { getRecordYear, parseRecordHistory } from '../../lib/recordDates'
 import { DEFAULT_ACTIVE_SEASON, resolveActiveSeason } from '../../lib/season'
 import { breedToSlug, resolveBreedParam } from '../../lib/breedMapping'
-import { buildSexByDogMap } from './stats/doninoStatsUtils'
+import { buildSexByDogMap, type SpeedRecordRow } from './stats/doninoStatsUtils'
 import type { GroupBy } from './stats/constants'
 import {
   buildDoninoDogIndex,
@@ -148,7 +148,7 @@ export function useSpeedRecordsPage() {
   )
 
   const sexByDog = useMemo(
-    () => buildSexByDogMap(speedRecordsData as { name: string; breed: string; sex: string }[]),
+    () => buildSexByDogMap(speedRecordsData as unknown as SpeedRecordRow[]),
     [speedRecordsData]
   )
 

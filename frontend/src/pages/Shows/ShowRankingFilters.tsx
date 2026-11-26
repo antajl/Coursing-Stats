@@ -58,7 +58,6 @@ export default function ShowRankingFilters({
   const [mobileAgeOpen, setMobileAgeOpen] = useState(false)
   const [desktopAgeOpen, setDesktopAgeOpen] = useState(false)
 
-  const isYearNonDefault = filterYear !== currentSeason && Boolean(filterYear)
   const isSexActive = Boolean(filterSex)
   const isAgeActive = Boolean(filterAge && filterAge !== 'all')
 

@@ -9,13 +9,13 @@ import {
   DisciplineColumnShell,
   DisciplineHistoryCard,
   DisciplineStatsCard,
-  disciplineTheme,
 } from './DisciplineColumnShell'
 import { HistoryMetaRow } from './HistoryPlacement'
 import type { ProfileHeaderRank } from './DogProfileHeader'
 import { breedToSlug } from '../../lib/breedMapping'
 
 type CoursingStats = {
+  total_starts?: number
   best_score?: number | string | null
   best_judge_score?: number | string | null
   avg_judge_score?: number | string | null
@@ -79,7 +79,6 @@ export function CoursingColumn({
   rank,
   breed,
 }: CoursingColumnProps) {
-  const t = disciplineTheme(THEME)
   if (!hasCoursingData && coursingEvents.length === 0) return null
 
   const dogBreed = breed || ''
@@ -94,11 +93,10 @@ export function CoursingColumn({
     ? procoursingUrlForEventId(eventResultsUrls, avgJudgeScoreEventId)
     : null
 
-  const has2026 = rank?.yearBreedRank != null && rank.yearBreedRank > 0
-  const hasHistory = rank?.breedRank != null && rank.breedRank > 0
-  const hasAnyRank = has2026 || hasHistory || rank?.rank != null
   const startsCount = coursingEvents.length
   const competitionsCount = startsCount || (typeof coursing.total_starts === 'number' ? coursing.total_starts : 0)
+  const has2026 = rank?.yearBreedRank != null && rank.yearBreedRank > 0
+  const hasHistory = rank?.breedRank != null && rank.breedRank > 0
 
   const isBzmp = coursingEvents.length > 0 && coursingEvents.every((e) => e.competition_kind === 'bzmp' || e.event_type === 'bzmp')
   const columnTitle = isBzmp ? 'БЗМП' : 'Курсинг'

@@ -13,7 +13,7 @@ interface DogDisciplinesDesktopViewProps {
   coursing: any
   coursingEvents: any[]
   visibleCoursingEvents: any[]
-  eventResultsUrls: Record<string, string>
+  eventResultsUrls: Map<number, string>
   bestScoreEventId: string | null
   bestJudgeScoreEventId: string | null
   avgJudgeScoreEventId: string | null

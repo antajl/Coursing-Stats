@@ -101,7 +101,13 @@ export default function TrackerPage() {
   // 2. Auto-login from Chrome Extension message transfer / site-bridge
   useEffect(() => {
     const handleExtensionMessage = (event: MessageEvent) => {
-      if (!event.data) return;
+      const allowedOrigins = new Set([
+        window.location.origin,
+        'https://coursing-stats.ru',
+        'https://www.coursing-stats.ru',
+      ]);
+      if (event.origin && !allowedOrigins.has(event.origin)) return;
+      if (!event.data || typeof event.data !== 'object') return;
       const { type, token, applications: extApps, userUuid } = event.data;
       if (
         (type === 'RKF_TOKEN_TRANSFER' ||

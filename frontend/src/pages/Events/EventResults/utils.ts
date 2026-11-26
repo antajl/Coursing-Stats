@@ -90,8 +90,8 @@ export function groupResultsByBreedClass(results: Result[]): {
     if (b === 'Неявившиеся участники' || b === 'Неприбывшие участники') return -1
 
     // Порядок каталога (хронологический порядок забегов состязания)
-    const minA = Math.min(...grouped[a].map(d => d.catalog_no || 9999))
-    const minB = Math.min(...grouped[b].map(d => d.catalog_no || 9999))
+    const minA = Math.min(...grouped[a].map(d => Number(d.catalog_no || 9999)))
+    const minB = Math.min(...grouped[b].map(d => Number(d.catalog_no || 9999)))
     if (minA !== minB) return minA - minB
 
     return a.localeCompare(b, 'ru')
@@ -105,7 +105,7 @@ export function groupResultsByBreedClass(results: Result[]): {
       const pa = a.placement || 999
       const pb = b.placement || 999
       if (pa !== pb) return pa - pb
-      return (a.catalog_no || 999) - (b.catalog_no || 999)
+      return Number(a.catalog_no || 999) - Number(b.catalog_no || 999)
     })
   }
 

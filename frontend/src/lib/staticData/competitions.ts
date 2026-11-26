@@ -108,7 +108,7 @@ async function loadCompetition(
   }
 
   const results = (comp.results ?? []).map((r) => {
-    const rawBreed = (r.dog?.breed ?? r.breed ?? '').trim()
+    const rawBreed = String(r.dog?.breed ?? r.breed ?? '').trim()
     const canonBreed = rawBreed ? (canonicalBreed(rawBreed) || rawBreed) : ''
     return {
       ...r,

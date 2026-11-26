@@ -90,12 +90,12 @@ export default function EventsToolbar({
   onFilterMonthChange,
   filterDiscipline,
   onFilterDisciplineChange,
-  filterWithProtocol,
+  filterWithProtocol: _filterWithProtocol,
   onFilterWithProtocolChange: _onFilterWithProtocolChange,
   sortedYears,
   onResetFilters: _onResetFilters,
   availableMonthsByYear,
-  stats,
+  stats: _stats,
 }: EventsToolbarProps) {
   const [disciplineDropdownOpen, setDisciplineDropdownOpen] = useState(false)
   const disciplineLabel =

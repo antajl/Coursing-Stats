@@ -321,7 +321,6 @@ export default function EventListRow({ event }: EventListRowProps) {
   return (
     <ProcoursingEventLink
       eventId={event.id}
-      eventTitle={event.title}
       procoursingUrl={procoursingUrl}
       className={rowClassName}
     >

@@ -9,7 +9,6 @@ import {
   groupEventsByMonth,
   getEventYear,
   parseDate,
-  getEventDiscipline,
   eventMatchesDiscipline,
   compareEventsAsc,
 } from './eventListUtils'

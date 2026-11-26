@@ -31,7 +31,7 @@ interface TopDogsFiltersProps {
   onSpeedFromChange?: (value: string) => void
   onResetFilters?: () => void
   onResetPanelFilters?: () => void
-  dropdownRef?: React.RefObject<HTMLDivElement>
+  dropdownRef?: React.RefObject<HTMLDivElement | null>
   trailing?: ReactNode
   activeMobileColumn?: 'coursing' | 'racing'
   onMobileColumnChange?: (col: 'coursing' | 'racing') => void
@@ -55,15 +55,14 @@ export default function TopDogsFilters({
   onResetFilters: _onResetFilters,
   dropdownRef,
   trailing,
-  activeMobileColumn,
-  onMobileColumnChange,
-  coursingCount,
-  racingCount,
+  activeMobileColumn: _activeMobileColumn,
+  onMobileColumnChange: _onMobileColumnChange,
+  coursingCount: _coursingCount,
+  racingCount: _racingCount,
 }: TopDogsFiltersProps) {
   const [mobileSexOpen, setMobileSexOpen] = useState(false)
   const [desktopSexOpen, setDesktopSexOpen] = useState(false)
 
-  const isYearNonDefault = filterYear !== '' && filterYear !== currentSeason
   const isSexActive = Boolean(filterSex)
 
   const sexTriggerLabel = filterSex === 'm' ? 'Кобели' : filterSex === 'f' ? 'Суки' : 'Пол'
@@ -131,8 +130,6 @@ export default function TopDogsFilters({
       </button>
     </div>
   )
-
-  const isCoursing = activeMobileColumn === 'coursing'
 
   return (
     <div className="mb-2.5 sm:mb-4" ref={dropdownRef}>

@@ -47,7 +47,7 @@ export function useFocusManagement() {
   return { saveFocus, restoreFocus, trapFocus }
 }
 
-export function useFocusTrap(isOpen: boolean, containerRef: React.RefObject<HTMLElement>) {
+export function useFocusTrap(isOpen: boolean, containerRef: React.RefObject<HTMLElement | null>) {
   const { trapFocus } = useFocusManagement()
 
   useEffect(() => {

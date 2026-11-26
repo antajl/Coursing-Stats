@@ -9,7 +9,7 @@ export const DISCIPLINE_COLORS = {
 }
 
 export function getDisciplineColor(eventType: string): string {
-  return DISCIPLINE_COLORS[eventType] || DISCIPLINE_COLORS.default
+  return (DISCIPLINE_COLORS as Record<string, string>)[eventType] || DISCIPLINE_COLORS.default
 }
 
 export const STATUSES = {

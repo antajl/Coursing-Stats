@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type ReactNode, type KeyboardEvent } from 'react'
+import { useEffect, useRef, useState, type ReactNode } from 'react'
 import { createPortal } from 'react-dom'
 
 interface ModernDropdownProps {
@@ -138,7 +138,7 @@ export default function ModernDropdown({
   useEffect(() => {
     if (!isOpen) return
 
-    const handleEscape = (event: KeyboardEvent) => {
+    const handleEscape = (event: globalThis.KeyboardEvent) => {
       if (event.key === 'Escape') {
         close()
         triggerRef.current?.focus()

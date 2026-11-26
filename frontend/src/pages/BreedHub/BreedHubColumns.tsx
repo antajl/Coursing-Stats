@@ -25,7 +25,7 @@ export default function BreedHubColumns({
   racingLeaders,
   doninoLeaders,
   annualLeadersLoading,
-  doninoLoading,
+  doninoLoading: _doninoLoading,
   canonicalKey,
   breedNameRu,
   breedSlug,
@@ -322,20 +322,26 @@ export default function BreedHubColumns({
         <div
           ref={trackRef}
           className="relative w-full overflow-hidden touch-pan-y"
-          onMouseDown={startDrag}
-          onMouseMove={moveDrag}
-          onMouseUp={endDrag}
+          onMouseDown={(e) => startDrag(e.clientX, e.clientY)}
+          onMouseMove={(e) => moveDrag(e.clientX, e.clientY)}
+          onMouseUp={(e) => endDrag(e.clientX)}
           onMouseLeave={cancelDrag}
-          onTouchStart={startDrag}
-          onTouchMove={moveDrag}
-          onTouchEnd={endDrag}
+          onTouchStart={(e) => {
+            if (e.touches[0]) startDrag(e.touches[0].clientX, e.touches[0].clientY)
+          }}
+          onTouchMove={(e) => {
+            if (e.touches[0]) moveDrag(e.touches[0].clientX, e.touches[0].clientY)
+          }}
+          onTouchEnd={(e) => {
+            if (e.changedTouches[0]) endDrag(e.changedTouches[0].clientX)
+          }}
           onTouchCancel={cancelDrag}
           onClickCapture={handleClickCapture}
         >
           <div
             className="flex w-full"
             style={{
-              transform: `translate3d(${getSlideOffset()}%, 0, 0)`,
+              transform: `translate3d(${getSlideOffset(activeTabIndex)}%, 0, 0)`,
               transition: 'transform 260ms cubic-bezier(0.25, 1, 0.5, 1)',
               willChange: 'transform',
             }}

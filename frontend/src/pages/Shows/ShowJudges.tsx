@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo, useRef, useCallback } from 'react'
-import { useSearchParams, useNavigate, useParams, useLocation } from 'react-router-dom'
+import { useSearchParams, useNavigate, useParams } from 'react-router-dom'
 import ShowJudgeCard, { type GradeScope } from '../../components/ShowJudgeCard'
 import { initialSeasonYearFilter, resolveActiveSeason } from '../../lib/season'
 import { useShowJudges, useShowJudgesPage0 } from '../../hooks/useStaticData'
@@ -81,7 +81,6 @@ interface ShowJudgesProps {
 export default function ShowJudges({ urlYear }: ShowJudgesProps = {}) {
   const { year: routeYearParam, judgeId } = useParams<{ year?: string; judgeId?: string }>()
   const routeYear = urlYear ?? routeYearParam ?? (judgeId && (judgeId === 'all' || /^20\d\d$/.test(judgeId)) ? judgeId : undefined)
-  const location = useLocation()
   const navigate = useNavigate()
   const [searchParams] = useSearchParams()
   const [searchQuery, setSearchQuery] = useState('')

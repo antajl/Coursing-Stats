@@ -21,10 +21,9 @@ describe('Year Navigation & Route Invariants', () => {
       },
     }
 
-    // @ts-expect-error mock window for node vitest environment
     globalThis.window = {
-      localStorage: mockLocalStorage,
-    }
+      localStorage: mockLocalStorage as unknown as Storage,
+    } as unknown as Window & typeof globalThis
   })
   it('navState: main tabs always link to the active 2026 season by default', () => {
     expect(getSectionLink('competitions')).toBe('/competitions/ranking/2026/')

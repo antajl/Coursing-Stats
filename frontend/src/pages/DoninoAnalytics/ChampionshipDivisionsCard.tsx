@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react'
+import { useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { Trophy, ChevronRight, Crown, Shield, Star } from 'lucide-react'
 import type { ChampionshipData } from '../../lib/staticData/donino'
@@ -45,7 +45,7 @@ const LEAGUES = [
 
 export default function ChampionshipDivisionsCard({
   data,
-  loading,
+  loading: _loading,
 }: ChampionshipDivisionsCardProps) {
   const standings = data?.standings ?? []
 

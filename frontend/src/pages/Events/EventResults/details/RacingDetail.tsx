@@ -29,8 +29,8 @@ export default function RacingDetail({ rawScores, bestTimesByRace }: RacingDetai
             )
 
             const heatDist = heat.time && heat.speed_kmh
-              ? Math.round((heat.speed_kmh / 3.6) * heat.time)
-              : (heat.distance || (rawScores as any).distance)
+              ? Math.round((heat.speed_kmh / 3.6) * Number(heat.time))
+              : ((heat as any).distance || (rawScores as any).distance)
 
             return (
               <div key={heatIdx} className="flex-shrink-0 bg-white rounded-xl p-3 border border-old-money-200 min-w-[140px]">
@@ -105,8 +105,8 @@ export default function RacingDetail({ rawScores, bestTimesByRace }: RacingDetai
           <tbody>
             {heats.map((heat, heatIdx) => {
               const heatDist = heat.time && heat.speed_kmh
-                ? Math.round((heat.speed_kmh / 3.6) * heat.time)
-                : (heat.distance || (rawScores as any).distance)
+                ? Math.round((heat.speed_kmh / 3.6) * Number(heat.time))
+                : ((heat as any).distance || (rawScores as any).distance)
               const isHeatDisqualified = !heat.time && !heat.speed_kmh
               const isBest = rawScores.grand_total && heat.time === rawScores.grand_total
               const speedMs = heat.speed_kmh ? (heat.speed_kmh / 3.6).toFixed(1) : null

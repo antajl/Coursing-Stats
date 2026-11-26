@@ -107,6 +107,7 @@ export function useYears() {
 export interface AnnualDogLeader {
   year: number;
   dog_id: number;
+  dog_name?: string | null;
   name_lat: string;
   name_ru?: string | null;
   sex?: string | null;
@@ -120,37 +121,42 @@ export interface AnnualDogLeader {
 
 export interface AnnualShowDogLeader {
   year: number;
-  dog_id: string;
+  dog_id: string | number;
   name_lat: string;
   name_ru?: string | null;
+  breed?: string;
   sex?: string | null;
+  scope?: 'all_breed' | 'mono';
   total_shows: number;
-  rank_score: number;
+  rank_score?: number;
   mono_score?: number;
   best_award?: string | null;
-  titles?: Record<string, number>;
+  titles: Record<string, number>;
   competition_dog_id?: number | null;
 }
 
 export interface ShowAllTimeDog {
-  rank: number;
-  dog_id: string;
+  rank?: number;
+  dog_id: string | number;
   name_lat: string;
   name_ru?: string | null;
+  breed?: string;
   sex?: string | null;
   total_shows: number;
-  rank_score: number;
+  rank_score?: number;
   best_award?: string | null;
-  titles?: Record<string, number>;
+  titles: Record<string, number>;
   competition_dog_id?: number | null;
 }
 
 export interface BreedShowStats {
   total_dogs: number;
-  total_shows: number;
-  total_bis: number;
-  total_big: number;
-  total_bob: number;
+  total_shows?: number;
+  total_entries?: number;
+  total_bis?: number;
+  total_bis_wins?: number;
+  total_big?: number;
+  total_bob?: number;
   total_mono_exhibitions: number;
 }
 

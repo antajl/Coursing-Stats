@@ -8,7 +8,6 @@ import { ShowsColumn } from '../DogProfile/ShowsColumn'
 import { EmptyDisciplineColumn } from '../DogProfile/EmptyDisciplineColumn'
 import { DogProfileHeader, type ProfileHeaderRank } from '../DogProfile/DogProfileHeader'
 import type { ShowDogCardData } from './ShowDogCard'
-import type { DogTitle } from '../../lib/qualificationTitles'
 
 export default function ShowDogProfile() {
   const params = useParams<{ showDogId: string }>()

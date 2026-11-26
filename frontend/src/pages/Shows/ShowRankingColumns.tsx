@@ -12,13 +12,6 @@ import type { ShowMonoAgeCategory } from '../../../../backend/lib/show-award-ran
 
 export type RankedShowDog = ShowDogCardData & { rank: number }
 
-const MONO_AGE_OPTIONS: Array<{ key: ShowMonoAgeCategory; label: string }> = [
-  { key: 'all', label: 'Все' },
-  { key: 'adult', label: 'Взрослые' },
-  { key: 'junior', label: 'Юниоры' },
-  { key: 'veteran', label: 'Ветераны' },
-]
-
 interface ShowRankingColumnsProps {
   generalDogs: RankedShowDog[]
   monoDogs: RankedShowDog[]
@@ -43,7 +36,7 @@ export default function ShowRankingColumns({
   filterYear,
   filterBreed,
   monoAgeCategory = 'all',
-  onMonoAgeCategoryChange,
+  onMonoAgeCategoryChange: _onMonoAgeCategoryChange,
   favorites,
   onToggleFavorite,
   activeMobileColumn: activeMobileColumnProp,

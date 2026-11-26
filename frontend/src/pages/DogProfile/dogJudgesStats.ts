@@ -58,6 +58,7 @@ export interface DogProfileEventItem {
   date_end?: string | null
   title?: string | null
   location?: string | null
+  host_club?: string | null
   placement?: number | string | null
   total_score?: number | string | null
   qualification?: string | null

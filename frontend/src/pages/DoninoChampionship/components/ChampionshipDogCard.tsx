@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import { memo } from 'react'
 import { Link } from 'react-router-dom'
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import DogSexIcon from '../../../components/DogSexIcon'
@@ -63,7 +63,7 @@ function ChampionshipDogCard({
   rank,
   isExpanded,
   sortMode,
-  dogPromotions,
+  dogPromotions: _dogPromotions,
   onToggle,
 }: ChampionshipDogCardProps) {
   // League badge styling
@@ -103,24 +103,25 @@ function ChampionshipDogCard({
           {/* Dog info: Clean Name and Breed */}
           <div className="min-w-0">
             <div className="flex items-center gap-1.5 flex-wrap">
-              {dog.dog_id ? (
-                <Link
-                  to={`/dog/${dog.dog_id}/`}
-                  onClick={(e) => e.stopPropagation()}
-                  title={secondary || undefined}
-                  className="font-bold font-serif text-charcoal-900 hover:text-camel-800 transition-colors text-xs sm:text-sm truncate"
-                >
-                  {primary}
-                </Link>
-              ) : (
-                <span
-                  title={secondary || undefined}
-                  className="font-bold font-serif text-charcoal-900 text-xs sm:text-sm truncate"
-                >
-                  {primary}
-                </span>
-              )}
-              <OwnerCrownName dogName={primary} />
+              <OwnerCrownName name={dog.name_ru || dog.name_lat || primary} breed={dog.breed} dogId={dog.dog_id} kind="donino">
+                {dog.dog_id ? (
+                  <Link
+                    to={`/dog/${dog.dog_id}/`}
+                    onClick={(e) => e.stopPropagation()}
+                    title={secondary || undefined}
+                    className="font-bold font-serif text-charcoal-900 hover:text-camel-800 transition-colors text-xs sm:text-sm truncate"
+                  >
+                    {primary}
+                  </Link>
+                ) : (
+                  <span
+                    title={secondary || undefined}
+                    className="font-bold font-serif text-charcoal-900 text-xs sm:text-sm truncate"
+                  >
+                    {primary}
+                  </span>
+                )}
+              </OwnerCrownName>
               {dog.sex && (
                 <DogSexIcon
                   sex={dog.sex === 'Сука' ? 'f' : 'm'}

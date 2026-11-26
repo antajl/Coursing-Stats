@@ -23,7 +23,7 @@ function Shows({ defaultTab, urlYear }: ShowsProps) {
   const routeYear = urlYear ?? routeYearParam ?? (judgeId && (judgeId === 'all' || /^20\d\d$/.test(judgeId)) ? judgeId : undefined)
   const location = useLocation()
   const navigate = useNavigate()
-  const [searchParams, setSearchParams] = useSearchParams()
+  const [searchParams] = useSearchParams()
   const calendarVisible = usePublicCalendarVisible('shows')
 
   const pathTab = routeTab || (routeId === 'archive' || routeId === 'ranking' || routeId === 'judges' ? routeId : undefined)
@@ -198,7 +198,7 @@ function Shows({ defaultTab, urlYear }: ShowsProps) {
           >
             <div id="ranking" className="scroll-mt-20" />
             <div id="champions" className="scroll-mt-20" />
-            <Suspense fallback={<LoadingCard count={6} variant="shows" />}>
+            <Suspense fallback={<LoadingCard count={6} variant="list" />}>
               <ShowRanking urlYear={routeYear} />
             </Suspense>
           </div>

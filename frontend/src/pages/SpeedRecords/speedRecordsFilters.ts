@@ -218,7 +218,6 @@ export function filterCoursingRecords(baseRecords: any[], options: CoursingFilte
   let filtered = baseRecords
 
   if (searchQuery) {
-    const query = searchQuery.toLowerCase()
     filtered = filtered.filter(
       (record) =>
         matchesDog(

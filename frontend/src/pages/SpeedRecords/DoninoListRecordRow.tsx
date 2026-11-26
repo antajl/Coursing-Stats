@@ -61,7 +61,7 @@ function DoninoListRecordRow({
   breed,
   sex,
   date,
-  status,
+  status: _status,
   history,
   speedKmh,
   timeSeconds,
@@ -70,7 +70,7 @@ function DoninoListRecordRow({
   embedded = true,
   rank,
   delta,
-  latestDateInDataset,
+  latestDateInDataset: _latestDateInDataset,
   hideBreed = false,
   compact = false,
 }: DoninoListRecordRowProps) {
@@ -85,22 +85,23 @@ function DoninoListRecordRow({
     ? 'donino-list-row donino-list-row--embedded'
     : 'donino-list-row'
 
+  const typedHistory = historyItems as unknown[]
   const hasSparkline =
     mode === 'speed'
-      ? buildSpeedTimeline({ speed_km_h: speedKmh ?? 0, date: date ?? '' }, history).length >= 2
-      : buildCoursingTimeline({ time_seconds: timeSeconds ?? 0, date: date ?? '' }, history).length >= 2
+      ? buildSpeedTimeline({ speed_km_h: speedKmh ?? 0, date: date ?? '' }, typedHistory).length >= 2
+      : buildCoursingTimeline({ time_seconds: timeSeconds ?? 0, date: date ?? '' }, typedHistory).length >= 2
 
   const sparkline =
     mode === 'speed' ? (
       <SpeedHistorySparkline
         current={{ speed_km_h: speedKmh ?? 0, date: date ?? '' }}
-        history={history}
+        history={typedHistory}
         className={compact ? 'h-6 w-14 sm:w-16' : 'h-7 w-[85px] min-[380px]:w-[105px] sm:h-10 sm:w-full sm:max-w-[170px]'}
       />
     ) : (
       <CoursingHistorySparkline
         current={{ time_seconds: timeSeconds ?? 0, date: date ?? '' }}
-        history={history}
+        history={typedHistory}
         className={compact ? 'h-6 w-14 sm:w-16' : 'h-7 w-[85px] min-[380px]:w-[105px] sm:h-10 sm:w-full sm:max-w-[170px]'}
       />
     )

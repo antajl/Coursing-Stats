@@ -5,13 +5,11 @@ import CoursingHistorySparkline from './CoursingHistorySparkline'
 import DogSexIcon from './DogSexIcon'
 import OwnerCrownName from './OwnerCrownName'
 import SpeedHistorySparkline from './SpeedHistorySparkline'
-import SpeedStatusBadge from './SpeedStatusBadge'
 import RankBadge from './RankBadge'
 import {
   formatRecordDate,
   formatDoninoSpeedKmh,
   parseRecordHistory,
-  isRecentDoninoDate,
   time350ToSpeedKmh,
 } from '../lib/recordDates'
 import { toDogTitleCase } from '../lib/dogName'
@@ -56,66 +54,38 @@ export default function DoninoHomeRecordRow({
   breed,
   sex,
   date,
-  status,
+  status: _status,
   history,
   speedKmh,
   timeSeconds,
   rise = false,
   trackType,
-  latestDateInDataset,
+  latestDateInDataset: _latestDateInDataset,
   rank,
 }: DoninoHomeRecordRowProps) {
-  const historyItems = useMemo(() => parseRecordHistory(history), [history])
-  const isRecent = useMemo(
-    () => isRecentDoninoDate(date, latestDateInDataset),
-    [date, latestDateInDataset]
-  )
+  const historyItems = useMemo(() => parseRecordHistory(history) as unknown[], [history])
+  const coursingSpeedKmh =
+    mode === 'coursing' && typeof timeSeconds === 'number' && timeSeconds > 0
+      ? formatDoninoSpeedKmh(time350ToSpeedKmh(timeSeconds))
+      : null
 
-  const hasHistory = historyItems.length > 0
-  const isNewDog = status === 'new' || (!hasHistory && status !== 'improved')
-  const isImprovedDog = status === 'improved' || (hasHistory && !isNewDog)
-
-  const showNew = isRecent && isNewDog
-  const showUpd = isRecent && !showNew && isImprovedDog
-
-  const prevValue = useMemo(() => {
-    if (!hasHistory) return null
-    if (mode === 'speed') {
-      const speeds = historyItems
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        .map((h: any) => Number(h.speed_km_h ?? h.speed ?? 0))
-        .filter((s) => s > 0)
-      return speeds.length > 0 ? Math.max(...speeds).toFixed(1) : null
-    } else {
-      const times = historyItems
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        .map((h: any) => Number(h.time_seconds ?? h.time ?? 0))
-        .filter((t) => t > 0)
-      return times.length > 0 ? Math.min(...times).toFixed(2) : null
-    }
-  }, [hasHistory, historyItems, mode])
-
-  const coursingSpeedKmh = useMemo(() => {
-    if (mode !== 'coursing' || timeSeconds == null || timeSeconds <= 0) return null
-    return time350ToSpeedKmh(timeSeconds).toFixed(1)
-  }, [mode, timeSeconds])
-
+  const typedHistory = historyItems as unknown[]
   const hasSparkline =
     mode === 'speed'
-      ? buildSpeedTimeline({ speed_km_h: speedKmh ?? 0, date: date ?? '' }, history).length >= 2
-      : buildCoursingTimeline({ time_seconds: timeSeconds ?? 0, date: date ?? '' }, history).length >= 2
+      ? buildSpeedTimeline({ speed_km_h: speedKmh ?? 0, date: date ?? '' }, typedHistory).length >= 2
+      : buildCoursingTimeline({ time_seconds: timeSeconds ?? 0, date: date ?? '' }, typedHistory).length >= 2
 
   const sparkline =
     mode === 'speed' ? (
       <SpeedHistorySparkline
         current={{ speed_km_h: speedKmh ?? 0, date: date ?? '' }}
-        history={history}
+        history={typedHistory}
         className="h-10 w-full max-w-[170px]"
       />
     ) : (
       <CoursingHistorySparkline
         current={{ time_seconds: timeSeconds ?? 0, date: date ?? '' }}
-        history={history}
+        history={typedHistory}
         className="h-10 w-full max-w-[170px]"
       />
     )

@@ -13,7 +13,7 @@ import ToolbarFiltersDropdown from '../../components/toolbar/ToolbarFiltersDropd
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
 import { getShowExhibition } from '../../lib/staticData'
 import {
-  SHOW_AWARD_BADGE,
+  // removed unused SHOW_AWARD_BADGE
   type ShowAwardKey,
 } from '../../../../backend/lib/show-award-ranking'
 import { collectExhibitionAwardKeys } from './showExhibitionUtils'
@@ -73,7 +73,7 @@ export default function ShowExhibitionDetail() {
     [exhibition]
   )
 
-  const hasActiveFilters = Boolean(searchQuery.trim() || awardKey)
+  void awardKey // keep active award filter state
 
   if (loading) {
     return (

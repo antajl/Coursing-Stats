@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react'
 import { prefersReducedMotion } from '../lib/motion'
 import { Icons } from '../lib/icons'
-import { ANIMATION, BREAKPOINTS, LAYOUT } from '../lib/constants'
+import { BREAKPOINTS, LAYOUT } from '../lib/constants'
 
 interface HomeHeroStageProps {
   children?: ReactNode

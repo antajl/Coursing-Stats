@@ -229,8 +229,8 @@ export function filterSpeed<
 
 /** @deprecated — use filterCombinedRanking */
 export function filterPlacement<
-  T extends { name_lat?: string; name_ru?: string; breed?: string; total_starts?: number }
->(dogs: T[], params: Pick<TopDogsFilterParams, 'searchQuery' | 'filterMinStarts' | 'filterBreed'>): T[] {
+  T extends { name_lat?: string; name_ru?: string; breed?: string; sex?: string | null; total_starts?: number }
+>(dogs: T[], params: Pick<TopDogsFilterParams, 'searchQuery' | 'filterMinStarts' | 'filterBreed' | 'filterSex'>): T[] {
   return dogs.filter((dog) => {
     if (!matchesSearch(dog, params.searchQuery)) return false
     if (!matchesMinStartsFilter(dog, params.filterMinStarts)) return false

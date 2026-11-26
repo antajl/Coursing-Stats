@@ -40,8 +40,8 @@ interface SportHallOfFameColumnProps {
 }
 
 export const SportHallOfFameColumn = memo(function SportHallOfFameColumn({
-  breedNameRu,
-  canonicalKey,
+  breedNameRu: _breedNameRu,
+  canonicalKey: _canonicalKey,
   sportCoursingDogs = [],
   sportRacingDogs = [],
 }: SportHallOfFameColumnProps) {

@@ -328,9 +328,16 @@ export default function Competitions2027() {
         ) : filteredEvents.length === 0 ? (
           <EmptyState
             title="Соревнования не найдены"
-            message="По заданным фильтрам или поисковому запросу ничего не найдено в календаре 2027 года."
-            actionLabel="Сбросить фильтры"
-            onAction={handleResetFilters}
+            description="По заданным фильтрам или поисковому запросу ничего не найдено в календаре 2027 года."
+            action={
+              <button
+                type="button"
+                onClick={handleResetFilters}
+                className="rounded-lg border border-camel-300 bg-camel-50 px-3 py-1.5 text-xs font-semibold text-camel-800 hover:bg-camel-100"
+              >
+                Сбросить фильтры
+              </button>
+            }
           />
         ) : (
           <EventsMonthList monthGroups={monthGroups} reveal={true} />

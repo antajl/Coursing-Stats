@@ -1,4 +1,4 @@
-import { canonicalBreed, matchesBreedFilter } from './breedMapping'
+import { canonicalBreed } from './breedMapping'
 import { getSportJudgeInfo } from './sportJudgesRegistry'
 
 /**
@@ -86,6 +86,7 @@ export function aggregateJudgeStats(rows: JudgeRawRow[]): Map<string, JudgeStats
         if (heat.judges && Array.isArray(heat.judges)) {
           for (const judge of heat.judges) {
             const judgeName = resolveJudgeName(judge, judgeNames)
+            if (!judgeName) continue
 
             if (!judgeStats.has(judgeName)) {
               judgeStats.set(judgeName, {

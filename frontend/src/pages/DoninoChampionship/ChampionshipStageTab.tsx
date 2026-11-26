@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { Calendar, Building2, FileSpreadsheet } from 'lucide-react'
 import SkeletonLoader from '../../components/SkeletonLoader'
 import { getEvent, getEventResults } from '../../lib/staticData'

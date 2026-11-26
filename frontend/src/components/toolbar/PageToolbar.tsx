@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 import { createContext, useContext, useMemo } from 'react'
-import { TOOLBAR_PANEL, TOOLBAR_CHIP, TOOLBAR_CHIP_IDLE } from '../../lib/toolbar'
+import { TOOLBAR_PANEL } from '../../lib/toolbar'
 
 interface PageToolbarContextValue {
   filters: ReactNode

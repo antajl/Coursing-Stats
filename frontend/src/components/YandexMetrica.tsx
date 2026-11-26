@@ -1,19 +1,10 @@
 import { useEffect, useRef } from 'react'
 import { useLocation } from 'react-router-dom'
-import { Helmet } from 'react-helmet-async'
 
 // Яндекс.Метрика код счетчика
 // Номер счётчика: 110619327
 // Настройки: Вебвизор, карта скроллинга, точные отскоки, отслеживание ссылок
 const YANDEX_METRICA_ID = 110619327
-
-declare global {
-  interface Window {
-    ym?: (...args: any[]) => void
-    gtag?: (...args: any[]) => void
-    dataLayer?: any[]
-  }
-}
 
 export function YandexMetrica() {
   const location = useLocation()

@@ -10,6 +10,25 @@ import {
 
 const ACTIVE_FAVORITE_KEY = 'coursing_active_favorite'
 const LOCAL_STORAGE_FAVORITES_KEY = 'coursing_favorites'
+const LOCAL_STORAGE_FAVORITES_META_KEY = 'coursing_favorites_meta'
+
+function getStoredFavoritesMeta(): Record<string, FavoriteDogMeta> {
+  try {
+    const stored = localStorage.getItem(LOCAL_STORAGE_FAVORITES_META_KEY)
+    const parsed = stored ? JSON.parse(stored) : {}
+    return parsed && typeof parsed === 'object' ? parsed : {}
+  } catch {
+    return {}
+  }
+}
+
+function saveStoredFavoritesMeta(meta: Record<string, FavoriteDogMeta>): void {
+  try {
+    localStorage.setItem(LOCAL_STORAGE_FAVORITES_META_KEY, JSON.stringify(meta))
+  } catch {
+    /* ignore */
+  }
+}
 
 // LocalStorage favorites utilities
 function getLocalStorageFavorites(): string[] {
@@ -72,7 +91,7 @@ const FavoritesContext = createContext<FavoritesContextValue | undefined>(undefi
 export function FavoritesProvider({ children }: { children: ReactNode }) {
   const [favorites, setFavorites] = useState<Set<string>>(() => new Set(getLocalStorageFavorites()))
   const [activeId, setActiveId] = useState<string | null>(() => getActiveFavoriteId())
-  const [metaById, setMetaById] = useState<Record<string, FavoriteDogMeta>>({})
+  const [metaById, setMetaById] = useState<Record<string, FavoriteDogMeta>>(() => getStoredFavoritesMeta())
   const [ready, setReady] = useState(true)
 
   useEffect(() => {
@@ -93,7 +112,12 @@ export function FavoritesProvider({ children }: { children: ReactNode }) {
   }, [])
 
   const setMeta = useCallback((dogId: string, meta: FavoriteDogMeta) => {
-    setMetaById((prev) => (prev[dogId] ? prev : { ...prev, [dogId]: meta }))
+    setMetaById((prev) => {
+      if (prev[dogId]) return prev
+      const next = { ...prev, [dogId]: meta }
+      saveStoredFavoritesMeta(next)
+      return next
+    })
   }, [])
 
   const getMeta = useCallback((dogId: string) => metaById[dogId], [metaById])
@@ -103,7 +127,6 @@ export function FavoritesProvider({ children }: { children: ReactNode }) {
   const toggleFavorite = useCallback(
     async (dogId: string | number, meta?: FavoriteDogMeta) => {
       const id = String(dogId)
-      const previous = new Set(favorites)
       const next = new Set(favorites)
       const removing = next.has(id)
       if (removing) next.delete(id)
@@ -111,7 +134,11 @@ export function FavoritesProvider({ children }: { children: ReactNode }) {
       setFavorites(next)
 
       if (meta) {
-        setMetaById((prev) => ({ ...prev, [id]: meta }))
+        setMetaById((prev) => {
+          const updated = { ...prev, [id]: meta }
+          saveStoredFavoritesMeta(updated)
+          return updated
+        })
       }
 
       if (removing) {
@@ -144,8 +171,6 @@ export function FavoritesProvider({ children }: { children: ReactNode }) {
       const unique = [...new Set(ids.map(String))].filter((id) => favorites.has(id))
       if (unique.length === 0) return
 
-      const previous = new Set(favorites)
-      const previousActive = activeId
       const next = new Set(favorites)
       for (const id of unique) next.delete(id)
 

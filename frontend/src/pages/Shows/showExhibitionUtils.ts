@@ -10,7 +10,6 @@ import {
   recoverInterleavedClassAndGrade,
   recoverWrappedPuppyClassAndGrade,
 } from '../../../../backend/lib/show-grades'
-import { dogNameMatchesQuery as dogNameMatchesQueryLib } from '../../lib/dogName'
 import { matchesDog, matchesSearchText } from '../../lib/searchEngine'
 import { matchesBreedSearch } from '../../lib/breedMapping'
 
@@ -50,6 +49,7 @@ export interface ShowResultRow {
   grade?: string
   title: string
   dog_name: string
+  pedigree?: string
   owner: string
   judge: string
   sex?: string
@@ -73,6 +73,7 @@ export interface BreedTitleRow {
   title_code: string
   ring_number: number
   dog_name: string
+  pedigree?: string
   owner: string
 }
 

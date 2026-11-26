@@ -108,7 +108,7 @@ export function extractCompetitionType(rankLabel: string): string | null {
   return null;
 }
 
-export function rankLabelFromCell($: CheerioAPI, cell: Cheerio<Element>): string {
+export function rankLabelFromCell(_$: CheerioAPI, cell: Cheerio<Element>): string {
   const html = cell.html();
   if (!html) return cell.text().replace(/\s+/g, ' ').trim();
 

@@ -8,7 +8,6 @@ import ResultsSection from './ResultsSection'
 import { SEO } from '../../../components/SEO'
 import { JsonLd, breadcrumbListSchema, sportsEventSchema } from '../../../components/JsonLd'
 import { getEventHeadline } from '../eventListUtils'
-import { isLocalDev } from '../../../lib/env'
 import type { Event, Result } from './types'
 
 export default function EventResults() {

@@ -12,6 +12,8 @@ export interface StrictnessBadgeInfo {
   dotClass: string
 }
 
+export type StrictnessBadge = StrictnessBadgeInfo
+
 /**
  * Converts ALL CAPS judge name (e.g. "ГАВРИЛОВА ЯНА АДОЛЬФОВНА" or "ПРОЗОРОВ Д.А.")
  * into clean Title Case ("Гаврилова Яна Адольфовна", "Прозоров Д.А.").

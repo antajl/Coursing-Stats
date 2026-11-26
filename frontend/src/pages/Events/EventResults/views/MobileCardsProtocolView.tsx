@@ -1,4 +1,4 @@
-import { useMemo, Fragment } from 'react'
+import { useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { Award } from 'lucide-react'
 import PlacementBadge from '../components/PlacementBadge'
@@ -38,7 +38,7 @@ export default function MobileCardsProtocolView({
   groupedResults,
   sortedGroupKeys,
   results,
-  bestTimesByRace,
+  bestTimesByRace: _bestTimesByRace,
   isRacing = false,
 }: MobileCardsProtocolViewProps) {
   const allResults = useMemo(() => {

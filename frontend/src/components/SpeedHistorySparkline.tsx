@@ -93,8 +93,8 @@ export default function SpeedHistorySparkline({ current, history, className = ''
       className={`h-10 w-full max-w-[200px] ${className}`}
       role="img"
       aria-label={`История скорости: от ${minSpeed} до ${maxSpeed} км/ч`}
-      title={points.map((point) => `${point.speed} км/ч`).join(' → ')}
     >
+      <title>{points.map((point) => `${point.speed} км/ч`).join(' → ')}</title>
       <defs>
         <linearGradient id={gradientId} x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stopColor="#c4956a" stopOpacity="0.35" />
