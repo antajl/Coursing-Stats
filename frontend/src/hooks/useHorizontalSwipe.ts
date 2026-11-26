@@ -1,10 +1,11 @@
-import { useRef, useCallback, useEffect } from 'react'
+import { useRef, useCallback, useEffect, useState } from 'react'
 
 interface UseHorizontalSwipeProps {
   activeTabsCount: number
   activeTabIndex: number
   onTabChange: (targetIndex: number) => void
   gapPx?: number
+  enableNudge?: boolean
 }
 
 export function calculateSlideOffset(slideIndex: number, gapPx = 0): string {
@@ -19,6 +20,7 @@ export function useHorizontalSwipe({
   activeTabIndex,
   onTabChange,
   gapPx = 0,
+  enableNudge = false,
 }: UseHorizontalSwipeProps) {
   const trackRef = useRef<HTMLDivElement>(null)
   const touchStartRef = useRef<{ x: number; y: number; time: number } | null>(null)
@@ -26,11 +28,27 @@ export function useHorizontalSwipe({
   const hadMovedRef = useRef(false)
   const isSwipingRef = useRef(false)
   const rafRef = useRef<number | null>(null)
+  const hasInteractedRef = useRef(false)
+  const nudgeTimerRef = useRef<number | null>(null)
+  const nudgeAnimRef = useRef<Animation | null>(null)
+  const [isNudging, setIsNudging] = useState(false)
 
   const getSlideOffset = useCallback(
     (slideIndex: number) => calculateSlideOffset(slideIndex, gapPx),
     [gapPx],
   )
+
+  const cancelNudge = useCallback(() => {
+    if (nudgeTimerRef.current !== null) {
+      window.clearTimeout(nudgeTimerRef.current)
+      nudgeTimerRef.current = null
+    }
+    if (nudgeAnimRef.current) {
+      nudgeAnimRef.current.cancel()
+      nudgeAnimRef.current = null
+    }
+    setIsNudging(false)
+  }, [])
 
   useEffect(() => {
     return () => {
@@ -38,8 +56,47 @@ export function useHorizontalSwipe({
         cancelAnimationFrame(rafRef.current)
         rafRef.current = null
       }
+      cancelNudge()
     }
-  }, [])
+  }, [cancelNudge])
+
+  // Single-shot gentle invitation nudge on mobile (< 1024px) when enabled
+  useEffect(() => {
+    if (!enableNudge || activeTabsCount <= 1 || hasInteractedRef.current) return
+    if (typeof window === 'undefined' || window.innerWidth >= 1024) return
+    if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return
+
+    nudgeTimerRef.current = window.setTimeout(() => {
+      const track = trackRef.current
+      if (!track || hasInteractedRef.current || window.innerWidth >= 1024) return
+      const base = getSlideOffset(activeTabIndex)
+      const delta = activeTabIndex === 0 ? '-28px' : '28px'
+      setIsNudging(true)
+      const anim = track.animate(
+        [
+          { transform: `translate3d(${base}, 0, 0)`, offset: 0 },
+          { transform: `translate3d(calc(${base} + ${delta}), 0, 0)`, offset: 0.25 },
+          { transform: `translate3d(calc(${base} + ${delta}), 0, 0)`, offset: 0.42 },
+          { transform: `translate3d(${base}, 0, 0)`, offset: 1 },
+        ],
+        {
+          duration: 750,
+          easing: 'cubic-bezier(0.25, 1, 0.5, 1)',
+        },
+      )
+      nudgeAnimRef.current = anim
+      anim.onfinish = () => {
+        nudgeAnimRef.current = null
+        setIsNudging(false)
+      }
+      anim.oncancel = () => {
+        nudgeAnimRef.current = null
+        setIsNudging(false)
+      }
+    }, 600)
+
+    return () => cancelNudge()
+  }, [enableNudge, activeTabsCount, activeTabIndex, getSlideOffset, cancelNudge])
 
   useEffect(() => {
     if (isSwipingRef.current) {
@@ -54,6 +111,8 @@ export function useHorizontalSwipe({
 
   const startDrag = (clientX: number, clientY: number) => {
     if (activeTabsCount <= 1 || (typeof window !== 'undefined' && window.innerWidth >= 1024)) return
+    hasInteractedRef.current = true
+    cancelNudge()
     if (rafRef.current) {
       cancelAnimationFrame(rafRef.current)
       rafRef.current = null
@@ -162,8 +221,15 @@ export function useHorizontalSwipe({
     }
   }
 
+  const markInteracted = useCallback(() => {
+    hasInteractedRef.current = true
+    cancelNudge()
+  }, [cancelNudge])
+
   return {
     trackRef,
+    isNudging,
+    markInteracted,
     getSlideOffset,
     startDrag,
     moveDrag,

@@ -1,8 +1,9 @@
-import { useState, useMemo, useRef, useEffect, useCallback } from 'react'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { useState, useMemo, useEffect, useCallback } from 'react'
 import DoninoListRecordRow from './DoninoListRecordRow'
 import DoninoColumnPlaque, { DoninoColumnShell } from './DoninoColumnPlaque'
 import { useInfiniteScroll } from '../../hooks/useInfiniteScroll'
+import { useHorizontalSwipe } from '../../hooks/useHorizontalSwipe'
+import { ColumnSwipeEdgeTab } from '../../components/ui/ColumnSwipeEdgeTab'
 
 interface SpeedRecord {
   id: string | number
@@ -60,215 +61,36 @@ export default function DoninoRecordsColumns({
       setMobileTab('speed')
     }
   }, [])
-  const trackRef = useRef<HTMLDivElement>(null)
-  const [isNudging, setIsNudging] = useState(false)
-  const hasInteractedRef = useRef(false)
-  const nudgeTimerRef = useRef<number | null>(null)
-  const nudgeEndTimerRef = useRef<number | null>(null)
-  const touchStartRef = useRef<{ x: number; y: number; time: number } | null>(null)
-  const gestureLockRef = useRef<'horizontal' | 'vertical' | null>(null)
-  const hadMovedRef = useRef(false)
-  const gapPx = 16
 
-  const getSlideOffset = useCallback(
-    (slideIndex: number) => {
-      return slideIndex === 0 ? '0%' : `calc(-100% - ${gapPx}px)`
+  const activeSlideIndex = mobileTab === 'speed' ? 0 : 1
+
+  const {
+    trackRef,
+    isNudging,
+    markInteracted,
+    getSlideOffset,
+    startDrag,
+    moveDrag,
+    endDrag,
+    cancelDrag,
+    handleClickCapture,
+  } = useHorizontalSwipe({
+    activeTabsCount: 2,
+    activeTabIndex: activeSlideIndex,
+    gapPx: 16,
+    enableNudge: true,
+    onTabChange: (targetIndex) => {
+      setMobileTab(targetIndex === 0 ? 'speed' : 'coursing')
     },
-    [gapPx],
-  )
-
-  const cancelNudge = useCallback(() => {
-    if (nudgeTimerRef.current !== null) {
-      clearTimeout(nudgeTimerRef.current)
-      nudgeTimerRef.current = null
-    }
-    if (nudgeEndTimerRef.current !== null) {
-      clearTimeout(nudgeEndTimerRef.current)
-      nudgeEndTimerRef.current = null
-    }
-    setIsNudging(false)
-  }, [])
-
-  const triggerNudge = useCallback(() => {
-    if (hasInteractedRef.current) return
-    cancelNudge()
-    setIsNudging(true)
-    nudgeEndTimerRef.current = window.setTimeout(() => {
-      setIsNudging(false)
-      nudgeEndTimerRef.current = null
-    }, 750)
-  }, [cancelNudge])
-
-  // Auto-play invitation nudge on page load (after 600ms) only if not interacted
-  useEffect(() => {
-    if (hasInteractedRef.current) return
-    nudgeTimerRef.current = window.setTimeout(() => {
-      triggerNudge()
-    }, 600)
-    return () => {
-      cancelNudge()
-    }
-  }, [triggerNudge, cancelNudge])
-
-  const currentSlideRef = useRef<number>(mobileTab === 'speed' ? 0 : 1)
+  })
 
   const handleTabChange = useCallback(
     (targetTab: 'speed' | 'coursing') => {
-      hasInteractedRef.current = true
-      cancelNudge()
-      const targetSlide = targetTab === 'speed' ? 0 : 1
-      currentSlideRef.current = targetSlide
-      if (trackRef.current) {
-        trackRef.current.style.transition = 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)'
-        trackRef.current.style.transform = `translate3d(${getSlideOffset(targetSlide)}, 0, 0)`
-      }
+      markInteracted()
       setMobileTab(targetTab)
     },
-    [getSlideOffset, cancelNudge],
+    [markInteracted],
   )
-
-  // Плавная анимация скольжения колонок при изменении активной дисциплины
-  useEffect(() => {
-    const slideIndex = mobileTab === 'speed' ? 0 : 1
-    if (currentSlideRef.current !== slideIndex) {
-      currentSlideRef.current = slideIndex
-      if (trackRef.current && (typeof window === 'undefined' || window.innerWidth < 1024)) {
-        trackRef.current.style.transition = 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)'
-        trackRef.current.style.transform = `translate3d(${getSlideOffset(slideIndex)}, 0, 0)`
-      }
-    }
-  }, [mobileTab, getSlideOffset])
-
-  const startDrag = (clientX: number, clientY: number) => {
-    if (typeof window !== 'undefined' && window.innerWidth >= 1024) return
-    hasInteractedRef.current = true
-    cancelNudge()
-    touchStartRef.current = { x: clientX, y: clientY, time: Date.now() }
-    gestureLockRef.current = null
-    hadMovedRef.current = false
-    if (trackRef.current) {
-      trackRef.current.style.transition = 'none'
-    }
-  }
-
-  const moveDrag = (clientX: number, clientY: number) => {
-    if (!touchStartRef.current || (typeof window !== 'undefined' && window.innerWidth >= 1024)) return
-    const touch = touchStartRef.current
-    const dx = clientX - touch.x
-    const dy = clientY - touch.y
-
-    if (Math.abs(dx) > 7 || Math.abs(dy) > 7) {
-      hadMovedRef.current = true
-    }
-
-    if (!gestureLockRef.current) {
-      const absDx = Math.abs(dx)
-      const absDy = Math.abs(dy)
-      if (absDx < 7 && absDy < 7) return
-      if (absDy >= absDx) {
-        gestureLockRef.current = 'vertical'
-        return
-      }
-      gestureLockRef.current = 'horizontal'
-    }
-
-    if (gestureLockRef.current === 'horizontal' && trackRef.current) {
-      const currentSlide = mobileTab === 'speed' ? 0 : 1
-      const isAtLeftEdge = currentSlide === 0 && dx > 0
-      const isAtRightEdge = currentSlide === 1 && dx < 0
-      const appliedDx = isAtLeftEdge || isAtRightEdge ? dx * 0.22 : dx
-      const base = currentSlide === 0 ? '0%' : `calc(-100% - ${gapPx}px)`
-      trackRef.current.style.transform = `translate3d(calc(${base} + ${appliedDx}px), 0, 0)`
-    }
-  }
-
-  const endDrag = (clientX: number, nativeEvent?: any) => {
-    if (!touchStartRef.current || (typeof window !== 'undefined' && window.innerWidth >= 1024)) return
-
-    const isHorizontal = gestureLockRef.current === 'horizontal'
-    const dx = clientX - touchStartRef.current.x
-    const dt = Date.now() - touchStartRef.current.time
-    const velocity = Math.abs(dx) / (dt || 1)
-
-    touchStartRef.current = null
-    gestureLockRef.current = null
-
-    const track = trackRef.current
-    const currentSlide = mobileTab === 'speed' ? 0 : 1
-
-    if (isHorizontal && track) {
-      const isSwipeLeft = dx < -35 || (dx < -15 && velocity > 0.2)
-      const isSwipeRight = dx > 35 || (dx > 15 && velocity > 0.2)
-      let targetSlide: 0 | 1 = currentSlide
-
-      if (isSwipeLeft && currentSlide === 0) {
-        targetSlide = 1
-        if (nativeEvent) nativeEvent._doninoSwipeConsumed = true
-      } else if (isSwipeRight && currentSlide === 1) {
-        targetSlide = 0
-        if (nativeEvent) nativeEvent._doninoSwipeConsumed = true
-      }
-
-      currentSlideRef.current = targetSlide
-      track.style.transition = 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)'
-      track.style.transform = `translate3d(${getSlideOffset(targetSlide)}, 0, 0)`
-
-      if (targetSlide !== currentSlide) {
-        setMobileTab(targetSlide === 0 ? 'speed' : 'coursing')
-      }
-    } else if (track) {
-      currentSlideRef.current = currentSlide
-      track.style.transition = 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)'
-      track.style.transform = `translate3d(${getSlideOffset(currentSlide)}, 0, 0)`
-    }
-  }
-
-  const cancelDrag = () => {
-    hasInteractedRef.current = true
-    cancelNudge()
-    touchStartRef.current = null
-    gestureLockRef.current = null
-    if (trackRef.current) {
-      const currentSlide = mobileTab === 'speed' ? 0 : 1
-      trackRef.current.style.transition = 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)'
-      trackRef.current.style.transform = `translate3d(${getSlideOffset(currentSlide)}, 0, 0)`
-    }
-  }
-
-  const handleTouchStart = (e: React.TouchEvent) => {
-    startDrag(e.touches[0].clientX, e.touches[0].clientY)
-  }
-
-  const handleTouchMove = (e: React.TouchEvent) => {
-    moveDrag(e.touches[0].clientX, e.touches[0].clientY)
-  }
-
-  const handleTouchEnd = (e: React.TouchEvent) => {
-    endDrag(e.changedTouches[0].clientX, e.nativeEvent)
-  }
-
-  const handleTouchCancel = () => {
-    cancelDrag()
-  }
-
-  const handleMouseDown = (e: React.MouseEvent) => {
-    if (e.button !== 0) return
-    startDrag(e.clientX, e.clientY)
-  }
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    moveDrag(e.clientX, e.clientY)
-  }
-
-  const handleMouseUp = (e: React.MouseEvent) => {
-    endDrag(e.clientX)
-  }
-
-  const handleMouseLeave = () => {
-    if (touchStartRef.current) {
-      cancelDrag()
-    }
-  }
 
   const listLength = Math.max(speedRecords.length, coursingRecords.length)
   const { visibleCount, loadMoreRef, hasMore } = useInfiniteScroll(listLength, [resetScrollKey])
@@ -304,20 +126,15 @@ export default function DoninoRecordsColumns({
         asHeader
         title="Замер скорости"
         count={speedRecords.length}
-        countClassName="pr-28 lg:pr-0"
+        countClassName="pr-24 lg:pr-0"
       />
-      <button
-        type="button"
+      <ColumnSwipeEdgeTab
+        direction="right"
+        label="Бега 350 м"
+        isNudging={isNudging && activeSlideIndex === 0}
         onClick={() => handleTabChange('coursing')}
-        className={`lg:hidden absolute top-1/2 -translate-y-1/2 right-0 z-20 inline-flex items-center gap-1 rounded-l-full border-y border-l border-camel-400/90 bg-camel-100/80 pl-3 pr-2 py-1 text-[11px] font-bold text-camel-950 shadow-md backdrop-blur-md transition-all hover:bg-camel-200 active:scale-95 cursor-pointer touch-manipulation ${
-          isNudging ? 'animate-tab-nudge-left' : ''
-        }`}
         title="Смахните экран или нажмите для перехода к бегам 350 м"
-        aria-label="Перейти к бегам 350 м"
-      >
-        <span>Бега 350 м</span>
-        <ChevronRight className="w-3.5 h-3.5 text-camel-800 shrink-0" />
-      </button>
+      />
     </div>
   )
 
@@ -329,57 +146,41 @@ export default function DoninoRecordsColumns({
         count={coursingRecords.length}
         titleClassName="pl-20 lg:pl-0"
       />
-      <button
-        type="button"
+      <ColumnSwipeEdgeTab
+        direction="left"
+        label="Замер"
+        isNudging={isNudging && activeSlideIndex === 1}
         onClick={() => handleTabChange('speed')}
-        className={`lg:hidden absolute top-1/2 -translate-y-1/2 left-0 z-20 inline-flex items-center gap-1 rounded-r-full border-y border-r border-camel-400/90 bg-camel-100/80 pr-3 pl-2 py-1 text-[11px] font-bold text-camel-950 shadow-md backdrop-blur-md transition-all hover:bg-camel-200 active:scale-95 cursor-pointer touch-manipulation ${
-          isNudging ? 'animate-tab-nudge-right' : ''
-        }`}
         title="Смахните экран или нажмите для перехода к замерам"
-        aria-label="Перейти к замерам"
-      >
-        <ChevronLeft className="w-3.5 h-3.5 text-camel-800 shrink-0" />
-        <span>Замер</span>
-      </button>
+      />
     </div>
   )
 
   return (
     <div className="space-y-2.5 sm:space-y-4">
-      {/* Мобильный свайп-контейнер и десктопная двухколоночная сетка */}
+      {/* Мобильный свайп-контейнер (зазор 16px) и десктопная 2-колоночная сетка (>= 1024px) */}
       <div
         className="w-full relative overflow-x-clip lg:overflow-visible touch-pan-y select-none"
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
-        onTouchCancel={handleTouchCancel}
-        onMouseDown={handleMouseDown}
-        onMouseMove={handleMouseMove}
-        onMouseUp={handleMouseUp}
-        onMouseLeave={handleMouseLeave}
-        onClickCapture={(e) => {
-          if (hadMovedRef.current) {
-            e.preventDefault()
-            e.stopPropagation()
-          }
+        onTouchStart={(e) => startDrag(e.touches[0].clientX, e.touches[0].clientY)}
+        onTouchMove={(e) => moveDrag(e.touches[0].clientX, e.touches[0].clientY)}
+        onTouchEnd={(e) => endDrag(e.changedTouches[0].clientX)}
+        onTouchCancel={cancelDrag}
+        onMouseDown={(e) => {
+          if (e.button === 0) startDrag(e.clientX, e.clientY)
         }}
+        onMouseMove={(e) => moveDrag(e.clientX, e.clientY)}
+        onMouseUp={(e) => endDrag(e.clientX)}
+        onMouseLeave={cancelDrag}
+        onClickCapture={handleClickCapture}
       >
         <div
           ref={trackRef}
-          className={`flex flex-nowrap w-full min-w-0 items-start gap-4 lg:grid lg:grid-cols-2 lg:gap-8 lg:!transform-none ${
-            isNudging
-              ? mobileTab === 'speed'
-                ? 'animate-silk-nudge-left'
-                : 'animate-silk-nudge-right'
-              : ''
-          }`}
+          className="flex flex-nowrap w-full min-w-0 items-start gap-4 lg:grid lg:grid-cols-2 lg:gap-8 lg:!transform-none"
           style={{
             transform:
               typeof window !== 'undefined' && window.innerWidth >= 1024
                 ? 'none'
-                : isNudging
-                ? undefined
-                : `translate3d(${getSlideOffset(mobileTab === 'speed' ? 0 : 1)}, 0, 0)`,
+                : `translate3d(${getSlideOffset(activeSlideIndex)}, 0, 0)`,
             willChange: 'transform',
           }}
         >
