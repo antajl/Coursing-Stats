@@ -1,6 +1,46 @@
-import type { Competition, DogData, RatingItem } from '../types';
+import type { Competition, DogData, RatingItem, ShowDogSummary } from '../types';
 import type { ApiClient } from './client';
 import { CACHE_TTL } from './constants';
+
+const SHOW_TITLE_ORDER = [
+  'BIS', 'BIG', 'BIS_JUNIOR', 'BIS_VETERAN', 'BIS_PUPPY', 'BIS_BABY',
+  'BOB', 'BOS', 'LYU', 'LV', 'LSH', 'LB',
+  'CACIB', 'R_CACIB', 'CAC', 'JCAC', 'VCAC',
+  'CHRKF', 'YCHRKF', 'VCHRKF',
+  'P_RUSSIA', 'P_MOSCOW', 'YP_RUSSIA', 'YP_MOSCOW', 'VP_RUSSIA', 'VP_MOSCOW',
+  'KCHK', 'KCHP', 'YKCHK', 'YKCHP', 'VKCHK', 'VKCHP',
+  'CW', 'R_CAC', 'R_JCAC', 'R_VCAC', 'SS', 'YSS', 'VSS',
+];
+
+function extractShowSummary(dog: Record<string, unknown>): ShowDogSummary | null {
+  const totalShows = Number(dog.total_shows) || 0;
+  if (totalShows <= 0) return null;
+
+  const titles = dog.titles;
+  const title_counts: Record<string, number> = {};
+  if (titles && typeof titles === 'object' && !Array.isArray(titles)) {
+    for (const [key, value] of Object.entries(titles as Record<string, unknown>)) {
+      const n = Number(value);
+      if (Number.isFinite(n) && n > 0) title_counts[key] = n;
+    }
+  }
+
+  const known = SHOW_TITLE_ORDER.filter((key) => (title_counts[key] ?? 0) > 0);
+  const extras = Object.keys(title_counts).filter((key) => !known.includes(key));
+  const title_keys = [...known, ...extras];
+
+  const bestAward =
+    typeof dog.best_award === 'string' && dog.best_award.trim()
+      ? dog.best_award.trim()
+      : null;
+
+  return {
+    total_shows: totalShows,
+    best_award: bestAward,
+    title_keys,
+    title_counts,
+  };
+}
 
 export function parseShowCalendarDate(date?: string): string | undefined {
   if (!date) return undefined;
@@ -83,8 +123,12 @@ export class ShowsApi {
     }
   }
 
-  async getShowDogById(dogId: string, depth: number = 0): Promise<DogData | null> {
-    if (depth > 2) return null;
+  async getShowDogById(
+    dogId: string,
+    depth: number = 0,
+    onResolveSportId?: (sportId: string) => Promise<DogData | null>,
+  ): Promise<DogData | null> {
+    if (depth > 3) return null;
     try {
       const shard = this.client.cdnPackShardKey(dogId);
       const pack = (await this.client.fetchJSON(
@@ -96,17 +140,27 @@ export class ShowsApi {
       const entry = pack[String(dogId)];
       if (!entry) return null;
       if (entry.alias_to) {
-        return this.getShowDogById(String(entry.alias_to), depth + 1);
+        return this.getShowDogById(String(entry.alias_to), depth + 1, onResolveSportId);
       }
 
-      const numId = Number(entry.competition_dog_id ?? entry.id ?? dogId);
-      const dogIdNum = Number.isFinite(numId) ? numId : Number(dogId) || 0;
+      const showSummary = extractShowSummary(entry);
+      const linkedSportId = entry.competition_dog_id != null ? Number(entry.competition_dog_id) : NaN;
+      if (Number.isFinite(linkedSportId) && linkedSportId > 0 && onResolveSportId) {
+        const sportData = await onResolveSportId(String(linkedSportId));
+        if (sportData) {
+          return showSummary ? { ...sportData, show_summary: showSummary } : sportData;
+        }
+      }
+
+      const resolvedId = Number(entry.id ?? dogId);
+      const dogIdNum = Number.isFinite(resolvedId) ? resolvedId : Number(dogId) || 0;
       return {
         schema: 'coursing-stats/show-dog-profile-v1',
         exported_at: new Date().toISOString(),
+        show_summary: showSummary,
         dog: {
           id: dogIdNum,
-          dog_key: String(dogId),
+          dog_key: String(entry.id ?? dogId),
           name_lat: String(entry.name_lat || entry.name_ru || `Собака #${dogId}`),
           name_ru: String(entry.name_ru || entry.name_lat || ''),
           breed: String(entry.breed || 'Порода не указана'),
@@ -134,12 +188,7 @@ export class ShowsApi {
     }
   }
 
-  async getShowSummaryForCompetitionDog(competitionDogId: number | string): Promise<{
-    total_shows: number;
-    best_award: string | null;
-    title_keys: string[];
-    title_counts: Record<string, number>;
-  } | null> {
+  async getShowSummaryForCompetitionDog(competitionDogId: number | string): Promise<ShowDogSummary | null> {
     const idNum = Number(competitionDogId);
     if (!Number.isFinite(idNum) || idNum <= 0) return null;
 
@@ -157,44 +206,7 @@ export class ShowsApi {
         (pack as Record<string, Record<string, unknown>>)[String(idNum)];
 
       if (!dog) return null;
-
-      const totalShows = Number(dog.total_shows) || 0;
-      if (totalShows <= 0) return null;
-
-      const titleOrder = [
-        'BIS', 'BIG', 'BIS_JUNIOR', 'BIS_VETERAN', 'BIS_PUPPY', 'BIS_BABY',
-        'BOB', 'BOS', 'LYU', 'LV', 'LSH', 'LB',
-        'CACIB', 'R_CACIB', 'CAC', 'JCAC', 'VCAC',
-        'CHRKF', 'YCHRKF', 'VCHRKF',
-        'P_RUSSIA', 'P_MOSCOW', 'YP_RUSSIA', 'YP_MOSCOW', 'VP_RUSSIA', 'VP_MOSCOW',
-        'KCHK', 'KCHP', 'YKCHK', 'YKCHP', 'VKCHK', 'VKCHP',
-        'CW', 'R_CAC', 'R_JCAC', 'R_VCAC', 'SS', 'YSS', 'VSS',
-      ];
-
-      const titles = dog.titles;
-      const title_counts: Record<string, number> = {};
-      if (titles && typeof titles === 'object' && !Array.isArray(titles)) {
-        for (const [key, value] of Object.entries(titles as Record<string, unknown>)) {
-          const n = Number(value);
-          if (Number.isFinite(n) && n > 0) title_counts[key] = n;
-        }
-      }
-
-      const known = titleOrder.filter((key) => (title_counts[key] ?? 0) > 0);
-      const extras = Object.keys(title_counts).filter((key) => !known.includes(key));
-      const title_keys = [...known, ...extras];
-
-      const bestAward =
-        typeof dog.best_award === 'string' && dog.best_award.trim()
-          ? dog.best_award.trim()
-          : null;
-
-      return {
-        total_shows: totalShows,
-        best_award: bestAward,
-        title_keys,
-        title_counts,
-      };
+      return extractShowSummary(dog);
     } catch {
       return null;
     }

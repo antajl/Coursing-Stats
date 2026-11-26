@@ -9,12 +9,20 @@ export interface Dog {
   competition_count: number;
 }
 
+export interface ShowDogSummary {
+  total_shows: number;
+  best_award: string | null;
+  title_keys: string[];
+  title_counts: Record<string, number>;
+}
+
 /**
  * Полные данные профиля собаки с агрегатами
  */
 export interface DogData {
   schema: string;
   exported_at: string;
+  show_summary?: ShowDogSummary | null;
   dog: {
     id: number;
     dog_key: string;

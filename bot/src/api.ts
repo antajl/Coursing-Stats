@@ -58,9 +58,13 @@ class CoursingStatsAPI {
   }
 
   async getDogById(dogId: string): Promise<DogData | null> {
+    const numId = Number(dogId);
+    if (Number.isFinite(numId) && numId >= 1_000_000) {
+      return this.shows.getShowDogById(dogId, 0, (sportId) => this.dogs.getDogById(sportId));
+    }
     const sportDog = await this.dogs.getDogById(dogId);
     if (sportDog) return sportDog;
-    return this.shows.getShowDogById(dogId);
+    return this.shows.getShowDogById(dogId, 0, (sportId) => this.dogs.getDogById(sportId));
   }
 
   getTopRatings(

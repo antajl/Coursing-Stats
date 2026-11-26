@@ -208,17 +208,12 @@ export function getRatingKeyboard(discipline: string, category: string, year: st
     keyboard.text('Бега борзых', 'rating_racing');
   }
 
-  // Category toggle for coursing (score/placement/elo)
+  // Category toggle for coursing (score/placement)
   if (discipline === 'coursing') {
     if (category === 'score') {
       keyboard.text('По медалям', `rating_${discipline}_placement_${year}`);
-      keyboard.text('Elo', `rating_${discipline}_elo_${year}`);
-    } else if (category === 'elo') {
-      keyboard.text('По очкам', `rating_${discipline}_score_${year}`);
-      keyboard.text('По медалям', `rating_${discipline}_placement_${year}`);
     } else {
       keyboard.text('По очкам', `rating_${discipline}_score_${year}`);
-      keyboard.text('Elo', `rating_${discipline}_elo_${year}`);
     }
     keyboard.row();
     keyboard.text('2024', `rating_${discipline}_${category}_2024`);

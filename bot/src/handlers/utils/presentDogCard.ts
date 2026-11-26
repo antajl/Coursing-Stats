@@ -34,7 +34,9 @@ export async function buildDogCardPresentation(
 ) {
   const dogId = dogData.dog.id.toString();
   const [shows, isFavorite] = await Promise.all([
-    api.getShowSummaryForCompetitionDog(dogData.dog.id),
+    dogData.show_summary !== undefined
+      ? Promise.resolve(dogData.show_summary)
+      : api.getShowSummaryForCompetitionDog(dogData.dog.id),
     isDogFavorite(options.cache, options.userId, dogId),
   ]);
 

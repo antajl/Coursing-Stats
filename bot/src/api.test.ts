@@ -152,6 +152,62 @@ describe('CoursingStatsAPI', () => {
       expect(result?.dog.id).toBe(1);
       expect(result?.dog.name_lat).toBe('Test Dog');
     });
+
+    it('fetches show-only ID directly from shows/indexes/dog-details without 404 probes', async () => {
+      const showId = '1571929282';
+      const fetchMock = vi.fn().mockResolvedValue({
+        ok: true,
+        text: async () => JSON.stringify({
+          [showId]: {
+            id: showId,
+            name_lat: 'SHOW CHAMPION',
+            name_ru: 'ШОУ ЧЕМПИОН',
+            breed: 'Уиппет',
+            total_shows: 12,
+            best_award: 'BIS',
+            titles: { BIS: 2, BOB: 5 },
+          },
+        }),
+      });
+      vi.stubGlobal('fetch', fetchMock);
+
+      const result = await runWithTimers(() => api.getDogById(showId));
+      expect(fetchMock).toHaveBeenCalledTimes(1);
+      expect(fetchMock).toHaveBeenCalledWith(`${baseUrl}/shows/indexes/dog-details/194.json`);
+      expect(result?.dog.name_lat).toBe('SHOW CHAMPION');
+      expect(result?.show_summary?.total_shows).toBe(12);
+      expect(result?.show_summary?.best_award).toBe('BIS');
+      expect(result?.show_summary?.title_counts).toEqual({ BIS: 2, BOB: 5 });
+    });
+
+    it('resolves show alias_to pointer to canonical dog entry', async () => {
+      const aliasId = '1000001';
+      const targetId = '1000002';
+      const fetchMock = vi.fn()
+        .mockResolvedValueOnce({
+          ok: true,
+          text: async () => JSON.stringify({ [aliasId]: { alias_to: targetId } }),
+        })
+        .mockResolvedValueOnce({
+          ok: true,
+          text: async () => JSON.stringify({
+            [targetId]: {
+              id: targetId,
+              name_lat: 'CANONICAL SHOW DOG',
+              breed: 'Салюки',
+              total_shows: 3,
+              best_award: 'BOB',
+              titles: { BOB: 1 },
+            },
+          }),
+        });
+      vi.stubGlobal('fetch', fetchMock);
+
+      const result = await runWithTimers(() => api.getDogById(aliasId));
+      expect(result?.dog.id).toBe(1000002);
+      expect(result?.dog.name_lat).toBe('CANONICAL SHOW DOG');
+      expect(result?.show_summary?.total_shows).toBe(3);
+    });
   });
 
   describe('getTopRatings', () => {
