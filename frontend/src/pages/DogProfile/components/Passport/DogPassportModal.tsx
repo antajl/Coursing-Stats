@@ -161,28 +161,28 @@ export const DogPassportModal: React.FC<DogPassportModalProps> = ({ isOpen, onCl
         if (e.target === e.currentTarget) onClose()
       }}
     >
-      <div className="relative w-full max-w-5xl max-h-[94vh] flex flex-col rounded-2xl border border-[#D5C9B8] bg-[#FAF8F5] shadow-2xl overflow-hidden">
+      <div className="relative w-full max-w-5xl max-h-[94dvh] flex flex-col rounded-2xl border border-old-money-300 bg-cream-50 shadow-2xl overflow-hidden">
         {/* Шапка модального окна */}
-        <div className="flex items-center justify-between border-b border-[#EAE3D6] px-4 sm:px-6 py-3 bg-white shrink-0">
+        <div className="flex items-center justify-between border-b border-old-money-200 px-4 sm:px-6 py-3 bg-white shrink-0">
           <div className="flex items-center gap-3">
-            <h3 id="passport-modal-title" className="font-serif text-base sm:text-lg font-bold text-[#1C1917]">
+            <h3 id="passport-modal-title" className="font-serif text-base sm:text-lg font-bold text-charcoal-900">
               Карточка собаки
             </h3>
-            <span className="hidden sm:inline text-xs text-[#8C7E6A]">·</span>
-            <span className="hidden sm:inline text-xs text-[#78716C] font-medium">
+            <span className="hidden sm:inline text-xs text-old-money-500">·</span>
+            <span className="hidden sm:inline text-xs text-charcoal-500 font-medium">
               Карточка для соцсетей и печати
             </span>
           </div>
 
           {/* Переключатель формата */}
-          <div className="flex items-center gap-1 rounded-xl border border-[#D5C9B8] bg-[#FAF7F2] p-1">
+          <div className="flex items-center gap-1 rounded-xl border border-old-money-300 bg-cream-50 p-1">
             <button
               type="button"
               onClick={() => setFormat('story')}
               className={`inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1 text-xs font-semibold transition-all cursor-pointer ${
                 format === 'story'
-                  ? 'bg-white text-[#1C1917] shadow-xs border border-[#DFD7CB]'
-                  : 'text-[#78716C] hover:text-[#1C1917]'
+                  ? 'bg-white text-charcoal-900 shadow-xs border border-old-money-200'
+                  : 'text-charcoal-500 hover:text-charcoal-900'
               }`}
               title="Вертикальный формат для Stories и постов в Telegram"
             >
@@ -194,8 +194,8 @@ export const DogPassportModal: React.FC<DogPassportModalProps> = ({ isOpen, onCl
               onClick={() => setFormat('certificate')}
               className={`inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1 text-xs font-semibold transition-all cursor-pointer ${
                 format === 'certificate'
-                  ? 'bg-white text-[#1C1917] shadow-xs border border-[#DFD7CB]'
-                  : 'text-[#78716C] hover:text-[#1C1917]'
+                  ? 'bg-white text-charcoal-900 shadow-xs border border-old-money-200'
+                  : 'text-charcoal-500 hover:text-charcoal-900'
               }`}
               title="Альбомный формат сертификата"
             >
@@ -207,7 +207,7 @@ export const DogPassportModal: React.FC<DogPassportModalProps> = ({ isOpen, onCl
           <button
             type="button"
             onClick={onClose}
-            className="rounded-lg p-1.5 text-[#78716C] hover:bg-[#F2ECE1] hover:text-[#1C1917] transition-colors cursor-pointer"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-charcoal-500 hover:bg-cream-100 hover:text-charcoal-900 transition-colors cursor-pointer touch-manipulation"
             aria-label="Закрыть окно"
           >
             <X className="h-5 w-5" aria-hidden />
@@ -224,7 +224,7 @@ export const DogPassportModal: React.FC<DogPassportModalProps> = ({ isOpen, onCl
         {/* Область интерактивного предпросмотра карточки */}
         <div
           ref={scrollContainerRef}
-          className="flex-1 overflow-auto p-3 sm:p-6 bg-[#F3EFEA]/60 flex justify-center items-start"
+          className="flex-1 overflow-auto p-3 sm:p-6 bg-cream-100/60 flex justify-center items-start"
         >
           <div className="inline-block transition-transform">
             <DogPassportCard ref={cardRef} data={data} format={format} sections={sections} />
@@ -232,8 +232,8 @@ export const DogPassportModal: React.FC<DogPassportModalProps> = ({ isOpen, onCl
         </div>
 
         {/* Подвал с кнопками экспорта */}
-        <div className="flex flex-wrap items-center justify-between gap-3 border-t border-[#EAE3D6] px-4 sm:px-6 py-3 bg-white shrink-0">
-          <div className="text-xs text-[#78716C]">
+        <div className="flex flex-wrap items-center justify-between gap-3 border-t border-old-money-200 px-4 sm:px-6 py-3 bg-white shrink-0">
+          <div className="text-xs text-charcoal-500">
             Изображение формируется локально в высоком разрешении (2x Retina)
           </div>
 
@@ -242,17 +242,17 @@ export const DogPassportModal: React.FC<DogPassportModalProps> = ({ isOpen, onCl
               type="button"
               onClick={handleCopy}
               disabled={exporting}
-              className="inline-flex items-center gap-1.5 rounded-xl border border-[#D5C9B8] bg-[#FAF8F5] px-3 sm:px-4 py-2 text-xs font-semibold text-[#1C1917] hover:bg-[#F2ECE1] transition-all disabled:opacity-50 cursor-pointer min-h-[38px]"
+              className="inline-flex items-center gap-1.5 rounded-xl border border-old-money-300 bg-cream-50 px-3 sm:px-4 py-2 text-xs font-semibold text-charcoal-900 hover:bg-cream-100 transition-all disabled:opacity-50 cursor-pointer min-h-[44px] sm:min-h-[38px] touch-manipulation"
               title="Скопировать изображение в буфер обмена для быстрой отправки в Telegram или чаты"
             >
               {copied ? (
                 <>
-                  <Check className="h-3.5 w-3.5 text-[#1F432E]" aria-hidden />
-                  <span className="text-[#1F432E]">Скопировано!</span>
+                  <Check className="h-3.5 w-3.5 text-forest-700" aria-hidden />
+                  <span className="text-forest-700">Скопировано!</span>
                 </>
               ) : (
                 <>
-                  <Copy className="h-3.5 w-3.5 text-[#8C6D37]" aria-hidden />
+                  <Copy className="h-3.5 w-3.5 text-camel-700" aria-hidden />
                   <span>Скопировать</span>
                 </>
               )}
@@ -262,10 +262,10 @@ export const DogPassportModal: React.FC<DogPassportModalProps> = ({ isOpen, onCl
               type="button"
               onClick={handleShare}
               disabled={exporting}
-              className="inline-flex items-center gap-1.5 rounded-xl border border-[#D5C9B8] bg-[#FAF8F5] px-3 sm:px-4 py-2 text-xs font-semibold text-[#1C1917] hover:bg-[#F2ECE1] transition-all disabled:opacity-50 cursor-pointer min-h-[38px]"
+              className="inline-flex items-center gap-1.5 rounded-xl border border-old-money-300 bg-cream-50 px-3 sm:px-4 py-2 text-xs font-semibold text-charcoal-900 hover:bg-cream-100 transition-all disabled:opacity-50 cursor-pointer min-h-[44px] sm:min-h-[38px] touch-manipulation"
               title="Поделиться в Telegram или сохранить файл"
             >
-              <Share2 className="h-3.5 w-3.5 text-[#8C6D37]" aria-hidden />
+              <Share2 className="h-3.5 w-3.5 text-camel-700" aria-hidden />
               <span>Поделиться</span>
             </button>
 
@@ -273,7 +273,7 @@ export const DogPassportModal: React.FC<DogPassportModalProps> = ({ isOpen, onCl
               type="button"
               onClick={handleDownload}
               disabled={exporting}
-              className="inline-flex items-center gap-1.5 rounded-xl border border-[#8C6D37] bg-[#8C6D37] px-4 sm:px-5 py-2 text-xs font-semibold text-white hover:bg-[#73582A] transition-all disabled:opacity-50 shadow-xs cursor-pointer min-h-[38px]"
+              className="inline-flex items-center gap-1.5 rounded-xl border border-camel-700 bg-camel-700 px-4 sm:px-5 py-2 text-xs font-semibold text-white hover:bg-camel-800 transition-all disabled:opacity-50 shadow-xs cursor-pointer min-h-[44px] sm:min-h-[38px] touch-manipulation"
               title="Скачать PNG на устройство"
             >
               {downloaded ? (

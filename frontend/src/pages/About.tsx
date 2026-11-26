@@ -337,7 +337,7 @@ export default function AboutPage() {
         </div>
         <Link
           to="/tracker/"
-          className="cs-glass-pill-active inline-flex min-h-[40px] shrink-0 items-center justify-center gap-1.5 rounded-xl px-4 py-2 text-xs font-semibold no-underline"
+          className="cs-glass-pill-active inline-flex min-h-[44px] sm:min-h-[40px] shrink-0 items-center justify-center gap-1.5 rounded-full px-4 py-2 text-xs font-semibold no-underline"
         >
           <span>Открыть Трекер</span>
         </Link>

@@ -17,7 +17,7 @@ export default {
         '3xl': '2100px',
       },
       colors: {
-        // Exact colors from Claude mockup
+        // Legacy compact aliases matching CSS variables (--om-*, --char-*, etc.)
         'om': {
           50: '#faf8f4',
           100: '#f3ede4',
@@ -33,6 +33,7 @@ export default {
           50: '#fcfaf7',
           100: '#f7f2ea',
           200: '#eee5d6',
+          300: '#e2d6c3',
         },
         'camel': {
           50: '#faf6f0',
