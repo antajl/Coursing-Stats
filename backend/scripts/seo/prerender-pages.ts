@@ -68,6 +68,10 @@ import {
   writeLineList,
 } from './incremental-state.js'
 import { CORE_BREED_HUBS } from '../../../frontend/src/lib/breed-hubs-data.js'
+import {
+  resolveShowJudgeNumericId,
+  resolveSportJudgeNumericId,
+} from '../../../frontend/src/lib/judgeIdMap.generated.js'
 import { loadExhibitionIdsForSitemap, saveAvailableExhibitionsIndex } from '../build-derived/sitemap.js'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT = path.resolve(__dirname, '../../..')
@@ -577,7 +581,7 @@ function prerenderSportJudges(spaHtml: string, tracker: EntityWriteTracker): num
   for (const j of judges) {
     const id = j.id || j.name
     if (!id) continue
-    const numericId = j.numeric_id
+    const numericId = j.numeric_id ?? resolveSportJudgeNumericId(id)
     const judgeSlug = numericId != null ? String(numericId) : encodeURIComponent(id)
     const canonicalUrl = `${SITE_ORIGIN}/judges/${judgeSlug}/`
 
@@ -874,7 +878,7 @@ function prerenderShowJudges(spaHtml: string, tracker: EntityWriteTracker): numb
     if (written >= max) break
     const id = j.id
     if (!id) continue
-    const numericId = j.numeric_id
+    const numericId = j.numeric_id ?? resolveShowJudgeNumericId(id)
     const judgeSlug = numericId != null ? String(numericId) : encodeURIComponent(id)
     const canonicalUrl = `${SITE_ORIGIN}/shows/judges/${judgeSlug}/`
 
