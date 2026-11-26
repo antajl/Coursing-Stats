@@ -15,6 +15,7 @@ import { DogJudgesSection } from './DogJudgesSection'
 import { DogOrganizationsSection } from './DogOrganizationsSection'
 import { DogDisciplinesMobileView } from './DogDisciplinesMobileView'
 import { DogDisciplinesDesktopView } from './DogDisciplinesDesktopView'
+import { DogCoursingCriteriaSection } from './CoursingCriteria/DogCoursingCriteriaSection'
 import { useDogProfileData } from './useDogProfileData'
 import type { DisciplineTabId, DogProfileMainTabId } from './types'
 
@@ -265,6 +266,23 @@ export default function DogProfile() {
             onToggleShowAllRacingEvents={() => data.setShowAllRacingEvents((v) => !v)}
             showDog={data.showDog}
           />
+
+          {/* Разбор 5 критериев курсинга — строго ниже сетки дисциплин, без сдвига 3 колонок */}
+          {data.coursingCriteria && (
+            <div
+              className={
+                data.activeDiscipline === 'coursing'
+                  ? 'mb-6'
+                  : 'mb-6 hidden lg:block'
+              }
+            >
+              <DogCoursingCriteriaSection
+                criteria={data.coursingCriteria}
+                breed={data.headerBreed}
+                dogName={data.displayName}
+              />
+            </div>
+          )}
         </div>
       )}
 

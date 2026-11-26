@@ -1,0 +1,211 @@
+import { useMemo, useState } from 'react'
+import { Compass } from 'lucide-react'
+import { CoursingRadarSvg } from './CoursingRadarSvg'
+import {
+  COURSING_CRITERIA_ITEMS,
+  buildCriteriaInsights,
+  type CriteriaCompareMode,
+  type DogCoursingCriteriaSummary,
+} from './coursingCriteriaTypes'
+
+interface DogCoursingCriteriaSectionProps {
+  criteria: DogCoursingCriteriaSummary
+  breed: string
+  dogName?: string
+}
+
+function pluralStarts(count: number): string {
+  const mod10 = count % 10
+  const mod100 = count % 100
+  if (mod100 >= 11 && mod100 <= 19) return `${count} состязаний`
+  if (mod10 === 1) return `${count} состязание`
+  if (mod10 >= 2 && mod10 <= 4) return `${count} состязания`
+  return `${count} состязаний`
+}
+
+function pluralHeats(count: number): string {
+  const mod10 = count % 10
+  const mod100 = count % 100
+  if (mod100 >= 11 && mod100 <= 19) return `${count} кругов`
+  if (mod10 === 1) return `${count} круг`
+  if (mod10 >= 2 && mod10 <= 4) return `${count} круга`
+  return `${count} кругов`
+}
+
+function formatDelta(delta: number): string {
+  const rounded = Math.round(delta * 10) / 10
+  if (rounded > 0) return `+${rounded.toFixed(1)}`
+  if (rounded < 0) return rounded.toFixed(1)
+  return '0.0'
+}
+
+function deltaToneClass(delta: number): string {
+  if (delta >= 0.2) return 'text-forest-700'
+  if (delta <= -0.2) return 'text-rose-700'
+  return 'text-charcoal-500'
+}
+
+export function DogCoursingCriteriaSection({
+  criteria,
+  breed,
+}: DogCoursingCriteriaSectionProps) {
+  const hasRoundsComparison = Boolean(criteria.run1_avg && criteria.run2_avg)
+  const [mode, setMode] = useState<CriteriaCompareMode>('breed')
+  const effectiveMode: CriteriaCompareMode =
+    mode === 'rounds' && hasRoundsComparison ? 'rounds' : 'breed'
+
+  const primaryTuple =
+    effectiveMode === 'rounds' && criteria.run2_avg
+      ? criteria.run2_avg
+      : criteria.dog_avg
+
+  const secondaryTuple =
+    effectiveMode === 'rounds' && criteria.run1_avg
+      ? criteria.run1_avg
+      : criteria.breed_avg
+
+  const primaryLabel = effectiveMode === 'rounds' ? '2-й круг' : 'Среднее собаки'
+  const secondaryLabel =
+    effectiveMode === 'rounds'
+      ? '1-й круг'
+      : criteria.is_global_baseline
+        ? 'Среднее по всем породам'
+        : 'Среднее по породе'
+
+  const insight = useMemo(() => buildCriteriaInsights(criteria, breed), [criteria, breed])
+
+  return (
+    <section
+      aria-labelledby="coursing-criteria-heading"
+      className="rounded-xl border border-forest-200 bg-white p-4 sm:p-5"
+    >
+      {/* Заголовок и переключатель режима */}
+      <div className="mb-4 flex flex-col gap-3 border-b border-old-money-100 pb-3 sm:flex-row sm:items-center sm:justify-between">
+        <div className="min-w-0">
+          <div className="flex items-center gap-2">
+            <Compass className="h-4 w-4 shrink-0 text-forest-700" strokeWidth={1.75} aria-hidden />
+            <h2
+              id="coursing-criteria-heading"
+              className="text-base sm:text-lg font-bold tracking-tight text-charcoal-800"
+            >
+              Разбор 5 критериев курсинга
+            </h2>
+          </div>
+          <p className="mt-0.5 text-xs text-charcoal-500">
+            {pluralStarts(criteria.events_count)} · {pluralHeats(criteria.heats_count)} с разбивкой по 20-балльной шкале
+          </p>
+        </div>
+
+        {hasRoundsComparison && (
+          <div
+            role="tablist"
+            aria-label="Режим сравнения критериев"
+            className="inline-flex self-start rounded-lg border border-old-money-200 bg-cream-50/90 p-0.5 sm:self-auto"
+          >
+            <button
+              type="button"
+              role="tab"
+              aria-selected={effectiveMode === 'breed'}
+              onClick={() => setMode('breed')}
+              className={`min-h-[44px] sm:min-h-[34px] rounded-md px-3 text-xs font-semibold transition-colors cursor-pointer touch-manipulation ${
+                effectiveMode === 'breed'
+                  ? 'border border-forest-200/80 bg-white text-forest-900 shadow-2xs'
+                  : 'text-charcoal-600 hover:text-charcoal-900'
+              }`}
+            >
+              К породе
+            </button>
+            <button
+              type="button"
+              role="tab"
+              aria-selected={effectiveMode === 'rounds'}
+              onClick={() => setMode('rounds')}
+              className={`min-h-[44px] sm:min-h-[34px] rounded-md px-3 text-xs font-semibold transition-colors cursor-pointer touch-manipulation ${
+                effectiveMode === 'rounds'
+                  ? 'border border-forest-200/80 bg-white text-forest-900 shadow-2xs'
+                  : 'text-charcoal-600 hover:text-charcoal-900'
+              }`}
+            >
+              1-й vs 2-й круг
+            </button>
+          </div>
+        )}
+      </div>
+
+      {/* Сетка: слева радар, справа 5 шкал */}
+      <div className="grid grid-cols-1 items-center gap-5 lg:grid-cols-[276px_minmax(0,1fr)] lg:gap-6">
+        <CoursingRadarSvg
+          primary={primaryTuple}
+          secondary={secondaryTuple}
+          primaryLabel={primaryLabel}
+          secondaryLabel={secondaryLabel}
+        />
+
+        <div className="space-y-3 min-w-0">
+          {COURSING_CRITERIA_ITEMS.map((item, idx) => {
+            const val = primaryTuple[idx]
+            const refVal = secondaryTuple[idx]
+            const delta = val - refVal
+            const fillPct = Math.max(0, Math.min(100, (val / 20) * 100))
+            const refPct = Math.max(0, Math.min(100, (refVal / 20) * 100))
+
+            return (
+              <div key={item.key} className="space-y-1">
+                <div className="flex items-center justify-between gap-2 text-xs sm:text-sm">
+                  <div className="flex min-w-0 items-center gap-2" title={item.summary}>
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md border border-forest-200/80 bg-forest-50 font-mono text-xs font-bold text-forest-800">
+                      {item.key}
+                    </span>
+                    <span className="truncate font-medium text-charcoal-800">
+                      {item.label}
+                    </span>
+                  </div>
+
+                  <div className="flex shrink-0 items-baseline gap-2 font-mono tabular-nums">
+                    <span className="text-sm font-bold text-charcoal-900">
+                      {val.toFixed(1)}
+                      <span className="text-[11px] font-normal text-charcoal-400"> / 20</span>
+                    </span>
+                    <span className={`w-11 text-right text-xs font-semibold ${deltaToneClass(delta)}`}>
+                      {formatDelta(delta)}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Спокойная шкала прогресса с отметкой уровня сравнения */}
+                <div className="relative h-2 w-full rounded-full bg-sand-100">
+                  <div
+                    className="h-full rounded-full bg-forest-600/80 transition-[width] duration-300"
+                    style={{ width: `${fillPct.toFixed(1)}%` }}
+                  />
+                  <div
+                    className="absolute -top-0.5 h-3 w-0.5 rounded-full bg-camel-700"
+                    style={{ left: `calc(${refPct.toFixed(1)}% - 1px)` }}
+                    title={`${secondaryLabel}: ${refVal.toFixed(1)} / 20`}
+                  />
+                </div>
+              </div>
+            )
+          })}
+        </div>
+      </div>
+
+      {/* Спокойная итоговая строка фактов */}
+      <div className="mt-4 flex flex-wrap items-center justify-between gap-x-4 gap-y-1 rounded-lg border border-old-money-200/80 bg-cream-50/60 px-3 py-2 text-xs text-charcoal-700">
+        <span>
+          Сильная сторона:{' '}
+          <strong className="font-semibold text-charcoal-900">
+            {insight.strongestLabel} ({insight.strongestScore.toFixed(1)} / 20
+            {insight.strongestDelta >= 0.1
+              ? `, +${insight.strongestDelta.toFixed(1)} ${criteria.is_global_baseline ? 'к среднему' : 'к породе'}`
+              : ''}
+            )
+          </strong>
+        </span>
+        {insight.roundNote && (
+          <span className="text-charcoal-600">{insight.roundNote}</span>
+        )}
+      </div>
+    </section>
+  )
+}

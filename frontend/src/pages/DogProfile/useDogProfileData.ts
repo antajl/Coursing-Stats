@@ -17,6 +17,7 @@ import {
 import { useYandexGoal } from '../../components/YandexMetrica'
 import { buildEventResultsUrlMap } from '../../lib/procoursingLinks'
 import type { DogJudgesStats } from './DogJudgesSection'
+import type { DogCoursingCriteriaSummary } from './CoursingCriteria/coursingCriteriaTypes'
 import {
   HISTORY_DEFAULT,
   computeSpeedStats,
@@ -214,6 +215,7 @@ export function useDogProfileData() {
   )
 
   const coursing = (dog?.coursing_stats || {}) as Record<string, any>
+  const coursingCriteria = (dog?.coursing_criteria as DogCoursingCriteriaSummary | undefined) || null
   const racing = (dog?.racing_stats || {}) as Record<string, any>
   const judgeStats = (dog?.judge_stats as DogJudgesStats | undefined) || null
   const hasCoursingData = (coursing.total_starts || 0) > 0
@@ -403,6 +405,7 @@ export function useDogProfileData() {
     hasCoursingData,
     hasCourseMedals,
     coursing,
+    coursingCriteria,
     coursingEvents,
     hasRacingData,
     hasRacingMedals,

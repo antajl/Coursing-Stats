@@ -7,6 +7,8 @@ import { parseJudgeNames } from '../../src/lib/judge-names';
 import { judgeDetailKey } from '../../src/lib/static-api';
 import { PARTICIPATION_STATUSES_SQL, RACING_EXCLUDED_STATUSES_SQL } from '../../src/lib/racing-status';
 import { cdnPackShardKey, type DogProfilePackFile } from '../../lib/cdn-packs';
+import { buildDogCoursingCriteriaMap } from '../../lib/coursing-criteria';
+import { canonicalBreed } from '../../src/lib/breed-mapping';
 import { loadDogAggressionMap } from '../../src/lib/aggression';
 import { INDEXES_DIR } from './shared';
 
@@ -733,6 +735,10 @@ export function buildDogProfiles(db: Database.Database) {
   const racingSpeedByDog = byDog(racingSpeedRows);
   const qualificationsByDog = byDog(qualificationRows);
   const competitionsByDog = byDog(competitionRows);
+  const coursingCriteriaByDog = buildDogCoursingCriteriaMap(coursingRows, (id) => {
+    const rawBreed = metadataById.get(id)?.breed ?? dogsById.get(id)?.breed ?? '';
+    return canonicalBreed(rawBreed) || rawBreed.trim().toUpperCase();
+  });
 
   const outDir = path.join(INDEXES_DIR, 'dog-profiles');
   fs.mkdirSync(outDir, { recursive: true });
@@ -849,6 +855,8 @@ export function buildDogProfiles(db: Database.Database) {
     file_by_id: string;
     file_by_key: string;
     competition_count: number;
+    sex?: string | null;
+    aggression_count?: number;
   }>();
 
   if (fs.existsSync(dogsIndexPath)) {
@@ -884,6 +892,7 @@ export function buildDogProfiles(db: Database.Database) {
 
     const dogCompetitions = competitionsByDog.get(dogId) ?? [];
     const coursing_stats = buildCoursingStats(coursingByDog.get(dogId) ?? []);
+    const coursing_criteria = coursingCriteriaByDog.get(dogId) ?? null;
     const racing_stats = buildRacingStats(racingMedalsByDog.get(dogId) ?? [], racingSpeedByDog.get(dogId) ?? []);
     const judge_stats = buildDogJudgesStats(dogCompetitions);
     const titles = aggregateQualificationTitles(qualificationsByDog.get(dogId) ?? []);
@@ -985,6 +994,7 @@ export function buildDogProfiles(db: Database.Database) {
         pedigree_url: dog.pedigree_url,
         photo_url: (fromFile as any)?.photo_url ?? null,
         coursing_stats,
+        ...(coursing_criteria ? { coursing_criteria } : {}),
         racing_stats,
         judge_stats,
         titles,
