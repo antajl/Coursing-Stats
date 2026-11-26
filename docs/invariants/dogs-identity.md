@@ -101,6 +101,11 @@ All `dog_id` in `competitions` **must** have `data/v1/dogs/by-id/{id}.json` (no 
 
 В блоке официальных чемпионских званий шапки профиля собаки (`DogProfileAwardsBar`, `DogProfileHeader`) выводятся строго подтвержденные дипломы РКФ и FCI (`isOfficialDogTitleToken`: `ГЧРКФ РК`, `ЧР`, `ЧРКФ`, `ЧР РК` и др.). Внутренние рейтинговые метрики платформы (например, «Топ-1 в бегах», «Топ-2 в породе») строго запрещено размещать внутри блока дипломов или отдельной строкой под ними: 1) Внутренние расчетные баллы сайта не равны государственным и международным кинологическим дипломам и девальвируют их статус; 2) Сезонный рейтинг исчерпывающе представлен в карточке дисциплины (`#N в 2026` с медалями) и отдельной вкладке «Достижения». При отсутствии официальных титулов блок наград скрывается целиком, исключая пустые рамки.
 
+### Global 256-Shard Prefix Search & Owner PII Removal
+
+1. **Исключение персональных данных владельцев (`no_owner_pii`):** Публичный сайт, протоколы выставок/соревнований (`shows/exhibitions/*.json`, `competitions/*.json`), карточки `dogs/by-id/*.json`, CDN-паки `indexes/dog-profiles/pack-*.json`, а также UI (`ShowExhibitionDetail`, `ShowJudgeBreedDogsList`) не хранят и не отображают имена владельцев (`owner` удалено / `null`). Отсутствие поля `owner` контролируется гейтом `no_owner_pii` в `verify-publish-gates.ts`.
+2. **Единый 256-шардовый префиксный поиск (`search-shards`):** Глобальный поиск по всей базе (в т.ч. вне топ-рейтинга `ShowRanking.tsx` и `QuickSearchModal`) использует `data/v1/indexes/search-shards/{00..ff}.json` (генератор `buildSearchShards` в `build-all-data.ts`). Коды `SearchRecordKind` (`backend/lib/search-prefix.ts`): `'s'` спорт, `'x'` только выставки, `'b'` спорт+выставки, `'d'` Донино, `'js'`/`'jx'` судьи. Для фильтрации выставочных собак допускаются строго `hit.kind === 'x' || hit.kind === 'b'`.
+
 ---
 
 ## Domain Forbidden Rules

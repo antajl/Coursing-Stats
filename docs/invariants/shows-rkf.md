@@ -139,6 +139,10 @@ description: Правила выставок РКФ: 56k статических 
 2) **Актуальные схемы РКФ (ред. 18.06.2025, с 01.07.2025):** В расчёте (`showEvaluator.ts`, `showClubEvaluator.ts`) учитываются `ЮЧР` (3 `JCAC`), `ЮЧРКФ` (1 `ЮЧРКФ` или 2 `ЮЧФ`), `ЮГЧР`, `ВЧР` (3 `VCAC`), `ВЧРКФ`, `ВГЧР`, льготы для `ЧР` (4 `CAC` при наличии `ЮЧР` или на `CACIB` / `ЧРКФ ОС`, 1 `CAC` при победе на «России»/«Евразии»), удвоение сертификатов на главных шоу, зачёт `2 R.CAC = 1 CAC` / `2 R.JCAC = 1 JCAC` / `2 R.VCAC = 1 VCAC` и `2 СС = 1 КЧК` (не 3). В «В шаге от титула» попадают только титулы с `progressPercent > 0`.
 3) **Гарантия раскрытия пояснений (`titleExplanations`):** Модуль `explanations.ts` обязан заполнять `titleExplanations[title]` и `titleExplanations['show:' + title]` для каждого официального титула (включая пришедшие напрямую из `showTitles`, например `ЮЧРКФ`), а `CompletedTitlesRegistry.tsx` обязан иметь резервный текст, чтобы клик по строке титула никогда не раскрывал пустой блок.
 
+### Show Title Deduplication & Per-Year Merging (`show-detail-merge`)
+
+При сборке `shows/indexes/dog-details/*.json` и слиянии годовых агрегатов запрещено повторно суммировать накопленные `titles` поверх существующих счётчиков (защита от 2x-инфляции титулов). Слияние обязано выполняться строго через `mergeYearDogIntoDetail` (`backend/lib/show-detail-merge.ts`), а сверка шардов — через `reconcile-dog-detail-titles.ts` по фактическим результатам рингов.
+
 ---
 
 ## Domain Forbidden Rules

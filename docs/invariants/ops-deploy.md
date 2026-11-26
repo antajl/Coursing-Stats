@@ -202,6 +202,13 @@ Workers + Grammy + KV; aggregates only
    - Вкладки `/tracker` используют единый `MobileSubNavTabs` (`TrackerSubNav.tsx`), статус и кнопка «Аккаунт» (`TrackerSyncBar.tsx`) показываются только внутри вкладки «Заявки» при активной сессии, модалки рендерятся через `createPortal(..., document.body)` с `z-[100]`, а в `TrackerCompetitionRow` свернутая строка содержит только дату в 1 строку, название клуба (раскрывает спойлер), чип `Протокол`, статус, колокольчик и шеврон.
    - Пароли при логине в `rkf.online` не обрезаются через `.trim()` (`worker-auth.ts`, `rkf-api.ts`, `TrackerAuthPasswordForm.tsx`), а `buildCorsHeaders` в `worker.ts` допускает `*.trycloudflare.com` для локальных Vite-туннелей.
 
+### Strict Frontend Build, CI Tests & Unified Bot Tracker Security
+
+1. **Строгий `tsc --noEmit` и CI test gate:** Команда `build` в `frontend/package.json` строго выполняет `tsc --noEmit && vite build`, а `.github/workflows/deploy.yml` запускает полный прогон `yarn test` сразу после `Verify Publish Gates`.
+2. **Единый календарь РКФ (`yarn sync-tracker`):** Файл `rkf-competitions-2026.json` синхронизируется во все клиенты (`bot/src/tracker/`, `rkf-tracker/{web,extension,desktop,bot}/`) строго через `rkf-tracker/shared/sync-tracker-calendar.cjs`, без унификации визуального дизайна разных платформ (сайт vs расширение vs Windows Desktop).
+3. **Безопасность и лимиты объединённого Telegram-бота (`bot/src/tracker/`):** Токены `rkfToken` шифруются в KV алгоритмом AES-GCM (`enc:v1:`), WebApp-авторизация проверяется по HMAC-SHA256, а крон-опрос (`*/15 * * * *`) ограничен round-robin квотой `MAX_RKF_POLLS_PER_CRON = 8` (пакеты по 4).
+4. **Стиль маркеров в Telegram-боте:** Допустимы только сдержанные функциональные маркеры (`🥇🥈🥉🏆📅📋🔍🏅⭐`), запрещены избыточные декоративные эмодзи (`🎪`, `❌`, `🏠`, `⏳`, `💡`) и неработающие пункты меню (кнопка `rating_elo` удалена). Запрещено смешивать UI-эмодзи сайта (в веб-фронтенде по-прежнему строго 0 эмодзи).
+
 ---
 
 ## Domain Forbidden Rules
