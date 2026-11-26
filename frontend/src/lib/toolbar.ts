@@ -1,5 +1,5 @@
 export const TOOLBAR_CHIP =
-  'inline-flex h-8 items-center rounded-full px-3.5 text-xs font-semibold whitespace-nowrap'
+  "relative inline-flex h-8 items-center rounded-full px-3.5 text-xs font-semibold whitespace-nowrap touch-manipulation before:absolute before:-inset-y-1.5 before:inset-x-0 before:content-[''] md:before:hidden"
 
 export const TOOLBAR_CHIP_IDLE =
   'cs-glass-pill cursor-pointer'

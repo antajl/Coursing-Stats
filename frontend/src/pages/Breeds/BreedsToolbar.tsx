@@ -40,7 +40,7 @@ export const BreedsToolbar: React.FC<BreedsToolbarProps> = ({
   return (
     <>
       {/* 1. Мобильная панель фильтров: Поиск + Группа FCI ▾ + Порода ▾ */}
-      <div className="flex items-center gap-1.5 w-full md:hidden py-1 overflow-x-auto no-scrollbar">
+      <div className="flex items-center gap-1.5 w-full md:hidden py-1.5 overflow-x-auto no-scrollbar">
         {/* Поиск */}
         <div className="shrink-0">
           <ToolbarSearch

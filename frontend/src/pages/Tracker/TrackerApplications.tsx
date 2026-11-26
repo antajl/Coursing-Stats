@@ -150,7 +150,7 @@ export function TrackerApplications({
         </div>
       )}
       {/* 1. Unified Single-Row Toolbar (Matching ShowCalendarToolbar & EventsToolbar) */}
-      <div className="flex items-center gap-1.5 w-full min-w-0 overflow-x-auto no-scrollbar py-0.5">
+      <div className="flex items-center gap-1.5 w-full min-w-0 overflow-x-auto no-scrollbar py-1.5">
         <ToolbarSearch
           value={query}
           onChange={setQuery}

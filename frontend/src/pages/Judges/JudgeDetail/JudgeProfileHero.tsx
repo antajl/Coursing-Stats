@@ -126,34 +126,40 @@ export const JudgeProfileHero: React.FC<JudgeProfileHeroProps> = ({
       {/* 2. Карточка сводной статистики соревнований */}
       <div className="min-w-0 rounded-2xl border border-old-money-200/80 bg-white p-4 sm:p-5 md:p-6 shadow-xs">
         {/* Primary 4 Key Statistics Cards */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-        <div className="flex items-center justify-between rounded-xl border border-old-money-200/80 bg-cream-50/50 p-3.5 sm:p-4 text-left">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-wider text-charcoal-500">
-              Средний балл
-            </p>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between rounded-xl border border-old-money-200/80 bg-cream-50/50 p-3 sm:p-4 text-left min-w-0 overflow-hidden">
+          <div className="min-w-0 w-full sm:w-auto">
+            <div className="flex items-center justify-between gap-1">
+              <p className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-charcoal-500 truncate">
+                Средний балл
+              </p>
+              <Award className="h-4 w-4 text-camel-700/70 sm:hidden shrink-0" aria-hidden />
+            </div>
             <div className="mt-1 flex items-baseline gap-1.5">
-              <p className={`text-2xl sm:text-3xl font-bold tabular-nums ${strictnessBadge.textClass}`}>
+              <p className={`text-xl sm:text-2xl lg:text-3xl font-bold tabular-nums leading-tight ${strictnessBadge.textClass}`}>
                 {avgScore != null ? (avgScore * 5).toFixed(1) : '—'}
               </p>
-              <span className="text-[11px] font-medium text-charcoal-400">/ 100 б.</span>
+              <span className="text-[11px] font-medium text-charcoal-400 whitespace-nowrap">/ 100 б.</span>
             </div>
           </div>
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-cream-200/60 text-camel-700">
+          <div className="hidden sm:flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-cream-200/60 text-camel-700">
             <Award className="h-5 w-5" />
           </div>
         </div>
 
-        <div className="flex items-center justify-between rounded-xl border border-old-money-200/80 bg-cream-50/50 p-3.5 sm:p-4 text-left">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-wider text-charcoal-500">
-              Листов оценок
-            </p>
-            <p className="mt-1 text-2xl sm:text-3xl font-bold tabular-nums text-charcoal-900">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between rounded-xl border border-old-money-200/80 bg-cream-50/50 p-3 sm:p-4 text-left min-w-0 overflow-hidden">
+          <div className="min-w-0 w-full sm:w-auto">
+            <div className="flex items-center justify-between gap-1">
+              <p className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-charcoal-500 truncate">
+                Листов <span className="hidden sm:inline">оценок</span>
+              </p>
+              <FileText className="h-4 w-4 text-camel-700/70 sm:hidden shrink-0" aria-hidden />
+            </div>
+            <p className="mt-1 text-xl sm:text-2xl lg:text-3xl font-bold tabular-nums leading-tight text-charcoal-900">
               {totalEvals || '—'}
             </p>
           </div>
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-cream-200/60 text-camel-700">
+          <div className="hidden sm:flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-cream-200/60 text-camel-700">
             <FileText className="h-5 w-5" />
           </div>
         </div>
@@ -161,17 +167,20 @@ export const JudgeProfileHero: React.FC<JudgeProfileHeroProps> = ({
         <button
           type="button"
           onClick={() => onSelectTab('events')}
-          className="group flex items-center justify-between rounded-xl border border-old-money-200/80 bg-cream-50/50 p-3.5 sm:p-4 text-left transition-all hover:border-camel-300 hover:bg-cream-100/70 hover:shadow-2xs"
+          className="group flex flex-col sm:flex-row sm:items-center justify-between rounded-xl border border-old-money-200/80 bg-cream-50/50 p-3 sm:p-4 text-left transition-all hover:border-camel-300 hover:bg-cream-100/70 hover:shadow-2xs cursor-pointer min-w-0 overflow-hidden"
         >
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-wider text-charcoal-500">
-              Соревнований
-            </p>
-            <p className="mt-1 text-2xl sm:text-3xl font-bold tabular-nums text-charcoal-900 group-hover:text-camel-800 transition-colors">
+          <div className="min-w-0 w-full sm:w-auto">
+            <div className="flex items-center justify-between gap-1">
+              <p className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-charcoal-500 truncate">
+                Соревнований
+              </p>
+              <Calendar className="h-4 w-4 text-camel-700/70 sm:hidden shrink-0" aria-hidden />
+            </div>
+            <p className="mt-1 text-xl sm:text-2xl lg:text-3xl font-bold tabular-nums leading-tight text-charcoal-900 group-hover:text-camel-800 transition-colors">
               {eventCount}
             </p>
           </div>
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-cream-200/60 text-camel-700 group-hover:bg-camel-200/60 transition-colors">
+          <div className="hidden sm:flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-cream-200/60 text-camel-700 group-hover:bg-camel-200/60 transition-colors">
             <Calendar className="h-5 w-5" />
           </div>
         </button>
@@ -179,17 +188,20 @@ export const JudgeProfileHero: React.FC<JudgeProfileHeroProps> = ({
         <button
           type="button"
           onClick={() => onSelectTab('breeds')}
-          className="group flex items-center justify-between rounded-xl border border-old-money-200/80 bg-cream-50/50 p-3.5 sm:p-4 text-left transition-all hover:border-camel-300 hover:bg-cream-100/70 hover:shadow-2xs"
+          className="group flex flex-col sm:flex-row sm:items-center justify-between rounded-xl border border-old-money-200/80 bg-cream-50/50 p-3 sm:p-4 text-left transition-all hover:border-camel-300 hover:bg-cream-100/70 hover:shadow-2xs cursor-pointer min-w-0 overflow-hidden"
         >
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-wider text-charcoal-500">
-              Пород
-            </p>
-            <p className="mt-1 text-2xl sm:text-3xl font-bold tabular-nums text-charcoal-900 group-hover:text-camel-800 transition-colors">
+          <div className="min-w-0 w-full sm:w-auto">
+            <div className="flex items-center justify-between gap-1">
+              <p className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-charcoal-500 truncate">
+                Пород
+              </p>
+              <Layers className="h-4 w-4 text-camel-700/70 sm:hidden shrink-0" aria-hidden />
+            </div>
+            <p className="mt-1 text-xl sm:text-2xl lg:text-3xl font-bold tabular-nums leading-tight text-charcoal-900 group-hover:text-camel-800 transition-colors">
               {breedCount}
             </p>
           </div>
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-cream-200/60 text-camel-700 group-hover:bg-camel-200/60 transition-colors">
+          <div className="hidden sm:flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-cream-200/60 text-camel-700 group-hover:bg-camel-200/60 transition-colors">
             <Layers className="h-5 w-5" />
           </div>
         </button>

@@ -133,8 +133,8 @@ export default function TopDogsFilters({
 
   return (
     <div className="mb-2.5 sm:mb-4" ref={dropdownRef}>
-      {/* 1. Мобильная консоль: единый компактный ряд (Поиск + Фильтры слева, Инфо + Дисциплина справа) */}
-      <div className="flex items-center gap-1.5 w-full lg:hidden mb-2.5 overflow-x-auto no-scrollbar py-0.5">
+      {/* 1. Мобильная и планшетная консоль (< 1024px): единый компактный ряд */}
+      <div className="flex items-center gap-1.5 w-full lg:hidden mb-2.5 overflow-x-auto no-scrollbar py-1.5">
         {/* Поиск */}
         <ToolbarSearch
           value={searchQuery}

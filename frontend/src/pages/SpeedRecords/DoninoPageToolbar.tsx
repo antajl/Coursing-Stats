@@ -150,8 +150,8 @@ export default function DoninoPageToolbar({
         topRowClassName="flex-nowrap"
         filters={
           <div className="w-full min-w-0">
-            {/* Мобильная консоль: единый компактный ряд */}
-            <div className="flex items-center gap-1.5 w-full md:hidden overflow-x-auto no-scrollbar py-1">
+            {/* Мобильная и планшетная консоль (< 1024px): единый компактный ряд */}
+            <div className="flex items-center gap-1.5 w-full lg:hidden overflow-x-auto no-scrollbar py-1.5">
               <ToolbarSearch
                 value={searchQuery}
                 onChange={onSearchChange}
@@ -225,8 +225,8 @@ export default function DoninoPageToolbar({
 
             </div>
 
-            {/* Десктопная панель фильтров: второй ряд */}
-            <div className="hidden md:flex items-center gap-2 w-full min-w-0 py-1">
+            {/* Десктопная панель фильтров (>= 1024px): второй ряд */}
+            <div className="hidden lg:flex items-center gap-2 w-full min-w-0 py-1">
               <ToolbarSearch
                 value={searchQuery}
                 onChange={onSearchChange}

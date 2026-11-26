@@ -174,10 +174,10 @@ export default function HomeHeroStage({
         </picture>
       </div>
 
-      {/* Desktop Hero Overlay (>= 768px): Unified flex row prevents any overlap between logo and metrics */}
+      {/* Desktop Hero Overlay (>= 1024px): Unified flex row prevents any overlap between logo and metrics */}
       <div
         ref={desktopOverlayRef}
-        className={`hidden md:block ${isStaticDashboard ? 'md:absolute md:top-1.5 lg:top-2 2xl:top-2.5 3xl:top-5' : 'md:fixed md:top-20'} inset-x-0 z-20 will-change-opacity pointer-events-none`}
+        className={`hidden lg:block ${isStaticDashboard ? 'lg:absolute lg:top-2 2xl:top-2.5 3xl:top-5' : 'lg:fixed lg:top-20'} inset-x-0 z-20 will-change-opacity pointer-events-none`}
       >
         <div
           className={`w-full max-w-[2400px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 flex justify-between items-start gap-4 lg:gap-6 ${

@@ -36,7 +36,7 @@ export default function ToolbarSearch({
   const trigger = (
     <button
       type="button"
-      className={`inline-flex h-8 shrink-0 items-center justify-center rounded-full cursor-pointer ${
+      className={`relative inline-flex h-8 shrink-0 items-center justify-center rounded-full cursor-pointer touch-manipulation before:absolute before:-inset-y-1.5 before:-inset-x-1 before:content-[''] md:before:hidden ${
         hasValue
           ? 'cs-glass-pill-active px-3 gap-1.5 font-semibold'
           : isOpen

@@ -51,8 +51,8 @@ export function ShowJudgesToolbar({
       topRowClassName="flex-nowrap"
       filters={
         <div className="w-full min-w-0">
-          {/* Мобильная компактная строка (32px): Поиск + Год + Классы + Порода + Сброс */}
-          <div className="flex sm:hidden items-center gap-1.5 w-full min-w-0 overflow-x-auto no-scrollbar py-0.5">
+          {/* Мобильная компактная строка (< 768px): Поиск + Год + Классы + Порода */}
+          <div className="flex md:hidden items-center gap-1.5 w-full min-w-0 overflow-x-auto no-scrollbar py-1.5">
             <ToolbarSearch
               value={searchQuery}
               onChange={setSearchQuery}
@@ -100,8 +100,8 @@ export function ShowJudgesToolbar({
             </div>
           </div>
 
-          {/* Десктопная строка: Поиск + Год + Классы + О судействе + Сброс + Разделитель | + QuickBreedBar edge-to-edge */}
-          <div className="hidden sm:flex sm:items-center gap-2 w-full min-w-0">
+          {/* Десктопная строка (>= 768px): Поиск + Год + Классы + О судействе + Разделитель | + QuickBreedBar edge-to-edge */}
+          <div className="hidden md:flex md:items-center gap-2 w-full min-w-0">
             <div className="flex items-center gap-1.5 shrink-0">
               <ToolbarSearch
                 value={searchQuery}

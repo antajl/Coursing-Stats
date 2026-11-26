@@ -98,7 +98,7 @@ function FavoriteCardStar({
         e.stopPropagation()
         onToggle(dogId, meta)
       }}
-      className={`absolute right-2 top-2 z-10 rounded-full bg-white/90 p-1.5 shadow-sm transition-all duration-150 hover:bg-cream-100 active:scale-90 ${
+      className={`absolute right-2 bottom-2 z-10 flex h-7 w-7 items-center justify-center rounded-full bg-white/90 shadow-sm transition-all duration-150 hover:bg-cream-100 active:scale-90 touch-manipulation before:absolute before:-inset-2 before:content-[''] ${
         isFav ? 'opacity-100' : 'opacity-40 sm:opacity-0 sm:group-hover:opacity-100'
       }`}
       title={isFav ? 'Удалить из избранного' : 'Добавить в избранное'}
@@ -256,7 +256,7 @@ function ShowDogCardInner({
         {/* Мобильная раскладка (< sm) */}
         <div className="flex sm:hidden flex-row items-stretch w-full min-h-[4rem] py-0.5 overflow-hidden">
           <div className="flex min-w-0 flex-1 flex-col justify-between gap-0.5 overflow-hidden">
-            <div className="pr-8 min-w-0">
+            <div className="min-w-0">
               <div className="flex items-center gap-1.5 min-w-0">
                 <OwnerCrownName
                   name={primary}
@@ -322,7 +322,7 @@ function ShowDogCardInner({
                   <span className="text-[10px] text-charcoal-400">Участник рингов</span>
                 ) : null}
               </div>
-              <div className="flex items-center justify-end gap-1 text-[11px] font-semibold text-charcoal-700 tabular-nums shrink-0 min-w-[2.25rem]">
+              <div className={`flex items-center justify-end gap-1 text-[11px] font-semibold text-charcoal-700 tabular-nums shrink-0 min-w-[2.25rem] ${onToggleFavorite ? 'mr-8' : ''}`}>
                 {isMonoScope ? (
                   <>
                     <span className="tabular-nums text-right font-bold text-camel-700">{monoAwardsCount}</span>

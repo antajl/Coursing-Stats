@@ -73,7 +73,7 @@ export default function HomeStatsPills({ stats, showStats, loading }: HomeStatsP
   }
 
   return (
-    <div className="flex flex-col gap-1.5 3xl:gap-2 w-full max-w-full pointer-events-auto select-none">
+    <div className="flex flex-col sm:grid sm:grid-cols-2 gap-1.5 sm:gap-2.5 3xl:gap-2 w-full max-w-full pointer-events-auto select-none">
       {/* Спорт */}
       {stats && (
         <Link

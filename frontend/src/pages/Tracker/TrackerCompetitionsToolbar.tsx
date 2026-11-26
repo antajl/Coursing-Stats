@@ -51,7 +51,7 @@ export function TrackerCompetitionsToolbar({
   const activeDisciplineLabel = disciplineItems.find((d) => d.key === discipline)?.label || discipline;
 
   return (
-    <div className="flex items-center gap-1.5 w-full min-w-0 overflow-x-auto no-scrollbar py-0.5">
+    <div className="flex items-center gap-1.5 w-full min-w-0 overflow-x-auto no-scrollbar py-1.5">
       {/* 1. Compact Search Pill */}
       <ToolbarSearch
         value={query}

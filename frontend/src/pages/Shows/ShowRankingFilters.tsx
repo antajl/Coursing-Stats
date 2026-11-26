@@ -183,8 +183,8 @@ export default function ShowRankingFilters({
         topRowClassName="flex-nowrap"
         filters={
           <div className="w-full">
-            {/* Мобильная панель фильтров: компактный единый ряд 32px */}
-            <div className="flex md:hidden items-center gap-1.5 w-full min-w-0 overflow-x-auto no-scrollbar py-0.5">
+            {/* Мобильная и планшетная панель фильтров (< 1024px): компактный единый ряд */}
+            <div className="flex lg:hidden items-center gap-1.5 w-full min-w-0 overflow-x-auto no-scrollbar py-1.5">
               <ToolbarSearch
                 value={searchQuery}
                 onChange={onSearchChange}
@@ -251,8 +251,8 @@ export default function ShowRankingFilters({
               </div>
             </div>
 
-            {/* Десктопная строка: Поиск + Год + Пол + О рейтинге + Сброс + Разделитель + Порода (QuickBreedBar) */}
-            <div className="hidden md:flex md:items-center gap-2 w-full min-w-0">
+            {/* Десктопная строка (>= 1024px): Поиск + Год + Пол + Возраст + О рейтинге + Разделитель + Порода (QuickBreedBar) */}
+            <div className="hidden lg:flex lg:items-center gap-2 w-full min-w-0">
               <div className="flex items-center gap-1.5 shrink-0">
                 <ToolbarSearch
                   value={searchQuery}
@@ -295,12 +295,12 @@ export default function ShowRankingFilters({
 
               {/* Разделитель между левыми контролами и породами на десктопе */}
               <div
-                className="hidden md:block h-5 w-px bg-old-money-300 shrink-0 mx-0.5"
+                className="hidden lg:block h-5 w-px bg-old-money-300 shrink-0 mx-0.5"
                 aria-hidden="true"
               />
 
               {/* Выбор породы QuickBreedBar — всегда самая правая часть фильтра до края страницы */}
-              <div className="hidden md:block flex-1 min-w-0">
+              <div className="hidden lg:block flex-1 min-w-0">
                 <QuickBreedBar
                   selectedBreed={filterBreed}
                   onSelectBreed={onBreedChange}

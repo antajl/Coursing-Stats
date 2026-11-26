@@ -8,8 +8,8 @@
   }
 }
 
-/* Статичный дашборд главной страницы — страница не скроллится ТОЛЬКО на десктопе (>= 768px) */
-@media (min-width: 768px) {
+/* Статичный дашборд главной страницы — страница не скроллится ТОЛЬКО на десктопе (>= 1024px) */
+@media (min-width: 1024px) {
   html.home-hero-locked,
   html.home-hero-locked body,
   html.home-static-locked,
@@ -82,14 +82,14 @@ main:has(.home-v2) {
   z-index: 1;
   padding-bottom: 2rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .home-v2-stage {
     height: calc(100dvh - var(--cs-nav-offset));
     min-height: 600px;
     padding-bottom: 0;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .home-v2-stage--closed,
   .home-v2-static .home-v2-stage {
     display: none !important;

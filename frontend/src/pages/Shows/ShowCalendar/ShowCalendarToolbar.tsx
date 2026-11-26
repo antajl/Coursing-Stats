@@ -68,8 +68,8 @@ export function ShowCalendarToolbar({
 }: ShowCalendarToolbarProps) {
   return (
     <div className="w-full min-w-0">
-      {/* Мобильная строка (32px): Поиск + Год/Месяц + Локация + Порода + (i) */}
-      <div className="flex md:hidden items-center gap-1.5 w-full min-w-0 overflow-x-auto no-scrollbar py-0.5">
+      {/* Мобильная строка (< 768px): Поиск + Год/Месяц + Локация + Порода + (i) */}
+      <div className="flex md:hidden items-center gap-1.5 w-full min-w-0 overflow-x-auto no-scrollbar py-1.5">
         <ToolbarSearch
           value={searchQuery}
           onChange={onSearchChange}

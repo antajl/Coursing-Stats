@@ -15,10 +15,10 @@ export default function Home() {
   const pageRef = useRef<HTMLDivElement>(null)
   const homeData = useHomeData()
 
-  // Lock root scroll on single-screen static dashboard ONLY on desktop (>= 768px)
+  // Lock root scroll on single-screen static dashboard ONLY on desktop (>= 1024px)
   useEffect(() => {
     const applyLock = () => {
-      if (window.innerWidth >= 768) {
+      if (window.innerWidth >= 1024) {
         document.documentElement.classList.add('home-static-locked')
       } else {
         document.documentElement.classList.remove('home-static-locked')
@@ -107,7 +107,7 @@ export default function Home() {
       <JsonLd data={webSiteSchema} />
 
       {/* =========================================================================
-          DESKTOP (>= 768px): Single-Screen Static Executive Dashboard
+          DESKTOP (>= 1024px): Single-Screen Static Executive Dashboard
       ========================================================================= */}
       <HomeHeroStage
         isStaticDashboard={true}
@@ -127,7 +127,7 @@ export default function Home() {
         }
         metrics={
           /* Left block: Double Podium Rankings */
-          <div className="pointer-events-auto shrink-0 w-full md:w-[clamp(900px,53vw,1040px)] 3xl:w-[clamp(980px,58vw,1360px)] max-w-[calc(100vw-340px)] mr-auto">
+          <div className="pointer-events-auto shrink-0 w-full lg:w-[clamp(900px,53vw,1040px)] 3xl:w-[clamp(980px,58vw,1360px)] max-w-[calc(100vw-340px)] mr-auto">
             <SeasonTopSection
               competitionSlides={competitionSlides}
               racingSlides={racingSlides}
@@ -145,9 +145,9 @@ export default function Home() {
       />
 
       {/* =========================================================================
-          MOBILE (< 768px): Natural, touch-friendly, scrollable flow
+          MOBILE & TABLET (< 1024px): Natural, touch-friendly, scrollable flow
       ========================================================================= */}
-      <div className="md:hidden flex flex-col pb-6">
+      <div className="lg:hidden flex flex-col pb-6">
         {/* Hero Banner: Borzoi in Motion across full width (Native, Smooth bottom fade) */}
         <div
           className="relative w-full h-[140px] xs:h-[155px] sm:h-[180px] overflow-hidden select-none pointer-events-none mb-1"
