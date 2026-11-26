@@ -2,6 +2,7 @@ import * as fs from 'fs'
 import * as path from 'path'
 import { writeFeaturedShowsFile } from './shows/build-featured-shows'
 import { fileURLToPath } from 'url'
+import { mergeYearDogIntoDetail } from '../lib/show-detail-merge'
 import {
   bestShowAward,
   compareShowDogs,
@@ -1557,25 +1558,7 @@ async function main() {
       if (!existing) {
         allDetailDogs.set(dog.id, dog)
       } else {
-        // Добавляем выставки из годового среза, если их ещё нет в истории
-        const existingExIds = new Set(existing.history.map((h) => h.exhibition_id))
-        for (const h of dog.history) {
-          if (!existingExIds.has(h.exhibition_id)) {
-            existing.history.push(h)
-            existingExIds.add(h.exhibition_id)
-            existing.total_shows = (existing.total_shows || 0) + 1
-          }
-        }
-        // Мержим титулы и обновляем лучшую награду и оценку
-        existing.titles = mergeShowTitles(existing.titles, dog.titles)
-        const recalculatedScore = showRankScore(existing.titles)
-        if (recalculatedScore > (existing.rank_score ?? 0)) {
-          existing.rank_score = recalculatedScore
-        }
-        existing.best_award = bestShowAward(existing.titles)
-        if (dog.best_grade && (!existing.best_grade || dog.best_grade !== existing.best_grade)) {
-          existing.best_grade = bestShowGradeLabel(existing.history.map((h) => h.grade))
-        }
+        mergeYearDogIntoDetail(existing, dog)
       }
     }
   }
