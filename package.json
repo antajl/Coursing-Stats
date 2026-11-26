@@ -15,6 +15,7 @@
     "build-data-snapshot": "npx tsx backend/scripts/build-data-snapshot.ts",
     "build-all-data": "npx tsx backend/scripts/build-all-data.ts",
     "publish-gates": "npx tsx backend/scripts/publish/verify-publish-gates.ts",
+    "verify-live": "npx tsx backend/scripts/ops/verify-live-deploy.ts",
     "indexnow": "npx tsx backend/scripts/seo/submit-indexnow.ts",
     "compress-assets": "node backend/scripts/ops/compress-dist-assets.cjs",
     "audit-duplicate-dogs": "npx tsx backend/scripts/audit/audit-duplicate-dogs.ts",

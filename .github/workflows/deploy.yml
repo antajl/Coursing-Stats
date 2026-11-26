@@ -385,34 +385,4 @@ jobs:
 
       - name: Post-deploy live verification
         if: inputs.dry_run != true
-        run: |
-          node -e '
-            const fs = require("fs");
-            const https = require("https");
-            function check(url, expectText) {
-              return new Promise((resolve, reject) => {
-                https.get(url, (res) => {
-                  let body = "";
-                  res.setEncoding("utf8");
-                  res.on("data", (c) => (body += c));
-                  res.on("end", () => {
-                    if (res.statusCode !== 200) return reject(new Error(url + " returned HTTP " + res.statusCode));
-                    if (expectText && !body.includes(expectText)) return reject(new Error(url + " missing expected text: " + expectText));
-                    console.log("OK 200:", url);
-                    resolve();
-                  });
-                }).on("error", reject);
-              });
-            }
-            (async () => {
-              await check("https://coursing-stats.ru/", "id=\"root\"");
-              await check("https://coursing-stats.ru/assets/loader.js", "/assets/");
-              await check("https://coursing-stats.ru/404.html", "404-dogs.png");
-              const state = JSON.parse(fs.readFileSync("/tmp/seo-state-out.json", "utf8"));
-              const sampleKey = Object.keys(state).find((k) => /^dog\/\d+\/index\.html$/.test(k));
-              if (sampleKey) {
-                const sampleUrl = "https://coursing-stats.ru/" + sampleKey.replace(/index\.html$/, "");
-                await check(sampleUrl, "/assets/loader.js");
-              }
-            })().catch((err) => { console.error(err); process.exit(1); });
-          '
+        run: yarn run verify-live
