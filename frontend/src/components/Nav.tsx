@@ -30,6 +30,8 @@ export default function Nav() {
     location.pathname.startsWith('/donino-');
   const isShowsActive =
     location.pathname === '/shows' || location.pathname.startsWith('/shows/')
+  const isTrackerActive =
+    location.pathname === '/tracker' || location.pathname.startsWith('/tracker/')
   const isGuideActive = location.pathname === '/guide';
   const isAboutActive = location.pathname === '/about';
   const [trackerRefreshing, setTrackerRefreshing] = useState(false);
@@ -122,6 +124,7 @@ export default function Nav() {
         isCompetitionsActive={isCompetitionsActive}
         isShowsActive={isShowsActive}
         isSpeedRecordsActive={isSpeedRecordsActive}
+        isTrackerActive={isTrackerActive}
         isGuideActive={isGuideActive}
         isAboutActive={isAboutActive}
         openMenu={openMenu}

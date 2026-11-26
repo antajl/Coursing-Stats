@@ -130,12 +130,12 @@ export function NavMobile({
             className="fixed inset-0 z-[999] md:hidden invisible pointer-events-none"
           >
             {/* Затемняющий оверлей с поддержкой тапов на iOS Safari */}
-            <div
+            <button
+              type="button"
               ref={overlayRef}
-              role="button"
               tabIndex={-1}
               aria-label="Закрыть меню"
-              className="fixed inset-0 bg-charcoal-950/45 opacity-0 cursor-pointer touch-manipulation"
+              className="fixed inset-0 bg-charcoal-950/45 opacity-0 cursor-pointer touch-manipulation border-none p-0"
               onClick={onCloseMobileMenu}
             />
 

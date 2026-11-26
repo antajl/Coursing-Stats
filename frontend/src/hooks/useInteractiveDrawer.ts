@@ -12,7 +12,7 @@ export function useInteractiveDrawer({
   onClose,
 }: UseInteractiveDrawerProps) {
   const containerRef = useRef<HTMLDivElement>(null)
-  const overlayRef = useRef<HTMLDivElement>(null)
+  const overlayRef = useRef<HTMLButtonElement>(null)
   const drawerRef = useRef<HTMLElement>(null)
 
   const isOpenRef = useRef(isOpen)

@@ -146,8 +146,8 @@ export default function ChampionshipToolbar({
 
   return (
     <>
-      {/* 1. Мобильная консоль: Поиск + Пол + Порода + Лига + Сброс (строго 1 компактный ряд) */}
-      <div className="flex sm:hidden items-center gap-1.5 w-full min-w-0 overflow-x-auto no-scrollbar py-0.5">
+      {/* 1. Мобильная консоль (< 768px): Поиск + Пол + Лига + Порода */}
+      <div className="flex md:hidden items-center gap-1.5 w-full min-w-0 overflow-x-auto no-scrollbar py-1.5">
         <ToolbarSearch
           value={searchQuery}
           onChange={onSearchChange}
@@ -188,7 +188,6 @@ export default function ChampionshipToolbar({
             trigger={
               <button
                 type="button"
-                onClick={() => setLeagueDropdownOpen(!leagueDropdownOpen)}
                 className={`shrink-0 ${toolbarPillTriggerClass(selectedLeague !== 'all')}`}
                 title="Фильтр по лигам"
               >
@@ -225,8 +224,8 @@ export default function ChampionshipToolbar({
 
       </div>
 
-      {/* 2. Десктопная консоль: Поиск + Пол + Разделитель + QuickBreedBar + Лига + Сброс */}
-      <div className="hidden sm:flex sm:items-center gap-2 w-full min-w-0">
+      {/* 2. Десктопная консоль (>= 768px): Поиск + Пол + Лига + Разделитель + QuickBreedBar */}
+      <div className="hidden md:flex md:items-center gap-2 w-full min-w-0">
         <ToolbarSearch
           value={searchQuery}
           onChange={onSearchChange}
@@ -267,7 +266,6 @@ export default function ChampionshipToolbar({
             trigger={
               <button
                 type="button"
-                onClick={() => setLeagueDropdownOpen(!leagueDropdownOpen)}
                 className={`shrink-0 ${toolbarPillTriggerClass(selectedLeague !== 'all')}`}
                 title="Фильтр по лигам"
               >

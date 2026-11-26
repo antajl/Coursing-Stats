@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useRef } from 'react'
+import { Bell } from 'lucide-react'
 import { Icons } from '../../lib/icons'
 import { useNavLogoVisibility } from './useNavLogoVisibility'
 import FavoritesCapsule from './FavoritesCapsule'
@@ -11,6 +12,7 @@ type NavDesktopProps = {
   isCompetitionsActive: boolean
   isShowsActive: boolean
   isSpeedRecordsActive: boolean
+  isTrackerActive?: boolean
   isGuideActive: boolean
   isAboutActive: boolean
   openMenu?: OpenMenuId
@@ -23,6 +25,7 @@ export function NavDesktop({
   isCompetitionsActive,
   isShowsActive,
   isSpeedRecordsActive,
+  isTrackerActive = false,
   isGuideActive,
   isAboutActive,
   openMenu: _openMenu,
@@ -198,6 +201,17 @@ export function NavDesktop({
       </div>
 
       <div className="flex shrink-0 items-center gap-1.5 lg:gap-2 2xl:gap-2.5">
+        <Link
+          to="/tracker/"
+          className={`${
+            isTrackerActive ? 'cs-glass-pill-active text-camel-950' : 'cs-glass-pill text-charcoal-700 hover:text-charcoal-900 hover:border-camel-300'
+          } flex items-center justify-center gap-1.5 h-9 w-9 xl:w-auto xl:px-2.5 2xl:px-3 rounded-full text-xs font-semibold transition-all shrink-0 no-underline active:scale-95`}
+          title="РКФ Трекер: заявки на титулы и график состязаний"
+          aria-label="РКФ Трекер"
+        >
+          <Bell className="w-3.5 h-3.5 text-camel-700 shrink-0" aria-hidden />
+          <span className="hidden xl:inline">Трекер</span>
+        </Link>
         <Link
           to="/breeds/"
           className="cs-glass-pill flex items-center justify-center gap-1.5 h-9 px-2.5 2xl:px-3 rounded-full text-charcoal-700 hover:text-charcoal-900 hover:border-camel-300 text-xs font-semibold transition-all shrink-0 no-underline active:scale-95"

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type ReactNode } from 'react'
+import { cloneElement, isValidElement, useEffect, useRef, useState, type ReactNode } from 'react'
 import { createPortal } from 'react-dom'
 
 interface ModernDropdownProps {
@@ -260,6 +260,43 @@ export default function ModernDropdown({
     </div>
   ) : null
 
+  const renderTrigger = () => {
+    if (isValidElement<Record<string, unknown>>(trigger)) {
+      const existingOnClick = trigger.props.onClick as ((e: React.MouseEvent) => void) | undefined
+      const existingOnKeyDown = trigger.props.onKeyDown as ((e: React.KeyboardEvent) => void) | undefined
+      const isNativeInteractive = trigger.type === 'button' || trigger.type === 'a'
+
+      return cloneElement(trigger, {
+        onClick: (e: React.MouseEvent) => {
+          existingOnClick?.(e)
+          if (!e.defaultPrevented) toggle()
+        },
+        onKeyDown: (e: React.KeyboardEvent) => {
+          existingOnKeyDown?.(e)
+          if (!isNativeInteractive && (e.key === 'Enter' || e.key === ' ')) {
+            e.preventDefault()
+            toggle()
+          }
+        },
+        'aria-haspopup': 'menu',
+        'aria-expanded': isOpen,
+        ...(isNativeInteractive ? {} : { role: 'button', tabIndex: 0 }),
+      })
+    }
+
+    return (
+      <button
+        type="button"
+        onClick={toggle}
+        aria-haspopup="menu"
+        aria-expanded={isOpen}
+        className="inline-flex items-center bg-transparent border-none p-0 cursor-pointer"
+      >
+        {trigger}
+      </button>
+    )
+  }
+
   return (
     <div
       ref={triggerRef}
@@ -267,21 +304,7 @@ export default function ModernDropdown({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div
-        onClick={toggle}
-        onKeyDown={(e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault()
-            toggle()
-          }
-        }}
-        role="button"
-        tabIndex={0}
-        aria-haspopup="menu"
-        aria-expanded={isOpen}
-      >
-        {trigger}
-      </div>
+      {renderTrigger()}
 
       {isOpen &&
         positionReady &&

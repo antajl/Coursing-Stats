@@ -18,11 +18,11 @@ describe('iOS Safari & Mobile Modal/Backdrop Invariants Audit', () => {
     expect(source).toContain('dvh')
   })
 
-  it('guarantees NavMobile overlay has touch/pointer delegation for iOS Safari', () => {
+  it('guarantees NavMobile overlay uses a native button with touch/pointer delegation for iOS Safari', () => {
     const filePath = path.join(root, 'components/nav/NavMobile.tsx')
     const source = fs.readFileSync(filePath, 'utf-8')
 
-    expect(source).toContain('role="button"')
+    expect(source).toMatch(/<button[^>]*aria-label="Закрыть меню"/s)
     expect(source).toContain('cursor-pointer')
     expect(source).toContain('touch-manipulation')
     expect(source).toContain('onClick={onCloseMobileMenu}')
