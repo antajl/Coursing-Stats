@@ -20,7 +20,7 @@ import type { KVNamespace } from './context';
 async function handleDogNameSearch(ctx: any, dogName: string, api: CoursingStatsAPI, cache?: KVNamespace) {
   // Additional validation as defense in depth
   if (!validateSearchQuery(dogName)) {
-    await safeEditOrReply(ctx, '❌ Неверный формат запроса. Минимум 2 символа, максимум 100.', {
+    await safeEditOrReply(ctx, 'Неверный формат запроса. Минимум 2 символа, максимум 100.', {
       reply_markup: getNavigationButtons('main_menu', 'main_menu'),
     }, cache);
     return;
@@ -69,7 +69,7 @@ async function handleDogNameSearch(ctx: any, dogName: string, api: CoursingStats
   }
   
   await safeEditOrReply(ctx,
-    '❌ Собаки не найдены.\n\nПопробуйте:\n• Другое написание клички\n• Введите ID собаки (число)\n• Более конкретный запрос\n• Inline: @coursing_stats_bot донино',
+    'Собаки не найдены.\n\nПопробуйте:\n• Другое написание клички\n• Введите ID собаки (число)\n• Более конкретный запрос\n• Inline: @coursing_stats_bot донино',
     { reply_markup: getNavigationButtons('main_menu', 'main_menu') },
     cache
   );
@@ -96,7 +96,7 @@ export function createSearch(api: CoursingStatsAPI, cache?: KVNamespace) {
     // Ignore or reject unrecognized slash commands (so /foo is not searched as a dog name)
     if (text.startsWith('/')) {
       await safeEditOrReply(ctx,
-        '❌ Неизвестная команда.\n\nИспользуйте меню команд или напишите кличку собаки для поиска.',
+        'Неизвестная команда.\n\nИспользуйте меню команд или напишите кличку собаки для поиска.',
         { reply_markup: getNavigationButtons('main_menu', 'main_menu') },
         cache
       );
@@ -174,7 +174,7 @@ export function createSearch(api: CoursingStatsAPI, cache?: KVNamespace) {
     if (/^\d+$/.test(text)) {
       if (!validateDogId(text)) {
         await safeEditOrReply(ctx,
-          '❌ Неверный формат ID собаки.\n\nID должен быть числом от 1 до 9999999999.',
+          'Неверный формат ID собаки.\n\nID должен быть числом от 1 до 9999999999.',
           { reply_markup: getNavigationButtons('main_menu', 'main_menu') },
           cache
         );
@@ -187,7 +187,7 @@ export function createSearch(api: CoursingStatsAPI, cache?: KVNamespace) {
     // Validate minimum length for name search
     if (!validateSearchQuery(text)) {
       await safeEditOrReply(ctx,
-        '❌ Минимальная длина запроса - 2 символа.\n\nВведите более длинную кличку собаки для поиска.',
+        'Минимальная длина запроса - 2 символа.\n\nВведите более длинную кличку собаки для поиска.',
         { reply_markup: getNavigationButtons('main_menu', 'main_menu') },
         cache
       );

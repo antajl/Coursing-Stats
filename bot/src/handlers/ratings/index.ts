@@ -15,7 +15,7 @@ function getRankBadge(index: number): string {
 
 function formatRacingRatings(ratingList: Rating[], yearLabel: string): string {
   let text = `<b>Топ-${ratingList.length} скорость · Бега борзых (${yearLabel})</b>\n\n`;
-  text += `<i>💡 Рейтинг по лучшей скорости (км/ч), отдельно от медалей и очков CS</i>\n\n`;
+  text += `<i>Рейтинг по лучшей скорости (км/ч), отдельно от медалей и очков CS</i>\n\n`;
   ratingList.forEach((rating, index) => {
     const badge = getRankBadge(index);
     const name = getDisplayName(rating);
@@ -32,7 +32,7 @@ function formatRacingRatings(ratingList: Rating[], yearLabel: string): string {
 
 function formatEloRatings(ratingList: Rating[], yearLabel: string): string {
   let text = `<b>Топ-${ratingList.length} Elo-рейтинг · Курсинг (${yearLabel})</b>\n\n`;
-  text += `<i>💡 Динамический рейтинг силы соперников (Elo-v2), отдельно от медалей и CS</i>\n\n`;
+  text += `<i>Динамический рейтинг силы соперников (Elo-v2), отдельно от медалей и CS</i>\n\n`;
   ratingList.forEach((rating, index) => {
     const badge = getRankBadge(index);
     const name = getDisplayName(rating);
@@ -52,7 +52,7 @@ function formatCoursingRatings(ratingList: Rating[], category: string, yearLabel
   }
   let text = `<b>Топ-${ratingList.length} ${category === 'score' ? 'по очкам' : 'по медалям'} · Курсинг (${yearLabel})</b>\n\n`;
   if (category === 'score') {
-    text += `<i>💡 Индекс — усреднённая оценка судей за все участия</i>\n\n`;
+    text += `<i>Индекс — усреднённая оценка судей за все участия</i>\n\n`;
   }
   ratingList.forEach((rating, index) => {
     const badge = getRankBadge(index);
@@ -230,7 +230,7 @@ export function createRatings(api: CoursingStatsAPI, cache?: KVNamespace) {
 
     if (!validateYear(year)) {
       await ctx.editMessageText(
-        '❌ Неверный год.\n\nВыберите год из доступных вариантов.',
+        'Неверный год.\n\nВыберите год из доступных вариантов.',
         { reply_markup: getNavigationButtons('ratings', 'main_menu') }
       );
       return;
@@ -277,7 +277,7 @@ export function createRatings(api: CoursingStatsAPI, cache?: KVNamespace) {
 
     if (!validateYear(year)) {
       await ctx.editMessageText(
-        '❌ Неверный год.\n\nВыберите год из доступных вариантов.',
+        'Неверный год.\n\nВыберите год из доступных вариантов.',
         { reply_markup: getNavigationButtons('ratings', 'main_menu') }
       );
       return;

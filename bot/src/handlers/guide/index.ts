@@ -93,7 +93,7 @@ function renderShowTitles(guide: any): string {
       ].join('\n');
 
   return `
-<b>🎪 Выставки — Иерархия наград и титулы РКФ</b>
+<b>🏅 Выставки — Иерархия наград и титулы РКФ</b>
 
 <b>Иерархия наград ринга:</b>
 ${awardsText}

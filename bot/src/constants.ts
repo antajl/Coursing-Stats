@@ -48,6 +48,8 @@ export const HANDLER_CALLBACK_PATTERNS: RegExp[] = [
   /^judges$/,
   /^judges_competition$/,
   /^judges_show$/,
+  /^tracker_menu$/,
+  /^trk_/,
 ];
 
 export function matchesHandlerCallback(callbackData: string): boolean {

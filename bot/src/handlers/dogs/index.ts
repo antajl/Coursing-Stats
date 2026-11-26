@@ -18,7 +18,7 @@ export function createDogs(api: CoursingStatsAPI, cache?: KVNamespace) {
     if (!validateDogId(dogId)) {
       await safeEditOrReply(
         ctx,
-        '❌ Неверный ID собаки.\n\nПожалуйста, выберите собаку из списка.',
+        'Неверный ID собаки.\n\nПожалуйста, выберите собаку из списка.',
         { reply_markup: getNavigationButtons('main_menu', 'main_menu') },
         cache,
       );
@@ -31,7 +31,7 @@ export function createDogs(api: CoursingStatsAPI, cache?: KVNamespace) {
       if (!dogData) {
         await safeEditOrReply(
           ctx,
-          '❌ Собака не найдена.',
+          'Собака не найдена.',
           { reply_markup: getNavigationButtons('main_menu', 'main_menu') },
           cache,
         );
@@ -55,7 +55,7 @@ export function createDogs(api: CoursingStatsAPI, cache?: KVNamespace) {
     } catch (error) {
       await safeEditOrReply(
         ctx,
-        '❌ Ошибка при загрузке профиля собаки.',
+        'Ошибка при загрузке профиля собаки.',
         { reply_markup: getNavigationButtons('main_menu', 'main_menu') },
         cache,
       );
@@ -82,7 +82,7 @@ export function createDogs(api: CoursingStatsAPI, cache?: KVNamespace) {
 
     if (!dogIds.includes(parseInt(dogId))) {
       dogIds.push(parseInt(dogId));
-      await cache.put(favoritesKey, JSON.stringify(dogIds), { expirationTtl: 86400 * 30 });
+      await cache.put(favoritesKey, JSON.stringify(dogIds));
       await ctx.answerCallbackQuery('Добавлено в избранное');
     } else {
       await ctx.answerCallbackQuery('Уже в избранном');
@@ -118,7 +118,7 @@ export function createDogs(api: CoursingStatsAPI, cache?: KVNamespace) {
     const index = dogIds.indexOf(parseInt(dogId));
     if (index > -1) {
       dogIds.splice(index, 1);
-      await cache.put(favoritesKey, JSON.stringify(dogIds), { expirationTtl: 86400 * 30 });
+      await cache.put(favoritesKey, JSON.stringify(dogIds));
       await ctx.answerCallbackQuery('Удалено из избранного');
     } else {
       await ctx.answerCallbackQuery('Не в избранном');

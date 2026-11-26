@@ -57,8 +57,10 @@ class CoursingStatsAPI {
     return this.dogs.fuzzySearchDogs(dogName, maxDistance);
   }
 
-  getDogById(dogId: string): Promise<DogData | null> {
-    return this.dogs.getDogById(dogId);
+  async getDogById(dogId: string): Promise<DogData | null> {
+    const sportDog = await this.dogs.getDogById(dogId);
+    if (sportDog) return sportDog;
+    return this.shows.getShowDogById(dogId);
   }
 
   getTopRatings(

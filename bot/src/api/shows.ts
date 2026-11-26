@@ -1,4 +1,4 @@
-import type { Competition, RatingItem } from '../types';
+import type { Competition, DogData, RatingItem } from '../types';
 import type { ApiClient } from './client';
 import { CACHE_TTL } from './constants';
 
@@ -49,16 +49,88 @@ export class ShowsApi {
 
   async getShows(year: string): Promise<RatingItem[]> {
     try {
+      const page0 = await this.client.fetchJSON(
+        `${this.client.baseApiUrl}/shows/indexes/dog-ranking-${year}-page0.json`,
+        CACHE_TTL.SHOWS,
+      );
+      if (page0 && typeof page0 === 'object' && Array.isArray((page0 as { dogs?: unknown }).dogs)) {
+        return (page0 as { dogs: RatingItem[] }).dogs;
+      }
+
       const data = await this.client.fetchJSON(
         `${this.client.baseApiUrl}/shows/indexes/dog-ranking-${year}.json`,
         CACHE_TTL.SHOWS,
       );
-      if (data && Array.isArray(data)) {
+      if (Array.isArray(data)) {
         return data as RatingItem[];
+      }
+      if (data && typeof data === 'object' && Array.isArray((data as { dogs?: unknown }).dogs)) {
+        return (data as { dogs: RatingItem[] }).dogs;
+      }
+      if (data && typeof data === 'object' && Array.isArray((data as { shards?: unknown }).shards)) {
+        const firstShard = (data as { shards: string[] }).shards[0];
+        if (firstShard) {
+          const shardData = await this.client.fetchJSON(
+            `${this.client.baseApiUrl}/shows/indexes/${firstShard}`,
+            CACHE_TTL.SHOWS,
+          );
+          if (Array.isArray(shardData)) return shardData as RatingItem[];
+        }
       }
       return [];
     } catch {
       return [];
+    }
+  }
+
+  async getShowDogById(dogId: string, depth: number = 0): Promise<DogData | null> {
+    if (depth > 2) return null;
+    try {
+      const shard = this.client.cdnPackShardKey(dogId);
+      const pack = (await this.client.fetchJSON(
+        `${this.client.baseApiUrl}/shows/indexes/dog-details/${shard}.json`,
+        CACHE_TTL.SHOWS,
+      )) as Record<string, Record<string, unknown>> | null;
+      if (!pack || typeof pack !== 'object') return null;
+
+      const entry = pack[String(dogId)];
+      if (!entry) return null;
+      if (entry.alias_to) {
+        return this.getShowDogById(String(entry.alias_to), depth + 1);
+      }
+
+      const numId = Number(entry.competition_dog_id ?? entry.id ?? dogId);
+      const dogIdNum = Number.isFinite(numId) ? numId : Number(dogId) || 0;
+      return {
+        schema: 'coursing-stats/show-dog-profile-v1',
+        exported_at: new Date().toISOString(),
+        dog: {
+          id: dogIdNum,
+          dog_key: String(dogId),
+          name_lat: String(entry.name_lat || entry.name_ru || `Собака #${dogId}`),
+          name_ru: String(entry.name_ru || entry.name_lat || ''),
+          breed: String(entry.breed || 'Порода не указана'),
+          sex: entry.sex ? String(entry.sex) : null,
+          owner: null,
+          pedigree_url: entry.pedigree_url ? String(entry.pedigree_url) : null,
+          coursing_stats: {
+            total_starts: 0,
+            best_score: null,
+            gold: 0,
+            silver: 0,
+            bronze: 0,
+          },
+          racing_stats: {
+            total_starts: 0,
+            best_speed: null,
+            gold: 0,
+            silver: 0,
+            bronze: 0,
+          },
+        },
+      };
+    } catch {
+      return null;
     }
   }
 

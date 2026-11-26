@@ -56,7 +56,7 @@ export async function handleDogIdSearch(
   cache?: KVNamespace,
 ) {
   if (!validateDogId(dogId)) {
-    await safeEditOrReply(ctx, '❌ Неверный формат ID собаки.', {
+    await safeEditOrReply(ctx, 'Неверный формат ID собаки.', {
       reply_markup: getNavigationButtons('main_menu', 'main_menu'),
     }, cache);
     return;
@@ -71,7 +71,7 @@ export async function handleDogIdSearch(
     const dogData = await api.getDogById(dogId);
 
     if (!dogData) {
-      await safeEditOrReply(ctx, '❌ Собака не найдена. Попробуйте другой ID или поиск по кличке.', {
+      await safeEditOrReply(ctx, 'Собака не найдена. Попробуйте другой ID или поиск по кличке.', {
         reply_markup: getNavigationButtons('main_menu', 'main_menu'),
       }, cache);
       return;
@@ -88,7 +88,7 @@ export async function handleDogIdSearch(
       reply_markup: card.reply_markup,
     }, cache);
   } catch (error) {
-    await safeEditOrReply(ctx, '❌ Ошибка при загрузке профиля собаки. Попробуйте позже.', {
+    await safeEditOrReply(ctx, 'Ошибка при загрузке профиля собаки. Попробуйте позже.', {
       reply_markup: getNavigationButtons('main_menu', 'main_menu'),
     }, cache);
   }

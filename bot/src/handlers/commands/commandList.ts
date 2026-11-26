@@ -25,7 +25,7 @@ export function setupCommandHandlers(composer: Composer<any>, api: CoursingStats
     if (args && args.startsWith('dog_')) {
       const dogId = args.replace('dog_', '');
       if (!validateDogId(dogId)) {
-        await safeEditOrReply(ctx, '❌ Неверный формат ссылки. Пожалуйста, используйте кнопку меню для поиска.', {
+        await safeEditOrReply(ctx, 'Неверный формат ссылки. Пожалуйста, используйте кнопку меню для поиска.', {
           reply_markup: getNavigationButtons('main_menu', 'main_menu'),
         }, cache);
         return;
@@ -153,7 +153,7 @@ export function setupCommandHandlers(composer: Composer<any>, api: CoursingStats
   });
 
   composer.command('shows', async (ctx) => {
-    await safeEditOrReply(ctx, '<b>🎪 Выставки</b>\n\nВыберите действие:', {
+    await safeEditOrReply(ctx, '<b>🏅 Выставки</b>\n\nВыберите действие:', {
       parse_mode: 'HTML',
       reply_markup: getShowsMenu(),
     }, cache);

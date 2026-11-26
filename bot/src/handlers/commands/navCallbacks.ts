@@ -68,10 +68,9 @@ export function setupNavigationCallbacks(composer: Composer<any>, api: CoursingS
    * Обработчик кнопки shows_menu для подменю выставок
    */
   composer.callbackQuery('shows_menu', async (ctx) => {
-    await safeEditOrReply(ctx, '<b>🎪 Выставки</b>\n\nВыберите действие:', {
+    await safeEditOrReply(ctx, '<b>🏅 Выставки</b>\n\nВыберите действие:', {
       parse_mode: 'HTML',
       reply_markup: getShowsMenu(),
-      reaction: '🎪',
     }, cache);
   });
 
@@ -103,7 +102,7 @@ export function setupNavigationCallbacks(composer: Composer<any>, api: CoursingS
   /**
    * Обработчики постоянных кнопок нижней клавиатуры (ReplyKeyboard)
    */
-  composer.hears('🏠 Главное меню', async (ctx) => {
+  composer.hears(/^(?:🏠\s*)?Главное меню$/, async (ctx) => {
     await returnToHomeScreen(ctx);
   });
 

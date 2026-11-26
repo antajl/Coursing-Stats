@@ -65,7 +65,7 @@ export function createCalendar(api: CoursingStatsAPI, cache?: KVNamespace) {
     } catch (error) {
       console.error('[calendar] Error loading calendar:', error);
       await safeEditOrReply(ctx,
-        '❌ Ошибка при загрузке календаря. Попробуйте позже.',
+        'Ошибка при загрузке календаря. Попробуйте позже.',
         { reply_markup: getNavigationButtons('competitions_menu', 'competitions_menu') },
         cache
       );
@@ -112,7 +112,7 @@ export function createCalendar(api: CoursingStatsAPI, cache?: KVNamespace) {
     } catch (error) {
       console.error('[filter_all] Error loading calendar:', error);
       await safeEditOrReply(ctx,
-        '❌ Ошибка при загрузке календаря. Попробуйте позже.',
+        'Ошибка при загрузке календаря. Попробуйте позже.',
         { reply_markup: getNavigationButtons('competitions_menu', 'competitions_menu') },
         cache
       );
@@ -158,7 +158,7 @@ export function createCalendar(api: CoursingStatsAPI, cache?: KVNamespace) {
     } catch (error) {
       console.error('[filter_coursing] Error loading calendar:', error);
       await safeEditOrReply(ctx,
-        '❌ Ошибка при загрузке календаря. Попробуйте позже.',
+        'Ошибка при загрузке календаря. Попробуйте позже.',
         { reply_markup: getNavigationButtons('competitions_menu', 'competitions_menu') },
         cache
       );
@@ -204,7 +204,7 @@ export function createCalendar(api: CoursingStatsAPI, cache?: KVNamespace) {
     } catch (error) {
       console.error('[filter_racing] Error loading calendar:', error);
       await safeEditOrReply(ctx,
-        '❌ Ошибка при загрузке календаря. Попробуйте позже.',
+        'Ошибка при загрузке календаря. Попробуйте позже.',
         { reply_markup: getNavigationButtons('competitions_menu', 'competitions_menu') },
         cache
       );
@@ -250,7 +250,7 @@ export function createCalendar(api: CoursingStatsAPI, cache?: KVNamespace) {
     } catch (error) {
       console.error('[filter_shows] Error loading calendar:', error);
       await safeEditOrReply(ctx,
-        '❌ Ошибка при загрузке календаря. Попробуйте позже.',
+        'Ошибка при загрузке календаря. Попробуйте позже.',
         { reply_markup: getNavigationButtons('shows_menu', 'main_menu') },
         cache
       );
@@ -290,7 +290,7 @@ export function createCalendar(api: CoursingStatsAPI, cache?: KVNamespace) {
     } catch (error) {
       console.error('[shows_calendar] Error:', error);
       await safeEditOrReply(ctx,
-        '❌ Ошибка при загрузке календаря выставок.',
+        'Ошибка при загрузке календаря выставок.',
         { reply_markup: getNavigationButtons('shows_menu', 'main_menu') },
         cache
       );
@@ -329,7 +329,7 @@ export function createCalendar(api: CoursingStatsAPI, cache?: KVNamespace) {
     } catch (error) {
       console.error('[calendar_page] Error:', error);
       await safeEditOrReply(ctx,
-        '❌ Ошибка при загрузке календаря.',
+        'Ошибка при загрузке календаря.',
         { reply_markup: getNavigationButtons('competitions_menu', 'main_menu') },
         cache
       );
@@ -386,7 +386,7 @@ export function createCalendar(api: CoursingStatsAPI, cache?: KVNamespace) {
       console.error('[calendar_2027] Error:', error);
       await safeEditOrReply(
         ctx,
-        '❌ Ошибка при загрузке состязаний 2027.',
+        'Ошибка при загрузке состязаний 2027.',
         { reply_markup: getNavigationButtons('competitions_menu', 'competitions_menu') },
         cache
       );
@@ -481,7 +481,7 @@ export function createCalendar(api: CoursingStatsAPI, cache?: KVNamespace) {
     } catch (error) {
       console.error('[cal_changelog_2027] Error:', error);
       await safeEditOrReply(ctx,
-        '❌ Ошибка при загрузке истории изменений.',
+        'Ошибка при загрузке истории изменений.',
         { reply_markup: getCalendarChangelogKeyboard() },
         cache
       );
