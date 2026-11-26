@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { SEO } from '../../components/SEO'
 import { JsonLd, itemPageSchema, breadcrumbListSchema, faqPageSchema } from '../../components/JsonLd'
+import { SectionFooter } from '../../components/SectionFooter'
 import { CORE_BREED_HUBS, getBreedHubBySlug } from '../../lib/breed-hubs-data'
 import { useBreedHubData } from './hooks/useBreedHubData'
 import { BreedHubHeader } from './components/BreedHubHeader'
@@ -177,6 +178,11 @@ export default function BreedHub() {
 
       {/* 5. Переход к другим породам */}
       <BreedHubCatalogNav currentSlug={breedInfo.slug} />
+
+      <SectionFooter
+        source="multi"
+        disclaimer="Зал славы и сводки по породе объединяют открытые протоколы соревнований, выставок РКФ и замеров Донино."
+      />
     </div>
   )
 }

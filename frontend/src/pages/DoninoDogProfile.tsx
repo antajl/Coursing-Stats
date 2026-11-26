@@ -12,7 +12,7 @@ import { displayBreed } from '../lib/breedMapping'
 import { useFavorites } from '../hooks/useFavorites'
 import { SEO } from '../components/SEO'
 import { JsonLd, breadcrumbListSchema, itemPageSchema } from '../components/JsonLd'
-import DoninoAttribution from '../components/DoninoAttribution'
+import { SectionFooter } from '../components/SectionFooter'
 import { api } from '../services/api'
 import { SegmentedTabs } from '../components/ui/SegmentedTabs'
 import { computeDoninoAchievements } from './DoninoDogProfile/doninoAchievements'
@@ -250,7 +250,7 @@ export default function DoninoDogProfile() {
           </div>
         )}
 
-        <DoninoAttribution className="mt-6 text-center" />
+        <SectionFooter source="donino" />
       </div>
     </>
   )

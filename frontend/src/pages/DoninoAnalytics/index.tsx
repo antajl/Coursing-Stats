@@ -1,7 +1,7 @@
 import { useState, useEffect, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { SEO } from '../../components/SEO'
-import DoninoAttribution from '../../components/DoninoAttribution'
+import { SectionFooter } from '../../components/SectionFooter'
 import SkeletonLoader from '../../components/SkeletonLoader'
 import { MobileSubNavTabs } from '../../components/ui/MobileSubNavTabs'
 import DoninoPageToolbar from '../SpeedRecords/DoninoPageToolbar'
@@ -244,9 +244,10 @@ export default function DoninoAnalytics() {
           </div>
         )}
 
-        <div className="pt-2 text-center">
-          <DoninoAttribution variant="inline" />
-        </div>
+        <SectionFooter
+          source="donino"
+          disclaimer="Аналитика полигона Донино рассчитывается по открытым замерам скорости и протоколам спринта 350 м."
+        />
       </div>
     </>
   )

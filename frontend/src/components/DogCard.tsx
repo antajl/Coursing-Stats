@@ -57,8 +57,8 @@ const DogCardInner = function DogCard({ dog, type, filterYear, rank, variant = '
   )
 
   const statsColClass = isEmbedded
-    ? 'mr-0 flex min-h-0 w-[7.75rem] shrink-0 flex-col justify-center items-start border-l border-old-money-200/35 pl-2 sm:pl-2.5 pr-0.5'
-    : 'mr-6 sm:mr-7 flex min-h-0 w-[6.5rem] sm:w-[8.5rem] shrink-0 flex-col justify-center items-start border-l border-old-money-200/35 pl-2 sm:pl-2.5'
+    ? 'mr-6 sm:mr-7 flex min-h-0 w-[6.75rem] sm:w-[7.5rem] shrink-0 flex-col justify-center items-end text-right border-l border-old-money-200/35 pl-2 sm:pl-2.5 pr-0.5'
+    : 'mr-6 sm:mr-7 flex min-h-0 w-[6.5rem] sm:w-[8.5rem] shrink-0 flex-col justify-center items-end text-right border-l border-old-money-200/35 pl-2 sm:pl-2.5'
 
   return (
     <DogCardContext.Provider value={contextValue}>
@@ -78,7 +78,7 @@ const DogCardInner = function DogCard({ dog, type, filterYear, rank, variant = '
             </div>
 
             <div className={statsColClass}>
-              <div className="flex flex-col items-start gap-0.5 sm:gap-1">
+              <div className="flex flex-col items-end gap-0.5 sm:gap-1">
                 <StartsLabel starts={dog.total_starts || 0} size="md" />
                 <DogCardMedals />
               </div>
@@ -100,7 +100,7 @@ const DogCardInner = function DogCard({ dog, type, filterYear, rank, variant = '
             </div>
 
             <div className={statsColClass}>
-              <div className="flex flex-col items-start gap-0.5 sm:gap-1">
+              <div className="flex flex-col items-end gap-0.5 sm:gap-1">
                 <StartsLabel starts={dog.total_starts || 0} size="md" />
                 <div className="flex items-center gap-1 sm:gap-1.5 leading-none whitespace-nowrap">
                   <span className="text-base sm:text-lg font-bold tabular-nums text-camel-700 leading-none">

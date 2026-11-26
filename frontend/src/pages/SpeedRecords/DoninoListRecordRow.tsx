@@ -15,11 +15,21 @@ import {
 import { toDogTitleCase } from '../../lib/dogName'
 import { buildCoursingTimeline } from '../../components/CoursingHistorySparkline'
 import { buildSpeedTimeline } from '../../components/SpeedHistorySparkline'
+import { FavoriteCardStar } from '../../components/ui/FavoriteCardStar'
+import type { FavoriteDogMeta } from '../../hooks/useFavorites'
+
+export function getDoninoFavId(name: string, breed: string, dogId?: string | number | null): string {
+  if (dogId != null && String(dogId).trim() !== '' && /^\d+$/.test(String(dogId).trim())) {
+    return String(dogId).trim()
+  }
+  return `donino:${name}:${breed}`
+}
 
 interface DoninoListRecordRowProps {
   mode: 'speed' | 'coursing'
   name: string
   breed: string
+  dogId?: string | number | null
   sex?: string
   date?: string
   status?: string
@@ -37,6 +47,8 @@ interface DoninoListRecordRowProps {
   hideBreed?: boolean
   /** Compact vertical padding (py-1 sm:py-1.5). */
   compact?: boolean
+  isFav?: boolean
+  onToggleFavorite?: (dogId: string, meta: FavoriteDogMeta) => void
 }
 
 function formatTime(value: number): string {
@@ -59,6 +71,7 @@ function DoninoListRecordRow({
   mode,
   name,
   breed,
+  dogId,
   sex,
   date,
   status: _status,
@@ -73,6 +86,8 @@ function DoninoListRecordRow({
   latestDateInDataset: _latestDateInDataset,
   hideBreed = false,
   compact = false,
+  isFav = false,
+  onToggleFavorite,
 }: DoninoListRecordRowProps) {
   const historyItems = useMemo(() => parseRecordHistory(history), [history])
 
@@ -143,74 +158,87 @@ function DoninoListRecordRow({
     </>
   )
 
+  const favId = getDoninoFavId(name, breed, dogId)
+
   const profileLink = (
-    <Link
-      to={`/donino-dog/${encodeURIComponent(name)}/${encodeURIComponent(breed)}/`}
-      state={{ from: mode === 'speed' ? 'speed-records' : 'coursing-records' }}
-      className={`donino-list-row-link group min-w-0 flex-1 border-b border-old-money-200 bg-white ${
-        compact ? 'py-1 sm:py-1.5 px-2.5 sm:px-3' : 'py-1.5 sm:py-2 px-2.5 sm:px-4'
-      } transition-colors duration-150 hover:bg-camel-100/60`}
-    >
-      <div className="flex items-center gap-2 min-w-0 flex-1">
-        {rank != null && (
-          <div className="shrink-0 flex items-center justify-center w-7 sm:w-8 mr-0.5 sm:mr-1">
-            <RankBadge rank={rank} delta={delta} />
+    <div className="relative group flex min-w-0 flex-1">
+      {onToggleFavorite && (
+        <FavoriteCardStar
+          dogId={favId}
+          nameLat={name}
+          breed={breed}
+          isFav={isFav}
+          onToggle={onToggleFavorite}
+        />
+      )}
+      <Link
+        to={`/donino-dog/${encodeURIComponent(name)}/${encodeURIComponent(breed)}/`}
+        state={{ from: mode === 'speed' ? 'speed-records' : 'coursing-records' }}
+        className={`donino-list-row-link group min-w-0 flex-1 border-b border-old-money-200 bg-white ${
+          compact ? 'py-1 sm:py-1.5 px-2.5 sm:px-3' : 'py-1.5 sm:py-2 px-2.5 sm:px-4'
+        } transition-colors duration-150 hover:bg-camel-100/60`}
+      >
+        <div className="flex items-center gap-2 min-w-0 flex-1">
+          {rank != null && (
+            <div className="shrink-0 flex items-center justify-center w-7 sm:w-8 mr-0.5 sm:mr-1">
+              <RankBadge rank={rank} delta={delta} />
+            </div>
+          )}
+          <div className="donino-home-row-main min-w-0 flex-1">
+            <div className="flex min-w-0 items-center gap-1.5">
+              <OwnerCrownName name={name} breed={breed} kind="donino">
+                <span className="truncate font-sans text-xs sm:text-[13.5px] font-bold leading-snug text-charcoal-900">
+                  {toDogTitleCase(name)}
+                </span>
+              </OwnerCrownName>
+              {sex && <DogSexIcon sex={sex} />}
+            </div>
+
+            {hideBreed ? (
+              (date || trackType) && (
+                <div className="mt-0.5 flex min-w-0 items-center gap-1 text-[11px] sm:text-xs text-old-money-500 whitespace-nowrap">
+                  {date && <span className="shrink-0">{formatRecordDate(date)}</span>}
+                  {date && trackType && <span className="text-old-money-300">·</span>}
+                  {trackType && (
+                    <span className="inline-flex items-center gap-0.5 font-medium text-old-money-600 truncate">
+                      {getTrackTypeIcon(trackType)}
+                      <span>{trackType}</span>
+                    </span>
+                  )}
+                </div>
+              )
+            ) : (
+              (date || breed || trackType) && (
+                <div className="mt-0.5 flex min-w-0 items-center gap-1 text-[11px] sm:text-xs text-old-money-500 whitespace-nowrap">
+                  {date && <span className="shrink-0">{formatRecordDate(date)}</span>}
+                  {date && (breed || trackType) && <span className="text-old-money-300">·</span>}
+                  {breed && <span className="truncate donino-home-row-breed">{breed}</span>}
+                  {breed && trackType && <span className="text-old-money-300">·</span>}
+                  {trackType && (
+                    <span className="inline-flex items-center gap-0.5 font-medium text-old-money-600 shrink-0">
+                      {getTrackTypeIcon(trackType)}
+                      <span>{trackType}</span>
+                    </span>
+                  )}
+                </div>
+              )
+            )}
+          </div>
+        </div>
+
+        {/* Компактный график по центру в одну строку */}
+        {hasSparkline && (
+          <div className={`donino-list-row-chart shrink-0 flex items-center justify-center ${compact ? 'px-1' : 'sm:flex-1 sm:px-2'}`}>
+            {sparkline}
           </div>
         )}
-        <div className="donino-home-row-main min-w-0 flex-1">
-          <div className="flex min-w-0 items-center gap-1.5">
-            <OwnerCrownName name={name} breed={breed} kind="donino">
-              <span className="truncate font-serif text-sm sm:text-base font-bold leading-snug text-charcoal-900">
-                {toDogTitleCase(name)}
-              </span>
-            </OwnerCrownName>
-            {sex && <DogSexIcon sex={sex} />}
-          </div>
 
-          {hideBreed ? (
-            (date || trackType) && (
-              <div className="mt-0.5 flex min-w-0 items-center gap-1 text-[11px] sm:text-xs text-old-money-500 whitespace-nowrap">
-                {date && <span className="shrink-0">{formatRecordDate(date)}</span>}
-                {date && trackType && <span className="text-old-money-300">·</span>}
-                {trackType && (
-                  <span className="inline-flex items-center gap-0.5 font-medium text-old-money-600 truncate">
-                    {getTrackTypeIcon(trackType)}
-                    <span>{trackType}</span>
-                  </span>
-                )}
-              </div>
-            )
-          ) : (
-            (date || breed || trackType) && (
-              <div className="mt-0.5 flex min-w-0 items-center gap-1 text-[11px] sm:text-xs text-old-money-500 whitespace-nowrap">
-                {date && <span className="shrink-0">{formatRecordDate(date)}</span>}
-                {date && (breed || trackType) && <span className="text-old-money-300">·</span>}
-                {breed && <span className="truncate donino-home-row-breed">{breed}</span>}
-                {breed && trackType && <span className="text-old-money-300">·</span>}
-                {trackType && (
-                  <span className="inline-flex items-center gap-0.5 font-medium text-old-money-600 shrink-0">
-                    {getTrackTypeIcon(trackType)}
-                    <span>{trackType}</span>
-                  </span>
-                )}
-              </div>
-            )
-          )}
+        {/* Результат справа */}
+        <div className={`relative shrink-0 flex flex-col items-end justify-center text-right min-w-[62px] sm:min-w-[85px] ${onToggleFavorite ? 'mr-7 sm:mr-8' : ''}`}>
+          {resultMetric}
         </div>
-      </div>
-
-      {/* Компактный график по центру в одну строку */}
-      {hasSparkline && (
-        <div className={`donino-list-row-chart shrink-0 flex items-center justify-center ${compact ? 'px-1' : 'sm:flex-1 sm:px-2'}`}>
-          {sparkline}
-        </div>
-      )}
-
-      {/* Результат справа */}
-      <div className="relative shrink-0 flex flex-col items-end justify-center text-right min-w-[62px] sm:min-w-[85px]">
-        {resultMetric}
-      </div>
-    </Link>
+      </Link>
+    </div>
   )
 
   if (!screenshotUrl) {

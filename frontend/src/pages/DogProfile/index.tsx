@@ -10,6 +10,7 @@ import { RacingColumn } from './RacingColumn'
 import { ShowsColumn } from './ShowsColumn'
 import { EmptyDisciplineColumn } from './EmptyDisciplineColumn'
 import { MobileSubNavTabs } from '../../components/ui/MobileSubNavTabs'
+import { SectionFooter } from '../../components/SectionFooter'
 import { DogAchievementsTab } from './DogAchievementsTab'
 import { DogJudgesSection } from './DogJudgesSection'
 import { DogOrganizationsSection } from './DogOrganizationsSection'
@@ -317,12 +318,11 @@ export default function DogProfile() {
         />
       )}
 
-      {/* Дисклеймер об источниках спортивных результатов */}
-      <footer className="mt-8 rounded-xl border border-old-money-100 bg-cream-50/30 p-3 text-center sm:text-left">
-        <p className="text-[11px] sm:text-xs leading-relaxed text-charcoal-500">
-          <strong>Примечание:</strong> спортивная статистика и результаты состязаний систематизированы на основе открытых протоколов организаторов, полевых секретариатов и материалов ProCoursing.ru. Сведения могут содержать ошибки или быть неполными из-за фрагментарности открытых источников и ручного ведения ранних баз организаторами. Проект является независимым архивом и не является официальным сайтом РКФ.
-        </p>
-      </footer>
+      {/* Дисклеймер об источниках спортивных и выставочных результатов */}
+      <SectionFooter
+        source="multi"
+        disclaimer="Примечание: спортивная статистика и результаты состязаний систематизированы на основе открытых протоколов организаторов, полевых секретариатов и материалов ProCoursing.ru, выставочная история — по материалам РКФ. Сведения могут содержать ошибки или быть неполными из-за фрагментарности открытых источников. Проект является независимым архивом и не является официальным сайтом РКФ."
+      />
     </>
   )
 }

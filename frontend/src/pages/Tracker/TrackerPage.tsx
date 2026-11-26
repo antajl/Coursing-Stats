@@ -19,6 +19,7 @@ import { TrackerApps } from './TrackerApps';
 import { TrackerAuthModal } from './TrackerAuthModal';
 import { TrackerDownloadModal } from './TrackerDownloadModal';
 import { TrackerSubNav } from './TrackerSubNav';
+import { SectionFooter } from '../../components/SectionFooter';
 import rawCompetitions from './rkf-competitions-2026.json';
 
 const initialCompetitions = rawCompetitions as TrackerCompetition[];
@@ -309,6 +310,11 @@ export default function TrackerPage() {
       <TrackerDownloadModal
         isOpen={downloadModalOpen}
         onClose={() => setDownloadModalOpen(false)}
+      />
+
+      <SectionFooter
+        source="rkf"
+        disclaimer="РКФ Трекер синхронизируется с открытым графиком состязаний и личным кабинетом rkf.online на стороне вашего браузера."
       />
     </div>
   );

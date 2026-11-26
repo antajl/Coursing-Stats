@@ -121,17 +121,17 @@ export default function EventHeader({
           <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1.5 min-w-0">
             {/* Числовые метрики */}
             <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 shrink-0">
-              <div className="inline-flex items-center gap-1.5 rounded-lg border border-old-money-200/80 bg-cream-100/70 px-2.5 py-1 text-charcoal-800">
+              <div className="inline-flex items-center gap-1.5 rounded-xl border border-old-money-200/80 bg-cream-100/70 px-2.5 py-1 text-charcoal-800">
                 <Calendar className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
                 <span className="font-semibold text-charcoal-900">{dateText}</span>
               </div>
 
-              <div className="inline-flex items-center gap-1.5 rounded-lg border border-old-money-200/80 bg-cream-100/70 px-2.5 py-1 text-charcoal-800">
+              <div className="inline-flex items-center gap-1.5 rounded-xl border border-old-money-200/80 bg-cream-100/70 px-2.5 py-1 text-charcoal-800">
                 <Dog className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
                 <span className="font-semibold text-charcoal-900">{participantsCount} участников</span>
               </div>
 
-              <div className="inline-flex items-center gap-1.5 rounded-lg border border-old-money-200/80 bg-cream-100/70 px-2.5 py-1 text-charcoal-800">
+              <div className="inline-flex items-center gap-1.5 rounded-xl border border-old-money-200/80 bg-cream-100/70 px-2.5 py-1 text-charcoal-800">
                 <PawPrint className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
                 <span className="font-semibold text-charcoal-900">{breedsCount} пород</span>
               </div>

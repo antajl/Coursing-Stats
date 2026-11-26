@@ -1,12 +1,14 @@
 import { useState, useMemo, useEffect, useCallback } from 'react'
-import DoninoListRecordRow from './DoninoListRecordRow'
+import DoninoListRecordRow, { getDoninoFavId } from './DoninoListRecordRow'
 import DoninoColumnPlaque, { DoninoColumnShell } from './DoninoColumnPlaque'
 import { useInfiniteScroll } from '../../hooks/useInfiniteScroll'
 import { useHorizontalSwipe } from '../../hooks/useHorizontalSwipe'
+import { useFavorites } from '../../hooks/useFavorites'
 import { ColumnSwipeEdgeTab } from '../../components/ui/ColumnSwipeEdgeTab'
 
 interface SpeedRecord {
   id: string | number
+  dog_id?: string | number | null
   name: string
   sex: string
   breed: string
@@ -22,6 +24,7 @@ interface SpeedRecord {
 
 interface CoursingRecord {
   id: string | number
+  dog_id?: string | number | null
   name: string
   breed: string
   sex?: string
@@ -51,6 +54,16 @@ export default function DoninoRecordsColumns({
   resetScrollKey,
 }: DoninoRecordsColumnsProps) {
   const [mobileTab, setMobileTab] = useState<'speed' | 'coursing'>('speed')
+  const { favorites, toggleFavorite } = useFavorites()
+
+  const handleToggleFavorite = useCallback(
+    (dogId: string, meta: { name: string; breed: string }) => {
+      void toggleFavorite(dogId, meta).catch((error) => {
+        console.error('Failed to toggle Donino favorite:', error)
+      })
+    },
+    [toggleFavorite],
+  )
 
   useEffect(() => {
     if (typeof window === 'undefined') return
@@ -194,6 +207,7 @@ export default function DoninoRecordsColumns({
                     mode="speed"
                     name={record.name}
                     breed={record.breed}
+                    dogId={record.dog_id}
                     sex={record.sex}
                     date={record.date}
                     status={record.status}
@@ -204,6 +218,8 @@ export default function DoninoRecordsColumns({
                     rank={record.rank}
                     delta={record.delta}
                     latestDateInDataset={latestSpeedDate}
+                    isFav={favorites.has(getDoninoFavId(record.name, record.breed, record.dog_id))}
+                    onToggleFavorite={handleToggleFavorite}
                   />
                 ))
               ) : (
@@ -222,6 +238,7 @@ export default function DoninoRecordsColumns({
                     mode="coursing"
                     name={record.name}
                     breed={record.breed}
+                    dogId={record.dog_id}
                     sex={record.sex}
                     date={record.date}
                     status={record.status}
@@ -230,6 +247,8 @@ export default function DoninoRecordsColumns({
                     rank={record.rank}
                     delta={record.delta}
                     latestDateInDataset={latestCoursingDate}
+                    isFav={favorites.has(getDoninoFavId(record.name, record.breed, record.dog_id))}
+                    onToggleFavorite={handleToggleFavorite}
                   />
                 ))
               ) : (

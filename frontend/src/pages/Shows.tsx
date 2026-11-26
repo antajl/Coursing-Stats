@@ -1,7 +1,7 @@
 import { lazy, Suspense, useState, useEffect, useCallback } from 'react'
 import { Navigate, useSearchParams, useNavigate, useParams, useLocation } from 'react-router-dom'
-import RKFAttribution from '../components/RKFAttribution'
 import { SEO } from '../components/SEO'
+import { SectionFooter } from '../components/SectionFooter'
 import { usePublicCalendarVisible } from '../hooks/useStaticData'
 import LoadingCard from '../components/LoadingCard'
 import SkeletonLoader from '../components/SkeletonLoader'
@@ -234,9 +234,10 @@ function Shows({ defaultTab, urlYear }: ShowsProps) {
         )}
       </div>
 
-      <div className="pt-2 text-center">
-        <RKFAttribution variant="inline" />
-      </div>
+      <SectionFooter
+        source="rkf"
+        disclaimer="Выставочная статистика и результаты рингов РКФ сформированы на основе открытых протоколов и каталогов."
+      />
     </>
   )
 }

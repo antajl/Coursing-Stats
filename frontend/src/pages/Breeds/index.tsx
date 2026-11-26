@@ -1,6 +1,7 @@
 import { SEO } from '../../components/SEO'
 import { JsonLd, breadcrumbListSchema, itemPageSchema } from '../../components/JsonLd'
 import LoadingCard from '../../components/LoadingCard'
+import { SectionFooter } from '../../components/SectionFooter'
 import { useBreedsFilterAndSort } from './useBreedsFilterAndSort'
 import BreedsToolbar from './BreedsToolbar'
 import BreedsList from './BreedsList'
@@ -87,6 +88,11 @@ export default function BreedsDirectory() {
         plaqueTitle={plaqueTitle}
         loadMoreRef={loadMoreRef}
         loading={loading}
+      />
+
+      <SectionFooter
+        source="multi"
+        disclaimer="Каталог пород и сводные метрики рассчитываются автоматически по результатам соревнований, выставок РКФ и замеров скорости Донино."
       />
     </div>
   )

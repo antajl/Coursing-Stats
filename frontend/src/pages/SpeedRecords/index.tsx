@@ -2,7 +2,7 @@ import { useMemo, useEffect } from 'react'
 import { useSearchParams, useNavigate, useParams, useLocation, Navigate } from 'react-router-dom'
 import { SEO } from '../../components/SEO'
 import { JsonLd, doninoDatasetSchema } from '../../components/JsonLd'
-import DoninoAttribution from '../../components/DoninoAttribution'
+import { SectionFooter } from '../../components/SectionFooter'
 import { useYandexGoal } from '../../components/YandexMetrica'
 import { useSpeedRecordsPage } from './useSpeedRecordsPage'
 import DoninoPageToolbar from './DoninoPageToolbar'
@@ -179,9 +179,10 @@ function SpeedRecords() {
           )}
         </div>
 
-        <div className="pt-2 text-center">
-          <DoninoAttribution variant="inline" />
-        </div>
+        <SectionFooter
+          source="donino"
+          disclaimer="Замеры скорости (км/ч) и результаты спринта 350 м публикуются по данным бегового полигона Донино."
+        />
       </div>
     </>
   )

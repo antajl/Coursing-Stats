@@ -5,6 +5,7 @@ import { SEO } from '../../components/SEO'
 import { JsonLd, faqPageSchema } from '../../components/JsonLd'
 import { useYandexGoal } from '../../components/YandexMetrica'
 import { MobileSubNavTabs } from '../../components/ui/MobileSubNavTabs'
+import { SectionFooter } from '../../components/SectionFooter'
 import { GUIDE_FAQS } from './guideFaqs'
 import TitlesTab from './components/TitlesTab'
 import ShowsTab from './components/ShowsTab'
@@ -119,6 +120,11 @@ export default function Guide() {
         {activeTab === 'donino' && <DoninoTab />}
         {activeTab === 'rating' && <RatingTab />}
       </div>
+
+      <SectionFooter
+        source="multi"
+        disclaimer="Справочник носит информационно-разъяснительный характер и основан на открытых регламентах РКФ/FCI и методике сайта."
+      />
     </>
   )
 }

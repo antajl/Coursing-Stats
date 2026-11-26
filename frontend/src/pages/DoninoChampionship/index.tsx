@@ -16,6 +16,7 @@ import ChampionshipStandingsTab from './ChampionshipStandingsTab'
 import ChampionshipStageTab, { prefetchStageData } from './ChampionshipStageTab'
 import ChampionshipRulesTab from './ChampionshipRulesTab'
 import { setLastDoninoPath } from '../../lib/navState'
+import { SectionFooter } from '../../components/SectionFooter'
 
 type MainTab = 'standings' | 'stage1' | 'stage2' | 'stage3' | 'rules'
 
@@ -259,12 +260,12 @@ export default function DoninoChampionship() {
         ariaLabel="Разделы Донино"
       />
 
-      <div className="space-y-4 w-full max-w-full min-w-0">
-        {/* Tournament Navigation Tabs */}
-        <div className="border-b border-old-money-200 w-full max-w-full overflow-hidden">
+      <div className="rounded-2xl border border-old-money-200/80 bg-white/80 p-3 sm:p-4 shadow-2xs space-y-4 w-full max-w-full min-w-0 overflow-hidden">
+        {/* Внутренние вкладки панели чемпионата */}
+        <div className="-mx-3 -mt-3 sm:-mx-4 sm:-mt-4 px-2 sm:px-4 pt-1.5 border-b border-old-money-200/80 bg-cream-50/70 w-[calc(100%+1.5rem)] sm:w-[calc(100%+2rem)] overflow-hidden">
           <nav
             ref={navRef}
-            className="flex gap-1 sm:gap-2 overflow-x-auto pb-px scrollbar-none w-full max-w-full"
+            className="flex gap-1 sm:gap-2 overflow-x-auto pb-px no-scrollbar w-full max-w-full"
             aria-label="Вкладки турнира"
           >
             {mainTabs.map((t) => {
@@ -366,6 +367,11 @@ export default function DoninoChampionship() {
           </div>
         )}
       </div>
+
+      <SectionFooter
+        source="donino"
+        disclaimer="Таблицы клубного чемпионата Донино по лигам обновляются по официальным протоколам этапов."
+      />
     </>
   )
 }

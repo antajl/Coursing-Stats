@@ -1,7 +1,7 @@
 import { memo, useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import { Star } from 'lucide-react'
 import DogSexIcon from '../../components/DogSexIcon'
+import { FavoriteCardStar } from '../../components/ui/FavoriteCardStar'
 import OwnerCrownName from '../../components/OwnerCrownName'
 import { Top3AccentBar } from '../../components/DogCard'
 import RankBadge, { DeltaBadge } from '../../components/RankBadge'
@@ -71,47 +71,6 @@ export function getShowDogFavId(dog: Pick<ShowDogCardData, 'id' | 'name_lat' | '
   const stable = stableShowProfileId(dog.name_lat || '', dog.breed || '')
   if (stable >= SHOW_PROFILE_ID_BASE) return String(stable)
   return String(dog.id)
-}
-
-function FavoriteCardStar({
-  dogId,
-  nameLat,
-  nameRu,
-  breed,
-  isFav,
-  onToggle,
-}: {
-  dogId: string
-  nameLat: string
-  nameRu?: string
-  breed: string
-  isFav: boolean
-  onToggle: (dogId: string, meta: FavoriteDogMeta) => void
-}) {
-  const { primary } = parseDogName(nameLat, nameRu)
-  const meta: FavoriteDogMeta = { name: primary, breed }
-  return (
-    <button
-      type="button"
-      onClick={(e) => {
-        e.preventDefault()
-        e.stopPropagation()
-        onToggle(dogId, meta)
-      }}
-      className={`absolute right-2 bottom-2 z-10 flex h-7 w-7 items-center justify-center rounded-full bg-white/90 shadow-sm transition-all duration-150 hover:bg-cream-100 active:scale-90 touch-manipulation before:absolute before:-inset-2 before:content-[''] ${
-        isFav ? 'opacity-100' : 'opacity-40 sm:opacity-0 sm:group-hover:opacity-100'
-      }`}
-      title={isFav ? 'Удалить из избранного' : 'Добавить в избранное'}
-      aria-label={isFav ? 'Удалить из избранного' : 'Добавить в избранное'}
-    >
-      <Star
-        key={isFav ? `${dogId}-fav` : `${dogId}-plain`}
-        className={`h-4 w-4 ${
-          isFav ? 'fill-amber-400 text-amber-400 animate-favorite-star-pop' : 'text-charcoal-400'
-        }`}
-      />
-    </button>
-  )
 }
 
 interface ShowDogCardProps {

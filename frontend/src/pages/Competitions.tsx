@@ -5,6 +5,7 @@ import { JsonLd, breadcrumbListSchema, faqPageSchema } from '../components/JsonL
 import { usePublicCalendarVisible } from '../hooks/useStaticData'
 import LoadingCard from '../components/LoadingCard'
 import { MobileSubNavTabs } from '../components/ui/MobileSubNavTabs'
+import { SectionFooter } from '../components/SectionFooter'
 import { getLastSectionTab, setLastSectionTab } from '../lib/navState'
 
 const TopDogs = lazy(() => import('./TopDogs'))
@@ -282,13 +283,10 @@ function Competitions({ defaultTab }: CompetitionsProps) {
         )}
       </div>
 
-      <footer className="mt-8 rounded-xl border border-old-money-100 bg-cream-50/30 p-3 text-center sm:text-left">
-        <p className="text-[11px] sm:text-xs leading-relaxed text-charcoal-500">
-          <strong>Примечание:</strong> спортивная статистика и результаты состязаний систематизированы на основе открытых протоколов
-          организаторов, полевых секретариатов и материалов ProCoursing.ru. Сведения могут содержать ошибки или быть неполными
-          из-за фрагментарности открытых источников и ручного ведения ранних баз организаторами.
-        </p>
-      </footer>
+      <SectionFooter
+        source="procoursing"
+        disclaimer="Примечание: спортивная статистика и результаты состязаний систематизированы на основе открытых протоколов организаторов, полевых секретариатов и материалов ProCoursing.ru. Сведения могут содержать ошибки или быть неполными из-за фрагментарности открытых источников и ручного ведения ранних баз организаторами."
+      />
     </>
   )
 }

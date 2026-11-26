@@ -31,7 +31,7 @@ export function ExhibitionHeader({ exhibition }: { exhibition: ShowExhibition })
 
   return (
     <div className="relative mb-4">
-      <div className="min-w-0 rounded-xl border border-old-money-200 bg-gradient-to-br from-cream-50 to-white px-4 py-4 md:px-5 md:py-4.5">
+      <div className="min-w-0 rounded-2xl border border-old-money-200 bg-gradient-to-br from-cream-50 to-white px-4 py-4 md:px-5 md:py-4.5">
         <div className="flex items-start justify-between gap-3">
           <div className="min-w-0 flex-1">
             {scopeInfo.isMono && (
@@ -63,21 +63,21 @@ export function ExhibitionHeader({ exhibition }: { exhibition: ShowExhibition })
             </h1>
 
             <div className="mt-3 flex flex-wrap gap-3">
-              <div className="flex items-center gap-2 rounded-lg bg-white/60 px-3 py-2 shrink-0">
+              <div className="flex items-center gap-2 rounded-xl border border-old-money-200/80 bg-cream-100/70 px-3 py-2 shrink-0">
                 <Calendar className="h-4 w-4 text-camel-600" />
                 <div>
                   <div className="text-[10px] uppercase tracking-wide text-old-money-500">Дата</div>
                   <div className="text-sm font-semibold text-charcoal-900">{exhibition.date || '—'}</div>
                 </div>
               </div>
-              <div className="flex items-center gap-2 rounded-lg bg-white/60 px-3 py-2 shrink-0">
+              <div className="flex items-center gap-2 rounded-xl border border-old-money-200/80 bg-cream-100/70 px-3 py-2 shrink-0">
                 <Dog className="h-4 w-4 text-camel-600" />
                 <div>
                   <div className="text-[10px] uppercase tracking-wide text-old-money-500">Собак</div>
                   <div className="text-sm font-semibold text-charcoal-900">{dogsCount}</div>
                 </div>
               </div>
-              <div className="flex items-center gap-2 rounded-lg bg-white/60 px-3 py-2 shrink-0">
+              <div className="flex items-center gap-2 rounded-xl border border-old-money-200/80 bg-cream-100/70 px-3 py-2 shrink-0">
                 <PawPrint className="h-4 w-4 text-camel-600" />
                 <div>
                   <div className="text-[10px] uppercase tracking-wide text-old-money-500">
@@ -91,7 +91,7 @@ export function ExhibitionHeader({ exhibition }: { exhibition: ShowExhibition })
                   </div>
                 </div>
               </div>
-              <div className="flex items-center gap-2 rounded-lg bg-white/60 px-3 py-2 min-w-0 flex-1">
+              <div className="flex items-center gap-2 rounded-xl border border-old-money-200/80 bg-cream-100/70 px-3 py-2 min-w-0 flex-1">
                 <MapPin className="h-4 w-4 text-camel-600 shrink-0" />
                 <div className="min-w-0 flex-1">
                   <div className="text-[10px] uppercase tracking-wide text-old-money-500">Место</div>
