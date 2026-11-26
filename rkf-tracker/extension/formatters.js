@@ -39,3 +39,12 @@ export function formatDocTitle(title) {
     return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
   }).join(' ');
 }
+
+export function formatStatusName(status) {
+  if (!status) return '';
+  const trimmed = status.trim();
+  if (/^передано в производственный департамент$/i.test(trimmed)) {
+    return 'Передано в производство';
+  }
+  return trimmed;
+}

@@ -75,10 +75,10 @@
 .app-row.is-collected.is-open .dog-pedigree { display: block; }
 .app-row.is-collected.is-open .doc-meta { display: flex; }
 
-/* Fixed Table Columns (Horizontal) */
+/* Responsive Table Columns (Horizontal) */
 .row-main {
   display: grid;
-  grid-template-columns: 18px 250px 1fr 140px 14px;
+  grid-template-columns: 18px minmax(130px, 180px) minmax(0, 1fr) auto 14px;
   align-items: center;
   gap: 8px;
 }
@@ -145,8 +145,7 @@
 
 /* Column 2: Dog Info */
 .col-dog {
-  width: 250px;
-  flex-shrink: 0;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -213,8 +212,7 @@
 
 /* Column 4: Status Badge */
 .col-status {
-  width: 140px;
-  flex-shrink: 0;
+  min-width: 0;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -229,6 +227,9 @@
   letter-spacing: 0.01em;
   border: 1px solid transparent;
   text-align: center;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .badge-ready {

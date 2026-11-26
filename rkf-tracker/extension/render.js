@@ -1,5 +1,5 @@
 // DOM Renderer for Applications and Cards (ES Module)
-import { formatDogName, formatDocTitle } from './formatters.js';
+import { formatDogName, formatDocTitle, formatStatusName } from './formatters.js';
 
 function escapeHtml(str) {
   if (!str) return '';
@@ -53,6 +53,7 @@ export function renderRowHtml(app, userUuid) {
 
   const safeBarcode = escapeHtml(app.barcode);
   const safeStatus = escapeHtml(app.currentStatus);
+  const displayStatus = escapeHtml(formatStatusName(app.currentStatus));
   const safePedigree = escapeHtml(app.pedigreeNumber);
   const rkfLink = userUuid
     ? `https://rkf.online/user/${encodeURIComponent(userUuid)}/documents/application/registry?barcode=${encodeURIComponent(app.barcode)}`
@@ -86,7 +87,7 @@ export function renderRowHtml(app, userUuid) {
         </div>
 
         <div class="col-status">
-          <span class="badge ${badgeClass}">${safeStatus}</span>
+          <span class="badge ${badgeClass}" title="${safeStatus}">${displayStatus}</span>
         </div>
 
         <div class="col-chevron">
