@@ -106,6 +106,11 @@ All `dog_id` in `competitions` **must** have `data/v1/dogs/by-id/{id}.json` (no 
 1. **Исключение персональных данных владельцев (`no_owner_pii`):** Публичный сайт, протоколы выставок/соревнований (`shows/exhibitions/*.json`, `competitions/*.json`), карточки `dogs/by-id/*.json`, CDN-паки `indexes/dog-profiles/pack-*.json`, а также UI (`ShowExhibitionDetail`, `ShowJudgeBreedDogsList`) не хранят и не отображают имена владельцев (`owner` удалено / `null`). Отсутствие поля `owner` контролируется гейтом `no_owner_pii` в `verify-publish-gates.ts`.
 2. **Единый 256-шардовый префиксный поиск (`search-shards`):** Глобальный поиск по всей базе (в т.ч. вне топ-рейтинга `ShowRanking.tsx` и `QuickSearchModal`) использует `data/v1/indexes/search-shards/{00..ff}.json` (генератор `buildSearchShards` в `build-all-data.ts`). Коды `SearchRecordKind` (`backend/lib/search-prefix.ts`): `'s'` спорт, `'x'` только выставки, `'b'` спорт+выставки, `'d'` Донино, `'js'`/`'jx'` судьи. Для фильтрации выставочных собак допускаются строго `hit.kind === 'x' || hit.kind === 'b'`.
 
+### RU/LAT Slash-Name Normalization & Bot Show-Dog Routing
+
+1. **Разделение склеенных кличек со слэшем (`normalize-slash-dog-names.ts`):** В карточках `dogs/by-id/*.json` и протоколах `competitions/*.json` не допускаются неразделённые двуязычные строки вида `"LAT / RU"` в одном поле `name_lat` или `name_ru` — они автоматически разносятся в `name_lat` и `name_ru`.
+2. **Прямая маршрутизация выставочных собак в Telegram-боте (`bot/src/api.ts`, `bot/src/api/shows.ts`):** Для `dogId >= 1_000_000` бот не делает лишних запросов в спортивные паки, а обращается напрямую к `shows/indexes/dog-details/{shard}.json`, разрешает цепочки `alias_to` до глубины 3, извлекает `show_summary` за один проход и при наличии `competition_dog_id` подгружает спортивный профиль.
+
 ---
 
 ## Domain Forbidden Rules

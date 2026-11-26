@@ -142,6 +142,11 @@ medals ≠ CS points — never merge
 2) **Полный охват схем РКФ (`НЧ РК`, `ПЧ РК`, `C.I.C.`):** Расчёт `НЧ РК` реализует все 6 официальных схем Положения о титулах по состязаниям (п. 3.3.1: `ПКР + ЧРКФ`, `2 × ПКР`, `ПКР + 2 × CACL`, `2 × ЧРКФ`, `ЧРКФ + 2 × CACL`, `5 × CACL` в 5 субъектах РФ у 4 судей). Породный чемпион `ПЧ РК` считается по `3 × CACLBr` у ≥ 2 судей (п. 3.3.2), а прогресс `C.I.C.` — по `2 × CACIL` с проверкой допуска по экстерьеру.
 3) **Модульность (`< 300` строк):** Пайплайн `frontend/src/lib/cumulativeTitles.ts` декомпозирован на тематические модули в `frontend/src/lib/cumulativeTitles/` (`types.ts`, `sportHelpers.ts`, `sportEvaluator.ts`, `showHelpers.ts`, `showClubEvaluator.ts`, `showEvaluator.ts`, `supremeEvaluator.ts`, `explanations.ts`, `index.ts`).
 
+### 5-Criteria Coursing Analytics & Protocol Builder Standard
+
+1) **Канонический порядок 5 критериев курсинга (`М, Р, В, П, Э`):** Во всех модулях (`backend/lib/coursing-criteria.ts`, `TableProtocolView.tsx`, `DogCoursingCriteriaSection`, `ProtocolBuilder`) используется единый порядок РКФ/FCI: **М** (Маневренность / `agility`), **Р** (Резвость / `speed`), **В** (Выносливость / `endurance`), **П** (Преследование / `intelligence`), **Э** (Энтузиазм / `enthusiasm`), максимум 20 баллов на критерий.
+2) **Агрегация радара курсинга (`coursing-criteria.ts`):** Средние профили в `dog-profiles/pack-*.json` (`coursing_criteria`) строятся из `raw_scores_json.heats` с базовой линией породы по принципу leave-one-dog-out (при `< 5` забегов по породе используется глобальная база) и расчётом дельты 1-го и 2-го забегов. В профиле `/dog/:id` блок располагается строго под столбцами дисциплин без сдвига колонок.
+
 ---
 
 ## Domain Forbidden Rules

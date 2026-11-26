@@ -208,6 +208,7 @@ Workers + Grammy + KV; aggregates only
 2. **Единый календарь РКФ (`yarn sync-tracker`):** Файл `rkf-competitions-2026.json` синхронизируется во все клиенты (`bot/src/tracker/`, `rkf-tracker/{web,extension,desktop,bot}/`) строго через `rkf-tracker/shared/sync-tracker-calendar.cjs`, без унификации визуального дизайна разных платформ (сайт vs расширение vs Windows Desktop).
 3. **Безопасность и лимиты объединённого Telegram-бота (`bot/src/tracker/`):** Токены `rkfToken` шифруются в KV алгоритмом AES-GCM (`enc:v1:`), WebApp-авторизация проверяется по HMAC-SHA256, а крон-опрос (`*/15 * * * *`) ограничен round-robin квотой `MAX_RKF_POLLS_PER_CRON = 8` (пакеты по 4).
 4. **Стиль маркеров в Telegram-боте:** Допустимы только сдержанные функциональные маркеры (`🥇🥈🥉🏆📅📋🔍🏅⭐`), запрещены избыточные декоративные эмодзи (`🎪`, `❌`, `🏠`, `⏳`, `💡`) и неработающие пункты меню (кнопка `rating_elo` удалена). Запрещено смешивать UI-эмодзи сайта (в веб-фронтенде по-прежнему строго 0 эмодзи).
+5. **Очистка наследия Turso и одноразовых скриптов:** Зависимости `@libsql/client`, `@tursodatabase/api`, `turso:*` команды и устаревшие одноразовые скрипты (`backend/scripts/repair/`, `tmp-*`, `check-*`, `test-*.js`) удалены из репозитория.
 
 ---
 
