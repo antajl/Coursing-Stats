@@ -1,12 +1,25 @@
 import { type Icons } from '../../lib/icons'
 
+import type { SearchRecordKind } from '../../../../backend/lib/search-prefix'
+
 export interface HomeSearchDog {
-  id: number
+  id: number | string
   name_lat?: string | null
   name_ru?: string | null
   breed?: string | null
   competition_count?: number
   sex?: string | null
+  kind?: SearchRecordKind
+  to?: string
+}
+
+export interface JudgeSearchItem {
+  id: string
+  name: string
+  meta: string
+  kind: 'js' | 'jx'
+  count: number
+  to: string
 }
 
 export interface CalendarSearchEvent {
@@ -41,4 +54,5 @@ export type SearchItem =
   | { type: 'nav'; item: NavigationRouteItem; score: number }
   | { type: 'breed'; item: BreedHubSearchItem; score: number }
   | { type: 'dog'; dog: HomeSearchDog; score: number }
+  | { type: 'judge'; judge: JudgeSearchItem; score: number }
   | { type: 'event'; event: CalendarSearchEvent; score: number }

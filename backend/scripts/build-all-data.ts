@@ -182,6 +182,9 @@ if (fs.existsSync(path.join(ROOT, showRankingMonolith))) {
 run('npx tsx backend/scripts/shows/build-featured-shows.ts', 'Featured shows build');
 run('npx tsx backend/scripts/export/export-all-html-protocols.ts', 'HTML protocols export');
 run('npx tsx backend/scripts/shows/build-all-time-top-ranking.ts', 'Show all-time top ranking build');
+if (!isCI) {
+  run('npx tsx --max-old-space-size=8192 backend/scripts/build-derived/search-shards.ts', 'Global search shards build');
+}
 
 // Also copy data for local preview (frontend/public/data/v1/)
 run('node frontend/scripts/copy-data.js', 'Data copy for preview');

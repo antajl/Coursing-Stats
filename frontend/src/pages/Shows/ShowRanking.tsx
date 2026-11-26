@@ -3,10 +3,10 @@ import { useSearchParams, useLocation, useNavigate, useParams } from 'react-rout
 import { useQuery } from '@tanstack/react-query'
 import SkeletonLoader from '../../components/SkeletonLoader'
 import { getShowDogRanking, getShowDogRankingPage0 } from '../../lib/staticData'
+import { queryGlobalSearchShards } from '../../components/nav/searchShardClient'
 import {
   compareShowDogs,
   compareShowDogsMono,
-  showMonoRankScore,
   showMonoRankScoreForCategory,
   type ShowMonoAgeCategory,
 } from '../../../../backend/lib/show-award-ranking'
@@ -27,6 +27,7 @@ const SHOW_RANKING_YEARS = [
   '2023',
   '2022',
   '2021',
+  '2020',
   '2019',
   '2018',
   '2017',
@@ -151,7 +152,6 @@ export default function ShowRanking({ urlYear }: ShowRankingProps = {}) {
     enabled: typeof rankingYear === 'string',
   })
 
-  const hasPage0 = Boolean(page0Data?.success && page0Data.data)
   const page0Failed =
     isPage0Fetched && (!page0Data?.success || !page0Data.data || isPage0Error)
 
@@ -205,16 +205,45 @@ export default function ShowRanking({ urlYear }: ShowRankingProps = {}) {
     enabled: allowFullLoad,
   })
 
-  // Synchronous memoized allDogs: zero delay, no useState or effect lag
+  const trimmedSearch = debouncedSearchQuery.trim()
+  const useShardSearch = trimmedSearch.length >= 3 && !rankingData?.success
+  const { data: shardSearchData } = useQuery({
+    queryKey: ['showRankingShardSearch', trimmedSearch],
+    queryFn: () => queryGlobalSearchShards(trimmedSearch),
+    staleTime: 5 * 60 * 1000,
+    enabled: useShardSearch,
+  })
+
+  // Synchronous memoized allDogs: zero delay, instant 256-shard fallback while full season JSON downloads
   const allDogs = useMemo<ShowDogCardData[]>(() => {
     if (rankingData?.success && rankingData.data) {
       return rankingData.data
     }
-    if (page0Data?.success && page0Data.data) {
-      return page0Data.data
+    const baseDogs: ShowDogCardData[] =
+      page0Data?.success && page0Data.data ? page0Data.data : []
+
+    if (!useShardSearch || !shardSearchData?.dogs?.length) {
+      return baseDogs
     }
-    return []
-  }, [rankingData, page0Data])
+
+    const seen = new Set(baseDogs.map((d) => String(d.id)))
+    const extra: ShowDogCardData[] = []
+    for (const hit of shardSearchData.dogs) {
+      if ((hit.kind !== 'x' && hit.kind !== 'b') || seen.has(hit.id)) continue
+      seen.add(hit.id)
+      extra.push({
+        id: hit.id,
+        name_lat: hit.namePrimary,
+        name_ru: hit.nameSecondary,
+        breed: hit.breedOrMeta,
+        sex: '',
+        total_shows: hit.weight,
+        rank_score: 0,
+        titles: {} as ShowDogCardData['titles'],
+      })
+    }
+    return extra.length > 0 ? [...baseDogs, ...extra] : baseDogs
+  }, [rankingData, page0Data, useShardSearch, shardSearchData])
 
   // Synchronize state with URL search params
   const isFirstRender = useRef(true)

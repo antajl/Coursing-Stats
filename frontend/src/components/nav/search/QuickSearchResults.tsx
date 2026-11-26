@@ -3,10 +3,12 @@ import { Icons } from '../../../lib/icons'
 import { displayBreed } from '../../../lib/breedMapping'
 import { parseDogName } from '../../../lib/dogName'
 import DogSexIcon from '../../DogSexIcon'
+import { QuickSearchJudgesSection } from './QuickSearchJudgesSection'
 import type {
   BreedHubSearchItem,
   CalendarSearchEvent,
   HomeSearchDog,
+  JudgeSearchItem,
   NavigationRouteItem,
   SearchItem,
 } from '../quickSearchTypes'
@@ -15,6 +17,7 @@ interface QuickSearchResultsProps {
   navItems: Array<{ type: 'nav'; item: NavigationRouteItem; score: number }>
   breedItems: Array<{ type: 'breed'; item: BreedHubSearchItem; score: number }>
   dogItems: Array<{ type: 'dog'; dog: HomeSearchDog; score: number }>
+  judgeItems?: Array<{ type: 'judge'; judge: JudgeSearchItem; score: number }>
   eventItems: Array<{ type: 'event'; event: CalendarSearchEvent; score: number }>
   allItems: SearchItem[]
   selectedIndex: number
@@ -26,6 +29,7 @@ export const QuickSearchResults: React.FC<QuickSearchResultsProps> = ({
   navItems,
   breedItems,
   dogItems,
+  judgeItems = [],
   eventItems,
   allItems,
   selectedIndex,
@@ -166,6 +170,21 @@ export const QuickSearchResults: React.FC<QuickSearchResultsProps> = ({
                         / {secondary}
                       </span>
                     )}
+                    {item.dog.kind === 'x' && (
+                      <span className="text-[9px] uppercase font-bold px-1.5 py-0.5 rounded bg-cream-100 text-camel-800 border border-camel-200 shrink-0">
+                        Выставки
+                      </span>
+                    )}
+                    {item.dog.kind === 'd' && (
+                      <span className="text-[9px] uppercase font-bold px-1.5 py-0.5 rounded bg-amber-50 text-amber-800 border border-amber-200 shrink-0">
+                        Донино
+                      </span>
+                    )}
+                    {item.dog.kind === 'b' && (
+                      <span className="text-[9px] uppercase font-bold px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-800 border border-emerald-200 shrink-0">
+                        Спорт + РКФ
+                      </span>
+                    )}
                   </div>
                   <div className="flex items-center gap-1 text-[11px] text-charcoal-500 mt-0.5">
                     <span className="font-medium text-charcoal-700 truncate">
@@ -180,7 +199,13 @@ export const QuickSearchResults: React.FC<QuickSearchResultsProps> = ({
                     {item.dog.competition_count ? (
                       <>
                         <span className="text-charcoal-300">·</span>
-                        <span>{item.dog.competition_count} заб.</span>
+                        <span>
+                          {item.dog.kind === 'x'
+                            ? `${item.dog.competition_count} выст.`
+                            : item.dog.kind === 'd'
+                              ? `${item.dog.competition_count} км/ч`
+                              : `${item.dog.competition_count} заб.`}
+                        </span>
                       </>
                     ) : null}
                   </div>
@@ -191,6 +216,15 @@ export const QuickSearchResults: React.FC<QuickSearchResultsProps> = ({
           })}
         </div>
       )}
+
+      {/* Judges Section */}
+      <QuickSearchJudgesSection
+        judgeItems={judgeItems}
+        allItems={allItems}
+        selectedIndex={selectedIndex}
+        onSelectItem={onSelectItem}
+        onHoverIndex={onHoverIndex}
+      />
 
       {/* Events Section */}
       {eventItems.length > 0 && (

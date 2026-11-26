@@ -3,9 +3,11 @@ import { createPortal } from 'react-dom'
 import { useNavigate } from 'react-router-dom'
 import { Icons } from '../../lib/icons'
 import { computeSearchResults } from './quickSearchScoring'
+import { getGlobalSearchHitUrl, queryGlobalSearchShards } from './searchShardClient'
 import type {
   CalendarSearchEvent,
   HomeSearchDog,
+  JudgeSearchItem,
   SearchItem,
 } from './quickSearchTypes'
 import { QuickSearchEmptyState } from './search/QuickSearchEmptyState'
@@ -36,6 +38,8 @@ export default function QuickSearchModal({ isOpen, onClose }: QuickSearchModalPr
   const [selectedIndex, setSelectedIndex] = useState(0)
   const [dogs, setDogs] = useState<HomeSearchDog[] | null>(cachedDogs)
   const [events, setEvents] = useState<CalendarSearchEvent[] | null>(cachedEvents)
+  const [shardDogs, setShardDogs] = useState<HomeSearchDog[]>([])
+  const [shardJudges, setShardJudges] = useState<JudgeSearchItem[]>([])
 
   // Fetch indexes when opened
   useEffect(() => {
@@ -90,11 +94,70 @@ export default function QuickSearchModal({ isOpen, onClose }: QuickSearchModalPr
     }
   }, [isOpen])
 
-  // Compute matched items via pure scoring function
-  const { navItems, breedItems, dogItems, eventItems, allItems } = useMemo(
-    () => computeSearchResults(query, dogs, events),
-    [dogs, events, query],
-  )
+  // Query prefix search shards for all 620k+ dogs (sport + shows + Donino) & judges
+  useEffect(() => {
+    if (!isOpen || query.trim().length < 2) {
+      setShardDogs([])
+      setShardJudges([])
+      return
+    }
+    let cancelled = false
+    const timer = window.setTimeout(() => {
+      void queryGlobalSearchShards(query).then(({ dogs: dHits, judges: jHits }) => {
+        if (cancelled) return
+        setShardDogs(
+          dHits.map((h) => ({
+            id: h.id,
+            name_ru: h.namePrimary,
+            name_lat: h.nameSecondary || h.namePrimary,
+            breed: h.breedOrMeta,
+            competition_count: h.weight,
+            kind: h.kind,
+            to: getGlobalSearchHitUrl(h),
+          })),
+        )
+        setShardJudges(
+          jHits.map((h) => ({
+            id: h.id,
+            name: h.namePrimary,
+            meta: h.breedOrMeta,
+            kind: h.kind as 'js' | 'jx',
+            count: h.weight,
+            to: getGlobalSearchHitUrl(h),
+          })),
+        )
+      })
+    }, 90)
+    return () => {
+      cancelled = true
+      window.clearTimeout(timer)
+    }
+  }, [isOpen, query])
+
+  // Compute matched items via pure scoring function + shard results
+  const { navItems, breedItems, dogItems, judgeItems, eventItems, allItems } = useMemo(() => {
+    const base = computeSearchResults(query, dogs, events)
+    const seenDogUrls = new Set(base.dogItems.map((d) => d.dog.to || `/dog/${d.dog.id}/`))
+    const mergedDogs = [...base.dogItems]
+    for (const sd of shardDogs) {
+      const target = sd.to || `/dog/${sd.id}/`
+      if (seenDogUrls.has(target)) continue
+      seenDogUrls.add(target)
+      mergedDogs.push({ type: 'dog', dog: sd, score: 80 })
+      if (mergedDogs.length >= 10) break
+    }
+    const judgesWrapped = shardJudges.map((j, idx) => ({
+      type: 'judge' as const,
+      judge: j,
+      score: 90 - idx,
+    }))
+    return {
+      ...base,
+      dogItems: mergedDogs,
+      judgeItems: judgesWrapped,
+      allItems: [...base.navItems, ...base.breedItems, ...mergedDogs, ...judgesWrapped, ...base.eventItems],
+    }
+  }, [dogs, events, query, shardDogs, shardJudges])
 
   // Reset selected index when results change
   useEffect(() => {
@@ -108,7 +171,9 @@ export default function QuickSearchModal({ isOpen, onClose }: QuickSearchModalPr
     } else if (item.type === 'breed') {
       navigate(item.item.to)
     } else if (item.type === 'dog') {
-      navigate(`/dog/${item.dog.id}/`)
+      navigate(item.dog.to || `/dog/${item.dog.id}/`)
+    } else if (item.type === 'judge') {
+      navigate(item.judge.to)
     } else {
       navigate(`/event/${item.event.id}/`)
     }
@@ -178,7 +243,7 @@ export default function QuickSearchModal({ isOpen, onClose }: QuickSearchModalPr
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={handleKeyDown}
-            placeholder="Поиск по сайту: собака, порода, турнир или раздел..."
+            placeholder="Поиск по всей базе: собака (спорт/выставки/Донино), судья, порода..."
             className="min-w-0 flex-1 bg-transparent border-0 !outline-none focus:!outline-none focus-visible:!outline-none focus:!ring-0 focus-visible:!ring-0 text-sm sm:text-base text-charcoal-900 placeholder:text-charcoal-400 font-medium mr-2"
             style={{ outline: 'none' }}
           />
@@ -231,6 +296,7 @@ export default function QuickSearchModal({ isOpen, onClose }: QuickSearchModalPr
               navItems={navItems}
               breedItems={breedItems}
               dogItems={dogItems}
+              judgeItems={judgeItems}
               eventItems={eventItems}
               allItems={allItems}
               selectedIndex={selectedIndex}
