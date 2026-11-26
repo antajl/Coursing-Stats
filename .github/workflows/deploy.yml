@@ -45,6 +45,9 @@ jobs:
 
       - name: Verify Publish Gates
         run: yarn run publish-gates
+
+      - name: Run full test suite
+        run: yarn test
       
       - name: Install frontend dependencies
         working-directory: ./frontend
@@ -139,7 +142,7 @@ jobs:
               --delete \
               --cache-control "public, max-age=0, must-revalidate"
           else
-            echo "Deploying lightweight hubs HTML (without --delete to preserve S3 billing)..."
+            echo "Deploying lightweight hubs HTML (without --delete to preserve S3 billing and monthly /dog/* SEO pages)..."
             aws s3 sync frontend/dist/ s3://${{ secrets.S3_BUCKET }}/ \
               --endpoint-url https://storage.yandexcloud.net \
               --acl public-read \
@@ -147,11 +150,6 @@ jobs:
               --include "*.html" \
               --exclude "dog/*" \
               --cache-control "public, max-age=0, must-revalidate"
-
-            # Purge stale dog HTML directory from S3 so SPA fallback serves the latest bundle directly
-            aws s3 rm s3://${{ secrets.S3_BUCKET }}/dog/ \
-              --recursive \
-              --endpoint-url https://storage.yandexcloud.net || true
           fi
 
           # 4. Critical SPA entrypoints (index.html, 404.html and ALL prerendered hubs including breeds/:slug)
@@ -246,12 +244,25 @@ jobs:
       - name: Deploy all data (Full Sync)
         if: steps.data-diff.outputs.mode == 'full'
         run: |
-          echo "Running full S3 sync for data/v1/..."
+          echo "Running full S3 sync for public data/v1/ (respecting publish-exclude rules)..."
           aws s3 sync data/v1/ s3://${{ secrets.S3_BUCKET }}/data/v1/ \
             --endpoint-url https://storage.yandexcloud.net \
             --acl public-read \
             --size-only \
             --exclude "shows/protocols/*" \
+            --exclude "shows/exhibitions/*" \
+            --exclude "shows/exhibitions-rkf/*" \
+            --exclude "shows/indexes/year-data/*" \
+            --exclude "shows/indexes/show-dog-lookup.json" \
+            --exclude "shows/indexes/dog-ranking.json" \
+            --exclude "shows/indexes/dog-ranking-unknown.json" \
+            --exclude "dogs/by-id/*" \
+            --exclude "dogs/registry.json" \
+            --exclude "judges/registry.json" \
+            --exclude "pc-db.sqlite*" \
+            --exclude "audit/*" \
+            --exclude "README.md" \
+            --exclude "publish-manifest.json" \
             --cache-control "public, max-age=3600, must-revalidate" \
             --delete
         env:
