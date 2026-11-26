@@ -15,13 +15,19 @@ on:
         type: boolean
         default: false
       full_prerender:
-        description: 'Полный SEO пререндер всех 25 000 HTML страниц (тарифицируется поштучно S3)'
+        description: 'Принудительная перегенерация и перезалив всех ~25 000 entity HTML страниц'
         required: false
         type: boolean
         default: false
-  schedule:
-    # 1-го числа каждого месяца в 03:00 UTC (06:00 МСК) — плановый полный SEO пререндер
-    - cron: '0 3 1 * *'
+      dry_run:
+        description: 'Тестовый прогон (показать план изменений без записи в S3)'
+        required: false
+        type: boolean
+        default: false
+
+concurrency:
+  group: deploy-yandex-s3
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -32,7 +38,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 2
+          fetch-depth: 20
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -60,33 +66,60 @@ jobs:
         working-directory: ./frontend
         run: yarn build
 
-      - name: Prerender SEO HTML
-        id: prerender-step
-        run: |
-          if [ "${{ inputs.full_prerender }}" = "true" ] || [ "${{ github.event_name }}" = "schedule" ] || git log -1 --pretty=%B | grep -q '\[seo full\]'; then
-            echo "mode=full" >> $GITHUB_OUTPUT
-            echo "mode=full" >> $GITHUB_ENV
-            echo "Running FULL SEO prerender (all 25,000+ pages)..."
-            yarn run prerender-seo
-          else
-            echo "mode=hubs" >> $GITHUB_OUTPUT
-            echo "mode=hubs" >> $GITHUB_ENV
-            echo "Running lightweight HUBS-ONLY prerender (~180 pages) to protect S3 billing..."
-            yarn run prerender-seo --hubs-only
-          fi
-      
       - name: Install AWS CLI & Configure Performance
         run: |
-          pip install awscli
+          pip install awscli boto3
           aws configure set default.s3.max_concurrent_requests 50
 
-      - name: Deploy frontend to Yandex Object Storage
+      - name: Prerender SEO HTML (Incremental)
+        id: prerender-step
         run: |
-          # 1. Compress JS and CSS chunks in frontend/dist/assets with gzip level 9
+          STATE_EXISTED=false
+          if aws s3 cp "s3://${S3_BUCKET}/_seo-state.json.gz" /tmp/seo-state-in.json.gz --endpoint-url https://storage.yandexcloud.net --only-show-errors 2>/dev/null; then
+            if gzip -dc /tmp/seo-state-in.json.gz > /tmp/seo-state-in.json 2>/dev/null && [ -s /tmp/seo-state-in.json ]; then
+              STATE_EXISTED=true
+            else
+              echo '{}' > /tmp/seo-state-in.json
+            fi
+          else
+            echo '{}' > /tmp/seo-state-in.json
+          fi
+
+          EXTRA_FLAGS=""
+          if [ "${{ inputs.full_prerender }}" = "true" ] || git log -1 --pretty=%B | grep -q '\[seo full\]'; then
+            EXTRA_FLAGS="--force-entities"
+            echo "Force-regenerating all entity HTML pages..."
+          fi
+
+          yarn run prerender-seo \
+            --state-in=/tmp/seo-state-in.json \
+            --state-out=/tmp/seo-state-out.json \
+            --delta-out=/tmp/seo-delta.txt \
+            --delete-out=/tmp/seo-delete.txt \
+            --hubs-out=/tmp/seo-hubs.txt \
+            $EXTRA_FLAGS
+
+          DELTA_COUNT=$(grep -c -v '^$' /tmp/seo-delta.txt || true)
+          DELETE_COUNT=$(grep -c -v '^$' /tmp/seo-delete.txt || true)
+          HUB_COUNT=$(grep -c -v '^$' /tmp/seo-hubs.txt || true)
+
+          echo "state_existed=${STATE_EXISTED}" >> $GITHUB_OUTPUT
+          echo "delta_count=${DELTA_COUNT}" >> $GITHUB_OUTPUT
+          echo "delete_count=${DELETE_COUNT}" >> $GITHUB_OUTPUT
+          echo "SEO plan: hubs=${HUB_COUNT}, entity_delta=${DELTA_COUNT}, entity_delete=${DELETE_COUNT}, state_existed=${STATE_EXISTED}"
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          S3_BUCKET: ${{ secrets.S3_BUCKET }}
+
+      - name: Deploy frontend to Yandex Object Storage
+        if: inputs.dry_run != true
+        run: |
+          # 1. Compress JS and CSS chunks in frontend/dist/assets with gzip level 9 (including loader.js)
           yarn run compress-assets
 
-          # 2. Upload gzipped CSS chunks with text/css and content-encoding gzip
-          aws s3 sync frontend/dist/assets/ s3://${{ secrets.S3_BUCKET }}/assets/ \
+          # 2. Upload gzipped CSS chunks (immutable 1y)
+          aws s3 sync frontend/dist/assets/ s3://${S3_BUCKET}/assets/ \
             --endpoint-url https://storage.yandexcloud.net \
             --acl public-read \
             --exclude "*" \
@@ -94,83 +127,149 @@ jobs:
             --content-encoding gzip \
             --content-type "text/css; charset=utf-8" \
             --size-only \
-            --cache-control "public, max-age=31536000, immutable"
+            --cache-control "public, max-age=31536000, immutable" \
+            --only-show-errors
 
-          # 3. Upload gzipped JS chunks with application/javascript and content-encoding gzip
-          aws s3 sync frontend/dist/assets/ s3://${{ secrets.S3_BUCKET }}/assets/ \
+          # 3. Upload gzipped JS chunks (immutable 1y, excluding loader.js which uses no-cache)
+          aws s3 sync frontend/dist/assets/ s3://${S3_BUCKET}/assets/ \
             --endpoint-url https://storage.yandexcloud.net \
             --acl public-read \
             --exclude "*" \
             --include "*.js" \
+            --exclude "loader.js" \
             --content-encoding gzip \
             --content-type "application/javascript; charset=utf-8" \
             --size-only \
-            --cache-control "public, max-age=31536000, immutable"
+            --cache-control "public, max-age=31536000, immutable" \
+            --only-show-errors
 
-          # 4. Upload any remaining assets without content-encoding
-          aws s3 sync frontend/dist/assets/ s3://${{ secrets.S3_BUCKET }}/assets/ \
+          # 4. Upload remaining static assets in /assets/ (badges, brand, errors, hero, home, icons)
+          aws s3 sync frontend/dist/assets/ s3://${S3_BUCKET}/assets/ \
             --endpoint-url https://storage.yandexcloud.net \
             --acl public-read \
             --exclude "*.css" \
             --exclude "*.js" \
             --size-only \
-            --cache-control "public, max-age=31536000, immutable"
+            --cache-control "public, max-age=31536000, immutable" \
+            --only-show-errors
 
-          # 5. Static media (images, favicons, banners) get 1 week caching
-          aws s3 sync frontend/dist/ s3://${{ secrets.S3_BUCKET }}/ \
+          # 5. Upload stable /assets/loader.js with must-revalidate so entity pages pick up new JS/CSS immediately
+          aws s3 cp frontend/dist/assets/loader.js s3://${S3_BUCKET}/assets/loader.js \
             --endpoint-url https://storage.yandexcloud.net \
             --acl public-read \
-            --delete \
-            --exclude "assets/*" \
-            --exclude "data/*" \
-            --exclude "*.html" \
-            --size-only \
-            --cache-control "public, max-age=604800"
+            --content-encoding gzip \
+            --content-type "application/javascript; charset=utf-8" \
+            --cache-control "public, max-age=0, must-revalidate" \
+            --only-show-errors
 
-          # 3. HTML entrypoints get max-age=0, must-revalidate so deploys are instant.
-          # Full SEO prerender mode: full sync with --delete to prune obsolete pages.
-          # Lightweight hubs mode (default on git push): sync only generated hub files without --delete,
-          # keeping all existing dog profiles on S3 and preventing thousands of paid PUT requests.
-          if [ "${{ steps.prerender-step.outputs.mode }}" = "full" ]; then
-            echo "Deploying full HTML prerender (with --delete)..."
-            aws s3 sync frontend/dist/ s3://${{ secrets.S3_BUCKET }}/ \
+          # 6. Sync small static subdirectories directly (avoids bucket-wide LIST over 56k protocols / 25k dogs)
+          for dir in .well-known bimi bot favicons images; do
+            if [ -d "frontend/dist/$dir" ]; then
+              aws s3 sync "frontend/dist/$dir/" "s3://${S3_BUCKET}/$dir/" \
+                --endpoint-url https://storage.yandexcloud.net \
+                --acl public-read \
+                --delete \
+                --size-only \
+                --cache-control "public, max-age=604800" \
+                --only-show-errors
+            fi
+          done
+
+          # 7. Upload only added/resized root non-HTML files (sitemaps, og-image, robots.txt, manifest, llms) using single delimiter='/' LIST
+          aws s3api list-objects-v2 \
+            --bucket "${S3_BUCKET}" \
+            --delimiter "/" \
+            --endpoint-url https://storage.yandexcloud.net \
+            --query "Contents[].[Key,Size]" \
+            --output json > /tmp/s3-root-objects.json || echo '[]' > /tmp/s3-root-objects.json
+
+          node -e '
+            const fs = require("fs");
+            const path = require("path");
+            const raw = JSON.parse(fs.readFileSync("/tmp/s3-root-objects.json", "utf8")) || [];
+            const remoteSizes = new Map(Array.isArray(raw) ? raw.filter(Boolean).map(([k, s]) => [k, Number(s)]) : []);
+            const distDir = "frontend/dist";
+            const changed = [];
+            for (const entry of fs.readdirSync(distDir, { withFileTypes: true })) {
+              if (!entry.isFile() || entry.name.endsWith(".html")) continue;
+              const localSize = fs.statSync(path.join(distDir, entry.name)).size;
+              if (remoteSizes.get(entry.name) !== localSize) changed.push(entry.name);
+            }
+            fs.writeFileSync("/tmp/root_upload.txt", changed.length ? changed.join("\n") + "\n" : "");
+            console.log("Root static files to upload:", changed.length);
+          '
+
+          tr '\n' '\0' < /tmp/root_upload.txt | \
+            xargs -0 -r -P 8 -I {} sh -c '[ -n "$1" ] && aws s3 cp "frontend/dist/$1" "s3://${S3_BUCKET}/$1" --endpoint-url https://storage.yandexcloud.net --acl public-read --cache-control "public, max-age=604800" --only-show-errors' _ {}
+
+          # 8. Sync exported vector HTML protocols directly under /protocols/
+          if [ -d "frontend/dist/protocols" ]; then
+            aws s3 sync frontend/dist/protocols/ s3://${S3_BUCKET}/protocols/ \
               --endpoint-url https://storage.yandexcloud.net \
               --acl public-read \
-              --exclude "*" \
-              --include "*.html" \
-              --size-only \
               --delete \
-              --cache-control "public, max-age=0, must-revalidate"
-          else
-            echo "Deploying lightweight hubs HTML (without --delete to preserve S3 billing and monthly /dog/* SEO pages)..."
-            aws s3 sync frontend/dist/ s3://${{ secrets.S3_BUCKET }}/ \
-              --endpoint-url https://storage.yandexcloud.net \
-              --acl public-read \
-              --exclude "*" \
-              --include "*.html" \
-              --exclude "dog/*" \
-              --cache-control "public, max-age=0, must-revalidate"
+              --size-only \
+              --cache-control "public, max-age=0, must-revalidate" \
+              --only-show-errors
           fi
 
-          # 4. Critical SPA entrypoints (index.html, 404.html and ALL prerendered hubs including breeds/:slug)
-          # MUST ALWAYS be refreshed via cp so new hashed JS/CSS chunk bundles take effect immediately regardless of byte size parity.
-          aws s3 cp frontend/dist/index.html s3://${{ secrets.S3_BUCKET }}/index.html \
-            --endpoint-url https://storage.yandexcloud.net \
-            --acl public-read \
+          # 9. Upload hub HTML pages (~180 files) and only changed/new entity HTML files in parallel
+          DELTA_COUNT="${{ steps.prerender-step.outputs.delta_count }}"
+          DELETE_COUNT="${{ steps.prerender-step.outputs.delete_count }}"
+          STATE_EXISTED="${{ steps.prerender-step.outputs.state_existed }}"
+
+          if [ "$DELTA_COUNT" -eq 0 ]; then
+            echo "Entity HTML delta is 0 — skipping all ~25,000 entity pages."
+          else
+            echo "Entity HTML delta: ${DELTA_COUNT} files to upload."
+          fi
+
+          python3 backend/scripts/ops/s3_apply_delta.py \
+            --bucket "${S3_BUCKET}" \
+            --root-dir "frontend/dist" \
+            --upload-list /tmp/seo-hubs.txt \
+            --upload-list /tmp/seo-delta.txt \
+            --delete-list /tmp/seo-delete.txt \
             --cache-control "public, max-age=0, must-revalidate"
 
-          aws s3 cp frontend/dist/404.html s3://${{ secrets.S3_BUCKET }}/404.html \
-            --endpoint-url https://storage.yandexcloud.net \
-            --acl public-read \
-            --cache-control "public, max-age=0, must-revalidate"
-
-          find frontend/dist -name "index.html" -not -path "frontend/dist/index.html" -not -path "frontend/dist/dog/*" | while read -r hubFile; do
-            relPath="${hubFile#frontend/dist/}"
-            aws s3 cp "$hubFile" "s3://${{ secrets.S3_BUCKET }}/$relPath" \
+          if [ "$DELTA_COUNT" -gt 0 ] || [ "$DELETE_COUNT" -gt 0 ] || [ "$STATE_EXISTED" != "true" ]; then
+            gzip -9 -c /tmp/seo-state-out.json > /tmp/seo-state-out.json.gz
+            aws s3 cp /tmp/seo-state-out.json.gz s3://${S3_BUCKET}/_seo-state.json.gz \
               --endpoint-url https://storage.yandexcloud.net \
-              --acl public-read \
-              --cache-control "public, max-age=0, must-revalidate"
-          done
+              --only-show-errors
+            echo "Updated _seo-state.json.gz on S3."
+          fi
+
+          # 10. Prune stale root hashed JS/CSS chunks older than 7 days from /assets/ (protects active user tabs)
+          aws s3api list-objects-v2 \
+            --bucket "${S3_BUCKET}" \
+            --prefix "assets/" \
+            --endpoint-url https://storage.yandexcloud.net \
+            --query "Contents[].[Key,LastModified]" \
+            --output json > /tmp/s3-assets-objects.json || echo '[]' > /tmp/s3-assets-objects.json
+
+          node -e '
+            const fs = require("fs");
+            const path = require("path");
+            const raw = JSON.parse(fs.readFileSync("/tmp/s3-assets-objects.json", "utf8")) || [];
+            const rows = Array.isArray(raw) ? raw : [];
+            const cutoffMs = Date.now() - 7 * 24 * 60 * 60 * 1000;
+            const stale = [];
+            for (const row of rows) {
+              if (!Array.isArray(row)) continue;
+              const [k, lastMod] = row;
+              if (typeof k !== "string" || !/^assets\/[^/]+\.(js|css)$/.test(k)) continue;
+              if (fs.existsSync(path.join("frontend/dist", k))) continue;
+              const mtimeMs = Date.parse(lastMod);
+              if (Number.isFinite(mtimeMs) && mtimeMs < cutoffMs) stale.push(k);
+            }
+            fs.writeFileSync("/tmp/assets_delete.txt", stale.length ? stale.join("\n") + "\n" : "");
+            console.log("Stale /assets/*.{js,css} chunks (>7d) to prune:", stale.length);
+          '
+
+          python3 backend/scripts/ops/s3_apply_delta.py \
+            --bucket "${S3_BUCKET}" \
+            --delete-list /tmp/assets_delete.txt
 
           aws s3 website s3://${{ secrets.S3_BUCKET }}/ \
             --index-document index.html \
@@ -179,11 +278,18 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          S3_BUCKET: ${{ secrets.S3_BUCKET }}
 
       - name: Detect data changes
         id: data-diff
         run: |
           git config core.quotepath false
+
+          DIFF_BASE="HEAD~1"
+          BEFORE_SHA="${{ github.event.before }}"
+          if [ -n "$BEFORE_SHA" ] && [ "$BEFORE_SHA" != "0000000000000000000000000000000000000000" ] && git cat-file -e "${BEFORE_SHA}^{commit}" 2>/dev/null; then
+            DIFF_BASE="$BEFORE_SHA"
+          fi
 
           if [ "${{ inputs.full_sync }}" = "true" ] || git log -1 --pretty=%B | grep -q '\[full sync\]'; then
             echo "mode=full" >> $GITHUB_OUTPUT
@@ -191,22 +297,25 @@ jobs:
           elif ! aws s3 ls "s3://${{ secrets.S3_BUCKET }}/data/v1/ui-flags.json" --endpoint-url https://storage.yandexcloud.net > /dev/null 2>&1; then
             echo "mode=full" >> $GITHUB_OUTPUT
             echo "data/v1/ui-flags.json not found on S3 — triggering automatic full sync recovery"
-          elif git diff --quiet HEAD~1 HEAD -- data/v1/; then
+          elif git diff --quiet "$DIFF_BASE" HEAD -- data/v1/; then
             echo "mode=none" >> $GITHUB_OUTPUT
             echo "No data files changed. Skipping data deploy step."
           else
-            git -c core.quotepath=false diff --name-only --diff-filter=d HEAD~1 HEAD -- data/v1/ > /tmp/changed_files.txt
-            git -c core.quotepath=false diff --name-only --diff-filter=D HEAD~1 HEAD -- data/v1/ > /tmp/deleted_files.txt
-            
+            git -c core.quotepath=false diff --name-only --diff-filter=d "$DIFF_BASE" HEAD -- data/v1/ | grep -Ev '^data/v1/(dogs/by-id/|dogs/registry\.json|judges/registry\.json|shows/exhibitions/|shows/exhibitions-rkf/|shows/indexes/year-data/|shows/indexes/show-dog-lookup/|shows/indexes/show-dog-lookup\.json|shows/indexes/dog-ranking(-[0-9]+|-unknown)?\.json|pc-db\.sqlite|audit/|README\.md|publish-manifest\.json)' > /tmp/changed_files.txt || true
+            git -c core.quotepath=false diff --name-only --diff-filter=D "$DIFF_BASE" HEAD -- data/v1/ | grep -Ev '^data/v1/(dogs/by-id/|dogs/registry\.json|judges/registry\.json|shows/exhibitions/|shows/exhibitions-rkf/|shows/indexes/year-data/|shows/indexes/show-dog-lookup/|shows/indexes/show-dog-lookup\.json|shows/indexes/dog-ranking(-[0-9]+|-unknown)?\.json|pc-db\.sqlite|audit/|README\.md|publish-manifest\.json)' > /tmp/deleted_files.txt || true
+
             CHANGED_COUNT=$(grep -c -v '^$' /tmp/changed_files.txt || true)
             DELETED_COUNT=$(grep -c -v '^$' /tmp/deleted_files.txt || true)
-            
-            echo "Changed files count: $CHANGED_COUNT"
-            echo "Deleted files count: $DELETED_COUNT"
 
-            if [ "$CHANGED_COUNT" -gt 250 ]; then
+            echo "Changed publishable files count: $CHANGED_COUNT"
+            echo "Deleted publishable files count: $DELETED_COUNT"
+
+            if [ "$CHANGED_COUNT" -eq 0 ] && [ "$DELETED_COUNT" -eq 0 ]; then
+              echo "mode=none" >> $GITHUB_OUTPUT
+              echo "Only internal/excluded data files changed. Skipping S3 data deploy."
+            elif [ "$CHANGED_COUNT" -gt 2000 ]; then
               echo "mode=full" >> $GITHUB_OUTPUT
-              echo "More than 250 files changed ($CHANGED_COUNT), falling back to optimized full s3 sync"
+              echo "More than 2000 publishable files changed ($CHANGED_COUNT), falling back to full s3 sync"
             else
               echo "mode=incremental" >> $GITHUB_OUTPUT
             fi
@@ -214,35 +323,25 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          S3_BUCKET: ${{ secrets.S3_BUCKET }}
 
       - name: Deploy changed data files (Incremental)
-        if: steps.data-diff.outputs.mode == 'incremental'
+        if: inputs.dry_run != true && steps.data-diff.outputs.mode == 'incremental'
         run: |
-          echo "Uploading changed files..."
-          while IFS= read -r file; do
-            if [ -n "$file" ] && [ -f "$file" ]; then
-              echo "Uploading $file"
-              aws s3 cp "$file" "s3://${{ secrets.S3_BUCKET }}/$file" \
-                --endpoint-url https://storage.yandexcloud.net \
-                --acl public-read \
-                --cache-control "public, max-age=3600, must-revalidate"
-            fi
-          done < /tmp/changed_files.txt
+          echo "Uploading changed publishable files in parallel..."
+          tr '\n' '\0' < /tmp/changed_files.txt | \
+            xargs -0 -r -P 16 -I {} sh -c '[ -n "$1" ] && [ -f "$1" ] && aws s3 cp "$1" "s3://${S3_BUCKET}/$1" --endpoint-url https://storage.yandexcloud.net --acl public-read --cache-control "public, max-age=3600, must-revalidate" --only-show-errors' _ {}
 
           echo "Removing deleted files from S3..."
-          while IFS= read -r file; do
-            if [ -n "$file" ]; then
-              echo "Deleting $file from S3"
-              aws s3 rm "s3://${{ secrets.S3_BUCKET }}/$file" \
-                --endpoint-url https://storage.yandexcloud.net
-            fi
-          done < /tmp/deleted_files.txt
+          tr '\n' '\0' < /tmp/deleted_files.txt | \
+            xargs -0 -r -P 16 -I {} sh -c '[ -n "$1" ] && aws s3 rm "s3://${S3_BUCKET}/$1" --endpoint-url https://storage.yandexcloud.net --only-show-errors' _ {}
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          S3_BUCKET: ${{ secrets.S3_BUCKET }}
 
       - name: Deploy all data (Full Sync)
-        if: steps.data-diff.outputs.mode == 'full'
+        if: inputs.dry_run != true && steps.data-diff.outputs.mode == 'full'
         run: |
           echo "Running full S3 sync for public data/v1/ (respecting publish-exclude rules)..."
           aws s3 sync data/v1/ s3://${{ secrets.S3_BUCKET }}/data/v1/ \
@@ -253,6 +352,7 @@ jobs:
             --exclude "shows/exhibitions/*" \
             --exclude "shows/exhibitions-rkf/*" \
             --exclude "shows/indexes/year-data/*" \
+            --exclude "shows/indexes/show-dog-lookup/*" \
             --exclude "shows/indexes/show-dog-lookup.json" \
             --exclude "shows/indexes/dog-ranking.json" \
             --exclude "shows/indexes/dog-ranking-unknown.json" \
@@ -268,3 +368,51 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          S3_BUCKET: ${{ secrets.S3_BUCKET }}
+
+      - name: Dry-run plan summary
+        if: inputs.dry_run == true
+        run: |
+          echo "=== DRY RUN SUMMARY (no files written to S3) ==="
+          echo "SEO entity delta to upload: ${{ steps.prerender-step.outputs.delta_count }}"
+          echo "SEO entity obsolete to delete: ${{ steps.prerender-step.outputs.delete_count }}"
+          echo "SEO remote state existed: ${{ steps.prerender-step.outputs.state_existed }}"
+          echo "Data diff mode: ${{ steps.data-diff.outputs.mode }}"
+          if [ -f /tmp/seo-delta.txt ] && [ -s /tmp/seo-delta.txt ]; then
+            echo "Sample entity deltas (first 20):"
+            head -n 20 /tmp/seo-delta.txt
+          fi
+
+      - name: Post-deploy live verification
+        if: inputs.dry_run != true
+        run: |
+          node -e '
+            const fs = require("fs");
+            const https = require("https");
+            function check(url, expectText) {
+              return new Promise((resolve, reject) => {
+                https.get(url, (res) => {
+                  let body = "";
+                  res.setEncoding("utf8");
+                  res.on("data", (c) => (body += c));
+                  res.on("end", () => {
+                    if (res.statusCode !== 200) return reject(new Error(url + " returned HTTP " + res.statusCode));
+                    if (expectText && !body.includes(expectText)) return reject(new Error(url + " missing expected text: " + expectText));
+                    console.log("OK 200:", url);
+                    resolve();
+                  });
+                }).on("error", reject);
+              });
+            }
+            (async () => {
+              await check("https://coursing-stats.ru/", "id=\"root\"");
+              await check("https://coursing-stats.ru/assets/loader.js", "/assets/");
+              await check("https://coursing-stats.ru/404.html", "404-dogs.png");
+              const state = JSON.parse(fs.readFileSync("/tmp/seo-state-out.json", "utf8"));
+              const sampleKey = Object.keys(state).find((k) => /^dog\/\d+\/index\.html$/.test(k));
+              if (sampleKey) {
+                const sampleUrl = "https://coursing-stats.ru/" + sampleKey.replace(/index\.html$/, "");
+                await check(sampleUrl, "/assets/loader.js");
+              }
+            })().catch((err) => { console.error(err); process.exit(1); });
+          '
