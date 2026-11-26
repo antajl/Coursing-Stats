@@ -10,7 +10,7 @@ function buildRedirectHtml(canonicalUrl: string): string {
     <script>window.location.replace('${canonicalUrl}');</script>
   </head>
   <body>
-    <p>Профиль собаки перемещён. Перенаправление на <a href="${canonicalUrl}">${canonicalUrl}</a>...</p>
+    <p>Страница перемещена. Перенаправление на <a href="${canonicalUrl}">${canonicalUrl}</a>...</p>
   </body>
 </html>`
 }

@@ -115,7 +115,6 @@ function buildYearStaticPages(): SitemapUrl[] {
 const STATIC_PAGES: SitemapUrl[] = [
   { loc: '/', priority: '1.0', changefreq: 'daily' },
   { loc: '/competitions/', priority: '0.9', changefreq: 'daily' },
-  { loc: '/competitions/2027/', priority: '0.85', changefreq: 'weekly' },
   { loc: '/shows/', priority: '0.9', changefreq: 'daily' },
   { loc: '/speed-records/', priority: '0.8', changefreq: 'daily' },
   { loc: '/donino/championship/', priority: '0.8', changefreq: 'weekly' },
