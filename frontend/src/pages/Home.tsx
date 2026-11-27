@@ -4,7 +4,6 @@ import { JsonLd, organizationSchema, webSiteSchema } from '../components/JsonLd'
 import { useGSAP, riseIn } from '../lib/motion'
 import HomeHeroStage from '../components/HomeHeroStage'
 import HomeStatsPills from '../components/HomeStatsPills'
-import HomeDogSearch from '../components/HomeDogSearch'
 import { useHomeData } from './Home/hooks/useHomeData'
 import { SeasonTopSection } from './Home/components/SeasonTopSection'
 import { HomeFooter } from './Home/components/HomeFooter'
@@ -116,18 +115,15 @@ export default function Home() {
         disableScrollFade={true}
         reverseLayout={true}
         children={
-          <div className="flex flex-col items-end w-full pointer-events-auto">
-            <HomeDogSearch className="w-[330px] xl:w-[360px] 2xl:w-[380px] 3xl:w-[420px] mb-2.5" />
-            <ConceptSymmetricFinal
-              stats={stats}
-              showStats={showStats}
-              breedHubsCount={CORE_BREED_HUBS.length}
-              maxDoninoSpeed={doninoSpeedRecords.reduce(
-                (max, r) => Math.max(max, Number(r.speed_km_h) || 0),
-                0,
-              ) || null}
-            />
-          </div>
+          <ConceptSymmetricFinal
+            stats={stats}
+            showStats={showStats}
+            breedHubsCount={CORE_BREED_HUBS.length}
+            maxDoninoSpeed={doninoSpeedRecords.reduce(
+              (max, r) => Math.max(max, Number(r.speed_km_h) || 0),
+              0,
+            ) || null}
+          />
         }
         metrics={
           /* Left block: Double Podium Rankings */
