@@ -87,6 +87,11 @@ description: Правила для судей (спорт и выставки): 
 
 Внутри `judge-details/pack-*.json` для каждой породы в `judge.breeds[]` хранятся рассчитанные счётчики строгости и побед (`adult_graded`, `excellent_count`, `bob_count`, `cac_count`, скрипт `enrich-judge-breed-stats.ts`). В `ShowJudgeDetail.tsx` и `JudgeBreedPanel.tsx` срез «Взрослые классы» сохраняет эти счётчики для отображения `% отл.` и `ЛПП/CAC` в заголовке каждой породы.
 
+### Calendar-Only Brigade Sport Judges (No Artificial Summary Entries)
+
+1) Судьи соревнований из шапок турниров без поштучных листов оценок в `heats` (рейсинг с хронометражем, командная «Тройка», общие бригады) **не добавляются искусственно** в `judges-summary.json`, чтобы не искажать рейтинги и строгость.
+2) Для их числовых маршрутов из `sitemap-judges.xml` (`/judges/33/`, `/judges/34/`, `/judges/35/`) первоисточником служит `data/v1/indexes/calendar-index.json`: пререндер (`prerenderSportJudges` в `prerender-pages.ts` -> `sportJudgeMeta`) генерирует полноценные SEO-страницы со списком обслуженных турниров и ссылками на `/event/:id/`, а фронтенд (`staticData/judges.ts` -> `JudgeDetail.tsx`) при пустом `breed_stats` подгружает `calendar_events` и открывает вкладку «Соревнования» без ложного «0 турниров».
+
 ---
 
 ## Domain Forbidden Rules
