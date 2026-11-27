@@ -1,6 +1,7 @@
 export type PodiumPlace = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10
 
 const SIZES = {
+  xs: 'h-[22px] w-[22px] text-[10px]',
   sm: 'h-[26px] w-[26px] text-[11px]',
   md: 'h-8 w-8 text-xs',
   lg: 'h-10 w-10 text-sm',

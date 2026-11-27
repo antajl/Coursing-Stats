@@ -279,10 +279,10 @@ export function DisciplineHistoryCard({
     label ?? (theme === 'forest' ? 'Состязаний' : theme === 'warm-blue' ? 'Забегов' : 'Выставок')
   return (
     <div
-      className={`flex flex-col rounded-xl border bg-white p-3.5 sm:p-4 lg:flex-1 lg:min-h-0 ${t.cardBorder}`}
+      className={`flex flex-col rounded-xl border bg-white p-3 sm:p-3.5 lg:flex-1 lg:min-h-0 ${t.cardBorder}`}
     >
       {participations != null && participations > 0 ? (
-        <div className="mb-3 flex shrink-0 items-baseline justify-between gap-2 border-b border-old-money-100 pb-2">
+        <div className="mb-1.5 flex shrink-0 items-baseline justify-between gap-2 border-b border-old-money-100 pb-1.5">
           <span className="text-xs font-semibold uppercase tracking-wide text-charcoal-500">
             {displayLabel}
           </span>

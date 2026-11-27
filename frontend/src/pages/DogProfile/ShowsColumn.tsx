@@ -20,7 +20,9 @@ import {
   DisciplineStatsCard,
   disciplineTheme,
 } from './DisciplineColumnShell'
-import { HistoryMetaRow } from './HistoryPlacement'
+import { DisciplineHistoryRow } from './DisciplineHistoryRow'
+import { HistoryPlacement } from './HistoryPlacement'
+import { formatCompactShowTitle, formatShowDate } from './historyFormatters'
 import { breedToSlug } from '../../lib/breedMapping'
 import type { ProfileHeaderRank } from './DogProfileHeader'
 import {
@@ -213,42 +215,34 @@ export function ShowsColumn({ dog, rank, breed }: ShowsColumnProps) {
               const entryTitles = presentShowAwards(parseShowTitles(entry.title || ''))
               const rowKey = `${entry.exhibition_id}-${idx}`
               const rowClass =
-                'block border-b border-camel-200/80 py-2 text-inherit no-underline transition-colors last:border-b-0 hover:bg-camel-50/60'
+                'block border-b border-camel-200/70 py-1.5 text-inherit no-underline transition-colors last:border-b-0 hover:bg-camel-50/60'
+              const compactTitle = formatCompactShowTitle(entry.exhibition_title)
               const rowBody = (
-                <>
-                  <div className="min-w-0 flex-shrink-0 break-words text-xs font-bold uppercase tracking-wide text-camel-700">
-                    {entry.exhibition_title || 'Выставка РКФ'}
-                  </div>
-                  <HistoryMetaRow
-                    date={
-                      entry.date
-                        ? (() => {
-                            if (entry.date.includes('.')) {
-                              const [day, month, year] = entry.date.split('.')
-                              if (day && month && year) return `${day}.${month}.${year}`
-                            }
-                            return entry.date
-                          })()
-                        : '—'
-                    }
-                    placement={entry.placement}
-                    grade={entry.grade}
-                  />
-                  <div className="min-w-0 flex-1 overflow-hidden">
-                    {entryTitles.length > 0 && (
-                      <div className="mt-1 flex flex-wrap gap-1">
+                <DisciplineHistoryRow
+                  title={compactTitle}
+                  titleClassName="text-xs font-semibold text-camel-900"
+                  metric={entry.grade ? <ShowGradeChip grade={entry.grade} size="sm" /> : null}
+                  badgeSlot={
+                    entry.placement > 0 ? (
+                      <HistoryPlacement placement={entry.placement} size="xs" />
+                    ) : undefined
+                  }
+                  date={formatShowDate(entry.date)}
+                  chips={
+                    entryTitles.length > 0 ? (
+                      <div className="flex flex-wrap items-center gap-1">
                         {entryTitles.slice(0, 3).map((t, i) => (
                           <span
                             key={i}
-                            className="inline-block rounded-md border border-camel-200 bg-camel-50/90 px-1.5 py-0.5 text-[10px] font-semibold text-camel-800"
+                            className="inline-block rounded-md border border-camel-200 bg-camel-50/90 px-1.5 py-0 text-[10px] font-semibold leading-4 text-camel-800"
                           >
                             {SHOW_AWARD_BADGE[t] || t}
                           </span>
                         ))}
                       </div>
-                    )}
-                  </div>
-                </>
+                    ) : null
+                  }
+                />
               )
 
               return entry.exhibition_id ? (
@@ -256,11 +250,12 @@ export function ShowsColumn({ dog, rank, breed }: ShowsColumnProps) {
                   key={rowKey}
                   to={`${localExhibitionPath}/${entry.exhibition_id}`}
                   className={rowClass}
+                  title={entry.exhibition_title || 'Выставка РКФ'}
                 >
                   {rowBody}
                 </Link>
               ) : (
-                <div key={rowKey} className={rowClass}>
+                <div key={rowKey} className={rowClass} title={entry.exhibition_title || 'Выставка РКФ'}>
                   {rowBody}
                 </div>
               )

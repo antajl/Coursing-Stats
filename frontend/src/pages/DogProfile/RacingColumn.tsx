@@ -10,7 +10,13 @@ import {
   DisciplineHistoryCard,
   DisciplineStatsCard,
 } from './DisciplineColumnShell'
-import { HistoryMetaRow } from './HistoryPlacement'
+import { DisciplineHistoryRow } from './DisciplineHistoryRow'
+import { HistoryPlacement } from './HistoryPlacement'
+import {
+  formatRuDate,
+  formatRunsCount,
+  formatShortLocation,
+} from './historyFormatters'
 import type { ProfileHeaderRank } from './DogProfileHeader'
 import { breedToSlug } from '../../lib/breedMapping'
 
@@ -28,8 +34,11 @@ type DogEvent = {
   competition_kind?: string | null
   title?: string | null
   date_start?: string | null
+  location?: string | null
   placement?: number | string | null
+  best_speed?: number | string | null
   speed?: number | string | null
+  distance?: number | string | null
   qualification?: string | null
   status?: string | null
   status_reason?: string | null
@@ -51,15 +60,6 @@ type RacingColumnProps = {
 }
 
 const THEME = 'warm-blue' as const
-
-function formatRunsCount(count: number): string {
-  const mod10 = count % 10
-  const mod100 = count % 100
-  if (mod100 >= 11 && mod100 <= 19) return `${count} забегов`
-  if (mod10 === 1) return `${count} забег`
-  if (mod10 >= 2 && mod10 <= 4) return `${count} забега`
-  return `${count} забегов`
-}
 
 export function RacingColumn({
   hasRacingData,
@@ -226,35 +226,35 @@ export function RacingColumn({
           <div className="flex-1">
             {visibleRacingEvents.map((event, idx) => {
               const cardClass =
-                'block border-b border-warm-blue-200/80 py-2 transition-colors last:border-b-0 hover:bg-warm-blue-50/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-camel-500'
+                'block border-b border-warm-blue-200/70 py-1.5 transition-colors last:border-b-0 hover:bg-warm-blue-50/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-camel-500'
               const headline = (event.competition_kind || event.title || '').trim()
+              const shortLoc = formatShortLocation(event.location)
+              const rawSpeed = event.best_speed ?? event.speed
+              const hasSpeed =
+                rawSpeed != null &&
+                Number.isFinite(Number(rawSpeed)) &&
+                Number(rawSpeed) > 0
+              const rowTooltip = [event.title || headline, event.location]
+                .filter(Boolean)
+                .join(' · ')
               const cardBody = (
-                <>
-                  {headline ? (
-                    <div className="min-w-0 flex-shrink-0">
-                      <div className="break-words text-xs font-bold uppercase tracking-wide text-warm-blue-700">
-                        {headline}
-                      </div>
-                    </div>
-                  ) : null}
-                  <HistoryMetaRow
-                    date={
-                      event.date_start
-                        ? (() => {
-                            const [year, month, day] = event.date_start.split('-')
-                            return `${day}.${month}.${year}`
-                          })()
-                        : '—'
-                    }
-                    placement={event.placement}
-                    status={event.status}
-                    statusReason={event.status_reason}
-                    speed={event.speed}
-                  />
-                  <div className="min-w-0 flex-1 overflow-hidden">
-                    <EventQualificationChips qualification={event.qualification as string | null | undefined} />
-                  </div>
-                </>
+                <DisciplineHistoryRow
+                  title={headline || 'Забег'}
+                  subtitle={shortLoc}
+                  titleClassName="text-xs font-bold uppercase tracking-wide text-warm-blue-700"
+                  metric={
+                    hasSpeed ? (
+                      <span className="font-mono text-xs font-semibold tabular-nums text-warm-blue-800">
+                        {formatScore(rawSpeed)}
+                        <span className="text-[10px] font-normal text-charcoal-400"> км/ч</span>
+                      </span>
+                    ) : null
+                  }
+                  badgeSlot={<HistoryPlacement placement={event.placement} status={event.status} statusReason={event.status_reason} size="xs" />}
+                  date={formatRuDate(event.date_start)}
+                  metaSuffix={event.distance ? `${event.distance} м` : null}
+                  chips={<EventQualificationChips qualification={event.qualification as string | null | undefined} inline />}
+                />
               )
               return event.event_id ? (
                 <ProcoursingEventLink
@@ -262,11 +262,12 @@ export function RacingColumn({
                   eventId={event.event_id}
                   procoursingUrl={procoursingUrlForEventId(eventResultsUrls, event.event_id)}
                   className={`${cardClass} text-inherit no-underline`}
+                  title={rowTooltip || undefined}
                 >
                   {cardBody}
                 </ProcoursingEventLink>
               ) : (
-                <div key={idx} className={cardClass}>
+                <div key={idx} className={cardClass} title={rowTooltip || undefined}>
                   {cardBody}
                 </div>
               )

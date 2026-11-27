@@ -45,13 +45,16 @@ export function HistoryPlacement({
   placement,
   status,
   statusReason,
+  size = 'sm',
 }: {
   placement?: number | string | null
   status?: string | null
   statusReason?: string | null
+  size?: 'xs' | 'sm'
 }) {
   const normStatus = (status || '').trim().toLowerCase()
   const category = getStatusCategory(normStatus, statusReason)
+  const circleSize = size === 'xs' ? 'w-[22px] h-[22px]' : 'w-6 h-6'
 
   // Показываем красный крестик для дисквалификации / снятия / DNF / выбывания
   if (category === 'dq') {
@@ -69,7 +72,7 @@ export function HistoryPlacement({
 
     return (
       <HoverTooltip label={label} placement="top" variant="site" delayMs={0} portal>
-        <div className="w-6 h-6 rounded-full bg-red-100 border-2 border-red-500 flex items-center justify-center cursor-help">
+        <div className={`${circleSize} rounded-full bg-red-100 border-2 border-red-500 flex items-center justify-center cursor-help`}>
           <svg className="w-3 h-3 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
           </svg>
@@ -82,7 +85,7 @@ export function HistoryPlacement({
   if (category === 'dns') {
     return (
       <HoverTooltip label="Неявка" placement="top" variant="site" delayMs={0} portal>
-        <div className="w-6 h-6 rounded-full bg-gray-100 border-2 border-gray-400 flex items-center justify-center cursor-help">
+        <div className={`${circleSize} rounded-full bg-gray-100 border-2 border-gray-400 flex items-center justify-center cursor-help`}>
           <svg className="w-3 h-3 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
           </svg>
@@ -98,7 +101,7 @@ export function HistoryPlacement({
     return (
       <PodiumRankMark
         place={place as PodiumPlace}
-        size="sm"
+        size={size}
         className="block"
       />
     )
@@ -106,7 +109,7 @@ export function HistoryPlacement({
 
   return (
     <span
-      className="text-sm font-semibold tabular-nums text-old-money-500"
+      className={`${size === 'xs' ? 'text-xs' : 'text-sm'} font-semibold tabular-nums text-old-money-500`}
       aria-label={`${place}-е место`}
     >
       #{place}
