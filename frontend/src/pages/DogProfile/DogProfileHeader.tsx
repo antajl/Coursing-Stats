@@ -17,7 +17,7 @@ import DogSexIcon from '../../components/DogSexIcon'
 import { isCertificateToken, type DogTitle } from '../../lib/qualificationTitles'
 import { DogProfileAwardsBar } from './DogProfileAwardsBar'
 import { parseDogName, toDogTitleCase, formatNameWithNonBreakingSpaces } from '../../lib/dogName'
-import { displayBreed } from '../../lib/breedMapping'
+import { displayBreed, canonicalBreed } from '../../lib/breedMapping'
 import { getBreedHubByCanonicalKey } from '../../lib/breed-hubs-data'
 import { useFavorites } from '../../hooks/useFavorites'
 import { createLogger } from '../../lib/logging'
@@ -79,7 +79,7 @@ export function DogProfileHeader({
   const { primary, secondary } = parseDogName(dog.name_lat, dog.name_ru)
   const breedDisplay = displayBreed(dog.breed)
   const breedHub = useMemo(
-    () => (dog.breed ? getBreedHubByCanonicalKey(dog.breed) : undefined),
+    () => (dog.breed ? getBreedHubByCanonicalKey(canonicalBreed(dog.breed) || dog.breed) : undefined),
     [dog.breed]
   )
   const hasTitles =

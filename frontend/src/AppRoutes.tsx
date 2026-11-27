@@ -190,6 +190,7 @@ function ShowDogIdRedirect() {
   const [redirectId, setRedirectId] = useState<string | null>(null);
   
   useEffect(() => {
+    setRedirectId(null);
     if (!id) return;
     
     let cancelled = false;
@@ -213,12 +214,12 @@ function ShowDogIdRedirect() {
     };
   }, [id]);
   
-  if (redirectId) {
+  if (redirectId && redirectId !== id) {
     return <Navigate to={`/dog/${redirectId}/`} replace />;
   }
   
-  // No redirect needed, show the normal profile
-  return <UnifiedDogProfile />;
+  // Key by route id so switching dogs via search resets profile state cleanly
+  return <UnifiedDogProfile key={id || 'dog'} />;
 }
 
 export default function AppRoutes() {

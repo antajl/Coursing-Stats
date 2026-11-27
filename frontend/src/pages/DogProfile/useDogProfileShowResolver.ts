@@ -31,9 +31,20 @@ export function useDogProfileShowResolver({
   queryBreed,
   isShowOnly,
 }: UseDogProfileShowResolverProps) {
-  const [showDog, setShowDog] = useState<ShowDogCardData | null>(null)
+  const currentTargetKey = profileId || (isLegacyShowRoute ? `legacy:${showRouteDogId}` : '')
+  const [resolvedState, setResolvedState] = useState<{
+    key: string
+    dog: ShowDogCardData | null
+  }>({ key: '', dog: null })
   const [showsLoading, setShowsLoading] = useState(true)
-  const [fallbackSportDogId, setFallbackSportDogId] = useState<string | null>(null)
+  const [fallbackState, setFallbackState] = useState<{ key: string; id: string | null }>({
+    key: '',
+    id: null,
+  })
+
+  const showDog = resolvedState.key === currentTargetKey ? resolvedState.dog : null
+  const effectiveShowsLoading = showsLoading || resolvedState.key !== currentTargetKey
+  const fallbackSportDogId = fallbackState.key === currentTargetKey ? fallbackState.id : null
 
   const resolvedCompId = dog?.id ? String(dog.id) : (effectiveSportDogId || competitionId)
   const resolvedNameLat = dog?.name_lat || queryName || ''
@@ -46,7 +57,10 @@ export function useDogProfileShowResolver({
     const hasIdLookup = Boolean(profileId || (isLegacyShowRoute && showRouteDogId) || resolvedCompId)
     const hasNameLookup = Boolean(resolvedBreed && (resolvedNameLat || resolvedNameRu))
     if (!hasIdLookup && !( !loading && hasNameLookup )) {
-      if (!loading) setShowsLoading(false)
+      if (!loading) {
+        setResolvedState({ key: currentTargetKey, dog: null })
+        setShowsLoading(false)
+      }
       return
     }
 
@@ -61,10 +75,13 @@ export function useDogProfileShowResolver({
           breed: resolvedBreed || undefined,
         })
         if (!cancelled) {
-          setShowDog(result.success && result.data ? result.data : null)
+          setResolvedState({
+            key: currentTargetKey,
+            dog: result.success && result.data ? result.data : null,
+          })
         }
       } catch {
-        if (!cancelled) setShowDog(null)
+        if (!cancelled) setResolvedState({ key: currentTargetKey, dog: null })
       } finally {
         if (!cancelled) {
           // Если спорт ещё грузится и собака не найдена по ID, оставляем индикатор до прихода кличка+порода
@@ -78,12 +95,12 @@ export function useDogProfileShowResolver({
     return () => {
       cancelled = true
     }
-  }, [resolvedCompId, resolvedNameLat, resolvedNameRu, resolvedBreed, loading, showRouteDogId, isLegacyShowRoute, profileId])
+  }, [resolvedCompId, resolvedNameLat, resolvedNameRu, resolvedBreed, loading, showRouteDogId, isLegacyShowRoute, profileId, currentTargetKey])
 
   // Fallback: If show-only profile ID didn't resolve to showDog or sportDog, but queryName exists,
   // search in dogs-index.json to avoid 404 if the dog exists in the sport database.
   useEffect(() => {
-    if (!isShowOnly || dog || showDog || loading || showsLoading || !queryName || fallbackSportDogId) {
+    if (!isShowOnly || dog || showDog || loading || effectiveShowsLoading || !queryName || fallbackSportDogId) {
       return
     }
     let cancelled = false
@@ -123,7 +140,7 @@ export function useDogProfileShowResolver({
           })
 
           if (matched) {
-            setFallbackSportDogId(String(d.id))
+            setFallbackState({ key: currentTargetKey, id: String(d.id) })
             break
           }
         }
@@ -135,11 +152,11 @@ export function useDogProfileShowResolver({
     return () => {
       cancelled = true
     }
-  }, [isShowOnly, dog, showDog, loading, showsLoading, queryName, queryBreed, fallbackSportDogId])
+  }, [isShowOnly, dog, showDog, loading, effectiveShowsLoading, queryName, queryBreed, fallbackSportDogId, currentTargetKey])
 
   return {
     showDog,
-    showsLoading,
+    showsLoading: effectiveShowsLoading,
     fallbackSportDogId,
   }
 }
