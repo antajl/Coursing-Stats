@@ -41,26 +41,12 @@ export function useSubTabSwipe<T extends string>({
     setIsNudging(false)
   }, [])
 
-  const triggerNudge = useCallback(() => {
-    if (hasInteractedRef.current) return
-    cancelNudge()
-    setIsNudging(true)
-    nudgeEndTimerRef.current = window.setTimeout(() => {
-      setIsNudging(false)
-      nudgeEndTimerRef.current = null
-    }, 750)
-  }, [cancelNudge])
-
-  // Single-shot invitation nudge on clean initial mount only
+  // Auto-nudge disabled: keep Home cards completely steady on page open
   useEffect(() => {
-    if (hasInteractedRef.current) return
-    nudgeTimerRef.current = window.setTimeout(() => {
-      triggerNudge()
-    }, 600)
     return () => {
       cancelNudge()
     }
-  }, [triggerNudge, cancelNudge])
+  }, [cancelNudge])
 
   const handleToggle = useCallback(
     (target: T) => {

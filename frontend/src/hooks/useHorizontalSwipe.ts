@@ -20,7 +20,7 @@ export function useHorizontalSwipe({
   activeTabIndex,
   onTabChange,
   gapPx = 0,
-  enableNudge = false,
+  enableNudge: _enableNudge = false,
 }: UseHorizontalSwipeProps) {
   const trackRef = useRef<HTMLDivElement>(null)
   const touchStartRef = useRef<{ x: number; y: number; time: number } | null>(null)
@@ -60,43 +60,11 @@ export function useHorizontalSwipe({
     }
   }, [cancelNudge])
 
-  // Single-shot gentle invitation nudge on mobile (< 1024px) when enabled
+  // Auto-nudge disabled: keep initial page open steady without horizontal jumps
   useEffect(() => {
-    if (!enableNudge || activeTabsCount <= 1 || hasInteractedRef.current) return
-    if (typeof window === 'undefined' || window.innerWidth >= 1024) return
-    if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return
-
-    nudgeTimerRef.current = window.setTimeout(() => {
-      const track = trackRef.current
-      if (!track || hasInteractedRef.current || window.innerWidth >= 1024) return
-      const base = getSlideOffset(activeTabIndex)
-      const delta = activeTabIndex === 0 ? '-28px' : '28px'
-      setIsNudging(true)
-      const anim = track.animate(
-        [
-          { transform: `translate3d(${base}, 0, 0)`, offset: 0 },
-          { transform: `translate3d(calc(${base} + ${delta}), 0, 0)`, offset: 0.25 },
-          { transform: `translate3d(calc(${base} + ${delta}), 0, 0)`, offset: 0.42 },
-          { transform: `translate3d(${base}, 0, 0)`, offset: 1 },
-        ],
-        {
-          duration: 750,
-          easing: 'cubic-bezier(0.25, 1, 0.5, 1)',
-        },
-      )
-      nudgeAnimRef.current = anim
-      anim.onfinish = () => {
-        nudgeAnimRef.current = null
-        setIsNudging(false)
-      }
-      anim.oncancel = () => {
-        nudgeAnimRef.current = null
-        setIsNudging(false)
-      }
-    }, 600)
-
+    setIsNudging(false)
     return () => cancelNudge()
-  }, [enableNudge, activeTabsCount, activeTabIndex, getSlideOffset, cancelNudge])
+  }, [cancelNudge])
 
   useEffect(() => {
     if (isSwipingRef.current) {

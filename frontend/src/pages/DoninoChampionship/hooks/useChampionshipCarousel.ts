@@ -46,17 +46,12 @@ export function useChampionshipCarousel() {
     }, 750)
   }, [cancelNudge])
 
-  // Auto-play gentle invitation nudge on page load (after 600ms) only if not interacted
+  // Auto-nudge disabled: avoid unexpected jumps on page open
   useEffect(() => {
-    if (hasInteractedRef.current) return
-    if (typeof window !== 'undefined' && window.innerWidth >= 1024) return
-    nudgeTimerRef.current = window.setTimeout(() => {
-      triggerNudge()
-    }, 600)
     return () => {
       cancelNudge()
     }
-  }, [triggerNudge, cancelNudge])
+  }, [cancelNudge])
 
   // Mobile swipe gesture with real-time direct GPU drag (0 React re-renders during swipe!)
   const touchStartRef = useRef<{ x: number; y: number; time: number } | null>(null)

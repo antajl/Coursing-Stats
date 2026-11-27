@@ -110,14 +110,10 @@ export function useHomeBreedCarousel(slideCount: number): HomeBreedCarouselApi {
   }, [animState, cancelNudge, dragOffset])
 
   useEffect(() => {
-    if (slideCount <= 1 || hasInteractedRef.current) return
-    nudgeTimerRef.current = window.setTimeout(() => {
-      triggerNudge()
-    }, 700)
     return () => {
       cancelNudge()
     }
-  }, [slideCount, triggerNudge, cancelNudge])
+  }, [cancelNudge])
 
   const reduceMotion = prefersReducedMotion()
   const autoplay = slideCount > 1 && !reduceMotion
