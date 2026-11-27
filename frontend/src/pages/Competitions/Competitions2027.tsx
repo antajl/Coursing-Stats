@@ -25,6 +25,7 @@ import {
   DEFAULT_CHANGELOG,
   Season2027ToolbarButtons,
 } from './Season2027Modals'
+import { Season2027NotifyBanner } from './Season2027NotifyBanner'
 
 const DISCIPLINE_DOT: Record<string, string> = {
   coursing: 'bg-forest-500',
@@ -314,6 +315,8 @@ export default function Competitions2027() {
       />
 
       <div className="space-y-4">
+        <Season2027NotifyBanner />
+
         {/* Панель фильтров с кнопкой «О сезоне 2027» справа от поиска */}
         <PageToolbar
           bare
