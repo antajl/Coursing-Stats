@@ -107,60 +107,50 @@ export function CoursingColumn({
           title={columnTitle}
           rankingUrl={rankingUrl}
         >
-          <div className="flex h-full flex-col justify-between gap-3">
+          <div className="flex flex-1 flex-col divide-y divide-old-money-100">
             {/* Верх: Подиум (Рейтинг + Медали) */}
             <Link
               to={rankingUrl}
-              className="group block rounded-xl border border-forest-200/90 bg-forest-50/80 p-3 transition-colors hover:bg-forest-100/80"
+              className="group flex items-center justify-between gap-2 bg-forest-50/60 px-3.5 py-2.5 transition-colors hover:bg-forest-100/70"
               title="Открыть рейтинг породы по курсингу"
             >
-              <div className="flex items-center justify-between gap-2 min-w-0">
-                {/* Слева: Место в породе + исторический зачёт */}
-                <div className="flex items-center gap-2.5 min-w-0 flex-1">
-                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-forest-700 text-white shadow-2xs">
-                    <Crown className="h-4 w-4" />
-                  </div>
-                  <div className="min-w-0 flex-1">
-                    <div className="flex items-center gap-1.5 leading-tight">
-                      <span className="text-sm font-bold text-forest-950 xl:text-base truncate block">
-                        {has2026
-                          ? `#${rank.yearBreedRank} в 2026`
-                          : hasHistory
-                            ? `№${rank.breedRank} за всё время`
-                            : 'Состязания'}
-                      </span>
-                    </div>
-                    <div className="text-[11px] text-forest-700 leading-tight mt-0.5 truncate">
-                      {has2026 && hasHistory ? (
-                        `№${rank?.breedRank} за всё время`
-                      ) : hasHistory ? (
-                        'исторический зачёт'
-                      ) : has2026 ? (
-                        'сезонный зачёт'
-                      ) : (
-                        'состязания РКФ'
-                      )}
-                    </div>
-                  </div>
+              <div className="flex items-center gap-2 min-w-0 flex-1">
+                <Crown className="h-4 w-4 shrink-0 text-forest-700" aria-hidden />
+                <div className="min-w-0 flex-1 leading-tight">
+                  <span className="text-sm font-bold text-forest-950 block truncate">
+                    {has2026
+                      ? `#${rank.yearBreedRank} в 2026`
+                      : hasHistory
+                        ? `№${rank.breedRank} за всё время`
+                        : 'Состязания'}
+                  </span>
+                  <span className="text-[11px] text-forest-700/90 block truncate">
+                    {has2026 && hasHistory
+                      ? `№${rank?.breedRank} за всё время`
+                      : hasHistory
+                        ? 'исторический зачёт'
+                        : has2026
+                          ? 'сезонный зачёт'
+                          : 'состязания РКФ'}
+                  </span>
                 </div>
+              </div>
 
-                {/* Справа: Медали и количество стартов */}
-                <div className="shrink-0 flex items-center leading-tight">
-                  {hasCourseMedals ? (
-                    <MedalTally
-                      gold={coursing.gold}
-                      silver={coursing.silver}
-                      bronze={coursing.bronze}
-                      size="sm"
-                      showZero
-                    />
-                  ) : startsCount > 0 ? (
-                    <span className="inline-flex items-center gap-1 rounded-full border border-forest-200 bg-white/90 px-2 py-0.5 text-[11px] font-semibold text-charcoal-700">
-                      <Medal className="h-3 w-3 text-forest-600 shrink-0" />
-                      <span>Участник</span>
-                    </span>
-                  ) : null}
-                </div>
+              <div className="shrink-0 flex items-center leading-tight">
+                {hasCourseMedals ? (
+                  <MedalTally
+                    gold={coursing.gold}
+                    silver={coursing.silver}
+                    bronze={coursing.bronze}
+                    size="sm"
+                    showZero
+                  />
+                ) : startsCount > 0 ? (
+                  <span className="inline-flex items-center gap-1 rounded-md border border-forest-200 bg-white/90 px-2 py-0.5 text-[11px] font-semibold text-charcoal-700">
+                    <Medal className="h-3 w-3 text-forest-600 shrink-0" />
+                    <span>Участник</span>
+                  </span>
+                ) : null}
               </div>
             </Link>
 
@@ -169,57 +159,57 @@ export function CoursingColumn({
               <ProcoursingEventLink
                 eventId={bestScoreEventId}
                 procoursingUrl={bestScoreUrl}
-                className="group flex flex-1 flex-col items-center justify-center rounded-xl border border-forest-200/90 bg-white p-3 text-center transition-colors hover:bg-forest-50/50"
+                className="group flex flex-1 flex-col items-center justify-center bg-white px-3.5 py-3 text-center transition-colors hover:bg-forest-50/40"
                 title="Посмотреть протокол лучшего состязания"
               >
-                <span className="text-[11px] font-semibold uppercase tracking-wider text-charcoal-500 mb-0.5">
+                <span className="text-[10px] font-semibold uppercase tracking-wider text-charcoal-400">
                   Лучший результат
                 </span>
-                <span className="text-3xl font-bold tabular-nums text-forest-900 sm:text-4xl">
+                <span className="mt-0.5 text-3xl font-bold tabular-nums tracking-tight text-forest-900">
                   {formatScore(coursing.best_score)}
                 </span>
-                <span className="mt-1 flex items-center gap-1 text-[11px] font-medium text-forest-700 group-hover:underline">
+                <span className="mt-0.5 inline-flex items-center gap-1 text-[11px] font-medium text-forest-700 group-hover:underline">
                   <span>Протокол состязания</span>
                   <ArrowRight className="h-3 w-3 shrink-0" />
                 </span>
               </ProcoursingEventLink>
             ) : (
-              <div className="flex flex-1 flex-col items-center justify-center rounded-xl border border-forest-200/90 bg-white p-3 text-center">
-                <span className="text-[11px] font-semibold uppercase tracking-wider text-charcoal-500 mb-0.5">
+              <div className="flex flex-1 flex-col items-center justify-center bg-white px-3.5 py-3 text-center">
+                <span className="text-[10px] font-semibold uppercase tracking-wider text-charcoal-400">
                   Лучший результат
                 </span>
-                <span className="text-3xl font-bold tabular-nums text-forest-900 sm:text-4xl">
+                <span className="mt-0.5 text-3xl font-bold tabular-nums tracking-tight text-forest-900">
                   {formatScore(coursing.best_score)}
                 </span>
               </div>
             )}
 
-            {/* Низ: 2 карточки показателей */}
-            <div className="grid grid-cols-2 gap-2 text-center text-xs shrink-0">
+            {/* Низ: Единая двойная строка показателей */}
+            <div className="grid grid-cols-2 divide-x divide-old-money-100 bg-cream-50/50 text-center text-xs shrink-0">
               {avgJudgeScoreEventId || bestJudgeScoreEventId ? (
                 <ProcoursingEventLink
                   eventId={(avgJudgeScoreEventId ?? bestJudgeScoreEventId)!}
                   procoursingUrl={avgJudgeUrl ?? bestJudgeUrl}
-                  className="rounded-lg border border-old-money-200 bg-cream-50/80 p-2 transition-colors hover:bg-cream-100/90"
+                  className="px-2 py-2 transition-colors hover:bg-cream-100/80"
                   title="Открыть состязание со средней оценкой"
                 >
-                  <div className="text-[10px] uppercase text-charcoal-500 mb-0.5">Средняя оценка</div>
-                  <div className="font-bold tabular-nums text-charcoal-800 text-sm sm:text-base">
+                  <div className="text-[10px] font-semibold uppercase tracking-wide text-charcoal-400">Средняя оценка</div>
+                  <div className="mt-0.5 font-bold tabular-nums text-charcoal-800 text-sm">
                     {formatScore(coursing.avg_judge_score ?? coursing.best_judge_score)}
                   </div>
                 </ProcoursingEventLink>
               ) : (
-                <div className="rounded-lg border border-old-money-200 bg-cream-50/80 p-2">
-                  <div className="text-[10px] uppercase text-charcoal-500 mb-0.5">Средняя оценка</div>
-                  <div className="font-bold tabular-nums text-charcoal-800 text-sm sm:text-base">
+                <div className="px-2 py-2">
+                  <div className="text-[10px] font-semibold uppercase tracking-wide text-charcoal-400">Средняя оценка</div>
+                  <div className="mt-0.5 font-bold tabular-nums text-charcoal-800 text-sm">
                     {formatScore(coursing.avg_judge_score ?? coursing.best_judge_score)}
                   </div>
                 </div>
               )}
 
-              <div className="rounded-lg border border-old-money-200 bg-cream-50/80 p-2">
-                <div className="text-[10px] uppercase text-charcoal-500 mb-0.5">Состязания</div>
-                <div className="font-bold tabular-nums text-charcoal-800 text-sm sm:text-base">
+              <div className="px-2 py-2">
+                <div className="text-[10px] font-semibold uppercase tracking-wide text-charcoal-400">Состязания</div>
+                <div className="mt-0.5 font-bold tabular-nums text-charcoal-800 text-sm">
                   {formatCompetitionsCount(competitionsCount)}
                 </div>
               </div>

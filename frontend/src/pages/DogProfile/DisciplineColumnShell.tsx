@@ -1,7 +1,12 @@
 import { createContext, useContext, type ReactNode } from 'react'
 import { Link } from 'react-router-dom'
-import { ChevronRight, ChevronLeft } from 'lucide-react'
+import { ChevronRight, ChevronLeft, Trophy, Zap, Award, ArrowUpRight } from 'lucide-react'
 import type { DisciplineTabId } from './types'
+import {
+  formatCompetitionsCount,
+  formatRunsCount,
+} from './historyFormatters'
+import { formatShowsCount } from './showsColumnUtils'
 
 export interface DisciplineMobileNav {
   prevTab?: { id: DisciplineTabId; label: string; count?: number } | null
@@ -43,7 +48,6 @@ const THEME: Record<
   camel: {
     cardBorder: 'border-camel-200',
     heroBorder: 'border-camel-200',
-    // camel palette starts at 100 (no 50) — use 100/80 to match soft empty-panel tint
     heroBg: 'bg-camel-100/80',
     heroValue: 'text-camel-700',
     cellBorder: 'border-camel-200',
@@ -51,39 +55,19 @@ const THEME: Record<
   },
 }
 
+const THEME_ICON: Record<DisciplineTheme, typeof Trophy> = {
+  forest: Trophy,
+  'warm-blue': Zap,
+  camel: Award,
+}
+
 export function disciplineTheme(theme: DisciplineTheme) {
   return THEME[theme]
 }
 
-const LINK_HINT_THEME: Record<DisciplineTheme, string> = {
-  forest:
-    'border-forest-200/80 bg-white/90 text-forest-700 shadow-sm hover:border-forest-300 hover:bg-forest-50',
-  'warm-blue':
-    'border-warm-blue-200/80 bg-white/90 text-warm-blue-700 shadow-sm hover:border-warm-blue-300 hover:bg-warm-blue-50',
-  camel:
-    'border-camel-200/80 bg-white/90 text-camel-700 shadow-sm hover:border-camel-300 hover:bg-camel-50',
-}
-
-/** Подсказка «открыть результаты» в hero-блоке колонки (появляется при hover на карточку-ссылку). */
-export function DisciplineHeroLinkHint({ theme }: { theme: DisciplineTheme }) {
-  return (
-    <div className="mt-1.5 flex min-h-[1.25rem] translate-y-0.5 justify-center opacity-0 transition-all duration-200 group-hover:translate-y-0 group-hover:opacity-100">
-      <span
-        className={`inline-flex items-center gap-0.5 rounded border px-2 py-0.5 text-[11px] font-semibold leading-none transition-colors ${LINK_HINT_THEME[theme]}`}
-      >
-        Открыть результаты
-        <ChevronRight
-          className="h-3 w-3 shrink-0 opacity-70 transition-transform group-hover:translate-x-0.5"
-          aria-hidden
-        />
-      </span>
-    </div>
-  )
-}
-
-/** Общая оболочка колонки: равная ширина/высота каркаса. */
+/** Общая оболочка колонки: равная ширина и корректное выравнивание по высоте. */
 export function DisciplineColumnShell({ children }: { children: ReactNode }) {
-  return <div className="flex h-full min-w-0 flex-col gap-4">{children}</div>
+  return <div className="flex h-full min-w-0 flex-col gap-3.5">{children}</div>
 }
 
 export function DisciplineStatsCard({
@@ -100,6 +84,7 @@ export function DisciplineStatsCard({
   children: ReactNode
 }) {
   const t = THEME[theme]
+  const Icon = THEME_ICON[theme]
   const nav = useContext(DisciplineMobileNavContext)
   const prevTab = nav?.prevTab
   const nextTab = nav?.nextTab
@@ -107,159 +92,91 @@ export function DisciplineStatsCard({
 
   return (
     <div
-      className={`relative flex h-[20.5rem] shrink-0 flex-col overflow-hidden rounded-xl border bg-white p-3.5 sm:p-4 md:h-[21rem] mb-7 lg:mb-0 ${t.cardBorder}`}
+      className={`relative flex shrink-0 flex-col overflow-hidden rounded-xl border bg-white mb-7 lg:mb-0 ${t.cardBorder}`}
     >
-        <div className="relative mb-4 flex min-h-[36px] items-center justify-between gap-1.5 shrink-0 min-w-0">
-          {/* Левый язычок (стиль HomeSubSectionTab / BreedHub: прикреплён к левому краю карточки) */}
-          {prevTab && (
-            <button
-              type="button"
-              onClick={() => onNavigateTab?.(prevTab.id)}
-              className="lg:hidden absolute -left-3.5 sm:-left-4 top-1/2 -translate-y-1/2 z-20 inline-flex items-center gap-1 bg-[#fbf7f0]/95 text-camel-950 font-bold text-[11px] py-1 pl-2.5 pr-2.5 rounded-r-full border-y border-r border-camel-400/60 shadow-xs backdrop-blur-md transition-all hover:bg-camel-100/90 active:scale-95 cursor-pointer touch-manipulation select-none"
-              title={`Перейти: ${prevTab.label}`}
-              aria-label={`Перейти: ${prevTab.label}`}
-            >
-              <ChevronLeft className="w-3.5 h-3.5 text-camel-800 shrink-0" aria-hidden />
-              <span className="tracking-tight">{prevTab.label}</span>
-            </button>
-          )}
-
-          {/* Мобильный заголовок: по центру название дисциплины */}
-          <div
-            className={`lg:hidden flex min-w-0 flex-1 flex-col items-center justify-center text-center leading-tight ${
-              prevTab || nextTab ? 'px-16 sm:px-20' : 'px-2'
-            }`}
+      {/* Фирменная кремовая шапка-плашка Old Money (как в хабе породы и Донино) */}
+      <div className="donino-column-plaque relative flex h-10 min-h-10 shrink-0 items-center justify-between gap-1.5 border-b border-[rgba(195,168,128,0.55)] bg-cream-100/90 px-3.5">
+        {prevTab && (
+          <button
+            type="button"
+            onClick={() => onNavigateTab?.(prevTab.id)}
+            className="lg:hidden absolute left-0 top-1/2 -translate-y-1/2 z-20 inline-flex items-center gap-1 bg-[#fbf7f0]/95 text-camel-950 font-bold text-[11px] py-1 pl-2.5 pr-2.5 rounded-r-full border-y border-r border-camel-400/60 shadow-xs backdrop-blur-md transition-all hover:bg-camel-100/90 active:scale-95 cursor-pointer touch-manipulation select-none"
+            title={`Перейти: ${prevTab.label}`}
+            aria-label={`Перейти: ${prevTab.label}`}
           >
-            {rankingUrl ? (
-              <Link
-                to={rankingUrl}
-                className="group flex flex-col items-center justify-center max-w-full transition-colors hover:text-camel-950"
-                title={`Открыть рейтинг: ${title}`}
-              >
-                <div className="text-xs font-bold uppercase tracking-wider text-charcoal-900 group-hover:underline truncate max-w-full">
-                  {title}
-                </div>
-              </Link>
-            ) : (
-              <div className="text-xs font-bold uppercase tracking-wider text-charcoal-900 truncate max-w-full">
-                {title}
-              </div>
-            )}
-          </div>
+            <ChevronLeft className="w-3.5 h-3.5 text-camel-800 shrink-0" aria-hidden />
+            <span className="tracking-tight">{prevTab.label}</span>
+          </button>
+        )}
 
-          {/* Десктопный заголовок: название слева, кнопка-бейдж справа */}
-          <div className="hidden lg:flex min-w-0 flex-1 items-center justify-between gap-1.5">
-            <h2 className="text-base sm:text-lg font-bold tracking-tight text-charcoal-800 md:text-xl truncate shrink min-w-0">
-              {title}
-            </h2>
-            {rankBadge}
-          </div>
-
-          {/* Правый язычок (стиль HomeSubSectionTab / BreedHub: прикреплён к правому краю карточки) */}
-          {nextTab && (
-            <button
-              type="button"
-              onClick={() => onNavigateTab?.(nextTab.id)}
-              className="lg:hidden absolute -right-3.5 sm:-right-4 top-1/2 -translate-y-1/2 z-20 inline-flex items-center gap-1 bg-[#fbf7f0]/95 text-camel-950 font-bold text-[11px] py-1 pl-2.5 pr-2.5 rounded-l-full border-y border-l border-camel-400/60 shadow-xs backdrop-blur-md transition-all hover:bg-camel-100/90 active:scale-95 cursor-pointer touch-manipulation select-none"
-              title={`Перейти: ${nextTab.label}`}
-              aria-label={`Перейти: ${nextTab.label}`}
+        {/* Мобильный заголовок с безопасным отступом от боковых язычков */}
+        <div
+          className={`lg:hidden flex min-w-0 flex-1 items-center justify-center text-center leading-tight ${
+            prevTab || nextTab ? 'px-16 sm:px-20' : 'px-2'
+          }`}
+        >
+          {rankingUrl ? (
+            <Link
+              to={rankingUrl}
+              className="group inline-flex items-center gap-1.5 max-w-full transition-colors hover:text-camel-950"
+              title={`Открыть рейтинг: ${title}`}
             >
-              <span className="tracking-tight">{nextTab.label}</span>
-              <ChevronRight className="w-3.5 h-3.5 text-camel-800 shrink-0" aria-hidden />
-            </button>
+              <Icon className="w-3.5 h-3.5 text-camel-700 shrink-0" aria-hidden />
+              <span className="text-xs font-bold uppercase tracking-wider text-camel-800 group-hover:underline truncate">
+                {title}
+              </span>
+            </Link>
+          ) : (
+            <span className="inline-flex items-center gap-1.5 max-w-full">
+              <Icon className="w-3.5 h-3.5 text-camel-700 shrink-0" aria-hidden />
+              <span className="text-xs font-bold uppercase tracking-wider text-camel-800 truncate">
+                {title}
+              </span>
+            </span>
           )}
         </div>
-        <div className="flex min-h-0 flex-1 flex-col overflow-hidden">{children}</div>
-      </div>
-  )
-}
 
-export function DisciplineHero({
-  theme,
-  label,
-  value,
-  unit,
-  footer,
-  footerAlwaysVisible = false,
-  as: Comp = 'div',
-  ...rest
-}: {
-  theme: DisciplineTheme
-  label: string
-  value: ReactNode
-  unit?: ReactNode
-  footer?: ReactNode
-  footerAlwaysVisible?: boolean
-  as?: 'div' | 'a'
-} & Record<string, unknown>) {
-  const t = THEME[theme]
-  return (
-    <Comp
-      className={`group mb-4 block h-[7.25rem] shrink-0 overflow-hidden rounded-lg border p-4 text-center transition-colors ${t.heroBorder} ${t.heroBg} ${
-        Comp === 'a' ? 'hover:brightness-[0.98]' : ''
-      }`}
-      {...rest}
-    >
-      <div className="mb-2 text-xs font-semibold uppercase tracking-wide text-charcoal-500">
-        {label}
-      </div>
-      <div
-        className={`flex flex-wrap items-baseline justify-center gap-x-2 text-4xl font-bold tracking-tight tabular-nums ${t.heroValue}`}
-      >
-        <span className="min-w-0 break-words">{value}</span>
-        {unit ? (
-          <span className="text-base font-normal text-charcoal-400">{unit}</span>
-        ) : null}
-      </div>
-      <div
-        className={`mt-2 min-h-[1.25rem] truncate text-sm font-medium ${
-          footerAlwaysVisible
-            ? 'text-camel-600'
-            : 'opacity-0 transition-opacity group-hover:opacity-100'
-        }`}
-      >
-        {footer ?? (footerAlwaysVisible ? '\u00a0' : null)}
-      </div>
-    </Comp>
-  )
-}
+        {/* Десктопный заголовок плашки: иконка + название слева, ссылка на рейтинг справа */}
+        <div className="hidden lg:flex min-w-0 flex-1 items-center justify-between gap-2">
+          <h2 className="inline-flex items-center gap-1.5 min-w-0 text-xs font-bold uppercase tracking-wider text-camel-800 truncate">
+            <Icon className="w-3.5 h-3.5 text-camel-700 shrink-0" aria-hidden />
+            <span className="truncate">{title}</span>
+          </h2>
+          {rankBadge ?? (rankingUrl ? (
+            <Link
+              to={rankingUrl}
+              className="inline-flex items-center gap-0.5 text-xs font-semibold text-camel-800 hover:text-camel-950 transition-colors shrink-0"
+              title={`Открыть рейтинг: ${title}`}
+            >
+              <span>Рейтинг</span>
+              <ArrowUpRight className="h-3.5 w-3.5 text-camel-700" aria-hidden />
+            </Link>
+          ) : null)}
+        </div>
 
-export function DisciplineStatCell({
-  theme,
-  label,
-  value,
-  as: Comp = 'div',
-  ...rest
-}: {
-  theme: DisciplineTheme
-  label: string
-  value: ReactNode
-  as?: 'div' | 'a'
-} & Record<string, unknown>) {
-  const t = THEME[theme]
-  return (
-    <Comp
-      className={`group min-h-[5.5rem] rounded-xl border p-4 text-center transition-colors ${t.cellBorder} ${t.cellBg} ${
-        Comp === 'a' ? 'hover:brightness-[0.98]' : ''
-      }`}
-      {...rest}
-    >
-      <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-old-money-500">
-        {label}
+        {nextTab && (
+          <button
+            type="button"
+            onClick={() => onNavigateTab?.(nextTab.id)}
+            className="lg:hidden absolute right-0 top-1/2 -translate-y-1/2 z-20 inline-flex items-center gap-1 bg-[#fbf7f0]/95 text-camel-950 font-bold text-[11px] py-1 pl-2.5 pr-2.5 rounded-l-full border-y border-l border-camel-400/60 shadow-xs backdrop-blur-md transition-all hover:bg-camel-100/90 active:scale-95 cursor-pointer touch-manipulation select-none"
+            title={`Перейти: ${nextTab.label}`}
+            aria-label={`Перейти: ${nextTab.label}`}
+          >
+            <span className="tracking-tight">{nextTab.label}</span>
+            <ChevronRight className="w-3.5 h-3.5 text-camel-800 shrink-0" aria-hidden />
+          </button>
+        )}
       </div>
-      <div className="text-2xl font-bold tabular-nums text-charcoal-800">
-        {value}
-      </div>
-    </Comp>
-  )
-}
 
-export function DisciplineFooterRow({ children }: { children?: ReactNode }) {
-  return (
-    <div className="mt-auto flex h-[2.75rem] max-h-[4.5rem] w-full min-w-0 shrink-0 items-center justify-center overflow-hidden py-1">
-      {children ?? null}
+      <div className="flex min-h-0 flex-1 flex-col">{children}</div>
     </div>
   )
+}
+
+function historyCountLabel(theme: DisciplineTheme, count: number): string {
+  if (theme === 'forest') return formatCompetitionsCount(count)
+  if (theme === 'warm-blue') return formatRunsCount(count)
+  return formatShowsCount(count)
 }
 
 export function DisciplineHistoryCard({
@@ -269,29 +186,33 @@ export function DisciplineHistoryCard({
   children,
 }: {
   theme: DisciplineTheme
-  /** Total events / shows — shown at top as label + N. */
   participations?: number
   label?: string
   children: ReactNode
 }) {
   const t = THEME[theme]
+  const Icon = THEME_ICON[theme]
   const displayLabel =
-    label ?? (theme === 'forest' ? 'Состязаний' : theme === 'warm-blue' ? 'Забегов' : 'Выставок')
+    label ?? (theme === 'forest' ? 'Состязания' : theme === 'warm-blue' ? 'Забеги' : 'Выставки')
+
   return (
     <div
-      className={`flex flex-col rounded-xl border bg-white p-3 sm:p-3.5 lg:flex-1 lg:min-h-0 ${t.cardBorder}`}
+      className={`flex flex-col overflow-hidden rounded-xl border bg-white lg:flex-1 lg:min-h-0 ${t.cardBorder}`}
     >
       {participations != null && participations > 0 ? (
-        <div className="mb-1.5 flex shrink-0 items-baseline justify-between gap-2 border-b border-old-money-100 pb-1.5">
-          <span className="text-xs font-semibold uppercase tracking-wide text-charcoal-500">
-            {displayLabel}
-          </span>
-          <span className="text-sm font-bold tabular-nums text-charcoal-800">
-            {participations}
+        <div className="donino-column-plaque relative flex h-10 min-h-10 shrink-0 items-center justify-between gap-2 border-b border-[rgba(195,168,128,0.55)] bg-cream-100/90 px-3.5">
+          <div className="inline-flex items-center gap-1.5 min-w-0 truncate">
+            <Icon className="w-3.5 h-3.5 text-camel-700 shrink-0" aria-hidden />
+            <span className="text-xs font-bold uppercase tracking-wider text-camel-800 truncate">
+              {displayLabel}
+            </span>
+          </div>
+          <span className="text-xs font-semibold text-old-money-600 tabular-nums shrink-0">
+            {historyCountLabel(theme, participations)}
           </span>
         </div>
       ) : null}
-      <div className="flex flex-1 flex-col justify-between">{children}</div>
+      <div className="flex flex-1 flex-col justify-between px-3.5 pb-2.5 pt-1">{children}</div>
     </div>
   )
 }

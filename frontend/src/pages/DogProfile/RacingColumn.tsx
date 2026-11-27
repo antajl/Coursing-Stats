@@ -98,60 +98,50 @@ export function RacingColumn({
           title="Рейсинг"
           rankingUrl={rankingUrl}
         >
-          <div className="flex h-full flex-col justify-between gap-3">
+          <div className="flex flex-1 flex-col divide-y divide-old-money-100">
             {/* Верх: Подиум (Рейтинг + Медали) */}
             <Link
               to={rankingUrl}
-              className="group block rounded-xl border border-warm-blue-200/90 bg-warm-blue-50/80 p-3 transition-colors hover:bg-warm-blue-100/80"
+              className="group flex items-center justify-between gap-2 bg-warm-blue-50/60 px-3.5 py-2.5 transition-colors hover:bg-warm-blue-100/70"
               title="Открыть рейтинг породы по бегам"
             >
-              <div className="flex items-center justify-between gap-2 min-w-0">
-                {/* Слева: Место в породе + исторический зачёт */}
-                <div className="flex items-center gap-2.5 min-w-0 flex-1">
-                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-warm-blue-700 text-white shadow-2xs">
-                    <Crown className="h-4 w-4" />
-                  </div>
-                  <div className="min-w-0 flex-1">
-                    <div className="flex items-center gap-1.5 leading-tight">
-                      <span className="text-sm font-bold text-warm-blue-950 xl:text-base truncate block">
-                        {has2026
-                          ? `#${rank.yearBreedRank} в 2026`
-                          : hasHistory
-                            ? `№${rank.breedRank} за всё время`
-                            : 'Бега'}
-                      </span>
-                    </div>
-                    <div className="text-[11px] text-warm-blue-700 leading-tight mt-0.5 truncate">
-                      {has2026 && hasHistory ? (
-                        `№${rank?.breedRank} за всё время`
-                      ) : hasHistory ? (
-                        'исторический зачёт'
-                      ) : has2026 ? (
-                        'сезонный зачёт'
-                      ) : (
-                        'беговой рейтинг'
-                      )}
-                    </div>
-                  </div>
+              <div className="flex items-center gap-2 min-w-0 flex-1">
+                <Crown className="h-4 w-4 shrink-0 text-warm-blue-700" aria-hidden />
+                <div className="min-w-0 flex-1 leading-tight">
+                  <span className="text-sm font-bold text-warm-blue-950 block truncate">
+                    {has2026
+                      ? `#${rank.yearBreedRank} в 2026`
+                      : hasHistory
+                        ? `№${rank.breedRank} за всё время`
+                        : 'Бега'}
+                  </span>
+                  <span className="text-[11px] text-warm-blue-700/90 block truncate">
+                    {has2026 && hasHistory
+                      ? `№${rank?.breedRank} за всё время`
+                      : hasHistory
+                        ? 'исторический зачёт'
+                        : has2026
+                          ? 'сезонный зачёт'
+                          : 'беговой рейтинг'}
+                  </span>
                 </div>
+              </div>
 
-                {/* Справа: Медали и количество стартов */}
-                <div className="shrink-0 flex items-center leading-tight">
-                  {hasRacingMedals ? (
-                    <MedalTally
-                      gold={racing.gold}
-                      silver={racing.silver}
-                      bronze={racing.bronze}
-                      size="sm"
-                      showZero
-                    />
-                  ) : startsCount > 0 ? (
-                    <span className="inline-flex items-center gap-1 rounded-full border border-warm-blue-200 bg-white/90 px-2 py-0.5 text-[11px] font-semibold text-charcoal-700">
-                      <Medal className="h-3 w-3 text-warm-blue-600 shrink-0" />
-                      <span>Участник</span>
-                    </span>
-                  ) : null}
-                </div>
+              <div className="shrink-0 flex items-center leading-tight">
+                {hasRacingMedals ? (
+                  <MedalTally
+                    gold={racing.gold}
+                    silver={racing.silver}
+                    bronze={racing.bronze}
+                    size="sm"
+                    showZero
+                  />
+                ) : startsCount > 0 ? (
+                  <span className="inline-flex items-center gap-1 rounded-md border border-warm-blue-200 bg-white/90 px-2 py-0.5 text-[11px] font-semibold text-charcoal-700">
+                    <Medal className="h-3 w-3 text-warm-blue-600 shrink-0" />
+                    <span>Участник</span>
+                  </span>
+                ) : null}
               </div>
             </Link>
 
@@ -160,59 +150,59 @@ export function RacingColumn({
               <ProcoursingEventLink
                 eventId={bestSpeedEventId}
                 procoursingUrl={bestSpeedUrl}
-                className="group flex flex-1 flex-col items-center justify-center rounded-xl border border-warm-blue-200/90 bg-white p-3 text-center transition-colors hover:bg-warm-blue-50/50"
+                className="group flex flex-1 flex-col items-center justify-center bg-white px-3.5 py-3 text-center transition-colors hover:bg-warm-blue-50/40"
                 title="Посмотреть протокол лучшего забега"
               >
-                <span className="text-[11px] font-semibold uppercase tracking-wider text-charcoal-500 mb-0.5">
+                <span className="text-[10px] font-semibold uppercase tracking-wider text-charcoal-400">
                   Лучшая скорость
                 </span>
-                <div className="flex items-baseline gap-1 text-3xl font-bold tabular-nums text-warm-blue-900 sm:text-4xl">
+                <div className="mt-0.5 flex items-baseline gap-1 text-3xl font-bold tabular-nums tracking-tight text-warm-blue-900">
                   <span>{formatScore(racing.best_speed)}</span>
                   <span className="text-sm font-normal text-charcoal-400">км/ч</span>
                 </div>
-                <span className="mt-1 flex items-center gap-1 text-[11px] font-medium text-warm-blue-700 group-hover:underline">
+                <span className="mt-0.5 inline-flex items-center gap-1 text-[11px] font-medium text-warm-blue-700 group-hover:underline">
                   <span>Протокол забега</span>
                   <ArrowRight className="h-3 w-3 shrink-0" />
                 </span>
               </ProcoursingEventLink>
             ) : (
-              <div className="flex flex-1 flex-col items-center justify-center rounded-xl border border-warm-blue-200/90 bg-white p-3 text-center">
-                <span className="text-[11px] font-semibold uppercase tracking-wider text-charcoal-500 mb-0.5">
+              <div className="flex flex-1 flex-col items-center justify-center bg-white px-3.5 py-3 text-center">
+                <span className="text-[10px] font-semibold uppercase tracking-wider text-charcoal-400">
                   Лучшая скорость
                 </span>
-                <div className="flex items-baseline gap-1 text-3xl font-bold tabular-nums text-warm-blue-900 sm:text-4xl">
+                <div className="mt-0.5 flex items-baseline gap-1 text-3xl font-bold tabular-nums tracking-tight text-warm-blue-900">
                   <span>{formatScore(racing.best_speed)}</span>
                   <span className="text-sm font-normal text-charcoal-400">км/ч</span>
                 </div>
               </div>
             )}
 
-            {/* Низ: 2 карточки показателей */}
-            <div className="grid grid-cols-2 gap-2 text-center text-xs shrink-0">
+            {/* Низ: Единая двойная строка показателей */}
+            <div className="grid grid-cols-2 divide-x divide-old-money-100 bg-cream-50/50 text-center text-xs shrink-0">
               {avgSpeedEventId ? (
                 <ProcoursingEventLink
                   eventId={avgSpeedEventId}
                   procoursingUrl={avgSpeedUrl}
-                  className="rounded-lg border border-old-money-200 bg-cream-50/80 p-2 transition-colors hover:bg-cream-100/90"
+                  className="px-2 py-2 transition-colors hover:bg-cream-100/80"
                   title="Открыть забег со средней скоростью"
                 >
-                  <div className="text-[10px] uppercase text-charcoal-500 mb-0.5">Средняя скорость</div>
-                  <div className="font-bold tabular-nums text-charcoal-800 text-sm sm:text-base">
+                  <div className="text-[10px] font-semibold uppercase tracking-wide text-charcoal-400">Средняя скорость</div>
+                  <div className="mt-0.5 font-bold tabular-nums text-charcoal-800 text-sm">
                     {formatScore(racing.avg_speed)} км/ч
                   </div>
                 </ProcoursingEventLink>
               ) : (
-                <div className="rounded-lg border border-old-money-200 bg-cream-50/80 p-2">
-                  <div className="text-[10px] uppercase text-charcoal-500 mb-0.5">Средняя скорость</div>
-                  <div className="font-bold tabular-nums text-charcoal-800 text-sm sm:text-base">
+                <div className="px-2 py-2">
+                  <div className="text-[10px] font-semibold uppercase tracking-wide text-charcoal-400">Средняя скорость</div>
+                  <div className="mt-0.5 font-bold tabular-nums text-charcoal-800 text-sm">
                     {formatScore(racing.avg_speed)} км/ч
                   </div>
                 </div>
               )}
 
-              <div className="rounded-lg border border-old-money-200 bg-cream-50/80 p-2">
-                <div className="text-[10px] uppercase text-charcoal-500 mb-0.5">Забеги</div>
-                <div className="font-bold tabular-nums text-charcoal-800 text-sm sm:text-base">
+              <div className="px-2 py-2">
+                <div className="text-[10px] font-semibold uppercase tracking-wide text-charcoal-400">Забеги</div>
+                <div className="mt-0.5 font-bold tabular-nums text-charcoal-800 text-sm">
                   {formatRunsCount(startsCount)}
                 </div>
               </div>
