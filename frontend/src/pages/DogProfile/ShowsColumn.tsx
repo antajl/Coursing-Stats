@@ -38,13 +38,23 @@ type ShowsColumnProps = {
   dog: ShowDogCardData & { history?: ShowHistoryEntry[] }
   rank?: ProfileHeaderRank
   breed?: string
+  showAll?: boolean
+  onToggleShowAll?: () => void
 }
 
 const THEME = 'camel' as const
 
-export function ShowsColumn({ dog, rank, breed }: ShowsColumnProps) {
+export function ShowsColumn({
+  dog,
+  rank,
+  breed,
+  showAll: controlledShowAll,
+  onToggleShowAll,
+}: ShowsColumnProps) {
   disciplineTheme(THEME)
-  const [showAll, setShowAll] = useState(false)
+  const [localShowAll, setLocalShowAll] = useState(false)
+  const showAll = controlledShowAll ?? localShowAll
+  const handleToggleShowAll = onToggleShowAll ?? (() => setLocalShowAll((v) => !v))
   const bestKey = (dog.best_award as ShowAwardKey | null) ?? null
   const bestLabel = bestKey ? SHOW_AWARD_LABELS[bestKey] : null
   const bestBadge = bestKey ? SHOW_AWARD_BADGE[bestKey] : null
@@ -266,7 +276,7 @@ export function ShowsColumn({ dog, rank, breed }: ShowsColumnProps) {
             <div className="mt-auto pt-2 text-center shrink-0 flex items-center justify-center">
               <button
                 type="button"
-                onClick={() => setShowAll((v) => !v)}
+                onClick={handleToggleShowAll}
                 className="text-xs font-semibold text-camel-700 transition-colors hover:text-camel-900 hover:underline"
               >
                 {showAll ? 'Свернуть историю' : `Показать все ${history.length} выставок`}

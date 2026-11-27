@@ -106,27 +106,30 @@ export function DogCoursingCriteriaSection({
 
   const insight = useMemo(() => buildCriteriaInsights(criteria, breed), [criteria, breed])
 
+  const sectionTitle = speedComparison
+    ? 'Критерии курсинга и скорость'
+    : 'Критерии курсинга'
+
   return (
     <section
       aria-labelledby="coursing-criteria-heading"
       className="rounded-xl border border-forest-200 bg-white p-3.5 sm:p-4"
     >
-      {/* Заголовок, метаданные в одну строку на десктопе и переключатель режима */}
+      {/* Заголовок, метаданные на одной базовой линии и переключатель режима */}
       <div className="mb-2.5 flex flex-col gap-2 border-b border-old-money-100 pb-2 sm:flex-row sm:items-center sm:justify-between">
-        <div className="min-w-0 flex flex-wrap items-baseline gap-x-2.5 gap-y-0.5">
-          <div className="flex items-center gap-2">
-            <Compass className="h-4 w-4 shrink-0 text-forest-700 self-center" strokeWidth={1.75} aria-hidden />
+        <div className="flex min-w-0 items-center gap-2">
+          <Compass className="h-4 w-4 shrink-0 text-forest-700" strokeWidth={1.75} aria-hidden />
+          <div className="min-w-0 flex flex-wrap items-baseline gap-x-2.5 gap-y-0.5">
             <h2
               id="coursing-criteria-heading"
-              className="text-base sm:text-lg font-bold tracking-tight text-charcoal-800"
+              className="text-base sm:text-lg font-bold tracking-tight leading-tight text-charcoal-800"
             >
-              Разбор 5 критериев курсинга
+              {sectionTitle}
             </h2>
+            <span className="text-xs leading-tight text-charcoal-500 whitespace-nowrap">
+              {pluralStarts(criteria.events_count)} · {pluralHeats(criteria.heats_count)}
+            </span>
           </div>
-          <span className="text-xs text-charcoal-500">
-            {pluralStarts(criteria.events_count)} · {pluralHeats(criteria.heats_count)}
-            <span className="hidden md:inline"> · шкала 20 б.</span>
-          </span>
         </div>
 
         {hasRoundsComparison && (
@@ -222,12 +225,7 @@ export function DogCoursingCriteriaSection({
               )
             })}
 
-            {speedComparison && (
-              <CriteriaSpeedBar
-                comparison={speedComparison}
-                inRoundsMode={effectiveMode === 'rounds'}
-              />
-            )}
+            {speedComparison && <CriteriaSpeedBar comparison={speedComparison} />}
           </div>
 
           {/* Компактная строка выводов прямо под шкалами */}

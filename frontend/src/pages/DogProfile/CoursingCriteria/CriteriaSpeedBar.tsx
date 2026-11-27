@@ -1,9 +1,7 @@
-import { Gauge } from 'lucide-react'
 import type { DogSpeedBreedComparison } from './coursingSpeedBenchmark'
 
 interface CriteriaSpeedBarProps {
   comparison: DogSpeedBreedComparison
-  inRoundsMode?: boolean
 }
 
 function formatSignedSpeedDelta(delta: number): string {
@@ -23,7 +21,7 @@ function speedDeltaTone(delta: number): string {
  * Шестая горизонтальная шкала внутри карточки критериев:
  * средняя (или лучшая) скорость в бегах относительно средней по породе.
  */
-export function CriteriaSpeedBar({ comparison, inRoundsMode = false }: CriteriaSpeedBarProps) {
+export function CriteriaSpeedBar({ comparison }: CriteriaSpeedBarProps) {
   const label = comparison.kind === 'best' ? 'Лучшая скорость в бегах' : 'Скорость в бегах'
   const tooltip = [
     `Средняя по породе: ${comparison.breedAvg.toFixed(1)} км/ч`,
@@ -32,18 +30,13 @@ export function CriteriaSpeedBar({ comparison, inRoundsMode = false }: CriteriaS
   ].join(' · ')
 
   return (
-    <div className="space-y-0.5 border-t border-old-money-100/90 pt-2 mt-2">
+    <div className="space-y-0.5">
       <div className="flex items-center justify-between gap-2 text-xs sm:text-sm">
         <div className="flex min-w-0 items-center gap-2" title={tooltip}>
-          <span className="flex h-5 w-5 sm:h-6 sm:w-6 shrink-0 items-center justify-center rounded-md border border-camel-300/80 bg-cream-100/90 text-camel-800">
-            <Gauge className="h-3.5 w-3.5" strokeWidth={1.9} aria-hidden />
+          <span className="flex h-5 w-5 sm:h-6 sm:w-6 shrink-0 items-center justify-center rounded-md border border-forest-200/80 bg-forest-50 font-mono text-[11px] font-bold text-forest-800">
+            С
           </span>
           <span className="truncate font-medium text-charcoal-800">{label}</span>
-          {inRoundsMode && (
-            <span className="hidden sm:inline shrink-0 text-[11px] text-charcoal-400">
-              (к породе)
-            </span>
-          )}
         </div>
 
         <div className="flex shrink-0 items-baseline gap-2 font-mono tabular-nums">

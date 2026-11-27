@@ -31,6 +31,8 @@ interface DogDisciplinesDesktopViewProps {
   avgSpeedEventId: string | null
   showAllRacingEvents: boolean
   onToggleShowAllRacingEvents: () => void
+  showAllShows?: boolean
+  onToggleShowAllShows?: () => void
   showDog: ShowDogCardData | null
 }
 
@@ -59,6 +61,8 @@ export const DogDisciplinesDesktopView: React.FC<DogDisciplinesDesktopViewProps>
   avgSpeedEventId,
   showAllRacingEvents,
   onToggleShowAllRacingEvents,
+  showAllShows,
+  onToggleShowAllShows,
   showDog,
 }) => {
   return (
@@ -112,6 +116,8 @@ export const DogDisciplinesDesktopView: React.FC<DogDisciplinesDesktopViewProps>
             dog={showDog}
             rank={headerRanks.find((r) => r.key === 'shows')}
             breed={headerBreed}
+            showAll={showAllShows}
+            onToggleShowAll={onToggleShowAllShows}
           />
         ) : (
           <EmptyDisciplineColumn title="Выставки" theme="camel" />

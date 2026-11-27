@@ -43,8 +43,8 @@ export function useDogProfileData() {
 
   const [showAllSpeedHistory, setShowAllSpeedHistory] = useState(false)
   const [showAllCoursingDoninoHistory, setShowAllCoursingDoninoHistory] = useState(false)
-  const [showAllCoursingEvents, setShowAllCoursingEvents] = useState(false)
-  const [showAllRacingEvents, setShowAllRacingEvents] = useState(false)
+  const [showAllHistory, setShowAllHistory] = useState(false)
+  const toggleShowAllHistory = () => setShowAllHistory((v) => !v)
 
   const { reachGoal } = useYandexGoal()
 
@@ -359,10 +359,10 @@ export function useDogProfileData() {
   const visibleCoursingDoninoHistory = showAllCoursingDoninoHistory
     ? (coursingStats?.history ?? [])
     : (coursingStats?.history ?? []).slice(0, HISTORY_DEFAULT)
-  const visibleCoursingEvents = showAllCoursingEvents
+  const visibleCoursingEvents = showAllHistory
     ? coursingEvents
     : coursingEvents.slice(0, HISTORY_DEFAULT)
-  const visibleRacingEvents = showAllRacingEvents
+  const visibleRacingEvents = showAllHistory
     ? racingEvents
     : racingEvents.slice(0, HISTORY_DEFAULT)
 
@@ -385,11 +385,13 @@ export function useDogProfileData() {
     showAllCoursingDoninoHistory,
     setShowAllCoursingDoninoHistory,
     visibleCoursingEvents,
-    showAllCoursingEvents,
-    setShowAllCoursingEvents,
+    showAllHistory,
+    toggleShowAllHistory,
+    showAllCoursingEvents: showAllHistory,
+    setShowAllCoursingEvents: setShowAllHistory,
     visibleRacingEvents,
-    showAllRacingEvents,
-    setShowAllRacingEvents,
+    showAllRacingEvents: showAllHistory,
+    setShowAllRacingEvents: setShowAllHistory,
     loading,
     showsLoading,
     exporting,

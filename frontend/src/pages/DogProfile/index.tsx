@@ -89,8 +89,8 @@ export default function DogProfile() {
             bestScoreEventId={data.bestScoreEventId}
             bestJudgeScoreEventId={data.bestJudgeScoreEventId}
             avgJudgeScoreEventId={data.avgJudgeScoreEventId}
-            showAllCoursingEvents={data.showAllCoursingEvents}
-            onToggleShowAll={() => data.setShowAllCoursingEvents((v) => !v)}
+            showAllCoursingEvents={data.showAllHistory}
+            onToggleShowAll={data.toggleShowAllHistory}
             rank={data.headerRanks.find((r) => r.key === 'coursing')}
             breed={data.headerBreed}
           />
@@ -108,8 +108,8 @@ export default function DogProfile() {
             eventResultsUrls={data.eventResultsUrls}
             bestSpeedEventId={data.bestSpeedEventId}
             avgSpeedEventId={data.avgSpeedEventId}
-            showAllRacingEvents={data.showAllRacingEvents}
-            onToggleShowAll={() => data.setShowAllRacingEvents((v) => !v)}
+            showAllRacingEvents={data.showAllHistory}
+            onToggleShowAll={data.toggleShowAllHistory}
             rank={data.headerRanks.find((r) => r.key === 'racing')}
             breed={data.headerBreed}
           />
@@ -122,6 +122,8 @@ export default function DogProfile() {
             dog={data.showDog}
             rank={data.headerRanks.find((r) => r.key === 'shows')}
             breed={data.headerBreed}
+            showAll={data.showAllHistory}
+            onToggleShowAll={data.toggleShowAllHistory}
           />
         ) : (
           <EmptyDisciplineColumn title="Выставки" theme="camel" />
@@ -251,8 +253,8 @@ export default function DogProfile() {
             bestScoreEventId={data.bestScoreEventId}
             bestJudgeScoreEventId={data.bestJudgeScoreEventId}
             avgJudgeScoreEventId={data.avgJudgeScoreEventId}
-            showAllCoursingEvents={data.showAllCoursingEvents}
-            onToggleShowAllCoursingEvents={() => data.setShowAllCoursingEvents((v) => !v)}
+            showAllCoursingEvents={data.showAllHistory}
+            onToggleShowAllCoursingEvents={data.toggleShowAllHistory}
             headerRanks={data.headerRanks}
             headerBreed={data.headerBreed}
             showRacingColumn={data.showRacingColumn}
@@ -263,8 +265,10 @@ export default function DogProfile() {
             visibleRacingEvents={data.visibleRacingEvents}
             bestSpeedEventId={data.bestSpeedEventId}
             avgSpeedEventId={data.avgSpeedEventId}
-            showAllRacingEvents={data.showAllRacingEvents}
-            onToggleShowAllRacingEvents={() => data.setShowAllRacingEvents((v) => !v)}
+            showAllRacingEvents={data.showAllHistory}
+            onToggleShowAllRacingEvents={data.toggleShowAllHistory}
+            showAllShows={data.showAllHistory}
+            onToggleShowAllShows={data.toggleShowAllHistory}
             showDog={data.showDog}
           />
 
