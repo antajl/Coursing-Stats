@@ -1,4 +1,5 @@
 import React from 'react'
+import { Award } from 'lucide-react'
 import type {
   DogPassportDoninoStats,
   DogPassportShowStats,
@@ -11,54 +12,51 @@ interface ShowPillarProps {
 
 export const ShowPillar: React.FC<ShowPillarProps> = ({ shows }) => {
   const rankLabel = shows.yearBreedRank
-    ? `#${shows.yearBreedRank} в рейтинге`
+    ? `#${shows.yearBreedRank} в 2026`
     : shows.breedRank
-    ? `#${shows.breedRank} в породе`
-    : null
+      ? `№${shows.breedRank} за всё время`
+      : null
 
   return (
-    <div className="h-full rounded-xl border border-[#E3D5BE] bg-white p-3 flex flex-col justify-between shadow-2xs">
-      <div>
-        {/* Шапка карточки в стиле camel (строго фиксированная min-высота для выравнивания) */}
-        <div className="rounded-lg border border-[#EBDDCB] bg-[#FAF5ED] p-2 mb-2 min-h-[58px] flex flex-col justify-between">
-          <div className="h-5 flex items-center justify-between gap-1.5">
-            <div className="font-serif text-[11px] sm:text-xs font-bold tracking-wider text-[#664619] uppercase">
-              Выставки
-            </div>
-            {rankLabel ? (
-              <span className="shrink-0 text-[10px] font-semibold text-[#7D5B28] bg-white/90 border border-[#E8DCC4] px-1.5 py-0.5 rounded shadow-2xs">
-                {rankLabel}
-              </span>
-            ) : (
-              <span className="shrink-0 text-[10px] font-medium text-[#8A6735] italic">
-                Экстерьер
-              </span>
-            )}
+    <div className="h-full overflow-hidden rounded-xl border border-[#E3D5BE] bg-white flex flex-col justify-between shadow-2xs">
+      <div className="flex flex-1 flex-col divide-y divide-[#EAE3D6]">
+        {/* Кремовая шапка-плашка Old Money */}
+        <div className="flex items-center justify-between gap-1.5 bg-[#F5EFE6] px-3 py-1.5 border-b border-[#D8CBB8]">
+          <div className="inline-flex items-center gap-1.5 font-serif text-[10px] font-bold tracking-wider text-[#664619] uppercase">
+            <Award className="h-3 w-3 text-[#7D5B28] shrink-0" aria-hidden />
+            <span>Выставки</span>
           </div>
-
-          <div className="h-5 flex items-center justify-between mt-1 pt-1 border-t border-[#EBDDCB]/70 text-[10px]">
-            {shows.hasData ? (
-              <>
-                <div className="font-semibold text-[#7D5B28]">
-                  <span className="text-[#8C7E6A] font-normal">Зачёт: </span>
-                  {shows.totalShows} {shows.totalShows === 1 ? 'выставка' : shows.totalShows < 5 ? 'выставки' : 'выставок'}
-                </div>
-                {shows.bobCount > 0 && (
-                  <span className="font-bold text-[#7D5B28] bg-white/90 border border-[#E8DCC4] px-1.5 py-0.2 rounded">
-                    BOB: {shows.bobCount}
-                  </span>
-                )}
-              </>
-            ) : (
-              <span className="text-[#8C7E6A] italic">Выставки не зафиксированы</span>
-            )}
-          </div>
+          {rankLabel && (
+            <span className="shrink-0 text-[10px] font-semibold text-[#7D5B28] tabular-nums">
+              {rankLabel}
+            </span>
+          )}
         </div>
 
-        {/* Главный результат — Высшая награда (BIS, BIG, BOB и т.д.) */}
+        {/* Зачёт и главные титулы ринга */}
+        <div className="flex items-center justify-between bg-[#FAF5ED]/80 px-3 py-1.5 min-h-[30px] text-[10px]">
+          {shows.hasData ? (
+            <>
+              <span className="text-[#78716C]">
+                Ринги: <strong className="font-semibold text-[#664619]">{shows.totalShows}</strong>
+              </span>
+              {shows.bobCount > 0 ? (
+                <span className="font-bold text-[#7D5B28] bg-white/90 border border-[#E8DCC4] px-1.5 py-0.2 rounded">
+                  BOB: {shows.bobCount}
+                </span>
+              ) : (
+                <span className="text-[#8A6735] font-medium">Экстерьер</span>
+              )}
+            </>
+          ) : (
+            <span className="text-[#8C7E6A] italic">Выставки не зафиксированы</span>
+          )}
+        </div>
+
+        {/* Высшая награда */}
         {shows.hasData ? (
-          <div className="rounded-lg border border-[#EFE5D5] bg-[#FDFBF7] py-2.5 px-2 text-center my-1.5 min-h-[74px] flex flex-col justify-center">
-            <div className="text-[9px] font-semibold uppercase tracking-wider text-[#8A6735]">
+          <div className="flex flex-1 flex-col items-center justify-center bg-white px-2.5 py-2.5 text-center">
+            <div className="text-[9px] font-semibold uppercase tracking-wider text-[#78716C]">
               Высшая награда
             </div>
             <div className="font-serif text-2xl font-bold text-[#664619] mt-0.5 leading-none">
@@ -66,21 +64,21 @@ export const ShowPillar: React.FC<ShowPillarProps> = ({ shows }) => {
             </div>
           </div>
         ) : (
-          <div className="rounded-lg border border-[#EFE5D5] bg-[#FDFBF7] py-2.5 px-2 text-center my-1.5 min-h-[74px] flex flex-col justify-center text-[11px] text-[#8C7E6A] italic">
+          <div className="flex flex-1 flex-col items-center justify-center bg-white px-2.5 py-2.5 text-center text-[11px] text-[#8C7E6A] italic">
             Выставки не зафиксированы
           </div>
         )}
       </div>
 
-      {/* Подвал карточки — правильная терминология: Выставки */}
-      <div className="pt-2 border-t border-[#EAE3D6] text-[10px] min-h-[26px] flex items-center justify-between">
-        <div>
-          <span className="text-[#8C7E6A]">Выставки: </span>
-          <span className="font-semibold text-[#1C1917]">{shows.totalShows}</span>
+      {/* Единый двухъячеечный подвал */}
+      <div className="grid grid-cols-2 divide-x divide-[#EAE3D6] border-t border-[#EAE3D6] bg-[#FAF7F2]/70 text-center text-[10px]">
+        <div className="px-2 py-1.5">
+          <div className="text-[9px] uppercase text-[#8C7E6A]">Выставки</div>
+          <div className="font-bold text-[#1C1917] tabular-nums">{shows.totalShows}</div>
         </div>
-        <div className="text-right">
-          <span className="text-[#8C7E6A]">Оценка: </span>
-          <span className="font-semibold text-[#7D5B28]">{shows.bestGrade || 'Отл'}</span>
+        <div className="px-2 py-1.5">
+          <div className="text-[9px] uppercase text-[#8C7E6A]">Оценка</div>
+          <div className="font-bold text-[#7D5B28]">{shows.bestGrade || 'Отл'}</div>
         </div>
       </div>
     </div>

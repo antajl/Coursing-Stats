@@ -1,10 +1,20 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect, useMemo } from 'react'
 import { createPortal } from 'react-dom'
-import { toPng } from 'html-to-image'
-import { Download, Share2, X, Smartphone, FileText, Check, Copy } from 'lucide-react'
+import { X, Smartphone, FileText } from 'lucide-react'
 import type { DogPassportData, PassportFormat, PassportSectionsConfig } from './passportTypes'
 import { DogPassportCard } from './DogPassportCard'
 import { PassportSectionsBar } from './PassportSectionsBar'
+import { PassportFooterActions } from './PassportFooterActions'
+import {
+  cleanPassportFileBase,
+  renderPassportPng,
+  triggerPngDownload,
+} from './passportExportUtils'
+import { useTopSpeed } from '../../../../hooks/useStaticData'
+import {
+  computeDogSpeedBreedComparison,
+  extractDogRacingSpeed,
+} from '../../CoursingCriteria/coursingSpeedBenchmark'
 
 export interface DogPassportModalProps {
   isOpen: boolean
@@ -12,7 +22,6 @@ export interface DogPassportModalProps {
   data: DogPassportData
 }
 
-/** Автоматический выбор формата: на десктопах по умолчанию А4, на смартфонах — Stories 9:16 */
 function getPreferredPassportFormat(): PassportFormat {
   if (typeof window !== 'undefined' && window.innerWidth >= 768) {
     return 'certificate'
@@ -32,14 +41,33 @@ export const DogPassportModal: React.FC<DogPassportModalProps> = ({ isOpen, onCl
     racing: data.racing.hasData,
     shows: data.shows.hasData,
     titles: data.titles.length > 0,
+    criteria: Boolean(data.coursingCriteria),
   })
   const cardRef = useRef<HTMLDivElement>(null)
   const scrollContainerRef = useRef<HTMLDivElement>(null)
   const baseWidth = format === 'story' ? 480 : 880
 
+  const hasCriteria = Boolean(data.coursingCriteria)
+  const hasRacingSpeed = useMemo(
+    () => extractDogRacingSpeed(data.racingStatsRaw) !== null,
+    [data.racingStatsRaw],
+  )
+  const { data: topSpeedRes } = useTopSpeed('all', {
+    enabled: isOpen && hasCriteria && hasRacingSpeed,
+  })
+  const speedComparison = useMemo(
+    () =>
+      computeDogSpeedBreedComparison({
+        racingStats: data.racingStatsRaw,
+        breed: data.breedPrimary,
+        dogId: data.id,
+        items: topSpeedRes?.data?.items,
+      }),
+    [data.racingStatsRaw, data.breedPrimary, data.id, topSpeedRes?.data?.items],
+  )
+
   useEffect(() => {
     if (!isOpen) return
-    // При открытии автоматически выставляем рекомендованный формат под текущее устройство
     setFormat(getPreferredPassportFormat())
     if (scrollContainerRef.current) {
       scrollContainerRef.current.scrollTop = 0
@@ -86,28 +114,16 @@ export const DogPassportModal: React.FC<DogPassportModalProps> = ({ isOpen, onCl
       ro?.disconnect()
       window.removeEventListener('resize', updateScale)
     }
-  }, [isOpen, baseWidth, sections])
+  }, [isOpen, baseWidth, sections, speedComparison])
 
   if (!isOpen) return null
-
-  const getPngOptions = (quality: number) => ({
-    quality,
-    pixelRatio: 2,
-    cacheBust: true,
-    width: baseWidth,
-    height: cardRef.current?.offsetHeight || undefined,
-  })
 
   const handleDownload = async () => {
     if (!cardRef.current || exporting) return
     setExporting(true)
     try {
-      const dataUrl = await toPng(cardRef.current, getPngOptions(0.98))
-      const link = document.createElement('a')
-      const cleanName = (data.namePrimary || 'dog').toLowerCase().replace(/[^a-zа-я0-9]/gi, '_')
-      link.download = `${cleanName}_passport_${format}.png`
-      link.href = dataUrl
-      link.click()
+      const dataUrl = await renderPassportPng(cardRef.current, baseWidth, 0.98)
+      triggerPngDownload(dataUrl, data.namePrimary, format)
       setDownloaded(true)
       setTimeout(() => setDownloaded(false), 2500)
     } catch (err) {
@@ -121,11 +137,12 @@ export const DogPassportModal: React.FC<DogPassportModalProps> = ({ isOpen, onCl
     if (!cardRef.current || exporting) return
     setExporting(true)
     try {
-      const dataUrl = await toPng(cardRef.current, getPngOptions(0.95))
+      const dataUrl = await renderPassportPng(cardRef.current, baseWidth, 0.95)
       const res = await fetch(dataUrl)
       const blob = await res.blob()
-      const cleanName = (data.namePrimary || 'dog').toLowerCase().replace(/[^a-zа-я0-9]/gi, '_')
-      const file = new File([blob], `${cleanName}_passport.png`, { type: 'image/png' })
+      const file = new File([blob], `${cleanPassportFileBase(data.namePrimary)}_passport.png`, {
+        type: 'image/png',
+      })
 
       if (
         typeof navigator !== 'undefined' &&
@@ -144,7 +161,6 @@ export const DogPassportModal: React.FC<DogPassportModalProps> = ({ isOpen, onCl
     } finally {
       setExporting(false)
     }
-    // Fallback к обычному скачиванию
     handleDownload()
   }
 
@@ -152,7 +168,7 @@ export const DogPassportModal: React.FC<DogPassportModalProps> = ({ isOpen, onCl
     if (!cardRef.current || exporting) return
     setExporting(true)
     try {
-      const dataUrl = await toPng(cardRef.current, getPngOptions(0.98))
+      const dataUrl = await renderPassportPng(cardRef.current, baseWidth, 0.98)
       const res = await fetch(dataUrl)
       const blob = await res.blob()
 
@@ -171,7 +187,6 @@ export const DogPassportModal: React.FC<DogPassportModalProps> = ({ isOpen, onCl
     } finally {
       setExporting(false)
     }
-    // Fallback к скачиванию, если буфер недоступен
     handleDownload()
   }
 
@@ -198,7 +213,6 @@ export const DogPassportModal: React.FC<DogPassportModalProps> = ({ isOpen, onCl
             </span>
           </div>
 
-          {/* Переключатель формата */}
           <div className="flex items-center gap-1 rounded-xl border border-old-money-300 bg-cream-50 p-1">
             <button
               type="button"
@@ -238,14 +252,13 @@ export const DogPassportModal: React.FC<DogPassportModalProps> = ({ isOpen, onCl
           </button>
         </div>
 
-        {/* Панель настройки разделов диплома */}
         <PassportSectionsBar
           sections={sections}
           setSections={setSections}
           hasTitles={data.titles.length > 0}
+          hasCriteria={hasCriteria}
         />
 
-        {/* Область интерактивного предпросмотра карточки */}
         <div
           ref={scrollContainerRef}
           className="flex-1 overflow-y-auto overflow-x-hidden p-3 sm:p-6 bg-cream-100/60 flex justify-center items-start"
@@ -264,72 +277,27 @@ export const DogPassportModal: React.FC<DogPassportModalProps> = ({ isOpen, onCl
                 transformOrigin: 'top left',
               }}
             >
-              <DogPassportCard ref={cardRef} data={data} format={format} sections={sections} />
+              <DogPassportCard
+                ref={cardRef}
+                data={data}
+                format={format}
+                sections={sections}
+                speedComparison={speedComparison}
+              />
             </div>
           </div>
         </div>
 
-        {/* Подвал с кнопками экспорта */}
-        <div className="flex flex-wrap items-center justify-between gap-3 border-t border-old-money-200 px-4 sm:px-6 py-3 bg-white shrink-0">
-          <div className="text-xs text-charcoal-500">
-            Изображение формируется локально в высоком разрешении (2x Retina)
-          </div>
-
-          <div className="flex items-center gap-2">
-            <button
-              type="button"
-              onClick={handleCopy}
-              disabled={exporting}
-              className="inline-flex items-center gap-1.5 rounded-xl border border-old-money-300 bg-cream-50 px-3 sm:px-4 py-2 text-xs font-semibold text-charcoal-900 hover:bg-cream-100 transition-all disabled:opacity-50 cursor-pointer min-h-[44px] sm:min-h-[38px] touch-manipulation"
-              title="Скопировать изображение в буфер обмена для быстрой отправки в Telegram или чаты"
-            >
-              {copied ? (
-                <>
-                  <Check className="h-3.5 w-3.5 text-forest-700" aria-hidden />
-                  <span className="text-forest-700">Скопировано!</span>
-                </>
-              ) : (
-                <>
-                  <Copy className="h-3.5 w-3.5 text-camel-700" aria-hidden />
-                  <span>Скопировать</span>
-                </>
-              )}
-            </button>
-
-            <button
-              type="button"
-              onClick={handleShare}
-              disabled={exporting}
-              className="inline-flex items-center gap-1.5 rounded-xl border border-old-money-300 bg-cream-50 px-3 sm:px-4 py-2 text-xs font-semibold text-charcoal-900 hover:bg-cream-100 transition-all disabled:opacity-50 cursor-pointer min-h-[44px] sm:min-h-[38px] touch-manipulation"
-              title="Поделиться в Telegram или сохранить файл"
-            >
-              <Share2 className="h-3.5 w-3.5 text-camel-700" aria-hidden />
-              <span>Поделиться</span>
-            </button>
-
-            <button
-              type="button"
-              onClick={handleDownload}
-              disabled={exporting}
-              className="inline-flex items-center gap-1.5 rounded-xl border border-camel-700 bg-camel-700 px-4 sm:px-5 py-2 text-xs font-semibold text-white hover:bg-camel-800 transition-all disabled:opacity-50 shadow-xs cursor-pointer min-h-[44px] sm:min-h-[38px] touch-manipulation"
-              title="Скачать PNG на устройство"
-            >
-              {downloaded ? (
-                <>
-                  <Check className="h-3.5 w-3.5 text-white" aria-hidden />
-                  <span>Сохранено</span>
-                </>
-              ) : (
-                <>
-                  <Download className="h-3.5 w-3.5 text-white" aria-hidden />
-                  <span>{exporting ? 'Сохранение...' : 'Скачать PNG'}</span>
-                </>
-              )}
-            </button>
-          </div>
-        </div>
+        <PassportFooterActions
+          exporting={exporting}
+          copied={copied}
+          downloaded={downloaded}
+          onCopy={handleCopy}
+          onShare={handleShare}
+          onDownload={handleDownload}
+        />
       </div>
     </div>,
-    document.body
+    document.body,
   )
 }

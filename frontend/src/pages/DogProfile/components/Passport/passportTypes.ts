@@ -1,3 +1,6 @@
+import type { DogCoursingCriteriaSummary } from '../../CoursingCriteria/coursingCriteriaTypes'
+import type { DogSpeedBreedComparison } from '../../CoursingCriteria/coursingSpeedBenchmark'
+
 export type PassportFormat = 'story' | 'certificate'
 
 export interface DogPassportHighlight {
@@ -66,6 +69,7 @@ export interface PassportSectionsConfig {
   racing: boolean
   shows: boolean
   titles: boolean
+  criteria?: boolean
 }
 
 export interface DogPassportTitle {
@@ -90,6 +94,9 @@ export interface DogPassportData {
   racing: DogPassportRacingStats
   donino: DogPassportDoninoStats
   shows: DogPassportShowStats
+  coursingCriteria?: DogCoursingCriteriaSummary | null
+  racingStatsRaw?: Record<string, unknown> | null
+  speedComparison?: DogSpeedBreedComparison | null
   highlights: DogPassportHighlight[]
   dogUrl: string
   issueDate: string

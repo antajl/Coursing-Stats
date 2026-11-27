@@ -6,6 +6,8 @@ interface CoursingRadarSvgProps {
   secondary: CriteriaTuple
   primaryLabel: string
   secondaryLabel: string
+  /** Убирает внешнюю рамку при встраивании в карточку паспорта собаки */
+  embedded?: boolean
 }
 
 const CX = 148
@@ -47,6 +49,7 @@ export function CoursingRadarSvg({
   secondary,
   primaryLabel,
   secondaryLabel,
+  embedded = false,
 }: CoursingRadarSvgProps) {
   const minVal = Math.min(...primary, ...secondary)
   const maxVal = Math.max(...primary, ...secondary)
@@ -63,11 +66,15 @@ export function CoursingRadarSvg({
   const primaryPoly = polygonPoints(primary, minFloor, maxCeil)
   const secondaryPoly = polygonPoints(secondary, minFloor, maxCeil)
 
+  const containerClass = embedded
+    ? 'flex w-full flex-col items-center'
+    : 'flex h-full w-full flex-col items-center justify-between rounded-xl border border-old-money-100/90 bg-cream-50/45 px-2 py-2'
+
   return (
-    <div className="flex h-full w-full flex-col items-center justify-between rounded-xl border border-old-money-100/90 bg-cream-50/45 px-2 py-2">
+    <div className={containerClass}>
       <svg
         viewBox="0 0 296 238"
-        className="w-full max-w-[310px] h-auto select-none my-auto"
+        className={`w-full ${embedded ? 'max-w-[205px]' : 'max-w-[310px]'} h-auto select-none my-auto`}
         role="img"
         aria-label={`Диаграмма 5 критериев курсинга: ${primaryLabel} и ${secondaryLabel}`}
       >
@@ -95,6 +102,7 @@ export function CoursingRadarSvg({
                 paintOrder="stroke"
                 stroke="#ffffff"
                 strokeWidth={2.5}
+                fill="#78716c"
                 className="fill-charcoal-400 font-mono text-[8.5px]"
               >
                 {formatTick(tick)}
@@ -125,6 +133,7 @@ export function CoursingRadarSvg({
                 x={lx.toFixed(1)}
                 y={(ly + dy).toFixed(1)}
                 textAnchor={anchor}
+                fill="#44403c"
                 className="fill-charcoal-700 font-sans text-[10px] font-semibold"
               >
                 {item.key} · {primary[idx].toFixed(1)}

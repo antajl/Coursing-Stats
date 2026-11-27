@@ -27,6 +27,15 @@ describe('buildDogPassportData invariants', () => {
           best_speed: 54.2,
           avg_speed: 52.1,
         },
+        coursing_criteria: {
+          events_count: 5,
+          heats_count: 10,
+          dog_avg: [17.1, 18.0, 17.4, 16.9, 18.2],
+          breed_avg: [16.8, 17.2, 17.0, 16.7, 17.5],
+          breed_heats_count: 120,
+          run1_avg: [17.2, 18.1, 17.6, 17.0, 18.3],
+          run2_avg: [17.0, 17.9, 17.2, 16.8, 18.1],
+        },
         ranks: {
           coursing: { breedRank: 2, yearBreedRank: 1 },
           racing: { breedRank: 3, yearBreedRank: 2 },
@@ -115,10 +124,12 @@ describe('buildDogPassportData invariants', () => {
     expect(data.donino.bestTime).toBe(22.84)
     expect(data.donino.timeRank).toBe(1)
 
-    // 7. Shows
+    // 7. Shows & Coursing Criteria
     expect(data.shows.hasData).toBe(true)
     expect(data.shows.totalShows).toBe(8)
     expect(data.shows.bestGrade).toBe('ОТЛ')
+    expect(data.coursingCriteria?.dog_avg).toEqual([17.1, 18.0, 17.4, 16.9, 18.2])
+    expect(data.coursingCriteria?.breed_avg).toEqual([16.8, 17.2, 17.0, 16.7, 17.5])
 
     // 8. Verification metadata
     expect(data.dogUrl).toContain('/dog/1234')

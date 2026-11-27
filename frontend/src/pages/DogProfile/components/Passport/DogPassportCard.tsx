@@ -14,19 +14,24 @@ import {
 import { DogBreedSilhouette, resolveSilhouetteBreed } from '../../../../components/DogSilhouettes'
 import { formatNameWithNonBreakingSpaces } from '../../../../lib/dogName'
 import { PassportTitlesSection } from './PassportTitlesSection'
+import { PassportCriteriaBlock } from './PassportCriteriaBlock'
+import type { DogSpeedBreedComparison } from '../../CoursingCriteria/coursingSpeedBenchmark'
 
 export interface DogPassportCardProps {
   data: DogPassportData
   format: PassportFormat
   sections?: PassportSectionsConfig
+  speedComparison?: DogSpeedBreedComparison | null
 }
 
 export const DogPassportCard = forwardRef<HTMLDivElement, DogPassportCardProps>(
-  ({ data, format, sections }, ref) => {
+  ({ data, format, sections, speedComparison }, ref) => {
     const showCoursing = sections ? sections.coursing : true
     const showRacing = sections ? sections.racing : true
     const showShows = sections ? sections.shows : true
     const showTitles = sections ? sections.titles : true
+    const showCriteria = (sections?.criteria ?? true) && Boolean(data.coursingCriteria)
+    const effectiveSpeedComparison = speedComparison ?? data.speedComparison ?? null
 
     const [qrDataUrl, setQrDataUrl] = useState<string>('')
     const [imgError, setImgError] = useState(false)
@@ -47,36 +52,36 @@ export const DogPassportCard = forwardRef<HTMLDivElement, DogPassportCardProps>(
       QRCode.toDataURL(data.dogUrl, {
         width: 160,
         margin: 1,
-        color: {
-          dark: '#1C1917',
-          light: '#FFFFFF',
-        },
+        color: { dark: '#1C1917', light: '#FFFFFF' },
       })
         .then(setQrDataUrl)
         .catch(() => {})
     }, [data.dogUrl])
 
+    const renderAvatar = (sizeClass: string, silhouetteSize: string) => (
+      <div className={`relative shrink-0 overflow-hidden rounded-xl border-2 border-[#C5B7A1] bg-[#F7F4EE] shadow-xs flex items-center justify-center ${sizeClass}`}>
+        {resolvedPhotoUrl && !imgError ? (
+          <img
+            src={resolvedPhotoUrl}
+            alt={data.namePrimary}
+            crossOrigin="anonymous"
+            referrerPolicy="no-referrer"
+            onError={() => setImgError(true)}
+            className="h-full w-full object-cover object-[center_20%]"
+          />
+        ) : silhouetteKey ? (
+          <DogBreedSilhouette breed={data.breedPrimary} className={`${silhouetteSize} text-camel-700/60`} />
+        ) : (
+          <div className="text-center font-serif text-2xl font-bold text-[#8C7E6A]">
+            {data.namePrimary.slice(0, 1)}
+          </div>
+        )}
+      </div>
+    )
+
     const renderHero = () => (
       <div className="flex items-start gap-3.5">
-        {/* Аватар собаки */}
-        <div className="relative shrink-0 overflow-hidden rounded-xl border-2 border-[#C5B7A1] bg-[#F7F4EE] shadow-xs h-20 w-20 flex items-center justify-center">
-          {resolvedPhotoUrl && !imgError ? (
-            <img
-              src={resolvedPhotoUrl}
-              alt={data.namePrimary}
-              crossOrigin="anonymous"
-              referrerPolicy="no-referrer"
-              onError={() => setImgError(true)}
-              className="h-full w-full object-cover object-[center_20%]"
-            />
-          ) : silhouetteKey ? (
-            <DogBreedSilhouette breed={data.breedPrimary} className="h-[70px] w-[70px] text-camel-700/60" />
-          ) : (
-            <div className="text-center font-serif text-2xl font-bold text-[#8C7E6A]">
-              {data.namePrimary.slice(0, 1)}
-            </div>
-          )}
-        </div>
+        {renderAvatar('h-20 w-20', 'h-[70px] w-[70px]')}
 
         {/* Инфо собаки */}
         <div className="min-w-0 flex-1">
@@ -167,6 +172,16 @@ export const DogPassportCard = forwardRef<HTMLDivElement, DogPassportCardProps>(
                   {showRacing && <StoryRacingCard racing={data.racing} />}
                   {showShows && <StoryShowsCard shows={data.shows} />}
                 </div>
+
+                {/* Многоугольник силы курсинга и скорость */}
+                {showCriteria && data.coursingCriteria && (
+                  <PassportCriteriaBlock
+                    criteria={data.coursingCriteria}
+                    breed={data.breedPrimary}
+                    speedComparison={effectiveSpeedComparison}
+                    format="story"
+                  />
+                )}
               </div>
 
               {/* Подвал с QR-кодом */}
@@ -204,24 +219,7 @@ export const DogPassportCard = forwardRef<HTMLDivElement, DogPassportCardProps>(
 
               {/* Широкий Hero во всю ширину */}
               <div className="flex items-start gap-4 pb-3 border-b border-[#EAE3D6]">
-                <div className="relative shrink-0 overflow-hidden rounded-xl border-2 border-[#C5B7A1] bg-[#F7F4EE] shadow-xs h-24 w-24 flex items-center justify-center">
-                  {resolvedPhotoUrl && !imgError ? (
-                    <img
-                      src={resolvedPhotoUrl}
-                      alt={data.namePrimary}
-                      crossOrigin="anonymous"
-                      referrerPolicy="no-referrer"
-                      onError={() => setImgError(true)}
-                      className="h-full w-full object-cover object-[center_20%]"
-                    />
-                  ) : silhouetteKey ? (
-                    <DogBreedSilhouette breed={data.breedPrimary} className="h-20 w-20 text-camel-700/60" />
-                  ) : (
-                    <div className="text-center font-serif text-2xl font-bold text-[#8C7E6A]">
-                      {data.namePrimary.slice(0, 1)}
-                    </div>
-                  )}
-                </div>
+                {renderAvatar('h-24 w-24', 'h-20 w-20')}
 
                 <div className="min-w-0 flex-1">
                   <h1 className="font-serif text-2xl font-bold text-[#1C1917] tracking-tight leading-snug">
@@ -264,6 +262,16 @@ export const DogPassportCard = forwardRef<HTMLDivElement, DogPassportCardProps>(
                   </div>
                 )
               })()}
+
+              {/* Многоугольник силы курсинга и скорость */}
+              {showCriteria && data.coursingCriteria && (
+                <PassportCriteriaBlock
+                  criteria={data.coursingCriteria}
+                  breed={data.breedPrimary}
+                  speedComparison={effectiveSpeedComparison}
+                  format="certificate"
+                />
+              )}
             </div>
 
             {/* Подвал */}

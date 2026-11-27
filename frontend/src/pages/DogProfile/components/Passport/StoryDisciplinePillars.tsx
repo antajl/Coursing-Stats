@@ -1,5 +1,7 @@
 import React from 'react'
+import { Trophy, Zap, Award } from 'lucide-react'
 import MedalTally from '../../../../components/MedalTally'
+import { formatShowsCount } from '../../showsColumnUtils'
 import type {
   DogPassportCoursingStats,
   DogPassportRacingStats,
@@ -12,17 +14,17 @@ interface StoryCoursingCardProps {
 
 export const StoryCoursingCard: React.FC<StoryCoursingCardProps> = ({ coursing }) => {
   const rankLabel = coursing.yearBreedRank
-    ? `#${coursing.yearBreedRank} в породе`
+    ? `#${coursing.yearBreedRank} в 2026`
     : coursing.breedRank
-    ? `№${coursing.breedRank} за всё время`
-    : null
+      ? `№${coursing.breedRank} за всё время`
+      : null
 
   return (
-    <div className="rounded-xl border border-[#C2D6C6] bg-[#F7FAF8] p-3 shadow-2xs">
-      <div className="grid grid-cols-[1fr_135px] items-center gap-2.5">
-        {/* Левая часть: Дисциплина + Медали + Зачёт */}
+    <div className="rounded-xl border border-[#C2D6C6] bg-[#F7FAF8] px-3 py-2.5 shadow-2xs">
+      <div className="grid grid-cols-[1fr_132px] items-center gap-2.5">
         <div className="min-w-0">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1.5">
+            <Trophy className="h-3 w-3 text-[#7D5B28] shrink-0" aria-hidden />
             <span className="font-serif text-xs font-bold tracking-wider text-[#1F432E] uppercase">
               {coursing.disciplineTitle || 'Курсинг'}
             </span>
@@ -33,7 +35,7 @@ export const StoryCoursingCard: React.FC<StoryCoursingCardProps> = ({ coursing }
             )}
           </div>
 
-          <div className="mt-1.5 flex flex-wrap items-center gap-2 text-[10px]">
+          <div className="mt-1 flex flex-wrap items-center gap-2 text-[10px]">
             {coursing.hasData ? (
               <>
                 <MedalTally
@@ -55,13 +57,12 @@ export const StoryCoursingCard: React.FC<StoryCoursingCardProps> = ({ coursing }
           </div>
         </div>
 
-        {/* Правая часть: Главный результат (фиксированная ширина для строгого выравнивания разграничителя) */}
         {coursing.hasData ? (
-          <div className="w-[135px] text-right pl-3 border-l border-[#D5E3D8]">
+          <div className="w-[132px] text-right pl-3 border-l border-[#D5E3D8]">
             <div className="text-[9px] font-semibold uppercase tracking-wider text-[#52735E]">
               Лучший результат
             </div>
-            <div className="font-serif text-xl sm:text-2xl font-bold text-[#1F432E] mt-0.5 leading-none whitespace-nowrap">
+            <div className="font-serif text-xl font-bold text-[#1F432E] mt-0.5 leading-none whitespace-nowrap">
               {coursing.bestScore ? (
                 <>
                   {coursing.bestScore}{' '}
@@ -78,7 +79,7 @@ export const StoryCoursingCard: React.FC<StoryCoursingCardProps> = ({ coursing }
             )}
           </div>
         ) : (
-          <div className="w-[135px] text-right pl-3 border-l border-[#D5E3D8] text-[10px] text-[#8C7E6A] italic">
+          <div className="w-[132px] text-right pl-3 border-l border-[#D5E3D8] text-[10px] text-[#8C7E6A] italic">
             Нет данных
           </div>
         )}
@@ -93,17 +94,17 @@ interface StoryRacingCardProps {
 
 export const StoryRacingCard: React.FC<StoryRacingCardProps> = ({ racing }) => {
   const rankLabel = racing.yearBreedRank
-    ? `#${racing.yearBreedRank} в породе`
+    ? `#${racing.yearBreedRank} в 2026`
     : racing.breedRank
-    ? `№${racing.breedRank} за всё время`
-    : null
+      ? `№${racing.breedRank} за всё время`
+      : null
 
   return (
-    <div className="rounded-xl border border-[#C5D5E6] bg-[#F5F8FB] p-3 shadow-2xs">
-      <div className="grid grid-cols-[1fr_135px] items-center gap-2.5">
-        {/* Левая часть: Дисциплина + Медали + Зачёт */}
+    <div className="rounded-xl border border-[#C5D5E6] bg-[#F5F8FB] px-3 py-2.5 shadow-2xs">
+      <div className="grid grid-cols-[1fr_132px] items-center gap-2.5">
         <div className="min-w-0">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1.5">
+            <Zap className="h-3 w-3 text-[#7D5B28] shrink-0" aria-hidden />
             <span className="font-serif text-xs font-bold tracking-wider text-[#1A3859] uppercase">
               Рейсинг
             </span>
@@ -114,7 +115,7 @@ export const StoryRacingCard: React.FC<StoryRacingCardProps> = ({ racing }) => {
             )}
           </div>
 
-          <div className="mt-1.5 flex flex-wrap items-center gap-2 text-[10px]">
+          <div className="mt-1 flex flex-wrap items-center gap-2 text-[10px]">
             {racing.hasData ? (
               <>
                 <MedalTally
@@ -136,13 +137,12 @@ export const StoryRacingCard: React.FC<StoryRacingCardProps> = ({ racing }) => {
           </div>
         </div>
 
-        {/* Правая часть: Рекорд скорости (фиксированная ширина для строгого выравнивания разграничителя) */}
         {racing.hasData ? (
-          <div className="w-[135px] text-right pl-3 border-l border-[#D3DFED]">
+          <div className="w-[132px] text-right pl-3 border-l border-[#D3DFED]">
             <div className="text-[9px] font-semibold uppercase tracking-wider text-[#4A6D94]">
               Рекорд скорости
             </div>
-            <div className="font-serif text-xl sm:text-2xl font-bold text-[#1A3859] mt-0.5 leading-none whitespace-nowrap">
+            <div className="font-serif text-xl font-bold text-[#1A3859] mt-0.5 leading-none whitespace-nowrap">
               {racing.bestSpeed ? (
                 <>
                   {racing.bestSpeed}{' '}
@@ -160,7 +160,7 @@ export const StoryRacingCard: React.FC<StoryRacingCardProps> = ({ racing }) => {
             )}
           </div>
         ) : (
-          <div className="w-[135px] text-right pl-3 border-l border-[#D3DFED] text-[10px] text-[#8C7E6A] italic">
+          <div className="w-[132px] text-right pl-3 border-l border-[#D3DFED] text-[10px] text-[#8C7E6A] italic">
             Нет данных
           </div>
         )}
@@ -175,17 +175,17 @@ interface StoryShowsCardProps {
 
 export const StoryShowsCard: React.FC<StoryShowsCardProps> = ({ shows }) => {
   const rankLabel = shows.yearBreedRank
-    ? `#${shows.yearBreedRank} в рейтинге`
+    ? `#${shows.yearBreedRank} в 2026`
     : shows.breedRank
-    ? `#${shows.breedRank} в породе`
-    : null
+      ? `№${shows.breedRank} за всё время`
+      : null
 
   return (
-    <div className="rounded-xl border border-[#E3D5BE] bg-[#FDFBF7] p-3 shadow-2xs">
-      <div className="grid grid-cols-[1fr_135px] items-center gap-2.5">
-        {/* Левая часть: Дисциплина + Зачёт */}
+    <div className="rounded-xl border border-[#E3D5BE] bg-[#FDFBF7] px-3 py-2.5 shadow-2xs">
+      <div className="grid grid-cols-[1fr_132px] items-center gap-2.5">
         <div className="min-w-0">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1.5">
+            <Award className="h-3 w-3 text-[#7D5B28] shrink-0" aria-hidden />
             <span className="font-serif text-xs font-bold tracking-wider text-[#664619] uppercase">
               Выставки
             </span>
@@ -200,12 +200,11 @@ export const StoryShowsCard: React.FC<StoryShowsCardProps> = ({ shows }) => {
             )}
           </div>
 
-          <div className="mt-1.5 flex flex-wrap items-center gap-2 text-[10px]">
+          <div className="mt-1 flex flex-wrap items-center gap-2 text-[10px]">
             {shows.hasData ? (
               <>
                 <span className="text-[#57534E]">
-                  Зачёт: <strong className="text-[#1C1917]">{shows.totalShows}</strong>{' '}
-                  {shows.totalShows === 1 ? 'выставка' : shows.totalShows < 5 ? 'выставки' : 'выставок'}
+                  Зачёт: <strong className="text-[#1C1917]">{formatShowsCount(shows.totalShows)}</strong>
                 </span>
                 {shows.bobCount > 0 && (
                   <>
@@ -222,13 +221,12 @@ export const StoryShowsCard: React.FC<StoryShowsCardProps> = ({ shows }) => {
           </div>
         </div>
 
-        {/* Правая часть: Высшая награда (фиксированная ширина для строгого выравнивания разграничителя) */}
         {shows.hasData ? (
-          <div className="w-[135px] text-right pl-3 border-l border-[#EFE5D5]">
+          <div className="w-[132px] text-right pl-3 border-l border-[#EFE5D5]">
             <div className="text-[9px] font-semibold uppercase tracking-wider text-[#8A6735]">
               Высшая награда
             </div>
-            <div className="font-serif text-xl sm:text-2xl font-bold text-[#664619] mt-0.5 leading-none whitespace-nowrap">
+            <div className="font-serif text-xl font-bold text-[#664619] mt-0.5 leading-none whitespace-nowrap">
               {shows.bestAward || shows.bestGrade || 'Отлично'}
             </div>
             <div className="text-[9.5px] text-[#8A6735] mt-0.5">
@@ -236,7 +234,7 @@ export const StoryShowsCard: React.FC<StoryShowsCardProps> = ({ shows }) => {
             </div>
           </div>
         ) : (
-          <div className="w-[135px] text-right pl-3 border-l border-[#EFE5D5] text-[10px] text-[#8C7E6A] italic">
+          <div className="w-[132px] text-right pl-3 border-l border-[#EFE5D5] text-[10px] text-[#8C7E6A] italic">
             Нет данных
           </div>
         )}

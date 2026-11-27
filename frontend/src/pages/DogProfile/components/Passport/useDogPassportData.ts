@@ -147,7 +147,6 @@ export function buildDogPassportData({
     events.every((e: any) => e.competition_kind === 'bzmp' || e.event_type === 'bzmp')
   const coursingDisciplineTitle = isBzmp ? 'БЗМП' : 'Курсинг'
 
-  // 1. Курсинг (отдельно от рейсинга)
   const cStats = dog?.coursing_stats || coursing || {}
   const coursingStarts = Number(cStats.total_starts || 0)
   const coursingGold = Number(cStats.gold || 0)
@@ -156,10 +155,10 @@ export function buildDogPassportData({
   const coursingBestScore = cStats.best_score != null ? Number(cStats.best_score) : null
   const coursingAvgJudgeScore = cStats.avg_judge_score != null ? Number(cStats.avg_judge_score) : null
   const coursingBestJudgeScore = cStats.best_judge_score != null ? Number(cStats.best_judge_score) : null
-  const coursingBreedRank = dog?.ranks?.coursing?.breedRank || null
-  const coursingYearBreedRank = dog?.ranks?.coursing?.yearBreedRank || null
+  const coursingRankEntry = ranks?.find((r) => r.key === 'coursing')
+  const coursingBreedRank = dog?.ranks?.coursing?.breedRank ?? coursingRankEntry?.breedRank ?? null
+  const coursingYearBreedRank = dog?.ranks?.coursing?.yearBreedRank ?? coursingRankEntry?.yearBreedRank ?? null
 
-  // 2. Рейсинг (бега борзых)
   const rStats = dog?.racing_stats || racing || {}
   const racingStarts = Number(rStats.total_starts || 0)
   const racingGold = Number(rStats.gold || 0)
@@ -167,19 +166,13 @@ export function buildDogPassportData({
   const racingBronze = Number(rStats.bronze || 0)
   const racingBestSpeed = rStats.best_speed != null ? Number(rStats.best_speed) : null
   const racingAvgSpeed = rStats.avg_speed != null ? Number(rStats.avg_speed) : null
-  const racingBreedRank = dog?.ranks?.racing?.breedRank || null
-  const racingYearBreedRank = dog?.ranks?.racing?.yearBreedRank || null
+  const racingRankEntry = ranks?.find((r) => r.key === 'racing')
+  const racingBreedRank = dog?.ranks?.racing?.breedRank ?? racingRankEntry?.breedRank ?? null
+  const racingYearBreedRank = dog?.ranks?.racing?.yearBreedRank ?? racingRankEntry?.yearBreedRank ?? null
 
-  // 3. Скоростные испытания (Донино)
-  const doninoBestSpeed = speedStats?.bestSpeed != null && Number.isFinite(speedStats.bestSpeed)
-    ? Number(speedStats.bestSpeed)
-    : null
-  const doninoAvgSpeed = speedStats?.avgSpeed != null && Number.isFinite(speedStats.avgSpeed)
-    ? Number(speedStats.avgSpeed)
-    : null
-  const doninoBestTime = coursingStats?.bestTime != null && Number.isFinite(coursingStats.bestTime)
-    ? Number(coursingStats.bestTime)
-    : null
+  const doninoBestSpeed = speedStats?.bestSpeed != null && Number.isFinite(speedStats.bestSpeed) ? Number(speedStats.bestSpeed) : null
+  const doninoAvgSpeed = speedStats?.avgSpeed != null && Number.isFinite(speedStats.avgSpeed) ? Number(speedStats.avgSpeed) : null
+  const doninoBestTime = coursingStats?.bestTime != null && Number.isFinite(coursingStats.bestTime) ? Number(coursingStats.bestTime) : null
 
   // 4. Выставки РКФ
   const totalShows = Number(showDog?.total_shows || (Array.isArray(showDog?.history) ? showDog.history.length : 0))
@@ -227,6 +220,10 @@ export function buildDogPassportData({
 
   const now = new Date()
   const issueDate = now.toLocaleDateString('ru-RU', { month: 'long', year: 'numeric' })
+
+  const showsRankEntry = ranks?.find((r) => r.key === 'shows')
+  const showBreedRank = showDog?.breed_rank ?? showsRankEntry?.breedRank ?? null
+  const showYearBreedRank = showDog?.year_breed_rank ?? showsRankEntry?.yearBreedRank ?? null
 
   return {
     id: dogId,
@@ -281,15 +278,11 @@ export function buildDogPassportData({
       bigCount,
       bobCount,
       rankScore: showDog?.rank_score || null,
-      breedRank:
-        showDog?.breed_rank ||
-        (ranks && ranks.find((r) => r.key === 'shows')?.breedRank) ||
-        null,
-      yearBreedRank:
-        showDog?.year_breed_rank ||
-        (ranks && ranks.find((r) => r.key === 'shows')?.yearBreedRank) ||
-        null,
+      breedRank: showBreedRank,
+      yearBreedRank: showYearBreedRank,
     },
+    coursingCriteria: dog?.coursing_criteria ?? null,
+    racingStatsRaw: rStats,
     highlights,
     dogUrl,
     issueDate,
