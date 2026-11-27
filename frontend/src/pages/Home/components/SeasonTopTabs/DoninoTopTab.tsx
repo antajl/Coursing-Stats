@@ -51,7 +51,7 @@ export const DoninoTopTab = memo(function DoninoTopTab({
         style={trackStyle}
       >
         {/* Column 1: Speed Radar Carousel */}
-        <div className="w-full max-w-full min-w-0 shrink-0 basis-full box-border md:border-r md:border-[rgba(195,168,128,0.40)] md:w-auto md:min-w-0 md:shrink md:basis-auto">
+        <div className="w-full max-w-full min-w-0 shrink-0 basis-full box-border border-r border-[rgba(195,168,128,0.45)] md:w-auto md:min-w-0 md:shrink md:basis-auto">
           <div className="home-v2-col w-full min-w-0 max-w-full">
             {doninoSpeedSlides && doninoSpeedSlides.length > 0 ? (
               <SeasonDoninoSpeedCarousel
