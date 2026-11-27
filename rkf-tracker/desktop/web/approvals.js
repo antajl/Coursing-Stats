@@ -15,7 +15,7 @@ export async function initApprovals() {
 
 async function loadCompetitionsData() {
   try {
-    const liveRes = await fetch('https://coursing-stats-tracker-bot.antal250599.workers.dev/api/competitions');
+    const liveRes = await fetch('https://coursing-stats-tracker-bot.antajltube.workers.dev/api/competitions');
     if (liveRes.ok) {
       const payload = await liveRes.json();
       if (payload?.ok && Array.isArray(payload.events) && payload.events.length > 0) {
