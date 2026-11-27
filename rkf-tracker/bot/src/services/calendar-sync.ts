@@ -5,6 +5,35 @@ import type { CompetitionEvent } from './competition-tracker.js';
 
 const DEFAULT_ARTICLE_URL = 'https://info.rkf.online/article/fb2b53ca-bdf2-5e35-bea2-2e973592e2d7';
 const CALENDAR_KV_KEY = 'calendar:2026:v1';
+const TARGET_SEASON_YEAR = 2026;
+
+export function detectDominantSeasonYear(events: CompetitionEvent[]): number | null {
+  const counts = new Map<number, number>();
+  for (const ev of events) {
+    const match = String(ev.dateRaw || '').match(/\b(20\d{2})\b/);
+    if (!match) continue;
+    const y = Number(match[1]);
+    counts.set(y, (counts.get(y) ?? 0) + 1);
+  }
+  let bestYear: number | null = null;
+  let bestCount = 0;
+  for (const [year, count] of counts.entries()) {
+    if (count > bestCount) {
+      bestYear = year;
+      bestCount = count;
+    }
+  }
+  return bestYear;
+}
+
+export function isValidSeasonSnapshot(events: CompetitionEvent[], expectedYear = TARGET_SEASON_YEAR): boolean {
+  if (!Array.isArray(events) || events.length === 0) return false;
+  const dominant = detectDominantSeasonYear(events);
+  if (dominant !== null && dominant !== expectedYear) {
+    return false;
+  }
+  return true;
+}
 
 interface StoredCalendarSnapshot {
   events: CompetitionEvent[];
@@ -184,13 +213,46 @@ export async function syncRkfCalendar(kv?: KVNamespace): Promise<StoredCalendarS
   const events = parseRkfCalendarBuffer(buffer);
   if (events.length === 0) throw new Error('Parsed 0 events from RKF calendar');
 
+  const dominantYear = detectDominantSeasonYear(events);
+  const nowIso = new Date().toISOString();
   const snapshot: StoredCalendarSnapshot = {
     events,
-    updatedAt: new Date().toISOString(),
+    updatedAt: nowIso,
     count: events.length,
   };
 
+  if (dominantYear !== null && dominantYear !== TARGET_SEASON_YEAR) {
+    // RKF updated the article attachment to next season (e.g. 2027): store separately and NEVER overwrite 2026!
+    if (kv) {
+      await kv.put(`calendar:${dominantYear}:v1`, JSON.stringify(snapshot));
+    }
+    throw new Error(
+      `RKF calendar attachment switched to ${dominantYear} (${events.length} events); preserved ${TARGET_SEASON_YEAR} calendar`,
+    );
+  }
+
   if (kv) {
+    // Mass-wipe protection: prevent overwriting a finalized calendar with an abnormally small partial list
+    try {
+      const existingRaw = await kv.get(CALENDAR_KV_KEY);
+      if (existingRaw) {
+        const prev = JSON.parse(existingRaw) as StoredCalendarSnapshot;
+        if (
+          Array.isArray(prev?.events) &&
+          prev.events.length >= 30 &&
+          isValidSeasonSnapshot(prev.events, TARGET_SEASON_YEAR) &&
+          events.length < Math.floor(prev.events.length * 0.5)
+        ) {
+          throw new Error(
+            `Blocked destructive ${TARGET_SEASON_YEAR} calendar overwrite: ${events.length} < 50% of ${prev.events.length}`,
+          );
+        }
+      }
+    } catch (guardErr) {
+      if (guardErr instanceof Error && guardErr.message.startsWith('Blocked destructive')) {
+        throw guardErr;
+      }
+    }
     await kv.put(CALENDAR_KV_KEY, JSON.stringify(snapshot));
   }
   return snapshot;
@@ -206,7 +268,7 @@ export async function getLiveCompetitions(kv?: KVNamespace): Promise<{
       const raw = await kv.get(CALENDAR_KV_KEY);
       if (raw) {
         const parsed = JSON.parse(raw) as StoredCalendarSnapshot;
-        if (Array.isArray(parsed?.events) && parsed.events.length > 0) {
+        if (Array.isArray(parsed?.events) && isValidSeasonSnapshot(parsed.events, TARGET_SEASON_YEAR)) {
           return {
             events: parsed.events,
             updatedAt: parsed.updatedAt || null,

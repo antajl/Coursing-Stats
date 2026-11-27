@@ -180,6 +180,21 @@ export async function pushSyncedState(
   }
 }
 
+function isCalendarYearPayload(events: TrackerCompetition[], expectedYear: number): boolean {
+  let matchingYearCount = 0;
+  let otherYearCount = 0;
+  for (const ev of events) {
+    const match = String(ev.dateRaw || '').match(/\b(20\d{2})\b/);
+    if (!match) continue;
+    const year = Number(match[1]);
+    if (year === expectedYear) matchingYearCount += 1;
+    else otherYearCount += 1;
+  }
+  if (matchingYearCount + otherYearCount === 0) return true;
+  // Reject snapshot if RKF overwrote the 2026 attachment with 2027 schedule
+  return matchingYearCount > 0 && matchingYearCount >= otherYearCount;
+}
+
 export async function fetchLiveCompetitions(): Promise<{
   events: TrackerCompetition[];
   updatedAt: string | null;
@@ -192,8 +207,12 @@ export async function fetchLiveCompetitions(): Promise<{
     if (!res.ok) return null;
     const data = await res.json();
     if (!data?.ok || !Array.isArray(data.events) || data.events.length === 0) return null;
+    const events = data.events as TrackerCompetition[];
+    if (!isCalendarYearPayload(events, 2026)) {
+      return null;
+    }
     return {
-      events: data.events as TrackerCompetition[],
+      events,
       updatedAt: typeof data.updatedAt === 'string' ? data.updatedAt : null,
     };
   } catch {

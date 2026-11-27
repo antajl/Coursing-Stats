@@ -4,8 +4,13 @@ import {
   filterCompetitions,
   findCompetitionById,
   formatCompetitionCard,
-  formatApprovalAlert
+  formatApprovalAlert,
+  type CompetitionEvent,
 } from '../src/services/competition-tracker.js';
+import {
+  detectDominantSeasonYear,
+  isValidSeasonSnapshot,
+} from '../src/services/calendar-sync.js';
 
 describe('2026 Competitions Tracker Service', () => {
   it('returns valid counts for 3 target disciplines (72 total: 39 coursing, 14 racing, 19 bzmp)', () => {
@@ -55,5 +60,41 @@ describe('2026 Competitions Tracker Service', () => {
     const alert = formatApprovalAlert(ev);
     expect(alert).toContain('[УТВЕРЖДЕНО СОСТЯЗАНИЕ РКФ]');
     expect(emojiRegex.test(alert)).toBe(false);
+  });
+
+  it('guards 2026 calendar against 2027 attachment overwrite', () => {
+    const events2026: CompetitionEvent[] = [
+      {
+        id: 'ev_1',
+        sheetName: 'Курсинг борзых',
+        dateRaw: '11-12.04.2026',
+        discipline: 'Курсинг борзых',
+        rank: 'ЧРКФ',
+        location: 'Ярославль',
+        club: 'Клуб А',
+        status: 'APPROVED',
+        reglament: 'Согласован',
+        summary: 'Утверждено',
+      },
+    ];
+    const events2027: CompetitionEvent[] = [
+      {
+        id: 'ev_2',
+        sheetName: 'Курсинг борзых',
+        dateRaw: '17-18.04.2027',
+        discipline: 'Курсинг борзых',
+        rank: 'ЧРКФ',
+        location: 'Москва',
+        club: 'Клуб Б',
+        status: 'PENDING',
+        reglament: '',
+        summary: '',
+      },
+    ];
+
+    expect(detectDominantSeasonYear(events2026)).toBe(2026);
+    expect(isValidSeasonSnapshot(events2026, 2026)).toBe(true);
+    expect(detectDominantSeasonYear(events2027)).toBe(2027);
+    expect(isValidSeasonSnapshot(events2027, 2026)).toBe(false);
   });
 });
