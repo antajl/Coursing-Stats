@@ -1,6 +1,7 @@
 import { Check, ExternalLink, ChevronDown, Clock } from 'lucide-react';
 import type { TrackerApplication } from './trackerTypes';
 import { getRkfApplicationUrl } from './trackerData';
+import { toDogTitleCase } from '../../lib/dogName';
 
 interface TrackerApplicationRowProps {
   app: TrackerApplication;
@@ -83,7 +84,7 @@ export function TrackerApplicationRow({
         {/* 2. Кличка собаки, номер РКФ и (на мобильном) название документа */}
         <div className="min-w-0 pr-1 sm:pr-2">
           <div className="font-semibold text-charcoal-900 text-[13.5px] leading-tight truncate sm:whitespace-normal">
-            {app.dogName || 'Собака не указана'}
+            {app.dogName ? toDogTitleCase(app.dogName) : 'Собака не указана'}
           </div>
           <div className="sm:hidden text-[12px] text-charcoal-700 font-medium leading-snug mt-0.5 line-clamp-2">
             {docTitle}

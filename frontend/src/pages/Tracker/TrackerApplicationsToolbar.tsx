@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
-import { ChevronDown, Check, Dog, FileText, User } from 'lucide-react';
+import { ChevronDown, Check, Dog, User } from 'lucide-react';
 import type { ApplicationFilter } from './trackerTypes';
 import ModernDropdown from '../../components/ui/ModernDropdown';
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch';
 import { toolbarPillTriggerClass } from '../../lib/toolbar';
+import { toDogTitleCase } from '../../lib/dogName';
 
 export interface StatusFilterItem {
   key: ApplicationFilter;
@@ -26,9 +27,6 @@ interface TrackerApplicationsToolbarProps {
   selectedDog: string;
   onDogChange: (dog: string) => void;
   dogItems: CountedFilterItem[];
-  selectedDocType: string;
-  onDocTypeChange: (docType: string) => void;
-  docTypeItems: CountedFilterItem[];
   showSyncControls: boolean;
   isRefreshing: boolean;
   onOpenAuth?: () => void;
@@ -55,16 +53,12 @@ export function TrackerApplicationsToolbar({
   selectedDog,
   onDogChange,
   dogItems,
-  selectedDocType,
-  onDocTypeChange,
-  docTypeItems,
   showSyncControls,
   isRefreshing,
   onOpenAuth,
 }: TrackerApplicationsToolbarProps) {
   const [statusOpen, setStatusOpen] = useState(false);
   const [dogOpen, setDogOpen] = useState(false);
-  const [docOpen, setDocOpen] = useState(false);
   const [lastSyncStr, setLastSyncStr] = useState<string | null>(readLastSyncTime);
 
   useEffect(() => {
@@ -74,29 +68,33 @@ export function TrackerApplicationsToolbar({
   }, [isRefreshing]);
 
   const activeStatus = statusItems.find((s) => s.key === filter) || statusItems[0];
+  const activeDogLabel = selectedDog === 'all' ? 'Собаки' : toDogTitleCase(selectedDog);
 
   return (
-    <div className="flex flex-wrap items-center gap-1.5 w-full min-w-0 py-1">
-      <ToolbarSearch
-        value={query}
-        onChange={onQueryChange}
-        placeholder="Кличка, титул, штрихкод..."
-        width="220px"
-      />
+    <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 w-full min-w-0 py-1">
+      <div className="w-full sm:w-auto">
+        <ToolbarSearch
+          value={query}
+          onChange={onQueryChange}
+          placeholder="Кличка, титул, штрихкод..."
+          width="220px"
+          className="!w-full sm:!w-[220px]"
+        />
+      </div>
 
-      {/* Статус заявки */}
+      {/* Статусы заявок */}
       <ModernDropdown
         isOpen={statusOpen}
         onOpenChange={setStatusOpen}
-        width="230px"
+        width="210px"
         trigger={
           <button
             type="button"
             className={toolbarPillTriggerClass(filter !== 'all', '!h-8 !px-3')}
           >
             <span className={`w-2 h-2 rounded-full shrink-0 ${activeStatus?.dotClass || 'bg-camel-500'}`} />
-            <span className="truncate max-w-[140px]">
-              {activeStatus?.label} ({activeStatus?.count ?? 0})
+            <span className="truncate max-w-[130px]">
+              {filter === 'all' ? 'Статусы' : activeStatus?.label}
             </span>
             <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" />
           </button>
@@ -145,12 +143,10 @@ export function TrackerApplicationsToolbar({
             <button
               type="button"
               className={toolbarPillTriggerClass(selectedDog !== 'all', '!h-8 !px-3')}
-              title={selectedDog === 'all' ? 'Фильтр по собаке' : selectedDog}
+              title={selectedDog === 'all' ? 'Фильтр по собаке' : activeDogLabel}
             >
               <Dog className="h-3.5 w-3.5 shrink-0 text-camel-700 opacity-80" />
-              <span className="truncate max-w-[150px] sm:max-w-[180px]">
-                {selectedDog === 'all' ? 'Все собаки' : selectedDog}
-              </span>
+              <span className="truncate max-w-[140px] sm:max-w-[180px]">{activeDogLabel}</span>
               <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" />
             </button>
           }
@@ -188,73 +184,7 @@ export function TrackerApplicationsToolbar({
                         : 'text-charcoal-700 hover:bg-cream-200/60'
                     }`}
                   >
-                    <span className="truncate">{item.name}</span>
-                    <div className="flex items-center gap-1.5 shrink-0">
-                      <span className="text-[11px] font-mono text-charcoal-500">{item.count}</span>
-                      {isSelected && <Check className="h-3.5 w-3.5 text-camel-700" />}
-                    </div>
-                  </button>
-                );
-              })}
-            </div>
-          )}
-        </ModernDropdown>
-      )}
-
-      {/* Тип документа / титула */}
-      {docTypeItems.length > 0 && (
-        <ModernDropdown
-          isOpen={docOpen}
-          onOpenChange={setDocOpen}
-          width="320px"
-          trigger={
-            <button
-              type="button"
-              className={toolbarPillTriggerClass(selectedDocType !== 'all', '!h-8 !px-3')}
-              title={selectedDocType === 'all' ? 'Фильтр по документу или титулу' : selectedDocType}
-            >
-              <FileText className="h-3.5 w-3.5 shrink-0 text-camel-700 opacity-80" />
-              <span className="truncate max-w-[150px] sm:max-w-[190px]">
-                {selectedDocType === 'all' ? 'Все документы' : selectedDocType}
-              </span>
-              <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" />
-            </button>
-          }
-        >
-          {(close) => (
-            <div className="p-1 space-y-0.5 max-h-72 overflow-y-auto" role="menu">
-              <button
-                type="button"
-                onClick={() => {
-                  onDocTypeChange('all');
-                  close();
-                }}
-                className={`w-full flex items-center justify-between gap-2 px-3 py-1.5 text-xs rounded-md text-left transition-colors ${
-                  selectedDocType === 'all'
-                    ? 'bg-camel-100 text-camel-950 font-semibold'
-                    : 'text-charcoal-700 hover:bg-cream-200/60'
-                }`}
-              >
-                <span>Все документы ({docTypeItems.length})</span>
-                {selectedDocType === 'all' && <Check className="h-3.5 w-3.5 text-camel-700 shrink-0" />}
-              </button>
-              {docTypeItems.map((item) => {
-                const isSelected = selectedDocType === item.name;
-                return (
-                  <button
-                    key={item.name}
-                    type="button"
-                    onClick={() => {
-                      onDocTypeChange(item.name);
-                      close();
-                    }}
-                    className={`w-full flex items-center justify-between gap-2 px-3 py-1.5 text-xs rounded-md text-left transition-colors ${
-                      isSelected
-                        ? 'bg-camel-100 text-camel-950 font-semibold'
-                        : 'text-charcoal-700 hover:bg-cream-200/60'
-                    }`}
-                  >
-                    <span className="truncate">{item.name}</span>
+                    <span className="truncate">{toDogTitleCase(item.name)}</span>
                     <div className="flex items-center gap-1.5 shrink-0">
                       <span className="text-[11px] font-mono text-charcoal-500">{item.count}</span>
                       {isSelected && <Check className="h-3.5 w-3.5 text-camel-700" />}
@@ -269,7 +199,7 @@ export function TrackerApplicationsToolbar({
 
       {/* Статус РКФ Онлайн и кнопка Аккаунт в одной строке справа */}
       {showSyncControls && onOpenAuth && (
-        <div className="ml-auto flex items-center gap-2 shrink-0">
+        <div className="ml-auto flex items-center gap-1.5 shrink-0">
           <div
             className="inline-flex items-center gap-1.5 h-8 px-2.5 rounded-full bg-cream-100/90 border border-old-money-200/80 text-xs text-charcoal-700"
             title={isRefreshing ? 'Идёт синхронизация с РКФ Онлайн' : 'Подключение к РКФ Онлайн активно'}
@@ -281,7 +211,7 @@ export function TrackerApplicationsToolbar({
                   : 'bg-emerald-500 ring-2 ring-emerald-500/20'
               }`}
             />
-            <span className="font-medium whitespace-nowrap">
+            <span className="hidden xs:inline font-medium whitespace-nowrap">
               {isRefreshing ? 'Синхронизация...' : 'РКФ Онлайн'}
             </span>
             {!isRefreshing && lastSyncStr && (

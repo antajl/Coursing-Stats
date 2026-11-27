@@ -32,7 +32,6 @@ export function TrackerApplications({
 }: TrackerApplicationsProps) {
   const [filter, setFilter] = useState<ApplicationFilter>('all');
   const [selectedDog, setSelectedDog] = useState<string>('all');
-  const [selectedDocType, setSelectedDocType] = useState<string>('all');
   const [query, setQuery] = useState('');
   const [expandedBarcode, setExpandedBarcode] = useState<string | null>(null);
 
@@ -56,13 +55,13 @@ export function TrackerApplications({
 
   const statusItems = useMemo<StatusFilterItem[]>(() => {
     const items: StatusFilterItem[] = [
-      { key: 'all', label: 'Все статусы', count: totalCount, dotClass: 'bg-camel-500' },
-      { key: 'active', label: 'В обработке', count: activeCount, dotClass: 'bg-amber-500' },
-      { key: 'to_pickup', label: 'Готовы к выдаче', count: readyCount, dotClass: 'bg-emerald-500' },
-      { key: 'collected', label: 'Забрано', count: collectedCount, dotClass: 'bg-charcoal-400' },
+      { key: 'all', label: 'Все', count: totalCount, dotClass: 'bg-camel-500' },
+      { key: 'active', label: 'В работе', count: activeCount, dotClass: 'bg-amber-500' },
+      { key: 'to_pickup', label: 'Готовы', count: readyCount, dotClass: 'bg-emerald-500' },
+      { key: 'collected', label: 'Забраны', count: collectedCount, dotClass: 'bg-charcoal-400' },
     ];
     if (rejectedCount > 0) {
-      items.push({ key: 'rejected', label: 'Отклонено', count: rejectedCount, dotClass: 'bg-rose-500' });
+      items.push({ key: 'rejected', label: 'Отклонены', count: rejectedCount, dotClass: 'bg-rose-500' });
     }
     return items;
   }, [totalCount, activeCount, readyCount, collectedCount, rejectedCount]);
@@ -73,18 +72,6 @@ export function TrackerApplications({
       const name = app.dogName?.trim();
       if (!name) continue;
       counts.set(name, (counts.get(name) ?? 0) + 1);
-    }
-    return Array.from(counts.entries())
-      .map(([name, count]) => ({ name, count }))
-      .sort((a, b) => a.name.localeCompare(b.name, 'ru'));
-  }, [applications]);
-
-  const docTypeItems = useMemo<CountedFilterItem[]>(() => {
-    const counts = new Map<string, number>();
-    for (const app of applications) {
-      const docName = app.documentName?.trim();
-      if (!docName) continue;
-      counts.set(docName, (counts.get(docName) ?? 0) + 1);
     }
     return Array.from(counts.entries())
       .map(([name, count]) => ({ name, count }))
@@ -103,7 +90,6 @@ export function TrackerApplications({
 
       if (!matchFilter) return false;
       if (selectedDog !== 'all' && app.dogName?.trim() !== selectedDog) return false;
-      if (selectedDocType !== 'all' && app.documentName?.trim() !== selectedDocType) return false;
       if (!q) return true;
 
       return (
@@ -113,7 +99,7 @@ export function TrackerApplications({
         (app.pedigreeNumber && app.pedigreeNumber.includes(q))
       );
     });
-  }, [applications, filter, selectedDog, selectedDocType, query, receivedSet]);
+  }, [applications, filter, selectedDog, query, receivedSet]);
 
   const formatDate = (iso: string) => {
     try {
@@ -129,12 +115,11 @@ export function TrackerApplications({
   };
 
   const hasToken = Boolean(getStoredToken());
-  const hasActiveFilters =
-    Boolean(query) || filter !== 'all' || selectedDog !== 'all' || selectedDocType !== 'all';
+  const hasActiveFilters = Boolean(query) || filter !== 'all' || selectedDog !== 'all';
 
   return (
     <div className="space-y-3">
-      {/* 1. Unified Single-Row Toolbar: Search + Dropdown Filters + RKF Online Status + Account */}
+      {/* 1. Unified Single-Row Toolbar: Search + Status & Dog Dropdowns + RKF Online + Account */}
       {(hasToken || isLive) && (
         <TrackerApplicationsToolbar
           query={query}
@@ -145,9 +130,6 @@ export function TrackerApplications({
           selectedDog={selectedDog}
           onDogChange={setSelectedDog}
           dogItems={dogItems}
-          selectedDocType={selectedDocType}
-          onDocTypeChange={setSelectedDocType}
-          docTypeItems={docTypeItems}
           showSyncControls={hasToken || isLive}
           isRefreshing={isRefreshing}
           onOpenAuth={onOpenAuth}
@@ -234,7 +216,6 @@ export function TrackerApplications({
                   setQuery('');
                   setFilter('all');
                   setSelectedDog('all');
-                  setSelectedDocType('all');
                 }}
                 className="inline-flex items-center px-3 py-1 rounded-full cs-glass-pill text-xs font-medium text-charcoal-700 cursor-pointer"
               >
