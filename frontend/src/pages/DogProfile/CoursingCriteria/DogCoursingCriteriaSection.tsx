@@ -64,13 +64,19 @@ export function DogCoursingCriteriaSection({
       ? criteria.run1_avg
       : criteria.breed_avg
 
-  const primaryLabel = effectiveMode === 'rounds' ? '2-й круг' : 'Среднее собаки'
   const secondaryLabel =
     effectiveMode === 'rounds'
       ? '1-й круг'
       : criteria.is_global_baseline
         ? 'Среднее по всем породам'
         : 'Среднее по породе'
+  const radarPrimaryLabel = effectiveMode === 'rounds' ? '2-й круг' : 'Собака'
+  const radarSecondaryLabel =
+    effectiveMode === 'rounds'
+      ? '1-й круг'
+      : criteria.is_global_baseline
+        ? 'Все породы'
+        : 'Порода'
 
   const insight = useMemo(() => buildCriteriaInsights(criteria, breed), [criteria, breed])
 
@@ -132,79 +138,84 @@ export function DogCoursingCriteriaSection({
         )}
       </div>
 
-      {/* Сетка: слева радар, справа 5 шкал */}
-      <div className="grid grid-cols-1 items-center gap-3 lg:grid-cols-[248px_minmax(0,1fr)] lg:gap-5">
+      {/* Сетка: слева радар в едином фрейме, справа 5 шкал + компактный итог */}
+      <div className="grid grid-cols-1 items-stretch gap-3 lg:grid-cols-[276px_minmax(0,1fr)] lg:gap-4">
         <CoursingRadarSvg
           primary={primaryTuple}
           secondary={secondaryTuple}
-          primaryLabel={primaryLabel}
-          secondaryLabel={secondaryLabel}
+          primaryLabel={radarPrimaryLabel}
+          secondaryLabel={radarSecondaryLabel}
         />
 
-        <div className="space-y-2 min-w-0">
-          {COURSING_CRITERIA_ITEMS.map((item, idx) => {
-            const val = primaryTuple[idx]
-            const refVal = secondaryTuple[idx]
-            const delta = val - refVal
-            const fillPct = Math.max(0, Math.min(100, (val / 20) * 100))
-            const refPct = Math.max(0, Math.min(100, (refVal / 20) * 100))
+        <div className="flex flex-col justify-between min-w-0 gap-2.5">
+          <div className="space-y-1.5 min-w-0">
+            {COURSING_CRITERIA_ITEMS.map((item, idx) => {
+              const val = primaryTuple[idx]
+              const refVal = secondaryTuple[idx]
+              const delta = val - refVal
+              const fillPct = Math.max(0, Math.min(100, (val / 20) * 100))
+              const refPct = Math.max(0, Math.min(100, (refVal / 20) * 100))
 
-            return (
-              <div key={item.key} className="space-y-1">
-                <div className="flex items-center justify-between gap-2 text-xs sm:text-sm">
-                  <div className="flex min-w-0 items-center gap-2" title={item.summary}>
-                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md border border-forest-200/80 bg-forest-50 font-mono text-xs font-bold text-forest-800">
-                      {item.key}
-                    </span>
-                    <span className="truncate font-medium text-charcoal-800">
-                      {item.label}
-                    </span>
+              return (
+                <div key={item.key} className="space-y-0.5">
+                  <div className="flex items-center justify-between gap-2 text-xs sm:text-sm">
+                    <div className="flex min-w-0 items-center gap-2" title={item.summary}>
+                      <span className="flex h-5 w-5 sm:h-6 sm:w-6 shrink-0 items-center justify-center rounded-md border border-forest-200/80 bg-forest-50 font-mono text-[11px] font-bold text-forest-800">
+                        {item.key}
+                      </span>
+                      <span className="truncate font-medium text-charcoal-800">
+                        {item.label}
+                      </span>
+                    </div>
+
+                    <div className="flex shrink-0 items-baseline gap-2 font-mono tabular-nums">
+                      <span className="text-sm font-bold text-charcoal-900">
+                        {val.toFixed(1)}
+                        <span className="text-[11px] font-normal text-charcoal-400"> / 20</span>
+                      </span>
+                      <span className={`w-11 text-right text-xs font-semibold ${deltaToneClass(delta)}`}>
+                        {formatDelta(delta)}
+                      </span>
+                    </div>
                   </div>
 
-                  <div className="flex shrink-0 items-baseline gap-2 font-mono tabular-nums">
-                    <span className="text-sm font-bold text-charcoal-900">
-                      {val.toFixed(1)}
-                      <span className="text-[11px] font-normal text-charcoal-400"> / 20</span>
-                    </span>
-                    <span className={`w-11 text-right text-xs font-semibold ${deltaToneClass(delta)}`}>
-                      {formatDelta(delta)}
-                    </span>
+                  {/* Спокойная шкала прогресса с отметкой уровня сравнения */}
+                  <div className="relative h-2 w-full rounded-full bg-sand-100">
+                    <div
+                      className="h-full rounded-full bg-forest-600/80 transition-[width] duration-300"
+                      style={{ width: `${fillPct.toFixed(1)}%` }}
+                    />
+                    <div
+                      className="absolute -top-0.5 h-3 w-[3px] -translate-x-1/2 rounded-full bg-camel-800 ring-1 ring-white/90"
+                      style={{ left: `${refPct.toFixed(1)}%` }}
+                      title={`${secondaryLabel}: ${refVal.toFixed(1)} / 20`}
+                    />
                   </div>
                 </div>
+              )
+            })}
+          </div>
 
-                {/* Спокойная шкала прогресса с отметкой уровня сравнения */}
-                <div className="relative h-2 w-full rounded-full bg-sand-100">
-                  <div
-                    className="h-full rounded-full bg-forest-600/80 transition-[width] duration-300"
-                    style={{ width: `${fillPct.toFixed(1)}%` }}
-                  />
-                  <div
-                    className="absolute -top-0.5 h-3 w-[3px] -translate-x-1/2 rounded-full bg-camel-800 ring-1 ring-white/90"
-                    style={{ left: `${refPct.toFixed(1)}%` }}
-                    title={`${secondaryLabel}: ${refVal.toFixed(1)} / 20`}
-                  />
-                </div>
-              </div>
-            )
-          })}
+          {/* Компактная строка выводов прямо под шкалами */}
+          <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 rounded-lg border border-old-money-200/80 bg-cream-50/60 px-3 py-1.5 text-xs text-charcoal-700">
+            <span>
+              Сильная сторона:{' '}
+              <strong className="font-semibold text-charcoal-900">
+                {insight.strongestLabel} ({insight.strongestScore.toFixed(1)}
+                {insight.strongestDelta >= 0.1
+                  ? `, +${insight.strongestDelta.toFixed(1)} ${criteria.is_global_baseline ? 'к среднему' : 'к породе'}`
+                  : ''}
+                )
+              </strong>
+            </span>
+            {insight.roundNote && (
+              <>
+                <span className="hidden sm:inline text-old-money-300 select-none">·</span>
+                <span className="text-charcoal-600">{insight.roundNote}</span>
+              </>
+            )}
+          </div>
         </div>
-      </div>
-
-      {/* Спокойная итоговая строка фактов */}
-      <div className="mt-2.5 flex flex-wrap items-center justify-between gap-x-4 gap-y-1 rounded-lg border border-old-money-200/80 bg-cream-50/60 px-3 py-1.5 text-xs text-charcoal-700">
-        <span>
-          Сильная сторона:{' '}
-          <strong className="font-semibold text-charcoal-900">
-            {insight.strongestLabel} ({insight.strongestScore.toFixed(1)} / 20
-            {insight.strongestDelta >= 0.1
-              ? `, +${insight.strongestDelta.toFixed(1)} ${criteria.is_global_baseline ? 'к среднему' : 'к породе'}`
-              : ''}
-            )
-          </strong>
-        </span>
-        {insight.roundNote && (
-          <span className="text-charcoal-600">{insight.roundNote}</span>
-        )}
       </div>
     </section>
   )

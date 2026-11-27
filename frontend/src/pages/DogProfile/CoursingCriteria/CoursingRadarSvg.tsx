@@ -64,10 +64,10 @@ export function CoursingRadarSvg({
   const secondaryPoly = polygonPoints(secondary, minFloor, maxCeil)
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex h-full w-full flex-col items-center justify-between rounded-xl border border-old-money-100/90 bg-cream-50/45 px-2.5 py-2">
       <svg
-        viewBox="0 0 264 196"
-        className="w-full max-w-[248px] h-auto select-none"
+        viewBox="0 0 264 192"
+        className="w-full max-w-[262px] h-auto select-none my-auto"
         role="img"
         aria-label={`Диаграмма 5 критериев курсинга: ${primaryLabel} и ${secondaryLabel}`}
       >
@@ -189,17 +189,17 @@ export function CoursingRadarSvg({
       </svg>
 
       {/* Legend */}
-      <div className="mt-1 flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-[11px] text-charcoal-600">
+      <div className="mt-1 flex flex-wrap items-center justify-center gap-x-3 gap-y-0.5 text-[11px] text-charcoal-600 whitespace-nowrap">
         <span className="inline-flex items-center gap-1.5">
-          <span className="inline-block h-2 w-3.5 rounded-xs border border-forest-700 bg-forest-700/20" />
+          <span className="inline-block h-2 w-3 rounded-xs border border-forest-700 bg-forest-700/20" />
           <span className="font-medium text-charcoal-800">{primaryLabel}</span>
         </span>
         <span className="inline-flex items-center gap-1.5">
-          <span className="inline-block h-0 w-3.5 border-t-2 border-dashed border-camel-600" />
+          <span className="inline-block h-0 w-3 border-t-2 border-dashed border-camel-700" />
           <span>{secondaryLabel}</span>
         </span>
         <span className="text-[10px] text-charcoal-400 font-mono">
-          шкала {formatTick(minFloor)}–{formatTick(maxCeil)}
+          {formatTick(minFloor)}–{formatTick(maxCeil)}
         </span>
       </div>
     </div>
