@@ -96,13 +96,31 @@ export async function switchYear(year) {
   applyAndRender();
 }
 
+function isCalendarYearPayload(events, expectedYear) {
+  let matching = 0;
+  let other = 0;
+  for (const ev of events) {
+    const m = String(ev?.dateRaw || '').match(/\b(20\d{2})\b/);
+    if (!m) continue;
+    if (Number(m[1]) === expectedYear) matching += 1;
+    else other += 1;
+  }
+  if (matching + other === 0) return true;
+  return matching > 0 && matching >= other;
+}
+
 async function fetchYearEvents(year) {
   if (year === 2026) {
     try {
       const liveRes = await fetch('https://coursing-stats-tracker-bot.antajltube.workers.dev/api/competitions');
       if (liveRes.ok) {
         const payload = await liveRes.json();
-        if (payload?.ok && Array.isArray(payload.events) && payload.events.length > 0) {
+        if (
+          payload?.ok &&
+          Array.isArray(payload.events) &&
+          payload.events.length > 0 &&
+          isCalendarYearPayload(payload.events, 2026)
+        ) {
           return payload.events;
         }
       }
