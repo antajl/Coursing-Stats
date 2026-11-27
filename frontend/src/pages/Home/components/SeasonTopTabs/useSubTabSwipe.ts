@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, useCallback } from 'react'
+import { useState, useRef, useEffect, useCallback, useMemo } from 'react'
 
 interface UseSubTabSwipeOptions<T extends string> {
   subTabs: [T, T]
@@ -63,6 +63,29 @@ export function useSubTabSwipe<T extends string>({
 
   const touchStartRef = useRef<{ x: number; y: number; time: number } | null>(null)
   const gestureLockRef = useRef<'horizontal' | 'vertical' | null>(null)
+
+  const finishSwipeReset = useCallback(() => {
+    hasInteractedRef.current = true
+    cancelNudge()
+    touchStartRef.current = null
+    gestureLockRef.current = null
+    if (trackRef.current) {
+      trackRef.current.style.transition = 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)'
+      trackRef.current.style.transform = `translate3d(${getSlideOffset(currentSlide)}, 0, 0)`
+    }
+  }, [cancelNudge, currentSlide, getSlideOffset])
+
+  useEffect(() => {
+    const handleGlobalTouchEnd = () => {
+      if (touchStartRef.current) {
+        finishSwipeReset()
+      }
+    }
+    window.addEventListener('touchcancel', handleGlobalTouchEnd, { passive: true })
+    return () => {
+      window.removeEventListener('touchcancel', handleGlobalTouchEnd)
+    }
+  }, [finishSwipeReset])
 
   const handleTouchStart = (e: React.TouchEvent) => {
     if (typeof window !== 'undefined' && window.innerWidth >= 768) return
@@ -137,15 +160,23 @@ export function useSubTabSwipe<T extends string>({
   }
 
   const handleTouchCancel = () => {
-    hasInteractedRef.current = true
-    cancelNudge()
-    touchStartRef.current = null
-    gestureLockRef.current = null
-    if (trackRef.current) {
-      trackRef.current.style.transition = 'transform 380ms cubic-bezier(0.16, 1, 0.3, 1)'
-      trackRef.current.style.transform = `translate3d(${getSlideOffset(currentSlide)}, 0, 0)`
-    }
+    finishSwipeReset()
   }
+
+  const idleOffset =
+    activeSubTab === subTabs[0] ? '0%' : gapPx ? `calc(-100% - ${gapPx}px)` : '-100%'
+  const trackStyle = useMemo(
+    () => ({
+      transform:
+        typeof window !== 'undefined' && window.innerWidth >= 768
+          ? 'none'
+          : isNudging
+          ? undefined
+          : `translate3d(${idleOffset}, 0, 0)`,
+      willChange: 'transform' as const,
+    }),
+    [idleOffset, isNudging],
+  )
 
   return {
     activeSubTab,
@@ -158,14 +189,6 @@ export function useSubTabSwipe<T extends string>({
       onTouchEnd: handleTouchEnd,
       onTouchCancel: handleTouchCancel,
     },
-    trackStyle: {
-      transform:
-        typeof window !== 'undefined' && window.innerWidth >= 768
-          ? 'none'
-          : isNudging
-          ? undefined
-          : `translate3d(${activeSubTab === subTabs[0] ? '0%' : gapPx ? `calc(-100% - ${gapPx}px)` : '-100%'}, 0, 0)`,
-      willChange: 'transform' as const,
-    },
+    trackStyle,
   }
 }

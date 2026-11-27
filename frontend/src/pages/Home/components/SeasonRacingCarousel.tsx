@@ -100,7 +100,7 @@ export default function SeasonRacingCarousel({
       </div>
 
       <div className="overflow-hidden flex-1 flex flex-col min-w-0 w-full">
-        <div key={slide.breedKey} className="w-full flex-1">
+        <div className="w-full flex-1">
           {renderSlideDogs(slide)}
         </div>
       </div>

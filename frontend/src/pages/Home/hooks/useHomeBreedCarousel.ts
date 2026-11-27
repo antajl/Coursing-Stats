@@ -380,6 +380,9 @@ export function useHomeBreedCarousel(slideCount: number): HomeBreedCarouselApi {
     onBlurCapture: (e: FocusEvent<HTMLDivElement>) => {
       if (!e.currentTarget.contains(e.relatedTarget as Node | null)) setPaused(false)
     },
+    onTouchStartCapture: () => setPaused(true),
+    onTouchEndCapture: () => setPaused(false),
+    onTouchCancelCapture: () => setPaused(false),
   }
 
   const touchHandlers = {
