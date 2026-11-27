@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { Key, AlertTriangle } from 'lucide-react';
 import type { TrackerApplication, ApplicationFilter } from './trackerTypes';
 import { TrackerApplicationRow } from './TrackerApplicationRow';
@@ -8,6 +8,18 @@ import {
   type CountedFilterItem,
 } from './TrackerApplicationsToolbar';
 import { getStoredToken } from './trackerData';
+
+function readLastSyncTime(): string | null {
+  if (typeof window === 'undefined') return null;
+  const raw =
+    localStorage.getItem('cs_rkf_last_sync_timestamp') ||
+    localStorage.getItem('cs_rkf_last_sync');
+  if (!raw) return null;
+  const ts = Number(raw);
+  if (!Number.isFinite(ts) || ts <= 0) return null;
+  const d = new Date(ts);
+  return `${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`;
+}
 
 interface TrackerApplicationsProps {
   applications: TrackerApplication[];
@@ -34,6 +46,13 @@ export function TrackerApplications({
   const [selectedDog, setSelectedDog] = useState<string>('all');
   const [query, setQuery] = useState('');
   const [expandedBarcode, setExpandedBarcode] = useState<string | null>(null);
+  const [lastSyncStr, setLastSyncStr] = useState<string | null>(readLastSyncTime);
+
+  useEffect(() => {
+    if (!isRefreshing) {
+      setLastSyncStr(readLastSyncTime());
+    }
+  }, [isRefreshing]);
 
   const totalCount = applications.length;
   const activeCount = useMemo(
@@ -193,13 +212,15 @@ export function TrackerApplications({
       {hasToken && (
       <div className="cs-glass-card bg-white rounded-2xl overflow-hidden">
         {/* Table Header Bar */}
-        <div className="relative flex min-h-9 items-center justify-between border-b border-[rgba(195,168,128,0.55)] bg-cream-100/90 px-3 sm:px-4 py-1.5">
+        <div className="relative flex min-h-9 items-center justify-between gap-2 border-b border-[rgba(195,168,128,0.55)] bg-cream-100/90 px-3 sm:px-4 py-1.5">
           <span className="text-[11.5px] font-bold uppercase tracking-wider text-charcoal-700">
             Реестр заявок РКФ Онлайн
           </span>
-          <span className="text-[11px] font-mono text-charcoal-500">
-            Показано: {filteredApps.length}
-          </span>
+          {(isRefreshing || lastSyncStr) && (
+            <span className="text-[11px] font-mono text-charcoal-500 shrink-0 tabular-nums">
+              {isRefreshing ? 'Синхронизация...' : lastSyncStr}
+            </span>
+          )}
         </div>
 
         {filteredApps.length === 0 ? (

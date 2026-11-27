@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { ChevronDown, Check, Dog, User } from 'lucide-react';
+import { useState } from 'react';
+import { ChevronDown, Check, Dog } from 'lucide-react';
 import type { ApplicationFilter } from './trackerTypes';
 import ModernDropdown from '../../components/ui/ModernDropdown';
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch';
@@ -32,18 +32,6 @@ interface TrackerApplicationsToolbarProps {
   onOpenAuth?: () => void;
 }
 
-function readLastSyncTime(): string | null {
-  if (typeof window === 'undefined') return null;
-  const raw =
-    localStorage.getItem('cs_rkf_last_sync_timestamp') ||
-    localStorage.getItem('cs_rkf_last_sync');
-  if (!raw) return null;
-  const ts = Number(raw);
-  if (!Number.isFinite(ts) || ts <= 0) return null;
-  const d = new Date(ts);
-  return `${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`;
-}
-
 export function TrackerApplicationsToolbar({
   query,
   onQueryChange,
@@ -59,13 +47,6 @@ export function TrackerApplicationsToolbar({
 }: TrackerApplicationsToolbarProps) {
   const [statusOpen, setStatusOpen] = useState(false);
   const [dogOpen, setDogOpen] = useState(false);
-  const [lastSyncStr, setLastSyncStr] = useState<string | null>(readLastSyncTime);
-
-  useEffect(() => {
-    if (!isRefreshing) {
-      setLastSyncStr(readLastSyncTime());
-    }
-  }, [isRefreshing]);
 
   const activeStatus = statusItems.find((s) => s.key === filter) || statusItems[0];
   const activeDogLabel = selectedDog === 'all' ? 'Собаки' : toDogTitleCase(selectedDog);
@@ -194,12 +175,14 @@ export function TrackerApplicationsToolbar({
         </ModernDropdown>
       )}
 
-      {/* Статус РКФ Онлайн и кнопка Аккаунт в одной строке справа */}
+      {/* Кнопка Аккаунт с индикатором статуса РКФ Онлайн */}
       {showSyncControls && onOpenAuth && (
-        <div className="ml-auto flex items-center gap-1.5 shrink-0">
-          <div
-            className="hidden sm:inline-flex items-center gap-1.5 h-8 px-2.5 rounded-full bg-cream-100/90 border border-old-money-200/80 text-xs text-charcoal-700"
-            title={isRefreshing ? 'Идёт синхронизация с РКФ Онлайн' : 'Подключение к РКФ Онлайн активно'}
+        <div className="ml-auto flex items-center shrink-0">
+          <button
+            type="button"
+            onClick={onOpenAuth}
+            className="h-8 px-2.5 sm:px-3 rounded-full cs-glass-pill text-xs font-medium text-charcoal-800 inline-flex items-center gap-1.5 cursor-pointer shrink-0"
+            title={isRefreshing ? 'Синхронизация с РКФ Онлайн...' : 'Подключение к РКФ Онлайн активно'}
           >
             <span
               className={`w-2 h-2 rounded-full shrink-0 transition-colors ${
@@ -208,28 +191,6 @@ export function TrackerApplicationsToolbar({
                   : 'bg-emerald-500 ring-2 ring-emerald-500/20'
               }`}
             />
-            <span className="font-medium whitespace-nowrap">
-              {isRefreshing ? 'Синхронизация...' : 'РКФ Онлайн'}
-            </span>
-            {!isRefreshing && lastSyncStr && (
-              <span className="text-[11px] font-mono text-charcoal-500 tabular-nums">
-                {lastSyncStr}
-              </span>
-            )}
-          </div>
-
-          <button
-            type="button"
-            onClick={onOpenAuth}
-            className="h-8 px-2.5 sm:px-3 rounded-full cs-glass-pill text-xs font-medium text-charcoal-800 inline-flex items-center gap-1.5 cursor-pointer shrink-0"
-            title={isRefreshing ? 'Синхронизация с РКФ Онлайн...' : 'Аккаунт РКФ Онлайн'}
-          >
-            <span
-              className={`sm:hidden w-2 h-2 rounded-full shrink-0 ${
-                isRefreshing ? 'bg-amber-500' : 'bg-emerald-500'
-              }`}
-            />
-            <User className="hidden sm:inline w-3.5 h-3.5 text-camel-700" />
             <span>Аккаунт</span>
           </button>
         </div>
