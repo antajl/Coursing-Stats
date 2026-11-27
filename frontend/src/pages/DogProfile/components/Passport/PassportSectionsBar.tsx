@@ -13,59 +13,59 @@ export const PassportSectionsBar: React.FC<PassportSectionsBarProps> = ({
   hasTitles,
 }) => {
   return (
-    <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[#EAE3D6] px-4 sm:px-6 py-2 bg-[#F7F4EE]/70 text-xs text-[#78716C] shrink-0">
-      <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
-        <span className="font-serif font-bold text-[#8C6D37] text-[10px] uppercase tracking-wider">
+    <div className="flex items-center justify-between gap-2 border-b border-old-money-200 px-3 sm:px-6 py-2 bg-cream-100/70 text-[11px] sm:text-xs text-charcoal-500 shrink-0 overflow-x-auto no-scrollbar">
+      <div className="flex flex-nowrap items-center justify-between sm:justify-start w-full sm:w-auto gap-x-3 sm:gap-x-4 whitespace-nowrap">
+        <span className="hidden sm:inline font-serif font-bold text-camel-700 text-[10px] uppercase tracking-wider shrink-0">
           Разделы:
         </span>
-        <label className="inline-flex items-center gap-1.5 cursor-pointer select-none">
+        <label className="inline-flex items-center gap-1 sm:gap-1.5 cursor-pointer select-none shrink-0">
           <input
             type="checkbox"
             checked={sections.coursing}
             onChange={(e) => setSections((prev) => ({ ...prev, coursing: e.target.checked }))}
-            className="rounded border-[#D5C9B8] text-[#8C6D37] focus:ring-0"
+            className="rounded border-old-money-300 text-camel-700 focus:ring-0"
           />
-          <span className={sections.coursing ? 'font-semibold text-[#1C1917]' : 'text-[#8C7E6A]'}>
+          <span className={sections.coursing ? 'font-semibold text-charcoal-900' : 'text-charcoal-500'}>
             Курсинг
           </span>
         </label>
-        <label className="inline-flex items-center gap-1.5 cursor-pointer select-none">
+        <label className="inline-flex items-center gap-1 sm:gap-1.5 cursor-pointer select-none shrink-0">
           <input
             type="checkbox"
             checked={sections.racing}
             onChange={(e) => setSections((prev) => ({ ...prev, racing: e.target.checked }))}
-            className="rounded border-[#D5C9B8] text-[#8C6D37] focus:ring-0"
+            className="rounded border-old-money-300 text-camel-700 focus:ring-0"
           />
-          <span className={sections.racing ? 'font-semibold text-[#1C1917]' : 'text-[#8C7E6A]'}>
+          <span className={sections.racing ? 'font-semibold text-charcoal-900' : 'text-charcoal-500'}>
             Рейсинг
           </span>
         </label>
-        <label className="inline-flex items-center gap-1.5 cursor-pointer select-none">
+        <label className="inline-flex items-center gap-1 sm:gap-1.5 cursor-pointer select-none shrink-0">
           <input
             type="checkbox"
             checked={sections.shows}
             onChange={(e) => setSections((prev) => ({ ...prev, shows: e.target.checked }))}
-            className="rounded border-[#D5C9B8] text-[#8C6D37] focus:ring-0"
+            className="rounded border-old-money-300 text-camel-700 focus:ring-0"
           />
-          <span className={sections.shows ? 'font-semibold text-[#1C1917]' : 'text-[#8C7E6A]'}>
+          <span className={sections.shows ? 'font-semibold text-charcoal-900' : 'text-charcoal-500'}>
             Выставки
           </span>
         </label>
         {hasTitles && (
-          <label className="inline-flex items-center gap-1.5 cursor-pointer select-none">
+          <label className="inline-flex items-center gap-1 sm:gap-1.5 cursor-pointer select-none shrink-0">
             <input
               type="checkbox"
               checked={sections.titles}
               onChange={(e) => setSections((prev) => ({ ...prev, titles: e.target.checked }))}
-              className="rounded border-[#D5C9B8] text-[#8C6D37] focus:ring-0"
+              className="rounded border-old-money-300 text-camel-700 focus:ring-0"
             />
-            <span className={sections.titles ? 'font-semibold text-[#1C1917]' : 'text-[#8C7E6A]'}>
+            <span className={sections.titles ? 'font-semibold text-charcoal-900' : 'text-charcoal-500'}>
               Звания
             </span>
           </label>
         )}
       </div>
-      <span className="hidden md:inline text-[11px] text-[#A89F91] italic">
+      <span className="hidden md:inline text-[11px] text-charcoal-400 italic shrink-0">
         Снимите галочку, чтобы скрыть дисциплину
       </span>
     </div>
