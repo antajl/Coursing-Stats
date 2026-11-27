@@ -54,6 +54,7 @@ export interface ParsedShowCareer {
   spanDays: number
   hasYearSpan: boolean
   allCacAreSpecialStatus: boolean
+  hasOutgrownJuniorClass: boolean
 }
 
 export function parseDateMs(dateStr?: string | null): number | null {
@@ -249,6 +250,58 @@ export function parseShowCareer(data: DogCareerData): ParsedShowCareer {
       ? Math.round((timestamps[timestamps.length - 1]! - timestamps[0]!) / (1000 * 60 * 60 * 24))
       : 0
 
+  const DAY_MS = 86_400_000
+  const st = data.showTitles ?? {}
+  const hasVeteranEvidence =
+    vcacCount > 0 ||
+    rVcacCount > 0 ||
+    vchrkfCount > 0 ||
+    vchfExhibitions.length > 0 ||
+    nkpVeteranExhibitions.length > 0 ||
+    (st.VCAC ?? 0) > 0 ||
+    (st.R_VCAC ?? 0) > 0 ||
+    (st.VCHRKF ?? 0) > 0 ||
+    (st.VCHF ?? 0) > 0 ||
+    (st.VKCHK ?? 0) > 0 ||
+    (st.VKCHP ?? 0) > 0 ||
+    (st.VSS ?? 0) > 0
+
+  const collectMs = (items: Array<{ date?: string | null }>) =>
+    items.map((x) => parseDateMs(x.date)).filter((ms): ms is number => ms !== null && Number.isFinite(ms))
+
+  const allShowMs = collectMs(showHistory)
+  const juniorShowMs = collectMs([...jcacExhibitions, ...ychfExhibitions, ...ychrkfExhibitions, ...nkpJuniorExhibitions])
+  const adultShowMs = collectMs([...cacExhibitions, ...chfExhibitions, ...chrkfExhibitions, ...nkpAdultExhibitions, ...cacibExhibitions])
+  const compMs = (data.competitions ?? [])
+    .map((c) => parseDateMs(c.date_start))
+    .filter((ms): ms is number => ms !== null && Number.isFinite(ms))
+  const allEventMs = [...allShowMs, ...compMs]
+
+  const minOrNull = (arr: number[]) => (arr.length > 0 ? Math.min(...arr) : null)
+  const maxOrNull = (arr: number[]) => (arr.length > 0 ? Math.max(...arr) : null)
+
+  const minAllMs = minOrNull(allEventMs)
+  const maxAllMs = maxOrNull(allEventMs)
+  const minJuniorMs = minOrNull(juniorShowMs)
+  const minAdultMs = minOrNull(adultShowMs)
+  const minCompMs = minOrNull(compMs)
+  const maxCompMs = maxOrNull(compMs)
+  const refMs =
+    typeof data.referenceDate === 'number'
+      ? data.referenceDate
+      : (data.referenceDate ? parseDateMs(data.referenceDate) : null) ?? Date.now()
+
+  const hasOutgrownJuniorClass =
+    hasVeteranEvidence ||
+    spanDays >= 365 ||
+    (minAllMs !== null && maxAllMs !== null && maxAllMs - minAllMs >= 550 * DAY_MS) ||
+    (minJuniorMs !== null && maxAllMs !== null && maxAllMs - minJuniorMs >= 285 * DAY_MS) ||
+    (minAdultMs !== null && maxAllMs !== null && maxAllMs - minAdultMs >= 110 * DAY_MS) ||
+    (minCompMs !== null && maxCompMs !== null && maxCompMs - minCompMs >= 210 * DAY_MS) ||
+    (minJuniorMs !== null && refMs - minJuniorMs >= 300 * DAY_MS) ||
+    (minAdultMs !== null && refMs - minAdultMs >= 150 * DAY_MS) ||
+    (minCompMs !== null && refMs - minCompMs >= 240 * DAY_MS)
+
   return {
     cacExhibitions,
     jcacExhibitions,
@@ -288,5 +341,6 @@ export function parseShowCareer(data: DogCareerData): ParsedShowCareer {
     spanDays,
     hasYearSpan: spanDays >= 365,
     allCacAreSpecialStatus: cacExhibitions.length >= 4 && cacExhibitions.every((e) => e.isSpecialStatus),
+    hasOutgrownJuniorClass,
   }
 }

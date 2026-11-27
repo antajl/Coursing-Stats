@@ -411,4 +411,55 @@ describe('evaluateCumulativeTitles', () => {
     expect(res.officialCoursingTitles.map((t) => t.title)).toContain('ПЧ РК')
     expect(res.certificates.caclEventsRacing).toHaveLength(0)
   })
+
+  it('hides incomplete Junior titles (ЮЧР/ЮЧРКФ/ЮЧНКП) for adult or veteran dogs while keeping them for active juniors', () => {
+    const adultWithOldJcac: DogCareerData = {
+      dogId: 88801,
+      breed: 'БОРЗАЯ',
+      referenceDate: '2026-11-27',
+      showTitles: { JCAC: 1, YKCHK: 1, CAC: 2, YCHF: 1 },
+      showHistory: [
+        { date: '15.05.2023', exhibition_id: 1, title: 'JCAC, ЮЧФ, ЮКЧК', judge: 'Судья 1' },
+        { date: '20.06.2024', exhibition_id: 2, title: 'CAC', judge: 'Судья 2' },
+        { date: '10.05.2026', exhibition_id: 3, title: 'CAC', judge: 'Судья 3' },
+      ],
+      competitions: [
+        { event_id: 2025001, event_type: 'coursing', status: 'finished', date_start: '2025-08-10', placement: 1, qualification: 'CACL' },
+      ],
+    }
+
+    const adultRes = evaluateCumulativeTitles(adultWithOldJcac)
+    expect(adultRes.inProgress.some((t) => t.badge.startsWith('Ю'))).toBe(false)
+    expect(adultRes.inProgress.some((t) => t.id === 'ch-russia')).toBe(true)
+
+    const veteranWithOldJcac: DogCareerData = {
+      dogId: 88802,
+      breed: 'САЛЮКИ',
+      referenceDate: '2026-11-27',
+      showTitles: { JCAC: 2, VCAC: 1 },
+      showHistory: [
+        { date: '01.11.2026', exhibition_id: 10, title: 'JCAC', judge: 'Судья 1' },
+        { date: '15.11.2026', exhibition_id: 11, title: 'VCAC', judge: 'Судья 2' },
+      ],
+      competitions: [],
+    }
+
+    const vetRes = evaluateCumulativeTitles(veteranWithOldJcac)
+    expect(vetRes.inProgress.some((t) => t.id === 'jch-russia')).toBe(false)
+
+    const youngActiveJunior: DogCareerData = {
+      dogId: 88803,
+      breed: 'УИППЕТ',
+      referenceDate: '2026-11-27',
+      showTitles: { JCAC: 1, YCHF: 1 },
+      showHistory: [
+        { date: '01.10.2026', exhibition_id: 20, title: 'JCAC, ЮЧФ', judge: 'Судья 1' },
+      ],
+      competitions: [],
+    }
+
+    const youngRes = evaluateCumulativeTitles(youngActiveJunior)
+    expect(youngRes.inProgress.some((t) => t.id === 'jch-russia')).toBe(true)
+    expect(youngRes.inProgress.some((t) => t.id === 'jch-rkf')).toBe(true)
+  })
 })

@@ -51,7 +51,7 @@ export function evaluateShowTitles(data: DogCareerData): ShowEvaluationOutput {
       ? `Получено ${p.ychrkfWithoutJcacCount + p.ychfWithoutJcacCount} сертификатов ЮЧРКФ/ЮЧФ без CAC (замена 3 JCAC по правилам РКФ)`
       : `Получено ${effectiveJcac} сертификатов JCAC на ${Math.max(p.uniqueJcacJudgesCount, effectiveJcac)} выставках (норма: 3 JCAC от 3 разных судей)`
 
-  if (jchrCompleted || effectiveJcac > 0 || p.rJcacCount > 0) {
+  if (jchrCompleted || (!p.hasOutgrownJuniorClass && (effectiveJcac > 0 || p.rJcacCount > 0))) {
     titles.push({
       id: 'jch-russia',
       title: 'Юный чемпион России',
@@ -98,7 +98,7 @@ export function evaluateShowTitles(data: DogCareerData): ShowEvaluationOutput {
         ? `Получен прямой сертификат ЮЧРКФ на выставке ранга ЧРКФ (${p.ychrkfCount} раз — каждый сертификат ЮЧРКФ даёт отдельный титул).`
         : `Набрано ${p.ychfExhibitions.length} сертификатов ЮЧФ (2 ЮЧФ от 2 разных федераций под 2 разными судьями дают 1 титул ЮЧРКФ).`
 
-  if (jchrkfCompleted || p.ychfExhibitions.length > 0) {
+  if (jchrkfCompleted || (!p.hasOutgrownJuniorClass && p.ychfExhibitions.length > 0)) {
     titles.push({
       id: 'jch-rkf',
       title: 'Юный чемпион РКФ',

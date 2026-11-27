@@ -64,13 +64,15 @@ export function evaluateClubAndGrandShowTitles(
     }
   }
 
+  const canCompleteJunior = !(parsed?.hasOutgrownJuniorClass ?? false)
+
   // 2. ЮНЫЙ ЧЕМПИОН НАЦИОНАЛЬНОГО КЛУБА ПОРОДЫ (ЮЧНКП)
   const yssCount = st.YSS ?? 0
   const ykchkCount = (st.YKCHK ?? 0) + (st.YKCHP ?? 0) * 2
   const effectiveYkchk = ykchkCount + (yssCount >= 2 ? 1 : 0)
   const jchnkpCompleted = effectiveYkchk >= 3
   const jchnkpBasis = `Набрано ${effectiveYkchk} ЮКЧК на монопородных выставках (норма: 3 ЮКЧК под 3 разными судьями; 2 ЮСС засчитываются как 1 ЮКЧК однократно).`
-  if (jchnkpCompleted || effectiveYkchk > 0 || yssCount > 0) {
+  if (jchnkpCompleted || (canCompleteJunior && (effectiveYkchk > 0 || yssCount > 0))) {
     const jchnkpEvs = parsed?.nkpJuniorExhibitions.map((e) => toShowEvidence(e, 'ЮКЧК / ЮСС')) ?? []
     titles.push({
       id: 'jch-nkp',
@@ -186,7 +188,7 @@ export function evaluateClubAndGrandShowTitles(
         ...parsed.nkpJuniorExhibitions.map((e) => toShowEvidence(e, 'ЮКЧК / ЮСС (ЮЧНКП)')),
       ]
     : []
-  if (jgchrShowCompleted || (jchrCompleted && (effectiveYkchk > 0 || yssCount > 0))) {
+  if (jgchrShowCompleted || (canCompleteJunior && jchrCompleted && (effectiveYkchk > 0 || yssCount > 0))) {
     const remYkchk = Math.max(1, 3 - effectiveYkchk)
     titles.push({
       id: 'jgrand-ch-russia',

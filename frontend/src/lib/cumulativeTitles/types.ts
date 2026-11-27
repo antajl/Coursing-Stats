@@ -54,6 +54,7 @@ export interface DogShowHistoryEntry {
 export interface DogCareerData {
   dogId?: string | number
   breed?: string
+  referenceDate?: string | number
   competitions?: DogCompetitionEntry[] | null
   competitionTitles?: Array<{ title: string; count: number }> | null
   showTitles?: Record<string, number> | null
