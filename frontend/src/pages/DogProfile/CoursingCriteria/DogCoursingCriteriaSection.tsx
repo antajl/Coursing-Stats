@@ -23,24 +23,6 @@ interface DogCoursingCriteriaSectionProps {
   racingStats?: Record<string, unknown> | null
 }
 
-function pluralStarts(count: number): string {
-  const mod10 = count % 10
-  const mod100 = count % 100
-  if (mod100 >= 11 && mod100 <= 19) return `${count} состязаний`
-  if (mod10 === 1) return `${count} состязание`
-  if (mod10 >= 2 && mod10 <= 4) return `${count} состязания`
-  return `${count} состязаний`
-}
-
-function pluralHeats(count: number): string {
-  const mod10 = count % 10
-  const mod100 = count % 100
-  if (mod100 >= 11 && mod100 <= 19) return `${count} кругов`
-  if (mod10 === 1) return `${count} круг`
-  if (mod10 >= 2 && mod10 <= 4) return `${count} круга`
-  return `${count} кругов`
-}
-
 function formatDelta(delta: number): string {
   const rounded = Math.round(delta * 10) / 10
   if (rounded > 0) return `+${rounded.toFixed(1)}`
@@ -114,37 +96,32 @@ export function DogCoursingCriteriaSection({
   return (
     <section
       aria-labelledby="coursing-criteria-heading"
-      className="rounded-xl border border-forest-200 bg-white p-3.5 sm:p-4"
+      className="overflow-hidden rounded-xl border border-forest-200 bg-white"
     >
-      {/* Заголовок, метаданные на одной базовой линии и переключатель режима */}
-      <div className="mb-2.5 flex flex-col gap-2 border-b border-old-money-100 pb-2 sm:flex-row sm:items-center sm:justify-between">
-        <div className="flex min-w-0 items-center gap-2">
-          <Compass className="h-4 w-4 shrink-0 text-forest-700" strokeWidth={1.75} aria-hidden />
-          <div className="min-w-0 flex flex-wrap items-baseline gap-x-2.5 gap-y-0.5">
-            <h2
-              id="coursing-criteria-heading"
-              className="text-base sm:text-lg font-bold tracking-tight leading-tight text-charcoal-800"
-            >
-              {sectionTitle}
-            </h2>
-            <span className="text-xs leading-tight text-charcoal-500 whitespace-nowrap">
-              {pluralStarts(criteria.events_count)} · {pluralHeats(criteria.heats_count)}
-            </span>
-          </div>
+      {/* Фирменная кремовая шапка-плашка в едином стиле со всеми блоками профиля */}
+      <div className="donino-column-plaque relative flex min-h-10 flex-wrap items-center justify-between gap-2 border-b border-[rgba(195,168,128,0.55)] bg-cream-100/90 px-3.5 py-1">
+        <div className="inline-flex min-w-0 items-center gap-1.5">
+          <Compass className="h-3.5 w-3.5 shrink-0 text-camel-700" strokeWidth={1.9} aria-hidden />
+          <h2
+            id="coursing-criteria-heading"
+            className="text-xs font-bold uppercase tracking-wider text-camel-800 truncate"
+          >
+            {sectionTitle}
+          </h2>
         </div>
 
         {hasRoundsComparison && (
           <div
             role="tablist"
             aria-label="Режим сравнения критериев"
-            className="inline-flex items-center self-start sm:self-auto rounded-full border border-old-money-200/90 bg-cream-100/70 p-0.5 gap-0.5 shadow-2xs"
+            className="inline-flex items-center rounded-full border border-old-money-200/90 bg-white/80 p-0.5 gap-0.5 shadow-2xs"
           >
             <button
               type="button"
               role="tab"
               aria-selected={effectiveMode === 'breed'}
               onClick={() => setMode('breed')}
-              className={`min-h-[36px] sm:min-h-[30px] rounded-full px-3 text-xs font-semibold transition-all duration-150 cursor-pointer whitespace-nowrap touch-manipulation ${
+              className={`min-h-[32px] sm:min-h-[26px] rounded-full px-2.5 text-[11px] font-semibold transition-all duration-150 cursor-pointer whitespace-nowrap touch-manipulation ${
                 effectiveMode === 'breed'
                   ? 'cs-glass-pill-active !font-semibold !text-camel-950 shadow-2xs'
                   : 'text-charcoal-600 hover:text-charcoal-950 hover:bg-cream-200/60'
@@ -157,7 +134,7 @@ export function DogCoursingCriteriaSection({
               role="tab"
               aria-selected={effectiveMode === 'rounds'}
               onClick={() => setMode('rounds')}
-              className={`min-h-[36px] sm:min-h-[30px] rounded-full px-3 text-xs font-semibold transition-all duration-150 cursor-pointer whitespace-nowrap touch-manipulation ${
+              className={`min-h-[32px] sm:min-h-[26px] rounded-full px-2.5 text-[11px] font-semibold transition-all duration-150 cursor-pointer whitespace-nowrap touch-manipulation ${
                 effectiveMode === 'rounds'
                   ? 'cs-glass-pill-active !font-semibold !text-camel-950 shadow-2xs'
                   : 'text-charcoal-600 hover:text-charcoal-950 hover:bg-cream-200/60'
@@ -169,8 +146,9 @@ export function DogCoursingCriteriaSection({
         )}
       </div>
 
-      {/* Сетка: слева крупный радар в едином фрейме, справа 5 шкал + компактный итог */}
-      <div className="grid grid-cols-1 items-stretch gap-3 lg:grid-cols-[328px_minmax(0,1fr)] lg:gap-4">
+      {/* Сетка: слева крупный радар в едином фрейме, справа 5/6 шкал + компактный итог */}
+      <div className="p-3.5 sm:p-4">
+        <div className="grid grid-cols-1 items-stretch gap-3 lg:grid-cols-[328px_minmax(0,1fr)] lg:gap-4">
         <CoursingRadarSvg
           primary={primaryTuple}
           secondary={secondaryTuple}
@@ -250,6 +228,7 @@ export function DogCoursingCriteriaSection({
             )}
           </div>
         </div>
+      </div>
       </div>
     </section>
   )

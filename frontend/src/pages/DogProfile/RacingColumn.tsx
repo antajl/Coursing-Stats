@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Crown, ArrowRight, Medal } from 'lucide-react'
+import { Medal } from 'lucide-react'
 import MedalTally from '../../components/MedalTally'
 import ProcoursingEventLink from '../../components/ProcoursingEventLink'
 import { procoursingUrlForEventId } from '../../lib/procoursingLinks'
@@ -9,6 +9,7 @@ import {
   DisciplineColumnShell,
   DisciplineHistoryCard,
   DisciplineStatsCard,
+  HistoryExpandToggle,
 } from './DisciplineColumnShell'
 import { DisciplineHistoryRow } from './DisciplineHistoryRow'
 import { HistoryPlacement } from './HistoryPlacement'
@@ -69,7 +70,7 @@ export function RacingColumn({
   visibleRacingEvents,
   eventResultsUrls,
   bestSpeedEventId,
-  avgSpeedEventId,
+  avgSpeedEventId: _avgSpeedEventId,
   showAllRacingEvents,
   onToggleShowAll,
   rank,
@@ -81,9 +82,6 @@ export function RacingColumn({
   const rankingUrl = `/competitions/ranking/2026/${dogBreed ? `?breed=${encodeURIComponent(breedToSlug(dogBreed))}` : ''}`
   const bestSpeedUrl = bestSpeedEventId
     ? procoursingUrlForEventId(eventResultsUrls, bestSpeedEventId)
-    : null
-  const avgSpeedUrl = avgSpeedEventId
-    ? procoursingUrlForEventId(eventResultsUrls, avgSpeedEventId)
     : null
 
   const startsCount = racingEvents.length
@@ -102,29 +100,26 @@ export function RacingColumn({
             {/* Верх: Подиум (Рейтинг + Медали) */}
             <Link
               to={rankingUrl}
-              className="group flex items-center justify-between gap-2 bg-warm-blue-50/60 px-3.5 py-2.5 transition-colors hover:bg-warm-blue-100/70"
+              className="group flex items-center justify-between gap-2 bg-warm-blue-50/60 px-3.5 py-2 transition-colors hover:bg-warm-blue-100/70"
               title="Открыть рейтинг породы по бегам"
             >
-              <div className="flex items-center gap-2 min-w-0 flex-1">
-                <Crown className="h-4 w-4 shrink-0 text-warm-blue-700" aria-hidden />
-                <div className="min-w-0 flex-1 leading-tight">
-                  <span className="text-sm font-bold text-warm-blue-950 block truncate">
-                    {has2026
-                      ? `#${rank.yearBreedRank} в 2026`
-                      : hasHistory
-                        ? `№${rank.breedRank} за всё время`
-                        : 'Бега'}
-                  </span>
-                  <span className="text-[11px] text-warm-blue-700/90 block truncate">
-                    {has2026 && hasHistory
-                      ? `№${rank?.breedRank} за всё время`
-                      : hasHistory
-                        ? 'исторический зачёт'
-                        : has2026
-                          ? 'сезонный зачёт'
-                          : 'беговой рейтинг'}
-                  </span>
-                </div>
+              <div className="min-w-0 flex-1 leading-tight">
+                <span className="text-sm font-bold text-warm-blue-950 block truncate">
+                  {has2026
+                    ? `#${rank.yearBreedRank} в 2026`
+                    : hasHistory
+                      ? `№${rank.breedRank} за всё время`
+                      : 'Бега'}
+                </span>
+                <span className="text-[11px] text-warm-blue-700/90 block truncate">
+                  {has2026 && hasHistory
+                    ? `№${rank?.breedRank} за всё время`
+                    : hasHistory
+                      ? 'исторический зачёт'
+                      : has2026
+                        ? 'сезонный зачёт'
+                        : 'беговой рейтинг'}
+                </span>
               </div>
 
               <div className="shrink-0 flex items-center leading-tight">
@@ -145,13 +140,13 @@ export function RacingColumn({
               </div>
             </Link>
 
-            {/* Центр: Главный рекорд скорости */}
+            {/* Центр: Главный рекорд скорости (нативная ссылка в протокол без лишней подписи) */}
             {bestSpeedEventId ? (
               <ProcoursingEventLink
                 eventId={bestSpeedEventId}
                 procoursingUrl={bestSpeedUrl}
-                className="group flex flex-1 flex-col items-center justify-center bg-white px-3.5 py-3 text-center transition-colors hover:bg-warm-blue-50/40"
-                title="Посмотреть протокол лучшего забега"
+                className="group flex flex-1 flex-col items-center justify-center bg-white px-3.5 py-3 text-center transition-colors hover:bg-warm-blue-50/50"
+                title="Открыть протокол лучшего забега"
               >
                 <span className="text-[10px] font-semibold uppercase tracking-wider text-charcoal-400">
                   Лучшая скорость
@@ -160,10 +155,6 @@ export function RacingColumn({
                   <span>{formatScore(racing.best_speed)}</span>
                   <span className="text-sm font-normal text-charcoal-400">км/ч</span>
                 </div>
-                <span className="mt-0.5 inline-flex items-center gap-1 text-[11px] font-medium text-warm-blue-700 group-hover:underline">
-                  <span>Протокол забега</span>
-                  <ArrowRight className="h-3 w-3 shrink-0" />
-                </span>
               </ProcoursingEventLink>
             ) : (
               <div className="flex flex-1 flex-col items-center justify-center bg-white px-3.5 py-3 text-center">
@@ -177,28 +168,14 @@ export function RacingColumn({
               </div>
             )}
 
-            {/* Низ: Единая двойная строка показателей */}
+            {/* Низ: Единая двойная строка агрегатных показателей */}
             <div className="grid grid-cols-2 divide-x divide-old-money-100 bg-cream-50/50 text-center text-xs shrink-0">
-              {avgSpeedEventId ? (
-                <ProcoursingEventLink
-                  eventId={avgSpeedEventId}
-                  procoursingUrl={avgSpeedUrl}
-                  className="px-2 py-2 transition-colors hover:bg-cream-100/80"
-                  title="Открыть забег со средней скоростью"
-                >
-                  <div className="text-[10px] font-semibold uppercase tracking-wide text-charcoal-400">Средняя скорость</div>
-                  <div className="mt-0.5 font-bold tabular-nums text-charcoal-800 text-sm">
-                    {formatScore(racing.avg_speed)} км/ч
-                  </div>
-                </ProcoursingEventLink>
-              ) : (
-                <div className="px-2 py-2">
-                  <div className="text-[10px] font-semibold uppercase tracking-wide text-charcoal-400">Средняя скорость</div>
-                  <div className="mt-0.5 font-bold tabular-nums text-charcoal-800 text-sm">
-                    {formatScore(racing.avg_speed)} км/ч
-                  </div>
+              <div className="px-2 py-2">
+                <div className="text-[10px] font-semibold uppercase tracking-wide text-charcoal-400">Средняя скорость</div>
+                <div className="mt-0.5 font-bold tabular-nums text-charcoal-800 text-sm">
+                  {formatScore(racing.avg_speed)} км/ч
                 </div>
-              )}
+              </div>
 
               <div className="px-2 py-2">
                 <div className="text-[10px] font-semibold uppercase tracking-wide text-charcoal-400">Забеги</div>
@@ -265,15 +242,11 @@ export function RacingColumn({
           </div>
 
           {racingEvents.length > 3 && (
-            <div className="mt-auto pt-2 text-center shrink-0 flex items-center justify-center">
-              <button
-                type="button"
-                onClick={onToggleShowAll}
-                className="text-xs font-semibold text-warm-blue-700 transition-colors hover:text-warm-blue-900 hover:underline"
-              >
-                {showAllRacingEvents ? 'Свернуть историю' : `Показать все ${racingEvents.length} забегов`}
-              </button>
-            </div>
+            <HistoryExpandToggle
+              expanded={showAllRacingEvents}
+              onToggle={onToggleShowAll}
+              expandLabel={`Показать все ${racingEvents.length} забегов`}
+            />
           )}
         </DisciplineHistoryCard>
       )}

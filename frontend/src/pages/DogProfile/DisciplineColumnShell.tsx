@@ -1,11 +1,17 @@
 import { createContext, useContext, type ReactNode } from 'react'
 import { Link } from 'react-router-dom'
-import { ChevronRight, ChevronLeft, Trophy, Zap, Award, ArrowUpRight } from 'lucide-react'
-import type { DisciplineTabId } from './types'
 import {
-  formatCompetitionsCount,
-  formatRunsCount,
-} from './historyFormatters'
+  ChevronRight,
+  ChevronLeft,
+  ChevronDown,
+  ChevronUp,
+  Trophy,
+  Zap,
+  Award,
+  ArrowUpRight,
+} from 'lucide-react'
+import type { DisciplineTabId } from './types'
+import { formatCompetitionsCount, formatRunsCount } from './historyFormatters'
 import { formatShowsCount } from './showsColumnUtils'
 
 export interface DisciplineMobileNav {
@@ -65,7 +71,6 @@ export function disciplineTheme(theme: DisciplineTheme) {
   return THEME[theme]
 }
 
-/** Общая оболочка колонки: равная ширина и корректное выравнивание по высоте. */
 export function DisciplineColumnShell({ children }: { children: ReactNode }) {
   return <div className="flex h-full min-w-0 flex-col gap-3.5">{children}</div>
 }
@@ -94,7 +99,6 @@ export function DisciplineStatsCard({
     <div
       className={`relative flex shrink-0 flex-col overflow-hidden rounded-xl border bg-white mb-7 lg:mb-0 ${t.cardBorder}`}
     >
-      {/* Фирменная кремовая шапка-плашка Old Money (как в хабе породы и Донино) */}
       <div className="donino-column-plaque relative flex h-10 min-h-10 shrink-0 items-center justify-between gap-1.5 border-b border-[rgba(195,168,128,0.55)] bg-cream-100/90 px-3.5">
         {prevTab && (
           <button
@@ -109,7 +113,6 @@ export function DisciplineStatsCard({
           </button>
         )}
 
-        {/* Мобильный заголовок с безопасным отступом от боковых язычков */}
         <div
           className={`lg:hidden flex min-w-0 flex-1 items-center justify-center text-center leading-tight ${
             prevTab || nextTab ? 'px-16 sm:px-20' : 'px-2'
@@ -136,7 +139,6 @@ export function DisciplineStatsCard({
           )}
         </div>
 
-        {/* Десктопный заголовок плашки: иконка + название слева, ссылка на рейтинг справа */}
         <div className="hidden lg:flex min-w-0 flex-1 items-center justify-between gap-2">
           <h2 className="inline-flex items-center gap-1.5 min-w-0 text-xs font-bold uppercase tracking-wider text-camel-800 truncate">
             <Icon className="w-3.5 h-3.5 text-camel-700 shrink-0" aria-hidden />
@@ -179,6 +181,33 @@ function historyCountLabel(theme: DisciplineTheme, count: number): string {
   return formatShowsCount(count)
 }
 
+export function HistoryExpandToggle({
+  expanded,
+  onToggle,
+  expandLabel,
+}: {
+  expanded: boolean
+  onToggle: () => void
+  expandLabel: string
+}) {
+  const hint = expanded ? 'Свернуть историю' : expandLabel
+  return (
+    <button
+      type="button"
+      onClick={onToggle}
+      title={hint}
+      aria-label={hint}
+      className="-mx-3.5 mt-auto flex h-6 w-[calc(100%+1.75rem)] shrink-0 items-center justify-center border-t border-old-money-100 bg-cream-50/40 text-charcoal-400 transition-colors hover:bg-cream-100/70 hover:text-charcoal-700 cursor-pointer touch-manipulation"
+    >
+      {expanded ? (
+        <ChevronUp className="h-3.5 w-3.5" aria-hidden />
+      ) : (
+        <ChevronDown className="h-3.5 w-3.5" aria-hidden />
+      )}
+    </button>
+  )
+}
+
 export function DisciplineHistoryCard({
   theme,
   participations,
@@ -191,7 +220,6 @@ export function DisciplineHistoryCard({
   children: ReactNode
 }) {
   const t = THEME[theme]
-  const Icon = THEME_ICON[theme]
   const displayLabel =
     label ?? (theme === 'forest' ? 'Состязания' : theme === 'warm-blue' ? 'Забеги' : 'Выставки')
 
@@ -200,19 +228,16 @@ export function DisciplineHistoryCard({
       className={`flex flex-col overflow-hidden rounded-xl border bg-white lg:flex-1 lg:min-h-0 ${t.cardBorder}`}
     >
       {participations != null && participations > 0 ? (
-        <div className="donino-column-plaque relative flex h-10 min-h-10 shrink-0 items-center justify-between gap-2 border-b border-[rgba(195,168,128,0.55)] bg-cream-100/90 px-3.5">
-          <div className="inline-flex items-center gap-1.5 min-w-0 truncate">
-            <Icon className="w-3.5 h-3.5 text-camel-700 shrink-0" aria-hidden />
-            <span className="text-xs font-bold uppercase tracking-wider text-camel-800 truncate">
-              {displayLabel}
-            </span>
-          </div>
+        <div className="donino-column-plaque relative flex h-9 min-h-9 shrink-0 items-center justify-between gap-2 border-b border-[rgba(195,168,128,0.55)] bg-cream-100/90 px-3.5">
+          <span className="text-xs font-bold uppercase tracking-wider text-camel-800 truncate">
+            {displayLabel}
+          </span>
           <span className="text-xs font-semibold text-old-money-600 tabular-nums shrink-0">
             {historyCountLabel(theme, participations)}
           </span>
         </div>
       ) : null}
-      <div className="flex flex-1 flex-col justify-between px-3.5 pb-2.5 pt-1">{children}</div>
+      <div className="flex flex-1 flex-col justify-between px-3.5 pt-1">{children}</div>
     </div>
   )
 }

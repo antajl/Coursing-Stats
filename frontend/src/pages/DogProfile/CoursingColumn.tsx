@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Crown, ArrowRight, Medal } from 'lucide-react'
+import { Medal } from 'lucide-react'
 import MedalTally from '../../components/MedalTally'
 import ProcoursingEventLink from '../../components/ProcoursingEventLink'
 import { procoursingUrlForEventId } from '../../lib/procoursingLinks'
@@ -9,6 +9,7 @@ import {
   DisciplineColumnShell,
   DisciplineHistoryCard,
   DisciplineStatsCard,
+  HistoryExpandToggle,
 } from './DisciplineColumnShell'
 import { DisciplineHistoryRow } from './DisciplineHistoryRow'
 import { HistoryPlacement } from './HistoryPlacement'
@@ -70,8 +71,8 @@ export function CoursingColumn({
   visibleCoursingEvents,
   eventResultsUrls,
   bestScoreEventId,
-  bestJudgeScoreEventId,
-  avgJudgeScoreEventId,
+  bestJudgeScoreEventId: _bestJudgeScoreEventId,
+  avgJudgeScoreEventId: _avgJudgeScoreEventId,
   showAllCoursingEvents,
   onToggleShowAll,
   rank,
@@ -83,12 +84,6 @@ export function CoursingColumn({
   const rankingUrl = `/competitions/ranking/2026/${dogBreed ? `?breed=${encodeURIComponent(breedToSlug(dogBreed))}` : ''}`
   const bestScoreUrl = bestScoreEventId
     ? procoursingUrlForEventId(eventResultsUrls, bestScoreEventId)
-    : null
-  const bestJudgeUrl = bestJudgeScoreEventId
-    ? procoursingUrlForEventId(eventResultsUrls, bestJudgeScoreEventId)
-    : null
-  const avgJudgeUrl = avgJudgeScoreEventId
-    ? procoursingUrlForEventId(eventResultsUrls, avgJudgeScoreEventId)
     : null
 
   const startsCount = coursingEvents.length
@@ -111,29 +106,26 @@ export function CoursingColumn({
             {/* Верх: Подиум (Рейтинг + Медали) */}
             <Link
               to={rankingUrl}
-              className="group flex items-center justify-between gap-2 bg-forest-50/60 px-3.5 py-2.5 transition-colors hover:bg-forest-100/70"
+              className="group flex items-center justify-between gap-2 bg-forest-50/60 px-3.5 py-2 transition-colors hover:bg-forest-100/70"
               title="Открыть рейтинг породы по курсингу"
             >
-              <div className="flex items-center gap-2 min-w-0 flex-1">
-                <Crown className="h-4 w-4 shrink-0 text-forest-700" aria-hidden />
-                <div className="min-w-0 flex-1 leading-tight">
-                  <span className="text-sm font-bold text-forest-950 block truncate">
-                    {has2026
-                      ? `#${rank.yearBreedRank} в 2026`
-                      : hasHistory
-                        ? `№${rank.breedRank} за всё время`
-                        : 'Состязания'}
-                  </span>
-                  <span className="text-[11px] text-forest-700/90 block truncate">
-                    {has2026 && hasHistory
-                      ? `№${rank?.breedRank} за всё время`
-                      : hasHistory
-                        ? 'исторический зачёт'
-                        : has2026
-                          ? 'сезонный зачёт'
-                          : 'состязания РКФ'}
-                  </span>
-                </div>
+              <div className="min-w-0 flex-1 leading-tight">
+                <span className="text-sm font-bold text-forest-950 block truncate">
+                  {has2026
+                    ? `#${rank.yearBreedRank} в 2026`
+                    : hasHistory
+                      ? `№${rank.breedRank} за всё время`
+                      : 'Состязания'}
+                </span>
+                <span className="text-[11px] text-forest-700/90 block truncate">
+                  {has2026 && hasHistory
+                    ? `№${rank?.breedRank} за всё время`
+                    : hasHistory
+                      ? 'исторический зачёт'
+                      : has2026
+                        ? 'сезонный зачёт'
+                        : 'состязания РКФ'}
+                </span>
               </div>
 
               <div className="shrink-0 flex items-center leading-tight">
@@ -154,23 +146,19 @@ export function CoursingColumn({
               </div>
             </Link>
 
-            {/* Центр: Главный рекорд */}
+            {/* Центр: Главный рекорд (нативная ссылка в протокол без лишней подписи) */}
             {bestScoreEventId ? (
               <ProcoursingEventLink
                 eventId={bestScoreEventId}
                 procoursingUrl={bestScoreUrl}
-                className="group flex flex-1 flex-col items-center justify-center bg-white px-3.5 py-3 text-center transition-colors hover:bg-forest-50/40"
-                title="Посмотреть протокол лучшего состязания"
+                className="group flex flex-1 flex-col items-center justify-center bg-white px-3.5 py-3 text-center transition-colors hover:bg-forest-50/50"
+                title="Открыть протокол лучшего состязания"
               >
                 <span className="text-[10px] font-semibold uppercase tracking-wider text-charcoal-400">
                   Лучший результат
                 </span>
                 <span className="mt-0.5 text-3xl font-bold tabular-nums tracking-tight text-forest-900">
                   {formatScore(coursing.best_score)}
-                </span>
-                <span className="mt-0.5 inline-flex items-center gap-1 text-[11px] font-medium text-forest-700 group-hover:underline">
-                  <span>Протокол состязания</span>
-                  <ArrowRight className="h-3 w-3 shrink-0" />
                 </span>
               </ProcoursingEventLink>
             ) : (
@@ -184,28 +172,14 @@ export function CoursingColumn({
               </div>
             )}
 
-            {/* Низ: Единая двойная строка показателей */}
+            {/* Низ: Единая двойная строка агрегатных показателей */}
             <div className="grid grid-cols-2 divide-x divide-old-money-100 bg-cream-50/50 text-center text-xs shrink-0">
-              {avgJudgeScoreEventId || bestJudgeScoreEventId ? (
-                <ProcoursingEventLink
-                  eventId={(avgJudgeScoreEventId ?? bestJudgeScoreEventId)!}
-                  procoursingUrl={avgJudgeUrl ?? bestJudgeUrl}
-                  className="px-2 py-2 transition-colors hover:bg-cream-100/80"
-                  title="Открыть состязание со средней оценкой"
-                >
-                  <div className="text-[10px] font-semibold uppercase tracking-wide text-charcoal-400">Средняя оценка</div>
-                  <div className="mt-0.5 font-bold tabular-nums text-charcoal-800 text-sm">
-                    {formatScore(coursing.avg_judge_score ?? coursing.best_judge_score)}
-                  </div>
-                </ProcoursingEventLink>
-              ) : (
-                <div className="px-2 py-2">
-                  <div className="text-[10px] font-semibold uppercase tracking-wide text-charcoal-400">Средняя оценка</div>
-                  <div className="mt-0.5 font-bold tabular-nums text-charcoal-800 text-sm">
-                    {formatScore(coursing.avg_judge_score ?? coursing.best_judge_score)}
-                  </div>
+              <div className="px-2 py-2">
+                <div className="text-[10px] font-semibold uppercase tracking-wide text-charcoal-400">Средняя оценка</div>
+                <div className="mt-0.5 font-bold tabular-nums text-charcoal-800 text-sm">
+                  {formatScore(coursing.avg_judge_score ?? coursing.best_judge_score)}
                 </div>
-              )}
+              </div>
 
               <div className="px-2 py-2">
                 <div className="text-[10px] font-semibold uppercase tracking-wide text-charcoal-400">Состязания</div>
@@ -270,15 +244,11 @@ export function CoursingColumn({
           </div>
 
           {coursingEvents.length > 3 && (
-            <div className="mt-auto pt-2 text-center shrink-0 flex items-center justify-center">
-              <button
-                type="button"
-                onClick={onToggleShowAll}
-                className="text-xs font-semibold text-forest-700 transition-colors hover:text-forest-900 hover:underline"
-              >
-                {showAllCoursingEvents ? 'Свернуть историю' : `Показать все ${coursingEvents.length} состязаний`}
-              </button>
-            </div>
+            <HistoryExpandToggle
+              expanded={showAllCoursingEvents}
+              onToggle={onToggleShowAll}
+              expandLabel={`Показать все ${coursingEvents.length} состязаний`}
+            />
           )}
         </DisciplineHistoryCard>
       )}
