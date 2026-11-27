@@ -8,9 +8,9 @@ interface CoursingRadarSvgProps {
   secondaryLabel: string
 }
 
-const CX = 150
-const CY = 128
-const RADIUS = 74
+const CX = 132
+const CY = 104
+const RADIUS = 72
 const START_ANGLE = -Math.PI / 2
 
 function pointAt(axisIdx: number, ratio: number): [number, number] {
@@ -66,8 +66,8 @@ export function CoursingRadarSvg({
   return (
     <div className="flex flex-col items-center">
       <svg
-        viewBox="0 0 300 250"
-        className="w-full max-w-[268px] h-auto select-none"
+        viewBox="0 0 264 196"
+        className="w-full max-w-[248px] h-auto select-none"
         role="img"
         aria-label={`Диаграмма 5 критериев курсинга: ${primaryLabel} и ${secondaryLabel}`}
       >
@@ -106,7 +106,7 @@ export function CoursingRadarSvg({
         {/* Radial axes */}
         {COURSING_CRITERIA_ITEMS.map((item, idx) => {
           const [ax, ay] = pointAt(idx, 1)
-          const [lx, ly] = pointAt(idx, 1.24)
+          const [lx, ly] = pointAt(idx, 1.19)
           const anchor =
             idx === 0 ? 'middle' : idx === 1 || idx === 2 ? 'start' : 'end'
           const dy = idx === 0 ? -4 : idx === 2 || idx === 3 ? 6 : 3

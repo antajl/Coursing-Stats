@@ -77,10 +77,10 @@ export function DogCoursingCriteriaSection({
   return (
     <section
       aria-labelledby="coursing-criteria-heading"
-      className="rounded-xl border border-forest-200 bg-white p-4 sm:p-5"
+      className="rounded-xl border border-forest-200 bg-white p-3.5 sm:p-4"
     >
       {/* Заголовок и переключатель режима */}
-      <div className="mb-4 flex flex-col gap-3 border-b border-old-money-100 pb-3 sm:flex-row sm:items-center sm:justify-between">
+      <div className="mb-2.5 flex flex-col gap-2 border-b border-old-money-100 pb-2 sm:flex-row sm:items-center sm:justify-between">
         <div className="min-w-0">
           <div className="flex items-center gap-2">
             <Compass className="h-4 w-4 shrink-0 text-forest-700" strokeWidth={1.75} aria-hidden />
@@ -100,17 +100,17 @@ export function DogCoursingCriteriaSection({
           <div
             role="tablist"
             aria-label="Режим сравнения критериев"
-            className="inline-flex self-start rounded-lg border border-old-money-200 bg-cream-50/90 p-0.5 sm:self-auto"
+            className="inline-flex items-center self-start sm:self-auto rounded-full border border-old-money-200/90 bg-cream-100/70 p-0.5 gap-0.5 shadow-2xs"
           >
             <button
               type="button"
               role="tab"
               aria-selected={effectiveMode === 'breed'}
               onClick={() => setMode('breed')}
-              className={`min-h-[44px] sm:min-h-[34px] rounded-md px-3 text-xs font-semibold transition-colors cursor-pointer touch-manipulation ${
+              className={`min-h-[36px] sm:min-h-[30px] rounded-full px-3 text-xs font-semibold transition-all duration-150 cursor-pointer whitespace-nowrap touch-manipulation ${
                 effectiveMode === 'breed'
-                  ? 'border border-forest-200/80 bg-white text-forest-900 shadow-2xs'
-                  : 'text-charcoal-600 hover:text-charcoal-900'
+                  ? 'cs-glass-pill-active !font-semibold !text-camel-950 shadow-2xs'
+                  : 'text-charcoal-600 hover:text-charcoal-950 hover:bg-cream-200/60'
               }`}
             >
               К породе
@@ -120,10 +120,10 @@ export function DogCoursingCriteriaSection({
               role="tab"
               aria-selected={effectiveMode === 'rounds'}
               onClick={() => setMode('rounds')}
-              className={`min-h-[44px] sm:min-h-[34px] rounded-md px-3 text-xs font-semibold transition-colors cursor-pointer touch-manipulation ${
+              className={`min-h-[36px] sm:min-h-[30px] rounded-full px-3 text-xs font-semibold transition-all duration-150 cursor-pointer whitespace-nowrap touch-manipulation ${
                 effectiveMode === 'rounds'
-                  ? 'border border-forest-200/80 bg-white text-forest-900 shadow-2xs'
-                  : 'text-charcoal-600 hover:text-charcoal-900'
+                  ? 'cs-glass-pill-active !font-semibold !text-camel-950 shadow-2xs'
+                  : 'text-charcoal-600 hover:text-charcoal-950 hover:bg-cream-200/60'
               }`}
             >
               1-й vs 2-й круг
@@ -133,7 +133,7 @@ export function DogCoursingCriteriaSection({
       </div>
 
       {/* Сетка: слева радар, справа 5 шкал */}
-      <div className="grid grid-cols-1 items-center gap-5 lg:grid-cols-[276px_minmax(0,1fr)] lg:gap-6">
+      <div className="grid grid-cols-1 items-center gap-3 lg:grid-cols-[248px_minmax(0,1fr)] lg:gap-5">
         <CoursingRadarSvg
           primary={primaryTuple}
           secondary={secondaryTuple}
@@ -141,7 +141,7 @@ export function DogCoursingCriteriaSection({
           secondaryLabel={secondaryLabel}
         />
 
-        <div className="space-y-3 min-w-0">
+        <div className="space-y-2 min-w-0">
           {COURSING_CRITERIA_ITEMS.map((item, idx) => {
             const val = primaryTuple[idx]
             const refVal = secondaryTuple[idx]
@@ -191,7 +191,7 @@ export function DogCoursingCriteriaSection({
       </div>
 
       {/* Спокойная итоговая строка фактов */}
-      <div className="mt-4 flex flex-wrap items-center justify-between gap-x-4 gap-y-1 rounded-lg border border-old-money-200/80 bg-cream-50/60 px-3 py-2 text-xs text-charcoal-700">
+      <div className="mt-2.5 flex flex-wrap items-center justify-between gap-x-4 gap-y-1 rounded-lg border border-old-money-200/80 bg-cream-50/60 px-3 py-1.5 text-xs text-charcoal-700">
         <span>
           Сильная сторона:{' '}
           <strong className="font-semibold text-charcoal-900">
