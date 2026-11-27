@@ -25,6 +25,8 @@ export const DogPassportModal: React.FC<DogPassportModalProps> = ({ isOpen, onCl
   const [exporting, setExporting] = useState(false)
   const [downloaded, setDownloaded] = useState(false)
   const [copied, setCopied] = useState(false)
+  const [previewScale, setPreviewScale] = useState(1)
+  const [cardHeight, setCardHeight] = useState<number | null>(null)
   const [sections, setSections] = useState<PassportSectionsConfig>({
     coursing: data.coursing.hasData,
     racing: data.racing.hasData,
@@ -33,6 +35,7 @@ export const DogPassportModal: React.FC<DogPassportModalProps> = ({ isOpen, onCl
   })
   const cardRef = useRef<HTMLDivElement>(null)
   const scrollContainerRef = useRef<HTMLDivElement>(null)
+  const baseWidth = format === 'story' ? 480 : 880
 
   useEffect(() => {
     if (!isOpen) return
@@ -60,17 +63,46 @@ export const DogPassportModal: React.FC<DogPassportModalProps> = ({ isOpen, onCl
     }
   }, [format])
 
+  useEffect(() => {
+    if (!isOpen) return
+    const container = scrollContainerRef.current
+    const cardEl = cardRef.current
+    if (!container || !cardEl) return
+
+    const updateScale = () => {
+      const cs = window.getComputedStyle(container)
+      const padX = (parseFloat(cs.paddingLeft) || 0) + (parseFloat(cs.paddingRight) || 0)
+      const available = Math.max(200, container.clientWidth - padX - 4)
+      setPreviewScale(Math.min(1, available / baseWidth))
+      setCardHeight(cardEl.offsetHeight || cardEl.scrollHeight || null)
+    }
+
+    updateScale()
+    const ro = typeof ResizeObserver !== 'undefined' ? new ResizeObserver(updateScale) : null
+    ro?.observe(container)
+    ro?.observe(cardEl)
+    window.addEventListener('resize', updateScale)
+    return () => {
+      ro?.disconnect()
+      window.removeEventListener('resize', updateScale)
+    }
+  }, [isOpen, baseWidth, sections])
+
   if (!isOpen) return null
+
+  const getPngOptions = (quality: number) => ({
+    quality,
+    pixelRatio: 2,
+    cacheBust: true,
+    width: baseWidth,
+    height: cardRef.current?.offsetHeight || undefined,
+  })
 
   const handleDownload = async () => {
     if (!cardRef.current || exporting) return
     setExporting(true)
     try {
-      const dataUrl = await toPng(cardRef.current, {
-        quality: 0.98,
-        pixelRatio: 2,
-        cacheBust: true,
-      })
+      const dataUrl = await toPng(cardRef.current, getPngOptions(0.98))
       const link = document.createElement('a')
       const cleanName = (data.namePrimary || 'dog').toLowerCase().replace(/[^a-zа-я0-9]/gi, '_')
       link.download = `${cleanName}_passport_${format}.png`
@@ -89,11 +121,7 @@ export const DogPassportModal: React.FC<DogPassportModalProps> = ({ isOpen, onCl
     if (!cardRef.current || exporting) return
     setExporting(true)
     try {
-      const dataUrl = await toPng(cardRef.current, {
-        quality: 0.95,
-        pixelRatio: 2,
-        cacheBust: true,
-      })
+      const dataUrl = await toPng(cardRef.current, getPngOptions(0.95))
       const res = await fetch(dataUrl)
       const blob = await res.blob()
       const cleanName = (data.namePrimary || 'dog').toLowerCase().replace(/[^a-zа-я0-9]/gi, '_')
@@ -124,11 +152,7 @@ export const DogPassportModal: React.FC<DogPassportModalProps> = ({ isOpen, onCl
     if (!cardRef.current || exporting) return
     setExporting(true)
     try {
-      const dataUrl = await toPng(cardRef.current, {
-        quality: 0.98,
-        pixelRatio: 2,
-        cacheBust: true,
-      })
+      const dataUrl = await toPng(cardRef.current, getPngOptions(0.98))
       const res = await fetch(dataUrl)
       const blob = await res.blob()
 
@@ -224,10 +248,24 @@ export const DogPassportModal: React.FC<DogPassportModalProps> = ({ isOpen, onCl
         {/* Область интерактивного предпросмотра карточки */}
         <div
           ref={scrollContainerRef}
-          className="flex-1 overflow-auto p-3 sm:p-6 bg-cream-100/60 flex justify-center items-start"
+          className="flex-1 overflow-y-auto overflow-x-hidden p-3 sm:p-6 bg-cream-100/60 flex justify-center items-start"
         >
-          <div className="inline-block transition-transform">
-            <DogPassportCard ref={cardRef} data={data} format={format} sections={sections} />
+          <div
+            className="mx-auto shrink-0 overflow-hidden transition-[width,height] duration-150"
+            style={{
+              width: Math.round(baseWidth * previewScale),
+              height: cardHeight ? Math.round(cardHeight * previewScale) : undefined,
+            }}
+          >
+            <div
+              style={{
+                width: baseWidth,
+                transform: previewScale < 1 ? `scale(${previewScale})` : undefined,
+                transformOrigin: 'top left',
+              }}
+            >
+              <DogPassportCard ref={cardRef} data={data} format={format} sections={sections} />
+            </div>
           </div>
         </div>
 
