@@ -5,6 +5,7 @@ import {
   type SearchRecordKind,
   type SearchShardTuple,
 } from '../../../../backend/lib/search-prefix'
+import { canonicalBreed } from '../../lib/breedMapping'
 
 export interface GlobalSearchHit {
   id: string
@@ -100,8 +101,24 @@ export async function queryGlobalSearchShards(rawQuery: string): Promise<{
   dogHits.sort(sortHits)
   judgeHits.sort(sortHits)
 
+  // Guard against legacy unmerged duplicate show profiles sharing name + canonical breed
+  const dedupedDogs: GlobalSearchHit[] = []
+  const seenDogNameBreed = new Set<string>()
+  for (const hit of dogHits) {
+    const cleanBreed = (canonicalBreed(hit.breedOrMeta) || hit.breedOrMeta).toUpperCase().trim()
+    const cleanName = hit.namePrimary.toUpperCase().replace(/\s+/g, ' ').trim()
+    if ((hit.kind === 'x' || hit.kind === 'b') && cleanName.length >= 12 && cleanBreed) {
+      const key = `${cleanName}|${cleanBreed}`
+      if (seenDogNameBreed.has(key)) continue
+      seenDogNameBreed.add(key)
+      dedupedDogs.push({ ...hit, breedOrMeta: cleanBreed })
+    } else {
+      dedupedDogs.push(hit)
+    }
+  }
+
   return {
-    dogs: dogHits.slice(0, 8),
+    dogs: dedupedDogs.slice(0, 8),
     judges: judgeHits.slice(0, 5),
   }
 }

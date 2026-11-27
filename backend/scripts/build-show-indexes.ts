@@ -54,6 +54,8 @@ import {
   collapseShowDogsByTranslit,
   collapseShowDogsByNamePrefix,
   linkShowDogsByUniqueName,
+  isStrongShowDogName,
+  primaryShowDogNameKey,
 } from '../lib/show-dog-dedupe'
 import { getExhibitionsRkfStore } from '../lib/exhibitions-rkf-store'
 import { canonicalBreed } from '../src/lib/breed-mapping'
@@ -1547,16 +1549,32 @@ async function main() {
   // БАЗА — all-time собаки (полная история за все годы, суммарные титулы и высшая награда).
   console.log('Collecting all dogs from all-time and year rankings for details/lookup...')
   const allDetailDogs = new Map<string, ShowDog>()
+  const strongDetailByNameBreed = new Map<string, ShowDog>()
+  const strongKeyFor = (d: ShowDog) => {
+    const canB = (canonicalBreed(d.breed || '') || d.breed || '').toUpperCase().trim()
+    return canB && isStrongShowDogName(d.name_lat, d.name_ru)
+      ? `${primaryShowDogNameKey(d.name_lat, d.name_ru)}|${canB}`
+      : ''
+  }
+
   for (const dog of dogs) {
+    if (dog.breed) dog.breed = canonicalBreed(dog.breed) || dog.breed
     allDetailDogs.set(dog.id, dog)
+    const sk = strongKeyFor(dog)
+    if (sk && !strongDetailByNameBreed.has(sk)) {
+      strongDetailByNameBreed.set(sk, dog)
+    }
   }
   
-  // Дополняем и объединяем из годовых рейтингов
-  for (const [year, yearDogs] of rankingByYear) {
+  // Дополняем и объединяем из годовых рейтингов (не создавая дубликатов для старых ненормализованных ID)
+  for (const [, yearDogs] of rankingByYear) {
     for (const dog of yearDogs) {
-      const existing = allDetailDogs.get(dog.id)
+      if (dog.breed) dog.breed = canonicalBreed(dog.breed) || dog.breed
+      const sk = strongKeyFor(dog)
+      const existing = allDetailDogs.get(dog.id) ?? (sk ? strongDetailByNameBreed.get(sk) : undefined)
       if (!existing) {
         allDetailDogs.set(dog.id, dog)
+        if (sk) strongDetailByNameBreed.set(sk, dog)
       } else {
         mergeYearDogIntoDetail(existing, dog)
       }

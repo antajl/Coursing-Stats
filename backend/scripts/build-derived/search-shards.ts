@@ -7,6 +7,8 @@ import {
   type SearchShardsManifest,
   type SearchShardTuple,
 } from '../../lib/search-prefix'
+import { canonicalBreed } from '../../src/lib/breed-mapping'
+import { isStrongShowDogName, primaryShowDogNameKey } from '../../lib/show-dog-dedupe'
 
 const DATA_V1 = path.resolve('data/v1')
 const OUT_DIR = path.join(DATA_V1, 'indexes/search-shards')
@@ -56,6 +58,7 @@ export function buildSearchShards(): SearchShardsManifest {
 
   // 3. Show dogs (all 256 shards in dog-details/)
   const detailsDir = path.join(DATA_V1, 'shows/indexes/dog-details')
+  const strongShowBest = new Map<string, { recIdx: number; score: number }>()
   if (fs.existsSync(detailsDir)) {
     for (const file of fs.readdirSync(detailsDir).filter((f) => f.endsWith('.json'))) {
       const pack = readJsonSafe<Record<string, any>>(path.join(detailsDir, file))
@@ -78,7 +81,31 @@ export function buildSearchShards(): SearchShardsManifest {
         const secondary =
           d.name_ru && d.name_lat && d.name_ru !== d.name_lat ? String(d.name_lat).trim() : ''
         if (!primary) continue
-        records.push([id, primary, secondary, String(d.breed || '').trim(), 'x', Number(d.total_shows) || 0])
+
+        const rawBreed = String(d.breed || '').trim()
+        const cleanBreed = canonicalBreed(rawBreed) || rawBreed
+        const showsCount = Number(d.total_shows) || 0
+        const tuple: SearchShardTuple = [id, primary, secondary, cleanBreed, 'x', showsCount]
+
+        if (isStrongShowDogName(d.name_lat, d.name_ru) && cleanBreed) {
+          const strongKey = `${primaryShowDogNameKey(d.name_lat, d.name_ru)}|${cleanBreed.toUpperCase()}`
+          const score =
+            (Number(d.rank) > 0 ? 100000 : 0) +
+            showsCount * 100 +
+            (rawBreed === cleanBreed ? 10 : 0) +
+            (d.name_ru ? 5 : 0)
+          const prev = strongShowBest.get(strongKey)
+          if (prev) {
+            if (score > prev.score) {
+              records[prev.recIdx] = tuple
+              prev.score = score
+            }
+            continue
+          }
+          strongShowBest.set(strongKey, { recIdx: records.length, score })
+        }
+
+        records.push(tuple)
       }
     }
   }
