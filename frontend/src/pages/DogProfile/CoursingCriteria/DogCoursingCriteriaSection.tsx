@@ -7,6 +7,7 @@ import { CriteriaSpeedBar } from './CriteriaSpeedBar'
 import {
   computeDogSpeedBreedComparison,
   extractDogRacingSpeed,
+  formatSpeedInsight,
 } from './coursingSpeedBenchmark'
 import {
   COURSING_CRITERIA_ITEMS,
@@ -87,19 +88,23 @@ export function DogCoursingCriteriaSection({
         ? 'Все породы'
         : 'Порода'
 
-  const insight = useMemo(() => buildCriteriaInsights(criteria, breed), [criteria, breed])
+  const insight = useMemo(() => buildCriteriaInsights(criteria), [criteria])
 
   const sectionTitle = speedComparison
     ? 'Критерии курсинга и скорость'
     : 'Критерии курсинга'
+  const roundsTabLabel =
+    speedComparison?.lastHeatMax && speedComparison.lastHeatMax >= 3
+      ? '1-й vs последний'
+      : '1-й vs 2-й круг'
 
   return (
     <section
       aria-labelledby="coursing-criteria-heading"
       className="overflow-hidden rounded-xl border border-forest-200 bg-white"
     >
-      {/* Фирменная кремовая шапка-плашка в едином стиле со всеми блоками профиля */}
-      <div className="donino-column-plaque relative flex min-h-10 flex-wrap items-center justify-between gap-2 border-b border-[rgba(195,168,128,0.55)] bg-cream-100/90 px-3.5 py-1">
+      {/* Фирменная кремовая шапка-плашка с кнопками в стиле cs-glass-pill */}
+      <div className="donino-column-plaque relative flex min-h-10 flex-wrap items-center justify-between gap-2 border-b border-[rgba(195,168,128,0.55)] bg-cream-100/90 px-3.5 py-1.5">
         <div className="inline-flex min-w-0 items-center gap-1.5">
           <Compass className="h-3.5 w-3.5 shrink-0 text-camel-700" strokeWidth={1.9} aria-hidden />
           <h2
@@ -114,17 +119,17 @@ export function DogCoursingCriteriaSection({
           <div
             role="tablist"
             aria-label="Режим сравнения критериев"
-            className="inline-flex items-center rounded-full border border-old-money-200/90 bg-white/80 p-0.5 gap-0.5 shadow-2xs"
+            className="inline-flex items-center gap-1 shrink-0"
           >
             <button
               type="button"
               role="tab"
               aria-selected={effectiveMode === 'breed'}
               onClick={() => setMode('breed')}
-              className={`min-h-[32px] sm:min-h-[26px] rounded-full px-2.5 text-[11px] font-semibold transition-all duration-150 cursor-pointer whitespace-nowrap touch-manipulation ${
+              className={`inline-flex items-center justify-center h-7 px-2.5 rounded-full text-[11px] font-semibold transition-all cursor-pointer whitespace-nowrap touch-manipulation active:scale-95 ${
                 effectiveMode === 'breed'
-                  ? 'cs-glass-pill-active !font-semibold !text-camel-950 shadow-2xs'
-                  : 'text-charcoal-600 hover:text-charcoal-950 hover:bg-cream-200/60'
+                  ? 'cs-glass-pill-active text-camel-950'
+                  : 'cs-glass-pill text-charcoal-700 hover:text-camel-900'
               }`}
             >
               К породе
@@ -134,13 +139,13 @@ export function DogCoursingCriteriaSection({
               role="tab"
               aria-selected={effectiveMode === 'rounds'}
               onClick={() => setMode('rounds')}
-              className={`min-h-[32px] sm:min-h-[26px] rounded-full px-2.5 text-[11px] font-semibold transition-all duration-150 cursor-pointer whitespace-nowrap touch-manipulation ${
+              className={`inline-flex items-center justify-center h-7 px-2.5 rounded-full text-[11px] font-semibold transition-all cursor-pointer whitespace-nowrap touch-manipulation active:scale-95 ${
                 effectiveMode === 'rounds'
-                  ? 'cs-glass-pill-active !font-semibold !text-camel-950 shadow-2xs'
-                  : 'text-charcoal-600 hover:text-charcoal-950 hover:bg-cream-200/60'
+                  ? 'cs-glass-pill-active text-camel-950'
+                  : 'cs-glass-pill text-charcoal-700 hover:text-camel-900'
               }`}
             >
-              1-й vs 2-й круг
+              {roundsTabLabel}
             </button>
           </div>
         )}
@@ -208,7 +213,7 @@ export function DogCoursingCriteriaSection({
             )}
           </div>
 
-          {/* Компактная строка выводов прямо под шкалами */}
+          {/* Компактная строка выводов: курсинг и скорость в бегах */}
           <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 rounded-lg border border-old-money-200/80 bg-cream-50/60 px-3 py-1.5 text-xs text-charcoal-700">
             <span>
               Сильная сторона:{' '}
@@ -220,10 +225,15 @@ export function DogCoursingCriteriaSection({
                 )
               </strong>
             </span>
-            {insight.roundNote && (
+            {speedComparison && (
               <>
                 <span className="hidden sm:inline text-old-money-300 select-none">·</span>
-                <span className="text-charcoal-600">{insight.roundNote}</span>
+                <span>
+                  {speedComparison.kind === 'best' ? 'Лучшая скорость:' : 'Скорость в бегах:'}{' '}
+                  <strong className="font-semibold text-charcoal-900">
+                    {formatSpeedInsight(speedComparison)}
+                  </strong>
+                </span>
               </>
             )}
           </div>

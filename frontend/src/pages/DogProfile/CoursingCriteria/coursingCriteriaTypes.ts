@@ -57,12 +57,10 @@ export interface CriteriaInsight {
   strongestLabel: string
   strongestScore: number
   strongestDelta: number
-  roundNote: string | null
 }
 
 export function buildCriteriaInsights(
   criteria: DogCoursingCriteriaSummary,
-  breed: string,
 ): CriteriaInsight {
   const baseline = criteria.breed_avg
   let bestIdx = 0
@@ -79,27 +77,9 @@ export function buildCriteriaInsights(
     }
   }
 
-  let roundNote: string | null = null
-  if (criteria.run1_avg && criteria.run2_avg) {
-    const sum1 = criteria.run1_avg.reduce((a, b) => a + b, 0)
-    const sum2 = criteria.run2_avg.reduce((a, b) => a + b, 0)
-    const diffTotal = Math.round((sum2 - sum1) * 10) / 10
-    const staminaDiff = Math.round((criteria.run2_avg[2] - criteria.run1_avg[2]) * 10) / 10
-    const prefix = diffTotal >= 0 ? `+${diffTotal.toFixed(1)}` : diffTotal.toFixed(1)
-    if (Math.abs(staminaDiff) >= 0.3) {
-      const staminaTxt = staminaDiff > 0 ? `+${staminaDiff.toFixed(1)}` : staminaDiff.toFixed(1)
-      roundNote = `Во 2-м круге ${prefix} б. к сумме (выносливость ${staminaTxt})`
-    } else {
-      roundNote = `Во 2-м круге ${prefix} б. — ровный темп обоих забегов`
-    }
-  } else if (breed && !criteria.is_global_baseline) {
-    roundNote = `База сравнения: ${criteria.breed_heats_count} судейских листов породы`
-  }
-
   return {
     strongestLabel: COURSING_CRITERIA_ITEMS[bestIdx].label,
     strongestScore: bestScore,
     strongestDelta: Math.round(bestDelta * 10) / 10,
-    roundNote,
   }
 }

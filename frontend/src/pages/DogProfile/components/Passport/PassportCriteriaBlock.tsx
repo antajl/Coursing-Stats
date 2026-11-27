@@ -4,12 +4,15 @@ import {
   buildCriteriaInsights,
 } from '../../CoursingCriteria/coursingCriteriaTypes'
 import { CoursingRadarSvg } from '../../CoursingCriteria/CoursingRadarSvg'
-import type { DogSpeedBreedComparison } from '../../CoursingCriteria/coursingSpeedBenchmark'
+import {
+  formatSpeedInsight,
+  type DogSpeedBreedComparison,
+} from '../../CoursingCriteria/coursingSpeedBenchmark'
 import type { PassportFormat } from './passportTypes'
 
 interface PassportCriteriaBlockProps {
   criteria: DogCoursingCriteriaSummary
-  breed: string
+  breed?: string
   speedComparison?: DogSpeedBreedComparison | null
   format: PassportFormat
 }
@@ -29,11 +32,10 @@ function deltaToneHex(delta: number, threshold = 0.2): string {
 
 export function PassportCriteriaBlock({
   criteria,
-  breed,
   speedComparison,
   format,
 }: PassportCriteriaBlockProps) {
-  const insight = buildCriteriaInsights(criteria, breed)
+  const insight = buildCriteriaInsights(criteria)
   const isStory = format === 'story'
   const secondaryLabel = criteria.is_global_baseline ? 'Все породы' : 'Порода'
 
@@ -152,15 +154,25 @@ export function PassportCriteriaBlock({
             )}
           </div>
 
-          <div className="mt-0.5 border-t border-[#EFE9DD] pt-1 text-[10px] text-[#57534E] leading-tight">
-            Сильная сторона:{' '}
-            <strong className="font-semibold text-[#1C1917]">
-              {insight.strongestLabel} ({insight.strongestScore.toFixed(1)}
-              {insight.strongestDelta >= 0.1
-                ? `, +${insight.strongestDelta.toFixed(1)} ${criteria.is_global_baseline ? 'к среднему' : 'к породе'}`
-                : ''}
-              )
-            </strong>
+          <div className="mt-0.5 flex flex-wrap items-center gap-x-2 gap-y-0.5 border-t border-[#EFE9DD] pt-1 text-[10px] text-[#57534E] leading-tight">
+            <span>
+              Сильная сторона:{' '}
+              <strong className="font-semibold text-[#1C1917]">
+                {insight.strongestLabel} ({insight.strongestScore.toFixed(1)}
+                {insight.strongestDelta >= 0.1
+                  ? `, +${insight.strongestDelta.toFixed(1)} ${criteria.is_global_baseline ? 'к среднему' : 'к породе'}`
+                  : ''}
+                )
+              </strong>
+            </span>
+            {speedComparison && (
+              <span>
+                · {speedComparison.kind === 'best' ? 'Лучшая скорость:' : 'Скорость в бегах:'}{' '}
+                <strong className="font-semibold text-[#1C1917]">
+                  {formatSpeedInsight(speedComparison)}
+                </strong>
+              </span>
+            )}
           </div>
         </div>
       </div>

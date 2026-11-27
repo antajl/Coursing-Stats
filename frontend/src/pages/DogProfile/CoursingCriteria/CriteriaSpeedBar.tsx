@@ -24,21 +24,21 @@ function speedDeltaTone(delta: number): string {
 
 /**
  * Шестая горизонтальная шкала внутри карточки критериев:
- * — в режиме «К породе»: средняя (или лучшая) скорость vs среднее по породе (шкала 0..рекорд породы)
- * — в режиме «1-й vs 2-й круг»: 2-й круг vs 1-й круг (при наличии разбивки по забегам).
+ * — «К породе»: средняя (или лучшая) скорость vs среднее по породе (шкала 0..рекорд породы)
+ * — «1-й vs последний»: последний забег старта (2-й или 3-й при 3 кругах) vs 1-й забег.
  */
 export function CriteriaSpeedBar({ comparison, mode = 'breed' }: CriteriaSpeedBarProps) {
   const canCompareRounds =
-    mode === 'rounds' && comparison.run1Speed != null && comparison.run2Speed != null
+    mode === 'rounds' && comparison.firstRunSpeed != null && comparison.lastRunSpeed != null
 
-  const primarySpeed = canCompareRounds ? comparison.run2Speed! : comparison.dogSpeed
-  const referenceSpeed = canCompareRounds ? comparison.run1Speed! : comparison.breedAvg
+  const primarySpeed = canCompareRounds ? comparison.lastRunSpeed! : comparison.dogSpeed
+  const referenceSpeed = canCompareRounds ? comparison.firstRunSpeed! : comparison.breedAvg
   const delta = primarySpeed - referenceSpeed
   const fillPct = canCompareRounds
-    ? clampSpeedPct(comparison.run2Speed!, comparison.breedMaxSpeed)
+    ? clampSpeedPct(primarySpeed, comparison.breedMaxSpeed)
     : comparison.fillPct
   const tickPct = canCompareRounds
-    ? clampSpeedPct(comparison.run1Speed!, comparison.breedMaxSpeed)
+    ? clampSpeedPct(referenceSpeed, comparison.breedMaxSpeed)
     : comparison.breedMarkerPct
 
   const label = canCompareRounds
@@ -47,19 +47,21 @@ export function CriteriaSpeedBar({ comparison, mode = 'breed' }: CriteriaSpeedBa
       ? 'Лучшая скорость в бегах'
       : 'Скорость в бегах'
 
+  const lastLabel =
+    comparison.lastHeatMax && comparison.lastHeatMax >= 3
+      ? 'Последний забег (до 3-го)'
+      : '2-й забег'
+
   const tickTooltip = canCompareRounds ? (
     <span className="block space-y-0.5">
       <span className="block whitespace-nowrap">
-        1-й круг:{' '}
+        1-й забег:{' '}
         <strong className="font-semibold text-charcoal-900">
-          {comparison.run1Speed!.toFixed(1)} км/ч
+          {referenceSpeed.toFixed(1)} км/ч
         </strong>
       </span>
       <span className="block text-charcoal-500 whitespace-nowrap">
-        {comparison.run3Speed != null
-          ? `3-й круг: ${comparison.run3Speed.toFixed(1)} км/ч · `
-          : ''}
-        Макс. породы: {comparison.breedMaxSpeed.toFixed(1)} км/ч
+        {lastLabel}: {primarySpeed.toFixed(1)} км/ч · макс. {comparison.breedMaxSpeed.toFixed(1)} км/ч
       </span>
     </span>
   ) : (
