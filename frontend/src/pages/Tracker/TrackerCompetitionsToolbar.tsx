@@ -1,10 +1,9 @@
 import { useState } from 'react';
-import { Bell, ChevronDown, Check, ArrowUpDown } from 'lucide-react';
+import { Bell, ChevronDown, Check } from 'lucide-react';
 import type { DisciplineKey, CompetitionStatusFilter } from './trackerTypes';
 import ModernDropdown from '../../components/ui/ModernDropdown';
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch';
 import { toolbarPillTriggerClass } from '../../lib/toolbar';
-import { SORT_OPTIONS, type SortOption } from './trackerCompetitionUtils';
 
 interface TrackerCompetitionsToolbarProps {
   season: '2026' | '2027';
@@ -17,8 +16,6 @@ interface TrackerCompetitionsToolbarProps {
   statusFilter: CompetitionStatusFilter;
   onStatusChange: (s: CompetitionStatusFilter) => void;
   statusItems: { key: CompetitionStatusFilter; label: string; color: string }[];
-  sortBy: SortOption;
-  onSortChange: (s: SortOption) => void;
   onlySubscribed: boolean;
   onToggleOnlySubscribed: () => void;
   subscribedCount: number;
@@ -35,8 +32,6 @@ export function TrackerCompetitionsToolbar({
   statusFilter,
   onStatusChange,
   statusItems,
-  sortBy,
-  onSortChange,
   onlySubscribed,
   onToggleOnlySubscribed,
   subscribedCount,
@@ -44,9 +39,7 @@ export function TrackerCompetitionsToolbar({
   const [seasonOpen, setSeasonOpen] = useState(false);
   const [disciplineOpen, setDisciplineOpen] = useState(false);
   const [statusOpen, setStatusOpen] = useState(false);
-  const [sortOpen, setSortOpen] = useState(false);
 
-  const activeSortLabel = SORT_OPTIONS.find((s) => s.id === sortBy)?.label || 'Сортировка';
   const activeStatusLabel = statusItems.find((s) => s.key === statusFilter)?.label || 'Статус';
   const activeDisciplineLabel = disciplineItems.find((d) => d.key === discipline)?.label || discipline;
 
@@ -186,50 +179,7 @@ export function TrackerCompetitionsToolbar({
         )}
       </ModernDropdown>
 
-      {/* 4. Sort Dropdown */}
-      <ModernDropdown
-        isOpen={sortOpen}
-        onOpenChange={setSortOpen}
-        width="240px"
-        trigger={
-          <button
-            type="button"
-            className={toolbarPillTriggerClass(sortBy !== 'date_desc', '!h-8 !px-3')}
-          >
-            <ArrowUpDown className="h-3 w-3 shrink-0 opacity-70" />
-            <span className="truncate max-w-[145px] sm:max-w-[160px]">{activeSortLabel}</span>
-            <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" />
-          </button>
-        }
-      >
-        {(close) => (
-          <div className="p-1 space-y-0.5" role="menu">
-            {SORT_OPTIONS.map((item) => {
-              const isSelected = sortBy === item.id;
-              return (
-                <button
-                  key={item.id}
-                  type="button"
-                  onClick={() => {
-                    onSortChange(item.id);
-                    close();
-                  }}
-                  className={`w-full flex items-center justify-between px-3 py-1.5 text-xs rounded-md text-left transition-colors ${
-                    isSelected
-                      ? 'bg-camel-100 text-camel-950 font-semibold'
-                      : 'text-charcoal-700 hover:bg-cream-200/60'
-                  }`}
-                >
-                  <span>{item.label}</span>
-                  {isSelected && <Check className="h-3.5 w-3.5 text-camel-700 shrink-0" />}
-                </button>
-              );
-            })}
-          </div>
-        )}
-      </ModernDropdown>
-
-      {/* 5. Subscriptions Pill Button */}
+      {/* 4. Subscriptions Pill Button */}
       <button
         type="button"
         onClick={onToggleOnlySubscribed}

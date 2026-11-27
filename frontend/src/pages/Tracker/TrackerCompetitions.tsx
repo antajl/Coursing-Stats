@@ -5,7 +5,6 @@ import { TrackerCompetitionsToolbar } from './TrackerCompetitionsToolbar';
 import {
   parseDateScore,
   formatShortDate,
-  type SortOption,
 } from './trackerCompetitionUtils';
 
 interface TrackerCompetitionsProps {
@@ -25,7 +24,6 @@ export function TrackerCompetitions({
   const [events2027, setEvents2027] = useState<TrackerCompetition[] | null>(null);
   const [discipline, setDiscipline] = useState<DisciplineKey>('Курсинг борзых');
   const [statusFilter, setStatusFilter] = useState<CompetitionStatusFilter>('all');
-  const [sortBy, setSortBy] = useState<SortOption>('date_desc');
   const [onlySubscribed, setOnlySubscribed] = useState(false);
   const [query, setQuery] = useState('');
 
@@ -136,37 +134,11 @@ export function TrackerCompetitions({
       );
     });
 
-    // 5. Explicit Sorting
-    const statusWeight = (st: TrackerCompetition['status'], mode: 'delayed_first' | 'approved_first') => {
-      if (mode === 'delayed_first') {
-        return st === 'DELAYED' ? 0 : st === 'PENDING' ? 1 : 2;
-      }
-      return st === 'APPROVED' ? 0 : st === 'PENDING' ? 1 : 2;
-    };
-
-    result.sort((a, b) => {
-      if (sortBy === 'date_asc') {
-        return parseDateScore(a.dateRaw) - parseDateScore(b.dateRaw);
-      }
-      if (sortBy === 'date_desc') {
-        return parseDateScore(b.dateRaw) - parseDateScore(a.dateRaw);
-      }
-      if (sortBy === 'status_delayed') {
-        const diff = statusWeight(a.status, 'delayed_first') - statusWeight(b.status, 'delayed_first');
-        return diff !== 0 ? diff : parseDateScore(b.dateRaw) - parseDateScore(a.dateRaw);
-      }
-      if (sortBy === 'status_approved') {
-        const diff = statusWeight(a.status, 'approved_first') - statusWeight(b.status, 'approved_first');
-        return diff !== 0 ? diff : parseDateScore(b.dateRaw) - parseDateScore(a.dateRaw);
-      }
-      if (sortBy === 'club_asc') {
-        return a.club.localeCompare(b.club, 'ru');
-      }
-      return 0;
-    });
+    // 5. Fixed sorting: from latest dates at top to earliest below
+    result.sort((a, b) => parseDateScore(b.dateRaw) - parseDateScore(a.dateRaw));
 
     return result;
-  }, [activeList, discipline, statusFilter, onlySubscribed, query, subscribedSet, sortBy]);
+  }, [activeList, discipline, statusFilter, onlySubscribed, query, subscribedSet]);
 
   return (
     <div className="space-y-3">
@@ -181,8 +153,6 @@ export function TrackerCompetitions({
         statusFilter={statusFilter}
         onStatusChange={setStatusFilter}
         statusItems={statusItems}
-        sortBy={sortBy}
-        onSortChange={setSortBy}
         onlySubscribed={onlySubscribed}
         onToggleOnlySubscribed={() => setOnlySubscribed((prev) => !prev)}
         subscribedCount={subscribedSet.size}
@@ -210,9 +180,9 @@ export function TrackerCompetitions({
           </div>
         ) : (
           <div className="divide-y divide-sand-200/60">
-            {filteredCompetitions.map((comp) => (
+            {filteredCompetitions.map((comp, idx) => (
               <TrackerCompetitionRow
-                key={comp.id}
+                key={`${comp.id}__${idx}`}
                 comp={comp}
                 isSubscribed={subscribedSet.has(comp.id)}
                 onToggleSubscribed={onToggleSubscribed}

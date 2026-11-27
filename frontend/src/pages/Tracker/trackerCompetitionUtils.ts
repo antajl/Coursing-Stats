@@ -15,8 +15,14 @@ export const SORT_OPTIONS: SortItem[] = [
 
 export function parseDateScore(raw: string): number {
   if (!raw) return 0;
-  // Match start day: '04-05.04.2026' -> day 4, month 4, year 2026
-  const m = raw.match(/^([0-9]{1,2})(?:-[0-9]{1,2})?\.([0-9]{1,2})\.([0-9]{4})/);
+  const normalized = raw.trim().replace(/[–—]/g, '-');
+  // ISO YYYY-MM-DD
+  const iso = normalized.match(/(\d{4})-(\d{2})-(\d{2})/);
+  if (iso) {
+    return new Date(parseInt(iso[1], 10), parseInt(iso[2], 10) - 1, parseInt(iso[3], 10)).getTime();
+  }
+  // Range with same month: '04-05.04.2026' or '04.04.2026 - 05.04.2026' or plain '04.04.2026'
+  const m = normalized.match(/(\d{1,2})(?:-\d{1,2})?\.(\d{1,2})\.(\d{4})/);
   if (m) {
     const day = parseInt(m[1], 10);
     const month = parseInt(m[2], 10) - 1;
