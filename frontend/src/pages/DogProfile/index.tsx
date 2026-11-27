@@ -281,6 +281,8 @@ export default function DogProfile() {
                 criteria={data.coursingCriteria}
                 breed={data.headerBreed}
                 dogName={data.displayName}
+                dogId={data.headerDog?.id}
+                racingStats={data.racing}
               />
             </div>
           )}

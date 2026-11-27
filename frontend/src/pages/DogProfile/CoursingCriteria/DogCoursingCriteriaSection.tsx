@@ -1,6 +1,12 @@
 import { useMemo, useState } from 'react'
 import { Compass } from 'lucide-react'
+import { useTopSpeed } from '../../../hooks/useStaticData'
 import { CoursingRadarSvg } from './CoursingRadarSvg'
+import { CriteriaSpeedBar } from './CriteriaSpeedBar'
+import {
+  computeDogSpeedBreedComparison,
+  extractDogRacingSpeed,
+} from './coursingSpeedBenchmark'
 import {
   COURSING_CRITERIA_ITEMS,
   buildCriteriaInsights,
@@ -12,6 +18,8 @@ interface DogCoursingCriteriaSectionProps {
   criteria: DogCoursingCriteriaSummary
   breed: string
   dogName?: string
+  dogId?: string | number
+  racingStats?: Record<string, unknown> | null
 }
 
 function pluralStarts(count: number): string {
@@ -48,11 +56,29 @@ function deltaToneClass(delta: number): string {
 export function DogCoursingCriteriaSection({
   criteria,
   breed,
+  dogId,
+  racingStats,
 }: DogCoursingCriteriaSectionProps) {
   const hasRoundsComparison = Boolean(criteria.run1_avg && criteria.run2_avg)
   const [mode, setMode] = useState<CriteriaCompareMode>('breed')
   const effectiveMode: CriteriaCompareMode =
     mode === 'rounds' && hasRoundsComparison ? 'rounds' : 'breed'
+
+  const hasRacingSpeed = useMemo(
+    () => extractDogRacingSpeed(racingStats) !== null,
+    [racingStats],
+  )
+  const { data: topSpeedRes } = useTopSpeed('all', { enabled: hasRacingSpeed })
+  const speedComparison = useMemo(
+    () =>
+      computeDogSpeedBreedComparison({
+        racingStats,
+        breed,
+        dogId,
+        items: topSpeedRes?.data?.items,
+      }),
+    [racingStats, breed, dogId, topSpeedRes?.data?.items],
+  )
 
   const primaryTuple =
     effectiveMode === 'rounds' && criteria.run2_avg
@@ -195,6 +221,13 @@ export function DogCoursingCriteriaSection({
                 </div>
               )
             })}
+
+            {speedComparison && (
+              <CriteriaSpeedBar
+                comparison={speedComparison}
+                inRoundsMode={effectiveMode === 'rounds'}
+              />
+            )}
           </div>
 
           {/* Компактная строка выводов прямо под шкалами */}

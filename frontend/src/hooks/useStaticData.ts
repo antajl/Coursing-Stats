@@ -66,12 +66,13 @@ export function useTopElo(year: string) {
   });
 }
 
-export function useTopSpeed(year: string) {
+export function useTopSpeed(year: string, options?: { enabled?: boolean }) {
   const fileName = topIndexFileName('top-speed', year);
   return useQuery({
     queryKey: ['topSpeed', year || 'all'],
     queryFn: () => fetchStaticData<TopItemsResponse>(`/data/v1/indexes/${fileName}`),
     staleTime: STALE_MS,
+    enabled: options?.enabled ?? true,
   });
 }
 
