@@ -16,6 +16,9 @@ export interface DogSpeedBreedComparison {
   peerCount: number
   fillPct: number
   breedMarkerPct: number
+  run1Speed: number | null
+  run2Speed: number | null
+  run3Speed: number | null
 }
 
 function toPositiveNumber(raw: unknown): number | null {
@@ -36,14 +39,14 @@ export function extractDogRacingSpeed(
   return null
 }
 
-function clamp0100(value: number): number {
-  return Math.max(0, Math.min(100, value))
+export function clampSpeedPct(value: number, maxSpeed: number): number {
+  if (maxSpeed <= 0) return 0
+  return Math.max(0, Math.min(100, (value / maxSpeed) * 100))
 }
 
 /**
  * Считает сравнение скорости собаки в бегах со средним значением по её канонической породе
- * на базе индекса indexes/top-speed-all.json (за все года).
- * За 100% шкалы берётся максимальная скорость среди всех представителей данной породы.
+ * на базе индекса indexes/top-speed-all.json (за все года) и круговые средние (1-й/2-й/3-й забег).
  */
 export function computeDogSpeedBreedComparison({
   racingStats,
@@ -62,9 +65,18 @@ export function computeDogSpeedBreedComparison({
   const field = extracted.kind === 'best' ? 'best_speed' : 'avg_speed'
   const selfId = dogId !== undefined && dogId !== null && dogId !== '' ? Number(dogId) : null
   const selfBest = toPositiveNumber(racingStats?.best_speed) ?? extracted.value
+  const run1Speed = toPositiveNumber(racingStats?.run1_avg_speed)
+  const run2Speed = toPositiveNumber(racingStats?.run2_avg_speed)
+  const run3Speed = toPositiveNumber(racingStats?.run3_avg_speed)
 
   const peers: number[] = []
-  let breedMaxSpeed = Math.max(extracted.value, selfBest)
+  let breedMaxSpeed = Math.max(
+    extracted.value,
+    selfBest,
+    run1Speed ?? 0,
+    run2Speed ?? 0,
+    run3Speed ?? 0,
+  )
 
   for (const row of items) {
     if (!matchesBreedFilter(String(row.breed ?? ''), breed)) continue
@@ -94,7 +106,10 @@ export function computeDogSpeedBreedComparison({
     delta,
     kind: extracted.kind,
     peerCount: peers.length,
-    fillPct: clamp0100((extracted.value / breedMaxSpeed) * 100),
-    breedMarkerPct: clamp0100((breedAvg / breedMaxSpeed) * 100),
+    fillPct: clampSpeedPct(extracted.value, breedMaxSpeed),
+    breedMarkerPct: clampSpeedPct(breedAvg, breedMaxSpeed),
+    run1Speed,
+    run2Speed,
+    run3Speed,
   }
 }

@@ -58,7 +58,13 @@ describe('computeDogSpeedBreedComparison', () => {
 
   it('compares racing avg_speed against same canonical breed using breed max_speed as 100% ceiling', () => {
     const res = computeDogSpeedBreedComparison({
-      racingStats: { avg_speed: '55.20', best_speed: '56.10' },
+      racingStats: {
+        avg_speed: '55.20',
+        best_speed: '56.10',
+        run1_avg_speed: '54.40',
+        run2_avg_speed: '55.90',
+        run3_avg_speed: '56.00',
+      },
       breed: 'Уиппет',
       dogId: 1,
       items: indexItems,
@@ -71,6 +77,9 @@ describe('computeDogSpeedBreedComparison', () => {
     expect(res?.delta).toBeCloseTo(2.2, 5)
     expect(res?.fillPct).toBeCloseTo((55.2 / 56.1) * 100, 4)
     expect(res?.breedMarkerPct).toBeCloseTo((53.0 / 56.1) * 100, 4)
+    expect(res?.run1Speed).toBeCloseTo(54.4, 5)
+    expect(res?.run2Speed).toBeCloseTo(55.9, 5)
+    expect(res?.run3Speed).toBeCloseTo(56.0, 5)
   })
 
   it('returns null when fewer than 2 same-breed peers exist', () => {

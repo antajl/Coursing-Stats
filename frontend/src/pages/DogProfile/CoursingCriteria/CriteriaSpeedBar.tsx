@@ -1,8 +1,12 @@
-import type { DogSpeedBreedComparison } from './coursingSpeedBenchmark'
+import {
+  clampSpeedPct,
+  type DogSpeedBreedComparison,
+} from './coursingSpeedBenchmark'
 import { CriteriaBenchmarkTick } from './CriteriaBenchmarkTick'
 
 interface CriteriaSpeedBarProps {
   comparison: DogSpeedBreedComparison
+  mode?: 'breed' | 'rounds'
 }
 
 function formatSignedSpeedDelta(delta: number): string {
@@ -20,15 +24,57 @@ function speedDeltaTone(delta: number): string {
 
 /**
  * Шестая горизонтальная шкала внутри карточки критериев:
- * скорость в бегах от 0 до рекорда породы за все годы + отметка средней по породе.
+ * — в режиме «К породе»: средняя (или лучшая) скорость vs среднее по породе (шкала 0..рекорд породы)
+ * — в режиме «1-й vs 2-й круг»: 2-й круг vs 1-й круг (при наличии разбивки по забегам).
  */
-export function CriteriaSpeedBar({ comparison }: CriteriaSpeedBarProps) {
-  const label = comparison.kind === 'best' ? 'Лучшая скорость в бегах' : 'Скорость в бегах'
-  const tickTooltip = [
-    `Среднее по породе: ${comparison.breedAvg.toFixed(1)} км/ч`,
-    `максимум породы: ${comparison.breedMaxSpeed.toFixed(1)} км/ч`,
-    `(${comparison.peerCount} соб.)`,
-  ].join(' · ')
+export function CriteriaSpeedBar({ comparison, mode = 'breed' }: CriteriaSpeedBarProps) {
+  const canCompareRounds =
+    mode === 'rounds' && comparison.run1Speed != null && comparison.run2Speed != null
+
+  const primarySpeed = canCompareRounds ? comparison.run2Speed! : comparison.dogSpeed
+  const referenceSpeed = canCompareRounds ? comparison.run1Speed! : comparison.breedAvg
+  const delta = primarySpeed - referenceSpeed
+  const fillPct = canCompareRounds
+    ? clampSpeedPct(comparison.run2Speed!, comparison.breedMaxSpeed)
+    : comparison.fillPct
+  const tickPct = canCompareRounds
+    ? clampSpeedPct(comparison.run1Speed!, comparison.breedMaxSpeed)
+    : comparison.breedMarkerPct
+
+  const label = canCompareRounds
+    ? 'Скорость в бегах'
+    : comparison.kind === 'best'
+      ? 'Лучшая скорость в бегах'
+      : 'Скорость в бегах'
+
+  const tickTooltip = canCompareRounds ? (
+    <span className="block space-y-0.5">
+      <span className="block whitespace-nowrap">
+        1-й круг:{' '}
+        <strong className="font-semibold text-charcoal-900">
+          {comparison.run1Speed!.toFixed(1)} км/ч
+        </strong>
+      </span>
+      <span className="block text-charcoal-500 whitespace-nowrap">
+        {comparison.run3Speed != null
+          ? `3-й круг: ${comparison.run3Speed.toFixed(1)} км/ч · `
+          : ''}
+        Макс. породы: {comparison.breedMaxSpeed.toFixed(1)} км/ч
+      </span>
+    </span>
+  ) : (
+    <span className="block space-y-0.5">
+      <span className="block whitespace-nowrap">
+        Среднее по породе:{' '}
+        <strong className="font-semibold text-charcoal-900">
+          {comparison.breedAvg.toFixed(1)} км/ч
+        </strong>
+      </span>
+      <span className="block text-charcoal-500 whitespace-nowrap">
+        Максимум породы: {comparison.breedMaxSpeed.toFixed(1)} км/ч · {comparison.peerCount} соб.
+      </span>
+    </span>
+  )
 
   return (
     <div className="space-y-0.5">
@@ -45,11 +91,11 @@ export function CriteriaSpeedBar({ comparison }: CriteriaSpeedBarProps) {
 
         <div className="flex shrink-0 items-baseline gap-2 font-mono tabular-nums">
           <span className="text-sm font-bold text-charcoal-900">
-            {comparison.dogSpeed.toFixed(1)}
+            {primarySpeed.toFixed(1)}
             <span className="text-[11px] font-normal text-charcoal-400"> км/ч</span>
           </span>
-          <span className={`w-11 text-right text-xs font-semibold ${speedDeltaTone(comparison.delta)}`}>
-            {formatSignedSpeedDelta(comparison.delta)}
+          <span className={`w-11 text-right text-xs font-semibold ${speedDeltaTone(delta)}`}>
+            {formatSignedSpeedDelta(delta)}
           </span>
         </div>
       </div>
@@ -57,9 +103,9 @@ export function CriteriaSpeedBar({ comparison }: CriteriaSpeedBarProps) {
       <div className="relative h-2 w-full rounded-full bg-sand-100">
         <div
           className="h-full rounded-full bg-forest-600/80 transition-[width] duration-300"
-          style={{ width: `${comparison.fillPct.toFixed(1)}%` }}
+          style={{ width: `${fillPct.toFixed(1)}%` }}
         />
-        <CriteriaBenchmarkTick percent={comparison.breedMarkerPct} label={tickTooltip} />
+        <CriteriaBenchmarkTick percent={tickPct} label={tickTooltip} />
       </div>
     </div>
   )

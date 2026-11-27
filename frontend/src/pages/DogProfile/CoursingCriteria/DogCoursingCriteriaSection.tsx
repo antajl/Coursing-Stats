@@ -225,7 +225,9 @@ export function DogCoursingCriteriaSection({
               )
             })}
 
-            {speedComparison && <CriteriaSpeedBar comparison={speedComparison} />}
+            {speedComparison && (
+              <CriteriaSpeedBar comparison={speedComparison} mode={effectiveMode} />
+            )}
           </div>
 
           {/* Компактная строка выводов прямо под шкалами */}
