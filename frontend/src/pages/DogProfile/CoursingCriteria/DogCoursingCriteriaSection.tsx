@@ -179,8 +179,8 @@ export function DogCoursingCriteriaSection({
                     style={{ width: `${fillPct.toFixed(1)}%` }}
                   />
                   <div
-                    className="absolute -top-0.5 h-3 w-0.5 rounded-full bg-camel-700"
-                    style={{ left: `calc(${refPct.toFixed(1)}% - 1px)` }}
+                    className="absolute -top-0.5 h-3 w-[3px] -translate-x-1/2 rounded-full bg-camel-800 ring-1 ring-white/90"
+                    style={{ left: `${refPct.toFixed(1)}%` }}
                     title={`${secondaryLabel}: ${refVal.toFixed(1)} / 20`}
                   />
                 </div>
