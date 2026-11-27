@@ -100,18 +100,32 @@ function extractJudgeSums(rawScoresJson: string | null): number[] {
   }
 }
 
-function extractHeatSpeeds(rawScoresJson: string | null): number[] {
-  if (!rawScoresJson) return [];
+function extractHeatSpeedsByRound(rawScoresJson: string | null): {
+  all: number[];
+  run1: number | null;
+  run2: number | null;
+  run3: number | null;
+} {
+  if (!rawScoresJson) return { all: [], run1: null, run2: null, run3: null };
   try {
     const parsed = JSON.parse(rawScoresJson);
-    const speeds: number[] = [];
-    for (const heat of parsed.heats ?? []) {
-      const speed = parseFloat(heat.speed_kmh);
-      if (!Number.isNaN(speed) && speed > 0 && speed <= 80) speeds.push(speed);
-    }
-    return speeds;
+    const heats = Array.isArray(parsed.heats) ? parsed.heats : [];
+    const all: number[] = [];
+    let run1: number | null = null;
+    let run2: number | null = null;
+    let run3: number | null = null;
+    heats.forEach((heat: { speed_kmh?: string | number | null }, idx: number) => {
+      const speed = parseFloat(String(heat?.speed_kmh ?? ''));
+      if (!Number.isNaN(speed) && speed > 0 && speed <= 80) {
+        all.push(speed);
+        if (idx === 0) run1 = speed;
+        else if (idx === 1) run2 = speed;
+        else if (idx === 2) run3 = speed;
+      }
+    });
+    return { all, run1, run2, run3 };
   } catch {
-    return [];
+    return { all: [], run1: null, run2: null, run3: null };
   }
 }
 
@@ -235,23 +249,29 @@ function buildRacingStats(medalRows: RacingMedalRow[], speedRows: RacingSpeedRow
   }
 
   const allSpeeds: number[] = [];
+  const run1Speeds: number[] = [];
+  const run2Speeds: number[] = [];
+  const run3Speeds: number[] = [];
   let bestRowMax: number | null = null;
   let best_speed_event_id: number | null = null;
   let bestRowAvg: number | null = null;
   let avg_speed_event_id: number | null = null;
 
   for (const row of speedRows) {
-    const speeds = extractHeatSpeeds(row.raw_scores_json);
-    if (speeds.length === 0) continue;
-    allSpeeds.push(...speeds);
+    const parsed = extractHeatSpeedsByRound(row.raw_scores_json);
+    if (parsed.all.length === 0) continue;
+    allSpeeds.push(...parsed.all);
+    if (parsed.run1 !== null) run1Speeds.push(parsed.run1);
+    if (parsed.run2 !== null) run2Speeds.push(parsed.run2);
+    if (parsed.run3 !== null) run3Speeds.push(parsed.run3);
 
-    const rowMax = Math.max(...speeds);
+    const rowMax = Math.max(...parsed.all);
     if (bestRowMax === null || rowMax > bestRowMax) {
       bestRowMax = rowMax;
       best_speed_event_id = row.event_id;
     }
 
-    const rowAvg = Math.round(mean(speeds) * 100) / 100;
+    const rowAvg = Math.round(mean(parsed.all) * 100) / 100;
     if (bestRowAvg === null || rowAvg > bestRowAvg) {
       bestRowAvg = rowAvg;
       avg_speed_event_id = row.event_id;
@@ -265,6 +285,9 @@ function buildRacingStats(medalRows: RacingMedalRow[], speedRows: RacingSpeedRow
     bronze,
     best_speed: allSpeeds.length > 0 ? Math.max(...allSpeeds).toFixed(2) : null,
     avg_speed: allSpeeds.length > 0 ? mean(allSpeeds).toFixed(2) : null,
+    ...(run1Speeds.length > 0 ? { run1_avg_speed: mean(run1Speeds).toFixed(2) } : {}),
+    ...(run2Speeds.length > 0 ? { run2_avg_speed: mean(run2Speeds).toFixed(2) } : {}),
+    ...(run3Speeds.length > 0 ? { run3_avg_speed: mean(run3Speeds).toFixed(2) } : {}),
     best_speed_event_id,
     avg_speed_event_id,
   };
