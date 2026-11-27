@@ -3,7 +3,8 @@
  */
 
 import type { CumulativeTitle, DogCareerData, TitleEvidenceItem } from './types'
-import { toShowEvidence, type ParsedShowCareer } from './showHelpers'
+import { toShowEvidence, type ParsedShowCareer, type ShowCertEvent } from './showHelpers'
+import { selectNkpEvidence } from './showEvidenceHelpers'
 
 export interface ClubAndGrandResult {
   titles: CumulativeTitle[]
@@ -19,7 +20,17 @@ export interface ClubAndGrandResult {
 
 export function evaluateClubAndGrandShowTitles(
   data: DogCareerData,
-  baseStatus: { chrCompleted: boolean; jchrCompleted: boolean; vchrCompleted: boolean },
+  baseStatus: {
+    chrCompleted: boolean
+    jchrCompleted: boolean
+    vchrCompleted: boolean
+    chrClosingEvent?: ShowCertEvent
+    chrProgressEvents?: ShowCertEvent[]
+    jchrClosingEvent?: ShowCertEvent
+    jchrProgressEvents?: ShowCertEvent[]
+    vchrClosingEvent?: ShowCertEvent
+    vchrProgressEvents?: ShowCertEvent[]
+  },
   parsed?: ParsedShowCareer,
 ): ClubAndGrandResult {
   const titles: CumulativeTitle[] = []
@@ -34,7 +45,7 @@ export function evaluateClubAndGrandShowTitles(
   const chnkpCompleted = effectiveKchk >= 4
   const chnkpBasis = `Набрано ${effectiveKchk} КЧК на монопородных выставках (норма: 4 КЧК под 4 разными судьями; 2 СС засчитываются как 1 КЧК однократно).`
   if (chnkpCompleted || effectiveKchk > 0 || ssCount > 0) {
-    const chnkpEvs = parsed?.nkpAdultExhibitions.map((e) => toShowEvidence(e, 'КЧК / СС')) ?? []
+    const chnkpEvs = parsed ? selectNkpEvidence(parsed.nkpAdultExhibitions, 4).items : []
     titles.push({
       id: 'ch-nkp',
       title: 'Чемпион Национального клуба породы',
@@ -73,7 +84,7 @@ export function evaluateClubAndGrandShowTitles(
   const jchnkpCompleted = effectiveYkchk >= 3
   const jchnkpBasis = `Набрано ${effectiveYkchk} ЮКЧК на монопородных выставках (норма: 3 ЮКЧК под 3 разными судьями; 2 ЮСС засчитываются как 1 ЮКЧК однократно).`
   if (jchnkpCompleted || (canCompleteJunior && (effectiveYkchk > 0 || yssCount > 0))) {
-    const jchnkpEvs = parsed?.nkpJuniorExhibitions.map((e) => toShowEvidence(e, 'ЮКЧК / ЮСС')) ?? []
+    const jchnkpEvs = parsed ? selectNkpEvidence(parsed.nkpJuniorExhibitions, 3, { fallbackLabel: 'ЮКЧК' }).items : []
     titles.push({
       id: 'jch-nkp',
       title: 'Юный чемпион Национального клуба породы',
@@ -110,7 +121,7 @@ export function evaluateClubAndGrandShowTitles(
   const vchnkpCompleted = effectiveVkchk >= 3
   const vchnkpBasis = `Набрано ${effectiveVkchk} ВКЧК на монопородных выставках (норма: 3 ВКЧК под 3 разными судьями; 2 ВСС засчитываются как 1 ВКЧК однократно).`
   if (vchnkpCompleted || effectiveVkchk > 0 || vssCount > 0) {
-    const vchnkpEvs = parsed?.nkpVeteranExhibitions.map((e) => toShowEvidence(e, 'ВКЧК / ВСС')) ?? []
+    const vchnkpEvs = parsed ? selectNkpEvidence(parsed.nkpVeteranExhibitions, 3, { fallbackLabel: 'ВКЧК' }).items : []
     titles.push({
       id: 'vch-nkp',
       title: 'Ветеран чемпион Национального клуба породы',
@@ -143,14 +154,24 @@ export function evaluateClubAndGrandShowTitles(
   // 4. ГРАНД-ТИТУЛЫ РКФ ПО КРАСОТЕ (ГЧР, ЮГЧР, ВГЧР)
   const { chrCompleted, jchrCompleted, vchrCompleted } = baseStatus
   const gchrShowCompleted = (chrCompleted && chnkpCompleted) || (st.GCHR ?? 0) > 0
-  const gchrEvs = parsed
-    ? [
-        ...parsed.cacExhibitions.map((e) => toShowEvidence(e, 'CAC (ЧР)')),
-        ...parsed.nkpAdultExhibitions.map((e) => toShowEvidence(e, 'КЧК / СС (ЧНКП)')),
-      ]
-    : []
+  const gchrChrEvs: TitleEvidenceItem[] = chrCompleted
+    ? (baseStatus.chrClosingEvent
+        ? [
+            toShowEvidence(
+              baseStatus.chrClosingEvent,
+              'ЧР',
+              baseStatus.chrClosingEvent.hasExplicitJudge
+                ? `Закрыт титул ЧР · Судья: ${baseStatus.chrClosingEvent.judge}`
+                : 'Закрыт титул ЧР',
+            ),
+          ]
+        : [])
+    : (baseStatus.chrProgressEvents ?? []).map((e) => toShowEvidence(e, 'CAC (ЧР)'))
+  const gchrNkpEvs = parsed ? selectNkpEvidence(parsed.nkpAdultExhibitions, 4, { suffix: 'ЧНКП' }).items : []
+  const gchrEvs = [...gchrChrEvs, ...gchrNkpEvs]
   if (gchrShowCompleted || chrCompleted || effectiveKchk > 0) {
     const remKchk = Math.max(1, 4 - effectiveKchk)
+    const ssHint = effectiveKchk === 0 && ssCount === 1 ? '; есть 1 СС — ещё 1 СС даст 1 КЧК' : ''
     titles.push({
       id: 'grand-ch-russia',
       title: 'Гранд чемпион России по красоте',
@@ -173,7 +194,7 @@ export function evaluateClubAndGrandShowTitles(
       nextStepAdvice: gchrShowCompleted
         ? undefined
         : chrCompleted
-          ? `${remKchk} КЧК на монопородных выставках для закрытия ЧНКП (сейчас ${effectiveKchk}/4 КЧК).`
+          ? `${remKchk} КЧК на монопородных выставках для закрытия ЧНКП (сейчас ${effectiveKchk}/4 КЧК${ssHint}).`
           : chnkpCompleted
             ? 'Закрыть титул «Чемпион России» (ЧР).'
             : `Закрыть ЧР и набрать ${remKchk} КЧК для ЧНКП.`,
@@ -182,12 +203,13 @@ export function evaluateClubAndGrandShowTitles(
   }
 
   const jgchrShowCompleted = jchrCompleted && jchnkpCompleted
-  const jgchrEvs = parsed
-    ? [
-        ...parsed.jcacExhibitions.map((e) => toShowEvidence(e, 'JCAC (ЮЧР)')),
-        ...parsed.nkpJuniorExhibitions.map((e) => toShowEvidence(e, 'ЮКЧК / ЮСС (ЮЧНКП)')),
-      ]
-    : []
+  const jgchrJchrEvs: TitleEvidenceItem[] = jchrCompleted
+    ? (baseStatus.jchrClosingEvent ? [toShowEvidence(baseStatus.jchrClosingEvent, 'ЮЧР', 'Закрыт титул ЮЧР')] : [])
+    : (baseStatus.jchrProgressEvents ?? []).map((e) => toShowEvidence(e, 'JCAC (ЮЧР)'))
+  const jgchrEvs = [
+    ...jgchrJchrEvs,
+    ...(parsed ? selectNkpEvidence(parsed.nkpJuniorExhibitions, 3, { suffix: 'ЮЧНКП', fallbackLabel: 'ЮКЧК' }).items : []),
+  ]
   if (jgchrShowCompleted || (canCompleteJunior && jchrCompleted && (effectiveYkchk > 0 || yssCount > 0))) {
     const remYkchk = Math.max(1, 3 - effectiveYkchk)
     titles.push({
@@ -209,12 +231,13 @@ export function evaluateClubAndGrandShowTitles(
   }
 
   const vgchrShowCompleted = vchrCompleted && vchnkpCompleted
-  const vgchrEvs = parsed
-    ? [
-        ...parsed.vcacExhibitions.map((e) => toShowEvidence(e, 'VCAC (ВЧР)')),
-        ...parsed.nkpVeteranExhibitions.map((e) => toShowEvidence(e, 'ВКЧК / ВСС (ВЧНКП)')),
-      ]
-    : []
+  const vgchrVchrEvs: TitleEvidenceItem[] = vchrCompleted
+    ? (baseStatus.vchrClosingEvent ? [toShowEvidence(baseStatus.vchrClosingEvent, 'ВЧР', 'Закрыт титул ВЧР')] : [])
+    : (baseStatus.vchrProgressEvents ?? []).map((e) => toShowEvidence(e, 'VCAC (ВЧР)'))
+  const vgchrEvs = [
+    ...vgchrVchrEvs,
+    ...(parsed ? selectNkpEvidence(parsed.nkpVeteranExhibitions, 3, { suffix: 'ВЧНКП', fallbackLabel: 'ВКЧК' }).items : []),
+  ]
   if (vgchrShowCompleted || (vchrCompleted && (effectiveVkchk > 0 || vssCount > 0))) {
     const remVkchk = Math.max(1, 3 - effectiveVkchk)
     titles.push({

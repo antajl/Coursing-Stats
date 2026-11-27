@@ -4,7 +4,8 @@
  */
 
 import type { CumulativeTitle, DogCareerData, TitleEvidenceItem } from './types'
-import { parseShowCareer, toShowEvidence, type ParsedShowCareer } from './showHelpers'
+import { parseShowCareer, toShowEvidence, type ParsedShowCareer, type ShowCertEvent } from './showHelpers'
+import { latestShowEvent, selectShowCertsUpToTarget, sortShowEventsAsc } from './showEvidenceHelpers'
 import { evaluateClubAndGrandShowTitles } from './showClubEvaluator'
 
 export interface ShowEvaluationOutput {
@@ -46,6 +47,16 @@ export function evaluateShowTitles(data: DogCareerData): ShowEvaluationOutput {
   const jchrCompleted =
     effectiveJcac >= 3 && p.uniqueJcacJudgesCount + p.ychrkfWithoutJcacCount + p.ychfWithoutJcacCount >= 3
 
+  const jchrSelection = selectShowCertsUpToTarget(p.jcacExhibitions, 3, {
+    reserveEvents: p.rJcacExhibitions,
+    canUseReservePair: p.rJcacCount >= 2,
+  })
+  const jchrEvs: TitleEvidenceItem[] = [
+    ...jchrSelection.selected.map((e) => toShowEvidence(e, e.weight > 1 ? `JCAC ×${e.weight}` : 'JCAC')),
+    ...jchrSelection.reserveUsed.map((e) => toShowEvidence(e, 'R.JCAC (2=1)')),
+  ]
+  const jchrClosingEvent: ShowCertEvent | undefined = jchrSelection.closingEvent
+
   const jchrBasis =
     p.jcacCount === 0 && p.ychrkfWithoutJcacCount + p.ychfWithoutJcacCount >= 3
       ? `Получено ${p.ychrkfWithoutJcacCount + p.ychfWithoutJcacCount} сертификатов ЮЧРКФ/ЮЧФ без CAC (замена 3 JCAC по правилам РКФ)`
@@ -60,7 +71,7 @@ export function evaluateShowTitles(data: DogCareerData): ShowEvaluationOutput {
       status: jchrCompleted ? 'completed' : 'in_progress',
       progressPercent: jchrCompleted ? 100 : Math.min(95, Math.round((effectiveJcac / 3) * 100)),
       fulfilledBasis: jchrCompleted ? jchrBasis : undefined,
-      fulfilledDate: jchrCompleted && p.jcacExhibitions.length > 0 ? p.jcacExhibitions[0]!.date : undefined,
+      fulfilledDate: jchrCompleted ? jchrClosingEvent?.date : undefined,
       rulesSummary: '3 JCAC у 3 разных судей (на «Евразии» и «России» JCAC = 2; 2 R.JCAC = 1 JCAC однократно; либо 3 ЮЧРКФ/ЮЧФ без CAC).',
       requirements: [
         {
@@ -79,11 +90,13 @@ export function evaluateShowTitles(data: DogCareerData): ShowEvaluationOutput {
         },
       ],
       nextStepAdvice: jchrCompleted ? undefined : `${Math.max(1, 3 - effectiveJcac)} JCAC под новым судьёй.`,
+      evidence: jchrEvs.length > 0 ? jchrEvs : undefined,
     })
-    if (jchrCompleted) {
+    if (jchrCompleted && jchrEvs.length) {
       explanations['ЮЧР'] = jchrBasis
-      const evs = p.jcacExhibitions.map((e) => toShowEvidence(e, e.weight > 1 ? `JCAC ×${e.weight}` : 'JCAC'))
-      if (evs.length) evidence['show:ЮЧР'] = evs
+      evidence['show:ЮЧР'] = jchrEvs
+    } else if (jchrCompleted) {
+      explanations['ЮЧР'] = jchrBasis
     }
   }
 
@@ -151,12 +164,36 @@ export function evaluateShowTitles(data: DogCareerData): ShowEvaluationOutput {
     chrBasis = `Победа на «России»/«Евразии» + ${effectiveCac} CAC у другого судьи`
   }
 
+  const targetCac = jchrCompleted || p.hasYearSpan || p.allCacAreSpecialStatus ? 4 : 6
+  const chrSelection = fulfillsChrScheme6
+    ? selectShowCertsUpToTarget(p.cacExhibitions, 6, { reserveEvents: p.rCacExhibitions, canUseReservePair: p.rCacCount >= 2 })
+    : fulfillsChrScheme4Jchr || fulfillsChrScheme4Special
+      ? selectShowCertsUpToTarget(p.cacExhibitions, 4, { reserveEvents: p.rCacExhibitions, canUseReservePair: p.rCacCount >= 2 })
+      : fulfillsChrScheme4Span
+        ? selectShowCertsUpToTarget(p.cacExhibitions, 4, { requireYearSpan: true, reserveEvents: p.rCacExhibitions, canUseReservePair: p.rCacCount >= 2 })
+        : fulfillsChrWinner
+          ? (() => {
+              const winnerEv = sortShowEventsAsc(p.winnerRussiaExhibitions)[0]
+              const cacSorted = sortShowEventsAsc(p.cacExhibitions)
+              const extraCac = cacSorted.find((c) => c.exhibitionId !== winnerEv?.exhibitionId) ?? cacSorted[0]
+              const sel = extraCac ? [extraCac] : []
+              const res = !extraCac && p.rCacCount >= 2 ? sortShowEventsAsc(p.rCacExhibitions).slice(0, 2) : []
+              const closing = latestShowEvent([...(winnerEv ? [winnerEv] : []), ...sel, ...res])
+              return { selected: sel, reserveUsed: res, closingEvent: closing }
+            })()
+          : selectShowCertsUpToTarget(p.cacExhibitions, targetCac, { reserveEvents: p.rCacExhibitions, canUseReservePair: p.rCacCount >= 2 })
+
+  const chrWinnerEvents = fulfillsChrWinner && !fulfillsChrScheme6 && !fulfillsChrScheme4Jchr && !fulfillsChrScheme4Special && !fulfillsChrScheme4Span
+    ? sortShowEventsAsc(p.winnerRussiaExhibitions).slice(0, 1)
+    : []
+  const chrEvs: TitleEvidenceItem[] = [
+    ...chrWinnerEvents.map((e) => toShowEvidence(e, 'Победитель')),
+    ...chrSelection.selected.map((e) => toShowEvidence(e, e.weight > 1 ? `CAC ×${e.weight}` : 'CAC')),
+    ...chrSelection.reserveUsed.map((e) => toShowEvidence(e, 'R.CAC (2=1)')),
+  ]
+  const chrClosingEvent = chrSelection.closingEvent
+
   if (chrCompleted || effectiveCac > 0 || p.rCacCount > 0) {
-    const targetCac = jchrCompleted || p.hasYearSpan || p.allCacAreSpecialStatus ? 4 : 6
-    const chrEvs: TitleEvidenceItem[] = [
-      ...p.winnerRussiaExhibitions.map((e) => toShowEvidence(e, 'Победитель')),
-      ...p.cacExhibitions.map((e) => toShowEvidence(e, e.weight > 1 ? `CAC ×${e.weight}` : 'CAC')),
-    ]
     titles.push({
       id: 'ch-russia',
       title: 'Чемпион России по красоте',
@@ -165,7 +202,7 @@ export function evaluateShowTitles(data: DogCareerData): ShowEvaluationOutput {
       status: chrCompleted ? 'completed' : 'in_progress',
       progressPercent: chrCompleted ? 100 : Math.min(95, Math.round((effectiveCac / targetCac) * 100)),
       fulfilledBasis: chrCompleted ? chrBasis : undefined,
-      fulfilledDate: chrCompleted && p.cacExhibitions.length > 0 ? p.cacExhibitions[p.cacExhibitions.length - 1]!.date : undefined,
+      fulfilledDate: chrCompleted ? chrClosingEvent?.date : undefined,
       rulesSummary: '6 CAC от 6 разных судей; либо 4 CAC от 4 судей с интервалом от 1 года, с дипломом ЮЧР или на выставках CACIB / ЧРКФ ОС.',
       requirements: [
         { text: 'Количество сертификатов CAC', completed: effectiveCac >= targetCac, currentCount: effectiveCac, targetCount: targetCac, details: p.rCacCount >= 2 ? `В наличии: ${p.cacCount} CAC + зачёт 2 R.CAC` : `В наличии: ${p.cacCount} CAC` },
@@ -225,6 +262,14 @@ export function evaluateShowTitles(data: DogCareerData): ShowEvaluationOutput {
   const effectiveVcac = p.vcacCount + (p.rVcacCount >= 2 ? 1 : 0) + p.vchrkfWithoutVcacCount + p.vchfWithoutVcacCount
   const vchrCompleted = effectiveVcac >= 3 && p.uniqueVcacJudgesCount + p.vchrkfWithoutVcacCount + p.vchfWithoutVcacCount >= 3
   const vchrBasis = `Получено ${effectiveVcac} сертификатов VCAC у ${p.uniqueVcacJudgesCount} судей (норма: 3 VCAC)`
+  const vchrSelection = selectShowCertsUpToTarget(p.vcacExhibitions, 3, {
+    reserveEvents: p.rVcacExhibitions,
+    canUseReservePair: p.rVcacCount >= 2,
+  })
+  const vchrEvs: TitleEvidenceItem[] = [
+    ...vchrSelection.selected.map((e) => toShowEvidence(e, e.weight > 1 ? `VCAC ×${e.weight}` : 'VCAC')),
+    ...vchrSelection.reserveUsed.map((e) => toShowEvidence(e, 'R.VCAC (2=1)')),
+  ]
   if (vchrCompleted || effectiveVcac > 0 || p.rVcacCount > 0) {
     titles.push({
       id: 'vch-russia',
@@ -234,14 +279,15 @@ export function evaluateShowTitles(data: DogCareerData): ShowEvaluationOutput {
       status: vchrCompleted ? 'completed' : 'in_progress',
       progressPercent: vchrCompleted ? 100 : Math.min(95, Math.round((effectiveVcac / 3) * 100)),
       fulfilledBasis: vchrCompleted ? vchrBasis : undefined,
+      fulfilledDate: vchrCompleted ? vchrSelection.closingEvent?.date : undefined,
       rulesSummary: '3 VCAC у 3 разных судей в классе ветеранов (2 R.VCAC = 1 VCAC однократно).',
       requirements: [{ text: '3 сертификата VCAC у 3 разных судей', completed: vchrCompleted, currentCount: effectiveVcac, targetCount: 3, details: `В наличии: ${p.vcacCount} VCAC · ${judgesNote(p.uniqueVcacJudgesCount, p.hasExactVcacJudges)}` }],
       nextStepAdvice: vchrCompleted ? undefined : `${Math.max(1, 3 - effectiveVcac)} VCAC под новым судьёй.`,
+      evidence: vchrEvs.length > 0 ? vchrEvs : undefined,
     })
     if (vchrCompleted) {
       explanations['ВЧР'] = vchrBasis
-      const evs = p.vcacExhibitions.map((e) => toShowEvidence(e, e.weight > 1 ? `VCAC ×${e.weight}` : 'VCAC'))
-      if (evs.length) evidence['show:ВЧР'] = evs
+      if (vchrEvs.length) evidence['show:ВЧР'] = vchrEvs
     }
   }
 
@@ -277,7 +323,21 @@ export function evaluateShowTitles(data: DogCareerData): ShowEvaluationOutput {
   }
 
   // 6. НКП и Гранды красоты
-  const clubAndGrand = evaluateClubAndGrandShowTitles(data, { chrCompleted, jchrCompleted, vchrCompleted }, p)
+  const clubAndGrand = evaluateClubAndGrandShowTitles(
+    data,
+    {
+      chrCompleted,
+      jchrCompleted,
+      vchrCompleted,
+      chrClosingEvent,
+      chrProgressEvents: chrSelection.selected,
+      jchrClosingEvent,
+      jchrProgressEvents: jchrSelection.selected,
+      vchrClosingEvent: vchrSelection.closingEvent,
+      vchrProgressEvents: vchrSelection.selected,
+    },
+    p,
+  )
   titles.push(...clubAndGrand.titles)
   Object.assign(explanations, clubAndGrand.explanations)
   Object.assign(evidence, clubAndGrand.evidence)

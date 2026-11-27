@@ -10,6 +10,7 @@ import type { DisciplineEvaluation } from './sportEvaluator'
 import { hasExactCertToken, isValidSportResult, toSportEvidence } from './sportHelpers'
 import type { ShowEvaluationOutput } from './showEvaluator'
 import { parseDateMs, toShowEvidence } from './showHelpers'
+import { latestShowEvent } from './showEvidenceHelpers'
 
 export function evaluateSupremeAndOfficialLists(
   data: DogCareerData,
@@ -106,12 +107,21 @@ export function evaluateSupremeAndOfficialLists(
   const sportLegCompleted = coursingEval.hasChr || racingEval.hasChr || coursingEval.nchCompleted || racingEval.nchCompleted
   const absoluteCompleted = showEval.gchrShowCompleted && sportLegCompleted
   const achBasis = 'Выполнены требования высшего стандарта: Гранд чемпион России по красоте + Чемпион по рабочим качествам'
-  const achEvs: TitleEvidenceItem[] = [...(showEval.evidence['supreme:ГЧР'] ?? [])]
-  if (coursingEval.chrEvent) achEvs.push(toSportEvidence(coursingEval.chrEvent, 'ЧР РК (Курсинг)', 'Чемпионат России'))
-  if (racingEval.chrEvent) achEvs.push(toSportEvidence(racingEval.chrEvent, 'ЧР РК (Рейсинг)', 'Чемпионат России'))
-  if (!coursingEval.chrEvent && !racingEval.chrEvent) {
-    if (coursingEval.nchCompleted && coursingEval.chrkfEvents[0]) achEvs.push(toSportEvidence(coursingEval.chrkfEvents[0], 'НЧ РК (Курсинг)', 'Состязания'))
-    if (racingEval.nchCompleted && racingEval.chrkfEvents[0]) achEvs.push(toSportEvidence(racingEval.chrkfEvents[0], 'НЧ РК (Рейсинг)', 'Состязания'))
+  const achEvs: TitleEvidenceItem[] = []
+  if (showEval.gchrShowCompleted) {
+    const gchrLatest = latestShowEvent(showEval.evidence['supreme:ГЧР'] ?? [])
+    if (gchrLatest) achEvs.push({ ...gchrLatest, award: 'ГЧР' })
+  }
+  const sportChrCandidates: Array<{ event: DogCompetitionEntry; award: string; label: string }> = []
+  if (coursingEval.chrEvent) sportChrCandidates.push({ event: coursingEval.chrEvent, award: 'ЧР РК (Курсинг)', label: 'Чемпионат России' })
+  if (racingEval.chrEvent) sportChrCandidates.push({ event: racingEval.chrEvent, award: 'ЧР РК (Рейсинг)', label: 'Чемпионат России' })
+  if (sportChrCandidates.length > 0) {
+    const best = sportChrCandidates.sort((a, b) => (parseDateMs(b.event.date_start) ?? 0) - (parseDateMs(a.event.date_start) ?? 0))[0]!
+    achEvs.push(toSportEvidence(best.event, best.award, best.label))
+  } else if (coursingEval.nchCompleted && coursingEval.chrkfEvents[0]) {
+    achEvs.push(toSportEvidence(coursingEval.chrkfEvents[0], 'НЧ РК (Курсинг)', 'Состязания'))
+  } else if (racingEval.nchCompleted && racingEval.chrkfEvents[0]) {
+    achEvs.push(toSportEvidence(racingEval.chrkfEvents[0], 'НЧ РК (Рейсинг)', 'Состязания'))
   }
 
   if (absoluteCompleted || showEval.gchrShowCompleted || sportLegCompleted) {

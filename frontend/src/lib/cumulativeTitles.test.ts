@@ -462,4 +462,85 @@ describe('evaluateCumulativeTitles', () => {
     expect(youngRes.inProgress.some((t) => t.id === 'jch-russia')).toBe(true)
     expect(youngRes.inProgress.some((t) => t.id === 'jch-rkf')).toBe(true)
   })
+
+  it('caps ЧР, ЧНКП, ГЧР and АЧР evidence to only the required events (dog 5782 and surplus cases)', () => {
+    // 1. Dog 5782: 7 CAC + 1 R.CAC + 1 СС -> ЧР needs 6 CAC; ГЧР needs 1 latest ЧР + up to 4 КЧК/СС (here 1 СС)
+    const dog5782: DogCareerData = {
+      dogId: 5782,
+      breed: 'САЛЮКИ',
+      showTitles: { CAC: 7, CHRKF: 1, R_CAC: 1, SS: 1 },
+      showHistory: [
+        { date: '06.09.2026', exhibition_id: 98739, exhibition_title: 'Монопородная выставка клуба МОО ОЛС "Конгур"', title: 'СС' },
+        { date: '19.07.2026', exhibition_id: 92385, exhibition_title: 'Выставка клуба РОО КК "СТОЛИЦА"', title: 'R.CAC, ЧФ' },
+        { date: '05.04.2026', exhibition_id: 91852, exhibition_title: 'Выставка клуба МРОО "БРИД"', title: 'ЛПП, CAC, ЧФ' },
+        { date: '05.04.2026', exhibition_id: 91405, exhibition_title: 'Выставка клуба МКОО "КОМОНДОР ПЛЮС"', title: 'ЛПП, CAC, ЧФ' },
+        { date: '29.03.2026', exhibition_id: 91729, exhibition_title: 'Выставка клуба МОО ОЛЖ "ЛИГА\'С"', title: 'ЛПП, CAC, ЧРКФ, ЧФ' },
+        { date: '29.03.2026', exhibition_id: 91513, exhibition_title: 'Выставка клуба МОО "Атмосфера"', title: 'ЛПП, CAC, ЧФ' },
+        { date: '22.03.2026', exhibition_id: 91762, exhibition_title: 'Выставка клуба МООК ОЛИМП', title: 'CAC, ЧФ' },
+        { date: '22.03.2026', exhibition_id: 91406, exhibition_title: 'Выставка клуба МКОО "КРАФТ"', title: 'CAC, ЧФ' },
+        { date: '19.02.2026', exhibition_id: 91659, exhibition_title: 'Выставка клуба МОО КК "ПРЕМЬЕР"', title: 'ЛПП, CAC, ЧФ' },
+      ],
+      competitions: [],
+    }
+
+    const res5782 = evaluateCumulativeTitles(dog5782)
+    expect(res5782.titleEvidence?.['show:ЧР']).toHaveLength(6)
+    const gchr5782 = res5782.inProgress.find((t) => t.id === 'grand-ch-russia')
+    expect(gchr5782?.evidence).toHaveLength(2)
+    expect(gchr5782?.evidence?.[0]?.award).toBe('ЧР')
+    expect(gchr5782?.evidence?.[0]?.date).toBe('05.04.2026')
+    expect(gchr5782?.evidence?.[1]?.award).toBe('СС (ЧНКП)')
+    expect(gchr5782?.nextStepAdvice).toContain('1 СС')
+
+    // 2. Surplus KCHK & SS + completed ГЧР + completed ЧР РК -> АЧР
+    const surplusDog: DogCareerData = {
+      dogId: 77701,
+      breed: 'УИППЕТ',
+      showTitles: { CAC: 7, KCHK: 5, SS: 2 },
+      showHistory: [
+        { date: '01.01.2026', exhibition_id: 1, exhibition_title: 'Шоу 1', title: 'CAC', judge: 'С1' },
+        { date: '02.01.2026', exhibition_id: 2, exhibition_title: 'Шоу 2', title: 'CAC', judge: 'С2' },
+        { date: '03.01.2026', exhibition_id: 3, exhibition_title: 'Шоу 3', title: 'CAC', judge: 'С3' },
+        { date: '04.01.2026', exhibition_id: 4, exhibition_title: 'Шоу 4', title: 'CAC', judge: 'С4' },
+        { date: '05.01.2026', exhibition_id: 5, exhibition_title: 'Шоу 5', title: 'CAC', judge: 'С5' },
+        { date: '06.01.2026', exhibition_id: 6, exhibition_title: 'Шоу 6', title: 'CAC', judge: 'С6' },
+        { date: '07.01.2026', exhibition_id: 7, exhibition_title: 'Шоу 7', title: 'CAC', judge: 'С7' },
+        { date: '10.02.2026', exhibition_id: 8, exhibition_title: 'Моно 1', title: 'КЧК' },
+        { date: '11.02.2026', exhibition_id: 9, exhibition_title: 'Моно 2', title: 'КЧК' },
+        { date: '12.02.2026', exhibition_id: 10, exhibition_title: 'Моно 3', title: 'КЧК' },
+        { date: '13.02.2026', exhibition_id: 11, exhibition_title: 'Моно 4', title: 'КЧК' },
+        { date: '14.02.2026', exhibition_id: 12, exhibition_title: 'Моно 5', title: 'КЧК' },
+        { date: '15.02.2026', exhibition_id: 13, exhibition_title: 'Моно 6', title: 'СС' },
+        { date: '16.02.2026', exhibition_id: 14, exhibition_title: 'Моно 7', title: 'СС' },
+      ],
+      competitions: [
+        { event_id: 100, event_type: 'racing', competition_kind: 'Чемпионат России', placement: 1, status: 'finished', qualification: 'Чемпион России', date_start: '2026-05-01' },
+      ],
+    }
+
+    const resSurplus = evaluateCumulativeTitles(surplusDog)
+    expect(resSurplus.titleEvidence?.['show:ЧР']).toHaveLength(6)
+    expect(resSurplus.titleEvidence?.['show:ЧНКП']).toHaveLength(4)
+    expect(resSurplus.titleEvidence?.['supreme:ГЧР']).toHaveLength(5) // 1 ЧР (06.01.2026) + 4 КЧК
+    expect(resSurplus.titleEvidence?.['supreme:ГЧР']?.[0]?.date).toBe('06.01.2026')
+    expect(resSurplus.titleEvidence?.['supreme:АЧР']).toHaveLength(2) // 1 ГЧР + 1 ЧР РК
+
+    // 3. 3 КЧК + 3 СС -> uses 3 КЧК + 2 СС (= 1 КЧК) = 5 events, drops 3rd СС
+    const ssDog: DogCareerData = {
+      dogId: 77702,
+      breed: 'УИППЕТ',
+      showTitles: { KCHK: 3, SS: 3 },
+      showHistory: [
+        { date: '01.03.2026', exhibition_id: 21, exhibition_title: 'Моно 1', title: 'КЧК' },
+        { date: '02.03.2026', exhibition_id: 22, exhibition_title: 'Моно 2', title: 'КЧК' },
+        { date: '03.03.2026', exhibition_id: 23, exhibition_title: 'Моно 3', title: 'КЧК' },
+        { date: '04.03.2026', exhibition_id: 24, exhibition_title: 'Моно 4', title: 'СС' },
+        { date: '05.03.2026', exhibition_id: 25, exhibition_title: 'Моно 5', title: 'СС' },
+        { date: '06.03.2026', exhibition_id: 26, exhibition_title: 'Моно 6', title: 'СС' },
+      ],
+      competitions: [],
+    }
+    const resSs = evaluateCumulativeTitles(ssDog)
+    expect(resSs.titleEvidence?.['show:ЧНКП']).toHaveLength(5)
+  })
 })

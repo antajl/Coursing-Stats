@@ -13,12 +13,16 @@ export interface ShowCertEvent {
   hasExplicitJudge: boolean
   weight: number
   isSpecialStatus: boolean
+  nkpKind?: 'КЧК' | 'КЧП' | 'СС' | 'ЮКЧК' | 'ЮКЧП' | 'ЮСС' | 'ВКЧК' | 'ВКЧП' | 'ВСС'
 }
 
 export interface ParsedShowCareer {
   cacExhibitions: ShowCertEvent[]
   jcacExhibitions: ShowCertEvent[]
   vcacExhibitions: ShowCertEvent[]
+  rCacExhibitions: ShowCertEvent[]
+  rJcacExhibitions: ShowCertEvent[]
+  rVcacExhibitions: ShowCertEvent[]
   rCacCount: number
   rJcacCount: number
   rVcacCount: number
@@ -130,6 +134,9 @@ export function parseShowCareer(data: DogCareerData): ParsedShowCareer {
   const cacExhibitions: ShowCertEvent[] = []
   const jcacExhibitions: ShowCertEvent[] = []
   const vcacExhibitions: ShowCertEvent[] = []
+  const rCacExhibitions: ShowCertEvent[] = []
+  const rJcacExhibitions: ShowCertEvent[] = []
+  const rVcacExhibitions: ShowCertEvent[] = []
   const chfExhibitions: ShowCertEvent[] = []
   const ychfExhibitions: ShowCertEvent[] = []
   const vchfExhibitions: ShowCertEvent[] = []
@@ -179,12 +186,15 @@ export function parseShowCareer(data: DogCareerData): ParsedShowCareer {
 
     if (parsed.CAC > 0) cacExhibitions.push({ ...baseEv, weight: doubleAdult ? 2 : 1 })
     else if (parsed.R_CAC > 0 && doubleAdult) cacExhibitions.push({ ...baseEv, title: `${exTitle} (R.CAC)` })
+    else if (parsed.R_CAC > 0) rCacExhibitions.push(baseEv)
 
     if (parsed.JCAC > 0) jcacExhibitions.push({ ...baseEv, weight: doubleAge ? 2 : 1 })
     else if (parsed.R_JCAC > 0 && doubleAge) jcacExhibitions.push({ ...baseEv, title: `${exTitle} (R.JCAC)` })
+    else if (parsed.R_JCAC > 0) rJcacExhibitions.push(baseEv)
 
     if (parsed.VCAC > 0) vcacExhibitions.push({ ...baseEv, weight: doubleAge ? 2 : 1 })
     else if (parsed.R_VCAC > 0 && doubleAge) vcacExhibitions.push({ ...baseEv, title: `${exTitle} (R.VCAC)` })
+    else if (parsed.R_VCAC > 0) rVcacExhibitions.push(baseEv)
 
     if (!doubleAdult) histRCac += parsed.R_CAC
     if (!doubleAge) {
@@ -201,9 +211,21 @@ export function parseShowCareer(data: DogCareerData): ParsedShowCareer {
     if (parsed.YCHRKF > 0) ychrkfExhibitions.push(baseEv)
     if (parsed.VCHRKF > 0) vchrkfExhibitions.push(baseEv)
     if (parsed.CACIB > 0) cacibExhibitions.push(baseEv)
-    if (parsed.KCHK > 0 || parsed.KCHP > 0 || parsed.SS > 0) nkpAdultExhibitions.push(baseEv)
-    if (parsed.YKCHK > 0 || parsed.YKCHP > 0 || parsed.YSS > 0) nkpJuniorExhibitions.push(baseEv)
-    if (parsed.VKCHK > 0 || parsed.VKCHP > 0 || parsed.VSS > 0) nkpVeteranExhibitions.push(baseEv)
+    if (parsed.KCHK > 0 || parsed.KCHP > 0 || parsed.SS > 0) {
+      const nkpKind = parsed.KCHK > 0 ? 'КЧК' : parsed.KCHP > 0 ? 'КЧП' : 'СС'
+      const weight = parsed.KCHK > 0 || parsed.KCHP > 0 ? 1 : 0
+      nkpAdultExhibitions.push({ ...baseEv, nkpKind, weight })
+    }
+    if (parsed.YKCHK > 0 || parsed.YKCHP > 0 || parsed.YSS > 0) {
+      const nkpKind = parsed.YKCHK > 0 ? 'ЮКЧК' : parsed.YKCHP > 0 ? 'ЮКЧП' : 'ЮСС'
+      const weight = parsed.YKCHK > 0 ? 1 : parsed.YKCHP > 0 ? 2 : 0
+      nkpJuniorExhibitions.push({ ...baseEv, nkpKind, weight })
+    }
+    if (parsed.VKCHK > 0 || parsed.VKCHP > 0 || parsed.VSS > 0) {
+      const nkpKind = parsed.VKCHK > 0 ? 'ВКЧК' : parsed.VKCHP > 0 ? 'ВКЧП' : 'ВСС'
+      const weight = parsed.VKCHK > 0 ? 1 : parsed.VKCHP > 0 ? 2 : 0
+      nkpVeteranExhibitions.push({ ...baseEv, nkpKind, weight })
+    }
     if (parsed.P_RUSSIA > 0 || /победитель\s*[«"]?(еврази|росси)/i.test(rawTitle)) {
       hasWinnerRussiaOrEurasia = true
       winnerRussiaExhibitions.push(baseEv)
@@ -306,6 +328,9 @@ export function parseShowCareer(data: DogCareerData): ParsedShowCareer {
     cacExhibitions,
     jcacExhibitions,
     vcacExhibitions,
+    rCacExhibitions,
+    rJcacExhibitions,
+    rVcacExhibitions,
     rCacCount,
     rJcacCount,
     rVcacCount,
