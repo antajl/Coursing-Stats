@@ -10,11 +10,10 @@ export interface ExtractedRacingSpeed {
 export interface DogSpeedBreedComparison {
   dogSpeed: number
   breedAvg: number
+  breedMaxSpeed: number
   delta: number
   kind: SpeedMetricKind
   peerCount: number
-  scaleMin: number
-  scaleMax: number
   fillPct: number
   breedMarkerPct: number
 }
@@ -37,13 +36,14 @@ export function extractDogRacingSpeed(
   return null
 }
 
-function clampPct(value: number): number {
-  return Math.max(8, Math.min(96, value))
+function clamp0100(value: number): number {
+  return Math.max(0, Math.min(100, value))
 }
 
 /**
  * Считает сравнение скорости собаки в бегах со средним значением по её канонической породе
- * на базе индекса indexes/top-speed-all.json (с исключением самой собаки из среднего, если коллег >= 2).
+ * на базе индекса indexes/top-speed-all.json (за все года).
+ * За 100% шкалы берётся максимальная скорость среди всех представителей данной породы.
  */
 export function computeDogSpeedBreedComparison({
   racingStats,
@@ -61,10 +61,19 @@ export function computeDogSpeedBreedComparison({
 
   const field = extracted.kind === 'best' ? 'best_speed' : 'avg_speed'
   const selfId = dogId !== undefined && dogId !== null && dogId !== '' ? Number(dogId) : null
+  const selfBest = toPositiveNumber(racingStats?.best_speed) ?? extracted.value
 
   const peers: number[] = []
+  let breedMaxSpeed = Math.max(extracted.value, selfBest)
+
   for (const row of items) {
     if (!matchesBreedFilter(String(row.breed ?? ''), breed)) continue
+
+    const rowMax = toPositiveNumber(row.best_speed) ?? toPositiveNumber(row.avg_speed)
+    if (rowMax !== null && rowMax > breedMaxSpeed) {
+      breedMaxSpeed = rowMax
+    }
+
     const rowId = toPositiveNumber(row.dog_id)
     if (selfId !== null && Number.isFinite(selfId) && rowId === selfId) continue
     const peerSpeed = toPositiveNumber(row[field])
@@ -72,30 +81,20 @@ export function computeDogSpeedBreedComparison({
   }
 
   // Минимум 2 другие собаки породы, чтобы не сравнивать с единичным шумом
-  if (peers.length < 2) return null
+  if (peers.length < 2 || breedMaxSpeed <= 0) return null
 
   const sum = peers.reduce((acc, v) => acc + v, 0)
   const breedAvg = sum / peers.length
   const delta = extracted.value - breedAvg
 
-  const allValues = [...peers, extracted.value]
-  const rawMin = Math.min(...allValues)
-  const rawMax = Math.max(...allValues)
-  const span = rawMax - rawMin
-  const pad = Math.max(2.5, span * 0.14)
-  const scaleMin = Math.floor((rawMin - pad) * 2) / 2
-  const scaleMax = Math.max(scaleMin + 6, Math.ceil((rawMax + pad) * 2) / 2)
-  const range = scaleMax - scaleMin
-
   return {
     dogSpeed: extracted.value,
     breedAvg,
+    breedMaxSpeed,
     delta,
     kind: extracted.kind,
     peerCount: peers.length,
-    scaleMin,
-    scaleMax,
-    fillPct: clampPct(((extracted.value - scaleMin) / range) * 100),
-    breedMarkerPct: clampPct(((breedAvg - scaleMin) / range) * 100),
+    fillPct: clamp0100((extracted.value / breedMaxSpeed) * 100),
+    breedMarkerPct: clamp0100((breedAvg / breedMaxSpeed) * 100),
   }
 }

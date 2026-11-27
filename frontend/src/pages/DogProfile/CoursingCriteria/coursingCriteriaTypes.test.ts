@@ -56,7 +56,7 @@ describe('computeDogSpeedBreedComparison', () => {
     { dog_id: 6, breed: 'Борзая', avg_speed: 59.0, best_speed: 60.0 },
   ]
 
-  it('compares racing avg_speed against same canonical breed excluding the dog itself', () => {
+  it('compares racing avg_speed against same canonical breed using breed max_speed as 100% ceiling', () => {
     const res = computeDogSpeedBreedComparison({
       racingStats: { avg_speed: '55.20', best_speed: '56.10' },
       breed: 'Уиппет',
@@ -67,8 +67,10 @@ describe('computeDogSpeedBreedComparison', () => {
     expect(res?.kind).toBe('avg')
     expect(res?.peerCount).toBe(2)
     expect(res?.breedAvg).toBeCloseTo(53.0, 5)
+    expect(res?.breedMaxSpeed).toBeCloseTo(56.1, 5)
     expect(res?.delta).toBeCloseTo(2.2, 5)
-    expect(res!.fillPct).toBeGreaterThan(res!.breedMarkerPct)
+    expect(res?.fillPct).toBeCloseTo((55.2 / 56.1) * 100, 4)
+    expect(res?.breedMarkerPct).toBeCloseTo((53.0 / 56.1) * 100, 4)
   })
 
   it('returns null when fewer than 2 same-breed peers exist', () => {

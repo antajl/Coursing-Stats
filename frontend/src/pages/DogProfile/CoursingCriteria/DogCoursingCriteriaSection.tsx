@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react'
 import { Compass } from 'lucide-react'
 import { useTopSpeed } from '../../../hooks/useStaticData'
 import { CoursingRadarSvg } from './CoursingRadarSvg'
+import { CriteriaBenchmarkTick } from './CriteriaBenchmarkTick'
 import { CriteriaSpeedBar } from './CriteriaSpeedBar'
 import {
   computeDogSpeedBreedComparison,
@@ -215,10 +216,9 @@ export function DogCoursingCriteriaSection({
                       className="h-full rounded-full bg-forest-600/80 transition-[width] duration-300"
                       style={{ width: `${fillPct.toFixed(1)}%` }}
                     />
-                    <div
-                      className="absolute -top-0.5 h-3 w-[3px] -translate-x-1/2 rounded-full bg-camel-800 ring-1 ring-white/90"
-                      style={{ left: `${refPct.toFixed(1)}%` }}
-                      title={`${secondaryLabel}: ${refVal.toFixed(1)} / 20`}
+                    <CriteriaBenchmarkTick
+                      percent={refPct}
+                      label={`${secondaryLabel}: ${refVal.toFixed(1)} / 20`}
                     />
                   </div>
                 </div>
