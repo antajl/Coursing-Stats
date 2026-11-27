@@ -2,8 +2,11 @@ import { useState, useMemo } from 'react';
 import { Key, AlertTriangle } from 'lucide-react';
 import type { TrackerApplication, ApplicationFilter } from './trackerTypes';
 import { TrackerApplicationRow } from './TrackerApplicationRow';
-import ToolbarSearch from '../../components/toolbar/ToolbarSearch';
-import { TrackerSyncBar } from './TrackerSyncBar';
+import {
+  TrackerApplicationsToolbar,
+  type StatusFilterItem,
+  type CountedFilterItem,
+} from './TrackerApplicationsToolbar';
 import { getStoredToken } from './trackerData';
 
 interface TrackerApplicationsProps {
@@ -28,6 +31,8 @@ export function TrackerApplications({
   onOpenAuth,
 }: TrackerApplicationsProps) {
   const [filter, setFilter] = useState<ApplicationFilter>('all');
+  const [selectedDog, setSelectedDog] = useState<string>('all');
+  const [selectedDocType, setSelectedDocType] = useState<string>('all');
   const [query, setQuery] = useState('');
   const [expandedBarcode, setExpandedBarcode] = useState<string | null>(null);
 
@@ -49,6 +54,43 @@ export function TrackerApplications({
     [applications]
   );
 
+  const statusItems = useMemo<StatusFilterItem[]>(() => {
+    const items: StatusFilterItem[] = [
+      { key: 'all', label: 'Все статусы', count: totalCount, dotClass: 'bg-camel-500' },
+      { key: 'active', label: 'В обработке', count: activeCount, dotClass: 'bg-amber-500' },
+      { key: 'to_pickup', label: 'Готовы к выдаче', count: readyCount, dotClass: 'bg-emerald-500' },
+      { key: 'collected', label: 'Забрано', count: collectedCount, dotClass: 'bg-charcoal-400' },
+    ];
+    if (rejectedCount > 0) {
+      items.push({ key: 'rejected', label: 'Отклонено', count: rejectedCount, dotClass: 'bg-rose-500' });
+    }
+    return items;
+  }, [totalCount, activeCount, readyCount, collectedCount, rejectedCount]);
+
+  const dogItems = useMemo<CountedFilterItem[]>(() => {
+    const counts = new Map<string, number>();
+    for (const app of applications) {
+      const name = app.dogName?.trim();
+      if (!name) continue;
+      counts.set(name, (counts.get(name) ?? 0) + 1);
+    }
+    return Array.from(counts.entries())
+      .map(([name, count]) => ({ name, count }))
+      .sort((a, b) => a.name.localeCompare(b.name, 'ru'));
+  }, [applications]);
+
+  const docTypeItems = useMemo<CountedFilterItem[]>(() => {
+    const counts = new Map<string, number>();
+    for (const app of applications) {
+      const docName = app.documentName?.trim();
+      if (!docName) continue;
+      counts.set(docName, (counts.get(docName) ?? 0) + 1);
+    }
+    return Array.from(counts.entries())
+      .map(([name, count]) => ({ name, count }))
+      .sort((a, b) => a.name.localeCompare(b.name, 'ru'));
+  }, [applications]);
+
   const filteredApps = useMemo(() => {
     const q = query.toLowerCase().trim();
     return applications.filter((app) => {
@@ -60,6 +102,8 @@ export function TrackerApplications({
       else if (filter === 'rejected') matchFilter = app.statusGroup === 'rejected';
 
       if (!matchFilter) return false;
+      if (selectedDog !== 'all' && app.dogName?.trim() !== selectedDog) return false;
+      if (selectedDocType !== 'all' && app.documentName?.trim() !== selectedDocType) return false;
       if (!q) return true;
 
       return (
@@ -69,7 +113,7 @@ export function TrackerApplications({
         (app.pedigreeNumber && app.pedigreeNumber.includes(q))
       );
     });
-  }, [applications, filter, query, receivedSet]);
+  }, [applications, filter, selectedDog, selectedDocType, query, receivedSet]);
 
   const formatDate = (iso: string) => {
     try {
@@ -85,127 +129,30 @@ export function TrackerApplications({
   };
 
   const hasToken = Boolean(getStoredToken());
+  const hasActiveFilters =
+    Boolean(query) || filter !== 'all' || selectedDog !== 'all' || selectedDocType !== 'all';
 
   return (
     <div className="space-y-3">
-      {/* 0a. Compact Account & Sync Status Bar (when connected) */}
-      {(hasToken || isLive) && onOpenAuth && (
-        <TrackerSyncBar
+      {/* 1. Unified Single-Row Toolbar: Search + Dropdown Filters + RKF Online Status + Account */}
+      {(hasToken || isLive) && (
+        <TrackerApplicationsToolbar
+          query={query}
+          onQueryChange={setQuery}
+          filter={filter}
+          onFilterChange={setFilter}
+          statusItems={statusItems}
+          selectedDog={selectedDog}
+          onDogChange={setSelectedDog}
+          dogItems={dogItems}
+          selectedDocType={selectedDocType}
+          onDocTypeChange={setSelectedDocType}
+          docTypeItems={docTypeItems}
+          showSyncControls={hasToken || isLive}
           isRefreshing={isRefreshing}
           onOpenAuth={onOpenAuth}
         />
       )}
-
-      {/* 0. Compact Old Money KPI Summary Strip (when connected) */}
-      {hasToken && (
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3">
-          <button
-            type="button"
-            onClick={() => setFilter('all')}
-            className={`text-left px-3.5 py-2.5 rounded-xl border transition-all cursor-pointer ${
-              filter === 'all'
-                ? 'bg-white border-camel-400 shadow-xs'
-                : 'bg-cream-50/80 border-old-money-200/80 hover:border-camel-300'
-            }`}
-          >
-            <div className="text-[11px] font-medium text-charcoal-500">Всего заявок</div>
-            <div className="text-lg font-bold text-charcoal-900 tabular-nums mt-0.5">{totalCount}</div>
-          </button>
-          <button
-            type="button"
-            onClick={() => setFilter('active')}
-            className={`text-left px-3.5 py-2.5 rounded-xl border transition-all cursor-pointer ${
-              filter === 'active'
-                ? 'bg-white border-amber-400 shadow-xs'
-                : 'bg-cream-50/80 border-old-money-200/80 hover:border-amber-300'
-            }`}
-          >
-            <div className="text-[11px] font-medium text-amber-800">В обработке</div>
-            <div className="text-lg font-bold text-amber-900 tabular-nums mt-0.5">{activeCount}</div>
-          </button>
-          <button
-            type="button"
-            onClick={() => setFilter('to_pickup')}
-            className={`text-left px-3.5 py-2.5 rounded-xl border transition-all cursor-pointer ${
-              filter === 'to_pickup'
-                ? 'bg-white border-emerald-400 shadow-xs'
-                : 'bg-cream-50/80 border-old-money-200/80 hover:border-emerald-300'
-            }`}
-          >
-            <div className="text-[11px] font-medium text-emerald-800">Готовы к выдаче</div>
-            <div className="text-lg font-bold text-emerald-900 tabular-nums mt-0.5">{readyCount}</div>
-          </button>
-          <button
-            type="button"
-            onClick={() => setFilter('collected')}
-            className={`text-left px-3.5 py-2.5 rounded-xl border transition-all cursor-pointer ${
-              filter === 'collected'
-                ? 'bg-white border-camel-400 shadow-xs'
-                : 'bg-cream-50/80 border-old-money-200/80 hover:border-camel-300'
-            }`}
-          >
-            <div className="text-[11px] font-medium text-charcoal-500">Забрано</div>
-            <div className="text-lg font-bold text-charcoal-700 tabular-nums mt-0.5">{collectedCount}</div>
-          </button>
-        </div>
-      )}
-      {/* 1. Unified Single-Row Toolbar (Matching ShowCalendarToolbar & EventsToolbar) */}
-      <div className="flex items-center gap-1.5 w-full min-w-0 overflow-x-auto no-scrollbar py-1.5">
-        <ToolbarSearch
-          value={query}
-          onChange={setQuery}
-          placeholder="Поиск по кличке собаки, титулу или номеру заявки..."
-          width="280px"
-        />
-
-        <button
-          type="button"
-          onClick={() => setFilter('all')}
-          className={`h-8 px-3.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all shrink-0 ${
-            filter === 'all' ? 'cs-glass-pill-active' : 'cs-glass-pill'
-          }`}
-        >
-          Все ({totalCount})
-        </button>
-        <button
-          type="button"
-          onClick={() => setFilter('active')}
-          className={`h-8 px-3.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all shrink-0 ${
-            filter === 'active' ? 'cs-glass-pill-active' : 'cs-glass-pill'
-          }`}
-        >
-          В обработке ({activeCount})
-        </button>
-        <button
-          type="button"
-          onClick={() => setFilter('to_pickup')}
-          className={`h-8 px-3.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all shrink-0 ${
-            filter === 'to_pickup' ? 'cs-glass-pill-active' : 'cs-glass-pill'
-          }`}
-        >
-          Готовы к выдаче ({readyCount})
-        </button>
-        <button
-          type="button"
-          onClick={() => setFilter('collected')}
-          className={`h-8 px-3.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all shrink-0 ${
-            filter === 'collected' ? 'cs-glass-pill-active' : 'cs-glass-pill'
-          }`}
-        >
-          Забрано ({collectedCount})
-        </button>
-        {rejectedCount > 0 && (
-          <button
-            type="button"
-            onClick={() => setFilter('rejected')}
-            className={`h-8 px-3.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all shrink-0 ${
-              filter === 'rejected' ? 'cs-glass-pill-active' : 'cs-glass-pill'
-            }`}
-          >
-            Отклонено ({rejectedCount})
-          </button>
-        )}
-      </div>
 
       {/* Sync / Auth Expired Alert Banner */}
       {syncError && getStoredToken() && (
@@ -276,8 +223,24 @@ export function TrackerApplications({
         {filteredApps.length === 0 ? (
           <div className="p-8 text-center text-xs text-charcoal-500 space-y-2">
             <div>
-              {query || filter !== 'all' ? 'Заявок по выбранным параметрам не найдено' : 'В личном кабинете активных заявок не найдено'}
+              {hasActiveFilters
+                ? 'Заявок по выбранным параметрам не найдено'
+                : 'В личном кабинете активных заявок не найдено'}
             </div>
+            {hasActiveFilters && (
+              <button
+                type="button"
+                onClick={() => {
+                  setQuery('');
+                  setFilter('all');
+                  setSelectedDog('all');
+                  setSelectedDocType('all');
+                }}
+                className="inline-flex items-center px-3 py-1 rounded-full cs-glass-pill text-xs font-medium text-charcoal-700 cursor-pointer"
+              >
+                Сбросить фильтры
+              </button>
+            )}
           </div>
         ) : (
           <div className="divide-y divide-sand-200/60">
