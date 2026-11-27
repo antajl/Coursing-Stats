@@ -72,6 +72,8 @@ import {
   resolveShowJudgeNumericId,
   resolveSportJudgeNumericId,
 } from '../../../frontend/src/lib/judgeIdMap.generated.js'
+import { parseJudgeNames } from '../../src/lib/judge-names.js'
+import type { CalendarJudgeEventSeo } from './entities/judge-seo.js'
 import { loadExhibitionIdsForSitemap, saveAvailableExhibitionsIndex } from '../build-derived/sitemap.js'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT = path.resolve(__dirname, '../../..')
@@ -565,6 +567,44 @@ function prerenderEvents(spaHtml: string, tracker: EntityWriteTracker): number {
   return written
 }
 
+function loadCalendarOnlySportJudges(renderedIds: Set<string>): Map<string, CalendarJudgeEventSeo[]> {
+  const calendar = readJsonFile<
+    Array<{
+      id?: number | string
+      title?: string | null
+      date_start?: string | null
+      location?: string | null
+      competition_type?: string | null
+      judges?: string | null
+      result_count?: number | null
+      participants_count?: number | null
+    }>
+  >(path.join(ROOT, 'data/v1/indexes/calendar-index.json'))
+  const byJudge = new Map<string, CalendarJudgeEventSeo[]>()
+  if (!calendar) return byJudge
+
+  for (const ev of calendar) {
+    if (!ev?.id || !ev.judges) continue
+    const names = parseJudgeNames(ev.judges)
+    for (const judgeName of names) {
+      if (renderedIds.has(judgeName)) continue
+      const list = byJudge.get(judgeName) ?? []
+      if (!list.some((item) => String(item.id) === String(ev.id))) {
+        list.push({
+          id: ev.id,
+          title: ev.title || 'Состязание',
+          date: ev.date_start || null,
+          location: ev.location || null,
+          competitionType: ev.competition_type || null,
+          participantsCount: ev.result_count ?? ev.participants_count ?? null,
+        })
+      }
+      byJudge.set(judgeName, list)
+    }
+  }
+  return byJudge
+}
+
 function prerenderSportJudges(spaHtml: string, tracker: EntityWriteTracker): number {
   const summary = readJsonFile<{
     judges?: Array<{
@@ -577,22 +617,17 @@ function prerenderSportJudges(spaHtml: string, tracker: EntityWriteTracker): num
     }>
   }>(path.join(ROOT, 'data/v1/indexes/judges-summary.json'))
   const judges = summary?.judges || []
+  const renderedIds = new Set<string>()
   let written = 0
-  for (const j of judges) {
-    const id = j.id || j.name
-    if (!id) continue
-    const numericId = j.numeric_id ?? resolveSportJudgeNumericId(id)
+
+  const writeSportJudgePage = (
+    id: string,
+    metaInput: Parameters<typeof sportJudgeMeta>[0],
+  ): void => {
+    const numericId = metaInput.numeric_id
     const judgeSlug = numericId != null ? String(numericId) : encodeURIComponent(id)
     const canonicalUrl = `${SITE_ORIGIN}/judges/${judgeSlug}/`
-
-    const meta = sportJudgeMeta({
-      id,
-      numeric_id: numericId,
-      name: j.name || id,
-      unique_events: j.unique_events,
-      unique_breeds: j.unique_breeds,
-      unique_dogs: j.unique_dogs,
-    })
+    const meta = sportJudgeMeta(metaInput)
     const html = applyMetaToSpaShell(spaHtml, {
       title: meta.title,
       description: meta.description,
@@ -600,18 +635,43 @@ function prerenderSportJudges(spaHtml: string, tracker: EntityWriteTracker): num
       bodyHtml: buildSimpleEntityBodyHtml(meta),
       jsonLd: meta.jsonLd || breadcrumbJsonLd(meta.breadcrumbs),
     })
-
-    // Write canonical page under numeric slug if available
     writeEntityHtml(tracker, `judges/${judgeSlug}/index.html`, html)
     written++
 
-    // If numeric slug is used and differs from legacy ID, write 301 static redirect at legacy path
     if (numericId != null && String(numericId) !== id) {
       const legacyRel = `judges/${staticSeoPathSegment(id)}/index.html`
       if (!tracker.has(legacyRel)) {
         writeEntityHtml(tracker, legacyRel, buildRedirectHtml(canonicalUrl))
       }
     }
+  }
+
+  for (const j of judges) {
+    const id = j.id || j.name
+    if (!id) continue
+    renderedIds.add(id)
+    const numericId = j.numeric_id ?? resolveSportJudgeNumericId(id)
+    writeSportJudgePage(id, {
+      id,
+      numeric_id: numericId,
+      name: j.name || id,
+      unique_events: j.unique_events,
+      unique_breeds: j.unique_breeds,
+      unique_dogs: j.unique_dogs,
+    })
+  }
+
+  // Fallback for judges appearing in event judge brigades / racing / team protocols without per-heat score sheets
+  for (const [id, events] of loadCalendarOnlySportJudges(renderedIds).entries()) {
+    const sorted = [...events].sort((a, b) => (b.date || '').localeCompare(a.date || ''))
+    const numericId = resolveSportJudgeNumericId(id)
+    writeSportJudgePage(id, {
+      id,
+      numeric_id: numericId,
+      name: id,
+      unique_events: sorted.length,
+      calendarEvents: sorted,
+    })
   }
   return written
 }

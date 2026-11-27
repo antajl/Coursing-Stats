@@ -40,6 +40,15 @@ export function parseJudgeNameTokens(fullName: string): {
   return { surname, initials: null, withInitials: surname, parts }
 }
 
+export type CalendarJudgeEventSeo = {
+  id: number | string
+  title: string
+  date?: string | null
+  location?: string | null
+  competitionType?: string | null
+  participantsCount?: number | null
+}
+
 export function sportJudgeMeta(judge: {
   id: string
   numeric_id?: number | null
@@ -47,22 +56,38 @@ export function sportJudgeMeta(judge: {
   unique_events?: number | null
   unique_breeds?: number | null
   unique_dogs?: number | null
+  calendarEvents?: CalendarJudgeEventSeo[]
 }): SimpleEntityMeta {
   const shortName = judge.name?.trim() || judge.id
   const fullName = SPORT_JUDGE_FULL_NAMES[shortName] || null
   const displayName = fullName ? `${fullName} (${shortName})` : shortName
   const primaryName = fullName || shortName
   const { surname, withInitials } = parseJudgeNameTokens(primaryName)
+  const calEvents = judge.calendarEvents || []
+  const totalCalendarParticipants = calEvents.reduce(
+    (sum, ev) => sum + (ev.participantsCount && ev.participantsCount > 0 ? ev.participantsCount : 0),
+    0,
+  )
   const facts = [
     judge.unique_events != null ? pluralizeRu(judge.unique_events, 'соревнование', 'соревнования', 'соревнований') : null,
     judge.unique_breeds != null ? pluralizeRu(judge.unique_breeds, 'порода', 'породы', 'пород') : null,
-    judge.unique_dogs != null ? pluralizeRu(judge.unique_dogs, 'собака', 'собаки', 'собак') : null,
+    judge.unique_dogs != null
+      ? pluralizeRu(judge.unique_dogs, 'собака', 'собаки', 'собак')
+      : totalCalendarParticipants > 0
+        ? pluralizeRu(totalCalendarParticipants, 'участник', 'участника', 'участников')
+        : null,
   ].filter(Boolean)
   const title = `${displayName} — судья РКФ по курсингу и бегам борзых: статистика соревнований | Курсинг Статс`
+  const calEventTitles = calEvents
+    .map((ev) => ev.title)
+    .filter(Boolean)
+    .slice(0, 3)
   const description =
-    facts.length > 0
-      ? `Судья РКФ ${displayName}: ${facts.join(', ')}. Обслуженные турниры, средние баллы по критериям и судейские бригады.`
-      : `Судья РКФ ${displayName}: обслуженные состязания, оценки собак и судимые породы.`
+    calEvents.length > 0 && judge.unique_breeds == null
+      ? `Судья РКФ ${displayName}: ${facts.join(', ')}. Судейская бригада и результаты турниров: ${calEventTitles.join('; ')}.`
+      : facts.length > 0
+        ? `Судья РКФ ${displayName}: ${facts.join(', ')}. Обслуженные турниры, средние баллы по критериям и судейские бригады.`
+        : `Судья РКФ ${displayName}: обслуженные состязания, оценки собак и судимые породы.`
   const judgeSlug = judge.numeric_id != null ? String(judge.numeric_id) : encodeURIComponent(judge.id)
   const url = `${SITE_ORIGIN}/judges/${judgeSlug}/`
   const breadcrumbs = [
@@ -79,12 +104,34 @@ export function sportJudgeMeta(judge: {
     fullName,
   ].filter((n): n is string => Boolean(n) && n !== primaryName)
 
+  const eventsListHtml =
+    calEvents.length > 0
+      ? `<h3>Обслуженные состязания</h3>\n<ul>\n${calEvents
+          .slice(0, 20)
+          .map((ev) => {
+            const parts = [
+              ev.date ? escapeHtml(ev.date) : null,
+              `<a href="/event/${escapeHtml(String(ev.id))}/"><strong>${escapeHtml(ev.title)}</strong></a>`,
+              ev.competitionType ? escapeHtml(ev.competitionType) : null,
+              ev.location ? escapeHtml(ev.location) : null,
+              ev.participantsCount
+                ? pluralizeRu(ev.participantsCount, 'участник', 'участника', 'участников')
+                : null,
+            ].filter(Boolean)
+            return `  <li>${parts.join(' — ')}</li>`
+          })
+          .join('\n')}\n</ul>`
+      : ''
+
   const contentHtml = [
     `<section aria-label="Судейская квалификация">`,
     `<h2>Судейство соревнований по курсингу и бегам борзых</h2>`,
-    `<p><strong>${escapeHtml(displayName)}</strong> — официальный судья Российской кинологической федерации (РКФ) по беговым дисциплинам борзых (курсинг, рейсинг). ${facts.length > 0 ? `Опыт судейства: ${escapeHtml(facts.join(', '))}.` : ''}</p>`,
+    `<p><strong>${escapeHtml(displayName)}</strong> — судья Российской кинологической федерации (РКФ) по беговым дисциплинам борзых (курсинг, рейсинг). ${facts.length > 0 ? `Опыт судейства: ${escapeHtml(facts.join(', '))}.` : ''}</p>`,
+    eventsListHtml,
     `</section>`,
-  ].join('\n')
+  ]
+    .filter(Boolean)
+    .join('\n')
 
   const jsonLd = {
     '@context': 'https://schema.org',

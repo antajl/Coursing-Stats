@@ -321,6 +321,35 @@ describe('prerender-seo helpers', () => {
     expect(person.jobTitle).toContain('Судья по курсингу и бегам борзых')
   })
 
+  it('sportJudgeMeta renders rich SEO meta and event links for calendar-only brigade judges without heat scores', () => {
+    const meta = sportJudgeMeta({
+      id: 'Молев С.Ю.',
+      numeric_id: 33,
+      name: 'Молев С.Ю.',
+      unique_events: 1,
+      calendarEvents: [
+        {
+          id: 1556,
+          title: 'Состязания CACL (Михайловское) по бегам борзых',
+          date: '2017-08-13',
+          location: 'Московская область, Пушкинский р-н, д. Михайловское',
+          competitionType: 'Бега борзых (рейсинг)',
+          participantsCount: 58,
+        },
+      ],
+    })
+
+    expect(meta.title).toContain('Молев С.Ю.')
+    expect(meta.description).toContain('1 соревнование')
+    expect(meta.description).toContain('58 участников')
+    expect(meta.description).toContain('Состязания CACL (Михайловское)')
+    expect(meta.description).not.toContain('0 пород')
+    expect(meta.contentHtml).toContain('<a href="/event/1556/">')
+    expect(meta.contentHtml).toContain('Бега борзых (рейсинг)')
+    const breadcrumb = (meta.jsonLd as any)['@graph'].find((i: any) => i['@type'] === 'BreadcrumbList')
+    expect(breadcrumb.itemListElement.at(-1).item).toBe('https://coursing-stats.ru/judges/33/')
+  })
+
   it('showJudgeMeta formats judge name in TitleCase without all-caps and sets RKF expert title', () => {
     const meta = showJudgeMeta({
       id: 'орлова|м|о',
