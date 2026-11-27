@@ -71,10 +71,13 @@ export function CoursingRadarSvg({
         role="img"
         aria-label={`Диаграмма 5 критериев курсинга: ${primaryLabel} и ${secondaryLabel}`}
       >
-        {/* Concentric reference pentagons */}
+        {/* Concentric reference pentagons (tick labels sit in the top-right sector so top vertex label stays clear) */}
         {rings.map((tick, ringIdx) => {
           const ratio = (tick - minFloor) / span
-          const [, labelY] = pointAt(0, ratio)
+          const [x0, y0] = pointAt(0, ratio)
+          const [x1, y1] = pointAt(1, ratio)
+          const labelX = x0 + (x1 - x0) * 0.42
+          const labelY = y0 + (y1 - y0) * 0.42
           const isOuter = ringIdx === rings.length - 1
           return (
             <g key={tick}>
@@ -86,9 +89,13 @@ export function CoursingRadarSvg({
                 strokeDasharray={isOuter ? undefined : '3 3'}
               />
               <text
-                x={CX + 4}
-                y={labelY - 2}
-                className="fill-charcoal-400 font-mono text-[8.5px]"
+                x={labelX.toFixed(1)}
+                y={(labelY - 2).toFixed(1)}
+                textAnchor="middle"
+                paintOrder="stroke"
+                stroke="#ffffff"
+                strokeWidth={2.5}
+                className="fill-charcoal-400 font-mono text-[8px]"
               >
                 {formatTick(tick)}
               </text>
