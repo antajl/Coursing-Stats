@@ -85,11 +85,11 @@ export function DogCoursingCriteriaSection({
       aria-labelledby="coursing-criteria-heading"
       className="rounded-xl border border-forest-200 bg-white p-3.5 sm:p-4"
     >
-      {/* Заголовок и переключатель режима */}
+      {/* Заголовок, метаданные в одну строку на десктопе и переключатель режима */}
       <div className="mb-2.5 flex flex-col gap-2 border-b border-old-money-100 pb-2 sm:flex-row sm:items-center sm:justify-between">
-        <div className="min-w-0">
+        <div className="min-w-0 flex flex-wrap items-baseline gap-x-2.5 gap-y-0.5">
           <div className="flex items-center gap-2">
-            <Compass className="h-4 w-4 shrink-0 text-forest-700" strokeWidth={1.75} aria-hidden />
+            <Compass className="h-4 w-4 shrink-0 text-forest-700 self-center" strokeWidth={1.75} aria-hidden />
             <h2
               id="coursing-criteria-heading"
               className="text-base sm:text-lg font-bold tracking-tight text-charcoal-800"
@@ -97,9 +97,10 @@ export function DogCoursingCriteriaSection({
               Разбор 5 критериев курсинга
             </h2>
           </div>
-          <p className="mt-0.5 text-xs text-charcoal-500">
-            {pluralStarts(criteria.events_count)} · {pluralHeats(criteria.heats_count)} с разбивкой по 20-балльной шкале
-          </p>
+          <span className="text-xs text-charcoal-500">
+            {pluralStarts(criteria.events_count)} · {pluralHeats(criteria.heats_count)}
+            <span className="hidden md:inline"> · шкала 20 б.</span>
+          </span>
         </div>
 
         {hasRoundsComparison && (
@@ -138,8 +139,8 @@ export function DogCoursingCriteriaSection({
         )}
       </div>
 
-      {/* Сетка: слева радар в едином фрейме, справа 5 шкал + компактный итог */}
-      <div className="grid grid-cols-1 items-stretch gap-3 lg:grid-cols-[276px_minmax(0,1fr)] lg:gap-4">
+      {/* Сетка: слева крупный радар в едином фрейме, справа 5 шкал + компактный итог */}
+      <div className="grid grid-cols-1 items-stretch gap-3 lg:grid-cols-[328px_minmax(0,1fr)] lg:gap-4">
         <CoursingRadarSvg
           primary={primaryTuple}
           secondary={secondaryTuple}

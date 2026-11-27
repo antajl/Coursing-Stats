@@ -8,9 +8,9 @@ interface CoursingRadarSvgProps {
   secondaryLabel: string
 }
 
-const CX = 132
-const CY = 104
-const RADIUS = 72
+const CX = 148
+const CY = 124
+const RADIUS = 96
 const START_ANGLE = -Math.PI / 2
 
 function pointAt(axisIdx: number, ratio: number): [number, number] {
@@ -64,10 +64,10 @@ export function CoursingRadarSvg({
   const secondaryPoly = polygonPoints(secondary, minFloor, maxCeil)
 
   return (
-    <div className="flex h-full w-full flex-col items-center justify-between rounded-xl border border-old-money-100/90 bg-cream-50/45 px-2.5 py-2">
+    <div className="flex h-full w-full flex-col items-center justify-between rounded-xl border border-old-money-100/90 bg-cream-50/45 px-2 py-2">
       <svg
-        viewBox="0 0 264 192"
-        className="w-full max-w-[262px] h-auto select-none my-auto"
+        viewBox="0 0 296 238"
+        className="w-full max-w-[310px] h-auto select-none my-auto"
         role="img"
         aria-label={`Диаграмма 5 критериев курсинга: ${primaryLabel} и ${secondaryLabel}`}
       >
@@ -95,7 +95,7 @@ export function CoursingRadarSvg({
                 paintOrder="stroke"
                 stroke="#ffffff"
                 strokeWidth={2.5}
-                className="fill-charcoal-400 font-mono text-[8px]"
+                className="fill-charcoal-400 font-mono text-[8.5px]"
               >
                 {formatTick(tick)}
               </text>
@@ -106,10 +106,11 @@ export function CoursingRadarSvg({
         {/* Radial axes */}
         {COURSING_CRITERIA_ITEMS.map((item, idx) => {
           const [ax, ay] = pointAt(idx, 1)
-          const [lx, ly] = pointAt(idx, 1.19)
+          const labelRatio = idx === 0 ? 1.15 : idx === 2 || idx === 3 ? 1.14 : 1.11
+          const [lx, ly] = pointAt(idx, labelRatio)
           const anchor =
             idx === 0 ? 'middle' : idx === 1 || idx === 2 ? 'start' : 'end'
-          const dy = idx === 0 ? -4 : idx === 2 || idx === 3 ? 6 : 3
+          const dy = idx === 0 ? -3 : idx === 2 || idx === 3 ? 7 : 3
           return (
             <g key={item.key}>
               <line
