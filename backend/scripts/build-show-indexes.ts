@@ -59,6 +59,7 @@ import {
 } from '../lib/show-dog-dedupe'
 import { getExhibitionsRkfStore } from '../lib/exhibitions-rkf-store'
 import { canonicalBreed } from '../src/lib/breed-mapping'
+import { transliterateRuToLat } from '../lib/text-normalization.js'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -1552,9 +1553,13 @@ async function main() {
   const strongDetailByNameBreed = new Map<string, ShowDog>()
   const strongKeyFor = (d: ShowDog) => {
     const canB = (canonicalBreed(d.breed || '') || d.breed || '').toUpperCase().trim()
-    return canB && isStrongShowDogName(d.name_lat, d.name_ru)
-      ? `${primaryShowDogNameKey(d.name_lat, d.name_ru)}|${canB}`
-      : ''
+    const primaryName = (d.name_ru || d.name_lat || '').toUpperCase().replace(/\s+/g, ' ').trim()
+    const asciiPrimary = primaryName ? transliterateRuToLat(primaryName).toUpperCase().replace(/\s+/g, ' ').trim() : ''
+    if (!canB || primaryName.length < 12) return ''
+    if (isStrongShowDogName(d.name_lat, d.name_ru) || primaryName.split(' ').length >= 2) {
+      return `${asciiPrimary || primaryShowDogNameKey(d.name_lat, d.name_ru)}|${canB}`
+    }
+    return ''
   }
 
   for (const dog of dogs) {

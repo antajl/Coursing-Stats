@@ -108,7 +108,8 @@ export async function queryGlobalSearchShards(rawQuery: string): Promise<{
     const cleanBreed = (canonicalBreed(hit.breedOrMeta) || hit.breedOrMeta).toUpperCase().trim()
     const cleanName = hit.namePrimary.toUpperCase().replace(/\s+/g, ' ').trim()
     if ((hit.kind === 'x' || hit.kind === 'b') && cleanName.length >= 12 && cleanBreed) {
-      const key = `${cleanName}|${cleanBreed}`
+      const asciiKey = transliterateToAscii(cleanName).replace(/[^a-z0-9]+/g, ' ').trim()
+      const key = `${asciiKey || cleanName}|${cleanBreed}`
       if (seenDogNameBreed.has(key)) continue
       seenDogNameBreed.add(key)
       dedupedDogs.push({ ...hit, breedOrMeta: cleanBreed })

@@ -3,12 +3,12 @@ import path from 'node:path'
 import {
   searchPrefixShardBucket,
   toSearchAsciiTokens,
+  transliterateToAscii,
   type SearchRecordKind,
   type SearchShardsManifest,
   type SearchShardTuple,
 } from '../../lib/search-prefix'
 import { canonicalBreed } from '../../src/lib/breed-mapping'
-import { isStrongShowDogName, primaryShowDogNameKey } from '../../lib/show-dog-dedupe'
 
 const DATA_V1 = path.resolve('data/v1')
 const OUT_DIR = path.join(DATA_V1, 'indexes/search-shards')
@@ -87,8 +87,10 @@ export function buildSearchShards(): SearchShardsManifest {
         const showsCount = Number(d.total_shows) || 0
         const tuple: SearchShardTuple = [id, primary, secondary, cleanBreed, 'x', showsCount]
 
-        if (isStrongShowDogName(d.name_lat, d.name_ru) && cleanBreed) {
-          const strongKey = `${primaryShowDogNameKey(d.name_lat, d.name_ru)}|${cleanBreed.toUpperCase()}`
+        const cleanPrimary = primary.toUpperCase().replace(/\s+/g, ' ').trim()
+        if (cleanPrimary.length >= 12 && cleanBreed) {
+          const asciiKey = transliterateToAscii(cleanPrimary).replace(/[^a-z0-9]+/g, ' ').trim()
+          const strongKey = `${asciiKey || cleanPrimary}|${cleanBreed.toUpperCase()}`
           const score =
             (Number(d.rank) > 0 ? 100000 : 0) +
             showsCount * 100 +
