@@ -170,7 +170,7 @@ async function showDashboard(store) {
 
   const lastTime = parseInt(store.rkf_last_refresh_timestamp || '0', 10);
   const elapsed = Math.floor((Date.now() - lastTime) / 1000);
-  if (elapsed < COOLDOWN_SECONDS) startCooldown(COOLDOWN_SECONDS - elapsed);
+  const withinCooldown = Number.isFinite(elapsed) && elapsed >= 0 && elapsed < COOLDOWN_SECONDS;
 
   if (store.cached_apps && store.cached_apps.length > 0) {
     currentApps = store.cached_apps;
@@ -180,6 +180,16 @@ async function showDashboard(store) {
     handleSearch(currentFilter);
   }
 
+  // Если с последнего авто/ручного обновления ещё не прошло 60 сек — не делаем повторный запрос и держим кулдаун
+  if (withinCooldown && store.cached_apps && store.cached_apps.length > 0) {
+    startCooldown(COOLDOWN_SECONDS - elapsed);
+    setStatusState('ok');
+    return;
+  }
+
+  // Автоматическое обновление при открытии запускает тот же 60-сек кулдаун на ручной кнопке
+  await chrome.storage.local.set({ rkf_last_refresh_timestamp: Date.now() });
+  startCooldown(COOLDOWN_SECONDS);
   fetchData(store.rkfToken, store.profileId, store.userUuid);
 }
 
