@@ -7,7 +7,8 @@ import { formatJudgeDisplayName, getSportJudgeStrictnessBadge } from '../../lib/
 import { getSportJudgeInfo } from '../../lib/sportJudgesRegistry'
 import { resolveSportJudgeNumericId } from '../../lib/judgeIdMap.generated'
 import { sortArray, type SortState } from '../../lib/judgeSortUtils'
-import type { BreedStat, CriteriaStat, ListTab } from './JudgeDetail/types'
+import type { BreedStat, CriteriaStat, JudgeEvent, ListTab } from './JudgeDetail/types'
+import type { CalendarJudgeEvent } from '../../lib/staticData/judges'
 import { collectEvents, formatBreedName } from './JudgeDetail/utils'
 import { JudgeProfileHero } from './JudgeDetail/JudgeProfileHero'
 import { JudgeBreedsTab } from './JudgeDetail/JudgeBreedsTab'
@@ -73,7 +74,18 @@ export default function JudgeDetail() {
     return sortArray(stats, criteriaSort.field, criteriaSort.direction, criteriaSort.field === 'name')
   }, [judgeData?.criteria_stats, criteriaSort])
 
-  const allEvents = useMemo(() => collectEvents(sortedBreeds), [sortedBreeds])
+  const allEvents = useMemo(() => {
+    const scoredEvents = collectEvents(sortedBreeds)
+    if (scoredEvents.length > 0) return scoredEvents
+    const calEvents = (judgeData?.calendar_events as CalendarJudgeEvent[] | undefined) || []
+    return calEvents.map((ev): JudgeEvent => ({
+      key: `${ev.date}|${ev.event_id}`,
+      title: ev.title,
+      date: ev.date,
+      breed: ev.competition_type || 'Турнир',
+      event_id: ev.event_id,
+    }))
+  }, [sortedBreeds, judgeData?.calendar_events])
 
   const distinctEventCount = useMemo(() => {
     const set = new Set<string>()
@@ -85,11 +97,12 @@ export default function JudgeDetail() {
 
   const availableYears = useMemo(() => {
     const baseBreeds = (baseData?.breed_stats as BreedStat[] | undefined) || []
-    const years = collectEvents(baseBreeds)
-      .map((e) => (e.date || '').slice(0, 4))
-      .filter((y) => /^\d{4}$/.test(y))
+    const scoredYears = collectEvents(baseBreeds).map((e) => (e.date || '').slice(0, 4))
+    const baseCal = (baseData?.calendar_events as CalendarJudgeEvent[] | undefined) || []
+    const calYears = scoredYears.length > 0 ? [] : baseCal.map((e) => (e.date || '').slice(0, 4))
+    const years = [...scoredYears, ...calYears].filter((y) => /^\d{4}$/.test(y))
     return [...new Set(years)].sort((a, b) => b.localeCompare(a))
-  }, [baseData?.breed_stats])
+  }, [baseData?.breed_stats, baseData?.calendar_events])
 
   const filteredEvents = useMemo(() => {
     let list = allEvents
@@ -110,6 +123,13 @@ export default function JudgeDetail() {
   useEffect(() => {
     if (eventBreedFilter) setListTab('events')
   }, [eventBreedFilter])
+
+  useEffect(() => {
+    const calEvents = (judgeData?.calendar_events as CalendarJudgeEvent[] | undefined) || []
+    if (sortedBreeds.length === 0 && calEvents.length > 0) {
+      setListTab('events')
+    }
+  }, [sortedBreeds.length, judgeData?.calendar_events])
 
   useEffect(() => {
     if (!pendingScrollRef.current) return
@@ -227,7 +247,11 @@ export default function JudgeDetail() {
     <>
       <SEO
         title={`${primaryJudgeName} — судья РКФ по курсингу и бегам борзых: статистика соревнований | Курсинг Статс`}
-        description={`Судья РКФ ${primaryJudgeName}${withInitials && withInitials !== primaryJudgeName ? ` (${withInitials})` : ''}: статистика забегов (${eventCount} турниров, ${totalEvals} оценок, ${breedCount} пород), средние баллы по 5 критериям и строгость оценок на Курсинг Статс.`}
+        description={
+          totalEvals > 0
+            ? `Судья РКФ ${primaryJudgeName}${withInitials && withInitials !== primaryJudgeName ? ` (${withInitials})` : ''}: статистика забегов (${eventCount} турниров, ${totalEvals} оценок, ${breedCount} пород), средние баллы по 5 критериям и строгость оценок на Курсинг Статс.`
+            : `Судья РКФ ${primaryJudgeName}${withInitials && withInitials !== primaryJudgeName ? ` (${withInitials})` : ''}: судейская бригада и обслуженные состязания (${eventCount} турниров) на Курсинг Статс.`
+        }
         keywords={`${surname}, ${primaryJudgeName}${withInitials ? `, ${withInitials}` : ''}, судья ркф, курсинг, бега борзых, статистика, оценки, соревнования`}
         canonicalUrl={`https://coursing-stats.ru/judges/${canonicalJudgeSlug}/`}
       />
@@ -238,7 +262,10 @@ export default function JudgeDetail() {
           city,
           jobTitle: role || 'Судья соревнований по курсингу и бегам борзых РКФ',
           url: `https://coursing-stats.ru/judges/${canonicalJudgeSlug}/`,
-          description: `Судья по курсингу и бегам ${primaryJudgeName}: ${eventCount} соревнований, ${totalEvals} оценок, ${breedCount} пород на Курсинг Статс.`,
+          description:
+            totalEvals > 0
+              ? `Судья по курсингу и бегам ${primaryJudgeName}: ${eventCount} соревнований, ${totalEvals} оценок, ${breedCount} пород на Курсинг Статс.`
+              : `Судья по курсингу и бегам ${primaryJudgeName}: участие в судейских бригадах, ${eventCount} соревнований на Курсинг Статс.`,
           worksFor: 'Российская Кинологическая Федерация (РКФ)',
         })}
       />

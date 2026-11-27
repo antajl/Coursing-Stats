@@ -7,6 +7,7 @@ import {
   formatCriteriaData,
   formatJudgesData,
   filterJudgeRawRows,
+  parseJudgeNames,
   type JudgeRawRow,
 } from '../judgeStats'
 import { type ApiResult, fetchJson, judgeDetailKey } from './core'
@@ -63,6 +64,54 @@ interface JudgeDetailFile {
   criteria_stats?: unknown[]
 }
 
+export interface CalendarJudgeEvent {
+  event_id: number | string
+  title: string
+  date: string
+  competition_type?: string | null
+  event_type?: string | null
+  location?: string | null
+  result_count?: number | null
+}
+
+interface CalendarIndexRow {
+  id?: number | string
+  title?: string | null
+  date_start?: string | null
+  competition_type?: string | null
+  event_type?: string | null
+  location?: string | null
+  judges?: string | null
+  result_count?: number | null
+  participants_count?: number | null
+}
+
+async function loadCalendarEventsForJudge(
+  judgeName: string,
+  discipline = '',
+  year = '',
+): Promise<CalendarJudgeEvent[]> {
+  const calendar = await fetchJson<CalendarIndexRow[]>('indexes/calendar-index.json')
+  if (!Array.isArray(calendar)) return []
+  const out: CalendarJudgeEvent[] = []
+  for (const ev of calendar) {
+    if (!ev?.id || !ev.judges) continue
+    if (discipline && ev.event_type !== discipline) continue
+    if (year && !(ev.date_start ?? '').startsWith(`${year}-`)) continue
+    if (!parseJudgeNames(ev.judges).includes(judgeName)) continue
+    out.push({
+      event_id: ev.id,
+      title: ev.title || 'Мероприятие',
+      date: ev.date_start || '',
+      competition_type: ev.competition_type || null,
+      event_type: ev.event_type || null,
+      location: ev.location || null,
+      result_count: ev.result_count ?? ev.participants_count ?? null,
+    })
+  }
+  return out.sort((a, b) => (b.date || '').localeCompare(a.date || ''))
+}
+
 export async function getJudgeDetails(
   judgeId: string,
   breed = '',
@@ -89,6 +138,8 @@ export async function getJudgeDetails(
   const overallAvg =
     allScores.length > 0 ? allScores.reduce((a, b) => a + b, 0) / allScores.length : null
   const info = getSportJudgeInfo(judgeName)
+  const calendarEvents =
+    breedData.length === 0 ? await loadCalendarEventsForJudge(judgeName, discipline, year) : []
 
   return {
     success: true,
@@ -106,6 +157,7 @@ export async function getJudgeDetails(
       avg_score: overallAvg,
       breed_stats: breedData,
       criteria_stats: criteriaData,
+      calendar_events: calendarEvents,
     },
   }
 }
