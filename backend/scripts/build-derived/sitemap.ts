@@ -300,6 +300,29 @@ export function loadExhibitionsByYear(): Record<string, string[]> {
     } catch {
       /* ignore */
     }
+  } else {
+    // CI fallback: clean checkouts omit gitignored data/local/exhibitions-rkf-archive.sqlite,
+    // so read committed modular show sitemaps to preserve all ~56.8k exhibition IDs by year.
+    for (const key of Object.keys(byYear)) {
+      const smPath = path.join(PUBLIC_DIR, `sitemap-shows-${key}.xml`)
+      if (!fs.existsSync(smPath)) continue
+      try {
+        const xml = fs.readFileSync(smPath, 'utf8')
+        for (const m of xml.matchAll(/<loc>[^<]*\/shows\/exhibition\/([^/<]+)\/<\/loc>/g)) {
+          let idStr: string
+          try {
+            idStr = decodeURIComponent(m[1])
+          } catch {
+            idStr = m[1]
+          }
+          if (seen.has(idStr)) continue
+          seen.add(idStr)
+          byYear[key].push(idStr)
+        }
+      } catch {
+        /* ignore */
+      }
+    }
   }
 
   // 2. shows/index.json
