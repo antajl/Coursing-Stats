@@ -38,7 +38,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 20
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -107,6 +107,113 @@ jobs:
           echo "delta_count=${DELTA_COUNT}" >> $GITHUB_OUTPUT
           echo "delete_count=${DELETE_COUNT}" >> $GITHUB_OUTPUT
           echo "SEO plan: hubs=${HUB_COUNT}, entity_delta=${DELTA_COUNT}, entity_delete=${DELETE_COUNT}, state_existed=${STATE_EXISTED}"
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          S3_BUCKET: ${{ secrets.S3_BUCKET }}
+
+      - name: Detect data changes
+        id: data-diff
+        run: |
+          git config core.quotepath false
+
+          LAST_DATA_SHA=""
+          if aws s3 cp "s3://${S3_BUCKET}/_data-deploy-sha.txt" /tmp/last-data-sha.txt --endpoint-url https://storage.yandexcloud.net --only-show-errors 2>/dev/null; then
+            LAST_DATA_SHA=$(tr -d '[:space:]' < /tmp/last-data-sha.txt || true)
+          fi
+
+          if [ "${{ inputs.full_sync }}" = "true" ] || git log -1 --pretty=%B | grep -q '\[full sync\]'; then
+            echo "mode=full" >> $GITHUB_OUTPUT
+            echo "Full sync requested"
+          elif ! aws s3 ls "s3://${S3_BUCKET}/data/v1/ui-flags.json" --endpoint-url https://storage.yandexcloud.net > /dev/null 2>&1; then
+            echo "mode=full" >> $GITHUB_OUTPUT
+            echo "data/v1/ui-flags.json not found on S3 — triggering automatic full sync recovery"
+          elif [ -z "$LAST_DATA_SHA" ] || ! git cat-file -e "${LAST_DATA_SHA}^{commit}" 2>/dev/null; then
+            echo "mode=full" >> $GITHUB_OUTPUT
+            echo "No valid _data-deploy-sha.txt on S3 (${LAST_DATA_SHA:-empty}) — running full data sync to guarantee parity"
+          elif git diff --quiet "$LAST_DATA_SHA" HEAD -- data/v1/; then
+            echo "mode=none" >> $GITHUB_OUTPUT
+            echo "No data files changed since ${LAST_DATA_SHA}. Skipping data deploy step."
+          else
+            git -c core.quotepath=false diff --name-only --diff-filter=d "$LAST_DATA_SHA" HEAD -- data/v1/ | grep -Ev '^data/v1/(dogs/by-id/|dogs/registry\.json|judges/registry\.json|shows/exhibitions/|shows/exhibitions-rkf/|shows/indexes/year-data/|shows/indexes/show-dog-lookup/|shows/indexes/show-dog-lookup\.json|shows/indexes/dog-ranking(-[0-9]+|-unknown)?\.json|pc-db\.sqlite|audit/|README\.md|publish-manifest\.json)' > /tmp/changed_files.txt || true
+            git -c core.quotepath=false diff --name-only --diff-filter=D "$LAST_DATA_SHA" HEAD -- data/v1/ | grep -Ev '^data/v1/(dogs/by-id/|dogs/registry\.json|judges/registry\.json|shows/exhibitions/|shows/exhibitions-rkf/|shows/indexes/year-data/|shows/indexes/show-dog-lookup/|shows/indexes/show-dog-lookup\.json|shows/indexes/dog-ranking(-[0-9]+|-unknown)?\.json|pc-db\.sqlite|audit/|README\.md|publish-manifest\.json)' > /tmp/deleted_files.txt || true
+
+            CHANGED_COUNT=$(grep -c -v '^$' /tmp/changed_files.txt || true)
+            DELETED_COUNT=$(grep -c -v '^$' /tmp/deleted_files.txt || true)
+
+            echo "Diff base (from S3 _data-deploy-sha.txt): $LAST_DATA_SHA"
+            echo "Changed publishable files count: $CHANGED_COUNT"
+            echo "Deleted publishable files count: $DELETED_COUNT"
+
+            if [ "$CHANGED_COUNT" -eq 0 ] && [ "$DELETED_COUNT" -eq 0 ]; then
+              echo "mode=none" >> $GITHUB_OUTPUT
+              echo "Only internal/excluded data files changed since ${LAST_DATA_SHA}. Skipping S3 data deploy."
+            elif [ "$CHANGED_COUNT" -gt 2000 ]; then
+              echo "mode=full" >> $GITHUB_OUTPUT
+              echo "More than 2000 publishable files changed ($CHANGED_COUNT), falling back to full s3 sync"
+            else
+              echo "mode=incremental" >> $GITHUB_OUTPUT
+            fi
+          fi
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          S3_BUCKET: ${{ secrets.S3_BUCKET }}
+
+      - name: Deploy changed data files (Incremental)
+        if: inputs.dry_run != true && steps.data-diff.outputs.mode == 'incremental'
+        run: |
+          echo "Uploading changed publishable files in parallel..."
+          tr '\n' '\0' < /tmp/changed_files.txt | \
+            xargs -0 -r -P 16 -I {} sh -c '[ -n "$1" ] && [ -f "$1" ] && aws s3 cp "$1" "s3://${S3_BUCKET}/$1" --endpoint-url https://storage.yandexcloud.net --acl public-read --cache-control "public, max-age=3600, must-revalidate" --only-show-errors' _ {}
+
+          echo "Removing deleted files from S3..."
+          tr '\n' '\0' < /tmp/deleted_files.txt | \
+            xargs -0 -r -P 16 -I {} sh -c '[ -n "$1" ] && aws s3 rm "s3://${S3_BUCKET}/$1" --endpoint-url https://storage.yandexcloud.net --only-show-errors' _ {}
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          S3_BUCKET: ${{ secrets.S3_BUCKET }}
+
+      - name: Deploy all data (Full Sync)
+        if: inputs.dry_run != true && steps.data-diff.outputs.mode == 'full'
+        run: |
+          echo "Running full S3 sync for public data/v1/ (respecting publish-exclude rules)..."
+          aws s3 sync data/v1/ s3://${{ secrets.S3_BUCKET }}/data/v1/ \
+            --endpoint-url https://storage.yandexcloud.net \
+            --acl public-read \
+            --exclude "shows/protocols/*" \
+            --exclude "shows/exhibitions/*" \
+            --exclude "shows/exhibitions-rkf/*" \
+            --exclude "shows/indexes/year-data/*" \
+            --exclude "shows/indexes/show-dog-lookup/*" \
+            --exclude "shows/indexes/show-dog-lookup.json" \
+            --exclude "shows/indexes/dog-ranking.json" \
+            --exclude "shows/indexes/dog-ranking-unknown.json" \
+            --exclude "dogs/by-id/*" \
+            --exclude "dogs/registry.json" \
+            --exclude "judges/registry.json" \
+            --exclude "pc-db.sqlite*" \
+            --exclude "audit/*" \
+            --exclude "README.md" \
+            --exclude "publish-manifest.json" \
+            --cache-control "public, max-age=3600, must-revalidate" \
+            --delete \
+            --only-show-errors
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          S3_BUCKET: ${{ secrets.S3_BUCKET }}
+
+      - name: Record deployed data SHA on S3
+        if: inputs.dry_run != true && steps.data-diff.outputs.mode != 'none'
+        run: |
+          git rev-parse HEAD > /tmp/data-deploy-sha.txt
+          aws s3 cp /tmp/data-deploy-sha.txt "s3://${S3_BUCKET}/_data-deploy-sha.txt" \
+            --endpoint-url https://storage.yandexcloud.net \
+            --cache-control "no-cache" \
+            --only-show-errors
+          echo "Updated _data-deploy-sha.txt to $(cat /tmp/data-deploy-sha.txt)"
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -213,7 +320,15 @@ jobs:
               --only-show-errors
           fi
 
-          # 9. Upload hub HTML pages (~180 files) and only changed/new entity HTML files in parallel
+          # 9a. Upload hub HTML pages (~180 files, including index.html) immediately before entity delta
+          python3 backend/scripts/ops/s3_apply_delta.py \
+            --bucket "${S3_BUCKET}" \
+            --root-dir "frontend/dist" \
+            --upload-list /tmp/seo-hubs.txt \
+            --workers 32 \
+            --cache-control "public, max-age=0, must-revalidate"
+
+          # 9b. Upload changed/new entity HTML files and prune deleted ones
           DELTA_COUNT="${{ steps.prerender-step.outputs.delta_count }}"
           DELETE_COUNT="${{ steps.prerender-step.outputs.delete_count }}"
           STATE_EXISTED="${{ steps.prerender-step.outputs.state_existed }}"
@@ -227,9 +342,9 @@ jobs:
           python3 backend/scripts/ops/s3_apply_delta.py \
             --bucket "${S3_BUCKET}" \
             --root-dir "frontend/dist" \
-            --upload-list /tmp/seo-hubs.txt \
             --upload-list /tmp/seo-delta.txt \
             --delete-list /tmp/seo-delete.txt \
+            --workers 64 \
             --cache-control "public, max-age=0, must-revalidate"
 
           if [ "$DELTA_COUNT" -gt 0 ] || [ "$DELETE_COUNT" -gt 0 ] || [ "$STATE_EXISTED" != "true" ]; then
@@ -275,96 +390,6 @@ jobs:
             --index-document index.html \
             --error-document index.html \
             --endpoint-url https://storage.yandexcloud.net || true
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          S3_BUCKET: ${{ secrets.S3_BUCKET }}
-
-      - name: Detect data changes
-        id: data-diff
-        run: |
-          git config core.quotepath false
-
-          DIFF_BASE="HEAD~1"
-          BEFORE_SHA="${{ github.event.before }}"
-          if [ -n "$BEFORE_SHA" ] && [ "$BEFORE_SHA" != "0000000000000000000000000000000000000000" ] && git cat-file -e "${BEFORE_SHA}^{commit}" 2>/dev/null; then
-            DIFF_BASE="$BEFORE_SHA"
-          fi
-
-          if [ "${{ inputs.full_sync }}" = "true" ] || git log -1 --pretty=%B | grep -q '\[full sync\]'; then
-            echo "mode=full" >> $GITHUB_OUTPUT
-            echo "Full sync requested"
-          elif ! aws s3 ls "s3://${{ secrets.S3_BUCKET }}/data/v1/ui-flags.json" --endpoint-url https://storage.yandexcloud.net > /dev/null 2>&1; then
-            echo "mode=full" >> $GITHUB_OUTPUT
-            echo "data/v1/ui-flags.json not found on S3 — triggering automatic full sync recovery"
-          elif git diff --quiet "$DIFF_BASE" HEAD -- data/v1/; then
-            echo "mode=none" >> $GITHUB_OUTPUT
-            echo "No data files changed. Skipping data deploy step."
-          else
-            git -c core.quotepath=false diff --name-only --diff-filter=d "$DIFF_BASE" HEAD -- data/v1/ | grep -Ev '^data/v1/(dogs/by-id/|dogs/registry\.json|judges/registry\.json|shows/exhibitions/|shows/exhibitions-rkf/|shows/indexes/year-data/|shows/indexes/show-dog-lookup/|shows/indexes/show-dog-lookup\.json|shows/indexes/dog-ranking(-[0-9]+|-unknown)?\.json|pc-db\.sqlite|audit/|README\.md|publish-manifest\.json)' > /tmp/changed_files.txt || true
-            git -c core.quotepath=false diff --name-only --diff-filter=D "$DIFF_BASE" HEAD -- data/v1/ | grep -Ev '^data/v1/(dogs/by-id/|dogs/registry\.json|judges/registry\.json|shows/exhibitions/|shows/exhibitions-rkf/|shows/indexes/year-data/|shows/indexes/show-dog-lookup/|shows/indexes/show-dog-lookup\.json|shows/indexes/dog-ranking(-[0-9]+|-unknown)?\.json|pc-db\.sqlite|audit/|README\.md|publish-manifest\.json)' > /tmp/deleted_files.txt || true
-
-            CHANGED_COUNT=$(grep -c -v '^$' /tmp/changed_files.txt || true)
-            DELETED_COUNT=$(grep -c -v '^$' /tmp/deleted_files.txt || true)
-
-            echo "Changed publishable files count: $CHANGED_COUNT"
-            echo "Deleted publishable files count: $DELETED_COUNT"
-
-            if [ "$CHANGED_COUNT" -eq 0 ] && [ "$DELETED_COUNT" -eq 0 ]; then
-              echo "mode=none" >> $GITHUB_OUTPUT
-              echo "Only internal/excluded data files changed. Skipping S3 data deploy."
-            elif [ "$CHANGED_COUNT" -gt 2000 ]; then
-              echo "mode=full" >> $GITHUB_OUTPUT
-              echo "More than 2000 publishable files changed ($CHANGED_COUNT), falling back to full s3 sync"
-            else
-              echo "mode=incremental" >> $GITHUB_OUTPUT
-            fi
-          fi
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          S3_BUCKET: ${{ secrets.S3_BUCKET }}
-
-      - name: Deploy changed data files (Incremental)
-        if: inputs.dry_run != true && steps.data-diff.outputs.mode == 'incremental'
-        run: |
-          echo "Uploading changed publishable files in parallel..."
-          tr '\n' '\0' < /tmp/changed_files.txt | \
-            xargs -0 -r -P 16 -I {} sh -c '[ -n "$1" ] && [ -f "$1" ] && aws s3 cp "$1" "s3://${S3_BUCKET}/$1" --endpoint-url https://storage.yandexcloud.net --acl public-read --cache-control "public, max-age=3600, must-revalidate" --only-show-errors' _ {}
-
-          echo "Removing deleted files from S3..."
-          tr '\n' '\0' < /tmp/deleted_files.txt | \
-            xargs -0 -r -P 16 -I {} sh -c '[ -n "$1" ] && aws s3 rm "s3://${S3_BUCKET}/$1" --endpoint-url https://storage.yandexcloud.net --only-show-errors' _ {}
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          S3_BUCKET: ${{ secrets.S3_BUCKET }}
-
-      - name: Deploy all data (Full Sync)
-        if: inputs.dry_run != true && steps.data-diff.outputs.mode == 'full'
-        run: |
-          echo "Running full S3 sync for public data/v1/ (respecting publish-exclude rules)..."
-          aws s3 sync data/v1/ s3://${{ secrets.S3_BUCKET }}/data/v1/ \
-            --endpoint-url https://storage.yandexcloud.net \
-            --acl public-read \
-            --size-only \
-            --exclude "shows/protocols/*" \
-            --exclude "shows/exhibitions/*" \
-            --exclude "shows/exhibitions-rkf/*" \
-            --exclude "shows/indexes/year-data/*" \
-            --exclude "shows/indexes/show-dog-lookup/*" \
-            --exclude "shows/indexes/show-dog-lookup.json" \
-            --exclude "shows/indexes/dog-ranking.json" \
-            --exclude "shows/indexes/dog-ranking-unknown.json" \
-            --exclude "dogs/by-id/*" \
-            --exclude "dogs/registry.json" \
-            --exclude "judges/registry.json" \
-            --exclude "pc-db.sqlite*" \
-            --exclude "audit/*" \
-            --exclude "README.md" \
-            --exclude "publish-manifest.json" \
-            --cache-control "public, max-age=3600, must-revalidate" \
-            --delete
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
