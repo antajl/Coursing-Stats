@@ -29,7 +29,7 @@ export default function DoninoDogHeader({
 }: DoninoDogHeaderProps) {
   return (
     <div className="relative mb-6">
-      <div className="relative min-w-0 rounded-xl border border-old-money-200/80 bg-white p-4 sm:p-5 md:p-6">
+      <div className="relative min-w-0 rounded-2xl border border-old-money-200 bg-white p-4 sm:p-5 md:p-6 shadow-xs">
         <div className="flex flex-col xl:flex-row xl:items-start xl:justify-between gap-3 sm:gap-4">
           {/* Левая часть: Кличка и пол */}
           <div className="min-w-0 flex-1 xl:min-w-[280px]">
@@ -82,10 +82,10 @@ export default function DoninoDogHeader({
               type="button"
               onClick={onToggleFavorite}
               disabled={loadingFavorite}
-              className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-50 ${
+              className={`inline-flex items-center gap-1.5 rounded-full border px-3.5 py-1.5 min-h-[44px] sm:min-h-[36px] text-xs font-semibold transition-colors cursor-pointer touch-manipulation disabled:cursor-not-allowed disabled:opacity-50 ${
                 favorite
-                  ? 'border-amber-400 bg-amber-50 text-amber-700 hover:border-amber-500 hover:bg-amber-100'
-                  : 'border-old-money-200 bg-white text-camel-700 hover:border-camel-400 hover:bg-camel-50'
+                  ? 'border-amber-400 bg-amber-50 text-amber-800 hover:border-amber-500 hover:bg-amber-100'
+                  : 'border-old-money-200 bg-white text-camel-800 hover:border-camel-400 hover:bg-camel-50'
               }`}
               aria-label={favorite ? 'Удалить из избранного' : 'Добавить в избранное'}
               title={favorite ? 'Удалить из избранного' : 'Добавить в избранное'}
@@ -93,6 +93,7 @@ export default function DoninoDogHeader({
             >
               <StarIcon
                 className={`h-3.5 w-3.5 shrink-0 ${favorite ? 'fill-current' : ''}`}
+                strokeWidth={1.75}
                 aria-hidden
               />
               <span>{favorite ? 'В избранном' : 'В избранное'}</span>
@@ -102,13 +103,13 @@ export default function DoninoDogHeader({
             {data?.dog_id && (
               <Link
                 to={`/dog/${data.dog_id}/`}
-                className="inline-flex items-center gap-1.5 rounded-full border border-forest-200 bg-forest-50 px-3.5 py-1.5 text-xs font-semibold text-forest-800 transition-colors hover:border-forest-300 hover:bg-forest-100"
+                className="inline-flex items-center gap-1.5 rounded-full border border-forest-200 bg-forest-50 px-3.5 py-1.5 min-h-[44px] sm:min-h-[36px] text-xs font-semibold text-forest-800 transition-colors hover:border-forest-300 hover:bg-forest-100"
                 title="Перейти в спортивный профиль собаки (соревнования РКФ)"
                 data-export-ignore
               >
-                <Trophy className="h-3.5 w-3.5 text-forest-600 shrink-0" />
+                <Trophy className="h-3.5 w-3.5 text-forest-700 shrink-0" strokeWidth={1.75} aria-hidden />
                 <span>Профиль в спорте</span>
-                <ArrowRight className="h-3 w-3 text-forest-600 shrink-0" />
+                <ArrowRight className="h-3 w-3 text-forest-700 shrink-0" strokeWidth={1.75} aria-hidden />
               </Link>
             )}
           </div>

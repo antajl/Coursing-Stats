@@ -14,7 +14,7 @@ import { SEO } from '../components/SEO'
 import { JsonLd, breadcrumbListSchema, itemPageSchema } from '../components/JsonLd'
 import { SectionFooter } from '../components/SectionFooter'
 import { api } from '../services/api'
-import { SegmentedTabs } from '../components/ui/SegmentedTabs'
+import { MobileSubNavTabs } from '../components/ui/MobileSubNavTabs'
 import { computeDoninoAchievements } from './DoninoDogProfile/doninoAchievements'
 import DoninoDogHeader from './DoninoDogProfile/DoninoDogHeader'
 import DoninoSpeedSection from './DoninoDogProfile/DoninoSpeedSection'
@@ -211,14 +211,36 @@ export default function DoninoDogProfile() {
 
         {/* Мобильный переключатель дисциплин (если есть обе) */}
         {hasSpeedRecords && hasCoursingRecords && (
-          <SegmentedTabs
+          <MobileSubNavTabs<'speed' | 'coursing'>
             tabs={[
-              { id: 'speed', label: 'Замер скорости', count: uniqueSpeedRecords.length },
-              { id: 'coursing', label: 'Бега 350 м', count: coursingHistory.length },
+              {
+                id: 'speed',
+                label: (
+                  <span className="inline-flex items-center gap-1.5">
+                    <span>Замер скорости</span>
+                    <span className="text-[11px] font-medium opacity-75 tabular-nums">
+                      {uniqueSpeedRecords.length}
+                    </span>
+                  </span>
+                ),
+              },
+              {
+                id: 'coursing',
+                label: (
+                  <span className="inline-flex items-center gap-1.5">
+                    <span>Бега 350 м</span>
+                    <span className="text-[11px] font-medium opacity-75 tabular-nums">
+                      {coursingHistory.length}
+                    </span>
+                  </span>
+                ),
+              },
             ]}
             activeTab={mobileTab}
             onChange={setMobileTab}
             ariaLabel="Дисциплины собаки"
+            layout="fill"
+            breakpoint="md"
             className="mb-4"
           />
         )}
