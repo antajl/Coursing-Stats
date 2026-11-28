@@ -39,4 +39,47 @@ describe('splitBilingualSlashNames', () => {
     const res = splitBilingualSlashNames('ALFA / OMEGA', '')
     expect(res.changed).toBe(false)
   })
+
+  it('keeps parenthesized coat tags intact and deduplicates hyphen/apostrophe variants', () => {
+    expect(
+      splitBilingualSlashNames(
+        'РОССО БОРЕАЛЕ ЛЕОПАРДС ЛИП (Г/Ш) /ROSSO BOREALE LEOPARDS LEAP',
+        'РОССО БОРЕАЛЕ ЛЕОПАРДС ЛИП (Г/Ш) /ROSSO BOREALE LEOPARDS LEAP',
+      ),
+    ).toEqual({
+      name_lat: 'ROSSO BOREALE LEOPARDS LEAP',
+      name_ru: 'РОССО БОРЕАЛЕ ЛЕОПАРДС ЛИП (Г/Ш)',
+      changed: true,
+    })
+
+    expect(
+      splitBilingualSlashNames('ZHAR-PTITSA', 'ЖАР ПТИЦА /ZHAR PTITSA'),
+    ).toEqual({
+      name_lat: 'ZHAR-PTITSA',
+      name_ru: 'ЖАР ПТИЦА',
+      changed: true,
+    })
+
+    expect(
+      splitBilingualSlashNames(
+        'SALGREY’S THE POWER OF LOVE',
+        'САЛГРЕЙС ТЭ ПАУЭР ОФ ЛАВ /SALGREYS THE POWER OF LOVE',
+      ),
+    ).toEqual({
+      name_lat: 'SALGREY’S THE POWER OF LOVE',
+      name_ru: 'САЛГРЕЙС ТЭ ПАУЭР ОФ ЛАВ',
+      changed: true,
+    })
+
+    expect(
+      splitBilingualSlashNames(
+        'МАНИФИК МЕТ ОСКАР /MAGNIFIQUE MEUTE OS\u0421AR',
+        'MAGNIFIQUE MEUTE OS\u0421AR',
+      ),
+    ).toEqual({
+      name_lat: 'MAGNIFIQUE MEUTE OSCAR',
+      name_ru: 'МАНИФИК МЕТ ОСКАР',
+      changed: true,
+    })
+  })
 })

@@ -14,8 +14,46 @@ function cleanNorm(s: string): string {
   return s.replace(/\s+/g, ' ').trim();
 }
 
+const CYR_TO_LAT_HOMOGLYPHS: Record<string, string> = {
+  А: 'A', В: 'B', Е: 'E', К: 'K', М: 'M', Н: 'H', О: 'O', Р: 'P', С: 'C', Т: 'T', Х: 'X',
+  а: 'a', в: 'b', е: 'e', к: 'k', м: 'm', н: 'h', о: 'o', р: 'p', с: 'c', т: 't', х: 'x',
+};
+
+/** Fix occasional stray Cyrillic lookalikes inside otherwise Latin names (e.g. OSСAR -> OSCAR). */
+function normalizeStrayCyrillicHomoglyphs(s: string): string {
+  const cyrMatches = s.match(/[а-яё]/gi) ?? [];
+  const latMatches = s.match(/[a-z]/gi) ?? [];
+  if (cyrMatches.length === 0 || latMatches.length < 4 || cyrMatches.length > 2) return s;
+  if (!cyrMatches.every((ch) => ch in CYR_TO_LAT_HOMOGLYPHS)) return s;
+  return s.replace(/[а-яё]/gi, (ch) => CYR_TO_LAT_HOMOGLYPHS[ch] ?? ch);
+}
+
+/** Split on `/` only outside parentheses so coat tags like `(Г/Ш)` stay intact. */
+function splitOutsideParens(s: string): string[] {
+  const parts: string[] = [];
+  let depth = 0;
+  let start = 0;
+  for (let i = 0; i < s.length; i += 1) {
+    const ch = s[i];
+    if (ch === '(') depth += 1;
+    else if (ch === ')' && depth > 0) depth -= 1;
+    else if (ch === '/' && depth === 0) {
+      parts.push(s.slice(start, i));
+      start = i + 1;
+    }
+  }
+  parts.push(s.slice(start));
+  return parts;
+}
+
 function dedupeKey(s: string): string {
-  return cleanNorm(s).toUpperCase().replace(/Ё/g, 'Е');
+  return cleanNorm(s)
+    .toUpperCase()
+    .replace(/Ё/g, 'Е')
+    .replace(/[’'`]/g, '')
+    .replace(/-/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
 }
 
 export function splitBilingualSlashNames(
@@ -29,8 +67,9 @@ export function splitBilingualSlashNames(
     return { name_lat: origLat, name_ru: origRu, changed: false };
   }
 
-  const rawParts = [...origLat.split('/'), ...origRu.split('/')]
+  const rawParts = [...splitOutsideParens(origLat), ...splitOutsideParens(origRu)]
     .map(cleanNorm)
+    .map(normalizeStrayCyrillicHomoglyphs)
     .filter(Boolean);
 
   if (rawParts.length === 0) {
