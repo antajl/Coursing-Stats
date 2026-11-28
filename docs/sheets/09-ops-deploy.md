@@ -13,6 +13,7 @@ verified: 2026-11-08
 
 | Область | Реализация |
 |---------|------------|
+| DNS | **Selectel DNS** (`a..d.ns.selectel.ru`, 0 ₽; ALIAS → бакет S3 через API v2 `/rrset`) |
 | Прод сайта | **Yandex Object Storage** (`https://storage.yandexcloud.net`) |
 | CDN корень | `https://coursing-stats.ru/data/v1/` |
 | Публичный runtime | **Отсутствует** (чистый статический хостинг + CDN JSON, без D1/Workers на проде сайта) |
