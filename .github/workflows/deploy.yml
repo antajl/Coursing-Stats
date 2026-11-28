@@ -47,17 +47,17 @@ jobs:
           cache: 'yarn'
       
       - name: Install dependencies
-        run: yarn install
+        run: |
+          yarn install
+          (cd frontend && yarn install)
+          (cd bot && yarn install)
+          (cd rkf-tracker/bot && yarn install)
 
       - name: Verify Publish Gates
         run: yarn run publish-gates
 
       - name: Run full test suite
-        run: yarn test
-      
-      - name: Install frontend dependencies
-        working-directory: ./frontend
-        run: yarn install
+        run: yarn test -- --maxWorkers=2
       
       - name: Export HTML protocols
         run: yarn run export-all-protocols
