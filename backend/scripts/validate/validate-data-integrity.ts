@@ -281,8 +281,15 @@ class DataValidator {
     if (filePath.includes('competitions')) {
       this.validateCompetition(data, filePath);
     } else if (filePath.includes('dog-profiles')) {
-      this.validateDogProfile(data, filePath);
-      this.validateTotalScore(data, filePath);
+      if (data?.byId && typeof data.byId === 'object') {
+        for (const [dogId, profile] of Object.entries(data.byId)) {
+          this.validateDogProfile(profile, `${filePath}#${dogId}`);
+          this.validateTotalScore(profile, `${filePath}#${dogId}`);
+        }
+      } else {
+        this.validateDogProfile(data, filePath);
+        this.validateTotalScore(data, filePath);
+      }
     }
     // Skip calendar validation entirely - shows and competition calendars have different structures
   }
