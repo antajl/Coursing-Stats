@@ -108,7 +108,7 @@ All `dog_id` in `competitions` **must** have `data/v1/dogs/by-id/{id}.json` (no 
 
 ### RU/LAT Slash-Name Normalization & Bot Show-Dog Routing
 
-1. **Разделение склеенных кличек со слэшем (`normalize-slash-dog-names.ts`):** В карточках `dogs/by-id/*.json` и протоколах `competitions/*.json` не допускаются неразделённые двуязычные строки вида `"LAT / RU"` в одном поле `name_lat` или `name_ru` — они автоматически разносятся в `name_lat` и `name_ru`.
+1. **Разделение склеенных кличек со слэшем (`normalize-slash-dog-names.ts`):** В карточках `dogs/by-id/*.json` и протоколах `competitions/*.json` не допускаются неразделённые двуязычные строки вида `"LAT / RU"` в одном поле `name_lat` или `name_ru` — они автоматически разносятся в `name_lat` и `name_ru`. Сплит по `/` выполняется строго вне скобок (сохраняя пометки вроде `(Г/Ш)`), нормализует случайные кириллические омоглифы в латинице (`OSСAR` -> `OSCAR`) и склеивает пунктуационные варианты дефисов/апострофов (`ZHAR-PTITSA` vs `ZHAR PTITSA`, `SALGREY’S` vs `SALGREYS`).
 2. **Прямая маршрутизация выставочных собак в Telegram-боте (`bot/src/api.ts`, `bot/src/api/shows.ts`):** Для `dogId >= 1_000_000` бот не делает лишних запросов в спортивные паки, а обращается напрямую к `shows/indexes/dog-details/{shard}.json`, разрешает цепочки `alias_to` до глубины 3, извлекает `show_summary` за один проход и при наличии `competition_dog_id` подгружает спортивный профиль.
 
 ---
