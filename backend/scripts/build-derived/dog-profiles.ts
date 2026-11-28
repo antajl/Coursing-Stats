@@ -769,10 +769,11 @@ export function buildDogProfiles(db: Database.Database) {
   const racingSpeedByDog = byDog(racingSpeedRows);
   const qualificationsByDog = byDog(qualificationRows);
   const competitionsByDog = byDog(competitionRows);
-  const coursingCriteriaByDog = buildDogCoursingCriteriaMap(coursingRows, (id) => {
+  const resolveDogBreedKey = (id: number) => {
     const rawBreed = metadataById.get(id)?.breed ?? dogsById.get(id)?.breed ?? '';
     return canonicalBreed(rawBreed) || rawBreed.trim().toUpperCase();
-  });
+  };
+  const coursingCriteriaByDog = buildDogCoursingCriteriaMap(coursingRows, resolveDogBreedKey);
 
   const outDir = path.join(INDEXES_DIR, 'dog-profiles');
   fs.mkdirSync(outDir, { recursive: true });
@@ -785,6 +786,47 @@ export function buildDogProfiles(db: Database.Database) {
     ...competitionsByDog.keys(),
   ]);
   const sortedDogIds = [...allDogIds].sort((a, b) => a - b);
+
+  // Предрасчёт racing_stats и базовых линий по последним забегам породы (leave-one-dog-out)
+  const racingStatsByDog = new Map<number, ReturnType<typeof buildRacingStats> & {
+    breed_last_avg_speed?: string;
+    breed_last_max_speed?: string;
+    breed_last_peer_count?: number;
+  }>();
+  const lastSpeedByBreed = new Map<string, Array<{ dogId: number; speed: number }>>();
+
+  for (const dogId of sortedDogIds) {
+    const stats = buildRacingStats(racingMedalsByDog.get(dogId) ?? [], racingSpeedByDog.get(dogId) ?? []);
+    racingStatsByDog.set(dogId, stats);
+    if (stats.last_avg_speed) {
+      const val = parseFloat(stats.last_avg_speed);
+      const breedKey = resolveDogBreedKey(dogId);
+      if (Number.isFinite(val) && val > 0 && breedKey) {
+        const list = lastSpeedByBreed.get(breedKey) ?? [];
+        list.push({ dogId, speed: val });
+        lastSpeedByBreed.set(breedKey, list);
+      }
+    }
+  }
+
+  for (const entries of lastSpeedByBreed.values()) {
+    if (entries.length < 3) continue; // минимум 2 другие собаки породы помимо текущей
+    let breedSum = 0;
+    let breedMax = 0;
+    for (const item of entries) {
+      breedSum += item.speed;
+      if (item.speed > breedMax) breedMax = item.speed;
+    }
+    const peerCount = entries.length - 1;
+    for (const item of entries) {
+      const stats = racingStatsByDog.get(item.dogId);
+      if (!stats) continue;
+      const peerAvg = (breedSum - item.speed) / peerCount;
+      stats.breed_last_avg_speed = peerAvg.toFixed(2);
+      stats.breed_last_max_speed = breedMax.toFixed(2);
+      stats.breed_last_peer_count = peerCount;
+    }
+  }
 
   const packs = new Map<string, Record<string, unknown>>();
 
@@ -927,7 +969,7 @@ export function buildDogProfiles(db: Database.Database) {
     const dogCompetitions = competitionsByDog.get(dogId) ?? [];
     const coursing_stats = buildCoursingStats(coursingByDog.get(dogId) ?? []);
     const coursing_criteria = coursingCriteriaByDog.get(dogId) ?? null;
-    const racing_stats = buildRacingStats(racingMedalsByDog.get(dogId) ?? [], racingSpeedByDog.get(dogId) ?? []);
+    const racing_stats = racingStatsByDog.get(dogId) ?? buildRacingStats(racingMedalsByDog.get(dogId) ?? [], racingSpeedByDog.get(dogId) ?? []);
     const judge_stats = buildDogJudgesStats(dogCompetitions);
     const titles = aggregateQualificationTitles(qualificationsByDog.get(dogId) ?? []);
 

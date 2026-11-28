@@ -51,14 +51,14 @@ describe('coursing-criteria aggregator', () => {
           ],
         }),
       },
-      // Peer whippet runs (>= 5 peer heats)
+      // Peer whippet runs (>= 5 total peer heats, >= 3 last-round peer heats)
       ...[2, 3, 4].map((dogId) => ({
         dog_id: dogId,
         event_id: 100,
         raw_scores_json: JSON.stringify({
           heats: [
             { heat_number: 1, judges: [{ scores: [16, 17, 17, 16, 17] }] },
-            { heat_number: 2, judges: [{ scores: [16, 17, 17, 16, 17] }] },
+            { heat_number: 2, judges: [{ scores: [15, 16, 16, 15, 16] }] },
           ],
         }),
       })),
@@ -87,13 +87,17 @@ describe('coursing-criteria aggregator', () => {
     expect(whippet1.dog_avg).toEqual([18, 18.5, 17, 17, 18.5])
     expect(whippet1.run1_avg).toEqual([18, 19, 18, 17, 19])
     expect(whippet1.run2_avg).toEqual([18, 18, 16, 17, 18])
-    expect(whippet1.breed_avg).toEqual([16, 17, 17, 16, 17])
+    expect(whippet1.breed_avg).toEqual([15.5, 16.5, 16.5, 15.5, 16.5])
     expect(whippet1.breed_heats_count).toBe(6)
     expect(whippet1.is_global_baseline).toBeUndefined()
+    expect(whippet1.breed_last_avg).toEqual([15, 16, 16, 15, 16])
+    expect(whippet1.breed_last_heats_count).toBe(3)
+    expect(whippet1.is_last_global_baseline).toBeUndefined()
 
     const azavak = result.get(99)!
     expect(azavak.is_global_baseline).toBe(true)
     expect(azavak.breed_heats_count).toBe(9)
     expect(azavak.run2_avg).toBeNull()
+    expect(azavak.breed_last_avg).toBeNull()
   })
 })

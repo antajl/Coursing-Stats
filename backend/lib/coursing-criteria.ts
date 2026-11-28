@@ -14,6 +14,9 @@ export interface DogCoursingCriteriaSummary {
   is_global_baseline?: boolean
   run1_avg: CriteriaTuple | null
   run2_avg: CriteriaTuple | null
+  breed_last_avg: CriteriaTuple | null
+  breed_last_heats_count?: number
+  is_last_global_baseline?: boolean
 }
 
 export interface CoursingCriteriaRowInput {
@@ -112,9 +115,34 @@ export function extractHeatCriteriaTuples(rawScoresJson: string | Record<string,
   return results
 }
 
+function resolveBreedBaseline(
+  breedKey: string,
+  dogCount: number,
+  dogSums: CriteriaTuple,
+  perBreed: Map<string, { sums: CriteriaTuple; count: number }>,
+  globalAvg: CriteriaTuple,
+  globalCount: number,
+  minPeerHeats: number,
+  minBreedHeatsFallback: number,
+): { avg: CriteriaTuple; count: number; isGlobal: boolean } {
+  if (breedKey) {
+    const bStats = perBreed.get(breedKey)
+    if (bStats && bStats.count - dogCount >= minPeerHeats) {
+      const peerSums = [...bStats.sums] as CriteriaTuple
+      subTuple(peerSums, dogSums)
+      const count = bStats.count - dogCount
+      return { avg: averageTuple(peerSums, count), count, isGlobal: false }
+    }
+    if (bStats && bStats.count >= minBreedHeatsFallback) {
+      return { avg: averageTuple(bStats.sums, bStats.count), count: bStats.count, isGlobal: false }
+    }
+  }
+  return { avg: globalAvg, count: globalCount, isGlobal: true }
+}
+
 /**
- * Builds 5-criteria profiles for all coursing dogs with breed (or global fallback) baselines.
- * Uses leave-one-dog-out comparison threshold (>= 5 peer heats) so rare breeds don't compare against themselves.
+ * Builds 5-criteria profiles for all coursing dogs with breed (or global fallback) baselines
+ * both across all rounds and specifically for last rounds (>= 2 heats per event).
  */
 export function buildDogCoursingCriteriaMap(
   rows: CoursingCriteriaRowInput[],
@@ -129,12 +157,17 @@ export function buildDogCoursingCriteriaMap(
     run1Sums: CriteriaTuple
     run2Count: number
     run2Sums: CriteriaTuple
+    lastCount: number
+    lastSums: CriteriaTuple
   }
 
   const perDog = new Map<number, DogAcc>()
   const perBreed = new Map<string, { sums: CriteriaTuple; count: number }>()
+  const perBreedLast = new Map<string, { sums: CriteriaTuple; count: number }>()
   const globalSums = emptySums()
   let globalCount = 0
+  const globalLastSums = emptySums()
+  let globalLastCount = 0
 
   for (const row of rows) {
     const heats = extractHeatCriteriaTuples(row.raw_scores_json)
@@ -152,6 +185,8 @@ export function buildDogCoursingCriteriaMap(
         run1Sums: emptySums(),
         run2Count: 0,
         run2Sums: emptySums(),
+        lastCount: 0,
+        lastSums: emptySums(),
       }
       perDog.set(row.dog_id, acc)
     }
@@ -183,44 +218,78 @@ export function buildDogCoursingCriteriaMap(
       addTuple(globalSums, h.scores)
       globalCount += 1
     }
+
+    if (heats.length >= 2) {
+      const lastHeat = heats[heats.length - 1]
+      acc.lastCount += 1
+      addTuple(acc.lastSums, lastHeat.scores)
+
+      if (breedKey) {
+        let bLastAcc = perBreedLast.get(breedKey)
+        if (!bLastAcc) {
+          bLastAcc = { sums: emptySums(), count: 0 }
+          perBreedLast.set(breedKey, bLastAcc)
+        }
+        addTuple(bLastAcc.sums, lastHeat.scores)
+        bLastAcc.count += 1
+      }
+
+      addTuple(globalLastSums, lastHeat.scores)
+      globalLastCount += 1
+    }
   }
 
   const out = new Map<number, DogCoursingCriteriaSummary>()
   if (globalCount === 0) return out
 
   const globalAvg = averageTuple(globalSums, globalCount)
+  const globalLastAvg = globalLastCount > 0 ? averageTuple(globalLastSums, globalLastCount) : null
 
   for (const [dogId, acc] of perDog.entries()) {
     if (acc.heatsCount === 0) continue
 
-    let baselineAvg: CriteriaTuple = globalAvg
-    let baselineCount = globalCount
-    let isGlobal = true
+    const overall = resolveBreedBaseline(
+      acc.breedKey,
+      acc.heatsCount,
+      acc.totalSums,
+      perBreed,
+      globalAvg,
+      globalCount,
+      5,
+      15,
+    )
 
-    if (acc.breedKey) {
-      const bStats = perBreed.get(acc.breedKey)
-      if (bStats && bStats.count - acc.heatsCount >= 5) {
-        const peerSums = [...bStats.sums] as CriteriaTuple
-        subTuple(peerSums, acc.totalSums)
-        baselineCount = bStats.count - acc.heatsCount
-        baselineAvg = averageTuple(peerSums, baselineCount)
-        isGlobal = false
-      } else if (bStats && bStats.count >= 15) {
-        baselineCount = bStats.count
-        baselineAvg = averageTuple(bStats.sums, bStats.count)
-        isGlobal = false
-      }
+    let breedLastAvg: CriteriaTuple | null = null
+    let breedLastCount = 0
+    let isLastGlobal = false
+    if (acc.lastCount > 0 && globalLastAvg) {
+      const lastRes = resolveBreedBaseline(
+        acc.breedKey,
+        acc.lastCount,
+        acc.lastSums,
+        perBreedLast,
+        globalLastAvg,
+        globalLastCount,
+        3,
+        8,
+      )
+      breedLastAvg = lastRes.avg
+      breedLastCount = lastRes.count
+      isLastGlobal = lastRes.isGlobal
     }
 
     out.set(dogId, {
       events_count: acc.events.size,
       heats_count: acc.heatsCount,
       dog_avg: averageTuple(acc.totalSums, acc.heatsCount),
-      breed_avg: baselineAvg,
-      breed_heats_count: baselineCount,
-      ...(isGlobal ? { is_global_baseline: true } : {}),
+      breed_avg: overall.avg,
+      breed_heats_count: overall.count,
+      ...(overall.isGlobal ? { is_global_baseline: true } : {}),
       run1_avg: acc.run1Count > 0 ? averageTuple(acc.run1Sums, acc.run1Count) : null,
       run2_avg: acc.run2Count > 0 ? averageTuple(acc.run2Sums, acc.run2Count) : null,
+      breed_last_avg: breedLastAvg,
+      ...(breedLastAvg ? { breed_last_heats_count: breedLastCount } : {}),
+      ...(isLastGlobal ? { is_last_global_baseline: true } : {}),
     })
   }
 
