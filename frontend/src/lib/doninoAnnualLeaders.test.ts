@@ -70,8 +70,8 @@ describe('computeDoninoAnnualLeaders', () => {
 
   it('correctly calculates Saluki real database annual leaders for 2026 and 2025', async () => {
     const fs = await import('fs')
-    const speed = JSON.parse(fs.readFileSync('frontend/public/data/v1/donino/speed_records.json', 'utf8')).records
-    const coursing = JSON.parse(fs.readFileSync('frontend/public/data/v1/donino/coursing_records.json', 'utf8')).records
+    const speed = JSON.parse(fs.readFileSync('data/v1/donino/speed_records.json', 'utf8')).records
+    const coursing = JSON.parse(fs.readFileSync('data/v1/donino/coursing_records.json', 'utf8')).records
 
     const salukiSpeed = speed.filter((r: any) => (r.breed || '').toLowerCase().includes('салюки'))
     const salukiCoursing = coursing.filter((r: any) => (r.breed || '').toLowerCase().includes('салюки'))
