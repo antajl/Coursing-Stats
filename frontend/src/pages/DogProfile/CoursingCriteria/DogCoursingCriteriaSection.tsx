@@ -2,12 +2,13 @@ import { useMemo, useState } from 'react'
 import { Compass } from 'lucide-react'
 import { useTopSpeed } from '../../../hooks/useStaticData'
 import { CoursingRadarSvg } from './CoursingRadarSvg'
-import { CriteriaBenchmarkTick } from './CriteriaBenchmarkTick'
+import { CriteriaMetricRow } from './CriteriaMetricRow'
 import { CriteriaSpeedBar } from './CriteriaSpeedBar'
 import {
   computeDogSpeedBreedComparison,
   extractDogRacingSpeed,
   formatSpeedInsight,
+  hasLastRoundSpeedBenchmark,
 } from './coursingSpeedBenchmark'
 import {
   COURSING_CRITERIA_ITEMS,
@@ -43,7 +44,7 @@ export function DogCoursingCriteriaSection({
   dogId,
   racingStats,
 }: DogCoursingCriteriaSectionProps) {
-  const hasRoundsComparison = Boolean(criteria.run1_avg && criteria.run2_avg)
+  const hasRoundsComparison = Boolean(criteria.run2_avg && criteria.breed_last_avg)
   const [mode, setMode] = useState<CriteriaCompareMode>('breed')
   const effectiveMode: CriteriaCompareMode =
     mode === 'rounds' && hasRoundsComparison ? 'rounds' : 'breed'
@@ -64,39 +65,31 @@ export function DogCoursingCriteriaSection({
     [racingStats, breed, dogId, topSpeedRes?.data?.items],
   )
 
-  const primaryTuple =
-    effectiveMode === 'rounds' && criteria.run2_avg
-      ? criteria.run2_avg
-      : criteria.dog_avg
+  const isRoundsMode = effectiveMode === 'rounds' && Boolean(criteria.run2_avg && criteria.breed_last_avg)
+  const primaryTuple = isRoundsMode ? criteria.run2_avg! : criteria.dog_avg
+  const secondaryTuple = isRoundsMode ? criteria.breed_last_avg! : criteria.breed_avg
+  const isGlobalBaseline = isRoundsMode
+    ? Boolean(criteria.is_last_global_baseline)
+    : Boolean(criteria.is_global_baseline)
 
-  const secondaryTuple =
-    effectiveMode === 'rounds' && criteria.run1_avg
-      ? criteria.run1_avg
-      : criteria.breed_avg
+  const secondaryLabel = isRoundsMode
+    ? isGlobalBaseline
+      ? 'Посл. раунд (все породы)'
+      : 'Посл. раунд породы'
+    : isGlobalBaseline
+      ? 'Среднее по всем породам'
+      : 'Среднее по породе'
+  const radarPrimaryLabel = 'Собака'
+  const radarSecondaryLabel = isGlobalBaseline ? 'Все породы' : 'Порода'
 
-  const secondaryLabel =
-    effectiveMode === 'rounds'
-      ? '1-й круг'
-      : criteria.is_global_baseline
-        ? 'Среднее по всем породам'
-        : 'Среднее по породе'
-  const radarPrimaryLabel = effectiveMode === 'rounds' ? '2-й круг' : 'Собака'
-  const radarSecondaryLabel =
-    effectiveMode === 'rounds'
-      ? '1-й круг'
-      : criteria.is_global_baseline
-        ? 'Все породы'
-        : 'Порода'
-
-  const insight = useMemo(() => buildCriteriaInsights(criteria), [criteria])
+  const insight = useMemo(() => buildCriteriaInsights(criteria, effectiveMode), [criteria, effectiveMode])
 
   const sectionTitle = speedComparison
     ? 'Критерии курсинга и скорость'
     : 'Критерии курсинга'
-  const roundsTabLabel =
-    speedComparison?.lastHeatMax && speedComparison.lastHeatMax >= 3
-      ? '1-й vs последний'
-      : '1-й vs 2-й круг'
+  const showSpeedInsight =
+    speedComparison !== null &&
+    (!isRoundsMode || hasLastRoundSpeedBenchmark(speedComparison))
 
   return (
     <section
@@ -109,7 +102,7 @@ export function DogCoursingCriteriaSection({
           <Compass className="h-3.5 w-3.5 shrink-0 text-camel-700" strokeWidth={1.9} aria-hidden />
           <h2
             id="coursing-criteria-heading"
-            className="text-xs font-bold uppercase tracking-wider text-camel-800 truncate"
+            className="text-xs font-bold text-camel-800 truncate"
           >
             {sectionTitle}
           </h2>
@@ -132,7 +125,7 @@ export function DogCoursingCriteriaSection({
                   : 'cs-glass-pill text-charcoal-700 hover:text-camel-900'
               }`}
             >
-              К породе
+              Общий зачёт
             </button>
             <button
               type="button"
@@ -145,7 +138,7 @@ export function DogCoursingCriteriaSection({
                   : 'cs-glass-pill text-charcoal-700 hover:text-camel-900'
               }`}
             >
-              {roundsTabLabel}
+              Последний раунд
             </button>
           </div>
         )}
@@ -161,8 +154,8 @@ export function DogCoursingCriteriaSection({
           secondaryLabel={radarSecondaryLabel}
         />
 
-        <div className="flex flex-col justify-between min-w-0 gap-2.5">
-          <div className="space-y-1.5 min-w-0">
+        <div className="flex flex-col justify-between min-w-0 gap-3">
+          <div className="space-y-2.5 sm:space-y-3 my-auto min-w-0">
             {COURSING_CRITERIA_ITEMS.map((item, idx) => {
               const val = primaryTuple[idx]
               const refVal = secondaryTuple[idx]
@@ -171,40 +164,19 @@ export function DogCoursingCriteriaSection({
               const refPct = Math.max(0, Math.min(100, (refVal / 20) * 100))
 
               return (
-                <div key={item.key} className="space-y-0.5">
-                  <div className="flex items-center justify-between gap-2 text-xs sm:text-sm">
-                    <div className="flex min-w-0 items-center gap-2" title={item.summary}>
-                      <span className="flex h-5 w-5 sm:h-6 sm:w-6 shrink-0 items-center justify-center rounded-md border border-forest-200/80 bg-forest-50 font-mono text-[11px] font-bold text-forest-800">
-                        {item.key}
-                      </span>
-                      <span className="truncate font-medium text-charcoal-800">
-                        {item.label}
-                      </span>
-                    </div>
-
-                    <div className="flex shrink-0 items-baseline gap-2 font-mono tabular-nums">
-                      <span className="text-sm font-bold text-charcoal-900">
-                        {val.toFixed(1)}
-                        <span className="text-[11px] font-normal text-charcoal-400"> / 20</span>
-                      </span>
-                      <span className={`w-11 text-right text-xs font-semibold ${deltaToneClass(delta)}`}>
-                        {formatDelta(delta)}
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Спокойная шкала прогресса с отметкой уровня сравнения */}
-                  <div className="relative h-2 w-full rounded-full bg-sand-100">
-                    <div
-                      className="h-full rounded-full bg-forest-600/80 transition-[width] duration-300"
-                      style={{ width: `${fillPct.toFixed(1)}%` }}
-                    />
-                    <CriteriaBenchmarkTick
-                      percent={refPct}
-                      label={`${secondaryLabel}: ${refVal.toFixed(1)} / 20`}
-                    />
-                  </div>
-                </div>
+                <CriteriaMetricRow
+                  key={item.key}
+                  badgeKey={item.key}
+                  label={item.label}
+                  title={item.summary}
+                  fillPct={fillPct}
+                  tickPct={refPct}
+                  tickTooltip={`${secondaryLabel}: ${refVal.toFixed(1)} / 20`}
+                  valueText={val.toFixed(1)}
+                  unitText="/ 20"
+                  deltaText={formatDelta(delta)}
+                  deltaToneClass={deltaToneClass(delta)}
+                />
               )
             })}
 
@@ -213,28 +185,25 @@ export function DogCoursingCriteriaSection({
             )}
           </div>
 
-          {/* Компактная строка выводов: курсинг и скорость в бегах */}
-          <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 rounded-lg border border-old-money-200/80 bg-cream-50/60 px-3 py-1.5 text-xs text-charcoal-700">
+          {/* Компактная строка выводов: курсинг слева, скорость в бегах справа */}
+          <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1 rounded-lg border border-old-money-200/80 bg-cream-50/60 px-3 py-1.5 text-xs text-charcoal-700">
             <span>
               Сильная сторона:{' '}
               <strong className="font-semibold text-charcoal-900">
                 {insight.strongestLabel} ({insight.strongestScore.toFixed(1)}
                 {insight.strongestDelta >= 0.1
-                  ? `, +${insight.strongestDelta.toFixed(1)} ${criteria.is_global_baseline ? 'к среднему' : 'к породе'}`
+                  ? `, +${insight.strongestDelta.toFixed(1)} ${isGlobalBaseline ? 'к среднему' : 'к породе'}`
                   : ''}
                 )
               </strong>
             </span>
-            {speedComparison && (
-              <>
-                <span className="hidden sm:inline text-old-money-300 select-none">·</span>
-                <span>
-                  {speedComparison.kind === 'best' ? 'Лучшая скорость:' : 'Скорость в бегах:'}{' '}
-                  <strong className="font-semibold text-charcoal-900">
-                    {formatSpeedInsight(speedComparison)}
-                  </strong>
-                </span>
-              </>
+            {showSpeedInsight && speedComparison && (
+              <span className="sm:text-right">
+                {!isRoundsMode && speedComparison.kind === 'best' ? 'Лучшая скорость:' : 'Скорость в бегах:'}{' '}
+                <strong className="font-semibold text-charcoal-900">
+                  {formatSpeedInsight(speedComparison, effectiveMode)}
+                </strong>
+              </span>
             )}
           </div>
         </div>

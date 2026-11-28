@@ -1,8 +1,9 @@
 import {
   clampSpeedPct,
+  hasLastRoundSpeedBenchmark,
   type DogSpeedBreedComparison,
 } from './coursingSpeedBenchmark'
-import { CriteriaBenchmarkTick } from './CriteriaBenchmarkTick'
+import { CriteriaMetricRow } from './CriteriaMetricRow'
 
 interface CriteriaSpeedBarProps {
   comparison: DogSpeedBreedComparison
@@ -24,91 +25,74 @@ function speedDeltaTone(delta: number): string {
 
 /**
  * Шестая горизонтальная шкала внутри карточки критериев:
- * — «К породе»: средняя (или лучшая) скорость vs среднее по породе (шкала 0..рекорд породы)
- * — «1-й vs последний»: последний забег старта (2-й или 3-й при 3 кругах) vs 1-й забег.
+ * — «Общий зачёт»: средняя (или лучшая) скорость собаки vs среднее по породе (шкала 0..макс. той же метрики)
+ * — «Последний раунд»: средняя скорость собаки в её последних забегах (2-й или 3-й) vs среднее породы в их последних забегах.
  */
 export function CriteriaSpeedBar({ comparison, mode = 'breed' }: CriteriaSpeedBarProps) {
-  const canCompareRounds =
-    mode === 'rounds' && comparison.firstRunSpeed != null && comparison.lastRunSpeed != null
+  const canCompareLastRound = mode === 'rounds' && hasLastRoundSpeedBenchmark(comparison)
+  if (mode === 'rounds' && !canCompareLastRound) {
+    return null
+  }
 
-  const primarySpeed = canCompareRounds ? comparison.lastRunSpeed! : comparison.dogSpeed
-  const referenceSpeed = canCompareRounds ? comparison.firstRunSpeed! : comparison.breedAvg
+  const primarySpeed = canCompareLastRound ? comparison.lastRunSpeed! : comparison.dogSpeed
+  const referenceSpeed = canCompareLastRound ? comparison.breedLastAvg! : comparison.breedAvg
   const delta = primarySpeed - referenceSpeed
-  const fillPct = canCompareRounds
-    ? clampSpeedPct(primarySpeed, comparison.breedMaxSpeed)
+  const scaleMax = canCompareLastRound
+    ? Math.max(comparison.breedLastMax!, primarySpeed)
+    : comparison.breedMaxSpeed
+  const fillPct = canCompareLastRound
+    ? clampSpeedPct(primarySpeed, scaleMax)
     : comparison.fillPct
-  const tickPct = canCompareRounds
-    ? clampSpeedPct(referenceSpeed, comparison.breedMaxSpeed)
+  const tickPct = canCompareLastRound
+    ? clampSpeedPct(referenceSpeed, scaleMax)
     : comparison.breedMarkerPct
 
-  const label = canCompareRounds
+  const label = canCompareLastRound
     ? 'Скорость в бегах'
     : comparison.kind === 'best'
-      ? 'Лучшая скорость в бегах'
+      ? 'Лучшая скорость'
       : 'Скорость в бегах'
 
-  const lastLabel =
-    comparison.lastHeatMax && comparison.lastHeatMax >= 3
-      ? 'Последний забег (до 3-го)'
-      : '2-й забег'
+  const peerCount = canCompareLastRound
+    ? (comparison.breedLastPeerCount ?? comparison.peerCount)
+    : comparison.peerCount
+  const ceilingLabel =
+    !canCompareLastRound && comparison.kind === 'best'
+      ? 'Рекорд породы'
+      : 'Макс. средняя в породе'
 
-  const tickTooltip = canCompareRounds ? (
+  const tickTooltip = (
     <span className="block space-y-0.5">
       <span className="block whitespace-nowrap">
-        1-й забег:{' '}
+        {canCompareLastRound ? 'Посл. раунд породы:' : 'Среднее по породе:'}{' '}
         <strong className="font-semibold text-charcoal-900">
           {referenceSpeed.toFixed(1)} км/ч
         </strong>
       </span>
       <span className="block text-charcoal-500 whitespace-nowrap">
-        {lastLabel}: {primarySpeed.toFixed(1)} км/ч · макс. {comparison.breedMaxSpeed.toFixed(1)} км/ч
-      </span>
-    </span>
-  ) : (
-    <span className="block space-y-0.5">
-      <span className="block whitespace-nowrap">
-        Среднее по породе:{' '}
-        <strong className="font-semibold text-charcoal-900">
-          {comparison.breedAvg.toFixed(1)} км/ч
-        </strong>
-      </span>
-      <span className="block text-charcoal-500 whitespace-nowrap">
-        Максимум породы: {comparison.breedMaxSpeed.toFixed(1)} км/ч · {comparison.peerCount} соб.
+        {ceilingLabel}: {scaleMax.toFixed(1)} км/ч · {peerCount} соб.
       </span>
     </span>
   )
 
+  const scaleTitle = canCompareLastRound
+    ? `Шкала последнего раунда от 0 до макс. средней по породе (${scaleMax.toFixed(1)} км/ч)`
+    : comparison.kind === 'best'
+      ? `Шкала от 0 до рекорда породы (${scaleMax.toFixed(1)} км/ч)`
+      : `Шкала от 0 до макс. средней по породе (${scaleMax.toFixed(1)} км/ч)`
+
   return (
-    <div className="space-y-0.5">
-      <div className="flex items-center justify-between gap-2 text-xs sm:text-sm">
-        <div
-          className="flex min-w-0 items-center gap-2"
-          title={`Шкала от 0 до рекорда породы (${comparison.breedMaxSpeed.toFixed(1)} км/ч)`}
-        >
-          <span className="flex h-5 w-5 sm:h-6 sm:w-6 shrink-0 items-center justify-center rounded-md border border-forest-200/80 bg-forest-50 font-mono text-[11px] font-bold text-forest-800">
-            С
-          </span>
-          <span className="truncate font-medium text-charcoal-800">{label}</span>
-        </div>
-
-        <div className="flex shrink-0 items-baseline gap-2 font-mono tabular-nums">
-          <span className="text-sm font-bold text-charcoal-900">
-            {primarySpeed.toFixed(1)}
-            <span className="text-[11px] font-normal text-charcoal-400"> км/ч</span>
-          </span>
-          <span className={`w-11 text-right text-xs font-semibold ${speedDeltaTone(delta)}`}>
-            {formatSignedSpeedDelta(delta)}
-          </span>
-        </div>
-      </div>
-
-      <div className="relative h-2 w-full rounded-full bg-sand-100">
-        <div
-          className="h-full rounded-full bg-forest-600/80 transition-[width] duration-300"
-          style={{ width: `${fillPct.toFixed(1)}%` }}
-        />
-        <CriteriaBenchmarkTick percent={tickPct} label={tickTooltip} />
-      </div>
-    </div>
+    <CriteriaMetricRow
+      badgeKey="С"
+      label={label}
+      title={scaleTitle}
+      fillPct={fillPct}
+      tickPct={tickPct}
+      tickTooltip={tickTooltip}
+      valueText={primarySpeed.toFixed(1)}
+      unitText="км/ч"
+      deltaText={formatSignedSpeedDelta(delta)}
+      deltaToneClass={speedDeltaTone(delta)}
+    />
   )
 }

@@ -11,22 +11,31 @@ import {
 } from './coursingSpeedBenchmark'
 
 describe('buildCriteriaInsights', () => {
-  it('picks the highest-scoring criterion and delta vs breed', () => {
-    const sample: DogCoursingCriteriaSummary = {
-      events_count: 3,
-      heats_count: 6,
-      dog_avg: [17.5, 18.8, 16.4, 17.2, 18.1],
-      breed_avg: [17.0, 17.5, 17.0, 17.0, 17.6],
-      breed_heats_count: 140,
-      run1_avg: [17.6, 18.9, 17.2, 17.2, 18.2],
-      run2_avg: [17.4, 18.7, 15.6, 17.2, 18.0],
-    }
+  const sample: DogCoursingCriteriaSummary = {
+    events_count: 3,
+    heats_count: 6,
+    dog_avg: [17.5, 18.8, 16.4, 17.2, 18.1],
+    breed_avg: [17.0, 17.5, 17.0, 17.0, 17.6],
+    breed_heats_count: 140,
+    run1_avg: [17.6, 18.9, 17.2, 17.2, 18.2],
+    run2_avg: [17.4, 18.7, 15.6, 17.2, 18.0],
+    breed_last_avg: [16.9, 17.3, 16.2, 16.8, 17.2],
+    breed_last_heats_count: 70,
+  }
 
+  it('picks the highest-scoring criterion and delta vs breed', () => {
     const insight = buildCriteriaInsights(sample)
     expect(COURSING_CRITERIA_ITEMS).toHaveLength(5)
     expect(insight.strongestLabel).toBe('Резвость')
     expect(insight.strongestScore).toBe(18.8)
     expect(insight.strongestDelta).toBe(1.3)
+  })
+
+  it('compares dog last round against breed last round in rounds mode', () => {
+    const insight = buildCriteriaInsights(sample, 'rounds')
+    expect(insight.strongestLabel).toBe('Резвость')
+    expect(insight.strongestScore).toBe(18.7)
+    expect(insight.strongestDelta).toBe(1.4)
   })
 })
 
@@ -40,7 +49,7 @@ describe('computeDogSpeedBreedComparison', () => {
     { dog_id: 6, breed: 'Борзая', avg_speed: 59.0, best_speed: 60.0 },
   ]
 
-  it('compares racing avg_speed against same canonical breed using breed max_speed as 100% ceiling', () => {
+  it('compares racing avg_speed against same canonical breed using breed max avg_speed as 100% ceiling', () => {
     const res = computeDogSpeedBreedComparison({
       racingStats: {
         avg_speed: '55.20',
@@ -51,6 +60,9 @@ describe('computeDogSpeedBreedComparison', () => {
         first_avg_speed: '54.40',
         last_avg_speed: '56.05',
         last_heat_max: 3,
+        breed_last_avg_speed: '53.50',
+        breed_last_max_speed: '57.20',
+        breed_last_peer_count: 25,
       },
       breed: 'Уиппет',
       dogId: 1,
@@ -60,14 +72,18 @@ describe('computeDogSpeedBreedComparison', () => {
     expect(res?.kind).toBe('avg')
     expect(res?.peerCount).toBe(2)
     expect(res?.breedAvg).toBeCloseTo(53.0, 5)
-    expect(res?.breedMaxSpeed).toBeCloseTo(56.1, 5)
+    expect(res?.breedMaxSpeed).toBeCloseTo(55.2, 5)
     expect(res?.delta).toBeCloseTo(2.2, 5)
-    expect(res?.fillPct).toBeCloseTo((55.2 / 56.1) * 100, 4)
-    expect(res?.breedMarkerPct).toBeCloseTo((53.0 / 56.1) * 100, 4)
+    expect(res?.fillPct).toBeCloseTo(100, 4)
+    expect(res?.breedMarkerPct).toBeCloseTo((53.0 / 55.2) * 100, 4)
     expect(res?.firstRunSpeed).toBeCloseTo(54.4, 5)
     expect(res?.lastRunSpeed).toBeCloseTo(56.05, 5)
     expect(res?.lastHeatMax).toBe(3)
+    expect(res?.breedLastAvg).toBeCloseTo(53.5, 5)
+    expect(res?.breedLastMax).toBeCloseTo(57.2, 5)
+    expect(res?.breedLastPeerCount).toBe(25)
     expect(formatSpeedInsight(res!)).toBe('55.2 км/ч (+2.2 к породе, лучшая 56.1)')
+    expect(formatSpeedInsight(res!, 'rounds')).toBe('56.0 км/ч (+2.5 к породе)')
   })
 
   it('formats speed insight cleanly when near breed average or best-only', () => {

@@ -9,6 +9,9 @@ export interface DogCoursingCriteriaSummary {
   is_global_baseline?: boolean
   run1_avg: CriteriaTuple | null
   run2_avg: CriteriaTuple | null
+  breed_last_avg?: CriteriaTuple | null
+  breed_last_heats_count?: number
+  is_last_global_baseline?: boolean
 }
 
 export type CriteriaCompareMode = 'breed' | 'rounds'
@@ -61,14 +64,17 @@ export interface CriteriaInsight {
 
 export function buildCriteriaInsights(
   criteria: DogCoursingCriteriaSummary,
+  mode: CriteriaCompareMode = 'breed',
 ): CriteriaInsight {
-  const baseline = criteria.breed_avg
+  const isLastRound = mode === 'rounds' && criteria.run2_avg && criteria.breed_last_avg
+  const values = isLastRound ? criteria.run2_avg! : criteria.dog_avg
+  const baseline = isLastRound ? criteria.breed_last_avg! : criteria.breed_avg
   let bestIdx = 0
   let bestScore = -1
   let bestDelta = -99
 
   for (let i = 0; i < 5; i++) {
-    const score = criteria.dog_avg[i]
+    const score = values[i]
     const delta = score - baseline[i]
     if (score > bestScore || (score === bestScore && delta > bestDelta)) {
       bestScore = score

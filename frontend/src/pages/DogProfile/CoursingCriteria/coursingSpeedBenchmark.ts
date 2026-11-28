@@ -23,6 +23,9 @@ export interface DogSpeedBreedComparison {
   firstRunSpeed: number | null
   lastRunSpeed: number | null
   lastHeatMax: number | null
+  breedLastAvg: number | null
+  breedLastMax: number | null
+  breedLastPeerCount: number | null
 }
 
 function toPositiveNumber(raw: unknown): number | null {
@@ -76,30 +79,25 @@ export function computeDogSpeedBreedComparison({
   const lastRunSpeed = toPositiveNumber(racingStats?.last_avg_speed) ?? run3Speed ?? run2Speed
   const lastHeatMax =
     toPositiveNumber(racingStats?.last_heat_max) ?? (run3Speed != null ? 3 : run2Speed != null ? 2 : null)
+  const breedLastAvg = toPositiveNumber(racingStats?.breed_last_avg_speed)
+  const breedLastMax = toPositiveNumber(racingStats?.breed_last_max_speed)
+  const breedLastPeerCount = toPositiveNumber(racingStats?.breed_last_peer_count)
 
   const peers: number[] = []
-  let breedMaxSpeed = Math.max(
-    extracted.value,
-    selfBest,
-    run1Speed ?? 0,
-    run2Speed ?? 0,
-    run3Speed ?? 0,
-    firstRunSpeed ?? 0,
-    lastRunSpeed ?? 0,
-  )
+  // Потолок шкалы совпадает по метрике с основным баром (макс. avg_speed по породе или best_speed)
+  let breedMaxSpeed = extracted.value
 
   for (const row of items) {
     if (!matchesBreedFilter(String(row.breed ?? ''), breed)) continue
 
-    const rowMax = toPositiveNumber(row.best_speed) ?? toPositiveNumber(row.avg_speed)
-    if (rowMax !== null && rowMax > breedMaxSpeed) {
-      breedMaxSpeed = rowMax
+    const rowScaleVal = toPositiveNumber(row[field])
+    if (rowScaleVal !== null && rowScaleVal > breedMaxSpeed) {
+      breedMaxSpeed = rowScaleVal
     }
 
     const rowId = toPositiveNumber(row.dog_id)
     if (selfId !== null && Number.isFinite(selfId) && rowId === selfId) continue
-    const peerSpeed = toPositiveNumber(row[field])
-    if (peerSpeed !== null) peers.push(peerSpeed)
+    if (rowScaleVal !== null) peers.push(rowScaleVal)
   }
 
   // Минимум 2 другие собаки породы, чтобы не сравнивать с единичным шумом
@@ -125,19 +123,40 @@ export function computeDogSpeedBreedComparison({
     firstRunSpeed,
     lastRunSpeed,
     lastHeatMax,
+    breedLastAvg,
+    breedLastMax,
+    breedLastPeerCount,
   }
 }
 
+export function hasLastRoundSpeedBenchmark(comparison: DogSpeedBreedComparison): boolean {
+  return (
+    comparison.lastRunSpeed != null &&
+    comparison.breedLastAvg != null &&
+    comparison.breedLastMax != null
+  )
+}
+
 /** Краткий вывод по скорости в бегах относительно своей породы для нижней строки блока. */
-export function formatSpeedInsight(comparison: DogSpeedBreedComparison): string {
-  const speedStr = `${comparison.dogSpeed.toFixed(1)} км/ч`
-  const roundedDelta = Math.round(comparison.delta * 10) / 10
+export function formatSpeedInsight(
+  comparison: DogSpeedBreedComparison,
+  mode: 'breed' | 'rounds' = 'breed',
+): string {
+  const isLastRound = mode === 'rounds' && hasLastRoundSpeedBenchmark(comparison)
+  const speed = isLastRound ? comparison.lastRunSpeed! : comparison.dogSpeed
+  const delta = isLastRound
+    ? comparison.lastRunSpeed! - comparison.breedLastAvg!
+    : comparison.delta
+
+  const speedStr = `${speed.toFixed(1)} км/ч`
+  const roundedDelta = Math.round(delta * 10) / 10
   const deltaStr =
     Math.abs(roundedDelta) < 0.2
       ? 'на уровне породы'
       : `${roundedDelta > 0 ? `+${roundedDelta.toFixed(1)}` : roundedDelta.toFixed(1)} к породе`
 
   const bestPart =
+    !isLastRound &&
     comparison.kind === 'avg' &&
     comparison.bestSpeed > comparison.dogSpeed &&
     comparison.bestSpeed.toFixed(1) !== comparison.dogSpeed.toFixed(1)
