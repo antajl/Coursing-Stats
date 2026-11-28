@@ -20,7 +20,7 @@ def make_client():
         "s3",
         endpoint_url="https://storage.yandexcloud.net",
         config=Config(
-            max_pool_connections=40,
+            max_pool_connections=80,
             retries={"max_attempts": 5, "mode": "standard"},
         ),
     )
@@ -62,7 +62,7 @@ def main() -> int:
     parser.add_argument("--upload-list", action="append", default=[])
     parser.add_argument("--delete-list", action="append", default=[])
     parser.add_argument("--cache-control", default="public, max-age=0, must-revalidate")
-    parser.add_argument("--workers", type=int, default=24)
+    parser.add_argument("--workers", type=int, default=64)
     args = parser.parse_args()
 
     uploads: list[str] = []
@@ -89,9 +89,9 @@ def main() -> int:
             for fut in as_completed(futs):
                 fut.result()
                 done += 1
-                if done % 2500 == 0:
-                    print(f"[s3_apply_delta] Uploaded {done}/{len(uploads)}...")
-        print(f"[s3_apply_delta] Uploaded {done} objects.")
+                if done % 1000 == 0:
+                    print(f"[s3_apply_delta] Uploaded {done}/{len(uploads)}...", flush=True)
+        print(f"[s3_apply_delta] Uploaded {done} objects.", flush=True)
 
     if deletes:
         removed = delete_batch(client, args.bucket, deletes)
