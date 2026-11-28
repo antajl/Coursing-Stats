@@ -241,7 +241,7 @@ export default function DogProfile() {
             renderTabContent={renderDisciplineTabContent}
           />
 
-          {/* Десктопный вид: 3 блока рядом (курсинг, бега, выставки) и история этих блоков под ними */}
+          {/* Десктопный вид: активные дисциплины в 1–3 колонки без пустых заглушек */}
           <DogDisciplinesDesktopView
             showCoursingColumn={data.showCoursingColumn}
             hasCoursingData={data.hasCoursingData}

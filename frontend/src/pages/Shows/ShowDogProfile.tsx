@@ -5,7 +5,6 @@ import SkeletonLoader from '../../components/SkeletonLoader'
 import ErrorState from '../../components/ErrorState'
 import { SEO } from '../../components/SEO'
 import { ShowsColumn } from '../DogProfile/ShowsColumn'
-import { EmptyDisciplineColumn } from '../DogProfile/EmptyDisciplineColumn'
 import { DogProfileHeader, type ProfileHeaderRank } from '../DogProfile/DogProfileHeader'
 import type { ShowDogCardData } from './ShowDogCard'
 
@@ -123,18 +122,7 @@ export default function ShowDogProfile() {
           </div>
         )}
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {/* Empty columns for coursing and racing */}
-          <EmptyDisciplineColumn 
-            title="Курсинг"
-            theme="camel"
-          />
-          <EmptyDisciplineColumn 
-            title="Бег с механическим зайцем"
-            theme="camel"
-          />
-          
-          {/* Shows column */}
+        <div>
           <ShowsColumn dog={dog} />
         </div>
       </div>

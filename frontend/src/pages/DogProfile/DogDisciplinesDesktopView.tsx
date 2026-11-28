@@ -65,10 +65,28 @@ export const DogDisciplinesDesktopView: React.FC<DogDisciplinesDesktopViewProps>
   onToggleShowAllShows,
   showDog,
 }) => {
+  const visibleCount =
+    Number(showCoursingColumn) + Number(showRacingColumn) + Number(Boolean(showDog))
+
+  if (visibleCount === 0) {
+    return (
+      <div className="mb-6 hidden lg:block">
+        <EmptyDisciplineColumn title="Курсинг" theme="forest" />
+      </div>
+    )
+  }
+
+  const gridColsClass =
+    visibleCount === 1
+      ? 'lg:grid-cols-1'
+      : visibleCount === 2
+        ? 'lg:grid-cols-2'
+        : 'lg:grid-cols-3'
+
   return (
-    <div className="mb-6 hidden items-stretch gap-4 lg:grid lg:grid-cols-3 lg:gap-5 xl:gap-6">
-      <div id="coursing" className="scroll-mt-20 flex flex-col h-full">
-        {showCoursingColumn ? (
+    <div className={`mb-6 hidden items-stretch gap-4 lg:grid ${gridColsClass} lg:gap-5 xl:gap-6`}>
+      {showCoursingColumn && (
+        <div id="coursing" className="scroll-mt-20 flex flex-col h-full">
           <CoursingColumn
             hasCoursingData={hasCoursingData}
             hasCourseMedals={hasCourseMedals}
@@ -84,13 +102,11 @@ export const DogDisciplinesDesktopView: React.FC<DogDisciplinesDesktopViewProps>
             rank={headerRanks.find((r) => r.key === 'coursing')}
             breed={headerBreed}
           />
-        ) : (
-          <EmptyDisciplineColumn title="Курсинг" theme="forest" />
-        )}
-      </div>
+        </div>
+      )}
 
-      <div id="racing" className="scroll-mt-20 flex flex-col h-full">
-        {showRacingColumn ? (
+      {showRacingColumn && (
+        <div id="racing" className="scroll-mt-20 flex flex-col h-full">
           <RacingColumn
             hasRacingData={hasRacingData}
             hasRacingMedals={hasRacingMedals}
@@ -105,13 +121,11 @@ export const DogDisciplinesDesktopView: React.FC<DogDisciplinesDesktopViewProps>
             rank={headerRanks.find((r) => r.key === 'racing')}
             breed={headerBreed}
           />
-        ) : (
-          <EmptyDisciplineColumn title="Рейсинг" theme="warm-blue" />
-        )}
-      </div>
+        </div>
+      )}
 
-      <div id="shows" className="scroll-mt-20 flex flex-col h-full">
-        {showDog ? (
+      {showDog && (
+        <div id="shows" className="scroll-mt-20 flex flex-col h-full">
           <ShowsColumn
             dog={showDog}
             rank={headerRanks.find((r) => r.key === 'shows')}
@@ -119,10 +133,8 @@ export const DogDisciplinesDesktopView: React.FC<DogDisciplinesDesktopViewProps>
             showAll={showAllShows}
             onToggleShowAll={onToggleShowAllShows}
           />
-        ) : (
-          <EmptyDisciplineColumn title="Выставки" theme="camel" />
-        )}
-      </div>
+        </div>
+      )}
     </div>
   )
 }
