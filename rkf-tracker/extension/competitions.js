@@ -85,15 +85,73 @@ function setupDomListeners() {
 
 export async function switchYear(year) {
   activeYear = year;
-  const container = document.getElementById('comp-list');
-  if (container) {
-    container.innerHTML = '<div class="comp-loading">Загрузка календаря соревнований...</div>';
+  allEvents = [];
+  await loadAndRenderYear(year, false);
+}
+
+export async function refreshCompetitions() {
+  await loadAndRenderYear(activeYear, true);
+  if (showToastCallback) showToastCallback('Календарь соревнований обновлен');
+}
+
+async function fetchWithTimeout(url, timeoutMs = 2500) {
+  const ctrl = new AbortController();
+  const tid = setTimeout(() => ctrl.abort(), timeoutMs);
+  try {
+    const res = await fetch(url, { signal: ctrl.signal });
+    clearTimeout(tid);
+    return res;
+  } catch (_) {
+    clearTimeout(tid);
+    return null;
+  }
+}
+
+async function loadAndRenderYear(year, forceNetwork = false) {
+  const cacheKey = 'cached_calendar_' + year;
+  const timeKey = 'cached_calendar_time_' + year;
+
+  // 1. Fast local cache / bundled JSON load (0ms instantaneous render)
+  if (!forceNetwork && allEvents.length === 0) {
+    const stored = await chrome.storage.local.get([cacheKey]);
+    if (Array.isArray(stored[cacheKey]) && stored[cacheKey].length > 0) {
+      allEvents = stored[cacheKey];
+      updateDisciplineCounters();
+      updateFilterCounters();
+      applyAndRender();
+    } else if (year === 2026) {
+      try {
+        const bundledUrl = chrome.runtime?.getURL ? chrome.runtime.getURL('rkf-competitions-2026.json') : './rkf-competitions-2026.json';
+        const bundledRes = await fetch(bundledUrl);
+        if (bundledRes.ok) {
+          const bundledData = await bundledRes.json();
+          if (Array.isArray(bundledData) && bundledData.length > 0) {
+            allEvents = bundledData;
+            updateDisciplineCounters();
+            updateFilterCounters();
+            applyAndRender();
+            chrome.storage.local.set({ [cacheKey]: bundledData, [timeKey]: Date.now() });
+          }
+        }
+      } catch (_) {}
+    }
   }
 
-  allEvents = await fetchYearEvents(year);
-  updateDisciplineCounters();
-  updateFilterCounters();
-  applyAndRender();
+  // If still empty (e.g. past year first load without cache), show loading placeholder
+  if (allEvents.length === 0) {
+    const container = document.getElementById('comp-list');
+    if (container) container.innerHTML = '<div class="comp-loading">Загрузка календаря соревнований...</div>';
+  }
+
+  // 2. Network revalidation (with fast 2.5s timeout and CDN fallback)
+  const fresh = await fetchNetworkEvents(year);
+  if (Array.isArray(fresh) && fresh.length > 0) {
+    allEvents = fresh;
+    updateDisciplineCounters();
+    updateFilterCounters();
+    applyAndRender();
+    await chrome.storage.local.set({ [cacheKey]: fresh, [timeKey]: Date.now() });
+  }
 }
 
 function isCalendarYearPayload(events, expectedYear) {
@@ -109,79 +167,49 @@ function isCalendarYearPayload(events, expectedYear) {
   return matching > 0 && matching >= other;
 }
 
-async function fetchYearEvents(year) {
+async function fetchNetworkEvents(year) {
   if (year === 2026) {
-    try {
-      const liveRes = await fetch('https://coursing-stats-tracker-bot.antajltube.workers.dev/api/competitions');
-      if (liveRes.ok) {
-        const payload = await liveRes.json();
-        if (
-          payload?.ok &&
-          Array.isArray(payload.events) &&
-          payload.events.length > 0 &&
-          isCalendarYearPayload(payload.events, 2026)
-        ) {
+    // 1. Try fast CDN first (300ms, hosted in Russia on Yandex Cloud S3)
+    const cdnRes = await fetchWithTimeout('https://coursing-stats.ru/data/v1/calendar/2026.json', 3000);
+    if (cdnRes?.ok) {
+      try {
+        const cdnData = await cdnRes.json();
+        if (Array.isArray(cdnData.events) && cdnData.events.length > 0) return cdnData.events;
+      } catch (_) {}
+    }
+    // 2. Fallback to Cloudflare worker (2.5s timeout)
+    const workerRes = await fetchWithTimeout('https://coursing-stats-tracker-bot.antajltube.workers.dev/api/competitions', 2500);
+    if (workerRes?.ok) {
+      try {
+        const payload = await workerRes.json();
+        if (payload?.ok && Array.isArray(payload.events) && payload.events.length > 0 && isCalendarYearPayload(payload.events, 2026)) {
           return payload.events;
         }
-      }
-    } catch (e) {
-      console.warn('[Competitions] Live 2026 fetch failed, falling back to bundled JSON:', e);
+      } catch (_) {}
     }
+    return null;
+  }
+
+  const res = await fetchWithTimeout(`https://coursing-stats.ru/data/v1/calendar/${year}.json`, 3000);
+  if (res?.ok) {
     try {
-      const url = chrome.runtime?.getURL ? chrome.runtime.getURL('rkf-competitions-2026.json') : './rkf-competitions-2026.json';
-      const res = await fetch(url);
-      if (res.ok) {
-        const data = await res.json();
-        if (Array.isArray(data) && data.length > 0) return data;
-      }
-    } catch (e) {
-      console.warn('[Competitions] Local 2026 load failed:', e);
-    }
-  }
-
-  const cacheKey = 'cached_calendar_' + year;
-  const timeKey = 'cached_calendar_time_' + year;
-
-  try {
-    const cached = await chrome.storage.local.get([cacheKey, timeKey]);
-    const cacheAge = Date.now() - (cached[timeKey] || 0);
-
-    if (cached[cacheKey] && cacheAge < 3600000) {
-      return cached[cacheKey];
-    }
-
-    const c = new AbortController();
-    const tid = setTimeout(() => c.abort(), 6000);
-    const res = await fetch(`https://coursing-stats.ru/data/v1/calendar/${year}.json`, { signal: c.signal });
-    clearTimeout(tid);
-
-    if (res.ok) {
       const data = await res.json();
-      const events = Array.isArray(data.events) ? data.events : [];
-      await chrome.storage.local.set({ [cacheKey]: events, [timeKey]: Date.now() });
-      return events;
-    }
-    if (cached[cacheKey]) return cached[cacheKey];
-  } catch (err) {
-    const cached = await chrome.storage.local.get(cacheKey);
-    if (cached[cacheKey]) return cached[cacheKey];
+      return Array.isArray(data.events) ? data.events : [];
+    } catch (_) {}
   }
-
-  return [];
+  return null;
 }
 
 function updateDisciplineCounters() {
   const discSelect = document.getElementById('comp-discipline-select');
   if (!discSelect) return;
-
-  const cCount = allEvents.filter((ev) => isMatchDiscipline(ev, 'Курсинг борзых')).length;
-  const rCount = allEvents.filter((ev) => isMatchDiscipline(ev, 'Бега борзых')).length;
-  const bCount = allEvents.filter((ev) => isMatchDiscipline(ev, 'БЗМП')).length;
-
+  const c = allEvents.filter((ev) => isMatchDiscipline(ev, 'Курсинг борзых')).length;
+  const r = allEvents.filter((ev) => isMatchDiscipline(ev, 'Бега борзых')).length;
+  const b = allEvents.filter((ev) => isMatchDiscipline(ev, 'БЗМП')).length;
   for (const opt of discSelect.options) {
-    if (opt.value === 'Курсинг борзых') opt.textContent = `Курсинг борзых (${cCount})`;
-    else if (opt.value === 'Бега борзых') opt.textContent = `Бега борзых (${rCount})`;
-    else if (opt.value === 'БЗМП') opt.textContent = `БЗМП (${bCount})`;
+    if (opt.value === 'Курсинг борзых') opt.textContent = `Курсинг борзых (${c})`;
+    else if (opt.value === 'Бега борзых') opt.textContent = `Бега борзых (${r})`;
+    else if (opt.value === 'БЗМП') opt.textContent = `БЗМП (${b})`;
   }
 }
 
@@ -229,10 +257,7 @@ function updateTrackedBadge() {
 
 function isMatchDiscipline(ev, disc) {
   const target = (ev.discipline || ev.sheetName || '').toLowerCase();
-  if (disc === 'БЗМП') {
-    return target.includes('бзмп') || target.includes('приманк');
-  }
-  return target.includes(disc.toLowerCase());
+  return disc === 'БЗМП' ? (target.includes('бзмп') || target.includes('приманк')) : target.includes(disc.toLowerCase());
 }
 
 function getEventDateSortKey(ev) {

@@ -2,10 +2,11 @@
 import { checkAuthFromTabs, fetchAppsData } from './api.js';
 import { renderApps, handleSearch, toggleAppReceived } from './render.js';
 import { setupSettings } from './settings.js';
-import { initCompetitions } from './competitions.js';
+import { initCompetitions, refreshCompetitions } from './competitions.js';
 
 const COOLDOWN_SECONDS = 60;
 let currentFilter = 'all';
+let currentMainTab = 'apps';
 let isCoolingDown = false;
 let cooldownTimer = null;
 let currentApps = [];
@@ -46,6 +47,7 @@ function setupEventListeners() {
   const secComps = document.getElementById('section-competitions');
 
   const switchTab = (toComps) => {
+    currentMainTab = toComps ? 'competitions' : 'apps';
     tabApps.classList.toggle('active', !toComps);
     tabComps.classList.toggle('active', toComps);
     secApps.classList.toggle('active', !toComps);
@@ -302,10 +304,17 @@ function startCooldown(seconds) {
 }
 
 async function triggerRefresh() {
+  if (currentMainTab === 'competitions') {
+    btnRefresh.classList.add('loading');
+    btnRefreshText.innerText = 'Запрос...';
+    try { await refreshCompetitions(); }
+    catch (_) { showToast('Ошибка обновления соревнований'); }
+    finally { btnRefresh.classList.remove('loading'); btnRefreshText.innerText = 'Обновить'; }
+    return;
+  }
   if (isCoolingDown) return;
   const store = await chrome.storage.local.get(['rkfToken', 'profileId', 'userUuid']);
   if (!store.rkfToken) return;
-
   await chrome.storage.local.set({ rkf_last_refresh_timestamp: Date.now() });
   startCooldown(COOLDOWN_SECONDS);
   await fetchData(store.rkfToken, store.profileId, store.userUuid);
