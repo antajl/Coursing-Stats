@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState } from 'react'
 import {
   TrendingUp,
   TrendingDown,
@@ -7,6 +7,7 @@ import {
   ChevronLeft,
   ChevronRight,
 } from 'lucide-react'
+import { useHorizontalSwipe } from '../../../hooks/useHorizontalSwipe'
 import type { RankedJudgeItem } from '../dogJudgesStats'
 import { formatExpertsCount, formatShowMoreExperts } from '../dogJudgesStats'
 import { DogJudgeRow } from '../DogJudgeRow'
@@ -34,99 +35,19 @@ export function DogJudgesCarousel({
 
   // Мобильная карусель: вкладка 0 (Выше обычного) или 1 (Строже обычного) со свайпом
   const [activeMobileTab, setActiveMobileTab] = useState<0 | 1>(0)
-  const trackRef = useRef<HTMLDivElement>(null)
-  const touchStartRef = useRef<{ x: number; y: number; time: number } | null>(null)
-  const gestureLockRef = useRef<'horizontal' | 'vertical' | null>(null)
-  const hadMovedRef = useRef(false)
-
-  const handleTouchStart = (e: React.TouchEvent) => {
-    touchStartRef.current = {
-      x: e.touches[0].clientX,
-      y: e.touches[0].clientY,
-      time: Date.now(),
-    }
-    gestureLockRef.current = null
-    hadMovedRef.current = false
-    if (trackRef.current) {
-      trackRef.current.style.transition = 'none'
-    }
-  }
-
-  const handleTouchMove = (e: React.TouchEvent) => {
-    if (!touchStartRef.current) return
-    const dx = e.touches[0].clientX - touchStartRef.current.x
-    const dy = e.touches[0].clientY - touchStartRef.current.y
-
-    if (Math.abs(dx) > 7 || Math.abs(dy) > 7) {
-      hadMovedRef.current = true
-    }
-
-    if (!gestureLockRef.current) {
-      if (Math.abs(dx) < 7 && Math.abs(dy) < 7) return
-      if (Math.abs(dy) >= Math.abs(dx)) {
-        gestureLockRef.current = 'vertical'
-        return
-      }
-      gestureLockRef.current = 'horizontal'
-    }
-
-    if (gestureLockRef.current === 'horizontal' && trackRef.current) {
-      const isAtLeftEdge = activeMobileTab === 0 && dx > 0
-      const isAtRightEdge = activeMobileTab === 1 && dx < 0
-      const appliedDx = isAtLeftEdge || isAtRightEdge ? dx * 0.22 : dx
-      const baseOffset = activeMobileTab === 0 ? '0%' : '-100%'
-      trackRef.current.style.transform = `translate3d(calc(${baseOffset} + ${appliedDx}px), 0, 0)`
-    }
-  }
-
-  const handleTouchEnd = (e: React.TouchEvent) => {
-    if (!touchStartRef.current) return
-    const isHorizontal = gestureLockRef.current === 'horizontal'
-    const dx = e.changedTouches[0].clientX - touchStartRef.current.x
-    const dt = Date.now() - touchStartRef.current.time
-    const velocity = Math.abs(dx) / (dt || 1)
-
-    touchStartRef.current = null
-    gestureLockRef.current = null
-
-    if (isHorizontal && trackRef.current) {
-      let target: 0 | 1 = activeMobileTab
-      if ((dx < -35 || (dx < -15 && velocity > 0.2)) && activeMobileTab === 0) {
-        target = 1
-      } else if ((dx > 35 || (dx > 15 && velocity > 0.2)) && activeMobileTab === 1) {
-        target = 0
-      }
-      setActiveMobileTab(target)
-      trackRef.current.style.transition = 'transform 320ms cubic-bezier(0.16, 1, 0.3, 1)'
-      trackRef.current.style.transform = `translate3d(${target === 0 ? '0%' : '-100%'}, 0, 0)`
-    } else if (trackRef.current) {
-      trackRef.current.style.transition = 'transform 320ms cubic-bezier(0.16, 1, 0.3, 1)'
-      trackRef.current.style.transform = `translate3d(${activeMobileTab === 0 ? '0%' : '-100%'}, 0, 0)`
-    }
-  }
-
-  const handleTouchCancel = () => {
-    touchStartRef.current = null
-    gestureLockRef.current = null
-    if (trackRef.current) {
-      trackRef.current.style.transition = 'transform 320ms cubic-bezier(0.16, 1, 0.3, 1)'
-      trackRef.current.style.transform = `translate3d(${activeMobileTab === 0 ? '0%' : '-100%'}, 0, 0)`
-    }
-  }
-
-  const handleClickCapture = (e: React.MouseEvent) => {
-    if (hadMovedRef.current) {
-      e.preventDefault()
-      e.stopPropagation()
-    }
-  }
-
-  useEffect(() => {
-    if (trackRef.current) {
-      trackRef.current.style.transition = 'transform 320ms cubic-bezier(0.16, 1, 0.3, 1)'
-      trackRef.current.style.transform = `translate3d(${activeMobileTab === 0 ? '0%' : '-100%'}, 0, 0)`
-    }
-  }, [activeMobileTab])
+  const {
+    trackRef,
+    getSlideOffset,
+    startDrag,
+    moveDrag,
+    endDrag,
+    cancelDrag,
+    handleClickCapture,
+  } = useHorizontalSwipe({
+    activeTabsCount: 2,
+    activeTabIndex: activeMobileTab,
+    onTabChange: (idx) => setActiveMobileTab(idx as 0 | 1),
+  })
 
   const visibleHigher =
     isHigherExpanded || higherThanCareer.length <= EXPAND_THRESHOLD
@@ -153,8 +74,8 @@ export function DogJudgesCarousel({
     <div className="rounded-2xl border border-old-money-200/90 bg-white overflow-hidden shadow-2xs h-full flex flex-col">
       <div className="relative px-3.5 py-2.5 bg-forest-50/70 border-b border-old-money-200/80 flex items-center justify-between select-none">
         <div className="flex items-center gap-1.5 min-w-0 pr-24 md:pr-0">
-          <TrendingUp className="w-3.5 h-3.5 text-forest-700 shrink-0" aria-hidden />
-          <h3 className="text-xs font-semibold uppercase tracking-wider text-charcoal-800 truncate">
+          <TrendingUp className="w-3.5 h-3.5 text-forest-700 shrink-0" strokeWidth={1.75} aria-hidden />
+          <h3 className="text-xs font-semibold text-charcoal-800 truncate">
             Выше обычного
           </h3>
           <span className="text-[11px] text-forest-800 font-semibold tabular-nums ml-0.5">
@@ -166,7 +87,7 @@ export function DogJudgesCarousel({
         <button
           type="button"
           onClick={() => setActiveMobileTab(1)}
-          className="md:hidden absolute right-0 top-1/2 -translate-y-1/2 z-20 inline-flex items-center gap-1 bg-[#fbf7f0]/95 text-camel-950 font-bold text-[11px] py-1 pl-2.5 pr-2 rounded-l-full border-y border-l border-camel-400/60 shadow-xs backdrop-blur-md transition-all hover:bg-camel-100/90 active:scale-95 cursor-pointer touch-manipulation select-none"
+          className="md:hidden absolute right-0 top-1/2 -translate-y-1/2 z-20 inline-flex items-center gap-1 bg-cream-50/95 text-camel-950 font-bold text-[11px] py-1 pl-2.5 pr-2 rounded-l-full border-y border-l border-camel-400/60 shadow-xs transition-colors hover:bg-camel-100/90 cursor-pointer touch-manipulation select-none min-h-[36px]"
           title="Перейти: Строже обычного"
           aria-label="Перейти: Строже обычного"
         >
@@ -174,7 +95,7 @@ export function DogJudgesCarousel({
           <span className="text-[9px] tabular-nums font-bold px-1 py-0 rounded-full bg-rose-200/80 text-rose-950 shrink-0">
             {lowerThanCareer.length}
           </span>
-          <ChevronRight className="w-3.5 h-3.5 text-rose-800 shrink-0" aria-hidden />
+          <ChevronRight className="w-3.5 h-3.5 text-rose-800 shrink-0" strokeWidth={1.75} aria-hidden />
         </button>
       </div>
 
@@ -192,21 +113,21 @@ export function DogJudgesCarousel({
               {isHigherExpanded ? (
                 <>
                   <span>Свернуть</span>
-                  <ChevronUp className="w-3.5 h-3.5 text-charcoal-500" aria-hidden />
+                  <ChevronUp className="w-3.5 h-3.5 text-charcoal-500" strokeWidth={1.75} aria-hidden />
                 </>
               ) : (
                 <>
                   <span>
                     {formatShowMoreExperts(higherThanCareer.length - INITIAL_LIMIT)}
                   </span>
-                  <ChevronDown className="w-3.5 h-3.5 text-charcoal-500" aria-hidden />
+                  <ChevronDown className="w-3.5 h-3.5 text-charcoal-500" strokeWidth={1.75} aria-hidden />
                 </>
               )}
             </button>
           )}
         </>
       ) : (
-        <div className="p-4 text-center text-xs text-charcoal-400 flex-1 flex items-center justify-center">
+        <div className="p-4 text-center text-xs text-charcoal-500 flex-1 flex items-center justify-center">
           Пока нет экспертов с оценками выше средних
         </div>
       )}
@@ -220,11 +141,11 @@ export function DogJudgesCarousel({
         <button
           type="button"
           onClick={() => setActiveMobileTab(0)}
-          className="md:hidden absolute left-0 top-1/2 -translate-y-1/2 z-20 inline-flex items-center gap-1 bg-[#fbf7f0]/95 text-camel-950 font-bold text-[11px] py-1 pl-2 pr-2.5 rounded-r-full border-y border-r border-camel-400/60 shadow-xs backdrop-blur-md transition-all hover:bg-camel-100/90 active:scale-95 cursor-pointer touch-manipulation select-none"
+          className="md:hidden absolute left-0 top-1/2 -translate-y-1/2 z-20 inline-flex items-center gap-1 bg-cream-50/95 text-camel-950 font-bold text-[11px] py-1 pl-2 pr-2.5 rounded-r-full border-y border-r border-camel-400/60 shadow-xs transition-colors hover:bg-camel-100/90 cursor-pointer touch-manipulation select-none min-h-[36px]"
           title="Перейти: Выше обычного"
           aria-label="Перейти: Выше обычного"
         >
-          <ChevronLeft className="w-3.5 h-3.5 text-forest-800 shrink-0" aria-hidden />
+          <ChevronLeft className="w-3.5 h-3.5 text-forest-800 shrink-0" strokeWidth={1.75} aria-hidden />
           <span className="tracking-tight text-forest-900 font-semibold">Выше</span>
           <span className="text-[9px] tabular-nums font-bold px-1 py-0 rounded-full bg-forest-200/80 text-forest-950 shrink-0">
             {higherThanCareer.length}
@@ -232,8 +153,8 @@ export function DogJudgesCarousel({
         </button>
 
         <div className="flex items-center gap-1.5 min-w-0 md:pl-0 pl-24 justify-end md:justify-start w-full">
-          <TrendingDown className="w-3.5 h-3.5 text-rose-700 shrink-0" aria-hidden />
-          <h3 className="text-xs font-semibold uppercase tracking-wider text-charcoal-800 truncate">
+          <TrendingDown className="w-3.5 h-3.5 text-rose-700 shrink-0" strokeWidth={1.75} aria-hidden />
+          <h3 className="text-xs font-semibold text-charcoal-800 truncate">
             Строже обычного
           </h3>
           <span className="text-[11px] text-rose-800 font-semibold tabular-nums ml-0.5">
@@ -256,21 +177,21 @@ export function DogJudgesCarousel({
               {isLowerExpanded ? (
                 <>
                   <span>Свернуть</span>
-                  <ChevronUp className="w-3.5 h-3.5 text-charcoal-500" aria-hidden />
+                  <ChevronUp className="w-3.5 h-3.5 text-charcoal-500" strokeWidth={1.75} aria-hidden />
                 </>
               ) : (
                 <>
                   <span>
                     {formatShowMoreExperts(lowerThanCareer.length - INITIAL_LIMIT)}
                   </span>
-                  <ChevronDown className="w-3.5 h-3.5 text-charcoal-500" aria-hidden />
+                  <ChevronDown className="w-3.5 h-3.5 text-charcoal-500" strokeWidth={1.75} aria-hidden />
                 </>
               )}
             </button>
           )}
         </>
       ) : (
-        <div className="p-4 text-center text-xs text-charcoal-400 flex-1 flex items-center justify-center">
+        <div className="p-4 text-center text-xs text-charcoal-500 flex-1 flex items-center justify-center">
           Пока нет экспертов со строгими оценками
         </div>
       )}
@@ -288,17 +209,24 @@ export function DogJudgesCarousel({
       {/* Мобильный вид: горизонтальный свайп между колонками */}
       <div
         className="block md:hidden relative overflow-x-clip touch-pan-y select-none"
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
-        onTouchCancel={handleTouchCancel}
+        onTouchStart={(e) => {
+          if (e.touches.length === 1) startDrag(e.touches[0].clientX, e.touches[0].clientY)
+        }}
+        onTouchMove={(e) => {
+          if (e.touches.length === 1) moveDrag(e.touches[0].clientX, e.touches[0].clientY)
+        }}
+        onTouchEnd={(e) => {
+          const touch = e.changedTouches[0]
+          if (touch) endDrag(touch.clientX)
+        }}
+        onTouchCancel={cancelDrag}
         onClickCapture={handleClickCapture}
       >
         <div
           ref={trackRef}
           className="flex flex-nowrap w-full min-w-0 items-stretch gap-0"
           style={{
-            transform: activeMobileTab === 0 ? 'translate3d(0%, 0, 0)' : 'translate3d(-100%, 0, 0)',
+            transform: getSlideOffset(activeMobileTab),
             willChange: 'transform',
           }}
         >

@@ -113,7 +113,7 @@ export function DogOrganizationsHeader({
                   : 'text-charcoal-500 hover:text-charcoal-900'
               }`}
             >
-              Бега
+              Рейсинг
             </button>
           </div>
         )}

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { ChevronDown, MapPin, ExternalLink } from 'lucide-react'
-import { PlacementMedalBadge } from '../../../components/PlacementMedalBadge'
+import { HistoryPlacement } from '../HistoryPlacement'
+import { formatCompetitionsCount } from '../historyFormatters'
 import type { DogOrgItem } from '../dogOrganizationsStats'
 
 export interface DogOrganizationRowProps {
@@ -22,18 +23,11 @@ export function DogOrganizationRow({
   const locationText = org.locations.filter(Boolean).join(', ')
 
   return (
-    <div className="transition-colors">
-      <div
-        role="button"
-        tabIndex={0}
+    <div className="transition-colors hover:bg-cream-50/60">
+      <button
+        type="button"
         onClick={onToggle}
-        onKeyDown={(e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault()
-            onToggle()
-          }
-        }}
-        className="px-3.5 py-2.5 sm:px-4 sm:py-2.5 flex items-center justify-between gap-2.5 cursor-pointer select-none hover:bg-cream-50/70 transition-colors"
+        className="w-full text-left min-h-[48px] px-3.5 py-2.5 sm:px-4 flex items-center justify-between gap-2.5 cursor-pointer select-none transition-colors touch-manipulation"
         aria-expanded={isExpanded}
       >
         <div className="flex-1 min-w-0">
@@ -43,16 +37,14 @@ export function DogOrganizationRow({
             </span>
             {locationText && (
               <span className="inline-flex items-center gap-0.5 text-[11px] text-charcoal-500 font-normal">
-                <MapPin className="w-3 h-3 text-charcoal-400 shrink-0" aria-hidden />
+                <MapPin className="w-3 h-3 text-charcoal-500 shrink-0" strokeWidth={1.75} aria-hidden />
                 <span className="truncate max-w-[140px] sm:max-w-[200px]">{locationText}</span>
               </span>
             )}
           </div>
-          <div className="text-[11px] text-charcoal-500 mt-0.5 flex items-center gap-2 flex-wrap">
-            <span>
-              {org.starts_count} {org.starts_count === 1 ? 'старт' : org.starts_count < 5 ? 'старта' : 'стартов'}
-            </span>
-            <span>•</span>
+          <div className="text-[11px] text-charcoal-600 mt-0.5 flex items-center gap-1.5 flex-wrap">
+            <span>{formatCompetitionsCount(org.starts_count)}</span>
+            <span className="text-old-money-300">·</span>
             <span className="text-forest-800 font-medium">
               {org.wins_count} {org.wins_count === 1 ? 'победа' : org.wins_count < 5 ? 'победы' : 'побед'}
             </span>
@@ -69,54 +61,65 @@ export function DogOrganizationRow({
             </div>
           </div>
           <ChevronDown
-            className={`w-4 h-4 text-charcoal-400 transition-transform duration-200 ${
+            className={`w-4 h-4 text-charcoal-500 transition-transform duration-200 ${
               isExpanded ? 'rotate-180 text-charcoal-700' : ''
             }`}
+            strokeWidth={1.75}
             aria-hidden
           />
         </div>
-      </div>
+      </button>
 
       {isExpanded && org.events.length > 0 && (
-        <div className="px-3.5 sm:px-4 py-2 border-t border-old-money-100/70 bg-cream-50/40 space-y-1.5 animate-in fade-in duration-150">
-          {org.events.map((start, idx) => {
-            const hasPlace = start.placement !== null && start.placement !== undefined
-            const eventLink = start.event_id ? `/competitions/${start.event_id}` : null
-
-            return (
-              <div
-                key={idx}
-                className="flex items-center justify-between gap-2 py-1 text-xs text-charcoal-700"
-              >
-                <div className="flex items-center gap-2 min-w-0 flex-1">
-                  {hasPlace ? (
-                    <PlacementMedalBadge placement={start.placement} size="sm" />
-                  ) : (
-                    <span className="w-5 h-5 rounded-full bg-cream-200/80 text-[10px] font-bold text-charcoal-600 flex items-center justify-center shrink-0">
-                      -
+        <div className="px-3.5 sm:px-4 py-2.5 border-t border-old-money-200/80 bg-cream-50/55 animate-in fade-in duration-150">
+          <div className="divide-y divide-old-money-200/80">
+            {org.events.map((start, idx) => {
+              const hasPlace = start.placement !== null && start.placement !== undefined
+              const eventLink = start.event_id ? `/event/${start.event_id}/` : null
+              const rowInner = (
+                <>
+                  <div className="flex items-center gap-2 min-w-0 flex-1">
+                    {hasPlace ? (
+                      <HistoryPlacement placement={start.placement} size="xs" />
+                    ) : (
+                      <span className="w-5 text-center text-[11px] font-semibold text-charcoal-500 shrink-0">
+                        —
+                      </span>
+                    )}
+                    <span className="font-medium text-charcoal-900 truncate">
+                      {start.title || 'Состязание'}
                     </span>
-                  )}
-                  <span className="font-medium text-charcoal-900 truncate">
-                    {start.title || 'Состязание'}
-                  </span>
-                </div>
+                    {eventLink && (
+                      <ExternalLink className="w-3 h-3 shrink-0 text-camel-700" strokeWidth={1.75} aria-hidden />
+                    )}
+                  </div>
 
-                <div className="flex items-center gap-2 shrink-0 text-charcoal-500 text-[11px] tabular-nums">
-                  {start.date && <span>{start.date}</span>}
-                  {start.total_score ? <span>{start.total_score} б.</span> : null}
-                  {eventLink && (
-                    <Link
-                      to={eventLink}
-                      className="p-1 text-camel-700 hover:text-camel-950 transition-colors"
-                      title="Открыть протокол состязания"
-                    >
-                      <ExternalLink className="w-3.5 h-3.5" />
-                    </Link>
-                  )}
+                  <div className="flex items-center gap-2 shrink-0 text-charcoal-600 text-[11px] tabular-nums">
+                    {start.date && <span>{start.date}</span>}
+                    {start.total_score ? <span className="font-semibold text-charcoal-800">{start.total_score} б.</span> : null}
+                  </div>
+                </>
+              )
+
+              return eventLink ? (
+                <Link
+                  key={idx}
+                  to={eventLink}
+                  className="min-h-[40px] sm:min-h-[34px] flex items-center justify-between gap-2 py-1.5 text-xs text-charcoal-800 hover:text-camel-800 transition-colors"
+                  title="Открыть протокол состязания"
+                >
+                  {rowInner}
+                </Link>
+              ) : (
+                <div
+                  key={idx}
+                  className="min-h-[40px] sm:min-h-[34px] flex items-center justify-between gap-2 py-1.5 text-xs text-charcoal-700"
+                >
+                  {rowInner}
                 </div>
-              </div>
-            )
-          })}
+              )
+            })}
+          </div>
         </div>
       )}
     </div>
