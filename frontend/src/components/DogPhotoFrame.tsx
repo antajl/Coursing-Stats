@@ -47,7 +47,7 @@ export const DogPhotoFrame: React.FC<DogPhotoFrameProps> = ({
           onError={() => setImgError(true)}
         />
         <span className="pointer-events-none absolute bottom-1.5 right-1.5 rounded-md bg-charcoal-900/60 p-1 text-white opacity-0 transition-opacity group-hover:opacity-100 backdrop-blur-xs">
-          <Maximize2 className="h-3 w-3" aria-hidden />
+          <Maximize2 className="h-3 w-3" strokeWidth={1.75} aria-hidden />
         </span>
       </button>
     );
@@ -65,7 +65,7 @@ export const DogPhotoFrame: React.FC<DogPhotoFrameProps> = ({
         <div className="relative z-10 w-full h-full p-2 flex items-center justify-center">
           <DogBreedSilhouette
             breed={breed}
-            className="w-full h-full text-camel-700/60 transition-transform duration-300 group-hover:scale-105"
+            className="w-full h-full text-camel-700/60"
           />
         </div>
       </div>

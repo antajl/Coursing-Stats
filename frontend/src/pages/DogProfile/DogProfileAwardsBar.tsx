@@ -120,7 +120,7 @@ export function DogProfileAwardsBar({
         portal
       >
         <span
-          className={`inline-flex shrink-0 items-center gap-1 rounded-md px-2 py-0.5 text-[11px] tabular-nums whitespace-nowrap transition-transform hover:scale-105 ${chipClass}`}
+          className={`inline-flex shrink-0 items-center gap-1 rounded-md px-2 py-0.5 text-[11px] tabular-nums whitespace-nowrap transition-opacity hover:opacity-90 ${chipClass}`}
           tabIndex={0}
         >
           <span>{line}</span>
@@ -136,7 +136,7 @@ export function DogProfileAwardsBar({
         <div className="space-y-1.5 min-w-0">
           {hasSupreme && (
             <div className="grid grid-cols-[4.75rem_1fr] items-baseline gap-2">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-amber-700/90 select-none whitespace-nowrap">
+              <span className="text-[11px] font-semibold text-amber-800 select-none whitespace-nowrap">
                 Высшие
               </span>
               <div className="flex flex-wrap items-center gap-1.5 min-w-0">
@@ -147,7 +147,7 @@ export function DogProfileAwardsBar({
 
           {hasCoursing && (
             <div className="grid grid-cols-[4.75rem_1fr] items-baseline gap-2">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-charcoal-400 select-none whitespace-nowrap">
+              <span className="text-[11px] font-semibold text-charcoal-600 select-none whitespace-nowrap">
                 Курсинг
               </span>
               <div className="flex flex-wrap items-center gap-1.5 min-w-0">
@@ -158,7 +158,7 @@ export function DogProfileAwardsBar({
 
           {hasRacing && (
             <div className="grid grid-cols-[4.75rem_1fr] items-baseline gap-2">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-charcoal-400 select-none whitespace-nowrap">
+              <span className="text-[11px] font-semibold text-charcoal-600 select-none whitespace-nowrap">
                 Рейсинг
               </span>
               <div className="flex flex-wrap items-center gap-1.5 min-w-0">
@@ -169,7 +169,7 @@ export function DogProfileAwardsBar({
 
           {hasComp && !hasCoursing && !hasRacing && (
             <div className="grid grid-cols-[4.75rem_1fr] items-baseline gap-2">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-charcoal-400 select-none whitespace-nowrap">
+              <span className="text-[11px] font-semibold text-charcoal-600 select-none whitespace-nowrap">
                 Спорт
               </span>
               <div className="flex flex-wrap items-center gap-1.5 min-w-0">
@@ -180,7 +180,7 @@ export function DogProfileAwardsBar({
 
           {hasShow && (
             <div className="grid grid-cols-[4.75rem_1fr] items-baseline gap-2">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-charcoal-400 select-none whitespace-nowrap">
+              <span className="text-[11px] font-semibold text-charcoal-600 select-none whitespace-nowrap">
                 Выставки
               </span>
               <div className="flex flex-wrap items-center gap-1.5 min-w-0">

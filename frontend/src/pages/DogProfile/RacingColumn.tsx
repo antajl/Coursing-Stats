@@ -148,22 +148,22 @@ export function RacingColumn({
                 className="group flex flex-1 flex-col items-center justify-center bg-white px-3.5 py-3 text-center transition-colors hover:bg-warm-blue-50/50"
                 title="Открыть протокол лучшего забега"
               >
-                <span className="text-[10px] font-semibold uppercase tracking-wider text-charcoal-400">
+                <span className="text-[11px] font-medium text-charcoal-500">
                   Лучшая скорость
                 </span>
                 <div className="mt-0.5 flex items-baseline gap-1 text-3xl font-bold tabular-nums tracking-tight text-warm-blue-900">
                   <span>{formatScore(racing.best_speed)}</span>
-                  <span className="text-sm font-normal text-charcoal-400">км/ч</span>
+                  <span className="text-sm font-normal text-charcoal-500">км/ч</span>
                 </div>
               </ProcoursingEventLink>
             ) : (
               <div className="flex flex-1 flex-col items-center justify-center bg-white px-3.5 py-3 text-center">
-                <span className="text-[10px] font-semibold uppercase tracking-wider text-charcoal-400">
+                <span className="text-[11px] font-medium text-charcoal-500">
                   Лучшая скорость
                 </span>
                 <div className="mt-0.5 flex items-baseline gap-1 text-3xl font-bold tabular-nums tracking-tight text-warm-blue-900">
                   <span>{formatScore(racing.best_speed)}</span>
-                  <span className="text-sm font-normal text-charcoal-400">км/ч</span>
+                  <span className="text-sm font-normal text-charcoal-500">км/ч</span>
                 </div>
               </div>
             )}
@@ -171,14 +171,14 @@ export function RacingColumn({
             {/* Низ: Единая двойная строка агрегатных показателей */}
             <div className="grid grid-cols-2 divide-x divide-old-money-100 bg-cream-50/50 text-center text-xs shrink-0">
               <div className="px-2 py-2">
-                <div className="text-[10px] font-semibold uppercase tracking-wide text-charcoal-400">Средняя скорость</div>
+                <div className="text-[11px] font-medium text-charcoal-500">Средняя скорость</div>
                 <div className="mt-0.5 font-bold tabular-nums text-charcoal-800 text-sm">
                   {formatScore(racing.avg_speed)} км/ч
                 </div>
               </div>
 
               <div className="px-2 py-2">
-                <div className="text-[10px] font-semibold uppercase tracking-wide text-charcoal-400">Забеги</div>
+                <div className="text-[11px] font-medium text-charcoal-500">Забеги</div>
                 <div className="mt-0.5 font-bold tabular-nums text-charcoal-800 text-sm">
                   {formatRunsCount(startsCount)}
                 </div>
@@ -208,12 +208,12 @@ export function RacingColumn({
                 <DisciplineHistoryRow
                   title={headline || 'Забег'}
                   subtitle={shortLoc}
-                  titleClassName="text-xs font-bold uppercase tracking-wide text-warm-blue-700"
+                  titleClassName="text-xs font-semibold text-warm-blue-800"
                   metric={
                     hasSpeed ? (
                       <span className="font-mono text-xs font-semibold tabular-nums text-warm-blue-800">
                         {formatScore(rawSpeed)}
-                        <span className="text-[10px] font-normal text-charcoal-400"> км/ч</span>
+                        <span className="text-[10px] font-normal text-charcoal-500"> км/ч</span>
                       </span>
                     ) : null
                   }

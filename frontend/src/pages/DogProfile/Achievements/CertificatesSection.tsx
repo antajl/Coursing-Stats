@@ -31,40 +31,35 @@ export function CertificatesSection({
     setExpandedTitles((prev) => ({ ...prev, [id]: !prev[id] }))
   }
 
-  const renderCertificateCard = (
+  const renderCertificateRow = (
     id: string,
     title: string,
     badgeText: string,
     subtitle: string,
     eventsList: Array<{ eventId?: number | string; exhibitionId?: number | string; title: string; date?: string }>,
-    disciplineTheme: 'forest' | 'sky' | 'camel',
+    disciplineTheme: 'forest' | 'warm-blue' | 'camel',
     extraNote?: string,
   ) => {
     const isExpanded = Boolean(expandedTitles[id])
     const themeText =
       disciplineTheme === 'forest'
         ? 'text-forest-800'
-        : disciplineTheme === 'sky'
-          ? 'text-sky-800'
+        : disciplineTheme === 'warm-blue'
+          ? 'text-warm-blue-800'
           : 'text-camel-800'
 
     return (
-      <div className="rounded-xl border border-old-money-200/80 bg-cream-50/30 overflow-hidden">
-        <div
-          role="button"
-          tabIndex={0}
+      <div key={id}>
+        <button
+          type="button"
           onClick={() => toggleTitle(id)}
-          onKeyDown={(e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-              e.preventDefault()
-              toggleTitle(id)
-            }
-          }}
-          className="px-3.5 py-2 sm:px-4 sm:py-2 flex items-center justify-between gap-2.5 cursor-pointer select-none hover:bg-cream-100/50 transition-colors"
+          className={`w-full min-h-[48px] px-4 py-2.5 sm:px-5 flex items-center justify-between gap-2.5 text-left cursor-pointer select-none transition-colors touch-manipulation ${
+            isExpanded ? 'bg-cream-100/70 hover:bg-cream-100' : 'hover:bg-cream-50/70'
+          }`}
           aria-expanded={isExpanded}
         >
           <div className="min-w-0">
-            <div className={`text-xs font-bold uppercase tracking-wider ${themeText}`}>
+            <div className={`text-xs font-bold ${themeText}`}>
               {title}
             </div>
             <p className="text-xs text-charcoal-600 truncate mt-0.5">{subtitle}</p>
@@ -77,41 +72,64 @@ export function CertificatesSection({
             {eventsList.length > 0 && (
               <ChevronDown
                 className={`w-4 h-4 transition-transform duration-200 ${
-                  isExpanded ? 'rotate-180 text-charcoal-700' : 'text-charcoal-400'
+                  isExpanded ? 'rotate-180 text-charcoal-700' : 'text-charcoal-500'
                 }`}
+                strokeWidth={1.75}
                 aria-hidden
               />
             )}
           </div>
-        </div>
+        </button>
 
-        {extraNote && isExpanded && (
-          <div className="px-3.5 pb-2 text-xs text-charcoal-500">{extraNote}</div>
-        )}
+        {isExpanded && (extraNote || eventsList.length > 0) && (
+          <div className="px-4 pb-3 pt-2 sm:px-5 border-t border-old-money-200/80 bg-cream-50/45 space-y-2 animate-in fade-in duration-150">
+            {extraNote && (
+              <div className="text-xs text-charcoal-600">{extraNote}</div>
+            )}
 
-        {isExpanded && eventsList.length > 0 && (
-          <div className="px-3.5 pb-3 pt-2 border-t border-cream-200/80 bg-white space-y-1.5 animate-in fade-in duration-150">
-            {eventsList.map((ev, i) => (
-              <div
-                key={i}
-                className="text-xs text-charcoal-700 flex items-center justify-between gap-2"
-              >
-                <span className="truncate">{ev.title}</span>
-                <div className="flex items-center gap-1.5 shrink-0">
-                  {ev.date && <span className="text-[11px] text-charcoal-400">{ev.date}</span>}
-                  {(ev.eventId && eventResultsUrls[ev.eventId]) || ev.exhibitionId ? (
+            {eventsList.length > 0 && (
+              <div className="divide-y divide-old-money-200/80 border-t border-old-money-200/80">
+                {eventsList.map((ev, i) => {
+                  const href =
+                    ev.eventId && eventResultsUrls[ev.eventId]
+                      ? eventResultsUrls[ev.eventId]
+                      : ev.exhibitionId
+                        ? `${localExhibitionPath}/${ev.exhibitionId}`
+                        : undefined
+
+                  return href ? (
                     <Link
-                      to={ev.eventId && eventResultsUrls[ev.eventId] ? eventResultsUrls[ev.eventId] : `${localExhibitionPath}/${ev.exhibitionId}`}
-                      className="text-camel-700 hover:text-camel-900 inline-flex items-center p-0.5"
+                      key={i}
+                      to={href}
+                      className="min-h-[40px] sm:min-h-[34px] py-1.5 text-xs text-charcoal-800 hover:text-camel-800 flex items-center justify-between gap-2 transition-colors"
                       title="Открыть протокол"
-                      onClick={(e) => e.stopPropagation()}
                     >
-                      <ExternalLink className="w-3.5 h-3.5" />
+                      <span className="inline-flex items-center gap-1.5 min-w-0 flex-1 font-medium">
+                        <span className="truncate">{ev.title}</span>
+                        <ExternalLink className="w-3 h-3 shrink-0 text-camel-700" strokeWidth={1.75} aria-hidden />
+                      </span>
+                      {ev.date && (
+                        <span className="text-[11px] text-charcoal-600 tabular-nums shrink-0">
+                          {ev.date}
+                        </span>
+                      )}
                     </Link>
-                  ) : null}
-                </div>
+                  ) : (
+                    <div
+                      key={i}
+                      className="min-h-[40px] sm:min-h-[34px] py-1.5 text-xs text-charcoal-700 flex items-center justify-between gap-2"
+                    >
+                      <span className="truncate">{ev.title}</span>
+                      {ev.date && (
+                        <span className="text-[11px] text-charcoal-600 tabular-nums shrink-0">
+                          {ev.date}
+                        </span>
+                      )}
+                    </div>
+                  )
+                })}
               </div>
-            ))}
+            )}
           </div>
         )}
       </div>
@@ -120,20 +138,19 @@ export function CertificatesSection({
 
   return (
     <div className="rounded-2xl border border-old-money-200/90 bg-white overflow-hidden shadow-2xs">
-      <div className="px-4 py-3 sm:px-5 sm:py-3 border-b border-old-money-100 bg-cream-50/50 flex items-center justify-between">
+      <div className="px-4 py-3 sm:px-5 border-b border-old-money-200/80 bg-cream-50/50 flex items-center justify-between">
         <h2 className="text-sm sm:text-base font-bold text-charcoal-900">
           Официальные сертификаты и квалификационные допуски
         </h2>
         {totalCertificates > 0 && (
-          <span className="rounded-full bg-cream-200/80 text-charcoal-800 text-xs font-bold px-2.5 py-0.5">
+          <span className="rounded-full bg-cream-200/80 text-charcoal-800 text-xs font-bold px-2.5 py-0.5 tabular-nums">
             {totalCertificates}
           </span>
         )}
       </div>
 
-      <div className="p-2.5 sm:p-3 space-y-2">
-        {/* CACL Курсинг */}
-        {renderCertificateCard(
+      <div className="divide-y divide-old-money-200/80">
+        {renderCertificateRow(
           'cert-cacl-coursing',
           'CACL · Курсинг борзых',
           `${certs.caclEventsCoursing.length} серт.`,
@@ -142,19 +159,17 @@ export function CertificatesSection({
           'forest',
         )}
 
-        {/* CACL Бега борзых */}
-        {renderCertificateCard(
+        {renderCertificateRow(
           'cert-cacl-racing',
           'CACL · Бега борзых',
           `${certs.caclEventsRacing.length} серт.`,
           'Кандидат в чемпионы России (рейсинг)',
           certs.caclEventsRacing,
-          'sky',
+          'warm-blue',
         )}
 
-        {/* CACIL Международные состязания */}
         {certs.cacilEvents.length > 0 &&
-          renderCertificateCard(
+          renderCertificateRow(
             'cert-cacil',
             'CACIL · Международные состязания FCI',
             `${certs.cacilEvents.length} серт.`,
@@ -163,9 +178,8 @@ export function CertificatesSection({
             'forest',
           )}
 
-        {/* CACLBr Породные сертификаты */}
         {((certs.caclBrEventsCoursing?.length ?? 0) > 0 || (certs.caclBrEventsRacing?.length ?? 0) > 0) &&
-          renderCertificateCard(
+          renderCertificateRow(
             'cert-cacl-br',
             'CACLBr · Породный чемпион по РК',
             `${(certs.caclBrEventsCoursing?.length ?? 0) + (certs.caclBrEventsRacing?.length ?? 0)} серт.`,
@@ -174,8 +188,7 @@ export function CertificatesSection({
             'forest',
           )}
 
-        {/* CAC Выставки */}
-        {renderCertificateCard(
+        {renderCertificateRow(
           'cert-cac-shows',
           'CAC · Выставки РКФ',
           `${totalCac} серт.`,
@@ -189,9 +202,8 @@ export function CertificatesSection({
             : undefined,
         )}
 
-        {/* JCAC Выставки (Юниоры) */}
         {totalJcac > 0 &&
-          renderCertificateCard(
+          renderCertificateRow(
             'cert-jcac-shows',
             'JCAC · Юниоры (выставки РКФ)',
             `${totalJcac} серт.`,
@@ -202,9 +214,8 @@ export function CertificatesSection({
             'camel',
           )}
 
-        {/* VCAC Выставки (Ветераны) */}
         {totalVcac > 0 &&
-          renderCertificateCard(
+          renderCertificateRow(
             'cert-vcac-shows',
             'VCAC · Ветераны (выставки РКФ)',
             `${totalVcac} серт.`,

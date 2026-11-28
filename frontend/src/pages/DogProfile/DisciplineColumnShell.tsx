@@ -108,7 +108,7 @@ export function DisciplineStatsCard({
             title={`Перейти: ${prevTab.label}`}
             aria-label={`Перейти: ${prevTab.label}`}
           >
-            <ChevronLeft className="w-3.5 h-3.5 text-camel-800 shrink-0" aria-hidden />
+            <ChevronLeft className="w-3.5 h-3.5 text-camel-800 shrink-0" strokeWidth={1.75} aria-hidden />
             <span className="tracking-tight">{prevTab.label}</span>
           </button>
         )}
@@ -124,15 +124,15 @@ export function DisciplineStatsCard({
               className="group inline-flex items-center gap-1.5 max-w-full transition-colors hover:text-camel-950"
               title={`Открыть рейтинг: ${title}`}
             >
-              <Icon className="w-3.5 h-3.5 text-camel-700 shrink-0" aria-hidden />
-              <span className="text-xs font-bold uppercase tracking-wider text-camel-800 group-hover:underline truncate">
+              <Icon className="w-3.5 h-3.5 text-camel-700 shrink-0" strokeWidth={1.75} aria-hidden />
+              <span className="text-xs font-bold text-camel-800 group-hover:underline truncate">
                 {title}
               </span>
             </Link>
           ) : (
             <span className="inline-flex items-center gap-1.5 max-w-full">
-              <Icon className="w-3.5 h-3.5 text-camel-700 shrink-0" aria-hidden />
-              <span className="text-xs font-bold uppercase tracking-wider text-camel-800 truncate">
+              <Icon className="w-3.5 h-3.5 text-camel-700 shrink-0" strokeWidth={1.75} aria-hidden />
+              <span className="text-xs font-bold text-camel-800 truncate">
                 {title}
               </span>
             </span>
@@ -140,8 +140,8 @@ export function DisciplineStatsCard({
         </div>
 
         <div className="hidden lg:flex min-w-0 flex-1 items-center justify-between gap-2">
-          <h2 className="inline-flex items-center gap-1.5 min-w-0 text-xs font-bold uppercase tracking-wider text-camel-800 truncate">
-            <Icon className="w-3.5 h-3.5 text-camel-700 shrink-0" aria-hidden />
+          <h2 className="inline-flex items-center gap-1.5 min-w-0 text-xs font-bold text-camel-800 truncate">
+            <Icon className="w-3.5 h-3.5 text-camel-700 shrink-0" strokeWidth={1.75} aria-hidden />
             <span className="truncate">{title}</span>
           </h2>
           {rankBadge ?? (rankingUrl ? (
@@ -151,7 +151,7 @@ export function DisciplineStatsCard({
               title={`Открыть рейтинг: ${title}`}
             >
               <span>Рейтинг</span>
-              <ArrowUpRight className="h-3.5 w-3.5 text-camel-700" aria-hidden />
+              <ArrowUpRight className="h-3.5 w-3.5 text-camel-700" strokeWidth={1.75} aria-hidden />
             </Link>
           ) : null)}
         </div>
@@ -165,7 +165,7 @@ export function DisciplineStatsCard({
             aria-label={`Перейти: ${nextTab.label}`}
           >
             <span className="tracking-tight">{nextTab.label}</span>
-            <ChevronRight className="w-3.5 h-3.5 text-camel-800 shrink-0" aria-hidden />
+            <ChevronRight className="w-3.5 h-3.5 text-camel-800 shrink-0" strokeWidth={1.75} aria-hidden />
           </button>
         )}
       </div>
@@ -197,12 +197,13 @@ export function HistoryExpandToggle({
       onClick={onToggle}
       title={hint}
       aria-label={hint}
-      className="-mx-3.5 mt-auto flex h-6 w-[calc(100%+1.75rem)] shrink-0 items-center justify-center border-t border-old-money-100 bg-cream-50/40 text-charcoal-400 transition-colors hover:bg-cream-100/70 hover:text-charcoal-700 cursor-pointer touch-manipulation"
+      className="-mx-3.5 mt-auto flex min-h-[44px] sm:min-h-[38px] w-[calc(100%+1.75rem)] shrink-0 items-center justify-center gap-1.5 border-t border-old-money-200/70 bg-cream-50/50 px-3 text-xs font-semibold text-charcoal-600 transition-colors hover:bg-cream-100/80 hover:text-charcoal-900 cursor-pointer touch-manipulation"
     >
+      <span>{hint}</span>
       {expanded ? (
-        <ChevronUp className="h-3.5 w-3.5" aria-hidden />
+        <ChevronUp className="h-3.5 w-3.5 shrink-0" strokeWidth={1.75} aria-hidden />
       ) : (
-        <ChevronDown className="h-3.5 w-3.5" aria-hidden />
+        <ChevronDown className="h-3.5 w-3.5 shrink-0" strokeWidth={1.75} aria-hidden />
       )}
     </button>
   )
@@ -229,7 +230,7 @@ export function DisciplineHistoryCard({
     >
       {participations != null && participations > 0 ? (
         <div className="donino-column-plaque relative flex h-9 min-h-9 shrink-0 items-center justify-between gap-2 border-b border-[rgba(195,168,128,0.55)] bg-cream-100/90 px-3.5">
-          <span className="text-xs font-bold uppercase tracking-wider text-camel-800 truncate">
+          <span className="text-xs font-bold text-camel-800 truncate">
             {displayLabel}
           </span>
           <span className="text-xs font-semibold text-old-money-600 tabular-nums shrink-0">

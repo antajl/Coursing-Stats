@@ -161,7 +161,7 @@ export function DogProfileHeader({
         type="button"
         onClick={handleToggleFavorite}
         disabled={loadingFavorite}
-        className={`inline-flex items-center justify-center rounded-xl border transition-all disabled:opacity-50 min-h-[36px] min-w-[36px] h-9 w-9 sm:h-9.5 sm:w-9.5 cursor-pointer shadow-2xs touch-manipulation ${
+        className={`relative inline-flex items-center justify-center rounded-xl border transition-colors disabled:opacity-50 min-h-[36px] min-w-[36px] h-9 w-9 sm:h-9.5 sm:w-9.5 cursor-pointer shadow-2xs touch-manipulation before:absolute before:-inset-1.5 before:content-[''] md:before:hidden ${
           favorite
             ? 'border-amber-400 bg-amber-50 text-amber-800 hover:bg-amber-100'
             : 'border-old-money-200/90 bg-cream-50/60 text-charcoal-700 hover:bg-cream-100 hover:text-charcoal-900'
@@ -169,14 +169,14 @@ export function DogProfileHeader({
         aria-label={favorite ? 'Удалить из избранного' : 'Добавить в избранное'}
         title={favorite ? 'Удалить из избранного' : 'Добавить в избранное'}
       >
-        <StarIcon className={`h-4 w-4 shrink-0 ${favorite ? 'fill-current text-amber-500' : 'text-charcoal-400'}`} aria-hidden />
+        <StarIcon className={`h-4 w-4 shrink-0 ${favorite ? 'fill-current text-amber-500' : 'text-charcoal-500'}`} strokeWidth={1.75} aria-hidden />
       </button>
 
       <a
         href={`https://t.me/coursing_stats_bot?start=dog_${dog.id}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center justify-center rounded-xl border border-old-money-200/90 bg-cream-50/60 text-charcoal-700 hover:bg-cream-100 hover:text-charcoal-900 transition-all min-h-[36px] min-w-[36px] h-9 w-9 sm:h-9.5 sm:w-9.5 cursor-pointer shadow-2xs touch-manipulation"
+        className="relative inline-flex items-center justify-center rounded-xl border border-old-money-200/90 bg-cream-50/60 text-charcoal-700 hover:bg-cream-100 hover:text-charcoal-900 transition-colors min-h-[36px] min-w-[36px] h-9 w-9 sm:h-9.5 sm:w-9.5 cursor-pointer shadow-2xs touch-manipulation before:absolute before:-inset-1.5 before:content-[''] md:before:hidden"
         aria-label="Отслеживать собаку в Telegram"
         title="Отслеживать собаку в Telegram: результаты и место в топе"
       >
@@ -187,18 +187,19 @@ export function DogProfileHeader({
         <button
           type="button"
           onClick={() => setIsPassportOpen(true)}
-          className="relative inline-flex items-center justify-center rounded-xl border border-old-money-200/90 bg-cream-50/60 text-charcoal-700 hover:border-camel-400 hover:bg-cream-100 hover:text-charcoal-900 transition-all min-h-[36px] min-w-[36px] h-9 w-9 sm:h-9.5 sm:w-9.5 cursor-pointer shadow-2xs touch-manipulation before:absolute before:-inset-1.5 before:content-[''] md:before:hidden"
+          className="relative inline-flex items-center justify-center gap-1.5 rounded-xl border border-old-money-200/90 bg-cream-50/60 px-2 sm:px-3 text-charcoal-700 hover:border-camel-400 hover:bg-cream-100 hover:text-charcoal-900 transition-colors min-h-[36px] min-w-[36px] h-9 sm:h-9.5 cursor-pointer shadow-2xs touch-manipulation before:absolute before:-inset-1.5 before:content-[''] md:before:hidden"
           aria-label="Карточка собаки (Паспорт)"
           title="Скачать карточку собаки (A4 или Stories) — Паспорт достижений"
         >
-          <Download className="h-4 w-4 shrink-0 text-camel-700" aria-hidden />
+          <Download className="h-4 w-4 shrink-0 text-camel-700" strokeWidth={1.75} aria-hidden />
+          <span className="hidden sm:inline text-xs font-semibold">Карточка</span>
         </button>
       )}
 
       <button
         type="button"
         onClick={handleShare}
-        className={`relative inline-flex items-center justify-center rounded-xl border transition-all min-h-[36px] min-w-[36px] h-9 w-9 sm:h-9.5 sm:w-9.5 cursor-pointer shadow-2xs touch-manipulation before:absolute before:-inset-1.5 before:content-[''] md:before:hidden ${
+        className={`relative inline-flex items-center justify-center rounded-xl border transition-colors min-h-[36px] min-w-[36px] h-9 w-9 sm:h-9.5 sm:w-9.5 cursor-pointer shadow-2xs touch-manipulation before:absolute before:-inset-1.5 before:content-[''] md:before:hidden ${
           copied
             ? 'border-forest-400 bg-forest-50 text-forest-800'
             : 'border-old-money-200/90 bg-cream-50/60 text-charcoal-700 hover:bg-cream-100 hover:text-charcoal-900'
@@ -207,9 +208,9 @@ export function DogProfileHeader({
         title={copied ? 'Ссылка скопирована в буфер обмена' : 'Поделиться профилем собаки'}
       >
         {copied ? (
-          <Check className="h-4 w-4 shrink-0 text-forest-600" aria-hidden />
+          <Check className="h-4 w-4 shrink-0 text-forest-600" strokeWidth={1.75} aria-hidden />
         ) : (
-          <Share2 className="h-4 w-4 shrink-0 text-charcoal-500" aria-hidden />
+          <Share2 className="h-4 w-4 shrink-0 text-charcoal-500" strokeWidth={1.75} aria-hidden />
         )}
       </button>
     </>
@@ -240,7 +241,7 @@ export function DogProfileHeader({
                   </h1>
                 </OwnerCrownName>
                 {secondary ? (
-                  <div className="mt-1 text-sm sm:text-base font-medium text-charcoal-400">
+                  <div className="mt-1 text-sm sm:text-base font-medium text-charcoal-500">
                     {secondary}
                   </div>
                 ) : showRuName ? (

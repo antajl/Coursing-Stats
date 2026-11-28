@@ -92,8 +92,9 @@ export function CompletedTitlesRegistry({
             </span>
             <ChevronDown
               className={`w-4 h-4 transition-transform duration-200 ${
-                isExpanded ? 'rotate-180 text-charcoal-700' : 'text-charcoal-400'
+                isExpanded ? 'rotate-180 text-charcoal-700' : 'text-charcoal-500'
               }`}
+              strokeWidth={1.75}
               aria-hidden
             />
           </div>
@@ -175,7 +176,7 @@ export function CompletedTitlesRegistry({
           {/* 3. Рейсинг */}
           {racingTitles.length > 0 && (
             <div className="px-4 py-3 sm:px-5 sm:py-3.5">
-              <div className="text-[11px] font-bold uppercase tracking-wider text-sky-800 mb-2">
+              <div className="text-[11px] font-bold uppercase tracking-wider text-warm-blue-800 mb-2">
                 Рейсинг
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-2 sm:gap-2.5">

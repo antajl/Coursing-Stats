@@ -32,7 +32,7 @@ export function DisciplineHistoryRow({
         <div className="flex min-w-0 flex-1 items-baseline gap-1.5">
           <span className={`truncate ${titleClassName}`}>{title}</span>
           {subtitle ? (
-            <span className="truncate text-[11px] font-medium text-charcoal-400">
+            <span className="truncate text-[11px] font-medium text-charcoal-500">
               · {subtitle}
             </span>
           ) : null}
@@ -51,11 +51,11 @@ export function DisciplineHistoryRow({
       </div>
 
       <div className="mt-0.5 flex min-w-0 flex-wrap items-center gap-x-1.5 gap-y-1">
-        <span className="shrink-0 text-[11px] font-medium tabular-nums text-charcoal-500">
+        <span className="shrink-0 text-[11px] font-medium tabular-nums text-charcoal-600">
           {date}
         </span>
         {metaSuffix ? (
-          <span className="shrink-0 text-[11px] text-charcoal-400 tabular-nums">
+          <span className="shrink-0 text-[11px] text-charcoal-500 tabular-nums">
             · {metaSuffix}
           </span>
         ) : null}

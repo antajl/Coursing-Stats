@@ -26,17 +26,17 @@ export function OneStepAwaySection({ inProgressTitles, eventResultsUrls = {}, br
   }
 
   return (
-    <div className="rounded-2xl border border-amber-200/80 bg-cream-50/45 overflow-hidden shadow-2xs">
-      <div className="px-4 py-3 sm:px-5 border-b border-amber-200/70 bg-amber-50/60 flex items-center justify-between">
+    <div className="rounded-2xl border border-amber-300/80 bg-white overflow-hidden shadow-2xs">
+      <div className="px-4 py-3 sm:px-5 border-b border-old-money-300/85 bg-amber-50/60 flex items-center justify-between">
         <h2 className="text-sm sm:text-base font-bold text-amber-950">
           В шаге от титула
         </h2>
-        <span className="rounded-full bg-amber-200/70 text-amber-900 text-xs font-bold px-2.5 py-0.5 tabular-nums">
+        <span className="rounded-full bg-amber-200/75 text-amber-900 text-xs font-bold px-2.5 py-0.5 tabular-nums">
           {inProgressTitles.length}
         </span>
       </div>
 
-      <div className="p-2.5 sm:p-3.5 space-y-3">
+      <div className="divide-y divide-old-money-300/85">
         {inProgressTitles.map((title) => {
           const isExpanded = Boolean(expandedTitles[title.id])
           const chipClass = titleBadgeClass(title.badge)
@@ -45,10 +45,10 @@ export function OneStepAwaySection({ inProgressTitles, eventResultsUrls = {}, br
           return (
             <div
               key={title.id}
-              className={`rounded-xl border bg-white overflow-hidden transition-colors ${
+              className={`transition-colors ${
                 isExpanded
-                  ? 'border-camel-400/90 shadow-xs'
-                  : 'border-old-money-300/80 hover:border-camel-300'
+                  ? 'border-y-2 border-old-money-400/60 first:border-t-0 last:border-b-0'
+                  : ''
               }`}
             >
               <div
@@ -61,7 +61,9 @@ export function OneStepAwaySection({ inProgressTitles, eventResultsUrls = {}, br
                     toggleTitle(title.id)
                   }
                 }}
-                className="min-h-[44px] px-3.5 py-2.5 sm:px-4 flex items-center justify-between gap-2.5 cursor-pointer select-none hover:bg-cream-50/70 transition-colors"
+                className={`min-h-[48px] px-4 py-3 sm:px-5 flex items-center justify-between gap-2.5 cursor-pointer select-none transition-colors ${
+                  isExpanded ? 'bg-cream-100/75 hover:bg-cream-100' : 'hover:bg-cream-50/80'
+                }`}
                 aria-expanded={isExpanded}
               >
                 <div className="min-w-0 flex-1 space-y-1 sm:space-y-0 sm:flex sm:items-center sm:justify-between sm:gap-3">
@@ -93,7 +95,7 @@ export function OneStepAwaySection({ inProgressTitles, eventResultsUrls = {}, br
 
                 <ChevronDown
                   className={`w-4 h-4 shrink-0 transition-transform duration-200 ${
-                    isExpanded ? 'rotate-180 text-camel-800' : 'text-charcoal-500'
+                    isExpanded ? 'rotate-180 text-amber-800' : 'text-charcoal-500'
                   }`}
                   strokeWidth={1.75}
                   aria-hidden
@@ -114,7 +116,7 @@ export function OneStepAwaySection({ inProgressTitles, eventResultsUrls = {}, br
                 const fallbackLabel = showCalendarFirst ? 'Календарь выставок' : 'Календарь состязаний'
 
                 return (
-                  <div className="border-t border-old-money-300/90 divide-y divide-old-money-300/85 animate-in fade-in duration-150">
+                  <div className="border-t border-old-money-300/85 divide-y divide-old-money-300/85 animate-in fade-in duration-150">
                     {/* Верхний ряд: Как получить | Осталось получить */}
                     {(title.rulesSummary || hasRemaining) && (
                       <div className="grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-old-money-300/85">

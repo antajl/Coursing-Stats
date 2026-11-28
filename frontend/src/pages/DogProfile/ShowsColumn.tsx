@@ -144,7 +144,7 @@ export function ShowsColumn({
               className="group flex flex-1 flex-col items-center justify-center bg-white px-3.5 py-3 text-center transition-colors hover:bg-camel-50/50"
               title="Открыть протокол выставки"
             >
-              <span className="text-[10px] font-semibold uppercase tracking-wider text-charcoal-400">
+              <span className="text-[11px] font-medium text-charcoal-500">
                 Высшая награда
               </span>
               <div className="mt-0.5 text-3xl font-bold tracking-tight text-camel-950 truncate max-w-full">
@@ -159,7 +159,7 @@ export function ShowsColumn({
             </Link>
           ) : (
             <div className="flex flex-1 flex-col items-center justify-center bg-white px-3.5 py-3 text-center">
-              <span className="text-[10px] font-semibold uppercase tracking-wider text-charcoal-400">
+              <span className="text-[11px] font-medium text-charcoal-500">
                 Высшая награда
               </span>
               <div className="mt-0.5 text-3xl font-bold tracking-tight text-camel-950 truncate max-w-full">
@@ -177,14 +177,14 @@ export function ShowsColumn({
           {/* Низ: Единая двойная строка показателей */}
           <div className="grid grid-cols-2 divide-x divide-old-money-100 bg-cream-50/50 text-center text-xs shrink-0">
             <div className="px-2 py-2">
-              <div className="text-[10px] font-semibold uppercase tracking-wide text-charcoal-400">Оценка в ринге</div>
+              <div className="text-[11px] font-medium text-charcoal-500">Оценка в ринге</div>
               <div className="mt-0.5 flex justify-center">
                 <ShowGradeChip grade={bestGrade} size="sm" />
               </div>
             </div>
 
             <div className="px-2 py-2">
-              <div className="text-[10px] font-semibold uppercase tracking-wide text-charcoal-400">Выставки</div>
+              <div className="text-[11px] font-medium text-charcoal-500">Выставки</div>
               <div className="mt-0.5 font-bold tabular-nums text-charcoal-800 text-sm">
                 {formatShowsCount(totalShows)}
               </div>

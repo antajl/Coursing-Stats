@@ -154,7 +154,7 @@ export function CoursingColumn({
                 className="group flex flex-1 flex-col items-center justify-center bg-white px-3.5 py-3 text-center transition-colors hover:bg-forest-50/50"
                 title="Открыть протокол лучшего состязания"
               >
-                <span className="text-[10px] font-semibold uppercase tracking-wider text-charcoal-400">
+                <span className="text-[11px] font-medium text-charcoal-500">
                   Лучший результат
                 </span>
                 <span className="mt-0.5 text-3xl font-bold tabular-nums tracking-tight text-forest-900">
@@ -163,7 +163,7 @@ export function CoursingColumn({
               </ProcoursingEventLink>
             ) : (
               <div className="flex flex-1 flex-col items-center justify-center bg-white px-3.5 py-3 text-center">
-                <span className="text-[10px] font-semibold uppercase tracking-wider text-charcoal-400">
+                <span className="text-[11px] font-medium text-charcoal-500">
                   Лучший результат
                 </span>
                 <span className="mt-0.5 text-3xl font-bold tabular-nums tracking-tight text-forest-900">
@@ -175,14 +175,14 @@ export function CoursingColumn({
             {/* Низ: Единая двойная строка агрегатных показателей */}
             <div className="grid grid-cols-2 divide-x divide-old-money-100 bg-cream-50/50 text-center text-xs shrink-0">
               <div className="px-2 py-2">
-                <div className="text-[10px] font-semibold uppercase tracking-wide text-charcoal-400">Средняя оценка</div>
+                <div className="text-[11px] font-medium text-charcoal-500">Средняя оценка</div>
                 <div className="mt-0.5 font-bold tabular-nums text-charcoal-800 text-sm">
                   {formatScore(coursing.avg_judge_score ?? coursing.best_judge_score)}
                 </div>
               </div>
 
               <div className="px-2 py-2">
-                <div className="text-[10px] font-semibold uppercase tracking-wide text-charcoal-400">Состязания</div>
+                <div className="text-[11px] font-medium text-charcoal-500">Состязания</div>
                 <div className="mt-0.5 font-bold tabular-nums text-charcoal-800 text-sm">
                   {formatCompetitionsCount(competitionsCount)}
                 </div>
@@ -211,12 +211,12 @@ export function CoursingColumn({
                 <DisciplineHistoryRow
                   title={headline || 'Состязание'}
                   subtitle={shortLoc}
-                  titleClassName="text-xs font-bold uppercase tracking-wide text-forest-700"
+                  titleClassName="text-xs font-semibold text-forest-800"
                   metric={
                     hasScore ? (
                       <span className="font-mono text-xs font-semibold tabular-nums text-forest-800">
                         {formatScore(event.total_score)}
-                        <span className="text-[10px] font-normal text-charcoal-400"> б.</span>
+                        <span className="text-[10px] font-normal text-charcoal-500"> б.</span>
                       </span>
                     ) : null
                   }
